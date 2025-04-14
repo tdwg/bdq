@@ -1,20 +1,50 @@
 # BDQ Core Maintenance Guide
 
-## 1 Introduction
+### Table of Contents ###
+[1 Introduction](#1-introduction)  
+  - [1.1 Purpose](#11-purpose)  
+  - [1.2 Audience](#12-audience)  
+  - [1.3 Associated Documents](#13-associated-documents)  
+  - [1.4 Status of the content of this document](#14-status-of-the-content-of-this-document)  
+  - [1.5 RFC 2119 key words](#15-rfc-2119-key-words)  
 
-TDWG standards require a Maintenance Interest Group to support ratified standards. The Maintenance Group is expected to keep the standard current, responding to questions, and processing requests for change.
+[2 Proposals for New Issues](#2-proposals-for-new-issues)  
+  - [2.1 Suggested Lifecycle for a Proposal](#21-suggested-lifecycle-for-a-proposal)  
+  - [2.2 Software Tools for Working with Test Descriptions](#22-software-tools-for-working-with-test-descriptions)  
+    - [2.2.1 Tools used to build the BDQ Core submission, and related code](#221-tools-used-to-build-the-bdq-core-submission-and-related-code)  
+
+[3 Test Validation Data](#3-test-validation-data)  
+  - [3.1 Edits to Current Test Validation Data](#31-edits-to-current-test-validation-data)  
+  - [3.2 Additions to Test Validation Data](#32-additions-to-test-validation-data)  
+  - [3.3 Updating Test Validation Data Due to Changes in Specifications or Terms](#33-updating-test-validation-data-due-to-changes-in-specifications-or-terms)  
+  - [3.4 Processing Test Validation Data](#34-processing-test-validation-data)  
+  - [3.5 Tools for validating implementations against the validation data](#35-tools-for-validating-implementations-against-the-validation-data)  
+
+[4 Proposals for Changes to existing Tests](#4-proposals-for-changes-to-existing-tests)
+
+## 1. Introduction
 
 ### 1.1 Purpose
- This document is meant to provide guidance for the maintenance of the BDQ Core standard.
+
+The purpose of this document is to provide guidance for the ongoing maintenance of the Biodiversity Data Quality (BDQ) Core standard. In accordance with TDWG policies, ratified standards must be supported by a designated Maintenance Interest Group. This guide outlines the responsibilities of the group and describes recommended processes for managing changes, evaluating new or revised Tests, maintaining validation data, and ensuring the integrity of BDQ Core components over time.
+
+It also documents the software tools and structured workflows that support the lifecycle of Test definitions, from proposal to validation, implementation, and inclusion in the standard.
 
 ### 1.2 Audience
-Biodiversity Information Standards (TDWG) BDQ Core Maintenance Interest Group
+
+This document is intended for members of the TDWG BDQ Core Maintenance Interest Group and others tasked with the stewardship and curation of the standard. It is also relevant to:
+
+- Contributors proposing changes or new Tests;
+- Implementers maintaining software tools that use BDQ Core Test specifications;
+- Standards developers interested in understanding the governance and maintenance model used by BDQ Core.
+
+Readers should be familiar with the structure of the BDQ Core standard and its supporting tools and vocabularies.
 
 ### 1.3 Associated Documents
 
-This document is not part of the BDQ Core standard, so no documents are associated with it.
+This document is not part of the BDQ Core standard, and as such it has no formally associated documents within the standard itself.
 
-Additional information about processes followed during the development of the BDQ Core standard can be found in the [BDQ Core Supplemental Information](docs/supplement/index.md).
+However, additional background information and development context for BDQ Core may be found in the [BDQ Core Supplemental Information](docs/supplement/index.md).
 
 ### 1.4 Status of the content of this document
 

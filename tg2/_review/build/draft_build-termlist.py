@@ -15,7 +15,9 @@ import yaml       # Library to parse yaml files
 import rdflib     # run sparql queries on rdf 
 from rdflib import Graph
 import function_lib # library of reusable functions for TDWG build scripts
-from function_lib import build_term_key, build_authors_contributors_markdown, build_contributors_markdown, build_authors_markdown
+from function_lib import build_term_key, build_authors_contributors_markdown
+from function_lib import build_contributors_markdown, build_authors_markdown
+from function_lib import generate_markdown_toc
 
 # -----------------
 # Configuration section
@@ -632,6 +634,10 @@ for term in termLists:
     footer = footer.replace('{current_iri}', document_configuration_yaml['current_iri'])
     footer = footer.replace('{ratification_date}', document_configuration_yaml['doc_modified'])
     
+	## Produce a table of contents from the headings 
+    toc = generate_markdown_toc((header+text+footer).splitlines())
+    header = header.replace('{toc}', toc)
+
     warning = "<!--- This file is generated from templates by code, DO NOT EDIT by hand --->\n"
     
     output = warning + header + text + footer

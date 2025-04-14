@@ -4,17 +4,54 @@
 # This script contains a library of reusable functions to support scripts to 
 # build of documents and term lists for TDWG standards and draft standards
 
+import re
 import rdflib     # run sparql queries on rdf 
 from rdflib import Graph
 
+import re
+
+def generate_markdown_toc(markdown_lines):
+    """
+    Generate a Markdown-formatted Table of Contents from a list of heading lines.
+    
+    Parameters:
+        markdown_lines (list of str): Lines from a Markdown document.
+
+    Returns:
+        str: A properly formatted Table of Contents.
+    """
+    toc_lines = ["## Table of Contents ##"]
+    first_top_level_seen = False
+
+    for line in markdown_lines:
+        if line.strip().startswith("#"):
+            level = len(line) - len(line.lstrip('##'))
+            link = markdown_heading_to_link(line)
+            if level == 2:
+                if first_top_level_seen:
+                    toc_lines.append("")  # blank line before top-level headings (except the first)
+                toc_lines.append(f"{link}")
+                first_top_level_seen = True
+            elif level > 2:
+                indent = "  " * (level-2)
+                toc_lines.append(f"{indent}- {link}")
+    return "\n".join(toc_lines)
+
 # Given a string containing a markdown heading, construct markdown for a link to that heading
-def markdown_heading_to_link(input_heading) :
-    retval = ""
-    if (input_heading and input_heading.strip().startswith("#")) : 
-        headingText = input_heading.replace("#","").strip()
-        headingAnchor = headingText.replace(" ","-").replace("(","").replace(")","").replace(":","").lower().replace(".","").replace(",","").replace('"','').replace("'","")[0:]
-        retval = "[" + headingText.strip() + "](#" + headingAnchor + ")"
-    return retval
+def markdown_heading_to_link(input_heading):
+    if not input_heading or not input_heading.strip().startswith("#"):
+        return None
+
+    level = len(input_heading) - len(input_heading.lstrip('#'))
+    heading_text = input_heading.lstrip('#').strip()
+
+    # Create anchor
+    anchor = heading_text.lower()
+    anchor = anchor.replace(" ", "-")
+    anchor = anchor.translate(str.maketrans("", "", "():,.'\""))
+
+    link = f"[{heading_text}](#{anchor})"
+    return link
 
 # Function build_term_key builds a markdown table of terms and examples 
 # for each term used to describe terms in a term-list document.

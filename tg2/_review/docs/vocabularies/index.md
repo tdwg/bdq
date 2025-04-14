@@ -42,35 +42,46 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
 **Comment**<br>
 Draft Standard for Review
 
-### Table of Contents ###
+## Table of Contents ##
+[1 Introduction](#1-introduction)
+  - [1.1 Purpose](#11-purpose)
+  - [1.2 Audience](#12-audience)
+  - [1.3 Associated Documents](#13-associated-documents)
+  - [1.4 Status of the content of this document](#14-status-of-the-content-of-this-document)
 
-- [1 Introduction](#1-introduction)
-- [1.1 Purpose](#11-purpose)
-- [1.2 Audience](#12-audience)
-- [1.3 Associated Documents](#13-associated-documents)
-- [1.4 Status of the content of this document](#14-status-of-the-content-of-this-document)
-- [2 BDQ Core Vocabularies](#2-bdq-core-vocabularies)
-- [2.1 Vocabularies Foundational to BDQ Core](#21-vocabularies-foundational-to-bdq-core)
-- [2.2 Vocabularies Supporting BDQ Core](#22-vocabularies-supporting-bdq-core)
-- [3 Namespace Abbreviations](#3-namespace-abbreviations)
+[2 BDQ Core Vocabularies](#2-bdq-core-vocabularies)
+  - [2.1 Vocabularies Foundational to BDQ Core](#21-vocabularies-foundational-to-bdq-core)
+  - [2.2 Vocabularies Supporting BDQ Core](#22-vocabularies-supporting-bdq-core)
 
+[3 Namespace Abbreviations](#3-namespace-abbreviations)
+
+[Acronyms](#acronyms)
+
+[Bibliography](#bibliography)
+
+[Cite BDQ Core](#cite-bdq-core)
 
 ## 1 Introduction
 
-This page provides an introduction and index to the six vocabularies introduced in BDQ Core. The vocabularies are distinguished by their roles within applications of the standard to biodiversity data quality (BDQ) use cases. Each vocabulary has its own namespace and term list document. 
-
 ### 1.1 Purpose
 
-This document is an index to all the vocabularies in BDQ Core.
+The purpose of this document is to serve as the central index and orientation point for the vocabularies used in the BDQ Core standard. BDQ Core defines a set of controlled vocabularies to support consistent specification, interpretation, and implementation of data quality Tests. These vocabularies provide the formal terms used to describe aspects such as data quality dimensions, amendment strategies, and evaluation criteria.
+
+This document distinguishes between foundational vocabularies that define the structural logic of BDQ Core and supporting vocabularies that contribute to its descriptive and operational semantics. Each vocabulary is assigned a namespace and is linked to its associated term list and RDF serialization.
 
 ### 1.2 Audience
 
-This document is for those needing a general or technical contextual overview of the BDQ Core vocabularies.
+This document is intended for both technical and non-technical readers who need to understand the structure and scope of the vocabularies within BDQ Core. It is especially useful for:
+
+- Implementers and developers working with BDQ Core Tests who need to reference the correct vocabulary namespaces and terms;
+- Standards developers seeking to align external specifications with BDQ Core vocabulary structures;
+- Data managers or analysts looking for contextual information about terms used in BDQ Core outputs or configurations.
+
+While the vocabulary content itself may involve semantic modeling, this index is designed to be readable without requiring specialized knowledge of RDF or ontology frameworks.
 
 ### 1.3 Associated Documents
 
-- [Biodiversity Data Quality Core](../../index.md) provides an index to all documents in the standard.
-- [BDQ Core Quick Reference Guide](../terms/bdqcore/index.md) provides an easy-to-read guide to the Tests. It is a descriptive document, not the full vocabulary definition document found in the [BDQ Core Tests and Assertions List of Terms](../list/bdqcore/index.md).
+For the list and links to all associated documents see the [Biodiversity Data Quality Core](../../index.md) page, which lists the parts of the standard.
 
 ### 1.4 Status of the content of this document
 

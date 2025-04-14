@@ -40,43 +40,32 @@
 **Comment**<br>
 {comment}
 
-### Table of Contents ###
-
 {toc}
 
-## 1 Introduction
-
-The Biodiversity Data Quality Fitness for Use Framework (hereafter referred to as "Framework") ontology formally describes the terms and relationships between them for evaluating the quality of biodiversity data. This conceptual Framework (Veiga 2016, Veiga et al. 2017) is comprehensive and allows different interpretations and manners of use by different stakeholders. The Framework also provides a base for the bdq: and bdqcore: namespace vocabularies.
-
-The bdqffdq: vocabulary is a specification of a framework for describing data quality. Each of the Tests in the bdqcore: vocabulary in this standard has been designed with this Framework and is framed using the terms and concepts from the Framework. The Framework provides the context for each Test, and has shaped decisions made about how each Test is defined.
-
-The Framework considers data to have quality with respect to some specified use. It provides a means to describe a use of data (bdqffdq:UseCase), and what is needed for some dataset to have quality for that use, that is for some dataset to be fit for a specified purpose.
-
-This document lists terms used to describe 'data quality' / 'fitness for use' in the context of biodiversity data. These are based on Veiga (2016) and Veiga et al. (2017), with a few changes for increased clarity.
+## 1. Introduction
 
 ### 1.1 Purpose
 
-This document provides a technical understanding of the Framework (`bdqffdq:`) ontology. 
-The ontology follows open world principles and has limited restrictions.
-This document gathers normative statements about how to use the Framework in a meaningful way. 
+The purpose of this document is to present the formal ontology of the Biodiversity Data Quality Fitness for Use Framework, referred to by the namespace `bdqffdq:`. This ontology defines the terms, classes, and relationships used to represent data quality concepts in a structured and interoperable manner. It forms the conceptual and semantic foundation for the BDQ Core standard.
+
+This document gathers normative statements for the ontology, explains how to use it meaningfully within biodiversity data quality workflows, and reflects the open world assumptions of RDF/OWL modeling. It provides a reference for tools and implementations that rely on this ontology for describing quality-related elements such as Use Cases, Specifications, Criteria, Amendments, and Test responses.
 
 ### 1.2 Audience
 
-Technical users who need to understand how to describe data quality with the Biodiversity Data Quality Fitness for Use Framework.
+This document is intended for technical users who need to interact directly with the BDQ Core ontology. It will be especially useful for:
 
-### 1.3 Documents About the bdqffdq: Ontology
+- Ontology engineers and developers working on semantic web applications or data validation systems;
+- Standards developers seeking to align other vocabularies with BDQ Core;
+- Implementers generating or consuming RDF data that describes BDQ Core Tests or their results;
+- Researchers modeling use cases for biodiversity data quality assessments.
 
-The `bdqffdq:` vocabulary is an ontology, documentation for it can be found in: 
+Readers should be familiar with ontology concepts, RDF/OWL syntax, and open world reasoning.
 
-- This page, which provides normative guidance on the use of this ontology.
-- The [Fitness For Use Framework Ontology List of Terms](../list/bdqffdq/index.md), which provides the detailed definitions of the terms.
-- The [Fitness For Use Framework Ontology Vocabulary Extension](../extension/bdqffdq/index.md), which provides additional axioms that extend the vocabulary.
-- The [Biodiversity Data Quality Fitness for Use Framework](../../../vocabulary/bdqffdq.owl) Ontology in OWL.
-- Veiga (2016) and Veiga et al. (2017)
+### 1.3 Associated Documents
 
-In addition, the [Fitness For Use Framework Ontology Guide](../guide/bdqffdq/index.md) provides an illustrated guide to the use of the bdqffdq ontology.
+For the list and links to all associated documents see the [Biodiversity Data Quality Core](../../index.md) page, which lists the parts of the standard.
 
-### 1.3.1 Distributions for bdqffdq:
+#### 1.3.1 Distributions for bdqffdq:
 
 | Description | IRI | Download URL |
 | ----------- | --- | ------------ |
@@ -292,7 +281,7 @@ Each instance of a bdqffdq:Implementation MAY have zero to many bdqffdq:produces
 
 Each instance of a bdqffdq:Asssertion SHOULD be the object of exactly one bdqffdq:producesAssertion object property. 
 
-### 2.1.6 Identifying the Test that produced an Assertion
+#### 2.1.6 Identifying the Test that produced an Assertion
 
 Following the object properties from an instance of a bdqffdq:Assertion to an instance of a subclass of a bdqffdq:DataQualityNeed SHOULD identify one and only one instance of a subclass of a bdqffdq:DataQualityNeed for a single instance of a bdqffdq:Assertion. If this condition is not met, it is not possible to tell which Test with which parameter argument values produced the Assertion.
 
@@ -327,7 +316,7 @@ Given an Assertion, the following query returns which Test was run with which ar
 
 Where, in this query, the text {id of assertion to look up} is a placeholder to replace with the id of the instance of the bdqffdq:Assertion to look up.
 
-### 2.1.6.1 Properties that should be one to one.
+##### 2.1.6.1 Properties that should be one to one
 
 **Validation**
 
@@ -337,16 +326,6 @@ Where, in this query, the text {id of assertion to look up} is a placeholder to 
 - Each instance of a bdqffdq:Implementation SHOULD be the subject of one and only one bdqffdq:usesSpecification property.
 - Each instance of a bdqffdq:Implementation MAY be the subject of zero to many bdqffdq:producesAssertion properties.
 - Each instance of a bdqffdq:ValidationAssertion SHOULD be the object of one and only one bdqffdq:producesAssertion property.
-
-**Measure**
-
-- Each instance of a bdqffdq:Measure SHOULD be the object of one and only one bdqffdq:forMeasure property.
-- Each instance of a bdqffdq:MeasurementMethod SHOULD be the subject of one and only one bdqffdq:forMeasure property.
-- Each instance of a bdqffdq:Specification SHOULD be the object of one and only one bdqffdq:hasSpecification property.
-- Each instance of a bdqffdq:Implementation SHOULD be the subject of one and only one bdqffdq:usesSpecification property.
-- Each instance of a bdqffdq:Specification SHOULD be the object of one and only one bdqffdq:usesSpecification property.
-- Each instance of a bdqffdq:Implementation MAY be the subject of zero to many bdqffdq:producesAssertion properties.
-- Each instance of a bdqffdq:MeasurementAssertion SHOULD be the object of one and only one bdqffdq:producesAssertion property.
 
 **Issue**
 
@@ -367,6 +346,16 @@ Where, in this query, the text {id of assertion to look up} is a placeholder to 
 - Each instance of a bdqffdq:Specification SHOULD be the object of one and only one bdqffdq:usesSpecification property.
 - Each instance of a bdqffdq:Implementation MAY be the subject of zero to many bdqffdq:producesAssertion properties.
 - Each instance of a bdqffdq:AmendmentAssertion SHOULD be the object of one and only one bdqffdq:producesAssertion property.
+
+**Measure**
+
+- Each instance of a bdqffdq:Measure SHOULD be the object of one and only one bdqffdq:forMeasure property.
+- Each instance of a bdqffdq:MeasurementMethod SHOULD be the subject of one and only one bdqffdq:forMeasure property.
+- Each instance of a bdqffdq:Specification SHOULD be the object of one and only one bdqffdq:hasSpecification property.
+- Each instance of a bdqffdq:Implementation SHOULD be the subject of one and only one bdqffdq:usesSpecification property.
+- Each instance of a bdqffdq:Specification SHOULD be the object of one and only one bdqffdq:usesSpecification property.
+- Each instance of a bdqffdq:Implementation MAY be the subject of zero to many bdqffdq:producesAssertion properties.
+- Each instance of a bdqffdq:MeasurementAssertion SHOULD be the object of one and only one bdqffdq:producesAssertion property.
 
 ## 3 Term Index
 

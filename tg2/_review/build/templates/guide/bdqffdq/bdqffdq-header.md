@@ -42,34 +42,30 @@
 **Comment**<br>
 {comment}
 
-### Table of Contents ###
-
 {toc}
 
-## 1 Introduction
-
-The bdqffdq: vocabulary is a specification of a framework for describing data quality. Each of the Tests in the bdqcore: vocabulary has been designed using this framework and is framed in the terms and concepts from the framework.
-
-The framework defines data quality in relation to a specified use. It enables formal description of a use case (bdqffdq:UseCase) and the requirements for a dataset to be fit for that purpose. By explicitly linking data quality to use, the framework supports assurance that data meet the needs of a given application.
-
-This document describes a set of terms used to describe 'data quality' and 'fitness for use' in the context of biodiversity data. These terms are based on Veiga (2016) and Veiga et al. (2017), with a few changes for increased clarity.
+## 1. Introduction
 
 ### 1.1 Purpose
 
-This is a guide to the use of the Framework Ontology (bdqffdq: vocabulary).
+The purpose of this document is to provide a practical guide to understanding and using the BDQ Core Fitness for Use Framework Ontology, represented by the `bdqffdq:` vocabulary. This ontology defines a formal framework for describing data quality in the context of biodiversity data, emphasizing that quality is always relative to a particular purpose or use.
+
+The document explains key concepts from the ontology, including `UseCase`, `InformationElement`, `Specification`, and `Criterion`, and shows how they support the structure and semantics of BDQ Core Tests. It provides context, illustrative examples, and guidance for interpreting the ontology as applied in real-world implementations.
 
 ### 1.2 Audience
 
-This document is for those needing a technical understanding of the Framework Ontology.
+This guide is intended for users who need a technical understanding of the BDQ Core conceptual framework and its ontology. It will be particularly useful for:
 
-### 1.3 Documents about the bdqffdq: ontology
+- Ontology engineers and information modelers incorporating BDQ Core into semantic systems;
+- Standards developers aligning other biodiversity data quality frameworks with BDQ Core;
+- Implementers needing to understand how BDQ Core Tests are formally structured and classified;
+- Advanced users exploring the logical foundation behind BDQ Core Test design.
 
-This document provides an illustrated guide to the use of the bdqffdq: vocabulary, which includes: 
+Some familiarity with RDF/OWL ontologies is assumed.
 
-- The [Fitness for Use Ontology](../../bdqffdq/index.md) landing page with normative guidance on the use of this ontology.
-- The [Fitness For Use Framework Ontology List of Terms](../../list/bdqffdq/index.md) document listing just the vocabulary terms in the ontology.
-- Additional axioms that can be found in the [Fitness For Use Framework Ontology Vocabulary Extension](../../extension/bdqffdq/index.md) 
-- The bdqffdq framework ontology is best technically understood from its [Owl Ontology Distribution](../../../vocabulary/bdqffdq.owl) 
+### 1.3 Associated Documents
+
+For the list and links to all associated documents see the [Biodiversity Data Quality Core](../../index.md) page, which lists the parts of the standard.
 
 ### 1.4 Status of the content of this document
 
@@ -113,9 +109,9 @@ When not represented as objects, controlled value strings MUST be used as values
 
 IRIs MUST be used as values for all individual class instances and object properties when using bdqffdq: terms.
 
-### 3 Framework for describing data quality 
+## 3 Framework for describing data quality 
 
-#### 3.1 Introduction and Context
+### 3.1 Introduction and Context
 
 The bdqffdq: portion of BDQ Core is a specification for a framework for describing data quality. This bdqffdq: framework is based on a mathematical formulation, using set theory (Veiga, 2016), and is represented as an OWL ontology. This document describes the organization and use of the OWL ontology.
 
@@ -123,7 +119,7 @@ This document provides a background for understanding the bdqcore: Test descript
 
 See the [Fitness for Use Ontology](../../bdqffdq/index.md) landing page for a concise description and normative information about the bdqffdq: ontology and a summary of the mathematical formalization. See the [Fitness For Use Framework Ontology List of Terms](../../list/bdqffdq/index.md) document for the list of terms in the bdqffdq: vocabulary. See the [Fitness For Use Framework Ontology Vocabulary Extension](../../extension/bdqffdq/index.md) for documentation on additional axioms. See the [Owl Ontology Distribution](../../../vocabulary/bdqffdq.owl) for the formal representation of the vocabulary as an OWL ontology. The mathematical formalization provides a description of inferences and reasoning that may be made with the terms in the vocabulary.
 
-#### 3.2 Description of the bdqffdq ontology
+### 3.2 Description of the bdqffdq ontology
 
 The bdqffdq framework defines data quality in relation to a specified use, emphasizing that data quality is not abstract but purpose-dependent. It provides a formal way to describe a use case (UseCase) and the criteria for evaluating whether a dataset is fit for that purpose. By linking data quality explicitly to use, the framework enables consistent assessment and assurance of fitness for a given purpose.
 
@@ -133,15 +129,15 @@ The framework can also be conceptually divided into four vertical themes, four s
 
 We use the informal term "Test" to describe these four vertical themes, a Test involves terms in both Needs and Solutions, and Tests produce particular reporting elements.
 
-### 3.2.1 Data Quality Control and Data Quality Assurance
+#### 3.2.1 Data Quality Control and Data Quality Assurance
 
 The framework draws a distinction between Quality Control and Quality Assurance. Quality Control processes seek to assess the quality of data for some purpose, then identify changes to the data or to processes around the data to improve their quality. Quality Assurance processes seek to filter some set of data to a subset that is fit for some purpose, that is, to assure that data used for some purpose are fit for that purpose.
 
-### 3.2.2 Information Elements
+#### 3.2.2 Information Elements
 
 The framework has an abstract concept of Information Elements. To frame Tests on Darwin Core terms in a usable way, we list specific Darwin Core terms as the Information Elements in each Test.
 
-### 3.2.3 Concepts in the framework, Test Types: Validation, Issue, Measure, Amendment
+#### 3.2.3 Concepts in the framework, Test Types: Validation, Issue, Measure, Amendment
 
 The framework defines four central concepts for describing and evaluating data quality Needs: Validation, Issue, Measure, and Amendment.
 

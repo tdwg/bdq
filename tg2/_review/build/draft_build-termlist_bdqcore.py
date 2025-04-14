@@ -18,7 +18,10 @@ import yaml       # Library to parse yaml files
 import rdflib     # run sparql queries on rdf 
 from rdflib import Graph
 import function_lib # library of reusable functions for TDWG build scripts
-from function_lib import build_authors_contributors_markdown, build_authors_markdown, build_contributors_markdown, markdown_heading_to_link, build_term_key
+from function_lib import build_authors_contributors_markdown, build_authors_markdown
+from function_lib import build_contributors_markdown, build_term_key
+#from function_lilb import markdown_heading_to_link
+from function_lib import generate_markdown_toc
 
 # -----------------
 # Configuration section
@@ -465,14 +468,17 @@ for term in termLists:
     
     warning = "<!--- This file is generated from templates by code, DO NOT EDIT by hand --->\n"
     
-    ## Produce a table of contents from the headings 
-    toc = ""
-    regexHeadings = "^#+ [0-9]+.*"
-    for line in (header+text).splitlines() :
-        aHeading = re.search(regexHeadings,line)
-        if (aHeading) : 
-            toc = toc + "- " + markdown_heading_to_link(aHeading.group()) + "\n"
+	## Produce a table of contents from the headings 
+    toc = generate_markdown_toc((header+text+footer).splitlines())
     header = header.replace('{toc}', toc)
+
+#     toc = ""
+#     regexHeadings = "^#+ [0-9]+.*"
+#     for line in (header+text).splitlines() :
+#         aHeading = re.search(regexHeadings,line)
+#         if (aHeading) : 
+#             toc = toc + "- " + markdown_heading_to_link(aHeading.group()) + "\n"
+#     header = header.replace('{toc}', toc)
 
     output = warning + header + text + footer
     outputObject = open(outFileName, 'wt', encoding='utf-8')

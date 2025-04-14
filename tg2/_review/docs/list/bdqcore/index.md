@@ -39,53 +39,58 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
 **Comment**<br>
 Draft Standard for Review
 
-# Table of Contents
-- [1 Introduction](#1-introduction)
-- [1.1 Purpose](#11-purpose)
-- [1.2 Audience](#12-audience)
-- [1.3 Associated Documents](#13-associated-documents)
-- [1.4 Term List Distributions](#14-term-list-distributions)
-- [1.5 Status of the Content of this Document](#15-status-of-the-content-of-this-document)
-- [1.6 RFC 2119 key words](#16-rfc-2119-key-words)
-- [1.7 Namespace abbreviations](#17-namespace-abbreviations)
-- [1.8 Test Types (non-normative)](#18-test-types-non-normative)
-- [1.9 Key to Vocabulary Terms](#19-key-to-vocabulary-terms)
-- [2 Normative Guidance](#2-normative-guidance)
-- [3 Term Indices](#3-term-indices)
-- [3.1 Index to Validation Tests](#31-index-to-validation-tests)
-- [3.2 Index to Issue Tests](#32-index-to-issue-tests)
-- [3.3 Index to Amendment Tests](#33-index-to-amendment-tests)
-- [3.4 Index to Measure Tests](#34-index-to-measure-tests)
-- [4 Vocabulary](#4-vocabulary)
+## Table of Contents ##
+[1 Introduction](#1-introduction)
+  - [1.1 Purpose](#11-purpose)
+  - [1.2 Audience](#12-audience)
+  - [1.3 Associated Documents](#13-associated-documents)
+  - [1.4 Term List Distributions](#14-term-list-distributions)
+  - [1.5 Status of the Content of this Document](#15-status-of-the-content-of-this-document)
+  - [1.6 RFC 2119 key words](#16-rfc-2119-key-words)
+  - [1.7 Namespace abbreviations](#17-namespace-abbreviations)
+  - [1.8 Test Types (non-normative)](#18-test-types-non-normative)
+  - [1.9 Key to Vocabulary Terms](#19-key-to-vocabulary-terms)
 
+[2 Normative Guidance](#2-normative-guidance)
+
+[3 Term Indices](#3-term-indices)
+  - [3.1 Index to Validation Tests](#31-index-to-validation-tests)
+  - [3.2 Index to Issue Tests](#32-index-to-issue-tests)
+  - [3.3 Index to Amendment Tests](#33-index-to-amendment-tests)
+  - [3.4 Index to Measure Tests](#34-index-to-measure-tests)
+
+[4 Vocabulary](#4-vocabulary)
+
+[Acronyms](#acronyms)
+
+[Glossary](#glossary)
+
+[References](#references)
+
+[Cite BDQ Core](#cite-bdq-core)
 
 ## 1 Introduction
 
-This document lists the BDQ Core Tests. These are the terms from the namespace `bdqcore:` (the CORE Tests). The description of these terms relies heavily on the [Fitness For Use Framework Ontology List of Terms](../bdqffdq/index.md) (Veiga 2016, Veiga et al. 2017). Terms are also used from the [Data Quality Dimension Controlled Vocabulary List of Terms](../list/bdqdim/index.md) (data quality Dimension from Veiga et al. 2017), [Data Quality Enhancement Controlled Vocabulary List of Terms](../list/bdqenh/index.md) (Test Enhancements), [Data Quality Criterion Controlled Vocabulary List of Terms](../list/bdqcrit/index.md) (Test Criteria), and [BDQ Controlled Vocabulary List of Terms](../list/bdq/index.md) (additional vocabulary terms). For background details see Chapman et al. (2017).
-
-The focus of this standard is the specification of a suite of Tests that operate on single Darwin Core (Wieczorek et al. 2012) encoded records, for example the Test [VALIDATION_COUNTRYCODE_STANDARD](https://rs.tdwg.org/bdqcore/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe). This (SingleRecord) Test checks the value of dwc:countryCode against the source authority ISO 3166-1-alpha-2 Country Code (which imlementations may access at https://www.iso.org/obp/ui/#search). This standard also includes specifications for MultiRecord Tests that accumulate results of multiple SingleRecord Tests, allowing, for example, a determination that 70% of records in a dataset had a valid dwc:countryCode.
-
-Each Test is designed to stand in isolation. This is by design to both support the mixing and matching of these and other Tests to meet particular data quality needs, and so as not impose any particular model of Test execution on implementation frameworks. Implementations of Test execution frameworks MAY execute Tests in on data records in parallel, on data records in sequence, as queries on datasets, or even on unique values. While the BDQ Core Tests are described in isolation, they MUST be used in sets that are related to a use of the data, as data does not have quality in the abstract, it only has quality with respect to some use. Thus each Test is linked to one or more Use Cases, which are formal descriptions of uses to which data may be put. The bdq: vocabulary defines the set of Use Cases referenced here. BDQ Core Tests can be freely composed in other ways for other uses. Additional Tests can be defined, including those that expand in scope beyond Darwin Core terms.
-
-Tests described here are paired in that all Validation Tests that assesses some aspect of data quality are associated with an Amendment Test that may be able to improve the quality of data with respect to that Validation Test.
-
 ### 1.1 Purpose
 
-This document lists the BDQ Core Tests, provides values for the terms that describe these Tests, and provides a brief explanation of those terms.
+The purpose of this document is to list and describe the terms that define the BDQ Core Tests, each represented as a term in the `bdqcore:` namespace. This document provides normative values and explanations for the properties used to describe each Test, including its label, expected input, outputs, parameters, and relationships to Use Cases and quality dimensions.
+
+The Tests defined here are intended to be modular and interoperable. They can be combined into Profiles tailored to particular data quality needs or assessment goals. Each Test is specified independently to support implementation flexibility, but all Tests are grounded in the principles of fitness for use as described in the BDQ Core framework.
 
 ### 1.2 Audience
 
-Users who need to understand the BDQ Core Tests, including all technical details required by the standard. 
+This document is intended for users who need to understand the detailed structure and semantics of the BDQ Core Tests. It is particularly useful for:
+
+- Software developers implementing or integrating BDQ Core Test logic into applications;
+- Data managers and curators reviewing or selecting appropriate Tests for assessing data quality;
+- Standards developers and information architects building upon the BDQ Core framework;
+- Anyone requiring detailed, machine-readable specifications of the Tests used in BDQ Core.
+
+Familiarity with RDF vocabularies, Darwin Core, and fitness for use principles will help readers make full use of this document, though the structure and examples are designed to support a broad technical audience.
 
 ### 1.3 Associated Documents
 
-The bdqcore: vocabulary includes: 
-
-- A [BDQ Core Quick Reference Guide](../terms/bdqcore/index.md) to the BDQ Core Tests.
-- This document, a term-list for the vocabulary, containing the vocabulary terms and their metadata.
-- A [BDQ Core Tests and Assertions](../bdqcore/index.md) document with normative guidance on the use of the bdqcore vocabulary.
-
-In addition, guides are provided in the form of the [BDQ Core User's Guide](../guide/users/index.md) and the [BDQ Core Implementer's Guide](../guide/implementers/index.md) .
+For the list and links to all associated documents see the [Biodiversity Data Quality Core](../../index.md) page, which lists the parts of the standard.
 
 ### 1.4 Term List Distributions
 
@@ -178,8 +183,8 @@ Terms used to describe the terms in this vocabulary follow the guidance of the [
 | Example Implementations (skos:note) | non-normative | A general note, for any purpose. In present context: Name or links to one or more entities that have an implementation of the Test. | Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501) |
 | Example Implementation Source Code (skos:note) | non-normative | A general note, for any purpose. In present context: A link to code that implements the Test. | [https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/ DwCMetadataDQ.java#L834](https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L834) |
 | Source (skos:historyNote) | non-normative | A note about the past state/use/meaning of a concept. In present context: The origin of the concept of the Test. | VertNet |
-| Developed As Github Issue (skos:historyNote) | non-normative | A note about the past state/use/meaning of a concept. In present context: A link to the GitHub issue that provided rationale management, recording a history (changes and comments) of the development of the Test. | [https://github.com/tdwg/bdq/issues/ 63](https://github.com/tdwg/bdq/issues/63) |
-| Github Issue Labels (skos:note) | non-normative | A general note, for any purpose. In present context: Labels applied to Github Issue noted in the skos:historyNote. | TG2 Amendment OTHER CODED Test VOCABULARY Conformance Parameterized CORE |
+| Developed As GitHub Issue (skos:historyNote) | non-normative | A note about the past state/use/meaning of a concept. In present context: A link to the GitHub issue that provided rationale management, recording a history (changes and comments) of the development of the Test. | [https://github.com/tdwg/bdq/issues/ 63](https://github.com/tdwg/bdq/issues/63) |
+| GitHub Issue Labels (skos:note) | non-normative | A general note, for any purpose. In present context: Labels applied to GitHub Issue noted in the skos:historyNote. | TG2 Amendment OTHER CODED Test VOCABULARY Conformance Parameterized CORE |
 | Argument GUID (bdqffdq:Argument) | normative | A value that, when provided to a test Specification to replace a Parameter changes the behavior of the test in a defined manner. | 1b66a16a-5e76-4eca-a400-d097ac136ac1 |
 
 
@@ -548,11 +553,11 @@ Including MultiRecord Measures
 			<td>VertNet</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/63</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Amendment OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -655,11 +660,11 @@ Including MultiRecord Measures
 			<td>ALA</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/32</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Amendment SPACE CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
@@ -766,11 +771,11 @@ Including MultiRecord Measures
 			<td>iDigBio, GBIF, BISON, FP, Kurator, ALA</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/54</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Amendment SPACE CODED Test Consistency CORE</td>
 		</tr>
 		<tr>
@@ -881,11 +886,11 @@ Including MultiRecord Measures
 			<td>ALA, GBIF, iDigBio</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/73</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Amendment SPACE CODED Test VOCABULARY Completeness ISO/DCMI STANDARD Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -984,11 +989,11 @@ Including MultiRecord Measures
 			<td>https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L931</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/48</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Amendment SPACE CODED Test VOCABULARY Conformance ISO/DCMI STANDARD CORE</td>
 		</tr>
 		<tr>
@@ -1083,11 +1088,11 @@ Including MultiRecord Measures
 			<td>Kurator</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/26</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Amendment TIME CODED Test Conformance ISO/DCMI STANDARD CORE</td>
 		</tr>
 		<tr>
@@ -1182,11 +1187,11 @@ Including MultiRecord Measures
 			<td>TG2-Gainesville</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/127</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Amendment TIME CODED Test Conformance CORE</td>
 		</tr>
 		<tr>
@@ -1285,11 +1290,11 @@ Including MultiRecord Measures
 			<td>VertNet</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/41</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Amendment OTHER CODED Test Conformance ISO/DCMI STANDARD CORE</td>
 		</tr>
 		<tr>
@@ -1392,11 +1397,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/276</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Amendment OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -1499,11 +1504,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/269</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Amendment OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -1606,11 +1611,11 @@ Including MultiRecord Measures
 			<td>VertNet, FP, Kurator</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/86</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Amendment TIME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
@@ -1709,11 +1714,11 @@ Including MultiRecord Measures
 			<td>TG2-Gainesville</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/93</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Amendment TIME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
@@ -1812,11 +1817,11 @@ Including MultiRecord Measures
 			<td>TG2-Gainesville</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/132</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Amendment TIME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
@@ -1911,11 +1916,11 @@ Including MultiRecord Measures
 			<td>Paul Morris, Lee Belbin</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/61</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Amendment TIME CODED Test Conformance ISO/DCMI STANDARD CORE</td>
 		</tr>
 		<tr>
@@ -2014,11 +2019,11 @@ Including MultiRecord Measures
 			<td>VertNet</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/52</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Amendment TIME CODED Test Completeness ISO/DCMI STANDARD CORE</td>
 		</tr>
 		<tr>
@@ -2125,11 +2130,11 @@ Including MultiRecord Measures
 			<td>ALA, GBIF</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/102</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Amendment SPACE CODED Test Completeness Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -2232,11 +2237,11 @@ Including MultiRecord Measures
 			<td>Paul Morris</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/60</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Amendment SPACE CODED Test VOCABULARY Conformance CORE</td>
 		</tr>
 		<tr>
@@ -2339,11 +2344,11 @@ Including MultiRecord Measures
 			<td>VertNet</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/133</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Amendment OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -2442,11 +2447,11 @@ Including MultiRecord Measures
 			<td>https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L1121</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/55</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Amendment SPACE CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
@@ -2541,11 +2546,11 @@ Including MultiRecord Measures
 			<td>https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L1775</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/68</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Amendment SPACE CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
@@ -2640,11 +2645,11 @@ Including MultiRecord Measures
 			<td>TG2-Gainesville</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/128</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Amendment TIME CODED Test Conformance CORE</td>
 		</tr>
 		<tr>
@@ -2751,11 +2756,11 @@ Including MultiRecord Measures
 			<td>ALA</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/75</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Amendment OTHER CODED Test VOCABULARY Completeness Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -2858,11 +2863,11 @@ Including MultiRecord Measures
 			<td>ALA</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/115</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Amendment OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -2965,11 +2970,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/278</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Amendment OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -3080,11 +3085,11 @@ Including MultiRecord Measures
 			<td>FP-Akka</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/57</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Amendment NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -3195,11 +3200,11 @@ Including MultiRecord Measures
 			<td>iDigBio</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/71</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Amendment NAME CODED Test VOCABULARY Completeness Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -3306,11 +3311,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/284</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Amendment OTHER CODED Test VOCABULARY Conformance CORE</td>
 		</tr>
 		<tr>
@@ -3417,11 +3422,11 @@ Including MultiRecord Measures
 			<td>TDWG2018</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/163</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Amendment NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -3528,11 +3533,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/286</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Amendment OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -3631,11 +3636,11 @@ Including MultiRecord Measures
 			<td>ALA, Lee Belbin</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/29</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Issue OTHER Test CORE</td>
 		</tr>
 	</tbody>
@@ -3734,11 +3739,11 @@ Including MultiRecord Measures
 			<td>GBIF</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/287</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Issue SPACE CODED Test Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -3837,11 +3842,11 @@ Including MultiRecord Measures
 			<td>ALA</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/72</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Issue NAME SPACE TIME CODED Test Resolution CORE</td>
 		</tr>
 		<tr>
@@ -3932,11 +3937,11 @@ Including MultiRecord Measures
 			<td>ALA, CRIA</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/94</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Issue OTHER CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
@@ -4015,11 +4020,11 @@ Including MultiRecord Measures
 			<td>John Wieczorek</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/65</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Measure NAME SPACE TIME OTHER Test CORE</td>
 		</tr>
 	</tbody>
@@ -4102,11 +4107,11 @@ Including MultiRecord Measures
 			<td>Alex Thompson</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/140</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Measure TIME CODED Test CORE</td>
 		</tr>
 	</tbody>
@@ -4181,11 +4186,11 @@ Including MultiRecord Measures
 			<td>TG2-Gainesville</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/135</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Measure NAME SPACE OTHER Test CORE</td>
 		</tr>
 	</tbody>
@@ -4260,11 +4265,11 @@ Including MultiRecord Measures
 			<td>Lee Belbin</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/31</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Measure NAME SPACE TIME OTHER Test CORE</td>
 		</tr>
 	</tbody>
@@ -4339,11 +4344,11 @@ Including MultiRecord Measures
 			<td>TG2-Gainesville</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/134</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Measure NAME SPACE TIME OTHER Test CORE</td>
 		</tr>
 	</tbody>
@@ -4414,11 +4419,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/58</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test Completeness CORE</td>
 		</tr>
 	</tbody>
@@ -4493,11 +4498,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/104</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -4576,11 +4581,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/123</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test VOCABULARY Consistency Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -4659,11 +4664,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/77</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -4742,11 +4747,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/50</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Consistency ISO/DCMI STANDARD Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -4825,11 +4830,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/56</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Consistency CORE</td>
 		</tr>
 		<tr>
@@ -4908,11 +4913,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/51</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Consistency Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -4987,11 +4992,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/87</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Likeliness CORE</td>
 		</tr>
 	</tbody>
@@ -5062,11 +5067,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/109</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Conformance CORE</td>
 		</tr>
 	</tbody>
@@ -5137,11 +5142,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/98</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Completeness CORE</td>
 		</tr>
 	</tbody>
@@ -5216,11 +5221,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/20</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Conformance ISO/DCMI STANDARD CORE</td>
 		</tr>
 	</tbody>
@@ -5295,11 +5300,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/62</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Consistency ISO/DCMI STANDARD CORE</td>
 		</tr>
 	</tbody>
@@ -5374,11 +5379,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/201</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -5457,11 +5462,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/21</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -5536,11 +5541,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/42</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Completeness CORE</td>
 		</tr>
 	</tbody>
@@ -5615,11 +5620,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/76</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Likeliness ISO/DCMI STANDARD Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -5694,11 +5699,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/69</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Conformance ISO/DCMI STANDARD CORE</td>
 		</tr>
 	</tbody>
@@ -5769,11 +5774,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/125</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Conformance CORE</td>
 		</tr>
 	</tbody>
@@ -5844,11 +5849,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/147</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Conformance CORE</td>
 		</tr>
 	</tbody>
@@ -5919,11 +5924,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/103</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test Completeness CORE</td>
 		</tr>
 	</tbody>
@@ -5998,11 +6003,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/91</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance ISO/DCMI STANDARD CORE</td>
 		</tr>
 	</tbody>
@@ -6073,11 +6078,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/79</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Conformance CORE</td>
 		</tr>
 	</tbody>
@@ -6148,11 +6153,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/119</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Completeness CORE</td>
 		</tr>
 	</tbody>
@@ -6223,11 +6228,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/30</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Conformance CORE</td>
 		</tr>
 	</tbody>
@@ -6298,11 +6303,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/96</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Completeness CORE</td>
 		</tr>
 	</tbody>
@@ -6377,11 +6382,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/275</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -6456,11 +6461,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/131</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Conformance CORE</td>
 		</tr>
 	</tbody>
@@ -6535,11 +6540,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/268</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -6618,11 +6623,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/36</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -6697,11 +6702,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/33</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Completeness CORE</td>
 		</tr>
 	</tbody>
@@ -6772,11 +6777,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/66</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Conformance ISO/DCMI STANDARD CORE</td>
 		</tr>
 	</tbody>
@@ -6847,11 +6852,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/88</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Completeness CORE</td>
 		</tr>
 	</tbody>
@@ -6922,11 +6927,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/67</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Consistency CORE</td>
 		</tr>
 	</tbody>
@@ -7001,11 +7006,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/28</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -7084,11 +7089,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/122</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -7163,11 +7168,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/78</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Completeness CORE</td>
 		</tr>
 	</tbody>
@@ -7242,11 +7247,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/59</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Conformance CORE</td>
 		</tr>
 	</tbody>
@@ -7321,11 +7326,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/81</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -7400,11 +7405,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/216</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
 		</tr>
 	</tbody>
@@ -7475,11 +7480,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/99</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test Completeness CORE</td>
 		</tr>
 	</tbody>
@@ -7554,11 +7559,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/38</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -7633,11 +7638,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/40</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Completeness CORE</td>
 		</tr>
 	</tbody>
@@ -7712,11 +7717,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/187</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -7795,11 +7800,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/112</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Likeliness Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -7878,11 +7883,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/107</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -7957,11 +7962,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/24</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Conformance CORE</td>
 		</tr>
 	</tbody>
@@ -8036,11 +8041,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/39</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -8115,11 +8120,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/108</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Conformance CORE</td>
 		</tr>
 	</tbody>
@@ -8190,11 +8195,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/126</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Conformance CORE</td>
 		</tr>
 	</tbody>
@@ -8265,11 +8270,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/259</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
 		</tr>
 	</tbody>
@@ -8340,11 +8345,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/47</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test Completeness CORE</td>
 		</tr>
 	</tbody>
@@ -8415,11 +8420,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/117</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test Completeness CORE</td>
 		</tr>
 	</tbody>
@@ -8494,11 +8499,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/116</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 	</tbody>
@@ -8573,11 +8578,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/83</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -8656,11 +8661,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/277</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -8739,11 +8744,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/22</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -8818,11 +8823,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/101</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test Consistency CORE</td>
 		</tr>
 	</tbody>
@@ -8893,11 +8898,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/244</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
 		</tr>
 	</tbody>
@@ -8968,11 +8973,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/212</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
 		</tr>
 	</tbody>
@@ -9043,11 +9048,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/120</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
 		</tr>
 	</tbody>
@@ -9122,11 +9127,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/46</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -9201,11 +9206,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/82</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
 		</tr>
 	</tbody>
@@ -9280,11 +9285,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/283</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test VOCABULARY Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -9359,11 +9364,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/130</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Conformance CORE</td>
 		</tr>
 	</tbody>
@@ -9438,11 +9443,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/199</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -9517,11 +9522,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/161</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
 		</tr>
 	</tbody>
@@ -9596,11 +9601,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/162</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -9675,11 +9680,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/105</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
 		</tr>
 	</tbody>
@@ -9754,11 +9759,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/70</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -9837,11 +9842,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/285</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -9920,11 +9925,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/84</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -9999,11 +10004,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/49</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Completeness CORE</td>
 		</tr>
 	</tbody>
@@ -10074,11 +10079,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/58</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test Completeness CORE</td>
 		</tr>
 	</tbody>
@@ -10153,11 +10158,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/104</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -10236,11 +10241,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/123</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test VOCABULARY Consistency Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -10319,11 +10324,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/77</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -10402,11 +10407,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/50</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Consistency ISO/DCMI STANDARD Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -10485,11 +10490,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/56</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Consistency CORE</td>
 		</tr>
 		<tr>
@@ -10568,11 +10573,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/51</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Consistency Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -10647,11 +10652,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/87</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Likeliness CORE</td>
 		</tr>
 	</tbody>
@@ -10722,11 +10727,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/109</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Conformance CORE</td>
 		</tr>
 	</tbody>
@@ -10797,11 +10802,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/98</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Completeness CORE</td>
 		</tr>
 	</tbody>
@@ -10876,11 +10881,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/20</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Conformance ISO/DCMI STANDARD CORE</td>
 		</tr>
 	</tbody>
@@ -10955,11 +10960,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/62</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Consistency ISO/DCMI STANDARD CORE</td>
 		</tr>
 	</tbody>
@@ -11034,11 +11039,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/201</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -11117,11 +11122,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/21</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -11196,11 +11201,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/42</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Completeness CORE</td>
 		</tr>
 	</tbody>
@@ -11275,11 +11280,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/76</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Likeliness ISO/DCMI STANDARD Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -11354,11 +11359,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/69</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Conformance ISO/DCMI STANDARD CORE</td>
 		</tr>
 	</tbody>
@@ -11429,11 +11434,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/125</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Conformance CORE</td>
 		</tr>
 	</tbody>
@@ -11504,11 +11509,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/147</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Conformance CORE</td>
 		</tr>
 	</tbody>
@@ -11579,11 +11584,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/103</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test Completeness CORE</td>
 		</tr>
 	</tbody>
@@ -11658,11 +11663,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/91</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance ISO/DCMI STANDARD CORE</td>
 		</tr>
 	</tbody>
@@ -11733,11 +11738,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/79</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Conformance CORE</td>
 		</tr>
 	</tbody>
@@ -11808,11 +11813,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/119</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Completeness CORE</td>
 		</tr>
 	</tbody>
@@ -11883,11 +11888,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/30</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Conformance CORE</td>
 		</tr>
 	</tbody>
@@ -11958,11 +11963,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/96</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Completeness CORE</td>
 		</tr>
 	</tbody>
@@ -12037,11 +12042,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/275</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -12116,11 +12121,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/131</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Conformance CORE</td>
 		</tr>
 	</tbody>
@@ -12195,11 +12200,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/268</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -12278,11 +12283,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/36</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -12357,11 +12362,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/33</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Completeness CORE</td>
 		</tr>
 	</tbody>
@@ -12432,11 +12437,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/66</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Conformance ISO/DCMI STANDARD CORE</td>
 		</tr>
 	</tbody>
@@ -12507,11 +12512,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/88</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Completeness CORE</td>
 		</tr>
 	</tbody>
@@ -12582,11 +12587,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/67</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Consistency CORE</td>
 		</tr>
 	</tbody>
@@ -12661,11 +12666,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/28</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -12744,11 +12749,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/122</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -12823,11 +12828,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/78</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Completeness CORE</td>
 		</tr>
 	</tbody>
@@ -12902,11 +12907,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/59</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Conformance CORE</td>
 		</tr>
 	</tbody>
@@ -12981,11 +12986,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/81</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -13060,11 +13065,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/216</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
 		</tr>
 	</tbody>
@@ -13135,11 +13140,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/99</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test Completeness CORE</td>
 		</tr>
 	</tbody>
@@ -13214,11 +13219,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/38</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -13293,11 +13298,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/40</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Completeness CORE</td>
 		</tr>
 	</tbody>
@@ -13372,11 +13377,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/187</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -13455,11 +13460,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/112</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Likeliness Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -13538,11 +13543,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/107</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -13617,11 +13622,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/24</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Conformance CORE</td>
 		</tr>
 	</tbody>
@@ -13696,11 +13701,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/39</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -13775,11 +13780,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/108</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Conformance CORE</td>
 		</tr>
 	</tbody>
@@ -13850,11 +13855,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/126</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Conformance CORE</td>
 		</tr>
 	</tbody>
@@ -13925,11 +13930,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/259</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
 		</tr>
 	</tbody>
@@ -14000,11 +14005,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/47</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test Completeness CORE</td>
 		</tr>
 	</tbody>
@@ -14075,11 +14080,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/117</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test Completeness CORE</td>
 		</tr>
 	</tbody>
@@ -14154,11 +14159,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/116</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 	</tbody>
@@ -14233,11 +14238,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/83</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -14316,11 +14321,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/277</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -14399,11 +14404,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/22</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -14478,11 +14483,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/101</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test Consistency CORE</td>
 		</tr>
 	</tbody>
@@ -14553,11 +14558,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/244</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
 		</tr>
 	</tbody>
@@ -14628,11 +14633,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/212</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
 		</tr>
 	</tbody>
@@ -14703,11 +14708,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/120</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
 		</tr>
 	</tbody>
@@ -14782,11 +14787,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/46</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -14861,11 +14866,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/82</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
 		</tr>
 	</tbody>
@@ -14940,11 +14945,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/283</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test VOCABULARY Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -15019,11 +15024,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/130</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Conformance CORE</td>
 		</tr>
 	</tbody>
@@ -15098,11 +15103,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/199</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -15177,11 +15182,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/161</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
 		</tr>
 	</tbody>
@@ -15256,11 +15261,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/162</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -15335,11 +15340,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/105</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
 		</tr>
 	</tbody>
@@ -15414,11 +15419,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/70</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -15497,11 +15502,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/285</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -15580,11 +15585,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/84</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -15659,11 +15664,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/49</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Completeness CORE</td>
 		</tr>
 	</tbody>
@@ -15746,11 +15751,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/58</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
@@ -15853,11 +15858,11 @@ Including MultiRecord Measures
 			<td>VertNet</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/104</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -15964,11 +15969,11 @@ Including MultiRecord Measures
 			<td>TG2-Gainesville</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/123</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test VOCABULARY Consistency Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -16071,11 +16076,11 @@ Including MultiRecord Measures
 			<td>https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L1345</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/77</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -16182,11 +16187,11 @@ Including MultiRecord Measures
 			<td>ALA, GBIF, iDigBio</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/50</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Consistency ISO/DCMI STANDARD Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -16293,11 +16298,11 @@ Including MultiRecord Measures
 			<td>ALA</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/56</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Consistency CORE</td>
 		</tr>
 		<tr>
@@ -16408,11 +16413,11 @@ Including MultiRecord Measures
 			<td>ALA, OBIS</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/51</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Consistency Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -16511,11 +16516,11 @@ Including MultiRecord Measures
 			<td>ALA, GBIF, OBIS</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/87</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Likeliness CORE</td>
 		</tr>
 		<tr>
@@ -16610,11 +16615,11 @@ Including MultiRecord Measures
 			<td>ALA</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/109</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Conformance CORE</td>
 		</tr>
 		<tr>
@@ -16705,11 +16710,11 @@ Including MultiRecord Measures
 			<td>https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2308</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/98</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Completeness CORE</td>
 		</tr>
 		<tr>
@@ -16808,11 +16813,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/20</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Conformance ISO/DCMI STANDARD CORE</td>
 		</tr>
 		<tr>
@@ -16911,11 +16916,11 @@ Including MultiRecord Measures
 			<td>GBIF</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/62</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Consistency ISO/DCMI STANDARD CORE</td>
 		</tr>
 		<tr>
@@ -17018,11 +17023,11 @@ Including MultiRecord Measures
 			<td>VertNet, Kurator</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/201</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -17129,11 +17134,11 @@ Including MultiRecord Measures
 			<td>ALA, GBIF</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/21</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -17232,11 +17237,11 @@ Including MultiRecord Measures
 			<td>https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L747</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/42</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
@@ -17343,11 +17348,11 @@ Including MultiRecord Measures
 			<td>GBIF, ALA</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/76</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Likeliness ISO/DCMI STANDARD Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -17438,11 +17443,11 @@ Including MultiRecord Measures
 			<td>https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/main/java/org/filteredpush/qc/date/DwCOtherDateDQ.java#L61</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/69</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Conformance ISO/DCMI STANDARD CORE</td>
 		</tr>
 		<tr>
@@ -17537,11 +17542,11 @@ Including MultiRecord Measures
 			<td>TG2-Gainesville</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/125</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Conformance CORE</td>
 		</tr>
 		<tr>
@@ -17636,11 +17641,11 @@ Including MultiRecord Measures
 			<td>TDWG2018 DQIG Meeting; TG2-Gainesville</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/147</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Conformance CORE</td>
 		</tr>
 		<tr>
@@ -17731,11 +17736,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/103</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
@@ -17834,11 +17839,11 @@ Including MultiRecord Measures
 			<td>VertNet</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/91</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance ISO/DCMI STANDARD CORE</td>
 		</tr>
 		<tr>
@@ -17929,11 +17934,11 @@ Including MultiRecord Measures
 			<td>ALA, GBIF, OBIS</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/79</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Conformance CORE</td>
 		</tr>
 		<tr>
@@ -18024,11 +18029,11 @@ Including MultiRecord Measures
 			<td>TG2-Gainesville</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/119</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
@@ -18119,11 +18124,11 @@ Including MultiRecord Measures
 			<td>ALA, GBIF, OBIS</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/30</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Conformance CORE</td>
 		</tr>
 		<tr>
@@ -18210,11 +18215,11 @@ Including MultiRecord Measures
 			<td>https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2273</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/96</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
@@ -18317,11 +18322,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/275</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -18424,11 +18429,11 @@ Including MultiRecord Measures
 			<td>TG2-Gainesville</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/131</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Conformance CORE</td>
 		</tr>
 		<tr>
@@ -18531,11 +18536,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/268</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -18642,11 +18647,11 @@ Including MultiRecord Measures
 			<td>VertNet</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/36</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -18741,11 +18746,11 @@ Including MultiRecord Measures
 			<td>TG2-Gainesville</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/33</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
@@ -18840,11 +18845,11 @@ Including MultiRecord Measures
 			<td>Paul Morris</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/66</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Conformance ISO/DCMI STANDARD CORE</td>
 		</tr>
 		<tr>
@@ -18939,11 +18944,11 @@ Including MultiRecord Measures
 			<td>@Tasilee</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/88</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
@@ -19038,11 +19043,11 @@ Including MultiRecord Measures
 			<td>GBIF</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/67</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Consistency CORE</td>
 		</tr>
 		<tr>
@@ -19145,11 +19150,11 @@ Including MultiRecord Measures
 			<td>iDigBio</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/28</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -19256,11 +19261,11 @@ Including MultiRecord Measures
 			<td>iDigBio</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/122</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -19351,11 +19356,11 @@ Including MultiRecord Measures
 			<td>https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2105</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/78</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
@@ -19454,11 +19459,11 @@ Including MultiRecord Measures
 			<td>ALA, GBIF</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/59</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Conformance CORE</td>
 		</tr>
 		<tr>
@@ -19561,11 +19566,11 @@ Including MultiRecord Measures
 			<td>GBIF</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/81</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -19660,11 +19665,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/216</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
@@ -19755,11 +19760,11 @@ Including MultiRecord Measures
 			<td>https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L274</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/99</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
@@ -19862,11 +19867,11 @@ Including MultiRecord Measures
 			<td>John Wieczorek</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/38</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -19965,11 +19970,11 @@ Including MultiRecord Measures
 			<td>Lee Belbin</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/40</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
@@ -20072,11 +20077,11 @@ Including MultiRecord Measures
 			<td>ALA, GBIF</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/187</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -20183,11 +20188,11 @@ Including MultiRecord Measures
 			<td>ALA, GBIF</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/112</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Likeliness Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -20294,11 +20299,11 @@ Including MultiRecord Measures
 			<td>ALA, GBIF</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/107</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -20393,11 +20398,11 @@ Including MultiRecord Measures
 			<td>ALA, GBIF, OBIS</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/24</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Conformance CORE</td>
 		</tr>
 		<tr>
@@ -20500,11 +20505,11 @@ Including MultiRecord Measures
 			<td>ALA, GBIF</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/39</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -20599,11 +20604,11 @@ Including MultiRecord Measures
 			<td>@Tasilee</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/108</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Conformance CORE</td>
 		</tr>
 		<tr>
@@ -20694,11 +20699,11 @@ Including MultiRecord Measures
 			<td>TG2-Gainesville (MONTH_INVALID/MONTH_IN_RANGE previously in spreadsheet, from ALA?)</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/126</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Conformance CORE</td>
 		</tr>
 		<tr>
@@ -20789,11 +20794,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/259</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
@@ -20884,11 +20889,11 @@ Including MultiRecord Measures
 			<td>VertNet</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/47</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
@@ -20979,11 +20984,11 @@ Including MultiRecord Measures
 			<td>ALA</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/117</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
@@ -21086,11 +21091,11 @@ Including MultiRecord Measures
 			<td>ALA</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/116</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -21193,11 +21198,11 @@ Including MultiRecord Measures
 			<td>iDigBio</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/83</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -21304,11 +21309,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/277</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -21415,11 +21420,11 @@ Including MultiRecord Measures
 			<td>iDigBio</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/22</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -21518,11 +21523,11 @@ Including MultiRecord Measures
 			<td>Paula Zermoglio</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/101</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test Consistency CORE</td>
 		</tr>
 		<tr>
@@ -21613,11 +21618,11 @@ Including MultiRecord Measures
 			<td>TG2</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/244</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
@@ -21712,11 +21717,11 @@ Including MultiRecord Measures
 			<td>TG2 December 2023</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/212</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
@@ -21807,11 +21812,11 @@ Including MultiRecord Measures
 			<td>TG2-Gainesville</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/120</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
@@ -21914,11 +21919,11 @@ Including MultiRecord Measures
 			<td>ALA</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/46</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -22013,11 +22018,11 @@ Including MultiRecord Measures
 			<td>ALA,GBIF,OBIS</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/82</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
@@ -22120,11 +22125,11 @@ Including MultiRecord Measures
 			<td>VertNet</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/283</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test VOCABULARY Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -22227,11 +22232,11 @@ Including MultiRecord Measures
 			<td>TG2-Gainesville</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/130</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Conformance CORE</td>
 		</tr>
 		<tr>
@@ -22334,11 +22339,11 @@ Including MultiRecord Measures
 			<td>ALA, GBIF</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/199</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -22433,11 +22438,11 @@ Including MultiRecord Measures
 			<td>TDWG2018</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/161</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
@@ -22540,11 +22545,11 @@ Including MultiRecord Measures
 			<td>TDWG2018</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/162</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -22643,11 +22648,11 @@ Including MultiRecord Measures
 			<td>Lee Belbin</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/105</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
@@ -22750,11 +22755,11 @@ Including MultiRecord Measures
 			<td>ALA, GBIF, CRIA</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/70</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -22861,11 +22866,11 @@ Including MultiRecord Measures
 			<td>ALA, GBIF</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/285</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -22972,11 +22977,11 @@ Including MultiRecord Measures
 			<td>VertNet</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/84</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
@@ -23071,11 +23076,11 @@ Including MultiRecord Measures
 			<td>TG2-Gainesville</td>
 		</tr>
 		<tr>
-			<td>Developed As Github Issue</td>
+			<td>Developed As GitHub Issue</td>
 			<td>https://github.com/tdwg/bdq/issues/49</td>
 		</tr>
 		<tr>
-			<td>Github Issue Labels</td>
+			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>

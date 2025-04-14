@@ -42,25 +42,29 @@
 **Comment**<br>
 {comment}
 
-### Table of Contents ###
-
 {toc}
 
-## 1 Introduction
+## 1. Introduction
 
-This document contains information that is considered supplemental to the normative and non-normative BDQ Core standard documentation. 
+### 1.1 Purpose
 
-### 1.1 Purpose 
+The purpose of this document is to provide supplemental information that supports the interpretation, development, and long-term maintenance of the BDQ Core standard. It offers historical context, rationale, and informal guidance gathered during the development of BDQ Core, with the aim of helping users extend, adapt, or evaluate the framework in their own domains.
 
-This document provides a historical context and lessons learned during the development of BDQ Core. This document will assist those seeking to evaluate their current tests or generate additional tests specific to their domain. 
+This document includes lessons learned, design considerations, test development principles, and reflections on the structure of BDQ Core. It serves both as a record of how BDQ Core evolved and as a practical reference for those planning to create additional Tests or Profiles.
 
 ### 1.2 Audience
 
-This document is relevant to curators, aggregators, data publishers, data analysts, programmers/developers and other practitioners that wish to understand, evaluate and/or improve the quality of the biodiversity data within their domain. This document also provides some guidelines based on the knowledge of the authors, for those who may wish to maintain BDQ Core.
+This document is intended for practitioners who wish to deepen their understanding of BDQ Core beyond the formal specifications. It will be useful for:
+
+- Data curators, aggregators, and publishers working to evaluate or improve data quality;
+- Developers and analysts designing new Tests or adapting existing ones to domain-specific needs;
+- Standards maintainers and contributors seeking insight into the design motivations and history of BDQ Core.
+
+The document also provides some informal guidance for those tasked with maintaining or evolving the standard over time.
 
 ### 1.3 Associated Documents
 
-This document provides practical information that goes beyond the normative guidance in the [BDQ Core User's Guide](../guide/users/index.md) and [BDQ Core Implementer's Guide](../guide/implementers/index.md) for those who wish to use or implement BDQ Core.
+For the list and links to all associated documents see the [Biodiversity Data Quality Core](../../index.md) page, which lists the parts of the standard.
 
 ### 1.4 Status of the content of this document
 
@@ -355,7 +359,7 @@ What Amendments act upon Information Elements that are acted upon by more than o
        } 
     } 
 
-### 2.4.1 Listing Identifiers for Tests
+#### 2.4.1 Listing Identifiers for Tests
 
 The following competency question obtains a list of identifiers of Validation Tests: 
 
@@ -381,7 +385,7 @@ Example results:
 
 The label is intended as the identifier of a Test for humans, the Term Name as a machine readable identifier.
 
-### 2.4.2 Framework Competency Question including an oa:annotation
+#### 2.4.2 Framework Competency Question including an oa:annotation
 
 Given a resource (an occurrence record) list all assertions produced by validations run on that resource where the resource is the target of an annotation and the assertion is the body of the annotation.  Includes the motivation and date generated for the annotation in the response.   
 
@@ -540,7 +544,7 @@ Gives the following distribution of Test Types by Dimension:
 | Completeness  | 22 | 11 | 1 | 1 | 
 | Likeliness    | 2  |    |   |   | 
 | Resolution    |    |    | 1 | 1 | 
-| Reliability    |    |    |   | 2 | 
+| Reliability   |    |    |   | 2 | 
 
 ### 3.4 Domain Scope of Tests
 
@@ -734,17 +738,17 @@ From [xkcd.com/2867](https://xkcd.com/2867/), by Randall Munroe, xkcd.com.  Lice
 
 ## 5 Rationale Management Documentation
 
-### 5.1 Developing BDQ Core Tests Using Github Issues
+### 5.1 Developing BDQ Core Tests Using GitHub Issues
 
 The Tests were developed as issues in the tdwg/bdq GitHub environment. The reasoning was that GitHub provided a comprehensive and consistent environment in which to develop, expose, discuss and manage all aspects of the development of BDQ Core. We used a standard template as the first Comment on GitHub Issues pages for documenting all Tests. This immediately exposed all proposed tests to anyone following the work. GitHub then enabled anyone to comment on the Test issues, facilitating discussion. When there was general agreement among the Authors, the values within the template could be easily modified and documented.  The comments in the issues served as a tool for rationale management, documenting why particular decisions were made about the tests during their development.
 
 GitHub's API also provided ample latitude to 'scrape' and filter Issues using GitHub tags (see below) to extract any subset of Tests by Descriptors to CSV files that would be used in the submission and proposed maintenance of the BDQ Core standard.   The [bdq_issue_to_csv](https://github.com/kurator-org/bdq_issue_to_csv) library (Morris 2024) uses GitHub's API to obtain a json representation of the GitHub issues, then parses the agreed upon format for markdown tables for describing issues into a CSV file (destined to become the [term-version CSV](../../vocabulary/bdqcore_term_versions.csv) file for the bdqcore: vocabulary.  The [kurator-ffdq](https://github.com/kurator-org/kurator-ffdq) library (Lowery et al. 2025), which contains a Java representation of bdqffdq: classes is used to process the term-version file into RDF representations of the tests (e.g., [bdqcore.xml](../../dist/bdqcore.xml) (and can also query combined bdqffdq: and bdqcore: rdf, and can generate stub python and java methods for test implementations, and can also execute appropriately annotated Java test implementations and produce data quality reports).  
 
-### 5.2 Github Tags and Categorizing Issues
+### 5.2 GitHub Tags and Categorizing Issues
 
 The development of each Test, with documentation of why particular decisions were made with regard to that test, has been documented in issues in the tdwg/bdq GitHub repository. Each Test issue was tagged with the following GitHub issue labels to assist in finding, evaluating, and asserting conclusions about each Test. 
 
-These tags are retained as the "Github Issue Labels" (a skos:note on each Method instance) in BDQ Core.
+These tags are retained as the "GitHub Issue Labels" (a skos:note on each Method instance) in BDQ Core.
 
 | tag | definition | comment |
 | --- | ---------- | ------- |
@@ -788,7 +792,7 @@ The tag NEEDS WORK was repeatedly added and removed to issues and was a valuable
 #### 5.2.4 Diagram of the OTHER-oriented tests and InformationElementsActedUpon
 ![Diagram of the 'OTHER'- oriented tests and InformationElementsActedUpon.](TestsOther.png "OTHER by InformationElements")
 
-### 5.3 Using Markdown Tables in Github Issues to Develop Test Descriptors
+### 5.3 Using Markdown Tables in GitHub Issues to Develop Test Descriptors
 
 Each test issue in GitHub begins with a table in markdown format describing the Test.  The terminology of the Test Descriptors in this markdown table documented below differs slightly from the terms used in the Framework but represent all key aspects of each test. Some Descriptors such as the GUID are intended for machine consumption, some such as the "Description" are designed to be human-readable for consumers of biodiversity data quality reports while Descriptors such as the "Specification" ensure that implementers have no ambiguity about how the test should be coded. 
 
@@ -836,7 +840,7 @@ Only a subset of all [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Cor
 
 **Notes** [non-normative]: Additional comments that the Authors believed necessary for an accurate understanding of the Test or issues that implementers needed to be aware of. Example: For [TAXONID_FROM_TAXON](https://rs.tdwg.org/bdqcore/terms/431467d6-9b4b-48fa-a197-cd5379f5e889), “This is the taxonID inferred from the Darwin Core Taxon class, not from any other sense of Taxon. Return a result with no value and a Result.status of NOT_AMENDED with a Response.comment of ambiguous if the information provided does not resolve to a unique result (e.g., if homonyms exist and there is insufficient information in the provided data, for example using the lowest ranking taxa in conjunction with dwc:scientificNameAuthorship, to resolve them).  When referencing a GBIF taxon by GBIF's identifier for that taxon, use the pseudo-namespace "gbif:" and the form "gbif:{integer}" as the value for dwc:taxonID.”.
 
-## 6 Code used to build BDQ Core Components
+## 6 Code for BDQ Core Components
 
 The specifications for the BDQ Core Tests were developed in Markdown Tables in GitHub issues (initially created by Alex Thompson by using the GitHub API from a spreadsheet of tests developed in the BDQ TG2 Gainesville meeting).  It was recognised early on that these would also need to be serialized to CSV (and later that this CSV would need to become a term-version file), so code was written (python by Lee Belbin, and Java (bdq_issue_to_csv (Morris 2024))) to extract the markdown tables to CSV lists of tests.  The descriptors in the issue markdown tables changed over time, and the columns in the CSV also changed over time (most markedly in late 2024 while preparing BDQ Core for submission), so this code has changed over time.  The kurator-ffdq (Lowery et al. 2025) code developed by David Lowery is capable of loading a CSV list of test descriptors into a set of Java classes that can be serialized as RDF.  This code was maintained and the configuration changed over time to accomodate changes in the test CSV file.  Kurator-ffdq was regularly used to produce RDF representations of the tests.  Kurator-ffdq is also able to generate stub Java (and python) methods, and this functionality was used to add tests to and maintain 4 FilteredPush/Kurator libraries of test implementations.  
 

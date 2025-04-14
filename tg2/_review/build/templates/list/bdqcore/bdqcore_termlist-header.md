@@ -40,36 +40,30 @@
 **Comment**<br>
 {comment}
 
-# Table of Contents
 {toc}
 
 ## 1 Introduction
 
-This document lists the BDQ Core Tests. These are the terms from the namespace `bdqcore:` (the CORE Tests). The description of these terms relies heavily on the [Fitness For Use Framework Ontology List of Terms](../bdqffdq/index.md) (Veiga 2016, Veiga et al. 2017). Terms are also used from the [Data Quality Dimension Controlled Vocabulary List of Terms](../list/bdqdim/index.md) (data quality Dimension from Veiga et al. 2017), [Data Quality Enhancement Controlled Vocabulary List of Terms](../list/bdqenh/index.md) (Test Enhancements), [Data Quality Criterion Controlled Vocabulary List of Terms](../list/bdqcrit/index.md) (Test Criteria), and [BDQ Controlled Vocabulary List of Terms](../list/bdq/index.md) (additional vocabulary terms). For background details see Chapman et al. (2017).
-
-The focus of this standard is the specification of a suite of Tests that operate on single Darwin Core (Wieczorek et al. 2012) encoded records, for example the Test [VALIDATION_COUNTRYCODE_STANDARD](https://rs.tdwg.org/bdqcore/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe). This (SingleRecord) Test checks the value of dwc:countryCode against the source authority ISO 3166-1-alpha-2 Country Code (which imlementations may access at https://www.iso.org/obp/ui/#search). This standard also includes specifications for MultiRecord Tests that accumulate results of multiple SingleRecord Tests, allowing, for example, a determination that 70% of records in a dataset had a valid dwc:countryCode.
-
-Each Test is designed to stand in isolation. This is by design to both support the mixing and matching of these and other Tests to meet particular data quality needs, and so as not impose any particular model of Test execution on implementation frameworks. Implementations of Test execution frameworks MAY execute Tests in on data records in parallel, on data records in sequence, as queries on datasets, or even on unique values. While the BDQ Core Tests are described in isolation, they MUST be used in sets that are related to a use of the data, as data does not have quality in the abstract, it only has quality with respect to some use. Thus each Test is linked to one or more Use Cases, which are formal descriptions of uses to which data may be put. The bdq: vocabulary defines the set of Use Cases referenced here. BDQ Core Tests can be freely composed in other ways for other uses. Additional Tests can be defined, including those that expand in scope beyond Darwin Core terms.
-
-Tests described here are paired in that all Validation Tests that assesses some aspect of data quality are associated with an Amendment Test that may be able to improve the quality of data with respect to that Validation Test.
-
 ### 1.1 Purpose
 
-This document lists the BDQ Core Tests, provides values for the terms that describe these Tests, and provides a brief explanation of those terms.
+The purpose of this document is to list and describe the terms that define the BDQ Core Tests, each represented as a term in the `bdqcore:` namespace. This document provides normative values and explanations for the properties used to describe each Test, including its label, expected input, outputs, parameters, and relationships to Use Cases and quality dimensions.
+
+The Tests defined here are intended to be modular and interoperable. They can be combined into Profiles tailored to particular data quality needs or assessment goals. Each Test is specified independently to support implementation flexibility, but all Tests are grounded in the principles of fitness for use as described in the BDQ Core framework.
 
 ### 1.2 Audience
 
-Users who need to understand the BDQ Core Tests, including all technical details required by the standard. 
+This document is intended for users who need to understand the detailed structure and semantics of the BDQ Core Tests. It is particularly useful for:
+
+- Software developers implementing or integrating BDQ Core Test logic into applications;
+- Data managers and curators reviewing or selecting appropriate Tests for assessing data quality;
+- Standards developers and information architects building upon the BDQ Core framework;
+- Anyone requiring detailed, machine-readable specifications of the Tests used in BDQ Core.
+
+Familiarity with RDF vocabularies, Darwin Core, and fitness for use principles will help readers make full use of this document, though the structure and examples are designed to support a broad technical audience.
 
 ### 1.3 Associated Documents
 
-The bdqcore: vocabulary includes: 
-
-- A [BDQ Core Quick Reference Guide](../terms/bdqcore/index.md) to the BDQ Core Tests.
-- This document, a term-list for the vocabulary, containing the vocabulary terms and their metadata.
-- A [BDQ Core Tests and Assertions](../bdqcore/index.md) document with normative guidance on the use of the bdqcore vocabulary.
-
-In addition, guides are provided in the form of the [BDQ Core User's Guide](../guide/users/index.md) and the [BDQ Core Implementer's Guide](../guide/implementers/index.md) .
+For the list and links to all associated documents see the [Biodiversity Data Quality Core](../../index.md) page, which lists the parts of the standard.
 
 ### 1.4 Term List Distributions
 

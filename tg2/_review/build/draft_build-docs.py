@@ -20,7 +20,10 @@ import shutil
 import rdflib     
 from rdflib import Graph 
 import function_lib # library of reusable functions for TDWG build scripts
-from function_lib import build_authors_contributors_markdown, build_contributors_markdown, build_authors_markdown, markdown_heading_to_link
+from function_lib import build_authors_contributors_markdown, build_contributors_markdown
+from function_lib import build_authors_markdown
+#from function_lib import markdown_heading_to_link
+from function_lib import generate_markdown_toc
 
 
 # -----------------
@@ -275,7 +278,7 @@ for templatePath, document in directories.items() :
 			entity = r.subject
 			entity = entity.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:");
 			term = entity.replace("bdqffdq:","");
-			text = text + "### {}\n\n".format(term)
+			text = text + "#### {}\n\n".format(term)
 			text = text + "- Name: {}\n".format(entity)
 			# text = text + "- Preferred Label: {}\n".format(r.prefLabel)
 			text = text + "- Definition: {}\n".format(r.definition)
@@ -291,7 +294,7 @@ for templatePath, document in directories.items() :
 			entity = r.subject
 			entity = entity.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:");
 			term = entity.replace("bdqffdq:","");
-			text = text + "### {}\n\n".format(term)
+			text = text + "#### {}\n\n".format(term)
 			text = text + "- Name: {}\n".format(entity)
 			# text = text + "- Preferred Label: {}\n".format(r.prefLabel)
 			text = text + "- Definition: {}\n".format(r.definition)
@@ -312,7 +315,7 @@ for templatePath, document in directories.items() :
 			entity = r.subject
 			entity = entity.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:")
 			term = entity.replace("bdqffdq:","")
-			text = text + "### {}\n\n".format(term)
+			text = text + "#### {}\n\n".format(term)
 			text = text + "- Name: {}\n".format(entity)
 			# text = text + "- Preferred Label: {}\n".format(r.prefLabel)
 			text = text + "- Definition: {}\n".format(r.definition)
@@ -328,7 +331,7 @@ for templatePath, document in directories.items() :
 			entity = r.subject
 			entity = entity.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:");
 			term = entity.replace("bdqffdq:","");
-			text = text + "### {}\n\n".format(term)
+			text = text + "#### {}\n\n".format(term)
 			text = text + "- Name: {}\n".format(entity)
 			rtype = r.type.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:");
 			text = text + "- Type: {}\n".format(rtype)
@@ -390,13 +393,16 @@ for templatePath, document in directories.items() :
 	footer = footer.replace('{references}', references)
 
 	## Produce a table of contents from the headings 
-	toc = ""
-	regexHeadings = "^#+ [0-9]+.*"
-	for line in (header+text+footer).splitlines() :
-		aHeading = re.search(regexHeadings,line)
-		if (aHeading) : 
-			toc = toc + "- " + markdown_heading_to_link(aHeading.group()) + "\n"
+	toc = generate_markdown_toc((header+text+footer).splitlines())
 	header = header.replace('{toc}', toc)
+
+#	toc = ""
+#	regexHeadings = "^#+ [0-9]+.*"
+#	for line in (header+text+footer).splitlines() :
+#		aHeading = re.search(regexHeadings,line)
+#		if (aHeading) : 
+#			toc = toc + "- " + markdown_heading_to_link(aHeading.group()) + "\n"
+#	header = header.replace('{toc}', toc)
 	
 	warning = "<!--- This file is generated from templates by code, DO NOT EDIT by hand --->\n"
 	

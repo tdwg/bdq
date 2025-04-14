@@ -40,48 +40,63 @@
 **Comment**<br>
 {comment}
 
-## 1 Introduction
+{toc}
 
-This document provides the full details of the terms of the bdq: vocabulary (<http://rs.tdwg.org/version/bdq/{ratification_date}>). For details and rationale, see Chapman et al. (2020).
+## 1. Introduction
 
 ### 1.1 Purpose
 
-This is the term-list document for the bdq: vocabulary.
+The purpose of this document is to provide the full term list for the `bdq:` controlled vocabulary, which supports the specification and use of BDQ Core Tests. The `bdq:` vocabulary includes concepts used throughout the BDQ Core standard to describe parameters, data structures, source authorities, and special value cases relevant to the execution and behavior of Tests.
+
+This term list defines the formal structure and meanings of these concepts and provides reference material for implementation and documentation purposes.
 
 ### 1.2 Audience
 
-This document is for those needing a technical understanding of the BDQ Core Tests. 
+This document is intended for technical users who need a precise understanding of the vocabulary elements used in BDQ Core Test specifications and reports. It will be particularly useful for:
 
-### 1.3 Data Quality Vocabulary terms.
+- Developers implementing or extending BDQ Core Test logic;
+- Standards developers and data modelers working with BDQ Core vocabularies;
+- Analysts and system designers configuring parameterized data quality assessments.
 
-The bdq: vocabulary inclues four sets of concepts: 
-* a list of bdqffdq:UseCases for the bdqcore: Tests
-* a list of bdqffdq:Parameters used in the bdqcore: Tests, including the concept of bdq:sourceAuthority and some named sourceAuthority parameters
-* a list of named bdqffdq:InformationElements used by MultiRecord Measure Tests
-* the concepts bdq:Empty and bdq:NotEmpty.
+Familiarity with RDF vocabularies and the BDQ Core framework is recommended for full comprehension, but the document is organized to be accessible for any reader needing detailed term definitions.
 
-### 1.4 Term List Distributions
+### 1.3 Data Quality Vocabulary Terms
+
+The `bdq:` vocabulary includes four groups of concepts used across BDQ Core:
+
+- **Use Cases** (`bdqffdq:UseCase`) – formal representations of the purposes for which data might be evaluated using BDQ Core Tests.
+- **Test Parameters** (`bdqffdq:Parameter`) – concepts used to configure the behavior of Tests, including named parameters like `bdq:sourceAuthority`.
+- **Information Elements** – used by MultiRecord Measure Tests to refer to aggregated or referenced values.
+- **Empty/NotEmpty Concepts** – `bdq:Empty` and `bdq:NotEmpty`, which provide shared semantics for Tests dealing with missing or present values.
+
+These terms ensure consistent representation and enable structured interpretation of Test configurations and outcomes.
+
+### 1.4 Associated Documents
+
+For the list and links to all associated documents see the [Biodiversity Data Quality Core](../../index.md) page, which lists the parts of the standard.
+
+### 1.5 Term List Distributions
 
 | Description | IRI | Download URL |
 | ----------- | --- | -----------  |
 | HTML file   | {current_iri} | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/docs/list/{pref_namespace_prefix}/index.md |
 | RDF/XML file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/dist/{pref_namespace_prefix}.xml |
 
-### 1.5 Status of the content of this document
+### 1.6 Status of the content of this document
 
 Sections 1 and 3 are non-normative.
 
 Section 2 is normative.
 
-Section [1.8 Key to Vocabulary Terms](#18-Key-to-Vocabulary-Terms) identifies which values in Section 4 are normative and which are non-normative.
+Section [1.9 Key to Vocabulary Terms](#19-Key-to-Vocabulary-Terms) identifies which values in Section 4 are normative and which are non-normative.
 
 Any sentence or phrase beginning with "For example" or "e.g." is non-normative.
 
-### 1.6 RFC 2119 key words
+### 1.7 RFC 2119 key words
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [BCP 14](https://www.rfc-editor.org/info/bcp14) [\[RFC 2119\]](https://datatracker.ietf.org/doc/html/rfc2119) and [\[RFC 8174\]](https://datatracker.ietf.org/doc/html/rfc8174) when, and only when, they appear in all capitals, as shown here.
 
-### 1.7 Namespace abbreviations
+### 1.8 Namespace abbreviations
 
 The following namespace abbreviations are used in this document:
 
@@ -100,7 +115,7 @@ The following namespace abbreviations are used in this document:
 | skos:        | http://www.w3.org/2004/02/skos/core#        |
 | tdwgutility: | http://rs.tdwg.org/dwc/terms/attributes/    |
 
-### 1.8 Key to Vocabulary Terms
+### 1.9 Key to Vocabulary Terms
 
 The terminology used to describe the terms in this vocabulary follows the TDWG Standards Documentation Standard (SDS). Each term definition includes the original RDF definition, and may also provide a TDWG-specific interpretation from the SDS, as well as a definition tailored to this local context.
 

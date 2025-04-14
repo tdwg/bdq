@@ -42,27 +42,28 @@
 **Comment**<br>
 {comment}
 
-### Table of Contents ###
-
 {toc}
 
 ## 1 Introduction
 
-With tests for data quality comes the need for validation data to test the behavior of test implementations. It is important that synthetic data created for the purposes of validating the behavior of test implementation, or data representing real occurences that has been modified for that purpose not be conflated with real data in analyses of patterns of biodiversity. This document explains how the creators of such validation datasets can unambiguously mark such data for exclusion, and how users can use these markings to exclude such data from analysies.
-
 ### 1.1 Purpose
 
-This document specifies the marking and identification of synthetic data as clearly distinguishable from real world occurrences.
+The purpose of this document is to provide guidance for marking and identifying synthetic or modified biodiversity data that has been created for the purpose of validating BDQ Core Test implementations. It establishes conventions for distinguishing such artificial or altered data from authentic biodiversity occurrence records, ensuring that validation datasets are not unintentionally incorporated into biodiversity analyses or downstream data pipelines.
+
+The document specifies how to explicitly mark validation data, including wholly synthetic records, real-world data with synthetic modifications, and real data reused for illustrative or example purposes. These practices support the integrity of analytical results and uphold trust in biodiversity data platforms.
 
 ### 1.2 Audience
 
-This document is designed for creators of datasets for the validation of implementations of BDQ Core Tests, to see how to mark their data, and for aggregators and users of biodiversity data, to identify criteria for excluding synthetic or modified data from their pipelines. 
+This document is intended for two primary audiences:
+
+- **Dataset creators** preparing synthetic or modified datasets to test or validate BDQ Core Test implementations, who need to mark those datasets appropriately;
+- **Aggregators and data consumers**, including biodiversity researchers and system integrators, who need to recognize and exclude synthetic or altered data to avoid contaminating biodiversity analyses.
+
+The document assumes a working familiarity with biodiversity data concepts, but no prior knowledge of BDQ Core Test internals is required.
 
 ### 1.3 Associated Documents
 
-See the introduction to the [BDQ Core Standard](../intro/index.md) for more context.
-
-See the [Implementer's Guide](../guide/implementers/index.md) for discussion of validation of implementations of bdqcore: tests.
+For the list and links to all associated documents see the [Biodiversity Data Quality Core](../../index.md) page, which lists the parts of the standard.
 
 ### 1.4 Status of the content of this document
 

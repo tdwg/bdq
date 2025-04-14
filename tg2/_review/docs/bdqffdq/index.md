@@ -41,74 +41,209 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
 **Comment**<br>
 Draft Standard for Review
 
-### Table of Contents ###
+## Table of Contents ##
+[1. Introduction](#1-introduction)
+  - [1.1 Purpose](#11-purpose)
+  - [1.2 Audience](#12-audience)
+  - [1.3 Associated Documents](#13-associated-documents)
+    - [1.3.1 Distributions for bdqffdq:](#131-distributions-for-bdqffdq)
+  - [1.4 Namespace abbreviations](#14-namespace-abbreviations)
+  - [1.5 Status of the Content of this Document](#15-status-of-the-content-of-this-document)
+  - [1.6 RFC 2119 key words](#16-rfc-2119-key-words)
+  - [1.7 Diagram of Classes and Properties](#17-diagram-of-classes-and-properties)
 
-- [1 Introduction](#1-introduction)
-- [1.1 Purpose](#11-purpose)
-- [1.2 Audience](#12-audience)
-- [1.3 Documents About the bdqffdq: Ontology](#13-documents-about-the-bdqffdq-ontology)
-- [1.3.1 Distributions for bdqffdq:](#131-distributions-for-bdqffdq)
-- [1.4 Namespace abbreviations](#14-namespace-abbreviations)
-- [1.5 Status of the Content of this Document](#15-status-of-the-content-of-this-document)
-- [1.6 RFC 2119 key words](#16-rfc-2119-key-words)
-- [1.7 Diagram of Classes and Properties](#17-diagram-of-classes-and-properties)
-- [2 Use of Terms (normative)](#2-use-of-terms-normative)
-- [2.1 Use of Properties (normative)](#21-use-of-properties-normative)
-- [2.1.1 Properties Relating to Data Quality Needs (normative)](#211-properties-relating-to-data-quality-needs-normative)
-- [2.1.2 Properties Relating Data Quality Needs to Data Quality Solutions](#212-properties-relating-data-quality-needs-to-data-quality-solutions)
-- [2.1.3 Properties Relating to Data Quality Solutions Provided in a Test Description](#213-properties-relating-to-data-quality-solutions-provided-in-a-test-description)
-- [2.1.4 Properties relating to data quality solutions provided by an implementation](#214-properties-relating-to-data-quality-solutions-provided-by-an-implementation)
-- [2.1.5 Properties relating data quality reports](#215-properties-relating-data-quality-reports)
-- [2.1.6 Identifying the Test that produced an Assertion](#216-identifying-the-test-that-produced-an-assertion)
-- [2.1.6.1 Properties that should be one to one.](#2161-properties-that-should-be-one-to-one)
-- [3 Term Index](#3-term-index)
-- [3.1 Key to Vocabulary Terms](#31-key-to-vocabulary-terms)
-- [3.2 Indexes](#32-indexes)
-- [3.2.1 Alphabetical Index of classes](#321-alphabetical-index-of-classes)
-- [3.2.2 Alphabetical Index of object properties](#322-alphabetical-index-of-object-properties)
-- [3.2.3 Alphabetical Index of data properties](#323-alphabetical-index-of-data-properties)
-- [3.2.4 Alphabetical Index of named individuals](#324-alphabetical-index-of-named-individuals)
-- [4 Vocabulary](#4-vocabulary)
-- [4.1 Class terms](#41-class-terms)
-- [4.2 ObjectProperty terms](#42-objectproperty-terms)
-- [4.3 DataProperty terms](#43-dataproperty-terms)
-- [4.4 NamedIndividual terms](#44-namedindividual-terms)
-- [5 Fitness For Use Framework Summary of Mathematical Formalization (normative)](#5-fitness-for-use-framework-summary-of-mathematical-formalization-normative)
+[2 Use of Terms (normative)](#2-use-of-terms-normative)
+  - [2.1 Use of Properties (normative)](#21-use-of-properties-normative)
+    - [2.1.1 Properties Relating to Data Quality Needs (normative)](#211-properties-relating-to-data-quality-needs-normative)
+    - [2.1.2 Properties Relating Data Quality Needs to Data Quality Solutions](#212-properties-relating-data-quality-needs-to-data-quality-solutions)
+    - [2.1.3 Properties Relating to Data Quality Solutions Provided in a Test Description](#213-properties-relating-to-data-quality-solutions-provided-in-a-test-description)
+    - [2.1.4 Properties relating to data quality solutions provided by an implementation](#214-properties-relating-to-data-quality-solutions-provided-by-an-implementation)
+    - [2.1.5 Properties relating data quality reports](#215-properties-relating-data-quality-reports)
+    - [2.1.6 Identifying the Test that produced an Assertion](#216-identifying-the-test-that-produced-an-assertion)
+      - [2.1.6.1 Properties that should be one to one](#2161-properties-that-should-be-one-to-one)
 
+[3 Term Index](#3-term-index)
+  - [3.1 Key to Vocabulary Terms](#31-key-to-vocabulary-terms)
+  - [3.2 Indexes](#32-indexes)
+    - [3.2.1 Alphabetical Index of classes](#321-alphabetical-index-of-classes)
+    - [3.2.2 Alphabetical Index of object properties](#322-alphabetical-index-of-object-properties)
+    - [3.2.3 Alphabetical Index of data properties](#323-alphabetical-index-of-data-properties)
+    - [3.2.4 Alphabetical Index of named individuals](#324-alphabetical-index-of-named-individuals)
 
-## 1 Introduction
+[4 Vocabulary](#4-vocabulary)
+  - [4.1 Class terms](#41-class-terms)
+    - [AbstractInformationElement](#abstractinformationelement)
+    - [ActedUpon](#actedupon)
+    - [Amendment](#amendment)
+    - [AmendmentAssertion](#amendmentassertion)
+    - [AmendmentMethod](#amendmentmethod)
+    - [AmendmentPolicy](#amendmentpolicy)
+    - [Argument](#argument)
+    - [Assertion](#assertion)
+    - [Consulted](#consulted)
+    - [Criterion](#criterion)
+    - [DataQualityDimension](#dataqualitydimension)
+    - [DataQualityMethod](#dataqualitymethod)
+    - [DataQualityNeed](#dataqualityneed)
+    - [DataQualityProfile](#dataqualityprofile)
+    - [DataQualityReport](#dataqualityreport)
+    - [DataResource](#dataresource)
+    - [Enhancement](#enhancement)
+    - [FundamentalConcept](#fundamentalconcept)
+    - [Implementation](#implementation)
+    - [ImprovementTarget](#improvementtarget)
+    - [InformationElement](#informationelement)
+    - [Issue](#issue)
+    - [IssueAssertion](#issueassertion)
+    - [IssueConcept](#issueconcept)
+    - [IssueMethod](#issuemethod)
+    - [IssuePolicy](#issuepolicy)
+    - [Measure](#measure)
+    - [MeasurementAssertion](#measurementassertion)
+    - [MeasurementMethod](#measurementmethod)
+    - [MeasurementPolicy](#measurementpolicy)
+    - [Mechanism](#mechanism)
+    - [NeedConcept](#needconcept)
+    - [Parameter](#parameter)
+    - [Policy](#policy)
+    - [ReportConcept](#reportconcept)
+    - [ResourceType](#resourcetype)
+    - [ResponseQualifier](#responsequalifier)
+    - [ResponseResult](#responseresult)
+    - [ResponseStatus](#responsestatus)
+    - [SolutionsConcept](#solutionsconcept)
+    - [Specification](#specification)
+    - [UseCase](#usecase)
+    - [Validation](#validation)
+    - [ValidationAssertion](#validationassertion)
+    - [ValidationConcept](#validationconcept)
+    - [ValidationMethod](#validationmethod)
+    - [ValidationPolicy](#validationpolicy)
+  - [4.2 ObjectProperty terms](#42-objectproperty-terms)
+    - [amendmentProperty](#amendmentproperty)
+    - [appliesTo](#appliesto)
+    - [composedOf](#composedof)
+    - [containsAssertion](#containsassertion)
+    - [forAmendment](#foramendment)
+    - [forDataQualityNeed](#fordataqualityneed)
+    - [forIssue](#forissue)
+    - [forMeasure](#formeasure)
+    - [forValidation](#forvalidation)
+    - [hasActedUponInformationElement](#hasacteduponinformationelement)
+    - [hasArgument](#hasargument)
+    - [hasConsultedInformationElement](#hasconsultedinformationelement)
+    - [hasCriterion](#hascriterion)
+    - [hasDataQualityDimension](#hasdataqualitydimension)
+    - [hasEnhancement](#hasenhancement)
+    - [hasInformationElement](#hasinformationelement)
+    - [hasParameter](#hasparameter)
+    - [hasResourceType](#hasresourcetype)
+    - [hasResponseQualifier](#hasresponsequalifier)
+    - [hasResponseResult](#hasresponseresult)
+    - [hasResponseStatus](#hasresponsestatus)
+    - [hasSpecification](#hasspecification)
+    - [hasUseCase](#hasusecase)
+    - [implementedBy](#implementedby)
+    - [improvedBy](#improvedby)
+    - [includedInPolicy](#includedinpolicy)
+    - [issueProperty](#issueproperty)
+    - [measurementProperty](#measurementproperty)
+    - [producesAssertion](#producesassertion)
+    - [reportProperty](#reportproperty)
+    - [targetedIssue](#targetedissue)
+    - [targetedMeasure](#targetedmeasure)
+    - [targetedValidation](#targetedvalidation)
+    - [usesSpecification](#usesspecification)
+    - [validationProperty](#validationproperty)
+  - [4.3 DataProperty terms](#43-dataproperty-terms)
+    - [hasAuthoritiesDefaults](#hasauthoritiesdefaults)
+    - [hasDateLastUpdated](#hasdatelastupdated)
+    - [hasExpectedResponse](#hasexpectedresponse)
+    - [hasResponseComment](#hasresponsecomment)
+    - [hasResponseResultValue](#hasresponseresultvalue)
+  - [4.4 NamedIndividual terms](#44-namedindividual-terms)
+    - [MultiRecord](#multirecord)
+    - [SingleRecord](#singlerecord)
+    - [COMPLETE](#complete)
+    - [IS_ISSUE](#is_issue)
+    - [IS_ISSUE](#is_issue)
+    - [NOT_COMPLETE](#not_complete)
+    - [NOT_ISSUE](#not_issue)
+    - [POTENTIAL_ISSUE](#potential_issue)
+    - [AMENDED](#amended)
+    - [NOT_AMENDED](#not_amended)
+    - [RUN_HAS_RESULT](#run_has_result)
 
-The Biodiversity Data Quality Fitness for Use Framework (hereafter referred to as "Framework") ontology formally describes the terms and relationships between them for evaluating the quality of biodiversity data. This conceptual Framework (Veiga 2016, Veiga et al. 2017) is comprehensive and allows different interpretations and manners of use by different stakeholders. The Framework also provides a base for the bdq: and bdqcore: namespace vocabularies.
+[5 Fitness For Use Framework Summary of Mathematical Formalization (normative)](#5-fitness-for-use-framework-summary-of-mathematical-formalization-normative)
 
-The bdqffdq: vocabulary is a specification of a framework for describing data quality. Each of the Tests in the bdqcore: vocabulary in this standard has been designed with this Framework and is framed using the terms and concepts from the Framework. The Framework provides the context for each Test, and has shaped decisions made about how each Test is defined.
+[Fundamental Concepts](#fundamental-concepts)
 
-The Framework considers data to have quality with respect to some specified use. It provides a means to describe a use of data (bdqffdq:UseCase), and what is needed for some dataset to have quality for that use, that is for some dataset to be fit for a specified purpose.
+[Properties](#properties)
 
-This document lists terms used to describe 'data quality' / 'fitness for use' in the context of biodiversity data. These are based on Veiga (2016) and Veiga et al. (2017), with a few changes for increased clarity.
+[Notation](#notation)
+
+[Derived Concepts](#derived-concepts)
+  - [General](#general)
+    - [Measure](#measure)
+    - [Validation](#validation)
+    - [Amendment](#amendment)
+    - [Issue](#issue)
+  - [Data Quality Needs](#data-quality-needs)
+    - [Measurement Policy](#measurement-policy)
+    - [Validation Policy](#validation-policy)
+    - [Enhancement Policy](#enhancement-policy)
+    - [Data Quality Profile](#data-quality-profile)
+    - [Use Case Coverage](#use-case-coverage)
+    - [Valuable Information Elements](#valuable-information-elements)
+    - [Acceptable Data Quality Measure](#acceptable-data-quality-measure)
+    - [Improvement Target](#improvement-target)
+  - [Data Quality Solutions](#data-quality-solutions)
+    - [Measurement Method](#measurement-method)
+    - [Validation Method](#validation-method)
+    - [Enhancement Method](#enhancement-method)
+    - [Implementation](#implementation)
+    - [Mechanism Coverage](#mechanism-coverage)
+  - [Data Quality Reports](#data-quality-reports)
+    - [Data Resource](#data-resource)
+    - [MeasurementAssertion](#measurementassertion)
+    - [ValidationAssertion](#validationassertion)
+    - [AmendmentAssertion](#amendmentassertion)
+    - [Data Quality Assessment](#data-quality-assessment)
+    - [Quality Control](#quality-control)
+    - [Quality Assurance](#quality-assurance)
+
+[Acronyms](#acronyms)
+
+[Glossary](#glossary)
+
+[References](#references)
+
+[Cite BDQ Core](#cite-bdq-core)
+
+## 1. Introduction
 
 ### 1.1 Purpose
 
-This document provides a technical understanding of the Framework (`bdqffdq:`) ontology. 
-The ontology follows open world principles and has limited restrictions.
-This document gathers normative statements about how to use the Framework in a meaningful way. 
+The purpose of this document is to present the formal ontology of the Biodiversity Data Quality Fitness for Use Framework, referred to by the namespace `bdqffdq:`. This ontology defines the terms, classes, and relationships used to represent data quality concepts in a structured and interoperable manner. It forms the conceptual and semantic foundation for the BDQ Core standard.
+
+This document gathers normative statements for the ontology, explains how to use it meaningfully within biodiversity data quality workflows, and reflects the open world assumptions of RDF/OWL modeling. It provides a reference for tools and implementations that rely on this ontology for describing quality-related elements such as Use Cases, Specifications, Criteria, Amendments, and Test responses.
 
 ### 1.2 Audience
 
-Technical users who need to understand how to describe data quality with the Biodiversity Data Quality Fitness for Use Framework.
+This document is intended for technical users who need to interact directly with the BDQ Core ontology. It will be especially useful for:
 
-### 1.3 Documents About the bdqffdq: Ontology
+- Ontology engineers and developers working on semantic web applications or data validation systems;
+- Standards developers seeking to align other vocabularies with BDQ Core;
+- Implementers generating or consuming RDF data that describes BDQ Core Tests or their results;
+- Researchers modeling use cases for biodiversity data quality assessments.
 
-The `bdqffdq:` vocabulary is an ontology, documentation for it can be found in: 
+Readers should be familiar with ontology concepts, RDF/OWL syntax, and open world reasoning.
 
-- This page, which provides normative guidance on the use of this ontology.
-- The [Fitness For Use Framework Ontology List of Terms](../list/bdqffdq/index.md), which provides the detailed definitions of the terms.
-- The [Fitness For Use Framework Ontology Vocabulary Extension](../extension/bdqffdq/index.md), which provides additional axioms that extend the vocabulary.
-- The [Biodiversity Data Quality Fitness for Use Framework](../../../vocabulary/bdqffdq.owl) Ontology in OWL.
-- Veiga (2016) and Veiga et al. (2017)
+### 1.3 Associated Documents
 
-In addition, the [Fitness For Use Framework Ontology Guide](../guide/bdqffdq/index.md) provides an illustrated guide to the use of the bdqffdq ontology.
+For the list and links to all associated documents see the [Biodiversity Data Quality Core](../../index.md) page, which lists the parts of the standard.
 
-### 1.3.1 Distributions for bdqffdq:
+#### 1.3.1 Distributions for bdqffdq:
 
 | Description | IRI | Download URL |
 | ----------- | --- | ------------ |
@@ -324,7 +459,7 @@ Each instance of a bdqffdq:Implementation MAY have zero to many bdqffdq:produces
 
 Each instance of a bdqffdq:Asssertion SHOULD be the object of exactly one bdqffdq:producesAssertion object property. 
 
-### 2.1.6 Identifying the Test that produced an Assertion
+#### 2.1.6 Identifying the Test that produced an Assertion
 
 Following the object properties from an instance of a bdqffdq:Assertion to an instance of a subclass of a bdqffdq:DataQualityNeed SHOULD identify one and only one instance of a subclass of a bdqffdq:DataQualityNeed for a single instance of a bdqffdq:Assertion. If this condition is not met, it is not possible to tell which Test with which parameter argument values produced the Assertion.
 
@@ -359,7 +494,7 @@ Given an Assertion, the following query returns which Test was run with which ar
 
 Where, in this query, the text {id of assertion to look up} is a placeholder to replace with the id of the instance of the bdqffdq:Assertion to look up.
 
-### 2.1.6.1 Properties that should be one to one.
+##### 2.1.6.1 Properties that should be one to one
 
 **Validation**
 
@@ -369,16 +504,6 @@ Where, in this query, the text {id of assertion to look up} is a placeholder to 
 - Each instance of a bdqffdq:Implementation SHOULD be the subject of one and only one bdqffdq:usesSpecification property.
 - Each instance of a bdqffdq:Implementation MAY be the subject of zero to many bdqffdq:producesAssertion properties.
 - Each instance of a bdqffdq:ValidationAssertion SHOULD be the object of one and only one bdqffdq:producesAssertion property.
-
-**Measure**
-
-- Each instance of a bdqffdq:Measure SHOULD be the object of one and only one bdqffdq:forMeasure property.
-- Each instance of a bdqffdq:MeasurementMethod SHOULD be the subject of one and only one bdqffdq:forMeasure property.
-- Each instance of a bdqffdq:Specification SHOULD be the object of one and only one bdqffdq:hasSpecification property.
-- Each instance of a bdqffdq:Implementation SHOULD be the subject of one and only one bdqffdq:usesSpecification property.
-- Each instance of a bdqffdq:Specification SHOULD be the object of one and only one bdqffdq:usesSpecification property.
-- Each instance of a bdqffdq:Implementation MAY be the subject of zero to many bdqffdq:producesAssertion properties.
-- Each instance of a bdqffdq:MeasurementAssertion SHOULD be the object of one and only one bdqffdq:producesAssertion property.
 
 **Issue**
 
@@ -399,6 +524,16 @@ Where, in this query, the text {id of assertion to look up} is a placeholder to 
 - Each instance of a bdqffdq:Specification SHOULD be the object of one and only one bdqffdq:usesSpecification property.
 - Each instance of a bdqffdq:Implementation MAY be the subject of zero to many bdqffdq:producesAssertion properties.
 - Each instance of a bdqffdq:AmendmentAssertion SHOULD be the object of one and only one bdqffdq:producesAssertion property.
+
+**Measure**
+
+- Each instance of a bdqffdq:Measure SHOULD be the object of one and only one bdqffdq:forMeasure property.
+- Each instance of a bdqffdq:MeasurementMethod SHOULD be the subject of one and only one bdqffdq:forMeasure property.
+- Each instance of a bdqffdq:Specification SHOULD be the object of one and only one bdqffdq:hasSpecification property.
+- Each instance of a bdqffdq:Implementation SHOULD be the subject of one and only one bdqffdq:usesSpecification property.
+- Each instance of a bdqffdq:Specification SHOULD be the object of one and only one bdqffdq:usesSpecification property.
+- Each instance of a bdqffdq:Implementation MAY be the subject of zero to many bdqffdq:producesAssertion properties.
+- Each instance of a bdqffdq:MeasurementAssertion SHOULD be the object of one and only one bdqffdq:producesAssertion property.
 
 ## 3 Term Index
 
@@ -543,7 +678,7 @@ Where, in this query, the text {id of assertion to look up} is a placeholder to 
 ## 4 Vocabulary
 
 ### 4.1 Class terms
-### AbstractInformationElement
+#### AbstractInformationElement
 
 - Name: [bdqffdq:AbstractInformationElement](https://rs.tdwg.org/bdqffdq/terms/AbstractInformationElement)
 - Preferred Label: Abstract Information Element
@@ -554,7 +689,7 @@ Where, in this query, the text {id of assertion to look up} is a placeholder to 
 
 ********************
 
-### ActedUpon
+#### ActedUpon
 
 - Name: [bdqffdq:ActedUpon](https://rs.tdwg.org/bdqffdq/terms/ActedUpon)
 - Preferred Label: Acted Upon
@@ -565,7 +700,7 @@ Where, in this query, the text {id of assertion to look up} is a placeholder to 
 
 ********************
 
-### Amendment
+#### Amendment
 
 - Name: [bdqffdq:Amendment](https://rs.tdwg.org/bdqffdq/terms/Amendment)
 - Preferred Label: Amendment
@@ -580,7 +715,7 @@ AM = { am | am = < ie, e, rt >, ie ∈ IE, e ∈ E ⋀ rt ∈ RT }
 
 ********************
 
-### AmendmentAssertion
+#### AmendmentAssertion
 
 - Name: [bdqffdq:AmendmentAssertion](https://rs.tdwg.org/bdqffdq/terms/AmendmentAssertion)
 - Preferred Label: Amendment Assertion
@@ -593,7 +728,7 @@ DQA(dr) = {dqa | dqa = < am, s, m, r >, am ∈ AM, s ∈ S, m ∈ M , r ∈ R �
 
 ********************
 
-### AmendmentMethod
+#### AmendmentMethod
 
 - Name: [bdqffdq:AmendmentMethod](https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod)
 - Preferred Label: Amendment Method
@@ -605,7 +740,7 @@ EM(am) = {s | s ⊂ S ⋀ am ∈ AM}
 
 ********************
 
-### AmendmentPolicy
+#### AmendmentPolicy
 
 - Name: [bdqffdq:AmendmentPolicy](https://rs.tdwg.org/bdqffdq/terms/AmendmentPolicy)
 - Preferred Label: Amendment Policy
@@ -617,7 +752,7 @@ EP(u) = {am | am ⊂ AM ⋀ u ∈ U }
 
 ********************
 
-### Argument
+#### Argument
 
 - Name: [bdqffdq:Argument](https://rs.tdwg.org/bdqffdq/terms/Argument)
 - Preferred Label: Argument
@@ -628,7 +763,7 @@ EP(u) = {am | am ⊂ AM ⋀ u ∈ U }
 
 ********************
 
-### Assertion
+#### Assertion
 
 - Name: [bdqffdq:Assertion](https://rs.tdwg.org/bdqffdq/terms/Assertion)
 - Preferred Label: Assertion
@@ -639,7 +774,7 @@ EP(u) = {am | am ⊂ AM ⋀ u ∈ U }
 
 ********************
 
-### Consulted
+#### Consulted
 
 - Name: [bdqffdq:Consulted](https://rs.tdwg.org/bdqffdq/terms/Consulted)
 - Preferred Label: Acted Upon
@@ -650,7 +785,7 @@ EP(u) = {am | am ⊂ AM ⋀ u ∈ U }
 
 ********************
 
-### Criterion
+#### Criterion
 
 - Name: [bdqffdq:Criterion](https://rs.tdwg.org/bdqffdq/terms/Criterion)
 - Preferred Label: Criterion
@@ -661,7 +796,7 @@ EP(u) = {am | am ⊂ AM ⋀ u ∈ U }
 
 ********************
 
-### DataQualityDimension
+#### DataQualityDimension
 
 - Name: [bdqffdq:DataQualityDimension](https://rs.tdwg.org/bdqffdq/terms/DataQualityDimension)
 - Preferred Label: Data Quality Dimension
@@ -672,7 +807,7 @@ EP(u) = {am | am ⊂ AM ⋀ u ∈ U }
 
 ********************
 
-### DataQualityMethod
+#### DataQualityMethod
 
 - Name: [bdqffdq:DataQualityMethod](https://rs.tdwg.org/bdqffdq/terms/DataQualityMethod)
 - Preferred Label: Data Quality Method
@@ -683,7 +818,7 @@ EP(u) = {am | am ⊂ AM ⋀ u ∈ U }
 
 ********************
 
-### DataQualityNeed
+#### DataQualityNeed
 
 - Name: [bdqffdq:DataQualityNeed](https://rs.tdwg.org/bdqffdq/terms/DataQualityNeed)
 - Preferred Label: Data Quality Need
@@ -694,7 +829,7 @@ EP(u) = {am | am ⊂ AM ⋀ u ∈ U }
 
 ********************
 
-### DataQualityProfile
+#### DataQualityProfile
 
 - Name: [bdqffdq:DataQualityProfile](https://rs.tdwg.org/bdqffdq/terms/DataQualityProfile)
 - Preferred Label: Data Quality Profile
@@ -706,7 +841,7 @@ DQP (u) = {dqp | dqp = mp(u) ⋃ vp(u) ⋃ ep(u), mp ∈ MP , vp ∈ VP , ep ∈
 
 ********************
 
-### DataQualityReport
+#### DataQualityReport
 
 - Name: [bdqffdq:DataQualityReport](https://rs.tdwg.org/bdqffdq/terms/DataQualityReport)
 - Preferred Label: Data Quality Report
@@ -717,7 +852,7 @@ DQP (u) = {dqp | dqp = mp(u) ⋃ vp(u) ⋃ ep(u), mp ∈ MP , vp ∈ VP , ep ∈
 
 ********************
 
-### DataResource
+#### DataResource
 
 - Name: [bdqffdq:DataResource](https://rs.tdwg.org/bdqffdq/terms/DataResource)
 - Preferred Label: Data Resource
@@ -730,7 +865,7 @@ DR = { dr | dr = < id, rt, v >, id ∈ I D, rt ∈ RT , (rt = sr ⋁ rt = ds) �
 
 ********************
 
-### Enhancement
+#### Enhancement
 
 - Name: [bdqffdq:Enhancement](https://rs.tdwg.org/bdqffdq/terms/Enhancement)
 - Preferred Label: Enhancement
@@ -741,7 +876,7 @@ DR = { dr | dr = < id, rt, v >, id ∈ I D, rt ∈ RT , (rt = sr ⋁ rt = ds) �
 
 ********************
 
-### FundamentalConcept
+#### FundamentalConcept
 
 - Name: [bdqffdq:FundamentalConcept](https://rs.tdwg.org/bdqffdq/terms/FundamentalConcept)
 - Preferred Label: Fundamental Concept
@@ -751,7 +886,7 @@ DR = { dr | dr = < id, rt, v >, id ∈ I D, rt ∈ RT , (rt = sr ⋁ rt = ds) �
 
 ********************
 
-### Implementation
+#### Implementation
 
 - Name: [bdqffdq:Implementation](https://rs.tdwg.org/bdqffdq/terms/Implementation)
 - Preferred Label: Implementation
@@ -763,7 +898,7 @@ I (s) = {m | m ⊂ M ⋀ s ∈ S}
 
 ********************
 
-### ImprovementTarget
+#### ImprovementTarget
 
 - Name: [bdqffdq:ImprovementTarget](https://rs.tdwg.org/bdqffdq/terms/ImprovementTarget)
 - Preferred Label: Improvement Target
@@ -775,7 +910,7 @@ IT(am) = {me ⋃ va | me ∈ ME, va ∈ VA ⋀ am ∈ AM}
 
 ********************
 
-### InformationElement
+#### InformationElement
 
 - Name: [bdqffdq:InformationElement](https://rs.tdwg.org/bdqffdq/terms/InformationElement)
 - Preferred Label: Information Element
@@ -786,7 +921,7 @@ IT(am) = {me ⋃ va | me ∈ ME, va ∈ VA ⋀ am ∈ AM}
 
 ********************
 
-### Issue
+#### Issue
 
 - Name: [bdqffdq:Issue](https://rs.tdwg.org/bdqffdq/terms/Issue)
 - Preferred Label: Issue
@@ -798,7 +933,7 @@ IS = { is | is = < ie, c, rt >, ie ∈ IE, c ∈ ∁C ⋀ rt ∈ RT }
 
 ********************
 
-### IssueAssertion
+#### IssueAssertion
 
 - Name: [bdqffdq:IssueAssertion](https://rs.tdwg.org/bdqffdq/terms/IssueAssertion)
 - Preferred Label: Issue Assertion
@@ -810,7 +945,7 @@ If a problem was found the ResponseResult is expected to carry a a value of IS_I
 
 ********************
 
-### IssueConcept
+#### IssueConcept
 
 - Name: [bdqffdq:IssueConcept](https://rs.tdwg.org/bdqffdq/terms/IssueConcept)
 - Preferred Label: Issue Concept
@@ -820,7 +955,7 @@ If a problem was found the ResponseResult is expected to carry a a value of IS_I
 
 ********************
 
-### IssueMethod
+#### IssueMethod
 
 - Name: [bdqffdq:IssueMethod](https://rs.tdwg.org/bdqffdq/terms/IssueMethod)
 - Preferred Label: Issue Method
@@ -831,7 +966,7 @@ If a problem was found the ResponseResult is expected to carry a a value of IS_I
 
 ********************
 
-### IssuePolicy
+#### IssuePolicy
 
 - Name: [bdqffdq:IssuePolicy](https://rs.tdwg.org/bdqffdq/terms/IssuePolicy)
 - Preferred Label: Issue Policy
@@ -842,7 +977,7 @@ If a problem was found the ResponseResult is expected to carry a a value of IS_I
 
 ********************
 
-### Measure
+#### Measure
 
 - Name: [bdqffdq:Measure](https://rs.tdwg.org/bdqffdq/terms/Measure)
 - Preferred Label: Measure
@@ -858,7 +993,7 @@ AM(me) = {va | me ∈ C D ⋀ va ⊂ C C}
 
 ********************
 
-### MeasurementAssertion
+#### MeasurementAssertion
 
 - Name: [bdqffdq:MeasurementAssertion](https://rs.tdwg.org/bdqffdq/terms/MeasurementAssertion)
 - Preferred Label: Measurement Assertion
@@ -871,7 +1006,7 @@ DQM(dr) = {dqm | dqm =< me, s, m, r >, me ∈ ME, s ∈ S, m ∈ M , r ∈ R ⋀
 
 ********************
 
-### MeasurementMethod
+#### MeasurementMethod
 
 - Name: [bdqffdq:MeasurementMethod](https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod)
 - Preferred Label: Measurement Method
@@ -883,7 +1018,7 @@ MM(me) = {s | s ⊂ S ⋀ me ∈ ME}
 
 ********************
 
-### MeasurementPolicy
+#### MeasurementPolicy
 
 - Name: [bdqffdq:MeasurementPolicy](https://rs.tdwg.org/bdqffdq/terms/MeasurementPolicy)
 - Preferred Label: Measurement Policy
@@ -895,7 +1030,7 @@ MP(u) = {me | me ⊂ ME ⋀ u ∈ U }
 
 ********************
 
-### Mechanism
+#### Mechanism
 
 - Name: [bdqffdq:Mechanism](https://rs.tdwg.org/bdqffdq/terms/Mechanism)
 - Preferred Label: Mechanism
@@ -907,7 +1042,7 @@ The bdqffdq concept of mechanism describes the entity that performs an assertion
 
 ********************
 
-### NeedConcept
+#### NeedConcept
 
 - Name: [bdqffdq:NeedConcept](https://rs.tdwg.org/bdqffdq/terms/NeedConcept)
 - Preferred Label: Need Concept
@@ -917,7 +1052,7 @@ The bdqffdq concept of mechanism describes the entity that performs an assertion
 
 ********************
 
-### Parameter
+#### Parameter
 
 - Name: [bdqffdq:Parameter](https://rs.tdwg.org/bdqffdq/terms/Parameter)
 - Preferred Label: Parameter
@@ -928,7 +1063,7 @@ The bdqffdq concept of mechanism describes the entity that performs an assertion
 
 ********************
 
-### Policy
+#### Policy
 
 - Name: [bdqffdq:Policy](https://rs.tdwg.org/bdqffdq/terms/Policy)
 - Preferred Label: Policy
@@ -939,7 +1074,7 @@ The bdqffdq concept of mechanism describes the entity that performs an assertion
 
 ********************
 
-### ReportConcept
+#### ReportConcept
 
 - Name: [bdqffdq:ReportConcept](https://rs.tdwg.org/bdqffdq/terms/ReportConcept)
 - Preferred Label: Report Concept
@@ -949,7 +1084,7 @@ The bdqffdq concept of mechanism describes the entity that performs an assertion
 
 ********************
 
-### ResourceType
+#### ResourceType
 
 - Name: [bdqffdq:ResourceType](https://rs.tdwg.org/bdqffdq/terms/ResourceType)
 - Preferred Label: Resource Type
@@ -960,7 +1095,7 @@ The bdqffdq concept of mechanism describes the entity that performs an assertion
 
 ********************
 
-### ResponseQualifier
+#### ResponseQualifier
 
 - Name: [bdqffdq:ResponseQualifier](https://rs.tdwg.org/bdqffdq/terms/ResponseQualifier)
 - Preferred Label: Response Qualifier
@@ -971,7 +1106,7 @@ The bdqffdq concept of mechanism describes the entity that performs an assertion
 
 ********************
 
-### ResponseResult
+#### ResponseResult
 
 - Name: [bdqffdq:ResponseResult](https://rs.tdwg.org/bdqffdq/terms/ResponseResult)
 - Preferred Label: Response.result
@@ -983,7 +1118,7 @@ The report ResponseResult in bdqffdq is represented as a value or a result objec
 
 ********************
 
-### ResponseStatus
+#### ResponseStatus
 
 - Name: [bdqffdq:ResponseStatus](https://rs.tdwg.org/bdqffdq/terms/ResponseStatus)
 - Preferred Label: Response.status
@@ -994,7 +1129,7 @@ The report ResponseResult in bdqffdq is represented as a value or a result objec
 
 ********************
 
-### SolutionsConcept
+#### SolutionsConcept
 
 - Name: [bdqffdq:SolutionsConcept](https://rs.tdwg.org/bdqffdq/terms/SolutionsConcept)
 - Preferred Label: Solutions Concept
@@ -1004,7 +1139,7 @@ The report ResponseResult in bdqffdq is represented as a value or a result objec
 
 ********************
 
-### Specification
+#### Specification
 
 - Name: [bdqffdq:Specification](https://rs.tdwg.org/bdqffdq/terms/Specification)
 - Preferred Label: Specification
@@ -1015,7 +1150,7 @@ The report ResponseResult in bdqffdq is represented as a value or a result objec
 
 ********************
 
-### UseCase
+#### UseCase
 
 - Name: [bdqffdq:UseCase](https://rs.tdwg.org/bdqffdq/terms/UseCase)
 - Preferred Label: Use Case
@@ -1026,7 +1161,7 @@ The report ResponseResult in bdqffdq is represented as a value or a result objec
 
 ********************
 
-### Validation
+#### Validation
 
 - Name: [bdqffdq:Validation](https://rs.tdwg.org/bdqffdq/terms/Validation)
 - Preferred Label: Validation
@@ -1040,7 +1175,7 @@ VA = { va | va = < ie, c, rt >, ie ∈ IE, c ∈ C ⋀ rt ∈ RT }
 
 ********************
 
-### ValidationAssertion
+#### ValidationAssertion
 
 - Name: [bdqffdq:ValidationAssertion](https://rs.tdwg.org/bdqffdq/terms/ValidationAssertion)
 - Preferred Label: Validation Assertion
@@ -1053,7 +1188,7 @@ DQV(dr) = {dqv | dqv = < va, s, m, r >, va ∈ VA, s ∈ S, m ∈ M , r ∈ R �
 
 ********************
 
-### ValidationConcept
+#### ValidationConcept
 
 - Name: [bdqffdq:ValidationConcept](https://rs.tdwg.org/bdqffdq/terms/ValidationConcept)
 - Preferred Label: Validation Concept
@@ -1063,7 +1198,7 @@ DQV(dr) = {dqv | dqv = < va, s, m, r >, va ∈ VA, s ∈ S, m ∈ M , r ∈ R �
 
 ********************
 
-### ValidationMethod
+#### ValidationMethod
 
 - Name: [bdqffdq:ValidationMethod](https://rs.tdwg.org/bdqffdq/terms/ValidationMethod)
 - Preferred Label: Validation Method
@@ -1075,7 +1210,7 @@ VM(va) = {s | s ⊂ S ⋀ va ∈ VA}
 
 ********************
 
-### ValidationPolicy
+#### ValidationPolicy
 
 - Name: [bdqffdq:ValidationPolicy](https://rs.tdwg.org/bdqffdq/terms/ValidationPolicy)
 - Preferred Label: Validation Policy
@@ -1088,7 +1223,7 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }
 ********************
 
 ### 4.2 ObjectProperty terms
-### amendmentProperty
+#### amendmentProperty
 
 - Name: bdqffdq:amendmentProperty
 - Preferred Label: amendment Property
@@ -1098,7 +1233,7 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }
 
 ********************
 
-### appliesTo
+#### appliesTo
 
 - Name: bdqffdq:appliesTo
 - Preferred Label: applies To
@@ -1108,7 +1243,7 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }
 
 ********************
 
-### composedOf
+#### composedOf
 
 - Name: bdqffdq:composedOf
 - Preferred Label: composed Of
@@ -1118,7 +1253,7 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }
 
 ********************
 
-### containsAssertion
+#### containsAssertion
 
 - Name: bdqffdq:containsAssertion
 - Preferred Label: contains Assertion
@@ -1128,7 +1263,7 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }
 
 ********************
 
-### forAmendment
+#### forAmendment
 
 - Name: bdqffdq:forAmendment
 - Preferred Label: for Amendment
@@ -1140,7 +1275,7 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }
 
 ********************
 
-### forDataQualityNeed
+#### forDataQualityNeed
 
 - Name: bdqffdq:forDataQualityNeed
 - Preferred Label: for Data Quality Need
@@ -1150,7 +1285,7 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }
 
 ********************
 
-### forIssue
+#### forIssue
 
 - Name: bdqffdq:forIssue
 - Preferred Label: for Issue
@@ -1162,7 +1297,7 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }
 
 ********************
 
-### forMeasure
+#### forMeasure
 
 - Name: bdqffdq:forMeasure
 - Preferred Label: for Measure
@@ -1174,7 +1309,7 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }
 
 ********************
 
-### forValidation
+#### forValidation
 
 - Name: bdqffdq:forValidation
 - Preferred Label: for Validation
@@ -1186,7 +1321,7 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }
 
 ********************
 
-### hasActedUponInformationElement
+#### hasActedUponInformationElement
 
 - Name: bdqffdq:hasActedUponInformationElement
 - Preferred Label: has Acted Upon Information Element
@@ -1197,7 +1332,7 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }
 
 ********************
 
-### hasArgument
+#### hasArgument
 
 - Name: bdqffdq:hasArgument
 - Preferred Label: has Argument
@@ -1208,7 +1343,7 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }
 
 ********************
 
-### hasConsultedInformationElement
+#### hasConsultedInformationElement
 
 - Name: bdqffdq:hasConsultedInformationElement
 - Preferred Label: has Consulted Information Element
@@ -1219,7 +1354,7 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }
 
 ********************
 
-### hasCriterion
+#### hasCriterion
 
 - Name: bdqffdq:hasCriterion
 - Preferred Label: has Criterion
@@ -1231,7 +1366,7 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }
 
 ********************
 
-### hasDataQualityDimension
+#### hasDataQualityDimension
 
 - Name: bdqffdq:hasDataQualityDimension
 - Preferred Label: has Data Quality Dimension
@@ -1244,7 +1379,7 @@ Under the original formulation of the Framework, only Measures have Dimensions.
 
 ********************
 
-### hasEnhancement
+#### hasEnhancement
 
 - Name: bdqffdq:hasEnhancement
 - Preferred Label: has Enhancement
@@ -1256,7 +1391,7 @@ Under the original formulation of the Framework, only Measures have Dimensions.
 
 ********************
 
-### hasInformationElement
+#### hasInformationElement
 
 - Name: bdqffdq:hasInformationElement
 - Preferred Label: has Information Element
@@ -1269,7 +1404,7 @@ Subtypes hasActedUponInformationElement and hasConsultedInformationElement allow
 
 ********************
 
-### hasParameter
+#### hasParameter
 
 - Name: bdqffdq:hasParameter
 - Preferred Label: has Parameter
@@ -1280,7 +1415,7 @@ Subtypes hasActedUponInformationElement and hasConsultedInformationElement allow
 
 ********************
 
-### hasResourceType
+#### hasResourceType
 
 - Name: bdqffdq:hasResourceType
 - Preferred Label: has Resource Type
@@ -1290,7 +1425,7 @@ Subtypes hasActedUponInformationElement and hasConsultedInformationElement allow
 
 ********************
 
-### hasResponseQualifier
+#### hasResponseQualifier
 
 - Name: bdqffdq:hasResponseQualifier
 - Preferred Label: has Response Qualifier
@@ -1301,7 +1436,7 @@ Subtypes hasActedUponInformationElement and hasConsultedInformationElement allow
 
 ********************
 
-### hasResponseResult
+#### hasResponseResult
 
 - Name: bdqffdq:hasResponseResult
 - Preferred Label: has Response Result
@@ -1313,7 +1448,7 @@ Subtypes hasActedUponInformationElement and hasConsultedInformationElement allow
 
 ********************
 
-### hasResponseStatus
+#### hasResponseStatus
 
 - Name: bdqffdq:hasResponseStatus
 - Preferred Label: has Response Status
@@ -1325,7 +1460,7 @@ ResponseStatus is always an object, unlike ResponseResult, where either the obje
 
 ********************
 
-### hasSpecification
+#### hasSpecification
 
 - Name: bdqffdq:hasSpecification
 - Preferred Label: has Specification
@@ -1336,7 +1471,7 @@ ResponseStatus is always an object, unlike ResponseResult, where either the obje
 
 ********************
 
-### hasUseCase
+#### hasUseCase
 
 - Name: bdqffdq:hasUseCase
 - Preferred Label: has Use Case
@@ -1347,7 +1482,7 @@ ResponseStatus is always an object, unlike ResponseResult, where either the obje
 
 ********************
 
-### implementedBy
+#### implementedBy
 
 - Name: bdqffdq:implementedBy
 - Preferred Label: implemented By
@@ -1358,7 +1493,7 @@ ResponseStatus is always an object, unlike ResponseResult, where either the obje
 
 ********************
 
-### improvedBy
+#### improvedBy
 
 - Name: bdqffdq:improvedBy
 - Preferred Label: improved By
@@ -1370,7 +1505,7 @@ Object property that describes an Amenement, as part of the ImprovementTarget, t
 
 ********************
 
-### includedInPolicy
+#### includedInPolicy
 
 - Name: bdqffdq:includedInPolicy
 - Preferred Label: included In Policy
@@ -1380,7 +1515,7 @@ Object property that describes an Amenement, as part of the ImprovementTarget, t
 
 ********************
 
-### issueProperty
+#### issueProperty
 
 - Name: bdqffdq:issueProperty
 - Preferred Label: issue Property
@@ -1390,7 +1525,7 @@ Object property that describes an Amenement, as part of the ImprovementTarget, t
 
 ********************
 
-### measurementProperty
+#### measurementProperty
 
 - Name: bdqffdq:measurementProperty
 - Preferred Label: measurement Property
@@ -1400,7 +1535,7 @@ Object property that describes an Amenement, as part of the ImprovementTarget, t
 
 ********************
 
-### producesAssertion
+#### producesAssertion
 
 - Name: bdqffdq:producesAssertion
 - Preferred Label: produces Assertion
@@ -1410,7 +1545,7 @@ Object property that describes an Amenement, as part of the ImprovementTarget, t
 
 ********************
 
-### reportProperty
+#### reportProperty
 
 - Name: bdqffdq:reportProperty
 - Preferred Label: report Property
@@ -1420,7 +1555,7 @@ Object property that describes an Amenement, as part of the ImprovementTarget, t
 
 ********************
 
-### targetedIssue
+#### targetedIssue
 
 - Name: bdqffdq:targetedIssue
 - Preferred Label: targeted Issue
@@ -1431,7 +1566,7 @@ Object property that describes an Amenement, as part of the ImprovementTarget, t
 
 ********************
 
-### targetedMeasure
+#### targetedMeasure
 
 - Name: bdqffdq:targetedMeasure
 - Preferred Label: targeted Measure
@@ -1442,7 +1577,7 @@ Object property that describes an Amenement, as part of the ImprovementTarget, t
 
 ********************
 
-### targetedValidation
+#### targetedValidation
 
 - Name: bdqffdq:targetedValidation
 - Preferred Label: targeted Validation
@@ -1454,7 +1589,7 @@ Object property that describes an Amenement, as part of the ImprovementTarget, t
 
 ********************
 
-### usesSpecification
+#### usesSpecification
 
 - Name: bdqffdq:usesSpecification
 - Preferred Label: uses Specification
@@ -1465,7 +1600,7 @@ Object property that describes an Amenement, as part of the ImprovementTarget, t
 
 ********************
 
-### validationProperty
+#### validationProperty
 
 - Name: bdqffdq:validationProperty
 - Preferred Label: validation Property
@@ -1476,7 +1611,7 @@ Object property that describes an Amenement, as part of the ImprovementTarget, t
 ********************
 
 ### 4.3 DataProperty terms
-### hasAuthoritiesDefaults
+#### hasAuthoritiesDefaults
 
 - Name: bdqffdq:hasAuthoritiesDefaults
 - Preferred Label: has Authorities and Defaults
@@ -1487,7 +1622,7 @@ Object property that describes an Amenement, as part of the ImprovementTarget, t
 
 ********************
 
-### hasDateLastUpdated
+#### hasDateLastUpdated
 
 - Name: bdqffdq:hasDateLastUpdated
 - Preferred Label: has Date Last Updated
@@ -1498,7 +1633,7 @@ Object property that describes an Amenement, as part of the ImprovementTarget, t
 
 ********************
 
-### hasExpectedResponse
+#### hasExpectedResponse
 
 - Name: bdqffdq:hasExpectedResponse
 - Preferred Label: has Expected Response
@@ -1509,7 +1644,7 @@ Object property that describes an Amenement, as part of the ImprovementTarget, t
 
 ********************
 
-### hasResponseComment
+#### hasResponseComment
 
 - Name: bdqffdq:hasResponseComment
 - Preferred Label: has Response Comment
@@ -1520,7 +1655,7 @@ Object property that describes an Amenement, as part of the ImprovementTarget, t
 
 ********************
 
-### hasResponseResultValue
+#### hasResponseResultValue
 
 - Name: bdqffdq:hasResponseResultValue
 - Preferred Label: has response result value
@@ -1531,7 +1666,7 @@ Object property that describes an Amenement, as part of the ImprovementTarget, t
 ********************
 
 ### 4.4 NamedIndividual terms
-### MultiRecord
+#### MultiRecord
 
 - Name: bdqffdq:MultiRecord
 - Type: bdqffdq:ResourceType
@@ -1542,7 +1677,7 @@ Object property that describes an Amenement, as part of the ImprovementTarget, t
 
 ********************
 
-### SingleRecord
+#### SingleRecord
 
 - Name: bdqffdq:SingleRecord
 - Type: bdqffdq:ResourceType
@@ -1554,7 +1689,7 @@ A SingleRecord, like a MultiRecord, is Encoded data with a defined structure tha
 
 ********************
 
-### COMPLETE
+#### COMPLETE
 
 - Name: bdqffdq:COMPLETE
 - Type: bdqffdq:ResponseResult
@@ -1566,7 +1701,7 @@ A SingleRecord, like a MultiRecord, is Encoded data with a defined structure tha
 
 ********************
 
-### IS_ISSUE
+#### IS_ISSUE
 
 - Name: bdqffdq:IS_ISSUE
 - Type: bdqffdq:ResponseResult
@@ -1578,7 +1713,7 @@ A SingleRecord, like a MultiRecord, is Encoded data with a defined structure tha
 
 ********************
 
-### IS_ISSUE
+#### IS_ISSUE
 
 - Name: bdqffdq:IS_ISSUE
 - Type: bdqffdq:ResponseResult
@@ -1590,7 +1725,7 @@ A SingleRecord, like a MultiRecord, is Encoded data with a defined structure tha
 
 ********************
 
-### NOT_COMPLETE
+#### NOT_COMPLETE
 
 - Name: bdqffdq:NOT_COMPLETE
 - Type: bdqffdq:ResponseResult
@@ -1601,7 +1736,7 @@ A SingleRecord, like a MultiRecord, is Encoded data with a defined structure tha
 
 ********************
 
-### NOT_ISSUE
+#### NOT_ISSUE
 
 - Name: bdqffdq:NOT_ISSUE
 - Type: bdqffdq:ResponseResult
@@ -1613,7 +1748,7 @@ A SingleRecord, like a MultiRecord, is Encoded data with a defined structure tha
 
 ********************
 
-### POTENTIAL_ISSUE
+#### POTENTIAL_ISSUE
 
 - Name: bdqffdq:POTENTIAL_ISSUE
 - Type: bdqffdq:ResponseResult
@@ -1624,7 +1759,7 @@ A SingleRecord, like a MultiRecord, is Encoded data with a defined structure tha
 
 ********************
 
-### AMENDED
+#### AMENDED
 
 - Name: bdqffdq:AMENDED
 - Type: bdqffdq:ResponseStatus
@@ -1636,7 +1771,7 @@ A SingleRecord, like a MultiRecord, is Encoded data with a defined structure tha
 
 ********************
 
-### NOT_AMENDED
+#### NOT_AMENDED
 
 - Name: bdqffdq:NOT_AMENDED
 - Type: bdqffdq:ResponseStatus
@@ -1647,7 +1782,7 @@ A SingleRecord, like a MultiRecord, is Encoded data with a defined structure tha
 
 ********************
 
-### RUN_HAS_RESULT
+#### RUN_HAS_RESULT
 
 - Name: bdqffdq:RUN_HAS_RESULT
 - Type: bdqffdq:ResponseStatus

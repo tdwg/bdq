@@ -40,37 +40,33 @@
 **Comment**<br>
 {comment}
 
-### Table of Contents ###
-
 {toc}
 
-## 1 Introduction
+## 1. Introduction
 
-This document defines a vocabulary extension for the bdqffdq: ontology, specifying additional axioms that extend the basic vocabulary terms. These axioms support more precise semantic expression within the Biodiversity Data Quality (BDQ) Fitness for Use Framework Ontology and are essential for its use as a fully functional ontology.
+### 1.1 Purpose
 
-The core terms of the ontology—such as classes, object properties, datatype properties, and named individuals—are listed separately in the Fitness For Use Framework Ontology List of Terms. In line with the TDWG Standards Documentation Specification, this extension document presents only the additional axioms, while keeping the core term list distinct and human-readable.
+The purpose of this document is to define the official vocabulary extension for the `bdqffdq:` ontology. It provides additional axioms, such as range constraints and logical distinctions, that refine and extend the semantics of the core vocabulary terms in the BDQ Fitness for Use Framework.
 
-The BDQ Framework intentionally limits its use of restrictions to preserve compatibility with OWL profiles and reasoning tools. While domain and range axioms appear in this document, they do not constrain data but rather assert expectations about the kinds of resources involved in a given relation. For additional context on usage and intended semantics, refer to the normative and illustrative materials listed below.
+These axioms enable more precise reasoning, validation, and integration with OWL tools. They are intended to complement the human-readable term list provided in the main ontology documentation without altering the open and minimally constrained design of the core framework.
 
-### 1.1 Purpose 
-
-This document serves as the official vocabulary extension for the bdqffdq: ontology, listing additional axioms that refine and extend the semantics of the core vocabulary terms. It supports implementers who require these axioms for reasoning, validation, or advanced modeling within the BDQ Framework.
+This extension follows the TDWG Standards Documentation Specification and maintains a clear separation between core term definitions and ontology logic.
 
 ### 1.2 Audience
 
-This document is intended for ontology engineers, semantic tool developers, and others seeking a deeper, technically precise understanding of how the BDQ Fitness for Use Framework operates as an OWL ontology. It assumes familiarity with OWL constructs, reasoning profiles, and the structure of TDWG vocabularies.
+This document is intended for ontology engineers, semantic modelers, and developers who are applying the BDQ Fitness for Use Framework in OWL environments. It will be especially useful for:
 
-### 1.3 Documents about the bdqffdq: ontology
+- Implementers using OWL reasoners or validators to enforce or explore logical structures;
+- Developers of semantic tooling and metadata pipelines based on BDQ Core;
+- Standards developers needing a detailed view of the formal semantics behind BDQ Framework concepts.
 
-The bdqffdq: ontology is supported by multiple documents that together describe its structure, intended use, and implementation:
+This document assumes familiarity with OWL constructs, reasoning profiles, and RDF/OWL modeling practices.
 
-- The [Fitness for Use Ontology](../../bdqffdq/index.md), which provides normative guidance on the use of the vocabulary.
-- The [Fitness For Use Framework Ontology List of Terms](../../list/bdqffdq/index.md) , which enumerates and describes the vocabulary terms.
-- This document, which defines additional axioms extending the core vocabulary.
-- The [Fitness For Use Framework Ontology Guide](../../guide/bdqffdq/index.md), a visual and narrative introduction to the concepts and application of the ontology.
-- The ontology itself: [Biodiversity Data Quality Fitness for Use Framework](../../../vocabulary/bdqffdq.owl), which provides the formal RDF/OWL representation of the vocabulary.
+### 1.3 Associated Documents
 
-### 1.3.1 Term List Distributions
+For the list and links to all associated documents see the [Biodiversity Data Quality Core](../../index.md) page, which lists the parts of the standard.
+
+#### 1.3.1 Term List Distributions
 
 | Description | IRI | Download URL | Note | 
 | ----------- | --- | -----------  | ---- | 

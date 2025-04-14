@@ -1,8 +1,8 @@
 # Produce markdown documents for the bdqffdq Framework 
-# onntology from the owl ontology.
+# ontology from the owl ontology.
 #
 # Produces the term list, the extension list, and a
-# landing pad page from templates and the ontology.
+# landing page from templates and the ontology.
 # 
 # @author Paul J. Morris 
 #
@@ -15,7 +15,9 @@ import yaml       # Library to parse yaml files
 import rdflib     # run sparql queries on rdf 
 from rdflib import Graph
 import function_lib # library of reusable functions for TDWG build scripts
-from function_lib import build_term_key, build_authors_contributors_markdown, build_contributors_markdown, build_authors_markdown, markdown_heading_to_link
+from function_lib import build_term_key, build_authors_contributors_markdown 
+from function_lib import build_contributors_markdown, build_authors_markdown
+from function_lib import markdown_heading_to_link, generate_markdown_toc
 
 # Configuration: common configuration
 
@@ -199,7 +201,7 @@ for r in queryResult :
 	entity = r.subject
 	entity = entity.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:");
 	term = entity.replace("bdqffdq:","");
-	text = text + "### {}\n\n".format(term)
+	text = text + "#### {}\n\n".format(term)
 	text = text + "- Name: [{}]({})\n".format(entity,r.subject)
 	text = text + "- Preferred Label: {}\n".format(r.prefLabel)
 	text = text + "- Definition: {}\n".format(r.definition)
@@ -216,7 +218,7 @@ for r in queryResult :
 	entity = r.subject
 	entity = entity.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:");
 	term = entity.replace("bdqffdq:","");
-	text = text + "### {}\n\n".format(term)
+	text = text + "#### {}\n\n".format(term)
 	text = text + "- Name: {}\n".format(entity)
 	text = text + "- Preferred Label: {}\n".format(r.prefLabel)
 	text = text + "- Definition: {}\n".format(r.definition)
@@ -239,7 +241,7 @@ for r in queryResult :
 	entity = r.subject
 	entity = entity.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:")
 	term = entity.replace("bdqffdq:","")
-	text = text + "### {}\n\n".format(term)
+	text = text + "#### {}\n\n".format(term)
 	text = text + "- Name: {}\n".format(entity)
 	text = text + "- Preferred Label: {}\n".format(r.prefLabel)
 	text = text + "- Definition: {}\n".format(r.definition)
@@ -256,7 +258,7 @@ for r in queryResult :
 	entity = r.subject
 	entity = entity.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:");
 	term = entity.replace("bdqffdq:","");
-	text = text + "### {}\n\n".format(term)
+	text = text + "#### {}\n\n".format(term)
 	text = text + "- Name: {}\n".format(entity)
 	rtype = r.type.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:");
 	text = text + "- Type: {}\n".format(rtype)
@@ -285,25 +287,28 @@ footer = footer.replace('{current_iri}', document_configuration_yaml['current_ir
 footer = footer.replace('{ratification_date}', document_configuration_yaml['doc_modified'])
    
 ## Produce a table of contents from the headings 
-toc = ""
-regexHeadings = "^#+ [0-9]+.*"
-with open(headerFileName) as headerFile:
-	for line in headerFile:
-		aHeading = re.search(regexHeadings,line)
-		if (aHeading) : 
-			toc = toc + "- " + markdown_heading_to_link(aHeading.group()) + "\n"
-	headerFile.close()
-for line in iter(text.splitlines()) : 
-	aHeading = re.search(regexHeadings,line)
-	if (aHeading) : 
-		toc = toc + "- " + markdown_heading_to_link(aHeading.group()) + "\n"
-with open(footerFileName) as footerFile:
-	for line in footerFile:
-		aHeading = re.search(regexHeadings,line)
-		if (aHeading) : 
-			toc = toc + "- " + markdown_heading_to_link(aHeading.group()) + "\n"
-	footerFile.close()
+toc = generate_markdown_toc((header+text+footer).splitlines())
 header = header.replace('{toc}', toc)
+
+# toc = ""
+# regexHeadings = "^#+ [0-9]+.*"
+# with open(headerFileName) as headerFile:
+# 	for line in headerFile:
+# 		aHeading = re.search(regexHeadings,line)
+# 		if (aHeading) : 
+# 			toc = toc + "- " + markdown_heading_to_link(aHeading.group()) + "\n"
+# 	headerFile.close()
+# for line in iter(text.splitlines()) : 
+# 	aHeading = re.search(regexHeadings,line)
+# 	if (aHeading) : 
+# 		toc = toc + "- " + markdown_heading_to_link(aHeading.group()) + "\n"
+# with open(footerFileName) as footerFile:
+# 	for line in footerFile:
+# 		aHeading = re.search(regexHeadings,line)
+# 		if (aHeading) : 
+# 			toc = toc + "- " + markdown_heading_to_link(aHeading.group()) + "\n"
+# 	footerFile.close()
+# header = header.replace('{toc}', toc)
 
 warning = "<!--- This file is generated from templates by code, DO NOT EDIT by hand --->\n"
     
@@ -510,19 +515,21 @@ for r in queryResult :
 	text = text + "\n********************\n\n"
 
 ## Produce a table of contents from the headings 
-toc = ""
-regexHeadings = "^#+ [0-9]+.*"
-with open(headerFileName) as headerFile:
-	for line in headerFile:
-		aHeading = re.search(regexHeadings,line)
-		if (aHeading) : 
-			toc = toc + "- " + markdown_heading_to_link(aHeading.group()) + "\n"
-	headerFile.close()
-for line in iter(text.splitlines()) : 
-	aHeading = re.search(regexHeadings,line)
-	if (aHeading) : 
-		toc = toc + "- " + markdown_heading_to_link(aHeading.group()) + "\n"
+toc = generate_markdown_toc((header+text+footer).splitlines())
 header = header.replace('{toc}', toc)
+# toc = ""
+# regexHeadings = "^#+ [0-9]+.*"
+# with open(headerFileName) as headerFile:
+# 	for line in headerFile:
+# 		aHeading = re.search(regexHeadings,line)
+# 		if (aHeading) : 
+# 			toc = toc + "- " + markdown_heading_to_link(aHeading.group()) + "\n"
+# 	headerFile.close()
+# for line in iter(text.splitlines()) : 
+# 	aHeading = re.search(regexHeadings,line)
+# 	if (aHeading) : 
+# 		toc = toc + "- " + markdown_heading_to_link(aHeading.group()) + "\n"
+# header = header.replace('{toc}', toc)
 
 # Load footer 
 footerObject = open(footerFileName, 'rt', encoding='utf-8')
@@ -537,7 +544,7 @@ footer = footer.replace('{year}', year)
 footer = footer.replace('{document_title}', document_configuration_yaml['documentTitle'])
 footer = footer.replace('{current_iri}', document_configuration_yaml['current_iri'])
 footer = footer.replace('{ratification_date}', document_configuration_yaml['doc_modified'])
-    
+
 warning = "<!--- This file is generated from templates by code, DO NOT EDIT by hand --->\n"
     
 print("writing to {}".format(outputFilename))
@@ -666,19 +673,21 @@ for r in queryResult :
 	text = text + "\n\n"
 
 ## Produce a table of contents from the headings 
-toc = ""
-regexHeadings = "^#+ [0-9]+.*"
-with open(headerFileName) as headerFile:
-	for line in headerFile:
-		aHeading = re.search(regexHeadings,line)
-		if (aHeading) : 
-			toc = toc + "- " + markdown_heading_to_link(aHeading.group()) + "\n"
-	headerFile.close()
-for line in iter(text.splitlines()) : 
-	aHeading = re.search(regexHeadings,line)
-	if (aHeading) : 
-		toc = toc + "- " + markdown_heading_to_link(aHeading.group()) + "\n"
+toc = generate_markdown_toc((header+text+footer).splitlines())
 header = header.replace('{toc}', toc)
+# toc = ""
+# regexHeadings = "^#+ [0-9]+.*"
+# with open(headerFileName) as headerFile:
+# 	for line in headerFile:
+# 		aHeading = re.search(regexHeadings,line)
+# 		if (aHeading) : 
+# 			toc = toc + "- " + markdown_heading_to_link(aHeading.group()) + "\n"
+# 	headerFile.close()
+# for line in iter(text.splitlines()) : 
+# 	aHeading = re.search(regexHeadings,line)
+# 	if (aHeading) : 
+# 		toc = toc + "- " + markdown_heading_to_link(aHeading.group()) + "\n"
+# header = header.replace('{toc}', toc)
 
 # Load footer 
 footerObject = open(footerFileName, 'rt', encoding='utf-8')

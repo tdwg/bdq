@@ -42,18 +42,25 @@
 **Comment**<br>
 {comment}
 
-## 1 Introduction
-
-This document includes the references cited in the BDQ Core Standard.
+## 1. Introduction
 
 ### 1.1 Purpose
-: This is combined bibliographic citations for the BDQ Core Standard
+
+The purpose of this document is to provide a comprehensive list of bibliographic references cited throughout the BDQ Core Standard. These references support the scientific, technical, and conceptual foundations of the standard, and are consolidated here for ease of citation and discovery.
+
+This bibliography includes all works referenced in any part of the BDQ Core suite, ensuring that readers can locate original sources for definitions, rationale, methodologies, and supporting frameworks.
 
 ### 1.2 Audience
 
-Readers of the BDQ Core Standard.
+This document is intended for any reader of the BDQ Core Standard who wishes to consult the literature and sources that underpin its components. It may be particularly useful for:
 
-### 1.4 Status of the content of this document
+- Standards developers and contributors verifying or extending BDQ Core content;
+- Researchers referencing the foundational works behind the data quality framework;
+- Implementers and tool builders seeking original documentation on referenced concepts or methods.
+
+No prior technical background is required to use this document.
+
+### 1.3 Status of the content of this document
 
 This document is non-normative.
 

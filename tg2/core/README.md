@@ -2,7 +2,7 @@
 
 ## The BDQ Core Test descriptors
 
-These are the authoritative descriptors of the BDQ core Tests, extracted from Github issue markdown tables using [bdq_issue_to_csv](https://github.com/kurator-org/bdq_issue_to_csv) one file contains the SingleRecord Tests, the other file the MultiRecord Measures.
+These are the authoritative descriptors of the BDQ core Tests, extracted from GitHub issue markdown tables using [bdq_issue_to_csv](https://github.com/kurator-org/bdq_issue_to_csv) one file contains the SingleRecord Tests, the other file the MultiRecord Measures.
 
 - TG2_tests.csv
 - TG2_multirecord_measure_tests.csv

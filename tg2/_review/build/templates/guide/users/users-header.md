@@ -42,28 +42,30 @@
 **Comment**<br>
 {comment}
 
-### Table of Contents ###
-
 {toc}
 
 ## 1 Introduction
 
-This document describes how consumers of BDQ Core data quality reports can interpret the content of those reports.
-
 ### 1.1 Purpose
 
-This is a guide to the BDQ Core Tests and the assertions that they make.
+The purpose of this document is to help users understand and effectively apply the BDQ Core Tests for assessing the quality of biodiversity data. It serves as a practical guide to interpreting Test outcomes, selecting appropriate Tests for specific data use scenarios, and understanding how the components of BDQ Core work together to support assessments of fitness for use.
+
+This guide explains the conceptual and operational structure of the Tests, their inputs and outputs, and how different types of Tests behave. It also provides non-normative guidance on Test parameters, report interpretation, and practical concerns such as handling time zones. The document complements the formal specification of Tests by offering real-world orientation and examples designed for practitioners.
 
 ### 1.2 Audience
 
-This document is for consumers of data quality reports.
+This guide is intended for biodiversity data users, curators, and quality assurance professionals who are responsible for evaluating the usability and reliability of biodiversity datasets. It is especially relevant for:
+
+- Data providers, curators, and aggregator staff seeking to understand test results and improve data quality;
+- Researchers assessing dataset suitability for specific projects or analyses;
+- Data standards developers aiming to understand how BDQ Core supports fitness-for-use evaluations;
+- Anyone interpreting or configuring BDQ Core Tests, but not necessarily implementing them in software.
+
+The document is written for readers with a practical need to work with data quality assessments. It assumes no formal training in ontologies or software development, but may reference those areas for context.
 
 ### 1.3 Associated Documents
 
-- [BDQ Core Quick Reference Guide](../terms/bdqcore/index.md) For anyone who wants a concise reference about the Tests.
-- The [Biodiversity Data Quality Core Introduction](../../intro/index.md) provides an introduction to the BDQ Core standard and the Tests.
-- [BDQ Core Implementer's Guide](../guide/implementers/index.md) For anyone interested in the technical implementation of the BDQ Core Tests.
-- [BDQ Core Supplemental Information](../supplement/index.md) This supplementary information may be relevant for curators, aggregators, data publishers, data analysts, programmers/developers and other practitioners who wish to understand, evaluate and/or improve the quality of biodiversity data within their domain. This document provides some key developmental issues in the building of BDQ Core that are not covered in other documents within the standard. This document may also be useful to those seeking to evaluate their current Tests or generate additional Tests for their domain.
+For the list and links to all associated documents see the [Biodiversity Data Quality Core](../../index.md) page, which lists the parts of the standard.
 
 ### 1.4 Status of the content of this document
 
@@ -160,7 +162,7 @@ Values of Parameters, other than the defaults, SHOULD also be present in the Res
 
 More normative guidance on Test Parameters can be found in the section [Parameters and Changing the Behavior of a Test](../implementers/index.md#61-Parameters-and-Changing-the-Behavior-of-a-Test-normative) of the [BDQ Core Implementer's Guide](../guide/implementers/index.md).
 
-### 2.4.1 Test Parameters Example (non-normative) 
+#### 2.4.1 Test Parameters Example (non-normative) 
 
 If a Test with a non-default Parameter value is used, this should be represented with at least the Label (rdfs:label) for the Test class (e.g., [VALIDATION_MINDEPTH_INRANGE](https://rs.tdwg.org/bdqcore/terms/04b2c8f3-c71b-4e95-8e43-f70374c5fb92)) in combination with the Parameter (e.g., bdq:maximumValidDepthInMeters) and the value of the argument that replaced the default Parameter value in this specific case (e.g., 1642). For example:
 
@@ -206,6 +208,6 @@ Each Test lists UseCases describing data quality needs to which each Test is app
 
 The definitions of the terms used for the Tests can be found at [Terms used in the Quick Reference Guide to BDQ Core Tests](../../terms/bdqcore/bdqcore_qrg_term_descriptions.md).
 
-## 5 Time and TimeZones (non-normative)
+## 5 Time and Time Zones (non-normative)
 
 Time is not considered in any of the BDQ Core Tests. There are Use Cases where the time zone is important. Dates within a dataset (bdqffdq:MultiRecord) aggregated from multiple sources may have plus or minus one day errors introduced. New Tests are required if ignorance of time would make such data unfit for a purpose. For further information, see Section [4.2 Time](../../supplement/index.md#42-Time) in [BDQ Core Supplemental Information](../../supplement/index.md).

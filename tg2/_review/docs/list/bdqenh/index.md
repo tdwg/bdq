@@ -39,50 +39,88 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
 **Comment**<br>
 Draft Standard for Review
 
-## 1 Introduction
+## Table of Contents ##
+[1. Introduction](#1-introduction)
+  - [1.1 Purpose](#11-purpose)
+  - [1.2 Audience](#12-audience)
+  - [1.3 Data Quality Enhancements](#13-data-quality-enhancements)
+  - [1.4 Associated Documents](#14-associated-documents)
+  - [1.5 Term List Distributions](#15-term-list-distributions)
+  - [1.6 Status of the content of this document](#16-status-of-the-content-of-this-document)
+  - [1.7 RFC 2119 key words](#17-rfc-2119-key-words)
+  - [1.8 Namespace abbreviations](#18-namespace-abbreviations)
+  - [1.9 Key to Vocabulary Terms](#19-key-to-vocabulary-terms)
 
-This document provides the full details of the controlled vocabulary values (individuals of the type bdqffdq:Enhancement) for the term bdqffdq:hasEnhancement in the BDQ Core Tests.
+[2 Use of Terms (normative)](#2-use-of-terms-normative)
+
+[3 Term index](#3-term-index)
+  - [3.1 Index By Term Name](#31-index-by-term-name)
+  - [3.2 Index By Label](#32-index-by-label)
+
+[4 Vocabulary](#4-vocabulary)
+
+[Acronyms](#acronyms)
+
+[Glossary](#glossary)
+
+[References](#references)
+
+[Cite BDQ Core](#cite-bdq-core)
+
+## 1. Introduction
 
 ### 1.1 Purpose
 
-This is the term-list document for the bdqenh: vocabulary.
+The purpose of this document is to provide the full term list for the `bdqenh:` controlled vocabulary, which defines the values of `bdqffdq:Enhancement` used in BDQ Core Amendment Tests. Each Enhancement describes a general strategy by which data may be modified or supplemented to improve its quality in alignment with a specified Use Case.
+
+These terms support the formal description of how Amendments propose changes to data and clarify the intended nature of those proposals.
 
 ### 1.2 Audience
 
-This document is for those needing a technical understanding of the BDQ Core Tests and application of the Framework Ontology, especially with respect to the controlled vocabulary for the term bdqffdq:hasEnhancement. 
+This document is intended for users who need a technical understanding of how BDQ Core Amendment Tests describe proposed improvements to data. It will be especially useful for:
 
-### 1.3 Data Quality Enhancement
+- Implementers developing systems that generate or evaluate data quality Amendments;
+- Data curators and quality analysts reviewing proposed changes to datasets;
+- Standards developers and modelers working with the BDQ Core Framework Ontology.
 
-Enhancement as used in the context of BDQ Core was originally defined by Veiga 2016 and Veiga et at. 2017, where it is a fundamental concept. The concept of bdqffdq:Enhancement (AssumedDefault, Converted, From, Standardized, and Transposed) describes how a bdqffdq:Amendment may act to produce proposals to improve data quality for a given use case.
+Some familiarity with the structure of BDQ Core Tests and the Framework Ontology is recommended.
 
-The Enhancement describes, in abstract terms, how proposals can modify data to improve fitness. An enhancement expresses in general terms what a bdqffdq:Specification expresses in specific terms. Enhancements have an informal relationship to bdqffdq:Dimensions, expressed here in the comments. These relationships could be formalized, but we have not done so.
+### 1.3 Data Quality Enhancements
 
-Each Amendment in bdqcore: is expected to evaluate one or more data values (one or more bdqffdq:InformationElements) and, following a particular bdqffdq:Enhancement, propose how the quality of data may be improved. For example, the Test [AMENDMENT_EVENTDATE_STANDARDIZED](https://rs.tdwg.org/bdqcore/terms/718dfc3c-cb52-4fca-b8e2-0e722f375da7) assesses the value of dwc:eventDate and may propose an a Amendment which would make the value conform to the expectations of the ISO 8601 standard, proposing to improve the quality of the record for the bdq:Spatial-Temporal_Patterns and bdq:Record-Management Use Cases. The appropriate value for bdqenh: to use as the bdqffdq:hasEnhancement property for this Test is bdqenh:Standardized, i.e., a change is proposed to the value of dwc:eventDate that would make it conform to the ISO date format standard, which is specified in the Comments on dwc:eventDate as the recommended best practice for this term.
+The concept of `bdqffdq:Enhancement`, as defined by Veiga (2016) and Veiga et al. (2017), captures the general nature of a proposed change intended to improve data quality. Examples of Enhancements include `AssumedDefault`, `Converted`, `From`, `Standardized`, and `Transposed`. These represent high-level categories of amendment strategies.
 
-Enhancement only applies to Tests of type bdqffdq:Amendment.
+Enhancements describe, in abstract terms, what a `bdqffdq:Specification` expresses concretely. While Enhancements are informally related to Data Quality Dimensions (e.g., a `Standardized` enhancement might relate to `Conformance`), those relationships are not formally encoded.
 
-### 1.4 Term List Distributions
+Each `bdqffdq:Amendment` Test in `bdqcore:` proposes a change to one or more data values (`bdqffdq:InformationElements`) based on a specific Enhancement. For example, the Test [`AMENDMENT_EVENTDATE_STANDARDIZED`](https://rs.tdwg.org/bdqcore/terms/718dfc3c-cb52-4fca-b8e2-0e722f375da7) evaluates the term `dwc:eventDate` and may propose a revised value formatted according to the ISO 8601 standard. The Enhancement in this case is `bdqenh:Standardized`.
+
+Enhancements are only applicable to Tests of type `bdqffdq:Amendment`.
+
+### 1.4 Associated Documents
+
+For the list and links to all associated documents see the [Biodiversity Data Quality Core](../../index.md) page, which lists the parts of the standard.
+
+### 1.5 Term List Distributions
 
 | Description | IRI | Download URL | Note | 
 | ----------- | --- | ------------ | ---- | 
 | HTML file   | http://rs.tdwg.org/bdq/bdqenh/terms/ | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/docs/list/bdqenh/index.md | This file | 
 | RDF/XML file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/dist/bdqenh.xml | Example for submission, to be generated | 
 
-### 1.5 Status of the content of this document
+### 1.6 Status of the content of this document
 
 Sections 1 and 3 are non-normative.
 
 Section 2 is normative.
 
-Section [1.8 Key to Vocabulary Terms](#18-Key-to-Vocabulary-Terms) identifies which values in Section 4 are normative and which are non-normative.
+Section [1.9 Key to Vocabulary Terms](#19-Key-to-Vocabulary-Terms) identifies which values in Section 4 are normative and which are non-normative.
 
 Any sentence or phrase beginning with "For example" or "e.g." is non-normative.
 
-### 1.6 RFC 2119 key words
+### 1.7 RFC 2119 key words
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [RFC 2119](https://tools.ietf.org/html/rfc2119).
 
-### 1.7 Namespace abbreviations
+### 1.8 Namespace abbreviations
 
 The following namespace abbreviations are used in this document:
 
@@ -100,7 +138,7 @@ The following namespace abbreviations are used in this document:
 | skos:        | http://www.w3.org/2004/02/skos/core#        |
 | tdwgutility: | http://rs.tdwg.org/dwc/terms/attributes/    |
 
-### 1.8 Key to Vocabulary Terms
+### 1.9 Key to Vocabulary Terms
 
 The terminology used to describe the terms in this vocabulary follows the TDWG Standards Documentation Standard (SDS). Each term definition includes the original RDF definition, and may also provide a TDWG-specific interpretation from the SDS, as well as a definition tailored to this local context.
 

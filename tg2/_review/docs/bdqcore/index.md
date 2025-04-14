@@ -42,58 +42,69 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
 **Comment**<br>
 Draft Standard for Review
 
-# Table of Contents 
-- [1 Introduction](#1-introduction)
-- [1.1 Purpose](#11-purpose)
-- [1.2 Audience](#12-audience)
-- [1.3 Associated Documents](#13-associated-documents)
-- [1.3.1 Term List Distributions for BDQ Core](#131-term-list-distributions-for-bdq-core)
-- [1.4 Status of the Content of this Document](#14-status-of-the-content-of-this-document)
-- [1.5 RFC 2119 key words](#15-rfc-2119-key-words)
-- [1.6 Namespace Abbreviations](#16-namespace-abbreviations)
-- [2 A Brief Context for the BDQ Core Tests](#2-a-brief-context-for-the-bdq-core-tests)
-- [2.1 Characteristics of the Tests (non-normative)](#21-characteristics-of-the-tests-non-normative)
-- [2.2 Test Types (non-normative)](#22-test-types-non-normative)
-- [2.2.1 Validation Tests (normative)](#221-validation-tests-normative)
-- [2.2.2 Issue Tests (normative)](#222-issue-tests-normative)
-- [2.2.3 Amendment Tests (normative)](#223-amendment-tests-normative)
-- [2.2.4 Measure Tests (normative)](#224-measure-tests-normative)
-- [2.3 SingleRecord and MultiRecord Tests (non-normative)](#23-singlerecord-and-multirecord-tests-non-normative)
-- [2.4 Example RDF (non-normative)](#24-example-rdf-non-normative)
-- [3 Use of Terms (normative)](#3-use-of-terms-normative)
-- [3.1 Structure of Response (normative)](#31-structure-of-response-normative)
-- [3.2 Resource Types (normative)](#32-resource-types-normative)
-- [3.3 Parameterizing the Tests (normative)](#33-parameterizing-the-tests-normative)
-- [3.3.1 Parameter Examples (non-normative)](#331-parameter-examples-non-normative)
-- [4 Term indices](#4-term-indices)
-- [4.1 Index By Test Label](#41-index-by-test-label)
-- [5 Vocabulary Summary](#5-vocabulary-summary)
+## Table of Contents ##
+[1 Introduction](#1-introduction)
+  - [1.1 Purpose](#11-purpose)
+  - [1.2 Audience](#12-audience)
+  - [1.3 Associated Documents](#13-associated-documents)
+    - [1.3.1 Term List Distributions for BDQ Core](#131-term-list-distributions-for-bdq-core)
+  - [1.4 Status of the Content of this Document](#14-status-of-the-content-of-this-document)
+  - [1.5 RFC 2119 key words](#15-rfc-2119-key-words)
+  - [1.6 Namespace Abbreviations](#16-namespace-abbreviations)
 
+[2 A Brief Context for the BDQ Core Tests](#2-a-brief-context-for-the-bdq-core-tests)
+  - [2.1 Characteristics of the Tests (non-normative)](#21-characteristics-of-the-tests-non-normative)
+  - [2.2 Test Types (non-normative)](#22-test-types-non-normative)
+    - [2.2.1 Validation Tests (normative)](#221-validation-tests-normative)
+    - [2.2.2 Issue Tests (normative)](#222-issue-tests-normative)
+    - [2.2.3 Amendment Tests (normative)](#223-amendment-tests-normative)
+    - [2.2.4 Measure Tests (normative)](#224-measure-tests-normative)
+  - [2.3 SingleRecord and MultiRecord Tests (non-normative)](#23-singlerecord-and-multirecord-tests-non-normative)
+  - [2.4 Example RDF (non-normative)](#24-example-rdf-non-normative)
+
+[3 Use of Terms (normative)](#3-use-of-terms-normative)
+  - [3.1 Structure of Response (normative)](#31-structure-of-response-normative)
+  - [3.2 Resource Types (normative)](#32-resource-types-normative)
+  - [3.3 Parameterizing the Tests (normative)](#33-parameterizing-the-tests-normative)
+    - [3.3.1 Parameter Examples (non-normative)](#331-parameter-examples-non-normative)
+
+[4 Term indices](#4-term-indices)
+  - [4.1 Index By Test Label](#41-index-by-test-label)
+
+[5 Vocabulary Summary](#5-vocabulary-summary)
+
+[Acronyms](#acronyms)
+
+[Glossary](#glossary)
+
+[References](#references)
+
+[Cite BDQ Core](#cite-bdq-core)
 
 ## 1 Introduction
 
-This document provides explanatory information and normative guidance for the BDQ Core Tests. The focus of this document are the technical details of the Test terms in the `bdqcore:` namespace, whose definitions are supported by terms in several additional namespaces: `bdq:`, `bdqffdq:`, `bdqdim:`, `bdqenh:`, and `bdqcrit:`. For the details and rationale, see Chapman et al. (2017).
-
 ### 1.1 Purpose
 
-The document provides the context in which the BDQ Core Tests exist.
+The purpose of this document is to define and explain the BDQ Core Tests — the primary mechanism for evaluating the quality of biodiversity data in the BDQ Core standard. It describes the structure, types, and formal characteristics of the Tests, providing a clear and consistent specification that can be used by implementers, analysts, and quality assessors.
+
+This document is both normative and explanatory: it defines how each Test is modeled using standard vocabulary terms and how it should behave under various conditions. It also distinguishes among types of Tests (Validation, Issue, Amendment, and Measure), outlines the semantics of single- versus multi-record evaluation, and explains how parameters influence Test behavior. The content here provides the foundation for interpreting and using the Tests in software and quality assessment workflows.
 
 ### 1.2 Audience
 
-This document is for Users and Implementers of BDQ Core who require a technical understanding of the Tests.
+This document is intended for audiences who need a detailed understanding of the BDQ Core Tests, including:
+
+- Data quality specialists configuring or analyzing BDQ Test outputs;
+- Software developers and data platform architects implementing BDQ Core Tests;
+- Researchers and data managers evaluating dataset readiness for specific uses;
+- Standards developers integrating BDQ Test logic into broader biodiversity data infrastructures.
+
+While some familiarity with controlled vocabularies and RDF modeling may be useful, the document is designed to be accessible to both technical and semi-technical users who want to apply, understand, or extend BDQ Core Tests.
 
 ### 1.3 Associated Documents
 
-The bdqcore: vocabulary includes: 
+For the list and links to all associated documents see the [Biodiversity Data Quality Core](../../index.md) page, which lists the parts of the standard.
 
-- [BDQ Core Quick Reference Guide](../terms/bdqcore/index.md) - an easy-to-read guide to the BDQ Core Tests.
-- [BDQ Core Tests and Assertions List of Terms](../list/bdqcore/index.md) - the complete normative definitions of the BDQ Core Tests.
-
-In addition there are two BDQ Core guides that pertain to the use and implementation of BDQ Core Tests:
-- [BDQ Core User's Guide](../guide/users/index.md)
-- [BDQ Core Implementer's Guide](../guide/implementers/index.md) 
-
-### 1.3.1 Term List Distributions for BDQ Core
+#### 1.3.1 Term List Distributions for BDQ Core
 
 <!--- This same table appears in bdqcore_termlist_header. Edit here, edit there. --->
 | Description | IRI | Download URL | Note | 
@@ -145,7 +156,7 @@ The following namespace abbreviations are used in this document:
 | skos:        | http://www.w3.org/2004/02/skos/core#        |
 | xsd:         | http://www.w3.org/2001/XMLSchema#           |
 
-### 2 A Brief Context for the BDQ Core Tests
+## 2 A Brief Context for the BDQ Core Tests
 
 The Authors acknowledge the fundamental importane of the work of:
 
@@ -243,7 +254,7 @@ or
 
 In each case, a Response.comment MUST be present with text explaining to consumers of the data quality report why the the Test produced this response in this case.
 
-#### 2.3 SingleRecord and MultiRecord Tests (non-normative) 
+### 2.3 SingleRecord and MultiRecord Tests (non-normative) 
 
 Tests may operate on a SingleRecord (e.g., one row of [Simple Darwin Core](https://dwc.tdwg.org/simple/)) or on a MultiRecord (a dataset).
 

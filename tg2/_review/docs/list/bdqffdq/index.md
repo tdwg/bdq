@@ -41,52 +41,150 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
 **Comment**<br>
 Draft Standard for Review
 
-### Table of Contents ###
+## Table of Contents ##
+[1. Introduction](#1-introduction)
+  - [1.1 Purpose](#11-purpose)
+  - [1.2 Audience](#12-audience)
+  - [1.3 Associated Documents](#13-associated-documents)
+  - [1.3.1 Term List Distributions](#131-term-list-distributions)
+  - [1.4 Status of the content of this document](#14-status-of-the-content-of-this-document)
+  - [1.5 RFC 2119 key words](#15-rfc-2119-key-words)
+  - [1.6 Namespace abbreviations](#16-namespace-abbreviations)
+  - [1.7 Key to Vocabulary Terms](#17-key-to-vocabulary-terms)
 
-- [1 Introduction](#1-introduction)
-- [1.1 Purpose](#11-purpose)
-- [1.2 Audience](#12-audience)
-- [1.3 Documents about the bdqffdq: ontology](#13-documents-about-the-bdqffdq-ontology)
-- [1.3.1 Term List Distributions](#131-term-list-distributions)
-- [1.4 Status of the content of this document](#14-status-of-the-content-of-this-document)
-- [1.5 RFC 2119 key words](#15-rfc-2119-key-words)
-- [1.6 Namespace abbreviations](#16-namespace-abbreviations)
-- [1.7 Key to Vocabulary Terms](#17-key-to-vocabulary-terms)
-- [2 Use of Terms (normative)](#2-use-of-terms-normative)
-- [3 Term index (non-normative)](#3-term-index-non-normative)
-- [3.1 Alphabetical Index of classes](#31-alphabetical-index-of-classes)
-- [3.2 Alphabetical Index of object properties](#32-alphabetical-index-of-object-properties)
-- [3.3 Alphabetical Index of data properties](#33-alphabetical-index-of-data-properties)
-- [3.4 Alphabetical Index of named individuals](#34-alphabetical-index-of-named-individuals)
-- [4 Vocabulary](#4-vocabulary)
-- [4.1 Class terms](#41-class-terms)
-- [4.2 ObjectProperty terms](#42-objectproperty-terms)
-- [4.3 DataProperty terms](#43-dataproperty-terms)
-- [4.4 NamedIndividual terms](#44-namedindividual-terms)
+[2 Use of Terms (normative)](#2-use-of-terms-normative)
 
+[3 Term index (non-normative)](#3-term-index-non-normative)
+    - [3.1 Alphabetical Index of classes](#31-alphabetical-index-of-classes)
+    - [3.2 Alphabetical Index of object properties](#32-alphabetical-index-of-object-properties)
+    - [3.3 Alphabetical Index of data properties](#33-alphabetical-index-of-data-properties)
+    - [3.4 Alphabetical Index of named individuals](#34-alphabetical-index-of-named-individuals)
 
-## 1 Introduction
+[4 Vocabulary](#4-vocabulary)
+  - [4.1 Class terms](#41-class-terms)
+  - [AbstractInformationElement](#abstractinformationelement)
+  - [ActedUpon](#actedupon)
+  - [Amendment](#amendment)
+  - [AmendmentAssertion](#amendmentassertion)
+  - [AmendmentMethod](#amendmentmethod)
+  - [AmendmentPolicy](#amendmentpolicy)
+  - [Argument](#argument)
+  - [Assertion](#assertion)
+  - [Consulted](#consulted)
+  - [Criterion](#criterion)
+  - [DataQualityDimension](#dataqualitydimension)
+  - [DataQualityMethod](#dataqualitymethod)
+  - [DataQualityNeed](#dataqualityneed)
+  - [DataQualityProfile](#dataqualityprofile)
+  - [DataQualityReport](#dataqualityreport)
+  - [DataResource](#dataresource)
+  - [Enhancement](#enhancement)
+  - [FundamentalConcept](#fundamentalconcept)
+  - [Implementation](#implementation)
+  - [ImprovementTarget](#improvementtarget)
+  - [InformationElement](#informationelement)
+  - [Issue](#issue)
+  - [IssueAssertion](#issueassertion)
+  - [IssueConcept](#issueconcept)
+  - [IssueMethod](#issuemethod)
+  - [IssuePolicy](#issuepolicy)
+  - [Measure](#measure)
+  - [MeasurementAssertion](#measurementassertion)
+  - [MeasurementMethod](#measurementmethod)
+  - [MeasurementPolicy](#measurementpolicy)
+  - [Mechanism](#mechanism)
+  - [NeedConcept](#needconcept)
+  - [Parameter](#parameter)
+  - [Policy](#policy)
+  - [ReportConcept](#reportconcept)
+  - [ResourceType](#resourcetype)
+  - [ResponseQualifier](#responsequalifier)
+  - [ResponseResult](#responseresult)
+  - [ResponseStatus](#responsestatus)
+  - [SolutionsConcept](#solutionsconcept)
+  - [Specification](#specification)
+  - [UseCase](#usecase)
+  - [Validation](#validation)
+  - [ValidationAssertion](#validationassertion)
+  - [ValidationConcept](#validationconcept)
+  - [ValidationMethod](#validationmethod)
+  - [ValidationPolicy](#validationpolicy)
+  - [4.2 ObjectProperty terms](#42-objectproperty-terms)
+  - [amendmentProperty](#amendmentproperty)
+  - [appliesTo](#appliesto)
+  - [composedOf](#composedof)
+  - [containsAssertion](#containsassertion)
+  - [forAmendment](#foramendment)
+  - [forDataQualityNeed](#fordataqualityneed)
+  - [forIssue](#forissue)
+  - [forMeasure](#formeasure)
+  - [forValidation](#forvalidation)
+  - [hasActedUponInformationElement](#hasacteduponinformationelement)
+  - [hasArgument](#hasargument)
+  - [hasConsultedInformationElement](#hasconsultedinformationelement)
+  - [hasCriterion](#hascriterion)
+  - [hasDataQualityDimension](#hasdataqualitydimension)
+  - [hasEnhancement](#hasenhancement)
+  - [hasInformationElement](#hasinformationelement)
+  - [hasParameter](#hasparameter)
+  - [hasResourceType](#hasresourcetype)
+  - [hasResponseQualifier](#hasresponsequalifier)
+  - [hasResponseResult](#hasresponseresult)
+  - [hasResponseStatus](#hasresponsestatus)
+  - [hasSpecification](#hasspecification)
+  - [hasUseCase](#hasusecase)
+  - [implementedBy](#implementedby)
+  - [improvedBy](#improvedby)
+  - [includedInPolicy](#includedinpolicy)
+  - [issueProperty](#issueproperty)
+  - [measurementProperty](#measurementproperty)
+  - [producesAssertion](#producesassertion)
+  - [reportProperty](#reportproperty)
+  - [targetedIssue](#targetedissue)
+  - [targetedMeasure](#targetedmeasure)
+  - [targetedValidation](#targetedvalidation)
+  - [usesSpecification](#usesspecification)
+  - [validationProperty](#validationproperty)
+  - [4.3 DataProperty terms](#43-dataproperty-terms)
+  - [hasAuthoritiesDefaults](#hasauthoritiesdefaults)
+  - [hasDateLastUpdated](#hasdatelastupdated)
+  - [hasExpectedResponse](#hasexpectedresponse)
+  - [hasResponseComment](#hasresponsecomment)
+  - [hasResponseResultValue](#hasresponseresultvalue)
+  - [4.4 NamedIndividual terms](#44-namedindividual-terms)
+  - [MultiRecord](#multirecord)
+  - [SingleRecord](#singlerecord)
+  - [COMPLETE](#complete)
+  - [IS_ISSUE](#is_issue)
+  - [IS_ISSUE](#is_issue)
+  - [NOT_COMPLETE](#not_complete)
+  - [NOT_ISSUE](#not_issue)
+  - [POTENTIAL_ISSUE](#potential_issue)
+  - [AMENDED](#amended)
+  - [NOT_AMENDED](#not_amended)
+  - [RUN_HAS_RESULT](#run_has_result)
 
-This document provides a structured list of terms that constitute the bdqffdq: vocabulary. The vocabulary is part of the Biodiversity Data Quality (BDQ) Fitness for Use Framework Ontology and is primarily used to describe the BDQ Core Tests. It includes ontology elements such as classes, object properties, datatype properties, and named individuals.
-
-Following the TDWG Standards Documentation Specification, this document presents a human-readable term list. It does not include additional axioms or normative usage guidance, which are instead provided through supporting documentation and vocabulary extensions.
+## 1. Introduction
 
 ### 1.1 Purpose
-The purpose of this document is to serve as the official term list for the bdqffdq: vocabulary. It defines the core ontology elements used to express BDQ Core Tests, without incorporating additional axioms or implementation constraints.
+
+The purpose of this document is to provide the official term list for the `bdqffdq:` vocabulary, which defines the ontology elements used in the Biodiversity Data Quality Fitness for Use Framework. This includes classes, object properties, data properties, and named individuals that collectively support the semantic description of BDQ Core Tests and related quality constructs.
+
+This document presents a human-readable view of the vocabulary and follows the TDWG Standards Documentation Specification. It does not include additional axioms, implementation guidance, or usage recommendations — those are addressed in complementary documentation and the [Fitness For Use Framework Ontology Vocabulary Extension](docs/extension/bdqffdq/index.md).
 
 ### 1.2 Audience
 
-This document is intended for users who require a technical understanding of the BDQ Core Tests, including ontology developers, data quality analysts, and others implementing or interpreting the Biodiversity Data Quality Fitness for Use Framework Ontology in data systems or tools.
+This document is intended for technical users who need to reference the `bdqffdq:` vocabulary in detail. It is particularly useful for:
 
-### 1.3 Documents about the bdqffdq: ontology
+- Ontology developers integrating BDQ Core concepts into semantic systems;
+- Data quality analysts and system implementers interpreting or expressing BDQ Test structures using RDF/OWL;
+- Standards developers needing access to term-level details when aligning or extending the BDQ Core framework.
 
-Comprehensive information about the bdqffdq: ontology, its usage, and its extensions can be found in the following resources:
+Familiarity with RDF, OWL, and the structure of the BDQ Core Tests is recommended.
 
-- The [Fitness for Use Ontology](../../bdqffdq/index.md), which provides normative guidance on the use of the vocabulary.
-- This term list document, which enumerates and describes the vocabulary terms.
-- The [Fitness For Use Framework Ontology Vocabulary Extension](../../extension/bdqffdq/index.md), which defines additional axioms extending the core vocabulary.
-- The [Fitness For Use Framework Ontology Guide](../../guide/bdqffdq/index.md), a visual and narrative introduction to the concepts and application of the ontology.
-- The ontology itself: [Biodiversity Data Quality Fitness for Use Framework](../../../vocabulary/bdqffdq.owl), which provides the formal RDF/OWL representation of the vocabulary.
+### 1.3 Associated Documents
+
+For the list and links to all associated documents see the [Biodiversity Data Quality Core](../../index.md) page, which lists the parts of the standard.
 
 ### 1.3.1 Term List Distributions
 

@@ -22,11 +22,11 @@ Biodiversity Data Quality Core Maintenance Group. 2024. Biodiversity Data Qualit
 ### I. Entry-Level Overview & Practical Orientation
 [Biodiversity Data Quality Core Introduction](docs/intro/index.md)<br>
 [BDQ Core Quick Reference Guide](docs/terms/bdqcore/index.md)<br>
+[BDQ Core Tests and Assertions](docs/bdqcore/index.md)<br>
 [BDQ Core User's Guide](docs/guide/users/index.md)<br>
 
 ### II. Implementation & Application
 [BDQ Core Implementer's Guide](docs/guide/implementers/index.md)<br>
-[BDQ Core Tests and Assertions](docs/bdqcore/index.md)<br>
 [BDQ Core: Identifying Synthetic and Modified Data](docs/synthetic/index.md)
 - File: [Test Validation Data](docs/guide/implementers/TG2_test_validation_data.csv)
 - File: [Test Validation Data for non-printing characters](docs/guide/implementers/TG2_test_validation_data_nonprintingchars.csv)

@@ -42,63 +42,169 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
 **Comment**<br>
 Draft Standard for Review
 
-### Table of Contents ###
+## Table of Contents ##
+[1. Introduction](#1-introduction)
+  - [1.1 Purpose](#11-purpose)
+  - [1.2 Audience](#12-audience)
+  - [1.3 Associated Documents](#13-associated-documents)
+  - [1.4 Status of the content of this document](#14-status-of-the-content-of-this-document)
+  - [1.5 RFC 2119 key words](#15-rfc-2119-key-words)
+  - [1.6 Namespace abbreviations](#16-namespace-abbreviations)
 
-- [1 Introduction](#1-introduction)
-- [1.1 Purpose](#11-purpose)
-- [1.2 Audience](#12-audience)
-- [1.3 Documents about the bdqffdq: ontology](#13-documents-about-the-bdqffdq-ontology)
-- [1.4 Status of the content of this document](#14-status-of-the-content-of-this-document)
-- [1.5 RFC 2119 key words](#15-rfc-2119-key-words)
-- [1.6 Namespace abbreviations](#16-namespace-abbreviations)
-- [2 Use of Terms (normative)](#2-use-of-terms-normative)
-- [3 Framework for describing data quality](#3-framework-for-describing-data-quality)
-- [3.1 Introduction and Context](#31-introduction-and-context)
-- [3.2 Description of the bdqffdq ontology](#32-description-of-the-bdqffdq-ontology)
-- [3.2.1 Data Quality Control and Data Quality Assurance](#321-data-quality-control-and-data-quality-assurance)
-- [3.2.2 Information Elements](#322-information-elements)
-- [3.2.3 Concepts in the framework, Test Types: Validation, Issue, Measure, Amendment](#323-concepts-in-the-framework-test-types-validation-issue-measure-amendment)
-- [3.4 Data Quality Needs, Data Quality Mechanisms, Data Quality Reports](#34-data-quality-needs-data-quality-mechanisms-data-quality-reports)
-- [3.5 Responses](#35-responses)
-- [3.6 Organization of the bdqcore classes](#36-organization-of-the-bdqcore-classes)
-- [3.7 Example representation of a BDQ Core Test](#37-example-representation-of-a-bdq-core-test)
-- [3.8 Cardinality of bdqffdq terms](#38-cardinality-of-bdqffdq-terms)
-- [4 Term index](#4-term-index)
-- [4.1 Alphabetical Index of classes](#41-alphabetical-index-of-classes)
-- [4.2 Alphabetical Index of object properties](#42-alphabetical-index-of-object-properties)
-- [4.3 Alphabetical Index of data properties](#43-alphabetical-index-of-data-properties)
-- [4.4 Alphabetical Index of named individuals](#44-alphabetical-index-of-named-individuals)
-- [5 List of Terms with axioms in the bdqffdq ontology (portions normative, see 1.4)](#5-list-of-terms-with-axioms-in-the-bdqffdq-ontology-portions-normative-see-14)
-- [5.1 Class terms](#51-class-terms)
-- [5.2 ObjectProperty terms](#52-objectproperty-terms)
-- [5.3 DataProperty terms](#53-dataproperty-terms)
-- [5.4 NamedIndividual terms](#54-namedindividual-terms)
+[2 Use of Terms (normative)](#2-use-of-terms-normative)
 
+[3 Framework for describing data quality](#3-framework-for-describing-data-quality)
+  - [3.1 Introduction and Context](#31-introduction-and-context)
+  - [3.2 Description of the bdqffdq ontology](#32-description-of-the-bdqffdq-ontology)
+    - [3.2.1 Data Quality Control and Data Quality Assurance](#321-data-quality-control-and-data-quality-assurance)
+    - [3.2.2 Information Elements](#322-information-elements)
+    - [3.2.3 Concepts in the framework, Test Types: Validation, Issue, Measure, Amendment](#323-concepts-in-the-framework-test-types-validation-issue-measure-amendment)
+  - [3.4 Data Quality Needs, Data Quality Mechanisms, Data Quality Reports](#34-data-quality-needs-data-quality-mechanisms-data-quality-reports)
+  - [3.5 Responses](#35-responses)
+  - [3.6 Organization of the bdqcore classes](#36-organization-of-the-bdqcore-classes)
+  - [3.7 Example representation of a BDQ Core Test](#37-example-representation-of-a-bdq-core-test)
+  - [3.8 Cardinality of bdqffdq terms](#38-cardinality-of-bdqffdq-terms)
 
-## 1 Introduction
+[4 Term index](#4-term-index)
+  - [4.1 Alphabetical Index of classes](#41-alphabetical-index-of-classes)
+  - [4.2 Alphabetical Index of object properties](#42-alphabetical-index-of-object-properties)
+  - [4.3 Alphabetical Index of data properties](#43-alphabetical-index-of-data-properties)
+  - [4.4 Alphabetical Index of named individuals](#44-alphabetical-index-of-named-individuals)
 
-The bdqffdq: vocabulary is a specification of a framework for describing data quality. Each of the Tests in the bdqcore: vocabulary has been designed using this framework and is framed in the terms and concepts from the framework.
+[5 List of Terms with axioms in the bdqffdq ontology (portions normative, see 1.4)](#5-list-of-terms-with-axioms-in-the-bdqffdq-ontology-portions-normative-see-14)
+  - [5.1 Class terms](#51-class-terms)
+    - [AbstractInformationElement](#abstractinformationelement)
+    - [ActedUpon](#actedupon)
+    - [Amendment](#amendment)
+    - [AmendmentAssertion](#amendmentassertion)
+    - [AmendmentMethod](#amendmentmethod)
+    - [AmendmentPolicy](#amendmentpolicy)
+    - [Argument](#argument)
+    - [Assertion](#assertion)
+    - [Consulted](#consulted)
+    - [Criterion](#criterion)
+    - [DataQualityDimension](#dataqualitydimension)
+    - [DataQualityMethod](#dataqualitymethod)
+    - [DataQualityNeed](#dataqualityneed)
+    - [DataQualityProfile](#dataqualityprofile)
+    - [DataQualityReport](#dataqualityreport)
+    - [DataResource](#dataresource)
+    - [Enhancement](#enhancement)
+    - [FundamentalConcept](#fundamentalconcept)
+    - [Implementation](#implementation)
+    - [ImprovementTarget](#improvementtarget)
+    - [InformationElement](#informationelement)
+    - [Issue](#issue)
+    - [IssueAssertion](#issueassertion)
+    - [IssueConcept](#issueconcept)
+    - [IssueMethod](#issuemethod)
+    - [IssuePolicy](#issuepolicy)
+    - [Measure](#measure)
+    - [MeasurementAssertion](#measurementassertion)
+    - [MeasurementMethod](#measurementmethod)
+    - [MeasurementPolicy](#measurementpolicy)
+    - [Mechanism](#mechanism)
+    - [NeedConcept](#needconcept)
+    - [Parameter](#parameter)
+    - [Policy](#policy)
+    - [ReportConcept](#reportconcept)
+    - [ResourceType](#resourcetype)
+    - [ResponseQualifier](#responsequalifier)
+    - [ResponseResult](#responseresult)
+    - [ResponseStatus](#responsestatus)
+    - [SolutionsConcept](#solutionsconcept)
+    - [Specification](#specification)
+    - [UseCase](#usecase)
+    - [Validation](#validation)
+    - [ValidationAssertion](#validationassertion)
+    - [ValidationConcept](#validationconcept)
+    - [ValidationMethod](#validationmethod)
+    - [ValidationPolicy](#validationpolicy)
+  - [5.2 ObjectProperty terms](#52-objectproperty-terms)
+    - [amendmentProperty](#amendmentproperty)
+    - [appliesTo](#appliesto)
+    - [composedOf](#composedof)
+    - [containsAssertion](#containsassertion)
+    - [forAmendment](#foramendment)
+    - [forDataQualityNeed](#fordataqualityneed)
+    - [forIssue](#forissue)
+    - [forMeasure](#formeasure)
+    - [forValidation](#forvalidation)
+    - [hasActedUponInformationElement](#hasacteduponinformationelement)
+    - [hasArgument](#hasargument)
+    - [hasConsultedInformationElement](#hasconsultedinformationelement)
+    - [hasCriterion](#hascriterion)
+    - [hasDataQualityDimension](#hasdataqualitydimension)
+    - [hasEnhancement](#hasenhancement)
+    - [hasInformationElement](#hasinformationelement)
+    - [hasParameter](#hasparameter)
+    - [hasResourceType](#hasresourcetype)
+    - [hasResponseQualifier](#hasresponsequalifier)
+    - [hasResponseResult](#hasresponseresult)
+    - [hasResponseStatus](#hasresponsestatus)
+    - [hasSpecification](#hasspecification)
+    - [hasUseCase](#hasusecase)
+    - [implementedBy](#implementedby)
+    - [improvedBy](#improvedby)
+    - [includedInPolicy](#includedinpolicy)
+    - [issueProperty](#issueproperty)
+    - [measurementProperty](#measurementproperty)
+    - [producesAssertion](#producesassertion)
+    - [reportProperty](#reportproperty)
+    - [targetedIssue](#targetedissue)
+    - [targetedMeasure](#targetedmeasure)
+    - [targetedValidation](#targetedvalidation)
+    - [usesSpecification](#usesspecification)
+    - [validationProperty](#validationproperty)
+  - [5.3 DataProperty terms](#53-dataproperty-terms)
+    - [hasAuthoritiesDefaults](#hasauthoritiesdefaults)
+    - [hasDateLastUpdated](#hasdatelastupdated)
+    - [hasExpectedResponse](#hasexpectedresponse)
+    - [hasResponseComment](#hasresponsecomment)
+    - [hasResponseResultValue](#hasresponseresultvalue)
+  - [5.4 NamedIndividual terms](#54-namedindividual-terms)
+    - [MultiRecord](#multirecord)
+    - [SingleRecord](#singlerecord)
+    - [COMPLETE](#complete)
+    - [IS_ISSUE](#is_issue)
+    - [IS_ISSUE](#is_issue)
+    - [NOT_COMPLETE](#not_complete)
+    - [NOT_ISSUE](#not_issue)
+    - [POTENTIAL_ISSUE](#potential_issue)
+    - [AMENDED](#amended)
+    - [NOT_AMENDED](#not_amended)
+    - [RUN_HAS_RESULT](#run_has_result)
 
-The framework defines data quality in relation to a specified use. It enables formal description of a use case (bdqffdq:UseCase) and the requirements for a dataset to be fit for that purpose. By explicitly linking data quality to use, the framework supports assurance that data meet the needs of a given application.
+[Acronyms](#acronyms)
 
-This document describes a set of terms used to describe 'data quality' and 'fitness for use' in the context of biodiversity data. These terms are based on Veiga (2016) and Veiga et al. (2017), with a few changes for increased clarity.
+[Glossary](#glossary)
+
+[References](#references)
+
+[Cite BDQ Core](#cite-bdq-core)
+
+## 1. Introduction
 
 ### 1.1 Purpose
 
-This is a guide to the use of the Framework Ontology (bdqffdq: vocabulary).
+The purpose of this document is to provide a practical guide to understanding and using the BDQ Core Fitness for Use Framework Ontology, represented by the `bdqffdq:` vocabulary. This ontology defines a formal framework for describing data quality in the context of biodiversity data, emphasizing that quality is always relative to a particular purpose or use.
+
+The document explains key concepts from the ontology, including `UseCase`, `InformationElement`, `Specification`, and `Criterion`, and shows how they support the structure and semantics of BDQ Core Tests. It provides context, illustrative examples, and guidance for interpreting the ontology as applied in real-world implementations.
 
 ### 1.2 Audience
 
-This document is for those needing a technical understanding of the Framework Ontology.
+This guide is intended for users who need a technical understanding of the BDQ Core conceptual framework and its ontology. It will be particularly useful for:
 
-### 1.3 Documents about the bdqffdq: ontology
+- Ontology engineers and information modelers incorporating BDQ Core into semantic systems;
+- Standards developers aligning other biodiversity data quality frameworks with BDQ Core;
+- Implementers needing to understand how BDQ Core Tests are formally structured and classified;
+- Advanced users exploring the logical foundation behind BDQ Core Test design.
 
-This document provides an illustrated guide to the use of the bdqffdq: vocabulary, which includes: 
+Some familiarity with RDF/OWL ontologies is assumed.
 
-- The [Fitness for Use Ontology](../../bdqffdq/index.md) landing page with normative guidance on the use of this ontology.
-- The [Fitness For Use Framework Ontology List of Terms](../../list/bdqffdq/index.md) document listing just the vocabulary terms in the ontology.
-- Additional axioms that can be found in the [Fitness For Use Framework Ontology Vocabulary Extension](../../extension/bdqffdq/index.md) 
-- The bdqffdq framework ontology is best technically understood from its [Owl Ontology Distribution](../../../vocabulary/bdqffdq.owl) 
+### 1.3 Associated Documents
+
+For the list and links to all associated documents see the [Biodiversity Data Quality Core](../../index.md) page, which lists the parts of the standard.
 
 ### 1.4 Status of the content of this document
 
@@ -142,9 +248,9 @@ When not represented as objects, controlled value strings MUST be used as values
 
 IRIs MUST be used as values for all individual class instances and object properties when using bdqffdq: terms.
 
-### 3 Framework for describing data quality 
+## 3 Framework for describing data quality 
 
-#### 3.1 Introduction and Context
+### 3.1 Introduction and Context
 
 The bdqffdq: portion of BDQ Core is a specification for a framework for describing data quality. This bdqffdq: framework is based on a mathematical formulation, using set theory (Veiga, 2016), and is represented as an OWL ontology. This document describes the organization and use of the OWL ontology.
 
@@ -152,7 +258,7 @@ This document provides a background for understanding the bdqcore: Test descript
 
 See the [Fitness for Use Ontology](../../bdqffdq/index.md) landing page for a concise description and normative information about the bdqffdq: ontology and a summary of the mathematical formalization. See the [Fitness For Use Framework Ontology List of Terms](../../list/bdqffdq/index.md) document for the list of terms in the bdqffdq: vocabulary. See the [Fitness For Use Framework Ontology Vocabulary Extension](../../extension/bdqffdq/index.md) for documentation on additional axioms. See the [Owl Ontology Distribution](../../../vocabulary/bdqffdq.owl) for the formal representation of the vocabulary as an OWL ontology. The mathematical formalization provides a description of inferences and reasoning that may be made with the terms in the vocabulary.
 
-#### 3.2 Description of the bdqffdq ontology
+### 3.2 Description of the bdqffdq ontology
 
 The bdqffdq framework defines data quality in relation to a specified use, emphasizing that data quality is not abstract but purpose-dependent. It provides a formal way to describe a use case (UseCase) and the criteria for evaluating whether a dataset is fit for that purpose. By linking data quality explicitly to use, the framework enables consistent assessment and assurance of fitness for a given purpose.
 
@@ -162,15 +268,15 @@ The framework can also be conceptually divided into four vertical themes, four s
 
 We use the informal term "Test" to describe these four vertical themes, a Test involves terms in both Needs and Solutions, and Tests produce particular reporting elements.
 
-### 3.2.1 Data Quality Control and Data Quality Assurance
+#### 3.2.1 Data Quality Control and Data Quality Assurance
 
 The framework draws a distinction between Quality Control and Quality Assurance. Quality Control processes seek to assess the quality of data for some purpose, then identify changes to the data or to processes around the data to improve their quality. Quality Assurance processes seek to filter some set of data to a subset that is fit for some purpose, that is, to assure that data used for some purpose are fit for that purpose.
 
-### 3.2.2 Information Elements
+#### 3.2.2 Information Elements
 
 The framework has an abstract concept of Information Elements. To frame Tests on Darwin Core terms in a usable way, we list specific Darwin Core terms as the Information Elements in each Test.
 
-### 3.2.3 Concepts in the framework, Test Types: Validation, Issue, Measure, Amendment
+#### 3.2.3 Concepts in the framework, Test Types: Validation, Issue, Measure, Amendment
 
 The framework defines four central concepts for describing and evaluating data quality Needs: Validation, Issue, Measure, and Amendment.
 
@@ -463,7 +569,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 
 ### 5.1 Class terms
-### AbstractInformationElement
+#### AbstractInformationElement
 
 - Name: bdqffdq:AbstractInformationElement
 - Definition: An InformationElement described in abstract terms and not linked with one or more concrete terms.
@@ -471,7 +577,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### ActedUpon
+#### ActedUpon
 
 - Name: bdqffdq:ActedUpon
 - Definition: An information element, expressed in concrete terms, about which a data quality need expresses assertions about the data quality in that element.
@@ -479,7 +585,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### Amendment
+#### Amendment
 
 - Name: bdqffdq:Amendment
 - Definition: A data quality need that expresses how proposals may be made to improve the fitness for use of data.
@@ -487,7 +593,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### AmendmentAssertion
+#### AmendmentAssertion
 
 - Name: bdqffdq:AmendmentAssertion
 - Definition: An assertion expressing the result of an implementation evaluating an amendment supporting a particular data quality need to improve a particular data resource.
@@ -495,7 +601,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### AmendmentMethod
+#### AmendmentMethod
 
 - Name: bdqffdq:AmendmentMethod
 - Definition: A data quality solution concept that relates an Amendment to its Specifications.
@@ -503,7 +609,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### AmendmentPolicy
+#### AmendmentPolicy
 
 - Name: bdqffdq:AmendmentPolicy
 - Definition: A need concept that relates a UseCase to a set of supporting Amendments.
@@ -511,7 +617,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### Argument
+#### Argument
 
 - Name: bdqffdq:Argument
 - Definition: A value that, when provided to a test Specification to replace a Parameter changes the behavior of the test in a defined manner.
@@ -519,7 +625,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### Assertion
+#### Assertion
 
 - Name: bdqffdq:Assertion
 - Definition: A report concept expressing a statement about data quality assertion following some Specification produced by some implementation pertaining to some data resource.
@@ -527,7 +633,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### Consulted
+#### Consulted
 
 - Name: bdqffdq:Consulted
 - Definition: An information element, expressed in concrete terms, about which a data quality need examines in order to expresses assertions about the data quality in another InformationElement.
@@ -535,7 +641,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### Criterion
+#### Criterion
 
 - Name: bdqffdq:Criterion
 - Definition: Rule against which data are evaluated for conformance to quality criteria.
@@ -543,7 +649,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### DataQualityDimension
+#### DataQualityDimension
 
 - Name: bdqffdq:DataQualityDimension
 - Definition: An aspect of data quality.
@@ -551,7 +657,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### DataQualityMethod
+#### DataQualityMethod
 
 - Name: bdqffdq:DataQualityMethod
 - Definition: A solutions concept that relates a data quality need to a Specification.
@@ -559,7 +665,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### DataQualityNeed
+#### DataQualityNeed
 
 - Name: bdqffdq:DataQualityNeed
 - Definition: A data quality need concept that expresses what assertions may be made about data with respect to fitness for use.
@@ -567,7 +673,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### DataQualityProfile
+#### DataQualityProfile
 
 - Name: bdqffdq:DataQualityProfile
 - Definition: A needs concept expressing the composition of Policies to satisfy a UseCase.
@@ -575,7 +681,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### DataQualityReport
+#### DataQualityReport
 
 - Name: bdqffdq:DataQualityReport
 - Definition: A report concept comprising a set of data quality assertions.
@@ -583,7 +689,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### DataResource
+#### DataResource
 
 - Name: bdqffdq:DataResource
 - Definition: A thing to whch a data quality assertion applies.
@@ -591,7 +697,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### Enhancement
+#### Enhancement
 
 - Name: bdqffdq:Enhancement
 - Definition: Description of a means by which data could be improved.
@@ -599,14 +705,14 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### FundamentalConcept
+#### FundamentalConcept
 
 - Name: bdqffdq:FundamentalConcept
 - Definition: Category of fitness for use concepts that are not derived by composition with other concepts.
 
 ********************
 
-### Implementation
+#### Implementation
 
 - Name: bdqffdq:Implementation
 - Definition: A solutions concept that describes the portion of a Mechanism that carries out the proccess described in a particular Specification.
@@ -614,7 +720,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### ImprovementTarget
+#### ImprovementTarget
 
 - Name: bdqffdq:ImprovementTarget
 - Definition: A specific data quality need for which a specific Amendment is intended to improve.
@@ -622,7 +728,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### InformationElement
+#### InformationElement
 
 - Name: bdqffdq:InformationElement
 - Definition: A portion of data with which a Data Quality Need is concerned.
@@ -630,7 +736,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### Issue
+#### Issue
 
 - Name: bdqffdq:Issue
 - Definition: A data quality need that expresses how quality problems may be identified in data.
@@ -638,7 +744,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### IssueAssertion
+#### IssueAssertion
 
 - Name: bdqffdq:IssueAssertion
 - Definition: An assertion expressing the result of an implementation evaluating an issue for a particular data quality need in a particular data resource.
@@ -646,14 +752,14 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### IssueConcept
+#### IssueConcept
 
 - Name: bdqffdq:IssueConcept
 - Definition: A term involved in flagging problems or potential problems in assessment of data quality that would or might prevent the data from meeting expressed data quality needs.
 
 ********************
 
-### IssueMethod
+#### IssueMethod
 
 - Name: bdqffdq:IssueMethod
 - Definition: A data quality solution concept that relates an Issue to its Specifications.
@@ -661,7 +767,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### IssuePolicy
+#### IssuePolicy
 
 - Name: bdqffdq:IssuePolicy
 - Definition: A need concept that relates a UseCase to a set of supporting Issues.
@@ -669,7 +775,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### Measure
+#### Measure
 
 - Name: bdqffdq:Measure
 - Definition: A data quality need that expresses how the fitness of data for some use may be measured.
@@ -677,7 +783,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### MeasurementAssertion
+#### MeasurementAssertion
 
 - Name: bdqffdq:MeasurementAssertion
 - Definition: An assertion expressing the result of an implementation measuring a particular data quality need in a particular data resource.
@@ -685,7 +791,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### MeasurementMethod
+#### MeasurementMethod
 
 - Name: bdqffdq:MeasurementMethod
 - Definition: A data quality solution concept that relates a Measure to its Specifications.
@@ -693,7 +799,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### MeasurementPolicy
+#### MeasurementPolicy
 
 - Name: bdqffdq:MeasurementPolicy
 - Definition: A need concept that relates a UseCase to a set of supporting Measures.
@@ -701,7 +807,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### Mechanism
+#### Mechanism
 
 - Name: bdqffdq:Mechanism
 - Definition: An entity that can execute data quality methods.
@@ -709,14 +815,14 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### NeedConcept
+#### NeedConcept
 
 - Name: bdqffdq:NeedConcept
 - Definition: A concept that expresses an aspect of a data quality need.
 
 ********************
 
-### Parameter
+#### Parameter
 
 - Name: bdqffdq:Parameter
 - Definition: A placeholder for a value that, when provided to a test Specification changes the behavior of the test in a defined manner.
@@ -724,7 +830,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### Policy
+#### Policy
 
 - Name: bdqffdq:Policy
 - Definition: The set of data quality Needs for a UseCase
@@ -732,14 +838,14 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### ReportConcept
+#### ReportConcept
 
 - Name: bdqffdq:ReportConcept
 - Definition: A concept concerning data quality expressed in a data quality report.
 
 ********************
 
-### ResourceType
+#### ResourceType
 
 - Name: bdqffdq:ResourceType
 - Definition: Category of things that are data objects about which data quality assertions may be made.
@@ -747,7 +853,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### ResponseQualifier
+#### ResponseQualifier
 
 - Name: bdqffdq:ResponseQualifier
 - Definition: A report concept to which additional assertions providing additional information beyond that of ResponseResult from the result of the execution of the Specification of a data quality need are attached.
@@ -755,7 +861,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### ResponseResult
+#### ResponseResult
 
 - Name: bdqffdq:ResponseResult
 - Definition: A report concept to which a controlled vocabulary assertions about the result of the execution of the Specification of a data quality need are attached.
@@ -763,7 +869,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### ResponseStatus
+#### ResponseStatus
 
 - Name: bdqffdq:ResponseStatus
 - Definition: A report concept expressing controlled vocabulary values about the exit state of an execution process of a data quality Specification by an implementation.
@@ -771,14 +877,14 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### SolutionsConcept
+#### SolutionsConcept
 
 - Name: bdqffdq:SolutionsConcept
 - Definition: A concept that expresses an aspect of a data quality solution.
 
 ********************
 
-### Specification
+#### Specification
 
 - Name: bdqffdq:Specification
 - Definition: A specific statement about how to evaluate a data quality need.
@@ -786,7 +892,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### UseCase
+#### UseCase
 
 - Name: bdqffdq:UseCase
 - Definition: A needs concept expressing a purpose to which data are put for which the data must have quality for the result to have meaning and reliability.
@@ -794,7 +900,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### Validation
+#### Validation
 
 - Name: bdqffdq:Validation
 - Definition: A data quality need that expreses how data may be evaluated for fitness for use.
@@ -802,7 +908,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### ValidationAssertion
+#### ValidationAssertion
 
 - Name: bdqffdq:ValidationAssertion
 - Definition: An assertion expressing the result of an implementation validating compliance with a a particular data quality need in a particular data resource.
@@ -810,14 +916,14 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### ValidationConcept
+#### ValidationConcept
 
 - Name: bdqffdq:ValidationConcept
 - Definition: A term involved in statements about the conformance of data to expressed quality needs.
 
 ********************
 
-### ValidationMethod
+#### ValidationMethod
 
 - Name: bdqffdq:ValidationMethod
 - Definition: A data quality solution concept that relates an Validation to its Specifications.
@@ -825,7 +931,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### ValidationPolicy
+#### ValidationPolicy
 
 - Name: bdqffdq:ValidationPolicy
 - Definition: A need concept that relates a UseCase to a set of supporting Validations.
@@ -834,35 +940,35 @@ It is important that the chain of relationships from an instance of an Assertion
 ********************
 
 ### 5.2 ObjectProperty terms
-### amendmentProperty
+#### amendmentProperty
 
 - Name: bdqffdq:amendmentProperty
 - Definition: Category of object properties that apply to Amendmentts
 
 ********************
 
-### appliesTo
+#### appliesTo
 
 - Name: bdqffdq:appliesTo
 - Definition: Describes the DataResource about which an Assertion is made.
 
 ********************
 
-### composedOf
+#### composedOf
 
 - Name: bdqffdq:composedOf
 - Definition: Specific vocabulary term that comprises a non-abstract InformationElement.
 
 ********************
 
-### containsAssertion
+#### containsAssertion
 
 - Name: bdqffdq:containsAssertion
 - Definition: Connects a Data Quality Report with Assertions that comprise that report.
 
 ********************
 
-### forAmendment
+#### forAmendment
 
 - Name: bdqffdq:forAmendment
 - Definition: Relates an AmendmentMethod to an Amendment.
@@ -871,14 +977,14 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### forDataQualityNeed
+#### forDataQualityNeed
 
 - Name: bdqffdq:forDataQualityNeed
 - Definition: Category of properties that relates specific Data Quality Needs to specific Methods.
 
 ********************
 
-### forIssue
+#### forIssue
 
 - Name: bdqffdq:forIssue
 - Definition: Relates an IssuetMethod to an Issue.
@@ -887,7 +993,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### forMeasure
+#### forMeasure
 
 - Name: bdqffdq:forMeasure
 - Definition: Relates an MeasurementMethod to a Measure.
@@ -896,7 +1002,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### forValidation
+#### forValidation
 
 - Name: bdqffdq:forValidation
 - Definition: Relates an ValidationMethod to a Validation.
@@ -905,7 +1011,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### hasActedUponInformationElement
+#### hasActedUponInformationElement
 
 - Name: bdqffdq:hasActedUponInformationElement
 - Definition: Describes the ActedUpon InformationElements assessed by a DataQualityNeed about which Assertions arising from the DataQualityNeed would apply.
@@ -913,7 +1019,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### hasArgument
+#### hasArgument
 
 - Name: bdqffdq:hasArgument
 - Definition: Relates a Specification to an Argument
@@ -921,7 +1027,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### hasConsultedInformationElement
+#### hasConsultedInformationElement
 
 - Name: bdqffdq:hasConsultedInformationElement
 - Definition: Describes the InformationElements assessed by a DataQualityNeed in order to make Assertions concerning ActedUpon InformationElements.
@@ -929,7 +1035,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### hasCriterion
+#### hasCriterion
 
 - Name: bdqffdq:hasCriterion
 - Definition: The Criterion under which a Validation or Issue assesses for data quality.
@@ -938,7 +1044,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### hasDataQualityDimension
+#### hasDataQualityDimension
 
 - Name: bdqffdq:hasDataQualityDimension
 - Definition: The DataQualityDimension to which a DataQualityNeed Applies.
@@ -947,7 +1053,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### hasEnhancement
+#### hasEnhancement
 
 - Name: bdqffdq:hasEnhancement
 - Definition: The Enhancement that describes how an Amendment may propose changes to improve data quality.
@@ -956,7 +1062,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### hasInformationElement
+#### hasInformationElement
 
 - Name: bdqffdq:hasInformationElement
 - Definition: Describes the InformationElements assessed by a DataQualityNeed.
@@ -965,7 +1071,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### hasParameter
+#### hasParameter
 
 - Name: bdqffdq:hasParameter
 - Definition: Relates an Argument to a Parameter.
@@ -973,14 +1079,14 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### hasResourceType
+#### hasResourceType
 
 - Name: bdqffdq:hasResourceType
 - Definition: Resource Type to which a DataQualityNeed applies.
 
 ********************
 
-### hasResponseQualifier
+#### hasResponseQualifier
 
 - Name: bdqffdq:hasResponseQualifier
 - Definition: ResponseQualifier object asserted by an Assertion.
@@ -988,7 +1094,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### hasResponseResult
+#### hasResponseResult
 
 - Name: bdqffdq:hasResponseResult
 - Definition: ResponseResult object asserted by an Assertion.
@@ -996,7 +1102,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### hasResponseStatus
+#### hasResponseStatus
 
 - Name: bdqffdq:hasResponseStatus
 - Definition: ResponseStatus object asserted by an Assertion.
@@ -1004,7 +1110,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### hasSpecification
+#### hasSpecification
 
 - Name: bdqffdq:hasSpecification
 - Definition: Relates a Method to a Specification.
@@ -1012,7 +1118,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### hasUseCase
+#### hasUseCase
 
 - Name: bdqffdq:hasUseCase
 - Definition: Relates a Policy to a UseCase.
@@ -1020,7 +1126,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### implementedBy
+#### implementedBy
 
 - Name: bdqffdq:implementedBy
 - Definition: Mechanism that provides an Implementation
@@ -1028,7 +1134,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### improvedBy
+#### improvedBy
 
 - Name: bdqffdq:improvedBy
 - Definition: ImprovementTarget that would have data quality improved by assertions resulting from an Amendment.
@@ -1036,42 +1142,42 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### includedInPolicy
+#### includedInPolicy
 
 - Name: bdqffdq:includedInPolicy
 - Definition: Assserts that a Data Quality Need is part of a Policy
 
 ********************
 
-### issueProperty
+#### issueProperty
 
 - Name: bdqffdq:issueProperty
 - Definition: Category of object properties that apply to Issues.
 
 ********************
 
-### measurementProperty
+#### measurementProperty
 
 - Name: bdqffdq:measurementProperty
 - Definition: Category of object properties that apply to Measures.
 
 ********************
 
-### producesAssertion
+#### producesAssertion
 
 - Name: bdqffdq:producesAssertion
 - Definition: Connects an entity with an assertion that the entity created.
 
 ********************
 
-### reportProperty
+#### reportProperty
 
 - Name: bdqffdq:reportProperty
 - Definition: Category of object properties that apply to Assertions.
 
 ********************
 
-### targetedIssue
+#### targetedIssue
 
 - Name: bdqffdq:targetedIssue
 - Definition: Issue where the data conformance with needs may be improved by accepting proposals from an Amendment via an ImprovementTarget.
@@ -1079,7 +1185,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### targetedMeasure
+#### targetedMeasure
 
 - Name: bdqffdq:targetedMeasure
 - Definition: Measure where the data conformance with needs may be improved by accepting proposals from an Amendment via an ImprovementTarget.
@@ -1087,7 +1193,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### targetedValidation
+#### targetedValidation
 
 - Name: bdqffdq:targetedValidation
 - Definition: Validation where the data conformance with needs may be improved by accepting proposals from an Amendment via an ImprovementTarget.
@@ -1096,7 +1202,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### usesSpecification
+#### usesSpecification
 
 - Name: bdqffdq:usesSpecification
 - Definition: Specification that an Implementation implements.
@@ -1104,7 +1210,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### validationProperty
+#### validationProperty
 
 - Name: bdqffdq:validationProperty
 - Definition: Category of object properties that apply to Validations.
@@ -1112,7 +1218,7 @@ It is important that the chain of relationships from an instance of an Assertion
 ********************
 
 ### 5.3 DataProperty terms
-### hasAuthoritiesDefaults
+#### hasAuthoritiesDefaults
 
 - Name: bdqffdq:hasAuthoritiesDefaults
 - Definition: Text describing source authorities and parameters with their default values to attach to a Specification to further specify the behavior described in the expected response.
@@ -1120,7 +1226,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### hasDateLastUpdated
+#### hasDateLastUpdated
 
 - Name: bdqffdq:hasDateLastUpdated
 - Definition: Date of the most recent dcterms:Issued for this class with a change that would be pertenent to implementation.
@@ -1128,7 +1234,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### hasExpectedResponse
+#### hasExpectedResponse
 
 - Name: bdqffdq:hasExpectedResponse
 - Definition: Text describing the logic to be followed by an implementation of a Specification specifying the values of ResponseStatus and ResponseResults that should be produced from the evaluation of input InformationElements.
@@ -1136,7 +1242,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### hasResponseComment
+#### hasResponseComment
 
 - Name: bdqffdq:hasResponseComment
 - Definition: Free text describing the assertion made in the response and why that conclusion was reached.
@@ -1144,7 +1250,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### hasResponseResultValue
+#### hasResponseResultValue
 
 - Name: bdqffdq:hasResponseResultValue
 - Definition: Data property carrying the value of an Assertion when not an object.
@@ -1152,7 +1258,7 @@ It is important that the chain of relationships from an instance of an Assertion
 ********************
 
 ### 5.4 NamedIndividual terms
-### MultiRecord
+#### MultiRecord
 
 - Name: bdqffdq:MultiRecord
 - Type: bdqffdq:ResourceType
@@ -1160,7 +1266,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### SingleRecord
+#### SingleRecord
 
 - Name: bdqffdq:SingleRecord
 - Type: bdqffdq:ResourceType
@@ -1168,7 +1274,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### COMPLETE
+#### COMPLETE
 
 - Name: bdqffdq:COMPLETE
 - Type: bdqffdq:ResponseResult
@@ -1177,7 +1283,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### IS_ISSUE
+#### IS_ISSUE
 
 - Name: bdqffdq:IS_ISSUE
 - Type: bdqffdq:ResponseResult
@@ -1186,7 +1292,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### IS_ISSUE
+#### IS_ISSUE
 
 - Name: bdqffdq:IS_ISSUE
 - Type: bdqffdq:ResponseResult
@@ -1195,7 +1301,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### NOT_COMPLETE
+#### NOT_COMPLETE
 
 - Name: bdqffdq:NOT_COMPLETE
 - Type: bdqffdq:ResponseResult
@@ -1203,7 +1309,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### NOT_ISSUE
+#### NOT_ISSUE
 
 - Name: bdqffdq:NOT_ISSUE
 - Type: bdqffdq:ResponseResult
@@ -1212,7 +1318,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### POTENTIAL_ISSUE
+#### POTENTIAL_ISSUE
 
 - Name: bdqffdq:POTENTIAL_ISSUE
 - Type: bdqffdq:ResponseResult
@@ -1220,7 +1326,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### AMENDED
+#### AMENDED
 
 - Name: bdqffdq:AMENDED
 - Type: bdqffdq:ResponseStatus
@@ -1229,7 +1335,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### NOT_AMENDED
+#### NOT_AMENDED
 
 - Name: bdqffdq:NOT_AMENDED
 - Type: bdqffdq:ResponseStatus
@@ -1237,7 +1343,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 ********************
 
-### RUN_HAS_RESULT
+#### RUN_HAS_RESULT
 
 - Name: bdqffdq:RUN_HAS_RESULT
 - Type: bdqffdq:ResponseStatus

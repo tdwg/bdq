@@ -42,90 +42,110 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
 **Comment**<br>
 Draft Standard for Review
 
-### Table of Contents ###
+## Table of Contents ##
+[1 Introduction](#1-introduction)
+  - [1.1 Purpose](#11-purpose)
+  - [1.2 Audience](#12-audience)
+  - [1.3 Associated Documents](#13-associated-documents)
+  - [1.4 Status of the Content of this document](#14-status-of-the-content-of-this-document)
+  - [1.5 RFC 2119 key words](#15-rfc-2119-key-words)
+  - [1.6 Namespace Abbreviations](#16-namespace-abbreviations)
 
-- [1 Introduction (non-normative)](#1-introduction-non-normative)
-- [1.1 Purpose](#11-purpose)
-- [1.2 Audience](#12-audience)
-- [1.3 Associated Documents](#13-associated-documents)
-- [1.4 Status of the Content of this document](#14-status-of-the-content-of-this-document)
-- [1.5 RFC 2119 key words](#15-rfc-2119-key-words)
-- [1.6 Namespace Abbreviations](#16-namespace-abbreviations)
-- [2 About the Tests and their Implementation](#2-about-the-tests-and-their-implementation)
-- [2.1 Independence (normative)](#21-independence-normative)
-- [2.2 The Concept of "EMPTY" in BDQ Core (normative)](#22-the-concept-of-empty-in-bdq-core-normative)
-- [2.2.1 The Concept of Empty (normative)](#221-the-concept-of-empty-normative)
-- [2.2.2 Example implementation of a Function to Assess Empty (non-normative)](#222-example-implementation-of-a-function-to-assess-empty-non-normative)
-- [2.3 Reading Test Descriptors (non-normative)](#23-reading-test-descriptors-non-normative)
-- [2.3.1 Key Parts of a Test Descriptor](#231-key-parts-of-a-test-descriptor)
-- [2.3.2 Reading a Specification](#232-reading-a-specification)
-- [2.3.2.1 Response as Shorthand for a Set of bdqffdq Concepts (non-normative)](#2321-response-as-shorthand-for-a-set-of-bdqffdq-concepts-non-normative)
-- [2.3.2.2 Guidance for Reading a Specification (normative)](#2322-guidance-for-reading-a-specification-normative)
-- [2.3.2.3 Further Guidance for Reading a Specification (non-normative)](#2323-further-guidance-for-reading-a-specification-non-normative)
-- [2.3.2.4 Default Value Strings in Parameters (normative)](#2324-default-value-strings-in-parameters-normative)
-- [2.3.2.5 Example Interpretation of a Parameter String Default Value (non-normative)](#2325-example-interpretation-of-a-parameter-string-default-value-non-normative)
-- [2.3.3 The Concept of "interpreted as" (normative)](#233-the-concept-of-interpreted-as-normative)
-- [2.3.4 Handling Leading and Trailing Whitespace (normative)](#234-handling-leading-and-trailing-whitespace-normative)
-- [3 Compliant Implementation (normative)](#3-compliant-implementation-normative)
-- [4 Extension Points (normative)](#4-extension-points-normative)
-- [5 Responses from Tests](#5-responses-from-tests)
-- [5.1 The Response Object (normative)](#51-the-response-object-normative)
-- [5.2 Framework Elements Not Included in BDQ Core Test Descriptions (normative)](#52-framework-elements-not-included-in-bdq-core-test-descriptions-normative)
-- [6 Guidelines for Implementers](#6-guidelines-for-implementers)
-- [6.1 Parameters and Changing the Behavior of a Test (normative)](#61-parameters-and-changing-the-behavior-of-a-test-normative)
-- [6.2 Execution Process Agnostic (non-normative)](#62-execution-process-agnostic-non-normative)
-- [6.3 Considerations for Test Execution (normative)](#63-considerations-for-test-execution-normative)
-- [6.4 Order of Test Execution.](#64-order-of-test-execution)
-- [6.4.1 Phases: Pre-Amendment, Amendment, Post-Amendment (normative)](#641-phases-pre-amendment-amendment-post-amendment-normative)
-- [6.4.1.1 Explanation of Phases (non-normative)](#6411-explanation-of-phases-non-normative)
-- [6.4.1.2 Phases and Quality Assurance (normative)](#6412-phases-and-quality-assurance-normative)
-- [6.4.1.3 Phases and Quality Control (normative)](#6413-phases-and-quality-control-normative)
-- [6.4.2 Test Dependencies (normative)](#642-test-dependencies-normative)
-- [6.4.2.1 Terms for describing Test Dependencies (non-normative)](#6421-terms-for-describing-test-dependencies-non-normative)
-- [6.4.3 Implementing a complete Test (normative)](#643-implementing-a-complete-test-normative)
-- [6.4.4 Presenting Darwin Core Data to a Method that Implements a Test](#644-presenting-darwin-core-data-to-a-method-that-implements-a-test)
-- [6.4.4.1 Binding Darwin Core Data (normative)](#6441-binding-darwin-core-data-normative)
-- [6.4.4.2 Examples of matching input Darwin Core to Method parameters (non-normative)](#6442-examples-of-matching-input-darwin-core-to-method-parameters-non-normative)
-- [6.4.5 Example Test Implementations (non-normative)](#645-example-test-implementations-non-normative)
-- [6.4.5.1 Example in Pseudocode (non-normative)](#6451-example-in-pseudocode-non-normative)
-- [6.4.5.2 Example in Java (non-normative)](#6452-example-in-java-non-normative)
-- [6.4.6 Implementing an Abstract Test](#646-implementing-an-abstract-test)
-- [6.4.7 Implementing a Test in a Specific Environment](#647-implementing-a-test-in-a-specific-environment)
-- [7 Presentation of Results](#7-presentation-of-results)
-- [7.1 Data Quality Reports](#71-data-quality-reports)
-- [7.1.1 Identifying Tests (normative)](#711-identifying-tests-normative)
-- [7.1.2 Information Elements ActedUpon and Consulted in Results (normative)](#712-information-elements-actedupon-and-consulted-in-results-normative)
-- [7.1.3 Example (non-normative)](#713-example-non-normative)
-- [7.2 Annotations (normative)](#72-annotations-normative)
-- [8 Validating Test Implementations (normative)](#8-validating-test-implementations-normative)
-- [8.1 Introduction to Validation (non-normative)](#81-introduction-to-validation-non-normative)
-- [8.1.1 DataID as a validation data record identifier (normative)](#811-dataid-as-a-validation-data-record-identifier-normative)
-- [8.2 Structure of the Test Validation Data (non-normative)](#82-structure-of-the-test-validation-data-non-normative)
-- [8.3 Examples of the Data for Validating Tests (non-normative)](#83-examples-of-the-data-for-validating-tests-non-normative)
-- [8.4 Where to Get the Test Validation Data (non-normative)](#84-where-to-get-the-test-validation-data-non-normative)
-- [8.5 Implementation and the Validation Data (normative)](#85-implementation-and-the-validation-data-normative)
-- [8.6 Existing Software tools (non-normative)](#86-existing-software-tools-non-normative)
-- [8.6.1 Tools for Validating Test Implementations with the Validation Data (non-normative)](#861-tools-for-validating-test-implementations-with-the-validation-data-non-normative)
-- [8.6.2 Tools to assist with implementations and RDF presentation (non-normative)](#862-tools-to-assist-with-implementations-and-rdf-presentation-non-normative)
-- [9 Existing Test Implementations (non-normative)](#9-existing-test-implementations-non-normative)
+[2 About the Tests and their Implementation](#2-about-the-tests-and-their-implementation)
+  - [2.1 Independence (normative)](#21-independence-normative)
+  - [2.2 The Concept of "EMPTY" in BDQ Core (normative)](#22-the-concept-of-empty-in-bdq-core-normative)
+    - [2.2.1 The Concept of Empty (normative)](#221-the-concept-of-empty-normative)
+    - [2.2.2 Example implementation of a Function to Assess Empty (non-normative)](#222-example-implementation-of-a-function-to-assess-empty-non-normative)
+  - [2.3 Reading Test Descriptors (non-normative)](#23-reading-test-descriptors-non-normative)
+    - [2.3.1 Key Parts of a Test Descriptor](#231-key-parts-of-a-test-descriptor)
+    - [2.3.2 Reading a Specification](#232-reading-a-specification)
+      - [2.3.2.1 Response as Shorthand for a Set of bdqffdq Concepts (non-normative)](#2321-response-as-shorthand-for-a-set-of-bdqffdq-concepts-non-normative)
+      - [2.3.2.2 Guidance for Reading a Specification (normative)](#2322-guidance-for-reading-a-specification-normative)
+      - [2.3.2.3 Further Guidance for Reading a Specification (non-normative)](#2323-further-guidance-for-reading-a-specification-non-normative)
+      - [2.3.2.4 Default Value Strings in Parameters (normative)](#2324-default-value-strings-in-parameters-normative)
+      - [2.3.2.5 Example Interpretation of a Parameter String Default Value (non-normative)](#2325-example-interpretation-of-a-parameter-string-default-value-non-normative)
+    - [2.3.3 The Concept of "interpreted as" (normative)](#233-the-concept-of-interpreted-as-normative)
+    - [2.3.4 Handling Leading and Trailing Whitespace (normative)](#234-handling-leading-and-trailing-whitespace-normative)
 
+[3 Compliant Implementation (normative)](#3-compliant-implementation-normative)
 
-## 1 Introduction (non-normative)
+[4 Extension Points (normative)](#4-extension-points-normative)
+
+[5 Responses from Tests](#5-responses-from-tests)
+  - [5.1 The Response Object (normative)](#51-the-response-object-normative)
+  - [5.2 Framework Elements Not Included in BDQ Core Test Descriptions (normative)](#52-framework-elements-not-included-in-bdq-core-test-descriptions-normative)
+
+[6 Guidelines for Implementers](#6-guidelines-for-implementers)
+  - [6.1 Parameters and Changing the Behavior of a Test (normative)](#61-parameters-and-changing-the-behavior-of-a-test-normative)
+  - [6.2 Execution Process Agnostic (non-normative)](#62-execution-process-agnostic-non-normative)
+  - [6.3 Considerations for Test Execution (normative)](#63-considerations-for-test-execution-normative)
+  - [6.4 Order of Test Execution.](#64-order-of-test-execution)
+    - [6.4.1 Phases: Pre-Amendment, Amendment, Post-Amendment (normative)](#641-phases-pre-amendment-amendment-post-amendment-normative)
+      - [6.4.1.1 Explanation of Phases (non-normative)](#6411-explanation-of-phases-non-normative)
+      - [6.4.1.2 Phases and Quality Assurance (normative)](#6412-phases-and-quality-assurance-normative)
+      - [6.4.1.3 Phases and Quality Control (normative)](#6413-phases-and-quality-control-normative)
+    - [6.4.2 Test Dependencies (normative)](#642-test-dependencies-normative)
+      - [6.4.2.1 Terms for describing Test Dependencies (non-normative)](#6421-terms-for-describing-test-dependencies-non-normative)
+    - [6.4.3 Implementing a complete Test (normative)](#643-implementing-a-complete-test-normative)
+    - [6.4.4 Presenting Darwin Core Data to a Method that Implements a Test](#644-presenting-darwin-core-data-to-a-method-that-implements-a-test)
+      - [6.4.4.1 Binding Darwin Core Data (normative)](#6441-binding-darwin-core-data-normative)
+      - [6.4.4.2 Examples of matching input Darwin Core to Method parameters (non-normative)](#6442-examples-of-matching-input-darwin-core-to-method-parameters-non-normative)
+    - [6.4.5 Example Test Implementations (non-normative)](#645-example-test-implementations-non-normative)
+      - [6.4.5.1 Example in Pseudocode (non-normative)](#6451-example-in-pseudocode-non-normative)
+      - [6.4.5.2 Example in Java (non-normative)](#6452-example-in-java-non-normative)
+    - [6.4.6 Implementing an Abstract Test](#646-implementing-an-abstract-test)
+    - [6.4.7 Implementing a Test in a Specific Environment](#647-implementing-a-test-in-a-specific-environment)
+
+[7 Presentation of Results](#7-presentation-of-results)
+  - [7.1 Data Quality Reports](#71-data-quality-reports)
+    - [7.1.1 Identifying Tests (normative)](#711-identifying-tests-normative)
+    - [7.1.2 Information Elements ActedUpon and Consulted in Results (normative)](#712-information-elements-actedupon-and-consulted-in-results-normative)
+    - [7.1.3 Example (non-normative)](#713-example-non-normative)
+  - [7.2 Annotations (normative)](#72-annotations-normative)
+
+[8 Validating Test Implementations (normative)](#8-validating-test-implementations-normative)
+  - [8.1 Introduction to Validation (non-normative)](#81-introduction-to-validation-non-normative)
+    - [8.1.1 DataID as a validation data record identifier (normative)](#811-dataid-as-a-validation-data-record-identifier-normative)
+  - [8.2 Structure of the Test Validation Data (non-normative)](#82-structure-of-the-test-validation-data-non-normative)
+  - [8.3 Examples of the Data for Validating Tests (non-normative)](#83-examples-of-the-data-for-validating-tests-non-normative)
+  - [8.4 Where to Get the Test Validation Data (non-normative)](#84-where-to-get-the-test-validation-data-non-normative)
+  - [8.5 Implementation and the Validation Data (normative)](#85-implementation-and-the-validation-data-normative)
+  - [8.6 Existing Software tools (non-normative)](#86-existing-software-tools-non-normative)
+    - [8.6.1 Tools for Validating Test Implementations with the Validation Data (non-normative)](#861-tools-for-validating-test-implementations-with-the-validation-data-non-normative)
+    - [8.6.2 Tools to assist with implementations and RDF presentation (non-normative)](#862-tools-to-assist-with-implementations-and-rdf-presentation-non-normative)
+
+[9 Existing Test Implementations (non-normative)](#9-existing-test-implementations-non-normative)
+
+[Acronyms](#acronyms)
+
+[Glossary](#glossary)
+
+[References](#references)
+
+[Cite BDQ Core](#cite-bdq-core)
+
+## 1 Introduction
 
 ### 1.1 Purpose
 
-This document provides guidance for those wishing to create software implementations (bdqffdq:Mechanism) of the BDQ Core Tests.
+The purpose of this document is to provide implementation guidance for software developers and systems architects building tools or workflows that conform to the BDQ Core standard. It explains how to interpret and operationalize the BDQ Core Test specifications, including the semantics of inputs and outputs, expected behaviors, parameter handling, dependency resolution, and result reporting.
+
+This guide supports consistent, standards-compliant implementations across various environments by clarifying technical aspects of the Tests, detailing extension points, and describing validation procedures using shared datasets. It includes both normative content necessary for implementation conformance and non-normative advice for implementers seeking efficiency, clarity, and compatibility.
 
 ### 1.2 Audience
 
-This document is for software developers needing a technical understanding of the BDQ Core Tests.
+This document is intended for technical audiences responsible for implementing BDQ Core Tests in software applications or data processing pipelines. It will be particularly useful to:
+
+- Software developers integrating BDQ Core into biodiversity data infrastructures;
+- Tool builders seeking to support data validation or annotation workflows;
+- Technical architects and standards implementers creating reusable data quality services;
+- Power users customizing or extending BDQ Core Test suites.
+
+Readers should be familiar with basic software development concepts and, ideally, have experience working with data structures and RDF vocabularies. This guide assumes a need for detailed implementation-level knowledge, but provides both high-level explanations and concrete examples (e.g., in pseudocode and Java).
 
 ### 1.3 Associated Documents
 
-- [BDQ Core Quick Reference Guide](../../terms/bdqcore/index.md)
-- [BDQ Core List of Vocabularies](../../vocabularies/index.md)
-- [BDQ Core User's Guide](../users/index.md)
-- Convenient list of Tests [CSV file of just the SingleRecord Tests](../../../dist/bdqcore_singlerecord_tests_current.csv)
+For the list and links to all associated documents see the [Biodiversity Data Quality Core](../../index.md) page, which lists the parts of the standard.
 
 ### 1.4 Status of the Content of this document
 
@@ -259,7 +279,7 @@ example
 
 Given these properties, it should be straightforward to understand the expected behavior of an implementation of this Test. This section gives further guidance on how to interpret these properties in order to produce an implementation that follows this Specification.
 
-#### 2.3.2.1 Response as Shorthand for a Set of bdqffdq Concepts (non-normative)
+##### 2.3.2.1 Response as Shorthand for a Set of bdqffdq Concepts (non-normative)
 
 We regularly (particularly in examples) use Response, Response.status, Response.result, and Response.comment as shorthand for a more complicated set of bdqffdq: classes, object properties and datatype properties. The table below describes how these concepts are related.
 
@@ -271,11 +291,11 @@ We regularly (particularly in examples) use Response, Response.status, Response.
 | Response.comment | bdqffdq:hasResponseComment | A human readable interpretation of the results of the Test. |
 | Response.qualifier | bdqffdq:ResponseQualifier, bdqffdq:hasResponseQualifier | Additional structured information that qualifies the bdq:Response, intended as an extension point for uncertainty. |
 
-#### 2.3.2.2 Guidance for Reading a Specification (normative)
+##### 2.3.2.2 Guidance for Reading a Specification (normative)
 
 A bdqffdq:hasExpectedResponse property of a bdqffdq:Specification provides expectations for the behavior of an implementation of a Test. A bdqffdq:hasExpectedResponse consists of a sequence of blocks of "RESPONSE, criteria;" Where a few Amendment Tests can propose values for multiple [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021), the "criteria" is a sequence of options for that RESPONSE. When reading a Specification, implementers SHOULD read each block in sequence, evaluating each of the criteria in sequence, and return the first response for which the specified criteria are met. An exception to this is the placement of EXTERNAL_PREREQUISITES_NOT_MET as the first RESPONSE in the Specification. This does not imply that the responsiveness of an external resource should be assessed first. Implementers MAY handle failure of an external resource in any appropriate manner, for example, with exception handling.
 
-#### 2.3.2.3 Further Guidance for Reading a Specification (non-normative)
+##### 2.3.2.3 Further Guidance for Reading a Specification (non-normative)
 
 Responses in a Specification are expressed in a concise and abbreviated form for readability by implementers, expanding these to string properties on a Response object gives:
 
@@ -328,13 +348,13 @@ The bdqffdq:hasAuthoritiesDefaults property may be present in isolation (to make
 
 See section [Parameterizing the Tests (normative)](../../bdqcore/index.md#33-parameterizing-the-tests-normative) of the [BDQ Core Tests and Assertions](../../docs/bdqcore/index.md) page for further guidance on bdq:sourceAuthority values, parameters, and arguments. 
 
-#### 2.3.2.4 Default Value Strings in Parameters (normative)
+##### 2.3.2.4 Default Value Strings in Parameters (normative)
 
 When a Test is defined as parameterized, implementations SHOULD support the parameter in addition to the Information Elements. When a Test is defined as parameterized, implementations MAY choose to only support the default value, and MAY do so internally to the Test, without including the parameter(s) in the Test API (note that implementations that choose to do so, will be unable to validate against all of the Test Validation Data (see [8 Validating Test Implementations](#8-Validating-Test-Implementations-normative))).
 
 When the parameter has a default value and a resource, and an implementation includes the parameter in its API, that implementation MUST support the string literal given as the default value, and internally choose the resource "{[resource]}" or "{API endpoint [resource]}" based on that string literal "default value". Implementations MAY also accept other values including the "{[resource]}" or "{API endpoint [resource]}" as the value for the parameter in the API for the Test implementation.
 
-#### 2.3.2.5 Example Interpretation of a Parameter String Default Value (non-normative)
+##### 2.3.2.5 Example Interpretation of a Parameter String Default Value (non-normative)
 
 The following code snippet in Java from the FilteredPush rec_occur_qc library (Morris 2025) illustrates interpretation of the default value "Creative Commons" when provided as a parameter to an implementation of [AMENDMENT_LICENSE_STANDARDIZED](https://rs.tdwg.org/bdqcore/terms/dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8). The literal "Creative Commons" is accepted as a parameter value.
 
@@ -517,15 +537,15 @@ Some source authorities are highly stable small vocabularies. Implementers MAY c
 
 Tests MAY be run in Pre-Amendment, Amendment, and Post-amendment phases.
 
-#### 6.4.1.1 Explanation of Phases (non-normative)
+##### 6.4.1.1 Explanation of Phases (non-normative)
 
 A good practice for executing the BDQ Core Tests is to follow a sequence that begins by executing all bdqffdq:SingleRecord Validation and Measure Tests in a pre-amendment phase. Then, to execute all Amendment Tests in an amendment phase. Finally, re-run all Validation and Measure Tests on the data with the proposed changes asserted by the Amendments applied to the data in a post-amendment phase. Such a sequence of phases allows assertions to be made first about the quality of the data as they were initially presented, and then about how much the quality of the data would be improved if all proposed changes from the Amendments were accepted. The order and method of running Validation and Measure Tests within the pre-amendment and post-amendment phases is not specified by BDQ Core. Within pre-amendment and post-amendment phases, the Validation and Measures Tests are agnostic about the order in which they are run, the extent to which they are run in parallel, or the extent to which they are run on single records or on unique values within a dataset.
 
-#### 6.4.1.2 Phases and Quality Assurance (normative)
+##### 6.4.1.2 Phases and Quality Assurance (normative)
 
 It is RECOMMENDED, for Quality Assurance with the current suite of BDQ Core Tests, to run all pertinent (to a Use Case) bdqffdq:SingleRecord Validation and Measure Tests, then run all pertinent MultiRecord Measures that return `COMPLETE` or `NOT_COMPLETE`. These Measures MAY be used as filters. Exclude records from the dataset until all MultiRecord Measure Tests return "COMPLETE". This, under the mathematical formulation of the Framework, is the assertion that the data are fit for the purpose of the selected UseCase. This process MAY be performed in a single Validation and Measure phase without Amendments. This process MAY be performed on a post-amendment phase with all or selected proposed changes from Amendments accepted into the data stream. Acceptance of proposals for changes to the data in a processing stream SHOULD NOT be done blindly, and SHOULD involve thoughtful consideration of the proposed changes.
 
-#### 6.4.1.3 Phases and Quality Control (normative)
+##### 6.4.1.3 Phases and Quality Control (normative)
 
 Under Quality Control, bdqffdq:MultiRecord Measure Tests that return numeric values MAY be used to assess the prevalence of quality issues in the data with respect to the selected bdqffdq:UseCase. This MAY be done in a pre-amendment phase and again in a post-amendment phase with all proposed changes applied to the data stream to evaluate how much accepting proposed amendments would improve the data. Acceptance of proposals for changes to the data in a processing stream SHOULD NOT be done blindly, and SHOULD involve thoughtful consideration of the proposed changes.
 
@@ -564,7 +584,7 @@ See also the [SPACE Tests diagram](../../supplement/index.md#522-diagram-of-the-
 
 BDQ Core does not specify how the ordering of these Tests should be accomplished. Ordering of Tests COULD be done by describing an Amendment Test with an expected response that specifies the execution of each Test in order. Such a composition of Amendment Tests would be the preferred method of sequencing under the Framework, but to keep Tests as independent a possible, and to allow the maximum flexibility for the composition of Tests in Profiles to support bdqffdq:UseCases, BDQ Core does not provide such a Test Specification. Ordering of Tests could be done by providing a configuration file for a Test execution framework specifying Test dependencies. Ordering could be supported in a workflow environment by composing a workflow to execute these Tests in sequence. The order specified above SHOULD be followed.
 
-#### 6.4.2.1 Terms for describing Test Dependencies (non-normative)
+##### 6.4.2.1 Terms for describing Test Dependencies (non-normative)
 
 The [Fitness for Use Ontology](../../docs/bdqffdq/index.md) does not include a property to describe sequence inter-dependencies among amendments. The Ontology does provide the terms bdqffdq:targetedMeasure, bdqffdq:targetedValidation, and bdqffdq:TargetedIssue, which could be used, together with bdqffdq:improvedBy to relate Amendment Tests to Validation, Measure, and Issue Tests. BDQ Core does not use these terms to describe Test interrelationships, though they could be used for this purpose. 
 
@@ -586,7 +606,7 @@ the Test will not return the desired result, even if the implementation is corre
 
 Multiple approaches are possible to correctly match input Darwin Core terms onto method signatures for methods that implement Tests. 
 
-#### 6.4.4.1 Binding Darwin Core Data (normative) 
+##### 6.4.4.1 Binding Darwin Core Data (normative) 
 
 BDQ Core is entirely agnostic as to how the binding between domain terms (i.e., input Darwin Core terms) and Information Elements considered inside Test implementations is done. Implementers MAY freely implement in any appropriate way for their environment. However, Test implementations MUST provide structured Responses containing Response.status, Response.result, and Response.comment. 
 
@@ -594,7 +614,7 @@ Implementations MAY define objects corresponding to the set of Information Eleme
 
 Implementers MAY use any approach appropriate for their language(s) and environment to pass data into Test implementations.
 
-#### 6.4.4.2 Examples of matching input Darwin Core to Method parameters (non-normative) 
+##### 6.4.4.2 Examples of matching input Darwin Core to Method parameters (non-normative) 
 
 If a Test implementation is function that takes Darwin Core terms as input parameters, the function (or method) call becomes the point of concern for correctly matching input Darwin Core terms to the parameters of the Test (function or method).
 
@@ -643,7 +663,7 @@ Other approaches are possible.
 
 #### 6.4.5 Example Test Implementations (non-normative)
 
-#### 6.4.5.1 Example in Pseudocode (non-normative)
+##### 6.4.5.1 Example in Pseudocode (non-normative)
 
 A Specification is a sequence of statements in the form of a string representing the response followed by the criteria that would result in that response. Thus, given the following Specification: 
 
@@ -719,7 +739,7 @@ Below is pseudocode for a similar implementation as a method on a Darwin Core do
        }
     }
 
-#### 6.4.5.2 Example in Java (non-normative)
+##### 6.4.5.2 Example in Java (non-normative)
 
 Consider the following Test Specification for [VALIDATION_DAY_STANDARD](https://rs.tdwg.org/bdqcore/terms/47ff73ba-0028-4f79-9ce1-ee7008d66498) from BDQ Core: 
 
@@ -840,13 +860,13 @@ BDQ Core is agnostic about the form and appearance of data quality reports (e.g.
 
 ### 7.1 Data Quality Reports
 
-### 7.1.1 Identifying Tests (normative)
+#### 7.1.1 Identifying Tests (normative)
 
 Reports SHOULD identify Tests to consumers of those reports using at least the Label (rdfs:label) for the Test class (e.g., "VALIDATION_COUNTRY_FOUND" for [VALIDATION_COUNTRY_FOUND](https://rs.tdwg.org/bdqcore/terms/69b2efdc-6269-45a4-aecb-4cb99c2ae134)).
 
 Reports MAY describe Tests to consumers of those reports using the Description (rdfs:comment) for the Test class (e.g., "Does the value of dwc:country occur in the bdq:sourceAuthority?" for [VALIDATION_COUNTRY_FOUND](https://rs.tdwg.org/bdqcore/terms/69b2efdc-6269-45a4-aecb-4cb99c2ae134)).
 
-### 7.1.2 Information Elements ActedUpon and Consulted in Results (normative)
+#### 7.1.2 Information Elements ActedUpon and Consulted in Results (normative)
 
 Information Elements may be bdqffdq:ActedUpon or bdqffdq:Consulted (the sub-types of bdqffdq:InformationElement). Presentations of data quality results MAY use Information Element sub-type to identify which specific values assertions are being made about, and which values are being used to support those assertions. ActedUpon Information Elements are those for which a Validation Test is asserting compliance/non-compliance, or for which an Amendment Test is proposing an improvement to the data. Consulted Information Elements are those which inform such decisions, but are not themselves the subject of the decision. For example, in the Test [AMENDMENT_EVENTDATE_FROM_VERBATIM](https://rs.tdwg.org/bdqcore/terms/6d0a0c10-5e4a-4759-b448-88932f399812), the InformationElement dwc:eventDate is ActedUpon, while the InformationElement dwc:verbatimEventDate is Consulted. Implementers may wish to clearly represent to consumers of data quality reports (particularly data quality reports in the form of spreadsheets), which terms are particular Tests are making assertions about.
 
@@ -914,7 +934,7 @@ The Test Validation Data are organized as two flat CSV files. Each row in each f
 
 The Test validation records are all fragmentary [Simple Darwin Core](https://dwc.tdwg.org/simple/) (Wieczorek et al. 2012) Occurrence records. Each row contains values for only those Darwin Core terms that are relevant input to the particular validation and consists of a mixture of real and artificial data. The validation data consists of over 1100 records, with an average of about 10 validation cases for each Test (designed to exercise all of the decision pathways in the Specification of the Test). The set of rows for a given Test are intended to be sufficient to validate that an implementation of that particular Test performs as expected against the Specification.
 
-### 8.1.1 DataID as a validation data record identifier (normative)
+#### 8.1.1 DataID as a validation data record identifier (normative)
 
 Test Validation Data rows SHOULD be uniquely identified within the validation dataset with a dataID.
 
@@ -1011,13 +1031,13 @@ For each Test in an implementation, that Test MUST produce the same results as a
 
 ### 8.6 Existing Software tools (non-normative) 
 
-### 8.6.1 Tools for Validating Test Implementations with the Validation Data (non-normative) 
+#### 8.6.1 Tools for Validating Test Implementations with the Validation Data (non-normative) 
 
 The bdqtestrunner tool (Morris, 2024), written in Java, was written to validate the implementations of the BDQ Core Tests in various FilteredPush data quality libraries against the Test Validation Data, see: [doi:10.5281/zenodo.13932177](https://doi.org/10.5281/zenodo.13932178) and [github.com/FilteredPush/bdqtestrunner/](https://github.com/FilteredPush/bdqtestrunner/). This tool uses Java annotations on methods that implement Tests in order to match inputs from the validation data to methods under Test that implement individual Tests. The tool could be reused to validate implementations in other Java classes that follow the same use of ffdq-api (Lowery and Morris 2024).
 
 Java annotations can be used to match Test implementation methods to Tests and Information Elements to method parameters. The [ffdq-api](https://github.com/kurator-ord/ffdq-api) (Lowery and Morris 2024) provides a set of annotations intended to enable code using Java reflection to detect methods that implement particular Tests, and then again through Java reflection, bind Darwin Core terms and other Information Elements in input data onto appropriate method parameters.
 
-### 8.6.2 Tools to assist with implementations and RDF presentation (non-normative) 
+#### 8.6.2 Tools to assist with implementations and RDF presentation (non-normative) 
 
 The Test implementations listed below use Java Annotations (as shown in the example in [Section 2.3.2.5](#2325-Example-interpretation-of-a-parameter-string-default-value-non-normative) to carry metadata to identify Tests and to allow binding of Darwin Core terms to Java method parameters. The Java Annotations are themselves related to bdqffdq: Framework concepts, are available in a library ffdq-api (Lowery and Morris 2024), and are intended to be used with rdfbeans to serialize Java result objects produced by Test implementations into bdqffdq:Assertion objects in RDF. In addition, a Java library, kurator-ffdq (Lowery et al., 2025) is available for working with Test descriptions as RDF, being an implementation of the Framework Ontology in Java. The kurator-ffdq library also includes classes for generating stub methods for each Test in either Java or Python.
 

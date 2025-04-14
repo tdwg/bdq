@@ -39,50 +39,88 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
 **Comment**<br>
 Draft Standard for Review
 
-## 1 Introduction
+## Table of Contents ##
+[1. Introduction](#1-introduction)
+  - [1.1 Purpose](#11-purpose)
+  - [1.2 Audience](#12-audience)
+  - [1.3 Data Quality Dimensions](#13-data-quality-dimensions)
+  - [1.4 Associated Documents](#14-associated-documents)
+  - [1.5 Term List Distributions](#15-term-list-distributions)
+  - [1.6 Status of the content of this document](#16-status-of-the-content-of-this-document)
+  - [1.7 RFC 2119 key words](#17-rfc-2119-key-words)
+  - [1.8 Namespace abbreviations](#18-namespace-abbreviations)
+  - [1.9 Key to Vocabulary Terms](#19-key-to-vocabulary-terms)
 
-This document provides the full details of the controlled vocabulary values (individuals of the type bdqffdq:DataQualityDimension) for the term bdqffdq:hasDataQualityDimension in the BDQ Core Tests.
+[2 Use of Terms (normative)](#2-use-of-terms-normative)
+
+[3 Term index](#3-term-index)
+  - [3.1 Index By Term Name](#31-index-by-term-name)
+  - [3.2 Index By Label](#32-index-by-label)
+
+[4 Vocabulary](#4-vocabulary)
+
+[Acronyms](#acronyms)
+
+[Glossary](#glossary)
+
+[References](#references)
+
+[Cite BDQ Core](#cite-bdq-core)
+
+## 1. Introduction
 
 ### 1.1 Purpose
 
-This is the term-list document for the bdqdim: vocabulary.
+The purpose of this document is to provide the full term list for the `bdqdim:` controlled vocabulary, which defines the values of `bdqffdq:DataQualityDimension` used in BDQ Core Tests. Each Data Quality Dimension describes a specific aspect of quality that a Test is intended to assess, such as completeness, conformance, or reliability.
+
+These Dimensions serve as a semantic anchor for describing the intent of Tests and enable structured classification and interpretation of Test results across diverse Use Cases.
 
 ### 1.2 Audience
 
-This document is for those needing a technical understanding of the BDQ Core Tests and the application of the Framework Ontology, especially with respect to the controlled vocabulary for the term bdqffdq:hasDataQualityDimension.
+This document is intended for users who need a technical understanding of how BDQ Core Tests relate to conceptual dimensions of data quality. It will be especially useful for:
 
-### 1.3 Data Quality Dimensions 
+- Standards developers and modelers applying the BDQ Core Framework Ontology;
+- Implementers who need to map Tests to dimensions in automated systems;
+- Curators and analysts reviewing Test results in the context of data improvement initiatives.
 
-Data Quality Dimension as used in the context of BDQ Core was originally defined by Veiga 2016 and Veiga et at. 2017 as a fundamental concept. The concept of bdqffdq:DataQualityDimension (Completeness, Conformance, Consistency, Likeliness, Reliability, and Resolution) describes the aspect of data quality that a Test examines to assess 'quality' for a given Use Case.
+A working familiarity with the BDQ Core Test structure and the Framework Ontology is helpful, though not required to benefit from this document.
 
-Data Quality Dimensions are measurable attributes in an Information Element which can be individually assessed, interpreted, and potentially improved.
+### 1.3 Data Quality Dimensions
 
-Each Test in bdqcore: is expected to evaluate one or more data values (one or more bdqffdq:InformationElements) against a single bdqffdq:DataQualityDimension. For example, the Test VALIDATION_COUNTRY_FOUND assesses the value of dwc:country against a source authority for a Use Case, (e.g., bdq:Record-Management). The appropriate type of bdqffq:DataQualityDimension in this case is bdqdim:Conformance, i.e., how well does the country value conform to an appropriate reference standard when evaluating the quality of a Darwin Core record in the context of a Use Case in which VALIDATION_COUNTRY_FOUND is found?
+The concept of `bdqffdq:DataQualityDimension`, originally introduced by Veiga (2016) and Veiga et al. (2017), represents the aspect or attribute of data quality being evaluated. Common dimensions include `Completeness`, `Conformance`, `Consistency`, `Likeliness`, `Reliability`, and `Resolution`. These serve as high-level categories that group Tests according to the type of quality issue they address.
 
-Data Quality Dimension applies to all Test types (all subclasses of bsqffdq:DataQualityNeed: bdqffdq:VALIDATION, bdqffdq:ISSUE, bdqffdq:AMENDMENT and bdqffdq:MEASURE).
+Dimensions are measurable characteristics of an `bdqffdq:InformationElement` and provide insight into how quality is defined and assessed for a given Use Case.
 
-### 1.4 Term List Distributions
+Each BDQ Core Test typically evaluates one or more data values (Information Elements) with respect to a single Data Quality Dimension. For example, the Test `VALIDATION_COUNTRY_FOUND` assesses the value of `dwc:country` for conformance to a reference authority. In this case, the relevant dimension is `bdqdim:Conformance`.
+
+Unlike Criteria, which apply only to Validation and Issue Tests, Data Quality Dimensions apply to all BDQ Core Test types: `bdqffdq:Validation`, `bdqffdq:Issue`, `bdqffdq:Amendment`, and `bdqffdq:Measure`.
+
+### 1.4 Associated Documents
+
+For the list and links to all associated documents see the [Biodiversity Data Quality Core](../../index.md) page, which lists the parts of the standard.
+
+### 1.5 Term List Distributions
 
 | Description | IRI | Download URL | Note | 
 | ----------- | --- | -----------  | ---- | 
 | HTML file   | http://rs.tdwg.org/bdq/bdqdim/terms/ | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/docs/list/bdqdim/index.md | This file | 
 | RDF/XML file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/dist/bdqdim.xml | Example for submission, to be generated | 
 
-### 1.5 Status of the content of this document
+### 1.6 Status of the content of this document
 
 Section 1 is non-normative.
 
 Section 2 is normative.
 
-Section [1.8 Key to Vocabulary Terms](#18-Key-to-Vocabulary-Terms) identifies which values in Section 4 are normative and which are non-normative.
+Section [1.9 Key to Vocabulary Terms](#19-Key-to-Vocabulary-Terms) identifies which values in Section 4 are normative and which are non-normative.
 
 Any sentence or phrase beginning with "For example" or "e.g." is non-normative.
 
-### 1.6 RFC 2119 key words
+### 1.7 RFC 2119 key words
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [RFC 2119](https://tools.ietf.org/html/rfc2119).
 
-### 1.7 Namespace abbreviations
+### 1.8 Namespace abbreviations
 
 The following namespace abbreviations are used in this document:
 
@@ -99,7 +137,7 @@ The following namespace abbreviations are used in this document:
 | skos:        | http://www.w3.org/2004/02/skos/core#        |
 | tdwgutility: | http://rs.tdwg.org/dwc/terms/attributes/    |
 
-### 1.8 Key to Vocabulary Terms
+### 1.9 Key to Vocabulary Terms
 
 The terminology used to describe the terms in this vocabulary follows the TDWG Standards Documentation Standard (SDS). Each term definition includes the original RDF definition, and may also provide a TDWG-specific interpretation from the SDS, as well as a definition tailored to this local context.
 

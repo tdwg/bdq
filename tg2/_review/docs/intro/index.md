@@ -42,39 +42,46 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
 **Comment**<br>
 Draft Standard for Review
 
-### Table of Contents ###
+## Table of Contents ##
+[1. Introduction](#1-introduction)
+  - [1.1 Purpose](#11-purpose)
+  - [1.2 Audience](#12-audience)
+  - [1.3 Associated Documents](#13-associated-documents)
+  - [1.4. Status of the Content of This Document](#14-status-of-the-content-of-this-document)
+  - [1.5 RFC 2119 key words](#15-rfc-2119-key-words)
+  - [1.6 Namespace Abbreviations](#16-namespace-abbreviations)
 
-- [1. Introduction](#1-introduction)
-- [1.1 Purpose](#11-purpose)
-- [1.2 Audience](#12-audience)
-- [1.4. Status of the Content of This Document](#14-status-of-the-content-of-this-document)
-- [1.5 RFC 2119 key words](#15-rfc-2119-key-words)
-- [1.6 Namespace Abbreviations](#16-namespace-abbreviations)
-- [2 Introduction to the BDQ Core Standard](#2-introduction-to-the-bdq-core-standard)
-- [2.1 Parts of the Standard](#21-parts-of-the-standard)
-- [2.2 Vocabularies](#22-vocabularies)
-- [2.3 Test Guidance](#23-test-guidance)
-- [2.4 Test Lists](#24-test-lists)
-- [2.5 Guides and other documents.](#25-guides-and-other-documents)
-- [2.6 Implementation Validation Data](#26-implementation-validation-data)
-- [2.7 Test Execution Environments and Workflows](#27-test-execution-environments-and-workflows)
-- [2.8 Implementations of Tests "In the Wild"](#28-implementations-of-tests-in-the-wild)
-- [3 Design of the Tests (normative)](#3-design-of-the-tests-normative)
-- [3.1 Data Quality Control, Data Quality Assurance (normative)](#31-data-quality-control-data-quality-assurance-normative)
-- [3.2 When are Tests Run (normative)](#32-when-are-tests-run-normative)
-- [3.3 Results of Test Executions (normative)](#33-results-of-test-executions-normative)
-- [4 Contributions and Acknowledgments](#4-contributions-and-acknowledgments)
-- [4.1 Acknowledgments](#41-acknowledgments)
-- [4.1.1 Funding and Support for Meetings](#411-funding-and-support-for-meetings)
-- [4.2 Contributions](#42-contributions)
-- [4.2.1 Authors](#421-authors)
-- [4.2.2 Contributors](#422-contributors)
-- [5 Acronyms](#5-acronyms)
-- [6 Glossary](#6-glossary)
-- [6.1 Term-Action](#61-term-action)
-- [6.2 General Glossary](#62-general-glossary)
-- [7 References](#7-references)
- 
+[2 Introduction to the BDQ Core Standard](#2-introduction-to-the-bdq-core-standard)
+  - [2.1 Parts of the Standard](#21-parts-of-the-standard)
+  - [2.2 Vocabularies](#22-vocabularies)
+  - [2.3 Test Guidance](#23-test-guidance)
+  - [2.4 Test Lists](#24-test-lists)
+  - [2.5 Guides and other documents.](#25-guides-and-other-documents)
+  - [2.6 Implementation Validation Data](#26-implementation-validation-data)
+  - [2.7 Test Execution Environments and Workflows](#27-test-execution-environments-and-workflows)
+  - [2.8 Implementations of Tests "In the Wild"](#28-implementations-of-tests-in-the-wild)
+
+[3 Design of the Tests (normative)](#3-design-of-the-tests-normative)
+  - [3.1 Data Quality Control, Data Quality Assurance (normative)](#31-data-quality-control-data-quality-assurance-normative)
+  - [3.2 When are Tests Run (normative)](#32-when-are-tests-run-normative)
+  - [3.3 Results of Test Executions (normative)](#33-results-of-test-executions-normative)
+
+[4 Contributions and Acknowledgments](#4-contributions-and-acknowledgments)
+  - [4.1 Acknowledgments](#41-acknowledgments)
+    - [4.1.1 Funding and Support for Meetings](#411-funding-and-support-for-meetings)
+  - [4.2 Contributions](#42-contributions)
+    - [4.2.1 Authors](#421-authors)
+    - [4.2.2 Contributors](#422-contributors)
+
+[5 Acronyms](#5-acronyms)
+
+[6 Glossary](#6-glossary)
+  - [6.1 Term-Action](#61-term-action)
+  - [6.2 General Glossary](#62-general-glossary)
+
+[7 References](#7-references)
+
+[Cite BDQ Core](#cite-bdq-core) 
 
 ## 1. Introduction
 
@@ -105,7 +112,7 @@ This document is intended for a broad audience, including:
 
 No technical or ontological expertise is required to understand this document. It provides a conceptual foundation for exploring the rest of the BDQ Core suite, whether for casual use or deep integration.
 
-### Associated Documents
+### 1.3 Associated Documents
 
 For the list and links to all associated documents see the [Biodiversity Data Quality Core](../../index.md) page, which lists the parts of the standard.
 
@@ -268,24 +275,24 @@ There were many people who have made notable contributions at various times duri
 
 ## 5 Acronyms
 
-| **Acronym** | **Explanation**                                                                                                |
-|-------------|----------------------------------------------------------------------------------------------------------------|
-| ALA         | [Atlas of Living Australia](https://ala.org.au)                             | 
-| BDQ         | [TDWG Biodiversity Data Quality](https://github.com/tdwg/bdq)                       |
-| BISON       | [Biodiversity Information Serving Our Nation](https://www.gbif.us/about/)           |
-| CRIA        | [Centro de Referência em Informação Ambiental](https://www.cria.org.br/)          |
-| EPSG        | [European Petroleum Survey Group](https://epsg.org/home.html)                     |
-| GBIF        | [Global Biodiversity Information Facility](https://gbif.org)             |
-| iDigBio     | [Integrated Digitized BioCollections](https://www.idigbio.org/)                   |
-| IRI         | [Internationalized Resource Identifier](https://en.wikipedia.org/wiki/Internationalized_Resource_Identifier)                 |
-| ISO         | [International Standards Organization](https://www.iso.org/home.html)                  |
-| QA          | [Quality Assurance](https://en.wikipedia.org/wiki/Quality_assurance)                                     |
-| QC          | [Quality Control](https://en.wikipedia.org/wiki/Quality_control)                                       |
-| SDS         | [TDWG Standards Documentation Standard](https://www.tdwg.org/standards/sds/)                 |
-| TDWG        | [Biodiversity Information Standards](https://tdwg.org)                    |
+| **Acronym** | **Explanation** |
+|-------------|-----------------|
+| ALA         | [Atlas of Living Australia](https://ala.org.au) | 
+| BDQ         | [TDWG Biodiversity Data Quality](https://github.com/tdwg/bdq) |
+| BISON       | [Biodiversity Information Serving Our Nation](https://www.gbif.us/about/) |
+| CRIA        | [Centro de Referência em Informação Ambiental](https://www.cria.org.br/) |
+| EPSG        | [European Petroleum Survey Group](https://epsg.org/home.html) |
+| GBIF        | [Global Biodiversity Information Facility](https://gbif.org) |
+| iDigBio     | [Integrated Digitized BioCollections](https://www.idigbio.org/) |
+| IRI         | [Internationalized Resource Identifier](https://en.wikipedia.org/wiki/Internationalized_Resource_Identifier) |
+| ISO         | [International Standards Organization](https://www.iso.org/home.html) |
+| QA          | [Quality Assurance](https://en.wikipedia.org/wiki/Quality_assurance) |
+| QC          | [Quality Control](https://en.wikipedia.org/wiki/Quality_control) |
+| SDS         | [TDWG Standards Documentation Standard](https://www.tdwg.org/standards/sds/) |
+| TDWG        | [Biodiversity Information Standards](https://tdwg.org) |
 | TG1         | [Biodiversity Data Quality Interest Group - Task Group 1: Framework on Data Quality](https://github.com/tdwg/bdq/tree/master/tg1) |
 | TG2         | [Biodiversity Data Quality Interest Group - Task Group 2: Data Quality Tests and Assertions](https://github.com/tdwg/bdq/tree/master/tg2) |
-| TG3         | [Biodiversity Data Quality Interest Group - Task Group 3: Data Quality Use Cases](https://github.com/tdwg/bdq/tree/master/tg3)     |
+| TG3         | [Biodiversity Data Quality Interest Group - Task Group 3: Data Quality Use Cases](https://github.com/tdwg/bdq/tree/master/tg3) |
 | TG4         | [Biodiversity Data Quality Interest Group - Task Group 4: Best Practices for Development of Vocabularies of Values](https://github.com/tdwg/bdq/tree/master/tg4) |
 
 ## 6 Glossary
