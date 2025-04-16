@@ -52,7 +52,7 @@ Draft Standard for Review
 
 [2 Synthetic and Example Data (normative)](#2-synthetic-and-example-data-normative)
   - [2.1 Identifying Example Data (normative)](#21-identifying-example-data-normative)
-  - [2.2 Data Fragments and Occurrence Data Sets (normative)](#22-data-fragments-and-occurrence-data-sets-normative)
+  - [2.2 Data Fragments and Occurrence Datasets (normative)](#22-data-fragments-and-occurrence-datasets-normative)
   - [2.3 Real Data Used as Examples (normative)](#23-real-data-used-as-examples-normative)
   - [2.4 Real Data with Synthetic Modifications Used as Examples (normative)](#24-real-data-with-synthetic-modifications-used-as-examples-normative)
   - [2.5 Wholly Synthetic Data (normative)](#25-wholly-synthetic-data-normative)
@@ -84,7 +84,7 @@ The document assumes a working familiarity with biodiversity data concepts, but 
 
 ### 1.3 Associated Documents
 
-For the list and links to all associated documents see the [Biodiversity Data Quality Core](../../index.md) page, which lists the parts of the standard.
+For the list and links to all associated documents see the [Biodiversity Data Quality (BDQ) Core](../../index.md) page, which lists the parts of the standard.
 
 ### 1.4 Status of the content of this document
 
@@ -102,63 +102,63 @@ The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL 
 
 ## 2 Synthetic and Example Data (normative)
 
-Implementers of BDQ Core tests, and other tests of biodiversity data quality may wish to use datasets containing known errors and issues for the purposes of testing the behavior of their test implementations and to validate that those test implementations perform as expected. To do so, they may wish to create modified example data or synthetic data into which known errors have been introduced (and then see if test implementations correctly identify those errors). To reduce the risk of such modified or synthetic data being mingled with actual biodiversity data in analyses, such data SHOULD BE marked in a consistent manner known to consumers of such data.
+Implementers of BDQ Core Tests, and other tests of biodiversity data quality may wish to use datasets containing known errors and issues for the purposes of testing the behavior of their test implementations and to validate that those test implementations perform as expected. To do so, they may wish to create modified example data or synthetic data into which known errors have been introduced (and then see if test implementations correctly identify those errors). To reduce the risk of such modified or synthetic data being mingled with actual biodiversity data in analyses, such data SHOULD BE marked in a consistent manner known to consumers of such data.
 
 ### 2.1 Identifying Example Data (normative)
 
-Data sets consisting of partly or wholly synthetic data, including datasets into which errors have been deliberately introduced may be used to test, validate, and demonstrate the operation of implementations of data quality tests. It is important that such synthetic and modified data not become conflated with actual biodiversity data in analyses. The following processes SHOULD be followed to identify original, modified, and synthetic example biodiversity data.
+Datasets consisting of partly or wholly synthetic data, including datasets into which errors have been deliberately introduced, may be used to test, validate, and demonstrate the operation of implementations of data quality tests. It is important that such synthetic and modified data not become conflated with actual biodiversity data in analyses. The following processes SHOULD be followed to identify original, modified, and synthetic example biodiversity data.
 
-### 2.2 Data Fragments and Occurrence Data Sets (normative)
+### 2.2 Data Fragments and Occurrence Datasets (normative)
 
-Inputs to unit tests and testing frameworks for individual test implementations are likely to be organized as fragments of Occurrence data not easily mistaken for actual occurrence data. A record forming a fragment of an Occurrence record for validating the behaviour of the implementation of a particular test SHOULD only contain the set of terms that form the Information Element for a particular test, along with test parameters, expected outputs, and related metadata, and SHOULD NOT contain values in other [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) not relevant to the test under consideration, except data fragments MAY be marked as synthetic by adding the term values described in 6.6.3 and 6.6.4 Testing frameworks MAY take as input more complete Darwin Core records, and when these are partly or wholly synthetic, they MUST be identified as synthetic, and MUST be treated as synthetic by consumers of Occurrence data.
+Inputs to unit tests and testing frameworks for individual test implementations are likely to be organized as fragments of Occurrence data not easily mistaken for actual Occurrence data. A record forming a fragment of a dwc:Occurrence record for validating the behaviour of the implementation of a particular Test SHOULD only contain the set of terms that form the Information Element for a particular Test, along with Test parameters, expected outputs, and related metadata, and SHOULD NOT contain values in other [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) not relevant to the Test under consideration, except data fragments MAY be marked as synthetic by adding the term values described in 6.6.3 and 6.6.4. Testing frameworks MAY take as input more complete Darwin Core records, and when these are partly or wholly synthetic, they MUST be identified as synthetic, and MUST be treated as synthetic by consumers.
 
 ### 2.3 Real Data Used as Examples (normative)
 
-Use the values in the original source, without modification except: If no dwc:datasetID is provided, a value for dwc:datasetID MAY be added, this SHOULD be the doi of the source dataset in which the example record was found. 
+Use the values in the original source, without modification except, if no dwc:datasetID is provided, a value for dwc:datasetID MAY be added. This SHOULD be the doi of the source dataset in which the example record was found.
 
 ### 2.4 Real Data with Synthetic Modifications Used as Examples (normative)
 
 A. The dataset MUST set values for record level terms to unambiguously mark the record as modified.
 
-The dataset SHOULD use the following values, and consumers of biodiversity data MUST treat these values as not representing actual occurrence data. 
+The dataset SHOULD use the following values, and consumers of biodiversity data MUST treat these values as not representing actual Occurrence data. 
 
 dwc:institutionCode = "example.org"
 dwc:institutionID = “http://example.org/"
 dwc:collectionCode = "Modified Example"
 dwc:collectionID = "urn:uuid:1887c794-7291-4005-8eee-1afbe9d7814e"
 
-B. Each modified record MUST provide a new GUID for the modified record distinct from the original GUID.
+B. Each modified record MUST provide a identifier for the modified record distinct from the original identifier. For example,
  			
 dwc:occurrenceID = urn:uuid: + a random type 4 UUID.
 
-C. Each Occurrence record SHOULD include resource relationship terms in the modified example pointing at the original source:
+C. Each dwc:Occurrence record SHOULD include [ResourceRelationship](https://dwc.tdwg.org/terms/#resourcerelationship) terms in the modified example pointing at the original source. For example,
 
-dwc:relatedResourceID = the ID (e.g., occurrenceID) for the original source record.
+dwc:relatedResourceID = the identifier (e.g., dwc:occurrenceID) for the original source record.
 
 dwc:relationshipOfResource = “source for modified example record”
 
-dwc:relationshipRemarks: Structured data specifying the original values for institutionID, institutionCode, collectionCode, collectionID, and occurrenceID, the doi for the dataset the original example record was found in, a list of the modifications made to the original record, and potentially, a list of standard tests and expected test results that this example illustrates. 
+dwc:relationshipRemarks: Structured data specifying the original values for institutionID, institutionCode, collectionCode, collectionID, and occurrenceID, the doi for the dataset the original example record was found in, a list of the modifications made to the original record, and potentially, a list of standard Tests and expected Test results that this example illustrates.
 
 ### 2.5 Wholly Synthetic Data (normative)
 
-Wholly Synthetic Data MAY be used. This is not recommended for entire Occurrence records or entire Occurrence datasets.
+Wholly synthetic data MAY be used. This is not recommended for entire dwc:Occurrence records or entire dwc:Occurrence datasets.
 
 A. The dataset MUST set values for record level terms to unambiguously mark the record as synthetic.
 
-The dataset SHOULD use the following values, and consumers of biodiversity data MUST treat these values as not representing actual occurrence data. 
+The dataset SHOULD use the following values, and consumers MUST treat these values as not representing actual Occurrence data. 
 
 dwc:institutionCode = "example.org"
 dwc:institutionID = “http://example.org/"
 dwc:collectionCode = "Synthetic Example"
 dwc:collectionID = "urn:uuid:0b1b9546-64aa-446b-bd9c-cbb0eacf4332"
 
-B. Each modified record MUST provide a GUID for the synthetic record.
+B. Each modified record MUST provide an identifier for the synthetic record. For example,
 
 dwc:occurrenceID = urn:uuid: + a random type 4 UUID
 
 ## 3 BDQ Core Validation Data (non-normative) 
 
-BDQ Core includes two datasets for the validation of test implemetations. These are sparsely populated data fragments unlikely to be mistaken for real data, and are not marked. 
+BDQ Core includes two datasets for the validation of Test implementations. These are sparsely populated data fragments unlikely to be mistaken for real data, and are not marked. 
 
   - File: [Test Validation Data](../guide/implementers/TG2_test_validation_data.csv "Test Validation Data CSV file")
   - File: [Test Validation Data for non-printing characters](../guide/implementers/TG2_test_validation_data_nonprintingchars.csv "Test Validation Data CSV file for testing implementations of bdq:Empty, containing non-printing characters")

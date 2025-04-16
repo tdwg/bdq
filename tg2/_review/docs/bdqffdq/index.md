@@ -235,13 +235,13 @@ This document is intended for technical users who need to interact directly with
 - Ontology engineers and developers working on semantic web applications or data validation systems;
 - Standards developers seeking to align other vocabularies with BDQ Core;
 - Implementers generating or consuming RDF data that describes BDQ Core Tests or their results;
-- Researchers modeling use cases for biodiversity data quality assessments.
+- Researchers modeling Use Cases for biodiversity data quality assessments.
 
 Readers should be familiar with ontology concepts, RDF/OWL syntax, and open world reasoning.
 
 ### 1.3 Associated Documents
 
-For the list and links to all associated documents see the [Biodiversity Data Quality Core](../../index.md) page, which lists the parts of the standard.
+For the list and links to all associated documents see the [Biodiversity Data Quality (BDQ) Core](../../index.md) page, which lists the parts of the standard.
 
 #### 1.3.1 Distributions for bdqffdq:
 
@@ -249,7 +249,7 @@ For the list and links to all associated documents see the [Biodiversity Data Qu
 | ----------- | --- | ------------ |
 | Human Readable Term List            | TBD | [/docs/terms/bdqffdq/index.md](../list/bdqffdq/index.md) | 
 | Human Readable Vocabulary Extension | TBD | [/docs/extension/bdqffdq/index.md](../extension/bdqffdq/index.md) | 
-| Owl Ontology                        | TBD | [/vocabulary/bdqffdq.owl](../../../vocabulary/bdqffdq.owl) |
+| OWL Ontology                        | TBD | [/vocabulary/bdqffdq.owl](../../../vocabulary/bdqffdq.owl) |
 
 ### 1.4 Namespace abbreviations
 
@@ -1978,7 +1978,7 @@ Note: This is a representation of the MultiRecord Measures that return COMPLETE/
 
      dqv(dr1) = {< va1, s1, m1, r1 >}
 
-* A DQ Validation asserts that the Contextualized Criterion “Geodetic Datum must be supplied” is COMPLIANT for a specific species occurrence and this validation was performed by the software Darwin Test by checking if the field Geodetic Datum of the record was not empty.
+* A DQ Validation asserts that the Contextualized Criterion “Geodetic Datum must be supplied” is COMPLIANT for a specific species occurrence and this validation was performed by the software Darwin Test by checking if the field Geodetic Datum of the record was bdq:NotEmpty.
 
 #### AmendmentAssertion
      DQA(dr) = {dqa | dqa = < am, s, m, r >, am ∈ AM, s ∈ S, m ∈ M , r ∈ R ⋀ dr ∈ DR}

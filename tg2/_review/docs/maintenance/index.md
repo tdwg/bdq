@@ -70,20 +70,20 @@ Templates for proposals of new and change issues are available at https://github
 2. Label as Proposed
 3. Review the proposal, including evaluating that the expected response follows a path an implementer can understand, that the Information Elements are referenced in the expected response, and whether parameters are present and formatted as desired.
 4. Confirm that the proposal is not a duplicate of an existing issue, including both Do Not Implement and Immature/Incomplete issues.
-5. Discussion at any point may conclude that the Test is not able to be implemented or should not be implemented as results would be misleading or problematic, label as DO NOT IMPLEMENT, describe why in comments on the issue, and close the issue.
+5. Discussion at any point may conclude that the Test is not able to be implemented or should not be implemented as results would be misleading or problematic, label as "DO NOT IMPLEMENT"", describe why in comments on the issue, and close the issue.
 6. Discussion at any point may conclude that the Test is reasonable, but can't be implemented as some needed resource, such a a controlled vocabulary, does not yet exist. Label as Immature/Incomplete.  Describe why in comments on the issue, leave open.
 7. Produce example data covering each path through the expected response, add these to a validation sheet.
-8. The markdown table from the Test can be exported to a list of proposed Tests in a CSV file .  This CSV-based list can be used by implementers to generate code stubs for Tests to be implemented.
+8. The Markdown table from the Test can be exported to a list of proposed Tests in a CSV file .  This CSV-based list can be used by implementers to generate code stubs for Tests to be implemented.
 9. Implementers produce at least one implementation of the Test, this will provide feedback on the expected response, and whether or not the Test is implementable.
 10. Implementers run the implementation against the validation data, this will result in identification of problems that may be defects in the implementation, errors in the validation data, or problems in the specification.  
 11. Confirm that the normative and non-normative elements are filled in as needed, including any references and links to source code for implementations.
 12. Confirm that the Proposed Test is linked to at least one use case.  
 13. Once at least one implementation exists that passes all validation Tests (produces exactly the expected Response.status, exactly the expected Response.result, and some Response.comment for each validation case/row), the proposed Test can be evaluated for inclusion in the standard.  
-14. If ratified, label the issue as CORE, remove the Proposed label, export the markdown table into the normative term-versions CSV file, generate derivatives as needed, and close the issue.
+14. If ratified, label the issue as CORE, remove the Proposed label, export the Markdown table into the normative term-versions CSV file, generate derivatives as needed, and close the issue.
 
 ### 2.2 Software Tools for Working with Test Descriptions
 
-The bdq_issue_to_csv utility (Morris 2024) is available ([Zenodo](https://doi.org/10.5281/zenodo.13937570), [GitHub](https://github.com/kurator-org/bdq_issue_to_csv)) for converting markdown tables in issues into lines of CSV (ready for use as a term-version file). See the bdq_issue_to_csv README and the [make_test_csv.sh](https://github.com/kurator-org/bdq_issue_to_csv/blob/master/make_test_csv.sh) shell script for details, including working with kurator-ffdq (Lowery et al. 2024; [Zenodo](https://doi.org/10.5281/zenodo.14026643), [GitHub](https://github.com/kurator-org/kurator-ffdq)) for generation of RDF serializations from the term-version CSV file.
+The bdq_issue_to_csv utility (Morris 2024) is available ([Zenodo](https://doi.org/10.5281/zenodo.13937570), [GitHub](https://github.com/kurator-org/bdq_issue_to_csv)) for converting Markdown tables in issues into lines of CSV (ready for use as a term-version file). See the bdq_issue_to_csv README and the [make_test_csv.sh](https://github.com/kurator-org/bdq_issue_to_csv/blob/master/make_test_csv.sh) shell script for details, including working with kurator-ffdq (Lowery et al. 2024; [Zenodo](https://doi.org/10.5281/zenodo.14026643), [GitHub](https://github.com/kurator-org/kurator-ffdq)) for generation of RDF serializations from the term-version CSV file.
 
 #### 2.2.1 Tools used to build the BDQ Core submission, and related code
 
@@ -93,7 +93,7 @@ BDQ Core `_review` is built with the following three sets of shell scripts:
 - [bdq/tg2/\_make_review/copy_files.sh](https://github.com/tdwg/bdq/blob/540eae5b1e609025b8dcbf19a7830d5c880aaf20/tg2/_make_review/copy_files.sh)
 - [bdq/tg2/\_make_review/do_build.sh](https://github.com/tdwg/bdq/blob/540eae5b1e609025b8dcbf19a7830d5c880aaf20/tg2/_make_review/do_build.sh)
 
-It is expected that supplementary Tests and proposed Tests under development will be maintained from issues, and the full process described in bdq_issue_to_csv [make_test_csv.sh](https://github.com/kurator-org/bdq_issue_to_csv/blob/v1.0.0/make_test_csv.sh) will be needed to produce CSV and RDF from markdown tables in GitHub issues.  This is expected to be different from the process for working with Tests that have been accepted into BDQ Core, where the GitHub issues are historical rationale management only and the authoritative file for Tests that are part of BDQ Core is a term-version file from which the build process will need to extract only the latest versions of Test records.
+It is expected that supplementary Tests and proposed Tests under development will be maintained from issues, and the full process described in bdq_issue_to_csv [make_test_csv.sh](https://github.com/kurator-org/bdq_issue_to_csv/blob/v1.0.0/make_test_csv.sh) will be needed to produce CSV and RDF from Markdown tables in GitHub issues.  This is expected to be different from the process for working with Tests that have been accepted into BDQ Core, where the GitHub issues are historical rationale management only and the authoritative file for Tests that are part of BDQ Core is a term-version file from which the build process will need to extract only the latest versions of Test records.
 
 The bdqcore term-version file does not contain all of the UUIDs needed to produce stable RDF - the following additional files are used for that: 
 

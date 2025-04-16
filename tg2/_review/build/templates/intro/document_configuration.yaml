@@ -3,7 +3,7 @@
 # ----------------
 
 # Official title of the document assigned by authors.
-documentTitle: Biodiversity Data Quality Core Introduction
+documentTitle: Biodiversity Data Quality Core (BDQ) Introduction
 
 # Abstract of document written by authors.
 abstract: '**Biodiversity Data Quality (BDQ) Core** is a standard designed to facilitate the consistent development and use of a set of biodiversity data quality tests and assertions. The standard consists of vocabularies needed to define the tests, a guide to support the implementation of tests, a guide to support the interpretation of outputs of implemented tests, example data, and expected responses from tests against the example data to support the validation of implemented tests.'

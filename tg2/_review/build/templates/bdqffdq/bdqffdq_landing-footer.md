@@ -183,7 +183,7 @@ Note: This is a representation of the MultiRecord Measures that return COMPLETE/
 
      dqv(dr1) = {< va1, s1, m1, r1 >}
 
-* A DQ Validation asserts that the Contextualized Criterion “Geodetic Datum must be supplied” is COMPLIANT for a specific species occurrence and this validation was performed by the software Darwin Test by checking if the field Geodetic Datum of the record was not empty.
+* A DQ Validation asserts that the Contextualized Criterion “Geodetic Datum must be supplied” is COMPLIANT for a specific species occurrence and this validation was performed by the software Darwin Test by checking if the field Geodetic Datum of the record was bdq:NotEmpty.
 
 #### AmendmentAssertion
      DQA(dr) = {dqa | dqa = < am, s, m, r >, am ∈ AM, s ∈ S, m ∈ M , r ∈ R ⋀ dr ∈ DR}

@@ -57,7 +57,7 @@ Biodiversity Data Quality Core Maintenance Group. 2024. Biodiversity Data Qualit
 [Fitness For Use Framework Ontology Guide](docs/guide/bdqffdq/index.md)<br>
 [Fitness For Use Ontology](docs/bdqffdq/index.md)<br>
 [Fitness For Use Framework Ontology List of Terms](docs/list/bdqffdq/index.md)
-- File [bdqffdq: Owl](vocabulary/bdqffdq.owl "OWL ontology for the bdqffdq framework.")<br>
+- File [bdqffdq: OWL](vocabulary/bdqffdq.owl "OWL ontology for the bdqffdq framework.")<br>
 
 [Fitness For Use Framework Ontology Vocabulary Extension](docs/extension/bdqffdq/index.md)
 

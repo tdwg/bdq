@@ -1,9 +1,9 @@
 <!--- This file is generated from templates by code, DO NOT EDIT by hand --->
 
-# Biodiversity Data Quality Core Introduction
+# Biodiversity Data Quality Core (BDQ) Introduction
 
 **Title**<br>
-Biodiversity Data Quality Core Introduction
+Biodiversity Data Quality Core (BDQ) Introduction
 
 **Date version issued**<br>
 2025-04-11
@@ -37,7 +37,7 @@ Biodiversity Data Quality Core Introduction
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 **Bibliographic citation**<br>
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Biodiversity Data Quality Core Introduction. Biodiversity Information Standards (TDWG). <https://bdq.tdwg/org/vocabularies/2025-04-11>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Biodiversity Data Quality Core (BDQ) Introduction. Biodiversity Information Standards (TDWG). <https://bdq.tdwg/org/vocabularies/2025-04-11>
 
 **Comment**<br>
 Draft Standard for Review
@@ -114,7 +114,7 @@ No technical or ontological expertise is required to understand this document. I
 
 ### 1.3 Associated Documents
 
-For the list and links to all associated documents see the [Biodiversity Data Quality Core](../../index.md) page, which lists the parts of the standard.
+For the list and links to all associated documents see the [Biodiversity Data Quality (BDQ) Core](../../index.md) page, which lists the parts of the standard.
 
 ### 1.4. Status of the Content of This Document
 
@@ -145,7 +145,7 @@ The following namespace abbreviations are used in this document:
 
 ### 2.1 Parts of the Standard
 
-The full set of documents comprising the BDQ Core standard is listed on the [Biodiversity Data Quality Core](../../index.md) landing page.
+The full set of documents comprising the BDQ Core standard is listed on the [Biodiversity Data Quality (BDQ) Core](../../index.md) page.
 
 ### 2.2 Vocabularies
 
@@ -222,7 +222,7 @@ The bdqcore Tests are designed to be run at any point in the life cycle of biodi
 ### 3.3 Results of Test Executions (normative)
 
 BDQ Core is agnostic about the format of presentation of results from BDQ Core Tests. BDQ Core does, however, specify that Test implementations and presentations MUST return structured data with at least bdq:Response.status, bdq:Response.result, and bdq:Response.comment. Responses MAY also contain more information in Response.qualifier.
-See the [Implementer's Guide](../guide/implementers/index.md) section on [Presentation of Results](../guide/implementers/index.md#7-Presentation-of-Results) for further normative and non-normative guidance about result presentation. See the [BDQ Core Tests and Assertions](../bdqcore/index.md) landing page section on the [Structure of a Response](../bdqcore/index.md#31-Structure-of-Response-normative) for normative guidance on Responses as RDF or as data structures.
+See the [Implementer's Guide](../guide/implementers/index.md) section on [Presentation of Results](../guide/implementers/index.md#7-Presentation-of-Results) for further normative and non-normative guidance about result presentation. See [Structure of a Response](../bdqcore/index.md#31-Structure-of-Response-normative) in the [BDQ Core Tests and Assertions](../bdqcore/index.md) document for normative guidance on Responses as RDF or as data structures.
 
 The results of the execution of implementations of the bdqcore: Tests MAY be presented as Data Quality reports. The Framework Ontology provides vocabulary and structure that MAY be used for such data quality reports.
 
@@ -260,7 +260,7 @@ We recognize four people as authors of the standard, having contributed consiste
 There were many people who have made notable contributions at various times during the development of BDQ Core.
  
 - **Paula F. Zermoglio (Instituto de Investigaciones en Recursos Naturales, Agroecología y Desarrollo Rural (IRNAD, CONICET-UNRN), San Carlos de Bariloche)**: Convener of TDWG Data Quality Task Group 4 (Best Practices for Development of Vocabularies of Value); Test descriptions; vocabulary development.
-- **Alexander Thompson (iDigBio)**: Key contributions to initial development of Test descriptors; migrated Test descriptors into markdown tables in GitHub issues.
+- **Alexander Thompson (iDigBio)**: Key contributions to initial development of Test descriptors; migrated Test descriptors into Markdown tables in GitHub issues.
 - **Yi-Ming Gan (Royal Belgian Institute of Natural Sciences)**: Contributed to Test evaluation; explanatory workflow diagrams; editing BDQ Core documents.
 - **António Mauro Saraiva (Universidade de São Paulo)**: Co-convenor of the TDWG Data Quality Interest Group; development of the Framework for Data Quality (TDWG Data Quality Task Group 1); facilitated Test development workshop.
 - **Allan Koch Veiga (Universidade de São Paulo)**: Developed the Framework on Data Quality as his doctoral dissertation (Veiga 2016), Convener of the TDWG Data Quality Task Group 1 (Framework for Data Quality).
@@ -313,7 +313,7 @@ A Test label reflects its Test type, the bdqffdq:InformationElement the Test act
 | FROM | An Output bdqffdq:InformationElement is being populated from a more primary Input bdqffdq:InformationElement. | Populates dwc:scientificName from dwc:scientificNameId. | [AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID](https://rs.tdwg.org/bdqcore/terms/f01fb3f9-2f7e-418b-9f51-adf50f202aea) |
 | INRANGE | The value of bdqffdq:InformationElements that are within an acceptable range. | Use in bdq:Response.qualifier or bdq:Response.comment. | [VALIDATION_MAXDEPTH_INRANGE](https://rs.tdwg.org/bdqcore/terms/3f1db29a-bfa5-40db-9fd1-fde020d81939) |
 | LESSTHAN | A Term-Action indicating that the value in one bdq:InformationElement is less than the value in another bdq:InformationElement. | Used in Tests for Depth and Elevation. | [VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH](https://rs.tdwg.org/bdqcore/terms/8f1e6e58-544b-4365-a569-fb781341644e) |
-| NOTEMPTY | An bdqffdq:InformationElement contains a non-empty value | | [VALIDATION_EVENTDATE_NOTEMPTY](https://rs.tdwg.org/bdqcore/terms/f51e15a6-a67d-4729-9c28-3766299d2985) |
+| NOTEMPTY | An bdqffdq:InformationElement contains a value that is bdq:NotEmpty. | | [VALIDATION_EVENTDATE_NOTEMPTY](https://rs.tdwg.org/bdqcore/terms/f51e15a6-a67d-4729-9c28-3766299d2985) |
 | PREREQUISITESNOTMET | A Test of type bdqffdq:Measure that counts the number of Tests of type bdqffdq:Validation that did not run due to one or more prerequisites not being met (bdq:INTERNAL_PREREQUISITES_NOT_MET or EXTERNAL_PREREQUISITES_NOT_MET). | | [MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET](https://rs.tdwg.org/bdqcore/terms/49a94636-a562-4e6b-803c-665c80628a3d) |
 | PROPOSED | A Test of type bdqffdq:Measure that counts the number of bdqffdq:Amendments where an action to modify a value in some way through a change or addition is proposed. | | [MEASURE_AMENDMENTS_PROPOSED](https://rs.tdwg.org/bdqcore/terms/03049fe5-a575-404f-b564-ae63f5a1cf8b) |
 | STANDARD | A bdqffdq:Validation Test where a value in a bdqffdq:InformationElement matches a bdq:STANDARD value in a bdq:sourceAuthority. | Use in bdq:Response.qualifier or bdq:Response.comment. | [VALIDATION_TAXONRANK_STANDARD](https://rs.tdwg.org/bdqcore/terms/7bdb13a4-8a51-4ee5-be7f-20693fdb183e) |
@@ -334,7 +334,7 @@ Glossary of terms used in BDQ Core that are in addition to those included in the
 | geodetic coordinate reference system | A coordinate reference system based on a geodetic datum, used to describe positions on the surface of the earth (Chapman and Wieczorek 2020). | Test |
 | geodetic datum | A mathematical model that uses a reference ellipsoid to describe the size and shape of the surface of the earth and adds to it the information needed for the origin and orientation of coordinate systems on that surface (Chapman and Wieczorek 2000). | Test |
 | Framework | The Fitness for Use Framework, the body of work that provides a fundamental structure for the BDQ Core Tests. The Fitness for Use Framework is derived from (Veiga 2016) and is the outcome of the TDWG Data Quality Task Group 1: Framework on Data Quality (Veiga et al. 2017). | bdqffdq: |
-| Framework Ontology | A model of the Framework (Veiga 2016, Veiga et al. 2017) as an owl ontology, present as the bdqffdq: vocabulary in BDQ Core. | bdqffdq: |
+| Framework Ontology | A model of the Framework (Veiga 2016, Veiga et al. 2017) as an OWL ontology, present as the bdqffdq: vocabulary in BDQ Core. | bdqffdq: |
 | GEOGRAPHY | A general category of specific bdq:InformationElements that represents a combination of Darwin Core administrative geography terms dwc:continent, dwc:country, dwc:countryCode, dwc:stateProvince, dwc:county, dwc:municipality. | bdqffdq:InformationElement |
 | Java | Java is a registered trademark of Oracle and/or its affiliates. | BDQ Core |
 | [NAME](../supplement/index.md#NAME) | A bdq GitHub label to indicate that the Test is related to Darwin Core terms in the dwc:Taxon Class. | bdqffdq:InformationElement |
@@ -347,7 +347,7 @@ Glossary of terms used in BDQ Core that are in addition to those included in the
 | SRS | spatial reference system - see CRS (Chapman and Wieczorek 2020). | Test |
 | Test | An individual consideration of a DataQualityNeed with a Method that links it to an instance of a Specification, these instances being composed of InformationElements, Arguments, and Parameters. | BDQ Core | 
 | Test (technical) | A composition of an instance of a subclass of bdqffdq:DataQualityNeed (which expresses a data quality need in the abstract) with an instance of a subclass of bdqffdq:DataQualityMethod, which links it to an instance of a bdqffdq:Specification (which spells out how to concretely evaluate the need). These class instances are composed with bdqffdq:InformationElements, bdqffdq:Arguments, and bdqffdq:Parameters. For example, the Test [VALIDATION_COUNTRY_FOUND](https://rs.tdwg.org/bdqcore/terms/69b2efdc-6269-45a4-aecb-4cb99c2ae134).| BDQ Core | 
-| TestField | Column heading in the markdown of the Tests in the [tdwg/bdq GitHub](https://github.com/tdwg/bdq/issues) that list all the normative and informative metadata elements that describe a Data Quality Test. | Test |
+| TestField | Column heading in the Markdown of the Tests in the [tdwg/bdq GitHub](https://github.com/tdwg/bdq/issues) that list all the normative and informative metadata elements that describe a Data Quality Test. | Test |
 | Test Type | There are four types of Tests: Validation (bdqffdq:Validation), Amendment (bdqffdq:Amendment), Issue (bdqffdq:Issue), and Measure (bdqffdq:Measure). | Test |
 | [TIME](../supplement/index.md#TIME) | A bdq GitHub label to indicate that the Test is related to Darwin Core terms in the dwc:Event Class. | bdqffdq:InformationElement |
 | VERBATIM | A general category of specific bdq:InformationElements that represents a term containing an original value. | bdqffdq:InformationElement |
@@ -473,7 +473,7 @@ BDQ Core Maintenance Group 2024. Biodiversity Information Standards (TDWG). http
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Biodiversity Data Quality Core Introduction. Biodiversity Information Standards (TDWG). <https://bdq.tdwg/org/vocabularies/2025-04-11>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Biodiversity Data Quality Core (BDQ) Introduction. Biodiversity Information Standards (TDWG). <https://bdq.tdwg/org/vocabularies/2025-04-11>
 
 **Biodiversity Information Standards (TDWG)**
 

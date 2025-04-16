@@ -8,7 +8,7 @@ Editable master copies of templates for human readable vocabulary lists and huma
 ├── README.md  This file.
 ├── authors_configuration.yaml  Configuration file for the list of authors and contributors.
 ├── draft_build_bdqcore_qrg.py  Script to build the BDQCore Quick Reference Guide.
-├── draft_build_bdqffdq.py  Script to build markdown documents for the BDQFFDQ Framework Ontology from the owl ontology.
+├── draft_build_bdqffdq.py  Script to build markdown documents for the BDQFFDQ Framework Ontology from the OWL ontology.
 ├── draft_build-docs.py  Script to fill in template information and copy files that don't include terms from build/templates to docs/.
 ├── draft_build-termlist_bdqcore.py  Script to build bdqcore termlist for docs/list/ from templates, needs more complete input list,  draft refers to this being to build a draft standard.
 ├── draft_build-termlist.py  Script to build termlist files for docs/list/ from templates (plus RDF for dist/), draft refers to this being to build a draft standard.

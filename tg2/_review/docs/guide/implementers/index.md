@@ -145,7 +145,7 @@ Readers should be familiar with basic software development concepts and, ideally
 
 ### 1.3 Associated Documents
 
-For the list and links to all associated documents see the [Biodiversity Data Quality Core](../../index.md) page, which lists the parts of the standard.
+For the list and links to all associated documents see the [Biodiversity Data Quality (BDQ) Core](../../index.md) page, which lists the parts of the standard.
 
 ### 1.4 Status of the Content of this document
 
@@ -428,7 +428,7 @@ The most important elements of BDQ Core are the structure that holds explicit de
 
 Results from each Test MUST be produced in the form Response.status, Response.result, and Response.comment, with one Test producing one Response. Results MAY include Response.qualifier (see section [4 Extension Points](#4-extension-points-normative)). The values of Response.status and Response.result MUST be those specified. This standard is agnostic concerning data structures and serializations of a Response. The standard is agnostic concerning internationalization and languages of labels applied to human readable presentations of values within a Response. See the [Structure of a Response](../../bdqcore/index.md#31-Structure-of-Response-normative) section of the [BDQ Core Tests and Assertions](../../bdqcore/index.md) for further normative guidance on Responses as RDF or as data structures. See section [5.1 The Response Object](#51-The-Response-Object-normative) for further normative guidance on Responses.
 
-Additional Tests that conform to BDQ Core MUST describe those Tests using the bdqffdq Framework, those Tests MUST use the same Response structures, and those Tests MUST be related to bdqffdq:UseCases, either those defined in the standard or additional use cases.
+Additional Tests that conform to BDQ Core MUST describe those Tests using the bdqffdq Framework, those Tests MUST use the same Response structures, and those Tests MUST be related to bdqffdq:UseCases, either those defined in the standard or additional Use Cases.
 
 Implementations MUST provide Parameterized Tests that support the default Parameter values. Implementations SHOULD provide for Parameterized Tests to take parameters, but MAY produce an implementation of a Parameterized Test that takes no parameters but only uses a default parameter value applicable within their domain.
 
@@ -912,7 +912,7 @@ Results of the Biodiversity Data Quality (BDQ) Taxon Name-related Tests.
 
 ### 7.2 Annotations (normative)
 
-The bdqffdq: owl representation of the Framework ()[Fitness for Use Ontology](../../docs/bdqffdq/index.md)), and the framing of the [BDQ Core Tests as RDF](../../dist/bdq.xml) using that ontology makes Test results particularly amenable to being wrapped in annotations following the W3C Web Annotation Data Model (Sanderson et al. 2017). Test responses MAY be represented as annotations.
+The bdqffdq: OWL representation of the Framework ()[Fitness for Use Ontology](../../docs/bdqffdq/index.md)), and the framing of the [BDQ Core Tests as RDF](../../dist/bdq.xml) using that ontology makes Test results particularly amenable to being wrapped in annotations following the W3C Web Annotation Data Model (Sanderson et al. 2017). Test responses MAY be represented as annotations.
 
 The responses from Tests could be structured as elements that can be wrapped in the body annotation document along with metadata from the Framework to describe which Test is being reported upon, and metadata within the target of the annotation to describe which data resource is being annotated, and the state it was in at the time of annotation.
 
@@ -930,7 +930,7 @@ For synthetic Test Validation Data that could be conflated with actual data, see
 
 A set of "Test Validation Data" accompanies the BDQ Core Test descriptors. These data are intended for implementers to use to evaluate whether or not their Test implementations produced the expected Response values for a set of cases for each Test. Each Test Specification could be graphed as a flow chart with several paths, the Test Validation Data are intended to cover each node and each path within each Test Specification with at least a single case. These data are, however, not exhaustive unit Tests covering large numbers of edge cases, but rather a minimal set of Tests for expected behaviors.
 
-The Test Validation Data are organized as two flat CSV files. Each row in each file is intended for the single validation of a single Test. The file has columns identifying the Test, the input data, the expected Response.status, Response.result, an example Response.comment, parameter values (if any), and a set of [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021). Most of the terms for a given Test are empty.
+The Test Validation Data are organized as two flat CSV files. Each row in each file is intended for the single validation of a single Test. The file has columns identifying the Test, the input data, the expected Response.status, Response.result, an example Response.comment, parameter values (if any), and a set of [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021). Most of the terms for a given Test are bdq:Empty.
 
 The Test validation records are all fragmentary [Simple Darwin Core](https://dwc.tdwg.org/simple/) (Wieczorek et al. 2012) Occurrence records. Each row contains values for only those Darwin Core terms that are relevant input to the particular validation and consists of a mixture of real and artificial data. The validation data consists of over 1100 records, with an average of about 10 validation cases for each Test (designed to exercise all of the decision pathways in the Specification of the Test). The set of rows for a given Test are intended to be sufficient to validate that an implementation of that particular Test performs as expected against the Specification.
 
@@ -982,7 +982,7 @@ For example, given the header line for the Test Validation Data files:
 
 "LineNumber","dataID","LineForTest","GitHubIssueNo","GUID","Label","Response.status","Response.result","Response.comment","IssuesWithThisRow","bdq:annotation","bdq:sourceAuthority","dc:type","dcterms:license","dwc:acceptedNameUsageID","dwc:basisOfRecord","dwc:class","dwc:continent","dwc:coordinateUncertaintyInMeters","dwc:country","dwc:countryCode","dwc:county","dwc:dataGeneralizations","dwc:dateIdentified","dwc:day","dwc:decimalLatitude","dwc:decimalLongitude","dwc:endDayOfYear","dwc:establishmentMeans","dwc:eventDate","dwc:family","dwc:genus","dwc:geodeticDatum","dwc:higherClassification","dwc:higherGeography","dwc:higherGeographyID","dwc:infraspecificEpithet","dwc:island","dwc:islandGroup","dwc:kingdom","dwc:locality","dwc:locationID","dwc:maximumDepthInMeters","dwc:maximumElevationInMeters","dwc:minimumDepthInMeters","dwc:minimumElevationInMeters","dwc:month","dwc:municipality","dwc:occurrenceID","dwc:occurrenceStatus","dwc:order","dwc:originalNameUsageID","dwc:parentNameUsageID","dwc:phylum","dwc:scientificName","dwc:scientificNameAuthorship","dwc:scientificNameID","dwc:specificEpithet","dwc:startDayOfYear","dwc:stateProvince","dwc:subgenus","dwc:taxon","dwc:taxonConceptID","dwc:taxonID","dwc:taxonRank","dwc:verbatimCoordinateSystem","dwc:verbatimCoordinates","dwc:verbatimDepth","dwc:verbatimElevation","dwc:verbatimEventDate","dwc:verbatimLatitude","dwc:verbatimLocality","dwc:verbatimLongitude","dwc:verbatimSRS","dwc:vernacularName","dwc:waterBody","dwc:year","dwc:subfamily","dwc:superfamily","dwc:tribe","dwc:subtribe","dwc:genericName","dwc:infragenericEpithet","dwc:cultivarEpithet","dwc:individualCount","dwc:organismQuantity","dwc:footprintWKT","dwc:coordinatePrecision","dwc:namePublishedInYear","dwc:sex","dwc:typeStatus","dwc:pathway","dwc:degreeOfEstablishment","bdq:taxonIsMarine","bdq:geospatialLand","bdq:assumptionOnUnknownBiome","bdq:latestValidDate","bdq:earliestValidDate",
 
-a validation Test case evaluating empty, where no dwc: term columns contain a value (dataID=1) would look like this:
+a validation Test case evaluating bdq:Empty, where no dwc: term columns contain a value (dataID=1) would look like this:
 
 "2","1","1","20","0493bcfb-652e-4d17-815b-b0cce0742fbe","VALIDATION_COUNTRYCODE_STANDARD","INTERNAL_PREREQUISITES_NOT_MET","","dwc:countryCode is EMPTY","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""
 

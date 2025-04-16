@@ -72,7 +72,7 @@ Unlike Criteria, which apply only to Validation and Issue Tests, Data Quality Di
 
 ### 1.4 Associated Documents
 
-For the list and links to all associated documents see the [Biodiversity Data Quality Core](../../index.md) page, which lists the parts of the standard.
+For the list and links to all associated documents see the [Biodiversity Data Quality (BDQ) Core](../../index.md) page, which lists the parts of the standard.
 
 ### 1.5 Term List Distributions
 

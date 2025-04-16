@@ -63,7 +63,7 @@ Familiarity with RDF vocabularies, Darwin Core, and fitness for use principles w
 
 ### 1.3 Associated Documents
 
-For the list and links to all associated documents see the [Biodiversity Data Quality Core](../../index.md) page, which lists the parts of the standard.
+For the list and links to all associated documents see the [Biodiversity Data Quality (BDQ) Core](../../index.md) page, which lists the parts of the standard.
 
 ### 1.4 Term List Distributions
 
@@ -115,7 +115,7 @@ The following namespace abbreviations are used in this document:
 
 ### 1.8 Test Types (non-normative)
 
-There are four types of BDQ Core Tests: Validations, Issues, Amendments and Measures. Each Test is intended to examine just one specific aspect of data quality. Tests are assembled into Test suites (bdqffdq:Policies) that assess the fitness for use of data for a specific use.
+There are four types of BDQ Core Tests: Validations, Issues, Measures and Amendments. Each Test is intended to examine just one specific aspect of data quality. Tests are assembled into Test suites (bdqffdq:Policies) that assess the fitness for use of data for a specific use.
 
 **Validation Tests** can be thought of as fact-checking. They compare the data against known standards or rules. Validation Tests examine the values of one or more [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) against a Criterion for quality. An example is [VALIDATION_COUNTRYCODE_STANDARD](https://rs.tdwg.org/bdqcore/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe) where dwc:countryCode is checked against a Source Authority for validity.
 

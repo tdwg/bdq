@@ -56,7 +56,7 @@ A bdqffdq:UseCase that documents the management of the quality of taxonomic name
 
 
 ### bdq:Alien-Species
-Research uses forming a bdqffdq:UseCase for occurrence data of alien species 1) where the Information Elements concern what organism occurred where and when and the means, degree, and pathways of establishment, and 2) that are used for analysis of spatial and/or temporal patterns of biodiversity (see examples in Groom et al. (2019). Improving Darwin Core for research and management of alien species. Biodiversity Information Science and Standards, 3: e38084. https://doi.org/10.3897/biss.3.38084).
+Research uses forming a bdqffdq:UseCase for Occurrence data of alien species 1) where the Information Elements concern what organism occurred where and when and the means, degree, and pathways of establishment, and 2) that are used for analysis of spatial and/or temporal patterns of biodiversity (see examples in Groom et al. (2019). Improving Darwin Core for research and management of alien species. Biodiversity Information Science and Standards, 3: e38084. https://doi.org/10.3897/biss.3.38084).
 
 - [VALIDATION_BASISOFRECORD_NOTEMPTY](index.md#VALIDATION_BASISOFRECORD_NOTEMPTY)
 - [VALIDATION_BASISOFRECORD_STANDARD](index.md#VALIDATION_BASISOFRECORD_STANDARD)
@@ -105,7 +105,7 @@ Research uses forming a bdqffdq:UseCase for occurrence data of alien species 1) 
 
 
 ### bdq:Spatial-Temporal_Patterns
-Research uses forming a bdqffdq:UseCase for biodiversity occurrence data 1) where the Information Elements concern what organism occurred where and when and 2) that are used for analysis of spatial and/or temporal patterns of biodiversity (see examples in Rees ER & Nicholls M (2020) Data Quality Use Case Study Results. Biodiversity Information Science and Standards 4: e50889, suppl. 2. https://doi.org/10.3897/biss.4.50889.suppl2).
+Research uses forming a bdqffdq:UseCase for biodiversity Occurrence data 1) where the Information Elements concern what organism occurred where and when and 2) that are used for analysis of spatial and/or temporal patterns of biodiversity (see examples in Rees ER & Nicholls M (2020) Data Quality Use Case Study Results. Biodiversity Information Science and Standards 4: e50889, suppl. 2. https://doi.org/10.3897/biss.4.50889.suppl2).
 
 - [VALIDATION_BASISOFRECORD_NOTEMPTY](index.md#VALIDATION_BASISOFRECORD_NOTEMPTY)
 - [VALIDATION_BASISOFRECORD_STANDARD](index.md#VALIDATION_BASISOFRECORD_STANDARD)
