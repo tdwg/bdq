@@ -79,9 +79,10 @@ This term list defines the formal structure and meanings of these concepts and p
 
 This document is intended for technical users who need a precise understanding of the vocabulary elements used in BDQ Core Test specifications and reports. It will be particularly useful for:
 
-- Developers implementing or extending BDQ Core Test logic;
-- Standards developers and data modelers working with BDQ Core vocabularies;
-- Analysts and system designers configuring parameterized data quality assessments.
+- implementers interpreting or extending BDQ Core Test logic
+- standards developers and data quality modelers working with BDQ Core vocabularies
+- analysts and system designers configuring parameterized data quality assessments
+- curators needing to understand the conceptual basis for different Test evaluations
 
 Familiarity with RDF vocabularies and the BDQ Core framework is recommended for full comprehension, but the document is organized to be accessible for any reader needing detailed term definitions.
 

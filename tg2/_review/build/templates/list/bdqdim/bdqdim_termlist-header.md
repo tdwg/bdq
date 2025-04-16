@@ -54,9 +54,9 @@ These Dimensions serve as a semantic anchor for describing the intent of Tests a
 
 This document is intended for users who need a technical understanding of how BDQ Core Tests relate to conceptual dimensions of data quality. It will be especially useful for:
 
-- Standards developers and modelers applying the BDQ Core Framework Ontology;
-- Implementers who need to map Tests to dimensions in automated systems;
-- Curators and analysts reviewing Test results in the context of data improvement initiatives.
+- implementers who need to map Tests to dimensions in automated systems
+- standards developers and data quality modelers applying the BDQ Core Framework Ontology
+- analysts and Curators needing to understand the conceptual basis for different Tests’ evaluation
 
 A working familiarity with the BDQ Core Test structure and the Framework Ontology is helpful, though not required to benefit from this document.
 

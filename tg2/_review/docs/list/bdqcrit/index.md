@@ -79,9 +79,9 @@ These terms are central to describing the logic of BDQ Core Validation and Issue
 
 This document is intended for users who need a technical understanding of how BDQ Core Tests apply evaluation logic through the use of Criteria. It is especially useful for:
 
-- Implementers interpreting or building Tests that rely on `bdqffdq:hasCriterion`;
-- Standards developers and data quality modelers working with the BDQ Core Framework Ontology;
-- Analysts and curators needing to understand the conceptual basis for different Tests’ evaluations.
+- implementers interpreting or building Tests that rely on data quality criteria
+- standards developers and data quality modelers applying the BDQ Core Framework Ontology
+- analysts and curators needing to understand the conceptual basis for different Test evaluations
 
 A working familiarity with the BDQ Core Test structure and the Framework Ontology is helpful, though not required to benefit from this document.
 
