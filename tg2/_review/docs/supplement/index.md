@@ -122,8 +122,8 @@ This document includes lessons learned, design considerations, Test development 
 
 This document is intended for practitioners who wish to deepen their understanding of BDQ Core beyond the formal specifications. It will be useful for:
 
-- Data curators, aggregators, and publishers working to evaluate or improve data quality;
-- Developers and analysts designing new Tests or adapting existing ones to domain-specific needs;
+- Data curators, aggregators, and publishers working to evaluate or improve data quality
+- Developers and analysts designing new Tests or adapting existing ones to domain-specific needs
 - Standards maintainers and contributors seeking insight into the design motivations and history of BDQ Core.
 
 The document also provides some informal guidance for those tasked with maintaining or evolving the standard over time.

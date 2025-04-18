@@ -54,9 +54,9 @@ These terms support the formal description of how Amendments propose changes to 
 
 This document is intended for users who need a technical understanding of how BDQ Core Amendment Tests describe proposed improvements to data. It will be especially useful for:
 
-- implementers developing systems that generate or evaluate data quality Amendments
-- standards developers and data quality modelers working with the BDQ Core Framework Ontology
-- analysts and Data Curators reviewing Test results in the context of proposed changes to datasets
+- Implementers developing systems that generate or evaluate data quality Amendments
+- Standards developers and data quality modelers working with the BDQ Core Framework Ontology
+- Analysts and data curators reviewing Test results in the context of proposed changes to datasets
 
 Some familiarity with the structure of BDQ Core Tests and the Framework Ontology is recommended.
 

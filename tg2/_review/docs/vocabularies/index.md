@@ -73,8 +73,8 @@ This document distinguishes between foundational vocabularies that define the st
 
 This document is intended for both technical and non-technical readers who need to understand the structure and scope of the vocabularies within BDQ Core. It is especially useful for:
 
-- Implementers and developers working with BDQ Core Tests who need to reference the correct vocabulary namespaces and terms;
-- Standards developers seeking to align external specifications with BDQ Core vocabulary structures;
+- Implementers and developers working with BDQ Core Tests who need to reference the correct vocabulary namespaces and terms
+- Standards developers seeking to align external specifications with BDQ Core vocabulary structures
 - Data managers or analysts looking for contextual information about terms used in BDQ Core outputs or configurations.
 
 While the vocabulary content itself may involve semantic modeling, this index is designed to be readable without requiring specialized knowledge of RDF or ontology frameworks.

@@ -93,9 +93,9 @@ This document is both normative and explanatory: it defines how each Test is mod
 
 This document is intended for audiences who need a detailed understanding of the BDQ Core Tests, including:
 
-- Data quality specialists configuring or analyzing BDQ Test outputs;
-- Software developers and data platform architects implementing BDQ Core Tests;
-- Researchers and data managers evaluating dataset readiness for specific uses;
+- Data quality specialists configuring or analyzing BDQ Test outputs
+- Software developers and data platform architects implementing BDQ Core Tests
+- Researchers and data managers evaluating dataset readiness for specific uses
 - Standards developers integrating BDQ Test logic into broader biodiversity data infrastructures.
 
 While some familiarity with controlled vocabularies and RDF modeling may be useful, the document is designed to be accessible to both technical and semi-technical users who want to apply, understand, or extend BDQ Core Tests.

@@ -56,9 +56,9 @@ The document explains key concepts from the ontology, including `UseCase`, `Info
 
 This guide is intended for users who need a technical understanding of the BDQ Core conceptual framework and its ontology. It will be particularly useful for:
 
-- Ontology engineers and information modelers incorporating BDQ Core into semantic systems;
-- Standards developers aligning other biodiversity data quality frameworks with BDQ Core;
-- Implementers needing to understand how BDQ Core Tests are formally structured and classified;
+- Ontology engineers and information modelers incorporating BDQ Core into semantic systems
+- Standards developers aligning other biodiversity data quality frameworks with BDQ Core
+- Implementers needing to understand how BDQ Core Tests are formally structured and classified
 - Advanced users exploring the logical foundation behind BDQ Core Test design.
 
 Some familiarity with RDF/OWL ontologies is assumed.

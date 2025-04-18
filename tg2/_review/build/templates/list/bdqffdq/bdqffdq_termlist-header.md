@@ -54,8 +54,8 @@ This document presents a human-readable view of the vocabulary and follows the T
 
 This document is intended for technical users who need to reference the `bdqffdq:` vocabulary in detail. It is particularly useful for:
 
-- Ontology developers integrating BDQ Core concepts into semantic systems;
-- Data quality analysts and system implementers interpreting or expressing BDQ Test structures using RDF/OWL;
+- Ontology developers integrating BDQ Core concepts into semantic systems
+- Data quality analysts and system implementers interpreting or expressing BDQ Test structures using RDF/OWL
 - Standards developers needing access to term-level details when aligning or extending the BDQ Core framework.
 
 Familiarity with RDF, OWL, and the structure of the BDQ Core Tests is recommended.

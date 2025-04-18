@@ -77,8 +77,8 @@ The document specifies how to explicitly mark validation data, including wholly 
 
 This document is intended for two primary audiences:
 
-- **Dataset creators** preparing synthetic or modified datasets to test or validate BDQ Core Test implementations, who need to mark those datasets appropriately;
-- **Aggregators and data consumers**, including biodiversity researchers and system integrators, who need to recognize and exclude synthetic or altered data to avoid contaminating biodiversity analyses.
+- Dataset creators preparing synthetic or modified datasets to test or validate BDQ Core Test implementations, who need to mark those datasets appropriately
+- Aggregators and data consumers, including biodiversity researchers and system integrators, who need to recognize and exclude synthetic or altered data to avoid contaminating biodiversity analyses.
 
 The document assumes a working familiarity with biodiversity data concepts, but no prior knowledge of BDQ Core Test internals is required.
 

@@ -66,9 +66,9 @@ This document also explains BDQ Core’s underlying principle: data quality is n
 
 This document is intended for a broad audience, including:
 
-- Practitioners interested in improving or assessing the quality of biodiversity data;
-- Developers of tools and pipelines for data validation;
-- Researchers and project leads evaluating the suitability of datasets;
+- Practitioners interested in improving or assessing the quality of biodiversity data
+- Developers of tools and pipelines for data validation
+- Researchers and project leads evaluating the suitability of datasets
 - Standards developers seeking formal approaches to fitness-for-use assessment.
 
 No technical or ontological expertise is required to understand this document. It provides a conceptual foundation for exploring the rest of the BDQ Core suite, whether for casual use or deep integration.

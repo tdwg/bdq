@@ -136,9 +136,9 @@ This guide supports consistent, standards-compliant implementations across vario
 
 This document is intended for technical audiences responsible for implementing BDQ Core Tests in software applications or data processing pipelines. It will be particularly useful to:
 
-- Software developers integrating BDQ Core into biodiversity data infrastructures;
-- Tool builders seeking to support data validation or annotation workflows;
-- Technical architects and standards implementers creating reusable data quality services;
+- Software developers integrating BDQ Core into biodiversity data infrastructures
+- Tool builders seeking to support data validation or annotation workflows
+- Technical architects and standards implementers creating reusable data quality services
 - Power users customizing or extending BDQ Core Test suites.
 
 Readers should be familiar with basic software development concepts and, ideally, have experience working with data structures and RDF vocabularies. This guide assumes a need for detailed implementation-level knowledge, but provides both high-level explanations and concrete examples (e.g., in pseudocode and Java).

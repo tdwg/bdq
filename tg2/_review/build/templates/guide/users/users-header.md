@@ -56,9 +56,9 @@ This guide explains the conceptual and operational structure of the Tests, their
 
 This guide is intended for biodiversity data users, curators, and quality assurance professionals who are responsible for evaluating the usability and reliability of biodiversity datasets. It is especially relevant for:
 
-- Data providers, curators, and aggregator staff seeking to understand test results and improve data quality;
-- Researchers assessing dataset suitability for specific projects or analyses;
-- Data standards developers aiming to understand how BDQ Core supports fitness-for-use evaluations;
+- Data providers, curators, and aggregator staff seeking to understand test results and improve data quality
+- Researchers assessing dataset suitability for specific projects or analyses
+- Data standards developers aiming to understand how BDQ Core supports fitness-for-use evaluations
 - Anyone interpreting or configuring BDQ Core Tests, but not necessarily implementing them in software.
 
 The document is written for readers with a practical need to work with data quality assessments. It assumes no formal training in ontologies or software development, but may reference those areas for context.

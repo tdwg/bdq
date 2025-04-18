@@ -232,9 +232,9 @@ This document gathers normative statements for the ontology, explains how to use
 
 This document is intended for technical users who need to interact directly with the BDQ Core ontology. It will be especially useful for:
 
-- Ontology engineers and developers working on semantic web applications or data validation systems;
-- Standards developers seeking to align other vocabularies with BDQ Core;
-- Implementers generating or consuming RDF data that describes BDQ Core Tests or their results;
+- Ontology engineers and developers working on semantic web applications or data validation systems
+- Standards developers seeking to align other vocabularies with BDQ Core
+- Implementers generating or consuming RDF data that describes BDQ Core Tests or their results
 - Researchers modeling Use Cases for biodiversity data quality assessments.
 
 Readers should be familiar with ontology concepts, RDF/OWL syntax, and open world reasoning.

@@ -42,6 +42,18 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
 **Comment**<br>
 Draft Standard for Review
 
+## Table of Contents ##
+[1. Introduction](#1-introduction)
+  - [1.1 Purpose](#11-purpose)
+  - [1.2 Audience](#12-audience)
+  - [1.3 Status of the content of this document](#13-status-of-the-content-of-this-document)
+
+[2 Bibliography](#2-bibliography)
+
+[Acronyms](#acronyms)
+
+[Cite BDQ Core](#cite-bdq-core)
+
 ## 1. Introduction
 
 ### 1.1 Purpose
@@ -54,8 +66,8 @@ This bibliography includes all works referenced in any part of the BDQ Core suit
 
 This document is intended for any reader of the BDQ Core Standard who wishes to consult the literature and sources that underpin its components. It may be particularly useful for:
 
-- Standards developers and contributors verifying or extending BDQ Core content;
-- Researchers referencing the foundational works behind the data quality framework;
+- Standards developers and contributors verifying or extending BDQ Core content
+- Researchers referencing the foundational works behind the data quality framework
 - Implementers and tool builders seeking original documentation on referenced concepts or methods.
 
 No prior technical background is required to use this document.

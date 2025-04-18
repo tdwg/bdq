@@ -54,9 +54,9 @@ The Tests defined here are intended to be modular and interoperable. They can be
 
 This document is intended for users who need to understand the detailed structure and semantics of the BDQ Core Tests. It is particularly useful for:
 
-- Software developers implementing or integrating BDQ Core Test logic into applications;
-- Data managers and curators reviewing or selecting appropriate Tests for assessing data quality;
-- Standards developers and information architects building upon the BDQ Core framework;
+- Software developers implementing or integrating BDQ Core Test logic into applications
+- Data managers and curators reviewing or selecting appropriate Tests for assessing data quality
+- Standards developers and information architects building upon the BDQ Core framework
 - Anyone requiring detailed, machine-readable specifications of the Tests used in BDQ Core.
 
 Familiarity with RDF vocabularies, Darwin Core, and fitness for use principles will help readers make full use of this document, though the structure and examples are designed to support a broad technical audience.
