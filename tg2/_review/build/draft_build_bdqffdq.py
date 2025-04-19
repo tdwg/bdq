@@ -408,7 +408,7 @@ text = text + "- [Data Properties](#43-DataProperty-terms)\n"
 text = text + "- [Named Individuals](#44-NamedIndividual-terms)\n"
 text = text + "\n"
 
-text = text + "#### 3.1 Alphabetical Index of classes\n\n"
+text = text + "## 3.1 Alphabetical Index of classes\n\n"
 sparql = prefixes + "SELECT ?subject WHERE {  ?subject a owl:Class . } "
 queryResult = graph.query(sparql)
 for r in queryResult : 
@@ -416,7 +416,7 @@ for r in queryResult :
 	term = term.replace("https://rs.tdwg.org/bdqffdq/terms/","")
 	text = text + "[{}](#{})\n".format(term,term)
 
-text = text + "#### 3.2 Alphabetical Index of object properties\n\n"
+text = text + "## 3.2 Alphabetical Index of object properties\n\n"
 sparql = prefixes + "SELECT ?subject WHERE {  ?subject a owl:ObjectProperty . } "
 queryResult = graph.query(sparql)
 for r in queryResult : 
@@ -424,7 +424,7 @@ for r in queryResult :
 	term = term.replace("https://rs.tdwg.org/bdqffdq/terms/","")
 	text = text + "[{}](#{})\n".format(term,term)
 
-text = text + "#### 3.3 Alphabetical Index of data properties\n\n"
+text = text + "## 3.3 Alphabetical Index of data properties\n\n"
 sparql = prefixes + "SELECT ?subject WHERE {  ?subject a owl:DatatypeProperty . } "
 queryResult = graph.query(sparql)
 for r in queryResult : 
@@ -432,7 +432,7 @@ for r in queryResult :
 	term = term.replace("https://rs.tdwg.org/bdqffdq/terms/","")
 	text = text + "[{}](#{})\n".format(term,term)
 
-text = text + "#### 3.4 Alphabetical Index of named individuals\n\n"
+text = text + "## 3.4 Alphabetical Index of named individuals\n\n"
 sparql = prefixes + "SELECT ?subject WHERE {  ?subject a owl:NamedIndividual . } "
 queryResult = graph.query(sparql)
 for r in queryResult : 
@@ -448,7 +448,7 @@ for r in queryResult :
 	entity = r.subject
 	entity = entity.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:");
 	term = entity.replace("bdqffdq:","");
-	text = text + "### {}\n\n".format(term)
+	text = text + "#### {}\n\n".format(term)
 	text = text + "- Name: {}\n".format(entity)
 	text = text + "- Preferred Label: {}\n".format(r.prefLabel)
 	text = text + "- Definition: {}\n".format(r.definition)
@@ -464,7 +464,7 @@ for r in queryResult :
 	entity = r.subject
 	entity = entity.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:");
 	term = entity.replace("bdqffdq:","");
-	text = text + "### {}\n\n".format(term)
+	text = text + "#### {}\n\n".format(term)
 	text = text + "- Name: {}\n".format(entity)
 	text = text + "- Preferred Label: {}\n".format(r.prefLabel)
 	text = text + "- Definition: {}\n".format(r.definition)
@@ -486,7 +486,7 @@ for r in queryResult :
 	entity = r.subject
 	entity = entity.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:")
 	term = entity.replace("bdqffdq:","")
-	text = text + "### {}\n\n".format(term)
+	text = text + "#### {}\n\n".format(term)
 	text = text + "- Name: {}\n".format(entity)
 	text = text + "- Preferred Label: {}\n".format(r.prefLabel)
 	text = text + "- Definition: {}\n".format(r.definition)
@@ -502,7 +502,7 @@ for r in queryResult :
 	entity = r.subject
 	entity = entity.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:");
 	term = entity.replace("bdqffdq:","");
-	text = text + "### {}\n\n".format(term)
+	text = text + "#### {}\n\n".format(term)
 	text = text + "- Name: {}\n".format(entity)
 	rtype = r.type.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:");
 	text = text + "- Type: {}\n".format(rtype)
