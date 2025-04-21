@@ -46,7 +46,7 @@ Draft Standard for Review
   - [1.1 Purpose](#11-purpose)
   - [1.2 Audience](#12-audience)
   - [1.3 Associated Documents](#13-associated-documents)
-  - [1.3.1 Term List Distributions](#131-term-list-distributions)
+    - [1.3.1 Term List Distributions](#131-term-list-distributions)
   - [1.4 Status of the content of this document](#14-status-of-the-content-of-this-document)
   - [1.5 RFC 2119 key words](#15-rfc-2119-key-words)
   - [1.6 Namespace abbreviations](#16-namespace-abbreviations)
@@ -55,14 +55,10 @@ Draft Standard for Review
 [2 Use of Terms (normative)](#2-use-of-terms-normative)
 
 [3 Term index (non-normative)](#3-term-index-non-normative)
-
-[3.1 Alphabetical Index of classes](#31-alphabetical-index-of-classes)
-
-[3.2 Alphabetical Index of object properties](#32-alphabetical-index-of-object-properties)
-
-[3.3 Alphabetical Index of data properties](#33-alphabetical-index-of-data-properties)
-
-[3.4 Alphabetical Index of named individuals](#34-alphabetical-index-of-named-individuals)
+  - [3.1 Alphabetical Index of classes](#31-alphabetical-index-of-classes)
+  - [3.2 Alphabetical Index of object properties](#32-alphabetical-index-of-object-properties)
+  - [3.3 Alphabetical Index of data properties](#33-alphabetical-index-of-data-properties)
+  - [3.4 Alphabetical Index of named individuals](#34-alphabetical-index-of-named-individuals)
 
 [4 Vocabulary](#4-vocabulary)
   - [4.1 Class terms](#41-class-terms)
@@ -190,7 +186,7 @@ Familiarity with RDF, OWL, and the structure of the BDQ Core Tests is recommende
 
 For the list and links to all associated documents see the [Biodiversity Data Quality (BDQ) Core](../../index.md) page, which lists the parts of the standard.
 
-### 1.3.1 Term List Distributions
+#### 1.3.1 Term List Distributions
 
 | Description | IRI | Download URL | Note | 
 | ----------- | --- | -----------  | ---- | 
@@ -256,7 +252,7 @@ In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use th
 - [Data Properties](#43-DataProperty-terms)
 - [Named Individuals](#44-NamedIndividual-terms)
 
-## 3.1 Alphabetical Index of classes
+### 3.1 Alphabetical Index of classes
 
 [AbstractInformationElement](#AbstractInformationElement)
 [ActedUpon](#ActedUpon)
@@ -307,7 +303,7 @@ In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use th
 [ValidationConcept](#ValidationConcept)
 [ValidationMethod](#ValidationMethod)
 [ValidationPolicy](#ValidationPolicy)
-## 3.2 Alphabetical Index of object properties
+### 3.2 Alphabetical Index of object properties
 
 [amendmentProperty](#amendmentProperty)
 [appliesTo](#appliesTo)
@@ -344,7 +340,7 @@ In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use th
 [targetedValidation](#targetedValidation)
 [usesSpecification](#usesSpecification)
 [validationProperty](#validationProperty)
-## 3.3 Alphabetical Index of data properties
+### 3.3 Alphabetical Index of data properties
 
 [hasArgumentValue](#hasArgumentValue)
 [hasAuthoritiesDefaults](#hasAuthoritiesDefaults)
@@ -352,7 +348,7 @@ In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use th
 [hasExpectedResponse](#hasExpectedResponse)
 [hasResponseComment](#hasResponseComment)
 [hasResponseResultValue](#hasResponseResultValue)
-## 3.4 Alphabetical Index of named individuals
+### 3.4 Alphabetical Index of named individuals
 
 [AMENDED](#AMENDED)
 [COMPLETE](#COMPLETE)

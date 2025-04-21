@@ -1,8 +1,8 @@
 # Vocabularies have moved.
 
-See [_review/vocabulary/](../_review/vocabulary/) for vocabulary files.
+See [_review/vocabulary](../_review/vocabulary/) for vocabulary files.
 
-You probbly want the [Draft BDQ Core standard](https://github.com/tdwg/bdq/blob/master/tg2/_review/index.md) 
+You probably want the orientatation page for [Biodiversity Data Quality Core](https://github.com/tdwg/bdq/blob/master/tg2/_review/index.md) 
 
 # Work in progress files
 

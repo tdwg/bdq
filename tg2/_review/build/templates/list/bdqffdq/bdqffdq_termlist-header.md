@@ -64,7 +64,7 @@ Familiarity with RDF, OWL, and the structure of the BDQ Core Tests is recommende
 
 For the list and links to all associated documents see the [Biodiversity Data Quality (BDQ) Core](../../index.md) page, which lists the parts of the standard.
 
-### 1.3.1 Term List Distributions
+#### 1.3.1 Term List Distributions
 
 | Description | IRI | Download URL | Note | 
 | ----------- | --- | -----------  | ---- | 
