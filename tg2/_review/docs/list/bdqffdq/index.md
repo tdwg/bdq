@@ -236,8 +236,8 @@ The terminology used to describe the terms in this vocabulary follows the TDWG S
 | Term IRI (dcterms:isVersionOf) | normative | A related resource of which the described resource is a version, edition, or adaptation. TDWG SDS: The HTTP IRI that uniquely identifies the current term. | [https://rs.tdwg.org/ bdqffdq/terms/ AbstractInformationElement](https://rs.tdwg.org/bdqffdq/terms/AbstractInformationElement) |
 | Term Version IRI (rdf:about) | normative | The HTTP IRI that identifies the version of the term that is currently in force. | [https://rs.tdwg.org/ bdqffdq/terms/ AbstractInformationElement](https://rs.tdwg.org/bdqffdq/terms/AbstractInformationElement) |
 | Label (rdfs:label) | normative | A human-readable name for the subject. TDWG SDS: A a word or short phrase that serves as a human-readable name for the term. | Abstract Information Element |
-| Definition (skos:definition) | normative | A statement or formal explanation of the meaning of a concept. TDWG SDS: The normative definition of the term, written in English. | An InformationElement described in abstract terms and not linked with one or more concrete terms. |
-| Comments (rdfs:comment) | non-normative | A description of the subject resource. | InformationElements such as DATE and DAY are abstract, they could reference any representation of those concepts.  In contrast, dwc:eventDate and dwc:day can be linked to concrete ActedUponInformationElements or ConsultedInformationElements. |
+| Definition (skos:definition) | normative | A statement or formal explanation of the meaning of a concept. TDWG SDS: The normative definition of the term, written in English. | A bdqffdq:InformationElement described in abstract terms and not linked with any concrete terms. |
+| Comments (rdfs:comment) | non-normative | A description of the subject resource. | Such bdqffdq:InformationElements as DATE and DAY are abstract, they could reference any representation of those concepts. In contrast, dwc:eventDate and dwc:day can be linked to concrete bdqffdq:ActedUponInformationElements or bdqffdq:ConsultedInformationElements. |
 | Type (rdf:type) | normative | The subject is an instance of a class. | [http://www.w3.org/2002/07/ owl#Class](http://www.w3.org/2002/07/owl#Class) |
 
 
@@ -373,9 +373,9 @@ In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use th
 
 - Name: bdqffdq:AbstractInformationElement
 - Preferred Label: Abstract Information Element
-- Definition: An InformationElement described in abstract terms and not linked with one or more concrete terms.
+- Definition: A bdqffdq:InformationElement described in abstract terms and not linked with any concrete terms.
 - SubClass Of: InformationElement
-- Comments: InformationElements such as DATE and DAY are abstract, they could reference any representation of those concepts.  In contrast, dwc:eventDate and dwc:day can be linked to concrete ActedUponInformationElements or ConsultedInformationElements.
+- Comments: Such bdqffdq:InformationElements as DATE and DAY are abstract, they could reference any representation of those concepts. In contrast, dwc:eventDate and dwc:day can be linked to concrete bdqffdq:ActedUponInformationElements or bdqffdq:ConsultedInformationElements.
 
 ********************
 
@@ -383,9 +383,9 @@ In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use th
 
 - Name: bdqffdq:ActedUpon
 - Preferred Label: Acted Upon
-- Definition: An InformationElement, expressed in concrete terms, about which a DataQualityNeed expresses Assertions about the data quality in that element.
+- Definition: A bdqffdq:InformationElement, expressed in concrete terms, about which a bdqffdq:DataQualityNeed expresses bdqffdq:Assertions about the data quality in that bdqffdq:InformationElement.
 - SubClass Of: InformationElement
-- Comments: An InformationElement to which a Result applies.
+- Comments: A bdqffdq:InformationElement to which a bdqffdq:ResponseResult applies.
 
 ********************
 
@@ -393,12 +393,12 @@ In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use th
 
 - Name: bdqffdq:Amendment
 - Preferred Label: Amendment
-- Definition: A DataQualityNeed that expresses how proposals may be made to improve the fitness for use of data.
+- Definition: A bdqffdq:DataQualityNeed that expresses how proposals may be made to improve the fitness for use of data.
 - SubClass Of: AmendmentConcept; DataQualityNeed
-- Comments: ContextualizedEnhacement in the original framework.   Describes an instance of a bdqffdq:Enhancement in the context of the associated InformationElements from some controlled vocabulary (fields ActedUpon or Consulted), and a ResourceType of SingleRecord or MultiRecord.    
-Describes a proposal for an Enhancement of original data, which if accepted, would improve the quality of the data for some use. For example: Recommends valid value for taxon name in a SingleRecord.    
-Amendments may describe proposed changes to data values, or proposed changes to processes for the production and manipulation of data, for example, an Amendment on a SingleRecord may provide Criteria for proposing that latitude and longitude are transposed in that record. Similarly, an Amendment on a MultiRecord may provide Critera for proposing that all latitudes and longitudes from some data source have been transposed, and the mapping of data values to transport terms should be changed.    
-An Amendment is the DataQualityNeed concept that parallels an AmendmentMethod in the Solutions layer, and an AmendmentAssertion in the Report layer (see Figure 3 in Veiga et al., 2017).  
+- Comments: ContextualizedEnhacement in the original framework.   Describes an instance of a bdqffdq:Enhancement in the context of the associated bdqffdq:InformationElements from a controlled vocabulary (fields bdqffdq:ActedUpon or bdqffdq:Consulted), and a bdqffdq:ResourceType of bdqffdq:SingleRecord or bdqffdq:MultiRecord.    
+Describes a proposal for a bdqffdq:Enhancement of original data, which if accepted, would improve the quality of the data for a use. For example: 'Recommends valid value for taxon name in a SingleRecord.'  
+bdqffdq:Amendments may describe proposed changes to data values, or proposed changes to processes for the production and manipulation of data, for example, a bdqffdq:Amendment on a bdqffdq:SingleRecord may provide bdqffdq:Criteria for proposing that dwc:decimalLatitude and dwc:decimalLongitude are transposed in that record. Similarly, a bdqffdq:Amendment on a bdqffdq:MultiRecord may provide bdqffdq:Critera for proposing that all dwc:decimalLatitudes and dwc:decimalLongitudes from a data source have been transposed, and the mapping of data values to transport terms should be changed.    
+A bdqffdq:Amendment is the bdqffdq:DataQualityNeed that parallels a bdqffdq:AmendmentMethod in the Solutions layer (see Figure 3 in Veiga et al., 2017), and a bdqffdq:AmendmentAssertion in the Report layer (see Figure 3 in Veiga et al., 2017).  
 AM = { am | am = < ie, e, rt >, ie ∈ IE, e ∈ E ⋀ rt ∈ RT }
 
 ********************
@@ -407,10 +407,10 @@ AM = { am | am = < ie, e, rt >, ie ∈ IE, e ∈ E ⋀ rt ∈ RT }
 
 - Name: bdqffdq:AmendmentAssertion
 - Preferred Label: Amendment Assertion
-- Definition: An Assertion expressing the result of an Implementation evaluating an Amendment supporting a particular DataQualityNeed to improve a particular DataResource.
+- Definition: A bdqffdq:Assertion expressing the result of a bdqffdq:Implementation evaluating a bdqffdq:Amendment supporting a particular bdqffdq:DataQualityNeed to improve a particular bdqffdq:DataResource.
 - SubClass Of: AmendmentConcept; Assertion
-- Comments: The AmendmentAssertion type is a Report layer concept (see Figure 3 in Veiga et al., 2017) that describes the results of the execution of a test that performs an AmendmentMethod following some Specification to propose changes based on some Amendment.   
-An Amendment concept in bdqffdq is expected to carry a ResponseStatus result that includes a status FILLED_IN or AMENDED, as well as a ResponseResult that asserts proposed changes to values from the original data.  
+- Comments: The bdqffdq:AmendmentAssertion type is a Report layer concept (see Figure 3 in Veiga et al., 2017) that describes the results of the execution of a Test that performs a bdqffdq:AmendmentMethod following a bdqffdq:Specification to propose changes based on a bdqffdq:Amendment.   
+A bdqffdq:Amendment is expected to carry a bdqffdq:ResponseStatus result that includes a status bdqffdq:FILLED_IN or bdqffdq:AMENDED, as well as a bdqffdq:ResponseResult that asserts proposed changes to values from the original data.  
 DQA(dr) = {dqa | dqa = < am, s, m, r >, am ∈ AM, s ∈ S, m ∈ M , r ∈ R ⋀ dr ∈ DR}
 
 ********************
@@ -419,9 +419,9 @@ DQA(dr) = {dqa | dqa = < am, s, m, r >, am ∈ AM, s ∈ S, m ∈ M , r ∈ R �
 
 - Name: bdqffdq:AmendmentMethod
 - Preferred Label: Amendment Method
-- Definition: A data quality SolutionsConcept that relates an Amendment to its Specifications.
+- Definition: A data quality bdqffdq:SolutionsConcept that relates a bdqffdq:Amendment to its bdqffdq:Specifications.
 - SubClass Of: AmendmentConcept; DataQualityMethod
-- Comments: The AmendmentMethod in bdqffdq is a DataQualityMethod describing the relationship between a Specification (technical description of a test) and an Amendment (a bdqffdq:Enhancement in the context of ResourceType (SingleRecord or MultiRecord) and associated InformationElements).  
+- Comments: The bdqffdq:AmendmentMethod is a bdqffdq:DataQualityMethod describing the relationship between a bdqffdq:Specification (technical description of a Test) and a bdqffdq:Amendment (a bdqffdq:Enhancement in the context of bdqffdq:ResourceType (bdqffdq:SingleRecord or bdqffdq:MultiRecord) and associated bdqffdq:InformationElements).  
 EM(am) = {s | s ⊂ S ⋀ am ∈ AM}
 
 ********************
@@ -430,9 +430,9 @@ EM(am) = {s | s ⊂ S ⋀ am ∈ AM}
 
 - Name: bdqffdq:AmendmentPolicy
 - Preferred Label: Amendment Policy
-- Definition: A NeedConcept that relates a UseCase to a set of supporting Amendments.
+- Definition: A bdqffdq:NeedConcept that relates a bdqffdq:UseCase to a set of supporting bdqffdq:Amendments.
 - SubClass Of: AmendmentConcept; Policy
-- Comments: A data quality Need layer concept (see Figure 3 in Veiga et al., 2017) that describes how some Amendment relates to a UseCase. This relationship defines which Amendments are supported by a given UseCase.  
+- Comments: A data quality Need layer concept (see Figure 3 in Veiga et al., 2017) that describes how a bdqffdq:Amendment relates to a bdqffdq:UseCase. This relationship defines which bdqffdq:Amendments are supported by a given bdqffdq:UseCase.  
 EP(u) = {am | am ⊂ AM ⋀ u ∈ U }
 
 ********************
@@ -441,9 +441,9 @@ EP(u) = {am | am ⊂ AM ⋀ u ∈ U }
 
 - Name: bdqffdq:Argument
 - Preferred Label: Argument
-- Definition: A value that, when provided to a test Specification to replace a Parameter changes the behavior of the test in a defined manner.
+- Definition: A value that, when provided to a Test bdqffdq:Specification to replace a bdqffdq:Parameter changes the behavior of the Test in a defined manner.
 - SubClass Of: SolutionsConcept
-- Comments: The Argument is an Actual Parameter, for which a Parameter is the corresponding Formal Parameter.  An extension to the original fitness for use framework as described in Veiga et al., 2017.
+- Comments: The bdqffdq:Argument is an Actual Parameter, for which a bdqffdq:Parameter is the corresponding Formal Parameter.  An extension to the original fitness for use framework as described in Veiga et al., 2017.
 
 ********************
 
@@ -451,9 +451,9 @@ EP(u) = {am | am ⊂ AM ⋀ u ∈ U }
 
 - Name: bdqffdq:Assertion
 - Preferred Label: Assertion
-- Definition: A ReportConcept expressing a statement about a data quality Assertion following some Specification produced by some Implementation pertaining to some DataResource.
+- Definition: A bdqffdq:ReportConcept expressing a statement about a data quality bdqffdq:Assertion following a bdqffdq:Specification produced by a bdqffdq:Implementation pertaining to a bdqffdq:DataResource.
 - SubClass Of: ReportConcept
-- Comments: The Assertion type in bdqffdq is the FundamentalConcept that makes up a DataQualityReport. Assertion can be any one of four types (represented as subclasses), Validation, Issue, Measure, and Amendment.  The Assertion concept consists of a Specification (the technical description of a performed test), a DataResource (initial values of input data expressed in terms of some controlled vocabulary), the Mechanism (external service, actor, or code that performs the test), and some form of result.
+- Comments: The bdqffdq:Assertion type is the bdqffdq:FundamentalConcept that makes up a bdqffdq:DataQualityReport. A bdqffdq:Assertion can be any one of four types (represented as subclasses), bdqffdq:Validation, bdqffdq:Issue, bdqffdq:Measure, and bdqffdq:Amendment.  The bdqffdq:Assertion concept consists of a bdqffdq:Specification (the technical description of a performed Test), a bdqffdq:DataResource (initial values of input data expressed in terms of a controlled vocabulary), the bdqffdq:Mechanism (external service, actor, or code that performs the Test), and a form of result.
 
 ********************
 
@@ -461,9 +461,9 @@ EP(u) = {am | am ⊂ AM ⋀ u ∈ U }
 
 - Name: bdqffdq:Consulted
 - Preferred Label: Acted Upon
-- Definition: An InformationElement, expressed in concrete terms, about which a DataQualityNeed examines in order to expresses Assertions about the data quality in another InformationElement.
+- Definition: A bdqffdq:InformationElement, expressed in concrete terms, about which a bdqffdq:DataQualityNeed examines in order to expresses bdqffdq:Assertions about the data quality in another bdqffdq:InformationElement.
 - SubClass Of: InformationElement
-- Comments: An InformationElement the content of which is examined to assert a result on one or more other InformationElements.
+- Comments: A bdqffdq:InformationElement the content of which is examined to assert a result on one or more other bdqffdq:InformationElements.
 
 ********************
 
@@ -471,9 +471,9 @@ EP(u) = {am | am ⊂ AM ⋀ u ∈ U }
 
 - Name: bdqffdq:Criterion
 - Preferred Label: Criterion
-- Definition: Rule against which data are evaluated for conformance to quality Criteria.
+- Definition: Rule against which data are evaluated for conformance to quality bdqffdq:Criteria.
 - SubClass Of: FundamentalConcept; NeedConcept
-- Comments: General statement, for example: In a controlled vocabulary.  Composed with both Validations and Issues.
+- Comments: General statement, for example, 'In a controlled vocabulary.' Composed with both bdqffdq:Validations and bdqffdq:Issues.
 
 ********************
 
@@ -483,7 +483,7 @@ EP(u) = {am | am ⊂ AM ⋀ u ∈ U }
 - Preferred Label: Data Quality Dimension
 - Definition: An aspect of data quality.
 - SubClass Of: FundamentalConcept; NeedConcept
-- Comments: Describes the aspect of data quality (accuracy, precision, completeness, etc.) that a test examines. For example, [precision] in [coordinate precision of SingleRecords].  In the original framework only related to Measures, here may be related to any DataQualityNeed.
+- Comments: Describes the aspect of data quality (accuracy, precision, completeness, etc.) that a Test examines. For example, [precision] in [coordinate precision of SingleRecords]. In the original framework, only related to Measures, here may be related to any bdqffdq:DataQualityNeed.
 
 ********************
 
@@ -491,9 +491,9 @@ EP(u) = {am | am ⊂ AM ⋀ u ∈ U }
 
 - Name: bdqffdq:DataQualityMethod
 - Preferred Label: Data Quality Method
-- Definition: A SolutionsConcept that relates a DataQualityNeed to a Specification.
+- Definition: A bdqffdq:SolutionsConcept that relates a bdqffdq:DataQualityNeed to a bdqffdq:Specification.
 - SubClass Of: SolutionsConcept
-- Comments: A DataQualityMethod is an associative entity that allows Specifications or data quality tests to be reused by supporting a many-to-many relationship between the two.
+- Comments: A bdqffdq:DataQualityMethod is an associative entity that allows bdqffdq:Specifications or data quality Tests to be reused by supporting a many-to-many relationship between the two.
 
 ********************
 
@@ -501,9 +501,9 @@ EP(u) = {am | am ⊂ AM ⋀ u ∈ U }
 
 - Name: bdqffdq:DataQualityNeed
 - Preferred Label: Data Quality Need
-- Definition: A NeedConcept that expresses what Assertions may be made about data with respect to fitness for use.
+- Definition: A bdqffdq:NeedConcept that expresses what bdqffdq:Assertions may be made about data with respect to fitness for use.
 - SubClass Of: NeedConcept
-- Comments: Subtypes of DataQualityNeed are the Test Types.  DataQualityNeed appoximates the informal concept of a Test as used in BDQ Core.
+- Comments: Subtypes of bdqffdq:DataQualityNeed are the Test Types (Validation, Issue, Measure, and Amendment). The bdqffdq:DataQualityNeed appoximates the informal concept of a Test as used in BDQ Core.
 
 ********************
 
@@ -511,9 +511,9 @@ EP(u) = {am | am ⊂ AM ⋀ u ∈ U }
 
 - Name: bdqffdq:DataQualityProfile
 - Preferred Label: Data Quality Profile
-- Definition: A NeedConcept expressing the composition of Policies to satisfy a UseCase.
+- Definition: A bdqffdq:NeedConcept expressing the composition of bdqffdq:Policies to satisfy a bdqffdq:UseCase.
 - SubClass Of: NeedConcept
-- Comments: DataQualityProfile in bdqffdq is a data quality Need layer concept (see Figure 3 in Veiga et al., 2017) describing the UseCases that make up some data quality operation such as the behavior of a single actor or workflow producing the relevant Assertions.    
+- Comments: The bdqffdq:DataQualityProfile is a data quality Need layer concept (see Figure 3 in Veiga et al., 2017) describing the bdqffdq:UseCases that make up a data quality operation such as the behavior of a single actor or workflow producing the relevant bdqffdq:Assertions.    
 DQP (u) = {dqp | dqp = mp(u) ⋃ vp(u) ⋃ ep(u), mp ∈ MP , vp ∈ VP , ep ∈ EP ⋀ u ∈ U }
 
 ********************
@@ -522,9 +522,9 @@ DQP (u) = {dqp | dqp = mp(u) ⋃ vp(u) ⋃ ep(u), mp ∈ MP , vp ∈ VP , ep ∈
 
 - Name: bdqffdq:DataQualityReport
 - Preferred Label: Data Quality Report
-- Definition: A ReportConcept comprising a set of data quality Assertions.
+- Definition: A bdqffdq:ReportConcept comprising a set of data quality bdqffdq:Assertions.
 - SubClass Of: ReportConcept
-- Comments: The DataQualityReport concept consists of a set of Assertions (ValidationAssertions, IssueAssertions, MeasureAssertions, and AmendmentAssertions) that represent the output of a workflow/actor run.  These Assertions form an account of the fitness for use of a tested data set for a specified UseCase, as produced by a Mechanism.
+- Comments: A bdqffdq:DataQualityReport consists of a set of bdqffdq:Assertions (bdqffdq:ValidationAssertions, bdqffdq:IssueAssertions, bdqffdq:MeasureAssertions, and bdqffdq:AmendmentAssertions) that represent the output of a workflow/actor run.  These bdqffdq:Assertions form an account of the fitness for use of a tested data set for a specified bdqffdq:UseCase, as produced by a bdqffdq:Mechanism.
 
 ********************
 
@@ -532,10 +532,10 @@ DQP (u) = {dqp | dqp = mp(u) ⋃ vp(u) ⋃ ep(u), mp ∈ MP , vp ∈ VP , ep ∈
 
 - Name: bdqffdq:DataResource
 - Preferred Label: Data Resource
-- Definition: An owl:Thing to which a data quality Assertion applies.
+- Definition: An owl:Thing to which a data quality bdqffdq:Assertion applies.
 - SubClass Of: ReportConcept
-- Comments: Describes a DataResource containing terms from a vocabulary such as Darwin Core (dwc:) that can be related to InformationElements and represents the original values of the data operated on by an Assertion test (e.g., an instance of dwc:Occurrence).  Ideally, DataResources have persistent GUIDs.  
-A DataResource could be the oa:target of a oa:Annotation of which an Assertion is the oa:body.  
+- Comments: Describes a bdqffdq:DataResource containing terms from a vocabulary such as Darwin Core that can be related to bdqffdq:InformationElements, and represents the original values of the data operated on by a bdqffdq:Assertion Test (e.g., an instance of dwc:Occurrence). Ideally, bdqffdq:DataResources have persistent GUIDs.  
+A bdqffdq:DataResource could be the oa:target of a oa:Annotation of which a bdqffdq:Assertion is the oa:body.  
 DR = { dr | dr = < id, rt, v >, id ∈ I D, rt ∈ RT , (rt = sr ⋁ rt = ds) ⋀ v ∈ V }
 
 ********************
@@ -546,7 +546,7 @@ DR = { dr | dr = < id, rt, v >, id ∈ I D, rt ∈ RT , (rt = sr ⋁ rt = ds) �
 - Preferred Label: Enhancement
 - Definition: Description of a means by which data could be improved.
 - SubClass Of: AmendmentConcept; FundamentalConcept; NeedConcept
-- Comments: General statement, for example: Recommend replacement value from a controlled vocabulary.
+- Comments: A general statement about improvement, for example, 'Recommend replacement value from a controlled vocabulary'.
 
 ********************
 
@@ -555,7 +555,7 @@ DR = { dr | dr = < id, rt, v >, id ∈ I D, rt ∈ RT , (rt = sr ⋁ rt = ds) �
 - Name: bdqffdq:FundamentalConcept
 - Preferred Label: Fundamental Concept
 - Definition: Category of fitness for use concepts that are not derived by composition with other concepts.
-- Comments: Contrast with derived concepts, which are compositions of two or more FundamentalConcepts.  See Veiga et al., 2017.   Derived concepts can be organized by test type into ValidationConcept, IssueConcept, MeasurementConcept, or AmendmentConcept.  Derived concepts can also be organized by framework layer into NeedConcept, SolutionsConcept, and ReportConcept (see Figure 3 in Veiga et al., 2017).
+- Comments: Contrast with derived concepts, which are compositions of two or more bdqffdq:FundamentalConcepts, see Veiga et al., 2017. Derived concepts can be organized by Test type into bdqffdq:ValidationConcept, bdqffdq:IssueConcept, bdqffdq:MeasurementConcept, or bdqffdq:AmendmentConcept. Derived concepts can also be organized by framework layer into bdqffdq:NeedConcept, bdqffdq:SolutionsConcept, and bdqffdq:ReportConcept (see Figure 3 in Veiga et al., 2017).
 
 ********************
 
@@ -563,9 +563,9 @@ DR = { dr | dr = < id, rt, v >, id ∈ I D, rt ∈ RT , (rt = sr ⋁ rt = ds) �
 
 - Name: bdqffdq:Implementation
 - Preferred Label: Implementation
-- Definition: A SolutionsConcept that describes the portion of a Mechanism that carries out the proccess described in a particular Specification.
+- Definition: A bdqffdq:SolutionsConcept that describes the portion of a bdqffdq:Mechanism that carries out the proccess described in a particular bdqffdq:Specification.
 - SubClass Of: SolutionsConcept
-- Comments: The bdqffdq-derived concept of an Implementation describes the relationship between a Specification (technical description of a test) and the Mechanism that implements it.  
+- Comments: A bdqffdq:Implementation describes the relationship between a bdqffdq:Specification (technical description of a Test) and the bdqffdq:Mechanism that implements it.  
 I (s) = {m | m ⊂ M ⋀ s ∈ S}
 
 ********************
@@ -574,9 +574,9 @@ I (s) = {m | m ⊂ M ⋀ s ∈ S}
 
 - Name: bdqffdq:ImprovementTarget
 - Preferred Label: Improvement Target
-- Definition: A specific DataQualityNeed that a specific Amendment is intended to improve.
+- Definition: A specific bdqffdq:DataQualityNeed that a specific bdqffdq:Amendment is intended to improve.
 - SubClass Of: NeedConcept
-- Comments: The ImprovementTarget concept in bdqffdq describes which Validations, Issues, and Measures are improved by some Amendment. ImprovementTarget includes relationships between an Amendment and one or more Validations or Measures.  
+- Comments: A bdqffdq:ImprovementTarget describes which bdqffdq:Validations, bdqffdq:Issues, and bdqffdq:Measures are improved by a bdqffdq:Amendment. The bdqffdq:ImprovementTarget includes relationships between a bdqffdq:Amendment and one or more bdqffdq:Validations or bdqffdq:Measures.  
 IT(am) = {me ⋃ va | me ∈ ME, va ∈ VA ⋀ am ∈ AM}
 
 ********************
@@ -585,9 +585,9 @@ IT(am) = {me ⋃ va | me ∈ ME, va ∈ VA ⋀ am ∈ AM}
 
 - Name: bdqffdq:InformationElement
 - Preferred Label: Information Element
-- Definition: A portion of data with which a DataQualityNeed is concerned.
+- Definition: A portion of data with which a bdqffdq:DataQualityNeed is concerned.
 - SubClass Of: FundamentalConcept
-- Comments: An InformationElement identifies a portion of data to which a test pertains.  The InformationElement in bdqffdq can be represented as a single or composite element that consists of one or more terms from a controlled vocabulary (fields ActedUpon or Consulted by an Assertion test) that identifies concepts in data relevant to a UseCase.  An abstraction or a concrete term that represents relevant content (e.g., coordinates; dwc.decimalLatitude, dwc:decimalLongitude).
+- Comments: A bdqffdq:InformationElement identifies a portion of data to which a Test pertains. A bdqffdq:InformationElement can be represented as a single or composite element that consists of one or more terms from a controlled vocabulary (fields bdqffdq:ActedUpon or bdqffdq:Consulted by a bdqffdq:Assertion Test) that identifies concepts in data relevant to a bdqffdq:UseCase.  An abstraction or a concrete term that represents relevant content (e.g., coordinates; dwc:decimalLatitude, dwc:decimalLongitude).
 
 ********************
 
@@ -595,9 +595,9 @@ IT(am) = {me ⋃ va | me ∈ ME, va ∈ VA ⋀ am ∈ AM}
 
 - Name: bdqffdq:Issue
 - Preferred Label: Issue
-- Definition: A DataQualityNeed that expresses how quality problems may be identified in data.
+- Definition: A bdqffdq:DataQualityNeed that expresses how quality problems may be identified in data.
 - SubClass Of: DataQualityNeed; IssueConcept
-- Comments: Added to the original framework.  Inverse of Contextualized Criterion in the original framework.  Describes an instance of the IssueConcept in terms of the associated InformationElements from some controlled vocabulary (fields ActedUpon or Consulted), and a ResourceType of SingleRecord or MultiRecord.  Describes Criteria by which data that lack quality for some purpose may be identified.  An Issue is phrased in a negative sense, and approximates an inverse of a Validation.  An Issue identifies data that lack or may lack quality.  An Issue may flag a POTENTIAL_ISSUE that would need further review to determine if the data have quality for some purpose.  If the conditions described by an Issue are identified by a test, the ResponseResult will be either IS_ISSUE or POTENTIAL_ISSUE, if no Issue is found with the data the ResponseResult will be NOT_ISSUE.  NOT_ISSUE, unlike COMPLIANT for a Validation, does not assert that data are fit for some purpose. An Issue is the DataQualityNeed concept that parallels a IssueMethod in the Solutions layer, and a IssueAssertion in the Report layer (see Figure 3 in Veiga et al., 2017).  
+- Comments: Added to the original framework. Inverse of ContextualizedCriterion in the original framework. Describes an instance of the bdqffdq:IssueConcept in terms of the associated bdqffdq:InformationElements from a controlled vocabulary (fields bdqffdq:ActedUpon or bdqffdq:Consulted), and a bdqffdq:ResourceType of bdqffdq:SingleRecord or bdqffdq:MultiRecord. Describes bdqffdq:Criteria by which data that lack quality for some purpose may be identified. A bdqffdq:Issue is phrased in a negative sense, and approximates an inverse of a bdqffdq:Validation. A bdqffdq:Issue identifies data that lack or may lack quality. A bdqffdq:Issue may flag a bdqffdq:POTENTIAL_ISSUE that would need further review to determine if the data have quality for some purpose. If the conditions described by a bdqffdq:Issue are identified by a Test, the bdqffdq:ResponseResult will be either bdqffdq:IS_ISSUE or bdqffdq:POTENTIAL_ISSUE, if no bdqffdq:Issue is found with the data, the bdqffdq:ResponseResult will be bdqffdq:NOT_ISSUE. The term bdqffdq:NOT_ISSUE, unlike bdqffdq:COMPLIANT for a bdqffdq:Validation, does not assert that data are fit for some purpose. A bdqffdq:Issue is the bdqffdq:DataQualityNeed concept that parallels a bdqffdq:IssueMethod in the Solutions layer (see Figure 3 in Veiga et al., 2017), and a bdqffdq:IssueAssertion in the Report layer (see Figure 3 in Veiga et al., 2017).  
 IS = { is | is = < ie, c, rt >, ie ∈ IE, c ∈ ∁C ⋀ rt ∈ RT }
 
 ********************
@@ -606,10 +606,10 @@ IS = { is | is = < ie, c, rt >, ie ∈ IE, c ∈ ∁C ⋀ rt ∈ RT }
 
 - Name: bdqffdq:IssueAssertion
 - Preferred Label: Issue Assertion
-- Definition: An Assertion expressing the result of an Implementation evaluating an Issue for a particular DataQualityNeed in a particular DataResource.
+- Definition: A bdqffdq:Assertion expressing the result of a bdqffdq:Implementation evaluating a bdqffdq:Issue for a particular bdqffdq:DataQualityNeed in a particular bdqffdq:DataResource.
 - SubClass Of: Assertion; IssueConcept
-- Comments: The DataQualityReport concept describing the result of a test in the negative (i.e., identifying the potential absence of data quality).   
-If a problem was found, the ResponseResult is expected to carry a value of IS_ISSUE, if a potential problem was found that needs human review the ResponseResult is expected to be POTENTIAL_ISSUE, otherwise if the ResponseStatus is RUN_HAS_RESULT, the ResponseResult is expected to be NOT_ISSUE.
+- Comments: The bdqffdq:DataQualityReport concept describing the result of a Test in the negative (i.e., identifying the potential absence of data quality).   
+If a problem was found, the bdqffdq:ResponseResult is expected to carry a value of bdqffdq:IS_ISSUE, if a potential problem was found that requires human review, the bdqffdq:ResponseResult is expected to be bdqffdq:POTENTIAL_ISSUE, otherwise if the bdqffdq:ResponseStatus is bdqffdq:RUN_HAS_RESULT, the bdqffdq:ResponseResult is expected to be bdqffdq:NOT_ISSUE.
 
 ********************
 
@@ -617,8 +617,8 @@ If a problem was found, the ResponseResult is expected to carry a value of IS_IS
 
 - Name: bdqffdq:IssueConcept
 - Preferred Label: Issue Concept
-- Definition: A term involved in flagging problems or potential problems in assessment of data quality that would or might prevent the data from meeting an expressed DataQualityNeed.
-- Comments: Issue terms are expressed in a negative sense, they identify data that do not or may not conform to DataQualityNeeds.
+- Definition: A term involved in flagging problems or potential problems in assessment of data quality that would or might prevent the data from meeting an expressed bdqffdq:DataQualityNeed.
+- Comments: A bdqffdq:Issue term is expressed in a negative sense, it identifies data that do not or may not conform to bdqffdq:DataQualityNeeds.
 
 ********************
 
@@ -626,9 +626,9 @@ If a problem was found, the ResponseResult is expected to carry a value of IS_IS
 
 - Name: bdqffdq:IssueMethod
 - Preferred Label: Issue Method
-- Definition: A data quality SolutionsConcept that relates an Issue to its Specifications.
+- Definition: A data quality bdqffdq:SolutionsConcept that relates a bdqffdq:Issue to its bdqffdq:Specifications.
 - SubClass Of: DataQualityMethod; IssueConcept
-- Comments: The IssueMethod in bdqffdq is a data quality Solutions layer concept (see Figure 3 in Veiga et al., 2017) describing the relationship between a Specification (technical description of a test) and an Issue (a Criterion in the context of ResourceType (SingleRecord or MultiRecord) and associated InformationElements).
+- Comments: A bdqffdq:IssueMethod is a data quality Solutions layer concept (see Figure 3 in Veiga et al., 2017) describing the relationship between a bdqffdq:Specification (technical description of a Test) and a bdqffdq:Issue (a bdqffdq:Criterion in the context of bdqffdq:ResourceType (bdqffdq:SingleRecord or bdqffdq:MultiRecord) and associated bdqffdq:InformationElements).
 
 ********************
 
@@ -636,9 +636,9 @@ If a problem was found, the ResponseResult is expected to carry a value of IS_IS
 
 - Name: bdqffdq:IssuePolicy
 - Preferred Label: Issue Policy
-- Definition: A NeedConcept that relates a UseCase to a set of supporting Issues.
+- Definition: A bdqffdq:NeedConcept that relates a bdqffdq:UseCase to a set of supporting bdqffdq:Issues.
 - SubClass Of: IssueConcept; Policy
-- Comments: The IssuePolicy in bdqffdq is a data quality Need layer concept (see Figure 3 in Veiga et al., 2017) that describes how some Issue relates to a UseCase. This relationship defines which Issues are supported by a given UseCase.
+- Comments: A bdqffdq:IssuePolicy is a data quality Need layer concept (see Figure 3 in Veiga et al., 2017) that describes how a bdqffdq:Issue relates to a bdqffdq:UseCase. This relationship defines which bdqffdq:Issues are supported by a given bdqffdq:UseCase.
 
 ********************
 
@@ -646,13 +646,13 @@ If a problem was found, the ResponseResult is expected to carry a value of IS_IS
 
 - Name: bdqffdq:Measure
 - Preferred Label: Measure
-- Definition: A DataQualityNeed that expresses how the fitness of data for some use may be measured.
+- Definition: A bdqffdq:DataQualityNeed that expresses how the fitness of data for some use may be measured.
 - SubClass Of: DataQualityNeed; MeasurementConcept
-- Comments: Contextualized Dimension in the original framework. Describes an instance of the MeasurementConcept in terms of the associated InformationElements from some controlled vocabulary (fields ActedUpon or Consulted), and a ResourceType of SingleRecord or MultiRecord.   
-Describes the Criteria for measuring an aspect of data quality related to some DataQualityNeed.   May be Criteria for determining that data are COMPLETE or NOT_COMPLETE, or may be Criteria for asserting a numeric Measure.  COMPLETE or NOT_COMPLETE Measures are fundamental to data quality control, as a set of data is filtered to the subset of data that have quality for some need if all records are COMPLETE for all pertinent Measures.  
-A Measure is the DataQualityNeed concept that parallels a MeasurementMethod in the Solutions layer, and a MeasurementAssertion in the Report layer (see Figure 3 in Veiga et al., 2017).  
+- Comments: ContextualizedDimension in the original framework. Describes an instance of the bdqffdq:MeasurementConcept in terms of the associated bdqffdq:InformationElements from a controlled vocabulary (fields bdqffdq:ActedUpon or bdqffdq:Consulted), and a bdqffdq:ResourceType of bdqffdq:SingleRecord or bdqffdq:MultiRecord.   
+Describes the bdqffdq:Criteria for measuring an aspect of data quality related to a bdqffdq:DataQualityNeed. May be bdqffdq:Criteria for determining that data are bdqffdq:COMPLETE or bdqffdq:NOT_COMPLETE, or may be bdqffdq:Criteria for asserting a numeric bdqffdq:Measure. The bdqffdq:COMPLETE and bdqffdq:NOT_COMPLETE bdqffdq:Measures are fundamental to data quality control, as a set of data is filtered to the subset of data that have quality for some need if all records are bdqffdq:COMPLETE for all pertinent bdqffdq:Measures.  
+A bdqffdq:Measure is the bdqffdq:DataQualityNeed concept that parallels a bdqffdq:MeasurementMethod in the Solutions layer (see Figure 3 in Veiga et al., 2017), and a bdqffdq:MeasurementAssertion in the Report layer (see Figure 3 in Veiga et al., 2017).  
 ME = { me | me =< ie, d, rt >, ie ∈ IE, d ∈ D ⋀ rt ∈ RT }  
-also acceptable Measure  
+also acceptable bdqffdq:Measure  
 AM(me) = {va | me ∈ C D ⋀ va ⊂ C C}
 
 ********************
@@ -661,10 +661,10 @@ AM(me) = {va | me ∈ C D ⋀ va ⊂ C C}
 
 - Name: bdqffdq:MeasurementAssertion
 - Preferred Label: Measurement Assertion
-- Definition: An Assertion expressing the result of an Implementation measuring a particular DataQualityNeed in a particular DataResource.
+- Definition: A bdqffdq:Assertion expressing the result of a bdqffdq:Implementation measuring a particular bdqffdq:DataQualityNeed in a particular bdqffdq:DataResource.
 - SubClass Of: Assertion; MeasurementConcept
-- Comments: The MeasurementAssertion is a Report layer concept (see Figure 3 in Veiga et al., 2017) that describes the results of the execution of a test that performs a MeasurementMethod following some Specification to assess some data quality Measure.   
-In bdqffdq, the MeasurementAssertion is expected to carry a ResponseResult of COMPLETE or NOT_COMPLETE or a numeric measured value (e.g., a Measure of a dwc:eventDate duration in seconds).  
+- Comments: A bdqffdq:MeasurementAssertion is a Report layer concept (see Figure 3 in Veiga et al., 2017) that describes the results of the execution of a Test that performs a bdqffdq:MeasurementMethod following a bdqffdq:Specification to assess a data quality bdqffdq:Measure.   
+A MeasurementAssertion is expected to carry a bdqffdq:ResponseResult of bdqffdq:COMPLETE or bdqffdq:NOT_COMPLETE or a numeric measured value (e.g., a bdqffdq:Measure of a dwc:eventDate duration in seconds).  
 DQM(dr) = {dqm | dqm =< me, s, m, r >, me ∈ ME, s ∈ S, m ∈ M , r ∈ R ⋀ dr ∈ DR}
 
 ********************
@@ -673,9 +673,9 @@ DQM(dr) = {dqm | dqm =< me, s, m, r >, me ∈ ME, s ∈ S, m ∈ M , r ∈ R ⋀
 
 - Name: bdqffdq:MeasurementMethod
 - Preferred Label: Measurement Method
-- Definition: A data quality SolutionsConcept that relates a Measure to its Specifications.
+- Definition: A data quality bdqffdq:SolutionsConcept that relates a bdqffdq:Measure to its bdqffdq:Specifications.
 - SubClass Of: DataQualityMethod; MeasurementConcept
-- Comments: The MeasurementMethod in bdqffdq is a data quality Solutions layer concept (see Figure 3 in Veiga et al., 2017) describing the relationship between a Specification (technical description of a test) and a Measurement (a dimension in the context of ResourceType (SingleRecord or MultiRecord) and associated InformationElements).  
+- Comments: A bdqffdq:MeasurementMethod is a data quality Solutions layer concept (see Figure 3 in Veiga et al., 2017) describing the relationship between a bdqffdq:Specification (technical description of a Test) and a bdqffdq:Measurement (a bdqffdq:Dimension in the context of bdqffdq:ResourceType (bdqffdq:SingleRecord or bdqffdq:MultiRecord) and associated bdqffdq:InformationElements).  
 MM(me) = {s | s ⊂ S ⋀ me ∈ ME}
 
 ********************
@@ -684,9 +684,9 @@ MM(me) = {s | s ⊂ S ⋀ me ∈ ME}
 
 - Name: bdqffdq:MeasurementPolicy
 - Preferred Label: Measurement Policy
-- Definition: A NeedConcept that relates a UseCase to a set of supporting Measures.
+- Definition: A bdqffdq:NeedConcept that relates a bdqffdq:UseCase to a set of supporting bdqffdq:Measures.
 - SubClass Of: MeasurementConcept; Policy
-- Comments: The MeasurementPolicy in bdqffdq is a data quality Need layer concept (see Figure 3 in Veiga et al., 2017) that describes how some Measurement relates to a UseCase. This relationship defines which Measures are supported by a given UseCase.  
+- Comments: A bdqffdq:MeasurementPolicy is a data quality Need layer concept (see Figure 3 in Veiga et al., 2017) that describes how a bdqffdq:Measurement relates to a bdqffdq:UseCase. This relationship defines which bdqffdq:Measures are supported by a given bdqffdq:UseCase.  
 MP(u) = {me | me ⊂ ME ⋀ u ∈ U }
 
 ********************
@@ -695,10 +695,10 @@ MP(u) = {me | me ⊂ ME ⋀ u ∈ U }
 
 - Name: bdqffdq:Mechanism
 - Preferred Label: Mechanism
-- Definition: An entity that can execute DataQualityMethods.
+- Definition: An entity that can execute bdqffdq:DataQualityMethods.
 - SubClass Of: FundamentalConcept; SolutionsConcept
-- Comments: Mechanisms may produce DataQualityReports as products.      
-The bdqffdq concept of Mechanism describes the entity that performs an Assertion test (code, external service, actor, etc.). Tied to a Specification via the concept of an Implementation.
+- Comments: A bdqffdq:Mechanism may produce bdqffdq:DataQualityReports as products.      
+A bdqffdq:Mechanism describes the entity that performs a bdqffdq:Assertion Test (code, external service, actor, etc.). Tied to a bdqffdq:Specification via the concept of a bdqffdq:Implementation.
 
 ********************
 
@@ -706,7 +706,7 @@ The bdqffdq concept of Mechanism describes the entity that performs an Assertion
 
 - Name: bdqffdq:NeedConcept
 - Preferred Label: Need Concept
-- Definition: A concept that expresses an aspect of a DataQualityNeed.
+- Definition: A concept that expresses an aspect of a bdqffdq:DataQualityNeed.
 - Comments: Category of concepts forming the Need layer of the fitness for use framework (see Figure 3 in Veiga et al., 2017).
 
 ********************
@@ -715,9 +715,9 @@ The bdqffdq concept of Mechanism describes the entity that performs an Assertion
 
 - Name: bdqffdq:Parameter
 - Preferred Label: Parameter
-- Definition: A placeholder for a value that, when provided to a test Specification changes the behavior of the test in a defined manner.
+- Definition: A placeholder for a value that, when provided to a Test bdqffdq:Specification changes the behavior of the Test in a defined manner.
 - SubClass Of: SolutionsConcept
-- Comments: A Parameter is a Formal Parameter for which an Argument is an Actual Parameter that replaces it to determine the behavior of a Specification.  An extension to the original fitness for use framework as described in Veiga et al., 2017.
+- Comments: A bdqffdq:Parameter is a Formal Parameter for which an bdqffdq:Argument is an Actual Parameter that replaces it to determine the behavior of a bdqffdq:Specification.  An extension to the original fitness for use framework as described in Veiga et al., 2017.
 
 ********************
 
@@ -725,9 +725,9 @@ The bdqffdq concept of Mechanism describes the entity that performs an Assertion
 
 - Name: bdqffdq:Policy
 - Preferred Label: Policy
-- Definition: The set of DataQualityNeeds for a UseCase.
+- Definition: The set of bdqffdq:DataQualityNeeds for a bdqffdq:UseCase.
 - SubClass Of: NeedConcept
-- Comments: Composition of DataQualityNeeds into a UseCase.
+- Comments: Composition of bdqffdq:DataQualityNeeds into a bdqffdq:UseCase.
 
 ********************
 
@@ -735,7 +735,7 @@ The bdqffdq concept of Mechanism describes the entity that performs an Assertion
 
 - Name: bdqffdq:ReportConcept
 - Preferred Label: Report Concept
-- Definition: A concept concerning data quality expressed in a DataQualityReport.
+- Definition: A concept concerning data quality expressed in a bdqffdq:DataQualityReport.
 - Comments: Category of concepts forming the Report layer of the fitness for use framework (see Figure 3 in Veiga et al., 2017).
 
 ********************
@@ -744,9 +744,9 @@ The bdqffdq concept of Mechanism describes the entity that performs an Assertion
 
 - Name: bdqffdq:ResourceType
 - Preferred Label: Resource Type
-- Definition: Category of things that are data objects about which data quality Assertions may be made.
+- Definition: Category of things that are data objects about which data quality bdqffdq:Assertions may be made.
 - SubClass Of: FundamentalConcept
-- Comments: In bdqffdq, the concept of ResourceType has instances for SingleRecord or MultiRecord.
+- Comments: The concept of bdqffdq:ResourceType has instances for bdqffdq:SingleRecord or bdqffdq:MultiRecord.
 
 ********************
 
@@ -754,7 +754,7 @@ The bdqffdq concept of Mechanism describes the entity that performs an Assertion
 
 - Name: bdqffdq:ResponseQualifier
 - Preferred Label: Response Qualifier
-- Definition: A ReportConcept to which additional Assertions providing additional information beyond that of ResponseResult from the execution of the Specification of a DataQualityNeed are attached.
+- Definition: A bdqffdq:ReportConcept to which additional bdqffdq:Assertions providing additional information beyond that of bdqffdq:ResponseResult from the execution of the bdqffdq:Specification of a bdqffdq:DataQualityNeed are attached.
 - SubClass Of: ReportConcept
 - Comments: Intended as an extension point for qualifying information about uncertainty or ambiguity.
 
@@ -764,10 +764,10 @@ The bdqffdq concept of Mechanism describes the entity that performs an Assertion
 
 - Name: bdqffdq:ResponseResult
 - Preferred Label: Response.result
-- Definition: A ReportConcept to which controlled vocabulary Assertions about the result of the execution of the Specification of a DataQualityNeed are attached.
+- Definition: A bdqffdq:ReportConcept to which controlled vocabulary bdqffdq:Assertions about the result of the execution of the bdqffdq:Specification of a bdqffdq:DataQualityNeed are attached.
 - SubClass Of: ReportConcept
-- Comments: For Validations, a ResponseResult may be COMPLIANT, or NOT_COMPLIANT.  For a Measure, a ResponseResult object may be COMPLETE or NOT_COMPLETE.  For an Issue, a ResponseResult may be IS_ISSUE, POTENTIAL_ISSUE, or NOT_ISSUE.  See the bdq: vocabulary.  Measures may also use a numeric data property.  Amendments assert a string data property.  
-The ResponseResult in bdqffdq is represented as a value or a result object for MeasureAsssertions, or just a result object for ValidationAssertions or just values for changes proposed in AmendmentAssertions.
+- Comments: For a bdqffdq:Validation, a bdqffdq:ResponseResult may be bdqffdq:COMPLIANT, or bdqffdq:NOT_COMPLIANT. For a bdqffdq:Measure, a bdqffdq:ResponseResult object may be bdqffdq:COMPLETE or bdqffdq:NOT_COMPLETE. For a bdqffdq:Issue, a bdqffdq:ResponseResult may be bdqffdq:IS_ISSUE, bdqffdq:POTENTIAL_ISSUE, or bdqffdq:NOT_ISSUE. A bdqffdq:Measure may also use a numeric data property. A bdqffdq:Amendment asserts a string data property.  
+The bdqffdq:ResponseResult is represented as a value or a result object for bdqffdq:MeasureAsssertions, or just a result object for bdqffdq:ValidationAssertions or just values for changes proposed in bdqffdq:AmendmentAssertions.
 
 ********************
 
@@ -775,9 +775,9 @@ The ResponseResult in bdqffdq is represented as a value or a result object for M
 
 - Name: bdqffdq:ResponseStatus
 - Preferred Label: Response.status
-- Definition: A ReportConcept expressing controlled vocabulary values about the exit state of an execution process of a data quality Specification by an Implementation.
+- Definition: A bdqffdq:ReportConcept expressing controlled vocabulary values about the exit state of an execution process of a data quality bdqffdq:Specification by a bdqffdq:Implementation.
 - SubClass Of: ReportConcept
-- Comments: The ResponseStatus is metadata, indicating if data should be present in a ResponseResult.   Any Assertion may have the values INTERNAL_PREREQUISITES_NOT_MET or EXTERNAL_PREREQUISITES_NOT_MET, indicating that no value would be present in the accompanying ResponseResult.  Other values depend on the Assertion type.  These would be RUN_HAS_RESULT for a Validation, Issue or Measure, and FILLED_IN, AMENDED, or NOT_AMENDED for an Amendment.  Additional metadata qualifying the Assertion in a ResponseResult, such as statements of uncertainy or ambiguity may be placed in the bdqffdq:ResponseQualifier.
+- Comments: The bdqffdq:ResponseStatus is metadata, indicating if data should be present in a bdqffdq:ResponseResult. Any bdqffdq:Assertion may have the values bdqffdq:INTERNAL_PREREQUISITES_NOT_MET or bdqffdq:EXTERNAL_PREREQUISITES_NOT_MET, indicating that no value would be present in the accompanying bdqffdq:ResponseResult.  Other values depend on the bdqffdq:Assertion type; bdqffdq:RUN_HAS_RESULT for a bdqffdq:Validation, bdqffdq:Issue or bdqffdq:Measure, and bdqffdq:FILLED_IN, bdqffdq:AMENDED, or bdqffdq:NOT_AMENDED for a bdqffdq:Amendment. Additional metadata qualifying the bdqffdq:Assertion in a bdqffdq:ResponseResult, such as statements of uncertainy or ambiguity may be placed in the bdqffdq:ResponseQualifier.
 
 ********************
 
@@ -786,7 +786,7 @@ The ResponseResult in bdqffdq is represented as a value or a result object for M
 - Name: bdqffdq:SolutionsConcept
 - Preferred Label: Solutions Concept
 - Definition: A concept that expresses an aspect of a data quality solution.
-- Comments: Category of concepts forming the Solutions layer of the fitness for use framework (see Figure 3 in Veiga et al., 2017).  Solutions are tools that evaluate data against Needs and express conclusions in DataQualityReports.
+- Comments: Category of concepts forming the Solutions layer of the fitness for use framework (see Figure 3 in Veiga et al., 2017). A bdqffdq:SolutionsConcept is a tool that evaluates data against bdqffdq:NeedConcepts and express conclusions in bdqffdq:DataQualityReports.
 
 ********************
 
@@ -794,9 +794,9 @@ The ResponseResult in bdqffdq is represented as a value or a result object for M
 
 - Name: bdqffdq:Specification
 - Preferred Label: Specification
-- Definition: A specific statement about how to evaluate a DataQualityNeed.
+- Definition: A specific statement about how to evaluate a bdqffdq:DataQualityNeed.
 - SubClass Of: FundamentalConcept; SolutionsConcept
-- Comments: A Specification is a technical description of an Assertion test.  A Specification is expected to have the following properies:  (1) Expected Response, (2) Authorities and Parameters.
+- Comments: A bdqffdq:Specification is a technical description of a bdqffdq:Assertion Test. A bdqffdq:Specification is expected to have the following properties:  (1) bdqffdq:hasExpectedResponse and (2) bdqffdq:hasAuthoritiesDefaults.
 
 ********************
 
@@ -804,9 +804,9 @@ The ResponseResult in bdqffdq is represented as a value or a result object for M
 
 - Name: bdqffdq:UseCase
 - Preferred Label: Use Case
-- Definition: A NeedConcept expressing a purpose to which data are put for which the data must have quality for the result to have meaning and reliability.
+- Definition: A bdqffdq:NeedConcept expressing a purpose to which data are put for which the data must have quality for the result to have meaning and reliability.
 - SubClass Of: FundamentalConcept; NeedConcept
-- Comments: The UseCase concept in bdqffdq describes some data quality control UseCase. The ValidationPolicies, MeasurementPolicies and AmendmentPolicies that make up a UseCase define which Assertions cover a given UseCase.  An example of a UseCase could be "Check for internal consistency of dates", with ValidationPolicies for checking consistency between atomic date fields and an Amendment such as "eventDate filled in from verbatim".  UseCases in bdqffdq are not the same as UseCases in the software engineering sense, but are similar bdqffdq formal statements derived from analyis of user stories.
+- Comments: A bdqffdq:UseCase describes a data quality control use case. The bdqffdq:ValidationPolicies, bdqffdq:MeasurementPolicies and bdqffdq:AmendmentPolicies that make up a bdqffdq:UseCase define which bdqffdq:Assertions cover a given bdqffdq:UseCase.  An example of a bdqffdq:UseCase could be 'Check for internal consistency of dates', with bdqffdq:ValidationPolicies for checking consistency between atomic date fields and a bdqffdq:Amendment such as 'eventDate filled in from verbatim'. A bdqffdq:UseCase is not the same as a use cases in the software engineering sense, it is a similar formal bdqffdq statement derived from analyis of user stories.
 
 ********************
 
@@ -814,11 +814,11 @@ The ResponseResult in bdqffdq is represented as a value or a result object for M
 
 - Name: bdqffdq:Validation
 - Preferred Label: Validation
-- Definition: A DataQualityNeed that expreses how data may be evaluated for fitness for use.
+- Definition: A bdqffdq:DataQualityNeed that expresses how data may be evaluated for fitness for use.
 - SubClass Of: DataQualityNeed; ValidationConcept
-- Comments: ContextualizedCriterion in the original framework.  Describes the Criteria for determining compliance of data to fill some DataQualityNeed.  A description of a Criterion applied to an InformationElement for some ResourceType.   Describes an instance of the Criterion concept in terms of the associated InformationElements from some controlled vocabulary (fields ActedUpon or Consulted), and a ResourceType of SingleRecord or MultiRecord.    
-Validations are phrased in a positive sense, they identify data which has quality for some need.  For example: The value of dwc:basisOfRecord of SingleRecords must be in the controlled vocabulary.     
-A Validation is the DataQualityNeed concept that parallels a ValidationMethod in the Solutions layer, and a ValidationAssertion in the Report layer.  ValidationAssertions may specify a result that is COMPLIANT, where the data has quality, or NOT_COMPLIANT, where the data lacks quality for some UseCase.    
+- Comments: ContextualizedCriterion in the original framework.  Describes the bdqffdq:Criteria for determining compliance of data to fill a bdqffdq:DataQualityNeed.  A description of a bdqffdq:Criterion applied to a bdqffdq:InformationElement for a bdqffdq:ResourceType. Describes an instance of a bdqffdq:Criterion in terms of the associated bdqffdq:InformationElements from a controlled vocabulary (fields bdqffdq:ActedUpon or bdqffdq:Consulted), and a bdqffdq:ResourceType of bdqffdq:SingleRecord or bdqffdq:MultiRecord.    
+A bdqffdq:Validation is phrased in a positive sense. It identifies data which have quality for some need.  For example, the value of dwc:basisOfRecord of bdqffdq:SingleRecords must be in the controlled vocabulary for dwc:basisOfRecord.  
+A bdqffdq:Validation is the bdqffdq:DataQualityNeed that parallels a bdqffdq:ValidationMethod in the Solutions layer (see Figure 3 in Veiga et al., 2017), and a bdqffdq:ValidationAssertion in the Report layer (see Figure 3 in Veiga et al., 2017). A bdqffdq:ValidationAssertion may specify a result that is bdqffdq:COMPLIANT, where the data have quality, or bdqffdq:NOT_COMPLIANT, where the data lack quality for a bdqffdq:UseCase.  
 VA = { va | va = < ie, c, rt >, ie ∈ IE, c ∈ C ⋀ rt ∈ RT }
 
 ********************
@@ -827,10 +827,10 @@ VA = { va | va = < ie, c, rt >, ie ∈ IE, c ∈ C ⋀ rt ∈ RT }
 
 - Name: bdqffdq:ValidationAssertion
 - Preferred Label: Validation Assertion
-- Definition: An Assertion expressing the result of an Implementation validating compliance with a a particular DataQualityNeed in a particular DataResource.
+- Definition: A bdqffdq:Assertion expressing the result of a bdqffdq:Implementation validating compliance with a particular bdqffdq:DataQualityNeed in a particular bdqffdq:DataResource.
 - SubClass Of: Assertion; ValidationConcept
-- Comments: The ValidationAssertion is a Report layer concept (see Figure 3 in Veiga et al., 2017) that describes the results of the execution of of a test that performs a ValidationMethod following some Specification to assess the validity of some data with respect to the Criteria of some Validation.   
-The ValidationAssertion concept in bdqffdq is expected to carry a a ResponseResult of COMPLIANT or NON_COMPLIANT.  
+- Comments: The bdqffdq:ValidationAssertion is a Report layer concept (see Figure 3 in Veiga et al., 2017) that describes the results of the execution of a Test that performs a bdqffdq:ValidationMethod following a bdqffdq:Specification to assess the validity of some data with respect to the bdqffdq:Criteria of a bdqffdq:Validation.   
+The bdqffdq:ValidationAssertion concept is expected to carry a bdqffdq:ResponseResult of bdqffdq:COMPLIANT or bdqffdq:NON_COMPLIANT.  
 DQV(dr) = {dqv | dqv = < va, s, m, r >, va ∈ VA, s ∈ S, m ∈ M , r ∈ R ⋀ dr ∈ DR}
 
 ********************
@@ -839,8 +839,8 @@ DQV(dr) = {dqv | dqv = < va, s, m, r >, va ∈ VA, s ∈ S, m ∈ M , r ∈ R �
 
 - Name: bdqffdq:ValidationConcept
 - Preferred Label: Validation Concept
-- Definition: A term involved in statements about the conformance of data to expressed DataQualityNeeds.
-- Comments: Validation terms are expressed in a positive sense, they identify data that conform to needs.
+- Definition: A term involved in statements about the conformance of data to expressed bdqffdq:DataQualityNeeds.
+- Comments: A bdqffdq:Validation term is expressed in a positive sense, it identifies data that conform to a bdqffdq:NeedConcept.
 
 ********************
 
@@ -848,9 +848,9 @@ DQV(dr) = {dqv | dqv = < va, s, m, r >, va ∈ VA, s ∈ S, m ∈ M , r ∈ R �
 
 - Name: bdqffdq:ValidationMethod
 - Preferred Label: Validation Method
-- Definition: A data quality SolutionsConcept that relates an Validation to its Specifications.
+- Definition: A data quality bdqffdq:SolutionsConcept that relates a bdqffdq:Validation to its bdqffdq:Specifications.
 - SubClass Of: DataQualityMethod; ValidationConcept
-- Comments: The ValidationMethod in bdqffdq is a data quality Solutions layer concept (see Figure 3 in Veiga et al., 2017) describing the relationship between a Specification (technical description of a test) and a Validation (a Criterion in the context of ResourceType (SingleRecord or MultiRecord) and associated InformationElements).  
+- Comments: A bdqffdq:ValidationMethod is a data quality Solutions layer concept (see Figure 3 in Veiga et al., 2017) describing the relationship between a bdqffdq:Specification (technical description of a Test) and a bdqffdq:Validation (a bdqffdq:Criterion in the context of bdqffdq:ResourceType (bdqffdq:SingleRecord or MultiRecordbdqffdq:) and associated bdqffdq:InformationElements).  
 VM(va) = {s | s ⊂ S ⋀ va ∈ VA}
 
 ********************
@@ -859,9 +859,9 @@ VM(va) = {s | s ⊂ S ⋀ va ∈ VA}
 
 - Name: bdqffdq:ValidationPolicy
 - Preferred Label: Validation Policy
-- Definition: A NeedConcept that relates a UseCase to a set of supporting Validations.
+- Definition: A bdqffdq:NeedConcept that relates a bdqffdq:UseCase to a set of supporting bdqffdq:Validations.
 - SubClass Of: Policy; ValidationConcept
-- Comments: The ValidationPolicy in bdqffdq is a data quality Need layer concept (see Figure 3 in Veiga et al., 2017) that describes how some Validation relates to a UseCase. This relationship defines which Validations are needed to identify quality in a given UseCase.  
+- Comments: A bdqffdq:ValidationPolicy is a data quality Need layer concept (see Figure 3 in Veiga et al., 2017) that describes how a bdqffdq:Validation relates to a bdqffdq:UseCase. This relationship defines which bdqffdq:Validations are needed to identify quality in a given bdqffdq:UseCase.  
 VP (u) = {va | va ⊂ VA ⋀ u ∈ U }
 
 ********************
@@ -871,8 +871,8 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }
 
 - Name: bdqffdq:amendmentProperty
 - Preferred Label: amendment Property
-- Definition: Category of object properties that apply to Amendments
-- Comments: Subproperties of this type group object properties that apply to Amendment concepts such as AmendmentPolicy (DataQualityNeed), AmendmentMethod (DataQualityMethods) and Amendment (DataQualityReports).
+- Definition: Category of object properties that apply to bdqffdq:Amendments
+- Comments: Subproperties of this type group object properties that apply to bdqffdq:AmendmentConcepts such as bdqffdq:AmendmentPolicy (bdqffdq:DataQualityNeed), bdqffdq:AmendmentMethod (bdqffdq:DataQualityMethod) and bdqffdq:Amendment (bdqffdq:DataQualityReports).
 
 ********************
 
@@ -880,8 +880,8 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }
 
 - Name: bdqffdq:appliesTo
 - Preferred Label: applies To
-- Definition: Describes the DataResource about which an Assertion is made.
-- Comments: If an Assertion forms the oa:body of an oa:Annotation, the appliesTo DataResource would be the oa:target of the Annotation.  If Assertions are composed in DataQualityReports, the appliesTo DataResource is an item examined as part of the DataQualityReport.  Expectation for SingleRecord test Assertions on Darwin Core data in BDQ Core is that appliesTo would point at a dwc:Occurrence record.
+- Definition: Describes the bdqffdq:DataResource about which a bdqffdq:Assertion is made.
+- Comments: If a bdqffdq:Assertion forms the oa:body of an oa:Annotation, the bdqffdq:appliesTo bdqffdq:DataResource would be the oa:target of the bdqffdq:Annotation.  If bdqffdq:Assertions are composed in bdqffdq:DataQualityReports, the bdqffdq:appliesTo bdqffdq:DataResource is an item examined as part of the bdqffdq:DataQualityReport.  Expectation for bdqffdq:SingleRecord Test bdqffdq:Assertions on Darwin Core data in BDQ Core is that bdqffdq:appliesTo would point at a dwc:Occurrence record.
 
 ********************
 
@@ -889,7 +889,7 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }
 
 - Name: bdqffdq:composedOf
 - Preferred Label: composed Of
-- Definition: Specific vocabulary term that comprises an InformationElement that is not an AbstractInformationElement.
+- Definition: Specific vocabulary term that comprises a bdqffdq:InformationElement that is not a bdqffdq:AbstractInformationElement.
 - Comments: Describes the properties from a controlled vocabulary that compose an InformationElement. For example, an InformationElement may be composedOf properties such as dwc:day, dwc:month and dwc:year.
 
 ********************
@@ -898,8 +898,8 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }
 
 - Name: bdqffdq:containsAssertion
 - Preferred Label: contains Assertion
-- Definition: Connects a DataQualityReport with Assertions that comprise that DataQualityReport.
-- Comments: Connects Assertions together into Data Quality Reports.  Alternatively, Assertions can be contained in oa:Annotations, in which case this property is not used.
+- Definition: Connects a bdqffdq:DataQualityReport with bdqffdq:Assertions that comprise that bdqffdq:DataQualityReport.
+- Comments: Connects bdqffdq:Assertions together into bdqffdq:DataQualityReports. Alternatively, bdqffdq:Assertions can be contained in oa:Annotations, in which case this property is not used.
 
 ********************
 
@@ -907,10 +907,10 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }
 
 - Name: bdqffdq:forAmendment
 - Preferred Label: for Amendment
-- Definition: Relates an AmendmentMethod to an Amendment.
+- Definition: Relates a bdqffdq:AmendmentMethod to a bdqffdq:Amendment.
 - SubClass Of: amendmentProperty; forDataQualityNeed
 - Range [ owl:someValuesFrom bdqffdq:forAmendment ]
-- Comments: Use to link AmendmentMethods to Amendments.  Describes the relationship between an AmendmentMethod (solutions) and an Amendment (needs).
+- Comments: Use to link a bdqffdq:AmendmentMethod to a bdqffdq:Amendment. Describes the relationship between a bdqffdq:AmendmentMethod (Solutions layer, see Figure 3 in Veiga et al., 2017) and a bdqffdq:Amendment (Need layer, see Figure 3 in Veiga et al., 2017).
 
 ********************
 
@@ -918,8 +918,8 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }
 
 - Name: bdqffdq:forDataQualityNeed
 - Preferred Label: for Data Quality Need
-- Definition: Category of properties that relates a DataQualityNeed to specific Methods.
-- Comments: Category of properties that link tests to their Methods.
+- Definition: Category of properties that relates a bdqffdq:DataQualityNeed to specific bdqffdq:Methods.
+- Comments: Category of properties that link Tests to their bdqffdq:Methods.
 
 ********************
 
@@ -927,10 +927,10 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }
 
 - Name: bdqffdq:forIssue
 - Preferred Label: for Issue
-- Definition: Relates an IssueMethod to an Issue.
+- Definition: Relates a bdqffdq:IssueMethod to a bdqffdq:Issue.
 - SubClass Of: forDataQualityNeed; issueProperty
 - Range [ owl:someValuesFrom bdqffdq:forIssue ]
-- Comments: Use to link IssueMethods to Issues.  Describes the relationship between a IssueMethod (solutions) in bdqffdq and an Issue (needs).  Parallel concepts are forAmendment, forValidation, forMeasure.
+- Comments: Use to link a bdqffdq:IssueMethod to a bdqffdq:Issue.  Describes the relationship between a bdqffdq:IssueMethod (Solutions layer, see Figure 3 in Veiga et al., 2017) and a bdqffdq:Issue (Need layer, see Figure 3 in Veiga et al., 2017). Parallel concepts are bdqffdq:forAmendment, bdqffdq:forValidation, and bdqffdq:forMeasure.
 
 ********************
 
@@ -938,10 +938,10 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }
 
 - Name: bdqffdq:forMeasure
 - Preferred Label: for Measure
-- Definition: Relates an MeasurementMethod to a Measure.
+- Definition: Relates a bdqffdq:MeasurementMethod to a bdqffdq:Measure.
 - SubClass Of: forDataQualityNeed; measurementProperty
 - Range [ owl:someValuesFrom bdqffdq:forMeasure ]
-- Comments: Use to link MeasurementMethods (solutions) to Measures (needs).   Parallel concepts are forAmendment, forValidation, forIssue.
+- Comments: Use to link bdqffdq:MeasurementMethods (Solutions layer, see Figure 3 in Veiga et al., 2017) to bdqffdq:Measures (Need layer, see Figure 3 in Veiga et al., 2017). Parallel concepts are bdqffdq:forAmendment, bdqffdq:forValidation, and bdqffdq:forIssue.
 
 ********************
 
@@ -949,10 +949,10 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }
 
 - Name: bdqffdq:forValidation
 - Preferred Label: for Validation
-- Definition: Relates an ValidationMethod to a Validation.
+- Definition: Relates a bdqffdq:ValidationMethod to a bdqffdq:Validation.
 - SubClass Of: forDataQualityNeed; validationProperty
 - Range [ owl:someValuesFrom bdqffdq:forValidation ]
-- Comments: Use to link ValidationMethods to Validations.  Describes the relationship between a ValidationMethod (solutions) and a Validation (needs).   Parallel concepts are forAmendment, forMeasure, and forIssue.
+- Comments: Use to link bdqffdq:ValidationMethods to bdqffdq:Validations. Describes the relationship between a bdqffdq:ValidationMethod (Solutions layer, see Figure 3 in Veiga et al., 2017) and a bdqffdq:Validation (Need layer, see Figure 3 in Veiga et al., 2017). Parallel concepts are bdqffdq:forAmendment, bdqffdq:forMeasure, and bdqffdq:forIssue.
 
 ********************
 
@@ -960,9 +960,9 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }
 
 - Name: bdqffdq:hasActedUponInformationElement
 - Preferred Label: has Acted Upon Information Element
-- Definition: Describes the ActedUpon InformationElements assessed by a DataQualityNeed about which Assertions arising from the DataQualityNeed would apply.
+- Definition: Describes the bdqffdq:ActedUpon bdqffdq:InformationElements assessed by a bdqffdq:DataQualityNeed about which bdqffdq:Assertions arising from the bdqffdq:DataQualityNeed would apply.
 - SubClass Of: hasInformationElement
-- Comments: Provides a relationship between bdqffdq concepts and the InformationElements that are ActedUpon in a test.
+- Comments: Provides a relationship between bdqffdq concepts and the bdqffdq:InformationElements that are bdqffdq:ActedUpon in a Test.
 
 ********************
 
@@ -970,9 +970,9 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }
 
 - Name: bdqffdq:hasArgument
 - Preferred Label: has Argument
-- Definition: Relates a Specification to an Argument
+- Definition: Relates a bdqffdq:Specification to a bdqffdq:Argument
 - Range bdqffdq:Argument
-- Comments: Expected to be a relationship between a Specification and an Argument, where the Argument provides a value for a Parameter (e.g., bdq:sourceAuthority), and a hasAuthoritiesDefaults for the Specification may provide a default value for the Parameter under that Specification.
+- Comments: Expected to be a relationship between a bdqffdq:Specification and a bdqffdq:Argument, where the bdqffdq:Argument provides a value for a bdqffdq:Parameter (e.g., bdq:sourceAuthority), and a bdqffdq:hasAuthoritiesDefaults for the bdqffdq:Specification may provide a default value for the bdqffdq:Parameter under that bdqffdq:Specification.
 
 ********************
 
@@ -980,9 +980,9 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }
 
 - Name: bdqffdq:hasConsultedInformationElement
 - Preferred Label: has Consulted Information Element
-- Definition: Describes the InformationElements assessed by a DataQualityNeed in order to make Assertions concerning ActedUpon InformationElements.
+- Definition: Describes the bdqffdq:InformationElements assessed by a bdqffdq:DataQualityNeed in order to make bdqffdq:Assertions concerning bdqffdq:ActedUpon bdqffdq:InformationElements.
 - SubClass Of: hasInformationElement
-- Comments: Provides a relationship between bdqffdq concepts and the InformationElements that are Consulted, but not ActedUpon in a test.
+- Comments: Provides a relationship between bdqffdq concepts and the bdqffdq:InformationElements that are bdqffdq:Consulted, but not bdqffdq:ActedUpon in a Test.
 
 ********************
 
@@ -990,10 +990,10 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }
 
 - Name: bdqffdq:hasCriterion
 - Preferred Label: has Criterion
-- Definition: The Criterion under which a Validation or Issue assesses for data quality.
+- Definition: The bdqffdq:Criterion under which a bdqffdq:Validation or bdqffdq:Issue assesses for data quality.
 - SubClass Of: issueProperty; validationProperty
 - Range [ owl:someValuesFrom bdqffdq:hasCriterion ]
-- Comments: Used to link the derived concept of a Validation to the FundamentalConcept of a Criterion.
+- Comments: Used to link the derived concept of a bdqffdq:Validation to the bdqffdq:FundamentalConcept of a bdqffdq:Criterion.
 
 ********************
 
@@ -1001,10 +1001,10 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }
 
 - Name: bdqffdq:hasDataQualityDimension
 - Preferred Label: has Data Quality Dimension
-- Definition: The DataQualityDimension to which a DataQualityNeed Applies.
+- Definition: The bdqffdq:DataQualityDimension to which a bdqffdq:DataQualityNeed applies.
 - SubClass Of: amendmentProperty; issueProperty; measurementProperty; validationProperty
 - Range [ owl:someValuesFrom bdqffdq:hasDataQualityDimension ]
-- Comments: Used to link a derived concept of a DataQualityNeed (a test, that is a Validation, Issue, Measure, or Amendment) to the FundamentalConcept of a DataQualityDimension.  For a Validation or Issue, the Dimension of data quality assessed.  For a Measure, the Dimension of data quality measured.   For an Amendment, the Dimension of data quality to be improved.    
+- Comments: Used to link a derived concept of a bdqffdq:DataQualityNeed (a Test, whether rdf:type Validation, Issue, Measure, or Amendment) to the bdqffdq:FundamentalConcept of a bdqffdq:DataQualityDimension. For a bdqffdq:Validation or bdqffdq:Issue, the bdqffdq:Dimension of data quality assessed. For a bdqffdq:Measure, the bdqffdq:Dimension of data quality measured. For a bdqffdq:Amendment, the bdqffdq:Dimension of data quality to be improved.    
 Under the original formulation of the Framework, only Measures have Dimensions.
 
 ********************
@@ -1013,10 +1013,10 @@ Under the original formulation of the Framework, only Measures have Dimensions.
 
 - Name: bdqffdq:hasEnhancement
 - Preferred Label: has Enhancement
-- Definition: The Enhancement that describes how an Amendment may propose changes to improve data quality.
+- Definition: The bdqffdq:Enhancement that describes how a bdqffdq:Amendment may propose changes to improve data quality.
 - SubClass Of: amendmentProperty
 - Range [ owl:someValuesFrom bdqffdq:hasEnhancement ]
-- Comments: Used to link the derived property of an Amendment to the FundamentalConcept of an Enhancement.
+- Comments: Used to link the derived property of a bdqffdq:Amendment to the bdqffdq:FundamentalConcept of a bdqffdq:Enhancement.
 
 ********************
 
@@ -1024,11 +1024,11 @@ Under the original formulation of the Framework, only Measures have Dimensions.
 
 - Name: bdqffdq:hasInformationElement
 - Preferred Label: has Information Element
-- Definition: Describes the InformationElements assessed by a DataQualityNeed.
+- Definition: Describes the bdqffdq:InformationElements assessed by a bdqffdq:DataQualityNeed.
 - SubClass Of: amendmentProperty; issueProperty; measurementProperty; validationProperty
 - Range bdqffdq:InformationElement
-- Comments: Provides a relationship between DataQualityNeed concepts and InformationElements. For example, Validation uses this property along with hasResourceType to define a Criterion in the context of related InformationElements.  
-Subtypes hasActedUponInformationElement and hasConsultedInformationElement allow a DataQualityNeed to be related to specific InformationElement terms in a way that allows DataQualityReports to distinguish for consumers which InformationElements a test makes Assertions about (and which only informed that Assertion).
+- Comments: Provides a relationship between bdqffdq:DataQualityNeed concepts and bdqffdq:InformationElements. For example, bdqffdq:Validation uses this property with bdqffdq:hasResourceType to define a bdqffdq:Criterion in the context of related bdqffdq:InformationElements.  
+Subtypes bdqffdq:hasActedUponInformationElement and bdqffdq:hasConsultedInformationElement allow a bdqffdq:DataQualityNeed to be related to specific bdqffdq:InformationElement terms in a way that allows bdqffdq:DataQualityReports to distinguish for consumers which bdqffdq:InformationElements a Test makes bdqffdq:Assertions about (and which only informed that bdqffdq:Assertion).
 
 ********************
 
@@ -1036,7 +1036,7 @@ Subtypes hasActedUponInformationElement and hasConsultedInformationElement allow
 
 - Name: bdqffdq:hasParameter
 - Preferred Label: has Parameter
-- Definition: Relates an Argument to a Parameter.
+- Definition: Relates a bdqffdq:Argument to a bdqffdq:Parameter.
 - Range bdqffdq:Parameter
 - Comments: The bdqffdq:hasParameter property is expected to describe the Formal Parameter for which a bdqffdq:hasArgumentValue of the same bdqffdq:Argument provides the Actual Parameter.  The bdqffdq:Argument is also expected to be the bdqffdq:hasArgument for a bdqffdq:Specification that provides the default value for the bdqffdq:hasArgumentValue and bdqffdq:hasParameter within a bdqffdq:hasAuthoritiesDefaults.
 
@@ -1046,8 +1046,8 @@ Subtypes hasActedUponInformationElement and hasConsultedInformationElement allow
 
 - Name: bdqffdq:hasResourceType
 - Preferred Label: has Resource Type
-- Definition: Resource Type to which a DataQualityNeed applies.
-- Comments: Provides additional metadata, along with the InformationElements, that describe the nature of the data  (SingleRecord or MultiRecord) on which the bdqffdq concept operates. For example, an Amendment with ResourceType of MultiRecord defines that Amendment as operating on a data set.
+- Definition: The bdqffdq:ResourceType to which a bdqffdq:DataQualityNeed applies.
+- Comments: Provides additional metadata, with the bdqffdq:InformationElements, that describe the bdqffdq:ResourceType (bdqffdq:SingleRecord or bdqffdq:MultiRecord) on which the bdqffdq concept operates. For example, a bdqffdq:Amendment with bdqffdq:ResourceType bdqffdq:MultiRecord defines that bdqffdq:Amendment as operating on a data set.
 
 ********************
 
@@ -1065,10 +1065,10 @@ Subtypes hasActedUponInformationElement and hasConsultedInformationElement allow
 
 - Name: bdqffdq:hasResponseResult
 - Preferred Label: has Response Result
-- Definition: ResponseResult object asserted by an Assertion.
+- Definition: The bdqffdq:ResponseResult object asserted by a bdqffdq:Assertion.
 - SubClass Of: reportProperty
-- Comments: Used in the DataQualityReport concept to describe ResponseResult objects. For example, values could be bdqffdq:COMPLIANT or bdqffdq:NOT_COMPLIANT for ValidationAssertions.   ValidationAssertions and IssueAssertions have ResponseResults as objects.  AmendmentAssertions have ResponseResults that are data properties, so they are not expected to use this object property.  MeasurementAssertion ResponseResults may be objects or data.    
-If ResponseResults are not objects, use the datatype property hasResponseResultValue
+- Comments: Used in a bdqffdq:DataQualityReport to describe bdqffdq:ResponseResult objects. For example, values could be bdqffdq:COMPLIANT or bdqffdq:NOT_COMPLIANT for bdqffdq:ValidationAssertions.  Both bdqffdq:ValidationAssertions and bdqffdq:IssueAssertions have bdqffdq:ResponseResults as objects. The bdqffdq:AmendmentAssertions have bdqffdq:ResponseResults that are data properties, so they are not expected to use this object property.  The bdqffdq:MeasurementAssertion bdqffdq:ResponseResults may be objects or data.    
+If bdqffdq:ResponseResults are not objects, use the datatype property bdqffdq:hasResponseResultValue.
 
 ********************
 
@@ -1076,10 +1076,10 @@ If ResponseResults are not objects, use the datatype property hasResponseResultV
 
 - Name: bdqffdq:hasResponseStatus
 - Preferred Label: has Response Status
-- Definition: ResponseStatus object asserted by an Assertion.
+- Definition: The bdqffdq:ResponseStatus object asserted by a bdqffdq:Assertion.
 - SubClass Of: reportProperty
-- Comments: Used in the DataQualityReport concept to describe ResponseStatus.  For example, in the case of a ValidationAssertion ResponseStatus values could be bdqffdq:RUN_HAS_RESULT or bdqffdq:INTERNAL_PREREQUISITES_NOT_MET, or bdqffdq:EXTERNAL_PREREQISITES_NOT_MET.   Similarly, AmendmentAssertions can assert Respones.status objects including bdqffdq:AMENDED or bdqffdq:FILLED_IN.    
-ResponseStatus is always an object, unlike ResponseResult, where either the object property hasResponseResult or the data property hasResponseResultValue may apply.
+- Comments: Used in a bdqffdq:DataQualityReport to describe bdqffdq:ResponseStatus.  For example, in the case of a bdqffdq:ValidationAssertion, bdqffdq:ResponseStatus values could be bdqffdq:RUN_HAS_RESULT, bdqffdq:INTERNAL_PREREQUISITES_NOT_MET, or bdqffdq:EXTERNAL_PREREQISITES_NOT_MET. Similarly, bdqffdq:AmendmentAssertions can assert bdqffdq:ResponesStatus objects including bdqffdq:AMENDED or bdqffdq:FILLED_IN.    
+The bdqffdq:ResponseStatus is always an object, unlike bdqffdq:ResponseResult, where either the object property bdqffdq:hasResponseResult or the data property bdqffdq:hasResponseResultValue may apply.
 
 ********************
 
@@ -1087,9 +1087,9 @@ ResponseStatus is always an object, unlike ResponseResult, where either the obje
 
 - Name: bdqffdq:hasSpecification
 - Preferred Label: has Specification
-- Definition: Relates a Method to a Specification.
+- Definition: Relates a bdqffdq:Method to a bdqffdq:Specification.
 - Range [ owl:someValuesFrom bdqffdq:hasSpecification ]
-- Comments: Describes the relationship between a derived bdqffdq concept that is a Method and the FundamentalConcept of a Specification (technical description of a test).
+- Comments: Describes the relationship between a derived bdqffdq concept that is a bdqffdq:Method and the bdqffdq:FundamentalConcept of a bdqffdq:Specification (technical description of a Test).
 
 ********************
 
@@ -1097,9 +1097,9 @@ ResponseStatus is always an object, unlike ResponseResult, where either the obje
 
 - Name: bdqffdq:hasUseCase
 - Preferred Label: has Use Case
-- Definition: Relates a Policy to a UseCase.
+- Definition: Relates a bdqffdq:Policy to a bdqffdq:UseCase.
 - Range [ owl:someValuesFrom bdqffdq:hasUseCase ]
-- Comments: Used by concepts in the DataQualityNeed category to describe the relationship between data quality Policies (ValidationPolicy, AmendmentPolicy, MeasurementPolicy) and an instance of a UseCase.
+- Comments: Used by concepts in the bdqffdq:DataQualityNeed category to describe the relationship between bdqffdq:Policies (bdqffdq:ValidationPolicy, bdqffdq:MeasurementPolicy, bdqffdq:AmendmentPolicy) and an instance of a bdqffdq:UseCase.
 
 ********************
 
@@ -1107,9 +1107,9 @@ ResponseStatus is always an object, unlike ResponseResult, where either the obje
 
 - Name: bdqffdq:implementedBy
 - Preferred Label: implemented By
-- Definition: Mechanism that provides an Implementation
+- Definition: The bdqffdq:Mechanism that provides a bdqffdq:Implementation
 - Range [ owl:someValuesFrom bdqffdq:implementedBy ]
-- Comments: Describes the link between the Implementation concept in bdqffdq and a Mechanism.
+- Comments: Describes the link between a bdqffdq:Implementation and a bdqffdq:Mechanism.
 
 ********************
 
@@ -1117,10 +1117,10 @@ ResponseStatus is always an object, unlike ResponseResult, where either the obje
 
 - Name: bdqffdq:improvedBy
 - Preferred Label: improved By
-- Definition: ImprovementTarget that would have data quality improved by Assertions resulting from an Amendment.
+- Definition: The bdqffdq:ImprovementTarget that would have data quality improved by bdqffdq:Assertions resulting from a bdqffdq:Amendment.
 - Range [ owl:someValuesFrom bdqffdq:improvedBy ]
-- Comments: Originally had Domain: Amendment and Range: ImprovementTarget.   Asserts that an ImprovementTarget could be improved by the Amendment.    
-Object property that describes an Amendment, as part of the ImprovementTarget, that would improve data ActedUpon by some set of Measures or Validations.  This can be used to determine which Measures and Validations are improved upon by a given Amendment.
+- Comments: Originally had Domain: Amendment and Range: ImprovementTarget. Asserts that a bdqffdq:ImprovementTarget could be improved by the bdqffdq:Amendment.  
+Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:ImprovementTarget, that would improve data bdqffdq:ActedUpon by a set of bdqffdq:Measures or bdqffdq:Validations.  This can be used to determine which bdqffdq:Measures and bdqffdq:Validations are improved upon by a given bdqffdq:Amendment.
 
 ********************
 
@@ -1128,8 +1128,8 @@ Object property that describes an Amendment, as part of the ImprovementTarget, t
 
 - Name: bdqffdq:includedInPolicy
 - Preferred Label: included In Policy
-- Definition: Assserts that a DataQualityNeed is part of a Policy.
-- Comments: Relates Policies to tests (DataQualityNeed).
+- Definition: Assserts that a bdqffdq:DataQualityNeed is part of a bdqffdq:Policy.
+- Comments: Relates bdqffdq:Policies to Tests (bdqffdq:DataQualityNeed).
 
 ********************
 
@@ -1137,8 +1137,8 @@ Object property that describes an Amendment, as part of the ImprovementTarget, t
 
 - Name: bdqffdq:issueProperty
 - Preferred Label: issue Property
-- Definition: Category of object properties that apply to Issues.
-- Comments: Properties that relate Issues to IssueMethods, Criteria, and dataQualityDimensions.
+- Definition: Category of object properties that apply to bdqffdq:Issues.
+- Comments: Properties that relate bdqffdq:Issues to bdqffdq:IssueMethods, bdqffdq:Criteria, and bdqffdq:DataQualityDimensions.
 
 ********************
 
@@ -1146,8 +1146,8 @@ Object property that describes an Amendment, as part of the ImprovementTarget, t
 
 - Name: bdqffdq:measurementProperty
 - Preferred Label: measurement Property
-- Definition: Category of object properties that apply to Measures.
-- Comments: Subproperties of this type group object properties that apply to MeasurementConcepts such as MeasurementPolicy (DataQualityNeed), MeasurementMethod (DataQualityMethod) and Measure (DataQualityReport).
+- Definition: Category of object properties that apply to bdqffdq:Measures.
+- Comments: Subproperties of this type group object properties that apply to bdqffdq:MeasurementConcepts such as bdqffdq:MeasurementPolicy (bdqffdq:DataQualityNeed), bdqffdq:MeasurementMethod (bdqffdq:DataQualityMethod) and bdqffdq:Measure (bdqffdq:DataQualityReport).
 
 ********************
 
@@ -1155,8 +1155,8 @@ Object property that describes an Amendment, as part of the ImprovementTarget, t
 
 - Name: bdqffdq:producesAssertion
 - Preferred Label: produces Assertion
-- Definition: Connects an entity with an Assertion that the entity created.
-- Comments: Connects Implementations (solutions) with the Assertions (reports) that they produce from the execution of a Specification.
+- Definition: Connects an entity with a bdqffdq:Assertion that the entity created.
+- Comments: Connects bdqffdq:Implementations (Solutions layer, see Figure 3 in Veiga et al., 2017) with the bdqffdq:Assertions (Reports layer, see Figure 3 in Veiga et al., 2017) that they produce from the execution of a bdqffdq:Specification.
 
 ********************
 
@@ -1164,8 +1164,8 @@ Object property that describes an Amendment, as part of the ImprovementTarget, t
 
 - Name: bdqffdq:reportProperty
 - Preferred Label: report Property
-- Definition: Category of object properties that apply to Assertions.
-- Comments: Category of properties used in reports (object properties associated with Response objects (bdqffdq:Assertions)).  See also the data properties bdqffdq:hasResponseComment and bdqffdq:hasResponseResultValue.
+- Definition: Category of object properties that apply to bdqffdq:Assertions.
+- Comments: Category of properties used in reports (object properties associated with response objects (bdqffdq:Assertions)).  See also the data properties bdqffdq:hasResponseComment and bdqffdq:hasResponseResultValue.
 
 ********************
 
@@ -1173,9 +1173,9 @@ Object property that describes an Amendment, as part of the ImprovementTarget, t
 
 - Name: bdqffdq:targetedIssue
 - Preferred Label: targeted Issue
-- Definition: An Issue for which the data conformance with needs may be improved by accepting proposals from an Amendment via an ImprovementTarget.
+- Definition: A bdqffdq:Issue for which the data conformance with a bdqffdq:NeedConcept may be improved by accepting proposals from a bdqffdq:Amendment via a bdqffdq:ImprovementTarget.
 - Range [ owl:someValuesFrom bdqffdq:targetedIssue ]
-- Comments: The Issue targeted by some problem via the ImprovementTarget object.  Describes the relationship between an ImprovementTarget and an Issue.
+- Comments: The bdqffdq:Issue targeted by a problem via the bdqffdq:ImprovementTarget object. Describes the relationship between a bdqffdq:ImprovementTarget and a bdqffdq:Issue.
 
 ********************
 
@@ -1183,9 +1183,9 @@ Object property that describes an Amendment, as part of the ImprovementTarget, t
 
 - Name: bdqffdq:targetedMeasure
 - Preferred Label: targeted Measure
-- Definition: A Measure for which the data conformance with needs may be improved by accepting proposals from an Amendment via an ImprovementTarget.
+- Definition: A bdqffdq:Measure for which the data conformance with a bdqffdq:NeedConcept may be improved by accepting proposals from a bdqffdq:Amendment via a bdqffdq:ImprovementTarget.
 - Range [ owl:someValuesFrom bdqffdq:targetedMeasure ]
-- Comments: Describes the relationship between an ImprovementTarget and a Measure.
+- Comments: Describes the relationship between a bdqffdq:ImprovementTarget and a bdqffdq:Measure.
 
 ********************
 
@@ -1193,10 +1193,10 @@ Object property that describes an Amendment, as part of the ImprovementTarget, t
 
 - Name: bdqffdq:targetedValidation
 - Preferred Label: targeted Validation
-- Definition: A Validation for which the data conformance with needs may be improved by accepting proposals from an Amendment via an ImprovementTarget.
+- Definition: A bdqffdq:Validation for which the data conformance with a bdqffdq:NeedConcept may be improved by accepting proposals from a bdqffdq:Amendment via a bdqffdq:ImprovementTarget.
 - SubClass Of: http://www.w3.org/2002/07/owl#topObjectProperty
 - Range [ owl:someValuesFrom bdqffdq:targetedValidation ]
-- Comments: Relates an ImprovementTarget to a Validation.  Describes the relationship between an ImprovementTarget and a Validation.
+- Comments: Relates a bdqffdq:ImprovementTarget to a bdqffdq:Validation. Describes the relationship between a bdqffdq:ImprovementTarget and a bdqffdq:Validation.
 
 ********************
 
@@ -1204,9 +1204,9 @@ Object property that describes an Amendment, as part of the ImprovementTarget, t
 
 - Name: bdqffdq:usesSpecification
 - Preferred Label: uses Specification
-- Definition: Specification that an Implementation implements.
+- Definition: The bdqffdq:Specification that a bdqffdq:Implementation implements.
 - Range [ owl:someValuesFrom bdqffdq:usesSpecification ]
-- Comments: Relates an Implementation to the Specification that the Implementation implements.
+- Comments: Relates a bdqffdq:Implementation to the bdqffdq:Specification that the bdqffdq:Implementation implements.
 
 ********************
 
@@ -1214,8 +1214,8 @@ Object property that describes an Amendment, as part of the ImprovementTarget, t
 
 - Name: bdqffdq:validationProperty
 - Preferred Label: validation Property
-- Definition: Category of object properties that apply to Validations.
-- Comments: Subproperties of this type group object properties that apply to ValidationConcepts such as ValidationPolicy (DataQualityNeed), ValidationMethod (DataQualityMethod) and Validation (DataQualityReport).
+- Definition: Category of object properties that apply to bdqffdq:Validations.
+- Comments: Subproperties of this type group object properties that apply to bdqffdq:ValidationConcepts such as bdqffdq:ValidationPolicy (bdqffdq:DataQualityNeed), bdqffdq:ValidationMethod (bdqffdq:DataQualityMethod) and bdqffdq:Validation (bdqffdq:DataQualityReport).
 
 ********************
 
@@ -1224,9 +1224,9 @@ Object property that describes an Amendment, as part of the ImprovementTarget, t
 
 - Name: bdqffdq:hasAuthoritiesDefaults
 - Preferred Label: has Authorities and Defaults
-- Definition: Text describing bdq:sourceAuthorities and Parameters with their default values to attach to a Specification to further specify the behavior described in the bdqffdq:hasExpectedResponse.
+- Definition: Text describing bdq:sourceAuthorities and bdqffdq:Parameters with their default values to attach to a bdqffdq:Specification to further specify the behavior described in the bdqffdq:hasExpectedResponse.
 - Range xsd:string
-- Comments: Details of the bdq:sourceAuthority listed in a Specification, along with Parameters that may affect the bdqffdq:hasExpectedResponse along with their default values.
+- Comments: Details of the bdq:sourceAuthority listed in a bdqffdq:Specification, with bdqffdq:Parameters that may affect the bdqffdq:hasExpectedResponse, and with their default values.
 
 ********************
 
@@ -1234,9 +1234,9 @@ Object property that describes an Amendment, as part of the ImprovementTarget, t
 
 - Name: bdqffdq:hasDateLastUpdated
 - Preferred Label: has Date Last Updated
-- Definition: Date of the most recent dcterms:issued for this class with a change that would be pertinent to an Implementation.
+- Definition: Date of the most recent dcterms:issued for this class with a change that would be pertinent to a bdqffdq:Implementation.
 - Range xsd:date
-- Comments: While a new instance of a resource with a new dcterms:issued is required for any change to that resource, not all changes would be pertinent to implementers, (i.e., that would required implementers to evaluate their code for changes needed to comply with the update).  bdqffdq:hasDateLastUpdated allows implementers to identify which new changes to the definition of a test would entail changes to code, and which would not.   For example, a change to the logic of a Specification in the text of bdqffdq:hasExpectedResponse would imply needed changes to the logic of code implementing that Specification, but a correction of a spelling mistake within the text of a bdqffdq:hasExpectedResponse would not.
+- Comments: While a new instance of a resource with a new dcterms:issued is required for any change to that resource, not all changes would be pertinent to implementers, (i.e., that would required implementers to evaluate their code for changes needed to comply with the update). The bdqffdq:hasDateLastUpdated allows implementers to identify which new changes to the definition of a Test would entail changes to code, and which would not. For example, a change to the logic of a bdqffdq:Specification in the text of bdqffdq:hasExpectedResponse would imply needed changes to the logic of code implementing that bdqffdq:Specification, but a correction of a spelling mistake within the text of a bdqffdq:hasExpectedResponse would not.
 
 ********************
 
@@ -1244,9 +1244,9 @@ Object property that describes an Amendment, as part of the ImprovementTarget, t
 
 - Name: bdqffdq:hasExpectedResponse
 - Preferred Label: has Expected Response
-- Definition: Text describing the logic to be followed by an Implementation of a Specification specifying the values of ResponseStatus and ResponseResults that should be produced from the evaluation of input InformationElements.
+- Definition: Text describing the logic to be followed by a bdqffdq:Implementation of a bdqffdq:Specification specifying the values of bdqffdq:ResponseStatus and bdqffdq:ResponseResults that should be produced from the evaluation of input bdqffdq:InformationElements.
 - Range xsd:string
-- Comments: The description of the logic of a test Specification.  A bdqffdq:hasExpectedResponse is expected to be a data property of a Specification.
+- Comments: The description of the logic of a Test Specification.  A bdqffdq:hasExpectedResponse is expected to be a data property of a Specification.
 
 ********************
 
@@ -1254,9 +1254,9 @@ Object property that describes an Amendment, as part of the ImprovementTarget, t
 
 - Name: bdqffdq:hasResponseComment
 - Preferred Label: has Response Comment
-- Definition: Free text describing the Assertion made in the response and why that conclusion was reached.
+- Definition: Free text describing the bdqffdq:Assertion made in the response and why that conclusion was reached.
 - Range xsd:string
-- Comments: Intended for consumption by human readers of DataQualityReports to understand why particular Assertions were made.  Referenced in some documentation as Response.comment.
+- Comments: Intended for consumption by human readers of bdqffdq:DataQualityReports to understand why particular bdqffdq:Assertions were made.
 
 ********************
 
@@ -1264,8 +1264,8 @@ Object property that describes an Amendment, as part of the ImprovementTarget, t
 
 - Name: bdqffdq:hasResponseResultValue
 - Preferred Label: has response result value
-- Definition: Data property carrying the value of an Assertion when not an object.
-- Comments: Applies to AmendmentAssertions.   To support bdqcore: tests, is expected to carry a key:value list where the keys are the names of ActedUpon InformationElements, and the values are the proposed new values (filling in or replacing the values of those terms in the input).  Applies to MeasureAssertions that assert a numeric value.
+- Definition: Data property carrying the value of a bdqffdq:Assertion when the value is not an object.
+- Comments: Applies to bdqffdq:AmendmentAssertions. To support bdqcore: Tests, bdqffdq:hasResponseResultValue is expected to carry a key:value list where the keys are the names of bdqffdq:ActedUpon bdqffdq:InformationElements, and the values are the proposed new values (filling in or replacing the values of those terms in the input).  Applies to bdqffdq:MeasureAssertions that assert a numeric value.
 
 ********************
 
@@ -1275,8 +1275,8 @@ Object property that describes an Amendment, as part of the ImprovementTarget, t
 - Name: bdqffdq:MultiRecord
 - Type: bdqffdq:ResourceType
 - Preferred Label: Multi Record
-- Definition: A set of one or more SingleRecords.
-- Comments: A data set.  Encoded data with a defined structure that can be described as dcmitype:Dataset.
+- Definition: A set of one or more bdqffdq:SingleRecords.
+- Comments: A data set. Encoded data with a defined structure that can be described as dcmitype:Dataset.
 
 ********************
 
@@ -1285,9 +1285,9 @@ Object property that describes an Amendment, as part of the ImprovementTarget, t
 - Name: bdqffdq:SingleRecord
 - Type: bdqffdq:ResourceType
 - Preferred Label: Single Record
-- Definition: A single entity comprised of encoded data with a defined structure that contains one instance of a core concept from the perspective of InformationElements assessed for a DataQualityNeed.
-- Comments: A record from a dcmitype:Dataset.  May be a database tuple, in the strict sense, that is a single row in a table, or may be rows related across several tables, or a graph of data.   A SingleRecord is single in that it has one instance of a core concept from the perspective of InformationElements assessed for a UseCase.  For example, in a UseCase where dwc:Occurences are central, a SingleRecord would represent a single dwc:Occurrence, but could have multiple dwc:Identifications and multiple dwc:Taxa related to it in a graph or data structure.  However, in a UseCase where dwc:Taxa are central, a SingleRecord would represent a single dwc:Taxon entity (and might have multiple dwc:Occurrences related to it as part of the SingleRecord, so long as the graph was limited before reaching other dwc:Taxon entities).  
-A SingleRecord, like a MultiRecord, consists of data with a defined structure that can be described as dcmitype:Dataset
+- Definition: A single entity comprised of encoded data with a defined structure that contains one instance of a core concept from the perspective of bdqffdq:InformationElements assessed for a bdqffdq:DataQualityNeed.
+- Comments: A record from a dcmitype:Dataset. May be a database tuple, in the strict sense (i.e, a single row in a table) or may be rows related across several tables, or a graph of data.   A bdqffdq:SingleRecord is single in that it has one instance of a core concept from the perspective of bdqffdq:InformationElements assessed for a bdqffdq:UseCase.  For example, in a bdqffdq:UseCase where dwc:Occurences are central, a bdqffdq:SingleRecord would represent a single dwc:Occurrence, but could have multiple dwc:Identifications and multiple dwc:Taxa related to it in a graph or data structure.  However, in a bdqffdq:UseCase where dwc:Taxa are central, a bdqffdq:SingleRecord would represent a single dwc:Taxon entity (and might have multiple dwc:Occurrences related to it as part of the bdqffdq:SingleRecord, so long as the graph was limited before reaching other dwc:Taxon entities).  
+A bdqffdq:SingleRecord, like a bdqffdq:MultiRecord, consists of data with a defined structure that can be described as dcmitype:Dataset
 
 ********************
 
@@ -1297,8 +1297,8 @@ A SingleRecord, like a MultiRecord, consists of data with a defined structure th
 - Type: bdqffdq:ResponseResult
 - Preferred Label: COMPLETE
 - DifferentFrom: bdqffdq:NOT_COMPLETE
-- Definition: A bdqffdq:ResponseResult of a bdqffdq:Measure which asserts that data are present and sufficiently comprehensive for use.
-- Comments: These can be used to include data for Quality Assurance.  These can be asserted, for example by bdqffdq:Measures of bdqffdq:MultiRecords where all the bdqffdq:Validation bdqffdq:ResponseResult from all included records in the dataset are bdqffdq:COMPLIANT.
+- Definition: A bdqffdq:ResponseResult of a bdqffdq:Measure that asserts that data are present and sufficiently comprehensive for use.
+- Comments: This value can be used to filter data for Quality Assurance. This value can be asserted, for example, by bdqffdq:Measures of bdqffdq:MultiRecords where all the bdqffdq:Validation bdqffdq:ResponseResults from all included records in the dataset are bdqffdq:COMPLIANT.
 
 ********************
 
@@ -1309,7 +1309,7 @@ A SingleRecord, like a MultiRecord, consists of data with a defined structure th
 - Preferred Label: IS_ISSUE
 - DifferentFrom: bdqffdq:NOT_ISSUE
 - Definition: A bdqffdq:ResponseResult of a bdqffdq:Issue indicating that the data do not have sufficient quality for a use.
-- Comments: This is a parallel Assertion to NOT_COMPLIANT
+- Comments: This is a parallel bdqffdq:ResponseResult to bdqffdq:NOT_COMPLIANT
 
 ********************
 
@@ -1320,7 +1320,7 @@ A SingleRecord, like a MultiRecord, consists of data with a defined structure th
 - Preferred Label: IS_ISSUE
 - DifferentFrom: bdqffdq:POTENTIAL_ISSUE
 - Definition: A bdqffdq:ResponseResult of a bdqffdq:Issue indicating that the data do not have sufficient quality for a use.
-- Comments: This is a parallel Assertion to NOT_COMPLIANT
+- Comments: This is a parallel bdqffdq:ResponseResult to bdqffdq:NOT_COMPLIANT
 
 ********************
 
@@ -1329,8 +1329,8 @@ A SingleRecord, like a MultiRecord, consists of data with a defined structure th
 - Name: bdqffdq:NOT_COMPLETE
 - Type: bdqffdq:ResponseResult
 - Preferred Label: NOT_COMPLETE
-- Definition: A bdqffdq:ResponseResult of a bdqffdq:Measure which asserts that data are not present or are not sufficiently comprehensive for use.
-- Comments: These can be used to exclude data for Quality Assurance.  These can be asserted, for example, by bdqffdq:Measures of bdqffdq:MultiRecords where not all the bdqffdq:Validation bdqffdq:ResponseResult from all included records in the dataset have a bdqffdq:ResponseResult of bdqffdq:COMPLIANT.
+- Definition: A bdqffdq:ResponseResult of a bdqffdq:Measure which asserts that data are not present or are not sufficiently comprehensive for a use.
+- Comments: This value can be used to exclude data for Quality Assurance. This value can be asserted, for example, by bdqffdq:Measures of bdqffdq:MultiRecords where not all the bdqffdq:Validation bdqffdq:ResponseResult from all included records in the dataset have a bdqffdq:ResponseResult of bdqffdq:COMPLIANT.
 
 ********************
 
@@ -1341,7 +1341,7 @@ A SingleRecord, like a MultiRecord, consists of data with a defined structure th
 - Preferred Label: NOT_ISSUE
 - DifferentFrom: bdqffdq:POTENTIAL_ISSUE
 - Definition: A bdqffdq:ResponseResult of a bdqffdq:Issue where no potential problems were detected.
-- Comments: This is similar to, but has different semantics to, bdqffdq:COMPLIANT for a bdqffdq:Validation.  COMPLIANT means that the data were evaluated as having quality according to some Criterion.  NOT_ISSUE means that no Issue with data quality was found under some Criterion for identifying the absence of quality.
+- Comments: This is similar to, but has different semantics to, bdqffdq:COMPLIANT for a bdqffdq:Validation. The value bdqffdq:COMPLIANT means that the data were evaluated as having quality according to a bdqffdq:Criterion.  The value bdqffdq:NOT_ISSUE means that no bdqffdq:Issue with data quality was found under a bdqffdq:Criterion for identifying the absence of quality.
 
 ********************
 
@@ -1350,8 +1350,8 @@ A SingleRecord, like a MultiRecord, consists of data with a defined structure th
 - Name: bdqffdq:POTENTIAL_ISSUE
 - Type: bdqffdq:ResponseResult
 - Preferred Label: POTENTIAL_ISSUE
-- Definition: A bdqffdq:ResponseResult of a bdqffdq:Issue that indicates that the data may not have sufficient quality for a use.  The user will need to evaluate if the data is fit for their particular use or not.
-- Comments: See also bdqffdq:IS_ISSUE and bdqffdq:NOT_ISSUE.  POTENTIAL_ISSUE has no analog in a bdqffdq:Validation.
+- Definition: A bdqffdq:ResponseResult of a bdqffdq:Issue that indicates that the data may not have sufficient quality for a use.  The user will need to evaluate if the data are fit for their particular use or not.
+- Comments: See also bdqffdq:IS_ISSUE and bdqffdq:NOT_ISSUE.  The value bdqffdq:POTENTIAL_ISSUE has no analog in a bdqffdq:Validation.
 
 ********************
 
@@ -1362,7 +1362,7 @@ A SingleRecord, like a MultiRecord, consists of data with a defined structure th
 - Preferred Label: AMENDED
 - DifferentFrom: bdqffdq:NOT_AMENDED
 - Definition: A bdqffdq:ResponseStatus used to indicate that a bdqffdq:hasResponseResultValue from a bdqffdq:Amendment contains a proposed change.
-- Comments: AMENDED implies that a change is being proposed to some existing bdq:NotEmpty value.  Amendments do not provide bdqffdq:hasResponseResult object properties.  Proposed changes will be in a bdqffdq:hasResponseResultValue data property.
+- Comments: The value bdqffdq:AMENDED implies that a change is being proposed to an existing bdq:NotEmpty value. bdqffdq:Amendments do not provide bdqffdq:hasResponseResult object properties.  Proposed changes will be in a bdqffdq:hasResponseResultValue data property.
 
 ********************
 
@@ -1372,7 +1372,7 @@ A SingleRecord, like a MultiRecord, consists of data with a defined structure th
 - Type: bdqffdq:ResponseStatus
 - Preferred Label: NOT_AMENDED
 - Definition: A bdqffdq:ResponseStatus used to indicate that a bdqffdq:Amendment proposed no change.
-- Comments: No Assertion will be provided in a bdqfdq:hasResponseResultValue.  Amendments do not provide bdqffdq:hasResponseResult object properties.
+- Comments: No value will be provided in a bdqfdq:hasResponseResultValue. bdqffdq:Amendments do not provide bdqffdq:hasResponseResult object properties.
 
 ********************
 
@@ -1382,7 +1382,7 @@ A SingleRecord, like a MultiRecord, consists of data with a defined structure th
 - Type: bdqffdq:ResponseStatus
 - Preferred Label: RUN_HAS_RESULT
 - Definition: A bdqffdq:ResponseStatus used to indicate that that a result was correctly generated.
-- Comments: Applies to bdqffdq:Validations, bdqffdq:Issues and bdqfdfq:Measures, but not bdqffdq:Amendments.   For a Validations or an Issues, the value will be found as a bdqffdq:ResponseResult object by following bdqffdq:hasResponseResult.  For a Measure, the value could be either in the data property bdqffdq:hasResponseResultValue or could be a ResponseResult object.
+- Comments: Applies to bdqffdq:Validations, bdqffdq:Issues and bdqfdfq:Measures, but not bdqffdq:Amendments.  For a bdqffdq:Validation or a bdqffdq:Issue, the value will be found as a bdqffdq:ResponseResult object by following bdqffdq:hasResponseResult.  For a bdqffdq:Measure, the value could be either in the data property bdqffdq:hasResponseResultValue or could be a ResponseResult object.
 
 ********************
 
