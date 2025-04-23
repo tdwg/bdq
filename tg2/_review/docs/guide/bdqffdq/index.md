@@ -477,9 +477,9 @@ It is important that the chain of relationships from an instance of an Assertion
 [IssuePolicy](#IssuePolicy)
 [Measure](#Measure)
 [MeasurementAssertion](#MeasurementAssertion)
+[MeasurementConcept](#MeasurementConcept)
 [MeasurementMethod](#MeasurementMethod)
 [MeasurementPolicy](#MeasurementPolicy)
-[MeasurementConcept](#MeasurementConcept)
 [Mechanism](#Mechanism)
 [NeedConcept](#NeedConcept)
 [Parameter](#Parameter)
@@ -1322,7 +1322,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 - Name: bdqffdq:POTENTIAL_ISSUE
 - Type: bdqffdq:ResponseResult
-- Definition: A bdqffdq:ResponseResult of a bdqffdq:Issue that indicates that the data may not have sufficient quality for a use.  The user will need to evaluate if the data are fit for their particular use or not.
+- Definition: A bdqffdq:ResponseResult of a bdqffdq:Issue that indicates that the data may not have sufficient quality for a use. The user will need to evaluate if the data are fit for their particular use or not.
 
 ********************
 
