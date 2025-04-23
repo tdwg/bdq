@@ -580,7 +580,7 @@ It is important that the chain of relationships from an instance of an Assertion
 #### ActedUpon
 
 - Name: bdqffdq:ActedUpon
-- Definition: An information element, expressed in concrete terms, about which a data quality need expresses assertions about the data quality in that element.
+- Definition: An InformationElement, expressed in concrete terms, about which a DataQualityNeed expresses Assertions about the data quality in that element.
 - SubClass Of: InformationElement
 
 ********************
@@ -588,7 +588,7 @@ It is important that the chain of relationships from an instance of an Assertion
 #### Amendment
 
 - Name: bdqffdq:Amendment
-- Definition: A data quality need that expresses how proposals may be made to improve the fitness for use of data.
+- Definition: A DataQualityNeed that expresses how proposals may be made to improve the fitness for use of data.
 - SubClass Of: AmendmentConcept; DataQualityNeed
 
 ********************
@@ -596,7 +596,7 @@ It is important that the chain of relationships from an instance of an Assertion
 #### AmendmentAssertion
 
 - Name: bdqffdq:AmendmentAssertion
-- Definition: An assertion expressing the result of an implementation evaluating an amendment supporting a particular data quality need to improve a particular data resource.
+- Definition: An Assertion expressing the result of an Implementation evaluating an Amendment supporting a particular DataQualityNeed to improve a particular DataResource.
 - SubClass Of: AmendmentConcept; Assertion
 
 ********************
@@ -604,7 +604,7 @@ It is important that the chain of relationships from an instance of an Assertion
 #### AmendmentMethod
 
 - Name: bdqffdq:AmendmentMethod
-- Definition: A data quality solution concept that relates an Amendment to its Specifications.
+- Definition: A data quality SolutionsConcept that relates an Amendment to its Specifications.
 - SubClass Of: AmendmentConcept; DataQualityMethod
 
 ********************
@@ -612,7 +612,7 @@ It is important that the chain of relationships from an instance of an Assertion
 #### AmendmentPolicy
 
 - Name: bdqffdq:AmendmentPolicy
-- Definition: A need concept that relates a UseCase to a set of supporting Amendments.
+- Definition: A NeedConcept that relates a UseCase to a set of supporting Amendments.
 - SubClass Of: AmendmentConcept; Policy
 
 ********************
@@ -628,7 +628,7 @@ It is important that the chain of relationships from an instance of an Assertion
 #### Assertion
 
 - Name: bdqffdq:Assertion
-- Definition: A report concept expressing a statement about data quality assertion following some Specification produced by some implementation pertaining to some data resource.
+- Definition: A ReportConcept expressing a statement about a data quality Assertion following some Specification produced by some Implementation pertaining to some DataResource.
 - SubClass Of: ReportConcept
 
 ********************
@@ -636,7 +636,7 @@ It is important that the chain of relationships from an instance of an Assertion
 #### Consulted
 
 - Name: bdqffdq:Consulted
-- Definition: An information element, expressed in concrete terms, about which a data quality need examines in order to expresses assertions about the data quality in another InformationElement.
+- Definition: An InformationElement, expressed in concrete terms, about which a DataQualityNeed examines in order to expresses Assertions about the data quality in another InformationElement.
 - SubClass Of: InformationElement
 
 ********************
@@ -644,7 +644,7 @@ It is important that the chain of relationships from an instance of an Assertion
 #### Criterion
 
 - Name: bdqffdq:Criterion
-- Definition: Rule against which data are evaluated for conformance to quality criteria.
+- Definition: Rule against which data are evaluated for conformance to quality Criteria.
 - SubClass Of: FundamentalConcept; NeedConcept
 
 ********************
@@ -660,7 +660,7 @@ It is important that the chain of relationships from an instance of an Assertion
 #### DataQualityMethod
 
 - Name: bdqffdq:DataQualityMethod
-- Definition: A solutions concept that relates a data quality need to a Specification.
+- Definition: A SolutionsConcept that relates a DataQualityNeed to a Specification.
 - SubClass Of: SolutionsConcept
 
 ********************
@@ -668,7 +668,7 @@ It is important that the chain of relationships from an instance of an Assertion
 #### DataQualityNeed
 
 - Name: bdqffdq:DataQualityNeed
-- Definition: A data quality need concept that expresses what assertions may be made about data with respect to fitness for use.
+- Definition: A NeedConcept that expresses what Assertions may be made about data with respect to fitness for use.
 - SubClass Of: NeedConcept
 
 ********************
@@ -676,7 +676,7 @@ It is important that the chain of relationships from an instance of an Assertion
 #### DataQualityProfile
 
 - Name: bdqffdq:DataQualityProfile
-- Definition: A needs concept expressing the composition of Policies to satisfy a UseCase.
+- Definition: A NeedConcept expressing the composition of Policies to satisfy a UseCase.
 - SubClass Of: NeedConcept
 
 ********************
@@ -684,7 +684,7 @@ It is important that the chain of relationships from an instance of an Assertion
 #### DataQualityReport
 
 - Name: bdqffdq:DataQualityReport
-- Definition: A report concept comprising a set of data quality assertions.
+- Definition: A ReportConcept comprising a set of data quality Assertions.
 - SubClass Of: ReportConcept
 
 ********************
@@ -692,7 +692,7 @@ It is important that the chain of relationships from an instance of an Assertion
 #### DataResource
 
 - Name: bdqffdq:DataResource
-- Definition: A thing to whch a data quality assertion applies.
+- Definition: An owl:Thing to which a data quality Assertion applies.
 - SubClass Of: ReportConcept
 
 ********************
@@ -715,7 +715,7 @@ It is important that the chain of relationships from an instance of an Assertion
 #### Implementation
 
 - Name: bdqffdq:Implementation
-- Definition: A solutions concept that describes the portion of a Mechanism that carries out the proccess described in a particular Specification.
+- Definition: A SolutionsConcept that describes the portion of a Mechanism that carries out the proccess described in a particular Specification.
 - SubClass Of: SolutionsConcept
 
 ********************
@@ -723,7 +723,7 @@ It is important that the chain of relationships from an instance of an Assertion
 #### ImprovementTarget
 
 - Name: bdqffdq:ImprovementTarget
-- Definition: A specific data quality need for which a specific Amendment is intended to improve.
+- Definition: A specific DataQualityNeed that a specific Amendment is intended to improve.
 - SubClass Of: NeedConcept
 
 ********************
@@ -731,7 +731,7 @@ It is important that the chain of relationships from an instance of an Assertion
 #### InformationElement
 
 - Name: bdqffdq:InformationElement
-- Definition: A portion of data with which a Data Quality Need is concerned.
+- Definition: A portion of data with which a DataQualityNeed is concerned.
 - SubClass Of: FundamentalConcept
 
 ********************
@@ -739,7 +739,7 @@ It is important that the chain of relationships from an instance of an Assertion
 #### Issue
 
 - Name: bdqffdq:Issue
-- Definition: A data quality need that expresses how quality problems may be identified in data.
+- Definition: A DataQualityNeed that expresses how quality problems may be identified in data.
 - SubClass Of: DataQualityNeed; IssueConcept
 
 ********************
@@ -747,7 +747,7 @@ It is important that the chain of relationships from an instance of an Assertion
 #### IssueAssertion
 
 - Name: bdqffdq:IssueAssertion
-- Definition: An assertion expressing the result of an implementation evaluating an issue for a particular data quality need in a particular data resource.
+- Definition: An Assertion expressing the result of an Implementation evaluating an Issue for a particular DataQualityNeed in a particular DataResource.
 - SubClass Of: Assertion; IssueConcept
 
 ********************
@@ -755,14 +755,14 @@ It is important that the chain of relationships from an instance of an Assertion
 #### IssueConcept
 
 - Name: bdqffdq:IssueConcept
-- Definition: A term involved in flagging problems or potential problems in assessment of data quality that would or might prevent the data from meeting expressed data quality needs.
+- Definition: A term involved in flagging problems or potential problems in assessment of data quality that would or might prevent the data from meeting an expressed DataQualityNeed.
 
 ********************
 
 #### IssueMethod
 
 - Name: bdqffdq:IssueMethod
-- Definition: A data quality solution concept that relates an Issue to its Specifications.
+- Definition: A data quality SolutionsConcept that relates an Issue to its Specifications.
 - SubClass Of: DataQualityMethod; IssueConcept
 
 ********************
@@ -770,7 +770,7 @@ It is important that the chain of relationships from an instance of an Assertion
 #### IssuePolicy
 
 - Name: bdqffdq:IssuePolicy
-- Definition: A need concept that relates a UseCase to a set of supporting Issues.
+- Definition: A NeedConcept that relates a UseCase to a set of supporting Issues.
 - SubClass Of: IssueConcept; Policy
 
 ********************
@@ -778,7 +778,7 @@ It is important that the chain of relationships from an instance of an Assertion
 #### Measure
 
 - Name: bdqffdq:Measure
-- Definition: A data quality need that expresses how the fitness of data for some use may be measured.
+- Definition: A DataQualityNeed that expresses how the fitness of data for some use may be measured.
 - SubClass Of: DataQualityNeed; MeasurementConcept
 
 ********************
@@ -786,7 +786,7 @@ It is important that the chain of relationships from an instance of an Assertion
 #### MeasurementAssertion
 
 - Name: bdqffdq:MeasurementAssertion
-- Definition: An assertion expressing the result of an implementation measuring a particular data quality need in a particular data resource.
+- Definition: An Assertion expressing the result of an Implementation measuring a particular DataQualityNeed in a particular DataResource.
 - SubClass Of: Assertion; MeasurementConcept
 
 ********************
@@ -794,7 +794,7 @@ It is important that the chain of relationships from an instance of an Assertion
 #### MeasurementMethod
 
 - Name: bdqffdq:MeasurementMethod
-- Definition: A data quality solution concept that relates a Measure to its Specifications.
+- Definition: A data quality SolutionsConcept that relates a Measure to its Specifications.
 - SubClass Of: DataQualityMethod; MeasurementConcept
 
 ********************
@@ -802,7 +802,7 @@ It is important that the chain of relationships from an instance of an Assertion
 #### MeasurementPolicy
 
 - Name: bdqffdq:MeasurementPolicy
-- Definition: A need concept that relates a UseCase to a set of supporting Measures.
+- Definition: A NeedConcept that relates a UseCase to a set of supporting Measures.
 - SubClass Of: MeasurementConcept; Policy
 
 ********************
@@ -810,7 +810,7 @@ It is important that the chain of relationships from an instance of an Assertion
 #### Mechanism
 
 - Name: bdqffdq:Mechanism
-- Definition: An entity that can execute data quality methods.
+- Definition: An entity that can execute DataQualityMethods.
 - SubClass Of: FundamentalConcept; SolutionsConcept
 
 ********************
@@ -818,7 +818,7 @@ It is important that the chain of relationships from an instance of an Assertion
 #### NeedConcept
 
 - Name: bdqffdq:NeedConcept
-- Definition: A concept that expresses an aspect of a data quality need.
+- Definition: A concept that expresses an aspect of a DataQualityNeed.
 
 ********************
 
@@ -833,7 +833,7 @@ It is important that the chain of relationships from an instance of an Assertion
 #### Policy
 
 - Name: bdqffdq:Policy
-- Definition: The set of data quality Needs for a UseCase
+- Definition: The set of DataQualityNeeds for a UseCase.
 - SubClass Of: NeedConcept
 
 ********************
@@ -841,14 +841,14 @@ It is important that the chain of relationships from an instance of an Assertion
 #### ReportConcept
 
 - Name: bdqffdq:ReportConcept
-- Definition: A concept concerning data quality expressed in a data quality report.
+- Definition: A concept concerning data quality expressed in a DataQualityReport.
 
 ********************
 
 #### ResourceType
 
 - Name: bdqffdq:ResourceType
-- Definition: Category of things that are data objects about which data quality assertions may be made.
+- Definition: Category of things that are data objects about which data quality Assertions may be made.
 - SubClass Of: FundamentalConcept
 
 ********************
@@ -856,7 +856,7 @@ It is important that the chain of relationships from an instance of an Assertion
 #### ResponseQualifier
 
 - Name: bdqffdq:ResponseQualifier
-- Definition: A report concept to which additional assertions providing additional information beyond that of ResponseResult from the result of the execution of the Specification of a data quality need are attached.
+- Definition: A ReportConcept to which additional Assertions providing additional information beyond that of ResponseResult from the execution of the Specification of a DataQualityNeed are attached.
 - SubClass Of: ReportConcept
 
 ********************
@@ -864,7 +864,7 @@ It is important that the chain of relationships from an instance of an Assertion
 #### ResponseResult
 
 - Name: bdqffdq:ResponseResult
-- Definition: A report concept to which a controlled vocabulary assertions about the result of the execution of the Specification of a data quality need are attached.
+- Definition: A ReportConcept to which controlled vocabulary Assertions about the result of the execution of the Specification of a DataQualityNeed are attached.
 - SubClass Of: ReportConcept
 
 ********************
@@ -872,7 +872,7 @@ It is important that the chain of relationships from an instance of an Assertion
 #### ResponseStatus
 
 - Name: bdqffdq:ResponseStatus
-- Definition: A report concept expressing controlled vocabulary values about the exit state of an execution process of a data quality Specification by an implementation.
+- Definition: A ReportConcept expressing controlled vocabulary values about the exit state of an execution process of a data quality Specification by an Implementation.
 - SubClass Of: ReportConcept
 
 ********************
@@ -887,7 +887,7 @@ It is important that the chain of relationships from an instance of an Assertion
 #### Specification
 
 - Name: bdqffdq:Specification
-- Definition: A specific statement about how to evaluate a data quality need.
+- Definition: A specific statement about how to evaluate a DataQualityNeed.
 - SubClass Of: FundamentalConcept; SolutionsConcept
 
 ********************
@@ -895,7 +895,7 @@ It is important that the chain of relationships from an instance of an Assertion
 #### UseCase
 
 - Name: bdqffdq:UseCase
-- Definition: A needs concept expressing a purpose to which data are put for which the data must have quality for the result to have meaning and reliability.
+- Definition: A NeedConcept expressing a purpose to which data are put for which the data must have quality for the result to have meaning and reliability.
 - SubClass Of: FundamentalConcept; NeedConcept
 
 ********************
@@ -903,7 +903,7 @@ It is important that the chain of relationships from an instance of an Assertion
 #### Validation
 
 - Name: bdqffdq:Validation
-- Definition: A data quality need that expreses how data may be evaluated for fitness for use.
+- Definition: A DataQualityNeed that expreses how data may be evaluated for fitness for use.
 - SubClass Of: DataQualityNeed; ValidationConcept
 
 ********************
@@ -911,7 +911,7 @@ It is important that the chain of relationships from an instance of an Assertion
 #### ValidationAssertion
 
 - Name: bdqffdq:ValidationAssertion
-- Definition: An assertion expressing the result of an implementation validating compliance with a a particular data quality need in a particular data resource.
+- Definition: An Assertion expressing the result of an Implementation validating compliance with a a particular DataQualityNeed in a particular DataResource.
 - SubClass Of: Assertion; ValidationConcept
 
 ********************
@@ -919,14 +919,14 @@ It is important that the chain of relationships from an instance of an Assertion
 #### ValidationConcept
 
 - Name: bdqffdq:ValidationConcept
-- Definition: A term involved in statements about the conformance of data to expressed quality needs.
+- Definition: A term involved in statements about the conformance of data to expressed DataQualityNeeds.
 
 ********************
 
 #### ValidationMethod
 
 - Name: bdqffdq:ValidationMethod
-- Definition: A data quality solution concept that relates an Validation to its Specifications.
+- Definition: A data quality SolutionsConcept that relates an Validation to its Specifications.
 - SubClass Of: DataQualityMethod; ValidationConcept
 
 ********************
@@ -934,7 +934,7 @@ It is important that the chain of relationships from an instance of an Assertion
 #### ValidationPolicy
 
 - Name: bdqffdq:ValidationPolicy
-- Definition: A need concept that relates a UseCase to a set of supporting Validations.
+- Definition: A NeedConcept that relates a UseCase to a set of supporting Validations.
 - SubClass Of: Policy; ValidationConcept
 
 ********************
@@ -943,7 +943,7 @@ It is important that the chain of relationships from an instance of an Assertion
 #### amendmentProperty
 
 - Name: bdqffdq:amendmentProperty
-- Definition: Category of object properties that apply to Amendmentts
+- Definition: Category of object properties that apply to Amendments
 
 ********************
 
@@ -957,14 +957,14 @@ It is important that the chain of relationships from an instance of an Assertion
 #### composedOf
 
 - Name: bdqffdq:composedOf
-- Definition: Specific vocabulary term that comprises a non-abstract InformationElement.
+- Definition: Specific vocabulary term that comprises an InformationElement that is not an AbstractInformationElement.
 
 ********************
 
 #### containsAssertion
 
 - Name: bdqffdq:containsAssertion
-- Definition: Connects a Data Quality Report with Assertions that comprise that report.
+- Definition: Connects a DataQualityReport with Assertions that comprise that DataQualityReport.
 
 ********************
 
@@ -980,14 +980,14 @@ It is important that the chain of relationships from an instance of an Assertion
 #### forDataQualityNeed
 
 - Name: bdqffdq:forDataQualityNeed
-- Definition: Category of properties that relates specific Data Quality Needs to specific Methods.
+- Definition: Category of properties that relates a DataQualityNeed to specific Methods.
 
 ********************
 
 #### forIssue
 
 - Name: bdqffdq:forIssue
-- Definition: Relates an IssuetMethod to an Issue.
+- Definition: Relates an IssueMethod to an Issue.
 - SubClass Of: forDataQualityNeed; issueProperty
 - Range [ owl:someValuesFrom bdqffdq:forIssue ]
 
@@ -1137,7 +1137,7 @@ It is important that the chain of relationships from an instance of an Assertion
 #### improvedBy
 
 - Name: bdqffdq:improvedBy
-- Definition: ImprovementTarget that would have data quality improved by assertions resulting from an Amendment.
+- Definition: ImprovementTarget that would have data quality improved by Assertions resulting from an Amendment.
 - Range [ owl:someValuesFrom bdqffdq:improvedBy ]
 
 ********************
@@ -1145,7 +1145,7 @@ It is important that the chain of relationships from an instance of an Assertion
 #### includedInPolicy
 
 - Name: bdqffdq:includedInPolicy
-- Definition: Assserts that a Data Quality Need is part of a Policy
+- Definition: Assserts that a DataQualityNeed is part of a Policy.
 
 ********************
 
@@ -1166,7 +1166,7 @@ It is important that the chain of relationships from an instance of an Assertion
 #### producesAssertion
 
 - Name: bdqffdq:producesAssertion
-- Definition: Connects an entity with an assertion that the entity created.
+- Definition: Connects an entity with an Assertion that the entity created.
 
 ********************
 
@@ -1180,7 +1180,7 @@ It is important that the chain of relationships from an instance of an Assertion
 #### targetedIssue
 
 - Name: bdqffdq:targetedIssue
-- Definition: Issue where the data conformance with needs may be improved by accepting proposals from an Amendment via an ImprovementTarget.
+- Definition: An Issue for which the data conformance with needs may be improved by accepting proposals from an Amendment via an ImprovementTarget.
 - Range [ owl:someValuesFrom bdqffdq:targetedIssue ]
 
 ********************
@@ -1188,7 +1188,7 @@ It is important that the chain of relationships from an instance of an Assertion
 #### targetedMeasure
 
 - Name: bdqffdq:targetedMeasure
-- Definition: Measure where the data conformance with needs may be improved by accepting proposals from an Amendment via an ImprovementTarget.
+- Definition: A Measure for which the data conformance with needs may be improved by accepting proposals from an Amendment via an ImprovementTarget.
 - Range [ owl:someValuesFrom bdqffdq:targetedMeasure ]
 
 ********************
@@ -1196,7 +1196,7 @@ It is important that the chain of relationships from an instance of an Assertion
 #### targetedValidation
 
 - Name: bdqffdq:targetedValidation
-- Definition: Validation where the data conformance with needs may be improved by accepting proposals from an Amendment via an ImprovementTarget.
+- Definition: A Validation for which the data conformance with needs may be improved by accepting proposals from an Amendment via an ImprovementTarget.
 - SubClass Of: http://www.w3.org/2002/07/owl#topObjectProperty
 - Range [ owl:someValuesFrom bdqffdq:targetedValidation ]
 
@@ -1221,7 +1221,7 @@ It is important that the chain of relationships from an instance of an Assertion
 #### hasAuthoritiesDefaults
 
 - Name: bdqffdq:hasAuthoritiesDefaults
-- Definition: Text describing source authorities and parameters with their default values to attach to a Specification to further specify the behavior described in the expected response.
+- Definition: Text describing bdq:sourceAuthorities and Parameters with their default values to attach to a Specification to further specify the behavior described in the bdqffdq:hasExpectedResponse.
 - Range xsd:string
 
 ********************
@@ -1229,7 +1229,7 @@ It is important that the chain of relationships from an instance of an Assertion
 #### hasDateLastUpdated
 
 - Name: bdqffdq:hasDateLastUpdated
-- Definition: Date of the most recent dcterms:Issued for this class with a change that would be pertenent to implementation.
+- Definition: Date of the most recent dcterms:issued for this class with a change that would be pertinent to an Implementation.
 - Range xsd:date
 
 ********************
@@ -1237,7 +1237,7 @@ It is important that the chain of relationships from an instance of an Assertion
 #### hasExpectedResponse
 
 - Name: bdqffdq:hasExpectedResponse
-- Definition: Text describing the logic to be followed by an implementation of a Specification specifying the values of ResponseStatus and ResponseResults that should be produced from the evaluation of input InformationElements.
+- Definition: Text describing the logic to be followed by an Implementation of a Specification specifying the values of ResponseStatus and ResponseResults that should be produced from the evaluation of input InformationElements.
 - Range xsd:string
 
 ********************
@@ -1245,7 +1245,7 @@ It is important that the chain of relationships from an instance of an Assertion
 #### hasResponseComment
 
 - Name: bdqffdq:hasResponseComment
-- Definition: Free text describing the assertion made in the response and why that conclusion was reached.
+- Definition: Free text describing the Assertion made in the response and why that conclusion was reached.
 - Range xsd:string
 
 ********************
@@ -1262,7 +1262,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 - Name: bdqffdq:MultiRecord
 - Type: bdqffdq:ResourceType
-- Definition: A set of one or more Single Records.
+- Definition: A set of one or more SingleRecords.
 
 ********************
 
@@ -1270,7 +1270,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 - Name: bdqffdq:SingleRecord
 - Type: bdqffdq:ResourceType
-- Definition: A single entity comprised of encoded data with a defined structure that contains one instance of a core concept from the perspective of information elements assessed for a data quality need.
+- Definition: A single entity comprised of encoded data with a defined structure that contains one instance of a core concept from the perspective of InformationElements assessed for a DataQualityNeed.
 
 ********************
 
@@ -1288,7 +1288,7 @@ It is important that the chain of relationships from an instance of an Assertion
 - Name: bdqffdq:IS_ISSUE
 - Type: bdqffdq:ResponseResult
 - DifferentFrom: bdqffdq:NOT_ISSUE
-- Definition: A bdqffdq:ResponseResult of a bdqffdq:Issue that flags where the data do not have sufficient quality for a use.
+- Definition: A bdqffdq:ResponseResult of a bdqffdq:Issue indicating that the data do not have sufficient quality for a use.
 
 ********************
 
@@ -1297,7 +1297,7 @@ It is important that the chain of relationships from an instance of an Assertion
 - Name: bdqffdq:IS_ISSUE
 - Type: bdqffdq:ResponseResult
 - DifferentFrom: bdqffdq:POTENTIAL_ISSUE
-- Definition: A bdqffdq:ResponseResult of a bdqffdq:Issue that flags where the data do not have sufficient quality for a use.
+- Definition: A bdqffdq:ResponseResult of a bdqffdq:Issue indicating that the data do not have sufficient quality for a use.
 
 ********************
 
@@ -1322,7 +1322,7 @@ It is important that the chain of relationships from an instance of an Assertion
 
 - Name: bdqffdq:POTENTIAL_ISSUE
 - Type: bdqffdq:ResponseResult
-- Definition: A bdqffdq:ResponseResult of a bdqffdq:Issue that flags where the data may not have sufficient quality for a use.  The user will need to evaluate if the data is fit for their particular use or not.
+- Definition: A bdqffdq:ResponseResult of a bdqffdq:Issue that indicates that the data may not have sufficient quality for a use.  The user will need to evaluate if the data is fit for their particular use or not.
 
 ********************
 
