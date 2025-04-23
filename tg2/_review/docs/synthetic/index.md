@@ -86,6 +86,11 @@ The document assumes a working familiarity with biodiversity data concepts, but 
 
 For the list and links to all associated documents see the [Biodiversity Data Quality (BDQ) Core](../../index.md) page, which lists the parts of the standard.
 
+The set of information most relevant to synthetic data for BDQ Core Tests can be found in the following subset of resources:
+
+- The [Biodiversity Data Quality Core Introduction](../../intro/index.md) Provides an introduction to the BDQ Core standard and the Tests.
+- [BDQ Core Implementer's Guide](../guide/implementers/index.md) For anyone interested in the technical implementation of the BDQ Core Tests.
+
 ### 1.4 Status of the content of this document
 
 Section 1 is non-normative.

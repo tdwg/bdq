@@ -92,6 +92,17 @@ Familiarity with RDF vocabularies, Darwin Core, and fitness for use principles w
 
 For the list and links to all associated documents see the [Biodiversity Data Quality (BDQ) Core](../../index.md) page, which lists the parts of the standard.
 
+The set of information most relevant to the BDQ Core Tests can be found in the following subset of resources:
+
+- [BDQ Core Tests and Assertions](../bdqcore/index.md) Defines how each Test is modeled using standard vocabulary terms and how it should behave under various conditions. This document.
+- [BDQ Core Quick Reference Guide](../terms/bdqcore/index.md) Provides a concise, easy-to-read reference about the BDQ Core Tests.
+- [BDQ Core Tests and Assertions List of Terms](../list/bdqcore/index.md) Provides the complete normative definitions of the BDQ Core Tests.
+  - [CSV list of BDQ Core Tests](../vocabulary/bdqcore_terms.csv) 
+  - [RDF/Turtle Serialization of BDQ Core Tests](../dist/bdqcore.ttl) 
+  - [RDF/XML Serialization of BDQ Core Tests](../dist/bdqcore.xml) 
+- [BDQ Core User's Guide](../../guide/users/index.md) For anyone interested in how to use the BDQ Core Tests in practice.
+- [BDQ Core Implementer's Guide](../guide/implementers/index.md) For anyone interested in the technical implementation of the BDQ Core Tests.
+
 ### 1.4 Term List Distributions
 
 <!--- This same table appears in bdqcore_landing_header. Edit here, edit there. --->

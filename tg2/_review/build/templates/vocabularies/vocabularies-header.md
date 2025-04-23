@@ -66,6 +66,12 @@ While the vocabulary content itself may involve semantic modeling, this index is
 
 For the list and links to all associated documents see the [Biodiversity Data Quality (BDQ) Core](../../index.md) page, which lists the parts of the standard.
 
+The set of information most relevant to the vocabularies of Biodiversity Data Quality (BDQ) Core Tests can be found in the following subset of resources:
+
+- [Biodiversity Data Quality Core](../../index.md) Provides an index to all documents in the standard.
+- [BDQ Core Quick Reference Guide](../terms/bdqcore/index.md) Provides a concise, easy-to-read reference about the BDQ Core Tests.
+- [BDQ Core List of Vocabularies](../../vocabularies/index.md) A summary of the vocabularies used in the BDQ Core Tests. This document.
+
 ### 1.4 Status of the content of this document
 
 This document is non-normative.

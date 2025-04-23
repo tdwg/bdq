@@ -67,6 +67,15 @@ The document is written for readers with a practical need to work with data qual
 
 For the list and links to all associated documents see the [Biodiversity Data Quality (BDQ) Core](../../index.md) page, which lists the parts of the standard.
 
+The set of information most relevant to users of Biodiversity Data Quality (BDQ) Core Tests can be found in the following subset of resources:
+
+- [Biodiversity Data Quality Core Introduction](../../intro/index.md) Provides an introduction to the BDQ Core standard and the Tests.
+- [BDQ Core Tests and Assertions](../bdqcore/index.md) Defines how each Test is modeled using standard vocabulary terms and how it should behave under various conditions.
+- [BDQ Core Quick Reference Guide](../terms/bdqcore/index.md) Provides a concise, easy-to-read reference about the BDQ Core Tests.
+- [BDQ Core User's Guide](../../guide/users/index.md) For anyone interested in how to use the BDQ Core Tests in practice. This document.
+- [BDQ Core Implementer's Guide](../../guide/implementers/index.md) For anyone interested in the technical implementation of the BDQ Core Tests.
+- [BDQ Core Supplemental Information](../../supplement/index.md) This supplementary information may be relevant for curators, aggregators, data publishers, data analysts, programmers/developers and other practitioners who wish to understand, evaluate and/or improve the quality of biodiversity data within their domain. This document provides some key developmental issues in the building of BDQ Core that are not covered in other documents within the standard. This document may also be useful to those seeking to evaluate their current Tests or generate additional Tests for their domain.
+
 ### 1.4 Status of the content of this document
 
 Each sections of this document is marked as normative or non-normative.
