@@ -1,84 +1,45 @@
-Files in this folder are for submission of BDQ Core for review as proposal for a new TDWG.
+# 📣 Welcome to the Public Review of the Biodiversity Data Quality (BDQ) Standard
 
-The best place to begin to review the proposal is on the [Biodiversity Data Quality Core](https://github.com/tdwg/bdq/blob/master/tg2/_review/index.md) page.
+Thank you for participating in the review of the proposed **Biodiversity Data Quality (BDQ) Core** standard.  
+This folder includes documents that are intended to form part of the standard, as well as supporting resources to use, develop and maintain it.
 
-Summary of files in this directory: 
+## 🧭 How to Approach the Review
 
-<pre>
-# NOTE: CORE tests are no longer maintained from the markdown tables in the github issues.
-# Current master files for the tests are: ../core/TG2_tests.csv and  ../core/TG2_multirecord_measure_tests.csv 
-# TODO: Make ../_review/vocabulary/bdqcore_term_versions.csv the master copy.
-</pre>
+The BDQ Core standard has two major, interconnected parts:
 
-<pre>
-├── README.md  This file. **Editable.**
-├── index.md  Landing page for the standard. **Editable.**
-├── build  Build scripts and templates to assemble pages.
-│   ├── build/README.md
-├── dist  Generated CSV distribution files for building other artifacts.
-│   ├── bdq.xml  Generated RDF for bdq vocabulary (built with draft_build-termlist.py).
-│   ├── bdqcore.json  JSON serialization of the RDF representation of test descriptions, built by kurator-ffdq from bdq/tg2/core/TG2_tests.csv as bdq/tg2/core/TG2_tests.ttl.
-│   ├── bdqcore.ttl  Turtle serialization of the RDF representation of test descriptions, built by kurator-ffdq from bdq/tg2/core/TG2_tests.csv as bdq/tg2/core/TG2_tests.ttl.
-│   ├── bdqcore.xml  RDF/XML serialization of the RDF representation of test descriptions, built by kurator-ffdq from bdq/tg2/core/TG2_tests.csv as bdq/tg2/core/TG2_tests.xml.
-│   ├── bdqcore_singlerecord_tests_current.csv  CSV list of current bdqcore SingleRecord tests, for the convenience of implementers.
-│   ├── bdqcore_tests_vertical.csv  List of test label, prefLabel, and fully qualified name.
-│   ├── bdqcrit.xml  Generated RDF for bdqcrit vocabulary (built with draft_build-termlist.py).
-│   ├── bdqdim.xml  Generated RDF for bdqdim vocabulary (built with draft_build-termlist.py).
-│   └── bdqenh.xml  Generated RDF for bdqenh vocabulary (built with draft_build-termlist.py).
-├── docs  Human-readable documentation files built from files in build directory.
-│   ├── bdqcore  Landing page for bdqcore, with normative statements.
-│   │   └── index.md  Generated file. **Do not edit.**
-│   ├── bdqffdq  Landing page for bdqffdq, with normative statements.
-│   │   └── index.md  Generated file. **Do not edit.**
-│   ├── extension  Build targets for Human readable vocabulary extension documents.
-│   │   └── bdqffdq
-│   │       └── index.md  Generated extension document. **Do not edit.**
-│   ├── guide  Descriptive document build targets.
-│   │   ├── bdqffdq 
-│   │   │   ├── *.svg and *.png  Files copied here from build. **Do not edit.**
-│   │   │   └── index.md  Generated file. **Do not edit.**
-│   │   ├── implementers
-│   │   │   ├── index.md  Generated file. **Do not edit.**
-│   │   │   ├── TG2_test_validation_data_nonprintingchars.csv **Do not edit.**
-│   │   │   └── TG2_test_validation_data.csv **Do not edit.**
-│   │   └── users
-│   │       └── index.md  Generated file. **Do not edit.**
-│   ├── intro  Generated Introduction to the standard.
-│   │   ├── index.md  Generated file. **Do not edit.**
-│   │   └── *.svg  Files copied here from build. **Do not edit.**
-│   ├── list  Build targets for Human readable term list documents. **Do not edit.**
-│   │   ├── bdq
-│   │   │   └── index.md  Generated bdq term list document. **Do not edit.**
-│   │   ├── bdqcore
-│   │   │   └── index.md  Generated bdqcore term list document. **Do not edit.**
-│   │   ├── bdqcrit
-│   │   │   └── index.md  Generated bdqcrit term list document. **Do not edit.**
-│   │   ├── bdqdim
-│   │   │   └── index.md  Generated bdqdim term list document. **Do not edit.**
-│   │   ├── bdqenh
-│   │   │   └── index.md  Generated bdqenh term list document. **Do not edit.**
-│   │   └── bdqffdq
-│   │       └── index.md  Generated bdqffdq term list document. **Do not edit.**
-│   ├── maintenance
-│   │   └── index.md  Suggestions for maintenance group. **Editable.**
-│   ├── references
-│   │   └── index.md  Generated file. **Do not edit.**
-│   ├── supplement
-│   │   └── index.md  Generated file. **Do not edit.**
-│   │   └── *.png  Files copied here from build. **Do not edit.**
-│   ├── synthetic
-│   │   └── index.md  Generated file. **Do not edit.**
-│   ├── terms  Build targets for Quick Reference Guides.
-│   │   └── bdqcore
-│   │       ├── bdqcore_qrg_term_descriptions.md  Terms key for index.md. Generated file. **Do not edit.**
-│   │       ├── index.md  Generated file. **Do not edit.**
-│   │       ├── qrg_index_by_dimension.md  Generated file. **Do not edit.**
-│   │       ├── qrg_index_by_ie_actedupon.md  Generated file. **Do not edit.**
-│   │       ├── qrg_index_by_ie_class.md  Generated file. **Do not edit.**
-│   │       ├── qrg_index_by_usecase.md  Generated file. **Do not edit.**
-│   │       └── qrg_multirecord_index.md  Generated file. **Do not edit.**
-│   └── vocabularies
-│       └── index.md  Generated file. **Do not edit.**
-└── vocabulary  Term version files for vocabularies.
-    └── see vocabulary/README.md
-</pre>
+- **BDQ Core Tests and Assertions:**  
+  Practical Tests and associated guidance for assessing biodiversity data quality.
+- **Fitness for Use Framework:**  
+  The theoretical foundation that defines key concepts such as "Fitness for Use," "Criteria," and "Dimensions" of data quality.
+
+## 🚀 Choose Your Review Path
+
+### A. Introduction
+First, read the [**Biodiversity Data Quality Core (BDQ) Introduction**](docs/intro/index.md). Then, you can approach the remainder of the review either from the practical perspective (the Tests) or the theoretical one (the Framework).
+
+### B. Documents emphasizing **BDQ in Practice (the Tests)**:
+- [**BDQ Core Quick Reference Guide**](docs/terms/bdqcore/index.md)
+- [**BDQ Core User's Guide**](docs/guide/users/index.md)
+- [**BDQ Core Tests and Assertions**](docs/bdqcore/index.md)
+- [**BDQ Core Implementer's Guide**](docs/guide/implementers/index.md)
+- [**BDQ Core: Identifying Synthetic and Modified Data**](docs/synthetic/index.md)
+
+### C. Documents emphasizing **BDQ in Theory (the Framework)**:
+- [**Fitness for Use Framework Ontology Guide**](docs/guide/bdqffdq/index.md)
+- [**Fitness for Use Framework Ontology**](docs/bdqffdq/index.md)
+- [**Fitness for Use Framework Vocabulary Extension**](docs/extension/bdqffdq/index.md)
+
+### D. Vocabularies
+The Tests and the Framework are linked with each other via **foundational vocabularies** and **controlled vocabularies of values**. The terms in these vocabularies are formally defined in the **List of terms** documents. We recommend reviewing these vocabularies carefully as well:
+- [**BDQ Core Tests and Assertions List of Terms (bdqcore:)**](docs/list/bdqcore/index.md)
+- [**BDQ Controlled Vocabulary List of Terms (bdq:)**](docs/list/bdq/index.md)
+- [**Data Quality Criterion Controlled Vocabulary List of Terms (bdqcrit:)**](docs/list/bdqcrit/index.md)
+- [**Data Quality Dimension Controlled Vocabulary List of Terms (bdqdim:)**](docs/list/bdqdim/index.md)
+- [**Data Quality Enhancement Controlled Vocabulary List of Terms (bdqenh:)**](docs/list/bdqenh/index.md)
+- [**Fitness For Use Framework Ontology List of Terms (bdqffdq:)**](docs/list/bdqffdq/index.md)
+
+## 📥 How to Provide Feedback
+
+To be determined.
+
+🙏 We appreciate your contributions to ensuring the clarity, relevance, and usability of the BDQ Standard!
