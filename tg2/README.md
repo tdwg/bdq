@@ -3,11 +3,11 @@
 ## Charter 
 -    [Task Group 2 - Biodiversity Data Quality Tests and Assertions](https://www.tdwg.org/community/bdq/tg-2/)
 
-## Link to draft BDQ Core standard
+## Link to draft the BDQ standard
 - https://github.com/tdwg/bdq/blob/master/tg2/_review/index.md
 
-## Link to Quick Reference Guide to the tests
-- https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/terms/bdqcore/index.md
+## Link to the BDQ Tests Quick Reference Guide
+- https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/terms/bdqtest/index.md
 
 ## Link to vocabularies:
 - https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/vocabularies/index.md
@@ -22,7 +22,7 @@
 -    https://github.com/tdwg/bdq/wiki/OLD-BDQ-CORE-Standards-Document-%E2%80%90-NO-LONGER-IN-USE
   
 <h2>Outcomes</h2>
-The group has been working for over 10 years to evaluate and refine'data quality'/'fitness for use' tests that have been run by-
+The group has been working for over 10 years to evaluate and refine 'data quality'/'fitness for use' tests that have been run by-
 <ul>
 <li>The Atlas of Living Australia (ALA)</<li>
 <li>The Global Biodiversity Information Facility (GBIF)</li>

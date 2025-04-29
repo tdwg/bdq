@@ -2,7 +2,7 @@
 <rdf:RDF
 	xmlns:rdfbeans="http://viceversatech.com/rdfbeans/2.0/"
 	xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
-	xmlns:bdqcore="https://rs.tdwg.org/bdqcore/terms"
+	xmlns:bdqtest="https://rs.tdwg.org/bdqtest/terms"
 	xmlns:dwc="http://rs.tdwg.org/dwc/terms/"
 	xmlns:bdqenh="https://rs.tdwg.org/bdqenh/terms/"
 	xmlns:bdqcrit="https://rs.tdwg.org/bdqcrit/terms/"
@@ -20,7 +20,7 @@
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
 	xmlns:fn="http://www.w3.org/2005/xpath-functions#">
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/43abded0-c3bf-44e7-8c1f-c4207608b1fa-2025-03-06">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/43abded0-c3bf-44e7-8c1f-c4207608b1fa-2025-03-06">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 </rdf:Description>
 
@@ -33,7 +33,7 @@
 	<rdfs:label>SingleRecord</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/43abded0-c3bf-44e7-8c1f-c4207608b1fa-2025-03-06">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/43abded0-c3bf-44e7-8c1f-c4207608b1fa-2025-03-06">
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<skos:note>This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
 </rdf:Description>
@@ -43,7 +43,7 @@
 	<rdfs:label>Conformance</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/43abded0-c3bf-44e7-8c1f-c4207608b1fa-2025-03-06">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/43abded0-c3bf-44e7-8c1f-c4207608b1fa-2025-03-06">
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Conformance"/>
 </rdf:Description>
 
@@ -52,7 +52,7 @@
 	<rdfs:label>Standard</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/43abded0-c3bf-44e7-8c1f-c4207608b1fa-2025-03-06">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/43abded0-c3bf-44e7-8c1f-c4207608b1fa-2025-03-06">
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:Standard"/>
 </rdf:Description>
 
@@ -70,14 +70,14 @@
 	<rdfs:label>Information Element ActedUpon dwc:individualCount</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/43abded0-c3bf-44e7-8c1f-c4207608b1fa-2025-03-06">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/43abded0-c3bf-44e7-8c1f-c4207608b1fa-2025-03-06">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:25276f2d-a2d5-45b7-96ec-b55eec94171f"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is dwc:individualCount an Integer ?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/290</skos:historyNote>
 	<rdfs:label>VALIDATION_INDIVIDUALCOUNT_INTEGER</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/43abded0-c3bf-44e7-8c1f-c4207608b1fa"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/43abded0-c3bf-44e7-8c1f-c4207608b1fa"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
@@ -110,10 +110,10 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<rdfs:label>ValidationMethod: VALIDATION_INDIVIDUALCOUNT_INTEGER with Specification for: VALIDATION_INDIVIDUALCOUNT_INTEGER</rdfs:label>
 	<skos:prefLabel>ValidationMethod: VALIDATION_INDIVIDUALCOUNT_INTEGER with Specification for: VALIDATION_INDIVIDUALCOUNT_INTEGER</skos:prefLabel>
-	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/43abded0-c3bf-44e7-8c1f-c4207608b1fa-2025-03-06"/>
+	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/43abded0-c3bf-44e7-8c1f-c4207608b1fa-2025-03-06"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/fffdc42b-b15e-4450-9e6a-f4181a319106-2025-03-06">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/fffdc42b-b15e-4450-9e6a-f4181a319106-2025-03-06">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<skos:note>The vast majority of current biodiversity data will be expected to not have a value in dwc:pathway. This test could have value in determining 'quality' for a specific set of data quality needs/use cases.</skos:note>
@@ -124,7 +124,7 @@
 	<rdfs:label>Completeness</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/fffdc42b-b15e-4450-9e6a-f4181a319106-2025-03-06">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/fffdc42b-b15e-4450-9e6a-f4181a319106-2025-03-06">
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Completeness"/>
 </rdf:Description>
 
@@ -133,7 +133,7 @@
 	<rdfs:label>NotEmpty</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/fffdc42b-b15e-4450-9e6a-f4181a319106-2025-03-06">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/fffdc42b-b15e-4450-9e6a-f4181a319106-2025-03-06">
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 </rdf:Description>
 
@@ -144,14 +144,14 @@
 	<rdfs:label>Information Element ActedUpon dwc:pathway</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/fffdc42b-b15e-4450-9e6a-f4181a319106-2025-03-06">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/fffdc42b-b15e-4450-9e6a-f4181a319106-2025-03-06">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:f3141ff8-76fa-4953-9c6c-9300816358cc"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Darwin Core Maintenance Group (2021). Pathway Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). (https://dwc.tdwg.org/pw/)&lt;/li&gt; &lt;li&gt;Groom et al. (2019). Improving Darwin Core for research and management of alien species. Biodiversity Information Science and Services 3: e38084 (https://doi.org/10.3897/biss.3.38084)</dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:pathway?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/289</skos:historyNote>
 	<rdfs:label>VALIDATION_PATHWAY_NOTEMPTY</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/fffdc42b-b15e-4450-9e6a-f4181a319106"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/fffdc42b-b15e-4450-9e6a-f4181a319106"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
@@ -177,10 +177,10 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<rdfs:label>ValidationMethod: VALIDATION_PATHWAY_NOTEMPTY with Specification for: VALIDATION_PATHWAY_NOTEMPTY</rdfs:label>
 	<skos:prefLabel>ValidationMethod: VALIDATION_PATHWAY_NOTEMPTY with Specification for: VALIDATION_PATHWAY_NOTEMPTY</skos:prefLabel>
-	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/fffdc42b-b15e-4450-9e6a-f4181a319106-2025-03-06"/>
+	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/fffdc42b-b15e-4450-9e6a-f4181a319106-2025-03-06"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/0fa16c7e-eb9c-4add-9193-aca6087d6636-2025-03-06">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/0fa16c7e-eb9c-4add-9193-aca6087d6636-2025-03-06">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<skos:note>The vast majority of current biodiversity data will be expected to not have a value in dwc:degreeofestablishment. This test could have value in determining 'quality' for a specific set of data quality needs/use cases.</skos:note>
@@ -195,14 +195,14 @@
 	<rdfs:label>Information Element ActedUpon dwc:degreeOfEstablishment</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/0fa16c7e-eb9c-4add-9193-aca6087d6636-2025-03-06">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/0fa16c7e-eb9c-4add-9193-aca6087d6636-2025-03-06">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:c5abcb06-a1d0-4ed5-9513-c04c194293e6"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Darwin Core Maintenance Group (2021). Degree Of Establishment Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). (https://dwc.tdwg.org/doe/)&lt;/li&gt; &lt;li&gt;Groom et al. (2019). Improving Darwin Core for research and management of alien species (https://doi.org/10.3897/biss.3.38084)</dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:degreeOfEstablishment?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/288</skos:historyNote>
 	<rdfs:label>VALIDATION_DEGREEOFESTABLISHMENT_NOTEMPTY</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/0fa16c7e-eb9c-4add-9193-aca6087d6636"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/0fa16c7e-eb9c-4add-9193-aca6087d6636"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
@@ -228,10 +228,10 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<rdfs:label>ValidationMethod: VALIDATION_DEGREEOFESTABLISHMENT_NOTEMPTY with Specification for: VALIDATION_DEGREEOFESTABLISHMENT_NOTEMPTY</rdfs:label>
 	<skos:prefLabel>ValidationMethod: VALIDATION_DEGREEOFESTABLISHMENT_NOTEMPTY with Specification for: VALIDATION_DEGREEOFESTABLISHMENT_NOTEMPTY</skos:prefLabel>
-	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/0fa16c7e-eb9c-4add-9193-aca6087d6636-2025-03-06"/>
+	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/0fa16c7e-eb9c-4add-9193-aca6087d6636-2025-03-06"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/10ef7660-3e08-4b74-95d3-66131275cf31-2024-09-05">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/10ef7660-3e08-4b74-95d3-66131275cf31-2024-09-05">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Amendment"/>
 </rdf:Description>
 
@@ -239,7 +239,7 @@
 	<rdfs:subClassOf rdf:resource="https://rs.tdwg.org/bdqffdq/terms/DataQualityNeed"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/10ef7660-3e08-4b74-95d3-66131275cf31-2024-09-05">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/10ef7660-3e08-4b74-95d3-66131275cf31-2024-09-05">
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 </rdf:Description>
 
@@ -248,7 +248,7 @@
 	<rdfs:label>Standardized</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/10ef7660-3e08-4b74-95d3-66131275cf31-2024-09-05">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/10ef7660-3e08-4b74-95d3-66131275cf31-2024-09-05">
 	<hasEnhancement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqenh:Standardized"/>
 	<skos:note>Currently, it appears that no full Vocabulary exists for dwc:reproductiveCondition making this test difficult to implement. This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Conformance"/>
@@ -261,14 +261,14 @@
 	<rdfs:label>Information Element ActedUpon dwc:reproductiveCondition</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/10ef7660-3e08-4b74-95d3-66131275cf31-2024-09-05">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/10ef7660-3e08-4b74-95d3-66131275cf31-2024-09-05">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:9de85bfc-6815-4742-b997-901fce0ee3c4"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-05</dcterms:issued>
 	<dcterms:bibliographicCitation>Darwin Core Maintenance Group (2021). Reproductive Condition Vocabulary List of Terms. Biodiversity Information Standards (TDWG). (https://dwc.tdwg.org/list/#dwc_reproductiveCondition)&lt;/li&gt; &lt;/ul&gt;</dcterms:bibliographicCitation>
 	<rdfs:comment>Propose amendment to the value of dwc:preparations using bdq:sourceAuthority.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/282</skos:historyNote>
 	<rdfs:label>AMENDMENT_REPRODUCTIVECONDITION_STANDARDIZED</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/10ef7660-3e08-4b74-95d3-66131275cf31"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/10ef7660-3e08-4b74-95d3-66131275cf31"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
@@ -282,7 +282,7 @@
 
 <rdf:Description rdf:about="urn:uuid:9116d7d1-5a12-4d72-aa79-82d377b4a6f6">
 	<skos:note>TG2 Amendment OTHER Test VOCABULARY Supplementary Conformance Parameterized</skos:note>
-	<forAmendment xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/10ef7660-3e08-4b74-95d3-66131275cf31-2024-09-05"/>
+	<forAmendment xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/10ef7660-3e08-4b74-95d3-66131275cf31-2024-09-05"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:42c9c755-2f1a-4d56-b6f8-889c148049d6">
@@ -320,7 +320,7 @@
 	<skos:prefLabel>AmendmentMethod: AMENDMENT_REPRODUCTIVECONDITION_STANDARDIZED with Specification Specification for: AMENDMENT_REPRODUCTIVECONDITION_STANDARDIZED</skos:prefLabel>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/8d0cbfee-4524-4da3-83d4-bebc4c4f7cd2-2024-09-05">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/8d0cbfee-4524-4da3-83d4-bebc4c4f7cd2-2024-09-05">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Amendment"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<hasEnhancement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqenh:Standardized"/>
@@ -335,21 +335,21 @@
 	<rdfs:label>Information Element ActedUpon dwc:preparations</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/8d0cbfee-4524-4da3-83d4-bebc4c4f7cd2-2024-09-05">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/8d0cbfee-4524-4da3-83d4-bebc4c4f7cd2-2024-09-05">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:f5ddb8c1-da15-409d-8ea4-43b15c9539e8"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-05</dcterms:issued>
 	<dcterms:bibliographicCitation>Darwin Core Maintenance Group (2021). Preparations Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). (http://rs.tdwg.org/dwc/terms/preparations)</dcterms:bibliographicCitation>
 	<rdfs:comment>Propose amendment to the value of dwc:preparations using bdq:sourceAuthority.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/280</skos:historyNote>
 	<rdfs:label>AMENDMENT_PREPARATIONS_STANDARDIZED</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/8d0cbfee-4524-4da3-83d4-bebc4c4f7cd2"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/8d0cbfee-4524-4da3-83d4-bebc4c4f7cd2"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:b339c443-d4cf-4bf3-b0cc-6b4c0d019de3">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"/>
 	<skos:note>TG2 Amendment OTHER Test VOCABULARY Supplementary Conformance Parameterized</skos:note>
-	<forAmendment xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/8d0cbfee-4524-4da3-83d4-bebc4c4f7cd2-2024-09-05"/>
+	<forAmendment xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/8d0cbfee-4524-4da3-83d4-bebc4c4f7cd2-2024-09-05"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:9a034f38-7d86-463e-86c1-b5b3a482dbf5">
@@ -380,7 +380,7 @@
 	<skos:prefLabel>AmendmentMethod: AMENDMENT_PREPARATIONS_STANDARDIZED with Specification Specification for: AMENDMENT_PREPARATIONS_STANDARDIZED</skos:prefLabel>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/dfb4a260-4cbc-45b2-bf86-28be49c2cceb-2025-03-06">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/dfb4a260-4cbc-45b2-bf86-28be49c2cceb-2025-03-06">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Amendment"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<hasEnhancement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqenh:Standardized"/>
@@ -395,14 +395,14 @@
 	<rdfs:label>Information Element ActedUpon dcterms:modified</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/dfb4a260-4cbc-45b2-bf86-28be49c2cceb-2025-03-06">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/dfb4a260-4cbc-45b2-bf86-28be49c2cceb-2025-03-06">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:94d0bbe2-548c-49dc-97be-cfe912d3c189"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>ISO 8601-1: Latest version (currently 2019(en)) Date and time — Representations for information interchange — Part 1: Basic rules (https://www.iso.org/obp/ui/#iso:std:iso:8601:-1:ed-1:v1:en); Wikipedia (2020). ISO 8601 (https://en.wikipedia.org/wiki/ISO_8601); Library of Congress (2019). Extended Date/Time Format (EDTF) (https://www.loc.gov/standards/datetime/)</dcterms:bibliographicCitation>
 	<rdfs:comment>Propose amendment of the value of dcterms:modified to a valid ISO date and time.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/273</skos:historyNote>
 	<rdfs:label>AMENDMENT_MODIFIED_STANDARDIZED</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/dfb4a260-4cbc-45b2-bf86-28be49c2cceb"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/dfb4a260-4cbc-45b2-bf86-28be49c2cceb"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
@@ -411,7 +411,7 @@
 	<skos:note>Example Implementations: Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)</skos:note>
 	<skos:note>Example Implementations Source Code: https://github.com/FilteredPush/event_date_qc/blob/addab1c1607e4a987bcb0a336e85e0dc2494272c/src/main/java/org/filteredpush/qc/date/DwCOtherDateDQ.java#L673</skos:note>
 	<skos:note>TG2 Amendment TIME CODED Test VOCABULARY Supplementary Conformance ISO/DCMI STANDARD</skos:note>
-	<forAmendment xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/dfb4a260-4cbc-45b2-bf86-28be49c2cceb-2025-03-06"/>
+	<forAmendment xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/dfb4a260-4cbc-45b2-bf86-28be49c2cceb-2025-03-06"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:369904b2-1176-419c-8daa-aba5e760aa48">
@@ -431,7 +431,7 @@
 	<skos:prefLabel>AmendmentMethod: AMENDMENT_MODIFIED_STANDARDIZED with Specification Specification for: AMENDMENT_MODIFIED_STANDARDIZED</skos:prefLabel>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/c253f11a-6161-4692-bfce-4328f1961630-2025-03-06">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/c253f11a-6161-4692-bfce-4328f1961630-2025-03-06">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<skos:note>This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
@@ -443,7 +443,7 @@
 	<rdfs:comment>Does the value of dcterms:modified a valid ISO date?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/272</skos:historyNote>
 	<rdfs:label>VALIDATION_MODIFIED_STANDARD</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/c253f11a-6161-4692-bfce-4328f1961630"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/c253f11a-6161-4692-bfce-4328f1961630"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
@@ -469,10 +469,10 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<rdfs:label>ValidationMethod: VALIDATION_MODIFIED_STANDARD with Specification for: VALIDATION_MODIFIED_STANDARD</rdfs:label>
 	<skos:prefLabel>ValidationMethod: VALIDATION_MODIFIED_STANDARD with Specification for: VALIDATION_MODIFIED_STANDARD</skos:prefLabel>
-	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/c253f11a-6161-4692-bfce-4328f1961630-2025-03-06"/>
+	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/c253f11a-6161-4692-bfce-4328f1961630-2025-03-06"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/07e79079-42e9-48e9-826e-4874ae34bce3-2025-03-06">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/07e79079-42e9-48e9-826e-4874ae34bce3-2025-03-06">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Amendment"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<hasEnhancement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqenh:Standardized"/>
@@ -487,14 +487,14 @@
 	<rdfs:label>Information Element ActedUpon dwc:lifeStage</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/07e79079-42e9-48e9-826e-4874ae34bce3-2025-03-06">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/07e79079-42e9-48e9-826e-4874ae34bce3-2025-03-06">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:0fbdf18c-e476-4b36-9786-8e01a527cf8a"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Propose amendment to the value of dwc:lifeStage using bdq:sourceAuthority.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/271</skos:historyNote>
 	<rdfs:label>AMENDMENT_LIFESTAGE_STANDARDIZED</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/07e79079-42e9-48e9-826e-4874ae34bce3"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/07e79079-42e9-48e9-826e-4874ae34bce3"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
@@ -503,7 +503,7 @@
 	<skos:note>Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</skos:note>
 	<skos:note>Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1617</skos:note>
 	<skos:note>TG2 Amendment OTHER CODED Test VOCABULARY Supplementary Conformance Parameterized</skos:note>
-	<forAmendment xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/07e79079-42e9-48e9-826e-4874ae34bce3-2025-03-06"/>
+	<forAmendment xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/07e79079-42e9-48e9-826e-4874ae34bce3-2025-03-06"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:1246660d-5aa0-4f17-b930-67e419a43f3c">
@@ -534,7 +534,7 @@
 	<skos:prefLabel>AmendmentMethod: AMENDMENT_LIFESTAGE_STANDARDIZED with Specification Specification for: AMENDMENT_LIFESTAGE_STANDARDIZED</skos:prefLabel>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/be40d19e-1fe7-42ed-b9d0-961f4cf3eb6a-2025-03-06">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/be40d19e-1fe7-42ed-b9d0-961f4cf3eb6a-2025-03-06">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<skos:note>This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters. This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
@@ -546,7 +546,7 @@
 	<rdfs:comment>Does the value of dwc:lifeStage occur in bdq:sourceAuthority?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/270</skos:historyNote>
 	<rdfs:label>VALIDATION_LIFESTAGE_STANDARD</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/be40d19e-1fe7-42ed-b9d0-961f4cf3eb6a"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/be40d19e-1fe7-42ed-b9d0-961f4cf3eb6a"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
@@ -583,10 +583,10 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<rdfs:label>ValidationMethod: VALIDATION_LIFESTAGE_STANDARD with Specification for: VALIDATION_LIFESTAGE_STANDARD</rdfs:label>
 	<skos:prefLabel>ValidationMethod: VALIDATION_LIFESTAGE_STANDARD with Specification for: VALIDATION_LIFESTAGE_STANDARD</skos:prefLabel>
-	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/be40d19e-1fe7-42ed-b9d0-961f4cf3eb6a-2025-03-06"/>
+	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/be40d19e-1fe7-42ed-b9d0-961f4cf3eb6a-2025-03-06"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/0267c35f-a02b-4dc9-9a01-38797faa6b2b-2025-03-06">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/0267c35f-a02b-4dc9-9a01-38797faa6b2b-2025-03-06">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<skos:note>This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
@@ -601,14 +601,14 @@
 	<rdfs:label>Information Element ActedUpon dwc:endDayOfYear</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/0267c35f-a02b-4dc9-9a01-38797faa6b2b-2025-03-06">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/0267c35f-a02b-4dc9-9a01-38797faa6b2b-2025-03-06">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:ef8f4379-6691-4cb9-b606-ca445f9fb060"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:endDayOfYear?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/267</skos:historyNote>
 	<rdfs:label>VALIDATION_ENDDAYOFYEAR_NOTEMPTY</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/0267c35f-a02b-4dc9-9a01-38797faa6b2b"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/0267c35f-a02b-4dc9-9a01-38797faa6b2b"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
@@ -634,10 +634,10 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<rdfs:label>ValidationMethod: VALIDATION_ENDDAYOFYEAR_NOTEMPTY with Specification for: VALIDATION_ENDDAYOFYEAR_NOTEMPTY</rdfs:label>
 	<skos:prefLabel>ValidationMethod: VALIDATION_ENDDAYOFYEAR_NOTEMPTY with Specification for: VALIDATION_ENDDAYOFYEAR_NOTEMPTY</skos:prefLabel>
-	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/0267c35f-a02b-4dc9-9a01-38797faa6b2b-2025-03-06"/>
+	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/0267c35f-a02b-4dc9-9a01-38797faa6b2b-2025-03-06"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/167d4346-6fac-40eb-9d2e-30b7683dac04-2025-03-06">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/167d4346-6fac-40eb-9d2e-30b7683dac04-2025-03-06">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<skos:note>This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
@@ -652,14 +652,14 @@
 	<rdfs:label>Information Element ActedUpon dwc:startDayOfYear</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/167d4346-6fac-40eb-9d2e-30b7683dac04-2025-03-06">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/167d4346-6fac-40eb-9d2e-30b7683dac04-2025-03-06">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:83d00e4e-6359-4545-87fc-94b080f46ead"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:startDayOfYear?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/264</skos:historyNote>
 	<rdfs:label>VALIDATION_STARTDAYOFYEAR_NOTEMPTY</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/167d4346-6fac-40eb-9d2e-30b7683dac04"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/167d4346-6fac-40eb-9d2e-30b7683dac04"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
@@ -685,10 +685,10 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<rdfs:label>ValidationMethod: VALIDATION_STARTDAYOFYEAR_NOTEMPTY with Specification for: VALIDATION_STARTDAYOFYEAR_NOTEMPTY</rdfs:label>
 	<skos:prefLabel>ValidationMethod: VALIDATION_STARTDAYOFYEAR_NOTEMPTY with Specification for: VALIDATION_STARTDAYOFYEAR_NOTEMPTY</skos:prefLabel>
-	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/167d4346-6fac-40eb-9d2e-30b7683dac04-2025-03-06"/>
+	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/167d4346-6fac-40eb-9d2e-30b7683dac04-2025-03-06"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/76067adf-1422-4d03-89e3-9067c3043700-2025-03-06">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/76067adf-1422-4d03-89e3-9067c3043700-2025-03-06">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<skos:note>This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
@@ -703,14 +703,14 @@
 	<rdfs:label>Information Element ActedUpon dwc:sex</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/76067adf-1422-4d03-89e3-9067c3043700-2025-03-06">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/76067adf-1422-4d03-89e3-9067c3043700-2025-03-06">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:81029ffa-2df8-4e9e-a7dd-fc67faad9205"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:sex?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/263</skos:historyNote>
 	<rdfs:label>VALIDATION_SEX_NOTEMPTY</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/76067adf-1422-4d03-89e3-9067c3043700"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/76067adf-1422-4d03-89e3-9067c3043700"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
@@ -736,10 +736,10 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<rdfs:label>ValidationMethod: VALIDATION_SEX_NOTEMPTY with Specification for: VALIDATION_SEX_NOTEMPTY</rdfs:label>
 	<skos:prefLabel>ValidationMethod: VALIDATION_SEX_NOTEMPTY with Specification for: VALIDATION_SEX_NOTEMPTY</skos:prefLabel>
-	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/76067adf-1422-4d03-89e3-9067c3043700-2025-03-06"/>
+	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/76067adf-1422-4d03-89e3-9067c3043700-2025-03-06"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/3eefe72c-4c7d-4dee-89b6-e9d91d3f1981-2025-03-06">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/3eefe72c-4c7d-4dee-89b6-e9d91d3f1981-2025-03-06">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<skos:note>The vast majority of current biodiversity data will be expected to not have a value in dwc:reproductiveCondition. This test could have value in determining 'quality' for a specific set of data quality needs/use cases.</skos:note>
@@ -751,7 +751,7 @@
 	<rdfs:comment>Is there a value in dwc:reproductiveCondition?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/262</skos:historyNote>
 	<rdfs:label>VALIDATION_REPRODUCTIVECONDITION_NOTEMPTY</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/3eefe72c-4c7d-4dee-89b6-e9d91d3f1981"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/3eefe72c-4c7d-4dee-89b6-e9d91d3f1981"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
@@ -777,10 +777,10 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<rdfs:label>ValidationMethod: VALIDATION_REPRODUCTIVECONDITION_NOTEMPTY with Specification for: VALIDATION_REPRODUCTIVECONDITION_NOTEMPTY</rdfs:label>
 	<skos:prefLabel>ValidationMethod: VALIDATION_REPRODUCTIVECONDITION_NOTEMPTY with Specification for: VALIDATION_REPRODUCTIVECONDITION_NOTEMPTY</skos:prefLabel>
-	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/3eefe72c-4c7d-4dee-89b6-e9d91d3f1981-2025-03-06"/>
+	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/3eefe72c-4c7d-4dee-89b6-e9d91d3f1981-2025-03-06"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/cd281f7e-13b3-43ae-8677-de06ffa70bb4-2025-03-06">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/cd281f7e-13b3-43ae-8677-de06ffa70bb4-2025-03-06">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<skos:note>Implementors need to consider multiplicity, in that a SingleRecord that contains dwc:relationshipOfResource values likely contains multiple dwc:ResourceRelationship records related to each Occurrence or other core entity of the SingleRecord.  Assessment should be made on single ResourceRelationship records at a time.  This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
@@ -795,14 +795,14 @@
 	<rdfs:label>Information Element ActedUpon dwc:relationshipOfResource</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/cd281f7e-13b3-43ae-8677-de06ffa70bb4-2025-03-06">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/cd281f7e-13b3-43ae-8677-de06ffa70bb4-2025-03-06">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:65bf491a-aa67-4fb1-b977-e17cf59a9594"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:relationshipOfResource?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/261</skos:historyNote>
 	<rdfs:label>VALIDATION_RELATIONSHIPOFRESOURCE_NOTEMPTY</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/cd281f7e-13b3-43ae-8677-de06ffa70bb4"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/cd281f7e-13b3-43ae-8677-de06ffa70bb4"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
@@ -828,10 +828,10 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<rdfs:label>ValidationMethod: VALIDATION_RELATIONSHIPOFRESOURCE_NOTEMPTY with Specification for: VALIDATION_RELATIONSHIPOFRESOURCE_NOTEMPTY</rdfs:label>
 	<skos:prefLabel>ValidationMethod: VALIDATION_RELATIONSHIPOFRESOURCE_NOTEMPTY with Specification for: VALIDATION_RELATIONSHIPOFRESOURCE_NOTEMPTY</skos:prefLabel>
-	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/cd281f7e-13b3-43ae-8677-de06ffa70bb4-2025-03-06"/>
+	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/cd281f7e-13b3-43ae-8677-de06ffa70bb4-2025-03-06"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/2aa1b7a0-0473-4a90-bf11-a02137c5c65b-2025-03-06">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/2aa1b7a0-0473-4a90-bf11-a02137c5c65b-2025-03-06">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<skos:note>Widely applicable for Occurrences vouchered by MateralSamples, but not generally applicable to observational Occurrence data.  This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists. See comments.</skos:note>
@@ -843,7 +843,7 @@
 	<rdfs:comment>Is there a value in dwc:preparations?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/260</skos:historyNote>
 	<rdfs:label>VALIDATION_PREPARATIONS_NOTEMPTY</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/2aa1b7a0-0473-4a90-bf11-a02137c5c65b"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/2aa1b7a0-0473-4a90-bf11-a02137c5c65b"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
@@ -869,10 +869,10 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<rdfs:label>ValidationMethod: VALIDATION_PREPARATIONS_NOTEMPTY with Specification for: VALIDATION_PREPARATIONS_NOTEMPTY</rdfs:label>
 	<skos:prefLabel>ValidationMethod: VALIDATION_PREPARATIONS_NOTEMPTY with Specification for: VALIDATION_PREPARATIONS_NOTEMPTY</skos:prefLabel>
-	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/2aa1b7a0-0473-4a90-bf11-a02137c5c65b-2025-03-06"/>
+	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/2aa1b7a0-0473-4a90-bf11-a02137c5c65b-2025-03-06"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/87537c73-4f70-4938-8114-7f5b149ed03c-2024-09-05">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/87537c73-4f70-4938-8114-7f5b149ed03c-2024-09-05">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<skos:note>Occurrences from the high seas is not expected to contain a value in dwc:muncipality.  Marine occurrences from within an EEZ may or may not legitimately have a value in municipality.   Local governments vary considerably in how far offshore they consider to be within the municipality, so nearshore marine occurrences may legitimately have a value in municipality.  Terrestrial material may or may not fall within the boundaries of an geopolitical entity that could be place within municipality.   This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
@@ -887,14 +887,14 @@
 	<rdfs:label>Information Element ActedUpon dwc:municipality</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/87537c73-4f70-4938-8114-7f5b149ed03c-2024-09-05">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/87537c73-4f70-4938-8114-7f5b149ed03c-2024-09-05">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:60b611f1-c5fd-491e-aa07-ef71c26c09a2"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-05</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:municipality?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/258</skos:historyNote>
 	<rdfs:label>VALIDATION_MUNICIPALITY_NOTEMPTY</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/87537c73-4f70-4938-8114-7f5b149ed03c"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/87537c73-4f70-4938-8114-7f5b149ed03c"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
@@ -918,10 +918,10 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<rdfs:label>ValidationMethod: VALIDATION_MUNICIPALITY_NOTEMPTY with Specification for: VALIDATION_MUNICIPALITY_NOTEMPTY</rdfs:label>
 	<skos:prefLabel>ValidationMethod: VALIDATION_MUNICIPALITY_NOTEMPTY with Specification for: VALIDATION_MUNICIPALITY_NOTEMPTY</skos:prefLabel>
-	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/87537c73-4f70-4938-8114-7f5b149ed03c-2024-09-05"/>
+	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/87537c73-4f70-4938-8114-7f5b149ed03c-2024-09-05"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/53e02d0c-93bd-444f-aa7f-68832bdd3143-2024-09-05">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/53e02d0c-93bd-444f-aa7f-68832bdd3143-2024-09-05">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<skos:note>This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
@@ -936,14 +936,14 @@
 	<rdfs:label>Information Element ActedUpon dwc:georeferenceVerificationStatus</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/53e02d0c-93bd-444f-aa7f-68832bdd3143-2024-09-05">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/53e02d0c-93bd-444f-aa7f-68832bdd3143-2024-09-05">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:4ad525bd-0dfc-4e6e-9148-0a8e496fba5d"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-05</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:georeferenceVerificationStatus?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/257</skos:historyNote>
 	<rdfs:label>VALIDATION_GEOREFERENCEVERIFICATIONSTATUS_NOTEMPTY</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/53e02d0c-93bd-444f-aa7f-68832bdd3143"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/53e02d0c-93bd-444f-aa7f-68832bdd3143"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
@@ -967,10 +967,10 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<rdfs:label>ValidationMethod: VALIDATION_GEOREFERENCEVERIFICATIONSTATUS_NOTEMPTY with Specification for: VALIDATION_GEOREFERENCEVERIFICATIONSTATUS_NOTEMPTY</rdfs:label>
 	<skos:prefLabel>ValidationMethod: VALIDATION_GEOREFERENCEVERIFICATIONSTATUS_NOTEMPTY with Specification for: VALIDATION_GEOREFERENCEVERIFICATIONSTATUS_NOTEMPTY</skos:prefLabel>
-	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/53e02d0c-93bd-444f-aa7f-68832bdd3143-2024-09-05"/>
+	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/53e02d0c-93bd-444f-aa7f-68832bdd3143-2024-09-05"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/e1765718-0964-4b40-9451-a66b23ca6268-2024-09-05">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/e1765718-0964-4b40-9451-a66b23ca6268-2024-09-05">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<skos:note>A COMPLIANT response on this test may have some quality value in some use cases, but a NOT_COMPLAINT response doesn't without the context of a georeference.</skos:note>
@@ -985,14 +985,14 @@
 	<rdfs:label>Information Element ActedUpon dwc:georeferencedDate</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/e1765718-0964-4b40-9451-a66b23ca6268-2024-09-05">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/e1765718-0964-4b40-9451-a66b23ca6268-2024-09-05">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:8c583771-7dea-4240-9f70-f82df076331d"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-05</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:georeferencedDate?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/256</skos:historyNote>
 	<rdfs:label>VALIDATION_GEOREFERENCEDDATE_NOTEMPTY</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/e1765718-0964-4b40-9451-a66b23ca6268"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/e1765718-0964-4b40-9451-a66b23ca6268"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
@@ -1016,10 +1016,10 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<rdfs:label>ValidationMethod: VALIDATION_GEOREFERENCEDDATE_NOTEMPTY with Specification for: VALIDATION_GEOREFERENCEDDATE_NOTEMPTY</rdfs:label>
 	<skos:prefLabel>ValidationMethod: VALIDATION_GEOREFERENCEDDATE_NOTEMPTY with Specification for: VALIDATION_GEOREFERENCEDDATE_NOTEMPTY</skos:prefLabel>
-	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/e1765718-0964-4b40-9451-a66b23ca6268-2024-09-05"/>
+	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/e1765718-0964-4b40-9451-a66b23ca6268-2024-09-05"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/aaebbde6-a101-4665-ba1e-6d4d8c561a31-2025-03-06">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/aaebbde6-a101-4665-ba1e-6d4d8c561a31-2025-03-06">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<skos:note>This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because assessment of dwc:eventTime is out of scope for the CORE use case, where temporal resolution is only considered down to the resolution of approximately one day.  Time is often known for observational occurrence data, but very seldom recorded for vouchered specimen data.  This test has significant value for research and other uses of observational data.   Any analysis of time data needs to be very cognizant of substantial problems related to temporal data of which time zones are just the tip of the iceberg, see: https://xkcd.com/2867/</skos:note>
@@ -1034,14 +1034,14 @@
 	<rdfs:label>Information Element ActedUpon dwc:eventTime</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/aaebbde6-a101-4665-ba1e-6d4d8c561a31-2025-03-06">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/aaebbde6-a101-4665-ba1e-6d4d8c561a31-2025-03-06">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:ed13a633-8cca-4d9b-b6f2-ba1fce092a04"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:eventTime?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/255</skos:historyNote>
 	<rdfs:label>VALIDATION_EVENTTIME_NOTEMPTY</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/aaebbde6-a101-4665-ba1e-6d4d8c561a31"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/aaebbde6-a101-4665-ba1e-6d4d8c561a31"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
@@ -1067,10 +1067,10 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<rdfs:label>ValidationMethod: VALIDATION_EVENTTIME_NOTEMPTY with Specification for: VALIDATION_EVENTTIME_NOTEMPTY</rdfs:label>
 	<skos:prefLabel>ValidationMethod: VALIDATION_EVENTTIME_NOTEMPTY with Specification for: VALIDATION_EVENTTIME_NOTEMPTY</skos:prefLabel>
-	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/aaebbde6-a101-4665-ba1e-6d4d8c561a31-2025-03-06"/>
+	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/aaebbde6-a101-4665-ba1e-6d4d8c561a31-2025-03-06"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/eb9b70c7-9cf6-42ea-a708-5de527211df4-2025-03-06">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/eb9b70c7-9cf6-42ea-a708-5de527211df4-2025-03-06">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<skos:note>This test has significant utility for assessing Taxon data.  The presence of vernacular names can substantially improve access to data using scientific names by a broader range of users.   Any uses of vernacularName on occurrence data should be cognizant of the vernacularName being populated because the occurrence vouchers the application of that vernacular name to the organism in the occurrence, or because it is metadata inherited from the taxon name applied in an identification.,This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
@@ -1085,14 +1085,14 @@
 	<rdfs:label>Information Element ActedUpon dwc:vernacularName</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/eb9b70c7-9cf6-42ea-a708-5de527211df4-2025-03-06">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/eb9b70c7-9cf6-42ea-a708-5de527211df4-2025-03-06">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:ec942b8d-f147-49b5-8899-aa1c5380338b"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:vernacularName?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/254</skos:historyNote>
 	<rdfs:label>VALIDATION_VERNACULARNAME_NOTEMPTY</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/eb9b70c7-9cf6-42ea-a708-5de527211df4"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/eb9b70c7-9cf6-42ea-a708-5de527211df4"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
@@ -1118,10 +1118,10 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<rdfs:label>ValidationMethod: VALIDATION_VERNACULARNAME_NOTEMPTY with Specification for: VALIDATION_VERNACULARNAME_NOTEMPTY</rdfs:label>
 	<skos:prefLabel>ValidationMethod: VALIDATION_VERNACULARNAME_NOTEMPTY with Specification for: VALIDATION_VERNACULARNAME_NOTEMPTY</skos:prefLabel>
-	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/eb9b70c7-9cf6-42ea-a708-5de527211df4-2025-03-06"/>
+	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/eb9b70c7-9cf6-42ea-a708-5de527211df4-2025-03-06"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/59d9dc66-8d86-4b8e-8f26-54b542d6c375-2024-09-05">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/59d9dc66-8d86-4b8e-8f26-54b542d6c375-2024-09-05">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<skos:note>This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
@@ -1136,14 +1136,14 @@
 	<rdfs:label>Information Element ActedUpon dwc:verbatimSRS</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/59d9dc66-8d86-4b8e-8f26-54b542d6c375-2024-09-05">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/59d9dc66-8d86-4b8e-8f26-54b542d6c375-2024-09-05">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:ca854c42-f44e-43eb-90dc-209d3e669bde"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-05</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:verbatimSRS?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/253</skos:historyNote>
 	<rdfs:label>VALIDATION_VERBATIMSRS_NOTEMPTY</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/59d9dc66-8d86-4b8e-8f26-54b542d6c375"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/59d9dc66-8d86-4b8e-8f26-54b542d6c375"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
@@ -1167,10 +1167,10 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<rdfs:label>ValidationMethod: VALIDATION_VERBATIMSRS_NOTEMPTY with Specification for: VALIDATION_VERBATIMSRS_NOTEMPTY</rdfs:label>
 	<skos:prefLabel>ValidationMethod: VALIDATION_VERBATIMSRS_NOTEMPTY with Specification for: VALIDATION_VERBATIMSRS_NOTEMPTY</skos:prefLabel>
-	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/59d9dc66-8d86-4b8e-8f26-54b542d6c375-2024-09-05"/>
+	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/59d9dc66-8d86-4b8e-8f26-54b542d6c375-2024-09-05"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/6e62e8e3-cffd-4afe-957c-5b200a6eaa4e-2024-09-05">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/6e62e8e3-cffd-4afe-957c-5b200a6eaa4e-2024-09-05">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<skos:note>This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; likely to return a high percentage of either bdq:ISSUE or bdq:NOT_ISSUE results (cf. bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
@@ -1185,14 +1185,14 @@
 	<rdfs:label>Information Element ActedUpon dwc:verbatimLongitude</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/6e62e8e3-cffd-4afe-957c-5b200a6eaa4e-2024-09-05">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/6e62e8e3-cffd-4afe-957c-5b200a6eaa4e-2024-09-05">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:de80b8eb-2a46-46e7-8029-876b39b78f3b"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-05</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:verbatimLongitude?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/252</skos:historyNote>
 	<rdfs:label>ISSUE_VERBATIMLONGITUDE_NOTEMPTY</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/6e62e8e3-cffd-4afe-957c-5b200a6eaa4e"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/6e62e8e3-cffd-4afe-957c-5b200a6eaa4e"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
@@ -1216,10 +1216,10 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<rdfs:label>ValidationMethod: ISSUE_VERBATIMLONGITUDE_NOTEMPTY with Specification for: ISSUE_VERBATIMLONGITUDE_NOTEMPTY</rdfs:label>
 	<skos:prefLabel>ValidationMethod: ISSUE_VERBATIMLONGITUDE_NOTEMPTY with Specification for: ISSUE_VERBATIMLONGITUDE_NOTEMPTY</skos:prefLabel>
-	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/6e62e8e3-cffd-4afe-957c-5b200a6eaa4e-2024-09-05"/>
+	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/6e62e8e3-cffd-4afe-957c-5b200a6eaa4e-2024-09-05"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/286fa10a-dab0-4f73-8732-76e379c932df-2024-09-05">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/286fa10a-dab0-4f73-8732-76e379c932df-2024-09-05">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<skos:note>This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
@@ -1234,14 +1234,14 @@
 	<rdfs:label>Information Element ActedUpon dwc:verbatimLatitude</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/286fa10a-dab0-4f73-8732-76e379c932df-2024-09-05">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/286fa10a-dab0-4f73-8732-76e379c932df-2024-09-05">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:b82385ad-6ea7-4040-961b-a4b00620f76a"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-05</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:verbatimLatitude?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/251</skos:historyNote>
 	<rdfs:label>ISSUE_VERBATIMLATITUDE_NOTEMPTY</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/286fa10a-dab0-4f73-8732-76e379c932df"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/286fa10a-dab0-4f73-8732-76e379c932df"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
@@ -1265,10 +1265,10 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<rdfs:label>ValidationMethod: ISSUE_VERBATIMLATITUDE_NOTEMPTY with Specification for: ISSUE_VERBATIMLATITUDE_NOTEMPTY</rdfs:label>
 	<skos:prefLabel>ValidationMethod: ISSUE_VERBATIMLATITUDE_NOTEMPTY with Specification for: ISSUE_VERBATIMLATITUDE_NOTEMPTY</skos:prefLabel>
-	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/286fa10a-dab0-4f73-8732-76e379c932df-2024-09-05"/>
+	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/286fa10a-dab0-4f73-8732-76e379c932df-2024-09-05"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/9bc8b105-902a-489c-aae8-3b7075e1b948-2025-03-06">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/9bc8b105-902a-489c-aae8-3b7075e1b948-2025-03-06">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<skos:note>This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
@@ -1283,14 +1283,14 @@
 	<rdfs:label>Information Element ActedUpon dwc:verbatimEventDate</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/9bc8b105-902a-489c-aae8-3b7075e1b948-2025-03-06">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/9bc8b105-902a-489c-aae8-3b7075e1b948-2025-03-06">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:67148f62-ca46-46d7-8828-11347767f8e7"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:verbatimEventDate?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/250</skos:historyNote>
 	<rdfs:label>ISSUE_VERBATIMEVENTDATE_NOTEMPTY</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/9bc8b105-902a-489c-aae8-3b7075e1b948"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/9bc8b105-902a-489c-aae8-3b7075e1b948"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
@@ -1316,10 +1316,10 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<rdfs:label>ValidationMethod: ISSUE_VERBATIMEVENTDATE_NOTEMPTY with Specification for: ISSUE_VERBATIMEVENTDATE_NOTEMPTY</rdfs:label>
 	<skos:prefLabel>ValidationMethod: ISSUE_VERBATIMEVENTDATE_NOTEMPTY with Specification for: ISSUE_VERBATIMEVENTDATE_NOTEMPTY</skos:prefLabel>
-	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/9bc8b105-902a-489c-aae8-3b7075e1b948-2025-03-06"/>
+	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/9bc8b105-902a-489c-aae8-3b7075e1b948-2025-03-06"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/c9fc7ef1-7714-4dfa-8dea-589d5b43f432-2024-09-05">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/c9fc7ef1-7714-4dfa-8dea-589d5b43f432-2024-09-05">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<skos:note>This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
@@ -1334,14 +1334,14 @@
 	<rdfs:label>Information Element ActedUpon dwc:verbatimElevation</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/c9fc7ef1-7714-4dfa-8dea-589d5b43f432-2024-09-05">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/c9fc7ef1-7714-4dfa-8dea-589d5b43f432-2024-09-05">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:cf9f182d-180f-4a53-8b47-95ad5f827e0e"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-05</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:verbatimElevation?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/249</skos:historyNote>
 	<rdfs:label>ISSUE_VERBATIMELEVATION_NOTEMPTY</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/c9fc7ef1-7714-4dfa-8dea-589d5b43f432"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/c9fc7ef1-7714-4dfa-8dea-589d5b43f432"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
@@ -1365,10 +1365,10 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<rdfs:label>ValidationMethod: ISSUE_VERBATIMELEVATION_NOTEMPTY with Specification for: ISSUE_VERBATIMELEVATION_NOTEMPTY</rdfs:label>
 	<skos:prefLabel>ValidationMethod: ISSUE_VERBATIMELEVATION_NOTEMPTY with Specification for: ISSUE_VERBATIMELEVATION_NOTEMPTY</skos:prefLabel>
-	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/c9fc7ef1-7714-4dfa-8dea-589d5b43f432-2024-09-05"/>
+	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/c9fc7ef1-7714-4dfa-8dea-589d5b43f432-2024-09-05"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/402c0a7c-2fbd-45d4-b644-61a47a887779-2024-09-05">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/402c0a7c-2fbd-45d4-b644-61a47a887779-2024-09-05">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<skos:note>This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
@@ -1383,14 +1383,14 @@
 	<rdfs:label>Information Element ActedUpon dwc:verbatimDepth</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/402c0a7c-2fbd-45d4-b644-61a47a887779-2024-09-05">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/402c0a7c-2fbd-45d4-b644-61a47a887779-2024-09-05">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:bdac5bd1-0866-427e-bdfe-eb2b3abf1572"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-05</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:verbatimDepth?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/248</skos:historyNote>
 	<rdfs:label>ISSUE_VERBATIMDEPTH_NOTEMPTY</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/402c0a7c-2fbd-45d4-b644-61a47a887779"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/402c0a7c-2fbd-45d4-b644-61a47a887779"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
@@ -1414,10 +1414,10 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<rdfs:label>ValidationMethod: ISSUE_VERBATIMDEPTH_NOTEMPTY with Specification for: ISSUE_VERBATIMDEPTH_NOTEMPTY</rdfs:label>
 	<skos:prefLabel>ValidationMethod: ISSUE_VERBATIMDEPTH_NOTEMPTY with Specification for: ISSUE_VERBATIMDEPTH_NOTEMPTY</skos:prefLabel>
-	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/402c0a7c-2fbd-45d4-b644-61a47a887779-2024-09-05"/>
+	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/402c0a7c-2fbd-45d4-b644-61a47a887779-2024-09-05"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/533118dd-eb18-4339-b2f8-0b7f71801305-2024-09-05">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/533118dd-eb18-4339-b2f8-0b7f71801305-2024-09-05">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<skos:note>This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
@@ -1432,14 +1432,14 @@
 	<rdfs:label>Information Element ActedUpon dwc:verbatimCoordinates</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/533118dd-eb18-4339-b2f8-0b7f71801305-2024-09-05">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/533118dd-eb18-4339-b2f8-0b7f71801305-2024-09-05">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:03114ebd-a6fa-449a-a551-0e076b2fe1c3"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-05</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:verbatimCoordinates?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/247</skos:historyNote>
 	<rdfs:label>ISSUE_VERBATIMCOORDINATES_NOTEMPTY</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/533118dd-eb18-4339-b2f8-0b7f71801305"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/533118dd-eb18-4339-b2f8-0b7f71801305"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
@@ -1463,10 +1463,10 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<rdfs:label>ValidationMethod: ISSUE_VERBATIMCOORDINATES_NOTEMPTY with Specification for: ISSUE_VERBATIMCOORDINATES_NOTEMPTY</rdfs:label>
 	<skos:prefLabel>ValidationMethod: ISSUE_VERBATIMCOORDINATES_NOTEMPTY with Specification for: ISSUE_VERBATIMCOORDINATES_NOTEMPTY</skos:prefLabel>
-	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/533118dd-eb18-4339-b2f8-0b7f71801305-2024-09-05"/>
+	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/533118dd-eb18-4339-b2f8-0b7f71801305-2024-09-05"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/cd7cae15-f255-41a3-b002-c9620c40f620-2025-03-06">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/cd7cae15-f255-41a3-b002-c9620c40f620-2025-03-06">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<skos:note>The vast majority of current biodiversity data will be expected to not have a value in dwc:typeStatus. This test could have value in determining 'quality' for a specific set of data quality needs/use cases.</skos:note>
@@ -1481,14 +1481,14 @@
 	<rdfs:label>Information Element ActedUpon dwc:typeStatus</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/cd7cae15-f255-41a3-b002-c9620c40f620-2025-03-06">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/cd7cae15-f255-41a3-b002-c9620c40f620-2025-03-06">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:63b75539-9290-4ce4-86e3-938bc924e3cd"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:typeStatus?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/246</skos:historyNote>
 	<rdfs:label>VALIDATION_TYPESTATUS_NOTEMPTY</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/cd7cae15-f255-41a3-b002-c9620c40f620"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/cd7cae15-f255-41a3-b002-c9620c40f620"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
@@ -1514,10 +1514,10 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<rdfs:label>ValidationMethod: VALIDATION_TYPESTATUS_NOTEMPTY with Specification for: VALIDATION_TYPESTATUS_NOTEMPTY</rdfs:label>
 	<skos:prefLabel>ValidationMethod: VALIDATION_TYPESTATUS_NOTEMPTY with Specification for: VALIDATION_TYPESTATUS_NOTEMPTY</skos:prefLabel>
-	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/cd7cae15-f255-41a3-b002-c9620c40f620-2025-03-06"/>
+	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/cd7cae15-f255-41a3-b002-c9620c40f620-2025-03-06"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/476d3e8e-e061-414c-b8ef-6d6da8f1ec02-2024-09-05">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/476d3e8e-e061-414c-b8ef-6d6da8f1ec02-2024-09-05">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<skos:note>This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
@@ -1532,14 +1532,14 @@
 	<rdfs:label>Information Element ActedUpon dwc:stateProvince</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/476d3e8e-e061-414c-b8ef-6d6da8f1ec02-2024-09-05">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/476d3e8e-e061-414c-b8ef-6d6da8f1ec02-2024-09-05">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:0e6f3880-8203-445f-9bff-f44f52120abe"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-05</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:stateProvince?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/245</skos:historyNote>
 	<rdfs:label>VALIDATION_STATEPROVINCE_NOTEMPTY</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/476d3e8e-e061-414c-b8ef-6d6da8f1ec02"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/476d3e8e-e061-414c-b8ef-6d6da8f1ec02"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
@@ -1563,10 +1563,10 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<rdfs:label>ValidationMethod: VALIDATION_STATEPROVINCE_NOTEMPTY with Specification for: VALIDATION_STATEPROVINCE_NOTEMPTY</rdfs:label>
 	<skos:prefLabel>ValidationMethod: VALIDATION_STATEPROVINCE_NOTEMPTY with Specification for: VALIDATION_STATEPROVINCE_NOTEMPTY</skos:prefLabel>
-	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/476d3e8e-e061-414c-b8ef-6d6da8f1ec02-2024-09-05"/>
+	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/476d3e8e-e061-414c-b8ef-6d6da8f1ec02-2024-09-05"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/3bd2477c-6497-43b0-94e6-b811eed1b1cb-2025-03-06">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/3bd2477c-6497-43b0-94e6-b811eed1b1cb-2025-03-06">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<skos:note>This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
@@ -1581,14 +1581,14 @@
 	<rdfs:label>Information Element ActedUpon dwc:recordNumber</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/3bd2477c-6497-43b0-94e6-b811eed1b1cb-2025-03-06">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/3bd2477c-6497-43b0-94e6-b811eed1b1cb-2025-03-06">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:d01067c3-c529-40fe-8059-b4114ca99930"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:recordNumber?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/243</skos:historyNote>
 	<rdfs:label>VALIDATION_RECORDNUMBER_NOTEMPTY</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/3bd2477c-6497-43b0-94e6-b811eed1b1cb"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/3bd2477c-6497-43b0-94e6-b811eed1b1cb"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
@@ -1614,10 +1614,10 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<rdfs:label>ValidationMethod: VALIDATION_RECORDNUMBER_NOTEMPTY with Specification for: VALIDATION_RECORDNUMBER_NOTEMPTY</rdfs:label>
 	<skos:prefLabel>ValidationMethod: VALIDATION_RECORDNUMBER_NOTEMPTY with Specification for: VALIDATION_RECORDNUMBER_NOTEMPTY</skos:prefLabel>
-	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/3bd2477c-6497-43b0-94e6-b811eed1b1cb-2025-03-06"/>
+	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/3bd2477c-6497-43b0-94e6-b811eed1b1cb-2025-03-06"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/986ad95d-ffa1-4e3b-a6cb-ed943c87be0d-2025-03-06">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/986ad95d-ffa1-4e3b-a6cb-ed943c87be0d-2025-03-06">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<skos:note>This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because it is not widely applicable to the CORE use case.</skos:note>
@@ -1632,14 +1632,14 @@
 	<rdfs:label>Information Element ActedUpon dwc:recordedBy</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/986ad95d-ffa1-4e3b-a6cb-ed943c87be0d-2025-03-06">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/986ad95d-ffa1-4e3b-a6cb-ed943c87be0d-2025-03-06">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:c1ca869d-6edf-45f6-a850-5ede84b8a8ac"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:recordedBy?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/242</skos:historyNote>
 	<rdfs:label>VALIDATION_RECORDEDBY_NOTEMPTY</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/986ad95d-ffa1-4e3b-a6cb-ed943c87be0d"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/986ad95d-ffa1-4e3b-a6cb-ed943c87be0d"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
@@ -1665,10 +1665,10 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<rdfs:label>ValidationMethod: VALIDATION_RECORDEDBY_NOTEMPTY with Specification for: VALIDATION_RECORDEDBY_NOTEMPTY</rdfs:label>
 	<skos:prefLabel>ValidationMethod: VALIDATION_RECORDEDBY_NOTEMPTY with Specification for: VALIDATION_RECORDEDBY_NOTEMPTY</skos:prefLabel>
-	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/986ad95d-ffa1-4e3b-a6cb-ed943c87be0d-2025-03-06"/>
+	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/986ad95d-ffa1-4e3b-a6cb-ed943c87be0d-2025-03-06"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/dc2fc946-8114-491b-8a7b-3242a274a221-2025-03-06">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/dc2fc946-8114-491b-8a7b-3242a274a221-2025-03-06">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<skos:note>This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
@@ -1683,14 +1683,14 @@
 	<rdfs:label>Information Element ActedUpon dwc:month</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/dc2fc946-8114-491b-8a7b-3242a274a221-2025-03-06">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/dc2fc946-8114-491b-8a7b-3242a274a221-2025-03-06">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:a16e8cb6-dbf5-44a9-becc-8bef83a37456"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:month?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/241</skos:historyNote>
 	<rdfs:label>VALIDATION_MONTH_NOTEMPTY</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/dc2fc946-8114-491b-8a7b-3242a274a221"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/dc2fc946-8114-491b-8a7b-3242a274a221"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
@@ -1716,10 +1716,10 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<rdfs:label>ValidationMethod: VALIDATION_MONTH_NOTEMPTY with Specification for: VALIDATION_MONTH_NOTEMPTY</rdfs:label>
 	<skos:prefLabel>ValidationMethod: VALIDATION_MONTH_NOTEMPTY with Specification for: VALIDATION_MONTH_NOTEMPTY</skos:prefLabel>
-	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/dc2fc946-8114-491b-8a7b-3242a274a221-2025-03-06"/>
+	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/dc2fc946-8114-491b-8a7b-3242a274a221-2025-03-06"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/b8500bf0-273b-45c0-91a5-ebade24f1b04-2024-09-05">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/b8500bf0-273b-45c0-91a5-ebade24f1b04-2024-09-05">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<skos:note>This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
@@ -1734,14 +1734,14 @@
 	<rdfs:label>Information Element ActedUpon dwc:minimumElevation</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/b8500bf0-273b-45c0-91a5-ebade24f1b04-2024-09-05">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/b8500bf0-273b-45c0-91a5-ebade24f1b04-2024-09-05">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:e48bc9df-59a1-48cd-9187-a3e37144c9d4"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-05</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:minimumElevation?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/240</skos:historyNote>
 	<rdfs:label>VALIDATION_MINIMUMELEVATION_NOTEMPTY</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/b8500bf0-273b-45c0-91a5-ebade24f1b04"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/b8500bf0-273b-45c0-91a5-ebade24f1b04"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
@@ -1765,10 +1765,10 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<rdfs:label>ValidationMethod: VALIDATION_MINIMUMELEVATION_NOTEMPTY with Specification for: VALIDATION_MINIMUMELEVATION_NOTEMPTY</rdfs:label>
 	<skos:prefLabel>ValidationMethod: VALIDATION_MINIMUMELEVATION_NOTEMPTY with Specification for: VALIDATION_MINIMUMELEVATION_NOTEMPTY</skos:prefLabel>
-	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/b8500bf0-273b-45c0-91a5-ebade24f1b04-2024-09-05"/>
+	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/b8500bf0-273b-45c0-91a5-ebade24f1b04-2024-09-05"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/e10777f1-ca8c-4129-ab2a-7c81856a4ba5-2024-09-05">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/e10777f1-ca8c-4129-ab2a-7c81856a4ba5-2024-09-05">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<skos:note>This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
@@ -1783,14 +1783,14 @@
 	<rdfs:label>Information Element ActedUpon dwc:minimumDepth</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/e10777f1-ca8c-4129-ab2a-7c81856a4ba5-2024-09-05">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/e10777f1-ca8c-4129-ab2a-7c81856a4ba5-2024-09-05">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:19c08d34-4e24-4446-a0fa-48620c36f18b"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-05</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:minimumDepth?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/239</skos:historyNote>
 	<rdfs:label>VALIDATION_MINIMUMDEPTH_NOTEMPTY</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/e10777f1-ca8c-4129-ab2a-7c81856a4ba5"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/e10777f1-ca8c-4129-ab2a-7c81856a4ba5"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
@@ -1814,10 +1814,10 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<rdfs:label>ValidationMethod: VALIDATION_MINIMUMDEPTH_NOTEMPTY with Specification for: VALIDATION_MINIMUMDEPTH_NOTEMPTY</rdfs:label>
 	<skos:prefLabel>ValidationMethod: VALIDATION_MINIMUMDEPTH_NOTEMPTY with Specification for: VALIDATION_MINIMUMDEPTH_NOTEMPTY</skos:prefLabel>
-	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/e10777f1-ca8c-4129-ab2a-7c81856a4ba5-2024-09-05"/>
+	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/e10777f1-ca8c-4129-ab2a-7c81856a4ba5-2024-09-05"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/653d907a-af86-4c1d-9156-0e86f79cbd2a-2024-09-05">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/653d907a-af86-4c1d-9156-0e86f79cbd2a-2024-09-05">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<skos:note>This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
@@ -1832,14 +1832,14 @@
 	<rdfs:label>Information Element ActedUpon dwc:maximumElevation</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/653d907a-af86-4c1d-9156-0e86f79cbd2a-2024-09-05">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/653d907a-af86-4c1d-9156-0e86f79cbd2a-2024-09-05">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:4679c02a-a7b6-48db-a2f7-d5faef5c465b"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-05</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:maximumElevation?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/238</skos:historyNote>
 	<rdfs:label>VALIDATION_MAXIMUMELEVATION_NOTEMPTY</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/653d907a-af86-4c1d-9156-0e86f79cbd2a"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/653d907a-af86-4c1d-9156-0e86f79cbd2a"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
@@ -1863,10 +1863,10 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<rdfs:label>ValidationMethod: VALIDATION_MAXIMUMELEVATION_NOTEMPTY with Specification for: VALIDATION_MAXIMUMELEVATION_NOTEMPTY</rdfs:label>
 	<skos:prefLabel>ValidationMethod: VALIDATION_MAXIMUMELEVATION_NOTEMPTY with Specification for: VALIDATION_MAXIMUMELEVATION_NOTEMPTY</skos:prefLabel>
-	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/653d907a-af86-4c1d-9156-0e86f79cbd2a-2024-09-05"/>
+	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/653d907a-af86-4c1d-9156-0e86f79cbd2a-2024-09-05"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/7236d80f-53cc-4871-9359-fbd468808136-2024-09-05">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/7236d80f-53cc-4871-9359-fbd468808136-2024-09-05">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<skos:note>This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
@@ -1881,14 +1881,14 @@
 	<rdfs:label>Information Element ActedUpon dwc:maximumDepth</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/7236d80f-53cc-4871-9359-fbd468808136-2024-09-05">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/7236d80f-53cc-4871-9359-fbd468808136-2024-09-05">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:720f8b94-d6c2-43be-a762-0a29372a3dc5"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-05</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:maximumDepth?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/237</skos:historyNote>
 	<rdfs:label>VALIDATION_MAXIMUMDEPTH_NOTEMPTY</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/7236d80f-53cc-4871-9359-fbd468808136"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/7236d80f-53cc-4871-9359-fbd468808136"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
@@ -1912,10 +1912,10 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<rdfs:label>ValidationMethod: VALIDATION_MAXIMUMDEPTH_NOTEMPTY with Specification for: VALIDATION_MAXIMUMDEPTH_NOTEMPTY</rdfs:label>
 	<skos:prefLabel>ValidationMethod: VALIDATION_MAXIMUMDEPTH_NOTEMPTY with Specification for: VALIDATION_MAXIMUMDEPTH_NOTEMPTY</skos:prefLabel>
-	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/7236d80f-53cc-4871-9359-fbd468808136-2024-09-05"/>
+	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/7236d80f-53cc-4871-9359-fbd468808136-2024-09-05"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/83282c46-0bd8-4f6c-a015-40506b0d5dc5-2024-09-05">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/83282c46-0bd8-4f6c-a015-40506b0d5dc5-2024-09-05">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<skos:note>This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
@@ -1930,14 +1930,14 @@
 	<rdfs:label>Information Element ActedUpon dwc:locality</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/83282c46-0bd8-4f6c-a015-40506b0d5dc5-2024-09-05">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/83282c46-0bd8-4f6c-a015-40506b0d5dc5-2024-09-05">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:31a2fa51-d796-4dcd-a403-3e08b18d0430"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-05</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:locality?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/236</skos:historyNote>
 	<rdfs:label>VALIDATION_LOCALITY_NOTEMPTY</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/83282c46-0bd8-4f6c-a015-40506b0d5dc5"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/83282c46-0bd8-4f6c-a015-40506b0d5dc5"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
@@ -1961,10 +1961,10 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<rdfs:label>ValidationMethod: VALIDATION_LOCALITY_NOTEMPTY with Specification for: VALIDATION_LOCALITY_NOTEMPTY</rdfs:label>
 	<skos:prefLabel>ValidationMethod: VALIDATION_LOCALITY_NOTEMPTY with Specification for: VALIDATION_LOCALITY_NOTEMPTY</skos:prefLabel>
-	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/83282c46-0bd8-4f6c-a015-40506b0d5dc5-2024-09-05"/>
+	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/83282c46-0bd8-4f6c-a015-40506b0d5dc5-2024-09-05"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/34b9eec9-03d5-4dc9-94b7-5b05ddcaaa87-2025-03-06">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/34b9eec9-03d5-4dc9-94b7-5b05ddcaaa87-2025-03-06">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<skos:note>This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
@@ -1976,7 +1976,7 @@
 	<rdfs:comment>Is there a value in dwc:lifeStage?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/235</skos:historyNote>
 	<rdfs:label>VALIDATION_LIFESTAGE_NOTEMPTY</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/34b9eec9-03d5-4dc9-94b7-5b05ddcaaa87"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/34b9eec9-03d5-4dc9-94b7-5b05ddcaaa87"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
@@ -2002,10 +2002,10 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<rdfs:label>ValidationMethod: VALIDATION_LIFESTAGE_NOTEMPTY with Specification for: VALIDATION_LIFESTAGE_NOTEMPTY</rdfs:label>
 	<skos:prefLabel>ValidationMethod: VALIDATION_LIFESTAGE_NOTEMPTY with Specification for: VALIDATION_LIFESTAGE_NOTEMPTY</skos:prefLabel>
-	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/34b9eec9-03d5-4dc9-94b7-5b05ddcaaa87-2025-03-06"/>
+	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/34b9eec9-03d5-4dc9-94b7-5b05ddcaaa87-2025-03-06"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/0b90c114-5ff1-4024-a174-b866b7ca6b81-2024-09-05">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/0b90c114-5ff1-4024-a174-b866b7ca6b81-2024-09-05">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<skos:note>This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
@@ -2020,14 +2020,14 @@
 	<rdfs:label>Information Element ActedUpon dwc:islandGroup</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/0b90c114-5ff1-4024-a174-b866b7ca6b81-2024-09-05">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/0b90c114-5ff1-4024-a174-b866b7ca6b81-2024-09-05">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:23cfce81-c184-4c01-8d16-a84414b6384b"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-05</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:islandGroup?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/234</skos:historyNote>
 	<rdfs:label>VALIDATION_ISLANDGROUP_NOTEMPTY</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/0b90c114-5ff1-4024-a174-b866b7ca6b81"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/0b90c114-5ff1-4024-a174-b866b7ca6b81"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
@@ -2051,10 +2051,10 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<rdfs:label>ValidationMethod: VALIDATION_ISLANDGROUP_NOTEMPTY with Specification for: VALIDATION_ISLANDGROUP_NOTEMPTY</rdfs:label>
 	<skos:prefLabel>ValidationMethod: VALIDATION_ISLANDGROUP_NOTEMPTY with Specification for: VALIDATION_ISLANDGROUP_NOTEMPTY</skos:prefLabel>
-	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/0b90c114-5ff1-4024-a174-b866b7ca6b81-2024-09-05"/>
+	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/0b90c114-5ff1-4024-a174-b866b7ca6b81-2024-09-05"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/4d72c8d0-c785-4e8a-aea5-08c0a9f2d88b-2024-09-05">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/4d72c8d0-c785-4e8a-aea5-08c0a9f2d88b-2024-09-05">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<skos:note>This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
@@ -2069,14 +2069,14 @@
 	<rdfs:label>Information Element ActedUpon dwc:island</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/4d72c8d0-c785-4e8a-aea5-08c0a9f2d88b-2024-09-05">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/4d72c8d0-c785-4e8a-aea5-08c0a9f2d88b-2024-09-05">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:00a6c82c-87e7-4252-beeb-04124d3594c2"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-05</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:island?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/233</skos:historyNote>
 	<rdfs:label>VALIDATION_ISLAND_NOTEMPTY</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/4d72c8d0-c785-4e8a-aea5-08c0a9f2d88b"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/4d72c8d0-c785-4e8a-aea5-08c0a9f2d88b"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
@@ -2100,10 +2100,10 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<rdfs:label>ValidationMethod: VALIDATION_ISLAND_NOTEMPTY with Specification for: VALIDATION_ISLAND_NOTEMPTY</rdfs:label>
 	<skos:prefLabel>ValidationMethod: VALIDATION_ISLAND_NOTEMPTY with Specification for: VALIDATION_ISLAND_NOTEMPTY</skos:prefLabel>
-	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/4d72c8d0-c785-4e8a-aea5-08c0a9f2d88b-2024-09-05"/>
+	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/4d72c8d0-c785-4e8a-aea5-08c0a9f2d88b-2024-09-05"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/aff0facd-1d2a-40a5-a55a-61f950cd68a0-2025-03-06">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/aff0facd-1d2a-40a5-a55a-61f950cd68a0-2025-03-06">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<skos:note>This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
@@ -2115,7 +2115,7 @@
 	<rdfs:comment>Is there a value in dwc:individualCount?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/232</skos:historyNote>
 	<rdfs:label>VALIDATION_INDIVIDUALCOUNT_NOTEMPTY</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/aff0facd-1d2a-40a5-a55a-61f950cd68a0"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/aff0facd-1d2a-40a5-a55a-61f950cd68a0"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
@@ -2141,10 +2141,10 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<rdfs:label>ValidationMethod: VALIDATION_INDIVIDUALCOUNT_NOTEMPTY with Specification for: VALIDATION_INDIVIDUALCOUNT_NOTEMPTY</rdfs:label>
 	<skos:prefLabel>ValidationMethod: VALIDATION_INDIVIDUALCOUNT_NOTEMPTY with Specification for: VALIDATION_INDIVIDUALCOUNT_NOTEMPTY</skos:prefLabel>
-	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/aff0facd-1d2a-40a5-a55a-61f950cd68a0-2025-03-06"/>
+	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/aff0facd-1d2a-40a5-a55a-61f950cd68a0-2025-03-06"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/cfa2c8fd-e778-4f2b-8c16-2221d46e0006-2024-09-05">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/cfa2c8fd-e778-4f2b-8c16-2221d46e0006-2024-09-05">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<skos:note>This would belong in core, except we are treating the georeference as the primary terms for locality, and the textual terms as secondary, and dwc:higherGeography is a concatenation of the textual higher geography terms, thus this appropriately falls outside of core.</skos:note>
@@ -2159,14 +2159,14 @@
 	<rdfs:label>Information Element ActedUpon dwc:higherGeography</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/cfa2c8fd-e778-4f2b-8c16-2221d46e0006-2024-09-05">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/cfa2c8fd-e778-4f2b-8c16-2221d46e0006-2024-09-05">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:b3e41770-f39c-4201-aa07-3ceb209e23cd"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-05</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:higherGeography?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/230</skos:historyNote>
 	<rdfs:label>VALIDATION_HIGHERGEOGRAPHY_NOTEMPTY</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/cfa2c8fd-e778-4f2b-8c16-2221d46e0006"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/cfa2c8fd-e778-4f2b-8c16-2221d46e0006"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
@@ -2190,10 +2190,10 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<rdfs:label>ValidationMethod: VALIDATION_HIGHERGEOGRAPHY_NOTEMPTY with Specification for: VALIDATION_HIGHERGEOGRAPHY_NOTEMPTY</rdfs:label>
 	<skos:prefLabel>ValidationMethod: VALIDATION_HIGHERGEOGRAPHY_NOTEMPTY with Specification for: VALIDATION_HIGHERGEOGRAPHY_NOTEMPTY</skos:prefLabel>
-	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/cfa2c8fd-e778-4f2b-8c16-2221d46e0006-2024-09-05"/>
+	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/cfa2c8fd-e778-4f2b-8c16-2221d46e0006-2024-09-05"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/72ed16f1-0587-4afd-a9fc-602c2f3f1975-2025-03-07">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/72ed16f1-0587-4afd-a9fc-602c2f3f1975-2025-03-07">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<skos:note>This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because it is not seen as having utility for most uses, dwc:higherClassification being largely redundant with the set of ranked higher taxonomic placement terms.</skos:note>
@@ -2208,14 +2208,14 @@
 	<rdfs:label>Information Element ActedUpon dwc:higherClassification</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/72ed16f1-0587-4afd-a9fc-602c2f3f1975-2025-03-07">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/72ed16f1-0587-4afd-a9fc-602c2f3f1975-2025-03-07">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:ce0046a3-946e-4fa0-abf6-585740e23535"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:higherClassification?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/229</skos:historyNote>
 	<rdfs:label>VALIDATION_HIGHERCLASSIFICATION_NOTEMPTY</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/72ed16f1-0587-4afd-a9fc-602c2f3f1975"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/72ed16f1-0587-4afd-a9fc-602c2f3f1975"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
@@ -2240,10 +2240,10 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<rdfs:label>ValidationMethod: VALIDATION_HIGHERCLASSIFICATION_NOTEMPTY with Specification for: VALIDATION_HIGHERCLASSIFICATION_NOTEMPTY</rdfs:label>
 	<skos:prefLabel>ValidationMethod: VALIDATION_HIGHERCLASSIFICATION_NOTEMPTY with Specification for: VALIDATION_HIGHERCLASSIFICATION_NOTEMPTY</skos:prefLabel>
-	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/72ed16f1-0587-4afd-a9fc-602c2f3f1975-2025-03-07"/>
+	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/72ed16f1-0587-4afd-a9fc-602c2f3f1975-2025-03-07"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/21fe55e5-3190-45a4-af17-dd47cf33275e-2024-09-05">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/21fe55e5-3190-45a4-af17-dd47cf33275e-2024-09-05">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<skos:note>This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists. This test illustrates the need for a new set of tests (based on the TG2 template) that examine the quality of the Darwin Core geospatial values in a record.</skos:note>
@@ -2255,7 +2255,7 @@
 	<rdfs:comment>Is there a value in dwc:georeferenceVerificationStatus?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/228</skos:historyNote>
 	<rdfs:label>VALIDATION_GEOREFERENCEVERIFICATIONSTATUS_NOTEMPTY</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/21fe55e5-3190-45a4-af17-dd47cf33275e"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/21fe55e5-3190-45a4-af17-dd47cf33275e"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
@@ -2279,10 +2279,10 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<rdfs:label>ValidationMethod: VALIDATION_GEOREFERENCEVERIFICATIONSTATUS_NOTEMPTY with Specification for: VALIDATION_GEOREFERENCEVERIFICATIONSTATUS_NOTEMPTY</rdfs:label>
 	<skos:prefLabel>ValidationMethod: VALIDATION_GEOREFERENCEVERIFICATIONSTATUS_NOTEMPTY with Specification for: VALIDATION_GEOREFERENCEVERIFICATIONSTATUS_NOTEMPTY</skos:prefLabel>
-	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/21fe55e5-3190-45a4-af17-dd47cf33275e-2024-09-05"/>
+	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/21fe55e5-3190-45a4-af17-dd47cf33275e-2024-09-05"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/2b03e9ae-b7b9-48e6-bbf9-31bfcdcae212-2024-09-05">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/2b03e9ae-b7b9-48e6-bbf9-31bfcdcae212-2024-09-05">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<skos:note>This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
@@ -2294,7 +2294,7 @@
 	<rdfs:comment>Is there a value in dwc:georeferencedDate?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/227</skos:historyNote>
 	<rdfs:label>VALIDATION_GEOREFERENCEDDATE_NOTEMPTY</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/2b03e9ae-b7b9-48e6-bbf9-31bfcdcae212"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/2b03e9ae-b7b9-48e6-bbf9-31bfcdcae212"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
@@ -2318,10 +2318,10 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<rdfs:label>ValidationMethod: VALIDATION_GEOREFERENCEDDATE_NOTEMPTY with Specification for: VALIDATION_GEOREFERENCEDDATE_NOTEMPTY</rdfs:label>
 	<skos:prefLabel>ValidationMethod: VALIDATION_GEOREFERENCEDDATE_NOTEMPTY with Specification for: VALIDATION_GEOREFERENCEDDATE_NOTEMPTY</skos:prefLabel>
-	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/2b03e9ae-b7b9-48e6-bbf9-31bfcdcae212-2024-09-05"/>
+	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/2b03e9ae-b7b9-48e6-bbf9-31bfcdcae212-2024-09-05"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/c6b705fc-7cf8-4af1-88ab-7a38d85f7109-2024-09-05">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/c6b705fc-7cf8-4af1-88ab-7a38d85f7109-2024-09-05">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<skos:note>This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
@@ -2336,14 +2336,14 @@
 	<rdfs:label>Information Element ActedUpon dwc:footprintWKT</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/c6b705fc-7cf8-4af1-88ab-7a38d85f7109-2024-09-05">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/c6b705fc-7cf8-4af1-88ab-7a38d85f7109-2024-09-05">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:7407dbc1-0f6a-4fbf-8747-47b1e0575f9c"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-05</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:footprintWKT?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/226</skos:historyNote>
 	<rdfs:label>VALIDATION_FOOTPRINTWKT_NOTEMPTY</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/c6b705fc-7cf8-4af1-88ab-7a38d85f7109"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/c6b705fc-7cf8-4af1-88ab-7a38d85f7109"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
@@ -2367,10 +2367,10 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<rdfs:label>ValidationMethod: VALIDATION_FOOTPRINTWKT_NOTEMPTY with Specification for: VALIDATION_FOOTPRINTWKT_NOTEMPTY</rdfs:label>
 	<skos:prefLabel>ValidationMethod: VALIDATION_FOOTPRINTWKT_NOTEMPTY with Specification for: VALIDATION_FOOTPRINTWKT_NOTEMPTY</skos:prefLabel>
-	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/c6b705fc-7cf8-4af1-88ab-7a38d85f7109-2024-09-05"/>
+	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/c6b705fc-7cf8-4af1-88ab-7a38d85f7109-2024-09-05"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/b4c17611-2703-474f-b46a-93b08ecfee16-2025-03-06">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/b4c17611-2703-474f-b46a-93b08ecfee16-2025-03-06">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<skos:note>This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
@@ -2385,14 +2385,14 @@
 	<rdfs:label>Information Element ActedUpon dwc:disposition</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/b4c17611-2703-474f-b46a-93b08ecfee16-2025-03-06">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/b4c17611-2703-474f-b46a-93b08ecfee16-2025-03-06">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:365c3d77-851b-40d6-8093-9b65760343a6"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:disposition?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/225</skos:historyNote>
 	<rdfs:label>VALIDATION_DISPOSITION_NOTEMPTY</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/b4c17611-2703-474f-b46a-93b08ecfee16"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/b4c17611-2703-474f-b46a-93b08ecfee16"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
@@ -2418,10 +2418,10 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<rdfs:label>ValidationMethod: VALIDATION_DISPOSITION_NOTEMPTY with Specification for: VALIDATION_DISPOSITION_NOTEMPTY</rdfs:label>
 	<skos:prefLabel>ValidationMethod: VALIDATION_DISPOSITION_NOTEMPTY with Specification for: VALIDATION_DISPOSITION_NOTEMPTY</skos:prefLabel>
-	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/b4c17611-2703-474f-b46a-93b08ecfee16-2025-03-06"/>
+	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/b4c17611-2703-474f-b46a-93b08ecfee16-2025-03-06"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/e17918fc-25ca-4a3a-828b-4502432b98c4-2025-03-06">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/e17918fc-25ca-4a3a-828b-4502432b98c4-2025-03-06">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<skos:note>This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists. See Issue comments below.</skos:note>
@@ -2433,7 +2433,7 @@
 	<rdfs:comment>Is there a value in dcterms:modified?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/224</skos:historyNote>
 	<rdfs:label>VALIDATION_MODIFIED_NOTEMPTY</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/e17918fc-25ca-4a3a-828b-4502432b98c4"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/e17918fc-25ca-4a3a-828b-4502432b98c4"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
@@ -2459,10 +2459,10 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<rdfs:label>ValidationMethod: VALIDATION_MODIFIED_NOTEMPTY with Specification for: VALIDATION_MODIFIED_NOTEMPTY</rdfs:label>
 	<skos:prefLabel>ValidationMethod: VALIDATION_MODIFIED_NOTEMPTY with Specification for: VALIDATION_MODIFIED_NOTEMPTY</skos:prefLabel>
-	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/e17918fc-25ca-4a3a-828b-4502432b98c4-2025-03-06"/>
+	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/e17918fc-25ca-4a3a-828b-4502432b98c4-2025-03-06"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/77b380ce-7c9d-498f-a2b5-3ac5c5bf23f7-2024-09-05">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/77b380ce-7c9d-498f-a2b5-3ac5c5bf23f7-2024-09-05">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<skos:note>This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
@@ -2477,14 +2477,14 @@
 	<rdfs:label>Information Element ActedUpon dwc:coordinatePrecision</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/77b380ce-7c9d-498f-a2b5-3ac5c5bf23f7-2024-09-05">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/77b380ce-7c9d-498f-a2b5-3ac5c5bf23f7-2024-09-05">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:7726b4e8-3e5c-4d46-9ecd-a8fcb6850e02"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-05</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:coordinatePrecision?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/222</skos:historyNote>
 	<rdfs:label>VALIDATION_COORDINATEPRECISION_NOTEMPTY</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/77b380ce-7c9d-498f-a2b5-3ac5c5bf23f7"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/77b380ce-7c9d-498f-a2b5-3ac5c5bf23f7"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
@@ -2508,10 +2508,10 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<rdfs:label>ValidationMethod: VALIDATION_COORDINATEPRECISION_NOTEMPTY with Specification for: VALIDATION_COORDINATEPRECISION_NOTEMPTY</rdfs:label>
 	<skos:prefLabel>ValidationMethod: VALIDATION_COORDINATEPRECISION_NOTEMPTY with Specification for: VALIDATION_COORDINATEPRECISION_NOTEMPTY</skos:prefLabel>
-	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/77b380ce-7c9d-498f-a2b5-3ac5c5bf23f7-2024-09-05"/>
+	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/77b380ce-7c9d-498f-a2b5-3ac5c5bf23f7-2024-09-05"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/181c51da-d5d8-41e9-94f9-1387fa5a5a2b-2024-09-05">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/181c51da-d5d8-41e9-94f9-1387fa5a5a2b-2024-09-05">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<skos:note>This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists. This test is seen of little current value due to the low population of dwc:waterbody and dwc:continent and the complexity of the definition of both terms.</skos:note>
@@ -2527,14 +2527,14 @@
 	<rdfs:label>Information Element ActedUpon dwc:continent, dwc:waterbody</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/181c51da-d5d8-41e9-94f9-1387fa5a5a2b-2024-09-05">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/181c51da-d5d8-41e9-94f9-1387fa5a5a2b-2024-09-05">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:040ef934-a9ef-4fde-8e8d-990a3b29d68a"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-05</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:continent?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/221</skos:historyNote>
 	<rdfs:label>VALIDATION_CONTINENTWATERBODY_NOTEMPTY</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/181c51da-d5d8-41e9-94f9-1387fa5a5a2b"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/181c51da-d5d8-41e9-94f9-1387fa5a5a2b"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
@@ -2558,10 +2558,10 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<rdfs:label>ValidationMethod: VALIDATION_CONTINENTWATERBODY_NOTEMPTY with Specification for: VALIDATION_CONTINENTWATERBODY_NOTEMPTY</rdfs:label>
 	<skos:prefLabel>ValidationMethod: VALIDATION_CONTINENTWATERBODY_NOTEMPTY with Specification for: VALIDATION_CONTINENTWATERBODY_NOTEMPTY</skos:prefLabel>
-	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/181c51da-d5d8-41e9-94f9-1387fa5a5a2b-2024-09-05"/>
+	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/181c51da-d5d8-41e9-94f9-1387fa5a5a2b-2024-09-05"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/cdb37443-292e-49b6-a012-4718f0d7ba64-2025-03-07">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/cdb37443-292e-49b6-a012-4718f0d7ba64-2025-03-07">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<skos:note>This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
@@ -2576,14 +2576,14 @@
 	<rdfs:label>Information Element ActedUpon dwc:specificEpithet</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/cdb37443-292e-49b6-a012-4718f0d7ba64-2025-03-07">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/cdb37443-292e-49b6-a012-4718f0d7ba64-2025-03-07">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:28774c6c-e887-4f11-9216-84c01e03adb0"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:specificEpithet?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/220</skos:historyNote>
 	<rdfs:label>VALIDATION_SPECIFICEPITHET_NOTEMPTY</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/cdb37443-292e-49b6-a012-4718f0d7ba64"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/cdb37443-292e-49b6-a012-4718f0d7ba64"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
@@ -2609,10 +2609,10 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<rdfs:label>ValidationMethod: VALIDATION_SPECIFICEPITHET_NOTEMPTY with Specification for: VALIDATION_SPECIFICEPITHET_NOTEMPTY</rdfs:label>
 	<skos:prefLabel>ValidationMethod: VALIDATION_SPECIFICEPITHET_NOTEMPTY with Specification for: VALIDATION_SPECIFICEPITHET_NOTEMPTY</skos:prefLabel>
-	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/cdb37443-292e-49b6-a012-4718f0d7ba64-2025-03-07"/>
+	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/cdb37443-292e-49b6-a012-4718f0d7ba64-2025-03-07"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/77c6fde2-c3ca-4ad3-b2f2-3b81bba9a673-2025-03-07">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/77c6fde2-c3ca-4ad3-b2f2-3b81bba9a673-2025-03-07">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<skos:note>This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
@@ -2627,14 +2627,14 @@
 	<rdfs:label>Information Element ActedUpon dwc:infraspecificEpithet</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/77c6fde2-c3ca-4ad3-b2f2-3b81bba9a673-2025-03-07">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/77c6fde2-c3ca-4ad3-b2f2-3b81bba9a673-2025-03-07">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:237b4727-bac1-4350-9440-ac8aa5ecbb8a"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:infraspecificEpithet?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/219</skos:historyNote>
 	<rdfs:label>VALIDATION_INFRASPECIFICEPITHET_NOTEMPTY</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/77c6fde2-c3ca-4ad3-b2f2-3b81bba9a673"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/77c6fde2-c3ca-4ad3-b2f2-3b81bba9a673"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
@@ -2660,10 +2660,10 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<rdfs:label>ValidationMethod: VALIDATION_INFRASPECIFICEPITHET_NOTEMPTY with Specification for: VALIDATION_INFRASPECIFICEPITHET_NOTEMPTY</rdfs:label>
 	<skos:prefLabel>ValidationMethod: VALIDATION_INFRASPECIFICEPITHET_NOTEMPTY with Specification for: VALIDATION_INFRASPECIFICEPITHET_NOTEMPTY</skos:prefLabel>
-	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/77c6fde2-c3ca-4ad3-b2f2-3b81bba9a673-2025-03-07"/>
+	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/77c6fde2-c3ca-4ad3-b2f2-3b81bba9a673-2025-03-07"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/19bbd107-6b14-4c82-8d3e-f7a2a67df309-2025-03-07">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/19bbd107-6b14-4c82-8d3e-f7a2a67df309-2025-03-07">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<skos:note>The definition of dwc:phylum includes both phylum and division.  This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
@@ -2678,7 +2678,7 @@
 	<rdfs:label>Information Element ActedUpon dwc:phylum</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/19bbd107-6b14-4c82-8d3e-f7a2a67df309-2025-03-07">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/19bbd107-6b14-4c82-8d3e-f7a2a67df309-2025-03-07">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:8fe0d938-7aa4-40a2-87b7-5bd7e9727e95"/>
 </rdf:Description>
 
@@ -2696,14 +2696,14 @@
 	<rdfs:label>Information Element Consulted dwc:taxonRank</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/19bbd107-6b14-4c82-8d3e-f7a2a67df309-2025-03-07">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/19bbd107-6b14-4c82-8d3e-f7a2a67df309-2025-03-07">
 	<hasConsultedInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:30f9c7bf-4e05-46c6-81dc-9279cd352c4f"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:phylum?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/218</skos:historyNote>
 	<rdfs:label>VALIDATION_PHYLUM_NOTEMPTY</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/19bbd107-6b14-4c82-8d3e-f7a2a67df309"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/19bbd107-6b14-4c82-8d3e-f7a2a67df309"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
@@ -2729,10 +2729,10 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<rdfs:label>ValidationMethod: VALIDATION_PHYLUM_NOTEMPTY with Specification for: VALIDATION_PHYLUM_NOTEMPTY</rdfs:label>
 	<skos:prefLabel>ValidationMethod: VALIDATION_PHYLUM_NOTEMPTY with Specification for: VALIDATION_PHYLUM_NOTEMPTY</skos:prefLabel>
-	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/19bbd107-6b14-4c82-8d3e-f7a2a67df309-2025-03-07"/>
+	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/19bbd107-6b14-4c82-8d3e-f7a2a67df309-2025-03-07"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/d1c40fc8-d8ad-4148-82e0-b4b7ead70051-2025-03-07">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/d1c40fc8-d8ad-4148-82e0-b4b7ead70051-2025-03-07">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<skos:note>This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
@@ -2747,7 +2747,7 @@
 	<rdfs:label>Information Element ActedUpon dwc:order</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/d1c40fc8-d8ad-4148-82e0-b4b7ead70051-2025-03-07">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/d1c40fc8-d8ad-4148-82e0-b4b7ead70051-2025-03-07">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:b1b7b96f-79c7-414e-998f-4e31c23b6dec"/>
 	<hasConsultedInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:30f9c7bf-4e05-46c6-81dc-9279cd352c4f"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
@@ -2755,7 +2755,7 @@
 	<rdfs:comment>Is there a value in dwc:order?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/217</skos:historyNote>
 	<rdfs:label>VALIDATION_ORDER_NOTEMPTY</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/d1c40fc8-d8ad-4148-82e0-b4b7ead70051"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/d1c40fc8-d8ad-4148-82e0-b4b7ead70051"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
@@ -2781,10 +2781,10 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<rdfs:label>ValidationMethod: VALIDATION_ORDER_NOTEMPTY with Specification for: VALIDATION_ORDER_NOTEMPTY</rdfs:label>
 	<skos:prefLabel>ValidationMethod: VALIDATION_ORDER_NOTEMPTY with Specification for: VALIDATION_ORDER_NOTEMPTY</skos:prefLabel>
-	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/d1c40fc8-d8ad-4148-82e0-b4b7ead70051-2025-03-07"/>
+	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/d1c40fc8-d8ad-4148-82e0-b4b7ead70051-2025-03-07"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/5bfa043c-1e19-4224-8d55-b568ced347c2-2025-03-07">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/5bfa043c-1e19-4224-8d55-b568ced347c2-2025-03-07">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<skos:note>Family is expected to be empty when an identification is only to a rank higher than Family.   This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
@@ -2799,7 +2799,7 @@
 	<rdfs:label>Information Element ActedUpon dwc:family</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/5bfa043c-1e19-4224-8d55-b568ced347c2-2025-03-07">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/5bfa043c-1e19-4224-8d55-b568ced347c2-2025-03-07">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:c3987992-230d-4c2e-816c-5b72d98218eb"/>
 	<hasConsultedInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:30f9c7bf-4e05-46c6-81dc-9279cd352c4f"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
@@ -2807,7 +2807,7 @@
 	<rdfs:comment>Is there a value in dwc:family?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/215</skos:historyNote>
 	<rdfs:label>VALIDATION_FAMILY_NOTEMPTY</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/5bfa043c-1e19-4224-8d55-b568ced347c2"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/5bfa043c-1e19-4224-8d55-b568ced347c2"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
@@ -2833,10 +2833,10 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<rdfs:label>ValidationMethod: VALIDATION_FAMILY_NOTEMPTY with Specification for: VALIDATION_FAMILY_NOTEMPTY</rdfs:label>
 	<skos:prefLabel>ValidationMethod: VALIDATION_FAMILY_NOTEMPTY with Specification for: VALIDATION_FAMILY_NOTEMPTY</skos:prefLabel>
-	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/5bfa043c-1e19-4224-8d55-b568ced347c2-2025-03-07"/>
+	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/5bfa043c-1e19-4224-8d55-b568ced347c2-2025-03-07"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/d02c1ffd-af28-49bd-9c9c-e8e23a8b7258-2025-03-07">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/d02c1ffd-af28-49bd-9c9c-e8e23a8b7258-2025-03-07">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<skos:note>Genus is expected to be bdq:Empty when an identification is only to the level of a taxon higher than Genus.   This test is not regarded as CORE (cf. bdq:CORE).</skos:note>
@@ -2851,7 +2851,7 @@
 	<rdfs:label>Information Element ActedUpon dwc:genus</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/d02c1ffd-af28-49bd-9c9c-e8e23a8b7258-2025-03-07">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/d02c1ffd-af28-49bd-9c9c-e8e23a8b7258-2025-03-07">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:6417eb42-b07d-4b42-9a6a-13c592aeb5ea"/>
 	<hasConsultedInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:30f9c7bf-4e05-46c6-81dc-9279cd352c4f"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
@@ -2859,7 +2859,7 @@
 	<rdfs:comment>Is there a value in dwc:genus?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/214</skos:historyNote>
 	<rdfs:label>VALIDATION_GENUS_NOTEMPTY</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/d02c1ffd-af28-49bd-9c9c-e8e23a8b7258"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/d02c1ffd-af28-49bd-9c9c-e8e23a8b7258"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
@@ -2885,10 +2885,10 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<rdfs:label>ValidationMethod: VALIDATION_GENUS_NOTEMPTY with Specification for: VALIDATION_GENUS_NOTEMPTY</rdfs:label>
 	<skos:prefLabel>ValidationMethod: VALIDATION_GENUS_NOTEMPTY with Specification for: VALIDATION_GENUS_NOTEMPTY</skos:prefLabel>
-	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/d02c1ffd-af28-49bd-9c9c-e8e23a8b7258-2025-03-07"/>
+	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/d02c1ffd-af28-49bd-9c9c-e8e23a8b7258-2025-03-07"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/b854b179-3572-48b6-aab2-879e3172fd7d-2025-03-07">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/b854b179-3572-48b6-aab2-879e3172fd7d-2025-03-07">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<skos:note>This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
@@ -2903,7 +2903,7 @@
 	<rdfs:label>Information Element ActedUpon dwc:class</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/b854b179-3572-48b6-aab2-879e3172fd7d-2025-03-07">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/b854b179-3572-48b6-aab2-879e3172fd7d-2025-03-07">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:5b155af3-2ce0-432e-ab10-2e21d6ccd32a"/>
 	<hasConsultedInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:30f9c7bf-4e05-46c6-81dc-9279cd352c4f"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
@@ -2911,7 +2911,7 @@
 	<rdfs:comment>Is there a value in dwc:class?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/213</skos:historyNote>
 	<rdfs:label>VALIDATION_CLASS_NOTEMPTY</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/b854b179-3572-48b6-aab2-879e3172fd7d"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/b854b179-3572-48b6-aab2-879e3172fd7d"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
@@ -2937,10 +2937,10 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<rdfs:label>ValidationMethod: VALIDATION_CLASS_NOTEMPTY with Specification for: VALIDATION_CLASS_NOTEMPTY</rdfs:label>
 	<skos:prefLabel>ValidationMethod: VALIDATION_CLASS_NOTEMPTY with Specification for: VALIDATION_CLASS_NOTEMPTY</skos:prefLabel>
-	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/b854b179-3572-48b6-aab2-879e3172fd7d-2025-03-07"/>
+	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/b854b179-3572-48b6-aab2-879e3172fd7d-2025-03-07"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/4527c47e-61d9-4abb-af3e-f2999191be17-2025-03-07">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/4527c47e-61d9-4abb-af3e-f2999191be17-2025-03-07">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<skos:note>The purpose of this test is to check whether the value is a name that is a result of a nomenclatural act at this rank. This excludes unpublished names, misspellings and vernacular names. The same test might return distinct results when using distinct source authorities. This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
@@ -2952,7 +2952,7 @@
 	<rdfs:label>Found</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/4527c47e-61d9-4abb-af3e-f2999191be17-2025-03-07">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/4527c47e-61d9-4abb-af3e-f2999191be17-2025-03-07">
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:Found"/>
 </rdf:Description>
 
@@ -2963,14 +2963,14 @@
 	<rdfs:label>Information Element ActedUpon dwc:subtribe</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/4527c47e-61d9-4abb-af3e-f2999191be17-2025-03-07">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/4527c47e-61d9-4abb-af3e-f2999191be17-2025-03-07">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:18bbb29e-f60e-42fb-bff0-1e46fa41d3c7"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>GBIF Secretariat (2019). GBIF Backbone Taxonomy. Checklist dataset (https://doi.org/10.15468/39omei)</dcterms:bibliographicCitation>
 	<rdfs:comment>Does the value of dwc:subtribe occur at rank of Subtribe in bdq:sourceAuthority?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/208</skos:historyNote>
 	<rdfs:label>VALIDATION_SUBTRIBE_FOUND</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/4527c47e-61d9-4abb-af3e-f2999191be17"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/4527c47e-61d9-4abb-af3e-f2999191be17"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
@@ -3006,10 +3006,10 @@
 	<hasSpecification xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:0e153bbb-d135-42be-aeb7-a742ea76fd5e"/>
 	<rdfs:label>ValidationMethod: VALIDATION_SUBTRIBE_FOUND with Specification for: VALIDATION_SUBTRIBE_FOUND</rdfs:label>
 	<skos:prefLabel>ValidationMethod: VALIDATION_SUBTRIBE_FOUND with Specification for: VALIDATION_SUBTRIBE_FOUND</skos:prefLabel>
-	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/4527c47e-61d9-4abb-af3e-f2999191be17-2025-03-07"/>
+	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/4527c47e-61d9-4abb-af3e-f2999191be17-2025-03-07"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/8c15f351-26d5-4edd-b38e-07541dc64fd0-2025-03-07">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/8c15f351-26d5-4edd-b38e-07541dc64fd0-2025-03-07">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<skos:note>The purpose of this test is to check whether the value is a name that is a result of a nomenclatural act at this rank. This excludes unpublished names, misspellings and vernacular names. The same test might return distinct results when using distinct source authorities. This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
@@ -3024,14 +3024,14 @@
 	<rdfs:label>Information Element ActedUpon dwc:tribe</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/8c15f351-26d5-4edd-b38e-07541dc64fd0-2025-03-07">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/8c15f351-26d5-4edd-b38e-07541dc64fd0-2025-03-07">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:9290e799-3b0f-4415-9fa3-b6bc08636fad"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>GBIF Secretariat (2019). GBIF Backbone Taxonomy. Checklist dataset (https://doi.org/10.15468/39omei)</dcterms:bibliographicCitation>
 	<rdfs:comment>Does the value of dwc:tribe occur at rank of Tribe in bdq:sourceAuthority?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/207</skos:historyNote>
 	<rdfs:label>VALIDATION_TRIBE_FOUND</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/8c15f351-26d5-4edd-b38e-07541dc64fd0"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/8c15f351-26d5-4edd-b38e-07541dc64fd0"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
@@ -3067,10 +3067,10 @@
 	<hasSpecification xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:a11ce583-71b3-4562-94ea-8b0b67b72f2f"/>
 	<rdfs:label>ValidationMethod: VALIDATION_TRIBE_FOUND with Specification for: VALIDATION_TRIBE_FOUND</rdfs:label>
 	<skos:prefLabel>ValidationMethod: VALIDATION_TRIBE_FOUND with Specification for: VALIDATION_TRIBE_FOUND</skos:prefLabel>
-	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/8c15f351-26d5-4edd-b38e-07541dc64fd0-2025-03-07"/>
+	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/8c15f351-26d5-4edd-b38e-07541dc64fd0-2025-03-07"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/2a45e0e9-446c-429f-992d-c3ec1d29eebb-2025-03-07">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/2a45e0e9-446c-429f-992d-c3ec1d29eebb-2025-03-07">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<skos:note>The purpose of this test is to check whether the value is a name that is a result of a nomenclatural act at this rank. This excludes unpublished names, misspellings and vernacular names. The same test might return distinct results when using distinct source authorities. This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
@@ -3085,14 +3085,14 @@
 	<rdfs:label>Information Element ActedUpon dwc:superfamily</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/2a45e0e9-446c-429f-992d-c3ec1d29eebb-2025-03-07">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/2a45e0e9-446c-429f-992d-c3ec1d29eebb-2025-03-07">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:f0b2eeeb-b8a5-48e6-a7de-6c311a04c435"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>GBIF Secretariat (2019). GBIF Backbone Taxonomy. Checklist dataset (https://doi.org/10.15468/39omei)</dcterms:bibliographicCitation>
 	<rdfs:comment>Does the value of dwc:superfamily occur at rank of Superfamily in bdq:sourceAuthority?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/206</skos:historyNote>
 	<rdfs:label>VALIDATION_SUPERFAMILY_FOUND</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/2a45e0e9-446c-429f-992d-c3ec1d29eebb"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/2a45e0e9-446c-429f-992d-c3ec1d29eebb"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
@@ -3128,10 +3128,10 @@
 	<hasSpecification xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:13f9168b-5bab-470f-a351-aefac6ec1e29"/>
 	<rdfs:label>ValidationMethod: VALIDATION_SUPERFAMILY_FOUND with Specification for: VALIDATION_SUPERFAMILY_FOUND</rdfs:label>
 	<skos:prefLabel>ValidationMethod: VALIDATION_SUPERFAMILY_FOUND with Specification for: VALIDATION_SUPERFAMILY_FOUND</skos:prefLabel>
-	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/2a45e0e9-446c-429f-992d-c3ec1d29eebb-2025-03-07"/>
+	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/2a45e0e9-446c-429f-992d-c3ec1d29eebb-2025-03-07"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/e654f562-44f8-43fd-983b-2aaba4c6dda9-2025-03-05">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/e654f562-44f8-43fd-983b-2aaba4c6dda9-2025-03-05">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<skos:note>See table https://github.com/tdwg/bdq/issues/95#issuecomment-1226450014. A fail condition may arise from the content being internally inconsistent (not all of the information can be true at the same time), or from the vocabulary being incapable of resolving the combination of term values.  This test should match despite leading or trailing whitespace or there are leading or trailing non-printing characters. @tucotuco: "Of #200 and #201, #201 is the strongest test. If it passes for a record, #200 must necessarily also pass and doesn't tell you anything. If #201 fails,#200 could still pass and that would tell you that there are multiple matches on the country/stateProvince combo: It would tell you the nature of the problem. Along with #42 (Country not empty), #200 would tell you whether there was an ambiguous combination of country (not empty) and stateProvince, such as would happen with Argentina/Buenos Aires. While if country is empty, then the ambiguity is purely at the stateProvince level".</skos:note>
@@ -3142,7 +3142,7 @@
 	<rdfs:label>Consistency</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/e654f562-44f8-43fd-983b-2aaba4c6dda9-2025-03-05">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/e654f562-44f8-43fd-983b-2aaba4c6dda9-2025-03-05">
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Consistency"/>
 </rdf:Description>
 
@@ -3151,7 +3151,7 @@
 	<rdfs:label>Consistent</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/e654f562-44f8-43fd-983b-2aaba4c6dda9-2025-03-05">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/e654f562-44f8-43fd-983b-2aaba4c6dda9-2025-03-05">
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:Consistent"/>
 </rdf:Description>
 
@@ -3163,14 +3163,14 @@
 	<rdfs:label>Information Element ActedUpon dwc:country, dwc:stateProvince</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/e654f562-44f8-43fd-983b-2aaba4c6dda9-2025-03-05">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/e654f562-44f8-43fd-983b-2aaba4c6dda9-2025-03-05">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:63ee37ac-d0ae-4578-82f8-7a956d92baf0"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-05</dcterms:issued>
 	<dcterms:bibliographicCitation>Chapman, AD and Wieczorek, JR (2020). Georeferencing Best Practices. Copenhagen: GBIF Secretariat (https://doi.org/10.15468/doc-gg7h-s853)&lt;/li&gt; &lt;li&gt;VertNet (2019). DwCVocabs (https://github.com/VertNet/DwCVocabs/blob/master/vocabs/Geography.csv)&lt;/li&gt; &lt;li&gt;Getty Research Institute (2017). Getty Thesaurus of Geographic Names Online (https://www.getty.edu/research/tools/vocabularies/tgn/index.html); ISO (n.dat.) ISO 3166 Country Codes. https://www.iso.org/iso-3166-country-codes.html; ISO (n.dat) 3166-1 alpha-2. https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2</dcterms:bibliographicCitation>
 	<rdfs:comment>Are the combination of the values of dwc:country, dwc:stateProvince consistent with the values in the bdq:sourceAuthority?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/200</skos:historyNote>
 	<rdfs:label>VALIDATION_COUNTRYSTATEPROVINCE_CONSISTENT</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/e654f562-44f8-43fd-983b-2aaba4c6dda9"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/e654f562-44f8-43fd-983b-2aaba4c6dda9"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
@@ -3207,10 +3207,10 @@
 	<skos:historyNote>Source: VertNet, Kurator</skos:historyNote>
 	<rdfs:label>ValidationMethod: VALIDATION_COUNTRYSTATEPROVINCE_CONSISTENT with Specification for: VALIDATION_COUNTRYSTATEPROVINCE_CONSISTENT</rdfs:label>
 	<skos:prefLabel>ValidationMethod: VALIDATION_COUNTRYSTATEPROVINCE_CONSISTENT with Specification for: VALIDATION_COUNTRYSTATEPROVINCE_CONSISTENT</skos:prefLabel>
-	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/e654f562-44f8-43fd-983b-2aaba4c6dda9-2025-03-05"/>
+	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/e654f562-44f8-43fd-983b-2aaba4c6dda9-2025-03-05"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/a82c7e3a-3a50-4438-906c-6d0fefa9e984-2025-03-06">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/a82c7e3a-3a50-4438-906c-6d0fefa9e984-2025-03-06">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<skos:note>We have made this test SUPPLEMENTARY - which means that while we do not believe this test should be CORE, there may be circumstances where some communities may want it as CORE. This change derived from a discussion at TDWG 2023 on the use of dwc:taxonID and dwc:scientificNameID. It was concluded that a test VALIDATION_SCIENTIFICNAMEID was justified as CORE while this test should be SUPPLEMENTARY.  The original test "VALIDATION_TAXONID_AMBIGUOUS" was seen by the TG2 team as too complex to implement. If we use any single bdq:sourceAuthority such as GBIF, a valid and complete dwc:taxonID based on an alternative source authority is unlikely to provide a valid match. A text or number string as a namespace indicator without a URI will be ambiguous. As an example, GBIF's backbone taxonomy dataset can be found at https://doi.org/10.15468/39omei. When referencing a GBIF taxon by GBIF's identifier for that taxon, use the the pseudo-namespace "gbif:" and the form "gbif:{integer}" as the value for dwc:taxonID.</skos:note>
@@ -3222,7 +3222,7 @@
 	<rdfs:label>Complete</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/a82c7e3a-3a50-4438-906c-6d0fefa9e984-2025-03-06">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/a82c7e3a-3a50-4438-906c-6d0fefa9e984-2025-03-06">
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:Complete"/>
 </rdf:Description>
 
@@ -3233,14 +3233,14 @@
 	<rdfs:label>Information Element ActedUpon dwc:taxonID</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/a82c7e3a-3a50-4438-906c-6d0fefa9e984-2025-03-06">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/a82c7e3a-3a50-4438-906c-6d0fefa9e984-2025-03-06">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:d205027a-bb1c-41ea-a94c-075416a3f061"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>GBIF Secretariat (2019). GBIF Backbone Taxonomy. Checklist dataset: https://doi.org/10.15468/39omei; LSID (Life Science Identifier): https://en.wikipedia.org/wiki/LSID; URN (Uniform Resource Name): https://en.wikipedia.org/wiki/Uniform_Resource_Name; URI (Uniform Resource Identifier): https://en.wikipedia.org/wiki/Uniform_Resource_Identifier; NID (Namespace Identifier): A NID and NSS make up a URN, https://en.wikipedia.org/wiki/Uniform_Resource_Name; NSS (Namespace-Specific String): https://en.wikipedia.org/wiki/Uniform_Resource_Name</dcterms:bibliographicCitation>
 	<rdfs:comment>Does the value of dwc:taxonID contain a complete identifier?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/121</skos:historyNote>
 	<rdfs:label>VALIDATION_TAXONID_COMPLETE</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/a82c7e3a-3a50-4438-906c-6d0fefa9e984"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/a82c7e3a-3a50-4438-906c-6d0fefa9e984"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
@@ -3266,10 +3266,10 @@
 	<skos:historyNote>Source: TG2-Gainesville</skos:historyNote>
 	<rdfs:label>ValidationMethod: VALIDATION_TAXONID_COMPLETE with Specification for: VALIDATION_TAXONID_COMPLETE</rdfs:label>
 	<skos:prefLabel>ValidationMethod: VALIDATION_TAXONID_COMPLETE with Specification for: VALIDATION_TAXONID_COMPLETE</skos:prefLabel>
-	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/a82c7e3a-3a50-4438-906c-6d0fefa9e984-2025-03-06"/>
+	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/a82c7e3a-3a50-4438-906c-6d0fefa9e984-2025-03-06"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/391ca46d-3842-4a18-970c-0434cbc17f07-2025-03-06">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/391ca46d-3842-4a18-970c-0434cbc17f07-2025-03-06">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<skos:note>There might be identification dates that are legitimately before dwc:eventDate.  This test will, by design, flag as problematic cases (such as LTER plots, bird banding data, and marine mammal sightings) where a known individual organism is identified by a specialist and then subsequently observed (or collected) without new taxonomic identifications being made.</skos:note>
@@ -3280,7 +3280,7 @@
 	<rdfs:label>Likelihood</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/391ca46d-3842-4a18-970c-0434cbc17f07-2025-03-06">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/391ca46d-3842-4a18-970c-0434cbc17f07-2025-03-06">
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Likelihood"/>
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:Consistent"/>
 </rdf:Description>
@@ -3293,14 +3293,14 @@
 	<rdfs:label>Information Element ActedUpon dwc:eventDate, dwc:dateIdentified</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/391ca46d-3842-4a18-970c-0434cbc17f07-2025-03-06">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/391ca46d-3842-4a18-970c-0434cbc17f07-2025-03-06">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:1be996a9-2bbe-471c-a4f5-c8e98536b1b3"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is the date of identification equal to, or later than the dwc:eventDate?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/92</skos:historyNote>
 	<rdfs:label>VALIDATION_DATEIDENTIFIED_AFTEREVENTDATE</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/391ca46d-3842-4a18-970c-0434cbc17f07"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/391ca46d-3842-4a18-970c-0434cbc17f07"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
@@ -3326,10 +3326,10 @@
 	<skos:historyNote>Source: ALA</skos:historyNote>
 	<rdfs:label>ValidationMethod: VALIDATION_DATEIDENTIFIED_AFTEREVENTDATE with Specification for: VALIDATION_DATEIDENTIFIED_AFTEREVENTDATE</rdfs:label>
 	<skos:prefLabel>ValidationMethod: VALIDATION_DATEIDENTIFIED_AFTEREVENTDATE with Specification for: VALIDATION_DATEIDENTIFIED_AFTEREVENTDATE</skos:prefLabel>
-	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/391ca46d-3842-4a18-970c-0434cbc17f07-2025-03-06"/>
+	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/391ca46d-3842-4a18-970c-0434cbc17f07-2025-03-06"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/399ef91d-425c-46f2-a6df-8a0fe4c3e86e-2025-03-07">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/399ef91d-425c-46f2-a6df-8a0fe4c3e86e-2025-03-07">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<skos:note>This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because it is not widely applicable; and is likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results.</skos:note>
@@ -3341,7 +3341,7 @@
 	<rdfs:label>InRange</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/399ef91d-425c-46f2-a6df-8a0fe4c3e86e-2025-03-07">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/399ef91d-425c-46f2-a6df-8a0fe4c3e86e-2025-03-07">
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:InRange"/>
 </rdf:Description>
 
@@ -3352,14 +3352,14 @@
 	<rdfs:label>Information Element ActedUpon dwc:namePublishedInYear</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/399ef91d-425c-46f2-a6df-8a0fe4c3e86e-2025-03-07">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/399ef91d-425c-46f2-a6df-8a0fe4c3e86e-2025-03-07">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:eb155979-58ca-4429-989d-8475e15fdcc6"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>The value of dwc:namePublishedInYear is between 1753-01-01 date and the current date, inclusive</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/64</skos:historyNote>
 	<rdfs:label>VALIDATION_NAMEPUBLISHEDINYEAR_INRANGE</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/399ef91d-425c-46f2-a6df-8a0fe4c3e86e"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/399ef91d-425c-46f2-a6df-8a0fe4c3e86e"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
@@ -3385,10 +3385,10 @@
 	<skos:historyNote>Source: VertNet</skos:historyNote>
 	<rdfs:label>ValidationMethod: VALIDATION_NAMEPUBLISHEDINYEAR_INRANGE with Specification for: VALIDATION_NAMEPUBLISHEDINYEAR_INRANGE</rdfs:label>
 	<skos:prefLabel>ValidationMethod: VALIDATION_NAMEPUBLISHEDINYEAR_INRANGE with Specification for: VALIDATION_NAMEPUBLISHEDINYEAR_INRANGE</skos:prefLabel>
-	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/399ef91d-425c-46f2-a6df-8a0fe4c3e86e-2025-03-07"/>
+	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/399ef91d-425c-46f2-a6df-8a0fe4c3e86e-2025-03-07"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/3cfe9ab4-79f8-4afd-8da5-723183ef16a3-2025-03-06">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/3cfe9ab4-79f8-4afd-8da5-723183ef16a3-2025-03-06">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 	<hasResourceType xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqffdq:SingleRecord"/>
 	<skos:note></skos:note>
@@ -3403,14 +3403,14 @@
 	<rdfs:label>Information Element ActedUpon dwc:occurrenceID</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcore/terms/3cfe9ab4-79f8-4afd-8da5-723183ef16a3-2025-03-06">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/3cfe9ab4-79f8-4afd-8da5-723183ef16a3-2025-03-06">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:c25c5737-ece9-4b6d-a5f2-6e661d35c325"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Darwin Core RDF Guide (2015). #1.3.2.1 Persistent Identifiers (normative): https://rs.tdwg.org/dwc/terms/guides/rdf/index.htm#1.3.2.1_Persistent_Identifiers; GUID Applicability Statement: https://github.com/tdwg/guid-as/blob/master/guid/tdwg_guid_applicability_statement.pdf; LSID (Life Science Identifier): https://en.wikipedia.org/wiki/LSID; URN (Uniform Resource Name): https://en.wikipedia.org/wiki/Uniform_Resource_Name; URI (Uniform Resource Identifier): https://en.wikipedia.org/wiki/Uniform_Resource_Identifier; NID (Namespace Identifier): A NID and NSS make up a URN, https://en.wikipedia.org/wiki/Uniform_Resource_Name; NSS (Namespace-Specific String): https://en.wikipedia.org/wiki/Uniform_Resource_Name</dcterms:bibliographicCitation>
 	<rdfs:comment>Does dwc:occurrenceID contain a valid identifier?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/23</skos:historyNote>
 	<rdfs:label>VALIDATION_OCCURRENCEID_STANDARD</rdfs:label>
-	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcore/terms/3cfe9ab4-79f8-4afd-8da5-723183ef16a3"/>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/3cfe9ab4-79f8-4afd-8da5-723183ef16a3"/>
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
@@ -3436,7 +3436,7 @@
 	<skos:historyNote>Source: VertNet</skos:historyNote>
 	<rdfs:label>ValidationMethod: VALIDATION_OCCURRENCEID_STANDARD with Specification for: VALIDATION_OCCURRENCEID_STANDARD</rdfs:label>
 	<skos:prefLabel>ValidationMethod: VALIDATION_OCCURRENCEID_STANDARD with Specification for: VALIDATION_OCCURRENCEID_STANDARD</skos:prefLabel>
-	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqcore/terms/3cfe9ab4-79f8-4afd-8da5-723183ef16a3-2025-03-06"/>
+	<forValidation xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="https://rs.tdwg.org/bdqtest/terms/3cfe9ab4-79f8-4afd-8da5-723183ef16a3-2025-03-06"/>
 </rdf:Description>
 
 </rdf:RDF>

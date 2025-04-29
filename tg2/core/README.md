@@ -1,8 +1,8 @@
-# Files describing and supporting the BDQ Core Tests
+# Files describing and supporting the BDQ Tests
 
-## The BDQ Core Test descriptors
+## The BDQ Test descriptors
 
-These are the authoritative descriptors of the BDQ core Tests, extracted from GitHub issue markdown tables using [bdq_issue_to_csv](https://github.com/kurator-org/bdq_issue_to_csv) one file contains the SingleRecord Tests, the other file the MultiRecord Measures.
+These are the authoritative descriptors of the BDQ Tests, extracted from GitHub issue markdown tables using [bdq_issue_to_csv](https://github.com/kurator-org/bdq_issue_to_csv) one file contains the SingleRecord Tests, the other file the MultiRecord Measures.
 
 - TG2_tests.csv
 - TG2_multirecord_measure_tests.csv
@@ -27,7 +27,7 @@ test_label_mappings.csv
 
 ## Test Validation Data 
 
-These files are for implementers to validate that their implementations of the BDQ Core Tests produce expected results.  They consist of one line per validation, with columns specifying the Test being validated by that row, one column for each of the inputs for the Information Elements and parameters for a single Test, and columns holding the expected outputs.  Each Test has multiple validation rows.  
+These files are for implementers to validate that their implementations of the BDQ Tests produce expected results.  They consist of one line per validation, with columns specifying the Test being validated by that row, one column for each of the inputs for the Information Elements and parameters for a single Test, and columns holding the expected outputs.  Each Test has multiple validation rows.  
 
 TG2_test_validation_data.csv
 TG2_test_validation_data_nonprintingchars.csv
