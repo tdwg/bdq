@@ -7,9 +7,9 @@
 import pandas
 import re
 import sys
-with open ("../vocabulary/bdqtest_term_versions.csv") as csvfile: 
+with open ("../_review/vocabulary/bdqtest_term_versions.csv") as csvfile: 
 	try: 
-		sys.stdout = open("../dist/bdqtest_tests_vertical.csv","w")
+		sys.stdout = open("../_review/dist/bdqtest_tests_vertical.csv","w")
 		# Header
 		# "#","GUID","DateLastUpdated","Label","prefLabel","IE Class","InformationElement:ActedUpon","InformationElement:Consulted","Parameters","Specification","Description","Criterion Label","Type","Resource Type","Dimension","Examples","Source","References","Example Implementations (Mechanisms)","Link to Specification Source Code","Notes","IssueState","IssueLabels","UseCases"
 		rawDataFrame = pandas.read_csv(csvfile)

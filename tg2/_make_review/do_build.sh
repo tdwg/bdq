@@ -1,6 +1,6 @@
 #!/bin/bash
-# From the root of the bdq repository tree:
-cd tg2/_build_review/
+# From _make_review/:
+cd ../_build_review/
 python3 draft_build_bdqtest_qrg.py
 python3 draft_build_bdqffdq.py
 python3 draft_build-docs.py
