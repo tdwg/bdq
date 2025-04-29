@@ -27,7 +27,7 @@ bdqffdq
 {previous_version_slot}
 
 **Abstract**<br>
-This document is a reference for the BDQ Core Standard, forming the landing page for the bdqffdq ontology, describing the ontology, its uses, its vocabulary, and its vocabulary extension.
+This document is a reference for the BDQ standard, forming the landing page for the bdqffdq ontology, describing the ontology, its uses, its vocabulary, and its vocabulary extension.
 
 **Authors**<br>
 [Lee Belbin](https://orcid.org/0000-0001-8900-6203) ([Blatant Fabrications](https://www.wikidata.org/wiki/Q130304884)), [Arthur D. Chapman](https://orcid.org/0000-0003-1700-6962) ([Australian Biodiversity Information Services](http://www.wikidata.org/entity/Q100600913)), [Paul J. Morris](https://orcid.org/0000-0002-3673-444X) ([Museum of Comparative Zoology, Harvard University](http://www.wikidata.org/entity/Q1420782)), [John Wieczorek](https://orcid.org/0000-0003-1144-0290) ([Rauthiflor LLC](http://www.wikidata.org/entity/Q98382028))
@@ -218,32 +218,32 @@ Draft Standard for Review
 
 [References](#references)
 
-[Cite BDQ Core](#cite-bdq-core)
+[Cite BDQ](#cite-bdq)
 
 ## 1. Introduction
 
 ### 1.1 Purpose
 
-The purpose of this document is to present the formal ontology of the Biodiversity Data Quality Fitness for Use Framework, referred to by the namespace `bdqffdq:`. This ontology defines the terms, classes, and relationships used to represent data quality concepts in a structured and interoperable manner. It forms the conceptual and semantic foundation for the BDQ Core standard.
+The purpose of this document is to present the formal ontology of the Biodiversity Data Quality Fitness for Use Framework, referred to by the namespace `bdqffdq:`. This ontology defines the terms, classes, and relationships used to represent data quality concepts in a structured and interoperable manner. It forms the conceptual and semantic foundation for the BDQ standard.
 
 This document gathers normative statements for the ontology, explains how to use it meaningfully within biodiversity data quality workflows, and reflects the open world assumptions of RDF/OWL modeling. It provides a reference for tools and implementations that rely on this ontology for describing quality-related elements such as Use Cases, Specifications, Criteria, Amendments, and Test responses.
 
 ### 1.2 Audience
 
-This document is intended for technical users who need to interact directly with the BDQ Core ontology. It will be especially useful for:
+This document is intended for technical users who need to interact directly with the BDQ ontology. It will be especially useful for:
 
 - Ontology engineers and developers working on semantic web applications or data validation systems
-- Standards developers seeking to align other vocabularies with BDQ Core
-- Implementers generating or consuming RDF data that describes BDQ Core Tests or their results
+- Standards developers seeking to align other vocabularies with the BDQ standard
+- Implementers generating or consuming RDF data that describes BDQ Tests or their results
 - Researchers modeling Use Cases for biodiversity data quality assessments.
 
 Readers should be familiar with ontology concepts, RDF/OWL syntax, and open world reasoning.
 
 ### 1.3 Associated Documents
 
-For the list and links to all associated documents see the [Biodiversity Data Quality (BDQ) Core](../../index.md) page, which lists the parts of the standard.
+For the list and links to all associated documents see the [Biodiversity Data Quality (BDQ)](../../index.md) page, which lists the parts of the standard.
 
-Information about the bdqffdq: ontology, its usage, and its extensions can be found in the following subset of Biodiversity Data Quality (BDQ) Core resources:
+Information about the bdqffdq: ontology, its usage, and its extensions can be found in the following subset of BDQ resources:
 
 - [Fitness For Use Framework Ontology Guide](../guide/bdqffdq/index.md) Provides a visual and narrative introduction to the concepts and application of the ontology.
 - [Fitness For Use Framework Ontology List of Terms](../list/bdqffdq/index.md) The term list document, which enumerates and describes the vocabulary terms.
@@ -266,7 +266,7 @@ The following namespace abbreviations are used in this document:
 | **Abbreviation** | **Namespace** |
 | ------------ | -------------                               |
 | bdq:         | https://rs.tdwg.org/bdq/terms/              |
-| bdqcore:     | https://rs.tdwg.org/bdqcore/terms/          |
+| bdqtest:     | https://rs.tdwg.org/bdqtest/terms/          |
 | bdqcrit:     | https://rs.tdwg.org/bdqcrit/terms/          |
 | bdqdim:      | https://rs.tdwg.org/bdqdim/terms/           |
 | bdqenh:      | https://rs.tdwg.org/bdqenh/terms            |
@@ -302,7 +302,7 @@ The (non-normative) diagram below is intended to help understand the normative s
 
 ![Diagram of Validation, ValidationMethod, and ValidationAssertion with related classes](../guide/bdqffdq/bdqffdq_data_quality_needs_solutions_report_validation.svg "Validation concepts in the Needs, Solutions, and Reports levels.")
 
-The use of classes and properties in [bdqcore:](../../dist/bdqcore.ttl). See also the guidance provided in [Use of Properties (normative)
+The use of classes and properties in [bdqtest:](../../dist/bdqtest.ttl). See also the guidance provided in [Use of Properties (normative)
 ](#21-use-of-properties-normative).
 
 ## 2 Use of Terms (normative) 
@@ -832,7 +832,7 @@ EP(u) = {am | am ⊂ AM ⋀ u ∈ U }
 - Preferred Label: Data Quality Need
 - Definition: A bdqffdq:NeedConcept that expresses what bdqffdq:Assertions may be made about data with respect to fitness for use.
 - SubClass Of: NeedConcept
-- Comments: Subtypes of bdqffdq:DataQualityNeed are the Test Types (Validation, Issue, Measure, and Amendment). The bdqffdq:DataQualityNeed appoximates the informal concept of a Test as used in BDQ Core.
+- Comments: Subtypes of bdqffdq:DataQualityNeed are the Test Types (Validation, Issue, Measure, and Amendment). The bdqffdq:DataQualityNeed appoximates the informal concept of a Test as used in the BDQ standard.
 - View in: [term-list](../list/bdqffdq/index.md#DataQualityNeed)
 
 ********************
@@ -1246,7 +1246,7 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }
 - Name: bdqffdq:appliesTo
 - Preferred Label: applies To
 - Definition: Describes the bdqffdq:DataResource about which a bdqffdq:Assertion is made.
-- Comments: If a bdqffdq:Assertion forms the oa:body of an oa:Annotation, the bdqffdq:appliesTo bdqffdq:DataResource would be the oa:target of the bdqffdq:Annotation. If bdqffdq:Assertions are composed in bdqffdq:DataQualityReports, the bdqffdq:appliesTo bdqffdq:DataResource is an item examined as part of the bdqffdq:DataQualityReport. Expectation for bdqffdq:SingleRecord Test bdqffdq:Assertions on Darwin Core data in BDQ Core is that bdqffdq:appliesTo would point at a dwc:Occurrence record.
+- Comments: If a bdqffdq:Assertion forms the oa:body of an oa:Annotation, the bdqffdq:appliesTo bdqffdq:DataResource would be the oa:target of the bdqffdq:Annotation. If bdqffdq:Assertions are composed in bdqffdq:DataQualityReports, the bdqffdq:appliesTo bdqffdq:DataResource is an item examined as part of the bdqffdq:DataQualityReport. Expectation for bdqffdq:SingleRecord Test bdqffdq:Assertions on Darwin Core data in the BDQ standard is that bdqffdq:appliesTo would point at a dwc:Occurrence record.
 - View in: [term-list](../list/bdqffdq/index.md#appliesTo)
 
 ********************
@@ -1668,7 +1668,7 @@ Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:Impro
 - Name: bdqffdq:hasResponseResultValue
 - Preferred Label: has response result value
 - Definition: Data property carrying the value of a bdqffdq:Assertion when the value is not an object.
-- Comments: Applies to bdqffdq:AmendmentAssertions. To support bdqcore: Tests, bdqffdq:hasResponseResultValue is expected to carry a key:value list where the keys are the names of bdqffdq:ActedUpon bdqffdq:InformationElements, and the values are the proposed new values (filling in or replacing the values of those terms in the input). Applies to bdqffdq:MeasureAssertions that assert a numeric value.
+- Comments: Applies to bdqffdq:AmendmentAssertions. To support bdqtest: Tests, bdqffdq:hasResponseResultValue is expected to carry a key:value list where the keys are the names of bdqffdq:ActedUpon bdqffdq:InformationElements, and the values are the proposed new values (filling in or replacing the values of those terms in the input). Applies to bdqffdq:MeasureAssertions that assert a numeric value.
 - View in: [term-list](../list/bdqffdq/index.md#hasResponseResultValue)
 
 ********************
@@ -2012,19 +2012,19 @@ Note: This is a representation of the MultiRecord Measures that return COMPLETE/
 
 ## Acronyms
 
-For a list of Acronyms see [Acronyms](../intro/index.md#5-acronyms) in the Introduction document.
+A list of Acronyms can be found in the [Acronyms](../../index.md#5-acronyms) section of the Biodiversity Data Quality (BDQ) landing page.
 
 ## Glossary
 
-A glossary of terms additional to those in the various namespaces can be found at [Glossary](../intro/index.md#6-glossary) in the Introduction document.
+A glossary of terms additional to those in the various namespaces can be found in the [Glossary](../../index.md#6-glossary) section of the Biodiversity Data Quality (BDQ) landing page.
 
 ## References
 
-The bibliography for BDQ Core is in the [References](../references/index.md#2-references) document.
+The references for the BDQ standard can be found in the [References](../../index.md#7-references) section of the Biodiversity Data Quality (BDQ) landing page.
 
-## Cite BDQ Core
+## Cite BDQ
 
-**To cite BDQ Core in general, use the peer-reviewed article:**
+**To cite BDQ in general, use the peer-reviewed article:**
 
 Chapman AD, Belbin L, Zermoglio PF, Wieczorek J, Morris PJ, Nicholls
 M, Rees ER, Veiga AK, Thompson A, Saraiva AM, James SA, Gendreau C,
@@ -2032,11 +2032,6 @@ Benson A, Schigel D (2020). Developing Standards for Improved Data
 Quality and for Selecting Fit for Use Biodiversity Data.
 Biodiversity Information Science and Standards 4: e50889.
 https://doi.org/10.3897/biss.4.50889
-
-**To cite the standard document upon which this page is built, use
-the following:**
-
-BDQ Core Maintenance Group 2024. Biodiversity Information Standards (TDWG). http://rs.tdwg.org/bdq/doc/list/
 
 **To cite this document specifically, use the following:**
 

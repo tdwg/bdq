@@ -11,7 +11,7 @@
 
 <https://rs.tdwg.org/bdqffdq/terms> rdf:type owl:Ontology ;
                                      owl:versionIRI <https://rs.tdwg.org/bdqffdq/terms/1.0> ;
-                                     rdfs:comment "The classes and object properties found in this ontology are dedicated to fundamental and derived concepts from the Fitness For Use Framework described in the paper by Veiga et al., available at: http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0178731 as modified to describe data quality fitness for use Tests in the BDQ Core (draft) TDWG Standard."@en ;
+                                     rdfs:comment "The classes and object properties found in this ontology are dedicated to fundamental and derived concepts from the Fitness For Use Framework described in the paper by Veiga et al., available at: http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0178731 as modified to describe data quality fitness for use Tests in the TDWG BDQ Standard."@en ;
                                      rdfs:label "Biodiversity Data Quality Fitness for Use Framework"@en .
 
 #################################################################
@@ -58,7 +58,7 @@ bdqffdq:amendmentProperty rdf:type owl:ObjectProperty ;
 ###  https://rs.tdwg.org/bdqffdq/terms/appliesTo
 bdqffdq:appliesTo rdf:type owl:ObjectProperty ;
                   dcterms:issued "2024-09-30"^^xsd:date ;
-                  rdfs:comment "If a bdqffdq:Assertion forms the oa:body of an oa:Annotation, the bdqffdq:appliesTo bdqffdq:DataResource would be the oa:target of the bdqffdq:Annotation. If bdqffdq:Assertions are composed in bdqffdq:DataQualityReports, the bdqffdq:appliesTo bdqffdq:DataResource is an item examined as part of the bdqffdq:DataQualityReport. Expectation for bdqffdq:SingleRecord Test bdqffdq:Assertions on Darwin Core data in BDQ Core is that bdqffdq:appliesTo would point at a dwc:Occurrence record."@en ;
+                  rdfs:comment "If a bdqffdq:Assertion forms the oa:body of an oa:Annotation, the bdqffdq:appliesTo bdqffdq:DataResource would be the oa:target of the bdqffdq:Annotation. If bdqffdq:Assertions are composed in bdqffdq:DataQualityReports, the bdqffdq:appliesTo bdqffdq:DataResource is an item examined as part of the bdqffdq:DataQualityReport. Expectation for bdqffdq:SingleRecord Test bdqffdq:Assertions on Darwin Core data in the BDQ standard is that bdqffdq:appliesTo would point at a dwc:Occurrence record."@en ;
                   rdfs:label "applies To"@en ;
                   skos:definition "Describes the bdqffdq:DataResource about which a bdqffdq:Assertion is made."@en ;
                   skos:prefLabel "applies To"@en .
@@ -515,7 +515,7 @@ bdqffdq:hasResponseComment rdf:type owl:DatatypeProperty ;
 ###  https://rs.tdwg.org/bdqffdq/terms/hasResponseResultValue
 bdqffdq:hasResponseResultValue rdf:type owl:DatatypeProperty ;
                                dcterms:issued "2024-09-30"^^xsd:date ;
-                               rdfs:comment "Applies to bdqffdq:AmendmentAssertions. To support bdqcore: Tests, bdqffdq:hasResponseResultValue is expected to carry a key:value list where the keys are the names of bdqffdq:ActedUpon bdqffdq:InformationElements, and the values are the proposed new values (filling in or replacing the values of those terms in the input). Applies to bdqffdq:MeasureAssertions that assert a numeric value."@en ;
+                               rdfs:comment "Applies to bdqffdq:AmendmentAssertions. To support bdqtest: Tests, bdqffdq:hasResponseResultValue is expected to carry a key:value list where the keys are the names of bdqffdq:ActedUpon bdqffdq:InformationElements, and the values are the proposed new values (filling in or replacing the values of those terms in the input). Applies to bdqffdq:MeasureAssertions that assert a numeric value."@en ;
                                rdfs:label "has response result value"@en ;
                                skos:definition "Data property carrying the value of a bdqffdq:Assertion when the value is not an object."@en ;
                                skos:prefLabel "has response result value"@en .
@@ -679,7 +679,7 @@ bdqffdq:DataQualityMethod rdf:type owl:Class ;
 bdqffdq:DataQualityNeed rdf:type owl:Class ;
                         rdfs:subClassOf bdqffdq:NeedConcept ;
                         dcterms:issued "2024-09-30"^^xsd:date ;
-                        rdfs:comment "Subtypes of bdqffdq:DataQualityNeed are the Test Types (Validation, Issue, Measure, and Amendment). The bdqffdq:DataQualityNeed appoximates the informal concept of a Test as used in BDQ Core."@en ;
+                        rdfs:comment "Subtypes of bdqffdq:DataQualityNeed are the Test Types (Validation, Issue, Measure, and Amendment). The bdqffdq:DataQualityNeed appoximates the informal concept of a Test as used in the BDQ standard."@en ;
                         rdfs:label "Data Quality Need"@en ;
                         skos:definition "A bdqffdq:NeedConcept that expresses what bdqffdq:Assertions may be made about data with respect to fitness for use."@en ;
                         skos:prefLabel "Data Quality Need"@en .

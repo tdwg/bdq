@@ -25,7 +25,7 @@ bdq
 
 **Previous version**<br>
 **Abstract**<br>
-This document is a reference for the BDQ Core Standard. It covers some terms used in Test Specifications, and especially values used as bdqffdq:Parameters.
+This document is a reference for the BDQ standard. It covers some terms used in Test Specifications, and especially values used as bdqffdq:Parameters.
 
 **Authors**<br>
 [Lee Belbin](https://orcid.org/0000-0001-8900-6203) ([Blatant Fabrications](https://www.wikidata.org/wiki/Q130304884)), [Arthur D. Chapman](https://orcid.org/0000-0003-1700-6962) ([Australian Biodiversity Information Services](http://www.wikidata.org/entity/Q100600913)), [Paul J. Morris](https://orcid.org/0000-0002-3673-444X) ([Museum of Comparative Zoology, Harvard University](http://www.wikidata.org/entity/Q1420782)), [John Wieczorek](https://orcid.org/0000-0003-1144-0290) ([Rauthiflor LLC](http://www.wikidata.org/entity/Q98382028))
@@ -65,32 +65,32 @@ Draft Standard for Review
 
 [References](#references)
 
-[Cite BDQ Core](#cite-bdq-core)
+[Cite BDQ](#cite-bdq)
 
 ## 1. Introduction
 
 ### 1.1 Purpose
 
-The purpose of this document is to provide the full term list for the `bdq:` controlled vocabulary, which supports the specification and use of BDQ Core Tests. The `bdq:` vocabulary includes concepts used throughout the BDQ Core standard to describe parameters, data structures, source authorities, and special value cases relevant to the execution and behavior of Tests.
+The purpose of this document is to provide the full term list for the `bdq:` controlled vocabulary, which supports the specification and use of BDQ Tests. The `bdq:` vocabulary includes concepts used throughout the BDQ standard to describe parameters, data structures, source authorities, and special value cases relevant to the execution and behavior of Tests.
 
 This term list defines the formal structure and meanings of these concepts and provides reference material for implementation and documentation purposes.
 
 ### 1.2 Audience
 
-This document is intended for technical users who need a precise understanding of the vocabulary elements used in BDQ Core Test specifications and reports. It will be particularly useful for:
+This document is intended for technical users who need a precise understanding of the vocabulary elements used in BDQ Test specifications and reports. It will be particularly useful for:
 
-- Implementers interpreting or extending BDQ Core Test logic
-- Standards developers and data quality modelers working with BDQ Core vocabularies
+- Implementers interpreting or extending BDQ Test logic
+- Standards developers and data quality modelers working with BDQ vocabularies
 - Analysts and system designers configuring parameterized data quality assessments
 - Curators needing to understand the conceptual basis for different Test evaluations
 
-Familiarity with RDF vocabularies and the BDQ Core framework is recommended for full comprehension, but the document is organized to be accessible for any reader needing detailed term definitions.
+Familiarity with RDF vocabularies and the BDQ Framework is recommended for full comprehension, but the document is organized to be accessible for any reader needing detailed term definitions.
 
 ### 1.3 Data Quality Vocabulary Terms
 
-The `bdq:` vocabulary includes four groups of concepts used across BDQ Core:
+The `bdq:` vocabulary includes four groups of concepts used across the BDQ standard:
 
-- **Use Cases** (`bdqffdq:UseCase`) – formal representations of the purposes for which data might be evaluated using BDQ Core Tests.
+- **Use Cases** (`bdqffdq:UseCase`) – formal representations of the purposes for which data might be evaluated using BDQ Tests.
 - **Test Parameters** (`bdqffdq:Parameter`) – concepts used to configure the behavior of Tests, including named parameters like `bdq:sourceAuthority`.
 - **Information Elements** – used by MultiRecord Measure Tests to refer to aggregated or referenced values.
 - **Empty/NotEmpty Concepts** – `bdq:Empty` and `bdq:NotEmpty`, which provide shared semantics for Tests dealing with missing or present values.
@@ -99,7 +99,7 @@ These terms ensure consistent representation and enable structured interpretatio
 
 ### 1.4 Associated Documents
 
-For the list and links to all associated documents see the [Biodiversity Data Quality (BDQ) Core](../../index.md) page, which lists the parts of the standard.
+For the list and links to all associated documents see the [Biodiversity Data Quality (BDQ)](../../index.md) page, which lists the parts of the standard.
 
 ### 1.5 Term List Distributions
 
@@ -129,7 +129,7 @@ The following namespace abbreviations are used in this document:
 | **Abbreviation** | **Namespace** |
 | ------------ | -------------                               |
 | bdq:         | https://rs.tdwg.org/bdq/terms/              |
-| bdqcore:     | https://rs.tdwg.org/bdqcore/terms/          |
+| bdqtest:     | https://rs.tdwg.org/bdqtest/terms/          |
 | bdqdim:      | https://rs.tdwg.org/bdqdim/terms/           |
 | bdqffdq:     | https://rs.tdwg.org/bdqffdq/terms           |
 | dc:          | https://purl.org/dc/elements/1.1/           |
@@ -420,7 +420,7 @@ In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use th
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>Used in Test "ANNOTATION_ISSUE_NOTEMPTY" (bdqcore:fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1).</td>
+			<td>Used in Test "ANNOTATION_ISSUE_NOTEMPTY" (bdqtest:fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1).</td>
 		</tr>
 		<tr>
 			<td>Status</td>
@@ -466,7 +466,7 @@ In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use th
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>Used in Test "ANNOTATION_ISSUE_NOTEMPTY" (bdqcore:fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1).</td>
+			<td>Used in Test "ANNOTATION_ISSUE_NOTEMPTY" (bdqtest:fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1).</td>
 		</tr>
 		<tr>
 			<td>Status</td>
@@ -512,7 +512,7 @@ In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use th
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>See VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT (bdqcore:b9c184ce-a859-410c-9d12-71a338200380).</td>
+			<td>See VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT (bdqtest:b9c184ce-a859-410c-9d12-71a338200380).</td>
 		</tr>
 		<tr>
 			<td>Status</td>
@@ -604,7 +604,7 @@ In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use th
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>See Test AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT (bdqcore:7498ca76-c4d4-42e2-8103-acacccbdffa7).</td>
+			<td>See Test AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT (bdqtest:7498ca76-c4d4-42e2-8103-acacccbdffa7).</td>
 		</tr>
 		<tr>
 			<td>Status</td>
@@ -788,7 +788,7 @@ In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use th
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>See also: bdq:NotEmpty. In BDQ Core, bdq:Empty is used to evaluate bdqffdq:InformationElements within a Test specification, it therefore means empty if the dataset being evaluated does not contain the term matching the Information Element, or if the dataset contains that term but the value for that term is empty. The phrasing 'in the context of the evauation' is to allow the Test implementations to be independent of, and agnostic about the data structures presented to a framework for executing the Tests and the framework within which the Tests are run. The term bdq:Empty is defined to be more broadly usable than just with bdqcore. Note: A bdqffdq:InformationElement containing invalid characters (e.g., letters in an Information Element that would be expected to contain integers) or values (including string serializations of the NULL value) are bdq:NotEmpty and their invalidity must be separately detected. The definition of bdq:Empty is not applicable to a discussion of what value to include in a controlled vocabulary to indicate that no meaningful value is present, so no suggestion is made that bdq:Empty should be used as a data value to represent some form of 'Null', 'unknown', 'not recorded', etc. Choices there would fall into the semantics for some set of controlled vocabularies. The relevance to such a discussion is that the definition of bdq:Empty would treat an empty string as an empty value, with no semantics attached as to why the value is empty</td>
+			<td>See also: bdq:NotEmpty. In the BDQ standard, bdq:Empty is used to evaluate bdqffdq:InformationElements within a Test specification, it therefore means empty if the dataset being evaluated does not contain the term matching the Information Element, or if the dataset contains that term but the value for that term is empty. The phrasing 'in the context of the evauation' is to allow the Test implementations to be independent of, and agnostic about the data structures presented to a framework for executing the Tests and the framework within which the Tests are run. The term bdq:Empty is defined to be more broadly usable than just with bdqtest. Note: A bdqffdq:InformationElement containing invalid characters (e.g., letters in an Information Element that would be expected to contain integers) or values (including string serializations of the NULL value) are bdq:NotEmpty and their invalidity must be separately detected. The definition of bdq:Empty is not applicable to a discussion of what value to include in a controlled vocabulary to indicate that no meaningful value is present, so no suggestion is made that bdq:Empty should be used as a data value to represent some form of 'Null', 'unknown', 'not recorded', etc. Choices there would fall into the semantics for some set of controlled vocabularies. The relevance to such a discussion is that the definition of bdq:Empty would treat an empty string as an empty value, with no semantics attached as to why the value is empty</td>
 		</tr>
 		<tr>
 			<td>Status</td>
@@ -834,7 +834,7 @@ In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use th
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>See VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT (bdqcore:b9c184ce-a859-410c-9d12-71a338200380)</td>
+			<td>See VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT (bdqtest:b9c184ce-a859-410c-9d12-71a338200380)</td>
 		</tr>
 		<tr>
 			<td>Status</td>
@@ -880,7 +880,7 @@ In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use th
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>Used in Test "VALIDATION_DATEIDENTIFIED_INRANGE" (bdqcore:dc8aae4b-134f-4d75-8a71-c4186239178e).</td>
+			<td>Used in Test "VALIDATION_DATEIDENTIFIED_INRANGE" (bdqtest:dc8aae4b-134f-4d75-8a71-c4186239178e).</td>
 		</tr>
 		<tr>
 			<td>Status</td>
@@ -1156,7 +1156,7 @@ In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use th
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>See also: bdq:Empty. In BDQ Core, bdq:NotEmpty is used to evaluate bdqffdq:InformationElements within a Test specification. Common string serializations of null such as '\N', 'NA', 'NaN', and NULL are treated as bdq:NotEmpty. If '\N' is present in a dataset, Tests are expected to explicitly treat that value as bdq:NotEmpty, and then try to evaluate it against whatever other criteria may apply. The term bdq:NotEmpty is defined to be more broadly usable than the scope of BDQ Tests. </td>
+			<td>See also: bdq:Empty. In the BDQ standard, bdq:NotEmpty is used to evaluate bdqffdq:InformationElements within a Test specification. Common string serializations of null such as '\N', 'NA', 'NaN', and NULL are treated as bdq:NotEmpty. If '\N' is present in a dataset, Tests are expected to explicitly treat that value as bdq:NotEmpty, and then try to evaluate it against whatever other criteria may apply. The term bdq:NotEmpty is defined to be more broadly usable than the scope of BDQ Tests. </td>
 		</tr>
 		<tr>
 			<td>Status</td>
@@ -1432,7 +1432,7 @@ In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use th
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>See VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT (bdqcore:b9c184ce-a859-410c-9d12-71a338200380).</td>
+			<td>See VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT (bdqtest:b9c184ce-a859-410c-9d12-71a338200380).</td>
 		</tr>
 		<tr>
 			<td>Status</td>
@@ -1450,22 +1450,21 @@ In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use th
 </table>
 
 
-
 ## Acronyms
 
-For a list of Acronyms see [Acronyms](../../intro/index.md#5-acronyms) in the Introduction document.
+A list of Acronyms can be found in the [Acronyms](../../index.md#5-acronyms) section of the Biodiversity Data Quality (BDQ) landing page.
 
 ## Glossary
 
-A glossary of terms additional to those in the various namespaces can be found at [Glossary](../../intro/index.md#6-glossary) in the Introduction document.
+A glossary of terms additional to those in the various namespaces can be found in the [Glossary](../../index.md#6-glossary) section of the Biodiversity Data Quality (BDQ) landing page.
 
 ## References
 
-The bibliography for BDQ Core is in the [References](../../references/index.md#2-references) document.
+The references for the BDQ standard can be found in the [References](../../index.md#7-references) section of the Biodiversity Data Quality (BDQ) landing page.
 
-## Cite BDQ Core
+## Cite BDQ
 
-**To cite BDQ Core in general, use the peer-reviewed article:**
+**To cite BDQ in general, use the peer-reviewed article:**
 
 Chapman AD, Belbin L, Zermoglio PF, Wieczorek J, Morris PJ, Nicholls
 M, Rees ER, Veiga AK, Thompson A, Saraiva AM, James SA, Gendreau C,
@@ -1474,11 +1473,6 @@ Quality and for Selecting Fit for Use Biodiversity Data.
 Biodiversity Information Science and Standards 4: e50889.
 https://doi.org/10.3897/biss.4.50889
 
-**To cite the standard document upon which this page is built, use
-the following:**
-
-BDQ Core Maintenance Group 2024. Biodiversity Information Standards (TDWG). http://rs.tdwg.org/bdq/doc/list/
-
 **To cite this document specifically, use the following:**
 
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. BDQ Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/terms/2025-04-11>
@@ -1486,5 +1480,3 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
 **Biodiversity Information Standards (TDWG)**
 
 This content made open by Biodiversity Information Standards (TDWG) is licensed under a [Licensed under a Creative Commons Attribution 4.0 International (CC BY) License.](http://creativecommons.org/licenses/by/4.0/)
-
-

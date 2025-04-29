@@ -8,7 +8,7 @@ xmlns:bdq="https://rs.tdwg.org/bdq/terms/"
 xmlns:bdqdim="https://rs.tdwg.org/bdqdim/terms/"
 xmlns:bdqenh="https://rs.tdwg.org/bdqenh/terms/"
 xmlns:bdqcrit="https://rs.tdwg.org/bdqcrit/terms/"
-xmlns:bdqcore="https://rs.tdwg.org/bdqcore/terms/"
+xmlns:bdqtest="https://rs.tdwg.org/bdqtest/terms/"
 xmlns:bdqffdq="https://rs.tdwg.org/bdqffdq/terms/"
 xmlns:dcterms="http://purl.org/dc/terms/"
 xmlns:dwc="http://rs.tdwg.org/dwc/terms/"
@@ -66,7 +66,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <tdwgutility:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recommended</tdwgutility:status>
      <rdfs:label xml:lang="en">annotationAlertIf</rdfs:label>
      <skos:prefLabel xml:lang="en">annotationAlertIf</skos:prefLabel>
-     <rdfs:comment xml:lang="en">Used in Test "ANNOTATION_ISSUE_NOTEMPTY" (bdqcore:fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1).</rdfs:comment>
+     <rdfs:comment xml:lang="en">Used in Test "ANNOTATION_ISSUE_NOTEMPTY" (bdqtest:fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1).</rdfs:comment>
      <skos:definition xml:lang="en">Optionally establishes if an annotation exists in a bdq:ParamaterizedTest within a bdq:annotationSystem by describing the criteria for relating annotations in the system to records within the bdq:ParameterizedTest.</skos:definition>
      <rdf:value>annotationAlertIf</rdf:value>
      <skos:inScheme rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
@@ -80,7 +80,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <tdwgutility:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recommended</tdwgutility:status>
      <rdfs:label xml:lang="en">annotationSystem</rdfs:label>
      <skos:prefLabel xml:lang="en">annotationSystem</skos:prefLabel>
-     <rdfs:comment xml:lang="en">Used in Test "ANNOTATION_ISSUE_NOTEMPTY" (bdqcore:fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1).</rdfs:comment>
+     <rdfs:comment xml:lang="en">Used in Test "ANNOTATION_ISSUE_NOTEMPTY" (bdqtest:fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1).</rdfs:comment>
      <skos:definition xml:lang="en">Optionally establishes a system for annotations in a bdq:ParamaterizedTest, with the default being the w3c Annotations Data Model's "oa:Annotation"</skos:definition>
      <rdf:value>annotationSystem</rdf:value>
      <skos:inScheme rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
@@ -94,7 +94,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <tdwgutility:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recommended</tdwgutility:status>
      <rdfs:label xml:lang="en">assumptionOnUnknownBiome</rdfs:label>
      <skos:prefLabel xml:lang="en">assumptionOnUnknownBiome</skos:prefLabel>
-     <rdfs:comment xml:lang="en">See VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT (bdqcore:b9c184ce-a859-410c-9d12-71a338200380).</rdfs:comment>
+     <rdfs:comment xml:lang="en">See VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT (bdqtest:b9c184ce-a859-410c-9d12-71a338200380).</rdfs:comment>
      <skos:definition xml:lang="en">Used when a bdq:taxonomyIsMarine source authority is unable to assert the marine or non-marine status of a taxon, the biome (either "marine or "nonmarine") to assume, with the default being "noassumption".</skos:definition>
      <rdf:value>assumptionOnUnknownBiome</rdf:value>
      <skos:inScheme rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
@@ -122,7 +122,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <tdwgutility:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recommended</tdwgutility:status>
      <rdfs:label xml:lang="en">defaultGeodeticDatum</rdfs:label>
      <skos:prefLabel xml:lang="en">defaultGeodeticDatum</skos:prefLabel>
-     <rdfs:comment xml:lang="en">See Test AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT (bdqcore:7498ca76-c4d4-42e2-8103-acacccbdffa7).</rdfs:comment>
+     <rdfs:comment xml:lang="en">See Test AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT (bdqtest:7498ca76-c4d4-42e2-8103-acacccbdffa7).</rdfs:comment>
      <skos:definition xml:lang="en">Optionally establishes the default geodetic datum in a bdq:ParamaterizedTest. A default geodetic datum is supplied in cases where a bdq:Parameter is not set at the time the Test is run.</skos:definition>
      <rdf:value>defaultGeodeticDatum</rdf:value>
      <skos:inScheme rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
@@ -178,7 +178,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <tdwgutility:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recommended</tdwgutility:status>
      <rdfs:label xml:lang="en">Empty</rdfs:label>
      <skos:prefLabel xml:lang="en">Empty</skos:prefLabel>
-     <rdfs:comment xml:lang="en">See also: bdq:NotEmpty. In BDQ Core, bdq:Empty is used to evaluate bdqffdq:InformationElements within a Test specification, it therefore means empty if the dataset being evaluated does not contain the term matching the Information Element, or if the dataset contains that term but the value for that term is empty. The phrasing 'in the context of the evauation' is to allow the Test implementations to be independent of, and agnostic about the data structures presented to a framework for executing the Tests and the framework within which the Tests are run. The term bdq:Empty is defined to be more broadly usable than just with bdqcore. Note: A bdqffdq:InformationElement containing invalid characters (e.g., letters in an Information Element that would be expected to contain integers) or values (including string serializations of the NULL value) are bdq:NotEmpty and their invalidity must be separately detected. The definition of bdq:Empty is not applicable to a discussion of what value to include in a controlled vocabulary to indicate that no meaningful value is present, so no suggestion is made that bdq:Empty should be used as a data value to represent some form of 'Null', 'unknown', 'not recorded', etc. Choices there would fall into the semantics for some set of controlled vocabularies. The relevance to such a discussion is that the definition of bdq:Empty would treat an empty string as an empty value, with no semantics attached as to why the value is empty</rdfs:comment>
+     <rdfs:comment xml:lang="en">See also: bdq:NotEmpty. In the BDQ standard, bdq:Empty is used to evaluate bdqffdq:InformationElements within a Test specification, it therefore means empty if the dataset being evaluated does not contain the term matching the Information Element, or if the dataset contains that term but the value for that term is empty. The phrasing 'in the context of the evauation' is to allow the Test implementations to be independent of, and agnostic about the data structures presented to a framework for executing the Tests and the framework within which the Tests are run. The term bdq:Empty is defined to be more broadly usable than just with bdqtest. Note: A bdqffdq:InformationElement containing invalid characters (e.g., letters in an Information Element that would be expected to contain integers) or values (including string serializations of the NULL value) are bdq:NotEmpty and their invalidity must be separately detected. The definition of bdq:Empty is not applicable to a discussion of what value to include in a controlled vocabulary to indicate that no meaningful value is present, so no suggestion is made that bdq:Empty should be used as a data value to represent some form of 'Null', 'unknown', 'not recorded', etc. Choices there would fall into the semantics for some set of controlled vocabularies. The relevance to such a discussion is that the definition of bdq:Empty would treat an empty string as an empty value, with no semantics attached as to why the value is empty</rdfs:comment>
      <skos:definition xml:lang="en">An evaluation of a value, which in the context of the evaluation, returns true if the value does not contain any characters or values other than those in the range U+0000 to U+0020, otherwise returns false. </skos:definition>
      <rdf:value>Empty</rdf:value>
      <skos:inScheme rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
@@ -192,7 +192,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <tdwgutility:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recommended</tdwgutility:status>
      <rdfs:label xml:lang="en">geospatialLand</rdfs:label>
      <skos:prefLabel xml:lang="en">geospatialLand</skos:prefLabel>
-     <rdfs:comment xml:lang="en">See VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT (bdqcore:b9c184ce-a859-410c-9d12-71a338200380)</rdfs:comment>
+     <rdfs:comment xml:lang="en">See VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT (bdqtest:b9c184ce-a859-410c-9d12-71a338200380)</rdfs:comment>
      <skos:definition xml:lang="en">A bdq:sourceAuthority consisting of polygons that have been derived from a union of Natural Earth vectors for Land and for Minor Islands at 1:10,000,000 resolution.</skos:definition>
      <rdf:value>geospatialLand</rdf:value>
      <skos:inScheme rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
@@ -206,7 +206,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <tdwgutility:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recommended</tdwgutility:status>
      <rdfs:label xml:lang="en">includeEventDate</rdfs:label>
      <skos:prefLabel xml:lang="en">includeEventDate</skos:prefLabel>
-     <rdfs:comment xml:lang="en">Used in Test "VALIDATION_DATEIDENTIFIED_INRANGE" (bdqcore:dc8aae4b-134f-4d75-8a71-c4186239178e).</rdfs:comment>
+     <rdfs:comment xml:lang="en">Used in Test "VALIDATION_DATEIDENTIFIED_INRANGE" (bdqtest:dc8aae4b-134f-4d75-8a71-c4186239178e).</rdfs:comment>
      <skos:definition xml:lang="en">Allows dwc:eventDate to be excluded in a bdq:ParameterizedTest. The default is to include the event date in the Test, but it may be excluded to allow an identification to be prior to the dwc:eventDate.</skos:definition>
      <rdf:value>includeEventDate</rdf:value>
      <skos:inScheme rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
@@ -290,7 +290,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <tdwgutility:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recommended</tdwgutility:status>
      <rdfs:label xml:lang="en">NotEmpty</rdfs:label>
      <skos:prefLabel xml:lang="en">NotEmpty</skos:prefLabel>
-     <rdfs:comment xml:lang="en">See also: bdq:Empty. In BDQ Core, bdq:NotEmpty is used to evaluate bdqffdq:InformationElements within a Test specification. Common string serializations of null such as '\N', 'NA', 'NaN', and NULL are treated as bdq:NotEmpty. If '\N' is present in a dataset, Tests are expected to explicitly treat that value as bdq:NotEmpty, and then try to evaluate it against whatever other criteria may apply. The term bdq:NotEmpty is defined to be more broadly usable than the scope of BDQ Tests. </rdfs:comment>
+     <rdfs:comment xml:lang="en">See also: bdq:Empty. In the BDQ standard, bdq:NotEmpty is used to evaluate bdqffdq:InformationElements within a Test specification. Common string serializations of null such as '\N', 'NA', 'NaN', and NULL are treated as bdq:NotEmpty. If '\N' is present in a dataset, Tests are expected to explicitly treat that value as bdq:NotEmpty, and then try to evaluate it against whatever other criteria may apply. The term bdq:NotEmpty is defined to be more broadly usable than the scope of BDQ Tests. </rdfs:comment>
      <skos:definition xml:lang="en">An evaluation of a value, which in the context of the evaluation, returns false if the value contains any characters or values other than those in the range U+0000 to U+0020, otherwise returns true. </skos:definition>
      <rdf:value>NotEmpty</rdf:value>
      <skos:inScheme rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
@@ -374,7 +374,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <tdwgutility:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recommended</tdwgutility:status>
      <rdfs:label xml:lang="en">taxonIsMarine</rdfs:label>
      <skos:prefLabel xml:lang="en">taxonIsMarine</skos:prefLabel>
-     <rdfs:comment xml:lang="en">See VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT (bdqcore:b9c184ce-a859-410c-9d12-71a338200380).</rdfs:comment>
+     <rdfs:comment xml:lang="en">See VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT (bdqtest:b9c184ce-a859-410c-9d12-71a338200380).</rdfs:comment>
      <skos:definition xml:lang="en">A bdq:sourceAuthority that uses dwc:scientificName to deterrmine the "marine" or "non-marine" status of a taxon using the "Environment" term obtained from the World Register of Marine Species (WORMS) database.</skos:definition>
      <rdf:value>taxonIsMarine</rdf:value>
      <skos:inScheme rdf:resource="http://rs.tdwg.org/bdq/terms/"/>

@@ -25,7 +25,7 @@ bdqenh
 
 **Previous version**<br>
 **Abstract**<br>
-This document is a reference for the BDQ Core Standard. It covers the vocabulary terms that are types of bdqffdq:Enhancement (originally defined in Veiga 2016 and Veiga et al. 2017) and form the controlled vocabulary for bdqffdq:hasEnhancement.
+This document is a reference for the BDQ standard. It covers the vocabulary terms that are types of bdqffdq:Enhancement (originally defined in Veiga 2016 and Veiga et al. 2017) and form the controlled vocabulary for bdqffdq:hasEnhancement.
 
 **Authors**<br>
 [Lee Belbin](https://orcid.org/0000-0001-8900-6203) ([Blatant Fabrications](https://www.wikidata.org/wiki/Q130304884)), [Arthur D. Chapman](https://orcid.org/0000-0003-1700-6962) ([Australian Biodiversity Information Services](http://www.wikidata.org/entity/Q100600913)), [Paul J. Morris](https://orcid.org/0000-0002-3673-444X) ([Museum of Comparative Zoology, Harvard University](http://www.wikidata.org/entity/Q1420782)), [John Wieczorek](https://orcid.org/0000-0003-1144-0290) ([Rauthiflor LLC](http://www.wikidata.org/entity/Q98382028))
@@ -65,25 +65,25 @@ Draft Standard for Review
 
 [References](#references)
 
-[Cite BDQ Core](#cite-bdq-core)
+[Cite BDQ](#cite-bdq)
 
 ## 1. Introduction
 
 ### 1.1 Purpose
 
-The purpose of this document is to provide the full term list for the `bdqenh:` controlled vocabulary, which defines the values of `bdqffdq:Enhancement` used in BDQ Core Amendment Tests. Each Enhancement describes a general strategy by which data may be modified or supplemented to improve its quality in alignment with a specified Use Case.
+The purpose of this document is to provide the full term list for the `bdqenh:` controlled vocabulary, which defines the values of `bdqffdq:Enhancement` used in BDQ Amendment Tests. Each Enhancement describes a general strategy by which data may be modified or supplemented to improve its quality in alignment with a specified Use Case.
 
 These terms support the formal description of how Amendments propose changes to data and clarify the intended nature of those proposals.
 
 ### 1.2 Audience
 
-This document is intended for users who need a technical understanding of how BDQ Core Amendment Tests describe proposed improvements to data. It will be especially useful for:
+This document is intended for users who need a technical understanding of how BDQ Amendment Tests describe proposed improvements to data. It will be especially useful for:
 
 - Implementers developing systems that generate or evaluate data quality Amendments
-- Standards developers and data quality modelers working with the BDQ Core Framework Ontology
+- Standards developers and data quality modelers working with the BDQ Framework Ontology
 - Analysts and data curators reviewing Test results in the context of proposed changes to datasets
 
-Some familiarity with the structure of BDQ Core Tests and the Framework Ontology is recommended.
+Some familiarity with the structure of BDQ Tests and the Framework Ontology is recommended.
 
 ### 1.3 Data Quality Enhancements
 
@@ -91,13 +91,13 @@ The concept of `bdqffdq:Enhancement`, as defined by Veiga (2016) and Veiga et al
 
 Enhancements describe, in abstract terms, what a `bdqffdq:Specification` expresses concretely. While Enhancements are informally related to Data Quality Dimensions (e.g., a `Standardized` enhancement might relate to `Conformance`), those relationships are not formally encoded.
 
-Each `bdqffdq:Amendment` Test in `bdqcore:` proposes a change to one or more data values (`bdqffdq:InformationElements`) based on a specific Enhancement. For example, the Test [`AMENDMENT_EVENTDATE_STANDARDIZED`](https://rs.tdwg.org/bdqcore/terms/718dfc3c-cb52-4fca-b8e2-0e722f375da7) evaluates the term `dwc:eventDate` and may propose a revised value formatted according to the ISO 8601 standard. The Enhancement in this case is `bdqenh:Standardized`.
+Each `bdqffdq:Amendment` Test in `bdqtest:` proposes a change to one or more data values (`bdqffdq:InformationElements`) based on a specific Enhancement. For example, the Test [`AMENDMENT_EVENTDATE_STANDARDIZED`](https://rs.tdwg.org/bdqtest/terms/718dfc3c-cb52-4fca-b8e2-0e722f375da7) evaluates the term `dwc:eventDate` and may propose a revised value formatted according to the ISO 8601 standard. The Enhancement in this case is `bdqenh:Standardized`.
 
 Enhancements are only applicable to Tests of type `bdqffdq:Amendment`.
 
 ### 1.4 Associated Documents
 
-For the list and links to all associated documents see the [Biodiversity Data Quality (BDQ) Core](../../index.md) page, which lists the parts of the standard.
+For the list and links to all associated documents see the [Biodiversity Data Quality (BDQ)](../../index.md) page, which lists the parts of the standard.
 
 ### 1.5 Term List Distributions
 
@@ -127,7 +127,7 @@ The following namespace abbreviations are used in this document:
 | **Abbreviation** | **Namespace** |
 | ------------ | -------------                               |
 | bdq:         | https://rs.tdwg.org/bdq/terms/              |
-| bdqcore:     | https://rs.tdwg.org/bdqcore/terms/          |
+| bdqtest:     | https://rs.tdwg.org/bdqtest/terms/          |
 | bdqdim:      | https://rs.tdwg.org/bdqdim/terms/           |
 | bdqenh:      | https://rs.tdwg.org/bdqenh/terms            |
 | bdqffdq:     | https://rs.tdwg.org/bdqffdq/terms           |
@@ -423,22 +423,21 @@ An instance of bdqffdq:Validation, bdqffdq:Issue, or bdqffdq:Measure SHOULD NOT 
 </table>
 
 
-
 ## Acronyms
 
-For a list of Acronyms see [Acronyms](../../intro/index.md#5-acronyms) in the Introduction document.
+A list of Acronyms can be found in the [Acronyms](../../index.md#5-acronyms) section of the Biodiversity Data Quality (BDQ) landing page.
 
 ## Glossary
 
-A glossary of terms additional to those in the various namespaces can be found at [Glossary](../../intro/index.md#6-glossary) in the Introduction document.
+A glossary of terms additional to those in the various namespaces can be found in the [Glossary](../../index.md#6-glossary) section of the Biodiversity Data Quality (BDQ) landing page.
 
 ## References
 
-The bibliography for BDQ Core is in the [References](../../references/index.md#2-references) document.
+The references for the BDQ standard can be found in the [References](../../index.md#7-references) section of the Biodiversity Data Quality (BDQ) landing page.
 
-## Cite BDQ Core
+## Cite BDQ
 
-**To cite BDQ Core in general, use the peer-reviewed article:**
+**To cite BDQ in general, use the peer-reviewed article:**
 
 Chapman AD, Belbin L, Zermoglio PF, Wieczorek J, Morris PJ, Nicholls
 M, Rees ER, Veiga AK, Thompson A, Saraiva AM, James SA, Gendreau C,
@@ -447,11 +446,6 @@ Quality and for Selecting Fit for Use Biodiversity Data.
 Biodiversity Information Science and Standards 4: e50889.
 https://doi.org/10.3897/biss.4.50889
 
-**To cite the standard document upon which this page is built, use
-the following:**
-
-BDQ Core Maintenance Group 2024. Biodiversity Information Standards (TDWG). http://rs.tdwg.org/bdq/doc/list/
-
 **To cite this document specifically, use the following:**
 
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Data Quality Enhancement Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/bdqenh/terms/2025-04-11>
@@ -459,5 +453,3 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
 **Biodiversity Information Standards (TDWG)**
 
 This content made open by Biodiversity Information Standards (TDWG) is licensed under a [Licensed under a Creative Commons Attribution 4.0 International (CC BY) License.](http://creativecommons.org/licenses/by/4.0/)
-
-

@@ -28,7 +28,7 @@ Fitness For Use Framework Ontology Guide
 **Previous version**<br>
 
 **Abstract**<br>
-This document is a user's guide for the BDQ Core Standard, describing the organization and use of the bdqffdq: ontology.  The BDQ Conceptual Framework ontology formally describes the terms and relationships between them for evaluating the quality of biodiversity data. Due to the comprehensiveness of the conceptual framework, it allows different interpretations and manners of using it according to different stakeholders. The Framework also provides a base for the bdq: and bdqcore: namespace vocabularies.
+This document is a user's guide for the BDQ standard, describing the organization and use of the bdqffdq: ontology.  The BDQ Conceptual Framework ontology formally describes the terms and relationships between them for evaluating the quality of biodiversity data. Due to the comprehensiveness of the conceptual framework, it allows different interpretations and manners of using it according to different stakeholders. The Framework also provides a base for the bdq: and bdqcore: namespace vocabularies.
 
 **Authors**<br>
 [Lee Belbin](https://orcid.org/0000-0001-8900-6203) ([Blatant Fabrications](https://www.wikidata.org/wiki/Q130304884)), [Arthur D. Chapman](https://orcid.org/0000-0003-1700-6962) ([Australian Biodiversity Information Services](http://www.wikidata.org/entity/Q100600913)), [Paul J. Morris](https://orcid.org/0000-0002-3673-444X) ([Museum of Comparative Zoology, Harvard University](http://www.wikidata.org/entity/Q1420782)), [John Wieczorek](https://orcid.org/0000-0003-1144-0290) ([Rauthiflor LLC](http://www.wikidata.org/entity/Q98382028))
@@ -61,8 +61,8 @@ Draft Standard for Review
     - [3.2.3 Concepts in the framework, Test Types: Validation, Issue, Measure, Amendment](#323-concepts-in-the-framework-test-types-validation-issue-measure-amendment)
   - [3.3 Data Quality Needs, Data Quality Mechanisms, Data Quality Reports](#33-data-quality-needs-data-quality-mechanisms-data-quality-reports)
   - [3.4 Responses](#34-responses)
-  - [3.5 Organization of the bdqcore classes](#35-organization-of-the-bdqcore-classes)
-  - [3.6 Example representation of a BDQ Core Test](#36-example-representation-of-a-bdq-core-test)
+  - [3.5 Organization of the bdqtest classes](#35-organization-of-the-bdqtest-classes)
+  - [3.6 Example representation of a BDQ Test](#36-example-representation-of-a-bdq-test)
   - [3.7 Cardinality of bdqffdq terms](#37-cardinality-of-bdqffdq-terms)
 
 [4 Term index](#4-term-index)
@@ -181,32 +181,32 @@ Draft Standard for Review
 
 [References](#references)
 
-[Cite BDQ Core](#cite-bdq-core)
+[Cite BDQ](#cite-bdq)
 
 ## 1. Introduction
 
 ### 1.1 Purpose
 
-The purpose of this document is to provide a practical guide to understanding and using the BDQ Core Fitness for Use Framework Ontology, represented by the `bdqffdq:` vocabulary. This ontology defines a formal framework for describing data quality in the context of biodiversity data, emphasizing that quality is always relative to a particular purpose or use.
+The purpose of this document is to provide a practical guide to understanding and using the BDQ Fitness for Use Framework Ontology, represented by the `bdqffdq:` vocabulary. This ontology defines a formal framework for describing data quality in the context of biodiversity data, emphasizing that quality is always relative to a particular purpose or use.
 
-The document explains key concepts from the ontology, including `UseCase`, `InformationElement`, `Specification`, and `Criterion`, and shows how they support the structure and semantics of BDQ Core Tests. It provides context, illustrative examples, and guidance for interpreting the ontology as applied in real-world implementations.
+The document explains key concepts from the ontology, including `UseCase`, `InformationElement`, `Specification`, and `Criterion`, and shows how they support the structure and semantics of BDQ Tests. It provides context, illustrative examples, and guidance for interpreting the ontology as applied in real-world implementations.
 
 ### 1.2 Audience
 
-This guide is intended for users who need a technical understanding of the BDQ Core conceptual framework and its ontology. It will be particularly useful for:
+This guide is intended for users who need a technical understanding of the BDQ conceptual framework and its ontology. It will be particularly useful for:
 
-- Ontology engineers and information modelers incorporating BDQ Core into semantic systems
-- Standards developers aligning other biodiversity data quality frameworks with BDQ Core
-- Implementers needing to understand how BDQ Core Tests are formally structured and classified
-- Advanced users exploring the logical foundation behind BDQ Core Test design.
+- Ontology engineers and information modelers incorporating the BDQ standard into semantic systems
+- Standards developers aligning other biodiversity data quality frameworks with the BDQ standard
+- Implementers needing to understand how BDQ Tests are formally structured and classified
+- Advanced users exploring the logical foundation behind BDQ Test design.
 
 Some familiarity with RDF/OWL ontologies is assumed.
 
 ### 1.3 Associated Documents
 
-For the list and links to all associated documents see the [Biodiversity Data Quality (BDQ) Core](../../index.md) page, which lists the parts of the standard.
+For the list and links to all associated documents see the [Biodiversity Data Quality (BDQ)](../../index.md) page, which lists the parts of the standard.
 
-Information about the bdqffdq: ontology, its usage, and its extensions can be found in the following subset of Biodiversity Data Quality (BDQ) Core resources:
+Information about the bdqffdq: ontology, its usage, and its extensions can be found in the following subset of BDQ resources:
 
 - [Fitness For Use Framework Ontology Guide](../../guide/bdqffdq/index.md) Provides a visual and narrative introduction to the concepts and application of the ontology. This document.
 - [Fitness For Use Framework Ontology List of Terms](../../list/bdqffdq/index.md) The term list document, which enumerates and describes the vocabulary terms.
@@ -239,7 +239,7 @@ The following namespace abbreviations are used in this document:
 | **Abbreviation** | **Namespace** |
 | ------------ | -------------                               |
 | bdq:         | https://rs.tdwg.org/bdq/terms/              |
-| bdqcore:     | https://rs.tdwg.org/bdqcore/terms/          |
+| bdqtest:     | https://rs.tdwg.org/bdqtest/terms/          |
 | bdqcrit:     | https://rs.tdwg.org/bdqcrit/terms/          |
 | bdqdim:      | https://rs.tdwg.org/bdqdim/terms/           |
 | bdqffdq:     | https://rs.tdwg.org/bdqffdq/terms           |
@@ -260,9 +260,9 @@ IRIs MUST be used as values for all individual class instances and object proper
 
 ### 3.1 Introduction and Context
 
-The bdqffdq: portion of BDQ Core is a specification for a framework for describing data quality. This bdqffdq: framework is based on a mathematical formulation, using set theory (Veiga, 2016), and is represented as an OWL ontology. This document describes the organization and use of the OWL ontology.
+The bdqffdq: portion of the BDQ standard is a specification for a framework for describing data quality. This bdqffdq: framework is based on a mathematical formulation, using set theory (Veiga, 2016), and is represented as an OWL ontology. This document describes the organization and use of the OWL ontology.
 
-This document provides a background for understanding the bdqcore: Test descriptions. Each of the Tests in the bdqcore: namespace have been designed and described within this framework and are framed using the terms and concepts from the framework. The bdqffdq: framework provides the context for each Test, and has shaped decisions made about each Test.
+This document provides a background for understanding the bdqtest: Test descriptions. Each of the Tests in the bdqtest: namespace have been designed and described within this framework and are framed using the terms and concepts from the framework. The bdqffdq: framework provides the context for each Test, and has shaped decisions made about each Test.
 
 See the [Fitness for Use Ontology](../../bdqffdq/index.md) for a concise description and normative information about the bdqffdq: ontology and a summary of the mathematical formalization. See the [Fitness For Use Framework Ontology List of Terms](../../list/bdqffdq/index.md) document for the list of terms in the bdqffdq: vocabulary. See the [Fitness For Use Framework Ontology Vocabulary Extension](../../extension/bdqffdq/index.md) for documentation on additional axioms. See the [OWL Ontology Distribution](../../../vocabulary/bdqffdq.owl) for the formal representation of the vocabulary as an OWL ontology. The mathematical formalization provides a description of inferences and reasoning that may be made with the terms in the vocabulary.
 
@@ -314,7 +314,7 @@ Data quality Needs can relate to the data quality of single records (bdqffdq:Sin
 
 The *bdqffdq* framework organizes data quality concepts into three core areas—**Needs**, **Mechanisms**, and **Reports**—which can be viewed as horizontal slices through the framework (Veiga et al., 2017).
 
-**Data Quality Needs** begin with a *UseCase*, a formal description of a purpose for which data may be used. Each UseCase includes a set of *Policies*, which in turn relate to *Contexts*. Contexts (e.g., `ContextualizedCriterion`, `ContextualizedDimension`, `ContextualizedEnhancement`, `ContextualizedIssue`) specify the data quality requirement (*Need*), the relevant *Information Elements* (such as specific Darwin Core terms), and the *ResourceType* the requirement applies to. A Need defines the properties data must have to be considered fit for use and may include ways to improve unfit data. The *Tests* described in this standard are formal specifications of such Needs for BDQ Core purposes.
+**Data Quality Needs** begin with a *UseCase*, a formal description of a purpose for which data may be used. Each UseCase includes a set of *Policies*, which in turn relate to *Contexts*. Contexts (e.g., `ContextualizedCriterion`, `ContextualizedDimension`, `ContextualizedEnhancement`, `ContextualizedIssue`) specify the data quality requirement (*Need*), the relevant *Information Elements* (such as specific Darwin Core terms), and the *ResourceType* the requirement applies to. A Need defines the properties data must have to be considered fit for use and may include ways to improve unfit data. The *Tests* described in this standard are formal specifications of such Needs for BDQ purposes.
 
 **Data Quality Mechanisms** are formal descriptions of software or other tools that implement these Tests. They execute the specifications defined in the Needs layer.
 
@@ -328,7 +328,7 @@ For **Quality Control**, MultiRecord Measures can return a count of `COMPLIANT` 
 
 ![Diagram of ValidationAssertion, IssueAssertion, MeasureAssertion and AmendmentAssertion classes as subtypes of the Assertion class with ReportConcept as its parent.](assertions.png "The 4 central Assertion types in the framework - ValidationAssertion, IssueAssertion, MeasureAssertion and AmendmentAssertion.")
 
-Diagram of the composition of Validation, ValidationMethod, and ValidationAssertion illustrating the Data Quality Needs, Solutions, and Reports layers of bdqffdq, with responsibilities of bdqcore (solid lines), and implementations (dashed lines).
+Diagram of the composition of Validation, ValidationMethod, and ValidationAssertion illustrating the Data Quality Needs, Solutions, and Reports layers of bdqffdq, with responsibilities of bdqtest (solid lines), and implementations (dashed lines).
 
 ![Diagram of Validation, ValidationMethod, and ValidationAssertion with related classes](bdqffdq_data_quality_needs_solutions_report_validation.svg "Validation concepts in the Needs, Solutions, and Reports levels.")
 
@@ -338,7 +338,7 @@ A useful way to think of the framework is to divide it horizontally into Needs, 
 
 ### 3.4 Responses
 
-The content of this section is non-normative, related normative guidance is in section [5.1 The Response Object (normative)](../../implementers/index.md#51-the-response-object-normative) of the [BDQ Core Implementer's Guide](../../implementers/index.md).
+The content of this section is non-normative, related normative guidance is in section [5.1 The Response Object (normative)](../../implementers/index.md#51-the-response-object-normative) of the [BDQ Implementer's Guide](../../implementers/index.md).
 
 Assertions are expected to assert Response objects. These will involve, in RDF, a combination of object properties and data properties.
 
@@ -350,19 +350,19 @@ Assertions are expected to assert Response objects. These will involve, in RDF, 
 | Response.comment | bdqffdq:hasResponseComment | A human readable interpretation of the results of the Test.|
 | Response.qualifier | bdqffdq:ResponseQualifier, bdqffdq:hasResponseQualifier | Additional structured information that qualifies the bdq:Response, intended as an extension point for uncertainty.|
 
-See the section [Structure of a Response (normative)](../../bdqcore/index.md#31-Structure-of-Response-normative) of the [BDQ Core Tests and Assertions](../../bdqcore/index.md) for further normative guidance on Responses as RDF or as data structures in non-RDF settings.
+See the section [Structure of a Response (normative)](../../bdqtest/index.md#31-Structure-of-Response-normative) of the [BDQ Tests and Assertions](../../bdqtest/index.md) for further normative guidance on Responses as RDF or as data structures in non-RDF settings.
 
-### 3.5 Organization of the bdqcore classes 
+### 3.5 Organization of the bdqtest classes 
 
 Following is a knowledge graph showing the is-a relationships between the classes in bdqffdq:
 
 ![Diagram of the is-a class relationships of bdqffdq, as a tree expanding left to right, with the root owl:Thing node not shown.](bdqffdq_class_diagram.png "Diagram showing the relationships among the bdqffdq classes.")
 
-### 3.6 Example representation of a BDQ Core Test
+### 3.6 Example representation of a BDQ Test
 
 Below is a fragment in Turtle describing VALIDATION_COUNTRY_FOUND, composed of a Validation, linking an ActedUpon Information Element, a Criterion, and the ResourceType SingleRecord, with the Validation linked to a ValidationMethod, and from there a Specification. Also shown is a ValidationPolicy linking this Validation to a UseCase. 
 
-     <bdqcore:69b2efdc-6269-45a4-aecb-4cb99c2ae134> a <bdqffdq:Validation> ;
+     <bdqtest:69b2efdc-6269-45a4-aecb-4cb99c2ae134> a <bdqffdq:Validation> ;
          rdfs:comment "Does the value of dwc:country occur in the bdq:sourceAuthority?" ;
          rdfs:label "Does the value of dwc:country occur in the bdq:sourceAuthority? Validation for SingleRecord" ;
          skos:prefLabel "VALIDATION_COUNTRY_FOUND" ;
@@ -385,7 +385,7 @@ Below is a fragment in Turtle describing VALIDATION_COUNTRY_FOUND, composed of a
      <urn:uuid:04cee4e0-0c83-40cc-8de2-e7391f0a97a9> a <bdqffdq:ValidationMethod> ;
          rdfs:label "ValidationMethod: Does the value of dwc:country occur in the bdq:sourceAuthority? Validation for SingleRecord with Specification for: VALIDATION_COUNTRY_FOUND" ;
          skos:prefLabel "ValidationMethod: Does the value of dwc:country occur in the bdq:sourceAuthority? Validation for SingleRecord with Specification for: VALIDATION_COUNTRY_FOUND" ;
-         <bdqffdq:forValidation> <bdqcore:69b2efdc-6269-45a4-aecb-4cb99c2ae134> ;
+         <bdqffdq:forValidation> <bdqtest:69b2efdc-6269-45a4-aecb-4cb99c2ae134> ;
          <bdqffdq:hasSpecification> <urn:uuid:051f6ad7-1a4b-4e6c-8a1d-2af76de24848> .
      
      <urn:uuid:051f6ad7-1a4b-4e6c-8a1d-2af76de24848> a <bdqffdq:Specification> ;
@@ -398,7 +398,7 @@ Below is a fragment in Turtle describing VALIDATION_COUNTRY_FOUND, composed of a
      	rdfs:label "ValidationPolicy: (65) validations  in UseCase bdq:Record-Management" ;
      	<http://www.w3.org/2004/02/skos/core#prefLabel> "ValidationPolicy: (65) validations  in UseCase bdq:Record-Management" ;
      	<bdqffdq:hasUseCase> <bdqffdq:Record-Management> ;
-     	<bdqffdq:includesInPolicy> <bdqcore:01c6dafa-0886-4b7e-9881-2c3018c98bdc> , <bdqcore:0493bcfb-652e-4d17-815b-b0cce0742fbe> , <bdqcore:04b2c8f3-c71b-4e95-8e43-f70374c5fb92> , <bdqcore:06851339-843f-4a43-8422-4e61b9a00e75> , <bdqcore:0949110d-c06b-450e-9649-7c1374d940d1> , <bdqcore:0bb8297d-8f8a-42d2-80c1-558f29efe798> , <bdqcore:125b5493-052d-4a0d-a3e1-ed5bf792689e> , <bdqcore:14da5b87-8304-4b2b-911d-117e3c29e890> , <bdqcore:15f78619-811a-4c6f-997a-a4c7888ad849> , <bdqcore:17f03f1f-f74d-40c0-8071-2927cfc9487b> , <bdqcore:239ec40e-a729-4a8e-ba69-e0bf03ac1c44> , <bdqcore:2750c040-1d4a-4149-99fe-0512785f2d5f> , <bdqcore:2cd6884e-3d14-4476-94f7-1191cfff309b> , <bdqcore:3136236e-04b6-49ea-8b34-a65f25e3aba1> , <bdqcore:3667556d-d8f5-454c-922b-af8af38f613c> , <bdqcore:36ed36c9-b1a7-40b2-b5e2-0d012e772098> , <bdqcore:374b091a-fc90-4791-91e5-c1557c649169> , <bdqcore:3cff4dc4-72e9-4abe-9bf3-8a30f1618432> , <bdqcore:3f1db29a-bfa5-40db-9fd1-fde020d81939> , <bdqcore:3f335517-f442-4b98-b149-1e87ff16de45> , <bdqcore:401bf207-9a55-4dff-88a5-abcd58ad97fa> , <bdqcore:42408a00-bf71-4892-a399-4325e2bc1fb8> , <bdqcore:47ff73ba-0028-4f79-9ce1-ee7008d66498> , <bdqcore:4833a522-12eb-4fe0-b4cf-7f7a337a6048> , <bdqcore:49f1d386-5bed-43ae-bd43-deabf7df64fc> , <bdqcore:4c09f127-737b-4686-82a0-7c8e30841590> , <bdqcore:4daa7986-d9b0-4dd5-ad17-2d7a771ea71a> , <bdqcore:4eb48fdf-7299-4d63-9d08-246902e2857f> , <bdqcore:4f2bf8fd-fc5c-493f-a44c-e7b16153c803> , <bdqcore:5424e933-bee7-4125-839e-d8743ea69f93> , <bdqcore:5618f083-d55a-4ac2-92b5-b9fb227b832f> , <bdqcore:58486cb6-1114-4a8a-ba1e-bd89cfe887e9> , <bdqcore:66269bdd-9271-4e76-b25c-7ab81eebe1d8> , <bdqcore:69b2efdc-6269-45a4-aecb-4cb99c2ae134> , <bdqcore:6ce2b2b4-6afe-4d13-82a0-390d31ade01c> , <bdqcore:6eeac3ed-f691-457f-a42e-eaa9c8a71ce8> , <bdqcore:7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47> , <bdqcore:7bdb13a4-8a51-4ee5-be7f-20693fdb183e> , <bdqcore:7c4b9498-a8d9-4ebb-85f1-9f200c788595> , <bdqcore:7d2485d5-1ba7-4f25-90cb-f4480ff1a275> , <bdqcore:7e0c0418-fe16-4a39-98bd-80e19d95b9d1> , <bdqcore:81cc974d-43cc-4c0f-a5e0-afa23b455aa3> , <bdqcore:853b79a2-b314-44a2-ae46-34a1e7ed85e4> , <bdqcore:85803c7e-2a5a-42e1-b8d3-299a44cafc46> , <bdqcore:88d8598b-3318-483d-9475-a5acf9887404> , <bdqcore:8d787cb5-73e2-4c39-9cd1-67c7361dc02e> , <bdqcore:8f1e6e58-544b-4365-a569-fb781341644e> , <bdqcore:9a39d88c-7eee-46df-b32a-c109f9f81fb8> , <bdqcore:9beb9442-d942-4f42-8b6a-fcea01ee086a> , <bdqcore:ac2b7648-d5f9-48ca-9b07-8ad5879a2536> , <bdqcore:ad0c8855-de69-4843-a80c-a5387d20fbc8> , <bdqcore:b6ecda2a-ce36-437a-b515-3ae94948fe83> , <bdqcore:c09ecbf9-34e3-4f3e-b74a-8796af15e59f> , <bdqcore:c486546c-e6e5-48a7-b286-eba7f5ca56c4> , <bdqcore:c6adf2ea-3051-4498-97f4-4b2f8a105f57> , <bdqcore:c971fe3f-84c1-4636-9f44-b1ec31fd63c7> , <bdqcore:cdaabb0d-a863-49d0-bc0f-738d771acba5> , <bdqcore:d257eb98-27cb-48e5-8d3c-ab9fca4edd11> , <bdqcore:d708526b-6561-438e-aa1a-82cd80b06396> , <bdqcore:dc8aae4b-134f-4d75-8a71-c4186239178e> , <bdqcore:eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f> , <bdqcore:eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf> , <bdqcore:f2ce7d55-5b1d-426a-b00e-6d4efe3058ec> , <bdqcore:f51e15a6-a67d-4729-9c28-3766299d2985> , <bdqcore:ff59f77d-71e9-4eb1-aac9-8bd05c50ff70> .
+     	<bdqffdq:includesInPolicy> <bdqtest:01c6dafa-0886-4b7e-9881-2c3018c98bdc> , <bdqtest:0493bcfb-652e-4d17-815b-b0cce0742fbe> , <bdqtest:04b2c8f3-c71b-4e95-8e43-f70374c5fb92> , <bdqtest:06851339-843f-4a43-8422-4e61b9a00e75> , <bdqtest:0949110d-c06b-450e-9649-7c1374d940d1> , <bdqtest:0bb8297d-8f8a-42d2-80c1-558f29efe798> , <bdqtest:125b5493-052d-4a0d-a3e1-ed5bf792689e> , <bdqtest:14da5b87-8304-4b2b-911d-117e3c29e890> , <bdqtest:15f78619-811a-4c6f-997a-a4c7888ad849> , <bdqtest:17f03f1f-f74d-40c0-8071-2927cfc9487b> , <bdqtest:239ec40e-a729-4a8e-ba69-e0bf03ac1c44> , <bdqtest:2750c040-1d4a-4149-99fe-0512785f2d5f> , <bdqtest:2cd6884e-3d14-4476-94f7-1191cfff309b> , <bdqtest:3136236e-04b6-49ea-8b34-a65f25e3aba1> , <bdqtest:3667556d-d8f5-454c-922b-af8af38f613c> , <bdqtest:36ed36c9-b1a7-40b2-b5e2-0d012e772098> , <bdqtest:374b091a-fc90-4791-91e5-c1557c649169> , <bdqtest:3cff4dc4-72e9-4abe-9bf3-8a30f1618432> , <bdqtest:3f1db29a-bfa5-40db-9fd1-fde020d81939> , <bdqtest:3f335517-f442-4b98-b149-1e87ff16de45> , <bdqtest:401bf207-9a55-4dff-88a5-abcd58ad97fa> , <bdqtest:42408a00-bf71-4892-a399-4325e2bc1fb8> , <bdqtest:47ff73ba-0028-4f79-9ce1-ee7008d66498> , <bdqtest:4833a522-12eb-4fe0-b4cf-7f7a337a6048> , <bdqtest:49f1d386-5bed-43ae-bd43-deabf7df64fc> , <bdqtest:4c09f127-737b-4686-82a0-7c8e30841590> , <bdqtest:4daa7986-d9b0-4dd5-ad17-2d7a771ea71a> , <bdqtest:4eb48fdf-7299-4d63-9d08-246902e2857f> , <bdqtest:4f2bf8fd-fc5c-493f-a44c-e7b16153c803> , <bdqtest:5424e933-bee7-4125-839e-d8743ea69f93> , <bdqtest:5618f083-d55a-4ac2-92b5-b9fb227b832f> , <bdqtest:58486cb6-1114-4a8a-ba1e-bd89cfe887e9> , <bdqtest:66269bdd-9271-4e76-b25c-7ab81eebe1d8> , <bdqtest:69b2efdc-6269-45a4-aecb-4cb99c2ae134> , <bdqtest:6ce2b2b4-6afe-4d13-82a0-390d31ade01c> , <bdqtest:6eeac3ed-f691-457f-a42e-eaa9c8a71ce8> , <bdqtest:7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47> , <bdqtest:7bdb13a4-8a51-4ee5-be7f-20693fdb183e> , <bdqtest:7c4b9498-a8d9-4ebb-85f1-9f200c788595> , <bdqtest:7d2485d5-1ba7-4f25-90cb-f4480ff1a275> , <bdqtest:7e0c0418-fe16-4a39-98bd-80e19d95b9d1> , <bdqtest:81cc974d-43cc-4c0f-a5e0-afa23b455aa3> , <bdqtest:853b79a2-b314-44a2-ae46-34a1e7ed85e4> , <bdqtest:85803c7e-2a5a-42e1-b8d3-299a44cafc46> , <bdqtest:88d8598b-3318-483d-9475-a5acf9887404> , <bdqtest:8d787cb5-73e2-4c39-9cd1-67c7361dc02e> , <bdqtest:8f1e6e58-544b-4365-a569-fb781341644e> , <bdqtest:9a39d88c-7eee-46df-b32a-c109f9f81fb8> , <bdqtest:9beb9442-d942-4f42-8b6a-fcea01ee086a> , <bdqtest:ac2b7648-d5f9-48ca-9b07-8ad5879a2536> , <bdqtest:ad0c8855-de69-4843-a80c-a5387d20fbc8> , <bdqtest:b6ecda2a-ce36-437a-b515-3ae94948fe83> , <bdqtest:c09ecbf9-34e3-4f3e-b74a-8796af15e59f> , <bdqtest:c486546c-e6e5-48a7-b286-eba7f5ca56c4> , <bdqtest:c6adf2ea-3051-4498-97f4-4b2f8a105f57> , <bdqtest:c971fe3f-84c1-4636-9f44-b1ec31fd63c7> , <bdqtest:cdaabb0d-a863-49d0-bc0f-738d771acba5> , <bdqtest:d257eb98-27cb-48e5-8d3c-ab9fca4edd11> , <bdqtest:d708526b-6561-438e-aa1a-82cd80b06396> , <bdqtest:dc8aae4b-134f-4d75-8a71-c4186239178e> , <bdqtest:eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f> , <bdqtest:eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf> , <bdqtest:f2ce7d55-5b1d-426a-b00e-6d4efe3058ec> , <bdqtest:f51e15a6-a67d-4729-9c28-3766299d2985> , <bdqtest:ff59f77d-71e9-4eb1-aac9-8bd05c50ff70> .
 
 ### 3.7 Cardinality of bdqffdq terms
 
@@ -1361,22 +1361,21 @@ It is important that the chain of relationships from an instance of an Assertion
 
 
 
-
 ## Acronyms
 
-For a list of Acronyms see [Acronyms](../../intro/index.md#5-acronyms) in the Introduction document.
+A list of Acronyms can be found in the [Acronyms](../../index.md#5-acronyms) section of the Biodiversity Data Quality (BDQ) landing page.
 
 ## Glossary
 
-A glossary of terms additional to those in the various namespaces can be found at [Glossary](../../intro/index.md#6-glossary) in the Introduction document.
+A glossary of terms additional to those in the various namespaces can be found in the [Glossary](../../index.md#6-glossary) section of the Biodiversity Data Quality (BDQ) landing page.
 
 ## References
 
-The bibliography for BDQ Core is in the [References](../../references/index.md#2-references) document.
+The references for the BDQ standard can be found in the [References](../../index.md#7-references) section of the Biodiversity Data Quality (BDQ) landing page.
 
-## Cite BDQ Core
+## Cite BDQ
 
-**To cite BDQ Core in general, use the peer-reviewed article:**
+**To cite BDQ in general, use the peer-reviewed article:**
 
 Chapman AD, Belbin L, Zermoglio PF, Wieczorek J, Morris PJ, Nicholls
 M, Rees ER, Veiga AK, Thompson A, Saraiva AM, James SA, Gendreau C,
@@ -1385,11 +1384,6 @@ Quality and for Selecting Fit for Use Biodiversity Data.
 Biodiversity Information Science and Standards 4: e50889.
 https://doi.org/10.3897/biss.4.50889
 
-**To cite the standard document upon which this page is built, use
-the following:**
-
-BDQ Core Maintenance Group 2024. Biodiversity Information Standards (TDWG). http://rs.tdwg.org/bdq/doc/list/
-
 **To cite this document specifically, use the following:**
 
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Fitness For Use Framework Ontology Guide. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/terms/2025-04-11>
@@ -1397,5 +1391,3 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
 **Biodiversity Information Standards (TDWG)**
 
 This content made open by Biodiversity Information Standards (TDWG) is licensed under a [Licensed under a Creative Commons Attribution 4.0 International (CC BY) License.](http://creativecommons.org/licenses/by/4.0/)
-
-

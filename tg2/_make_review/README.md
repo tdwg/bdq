@@ -4,7 +4,7 @@ WARNING: All files listed in the copy_files.sh script MUST NOT be edited in thei
 
 copy_files.sh  Copies authoritative files from outside the _review tree into their target locations in the _review tree.
 
-do_build.sh Executes the python scripts in _review/build/ to build artifacts from the templates, configuration files, and vocabulary documents in the _review tree.
+do_build.sh Executes the python scripts in _build_review/ to build artifacts from the templates, configuration files, and vocabulary documents in the _build_review/ tree.
 
 Third party Python libraries required by the scripts:
 ```

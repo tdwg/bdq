@@ -1,16 +1,11 @@
-# Vocabulary term-version files for BDQ Core
+# Vocabulary term-version files for the BDQ standard
 
-This directory contains the master term-version CSV files for the vocabularies in BDQ Core.
+This directory contains the master canonical term-version CSV files from which the the vocabularies in the BDQ standard are generated. It also contains the master file for the bdqffdq ontology, which is an OWL file (bdqffdq.owl), not a CSV term-version file.
 
-It also contains the master file for the bdqffdq ontology, bdqffdq.owl, which is an OWL file, not a CSV term-version file.  
-
-List of files: 
-<pre>
-├── README.md  This file. **Editable.**
-├── bdq_term_versions.csv  Term version file for bdq vocabulary. **Editable.**
-├── bdqcore_term_versions.csv  Term version file for bdqcore (test descriptions) vocabulary. **Editable.**
-├── bdqcrit_term_versions.csv  Term version file for bdqcrit Criterion vocabulary. **Editable.**
-├── bdqdim_term_versions.csv  Term version file for bdqdim Dimension vocabulary. **Editable.**
-├── bdqenh_term_versions.csv  Term version file for bdqenh Enhancement vocabulary. **Editable.**
-└── bdqffdq.owl  OWL Ontology for BDQFFDQ terms. **Edit with Protege.**
-</pre>
+README.md  This file.
+[bdq_term_versions.csv](bdq_term_versions.csv) Term version file for bdq: supplemental vocabulary. **Editable.**
+[bdqtest_term_versions.csv](bdqcore_term_versions.csv) Term version file for bdqtest: Test descriptions vocabulary. **Editable.**
+[bdqcrit_term_versions.csv](bdqcrit_term_versions.csv) Term version file for bdqcrit: Criterion vocabulary. **Editable.**
+[bdqdim_term_versions.csv](bdqdim_term_versions.csv) Term version file for bdqdim: Dimension vocabulary. **Editable.**
+[bdqenh_term_versions.csv](bdqenh_term_versions.csv) Term version file for bdqenh: Enhancement vocabulary. **Editable.**
+[bdqffdq.owl](bdqffdq.owl) OWL Ontology for BDQFFDQ terms. **Edit with Protege.**

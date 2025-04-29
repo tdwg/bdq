@@ -1,9 +1,9 @@
 <!--- This file is generated from templates by code, DO NOT EDIT by hand --->
 
-# BDQ Core User's Guide
+# BDQ User's Guide
 
 **Title**<br>
-BDQ Core User's Guide
+BDQ User's Guide
 
 **Date version issued**<br>
 2025-04-11
@@ -28,7 +28,7 @@ BDQ Core User's Guide
 **Previous version**<br>
 
 **Abstract**<br>
-This document serves as a reference for the BDQ Core Standard, outlining the BDQ Core Tests used in data quality reports.
+This document serves as a reference for the BDQ standard, outlining the BDQ Tests used in data quality reports.
 
 **Authors**<br>
 [Lee Belbin](https://orcid.org/0000-0001-8900-6203) ([Blatant Fabrications](https://www.wikidata.org/wiki/Q130304884)), [Arthur D. Chapman](https://orcid.org/0000-0003-1700-6962) ([Australian Biodiversity Information Services](http://www.wikidata.org/entity/Q100600913)), [Paul J. Morris](https://orcid.org/0000-0002-3673-444X) ([Museum of Comparative Zoology, Harvard University](http://www.wikidata.org/entity/Q1420782)), [John Wieczorek](https://orcid.org/0000-0003-1144-0290) ([Rauthiflor LLC](http://www.wikidata.org/entity/Q98382028))
@@ -37,7 +37,7 @@ This document serves as a reference for the BDQ Core Standard, outlining the BDQ
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 **Bibliographic citation**<br>
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. BDQ Core User's Guide. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/terms/2025-04-11>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. BDQ User's Guide. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/terms/2025-04-11>
 
 **Comment**<br>
 Draft Standard for Review
@@ -64,7 +64,7 @@ Draft Standard for Review
 
 [3 Context for Quality, Uses and Purposes (non-normative)](#3-context-for-quality-uses-and-purposes-non-normative)
 
-[4 Using the BDQ Core Quick Reference Guide (non-normative)](#4-using-the-bdq-core-quick-reference-guide-non-normative)
+[4 Using the BDQ Tests Quick Reference Guide (non-normative)](#4-using-the-bdq-tests-quick-reference-guide-non-normative)
 
 [5 Time and Time Zones (non-normative)](#5-time-and-time-zones-non-normative)
 
@@ -74,13 +74,13 @@ Draft Standard for Review
 
 [References](#references)
 
-[Cite BDQ Core](#cite-bdq-core)
+[Cite BDQ](#cite-bdq)
 
 ## 1 Introduction
 
 ### 1.1 Purpose
 
-The purpose of this document is to help users understand and effectively apply the BDQ Core Tests for assessing the quality of biodiversity data. It serves as a practical guide to interpreting Test outcomes, selecting appropriate Tests for specific data use scenarios, and understanding how the components of BDQ Core work together to support assessments of fitness for use.
+The purpose of this document is to help users understand and effectively apply the BDQ Tests for assessing the quality of biodiversity data. It serves as a practical guide to interpreting Test outcomes, selecting appropriate Tests for specific data use scenarios, and understanding how the components of the BDQ standard work together to support assessments of fitness for use.
 
 This guide explains the conceptual and operational structure of the Tests, their inputs and outputs, and how different types of Tests behave. It also provides non-normative guidance on Test parameters, report interpretation, and practical concerns such as handling time zones. The document complements the formal specification of Tests by offering real-world orientation and examples designed for practitioners.
 
@@ -90,23 +90,22 @@ This guide is intended for biodiversity data users, curators, and quality assura
 
 - Data providers, curators, and aggregator staff seeking to understand test results and improve data quality
 - Researchers assessing dataset suitability for specific projects or analyses
-- Data standards developers aiming to understand how BDQ Core supports fitness-for-use evaluations
-- Anyone interpreting or configuring BDQ Core Tests, but not necessarily implementing them in software.
+- Data standards developers aiming to understand how the BDQ standard supports fitness-for-use evaluations
+- Anyone interpreting or configuring BDQ Tests, but not necessarily implementing them in software.
 
 The document is written for readers with a practical need to work with data quality assessments. It assumes no formal training in ontologies or software development, but may reference those areas for context.
 
 ### 1.3 Associated Documents
 
-For the list and links to all associated documents see the [Biodiversity Data Quality (BDQ) Core](../../index.md) page, which lists the parts of the standard.
+For the list and links to all associated documents see the [Biodiversity Data Quality (BDQ)](../../index.md) page, which lists the parts of the standard.
 
-The set of information most relevant to users of Biodiversity Data Quality (BDQ) Core Tests can be found in the following subset of resources:
+The set of information most relevant to users of Biodiversity Data Quality (BDQ) Tests can be found in the following subset of resources:
 
-- [Biodiversity Data Quality Core Introduction](../../intro/index.md) Provides an introduction to the BDQ Core standard and the Tests.
-- [BDQ Core Tests and Assertions](../bdqcore/index.md) Defines how each Test is modeled using standard vocabulary terms and how it should behave under various conditions.
-- [BDQ Core Quick Reference Guide](../terms/bdqcore/index.md) Provides a concise, easy-to-read reference about the BDQ Core Tests.
-- [BDQ Core User's Guide](../../guide/users/index.md) For anyone interested in how to use the BDQ Core Tests in practice. This document.
-- [BDQ Core Implementer's Guide](../../guide/implementers/index.md) For anyone interested in the technical implementation of the BDQ Core Tests.
-- [BDQ Core Supplemental Information](../../supplement/index.md) This supplementary information may be relevant for curators, aggregators, data publishers, data analysts, programmers/developers and other practitioners who wish to understand, evaluate and/or improve the quality of biodiversity data within their domain. This document provides some key developmental issues in the building of BDQ Core that are not covered in other documents within the standard. This document may also be useful to those seeking to evaluate their current Tests or generate additional Tests for their domain.
+- [BDQ Tests and Assertions](../bdqtest/index.md) Defines how each Test is modeled using standard vocabulary terms and how it should behave under various conditions.
+- [BDQ Tests Quick Reference Guide](../terms/bdqtest/index.md) Provides a concise, easy-to-read reference about the BDQ Tests.
+- [BDQ User's Guide](../../guide/users/index.md) For anyone interested in how to use the BDQ Tests in practice. This document.
+- [BDQ Implementer's Guide](../../guide/implementers/index.md) For anyone interested in the technical implementation of the BDQ Tests.
+- [BDQ Supplemental Information](../../supplement/index.md) This supplementary information may be relevant for curators, aggregators, data publishers, data analysts, programmers/developers and other practitioners who wish to understand, evaluate and/or improve the quality of biodiversity data within their domain. This document provides some key developmental issues in the building of the BDQ standard that are not covered in other documents within the standard. This document may also be useful to those seeking to evaluate their current Tests or generate additional Tests for their domain.
 
 ### 1.4 Status of the content of this document
 
@@ -132,41 +131,41 @@ The following namespace abbreviations are used in this document:
 
 ## 2 A Guide to the Tests
 
-BDQ Core defines a set of Tests to assess the quality of biodiversity data. Implementations of these Tests may produce data quality reports. The format of such data quality reports may vary, but they should contain specific information about outputs from each Test. This guide describes the Tests, their inputs, expectations about their outputs, how they may be used for Quality Control and Quality Assurance, and describes the [BDQ Core Quick Reference Guide](../terms/bdqcore/index.md), which gives the details of each BDQ Core Test. 
+The BDQ standard defines a set of Tests to assess the quality of biodiversity data. Implementations of these Tests may produce data quality reports. The format of such data quality reports may vary, but they should contain specific information about outputs from each Test. This guide describes the Tests, their inputs, expectations about their outputs, how they may be used for Quality Control and Quality Assurance, and describes the [BDQ Tests Quick Reference Guide](../terms/bdqtest/index.md), which gives the details of each BDQ Test. 
 
-Biodiversity data encompasses information about the variety of life on Earth. This includes observations of where and when organisms were found (such as the date and location of a bird sighting including the species name, and potentially other details about its behavior, observed habitat, or physical characteristics. BDQ Core is designed to assess the quality of these data for a variety of uses including research and conservation. Implementations of the Tests defined in BDQ Core examine such Occurrence data expressed using Darwin Core terms. Darwin Core is a standardized set of terms used to describe biodiversity data, it provides a common vocabulary that allows different databases and researchers to share information in a consistent way.
+Biodiversity data encompasses information about the variety of life on Earth. This includes observations of where and when organisms were found (such as the date and location of a bird sighting including the species name, and potentially other details about its behavior, observed habitat, or physical characteristics. The BDQ standard is designed to assess the quality of these data for a variety of uses including research and conservation. Implementations of the Tests defined in BDQ examine such Occurrence data expressed using Darwin Core terms. Darwin Core is a standardized set of terms used to describe biodiversity data, it provides a common vocabulary that allows different databases and researchers to share information in a consistent way.
 
-The BDQ Core Tests are each very specific. Some Tests are very simple and self explanatory, such as the Test that asserts that the value of dwc:day should be an integer in the range 1 to 31. Other Tests reference external authoritative sources of information to evaluate data quality, these are referred to as source authorities. For example, testing values of dwc:countryCode involves comparison with the source authority that is the list of valid ISO country codes.
+The BDQ Tests are each very specific. Some Tests are very simple and self explanatory, such as the Test that asserts that the value of dwc:day should be an integer in the range 1 to 31. Other Tests reference external authoritative sources of information to evaluate data quality, these are referred to as source authorities. For example, testing values of dwc:countryCode involves comparison with the source authority that is the list of valid ISO country codes.
 
 ### 2.1 Test Types (non-normative)
 
 There are four types of Tests: Validation, Issue, Amendment, and Measure. Each Test is intended to examine just one specific aspect of data quality. Tests are assembled into Test suites (Policies) that assess the fitness of data for a specific use.
 
-**Validation Tests** can be thought of as fact-checking. They compare the data against known standards or rules. Validation Tests examine the values of one or more [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) against a Criterion for quality. An example is [VALIDATION_COUNTRYCODE_STANDARD](https://rs.tdwg.org/bdqcore/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe) where dwc:countryCode is checked against a Source Authority for validity.
+**Validation Tests** can be thought of as fact-checking. They compare the data against known standards or rules. Validation Tests examine the values of one or more [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) against a Criterion for quality. An example is [VALIDATION_COUNTRYCODE_STANDARD](https://rs.tdwg.org/bdqtest/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe) where dwc:countryCode is checked against a Source Authority for validity.
 
-**Issue Tests** can be thought of as warning flags. They don't necessarily mean the data are wrong, but they highlight something that might be a problem for some users. For example, [ISSUE_DATAGENERALIZATIONS_NOTEMPTY](https://rs.tdwg.org/bdqcore/terms/13d5a10e-188e-40fd-a22c-dbaa87b91df2) alerts users to a NotEmpty value that should be examined against their data quality needs. 
+**Issue Tests** can be thought of as warning flags. They don't necessarily mean the data are wrong, but they highlight something that might be a problem for some users. For example, [ISSUE_DATAGENERALIZATIONS_NOTEMPTY](https://rs.tdwg.org/bdqtest/terms/13d5a10e-188e-40fd-a22c-dbaa87b91df2) alerts users to a NotEmpty value that should be examined against their data quality needs. 
 
-**Amendment Tests** can be thought of as suggestions for improvement. Amendment Tests examine the values of [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) and may propose changes or additions to improve the quality. An example is [AMENDMENT_COUNTRYCODE_STANDARDIZED](https://rs.tdwg.org/bdqcore/terms/fec5ffe6-3958-4312-82d9-ebcca0efb350), where a valid ISO country code could be inferred.
+**Amendment Tests** can be thought of as suggestions for improvement. Amendment Tests examine the values of [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) and may propose changes or additions to improve the quality. An example is [AMENDMENT_COUNTRYCODE_STANDARDIZED](https://rs.tdwg.org/bdqtest/terms/fec5ffe6-3958-4312-82d9-ebcca0efb350), where a valid ISO country code could be inferred.
 
-**Measure Tests** can be thought of as metrics. Measure Tests either count things, or assert that data evaluate as fit for some use (COMPLETE), or not fit for some use (NOT_COMPLETE). An example is [MEASURE_VALIDATIONTESTS_NOTCOMPLIANT](https://rs.tdwg.org/bdqcore/terms/453844ae-9df4-439f-8e24-c52498eca84a), which returns the number of Tests of Type Validation that had a response of "NOT_COMPLIANT" on a record.
+**Measure Tests** can be thought of as metrics. Measure Tests either count things, or assert that data evaluate as fit for some use (COMPLETE), or not fit for some use (NOT_COMPLETE). An example is [MEASURE_VALIDATIONTESTS_NOTCOMPLIANT](https://rs.tdwg.org/bdqtest/terms/453844ae-9df4-439f-8e24-c52498eca84a), which returns the number of Tests of Type Validation that had a response of "NOT_COMPLIANT" on a record.
 
 ### 2.2 Test Inputs and Outputs
 
 #### 2.2.1 Inputs to Tests (non-normative)
 
-Each Test is defined to take a specific set of input terms (InformationElements, generally [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021)), and then perform some tightly specified evaluation of those inputs to produce a specific output (the Response, see below). All of the BDQ Core Validation, Amendment, and Issue Tests examine a set of Darwin Core terms from a Single Record (e.g., from a single Occurrence record) rather than looking at the input term(s) over multiple records.
+Each Test is defined to take a specific set of input terms (InformationElements, generally [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021)), and then perform some tightly specified evaluation of those inputs to produce a specific output (the Response, see below). All of the BDQ Validation, Amendment, and Issue Tests examine a set of Darwin Core terms from a Single Record (e.g., from a single Occurrence record) rather than looking at the input term(s) over multiple records.
 
-Consider the Test [VALIDATION_EVENTDATE_STANDARD](https://rs.tdwg.org/bdqcore/terms/4f2bf8fd-fc5c-493f-a44c-e7b16153c803). It takes as input value of the InformationElement dwc:eventDate from a Single Record, and then asks, "Is the value of dwc:eventDate a valid ISO date?". It will then produce a Response describing the conclusion it reached when analyzing that record.
+Consider the Test [VALIDATION_EVENTDATE_STANDARD](https://rs.tdwg.org/bdqtest/terms/4f2bf8fd-fc5c-493f-a44c-e7b16153c803). It takes as input value of the InformationElement dwc:eventDate from a Single Record, and then asks, "Is the value of dwc:eventDate a valid ISO date?". It will then produce a Response describing the conclusion it reached when analyzing that record.
 
-Tests can also operate on a dataset (a Multi Record), and examine the values for Information Elements across the entire dataset. The only Multi Record Tests currently defined in BDQ Core are Measures, which take the outputs of Single Record Tests as their inputs and report on the results of those Single Record Tests aggregated across the dataset. The names of these Tests all begin with `MULTIRECORD_`. 
+Tests can also operate on a dataset (a Multi Record), and examine the values for Information Elements across the entire dataset. The only Multi Record Tests currently defined in BDQ are Measures, which take the outputs of Single Record Tests as their inputs and report on the results of those Single Record Tests aggregated across the dataset. The names of these Tests all begin with `MULTIRECORD_`. 
 
 #### 2.2.2 Data Quality Reports (non-normative) 
 
-Software that includes implementations of the Tests may produce data quality reports. The form that such data quality reports may take is not specified by BDQ Core, however, it does specify elements that should be present in such reports.
+Software that includes implementations of the Tests may produce data quality reports. The form that such data quality reports may take is not specified by the BDQ standard, however, it does specify elements that should be present in such reports.
 
 #### 2.2.3 Responses From Tests (normative) 
 
-Reports SHOULD identify Tests using at least the Label (rdfs:label) for the Test class (e.g., [VALIDATION_COUNTRY_FOUND](https://rs.tdwg.org/bdqcore/terms/69b2efdc-6269-45a4-aecb-4cb99c2ae134)).
+Reports SHOULD identify Tests using at least the Label (rdfs:label) for the Test class (e.g., [VALIDATION_COUNTRY_FOUND](https://rs.tdwg.org/bdqtest/terms/69b2efdc-6269-45a4-aecb-4cb99c2ae134)).
 
 Results from each Test MUST be delivered in the form of a Response.status, Response.result, and Response.comment. Each Test MUST produce one Response. A Response.qualifier MAY also be included.
 
@@ -187,9 +186,9 @@ Validation Tests can have a Response.status of RUN_HAS_RESULT, which tells you t
 
 Amendment Tests can have a Response.status of FILLED_IN, AMENDED, or NOT_AMENDED. FILLED_IN tells you that the Amendment is proposing that a value that was bdq:Empty in the data evaluated by the Test can be filled in with a value that is bdq:NotEmpty. This proposal will be found in the Response.result. A Response.status="AMENDED" tells you that the Amendment is proposing a change to an existing value, and this proposal will be found in the Response.result. "NOT_AMENDED" tells you that the prerequisites for running the Amendment were met, but that it did not propose any change to the data.
 
-Measure Tests that return a Response.status of RUN_HAS_RESULT MUST return either a numeric value or one of COMPLETE or NOT_COMPLETE. Most Measure Tests are summaries of the results of running Validation or Amendment Tests across datasets, though some (e.g., [MEASURE_EVENTDATE_DURATIONINSECONDS](https://rs.tdwg.org/bdqcore/terms/56b6c695-adf1-418e-95d2-da04cad7be53)), can provide a conversion from one representation of the data to another.
+Measure Tests that return a Response.status of RUN_HAS_RESULT MUST return either a numeric value or one of COMPLETE or NOT_COMPLETE. Most Measure Tests are summaries of the results of running Validation or Amendment Tests across datasets, though some (e.g., [MEASURE_EVENTDATE_DURATIONINSECONDS](https://rs.tdwg.org/bdqtest/terms/56b6c695-adf1-418e-95d2-da04cad7be53)), can provide a conversion from one representation of the data to another.
 
-Issue Tests with a Response.status of RUN_HAS_RESULT MAY have a Response.result of POTENTIAL_ISSUE or NOT_ISSUE. Potential issues require review to evaluate if the record is suitable for a particular use. For example, the Test [ISSUE_DATAGENERALIZATIONS_NOTEMPTY](https://rs.tdwg.org/bdqcore/terms/13d5a10e-188e-40fd-a22c-dbaa87b91df2) evaluates whether dwc:dataGeneralizations contains any value, if it does, then the Test reports a Response.result="POTENTIAL_ISSUE", meaning that a human will need to evaluate whether the information in dwc:dataGeneralizations indicates that the data in that record have been generalized in a way that makes the data unfit for their purpose. An Issue Test that has a Response.result="POTENTIAL_ISSUE" is making an assertion that is the similar to that of a Validation Test that has a Response.result="NOT_COMPLIANT". Issue Tests approximate the converse of Validation Tests. The meaning, Response.result="NOT_ISSUE", however, is not the same as a Response.result="COMPLIANT" from a Validation Test. NOT_ISSUE means that no (data quality) issue was detected, not that the data comply with any criteria for fitness, while COMPLIANT explicitly means that the data satisfy some criterion for fitness for some Use Case. A Response.result="POTENTIAL_ISSUE" has no analog in Validation Tests; it marks the presence of something in the data that SHOULD BE evaluated by a human to determine whether or not the data are fit for their use.
+Issue Tests with a Response.status of RUN_HAS_RESULT MAY have a Response.result of POTENTIAL_ISSUE or NOT_ISSUE. Potential issues require review to evaluate if the record is suitable for a particular use. For example, the Test [ISSUE_DATAGENERALIZATIONS_NOTEMPTY](https://rs.tdwg.org/bdqtest/terms/13d5a10e-188e-40fd-a22c-dbaa87b91df2) evaluates whether dwc:dataGeneralizations contains any value, if it does, then the Test reports a Response.result="POTENTIAL_ISSUE", meaning that a human will need to evaluate whether the information in dwc:dataGeneralizations indicates that the data in that record have been generalized in a way that makes the data unfit for their purpose. An Issue Test that has a Response.result="POTENTIAL_ISSUE" is making an assertion that is the similar to that of a Validation Test that has a Response.result="NOT_COMPLIANT". Issue Tests approximate the converse of Validation Tests. The meaning, Response.result="NOT_ISSUE", however, is not the same as a Response.result="COMPLIANT" from a Validation Test. NOT_ISSUE means that no (data quality) issue was detected, not that the data comply with any criteria for fitness, while COMPLIANT explicitly means that the data satisfy some criterion for fitness for some Use Case. A Response.result="POTENTIAL_ISSUE" has no analog in Validation Tests; it marks the presence of something in the data that SHOULD BE evaluated by a human to determine whether or not the data are fit for their use.
 
 ### 2.3 Amendments Propose Changes (normative)
 
@@ -201,11 +200,11 @@ Some Tests are parameterized. When a Test is Parameterized, and a value other th
 
 Values of Parameters, other than the defaults, SHOULD also be present in the Response.comment.
 
-More normative guidance on Test Parameters can be found in the section [Parameters and Changing the Behavior of a Test](../implementers/index.md#61-Parameters-and-Changing-the-Behavior-of-a-Test-normative) of the [BDQ Core Implementer's Guide](../guide/implementers/index.md).
+More normative guidance on Test Parameters can be found in the section [Parameters and Changing the Behavior of a Test](../implementers/index.md#61-Parameters-and-Changing-the-Behavior-of-a-Test-normative) of the [BDQ Implementer's Guide](../guide/implementers/index.md).
 
 #### 2.4.1 Test Parameters Example (non-normative) 
 
-If a Test with a non-default Parameter value is used, this should be represented with at least the Label (rdfs:label) for the Test class (e.g., [VALIDATION_MINDEPTH_INRANGE](https://rs.tdwg.org/bdqcore/terms/04b2c8f3-c71b-4e95-8e43-f70374c5fb92)) in combination with the Parameter (e.g., bdq:maximumValidDepthInMeters) and the value of the argument that replaced the default Parameter value in this specific case (e.g., 1642). For example:
+If a Test with a non-default Parameter value is used, this should be represented with at least the Label (rdfs:label) for the Test class (e.g., [VALIDATION_MINDEPTH_INRANGE](https://rs.tdwg.org/bdqtest/terms/04b2c8f3-c71b-4e95-8e43-f70374c5fb92)) in combination with the Parameter (e.g., bdq:maximumValidDepthInMeters) and the value of the argument that replaced the default Parameter value in this specific case (e.g., 1642). For example:
 
 	`VALIDATION_MAXDEPTH_INRANGE with bdq:maximumValidDepthInMeters=1642`
 
@@ -215,11 +214,11 @@ So, a value of dwc:minimumDepthInMeters of 2000m would be NOT_COMPLIANT in this 
 
 ## 3 Context for Quality, Uses and Purposes (non-normative)
 
-Data do not have quality in the abstract, they only have quality with respect to some use (BDQ Core Use Case). The Fitness for Use Framework (see [Fitness For Use Framework Ontology Guide](../bdqffdq/index.md)) used in BDQ Core describes uses for data as Use Cases, and expects that Tests are run in suites that form policy for data quality with respect to Use Cases. That is, sets of Tests are expected to be run together in order to assess quality of data for some specified use, and both Tests and reports of results from Tests should be understood within the context of that use for the data.
+Data do not have quality in the abstract, they only have quality with respect to some use (BDQ Use Case). The Fitness for Use Framework (see [Fitness For Use Framework Ontology Guide](../bdqffdq/index.md)) used in the BDQ standard describes uses for data as Use Cases, and expects that Tests are run in suites that form policy for data quality with respect to Use Cases. That is, sets of Tests are expected to be run together in order to assess quality of data for some specified use, and both Tests and reports of results from Tests should be understood within the context of that use for the data.
 
 Tests for data quality may serve two purposes, Quality Control and Quality Assurance. In Quality Control, Tests are used to find data that lack fitness for particular uses and the results are used to improve the quality of the data. In Quality Assurance, data are filtered so that only data that are fit for some use are used for that purpose.
 
-The Fitness for use Framework (Veiga 2016, Veiga et al., 2017) provides a formal means for filtering records for [Quality Assurance](../../bdqffdq/index.md#5-Fitness-For-Use-Framework-Summary-of-Mathematical-Formalization-normative) (involving only Measures), but informally, data may be thought as being fit for some use if all Validation Tests comprising that Use Case have a Response.result="COMPLIANT", and all non-numeric Measure Tests comprising that Use Case have a Response.result="COMPLETE". The BDQ Core Tests include a set of MultiRecord Measures who's purpose is to enable formal filtering (Quality Assurance) and reporting (for Quality Control) under the [Fitness for Use Ontology](../../bdqffdq/index.md).
+The Fitness for use Framework (Veiga 2016, Veiga et al., 2017) provides a formal means for filtering records for [Quality Assurance](../../bdqffdq/index.md#5-Fitness-For-Use-Framework-Summary-of-Mathematical-Formalization-normative) (involving only Measures), but informally, data may be thought as being fit for some use if all Validation Tests comprising that Use Case have a Response.result="COMPLIANT", and all non-numeric Measure Tests comprising that Use Case have a Response.result="COMPLETE". The BDQ Tests include a set of MultiRecord Measures who's purpose is to enable formal filtering (Quality Assurance) and reporting (for Quality Control) under the [Fitness for Use Ontology](../../bdqffdq/index.md).
 
 The Framework provides a formal statement of [Quality Control](../../bdqffdq/index.md#5-Fitness-For-Use-Framework-Summary-of-Mathematical-Formalization-normative), but the application of Quality Control 'in the wild' is more nuanced; more complex than simple filtering under Quality Assurance. The context of Quality Control may affect how Tests and their results are applied to data, information systems and processes.
 
@@ -235,39 +234,38 @@ When performing Quality Control while preparing data for aggregation, or when re
 
 Quality Control to improve data during downstream analysis of aggregated data has other challenges. The volume of aggregated data may be large enough to make both examination of the proposed Amendments and reporting of proposed changes to upstream databases of record infeasible. Quality Control in the workflow processing of data streams from large scale aggregation may include acceptance of proposals from Amendments into a data stream for downstream analysis. This should be done with some care in checking that the proposed amendments are not introducing errors or false precision, and both unamended and amended data should be preserved, with accepted proposals from amendments clearly identifiable as manipulations of the data stream.
 
-## 4 Using the BDQ Core Quick Reference Guide (non-normative)
+## 4 Using the BDQ Tests Quick Reference Guide (non-normative)
 
-The [BDQ Core Quick Reference Guide](../../terms/bdqcore/index.md) is a companion to this Guide and lists the Tests with a subset of Test Descriptors. This subset is intended to provide a quick summary of the nature of each of the Tests that is sufficient of most cases. Some Test Descriptors can be used to filter the Tests down to those that may be applicable for an application (Use Case). An index is provided for each Test by example UseCase. Both SingleRecord Tests (Validations, Amendments, Issues, Measures) and MultiRecord Tests (at this time only Measures that evaluate the output of SingleRecord Validations across a dataset) are included. Term definitions with the full set of Test Descriptors can be found in the [BDQ Core Tests and Assertions List of Terms](../../list/bdqcore/index.md).
+The [BDQ Tests Quick Reference Guide](../../terms/bdqtest/index.md) is a companion to this Guide and lists the Tests with a subset of Test Descriptors. This subset is intended to provide a quick summary of the nature of each of the Tests that is sufficient of most cases. Some Test Descriptors can be used to filter the Tests down to those that may be applicable for an application (Use Case). An index is provided for each Test by example UseCase. Both SingleRecord Tests (Validations, Amendments, Issues, Measures) and MultiRecord Tests (at this time only Measures that evaluate the output of SingleRecord Validations across a dataset) are included. Term definitions with the full set of Test Descriptors can be found in the [BDQ Tests and Assertions List of Terms](../../list/bdqtest/index.md).
 
-While the [BDQ Core Quick Reference Guide](../../terms/bdqcore/index.md) provides a description of each individual BDQ Core Test, Data Quality Reports may vary in how they present results from the execution of these Tests. Possible presentations include displaying Test results individually, aggregating counts of results for each Test run over all records in a dataset, and separating results into pre- and post-amendment phases. In the latter case, results may be shown for all Validation and Measure Tests run in a pre-amendment phase, then proposals for changes from all Amendment Tests run in an amendment phase, and then results from the same Validation and Measure Tests run in a post-amendment phase as if all proposed changes from the Amendment Tests were evaluated and accepted. It is thus important to identify both the Test for which results are being reported, and the context for the report. The Quick Reference Guide describes what each Test does independent of this context.
+While the [BDQ Tests Quick Reference Guide](../../terms/bdqtest/index.md) provides a description of each individual BDQ Test, Data Quality Reports may vary in how they present results from the execution of these Tests. Possible presentations include displaying Test results individually, aggregating counts of results for each Test run over all records in a dataset, and separating results into pre- and post-amendment phases. In the latter case, results may be shown for all Validation and Measure Tests run in a pre-amendment phase, then proposals for changes from all Amendment Tests run in an amendment phase, and then results from the same Validation and Measure Tests run in a post-amendment phase as if all proposed changes from the Amendment Tests were evaluated and accepted. It is thus important to identify both the Test for which results are being reported, and the context for the report. The Quick Reference Guide describes what each Test does independent of this context.
 
-For each Test, the [BDQ Core Quick Reference Guide](../../terms/bdqcore/index.md) lists ways to identify the Test (**Label:** - the brief human readable means for identifying a Test; **skos:prefLabel:** - the human readable label spelled out in words; **Versioned IRI:** - the means for software to identify the Test). For each Test, the Quick Reference Guide identifies whether the Test operates on SingleRecords or a MultiRecord (a dataset). A brief description of what the Test is intended to do follows, with a more detailed description for implementers, consisting of Specification, InformationElements ActedUpon and Consulted, any Parameters that could change the behavior of the Tests, default values for any bdq:sourceAuthority consulted by the Test, or other parameters.
+For each Test, the [BDQ Tests Quick Reference Guide](../../terms/bdqtest/index.md) lists ways to identify the Test (**Label:** - the brief human readable means for identifying a Test; **skos:prefLabel:** - the human readable label spelled out in words; **Versioned IRI:** - the means for software to identify the Test). For each Test, the Quick Reference Guide identifies whether the Test operates on SingleRecords or a MultiRecord (a dataset). A brief description of what the Test is intended to do follows, with a more detailed description for implementers, consisting of Specification, InformationElements ActedUpon and Consulted, any Parameters that could change the behavior of the Tests, default values for any bdq:sourceAuthority consulted by the Test, or other parameters.
 
-Two Examples of Test data input and output are provided to illustrate opposing behaviors of the Test. For Validation Tests, one example provides a Response.result="COMPLIANT", the other "NOT_COMPLIANT". See the [BDQ Core Implementer's Guide](../implementers/index.md) for information about Test Validation Data. 
+Two Examples of Test data input and output are provided to illustrate opposing behaviors of the Test. For Validation Tests, one example provides a Response.result="COMPLIANT", the other "NOT_COMPLIANT". See the [BDQ Implementer's Guide](../implementers/index.md) for information about Test Validation Data. 
 
 Each Test lists UseCases describing data quality needs to which each Test is applicable. Notes provide additional guidance for understanding Test results and for implementation.
 
-The definitions of the terms used for the Tests can be found at [Terms used in the Quick Reference Guide to BDQ Core Tests](../../terms/bdqcore/bdqcore_qrg_term_descriptions.md).
+The definitions of the terms used for the Tests can be found at [BDQ Tests Quick Reference Guide](../../terms/bdqtest/bdqtest_qrg_term_descriptions.md).
 
 ## 5 Time and Time Zones (non-normative)
 
-Time is not considered in any of the BDQ Core Tests. There are Use Cases where the time zone is important. Dates within a dataset (bdqffdq:MultiRecord) aggregated from multiple sources may have plus or minus one day errors introduced. New Tests are required if ignorance of time would make such data unfit for a purpose. For further information, see Section [4.2 Time](../../supplement/index.md#42-Time) in [BDQ Core Supplemental Information](../../supplement/index.md).
-
+Time is not considered in any of the BDQ Tests. There are Use Cases where the time zone is important. Dates within a dataset (bdqffdq:MultiRecord) aggregated from multiple sources may have plus or minus one day errors introduced. New Tests are required if ignorance of time would make such data unfit for a purpose. For further information, see Section [4.2 Time](../../supplement/index.md#42-Time) in [BDQ Supplemental Information](../../supplement/index.md).
 ## Acronyms
 
-For a list of Acronyms see [Acronyms](../../intro/index.md#5-acronyms) in the Introduction document.
+A list of Acronyms can be found in the [Acronyms](../../index.md#5-acronyms) section of the Biodiversity Data Quality (BDQ) landing page.
 
 ## Glossary
 
-A glossary of terms additional to those in the various namespaces can be found at [Glossary](../../intro/index.md#6-glossary) in the Introduction document.
+A glossary of terms additional to those in the various namespaces can be found in the [Glossary](../../index.md#6-glossary) section of the Biodiversity Data Quality (BDQ) landing page.
 
 ## References
 
-The bibliography for BDQ Core is in the [References](../../references/index.md#2-references) document.
+The references for the BDQ standard can be found in the [References](../../index.md#7-references) section of the Biodiversity Data Quality (BDQ) landing page.
 
-## Cite BDQ Core
+## Cite BDQ
 
-**To cite BDQ Core in general, use the peer-reviewed article:**
+**To cite BDQ in general, use the peer-reviewed article:**
 
 Chapman AD, Belbin L, Zermoglio PF, Wieczorek J, Morris PJ, Nicholls
 M, Rees ER, Veiga AK, Thompson A, Saraiva AM, James SA, Gendreau C,
@@ -276,17 +274,10 @@ Quality and for Selecting Fit for Use Biodiversity Data.
 Biodiversity Information Science and Standards 4: e50889.
 https://doi.org/10.3897/biss.4.50889
 
-**To cite the standard document upon which this page is built, use
-the following:**
-
-BDQ Core Maintenance Group 2024. Biodiversity Information Standards (TDWG). http://rs.tdwg.org/bdq/doc/list/
-
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. BDQ Core User's Guide. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/terms/2025-04-11>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. BDQ User's Guide. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/terms/2025-04-11>
 
 **Biodiversity Information Standards (TDWG)**
 
 This content made open by Biodiversity Information Standards (TDWG) is licensed under a [Licensed under a Creative Commons Attribution 4.0 International (CC BY) License.](http://creativecommons.org/licenses/by/4.0/)
-
-

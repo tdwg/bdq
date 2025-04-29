@@ -25,7 +25,7 @@ bdqdim
 
 **Previous version**<br>
 **Abstract**<br>
-This document is a reference for the BDQ Core Standard. It covers the vocabulary terms that are types of bdqffdq:DataQualityDimension (originally defined in Veiga 2016 and Veiga et al. 2017) and form the controlled vocabulary for bdqffdq:hasDataQualityDimension.
+This document is a reference for the BDQ standard. It covers the vocabulary terms that are types of bdqffdq:DataQualityDimension (originally defined in Veiga 2016 and Veiga et al. 2017) and form the controlled vocabulary for bdqffdq:hasDataQualityDimension.
 
 **Authors**<br>
 [Lee Belbin](https://orcid.org/0000-0001-8900-6203) ([Blatant Fabrications](https://www.wikidata.org/wiki/Q130304884)), [Arthur D. Chapman](https://orcid.org/0000-0003-1700-6962) ([Australian Biodiversity Information Services](http://www.wikidata.org/entity/Q100600913)), [Paul J. Morris](https://orcid.org/0000-0002-3673-444X) ([Museum of Comparative Zoology, Harvard University](http://www.wikidata.org/entity/Q1420782)), [John Wieczorek](https://orcid.org/0000-0003-1144-0290) ([Rauthiflor LLC](http://www.wikidata.org/entity/Q98382028))
@@ -65,25 +65,25 @@ Draft Standard for Review
 
 [References](#references)
 
-[Cite BDQ Core](#cite-bdq-core)
+[Cite BDQ](#cite-bdq)
 
 ## 1. Introduction
 
 ### 1.1 Purpose
 
-The purpose of this document is to provide the full term list for the `bdqdim:` controlled vocabulary, which defines the values of `bdqffdq:DataQualityDimension` used in BDQ Core Tests. Each Data Quality Dimension describes a specific aspect of quality that a Test is intended to assess, such as completeness, conformance, or reliability.
+The purpose of this document is to provide the full term list for the `bdqdim:` controlled vocabulary, which defines the values of `bdqffdq:DataQualityDimension` used in BDQ Tests. Each Data Quality Dimension describes a specific aspect of quality that a Test is intended to assess, such as completeness, conformance, or reliability.
 
 These Dimensions serve as a semantic anchor for describing the intent of Tests and enable structured classification and interpretation of Test results across diverse Use Cases.
 
 ### 1.2 Audience
 
-This document is intended for users who need a technical understanding of how BDQ Core Tests relate to conceptual dimensions of data quality. It will be especially useful for:
+This document is intended for users who need a technical understanding of how BDQ Tests relate to conceptual dimensions of data quality. It will be especially useful for:
 
 - Implementers who need to map Tests to dimensions in automated systems
-- Standards developers and data quality modelers applying the BDQ Core Framework Ontology
+- Standards developers and data quality modelers applying the BDQ Framework Ontology
 - Analysts and curators needing to understand the conceptual basis for different Tests’ evaluation
 
-A working familiarity with the BDQ Core Test structure and the Framework Ontology is helpful, though not required to benefit from this document.
+A working familiarity with the BDQ Test structure and the Framework Ontology is helpful, though not required to benefit from this document.
 
 ### 1.3 Data Quality Dimensions
 
@@ -91,13 +91,13 @@ The concept of `bdqffdq:DataQualityDimension`, originally introduced by Veiga (2
 
 Dimensions are measurable characteristics of an `bdqffdq:InformationElement` and provide insight into how quality is defined and assessed for a given Use Case.
 
-Each BDQ Core Test typically evaluates one or more data values (Information Elements) with respect to a single Data Quality Dimension. For example, the Test `VALIDATION_COUNTRY_FOUND` assesses the value of `dwc:country` for conformance to a reference authority. In this case, the relevant dimension is `bdqdim:Conformance`.
+Each BDQ Test typically evaluates one or more data values (Information Elements) with respect to a single Data Quality Dimension. For example, the Test `VALIDATION_COUNTRY_FOUND` assesses the value of `dwc:country` for conformance to a reference authority. In this case, the relevant dimension is `bdqdim:Conformance`.
 
-Unlike Criteria, which apply only to Validation and Issue Tests, Data Quality Dimensions apply to all BDQ Core Test types: `bdqffdq:Validation`, `bdqffdq:Issue`, `bdqffdq:Amendment`, and `bdqffdq:Measure`.
+Unlike Criteria, which apply only to Validation and Issue Tests, Data Quality Dimensions apply to all BDQ Test types: `bdqffdq:Validation`, `bdqffdq:Issue`, `bdqffdq:Amendment`, and `bdqffdq:Measure`.
 
 ### 1.4 Associated Documents
 
-For the list and links to all associated documents see the [Biodiversity Data Quality (BDQ) Core](../../index.md) page, which lists the parts of the standard.
+For the list and links to all associated documents see the [Biodiversity Data Quality (BDQ)](../../index.md) page, which lists the parts of the standard.
 
 ### 1.5 Term List Distributions
 
@@ -127,7 +127,7 @@ The following namespace abbreviations are used in this document:
 | **Abbreviation** | **Namespace** |
 | ------------ | -------------                               |
 | bdq:         | https://rs.tdwg.org/bdq/terms/              |
-| bdqcore:     | https://rs.tdwg.org/bdqcore/terms/          |
+| bdqtest:     | https://rs.tdwg.org/bdqtest/terms/          |
 | bdqdim:      | https://rs.tdwg.org/bdqdim/terms/           |
 | bdqffdq:     | https://rs.tdwg.org/bdqffdq/terms           |
 | dcterms:     | http://purl.org/dc/terms/                   |
@@ -468,22 +468,21 @@ Each instance of a Test, regardless of Test type, SHOULD have exactly one bdqffd
 </table>
 
 
-
 ## Acronyms
 
-For a list of Acronyms see [Acronyms](../../intro/index.md#5-acronyms) in the Introduction document.
+A list of Acronyms can be found in the [Acronyms](../../index.md#5-acronyms) section of the Biodiversity Data Quality (BDQ) landing page.
 
 ## Glossary
 
-A glossary of terms additional to those in the various namespaces can be found at [Glossary](../../intro/index.md#6-glossary) in the Introduction document.
+A glossary of terms additional to those in the various namespaces can be found in the [Glossary](../../index.md#6-glossary) section of the Biodiversity Data Quality (BDQ) landing page.
 
 ## References
 
-The bibliography for BDQ Core is in the [References](../../references/index.md#2-references) document.
+The references for the BDQ standard can be found in the [References](../../index.md#7-references) section of the Biodiversity Data Quality (BDQ) landing page.
 
-## Cite BDQ Core
+## Cite BDQ
 
-**To cite BDQ Core in general, use the peer-reviewed article:**
+**To cite BDQ in general, use the peer-reviewed article:**
 
 Chapman AD, Belbin L, Zermoglio PF, Wieczorek J, Morris PJ, Nicholls
 M, Rees ER, Veiga AK, Thompson A, Saraiva AM, James SA, Gendreau C,
@@ -492,11 +491,6 @@ Quality and for Selecting Fit for Use Biodiversity Data.
 Biodiversity Information Science and Standards 4: e50889.
 https://doi.org/10.3897/biss.4.50889
 
-**To cite the standard document upon which this page is built, use
-the following:**
-
-BDQ Core Maintenance Group 2024. Biodiversity Information Standards (TDWG). http://rs.tdwg.org/bdq/doc/list/
-
 **To cite this document specifically, use the following:**
 
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Data Quality Dimension Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/bdqdim/terms/2025-04-11>
@@ -504,5 +498,3 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
 **Biodiversity Information Standards (TDWG)**
 
 This content made open by Biodiversity Information Standards (TDWG) is licensed under a [Licensed under a Creative Commons Attribution 4.0 International (CC BY) License.](http://creativecommons.org/licenses/by/4.0/)
-
-
