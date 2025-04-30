@@ -656,7 +656,7 @@ for r in queryResult :
 	text = text + "\n\n"
 
 text = text + "### 4.2 Different From Axioms\n"
-sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment ?type (STR(GROUP_CONCAT(DISTINCT COALESCE(?differentFrom, \",\"); SEPARATOR=\", \")) AS ?differentFromAggregate) WHERE { ?subject a owl:NamedIndividual .  ?subject a ?type .  ?subject skos:definition ?definition .  ?subject skos:prefLabel ?prefLabel .  ?subject rdfs:comment ?comment .  FILTER ( ?type != owl:NamedIndividual) .  OPTIONAL { ?subject owl:differentFrom ?differentFrom } } GROUP BY ?subject ?prefLabel ?definition ?comment ?type ORDER BY ?type ?subject"
+sparql = prefixes + "SELECT DISTINCT  ?subject  ?type  (STR(GROUP_CONCAT(DISTINCT COALESCE(?differentFrom, \",\"); SEPARATOR=\", \")) AS ?differentFromAggregate) WHERE { ?subject owl:differentFrom ?differentFrom . ?subject a ?type  . FILTER ( ?type != owl:NamedIndividual) . } GROUP BY ?subject ?type ORDER BY ?type ?subject "
 if debug: 
    print(sparql)
 queryResult = graph.query(sparql)
