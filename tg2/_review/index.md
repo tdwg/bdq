@@ -65,8 +65,9 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
   - [2.6 Distribution Files](#26-distribution-files)
     - [2.6.1 Tests](#261-tests)
     - [2.6.2 Test Validation Data](#262-test-validation-data)
-    - [2.6.3 RDF Serializations of Controlled Vocabularies](#263-rdf-serializations-of-controlled-vocabularies)<br>
-      
+    - [2.6.3 RDF Serializations of Controlled Vocabularies](#263-rdf-serializations-of-controlled-vocabularies)
+    - [2.6.4 Java Implementation](#264-java-implementation)<br>
+
 [3. Design of the Tests (Normative)](#3-design-of-the-tests-normative)
   - [3.1 Data Quality Control, Data Quality Assurance (normative)](#31-data-quality-control-data-quality-assurance-normative)
   - [3.2 When to Run Tests (normative)](#32-when-to-run-tests-normative)
@@ -85,15 +86,7 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
 ## 1. Introduction
 
 ### 1.1 Purpose
-Beyond data availability, data quality is probably the most significant issue for users of biodiversity data. Data quality is treated as fitness for a particular use, not as an inherent characteristic of data as described in detail in the User's Guide section [Context for Quality, Uses and Purposes](docs/guide/users/index.md#3-context-for-quality-uses-and-purposes-non-normative). The Biodiversity Data Quality (BDQ) standard is meant to provide a modular, extensible framework for assessing the quality of biodiversity data relative to specific uses. The standard includes:
-- Specifications for reproducible data quality Tests as a vocabulary
-- A supporting vocabulary (`bdq:`) for describing Tests
-- Controlled vocabularies defining key data quality concepts
-- Guides for Test implementation and use
-- A Fitness for Use Ontology (`bdqffdq:`) to contextualize Tests 
-- A supplemental history of development
-
-While not part of the BDQ standard, a validated Java® implementation, [bdqtestrunner](https://github.com/FilteredPush/bdqtestrunner/), demonstrates practical usage and conformance with the provided [Test Validation Data](#262-test-validation-data).
+Beyond data availability, data quality is probably the most significant issue for users of biodiversity data. Data quality is treated as fitness for a particular use, not as an inherent characteristic of data as described in detail in the User's Guide section [Context for Quality, Uses and Purposes](docs/guide/users/index.md#3-context-for-quality-uses-and-purposes-non-normative). The Biodiversity Data Quality (BDQ) standard is meant to provide a modular, extensible framework for assessing the quality of biodiversity data relative to specific uses.
 
 ### 1.2 Audience
 Intended for:
@@ -136,7 +129,7 @@ The Quick Reference Guide is a simple, informative reference and the first place
 
 ### 2.2 Landing Pages
 The landing pages provide overviews of the subjects they cover and refer to more detailed information in associated documents.<br>
-[**Biodiversity Data Quality (BDQ)**](index.md) - Overview of the BDQ standard. This page.<br>
+**Biodiversity Data Quality (BDQ)** - Overview of the BDQ standard. This page.<br>
 [**BDQ Tests and Assertions**](docs/bdqtest/index.md) - Overview of the Tests.<br>
 [**Fitness For Use Ontology**](docs/bdqffdq/index.md) - Overview of the Fitness for Use Framework.<br>
 [**Fitness For Use Framework Ontology Vocabulary Extension**](docs/extension/bdqffdq/index.md) - Overview of the axioms that extend the basic vocabulary for the Fitness of Use Framework Ontology.
@@ -152,7 +145,7 @@ The Guides are explanatory documents targeting particular perspectives on the st
 #### 2.4.1 Foundational Vocabularies
 The Foundational Vocabularies cover the two main parts of the standard - the practical (the Tests) and the theoretical (the Framework).<br>
 [**Biodiversity Data Quality Fitness for Use Framework (OWL Ontology)**](vocabulary/bdqffdq.owl)<br>
-[**Fitness For Use Framework Ontology List of Terms (bdqffdq:)**](docs/list/bdqffdq/index.md)
+[**Fitness For Use Framework Ontology List of Terms (bdqffdq:)**](docs/list/bdqffdq/index.md)<br>
 [**BDQ Tests and Assertions List of Terms (bdqtest:)**](docs/list/bdqtest/index.md)<br>
 
 #### 2.4.2 Supporting Vocabularies
@@ -169,14 +162,14 @@ Supplemental Information includes the rationale for, the history of, and the cha
 ### 2.6 Distribution Files
 
 #### 2.6.1 Tests
-The Test definitions are provided in various serializations. Of these, the bdqcore_term_versions.csv is the canonical archive of all Tests versions, both recommended and historical. The documentation about the details of Tests for this standard are generated from this file.<br>
+The Test definitions are provided in various serializations. Of these, the bdqtest_term_versions.csv is the canonical archive of all Tests versions, both recommended and historical. The documentation about the details of Tests for this standard are generated from this file.<br>
 
-[**CSV List of all Tests**](vocabulary/bdqcore_term_versions.csv)<br>
-[**CSV List of Single Record Tests**](dist/bdqcore_singlerecord_tests_current.csv)<br>
-[**CSV List of Multi Record Tests**](dist/bdqcore_multirecord_tests_current.csv)<br>
-[**Tests in RDF/XML**](dist/bdqcore.xml)<br>
-[**Tests in Turtle**](dist/bdqcore.ttl)<br>
-[**Tests in JSON-LD**](dist/bdqcore.json)
+[**CSV List of all Tests (bdqtest_term_versions.csv)**](vocabulary/bdqtest_term_versions.csv)<br>
+[**CSV List of Single Record Tests**](dist/bdqtest_singlerecord_tests_current.csv)<br>
+[**CSV List of Multi Record Tests**](dist/bdqtest_multirecord_tests_current.csv)<br>
+[**Tests in RDF/XML**](dist/bdqtest.xml)<br>
+[**Tests in Turtle**](dist/bdqtest.ttl)<br>
+[**Tests in JSON-LD**](dist/bdqtest.json)
 
 #### 2.6.2 Test Validation Data
 Test Validation Data are intended for implementers to use to evaluate whether Test Implementations produce the Expected Responses.<br>
@@ -189,6 +182,10 @@ Test Validation Data are intended for implementers to use to evaluate whether Te
 [**RDF/XML serialization of the bdqcrit: terms**](dist/bdqcrit.xml)<br>
 [**RDF/XML serialization of the bdqdim: terms**](dist/bdqdim.xml)<br>
 [**RDF/XML serialization of the bdqenh: terms**](dist/bdqenh.xml)
+
+#### 2.6.4 Java Validation
+
+While not part of the BDQ standard, a validated Java® implementation, [bdqtestrunner](https://github.com/FilteredPush/bdqtestrunner/), demonstrates practical usage and conformance with the provided [Test Validation Data](#262-test-validation-data).      
 
 ## 3 Design of the Tests (normative)
 
@@ -407,7 +404,7 @@ We have used the formatting recommended by Pensoft, see https://checklist.pensof
 <li>Lowery D, Morris PJ, Morris RA (2025) kurator-org/kurator-ffdq: Release of Kurator-FFDQ library version v3.1.0 (v3.1.0). Zenodo. https://doi.org/10.5281/zenodo.15182936</li>
 <li>Maptiler (2019) EPSG.io. https://epsg.io</li>
 <li>Morris P, Hanken J, Lowery D, Ludäscher B, Macklin J, McPhillips T, Wieczorek J, Zhang Q (2018) Kurator: Tools for Improving Fitness for Use of Biodiversity Data. Biodiversity Information Science and Standards 2: e26539. https://doi.org/10.3897/biss.2.26539</li>
-<li>Morris PJ (2024) kurator-org/bdq_issue_to_csv: Version 1.0.0 release of bdq_issue_to_csv utility for creating bdqcore: term-version file. (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.14057551</li>
+<li>Morris PJ (2024) kurator-org/bdq_issue_to_csv: Version 1.0.0 release of bdq_issue_to_csv utility for creating bdqtest: term-version file. (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.14057551</li>
 <li>Morris PJ (2024b) FilteredPush/bdqtestrunner: Release of bdqtestrunner version v1.0.0 (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.13932178</li>
 <li>Morris PJ, Dou L (2024) FilteredPush/sci_name_qc: Release vesion 1.1.2 of the sci_name_qc library implementing BDQ Core NAME tests. (v1.1.2). Zenodo. https://doi.org/10.5281/zenodo.14052951</li>
 <li>Morris PJ (2025) FilteredPush/rec_occur_qc: Release vesion 1.0.1 of the rec_occur_qc library, compliant implementation of all the BDQ Core Other (metadata) Tests. (v1.0.1). Zenodo. https://doi.org/10.5281/zenodo.14968502</li>

@@ -229,7 +229,7 @@ In each case, a Response.comment MUST be present with text explaining to consume
 
 Tests may operate on a SingleRecord (e.g., one row of [Simple Darwin Core](https://dwc.tdwg.org/simple/)) or on a MultiRecord (a dataset).
 
-The bdqffdq Framework allows for Tests of all types to operate on (bdqffdq:hasResourceType) either SingleRecords or MultiRecords. In the BDQ standard, the only MultiRecord Tests that have been defined are Measures. We refer to these as MultiRecord Measures (instances of bdqffdq:Measure that are the subject of a bdqffdq:hasResourceType property who's object is bdqffdq:MultiRecord).
+The BDQ [Fitness for Use Framework](../bdqffdq/index.md) allows for Tests of all types to operate on (bdqffdq:hasResourceType) either SingleRecords or MultiRecords. In the BDQ standard, the only MultiRecord Tests that have been defined are Measures. We refer to these as MultiRecord Measures (instances of bdqffdq:Measure that are the subject of a bdqffdq:hasResourceType property who's object is bdqffdq:MultiRecord).
 
 The focus of the BDQ Tests are the SingleRecord Tests. To allow for standard means for summarizing the results of these Tests, and for filtering data under Quality Assurance, we have also defined two sets of MultiRecord Measures.
 
