@@ -470,11 +470,11 @@ for r in queryResult :
 	text = text + "- Definition: {}\n".format(r.definition)
 	if (r.parents) :
 		text = text + "- SubClass Of: {}\n".format(r.parents.replace("https://rs.tdwg.org/bdqffdq/terms/",""))
-	if (r.range) :
-		if (r.restriction) :
-			text = text + "- Range [ {} {} ]\n".format(r.restriction.replace("http://www.w3.org/2002/07/owl#","owl:"), r.restrictedRange.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:"))
-		else :
-			text = text + "- Range {}\n".format(r.range.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:"))
+	#if (r.range) :
+	#	if (r.restriction) :
+	#		text = text + "- Range [ {} {} ]\n".format(r.restriction.replace("http://www.w3.org/2002/07/owl#","owl:"), r.restrictedRange.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:"))
+	#	else :
+	#		text = text + "- Range {}\n".format(r.range.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:"))
 	text = text + "- Comments: {}\n".format(r.comment.replace("\n\n","\n").replace("\n","  \n"))
 	text = text + "\n********************\n\n"
 
@@ -490,13 +490,13 @@ for r in queryResult :
 	text = text + "- Name: {}\n".format(entity)
 	text = text + "- Preferred Label: {}\n".format(r.prefLabel)
 	text = text + "- Definition: {}\n".format(r.definition)
-	if (r.range) :
-		text = text + "- Range {}\n".format(r.range.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:").replace("http://www.w3.org/2001/XMLSchema#","xsd:"))
+	#if (r.range) :
+	#	text = text + "- Range {}\n".format(r.range.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:").replace("http://www.w3.org/2001/XMLSchema#","xsd:"))
 	text = text + "- Comments: {}\n".format(r.comment.replace("\n\n","\n").replace("\n","  \n"))
 	text = text + "\n********************\n\n"
 
 text = text + "### 4.4 NamedIndividual terms\n"
-sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment ?type ?differentFrom WHERE {  ?subject a owl:NamedIndividual . ?subject a ?type . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . ?subject rdfs:comment ?comment . FILTER ( ?type != owl:NamedIndividual) . OPTIONAL { ?subject owl:differentFrom ?differentFrom }  }  ORDER BY ?type ?subject"
+sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment ?type  WHERE {  ?subject a owl:NamedIndividual . ?subject a ?type . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . ?subject rdfs:comment ?comment . FILTER ( ?type != owl:NamedIndividual) . }  ORDER BY ?type ?subject"
 queryResult = graph.query(sparql)
 for r in queryResult : 
 	entity = r.subject
@@ -507,9 +507,9 @@ for r in queryResult :
 	rtype = r.type.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:");
 	text = text + "- Type: {}\n".format(rtype)
 	text = text + "- Preferred Label: {}\n".format(r.prefLabel)
-	if (r.differentFrom) :
-		different = r.differentFrom.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:");
-		text = text + "- DifferentFrom: {}\n".format(different)
+	#if (r.differentFrom) :
+	#	different = r.differentFrom.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:");
+	#	text = text + "- DifferentFrom: {}\n".format(different)
 	text = text + "- Definition: {}\n".format(r.definition)
 	text = text + "- Comments: {}\n".format(r.comment.replace("\n\n","\n").replace("\n","  \n"))
 	text = text + "\n********************\n\n"
@@ -656,7 +656,7 @@ for r in queryResult :
 	text = text + "\n\n"
 
 text = text + "### 4.2 Different From Axioms\n"
-sparql = prefixes + "SELECT DISTINCT ?subject ?type ?differentFrom WHERE {  ?subject a owl:NamedIndividual . ?subject a ?type . FILTER ( ?type != owl:NamedIndividual) .  ?subject owl:differentFrom ?differentFrom  }  ORDER BY ?type ?subject"
+sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment ?type (STR(GROUP_CONCAT(DISTINCT COALESCE(?differentFrom, \",\"); SEPARATOR=\", \")) AS ?differentFromAggregate) WHERE { ?subject a owl:NamedIndividual .  ?subject a ?type .  ?subject skos:definition ?definition .  ?subject skos:prefLabel ?prefLabel .  ?subject rdfs:comment ?comment .  FILTER ( ?type != owl:NamedIndividual) .  OPTIONAL { ?subject owl:differentFrom ?differentFrom } } GROUP BY ?subject ?prefLabel ?definition ?comment ?type ORDER BY ?type ?subject"
 if debug: 
    print(sparql)
 queryResult = graph.query(sparql)
@@ -669,7 +669,7 @@ for r in queryResult :
 	text = text + "| -------- | ----- |\n"
 	text = text + "| Name | {} |\n".format(entity)
 	text = text + "| Type | {} |\n".format(r.type.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:"))
-	text = text + "| Different From | {} |\n".format(r.differentFrom.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:"))
+	text = text + "| Different From | {} |\n".format(r.differentFromAggregate.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:"))
 	text = text + "\n\n"
 
 ## Produce a table of contents from the headings 
