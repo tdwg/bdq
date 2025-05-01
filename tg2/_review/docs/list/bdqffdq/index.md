@@ -46,11 +46,10 @@ Draft Standard for Review
   - [1.1 Purpose](#11-purpose)
   - [1.2 Audience](#12-audience)
   - [1.3 Associated Documents](#13-associated-documents)
-    - [1.3.1 Term List Distributions](#131-term-list-distributions)
+    - [1.3.1 Distributions for bdqffdq:](#131-distributions-for-bdqffdq)
   - [1.4 Status of the content of this document](#14-status-of-the-content-of-this-document)
   - [1.5 RFC 2119 key words](#15-rfc-2119-key-words)
   - [1.6 Namespace abbreviations](#16-namespace-abbreviations)
-  - [1.7 Key to Vocabulary Terms](#17-key-to-vocabulary-terms)
 
 [2 Use of Terms (normative)](#2-use-of-terms-normative)
 
@@ -168,9 +167,7 @@ Draft Standard for Review
 
 ### 1.1 Purpose
 
-The purpose of this document is to provide the official term list for the `bdqffdq:` vocabulary, which defines the ontology elements used in the Biodiversity Data Quality Fitness for Use Framework. This includes classes, object properties, data properties, and named individuals that collectively support the semantic description of BDQ Tests and related quality constructs.
-
-This document presents a human-readable view of the vocabulary and follows the TDWG Standards Documentation Specification. It does not include additional axioms, implementation guidance, or usage recommendations — those are addressed in complementary documentation and the [Fitness For Use Framework Ontology Vocabulary Extension](docs/extension/bdqffdq/index.md).
+The purpose of this document is to provide the landing page for the `bdqffdq:` vocabulary, which defines the ontology elements used in the Biodiversity Data Quality Fitness for Use Framework (Ontology). The vocabulary includes classes, object properties, data properties, and named individuals that collectively support the semantic description of BDQ Tests and related quality constructs. The terms in the vocabulary are fully documented in the [**Fitness For Use Framework Ontology List of Terms (bdqffdq:)**](docs/list/bdqffdq/index.md). Additional axioms, implementation guidance, or usage recommendations are addressed in the [1.3 Associated Documents](#13-associated-documents).
 
 ### 1.2 Audience
 
@@ -184,22 +181,24 @@ Familiarity with RDF, OWL, and the structure of the BDQ Tests is recommended.
 
 ### 1.3 Associated Documents
 
-For the list and links to all associated documents see the [Biodiversity Data Quality (BDQ)](../../index.md) page, which lists the parts of the standard.
+For the list and links to all associated documents see [The Biodiversity Data Quality (BDQ) Standard](../../index.md).
 
 Information about the bdqffdq: ontology, its usage, and its extensions can be found in the following subset of BDQ resources:
 
-- [Fitness For Use Framework Ontology Guide](../../guide/bdqffdq/index.md) Provides a visual and narrative introduction to the concepts and application of the ontology.
-- [Fitness For Use Framework Ontology List of Terms](../../list/bdqffdq/index.md) The term list document, which enumerates and describes the vocabulary terms. This document.
-- [Fitness for Use Ontology](../../bdqffdq/index.md) Provides normative guidance on the use of the vocabulary.
-- [Fitness For Use Framework Ontology Vocabulary Extension](../../extension/bdqffdq/index.md) Defines additional axioms extending the core vocabulary.
-- [Biodiversity Data Quality Fitness for Use Framework](../../../vocabulary/bdqffdq.owl) The ontology, which provides the formal RDF/OWL representation of the vocabulary.
+- [**Fitness For Use Framework Ontology Guide**](../../guide/bdqffdq/index.md) Provides a visual and narrative introduction to the concepts and application of the ontology.
+- **Fitness For Use Framework Ontology List of Terms** The term list document, which enumerates and describes the vocabulary terms. This document.
+- [**Fitness for Use Ontology**](../../bdqffdq/index.md) Provides normative guidance on the use of the vocabulary.
+- [**Fitness For Use Framework Ontology Vocabulary Extension**](../../extension/bdqffdq/index.md) Defines additional axioms extending the core vocabulary.
+- [**Biodiversity Data Quality Fitness for Use Framework (Ontology)**](../../../vocabulary/bdqffdq.owl) The ontology, which provides the formal RDF/OWL representation of the vocabulary.
 
-#### 1.3.1 Term List Distributions
+#### 1.3.1 Distributions for bdqffdq:
 
-| Description | IRI | Download URL | Note | 
-| ----------- | --- | -----------  | ---- | 
-| HTML file   | http://rs.tdwg.org/bdqffdq/terms/ | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/docs/list/bdqffdq/index.md | This file | 
-| OWL Ontology | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/vocabulary/bdqffdq.owl | Turtle Serialization of the full ontology, including additional axioms | 
+| Description | IRI | Download URL |
+| ----------- | --- | ------------ |
+| Human Readable Term List            | TBD | [/docs/terms/bdqffdq/index.md](../list/bdqffdq/index.md) | 
+| Human Readable Vocabulary Extension | TBD | [/docs/extension/bdqffdq/index.md](../extension/bdqffdq/index.md) | 
+| OWL Ontology                        | TBD | [/vocabulary/bdqffdq.owl](../../../vocabulary/bdqffdq.owl) |
+
 
 ### 1.4 Status of the content of this document
 
@@ -233,21 +232,6 @@ The following namespace abbreviations are used in this document:
 | rdfs:        | http://www.w3.org/2000/01/rdf-schema        |
 | skos:        | http://www.w3.org/2004/02/skos/core#        |
 | xsd:         | http://www.w3.org/2001/XMLSchema#           |
-
-### 1.7 Key to Vocabulary Terms
-
-The terminology used to describe the terms in this vocabulary follows the TDWG Standards Documentation Standard (SDS). Each term definition includes the original RDF definition, and may also provide a TDWG-specific interpretation from the SDS, as well as a definition tailored to this local context.
-
-| Label (Term) | Normative | Definition | Example |
-| ------------ | --------- | ---------- | ------- |
-| Term Name (rdf:value) | normative | Idiomatic property used for structured values. TDWG SDS: The term name is a controlled value that represents the class, property, or concept described by the term definition. | [https://rs.tdwg.org/ bdqffdq/terms/ AbstractInformationElement](https://rs.tdwg.org/bdqffdq/terms/AbstractInformationElement) |
-| Term IRI (dcterms:isVersionOf) | normative | A related resource of which the described resource is a version, edition, or adaptation. TDWG SDS: The HTTP IRI that uniquely identifies the current term. | [https://rs.tdwg.org/ bdqffdq/terms/ AbstractInformationElement](https://rs.tdwg.org/bdqffdq/terms/AbstractInformationElement) |
-| Term Version IRI (rdf:about) | normative | The HTTP IRI that identifies the version of the term that is currently in force. | [https://rs.tdwg.org/ bdqffdq/terms/ AbstractInformationElement](https://rs.tdwg.org/bdqffdq/terms/AbstractInformationElement) |
-| Label (rdfs:label) | normative | A human-readable name for the subject. TDWG SDS: A a word or short phrase that serves as a human-readable name for the term. | Abstract Information Element |
-| Definition (skos:definition) | normative | A statement or formal explanation of the meaning of a concept. TDWG SDS: The normative definition of the term, written in English. | A bdqffdq:InformationElement described in abstract terms and not linked with any concrete terms. |
-| Comments (rdfs:comment) | non-normative | A description of the subject resource. | Such bdqffdq:InformationElements as DATE and DAY are abstract, they could reference any representation of those concepts. In contrast, dwc:eventDate and dwc:day can be linked to concrete bdqffdq:ActedUponInformationElements or bdqffdq:ConsultedInformationElements. |
-| Type (rdf:type) | normative | The subject is an instance of a class. | [http://www.w3.org/2002/07/ owl#Class](http://www.w3.org/2002/07/owl#Class) |
-
 
 ## 2 Use of Terms (normative)
 

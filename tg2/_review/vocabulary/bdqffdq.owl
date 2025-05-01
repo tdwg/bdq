@@ -12,7 +12,7 @@
 <https://rs.tdwg.org/bdqffdq/terms> rdf:type owl:Ontology ;
                                      owl:versionIRI <https://rs.tdwg.org/bdqffdq/terms/1.0> ;
                                      rdfs:comment "The classes and object properties found in this ontology are dedicated to fundamental and derived concepts from the Fitness For Use Framework described in the paper by Veiga et al., available at: http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0178731 as modified to describe data quality fitness for use Tests in the TDWG BDQ Standard."@en ;
-                                     rdfs:label "Biodiversity Data Quality Fitness for Use Framework"@en .
+                                     rdfs:label "Biodiversity Data Quality Fitness for Use Framework (Ontology)"@en .
 
 #################################################################
 #    Annotation properties

@@ -102,15 +102,15 @@ While some familiarity with controlled vocabularies and RDF modeling may be usef
 
 ### 1.3 Associated Documents
 
-For the list and links to all associated documents see the [Biodiversity Data Quality (BDQ)](../../index.md) page, which lists the parts of the standard.
+For the list and links to all associated documents see [The Biodiversity Data Quality (BDQ) Standard](../../index.md).
 
 The set of information most relevant to the Biodiversity Data Quality (BDQ) Tests can be found in the following subset of resources:
 
-- [BDQ Tests and Assertions](../bdqtest/index.md) Defines how each Test is modeled using standard vocabulary terms and how it should behave under various conditions. This document.
-- [BDQ Tests Quick Reference Guide](../terms/bdqtest/index.md) Provides a concise, easy-to-read reference about the BDQ Tests.
-- [BDQ Tests and Assertions List of Terms](../list/bdqtest/index.md) Provides the complete normative definitions of the BDQ Tests.
-- [BDQ User's Guide](../../guide/users/index.md) For anyone interested in how to use the BDQ Tests in practice.
-- [BDQ Implementer's Guide](../guide/implementers/index.md) For anyone interested in the technical implementation of the BDQ Tests.
+- **BDQ Tests and Assertions** Defines how each Test is modeled using standard vocabulary terms and how it should behave under various conditions. This document.
+- [**BDQ Tests Quick Reference Guide**](../terms/bdqtest/index.md) Provides a concise, easy-to-read reference about the BDQ Tests.
+- [**BDQ Tests and Assertions List of Terms**](../list/bdqtest/index.md) Provides the complete normative definitions of the BDQ Tests.
+- [**BDQ User's Guide**](../../guide/users/index.md) For anyone interested in how to use the BDQ Tests in practice.
+- [**BDQ Implementer's Guide**](../guide/implementers/index.md) For anyone interested in the technical implementation of the BDQ Tests.
 
 #### 1.3.1 Term List Distributions for the BDQ Standard
 

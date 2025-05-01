@@ -2,7 +2,7 @@
 
 See [_review/vocabulary](../_review/vocabulary/) for vocabulary files.
 
-You probably want the orientatation page for [Biodiversity Data Quality Core](https://github.com/tdwg/bdq/blob/master/tg2/_review/index.md) 
+You probably want the orientation page for [Biodiversity Data Quality Core](https://github.com/tdwg/bdq/blob/master/tg2/_review/index.md) 
 
 # Work in progress files
 

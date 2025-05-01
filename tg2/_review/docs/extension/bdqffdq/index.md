@@ -112,15 +112,15 @@ This document assumes familiarity with OWL constructs, reasoning profiles, and R
 
 ### 1.3 Associated Documents
 
-For the list and links to all associated documents see the [Biodiversity Data Quality (BDQ)](../../index.md) page, which lists the parts of the standard.
+For the list and links to all associated documents see [The Biodiversity Data Quality (BDQ) Standard](../../index.md).
 
 Information about the bdqffdq: ontology, its usage, and its extensions can be found in the following subset of Biodiversity Data Quality (BDQ) resources:
 
-- [Fitness For Use Framework Ontology Guide](../../guide/bdqffdq/index.md) Provides a visual and narrative introduction to the concepts and application of the ontology.
-- [Fitness For Use Framework Ontology List of Terms](../../list/bdqffdq/index.md) The term list document, which enumerates and describes the vocabulary terms.
-- [Fitness for Use Ontology](../../bdqffdq/index.md) Provides normative guidance on the use of the vocabulary.
-- [Fitness For Use Framework Ontology Vocabulary Extension](../../extension/bdqffdq/index.md) Defines additional axioms extending the core vocabulary. This document.
-- [Biodiversity Data Quality Fitness for Use Framework](../../../vocabulary/bdqffdq.owl) The ontology, which provides the formal RDF/OWL representation of the vocabulary.
+- [**Fitness For Use Framework Ontology Guide**](../../guide/bdqffdq/index.md) Provides a visual and narrative introduction to the concepts and application of the ontology.
+- [**Fitness For Use Framework Ontology List of Terms**](../../list/bdqffdq/index.md) The term list document, which enumerates and describes the vocabulary terms.
+- [**Fitness for Use Ontology**](../../bdqffdq/index.md) Provides normative guidance on the use of the vocabulary.
+- **Fitness For Use Framework Ontology Vocabulary Extension** Defines additional axioms extending the core vocabulary. This document.
+- [**Biodiversity Data Quality Fitness for Use Framework (Ontology)**](../../../vocabulary/bdqffdq.owl) The ontology, which provides the formal RDF/OWL representation of the vocabulary.
 
 #### 1.3.1 Term List Distributions
 

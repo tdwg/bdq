@@ -74,7 +74,7 @@ These terms ensure consistent representation and enable structured interpretatio
 
 ### 1.4 Associated Documents
 
-For the list and links to all associated documents see the [Biodiversity Data Quality (BDQ)](../../index.md) page, which lists the parts of the standard.
+For the list and links to all associated documents see [The Biodiversity Data Quality (BDQ) Standard](../../index.md).
 
 ### 1.5 Term List Distributions
 

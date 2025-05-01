@@ -15,10 +15,10 @@ The BDQ standard is complex. There are requirements about which documents must e
 ## 🚀 Choose Your Review Path
 
 ### A. Introduction
-First, read [**Biodiversity Data Quality (BDQ)**](./index.md). This is the introduction and landing page for the standard (see section '2.2.1 Standards landing page' in the [TDWG Standards Documentation Specification](https://github.com/tdwg/vocab/blob/master/sds/documentation-specification.md)). Then, you can approach the remainder of the review either from the practical perspective (the Tests) or from the theoretical one (the Framework). 
+First, read [**The Biodiversity Data Quality (BDQ) Standard**](./index.md). This is the introduction and landing page for the standard (see section '2.2.1 Standards landing page' in the [TDWG Standards Documentation Specification](https://github.com/tdwg/vocab/blob/master/sds/documentation-specification.md)). Then, you can approach the remainder of the review either from the practical perspective (the Tests) or from the theoretical one (the Framework). 
 
 ### B. Documents emphasizing BDQ in Practice (the Tests)
-Within the practical perspective there are two basic audiences, Users and Implementers, with fundamental interests in common. For either of these audiences, the [**BDQ Tests Quick Reference Guide**](docs/terms/bdqtest/index.md) is good continuation following the introductory [**Biodiversity Data Quality (BDQ)**](./index.md). The Quick Reference Guide is an informative go-to reference with only the essential information about the BDQ Tests. Also of common interest to Users and Implementers is the in-depth introduction and required landing page for the Tests vocabulary - [**BDQ Tests and Assertions**](docs/bdqtest/index.md). After all of this orientational material, there are guides specifically targeting Users and Implementers:
+Within the practical perspective there are two basic audiences, Users and Implementers, with fundamental interests in common. For either of these audiences, the [**BDQ Tests Quick Reference Guide**](docs/terms/bdqtest/index.md) is good continuation following the introductory [**The Biodiversity Data Quality (BDQ) Standard**](./index.md). The Quick Reference Guide is an informative go-to reference with only the essential information about the BDQ Tests. Also of common interest to Users and Implementers is the in-depth introduction and required landing page for the Tests vocabulary - [**BDQ Tests and Assertions**](docs/bdqtest/index.md). After all of this orientational material, there are guides specifically targeting Users and Implementers:
 
 #### 1. Users
 - [**BDQ User's Guide**](docs/guide/users/index.md)
@@ -28,8 +28,8 @@ Within the practical perspective there are two basic audiences, Users and Implem
 - [**Guide to Marking and Identifying Synthetic and Modified Data**](docs/guide/synthetic/index.md)
 
 ### C. Documents emphasizing **BDQ in Theory (the Framework)**:
-The theoretical perspective is formally based on the [**Biodiversity Data Quality Fitness for Use Framework**](vocabulary/bdqffdq.owl) OWL ontology. The following documents explain the ontology and how it is extended for use with the BDQ Tests and Assertions (the Tests):
-- [**Fitness for Use Framework Ontology**](docs/bdqffdq/index.md)
+The theoretical perspective is formally based on the [**Biodiversity Data Quality Fitness for Use Framework (Ontology)**](vocabulary/bdqffdq.owl). The following documents explain the ontology and how it is extended for use with the BDQ Tests and Assertions (the Tests):
+- [**Fitness for Use Ontology**](docs/bdqffdq/index.md)
 - [**Fitness for Use Framework Vocabulary Extension**](docs/extension/bdqffdq/index.md)
 - [**Fitness for Use Framework Ontology Guide**](docs/guide/bdqffdq/index.md)
 - [**Biodiversity Data Quality Fitness for Use Framework (Ontology)**](vocabulary/bdqffdq.owl)

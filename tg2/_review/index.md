@@ -1,9 +1,9 @@
 <!--- layout: home --->
-# Biodiversity Data Quality (BDQ)
+# The Biodiversity Data Quality (BDQ) Standard
 <!--- {:.lead} --->
 
 **Title**<br>
-Biodiversity Data Quality (BDQ)
+The Biodiversity Data Quality (BDQ) Standard
 
 **Permanent IRI (for citations and links)**<br>
 [https://www.tdwg.org/standards/bdq](https://www.tdwg.org/standards/bdq)
@@ -21,7 +21,7 @@ Technical Specification
 **Biodiversity Data Quality (BDQ)** is a standard maintained by the [Biodiversity Data Quality Maintenance Interest Group](https://www.tdwg.org/standards/bdq/#maintenance-group">) and designed to facilitate the consistent development and use of a set of biodiversity data quality tests and assertions. The standard consists of vocabularies needed to define the tests, a guide to support the implementation of tests, a guide to support the interpretation of outputs of implemented tests, example data, and expected responses from tests against the example data to support the validation of implemented tests.
 
 **Preferred Citation**<br>
-Biodiversity Data Quality Maintenance Group. 2025. Biodiversity Data Quality. https://www.tdwg.org/standards/bdq
+Biodiversity Data Quality Maintenance Group. 2025. The Biodiversity Data Quality (BDQ) Standard. https://www.tdwg.org/standards/bdq
 
 **Date version issued**<br>
 2025-04-27
@@ -129,7 +129,7 @@ The Quick Reference Guide is a simple, informative reference and the first place
 
 ### 2.2 Landing Pages
 The landing pages provide overviews of the subjects they cover and refer to more detailed information in associated documents.<br>
-**Biodiversity Data Quality (BDQ)** - Overview of the BDQ standard. This page.<br>
+**The Biodiversity Data Quality (BDQ) Standard** - Overview of the BDQ standard. This page.<br>
 [**BDQ Tests and Assertions**](docs/bdqtest/index.md) - Overview of the Tests.<br>
 [**Fitness For Use Ontology**](docs/bdqffdq/index.md) - Overview of the Fitness for Use Framework.<br>
 [**Fitness For Use Framework Ontology Vocabulary Extension**](docs/extension/bdqffdq/index.md) - Overview of the axioms that extend the basic vocabulary for the Fitness of Use Framework Ontology.
@@ -144,7 +144,7 @@ The Guides are explanatory documents targeting particular perspectives on the st
 ### 2.4 Vocabularies
 #### 2.4.1 Foundational Vocabularies
 The Foundational Vocabularies cover the two main parts of the standard - the practical (the Tests) and the theoretical (the Framework).<br>
-[**Biodiversity Data Quality Fitness for Use Framework (OWL Ontology)**](vocabulary/bdqffdq.owl)<br>
+[**Biodiversity Data Quality Fitness for Use Framework (Ontology)**](vocabulary/bdqffdq.owl)<br>
 [**Fitness For Use Framework Ontology List of Terms (bdqffdq:)**](docs/list/bdqffdq/index.md)<br>
 [**BDQ Tests and Assertions List of Terms (bdqtest:)**](docs/list/bdqtest/index.md)<br>
 
@@ -183,7 +183,7 @@ Test Validation Data are intended for implementers to use to evaluate whether Te
 [**RDF/XML serialization of the bdqdim: terms**](dist/bdqdim.xml)<br>
 [**RDF/XML serialization of the bdqenh: terms**](dist/bdqenh.xml)
 
-#### 2.6.4 Java Validation
+#### 2.6.4 Java Implementation
 
 While not part of the BDQ standard, a validated Java® implementation, [bdqtestrunner](https://github.com/FilteredPush/bdqtestrunner/), demonstrates practical usage and conformance with the provided [Test Validation Data](#262-test-validation-data).      
 
@@ -191,7 +191,7 @@ While not part of the BDQ standard, a validated Java® implementation, [bdqtestr
 
 ### 3.1 Data Quality Control, Data Quality Assurance (normative)
 
-The BDQ standard draws a distinction between Quality Control and Quality Assurance. Quality Control processes seek to assess the quality of data for some purpose, then identify changes to the data or to processes around the data for improving the quality of the data. Quality Assurance processes seek to filter some set of data to a subset that is fit for some purpose, that is to assure that data used for some purpose are fit for that purpose. Implementations of the BDQ Tests MAY be used to perform Quality Control, Quality Assurance, or both. The [mathematical formalization](..//bdqffdq/index.md#5-fitness-for-use-framework-summary-of-mathematical-formalization-normative) of the bdqffdq Framework provides a formal definition of Quality Control and Quality Assurance, and how Test Assertions SHOULD be used for each.
+The BDQ standard draws a distinction between Quality Control and Quality Assurance. Quality Control processes seek to assess the quality of data for some purpose, then identify changes to the data or to processes around the data for improving the quality of the data. Quality Assurance processes seek to filter some set of data to a subset that is fit for some purpose, that is to assure that data used for some purpose are fit for that purpose. Implementations of the BDQ Tests MAY be used to perform Quality Control, Quality Assurance, or both. The [mathematical formalization](../bdqffdq/index.md#5-fitness-for-use-framework-summary-of-mathematical-formalization-normative) of the [Fitness for Use Ontology](../bdqffdq/index.md) provides a formal definition of Quality Control and Quality Assurance, and how Test Assertions SHOULD be used for each.
 
 ### 3.2 When to Run Tests (normative)
 
@@ -454,7 +454,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Biodiversity Data Quality (BDQ). Biodiversity Information Standards (TDWG). <https://bdq.tdwg/org/vocabularies/2025-04-11>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. The Biodiversity Data Quality (BDQ) Standard. Biodiversity Information Standards (TDWG). <https://bdq.tdwg/org/vocabularies/2025-04-11>
 
 **Biodiversity Information Standards (TDWG)**
 

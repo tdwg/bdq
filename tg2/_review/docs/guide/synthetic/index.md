@@ -86,11 +86,12 @@ The document assumes a working familiarity with biodiversity data concepts, but 
 
 ### 1.3 Associated Documents
 
-For the list and links to all associated documents see the [Biodiversity Data Quality (BDQ)](../../index.md) page, which lists the parts of the standard.
+For the list and links to all associated documents see [The Biodiversity Data Quality (BDQ) Standard](../../index.md).
 
 The set of information most relevant to synthetic data for BDQ Tests can be found in the following subset of resources:
 
 - [BDQ Implementer's Guide](../guide/implementers/index.md) For anyone interested in the technical implementation of the BDQ Tests.
+- **Guide to Marking and Identifying Synthetic and Modified Data** For anyone creating or using validation data, to distinguish blatant fabrications from real data. This document.
 
 ### 1.4 Status of the content of this document
 
