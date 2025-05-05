@@ -174,48 +174,48 @@ for templatePath, document in directories.items() :
 		header = header.replace('{pref_namespace_prefix}', term)
 #	header = header.replace('{references}', references)
 
-	if document == 'bdqtest_landing' : 
-		# Special handling of bdqtest landing page, load minimal test list, add to header
-		
-		# Load data
-		data_url = "../_review/vocabulary/bdqtest_term_versions.csv"
-		frame = pd.read_csv(data_url, na_filter=False)
-		table_list = []
-		column_list = ["Label","issueNumber","historyNoteUrl","iri","term_iri","issued","term_localName","DateLastUpdated","prefLabel","IE Class","InformationElement:ActedUpon","InformationElement:Consulted","Parameters","ExpectedResponse","AuthoritiesDefaults","Description","Type","Resource Type","Dimension","Criterion","Enhancement","Examples","Source","References","Example Implementations (Mechanisms)","Link to Specification Source Code","Notes","IssueState","IssueLabels","UseCases","ArgumentGuids","status"]
-		for index,row in frame.iterrows():
-			row_list = [ row['Label'], row['issueNumber'], row['historyNoteUrl'], row['iri'], row['term_iri'], row['issued'], row['term_localName'], row['DateLastUpdated'], row['prefLabel'], row['IE Class'], row['InformationElement:ActedUpon'], row['InformationElement:Consulted'], row['Parameters'], row['ExpectedResponse'], row['AuthoritiesDefaults'], row['Description'], row['Type'], row['Resource Type'], row['Dimension'], row['Criterion'], row['Enhancement'], row['Examples'], row['Source'], row['References'], row['Example Implementations (Mechanisms)'], row['Link to Specification Source Code'], row['Notes'], row['IssueState'], row['IssueLabels'], row['UseCases'], row["ArgumentGuids"], row['status'] ]
-			table_list.append(row_list)
-		terms_df = pd.DataFrame(table_list, columns = column_list)
-		terms_sorted_by_label = terms_df.sort_values(by='Label')
-
-		# Index
-		text = '\n### 4.1 Index By Test Label\n\n'
-		text += '\n'
-		for row_index,row in terms_sorted_by_label.iterrows():
-			if row['Label'].find('MULTIRECORD') == -1 : 
-				curie = "bdqtest:" + row['term_localName']
-				curie_anchor = curie.replace(':','_')
-				text += '[' + row['Label'] + '](#' + curie_anchor + ') |\n'
-		text = text[:len(text)-2] # remove final trailing vertical bar and newline
-		text += '\n'
-
-		# Vocabulary terms with minimal data
-		text += '\n## 5 Vocabulary Summary\n'
-		for row_index,row in terms_sorted_by_label.iterrows():
-			if row['Label'].find('MULTIRECORD') == -1 :
-				curie =  "bdqtest:" + row['term_localName']
-				curieAnchor = curie.replace(':','_')
-				text += '- <a id="' + curieAnchor + '"></a>' + row['Label'] + '\n'
-				text += '  - Description: ' + row['Description'] + '\n'
-				text += '  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#' + row['Label'] + ')\n'
-				text += '  - View in Term-List: [Link](../list/bdqtest/index.md#' + curieAnchor + ')\n'
-				text += '\n'
-
-		# Append to end of header
-		header = header + '\n' + text
-		text = ""
-
-		# End special case handling of bdqtest_landing ********************************
+# 	if document == 'bdqtest_landing' : 
+# 		# Special handling of bdqtest landing page, load minimal test list, add to header
+# 		
+# 		# Load data
+# 		data_url = "../_review/vocabulary/bdqtest_term_versions.csv"
+# 		frame = pd.read_csv(data_url, na_filter=False)
+# 		table_list = []
+# 		column_list = ["Label","issueNumber","historyNoteUrl","iri","term_iri","issued","term_localName","DateLastUpdated","prefLabel","IE Class","InformationElement:ActedUpon","InformationElement:Consulted","Parameters","ExpectedResponse","AuthoritiesDefaults","Description","Type","Resource Type","Dimension","Criterion","Enhancement","Examples","Source","References","Example Implementations (Mechanisms)","Link to Specification Source Code","Notes","IssueState","IssueLabels","UseCases","ArgumentGuids","status"]
+# 		for index,row in frame.iterrows():
+# 			row_list = [ row['Label'], row['issueNumber'], row['historyNoteUrl'], row['iri'], row['term_iri'], row['issued'], row['term_localName'], row['DateLastUpdated'], row['prefLabel'], row['IE Class'], row['InformationElement:ActedUpon'], row['InformationElement:Consulted'], row['Parameters'], row['ExpectedResponse'], row['AuthoritiesDefaults'], row['Description'], row['Type'], row['Resource Type'], row['Dimension'], row['Criterion'], row['Enhancement'], row['Examples'], row['Source'], row['References'], row['Example Implementations (Mechanisms)'], row['Link to Specification Source Code'], row['Notes'], row['IssueState'], row['IssueLabels'], row['UseCases'], row["ArgumentGuids"], row['status'] ]
+# 			table_list.append(row_list)
+# 		terms_df = pd.DataFrame(table_list, columns = column_list)
+# 		terms_sorted_by_label = terms_df.sort_values(by='Label')
+# 
+# 		# Index
+# 		text = '\n### 4.1 Index By Test Label\n\n'
+# 		text += '\n'
+# 		for row_index,row in terms_sorted_by_label.iterrows():
+# 			if row['Label'].find('MULTIRECORD') == -1 : 
+# 				curie = "bdqtest:" + row['term_localName']
+# 				curie_anchor = curie.replace(':','_')
+# 				text += '[' + row['Label'] + '](#' + curie_anchor + ') |\n'
+# 		text = text[:len(text)-2] # remove final trailing vertical bar and newline
+# 		text += '\n'
+# 
+# 		# Vocabulary terms with minimal data
+# 		text += '\n## 5 Vocabulary Summary\n'
+# 		for row_index,row in terms_sorted_by_label.iterrows():
+# 			if row['Label'].find('MULTIRECORD') == -1 :
+# 				curie =  "bdqtest:" + row['term_localName']
+# 				curieAnchor = curie.replace(':','_')
+# 				text += '- <a id="' + curieAnchor + '"></a>' + row['Label'] + '\n'
+# 				text += '  - Description: ' + row['Description'] + '\n'
+# 				text += '  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#' + row['Label'] + ')\n'
+# 				text += '  - View in Term-List: [Link](../list/bdqtest/index.md#' + curieAnchor + ')\n'
+# 				text += '\n'
+# 
+# 		# Append to end of header
+# 		header = header + '\n' + text
+# 		text = ""
+# 
+# 		# End special case handling of bdqtest_landing ********************************
 
 	if document == 'bdqffdq' : 
 		# Special handling of bdqffdq, load minimal ontology documentation, add to header

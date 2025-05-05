@@ -64,7 +64,7 @@ This document assumes familiarity with OWL constructs, reasoning profiles, and R
 
 ### 1.3 Associated Documents
 
-For the list and links to all associated documents see [The Biodiversity Data Quality (BDQ) Standard](../../index.md).
+For the list and links to all associated documents see [The Biodiversity Data Quality (BDQ) Standard](../../../index.md).
 
 Information about the bdqffdq: ontology, its usage, and its extensions can be found in the following subset of Biodiversity Data Quality (BDQ) resources:
 
@@ -87,7 +87,7 @@ Sections 1 and 3 are non-normative.
 
 Section 2 is normative.
 
-Section [1.7 Key to Vocabulary Terms](#17-Key-to-Vocabulary-Terms) identifies which values in Section 4 are normative and which are non-normative.
+Section [1.7 Key to Vocabulary Terms](#17-key-to-vocabulary-terms) identifies which values in Section 4 are normative and which are non-normative.
 
 Any sentence or phrase beginning with "For example" or "e.g." is non-normative.
 

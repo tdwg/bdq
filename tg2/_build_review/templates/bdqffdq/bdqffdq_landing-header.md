@@ -108,7 +108,10 @@ Any sentence or phrase beginning with "For example" or "e.g." is non-normative.
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119.
 
-### 1.7 Diagram of Classes and Properties
+### 1.7 Referring to Terms (normative)
+In any technical treatment of the BDQ standard, a precise reference to a class or property term SHOULD be made using its qualified name (the namespace prefix followed by the term local name; e.g., `bdqffdq:InformationElement`) and the namespace IRI corresponding to the namespace prefix (e.g., `https://rs.tdwg.org/bdqffdq/terms` for `bdqffdq:`) MUST be provided. In less formal descriptions where the technical precision is not needed, the preferred label (skos:prefLabel, e.g., `Information Element`) or the term local name (e.g., `InformationElement`) MAY be used. You will find all of these methods of referring to BDQ-related terms through the BDQ documentation.
+
+### 1.8 Diagram of Classes and Properties
 
 The (non-normative) diagram below is intended to help understand the normative statements in section 2 below.
 

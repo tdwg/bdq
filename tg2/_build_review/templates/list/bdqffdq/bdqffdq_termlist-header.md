@@ -46,7 +46,7 @@
 
 ### 1.1 Purpose
 
-The purpose of this document is to provide the landing page for the `bdqffdq:` vocabulary, which defines the ontology elements used in the Biodiversity Data Quality Fitness for Use Framework (Ontology). The vocabulary includes classes, object properties, data properties, and named individuals that collectively support the semantic description of BDQ Tests and related quality constructs. The terms in the vocabulary are fully documented in the [**Fitness For Use Framework Ontology List of Terms (bdqffdq:)**](docs/list/bdqffdq/index.md). Additional axioms, implementation guidance, or usage recommendations are addressed in the [1.3 Associated Documents](#13-associated-documents).
+The purpose of this document is to provide the landing page for the `bdqffdq:` vocabulary, which defines the ontology elements used in the Biodiversity Data Quality Fitness for Use Framework (Ontology). The vocabulary includes classes, object properties, data properties, and named individuals that collectively support the semantic description of BDQ Tests and related quality constructs. Additional axioms, implementation guidance, or usage recommendations are addressed in the [1.3 Associated Documents](#13-associated-documents).
 
 ### 1.2 Audience
 
@@ -60,7 +60,7 @@ Familiarity with RDF, OWL, and the structure of the BDQ Tests is recommended.
 
 ### 1.3 Associated Documents
 
-For the list and links to all associated documents see [The Biodiversity Data Quality (BDQ) Standard](../../index.md).
+For the list and links to all associated documents see [The Biodiversity Data Quality (BDQ) Standard](../../../index.md).
 
 Information about the bdqffdq: ontology, its usage, and its extensions can be found in the following subset of BDQ resources:
 
@@ -74,8 +74,8 @@ Information about the bdqffdq: ontology, its usage, and its extensions can be fo
 
 | Description | IRI | Download URL |
 | ----------- | --- | ------------ |
-| Human Readable Term List            | TBD | [/docs/terms/bdqffdq/index.md](../list/bdqffdq/index.md) | 
-| Human Readable Vocabulary Extension | TBD | [/docs/extension/bdqffdq/index.md](../extension/bdqffdq/index.md) | 
+| Human Readable Term List            | TBD | [/docs/list/bdqffdq/index.md](../../list/bdqffdq/index.md) | 
+| Human Readable Vocabulary Extension | TBD | [/docs/extension/bdqffdq/index.md](../../extension/bdqffdq/index.md) | 
 | OWL Ontology                        | TBD | [/vocabulary/bdqffdq.owl](../../../vocabulary/bdqffdq.owl) |
 
 
@@ -85,7 +85,7 @@ Sections 1 and 3 are non-normative.
 
 Section 2 is normative.
 
-Section [1.7 Key to Vocabulary Terms](#17-Key-to-Vocabulary-Terms) identifies which values in Section 4 are normative and which are non-normative.
+Section [1.7 Key to Vocabulary Terms](#17-key-to-vocabulary-terms) identifies which values in Section 4 are normative and which are non-normative.
 
 Any sentence or phrase beginning with "For example" or "e.g." is non-normative.
 

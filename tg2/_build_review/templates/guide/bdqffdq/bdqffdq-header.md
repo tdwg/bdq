@@ -65,7 +65,7 @@ Some familiarity with RDF/OWL ontologies is assumed.
 
 ### 1.3 Associated Documents
 
-For the list and links to all associated documents see [The Biodiversity Data Quality (BDQ) Standard](../../index.md).
+For the list and links to all associated documents see [The Biodiversity Data Quality (BDQ) Standard](../../..index.md).
 
 Information about the bdqffdq: ontology, its usage, and its extensions can be found in the following subset of BDQ resources:
 
@@ -110,6 +110,9 @@ The following namespace abbreviations are used in this document:
 | rdfs:        | http://www.w3.org/2000/01/rdf-schema        |
 | skos:        | http://www.w3.org/2004/02/skos/core#        |
 | xsd:         | http://www.w3.org/2001/XMLSchema#           |
+
+### 1.7 Referring to Terms (normative)
+In any technical treatment of the BDQ standard, a precise reference to a class or property term SHOULD be made using its qualified name (the namespace prefix followed by the term local name; e.g., `bdqffdq:InformationElement`) and the namespace IRI corresponding to the namespace prefix (e.g., `https://rs.tdwg.org/bdqffdq/terms` for `bdqffdq:`) MUST be provided. In less formal descriptions where the technical precision is not needed, the preferred label (skos:prefLabel, e.g., `Information Element`) or the term local name (e.g., `InformationElement`) MAY be used. You will find all of these methods of referring to BDQ-related terms through the BDQ documentation.
 
 ## 2 Use of Terms (normative)
 
@@ -199,7 +202,7 @@ A useful way to think of the framework is to divide it horizontally into Needs, 
 
 ### 3.4 Responses
 
-The content of this section is non-normative, related normative guidance is in section [5.1 The Response Object (normative)](../../implementers/index.md#51-the-response-object-normative) of the [BDQ Implementer's Guide](../../implementers/index.md).
+The content of this section is non-normative, related normative guidance is in section [5.1 The Response Object (normative)](../implementers/index.md#51-the-response-object-normative) of the [BDQ Implementer's Guide](../implementers/index.md).
 
 Assertions are expected to assert Response objects. These will involve, in RDF, a combination of object properties and data properties.
 
@@ -211,7 +214,7 @@ Assertions are expected to assert Response objects. These will involve, in RDF, 
 | Response.comment | bdqffdq:hasResponseComment | A human readable interpretation of the results of the Test.|
 | Response.qualifier | bdqffdq:ResponseQualifier, bdqffdq:hasResponseQualifier | Additional structured information that qualifies the bdq:Response, intended as an extension point for uncertainty.|
 
-See the section [Structure of a Response (normative)](../../bdqtest/index.md#31-Structure-of-Response-normative) of the [BDQ Tests and Assertions](../../bdqtest/index.md) for further normative guidance on Responses as RDF or as data structures in non-RDF settings.
+See the section [Structure of a Response (normative)](../bdqtest/index.md#31-structure-of-response-normative) of the [BDQ Tests and Assertions](../bdqtest/index.md) for further normative guidance on Responses as RDF or as data structures in non-RDF settings.
 
 ### 3.5 Organization of the bdqtest classes 
 
