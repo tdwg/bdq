@@ -39,7 +39,7 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
 **Bibliographic citation**<br>
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Guide to Marking and Identifying Synthetic and Modified Data. Biodiversity Information Standards (TDWG). <https://bdq.tdwg/org/vocabularies/2025-04-11>
 
-**Comment**<br>
+**Status**<br>
 Draft Standard for Review
 
 ## Table of Contents ##
@@ -86,11 +86,11 @@ The document assumes a working familiarity with biodiversity data concepts, but 
 
 ### 1.3 Associated Documents
 
-For the list and links to all associated documents see [The Biodiversity Data Quality (BDQ) Standard](../../index.md).
+For the list and links to all associated documents see [The Biodiversity Data Quality (BDQ) Standard](../../../index.md).
 
 The set of information most relevant to synthetic data for BDQ Tests can be found in the following subset of resources:
 
-- [BDQ Implementer's Guide](../guide/implementers/index.md) For anyone interested in the technical implementation of the BDQ Tests.
+- [BDQ Implementer's Guide](../implementers/index.md) For anyone interested in the technical implementation of the BDQ Tests.
 - **Guide to Marking and Identifying Synthetic and Modified Data** For anyone creating or using validation data, to distinguish blatant fabrications from real data. This document.
 
 ### 1.4 Status of the content of this document
@@ -167,8 +167,8 @@ dwc:occurrenceID = urn:uuid: + a random type 4 UUID
 
 The BDQ standard includes two datasets for the validation of Test implementations. These are sparsely populated data fragments unlikely to be mistaken for real data, and are not marked. 
 
-  - File: [Test Validation Data](../guide/implementers/TG2_test_validation_data.csv "Test Validation Data CSV file")
-  - File: [Test Validation Data for non-printing characters](../guide/implementers/TG2_test_validation_data_nonprintingchars.csv "Test Validation Data CSV file for testing implementations of bdq:Empty, containing non-printing characters")
+  - File: [Test Validation Data](../implementers/TG2_test_validation_data.csv "Test Validation Data CSV file")
+  - File: [Test Validation Data for non-printing characters](../implementers/TG2_test_validation_data_nonprintingchars.csv "Test Validation Data CSV file for testing implementations of bdq:Empty, containing non-printing characters")
 ## Acronyms
 
 A list of Acronyms can be found in the [Acronyms](../../index.md#5-acronyms) section of the Biodiversity Data Quality (BDQ) landing page.

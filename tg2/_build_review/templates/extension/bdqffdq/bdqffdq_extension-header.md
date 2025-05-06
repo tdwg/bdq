@@ -37,7 +37,7 @@
 **Bibliographic citation**<br>
 {creator}. {year}. {document_title}. {publisher}. <{current_iri}{ratification_date}>
 
-**Comment**<br>
+**Status**<br>
 {comment}
 
 {toc}
@@ -57,7 +57,7 @@ This extension follows the TDWG Standards Documentation Specification and mainta
 This document is intended for ontology engineers, semantic modelers, and developers who are applying the BDQ Fitness for Use Framework in OWL environments. It will be especially useful for:
 
 - Implementers using OWL reasoners or validators to enforce or explore logical structures
-- Developers of semantic tooling and metadata pipelines based on teh BDQ Standard
+- Developers of semantic tooling and metadata pipelines based on the BDQ Standard
 - Standards developers needing a detailed view of the formal semantics behind BDQ Framework concepts.
 
 This document assumes familiarity with OWL constructs, reasoning profiles, and RDF/OWL modeling practices.

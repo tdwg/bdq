@@ -36,7 +36,7 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
 **Bibliographic citation**<br>
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. BDQ Tests and Assertions List of Terms. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqtest/terms/2025-04-11>
 
-**Comment**<br>
+**Status**<br>
 Draft Standard for Review
 
 ## Table of Contents ##
@@ -48,10 +48,11 @@ Draft Standard for Review
   - [1.5 Status of the Content of this Document](#15-status-of-the-content-of-this-document)
   - [1.6 RFC 2119 key words](#16-rfc-2119-key-words)
   - [1.7 Namespace abbreviations](#17-namespace-abbreviations)
-  - [1.8 Test Types (non-normative)](#18-test-types-non-normative)
-  - [1.9 Key to Vocabulary Terms](#19-key-to-vocabulary-terms)
+  - [1.8 Referring to Terms (normative)](#18-referring-to-terms-normative)
+  - [1.9 Test Types (non-normative)](#19-test-types-non-normative)
+  - [1.10 Key to Vocabulary Terms](#110-key-to-vocabulary-terms)
 
-[2 Normative Guidance](#2-normative-guidance)
+[2 Use of Terms (normative)](#2-use-of-terms-normative)
 
 [3 Term Indices](#3-term-indices)
   - [3.1 Index to Validation Tests](#31-index-to-validation-tests)
@@ -90,31 +91,31 @@ Familiarity with RDF vocabularies, Darwin Core, and fitness for use principles w
 
 ### 1.3 Associated Documents
 
-For the list and links to all associated documents see [The Biodiversity Data Quality (BDQ) Standard](../../index.md).
+For the list and links to all associated documents see [The Biodiversity Data Quality (BDQ) Standard](../../../index.md).
 
 The set of information most relevant to the BDQ Tests can be found in the following subset of resources:
 
 - **BDQ Tests and Assertions** Defines how each Test is modeled using standard vocabulary terms and how it should behave under various conditions. This document.
-- [**BDQ Tests Quick Reference Guide**](../terms/bdqtest/index.md) Provides a concise, easy-to-read reference about the BDQ Tests.
-- [**BDQ Tests and Assertions List of Terms**](../list/bdqtest/index.md) Provides the complete normative definitions of the BDQ Tests.
-  - [**CSV list of BDQ Tests**](../vocabulary/bdqtest_terms.csv) 
-  - [**RDF/Turtle Serialization of BDQ Tests**](../dist/bdqtest.ttl) 
-  - [**RDF/XML Serialization of BDQ Tests**](../dist/bdqtest.xml) 
+- [**BDQ Tests Quick Reference Guide**](../../terms/bdqtest/index.md) Provides a concise, easy-to-read reference about the BDQ Tests.
+- [**BDQ Tests and Assertions List of Terms**](../..list/bdqtest/index.md) Provides the complete normative definitions of the BDQ Tests.
+  - [**CSV list of BDQ Tests**](../../../vocabulary/bdqtest_terms.csv) 
+  - [**RDF/Turtle Serialization of BDQ Tests**](../../../dist/bdqtest.ttl) 
+  - [**RDF/XML Serialization of BDQ Tests**](../../../dist/bdqtest.xml) 
 - [**BDQ User's Guide**](../../guide/users/index.md) For anyone interested in how to use the BDQ Tests in practice.
-- [**BDQ Implementer's Guide**](../guide/implementers/index.md) For anyone interested in the technical implementation of the BDQ Tests.
+- [**BDQ Implementer's Guide**](../../guide/implementers/index.md) For anyone interested in the technical implementation of the BDQ Tests.
 
 ### 1.4 Term List Distributions
 
 <!--- This same table appears in bdqtest_landing_header. Edit here, edit there. --->
 | Description | IRI | Download URL | Note | 
 | ----------- | --- | -----------  | ---- | 
-| HTML file   | TBD | [BDQ Tests and Assertions List of Terms](../docs/list/bdqtest/index.md) | Complete term list for the bdqtest: vocabulary as a web page. | 
-| RDF/XML file | TBD | [Tests in RDF/XML](../dist/bdqtest.xml) | An RDF representation of the Tests in an RDF/XML serialization. | 
-| Turtle file | TBD | [Tests in Turtle](../dist/bdqtest.ttl) | An RDF representation of the Tests in a Turtle serialization. | 
-| JSON-LD file | TBD | [Tests in JSON/LD](../dist/bdqtest.json) | An RDF representation of the Tests in a JSON-LD serialization. | 
-| CSV file | TBD | [Tests in CSV](../vocabulary/bdqtest_term_versions.csv) | CSV file listing all of the Tests. | 
-| SingleRecord Test CSV file | TBD | [SingleRecord Tests in CSV](../dist/bdqtest_singlerecord_tests_current.csv) | CSV file listing just the SingleRecord Tests. |
-| MultiRecord Test CSV file | TBD | [MultiRecord Tests in CSV](../dist/bdqtest_multirecord_tests_current.csv) | CSV file listing just the MultiRecord Tests. |
+| HTML file   | TBD | [BDQ Tests and Assertions List of Terms](../../list/bdqtest/index.md) | Complete term list for the bdqtest: vocabulary as a web page. | 
+| RDF/XML file | TBD | [Tests in RDF/XML](../../../dist/bdqtest.xml) | An RDF representation of the Tests in an RDF/XML serialization. | 
+| Turtle file | TBD | [Tests in Turtle](../../../dist/bdqtest.ttl) | An RDF representation of the Tests in a Turtle serialization. | 
+| JSON-LD file | TBD | [Tests in JSON/LD](../../../dist/bdqtest.json) | An RDF representation of the Tests in a JSON-LD serialization. | 
+| CSV file | TBD | [Tests in CSV](../../../vocabulary/bdqtest_term_versions.csv) | CSV file listing all of the Tests. | 
+| SingleRecord Test CSV file | TBD | [SingleRecord Tests in CSV](../../../dist/bdqtest_singlerecord_tests_current.csv) | CSV file listing just the SingleRecord Tests. |
+| MultiRecord Test CSV file | TBD | [MultiRecord Tests in CSV](../../../dist/bdqtest_multirecord_tests_current.csv) | CSV file listing just the MultiRecord Tests. |
 
 ### 1.5 Status of the Content of this Document
 
@@ -122,7 +123,7 @@ Sections 1 and 3 are non-normative.
 
 Section 2 is normative.
 
-Section [1.9 Key to Vocabulary Terms](#19-Key-to-Vocabulary-Terms) identifies which values in Section 4 are normative and which are non-normative.
+Section [1.9 Key to Vocabulary Terms](#19-key-to-vocabulary-terms) identifies which values in Section 4 are normative and which are non-normative.
 
 Any sentence or phrase beginning with "For example" or "e.g." is non-normative.
 
@@ -151,19 +152,22 @@ The following namespace abbreviations are used in this document:
 | skos:        | http://www.w3.org/2004/02/skos/core#        |
 | tdwgutility: | http://rs.tdwg.org/dwc/terms/attributes/    |
 
-### 1.8 Test Types (non-normative)
+### 1.8 Referring to Terms (normative)
+In any technical treatment of the BDQ standard, a precise reference to a class or property term SHOULD be made using its qualified name (the namespace prefix followed by the term local name; e.g., `bdqffdq:InformationElement`) and the namespace IRI corresponding to the namespace prefix (e.g., `https://rs.tdwg.org/bdqffdq/terms` for `bdqffdq:`) MUST be provided. In less formal descriptions where the technical precision is not needed, the preferred label (skos:prefLabel, e.g., `Information Element`) or the term local name (e.g., `InformationElement`) MAY be used. You will find all of these methods of referring to BDQ-related terms through the BDQ documentation.
+
+### 1.9 Test Types (non-normative)
 
 There are four types of BDQ Tests: Validations, Issues, Measures and Amendments. Each Test is intended to examine just one specific aspect of data quality. Tests are assembled into Test suites (bdqffdq:Policies) that assess the fitness for use of data for a specific use.
 
-**Validation Tests** can be thought of as fact-checking. They compare the data against known standards or rules. Validation Tests examine the values of one or more [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) against a Criterion for quality. An example is [VALIDATION_COUNTRYCODE_STANDARD](https://rs.tdwg.org/bdqtest/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe) where dwc:countryCode is checked against a Source Authority for validity.
+**Validation Tests** can be thought of as fact-checking. They compare the data against known standards or rules. Validation Tests examine the values of one or more [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) against a Criterion for quality. An example is [VALIDATION_COUNTRYCODE_STANDARD](../../terms/bdqtest/index.md#VALIDATION_COUNTRYCODE_STANDARD) where dwc:countryCode is checked against a Source Authority for validity.
 
-**Issue Tests** can be thought of as warning flags. They don't necessarily mean the data are wrong, but they highlight something that might be a problem for some users. For example, [ISSUE_DATAGENERALIZATIONS_NOTEMPTY](https://rs.tdwg.org/bdqtest/terms/13d5a10e-188e-40fd-a22c-dbaa87b91df2) alerts users to a NotEmpty value that should be examined against their data quality needs. 
+**Issue Tests** can be thought of as warning flags. They don't necessarily mean the data are wrong, but they highlight something that might be a problem for some users. For example, [ISSUE_DATAGENERALIZATIONS_NOTEMPTY](../../terms/bdqtest/index.md#ISSUE_DATAGENERALIZATIONS_NOTEMPTY) alerts users to a NotEmpty value that should be examined against their data quality needs. 
 
-**Amendment Tests** can be thought of as suggestions for improvement. Amendment Tests examine the values of [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) and may propose changes or additions to improve the quality. An example is [AMENDMENT_COUNTRYCODE_STANDARDIZED](https://rs.tdwg.org/bdqtest/terms/fec5ffe6-3958-4312-82d9-ebcca0efb350), where a valid ISO country code could be inferred.
+**Amendment Tests** can be thought of as suggestions for improvement. Amendment Tests examine the values of [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) and may propose changes or additions to improve the quality. An example is [AMENDMENT_COUNTRYCODE_STANDARDIZED](../../terms/bdqtest/index.md#AMENDMENT_COUNTRYCODE_STANDARDIZED), where a valid ISO country code could be inferred.
 
-**Measure Tests** can be thought of as metrics. Measure Tests either count things, or assert that data evaluate as fit for some use (COMPLETE), or not fit for some use (NOT_COMPLETE). An example is [MEASURE_VALIDATIONTESTS_NOTCOMPLIANT](https://rs.tdwg.org/bdqtest/terms/453844ae-9df4-439f-8e24-c52498eca84a), which returns the number of Tests of Type Validation that had a response of "NOT_COMPLIANT" on a record.
+**Measure Tests** can be thought of as metrics. Measure Tests either count things, or assert that data evaluate as fit for some use (COMPLETE), or not fit for some use (NOT_COMPLETE). An example is [MEASURE_VALIDATIONTESTS_NOTCOMPLIANT](../../terms/bdqtest/index.md#MEASURE_VALIDATIONTESTS_NOTCOMPLIANT), which returns the number of Tests of Type Validation that had a response of "NOT_COMPLIANT" on a record.
 
-### 1.9 Key to Vocabulary Terms
+### 1.10 Key to Vocabulary Terms
 
 These "Test Descriptors" are terms that are necessary to comprehensively describe each Test. Some terms, such as those labeled `Term Version IRI (rdf:about)`, `Term IRI (dcterms:isVersionOf)` and `Term Name (rdf:value)` are intended for machine consumption. Some terms such as the `Description (rdfs:comment)` are designed to be human-readable and to be understood by consumers of biodiversity data quality reports. Terms such as the `Specification (bdqffdq:Specification)` ensure that implementers have no ambiguity about how the Test should be coded.
 
@@ -199,9 +203,9 @@ Terms used to describe the terms in this vocabulary follow the guidance of the [
 | Argument GUID (bdqffdq:Argument) | normative | A value that, when provided to a Test bdqffdq:Specification to replace a bdqffdq:Parameter changes the behavior of the Test in a defined manner. | 1b66a16a-5e76-4eca-a400-d097ac136ac1 |
 
 
-## 2 Normative Guidance
+## 2 Use of Terms (normative)
 
-See [BDQ Tests and Assertions](../../bdqtest/index.md) for normative guidance on the use of BDQ Test terms.
+In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use the Term IRI (e.g., `http://rs.tdwg.org/bdq/bdqffdq/InformationElement`) or Term Qualified name (e.g., `bdqffdq:InformationElement`). In a non-RDF context in which resources may be used by software (e.g., a value in a spreadsheet or database table) the Controlled Value String (Local name, e.g., `InformationElement`) MAY be used. In a purely human context a Label (e.g., `Information Element`) MAY be used.
 
 ## 3 Term Indices
 

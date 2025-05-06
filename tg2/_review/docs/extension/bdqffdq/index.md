@@ -38,7 +38,7 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
 **Bibliographic citation**<br>
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Fitness For Use Framework Ontology Vocabulary Extension. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqffdq/extension/2025-04-11>
 
-**Comment**<br>
+**Status**<br>
 Draft Standard for Review
 
 ## Table of Contents ##
@@ -105,14 +105,14 @@ This extension follows the TDWG Standards Documentation Specification and mainta
 This document is intended for ontology engineers, semantic modelers, and developers who are applying the BDQ Fitness for Use Framework in OWL environments. It will be especially useful for:
 
 - Implementers using OWL reasoners or validators to enforce or explore logical structures
-- Developers of semantic tooling and metadata pipelines based on teh BDQ Standard
+- Developers of semantic tooling and metadata pipelines based on the BDQ Standard
 - Standards developers needing a detailed view of the formal semantics behind BDQ Framework concepts.
 
 This document assumes familiarity with OWL constructs, reasoning profiles, and RDF/OWL modeling practices.
 
 ### 1.3 Associated Documents
 
-For the list and links to all associated documents see [The Biodiversity Data Quality (BDQ) Standard](../../index.md).
+For the list and links to all associated documents see [The Biodiversity Data Quality (BDQ) Standard](../../../index.md).
 
 Information about the bdqffdq: ontology, its usage, and its extensions can be found in the following subset of Biodiversity Data Quality (BDQ) resources:
 
@@ -135,7 +135,7 @@ Sections 1 and 3 are non-normative.
 
 Section 2 is normative.
 
-Section [1.7 Key to Vocabulary Terms](#17-Key-to-Vocabulary-Terms) identifies which values in Section 4 are normative and which are non-normative.
+Section [1.7 Key to Vocabulary Terms](#17-key-to-vocabulary-terms) identifies which values in Section 4 are normative and which are non-normative.
 
 Any sentence or phrase beginning with "For example" or "e.g." is non-normative.
 

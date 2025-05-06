@@ -38,7 +38,7 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
 **Bibliographic citation**<br>
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Fitness for Use Ontology. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqffdq/2025-04-11>
 
-**Comment**<br>
+**Status**<br>
 Draft Standard for Review
 
 ## Table of Contents ##
@@ -49,7 +49,8 @@ Draft Standard for Review
   - [1.4 Namespace abbreviations](#14-namespace-abbreviations)
   - [1.5 Status of the Content of this Document](#15-status-of-the-content-of-this-document)
   - [1.6 RFC 2119 key words](#16-rfc-2119-key-words)
-  - [1.7 Diagram of Classes and Properties](#17-diagram-of-classes-and-properties)
+  - [1.7 Referring to Terms (normative)](#17-referring-to-terms-normative)
+  - [1.8 Diagram of Classes and Properties](#18-diagram-of-classes-and-properties)
 
 [2 Use of Terms (normative)](#2-use-of-terms-normative)
   - [2.1 Use of Properties (normative)](#21-use-of-properties-normative)
@@ -169,7 +170,10 @@ Any sentence or phrase beginning with "For example" or "e.g." is non-normative.
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119.
 
-### 1.7 Diagram of Classes and Properties
+### 1.7 Referring to Terms (normative)
+In any technical treatment of the BDQ standard, a precise reference to a class or property term SHOULD be made using its qualified name (the namespace prefix followed by the term local name; e.g., `bdqffdq:InformationElement`) and the namespace IRI corresponding to the namespace prefix (e.g., `https://rs.tdwg.org/bdqffdq/terms` for `bdqffdq:`) MUST be provided. In less formal descriptions where the technical precision is not needed, the preferred label (skos:prefLabel, e.g., `Information Element`) or the term local name (e.g., `InformationElement`) MAY be used. You will find all of these methods of referring to BDQ-related terms through the BDQ documentation.
+
+### 1.8 Diagram of Classes and Properties
 
 The (non-normative) diagram below is intended to help understand the normative statements in section 2 below.
 
