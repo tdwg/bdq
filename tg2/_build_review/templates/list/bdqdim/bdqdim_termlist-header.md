@@ -46,29 +46,29 @@
 
 ### 1.1 Purpose
 
-The purpose of this document is to provide the full term list for the `bdqdim:` controlled vocabulary, which defines the values of `bdqffdq:DataQualityDimension` used in BDQ Tests. Each Data Quality Dimension describes a specific aspect of quality that a Test is intended to assess, such as completeness, conformance, or reliability.
+The purpose of this document is to provide the full term list for the `bdqdim:` controlled vocabulary, which defines the values of `bdqffdq:DataQualityDimension` used in BDQ Tests. Each `Data Quality Dimension` describes a specific aspect of quality that a Test is intended to assess, such as completeness, conformance, or reliability.
 
-These Dimensions serve as a semantic anchor for describing the intent of Tests and enable structured classification and interpretation of Test results across diverse Use Cases.
+These `Dimensions` serve as a semantic anchor for describing the intent of Tests and enable structured classification and interpretation of Test results across diverse `Use Cases`.
 
 ### 1.2 Audience
 
-This document is intended for users who need a technical understanding of how BDQ Tests relate to conceptual dimensions of data quality. It will be especially useful for:
+This document is intended for users who need a technical understanding of how BDQ Tests relate to conceptual `Dimensions` of data quality. It will be especially useful for:
 
-- Implementers who need to map Tests to dimensions in automated systems
+- Implementers who need to map Tests to `Dimensions` in automated systems
 - Standards developers and data quality modelers applying the Fitness for Use Framework Ontology
 - Analysts and curators needing to understand the conceptual basis for different Tests’ evaluation
 
-A working familiarity with the BDQ Test structure and the Framework Ontology is helpful, though not required to benefit from this document.
+A working familiarity with the BDQ Test structure and the Fitness for Use Framework Ontology is helpful, though not required to benefit from this document.
 
 ### 1.3 Data Quality Dimensions
 
-The concept of `bdqffdq:DataQualityDimension`, originally introduced by Veiga (2016) and Veiga et al. (2017), represents the aspect or attribute of data quality being evaluated. Common dimensions include `Completeness`, `Conformance`, `Consistency`, `Likeliness`, `Reliability`, and `Resolution`. These serve as high-level categories that group Tests according to the type of quality issue they address.
+The concept of `bdqffdq:DataQualityDimension`, originally introduced by Veiga (2016) and Veiga et al. (2017), represents the aspect or attribute of data quality being evaluated. Common `Dimensions` include `Completeness`, `Conformance`, `Consistency`, `Likeliness`, `Reliability`, and `Resolution`. These serve as high-level categories that group Tests according to the type of quality issue they address.
 
-Dimensions are measurable characteristics of an `bdqffdq:InformationElement` and provide insight into how quality is defined and assessed for a given Use Case.
+`Dimensions` are measurable characteristics of an `bdqffdq:InformationElement` and provide insight into how quality is defined and assessed for a given `Use Case`.
 
-Each BDQ Test typically evaluates one or more data values (Information Elements) with respect to a single Data Quality Dimension. For example, the Test `VALIDATION_COUNTRY_FOUND` assesses the value of `dwc:country` for conformance to a reference authority. In this case, the relevant dimension is `bdqdim:Conformance`.
+Each BDQ Test typically evaluates one or more data values (`Information Elements`) with respect to a single `Data Quality Dimension`. For example, the Test VALIDATION_COUNTRY_FOUND assesses the value of `dwc:country` for conformance to a `sourceAuthority`. In this case, the relevant dimension is `bdqdim:Conformance`.
 
-Unlike Criteria, which apply only to Validation and Issue Tests, Data Quality Dimensions apply to all BDQ Test types: `bdqffdq:Validation`, `bdqffdq:Issue`, `bdqffdq:Amendment`, and `bdqffdq:Measure`.
+Unlike `Criteria`, which apply only to `Validation` and `Issue` Tests, `Data Quality Dimensions` apply to all BDQ Test types: `bdqffdq:Validation`, `bdqffdq:Issue``bdqffdq:Measure`, and `bdqffdq:Amendment`.
 
 ### 1.4 Associated Documents
 
@@ -120,8 +120,8 @@ The terminology used to describe the terms in this vocabulary follows the TDWG [
 
 ## 2 Use of Terms (normative)
 
-A value for `bdqffdq:hasdataQualityDimension` in an RDF context MUST be a Term IRI (e.g., `https://rs.tdwg.org/bdqdim/terms/Completeness`) or Term Qualified name (e.g., `bdqdim:Completeness`) from the bdqdim: namespace. In a non-RDF context in which resources may be used by software (e.g., a value in a spreadsheet or database table) the Controlled Value String (Local name, e.g., `Completeness`) MAY be used. In a purely human context a Label (e.g., `Completeness`) MAY be used.
+A value for `bdqffdq:hasdataQualityDimension` in an RDF context MUST be a Term IRI (e.g., `https://rs.tdwg.org/bdqdim/terms/Completeness`) or Term Qualified name (e.g., `bdqdim:Completeness`) from the `bdqdim:` namespace. In a non-RDF context in which resources may be used by software (e.g., a value in a spreadsheet or database table) the Controlled Value String (Local name, e.g., `Completeness`) MAY be used. In a purely human context a Label (e.g., `Completeness`) MAY be used.
 
-Each instance of a Test, regardless of Test type, SHOULD have exactly one bdqffdq:hasdataQualityDimension property relating it to a term in this bdqdim: vocabulary.
+Each instance of a Test, regardless of Test type, SHOULD have exactly one `bdqffdq:hasdataQualityDimension` property relating it to a term in this `bdqdim:` vocabulary.
 
 ## 3 Term index
