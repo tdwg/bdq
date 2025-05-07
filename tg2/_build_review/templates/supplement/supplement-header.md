@@ -362,7 +362,7 @@ What Amendments have Information Elements ActedUpon that are ActedUpon by more t
 
 #### 2.4.1 Listing Identifiers for Tests
 
-The BDQ Framework organizes data quality Tests as ontology individuals, each with associated human-readable labels and persistent identifiers. To support automated processing and reference, it is often necessary to retrieve a list of these Validation Tests, along with their identifiers and version-specific IRIs. The following competency question demonstrates how to query the ontology to obtain this information using SPARQL.
+The Fitness for Use Framework organizes data quality Tests as ontology individuals, each with associated human-readable labels and persistent identifiers. To support automated processing and reference, it is often necessary to retrieve a list of these Validation Tests, along with their identifiers and version-specific IRIs. The following competency question demonstrates how to query the ontology to obtain this information using SPARQL.
 
     PREFIX owl: <http://www.w3.org/2002/07/owl#>
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -388,7 +388,7 @@ The label is intended as the identifier of a Test for humans, the Term Name as a
 
 #### 2.4.2 Framework Competency Question including an oa:annotation
 
-The BDQ Framework represents the results of Validation Tests as assertions, which can be linked to biodiversity records through annotations following the W3C Web Annotation model. This structure allows detailed provenance and context to be recorded alongside each assertion. The following competency question demonstrates how to retrieve all assertions generated for a specific dwc:Occurrence record, including metadata such as the associated Validation Test, annotation motivation, date of generation, and relevant Parameters.
+The Fitness for Use Framework represents the results of Validation Tests as assertions, which can be linked to biodiversity records through annotations following the W3C Web Annotation model. This structure allows detailed provenance and context to be recorded alongside each assertion. The following competency question demonstrates how to retrieve all assertions generated for a specific dwc:Occurrence record, including metadata such as the associated Validation Test, annotation motivation, date of generation, and relevant Parameters.
 
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     PREFIX owl: <http://www.w3.org/2002/07/owl#>
@@ -504,7 +504,7 @@ Then, rerun the Measure after applying the Amendments.
 
 By comparing the pre- and post-Amendment counts, one can quantify how much the proposed changes improve the quality of the data for the intended Use Case.
 
-In the BDQ standard, we define these Measures to return counts of COMPLIANT records (see [3.2.3 Considerations for use of MultiRecord Measures](#323-considerations-for-use-of-multirecord-measures) for important notes). Consumers of the data may calculate percentages or other derived statistics based on these counts. While other summary statistics are theoretically possible, the BDQ Framework (bdqffdq:) restricts a Measure to return either a single numeric value or a COMPLETE/NOT_COMPLETE result.
+In the BDQ standard, we define these Measures to return counts of COMPLIANT records (see [3.2.3 Considerations for use of MultiRecord Measures](#323-considerations-for-use-of-multirecord-measures) for important notes). Consumers of the data may calculate percentages or other derived statistics based on these counts. While other summary statistics are theoretically possible, the Fitness for Use Framework (bdqffdq:) restricts a Measure to return either a single numeric value or a COMPLETE/NOT_COMPLETE result.
 
 MultiRecord Measures can also operate directly on the data, that is, to use data terms as the input Information Elements. For example, a MultiRecord Measure could be framed to measure the average number of individuals reported in dwc:individualCount in a dataset, or could be framed to report another statistic on that or another term. We have defined no Measures of this form in the BDQ standard.
 

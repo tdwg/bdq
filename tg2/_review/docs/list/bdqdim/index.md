@@ -80,7 +80,7 @@ These Dimensions serve as a semantic anchor for describing the intent of Tests a
 This document is intended for users who need a technical understanding of how BDQ Tests relate to conceptual dimensions of data quality. It will be especially useful for:
 
 - Implementers who need to map Tests to dimensions in automated systems
-- Standards developers and data quality modelers applying the BDQ Framework Ontology
+- Standards developers and data quality modelers applying the Fitness for Use Framework Ontology
 - Analysts and curators needing to understand the conceptual basis for different Tests’ evaluation
 
 A working familiarity with the BDQ Test structure and the Framework Ontology is helpful, though not required to benefit from this document.
@@ -139,7 +139,7 @@ The following namespace abbreviations are used in this document:
 
 ### 1.9 Key to Vocabulary Terms
 
-The terminology used to describe the terms in this vocabulary follows the TDWG Standards Documentation Standard (SDS). Each term definition includes the original RDF definition, and may also provide a TDWG-specific interpretation from the SDS, as well as a definition tailored to this local context.
+The terminology used to describe the terms in this vocabulary follows the TDWG [TDWG Standards Documentation Standard (SDS)](https://www.tdwg.org/standards/sds/) (SDS). Each term definition includes the original RDF definition, and may also provide a TDWG-specific interpretation from the SDS, as well as a definition tailored to this local context.
 
 | Label (Term) | Normative | Definition | Example |
 | ------------ | --------- | ---------- | ------- |

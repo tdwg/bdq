@@ -173,7 +173,7 @@ This document is intended for technical users who need to reference the `bdqffdq
 
 - Ontology developers integrating BDQ concepts into semantic systems
 - Data quality analysts and system implementers interpreting or expressing BDQ Test structures using RDF/OWL
-- Standards developers needing access to term-level details when aligning or extending the BDQ Framework.
+- Standards developers needing access to term-level details when aligning or extending the Fitness for Use Framework.
 
 Familiarity with RDF, OWL, and the structure of the BDQ Tests is recommended.
 

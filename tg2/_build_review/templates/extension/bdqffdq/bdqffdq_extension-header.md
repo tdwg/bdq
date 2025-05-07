@@ -58,7 +58,7 @@ This document is intended for ontology engineers, semantic modelers, and develop
 
 - Implementers using OWL reasoners or validators to enforce or explore logical structures
 - Developers of semantic tooling and metadata pipelines based on the BDQ Standard
-- Standards developers needing a detailed view of the formal semantics behind BDQ Framework concepts.
+- Standards developers needing a detailed view of the formal semantics behind Fitness for Use Framework concepts.
 
 This document assumes familiarity with OWL constructs, reasoning profiles, and RDF/OWL modeling practices.
 
@@ -111,7 +111,7 @@ The following namespace abbreviations are used in this document:
 
 ### 1.7 Key to Vocabulary Terms
 
-The terminology used to describe the terms in this vocabulary follows the TDWG Standards Documentation Standard (SDS). Each term definition includes the original RDF definition, and may also provide a TDWG-specific interpretation from the SDS, as well as a definition tailored to this local context.
+The terminology used to describe the terms in this vocabulary follows the [TDWG Standards Documentation Standard (SDS)](https://www.tdwg.org/standards/sds/) (SDS). Each term definition includes the original RDF definition, and may also provide a TDWG-specific interpretation from the SDS, as well as a definition tailored to this local context.
 
 {term_key}
 

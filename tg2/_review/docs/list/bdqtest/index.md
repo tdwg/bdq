@@ -76,7 +76,7 @@ Draft Standard for Review
 
 The purpose of this document is to list and describe the terms that define the BDQ Tests, each represented as a term in the `bdqtest:` namespace. This document provides normative values and explanations for the properties used to describe each Test, including its label, expected input, outputs, parameters, and relationships to Use Cases and quality dimensions.
 
-The Tests defined here are intended to be modular and interoperable. They can be combined into Profiles tailored to particular data quality needs or assessment goals. Each Test is specified independently to support implementation flexibility, but all Tests are grounded in the principles of fitness for use as described in the BDQ Framework.
+The Tests defined here are intended to be modular and interoperable. They can be combined into Profiles tailored to particular data quality needs or assessment goals. Each Test is specified independently to support implementation flexibility, but all Tests are grounded in the principles of fitness for use as described in the Fitness for Use Framework.
 
 ### 1.2 Audience
 
@@ -84,7 +84,7 @@ This document is intended for users who need to understand the detailed structur
 
 - Software developers implementing or integrating BDQ Test logic into applications
 - Data managers and curators reviewing or selecting appropriate Tests for assessing data quality
-- Standards developers and information architects building upon the BDQ Framework
+- Standards developers and information architects building upon the Fitness for Use Framework
 - Anyone requiring detailed, machine-readable specifications of the Tests used in the BDQ standard.
 
 Familiarity with RDF vocabularies, Darwin Core, and fitness for use principles will help readers make full use of this document, though the structure and examples are designed to support a broad technical audience.
