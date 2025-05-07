@@ -165,7 +165,7 @@ Draft Standard for Review
 
 ### 1.1 Purpose
 
-The purpose of this document is to provide the landing page for the `bdqffdq:` vocabulary, which defines the ontology elements used in the Biodiversity Data Quality Fitness for Use Framework (Ontology). The vocabulary includes classes, object properties, data properties, and named individuals that collectively support the semantic description of BDQ Tests and related quality constructs. Additional axioms, implementation guidance, or usage recommendations are addressed in the [1.3 Associated Documents](#13-associated-documents).
+The purpose of this document is to provide the landing page for the `bdqffdq:` vocabulary, which defines the elements used in the Biodiversity Data Quality Fitness for Use Framework (Ontology). The vocabulary includes classes, object properties, data properties, and named individuals that collectively support the semantic description of BDQ Tests and related quality constructs. Additional axioms, implementation guidance, or usage recommendations are addressed in the [1.3 Associated Documents](#13-associated-documents).
 
 ### 1.2 Audience
 
@@ -181,7 +181,7 @@ Familiarity with RDF, OWL, and the structure of the BDQ Tests is recommended.
 
 For the list and links to all associated documents see [The Biodiversity Data Quality (BDQ) Standard](../../../index.md).
 
-Information about the bdqffdq: ontology, its usage, and its extensions can be found in the following subset of BDQ resources:
+Information about the bdqffdq: Fitness For Use Framework Ontology, its usage, and its extensions can be found in the following subset of BDQ resources:
 
 - [**Fitness For Use Framework Ontology Guide**](../../guide/bdqffdq/index.md) Provides a visual and narrative introduction to the concepts and application of the ontology.
 - **Fitness For Use Framework Ontology List of Terms** The term list document, which enumerates and describes the vocabulary terms. This document.

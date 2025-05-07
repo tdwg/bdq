@@ -46,9 +46,9 @@
 
 ### 1.1 Purpose
 
-The purpose of this document is to list and describe the terms that define the BDQ Tests, each represented as a term in the `bdqtest:` namespace. This document provides normative values and explanations for the properties used to describe each Test, including its label, expected input, outputs, parameters, and relationships to Use Cases and quality dimensions.
+The purpose of this document is to list and describe the terms that define the BDQ Tests, each represented as a term in the `bdqtest:` namespace. This document provides normative values and explanations for the properties used to describe each Test, including its label, expected input, outputs, parameters, and relationships to `Use Cases` and quality `Dimensions`.
 
-The Tests defined here are intended to be modular and interoperable. They can be combined into Profiles tailored to particular data quality needs or assessment goals. Each Test is specified independently to support implementation flexibility, but all Tests are grounded in the principles of fitness for use as described in the Fitness for Use Framework.
+The Tests defined here are intended to be modular and interoperable. They can be combined into `Profiles` tailored to particular data quality needs or assessment goals. Each Test is specified independently to support implementation flexibility, but all Tests are grounded in the principles of fitness for use as described in the Fitness for Use Framework.
 
 ### 1.2 Audience
 
@@ -129,19 +129,19 @@ In any technical treatment of the BDQ standard, a precise reference to a class o
 
 ### 1.9 Test Types (non-normative)
 
-There are four types of BDQ Tests: Validations, Issues, Measures and Amendments. Each Test is intended to examine just one specific aspect of data quality. Tests are assembled into Test suites (bdqffdq:Policies) that assess the fitness for use of data for a specific use.
+There are four types of BDQ Tests: `Validations`, `Issues`, `Measures` and `Amendments`. Each Test is intended to examine just one specific aspect of data quality. Tests are assembled into Test suites (`bdqffdq:Policies`) that assess the fitness for use of data for a specific use.
 
-**Validation Tests** can be thought of as fact-checking. They compare the data against known standards or rules. Validation Tests examine the values of one or more [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) against a Criterion for quality. An example is [VALIDATION_COUNTRYCODE_STANDARD](../../terms/bdqtest/index.md#VALIDATION_COUNTRYCODE_STANDARD) where dwc:countryCode is checked against a Source Authority for validity.
+**Validation Tests** can be thought of as fact-checking. They compare the data against known standards or rules. `Validation` Tests examine the values of one or more [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) against a `Criterion` for quality. An example is [VALIDATION_COUNTRYCODE_STANDARD](../../terms/bdqtest/index.md#VALIDATION_COUNTRYCODE_STANDARD) where `dwc:countryCode` is checked against a `sourceAuthority` for validity.
 
-**Issue Tests** can be thought of as warning flags. They don't necessarily mean the data are wrong, but they highlight something that might be a problem for some users. For example, [ISSUE_DATAGENERALIZATIONS_NOTEMPTY](../../terms/bdqtest/index.md#ISSUE_DATAGENERALIZATIONS_NOTEMPTY) alerts users to a NotEmpty value that should be examined against their data quality needs. 
+**Issue Tests** can be thought of as warning flags. They don't necessarily mean the data are wrong, but they highlight something that might be a problem for some users. For example, [ISSUE_DATAGENERALIZATIONS_NOTEMPTY](../../terms/bdqtest/index.md#ISSUE_DATAGENERALIZATIONS_NOTEMPTY) alerts users to a `NotEmpty` value that should be examined against their data quality needs. 
 
-**Amendment Tests** can be thought of as suggestions for improvement. Amendment Tests examine the values of [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) and may propose changes or additions to improve the quality. An example is [AMENDMENT_COUNTRYCODE_STANDARDIZED](../../terms/bdqtest/index.md#AMENDMENT_COUNTRYCODE_STANDARDIZED), where a valid ISO country code could be inferred.
+**Amendment Tests** can be thought of as suggestions for improvement. `Amendment` Tests examine the values of [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) and may propose changes or additions to improve the quality. An example is [AMENDMENT_COUNTRYCODE_STANDARDIZED](../../terms/bdqtest/index.md#AMENDMENT_COUNTRYCODE_STANDARDIZED), where a valid ISO country code could be inferred.
 
-**Measure Tests** can be thought of as metrics. Measure Tests either count things, or assert that data evaluate as fit for some use (COMPLETE), or not fit for some use (NOT_COMPLETE). An example is [MEASURE_VALIDATIONTESTS_NOTCOMPLIANT](../../terms/bdqtest/index.md#MEASURE_VALIDATIONTESTS_NOTCOMPLIANT), which returns the number of Tests of Type Validation that had a response of "NOT_COMPLIANT" on a record.
+**Measure Tests** can be thought of as metrics. `Measure` Tests either count things, or assert that data evaluate as fit for some use (COMPLETE), or not fit for some use (NOT_COMPLETE). An example is [MEASURE_VALIDATIONTESTS_NOTCOMPLIANT](../../terms/bdqtest/index.md#MEASURE_VALIDATIONTESTS_NOTCOMPLIANT), which returns the number of Tests of Type `Validation` that had a response of "NOT_COMPLIANT" on a record.
 
 ### 1.10 Key to Vocabulary Terms
 
-These "Test Descriptors" are terms that are necessary to comprehensively describe each Test. Some terms, such as those labeled `Term Version IRI (rdf:about)`, `Term IRI (dcterms:isVersionOf)` and `Term Name (rdf:value)` are intended for machine consumption. Some terms such as the `Description (rdfs:comment)` are designed to be human-readable and to be understood by consumers of biodiversity data quality reports. Terms such as the `Specification (bdqffdq:Specification)` ensure that implementers have no ambiguity about how the Test should be coded.
+These "Test Descriptors" are terms that are necessary to comprehensively describe each Test. Some terms, such as those labeled `Term Version IRI` (`rdf:about`), `Term IRI` (`dcterms:isVersionOf`) and `Term Name` (`rdf:value`) are intended for machine consumption. Some terms such as the `Description` (`rdfs:comment`) are designed to be human-readable and to be understood by consumers of biodiversity data quality reports. Terms such as the `Specification` (`bdqffdq:Specification`) ensure that implementers have no ambiguity about how the Test should be coded.
 
 Terms used to describe the terms in this vocabulary follow the guidance of the [TDWG Standards Documentation Standard (SDS)](https://www.tdwg.org/standards/sds/). Term definitions include the definition of the underlying RDF vocabulary term, and may include a TDWG-specific meaning from the SDS, and may also include a specific definition in this local context. See section [2.4.1 Listing Identifiers for Tests](../../supplement/index.md#241-Listing-Identifiers-for-Tests) in [BDQ Supplemental Information](../../supplement/index.md) for a competency question clarifying the relationships among `Term Version IRI`, `Term IRI`, `Term Name`, and `Label`.
 
@@ -149,6 +149,6 @@ Terms used to describe the terms in this vocabulary follow the guidance of the [
 
 ## 2 Use of Terms (normative)
 
-In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use the Term IRI (e.g., `http://rs.tdwg.org/bdq/bdqffdq/InformationElement`) or Term Qualified name (e.g., `bdqffdq:InformationElement`). In a non-RDF context in which resources may be used by software (e.g., a value in a spreadsheet or database table) the Controlled Value String (Local name, e.g., `InformationElement`) MAY be used. In a purely human context a Label (e.g., `Information Element`) MAY be used.
+In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use the Term IRI (e.g., `http://rs.tdwg.org/bdq/bdqffdq/InformationElement`) or Term Qualified name (e.g., `bdqffdq:InformationElement`). In a non-RDF context in which resources may be used by software (e.g., a value in a spreadsheet or database table) the Controlled Value String (Local name, e.g., `InformationElement`) MAY be used. In a purely human context a label (e.g., `Information Element`) MAY be used.
 
 ## 3 Term Indices
