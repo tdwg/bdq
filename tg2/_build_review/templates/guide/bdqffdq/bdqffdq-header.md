@@ -50,7 +50,7 @@
 
 The purpose of this document is to provide a practical guide to understanding and using the [Biodiversity Data Quality Fitness for Use Framework Ontology](../../../vocabulary/bdqffdq.owl), represented by the `bdqffdq:` vocabulary. This ontology defines a formal framework for describing data quality in the context of biodiversity data, emphasizing that quality is always relative to a particular purpose or use.
 
-The document explains key concepts from the ontology, including `UseCase`, `InformationElement`, `Specification`, and `Criterion`, and shows how they support the structure and semantics of BDQ Tests. It provides context, illustrative examples, and guidance for interpreting the ontology as applied in real-world implementations.
+The document explains key concepts from the ontology, including `Use Case`, `Information Element`, `Specification`, and `Criterion`, and shows how they support the structure and semantics of BDQ Tests. It provides context, illustrative examples, and guidance for interpreting the ontology as applied in real-world implementations.
 
 ### 1.2 Audience
 
@@ -280,7 +280,7 @@ Each `Validation` has one-to-many related `Validation Policies`.
 
 Each `Validation` has one and only one `Data Quality Dimension`.
 Each `Validation` has one and only one `Criterion`.
-Each `Validation` has one and only one `Acted Upon` `InformationElement`.
+Each `Validation` has one and only one `Acted Upon` `Information Element`.
 Each `Acted Upon` `Information Element` is `composedOf` one-to-many concrete `Information Element` terms.
 Each `Validation` has zero or one `Consulted` `Information Elements`.
 Each `Consulted` `Information Element` is `composedOf` one-to-many concrete `Information Element` terms.
