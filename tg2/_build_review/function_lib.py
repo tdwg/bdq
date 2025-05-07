@@ -126,7 +126,9 @@ def build_term_key(term_concept_dictionary, terms_sorted_by_localname) :
                     definition = r.object
             elif termname.startswith("bdqffdq:") : 
                 graph = rdflib.Graph()
-                graph.parse("https://raw.githubusercontent.com/tdwg/bdq/refs/heads/master/tg2/_review/vocabulary/bdqffdq.owl", format="turtle")
+#                graph.parse("https://raw.githubusercontent.com/tdwg/bdq/refs/heads/master/tg2/_review/vocabulary/bdqffdq.owl", format="turtle")
+                # Use local copy
+                graph.parse('../_review/vocabulary/bdqffdq.owl', format="turtle")
                 sparql = prefixes + "SELECT ?subject ?object WHERE {  ?subject skos:definition ?object . FILTER ( ?subject = "+termname+" )  } "
                 queryResult = graph.query(sparql)
                 for r in queryResult : 

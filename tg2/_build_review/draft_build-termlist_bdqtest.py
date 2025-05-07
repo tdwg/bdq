@@ -141,7 +141,9 @@ if debug :
 # ---------------
 
 graph = rdflib.Graph()
-graph.parse(testRdfDocument, format="xml")
+#graph.parse(testRdfDocument, format="xml")
+# Use local copy
+graph.parse('../_review/dist/bdqtest.xml', format="xml")
 
 # ---------------
 # Create metadata table and populate using data from namespace databases in GitHub
