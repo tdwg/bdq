@@ -114,7 +114,7 @@ Draft Standard for Review
 
 ### 1.1 Purpose
 
-The purpose of this document is to provide supplemental information that supports the interpretation, development, and long-term maintenance of the BDQ standard. It offers historical context, rationale, and informal guidance gathered during the development of BDQ, with the aim of helping users extend, adapt, or evaluate the framework in their own domains.
+The purpose of this document is to provide supplemental information that supports the interpretation, development, and long-term maintenance of the BDQ standard. It offers historical context, rationale, and informal guidance gathered during the development of BDQ, with the aim of helping users extend, adapt, or evaluate the Fitness For Use Framework in their own domains.
 
 This document includes lessons learned, design considerations, Test development principles, and reflections on the structure of the BDQ standard. It serves both as a record of how the BDQ standard evolved and as a practical reference for those planning to create additional Tests or Profiles.
 
@@ -501,7 +501,7 @@ The team identified a fundamental problem early in the development of the Tests:
 
 Over the course of the development of the Tests, we encountered significant difficulties with choices of words. In the original formulation of the Framework (Veiga 2016), different words were used to describe parallel concepts at the levels of data quality needs, solutions, and reports, and the words used for fundamental concepts overlapped with those for derived concepts. We have settled on Criterion, Dimension, and Enhancement as the words for fundamental concepts, and variations on Validation (Validation, ValidationMethod, ValidationAssertion), Issue, Measure, and Amendment for derived concepts. It was very late in development of the Test Specifications that we realized that the heart of what we were calling 'Validation' mapped to the derived concept of CriterionInContext/ContextualizedCriterion in the Framework (Veiga et al. 2017), so we have renamed Framework concepts for clarity.
 
-Early on we recognized that the Data Quality Framework required us to frame MultiRecord Measures in order to support the formal requirements in the framework for Quality Control and Quality Assurance, which are defined as only involving Measures. We recognized that these would be simple, repetitive, formal statements about the results of Validations, so we put off defining these until very late in the process. They proved straightforward to frame and then generate from the set of adopted SingleRecord Tests.
+Early on we recognized that the Data Quality Framework required us to frame MultiRecord Measures in order to support the formal requirements in the Fitness For Use Framework for Quality Control and Quality Assurance, which are defined as only involving Measures. We recognized that these would be simple, repetitive, formal statements about the results of Validations, so we put off defining these until very late in the process. They proved straightforward to frame and then generate from the set of adopted SingleRecord Tests.
 
 ### 3.1 Test Types
 
@@ -698,7 +698,7 @@ The Darwin Core Standard (Wieczorek et al. 2012) is deliberately permissive. The
 
 #### 3.9.2 Georeferencing
 
-Some BDQ Tests are aspirational, promoting community best practices for expressing data in ways that support high quality. For example, several Tests reflect guidance from Georeferencing Best Practices (Chapman & Wieczorek 2020), emphasizing the importance of populating specific metadata elements required for high-quality georeferences (e.g., [VALIDATION_GEODETICDATUM_NOTEMPTY](../terms/bdqtest/index.md#VALIDATION_GEODETICDATUM_NOTEMPTY)). Similarly, the framework encourages the use of controlled vocabularies that the community is encouraged to adopt, such as EPSG codes for geodetic datums (https://epsg.org).
+Some BDQ Tests are aspirational, promoting community best practices for expressing data in ways that support high quality. For example, several Tests reflect guidance from Georeferencing Best Practices (Chapman & Wieczorek 2020), emphasizing the importance of populating specific metadata elements required for high-quality georeferences (e.g., [VALIDATION_GEODETICDATUM_NOTEMPTY](../terms/bdqtest/index.md#VALIDATION_GEODETICDATUM_NOTEMPTY)). Similarly, the Fitness For Use Framework encourages the use of controlled vocabularies that the community is encouraged to adopt, such as EPSG codes for geodetic datums (https://epsg.org).
 
 #### 3.9.3 Annotations
 

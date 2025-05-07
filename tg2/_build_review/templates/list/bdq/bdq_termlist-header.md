@@ -48,18 +48,18 @@
 
 The purpose of this document is to provide the full term list for the `bdq:` controlled vocabulary, which supports the specification and use of BDQ Tests. The `bdq:` vocabulary includes concepts used throughout the BDQ standard to describe parameters, data structures, source authorities, and special value cases relevant to the execution and behavior of Tests.
 
-This term list defines the formal structure and meanings of these concepts and provides reference material for implementation and documentation purposes.
+This term list defines the formal structure and meanings of these concepts and provides reference material for `Implementation` and documentation purposes.
 
 ### 1.2 Audience
 
-This document is intended for technical users who need a precise understanding of the vocabulary elements used in BDQ Test specifications and reports. It will be particularly useful for:
+This document is intended for technical users who need a precise understanding of the vocabulary elements used in BDQ Test `Specifications` and reports. It will be particularly useful for:
 
 - Implementers interpreting or extending BDQ Test logic
 - Standards developers and data quality modelers working with BDQ vocabularies
 - Analysts and system designers configuring parameterized data quality assessments
 - Curators needing to understand the conceptual basis for different Test evaluations
 
-Familiarity with RDF vocabularies and the BDQ Framework is recommended for full comprehension, but the document is organized to be accessible for any reader needing detailed term definitions.
+Familiarity with RDF vocabularies and the Fitness For Use Framework is recommended for full comprehension, but the document is organized to be accessible for any reader needing detailed term definitions.
 
 ### 1.3 Data Quality Vocabulary Terms
 
@@ -67,7 +67,7 @@ The `bdq:` vocabulary includes four groups of concepts used across the BDQ stand
 
 - **Use Cases** (`bdqffdq:UseCase`) – formal representations of the purposes for which data might be evaluated using BDQ Tests.
 - **Test Parameters** (`bdqffdq:Parameter`) – concepts used to configure the behavior of Tests, including named parameters like `bdq:sourceAuthority`.
-- **Information Elements** – used by MultiRecord Measure Tests to refer to aggregated or referenced values.
+- **Information Elements** – used by `MultiRecord` `Measure` Tests to refer to aggregated or referenced values.
 - **Empty/NotEmpty Concepts** – `bdq:Empty` and `bdq:NotEmpty`, which provide shared semantics for Tests dealing with missing or present values.
 
 These terms ensure consistent representation and enable structured interpretation of Test configurations and outcomes.
@@ -118,7 +118,7 @@ The following namespace abbreviations are used in this document:
 
 ### 1.9 Key to Vocabulary Terms
 
-The terminology used to describe the terms in this vocabulary follows the TDWG Standards Documentation Standard (SDS). Each term definition includes the original RDF definition, and may also provide a TDWG-specific interpretation from the SDS, as well as a definition tailored to this local context.
+The terminology used to describe the terms in this vocabulary follows the TDWG [Standards Documentation Specification](https://github.com/tdwg/vocab/blob/master/sds/documentation-specification.md) (SDS). Each term definition includes the original RDF definition, and may also provide a TDWG-specific interpretation from the SDS, as well as a definition tailored to this local context.
 
 {term_key}
 

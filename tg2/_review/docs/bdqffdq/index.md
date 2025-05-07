@@ -1,9 +1,9 @@
 <!--- This file is generated from templates by code, DO NOT EDIT by hand --->
 
-# Fitness for Use Ontology
+# Fitness for Use Framework Ontology
 
 **Title**<br>
-Fitness for Use Ontology
+Fitness for Use Framework Ontology
 
 **Date version issued**<br>
 2025-04-11
@@ -27,7 +27,7 @@ bdqffdq
 {previous_version_slot}
 
 **Abstract**<br>
-This document is a reference for the BDQ standard, forming the landing page for the bdqffdq ontology, describing the ontology, its uses, its vocabulary, and its vocabulary extension.
+This document is a reference for the BDQ standard, describing the Fitness for Use Framework ontology, its uses, its vocabulary, and its vocabulary extension.
 
 **Authors**<br>
 [Lee Belbin](https://orcid.org/0000-0001-8900-6203) ([Blatant Fabrications](https://www.wikidata.org/wiki/Q130304884)), [Arthur D. Chapman](https://orcid.org/0000-0003-1700-6962) ([Australian Biodiversity Information Services](http://www.wikidata.org/entity/Q100600913)), [Paul J. Morris](https://orcid.org/0000-0002-3673-444X) ([Museum of Comparative Zoology, Harvard University](http://www.wikidata.org/entity/Q1420782)), [John Wieczorek](https://orcid.org/0000-0003-1144-0290) ([Rauthiflor LLC](http://www.wikidata.org/entity/Q98382028))
@@ -36,7 +36,7 @@ This document is a reference for the BDQ standard, forming the landing page for 
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 **Bibliographic citation**<br>
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Fitness for Use Ontology. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqffdq/2025-04-11>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Fitness for Use Framework Ontology. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqffdq/2025-04-11>
 
 **Status**<br>
 Draft Standard for Review
@@ -131,7 +131,7 @@ Information about the bdqffdq: ontology, its usage, and its extensions can be fo
 
 - [**Fitness For Use Framework Ontology Guide**](../guide/bdqffdq/index.md) Provides a visual and narrative introduction to the concepts and application of the ontology.
 - [**Fitness For Use Framework Ontology List of Terms**](../list/bdqffdq/index.md) The term list document, which enumerates and describes the vocabulary terms.
-- Fitness for Use Ontology** Provides normative guidance on the use of the vocabulary. This document.
+- Fitness for Use Framework Ontology** Provides normative guidance on the use of the vocabulary. This document.
 - [**Fitness For Use Framework Ontology Vocabulary Extension**](../extension/bdqffdq/index.md) Defines additional axioms extending the core vocabulary.
 - [**Biodiversity Data Quality Fitness for Use Framework (Ontology)**](../../vocabulary/bdqffdq.owl) The ontology, which provides the formal RDF/OWL representation of the vocabulary.
 
@@ -674,7 +674,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Fitness for Use Ontology. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqffdq/2025-04-11>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Fitness for Use Framework Ontology. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqffdq/2025-04-11>
 
 **Biodiversity Information Standards (TDWG)**
 

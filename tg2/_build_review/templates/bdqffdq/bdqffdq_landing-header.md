@@ -69,7 +69,7 @@ Information about the bdqffdq: ontology, its usage, and its extensions can be fo
 
 - [**Fitness For Use Framework Ontology Guide**](../guide/bdqffdq/index.md) Provides a visual and narrative introduction to the concepts and application of the ontology.
 - [**Fitness For Use Framework Ontology List of Terms**](../list/bdqffdq/index.md) The term list document, which enumerates and describes the vocabulary terms.
-- Fitness for Use Ontology** Provides normative guidance on the use of the vocabulary. This document.
+- Fitness for Use Framework Ontology** Provides normative guidance on the use of the vocabulary. This document.
 - [**Fitness For Use Framework Ontology Vocabulary Extension**](../extension/bdqffdq/index.md) Defines additional axioms extending the core vocabulary.
 - [**Biodiversity Data Quality Fitness for Use Framework (Ontology)**](../../vocabulary/bdqffdq.owl) The ontology, which provides the formal RDF/OWL representation of the vocabulary.
 

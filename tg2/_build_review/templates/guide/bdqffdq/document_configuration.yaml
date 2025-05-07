@@ -6,7 +6,7 @@
 documentTitle: Fitness For Use Framework Ontology Guide
 
 # Abstract of document written by authors.
-abstract: 'This document is a user''s guide for the BDQ standard, describing the organization and use of the bdqffdq: ontology.  The BDQ Conceptual Framework ontology formally describes the terms and relationships between them for evaluating the quality of biodiversity data. Because of its comprehensive nature, the conceptual framework supports varied interpretations and uses by different stakeholders. The Framework also provides a base for the bdq: and bdqcore: namespace vocabularies.'
+abstract: 'This document is a user''s guide for the BDQ standard, describing the organization and use of the bdqffdq: ontology.  The Fitness For Use Framework ontology formally describes the terms and relationships between them for evaluating the quality of biodiversity data. Because of its comprehensive nature, the Fitness For Use Framework supports varied interpretations and uses by different stakeholders. The Framework also provides a base for the bdq: and bdqcore: namespace vocabularies.'
 
 # This value is generally the name of the task group that created the document.
 creator: 'TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions'

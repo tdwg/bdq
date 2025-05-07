@@ -112,7 +112,7 @@ In any technical treatment of the BDQ standard, a precise reference to a class o
 
 ### 2.1 Independence (normative) 
 
-Test  `event_date_qc`  SHOULD be independent of how data are stored and transported, data serializations, and the framework or environment in which the Tests are being executed. 
+Test `event_date_qc` SHOULD be independent of how data are stored and transported, data serializations, and the framework or environment in which the Tests are being executed. 
 
 ### 2.2 The Concept of "EMPTY" in the BDQ Standard(normative)
 
@@ -403,7 +403,7 @@ An `Amendment` Test may propose a change to a value found in an existing Darwin 
 
 An `Amendment` Test `Response.result` SHOULD consist of a set of key:value pairs, where each key is an `Information Element` to be modified, and each value is a proposed new value for that `Information Element`. The `Response.result` key:value pairs SHOULD be a JSON serialization of the proposed changes.
 
-Under the `bdqffdq:` framework, `Amendments` may propose changes to processes as well as data, no structure is proposed for such an `Amendment` Test `Response.result`, and implementers MAY develop their own structures and serializations for such `Amendment` Test `Response.results`.
+Under the Fitness For Use Framework, `Amendments` may propose changes to processes as well as data, no structure is proposed for such an `Amendment` Test `Response.result`, and implementers MAY develop their own structures and serializations for such `Amendment` Test `Response.results`.
 
 Nothing in this section should be taken as a requirement for a particular format or serialization of `bdqffdq:Assertions` or `Responses`. Implementations MAY serialize `Assertions` in any appropriate form. 
 
@@ -525,7 +525,7 @@ The BDQ standard does not specify how the ordering of these Tests should be acco
 
 ##### 6.4.2.1 Terms for describing Test Dependencies (non-normative)
 
-The [Fitness for Use Ontology](../../bdqffdq/index.md) does not include a property to describe sequence inter-dependencies among `Amendments`. The Ontology does provide the terms `bdqffdq:targetedMeasure`, `bdqffdq:targetedValidation`, and `bdqffdq:TargetedIssue`, which could be used, together with `bdqffdq:improvedBy` to relate `Amendment` Tests to `Validation`, `Measure`, and `Issue` Tests. The BDQ standard does not use these terms to describe Test interrelationships, though they could be used for this purpose. 
+The [Fitness for Use Framework Ontology](../../bdqffdq/index.md) does not include a property to describe sequence inter-dependencies among `Amendments`. The Ontology does provide the terms `bdqffdq:targetedMeasure`, `bdqffdq:targetedValidation`, and `bdqffdq:TargetedIssue`, which could be used, together with `bdqffdq:improvedBy` to relate `Amendment` Tests to `Validation`, `Measure`, and `Issue` Tests. The BDQ standard does not use these terms to describe Test interrelationships, though they could be used for this purpose. 
 
 #### 6.4.3 Implementing a complete Test (normative)
 
@@ -854,7 +854,7 @@ Results of the Biodiversity Data Quality (BDQ) Taxon Name-related Tests.
 
 ### 7.2 Annotations (normative)
 
-The `bdqffdq:` OWL representation of the Framework [Fitness for Use Ontology](../../bdqffdq/index.md)), and the framing of the [BDQ Tests as RDF](../../../dist/bdq.xml) using that ontology makes Test results particularly amenable to being wrapped in `Annotations` following the W3C Web Annotation Data Model (Sanderson et al. 2017). Test responses MAY be represented as `Annotations`.
+The `bdqffdq:` OWL representation of the Framework [Fitness for Use Framework Ontology](../../bdqffdq/index.md)), and the framing of the [BDQ Tests as RDF](../../../dist/bdq.xml) using that ontology makes Test results particularly amenable to being wrapped in `Annotations` following the W3C Web Annotation Data Model (Sanderson et al. 2017). Test responses MAY be represented as `Annotations`.
 
 The responses from Tests could be structured as elements that can be wrapped in the body `Annotation` document along with metadata from the Framework to describe which Test is being reported upon, and metadata within the target of the `Annotation` to describe which data resource is being annotated, and the state it was in at the time of annotation.
 
@@ -885,7 +885,7 @@ Frameworks that validate Test `Implementations` against the Test Validation Data
 
 ### 8.2 Structure of the Test Validation Data (non-normative)
 
-The Test Validation Data are intended as input into a testing system that can evaluate the `Implementations` of Tests, evaluating each Test independently. Each Test Validation Data record contains only the values of the `Information Elements` ([Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021)) for a single Test as input. A validation framework is expected to present those `Information Elements` as input to a Test `Implementation` and assesses whether the `Response` from the Test `Implementation` for that input conforms to the expected `Response` values for that row in the Test Validation Data. The Test Validation Data could be processed as input for unit tests using some unit testing framework for Test `Implementations`, or it could be used as the basis for presenting synthetic records to a larger Test execution system. The Test Validation Data are designed to be used at a level where individual Tests are being assessed. The structure of the validation data attempts to be at a level of abstraction above the method signature specificity needed in unit Tests (i.e., the structure of the Test Validation Data is generic, not specific to a particular Test), but still at a level that is examining individual Test `Implementations`, and below the level of testing inputs and outputs of a larger data processing system that could take complete Darwin Core records as input and return rich data quality reports as output. The chosen level of abstraction for the Test Validation Data avoids forcing particular formats on data quality reports as a whole, as the responses from individual Tests are validated, not data quality reports.
+The Test Validation Data are intended as input into a testing system that can evaluate the `Implementations` of Tests, evaluating each Test independently. Each Test Validation Data record contains only the values of the `Information Elements` ([Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021)) for a single Test as input. A `Validation` framework is expected to present those `Information Elements` as input to a Test `Implementation` and assesses whether the `Response` from the Test `Implementation` for that input conforms to the expected `Response` values for that row in the Test Validation Data. The Test Validation Data could be processed as input for unit tests using some unit testing framework for Test `Implementations`, or it could be used as the basis for presenting synthetic records to a larger Test execution system. The Test Validation Data are designed to be used at a level where individual Tests are being assessed. The structure of the validation data attempts to be at a level of abstraction above the method signature specificity needed in unit Tests (i.e., the structure of the Test Validation Data is generic, not specific to a particular Test), but still at a level that is examining individual Test `Implementations`, and below the level of testing inputs and outputs of a larger data processing system that could take complete Darwin Core records as input and return rich data quality reports as output. The chosen level of abstraction for the Test Validation Data avoids forcing particular formats on data quality reports as a whole, as the responses from individual Tests are validated, not data quality reports.
 
 The header for the data in the Test Validation Data files includes a column for each
 `Information Element` and each `Parameter` among all those used in the BDQ standard. Following are definitions for a subset of all columns in the Test Validation Data files:
@@ -979,7 +979,7 @@ Java annotations can be used to match Test `Implementation` methods to Tests and
 
 #### 8.6.2 Tools to assist with `Implementations` and RDF presentation (non-normative) 
 
-The Test `Implementations` listed below use Java Annotations (as shown in the example in [Section 2.3.2.5](#2325-example-interpretation-of-a-parameter-string-default-value-non-normative) to carry metadata to identify Tests and to allow binding of Darwin Core terms to Java method parameters. The Java Annotations are themselves related to `bdqffdq:` framework concepts, are available in a library ffdq-api (Lowery and Morris 2024), and are intended to be used with rdfbeans to serialize Java result objects produced by Test `Implementations` into `bdqffdq:Assertion` objects in RDF. In addition, a Java library, `kurator-ffdq` (Lowery et al., 2025) is available for working with Test descriptions as RDF, being an `Implementation` of the Framework Ontology in Java. The `kurator-ffdq` library also includes classes for generating stub methods for each Test in either Java or Python.
+The Test `Implementations` listed below use Java Annotations (as shown in the example in [Section 2.3.2.5](#2325-example-interpretation-of-a-parameter-string-default-value-non-normative) to carry metadata to identify Tests and to allow binding of Darwin Core terms to Java method parameters. The Java Annotations are themselves related to Fitness For Use Framework concepts, are available in a library ffdq-api (Lowery and Morris 2024), and are intended to be used with rdfbeans to serialize Java result objects produced by Test `Implementations` into `bdqffdq:Assertion` objects in RDF. In addition, a Java library, `kurator-ffdq` (Lowery et al., 2025) is available for working with Test descriptions as RDF, being an `Implementation` of the Framework Ontology in Java. The `kurator-ffdq` library also includes classes for generating stub methods for each Test in either Java or Python.
 
 - [ffdq-api](https://github.com/kurator-org/ffdq-api) (Lowery and Morris 2024) Java annotations for decorating Test `Implementations`.
 - [kurator-ffdq](https://github.com/kurator-org/kurator-ffdq) (Lowery et al. 2025) Java class representation of `bdqffdq:` classes, able to produce stub code for Test `Implementations` in Java or Python. `kurator-ffdq` is also able (code is rusty as of v3.0.0) to run Java Test `Implementations` annotated with `ffdq-api` annotations and produce `Data Quality Report` spreadsheets.
