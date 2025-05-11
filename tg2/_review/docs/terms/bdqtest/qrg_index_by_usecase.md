@@ -1,11 +1,11 @@
-# UseCase Index to the BDQ Tests Quick Reference Guide
+# Use Case Index to the BDQ Tests Quick Reference Guide
 
 Title
 : Terms used in the BDQ Tests Quick Reference Guide
 
 Part of the [BDQ Tests Quick Reference Guide](index.md)
 
-## Index of Tests by UseCase
+## Index of Tests by Use Case
 ### bdq:Taxon-Management
 A bdqffdq:UseCase that documents the management of the quality of taxonomic names (see examples in Rees ER & Nicholls M (2020) Data Quality Use Case Study Results Biodiversity Information Science and Standards 4: e50889, suppl. 2. https://doi.org/10.3897/biss.4.50889.suppl2).
 

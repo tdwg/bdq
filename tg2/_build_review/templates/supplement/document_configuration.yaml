@@ -15,7 +15,7 @@ creator: 'TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quali
 # These Markdown documents are then converted to HTML by GitHub Pages. To match the TDWG theme, the 
 # document maintainers will need to work with the Infrastructure team to set up the repository so 
 # that it can host the ancillary website for the standard or vocabulary. 
-# The exact setup of the repository will determin the values of accessUrl and browserRedirectUri.
+# The exact setup of the repository will determine the values of accessUrl and browserRedirectUri.
 
 # Media type of source document used to generate the HTML version of the document.
 mediaType: text/markdown
@@ -51,7 +51,7 @@ current_iri: https://bdq.tdwg/org/vocabularies/
 # Date of first ratification of the document. Will match the doc_modified value for the first
 # version of the document. For lists of terms, this will also match the date that the
 # first version of the vocabulary was issued (date_issued).
-doc_created: '2025-04-11'
+doc_created: '2025-05-10'
 
 # ----------------
 # Do not edit below this line
@@ -69,4 +69,4 @@ comment: 'Draft Standard for Review'
 # This value will automatically get updated from the date_issued value in config.yaml if the document
 # is a list of terms document. For other types of documents, it is set from the general_configuration.yaml
 # file.
-doc_modified: '2025-04-11'
+doc_modified: '2025-05-10'

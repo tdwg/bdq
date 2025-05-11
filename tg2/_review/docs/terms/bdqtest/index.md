@@ -140,7 +140,7 @@ This document also includes `Measures` operating on Test `Responses` for `Multi 
 
 # The BDQ Tests
 
-## Validations, Amendments, Measures operating on SingleRecords.
+## Validations, Measures, Amendments operating on Single Records.
 
 ###  VALIDATION_BASISOFRECORD_NOTEMPTY
 
@@ -158,7 +158,7 @@ COMPLIANT if dwc:basisOfRecord is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:basisOfRecord
 
 #### Examples
@@ -191,7 +191,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:basisOfRecord
 
 #### Parameters
@@ -236,7 +236,7 @@ COMPLIANT if dc:type is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dc:type
 
 #### Examples
@@ -269,7 +269,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dc:type
 
 #### Default Parameter Values
@@ -310,7 +310,7 @@ COMPLIANT if dcterms:license is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dcterms:license
 
 #### Examples
@@ -347,7 +347,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dcterms:license
 
 #### Parameters
@@ -392,7 +392,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:countryCode,dwc:decimalLatitude,dwc:decimalLongitude
 
 #### Parameters
@@ -439,7 +439,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:stateProvince,dwc:decimalLatitude,dwc:decimalLongitude
 
 #### Parameters
@@ -484,7 +484,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if either bdq:taxonIsMarine or bdq:geospatialLand
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:decimalLatitude,dwc:decimalLongitude
 
 Consulted: 
@@ -532,7 +532,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLatitude is bdq:Empty or is not int
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:decimalLatitude,dwc:decimalLongitude
 
 #### Examples
@@ -569,7 +569,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:coordinateUncertaintyInMeters is bdq:Empty
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:coordinateUncertaintyInMeters
 
 #### Examples
@@ -606,7 +606,7 @@ COMPLIANT if dwc:countryCode is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:countryCode
 
 #### Examples
@@ -643,7 +643,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:countryCode
 
 #### Default Parameter Values
@@ -684,7 +684,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:country,dwc:countryCode
 
 #### Default Parameter Values
@@ -725,7 +725,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:country,dwc:stateProvince
 
 #### Parameters
@@ -770,7 +770,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:country
 
 #### Parameters
@@ -815,7 +815,7 @@ COMPLIANT if dwc:country is bdq:NotEmpty or dwc:countryCode has a value of "XZ" 
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:country
 
 Consulted: 
@@ -855,7 +855,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLatitude is bdq:Empty or the value 
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:decimalLatitude
 
 #### Examples
@@ -888,7 +888,7 @@ COMPLIANT if dwc:decimalLatitude is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:decimalLatitude
 
 #### Examples
@@ -921,7 +921,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLongitude is bdq:Empty or the value
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:decimalLongitude
 
 #### Examples
@@ -954,7 +954,7 @@ COMPLIANT if dwc:decimalLongitude is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:decimalLongitude
 
 #### Examples
@@ -987,7 +987,7 @@ COMPLIANT if dwc:geodeticDatum is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:geodeticDatum
 
 #### Examples
@@ -1020,7 +1020,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:geodeticDatum
 
 #### Default Parameter Values
@@ -1061,7 +1061,7 @@ COMPLIANT if at least one term needed to determine the location of the entity ex
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:higherGeographyID,dwc:higherGeography,dwc:continent,dwc:country,dwc:countryCode,dwc:stateProvince,dwc:county,dwc:municipality,dwc:waterBody,dwc:island,dwc:islandGroup,dwc:locality,dwc:locationID,dwc:verbatimLocality,dwc:decimalLatitude,dwc:decimalLongitude,dwc:verbatimCoordinates,dwc:verbatimLatitude,dwc:verbatimLongitude,dwc:footprintWKT
 
 #### Examples
@@ -1098,7 +1098,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumDepthInMeters is bdq:Empty or is no
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:maximumDepthInMeters
 
 #### Parameters
@@ -1143,7 +1143,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumElevationInMeters is bdq:Empty or t
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:maximumElevationInMeters
 
 #### Parameters
@@ -1188,7 +1188,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters is bdq:Empty, or the 
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:minimumDepthInMeters
 
 #### Parameters
@@ -1233,7 +1233,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters or dwc:maximumDepthIn
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:minimumDepthInMeters,dwc:maximumDepthInMeters
 
 #### Examples
@@ -1266,7 +1266,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumElevationInMeters is bdq:Empty or t
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:minimumElevationInMeters
 
 #### Parameters
@@ -1311,7 +1311,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumlevationInMeters or dwc:minimumElev
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:minimumElevationInMeters,dwc:maximumElevationInMeters
 
 #### Examples
@@ -1344,7 +1344,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:stateProvince
 
 #### Parameters
@@ -1389,7 +1389,7 @@ INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:day is bdq:Empty, or (2) dwc:day is no
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:day,dwc:month,dwc:year
 
 #### Examples
@@ -1426,7 +1426,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:day is bdq:Empty; COMPLIANT if the value o
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:day
 
 #### Examples
@@ -1463,7 +1463,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:endDayOfYear is bdq:Empty or if the value 
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:endDayOfYear
 
 Consulted: 
@@ -1503,7 +1503,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty or if the value of 
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:eventDate
 
 #### Parameters
@@ -1548,7 +1548,7 @@ COMPLIANT if dwc:eventDate is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:eventDate
 
 #### Examples
@@ -1581,7 +1581,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty; COMPLIANT if the v
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:eventDate
 
 #### Examples
@@ -1618,7 +1618,7 @@ COMPLIANT if any of dwc:eventDate, dwc:year, dwc:month, dwc:day, dwc:startDayOfY
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:eventDate,dwc:year,dwc:month,dwc:day,dwc:startDayOfYear,dwc:endDayOfYear,dwc:verbatimEventDate
 
 #### Examples
@@ -1655,7 +1655,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty, or all of dwc:year
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:eventDate,dwc:day,dwc:month,dwc:year,dwc:startDayOfYear,dwc:endDayOfYear
 
 #### Examples
@@ -1692,7 +1692,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:month is bdq:Empty; COMPLIANT if the value
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:month
 
 #### Examples
@@ -1725,7 +1725,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:startDayOfYear is bdq:Empty or if the valu
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:startDayOfYear
 
 Consulted: 
@@ -1765,7 +1765,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:year is bdq:Empty or cannot be interpreted
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:year
 
 #### Parameters
@@ -1810,7 +1810,7 @@ COMPLIANT if dwc:year is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:year
 
 #### Examples
@@ -1843,7 +1843,7 @@ INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:dateIdentified is bdq:Empty, or (2) dw
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:dateIdentified
 
 Consulted: 
@@ -1891,7 +1891,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:dateIdentified is bdq:Empty; COMPLIANT if 
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:dateIdentified
 
 #### Examples
@@ -1924,7 +1924,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:degreeOfEstablishment
 
 #### Parameters
@@ -1969,7 +1969,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:establishmentMeans
 
 #### Parameters
@@ -2014,7 +2014,7 @@ COMPLIANT if dwc:occurrenceID is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:occurrenceID
 
 #### Examples
@@ -2047,7 +2047,7 @@ COMPLIANT if dwc:occurrenceStatus is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:occurrenceStatus
 
 #### Examples
@@ -2080,7 +2080,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:occurrenceStatus
 
 #### Parameters
@@ -2125,7 +2125,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:pathway
 
 #### Parameters
@@ -2170,7 +2170,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:sex
 
 #### Parameters
@@ -2215,7 +2215,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:typeStatus
 
 #### Parameters
@@ -2260,7 +2260,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:kingdom,dwc:phylum,dwc:class,dwc:order,dwc:superfamily,dwc:family,dwc:subfamily,dwc:tribe,dwc:subtribe,dwc:genus
 
 #### Parameters
@@ -2305,7 +2305,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:class
 
 #### Parameters
@@ -2350,7 +2350,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:family
 
 #### Parameters
@@ -2395,7 +2395,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:genus
 
 #### Parameters
@@ -2440,7 +2440,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:kingdom
 
 #### Parameters
@@ -2485,7 +2485,7 @@ COMPLIANT if dwc:kingdom is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:kingdom
 
 #### Examples
@@ -2518,7 +2518,7 @@ COMPLIANT if dwc:namePublishedInYear is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:namePublishedInYear
 
 #### Examples
@@ -2551,7 +2551,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:order
 
 #### Parameters
@@ -2596,7 +2596,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:phylum
 
 #### Parameters
@@ -2641,7 +2641,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificName is bdq:Empty, or all of dwc
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:scientificName,dwc:genericName,dwc:specificEpithet,dwc:infraspecificEpithet
 
 #### Examples
@@ -2678,7 +2678,7 @@ COMPLIANT if dwc:scientificNameAuthorship is bdq:NotEmpty; otherwise NOT_COMPLIA
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:scientificNameAuthorship
 
 #### Examples
@@ -2711,7 +2711,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is bdq:Empty; COMPLIANT i
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:scientificNameID
 
 #### Examples
@@ -2748,7 +2748,7 @@ COMPLIANT if dwc:scientificNameID is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:scientificNameID
 
 #### Examples
@@ -2781,7 +2781,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:scientificName
 
 #### Parameters
@@ -2826,7 +2826,7 @@ COMPLIANT if dwc:scientificName is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:scientificName
 
 #### Examples
@@ -2859,7 +2859,7 @@ COMPLIANT if dwc:taxonRank is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:taxonRank
 
 #### Examples
@@ -2892,7 +2892,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:taxonRank
 
 #### Parameters
@@ -2937,7 +2937,7 @@ COMPLIANT if at least one term needed to determine the taxon of the entity exist
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:taxonID,dwc:scientificNameID,dwc:acceptedNameUsageID,dwc:parentNameUsageID,dwc:originalNameUsageID,dwc:taxonConceptID,dwc:scientificName,dwc:higherClassification,dwc:kingdom,dwc:phylum,dwc:class,dwc:order,dwc:superfamily,dwc:family,dwc:subfamily,dwc:tribe,dwc:subtribe,dwc:genus,dwc:genericName,dwc:subgenus,dwc:infragenericEpithet,dwc:specificEpithet,dwc:infraspecificEpithet,dwc:vernacularName,dwc:cultivarEpithet
 
 #### Examples
@@ -2974,7 +2974,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:taxonID,dwc:scientificName,dwc:scientificNameID,dwc:acceptedNameUsageID,dwc:originalNameUsageID,dwc:taxonConceptID,dwc:higherClassification,dwc:kingdom,dwc:phylum,dwc:class,dwc:order,dwc:superfamily,dwc:family,dwc:subfamily,dwc:tribe,dwc:subtribe,dwc:genus,dwc:genericName,dwc:subgenus,dwc:infragenericEpithet,dwc:specificEpithet,dwc:infraspecificEpithet,dwc:cultivarEpithet,dwc:vernacularName,dwc:scientificNameAuthorship,dwc:taxonRank
 
 #### Parameters
@@ -3151,7 +3151,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty or if the value of 
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:eventDate
 
 #### Examples
@@ -3188,7 +3188,7 @@ POTENTIAL_ISSUE if dwc:dataGeneralizations is bdq:NotEmpty; otherwise NOT_ISSUE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:dataGeneralizations
 
 #### Examples
@@ -3225,7 +3225,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:countryCode,dwc:decimalLatitude,dwc:decimalLongitude
 
 Consulted: 
@@ -3273,7 +3273,7 @@ POTENTIAL_ISSUE if dwc:establishmentMeans is bdq:NotEmpty; otherwise NOT_ISSUE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:establishmentMeans
 
 #### Examples
@@ -3350,7 +3350,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:basisOfRecord
 
 #### Parameters
@@ -3395,7 +3395,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dc:type
 
 #### Default Parameter Values
@@ -3436,7 +3436,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; AMEN
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dcterms:license
 
 #### Parameters
@@ -3481,7 +3481,7 @@ INTERNAL_PREREQUISITES_NOT_MET if 1) either dwc:decimalLatitude or dwc:decimalLo
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:decimalLatitude,dwc:decimalLongitude,dwc:geodeticDatum
 
 Consulted: 
@@ -3521,7 +3521,7 @@ INTERNAL_PREREQUISITES_NOT_MET if any of dwc:decimalLatitude or dwc:decimalLongi
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:decimalLatitude,dwc:decimalLongitude
 
 Consulted: 
@@ -3569,7 +3569,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:countryCode
 
 Consulted: 
@@ -3617,7 +3617,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:countryCode
 
 #### Default Parameter Values
@@ -3658,7 +3658,7 @@ If dwc:geodeticDatum is bdq:Empty, fill in dwc:geodeticDatum using the value of 
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:geodeticDatum,dwc:coordinateUncertaintyInMeters
 
 Consulted: 
@@ -3706,7 +3706,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:geodeticDatum
 
 #### Default Parameter Values
@@ -3747,7 +3747,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters or dwc:maximumDepthIn
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:minimumDepthInMeters,dwc:maximumDepthInMeters
 
 Consulted: 
@@ -3787,7 +3787,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumElevationInMeters or dwc:maximumEle
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:minimumElevationInMeters,dwc:maximumElevationInMeters
 
 Consulted: 
@@ -3827,7 +3827,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:day is bdq:Empty; AMENDED the value of dwc
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:day
 
 #### Examples
@@ -3864,7 +3864,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:NotEmpty or the value of 
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:eventDate
 
 Consulted: 
@@ -3904,7 +3904,7 @@ INTERNAL _PREREQUISITES_NOT_MET if dwc:eventDate is not EMPTY or dwc:year is EMP
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:eventDate
 
 Consulted: 
@@ -3944,7 +3944,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:NotEmpty or any of dwc:ye
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:eventDate
 
 Consulted: 
@@ -3984,7 +3984,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty; AMENDED if the val
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:eventDate
 
 #### Examples
@@ -4021,7 +4021,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty or contains an inva
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:year,dwc:month,dwc:day,dwc:startDayOfYear,dwc:endDayOfYear
 
 Consulted: 
@@ -4061,7 +4061,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:month is bdq:Empty; AMENDED the value of d
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:month
 
 #### Examples
@@ -4098,7 +4098,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:dateIdentified is bdq:Empty; AMENDED if th
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:dateIdentified
 
 #### Examples
@@ -4135,7 +4135,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:degreeOfEstablishment
 
 #### Parameters
@@ -4180,7 +4180,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:establishmentMeans
 
 #### Parameters
@@ -4221,7 +4221,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdq:NotEmpty; FILLED_I
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:occurrenceStatus
 
 Consulted: 
@@ -4269,7 +4269,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:occurrenceStatus
 
 #### Parameters
@@ -4314,7 +4314,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:pathway
 
 #### Parameters
@@ -4359,7 +4359,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:sex
 
 #### Parameters
@@ -4404,7 +4404,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:typeStatus
 
 #### Parameters
@@ -4449,7 +4449,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:scientificNameID
 
 Consulted: 
@@ -4497,7 +4497,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:scientificName
 
 Consulted: 
@@ -4545,7 +4545,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 dwc:taxonRank
 
 #### Parameters
@@ -4575,7 +4575,7 @@ For reference, information about possible values of dwc:taxonRank can be found a
 ********************
 
 
-## Measures operating on Test Responses for MultiRecords (datasets)
+## Measures operating on Test Responses for Multi Records (datasets)
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_NOTEMPTY
 
@@ -4593,7 +4593,7 @@ COMPLIANT if dwc:basisOfRecord is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_BASISOFRECORD_NOTEMPTY.Response
 
 #### Use Cases
@@ -4623,7 +4623,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_BASISOFRECORD_STANDARD.Response
 
 #### Use Cases
@@ -4653,7 +4653,7 @@ COMPLIANT if dc:type is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_DCTYPE_NOTEMPTY.Response
 
 #### Use Cases
@@ -4683,7 +4683,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_DCTYPE_STANDARD.Response
 
 #### Use Cases
@@ -4713,7 +4713,7 @@ COMPLIANT if dcterms:license is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_LICENSE_NOTEMPTY.Response
 
 #### Use Cases
@@ -4743,7 +4743,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_LICENSE_STANDARD.Response
 
 #### Use Cases
@@ -4773,7 +4773,7 @@ COMPLIANT if dwc:basisOfRecord is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_BASISOFRECORD_NOTEMPTY.Response
 
 #### Use Cases
@@ -4803,7 +4803,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_BASISOFRECORD_STANDARD.Response
 
 #### Use Cases
@@ -4833,7 +4833,7 @@ COMPLIANT if dc:type is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_DCTYPE_NOTEMPTY.Response
 
 #### Use Cases
@@ -4863,7 +4863,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_DCTYPE_STANDARD.Response
 
 #### Use Cases
@@ -4893,7 +4893,7 @@ COMPLIANT if dcterms:license is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_LICENSE_NOTEMPTY.Response
 
 #### Use Cases
@@ -4923,7 +4923,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_LICENSE_STANDARD.Response
 
 #### Use Cases
@@ -4953,7 +4953,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT.Response
 
 #### Use Cases
@@ -4983,7 +4983,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT.Response
 
 #### Use Cases
@@ -5013,7 +5013,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if either bdq:taxonIsMarine or bdq:geospatialLand
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT.Response
 
 #### Use Cases
@@ -5043,7 +5043,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLatitude is bdq:Empty or is not int
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_COORDINATES_NOTZERO.Response
 
 #### Use Cases
@@ -5073,7 +5073,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:coordinateUncertaintyInMeters is bdq:Empty
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_COORDINATEUNCERTAINTY_INRANGE.Response
 
 #### Use Cases
@@ -5103,7 +5103,7 @@ COMPLIANT if dwc:countryCode is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_COUNTRYCODE_NOTEMPTY.Response
 
 #### Use Cases
@@ -5133,7 +5133,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_COUNTRYCODE_STANDARD.Response
 
 #### Use Cases
@@ -5163,7 +5163,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT.Response
 
 #### Use Cases
@@ -5193,7 +5193,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS.Response
 
 #### Use Cases
@@ -5223,7 +5223,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_COUNTRY_FOUND.Response
 
 #### Use Cases
@@ -5253,7 +5253,7 @@ COMPLIANT if dwc:country is bdq:NotEmpty or dwc:countryCode has a value of "XZ" 
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_COUNTRY_NOTEMPTY.Response
 
 #### Use Cases
@@ -5283,7 +5283,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLatitude is bdq:Empty or the value 
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_DECIMALLATITUDE_INRANGE.Response
 
 #### Use Cases
@@ -5313,7 +5313,7 @@ COMPLIANT if dwc:decimalLatitude is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_DECIMALLATITUDE_NOTEMPTY.Response
 
 #### Use Cases
@@ -5343,7 +5343,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLongitude is bdq:Empty or the value
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_DECIMALLONGITUDE_INRANGE.Response
 
 #### Use Cases
@@ -5373,7 +5373,7 @@ COMPLIANT if dwc:decimalLongitude is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_DECIMALLONGITUDE_NOTEMPTY.Response
 
 #### Use Cases
@@ -5403,7 +5403,7 @@ COMPLIANT if dwc:geodeticDatum is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_GEODETICDATUM_NOTEMPTY.Response
 
 #### Use Cases
@@ -5433,7 +5433,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_GEODETICDATUM_STANDARD.Response
 
 #### Use Cases
@@ -5463,7 +5463,7 @@ COMPLIANT if at least one term needed to determine the location of the entity ex
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_LOCATION_NOTEMPTY.Response
 
 #### Use Cases
@@ -5493,7 +5493,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumDepthInMeters is bdq:Empty or is no
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_MAXDEPTH_INRANGE.Response
 
 #### Use Cases
@@ -5523,7 +5523,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumElevationInMeters is bdq:Empty or t
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_MAXELEVATION_INRANGE.Response
 
 #### Use Cases
@@ -5553,7 +5553,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters is bdq:Empty, or the 
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_MINDEPTH_INRANGE.Response
 
 #### Use Cases
@@ -5583,7 +5583,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters or dwc:maximumDepthIn
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH.Response
 
 #### Use Cases
@@ -5613,7 +5613,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumElevationInMeters is bdq:Empty or t
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_MINELEVATION_INRANGE.Response
 
 #### Use Cases
@@ -5643,7 +5643,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumlevationInMeters or dwc:minimumElev
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION.Response
 
 #### Use Cases
@@ -5673,7 +5673,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_STATEPROVINCE_FOUND.Response
 
 #### Use Cases
@@ -5703,7 +5703,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT.Response
 
 #### Use Cases
@@ -5733,7 +5733,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT.Response
 
 #### Use Cases
@@ -5763,7 +5763,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if either bdq:taxonIsMarine or bdq:geospatialLand
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT.Response
 
 #### Use Cases
@@ -5793,7 +5793,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLatitude is bdq:Empty or is not int
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_COORDINATES_NOTZERO.Response
 
 #### Use Cases
@@ -5823,7 +5823,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:coordinateUncertaintyInMeters is bdq:Empty
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_COORDINATEUNCERTAINTY_INRANGE.Response
 
 #### Use Cases
@@ -5853,7 +5853,7 @@ COMPLIANT if dwc:countryCode is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_COUNTRYCODE_NOTEMPTY.Response
 
 #### Use Cases
@@ -5883,7 +5883,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_COUNTRYCODE_STANDARD.Response
 
 #### Use Cases
@@ -5913,7 +5913,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT.Response
 
 #### Use Cases
@@ -5943,7 +5943,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS.Response
 
 #### Use Cases
@@ -5973,7 +5973,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_COUNTRY_FOUND.Response
 
 #### Use Cases
@@ -6003,7 +6003,7 @@ COMPLIANT if dwc:country is bdq:NotEmpty or dwc:countryCode has a value of "XZ" 
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_COUNTRY_NOTEMPTY.Response
 
 #### Use Cases
@@ -6033,7 +6033,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLatitude is bdq:Empty or the value 
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_DECIMALLATITUDE_INRANGE.Response
 
 #### Use Cases
@@ -6063,7 +6063,7 @@ COMPLIANT if dwc:decimalLatitude is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_DECIMALLATITUDE_NOTEMPTY.Response
 
 #### Use Cases
@@ -6093,7 +6093,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLongitude is bdq:Empty or the value
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_DECIMALLONGITUDE_INRANGE.Response
 
 #### Use Cases
@@ -6123,7 +6123,7 @@ COMPLIANT if dwc:decimalLongitude is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_DECIMALLONGITUDE_NOTEMPTY.Response
 
 #### Use Cases
@@ -6153,7 +6153,7 @@ COMPLIANT if dwc:geodeticDatum is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_GEODETICDATUM_NOTEMPTY.Response
 
 #### Use Cases
@@ -6183,7 +6183,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_GEODETICDATUM_STANDARD.Response
 
 #### Use Cases
@@ -6213,7 +6213,7 @@ COMPLIANT if at least one term needed to determine the location of the entity ex
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_LOCATION_NOTEMPTY.Response
 
 #### Use Cases
@@ -6243,7 +6243,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumDepthInMeters is bdq:Empty or is no
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_MAXDEPTH_INRANGE.Response
 
 #### Use Cases
@@ -6273,7 +6273,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumElevationInMeters is bdq:Empty or t
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_MAXELEVATION_INRANGE.Response
 
 #### Use Cases
@@ -6303,7 +6303,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters is bdq:Empty, or the 
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_MINDEPTH_INRANGE.Response
 
 #### Use Cases
@@ -6333,7 +6333,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters or dwc:maximumDepthIn
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH.Response
 
 #### Use Cases
@@ -6363,7 +6363,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumElevationInMeters is bdq:Empty or t
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_MINELEVATION_INRANGE.Response
 
 #### Use Cases
@@ -6393,7 +6393,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumlevationInMeters or dwc:minimumElev
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION.Response
 
 #### Use Cases
@@ -6423,7 +6423,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_STATEPROVINCE_FOUND.Response
 
 #### Use Cases
@@ -6453,7 +6453,7 @@ INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:day is bdq:Empty, or (2) dwc:day is no
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_DAY_INRANGE.Response
 
 #### Use Cases
@@ -6483,7 +6483,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:day is bdq:Empty; COMPLIANT if the value o
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_DAY_STANDARD.Response
 
 #### Use Cases
@@ -6513,7 +6513,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:endDayOfYear is bdq:Empty or if the value 
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_ENDDAYOFYEAR_INRANGE.Response
 
 #### Use Cases
@@ -6543,7 +6543,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty or if the value of 
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_EVENTDATE_INRANGE.Response
 
 #### Use Cases
@@ -6573,7 +6573,7 @@ COMPLIANT if dwc:eventDate is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_EVENTDATE_NOTEMPTY.Response
 
 #### Use Cases
@@ -6603,7 +6603,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty; COMPLIANT if the v
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_EVENTDATE_STANDARD.Response
 
 #### Use Cases
@@ -6633,7 +6633,7 @@ COMPLIANT if any of dwc:eventDate, dwc:year, dwc:month, dwc:day, dwc:startDayOfY
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_EVENTTEMPORAL_NOTEMPTY.Response
 
 #### Use Cases
@@ -6663,7 +6663,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty, or all of dwc:year
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_EVENT_CONSISTENT.Response
 
 #### Use Cases
@@ -6693,7 +6693,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:month is bdq:Empty; COMPLIANT if the value
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_MONTH_STANDARD.Response
 
 #### Use Cases
@@ -6723,7 +6723,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:startDayOfYear is bdq:Empty or if the valu
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_STARTDAYOFYEAR_INRANGE.Response
 
 #### Use Cases
@@ -6753,7 +6753,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:year is bdq:Empty or cannot be interpreted
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_YEAR_INRANGE.Response
 
 #### Use Cases
@@ -6783,7 +6783,7 @@ COMPLIANT if dwc:year is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_YEAR_NOTEMPTY.Response
 
 #### Use Cases
@@ -6813,7 +6813,7 @@ INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:day is bdq:Empty, or (2) dwc:day is no
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_DAY_INRANGE.Response
 
 #### Use Cases
@@ -6843,7 +6843,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:day is bdq:Empty; COMPLIANT if the value o
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_DAY_STANDARD.Response
 
 #### Use Cases
@@ -6873,7 +6873,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:endDayOfYear is bdq:Empty or if the value 
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_ENDDAYOFYEAR_INRANGE.Response
 
 #### Use Cases
@@ -6903,7 +6903,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty or if the value of 
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_EVENTDATE_INRANGE.Response
 
 #### Use Cases
@@ -6933,7 +6933,7 @@ COMPLIANT if dwc:eventDate is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_EVENTDATE_NOTEMPTY.Response
 
 #### Use Cases
@@ -6963,7 +6963,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty; COMPLIANT if the v
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_EVENTDATE_STANDARD.Response
 
 #### Use Cases
@@ -6993,7 +6993,7 @@ COMPLIANT if any of dwc:eventDate, dwc:year, dwc:month, dwc:day, dwc:startDayOfY
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_EVENTTEMPORAL_NOTEMPTY.Response
 
 #### Use Cases
@@ -7023,7 +7023,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty, or all of dwc:year
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_EVENT_CONSISTENT.Response
 
 #### Use Cases
@@ -7053,7 +7053,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:month is bdq:Empty; COMPLIANT if the value
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_MONTH_STANDARD.Response
 
 #### Use Cases
@@ -7083,7 +7083,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:startDayOfYear is bdq:Empty or if the valu
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_STARTDAYOFYEAR_INRANGE.Response
 
 #### Use Cases
@@ -7113,7 +7113,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:year is bdq:Empty or cannot be interpreted
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_YEAR_INRANGE.Response
 
 #### Use Cases
@@ -7143,7 +7143,7 @@ COMPLIANT if dwc:year is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_YEAR_NOTEMPTY.Response
 
 #### Use Cases
@@ -7173,7 +7173,7 @@ INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:dateIdentified is bdq:Empty, or (2) dw
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_DATEIDENTIFIED_INRANGE.Response
 
 #### Use Cases
@@ -7203,7 +7203,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:dateIdentified is bdq:Empty; COMPLIANT if 
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_DATEIDENTIFIED_STANDARD.Response
 
 #### Use Cases
@@ -7233,7 +7233,7 @@ INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:dateIdentified is bdq:Empty, or (2) dw
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_DATEIDENTIFIED_INRANGE.Response
 
 #### Use Cases
@@ -7263,7 +7263,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:dateIdentified is bdq:Empty; COMPLIANT if 
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_DATEIDENTIFIED_STANDARD.Response
 
 #### Use Cases
@@ -7293,7 +7293,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_DEGREEOFESTABLISHMENT_STANDARD.Response
 
 #### Use Cases
@@ -7323,7 +7323,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_ESTABLISHMENTMEANS_STANDARD.Response
 
 #### Use Cases
@@ -7353,7 +7353,7 @@ COMPLIANT if dwc:occurrenceID is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_OCCURRENCEID_NOTEMPTY.Response
 
 #### Use Cases
@@ -7383,7 +7383,7 @@ COMPLIANT if dwc:occurrenceStatus is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_OCCURRENCESTATUS_NOTEMPTY.Response
 
 #### Use Cases
@@ -7413,7 +7413,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_OCCURRENCESTATUS_STANDARD.Response
 
 #### Use Cases
@@ -7443,7 +7443,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_PATHWAY_STANDARD.Response
 
 #### Use Cases
@@ -7473,7 +7473,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_SEX_STANDARD.Response
 
 #### Use Cases
@@ -7503,7 +7503,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_TYPESTATUS_STANDARD.Response
 
 #### Use Cases
@@ -7533,7 +7533,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_DEGREEOFESTABLISHMENT_STANDARD.Response
 
 #### Use Cases
@@ -7563,7 +7563,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_ESTABLISHMENTMEANS_STANDARD.Response
 
 #### Use Cases
@@ -7593,7 +7593,7 @@ COMPLIANT if dwc:occurrenceID is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_OCCURRENCEID_NOTEMPTY.Response
 
 #### Use Cases
@@ -7623,7 +7623,7 @@ COMPLIANT if dwc:occurrenceStatus is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_OCCURRENCESTATUS_NOTEMPTY.Response
 
 #### Use Cases
@@ -7653,7 +7653,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_OCCURRENCESTATUS_STANDARD.Response
 
 #### Use Cases
@@ -7683,7 +7683,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_PATHWAY_STANDARD.Response
 
 #### Use Cases
@@ -7713,7 +7713,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_SEX_STANDARD.Response
 
 #### Use Cases
@@ -7743,7 +7743,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_TYPESTATUS_STANDARD.Response
 
 #### Use Cases
@@ -7773,7 +7773,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_CLASSIFICATION_CONSISTENT.Response
 
 #### Use Cases
@@ -7803,7 +7803,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_CLASS_FOUND.Response
 
 #### Use Cases
@@ -7833,7 +7833,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_FAMILY_FOUND.Response
 
 #### Use Cases
@@ -7863,7 +7863,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available;  INT
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_GENUS_FOUND.Response
 
 #### Use Cases
@@ -7893,7 +7893,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_KINGDOM_FOUND.Response
 
 #### Use Cases
@@ -7923,7 +7923,7 @@ COMPLIANT if dwc:kingdom is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_KINGDOM_NOTEMPTY.Response
 
 #### Use Cases
@@ -7953,7 +7953,7 @@ COMPLIANT if dwc:namePublishedInYear is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY.Response
 
 #### Use Cases
@@ -7983,7 +7983,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_ORDER_FOUND.Response
 
 #### Use Cases
@@ -8013,7 +8013,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_PHYLUM_FOUND.Response
 
 #### Use Cases
@@ -8043,7 +8043,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificName is bdq:Empty, or all of dwc
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_POLYNOMIAL_CONSISTENT.Response
 
 #### Use Cases
@@ -8073,7 +8073,7 @@ COMPLIANT if dwc:scientificNameAuthorship is bdq:NotEmpty; otherwise NOT_COMPLIA
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY.Response
 
 #### Use Cases
@@ -8103,7 +8103,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is bdq:Empty; COMPLIANT i
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_SCIENTIFICNAMEID_COMPLETE.Response
 
 #### Use Cases
@@ -8133,7 +8133,7 @@ COMPLIANT if dwc:scientificNameID is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_SCIENTIFICNAMEID_NOTEMPTY.Response
 
 #### Use Cases
@@ -8163,7 +8163,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_SCIENTIFICNAME_FOUND.Response
 
 #### Use Cases
@@ -8193,7 +8193,7 @@ COMPLIANT if dwc:scientificName is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_SCIENTIFICNAME_NOTEMPTY.Response
 
 #### Use Cases
@@ -8223,7 +8223,7 @@ COMPLIANT if dwc:taxonRank is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_TAXONRANK_NOTEMPTY.Response
 
 #### Use Cases
@@ -8253,7 +8253,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_TAXONRANK_STANDARD.Response
 
 #### Use Cases
@@ -8283,7 +8283,7 @@ COMPLIANT if at least one term needed to determine the taxon of the entity exist
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_TAXON_NOTEMPTY.Response
 
 #### Use Cases
@@ -8313,7 +8313,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_TAXON_UNAMBIGUOUS.Response
 
 #### Use Cases
@@ -8343,7 +8343,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_CLASSIFICATION_CONSISTENT.Response
 
 #### Use Cases
@@ -8373,7 +8373,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_CLASS_FOUND.Response
 
 #### Use Cases
@@ -8403,7 +8403,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_FAMILY_FOUND.Response
 
 #### Use Cases
@@ -8433,7 +8433,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available;  INT
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_GENUS_FOUND.Response
 
 #### Use Cases
@@ -8463,7 +8463,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_KINGDOM_FOUND.Response
 
 #### Use Cases
@@ -8493,7 +8493,7 @@ COMPLIANT if dwc:kingdom is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_KINGDOM_NOTEMPTY.Response
 
 #### Use Cases
@@ -8523,7 +8523,7 @@ COMPLIANT if dwc:namePublishedInYear is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY.Response
 
 #### Use Cases
@@ -8553,7 +8553,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_ORDER_FOUND.Response
 
 #### Use Cases
@@ -8583,7 +8583,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_PHYLUM_FOUND.Response
 
 #### Use Cases
@@ -8613,7 +8613,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificName is bdq:Empty, or all of dwc
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_POLYNOMIAL_CONSISTENT.Response
 
 #### Use Cases
@@ -8643,7 +8643,7 @@ COMPLIANT if dwc:scientificNameAuthorship is bdq:NotEmpty; otherwise NOT_COMPLIA
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY.Response
 
 #### Use Cases
@@ -8673,7 +8673,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is bdq:Empty; COMPLIANT i
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_SCIENTIFICNAMEID_COMPLETE.Response
 
 #### Use Cases
@@ -8703,7 +8703,7 @@ COMPLIANT if dwc:scientificNameID is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_SCIENTIFICNAMEID_NOTEMPTY.Response
 
 #### Use Cases
@@ -8733,7 +8733,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_SCIENTIFICNAME_FOUND.Response
 
 #### Use Cases
@@ -8763,7 +8763,7 @@ COMPLIANT if dwc:scientificName is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_SCIENTIFICNAME_NOTEMPTY.Response
 
 #### Use Cases
@@ -8793,7 +8793,7 @@ COMPLIANT if dwc:taxonRank is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_TAXONRANK_NOTEMPTY.Response
 
 #### Use Cases
@@ -8823,7 +8823,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_TAXONRANK_STANDARD.Response
 
 #### Use Cases
@@ -8853,7 +8853,7 @@ COMPLIANT if at least one term needed to determine the taxon of the entity exist
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_TAXON_NOTEMPTY.Response
 
 #### Use Cases
@@ -8883,7 +8883,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 
 #### Information Elements
 
-Acted Upon: 
+Acted upon: 
 bdq:VALIDATION_TAXON_UNAMBIGUOUS.Response
 
 #### Use Cases
@@ -8923,7 +8923,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. BDQ Tests Quick Reference Guide. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqtest/terms/2025-04-11>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. BDQ Tests Quick Reference Guide. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqtest/terms/2025-05-10>
 
 **Biodiversity Information Standards (TDWG)**
 

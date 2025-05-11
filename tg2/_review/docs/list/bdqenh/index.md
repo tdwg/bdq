@@ -6,10 +6,10 @@
 Data Quality Enhancement Controlled Vocabulary List of Terms
 
 **Date version issued**<br>
-2025-04-11
+2025-05-10
 
 **Date created**<br>
-2025-04-11
+2025-05-10
 
 **Part of TDWG Standard**<br>
 <http://example.org/to_be_determined>
@@ -18,7 +18,7 @@ Data Quality Enhancement Controlled Vocabulary List of Terms
 bdqenh
 
 **This version**<br>
-<http://rs.tdwg.org/bdq/bdqenh/terms/2025-04-11>
+<http://rs.tdwg.org/bdq/bdqenh/terms/2025-05-10>
 
 **Latest version**<br>
 <http://rs.tdwg.org/bdq/bdqenh/terms/>
@@ -34,7 +34,7 @@ This document is a reference for the BDQ standard. It covers the vocabulary term
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 **Bibliographic citation**<br>
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Data Quality Enhancement Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/bdqenh/terms/2025-04-11>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Data Quality Enhancement Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/bdqenh/terms/2025-05-10>
 
 **Status**<br>
 Draft Standard for Review
@@ -158,7 +158,7 @@ The terminology used to describe the terms in this vocabulary follows the TDWG [
 
 ## 2 Use of Terms (normative) 
 
-A value for `bdqffdq:hasEnhancement` in an RDF context MUST be a Term IRI (e.g., `https://rs.tdwg.org/bdqenh/terms/AssumedDefault`) or Term Qualified name (e.g., `bdqdim:AssumedDefault`) from the bdqenh: namespace. In a non-RDF context in which resources may be used by software (e.g., a value in a spreadsheet or database table) the Controlled Value String (Local name, e.g., `AssumedDefault`) MAY be used. In a purely human context a label (e.g., `Assumed Default`) MAY be used.
+A value for `bdqffdq:hasEnhancement` in an RDF context MUST be a Term IRI (e.g., 'https://rs.tdwg.org/bdqenh/terms/AssumedDefault') or Term Qualified name (e.g., `bdqdim:AssumedDefault`) from the bdqenh: namespace. In a non-RDF context in which resources may be used by software (e.g., a value in a spreadsheet or database table) the Controlled Value String (Local name, e.g., `AssumedDefault`) MAY be used. In a purely human context a label (e.g., `Assumed Default`) MAY be used.
 
 Each instance of `bdqffdq:Amendment` SHOULD have exactly one `bdqffdq:hasEnhancement` property relating it to a term in this `bdqenh:` vocabulary.
 
@@ -448,7 +448,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Data Quality Enhancement Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/bdqenh/terms/2025-04-11>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Data Quality Enhancement Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/bdqenh/terms/2025-05-10>
 
 **Biodiversity Information Standards (TDWG)**
 

@@ -95,7 +95,7 @@ BDQ `_review` is built with the following three sets of shell scripts:
 
 It is expected that supplementary Tests and proposed Tests under development will be maintained from issues, and the full process described in bdq_issue_to_csv [make_test_csv.sh](https://github.com/kurator-org/bdq_issue_to_csv/blob/v1.0.0/make_test_csv.sh) will be needed to produce CSV and RDF from Markdown tables in GitHub issues. This is expected to be different from the process for working with Tests that have been accepted into BDQ, where the GitHub issues are historical rationale management only. The authoritative file for Tests that are part of BDQ is a term-version file from which the build process will need to extract only the latest versions of Test records.
 
-The bdqtest term-version file does not contain all of the UUIDs needed to produce stable RDF - the following additional files are used for that: 
+The bdqtest: term-version file does not contain all of the UUIDs needed to produce stable RDF - the following additional files are used for that: 
 
 - tg2/core/TG2_tests_additional_guids.csv (which should all be included in the term-version file for bdqtest, kurator-ffdq may still be reading from this file instead)
 - tg2/core/information_element_guids.csv
@@ -176,7 +176,7 @@ The bdqtestrunner utility is available for running Java implementations of Tests
 
 <!--- TODO: Once in maintenance mode, add a template for proposals of changes to the maintenance repository. It may be possible to reuse the change template from https://github.com/tdwg/bdq/tree/master/.github/ISSUE_TEMPLATE --->
 
-Accepted changes will need to be added as new rows to the bdqtest term-version file.
+Accepted changes will need to be added as new rows to the bdqtest: term-version file.
 
 Note the distinction between the 'issued' date and 'DateLastUpdated'. 'DateLastUpdated' SHOULD only be changed if the changes are substantive to implementers (would cause them to change their code). The purpose of 'DateLastUpdated' is to allow implementers to not have to review their code when changes wouldn't affect that code. Implementers who note the 'DateLastUpdated' for each Test within their implementations can run software checks on their code to see if new changes require examination of their code. Non-substantive changes (such as addition of more non-normative known implementations) to the metadata about a Test can be distinguished by only updating the (required) value of 'issued' in the term-version file without a change to the 'DateLastUpdated'. 
 

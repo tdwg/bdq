@@ -6,10 +6,10 @@
 Fitness For Use Framework Ontology List of Terms
 
 **Date version issued**<br>
-2025-04-11
+2025-05-10
 
 **Date created**<br>
-2025-04-11
+2025-05-10
 
 **Part of TDWG Standard**<br>
 <http://example.org/to_be_determined>
@@ -18,7 +18,7 @@ Fitness For Use Framework Ontology List of Terms
 bdqffdq
 
 **This version**<br>
-<http://rs.tdwg.org/bdqffdq/terms/2025-04-11>
+<http://rs.tdwg.org/bdqffdq/terms/2025-05-10>
 
 **Latest version**<br>
 <http://rs.tdwg.org/bdqffdq/terms/>
@@ -36,7 +36,7 @@ This document is a reference for the BDQ standard, documenting vocabulary values
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 **Bibliographic citation**<br>
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Fitness For Use Framework Ontology List of Terms. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqffdq/terms/2025-04-11>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Fitness For Use Framework Ontology List of Terms. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqffdq/terms/2025-05-10>
 
 **Status**<br>
 Draft Standard for Review
@@ -152,12 +152,17 @@ Draft Standard for Review
     - [MultiRecord](#multirecord)
     - [SingleRecord](#singlerecord)
     - [COMPLETE](#complete)
+    - [COMPLIANT](#compliant)
     - [IS_ISSUE](#is_issue)
     - [IS_ISSUE](#is_issue)
     - [NOT_COMPLETE](#not_complete)
+    - [NOT_COMPLIANT](#not_compliant)
     - [NOT_ISSUE](#not_issue)
     - [POTENTIAL_ISSUE](#potential_issue)
     - [AMENDED](#amended)
+    - [EXTERNAL_PREREQUISITES_NOT_MET](#external_prerequisites_not_met)
+    - [FILLED_IN](#filled_in)
+    - [INTERNAL_PREREQUISITES_NOT_MET](#internal_prerequisites_not_met)
     - [NOT_AMENDED](#not_amended)
     - [RUN_HAS_RESULT](#run_has_result)
 
@@ -383,7 +388,7 @@ The following namespace abbreviations are used in this document:
 - Definition: A bdqffdq:DataQualityNeed that expresses how proposals may be made to improve the fitness for use of data.
 - SubClass Of: AmendmentConcept; DataQualityNeed
 - Comments: ContextualizedEnhacement in the original framework. Describes an instance of a bdqffdq:Enhancement in the context of the associated bdqffdq:InformationElements from a controlled vocabulary (fields bdqffdq:ActedUpon or bdqffdq:Consulted), and a bdqffdq:ResourceType of bdqffdq:SingleRecord or bdqffdq:MultiRecord.  
-Describes a proposal for a bdqffdq:Enhancement of original data, which if accepted, would improve the quality of the data for a use. For example: 'Recommends valid value for taxon name in a SingleRecord.'  
+Describes a proposal for a bdqffdq:Enhancement of original data, which if accepted, would improve the quality of the data for a use. For example: 'Recommends valid value for taxon name in a Single Record.'  
 bdqffdq:Amendments may describe proposed changes to data values, or proposed changes to processes for the production and manipulation of data, for example, a bdqffdq:Amendment on a bdqffdq:SingleRecord may provide bdqffdq:Criteria for proposing that dwc:decimalLatitude and dwc:decimalLongitude are transposed in that record. Similarly, a bdqffdq:Amendment on a bdqffdq:MultiRecord may provide bdqffdq:Critera for proposing that all dwc:decimalLatitudes and dwc:decimalLongitudes from a data source have been transposed, and the mapping of data values to transport terms should be changed.  
 A bdqffdq:Amendment is the bdqffdq:DataQualityNeed that parallels a bdqffdq:AmendmentMethod in the Solutions layer (see Figure 3 in Veiga et al., 2017), and a bdqffdq:AmendmentAssertion in the Report layer (see Figure 3 in Veiga et al., 2017).  
 AM = { am | am = < ie, e, rt >, ie ∈ IE, e ∈ E ⋀ rt ∈ RT }
@@ -470,7 +475,7 @@ EP(u) = {am | am ⊂ AM ⋀ u ∈ U }
 - Preferred Label: Data Quality Dimension
 - Definition: An aspect of data quality.
 - SubClass Of: FundamentalConcept; NeedConcept
-- Comments: Describes the aspect of data quality (accuracy, precision, completeness, etc.) that a Test examines. For example, [precision] in [coordinate precision of SingleRecords]. In the original framework, only related to Measures, here may be related to any bdqffdq:DataQualityNeed.
+- Comments: Describes the aspect of data quality (accuracy, precision, completeness, etc.) that a Test examines. For example, [precision] in [coordinate precision of Single Records]. In the original framework, only related to Measures, here may be related to any bdqffdq:DataQualityNeed.
 
 ********************
 
@@ -793,7 +798,7 @@ The bdqffdq:ResponseResult is represented as a value or a result object for bdqf
 - Preferred Label: Use Case
 - Definition: A bdqffdq:NeedConcept expressing a purpose to which data are put for which the data must have quality for the result to have meaning and reliability.
 - SubClass Of: FundamentalConcept; NeedConcept
-- Comments: A bdqffdq:UseCase describes a data quality control use case. The bdqffdq:ValidationPolicies, bdqffdq:MeasurementPolicies and bdqffdq:AmendmentPolicies that make up a bdqffdq:UseCase define which bdqffdq:Assertions cover a given bdqffdq:UseCase. An example of a bdqffdq:UseCase could be 'Check for internal consistency of dates', with bdqffdq:ValidationPolicies for checking consistency between atomic date fields and a bdqffdq:Amendment such as 'eventDate filled in from verbatim'. A bdqffdq:UseCase is not the same as a use cases in the software engineering sense, it is a similar formal bdqffdq statement derived from analyis of user stories.
+- Comments: A bdqffdq:UseCase describes a data quality control use case. The bdqffdq:ValidationPolicies, bdqffdq:MeasurementPolicies and bdqffdq:AmendmentPolicies that make up a bdqffdq:UseCase define which bdqffdq:Assertions cover a given bdqffdq:UseCase. An example of a bdqffdq:UseCase could be 'Check for internal consistency of dates', with bdqffdq:ValidationPolicies for checking consistency between atomic date fields and a bdqffdq:Amendment such as 'eventDate filled in from verbatim'. A bdqffdq:UseCase is not the same as a use cases in the software engineering sense, it is a similar formal bdqffdq: statement derived from analyis of user stories.
 
 ********************
 
@@ -837,7 +842,7 @@ DQV(dr) = {dqv | dqv = < va, s, m, r >, va ∈ VA, s ∈ S, m ∈ M , r ∈ R �
 - Preferred Label: Validation Method
 - Definition: A data quality bdqffdq:SolutionsConcept that relates a bdqffdq:Validation to its bdqffdq:Specifications.
 - SubClass Of: DataQualityMethod; ValidationConcept
-- Comments: A bdqffdq:ValidationMethod is a data quality Solutions layer concept (see Figure 3 in Veiga et al., 2017) describing the relationship between a bdqffdq:Specification (technical description of a Test) and a bdqffdq:Validation (a bdqffdq:Criterion in the context of bdqffdq:ResourceType (bdqffdq:SingleRecord or MultiRecordbdqffdq:) and associated bdqffdq:InformationElements).  
+- Comments: A bdqffdq:ValidationMethod is a data quality Solutions layer concept (see Figure 3 in Veiga et al., 2017) describing the relationship between a bdqffdq:Specification (technical description of a Test) and a bdqffdq:Validation (a bdqffdq:Criterion in the context of bdqffdq:ResourceType (bdqffdq:SingleRecord or bdqffdq:MultiRecord) and associated bdqffdq:InformationElements).  
 VM(va) = {s | s ⊂ S ⋀ va ∈ VA}
 
 ********************
@@ -949,7 +954,7 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }
 - Preferred Label: has Acted Upon Information Element
 - Definition: Describes the bdqffdq:ActedUpon bdqffdq:InformationElements assessed by a bdqffdq:DataQualityNeed about which bdqffdq:Assertions arising from the bdqffdq:DataQualityNeed would apply.
 - SubClass Of: hasInformationElement
-- Comments: Provides a relationship between bdqffdq concepts and the bdqffdq:InformationElements that are bdqffdq:ActedUpon in a Test.
+- Comments: Provides a relationship between bdqffdq: concepts and the bdqffdq:InformationElements that are bdqffdq:ActedUpon in a Test.
 
 ********************
 
@@ -969,7 +974,7 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }
 - Preferred Label: has Consulted Information Element
 - Definition: Describes the bdqffdq:InformationElements assessed by a bdqffdq:DataQualityNeed in order to make bdqffdq:Assertions concerning bdqffdq:ActedUpon bdqffdq:InformationElements.
 - SubClass Of: hasInformationElement
-- Comments: Provides a relationship between bdqffdq concepts and the bdqffdq:InformationElements that are bdqffdq:Consulted, but not bdqffdq:ActedUpon in a Test.
+- Comments: Provides a relationship between bdqffdq: concepts and the bdqffdq:InformationElements that are bdqffdq:Consulted, but not bdqffdq:ActedUpon in a Test.
 
 ********************
 
@@ -1034,7 +1039,7 @@ Subtypes bdqffdq:hasActedUponInformationElement and bdqffdq:hasConsultedInformat
 - Name: bdqffdq:hasResourceType
 - Preferred Label: has Resource Type
 - Definition: The bdqffdq:ResourceType to which a bdqffdq:DataQualityNeed applies.
-- Comments: Provides additional metadata, with the bdqffdq:InformationElements, that describe the bdqffdq:ResourceType (bdqffdq:SingleRecord or bdqffdq:MultiRecord) on which the bdqffdq concept operates. For example, a bdqffdq:Amendment with bdqffdq:ResourceType bdqffdq:MultiRecord defines that bdqffdq:Amendment as operating on a data set.
+- Comments: Provides additional metadata, with the bdqffdq:InformationElements, that describe the bdqffdq:ResourceType (bdqffdq:SingleRecord or bdqffdq:MultiRecord) on which the bdqffdq: concept operates. For example, a bdqffdq:Amendment with bdqffdq:ResourceType bdqffdq:MultiRecord defines that bdqffdq:Amendment as operating on a data set.
 
 ********************
 
@@ -1076,7 +1081,7 @@ The bdqffdq:ResponseStatus is always an object, unlike bdqffdq:ResponseResult, w
 - Preferred Label: has Specification
 - Definition: Relates a bdqffdq:Method to a bdqffdq:Specification.
 - Range [ owl:someValuesFrom bdqffdq:hasSpecification ]
-- Comments: Describes the relationship between a derived bdqffdq concept that is a bdqffdq:Method and the bdqffdq:FundamentalConcept of a bdqffdq:Specification (technical description of a Test).
+- Comments: Describes the relationship between a derived bdqffdq: concept that is a bdqffdq:Method and the bdqffdq:FundamentalConcept of a bdqffdq:Specification (technical description of a Test).
 
 ********************
 
@@ -1289,6 +1294,17 @@ A bdqffdq:SingleRecord, like a bdqffdq:MultiRecord, consists of data with a defi
 
 ********************
 
+#### COMPLIANT
+
+- Name: bdqffdq:COMPLIANT
+- Type: bdqffdq:ResponseResult
+- Preferred Label: COMPLIANT
+- DifferentFrom: bdqffdq:NOT_COMPLIANT
+- Definition: A bdqffdq:ResponseResult of a bdqffdq:Validation where the data conforms to the bdqffdq:Criteria for quality in the Test bdqffdq:Specification.
+- Comments:
+
+********************
+
 #### IS_ISSUE
 
 - Name: bdqffdq:IS_ISSUE
@@ -1321,6 +1337,16 @@ A bdqffdq:SingleRecord, like a bdqffdq:MultiRecord, consists of data with a defi
 
 ********************
 
+#### NOT_COMPLIANT
+
+- Name: bdqffdq:NOT_COMPLIANT
+- Type: bdqffdq:ResponseResult
+- Preferred Label: NOT_COMPLIANT
+- Definition: A bdqffdq:ResponseResult of a bdqffdq:Validation where the data do not conform to the bdqffdq:Criteria for quality in the Test bdqffdq:Specification.
+- Comments:
+
+********************
+
 #### NOT_ISSUE
 
 - Name: bdqffdq:NOT_ISSUE
@@ -1350,6 +1376,38 @@ A bdqffdq:SingleRecord, like a bdqffdq:MultiRecord, consists of data with a defi
 - DifferentFrom: bdqffdq:NOT_AMENDED
 - Definition: A bdqffdq:ResponseStatus used to indicate that a bdqffdq:hasResponseResultValue from a bdqffdq:Amendment contains a proposed change.
 - Comments: The value bdqffdq:AMENDED implies that a change is being proposed to an existing bdq:NotEmpty value. bdqffdq:Amendments do not provide bdqffdq:hasResponseResult object properties. Proposed changes will be in a bdqffdq:hasResponseResultValue data property.
+
+********************
+
+#### EXTERNAL_PREREQUISITES_NOT_MET
+
+- Name: bdqffdq:EXTERNAL_PREREQUISITES_NOT_MET
+- Type: bdqffdq:ResponseStatus
+- Preferred Label: EXTERNAL_PREREQUISITES_NOT_MET
+- DifferentFrom: bdqffdq:INTERNAL_PREREQUISITES_NOT_MET
+- Definition: A bdqffdq:ResponseStatus used to indicate that a bdqffdq:ResponseResult was not generated because a bdq:sourceAuthority was not accessible. If the Test is run at a later time, it may produce a different bdqffdq:ResponseStatus.
+- Comments:
+
+********************
+
+#### FILLED_IN
+
+- Name: bdqffdq:FILLED_IN
+- Type: bdqffdq:ResponseStatus
+- Preferred Label: FILLED_IN
+- DifferentFrom: bdqffdq:NOT_AMENDED
+- Definition: A bdqffdq:ResponseStatus used to indicate that a bdqffdq:Amendment contains a proposed change to a record in a bdqffdq:hasResponseResultValue where the bdqffdq:InformationElement was bdq:Empty.
+- Comments:
+
+********************
+
+#### INTERNAL_PREREQUISITES_NOT_MET
+
+- Name: bdqffdq:INTERNAL_PREREQUISITES_NOT_MET
+- Type: bdqffdq:ResponseStatus
+- Preferred Label: INTERNAL_PREREQUISITES_NOT_MET
+- Definition: A bdqffdq:ResponseStatus used to indicate that a bdqffdq:ResponseResult was not generated because values of the bdqffdq:InformationElement were insufficient to run the Test. If the Test is run at a later time on unmodified data, it should produce the same bdqffdq:ResponseStatus.
+- Comments:
 
 ********************
 
@@ -1398,7 +1456,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Fitness For Use Framework Ontology List of Terms. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqffdq/terms/2025-04-11>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Fitness For Use Framework Ontology List of Terms. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqffdq/terms/2025-05-10>
 
 **Biodiversity Information Standards (TDWG)**
 

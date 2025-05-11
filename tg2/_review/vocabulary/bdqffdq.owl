@@ -155,7 +155,7 @@ bdqffdq:forValidation rdf:type owl:ObjectProperty ;
 bdqffdq:hasActedUponInformationElement rdf:type owl:ObjectProperty ;
                                        rdfs:subPropertyOf bdqffdq:hasInformationElement ;
                                        dcterms:issued "2024-09-30"^^xsd:date ;
-                                       rdfs:comment "Provides a relationship between bdqffdq concepts and the bdqffdq:InformationElements that are bdqffdq:ActedUpon in a Test."@en ;
+                                       rdfs:comment "Provides a relationship between bdqffdq: concepts and the bdqffdq:InformationElements that are bdqffdq:ActedUpon in a Test."@en ;
                                        rdfs:label "has Acted Upon Information Element"@en ;
                                        skos:definition "Describes the bdqffdq:ActedUpon bdqffdq:InformationElements assessed by a bdqffdq:DataQualityNeed about which bdqffdq:Assertions arising from the bdqffdq:DataQualityNeed would apply."@en ;
                                        skos:prefLabel "has Acted Upon Information Element"@en .
@@ -175,7 +175,7 @@ bdqffdq:hasArgument rdf:type owl:ObjectProperty ;
 bdqffdq:hasConsultedInformationElement rdf:type owl:ObjectProperty ;
                                        rdfs:subPropertyOf bdqffdq:hasInformationElement ;
                                        dcterms:issued "2024-09-30"^^xsd:date ;
-                                       rdfs:comment "Provides a relationship between bdqffdq concepts and the bdqffdq:InformationElements that are bdqffdq:Consulted, but not bdqffdq:ActedUpon in a Test."@en ;
+                                       rdfs:comment "Provides a relationship between bdqffdq: concepts and the bdqffdq:InformationElements that are bdqffdq:Consulted, but not bdqffdq:ActedUpon in a Test."@en ;
                                        rdfs:label "has Consulted Information Element"@en ;
                                        skos:definition "Describes the bdqffdq:InformationElements assessed by a bdqffdq:DataQualityNeed in order to make bdqffdq:Assertions concerning bdqffdq:ActedUpon bdqffdq:InformationElements."@en ;
                                        skos:prefLabel "has Consulted Information Element"@en .
@@ -258,7 +258,7 @@ bdqffdq:hasParameter rdf:type owl:ObjectProperty ;
 ###  https://rs.tdwg.org/bdqffdq/terms/hasResourceType
 bdqffdq:hasResourceType rdf:type owl:ObjectProperty ;
                         dcterms:issued "2024-09-30"^^xsd:date ;
-                        rdfs:comment "Provides additional metadata, with the bdqffdq:InformationElements, that describe the bdqffdq:ResourceType (bdqffdq:SingleRecord or bdqffdq:MultiRecord) on which the bdqffdq concept operates. For example, a bdqffdq:Amendment with bdqffdq:ResourceType bdqffdq:MultiRecord defines that bdqffdq:Amendment as operating on a data set."@en ;
+                        rdfs:comment "Provides additional metadata, with the bdqffdq:InformationElements, that describe the bdqffdq:ResourceType (bdqffdq:SingleRecord or bdqffdq:MultiRecord) on which the bdqffdq: concept operates. For example, a bdqffdq:Amendment with bdqffdq:ResourceType bdqffdq:MultiRecord defines that bdqffdq:Amendment as operating on a data set."@en ;
                         rdfs:label "has Resource Type"@en ;
                         skos:definition "The bdqffdq:ResourceType to which a bdqffdq:DataQualityNeed applies."@en ;
                         skos:prefLabel "has Resource Type"@en .
@@ -305,7 +305,7 @@ bdqffdq:hasSpecification rdf:type owl:ObjectProperty ;
                                       owl:someValuesFrom bdqffdq:Specification
                                     ] ;
                          dcterms:issued "2024-09-30"^^xsd:date ;
-                         rdfs:comment "Describes the relationship between a derived bdqffdq concept that is a bdqffdq:Method and the bdqffdq:FundamentalConcept of a bdqffdq:Specification (technical description of a Test)."@en ;
+                         rdfs:comment "Describes the relationship between a derived bdqffdq: concept that is a bdqffdq:Method and the bdqffdq:FundamentalConcept of a bdqffdq:Specification (technical description of a Test)."@en ;
                          rdfs:label "has Specification"@en ;
                          skos:definition "Relates a bdqffdq:Method to a bdqffdq:Specification."@en ;
                          skos:prefLabel "has Specification"@en .
@@ -552,7 +552,7 @@ bdqffdq:Amendment rdf:type owl:Class ;
                   dcterms:issued "2024-09-30"^^xsd:date ;
                   rdfs:comment """ContextualizedEnhacement in the original framework. Describes an instance of a bdqffdq:Enhancement in the context of the associated bdqffdq:InformationElements from a controlled vocabulary (fields bdqffdq:ActedUpon or bdqffdq:Consulted), and a bdqffdq:ResourceType of bdqffdq:SingleRecord or bdqffdq:MultiRecord.
 
-Describes a proposal for a bdqffdq:Enhancement of original data, which if accepted, would improve the quality of the data for a use. For example: 'Recommends valid value for taxon name in a SingleRecord.'
+Describes a proposal for a bdqffdq:Enhancement of original data, which if accepted, would improve the quality of the data for a use. For example: 'Recommends valid value for taxon name in a Single Record.'
 
 bdqffdq:Amendments may describe proposed changes to data values, or proposed changes to processes for the production and manipulation of data, for example, a bdqffdq:Amendment on a bdqffdq:SingleRecord may provide bdqffdq:Criteria for proposing that dwc:decimalLatitude and dwc:decimalLongitude are transposed in that record. Similarly, a bdqffdq:Amendment on a bdqffdq:MultiRecord may provide bdqffdq:Critera for proposing that all dwc:decimalLatitudes and dwc:decimalLongitudes from a data source have been transposed, and the mapping of data values to transport terms should be changed.
 
@@ -659,7 +659,7 @@ bdqffdq:DataQualityDimension rdf:type owl:Class ;
                              rdfs:subClassOf bdqffdq:FundamentalConcept ,
                                              bdqffdq:NeedConcept ;
                              dcterms:issued "2024-09-30"^^xsd:date ;
-                             rdfs:comment "Describes the aspect of data quality (accuracy, precision, completeness, etc.) that a Test examines. For example, [precision] in [coordinate precision of SingleRecords]. In the original framework, only related to Measures, here may be related to any bdqffdq:DataQualityNeed."@en ;
+                             rdfs:comment "Describes the aspect of data quality (accuracy, precision, completeness, etc.) that a Test examines. For example, [precision] in [coordinate precision of Single Records]. In the original framework, only related to Measures, here may be related to any bdqffdq:DataQualityNeed."@en ;
                              rdfs:label "Data Quality Dimension"@en ;
                              skos:definition "An aspect of data quality."@en ;
                              skos:prefLabel "Data Quality Dimension"@en .
@@ -1019,7 +1019,7 @@ bdqffdq:UseCase rdf:type owl:Class ;
                 rdfs:subClassOf bdqffdq:FundamentalConcept ,
                                 bdqffdq:NeedConcept ;
                 dcterms:issued "2024-09-30"^^xsd:date ;
-                rdfs:comment "A bdqffdq:UseCase describes a data quality control use case. The bdqffdq:ValidationPolicies, bdqffdq:MeasurementPolicies and bdqffdq:AmendmentPolicies that make up a bdqffdq:UseCase define which bdqffdq:Assertions cover a given bdqffdq:UseCase. An example of a bdqffdq:UseCase could be 'Check for internal consistency of dates', with bdqffdq:ValidationPolicies for checking consistency between atomic date fields and a bdqffdq:Amendment such as 'eventDate filled in from verbatim'. A bdqffdq:UseCase is not the same as a use cases in the software engineering sense, it is a similar formal bdqffdq statement derived from analyis of user stories."@en ;
+                rdfs:comment "A bdqffdq:UseCase describes a data quality control use case. The bdqffdq:ValidationPolicies, bdqffdq:MeasurementPolicies and bdqffdq:AmendmentPolicies that make up a bdqffdq:UseCase define which bdqffdq:Assertions cover a given bdqffdq:UseCase. An example of a bdqffdq:UseCase could be 'Check for internal consistency of dates', with bdqffdq:ValidationPolicies for checking consistency between atomic date fields and a bdqffdq:Amendment such as 'eventDate filled in from verbatim'. A bdqffdq:UseCase is not the same as a use cases in the software engineering sense, it is a similar formal bdqffdq: statement derived from analyis of user stories."@en ;
                 rdfs:label "Use Case"@en ;
                 skos:definition "A bdqffdq:NeedConcept expressing a purpose to which data are put for which the data must have quality for the result to have meaning and reliability."@en ;
                 skos:prefLabel "Use Case"@en .
@@ -1071,7 +1071,7 @@ bdqffdq:ValidationMethod rdf:type owl:Class ;
                          rdfs:subClassOf bdqffdq:DataQualityMethod ,
                                          bdqffdq:ValidationConcept ;
                          dcterms:issued "2024-09-30"^^xsd:date ;
-                         rdfs:comment """A bdqffdq:ValidationMethod is a data quality Solutions layer concept (see Figure 3 in Veiga et al., 2017) describing the relationship between a bdqffdq:Specification (technical description of a Test) and a bdqffdq:Validation (a bdqffdq:Criterion in the context of bdqffdq:ResourceType (bdqffdq:SingleRecord or MultiRecordbdqffdq:) and associated bdqffdq:InformationElements).
+                         rdfs:comment """A bdqffdq:ValidationMethod is a data quality Solutions layer concept (see Figure 3 in Veiga et al., 2017) describing the relationship between a bdqffdq:Specification (technical description of a Test) and a bdqffdq:Validation (a bdqffdq:Criterion in the context of bdqffdq:ResourceType (bdqffdq:SingleRecord or bdqffdq:MultiRecord) and associated bdqffdq:InformationElements).
 
 VM(va) = {s | s ⊂ S ⋀ va ∈ VA}"""@en ;
                          rdfs:label "Validation Method"@en ;

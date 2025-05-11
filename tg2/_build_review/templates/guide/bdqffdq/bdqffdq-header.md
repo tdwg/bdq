@@ -67,7 +67,7 @@ Some familiarity with RDF/OWL ontologies is assumed.
 
 For the list and links to all associated documents see [The Biodiversity Data Quality (BDQ) Standard](../../..index.md).
 
-Information about the bdqffdq ontology, its usage, and its extensions can be found in the following subset of BDQ resources:
+Information about the Fitness For Use Framework ontology, its usage, and its extensions can be found in the following subset of BDQ resources:
 
 - **Fitness For Use Framework Ontology Guide** Provides a visual and narrative introduction to the concepts and application of the ontology. This document.
 - [**Fitness For Use Framework Ontology List of Terms**](../../list/bdqffdq/index.md) The term list document, which enumerates and describes the vocabulary terms.
@@ -130,7 +130,7 @@ This document provides a background for understanding the `bdqtest:` Test descri
 
 See the [Fitness for Use Framework Ontology](../../bdqffdq/index.md) for a concise description and normative information about the `bdqffdq:` ontology and a summary of the mathematical formalization. See the [Fitness For Use Framework Ontology List of Terms](../../list/bdqffdq/index.md) document for the list of terms in the `bdqffdq:` vocabulary. See the [Fitness For Use Framework Ontology Vocabulary Extension](../../extension/bdqffdq/index.md) for documentation on additional axioms. See the [OWL Ontology Distribution](../../../vocabulary/bdqffdq.owl) for the formal representation of the vocabulary as an OWL ontology. The mathematical formalization provides a description of inferences and reasoning that may be made with the terms in the vocabulary.
 
-### 3.2 Description of the bdqffdq ontology
+### 3.2 Description of the Fitness For Use Framework ontology
 
 The Fitness for Use Framework defines data quality in relation to a specified use, emphasizing that data quality is not abstract but purpose-dependent. It provides a formal way to describe a `Use Case` (`bdqffdq:UseCase`) and the `Criteria` for evaluating whether a dataset is fit for that purpose. By linking data quality explicitly to use, the Framework enables consistent assessment and assurance of fitness for a given purpose.
 
@@ -172,7 +172,7 @@ Formally, in the `Data Quality Needs` level, the Framework starts with a `Use Ca
 
 `Data Quality Needs` can relate to the data quality of single records (`bdqffdq:SingleRecord`) or of datasets (`bdqffdq:MultiRecord`).
 
-![Diagram of SingleRecord and MultiRecord as named individual instances of the Resource class, showing Resource as a rectangular node above rectangular nodes for MultiRecord and Amendment. ](resource_types.png "Representation of SingleRecord and MultiRecord as named individual instances of the Resource class.")
+![Diagram of Single Record and Multi Record as named individual instances of the Resource class, showing Resource as a rectangular node above rectangular nodes for Multi Record and Amendment. ](resource_types.png "Representation of Single Record and Multi Record as named individual instances of the Resource class.")
 
 ### 3.3 Data Quality Needs, Data Quality Mechanisms, Data Quality Reports
 
@@ -187,9 +187,9 @@ Need defines the properties data must have to be considered fit for use and may 
 
 The Framework includes an abstract concept of `Information Elements`, which are concretely represented by specific Darwin Core terms within each Test to make evaluations practical.
 
-For **Quality Assurance**, the Framework defines `Measures` that operate on `MultiRecords` and return a `Response.result` of `COMPLETE` or `NOT_COMPLETE`. A `MultiRecord` `Measure` may be `COMPLETE` if all instances of a related `SingleRecord` `Validation` are `COMPLIANT`.
+For **Quality Assurance**, the Framework defines `Measures` that operate on `Multi Records` and return a `Response.result` of `COMPLETE` or `NOT_COMPLETE`. A `Multi Record` `Measure` may be `COMPLETE` if all instances of a related `Single Record` `Validation` are `COMPLIANT`.
 
-For **Quality Control**, `MultiRecord` `Measures` can return a count of `COMPLIANT` results for `Validations`, thereby indicating how fit a dataset is for its intended purpose and what adjustments are needed to make it fully fit.
+For **Quality Control**, `Multi Record` `Measures` can return a count of `COMPLIANT` results for `Validations`, thereby indicating how fit a dataset is for its intended purpose and what adjustments are needed to make it fully fit.
 
 ![Diagram of ValidationAssertion, IssueAssertion, MeasureAssertion and AmendmentAssertion classes as subtypes of the Assertion class with ReportConcept as its parent.](assertions.png "The 4 central Assertion types in the Framework - ValidationAssertion, IssueAssertion, MeasureAssertion and AmendmentAssertion.")
 
@@ -207,7 +207,7 @@ The content of this section is non-normative, related normative guidance is in s
 
 Assertions are expected to assert Response objects. These will involve, in RDF, a combination of object properties and data properties.
 
-| Concept | bdqffdq Term(s) | Description |
+| Concept | bdqffdq: Term(s) | Description |
 | ------- | ------- | ----------- |
 | Response | bdqffdq:Assertion | The report from a single execution of a single Test, consisting of a bdq:Response.status, a bdq:Response.result, a bdq:Response.comment, and optionally, a bdq:Response.qualifier.| 
 | Response.status | bdqffdq:ResponseStatus, bdqffdq:hasResponseStatus | A metadata element in a bdq:Response indicating whether a particular Test (bdqffdq:Validation, bdqffdq:Issue, bdqffdq:Measure, or bdqffdq:Amendment) was able to be performed or not. |
@@ -217,11 +217,11 @@ Assertions are expected to assert Response objects. These will involve, in RDF, 
 
 See the section [Structure of a Response (normative)](../bdqtest/index.md#31-structure-of-response-normative) of the [BDQ Tests and Assertions](../bdqtest/index.md) for further normative guidance on Responses as RDF or as data structures in non-RDF settings.
 
-### 3.5 Organization of the bdqtest classes 
+### 3.5 Organization of the bdqtest: classes 
 
 Following is a knowledge graph showing the is-a relationships between the classes in the Fitness for Use Framework:
 
-![Diagram of the is-a class relationships of bdqffdq, as a tree expanding left to right, with the root owl:Thing node not shown.](bdqffdq_class_diagram.png "Diagram showing the relationships among the bdqffdq classes.")
+![Diagram of the is-a class relationships of bdqffdq:, as a tree expanding left to right, with the root owl:Thing node not shown.](bdqffdq_class_diagram.png "Diagram showing the relationships among the bdqffdq: classes.")
 
 ### 3.6 Example representation of a BDQ Test
 
@@ -314,6 +314,6 @@ It is important that the chain of relationships from an instance of an `Assertio
 
 {term_index}
 
-## 5 List of Terms with axioms in the bdqffdq ontology (portions normative, see 1.4)
+## 5 List of Terms with axioms in the Fitness For Use Framework ontology (portions normative, see 1.4)
 
 {term_list}

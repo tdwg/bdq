@@ -1,11 +1,11 @@
-# InformationElement Class Index to the BDQ Tests Quick Reference Guide
+# Information Element Class Index to the BDQ Tests Quick Reference Guide
 
 Title
 : Terms used in the BDQ Tests Quick Reference Guide
 
 Part of the [BDQ Tests Quick Reference Guide](index.md)
 
-## Index of Tests by Class to which InformationElements belong
+## Index of Tests by Class to which Information Elements belong
 ### Record-level
 
 - [VALIDATION_BASISOFRECORD_NOTEMPTY](index.md#VALIDATION_BASISOFRECORD_NOTEMPTY)

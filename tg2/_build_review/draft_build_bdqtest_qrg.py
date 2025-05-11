@@ -242,14 +242,14 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 			foundUseCases = [val.strip() for val in usecasesTerm.split(',')]
 			for useCase in foundUseCases: 
 				usecaseDict.setdefault(useCase,[]).append(test)
-		outputUseCaseIndex.write("# UseCase Index to the {}\n".format(document_configuration_yaml['documentTitle']))
+		outputUseCaseIndex.write("# Use Case Index to the {}\n".format(document_configuration_yaml['documentTitle']))
 		outputUseCaseIndex.write("\n")
 		outputUseCaseIndex.write("Title\n")
 		outputUseCaseIndex.write(": Terms used in the {}\n".format(document_configuration_yaml['documentTitle']))
 		outputUseCaseIndex.write("\n")
 		outputUseCaseIndex.write("Part of the [{}](index.md)\n".format(document_configuration_yaml['documentTitle']))
 		outputUseCaseIndex.write("\n")
-		outputUseCaseIndex.write("## Index of Tests by UseCase\n")
+		outputUseCaseIndex.write("## Index of Tests by Use Case\n")
 		for useCase in usecaseDict.keys(): 
 			outputUseCaseIndex.write("### "+useCase)
 			outputUseCaseIndex.write("\n")
@@ -273,14 +273,14 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 			foundInformationElements = [val.strip() for val in informationelementsTerm.split(',')]
 			for ie in foundInformationElements: 
 				informationelementDict.setdefault(ie,[]).append(test)
-		outputInformationElementIndex.write("# InformationElement ActedUpon Index to the {}\n".format(document_configuration_yaml['documentTitle']))
+		outputInformationElementIndex.write("# Information Element Acted Upon Index to the {}\n".format(document_configuration_yaml['documentTitle']))
 		outputInformationElementIndex.write("\n")
 		outputInformationElementIndex.write("Title\n")
 		outputInformationElementIndex.write(": Terms used in the {}\n".format(document_configuration_yaml['documentTitle']))
 		outputInformationElementIndex.write("\n")
 		outputInformationElementIndex.write("Part of the [{}](index.md)\n".format(document_configuration_yaml['documentTitle']))
 		outputInformationElementIndex.write("\n")
-		outputInformationElementIndex.write("## Index of Tests by InformationElement ActedUpon\n")
+		outputInformationElementIndex.write("## Index of Tests by Information Element Acted Upon\n")
 		for ie in informationelementDict.keys(): 
 			outputInformationElementIndex.write("### "+ie)
 			outputInformationElementIndex.write("\n\n")
@@ -296,14 +296,14 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 			foundInformationElements = [val.strip() for val in informationelementsTerm.split(',')]
 			for ie in foundInformationElements: 
 				informationelementDict.setdefault(ie,[]).append(test)
-		outputIEClassIndex.write("# InformationElement Class Index to the {}\n".format(document_configuration_yaml['documentTitle']))
+		outputIEClassIndex.write("# Information Element Class Index to the {}\n".format(document_configuration_yaml['documentTitle']))
 		outputIEClassIndex.write("\n")
 		outputIEClassIndex.write("Title\n")
 		outputIEClassIndex.write(": Terms used in the {}\n".format(document_configuration_yaml['documentTitle']))
 		outputIEClassIndex.write("\n")
 		outputIEClassIndex.write("Part of the [{}](index.md)\n".format(document_configuration_yaml['documentTitle']))
 		outputIEClassIndex.write("\n")
-		outputIEClassIndex.write("## Index of Tests by Class to which InformationElements belong\n")
+		outputIEClassIndex.write("## Index of Tests by Class to which Information Elements belong\n")
 		for ie in informationelementDict.keys(): 
 			outputIEClassIndex.write("### "+ie)
 			outputIEClassIndex.write("\n\n")
@@ -336,14 +336,14 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 			outputDimensionIndex.write("\n")
 
 		# Index for multirecord measures
-		outputMultiRecordMeasureIndex.write("# Index to MultiRecord Measures {}\n".format(document_configuration_yaml['documentTitle']))
+		outputMultiRecordMeasureIndex.write("# Index to Multi Record Measures {}\n".format(document_configuration_yaml['documentTitle']))
 		outputMultiRecordMeasureIndex.write("\n")
 		outputMultiRecordMeasureIndex.write("Title\n")
 		outputMultiRecordMeasureIndex.write(": Index to used in the {}\n".format(document_configuration_yaml['documentTitle']))
 		outputMultiRecordMeasureIndex.write("\n")
 		outputMultiRecordMeasureIndex.write("Part of the [{}](index.md)\n".format(document_configuration_yaml['documentTitle']))
 		outputMultiRecordMeasureIndex.write("\n")
-		outputMultiRecordMeasureIndex.write("## Index of MultiRecord Measure Tests in the BDQ Tests.\n")
+		outputMultiRecordMeasureIndex.write("## Index of Multi Record Measure Tests in the BDQ Tests.\n")
 		for index, row in multirecordDataFrame.sort_values('Label').iterrows():
 			outputMultiRecordMeasureIndex.write("- [{}](index.md#{})\n".format(row['Label'],row['Label'].lower()))
 
@@ -356,7 +356,7 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 		print()
 		print("# The BDQ Tests")
 		print()
-		print("## Validations, Amendments, Measures operating on SingleRecords.")
+		print("## Validations, Measures, Amendments operating on Single Records.")
 		print()
 		for index, row in dataFrame.iterrows():
 			print("### ",row['Label'])
@@ -376,7 +376,7 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 			print("#### Information Elements")
 			if not pandas.isna(row['InformationElement:ActedUpon']) : 
 				print()
-				print("Acted Upon: ")
+				print("Acted upon: ")
 				print(row['InformationElement:ActedUpon'])
 				print()
 			if not pandas.isna(row['InformationElement:Consulted']) : 
@@ -416,7 +416,7 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 			print("********************")
 			print()
 		print()
-		print("## Measures operating on Test Responses for MultiRecords (datasets)")
+		print("## Measures operating on Test Responses for Multi Records (datasets)")
 		print()
 		for index, row in multirecordDataFrame.iterrows():
 			print("### ",row['Label'])
@@ -436,7 +436,7 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 			print("#### Information Elements")
 			if not pandas.isna(row['InformationElement:ActedUpon']) : 
 				print()
-				print("Acted Upon: ")
+				print("Acted upon: ")
 				print(row['InformationElement:ActedUpon'])
 				print()
 			if not pandas.isna(row['InformationElement:Consulted']) : 

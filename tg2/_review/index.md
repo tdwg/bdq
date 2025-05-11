@@ -24,10 +24,10 @@ Technical Specification
 Biodiversity Data Quality Maintenance Group. 2025. The Biodiversity Data Quality (BDQ) Standard. https://www.tdwg.org/standards/bdq
 
 **Date version issued**<br>
-2025-04-27
+2025-05-10
 
 **Date created**<br>
-2025-04-27
+2025-05-10
 
 **Part of TDWG Standard**<br>
 <http://www.tdwg.org/standards/to_be_determined>
@@ -112,17 +112,17 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 
 | Abbreviation | Namespace |
 |--------------|------------|
-| bdq: | https://rs.tdwg.org/bdq/terms/ |
-| bdqtest: | https://rs.tdwg.org/bdqtest/terms/ |
-| bdqcrit: | https://rs.tdwg.org/bdqcrit/terms/ |
-| bdqdim: | https://rs.tdwg.org/bdqdim/terms/ |
-| bdqenh: | https://rs.tdwg.org/bdqenh/terms/ |
-| bdqffdq: | https://rs.tdwg.org/bdqffdq/terms/ |
-| oa: | https://www.w3.org/TR/annotation-vocab/ |
-| dwc: | http://rs.tdwg.org/dwc/terms/ |
+| bdq:         | https://rs.tdwg.org/bdq/terms/ |
+| bdqtest:     | https://rs.tdwg.org/bdqtest/terms/ |
+| bdqcrit:     | https://rs.tdwg.org/bdqcrit/terms/ |
+| bdqdim:      | https://rs.tdwg.org/bdqdim/terms/ |
+| bdqenh:      | https://rs.tdwg.org/bdqenh/terms/ |
+| bdqffdq:     | https://rs.tdwg.org/bdqffdq/terms/ |
+| oa:          | https://www.w3.org/TR/annotation-vocab/ |
+| dwc:         | http://rs.tdwg.org/dwc/terms/ |
 
 ### 1.7 Referring to Terms (normative)
-In any technical treatment of the BDQ standard, a precise reference to a class or property term SHOULD be made using its qualified name (the namespace prefix followed by the term local name; e.g., `bdqffdq:InformationElement`) and the namespace IRI corresponding to the namespace prefix (e.g., `https://rs.tdwg.org/bdqffdq/terms` for `bdqffdq:`) MUST be provided. In less formal descriptions where the technical precision is not needed, the preferred label (skos:prefLabel, e.g., `Information Element`) or the term local name (e.g., `InformationElement`) MAY be used. You will find all of these methods of referring to BDQ-related terms through the BDQ documentation.
+In any technical treatment of the BDQ standard, a precise reference to a class or property term SHOULD be made using its qualified name (the namespace prefix followed by the term local name; e.g., `bdqffdq:InformationElement`) and the namespace IRI corresponding to the namespace prefix (e.g., 'https://rs.tdwg.org/bdqffdq/terms' for `bdqffdq:`) MUST be provided. In less formal descriptions where the technical precision is not needed, the preferred label (skos:prefLabel, e.g., `Information Element`) or the term local name (e.g., `InformationElement`) MAY be used. You will find all of these methods of referring to BDQ-related terms throughout the BDQ documentation.
 
 ## 2. Parts of the Standard
 This standard is comprised of the following documents and artifacts:
@@ -244,7 +244,7 @@ We recognize four people as authors of the standard, having contributed consiste
 
 - **Lee Belbin (Blatant Fabrications Pty Ltd)**: Convener of TDWG Data Quality Task Group 2 (Data Quality Tests and Assertions); Test descriptions; author of the BDQ standard documents; Test Validation Data.
 - **Arthur D Chapman (Australian Biodiversity Information Services)**: Co-convener of the TDWG Data Quality Interest Group; Test descriptions; author of the BDQ standard documents; vocabularies. 
-- **Paul J Morris (Museum of Comparative Zoology, Harvard University)**: Test descriptions; bdqffdq ontology; Java Test implementations in filteredpush packages; author of the BDQ standard documents; Test Validation Data. 
+- **Paul J Morris (Museum of Comparative Zoology, Harvard University)**: Test descriptions; Fitness For Use Framework ontology; Java Test implementations in filteredpush packages; author of the BDQ standard documents; Test Validation Data. 
 - **John Wieczorek (Rauthiflor LLC)**: Test descriptions; Test implementations; author of the BDQ standard documents; Darwin Core liaison.
 
 #### 4.2.2 Contributors
@@ -458,7 +458,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. The Biodiversity Data Quality (BDQ) Standard. Biodiversity Information Standards (TDWG). <https://bdq.tdwg/org/vocabularies/2025-04-11>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. The Biodiversity Data Quality (BDQ) Standard. Biodiversity Information Standards (TDWG). <https://bdq.tdwg/org/vocabularies/2025-05-10>
 
 **Biodiversity Information Standards (TDWG)**
 

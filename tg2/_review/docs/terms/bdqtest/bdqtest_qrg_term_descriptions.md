@@ -44,7 +44,7 @@ Part of the [BDQ Tests Quick Reference Guide](index.md)
 
 **Information Elements Consulted** [normative]: A list of Darwin Core terms that are consulted in the evaluation of the `Information Elements` `Acted Upon`. Example: "dwc:minimumDepthInMeters, dwc:maximumDepthInMeters", "dwc:verbatimDepth"
 
-**Parameters** [normative]: Any parameters that change the behavior of the Test for a subset of users with special data quality needs. Example: "bdq:taxonIsMarine", "bdq:earliestValidDate, bdq:latestValidDate"
+**Parameters** [normative]: Any parameters that change the behavior of the Test for a subset of users with special `Data Quality Needs`. Example: "bdq:taxonIsMarine", "bdq:earliestValidDate, bdq:latestValidDate"
 
 **Default Parameter Values** [normative]: The default values for any `bdq:sourceAuthority` and any parameters used in the `Specification` that define the default behavior of the Test. Example: "bdq:maximumValidElevationInMeters default = '8850'"
 
@@ -80,7 +80,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. BDQ Tests Quick Reference Guide. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqtest/terms/2025-04-11>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. BDQ Tests Quick Reference Guide. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqtest/terms/2025-05-10>
 
 **Biodiversity Information Standards (TDWG)**
 

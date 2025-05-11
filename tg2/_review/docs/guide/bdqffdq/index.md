@@ -6,10 +6,10 @@
 Fitness For Use Framework Ontology Guide
 
 **Date version issued**<br>
-2025-04-11
+2025-05-10
 
 **Date created**<br>
-2025-04-11
+2025-05-10
 
 **Part of TDWG Standard**<br>
 <http://example.org/to_be_determined>
@@ -20,7 +20,7 @@ Fitness For Use Framework Ontology Guide
 -->
 
 **This version**<br>
-<http://rs.tdwg.org/bdq/terms/2025-04-11>
+<http://rs.tdwg.org/bdq/terms/2025-05-10>
 
 **Latest version**<br>
 <http://rs.tdwg.org/bdq/terms/>
@@ -28,7 +28,7 @@ Fitness For Use Framework Ontology Guide
 **Previous version**<br>
 
 **Abstract**<br>
-This document is a user's guide for the BDQ standard, describing the organization and use of the bdqffdq: ontology.  The Fitness For Use Framework ontology formally describes the terms and relationships between them for evaluating the quality of biodiversity data. Because of its comprehensive nature, the Fitness For Use Framework supports varied interpretations and uses by different stakeholders. The Framework also provides a base for the bdq: and bdqcore: namespace vocabularies.
+This document is a user's guide for the BDQ standard, describing the organization and use of the bdqffdq: ontology. The Fitness For Use Framework ontology formally describes the terms and relationships between them for evaluating the quality of biodiversity data. Because of its comprehensive nature, the Fitness For Use Framework supports varied interpretations and uses by different stakeholders. The Framework also provides a base for the bdq: and bdqtest: namespace vocabularies.
 
 **Authors**<br>
 [Lee Belbin](https://orcid.org/0000-0001-8900-6203) ([Blatant Fabrications](https://www.wikidata.org/wiki/Q130304884)), [Arthur D. Chapman](https://orcid.org/0000-0003-1700-6962) ([Australian Biodiversity Information Services](http://www.wikidata.org/entity/Q100600913)), [Paul J. Morris](https://orcid.org/0000-0002-3673-444X) ([Museum of Comparative Zoology, Harvard University](http://www.wikidata.org/entity/Q1420782)), [John Wieczorek](https://orcid.org/0000-0003-1144-0290) ([Rauthiflor LLC](http://www.wikidata.org/entity/Q98382028))
@@ -37,7 +37,7 @@ This document is a user's guide for the BDQ standard, describing the organizatio
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 **Bibliographic citation**<br>
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Fitness For Use Framework Ontology Guide. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/terms/2025-04-11>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Fitness For Use Framework Ontology Guide. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/terms/2025-05-10>
 
 **Status**<br>
 Draft Standard for Review
@@ -56,13 +56,13 @@ Draft Standard for Review
 
 [3 Framework for describing data quality](#3-framework-for-describing-data-quality)
   - [3.1 Introduction and Context](#31-introduction-and-context)
-  - [3.2 Description of the bdqffdq ontology](#32-description-of-the-bdqffdq-ontology)
+  - [3.2 Description of the Fitness For Use Framework ontology](#32-description-of-the-fitness-for-use-framework-ontology)
     - [3.2.1 Data Quality Control and Data Quality Assurance](#321-data-quality-control-and-data-quality-assurance)
     - [3.2.2 Information Elements](#322-information-elements)
     - [3.2.3 Concepts in the Framework, Test Types: Validation, Issue, Measure, Amendment](#323-concepts-in-the-framework-test-types-validation-issue-measure-amendment)
   - [3.3 Data Quality Needs, Data Quality Mechanisms, Data Quality Reports](#33-data-quality-needs-data-quality-mechanisms-data-quality-reports)
   - [3.4 Responses](#34-responses)
-  - [3.5 Organization of the bdqtest classes](#35-organization-of-the-bdqtest-classes)
+  - [3.5 Organization of the bdqtest: classes](#35-organization-of-the-bdqtest-classes)
   - [3.6 Example representation of a BDQ Test](#36-example-representation-of-a-bdq-test)
   - [3.7 Cardinality of bdqffdq: terms](#37-cardinality-of-bdqffdq-terms)
 
@@ -72,7 +72,7 @@ Draft Standard for Review
   - [4.3 Alphabetical Index of data properties](#43-alphabetical-index-of-data-properties)
   - [4.4 Alphabetical Index of named individuals](#44-alphabetical-index-of-named-individuals)
 
-[5 List of Terms with axioms in the bdqffdq ontology (portions normative, see 1.4)](#5-list-of-terms-with-axioms-in-the-bdqffdq-ontology-portions-normative-see-14)
+[5 List of Terms with axioms in the Fitness For Use Framework ontology (portions normative, see 1.4)](#5-list-of-terms-with-axioms-in-the-fitness-for-use-framework-ontology-portions-normative-see-14)
   - [5.1 Class terms](#51-class-terms)
     - [AbstractInformationElement](#abstractinformationelement)
     - [ActedUpon](#actedupon)
@@ -207,7 +207,7 @@ Some familiarity with RDF/OWL ontologies is assumed.
 
 For the list and links to all associated documents see [The Biodiversity Data Quality (BDQ) Standard](../../..index.md).
 
-Information about the bdqffdq ontology, its usage, and its extensions can be found in the following subset of BDQ resources:
+Information about the Fitness For Use Framework ontology, its usage, and its extensions can be found in the following subset of BDQ resources:
 
 - **Fitness For Use Framework Ontology Guide** Provides a visual and narrative introduction to the concepts and application of the ontology. This document.
 - [**Fitness For Use Framework Ontology List of Terms**](../../list/bdqffdq/index.md) The term list document, which enumerates and describes the vocabulary terms.
@@ -270,7 +270,7 @@ This document provides a background for understanding the `bdqtest:` Test descri
 
 See the [Fitness for Use Framework Ontology](../../bdqffdq/index.md) for a concise description and normative information about the `bdqffdq:` ontology and a summary of the mathematical formalization. See the [Fitness For Use Framework Ontology List of Terms](../../list/bdqffdq/index.md) document for the list of terms in the `bdqffdq:` vocabulary. See the [Fitness For Use Framework Ontology Vocabulary Extension](../../extension/bdqffdq/index.md) for documentation on additional axioms. See the [OWL Ontology Distribution](../../../vocabulary/bdqffdq.owl) for the formal representation of the vocabulary as an OWL ontology. The mathematical formalization provides a description of inferences and reasoning that may be made with the terms in the vocabulary.
 
-### 3.2 Description of the bdqffdq ontology
+### 3.2 Description of the Fitness For Use Framework ontology
 
 The Fitness for Use Framework defines data quality in relation to a specified use, emphasizing that data quality is not abstract but purpose-dependent. It provides a formal way to describe a `Use Case` (`bdqffdq:UseCase`) and the `Criteria` for evaluating whether a dataset is fit for that purpose. By linking data quality explicitly to use, the Framework enables consistent assessment and assurance of fitness for a given purpose.
 
@@ -312,7 +312,7 @@ Formally, in the `Data Quality Needs` level, the Framework starts with a `Use Ca
 
 `Data Quality Needs` can relate to the data quality of single records (`bdqffdq:SingleRecord`) or of datasets (`bdqffdq:MultiRecord`).
 
-![Diagram of SingleRecord and MultiRecord as named individual instances of the Resource class, showing Resource as a rectangular node above rectangular nodes for MultiRecord and Amendment. ](resource_types.png "Representation of SingleRecord and MultiRecord as named individual instances of the Resource class.")
+![Diagram of Single Record and Multi Record as named individual instances of the Resource class, showing Resource as a rectangular node above rectangular nodes for Multi Record and Amendment. ](resource_types.png "Representation of Single Record and Multi Record as named individual instances of the Resource class.")
 
 ### 3.3 Data Quality Needs, Data Quality Mechanisms, Data Quality Reports
 
@@ -327,9 +327,9 @@ Need defines the properties data must have to be considered fit for use and may 
 
 The Framework includes an abstract concept of `Information Elements`, which are concretely represented by specific Darwin Core terms within each Test to make evaluations practical.
 
-For **Quality Assurance**, the Framework defines `Measures` that operate on `MultiRecords` and return a `Response.result` of `COMPLETE` or `NOT_COMPLETE`. A `MultiRecord` `Measure` may be `COMPLETE` if all instances of a related `SingleRecord` `Validation` are `COMPLIANT`.
+For **Quality Assurance**, the Framework defines `Measures` that operate on `Multi Records` and return a `Response.result` of `COMPLETE` or `NOT_COMPLETE`. A `Multi Record` `Measure` may be `COMPLETE` if all instances of a related `Single Record` `Validation` are `COMPLIANT`.
 
-For **Quality Control**, `MultiRecord` `Measures` can return a count of `COMPLIANT` results for `Validations`, thereby indicating how fit a dataset is for its intended purpose and what adjustments are needed to make it fully fit.
+For **Quality Control**, `Multi Record` `Measures` can return a count of `COMPLIANT` results for `Validations`, thereby indicating how fit a dataset is for its intended purpose and what adjustments are needed to make it fully fit.
 
 ![Diagram of ValidationAssertion, IssueAssertion, MeasureAssertion and AmendmentAssertion classes as subtypes of the Assertion class with ReportConcept as its parent.](assertions.png "The 4 central Assertion types in the Framework - ValidationAssertion, IssueAssertion, MeasureAssertion and AmendmentAssertion.")
 
@@ -347,7 +347,7 @@ The content of this section is non-normative, related normative guidance is in s
 
 Assertions are expected to assert Response objects. These will involve, in RDF, a combination of object properties and data properties.
 
-| Concept | bdqffdq Term(s) | Description |
+| Concept | bdqffdq: Term(s) | Description |
 | ------- | ------- | ----------- |
 | Response | bdqffdq:Assertion | The report from a single execution of a single Test, consisting of a bdq:Response.status, a bdq:Response.result, a bdq:Response.comment, and optionally, a bdq:Response.qualifier.| 
 | Response.status | bdqffdq:ResponseStatus, bdqffdq:hasResponseStatus | A metadata element in a bdq:Response indicating whether a particular Test (bdqffdq:Validation, bdqffdq:Issue, bdqffdq:Measure, or bdqffdq:Amendment) was able to be performed or not. |
@@ -357,11 +357,11 @@ Assertions are expected to assert Response objects. These will involve, in RDF, 
 
 See the section [Structure of a Response (normative)](../bdqtest/index.md#31-structure-of-response-normative) of the [BDQ Tests and Assertions](../bdqtest/index.md) for further normative guidance on Responses as RDF or as data structures in non-RDF settings.
 
-### 3.5 Organization of the bdqtest classes 
+### 3.5 Organization of the bdqtest: classes 
 
 Following is a knowledge graph showing the is-a relationships between the classes in the Fitness for Use Framework:
 
-![Diagram of the is-a class relationships of bdqffdq, as a tree expanding left to right, with the root owl:Thing node not shown.](bdqffdq_class_diagram.png "Diagram showing the relationships among the bdqffdq classes.")
+![Diagram of the is-a class relationships of bdqffdq:, as a tree expanding left to right, with the root owl:Thing node not shown.](bdqffdq_class_diagram.png "Diagram showing the relationships among the bdqffdq: classes.")
 
 ### 3.6 Example representation of a BDQ Test
 
@@ -578,7 +578,7 @@ It is important that the chain of relationships from an instance of an `Assertio
 
 
 
-## 5 List of Terms with axioms in the bdqffdq ontology (portions normative, see 1.4)
+## 5 List of Terms with axioms in the Fitness For Use Framework ontology (portions normative, see 1.4)
 
 
 ### 5.1 Class terms
@@ -1391,7 +1391,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Fitness For Use Framework Ontology Guide. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/terms/2025-04-11>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Fitness For Use Framework Ontology Guide. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/terms/2025-05-10>
 
 **Biodiversity Information Standards (TDWG)**
 

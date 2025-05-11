@@ -82,7 +82,7 @@ Any sentence or phrase beginning with "For example" or "e.g." is non-normative.
 
 ### 1.5 RFC 2119 key words
 
-The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in this document are to be interpreted as described in RFC 2119.
+The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [RFC 2119](https://tools.ietf.org/html/rfc2119).
 
 ## 2 Synthetic and Example Data (normative)
 
@@ -92,7 +92,7 @@ Implementers of BDQ Tests, and other tests of biodiversity data quality may wish
 
 Datasets consisting of partly or wholly synthetic data, including datasets into which errors have been deliberately introduced, may be used to test, validate, and demonstrate the operation of `Implementations` of data quality Tests. It is important that such synthetic and modified data not become conflated with actual biodiversity data in analyses. The following processes SHOULD be followed to identify original, modified, and synthetic example biodiversity data.
 
-### 2.2 Data Fragments and Occurrence Datasets (normative)
+### 2.2 Data Fragments and dwc:Occurrence Datasets (normative)
 
 Inputs to unit tests and testing frameworks for individual Test `Implementations` are likely to be organized as fragments of `dwc:Occurrence` data not easily mistaken for actual data. A record forming a fragment of a `dwc:Occurrence` record for validating the behaviour of the `Implementation` of a particular Test SHOULD only contain the set of terms that form the `Information Element` for a particular Test, along with Test `Parameters`, expected outputs, and related metadata, and SHOULD NOT contain values in other [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) not relevant to the Test under consideration, except data fragments MAY be marked as synthetic by adding the term values described in 6.6.3 and 6.6.4. Testing frameworks MAY take as input more complete Darwin Core records, and when these are partly or wholly synthetic, they MUST be identified as synthetic, and MUST be treated as synthetic by consumers.
 
@@ -107,7 +107,7 @@ A. The dataset MUST set values for record level terms to unambiguously mark the 
 The dataset SHOULD use the following values, and consumers of biodiversity data MUST NOT treat these values as representing actual `dwc:Occurrence` data. 
 
 `dwc:institutionCode` = "example.org"
-`dwc:institutionID` = “http://example.org/"
+`dwc:institutionID` = "http://example.org/""
 `dwc:collectionCode` = "Modified Example"
 `dwc:collectionID` = "urn:uuid:1887c794-7291-4005-8eee-1afbe9d7814e"
 
@@ -119,7 +119,7 @@ C. Each `dwc:Occurrence` record SHOULD include [ResourceRelationship](https://dw
 
 `dwc:relatedResourceID` = the identifier (e.g., `dwc:occurrenceID`) for the original source record.
 
-`dwc:relationshipOfResource` = “source for modified example record”
+`dwc:relationshipOfResource` = "source for modified example record"
 
 `dwc:relationshipRemarks`: Structured data specifying the original values for `dwc:institutionID`, `dwc:institutionCode`, `dwc:collectionCode`, `dwc:collectionID`, and `dwc:occurrenceID`, the `doi` for the dataset the original example record was found in, a list of the modifications made to the original record, and potentially, a list of standard Tests and expected Test results that this example illustrates.
 
@@ -132,7 +132,7 @@ A. The dataset MUST set values for record level terms to unambiguously mark the 
 The dataset SHOULD use the following values, and consumers MUST NOT treat these values as representing actual `dwc:Occurrence` data. 
 
 `dwc:institutionCode` = "example.org"
-`dwc:institutionID` = “http://example.org/"
+`dwc:institutionID` = "http://example.org/"
 `dwc:collectionCode` = "Synthetic Example"
 `dwc:collectionID` = "urn:uuid:0b1b9546-64aa-446b-bd9c-cbb0eacf4332"
 
