@@ -69,6 +69,20 @@ TEMPLATE = '''<!DOCTYPE html>
             color: #003c71;
             border-bottom: none;
         }}
+        nav.field-index a.field-box {{
+            display: inline-block;
+            margin: 5px;
+            padding: 5px 10px;
+            border: 1px solid #8da7b5;
+            border-radius: 4px;
+            background: #f1f6f9;
+            color: #003c71;
+            text-decoration: none;
+            font-size: 0.75em;
+        }}
+        nav.field-index a.field-box:hover {{
+            background: #e1ecf4;
+        }}
         table.term-table {{ width: 100%; border-collapse: collapse; margin-top: 10px; }}
         table.term-table td {{ vertical-align: top; padding: 4px; border-top: 1px solid #ccc; }}
         table.term-table td.label {{ width: 25%; font-weight: bold; color: #003c71; }}
@@ -112,6 +126,14 @@ def build_term_section(term, columns):
         rows += f'<tr><td class="label">{col}</td><td>{value}</td></tr>'
     return f'<section class="term-section" id="{term_id}">\n<div class="field-header-wrapper"><h3>{label}</h3></div>\n<table class="term-table">{rows}</table>\n</section>'
 
+def build_field_index(terms):
+    links = []
+    for term in terms:
+        term_id = term.get('term_localName', term.get('Label', 'term')).strip().replace(' ', '_')
+        label = term.get('Label', 'Unnamed Term')
+        links.append(f'<a class="field-box" href="#{term_id}">{label}</a>')
+    return f'<nav class="field-index">' + ''.join(links) + '</nav>'
+
 def generate_qrg():
     print(f"Loading CSV from {CSV_PATH}...")
     df = pd.read_csv(CSV_PATH)
@@ -131,6 +153,8 @@ def generate_qrg():
     for group, terms in grouped.items():
         anchor = group.strip().replace(' ', '_')
         content += f'<div class="class-header-wrapper"><h2 id="{anchor}" class="class-header">{group}</h2></div>'
+        content += build_field_index(terms.to_dict(orient='records'))
+
         class_links += f'<a class="class-box" href="#{anchor}">{group}</a>\n'
         for _, row in terms.iterrows():
             content += build_term_section(row, columns)
