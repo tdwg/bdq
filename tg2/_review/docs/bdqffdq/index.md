@@ -46,6 +46,7 @@ Draft Standard for Review
   - [1.1 Purpose](#11-purpose)
   - [1.2 Audience](#12-audience)
   - [1.3 Associated Documents](#13-associated-documents)
+    - [1.3.1 Distributions](#131-distributions)
   - [1.4 Namespace abbreviations](#14-namespace-abbreviations)
   - [1.5 Status of the Content of this Document](#15-status-of-the-content-of-this-document)
   - [1.6 RFC 2119 key words](#16-rfc-2119-key-words)
@@ -133,7 +134,11 @@ Information about the Fitness for Use ontology, its usage, and its extensions ca
 - [**Fitness For Use Framework Ontology List of Terms**](../list/bdqffdq/index.md) The term list document, which enumerates and describes the vocabulary terms.
 - **Fitness for Use Framework Ontology** Provides normative guidance on the use of the vocabulary. This document.
 - [**Fitness For Use Framework Ontology Vocabulary Extension**](../extension/bdqffdq/index.md) Defines additional axioms extending the core vocabulary.
-- [**Biodiversity Data Quality Fitness for Use Framework (Ontology)**](../../vocabulary/bdqffdq.owl) The ontology, which provides the formal RDF/OWL representation of the vocabulary.
+
+#### 1.3.1 Distributions
+
+Description | IRI | Download URL | Note |
+Owl ontology | TBD | Biodiversity Data Quality Fitness for Use Framework (Ontology) | The formal RDF/OWL representation of the vocabulary. |
 
 ### 1.4 Namespace abbreviations
 

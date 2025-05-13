@@ -638,7 +638,7 @@ Implementers MAY use any approach appropriate for their language(s) and environm
 
 If a Test `Implementation` is function that takes Darwin Core terms as input parameters, the function (or method) call becomes the point of concern for correctly matching input Darwin Core terms to the `Parameters` of the Test (function or method).
 
-In Java, annotating method parameters and using reflection to bind between the execution framework and Test `Implementations` works well. Following is a simplified code snippet from the FilteredPush `event_date_qc` library (Morris & Lowery 2024) that uses Java annotations, (e.g., @ActedUpon(value="dwc:endDayOfYear") to provide metadata about which parameter goes with which `Information Element`.
+In Java, annotating method parameters and using reflection to bind between the execution framework and Test `Implementations` works well. Following is a simplified code snippet from the FilteredPush `event_date_qc` library (Morris & Lowery 2025) that uses Java annotations, (e.g., @ActedUpon(value="dwc:endDayOfYear") to provide metadata about which parameter goes with which `Information Element`.
 
     public Response validationEnddayofyearInrange(
             @ActedUpon(value="dwc:endDayOfYear") String endDay,
@@ -646,7 +646,7 @@ In Java, annotating method parameters and using reflection to bind between the e
 
 An execution framework can use reflection to determine, from the annotations on the parameter, which Darwin Core term to bind to which parameter.
 
-Additional metadata can be added in Java annotations. In the following, again from the FilteredPush `event_date_qc` (Morris & Lowery 2024) library, annotations enable an `Implementation` framework to look up a Test `Implementation` by the Test GUID, and can provide metadata about the Test to users. For maintenance, annotations can be used to determine if an `Implementation` is up to date with the latest version of a Test `Specification`.
+Additional metadata can be added in Java annotations. In the following, again from the FilteredPush `event_date_qc` (Morris & Lowery 2025) library, annotations enable an `Implementation` framework to look up a Test `Implementation` by the Test GUID, and can provide metadata about the Test to users. For maintenance, annotations can be used to determine if an `Implementation` is up to date with the latest version of a Test `Specification`.
 
     @Validation(label="_ENDDAYOFYEAR_INRANGE", description="Is the value of dwc:endDayOfYear an integer between 1 and 365 inclusive, or 366 if a leap year?")
     @Provides("9a39d88c-7eee-46df-b32a-c109f9f81fb8")
@@ -875,7 +875,7 @@ This `Implementation` is dependent on the schema the data are stored in, in part
 
 This `Implementation` does not generalize, as for example, day in a numeric data type that supports numbers in addition to integers would return incorrect values (per the Test `Specification`, which requires day to be an integer), for values of day such as "8.5"
 
-`Implementations` should carefully consider the assumptions inherent in the environment on which Tests are being run. For example, the FilteredPush `Implementations` in `event_date_qc` (Morris & Lowery 2024), `sci_name_qc` (Morris & Dou 2024), `rec_occur_qc` (Morris 2025), and `geo_ref_qc` (Morris, Lowery & Wieczorek 2024), expect that all data will be presented to the Test methods as strings. Therefore each Test `Implementation` that deals with numeric values must convert the input strings to appropriate numeric types for evaluation, and can use the failure to convert the data type as a means to identify INTERNAL_PREREQUISITES_NOT_MET.
+`Implementations` should carefully consider the assumptions inherent in the environment on which Tests are being run. For example, the FilteredPush `Implementations` in `event_date_qc` (Morris & Lowery 2025), `sci_name_qc` (Morris & Dou 2025), `rec_occur_qc` (Morris 2025), and `geo_ref_qc` (Morris & Lowery 2025b), expect that all data will be presented to the Test methods as strings. Therefore each Test `Implementation` that deals with numeric values must convert the input strings to appropriate numeric types for evaluation, and can use the failure to convert the data type as a means to identify INTERNAL_PREREQUISITES_NOT_MET.
 
 ## 7 Presentation of Results
 
@@ -1054,7 +1054,7 @@ For each Test in an `Implementation`, that Test MUST produce the same results as
 
 #### 8.6.1 Tools for Validating Test Implementations with the Validation Data (non-normative) 
 
-The `bdqtestrunner` tool (Morris, 2024), written in Java, was written to validate the `Implementations` of the BDQ Tests in various FilteredPush data quality libraries against the Test Validation Data, see: [doi:10.5281/zenodo.13932177](https://doi.org/10.5281/zenodo.13932178) and [github.com/FilteredPush/bdqtestrunner/](https://github.com/FilteredPush/bdqtestrunner/). This tool uses Java annotations on methods that implement Tests in order to match inputs from the validation data to methods under Test that implement individual Tests. The tool could be reused to validate `Implementations` in other Java classes that follow the same use of `ffdq-api` (Lowery and Morris 2024).
+The `bdqtestrunner` tool (Morris, 2024), written in Java, was written to validate the `Implementations` of the BDQ Tests in various FilteredPush data quality libraries against the Test Validation Data. This tool uses Java annotations on methods that implement Tests in order to match inputs from the validation data to methods under Test that implement individual Tests. The tool could be reused to validate `Implementations` in other Java classes that follow the same use of `ffdq-api` (Lowery and Morris 2024).
 
 Java annotations can be used to match Test `Implementation` methods to Tests and `Information Elements` to method parameters. The [ffdq-api](https://github.com/kurator-ord/ffdq-api) (Lowery and Morris 2024) provides a set of annotations intended to enable code using Java reflection to detect methods that implement particular Tests, and then again through Java reflection, bind Darwin Core terms and other `Information Elements` in input data onto appropriate method parameters.
 

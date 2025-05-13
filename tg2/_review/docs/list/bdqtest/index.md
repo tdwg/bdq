@@ -195,7 +195,7 @@ Terms used to describe the terms in this vocabulary follow the guidance of the [
 | Data Quality Dimension (bdqffdq:DataQualityDimension) | normative | An aspect of data quality. | Conformance |
 | Criterion (bdqffdq:Criterion) | normative | Rule against which data are evaluated for conformance to quality bdqffdq:Criteria. | NotEmpty |
 | Enhancement (bdqffdq:Enhancement) | normative | Description of a means by which data could be improved. | Standardized |
-| Example Implementations (skos:note) | non-normative | A general note, for any purpose. In present context: Name or links to one or more entities that have an implementation of the Test. | Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501) |
+| Example Implementations (skos:note) | non-normative | A general note, for any purpose. In present context: Name or links to one or more entities that have an implementation of the Test. | Kurator/FilteredPush rec_occur_qc Library (Morris 2025) |
 | Example Implementation Source Code (skos:note) | non-normative | A general note, for any purpose. In present context: A link to code that implements the Test. | [https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/ DwCMetadataDQ.java#L834](https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L834) |
 | Source (skos:historyNote) | non-normative | A note about the past state/use/meaning of a concept. In present context: The origin of the concept of the Test. | VertNet |
 | Developed As GitHub Issue (skos:historyNote) | non-normative | A note about the past state/use/meaning of a concept. In present context: A link to the GitHub issue that provided rationale management, recording a history (changes and comments) of the development of the Test. | [https://github.com/tdwg/bdq/issues/ 63](https://github.com/tdwg/bdq/issues/63) |
@@ -557,7 +557,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -656,7 +656,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -759,7 +759,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -814,7 +814,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Proposes an amendment to the value of dwc:countryCode if dwc:decimalLatitude and dwc:decimalLongitude fall within a boundary from the bdq:countryShapes that is attributable to a single valid country code.</td>
+			<td>Proposes an amendment to the value of dwc:countryCode if dwc:decimalLatitude and dwc:decimalLongitude fall within a boundary from the bdq:countryShapes that is attributable to a single valid ISO 3166-1-alpha-2 country code.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -842,7 +842,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>This amendment simply fills dwc:countryCode from a lookup of dwc:decimalLatitude and dwc:decimalLongitude. dwc:coordinateUncertaintyInMeters and dwc:coordinatePrecicision (if present) imply a buffer around the provided coordinates. Likewise, country polygons cannot be 100% accurate at all scales (Dooley 2005), so a spatial buffer of the country boundaries is also justified. Taking spatial buffers into account does however greatly complicate the logic and the implementation of this and related Tests. In this Test, a detection of multiple country codes by sampling within the buffer while possible, is not considered.</td>
+			<td>This amendment simply fills dwc:countryCode from a lookup of dwc:decimalLatitude and dwc:decimalLongitude. dwc:coordinateUncertaintyInMeters and dwc:coordinatePrecision (if present) imply a buffer around the provided coordinates. Likewise, country polygons cannot be 100% accurate at all scales (Dooley 2005), so a spatial buffer of the country boundaries is also justified. Taking spatial buffers into account does, however, greatly complicate the logic and the implementation of this and related Tests. In this Test, a detection of multiple country codes by sampling within the buffer, while possible, is not considered.</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
@@ -866,7 +866,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -941,7 +941,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>This Test supports conformance with the recommendation in the comment on dwc:countryCode: "Recommended best practice is to use an ISO 3166-1-alpha-2 country code." Three letter codes should be amended to the matching two letter code.</td>
+			<td>This Test supports conformance with the recommendation in the comment on dwc:countryCode: "Recommended best practice is to use an ISO 3166-1-alpha-2 country code." Three letter codes should be amended to the matching two-letter code.</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
@@ -965,7 +965,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -1052,7 +1052,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)</td>
+			<td>Kurator/FilteredPush event_date_qc event_date_qc Library (Morris & Lowery 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -1143,7 +1143,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)</td>
+			<td>Kurator/FilteredPush event_date_qc event_date_qc Library (Morris & Lowery 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -1238,7 +1238,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -1337,7 +1337,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -1436,7 +1436,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -1535,7 +1535,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)</td>
+			<td>Kurator/FilteredPush event_date_qc event_date_qc Library (Morris & Lowery 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -1606,7 +1606,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>An attempt to populate dwc:eventDate from dwc:verbatimEventDate and from dwc:startDayOfYear and dwc:endDayOfYear should be made before this Test is run. If dwc:year and dwc:day are present and interpretable, but dwc:month is not supplied or is not interpretable, then just the year should be given as the proposed amendment. This Test assumes that that dwc:year, dwc:month, dwc:day are in a Gregorian calendar, and that only those three pieces of information are needed to produce a dwc:eventDate (explicitly in ISO 8601-1 format, and thus using the Gregorian calendar). When running the Test, the original precision, e.g. dwc:year=1980, dwc:month=1 should be retained, e.g. dwc:eventDate should become 1980-01, not 1980-01-01/1980-01-3.</td>
+			<td>An attempt to populate dwc:eventDate from dwc:verbatimEventDate and from dwc:startDayOfYear and dwc:endDayOfYear should be made before this Test is run. If dwc:year and dwc:day are present and interpretable, but dwc:month is not supplied or is not interpretable, then just the year should be given as the proposed amendment. This Test assumes that that dwc:year, dwc:month, dwc:day are in a Gregorian calendar, and that only those three pieces of information are needed to produce a dwc:eventDate (explicitly in ISO 8601-1 format, and thus using the Gregorian calendar). When running the Test, the original precision, e.g. dwc:year=1980, dwc:month=1 should be retained, e.g. dwc:eventDate should become 1980-01, not 1980-01-01/1980-01-31.</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
@@ -1630,7 +1630,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)</td>
+			<td>Kurator/FilteredPush event_date_qc event_date_qc Library (Morris & Lowery 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -1701,7 +1701,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>An attempt to populate dwc:eventDate from dwc:verbatimEventDate should be made before this Test is run. While year=1999, startDayOfYear=123 could be validly represented as an ISO date as either 1999-123 or 1999-05-03, the latter of these two forms SHOULD be used, thus, do not simply concatenate dwc:year and dwc:startDayOfYear. This Test is only for cases that fall within the one year (as given in dwc:year) and hence "dwc:startDayOfYear will always be less than dwc:endDayOfYear". [or do we just leave this as being obvious from the Expected Response.</td>
+			<td>An attempt to populate dwc:eventDate from dwc:verbatimEventDate should be made before this Test is run. While year=1999, startDayOfYear=123 could be validly represented as an ISO date as either 1999-123 or 1999-05-03, the latter of these two forms SHOULD be used, thus, do not simply concatenate dwc:year and dwc:startDayOfYear. This Test is only for cases that fall within the one year (as given in dwc:year) and hence dwc:startDayOfYear will always be less than dwc:endDayOfYear.</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
@@ -1725,7 +1725,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)</td>
+			<td>Kurator/FilteredPush event_date_qc event_date_qc Library (Morris & Lowery 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -1816,7 +1816,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)</td>
+			<td>Kurator/FilteredPush event_date_qc event_date_qc Library (Morris & Lowery 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -1887,7 +1887,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>Only fields that are empty will be have changes proposed, and only if dwc:eventDate has a valid ISO 8601-1 date. The dwc:eventDate is the canonical form of the event date (it is the first trusted form). If event date does not contain a range,dwc:startDayOfYear = dwc:endDayOfYear. Time (as compared to date) is not deemed a CORE component. Note, see sequencing Tests section of standards document, run this amendment after any other amendment which may affect dwc:eventDate</td>
+			<td>Only fields that are empty will be have changes proposed, and only if dwc:eventDate has a valid ISO 8601-1 date. The dwc:eventDate is the canonical form of the event date (it is the first trusted form). If event date does not contain a range,dwc:startDayOfYear = dwc:endDayOfYear. Time (as compared to date) is not deemed a CORE component. Note, see sequencing Tests section of standards documents, run this amendment after any other amendment that may affect dwc:eventDate</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
@@ -1911,7 +1911,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)</td>
+			<td>Kurator/FilteredPush event_date_qc event_date_qc Library (Morris & Lowery 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -1990,7 +1990,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>The value of dwc:geodeticDatum applies to dwc:decimalLatitude and dwc:decimalLongitude, thus EPSG:4326 https://epsg.org/crs_4326/WGS-84.html is the appropriate EPSG code as it applies to the WGS84 datum used with a geographic coordinate system. If the dwc:coordinateUncertaintyInMeters is bdq:Empty, not interpretable, or not valid, this amendment should not provide a dwc:coordinateUncertaintyInMeters. If the dwc:coordinateUncertaintyInMeters is bdqNotEmpty and is valid, this amendment should add to the dwc:coordinateUncertaintyInMeters the uncertainty contributed by the maximum datum shift at the given coordinates. Since different systems have differing requirements for what the default datum should be, it is left unspecified, but should match whatever the target datum is in AMENDMENT_COORDINATES_CONVERTED (620749b9-7d9c-4890-97d2-be3d1cde6da8). After the amendment is performed, the dwc:geodeticDatum field should be the assumed default datum as parameterized. An example implementation to determine the uncertainty added by asserting a default datum (datum shift) where a known datum is not declared can be found in [datumshiftproj.py](https://github.com/VertNet/georefcalculator/blob/master/source/python/datumshiftproj.py) in the source code for the [Georeferencing Calculator](http://georeferencing.org/georefcalculator/gc.html) (Wieczorek & Wieczorek 2021). Included in the source code is a [5-degree grid](https://github.com/VertNet/georefcalculator/blob/master/datumerrordata.js) of datum shifts from an unknown datum to WGS84.</td>
+			<td>The value of dwc:geodeticDatum applies to dwc:decimalLatitude and dwc:decimalLongitude, thus EPSG:4326 (https://epsg.org/crs_4326/WGS-84.html) is the appropriate EPSG code as it applies to the WGS84 datum used with a geographic coordinate system. If the dwc:coordinateUncertaintyInMeters is bdq:Empty, not interpretable, or not valid, this amendment should not provide a dwc:coordinateUncertaintyInMeters. If the dwc:coordinateUncertaintyInMeters is bdq:NotEmpty and is valid, this amendment should add to the dwc:coordinateUncertaintyInMeters the uncertainty contributed by the maximum datum shift at the given coordinates. Since different systems have differing requirements for what the default datum should be, it is left unspecified, but should match whatever the target datum is in AMENDMENT_COORDINATES_CONVERTED (620749b9-7d9c-4890-97d2-be3d1cde6da8). After the amendment is performed, the dwc:geodeticDatum field should be the assumed default datum as parameterized. An example implementation to determine the uncertainty added by asserting a default datum (datum shift) where a known datum is not declared can be found in [datumshiftproj.py](https://github.com/VertNet/georefcalculator/blob/master/source/python/datumshiftproj.py) in the source code for the [Georeferencing Calculator](http://georeferencing.org/georefcalculator/gc.html) (Wieczorek & Wieczorek 2021). Included in the source code is a [5-degree grid](https://github.com/VertNet/georefcalculator/blob/master/datumerrordata.js) of datum shifts from an unknown datum to WGS84.</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
@@ -2014,7 +2014,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -2089,7 +2089,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>Chapman and Wieczorek (2020) recommend best practice is to use EPSG codes (https://epsg.io/) as a controlled vocabulary. Ideally, amend to the EPSG code for the geographic coordinate reference system (CRS), if known. Otherwise use the EPSG code for the geodetic datum, if known. Otherwise use the EPSG code of the ellipsoid, if known. If none of these is known, use the explicit value "not recorded". The reference vocabularies of values for geodetic datums and ellipsoids needs to be made available should map alternative representations of dwc:geodeticDatum strings to EPSG codes, such as "WGS84", "WGS_84", "WGS:84", "WGS 84" all with standard value "epsg:4326". NB. Do NOT change one datum to any other datum no matter how close they are or may appear to be. The same treatment should be given to all datums, which is to use their transformation algorithms to get the equivalent in epsg:4326. For reference, a vocabulary of synonyms for EPSG codes for values of dwc:geodeticDatum can be found at https://registry.gbif.org/vocabulary/GeodeticDatum/concepts and and for more information on obtaining the EPSG dataset, see https://docs.geotools.org/latest/userguide/library/referencing/epsg.html. For the purposes of this Test "not recorded" is not a value in the bdq:sourceAuthority and should result in NOT_AMENDED.</td>
+			<td>Chapman and Wieczorek (2020) recommend best practice is to use EPSG codes (https://epsg.io/) as a controlled vocabulary. Ideally, amend to the EPSG code for the geographic coordinate reference system (CRS), if known. Otherwise use the EPSG code for the geodetic datum, if known. Otherwise use the EPSG code of the ellipsoid, if known. If none of these is known, use the explicit value "not recorded". The reference vocabularies of values for geodetic datums and ellipsoids needs to be made available and should map alternative representations of dwc:geodeticDatum strings to EPSG codes, such as "WGS84", "WGS_84", "WGS:84", "WGS 84", all with standard value "epsg:4326". NB. Do NOT change one datum to any other datum no matter how close they are or may appear to be. The same treatment should be given to all datums, which is to use their transformation algorithms to get the equivalent in epsg:4326. For reference, a vocabulary of synonyms for EPSG codes for values of dwc:geodeticDatum can be found at https://registry.gbif.org/vocabulary/GeodeticDatum/concepts and and for more information on obtaining the EPSG dataset, see https://docs.geotools.org/latest/userguide/library/referencing/epsg.html. For the purposes of this Test "not recorded" is not a value in the bdq:sourceAuthority and should result in NOT_AMENDED.</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
@@ -2113,7 +2113,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -2212,7 +2212,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -2311,7 +2311,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -2402,7 +2402,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -2489,7 +2489,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)</td>
+			<td>Kurator/FilteredPush event_date_qc event_date_qc Library (Morris & Lowery 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -2568,7 +2568,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>There is currently a capitalization mismatch between https://dwc.tdwg.org/terms/#dwc:occurrenceStatus recommended values and the GBIF vocabulary at (https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts)</td>
+			<td>There is currently a capitalization mismatch between https://dwc.tdwg.org/terms/#dwc:occurrenceStatus recommended values and the GBIF vocabulary at (https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts).</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
@@ -2592,7 +2592,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -2667,7 +2667,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>The recommended controlled vocabulary for this term consists of "present" and "absent", which are the only two appropriate terms for a Darwin Core Occurrence. This is reflected in the suggested dwc:occurrenceStatus vocabulary for this Test. Other values for dwc:occurrenceStatus should only arise under circumstances that do not refer to an Occurrence. The GBIF API is listed in the sourceAuthority, there is however, currently a mismatch between the lower case recommended values at https://dwc.tdwg.org/terms/#dwc:occurrenceStatus and the GBIF vocabulary at bdq:sourceAuthority that uses an upper case first letter (https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts), thus implementations using the GBIF API should ensure that matches on alternate terms in that vocabulary are converted to the all lower case values in the present/absent vocabulary recommended in Darwin Core. Implementations should interpret the numeric value 1 as present, and the numeric value 0 as absent.</td>
+			<td>The recommended controlled vocabulary for this term consists of "present" and "absent", which are the only two appropriate terms for a Darwin Core Occurrence. This is reflected in the suggested dwc:occurrenceStatus vocabulary for this Test. Other values for dwc:occurrenceStatus should only arise under circumstances that do not refer to an Occurrence. The GBIF API is listed in the sourceAuthority. However, there is currently a mismatch between the lower case recommended values at https://dwc.tdwg.org/terms/#dwc:occurrenceStatus and the GBIF vocabulary at bdq:sourceAuthority that uses an upper case first letter (https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts), thus implementations using the GBIF API should ensure that matches on alternate terms in that vocabulary are converted to the all lower case values in the present/absent vocabulary recommended in Darwin Core. Implementations should interpret the numeric value 1 as present, and the numeric value 0 as absent.</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
@@ -2691,7 +2691,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -2742,7 +2742,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Propose an amendment to the value of dwc:pathway using the bdq:sourceAuthority.</td>
+			<td>Proposes an amendment to the value of dwc:pathway using the bdq:sourceAuthority.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -2790,7 +2790,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -2897,7 +2897,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712), Arctos, MCZbase, Symbiota</td>
+			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2025), Arctos, MCZbase, Symbiota</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -3004,7 +3004,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</td>
+			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -3107,7 +3107,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -3210,7 +3210,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</td>
+			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -3289,7 +3289,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>Valuable for data quality needs related to voucher specimens in natural science collections. Almost all occurrence data will have no value in dwc:typeStatus. For reference, a vocabulary of synonyms can be found for dwc:typeStatus at [https://registry.gbif.org/vocabulary/TypeStatus/concepts.</td>
+			<td>Valuable for data quality needs related to voucher specimens in natural science collections. Almost all occurrence data will have no value in dwc:typeStatus. For reference, a vocabulary of synonyms can be found for dwc:typeStatus at [https://registry.gbif.org/vocabulary/TypeStatus/concepts].</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
@@ -3313,7 +3313,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -3487,7 +3487,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>We have increased the buffer to 5000 meters to cater for differences that may have arisen due to the difference in geodetic datums</td>
+			<td>We have increased the buffer to 5000 meters to cater for differences that may have arisen due to the difference in geodetic datums.</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
@@ -3511,7 +3511,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -3606,7 +3606,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -3693,7 +3693,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -3756,7 +3756,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements Consulted</td>
-			<td>bdq:AllAmendmentTestsRunOnSingleRecord"</td>
+			<td>bdq:AllAmendmentTestsRunOnSingleRecord</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
@@ -3855,7 +3855,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)</td>
+			<td>Kurator/FilteredPush event_date_qc event_date_qc Library (Morris & Lowery 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -4131,7 +4131,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/b60c8c58-0137-4b6a-97e9-57d8ca5cf248</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/b60c8c58-0137-4b6a-97e9-57d8ca5cf248</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -4139,11 +4139,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/b60c8c58-0137-4b6a-97e9-57d8ca5cf248-2023-09-17</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/b60c8c58-0137-4b6a-97e9-57d8ca5cf248-2023-09-17</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_BASISOFRECORD_NOTEMPTY in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_BASISOFRECORD_NOTEMPTY in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -4206,7 +4206,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/f5dd74bd-6a22-4792-b675-c7ccf2a2c103</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/f5dd74bd-6a22-4792-b675-c7ccf2a2c103</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -4214,11 +4214,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/f5dd74bd-6a22-4792-b675-c7ccf2a2c103-2024-08-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/f5dd74bd-6a22-4792-b675-c7ccf2a2c103-2024-08-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_BASISOFRECORD_STANDARD in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_BASISOFRECORD_STANDARD in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -4289,7 +4289,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/a56fb342-c8ee-4611-8aab-e6c6357e8875</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/a56fb342-c8ee-4611-8aab-e6c6357e8875</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -4297,11 +4297,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/a56fb342-c8ee-4611-8aab-e6c6357e8875-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/a56fb342-c8ee-4611-8aab-e6c6357e8875-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_CLASSIFICATION_CONSISTENT in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_CLASSIFICATION_CONSISTENT in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -4372,7 +4372,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/7270a362-5f2e-41f0-955a-d7a8eaaf0f17</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/7270a362-5f2e-41f0-955a-d7a8eaaf0f17</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -4380,11 +4380,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/7270a362-5f2e-41f0-955a-d7a8eaaf0f17-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/7270a362-5f2e-41f0-955a-d7a8eaaf0f17-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_CLASS_FOUND in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_CLASS_FOUND in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -4455,7 +4455,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/d68dc111-9704-4fc5-a8eb-5fa084809202</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/d68dc111-9704-4fc5-a8eb-5fa084809202</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -4463,11 +4463,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/d68dc111-9704-4fc5-a8eb-5fa084809202-2024-08-30</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/d68dc111-9704-4fc5-a8eb-5fa084809202-2024-08-30</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -4538,7 +4538,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/c6c998af-6145-4361-b1e6-52c5b790340a</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/c6c998af-6145-4361-b1e6-52c5b790340a</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -4546,11 +4546,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/c6c998af-6145-4361-b1e6-52c5b790340a-2024-08-30</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/c6c998af-6145-4361-b1e6-52c5b790340a-2024-08-30</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -4621,7 +4621,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/b67f41f4-198c-41e9-9419-ba3919c1be8b</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/b67f41f4-198c-41e9-9419-ba3919c1be8b</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -4629,11 +4629,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/b67f41f4-198c-41e9-9419-ba3919c1be8b-2024-08-30</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/b67f41f4-198c-41e9-9419-ba3919c1be8b-2024-08-30</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -4704,7 +4704,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/0e239a55-0f19-4c68-bdbf-20580f27a647</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/0e239a55-0f19-4c68-bdbf-20580f27a647</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -4712,11 +4712,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/0e239a55-0f19-4c68-bdbf-20580f27a647-2023-06-20</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/0e239a55-0f19-4c68-bdbf-20580f27a647-2023-06-20</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_COORDINATES_NOTZERO in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_COORDINATES_NOTZERO in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -4779,7 +4779,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/2d90d94b-d384-4bac-aa68-c6800d765882</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/2d90d94b-d384-4bac-aa68-c6800d765882</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -4787,11 +4787,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/2d90d94b-d384-4bac-aa68-c6800d765882-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/2d90d94b-d384-4bac-aa68-c6800d765882-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_COORDINATEUNCERTAINTY_INRANGE in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_COORDINATEUNCERTAINTY_INRANGE in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -4854,7 +4854,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/d71be8d4-1a04-4816-90c5-49808c823651</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/d71be8d4-1a04-4816-90c5-49808c823651</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -4862,11 +4862,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/d71be8d4-1a04-4816-90c5-49808c823651-2024-11-10</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/d71be8d4-1a04-4816-90c5-49808c823651-2024-11-10</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_COUNTRYCODE_NOTEMPTY in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_COUNTRYCODE_NOTEMPTY in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -4929,7 +4929,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/38966850-3737-4a67-953c-c231469e0489</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/38966850-3737-4a67-953c-c231469e0489</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -4937,11 +4937,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/38966850-3737-4a67-953c-c231469e0489-2024-09-19</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/38966850-3737-4a67-953c-c231469e0489-2024-09-19</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_COUNTRYCODE_STANDARD in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_COUNTRYCODE_STANDARD in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -5008,7 +5008,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/26b46375-df2b-4677-a2e5-f96f86b8e242</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/26b46375-df2b-4677-a2e5-f96f86b8e242</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -5016,11 +5016,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/26b46375-df2b-4677-a2e5-f96f86b8e242-2024-09-25</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/26b46375-df2b-4677-a2e5-f96f86b8e242-2024-09-25</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -5087,7 +5087,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/8b73f37d-89ed-479a-8389-9e71ad2ac84d</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/8b73f37d-89ed-479a-8389-9e71ad2ac84d</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -5095,11 +5095,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/8b73f37d-89ed-479a-8389-9e71ad2ac84d-2024-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/8b73f37d-89ed-479a-8389-9e71ad2ac84d-2024-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -5170,7 +5170,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/f15c38c3-d96d-4e9c-982d-410fb71cf2bc</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/f15c38c3-d96d-4e9c-982d-410fb71cf2bc</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -5178,11 +5178,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/f15c38c3-d96d-4e9c-982d-410fb71cf2bc-2024-08-19</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/f15c38c3-d96d-4e9c-982d-410fb71cf2bc-2024-08-19</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_COUNTRY_FOUND in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_COUNTRY_FOUND in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -5253,7 +5253,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/6887c881-dc52-409b-8979-9c2f05e55569</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/6887c881-dc52-409b-8979-9c2f05e55569</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -5261,11 +5261,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/6887c881-dc52-409b-8979-9c2f05e55569-2024-09-27</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/6887c881-dc52-409b-8979-9c2f05e55569-2024-09-27</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_COUNTRY_NOTEMPTY in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_COUNTRY_NOTEMPTY in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -5328,7 +5328,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/c72fda2d-16e1-4ded-91a5-a7094339d603</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/c72fda2d-16e1-4ded-91a5-a7094339d603</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -5336,11 +5336,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/c72fda2d-16e1-4ded-91a5-a7094339d603-2024-09-16</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/c72fda2d-16e1-4ded-91a5-a7094339d603-2024-09-16</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_DATEIDENTIFIED_INRANGE in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_DATEIDENTIFIED_INRANGE in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -5356,7 +5356,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>,bdq:earliestValidDate default = "1753-01-01",bdq:latestValidDate default = "{current day}",bdq:includeEventDate default = "true"</td>
+			<td>bdq:earliestValidDate default = "1753-01-01",bdq:latestValidDate default = "{current day}",bdq:includeEventDate default = "true"</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -5411,7 +5411,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/49b787eb-7dce-4ace-97f5-7cbb47cd8cb9</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/49b787eb-7dce-4ace-97f5-7cbb47cd8cb9</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -5419,11 +5419,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/49b787eb-7dce-4ace-97f5-7cbb47cd8cb9-2024-09-16</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/49b787eb-7dce-4ace-97f5-7cbb47cd8cb9-2024-09-16</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_DATEIDENTIFIED_STANDARD in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_DATEIDENTIFIED_STANDARD in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -5486,7 +5486,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/780480ff-8c4a-4276-aaca-cbd1248de9fa</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/780480ff-8c4a-4276-aaca-cbd1248de9fa</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -5494,11 +5494,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/780480ff-8c4a-4276-aaca-cbd1248de9fa-2024-09-16</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/780480ff-8c4a-4276-aaca-cbd1248de9fa-2024-09-16</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_DAY_INRANGE in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_DAY_INRANGE in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -5561,7 +5561,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/c3e0100f-dfc3-4379-a855-df878eef295e</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/c3e0100f-dfc3-4379-a855-df878eef295e</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -5569,11 +5569,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/c3e0100f-dfc3-4379-a855-df878eef295e-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/c3e0100f-dfc3-4379-a855-df878eef295e-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_DAY_STANDARD in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_DAY_STANDARD in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -5636,7 +5636,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/f041ab17-d834-4586-aa6b-090de2e571a8</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/f041ab17-d834-4586-aa6b-090de2e571a8</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -5644,11 +5644,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/f041ab17-d834-4586-aa6b-090de2e571a8-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/f041ab17-d834-4586-aa6b-090de2e571a8-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_DCTYPE_NOTEMPTY in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_DCTYPE_NOTEMPTY in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -5711,7 +5711,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/fbe47441-500f-44c7-a1bd-1e872edc5266</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/fbe47441-500f-44c7-a1bd-1e872edc5266</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -5719,11 +5719,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/fbe47441-500f-44c7-a1bd-1e872edc5266-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/fbe47441-500f-44c7-a1bd-1e872edc5266-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_DCTYPE_STANDARD in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_DCTYPE_STANDARD in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -5790,7 +5790,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/f0fb1c79-9e3d-4d6c-a5a9-087cf57ebd26</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/f0fb1c79-9e3d-4d6c-a5a9-087cf57ebd26</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -5798,11 +5798,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/f0fb1c79-9e3d-4d6c-a5a9-087cf57ebd26-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/f0fb1c79-9e3d-4d6c-a5a9-087cf57ebd26-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_DECIMALLATITUDE_INRANGE in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_DECIMALLATITUDE_INRANGE in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -5865,7 +5865,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/bceae35a-52ab-4968-846f-069ace766513</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/bceae35a-52ab-4968-846f-069ace766513</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -5873,11 +5873,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/bceae35a-52ab-4968-846f-069ace766513-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/bceae35a-52ab-4968-846f-069ace766513-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_DECIMALLATITUDE_NOTEMPTY in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_DECIMALLATITUDE_NOTEMPTY in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -5940,7 +5940,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/c70c4950-2246-4acc-a59d-81eaa47edf2b</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/c70c4950-2246-4acc-a59d-81eaa47edf2b</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -5948,11 +5948,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/c70c4950-2246-4acc-a59d-81eaa47edf2b-2023-09-17</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/c70c4950-2246-4acc-a59d-81eaa47edf2b-2023-09-17</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_DECIMALLONGITUDE_INRANGE in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_DECIMALLONGITUDE_INRANGE in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -6015,7 +6015,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/f948a30e-8084-48d5-b1ca-d77c476f181f</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/f948a30e-8084-48d5-b1ca-d77c476f181f</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -6023,11 +6023,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/f948a30e-8084-48d5-b1ca-d77c476f181f-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/f948a30e-8084-48d5-b1ca-d77c476f181f-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_DECIMALLONGITUDE_NOTEMPTY in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_DECIMALLONGITUDE_NOTEMPTY in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -6090,7 +6090,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/1b8ae68e-63f1-41c0-9025-fbe64db38d64</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/1b8ae68e-63f1-41c0-9025-fbe64db38d64</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -6098,11 +6098,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/1b8ae68e-63f1-41c0-9025-fbe64db38d64-2024-02-09</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/1b8ae68e-63f1-41c0-9025-fbe64db38d64-2024-02-09</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_DEGREEOFESTABLISHMENT_STANDARD in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_DEGREEOFESTABLISHMENT_STANDARD in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -6173,7 +6173,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/7775309b-5331-4a65-b839-cbe959948d33</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/7775309b-5331-4a65-b839-cbe959948d33</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -6181,11 +6181,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/7775309b-5331-4a65-b839-cbe959948d33-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/7775309b-5331-4a65-b839-cbe959948d33-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_ENDDAYOFYEAR_INRANGE in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_ENDDAYOFYEAR_INRANGE in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -6248,7 +6248,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/130bb875-6b7c-4965-b864-d53f9d05b2cd</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/130bb875-6b7c-4965-b864-d53f9d05b2cd</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -6256,11 +6256,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/130bb875-6b7c-4965-b864-d53f9d05b2cd-2024-02-08</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/130bb875-6b7c-4965-b864-d53f9d05b2cd-2024-02-08</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_ESTABLISHMENTMEANS_STANDARD in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_ESTABLISHMENTMEANS_STANDARD in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -6331,7 +6331,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/c8250600-de61-4047-9d7c-6e06a38c7994</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/c8250600-de61-4047-9d7c-6e06a38c7994</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -6339,11 +6339,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/c8250600-de61-4047-9d7c-6e06a38c7994-2024-09-16</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/c8250600-de61-4047-9d7c-6e06a38c7994-2024-09-16</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_EVENTDATE_INRANGE in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_EVENTDATE_INRANGE in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -6414,7 +6414,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/3f62eaa2-747f-456b-85e6-1a6e74086a18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/3f62eaa2-747f-456b-85e6-1a6e74086a18</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -6422,11 +6422,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/3f62eaa2-747f-456b-85e6-1a6e74086a18-2023-09-17</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/3f62eaa2-747f-456b-85e6-1a6e74086a18-2023-09-17</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_EVENTDATE_NOTEMPTY in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_EVENTDATE_NOTEMPTY in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -6489,7 +6489,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/bffd7499-aca3-423f-bb43-f7bdc9260f4f</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/bffd7499-aca3-423f-bb43-f7bdc9260f4f</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -6497,11 +6497,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/bffd7499-aca3-423f-bb43-f7bdc9260f4f-2024-09-16</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/bffd7499-aca3-423f-bb43-f7bdc9260f4f-2024-09-16</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_EVENTDATE_STANDARD in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_EVENTDATE_STANDARD in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -6564,7 +6564,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/d3e282a1-3ff3-4ed0-bd08-fa23b6b8c161</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/d3e282a1-3ff3-4ed0-bd08-fa23b6b8c161</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -6572,11 +6572,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/d3e282a1-3ff3-4ed0-bd08-fa23b6b8c161-2023-09-30</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/d3e282a1-3ff3-4ed0-bd08-fa23b6b8c161-2023-09-30</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_EVENTTEMPORAL_NOTEMPTY in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_EVENTTEMPORAL_NOTEMPTY in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -6639,7 +6639,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/1919f212-b7db-4b6e-9697-41a715001bd6</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/1919f212-b7db-4b6e-9697-41a715001bd6</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -6647,11 +6647,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/1919f212-b7db-4b6e-9697-41a715001bd6-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/1919f212-b7db-4b6e-9697-41a715001bd6-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_EVENT_CONSISTENT in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_EVENT_CONSISTENT in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -6714,7 +6714,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/97928242-11a9-4ab0-9dd7-3f0465834824</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/97928242-11a9-4ab0-9dd7-3f0465834824</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -6722,11 +6722,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/97928242-11a9-4ab0-9dd7-3f0465834824-2023-09-17</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/97928242-11a9-4ab0-9dd7-3f0465834824-2023-09-17</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_FAMILY_FOUND in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_FAMILY_FOUND in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -6797,7 +6797,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/977f7e75-a88e-4e29-a7b1-e8cdd35aa107</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/977f7e75-a88e-4e29-a7b1-e8cdd35aa107</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -6805,11 +6805,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/977f7e75-a88e-4e29-a7b1-e8cdd35aa107-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/977f7e75-a88e-4e29-a7b1-e8cdd35aa107-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_GENUS_FOUND in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_GENUS_FOUND in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -6880,7 +6880,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/63fbaf3c-3d41-4ab6-bfc0-904f1b26835f</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/63fbaf3c-3d41-4ab6-bfc0-904f1b26835f</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -6888,11 +6888,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/63fbaf3c-3d41-4ab6-bfc0-904f1b26835f-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/63fbaf3c-3d41-4ab6-bfc0-904f1b26835f-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_GEODETICDATUM_NOTEMPTY in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_GEODETICDATUM_NOTEMPTY in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -6955,7 +6955,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/8d8aba5c-f58a-49c9-a08d-1afb5ff1aa63</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/8d8aba5c-f58a-49c9-a08d-1afb5ff1aa63</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -6963,11 +6963,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/8d8aba5c-f58a-49c9-a08d-1afb5ff1aa63-2025-03-03</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/8d8aba5c-f58a-49c9-a08d-1afb5ff1aa63-2025-03-03</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_GEODETICDATUM_STANDARD in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_GEODETICDATUM_STANDARD in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -7034,7 +7034,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/012eade5-fc64-458a-a13a-a614491bf4e0</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/012eade5-fc64-458a-a13a-a614491bf4e0</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -7042,11 +7042,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/012eade5-fc64-458a-a13a-a614491bf4e0-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/012eade5-fc64-458a-a13a-a614491bf4e0-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_KINGDOM_FOUND in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_KINGDOM_FOUND in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -7117,7 +7117,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/342bd81c-e2b7-41d8-b32b-013992d19f99</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/342bd81c-e2b7-41d8-b32b-013992d19f99</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -7125,11 +7125,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/342bd81c-e2b7-41d8-b32b-013992d19f99-2024-01-28</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/342bd81c-e2b7-41d8-b32b-013992d19f99-2024-01-28</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_KINGDOM_NOTEMPTY in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_KINGDOM_NOTEMPTY in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -7192,7 +7192,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/47ee20d9-5087-4f76-a494-6fea05e50b8b</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/47ee20d9-5087-4f76-a494-6fea05e50b8b</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -7200,11 +7200,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/47ee20d9-5087-4f76-a494-6fea05e50b8b-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/47ee20d9-5087-4f76-a494-6fea05e50b8b-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_LICENSE_NOTEMPTY in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_LICENSE_NOTEMPTY in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -7267,7 +7267,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/9d5be694-f5da-465d-8c7e-27e6dac69f9f</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/9d5be694-f5da-465d-8c7e-27e6dac69f9f</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -7275,11 +7275,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/9d5be694-f5da-465d-8c7e-27e6dac69f9f-2024-03-21</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/9d5be694-f5da-465d-8c7e-27e6dac69f9f-2024-03-21</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_LICENSE_STANDARD in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_LICENSE_STANDARD in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -7350,7 +7350,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/bac852b5-1ba6-427b-aa8e-02018e99279c</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/bac852b5-1ba6-427b-aa8e-02018e99279c</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -7358,11 +7358,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/bac852b5-1ba6-427b-aa8e-02018e99279c-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/bac852b5-1ba6-427b-aa8e-02018e99279c-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_LOCATION_NOTEMPTY in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_LOCATION_NOTEMPTY in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -7425,7 +7425,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/3de8af03-05d4-4fd8-8e6d-ba886dc5446f</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/3de8af03-05d4-4fd8-8e6d-ba886dc5446f</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -7433,11 +7433,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/3de8af03-05d4-4fd8-8e6d-ba886dc5446f-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/3de8af03-05d4-4fd8-8e6d-ba886dc5446f-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_MAXDEPTH_INRANGE in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_MAXDEPTH_INRANGE in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -7508,7 +7508,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/6a3baf78-5ec3-4a84-8c6b-6876b3a4e3b5</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/6a3baf78-5ec3-4a84-8c6b-6876b3a4e3b5</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -7516,11 +7516,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/6a3baf78-5ec3-4a84-8c6b-6876b3a4e3b5-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/6a3baf78-5ec3-4a84-8c6b-6876b3a4e3b5-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_MAXELEVATION_INRANGE in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_MAXELEVATION_INRANGE in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -7591,7 +7591,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/9c66c116-6644-45b4-b4c7-db7a4ee7c500</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/9c66c116-6644-45b4-b4c7-db7a4ee7c500</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -7599,11 +7599,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/9c66c116-6644-45b4-b4c7-db7a4ee7c500-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/9c66c116-6644-45b4-b4c7-db7a4ee7c500-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_MINDEPTH_INRANGE in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_MINDEPTH_INRANGE in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -7674,7 +7674,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/b21256c2-4bb7-4deb-852d-a9eaa05345e7</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/b21256c2-4bb7-4deb-852d-a9eaa05345e7</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -7682,11 +7682,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/b21256c2-4bb7-4deb-852d-a9eaa05345e7-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/b21256c2-4bb7-4deb-852d-a9eaa05345e7-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -7749,7 +7749,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/071267a0-d993-4961-a3f7-d8210810d167</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/071267a0-d993-4961-a3f7-d8210810d167</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -7757,11 +7757,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/071267a0-d993-4961-a3f7-d8210810d167-2023-09-17</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/071267a0-d993-4961-a3f7-d8210810d167-2023-09-17</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_MINELEVATION_INRANGE in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_MINELEVATION_INRANGE in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -7832,7 +7832,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/be2eb717-b390-47d1-b7ba-965a1101e215</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/be2eb717-b390-47d1-b7ba-965a1101e215</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -7840,11 +7840,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/be2eb717-b390-47d1-b7ba-965a1101e215-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/be2eb717-b390-47d1-b7ba-965a1101e215-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -7907,7 +7907,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/c3b4cd93-a37f-4a0a-89dd-7ce53669f1f3</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/c3b4cd93-a37f-4a0a-89dd-7ce53669f1f3</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -7915,11 +7915,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/c3b4cd93-a37f-4a0a-89dd-7ce53669f1f3-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/c3b4cd93-a37f-4a0a-89dd-7ce53669f1f3-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_MONTH_STANDARD in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_MONTH_STANDARD in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -7982,7 +7982,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/36ea0a78-a079-4014-aca3-2f2b3b11e822</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/36ea0a78-a079-4014-aca3-2f2b3b11e822</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -7990,11 +7990,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/36ea0a78-a079-4014-aca3-2f2b3b11e822-2024-02-07</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/36ea0a78-a079-4014-aca3-2f2b3b11e822-2024-02-07</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -8057,7 +8057,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/0c9a139e-5d23-44de-a495-14ec08c61a1c</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/0c9a139e-5d23-44de-a495-14ec08c61a1c</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -8065,11 +8065,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/0c9a139e-5d23-44de-a495-14ec08c61a1c-2023-09-17</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/0c9a139e-5d23-44de-a495-14ec08c61a1c-2023-09-17</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_OCCURRENCEID_NOTEMPTY in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_OCCURRENCEID_NOTEMPTY in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -8132,7 +8132,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/298db0c9-a85a-41ee-b111-d622fd969d71</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/298db0c9-a85a-41ee-b111-d622fd969d71</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -8140,11 +8140,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/298db0c9-a85a-41ee-b111-d622fd969d71-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/298db0c9-a85a-41ee-b111-d622fd969d71-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_OCCURRENCESTATUS_NOTEMPTY in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_OCCURRENCESTATUS_NOTEMPTY in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -8207,7 +8207,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/faca6558-dbff-4d26-a5cb-e11cdf632fe7</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/faca6558-dbff-4d26-a5cb-e11cdf632fe7</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -8215,11 +8215,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/faca6558-dbff-4d26-a5cb-e11cdf632fe7-2025-02-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/faca6558-dbff-4d26-a5cb-e11cdf632fe7-2025-02-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_OCCURRENCESTATUS_STANDARD in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_OCCURRENCESTATUS_STANDARD in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -8286,7 +8286,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/f4fa449c-4b74-4dcf-b4cf-0b73e1496375</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/f4fa449c-4b74-4dcf-b4cf-0b73e1496375</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -8294,11 +8294,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/f4fa449c-4b74-4dcf-b4cf-0b73e1496375-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/f4fa449c-4b74-4dcf-b4cf-0b73e1496375-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_ORDER_FOUND in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_ORDER_FOUND in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -8369,7 +8369,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/15e0da1d-1a43-4075-8454-b2e618cdd25b</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/15e0da1d-1a43-4075-8454-b2e618cdd25b</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -8377,11 +8377,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/15e0da1d-1a43-4075-8454-b2e618cdd25b-2024-02-09</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/15e0da1d-1a43-4075-8454-b2e618cdd25b-2024-02-09</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_PATHWAY_STANDARD in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_PATHWAY_STANDARD in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -8452,7 +8452,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/65e66ca0-e9d1-4411-ad26-bb9c43f32afc</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/65e66ca0-e9d1-4411-ad26-bb9c43f32afc</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -8460,11 +8460,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/65e66ca0-e9d1-4411-ad26-bb9c43f32afc-2022-03-25</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/65e66ca0-e9d1-4411-ad26-bb9c43f32afc-2022-03-25</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_PHYLUM_FOUND in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_PHYLUM_FOUND in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -8535,7 +8535,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/7da5428e-87b2-4ec2-be82-05b9398b7577</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/7da5428e-87b2-4ec2-be82-05b9398b7577</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -8543,11 +8543,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/7da5428e-87b2-4ec2-be82-05b9398b7577-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/7da5428e-87b2-4ec2-be82-05b9398b7577-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_POLYNOMIAL_CONSISTENT in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_POLYNOMIAL_CONSISTENT in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -8610,7 +8610,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/dbf3cece-1d83-426e-a5e0-8158fcf9c0cd</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/dbf3cece-1d83-426e-a5e0-8158fcf9c0cd</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -8618,11 +8618,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/dbf3cece-1d83-426e-a5e0-8158fcf9c0cd-2024-02-04</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/dbf3cece-1d83-426e-a5e0-8158fcf9c0cd-2024-02-04</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -8685,7 +8685,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/f174ad13-3c67-49f9-8d8b-aba4e933d6f6</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/f174ad13-3c67-49f9-8d8b-aba4e933d6f6</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -8693,11 +8693,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/f174ad13-3c67-49f9-8d8b-aba4e933d6f6-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/f174ad13-3c67-49f9-8d8b-aba4e933d6f6-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_SCIENTIFICNAMEID_COMPLETE in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_SCIENTIFICNAMEID_COMPLETE in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -8760,7 +8760,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/a9962d33-ad08-453a-8938-2972425034c2</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/a9962d33-ad08-453a-8938-2972425034c2</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -8768,11 +8768,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/a9962d33-ad08-453a-8938-2972425034c2-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/a9962d33-ad08-453a-8938-2972425034c2-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_SCIENTIFICNAMEID_NOTEMPTY in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_SCIENTIFICNAMEID_NOTEMPTY in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -8835,7 +8835,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/4e70b0e4-3fd2-4899-802c-439671374eeb</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/4e70b0e4-3fd2-4899-802c-439671374eeb</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -8843,11 +8843,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/4e70b0e4-3fd2-4899-802c-439671374eeb-2023-09-17</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/4e70b0e4-3fd2-4899-802c-439671374eeb-2023-09-17</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_SCIENTIFICNAME_FOUND in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_SCIENTIFICNAME_FOUND in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -8918,7 +8918,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/0f8b30e2-59dc-46ba-8b91-62049cd1a4e2</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/0f8b30e2-59dc-46ba-8b91-62049cd1a4e2</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -8926,11 +8926,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/0f8b30e2-59dc-46ba-8b91-62049cd1a4e2-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/0f8b30e2-59dc-46ba-8b91-62049cd1a4e2-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_SCIENTIFICNAME_NOTEMPTY in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_SCIENTIFICNAME_NOTEMPTY in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -8993,7 +8993,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/e4d35063-2366-4dda-8eaa-326340361da3</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/e4d35063-2366-4dda-8eaa-326340361da3</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -9001,11 +9001,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/e4d35063-2366-4dda-8eaa-326340361da3-2024-02-09</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/e4d35063-2366-4dda-8eaa-326340361da3-2024-02-09</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_SEX_STANDARD in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_SEX_STANDARD in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -9076,7 +9076,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/76008c6b-c56a-4233-84e3-8584950037ec</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/76008c6b-c56a-4233-84e3-8584950037ec</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -9084,11 +9084,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/76008c6b-c56a-4233-84e3-8584950037ec-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/76008c6b-c56a-4233-84e3-8584950037ec-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_STARTDAYOFYEAR_INRANGE in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_STARTDAYOFYEAR_INRANGE in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -9151,7 +9151,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/58fdd5c1-6201-49a1-a7cd-f49c210dc0b6</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/58fdd5c1-6201-49a1-a7cd-f49c210dc0b6</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -9159,11 +9159,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/58fdd5c1-6201-49a1-a7cd-f49c210dc0b6-2024-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/58fdd5c1-6201-49a1-a7cd-f49c210dc0b6-2024-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_STATEPROVINCE_FOUND in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_STATEPROVINCE_FOUND in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -9234,7 +9234,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/de661615-b338-4557-af5b-d44a89de40fa</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/de661615-b338-4557-af5b-d44a89de40fa</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -9242,11 +9242,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/de661615-b338-4557-af5b-d44a89de40fa-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/de661615-b338-4557-af5b-d44a89de40fa-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_TAXONRANK_NOTEMPTY in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_TAXONRANK_NOTEMPTY in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -9309,7 +9309,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/602bc457-6b1d-4f24-adef-d0d31bcdf2f0</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/602bc457-6b1d-4f24-adef-d0d31bcdf2f0</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -9317,11 +9317,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/602bc457-6b1d-4f24-adef-d0d31bcdf2f0-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/602bc457-6b1d-4f24-adef-d0d31bcdf2f0-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_TAXONRANK_STANDARD in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_TAXONRANK_STANDARD in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -9392,7 +9392,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/54d290e8-ac48-4f31-8af3-676363573217</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/54d290e8-ac48-4f31-8af3-676363573217</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -9400,11 +9400,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/54d290e8-ac48-4f31-8af3-676363573217-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/54d290e8-ac48-4f31-8af3-676363573217-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_TAXON_NOTEMPTY in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_TAXON_NOTEMPTY in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -9467,7 +9467,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/782773c9-7b37-483d-8ce2-c6683ba81882</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/782773c9-7b37-483d-8ce2-c6683ba81882</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -9475,11 +9475,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/782773c9-7b37-483d-8ce2-c6683ba81882-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/782773c9-7b37-483d-8ce2-c6683ba81882-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_TAXON_UNAMBIGUOUS in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_TAXON_UNAMBIGUOUS in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -9550,7 +9550,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/b5a14d76-292e-499b-b80f-9546243311a0</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/b5a14d76-292e-499b-b80f-9546243311a0</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -9558,11 +9558,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/b5a14d76-292e-499b-b80f-9546243311a0-2024-11-11</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/b5a14d76-292e-499b-b80f-9546243311a0-2024-11-11</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_TYPESTATUS_STANDARD in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_TYPESTATUS_STANDARD in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -9633,7 +9633,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/aee65eb8-8d1e-4b8f-bd37-5822e29f5734</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/aee65eb8-8d1e-4b8f-bd37-5822e29f5734</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -9641,11 +9641,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/aee65eb8-8d1e-4b8f-bd37-5822e29f5734-2024-08-23</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/aee65eb8-8d1e-4b8f-bd37-5822e29f5734-2024-08-23</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_YEAR_INRANGE in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_YEAR_INRANGE in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -9716,7 +9716,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/687d3ad1-93a3-4a1f-b69f-da5a1eb761a5</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/687d3ad1-93a3-4a1f-b69f-da5a1eb761a5</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -9724,11 +9724,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/687d3ad1-93a3-4a1f-b69f-da5a1eb761a5-2023-09-17</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/687d3ad1-93a3-4a1f-b69f-da5a1eb761a5-2023-09-17</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Count the number of VALIDATION_YEAR_NOTEMPTY in a record set that are COMPLIANT</td>
+			<td>Count the number of VALIDATION_YEAR_NOTEMPTY in a record set that are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -9791,7 +9791,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/c8c61535-ab1a-4ec6-b4e9-f5f02541d7d8</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/c8c61535-ab1a-4ec6-b4e9-f5f02541d7d8</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -9799,11 +9799,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/c8c61535-ab1a-4ec6-b4e9-f5f02541d7d8-2023-09-17</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/c8c61535-ab1a-4ec6-b4e9-f5f02541d7d8-2023-09-17</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_BASISOFRECORD_NOTEMPTY in a record set are COMPLIANT</td>
+			<td>Measure if all VALIDATION_BASISOFRECORD_NOTEMPTY in a record set are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -9866,7 +9866,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/241a279c-76d5-499b-ab49-a47ad7f8df50</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/241a279c-76d5-499b-ab49-a47ad7f8df50</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -9874,11 +9874,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/241a279c-76d5-499b-ab49-a47ad7f8df50-2024-08-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/241a279c-76d5-499b-ab49-a47ad7f8df50-2024-08-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_BASISOFRECORD_STANDARD in a record set are COMPLIANT</td>
+			<td>Measure if all VALIDATION_BASISOFRECORD_STANDARD in a record set are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -9949,7 +9949,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/a2be4734-0a93-46dc-af4a-e2125b47dbd4</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/a2be4734-0a93-46dc-af4a-e2125b47dbd4</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -9957,11 +9957,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/a2be4734-0a93-46dc-af4a-e2125b47dbd4-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/a2be4734-0a93-46dc-af4a-e2125b47dbd4-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_CLASSIFICATION_CONSISTENT in a record set are COMPLIANT</td>
+			<td>Measure if all VALIDATION_CLASSIFICATION_CONSISTENT in a record set are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -10032,7 +10032,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/21541436-641d-45a9-938c-537484d94eb7</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/21541436-641d-45a9-938c-537484d94eb7</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -10040,11 +10040,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/21541436-641d-45a9-938c-537484d94eb7-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/21541436-641d-45a9-938c-537484d94eb7-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_CLASS_FOUND in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
+			<td>Measure if all VALIDATION_CLASS_FOUND in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -10115,7 +10115,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/86c28d5e-f778-4230-88d8-64cc01478601</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/86c28d5e-f778-4230-88d8-64cc01478601</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -10123,11 +10123,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/86c28d5e-f778-4230-88d8-64cc01478601-2024-08-30</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/86c28d5e-f778-4230-88d8-64cc01478601-2024-08-30</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT in a record set are COMPLIANT</td>
+			<td>Measure if all VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT in a record set are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -10198,7 +10198,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/7a8b0af3-fa7d-416a-921a-8992d56f8233</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/7a8b0af3-fa7d-416a-921a-8992d56f8233</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -10206,11 +10206,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/7a8b0af3-fa7d-416a-921a-8992d56f8233-2024-08-30</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/7a8b0af3-fa7d-416a-921a-8992d56f8233-2024-08-30</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT in a record set are COMPLIANT</td>
+			<td>Measure if all VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT in a record set are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -10281,7 +10281,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/478dee00-98d0-4154-b66c-eca64dbbf86d</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/478dee00-98d0-4154-b66c-eca64dbbf86d</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -10289,11 +10289,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/478dee00-98d0-4154-b66c-eca64dbbf86d-2024-08-30</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/478dee00-98d0-4154-b66c-eca64dbbf86d-2024-08-30</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT in a record set are COMPLIANT</td>
+			<td>Measure if all VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT in a record set are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -10364,7 +10364,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/151b2d29-3460-4ba5-a226-86971dc8ad03</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/151b2d29-3460-4ba5-a226-86971dc8ad03</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -10372,11 +10372,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/151b2d29-3460-4ba5-a226-86971dc8ad03-2023-06-20</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/151b2d29-3460-4ba5-a226-86971dc8ad03-2023-06-20</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_COORDINATES_NOTZERO in a record set are COMPLIANT</td>
+			<td>Measure if all VALIDATION_COORDINATES_NOTZERO in a record set are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -10439,7 +10439,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/d94b0130-7a13-4fa8-955c-eff5c47bd9de</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/d94b0130-7a13-4fa8-955c-eff5c47bd9de</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -10447,11 +10447,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/d94b0130-7a13-4fa8-955c-eff5c47bd9de-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/d94b0130-7a13-4fa8-955c-eff5c47bd9de-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_COORDINATEUNCERTAINTY_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
+			<td>Measure if all VALIDATION_COORDINATEUNCERTAINTY_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -10514,7 +10514,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/942f63bd-d19d-4214-bf8e-cec0055b8909</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/942f63bd-d19d-4214-bf8e-cec0055b8909</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -10522,11 +10522,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/942f63bd-d19d-4214-bf8e-cec0055b8909-2024-11-10</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/942f63bd-d19d-4214-bf8e-cec0055b8909-2024-11-10</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_COUNTRYCODE_NOTEMPTY in a record set are COMPLIANT</td>
+			<td>Measure if all VALIDATION_COUNTRYCODE_NOTEMPTY in a record set are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -10589,7 +10589,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/fedf27b2-e01d-459f-98fc-7f0f39e3d4be</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/fedf27b2-e01d-459f-98fc-7f0f39e3d4be</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -10597,11 +10597,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/fedf27b2-e01d-459f-98fc-7f0f39e3d4be-2024-09-19</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/fedf27b2-e01d-459f-98fc-7f0f39e3d4be-2024-09-19</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_COUNTRYCODE_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
+			<td>Measure if all VALIDATION_COUNTRYCODE_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -10668,7 +10668,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/57b40d9a-67d7-4916-9c27-dbb395c6c27e</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/57b40d9a-67d7-4916-9c27-dbb395c6c27e</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -10676,11 +10676,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/57b40d9a-67d7-4916-9c27-dbb395c6c27e-2024-09-25</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/57b40d9a-67d7-4916-9c27-dbb395c6c27e-2024-09-25</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT in a record set are COMPLIANT</td>
+			<td>Measure if all VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT in a record set are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -10747,7 +10747,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/23aced89-d613-479c-bc4c-837d74b73be0</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/23aced89-d613-479c-bc4c-837d74b73be0</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -10755,11 +10755,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/23aced89-d613-479c-bc4c-837d74b73be0-2024-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/23aced89-d613-479c-bc4c-837d74b73be0-2024-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS in a record set are COMPLIANT</td>
+			<td>Measure if all VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS in a record set are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -10830,7 +10830,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/388e74b3-2e18-4d78-8112-3142d1177e25</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/388e74b3-2e18-4d78-8112-3142d1177e25</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -10838,11 +10838,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/388e74b3-2e18-4d78-8112-3142d1177e25-2024-08-19</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/388e74b3-2e18-4d78-8112-3142d1177e25-2024-08-19</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_COUNTRY_FOUND in a record set are COMPLIANT</td>
+			<td>Measure if all VALIDATION_COUNTRY_FOUND in a record set are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -10913,7 +10913,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/9c8df974-8fba-4537-8c67-31466787f732</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/9c8df974-8fba-4537-8c67-31466787f732</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -10921,11 +10921,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/9c8df974-8fba-4537-8c67-31466787f732-2024-09-27</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/9c8df974-8fba-4537-8c67-31466787f732-2024-09-27</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_COUNTRY_NOTEMPTY in a record set are COMPLIANT</td>
+			<td>Measure if all VALIDATION_COUNTRY_NOTEMPTY in a record set are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -10988,7 +10988,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/6354376c-0cf2-435b-be40-850769c5a18a</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/6354376c-0cf2-435b-be40-850769c5a18a</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -10996,11 +10996,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/6354376c-0cf2-435b-be40-850769c5a18a-2024-09-16</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/6354376c-0cf2-435b-be40-850769c5a18a-2024-09-16</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_DATEIDENTIFIED_INRANGE in a record set are COMPLIANT</td>
+			<td>Measure if all VALIDATION_DATEIDENTIFIED_INRANGE in a record set are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -11016,7 +11016,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>,bdq:earliestValidDate default = "1753-01-01",bdq:latestValidDate default = "{current day}",bdq:includeEventDate default = "true"</td>
+			<td>bdq:earliestValidDate default = "1753-01-01",bdq:latestValidDate default = "{current day}",bdq:includeEventDate default = "true"</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -11071,7 +11071,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/563872eb-f544-45a0-8f91-8098d62768d4</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/563872eb-f544-45a0-8f91-8098d62768d4</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -11079,11 +11079,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/563872eb-f544-45a0-8f91-8098d62768d4-2024-09-16</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/563872eb-f544-45a0-8f91-8098d62768d4-2024-09-16</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_DATEIDENTIFIED_STANDARD in a record set are COMPLIANT</td>
+			<td>Measure if all VALIDATION_DATEIDENTIFIED_STANDARD in a record set are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -11146,7 +11146,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/85dc5d02-9847-420f-a026-6a0e70962d2a</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/85dc5d02-9847-420f-a026-6a0e70962d2a</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -11154,11 +11154,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/85dc5d02-9847-420f-a026-6a0e70962d2a-2024-09-16</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/85dc5d02-9847-420f-a026-6a0e70962d2a-2024-09-16</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_DAY_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
+			<td>Measure if all VALIDATION_DAY_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -11221,7 +11221,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/371035f6-42b5-494f-86d9-de2f44a6cdc6</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/371035f6-42b5-494f-86d9-de2f44a6cdc6</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -11229,11 +11229,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/371035f6-42b5-494f-86d9-de2f44a6cdc6-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/371035f6-42b5-494f-86d9-de2f44a6cdc6-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_DAY_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
+			<td>Measure if all VALIDATION_DAY_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -11296,7 +11296,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/4d999a65-a431-4a76-b591-e0d86dcf244b</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/4d999a65-a431-4a76-b591-e0d86dcf244b</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -11304,11 +11304,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/4d999a65-a431-4a76-b591-e0d86dcf244b-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/4d999a65-a431-4a76-b591-e0d86dcf244b-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_DCTYPE_NOTEMPTY in a record set are COMPLIANT</td>
+			<td>Measure if all VALIDATION_DCTYPE_NOTEMPTY in a record set are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -11371,7 +11371,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/d9493fa0-d90e-41db-95f6-d1c1d243540e</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/d9493fa0-d90e-41db-95f6-d1c1d243540e</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -11379,11 +11379,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/d9493fa0-d90e-41db-95f6-d1c1d243540e-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/d9493fa0-d90e-41db-95f6-d1c1d243540e-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_DCTYPE_STANDARD in a record set are COMPLIANT</td>
+			<td>Measure if all VALIDATION_DCTYPE_STANDARD in a record set are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -11450,7 +11450,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/3c8bc478-f6b2-4533-b7ce-45bae5d186c2</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/3c8bc478-f6b2-4533-b7ce-45bae5d186c2</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -11458,11 +11458,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/3c8bc478-f6b2-4533-b7ce-45bae5d186c2-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/3c8bc478-f6b2-4533-b7ce-45bae5d186c2-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_DECIMALLATITUDE_INRANGE in a record set are COMPLIANT</td>
+			<td>Measure if all VALIDATION_DECIMALLATITUDE_INRANGE in a record set are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -11525,7 +11525,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/a2535b23-4407-40bd-b23b-30c8185d72a2</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/a2535b23-4407-40bd-b23b-30c8185d72a2</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -11533,11 +11533,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/a2535b23-4407-40bd-b23b-30c8185d72a2-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/a2535b23-4407-40bd-b23b-30c8185d72a2-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_DECIMALLATITUDE_NOTEMPTY in a record set are COMPLIANT</td>
+			<td>Measure if all VALIDATION_DECIMALLATITUDE_NOTEMPTY in a record set are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -11600,7 +11600,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/6f7a9b82-7d34-4111-a2a6-9efe5221fa44</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/6f7a9b82-7d34-4111-a2a6-9efe5221fa44</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -11608,11 +11608,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/6f7a9b82-7d34-4111-a2a6-9efe5221fa44-2023-09-17</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/6f7a9b82-7d34-4111-a2a6-9efe5221fa44-2023-09-17</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_DECIMALLONGITUDE_INRANGE in a record set are COMPLIANT</td>
+			<td>Measure if all VALIDATION_DECIMALLONGITUDE_INRANGE in a record set are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -11675,7 +11675,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/a94e986e-dbc8-4147-872d-5f2727945654</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/a94e986e-dbc8-4147-872d-5f2727945654</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -11683,11 +11683,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/a94e986e-dbc8-4147-872d-5f2727945654-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/a94e986e-dbc8-4147-872d-5f2727945654-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_DECIMALLONGITUDE_NOTEMPTY in a record set are COMPLIANT</td>
+			<td>Measure if all VALIDATION_DECIMALLONGITUDE_NOTEMPTY in a record set are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -11750,7 +11750,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/ba953672-6526-4375-97e8-b4e9d1a7d3a0</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/ba953672-6526-4375-97e8-b4e9d1a7d3a0</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -11758,11 +11758,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/ba953672-6526-4375-97e8-b4e9d1a7d3a0-2024-02-09</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/ba953672-6526-4375-97e8-b4e9d1a7d3a0-2024-02-09</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_DEGREEOFESTABLISHMENT_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
+			<td>Measure if all VALIDATION_DEGREEOFESTABLISHMENT_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -11833,7 +11833,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/c04d428a-13d0-4766-9df7-4dfb2ef5d5d8</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/c04d428a-13d0-4766-9df7-4dfb2ef5d5d8</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -11841,11 +11841,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/c04d428a-13d0-4766-9df7-4dfb2ef5d5d8-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/c04d428a-13d0-4766-9df7-4dfb2ef5d5d8-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_ENDDAYOFYEAR_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
+			<td>Measure if all VALIDATION_ENDDAYOFYEAR_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -11908,7 +11908,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/8dfed701-01a9-415d-a9f8-539280b75975</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/8dfed701-01a9-415d-a9f8-539280b75975</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -11916,11 +11916,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/8dfed701-01a9-415d-a9f8-539280b75975-2024-02-08</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/8dfed701-01a9-415d-a9f8-539280b75975-2024-02-08</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_ESTABLISHMENTMEANS_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
+			<td>Measure if all VALIDATION_ESTABLISHMENTMEANS_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -11991,7 +11991,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/d41a731b-2e2b-4442-9217-4c375ae92926</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/d41a731b-2e2b-4442-9217-4c375ae92926</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -11999,11 +11999,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/d41a731b-2e2b-4442-9217-4c375ae92926-2024-09-16</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/d41a731b-2e2b-4442-9217-4c375ae92926-2024-09-16</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_EVENTDATE_INRANGE in a record set are COMPLIANT</td>
+			<td>Measure if all VALIDATION_EVENTDATE_INRANGE in a record set are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -12074,7 +12074,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/c23cd67d-1b5c-4e9f-a1ce-8cc6b3e9b365</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/c23cd67d-1b5c-4e9f-a1ce-8cc6b3e9b365</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -12082,11 +12082,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/c23cd67d-1b5c-4e9f-a1ce-8cc6b3e9b365-2023-09-17</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/c23cd67d-1b5c-4e9f-a1ce-8cc6b3e9b365-2023-09-17</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_EVENTDATE_NOTEMPTY in a record set are COMPLIANT</td>
+			<td>Measure if all VALIDATION_EVENTDATE_NOTEMPTY in a record set are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -12149,7 +12149,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/14a1d51f-16ed-4148-9dc8-1e90157a9868</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/14a1d51f-16ed-4148-9dc8-1e90157a9868</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -12157,11 +12157,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/14a1d51f-16ed-4148-9dc8-1e90157a9868-2024-09-16</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/14a1d51f-16ed-4148-9dc8-1e90157a9868-2024-09-16</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_EVENTDATE_STANDARD in a record set are COMPLIANT</td>
+			<td>Measure if all VALIDATION_EVENTDATE_STANDARD in a record set are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -12224,7 +12224,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/f22539ef-029b-4edb-ad17-add4363f7395</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/f22539ef-029b-4edb-ad17-add4363f7395</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -12232,11 +12232,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/f22539ef-029b-4edb-ad17-add4363f7395-2023-09-30</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/f22539ef-029b-4edb-ad17-add4363f7395-2023-09-30</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_EVENTTEMPORAL_NOTEMPTY in a record set are COMPLIANT</td>
+			<td>Measure if all VALIDATION_EVENTTEMPORAL_NOTEMPTY in a record set are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -12299,7 +12299,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/f375a3fd-4cf5-4ef4-955e-d71762ede2d8</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/f375a3fd-4cf5-4ef4-955e-d71762ede2d8</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -12307,11 +12307,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/f375a3fd-4cf5-4ef4-955e-d71762ede2d8-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/f375a3fd-4cf5-4ef4-955e-d71762ede2d8-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_EVENT_CONSISTENT in a record set are COMPLIANT</td>
+			<td>Measure if all VALIDATION_EVENT_CONSISTENT in a record set are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -12374,7 +12374,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/a07d7147-2db8-48ce-81b8-e47595ad5f17</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/a07d7147-2db8-48ce-81b8-e47595ad5f17</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -12382,11 +12382,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/a07d7147-2db8-48ce-81b8-e47595ad5f17-2023-09-17</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/a07d7147-2db8-48ce-81b8-e47595ad5f17-2023-09-17</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_FAMILY_FOUND in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
+			<td>Measure if all VALIDATION_FAMILY_FOUND in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -12457,7 +12457,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/c5c8db83-3af0-4215-806f-e2f90574b138</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/c5c8db83-3af0-4215-806f-e2f90574b138</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -12465,11 +12465,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/c5c8db83-3af0-4215-806f-e2f90574b138-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/c5c8db83-3af0-4215-806f-e2f90574b138-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_GENUS_FOUND in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
+			<td>Measure if all VALIDATION_GENUS_FOUND in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -12540,7 +12540,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/488c1dff-21ec-4e68-a00a-7355505e180c</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/488c1dff-21ec-4e68-a00a-7355505e180c</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -12548,11 +12548,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/488c1dff-21ec-4e68-a00a-7355505e180c-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/488c1dff-21ec-4e68-a00a-7355505e180c-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_GEODETICDATUM_NOTEMPTY in a record set are COMPLIANT</td>
+			<td>Measure if all VALIDATION_GEODETICDATUM_NOTEMPTY in a record set are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -12615,7 +12615,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/cb88b6d9-85b2-4cd5-9bfa-c0d96f79552e</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/cb88b6d9-85b2-4cd5-9bfa-c0d96f79552e</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -12623,11 +12623,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/cb88b6d9-85b2-4cd5-9bfa-c0d96f79552e-2025-03-03</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/cb88b6d9-85b2-4cd5-9bfa-c0d96f79552e-2025-03-03</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_GEODETICDATUM_STANDARD in a record set are COMPLIANT</td>
+			<td>Measure if all VALIDATION_GEODETICDATUM_STANDARD in a record set are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -12694,7 +12694,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/465d7ac1-d193-46c0-a302-56a9ef99215f</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/465d7ac1-d193-46c0-a302-56a9ef99215f</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -12702,11 +12702,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/465d7ac1-d193-46c0-a302-56a9ef99215f-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/465d7ac1-d193-46c0-a302-56a9ef99215f-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_KINGDOM_FOUND in a record set are COMPLIANT</td>
+			<td>Measure if all VALIDATION_KINGDOM_FOUND in a record set are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -12777,7 +12777,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/3bc9df8b-0f57-4157-9374-b56a99090b22</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/3bc9df8b-0f57-4157-9374-b56a99090b22</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -12785,11 +12785,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/3bc9df8b-0f57-4157-9374-b56a99090b22-2024-01-28</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/3bc9df8b-0f57-4157-9374-b56a99090b22-2024-01-28</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_KINGDOM_NOTEMPTY in a record set are COMPLIANT</td>
+			<td>Measure if all VALIDATION_KINGDOM_NOTEMPTY in a record set are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -12852,7 +12852,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/4fccf163-9336-4f48-996c-57f5f66e72db</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/4fccf163-9336-4f48-996c-57f5f66e72db</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -12860,11 +12860,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/4fccf163-9336-4f48-996c-57f5f66e72db-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/4fccf163-9336-4f48-996c-57f5f66e72db-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_LICENSE_NOTEMPTY in a record set are COMPLIANT</td>
+			<td>Measure if all VALIDATION_LICENSE_NOTEMPTY in a record set are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -12927,7 +12927,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/acd8d43e-7a2a-4372-b887-fb53a9972dc9</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/acd8d43e-7a2a-4372-b887-fb53a9972dc9</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -12935,11 +12935,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/acd8d43e-7a2a-4372-b887-fb53a9972dc9-2024-03-21</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/acd8d43e-7a2a-4372-b887-fb53a9972dc9-2024-03-21</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_LICENSE_STANDARD in a record set are COMPLIANT</td>
+			<td>Measure if all VALIDATION_LICENSE_STANDARD in a record set are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -13010,7 +13010,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/3b2e4791-1a5a-4087-9e8d-09c67cf8c816</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/3b2e4791-1a5a-4087-9e8d-09c67cf8c816</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -13018,11 +13018,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/3b2e4791-1a5a-4087-9e8d-09c67cf8c816-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/3b2e4791-1a5a-4087-9e8d-09c67cf8c816-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_LOCATION_NOTEMPTY in a record set are COMPLIANT</td>
+			<td>Measure if all VALIDATION_LOCATION_NOTEMPTY in a record set are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -13085,7 +13085,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/c73d49d1-06e4-4272-8249-6a26e7f8abca</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/c73d49d1-06e4-4272-8249-6a26e7f8abca</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -13093,11 +13093,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/c73d49d1-06e4-4272-8249-6a26e7f8abca-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/c73d49d1-06e4-4272-8249-6a26e7f8abca-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_MAXDEPTH_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
+			<td>Measure if all VALIDATION_MAXDEPTH_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -13168,7 +13168,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/7c5a6ba0-399d-4570-878a-4a064e2406fe</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/7c5a6ba0-399d-4570-878a-4a064e2406fe</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -13176,11 +13176,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/7c5a6ba0-399d-4570-878a-4a064e2406fe-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/7c5a6ba0-399d-4570-878a-4a064e2406fe-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_MAXELEVATION_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
+			<td>Measure if all VALIDATION_MAXELEVATION_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -13251,7 +13251,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/49d756a8-e654-4267-a290-d1def5d2c5f9</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/49d756a8-e654-4267-a290-d1def5d2c5f9</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -13259,11 +13259,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/49d756a8-e654-4267-a290-d1def5d2c5f9-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/49d756a8-e654-4267-a290-d1def5d2c5f9-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_MINDEPTH_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
+			<td>Measure if all VALIDATION_MINDEPTH_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -13334,7 +13334,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/fcabd2c9-392c-4841-a5d7-e2680c9587ab</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/fcabd2c9-392c-4841-a5d7-e2680c9587ab</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -13342,11 +13342,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/fcabd2c9-392c-4841-a5d7-e2680c9587ab-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/fcabd2c9-392c-4841-a5d7-e2680c9587ab-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
+			<td>Measure if all VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -13409,7 +13409,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/1ba18c8b-66a6-47d9-a709-404439332dba</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/1ba18c8b-66a6-47d9-a709-404439332dba</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -13417,11 +13417,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/1ba18c8b-66a6-47d9-a709-404439332dba-2023-09-17</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/1ba18c8b-66a6-47d9-a709-404439332dba-2023-09-17</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_MINELEVATION_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
+			<td>Measure if all VALIDATION_MINELEVATION_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -13492,7 +13492,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/44f00697-ca66-43cf-8f16-646b40c0f514</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/44f00697-ca66-43cf-8f16-646b40c0f514</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -13500,11 +13500,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/44f00697-ca66-43cf-8f16-646b40c0f514-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/44f00697-ca66-43cf-8f16-646b40c0f514-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
+			<td>Measure if all VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -13567,7 +13567,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/b3c2bb86-e239-4532-ae0c-b121ec1ee025</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/b3c2bb86-e239-4532-ae0c-b121ec1ee025</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -13575,11 +13575,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/b3c2bb86-e239-4532-ae0c-b121ec1ee025-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/b3c2bb86-e239-4532-ae0c-b121ec1ee025-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_MONTH_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
+			<td>Measure if all VALIDATION_MONTH_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -13642,7 +13642,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/16059801-6adb-4e65-82f4-61eaa70d8df0</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/16059801-6adb-4e65-82f4-61eaa70d8df0</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -13650,11 +13650,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/16059801-6adb-4e65-82f4-61eaa70d8df0-2024-02-07</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/16059801-6adb-4e65-82f4-61eaa70d8df0-2024-02-07</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
+			<td>Measure if all VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -13717,7 +13717,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/0028ef9a-6553-467b-a344-90327ed2babf</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/0028ef9a-6553-467b-a344-90327ed2babf</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -13725,11 +13725,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/0028ef9a-6553-467b-a344-90327ed2babf-2023-09-17</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/0028ef9a-6553-467b-a344-90327ed2babf-2023-09-17</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_OCCURRENCEID_NOTEMPTY in a record set are COMPLIANT</td>
+			<td>Measure if all VALIDATION_OCCURRENCEID_NOTEMPTY in a record set are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -13792,7 +13792,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/d2922585-2070-4851-a033-15e51977f9dc</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/d2922585-2070-4851-a033-15e51977f9dc</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -13800,11 +13800,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/d2922585-2070-4851-a033-15e51977f9dc-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/d2922585-2070-4851-a033-15e51977f9dc-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_OCCURRENCESTATUS_NOTEMPTY in a record set are COMPLIANT</td>
+			<td>Measure if all VALIDATION_OCCURRENCESTATUS_NOTEMPTY in a record set are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -13867,7 +13867,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/2fea4571-92d0-48a5-a5ba-6caecd647862</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/2fea4571-92d0-48a5-a5ba-6caecd647862</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -13875,11 +13875,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/2fea4571-92d0-48a5-a5ba-6caecd647862-2025-02-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/2fea4571-92d0-48a5-a5ba-6caecd647862-2025-02-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_OCCURRENCESTATUS_STANDARD in a record set are COMPLIANT</td>
+			<td>Measure if all VALIDATION_OCCURRENCESTATUS_STANDARD in a record set are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -13946,7 +13946,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/773bb288-fef3-4968-a65a-a69c74d6ecb5</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/773bb288-fef3-4968-a65a-a69c74d6ecb5</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -13954,11 +13954,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/773bb288-fef3-4968-a65a-a69c74d6ecb5-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/773bb288-fef3-4968-a65a-a69c74d6ecb5-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_ORDER_FOUND in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
+			<td>Measure if all VALIDATION_ORDER_FOUND in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -14029,7 +14029,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/ef31ba02-cea7-4d76-990f-99ebbd201fb4</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/ef31ba02-cea7-4d76-990f-99ebbd201fb4</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -14037,11 +14037,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/ef31ba02-cea7-4d76-990f-99ebbd201fb4-2024-02-09</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/ef31ba02-cea7-4d76-990f-99ebbd201fb4-2024-02-09</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_PATHWAY_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
+			<td>Measure if all VALIDATION_PATHWAY_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -14112,7 +14112,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/17364d16-37b7-4ccb-9614-bfb95ff1bca9</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/17364d16-37b7-4ccb-9614-bfb95ff1bca9</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -14120,11 +14120,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/17364d16-37b7-4ccb-9614-bfb95ff1bca9-2022-03-25</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/17364d16-37b7-4ccb-9614-bfb95ff1bca9-2022-03-25</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_PHYLUM_FOUND in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
+			<td>Measure if all VALIDATION_PHYLUM_FOUND in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -14195,7 +14195,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/ef05b45b-13b8-4877-9e9d-fa44b332d83c</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/ef05b45b-13b8-4877-9e9d-fa44b332d83c</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -14203,11 +14203,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/ef05b45b-13b8-4877-9e9d-fa44b332d83c-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/ef05b45b-13b8-4877-9e9d-fa44b332d83c-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_POLYNOMIAL_CONSISTENT in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
+			<td>Measure if all VALIDATION_POLYNOMIAL_CONSISTENT in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -14270,7 +14270,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/6dd6fecf-6ba1-425c-afbe-6a9ed7b65ed7</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/6dd6fecf-6ba1-425c-afbe-6a9ed7b65ed7</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -14278,11 +14278,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/6dd6fecf-6ba1-425c-afbe-6a9ed7b65ed7-2024-02-04</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/6dd6fecf-6ba1-425c-afbe-6a9ed7b65ed7-2024-02-04</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY in a record set are COMPLIANT</td>
+			<td>Measure if all VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY in a record set are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -14345,7 +14345,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/a9529e71-5470-4cb1-b04d-aa483926f532</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/a9529e71-5470-4cb1-b04d-aa483926f532</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -14353,11 +14353,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/a9529e71-5470-4cb1-b04d-aa483926f532-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/a9529e71-5470-4cb1-b04d-aa483926f532-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_SCIENTIFICNAMEID_COMPLETE in a record set are COMPLIANT</td>
+			<td>Measure if all VALIDATION_SCIENTIFICNAMEID_COMPLETE in a record set are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -14420,7 +14420,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/4cf84216-c8a7-4865-a8e1-3ffd829d5a10</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/4cf84216-c8a7-4865-a8e1-3ffd829d5a10</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -14428,11 +14428,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/4cf84216-c8a7-4865-a8e1-3ffd829d5a10-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/4cf84216-c8a7-4865-a8e1-3ffd829d5a10-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_SCIENTIFICNAMEID_NOTEMPTY in a record set are COMPLIANT</td>
+			<td>Measure if all VALIDATION_SCIENTIFICNAMEID_NOTEMPTY in a record set are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -14495,7 +14495,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/a8aee02c-cf7c-4104-a601-d8afc4f9cbe2</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/a8aee02c-cf7c-4104-a601-d8afc4f9cbe2</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -14503,11 +14503,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/a8aee02c-cf7c-4104-a601-d8afc4f9cbe2-2023-09-17</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/a8aee02c-cf7c-4104-a601-d8afc4f9cbe2-2023-09-17</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_SCIENTIFICNAME_FOUND in a record set are COMPLIANT</td>
+			<td>Measure if all VALIDATION_SCIENTIFICNAME_FOUND in a record set are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -14578,7 +14578,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/b4d6a61c-64ff-4da0-974c-63a73fd20836</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/b4d6a61c-64ff-4da0-974c-63a73fd20836</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -14586,11 +14586,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/b4d6a61c-64ff-4da0-974c-63a73fd20836-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/b4d6a61c-64ff-4da0-974c-63a73fd20836-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_SCIENTIFICNAME_NOTEMPTY in a record set are COMPLIANT</td>
+			<td>Measure if all VALIDATION_SCIENTIFICNAME_NOTEMPTY in a record set are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -14653,7 +14653,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/1b3bbac4-7c00-46d6-8179-1d57c92374ad</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/1b3bbac4-7c00-46d6-8179-1d57c92374ad</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -14661,11 +14661,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/1b3bbac4-7c00-46d6-8179-1d57c92374ad-2024-02-09</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/1b3bbac4-7c00-46d6-8179-1d57c92374ad-2024-02-09</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_SEX_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
+			<td>Measure if all VALIDATION_SEX_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -14736,7 +14736,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/8c217eee-9cd0-48c3-aea0-90151c6c5bfd</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/8c217eee-9cd0-48c3-aea0-90151c6c5bfd</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -14744,11 +14744,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/8c217eee-9cd0-48c3-aea0-90151c6c5bfd-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/8c217eee-9cd0-48c3-aea0-90151c6c5bfd-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_STARTDAYOFYEAR_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
+			<td>Measure if all VALIDATION_STARTDAYOFYEAR_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -14811,7 +14811,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/9c1cdf6a-0dbf-4828-a2e3-fb368f74d194</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/9c1cdf6a-0dbf-4828-a2e3-fb368f74d194</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -14819,11 +14819,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/9c1cdf6a-0dbf-4828-a2e3-fb368f74d194-2024-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/9c1cdf6a-0dbf-4828-a2e3-fb368f74d194-2024-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_STATEPROVINCE_FOUND in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</td>
+			<td>Measure if all VALIDATION_STATEPROVINCE_FOUND in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -14894,7 +14894,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/e0b8cff1-3322-40d2-b8b2-b99fc9ae130a</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/e0b8cff1-3322-40d2-b8b2-b99fc9ae130a</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -14902,11 +14902,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/e0b8cff1-3322-40d2-b8b2-b99fc9ae130a-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/e0b8cff1-3322-40d2-b8b2-b99fc9ae130a-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_TAXONRANK_NOTEMPTY in a record set are COMPLIANT</td>
+			<td>Measure if all VALIDATION_TAXONRANK_NOTEMPTY in a record set are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -14969,7 +14969,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/f320ca83-8487-4011-b1ff-f4b1b4dd86ec</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/f320ca83-8487-4011-b1ff-f4b1b4dd86ec</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -14977,11 +14977,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/f320ca83-8487-4011-b1ff-f4b1b4dd86ec-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/f320ca83-8487-4011-b1ff-f4b1b4dd86ec-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_TAXONRANK_STANDARD in a record set are COMPLIANT</td>
+			<td>Measure if all VALIDATION_TAXONRANK_STANDARD in a record set are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -15052,7 +15052,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/2a9d4cfd-815a-46e0-bb51-60724582b762</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/2a9d4cfd-815a-46e0-bb51-60724582b762</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -15060,11 +15060,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/2a9d4cfd-815a-46e0-bb51-60724582b762-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/2a9d4cfd-815a-46e0-bb51-60724582b762-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_TAXON_NOTEMPTY in a record set are COMPLIANT</td>
+			<td>Measure if all VALIDATION_TAXON_NOTEMPTY in a record set are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -15127,7 +15127,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/0df03601-3768-4805-906a-bbd0a41b0fda</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/0df03601-3768-4805-906a-bbd0a41b0fda</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -15135,11 +15135,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/0df03601-3768-4805-906a-bbd0a41b0fda-2023-09-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/0df03601-3768-4805-906a-bbd0a41b0fda-2023-09-18</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_TAXON_UNAMBIGUOUS in a record set are COMPLIANT</td>
+			<td>Measure if all VALIDATION_TAXON_UNAMBIGUOUS in a record set are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -15210,7 +15210,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/1ca359ea-4df3-4dca-b92b-2bc8fa8e0c88</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/1ca359ea-4df3-4dca-b92b-2bc8fa8e0c88</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -15218,11 +15218,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/1ca359ea-4df3-4dca-b92b-2bc8fa8e0c88-2024-11-11</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/1ca359ea-4df3-4dca-b92b-2bc8fa8e0c88-2024-11-11</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_TYPESTATUS_STANDARD in a record set are COMPLIANT</td>
+			<td>Measure if all VALIDATION_TYPESTATUS_STANDARD in a record set are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -15293,7 +15293,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/a0502c5f-608b-4e59-99da-d9490bb4d93b</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/a0502c5f-608b-4e59-99da-d9490bb4d93b</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -15301,11 +15301,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/a0502c5f-608b-4e59-99da-d9490bb4d93b-2024-08-23</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/a0502c5f-608b-4e59-99da-d9490bb4d93b-2024-08-23</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_YEAR_INRANGE in a record set are COMPLIANT</td>
+			<td>Measure if all VALIDATION_YEAR_INRANGE in a record set are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -15376,7 +15376,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/a8fef8a8-e7c7-4a2d-adaf-7da99c896c93</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/a8fef8a8-e7c7-4a2d-adaf-7da99c896c93</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -15384,11 +15384,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqcore/terms/version/a8fef8a8-e7c7-4a2d-adaf-7da99c896c93-2023-09-17</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/a8fef8a8-e7c7-4a2d-adaf-7da99c896c93-2023-09-17</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measure if all VALIDATION_YEAR_NOTEMPTY in a record set are COMPLIANT</td>
+			<td>Measure if all VALIDATION_YEAR_NOTEMPTY in a record set are COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -15499,7 +15499,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -15598,7 +15598,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -15701,7 +15701,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</td>
+			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -15756,7 +15756,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Does the value of dwc:class occur at rank of Class in bdq:sourceAuthority?</td>
+			<td>Does the value of dwc:class occur at the rank of Class in bdq:sourceAuthority?</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -15780,7 +15780,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>The purpose of this Test is to check whether the value is a name that is a result of a nomenclatural act at this rank. This excludes unpublished names, misspellings and vernacular names. It is expected that the Test will designate the source authority against to check. The same Test might return distinct results when using distinct source authorities.</td>
+			<td>The purpose of this Test is to check whether the value is a name that is a result of a nomenclatural act at this rank. This excludes unpublished names, misspellings and vernacular names. It is expected that the Test will designate the source authority against which to check. The same Test might return distinct results when using distinct source authorities.</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
@@ -15804,7 +15804,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</td>
+			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -15879,7 +15879,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>dwc:coordinatePrecicision and dwc:coordinateUncertaintyInMeters (if present) imply a potential displacement of the provided coordinates. These two terms can be considered spatial buffers. Likewise, country polygons cannot be 100% accurate at all scales (Dooley 2005), so a spatial buffer of the country boundaries is justified. When dwc:countryCode=XZ (for High Seas), the coordinate should fall into a marine region out side of the EEZ of any country. Taking the spatial buffers into account does however greatly complicate both the logic and the implementation of such Tests. The same applies to potential conversion of the Spatial Reference System (SRS) of dwc:decimalLatitude and dwc:decimalLongitude to the SRS used in the bdq:sourceAuthority.</td>
+			<td>dwc:coordinatePrecision and dwc:coordinateUncertaintyInMeters (if present) imply a potential displacement of the provided coordinates. These two terms can be considered spatial buffers. Likewise, country polygons cannot be 100% accurate at all scales (Dooley 2005), so a spatial buffer of the country boundaries is justified. When dwc:countryCode=XZ (for High Seas), the coordinate should fall into a marine region out side of the EEZ of any country. Taking the spatial buffers into account does however greatly complicate both the logic and the implementation of such Tests. The same applies to potential conversion of the Spatial Reference System (SRS) of dwc:decimalLatitude and dwc:decimalLongitude to the SRS used in the bdq:sourceAuthority.</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
@@ -15903,7 +15903,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -16006,7 +16006,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -16089,7 +16089,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>dwc:coordinatePrecicision and dwc:coordinateUncertaintyInMeters (if present) imply a potential displacement of the provided coordinates. These two terms can be considered spatial buffers. Likewise, country polygons cannot be 100% accurate at all scales (Dooley 2005), so a spatial buffer of the country boundaries is justified. Taking the spatial buffers into account does however greatly complicate both the logic and the implementation of such Tests. The same applies to potential conversion of the Spatial Reference System (SRS) of dwc:decimalLatitude and dwc:decimalLongitude to the SRS used in the bdq:sourceAuthority. Note that in the current implementation Tests treat "brackish" in WoRMS as both marine and terrestrial. Note that both bdq:taxonIsMarine and bdq:geospatialLand are bdq:sourceAuthorities, but as they form two parameters, distinct names are used for them.</td>
+			<td>dwc:coordinatePrecision and dwc:coordinateUncertaintyInMeters (if present) imply a potential displacement of the provided coordinates. These two terms can be considered spatial buffers. Likewise, country polygons cannot be 100% accurate at all scales (Dooley 2005), so a spatial buffer of the country boundaries is justified. Taking the spatial buffers into account does however greatly complicate both the logic and the implementation of such Tests. The same applies to potential conversion of the Spatial Reference System (SRS) of dwc:decimalLatitude and dwc:decimalLongitude to the SRS used in the bdq:sourceAuthority. Note that in the current implementation Tests treat "brackish" in WoRMS as both marine and terrestrial. Note that both bdq:taxonIsMarine and bdq:geospatialLand are bdq:sourceAuthorities, but as they form two parameters, distinct names are used for them.</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
@@ -16113,7 +16113,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -16184,7 +16184,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>A record with 0.0 is interpreted as the string "0"</td>
+			<td>A record with 0.0 is interpreted as the string "0".</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
@@ -16208,7 +16208,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -16299,7 +16299,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -16390,7 +16390,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -16481,7 +16481,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -16576,7 +16576,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -16651,7 +16651,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>See table https://github.com/tdwg/bdq/issues/95#issuecomment-1226450014. A fail condition may arise from the content being internally inconsistent (not all of the information can be true at the same time), or from the vocabulary being incapable of uniquely resolving the combination of term values. This Test specifically does not consider the content of dwc:higherGeography. If dwc:country contains a value and dwc:stateProvince does not, this Test will return NOT_COMPLIANT. Use cases where knowledge to the level of country is adequate for the fitness of the data should not include this Test. @tucotuco: "Of #200 and #201, #201 is the strongest Test. If it passes for a record, #200 must necessarily also pass and doesn't tell you anything. If #201 fails,#200 could still pass and that would tell you that there are multiple matches on the dwc:country/dwc:stateProvince combo: It would tell you the nature of the problem. Along with #42 (dwc:country not empty), #200 would tell you whether there was an ambiguous combination of country (not empty) and dwc:stateProvince, such as would happen with Argentina/Buenos Aires. While if country is empty, then the ambiguity is purely at the dwc:stateProvince level".</td>
+			<td>See table https://github.com/tdwg/bdq/issues/95#issuecomment-1226450014. A fail condition may arise from the content being internally inconsistent (not all of the information can be true at the same time), or from the vocabulary being incapable of uniquely resolving the combination of term values. This Test specifically does not consider the content of dwc:higherGeography. If dwc:country contains a value and dwc:stateProvince does not, this Test will return NOT_COMPLIANT. Use cases where knowledge to the level of country is adequate for the fitness of the data should not include this Test. @tucotuco: "Of #200 and #201, #201 is the strongest Test. If it passes for a record, #200 must necessarily also pass and doesn't tell you anything. If #201 fails, #200 could still pass and that would tell you that there are multiple matches on the dwc:country/dwc:stateProvince combo: It would tell you the nature of the problem. Along with #42 (dwc:country not empty), #200 would tell you whether there was an ambiguous combination of country (not empty) and dwc:stateProvince, such as would happen with Argentina/Buenos Aires. While if country is empty, then the ambiguity is purely at the dwc:stateProvince level".</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
@@ -16675,7 +16675,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -16754,7 +16754,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>Non-country information such as "high seas" will fail this Test (High Seas should use dwc:countryCode = "XZ" and have dwc:country empty). Getty Place Types for administrative level "nation" are 81010 nation, 81011 independent sovereign nation, and 81012 independent nation. Multiple values in the dwc:country field (whether to signify on a border or in a list of possibilities) will fail this Test. Locations outside of a jurisdiction covered by a country code should not have a value in the field dwc:countryCode. This Test should find any matches at the Getty "nation" level including internationalized names and historical representations of that nation (where boundaries are same). This Test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.</td>
+			<td>Non-country information such as "high seas" will fail this Test (high seas should use dwc:countryCode = "XZ" and have dwc:country empty). Getty Place Types for administrative level "nation" are 81010 nation, 81011 independent sovereign nation, and 81012 independent nation. Multiple values in the dwc:country field (whether to signify on a border or in a list of possibilities) will fail this Test. Locations outside of a jurisdiction covered by a country code should not have a value in the field dwc:countryCode. This Test should find any matches at the Getty "nation" level including internationalized names and historical representations of that nation (where boundaries are same). This Test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
@@ -16778,7 +16778,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -16853,7 +16853,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>Country is expected to be either bdq:Empty or ideally have a value of "High seas" or an agreed equivalent if material comes from the high seas, or from those portions of Antarctica outside of any sovereign nation.</td>
+			<td>Country is expected to be either bdq:Empty or, ideally, have a value of "High seas" or an agreed equivalent if material comes from the high seas, or from those portions of Antarctica outside of any sovereign nation.</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
@@ -16877,7 +16877,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -16924,7 +16924,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Is the value of dwc:dateIdentified within Parameter ranges and either overlap or is later than dwc:eventDate?</td>
+			<td>Is the value of dwc:dateIdentified within Parameters range and does it overlap with or is it later than dwc:eventDate?</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -16948,11 +16948,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>,bdq:earliestValidDate default = "1753-01-01",bdq:latestValidDate default = "{current day}",bdq:includeEventDate default = "true"</td>
+			<td>bdq:earliestValidDate default = "1753-01-01",bdq:latestValidDate default = "{current day}",bdq:includeEventDate default = "true"</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>There may be valid identifications prior to Linnaeus, but this Test will flag these under the default value of bdq:earliestValidDate, as for most biodiversity data, pre-linnaean identification dates are likely to be errors. If a parameter is not set, then the default is 1753-01-01. This Test will, by design, flag as problematic cases (such as LTER plots and marine mammal sightings) where a known individual organism is identified by a specialist and then subsequently observed without new taxonomic identifications being made.</td>
+			<td>There may be valid identifications prior to Linnaeus, but this Test will flag these under the default value of bdq:earliestValidDate, as for most biodiversity data, pre-Linnaean identification dates are likely to be errors. If a parameter is not set, then the default is 1753-01-01. This Test will, by design, flag as problematic cases (such as LTER plots and marine mammal sightings) where a known individual organism is identified by a specialist and then subsequently observed without new taxonomic identifications being made.</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
@@ -16976,7 +16976,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)</td>
+			<td>Kurator/FilteredPush event_date_qc event_date_qc Library (Morris & Lowery 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -17067,7 +17067,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)</td>
+			<td>Kurator/FilteredPush event_date_qc event_date_qc Library (Morris & Lowery 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -17114,7 +17114,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Is the value of dwc:day interpretable as a valid integer between 1 and 28 inclusive or 29, 30 or 31 given the relative month and year?</td>
+			<td>Is the value of dwc:day interpretable as a valid integer between 1 and 28 inclusive, or is it validly 29, 30 or 31 given the dwc:month and dwc:year?</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -17154,7 +17154,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)</td>
+			<td>Kurator/FilteredPush event_date_qc event_date_qc Library (Morris & Lowery 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -17245,7 +17245,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)</td>
+			<td>Kurator/FilteredPush event_date_qc event_date_qc Library (Morris & Lowery 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -17332,7 +17332,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -17383,7 +17383,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Does the value in dc:type occur as a value in the DCMI type vocabulary?</td>
+			<td>Does the value of dc:type occur as a value in the DCMI type vocabulary?</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -17403,7 +17403,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>This Test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters. EXTERNAL_PREREQUISITES_NOT_MET is not a necessary path in the specification, the type literals may be hard coded in a Test implementation without an external call</td>
+			<td>This Test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters. EXTERNAL_PREREQUISITES_NOT_MET is not a necessary path in the specification, the type literals may be hard coded in a Test implementation without an external call.</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
@@ -17427,7 +17427,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -17514,7 +17514,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -17601,7 +17601,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -17688,7 +17688,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -17775,7 +17775,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -17870,7 +17870,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -17969,7 +17969,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)</td>
+			<td>Kurator/FilteredPush event_date_qc event_date_qc Library (Morris & Lowery 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -18068,7 +18068,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -18123,7 +18123,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Is the value of dwc:eventDate entirely with the Parameter Range?</td>
+			<td>Is the value of dwc:eventDate entirely with the Parameter range?</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -18171,7 +18171,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)</td>
+			<td>Kurator/FilteredPush event_date_qc event_date_qc Library (Morris & Lowery 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -18262,7 +18262,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)</td>
+			<td>Kurator/FilteredPush event_date_qc event_date_qc Library (Morris & Lowery 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -18329,7 +18329,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>This Test should also pick up issues such as 29 Feb in a non leap year.</td>
+			<td>This Test should also pick up issues such as 29 Feb in a non-leap year.</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
@@ -18353,7 +18353,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)</td>
+			<td>Kurator/FilteredPush event_date_qc event_date_qc Library (Morris & Lowery 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -18420,7 +18420,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>Only fails if all of the relevant fields of the Darwin Core Event class are bdq:Empty or do not exist. Relevant Darwin Core fields include dwc:eventDate, dwc:verbatimEventDate, dwc:year, dwc:month, dwc:day, dwc:startDayOfYear, dwc:endDayOfYear. The terms dwc:eventID (if populated may or may not point to temporal information accessible to user of the data) and dwc:eventTime (which is rare) are not included.</td>
+			<td>Only fails if all of the relevant fields of the Darwin Core Event class are bdq:Empty or do not exist. Relevant Darwin Core fields include dwc:eventDate, dwc:verbatimEventDate, dwc:year, dwc:month, dwc:day, dwc:startDayOfYear, dwc:endDayOfYear. The terms dwc:eventID (if populated may or may not point to temporal information accessible to the user of the data) and dwc:eventTime (which is rare) are not included.</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
@@ -18444,7 +18444,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)</td>
+			<td>Kurator/FilteredPush event_date_qc event_date_qc Library (Morris & Lowery 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -18535,7 +18535,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)</td>
+			<td>Kurator/FilteredPush event_date_qc event_date_qc Library (Morris & Lowery 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -18586,7 +18586,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Does the value of dwc:family occur at rank of Family in the bdq:sourceAuthority?</td>
+			<td>Does the value of dwc:family occur at the rank of Family in the bdq:sourceAuthority?</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -18610,7 +18610,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>The purpose of this Test is to check whether the value is a name that is a result of a nomenclatural act at this rank. This excludes unpublished names, misspellings and vernacular names. It is expected that the Test will designate the source authority against to check. The same Test might return distinct results when using distinct source authorities.</td>
+			<td>The purpose of this Test is to check whether the value is a name that is a result of a nomenclatural act at this rank. This excludes unpublished names, misspellings and vernacular names. It is expected that the Test will designate the source authority against which to check. The same Test might return distinct results when using distinct source authorities.</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
@@ -18634,7 +18634,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</td>
+			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -18737,7 +18737,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</td>
+			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -18828,7 +18828,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -18895,7 +18895,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>Darwin Core recommends best practice is to use a controlled vocabulary. This Test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters. Chapman and Wieczorek (2020) recommend best practice is to use EPSG geographic CRS or Datum codes (https://epsg.io/) as a controlled vocabulary. Ideally, amend to the EPSG code for the geographic coordinate reference system (CRS), if known. Otherwise use the EPSG code for the geodetic datum, if known. Otherwise use the EPSG code of the ellipsoid, if known. If none of these is known, use the explicit value "not recorded". While "not recorded" is not a valid EPSG code, it is a valid value according to Darwin Core. The reference vocabularies of values for geodetic datums and ellipsoids needs to be made available should map alternative representations of dwc:geodeticDatum strings to EPSG codes, such as "WGS84", "WGS_84", "WGS:84", "WGS 84" all with standard value "EPSG:4326".</td>
+			<td>Darwin Core recommends best practice is to use a controlled vocabulary. This Test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters. Chapman and Wieczorek (2020) recommend best practice is to use EPSG geographic CRS or Datum codes (https://epsg.io/) as a controlled vocabulary. Ideally, amend to the EPSG code for the geographic coordinate reference system (CRS), if known. Otherwise use the EPSG code for the geodetic datum, if known. Otherwise use the EPSG code of the ellipsoid, if known. If none of these is known, use the explicit value "not recorded". While "not recorded" is not a valid EPSG code, it is a valid value according to Darwin Core. The reference vocabularies of values for geodetic datums and ellipsoids needs to be made available and should map alternative representations of dwc:geodeticDatum strings to EPSG codes, such as "WGS84", "WGS_84", "WGS:84", "WGS 84" all with standard value "EPSG:4326".</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
@@ -18919,7 +18919,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -18970,7 +18970,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Does the value of dwc:kingdom occur at rank of Kingdom in the bdq:sourceAuthority?</td>
+			<td>Does the value of dwc:kingdom occur at the rank of Kingdom in the bdq:sourceAuthority?</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -18994,7 +18994,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>The purpose of this Test is to check whether the value is a name that is a result of a nomenclatural act at this rank. This excludes unpublished names, misspellings and vernacular names. It is expected that the Test will designate the source authority against to check. The same Test might return distinct results when using distinct source authorities.</td>
+			<td>The purpose of this Test is to check whether the value is a name that is a result of a nomenclatural act at this rank. This excludes unpublished names, misspellings and vernacular names. It is expected that the Test will designate the source authority against which to check. The same Test might return distinct results when using distinct source authorities.</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
@@ -19018,7 +19018,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</td>
+			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -19109,7 +19109,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</td>
+			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -19176,7 +19176,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>The license at the record level might be derived from the license of the dataset from which the record is retrieved</td>
+			<td>The license at the record level might be derived from the license of the dataset from which the record is retrieved.</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
@@ -19200,7 +19200,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -19271,7 +19271,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>The license at the record level might be derived from the license of the dataset from which the record is retrieved. This Test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters. The canonical form of the Creative Commons license IRI has nothing after the version (e.g., https://creativecommons.org/licenses/by/4.0/), but may be followed by deed or legalcode e.g. https://creativecommons.org/licenses/by/4.0/deed and this may be followed by a language code. However, only some two letter language codes have translations, and some translations are identified by a longer string than the two letter language code. Errors in the language code, or specifying a language code for which a translation doesn't exist returns a 404 error instead of redirecting to the more general license IRI. As of 2024-02-28 deed.mi doesn't exist yet, but legalcode.mi does.</td>
+			<td>The license at the record level might be derived from the license of the dataset from which the record is retrieved. This Test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters. The canonical form of the Creative Commons license IRI has nothing after the version (e.g., https://creativecommons.org/licenses/by/4.0/), but may be followed by deed or legalcode e.g. https://creativecommons.org/licenses/by/4.0/deed and this may be followed by a language code. However, only some two-letter language codes have translations, and some translations are identified by a longer string than the two-letter language code. Errors in the language code, or specifying a language code for which a translation doesn't exist returns a 404 error instead of redirecting to the more general license IRI. As of 2024-02-28 deed.mi doesn't exist yet, but legalcode.mi does.</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
@@ -19295,7 +19295,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -19390,7 +19390,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -19465,7 +19465,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>The Challenger Deep in the Mariana Trench is the deepest known point in Earth's oceans at 10,994 meters. We have rounded up bdq:maximumValidDepthInMeters.</td>
+			<td>The Challenger Deep in the Mariana Trench is the deepest known point in Earth's oceans at 10,994 meters below sea level. We have rounded up bdq:maximumValidDepthInMeters.</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
@@ -19489,7 +19489,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -19544,7 +19544,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Is the value of dwc:maximumElevationInMeters of a single record within a valid range?</td>
+			<td>Is the value of dwc:maximumElevationInMeters within the Parameter range?</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -19568,7 +19568,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>We have rounded up the Parameter values. We are aware of sub-ice elevations in Antarctica to -3,500m and possible sampling in the atmosphere above the elevation of the top of Mt Everest that would fail this Test but we support the odd false positive.</td>
+			<td>We have rounded up the Parameter values. We are aware of sub-ice elevations in Antarctica to -3,500m and possible sampling in the atmosphere above the elevation of the top of Mt Everest should fail this Test if captured as elevation rather than as distanceAboveSurfaceInMeters. Elevations below the maximum elevation yet above the local surface will be false positives.</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
@@ -19592,7 +19592,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -19671,7 +19671,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>The Challenger Deep in the Mariana Trench is the deepest known point in Earth's oceans at 10,994 meters. We have rounded up bdq:maximumValidDepthInMeters.</td>
+			<td>The Challenger Deep in the Mariana Trench is the deepest known point in Earth's oceans at 10,994 meters below sea level. We have rounded up bdq:maximumValidDepthInMeters.</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
@@ -19695,7 +19695,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -19750,7 +19750,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Is the value of dwc:minimumDepthInMeters a number that is less than or equal to the value of dwc:maximumDepthInMeters?</td>
+			<td>Is the value of dwc:minimumDepthInMeters a number less than or equal to the value of dwc:maximumDepthInMeters?</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -19786,7 +19786,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -19861,7 +19861,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>We have rounded up the Parameter values. We are aware of sub-ice elevations in Antarctica to -3,500m and possible sampling in the atmosphere above the elevation of the top of Mt Everest that would fail this Test but we support the odd false positive.</td>
+			<td>We have rounded up the Parameter values. We are aware of sub-ice elevations in Antarctica to -3,500m and possible sampling in the atmosphere above the elevation of the top of Mt Everest should fail this Test if captured as elevation rather than as distanceAboveSurfaceInMeters. Elevations below the maximum elevation yet above the local surface will be false positives.</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
@@ -19885,7 +19885,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -19976,7 +19976,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -20063,7 +20063,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)</td>
+			<td>Kurator/FilteredPush event_date_qc event_date_qc Library (Morris & Lowery 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -20150,7 +20150,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</td>
+			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -20237,7 +20237,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -20324,7 +20324,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -20423,7 +20423,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -20474,7 +20474,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Does the value of dwc:order occur at rank of Order in bdq:sourceAuthority?</td>
+			<td>Does the value of dwc:order occur at the rank of Order in bdq:sourceAuthority?</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -20498,7 +20498,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>The purpose of this Test is to check whether the value is a name that is a result of a nomenclatural act at this rank. This excludes unpublished names, misspellings and vernacular names. It is expected that the Test will designate the source authority against to check. The same Test might return distinct results when using distinct source authorities.</td>
+			<td>The purpose of this Test is to check whether the value is a name that is a result of a nomenclatural act at this rank. This excludes unpublished names, misspellings and vernacular names. It is expected that the Test will designate the source authority against which to check. The same Test might return distinct results when using distinct source authorities.</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
@@ -20522,7 +20522,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</td>
+			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -20625,7 +20625,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -20680,7 +20680,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Does the value of dwc:phylum occur at rank of Phylum in the bdq:sourceAuthority?</td>
+			<td>Does the value of dwc:phylum occur at the rank of Phylum in the bdq:sourceAuthority?</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -20704,7 +20704,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>The purpose of this Test is to check whether the value is a name that is a result of a nomenclatural act at this rank. This excludes unpublished names, misspellings and vernacular names. It is expected that the Test will designate the source authority against to check. The same Test might return distinct results when using distinct source authorities.</td>
+			<td>The purpose of this Test is to check whether the value is a name that is a result of a nomenclatural act at this rank. This excludes unpublished names, misspellings and vernacular names. It is expected that the Test will designate the source authority against which to check. The same Test might return distinct results when using distinct source authorities.</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
@@ -20728,7 +20728,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</td>
+			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -20823,7 +20823,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</td>
+			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -20910,7 +20910,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</td>
+			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -21001,7 +21001,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</td>
+			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -21088,7 +21088,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</td>
+			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -21187,7 +21187,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</td>
+			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -21278,7 +21278,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</td>
+			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -21377,7 +21377,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -21476,7 +21476,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)</td>
+			<td>Kurator/FilteredPush event_date_qc event_date_qc Library (Morris & Lowery 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -21575,7 +21575,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -21666,7 +21666,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</td>
+			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -21765,7 +21765,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</td>
+			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -21836,7 +21836,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>This Tests for records that have no taxonomic (NAME) information. If there is any value for any of the Information Elements, this may be useful information. See example.</td>
+			<td>This tests for records that have no taxonomic (NAME) information. If there is any value for any of the Information Elements, this may be useful information. See example.</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
@@ -21860,7 +21860,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</td>
+			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -21935,7 +21935,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>There are any number of potential controlled vocabularies that might be used for this Test, including local vocabularies and taxon specific vocabularies. If dwc:scientificNameID is empty, use dwc:scientificName and dwc:CultivarEpithet to search for a unique taxon. If dwc:scientificName is bdq:Empty, check with the terms that form atomic parts of it (dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:taxonRank, dwc:scientificNameAuthorship), and if more than one match is found, use the remaining terms to try to disambiguate to a single Taxon record. The terms dwc:subgenus, dwc:genus, dwc:family, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:scientificNameID,, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID should not be used to make a match if dwc:scientificNameID and dwc:scientificName or dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:taxonRank, dwc:scientificNameAuthorship are bdq:Empty. Note that Test VALIDATION_SCIENTIFICNAME_FOUND (4c09f127-737b-4686-82a0-7c8e30841590) is a more specific Test for a subset of Information Elements from this Test.</td>
+			<td>There are any number of potential controlled vocabularies that might be used for this Test, including local vocabularies and taxon specific vocabularies. If dwc:scientificNameID is bdq:Empty, use dwc:scientificName and dwc:CultivarEpithet to search for a unique taxon. If dwc:scientificName is bdq:Empty, check with the terms that form atomic parts of it (dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:taxonRank, dwc:scientificNameAuthorship), and if more than one match is found, use the remaining terms to try to disambiguate to a single Taxon record. The terms dwc:subgenus, dwc:genus, dwc:family, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:scientificNameID,, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID should not be used to make a match if dwc:scientificNameID and dwc:scientificName or dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:taxonRank, dwc:scientificNameAuthorship are bdq:Empty. Note that Test VALIDATION_SCIENTIFICNAME_FOUND (4c09f127-737b-4686-82a0-7c8e30841590) is a more specific Test for a subset of Information Elements from this Test.</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
@@ -21959,7 +21959,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</td>
+			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -22062,7 +22062,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -22165,7 +22165,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)</td>
+			<td>Kurator/FilteredPush event_date_qc event_date_qc Library (Morris & Lowery 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -22256,7 +22256,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)</td>
+			<td>Kurator/FilteredPush event_date_qc event_date_qc Library (Morris & Lowery 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>

@@ -261,7 +261,7 @@ Acts upon  SingleRecord
 
 #### Description
 
-Does the value in dc:type occur as a value in the DCMI type vocabulary?
+Does the value of dc:type occur as a value in the DCMI type vocabulary?
 
 #### Specification
 
@@ -289,7 +289,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Reco
 
 #### Notes
 
-This Test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters. EXTERNAL_PREREQUISITES_NOT_MET is not a necessary path in the specification, the type literals may be hard coded in a Test implementation without an external call
+This Test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters. EXTERNAL_PREREQUISITES_NOT_MET is not a necessary path in the specification, the type literals may be hard coded in a Test implementation without an external call.
 
 [🠱](#indexes-to-the-tests)
 ********************
@@ -326,7 +326,7 @@ bdq:Record-Management
 
 #### Notes
 
-The license at the record level might be derived from the license of the dataset from which the record is retrieved
+The license at the record level might be derived from the license of the dataset from which the record is retrieved.
 
 [🠱](#indexes-to-the-tests)
 ********************
@@ -371,7 +371,7 @@ bdq:Record-Management
 
 #### Notes
 
-The license at the record level might be derived from the license of the dataset from which the record is retrieved. This Test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters. The canonical form of the Creative Commons license IRI has nothing after the version (e.g., https://creativecommons.org/licenses/by/4.0/), but may be followed by deed or legalcode e.g. https://creativecommons.org/licenses/by/4.0/deed and this may be followed by a language code. However, only some two letter language codes have translations, and some translations are identified by a longer string than the two letter language code. Errors in the language code, or specifying a language code for which a translation doesn't exist returns a 404 error instead of redirecting to the more general license IRI. As of 2024-02-28 deed.mi doesn't exist yet, but legalcode.mi does.
+The license at the record level might be derived from the license of the dataset from which the record is retrieved. This Test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters. The canonical form of the Creative Commons license IRI has nothing after the version (e.g., https://creativecommons.org/licenses/by/4.0/), but may be followed by deed or legalcode e.g. https://creativecommons.org/licenses/by/4.0/deed and this may be followed by a language code. However, only some two-letter language codes have translations, and some translations are identified by a longer string than the two-letter language code. Errors in the language code, or specifying a language code for which a translation doesn't exist returns a 404 error instead of redirecting to the more general license IRI. As of 2024-02-28 deed.mi doesn't exist yet, but legalcode.mi does.
 
 [🠱](#indexes-to-the-tests)
 ********************
@@ -418,7 +418,7 @@ bdq:Spatial-Temporal_Patterns
 
 #### Notes
 
-dwc:coordinatePrecicision and dwc:coordinateUncertaintyInMeters (if present) imply a potential displacement of the provided coordinates. These two terms can be considered spatial buffers. Likewise, country polygons cannot be 100% accurate at all scales (Dooley 2005), so a spatial buffer of the country boundaries is justified. When dwc:countryCode=XZ (for High Seas), the coordinate should fall into a marine region out side of the EEZ of any country. Taking the spatial buffers into account does however greatly complicate both the logic and the implementation of such Tests. The same applies to potential conversion of the Spatial Reference System (SRS) of dwc:decimalLatitude and dwc:decimalLongitude to the SRS used in the bdq:sourceAuthority.
+dwc:coordinatePrecision and dwc:coordinateUncertaintyInMeters (if present) imply a potential displacement of the provided coordinates. These two terms can be considered spatial buffers. Likewise, country polygons cannot be 100% accurate at all scales (Dooley 2005), so a spatial buffer of the country boundaries is justified. When dwc:countryCode=XZ (for High Seas), the coordinate should fall into a marine region out side of the EEZ of any country. Taking the spatial buffers into account does however greatly complicate both the logic and the implementation of such Tests. The same applies to potential conversion of the Spatial Reference System (SRS) of dwc:decimalLatitude and dwc:decimalLongitude to the SRS used in the bdq:sourceAuthority.
 
 [🠱](#indexes-to-the-tests)
 ********************
@@ -511,7 +511,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 #### Notes
 
-dwc:coordinatePrecicision and dwc:coordinateUncertaintyInMeters (if present) imply a potential displacement of the provided coordinates. These two terms can be considered spatial buffers. Likewise, country polygons cannot be 100% accurate at all scales (Dooley 2005), so a spatial buffer of the country boundaries is justified. Taking the spatial buffers into account does however greatly complicate both the logic and the implementation of such Tests. The same applies to potential conversion of the Spatial Reference System (SRS) of dwc:decimalLatitude and dwc:decimalLongitude to the SRS used in the bdq:sourceAuthority. Note that in the current implementation Tests treat "brackish" in WoRMS as both marine and terrestrial. Note that both bdq:taxonIsMarine and bdq:geospatialLand are bdq:sourceAuthorities, but as they form two parameters, distinct names are used for them.
+dwc:coordinatePrecision and dwc:coordinateUncertaintyInMeters (if present) imply a potential displacement of the provided coordinates. These two terms can be considered spatial buffers. Likewise, country polygons cannot be 100% accurate at all scales (Dooley 2005), so a spatial buffer of the country boundaries is justified. Taking the spatial buffers into account does however greatly complicate both the logic and the implementation of such Tests. The same applies to potential conversion of the Spatial Reference System (SRS) of dwc:decimalLatitude and dwc:decimalLongitude to the SRS used in the bdq:sourceAuthority. Note that in the current implementation Tests treat "brackish" in WoRMS as both marine and terrestrial. Note that both bdq:taxonIsMarine and bdq:geospatialLand are bdq:sourceAuthorities, but as they form two parameters, distinct names are used for them.
 
 [🠱](#indexes-to-the-tests)
 ********************
@@ -548,7 +548,7 @@ bdq:Spatial-Temporal_Patterns
 
 #### Notes
 
-A record with 0.0 is interpreted as the string "0"
+A record with 0.0 is interpreted as the string "0".
 
 [🠱](#indexes-to-the-tests)
 ********************
@@ -749,7 +749,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 #### Notes
 
-See table https://github.com/tdwg/bdq/issues/95#issuecomment-1226450014. A fail condition may arise from the content being internally inconsistent (not all of the information can be true at the same time), or from the vocabulary being incapable of uniquely resolving the combination of term values. This Test specifically does not consider the content of dwc:higherGeography. If dwc:country contains a value and dwc:stateProvince does not, this Test will return NOT_COMPLIANT. Use cases where knowledge to the level of country is adequate for the fitness of the data should not include this Test. @tucotuco: "Of #200 and #201, #201 is the strongest Test. If it passes for a record, #200 must necessarily also pass and doesn't tell you anything. If #201 fails,#200 could still pass and that would tell you that there are multiple matches on the dwc:country/dwc:stateProvince combo: It would tell you the nature of the problem. Along with #42 (dwc:country not empty), #200 would tell you whether there was an ambiguous combination of country (not empty) and dwc:stateProvince, such as would happen with Argentina/Buenos Aires. While if country is empty, then the ambiguity is purely at the dwc:stateProvince level".
+See table https://github.com/tdwg/bdq/issues/95#issuecomment-1226450014. A fail condition may arise from the content being internally inconsistent (not all of the information can be true at the same time), or from the vocabulary being incapable of uniquely resolving the combination of term values. This Test specifically does not consider the content of dwc:higherGeography. If dwc:country contains a value and dwc:stateProvince does not, this Test will return NOT_COMPLIANT. Use cases where knowledge to the level of country is adequate for the fitness of the data should not include this Test. @tucotuco: "Of #200 and #201, #201 is the strongest Test. If it passes for a record, #200 must necessarily also pass and doesn't tell you anything. If #201 fails, #200 could still pass and that would tell you that there are multiple matches on the dwc:country/dwc:stateProvince combo: It would tell you the nature of the problem. Along with #42 (dwc:country not empty), #200 would tell you whether there was an ambiguous combination of country (not empty) and dwc:stateProvince, such as would happen with Argentina/Buenos Aires. While if country is empty, then the ambiguity is purely at the dwc:stateProvince level".
 
 [🠱](#indexes-to-the-tests)
 ********************
@@ -794,7 +794,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 #### Notes
 
-Non-country information such as "high seas" will fail this Test (High Seas should use dwc:countryCode = "XZ" and have dwc:country empty). Getty Place Types for administrative level "nation" are 81010 nation, 81011 independent sovereign nation, and 81012 independent nation. Multiple values in the dwc:country field (whether to signify on a border or in a list of possibilities) will fail this Test. Locations outside of a jurisdiction covered by a country code should not have a value in the field dwc:countryCode. This Test should find any matches at the Getty "nation" level including internationalized names and historical representations of that nation (where boundaries are same). This Test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.
+Non-country information such as "high seas" will fail this Test (high seas should use dwc:countryCode = "XZ" and have dwc:country empty). Getty Place Types for administrative level "nation" are 81010 nation, 81011 independent sovereign nation, and 81012 independent nation. Multiple values in the dwc:country field (whether to signify on a border or in a list of possibilities) will fail this Test. Locations outside of a jurisdiction covered by a country code should not have a value in the field dwc:countryCode. This Test should find any matches at the Getty "nation" level including internationalized names and historical representations of that nation (where boundaries are same). This Test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.
 
 [🠱](#indexes-to-the-tests)
 ********************
@@ -834,7 +834,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 #### Notes
 
-Country is expected to be either bdq:Empty or ideally have a value of "High seas" or an agreed equivalent if material comes from the high seas, or from those portions of Antarctica outside of any sovereign nation.
+Country is expected to be either bdq:Empty or, ideally, have a value of "High seas" or an agreed equivalent if material comes from the high seas, or from those portions of Antarctica outside of any sovereign nation.
 
 [🠱](#indexes-to-the-tests)
 ********************
@@ -1040,7 +1040,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 #### Notes
 
-Darwin Core recommends best practice is to use a controlled vocabulary. This Test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters. Chapman and Wieczorek (2020) recommend best practice is to use EPSG geographic CRS or Datum codes (https://epsg.io/) as a controlled vocabulary. Ideally, amend to the EPSG code for the geographic coordinate reference system (CRS), if known. Otherwise use the EPSG code for the geodetic datum, if known. Otherwise use the EPSG code of the ellipsoid, if known. If none of these is known, use the explicit value "not recorded". While "not recorded" is not a valid EPSG code, it is a valid value according to Darwin Core. The reference vocabularies of values for geodetic datums and ellipsoids needs to be made available should map alternative representations of dwc:geodeticDatum strings to EPSG codes, such as "WGS84", "WGS_84", "WGS:84", "WGS 84" all with standard value "EPSG:4326".
+Darwin Core recommends best practice is to use a controlled vocabulary. This Test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters. Chapman and Wieczorek (2020) recommend best practice is to use EPSG geographic CRS or Datum codes (https://epsg.io/) as a controlled vocabulary. Ideally, amend to the EPSG code for the geographic coordinate reference system (CRS), if known. Otherwise use the EPSG code for the geodetic datum, if known. Otherwise use the EPSG code of the ellipsoid, if known. If none of these is known, use the explicit value "not recorded". While "not recorded" is not a valid EPSG code, it is a valid value according to Darwin Core. The reference vocabularies of values for geodetic datums and ellipsoids needs to be made available and should map alternative representations of dwc:geodeticDatum strings to EPSG codes, such as "WGS84", "WGS_84", "WGS:84", "WGS 84" all with standard value "EPSG:4326".
 
 [🠱](#indexes-to-the-tests)
 ********************
@@ -1122,7 +1122,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 #### Notes
 
-The Challenger Deep in the Mariana Trench is the deepest known point in Earth's oceans at 10,994 meters. We have rounded up bdq:maximumValidDepthInMeters.
+The Challenger Deep in the Mariana Trench is the deepest known point in Earth's oceans at 10,994 meters below sea level. We have rounded up bdq:maximumValidDepthInMeters.
 
 [🠱](#indexes-to-the-tests)
 ********************
@@ -1135,7 +1135,7 @@ Acts upon  SingleRecord
 
 #### Description
 
-Is the value of dwc:maximumElevationInMeters of a single record within a valid range?
+Is the value of dwc:maximumElevationInMeters within the Parameter range?
 
 #### Specification
 
@@ -1167,7 +1167,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 #### Notes
 
-We have rounded up the Parameter values. We are aware of sub-ice elevations in Antarctica to -3,500m and possible sampling in the atmosphere above the elevation of the top of Mt Everest that would fail this Test but we support the odd false positive.
+We have rounded up the Parameter values. We are aware of sub-ice elevations in Antarctica to -3,500m and possible sampling in the atmosphere above the elevation of the top of Mt Everest should fail this Test if captured as elevation rather than as distanceAboveSurfaceInMeters. Elevations below the maximum elevation yet above the local surface will be false positives.
 
 [🠱](#indexes-to-the-tests)
 ********************
@@ -1212,7 +1212,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 #### Notes
 
-The Challenger Deep in the Mariana Trench is the deepest known point in Earth's oceans at 10,994 meters. We have rounded up bdq:maximumValidDepthInMeters.
+The Challenger Deep in the Mariana Trench is the deepest known point in Earth's oceans at 10,994 meters below sea level. We have rounded up bdq:maximumValidDepthInMeters.
 
 [🠱](#indexes-to-the-tests)
 ********************
@@ -1225,7 +1225,7 @@ Acts upon  SingleRecord
 
 #### Description
 
-Is the value of dwc:minimumDepthInMeters a number that is less than or equal to the value of dwc:maximumDepthInMeters?
+Is the value of dwc:minimumDepthInMeters a number less than or equal to the value of dwc:maximumDepthInMeters?
 
 #### Specification
 
@@ -1290,7 +1290,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 #### Notes
 
-We have rounded up the Parameter values. We are aware of sub-ice elevations in Antarctica to -3,500m and possible sampling in the atmosphere above the elevation of the top of Mt Everest that would fail this Test but we support the odd false positive.
+We have rounded up the Parameter values. We are aware of sub-ice elevations in Antarctica to -3,500m and possible sampling in the atmosphere above the elevation of the top of Mt Everest should fail this Test if captured as elevation rather than as distanceAboveSurfaceInMeters. Elevations below the maximum elevation yet above the local surface will be false positives.
 
 [🠱](#indexes-to-the-tests)
 ********************
@@ -1381,7 +1381,7 @@ Acts upon  SingleRecord
 
 #### Description
 
-Is the value of dwc:day interpretable as a valid integer between 1 and 28 inclusive or 29, 30 or 31 given the relative month and year?
+Is the value of dwc:day interpretable as a valid integer between 1 and 28 inclusive, or is it validly 29, 30 or 31 given the dwc:month and dwc:year?
 
 #### Specification
 
@@ -1495,7 +1495,7 @@ Acts upon  SingleRecord
 
 #### Description
 
-Is the value of dwc:eventDate entirely with the Parameter Range?
+Is the value of dwc:eventDate entirely with the Parameter range?
 
 #### Specification
 
@@ -1597,7 +1597,7 @@ bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Bio
 
 #### Notes
 
-This Test should also pick up issues such as 29 Feb in a non leap year.
+This Test should also pick up issues such as 29 Feb in a non-leap year.
 
 [🠱](#indexes-to-the-tests)
 ********************
@@ -1634,7 +1634,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 #### Notes
 
-Only fails if all of the relevant fields of the Darwin Core Event class are bdq:Empty or do not exist. Relevant Darwin Core fields include dwc:eventDate, dwc:verbatimEventDate, dwc:year, dwc:month, dwc:day, dwc:startDayOfYear, dwc:endDayOfYear. The terms dwc:eventID (if populated may or may not point to temporal information accessible to user of the data) and dwc:eventTime (which is rare) are not included.
+Only fails if all of the relevant fields of the Darwin Core Event class are bdq:Empty or do not exist. Relevant Darwin Core fields include dwc:eventDate, dwc:verbatimEventDate, dwc:year, dwc:month, dwc:day, dwc:startDayOfYear, dwc:endDayOfYear. The terms dwc:eventID (if populated may or may not point to temporal information accessible to the user of the data) and dwc:eventTime (which is rare) are not included.
 
 [🠱](#indexes-to-the-tests)
 ********************
@@ -1835,7 +1835,7 @@ Acts upon  SingleRecord
 
 #### Description
 
-Is the value of dwc:dateIdentified within Parameter ranges and either overlap or is later than dwc:eventDate?
+Is the value of dwc:dateIdentified within Parameters range and does it overlap with or is it later than dwc:eventDate?
 
 #### Specification
 
@@ -1855,7 +1855,7 @@ bdq:earliestValidDate,bdq:latestValidDate,bdq:includeEventDate
 
 #### Default Parameter Values
 
-,bdq:earliestValidDate default = "1753-01-01",bdq:latestValidDate default = "{current day}",bdq:includeEventDate default = "true"
+bdq:earliestValidDate default = "1753-01-01",bdq:latestValidDate default = "{current day}",bdq:includeEventDate default = "true"
 
 #### Examples
 
@@ -1870,7 +1870,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Taxon-Management
 
 #### Notes
 
-There may be valid identifications prior to Linnaeus, but this Test will flag these under the default value of bdq:earliestValidDate, as for most biodiversity data, pre-linnaean identification dates are likely to be errors. If a parameter is not set, then the default is 1753-01-01. This Test will, by design, flag as problematic cases (such as LTER plots and marine mammal sightings) where a known individual organism is identified by a specialist and then subsequently observed without new taxonomic identifications being made.
+There may be valid identifications prior to Linnaeus, but this Test will flag these under the default value of bdq:earliestValidDate, as for most biodiversity data, pre-Linnaean identification dates are likely to be errors. If a parameter is not set, then the default is 1753-01-01. This Test will, by design, flag as problematic cases (such as LTER plots and marine mammal sightings) where a known individual organism is identified by a specialist and then subsequently observed without new taxonomic identifications being made.
 
 [🠱](#indexes-to-the-tests)
 ********************
@@ -2297,7 +2297,7 @@ Acts upon  SingleRecord
 
 #### Description
 
-Does the value of dwc:class occur at rank of Class in bdq:sourceAuthority?
+Does the value of dwc:class occur at the rank of Class in bdq:sourceAuthority?
 
 #### Specification
 
@@ -2329,7 +2329,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relat
 
 #### Notes
 
-The purpose of this Test is to check whether the value is a name that is a result of a nomenclatural act at this rank. This excludes unpublished names, misspellings and vernacular names. It is expected that the Test will designate the source authority against to check. The same Test might return distinct results when using distinct source authorities.
+The purpose of this Test is to check whether the value is a name that is a result of a nomenclatural act at this rank. This excludes unpublished names, misspellings and vernacular names. It is expected that the Test will designate the source authority against which to check. The same Test might return distinct results when using distinct source authorities.
 
 [🠱](#indexes-to-the-tests)
 ********************
@@ -2342,7 +2342,7 @@ Acts upon  SingleRecord
 
 #### Description
 
-Does the value of dwc:family occur at rank of Family in the bdq:sourceAuthority?
+Does the value of dwc:family occur at the rank of Family in the bdq:sourceAuthority?
 
 #### Specification
 
@@ -2374,7 +2374,7 @@ bdq:Record-Management, bdq:Taxon-Management
 
 #### Notes
 
-The purpose of this Test is to check whether the value is a name that is a result of a nomenclatural act at this rank. This excludes unpublished names, misspellings and vernacular names. It is expected that the Test will designate the source authority against to check. The same Test might return distinct results when using distinct source authorities.
+The purpose of this Test is to check whether the value is a name that is a result of a nomenclatural act at this rank. This excludes unpublished names, misspellings and vernacular names. It is expected that the Test will designate the source authority against which to check. The same Test might return distinct results when using distinct source authorities.
 
 [🠱](#indexes-to-the-tests)
 ********************
@@ -2432,7 +2432,7 @@ Acts upon  SingleRecord
 
 #### Description
 
-Does the value of dwc:kingdom occur at rank of Kingdom in the bdq:sourceAuthority?
+Does the value of dwc:kingdom occur at the rank of Kingdom in the bdq:sourceAuthority?
 
 #### Specification
 
@@ -2464,7 +2464,7 @@ bdq:Record-Management, bdq:Taxon-Management
 
 #### Notes
 
-The purpose of this Test is to check whether the value is a name that is a result of a nomenclatural act at this rank. This excludes unpublished names, misspellings and vernacular names. It is expected that the Test will designate the source authority against to check. The same Test might return distinct results when using distinct source authorities.
+The purpose of this Test is to check whether the value is a name that is a result of a nomenclatural act at this rank. This excludes unpublished names, misspellings and vernacular names. It is expected that the Test will designate the source authority against which to check. The same Test might return distinct results when using distinct source authorities.
 
 [🠱](#indexes-to-the-tests)
 ********************
@@ -2543,7 +2543,7 @@ Acts upon  SingleRecord
 
 #### Description
 
-Does the value of dwc:order occur at rank of Order in bdq:sourceAuthority?
+Does the value of dwc:order occur at the rank of Order in bdq:sourceAuthority?
 
 #### Specification
 
@@ -2575,7 +2575,7 @@ bdq:Record-Management, bdq:Taxon-Management
 
 #### Notes
 
-The purpose of this Test is to check whether the value is a name that is a result of a nomenclatural act at this rank. This excludes unpublished names, misspellings and vernacular names. It is expected that the Test will designate the source authority against to check. The same Test might return distinct results when using distinct source authorities.
+The purpose of this Test is to check whether the value is a name that is a result of a nomenclatural act at this rank. This excludes unpublished names, misspellings and vernacular names. It is expected that the Test will designate the source authority against which to check. The same Test might return distinct results when using distinct source authorities.
 
 [🠱](#indexes-to-the-tests)
 ********************
@@ -2588,7 +2588,7 @@ Acts upon  SingleRecord
 
 #### Description
 
-Does the value of dwc:phylum occur at rank of Phylum in the bdq:sourceAuthority?
+Does the value of dwc:phylum occur at the rank of Phylum in the bdq:sourceAuthority?
 
 #### Specification
 
@@ -2620,7 +2620,7 @@ bdq:Record-Management, bdq:Taxon-Management
 
 #### Notes
 
-The purpose of this Test is to check whether the value is a name that is a result of a nomenclatural act at this rank. This excludes unpublished names, misspellings and vernacular names. It is expected that the Test will designate the source authority against to check. The same Test might return distinct results when using distinct source authorities.
+The purpose of this Test is to check whether the value is a name that is a result of a nomenclatural act at this rank. This excludes unpublished names, misspellings and vernacular names. It is expected that the Test will designate the source authority against which to check. The same Test might return distinct results when using distinct source authorities.
 
 [🠱](#indexes-to-the-tests)
 ********************
@@ -2953,7 +2953,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Reco
 
 #### Notes
 
-This Tests for records that have no taxonomic (NAME) information. If there is any value for any of the Information Elements, this may be useful information. See example.
+This tests for records that have no taxonomic (NAME) information. If there is any value for any of the Information Elements, this may be useful information. See example.
 
 [🠱](#indexes-to-the-tests)
 ********************
@@ -2998,7 +2998,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Reco
 
 #### Notes
 
-There are any number of potential controlled vocabularies that might be used for this Test, including local vocabularies and taxon specific vocabularies. If dwc:scientificNameID is empty, use dwc:scientificName and dwc:CultivarEpithet to search for a unique taxon. If dwc:scientificName is bdq:Empty, check with the terms that form atomic parts of it (dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:taxonRank, dwc:scientificNameAuthorship), and if more than one match is found, use the remaining terms to try to disambiguate to a single Taxon record. The terms dwc:subgenus, dwc:genus, dwc:family, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:scientificNameID,, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID should not be used to make a match if dwc:scientificNameID and dwc:scientificName or dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:taxonRank, dwc:scientificNameAuthorship are bdq:Empty. Note that Test VALIDATION_SCIENTIFICNAME_FOUND (4c09f127-737b-4686-82a0-7c8e30841590) is a more specific Test for a subset of Information Elements from this Test.
+There are any number of potential controlled vocabularies that might be used for this Test, including local vocabularies and taxon specific vocabularies. If dwc:scientificNameID is bdq:Empty, use dwc:scientificName and dwc:CultivarEpithet to search for a unique taxon. If dwc:scientificName is bdq:Empty, check with the terms that form atomic parts of it (dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:taxonRank, dwc:scientificNameAuthorship), and if more than one match is found, use the remaining terms to try to disambiguate to a single Taxon record. The terms dwc:subgenus, dwc:genus, dwc:family, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:scientificNameID,, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID should not be used to make a match if dwc:scientificNameID and dwc:scientificName or dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:taxonRank, dwc:scientificNameAuthorship are bdq:Empty. Note that Test VALIDATION_SCIENTIFICNAME_FOUND (4c09f127-737b-4686-82a0-7c8e30841590) is a more specific Test for a subset of Information Elements from this Test.
 
 [🠱](#indexes-to-the-tests)
 ********************
@@ -3019,7 +3019,7 @@ The number of Tests of output type AMENDMENT that have been run against the reco
 
 #### Information Elements
 Consulted: 
-bdq:AllAmendmentTestsRunOnSingleRecord"
+bdq:AllAmendmentTestsRunOnSingleRecord
 
 #### Examples
 
@@ -3252,7 +3252,7 @@ bdq:Spatial-Temporal_Patterns
 
 #### Notes
 
-We have increased the buffer to 5000 meters to cater for differences that may have arisen due to the difference in geodetic datums
+We have increased the buffer to 5000 meters to cater for differences that may have arisen due to the difference in geodetic datums.
 
 [🠱](#indexes-to-the-tests)
 ********************
@@ -3561,7 +3561,7 @@ Acts upon  SingleRecord
 
 #### Description
 
-Proposes an amendment to the value of dwc:countryCode if dwc:decimalLatitude and dwc:decimalLongitude fall within a boundary from the bdq:countryShapes that is attributable to a single valid country code.
+Proposes an amendment to the value of dwc:countryCode if dwc:decimalLatitude and dwc:decimalLongitude fall within a boundary from the bdq:countryShapes that is attributable to a single valid ISO 3166-1-alpha-2 country code.
 
 #### Specification
 
@@ -3596,7 +3596,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 #### Notes
 
-This amendment simply fills dwc:countryCode from a lookup of dwc:decimalLatitude and dwc:decimalLongitude. dwc:coordinateUncertaintyInMeters and dwc:coordinatePrecicision (if present) imply a buffer around the provided coordinates. Likewise, country polygons cannot be 100% accurate at all scales (Dooley 2005), so a spatial buffer of the country boundaries is also justified. Taking spatial buffers into account does however greatly complicate the logic and the implementation of this and related Tests. In this Test, a detection of multiple country codes by sampling within the buffer while possible, is not considered.
+This amendment simply fills dwc:countryCode from a lookup of dwc:decimalLatitude and dwc:decimalLongitude. dwc:coordinateUncertaintyInMeters and dwc:coordinatePrecision (if present) imply a buffer around the provided coordinates. Likewise, country polygons cannot be 100% accurate at all scales (Dooley 2005), so a spatial buffer of the country boundaries is also justified. Taking spatial buffers into account does, however, greatly complicate the logic and the implementation of this and related Tests. In this Test, a detection of multiple country codes by sampling within the buffer, while possible, is not considered.
 
 [🠱](#indexes-to-the-tests)
 ********************
@@ -3637,7 +3637,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 #### Notes
 
-This Test supports conformance with the recommendation in the comment on dwc:countryCode: "Recommended best practice is to use an ISO 3166-1-alpha-2 country code." Three letter codes should be amended to the matching two letter code.
+This Test supports conformance with the recommendation in the comment on dwc:countryCode: "Recommended best practice is to use an ISO 3166-1-alpha-2 country code." Three letter codes should be amended to the matching two-letter code.
 
 [🠱](#indexes-to-the-tests)
 ********************
@@ -3685,7 +3685,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 #### Notes
 
-The value of dwc:geodeticDatum applies to dwc:decimalLatitude and dwc:decimalLongitude, thus EPSG:4326 https://epsg.org/crs_4326/WGS-84.html is the appropriate EPSG code as it applies to the WGS84 datum used with a geographic coordinate system. If the dwc:coordinateUncertaintyInMeters is bdq:Empty, not interpretable, or not valid, this amendment should not provide a dwc:coordinateUncertaintyInMeters. If the dwc:coordinateUncertaintyInMeters is bdqNotEmpty and is valid, this amendment should add to the dwc:coordinateUncertaintyInMeters the uncertainty contributed by the maximum datum shift at the given coordinates. Since different systems have differing requirements for what the default datum should be, it is left unspecified, but should match whatever the target datum is in AMENDMENT_COORDINATES_CONVERTED (620749b9-7d9c-4890-97d2-be3d1cde6da8). After the amendment is performed, the dwc:geodeticDatum field should be the assumed default datum as parameterized. An example implementation to determine the uncertainty added by asserting a default datum (datum shift) where a known datum is not declared can be found in [datumshiftproj.py](https://github.com/VertNet/georefcalculator/blob/master/source/python/datumshiftproj.py) in the source code for the [Georeferencing Calculator](http://georeferencing.org/georefcalculator/gc.html) (Wieczorek & Wieczorek 2021). Included in the source code is a [5-degree grid](https://github.com/VertNet/georefcalculator/blob/master/datumerrordata.js) of datum shifts from an unknown datum to WGS84.
+The value of dwc:geodeticDatum applies to dwc:decimalLatitude and dwc:decimalLongitude, thus EPSG:4326 (https://epsg.org/crs_4326/WGS-84.html) is the appropriate EPSG code as it applies to the WGS84 datum used with a geographic coordinate system. If the dwc:coordinateUncertaintyInMeters is bdq:Empty, not interpretable, or not valid, this amendment should not provide a dwc:coordinateUncertaintyInMeters. If the dwc:coordinateUncertaintyInMeters is bdq:NotEmpty and is valid, this amendment should add to the dwc:coordinateUncertaintyInMeters the uncertainty contributed by the maximum datum shift at the given coordinates. Since different systems have differing requirements for what the default datum should be, it is left unspecified, but should match whatever the target datum is in AMENDMENT_COORDINATES_CONVERTED (620749b9-7d9c-4890-97d2-be3d1cde6da8). After the amendment is performed, the dwc:geodeticDatum field should be the assumed default datum as parameterized. An example implementation to determine the uncertainty added by asserting a default datum (datum shift) where a known datum is not declared can be found in [datumshiftproj.py](https://github.com/VertNet/georefcalculator/blob/master/source/python/datumshiftproj.py) in the source code for the [Georeferencing Calculator](http://georeferencing.org/georefcalculator/gc.html) (Wieczorek & Wieczorek 2021). Included in the source code is a [5-degree grid](https://github.com/VertNet/georefcalculator/blob/master/datumerrordata.js) of datum shifts from an unknown datum to WGS84.
 
 [🠱](#indexes-to-the-tests)
 ********************
@@ -3726,7 +3726,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 #### Notes
 
-Chapman and Wieczorek (2020) recommend best practice is to use EPSG codes (https://epsg.io/) as a controlled vocabulary. Ideally, amend to the EPSG code for the geographic coordinate reference system (CRS), if known. Otherwise use the EPSG code for the geodetic datum, if known. Otherwise use the EPSG code of the ellipsoid, if known. If none of these is known, use the explicit value "not recorded". The reference vocabularies of values for geodetic datums and ellipsoids needs to be made available should map alternative representations of dwc:geodeticDatum strings to EPSG codes, such as "WGS84", "WGS_84", "WGS:84", "WGS 84" all with standard value "epsg:4326". NB. Do NOT change one datum to any other datum no matter how close they are or may appear to be. The same treatment should be given to all datums, which is to use their transformation algorithms to get the equivalent in epsg:4326. For reference, a vocabulary of synonyms for EPSG codes for values of dwc:geodeticDatum can be found at https://registry.gbif.org/vocabulary/GeodeticDatum/concepts and and for more information on obtaining the EPSG dataset, see https://docs.geotools.org/latest/userguide/library/referencing/epsg.html. For the purposes of this Test "not recorded" is not a value in the bdq:sourceAuthority and should result in NOT_AMENDED.
+Chapman and Wieczorek (2020) recommend best practice is to use EPSG codes (https://epsg.io/) as a controlled vocabulary. Ideally, amend to the EPSG code for the geographic coordinate reference system (CRS), if known. Otherwise use the EPSG code for the geodetic datum, if known. Otherwise use the EPSG code of the ellipsoid, if known. If none of these is known, use the explicit value "not recorded". The reference vocabularies of values for geodetic datums and ellipsoids needs to be made available and should map alternative representations of dwc:geodeticDatum strings to EPSG codes, such as "WGS84", "WGS_84", "WGS:84", "WGS 84", all with standard value "epsg:4326". NB. Do NOT change one datum to any other datum no matter how close they are or may appear to be. The same treatment should be given to all datums, which is to use their transformation algorithms to get the equivalent in epsg:4326. For reference, a vocabulary of synonyms for EPSG codes for values of dwc:geodeticDatum can be found at https://registry.gbif.org/vocabulary/GeodeticDatum/concepts and and for more information on obtaining the EPSG dataset, see https://docs.geotools.org/latest/userguide/library/referencing/epsg.html. For the purposes of this Test "not recorded" is not a value in the bdq:sourceAuthority and should result in NOT_AMENDED.
 
 [🠱](#indexes-to-the-tests)
 ********************
@@ -3923,7 +3923,7 @@ bdq:Record-Management
 
 #### Notes
 
-An attempt to populate dwc:eventDate from dwc:verbatimEventDate and from dwc:startDayOfYear and dwc:endDayOfYear should be made before this Test is run. If dwc:year and dwc:day are present and interpretable, but dwc:month is not supplied or is not interpretable, then just the year should be given as the proposed amendment. This Test assumes that that dwc:year, dwc:month, dwc:day are in a Gregorian calendar, and that only those three pieces of information are needed to produce a dwc:eventDate (explicitly in ISO 8601-1 format, and thus using the Gregorian calendar). When running the Test, the original precision, e.g. dwc:year=1980, dwc:month=1 should be retained, e.g. dwc:eventDate should become 1980-01, not 1980-01-01/1980-01-3.
+An attempt to populate dwc:eventDate from dwc:verbatimEventDate and from dwc:startDayOfYear and dwc:endDayOfYear should be made before this Test is run. If dwc:year and dwc:day are present and interpretable, but dwc:month is not supplied or is not interpretable, then just the year should be given as the proposed amendment. This Test assumes that that dwc:year, dwc:month, dwc:day are in a Gregorian calendar, and that only those three pieces of information are needed to produce a dwc:eventDate (explicitly in ISO 8601-1 format, and thus using the Gregorian calendar). When running the Test, the original precision, e.g. dwc:year=1980, dwc:month=1 should be retained, e.g. dwc:eventDate should become 1980-01, not 1980-01-01/1980-01-31.
 
 [🠱](#indexes-to-the-tests)
 ********************
@@ -3963,7 +3963,7 @@ bdq:Record-Management
 
 #### Notes
 
-An attempt to populate dwc:eventDate from dwc:verbatimEventDate should be made before this Test is run. While year=1999, startDayOfYear=123 could be validly represented as an ISO date as either 1999-123 or 1999-05-03, the latter of these two forms SHOULD be used, thus, do not simply concatenate dwc:year and dwc:startDayOfYear. This Test is only for cases that fall within the one year (as given in dwc:year) and hence "dwc:startDayOfYear will always be less than dwc:endDayOfYear". [or do we just leave this as being obvious from the Expected Response.
+An attempt to populate dwc:eventDate from dwc:verbatimEventDate should be made before this Test is run. While year=1999, startDayOfYear=123 could be validly represented as an ISO date as either 1999-123 or 1999-05-03, the latter of these two forms SHOULD be used, thus, do not simply concatenate dwc:year and dwc:startDayOfYear. This Test is only for cases that fall within the one year (as given in dwc:year) and hence dwc:startDayOfYear will always be less than dwc:endDayOfYear.
 
 [🠱](#indexes-to-the-tests)
 ********************
@@ -4040,7 +4040,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 #### Notes
 
-Only fields that are empty will be have changes proposed, and only if dwc:eventDate has a valid ISO 8601-1 date. The dwc:eventDate is the canonical form of the event date (it is the first trusted form). If event date does not contain a range,dwc:startDayOfYear = dwc:endDayOfYear. Time (as compared to date) is not deemed a CORE component. Note, see sequencing Tests section of standards document, run this amendment after any other amendment which may affect dwc:eventDate
+Only fields that are empty will be have changes proposed, and only if dwc:eventDate has a valid ISO 8601-1 date. The dwc:eventDate is the canonical form of the event date (it is the first trusted form). If event date does not contain a range,dwc:startDayOfYear = dwc:endDayOfYear. Time (as compared to date) is not deemed a CORE component. Note, see sequencing Tests section of standards documents, run this amendment after any other amendment that may affect dwc:eventDate
 
 [🠱](#indexes-to-the-tests)
 ********************
@@ -4248,7 +4248,7 @@ bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Bio
 
 #### Notes
 
-There is currently a capitalization mismatch between https://dwc.tdwg.org/terms/#dwc:occurrenceStatus recommended values and the GBIF vocabulary at (https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts)
+There is currently a capitalization mismatch between https://dwc.tdwg.org/terms/#dwc:occurrenceStatus recommended values and the GBIF vocabulary at (https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts).
 
 [🠱](#indexes-to-the-tests)
 ********************
@@ -4293,7 +4293,7 @@ bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Bio
 
 #### Notes
 
-The recommended controlled vocabulary for this term consists of "present" and "absent", which are the only two appropriate terms for a Darwin Core Occurrence. This is reflected in the suggested dwc:occurrenceStatus vocabulary for this Test. Other values for dwc:occurrenceStatus should only arise under circumstances that do not refer to an Occurrence. The GBIF API is listed in the sourceAuthority, there is however, currently a mismatch between the lower case recommended values at https://dwc.tdwg.org/terms/#dwc:occurrenceStatus and the GBIF vocabulary at bdq:sourceAuthority that uses an upper case first letter (https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts), thus implementations using the GBIF API should ensure that matches on alternate terms in that vocabulary are converted to the all lower case values in the present/absent vocabulary recommended in Darwin Core. Implementations should interpret the numeric value 1 as present, and the numeric value 0 as absent.
+The recommended controlled vocabulary for this term consists of "present" and "absent", which are the only two appropriate terms for a Darwin Core Occurrence. This is reflected in the suggested dwc:occurrenceStatus vocabulary for this Test. Other values for dwc:occurrenceStatus should only arise under circumstances that do not refer to an Occurrence. The GBIF API is listed in the sourceAuthority. However, there is currently a mismatch between the lower case recommended values at https://dwc.tdwg.org/terms/#dwc:occurrenceStatus and the GBIF vocabulary at bdq:sourceAuthority that uses an upper case first letter (https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts), thus implementations using the GBIF API should ensure that matches on alternate terms in that vocabulary are converted to the all lower case values in the present/absent vocabulary recommended in Darwin Core. Implementations should interpret the numeric value 1 as present, and the numeric value 0 as absent.
 
 [🠱](#indexes-to-the-tests)
 ********************
@@ -4306,7 +4306,7 @@ Acts upon  SingleRecord
 
 #### Description
 
-Propose an amendment to the value of dwc:pathway using the bdq:sourceAuthority.
+Proposes an amendment to the value of dwc:pathway using the bdq:sourceAuthority.
 
 #### Specification
 
@@ -4428,7 +4428,7 @@ bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relat
 
 #### Notes
 
-Valuable for data quality needs related to voucher specimens in natural science collections. Almost all occurrence data will have no value in dwc:typeStatus. For reference, a vocabulary of synonyms can be found for dwc:typeStatus at [https://registry.gbif.org/vocabulary/TypeStatus/concepts.
+Valuable for data quality needs related to voucher specimens in natural science collections. Almost all occurrence data will have no value in dwc:typeStatus. For reference, a vocabulary of synonyms can be found for dwc:typeStatus at [https://registry.gbif.org/vocabulary/TypeStatus/concepts].
 
 [🠱](#indexes-to-the-tests)
 ********************
@@ -4585,7 +4585,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_BASISOFRECORD_NOTEMPTY in a record set that are COMPLIANT
+Count the number of VALIDATION_BASISOFRECORD_NOTEMPTY in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -4615,7 +4615,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_BASISOFRECORD_STANDARD in a record set that are COMPLIANT
+Count the number of VALIDATION_BASISOFRECORD_STANDARD in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -4645,7 +4645,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_DCTYPE_NOTEMPTY in a record set that are COMPLIANT
+Count the number of VALIDATION_DCTYPE_NOTEMPTY in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -4675,7 +4675,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_DCTYPE_STANDARD in a record set that are COMPLIANT
+Count the number of VALIDATION_DCTYPE_STANDARD in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -4705,7 +4705,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_LICENSE_NOTEMPTY in a record set that are COMPLIANT
+Count the number of VALIDATION_LICENSE_NOTEMPTY in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -4735,7 +4735,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_LICENSE_STANDARD in a record set that are COMPLIANT
+Count the number of VALIDATION_LICENSE_STANDARD in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -4765,7 +4765,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_BASISOFRECORD_NOTEMPTY in a record set are COMPLIANT
+Measure if all VALIDATION_BASISOFRECORD_NOTEMPTY in a record set are COMPLIANT.
 
 #### Specification
 
@@ -4795,7 +4795,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_BASISOFRECORD_STANDARD in a record set are COMPLIANT
+Measure if all VALIDATION_BASISOFRECORD_STANDARD in a record set are COMPLIANT.
 
 #### Specification
 
@@ -4825,7 +4825,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_DCTYPE_NOTEMPTY in a record set are COMPLIANT
+Measure if all VALIDATION_DCTYPE_NOTEMPTY in a record set are COMPLIANT.
 
 #### Specification
 
@@ -4855,7 +4855,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_DCTYPE_STANDARD in a record set are COMPLIANT
+Measure if all VALIDATION_DCTYPE_STANDARD in a record set are COMPLIANT.
 
 #### Specification
 
@@ -4885,7 +4885,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_LICENSE_NOTEMPTY in a record set are COMPLIANT
+Measure if all VALIDATION_LICENSE_NOTEMPTY in a record set are COMPLIANT.
 
 #### Specification
 
@@ -4915,7 +4915,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_LICENSE_STANDARD in a record set are COMPLIANT
+Measure if all VALIDATION_LICENSE_STANDARD in a record set are COMPLIANT.
 
 #### Specification
 
@@ -4945,7 +4945,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT in a record set that are COMPLIANT
+Count the number of VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -4975,7 +4975,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT in a record set that are COMPLIANT
+Count the number of VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -5005,7 +5005,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT in a record set that are COMPLIANT
+Count the number of VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -5035,7 +5035,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_COORDINATES_NOTZERO in a record set that are COMPLIANT
+Count the number of VALIDATION_COORDINATES_NOTZERO in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -5065,7 +5065,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_COORDINATEUNCERTAINTY_INRANGE in a record set that are COMPLIANT
+Count the number of VALIDATION_COORDINATEUNCERTAINTY_INRANGE in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -5095,7 +5095,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_COUNTRYCODE_NOTEMPTY in a record set that are COMPLIANT
+Count the number of VALIDATION_COUNTRYCODE_NOTEMPTY in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -5125,7 +5125,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_COUNTRYCODE_STANDARD in a record set that are COMPLIANT
+Count the number of VALIDATION_COUNTRYCODE_STANDARD in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -5155,7 +5155,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT in a record set that are COMPLIANT
+Count the number of VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -5185,7 +5185,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS in a record set that are COMPLIANT
+Count the number of VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -5215,7 +5215,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_COUNTRY_FOUND in a record set that are COMPLIANT
+Count the number of VALIDATION_COUNTRY_FOUND in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -5245,7 +5245,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_COUNTRY_NOTEMPTY in a record set that are COMPLIANT
+Count the number of VALIDATION_COUNTRY_NOTEMPTY in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -5275,7 +5275,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_DECIMALLATITUDE_INRANGE in a record set that are COMPLIANT
+Count the number of VALIDATION_DECIMALLATITUDE_INRANGE in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -5305,7 +5305,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_DECIMALLATITUDE_NOTEMPTY in a record set that are COMPLIANT
+Count the number of VALIDATION_DECIMALLATITUDE_NOTEMPTY in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -5335,7 +5335,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_DECIMALLONGITUDE_INRANGE in a record set that are COMPLIANT
+Count the number of VALIDATION_DECIMALLONGITUDE_INRANGE in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -5365,7 +5365,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_DECIMALLONGITUDE_NOTEMPTY in a record set that are COMPLIANT
+Count the number of VALIDATION_DECIMALLONGITUDE_NOTEMPTY in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -5395,7 +5395,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_GEODETICDATUM_NOTEMPTY in a record set that are COMPLIANT
+Count the number of VALIDATION_GEODETICDATUM_NOTEMPTY in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -5425,7 +5425,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_GEODETICDATUM_STANDARD in a record set that are COMPLIANT
+Count the number of VALIDATION_GEODETICDATUM_STANDARD in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -5455,7 +5455,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_LOCATION_NOTEMPTY in a record set that are COMPLIANT
+Count the number of VALIDATION_LOCATION_NOTEMPTY in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -5485,7 +5485,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_MAXDEPTH_INRANGE in a record set that are COMPLIANT
+Count the number of VALIDATION_MAXDEPTH_INRANGE in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -5515,7 +5515,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_MAXELEVATION_INRANGE in a record set that are COMPLIANT
+Count the number of VALIDATION_MAXELEVATION_INRANGE in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -5545,7 +5545,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_MINDEPTH_INRANGE in a record set that are COMPLIANT
+Count the number of VALIDATION_MINDEPTH_INRANGE in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -5575,7 +5575,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH in a record set that are COMPLIANT
+Count the number of VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -5605,7 +5605,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_MINELEVATION_INRANGE in a record set that are COMPLIANT
+Count the number of VALIDATION_MINELEVATION_INRANGE in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -5635,7 +5635,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION in a record set that are COMPLIANT
+Count the number of VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -5665,7 +5665,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_STATEPROVINCE_FOUND in a record set that are COMPLIANT
+Count the number of VALIDATION_STATEPROVINCE_FOUND in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -5695,7 +5695,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT in a record set are COMPLIANT
+Measure if all VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT in a record set are COMPLIANT.
 
 #### Specification
 
@@ -5725,7 +5725,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT in a record set are COMPLIANT
+Measure if all VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT in a record set are COMPLIANT.
 
 #### Specification
 
@@ -5755,7 +5755,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT in a record set are COMPLIANT
+Measure if all VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT in a record set are COMPLIANT.
 
 #### Specification
 
@@ -5785,7 +5785,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_COORDINATES_NOTZERO in a record set are COMPLIANT
+Measure if all VALIDATION_COORDINATES_NOTZERO in a record set are COMPLIANT.
 
 #### Specification
 
@@ -5815,7 +5815,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_COORDINATEUNCERTAINTY_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)
+Measure if all VALIDATION_COORDINATEUNCERTAINTY_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).
 
 #### Specification
 
@@ -5845,7 +5845,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_COUNTRYCODE_NOTEMPTY in a record set are COMPLIANT
+Measure if all VALIDATION_COUNTRYCODE_NOTEMPTY in a record set are COMPLIANT.
 
 #### Specification
 
@@ -5875,7 +5875,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_COUNTRYCODE_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)
+Measure if all VALIDATION_COUNTRYCODE_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).
 
 #### Specification
 
@@ -5905,7 +5905,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT in a record set are COMPLIANT
+Measure if all VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT in a record set are COMPLIANT.
 
 #### Specification
 
@@ -5935,7 +5935,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS in a record set are COMPLIANT
+Measure if all VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS in a record set are COMPLIANT.
 
 #### Specification
 
@@ -5965,7 +5965,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_COUNTRY_FOUND in a record set are COMPLIANT
+Measure if all VALIDATION_COUNTRY_FOUND in a record set are COMPLIANT.
 
 #### Specification
 
@@ -5995,7 +5995,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_COUNTRY_NOTEMPTY in a record set are COMPLIANT
+Measure if all VALIDATION_COUNTRY_NOTEMPTY in a record set are COMPLIANT.
 
 #### Specification
 
@@ -6025,7 +6025,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_DECIMALLATITUDE_INRANGE in a record set are COMPLIANT
+Measure if all VALIDATION_DECIMALLATITUDE_INRANGE in a record set are COMPLIANT.
 
 #### Specification
 
@@ -6055,7 +6055,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_DECIMALLATITUDE_NOTEMPTY in a record set are COMPLIANT
+Measure if all VALIDATION_DECIMALLATITUDE_NOTEMPTY in a record set are COMPLIANT.
 
 #### Specification
 
@@ -6085,7 +6085,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_DECIMALLONGITUDE_INRANGE in a record set are COMPLIANT
+Measure if all VALIDATION_DECIMALLONGITUDE_INRANGE in a record set are COMPLIANT.
 
 #### Specification
 
@@ -6115,7 +6115,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_DECIMALLONGITUDE_NOTEMPTY in a record set are COMPLIANT
+Measure if all VALIDATION_DECIMALLONGITUDE_NOTEMPTY in a record set are COMPLIANT.
 
 #### Specification
 
@@ -6145,7 +6145,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_GEODETICDATUM_NOTEMPTY in a record set are COMPLIANT
+Measure if all VALIDATION_GEODETICDATUM_NOTEMPTY in a record set are COMPLIANT.
 
 #### Specification
 
@@ -6175,7 +6175,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_GEODETICDATUM_STANDARD in a record set are COMPLIANT
+Measure if all VALIDATION_GEODETICDATUM_STANDARD in a record set are COMPLIANT.
 
 #### Specification
 
@@ -6205,7 +6205,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_LOCATION_NOTEMPTY in a record set are COMPLIANT
+Measure if all VALIDATION_LOCATION_NOTEMPTY in a record set are COMPLIANT.
 
 #### Specification
 
@@ -6235,7 +6235,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_MAXDEPTH_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)
+Measure if all VALIDATION_MAXDEPTH_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).
 
 #### Specification
 
@@ -6265,7 +6265,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_MAXELEVATION_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)
+Measure if all VALIDATION_MAXELEVATION_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).
 
 #### Specification
 
@@ -6295,7 +6295,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_MINDEPTH_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)
+Measure if all VALIDATION_MINDEPTH_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).
 
 #### Specification
 
@@ -6325,7 +6325,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)
+Measure if all VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).
 
 #### Specification
 
@@ -6355,7 +6355,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_MINELEVATION_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)
+Measure if all VALIDATION_MINELEVATION_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).
 
 #### Specification
 
@@ -6385,7 +6385,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)
+Measure if all VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).
 
 #### Specification
 
@@ -6415,7 +6415,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_STATEPROVINCE_FOUND in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)
+Measure if all VALIDATION_STATEPROVINCE_FOUND in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).
 
 #### Specification
 
@@ -6445,7 +6445,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_DAY_INRANGE in a record set that are COMPLIANT
+Count the number of VALIDATION_DAY_INRANGE in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -6475,7 +6475,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_DAY_STANDARD in a record set that are COMPLIANT
+Count the number of VALIDATION_DAY_STANDARD in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -6505,7 +6505,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_ENDDAYOFYEAR_INRANGE in a record set that are COMPLIANT
+Count the number of VALIDATION_ENDDAYOFYEAR_INRANGE in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -6535,7 +6535,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_EVENTDATE_INRANGE in a record set that are COMPLIANT
+Count the number of VALIDATION_EVENTDATE_INRANGE in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -6565,7 +6565,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_EVENTDATE_NOTEMPTY in a record set that are COMPLIANT
+Count the number of VALIDATION_EVENTDATE_NOTEMPTY in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -6595,7 +6595,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_EVENTDATE_STANDARD in a record set that are COMPLIANT
+Count the number of VALIDATION_EVENTDATE_STANDARD in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -6625,7 +6625,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_EVENTTEMPORAL_NOTEMPTY in a record set that are COMPLIANT
+Count the number of VALIDATION_EVENTTEMPORAL_NOTEMPTY in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -6655,7 +6655,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_EVENT_CONSISTENT in a record set that are COMPLIANT
+Count the number of VALIDATION_EVENT_CONSISTENT in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -6685,7 +6685,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_MONTH_STANDARD in a record set that are COMPLIANT
+Count the number of VALIDATION_MONTH_STANDARD in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -6715,7 +6715,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_STARTDAYOFYEAR_INRANGE in a record set that are COMPLIANT
+Count the number of VALIDATION_STARTDAYOFYEAR_INRANGE in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -6745,7 +6745,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_YEAR_INRANGE in a record set that are COMPLIANT
+Count the number of VALIDATION_YEAR_INRANGE in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -6775,7 +6775,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_YEAR_NOTEMPTY in a record set that are COMPLIANT
+Count the number of VALIDATION_YEAR_NOTEMPTY in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -6805,7 +6805,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_DAY_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)
+Measure if all VALIDATION_DAY_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).
 
 #### Specification
 
@@ -6835,7 +6835,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_DAY_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)
+Measure if all VALIDATION_DAY_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).
 
 #### Specification
 
@@ -6865,7 +6865,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_ENDDAYOFYEAR_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)
+Measure if all VALIDATION_ENDDAYOFYEAR_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).
 
 #### Specification
 
@@ -6895,7 +6895,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_EVENTDATE_INRANGE in a record set are COMPLIANT
+Measure if all VALIDATION_EVENTDATE_INRANGE in a record set are COMPLIANT.
 
 #### Specification
 
@@ -6925,7 +6925,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_EVENTDATE_NOTEMPTY in a record set are COMPLIANT
+Measure if all VALIDATION_EVENTDATE_NOTEMPTY in a record set are COMPLIANT.
 
 #### Specification
 
@@ -6955,7 +6955,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_EVENTDATE_STANDARD in a record set are COMPLIANT
+Measure if all VALIDATION_EVENTDATE_STANDARD in a record set are COMPLIANT.
 
 #### Specification
 
@@ -6985,7 +6985,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_EVENTTEMPORAL_NOTEMPTY in a record set are COMPLIANT
+Measure if all VALIDATION_EVENTTEMPORAL_NOTEMPTY in a record set are COMPLIANT.
 
 #### Specification
 
@@ -7015,7 +7015,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_EVENT_CONSISTENT in a record set are COMPLIANT
+Measure if all VALIDATION_EVENT_CONSISTENT in a record set are COMPLIANT.
 
 #### Specification
 
@@ -7045,7 +7045,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_MONTH_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)
+Measure if all VALIDATION_MONTH_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).
 
 #### Specification
 
@@ -7075,7 +7075,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_STARTDAYOFYEAR_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)
+Measure if all VALIDATION_STARTDAYOFYEAR_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).
 
 #### Specification
 
@@ -7105,7 +7105,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_YEAR_INRANGE in a record set are COMPLIANT
+Measure if all VALIDATION_YEAR_INRANGE in a record set are COMPLIANT.
 
 #### Specification
 
@@ -7135,7 +7135,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_YEAR_NOTEMPTY in a record set are COMPLIANT
+Measure if all VALIDATION_YEAR_NOTEMPTY in a record set are COMPLIANT.
 
 #### Specification
 
@@ -7165,7 +7165,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_DATEIDENTIFIED_INRANGE in a record set that are COMPLIANT
+Count the number of VALIDATION_DATEIDENTIFIED_INRANGE in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -7195,7 +7195,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_DATEIDENTIFIED_STANDARD in a record set that are COMPLIANT
+Count the number of VALIDATION_DATEIDENTIFIED_STANDARD in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -7225,7 +7225,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_DATEIDENTIFIED_INRANGE in a record set are COMPLIANT
+Measure if all VALIDATION_DATEIDENTIFIED_INRANGE in a record set are COMPLIANT.
 
 #### Specification
 
@@ -7255,7 +7255,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_DATEIDENTIFIED_STANDARD in a record set are COMPLIANT
+Measure if all VALIDATION_DATEIDENTIFIED_STANDARD in a record set are COMPLIANT.
 
 #### Specification
 
@@ -7285,7 +7285,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_DEGREEOFESTABLISHMENT_STANDARD in a record set that are COMPLIANT
+Count the number of VALIDATION_DEGREEOFESTABLISHMENT_STANDARD in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -7315,7 +7315,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_ESTABLISHMENTMEANS_STANDARD in a record set that are COMPLIANT
+Count the number of VALIDATION_ESTABLISHMENTMEANS_STANDARD in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -7345,7 +7345,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_OCCURRENCEID_NOTEMPTY in a record set that are COMPLIANT
+Count the number of VALIDATION_OCCURRENCEID_NOTEMPTY in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -7375,7 +7375,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_OCCURRENCESTATUS_NOTEMPTY in a record set that are COMPLIANT
+Count the number of VALIDATION_OCCURRENCESTATUS_NOTEMPTY in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -7405,7 +7405,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_OCCURRENCESTATUS_STANDARD in a record set that are COMPLIANT
+Count the number of VALIDATION_OCCURRENCESTATUS_STANDARD in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -7435,7 +7435,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_PATHWAY_STANDARD in a record set that are COMPLIANT
+Count the number of VALIDATION_PATHWAY_STANDARD in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -7465,7 +7465,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_SEX_STANDARD in a record set that are COMPLIANT
+Count the number of VALIDATION_SEX_STANDARD in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -7495,7 +7495,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_TYPESTATUS_STANDARD in a record set that are COMPLIANT
+Count the number of VALIDATION_TYPESTATUS_STANDARD in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -7525,7 +7525,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_DEGREEOFESTABLISHMENT_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)
+Measure if all VALIDATION_DEGREEOFESTABLISHMENT_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).
 
 #### Specification
 
@@ -7555,7 +7555,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_ESTABLISHMENTMEANS_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)
+Measure if all VALIDATION_ESTABLISHMENTMEANS_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).
 
 #### Specification
 
@@ -7585,7 +7585,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_OCCURRENCEID_NOTEMPTY in a record set are COMPLIANT
+Measure if all VALIDATION_OCCURRENCEID_NOTEMPTY in a record set are COMPLIANT.
 
 #### Specification
 
@@ -7615,7 +7615,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_OCCURRENCESTATUS_NOTEMPTY in a record set are COMPLIANT
+Measure if all VALIDATION_OCCURRENCESTATUS_NOTEMPTY in a record set are COMPLIANT.
 
 #### Specification
 
@@ -7645,7 +7645,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_OCCURRENCESTATUS_STANDARD in a record set are COMPLIANT
+Measure if all VALIDATION_OCCURRENCESTATUS_STANDARD in a record set are COMPLIANT.
 
 #### Specification
 
@@ -7675,7 +7675,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_PATHWAY_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)
+Measure if all VALIDATION_PATHWAY_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).
 
 #### Specification
 
@@ -7705,7 +7705,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_SEX_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)
+Measure if all VALIDATION_SEX_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).
 
 #### Specification
 
@@ -7735,7 +7735,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_TYPESTATUS_STANDARD in a record set are COMPLIANT
+Measure if all VALIDATION_TYPESTATUS_STANDARD in a record set are COMPLIANT.
 
 #### Specification
 
@@ -7765,7 +7765,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_CLASSIFICATION_CONSISTENT in a record set that are COMPLIANT
+Count the number of VALIDATION_CLASSIFICATION_CONSISTENT in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -7795,7 +7795,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_CLASS_FOUND in a record set that are COMPLIANT
+Count the number of VALIDATION_CLASS_FOUND in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -7825,7 +7825,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_FAMILY_FOUND in a record set that are COMPLIANT
+Count the number of VALIDATION_FAMILY_FOUND in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -7855,7 +7855,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_GENUS_FOUND in a record set that are COMPLIANT
+Count the number of VALIDATION_GENUS_FOUND in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -7885,7 +7885,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_KINGDOM_FOUND in a record set that are COMPLIANT
+Count the number of VALIDATION_KINGDOM_FOUND in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -7915,7 +7915,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_KINGDOM_NOTEMPTY in a record set that are COMPLIANT
+Count the number of VALIDATION_KINGDOM_NOTEMPTY in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -7945,7 +7945,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY in a record set that are COMPLIANT
+Count the number of VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -7975,7 +7975,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_ORDER_FOUND in a record set that are COMPLIANT
+Count the number of VALIDATION_ORDER_FOUND in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -8005,7 +8005,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_PHYLUM_FOUND in a record set that are COMPLIANT
+Count the number of VALIDATION_PHYLUM_FOUND in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -8035,7 +8035,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_POLYNOMIAL_CONSISTENT in a record set that are COMPLIANT
+Count the number of VALIDATION_POLYNOMIAL_CONSISTENT in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -8065,7 +8065,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY in a record set that are COMPLIANT
+Count the number of VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -8095,7 +8095,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_SCIENTIFICNAMEID_COMPLETE in a record set that are COMPLIANT
+Count the number of VALIDATION_SCIENTIFICNAMEID_COMPLETE in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -8125,7 +8125,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_SCIENTIFICNAMEID_NOTEMPTY in a record set that are COMPLIANT
+Count the number of VALIDATION_SCIENTIFICNAMEID_NOTEMPTY in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -8155,7 +8155,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_SCIENTIFICNAME_FOUND in a record set that are COMPLIANT
+Count the number of VALIDATION_SCIENTIFICNAME_FOUND in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -8185,7 +8185,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_SCIENTIFICNAME_NOTEMPTY in a record set that are COMPLIANT
+Count the number of VALIDATION_SCIENTIFICNAME_NOTEMPTY in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -8215,7 +8215,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_TAXONRANK_NOTEMPTY in a record set that are COMPLIANT
+Count the number of VALIDATION_TAXONRANK_NOTEMPTY in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -8245,7 +8245,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_TAXONRANK_STANDARD in a record set that are COMPLIANT
+Count the number of VALIDATION_TAXONRANK_STANDARD in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -8275,7 +8275,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_TAXON_NOTEMPTY in a record set that are COMPLIANT
+Count the number of VALIDATION_TAXON_NOTEMPTY in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -8305,7 +8305,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Count the number of VALIDATION_TAXON_UNAMBIGUOUS in a record set that are COMPLIANT
+Count the number of VALIDATION_TAXON_UNAMBIGUOUS in a record set that are COMPLIANT.
 
 #### Specification
 
@@ -8335,7 +8335,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_CLASSIFICATION_CONSISTENT in a record set are COMPLIANT
+Measure if all VALIDATION_CLASSIFICATION_CONSISTENT in a record set are COMPLIANT.
 
 #### Specification
 
@@ -8365,7 +8365,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_CLASS_FOUND in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)
+Measure if all VALIDATION_CLASS_FOUND in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).
 
 #### Specification
 
@@ -8395,7 +8395,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_FAMILY_FOUND in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)
+Measure if all VALIDATION_FAMILY_FOUND in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).
 
 #### Specification
 
@@ -8425,7 +8425,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_GENUS_FOUND in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)
+Measure if all VALIDATION_GENUS_FOUND in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).
 
 #### Specification
 
@@ -8455,7 +8455,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_KINGDOM_FOUND in a record set are COMPLIANT
+Measure if all VALIDATION_KINGDOM_FOUND in a record set are COMPLIANT.
 
 #### Specification
 
@@ -8485,7 +8485,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_KINGDOM_NOTEMPTY in a record set are COMPLIANT
+Measure if all VALIDATION_KINGDOM_NOTEMPTY in a record set are COMPLIANT.
 
 #### Specification
 
@@ -8515,7 +8515,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)
+Measure if all VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).
 
 #### Specification
 
@@ -8545,7 +8545,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_ORDER_FOUND in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)
+Measure if all VALIDATION_ORDER_FOUND in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).
 
 #### Specification
 
@@ -8575,7 +8575,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_PHYLUM_FOUND in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)
+Measure if all VALIDATION_PHYLUM_FOUND in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).
 
 #### Specification
 
@@ -8605,7 +8605,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_POLYNOMIAL_CONSISTENT in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)
+Measure if all VALIDATION_POLYNOMIAL_CONSISTENT in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).
 
 #### Specification
 
@@ -8635,7 +8635,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY in a record set are COMPLIANT
+Measure if all VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY in a record set are COMPLIANT.
 
 #### Specification
 
@@ -8665,7 +8665,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_SCIENTIFICNAMEID_COMPLETE in a record set are COMPLIANT
+Measure if all VALIDATION_SCIENTIFICNAMEID_COMPLETE in a record set are COMPLIANT.
 
 #### Specification
 
@@ -8695,7 +8695,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_SCIENTIFICNAMEID_NOTEMPTY in a record set are COMPLIANT
+Measure if all VALIDATION_SCIENTIFICNAMEID_NOTEMPTY in a record set are COMPLIANT.
 
 #### Specification
 
@@ -8725,7 +8725,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_SCIENTIFICNAME_FOUND in a record set are COMPLIANT
+Measure if all VALIDATION_SCIENTIFICNAME_FOUND in a record set are COMPLIANT.
 
 #### Specification
 
@@ -8755,7 +8755,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_SCIENTIFICNAME_NOTEMPTY in a record set are COMPLIANT
+Measure if all VALIDATION_SCIENTIFICNAME_NOTEMPTY in a record set are COMPLIANT.
 
 #### Specification
 
@@ -8785,7 +8785,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_TAXONRANK_NOTEMPTY in a record set are COMPLIANT
+Measure if all VALIDATION_TAXONRANK_NOTEMPTY in a record set are COMPLIANT.
 
 #### Specification
 
@@ -8815,7 +8815,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_TAXONRANK_STANDARD in a record set are COMPLIANT
+Measure if all VALIDATION_TAXONRANK_STANDARD in a record set are COMPLIANT.
 
 #### Specification
 
@@ -8845,7 +8845,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_TAXON_NOTEMPTY in a record set are COMPLIANT
+Measure if all VALIDATION_TAXON_NOTEMPTY in a record set are COMPLIANT.
 
 #### Specification
 
@@ -8875,7 +8875,7 @@ Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_TAXON_UNAMBIGUOUS in a record set are COMPLIANT
+Measure if all VALIDATION_TAXON_UNAMBIGUOUS in a record set are COMPLIANT.
 
 #### Specification
 
