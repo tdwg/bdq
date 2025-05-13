@@ -71,7 +71,11 @@ Information about the Fitness for Use ontology, its usage, and its extensions ca
 - [**Fitness For Use Framework Ontology List of Terms**](../list/bdqffdq/index.md) The term list document, which enumerates and describes the vocabulary terms.
 - **Fitness for Use Framework Ontology** Provides normative guidance on the use of the vocabulary. This document.
 - [**Fitness For Use Framework Ontology Vocabulary Extension**](../extension/bdqffdq/index.md) Defines additional axioms extending the core vocabulary.
-- [**Biodiversity Data Quality Fitness for Use Framework (Ontology)**](../../vocabulary/bdqffdq.owl) The ontology, which provides the formal RDF/OWL representation of the vocabulary.
+
+#### 1.3.1 Distributions
+
+Description | IRI | Download URL | Note |
+Owl ontology | TBD | Biodiversity Data Quality Fitness for Use Framework (Ontology) | The formal RDF/OWL representation of the vocabulary. |
 
 ### 1.4 Namespace abbreviations
 

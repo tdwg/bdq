@@ -132,11 +132,14 @@ The Quick Reference Guide is a simple, informative reference and the first place
 [**BDQ Tests Quick Reference Guide**](docs/terms/bdqtest/index.md)<br>
 
 ### 2.2 Landing Pages
-The landing pages provide overviews of the subjects they cover and refer to more detailed information in associated documents.<br>
+The landing pages provide overviews of the subjects they cover and refer to more detailed information in associated documents. The details of the individual terms are provided in the corresponding term list documents. The controlled vocabulary term list documents also act as the landing pages for those vocabularies.<br>
 **The Biodiversity Data Quality (BDQ) Standard** - Overview of the BDQ standard. This page.<br>
 [**BDQ Tests and Assertions**](docs/bdqtest/index.md) - Overview of the Tests.<br>
 [**Fitness For Use Ontology**](docs/bdqffdq/index.md) - Overview of the Fitness for Use Framework.<br>
-[**Fitness For Use Framework Ontology Vocabulary Extension**](docs/extension/bdqffdq/index.md) - Overview of the axioms that extend the basic vocabulary for the Fitness of Use Framework Ontology.
+[**BDQ Controlled Vocabulary List of Terms (bdq:)**](https://bdq.tdwg.org/bdq)<br>
+[**Data Quality Criterion Controlled Vocabulary List of Terms (bdqcrit:)**](https://bdq.tdwg.org/bdqcrit)<br>
+[**Data Quality Dimension Controlled Vocabulary List of Terms (bdqdim:)**](https://bdq.tdwg.org/bdqdim)<br>
+[**Data Quality Enhancement Controlled Vocabulary List of Terms (bdqenh:)**](https://bdq.tdwg.org/bdqenh)<br>
 
 ### 2.3 Guides
 The Guides are explanatory documents targeting particular perspectives on the standard for particular audiences.<br>
@@ -148,9 +151,9 @@ The Guides are explanatory documents targeting particular perspectives on the st
 ### 2.4 Vocabularies
 #### 2.4.1 Foundational Vocabularies
 The Foundational Vocabularies cover the two main parts of the standard - the practical (the Tests) and the theoretical (the Framework).<br>
-[**Biodiversity Data Quality Fitness for Use Framework (Ontology)**](vocabulary/bdqffdq.owl)<br>
-[**Fitness For Use Framework Ontology List of Terms (bdqffdq:)**](docs/list/bdqffdq/index.md)<br>
-[**BDQ Tests and Assertions List of Terms (bdqtest:)**](docs/list/bdqtest/index.md)<br>
+[**Fitness For Use Framework Ontology List of Terms (bdqffdq:)**](docs/list/bdqffdq/index.md) - The definitions of terms in the bdqffdq: vocabulary.<br>
+[**Fitness For Use Framework Ontology Vocabulary Extension**](docs/extension/bdqffdq/index.md) - The axioms that extend the logic of the basic the bdqffdq: vocabulary.
+[**BDQ Tests and Assertions List of Terms (bdqtest:)**](docs/list/bdqtest/index.md) - The complete list of terms that define the BDQ Tests.<br>
 
 #### 2.4.2 Supporting Vocabularies
 The Supporting Vocabularies are controlled vocabularies used in the technical definitions of the Tests.<br>
@@ -168,6 +171,7 @@ Supplemental Information includes the rationale for, the history of, and the cha
 #### 2.6.1 Tests
 The Test definitions are provided in various serializations. Of these, the bdqtest_term_versions.csv is the canonical archive of all Tests versions, both recommended and historical. The documentation about the details of Tests for this standard are generated from this file.<br>
 
+[**Biodiversity Data Quality Fitness for Use Framework (Ontology)**](vocabulary/bdqffdq.owl)<br>
 [**CSV List of all Tests (bdqtest_term_versions.csv)**](vocabulary/bdqtest_term_versions.csv)<br>
 [**CSV List of Single Record Tests**](dist/bdqtest_singlerecord_tests_current.csv)<br>
 [**CSV List of Multi Record Tests**](dist/bdqtest_multirecord_tests_current.csv)<br>
@@ -291,26 +295,26 @@ There were many people who have made notable contributions at various times duri
 
 ### 6.1 Term-Action
 
-A Test label reflects its Test type, the bdqffdq:InformationElement the Test acts upon, and the nature of the evaluation that is being done. The Test type is one of Validation, Issue, Amendment or Measure. The term action is the combination of the bdqffdq:InformationElement and the nature of the evaluation. For example, the Test with the label "VALIDATION_COUNTRYCODE_STANDARD" has the type "Validation"", the bdqffdq:InformationElement "dwc:countryCode" and the nature of the evaluation "STANDARD". Following is a table of distinct values for the nature of the evaluation part of the term-action, along with a definition and a usage comment with examples.
+A Test label reflects its Test type, the `bdqffdq:InformationElement` the Test acts upon, and the nature of the evaluation that is being done. The Test type is one of `Validation`, `Issue`, `Measure` or `Amendment`. The term action is the combination of the `bdqffdq:InformationElement` and the nature of the evaluation. For example, the Test with the label "VALIDATION_COUNTRYCODE_STANDARD" has the type `Validation`, the `bdqffdq:InformationElement` `dwc:countryCode` and the nature of the evaluation "STANDARD". Following is a table of distinct values for the nature of the evaluation part of the term-action, along with a definition and a usage comment with examples.
 
-| Label | Definition | Comment | Example |
-| ---- | ---- | ---- | ---- |
-| ASSUMEDDEFAULT | A bdqffdq:Amendment that replaces a bdq:EMPTY term with a predefined default bdq:Parameter value. | This action is used in Tests and in bdq:Response.comments. bdq:Response.status value for this case is bdq:AMENDED. | [AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT](docs/terms/bdqtest/index.md#AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT) |
-| CENTREOFCOUNTRY | Testing if bdqffdq:EnformationElements COORDINATES identify the center of the dwc:country, allowing for a spatial buffer. | | [ISSUE_COORDINATES_CENTEROFCOUNTRY](docs/terms/bdqtest/index.md#ISSUE_COORDINATES_CENTEROFCOUNTRY) |
-| COMPLETE | Testing if the bdqffdq:InformationElement dwc:scientificNameId forms a valid and complete identifier. | Testing for bdqdim:Completeness. | [VALIDATION_SCIENTIFICNAMEID_COMPLETE](docs/terms/bdqtest/index.md#VALIDATION_SCIENTIFICNAMEID_COMPLETE) |
-| CONSISTENT | Identifies consistency among values between bdqffdq:InformationElements. | Testing for bdqdim:Consistency. | [VALIDATION_CLASSIFICATION_CONSISTENT](docs/terms/bdqtest/index.md#VALIDATION_CLASSIFICATION_CONSISTENT) |
-| COORDINATESTERRESTRIALMARINE | A terrestrial taxon that has geographic coordinates that fall within terrestrial boundaries, or a marine taxon that has geographic coordinates that fall within marine boundaries. | Use bdq:AMENDED as the bdq:Response.status, report bdq:COORDINATESTERRESTRIALMARINE in a bdq:Response.qualifier or in a bdq:Response.comment. | [VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT](docs/terms/bdqtest/index.md#VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT) |
+| Label | Comment | Example |
+| ----- | ------- | ------- |
+| ASSUMEDDEFAULT | A bdqffdq:Amendment that replaces a bdq:EMPTY term with a predefined default bdq:Parameter value. | [AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT](docs/terms/bdqtest/index.md#AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT) |
+| CENTREOFCOUNTRY | Testing if bdqffdq:EnformationElements COORDINATES identify the center of the dwc:country, allowing for a spatial buffer. | [ISSUE_COORDINATES_CENTEROFCOUNTRY](docs/terms/bdqtest/index.md#ISSUE_COORDINATES_CENTEROFCOUNTRY) |
+| COMPLETE | Testing if the bdqffdq:InformationElement dwc:scientificNameId forms a valid and complete identifier. | [VALIDATION_SCIENTIFICNAMEID_COMPLETE](docs/terms/bdqtest/index.md#VALIDATION_SCIENTIFICNAMEID_COMPLETE) |
+| CONSISTENT | Identifies consistency among values between bdqffdq:InformationElements. | [VALIDATION_CLASSIFICATION_CONSISTENT](docs/terms/bdqtest/index.md#VALIDATION_CLASSIFICATION_CONSISTENT) |
+| COORDINATESTERRESTRIALMARINE | A terrestrial taxon that has geographic coordinates that fall within terrestrial boundaries, or a marine taxon that has geographic coordinates that fall within marine boundaries. | [VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT](docs/terms/bdqtest/index.md#VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT) |
 | DURATIONINSECONDS | The duration in seconds of the bdq:InformationElement dwc:eventDate. | | [MEASURE_EVENTDATE_DURATIONINSECONDS](docs/terms/bdqtest/index.md#MEASURE_EVENTDATE_DURATIONINSECONDS) |
-| FOUND | The value in a bdqffdq:InformationElement that matched a value in a bdq:sourceAuthority. | Use bdq:COMPLIANT for bdq:Response.result, and include this in bdq:Response.comments or bdq:Response.qualifier. | [VALIDATION_STATEPROVINCE_FOUND](docs/terms/bdqtest/index.md#VALIDATION_STATEPROVINCE_FOUND) |
-| FROM | An Output bdqffdq:InformationElement is being populated from a more primary Input bdqffdq:InformationElement. | Populates dwc:scientificName from dwc:scientificNameId. | [AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID](docs/terms/bdqtest/index.md#AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID) |
-| INRANGE | The value of bdqffdq:InformationElements that are within an acceptable range. | Use in bdq:Response.qualifier or bdq:Response.comment. | [VALIDATION_MAXDEPTH_INRANGE](docs/terms/bdqtest/index.md#VALIDATION_MAXDEPTH_INRANGE) |
-| LESSTHAN | A Term-Action indicating that the value in one bdq:InformationElement is less than the value in another bdq:InformationElement. | Used in Tests for Depth and Elevation. | [VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH](docs/terms/bdqtest/index.md#VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH) |
+| FOUND | The value in a bdqffdq:InformationElement that matched a value in a bdq:sourceAuthority. | [VALIDATION_STATEPROVINCE_FOUND](docs/terms/bdqtest/index.md#VALIDATION_STATEPROVINCE_FOUND) |
+| FROM | An Output bdqffdq:InformationElement is being populated from a more primary Input bdqffdq:InformationElement. | [AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID](docs/terms/bdqtest/index.md#AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID) |
+| INRANGE | The value of bdqffdq:InformationElements that are within an acceptable range. | [VALIDATION_MAXDEPTH_INRANGE](docs/terms/bdqtest/index.md#VALIDATION_MAXDEPTH_INRANGE) |
+| LESSTHAN | A Term-Action indicating that the value in one bdq:InformationElement is less than the value in another bdq:InformationElement. | [VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH](docs/terms/bdqtest/index.md#VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH) |
 | NOTEMPTY | An bdqffdq:InformationElement contains a value that is bdq:NotEmpty. | | [VALIDATION_EVENTDATE_NOTEMPTY](docs/terms/bdqtest/index.md#VALIDATION_EVENTDATE_NOTEMPTY) |
 | PREREQUISITESNOTMET | A Test of type bdqffdq:Measure that counts the number of Tests of type bdqffdq:Validation that did not run due to one or more prerequisites not being met (bdq:INTERNAL_PREREQUISITES_NOT_MET or EXTERNAL_PREREQUISITES_NOT_MET). | | [MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET](docs/terms/bdqtest/index.md#MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET) |
 | PROPOSED | A Test of type bdqffdq:Measure that counts the number of bdqffdq:Amendments where an action to modify a value in some way through a change or addition is proposed. | | [MEASURE_AMENDMENTS_PROPOSED](docs/terms/bdqtest/index.md#MEASURE_AMENDMENTS_PROPOSED) |
-| STANDARD | A bdqffdq:Validation Test where a value in a bdqffdq:InformationElement matches a bdq:STANDARD value in a bdq:sourceAuthority. | Use in bdq:Response.qualifier or bdq:Response.comment. | [VALIDATION_TAXONRANK_STANDARD](docs/terms/bdqtest/index.md#VALIDATION_TAXONRANK_STANDARD) |
-| STANDARDIZED | A bdqffdq:Amendment where a bdq:STANDARD value for a bdqffdq:InformationElement is proposed. | Use bdq:AMENDED as the bdq:Response.status, report bdq:STANDARDIZED in a bdq:Response.qualifier or in a bdq:Response.comment. | [AMENDMENT_TAXONRANK_STANDARDIZED](docs/terms/bdqtest/index.md#AMENDMENT_TAXONRANK_STANDARDIZED) |
-| TRANSPOSED | A bdqffdq:Amendment where the sign and/or value of one or more bdqffdq:InformationElements were proposed to be swapped. | Use bdq:AMENDED as the bdq:Response.status, report bdq:TRANSPOSED in a bdq:Response.qualifier or in a bdq:Response.comment. | [AMENDMENT_COORDINATES_TRANSPOSED](docs/terms/bdqtest/index.md#AMENDMENT_COORDINATES_TRANSPOSED) |
+| STANDARD | A bdqffdq:Validation Test where a value in a bdqffdq:InformationElement matches a bdq:STANDARD value in a bdq:sourceAuthority. | [VALIDATION_TAXONRANK_STANDARD](docs/terms/bdqtest/index.md#VALIDATION_TAXONRANK_STANDARD) |
+| STANDARDIZED | A bdqffdq:Amendment where a bdq:STANDARD value for a bdqffdq:InformationElement is proposed. | [AMENDMENT_TAXONRANK_STANDARDIZED](docs/terms/bdqtest/index.md#AMENDMENT_TAXONRANK_STANDARDIZED) |
+| TRANSPOSED | A bdqffdq:Amendment where the sign and/or value of one or more bdqffdq:InformationElements were proposed to be swapped. | [AMENDMENT_COORDINATES_TRANSPOSED](docs/terms/bdqtest/index.md#AMENDMENT_COORDINATES_TRANSPOSED) |
 | UNAMBIGUOUS | A combination of bdqffdq:InformationElements is unambiguous in that they align to a unique result given a reference or a Source Authority (bdq:sourceAuthority). | | [VALIDATION_TAXON_UNAMBIGUOUS](docs/terms/bdqtest/index.md#VALIDATION_TAXON_UNAMBIGUOUS) |
 | VERBATIM | Refers to bdqffdq:Amendment Tests that attempt to extract explicit Darwin Core bdq:InformationElements values from Darwin Core verbatim term bdq:InformationElements. | | [AMENDMENT_EVENTDATE_FROM_VERBATIM](docs/terms/bdqtest/index.md#AMENDMENT_EVENTDATE_FROM_VERBATIM) |
 
@@ -404,16 +408,15 @@ We have used the formatting recommended by Pensoft, see https://checklist.pensof
 <li>Leiba B (2017) IETF Key words for use in RFCs to Indicate Requirement Levels (RFC 8174). https://tools.ietf.org/html/rfc8174</li>
 <li>Library of Congress (2019) Extended Date/Time Format (EDTF). https://www.loc.gov/standards/datetime/</li>
 <li>Lowery D, Morris PJ (2024) kurator-org/ffdq-api: Release of ffdq-api version 2.0.2 (v2.0.2). Zenodo. https://doi.org/10.5281/zenodo.14031588</li>
-<li>Lowery D, Morris PJ, Morris RA (2024) kurator-org/kurator-ffdq: Release of Kurator-FFDQ library version v3.0.0 (v3.0.0). Zenodo. https://doi.org/10.5281/zenodo.14026643</li>
-<li>Lowery D, Morris PJ, Morris RA (2025) kurator-org/kurator-ffdq: Release of Kurator-FFDQ library version v3.1.0 (v3.1.0). Zenodo. https://doi.org/10.5281/zenodo.15182936</li>
+<li>Lowery D, Morris PJ, Morris RA (2025) kurator-org/kurator-ffdq: Release of Kurator-FFDQ library version v3.2.0 (v3.2.0). Zenodo. https://doi.org/10.5281/zenodo.15375151</li>
 <li>Maptiler (2019) EPSG.io. https://epsg.io</li>
 <li>Morris P, Hanken J, Lowery D, Ludäscher B, Macklin J, McPhillips T, Wieczorek J, Zhang Q (2018) Kurator: Tools for Improving Fitness for Use of Biodiversity Data. Biodiversity Information Science and Standards 2: e26539. https://doi.org/10.3897/biss.2.26539</li>
-<li>Morris PJ (2024) kurator-org/bdq_issue_to_csv: Version 1.0.0 release of bdq_issue_to_csv utility for creating bdqtest: term-version file. (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.14057551</li>
-<li>Morris PJ (2024b) FilteredPush/bdqtestrunner: Release of bdqtestrunner version v1.0.0 (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.13932178</li>
-<li>Morris PJ, Dou L (2024) FilteredPush/sci_name_qc: Release vesion 1.1.2 of the sci_name_qc library implementing BDQ Core NAME tests. (v1.1.2). Zenodo. https://doi.org/10.5281/zenodo.14052951</li>
-<li>Morris PJ (2025) FilteredPush/rec_occur_qc: Release vesion 1.0.1 of the rec_occur_qc library, compliant implementation of all the BDQ Core Other (metadata) Tests. (v1.0.1). Zenodo. https://doi.org/10.5281/zenodo.14968502</li>
-<li>Morris PJ, Lowery D (2024) FilteredPush/event_date_qc: Release version 3.0.5 of the event_date_qc library, compliant implementation of all the BDQ Core Time Tests. Zenodo. https://doi.org/10.5281/zenodo.14056663</li>
-<li>Morris PJ, Lowery D, Wieczorek J (2025) FilteredPush/geo_ref_qc: Release version 2.0.1 of the geo_ref_qc library, compliant implementation of all the BDQ Core Space Tests (v2.0.1). Zenodo. https://doi.org/10.5281/zenodo.14975607</li>
+<li>Morris PJ (2024) FilteredPush/bdqtestrunner: Release of bdqtestrunner version v1.0.0 (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.13932178</li>
+<li>Morris PJ (2025) kurator-org/bdq_issue_to_csv: Version 1.2.0 release of bdq_issue_to_csv utility for creating bdqtest: term-version file (v1.2.0). Zenodo. https://doi.org/10.5281/zenodo.15375006</li>
+<li>Morris PJ, Dou L (2025) FilteredPush/sci_name_qc: Release version 1.2.0 of the sci_name_qc library compliant implementation of all the BDQ Standard NAME Tests (v1.2.0). Zenodo. https://doi.org/10.5281/zenodo.15374172<li>
+<li>Morris PJ (2025) FilteredPush/rec_occur_qc: Release version 1.1.0 of the rec_occur_qc library, compliant implementation of all the BDQ Standard OTHER (metadata) Tests (v1.1.0). Zenodo. https://doi.org/10.5281/zenodo.15374776</li>
+<li>Morris PJ, Lowery D (2025) FilteredPush/event_date_qc: Release version 3.1.0 of the event_date_qc library, compliant implementation of all the BDQ Standard Time Tests (v3.1.0). Zenodo. https://doi.org/10.5281/zenodo.15373615</li>
+<li>Morris PJ, Lowery D (2025b). FilteredPush/geo_ref_qc: Release version 2.1.0 of the geo_ref_qc library, compliant implementation of all the BDQ Standard Space Tests (v2.1.0). Zenodo. https://doi.org/10.5281/zenodo.15374533</li>
 <li>Natural Earth (2009)  Land 10m. https//www.naturalearthdata.com/download/10m/physical/ne_10m_land.zip</li>
 <li>Natural Earth (2009)  Minor Islands. https//www.naturalearthdata.com/download/10m/physical/ne_10m_minor_islands.zip</li>
 <li>Natural Earth (2022) Admin 1 – States, provinces. v5.1.1 2022-05-12. https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/</li>
