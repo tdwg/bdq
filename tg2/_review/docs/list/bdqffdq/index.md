@@ -152,17 +152,11 @@ Draft Standard for Review
     - [MultiRecord](#multirecord)
     - [SingleRecord](#singlerecord)
     - [COMPLETE](#complete)
-    - [COMPLIANT](#compliant)
-    - [IS_ISSUE](#is_issue)
     - [IS_ISSUE](#is_issue)
     - [NOT_COMPLETE](#not_complete)
-    - [NOT_COMPLIANT](#not_compliant)
     - [NOT_ISSUE](#not_issue)
     - [POTENTIAL_ISSUE](#potential_issue)
     - [AMENDED](#amended)
-    - [EXTERNAL_PREREQUISITES_NOT_MET](#external_prerequisites_not_met)
-    - [FILLED_IN](#filled_in)
-    - [INTERNAL_PREREQUISITES_NOT_MET](#internal_prerequisites_not_met)
     - [NOT_AMENDED](#not_amended)
     - [RUN_HAS_RESULT](#run_has_result)
 
@@ -901,7 +895,6 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }
 - Preferred Label: for Amendment
 - Definition: Relates a bdqffdq:AmendmentMethod to a bdqffdq:Amendment.
 - SubClass Of: amendmentProperty; forDataQualityNeed
-- Range [ owl:someValuesFrom bdqffdq:forAmendment ]
 - Comments: Use to link a bdqffdq:AmendmentMethod to a bdqffdq:Amendment. Describes the relationship between a bdqffdq:AmendmentMethod (Solutions layer, see Figure 3 in Veiga et al., 2017) and a bdqffdq:Amendment (Need layer, see Figure 3 in Veiga et al., 2017).
 
 ********************
@@ -921,7 +914,6 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }
 - Preferred Label: for Issue
 - Definition: Relates a bdqffdq:IssueMethod to a bdqffdq:Issue.
 - SubClass Of: forDataQualityNeed; issueProperty
-- Range [ owl:someValuesFrom bdqffdq:forIssue ]
 - Comments: Use to link a bdqffdq:IssueMethod to a bdqffdq:Issue. Describes the relationship between a bdqffdq:IssueMethod (Solutions layer, see Figure 3 in Veiga et al., 2017) and a bdqffdq:Issue (Need layer, see Figure 3 in Veiga et al., 2017). Parallel concepts are bdqffdq:forAmendment, bdqffdq:forValidation, and bdqffdq:forMeasure.
 
 ********************
@@ -932,7 +924,6 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }
 - Preferred Label: for Measure
 - Definition: Relates a bdqffdq:MeasurementMethod to a bdqffdq:Measure.
 - SubClass Of: forDataQualityNeed; measurementProperty
-- Range [ owl:someValuesFrom bdqffdq:forMeasure ]
 - Comments: Use to link bdqffdq:MeasurementMethods (Solutions layer, see Figure 3 in Veiga et al., 2017) to bdqffdq:Measures (Need layer, see Figure 3 in Veiga et al., 2017). Parallel concepts are bdqffdq:forAmendment, bdqffdq:forValidation, and bdqffdq:forIssue.
 
 ********************
@@ -943,7 +934,6 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }
 - Preferred Label: for Validation
 - Definition: Relates a bdqffdq:ValidationMethod to a bdqffdq:Validation.
 - SubClass Of: forDataQualityNeed; validationProperty
-- Range [ owl:someValuesFrom bdqffdq:forValidation ]
 - Comments: Use to link bdqffdq:ValidationMethods to bdqffdq:Validations. Describes the relationship between a bdqffdq:ValidationMethod (Solutions layer, see Figure 3 in Veiga et al., 2017) and a bdqffdq:Validation (Need layer, see Figure 3 in Veiga et al., 2017). Parallel concepts are bdqffdq:forAmendment, bdqffdq:forMeasure, and bdqffdq:forIssue.
 
 ********************
@@ -963,7 +953,6 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }
 - Name: bdqffdq:hasArgument
 - Preferred Label: has Argument
 - Definition: Relates a bdqffdq:Specification to a bdqffdq:Argument
-- Range bdqffdq:Argument
 - Comments: Expected to be a relationship between a bdqffdq:Specification and a bdqffdq:Argument, where the bdqffdq:Argument provides a value for a bdqffdq:Parameter (e.g., bdq:sourceAuthority), and a bdqffdq:hasAuthoritiesDefaults for the bdqffdq:Specification may provide a default value for the bdqffdq:Parameter under that bdqffdq:Specification.
 
 ********************
@@ -984,7 +973,6 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }
 - Preferred Label: has Criterion
 - Definition: The bdqffdq:Criterion under which a bdqffdq:Validation or bdqffdq:Issue assesses for data quality.
 - SubClass Of: issueProperty; validationProperty
-- Range [ owl:someValuesFrom bdqffdq:hasCriterion ]
 - Comments: Used to link the derived concept of a bdqffdq:Validation to the bdqffdq:FundamentalConcept of a bdqffdq:Criterion.
 
 ********************
@@ -995,7 +983,6 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }
 - Preferred Label: has Data Quality Dimension
 - Definition: The bdqffdq:DataQualityDimension to which a bdqffdq:DataQualityNeed applies.
 - SubClass Of: amendmentProperty; issueProperty; measurementProperty; validationProperty
-- Range [ owl:someValuesFrom bdqffdq:hasDataQualityDimension ]
 - Comments: Used to link a derived concept of a bdqffdq:DataQualityNeed (a Test, whether rdf:type Validation, Issue, Measure, or Amendment) to the bdqffdq:FundamentalConcept of a bdqffdq:DataQualityDimension. For a bdqffdq:Validation or bdqffdq:Issue, the bdqffdq:Dimension of data quality assessed. For a bdqffdq:Measure, the bdqffdq:Dimension of data quality measured. For a bdqffdq:Amendment, the bdqffdq:Dimension of data quality to be improved.  
 Under the original formulation of the Framework, only Measures have Dimensions.
 
@@ -1007,7 +994,6 @@ Under the original formulation of the Framework, only Measures have Dimensions.
 - Preferred Label: has Enhancement
 - Definition: The bdqffdq:Enhancement that describes how a bdqffdq:Amendment may propose changes to improve data quality.
 - SubClass Of: amendmentProperty
-- Range [ owl:someValuesFrom bdqffdq:hasEnhancement ]
 - Comments: Used to link the derived property of a bdqffdq:Amendment to the bdqffdq:FundamentalConcept of a bdqffdq:Enhancement.
 
 ********************
@@ -1018,7 +1004,6 @@ Under the original formulation of the Framework, only Measures have Dimensions.
 - Preferred Label: has Information Element
 - Definition: Describes the bdqffdq:InformationElements assessed by a bdqffdq:DataQualityNeed.
 - SubClass Of: amendmentProperty; issueProperty; measurementProperty; validationProperty
-- Range bdqffdq:InformationElement
 - Comments: Provides a relationship between bdqffdq:DataQualityNeed concepts and bdqffdq:InformationElements. For example, bdqffdq:Validation uses this property with bdqffdq:hasResourceType to define a bdqffdq:Criterion in the context of related bdqffdq:InformationElements.  
 Subtypes bdqffdq:hasActedUponInformationElement and bdqffdq:hasConsultedInformationElement allow a bdqffdq:DataQualityNeed to be related to specific bdqffdq:InformationElement terms in a way that allows bdqffdq:DataQualityReports to distinguish for consumers which bdqffdq:InformationElements a Test makes bdqffdq:Assertions about (and which only informed that bdqffdq:Assertion).
 
@@ -1029,7 +1014,6 @@ Subtypes bdqffdq:hasActedUponInformationElement and bdqffdq:hasConsultedInformat
 - Name: bdqffdq:hasParameter
 - Preferred Label: has Parameter
 - Definition: Relates a bdqffdq:Argument to a bdqffdq:Parameter.
-- Range bdqffdq:Parameter
 - Comments: The bdqffdq:hasParameter property is expected to describe the Formal Parameter for which a bdqffdq:hasArgumentValue of the same bdqffdq:Argument provides the Actual Parameter. The bdqffdq:Argument is also expected to be the bdqffdq:hasArgument for a bdqffdq:Specification that provides the default value for the bdqffdq:hasArgumentValue and bdqffdq:hasParameter within a bdqffdq:hasAuthoritiesDefaults.
 
 ********************
@@ -1080,7 +1064,6 @@ The bdqffdq:ResponseStatus is always an object, unlike bdqffdq:ResponseResult, w
 - Name: bdqffdq:hasSpecification
 - Preferred Label: has Specification
 - Definition: Relates a bdqffdq:Method to a bdqffdq:Specification.
-- Range [ owl:someValuesFrom bdqffdq:hasSpecification ]
 - Comments: Describes the relationship between a derived bdqffdq: concept that is a bdqffdq:Method and the bdqffdq:FundamentalConcept of a bdqffdq:Specification (technical description of a Test).
 
 ********************
@@ -1090,7 +1073,6 @@ The bdqffdq:ResponseStatus is always an object, unlike bdqffdq:ResponseResult, w
 - Name: bdqffdq:hasUseCase
 - Preferred Label: has Use Case
 - Definition: Relates a bdqffdq:Policy to a bdqffdq:UseCase.
-- Range [ owl:someValuesFrom bdqffdq:hasUseCase ]
 - Comments: Used by concepts in the bdqffdq:DataQualityNeed category to describe the relationship between bdqffdq:Policies (bdqffdq:ValidationPolicy, bdqffdq:MeasurementPolicy, bdqffdq:AmendmentPolicy) and an instance of a bdqffdq:UseCase.
 
 ********************
@@ -1100,7 +1082,6 @@ The bdqffdq:ResponseStatus is always an object, unlike bdqffdq:ResponseResult, w
 - Name: bdqffdq:implementedBy
 - Preferred Label: implemented By
 - Definition: The bdqffdq:Mechanism that provides a bdqffdq:Implementation
-- Range [ owl:someValuesFrom bdqffdq:implementedBy ]
 - Comments: Describes the link between a bdqffdq:Implementation and a bdqffdq:Mechanism.
 
 ********************
@@ -1110,7 +1091,6 @@ The bdqffdq:ResponseStatus is always an object, unlike bdqffdq:ResponseResult, w
 - Name: bdqffdq:improvedBy
 - Preferred Label: improved By
 - Definition: The bdqffdq:ImprovementTarget that would have data quality improved by bdqffdq:Assertions resulting from a bdqffdq:Amendment.
-- Range [ owl:someValuesFrom bdqffdq:improvedBy ]
 - Comments: Originally had Domain: Amendment and Range: ImprovementTarget. Asserts that a bdqffdq:ImprovementTarget could be improved by the bdqffdq:Amendment.  
 Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:ImprovementTarget, that would improve data bdqffdq:ActedUpon by a set of bdqffdq:Measures or bdqffdq:Validations. This can be used to determine which bdqffdq:Measures and bdqffdq:Validations are improved upon by a given bdqffdq:Amendment.
 
@@ -1166,7 +1146,6 @@ Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:Impro
 - Name: bdqffdq:targetedIssue
 - Preferred Label: targeted Issue
 - Definition: A bdqffdq:Issue for which the data conformance with a bdqffdq:NeedConcept may be improved by accepting proposals from a bdqffdq:Amendment via a bdqffdq:ImprovementTarget.
-- Range [ owl:someValuesFrom bdqffdq:targetedIssue ]
 - Comments: The bdqffdq:Issue targeted by a problem via the bdqffdq:ImprovementTarget object. Describes the relationship between a bdqffdq:ImprovementTarget and a bdqffdq:Issue.
 
 ********************
@@ -1176,7 +1155,6 @@ Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:Impro
 - Name: bdqffdq:targetedMeasure
 - Preferred Label: targeted Measure
 - Definition: A bdqffdq:Measure for which the data conformance with a bdqffdq:NeedConcept may be improved by accepting proposals from a bdqffdq:Amendment via a bdqffdq:ImprovementTarget.
-- Range [ owl:someValuesFrom bdqffdq:targetedMeasure ]
 - Comments: Describes the relationship between a bdqffdq:ImprovementTarget and a bdqffdq:Measure.
 
 ********************
@@ -1187,7 +1165,6 @@ Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:Impro
 - Preferred Label: targeted Validation
 - Definition: A bdqffdq:Validation for which the data conformance with a bdqffdq:NeedConcept may be improved by accepting proposals from a bdqffdq:Amendment via a bdqffdq:ImprovementTarget.
 - SubClass Of: http://www.w3.org/2002/07/owl#topObjectProperty
-- Range [ owl:someValuesFrom bdqffdq:targetedValidation ]
 - Comments: Relates a bdqffdq:ImprovementTarget to a bdqffdq:Validation. Describes the relationship between a bdqffdq:ImprovementTarget and a bdqffdq:Validation.
 
 ********************
@@ -1197,7 +1174,6 @@ Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:Impro
 - Name: bdqffdq:usesSpecification
 - Preferred Label: uses Specification
 - Definition: The bdqffdq:Specification that a bdqffdq:Implementation implements.
-- Range [ owl:someValuesFrom bdqffdq:usesSpecification ]
 - Comments: Relates a bdqffdq:Implementation to the bdqffdq:Specification that the bdqffdq:Implementation implements.
 
 ********************
@@ -1217,7 +1193,6 @@ Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:Impro
 - Name: bdqffdq:hasAuthoritiesDefaults
 - Preferred Label: has Authorities and Defaults
 - Definition: Text describing bdq:sourceAuthorities and bdqffdq:Parameters with their default values to attach to a bdqffdq:Specification to further specify the behavior described in the bdqffdq:hasExpectedResponse.
-- Range xsd:string
 - Comments: Details of the bdq:sourceAuthority listed in a bdqffdq:Specification, with bdqffdq:Parameters that may affect the bdqffdq:hasExpectedResponse, and with their default values.
 
 ********************
@@ -1227,7 +1202,6 @@ Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:Impro
 - Name: bdqffdq:hasDateLastUpdated
 - Preferred Label: has Date Last Updated
 - Definition: Date of the most recent dcterms:issued for this class with a change that would be pertinent to a bdqffdq:Implementation.
-- Range xsd:date
 - Comments: While a new instance of a resource with a new dcterms:issued is required for any change to that resource, not all changes would be pertinent to implementers, (i.e., that would required implementers to evaluate their code for changes needed to comply with the update). The bdqffdq:hasDateLastUpdated allows implementers to identify which new changes to the definition of a Test would entail changes to code, and which would not. For example, a change to the logic of a bdqffdq:Specification in the text of bdqffdq:hasExpectedResponse would imply needed changes to the logic of code implementing that bdqffdq:Specification, but a correction of a spelling mistake within the text of a bdqffdq:hasExpectedResponse would not.
 
 ********************
@@ -1237,7 +1211,6 @@ Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:Impro
 - Name: bdqffdq:hasExpectedResponse
 - Preferred Label: has Expected Response
 - Definition: Text describing the logic to be followed by a bdqffdq:Implementation of a bdqffdq:Specification specifying the values of bdqffdq:ResponseStatus and bdqffdq:ResponseResults that should be produced from the evaluation of input bdqffdq:InformationElements.
-- Range xsd:string
 - Comments: The description of the logic of a Test Specification. A bdqffdq:hasExpectedResponse is expected to be a data property of a Specification.
 
 ********************
@@ -1247,7 +1220,6 @@ Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:Impro
 - Name: bdqffdq:hasResponseComment
 - Preferred Label: has Response Comment
 - Definition: Free text describing the bdqffdq:Assertion made in the response and why that conclusion was reached.
-- Range xsd:string
 - Comments: Intended for consumption by human readers of bdqffdq:DataQualityReports to understand why particular bdqffdq:Assertions were made.
 
 ********************
@@ -1288,40 +1260,16 @@ A bdqffdq:SingleRecord, like a bdqffdq:MultiRecord, consists of data with a defi
 - Name: bdqffdq:COMPLETE
 - Type: bdqffdq:ResponseResult
 - Preferred Label: COMPLETE
-- DifferentFrom: bdqffdq:NOT_COMPLETE
 - Definition: A bdqffdq:ResponseResult of a bdqffdq:Measure that asserts that data are present and sufficiently comprehensive for use.
 - Comments: This value can be used to filter data for Quality Assurance. This value can be asserted, for example, by bdqffdq:Measures of bdqffdq:MultiRecords where all the bdqffdq:Validation bdqffdq:ResponseResults from all included records in the dataset are bdqffdq:COMPLIANT.
 
 ********************
 
-#### COMPLIANT
-
-- Name: bdqffdq:COMPLIANT
-- Type: bdqffdq:ResponseResult
-- Preferred Label: COMPLIANT
-- DifferentFrom: bdqffdq:NOT_COMPLIANT
-- Definition: A bdqffdq:ResponseResult of a bdqffdq:Validation where the data conforms to the bdqffdq:Criteria for quality in the Test bdqffdq:Specification.
-- Comments:
-
-********************
-
 #### IS_ISSUE
 
 - Name: bdqffdq:IS_ISSUE
 - Type: bdqffdq:ResponseResult
 - Preferred Label: IS_ISSUE
-- DifferentFrom: bdqffdq:NOT_ISSUE
-- Definition: A bdqffdq:ResponseResult of a bdqffdq:Issue indicating that the data do not have sufficient quality for a use.
-- Comments: This is a parallel bdqffdq:ResponseResult to bdqffdq:NOT_COMPLIANT
-
-********************
-
-#### IS_ISSUE
-
-- Name: bdqffdq:IS_ISSUE
-- Type: bdqffdq:ResponseResult
-- Preferred Label: IS_ISSUE
-- DifferentFrom: bdqffdq:POTENTIAL_ISSUE
 - Definition: A bdqffdq:ResponseResult of a bdqffdq:Issue indicating that the data do not have sufficient quality for a use.
 - Comments: This is a parallel bdqffdq:ResponseResult to bdqffdq:NOT_COMPLIANT
 
@@ -1337,22 +1285,11 @@ A bdqffdq:SingleRecord, like a bdqffdq:MultiRecord, consists of data with a defi
 
 ********************
 
-#### NOT_COMPLIANT
-
-- Name: bdqffdq:NOT_COMPLIANT
-- Type: bdqffdq:ResponseResult
-- Preferred Label: NOT_COMPLIANT
-- Definition: A bdqffdq:ResponseResult of a bdqffdq:Validation where the data do not conform to the bdqffdq:Criteria for quality in the Test bdqffdq:Specification.
-- Comments:
-
-********************
-
 #### NOT_ISSUE
 
 - Name: bdqffdq:NOT_ISSUE
 - Type: bdqffdq:ResponseResult
 - Preferred Label: NOT_ISSUE
-- DifferentFrom: bdqffdq:POTENTIAL_ISSUE
 - Definition: A bdqffdq:ResponseResult of a bdqffdq:Issue where no potential problems were detected.
 - Comments: This is similar to, but has different semantics to, bdqffdq:COMPLIANT for a bdqffdq:Validation. The value bdqffdq:COMPLIANT means that the data were evaluated as having quality according to a bdqffdq:Criterion. The value bdqffdq:NOT_ISSUE means that no bdqffdq:Issue with data quality was found under a bdqffdq:Criterion for identifying the absence of quality.
 
@@ -1373,41 +1310,8 @@ A bdqffdq:SingleRecord, like a bdqffdq:MultiRecord, consists of data with a defi
 - Name: bdqffdq:AMENDED
 - Type: bdqffdq:ResponseStatus
 - Preferred Label: AMENDED
-- DifferentFrom: bdqffdq:NOT_AMENDED
 - Definition: A bdqffdq:ResponseStatus used to indicate that a bdqffdq:hasResponseResultValue from a bdqffdq:Amendment contains a proposed change.
 - Comments: The value bdqffdq:AMENDED implies that a change is being proposed to an existing bdq:NotEmpty value. bdqffdq:Amendments do not provide bdqffdq:hasResponseResult object properties. Proposed changes will be in a bdqffdq:hasResponseResultValue data property.
-
-********************
-
-#### EXTERNAL_PREREQUISITES_NOT_MET
-
-- Name: bdqffdq:EXTERNAL_PREREQUISITES_NOT_MET
-- Type: bdqffdq:ResponseStatus
-- Preferred Label: EXTERNAL_PREREQUISITES_NOT_MET
-- DifferentFrom: bdqffdq:INTERNAL_PREREQUISITES_NOT_MET
-- Definition: A bdqffdq:ResponseStatus used to indicate that a bdqffdq:ResponseResult was not generated because a bdq:sourceAuthority was not accessible. If the Test is run at a later time, it may produce a different bdqffdq:ResponseStatus.
-- Comments:
-
-********************
-
-#### FILLED_IN
-
-- Name: bdqffdq:FILLED_IN
-- Type: bdqffdq:ResponseStatus
-- Preferred Label: FILLED_IN
-- DifferentFrom: bdqffdq:NOT_AMENDED
-- Definition: A bdqffdq:ResponseStatus used to indicate that a bdqffdq:Amendment contains a proposed change to a record in a bdqffdq:hasResponseResultValue where the bdqffdq:InformationElement was bdq:Empty.
-- Comments:
-
-********************
-
-#### INTERNAL_PREREQUISITES_NOT_MET
-
-- Name: bdqffdq:INTERNAL_PREREQUISITES_NOT_MET
-- Type: bdqffdq:ResponseStatus
-- Preferred Label: INTERNAL_PREREQUISITES_NOT_MET
-- Definition: A bdqffdq:ResponseStatus used to indicate that a bdqffdq:ResponseResult was not generated because values of the bdqffdq:InformationElement were insufficient to run the Test. If the Test is run at a later time on unmodified data, it should produce the same bdqffdq:ResponseStatus.
-- Comments:
 
 ********************
 

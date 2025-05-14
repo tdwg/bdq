@@ -10,7 +10,7 @@
 
 # The file ../_review/vocabulary/bdqtest_term_versions.csv is now the canonical version
 # of all test descriptions.
-#cp ../core/TG2_tests.csv ../_review/vocabulary/bdqtest_term_versions.csv
+cp ../core/TG2_tests.csv ../_review/vocabulary/bdqtest_term_versions.csv
 
 # TODO: replace the next step with invocation of:
 # draft_build_bdqtest_singlerecord_tests_current.py

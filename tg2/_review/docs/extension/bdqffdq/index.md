@@ -84,7 +84,6 @@ Draft Standard for Review
     - [COMPLETE](#complete)
     - [COMPLIANT](#compliant)
     - [IS_ISSUE](#is_issue)
-    - [IS_ISSUE](#is_issue)
     - [NOT_ISSUE](#not_issue)
     - [AMENDED](#amended)
     - [EXTERNAL_PREREQUISITES_NOT_MET](#external_prerequisites_not_met)
@@ -405,16 +404,7 @@ In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use th
 | -------- | ----- |
 | Name | bdqffdq:IS_ISSUE |
 | Type | bdqffdq:ResponseResult |
-| Different From | bdqffdq:NOT_ISSUE |
-
-
-#### IS_ISSUE
-
-| Property | Value |
-| -------- | ----- |
-| Name | bdqffdq:IS_ISSUE |
-| Type | bdqffdq:ResponseResult |
-| Different From | bdqffdq:POTENTIAL_ISSUE |
+| Different From | bdqffdq:NOT_ISSUE, bdqffdq:POTENTIAL_ISSUE |
 
 
 #### NOT_ISSUE

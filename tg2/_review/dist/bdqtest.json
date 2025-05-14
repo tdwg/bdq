@@ -1,6 +1,6 @@
 [
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe-2025-03-07",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -57,7 +57,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -174,7 +174,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe-2025-03-07"
             }
         ]
     },
@@ -221,7 +221,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/69b2efdc-6269-45a4-aecb-4cb99c2ae134-2025-03-07",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/69b2efdc-6269-45a4-aecb-4cb99c2ae134-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -278,7 +278,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/69b2efdc-6269-45a4-aecb-4cb99c2ae134"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/69b2efdc-6269-45a4-aecb-4cb99c2ae134"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -357,7 +357,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/69b2efdc-6269-45a4-aecb-4cb99c2ae134-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/69b2efdc-6269-45a4-aecb-4cb99c2ae134-2025-03-07"
             }
         ]
     },
@@ -428,7 +428,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -485,7 +485,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -553,7 +553,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f-2025-03-06"
             }
         ]
     },
@@ -618,7 +618,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/8f1e6e58-544b-4365-a569-fb781341644e-2025-03-07",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/8f1e6e58-544b-4365-a569-fb781341644e-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -675,7 +675,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/8f1e6e58-544b-4365-a569-fb781341644e"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/8f1e6e58-544b-4365-a569-fb781341644e"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -757,7 +757,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/8f1e6e58-544b-4365-a569-fb781341644e-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/8f1e6e58-544b-4365-a569-fb781341644e-2025-03-07"
             }
         ]
     },
@@ -796,7 +796,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/39bb2280-1215-447b-9221-fd13bc990641-2025-03-07",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/39bb2280-1215-447b-9221-fd13bc990641-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -853,7 +853,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/39bb2280-1215-447b-9221-fd13bc990641"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/39bb2280-1215-447b-9221-fd13bc990641"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -920,7 +920,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/39bb2280-1215-447b-9221-fd13bc990641-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/39bb2280-1215-447b-9221-fd13bc990641-2025-03-07"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -987,7 +987,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/3667556d-d8f5-454c-922b-af8af38f613c-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/3667556d-d8f5-454c-922b-af8af38f613c-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -1044,7 +1044,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/3667556d-d8f5-454c-922b-af8af38f613c"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/3667556d-d8f5-454c-922b-af8af38f613c"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -1112,7 +1112,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/3667556d-d8f5-454c-922b-af8af38f613c-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/3667556d-d8f5-454c-922b-af8af38f613c-2025-03-06"
             }
         ]
     },
@@ -1177,7 +1177,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/0949110d-c06b-450e-9649-7c1374d940d1-2025-03-07",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/0949110d-c06b-450e-9649-7c1374d940d1-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -1234,7 +1234,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/0949110d-c06b-450e-9649-7c1374d940d1"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/0949110d-c06b-450e-9649-7c1374d940d1"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -1313,7 +1313,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/0949110d-c06b-450e-9649-7c1374d940d1-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/0949110d-c06b-450e-9649-7c1374d940d1-2025-03-07"
             }
         ]
     },
@@ -1352,7 +1352,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/453844ae-9df4-439f-8e24-c52498eca84a-2024-09-24",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/453844ae-9df4-439f-8e24-c52498eca84a-2024-09-24",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Measure"
         ],
@@ -1404,7 +1404,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/453844ae-9df4-439f-8e24-c52498eca84a"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/453844ae-9df4-439f-8e24-c52498eca84a"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -1488,7 +1488,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forMeasurement": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/453844ae-9df4-439f-8e24-c52498eca84a-2024-09-24"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/453844ae-9df4-439f-8e24-c52498eca84a-2024-09-24"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -1537,7 +1537,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e-2025-03-07",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -1599,7 +1599,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -1708,7 +1708,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e-2025-03-07"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -1767,7 +1767,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/f51e15a6-a67d-4729-9c28-3766299d2985-2025-03-07",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/f51e15a6-a67d-4729-9c28-3766299d2985-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -1824,7 +1824,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/f51e15a6-a67d-4729-9c28-3766299d2985"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/f51e15a6-a67d-4729-9c28-3766299d2985"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -1903,7 +1903,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/f51e15a6-a67d-4729-9c28-3766299d2985-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/f51e15a6-a67d-4729-9c28-3766299d2985-2025-03-07"
             }
         ]
     },
@@ -1942,7 +1942,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/3cff4dc4-72e9-4abe-9bf3-8a30f1618432-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/3cff4dc4-72e9-4abe-9bf3-8a30f1618432-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -1999,7 +1999,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/3cff4dc4-72e9-4abe-9bf3-8a30f1618432"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/3cff4dc4-72e9-4abe-9bf3-8a30f1618432"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -2046,7 +2046,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/3cff4dc4-72e9-4abe-9bf3-8a30f1618432-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/3cff4dc4-72e9-4abe-9bf3-8a30f1618432-2025-03-06"
             }
         ]
     },
@@ -2117,7 +2117,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/3136236e-04b6-49ea-8b34-a65f25e3aba1-2025-03-07",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/3136236e-04b6-49ea-8b34-a65f25e3aba1-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -2174,7 +2174,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/3136236e-04b6-49ea-8b34-a65f25e3aba1"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/3136236e-04b6-49ea-8b34-a65f25e3aba1"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -2242,7 +2242,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/3136236e-04b6-49ea-8b34-a65f25e3aba1-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/3136236e-04b6-49ea-8b34-a65f25e3aba1-2025-03-07"
             }
         ]
     },
@@ -2307,7 +2307,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/0bb8297d-8f8a-42d2-80c1-558f29efe798-2025-03-07",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/0bb8297d-8f8a-42d2-80c1-558f29efe798-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -2364,7 +2364,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/0bb8297d-8f8a-42d2-80c1-558f29efe798"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/0bb8297d-8f8a-42d2-80c1-558f29efe798"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -2432,7 +2432,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/0bb8297d-8f8a-42d2-80c1-558f29efe798-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/0bb8297d-8f8a-42d2-80c1-558f29efe798-2025-03-07"
             }
         ]
     },
@@ -2503,7 +2503,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/58486cb6-1114-4a8a-ba1e-bd89cfe887e9-2025-03-07",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/58486cb6-1114-4a8a-ba1e-bd89cfe887e9-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -2560,7 +2560,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/58486cb6-1114-4a8a-ba1e-bd89cfe887e9"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/58486cb6-1114-4a8a-ba1e-bd89cfe887e9"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -2685,7 +2685,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/58486cb6-1114-4a8a-ba1e-bd89cfe887e9-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/58486cb6-1114-4a8a-ba1e-bd89cfe887e9-2025-03-07"
             }
         ]
     },
@@ -2724,7 +2724,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/bd385eeb-44a2-464b-a503-7abe407ef904-2025-03-07",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/bd385eeb-44a2-464b-a503-7abe407ef904-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -2781,7 +2781,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/bd385eeb-44a2-464b-a503-7abe407ef904"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/bd385eeb-44a2-464b-a503-7abe407ef904"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -2829,7 +2829,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/bd385eeb-44a2-464b-a503-7abe407ef904-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/bd385eeb-44a2-464b-a503-7abe407ef904-2025-03-07"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -2888,7 +2888,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/6ce2b2b4-6afe-4d13-82a0-390d31ade01c-2025-03-07",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/6ce2b2b4-6afe-4d13-82a0-390d31ade01c-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -2950,7 +2950,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/6ce2b2b4-6afe-4d13-82a0-390d31ade01c"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/6ce2b2b4-6afe-4d13-82a0-390d31ade01c"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -3013,7 +3013,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/6ce2b2b4-6afe-4d13-82a0-390d31ade01c-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/6ce2b2b4-6afe-4d13-82a0-390d31ade01c-2025-03-07"
             }
         ]
     },
@@ -3052,7 +3052,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/3f335517-f442-4b98-b149-1e87ff16de45-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/3f335517-f442-4b98-b149-1e87ff16de45-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -3109,7 +3109,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/3f335517-f442-4b98-b149-1e87ff16de45"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/3f335517-f442-4b98-b149-1e87ff16de45"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -3177,7 +3177,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/3f335517-f442-4b98-b149-1e87ff16de45-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/3f335517-f442-4b98-b149-1e87ff16de45-2025-03-06"
             }
         ]
     },
@@ -3242,7 +3242,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/c486546c-e6e5-48a7-b286-eba7f5ca56c4-2025-03-07",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/c486546c-e6e5-48a7-b286-eba7f5ca56c4-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -3299,7 +3299,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/c486546c-e6e5-48a7-b286-eba7f5ca56c4"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/c486546c-e6e5-48a7-b286-eba7f5ca56c4"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -3367,7 +3367,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/c486546c-e6e5-48a7-b286-eba7f5ca56c4-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/c486546c-e6e5-48a7-b286-eba7f5ca56c4-2025-03-07"
             }
         ]
     },
@@ -3406,7 +3406,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/fec5ffe6-3958-4312-82d9-ebcca0efb350-2025-03-07",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/fec5ffe6-3958-4312-82d9-ebcca0efb350-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -3463,7 +3463,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/fec5ffe6-3958-4312-82d9-ebcca0efb350"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/fec5ffe6-3958-4312-82d9-ebcca0efb350"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -3490,7 +3490,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/fec5ffe6-3958-4312-82d9-ebcca0efb350-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/fec5ffe6-3958-4312-82d9-ebcca0efb350-2025-03-07"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -3544,7 +3544,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/c09ecbf9-34e3-4f3e-b74a-8796af15e59f-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/c09ecbf9-34e3-4f3e-b74a-8796af15e59f-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -3601,7 +3601,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/c09ecbf9-34e3-4f3e-b74a-8796af15e59f"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/c09ecbf9-34e3-4f3e-b74a-8796af15e59f"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -3669,7 +3669,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/c09ecbf9-34e3-4f3e-b74a-8796af15e59f-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/c09ecbf9-34e3-4f3e-b74a-8796af15e59f-2025-03-06"
             }
         ]
     },
@@ -3708,7 +3708,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/adb27d29-9f0d-4d52-b760-a77ba57a69c9-2025-03-07",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/adb27d29-9f0d-4d52-b760-a77ba57a69c9-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -3765,7 +3765,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/adb27d29-9f0d-4d52-b760-a77ba57a69c9"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/adb27d29-9f0d-4d52-b760-a77ba57a69c9"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -3850,7 +3850,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/adb27d29-9f0d-4d52-b760-a77ba57a69c9-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/adb27d29-9f0d-4d52-b760-a77ba57a69c9-2025-03-07"
             }
         ]
     },
@@ -3918,7 +3918,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/b9c184ce-a859-410c-9d12-71a338200380-2025-03-07",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/b9c184ce-a859-410c-9d12-71a338200380-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -3980,7 +3980,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/b9c184ce-a859-410c-9d12-71a338200380"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/b9c184ce-a859-410c-9d12-71a338200380"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -4072,7 +4072,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/b9c184ce-a859-410c-9d12-71a338200380-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/b9c184ce-a859-410c-9d12-71a338200380-2025-03-07"
             }
         ]
     },
@@ -4143,7 +4143,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/710fe118-17e1-440f-b428-88ba3f547d6d-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/710fe118-17e1-440f-b428-88ba3f547d6d-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -4205,7 +4205,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/710fe118-17e1-440f-b428-88ba3f547d6d"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/710fe118-17e1-440f-b428-88ba3f547d6d"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -4286,7 +4286,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/710fe118-17e1-440f-b428-88ba3f547d6d-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/710fe118-17e1-440f-b428-88ba3f547d6d-2025-03-06"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -4345,7 +4345,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/f2b4a50a-6b2f-4930-b9df-da87b6a21082-2025-03-07",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/f2b4a50a-6b2f-4930-b9df-da87b6a21082-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -4407,7 +4407,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/f2b4a50a-6b2f-4930-b9df-da87b6a21082"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/f2b4a50a-6b2f-4930-b9df-da87b6a21082"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -4445,7 +4445,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/f2b4a50a-6b2f-4930-b9df-da87b6a21082-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/f2b4a50a-6b2f-4930-b9df-da87b6a21082-2025-03-07"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -4530,7 +4530,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/c5658b83-4471-4f57-9d94-bf7d0a96900c-2025-03-07",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/c5658b83-4471-4f57-9d94-bf7d0a96900c-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -4592,7 +4592,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/c5658b83-4471-4f57-9d94-bf7d0a96900c"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/c5658b83-4471-4f57-9d94-bf7d0a96900c"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -4640,7 +4640,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/c5658b83-4471-4f57-9d94-bf7d0a96900c-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/c5658b83-4471-4f57-9d94-bf7d0a96900c-2025-03-07"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -4694,7 +4694,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/f18a470b-3fe1-4aae-9c65-a6d3db6b550c-2025-03-07",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/f18a470b-3fe1-4aae-9c65-a6d3db6b550c-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -4751,7 +4751,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/f18a470b-3fe1-4aae-9c65-a6d3db6b550c"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/f18a470b-3fe1-4aae-9c65-a6d3db6b550c"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -4825,7 +4825,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/f18a470b-3fe1-4aae-9c65-a6d3db6b550c-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/f18a470b-3fe1-4aae-9c65-a6d3db6b550c-2025-03-07"
             }
         ]
     },
@@ -4890,7 +4890,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/431467d6-9b4b-48fa-a197-cd5379f5e889-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/431467d6-9b4b-48fa-a197-cd5379f5e889-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -4952,7 +4952,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/431467d6-9b4b-48fa-a197-cd5379f5e889"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/431467d6-9b4b-48fa-a197-cd5379f5e889"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -5090,7 +5090,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/431467d6-9b4b-48fa-a197-cd5379f5e889-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/431467d6-9b4b-48fa-a197-cd5379f5e889-2025-03-06"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -5175,7 +5175,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2025-03-07",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -5232,7 +5232,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -5300,7 +5300,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2025-03-07"
             }
         ]
     },
@@ -5339,7 +5339,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2025-03-07",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -5396,7 +5396,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/7e0c0418-fe16-4a39-98bd-80e19d95b9d1"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/7e0c0418-fe16-4a39-98bd-80e19d95b9d1"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -5464,7 +5464,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2025-03-07"
             }
         ]
     },
@@ -5503,7 +5503,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/0345b325-836d-4235-96d0-3b5caf150fc0-2025-03-07",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/0345b325-836d-4235-96d0-3b5caf150fc0-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -5560,7 +5560,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/0345b325-836d-4235-96d0-3b5caf150fc0"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/0345b325-836d-4235-96d0-3b5caf150fc0"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -5587,7 +5587,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/0345b325-836d-4235-96d0-3b5caf150fc0-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/0345b325-836d-4235-96d0-3b5caf150fc0-2025-03-07"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -5646,7 +5646,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/718dfc3c-cb52-4fca-b8e2-0e722f375da7-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/718dfc3c-cb52-4fca-b8e2-0e722f375da7-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -5703,7 +5703,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/718dfc3c-cb52-4fca-b8e2-0e722f375da7"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/718dfc3c-cb52-4fca-b8e2-0e722f375da7"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -5730,7 +5730,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/718dfc3c-cb52-4fca-b8e2-0e722f375da7-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/718dfc3c-cb52-4fca-b8e2-0e722f375da7-2025-03-06"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -5789,7 +5789,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/b23110e7-1be7-444a-a677-cdee0cf4330c-2025-03-07",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/b23110e7-1be7-444a-a677-cdee0cf4330c-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -5846,7 +5846,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/b23110e7-1be7-444a-a677-cdee0cf4330c"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/b23110e7-1be7-444a-a677-cdee0cf4330c"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -5917,7 +5917,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/b23110e7-1be7-444a-a677-cdee0cf4330c-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/b23110e7-1be7-444a-a677-cdee0cf4330c-2025-03-07"
             }
         ]
     },
@@ -5956,7 +5956,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/07c28ace-561a-476e-a9b9-3d5ad6e35933-2025-03-07",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/07c28ace-561a-476e-a9b9-3d5ad6e35933-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -6013,7 +6013,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/07c28ace-561a-476e-a9b9-3d5ad6e35933"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/07c28ace-561a-476e-a9b9-3d5ad6e35933"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -6040,7 +6040,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/07c28ace-561a-476e-a9b9-3d5ad6e35933-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/07c28ace-561a-476e-a9b9-3d5ad6e35933-2025-03-07"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -6125,7 +6125,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/4f2bf8fd-fc5c-493f-a44c-e7b16153c803-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/4f2bf8fd-fc5c-493f-a44c-e7b16153c803-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -6182,7 +6182,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/4f2bf8fd-fc5c-493f-a44c-e7b16153c803"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/4f2bf8fd-fc5c-493f-a44c-e7b16153c803"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -6229,7 +6229,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/4f2bf8fd-fc5c-493f-a44c-e7b16153c803-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/4f2bf8fd-fc5c-493f-a44c-e7b16153c803-2025-03-06"
             }
         ]
     },
@@ -6268,7 +6268,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/5618f083-d55a-4ac2-92b5-b9fb227b832f-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/5618f083-d55a-4ac2-92b5-b9fb227b832f-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -6325,7 +6325,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/5618f083-d55a-4ac2-92b5-b9fb227b832f"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/5618f083-d55a-4ac2-92b5-b9fb227b832f"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -6408,7 +6408,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/5618f083-d55a-4ac2-92b5-b9fb227b832f-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/5618f083-d55a-4ac2-92b5-b9fb227b832f-2025-03-06"
             }
         ]
     },
@@ -6447,7 +6447,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/2d638c8b-4c62-44a0-a14d-fa147bf9823d-2025-03-07",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/2d638c8b-4c62-44a0-a14d-fa147bf9823d-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -6509,7 +6509,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/2d638c8b-4c62-44a0-a14d-fa147bf9823d"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/2d638c8b-4c62-44a0-a14d-fa147bf9823d"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -6581,7 +6581,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/2d638c8b-4c62-44a0-a14d-fa147bf9823d-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/2d638c8b-4c62-44a0-a14d-fa147bf9823d-2025-03-07"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -6635,7 +6635,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/66269bdd-9271-4e76-b25c-7ab81eebe1d8-2025-03-07",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/66269bdd-9271-4e76-b25c-7ab81eebe1d8-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -6692,7 +6692,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/66269bdd-9271-4e76-b25c-7ab81eebe1d8"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/66269bdd-9271-4e76-b25c-7ab81eebe1d8"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -6734,7 +6734,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/66269bdd-9271-4e76-b25c-7ab81eebe1d8-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/66269bdd-9271-4e76-b25c-7ab81eebe1d8-2025-03-07"
             }
         ]
     },
@@ -6773,7 +6773,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/4c09f127-737b-4686-82a0-7c8e30841590-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/4c09f127-737b-4686-82a0-7c8e30841590-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -6830,7 +6830,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/4c09f127-737b-4686-82a0-7c8e30841590"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/4c09f127-737b-4686-82a0-7c8e30841590"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -6984,7 +6984,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/4c09f127-737b-4686-82a0-7c8e30841590-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/4c09f127-737b-4686-82a0-7c8e30841590-2025-03-06"
             }
         ]
     },
@@ -7049,7 +7049,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/f01fb3f9-2f7e-418b-9f51-adf50f202aea-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/f01fb3f9-2f7e-418b-9f51-adf50f202aea-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -7111,7 +7111,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/f01fb3f9-2f7e-418b-9f51-adf50f202aea"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/f01fb3f9-2f7e-418b-9f51-adf50f202aea"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -7159,7 +7159,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/f01fb3f9-2f7e-418b-9f51-adf50f202aea-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/f01fb3f9-2f7e-418b-9f51-adf50f202aea-2025-03-06"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -7244,7 +7244,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/13d5a10e-188e-40fd-a22c-dbaa87b91df2-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/13d5a10e-188e-40fd-a22c-dbaa87b91df2-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Issue"
         ],
@@ -7301,7 +7301,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/13d5a10e-188e-40fd-a22c-dbaa87b91df2"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/13d5a10e-188e-40fd-a22c-dbaa87b91df2"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -7383,7 +7383,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forIssue": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/13d5a10e-188e-40fd-a22c-dbaa87b91df2-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/13d5a10e-188e-40fd-a22c-dbaa87b91df2-2025-03-06"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -7435,7 +7435,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae-2025-03-07",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -7497,7 +7497,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -7548,7 +7548,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae-2025-03-07"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -7633,7 +7633,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2025-03-07",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -7695,7 +7695,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -7778,7 +7778,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2025-03-07"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -7869,7 +7869,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/dc8aae4b-134f-4d75-8a71-c4186239178e-2025-03-07",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/dc8aae4b-134f-4d75-8a71-c4186239178e-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -7931,7 +7931,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/dc8aae4b-134f-4d75-8a71-c4186239178e"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/dc8aae4b-134f-4d75-8a71-c4186239178e"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -7989,7 +7989,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/dc8aae4b-134f-4d75-8a71-c4186239178e-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/dc8aae4b-134f-4d75-8a71-c4186239178e-2025-03-07"
             }
         ]
     },
@@ -8054,7 +8054,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/2cd6884e-3d14-4476-94f7-1191cfff309b-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/2cd6884e-3d14-4476-94f7-1191cfff309b-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -8111,7 +8111,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/2cd6884e-3d14-4476-94f7-1191cfff309b"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/2cd6884e-3d14-4476-94f7-1191cfff309b"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -8174,7 +8174,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/2cd6884e-3d14-4476-94f7-1191cfff309b-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/2cd6884e-3d14-4476-94f7-1191cfff309b-2025-03-06"
             }
         ]
     },
@@ -8239,7 +8239,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/239ec40e-a729-4a8e-ba69-e0bf03ac1c44-2025-03-07",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/239ec40e-a729-4a8e-ba69-e0bf03ac1c44-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -8296,7 +8296,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/239ec40e-a729-4a8e-ba69-e0bf03ac1c44"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/239ec40e-a729-4a8e-ba69-e0bf03ac1c44"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -8338,7 +8338,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/239ec40e-a729-4a8e-ba69-e0bf03ac1c44-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/239ec40e-a729-4a8e-ba69-e0bf03ac1c44-2025-03-07"
             }
         ]
     },
@@ -8377,7 +8377,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/b6ecda2a-ce36-437a-b515-3ae94948fe83-2025-03-07",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/b6ecda2a-ce36-437a-b515-3ae94948fe83-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -8434,7 +8434,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/b6ecda2a-ce36-437a-b515-3ae94948fe83"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/b6ecda2a-ce36-437a-b515-3ae94948fe83"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -8502,7 +8502,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/b6ecda2a-ce36-437a-b515-3ae94948fe83-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/b6ecda2a-ce36-437a-b515-3ae94948fe83-2025-03-07"
             }
         ]
     },
@@ -8541,7 +8541,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/125b5493-052d-4a0d-a3e1-ed5bf792689e-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/125b5493-052d-4a0d-a3e1-ed5bf792689e-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -8598,7 +8598,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/125b5493-052d-4a0d-a3e1-ed5bf792689e"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/125b5493-052d-4a0d-a3e1-ed5bf792689e"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -8666,7 +8666,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/125b5493-052d-4a0d-a3e1-ed5bf792689e-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/125b5493-052d-4a0d-a3e1-ed5bf792689e-2025-03-06"
             }
         ]
     },
@@ -8731,7 +8731,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/7c4b9498-a8d9-4ebb-85f1-9f200c788595-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/7c4b9498-a8d9-4ebb-85f1-9f200c788595-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -8788,7 +8788,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/7c4b9498-a8d9-4ebb-85f1-9f200c788595"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/7c4b9498-a8d9-4ebb-85f1-9f200c788595"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -8835,7 +8835,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/7c4b9498-a8d9-4ebb-85f1-9f200c788595-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/7c4b9498-a8d9-4ebb-85f1-9f200c788595-2025-03-06"
             }
         ]
     },
@@ -8874,7 +8874,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/81cc974d-43cc-4c0f-a5e0-afa23b455aa3-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/81cc974d-43cc-4c0f-a5e0-afa23b455aa3-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -8931,7 +8931,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/81cc974d-43cc-4c0f-a5e0-afa23b455aa3"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/81cc974d-43cc-4c0f-a5e0-afa23b455aa3"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -8999,7 +8999,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/81cc974d-43cc-4c0f-a5e0-afa23b455aa3-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/81cc974d-43cc-4c0f-a5e0-afa23b455aa3-2025-03-06"
             }
         ]
     },
@@ -9064,7 +9064,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/ad0c8855-de69-4843-a80c-a5387d20fbc8-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/ad0c8855-de69-4843-a80c-a5387d20fbc8-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -9121,7 +9121,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/ad0c8855-de69-4843-a80c-a5387d20fbc8"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/ad0c8855-de69-4843-a80c-a5387d20fbc8"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -9168,7 +9168,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/ad0c8855-de69-4843-a80c-a5387d20fbc8-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/ad0c8855-de69-4843-a80c-a5387d20fbc8-2025-03-06"
             }
         ]
     },
@@ -9233,7 +9233,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/6d0a0c10-5e4a-4759-b448-88932f399812-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/6d0a0c10-5e4a-4759-b448-88932f399812-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -9295,7 +9295,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/6d0a0c10-5e4a-4759-b448-88932f399812"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/6d0a0c10-5e4a-4759-b448-88932f399812"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -9343,7 +9343,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/6d0a0c10-5e4a-4759-b448-88932f399812-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/6d0a0c10-5e4a-4759-b448-88932f399812-2025-03-06"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -9402,7 +9402,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/1bf0e210-6792-4128-b8cc-ab6828aa4871-2025-03-07",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/1bf0e210-6792-4128-b8cc-ab6828aa4871-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -9459,7 +9459,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/1bf0e210-6792-4128-b8cc-ab6828aa4871"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/1bf0e210-6792-4128-b8cc-ab6828aa4871"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -9517,7 +9517,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/1bf0e210-6792-4128-b8cc-ab6828aa4871-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/1bf0e210-6792-4128-b8cc-ab6828aa4871-2025-03-07"
             }
         ]
     },
@@ -9556,7 +9556,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/41267642-60ff-4116-90eb-499fee2cd83f-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/41267642-60ff-4116-90eb-499fee2cd83f-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -9613,7 +9613,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/41267642-60ff-4116-90eb-499fee2cd83f"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/41267642-60ff-4116-90eb-499fee2cd83f"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -9699,7 +9699,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/41267642-60ff-4116-90eb-499fee2cd83f-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/41267642-60ff-4116-90eb-499fee2cd83f-2025-03-06"
             }
         ]
     },
@@ -9738,7 +9738,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/cdaabb0d-a863-49d0-bc0f-738d771acba5-2025-03-07",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/cdaabb0d-a863-49d0-bc0f-738d771acba5-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -9795,7 +9795,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/cdaabb0d-a863-49d0-bc0f-738d771acba5"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/cdaabb0d-a863-49d0-bc0f-738d771acba5"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -9842,7 +9842,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/cdaabb0d-a863-49d0-bc0f-738d771acba5-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/cdaabb0d-a863-49d0-bc0f-738d771acba5-2025-03-07"
             }
         ]
     },
@@ -9881,7 +9881,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/3892f432-ddd0-4a0a-b713-f2e2ecbd879d-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/3892f432-ddd0-4a0a-b713-f2e2ecbd879d-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -9943,7 +9943,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/3892f432-ddd0-4a0a-b713-f2e2ecbd879d"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/3892f432-ddd0-4a0a-b713-f2e2ecbd879d"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -9997,7 +9997,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/3892f432-ddd0-4a0a-b713-f2e2ecbd879d-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/3892f432-ddd0-4a0a-b713-f2e2ecbd879d-2025-03-06"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -10056,7 +10056,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/acc8dff2-d8d1-483a-946d-65a02a452700-2025-03-07",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/acc8dff2-d8d1-483a-946d-65a02a452700-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Issue"
         ],
@@ -10113,7 +10113,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/acc8dff2-d8d1-483a-946d-65a02a452700"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/acc8dff2-d8d1-483a-946d-65a02a452700"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -10176,7 +10176,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forIssue": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/acc8dff2-d8d1-483a-946d-65a02a452700-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/acc8dff2-d8d1-483a-946d-65a02a452700-2025-03-07"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -10220,7 +10220,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/9beb9442-d942-4f42-8b6a-fcea01ee086a-2025-03-07",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/9beb9442-d942-4f42-8b6a-fcea01ee086a-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -10277,7 +10277,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/9beb9442-d942-4f42-8b6a-fcea01ee086a"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/9beb9442-d942-4f42-8b6a-fcea01ee086a"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -10319,7 +10319,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/9beb9442-d942-4f42-8b6a-fcea01ee086a-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/9beb9442-d942-4f42-8b6a-fcea01ee086a-2025-03-07"
             }
         ]
     },
@@ -10358,7 +10358,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/853b79a2-b314-44a2-ae46-34a1e7ed85e4-2025-03-07",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/853b79a2-b314-44a2-ae46-34a1e7ed85e4-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -10415,7 +10415,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/853b79a2-b314-44a2-ae46-34a1e7ed85e4"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/853b79a2-b314-44a2-ae46-34a1e7ed85e4"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -10457,7 +10457,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/853b79a2-b314-44a2-ae46-34a1e7ed85e4-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/853b79a2-b314-44a2-ae46-34a1e7ed85e4-2025-03-07"
             }
         ]
     },
@@ -10496,7 +10496,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/15f78619-811a-4c6f-997a-a4c7888ad849-2025-03-07",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/15f78619-811a-4c6f-997a-a4c7888ad849-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -10553,7 +10553,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/15f78619-811a-4c6f-997a-a4c7888ad849"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/15f78619-811a-4c6f-997a-a4c7888ad849"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -10595,7 +10595,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/15f78619-811a-4c6f-997a-a4c7888ad849-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/15f78619-811a-4c6f-997a-a4c7888ad849-2025-03-07"
             }
         ]
     },
@@ -10634,7 +10634,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/17f03f1f-f74d-40c0-8071-2927cfc9487b-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/17f03f1f-f74d-40c0-8071-2927cfc9487b-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -10691,7 +10691,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/17f03f1f-f74d-40c0-8071-2927cfc9487b"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/17f03f1f-f74d-40c0-8071-2927cfc9487b"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -10768,7 +10768,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/17f03f1f-f74d-40c0-8071-2927cfc9487b-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/17f03f1f-f74d-40c0-8071-2927cfc9487b-2025-03-06"
             }
         ]
     },
@@ -10807,7 +10807,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2025-03-07",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -10869,7 +10869,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -10920,7 +10920,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2025-03-07"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -11011,7 +11011,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/374b091a-fc90-4791-91e5-c1557c649169-2025-03-07",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/374b091a-fc90-4791-91e5-c1557c649169-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -11068,7 +11068,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/374b091a-fc90-4791-91e5-c1557c649169"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/374b091a-fc90-4791-91e5-c1557c649169"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -11115,7 +11115,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/374b091a-fc90-4791-91e5-c1557c649169-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/374b091a-fc90-4791-91e5-c1557c649169-2025-03-07"
             }
         ]
     },
@@ -11154,7 +11154,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/42408a00-bf71-4892-a399-4325e2bc1fb8-2025-03-07",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/42408a00-bf71-4892-a399-4325e2bc1fb8-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -11211,7 +11211,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/42408a00-bf71-4892-a399-4325e2bc1fb8"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/42408a00-bf71-4892-a399-4325e2bc1fb8"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -11258,7 +11258,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/42408a00-bf71-4892-a399-4325e2bc1fb8-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/42408a00-bf71-4892-a399-4325e2bc1fb8-2025-03-07"
             }
         ]
     },
@@ -11323,7 +11323,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/06851339-843f-4a43-8422-4e61b9a00e75-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/06851339-843f-4a43-8422-4e61b9a00e75-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -11380,7 +11380,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/06851339-843f-4a43-8422-4e61b9a00e75"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/06851339-843f-4a43-8422-4e61b9a00e75"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -11520,7 +11520,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/06851339-843f-4a43-8422-4e61b9a00e75-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/06851339-843f-4a43-8422-4e61b9a00e75-2025-03-06"
             }
         ]
     },
@@ -11559,7 +11559,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/04b2c8f3-c71b-4e95-8e43-f70374c5fb92-2025-03-07",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/04b2c8f3-c71b-4e95-8e43-f70374c5fb92-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -11616,7 +11616,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/04b2c8f3-c71b-4e95-8e43-f70374c5fb92"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/04b2c8f3-c71b-4e95-8e43-f70374c5fb92"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -11684,7 +11684,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/04b2c8f3-c71b-4e95-8e43-f70374c5fb92-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/04b2c8f3-c71b-4e95-8e43-f70374c5fb92-2025-03-07"
             }
         ]
     },
@@ -11755,7 +11755,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/d708526b-6561-438e-aa1a-82cd80b06396-2025-03-07",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/d708526b-6561-438e-aa1a-82cd80b06396-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -11812,7 +11812,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/d708526b-6561-438e-aa1a-82cd80b06396"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/d708526b-6561-438e-aa1a-82cd80b06396"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -11859,7 +11859,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/d708526b-6561-438e-aa1a-82cd80b06396-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/d708526b-6561-438e-aa1a-82cd80b06396-2025-03-07"
             }
         ]
     },
@@ -11898,7 +11898,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/c6adf2ea-3051-4498-97f4-4b2f8a105f57-2025-03-07",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/c6adf2ea-3051-4498-97f4-4b2f8a105f57-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -11955,7 +11955,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/c6adf2ea-3051-4498-97f4-4b2f8a105f57"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/c6adf2ea-3051-4498-97f4-4b2f8a105f57"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -12023,7 +12023,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/c6adf2ea-3051-4498-97f4-4b2f8a105f57-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/c6adf2ea-3051-4498-97f4-4b2f8a105f57-2025-03-07"
             }
         ]
     },
@@ -12062,7 +12062,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/c971fe3f-84c1-4636-9f44-b1ec31fd63c7-2025-03-07",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/c971fe3f-84c1-4636-9f44-b1ec31fd63c7-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -12119,7 +12119,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/c971fe3f-84c1-4636-9f44-b1ec31fd63c7"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/c971fe3f-84c1-4636-9f44-b1ec31fd63c7"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -12187,7 +12187,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/c971fe3f-84c1-4636-9f44-b1ec31fd63c7-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/c971fe3f-84c1-4636-9f44-b1ec31fd63c7-2025-03-07"
             }
         ]
     },
@@ -12252,7 +12252,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/f8f3a093-042c-47a3-971a-a482aaaf3b75-2025-03-07",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/f8f3a093-042c-47a3-971a-a482aaaf3b75-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -12309,7 +12309,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/f8f3a093-042c-47a3-971a-a482aaaf3b75"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/f8f3a093-042c-47a3-971a-a482aaaf3b75"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -12336,7 +12336,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/f8f3a093-042c-47a3-971a-a482aaaf3b75-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/f8f3a093-042c-47a3-971a-a482aaaf3b75-2025-03-07"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -12421,7 +12421,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2025-03-07",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -12478,7 +12478,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -12525,7 +12525,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2025-03-07"
             }
         ]
     },
@@ -12590,7 +12590,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf-2025-03-07",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -12647,7 +12647,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -12694,7 +12694,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf-2025-03-07"
             }
         ]
     },
@@ -12733,7 +12733,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/7d2485d5-1ba7-4f25-90cb-f4480ff1a275-2025-03-07",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/7d2485d5-1ba7-4f25-90cb-f4480ff1a275-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -12790,7 +12790,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/7d2485d5-1ba7-4f25-90cb-f4480ff1a275"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/7d2485d5-1ba7-4f25-90cb-f4480ff1a275"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -12837,7 +12837,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/7d2485d5-1ba7-4f25-90cb-f4480ff1a275-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/7d2485d5-1ba7-4f25-90cb-f4480ff1a275-2025-03-07"
             }
         ]
     },
@@ -12876,7 +12876,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/401bf207-9a55-4dff-88a5-abcd58ad97fa-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/401bf207-9a55-4dff-88a5-abcd58ad97fa-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -12933,7 +12933,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/401bf207-9a55-4dff-88a5-abcd58ad97fa"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/401bf207-9a55-4dff-88a5-abcd58ad97fa"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -12980,7 +12980,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/401bf207-9a55-4dff-88a5-abcd58ad97fa-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/401bf207-9a55-4dff-88a5-abcd58ad97fa-2025-03-06"
             }
         ]
     },
@@ -13019,7 +13019,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/f2ce7d55-5b1d-426a-b00e-6d4efe3058ec-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/f2ce7d55-5b1d-426a-b00e-6d4efe3058ec-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -13076,7 +13076,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/f2ce7d55-5b1d-426a-b00e-6d4efe3058ec"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/f2ce7d55-5b1d-426a-b00e-6d4efe3058ec"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -13144,7 +13144,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/f2ce7d55-5b1d-426a-b00e-6d4efe3058ec-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/f2ce7d55-5b1d-426a-b00e-6d4efe3058ec-2025-03-06"
             }
         ]
     },
@@ -13209,7 +13209,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/2750c040-1d4a-4149-99fe-0512785f2d5f-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/2750c040-1d4a-4149-99fe-0512785f2d5f-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -13266,7 +13266,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/2750c040-1d4a-4149-99fe-0512785f2d5f"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/2750c040-1d4a-4149-99fe-0512785f2d5f"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -13361,7 +13361,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/2750c040-1d4a-4149-99fe-0512785f2d5f-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/2750c040-1d4a-4149-99fe-0512785f2d5f-2025-03-06"
             }
         ]
     },
@@ -13426,7 +13426,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/8d787cb5-73e2-4c39-9cd1-67c7361dc02e-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/8d787cb5-73e2-4c39-9cd1-67c7361dc02e-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -13483,7 +13483,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/8d787cb5-73e2-4c39-9cd1-67c7361dc02e"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/8d787cb5-73e2-4c39-9cd1-67c7361dc02e"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -13557,7 +13557,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/8d787cb5-73e2-4c39-9cd1-67c7361dc02e-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/8d787cb5-73e2-4c39-9cd1-67c7361dc02e-2025-03-06"
             }
         ]
     },
@@ -13596,7 +13596,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/01c6dafa-0886-4b7e-9881-2c3018c98bdc-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/01c6dafa-0886-4b7e-9881-2c3018c98bdc-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -13653,7 +13653,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/01c6dafa-0886-4b7e-9881-2c3018c98bdc"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/01c6dafa-0886-4b7e-9881-2c3018c98bdc"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -13721,7 +13721,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/01c6dafa-0886-4b7e-9881-2c3018c98bdc-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/01c6dafa-0886-4b7e-9881-2c3018c98bdc-2025-03-06"
             }
         ]
     },
@@ -13760,7 +13760,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/b129fa4d-b25b-43f7-9645-5ed4d44b357b-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/b129fa4d-b25b-43f7-9645-5ed4d44b357b-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -13817,7 +13817,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/b129fa4d-b25b-43f7-9645-5ed4d44b357b"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/b129fa4d-b25b-43f7-9645-5ed4d44b357b"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -13865,7 +13865,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/b129fa4d-b25b-43f7-9645-5ed4d44b357b-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/b129fa4d-b25b-43f7-9645-5ed4d44b357b-2025-03-06"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -13924,7 +13924,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/2e371d57-1eb3-4fe3-8a61-dff43ced50cf-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/2e371d57-1eb3-4fe3-8a61-dff43ced50cf-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -13981,7 +13981,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/2e371d57-1eb3-4fe3-8a61-dff43ced50cf"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/2e371d57-1eb3-4fe3-8a61-dff43ced50cf"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -14008,7 +14008,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/2e371d57-1eb3-4fe3-8a61-dff43ced50cf-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/2e371d57-1eb3-4fe3-8a61-dff43ced50cf-2025-03-06"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -14067,7 +14067,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/85803c7e-2a5a-42e1-b8d3-299a44cafc46-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/85803c7e-2a5a-42e1-b8d3-299a44cafc46-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -14129,7 +14129,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/85803c7e-2a5a-42e1-b8d3-299a44cafc46"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/85803c7e-2a5a-42e1-b8d3-299a44cafc46"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -14197,7 +14197,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/85803c7e-2a5a-42e1-b8d3-299a44cafc46-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/85803c7e-2a5a-42e1-b8d3-299a44cafc46-2025-03-06"
             }
         ]
     },
@@ -14236,7 +14236,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/9a39d88c-7eee-46df-b32a-c109f9f81fb8-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/9a39d88c-7eee-46df-b32a-c109f9f81fb8-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -14298,7 +14298,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/9a39d88c-7eee-46df-b32a-c109f9f81fb8"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/9a39d88c-7eee-46df-b32a-c109f9f81fb8"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -14366,7 +14366,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/9a39d88c-7eee-46df-b32a-c109f9f81fb8-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/9a39d88c-7eee-46df-b32a-c109f9f81fb8-2025-03-06"
             }
         ]
     },
@@ -14405,7 +14405,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/eb0a44fa-241c-4d64-98df-ad4aa837307b-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/eb0a44fa-241c-4d64-98df-ad4aa837307b-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -14467,7 +14467,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/eb0a44fa-241c-4d64-98df-ad4aa837307b"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/eb0a44fa-241c-4d64-98df-ad4aa837307b"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -14521,7 +14521,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/eb0a44fa-241c-4d64-98df-ad4aa837307b-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/eb0a44fa-241c-4d64-98df-ad4aa837307b-2025-03-06"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -14580,7 +14580,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8-2025-03-07",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -14637,7 +14637,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -14664,7 +14664,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8-2025-03-07"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -14749,7 +14749,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/49a94636-a562-4e6b-803c-665c80628a3d-2024-09-25",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/49a94636-a562-4e6b-803c-665c80628a3d-2024-09-25",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Measure"
         ],
@@ -14801,7 +14801,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/49a94636-a562-4e6b-803c-665c80628a3d"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/49a94636-a562-4e6b-803c-665c80628a3d"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -14837,7 +14837,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forMeasurement": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/49a94636-a562-4e6b-803c-665c80628a3d-2024-09-25"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/49a94636-a562-4e6b-803c-665c80628a3d-2024-09-25"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -14878,7 +14878,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/45fb49eb-4a1b-4b49-876f-15d5034dfc73-2024-09-25",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/45fb49eb-4a1b-4b49-876f-15d5034dfc73-2024-09-25",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Measure"
         ],
@@ -14930,7 +14930,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/45fb49eb-4a1b-4b49-876f-15d5034dfc73"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/45fb49eb-4a1b-4b49-876f-15d5034dfc73"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -14966,7 +14966,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forMeasurement": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/45fb49eb-4a1b-4b49-876f-15d5034dfc73-2024-09-25"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/45fb49eb-4a1b-4b49-876f-15d5034dfc73-2024-09-25"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -15007,7 +15007,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/56b6c695-adf1-418e-95d2-da04cad7be53-2025-03-07",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/56b6c695-adf1-418e-95d2-da04cad7be53-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Measure"
         ],
@@ -15059,7 +15059,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/56b6c695-adf1-418e-95d2-da04cad7be53"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/56b6c695-adf1-418e-95d2-da04cad7be53"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -15101,7 +15101,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forMeasurement": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/56b6c695-adf1-418e-95d2-da04cad7be53-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/56b6c695-adf1-418e-95d2-da04cad7be53-2025-03-07"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -15145,7 +15145,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/47ff73ba-0028-4f79-9ce1-ee7008d66498-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/47ff73ba-0028-4f79-9ce1-ee7008d66498-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -15202,7 +15202,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/47ff73ba-0028-4f79-9ce1-ee7008d66498"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/47ff73ba-0028-4f79-9ce1-ee7008d66498"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -15249,7 +15249,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/47ff73ba-0028-4f79-9ce1-ee7008d66498-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/47ff73ba-0028-4f79-9ce1-ee7008d66498-2025-03-06"
             }
         ]
     },
@@ -15288,7 +15288,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/14da5b87-8304-4b2b-911d-117e3c29e890-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/14da5b87-8304-4b2b-911d-117e3c29e890-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -15345,7 +15345,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/14da5b87-8304-4b2b-911d-117e3c29e890"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/14da5b87-8304-4b2b-911d-117e3c29e890"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -15413,7 +15413,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/14da5b87-8304-4b2b-911d-117e3c29e890-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/14da5b87-8304-4b2b-911d-117e3c29e890-2025-03-06"
             }
         ]
     },
@@ -15452,7 +15452,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/7bdb13a4-8a51-4ee5-be7f-20693fdb183e-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/7bdb13a4-8a51-4ee5-be7f-20693fdb183e-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -15509,7 +15509,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/7bdb13a4-8a51-4ee5-be7f-20693fdb183e"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/7bdb13a4-8a51-4ee5-be7f-20693fdb183e"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -15556,7 +15556,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/7bdb13a4-8a51-4ee5-be7f-20693fdb183e-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/7bdb13a4-8a51-4ee5-be7f-20693fdb183e-2025-03-06"
             }
         ]
     },
@@ -15621,7 +15621,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/e39098df-ef46-464c-9aef-bcdeee2a88cb-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/e39098df-ef46-464c-9aef-bcdeee2a88cb-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -15678,7 +15678,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/e39098df-ef46-464c-9aef-bcdeee2a88cb"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/e39098df-ef46-464c-9aef-bcdeee2a88cb"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -15705,7 +15705,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/e39098df-ef46-464c-9aef-bcdeee2a88cb-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/e39098df-ef46-464c-9aef-bcdeee2a88cb-2025-03-06"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -15790,7 +15790,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/3f1db29a-bfa5-40db-9fd1-fde020d81939-2025-03-07",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/3f1db29a-bfa5-40db-9fd1-fde020d81939-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -15847,7 +15847,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/3f1db29a-bfa5-40db-9fd1-fde020d81939"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/3f1db29a-bfa5-40db-9fd1-fde020d81939"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -15915,7 +15915,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/3f1db29a-bfa5-40db-9fd1-fde020d81939-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/3f1db29a-bfa5-40db-9fd1-fde020d81939-2025-03-07"
             }
         ]
     },
@@ -15980,7 +15980,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/4daa7986-d9b0-4dd5-ad17-2d7a771ea71a-2025-03-07",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/4daa7986-d9b0-4dd5-ad17-2d7a771ea71a-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -16037,7 +16037,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/4daa7986-d9b0-4dd5-ad17-2d7a771ea71a"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/4daa7986-d9b0-4dd5-ad17-2d7a771ea71a"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -16105,7 +16105,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/4daa7986-d9b0-4dd5-ad17-2d7a771ea71a-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/4daa7986-d9b0-4dd5-ad17-2d7a771ea71a-2025-03-07"
             }
         ]
     },
@@ -16170,7 +16170,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/d257eb98-27cb-48e5-8d3c-ab9fca4edd11-2025-03-07",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/d257eb98-27cb-48e5-8d3c-ab9fca4edd11-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -16227,7 +16227,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/d257eb98-27cb-48e5-8d3c-ab9fca4edd11"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/d257eb98-27cb-48e5-8d3c-ab9fca4edd11"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -16298,7 +16298,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/d257eb98-27cb-48e5-8d3c-ab9fca4edd11-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/d257eb98-27cb-48e5-8d3c-ab9fca4edd11-2025-03-07"
             }
         ]
     },
@@ -16363,7 +16363,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/6eeac3ed-f691-457f-a42e-eaa9c8a71ce8-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/6eeac3ed-f691-457f-a42e-eaa9c8a71ce8-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -16420,7 +16420,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/6eeac3ed-f691-457f-a42e-eaa9c8a71ce8"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/6eeac3ed-f691-457f-a42e-eaa9c8a71ce8"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -16478,7 +16478,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/6eeac3ed-f691-457f-a42e-eaa9c8a71ce8-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/6eeac3ed-f691-457f-a42e-eaa9c8a71ce8-2025-03-06"
             }
         ]
     },
@@ -16517,7 +16517,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/36ed36c9-b1a7-40b2-b5e2-0d012e772098-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/36ed36c9-b1a7-40b2-b5e2-0d012e772098-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -16574,7 +16574,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/36ed36c9-b1a7-40b2-b5e2-0d012e772098"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/36ed36c9-b1a7-40b2-b5e2-0d012e772098"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -16621,7 +16621,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/36ed36c9-b1a7-40b2-b5e2-0d012e772098-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/36ed36c9-b1a7-40b2-b5e2-0d012e772098-2025-03-06"
             }
         ]
     },
@@ -16660,7 +16660,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/49f1d386-5bed-43ae-bd43-deabf7df64fc-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/49f1d386-5bed-43ae-bd43-deabf7df64fc-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -16717,7 +16717,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/49f1d386-5bed-43ae-bd43-deabf7df64fc"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/49f1d386-5bed-43ae-bd43-deabf7df64fc"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -16785,7 +16785,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/49f1d386-5bed-43ae-bd43-deabf7df64fc-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/49f1d386-5bed-43ae-bd43-deabf7df64fc-2025-03-06"
             }
         ]
     },
@@ -16824,7 +16824,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/ff59f77d-71e9-4eb1-aac9-8bd05c50ff70-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/ff59f77d-71e9-4eb1-aac9-8bd05c50ff70-2025-03-06",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -16881,7 +16881,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/ff59f77d-71e9-4eb1-aac9-8bd05c50ff70"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/ff59f77d-71e9-4eb1-aac9-8bd05c50ff70"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -16949,7 +16949,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/ff59f77d-71e9-4eb1-aac9-8bd05c50ff70-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/ff59f77d-71e9-4eb1-aac9-8bd05c50ff70-2025-03-06"
             }
         ]
     },
@@ -16988,7 +16988,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/4eb48fdf-7299-4d63-9d08-246902e2857f-2025-03-07",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/4eb48fdf-7299-4d63-9d08-246902e2857f-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -17045,7 +17045,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/4eb48fdf-7299-4d63-9d08-246902e2857f"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/4eb48fdf-7299-4d63-9d08-246902e2857f"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -17092,7 +17092,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/4eb48fdf-7299-4d63-9d08-246902e2857f-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/4eb48fdf-7299-4d63-9d08-246902e2857f-2025-03-07"
             }
         ]
     },
@@ -17157,7 +17157,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/15d15927-7a22-43f8-88d6-298f5eb45c4c-2025-03-07",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/15d15927-7a22-43f8-88d6-298f5eb45c4c-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -17214,7 +17214,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/15d15927-7a22-43f8-88d6-298f5eb45c4c"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/15d15927-7a22-43f8-88d6-298f5eb45c4c"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -17241,7 +17241,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/15d15927-7a22-43f8-88d6-298f5eb45c4c-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/15d15927-7a22-43f8-88d6-298f5eb45c4c-2025-03-07"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -17326,7 +17326,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/060e7734-607d-4737-8b2c-bfa17788bf1a-2025-03-07",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/060e7734-607d-4737-8b2c-bfa17788bf1a-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -17383,7 +17383,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/060e7734-607d-4737-8b2c-bfa17788bf1a"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/060e7734-607d-4737-8b2c-bfa17788bf1a"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -17451,7 +17451,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/060e7734-607d-4737-8b2c-bfa17788bf1a-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/060e7734-607d-4737-8b2c-bfa17788bf1a-2025-03-07"
             }
         ]
     },
@@ -17516,7 +17516,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/74ef1034-e289-4596-b5b0-cde73796697d-2025-03-07",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/74ef1034-e289-4596-b5b0-cde73796697d-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -17573,7 +17573,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/74ef1034-e289-4596-b5b0-cde73796697d"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/74ef1034-e289-4596-b5b0-cde73796697d"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -17600,7 +17600,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/74ef1034-e289-4596-b5b0-cde73796697d-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/74ef1034-e289-4596-b5b0-cde73796697d-2025-03-07"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -17685,7 +17685,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/5424e933-bee7-4125-839e-d8743ea69f93-2025-03-07",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/5424e933-bee7-4125-839e-d8743ea69f93-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -17742,7 +17742,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/5424e933-bee7-4125-839e-d8743ea69f93"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/5424e933-bee7-4125-839e-d8743ea69f93"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -17810,7 +17810,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/5424e933-bee7-4125-839e-d8743ea69f93-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/5424e933-bee7-4125-839e-d8743ea69f93-2025-03-07"
             }
         ]
     },
@@ -17875,7 +17875,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/f9205977-f145-44f5-8cb9-e3e2e35ce908-2025-03-07",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/f9205977-f145-44f5-8cb9-e3e2e35ce908-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -17932,7 +17932,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/f9205977-f145-44f5-8cb9-e3e2e35ce908"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/f9205977-f145-44f5-8cb9-e3e2e35ce908"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -17959,7 +17959,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/f9205977-f145-44f5-8cb9-e3e2e35ce908-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/f9205977-f145-44f5-8cb9-e3e2e35ce908-2025-03-07"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -18044,7 +18044,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/88d8598b-3318-483d-9475-a5acf9887404-2025-03-07",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/88d8598b-3318-483d-9475-a5acf9887404-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -18101,7 +18101,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/88d8598b-3318-483d-9475-a5acf9887404"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/88d8598b-3318-483d-9475-a5acf9887404"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -18169,7 +18169,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/88d8598b-3318-483d-9475-a5acf9887404-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/88d8598b-3318-483d-9475-a5acf9887404-2025-03-07"
             }
         ]
     },
@@ -18234,7 +18234,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/33c45ae1-e2db-462a-a59e-7169bb01c5d6-2025-03-07",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/33c45ae1-e2db-462a-a59e-7169bb01c5d6-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -18291,7 +18291,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/33c45ae1-e2db-462a-a59e-7169bb01c5d6"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/33c45ae1-e2db-462a-a59e-7169bb01c5d6"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -18318,7 +18318,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/33c45ae1-e2db-462a-a59e-7169bb01c5d6-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/33c45ae1-e2db-462a-a59e-7169bb01c5d6-2025-03-07"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -18403,7 +18403,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2025-03-07",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
         ],
@@ -18460,7 +18460,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -18528,7 +18528,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forValidation": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2025-03-07"
             }
         ]
     },
@@ -18593,7 +18593,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/b3471c65-b53e-453b-8282-abfa27bf1805-2025-03-07",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/b3471c65-b53e-453b-8282-abfa27bf1805-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -18650,7 +18650,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/b3471c65-b53e-453b-8282-abfa27bf1805"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/b3471c65-b53e-453b-8282-abfa27bf1805"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -18677,7 +18677,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/b3471c65-b53e-453b-8282-abfa27bf1805-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/b3471c65-b53e-453b-8282-abfa27bf1805-2025-03-07"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -18762,7 +18762,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqcore/terms/256e51b3-1e08-4349-bb7e-5186631c3f8e-2025-03-07",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/256e51b3-1e08-4349-bb7e-5186631c3f8e-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Issue"
         ],
@@ -18824,7 +18824,7 @@
         ],
         "http://purl.org/dc/terms/isVersionOf": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/256e51b3-1e08-4349-bb7e-5186631c3f8e"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/256e51b3-1e08-4349-bb7e-5186631c3f8e"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -18887,7 +18887,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forIssue": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/256e51b3-1e08-4349-bb7e-5186631c3f8e-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/256e51b3-1e08-4349-bb7e-5186631c3f8e-2025-03-07"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -18979,13 +18979,13 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/includesInPolicy": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/453844ae-9df4-439f-8e24-c52498eca84a-2024-09-24"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/453844ae-9df4-439f-8e24-c52498eca84a-2024-09-24"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/49a94636-a562-4e6b-803c-665c80628a3d-2024-09-25"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/49a94636-a562-4e6b-803c-665c80628a3d-2024-09-25"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/45fb49eb-4a1b-4b49-876f-15d5034dfc73-2024-09-25"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/45fb49eb-4a1b-4b49-876f-15d5034dfc73-2024-09-25"
             }
         ]
     },
@@ -19017,100 +19017,100 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/includesInPolicy": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/0949110d-c06b-450e-9649-7c1374d940d1-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/0949110d-c06b-450e-9649-7c1374d940d1-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/f51e15a6-a67d-4729-9c28-3766299d2985-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/f51e15a6-a67d-4729-9c28-3766299d2985-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/3f335517-f442-4b98-b149-1e87ff16de45-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/3f335517-f442-4b98-b149-1e87ff16de45-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/c09ecbf9-34e3-4f3e-b74a-8796af15e59f-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/c09ecbf9-34e3-4f3e-b74a-8796af15e59f-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/4f2bf8fd-fc5c-493f-a44c-e7b16153c803-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/4f2bf8fd-fc5c-493f-a44c-e7b16153c803-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/5618f083-d55a-4ac2-92b5-b9fb227b832f-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/5618f083-d55a-4ac2-92b5-b9fb227b832f-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/4c09f127-737b-4686-82a0-7c8e30841590-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/4c09f127-737b-4686-82a0-7c8e30841590-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/2cd6884e-3d14-4476-94f7-1191cfff309b-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/2cd6884e-3d14-4476-94f7-1191cfff309b-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/b6ecda2a-ce36-437a-b515-3ae94948fe83-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/b6ecda2a-ce36-437a-b515-3ae94948fe83-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/7c4b9498-a8d9-4ebb-85f1-9f200c788595-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/7c4b9498-a8d9-4ebb-85f1-9f200c788595-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/ad0c8855-de69-4843-a80c-a5387d20fbc8-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/ad0c8855-de69-4843-a80c-a5387d20fbc8-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/cdaabb0d-a863-49d0-bc0f-738d771acba5-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/cdaabb0d-a863-49d0-bc0f-738d771acba5-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/9beb9442-d942-4f42-8b6a-fcea01ee086a-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/9beb9442-d942-4f42-8b6a-fcea01ee086a-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/374b091a-fc90-4791-91e5-c1557c649169-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/374b091a-fc90-4791-91e5-c1557c649169-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/42408a00-bf71-4892-a399-4325e2bc1fb8-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/42408a00-bf71-4892-a399-4325e2bc1fb8-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/06851339-843f-4a43-8422-4e61b9a00e75-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/06851339-843f-4a43-8422-4e61b9a00e75-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/7d2485d5-1ba7-4f25-90cb-f4480ff1a275-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/7d2485d5-1ba7-4f25-90cb-f4480ff1a275-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/401bf207-9a55-4dff-88a5-abcd58ad97fa-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/401bf207-9a55-4dff-88a5-abcd58ad97fa-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/f2ce7d55-5b1d-426a-b00e-6d4efe3058ec-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/f2ce7d55-5b1d-426a-b00e-6d4efe3058ec-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/2750c040-1d4a-4149-99fe-0512785f2d5f-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/2750c040-1d4a-4149-99fe-0512785f2d5f-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/85803c7e-2a5a-42e1-b8d3-299a44cafc46-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/85803c7e-2a5a-42e1-b8d3-299a44cafc46-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/4daa7986-d9b0-4dd5-ad17-2d7a771ea71a-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/4daa7986-d9b0-4dd5-ad17-2d7a771ea71a-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/6eeac3ed-f691-457f-a42e-eaa9c8a71ce8-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/6eeac3ed-f691-457f-a42e-eaa9c8a71ce8-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/49f1d386-5bed-43ae-bd43-deabf7df64fc-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/49f1d386-5bed-43ae-bd43-deabf7df64fc-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/4eb48fdf-7299-4d63-9d08-246902e2857f-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/4eb48fdf-7299-4d63-9d08-246902e2857f-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/060e7734-607d-4737-8b2c-bfa17788bf1a-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/060e7734-607d-4737-8b2c-bfa17788bf1a-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/5424e933-bee7-4125-839e-d8743ea69f93-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/5424e933-bee7-4125-839e-d8743ea69f93-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/88d8598b-3318-483d-9475-a5acf9887404-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/88d8598b-3318-483d-9475-a5acf9887404-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2025-03-07"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -19147,97 +19147,97 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/includesInPolicy": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/3667556d-d8f5-454c-922b-af8af38f613c-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/3667556d-d8f5-454c-922b-af8af38f613c-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/0949110d-c06b-450e-9649-7c1374d940d1-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/0949110d-c06b-450e-9649-7c1374d940d1-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/3f335517-f442-4b98-b149-1e87ff16de45-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/3f335517-f442-4b98-b149-1e87ff16de45-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/66269bdd-9271-4e76-b25c-7ab81eebe1d8-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/66269bdd-9271-4e76-b25c-7ab81eebe1d8-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/4c09f127-737b-4686-82a0-7c8e30841590-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/4c09f127-737b-4686-82a0-7c8e30841590-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/dc8aae4b-134f-4d75-8a71-c4186239178e-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/dc8aae4b-134f-4d75-8a71-c4186239178e-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/2cd6884e-3d14-4476-94f7-1191cfff309b-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/2cd6884e-3d14-4476-94f7-1191cfff309b-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/b6ecda2a-ce36-437a-b515-3ae94948fe83-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/b6ecda2a-ce36-437a-b515-3ae94948fe83-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/125b5493-052d-4a0d-a3e1-ed5bf792689e-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/125b5493-052d-4a0d-a3e1-ed5bf792689e-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/7c4b9498-a8d9-4ebb-85f1-9f200c788595-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/7c4b9498-a8d9-4ebb-85f1-9f200c788595-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/81cc974d-43cc-4c0f-a5e0-afa23b455aa3-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/81cc974d-43cc-4c0f-a5e0-afa23b455aa3-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/cdaabb0d-a863-49d0-bc0f-738d771acba5-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/cdaabb0d-a863-49d0-bc0f-738d771acba5-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/9beb9442-d942-4f42-8b6a-fcea01ee086a-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/9beb9442-d942-4f42-8b6a-fcea01ee086a-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/17f03f1f-f74d-40c0-8071-2927cfc9487b-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/17f03f1f-f74d-40c0-8071-2927cfc9487b-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/374b091a-fc90-4791-91e5-c1557c649169-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/374b091a-fc90-4791-91e5-c1557c649169-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/42408a00-bf71-4892-a399-4325e2bc1fb8-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/42408a00-bf71-4892-a399-4325e2bc1fb8-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/06851339-843f-4a43-8422-4e61b9a00e75-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/06851339-843f-4a43-8422-4e61b9a00e75-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/7d2485d5-1ba7-4f25-90cb-f4480ff1a275-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/7d2485d5-1ba7-4f25-90cb-f4480ff1a275-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/401bf207-9a55-4dff-88a5-abcd58ad97fa-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/401bf207-9a55-4dff-88a5-abcd58ad97fa-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/f2ce7d55-5b1d-426a-b00e-6d4efe3058ec-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/f2ce7d55-5b1d-426a-b00e-6d4efe3058ec-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/2750c040-1d4a-4149-99fe-0512785f2d5f-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/2750c040-1d4a-4149-99fe-0512785f2d5f-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/14da5b87-8304-4b2b-911d-117e3c29e890-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/14da5b87-8304-4b2b-911d-117e3c29e890-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/7bdb13a4-8a51-4ee5-be7f-20693fdb183e-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/7bdb13a4-8a51-4ee5-be7f-20693fdb183e-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/6eeac3ed-f691-457f-a42e-eaa9c8a71ce8-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/6eeac3ed-f691-457f-a42e-eaa9c8a71ce8-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/36ed36c9-b1a7-40b2-b5e2-0d012e772098-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/36ed36c9-b1a7-40b2-b5e2-0d012e772098-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/49f1d386-5bed-43ae-bd43-deabf7df64fc-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/49f1d386-5bed-43ae-bd43-deabf7df64fc-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/ff59f77d-71e9-4eb1-aac9-8bd05c50ff70-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/ff59f77d-71e9-4eb1-aac9-8bd05c50ff70-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/88d8598b-3318-483d-9475-a5acf9887404-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/88d8598b-3318-483d-9475-a5acf9887404-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2025-03-07"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -19263,151 +19263,151 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/includesInPolicy": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/69b2efdc-6269-45a4-aecb-4cb99c2ae134-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/69b2efdc-6269-45a4-aecb-4cb99c2ae134-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/8f1e6e58-544b-4365-a569-fb781341644e-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/8f1e6e58-544b-4365-a569-fb781341644e-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/0949110d-c06b-450e-9649-7c1374d940d1-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/0949110d-c06b-450e-9649-7c1374d940d1-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/f51e15a6-a67d-4729-9c28-3766299d2985-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/f51e15a6-a67d-4729-9c28-3766299d2985-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/3cff4dc4-72e9-4abe-9bf3-8a30f1618432-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/3cff4dc4-72e9-4abe-9bf3-8a30f1618432-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/0bb8297d-8f8a-42d2-80c1-558f29efe798-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/0bb8297d-8f8a-42d2-80c1-558f29efe798-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/58486cb6-1114-4a8a-ba1e-bd89cfe887e9-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/58486cb6-1114-4a8a-ba1e-bd89cfe887e9-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/6ce2b2b4-6afe-4d13-82a0-390d31ade01c-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/6ce2b2b4-6afe-4d13-82a0-390d31ade01c-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/3f335517-f442-4b98-b149-1e87ff16de45-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/3f335517-f442-4b98-b149-1e87ff16de45-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/c09ecbf9-34e3-4f3e-b74a-8796af15e59f-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/c09ecbf9-34e3-4f3e-b74a-8796af15e59f-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/adb27d29-9f0d-4d52-b760-a77ba57a69c9-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/adb27d29-9f0d-4d52-b760-a77ba57a69c9-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/b9c184ce-a859-410c-9d12-71a338200380-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/b9c184ce-a859-410c-9d12-71a338200380-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/f18a470b-3fe1-4aae-9c65-a6d3db6b550c-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/f18a470b-3fe1-4aae-9c65-a6d3db6b550c-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/b23110e7-1be7-444a-a677-cdee0cf4330c-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/b23110e7-1be7-444a-a677-cdee0cf4330c-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/4f2bf8fd-fc5c-493f-a44c-e7b16153c803-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/4f2bf8fd-fc5c-493f-a44c-e7b16153c803-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/66269bdd-9271-4e76-b25c-7ab81eebe1d8-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/66269bdd-9271-4e76-b25c-7ab81eebe1d8-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/4c09f127-737b-4686-82a0-7c8e30841590-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/4c09f127-737b-4686-82a0-7c8e30841590-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/dc8aae4b-134f-4d75-8a71-c4186239178e-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/dc8aae4b-134f-4d75-8a71-c4186239178e-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/239ec40e-a729-4a8e-ba69-e0bf03ac1c44-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/239ec40e-a729-4a8e-ba69-e0bf03ac1c44-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/b6ecda2a-ce36-437a-b515-3ae94948fe83-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/b6ecda2a-ce36-437a-b515-3ae94948fe83-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/7c4b9498-a8d9-4ebb-85f1-9f200c788595-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/7c4b9498-a8d9-4ebb-85f1-9f200c788595-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/ad0c8855-de69-4843-a80c-a5387d20fbc8-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/ad0c8855-de69-4843-a80c-a5387d20fbc8-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/1bf0e210-6792-4128-b8cc-ab6828aa4871-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/1bf0e210-6792-4128-b8cc-ab6828aa4871-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/41267642-60ff-4116-90eb-499fee2cd83f-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/41267642-60ff-4116-90eb-499fee2cd83f-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/cdaabb0d-a863-49d0-bc0f-738d771acba5-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/cdaabb0d-a863-49d0-bc0f-738d771acba5-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/9beb9442-d942-4f42-8b6a-fcea01ee086a-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/9beb9442-d942-4f42-8b6a-fcea01ee086a-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/853b79a2-b314-44a2-ae46-34a1e7ed85e4-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/853b79a2-b314-44a2-ae46-34a1e7ed85e4-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/374b091a-fc90-4791-91e5-c1557c649169-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/374b091a-fc90-4791-91e5-c1557c649169-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/42408a00-bf71-4892-a399-4325e2bc1fb8-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/42408a00-bf71-4892-a399-4325e2bc1fb8-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/06851339-843f-4a43-8422-4e61b9a00e75-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/06851339-843f-4a43-8422-4e61b9a00e75-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/04b2c8f3-c71b-4e95-8e43-f70374c5fb92-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/04b2c8f3-c71b-4e95-8e43-f70374c5fb92-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/d708526b-6561-438e-aa1a-82cd80b06396-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/d708526b-6561-438e-aa1a-82cd80b06396-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/c6adf2ea-3051-4498-97f4-4b2f8a105f57-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/c6adf2ea-3051-4498-97f4-4b2f8a105f57-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/c971fe3f-84c1-4636-9f44-b1ec31fd63c7-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/c971fe3f-84c1-4636-9f44-b1ec31fd63c7-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/7d2485d5-1ba7-4f25-90cb-f4480ff1a275-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/7d2485d5-1ba7-4f25-90cb-f4480ff1a275-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/8d787cb5-73e2-4c39-9cd1-67c7361dc02e-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/8d787cb5-73e2-4c39-9cd1-67c7361dc02e-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/01c6dafa-0886-4b7e-9881-2c3018c98bdc-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/01c6dafa-0886-4b7e-9881-2c3018c98bdc-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/85803c7e-2a5a-42e1-b8d3-299a44cafc46-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/85803c7e-2a5a-42e1-b8d3-299a44cafc46-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/9a39d88c-7eee-46df-b32a-c109f9f81fb8-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/9a39d88c-7eee-46df-b32a-c109f9f81fb8-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/47ff73ba-0028-4f79-9ce1-ee7008d66498-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/47ff73ba-0028-4f79-9ce1-ee7008d66498-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/3f1db29a-bfa5-40db-9fd1-fde020d81939-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/3f1db29a-bfa5-40db-9fd1-fde020d81939-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/4daa7986-d9b0-4dd5-ad17-2d7a771ea71a-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/4daa7986-d9b0-4dd5-ad17-2d7a771ea71a-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/d257eb98-27cb-48e5-8d3c-ab9fca4edd11-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/d257eb98-27cb-48e5-8d3c-ab9fca4edd11-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/4eb48fdf-7299-4d63-9d08-246902e2857f-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/4eb48fdf-7299-4d63-9d08-246902e2857f-2025-03-07"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -19444,34 +19444,34 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/includesInPolicy": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/bd385eeb-44a2-464b-a503-7abe407ef904-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/bd385eeb-44a2-464b-a503-7abe407ef904-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/07c28ace-561a-476e-a9b9-3d5ad6e35933-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/07c28ace-561a-476e-a9b9-3d5ad6e35933-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/f01fb3f9-2f7e-418b-9f51-adf50f202aea-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/f01fb3f9-2f7e-418b-9f51-adf50f202aea-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/f8f3a093-042c-47a3-971a-a482aaaf3b75-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/f8f3a093-042c-47a3-971a-a482aaaf3b75-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/15d15927-7a22-43f8-88d6-298f5eb45c4c-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/15d15927-7a22-43f8-88d6-298f5eb45c4c-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/74ef1034-e289-4596-b5b0-cde73796697d-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/74ef1034-e289-4596-b5b0-cde73796697d-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/f9205977-f145-44f5-8cb9-e3e2e35ce908-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/f9205977-f145-44f5-8cb9-e3e2e35ce908-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/33c45ae1-e2db-462a-a59e-7169bb01c5d6-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/33c45ae1-e2db-462a-a59e-7169bb01c5d6-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/b3471c65-b53e-453b-8282-abfa27bf1805-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/b3471c65-b53e-453b-8282-abfa27bf1805-2025-03-07"
             }
         ]
     },
@@ -19492,28 +19492,28 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/includesInPolicy": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/39bb2280-1215-447b-9221-fd13bc990641-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/39bb2280-1215-447b-9221-fd13bc990641-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/bd385eeb-44a2-464b-a503-7abe407ef904-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/bd385eeb-44a2-464b-a503-7abe407ef904-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/431467d6-9b4b-48fa-a197-cd5379f5e889-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/431467d6-9b4b-48fa-a197-cd5379f5e889-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/07c28ace-561a-476e-a9b9-3d5ad6e35933-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/07c28ace-561a-476e-a9b9-3d5ad6e35933-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/f01fb3f9-2f7e-418b-9f51-adf50f202aea-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/f01fb3f9-2f7e-418b-9f51-adf50f202aea-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/e39098df-ef46-464c-9aef-bcdeee2a88cb-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/e39098df-ef46-464c-9aef-bcdeee2a88cb-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/33c45ae1-e2db-462a-a59e-7169bb01c5d6-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/33c45ae1-e2db-462a-a59e-7169bb01c5d6-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/b3471c65-b53e-453b-8282-abfa27bf1805-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/b3471c65-b53e-453b-8282-abfa27bf1805-2025-03-07"
             }
         ]
     },
@@ -19534,7 +19534,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/includesInPolicy": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/acc8dff2-d8d1-483a-946d-65a02a452700-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/acc8dff2-d8d1-483a-946d-65a02a452700-2025-03-07"
             }
         ]
     },
@@ -19555,13 +19555,13 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/includesInPolicy": [
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/13d5a10e-188e-40fd-a22c-dbaa87b91df2-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/13d5a10e-188e-40fd-a22c-dbaa87b91df2-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/acc8dff2-d8d1-483a-946d-65a02a452700-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/acc8dff2-d8d1-483a-946d-65a02a452700-2025-03-07"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqcore/terms/256e51b3-1e08-4349-bb7e-5186631c3f8e-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/256e51b3-1e08-4349-bb7e-5186631c3f8e-2025-03-07"
             }
         ]
     }
