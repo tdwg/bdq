@@ -6,10 +6,10 @@
 Data Quality Enhancement Controlled Vocabulary List of Terms
 
 **Date version issued**<br>
-2025-04-11
+2025-05-10
 
 **Date created**<br>
-2025-04-11
+2025-05-10
 
 **Part of TDWG Standard**<br>
 <http://example.org/to_be_determined>
@@ -18,7 +18,7 @@ Data Quality Enhancement Controlled Vocabulary List of Terms
 bdqenh
 
 **This version**<br>
-<http://rs.tdwg.org/bdq/bdqenh/terms/2025-04-11>
+<http://rs.tdwg.org/bdq/bdqenh/terms/2025-05-10>
 
 **Latest version**<br>
 <http://rs.tdwg.org/bdq/bdqenh/terms/>
@@ -34,9 +34,9 @@ This document is a reference for the BDQ standard. It covers the vocabulary term
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 **Bibliographic citation**<br>
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Data Quality Enhancement Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/bdqenh/terms/2025-04-11>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Data Quality Enhancement Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/bdqenh/terms/2025-05-10>
 
-**Comment**<br>
+**Status**<br>
 Draft Standard for Review
 
 ## Table of Contents ##
@@ -71,33 +71,33 @@ Draft Standard for Review
 
 ### 1.1 Purpose
 
-The purpose of this document is to provide the full term list for the `bdqenh:` controlled vocabulary, which defines the values of `bdqffdq:Enhancement` used in BDQ Amendment Tests. Each Enhancement describes a general strategy by which data may be modified or supplemented to improve its quality in alignment with a specified Use Case.
+The purpose of this document is to provide the full term list for the `bdqenh:` controlled vocabulary, which defines the values of `bdqffdq:Enhancement` used in BDQ `Amendment` Tests. Each `Enhancement` describes a general strategy by which data may be modified or supplemented to improve its quality in alignment with a specified `Use Case`.
 
-These terms support the formal description of how Amendments propose changes to data and clarify the intended nature of those proposals.
+These terms support the formal description of how `Amendments` propose changes to data and clarify the intended nature of those proposals.
 
 ### 1.2 Audience
 
-This document is intended for users who need a technical understanding of how BDQ Amendment Tests describe proposed improvements to data. It will be especially useful for:
+This document is intended for users who need a technical understanding of how BDQ `Amendment` Tests describe proposed `Improvements` to data. It will be especially useful for:
 
-- Implementers developing systems that generate or evaluate data quality Amendments
-- Standards developers and data quality modelers working with the BDQ Framework Ontology
+- Implementers developing systems that generate or evaluate data quality `Amendments`
+- Standards developers and data quality modelers working with the Fitness for Use Framework Ontology
 - Analysts and data curators reviewing Test results in the context of proposed changes to datasets
 
-Some familiarity with the structure of BDQ Tests and the Framework Ontology is recommended.
+Some familiarity with the structure of BDQ Tests and the Fitness for Use Framework Ontology is recommended.
 
 ### 1.3 Data Quality Enhancements
 
-The concept of `bdqffdq:Enhancement`, as defined by Veiga (2016) and Veiga et al. (2017), captures the general nature of a proposed change intended to improve data quality. Examples of Enhancements include `AssumedDefault`, `Converted`, `From`, `Standardized`, and `Transposed`. These represent high-level categories of amendment strategies.
+The concept of `bdqffdq:Enhancement`, as defined by Veiga (2016) and Veiga et al. (2017), captures the general nature of a proposed change intended to improve data quality. Examples of `Enhancements` include `AssumedDefault`, `Converted`, `From`, `Standardized`, and `Transposed`. These represent high-level categories of `Amendment` strategies.
 
-Enhancements describe, in abstract terms, what a `bdqffdq:Specification` expresses concretely. While Enhancements are informally related to Data Quality Dimensions (e.g., a `Standardized` enhancement might relate to `Conformance`), those relationships are not formally encoded.
+`Enhancements` describe, in abstract terms, what a `bdqffdq:Specification` expresses concretely. While `Enhancements` are informally related to `Data Quality Dimensions` (e.g., a standardized `Enhancement` might relate to `Conformance`), those relationships are not formally encoded.
 
-Each `bdqffdq:Amendment` Test in `bdqtest:` proposes a change to one or more data values (`bdqffdq:InformationElements`) based on a specific Enhancement. For example, the Test [`AMENDMENT_EVENTDATE_STANDARDIZED`](https://rs.tdwg.org/bdqtest/terms/718dfc3c-cb52-4fca-b8e2-0e722f375da7) evaluates the term `dwc:eventDate` and may propose a revised value formatted according to the ISO 8601 standard. The Enhancement in this case is `bdqenh:Standardized`.
+Each `bdqffdq:Amendment` Test in `bdqtest:` proposes a change to one or more data values (`bdqffdq:InformationElements`) based on a specific `Enhancement`. For example, the Test [AMENDMENT_EVENTDATE_STANDARDIZED](../../terms/bdqtest/index.md#AMENDMENT_EVENTDATE_STANDARDIZED) evaluates the term `dwc:eventDate` and may propose a revised value formatted according to the ISO 8601 standard. The `Enhancement` in this case is `bdqenh:Standardized`.
 
-Enhancements are only applicable to Tests of type `bdqffdq:Amendment`.
+`Enhancements` are only applicable to Tests of type `bdqffdq:Amendment`.
 
 ### 1.4 Associated Documents
 
-For the list and links to all associated documents see the [Biodiversity Data Quality (BDQ)](../../index.md) page, which lists the parts of the standard.
+For the list and links to all associated documents see [The Biodiversity Data Quality (BDQ) Standard](../../../index.md).
 
 ### 1.5 Term List Distributions
 
@@ -112,7 +112,7 @@ Sections 1 and 3 are non-normative.
 
 Section 2 is normative.
 
-Section [1.9 Key to Vocabulary Terms](#19-Key-to-Vocabulary-Terms) identifies which values in Section 4 are normative and which are non-normative.
+Section [1.9 Key to Vocabulary Terms](#19-key-to-vocabulary-terms) identifies which values in Section 4 are normative and which are non-normative.
 
 Any sentence or phrase beginning with "For example" or "e.g." is non-normative.
 
@@ -140,7 +140,7 @@ The following namespace abbreviations are used in this document:
 
 ### 1.9 Key to Vocabulary Terms
 
-The terminology used to describe the terms in this vocabulary follows the TDWG Standards Documentation Standard (SDS). Each term definition includes the original RDF definition, and may also provide a TDWG-specific interpretation from the SDS, as well as a definition tailored to this local context.
+The terminology used to describe the terms in this vocabulary follows the TDWG [TDWG Standards Documentation Standard (SDS)](https://www.tdwg.org/standards/sds/) (SDS). Each term definition includes the original RDF definition, and may also provide a TDWG-specific interpretation from the SDS, as well as a definition tailored to this local context.
 
 | Label (Term) | Normative | Definition | Example |
 | ------------ | --------- | ---------- | ------- |
@@ -158,11 +158,11 @@ The terminology used to describe the terms in this vocabulary follows the TDWG S
 
 ## 2 Use of Terms (normative) 
 
-A value for `bdqffdq:hasEnhancement` in an RDF context MUST be a Term IRI (e.g., `https://rs.tdwg.org/bdqenh/terms/AssumedDefault`) or Term Qualified name (e.g., `bdqdim:AssumedDefault`) from the bdqenh: namespace. In a non-RDF context in which resources may be used by software (e.g., a value in a spreadsheet or database table) the Controlled Value String (Local name, e.g., `AssumedDefault`) MAY be used. In a purely human context a Label (e.g., `Assumed Default`) MAY be used.
+A value for `bdqffdq:hasEnhancement` in an RDF context MUST be a Term IRI (e.g., 'https://rs.tdwg.org/bdqenh/terms/AssumedDefault') or Term Qualified name (e.g., `bdqdim:AssumedDefault`) from the bdqenh: namespace. In a non-RDF context in which resources may be used by software (e.g., a value in a spreadsheet or database table) the Controlled Value String (Local name, e.g., `AssumedDefault`) MAY be used. In a purely human context a label (e.g., `Assumed Default`) MAY be used.
 
-Each instance of bdqffdq:Amendment SHOULD have exactly one bdqffdq:hasEnhancement property relating it to a term in this bdqenh: vocabulary.
+Each instance of `bdqffdq:Amendment` SHOULD have exactly one `bdqffdq:hasEnhancement` property relating it to a term in this `bdqenh:` vocabulary.
 
-An instance of bdqffdq:Validation, bdqffdq:Issue, or bdqffdq:Measure SHOULD NOT have a bdqffdq:hasEnhancement property relating it to a term in this bdqenh: vocabulary.
+An instance of `bdqffdq:Validation`, `bdqffdq:Issue`, or `bdqffdq:Measure` SHOULD NOT have a `bdqffdq:hasEnhancement` property relating it to a term in this `bdqenh:` vocabulary.
 
 ## 3 Term index
 ### 3.1 Index By Term Name
@@ -448,7 +448,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Data Quality Enhancement Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/bdqenh/terms/2025-04-11>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Data Quality Enhancement Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/bdqenh/terms/2025-05-10>
 
 **Biodiversity Information Standards (TDWG)**
 

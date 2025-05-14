@@ -83,7 +83,7 @@ Templates for proposals of new and change issues are available at https://github
 
 ### 2.2 Software Tools for Working with Test Descriptions
 
-The bdq_issue_to_csv utility (Morris 2024) is available ([Zenodo](https://doi.org/10.5281/zenodo.13937570), [GitHub](https://github.com/kurator-org/bdq_issue_to_csv)) for converting Markdown tables in issues into lines of CSV (ready for use as a term-version file). See the bdq_issue_to_csv README and the [make_test_csv.sh](https://github.com/kurator-org/bdq_issue_to_csv/blob/master/make_test_csv.sh) shell script for details, including working with kurator-ffdq (Lowery et al. 2024; [Zenodo](https://doi.org/10.5281/zenodo.14026643), [GitHub](https://github.com/kurator-org/kurator-ffdq)) for generation of RDF serializations from the term-version CSV file.
+The [bdq_issue_to_csv](https://github.com/kurator-org/bdq_issue_to_csv) utility (Morris 2024) is available for converting Markdown tables in issues into lines of CSV (ready for use as a term-version file). See the bdq_issue_to_csv README and the [make_test_csv.sh](https://github.com/kurator-org/bdq_issue_to_csv/blob/master/make_test_csv.sh) shell script for details, including working with [kurator-ffdq](https://github.com/kurator-org/kurator-ffdq) (Lowery et al. 2025), for generation of RDF serializations from the term-version CSV file.
 
 #### 2.2.1 Tools used to build the BDQ submission, and related code
 
@@ -95,7 +95,7 @@ BDQ `_review` is built with the following three sets of shell scripts:
 
 It is expected that supplementary Tests and proposed Tests under development will be maintained from issues, and the full process described in bdq_issue_to_csv [make_test_csv.sh](https://github.com/kurator-org/bdq_issue_to_csv/blob/v1.0.0/make_test_csv.sh) will be needed to produce CSV and RDF from Markdown tables in GitHub issues. This is expected to be different from the process for working with Tests that have been accepted into BDQ, where the GitHub issues are historical rationale management only. The authoritative file for Tests that are part of BDQ is a term-version file from which the build process will need to extract only the latest versions of Test records.
 
-The bdqtest term-version file does not contain all of the UUIDs needed to produce stable RDF - the following additional files are used for that: 
+The bdqtest: term-version file does not contain all of the UUIDs needed to produce stable RDF - the following additional files are used for that: 
 
 - tg2/core/TG2_tests_additional_guids.csv (which should all be included in the term-version file for bdqtest, kurator-ffdq may still be reading from this file instead)
 - tg2/core/information_element_guids.csv
@@ -130,7 +130,7 @@ The Test Validation Data is a file of Darwin Core (Wieczorek et al. 2012) record
   - Test GUID
   - TestType: Either Validation, Issue, Measure or Amendment
   - Test Label: The last two components of the full Test Label that enables sorting by the Information Element focus of the Test
-  - Data Dimension: What dimension of the data (what general category of Information Element) does the Test focus on, either NAME, SPACE, TIME, or OTHER (for definitions - see the [Glossary](../tg2/_review/index.md#6-glossary) on the [Biodiversity Data Quality (BDQ)](../tg2/_review/index.md) landing page).
+  - Data Dimension: What dimension of the data (what general category of Information Element) does the Test focus on, either NAME, SPACE, TIME, or OTHER (for definitions - see the [Glossary](../tg2/_review/index.md#6-glossary) in [The Biodiversity Data Quality (BDQ) Standard](../tg2/_review/index.md)).
   - Record unique identifier
   - Unique identifier within the Test (see below on special values)
 
@@ -176,10 +176,10 @@ The bdqtestrunner utility is available for running Java implementations of Tests
 
 <!--- TODO: Once in maintenance mode, add a template for proposals of changes to the maintenance repository. It may be possible to reuse the change template from https://github.com/tdwg/bdq/tree/master/.github/ISSUE_TEMPLATE --->
 
-Accepted changes will need to be added as new rows to the bdqtest term-version file.
+Accepted changes will need to be added as new rows to the bdqtest: term-version file.
 
 Note the distinction between the 'issued' date and 'DateLastUpdated'. 'DateLastUpdated' SHOULD only be changed if the changes are substantive to implementers (would cause them to change their code). The purpose of 'DateLastUpdated' is to allow implementers to not have to review their code when changes wouldn't affect that code. Implementers who note the 'DateLastUpdated' for each Test within their implementations can run software checks on their code to see if new changes require examination of their code. Non-substantive changes (such as addition of more non-normative known implementations) to the metadata about a Test can be distinguished by only updating the (required) value of 'issued' in the term-version file without a change to the 'DateLastUpdated'. 
 
-Proposed substantive changes SHOULD have a software implementation.
+Proposed substantive changes SHOULD have a software implementation. Links to specification source code SHOULD be to stable locations, with a link to a tag, file, and line of code in GitHub being the convention we've used as a way to let people quickly see the source for an implementation.
 
 Proposed substantive changes SHOULD have data validation rows or have proposed changes to existing data validation rows.

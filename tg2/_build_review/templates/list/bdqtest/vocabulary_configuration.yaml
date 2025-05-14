@@ -154,7 +154,7 @@ Source:
   term: skos:historyNote
   sort_order: 24
 historyNoteUrl:
-  # Currently all tdwg/bdq issue numbers, but in future could be on a bdqcore repository.
+  # Currently all tdwg/bdq issue numbers, but in future could be on a bdqtest repository.
   # Expect multiplicity here for rationale management of changes to tests after acceptance.
   append: A link to the GitHub issue that provided rationale management, recording a history (changes and comments) of the development of the Test.
   label: Developed As GitHub Issue

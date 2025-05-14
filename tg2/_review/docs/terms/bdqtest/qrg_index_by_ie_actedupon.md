@@ -1,11 +1,11 @@
-# InformationElement ActedUpon Index to the BDQ Tests Quick Reference Guide
+# Information Element Acted Upon Index to the BDQ Tests Quick Reference Guide
 
 Title
 : Terms used in the BDQ Tests Quick Reference Guide
 
 Part of the [BDQ Tests Quick Reference Guide](index.md)
 
-## Index of Tests by InformationElement ActedUpon
+## Index of Tests by Information Element Acted Upon
 ### dwc:basisOfRecord
 
 - [VALIDATION_BASISOFRECORD_NOTEMPTY](index.md#VALIDATION_BASISOFRECORD_NOTEMPTY)

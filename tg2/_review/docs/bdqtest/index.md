@@ -6,10 +6,10 @@
 BDQ Tests and Assertions
 
 **Date version issued**<br>
-2025-04-11
+2025-05-10
 
 **Date created**<br>
-2025-04-11
+2025-05-10
 
 **Part of TDWG Standard**<br>
 <http://example.org/to_be_determined>
@@ -20,7 +20,7 @@ BDQ Tests and Assertions
 -->
 
 **This version**<br>
-<http://rs.tdwg.org/bdqtest/terms/2025-04-11>
+<http://rs.tdwg.org/bdqtest/terms/2025-05-10>
 
 **Latest version**<br>
 <http://rs.tdwg.org/bdqtest/terms/>
@@ -37,9 +37,9 @@ This document is a reference for the BDQ standard, documenting the tests in the 
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 **Bibliographic citation**<br>
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. BDQ Tests and Assertions. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqtest/terms/2025-04-11>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. BDQ Tests and Assertions. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqtest/terms/2025-05-10>
 
-**Comment**<br>
+**Status**<br>
 Draft Standard for Review
 
 ## Table of Contents ##
@@ -51,15 +51,16 @@ Draft Standard for Review
   - [1.4 Status of the Content of this Document](#14-status-of-the-content-of-this-document)
   - [1.5 RFC 2119 key words](#15-rfc-2119-key-words)
   - [1.6 Namespace Abbreviations](#16-namespace-abbreviations)
+  - [1.7 Referring to Terms (normative)](#17-referring-to-terms-normative)
 
 [2 A Brief Context for the BDQ Tests](#2-a-brief-context-for-the-bdq-tests)
-  - [2.1 Characteristics of the Tests (non-normative)](#21-characteristics-of-the-tests-non-normative)
+  - [2.1 What is meant by "Test"? (non-normative)](#21-what-is-meant-by-test?-non-normative)
   - [2.2 Test Types (non-normative)](#22-test-types-non-normative)
     - [2.2.1 Validation Tests (normative)](#221-validation-tests-normative)
     - [2.2.2 Issue Tests (normative)](#222-issue-tests-normative)
-    - [2.2.3 Amendment Tests (normative)](#223-amendment-tests-normative)
-    - [2.2.4 Measure Tests (normative)](#224-measure-tests-normative)
-  - [2.3 SingleRecord and MultiRecord Tests (non-normative)](#23-singlerecord-and-multirecord-tests-non-normative)
+    - [2.2.3 Measure Tests (normative)](#223-measure-tests-normative)
+    - [2.2.4 Amendment Tests (normative)](#224-amendment-tests-normative)
+  - [2.3 Single Record and Multi Record Tests (non-normative)](#23-single-record-and-multi-record-tests-non-normative)
   - [2.4 Example RDF (non-normative)](#24-example-rdf-non-normative)
 
 [3 Use of Terms (normative)](#3-use-of-terms-normative)
@@ -69,9 +70,6 @@ Draft Standard for Review
     - [3.3.1 Parameter Examples (non-normative)](#331-parameter-examples-non-normative)
 
 [4 Term indices](#4-term-indices)
-  - [4.1 Index By Test Label](#41-index-by-test-label)
-
-[5 Vocabulary Summary](#5-vocabulary-summary)
 
 [Acronyms](#acronyms)
 
@@ -87,7 +85,7 @@ Draft Standard for Review
 
 The purpose of this document is to define and explain the BDQ Tests — the primary mechanism for evaluating the quality of biodiversity data in the BDQ standard. It describes the structure, types, and formal characteristics of the Tests, providing a clear and consistent specification that can be used by implementers, analysts, and quality assessors.
 
-This document is both normative and explanatory: it defines how each Test is modeled using standard vocabulary terms and how it should behave under various conditions. It also distinguishes among types of Tests (Validation, Issue, Amendment, and Measure), outlines the semantics of single- versus multi-record evaluation, and explains how parameters influence Test behavior. The content here provides the foundation for interpreting and using the Tests in software and quality assessment workflows.
+This document is both normative and explanatory: it defines how each Test is modeled using standard vocabulary terms and how it should behave under various conditions. It also distinguishes among types of Tests (`Validation`, `Issue`, `Measure`, and `Amendment`), outlines the semantics of single- versus multi-record evaluation, and explains how `Parameters` influence Test behavior. The content here provides the foundation for interpreting and using the Tests in software and quality assessment workflows.
 
 ### 1.2 Audience
 
@@ -102,28 +100,28 @@ While some familiarity with controlled vocabularies and RDF modeling may be usef
 
 ### 1.3 Associated Documents
 
-For the list and links to all associated documents see the [Biodiversity Data Quality (BDQ)](../../index.md) page, which lists the parts of the standard.
+For the list and links to all associated documents see [The Biodiversity Data Quality (BDQ) Standard](../../index.md).
 
 The set of information most relevant to the Biodiversity Data Quality (BDQ) Tests can be found in the following subset of resources:
 
-- [BDQ Tests and Assertions](../bdqtest/index.md) Defines how each Test is modeled using standard vocabulary terms and how it should behave under various conditions. This document.
-- [BDQ Tests Quick Reference Guide](../terms/bdqtest/index.md) Provides a concise, easy-to-read reference about the BDQ Tests.
-- [BDQ Tests and Assertions List of Terms](../list/bdqtest/index.md) Provides the complete normative definitions of the BDQ Tests.
-- [BDQ User's Guide](../../guide/users/index.md) For anyone interested in how to use the BDQ Tests in practice.
-- [BDQ Implementer's Guide](../guide/implementers/index.md) For anyone interested in the technical implementation of the BDQ Tests.
+- **BDQ Tests and Assertions** Defines how each Test is modeled using standard vocabulary terms and how it should behave under various conditions. This document.
+- [**BDQ Tests Quick Reference Guide**](../terms/bdqtest/index.md) Provides a concise, easy-to-read reference about the BDQ Tests.
+- [**BDQ Tests and Assertions List of Terms**](../list/bdqtest/index.md) Provides the complete normative definitions of the BDQ Tests.
+- [**BDQ User's Guide**](../guide/users/index.md) For anyone interested in how to use the BDQ Tests in practice.
+- [**BDQ Implementer's Guide**](../guide/implementers/index.md) For anyone interested in the technical implementation of the BDQ Tests.
 
 #### 1.3.1 Term List Distributions for the BDQ Standard
 
 <!--- This same table appears in bdqtest_termlist_header. Edit here, edit there. --->
 | Description | IRI | Download URL | Note | 
 | ----------- | --- | -----------  | ---- | 
-| HTML file   | TBD | [BDQ Tests and Assertions List of Terms](../docs/list/bdqtest/index.md) | Complete term list for the bdqtest: vocabulary as a web page. | 
-| RDF/XML file | TBD | [Tests in RDF/XML](../dist/bdqtest.xml) | An RDF representation of the Tests in an RDF/XML serialization. | 
-| Turtle file | TBD | [Tests in Turtle](../dist/bdqtest.ttl) | An RDF representation of the Tests in a Turtle serialization. | 
-| JSON-LD file | TBD | [Tests in JSON/LD](../dist/bdqtest.json) | An RDF representation of the Tests in a JSON-LD serialization. | 
-| CSV file | TBD | [Tests in CSV](../vocabulary/bdqtest_term_versions.csv) | CSV file listing all of the Tests. | 
-| SingleRecord Test CSV file | TBD | [SingleRecord Tests in CSV](../dist/bdqtest_singlerecord_tests_current.csv) | CSV file listing just the SingleRecord Tests. |
-| MultiRecord Test CSV file | TBD | [MultiRecord Tests in CSV](../dist/bdqtest_multirecord_tests_current.csv) | CSV file listing just the MultiRecord Tests. |
+| HTML file   | TBD | [BDQ Tests and Assertions List of Terms](../list/bdqtest/index.md) | Complete term list for the bdqtest: vocabulary as a web page. | 
+| RDF/XML file | TBD | [Tests in RDF/XML](../../dist/bdqtest.xml) | An RDF representation of the Tests in an RDF/XML serialization. | 
+| Turtle file | TBD | [Tests in Turtle](../../dist/bdqtest.ttl) | An RDF representation of the Tests in a Turtle serialization. | 
+| JSON-LD file | TBD | [Tests in JSON/LD](../../dist/bdqtest.json) | An RDF representation of the Tests in a JSON-LD serialization. | 
+| CSV file | TBD | [Tests in CSV](../../vocabulary/bdqtest_term_versions.csv) | CSV file listing all of the Tests. | 
+| Single Record Test CSV file | TBD | [Single Record Tests in CSV](../../dist/bdqtest_singlerecord_tests_current.csv) | CSV file listing just the Single Record Tests. |
+| Multi Record Test CSV file | TBD | [Multi Record Tests in CSV](../../dist/bdqtest_multirecord_tests_current.csv) | CSV file listing just the Multi Record Tests. |
 
 ### 1.4 Status of the Content of this Document
 
@@ -164,6 +162,9 @@ The following namespace abbreviations are used in this document:
 | skos:        | http://www.w3.org/2004/02/skos/core#        |
 | xsd:         | http://www.w3.org/2001/XMLSchema#           |
 
+### 1.7 Referring to Terms (normative)
+In any technical treatment of the BDQ standard, a precise reference to a class or property term SHOULD be made using its qualified name (the namespace prefix followed by the term local name; e.g., `bdqffdq:InformationElement`) and the namespace IRI corresponding to the namespace prefix (e.g., 'https://rs.tdwg.org/bdqffdq/terms' for `bdqffdq:`) MUST be provided. In less formal descriptions where the technical precision is not needed, the preferred label (skos:prefLabel, e.g., `Information Element`) or the term local name (e.g., `InformationElement`) MAY be used. You will find all of these methods of referring to BDQ-related terms throughout the BDQ documentation.
+
 ## 2 A Brief Context for the BDQ Tests
 
 The Authors acknowledge the fundamental importane of the work of:
@@ -172,115 +173,113 @@ The Authors acknowledge the fundamental importane of the work of:
 - The TDWG Data Quality Interest Group - Task Group 3 [Data Quality Use Cases](https://www.tdwg.org/community/bdq/tg-3/) for providing recommendations on Use Cases.
 - The TDWG [Annotations Interest Group](https://www.tdwg.org/community/annotations/) as to how the Test results may be reported against records.
 
-The terminology of BDQ is based primarily on the Fitness for use Framework (Veiga 2016, Veiga et al. 2017, Biodiversity Information standards (TDWG) Task Group 1) expressed as an ontology, but additional vocabularies are required for a complete description of the Tests and how to use them. See [BDQ List of Vocabularies](../vocabularies/index.md).
+The terminology of BDQ is based primarily on the Fitness for use Framework (Veiga 2016, Veiga et al. 2017, Biodiversity Information standards (TDWG) Task Group 1) expressed as an ontology, but additional vocabularies are required for a complete description of the Tests and how to use them. See [2.4 Vocabularies](index.md#24-vocabularies) in [The Biodiversity Data Quality (BDQ) Standard](../../index.md).
 
-BDQ Tests focus on values of a subset of [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) composed as bdqffdq:InformationElements as inputs to the Tests. Each Test is independent, to support the mixing and matching of Tests to meet particular data quality needs and not impose a particular model of Test execution on implementation frameworks. Tests may execute in parallel, on data records in sequence, as queries on datasets and on unique values. Tests are paired in that all Amendment Tests are matched with a corresponding Validation Test that assesses some aspect of data quality. An Amendment Test may propose improvements to term values, but the BDQ standard recommends that all improvements be evaluated before application.
+BDQ Tests focus on values of a subset of [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) composed as `bdqffdq:InformationElements` as inputs to the Tests. Each Test is independent, to support the mixing and matching of Tests to meet particular `Data Quality Needs` and not impose a particular model of Test execution on implementation frameworks. Tests may execute in parallel, on data records in sequence, as queries on datasets and on unique values. Tests are paired in that all `Amendment` Tests are matched with a corresponding `Validation` Test that assesses some aspect of data quality. An `Amendment` Test may propose improvements to term values, but the BDQ standard recommends that all improvements be evaluated before application.
 
 Some BDQ Tests also require reference to external data such as standard vocabularies of terms or names.
 
-While the most important BDQ Tests apply to a SingleRecord (bdqffdq:SingleRecord), Test results may also be accumulated across multiple records (bdqffdq:MultiRecord), for example reporting that 75% of the records do not have a valid value for dwc:basisOfRecord. Tests that accumulate information about results across multiple records are necessary for formal application of Quality Assurance and Quality Control principles.
+While the most important BDQ Tests apply to a `Single Record` (`bdqffdq:SingleRecord`), Test results may also be accumulated across multiple records (`bdqffdq:MultiRecord`), for example reporting that 75% of the records do not have a valid value for `dwc:basisOfRecord`. Tests that accumulate information about results across multiple records are necessary for formal application of Quality Assurance and Quality Control principles.
 
-### 2.1 Characteristics of the Tests (non-normative)
+### 2.1 What is meant by "Test"? (non-normative)
 
-The scope of each BDQ Test is largely provided by the bdqffdq:Specification. The [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) used in the Specification are included in the "Information Elements" (bdqffdq:InformationElement). The Specification also includes references to external (to the Darwin Core standard, Wieczorek et al. 2012) authorities that are required to implement the Test, for example, references to an ISO standard. Such authoritative references are listed under "Source Authority" (bdq:SourceAuthority) with a link to the authority and optionally, a link to a specific online resource required for the implementation of the Test.
+We use the captialized term "Test" to mean something specific in the BDQ Standard. A "Test" is any instance of a subclass of `bdqffdq:DataQualityNeed` (e.g., `bdqffdq:Validation`) composed with an instance of a subclass of `bdqffdq:Method` (e.g., `bdqffdq:ValidationMethod`) composed with an instance of `bdqffdq:Specification`. When run by an `Implementation`, each BDQ Test can produce a `Data Quality Report` consisting of `bdqffdq:Assertions`. See the diagrams and further information in the [Fitness For Use Framework Ontology Guide](../guide/bdqffdq/index.md).
 
-Each BDQ Test is defined to operate on a SingleRecord or a MultiRecord. The Framework allows for MultiRecord Tests able to identify outliers within a dataset, or other Tests that look across data values in a MultiRecord to evaluate data quality. No BDQ Tests have been defined to use data in other records within a dataset to evaluate the quality of data in a SingleRecord. The only MultiRecord Tests included in BDQ accumulate the outputs of other Tests.
+The scope of each BDQ Test is largely provided by the `bdqffdq:Specification`. The [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) used in the `Specification` are included in the `Information Elements` (`bdqffdq:InformationElement`). The `Specification` also includes references to external (to the Darwin Core standard, Wieczorek et al. 2012) authorities that are required to implement the Test, for example, references to an ISO standard. Such authoritative references are listed under `sourceAuthority` (`bdq:sourceAuthority`) with a link to the authority and optionally, a link to a specific online resource required for the `Implementation` of the Test.
+
+Each BDQ Test is defined to operate on a `Single Record` or a `Multi Record`. The Framework allows for `Multi Record` Tests able to identify outliers within a dataset, or other Tests that look across data values in a `Multi Record` to evaluate data quality. No BDQ Tests have been defined to use data in other records within a dataset to evaluate the quality of data in a `Single Record`. The only `Multi Record` Tests included in BDQ accumulate the outputs of other Tests.
 
 ### 2.2 Test Types (non-normative)
 
-The concept of 'Tests' in the context of BDQ include four distinct types: Validation (bdqffdq:Validation); Issue (bdqffdq:Issue); Amendment (bdqffdq:Amendment) and Measure (bdqffdq:Measure).
-
-Each BDQ Test is an instance of a subclass of bdqffdq:DataQualityNeed (e.g., bdqffdq:Validation) composed with an instance of a subclass of bdqffdq:Method (e.g., bdqffdq:ValidationMethod) composed with an instance of bdqffdq:Specification. When run by an implementation, each BDQ Test can produce a data quality report consisting of bdqffdq:Assertions. See the diagrams and further information in the [Fitness For Use Framework Ontology Guide](../guide/bdqffdq/index.md).
+The concept of 'Tests' in the context of BDQ include four distinct types: `Validation` (`bdqffdq:Validation`); `Issue` (`bdqffdq:Issue`); `Amendment` (`bdqffdq:Amendment`) and `Measure` (`bdqffdq:Measure`).
 
 #### 2.2.1 Validation Tests (normative)
 
-Each Validation Test is composed of an instance of bdqffdq:Validation (which expresses a data quality need in the abstract) with an instance of bdqffdq:ValidationMethod linking it to an instance of a bdqffdq:Specification (which gives details of how that data quality need is to be concretely assessed).
+Each `Validation` Test is composed of an instance of `bdqffdq:Validation` (which expresses a data quality need in the abstract) with an instance of `bdqffdq:ValidationMethod` linking it to an instance of a `bdqffdq:Specification` (which gives details of how that data quality need is to be concretely assessed).
 
-Validation Tests in BDQ evaluate values in one or more [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) for fitness for a particular data quality need. In some cases, Validation Tests check for the presence or the lack of a value. Validation Tests are phrased as positive statements consistent with the Fitness For Use Framework (Veiga 2016, Veiga et al. 2017). For example, [VALIDATION_TAXONRANK_NOTEMPTY](https://rs.tdwg.org/bdqtest/terms/14da5b87-8304-4b2b-911d-117e3c29e890) will return a Response.status="RUN_HAS_RESULT" and Response.result="COMPLIANT" if a record being tested contains a value in dwc:taxonRank, rather than being phrased in the negative (i.e., VALIDATION_TAXONRANK_EMPTY) and flagging a potential problem. Data are found to be fit for some use if all Validations comprising a corresponding UseCase have a Response.result="COMPLIANT".
+`Validation` Tests in BDQ evaluate values in one or more [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) for fitness for a particular `Data Quality Need`. In some cases, `Validation` Tests check for the presence or the lack of a value. `Validation` Tests are phrased as positive statements consistent with the Fitness For Use Framework (Veiga 2016, Veiga et al. 2017). For example, [VALIDATION_TAXONRANK_NOTEMPTY](../terms/bdqtest/index.md#VALIDATION_TAXONRANK_NOTEMPTY) will return a `Response.status`="RUN_HAS_RESULT" and `Response.result`="COMPLIANT" if a record being tested contains a value in `dwc:taxonRank`, rather than being phrased in the negative (i.e., VALIDATION_TAXONRANK_EMPTY) and flagging a potential problem. Data are found to be fit for some use if all `Validations` comprising a corresponding `Use Case` have a `Response.result`="COMPLIANT".
 
-The response of a Validation Test (i.e., an instance of a bdqffdq:ValidationAssertion) MUST take one of three forms.
+The response of a `Validation` Test (i.e., an instance of a `bdqffdq:ValidationAssertion`) MUST take one of three forms.
 
-1. A Response.status of "EXTERNAL_PREREQUISITES_NOT_MET" when an external resource (e.g., a bdq:sourceAuthority) is unavailable. Running the same Test on the same data at a different time may result in a different result.
-2. A Response.status of "INTERNAL_PREREQUISITES_NOT_MET" when the values of one or more of the Information Elements (bdqffdq:InformationElement) are such that the Test cannot be meaningfully run.
-3. A Response.status of "RUN_HAS_RESULT" when the prerequisites for running the Test have been met, and in this situation:
-  - A Response.result of either "COMPLIANT" if the values of the Information Elements (bdqffdq:InformationElement) meet the criteria, or "NOT_COMPLIANT" if they do not.
+1. A `Response.status` of "EXTERNAL_PREREQUISITES_NOT_MET" when an external resource (e.g., a `bdq:sourceAuthority`) is unavailable. Running the same Test on the same data at a different time may result in a different result.
+2. A `Response.status` of "INTERNAL_PREREQUISITES_NOT_MET" when the values of one or more of the `Information Elements` (`bdqffdq:InformationElement`) are such that the Test cannot be meaningfully run.
+3. A `Response.status` of "RUN_HAS_RESULT" when the prerequisites for running the Test have been met, and in this situation:
+  - A `Response.result` of either "COMPLIANT" if the values of the `Information Elements` (`bdqffdq:InformationElement`) meet the `Criteria`, or "NOT_COMPLIANT" if they do not.
 
 #### 2.2.2 Issue Tests (normative)
 
-Each Issue Test is composed of an instance of bdqffdq:Issue (which expresses a data quality need in the abstract) with an instance of bdqffdq:IssueMethod, which links it to an instance of a bdqffdq:Specification (which gives details of how that data quality need is to be concretely assessed).
+Each Issue Test is composed of an instance of `bdqffdq:Issue` (which expresses a data quality need in the abstract) with an instance of `bdqffdq:IssueMethod`, which links it to an instance of a `bdqffdq:Specification` (which gives details of how that data quality need is to be concretely assessed).
 
-Issue Tests are a form of warning flag where the Test is drawing attention to potential problem with the value of an Information Element for at least one use of the data.
+`Issue` Tests are a form of warning flag where the Test is drawing attention to potential problem with the value of an `Information Element` for at least one use of the data.
 
-We have used Issue Tests for a small number of cases where we wished to flag a value that might indicate a record is not fit for some purpose, but the evaluation of this case would take human review. For example, the Test [ISSUE_ANNOTATION_NOTEMPTY](https://rs.tdwg.org/bdqtest/terms/fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1) is informing the tester than there is at least one annotation associated with record and this should be evaluated before using the record. Similarly for the other two ISSUE-Type Tests: [ISSUE_DATAGENERALIZATIONS_NOTEMPTY](https://rs.tdwg.org/bdqtest/terms/13d5a10e-188e-40fd-a22c-dbaa87b91df2) where some form of transformation has occurred, and the Test [ISSUE_ESTABLISHMENTMEANS_NOTEMPTY](https://rs.tdwg.org/bdqtest/terms/acc8dff2-d8d1-483a-946d-65a02a452700) where the value needs to be assessed for utility.
+We have used `Issue` Tests for a small number of cases where we wished to flag a value that might indicate a record is not fit for some purpose, but the evaluation of these cases would take human review. For example, the Test [ISSUE_ANNOTATION_NOTEMPTY](../terms/bdqtest/index.md#ISSUE_ANNOTATION_NOTEMPTY) is informing the tester than there is at least one annotation associated with a record and this should be evaluated before using the record. Similarly for the other two `Issue` Tests: [ISSUE_DATAGENERALIZATIONS_NOTEMPTY](../terms/bdqtest/index.md#ISSUE_DATAGENERALIZATIONS_NOTEMPTY) where some form of transformation has occurred, and the Test [ISSUE_ESTABLISHMENTMEANS_NOTEMPTY](../terms/bdqtest/index.md#ISSUE_ESTABLISHMENTMEANS_NOTEMPTY) where the value needs to be assessed for utility.
 
-The response of an Issue Test (an instance of a bdqffdq:IssueAssertion) MUST take one of three forms.
+The response of an `Issue` Test (an instance of a `bdqffdq:IssueAssertion`) MUST take one of three forms.
 
-1. A Response.status of "EXTERNAL_PREREQUISITES_NOT_MET" when an external resource (e.g., a Source Authority, bdq:sourceAuthority) is unavailable. Running the same Test on the same data at a different time may result in a different result. In this case, the Response.result MUST be empty.
-2. A Response.status of "INTERNAL_PREREQUISITES_NOT_MET" when the values of one or more of the Information Elements are such that the Test cannot be meaningfully run. In this case, the Response.result MUST be empty.
-3. A Response.status of "RUN_HAS_RESULT" when the prerequisites for running the Test have been met, and in this case:
-  - A Response.result="POTENTIAL_ISSUE", a Response.result="NOT_ISSUE", or a Response.result="IS_ISSUE".
+1. A `Response.status` of "EXTERNAL_PREREQUISITES_NOT_MET" when an external resource (e.g., a `bdq:sourceAuthority`) is unavailable. Running the same Test on the same data at a different time may result in a different result. In this case, the `Response.result` MUST be empty.
+2. A `Response.status` of "INTERNAL_PREREQUISITES_NOT_MET" when the values of one or more of the `Information Elements` are such that the Test cannot be meaningfully run. In this case, the `Response.result` MUST be empty.
+3. A `Response.status` of "RUN_HAS_RESULT" when the prerequisites for running the Test have been met, and in this case:
+  - A `Response.result`="POTENTIAL_ISSUE", a `Response.result`="NOT_ISSUE", or a `Response.result`="IS_ISSUE".
 
-In each case, a Response.comment MUST be present with text explaining to consumers of the data quality report why the the Test produced this response in this case.
+In each case, a `Response.comment` MUST be present with text explaining to consumers of the `Data Quality Report` why the the Test produced this response in this case.
 
-None of the currently defined BDQ Issue Tests return a Response.result of IS_ISSUE
+None of the currently defined BDQ Issue Tests return a `Response.result` of IS_ISSUE.
 
-#### 2.2.3 Amendment Tests (normative) 
+#### 2.2.3 Measure Tests (normative) 
 
-Each Amendment Test is composed of an instance of bdqffdq:Amendment (which expresses how to improve data to fit a data quality need in the abstract) with an instance of bdqffdq:AmendmentMethod, which links it to an instance of a bdqffdq:Specification (which gives details of how proposals could be made to improve data for that need).
+Each `Measure` Test is composed of an instance of `bdqffdq:Measure` (which expresses how to measure fitness of data for a data quality need in the abstract) with an instance of `bdqffdq:MeasurementMethod`, which links it to an instance of a `bdqffdq:Specification` (which gives details of how that data quality is to be measured).
 
-An Amendment Test MAY propose a change to one or more Darwin Core term values, or MAY propose to fill in missing values. The Assertion produced by an Amendment is intended to improve one or more components of the quality of the record. The Response.result from an Amendment MUST always be treated as a proposal for a change, and MUST NOT be blindly applied to a database or record when a data quality report is used for QualityControl of an existing database or record. Consumers of Data Quality Reports under Quality Assurance uses MAY choose to accept all proposed Amendments as part of a pipeline in preparing data for an analysis. Amendments, under the framework, may also propose changes to procedures rather than to data values, we have not framed any in this form in the BDQ Tests at the time of first release.
+`Measure` Tests return a `Response.result` of either a numeric value or one of the values "COMPLETE" or "NOT_COMPLETE". `Measure` Tests may directly measure properties of data. Alternatively, `Measure` Tests may measure the outputs of other Tests, for example, a `Measure` may count the number of `Response.results` from all COMPLIANT `Validation` Tests run on a `bdqffdq:SingleRecord`.
 
-The response of an Amendment Test (an instance of a bdqffdq:AmendmentAssertion) MUST take one of four forms.
+The only `Measure` defined in the BDQ standard that directly examines data is the Test [MEASURE_EVENTDATE_DURATIONINSECONDS](../terms/bdqtest/index.md#MEASURE_EVENTDATE_DURATIONINSECONDS). This Test returns a `Response.result` measuring the amount of time represented by the value in `dwc:eventDate`, and can be used in Quality Assurance under specific research `Data Quality Needs` to identify `dwc:Occurrences` where the date observed or collected is known well enough for particular analytical needs (e.g., to at least one day for phenology studies, to at least one year for other purposes). The Test basically interprets the results of running the `Validation` and `Amendment` Tests and provides an indication of the length of the period of the value of `dwc:eventDate`.
 
-1. A Response.status of "EXTERNAL_PREREQUISITES_NOT_MET" when an external resource (e.g., a Source Authority, bdq:sourceAuthority) is unavailable Running the same Test on the same data at a different time may result in a different result.
-2. A Response.status of "INTERNAL_PREREQUISITES_NOT_MET" when the values of one or more of the Information Elements are such that the Test cannot be meaningfully run.
-3. A Response.status of "FILLED_IN" when the prerequisites for running the Test have been met and a proposal is made to fill in a value for one or more input terms that were Empty, and in this situation:
-  - A Response.result containing a list of key-value pairs of the terms for which values are to be filled in, and the proposed new values for those terms.
-3. A Response.status of "AMENDED" when the prerequisites for running the Test have been met and a proposal is made to change a value for one or more input terms that were Empty, and in this situation:
-  - A Response.result containing a list of key-value pairs of the terms for which new values are proposed, and the proposed new values for those terms.
+Most `Single Record` `Measure` Tests defined in the BDQ standard count the number of `Validation` or `Amendment` Tests with a specified `Response.result` from a `Single Record` Test.
 
-In each case, a Response.comment MUST be present with text explaining to consumers of the data quality report why the the Test produced this response in this case.
+The response of a `Measure` Test (an instance of a `bdqffdq:MeasureAssertion`) MUST take one of three forms.
 
-#### 2.2.4 Measure Tests (normative) 
-
-Each Measure Test is composed of an instance of bdqffdq:Measure (which expresses how to measure fitness of data for a data quality need in the abstract) with an instance of bdqffdq:MeasurementMethod, which links it to an instance of a bdqffdq:Specification (which gives details of how that data quality is to be measured).
-
-Measure Tests return a Response.result of either a numeric value or one of the values "COMPLETE" or "NOT_COMPLETE". Measure Tests may directly measure properties of data. Alternatively, Measure Tests may measure the outputs of other Tests, for example, a Measure may count the number of Response.results from all Validation Tests run on a single record (bdqffdq:SingleRecord) that are COMPLIANT.
-
-The only Measure defined in the BDQ standard that directly examines data is the Test [MEASURE_EVENTDATE_DURATIONINSECONDS](https://rs.tdwg.org/bdqtest/terms/56b6c695-adf1-418e-95d2-da04cad7be53). This Test returns a Response.result measuring the amount of time represented by the value in dwc:eventDate, and can be used in QualityAssurance under specific research data quality needs to identify Occurrences where the date observed or collected is known well enough for particular analytical needs (e.g., to at least one day for phenology studies, to at least one year for other purposes). The Test basically interprets the results of running the Validation and Amendment Tests and provides an indication of the length of the period of the value of dwc:eventDate.
-
-Most SingleRecord Measure Tests defined in the BDQ standard count the number of Validation or Amendment Tests with a specified Response.Result from a SingleRecord Test.
-
-The response of a Measure Test (an instance of a bdqffdq:MeasureAssertion) MUST take one of three forms.
-
-1. A Response.status of "EXTERNAL_PREREQUISITES_NOT_MET" when an external resource (e.g., a Source Authority, bdq:sourceAuthority) is unavailable. Running the same Test on the same data at a different time may result in a different result. In this case, the Response.result MUST be empty.
-2. A Response.status of "INTERNAL_PREREQUISITES_NOT_MET" when the values of one or more of the Information Elements are such that the Test cannot be meaningfully run. In this case, the Response.result MUST be empty.
-3. A Response.status of "RUN_HAS_RESULT" when the prerequisites for running the Test have been met, and in this case either:
-  - a Response.result="COMPLETE", or a Response.result="NOT_COMPLETE".
+1. A `Response.status` of "EXTERNAL_PREREQUISITES_NOT_MET" when an external resource (e.g., a `bdq:sourceAuthority`) is unavailable. Running the same Test on the same data at a different time may result in a different result. In this case, the `Response.result` MUST be empty.
+2. A `Response.status` of "INTERNAL_PREREQUISITES_NOT_MET" when the values of one or more of the `Information Elements` are such that the Test cannot be meaningfully run. In this case, the `Response.result` MUST be empty.
+3. A `Response.status` of "RUN_HAS_RESULT" when the prerequisites for running the Test have been met, and in this case either:
+  - a `Response.result`="COMPLETE", or a `Response.result`="NOT_COMPLETE".
 or
-  - a Response.result containing a single number.
+  - a `Response.result` containing a single number.
 
-In each case, a Response.comment MUST be present with text explaining to consumers of the data quality report why the the Test produced this response in this case.
+In each case, a `Response.comment` MUST be present with text explaining to consumers of the `Data Quality Report` why the the Test produced this response in this case.
 
-### 2.3 SingleRecord and MultiRecord Tests (non-normative) 
+#### 2.2.4 Amendment Tests (normative) 
 
-Tests may operate on a SingleRecord (e.g., one row of [Simple Darwin Core](https://dwc.tdwg.org/simple/)) or on a MultiRecord (a dataset).
+Each `Amendment` Test is composed of an instance of `bdqffdq:Amendment` (which expresses how to improve data to fit a data quality need in the abstract) with an instance of `bdqffdq:AmendmentMethod`, which links it to an instance of a `bdqffdq:Specification` (which gives details of how proposals could be made to improve data for that need).
 
-The BDQ [Fitness for Use Framework](../bdqffdq/index.md) allows for Tests of all types to operate on (bdqffdq:hasResourceType) either SingleRecords or MultiRecords. In the BDQ standard, the only MultiRecord Tests that have been defined are Measures. We refer to these as MultiRecord Measures (instances of bdqffdq:Measure that are the subject of a bdqffdq:hasResourceType property who's object is bdqffdq:MultiRecord).
+An `Amendment` Test MAY propose a change to one or more Darwin Core term values, or MAY propose to fill in missing values. The `Assertion` produced by an `Amendment` is intended to improve one or more components of the quality of the record. The `Response.result` from an `Amendment` MUST always be treated as a proposal for a change, and MUST NOT be blindly applied to a database or record when a `Data Quality Report` is used for Quality Control of an existing database or record. Consumers of `Data Quality Reports` under Quality Assurance uses MAY choose to accept all proposed `Amendments` as part of a pipeline in preparing data for an analysis. `Amendments`, under the Fitness For Use Framework, may also propose changes to procedures rather than to data values, we have not framed any in this form in the BDQ Tests at the time of first release.
 
-The focus of the BDQ Tests are the SingleRecord Tests. To allow for standard means for summarizing the results of these Tests, and for filtering data under Quality Assurance, we have also defined two sets of MultiRecord Measures.
+The response of an `Amendment` Test (an instance of a `bdqffdq:AmendmentAssertion`) MUST take one of four forms.
 
-In the BDQ standard, for each SingleRecord Validation Test, we have defined a MultiRecord Measure Test that returns a Response.result="COMPLETE" when all records in the MultiRecord have a Response.result="COMPLIANT", and a Response.result="NOT_COMPLETE" when they are not. Under Quality Assurance, these Measure Tests are the key criterion for identifying data that have quality for a Use Case. Under Quality Assurance, a MultiRecord is filtered to remove records that do not fit the MultiRecord Measure Tests for completeness, such that a filtered MultiRecord has Response.result="COMPLETE" for all MultiRecord Measure Tests.
+1. A `Response.status` of "EXTERNAL_PREREQUISITES_NOT_MET" when an external resource (e.g., `bdq:sourceAuthority`) is unavailable. Running the same Test on the same data at a different time may result in a different result.
+2. A `Response.status` of "INTERNAL_PREREQUISITES_NOT_MET" when the values of one or more of the `Information Elements` are such that the Test cannot be meaningfully run.
+3. A `Response.status` of "FILLED_IN" when the prerequisites for running the Test have been met and a proposal is made to fill in a value for one or more input terms that were `Empty`, and in this situation:
+  - A `Response.result` containing a list of key-value pairs of the terms for which values are to be filled in, and the proposed new values for those terms.
+3. A `Response.status` of "AMENDED" when the prerequisites for running the Test have been met and a proposal is made to change a value for one or more input terms that were Empty, and in this situation:
+  - A `Response.result` containing a list of key-value pairs of the terms for which new values are proposed, and the proposed new values for those terms.
 
-In the BDQ standard, for each SingleRecord Validation Test, we have also defined a MultiRecord Measure Test that returns a Response.result counting the number of Response.results from that Validation Test that are COMPLIANT (or in a few cases, COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET). Under Quality Control, these MultiRecord Measures allow calculation of how much the quality of a dataset would be improved by accepting changes proposed by Amendments, and allow identification of areas in the data where quality improvement is most needed to fit the needs of some Use Case.
+In each case, a `Response.comment` MUST be present with text explaining to consumers of the `Data Quality Report` why the the Test produced this response in this case.
 
-See the [Fitness For Use Framework Summary of Mathematical Formalization (normative)](../bdqffdq/index.md#5-fitness-for-use-framework-summary-of-mathematical-formalization-normative) for the formal expression of how Measures are intended to be used used in Quality Control and Quality Assurance.
+### 2.3 Single Record and Multi Record Tests (non-normative) 
+
+Tests may operate on a `Single Record` (e.g., one row of [Simple Darwin Core](https://dwc.tdwg.org/simple/)) or on a `Multi Record` (a dataset).
+
+The BDQ [Fitness for Use Framework](../bdqffdq/index.md) allows for Tests of all types to operate on either (`bdqffdq:hasResourceType`) `Single Record` or `Multi Record`. In the BDQ standard, the only `Multi Record` Tests that have been defined are `Measures`. We refer to these as `Multi Record` `Measures` (instances of `bdqffdq:Measure` that are the subject of a `bdqffdq:hasResourceType` property whose object is `bdqffdq:MultiRecord`).
+
+The focus of the BDQ Tests are the `Single Record` Tests. To allow for standard means for summarizing the results of these Tests, and for filtering data under Quality Assurance, we have also defined two sets of `Multi Record` `Measures`.
+
+In the BDQ standard, for each `Single Record` `Validation` Test, we have defined a `Multi Record` `Measure` Test that returns a `Response.result`="COMPLETE" when all records in the `Multi Record` have a `Response.result`="COMPLIANT", and a `Response.result`="NOT_COMPLETE" when they are not. Under Quality Assurance, these `Measure` Tests are the key criterion for identifying data that have quality for a `Use Case`. Under Quality Assurance, a `Multi Record` is filtered to remove records that do not fit the `Multi Record` `Measure` Tests for completeness, such that a filtered `Multi Record` has `Response.result`="COMPLETE" for all `Multi Record` `Measure` Tests.
+
+In the BDQ standard, for each `Single Record` `Validation` Test, we have also defined a `Multi Record` `Measure` Test that returns a `Response.result` counting the number of `Response.results` from that `Validation` Test that are COMPLIANT (or in a few cases, COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET). Under Quality Control, these `Multi Record` `Measures` allow calculation of how much the quality of a dataset would be improved by accepting changes proposed by `Amendments`, and allow identification of areas in the data where quality improvement is most needed to fit the needs of some `Use Case`.
+
+See the [Fitness For Use Framework Summary of Mathematical Formalization (normative)](../bdqffdq/index.md#3-fitness-for-use-framework-summary-of-mathematical-formalization-normative) for the formal expression of how `Measures` are intended to be used in Quality Control and Quality Assurance.
 
 ### 2.4 Example RDF (non-normative) 
 
-A more complete description of BDQ Tests can be found in the RDF representation of this vocabulary. Following the Framework Ontology (bdqffdq:), a Test is composed of an instance of a subclass of a bdqffdq:DataQualityNeed (e.g., bdqffdq:Validation), an instance of a bdqffdq:ActedUpon Information Element, optionally an instance of a bdqffdq:Consulted Information Element, an instance of a subclass of bdqffdq:Method (e.g., bdqffdq:ValidationMethod), and an instance of a bdqffdq:Specification. Most of the information associated with a bdqtest: term is expressed in other vocabularies, in particular bdqffdq:. This structure and dependence on other vocabularies can be seen in the example below of [VALIDATION_COUNTRYCODE_STANDARD](https://rs.tdwg.org/bdqtest/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe).
-
-Example: Formal description of [VALIDATION_COUNTRYCODE_STANDARD](https://rs.tdwg.org/bdqtest/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe)-
+A more complete description of BDQ Tests can be found in the RDF representation of this vocabulary. Following the Fitness for Use Framework Ontology (`bdqffdq:`), a Test is composed of an instance of a subclass of a `bdqffdq:DataQualityNeed` (e.g., `bdqffdq:Validation`), an instance of a `bdqffdq:ActedUpon` `Information Element`, optionally an instance of a `bdqffdq:Consulted` `Information Element`, an instance of a subclass of `bdqffdq:Method` (e.g., `bdqffdq:ValidationMethod`), and an instance of a `bdqffdq:Specification`. Most of the information associated with a `bdqtest:` term is expressed in other vocabularies, in particular `bdqffdq:`. This structure and dependence on other vocabularies can be seen in the formal example description of [VALIDATION_COUNTRYCODE_STANDARD](../terms/bdqtest/index.md#VALIDATION_COUNTRYCODE_STANDARD), below.
 
     <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe">
     	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
@@ -323,11 +322,9 @@ Example: Formal description of [VALIDATION_COUNTRYCODE_STANDARD](https://rs.tdwg
 
 ## 3 Use of Terms (normative)
 
-In any technical treatment of the BDQ standard, a precise reference to a class or property term SHOULD be made using its qualified name (the namespace prefix followed by the term local name; e.g., `bdqffdq:InformationElement`) and the namespace IRI corresponding to the namespace prefix (e.g., `https://rs.tdwg.org/bdqffdq/terms` for `bdqffdq:`) MUST be provided. In less formal descriptions where the technical precision is not needed, the preferred label (skos:prefLabel) MAY be used (e.g., `Information Element`). You will find both of the methods of referring to BDQ-related terms through the BDQ documentation.
-
 The technical (normative) details of the BDQ Test terms (those in the `bdqtest:` namespace) are found in the [BDQ Tests and Assertions List of Terms](../list/bdqtest/index.md).
 
-The technical definitions of the bdqtest: terms are supported by terms in several additional namespaces in the BDQ standard, namely `bdq:`, `bdqffdq:`, `bdqdim:`, `bdqenh:`, and `bdqcrit:`. For the details and rationale, see Chapman et al. (2017).
+The technical definitions of the `bdqtest:` terms are supported by terms in several additional namespaces in the BDQ standard, namely `bdq:`, `bdqffdq:`, `bdqdim:`, `bdqenh:`, and `bdqcrit:`. For the details and rationale, see Chapman et al. (2017).
 
 | **Abbreviation**  | **Technical List of Terms** |
 | -------- | ----------------------- |
@@ -340,81 +337,81 @@ The technical definitions of the bdqtest: terms are supported by terms in severa
 
 ### 3.1 Structure of Response (normative)
 
-Responses from each of the Tests MUST be structured data, and MUST NOT be simple pass/fail flags. The Response from a Test is an Assertion, which can form part of a data quality report or be wrapped in an Annotation, and MUST include the following three components: 
+Responses from each of the Tests MUST be structured data, and MUST NOT be simple pass/fail flags. The Response from a Test is an `Assertion`, which can form part of a `Data Quality Report` or be wrapped in an `Annotation`, and MUST include the following three components: 
 
-1. Response.result is the returned result for the Test, i.e., a numeric value for Measure Tests, a strictly controlled vocabulary value (consisting of "COMPLIANT" or "NOT_COMPLIANT" only) for Validation Tests, a strictly controlled vocabulary value ("NOT_ISSUE" or "POTENTIAL_ISSUE" only) for Issue Tests, a numeric value or a strictly controlled vocabulary value (consisting of exactly "COMPLETE" or "NOT_COMPLETE" for Measure Tests, and a data structure (e.g., a list of key value pairs) for proposed changes for Amendment Tests.
-2. Response.status provides a controlled vocabulary, metadata concerning the success, failure, or problems with the Test. The Status also serves as a link to information about warning type values and where, with future development, probabilistic assertions about the likeliness of the value could be made.
-3. Response.comment supplies human-readable text describing reasons for the Test result output.
+1. `Response.result` is the returned result for the Test, i.e., a numeric value for `Measure` Tests, a strictly controlled vocabulary value (consisting of "COMPLIANT" or "NOT_COMPLIANT" only) for `Validation` Tests, a strictly controlled vocabulary value ("NOT_ISSUE" or "POTENTIAL_ISSUE" only) for `Issue` Tests, a numeric value or a strictly controlled vocabulary value (consisting of exactly "COMPLETE" or "NOT_COMPLETE" for `Measure` Tests, and a data structure (e.g., a list of key value pairs) for proposed changes for `Amendment` Tests.
+2. `Response.status` provides a controlled vocabulary, metadata concerning the success, failure, or problems with the Test. The Status also serves as a link to information about warning type values and where, with future development, probabilistic `Assertions` about the likeliness of the value could be made.
+3. `Response.comment` supplies human-readable text describing reasons for the Test result output.
 
 A Response MUST be represented as either RDF or as a data structure.
 
 When responses are in the form of RDF, the RDF MUST meet the following conditions: 
 
-1. The response MUST be an instance of bdqffdq:Assertion or one of its subclasses (bdqffdq:ValidationAssertion, bdqffdq:IssueAssertion, bdqffdq:MeasurementAssertion, bdqffdq:AmendmentAssertion). An instance of a subclass of bdqffdq:Assertion SHOULD be used.
-2. The Assertion MUST have exactly one bdqffdq:hasResponseStatus object property linking it to one of the named individuals that has type bdqffdq:ResponseStatus (bdqffdq:INTERNAL_PREREQUISITES_NOT_MET, bdqffdq:EXTERNAL_PREREQUISITES_NOT_MET, bdqffdq:NOT_AMENDED, bdqffdq:AMENDED, bdqffdq:FILLED_IN, or bdqffdq:RUN_HAS_RESULT).
-3. The Assertion MUST have a bdqffdq:hasResponseResult object property or bdqffdq:hasResponseResultValue data property, unless the object of the bdqffdq:hasResponseStatus indicates that none should be present.
-  - If the object of the bdqffdq:hasResponseStatus is bdqffdq:RUN_HAS_RESULT, then the instance of the Assertion MUST have one and only one bdqffdq:hasResponseResult object property linking it to one of the named individuals that has type bdqffdq:ResponseResult (bdqffdq:COMPLETE, bdqffdq:COMPLIANT, bdqffdq:IS_ISSUE, bdqffdq:NOT_COMPLETE, bdqffdq:NOT_COMPLIANT, bdqffdq:NOT_ISSUE, or bdqffdq:POTENTIAL_ISSUE).
-  - If the object of the bdqffdq:hasResponseStatus is one of bdqffdq:AMENDED or bdqffdq:FILLED_IN, then the instance of the Assertion MUST have one and only one bdqffdq:hasResponseResultValue data property linking it to structured data presenting the result of the Amendment. The string in the bdqffdq:hasResponseResultValue SHOULD be a JSON list of key:value pairs, where the keys are specific Information Elements (e.g., dwc:eventDate), and the values are the new values proposed by the Amendment.
-  - If the object of the bdqffdq:hasResponseStatus is one of bdqffdq:INTERNAL_PREREQUISITES_NOT_MET, bdqffdq:EXTERNAL_PREREQUISITES_NOT_MET, bdqffdq:NOT_AMENDED, then no bdqffdq:hasResponseResult SHOULD be present.
-4. The Assertion MUST have at least one bdqffdq:hasResponseComment data property. This bdqffdq:hasResponseComment must provide a human readable text explanation of why the conclusion expressed in the Assertion was reached. The bdqffdq:hasResponseComment MAY be repeated to provide the comment in different languages. Each bdqffdq:hasResponseComment SHOULD be a self standing and complete explanation.
-5. The Assertion MAY have a bdqffdq:hasResponseQualifier object property.
+1. The Response MUST be an instance of `bdqffdq:Assertion` or one of its subclasses (`bdqffdq:ValidationAssertion`, `bdqffdq:IssueAssertion`, `bdqffdq:MeasurementAssertion`, `bdqffdq:AmendmentAssertion`). An instance of a subclass of `bdqffdq:Assertion` SHOULD be used.
+2. The `Assertion` MUST have exactly one `bdqffdq:hasResponseStatus` object property linking it to one of the named individuals that has type `bdqffdq:ResponseStatus` (`bdqffdq:INTERNAL_PREREQUISITES_NOT_MET`, `bdqffdq:EXTERNAL_PREREQUISITES_NOT_MET`, `bdqffdq:NOT_AMENDED`, `bdqffdq:AMENDED`, `bdqffdq:FILLED_IN`, or `bdqffdq:RUN_HAS_RESULT`).
+3. The `Assertion` MUST have a `bdqffdq:hasResponseResult` object property or `bdqffdq:hasResponseResultValue` data property, unless the object of the `bdqffdq:hasResponseStatus` indicates that none should be present.
+  - If the object of the `bdqffdq:hasResponseStatus` is `bdqffdq:RUN_HAS_RESULT`, then the instance of the `Assertion` MUST have one and only one `bdqffdq:hasResponseResult` object property linking it to one of the named individuals that has type `bdqffdq:ResponseResult` (`bdqffdq:COMPLETE`, `bdqffdq:COMPLIANT`, `bdqffdq:IS_ISSUE`, `bdqffdq:NOT_COMPLETE`, `bdqffdq:NOT_COMPLIANT`, `bdqffdq:NOT_ISSUE`, or `bdqffdq:POTENTIAL_ISSUE`).
+  - If the object of the `bdqffdq:hasResponseStatus` is one of `bdqffdq:AMENDED` or `bdqffdq:FILLED_IN`, then the instance of the `Assertion` MUST have one and only one `bdqffdq:hasResponseResultValue` data property linking it to structured data presenting the result of the `Amendment`. The string in the `bdqffdq:hasResponseResultValue` SHOULD be a JSON list of key:value pairs, where the keys are specific `Information Elements` (e.g., `dwc:eventDate`), and the values are the new values proposed by the `Amendment`.
+  - If the object of the `bdqffdq:hasResponseStatus` is one of `bdqffdq:INTERNAL_PREREQUISITES_NOT_MET`, `bdqffdq:EXTERNAL_PREREQUISITES_NOT_MET`, `bdqffdq:NOT_AMENDED`, then no `bdqffdq:hasResponseResult` SHOULD be present.
+4. The `Assertion` MUST have at least one `bdqffdq:hasResponseComment` data property. This `bdqffdq:hasResponseComment` must provide a human readable text explanation of why the conclusion expressed in the `Assertion` was reached. The `bdqffdq:hasResponseComment` MAY be repeated to provide the comment in different languages. Each `bdqffdq:hasResponseComment` SHOULD be a independent and complete explanation.
+5. The `Assertion` MAY have a `bdqffdq:hasResponseQualifier` object property.
 
 When the Response is represented as a data structure in a form other than RDF, the data structure MUST:
 
-1. Have properties corresponding to Response.status, Response.result, and Response.comment. These properties SHOULD have these names.
-2. Have one Response.status property, containing a string constant that MUST be one of the local names of one of the named individuals in bdqffdq with a type bdqffdq:ResponseStatus ( "INTERNAL_PREREQUISITES_NOT_MET", "EXTERNAL_PREREQUISITES_NOT_MET", "NOT_AMENDED", "AMENDED", "FILLED_IN", or "RUN_HAS_RESULT").
-3. Have one Response.result property.
-  - If the Response.status is "RUN_HAS_RESULT" then the value of the Response.result property MUST be a string constant that is one of the local names of one of the named individuals of type bdqffdq:ResponseResult ("COMPLETE", "COMPLIANT", "IS_ISSUE", "NOT_COMPLETE", "NOT_COMPLIANT", "NOT_ISSUE", or "POTENTIAL_ISSUE").
-  -  If the Response.status is one of  "AMENDED" or "FILLED_IN" then the value of the Response.result property MUST be structured data presenting the result of the Amendment. The string in the Response.result SHOULD be a JSON list of key:value pairs, where the keys are specific Information Elements (e.g., dwc:eventDate), and the values are the new values proposed by the Amendment.
-  - If the Response.status is one of "INTERNAL_PREREQUISITES_NOT_MET", "EXTERNAL_PREREQUISITES_NOT_MET", or "NOT_AMENDED", then the Response.result MUST be empty or null.
-4. Have one Response.comment property. This Response.comment must provide a human readable text explanation of why the conclusion expressed in the Assertion was reached. Internationalization of content of the Response.comment MAY be provided, nothing in this section should be taken as a constraint on how that may be accomplished.
-5. A Response.qualifier property may be included.
+1. Have properties corresponding to `Response.status`, `Response.result`, and `Response.comment`. These properties SHOULD have these labels.
+2. Have one `Response.status` property, containing a string constant that MUST be one of the local names of one of the named individuals in `bdqffdq:` with a type `bdqffdq:ResponseStatus` ("INTERNAL_PREREQUISITES_NOT_MET", "EXTERNAL_PREREQUISITES_NOT_MET", "NOT_AMENDED", "AMENDED", "FILLED_IN", or "RUN_HAS_RESULT"").
+3. Have one `Response.result` property.
+  - If the `Response.status` is "RUN_HAS_RESULT" then the value of the `Response.result` property MUST be a string constant that is one of the local names of one of the named individuals of type `bdqffdq:ResponseResult` ("COMPLETE", "COMPLIANT", "IS_ISSUE", "NOT_COMPLETE", "NOT_COMPLIANT", "NOT_ISSUE", or "POTENTIAL_ISSUE").
+  -  If the `Response.status` is one of  "AMENDED" or "FILLED_IN" then the value of the `Response.result` property MUST be structured data presenting the result of the `Amendment`. The string in the `Response.result` SHOULD be a JSON list of key:value pairs, where the keys are specific `Information Elements` (e.g., `dwc:eventDate`), and the values are the new values proposed by the `Amendment`.
+  - If the `Response.status` is one of "INTERNAL_PREREQUISITES_NOT_MET", "EXTERNAL_PREREQUISITES_NOT_MET", or "NOT_AMENDED", then the `Response.result` MUST be empty or null.
+4. Have one `Response.comment` property. This `Response.comment` must provide a human readable text explanation of why the conclusion expressed in the `Assertion` was reached. Internationalization of content of the `Response.comment` MAY be provided, nothing in this section should be taken as a constraint on how that may be accomplished.
+5. A `Response.qualifier` property may be included to provide additional information.
 
-Nothing in this section should be taken as constraining how data quality reports are presented to consumers of those reports, so long as all three elements of Response.result, Response.status, and Response.comment can be accessed.
+Nothing in this section should be taken as constraining how `Data Quality Reports` are presented to consumers of those reports, so long as all three elements of `Response.result`, `Response.status`, and `Response.comment` can be accessed.
 
 Nothing in this section should be taken as constraining internationalization and languages of labels applied to human readable presentations of Responses from Tests.
 
-Nothing in this section should be taken as a requirement for a particular format or serialization of bdqffdq:Assertions or Responses. Implementations MAY serialize Assertions in any appropriate form for the context. When Assertions are wrapped in oa:Annotations or presented as linked open data, an RDF representation SHOULD be used.
+Nothing in this section should be taken as a requirement for a particular format or serialization of `bdqffdq:Assertions` or Responses. `Implementations` MAY serialize `Assertions` in any appropriate form for the context. When `Assertions` are wrapped in `oa:Annotations` or presented as linked open data, an RDF representation SHOULD be used.
 
-Nothing in this section should be taken as a requirement to how bdqffdq:Assertions or Responses are to be presented to consumers of data quality reports. Implementations MAY present the results of Tests in any form appropriate for their consumers.
+Nothing in this section should be taken as a requirement to how `bdqffdq:Assertions` or Responses are to be presented to consumers of `Data Quality Reports`. `Implementations` MAY present the results of Tests in any form appropriate for their consumers, so long as none of the required information is suppressed.
 
 ### 3.2 Resource Types (normative)
 
-Each BDQ Test (each instance of a bdqffdq:DataQualityNeed) MUST have exactly one bdqffdq:hasResourceType object property that relates the Test to a ResourceType of bdqffdq:SingleRecord or bdqffdq:MultiRecord.
+Each BDQ Test (each instance of a `bdqffdq:DataQualityNeed`) MUST have exactly one `bdqffdq:hasResourceType` object property that relates the Test to a `Resource Type` of `bdqffdq:SingleRecord` or `bdqffdq:MultiRecord`.
 
-Tests operate on data. Data may be understood as representing a single record or multiple records. The single record (bdqffdq:SingleRecord) BDQ Tests MAY be applied to a single [Simple Darwin Core](https://dwc.tdwg.org/simple/)), or to a single instance of a Darwin Core Occurrence, Taxon, Event, or other class, and MAY extend across one to many relations from that class instance to instances of classes of other types in a structured representation of Darwin Core data (Wieczorek et al 2012). For example, a BDQ SingleRecord Test (that is, a BDQ Test with a bdqffdq:hasResourceType of bdqffdq:SingleRecord) SHOULD NOT take multiple rows of Simple Darwin Core as input. A BDQ SingleRecord Test SHOULD NOT take multiple objects of the same core type in structured Darwin Core as input (for example, input Darwin Core data in RDF should be presented to a BDQ SingleRecord Test one dwc:Occurrence at a time, although the Occurrence could be linked to multiple other instances of other classes such as dwc:Identifications or dwc:Events).
+Tests operate on data. Data may be understood as representing a single record or multiple records. The `Single Record` (`bdqffdq:SingleRecord`) BDQ Tests MAY be applied to a single [Simple Darwin Core](https://dwc.tdwg.org/simple/)) record, or to a single instance of a Darwin Core `dwc:Occurrence`, `dwc:Taxon`, `dwc:Event`, or other class, and MAY extend across one to many relations from that class instance to instances of classes of other types in a structured representation of Darwin Core data (Wieczorek et al. 2012). For example, a BDQ `Single Record` Test SHOULD NOT take multiple rows of Simple Darwin Core as input. A BDQ `Single Record` Test SHOULD NOT take multiple objects of the same core type in structured Darwin Core as input (for example, input Darwin Core data in RDF should be presented to a BDQ `Single Record` Test one `dwc:Occurrence` at a time, although the `dwc:Occurrence` could be linked to multiple other instances of other classes such as `dwc:Identifications`).
 
-The BDQ Test [ISSUE_ANNOTATION_NOTEMPTY](https://rs.tdwg.org/bdqtest/terms/fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1) similarly operates on a single Simple Darwin Core record, or a single core Darwin Core class instance, and asks whether Annotations exist related to that class, here this standard encourages the implementation of a standard for annotating dwc:Occurrence records beyond the [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021).
+The BDQ Test [ISSUE_ANNOTATION_NOTEMPTY](../terms/bdqtest/index.md#ISSUE_ANNOTATION_NOTEMPTY) similarly operates on a single Simple Darwin Core record, or a single core Darwin Core class instance, and asks whether `Annotations` exist related to that class, here this standard encourages the implementation of a standard for annotating `dwc:Occurrence` records beyond the [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021).
 
-BDQ MultiRecord (bdqffdq:MultiRecord) Tests operate on a dataset as a whole. BDQ MultiRecord Tests in bdqtest: sum up results across all records for each bdqffdq:SingleRecord Test.
+BDQ `Multi Record` (`bdqffdq:MultiRecord`) Tests operate on a dataset as a whole. BDQ `Multi Record` Tests in `bdqtest:` sum up results across all records for each `bdqffdq:SingleRecord` Test.
 
 ### 3.3 Parameterizing the Tests (normative)
 
-Where a Test is parameterized, a parameter (e.g., bdq:sourceAuthority) is specified in the text of the bdqffdq:hasExpectedResponse data type property of the instance of the bdqffdq:Specification for the Test. Such a bdqffdq:Specification MUST also have a bdqffdq:hasArgument object property linking it to an instance of a bdqffdq:Argument, which MUST have a bdqffdq:hasArgumentValue data type property carrying the default value for the parameter, and this bdqffdq:Argument MUST have a bdqffdq:hasParameter object property linking it to a bdqffdq:Parameter. The bdqffdq:Parameter SHOULD be a class instance in the bdq: namespace (e.g., bdq:sourceAuthority).
+Where a Test is parameterized, a `Parameter` (e.g., `bdq:sourceAuthority`) is specified in the text of the `bdqffdq:hasExpectedResponse` data type property of the instance of the `bdqffdq:Specification` for the Test. Such a `bdqffdq:Specification` MUST also have a `bdqffdq:hasArgument` object property linking it to an instance of a `bdqffdq:Argument`, which MUST have a `bdqffdq:hasArgumentValue` data type property carrying the default value for the `Parameter`, and this `bdqffdq:Argument` MUST have a `bdqffdq:hasParameter` object property linking it to a `bdqffdq:Parameter`. The `bdqffdq:Parameter` SHOULD be a class instance in the `bdq:` namespace (e.g., `bdq:sourceAuthority`).
 
-The instance of the bdqffdq:Specification SHOULD have a bdqffdq:hasAuthoritiesDefaults data type property containing the parameters, default values, and references to resources, including API endpoints that would provide access to values in the authority.
+An instance of the `bdqffdq:Specification` SHOULD have a `bdqffdq:hasAuthoritiesDefaults` data type property containing the parameters, default values, and references to resources, including API endpoints that would provide access to values in the authority.
 
 These elements MUST be understood in concert.
 
-Values of bdqffdq:hasAuthoritiesDefaults SHOULD be a text string listing parameters in the form of a semicolon-delimited list of one or more of the following: 
+Values of `bdqffdq:hasAuthoritiesDefaults` SHOULD be a text string listing `Parameters` in the form of a semicolon-delimited list of one or more of the following: 
  
 - parameter default = "default value" 
 - parameter default = "default value" {[resource]}
 - parameter default = "default value" {[resource]} {API endpoint [resource]}
 
-The bdqffdq:hasAuthoritiesDefaults data property MAY be used without corresponding bdqffdq:Arguments and bdqffdq:Parameters when a Test is not parameterized, but a bdq:sourceAuthority is mentioned within a bdqffdq:hasExpectedResponse for the bdqffdq:Specification and the bdqffdq:hasAuthoritiesDefaults provides details on this Source Authority. This usage allows for simpler and easier-to-read expected responses.
+The `bdqffdq:hasAuthoritiesDefaults` data property MAY be used without corresponding `bdqffdq:Arguments` and `bdqffdq:Parameters` when a Test is not parameterized, but a `bdq:sourceAuthority` is mentioned within a `bdqffdq:hasExpectedResponse` for the `bdqffdq:Specification` and the `bdqffdq:hasAuthoritiesDefaults` provides details on this `sourceAuthority`. This usage allows for simpler and easier-to-read expected responses.
 
-Section [2.3.2 Reading a Specification](../guide/implementers/index.md#232-Reading-a-Specification) of the [BDQ Implementer's Guide](../guide/implementers/index.md) contains additional guidance for handling parameters in BDQ Test implementations.
+Section [2.3.2 Reading a Specification](../guide/implementers/index.md#232-reading-a-specification) of the [BDQ Implementer's Guide](../guide/implementers/index.md) contains additional guidance for handling parameters in BDQ Test `Implementations`.
 
 #### 3.3.1 Parameter Examples (non-normative)
 
-Example values for bdqffdq:hasAuthoritiesDefaults: 
+Example values for `bdqffdq:hasAuthoritiesDefaults`: 
 
      bdq:earliestValidDate default ="1582-11-15"
 
      bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&amp;name=]}
 
-Example RDF fragment showing use of Arguments and hasAuthoritiesDefaults: 
+Example RDF fragment showing use of `Arguments` and `bdqffdq:hasAuthoritiesDefaults`: 
 
     <rdf:Description rdf:about="urn:uuid:9f12e2c3-17ac-42c0-91f4-c40a02d3f133">
         <rdf:type rdf:resource="bdqffdq:Argument"/>
@@ -440,680 +437,14 @@ Example RDF fragment showing use of Arguments and hasAuthoritiesDefaults:
         ...
     </rdf:Description>
 
-Example RDF Fragment from the Specification for [VALIDATION_COUNTRYCODE_STANDARD](https://rs.tdwg.org/bdqtest/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe), where bdqffdq:hasAuthoritiesDefaults is present to provide a bdq:sourceAuthority for the Specification, but the Test is not parameterized, so no hasArgument properties are present: 
+Example RDF Fragment from the `Specification` for [VALIDATION_COUNTRYCODE_STANDARD](../terms/bdqtest/index.md#VALIDATION_COUNTRYCODE_STANDARD), where `bdqffdq:hasAuthoritiesDefaults` is present to provide a `bdq:sourceAuthority` for the `Specification`, but the Test is not parameterized, so no `bdqffdq:hasArgument` properties are present: 
 
     <hasAuthoritiesDefaults xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bdq:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}</hasAuthoritiesDefaults>
     <hasExpectedResponse xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode is bdq:Empty; COMPLIANT if dwc:countryCode can be unambiguously interpreted as a valid ISO 3166-1-alpha-2 country code in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</hasExpectedResponse
 
+<!--
 ## 4 Term indices
-
-
-### 4.1 Index By Test Label
-
-
-[AMENDMENT_BASISOFRECORD_STANDARDIZED](#bdqtest_07c28ace-561a-476e-a9b9-3d5ad6e35933) |
-[AMENDMENT_COORDINATES_FROM_VERBATIM](#bdqtest_3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e) |
-[AMENDMENT_COORDINATES_TRANSPOSED](#bdqtest_f2b4a50a-6b2f-4930-b9df-da87b6a21082) |
-[AMENDMENT_COUNTRYCODE_FROM_COORDINATES](#bdqtest_8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae) |
-[AMENDMENT_COUNTRYCODE_STANDARDIZED](#bdqtest_fec5ffe6-3958-4312-82d9-ebcca0efb350) |
-[AMENDMENT_DATEIDENTIFIED_STANDARDIZED](#bdqtest_39bb2280-1215-447b-9221-fd13bc990641) |
-[AMENDMENT_DAY_STANDARDIZED](#bdqtest_b129fa4d-b25b-43f7-9645-5ed4d44b357b) |
-[AMENDMENT_DCTYPE_STANDARDIZED](#bdqtest_bd385eeb-44a2-464b-a503-7abe407ef904) |
-[AMENDMENT_DEGREEOFESTABLISHMENT_STANDARDIZED](#bdqtest_74ef1034-e289-4596-b5b0-cde73796697d) |
-[AMENDMENT_ESTABLISHMENTMEANS_STANDARDIZED](#bdqtest_15d15927-7a22-43f8-88d6-298f5eb45c4c) |
-[AMENDMENT_EVENTDATE_FROM_VERBATIM](#bdqtest_6d0a0c10-5e4a-4759-b448-88932f399812) |
-[AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY](#bdqtest_3892f432-ddd0-4a0a-b713-f2e2ecbd879d) |
-[AMENDMENT_EVENTDATE_FROM_YEARSTARTDAYOFYEARENDDAYOFYEAR](#bdqtest_eb0a44fa-241c-4d64-98df-ad4aa837307b) |
-[AMENDMENT_EVENTDATE_STANDARDIZED](#bdqtest_718dfc3c-cb52-4fca-b8e2-0e722f375da7) |
-[AMENDMENT_EVENT_FROM_EVENTDATE](#bdqtest_710fe118-17e1-440f-b428-88ba3f547d6d) |
-[AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT](#bdqtest_7498ca76-c4d4-42e2-8103-acacccbdffa7) |
-[AMENDMENT_GEODETICDATUM_STANDARDIZED](#bdqtest_0345b325-836d-4235-96d0-3b5caf150fc0) |
-[AMENDMENT_LICENSE_STANDARDIZED](#bdqtest_dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8) |
-[AMENDMENT_MINDEPTHMAXDEPTH_FROM_VERBATIM](#bdqtest_c5658b83-4471-4f57-9d94-bf7d0a96900c) |
-[AMENDMENT_MINELEVATIONMAXELEVATION_FROM_VERBATIM](#bdqtest_2d638c8b-4c62-44a0-a14d-fa147bf9823d) |
-[AMENDMENT_MONTH_STANDARDIZED](#bdqtest_2e371d57-1eb3-4fe3-8a61-dff43ced50cf) |
-[AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT](#bdqtest_96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5) |
-[AMENDMENT_OCCURRENCESTATUS_STANDARDIZED](#bdqtest_f8f3a093-042c-47a3-971a-a482aaaf3b75) |
-[AMENDMENT_PATHWAY_STANDARDIZED](#bdqtest_f9205977-f145-44f5-8cb9-e3e2e35ce908) |
-[AMENDMENT_SCIENTIFICNAMEID_FROM_TAXON](#bdqtest_431467d6-9b4b-48fa-a197-cd5379f5e889) |
-[AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID](#bdqtest_f01fb3f9-2f7e-418b-9f51-adf50f202aea) |
-[AMENDMENT_SEX_STANDARDIZED](#bdqtest_33c45ae1-e2db-462a-a59e-7169bb01c5d6) |
-[AMENDMENT_TAXONRANK_STANDARDIZED](#bdqtest_e39098df-ef46-464c-9aef-bcdeee2a88cb) |
-[AMENDMENT_TYPESTATUS_STANDARDIZED](#bdqtest_b3471c65-b53e-453b-8282-abfa27bf1805) |
-[ISSUE_ANNOTATION_NOTEMPTY](#bdqtest_fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1) |
-[ISSUE_COORDINATES_CENTEROFCOUNTRY](#bdqtest_256e51b3-1e08-4349-bb7e-5186631c3f8e) |
-[ISSUE_DATAGENERALIZATIONS_NOTEMPTY](#bdqtest_13d5a10e-188e-40fd-a22c-dbaa87b91df2) |
-[ISSUE_ESTABLISHMENTMEANS_NOTEMPTY](#bdqtest_acc8dff2-d8d1-483a-946d-65a02a452700) |
-[MEASURE_AMENDMENTS_PROPOSED](#bdqtest_03049fe5-a575-404f-b564-ae63f5a1cf8b) |
-[MEASURE_EVENTDATE_DURATIONINSECONDS](#bdqtest_56b6c695-adf1-418e-95d2-da04cad7be53) |
-[MEASURE_VALIDATIONTESTS_COMPLIANT](#bdqtest_45fb49eb-4a1b-4b49-876f-15d5034dfc73) |
-[MEASURE_VALIDATIONTESTS_NOTCOMPLIANT](#bdqtest_453844ae-9df4-439f-8e24-c52498eca84a) |
-[MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET](#bdqtest_49a94636-a562-4e6b-803c-665c80628a3d) |
-[VALIDATION_BASISOFRECORD_NOTEMPTY](#bdqtest_ac2b7648-d5f9-48ca-9b07-8ad5879a2536) |
-[VALIDATION_BASISOFRECORD_STANDARD](#bdqtest_42408a00-bf71-4892-a399-4325e2bc1fb8) |
-[VALIDATION_CLASSIFICATION_CONSISTENT](#bdqtest_2750c040-1d4a-4149-99fe-0512785f2d5f) |
-[VALIDATION_CLASS_FOUND](#bdqtest_2cd6884e-3d14-4476-94f7-1191cfff309b) |
-[VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT](#bdqtest_adb27d29-9f0d-4d52-b760-a77ba57a69c9) |
-[VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT](#bdqtest_f18a470b-3fe1-4aae-9c65-a6d3db6b550c) |
-[VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT](#bdqtest_b9c184ce-a859-410c-9d12-71a338200380) |
-[VALIDATION_COORDINATES_NOTZERO](#bdqtest_1bf0e210-6792-4128-b8cc-ab6828aa4871) |
-[VALIDATION_COORDINATEUNCERTAINTY_INRANGE](#bdqtest_c6adf2ea-3051-4498-97f4-4b2f8a105f57) |
-[VALIDATION_COUNTRYCODE_NOTEMPTY](#bdqtest_853b79a2-b314-44a2-ae46-34a1e7ed85e4) |
-[VALIDATION_COUNTRYCODE_STANDARD](#bdqtest_0493bcfb-652e-4d17-815b-b0cce0742fbe) |
-[VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT](#bdqtest_b23110e7-1be7-444a-a677-cdee0cf4330c) |
-[VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS](#bdqtest_d257eb98-27cb-48e5-8d3c-ab9fca4edd11) |
-[VALIDATION_COUNTRY_FOUND](#bdqtest_69b2efdc-6269-45a4-aecb-4cb99c2ae134) |
-[VALIDATION_COUNTRY_NOTEMPTY](#bdqtest_6ce2b2b4-6afe-4d13-82a0-390d31ade01c) |
-[VALIDATION_DATEIDENTIFIED_INRANGE](#bdqtest_dc8aae4b-134f-4d75-8a71-c4186239178e) |
-[VALIDATION_DATEIDENTIFIED_STANDARD](#bdqtest_66269bdd-9271-4e76-b25c-7ab81eebe1d8) |
-[VALIDATION_DAY_INRANGE](#bdqtest_8d787cb5-73e2-4c39-9cd1-67c7361dc02e) |
-[VALIDATION_DAY_STANDARD](#bdqtest_47ff73ba-0028-4f79-9ce1-ee7008d66498) |
-[VALIDATION_DCTYPE_NOTEMPTY](#bdqtest_374b091a-fc90-4791-91e5-c1557c649169) |
-[VALIDATION_DCTYPE_STANDARD](#bdqtest_cdaabb0d-a863-49d0-bc0f-738d771acba5) |
-[VALIDATION_DECIMALLATITUDE_INRANGE](#bdqtest_b6ecda2a-ce36-437a-b515-3ae94948fe83) |
-[VALIDATION_DECIMALLATITUDE_NOTEMPTY](#bdqtest_7d2485d5-1ba7-4f25-90cb-f4480ff1a275) |
-[VALIDATION_DECIMALLONGITUDE_INRANGE](#bdqtest_0949110d-c06b-450e-9649-7c1374d940d1) |
-[VALIDATION_DECIMALLONGITUDE_NOTEMPTY](#bdqtest_9beb9442-d942-4f42-8b6a-fcea01ee086a) |
-[VALIDATION_DEGREEOFESTABLISHMENT_STANDARD](#bdqtest_060e7734-607d-4737-8b2c-bfa17788bf1a) |
-[VALIDATION_ENDDAYOFYEAR_INRANGE](#bdqtest_9a39d88c-7eee-46df-b32a-c109f9f81fb8) |
-[VALIDATION_ESTABLISHMENTMEANS_STANDARD](#bdqtest_4eb48fdf-7299-4d63-9d08-246902e2857f) |
-[VALIDATION_EVENTDATE_INRANGE](#bdqtest_3cff4dc4-72e9-4abe-9bf3-8a30f1618432) |
-[VALIDATION_EVENTDATE_NOTEMPTY](#bdqtest_f51e15a6-a67d-4729-9c28-3766299d2985) |
-[VALIDATION_EVENTDATE_STANDARD](#bdqtest_4f2bf8fd-fc5c-493f-a44c-e7b16153c803) |
-[VALIDATION_EVENTTEMPORAL_NOTEMPTY](#bdqtest_41267642-60ff-4116-90eb-499fee2cd83f) |
-[VALIDATION_EVENT_CONSISTENT](#bdqtest_5618f083-d55a-4ac2-92b5-b9fb227b832f) |
-[VALIDATION_FAMILY_FOUND](#bdqtest_3667556d-d8f5-454c-922b-af8af38f613c) |
-[VALIDATION_GENUS_FOUND](#bdqtest_f2ce7d55-5b1d-426a-b00e-6d4efe3058ec) |
-[VALIDATION_GEODETICDATUM_NOTEMPTY](#bdqtest_239ec40e-a729-4a8e-ba69-e0bf03ac1c44) |
-[VALIDATION_GEODETICDATUM_STANDARD](#bdqtest_7e0c0418-fe16-4a39-98bd-80e19d95b9d1) |
-[VALIDATION_KINGDOM_FOUND](#bdqtest_125b5493-052d-4a0d-a3e1-ed5bf792689e) |
-[VALIDATION_KINGDOM_NOTEMPTY](#bdqtest_36ed36c9-b1a7-40b2-b5e2-0d012e772098) |
-[VALIDATION_LICENSE_NOTEMPTY](#bdqtest_15f78619-811a-4c6f-997a-a4c7888ad849) |
-[VALIDATION_LICENSE_STANDARD](#bdqtest_3136236e-04b6-49ea-8b34-a65f25e3aba1) |
-[VALIDATION_LOCATION_NOTEMPTY](#bdqtest_58486cb6-1114-4a8a-ba1e-bd89cfe887e9) |
-[VALIDATION_MAXDEPTH_INRANGE](#bdqtest_3f1db29a-bfa5-40db-9fd1-fde020d81939) |
-[VALIDATION_MAXELEVATION_INRANGE](#bdqtest_c971fe3f-84c1-4636-9f44-b1ec31fd63c7) |
-[VALIDATION_MINDEPTH_INRANGE](#bdqtest_04b2c8f3-c71b-4e95-8e43-f70374c5fb92) |
-[VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH](#bdqtest_8f1e6e58-544b-4365-a569-fb781341644e) |
-[VALIDATION_MINELEVATION_INRANGE](#bdqtest_0bb8297d-8f8a-42d2-80c1-558f29efe798) |
-[VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION](#bdqtest_d708526b-6561-438e-aa1a-82cd80b06396) |
-[VALIDATION_MONTH_STANDARD](#bdqtest_01c6dafa-0886-4b7e-9881-2c3018c98bdc) |
-[VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY](#bdqtest_ff59f77d-71e9-4eb1-aac9-8bd05c50ff70) |
-[VALIDATION_OCCURRENCEID_NOTEMPTY](#bdqtest_c486546c-e6e5-48a7-b286-eba7f5ca56c4) |
-[VALIDATION_OCCURRENCESTATUS_NOTEMPTY](#bdqtest_eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf) |
-[VALIDATION_OCCURRENCESTATUS_STANDARD](#bdqtest_7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47) |
-[VALIDATION_ORDER_FOUND](#bdqtest_81cc974d-43cc-4c0f-a5e0-afa23b455aa3) |
-[VALIDATION_PATHWAY_STANDARD](#bdqtest_5424e933-bee7-4125-839e-d8743ea69f93) |
-[VALIDATION_PHYLUM_FOUND](#bdqtest_eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f) |
-[VALIDATION_POLYNOMIAL_CONSISTENT](#bdqtest_17f03f1f-f74d-40c0-8071-2927cfc9487b) |
-[VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY](#bdqtest_49f1d386-5bed-43ae-bd43-deabf7df64fc) |
-[VALIDATION_SCIENTIFICNAMEID_COMPLETE](#bdqtest_6eeac3ed-f691-457f-a42e-eaa9c8a71ce8) |
-[VALIDATION_SCIENTIFICNAMEID_NOTEMPTY](#bdqtest_401bf207-9a55-4dff-88a5-abcd58ad97fa) |
-[VALIDATION_SCIENTIFICNAME_FOUND](#bdqtest_3f335517-f442-4b98-b149-1e87ff16de45) |
-[VALIDATION_SCIENTIFICNAME_NOTEMPTY](#bdqtest_7c4b9498-a8d9-4ebb-85f1-9f200c788595) |
-[VALIDATION_SEX_STANDARD](#bdqtest_88d8598b-3318-483d-9475-a5acf9887404) |
-[VALIDATION_STARTDAYOFYEAR_INRANGE](#bdqtest_85803c7e-2a5a-42e1-b8d3-299a44cafc46) |
-[VALIDATION_STATEPROVINCE_FOUND](#bdqtest_4daa7986-d9b0-4dd5-ad17-2d7a771ea71a) |
-[VALIDATION_TAXONRANK_NOTEMPTY](#bdqtest_14da5b87-8304-4b2b-911d-117e3c29e890) |
-[VALIDATION_TAXONRANK_STANDARD](#bdqtest_7bdb13a4-8a51-4ee5-be7f-20693fdb183e) |
-[VALIDATION_TAXON_NOTEMPTY](#bdqtest_06851339-843f-4a43-8422-4e61b9a00e75) |
-[VALIDATION_TAXON_UNAMBIGUOUS](#bdqtest_4c09f127-737b-4686-82a0-7c8e30841590) |
-[VALIDATION_TYPESTATUS_STANDARD](#bdqtest_4833a522-12eb-4fe0-b4cf-7f7a337a6048) |
-[VALIDATION_YEAR_INRANGE](#bdqtest_ad0c8855-de69-4843-a80c-a5387d20fbc8) |
-[VALIDATION_YEAR_NOTEMPTY](#bdqtest_c09ecbf9-34e3-4f3e-b74a-8796af15e59f) 
-
-## 5 Vocabulary Summary
-- <a id="bdqtest_07c28ace-561a-476e-a9b9-3d5ad6e35933"></a>AMENDMENT_BASISOFRECORD_STANDARDIZED
-  - Description: Proposes an amendment to the value of dwc:basisOfRecord using the bdq:sourceAuthority.
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#AMENDMENT_BASISOFRECORD_STANDARDIZED)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_07c28ace-561a-476e-a9b9-3d5ad6e35933)
-
-- <a id="bdqtest_3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e"></a>AMENDMENT_COORDINATES_FROM_VERBATIM
-  - Description: Proposes an amendment to the values of dwc:decimalLatitude, dwc:decimalLongitude, and dwc:geodeticDatum from geographic coordinate information in the verbatim coordinates terms.
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#AMENDMENT_COORDINATES_FROM_VERBATIM)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e)
-
-- <a id="bdqtest_f2b4a50a-6b2f-4930-b9df-da87b6a21082"></a>AMENDMENT_COORDINATES_TRANSPOSED
-  - Description: Proposes an amendment of the signs of dwc:decimalLatitude and/or dwc:decimalLongitude to align the location with the dwc:countryCode.
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#AMENDMENT_COORDINATES_TRANSPOSED)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_f2b4a50a-6b2f-4930-b9df-da87b6a21082)
-
-- <a id="bdqtest_8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae"></a>AMENDMENT_COUNTRYCODE_FROM_COORDINATES
-  - Description: Proposes an amendment to the value of dwc:countryCode if dwc:decimalLatitude and dwc:decimalLongitude fall within a boundary from the bdq:countryShapes that is attributable to a single valid country code.
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#AMENDMENT_COUNTRYCODE_FROM_COORDINATES)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae)
-
-- <a id="bdqtest_fec5ffe6-3958-4312-82d9-ebcca0efb350"></a>AMENDMENT_COUNTRYCODE_STANDARDIZED
-  - Description: Proposes an amendment to the value of dwc:countryCode if it can be interpreted as an ISO 3166-1-alpha-2 country code.
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#AMENDMENT_COUNTRYCODE_STANDARDIZED)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_fec5ffe6-3958-4312-82d9-ebcca0efb350)
-
-- <a id="bdqtest_39bb2280-1215-447b-9221-fd13bc990641"></a>AMENDMENT_DATEIDENTIFIED_STANDARDIZED
-  - Description: Proposes an amendment to the value of dwc:dateIdentified to a valid ISO date.
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#AMENDMENT_DATEIDENTIFIED_STANDARDIZED)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_39bb2280-1215-447b-9221-fd13bc990641)
-
-- <a id="bdqtest_b129fa4d-b25b-43f7-9645-5ed4d44b357b"></a>AMENDMENT_DAY_STANDARDIZED
-  - Description: Proposes an amendment to the value of dwc:day as an integer between 1 and 31 inclusive.
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#AMENDMENT_DAY_STANDARDIZED)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_b129fa4d-b25b-43f7-9645-5ed4d44b357b)
-
-- <a id="bdqtest_bd385eeb-44a2-464b-a503-7abe407ef904"></a>AMENDMENT_DCTYPE_STANDARDIZED
-  - Description: Proposes an amendment to the value of dc:type using the DCMI type vocabulary.
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#AMENDMENT_DCTYPE_STANDARDIZED)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_bd385eeb-44a2-464b-a503-7abe407ef904)
-
-- <a id="bdqtest_74ef1034-e289-4596-b5b0-cde73796697d"></a>AMENDMENT_DEGREEOFESTABLISHMENT_STANDARDIZED
-  - Description: Proposes an amendment to the value of dwc:degreeOfEstablishment using the bdq:sourceAuthority.
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#AMENDMENT_DEGREEOFESTABLISHMENT_STANDARDIZED)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_74ef1034-e289-4596-b5b0-cde73796697d)
-
-- <a id="bdqtest_15d15927-7a22-43f8-88d6-298f5eb45c4c"></a>AMENDMENT_ESTABLISHMENTMEANS_STANDARDIZED
-  - Description: Proposes an amendment to the value of dwc:establishmentMeans using the bdq:sourceAuthority.
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#AMENDMENT_ESTABLISHMENTMEANS_STANDARDIZED)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_15d15927-7a22-43f8-88d6-298f5eb45c4c)
-
-- <a id="bdqtest_6d0a0c10-5e4a-4759-b448-88932f399812"></a>AMENDMENT_EVENTDATE_FROM_VERBATIM
-  - Description: Proposes an amendment to the value of dwc:eventDate from the content of dwc:verbatimEventDate.
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#AMENDMENT_EVENTDATE_FROM_VERBATIM)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_6d0a0c10-5e4a-4759-b448-88932f399812)
-
-- <a id="bdqtest_3892f432-ddd0-4a0a-b713-f2e2ecbd879d"></a>AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY
-  - Description: Proposes an amendment to the value of dwc:eventDate from values in dwc:year, dwc:month and dwc:day.
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_3892f432-ddd0-4a0a-b713-f2e2ecbd879d)
-
-- <a id="bdqtest_eb0a44fa-241c-4d64-98df-ad4aa837307b"></a>AMENDMENT_EVENTDATE_FROM_YEARSTARTDAYOFYEARENDDAYOFYEAR
-  - Description: Proposes an amendment to the value of dwc:eventDate from values in dwc:year, dwc:startDayOfYear and dwc:endDayOfYear.
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#AMENDMENT_EVENTDATE_FROM_YEARSTARTDAYOFYEARENDDAYOFYEAR)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_eb0a44fa-241c-4d64-98df-ad4aa837307b)
-
-- <a id="bdqtest_718dfc3c-cb52-4fca-b8e2-0e722f375da7"></a>AMENDMENT_EVENTDATE_STANDARDIZED
-  - Description: Proposes an amendment of the value of dwc:eventDate to a valid ISO date.
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#AMENDMENT_EVENTDATE_STANDARDIZED)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_718dfc3c-cb52-4fca-b8e2-0e722f375da7)
-
-- <a id="bdqtest_710fe118-17e1-440f-b428-88ba3f547d6d"></a>AMENDMENT_EVENT_FROM_EVENTDATE
-  - Description: Proposes an amendment to values in any of dwc:year, dwc:month, dwc:day, dwc:startDayOfYear or dwc:endDayOfYear from the content of dwc:eventDate.
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#AMENDMENT_EVENT_FROM_EVENTDATE)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_710fe118-17e1-440f-b428-88ba3f547d6d)
-
-- <a id="bdqtest_7498ca76-c4d4-42e2-8103-acacccbdffa7"></a>AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT
-  - Description: Proposes an amendment to fill in dwc:geodeticDatum using a parameterized value if the dwc:geodeticDatum is empty.
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_7498ca76-c4d4-42e2-8103-acacccbdffa7)
-
-- <a id="bdqtest_0345b325-836d-4235-96d0-3b5caf150fc0"></a>AMENDMENT_GEODETICDATUM_STANDARDIZED
-  - Description: Proposes an amendment to the value of dwc:geodeticDatum using the bdq:sourceAuthority.
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#AMENDMENT_GEODETICDATUM_STANDARDIZED)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_0345b325-836d-4235-96d0-3b5caf150fc0)
-
-- <a id="bdqtest_dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8"></a>AMENDMENT_LICENSE_STANDARDIZED
-  - Description: Proposes an amendment to the value of dcterms:license using the bdq:sourceAuthority.
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#AMENDMENT_LICENSE_STANDARDIZED)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8)
-
-- <a id="bdqtest_c5658b83-4471-4f57-9d94-bf7d0a96900c"></a>AMENDMENT_MINDEPTHMAXDEPTH_FROM_VERBATIM
-  - Description: Proposes amendments of the values of dwc:minimumDepthInMeters and dwc:maximumDepthInMeters if they can be interpreted from dwc:verbatimDepth.
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#AMENDMENT_MINDEPTHMAXDEPTH_FROM_VERBATIM)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_c5658b83-4471-4f57-9d94-bf7d0a96900c)
-
-- <a id="bdqtest_2d638c8b-4c62-44a0-a14d-fa147bf9823d"></a>AMENDMENT_MINELEVATIONMAXELEVATION_FROM_VERBATIM
-  - Description: Proposes an amendment or amendments to the values of dwc:minimumElevationInMeters and dwc:maximumElevationInMeters if they can be interpreted from dwc:verbatimElevation.
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#AMENDMENT_MINELEVATIONMAXELEVATION_FROM_VERBATIM)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_2d638c8b-4c62-44a0-a14d-fa147bf9823d)
-
-- <a id="bdqtest_2e371d57-1eb3-4fe3-8a61-dff43ced50cf"></a>AMENDMENT_MONTH_STANDARDIZED
-  - Description: Proposes an amendment to the value of dwc:month as an integer between 1 and 12 inclusive.
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#AMENDMENT_MONTH_STANDARDIZED)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_2e371d57-1eb3-4fe3-8a61-dff43ced50cf)
-
-- <a id="bdqtest_96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5"></a>AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT
-  - Description: Proposes an amendment of the value of dwc:occurrenceStatus to the default parameter value if dwc:occurrenceStatus, dwc:individualCount and dwc:organismQuantity are empty.
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5)
-
-- <a id="bdqtest_f8f3a093-042c-47a3-971a-a482aaaf3b75"></a>AMENDMENT_OCCURRENCESTATUS_STANDARDIZED
-  - Description: Proposes an amendment to the value of dwc:occurrenceStatus using the bdq:sourceAuthority.
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#AMENDMENT_OCCURRENCESTATUS_STANDARDIZED)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_f8f3a093-042c-47a3-971a-a482aaaf3b75)
-
-- <a id="bdqtest_f9205977-f145-44f5-8cb9-e3e2e35ce908"></a>AMENDMENT_PATHWAY_STANDARDIZED
-  - Description: Propose an amendment to the value of dwc:pathway using the bdq:sourceAuthority.
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#AMENDMENT_PATHWAY_STANDARDIZED)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_f9205977-f145-44f5-8cb9-e3e2e35ce908)
-
-- <a id="bdqtest_431467d6-9b4b-48fa-a197-cd5379f5e889"></a>AMENDMENT_SCIENTIFICNAMEID_FROM_TAXON
-  - Description: Proposes an amendment to the value of dwc:scientificNameID if it can be unambiguously resolved from bdq:sourceAuthority using the available taxon terms.
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#AMENDMENT_SCIENTIFICNAMEID_FROM_TAXON)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_431467d6-9b4b-48fa-a197-cd5379f5e889)
-
-- <a id="bdqtest_f01fb3f9-2f7e-418b-9f51-adf50f202aea"></a>AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID
-  - Description: Proposes an amendment to the value of dwc:scientificName using the dwc:scientificNameID value from the bdq:sourceAuthority.
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_f01fb3f9-2f7e-418b-9f51-adf50f202aea)
-
-- <a id="bdqtest_33c45ae1-e2db-462a-a59e-7169bb01c5d6"></a>AMENDMENT_SEX_STANDARDIZED
-  - Description: Proposes an amendment to the value of dwc:sex using the bdq:sourceAuthority.
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#AMENDMENT_SEX_STANDARDIZED)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_33c45ae1-e2db-462a-a59e-7169bb01c5d6)
-
-- <a id="bdqtest_e39098df-ef46-464c-9aef-bcdeee2a88cb"></a>AMENDMENT_TAXONRANK_STANDARDIZED
-  - Description: Proposes an amendment to the value of dwc:taxonRank using the bdq:sourceAuthority.
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#AMENDMENT_TAXONRANK_STANDARDIZED)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_e39098df-ef46-464c-9aef-bcdeee2a88cb)
-
-- <a id="bdqtest_b3471c65-b53e-453b-8282-abfa27bf1805"></a>AMENDMENT_TYPESTATUS_STANDARDIZED
-  - Description: Proposes an amendment to the value of dwc:typeStatus using the bdq:sourceAuthority.
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#AMENDMENT_TYPESTATUS_STANDARDIZED)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_b3471c65-b53e-453b-8282-abfa27bf1805)
-
-- <a id="bdqtest_fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1"></a>ISSUE_ANNOTATION_NOTEMPTY
-  - Description: Are there any annotations associated with the record?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#ISSUE_ANNOTATION_NOTEMPTY)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1)
-
-- <a id="bdqtest_256e51b3-1e08-4349-bb7e-5186631c3f8e"></a>ISSUE_COORDINATES_CENTEROFCOUNTRY
-  - Description: Are the supplied geographic coordinates within a defined buffer of the center of the country?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#ISSUE_COORDINATES_CENTEROFCOUNTRY)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_256e51b3-1e08-4349-bb7e-5186631c3f8e)
-
-- <a id="bdqtest_13d5a10e-188e-40fd-a22c-dbaa87b91df2"></a>ISSUE_DATAGENERALIZATIONS_NOTEMPTY
-  - Description: Is there a value in dwc:dataGeneralizations?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#ISSUE_DATAGENERALIZATIONS_NOTEMPTY)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_13d5a10e-188e-40fd-a22c-dbaa87b91df2)
-
-- <a id="bdqtest_acc8dff2-d8d1-483a-946d-65a02a452700"></a>ISSUE_ESTABLISHMENTMEANS_NOTEMPTY
-  - Description: Is there a value in dwc:establishmentMeans?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#ISSUE_ESTABLISHMENTMEANS_NOTEMPTY)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_acc8dff2-d8d1-483a-946d-65a02a452700)
-
-- <a id="bdqtest_03049fe5-a575-404f-b564-ae63f5a1cf8b"></a>MEASURE_AMENDMENTS_PROPOSED
-  - Description: A count of the number of distinct AMENDMENT Tests that have a Response.status="AMENDED" for a given record.
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#MEASURE_AMENDMENTS_PROPOSED)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_03049fe5-a575-404f-b564-ae63f5a1cf8b)
-
-- <a id="bdqtest_56b6c695-adf1-418e-95d2-da04cad7be53"></a>MEASURE_EVENTDATE_DURATIONINSECONDS
-  - Description: What is the duration of dwc:eventDate in seconds?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#MEASURE_EVENTDATE_DURATIONINSECONDS)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_56b6c695-adf1-418e-95d2-da04cad7be53)
-
-- <a id="bdqtest_45fb49eb-4a1b-4b49-876f-15d5034dfc73"></a>MEASURE_VALIDATIONTESTS_COMPLIANT
-  - Description: Measures the number of distinct VALIDATION Tests that have a Response.status="COMPLIANT" for a given record.
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#MEASURE_VALIDATIONTESTS_COMPLIANT)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_45fb49eb-4a1b-4b49-876f-15d5034dfc73)
-
-- <a id="bdqtest_453844ae-9df4-439f-8e24-c52498eca84a"></a>MEASURE_VALIDATIONTESTS_NOTCOMPLIANT
-  - Description: A count of the number of distinct VALIDATION Tests that have a Response.status="NOT_COMPLIANT" for a given record.
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#MEASURE_VALIDATIONTESTS_NOTCOMPLIANT)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_453844ae-9df4-439f-8e24-c52498eca84a)
-
-- <a id="bdqtest_49a94636-a562-4e6b-803c-665c80628a3d"></a>MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET
-  - Description: The number of distinct VALIDATION Tests that have a Response.status="EXTERNAL_PREREQUISITES_NOT_MET" or "INTERNAL_PREREQUISITES_NOT_MET" for a given record.
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_49a94636-a562-4e6b-803c-665c80628a3d)
-
-- <a id="bdqtest_ac2b7648-d5f9-48ca-9b07-8ad5879a2536"></a>VALIDATION_BASISOFRECORD_NOTEMPTY
-  - Description: Is there a value in dwc:basisOfRecord?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_BASISOFRECORD_NOTEMPTY)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_ac2b7648-d5f9-48ca-9b07-8ad5879a2536)
-
-- <a id="bdqtest_42408a00-bf71-4892-a399-4325e2bc1fb8"></a>VALIDATION_BASISOFRECORD_STANDARD
-  - Description: Does the value of dwc:basisOfRecord occur in the bdq:sourceAuthority?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_BASISOFRECORD_STANDARD)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_42408a00-bf71-4892-a399-4325e2bc1fb8)
-
-- <a id="bdqtest_2750c040-1d4a-4149-99fe-0512785f2d5f"></a>VALIDATION_CLASSIFICATION_CONSISTENT
-  - Description: Is the combination of higher classification taxonomic terms consistent using bdq:sourceAuthority?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_CLASSIFICATION_CONSISTENT)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_2750c040-1d4a-4149-99fe-0512785f2d5f)
-
-- <a id="bdqtest_2cd6884e-3d14-4476-94f7-1191cfff309b"></a>VALIDATION_CLASS_FOUND
-  - Description: Does the value of dwc:class occur at rank of Class in bdq:sourceAuthority?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_CLASS_FOUND)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_2cd6884e-3d14-4476-94f7-1191cfff309b)
-
-- <a id="bdqtest_adb27d29-9f0d-4d52-b760-a77ba57a69c9"></a>VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT
-  - Description: Do the geographic coordinates fall on or within the boundaries of the territory given in dwc:countryCode or its Exclusive Economic Zone?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_adb27d29-9f0d-4d52-b760-a77ba57a69c9)
-
-- <a id="bdqtest_f18a470b-3fe1-4aae-9c65-a6d3db6b550c"></a>VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT
-  - Description: Do the geographic coordinates fall on or within the boundary from the bdq:sourceAuthority for the given dwc:stateProvince or within the distance given by bdq:spatialBufferInMeters outside that boundary?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_f18a470b-3fe1-4aae-9c65-a6d3db6b550c)
-
-- <a id="bdqtest_b9c184ce-a859-410c-9d12-71a338200380"></a>VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT
-  - Description: Does the marine/non-marine biome of a taxon from the bdq:sourceAuthority match the biome at the location given by the coordinates?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_b9c184ce-a859-410c-9d12-71a338200380)
-
-- <a id="bdqtest_1bf0e210-6792-4128-b8cc-ab6828aa4871"></a>VALIDATION_COORDINATES_NOTZERO
-  - Description: Are the values of either dwc:decimalLatitude or dwc:decimalLongitude numbers that are not equal to 0?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_COORDINATES_NOTZERO)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_1bf0e210-6792-4128-b8cc-ab6828aa4871)
-
-- <a id="bdqtest_c6adf2ea-3051-4498-97f4-4b2f8a105f57"></a>VALIDATION_COORDINATEUNCERTAINTY_INRANGE
-  - Description: Is the value of dwc:coordinateUncertaintyInMeters a number between 1 and 20,037,509?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_COORDINATEUNCERTAINTY_INRANGE)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_c6adf2ea-3051-4498-97f4-4b2f8a105f57)
-
-- <a id="bdqtest_853b79a2-b314-44a2-ae46-34a1e7ed85e4"></a>VALIDATION_COUNTRYCODE_NOTEMPTY
-  - Description: Is there a value in dwc:countryCode?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_COUNTRYCODE_NOTEMPTY)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_853b79a2-b314-44a2-ae46-34a1e7ed85e4)
-
-- <a id="bdqtest_0493bcfb-652e-4d17-815b-b0cce0742fbe"></a>VALIDATION_COUNTRYCODE_STANDARD
-  - Description: Is the value of dwc:countryCode a valid ISO 3166-1-alpha-2 country code?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_COUNTRYCODE_STANDARD)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_0493bcfb-652e-4d17-815b-b0cce0742fbe)
-
-- <a id="bdqtest_b23110e7-1be7-444a-a677-cdee0cf4330c"></a>VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT
-  - Description: Does the ISO country code, determined from the value of dwc:country, equal the value of dwc:countryCode?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_b23110e7-1be7-444a-a677-cdee0cf4330c)
-
-- <a id="bdqtest_d257eb98-27cb-48e5-8d3c-ab9fca4edd11"></a>VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS
-  - Description: Is the combination of the values of the terms dwc:country, dwc:stateProvince unique in the bdq:sourceAuthority?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_d257eb98-27cb-48e5-8d3c-ab9fca4edd11)
-
-- <a id="bdqtest_69b2efdc-6269-45a4-aecb-4cb99c2ae134"></a>VALIDATION_COUNTRY_FOUND
-  - Description: Does the value of dwc:country occur in the bdq:sourceAuthority?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_COUNTRY_FOUND)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_69b2efdc-6269-45a4-aecb-4cb99c2ae134)
-
-- <a id="bdqtest_6ce2b2b4-6afe-4d13-82a0-390d31ade01c"></a>VALIDATION_COUNTRY_NOTEMPTY
-  - Description: Is there a value in dwc:country?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_COUNTRY_NOTEMPTY)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_6ce2b2b4-6afe-4d13-82a0-390d31ade01c)
-
-- <a id="bdqtest_dc8aae4b-134f-4d75-8a71-c4186239178e"></a>VALIDATION_DATEIDENTIFIED_INRANGE
-  - Description: Is the value of dwc:dateIdentified within Parameter ranges and either overlap or is later than dwc:eventDate?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_DATEIDENTIFIED_INRANGE)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_dc8aae4b-134f-4d75-8a71-c4186239178e)
-
-- <a id="bdqtest_66269bdd-9271-4e76-b25c-7ab81eebe1d8"></a>VALIDATION_DATEIDENTIFIED_STANDARD
-  - Description: Is the value of dwc:dateIdentified a valid ISO date?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_DATEIDENTIFIED_STANDARD)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_66269bdd-9271-4e76-b25c-7ab81eebe1d8)
-
-- <a id="bdqtest_8d787cb5-73e2-4c39-9cd1-67c7361dc02e"></a>VALIDATION_DAY_INRANGE
-  - Description: Is the value of dwc:day interpretable as a valid integer between 1 and 28 inclusive or 29, 30 or 31 given the relative month and year?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_DAY_INRANGE)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_8d787cb5-73e2-4c39-9cd1-67c7361dc02e)
-
-- <a id="bdqtest_47ff73ba-0028-4f79-9ce1-ee7008d66498"></a>VALIDATION_DAY_STANDARD
-  - Description: Is the value of dwc:day an integer between 1 and 31 inclusive?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_DAY_STANDARD)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_47ff73ba-0028-4f79-9ce1-ee7008d66498)
-
-- <a id="bdqtest_374b091a-fc90-4791-91e5-c1557c649169"></a>VALIDATION_DCTYPE_NOTEMPTY
-  - Description: Is there a value in dc:type?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_DCTYPE_NOTEMPTY)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_374b091a-fc90-4791-91e5-c1557c649169)
-
-- <a id="bdqtest_cdaabb0d-a863-49d0-bc0f-738d771acba5"></a>VALIDATION_DCTYPE_STANDARD
-  - Description: Does the value in dc:type occur as a value in the DCMI type vocabulary?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_DCTYPE_STANDARD)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_cdaabb0d-a863-49d0-bc0f-738d771acba5)
-
-- <a id="bdqtest_b6ecda2a-ce36-437a-b515-3ae94948fe83"></a>VALIDATION_DECIMALLATITUDE_INRANGE
-  - Description: Is the value of dwc:decimalLatitude a number between -90 and 90 inclusive?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_DECIMALLATITUDE_INRANGE)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_b6ecda2a-ce36-437a-b515-3ae94948fe83)
-
-- <a id="bdqtest_7d2485d5-1ba7-4f25-90cb-f4480ff1a275"></a>VALIDATION_DECIMALLATITUDE_NOTEMPTY
-  - Description: Is there a value in dwc:decimalLatitude?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_DECIMALLATITUDE_NOTEMPTY)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_7d2485d5-1ba7-4f25-90cb-f4480ff1a275)
-
-- <a id="bdqtest_0949110d-c06b-450e-9649-7c1374d940d1"></a>VALIDATION_DECIMALLONGITUDE_INRANGE
-  - Description: Is the value of dwc:decimalLongitude a number between -180 and 180 inclusive?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_DECIMALLONGITUDE_INRANGE)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_0949110d-c06b-450e-9649-7c1374d940d1)
-
-- <a id="bdqtest_9beb9442-d942-4f42-8b6a-fcea01ee086a"></a>VALIDATION_DECIMALLONGITUDE_NOTEMPTY
-  - Description: Is there a value in dwc:decimalLongitude?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_DECIMALLONGITUDE_NOTEMPTY)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_9beb9442-d942-4f42-8b6a-fcea01ee086a)
-
-- <a id="bdqtest_060e7734-607d-4737-8b2c-bfa17788bf1a"></a>VALIDATION_DEGREEOFESTABLISHMENT_STANDARD
-  - Description: Does the value of dwc:degreeOfEstablishment occur in the bdq:sourceAuthority?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_DEGREEOFESTABLISHMENT_STANDARD)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_060e7734-607d-4737-8b2c-bfa17788bf1a)
-
-- <a id="bdqtest_9a39d88c-7eee-46df-b32a-c109f9f81fb8"></a>VALIDATION_ENDDAYOFYEAR_INRANGE
-  - Description: Is the value of dwc:endDayOfYear an integer between 1 and 365 inclusive, or 366 if a leap year?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_ENDDAYOFYEAR_INRANGE)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_9a39d88c-7eee-46df-b32a-c109f9f81fb8)
-
-- <a id="bdqtest_4eb48fdf-7299-4d63-9d08-246902e2857f"></a>VALIDATION_ESTABLISHMENTMEANS_STANDARD
-  - Description: Does the value of dwc:establishmentMeans occur in the bdq:sourceAuthority?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_ESTABLISHMENTMEANS_STANDARD)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_4eb48fdf-7299-4d63-9d08-246902e2857f)
-
-- <a id="bdqtest_3cff4dc4-72e9-4abe-9bf3-8a30f1618432"></a>VALIDATION_EVENTDATE_INRANGE
-  - Description: Is the value of dwc:eventDate entirely with the Parameter Range?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_EVENTDATE_INRANGE)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_3cff4dc4-72e9-4abe-9bf3-8a30f1618432)
-
-- <a id="bdqtest_f51e15a6-a67d-4729-9c28-3766299d2985"></a>VALIDATION_EVENTDATE_NOTEMPTY
-  - Description: Is there a value in dwc:eventDate?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_EVENTDATE_NOTEMPTY)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_f51e15a6-a67d-4729-9c28-3766299d2985)
-
-- <a id="bdqtest_4f2bf8fd-fc5c-493f-a44c-e7b16153c803"></a>VALIDATION_EVENTDATE_STANDARD
-  - Description: Is the value of dwc:eventDate a valid ISO date?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_EVENTDATE_STANDARD)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_4f2bf8fd-fc5c-493f-a44c-e7b16153c803)
-
-- <a id="bdqtest_41267642-60ff-4116-90eb-499fee2cd83f"></a>VALIDATION_EVENTTEMPORAL_NOTEMPTY
-  - Description: Is there a value in any of the terms dwc:eventDate, dwc:year, dwc:month, dwc:day, dwc:startDayOfYear, dwc:endDayOfYear, dwc:verbatimEventDate?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_EVENTTEMPORAL_NOTEMPTY)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_41267642-60ff-4116-90eb-499fee2cd83f)
-
-- <a id="bdqtest_5618f083-d55a-4ac2-92b5-b9fb227b832f"></a>VALIDATION_EVENT_CONSISTENT
-  - Description: Are the values in dwc:eventDate consistent with the values in dwc:year, dwc:month, dwc:day, dwc:startDayOfYear and dwc:endDayOfYear?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_EVENT_CONSISTENT)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_5618f083-d55a-4ac2-92b5-b9fb227b832f)
-
-- <a id="bdqtest_3667556d-d8f5-454c-922b-af8af38f613c"></a>VALIDATION_FAMILY_FOUND
-  - Description: Does the value of dwc:family occur at rank of Family in the bdq:sourceAuthority?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_FAMILY_FOUND)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_3667556d-d8f5-454c-922b-af8af38f613c)
-
-- <a id="bdqtest_f2ce7d55-5b1d-426a-b00e-6d4efe3058ec"></a>VALIDATION_GENUS_FOUND
-  - Description: Does the value of dwc:genus occur at the rank of Genus in the bdq:sourceAuthority?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_GENUS_FOUND)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_f2ce7d55-5b1d-426a-b00e-6d4efe3058ec)
-
-- <a id="bdqtest_239ec40e-a729-4a8e-ba69-e0bf03ac1c44"></a>VALIDATION_GEODETICDATUM_NOTEMPTY
-  - Description: Is there a value in dwc:geodeticDatum?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_GEODETICDATUM_NOTEMPTY)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_239ec40e-a729-4a8e-ba69-e0bf03ac1c44)
-
-- <a id="bdqtest_7e0c0418-fe16-4a39-98bd-80e19d95b9d1"></a>VALIDATION_GEODETICDATUM_STANDARD
-  - Description: Does the value of dwc:geodeticDatum occur as a valid geographic CRS, geodetic Datum or ellipsoid in bdq:sourceAuthority?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_GEODETICDATUM_STANDARD)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_7e0c0418-fe16-4a39-98bd-80e19d95b9d1)
-
-- <a id="bdqtest_125b5493-052d-4a0d-a3e1-ed5bf792689e"></a>VALIDATION_KINGDOM_FOUND
-  - Description: Does the value of dwc:kingdom occur at rank of Kingdom in the bdq:sourceAuthority?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_KINGDOM_FOUND)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_125b5493-052d-4a0d-a3e1-ed5bf792689e)
-
-- <a id="bdqtest_36ed36c9-b1a7-40b2-b5e2-0d012e772098"></a>VALIDATION_KINGDOM_NOTEMPTY
-  - Description: Is there a value in dwc:kingdom?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_KINGDOM_NOTEMPTY)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_36ed36c9-b1a7-40b2-b5e2-0d012e772098)
-
-- <a id="bdqtest_15f78619-811a-4c6f-997a-a4c7888ad849"></a>VALIDATION_LICENSE_NOTEMPTY
-  - Description: Is there a value in dcterms:license?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_LICENSE_NOTEMPTY)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_15f78619-811a-4c6f-997a-a4c7888ad849)
-
-- <a id="bdqtest_3136236e-04b6-49ea-8b34-a65f25e3aba1"></a>VALIDATION_LICENSE_STANDARD
-  - Description: Does the value of dcterms:license occur in bdq:sourceAuthority?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_LICENSE_STANDARD)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_3136236e-04b6-49ea-8b34-a65f25e3aba1)
-
-- <a id="bdqtest_58486cb6-1114-4a8a-ba1e-bd89cfe887e9"></a>VALIDATION_LOCATION_NOTEMPTY
-  - Description: Is there a value in any of the Darwin Core spatial terms that could specify a location?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_LOCATION_NOTEMPTY)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_58486cb6-1114-4a8a-ba1e-bd89cfe887e9)
-
-- <a id="bdqtest_3f1db29a-bfa5-40db-9fd1-fde020d81939"></a>VALIDATION_MAXDEPTH_INRANGE
-  - Description: Is the value of dwc:maximumDepthInMeters within the Parameter range?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_MAXDEPTH_INRANGE)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_3f1db29a-bfa5-40db-9fd1-fde020d81939)
-
-- <a id="bdqtest_c971fe3f-84c1-4636-9f44-b1ec31fd63c7"></a>VALIDATION_MAXELEVATION_INRANGE
-  - Description: Is the value of dwc:maximumElevationInMeters of a single record within a valid range?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_MAXELEVATION_INRANGE)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_c971fe3f-84c1-4636-9f44-b1ec31fd63c7)
-
-- <a id="bdqtest_04b2c8f3-c71b-4e95-8e43-f70374c5fb92"></a>VALIDATION_MINDEPTH_INRANGE
-  - Description: Is the value of dwc:minimumDepthInMeters within the Parameter range?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_MINDEPTH_INRANGE)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_04b2c8f3-c71b-4e95-8e43-f70374c5fb92)
-
-- <a id="bdqtest_8f1e6e58-544b-4365-a569-fb781341644e"></a>VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH
-  - Description: Is the value of dwc:minimumDepthInMeters a number that is less than or equal to the value of dwc:maximumDepthInMeters?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_8f1e6e58-544b-4365-a569-fb781341644e)
-
-- <a id="bdqtest_0bb8297d-8f8a-42d2-80c1-558f29efe798"></a>VALIDATION_MINELEVATION_INRANGE
-  - Description: Is the value of dwc:minimumElevationInMeters within the Parameter range?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_MINELEVATION_INRANGE)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_0bb8297d-8f8a-42d2-80c1-558f29efe798)
-
-- <a id="bdqtest_d708526b-6561-438e-aa1a-82cd80b06396"></a>VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION
-  - Description: Is the value of dwc:minimumElevationInMeters a number less than or equal to the value of dwc:maximumElevationInMeters?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_d708526b-6561-438e-aa1a-82cd80b06396)
-
-- <a id="bdqtest_01c6dafa-0886-4b7e-9881-2c3018c98bdc"></a>VALIDATION_MONTH_STANDARD
-  - Description: Is the value of dwc:month interpretable as an integer between 1 and 12 inclusive?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_MONTH_STANDARD)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_01c6dafa-0886-4b7e-9881-2c3018c98bdc)
-
-- <a id="bdqtest_ff59f77d-71e9-4eb1-aac9-8bd05c50ff70"></a>VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY
-  - Description: Is there a value in dwc:namePublishedInYear?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_ff59f77d-71e9-4eb1-aac9-8bd05c50ff70)
-
-- <a id="bdqtest_c486546c-e6e5-48a7-b286-eba7f5ca56c4"></a>VALIDATION_OCCURRENCEID_NOTEMPTY
-  - Description: Is there a value in dwc:occurrenceID?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_OCCURRENCEID_NOTEMPTY)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_c486546c-e6e5-48a7-b286-eba7f5ca56c4)
-
-- <a id="bdqtest_eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf"></a>VALIDATION_OCCURRENCESTATUS_NOTEMPTY
-  - Description: Is there a value in dwc:occurrenceStatus?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_OCCURRENCESTATUS_NOTEMPTY)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf)
-
-- <a id="bdqtest_7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47"></a>VALIDATION_OCCURRENCESTATUS_STANDARD
-  - Description: Does the value of dwc:occurrenceStatus occur in the bdq:sourceAuthority?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_OCCURRENCESTATUS_STANDARD)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47)
-
-- <a id="bdqtest_81cc974d-43cc-4c0f-a5e0-afa23b455aa3"></a>VALIDATION_ORDER_FOUND
-  - Description: Does the value of dwc:order occur at rank of Order in bdq:sourceAuthority?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_ORDER_FOUND)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_81cc974d-43cc-4c0f-a5e0-afa23b455aa3)
-
-- <a id="bdqtest_5424e933-bee7-4125-839e-d8743ea69f93"></a>VALIDATION_PATHWAY_STANDARD
-  - Description: Does the value of dwc:pathway occur in the bdq:sourceAuthority?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_PATHWAY_STANDARD)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_5424e933-bee7-4125-839e-d8743ea69f93)
-
-- <a id="bdqtest_eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f"></a>VALIDATION_PHYLUM_FOUND
-  - Description: Does the value of dwc:phylum occur at rank of Phylum in the bdq:sourceAuthority?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_PHYLUM_FOUND)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f)
-
-- <a id="bdqtest_17f03f1f-f74d-40c0-8071-2927cfc9487b"></a>VALIDATION_POLYNOMIAL_CONSISTENT
-  - Description: Is the polynomial represented in dwc:scientificName consistent with the equivalent values in dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_POLYNOMIAL_CONSISTENT)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_17f03f1f-f74d-40c0-8071-2927cfc9487b)
-
-- <a id="bdqtest_49f1d386-5bed-43ae-bd43-deabf7df64fc"></a>VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY
-  - Description: Is there a value in dwc:scientificNameAuthorship?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_49f1d386-5bed-43ae-bd43-deabf7df64fc)
-
-- <a id="bdqtest_6eeac3ed-f691-457f-a42e-eaa9c8a71ce8"></a>VALIDATION_SCIENTIFICNAMEID_COMPLETE
-  - Description: Does the value of dwc:scientificNameID contain a complete identifier?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_SCIENTIFICNAMEID_COMPLETE)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_6eeac3ed-f691-457f-a42e-eaa9c8a71ce8)
-
-- <a id="bdqtest_401bf207-9a55-4dff-88a5-abcd58ad97fa"></a>VALIDATION_SCIENTIFICNAMEID_NOTEMPTY
-  - Description: Is there a value in dwc:scientificNameID?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_SCIENTIFICNAMEID_NOTEMPTY)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_401bf207-9a55-4dff-88a5-abcd58ad97fa)
-
-- <a id="bdqtest_3f335517-f442-4b98-b149-1e87ff16de45"></a>VALIDATION_SCIENTIFICNAME_FOUND
-  - Description: Is there a match of the contents of dwc:scientificName with the bdq:sourceAuthority?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_SCIENTIFICNAME_FOUND)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_3f335517-f442-4b98-b149-1e87ff16de45)
-
-- <a id="bdqtest_7c4b9498-a8d9-4ebb-85f1-9f200c788595"></a>VALIDATION_SCIENTIFICNAME_NOTEMPTY
-  - Description: Is there a value in dwc:scientificName?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_SCIENTIFICNAME_NOTEMPTY)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_7c4b9498-a8d9-4ebb-85f1-9f200c788595)
-
-- <a id="bdqtest_88d8598b-3318-483d-9475-a5acf9887404"></a>VALIDATION_SEX_STANDARD
-  - Description: Does the value of dwc:sex occur in bdq:sourceAuthority?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_SEX_STANDARD)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_88d8598b-3318-483d-9475-a5acf9887404)
-
-- <a id="bdqtest_85803c7e-2a5a-42e1-b8d3-299a44cafc46"></a>VALIDATION_STARTDAYOFYEAR_INRANGE
-  - Description: Is the value of dwc:startDayOfYear an integer between 1 and 365 inclusive, or 366 if a leap year?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_STARTDAYOFYEAR_INRANGE)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_85803c7e-2a5a-42e1-b8d3-299a44cafc46)
-
-- <a id="bdqtest_4daa7986-d9b0-4dd5-ad17-2d7a771ea71a"></a>VALIDATION_STATEPROVINCE_FOUND
-  - Description: Does the value of dwc:stateProvince occur in the bdq:sourceAuthority?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_STATEPROVINCE_FOUND)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_4daa7986-d9b0-4dd5-ad17-2d7a771ea71a)
-
-- <a id="bdqtest_14da5b87-8304-4b2b-911d-117e3c29e890"></a>VALIDATION_TAXONRANK_NOTEMPTY
-  - Description: Is there a value in dwc:taxonRank?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_TAXONRANK_NOTEMPTY)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_14da5b87-8304-4b2b-911d-117e3c29e890)
-
-- <a id="bdqtest_7bdb13a4-8a51-4ee5-be7f-20693fdb183e"></a>VALIDATION_TAXONRANK_STANDARD
-  - Description: Does the value of dwc:taxonRank occur in the bdq:sourceAuthority?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_TAXONRANK_STANDARD)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_7bdb13a4-8a51-4ee5-be7f-20693fdb183e)
-
-- <a id="bdqtest_06851339-843f-4a43-8422-4e61b9a00e75"></a>VALIDATION_TAXON_NOTEMPTY
-  - Description: Is there a value in any of the terms needed to determine that the taxon exists?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_TAXON_NOTEMPTY)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_06851339-843f-4a43-8422-4e61b9a00e75)
-
-- <a id="bdqtest_4c09f127-737b-4686-82a0-7c8e30841590"></a>VALIDATION_TAXON_UNAMBIGUOUS
-  - Description: Can the taxon be unambiguously resolved from bdq:sourceAuthority using the available taxon terms?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_TAXON_UNAMBIGUOUS)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_4c09f127-737b-4686-82a0-7c8e30841590)
-
-- <a id="bdqtest_4833a522-12eb-4fe0-b4cf-7f7a337a6048"></a>VALIDATION_TYPESTATUS_STANDARD
-  - Description: Does the value of dwc:typeStatus occur in bdq:sourceAuthority?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_TYPESTATUS_STANDARD)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_4833a522-12eb-4fe0-b4cf-7f7a337a6048)
-
-- <a id="bdqtest_ad0c8855-de69-4843-a80c-a5387d20fbc8"></a>VALIDATION_YEAR_INRANGE
-  - Description: Is the value of dwc:year within the Parameter range?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_YEAR_INRANGE)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_ad0c8855-de69-4843-a80c-a5387d20fbc8)
-
-- <a id="bdqtest_c09ecbf9-34e3-4f3e-b74a-8796af15e59f"></a>VALIDATION_YEAR_NOTEMPTY
-  - Description: Is there a value in dwc:year?
-  - View in Quick Reference Guide: [Link](../terms/bdqtest/index.md#VALIDATION_YEAR_NOTEMPTY)
-  - View in Term-List: [Link](../list/bdqtest/index.md#bdqtest_c09ecbf9-34e3-4f3e-b74a-8796af15e59f)
-
-
+-->
 ## Acronyms
 
 A list of Acronyms can be found in the [Acronyms](../../index.md#5-acronyms) section of the Biodiversity Data Quality (BDQ) landing page.
@@ -1139,7 +470,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. BDQ Tests and Assertions. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqtest/terms/2025-04-11>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. BDQ Tests and Assertions. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqtest/terms/2025-05-10>
 
 **Biodiversity Information Standards (TDWG)**
 

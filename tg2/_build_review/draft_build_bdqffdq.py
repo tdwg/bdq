@@ -149,127 +149,129 @@ header = header.replace('{term_key}', definitionTable)
 # ---------------
 # Load rdf, format for landing page
 # ---------------
+
 text = ""
-
-graph = rdflib.Graph()
-graph.parse(inputTermsOwlFilename, format="ttl")
-
-text = "\n"
-text = text + "- [Classes](#41-Class-terms)\n"
-text = text + "- [Object Properties](#42-ObjectProperty-terms)\n"
-text = text + "- [Data Properties](#43-DataProperty-terms)\n"
-text = text + "- [Named Individuals](#44-NamedIndividual-terms)\n"
-text = text + "\n"
-
-text = text + "#### 3.2.1 Alphabetical Index of classes\n\n"
-sparql = prefixes + "SELECT ?subject WHERE {  ?subject a owl:Class . } "
-queryResult = graph.query(sparql)
-for r in queryResult : 
-	term = r.subject
-	term = term.replace("https://rs.tdwg.org/bdqffdq/terms/","")
-	text = text + "[{}](#{})\n".format(term,term)
-
-text = text + "#### 3.2.2 Alphabetical Index of object properties\n\n"
-sparql = prefixes + "SELECT ?subject WHERE {  ?subject a owl:ObjectProperty . } "
-queryResult = graph.query(sparql)
-for r in queryResult : 
-	term = r.subject
-	term = term.replace("https://rs.tdwg.org/bdqffdq/terms/","")
-	text = text + "[{}](#{})\n".format(term,term)
-
-text = text + "#### 3.2.3 Alphabetical Index of data properties\n\n"
-sparql = prefixes + "SELECT ?subject WHERE {  ?subject a owl:DatatypeProperty . } "
-queryResult = graph.query(sparql)
-for r in queryResult : 
-	term = r.subject
-	term = term.replace("https://rs.tdwg.org/bdqffdq/terms/","")
-	text = text + "[{}](#{})\n".format(term,term)
-
-text = text + "#### 3.2.4 Alphabetical Index of named individuals\n\n"
-sparql = prefixes + "SELECT ?subject WHERE {  ?subject a owl:NamedIndividual . } "
-queryResult = graph.query(sparql)
-for r in queryResult : 
-	term = r.subject
-	term = term.replace("https://rs.tdwg.org/bdqffdq/terms/","")
-	text = text + "[{}](#{})\n".format(term,term)
-
-text = text + "\n## 4 Vocabulary\n"
-text = text + "\n### 4.1 Class terms\n"
-sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment (GROUP_CONCAT(?parent; SEPARATOR='; ') AS ?parents)  WHERE {  ?subject a owl:Class . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . OPTIONAL { ?subject rdfs:subClassOf ?parent } . ?subject rdfs:comment ?comment } GROUP BY ?subject ?prefLabel ?definition ?comment ORDER BY ?subject"
-queryResult = graph.query(sparql)
-for r in queryResult : 
-	entity = r.subject
-	entity = entity.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:");
-	term = entity.replace("bdqffdq:","");
-	text = text + "#### {}\n\n".format(term)
-	text = text + "- Name: [{}]({})\n".format(entity,r.subject)
-	text = text + "- Preferred Label: {}\n".format(r.prefLabel)
-	text = text + "- Definition: {}\n".format(r.definition)
-	if (r.parents) :
-		text = text + "- SubClass Of: {}\n".format(r.parents.replace("https://rs.tdwg.org/bdqffdq/terms/",""))
-	text = text + "- Comments: {}\n".format(r.comment.replace("\n\n","\n").replace("\n","  \n"))
-	text = text + "- View in: [term-list](../list/bdqffdq/index.md#{})\n".format(term)
-	text = text + "\n********************\n\n"
-
-text = text + "### 4.2 ObjectProperty terms\n"
-sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment ?range ?restrictedRange ?restriction  (GROUP_CONCAT(?parent; SEPARATOR='; ') AS ?parents)  WHERE {  ?subject a owl:ObjectProperty . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . OPTIONAL { ?subject rdfs:subPropertyOf ?parent } . OPTIONAL { ?subject rdfs:range ?range . optional { ?range a owl:Restriction . ?range owl:onProperty ?restrictedRange . ?range  ?restriction ?x . FILTER ( ?restriction != owl:onProperty && ?restriction != rdf:type  ) }  } . ?subject rdfs:comment ?comment } GROUP BY ?subject ?prefLabel ?definition ?comment ORDER BY ?subject"
-queryResult = graph.query(sparql)
-for r in queryResult : 
-	entity = r.subject
-	entity = entity.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:");
-	term = entity.replace("bdqffdq:","");
-	text = text + "#### {}\n\n".format(term)
-	text = text + "- Name: {}\n".format(entity)
-	text = text + "- Preferred Label: {}\n".format(r.prefLabel)
-	text = text + "- Definition: {}\n".format(r.definition)
-	if (r.parents) :
-		text = text + "- SubClass Of: {}\n".format(r.parents.replace("https://rs.tdwg.org/bdqffdq/terms/",""))
-	if (r.range) :
-		if (r.restriction) :
-			text = text + "- Range [ {} {} ]\n".format(r.restriction.replace("http://www.w3.org/2002/07/owl#","owl:"), r.restrictedRange.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:"))
-		else :
-			text = text + "- Range {}\n".format(r.range.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:"))
-	text = text + "- Comments: {}\n".format(r.comment.replace("\n\n","\n").replace("\n","  \n"))
-	text = text + "- View in: [term-list](../list/bdqffdq/index.md#{})\n".format(term)
-	text = text + "\n********************\n\n"
-
-
-text = text + "### 4.3 DataProperty terms\n"
-sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment ?range WHERE { ?subject a owl:DatatypeProperty . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . ?subject rdfs:comment ?comment . OPTIONAL { ?subject rdfs:range ?range }  }  ORDER BY ?subject"
-queryResult = graph.query(sparql)
-for r in queryResult : 
-	entity = r.subject
-	entity = entity.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:")
-	term = entity.replace("bdqffdq:","")
-	text = text + "#### {}\n\n".format(term)
-	text = text + "- Name: {}\n".format(entity)
-	text = text + "- Preferred Label: {}\n".format(r.prefLabel)
-	text = text + "- Definition: {}\n".format(r.definition)
-	if (r.range) :
-		text = text + "- Range {}\n".format(r.range.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:").replace("http://www.w3.org/2001/XMLSchema#","xsd:"))
-	text = text + "- Comments: {}\n".format(r.comment.replace("\n\n","\n").replace("\n","  \n"))
-	text = text + "- View in: [term-list](../list/bdqffdq/index.md#{})\n".format(term)
-	text = text + "\n********************\n\n"
-
-text = text + "### 4.4 NamedIndividual terms\n"
-sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment ?type ?differentFrom WHERE {  ?subject a owl:NamedIndividual . ?subject a ?type . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . ?subject rdfs:comment ?comment . FILTER ( ?type != owl:NamedIndividual) . OPTIONAL { ?subject owl:differentFrom ?differentFrom }  }  ORDER BY ?type ?subject"
-queryResult = graph.query(sparql)
-for r in queryResult : 
-	entity = r.subject
-	entity = entity.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:");
-	term = entity.replace("bdqffdq:","");
-	text = text + "#### {}\n\n".format(term)
-	text = text + "- Name: {}\n".format(entity)
-	rtype = r.type.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:");
-	text = text + "- Type: {}\n".format(rtype)
-	text = text + "- Preferred Label: {}\n".format(r.prefLabel)
-	if (r.differentFrom) :
-		different = r.differentFrom.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:");
-		text = text + "- DifferentFrom: {}\n".format(different)
-	text = text + "- Definition: {}\n".format(r.definition)
-	text = text + "- Comments: {}\n".format(r.comment.replace("\n\n","\n").replace("\n","  \n"))
-	text = text + "- View in: [term-list](../list/bdqffdq/index.md#{})\n".format(term)
-	text = text + "\n********************\n\n"
+# Terms listed here are redundant with the term list document. Omitting here.
+# 
+# graph = rdflib.Graph()
+# graph.parse(inputTermsOwlFilename, format="ttl")
+# 
+# text = "\n"
+# text = text + "- [Classes](#41-Class-terms)\n"
+# text = text + "- [Object Properties](#42-ObjectProperty-terms)\n"
+# text = text + "- [Data Properties](#43-DataProperty-terms)\n"
+# text = text + "- [Named Individuals](#44-NamedIndividual-terms)\n"
+# text = text + "\n"
+# 
+# text = text + "#### 3.2.1 Alphabetical Index of classes\n\n"
+# sparql = prefixes + "SELECT ?subject WHERE {  ?subject a owl:Class . } "
+# queryResult = graph.query(sparql)
+# for r in queryResult : 
+# 	term = r.subject
+# 	term = term.replace("https://rs.tdwg.org/bdqffdq/terms/","")
+# 	text = text + "[{}](#{})\n".format(term,term)
+# 
+# text = text + "#### 3.2.2 Alphabetical Index of object properties\n\n"
+# sparql = prefixes + "SELECT ?subject WHERE {  ?subject a owl:ObjectProperty . } "
+# queryResult = graph.query(sparql)
+# for r in queryResult : 
+# 	term = r.subject
+# 	term = term.replace("https://rs.tdwg.org/bdqffdq/terms/","")
+# 	text = text + "[{}](#{})\n".format(term,term)
+# 
+# text = text + "#### 3.2.3 Alphabetical Index of data properties\n\n"
+# sparql = prefixes + "SELECT ?subject WHERE {  ?subject a owl:DatatypeProperty . } "
+# queryResult = graph.query(sparql)
+# for r in queryResult : 
+# 	term = r.subject
+# 	term = term.replace("https://rs.tdwg.org/bdqffdq/terms/","")
+# 	text = text + "[{}](#{})\n".format(term,term)
+# 
+# text = text + "#### 3.2.4 Alphabetical Index of named individuals\n\n"
+# sparql = prefixes + "SELECT ?subject WHERE {  ?subject a owl:NamedIndividual . } "
+# queryResult = graph.query(sparql)
+# for r in queryResult : 
+# 	term = r.subject
+# 	term = term.replace("https://rs.tdwg.org/bdqffdq/terms/","")
+# 	text = text + "[{}](#{})\n".format(term,term)
+# 
+# text = text + "\n## 4 Vocabulary\n"
+# text = text + "\n### 4.1 Class terms\n"
+# sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment (GROUP_CONCAT(?parent; SEPARATOR='; ') AS ?parents)  WHERE {  ?subject a owl:Class . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . OPTIONAL { ?subject rdfs:subClassOf ?parent } . ?subject rdfs:comment ?comment } GROUP BY ?subject ?prefLabel ?definition ?comment ORDER BY ?subject"
+# queryResult = graph.query(sparql)
+# for r in queryResult : 
+# 	entity = r.subject
+# 	entity = entity.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:");
+# 	term = entity.replace("bdqffdq:","");
+# 	text = text + "#### {}\n\n".format(term)
+# 	text = text + "- Name: [{}]({})\n".format(entity,r.subject)
+# 	text = text + "- Preferred Label: {}\n".format(r.prefLabel)
+# 	text = text + "- Definition: {}\n".format(r.definition)
+# 	if (r.parents) :
+# 		text = text + "- SubClass Of: {}\n".format(r.parents.replace("https://rs.tdwg.org/bdqffdq/terms/",""))
+# 	text = text + "- Comments: {}\n".format(r.comment.replace("\n\n","\n").replace("\n","  \n"))
+# 	text = text + "- View in: [term-list](../list/bdqffdq/index.md#{})\n".format(term)
+# 	text = text + "\n********************\n\n"
+# 
+# text = text + "### 4.2 ObjectProperty terms\n"
+# sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment ?range ?restrictedRange ?restriction  (GROUP_CONCAT(?parent; SEPARATOR='; ') AS ?parents)  WHERE {  ?subject a owl:ObjectProperty . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . OPTIONAL { ?subject rdfs:subPropertyOf ?parent } . OPTIONAL { ?subject rdfs:range ?range . optional { ?range a owl:Restriction . ?range owl:onProperty ?restrictedRange . ?range  ?restriction ?x . FILTER ( ?restriction != owl:onProperty && ?restriction != rdf:type  ) }  } . ?subject rdfs:comment ?comment } GROUP BY ?subject ?prefLabel ?definition ?comment ORDER BY ?subject"
+# queryResult = graph.query(sparql)
+# for r in queryResult : 
+# 	entity = r.subject
+# 	entity = entity.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:");
+# 	term = entity.replace("bdqffdq:","");
+# 	text = text + "#### {}\n\n".format(term)
+# 	text = text + "- Name: {}\n".format(entity)
+# 	text = text + "- Preferred Label: {}\n".format(r.prefLabel)
+# 	text = text + "- Definition: {}\n".format(r.definition)
+# 	if (r.parents) :
+# 		text = text + "- SubClass Of: {}\n".format(r.parents.replace("https://rs.tdwg.org/bdqffdq/terms/",""))
+# 	if (r.range) :
+# 		if (r.restriction) :
+# 			text = text + "- Range [ {} {} ]\n".format(r.restriction.replace("http://www.w3.org/2002/07/owl#","owl:"), r.restrictedRange.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:"))
+# 		else :
+# 			text = text + "- Range {}\n".format(r.range.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:"))
+# 	text = text + "- Comments: {}\n".format(r.comment.replace("\n\n","\n").replace("\n","  \n"))
+# 	text = text + "- View in: [term-list](../list/bdqffdq/index.md#{})\n".format(term)
+# 	text = text + "\n********************\n\n"
+# 
+# 
+# text = text + "### 4.3 DataProperty terms\n"
+# sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment ?range WHERE { ?subject a owl:DatatypeProperty . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . ?subject rdfs:comment ?comment . OPTIONAL { ?subject rdfs:range ?range }  }  ORDER BY ?subject"
+# queryResult = graph.query(sparql)
+# for r in queryResult : 
+# 	entity = r.subject
+# 	entity = entity.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:")
+# 	term = entity.replace("bdqffdq:","")
+# 	text = text + "#### {}\n\n".format(term)
+# 	text = text + "- Name: {}\n".format(entity)
+# 	text = text + "- Preferred Label: {}\n".format(r.prefLabel)
+# 	text = text + "- Definition: {}\n".format(r.definition)
+# 	if (r.range) :
+# 		text = text + "- Range {}\n".format(r.range.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:").replace("http://www.w3.org/2001/XMLSchema#","xsd:"))
+# 	text = text + "- Comments: {}\n".format(r.comment.replace("\n\n","\n").replace("\n","  \n"))
+# 	text = text + "- View in: [term-list](../list/bdqffdq/index.md#{})\n".format(term)
+# 	text = text + "\n********************\n\n"
+# 
+# text = text + "### 4.4 NamedIndividual terms\n"
+# sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment ?type ?differentFrom WHERE {  ?subject a owl:NamedIndividual . ?subject a ?type . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . ?subject rdfs:comment ?comment . FILTER ( ?type != owl:NamedIndividual) . OPTIONAL { ?subject owl:differentFrom ?differentFrom }  }  ORDER BY ?type ?subject"
+# queryResult = graph.query(sparql)
+# for r in queryResult : 
+# 	entity = r.subject
+# 	entity = entity.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:");
+# 	term = entity.replace("bdqffdq:","");
+# 	text = text + "#### {}\n\n".format(term)
+# 	text = text + "- Name: {}\n".format(entity)
+# 	rtype = r.type.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:");
+# 	text = text + "- Type: {}\n".format(rtype)
+# 	text = text + "- Preferred Label: {}\n".format(r.prefLabel)
+# 	if (r.differentFrom) :
+# 		different = r.differentFrom.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:");
+# 		text = text + "- DifferentFrom: {}\n".format(different)
+# 	text = text + "- Definition: {}\n".format(r.definition)
+# 	text = text + "- Comments: {}\n".format(r.comment.replace("\n\n","\n").replace("\n","  \n"))
+# 	text = text + "- View in: [term-list](../list/bdqffdq/index.md#{})\n".format(term)
+# 	text = text + "\n********************\n\n"
 
 
 # Load footer 
@@ -511,7 +513,10 @@ for r in queryResult :
 	#	different = r.differentFrom.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:");
 	#	text = text + "- DifferentFrom: {}\n".format(different)
 	text = text + "- Definition: {}\n".format(r.definition)
-	text = text + "- Comments: {}\n".format(r.comment.replace("\n\n","\n").replace("\n","  \n"))
+	if r.comment is None:
+		text = text + "- Comments:\n"
+	else:
+		text = text + "- Comments: {}\n".format(r.comment.replace("\n\n","\n").replace("\n","  \n"))
 	text = text + "\n********************\n\n"
 
 ## Produce a table of contents from the headings 
@@ -631,8 +636,8 @@ header = header.replace('{term_key}', definitionTable)
 ## Page content
 
 text = "\n"
-text = text + "- [Range Axioms](#41-Range Axioms)\n"
-text = text + "- [Different From Axioms](#41-Different From Axioms)\n"
+text = text + "- [Range Axioms](#41-range-axioms)\n"
+text = text + "- [Different From Axioms](#41-different-from-axioms)\n"
 text = text + "\n## 4 Vocabulary Extension\n"
 text = text + "\n### 4.1 Range Axioms\n"
 sparql = prefixes + "SELECT ?subject ?type ?range ?restriction ?restrictedRange WHERE { ?subject rdf:type ?type . ?subject rdfs:range ?range. optional { ?range a owl:Restriction . ?range owl:onProperty ?restrictedRange . ?range  ?restriction ?x . FILTER ( ?restriction != owl:onProperty && ?restriction != rdf:type  ) } } ORDER BY ?type ?subject "
