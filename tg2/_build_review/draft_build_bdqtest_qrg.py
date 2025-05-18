@@ -293,7 +293,7 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 			foundInformationElements = [val.strip() for val in informationelementsTerm.split(',')]
 			for ie in foundInformationElements: 
 				informationelementDict.setdefault(ie,{})[test] = term_localName
-		outputIEClassIndex.write("# BDQ Test Index by Information Element Acted Upon\n")
+		outputIEClassIndex.write("# BDQ Test Index by Information Element Class\n")
 		for ie in informationelementDict.keys(): 
 			outputIEClassIndex.write("## "+ie)
 			outputIEClassIndex.write("\n\n")

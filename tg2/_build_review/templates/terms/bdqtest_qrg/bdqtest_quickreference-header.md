@@ -17,7 +17,7 @@ If you have questions or suggestions, submit these to the [BDQ Issues](https://
 
 ## Linked Indexes
 
-Index by: [UseCase](qrg_index_by_usecase.md), [InformationElement ActedUpon](qrg_index_by_ie_actedupon.md), [InformationElement Class](qrg_index_by_ie_class.md), [Data Quality Dimension](qrg_index_by_dimension.md), 
+Index by: [Use Case](qrg_index_by_usecase.md), [Information Element Acted Upon](qrg_index_by_ie_actedupon.md), [Information Element Class](qrg_index_by_ie_class.md), [Data Quality Dimension](qrg_index_by_dimension.md), 
 
 This document also includes `Measures` operating on Test `Responses` for `Multi Records` (datasets) indexed in [Multi Record Measures](qrg_multirecord_index.md)
 

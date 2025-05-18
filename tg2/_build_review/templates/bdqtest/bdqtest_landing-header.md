@@ -71,11 +71,11 @@ The set of information most relevant to the Biodiversity Data Quality (BDQ) Test
 
 - **BDQ Tests and Assertions** Defines how each Test is modeled using standard vocabulary terms and how it should behave under various conditions. This document.
 - [**BDQ Tests Quick Reference Guide**](../terms/bdqtest/index.md) Provides a concise, easy-to-read reference about the BDQ Tests.
-  - [Use Case Index to the BDQ Tests Quick Reference Guide](qrg_index_by_usecase.md)
-  - [Information Element Acted Upon Index to the BDQ Tests Quick Reference Guide](qrg_index_by_ie_actedupon.md)
-  - [Information Element Class Index to the BDQ Tests Quick Reference Guide](qrg_index_by_ie_class.md)
-  - [Data Quality Dimension Index to the BDQ Tests Quick Reference Guide](qrg_index_by_dimension.md)
-  - [Index to Multi Record Measures BDQ Tests Quick Reference Guide](qrg_multirecord_index.md)
+  - [BDQ Test Index by Use Case](../terms/bdqtest/qrg_index_by_usecase.md)
+  - [BDQ Test Index by Information Element Acted Upon](../terms/bdqtest/qrg_index_by_ie_actedupon.md)
+  - [BDQ Test Index by Information Element Class](../terms/bdqtest/qrg_index_by_ie_class.md)
+  - [BDQ Test Index by Data Quality Dimension](../terms/bdqtest/qrg_index_by_dimension.md)
+  - [BDQ Multi Record Measure Test Index](../terms/bdqtest/qrg_multirecord_index.md)
 - [**BDQ Tests and Assertions List of Terms**](../list/bdqtest/index.md) Provides the complete normative definitions of the BDQ Tests.
 - [**BDQ User's Guide**](../guide/users/index.md) For anyone interested in how to use the BDQ Tests in practice.
 - [**BDQ Implementer's Guide**](../guide/implementers/index.md) For anyone interested in the technical implementation of the BDQ Tests.
