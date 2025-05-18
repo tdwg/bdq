@@ -5,8 +5,9 @@
 # landing page from templates and the ontology.
 # 
 # @author Paul J. Morris 
+# @contributor John Wieczorek
 #
-# Assumes run from generation/build directory of tg2 repository.
+# Run from tg2/_build_review directory.
 #
 import re
 import sys

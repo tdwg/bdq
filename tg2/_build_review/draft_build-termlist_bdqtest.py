@@ -1,4 +1,9 @@
 # Script to build Markdown pages that provide term metadata for complex vocabularies
+#
+# @author Steve Baskauf
+# @contributor Paul J. Morris 
+# @contributor John Wieczorek
+#
 # Steve Baskauf 2020-08-12 CC0
 # updated 2021-02-11
 # Modified Paul J. Morris for generating draft standard documents without rs.tdwg.org files 

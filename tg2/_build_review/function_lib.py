@@ -1,4 +1,8 @@
 # Shared functions reused across build scripts
+#
+# @author Paul J. Morris 
+# @contributor John Wieczorek
+#
 # Paul J. Morris 
 # 2024-10-07
 # This script contains a library of reusable functions to support scripts to 

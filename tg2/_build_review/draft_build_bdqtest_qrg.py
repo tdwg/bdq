@@ -328,7 +328,6 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 		# Index for multirecord measures
 		outputMultiRecordMeasureIndex.write("# BDQ Multi Record Measure Test Index\n")
 		for index, row in multirecordDataFrame.sort_values('Label').iterrows():
-			print(f'Row:\n{row}')
 			outputMultiRecordMeasureIndex.write(f'{row["Label"]}\n')
 			outputMultiRecordMeasureIndex.write(f'- Term IRI: https://rs.tdwg.org/bdqtest/terms/{row["term_localName"]}\n')
 			outputMultiRecordMeasureIndex.write(f'- [Quick Reference Guide](index.md#{row["Label"]})\n')

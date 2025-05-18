@@ -1,5 +1,9 @@
 # Script to build Markdown pages that are largely human readable text, filling in values from configuration files
 #
+# @author Steve Baskauf
+# @contributor Paul J. Morris 
+# @contributor John Wieczorek
+#
 # Modified from script by
 # Steve Baskauf 2020-08-12 CC0
 # updated 2021-02-11
