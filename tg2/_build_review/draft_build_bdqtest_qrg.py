@@ -3,8 +3,9 @@
 # and TG2_multirecord_measure_tests.csv
 #
 # @author Paul J. Morris 
+# @contributor John Wieczorek
 #
-# Assumes run from generation/build directory of tg2 repository.
+# Run from tg2/_build_review directory.
 #
 # TODO; Include header/footer templates.
 #
@@ -239,19 +240,14 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 		for index, row in dataFrame.iterrows():
 			usecasesTerm = str(row["UseCases"])
 			test = row['Label']
+			term_localName = row['term_localName']
 			foundUseCases = [val.strip() for val in usecasesTerm.split(',')]
 			for useCase in foundUseCases: 
-				usecaseDict.setdefault(useCase,[]).append(test)
-		outputUseCaseIndex.write("# Use Case Index to the {}\n".format(document_configuration_yaml['documentTitle']))
-		outputUseCaseIndex.write("\n")
-		outputUseCaseIndex.write("Title\n")
-		outputUseCaseIndex.write(": Terms used in the {}\n".format(document_configuration_yaml['documentTitle']))
-		outputUseCaseIndex.write("\n")
-		outputUseCaseIndex.write("Part of the [{}](index.md)\n".format(document_configuration_yaml['documentTitle']))
-		outputUseCaseIndex.write("\n")
-		outputUseCaseIndex.write("## Index of Tests by Use Case\n")
+				usecaseDict.setdefault(useCase,{})[test] = term_localName
+				
+		outputUseCaseIndex.write("# BDQ Test Index by Use Case\n")
 		for useCase in usecaseDict.keys(): 
-			outputUseCaseIndex.write("### "+useCase)
+			outputUseCaseIndex.write("## "+useCase)
 			outputUseCaseIndex.write("\n")
 			definitionRow = vocabDataFrame.loc["bdq:"+vocabDataFrame["term_localName"]==useCase]
 			try: 
@@ -262,7 +258,10 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 				outputUseCaseIndex.write("error extracting definition\n")
 			outputUseCaseIndex.write("\n")
 			for test in usecaseDict[useCase]:
-				outputUseCaseIndex.write("- [" + test + "](index.md#" + test +")\n")
+				outputUseCaseIndex.write(f'{test}\n')
+				outputUseCaseIndex.write(f'- Term IRI: https://rs.tdwg.org/bdqtest/terms/{usecaseDict[useCase][test]}\n')
+				outputUseCaseIndex.write(f'- [Quick Reference Guide](index.md#{test})\n')
+				outputUseCaseIndex.write(f'- [Term List](../../list/bdqtext/index.md#bdqtest_{usecaseDict[useCase][test]})\n\n')
 			outputUseCaseIndex.write("\n\n")
 
 		# Index by information element
@@ -270,22 +269,19 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 		for index, row in dataFrame.iterrows():
 			informationelementsTerm = str(row['InformationElement:ActedUpon'])
 			test = row['Label']
+			term_localName = row['term_localName']
 			foundInformationElements = [val.strip() for val in informationelementsTerm.split(',')]
 			for ie in foundInformationElements: 
-				informationelementDict.setdefault(ie,[]).append(test)
-		outputInformationElementIndex.write("# Information Element Acted Upon Index to the {}\n".format(document_configuration_yaml['documentTitle']))
-		outputInformationElementIndex.write("\n")
-		outputInformationElementIndex.write("Title\n")
-		outputInformationElementIndex.write(": Terms used in the {}\n".format(document_configuration_yaml['documentTitle']))
-		outputInformationElementIndex.write("\n")
-		outputInformationElementIndex.write("Part of the [{}](index.md)\n".format(document_configuration_yaml['documentTitle']))
-		outputInformationElementIndex.write("\n")
-		outputInformationElementIndex.write("## Index of Tests by Information Element Acted Upon\n")
+				informationelementDict.setdefault(ie,{})[test] = term_localName
+		outputInformationElementIndex.write("# BDQ Test Index by Information Element Acted Upon\n")
 		for ie in informationelementDict.keys(): 
-			outputInformationElementIndex.write("### "+ie)
+			outputInformationElementIndex.write("## "+ie)
 			outputInformationElementIndex.write("\n\n")
 			for test in informationelementDict[ie]:
-				outputInformationElementIndex.write("- [" + test + "](index.md#" + test +")\n")
+				outputInformationElementIndex.write(f'{test}\n')
+				outputInformationElementIndex.write(f'- Term IRI: https://rs.tdwg.org/bdqtest/terms/{informationelementDict[ie][test]}\n')
+				outputInformationElementIndex.write(f'- [Quick Reference Guide](index.md#{test})\n')
+				outputInformationElementIndex.write(f'- [Term List](../../list/bdqtext/index.md#bdqtest_{informationelementDict[ie][test]})\n\n')
 			outputInformationElementIndex.write("\n")
 
 		# Index by information element class
@@ -293,22 +289,19 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 		for index, row in dataFrame.iterrows():
 			informationelementsTerm = str(row['IE Class'])
 			test = row['Label']
+			term_localName = row['term_localName']
 			foundInformationElements = [val.strip() for val in informationelementsTerm.split(',')]
 			for ie in foundInformationElements: 
-				informationelementDict.setdefault(ie,[]).append(test)
-		outputIEClassIndex.write("# Information Element Class Index to the {}\n".format(document_configuration_yaml['documentTitle']))
-		outputIEClassIndex.write("\n")
-		outputIEClassIndex.write("Title\n")
-		outputIEClassIndex.write(": Terms used in the {}\n".format(document_configuration_yaml['documentTitle']))
-		outputIEClassIndex.write("\n")
-		outputIEClassIndex.write("Part of the [{}](index.md)\n".format(document_configuration_yaml['documentTitle']))
-		outputIEClassIndex.write("\n")
-		outputIEClassIndex.write("## Index of Tests by Class to which Information Elements belong\n")
+				informationelementDict.setdefault(ie,{})[test] = term_localName
+		outputIEClassIndex.write("# BDQ Test Index by Information Element Acted Upon\n")
 		for ie in informationelementDict.keys(): 
-			outputIEClassIndex.write("### "+ie)
+			outputIEClassIndex.write("## "+ie)
 			outputIEClassIndex.write("\n\n")
 			for test in informationelementDict[ie]:
-				outputIEClassIndex.write("- [" + test + "](index.md#" + test +")\n")
+				outputIEClassIndex.write(f'{test}\n')
+				outputIEClassIndex.write(f'- Term IRI: https://rs.tdwg.org/bdqtest/terms/{informationelementDict[ie][test]}\n')
+				outputIEClassIndex.write(f'- [Quick Reference Guide](index.md#{test})\n')
+				outputIEClassIndex.write(f'- [Term List](../../list/bdqtext/index.md#bdqtest_{informationelementDict[ie][test]})\n\n')
 			outputIEClassIndex.write("\n")
 
 		# Index by dimension
@@ -317,35 +310,29 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 		for index, row in dataFrame.iterrows():
 			dimensionsTerm = str(row['Dimension'])
 			test = row['Label']
-			foundInformationElements = [val.strip() for val in dimensionsTerm.split(',')]
-			for ie in foundInformationElements: 
-				dimensionDict.setdefault(ie,[]).append(test)
-		outputDimensionIndex.write("# Data Quality Dimension Index to the {}\n".format(document_configuration_yaml['documentTitle']))
-		outputDimensionIndex.write("\n")
-		outputDimensionIndex.write("Title\n")
-		outputDimensionIndex.write(": Terms used in the {}\n".format(document_configuration_yaml['documentTitle']))
-		outputDimensionIndex.write("\n")
-		outputDimensionIndex.write("Part of the [{}](index.md)\n".format(document_configuration_yaml['documentTitle']))
-		outputDimensionIndex.write("\n")
-		outputDimensionIndex.write("## Index of Tests by Data Quality Dimension\n")
-		for ie in dimensionDict.keys(): 
-			outputDimensionIndex.write("### "+ie)
+			term_localName = row['term_localName']
+			foundDimensions = [val.strip() for val in dimensionsTerm.split(',')]
+			for dim in foundDimensions: 
+				dimensionDict.setdefault(dim,{})[test] = term_localName
+		outputDimensionIndex.write("# BDQ Test Index by Data Quality Dimension\n")
+		for dim in dimensionDict.keys(): 
+			outputDimensionIndex.write("## "+dim)
 			outputDimensionIndex.write("\n\n")
-			for test in dimensionDict[ie]:
-				outputDimensionIndex.write("- [" + test + "](index.md#" + test +")\n")
+			for test in dimensionDict[dim]:
+				outputDimensionIndex.write(f'{test}\n')
+				outputDimensionIndex.write(f'- Term IRI: https://rs.tdwg.org/bdqtest/terms/{dimensionDict[dim][test]}\n')
+				outputDimensionIndex.write(f'- [Quick Reference Guide](index.md#{test})\n')
+				outputDimensionIndex.write(f'- [Term List](../../list/bdqtext/index.md#bdqtest_{dimensionDict[dim][test]})\n\n')
 			outputDimensionIndex.write("\n")
 
 		# Index for multirecord measures
-		outputMultiRecordMeasureIndex.write("# Index to Multi Record Measures {}\n".format(document_configuration_yaml['documentTitle']))
-		outputMultiRecordMeasureIndex.write("\n")
-		outputMultiRecordMeasureIndex.write("Title\n")
-		outputMultiRecordMeasureIndex.write(": Index to used in the {}\n".format(document_configuration_yaml['documentTitle']))
-		outputMultiRecordMeasureIndex.write("\n")
-		outputMultiRecordMeasureIndex.write("Part of the [{}](index.md)\n".format(document_configuration_yaml['documentTitle']))
-		outputMultiRecordMeasureIndex.write("\n")
-		outputMultiRecordMeasureIndex.write("## Index of Multi Record Measure Tests in the BDQ Tests.\n")
+		outputMultiRecordMeasureIndex.write("# BDQ Multi Record Measure Test Index\n")
 		for index, row in multirecordDataFrame.sort_values('Label').iterrows():
-			outputMultiRecordMeasureIndex.write("- [{}](index.md#{})\n".format(row['Label'],row['Label'].lower()))
+			print(f'Row:\n{row}')
+			outputMultiRecordMeasureIndex.write(f'{row["Label"]}\n')
+			outputMultiRecordMeasureIndex.write(f'- Term IRI: https://rs.tdwg.org/bdqtest/terms/{row["term_localName"]}\n')
+			outputMultiRecordMeasureIndex.write(f'- [Quick Reference Guide](index.md#{row["Label"]})\n')
+			outputMultiRecordMeasureIndex.write(f'- [Term List](../../list/bdqtext/index.md#bdqtest_{row["term_localName"]})\n\n')
 
 		#
 		# Base alphabetical index.

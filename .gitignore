@@ -1,5 +1,7 @@
 tg2/vocabularies/glossary_terms.ods
 tg2/_build_review/__pycache__/
+tg2/hold/
+*.pyc
 # Mac OS X
 .DS_Store
 # LibreOffice Lock files
