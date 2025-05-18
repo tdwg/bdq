@@ -1,4 +1,4 @@
-# BDQ Test Index by Information Element Acted Upon
+# BDQ Test Index by Information Element Class
 ## Record-level
 
 VALIDATION_BASISOFRECORD_NOTEMPTY
