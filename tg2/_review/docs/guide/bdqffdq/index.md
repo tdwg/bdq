@@ -449,10 +449,10 @@ It is important that the chain of relationships from an instance of an `Assertio
 
 
 
-- [Classes](#51-class-terms-non-normative)
-- [Object Properties](#52-objectproperty-terms-non-normative)
+- [Classes](#51-class-terms-normative)
+- [Object Properties](#52-objectproperty-terms-normative)
 - [Data Properties](#53-dataproperty-terms-non-normative)
-- [Named Individuals](#54-namedindividual-terms-non-normative)
+- [Named Individuals](#54-namedindividual-terms-normative)
 
 ### 4.1 Alphabetical Index of classes (non-normative)
 

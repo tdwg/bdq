@@ -231,10 +231,10 @@ for templatePath, document in directories.items() :
 		graph.parse(inputTermsOwlFilename, format="ttl")
 		
 		indextext = "\n"
-		indextext = indextext + "- [Classes](#51-class-terms-non-normative)\n"
-		indextext = indextext + "- [Object Properties](#52-objectproperty-terms-non-normative)\n"
+		indextext = indextext + "- [Classes](#51-class-terms-normative)\n"
+		indextext = indextext + "- [Object Properties](#52-objectproperty-terms-normative)\n"
 		indextext = indextext + "- [Data Properties](#53-dataproperty-terms-non-normative)\n"
-		indextext = indextext + "- [Named Individuals](#54-namedindividual-terms-non-normative)\n"
+		indextext = indextext + "- [Named Individuals](#54-namedindividual-terms-normative)\n"
 		indextext = indextext + "\n"
 		
 		indextext = indextext + "### 4.1 Alphabetical Index of classes (non-normative)\n\n"
