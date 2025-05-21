@@ -245,7 +245,7 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 			for useCase in foundUseCases: 
 				usecaseDict.setdefault(useCase,{})[test] = term_localName
 				
-		outputUseCaseIndex.write("# BDQ Test Index by Use Case\n")
+		outputUseCaseIndex.write("# BDQ Test Index by Use Case (non-normative)\n")
 		outputUseCaseIndex.write("This document is non-normative and part of the [BDQ Tests Quick Reference Guide](index.md).\n")
 
 		for useCase in usecaseDict.keys(): 
@@ -331,7 +331,7 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 			outputDimensionIndex.write("\n")
 
 		# Index for multirecord measures
-		outputMultiRecordMeasureIndex.write("# BDQ Multi Record Measure Test Index (non-normative)\n")
+		outputMultiRecordMeasureIndex.write("# BDQ Multi Record Measure Test Index (non-normative)\n\n")
 		outputMultiRecordMeasureIndex.write("This document is non-normative and part of the [BDQ Tests Quick Reference Guide](index.md).\n")
 		for index, row in multirecordDataFrame.sort_values('Label').iterrows():
 			outputMultiRecordMeasureIndex.write(f'{row["Label"]}\n')
