@@ -103,7 +103,7 @@ A. The dataset MUST set values for record level terms to unambiguously mark the 
 The dataset SHOULD use the following values, and consumers of biodiversity data MUST NOT treat these values as representing actual `dwc:Occurrence` data. 
 
 `dwc:institutionCode` = "example.org"
-`dwc:institutionID` = "http://example.org/""
+`dwc:institutionID` = `http://example.org/`
 `dwc:collectionCode` = "Modified Example"
 `dwc:collectionID` = "urn:uuid:1887c794-7291-4005-8eee-1afbe9d7814e"
 
@@ -128,7 +128,7 @@ A. The dataset MUST set values for record level terms to unambiguously mark the 
 The dataset SHOULD use the following values, and consumers MUST NOT treat these values as representing actual `dwc:Occurrence` data. 
 
 `dwc:institutionCode` = "example.org"
-`dwc:institutionID` = "http://example.org/"
+`dwc:institutionID` = `http://example.org/`
 `dwc:collectionCode` = "Synthetic Example"
 `dwc:collectionID` = "urn:uuid:0b1b9546-64aa-446b-bd9c-cbb0eacf4332"
 

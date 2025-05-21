@@ -98,7 +98,7 @@ The following namespace abbreviations are used in this document:
 | skos:        | http://www.w3.org/2004/02/skos/core#        |
 
 ### 1.7 Referring to Terms (normative)
-In any technical treatment of the BDQ standard, a precise reference to a class or property term SHOULD be made using its qualified name (the namespace prefix followed by the term local name; e.g., `bdqffdq:InformationElement`) and the namespace IRI corresponding to the namespace prefix (e.g., 'https://rs.tdwg.org/bdqffdq/terms' for `bdqffdq:`) MUST be provided. In less formal descriptions where the technical precision is not needed, the preferred label (skos:prefLabel, e.g., `Information Element`) or the term local name (e.g., `InformationElement`) MAY be used. You will find all of these methods of referring to BDQ-related terms throughout the BDQ documentation.
+In any technical treatment of the BDQ standard, a precise reference to a class or property term SHOULD be made using its qualified name (the namespace prefix followed by the term local name; e.g., `bdqffdq:InformationElement`) and the namespace IRI corresponding to the namespace prefix (e.g., `https://rs.tdwg.org/bdqffdq/terms` for `bdqffdq:`) MUST be provided. In less formal descriptions where the technical precision is not needed, the preferred label (skos:prefLabel, e.g., `Information Element`) or the term local name (e.g., `InformationElement`) MAY be used. You will find all of these methods of referring to BDQ-related terms throughout the BDQ documentation.
 
 ## 2 A Guide to the Tests (non-normative)
 
@@ -128,7 +128,7 @@ Each Test is defined to take a specific set of input terms (`Information Element
 
 Consider the Test [VALIDATION_EVENTDATE_STANDARD](../../terms/bdqtest/index.md#VALIDATION_EVENTDATE_STANDARD). It takes as input value of the `Information Element` `dwc:eventDate` from a `Single Record`, and then asks, "Is the value of dwc:eventDate a valid ISO date?". It will then produce a Response describing the conclusion it reached when analyzing that record.
 
-Tests can also operate on a dataset (a `Multi Record`), and examine the values for `Information Elements` across the entire dataset. The only `Multi Record` Tests currently defined in BDQ are `Measures`, which take the outputs of `Single Record` Tests as their inputs and report on the results of those `Single Record` Tests aggregated across the dataset. The names of these Tests all begin with `MULTIRECORD_`. 
+Tests can also operate on a dataset (a `Multi Record`), and examine the values for `Information Elements` across the entire dataset. The only `Multi Record` Tests currently defined in BDQ are `Measures`, which take the outputs of `Single Record` Tests as their inputs and report on the results of those `Single Record` Tests aggregated across the dataset. The names of these Tests all begin with "MULTIRECORD_". 
 
 #### 2.2.2 Outputs: Data Quality Reports (non-normative) 
 
@@ -136,7 +136,7 @@ Software that include an `Implementation` of a Test may produce `Data Quality Re
 
 #### 2.2.3 Outputs: Responses From Tests (normative) 
 
-The specifications for the structure of a response from running a Test can be found in [3.1 Structure of Response (normative)](../../bdqtest.index#31-structure-of-response-normative) in the document [BDQ Tests and Assertions](../../bdqtest.index).
+The specifications for the structure of a response from running a Test can be found in [3.1 Structure of Response (normative)](../../bdqtest/index.md#31-structure-of-response-normative) in the document [BDQ Tests and Assertions](../../bdqtest/index.md).
 
 ### 2.3 Amendments Propose Changes (normative)
 
@@ -148,7 +148,7 @@ Some Tests are parameterized. When a Test is parameterized, and a value other th
 
 Values of `Parameters`, other than the defaults, SHOULD also be present in the `Response.comment`.
 
-More normative guidance on Test `Parameters` can be found in the section [Parameters and Changing the Behavior of a Test](../implementers/index.md#61-parameters-and-changing-the-behavior-of-a-test-normative) of the [BDQ Implementer's Guide](../guide/implementers/index.md).
+More normative guidance on Test `Parameters` can be found in the section [6.1 Parameters and Changing the Behavior of a Test (normative)](../implementers/index.md#61-parameters-and-changing-the-behavior-of-a-test-normative) of the [BDQ Implementer's Guide](../implementers/index.md).
 
 #### 2.4.1 Test Parameters Example (non-normative) 
 
@@ -172,9 +172,9 @@ Tests for data quality may serve two purposes: Quality Control and Quality Assur
 
 More broadly, the concept of fitness for purpose refers to whether data are adequate to support a given goal or objective beyond the immediate use — such as policy formulation, scientific modeling, or legal compliance. Achieving fitness for purpose may involve additional considerations such as provenance, trustworthiness, and completeness beyond what is required for fitness for use.
 
-The Fitness for use Framework (Veiga 2016, Veiga et al., 2017) provides a formal means for filtering records for [Quality Assurance](../../bdqffdq/index.md#3-fitness-for-use-framework-summary-of-mathematical-formalization-normative) (involving only Measures), but informally, data may be thought as being fit for some use if all `Validation` Tests comprising that `Use Case` have a `Response.result`="COMPLIANT", and all non-numeric `Measure` Tests comprising that `Use Case` have a `Response.result`="COMPLETE". The BDQ Tests include a set of `Multi Record` `Measures` whose purpose is to enable formal filtering (Quality Assurance) and reporting (for Quality Control) under the [Fitness for Use Framework Ontology](../../bdqffdq/index.md).
+The Fitness for use Framework (Veiga 2016, Veiga et al., 2017) provides a formal means for filtering records for [Quality Assurance](../../bdqffdq/index.md#3447-quality-assurance-normative) (involving only Measures), but informally, data may be thought as being fit for some use if all `Validation` Tests comprising that `Use Case` have a `Response.result`="COMPLIANT", and all non-numeric `Measure` Tests comprising that `Use Case` have a `Response.result`="COMPLETE". The BDQ Tests include a set of `Multi Record` `Measures` whose purpose is to enable formal filtering (Quality Assurance) and reporting (for Quality Control) under the [Fitness for Use Framework Ontology](../../bdqffdq/index.md).
 
-The Framework provides a formal statement of [Quality Control](../../bdqffdq/index.md#3-fitness-for-use-framework-summary-of-mathematical-formalization-normative), but the application of Quality Control 'in the wild' is more nuanced; more complex than simple filtering under Quality Assurance. The context of Quality Control may affect how Tests and their results are applied to data, information systems and processes.
+The Framework provides a formal statement of [Quality Control](../../bdqffdq/index.md#3446-quality-control-normative), but the application of Quality Control 'in the wild' is more nuanced; more complex than simple filtering under Quality Assurance. The context of Quality Control may affect how Tests and their results are applied to data, information systems and processes.
 
 Quality Control is most efficient at the time of data capture where the prevention of incorrect values avoids subsequent, far less efficient issue detection and correction. For example, issues such as transposition of values are far easier to detect and correct at the point of recording than during subsequent downstream processing where context may be lost or held on paper records remote from data entry, and errors may be propagated. `Validation` Tests may be thought of as framing constraints to impose on data entry interfaces, such as validation of data against a controlled vocabulary being imposed by the presentation of the controlled vocabulary as a pick list in a user interface, or may be implemented as checks on entered data values with immediate feedback for users. 
 
@@ -202,8 +202,8 @@ Two Examples of Test data input and output are provided to illustrate opposing b
 
 Each Test lists `Use Cases` describing `Data Quality Needs` to which each Test is applicable. Notes provide additional guidance for understanding Test results and for implementation.
 
-The definitions of the terms used for the Tests can be found at [BDQ Tests Quick Reference Guide](../../terms/bdqtest/bdqtest_qrg_term_descriptions.md).
+The definitions of the terms used for the Tests can be found in [Terms Used in the BDQ Tests Quick Reference Guide](../../terms/bdqtest/bdqtest_qrg_term_descriptions.md).
 
 ## 5 Time of Day and Time Zones (non-normative)
 
-Time of day (as opposed to dates) is not considered in any of the BDQ Tests. There are `Use Cases` where the time zone is important. Dates within a dataset (`bdqffdq:MultiRecord`) aggregated from multiple sources may have plus or minus one day errors introduced. New Tests are required if ignorance of time would make such data unfit for a purpose. For further information, see Section [4.2 Time](../../supplement/index.md#42-time-non-normative) in [BDQ Supplemental Information](../../supplement/index.md).
+Time of day (as opposed to dates) is not considered in any of the BDQ Tests. There are `Use Cases` where the time zone is important. Dates within a dataset (`bdqffdq:MultiRecord`) aggregated from multiple sources may have plus or minus one day errors introduced. New Tests are required if ignorance of time would make such data unfit for a purpose. For further information, see Section [4.2 Time (non-normative)](../../supplement/index.md#42-time-non-normative) in [BDQ Supplemental Information](../../supplement/index.md).

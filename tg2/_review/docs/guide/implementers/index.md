@@ -110,10 +110,10 @@ Draft Standard for Review
   - [8.2 Structure of the Test Validation Data (non-normative)](#82-structure-of-the-test-validation-data-non-normative)
   - [8.3 Examples of the Data for Validating Tests (non-normative)](#83-examples-of-the-data-for-validating-tests-non-normative)
   - [8.4 Where to Get the Test Validation Data (non-normative)](#84-where-to-get-the-test-validation-data-non-normative)
-  - [8.5 `Implementation` and the Validation Data (normative)](#85-`implementation`-and-the-validation-data-normative)
+  - [8.5 Implementation and the Validation Data (normative)](#85-implementation-and-the-validation-data-normative)
   - [8.6 Existing Software tools (non-normative)](#86-existing-software-tools-non-normative)
     - [8.6.1 Tools for Validating Test Implementations with the Validation Data (non-normative)](#861-tools-for-validating-test-implementations-with-the-validation-data-non-normative)
-    - [8.6.2 Tools to assist with `Implementations` and RDF presentation (non-normative)](#862-tools-to-assist-with-`implementations`-and-rdf-presentation-non-normative)
+    - [8.6.2 Tools to assist with Implementations and RDF presentation (non-normative)](#862-tools-to-assist-with-implementations-and-rdf-presentation-non-normative)
 
 [9 Existing Test Implementations (non-normative)](#9-existing-test-implementations-non-normative)
 
@@ -1060,7 +1060,7 @@ Parameter values are specified in a `bdq:sourceAuthority` column, when more than
 
 Dublin Core and Darwin Core term input columns are specified with the appropriate namespace abbreviation prepended (e.g., `dc:type`, `dcterms:license`, `dwc:acceptedNameUsageID`).
 
-### 8.5 `Implementation` and the Validation Data (normative)
+### 8.5 Implementation and the Validation Data (normative)
 
 To be compliant with the BDQ standard, an `Implementation` of a Test MUST fulfill all of the REQUIRED elements of this section.
 
@@ -1084,7 +1084,7 @@ The `bdqtestrunner` tool (Morris, 2024), written in Java, was written to validat
 
 Java annotations can be used to match Test `Implementation` methods to Tests and `Information Elements` to method parameters. The [ffdq-api](https://github.com/kurator-org/ffdq-api) (Lowery and Morris 2024) provides a set of annotations intended to enable code using Java reflection to detect methods that implement particular Tests, and then again through Java reflection, bind Darwin Core terms and other `Information Elements` in input data onto appropriate method parameters.
 
-#### 8.6.2 Tools to assist with `Implementations` and RDF presentation (non-normative) 
+#### 8.6.2 Tools to assist with Implementations and RDF presentation (non-normative) 
 
 The Test `Implementations` listed below use Java Annotations (as shown in the example in [2.3.2.5 Example Interpretation of a Parameter String Default Value (non-normative)](#2325-example-interpretation-of-a-parameter-string-default-value-non-normative) to carry metadata to identify Tests and to allow binding of Darwin Core terms to Java method parameters. The Java Annotations are themselves related to Fitness For Use Framework concepts, are available in a library ffdq-api (Lowery and Morris 2024), and are intended to be used with rdfbeans to serialize Java result objects produced by Test `Implementations` into `bdqffdq:Assertion` objects in RDF. In addition, a Java library, `kurator-ffdq` (Lowery et al., 2025) is available for working with Test descriptions as RDF, being an `Implementation` of the Framework Ontology in Java. The `kurator-ffdq` library also includes classes for generating stub methods for each Test in either Java or Python.
 
