@@ -52,7 +52,9 @@ Draft Standard for Review
   - [1.6 Namespace abbreviations (non-normative)](#16-namespace-abbreviations-non-normative)
   - [1.7 Key to Vocabulary Terms (normative)](#17-key-to-vocabulary-terms-normative)
 
-[3 Term index (normative)](#3-term-index-normative)
+[2 Use of Terms (normative)](#2-use-of-terms-normative)
+
+[3 Term index (non-normative)](#3-term-index-non-normative)
   - [3.1 Alphabetical Index of classes (non-normative)](#31-alphabetical-index-of-classes-non-normative)
   - [3.2 Alphabetical Index of object properties (non-normative)](#32-alphabetical-index-of-object-properties-non-normative)
   - [3.3 Alphabetical Index of data properties (non-normative)](#33-alphabetical-index-of-data-properties-non-normative)
@@ -244,7 +246,11 @@ The terminology used to describe the terms in this vocabulary follows the TDWG [
 | Type (rdf:type) | normative | The subject is an instance of a class. | [http://www.w3.org/2002/07/ owl#Class](http://www.w3.org/2002/07/owl#Class) |
 
 
-## 3 Term index (normative)
+## 2 Use of Terms (normative)
+
+In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use the Term IRI (e.g., `http://rs.tdwg.org/bdq/bdqffdq/InformationElement`) or Term Qualified name (e.g., `bdqffdq:InformationElement`). In a non-RDF context in which resources may be used by software (e.g., a value in a spreadsheet or database table) the Controlled Value String (Local name, e.g., `InformationElement`) SHOULD be used. In a purely human context a label (e.g., `Information Element`) MAY be used.
+
+## 3 Term index (non-normative)
 
 - [Classes (normative)](#41-class-terms-normative)
 - [Object Properties (normative)](#42-objectproperty-terms-normative)

@@ -122,4 +122,4 @@ A value for `bdqffdq:hasdataQualityDimension` in an RDF context MUST be a Term I
 
 Each instance of a Test, regardless of Test type, SHOULD have exactly one `bdqffdq:hasdataQualityDimension` property relating it to a term in this `bdqdim:` vocabulary.
 
-## 3 Term index (normative)
+## 3 Term index (non-normative)

@@ -125,4 +125,4 @@ Each instance of `bdqffdq:Amendment` SHOULD have exactly one `bdqffdq:hasEnhance
 
 An instance of `bdqffdq:Validation`, `bdqffdq:Issue`, or `bdqffdq:Measure` SHOULD NOT have a `bdqffdq:hasEnhancement` property relating it to a term in this `bdqenh:` vocabulary.
 
-## 3 Term index (normative)
+## 3 Term index (non-normative)

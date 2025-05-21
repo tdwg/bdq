@@ -53,7 +53,7 @@ Draft Standard for Review
 
 [2 Use of Terms (normative)](#2-use-of-terms-normative)
 
-[3 Term index (normative)](#3-term-index-normative)
+[3 Term index (non-normative)](#3-term-index-non-normative)
   - [3.1 Index By Term Name (non-normative)](#31-index-by-term-name-non-normative)
   - [3.2 Index By Label (non-normative)](#32-index-by-label-non-normative)
 
@@ -159,7 +159,7 @@ A value for `bdqffdq:hasdataQualityDimension` in an RDF context MUST be a Term I
 
 Each instance of a Test, regardless of Test type, SHOULD have exactly one `bdqffdq:hasdataQualityDimension` property relating it to a term in this `bdqdim:` vocabulary.
 
-## 3 Term index (normative)
+## 3 Term index (non-normative)
 ### 3.1 Index By Term Name (non-normative)
 
 (See also [3.2 Index By Label (non-normative)](#32-index-by-label-non-normative))
