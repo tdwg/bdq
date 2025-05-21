@@ -173,8 +173,8 @@ In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use th
 
 ## 3 Axiom Index (non-normative)
 
-- [Range Axioms](#41-range-axioms-normative)
-- [Different From Axioms](#42-different-from-axioms-normative)
+- [Range Axioms (normative)](#41-range-axioms-normative)
+- [Different From Axioms (normative)](#42-different-from-axioms-normative)
 
 ## 4 Vocabulary Extension (normative)
 

@@ -405,13 +405,13 @@ graph = rdflib.Graph()
 graph.parse(inputTermsOwlFilename, format="ttl")
 
 text = "\n"
-text = text + "- [Classes](#41-class-terms-normative)\n"
-text = text + "- [Object Properties](#42-objectproperty-terms-normative)\n"
-text = text + "- [Data Properties](#43-dataproperty-terms-normative)\n"
-text = text + "- [Named Individuals](#44-namedindividual-terms-normative)\n"
+text = text + "- [Classes (normative)](#41-class-terms-normative)\n"
+text = text + "- [Object Properties (normative)](#42-objectproperty-terms-normative)\n"
+text = text + "- [Data Properties (normative)](#43-dataproperty-terms-normative)\n"
+text = text + "- [Named Individuals (normative)](#44-namedindividual-terms-normative)\n"
 text = text + "\n"
 
-text = text + "### 3.1 Alphabetical Index of classes-non-normative\n\n"
+text = text + "### 3.1 Alphabetical Index of classes (non-normative)\n\n"
 sparql = prefixes + "SELECT ?subject WHERE {  ?subject a owl:Class . } "
 queryResult = graph.query(sparql)
 for r in queryResult : 
@@ -419,7 +419,7 @@ for r in queryResult :
 	term = term.replace("https://rs.tdwg.org/bdqffdq/terms/","")
 	text = text + "[{}](#{})\n".format(term,term)
 
-text = text + "### 3.2 Alphabetical Index of object properties-non-normative\n\n"
+text = text + "### 3.2 Alphabetical Index of object properties (non-normative)\n\n"
 sparql = prefixes + "SELECT ?subject WHERE {  ?subject a owl:ObjectProperty . } "
 queryResult = graph.query(sparql)
 for r in queryResult : 
@@ -427,7 +427,7 @@ for r in queryResult :
 	term = term.replace("https://rs.tdwg.org/bdqffdq/terms/","")
 	text = text + "[{}](#{})\n".format(term,term)
 
-text = text + "### 3.3 Alphabetical Index of data properties-non-normative\n\n"
+text = text + "### 3.3 Alphabetical Index of data properties (non-normative)\n\n"
 sparql = prefixes + "SELECT ?subject WHERE {  ?subject a owl:DatatypeProperty . } "
 queryResult = graph.query(sparql)
 for r in queryResult : 
@@ -435,7 +435,7 @@ for r in queryResult :
 	term = term.replace("https://rs.tdwg.org/bdqffdq/terms/","")
 	text = text + "[{}](#{})\n".format(term,term)
 
-text = text + "### 3.4 Alphabetical Index of named individuals-non-normative\n\n"
+text = text + "### 3.4 Alphabetical Index of named individuals (non-normative)\n\n"
 sparql = prefixes + "SELECT ?subject WHERE {  ?subject a owl:NamedIndividual . } "
 queryResult = graph.query(sparql)
 for r in queryResult : 
@@ -637,8 +637,8 @@ header = header.replace('{term_key}', definitionTable)
 ## Page content
 
 text = "\n"
-text = text + "- [Range Axioms](#41-range-axioms-normative)\n"
-text = text + "- [Different From Axioms](#42-different-from-axioms-normative)\n"
+text = text + "- [Range Axioms (normative)](#41-range-axioms-normative)\n"
+text = text + "- [Different From Axioms (normative)](#42-different-from-axioms-normative)\n"
 text = text + "\n## 4 Vocabulary Extension (normative)\n"
 text = text + "\n### 4.1 Range Axioms (normative)\n"
 sparql = prefixes + "SELECT ?subject ?type ?range ?restriction ?restrictedRange WHERE { ?subject rdf:type ?type . ?subject rdfs:range ?range. optional { ?range a owl:Restriction . ?range owl:onProperty ?restrictedRange . ?range  ?restriction ?x . FILTER ( ?restriction != owl:onProperty && ?restriction != rdf:type  ) } } ORDER BY ?type ?subject "
