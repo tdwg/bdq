@@ -246,6 +246,8 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 				usecaseDict.setdefault(useCase,{})[test] = term_localName
 				
 		outputUseCaseIndex.write("# BDQ Test Index by Use Case\n")
+		outputUseCaseIndex.write("This document is non-normative and part of the [BDQ Tests Quick Reference Guide](index.md).\n")
+
 		for useCase in usecaseDict.keys(): 
 			outputUseCaseIndex.write("## "+useCase)
 			outputUseCaseIndex.write("\n")
@@ -273,7 +275,8 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 			foundInformationElements = [val.strip() for val in informationelementsTerm.split(',')]
 			for ie in foundInformationElements: 
 				informationelementDict.setdefault(ie,{})[test] = term_localName
-		outputInformationElementIndex.write("# BDQ Test Index by Information Element Acted Upon\n")
+		outputInformationElementIndex.write("# BDQ Test Index by Information Element Acted Upon (non-normative)\n")
+		outputInformationElementIndex.write("This document is non-normative and part of the [BDQ Tests Quick Reference Guide](index.md).\n")
 		for ie in informationelementDict.keys(): 
 			outputInformationElementIndex.write("## "+ie)
 			outputInformationElementIndex.write("\n\n")
@@ -293,7 +296,8 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 			foundInformationElements = [val.strip() for val in informationelementsTerm.split(',')]
 			for ie in foundInformationElements: 
 				informationelementDict.setdefault(ie,{})[test] = term_localName
-		outputIEClassIndex.write("# BDQ Test Index by Information Element Class\n")
+		outputIEClassIndex.write("# BDQ Test Index by Information Element Class (non-normative)\n")
+		outputIEClassIndex.write("This document is non-normative and part of the [BDQ Tests Quick Reference Guide](index.md).\n")
 		for ie in informationelementDict.keys(): 
 			outputIEClassIndex.write("## "+ie)
 			outputIEClassIndex.write("\n\n")
@@ -314,7 +318,8 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 			foundDimensions = [val.strip() for val in dimensionsTerm.split(',')]
 			for dim in foundDimensions: 
 				dimensionDict.setdefault(dim,{})[test] = term_localName
-		outputDimensionIndex.write("# BDQ Test Index by Data Quality Dimension\n")
+		outputDimensionIndex.write("# BDQ Test Index by Data Quality Dimension (non-normative)\n")
+		outputDimensionIndex.write("This document is non-normative and part of the [BDQ Tests Quick Reference Guide](index.md).\n")
 		for dim in dimensionDict.keys(): 
 			outputDimensionIndex.write("## "+dim)
 			outputDimensionIndex.write("\n\n")
@@ -326,7 +331,8 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 			outputDimensionIndex.write("\n")
 
 		# Index for multirecord measures
-		outputMultiRecordMeasureIndex.write("# BDQ Multi Record Measure Test Index\n")
+		outputMultiRecordMeasureIndex.write("# BDQ Multi Record Measure Test Index (non-normative)\n")
+		outputMultiRecordMeasureIndex.write("This document is non-normative and part of the [BDQ Tests Quick Reference Guide](index.md).\n")
 		for index, row in multirecordDataFrame.sort_values('Label').iterrows():
 			outputMultiRecordMeasureIndex.write(f'{row["Label"]}\n')
 			outputMultiRecordMeasureIndex.write(f'- Term IRI: https://rs.tdwg.org/bdqtest/terms/{row["term_localName"]}\n')
@@ -398,7 +404,7 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 				print()
 				print(row['Notes'])
 				print()
-			print("[🠱](#indexes-to-the-tests)")
+			print("[🠱](#indexes-to-the-tests-non-normative)")
 			print("********************")
 			print()
 		print()
@@ -442,7 +448,7 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 			print()
 			print(row['Notes'])
 			print()
-			print("[↑](#indexes-to-the-tests)")
+			print("[↑](#indexes-to-the-tests-non-normative)")
 			print("********************")
 			print()
 		print()

@@ -1,4 +1,5 @@
-# BDQ Test Index by Information Element Class
+# BDQ Test Index by Information Element Class (non-normative)
+This document is non-normative and part of the [BDQ Tests Quick Reference Guide](index.md).
 ## Record-level
 
 VALIDATION_BASISOFRECORD_NOTEMPTY

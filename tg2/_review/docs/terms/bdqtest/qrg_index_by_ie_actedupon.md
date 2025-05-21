@@ -1,4 +1,5 @@
-# BDQ Test Index by Information Element Acted Upon
+# BDQ Test Index by Information Element Acted Upon (non-normative)
+This document is non-normative and part of the [BDQ Tests Quick Reference Guide](index.md).
 ## dwc:basisOfRecord
 
 VALIDATION_BASISOFRECORD_NOTEMPTY

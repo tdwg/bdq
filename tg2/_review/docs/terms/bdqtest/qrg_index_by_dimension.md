@@ -1,4 +1,5 @@
-# BDQ Test Index by Data Quality Dimension
+# BDQ Test Index by Data Quality Dimension (non-normative)
+This document is non-normative and part of the [BDQ Tests Quick Reference Guide](index.md).
 ## Completeness
 
 VALIDATION_BASISOFRECORD_NOTEMPTY
