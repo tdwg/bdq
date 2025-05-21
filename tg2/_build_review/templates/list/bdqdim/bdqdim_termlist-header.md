@@ -112,13 +112,13 @@ The following namespace abbreviations are used in this document:
 
 ### 1.9 Key to Vocabulary Terms (normative)
 
-The terminology used to describe the terms in this vocabulary follows the TDWG [TDWG Standards Documentation Standard (SDS)](https://www.tdwg.org/standards/sds/) (SDS). Each term definition includes the original RDF definition, and may also provide a TDWG-specific interpretation from the SDS, as well as a definition tailored to this local context.
+The terminology used to describe the terms in this vocabulary follows the TDWG [TDWG Standards Documentation Standard (SDS)](https://www.tdwg.org/standards/sds/). Each term definition includes the original RDF definition, and may also provide a TDWG-specific interpretation from the SDS, as well as a definition tailored to this local context.
 
 {term_key}
 
 ## 2 Use of Terms (normative)
 
-A value for `bdqffdq:hasdataQualityDimension` in an RDF context MUST be a Term IRI (e.g., 'https://rs.tdwg.org/bdqdim/terms/Completeness') or Term Qualified name (e.g., `bdqdim:Completeness`) from the `bdqdim:` namespace. In a non-RDF context in which resources may be used by software (e.g., a value in a spreadsheet or database table) the Controlled Value String (Local name, e.g., `Completeness`) MAY be used. In a purely human context a abel (e.g., `Completeness`) MAY be used.
+A value for `bdqffdq:hasdataQualityDimension` in an RDF context MUST be a Term IRI (e.g., `https://rs.tdwg.org/bdqdim/terms/Completeness`) or Term Qualified name (e.g., `bdqdim:Completeness`) from the `bdqdim:` namespace. In a non-RDF context in which resources may be used by software (e.g., a value in a spreadsheet or database table) the Controlled Value String (Local name, e.g., `Completeness`) MAY be used. In a purely human context a abel (e.g., `Completeness`) MAY be used.
 
 Each instance of a Test, regardless of Test type, SHOULD have exactly one `bdqffdq:hasdataQualityDimension` property relating it to a term in this `bdqdim:` vocabulary.
 

@@ -53,7 +53,7 @@ Draft Standard for Review
 
 [2 Use of Terms (normative)](#2-use-of-terms-normative)
 
-[3 Term index (normative)](#3-term-index-normative)
+[3 Term index (non-normative)](#3-term-index-non-normative)
   - [3.1 Index By Term Name (non-normative)](#31-index-by-term-name-non-normative)
   - [3.2 Index By Label (non-normative)](#32-index-by-label-non-normative)
 
@@ -141,7 +141,7 @@ The following namespace abbreviations are used in this document:
 
 ### 1.9 Key to Vocabulary Terms (normative)
 
-The terminology used to describe the terms in this vocabulary follows the TDWG [Standards Documentation Specification](https://github.com/tdwg/vocab/blob/master/sds/documentation-specification.md) (SDS). Each term definition includes the original RDF definition, and may also provide a TDWG-specific interpretation from the SDS, as well as a definition tailored to this local context.
+The terminology used to describe the terms in this vocabulary follows the TDWG [TDWG Standards Documentation Standard (SDS)](https://www.tdwg.org/standards/sds/) (SDS). Each term definition includes the original RDF definition, and may also provide a TDWG-specific interpretation from the SDS, as well as a definition tailored to this local context.
 
 | Label (Term) | Normative | Definition | Example |
 | ------------ | --------- | ---------- | ------- |
@@ -159,9 +159,9 @@ The terminology used to describe the terms in this vocabulary follows the TDWG [
 
 ## 2 Use of Terms (normative)
 
-In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use the Term IRI (e.g., 'http://rs.tdwg.org/bdq/bdqffdq/InformationElement') or Term Qualified name (e.g., `bdqffdq:InformationElement`). In a non-RDF context in which resources may be used by software (e.g., a value in a spreadsheet or database table) the Controlled Value String (Local name, e.g., `InformationElement`) SHOULD be used. In a purely human context a label (e.g., `Information Element`) MAY be used.
+In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use the Term IRI (e.g., `http://rs.tdwg.org/bdq/bdqffdq/InformationElement`) or Term Qualified name (e.g., `bdqffdq:InformationElement`). In a non-RDF context in which resources may be used by software (e.g., a value in a spreadsheet or database table) the Controlled Value String (Local name, e.g., `InformationElement`) SHOULD be used. In a purely human context a label (e.g., `Information Element`) MAY be used.
 
-## 3 Term index (normative)
+## 3 Term index (non-normative)
 ### 3.1 Index By Term Name (non-normative)
 
 (See also [3.2 Index By Label (non-normative)](#32-index-by-label-non-normative))
@@ -1450,15 +1450,15 @@ In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use th
 
 ## Acronyms (non-normative)
 
-A list of Acronyms can be found in the [Acronyms (non-normative)](../../index.md#5-acronyms-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.
+A list of Acronyms can be found in the [Acronyms (non-normative)](../../../index.md#5-acronyms-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.
 
 ## Glossary (non-normative)
 
-A glossary of terms additional to those in the various namespaces can be found in the [Glossary (non-normative)](../../index.md#6-glossary-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.
+A glossary of terms additional to those in the various namespaces can be found in the [Glossary (non-normative)](../../../index.md#6-glossary-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.
 
 ## References (non-normative)
 
-The references for the BDQ standard can be found in the [References (non-normative)](../../index.md#7-references-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.
+The references for the BDQ standard can be found in the [References (non-normative)](../../../index.md#7-references-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.
 
 ## Cite BDQ (non-normative)
 

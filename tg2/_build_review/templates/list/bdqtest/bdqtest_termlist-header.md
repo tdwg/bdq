@@ -141,12 +141,13 @@ There are four types of BDQ Tests: `Validations`, `Issues`, `Measures` and `Amen
 
 These "Test Descriptors" are terms that are necessary to comprehensively describe each Test. Some terms, such as those labeled `Term Version IRI` (`rdf:about`), `Term IRI` (`dcterms:isVersionOf`) and `Term Name` (`rdf:value`) are intended for machine consumption. Some terms such as the `Description` (`rdfs:comment`) are designed to be human-readable and to be understood by consumers of biodiversity `Data Quality Reports`s. Terms such as the `Specification` (`bdqffdq:Specification`) ensure that implementers have no ambiguity about how the Test should be coded.
 
-Terms used to describe the terms in this vocabulary follow the guidance of the [TDWG Standards Documentation Standard (SDS)](https://www.tdwg.org/standards/sds/). Term definitions include the definition of the underlying RDF vocabulary term, and may include a TDWG-specific meaning from the SDS, and may also include a specific definition in this local context. See section [2.4.1 Listing Identifiers for Tests (non-normative)](../../supplement/index.md#241-listing-identifiers-for-tests-non-normative) in [BDQ Supplemental Information](../../supplement/index.md) for a competency question clarifying the relationships among `Term Version IRI`, `Term IRI`, `Term Name`, and `Label`.
+The terminology used to describe the terms in this vocabulary follows the TDWG [TDWG Standards Documentation Standard (SDS)](https://www.tdwg.org/standards/sds/) (SDS). Each term definition includes the original RDF definition, and may also provide a TDWG-specific interpretation from the SDS, as well as a definition tailored to this local context.
+See section [2.4.1 Listing Identifiers for Tests (non-normative)](../../supplement/index.md#241-listing-identifiers-for-tests-non-normative) in [BDQ Supplemental Information](../../supplement/index.md) for a competency question clarifying the relationships among `Term Version IRI`, `Term IRI`, `Term Name`, and `Label`.
 
 {term_key}
 
 ## 2 Use of Terms (normative)
 
-In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use the Term IRI (e.g., 'http://rs.tdwg.org/bdq/bdqffdq/InformationElement') or Term Qualified name (e.g., `bdqffdq:InformationElement`). In a non-RDF context in which resources may be used by software (e.g., a value in a spreadsheet or database table) the Controlled Value String (Local name, e.g., `InformationElement`) MAY be used. In a purely human context a label (e.g., `Information Element`) MAY be used.
+In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use the Term IRI (e.g., `http://rs.tdwg.org/bdq/bdqffdq/InformationElement`) or Term Qualified name (e.g., `bdqffdq:InformationElement`). In a non-RDF context in which resources may be used by software (e.g., a value in a spreadsheet or database table) the Controlled Value String (Local name, e.g., `InformationElement`) MAY be used. In a purely human context a label (e.g., `Information Element`) MAY be used.
 
 ## 3 Term Indices (non-normative)
