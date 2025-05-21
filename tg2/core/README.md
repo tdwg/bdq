@@ -38,9 +38,9 @@ This file contains a complete synthetic [Simple Darwin Core](https://dwc.tdwg.or
 
 TG2_test_validation_data_synthetic_occurrence.csv
 
-### Python script to convert one colums per information Test validation spreadsheet into one with a single column for all Input.data
+### Python script to convert one column per information Test validation spreadsheet into one with a single column for all Input.data
 
-Maintinance of validation data is easier in this more compact spreadsheet form, but the one column per Information Element form is more easily consumed by a Test validation framework.
+Maintenance of validation data is easier in this more compact spreadsheet form, but the one column per Information Element form is more easily consumed by a Test validation framework.
 
 - squish_validation_data.py
 - test_validation_maintainer.csv

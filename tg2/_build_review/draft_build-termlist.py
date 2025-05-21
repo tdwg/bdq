@@ -303,8 +303,8 @@ for term in termLists:
     text = '\n\n'
     
     # Comment out the following two lines if there is no index by local names
-    text = '### 3.2 Index By Label\n\n'
-    text += '(See also [3.1 Index By Term Name](#31-index-by-term-name))\n\n'
+    text = '### 3.2 Index By Label (non-normative)\n\n'
+    text += '(See also [3.1 Index By Term Name (non-normative)](#31-index-by-term-name-non-normative))\n\n'
     
     text += '**Classes**\n'
     text += '\n'

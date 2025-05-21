@@ -55,7 +55,7 @@ Draft Standard for Review
 
 [3 Term index (normative)](#3-term-index-normative)
   - [3.1 Index By Term Name (non-normative)](#31-index-by-term-name-non-normative)
-  - [3.2 Index By Label](#32-index-by-label)
+  - [3.2 Index By Label (non-normative)](#32-index-by-label-non-normative)
 
 [4 Vocabulary (normative)](#4-vocabulary-normative)
 
@@ -147,8 +147,8 @@ The terminology used to describe the terms in this vocabulary follows the TDWG [
 | Modified (dcterms:issued) | normative | Date of formal issuance of the resource. TDWG SDS: The date in ISO 8601 Date format on which the most recent version of the term was issued. | 2024-09-30 |
 | Term Version IRI (rdf:about) | normative | The HTTP IRI that identifies the version of the term that is currently in force. | [https://rs.tdwg.org/ bdqenh/terms/ AssumedDefault-2024-09-30](https://rs.tdwg.org/bdqenh/terms/AssumedDefault-2024-09-30) |
 | Label (rdfs:label) | normative | A human-readable name for the subject. TDWG SDS: A a word or short phrase that serves as a human-readable name for the term. | Assumed Default |
-| Definition (skos:definition) | normative | A statement or formal explanation of the meaning of a concept. TDWG SDS: The normative definition of the term, written in English. | Data could be improved by setting an empty value to a default value |
-| Comments (rdfs:comment) | non-normative | A description of the subject resource. | Data in a bdqffdq:InformationElement are absent and may be proposed to be filled in with a default value.  Corresponding dimension is bdqdim:Completeness |
+| Definition (skos:definition) | normative | A statement or formal explanation of the meaning of a concept. TDWG SDS: The normative definition of the term, written in English. | Data could be improved by setting an empty value to a default value. |
+| Comments (rdfs:comment) | non-normative | A description of the subject resource. | Data in a bdqffdq:InformationElement are absent and may be proposed to be filled in with a default value. Corresponding dimension is bdqdim:Completeness. |
 | Status (tdwgutility:status) |  | Used to indicate if the term is recommended for use or if it is only of historical significance. | recommended |
 | Controlled Value String () | normative |  | AssumedDefault |
 | Type (rdf:type) | normative | The subject is an instance of a class. | bdqffdq:Enhancement |
@@ -177,9 +177,9 @@ An instance of `bdqffdq:Validation`, `bdqffdq:Issue`, or `bdqffdq:Measure` SHOUL
 [bdqenh:Standardized](#bdqenh_Standardized) |
 [bdqenh:Transposed](#bdqenh_Transposed) 
 
-### 3.2 Index By Label
+### 3.2 Index By Label (non-normative)
 
-(See also [3.1 Index By Term Name](#31-index-by-term-name))
+(See also [3.1 Index By Term Name (non-normative)](#31-index-by-term-name-non-normative))
 
 **Classes**
 
@@ -215,11 +215,11 @@ An instance of `bdqffdq:Validation`, `bdqffdq:Issue`, or `bdqffdq:Measure` SHOUL
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>Data could be improved by setting an empty value to a default value</td>
+			<td>Data could be improved by setting an empty value to a default value.</td>
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>Data in a bdqffdq:InformationElement are absent and may be proposed to be filled in with a default value.  Corresponding dimension is bdqdim:Completeness</td>
+			<td>Data in a bdqffdq:InformationElement are absent and may be proposed to be filled in with a default value. Corresponding dimension is bdqdim:Completeness.</td>
 		</tr>
 		<tr>
 			<td>Status</td>
@@ -261,11 +261,11 @@ An instance of `bdqffdq:Validation`, `bdqffdq:Issue`, or `bdqffdq:Measure` SHOUL
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>Data could be improved by converting from one representation to another</td>
+			<td>Data could be improved by converting from one representation to another.</td>
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>As in spatial coordinate transformations.  Data in a bdqffdq:InformationElement that do not conform to some specification may be proposed to be replaced in with a conforming value.  Corresponding dimension is bdqdim:Conformance</td>
+			<td>As in spatial coordinate transformations. Data in a bdqffdq:InformationElement that do not conform to some specification may be proposed to be replaced with a conforming value. Corresponding dimension is bdqdim:Conformance.</td>
 		</tr>
 		<tr>
 			<td>Status</td>
@@ -307,11 +307,11 @@ An instance of `bdqffdq:Validation`, `bdqffdq:Issue`, or `bdqffdq:Measure` SHOUL
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>Data could be improved by using one data value to fill in the empty value in another</td>
+			<td>Data could be improved by using one data value to fill in the empty value in another.</td>
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>As in filling in from verbatim terms.  Data in a bdqffdq:InformationElement are absent and may be proposed to be filled in by interpretation of values in one or more other terms.  Corresponding dimension is bdqdim:Completeness.</td>
+			<td>As in filling in from verbatim terms. Data in a bdqffdq:InformationElement are absent and may be proposed to be filled in by interpretation of values in one or more other terms. Corresponding dimension is bdqdim:Completeness.</td>
 		</tr>
 		<tr>
 			<td>Status</td>
@@ -357,7 +357,7 @@ An instance of `bdqffdq:Validation`, `bdqffdq:Issue`, or `bdqffdq:Measure` SHOUL
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>Data in a bdqffdq:InformationElement that do not conform to some format, syntax, data type, or standard may be proposed to be replaced in with a conforming value.  Corresponding dimension is bdqdim:Conformance</td>
+			<td>Data in a bdqffdq:InformationElement that do not conform to some format, syntax, data type, or standard may be proposed to be replaced with a conforming value. Corresponding dimension is bdqdim:Conformance.</td>
 		</tr>
 		<tr>
 			<td>Status</td>
@@ -403,7 +403,7 @@ An instance of `bdqffdq:Validation`, `bdqffdq:Issue`, or `bdqffdq:Measure` SHOUL
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>Data in a set of at least two bdqffdq:InformationElements that do not conform to expectations may be proposed to have their values switched in order to produce conforming values.  Corresponding dimension is bdqdim:Consistency.</td>
+			<td>Data in a set of at least two bdqffdq:InformationElements that do not conform to expectations may be proposed to have their values switched in order to produce conforming values. Corresponding dimension is bdqdim:Consistency.</td>
 		</tr>
 		<tr>
 			<td>Status</td>

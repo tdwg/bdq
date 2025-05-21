@@ -25,7 +25,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdfs:label xml:lang="en">Alien-Species</rdfs:label>
      <skos:prefLabel xml:lang="en">Alien-Species</skos:prefLabel>
      <rdfs:comment xml:lang="en"></rdfs:comment>
-     <skos:definition xml:lang="en">Research uses forming a bdqffdq:UseCase for Occurrence data of alien species 1) where the Information Elements concern what organism occurred where and when and the means, degree, and pathways of establishment, and 2) that are used for analysis of spatial and/or temporal patterns of biodiversity (see examples in Groom et al. (2019). Improving Darwin Core for research and management of alien species. Biodiversity Information Science and Standards, 3: e38084. https://doi.org/10.3897/biss.3.38084).</skos:definition>
+     <skos:definition xml:lang="en">Research uses forming a bdqffdq:UseCase for dwc:Occurrence data of alien species 1) where the Information Elements concern what dwc:Organism occurred where and when and the means, degree, and pathways of establishment, and 2) that are used for analysis of spatial and/or temporal patterns of biodiversity (see examples in Groom et al. (2019). Improving Darwin Core for research and management of alien species. Biodiversity Information Science and Standards, 3: e38084. https://doi.org/10.3897/biss.3.38084).</skos:definition>
      <rdf:value>Alien-Species</rdf:value>
      <skos:inScheme rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <rdf:type rdf:resource="bdqffdq:UseCase"/>
@@ -81,7 +81,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdfs:label xml:lang="en">annotationSystem</rdfs:label>
      <skos:prefLabel xml:lang="en">annotationSystem</skos:prefLabel>
      <rdfs:comment xml:lang="en">Used in Test "ANNOTATION_ISSUE_NOTEMPTY" (bdqtest:fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1).</rdfs:comment>
-     <skos:definition xml:lang="en">Optionally establishes a system for annotations in a bdq:ParamaterizedTest, with the default being the w3c Annotations Data Model's "oa:Annotation"</skos:definition>
+     <skos:definition xml:lang="en">Optionally establishes a system for annotations in a bdq:ParamaterizedTest, with the default being the W3C Annotations Data Model's "oa:Annotation"</skos:definition>
      <rdf:value>annotationSystem</rdf:value>
      <skos:inScheme rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <rdf:type rdf:resource="bdqffdq:Parameter, owl:NamedIndividual"/>
@@ -95,7 +95,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdfs:label xml:lang="en">assumptionOnUnknownBiome</rdfs:label>
      <skos:prefLabel xml:lang="en">assumptionOnUnknownBiome</skos:prefLabel>
      <rdfs:comment xml:lang="en">See VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT (bdqtest:b9c184ce-a859-410c-9d12-71a338200380).</rdfs:comment>
-     <skos:definition xml:lang="en">Used when a bdq:taxonomyIsMarine source authority is unable to assert the marine or non-marine status of a taxon, the biome (either "marine or "nonmarine") to assume, with the default being "noassumption".</skos:definition>
+     <skos:definition xml:lang="en">Used when a bdq:taxonomyIsMarine sourceAuthority is unable to assert the marine or non-marine status of a taxon, the biome (either "marine or "nonmarine") to assume, with the default being "noassumption".</skos:definition>
      <rdf:value>assumptionOnUnknownBiome</rdf:value>
      <skos:inScheme rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <rdf:type rdf:resource="bdqffdq:Parameter, owl:NamedIndividual"/>
@@ -109,7 +109,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdfs:label xml:lang="en">Biotic-Relationships</rdfs:label>
      <skos:prefLabel xml:lang="en">Biotic-Relationships</skos:prefLabel>
      <rdfs:comment xml:lang="en"></rdfs:comment>
-     <skos:definition xml:lang="en">Research uses forming a bdqffdq:UseCase for relationships between organisms 1) where the bdqffdq:InformationElements concern what organisms have a relationship and 2) that are used for analysis of the relationship of one organism to another (see examples in: Poelen JH, Simons JD, Mungall CJ. (2014). Global Biotic Interactions: An open infrastructure to share and analyze species-interaction datasets. Ecological Informatics, 24, 148–159. https://doi.org/10.1016/j.ecoinf.2014.08.005).</skos:definition>
+     <skos:definition xml:lang="en">Research uses forming a bdqffdq:UseCase for relationships between dwc:Organisms 1) where the bdqffdq:InformationElements concern what dwc:Organisms have a relationship and 2) that are used for analysis of the relationship of one dwc:Organism to another (see examples in: Poelen JH, Simons JD, Mungall CJ. (2014). Global Biotic Interactions: An open infrastructure to share and analyze species-interaction datasets. Ecological Informatics, 24, 148–159. https://doi.org/10.1016/j.ecoinf.2014.08.005).</skos:definition>
      <rdf:value>Biotic-Relationships</rdf:value>
      <skos:inScheme rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <rdf:type rdf:resource="bdqffdq:UseCase"/>
@@ -123,7 +123,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdfs:label xml:lang="en">defaultGeodeticDatum</rdfs:label>
      <skos:prefLabel xml:lang="en">defaultGeodeticDatum</skos:prefLabel>
      <rdfs:comment xml:lang="en">See Test AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT (bdqtest:7498ca76-c4d4-42e2-8103-acacccbdffa7).</rdfs:comment>
-     <skos:definition xml:lang="en">Optionally establishes the default geodetic datum in a bdq:ParamaterizedTest. A default geodetic datum is supplied in cases where a bdq:Parameter is not set at the time the Test is run.</skos:definition>
+     <skos:definition xml:lang="en">Optionally establishes the default dwc:geodeticDatum in a bdq:ParamaterizedTest. A default dwc:geodeticDatum is supplied in cases where a bdq:Parameter is not set at the time the Test is run.</skos:definition>
      <rdf:value>defaultGeodeticDatum</rdf:value>
      <skos:inScheme rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <rdf:type rdf:resource="bdqffdq:Parameter, owl:NamedIndividual"/>
@@ -137,7 +137,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdfs:label xml:lang="en">DefaultSourceAuthority</rdfs:label>
      <skos:prefLabel xml:lang="en">DefaultSourceAuthority</skos:prefLabel>
      <rdfs:comment xml:lang="en"></rdfs:comment>
-     <skos:definition xml:lang="en">A provided default bdq:SourceAuthority that is used when a required bdq:Parameter specifying a bdq:sourceAuthority has not been provided at the time the Test is run.</skos:definition>
+     <skos:definition xml:lang="en">A provided default bdq:sourceAuthority that is used when a required bdq:Parameter specifying a bdq:sourceAuthority has not been provided at the time the Test is run.</skos:definition>
      <rdf:value>DefaultSourceAuthority</rdf:value>
      <skos:inScheme rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <rdf:type rdf:resource="bdqffdq:Parameter, owl:NamedIndividual"/>
@@ -151,7 +151,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdfs:label xml:lang="en">defaultValue</rdfs:label>
      <skos:prefLabel xml:lang="en">defaultValue</skos:prefLabel>
      <rdfs:comment xml:lang="en"></rdfs:comment>
-     <skos:definition xml:lang="en">A preselected value (e.g. year, elevation) to be used where a required bdq:Parameter value has not been provided at the time the Test is run.</skos:definition>
+     <skos:definition xml:lang="en">A preselected value (e.g., year, elevation) to be used where a required bdq:Parameter value has not been provided at the time the Test is run.</skos:definition>
      <rdf:value>defaultValue</rdf:value>
      <skos:inScheme rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <rdf:type rdf:resource="bdqffdq:Parameter, owl:NamedIndividual"/>
@@ -178,7 +178,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <tdwgutility:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recommended</tdwgutility:status>
      <rdfs:label xml:lang="en">Empty</rdfs:label>
      <skos:prefLabel xml:lang="en">Empty</skos:prefLabel>
-     <rdfs:comment xml:lang="en">See also: bdq:NotEmpty. In the BDQ standard, bdq:Empty is used to evaluate bdqffdq:InformationElements within a Test specification, it therefore means empty if the dataset being evaluated does not contain the term matching the Information Element, or if the dataset contains that term but the value for that term is empty. The phrasing 'in the context of the evauation' is to allow the Test implementations to be independent of, and agnostic about the data structures presented to a framework for executing the Tests and the framework within which the Tests are run. The term bdq:Empty is defined to be more broadly usable than just with bdqtest. Note: A bdqffdq:InformationElement containing invalid characters (e.g., letters in an Information Element that would be expected to contain integers) or values (including string serializations of the NULL value) are bdq:NotEmpty and their invalidity must be separately detected. The definition of bdq:Empty is not applicable to a discussion of what value to include in a controlled vocabulary to indicate that no meaningful value is present, so no suggestion is made that bdq:Empty should be used as a data value to represent some form of 'Null', 'unknown', 'not recorded', etc. Choices there would fall into the semantics for some set of controlled vocabularies. The relevance to such a discussion is that the definition of bdq:Empty would treat an empty string as an empty value, with no semantics attached as to why the value is empty</rdfs:comment>
+     <rdfs:comment xml:lang="en">See also: bdq:NotEmpty. In the BDQ standard, bdq:Empty is used to evaluate bdqffdq:InformationElements within a Test specification, it therefore means empty if the dataset being evaluated does not contain the term matching the Information Element, or if the dataset contains that term but the value for that term is empty. The phrasing 'in the context of the evauation' is to allow the Test implementations to be independent of, and agnostic about the data structures presented to a framework for executing the Tests and the framework within which the Tests are run. The term bdq:Empty is defined to be more broadly usable than just with bdqtest:. Note: A bdqffdq:InformationElement containing invalid characters (e.g., letters in an Information Element that would be expected to contain integers) or values (including string serializations of the NULL value) are bdq:NotEmpty and their invalidity must be separately detected. The definition of bdq:Empty is not applicable to a discussion of what value to include in a controlled vocabulary to indicate that no meaningful value is present, so no suggestion is made that bdq:Empty should be used as a data value to represent some form of 'Null', 'unknown', 'not recorded', etc. Choices there would fall into the semantics for some set of controlled vocabularies. The relevance to such a discussion is that the definition of bdq:Empty would treat an empty string as an empty value, with no semantics attached as to why the value is empty</rdfs:comment>
      <skos:definition xml:lang="en">An evaluation of a value, which in the context of the evaluation, returns true if the value does not contain any characters or values other than those in the range U+0000 to U+0020, otherwise returns false. </skos:definition>
      <rdf:value>Empty</rdf:value>
      <skos:inScheme rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
@@ -207,7 +207,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdfs:label xml:lang="en">includeEventDate</rdfs:label>
      <skos:prefLabel xml:lang="en">includeEventDate</skos:prefLabel>
      <rdfs:comment xml:lang="en">Used in Test "VALIDATION_DATEIDENTIFIED_INRANGE" (bdqtest:dc8aae4b-134f-4d75-8a71-c4186239178e).</rdfs:comment>
-     <skos:definition xml:lang="en">Allows dwc:eventDate to be excluded in a bdq:ParameterizedTest. The default is to include the event date in the Test, but it may be excluded to allow an identification to be prior to the dwc:eventDate.</skos:definition>
+     <skos:definition xml:lang="en">Allows dwc:eventDate to be excluded in a bdq:ParameterizedTest. The default is to include the dwc:eventDate in the Test, but it may be excluded to allow a dwc:dateIdentified to be prior to the dwc:eventDate.</skos:definition>
      <rdf:value>includeEventDate</rdf:value>
      <skos:inScheme rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <rdf:type rdf:resource="bdqffdq:Parameter, owl:NamedIndividual"/>
@@ -333,7 +333,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdfs:label xml:lang="en">Spatial-Temporal Patterns</rdfs:label>
      <skos:prefLabel xml:lang="en">Spatial-Temporal Patterns</skos:prefLabel>
      <rdfs:comment xml:lang="en"></rdfs:comment>
-     <skos:definition xml:lang="en">Research uses forming a bdqffdq:UseCase for biodiversity Occurrence data 1) where the Information Elements concern what organism occurred where and when and 2) that are used for analysis of spatial and/or temporal patterns of biodiversity (see examples in Rees ER & Nicholls M (2020) Data Quality Use Case Study Results. Biodiversity Information Science and Standards 4: e50889, suppl. 2. https://doi.org/10.3897/biss.4.50889.suppl2).</skos:definition>
+     <skos:definition xml:lang="en">Research uses forming a bdqffdq:UseCase for dwc:Occurrence data 1) where the Information Elements concern what dwc:Organism occurred where and when and 2) that are used for analysis of spatial and/or temporal patterns of biodiversity (see examples in Rees ER & Nicholls M (2020) Data Quality Use Case Study Results. Biodiversity Information Science and Standards 4: e50889, suppl. 2. https://doi.org/10.3897/biss.4.50889.suppl2).</skos:definition>
      <rdf:value>Spatial-Temporal_Patterns</rdf:value>
      <skos:inScheme rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <rdf:type rdf:resource="bdqffdq:UseCase"/>
@@ -375,7 +375,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdfs:label xml:lang="en">taxonIsMarine</rdfs:label>
      <skos:prefLabel xml:lang="en">taxonIsMarine</skos:prefLabel>
      <rdfs:comment xml:lang="en">See VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT (bdqtest:b9c184ce-a859-410c-9d12-71a338200380).</rdfs:comment>
-     <skos:definition xml:lang="en">A bdq:sourceAuthority that uses dwc:scientificName to deterrmine the "marine" or "non-marine" status of a taxon using the "Environment" term obtained from the World Register of Marine Species (WORMS) database.</skos:definition>
+     <skos:definition xml:lang="en">A bdq:sourceAuthority that uses dwc:scientificName to determine the "marine" or "non-marine" status of a dwc:Taxon using the "Environment" term obtained from the World Register of Marine Species (WORMS) database.</skos:definition>
      <rdf:value>taxonIsMarine</rdf:value>
      <skos:inScheme rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <rdf:type rdf:resource="bdqffdq:Parameter, owl:NamedIndividual"/>

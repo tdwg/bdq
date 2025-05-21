@@ -55,7 +55,7 @@ Draft Standard for Review
 
 [3 Term index (normative)](#3-term-index-normative)
   - [3.1 Index By Term Name (non-normative)](#31-index-by-term-name-non-normative)
-  - [3.2 Index By Label](#32-index-by-label)
+  - [3.2 Index By Label (non-normative)](#32-index-by-label-non-normative)
 
 [4 Vocabulary (normative)](#4-vocabulary-normative)
 
@@ -144,7 +144,7 @@ The terminology used to describe the terms in this vocabulary follows the TDWG [
 | Term Version IRI (rdf:about) | normative | The HTTP IRI that identifies the version of the term that is currently in force. | [https://rs.tdwg.org/ bdqcrit/terms/ Complete-2024-09-30](https://rs.tdwg.org/bdqcrit/terms/Complete-2024-09-30) |
 | Label (rdfs:label) | normative | A human-readable name for the subject. TDWG SDS: A a word or short phrase that serves as a human-readable name for the term. | Complete |
 | Definition (skos:definition) | normative | A statement or formal explanation of the meaning of a concept. TDWG SDS: The normative definition of the term, written in English. | Data are present and sufficiently comprehensive for use. |
-| Comments (rdfs:comment) | non-normative | A description of the subject resource. | Data in a bdqffdq:InformationElement are present and sufficiently comprehensive for use.  Corresponding dimension is bdqdim:Completeness |
+| Comments (rdfs:comment) | non-normative | A description of the subject resource. | Data in a bdqffdq:InformationElement are present and sufficiently comprehensive for use. Corresponding dimension is bdqdim:Completeness. |
 | Status (tdwgutility:status) |  | Used to indicate if the term is recommended for use or if it is only of historical significance. | recommended |
 | Controlled Value String () | normative |  | Complete |
 | Type (rdf:type) | normative | The subject is an instance of a class. | bdqffdq:Criterion |
@@ -176,9 +176,9 @@ An instance of `bdqffdq:Measure` or `bdqffdq:Amendment` SHOULD NOT have a `bdqff
 [bdqcrit:Standard](#bdqcrit_Standard) |
 [bdqcrit:Unambiguous](#bdqcrit_Unambiguous) 
 
-### 3.2 Index By Label
+### 3.2 Index By Label (non-normative)
 
-(See also [3.1 Index By Term Name](#31-index-by-term-name))
+(See also [3.1 Index By Term Name (non-normative)](#31-index-by-term-name-non-normative))
 
 **Classes**
 
@@ -221,7 +221,7 @@ An instance of `bdqffdq:Measure` or `bdqffdq:Amendment` SHOULD NOT have a `bdqff
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>Data in a bdqffdq:InformationElement are present and sufficiently comprehensive for use.  Corresponding dimension is bdqdim:Completeness</td>
+			<td>Data in a bdqffdq:InformationElement are present and sufficiently comprehensive for use. Corresponding dimension is bdqdim:Completeness.</td>
 		</tr>
 		<tr>
 			<td>Status</td>
@@ -267,7 +267,7 @@ An instance of `bdqffdq:Measure` or `bdqffdq:Amendment` SHOULD NOT have a `bdqff
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>A set of bdqffdq:InformationElements and bdq:sourceAuthorities are consistent.   Corresponding dimension is bdqdim:Consistency</td>
+			<td>A set of bdqffdq:InformationElements and bdq:sourceAuthorities are consistent.  Corresponding dimension is bdqdim:Consistency.</td>
 		</tr>
 		<tr>
 			<td>Status</td>
@@ -313,7 +313,7 @@ An instance of `bdqffdq:Measure` or `bdqffdq:Amendment` SHOULD NOT have a `bdqff
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>Data in a bdqffdq:InformationElement conform to a bdq:sourceAuthority.  Corresponding dimension is bdqdim:Conformance</td>
+			<td>Data in a bdqffdq:InformationElement conform to a bdq:sourceAuthority. Corresponding dimension is bdqdim:Conformance.</td>
 		</tr>
 		<tr>
 			<td>Status</td>
@@ -359,7 +359,7 @@ An instance of `bdqffdq:Measure` or `bdqffdq:Amendment` SHOULD NOT have a `bdqff
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>Data in a bdqffdq:InformationElement conform to an expected range of values.  Corresponding dimension is bdqdim:Conformance</td>
+			<td>Data in a bdqffdq:InformationElement conform to an expected range of values. Corresponding dimension is bdqdim:Conformance.</td>
 		</tr>
 		<tr>
 			<td>Status</td>
@@ -405,7 +405,7 @@ An instance of `bdqffdq:Measure` or `bdqffdq:Amendment` SHOULD NOT have a `bdqff
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>Data in a bdqffdq:InformationElement is likely to be true or expected values.  Corresponding dimension is bdqdim:Likeliness</td>
+			<td>Data in a bdqffdq:InformationElement is likely to be true or expected values. Corresponding dimension is bdqdim:Likeliness.</td>
 		</tr>
 		<tr>
 			<td>Status</td>
@@ -451,7 +451,7 @@ An instance of `bdqffdq:Measure` or `bdqffdq:Amendment` SHOULD NOT have a `bdqff
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>Some value is present in a bdqffdq:InformationElement.  Corresponding dimension is bdqdim:Completeness.   See also bdq:EMPTY and bdq:NOT_EMPTY</td>
+			<td>Some value is present in a bdqffdq:InformationElement. Corresponding dimension is bdqdim:Completeness. See also bdq:Empty and bdq:NotEmpty.</td>
 		</tr>
 		<tr>
 			<td>Status</td>
@@ -497,7 +497,7 @@ An instance of `bdqffdq:Measure` or `bdqffdq:Amendment` SHOULD NOT have a `bdqff
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>Data in a bdqffdq:InformationElement conform to a format, syntax, data type, or standard.  Corresponding dimension is bdqdim:Conformance</td>
+			<td>Data in a bdqffdq:InformationElement conform to a format, syntax, data type, or standard. Corresponding dimension is bdqdim:Conformance.</td>
 		</tr>
 		<tr>
 			<td>Status</td>
@@ -543,7 +543,7 @@ An instance of `bdqffdq:Measure` or `bdqffdq:Amendment` SHOULD NOT have a `bdqff
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>Data in a bdqffdq:InformationElement adequately identifies a unique entity.  Corresponding dimension is bdqdim:Conformance</td>
+			<td>Data in a bdqffdq:InformationElement adequately identifies a unique entity. Corresponding dimension is bdqdim:Conformance.</td>
 		</tr>
 		<tr>
 			<td>Status</td>

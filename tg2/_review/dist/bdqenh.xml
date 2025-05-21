@@ -24,8 +24,8 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <tdwgutility:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recommended</tdwgutility:status>
      <rdfs:label xml:lang="en">Assumed Default</rdfs:label>
      <skos:prefLabel xml:lang="en">Assumed Default</skos:prefLabel>
-     <rdfs:comment xml:lang="en">Data in a bdqffdq:InformationElement are absent and may be proposed to be filled in with a default value.  Corresponding dimension is bdqdim:Completeness</rdfs:comment>
-     <skos:definition xml:lang="en">Data could be improved by setting an empty value to a default value</skos:definition>
+     <rdfs:comment xml:lang="en">Data in a bdqffdq:InformationElement are absent and may be proposed to be filled in with a default value. Corresponding dimension is bdqdim:Completeness.</rdfs:comment>
+     <skos:definition xml:lang="en">Data could be improved by setting an empty value to a default value.</skos:definition>
      <rdf:value>AssumedDefault</rdf:value>
      <skos:inScheme rdf:resource="http://rs.tdwg.org/bdqenh/terms/"/>
      <rdf:type rdf:resource="bdqffdq:Enhancement"/>
@@ -38,8 +38,8 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <tdwgutility:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recommended</tdwgutility:status>
      <rdfs:label xml:lang="en">Converted</rdfs:label>
      <skos:prefLabel xml:lang="en">Converted</skos:prefLabel>
-     <rdfs:comment xml:lang="en">As in spatial coordinate transformations.  Data in a bdqffdq:InformationElement that do not conform to some specification may be proposed to be replaced in with a conforming value.  Corresponding dimension is bdqdim:Conformance</rdfs:comment>
-     <skos:definition xml:lang="en">Data could be improved by converting from one representation to another</skos:definition>
+     <rdfs:comment xml:lang="en">As in spatial coordinate transformations. Data in a bdqffdq:InformationElement that do not conform to some specification may be proposed to be replaced with a conforming value. Corresponding dimension is bdqdim:Conformance.</rdfs:comment>
+     <skos:definition xml:lang="en">Data could be improved by converting from one representation to another.</skos:definition>
      <rdf:value>Converted</rdf:value>
      <skos:inScheme rdf:resource="http://rs.tdwg.org/bdqenh/terms/"/>
      <rdf:type rdf:resource="bdqffdq:Enhancement"/>
@@ -52,8 +52,8 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <tdwgutility:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recommended</tdwgutility:status>
      <rdfs:label xml:lang="en">Fill In From</rdfs:label>
      <skos:prefLabel xml:lang="en">Fill In From</skos:prefLabel>
-     <rdfs:comment xml:lang="en">As in filling in from verbatim terms.  Data in a bdqffdq:InformationElement are absent and may be proposed to be filled in by interpretation of values in one or more other terms.  Corresponding dimension is bdqdim:Completeness.</rdfs:comment>
-     <skos:definition xml:lang="en">Data could be improved by using one data value to fill in the empty value in another</skos:definition>
+     <rdfs:comment xml:lang="en">As in filling in from verbatim terms. Data in a bdqffdq:InformationElement are absent and may be proposed to be filled in by interpretation of values in one or more other terms. Corresponding dimension is bdqdim:Completeness.</rdfs:comment>
+     <skos:definition xml:lang="en">Data could be improved by using one data value to fill in the empty value in another.</skos:definition>
      <rdf:value>FilledInFrom</rdf:value>
      <skos:inScheme rdf:resource="http://rs.tdwg.org/bdqenh/terms/"/>
      <rdf:type rdf:resource="bdqffdq:Enhancement"/>
@@ -66,7 +66,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <tdwgutility:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recommended</tdwgutility:status>
      <rdfs:label xml:lang="en">Standardized</rdfs:label>
      <skos:prefLabel xml:lang="en">Standardized</skos:prefLabel>
-     <rdfs:comment xml:lang="en">Data in a bdqffdq:InformationElement that do not conform to some format, syntax, data type, or standard may be proposed to be replaced in with a conforming value.  Corresponding dimension is bdqdim:Conformance</rdfs:comment>
+     <rdfs:comment xml:lang="en">Data in a bdqffdq:InformationElement that do not conform to some format, syntax, data type, or standard may be proposed to be replaced with a conforming value. Corresponding dimension is bdqdim:Conformance.</rdfs:comment>
      <skos:definition xml:lang="en">Data could be improved by conforming them to a standard representation.</skos:definition>
      <rdf:value>Standardized</rdf:value>
      <skos:inScheme rdf:resource="http://rs.tdwg.org/bdqenh/terms/"/>
@@ -80,7 +80,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <tdwgutility:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recommended</tdwgutility:status>
      <rdfs:label xml:lang="en">Transposed</rdfs:label>
      <skos:prefLabel xml:lang="en">Transposed</skos:prefLabel>
-     <rdfs:comment xml:lang="en">Data in a set of at least two bdqffdq:InformationElements that do not conform to expectations may be proposed to have their values switched in order to produce conforming values.  Corresponding dimension is bdqdim:Consistency.</rdfs:comment>
+     <rdfs:comment xml:lang="en">Data in a set of at least two bdqffdq:InformationElements that do not conform to expectations may be proposed to have their values switched in order to produce conforming values. Corresponding dimension is bdqdim:Consistency.</rdfs:comment>
      <skos:definition xml:lang="en">Data could be improved by switching values between two or more fields.</skos:definition>
      <rdf:value>Transposed</rdf:value>
      <skos:inScheme rdf:resource="http://rs.tdwg.org/bdqenh/terms/"/>

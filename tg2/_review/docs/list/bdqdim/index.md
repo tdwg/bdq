@@ -55,7 +55,7 @@ Draft Standard for Review
 
 [3 Term index (normative)](#3-term-index-normative)
   - [3.1 Index By Term Name (non-normative)](#31-index-by-term-name-non-normative)
-  - [3.2 Index By Label](#32-index-by-label)
+  - [3.2 Index By Label (non-normative)](#32-index-by-label-non-normative)
 
 [4 Vocabulary (normative)](#4-vocabulary-normative)
 
@@ -147,7 +147,7 @@ The terminology used to describe the terms in this vocabulary follows the TDWG [
 | Term Version IRI (rdf:about) | normative | The HTTP IRI that identifies the version of the term that is currently in force. | [https://rs.tdwg.org/ bdqdim/terms/version/ Completeness-2024-09-30](https://rs.tdwg.org/bdqdim/terms/version/Completeness-2024-09-30) |
 | Label (rdfs:label) | normative | A human-readable name for the subject. TDWG SDS: A a word or short phrase that serves as a human-readable name for the term. | Completeness |
 | Definition (skos:definition) | normative | A statement or formal explanation of the meaning of a concept. TDWG SDS: The normative definition of the term, written in English. | The extent to which data in a bdqffdq:InformationElement are present and sufficiently comprehensive for use. |
-| Comments (rdfs:comment) | non-normative | A description of the subject resource. | Definition from the Fitness for Use Framework: Data Quality Dimensions Document  https://github.com/tdwg/bdq/wiki/TG2-Data-Quality-Dimension. |
+| Comments (rdfs:comment) | non-normative | A description of the subject resource. | Definition from the Fitness for Use Framework: Data Quality Dimensions Document https://github.com/tdwg/bdq/wiki/TG2-Data-Quality-Dimension. |
 | Status (tdwgutility:status) |  | Used to indicate if the term is recommended for use or if it is only of historical significance. | recommended |
 | Controlled Value String () | normative |  | Completeness |
 | Type (rdf:type) | normative | The subject is an instance of a class. | bdqffdq:DataQualityDimension |
@@ -175,9 +175,9 @@ Each instance of a Test, regardless of Test type, SHOULD have exactly one `bdqff
 [bdqdim:Reliability](#bdqdim_Reliability) |
 [bdqdim:Resolution](#bdqdim_Resolution) 
 
-### 3.2 Index By Label
+### 3.2 Index By Label (non-normative)
 
-(See also [3.1 Index By Term Name](#31-index-by-term-name))
+(See also [3.1 Index By Term Name (non-normative)](#31-index-by-term-name-non-normative))
 
 **Classes**
 
@@ -218,7 +218,7 @@ Each instance of a Test, regardless of Test type, SHOULD have exactly one `bdqff
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>Definition from the Fitness for Use Framework: Data Quality Dimensions Document  https://github.com/tdwg/bdq/wiki/TG2-Data-Quality-Dimension.</td>
+			<td>Definition from the Fitness for Use Framework: Data Quality Dimensions Document https://github.com/tdwg/bdq/wiki/TG2-Data-Quality-Dimension.</td>
 		</tr>
 		<tr>
 			<td>Status</td>
@@ -264,7 +264,7 @@ Each instance of a Test, regardless of Test type, SHOULD have exactly one `bdqff
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>Definition from the Fitness for Use Framework: Data Quality Dimensions Document  https://github.com/tdwg/bdq/wiki/TG2-Data-Quality-Dimension.</td>
+			<td>Definition from the Fitness for Use Framework: Data Quality Dimensions Document https://github.com/tdwg/bdq/wiki/TG2-Data-Quality-Dimension.</td>
 		</tr>
 		<tr>
 			<td>Status</td>
@@ -310,7 +310,7 @@ Each instance of a Test, regardless of Test type, SHOULD have exactly one `bdqff
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>Definition from the Fitness for Use Framework: Data Quality Dimensions Document  https://github.com/tdwg/bdq/wiki/TG2-Data-Quality-Dimension.</td>
+			<td>Definition from the Fitness for Use Framework: Data Quality Dimensions Document https://github.com/tdwg/bdq/wiki/TG2-Data-Quality-Dimension.</td>
 		</tr>
 		<tr>
 			<td>Status</td>
@@ -352,11 +352,11 @@ Each instance of a Test, regardless of Test type, SHOULD have exactly one `bdqff
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>The likelihood of Darwin Core Term(s) having true or expected values.</td>
+			<td>The likelihood of one or more Darwin Core Terms having a true or expected values.</td>
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>Definition from the Fitness for Use Framework: Data Quality Dimensions Document  https://github.com/tdwg/bdq/wiki/TG2-Data-Quality-Dimension).</td>
+			<td>Definition from the Fitness for Use Framework: Data Quality Dimensions Document https://github.com/tdwg/bdq/wiki/TG2-Data-Quality-Dimension).</td>
 		</tr>
 		<tr>
 			<td>Status</td>
@@ -402,7 +402,7 @@ Each instance of a Test, regardless of Test type, SHOULD have exactly one `bdqff
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>Definition from the Fitness for Use Framework: Data Quality Dimensions Document  https://github.com/tdwg/bdq/wiki/TG2-Data-Quality-Dimension.</td>
+			<td>Definition from the Fitness for Use Framework: Data Quality Dimensions Document https://github.com/tdwg/bdq/wiki/TG2-Data-Quality-Dimension.</td>
 		</tr>
 		<tr>
 			<td>Status</td>
@@ -448,7 +448,7 @@ Each instance of a Test, regardless of Test type, SHOULD have exactly one `bdqff
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>Definition from the Fitness for Use Framework: Data Quality Dimensions Document  https://github.com/tdwg/bdq/wiki/TG2-Data-Quality-Dimension.</td>
+			<td>Definition from the Fitness for Use Framework: Data Quality Dimensions Document https://github.com/tdwg/bdq/wiki/TG2-Data-Quality-Dimension.</td>
 		</tr>
 		<tr>
 			<td>Status</td>

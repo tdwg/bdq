@@ -602,7 +602,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Preferred Label</td>
-			<td>Amendment Coordinates From Verbatim</td>
+			<td>Amendment Coordinates from Verbatim</td>
 		</tr>
 		<tr>
 			<td>Term IRI</td>
@@ -1264,7 +1264,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority is "DCMI Type Vocabulary" {[http://purl.org/dc/terms/DCMIType]} {"DCMI Type Vocabulary List Of Terms" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}</td>
+			<td>bdq:sourceAuthority is "DCMI Type Vocabulary" {[http://purl.org/dc/terms/DCMIType]} {"DCMI Type Vocabulary List of Terms" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -1553,7 +1553,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Preferred Label</td>
-			<td>Amendment dwc:eventDate From dwc:verbatimEventDate</td>
+			<td>Amendment dwc:eventDate from dwc:verbatimEventDate</td>
 		</tr>
 		<tr>
 			<td>Term IRI</td>
@@ -2393,7 +2393,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Preferred Label</td>
-			<td>Amendment dwc:minimumDepthInMeters dwc:maximumDepthInMeters From dwc:verbatimDepth</td>
+			<td>Amendment dwc:minimumDepthInMeters dwc:maximumDepthInMeters from dwc:verbatimDepth</td>
 		</tr>
 		<tr>
 			<td>Term IRI</td>
@@ -2492,7 +2492,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Preferred Label</td>
-			<td>Amendment dwc:minimumElevationInMeters dwc:maximumElevationInMeters From dwc:verbatimElevation</td>
+			<td>Amendment dwc:minimumElevationInMeters dwc:maximumElevationInMeters from dwc:verbatimElevation</td>
 		</tr>
 		<tr>
 			<td>Term IRI</td>
@@ -3673,7 +3673,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Preferred Label</td>
-			<td>Issue Coordinates Center Of Country</td>
+			<td>Issue Coordinates Center of Country</td>
 		</tr>
 		<tr>
 			<td>Term IRI</td>
@@ -4057,7 +4057,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Preferred Label</td>
-			<td>Measure dwc:eventDate Duration In Seconds</td>
+			<td>Measure dwc:eventDate Duration in Seconds</td>
 		</tr>
 		<tr>
 			<td>Term IRI</td>
@@ -4891,7 +4891,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if either bdq:taxonIsMarine or bdq:geospatialLand are not available; INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:scientificName is bdq:Empty or (2)  the values of dwc:decimalLatitude or dwc:decimalLongitude are bdq:Empty or (3) if bdq:assumptionOnUnknownBiome is noassumption and the marine/nonmarine status of the taxon is not interpretable from bdq:taxonIsMarine; COMPLIANT if (1) the taxon marine/nonmarine status from bdq:taxonIsMarine matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdq:geospatialLand plus an exterior buffer given by bdq:spatialBufferInMeters or (2)  if the marine/nonmarine status of the taxon is not interpretable from bdq:taxonIsMarine and bdq:assumptionOnUnknownBiome matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdq:geospatialLand plus an exterior buffer given by bdq:spatialBufferInMeters; otherwise NOT_COMPLIANT</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if either bdq:taxonIsMarine or bdq:geospatialLand are not available; INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:scientificName is bdq:Empty or (2) the values of dwc:decimalLatitude or dwc:decimalLongitude are bdq:Empty or (3) if bdq:assumptionOnUnknownBiome is noassumption and the marine/nonmarine status of the taxon is not interpretable from bdq:taxonIsMarine; COMPLIANT if (1) the taxon marine/nonmarine status from bdq:taxonIsMarine matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdq:geospatialLand plus an exterior buffer given by bdq:spatialBufferInMeters or (2) if the marine/nonmarine status of the taxon is not interpretable from bdq:taxonIsMarine and bdq:assumptionOnUnknownBiome matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdq:geospatialLand plus an exterior buffer given by bdq:spatialBufferInMeters; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -5049,7 +5049,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:coordinateUncertaintyInMeters is bdq:Empty; COMPLIANT if the value of  dwc:coordinateUncertaintyInMeters is interpreted as a number between 1 and 20037509 inclusive; otherwise NOT_COMPLIANT</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:coordinateUncertaintyInMeters is bdq:Empty; COMPLIANT if the value of dwc:coordinateUncertaintyInMeters is interpreted as a number between 1 and 20037509 inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -5993,7 +5993,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>DCMI Type Vocabulary" {[http://purl.org/dc/terms/DCMIType]} {"DCMI Type Vocabulary List Of Terms" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}</td>
+			<td>DCMI Type Vocabulary" {[http://purl.org/dc/terms/DCMIType]} {"DCMI Type Vocabulary List of Terms" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -7067,7 +7067,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available;  INTERNAL_PREREQUISITES_NOT_MET if dwc:genus is bdq:Empty; COMPLIANT if the value of dwc:genus is found as a value at the rank of genus in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:genus is bdq:Empty; COMPLIANT if the value of dwc:genus is found as a value at the rank of genus in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -7924,7 +7924,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Preferred Label</td>
-			<td>Measurement over MultiRecord Counting Compliance of Validation  dwc:minimumDepthInMeters Less Than dwc:maximumDepthInMeters</td>
+			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:minimumDepthInMeters less than dwc:maximumDepthInMeters</td>
 		</tr>
 		<tr>
 			<td>Term IRI</td>
@@ -8082,7 +8082,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Preferred Label</td>
-			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:minimumElevationInMeters Less Than dwcmaximumElevationInMeters</td>
+			<td>Measurement over MultiRecord Counting Compliance of Validation dwc:minimumElevationInMeters less than dwcmaximumElevationInMeters</td>
 		</tr>
 		<tr>
 			<td>Term IRI</td>
@@ -10551,7 +10551,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if either bdq:taxonIsMarine or bdq:geospatialLand are not available; INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:scientificName is bdq:Empty or (2)  the values of dwc:decimalLatitude or dwc:decimalLongitude are bdq:Empty or (3) if bdq:assumptionOnUnknownBiome is noassumption and the marine/nonmarine status of the taxon is not interpretable from bdq:taxonIsMarine; COMPLIANT if (1) the taxon marine/nonmarine status from bdq:taxonIsMarine matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdq:geospatialLand plus an exterior buffer given by bdq:spatialBufferInMeters or (2)  if the marine/nonmarine status of the taxon is not interpretable from bdq:taxonIsMarine and bdq:assumptionOnUnknownBiome matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdq:geospatialLand plus an exterior buffer given by bdq:spatialBufferInMeters; otherwise NOT_COMPLIANT</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if either bdq:taxonIsMarine or bdq:geospatialLand are not available; INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:scientificName is bdq:Empty or (2) the values of dwc:decimalLatitude or dwc:decimalLongitude are bdq:Empty or (3) if bdq:assumptionOnUnknownBiome is noassumption and the marine/nonmarine status of the taxon is not interpretable from bdq:taxonIsMarine; COMPLIANT if (1) the taxon marine/nonmarine status from bdq:taxonIsMarine matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdq:geospatialLand plus an exterior buffer given by bdq:spatialBufferInMeters or (2) if the marine/nonmarine status of the taxon is not interpretable from bdq:taxonIsMarine and bdq:assumptionOnUnknownBiome matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdq:geospatialLand plus an exterior buffer given by bdq:spatialBufferInMeters; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -10709,7 +10709,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:coordinateUncertaintyInMeters is bdq:Empty; COMPLIANT if the value of  dwc:coordinateUncertaintyInMeters is interpreted as a number between 1 and 20037509 inclusive; otherwise NOT_COMPLIANT</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:coordinateUncertaintyInMeters is bdq:Empty; COMPLIANT if the value of dwc:coordinateUncertaintyInMeters is interpreted as a number between 1 and 20037509 inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -11653,7 +11653,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>DCMI Type Vocabulary" {[http://purl.org/dc/terms/DCMIType]} {"DCMI Type Vocabulary List Of Terms" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}</td>
+			<td>DCMI Type Vocabulary" {[http://purl.org/dc/terms/DCMIType]} {"DCMI Type Vocabulary List of Terms" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -12727,7 +12727,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available;  INTERNAL_PREREQUISITES_NOT_MET if dwc:genus is bdq:Empty; COMPLIANT if the value of dwc:genus is found as a value at the rank of genus in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:genus is bdq:Empty; COMPLIANT if the value of dwc:genus is found as a value at the rank of genus in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -13584,7 +13584,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Preferred Label</td>
-			<td>Measurement over MultiRecord for QualityAssurance of Validation  dwc:minimumDepthInMeters Less Than dwc:maximumDepthInMeters</td>
+			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:minimumDepthInMeters less than dwc:maximumDepthInMeters</td>
 		</tr>
 		<tr>
 			<td>Term IRI</td>
@@ -13742,7 +13742,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Preferred Label</td>
-			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:minimumElevationInMeters Less Than dwcmaximumElevationInMeters</td>
+			<td>Measurement over MultiRecord for QualityAssurance of Validation dwc:minimumElevationInMeters less than dwcmaximumElevationInMeters</td>
 		</tr>
 		<tr>
 			<td>Term IRI</td>
@@ -17813,7 +17813,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>DCMI Type Vocabulary" {[http://purl.org/dc/terms/DCMIType]} {"DCMI Type Vocabulary List Of Terms" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}</td>
+			<td>DCMI Type Vocabulary" {[http://purl.org/dc/terms/DCMIType]} {"DCMI Type Vocabulary List of Terms" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -20348,7 +20348,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Preferred Label</td>
-			<td>Validation dwc:minimumDepthInMeters Less Than dwc:maximumDepthInMeters</td>
+			<td>Validation dwc:minimumDepthInMeters less than dwc:maximumDepthInMeters</td>
 		</tr>
 		<tr>
 			<td>Term IRI</td>
@@ -20554,7 +20554,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Preferred Label</td>
-			<td>Validation dwc:minimumElevationInMeters Less Than dwcmaximumElevationInMeters</td>
+			<td>Validation dwc:minimumElevationInMeters less than dwcmaximumElevationInMeters</td>
 		</tr>
 		<tr>
 			<td>Term IRI</td>

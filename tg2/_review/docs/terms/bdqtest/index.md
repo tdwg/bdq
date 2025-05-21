@@ -274,7 +274,7 @@ dc:type
 
 #### Default Parameter Values
 
-DCMI Type Vocabulary" {[http://purl.org/dc/terms/DCMIType]} {"DCMI Type Vocabulary List Of Terms" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}
+DCMI Type Vocabulary" {[http://purl.org/dc/terms/DCMIType]} {"DCMI Type Vocabulary List of Terms" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}
 
 #### Examples
 
@@ -1219,7 +1219,7 @@ The Challenger Deep in the Mariana Trench is the deepest known point in Earth's 
 
 ###  VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH
 
-####  Validation dwc:minimumDepthInMeters Less Than dwc:maximumDepthInMeters
+####  Validation dwc:minimumDepthInMeters less than dwc:maximumDepthInMeters
 https://rs.tdwg.org/bdqtest/terms/8f1e6e58-544b-4365-a569-fb781341644e/2023-09-18
 Acts upon  SingleRecord
 
@@ -1297,7 +1297,7 @@ We have rounded up the Parameter values. We are aware of sub-ice elevations in A
 
 ###  VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION
 
-####  Validation dwc:minimumElevationInMeters Less Than dwcmaximumElevationInMeters
+####  Validation dwc:minimumElevationInMeters less than dwcmaximumElevationInMeters
 https://rs.tdwg.org/bdqtest/terms/d708526b-6561-438e-aa1a-82cd80b06396/2023-09-18
 Acts upon  SingleRecord
 
@@ -3137,7 +3137,7 @@ We have three individual measures for pass (MEASURE_VALIDATIONTESTS_COMPLIANT (4
 
 ###  MEASURE_EVENTDATE_DURATIONINSECONDS
 
-####  Measure dwc:eventDate Duration In Seconds
+####  Measure dwc:eventDate Duration in Seconds
 https://rs.tdwg.org/bdqtest/terms/56b6c695-adf1-418e-95d2-da04cad7be53/2024-09-16
 Acts upon  SingleRecord
 
@@ -3211,7 +3211,7 @@ This is not specific to spatial data, any value in the dwc:dataGeneralizations f
 
 ###  ISSUE_COORDINATES_CENTEROFCOUNTRY
 
-####  Issue Coordinates Center Of Country
+####  Issue Coordinates Center of Country
 https://rs.tdwg.org/bdqtest/terms/256e51b3-1e08-4349-bb7e-5186631c3f8e/2024-08-28
 Acts upon  SingleRecord
 
@@ -3400,7 +3400,7 @@ dc:type
 
 #### Default Parameter Values
 
-bdq:sourceAuthority is "DCMI Type Vocabulary" {[http://purl.org/dc/terms/DCMIType]} {"DCMI Type Vocabulary List Of Terms" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}
+bdq:sourceAuthority is "DCMI Type Vocabulary" {[http://purl.org/dc/terms/DCMIType]} {"DCMI Type Vocabulary List of Terms" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}
 
 #### Examples
 
@@ -3467,7 +3467,7 @@ The license at the record level might be derived from the license of the dataset
 
 ###  AMENDMENT_COORDINATES_FROM_VERBATIM
 
-####  Amendment Coordinates From Verbatim
+####  Amendment Coordinates from Verbatim
 https://rs.tdwg.org/bdqtest/terms/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e/2024-08-20
 Acts upon  SingleRecord
 
@@ -3733,7 +3733,7 @@ Chapman and Wieczorek (2020) recommend best practice is to use EPSG codes (https
 
 ###  AMENDMENT_MINDEPTHMAXDEPTH_FROM_VERBATIM
 
-####  Amendment dwc:minimumDepthInMeters dwc:maximumDepthInMeters From dwc:verbatimDepth
+####  Amendment dwc:minimumDepthInMeters dwc:maximumDepthInMeters from dwc:verbatimDepth
 https://rs.tdwg.org/bdqtest/terms/c5658b83-4471-4f57-9d94-bf7d0a96900c/2024-08-30
 Acts upon  SingleRecord
 
@@ -3773,7 +3773,7 @@ If dwc:verbatimDepth has a single value rather than a range, the minimum and max
 
 ###  AMENDMENT_MINELEVATIONMAXELEVATION_FROM_VERBATIM
 
-####  Amendment dwc:minimumElevationInMeters dwc:maximumElevationInMeters From dwc:verbatimElevation
+####  Amendment dwc:minimumElevationInMeters dwc:maximumElevationInMeters from dwc:verbatimElevation
 https://rs.tdwg.org/bdqtest/terms/2d638c8b-4c62-44a0-a14d-fa147bf9823d/2024-08-30
 Acts upon  SingleRecord
 
@@ -3850,7 +3850,7 @@ If dwc:day contains text that may be interpreted as Roman numerals, the result w
 
 ###  AMENDMENT_EVENTDATE_FROM_VERBATIM
 
-####  Amendment dwc:eventDate From dwc:verbatimEventDate
+####  Amendment dwc:eventDate from dwc:verbatimEventDate
 https://rs.tdwg.org/bdqtest/terms/6d0a0c10-5e4a-4759-b448-88932f399812/2024-09-16
 Acts upon  SingleRecord
 
@@ -5009,7 +5009,7 @@ Count the number of VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT in a reco
 
 #### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if either bdq:taxonIsMarine or bdq:geospatialLand are not available; INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:scientificName is bdq:Empty or (2)  the values of dwc:decimalLatitude or dwc:decimalLongitude are bdq:Empty or (3) if bdq:assumptionOnUnknownBiome is noassumption and the marine/nonmarine status of the taxon is not interpretable from bdq:taxonIsMarine; COMPLIANT if (1) the taxon marine/nonmarine status from bdq:taxonIsMarine matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdq:geospatialLand plus an exterior buffer given by bdq:spatialBufferInMeters or (2)  if the marine/nonmarine status of the taxon is not interpretable from bdq:taxonIsMarine and bdq:assumptionOnUnknownBiome matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdq:geospatialLand plus an exterior buffer given by bdq:spatialBufferInMeters; otherwise NOT_COMPLIANT
+EXTERNAL_PREREQUISITES_NOT_MET if either bdq:taxonIsMarine or bdq:geospatialLand are not available; INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:scientificName is bdq:Empty or (2) the values of dwc:decimalLatitude or dwc:decimalLongitude are bdq:Empty or (3) if bdq:assumptionOnUnknownBiome is noassumption and the marine/nonmarine status of the taxon is not interpretable from bdq:taxonIsMarine; COMPLIANT if (1) the taxon marine/nonmarine status from bdq:taxonIsMarine matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdq:geospatialLand plus an exterior buffer given by bdq:spatialBufferInMeters or (2) if the marine/nonmarine status of the taxon is not interpretable from bdq:taxonIsMarine and bdq:assumptionOnUnknownBiome matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdq:geospatialLand plus an exterior buffer given by bdq:spatialBufferInMeters; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -5069,7 +5069,7 @@ Count the number of VALIDATION_COORDINATEUNCERTAINTY_INRANGE in a record set tha
 
 #### Specification
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:coordinateUncertaintyInMeters is bdq:Empty; COMPLIANT if the value of  dwc:coordinateUncertaintyInMeters is interpreted as a number between 1 and 20037509 inclusive; otherwise NOT_COMPLIANT
+INTERNAL_PREREQUISITES_NOT_MET if dwc:coordinateUncertaintyInMeters is bdq:Empty; COMPLIANT if the value of dwc:coordinateUncertaintyInMeters is interpreted as a number between 1 and 20037509 inclusive; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -5569,7 +5569,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINDEPTH_LESSTHAN_MAXDEPTH
 
-####  Measurement over MultiRecord Counting Compliance of Validation  dwc:minimumDepthInMeters Less Than dwc:maximumDepthInMeters
+####  Measurement over MultiRecord Counting Compliance of Validation dwc:minimumDepthInMeters less than dwc:maximumDepthInMeters
 https://rs.tdwg.org/bdqtest/terms/b21256c2-4bb7-4deb-852d-a9eaa05345e7/2023-09-18
 Acts upon  MultiRecord
 
@@ -5629,7 +5629,7 @@ For Quality Control, compare the Response.result of this measure with the total 
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINELEVATION_LESSTHAN_MAXELEVATION
 
-####  Measurement over MultiRecord Counting Compliance of Validation dwc:minimumElevationInMeters Less Than dwcmaximumElevationInMeters
+####  Measurement over MultiRecord Counting Compliance of Validation dwc:minimumElevationInMeters less than dwcmaximumElevationInMeters
 https://rs.tdwg.org/bdqtest/terms/be2eb717-b390-47d1-b7ba-965a1101e215/2023-09-18
 Acts upon  MultiRecord
 
@@ -5759,7 +5759,7 @@ Measure if all VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT in a record se
 
 #### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if either bdq:taxonIsMarine or bdq:geospatialLand are not available; INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:scientificName is bdq:Empty or (2)  the values of dwc:decimalLatitude or dwc:decimalLongitude are bdq:Empty or (3) if bdq:assumptionOnUnknownBiome is noassumption and the marine/nonmarine status of the taxon is not interpretable from bdq:taxonIsMarine; COMPLIANT if (1) the taxon marine/nonmarine status from bdq:taxonIsMarine matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdq:geospatialLand plus an exterior buffer given by bdq:spatialBufferInMeters or (2)  if the marine/nonmarine status of the taxon is not interpretable from bdq:taxonIsMarine and bdq:assumptionOnUnknownBiome matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdq:geospatialLand plus an exterior buffer given by bdq:spatialBufferInMeters; otherwise NOT_COMPLIANT
+EXTERNAL_PREREQUISITES_NOT_MET if either bdq:taxonIsMarine or bdq:geospatialLand are not available; INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:scientificName is bdq:Empty or (2) the values of dwc:decimalLatitude or dwc:decimalLongitude are bdq:Empty or (3) if bdq:assumptionOnUnknownBiome is noassumption and the marine/nonmarine status of the taxon is not interpretable from bdq:taxonIsMarine; COMPLIANT if (1) the taxon marine/nonmarine status from bdq:taxonIsMarine matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdq:geospatialLand plus an exterior buffer given by bdq:spatialBufferInMeters or (2) if the marine/nonmarine status of the taxon is not interpretable from bdq:taxonIsMarine and bdq:assumptionOnUnknownBiome matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdq:geospatialLand plus an exterior buffer given by bdq:spatialBufferInMeters; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -5819,7 +5819,7 @@ Measure if all VALIDATION_COORDINATEUNCERTAINTY_INRANGE in a record set are COMP
 
 #### Specification
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:coordinateUncertaintyInMeters is bdq:Empty; COMPLIANT if the value of  dwc:coordinateUncertaintyInMeters is interpreted as a number between 1 and 20037509 inclusive; otherwise NOT_COMPLIANT
+INTERNAL_PREREQUISITES_NOT_MET if dwc:coordinateUncertaintyInMeters is bdq:Empty; COMPLIANT if the value of dwc:coordinateUncertaintyInMeters is interpreted as a number between 1 and 20037509 inclusive; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -6319,7 +6319,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 
 ###  MULTIRECORD_MEASURE_QA_MINDEPTH_LESSTHAN_MAXDEPTH
 
-####  Measurement over MultiRecord for QualityAssurance of Validation  dwc:minimumDepthInMeters Less Than dwc:maximumDepthInMeters
+####  Measurement over MultiRecord for QualityAssurance of Validation dwc:minimumDepthInMeters less than dwc:maximumDepthInMeters
 https://rs.tdwg.org/bdqtest/terms/fcabd2c9-392c-4841-a5d7-e2680c9587ab/2023-09-18
 Acts upon  MultiRecord
 
@@ -6379,7 +6379,7 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 
 ###  MULTIRECORD_MEASURE_QA_MINELEVATION_LESSTHAN_MAXELEVATION
 
-####  Measurement over MultiRecord for QualityAssurance of Validation dwc:minimumElevationInMeters Less Than dwcmaximumElevationInMeters
+####  Measurement over MultiRecord for QualityAssurance of Validation dwc:minimumElevationInMeters less than dwcmaximumElevationInMeters
 https://rs.tdwg.org/bdqtest/terms/44f00697-ca66-43cf-8f16-646b40c0f514/2023-09-18
 Acts upon  MultiRecord
 
@@ -7859,7 +7859,7 @@ Count the number of VALIDATION_GENUS_FOUND in a record set that are COMPLIANT.
 
 #### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available;  INTERNAL_PREREQUISITES_NOT_MET if dwc:genus is bdq:Empty; COMPLIANT if the value of dwc:genus is found as a value at the rank of genus in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:genus is bdq:Empty; COMPLIANT if the value of dwc:genus is found as a value at the rank of genus in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -8429,7 +8429,7 @@ Measure if all VALIDATION_GENUS_FOUND in a record set are COMPLIANT or INTERNAL_
 
 #### Specification
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available;  INTERNAL_PREREQUISITES_NOT_MET if dwc:genus is bdq:Empty; COMPLIANT if the value of dwc:genus is found as a value at the rank of genus in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
+EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:genus is bdq:Empty; COMPLIANT if the value of dwc:genus is found as a value at the rank of genus in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
 
 #### Information Elements
 

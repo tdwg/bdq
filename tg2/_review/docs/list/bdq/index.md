@@ -55,7 +55,7 @@ Draft Standard for Review
 
 [3 Term index (normative)](#3-term-index-normative)
   - [3.1 Index By Term Name (non-normative)](#31-index-by-term-name-non-normative)
-  - [3.2 Index By Label](#32-index-by-label)
+  - [3.2 Index By Label (non-normative)](#32-index-by-label-non-normative)
 
 [4 Vocabulary (normative)](#4-vocabulary-normative)
 
@@ -150,7 +150,7 @@ The terminology used to describe the terms in this vocabulary follows the TDWG [
 | Modified (dcterms:issued) | normative | Date of formal issuance of the resource. TDWG SDS: The date in ISO 8601 Date format on which the most recent version of the term was issued. | 2024-09-30 |
 | Term Version IRI (rdf:about) | normative | The HTTP IRI that identifies the version of the term that is currently in force. | [https://rs.tdwg.org/ bdq/terms/version/ Alien-Species-2024-09-30](https://rs.tdwg.org/bdq/terms/version/Alien-Species-2024-09-30) |
 | Label (rdfs:label) | normative | A human-readable name for the subject. TDWG SDS: A a word or short phrase that serves as a human-readable name for the term. | Alien-Species |
-| Definition (skos:definition) | normative | A statement or formal explanation of the meaning of a concept. TDWG SDS: The normative definition of the term, written in English. | Research uses forming a bdqffdq:UseCase for Occurrence data of alien species 1) where the Information Elements concern what organism occurred where and when and the means, degree, and pathways of establishment, and 2) that are used for analysis of spatial and/or temporal patterns of biodiversity (see examples in Groom et al. (2019). Improving Darwin Core for research and management of alien species. Biodiversity Information Science and Standards, 3: e38084. https://doi.org/10.3897/biss.3.38084). |
+| Definition (skos:definition) | normative | A statement or formal explanation of the meaning of a concept. TDWG SDS: The normative definition of the term, written in English. | Research uses forming a bdqffdq:UseCase for dwc:Occurrence data of alien species 1) where the Information Elements concern what dwc:Organism occurred where and when and the means, degree, and pathways of establishment, and 2) that are used for analysis of spatial and/or temporal patterns of biodiversity (see examples in Groom et al. (2019). Improving Darwin Core for research and management of alien species. Biodiversity Information Science and Standards, 3: e38084. https://doi.org/10.3897/biss.3.38084). |
 | Comments (rdfs:comment) | non-normative | A description of the subject resource. | Used in Measure of Single Record Tests |
 | Status (tdwgutility:status) |  | Used to indicate if the term is recommended for use or if it is only of historical significance. | recommended |
 | Controlled Value String () | normative |  | Alien-Species |
@@ -206,9 +206,9 @@ In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use th
 [bdq:AllAmendmentTestsRunOnSingleRecord](#bdq_AllAmendmentTestsRunOnSingleRecord) |
 [bdq:AllValidationTestsRunOnSingleRecord](#bdq_AllValidationTestsRunOnSingleRecord) 
 
-### 3.2 Index By Label
+### 3.2 Index By Label (non-normative)
 
-(See also [3.1 Index By Term Name](#31-index-by-term-name))
+(See also [3.1 Index By Term Name (non-normative)](#31-index-by-term-name-non-normative))
 
 **Classes**
 
@@ -276,7 +276,7 @@ In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use th
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>Research uses forming a bdqffdq:UseCase for Occurrence data of alien species 1) where the Information Elements concern what organism occurred where and when and the means, degree, and pathways of establishment, and 2) that are used for analysis of spatial and/or temporal patterns of biodiversity (see examples in Groom et al. (2019). Improving Darwin Core for research and management of alien species. Biodiversity Information Science and Standards, 3: e38084. https://doi.org/10.3897/biss.3.38084).</td>
+			<td>Research uses forming a bdqffdq:UseCase for dwc:Occurrence data of alien species 1) where the Information Elements concern what dwc:Organism occurred where and when and the means, degree, and pathways of establishment, and 2) that are used for analysis of spatial and/or temporal patterns of biodiversity (see examples in Groom et al. (2019). Improving Darwin Core for research and management of alien species. Biodiversity Information Science and Standards, 3: e38084. https://doi.org/10.3897/biss.3.38084).</td>
 		</tr>
 		<tr>
 			<td>Comments</td>
@@ -460,7 +460,7 @@ In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use th
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>Optionally establishes a system for annotations in a bdq:ParamaterizedTest, with the default being the w3c Annotations Data Model's "oa:Annotation"</td>
+			<td>Optionally establishes a system for annotations in a bdq:ParamaterizedTest, with the default being the W3C Annotations Data Model's "oa:Annotation"</td>
 		</tr>
 		<tr>
 			<td>Comments</td>
@@ -506,7 +506,7 @@ In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use th
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>Used when a bdq:taxonomyIsMarine source authority is unable to assert the marine or non-marine status of a taxon, the biome (either "marine or "nonmarine") to assume, with the default being "noassumption".</td>
+			<td>Used when a bdq:taxonomyIsMarine sourceAuthority is unable to assert the marine or non-marine status of a taxon, the biome (either "marine or "nonmarine") to assume, with the default being "noassumption".</td>
 		</tr>
 		<tr>
 			<td>Comments</td>
@@ -552,7 +552,7 @@ In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use th
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>Research uses forming a bdqffdq:UseCase for relationships between organisms 1) where the bdqffdq:InformationElements concern what organisms have a relationship and 2) that are used for analysis of the relationship of one organism to another (see examples in: Poelen JH, Simons JD, Mungall CJ. (2014). Global Biotic Interactions: An open infrastructure to share and analyze species-interaction datasets. Ecological Informatics, 24, 148–159. https://doi.org/10.1016/j.ecoinf.2014.08.005).</td>
+			<td>Research uses forming a bdqffdq:UseCase for relationships between dwc:Organisms 1) where the bdqffdq:InformationElements concern what dwc:Organisms have a relationship and 2) that are used for analysis of the relationship of one dwc:Organism to another (see examples in: Poelen JH, Simons JD, Mungall CJ. (2014). Global Biotic Interactions: An open infrastructure to share and analyze species-interaction datasets. Ecological Informatics, 24, 148–159. https://doi.org/10.1016/j.ecoinf.2014.08.005).</td>
 		</tr>
 		<tr>
 			<td>Comments</td>
@@ -598,7 +598,7 @@ In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use th
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>Optionally establishes the default geodetic datum in a bdq:ParamaterizedTest. A default geodetic datum is supplied in cases where a bdq:Parameter is not set at the time the Test is run.</td>
+			<td>Optionally establishes the default dwc:geodeticDatum in a bdq:ParamaterizedTest. A default dwc:geodeticDatum is supplied in cases where a bdq:Parameter is not set at the time the Test is run.</td>
 		</tr>
 		<tr>
 			<td>Comments</td>
@@ -644,7 +644,7 @@ In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use th
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>A provided default bdq:SourceAuthority that is used when a required bdq:Parameter specifying a bdq:sourceAuthority has not been provided at the time the Test is run.</td>
+			<td>A provided default bdq:sourceAuthority that is used when a required bdq:Parameter specifying a bdq:sourceAuthority has not been provided at the time the Test is run.</td>
 		</tr>
 		<tr>
 			<td>Comments</td>
@@ -690,7 +690,7 @@ In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use th
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>A preselected value (e.g. year, elevation) to be used where a required bdq:Parameter value has not been provided at the time the Test is run.</td>
+			<td>A preselected value (e.g., year, elevation) to be used where a required bdq:Parameter value has not been provided at the time the Test is run.</td>
 		</tr>
 		<tr>
 			<td>Comments</td>
@@ -786,7 +786,7 @@ In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use th
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>See also: bdq:NotEmpty. In the BDQ standard, bdq:Empty is used to evaluate bdqffdq:InformationElements within a Test specification, it therefore means empty if the dataset being evaluated does not contain the term matching the Information Element, or if the dataset contains that term but the value for that term is empty. The phrasing 'in the context of the evauation' is to allow the Test implementations to be independent of, and agnostic about the data structures presented to a framework for executing the Tests and the framework within which the Tests are run. The term bdq:Empty is defined to be more broadly usable than just with bdqtest. Note: A bdqffdq:InformationElement containing invalid characters (e.g., letters in an Information Element that would be expected to contain integers) or values (including string serializations of the NULL value) are bdq:NotEmpty and their invalidity must be separately detected. The definition of bdq:Empty is not applicable to a discussion of what value to include in a controlled vocabulary to indicate that no meaningful value is present, so no suggestion is made that bdq:Empty should be used as a data value to represent some form of 'Null', 'unknown', 'not recorded', etc. Choices there would fall into the semantics for some set of controlled vocabularies. The relevance to such a discussion is that the definition of bdq:Empty would treat an empty string as an empty value, with no semantics attached as to why the value is empty</td>
+			<td>See also: bdq:NotEmpty. In the BDQ standard, bdq:Empty is used to evaluate bdqffdq:InformationElements within a Test specification, it therefore means empty if the dataset being evaluated does not contain the term matching the Information Element, or if the dataset contains that term but the value for that term is empty. The phrasing 'in the context of the evauation' is to allow the Test implementations to be independent of, and agnostic about the data structures presented to a framework for executing the Tests and the framework within which the Tests are run. The term bdq:Empty is defined to be more broadly usable than just with bdqtest:. Note: A bdqffdq:InformationElement containing invalid characters (e.g., letters in an Information Element that would be expected to contain integers) or values (including string serializations of the NULL value) are bdq:NotEmpty and their invalidity must be separately detected. The definition of bdq:Empty is not applicable to a discussion of what value to include in a controlled vocabulary to indicate that no meaningful value is present, so no suggestion is made that bdq:Empty should be used as a data value to represent some form of 'Null', 'unknown', 'not recorded', etc. Choices there would fall into the semantics for some set of controlled vocabularies. The relevance to such a discussion is that the definition of bdq:Empty would treat an empty string as an empty value, with no semantics attached as to why the value is empty</td>
 		</tr>
 		<tr>
 			<td>Status</td>
@@ -874,7 +874,7 @@ In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use th
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>Allows dwc:eventDate to be excluded in a bdq:ParameterizedTest. The default is to include the event date in the Test, but it may be excluded to allow an identification to be prior to the dwc:eventDate.</td>
+			<td>Allows dwc:eventDate to be excluded in a bdq:ParameterizedTest. The default is to include the dwc:eventDate in the Test, but it may be excluded to allow a dwc:dateIdentified to be prior to the dwc:eventDate.</td>
 		</tr>
 		<tr>
 			<td>Comments</td>
@@ -1288,7 +1288,7 @@ In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use th
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>Research uses forming a bdqffdq:UseCase for biodiversity Occurrence data 1) where the Information Elements concern what organism occurred where and when and 2) that are used for analysis of spatial and/or temporal patterns of biodiversity (see examples in Rees ER & Nicholls M (2020) Data Quality Use Case Study Results. Biodiversity Information Science and Standards 4: e50889, suppl. 2. https://doi.org/10.3897/biss.4.50889.suppl2).</td>
+			<td>Research uses forming a bdqffdq:UseCase for dwc:Occurrence data 1) where the Information Elements concern what dwc:Organism occurred where and when and 2) that are used for analysis of spatial and/or temporal patterns of biodiversity (see examples in Rees ER & Nicholls M (2020) Data Quality Use Case Study Results. Biodiversity Information Science and Standards 4: e50889, suppl. 2. https://doi.org/10.3897/biss.4.50889.suppl2).</td>
 		</tr>
 		<tr>
 			<td>Comments</td>
@@ -1426,7 +1426,7 @@ In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use th
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>A bdq:sourceAuthority that uses dwc:scientificName to deterrmine the "marine" or "non-marine" status of a taxon using the "Environment" term obtained from the World Register of Marine Species (WORMS) database.</td>
+			<td>A bdq:sourceAuthority that uses dwc:scientificName to determine the "marine" or "non-marine" status of a dwc:Taxon using the "Environment" term obtained from the World Register of Marine Species (WORMS) database.</td>
 		</tr>
 		<tr>
 			<td>Comments</td>
