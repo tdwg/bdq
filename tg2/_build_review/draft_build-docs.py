@@ -231,13 +231,13 @@ for templatePath, document in directories.items() :
 		graph.parse(inputTermsOwlFilename, format="ttl")
 		
 		indextext = "\n"
-		indextext = indextext + "- [Classes](#51-Class-terms)\n"
-		indextext = indextext + "- [Object Properties](#52-ObjectProperty-terms)\n"
-		indextext = indextext + "- [Data Properties](#53-DataProperty-terms)\n"
-		indextext = indextext + "- [Named Individuals](#54-NamedIndividual-terms)\n"
+		indextext = indextext + "- [Classes](#51-class-terms-non-normative)\n"
+		indextext = indextext + "- [Object Properties](#52-objectproperty-terms-non-normative)\n"
+		indextext = indextext + "- [Data Properties](#53-dataproperty-terms-non-normative)\n"
+		indextext = indextext + "- [Named Individuals](#54-namedindividual-terms-non-normative)\n"
 		indextext = indextext + "\n"
 		
-		indextext = indextext + "### 4.1 Alphabetical Index of classes\n\n"
+		indextext = indextext + "### 4.1 Alphabetical Index of classes (non-normative)\n\n"
 		sparql = prefixes + "SELECT ?subject WHERE {  ?subject a owl:Class . } "
 		queryResult = graph.query(sparql)
 		for r in queryResult : 
@@ -246,7 +246,7 @@ for templatePath, document in directories.items() :
 			indextext = indextext + "[{}](#{})\n".format(term,term)
 		
 		indextext = indextext + "\n"
-		indextext = indextext + "### 4.2 Alphabetical Index of object properties\n\n"
+		indextext = indextext + "### 4.2 Alphabetical Index of object properties (non-normative)\n\n"
 		sparql = prefixes + "SELECT ?subject WHERE {  ?subject a owl:ObjectProperty . } "
 		queryResult = graph.query(sparql)
 		for r in queryResult : 
@@ -255,7 +255,7 @@ for templatePath, document in directories.items() :
 			indextext = indextext + "[{}](#{})\n".format(term,term)
 		
 		indextext = indextext + "\n"
-		indextext = indextext + "### 4.3 Alphabetical Index of data properties\n\n"
+		indextext = indextext + "### 4.3 Alphabetical Index of data properties (non-normative)\n\n"
 		sparql = prefixes + "SELECT ?subject WHERE {  ?subject a owl:DatatypeProperty . } "
 		queryResult = graph.query(sparql)
 		for r in queryResult : 
@@ -264,7 +264,7 @@ for templatePath, document in directories.items() :
 			indextext = indextext + "[{}](#{})\n".format(term,term)
 		
 		indextext = indextext + "\n"
-		indextext = indextext + "### 4.4 Alphabetical Index of named individuals\n\n"
+		indextext = indextext + "### 4.4 Alphabetical Index of named individuals (non-normative)\n\n"
 		sparql = prefixes + "SELECT ?subject WHERE {  ?subject a owl:NamedIndividual . } "
 		queryResult = graph.query(sparql)
 		for r in queryResult : 
@@ -276,7 +276,7 @@ for templatePath, document in directories.items() :
 		header = header.replace('{term_index}','\n{}\n'.format(indextext))
 
 		text = ""
-		text = text + "### 5.1 Class terms\n"
+		text = text + "### 5.1 Class terms (normative)\n"
 		sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment (GROUP_CONCAT(?parent; SEPARATOR='; ') AS ?parents)  WHERE {  ?subject a owl:Class . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . OPTIONAL { ?subject rdfs:subClassOf ?parent } . ?subject rdfs:comment ?comment } GROUP BY ?subject ?prefLabel ?definition ?comment ORDER BY ?subject"
 		queryResult = graph.query(sparql)
 		for r in queryResult : 
@@ -292,7 +292,7 @@ for templatePath, document in directories.items() :
 			# text = text + "- Notes: {}\n".format(r.comment.replace("\n\n","\n").replace("\n","  \n"))
 			text = text + "\n********************\n\n"
 		
-		text = text + "### 5.2 ObjectProperty terms\n"
+		text = text + "### 5.2 ObjectProperty terms (normative)\n"
 		sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment ?range ?restrictedRange ?restriction  (GROUP_CONCAT(?parent; SEPARATOR='; ') AS ?parents)  WHERE {  ?subject a owl:ObjectProperty . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . OPTIONAL { ?subject rdfs:subPropertyOf ?parent } . OPTIONAL { ?subject rdfs:range ?range . optional { ?range a owl:Restriction . ?range owl:onProperty ?restrictedRange . ?range  ?restriction ?x . FILTER ( ?restriction != owl:onProperty && ?restriction != rdf:type  ) }  } . ?subject rdfs:comment ?comment } GROUP BY ?subject ?prefLabel ?definition ?comment ORDER BY ?subject"
 		queryResult = graph.query(sparql)
 		for r in queryResult : 
@@ -313,7 +313,7 @@ for templatePath, document in directories.items() :
 			# text = text + "- Notes: {}\n".format(r.comment.replace("\n\n","\n").replace("\n","  \n"))
 			text = text + "\n********************\n\n"
 		
-		text = text + "### 5.3 DataProperty terms\n"
+		text = text + "### 5.3 DataProperty terms (normative)\n"
 		sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment ?range WHERE { ?subject a owl:DatatypeProperty . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . ?subject rdfs:comment ?comment . OPTIONAL { ?subject rdfs:range ?range }  }  ORDER BY ?subject"
 		queryResult = graph.query(sparql)
 		for r in queryResult : 
@@ -329,7 +329,7 @@ for templatePath, document in directories.items() :
 			# text = text + "- Notes: {}\n".format(r.comment.replace("\n\n","\n").replace("\n","  \n"))
 			text = text + "\n********************\n\n"
 		
-		text = text + "### 5.4 NamedIndividual terms\n"
+		text = text + "### 5.4 NamedIndividual terms (normative)\n"
 		sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment ?type ?differentFrom WHERE {  ?subject a owl:NamedIndividual . ?subject a ?type . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . ?subject rdfs:comment ?comment . FILTER ( ?type != owl:NamedIndividual) . OPTIONAL { ?subject owl:differentFrom ?differentFrom }  }  ORDER BY ?type ?subject"
 		queryResult = graph.query(sparql)
 		for r in queryResult : 
@@ -436,4 +436,3 @@ for templatePath, document in directories.items() :
 		shutil.copy(file, outputDirectory)
 
 print('done ({})'.format(__file__))
-

@@ -67,13 +67,13 @@ Draft Standard for Review
   - [3.7 Cardinality of bdqffdq: terms (non-normative)](#37-cardinality-of-bdqffdq-terms-non-normative)
 
 [4 Term index (non-normative)](#4-term-index-non-normative)
-  - [4.1 Alphabetical Index of classes](#41-alphabetical-index-of-classes)
-  - [4.2 Alphabetical Index of object properties](#42-alphabetical-index-of-object-properties)
-  - [4.3 Alphabetical Index of data properties](#43-alphabetical-index-of-data-properties)
-  - [4.4 Alphabetical Index of named individuals](#44-alphabetical-index-of-named-individuals)
+  - [4.1 Alphabetical Index of classes (non-normative)](#41-alphabetical-index-of-classes-non-normative)
+  - [4.2 Alphabetical Index of object properties (non-normative)](#42-alphabetical-index-of-object-properties-non-normative)
+  - [4.3 Alphabetical Index of data properties (non-normative)](#43-alphabetical-index-of-data-properties-non-normative)
+  - [4.4 Alphabetical Index of named individuals (non-normative)](#44-alphabetical-index-of-named-individuals-non-normative)
 
 [5 List of Terms with axioms in the Fitness For Use Framework ontology (normative)](#5-list-of-terms-with-axioms-in-the-fitness-for-use-framework-ontology-normative)
-  - [5.1 Class terms](#51-class-terms)
+  - [5.1 Class terms (normative)](#51-class-terms-normative)
     - [AbstractInformationElement](#abstractinformationelement)
     - [ActedUpon](#actedupon)
     - [Amendment](#amendment)
@@ -121,7 +121,7 @@ Draft Standard for Review
     - [ValidationConcept](#validationconcept)
     - [ValidationMethod](#validationmethod)
     - [ValidationPolicy](#validationpolicy)
-  - [5.2 ObjectProperty terms](#52-objectproperty-terms)
+  - [5.2 ObjectProperty terms (normative)](#52-objectproperty-terms-normative)
     - [amendmentProperty](#amendmentproperty)
     - [appliesTo](#appliesto)
     - [composedOf](#composedof)
@@ -157,13 +157,13 @@ Draft Standard for Review
     - [targetedValidation](#targetedvalidation)
     - [usesSpecification](#usesspecification)
     - [validationProperty](#validationproperty)
-  - [5.3 DataProperty terms](#53-dataproperty-terms)
+  - [5.3 DataProperty terms (normative)](#53-dataproperty-terms-normative)
     - [hasAuthoritiesDefaults](#hasauthoritiesdefaults)
     - [hasDateLastUpdated](#hasdatelastupdated)
     - [hasExpectedResponse](#hasexpectedresponse)
     - [hasResponseComment](#hasresponsecomment)
     - [hasResponseResultValue](#hasresponseresultvalue)
-  - [5.4 NamedIndividual terms](#54-namedindividual-terms)
+  - [5.4 NamedIndividual terms (normative)](#54-namedindividual-terms-normative)
     - [MultiRecord](#multirecord)
     - [SingleRecord](#singlerecord)
     - [COMPLETE](#complete)
@@ -449,12 +449,12 @@ It is important that the chain of relationships from an instance of an `Assertio
 
 
 
-- [Classes](#51-Class-terms)
-- [Object Properties](#52-ObjectProperty-terms)
-- [Data Properties](#53-DataProperty-terms)
-- [Named Individuals](#54-NamedIndividual-terms)
+- [Classes](#51-class-terms-non-normative)
+- [Object Properties](#52-objectproperty-terms-non-normative)
+- [Data Properties](#53-dataproperty-terms-non-normative)
+- [Named Individuals](#54-namedindividual-terms-non-normative)
 
-### 4.1 Alphabetical Index of classes
+### 4.1 Alphabetical Index of classes (non-normative)
 
 [AbstractInformationElement](#AbstractInformationElement)
 [ActedUpon](#ActedUpon)
@@ -506,7 +506,7 @@ It is important that the chain of relationships from an instance of an `Assertio
 [ValidationMethod](#ValidationMethod)
 [ValidationPolicy](#ValidationPolicy)
 
-### 4.2 Alphabetical Index of object properties
+### 4.2 Alphabetical Index of object properties (non-normative)
 
 [amendmentProperty](#amendmentProperty)
 [appliesTo](#appliesTo)
@@ -544,7 +544,7 @@ It is important that the chain of relationships from an instance of an `Assertio
 [usesSpecification](#usesSpecification)
 [validationProperty](#validationProperty)
 
-### 4.3 Alphabetical Index of data properties
+### 4.3 Alphabetical Index of data properties (non-normative)
 
 [hasArgumentValue](#hasArgumentValue)
 [hasAuthoritiesDefaults](#hasAuthoritiesDefaults)
@@ -553,7 +553,7 @@ It is important that the chain of relationships from an instance of an `Assertio
 [hasResponseComment](#hasResponseComment)
 [hasResponseResultValue](#hasResponseResultValue)
 
-### 4.4 Alphabetical Index of named individuals
+### 4.4 Alphabetical Index of named individuals (non-normative)
 
 [AMENDED](#AMENDED)
 [COMPLETE](#COMPLETE)
@@ -576,7 +576,7 @@ It is important that the chain of relationships from an instance of an `Assertio
 ## 5 List of Terms with axioms in the Fitness For Use Framework ontology (normative)
 
 
-### 5.1 Class terms
+### 5.1 Class terms (normative)
 #### AbstractInformationElement
 
 - Name: bdqffdq:AbstractInformationElement
@@ -947,7 +947,7 @@ It is important that the chain of relationships from an instance of an `Assertio
 
 ********************
 
-### 5.2 ObjectProperty terms
+### 5.2 ObjectProperty terms (normative)
 #### amendmentProperty
 
 - Name: bdqffdq:amendmentProperty
@@ -1225,7 +1225,7 @@ It is important that the chain of relationships from an instance of an `Assertio
 
 ********************
 
-### 5.3 DataProperty terms
+### 5.3 DataProperty terms (normative)
 #### hasAuthoritiesDefaults
 
 - Name: bdqffdq:hasAuthoritiesDefaults
@@ -1265,7 +1265,7 @@ It is important that the chain of relationships from an instance of an `Assertio
 
 ********************
 
-### 5.4 NamedIndividual terms
+### 5.4 NamedIndividual terms (normative)
 #### MultiRecord
 
 - Name: bdqffdq:MultiRecord
