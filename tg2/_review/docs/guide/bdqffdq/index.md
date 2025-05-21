@@ -451,7 +451,7 @@ It is important that the chain of relationships from an instance of an `Assertio
 
 - [Classes](#51-class-terms-normative)
 - [Object Properties](#52-objectproperty-terms-normative)
-- [Data Properties](#53-dataproperty-terms-non-normative)
+- [Data Properties](#53-dataproperty-terms-normative)
 - [Named Individuals](#54-namedindividual-terms-normative)
 
 ### 4.1 Alphabetical Index of classes (non-normative)
@@ -1363,15 +1363,15 @@ It is important that the chain of relationships from an instance of an `Assertio
 
 ## Acronyms (non-normative)
 
-A list of Acronyms can be found in the [Acronyms (non-normative)](../../index.md#5-acronyms-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.
+A list of Acronyms can be found in the [Acronyms (non-normative)](../../../index.md#5-acronyms-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.
 
 ## Glossary (non-normative)
 
-A glossary of terms additional to those in the various namespaces can be found in the [Glossary (non-normative)](../../index.md#6-glossary-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.
+A glossary of terms additional to those in the various namespaces can be found in the [Glossary (non-normative)](../../../index.md#6-glossary-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.
 
 ## References (non-normative)
 
-The references for the BDQ standard can be found in the [References (non-normative)](../../index.md#7-references-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.
+The references for the BDQ standard can be found in the [References (non-normative)](../../../index.md#7-references-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.
 
 ## Cite BDQ (non-normative)
 

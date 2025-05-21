@@ -233,7 +233,7 @@ for templatePath, document in directories.items() :
 		indextext = "\n"
 		indextext = indextext + "- [Classes](#51-class-terms-normative)\n"
 		indextext = indextext + "- [Object Properties](#52-objectproperty-terms-normative)\n"
-		indextext = indextext + "- [Data Properties](#53-dataproperty-terms-non-normative)\n"
+		indextext = indextext + "- [Data Properties](#53-dataproperty-terms-normative)\n"
 		indextext = indextext + "- [Named Individuals](#54-namedindividual-terms-normative)\n"
 		indextext = indextext + "\n"
 		
