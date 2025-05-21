@@ -405,13 +405,13 @@ graph = rdflib.Graph()
 graph.parse(inputTermsOwlFilename, format="ttl")
 
 text = "\n"
-text = text + "- [Classes](#41-Class-terms)\n"
-text = text + "- [Object Properties](#42-ObjectProperty-terms)\n"
-text = text + "- [Data Properties](#43-DataProperty-terms)\n"
-text = text + "- [Named Individuals](#44-NamedIndividual-terms)\n"
+text = text + "- [Classes](#41-class-terms-normative)\n"
+text = text + "- [Object Properties](#42-objectproperty-terms-normative)\n"
+text = text + "- [Data Properties](#43-dataproperty-terms-normative)\n"
+text = text + "- [Named Individuals](#44-namedindividual-terms-normative)\n"
 text = text + "\n"
 
-text = text + "### 3.1 Alphabetical Index of classes\n\n"
+text = text + "### 3.1 Alphabetical Index of classes-non-normative\n\n"
 sparql = prefixes + "SELECT ?subject WHERE {  ?subject a owl:Class . } "
 queryResult = graph.query(sparql)
 for r in queryResult : 
@@ -419,7 +419,7 @@ for r in queryResult :
 	term = term.replace("https://rs.tdwg.org/bdqffdq/terms/","")
 	text = text + "[{}](#{})\n".format(term,term)
 
-text = text + "### 3.2 Alphabetical Index of object properties\n\n"
+text = text + "### 3.2 Alphabetical Index of object properties-non-normative\n\n"
 sparql = prefixes + "SELECT ?subject WHERE {  ?subject a owl:ObjectProperty . } "
 queryResult = graph.query(sparql)
 for r in queryResult : 
@@ -427,7 +427,7 @@ for r in queryResult :
 	term = term.replace("https://rs.tdwg.org/bdqffdq/terms/","")
 	text = text + "[{}](#{})\n".format(term,term)
 
-text = text + "### 3.3 Alphabetical Index of data properties\n\n"
+text = text + "### 3.3 Alphabetical Index of data properties-non-normative\n\n"
 sparql = prefixes + "SELECT ?subject WHERE {  ?subject a owl:DatatypeProperty . } "
 queryResult = graph.query(sparql)
 for r in queryResult : 
@@ -435,7 +435,7 @@ for r in queryResult :
 	term = term.replace("https://rs.tdwg.org/bdqffdq/terms/","")
 	text = text + "[{}](#{})\n".format(term,term)
 
-text = text + "### 3.4 Alphabetical Index of named individuals\n\n"
+text = text + "### 3.4 Alphabetical Index of named individuals-non-normative\n\n"
 sparql = prefixes + "SELECT ?subject WHERE {  ?subject a owl:NamedIndividual . } "
 queryResult = graph.query(sparql)
 for r in queryResult : 
@@ -443,8 +443,8 @@ for r in queryResult :
 	term = term.replace("https://rs.tdwg.org/bdqffdq/terms/","")
 	text = text + "[{}](#{})\n".format(term,term)
 
-text = text + "\n## 4 Vocabulary\n"
-text = text + "\n### 4.1 Class terms\n"
+text = text + "\n## 4 Vocabulary (normative)\n"
+text = text + "\n### 4.1 Class terms (normative)\n"
 sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment (GROUP_CONCAT(?parent; SEPARATOR='; ') AS ?parents)  WHERE {  ?subject a owl:Class . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . OPTIONAL { ?subject rdfs:subClassOf ?parent } . ?subject rdfs:comment ?comment } GROUP BY ?subject ?prefLabel ?definition ?comment ORDER BY ?subject"
 queryResult = graph.query(sparql)
 for r in queryResult : 
@@ -460,7 +460,7 @@ for r in queryResult :
 	text = text + "- Comments: {}\n".format(r.comment.replace("\n\n","\n").replace("\n","  \n"))
 	text = text + "\n********************\n\n"
 
-text = text + "### 4.2 ObjectProperty terms\n"
+text = text + "### 4.2 ObjectProperty terms (normative)\n"
 sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment ?range ?restrictedRange ?restriction  (GROUP_CONCAT(?parent; SEPARATOR='; ') AS ?parents)  WHERE {  ?subject a owl:ObjectProperty . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . OPTIONAL { ?subject rdfs:subPropertyOf ?parent } . OPTIONAL { ?subject rdfs:range ?range . optional { ?range a owl:Restriction . ?range owl:onProperty ?restrictedRange . ?range  ?restriction ?x . FILTER ( ?restriction != owl:onProperty && ?restriction != rdf:type  ) }  } . ?subject rdfs:comment ?comment } GROUP BY ?subject ?prefLabel ?definition ?comment ORDER BY ?subject"
 queryResult = graph.query(sparql)
 for r in queryResult : 
@@ -482,7 +482,7 @@ for r in queryResult :
 	text = text + "\n********************\n\n"
 
 
-text = text + "### 4.3 DataProperty terms\n"
+text = text + "### 4.3 DataProperty terms (normative)\n"
 sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment ?range WHERE { ?subject a owl:DatatypeProperty . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . ?subject rdfs:comment ?comment . OPTIONAL { ?subject rdfs:range ?range }  }  ORDER BY ?subject"
 queryResult = graph.query(sparql)
 for r in queryResult : 
@@ -498,7 +498,7 @@ for r in queryResult :
 	text = text + "- Comments: {}\n".format(r.comment.replace("\n\n","\n").replace("\n","  \n"))
 	text = text + "\n********************\n\n"
 
-text = text + "### 4.4 NamedIndividual terms\n"
+text = text + "### 4.4 NamedIndividual terms (normative)\n"
 sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment ?type  WHERE {  ?subject a owl:NamedIndividual . ?subject a ?type . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . ?subject rdfs:comment ?comment . FILTER ( ?type != owl:NamedIndividual) . }  ORDER BY ?type ?subject"
 queryResult = graph.query(sparql)
 for r in queryResult : 
@@ -637,10 +637,10 @@ header = header.replace('{term_key}', definitionTable)
 ## Page content
 
 text = "\n"
-text = text + "- [Range Axioms](#41-range-axioms)\n"
-text = text + "- [Different From Axioms](#41-different-from-axioms)\n"
-text = text + "\n## 4 Vocabulary Extension\n"
-text = text + "\n### 4.1 Range Axioms\n"
+text = text + "- [Range Axioms](#41-range-axioms-normative)\n"
+text = text + "- [Different From Axioms](#42-different-from-axioms-normative)\n"
+text = text + "\n## 4 Vocabulary Extension (normative)\n"
+text = text + "\n### 4.1 Range Axioms (normative)\n"
 sparql = prefixes + "SELECT ?subject ?type ?range ?restriction ?restrictedRange WHERE { ?subject rdf:type ?type . ?subject rdfs:range ?range. optional { ?range a owl:Restriction . ?range owl:onProperty ?restrictedRange . ?range  ?restriction ?x . FILTER ( ?restriction != owl:onProperty && ?restriction != rdf:type  ) } } ORDER BY ?type ?subject "
 if debug: 
    print(sparql)
@@ -661,7 +661,7 @@ for r in queryResult :
 			text = text + "| Range | {} |\n".format(r.range.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:").replace("http://www.w3.org/2001/XMLSchema#","xsd:"))
 	text = text + "\n\n"
 
-text = text + "### 4.2 Different From Axioms\n"
+text = text + "### 4.2 Different From Axioms (normative)\n"
 sparql = prefixes + "SELECT DISTINCT  ?subject  ?type  (STR(GROUP_CONCAT(DISTINCT COALESCE(?differentFrom, \",\"); SEPARATOR=\", \")) AS ?differentFromAggregate) WHERE { ?subject owl:differentFrom ?differentFrom . ?subject a ?type  . FILTER ( ?type != owl:NamedIndividual) . } GROUP BY ?subject ?type ORDER BY ?type ?subject "
 if debug: 
    print(sparql)

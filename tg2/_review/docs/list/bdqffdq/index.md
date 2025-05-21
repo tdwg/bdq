@@ -30,7 +30,7 @@ bdqffdq
 This document is a reference for the BDQ standard, documenting vocabulary values in the Fitness For Use Framework Ontology, excluding additional axioms.
 
 **Authors**<br>
-[Lee Belbin](https://orcid.org/0000-0001-8900-6203) ([Blatant Fabrications](https://www.wikidata.org/wiki/Q130304884)), [Arthur D. Chapman](https://orcid.org/0000-0003-1700-6962) ([Australian Biodiversity Information Services](http://www.wikidata.org/entity/Q100600913)), [Paul J. Morris](https://orcid.org/0000-0002-3673-444X) ([Museum of Comparative Zoology, Harvard University](http://www.wikidata.org/entity/Q1420782)), [John Wieczorek](https://orcid.org/0000-0003-1144-0290) ([Rauthiflor LLC](http://www.wikidata.org/entity/Q98382028))
+[Lee Belbin](https://orcid.org/0000-0001-8900-6203) ([Blatant Fabrications](https://www.wikidata.org/wiki/Q130304884)), [Arthur D. Chapman](https://orcid.org/0000-0003-1700-6962) ([Australian Biodiversity Information Services](http://www.wikidata.org/entity/Q100600913)), [Paul J. Morris](https://orcid.org/0000-0002-3673-444X) ([Museum of Comparative Zoology, Harvard University](http://www.wikidata.org/entity/Q1420782)), [John Wieczorek](https://orcid.org/0000-0003-1144-0290) (Rauthiflor LLC)
 
 **Creator**<br>
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
@@ -53,13 +53,13 @@ Draft Standard for Review
   - [1.7 Key to Vocabulary Terms (normative)](#17-key-to-vocabulary-terms-normative)
 
 [3 Term index (normative)](#3-term-index-normative)
-  - [3.1 Alphabetical Index of classes](#31-alphabetical-index-of-classes)
-  - [3.2 Alphabetical Index of object properties](#32-alphabetical-index-of-object-properties)
-  - [3.3 Alphabetical Index of data properties](#33-alphabetical-index-of-data-properties)
-  - [3.4 Alphabetical Index of named individuals](#34-alphabetical-index-of-named-individuals)
+  - [3.1 Alphabetical Index of classes-non-normative](#31-alphabetical-index-of-classes-non-normative)
+  - [3.2 Alphabetical Index of object properties-non-normative](#32-alphabetical-index-of-object-properties-non-normative)
+  - [3.3 Alphabetical Index of data properties-non-normative](#33-alphabetical-index-of-data-properties-non-normative)
+  - [3.4 Alphabetical Index of named individuals-non-normative](#34-alphabetical-index-of-named-individuals-non-normative)
 
-[4 Vocabulary](#4-vocabulary)
-  - [4.1 Class terms](#41-class-terms)
+[4 Vocabulary (normative)](#4-vocabulary-normative)
+  - [4.1 Class terms (normative)](#41-class-terms-normative)
     - [AbstractInformationElement](#abstractinformationelement)
     - [ActedUpon](#actedupon)
     - [Amendment](#amendment)
@@ -107,7 +107,7 @@ Draft Standard for Review
     - [ValidationConcept](#validationconcept)
     - [ValidationMethod](#validationmethod)
     - [ValidationPolicy](#validationpolicy)
-  - [4.2 ObjectProperty terms](#42-objectproperty-terms)
+  - [4.2 ObjectProperty terms (normative)](#42-objectproperty-terms-normative)
     - [amendmentProperty](#amendmentproperty)
     - [appliesTo](#appliesto)
     - [composedOf](#composedof)
@@ -143,13 +143,13 @@ Draft Standard for Review
     - [targetedValidation](#targetedvalidation)
     - [usesSpecification](#usesspecification)
     - [validationProperty](#validationproperty)
-  - [4.3 DataProperty terms](#43-dataproperty-terms)
+  - [4.3 DataProperty terms (normative)](#43-dataproperty-terms-normative)
     - [hasAuthoritiesDefaults](#hasauthoritiesdefaults)
     - [hasDateLastUpdated](#hasdatelastupdated)
     - [hasExpectedResponse](#hasexpectedresponse)
     - [hasResponseComment](#hasresponsecomment)
     - [hasResponseResultValue](#hasresponseresultvalue)
-  - [4.4 NamedIndividual terms](#44-namedindividual-terms)
+  - [4.4 NamedIndividual terms (normative)](#44-namedindividual-terms-normative)
     - [MultiRecord](#multirecord)
     - [SingleRecord](#singlerecord)
     - [COMPLETE](#complete)
@@ -246,12 +246,12 @@ The terminology used to describe the terms in this vocabulary follows the TDWG [
 
 ## 3 Term index (normative)
 
-- [Classes](#41-Class-terms)
-- [Object Properties](#42-ObjectProperty-terms)
-- [Data Properties](#43-DataProperty-terms)
-- [Named Individuals](#44-NamedIndividual-terms)
+- [Classes](#41-class-terms-normative)
+- [Object Properties](#42-objectproperty-terms-normative)
+- [Data Properties](#43-dataproperty-terms-normative)
+- [Named Individuals](#44-namedindividual-terms-normative)
 
-### 3.1 Alphabetical Index of classes
+### 3.1 Alphabetical Index of classes-non-normative
 
 [AbstractInformationElement](#AbstractInformationElement)
 [ActedUpon](#ActedUpon)
@@ -302,7 +302,7 @@ The terminology used to describe the terms in this vocabulary follows the TDWG [
 [ValidationConcept](#ValidationConcept)
 [ValidationMethod](#ValidationMethod)
 [ValidationPolicy](#ValidationPolicy)
-### 3.2 Alphabetical Index of object properties
+### 3.2 Alphabetical Index of object properties-non-normative
 
 [amendmentProperty](#amendmentProperty)
 [appliesTo](#appliesTo)
@@ -339,7 +339,7 @@ The terminology used to describe the terms in this vocabulary follows the TDWG [
 [targetedValidation](#targetedValidation)
 [usesSpecification](#usesSpecification)
 [validationProperty](#validationProperty)
-### 3.3 Alphabetical Index of data properties
+### 3.3 Alphabetical Index of data properties-non-normative
 
 [hasArgumentValue](#hasArgumentValue)
 [hasAuthoritiesDefaults](#hasAuthoritiesDefaults)
@@ -347,7 +347,7 @@ The terminology used to describe the terms in this vocabulary follows the TDWG [
 [hasExpectedResponse](#hasExpectedResponse)
 [hasResponseComment](#hasResponseComment)
 [hasResponseResultValue](#hasResponseResultValue)
-### 3.4 Alphabetical Index of named individuals
+### 3.4 Alphabetical Index of named individuals-non-normative
 
 [AMENDED](#AMENDED)
 [COMPLETE](#COMPLETE)
@@ -365,9 +365,9 @@ The terminology used to describe the terms in this vocabulary follows the TDWG [
 [RUN_HAS_RESULT](#RUN_HAS_RESULT)
 [SingleRecord](#SingleRecord)
 
-## 4 Vocabulary
+## 4 Vocabulary (normative)
 
-### 4.1 Class terms
+### 4.1 Class terms (normative)
 #### AbstractInformationElement
 
 - Name: bdqffdq:AbstractInformationElement
@@ -865,7 +865,7 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }
 
 ********************
 
-### 4.2 ObjectProperty terms
+### 4.2 ObjectProperty terms (normative)
 #### amendmentProperty
 
 - Name: bdqffdq:amendmentProperty
@@ -1200,7 +1200,7 @@ Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:Impro
 
 ********************
 
-### 4.3 DataProperty terms
+### 4.3 DataProperty terms (normative)
 #### hasAuthoritiesDefaults
 
 - Name: bdqffdq:hasAuthoritiesDefaults
@@ -1246,7 +1246,7 @@ Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:Impro
 
 ********************
 
-### 4.4 NamedIndividual terms
+### 4.4 NamedIndividual terms (normative)
 #### MultiRecord
 
 - Name: bdqffdq:MultiRecord

@@ -30,7 +30,7 @@ bdqffdq
 This document is a reference for the BDQ standard, describing the Fitness for Use Framework ontology, its uses, its vocabulary, and its vocabulary extension.
 
 **Authors**<br>
-[Lee Belbin](https://orcid.org/0000-0001-8900-6203) ([Blatant Fabrications](https://www.wikidata.org/wiki/Q130304884)), [Arthur D. Chapman](https://orcid.org/0000-0003-1700-6962) ([Australian Biodiversity Information Services](http://www.wikidata.org/entity/Q100600913)), [Paul J. Morris](https://orcid.org/0000-0002-3673-444X) ([Museum of Comparative Zoology, Harvard University](http://www.wikidata.org/entity/Q1420782)), [John Wieczorek](https://orcid.org/0000-0003-1144-0290) ([Rauthiflor LLC](http://www.wikidata.org/entity/Q98382028))
+[Lee Belbin](https://orcid.org/0000-0001-8900-6203) ([Blatant Fabrications](https://www.wikidata.org/wiki/Q130304884)), [Arthur D. Chapman](https://orcid.org/0000-0003-1700-6962) ([Australian Biodiversity Information Services](http://www.wikidata.org/entity/Q100600913)), [Paul J. Morris](https://orcid.org/0000-0002-3673-444X) ([Museum of Comparative Zoology, Harvard University](http://www.wikidata.org/entity/Q1420782)), [John Wieczorek](https://orcid.org/0000-0003-1144-0290) (Rauthiflor LLC)
 
 **Creator**<br>
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
@@ -181,7 +181,7 @@ The (non-normative) diagram below is intended to help understand the normative s
 
 ![Diagram of Validation, ValidationMethod, and ValidationAssertion with related classes](../guide/bdqffdq/bdqffdq_data_quality_needs_solutions_report_validation.svg "Validation concepts in the Needs, Solutions, and Reports levels.")
 
-The use of classes and properties in [bdqtest:](../../dist/bdqtest.ttl). See also the guidance provided in [Use of Properties (normative)
+The use of classes and properties in [bdqtest:](../../dist/bdqtest.ttl). See also the guidance provided in [2.1 Use of Properties (normative)
 ](#21-use-of-properties-normative).
 
 ## 2 Use of Terms (normative) 

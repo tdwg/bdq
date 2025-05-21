@@ -30,7 +30,7 @@ bdqffdq
 This document is a reference for the BDQ standard, documenting additional axioms that extend the basic vocabulary of the Fitness For Use Framework Ontology.
 
 **Authors**<br>
-[Lee Belbin](https://orcid.org/0000-0001-8900-6203) ([Blatant Fabrications](https://www.wikidata.org/wiki/Q130304884)), [Arthur D. Chapman](https://orcid.org/0000-0003-1700-6962) ([Australian Biodiversity Information Services](http://www.wikidata.org/entity/Q100600913)), [Paul J. Morris](https://orcid.org/0000-0002-3673-444X) ([Museum of Comparative Zoology, Harvard University](http://www.wikidata.org/entity/Q1420782)), [John Wieczorek](https://orcid.org/0000-0003-1144-0290) ([Rauthiflor LLC](http://www.wikidata.org/entity/Q98382028))
+[Lee Belbin](https://orcid.org/0000-0001-8900-6203) ([Blatant Fabrications](https://www.wikidata.org/wiki/Q130304884)), [Arthur D. Chapman](https://orcid.org/0000-0003-1700-6962) ([Australian Biodiversity Information Services](http://www.wikidata.org/entity/Q100600913)), [Paul J. Morris](https://orcid.org/0000-0002-3673-444X) ([Museum of Comparative Zoology, Harvard University](http://www.wikidata.org/entity/Q1420782)), [John Wieczorek](https://orcid.org/0000-0003-1144-0290) (Rauthiflor LLC)
 
 **Creator**<br>
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
@@ -56,8 +56,8 @@ Draft Standard for Review
 
 [3 Axiom Index (non-normative)](#3-axiom-index-non-normative)
 
-[4 Vocabulary Extension](#4-vocabulary-extension)
-  - [4.1 Range Axioms](#41-range-axioms)
+[4 Vocabulary Extension (normative)](#4-vocabulary-extension-normative)
+  - [4.1 Range Axioms (normative)](#41-range-axioms-normative)
     - [hasAuthoritiesDefaults](#hasauthoritiesdefaults)
     - [hasDateLastUpdated](#hasdatelastupdated)
     - [hasExpectedResponse](#hasexpectedresponse)
@@ -80,7 +80,7 @@ Draft Standard for Review
     - [targetedMeasure](#targetedmeasure)
     - [targetedValidation](#targetedvalidation)
     - [usesSpecification](#usesspecification)
-  - [4.2 Different From Axioms](#42-different-from-axioms)
+  - [4.2 Different From Axioms (normative)](#42-different-from-axioms-normative)
     - [COMPLETE](#complete)
     - [COMPLIANT](#compliant)
     - [IS_ISSUE](#is_issue)
@@ -169,16 +169,16 @@ The terminology used to describe the terms in this vocabulary follows the [TDWG 
 
 ## 2 Use of Terms (normative)
 
-In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use the Term IRI (e.g., 'http://rs.tdwg.org/bdq/bdqffdq/hasExpectedResponse') or Term Qualified name (e.g., `bdqffdq:hasExpectedResponse`). In a non-RDF context in which resources may be used by software (e.g., a value in a spreadsheet or database table) the Controlled Value String (Local name, e.g., `hasExpectedResponse`) MAY be used. In a purely human context a label (e.g., `Expected Response`) MAY be used.
+In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use the Term IRI (e.g., `http://rs.tdwg.org/bdq/bdqffdq/hasExpectedResponse`) or Term Qualified name (e.g., `bdqffdq:hasExpectedResponse`). In a non-RDF context in which resources may be used by software (e.g., a value in a spreadsheet or database table) the Controlled Value String (Local name, e.g., `hasExpectedResponse`) MAY be used. In a purely human context a label (e.g., `Expected Response`) MAY be used.
 
 ## 3 Axiom Index (non-normative)
 
-- [Range Axioms](#41-range-axioms)
-- [Different From Axioms](#41-different-from-axioms)
+- [Range Axioms](#41-range-axioms-normative)
+- [Different From Axioms](#42-different-from-axioms-normative)
 
-## 4 Vocabulary Extension
+## 4 Vocabulary Extension (normative)
 
-### 4.1 Range Axioms
+### 4.1 Range Axioms (normative)
 #### hasAuthoritiesDefaults
 
 | Property | Value |
@@ -377,7 +377,7 @@ In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use th
 | Range | [ owl:someValuesFrom bdqffdq:usesSpecification ] |
 
 
-### 4.2 Different From Axioms
+### 4.2 Different From Axioms (normative)
 #### COMPLETE
 
 | Property | Value |

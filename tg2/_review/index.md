@@ -84,12 +84,14 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
 [7. References (non-normative)](#7-references-non-normative)<br>
 [8. Cite BDQ (non-normative)](#8-cite-bdq-non-normative)
 
-## 1. Introduction
+## 1. Introduction (non_normative)
 
-### 1.1 Purpose
+### 1.1 Purpose (non_normative)
+
 Beyond data availability, data quality is probably the most significant issue for users of biodiversity data. Data quality is treated as fitness for a particular use, not as an inherent characteristic of data as described in detail in [3. Context for Quality, Uses and Purposes](docs/guide/users/index.md#3-context-for-quality-uses-and-purposes-non-normative) in the [BDQ User's Guide](docs/guide/users/index.md). The Biodiversity Data Quality (BDQ) standard is meant to provide a modular, extensible framework for assessing the quality of biodiversity data relative to specific uses.
 
-### 1.2 Audience
+### 1.2 Audience (non_normative)
+
 Intended for:
 - Practitioners and data curators
 - Software developers implementing Tests
@@ -99,22 +101,23 @@ Intended for:
 
 No technical background in ontology is required.
 
-### 1.3 Associated Documents
+### 1.3 Associated Documents (non_normative)
+
 See all documents listed in [2. Parts of the Standard (non-normative)](#2-parts-of-the-standard-non-normative).
 
-### 1.4 Status of the Content of This Document
+### 1.4 Status of the Content of This Document (normative)
 
 Sections may be either normative (defines what is required to comply with the standard) or non-normative (supports understanding but is not binding) and are marked as such. 
 
 Any sentence or phrase beginning with "For example" or "e.g.", whether in a normative section or a non-normative section, is non-normative.
 
-### 1.5 RFC 2119 key words
+### 1.5 RFC 2119 key words (normative)
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" are to be interpreted as described in [RFC 2119](https://www.rfc-editor.org/rfc/rfc2119.html).
 
-### 1.6 Namespace Abbreviations
+### 1.6 Namespace Abbreviations (non_normative)
 
 | Abbreviation | Namespace |
-|--------------|------------|
+|--------------|-----------|
 | bdq:         | https://rs.tdwg.org/bdq/terms/ |
 | bdqtest:     | https://rs.tdwg.org/bdqtest/terms/ |
 | bdqcrit:     | https://rs.tdwg.org/bdqcrit/terms/ |

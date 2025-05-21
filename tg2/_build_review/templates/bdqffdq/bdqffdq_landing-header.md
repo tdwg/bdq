@@ -118,7 +118,7 @@ The (non-normative) diagram below is intended to help understand the normative s
 
 ![Diagram of Validation, ValidationMethod, and ValidationAssertion with related classes](../guide/bdqffdq/bdqffdq_data_quality_needs_solutions_report_validation.svg "Validation concepts in the Needs, Solutions, and Reports levels.")
 
-The use of classes and properties in [bdqtest:](../../dist/bdqtest.ttl). See also the guidance provided in [Use of Properties (normative)
+The use of classes and properties in [bdqtest:](../../dist/bdqtest.ttl). See also the guidance provided in [2.1 Use of Properties (normative)
 ](#21-use-of-properties-normative).
 
 ## 2 Use of Terms (normative) 
