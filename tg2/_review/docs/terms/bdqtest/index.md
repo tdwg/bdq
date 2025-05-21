@@ -11,19 +11,19 @@ Draft Standard for Review
 
 This document is intended to be an easy-to-read reference for the Tests maintained as part of the TDWG standard [BDQ](http://example.org/to_be_determined) produced by the TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions and is maintained by the BDQ Maintenance Interest Group. This document lists the BDQ Tests, described by the [Terms Used in the BDQ Tests Quick Reference Guide](bdqtest_qrg_term_descriptions.md). Definitions, comments, and examples may include namespace abbreviations (e.g., `bdq:`, `dwc:`). These are required as the meaning for the word is defined specifically in that namespace. Thus, `dwc:Event` means Event as defined by Darwin Core at https://dwc.tdwg.org/terms/#event.
 
-This page is a descriptive document, not the full vocabulary definition document for `bdqtest:` terms. It combines the normative Test names and terms with non-normative comments and examples that are meant to help people to use the Tests consistently. Further details can be found in [The Biodiversity Data Quality (BDQ) Standard](../../../index.md), the [Fitness For Use Framework Ontology Guide](../../guide/bdqffdq/index.md), the [BDQ Implementer's Guide](../../guide/implementers/index.md). 
+This page is a non-normative descriptive document, not the full vocabulary definition document for `bdqtest:` terms. It combines the normative Test names and terms with non-normative comments and examples that are meant to help people to use the Tests consistently. Further details can be found in [The Biodiversity Data Quality (BDQ) Standard](../../../index.md), the [Fitness For Use Framework Ontology Guide](../../guide/bdqffdq/index.md), the [BDQ Implementer's Guide](../../guide/implementers/index.md). 
 
 If you have questions or suggestions, submit these to the [BDQ Issues](https://github.com/tdwg/bdq/issues) page in GitHub. See the bottom of this document for how to cite the BDQ standard and this document in particular.
 
-# Indexes to the Tests
+# Indexes to the Tests (non-normative)
 
-## Linked Indexes
+## Linked Indexes (non-normative)
 
 Index by: [Use Case](qrg_index_by_usecase.md), [Information Element Acted Upon](qrg_index_by_ie_actedupon.md), [Information Element Class](qrg_index_by_ie_class.md), [Data Quality Dimension](qrg_index_by_dimension.md), 
 
 This document also includes `Measures` operating on Test `Responses` for `Multi Records` (datasets) indexed in [Multi Record Measures](qrg_multirecord_index.md)
 
-## Alphabetical Index to Single Record Tests
+## Alphabetical Index to Single Record Tests (non-normative)
 
 - [AMENDMENT_BASISOFRECORD_STANDARDIZED](#AMENDMENT_BASISOFRECORD_STANDARDIZED)
 - [AMENDMENT_COORDINATES_FROM_VERBATIM](#AMENDMENT_COORDINATES_FROM_VERBATIM)
@@ -8898,19 +8898,19 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ********************
 
 
-## Acronyms
+## Acronyms (non-normative)
 
-A list of Acronyms can be found in the [Acronyms](../../index.md#5-acronyms) section of the Biodiversity Data Quality (BDQ) landing page.
+A list of Acronyms can be found in the [Acronyms (non-normative)](../../index.md#5-acronyms-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.
 
-## Glossary
+## Glossary (non-normative)
 
-A glossary of terms additional to those in the various namespaces can be found in the [Glossary](../../index.md#6-glossary) section of the Biodiversity Data Quality (BDQ) landing page.
+A glossary of terms additional to those in the various namespaces can be found in the [Glossary (non-normative)](../../index.md#6-glossary-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.
 
-## References
+## References (non-normative)
 
-The references for the BDQ standard can be found in the [References](../../index.md#7-references) section of the Biodiversity Data Quality (BDQ) landing page.
+The references for the BDQ standard can be found in the [References (non-normative)](../../index.md#7-references-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.
 
-## Cite BDQ
+## Cite BDQ (non-normative)
 
 **To cite BDQ in general, use the peer-reviewed article:**
 

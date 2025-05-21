@@ -43,36 +43,36 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
 Draft Standard for Review
 
 ## Table of Contents ##
-[1. Introduction](#1-introduction)
-  - [1.1 Purpose](#11-purpose)
-  - [1.2 Audience](#12-audience)
-  - [1.3 Associated Documents](#13-associated-documents)
-  - [1.4 Status of the content of this document](#14-status-of-the-content-of-this-document)
-  - [1.5 RFC 2119 key words](#15-rfc-2119-key-words)
-  - [1.6 Namespace abbreviations](#16-namespace-abbreviations)
+[1. Introduction (non-normative)](#1-introduction-non-normative)
+  - [1.1 Purpose (non-normative)](#11-purpose-non-normative)
+  - [1.2 Audience (non-normative)](#12-audience-non-normative)
+  - [1.3 Associated Documents (non-normative)](#13-associated-documents-non-normative)
+  - [1.4 Status of the content of this document (normative)](#14-status-of-the-content-of-this-document-normative)
+  - [1.5 RFC 2119 key words (normative)](#15-rfc-2119-key-words-normative)
+  - [1.6 Namespace abbreviations (non-normative)](#16-namespace-abbreviations-non-normative)
   - [1.7 Referring to Terms (normative)](#17-referring-to-terms-normative)
 
 [2 Use of Terms (normative)](#2-use-of-terms-normative)
 
-[3 Framework for describing data quality](#3-framework-for-describing-data-quality)
-  - [3.1 Introduction and Context](#31-introduction-and-context)
-  - [3.2 Description of the Fitness For Use Framework ontology](#32-description-of-the-fitness-for-use-framework-ontology)
-    - [3.2.1 Data Quality Control and Data Quality Assurance](#321-data-quality-control-and-data-quality-assurance)
-    - [3.2.2 Information Elements](#322-information-elements)
-    - [3.2.3 Concepts in the Framework, Test Types: Validation, Issue, Measure, Amendment](#323-concepts-in-the-framework-test-types-validation-issue-measure-amendment)
-  - [3.3 Data Quality Needs, Data Quality Mechanisms, Data Quality Reports](#33-data-quality-needs-data-quality-mechanisms-data-quality-reports)
-  - [3.4 Responses](#34-responses)
-  - [3.5 Organization of the bdqtest: classes](#35-organization-of-the-bdqtest-classes)
-  - [3.6 Example representation of a BDQ Test](#36-example-representation-of-a-bdq-test)
-  - [3.7 Cardinality of bdqffdq: terms](#37-cardinality-of-bdqffdq-terms)
+[3 Framework for describing data quality (non-normative)](#3-framework-for-describing-data-quality-non-normative)
+  - [3.1 Introduction and Context (non-normative)](#31-introduction-and-context-non-normative)
+  - [3.2 Description of the Fitness For Use Framework ontology (non-normative)](#32-description-of-the-fitness-for-use-framework-ontology-non-normative)
+    - [3.2.1 Data Quality Control and Data Quality Assurance (non-normative)](#321-data-quality-control-and-data-quality-assurance-non-normative)
+    - [3.2.2 Information Elements (non-normative)](#322-information-elements-non-normative)
+    - [3.2.3 Concepts in the Framework, Test Types: Validation, Issue, Measure, Amendment (non-normative)](#323-concepts-in-the-framework-test-types-validation-issue-measure-amendment-non-normative)
+  - [3.3 Data Quality Needs, Data Quality Mechanisms, Data Quality Reports (non-normative)](#33-data-quality-needs-data-quality-mechanisms-data-quality-reports-non-normative)
+  - [3.4 Responses (non-normative)](#34-responses-non-normative)
+  - [3.5 Organization of the bdqtest: classes  (non-normative)](#35-organization-of-the-bdqtest-classes--non-normative)
+  - [3.6 Example representation of a BDQ Test (non-normative)](#36-example-representation-of-a-bdq-test-non-normative)
+  - [3.7 Cardinality of bdqffdq: terms (non-normative)](#37-cardinality-of-bdqffdq-terms-non-normative)
 
-[4 Term index](#4-term-index)
+[4 Term index (non-normative)](#4-term-index-non-normative)
   - [4.1 Alphabetical Index of classes](#41-alphabetical-index-of-classes)
   - [4.2 Alphabetical Index of object properties](#42-alphabetical-index-of-object-properties)
   - [4.3 Alphabetical Index of data properties](#43-alphabetical-index-of-data-properties)
   - [4.4 Alphabetical Index of named individuals](#44-alphabetical-index-of-named-individuals)
 
-[5 List of Terms with axioms in the Fitness For Use Framework ontology (portions normative, see 1.4)](#5-list-of-terms-with-axioms-in-the-fitness-for-use-framework-ontology-portions-normative-see-14)
+[5 List of Terms with axioms in the Fitness For Use Framework ontology (normative)](#5-list-of-terms-with-axioms-in-the-fitness-for-use-framework-ontology-normative)
   - [5.1 Class terms](#51-class-terms)
     - [AbstractInformationElement](#abstractinformationelement)
     - [ActedUpon](#actedupon)
@@ -176,23 +176,23 @@ Draft Standard for Review
     - [NOT_AMENDED](#not_amended)
     - [RUN_HAS_RESULT](#run_has_result)
 
-[Acronyms](#acronyms)
+[Acronyms (non-normative)](#acronyms-non-normative)
 
-[Glossary](#glossary)
+[Glossary (non-normative)](#glossary-non-normative)
 
-[References](#references)
+[References (non-normative)](#references-non-normative)
 
-[Cite BDQ](#cite-bdq)
+[Cite BDQ (non-normative)](#cite-bdq-non-normative)
 
-## 1. Introduction
+## 1. Introduction (non-normative)
 
-### 1.1 Purpose
+### 1.1 Purpose (non-normative)
 
 The purpose of this document is to provide a practical guide to understanding and using the [Biodiversity Data Quality Fitness for Use Framework Ontology](../../../vocabulary/bdqffdq.owl), represented by the `bdqffdq:` vocabulary. This ontology defines a formal framework for describing data quality in the context of biodiversity data, emphasizing that quality is always relative to a particular purpose or use.
 
 The document explains key concepts from the ontology, including `Use Case`, `Information Element`, `Specification`, and `Criterion`, and shows how they support the structure and semantics of BDQ Tests. It provides context, illustrative examples, and guidance for interpreting the ontology as applied in real-world implementations.
 
-### 1.2 Audience
+### 1.2 Audience (non-normative)
 
 This guide is intended for users who need a technical understanding of the Fitness for Use Framework and its ontology. It will be particularly useful for:
 
@@ -203,37 +203,31 @@ This guide is intended for users who need a technical understanding of the Fitne
 
 Some familiarity with RDF/OWL ontologies is assumed.
 
-### 1.3 Associated Documents
+### 1.3 Associated Documents (non-normative)
 
 For the list and links to all associated documents see [The Biodiversity Data Quality (BDQ) Standard](../../..index.md).
 
 Information about the Fitness For Use Framework ontology, its usage, and its extensions can be found in the following subset of BDQ resources:
 
-- **Fitness For Use Framework Ontology Guide** Provides a visual and narrative introduction to the concepts and application of the ontology. This document.
-- [**Fitness For Use Framework Ontology List of Terms**](../../list/bdqffdq/index.md) The term list document, which enumerates and describes the vocabulary terms.
-- [**Fitness for Use Framework Ontology**](../../bdqffdq/index.md) Provides normative guidance on the use of the vocabulary.
-- [**Fitness For Use Framework Ontology Vocabulary Extension**](../../extension/bdqffdq/index.md) Defines additional axioms extending the core vocabulary.
-- [**Biodiversity Data Quality Fitness for Use Framework (Ontology)**](../../../vocabulary/bdqffdq.owl) The ontology, which provides the formal RDF/OWL representation of the vocabulary.
+- **Fitness For Use Framework Ontology Guide** - Provides a visual and narrative introduction to the concepts and application of the ontology. This document.
+- [**Fitness For Use Framework Ontology List of Terms**](../../list/bdqffdq/index.md) - The term list document, which enumerates and describes the vocabulary terms.
+- [**Fitness for Use Framework Ontology**](../../bdqffdq/index.md) - Provides normative guidance on the use of the vocabulary.
+- [**Fitness For Use Framework Ontology Vocabulary Extension**](../../extension/bdqffdq/index.md) - Defines additional axioms extending the core vocabulary.
+- [**Biodiversity Data Quality Fitness for Use Framework (Ontology)**](../../../vocabulary/bdqffdq.owl) - The ontology, which provides the formal RDF/OWL representation of the vocabulary.
 
-### 1.4 Status of the content of this document
+### 1.4 Status of the content of this document (normative)
 
-<!--- TODO: Review these normative/non-normative statements, not all sections are covered --->
+Sections may be either normative (defines what is required to comply with the standard) or non-normative (supports understanding but is not binding) and are marked as such. 
 
-Sections 1 and 3 are non-normative.
-
-Section 2 is normative.
-
-In Section 5, the values of following terms are normative: Term IRI, Name, Type, Superclass, Definition.
+Any sentence or phrase beginning with "For example" or "e.g.", whether in a normative section or a non-normative section, is non-normative.
 
 Figures are non-normative.
 
-Any sentence or phrase beginning with "For example" or "e.g." is non-normative.
-
-### 1.5 RFC 2119 key words
+### 1.5 RFC 2119 key words (normative)
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119.
 
-### 1.6 Namespace abbreviations
+### 1.6 Namespace abbreviations (non-normative)
 
 The following namespace abbreviations are used in this document:
 
@@ -252,6 +246,7 @@ The following namespace abbreviations are used in this document:
 | xsd:         | http://www.w3.org/2001/XMLSchema#           |
 
 ### 1.7 Referring to Terms (normative)
+
 In any technical treatment of the BDQ standard, a precise reference to a class or property term SHOULD be made using its qualified name (the namespace prefix followed by the term local name; e.g., `bdqffdq:InformationElement`) and the namespace IRI corresponding to the namespace prefix (e.g., https://rs.tdwg.org/bdqffdq/terms for `bdqffdq:`) MUST be provided. In less formal descriptions where the technical precision is not needed, the preferred label (skos:prefLabel, e.g., `Information Element`) or the term local name (e.g., `InformationElement`) MAY be used. You will find all of these methods of referring to BDQ-related terms throughout the BDQ documentation.
 
 ## 2 Use of Terms (normative)
@@ -260,9 +255,9 @@ When not represented as objects, controlled value strings MUST be used as values
 
 IRIs MUST be used as values for all individual class instances and object properties when using bdqffdq: terms.
 
-## 3 Framework for describing data quality 
+## 3 Framework for describing data quality (non-normative)
 
-### 3.1 Introduction and Context
+### 3.1 Introduction and Context (non-normative)
 
 The `bdqffdq:` portion of the BDQ standard is a specification for a framework for describing data quality. This Fitness for Use Framework (often referred to simply as "The Framework") is based on a mathematical formulation, using set theory (Veiga, 2016), and is represented as an OWL ontology. This document describes the organization and use of the OWL ontology.
 
@@ -270,7 +265,7 @@ This document provides a background for understanding the `bdqtest:` Test descri
 
 See the [Fitness for Use Framework Ontology](../../bdqffdq/index.md) for a concise description and normative information about the `bdqffdq:` ontology and a summary of the mathematical formalization. See the [Fitness For Use Framework Ontology List of Terms](../../list/bdqffdq/index.md) document for the list of terms in the `bdqffdq:` vocabulary. See the [Fitness For Use Framework Ontology Vocabulary Extension](../../extension/bdqffdq/index.md) for documentation on additional axioms. See the [OWL Ontology Distribution](../../../vocabulary/bdqffdq.owl) for the formal representation of the vocabulary as an OWL ontology. The mathematical formalization provides a description of inferences and reasoning that may be made with the terms in the vocabulary.
 
-### 3.2 Description of the Fitness For Use Framework ontology
+### 3.2 Description of the Fitness For Use Framework ontology (non-normative)
 
 The Fitness for Use Framework defines data quality in relation to a specified use, emphasizing that data quality is not abstract but purpose-dependent. It provides a formal way to describe a `Use Case` (`bdqffdq:UseCase`) and the `Criteria` for evaluating whether a dataset is fit for that purpose. By linking data quality explicitly to use, the Framework enables consistent assessment and assurance of fitness for a given purpose.
 
@@ -280,15 +275,15 @@ The Framework can also be conceptually divided into four vertical themes, four s
 
 We use the informal term "Test" to describe these four vertical themes, a Test involves terms in both Needs and Solutions, and Tests produce particular reporting elements.
 
-#### 3.2.1 Data Quality Control and Data Quality Assurance
+#### 3.2.1 Data Quality Control and Data Quality Assurance (non-normative)
 
 The Framework draws a distinction between **Quality Control** and **Quality Assurance**. Quality Control processes seek to assess the quality of data for some purpose, then identify changes to the data or to processes around the data to improve their quality. Quality Assurance processes seek to filter some set of data to a subset that is fit for some purpose, that is, to assure that data used for some purpose are fit for that purpose.
 
-#### 3.2.2 Information Elements
+#### 3.2.2 Information Elements (non-normative)
 
 The Framework has an abstract concept of `Information Elements`. To frame Tests on Darwin Core terms in a usable way, we list specific Darwin Core terms as the `Information Elements` in each Test.
 
-#### 3.2.3 Concepts in the Framework, Test Types: Validation, Issue, Measure, Amendment
+#### 3.2.3 Concepts in the Framework, Test Types: Validation, Issue, Measure, Amendment (non-normative)
 
 The Framework defines four central concepts for describing and evaluating `Data Quality Needs`: `Validation`, `Issue`, `Measure`, and `Amendment`.
 
@@ -314,7 +309,7 @@ Formally, in the `Data Quality Needs` level, the Framework starts with a `Use Ca
 
 ![Diagram of Single Record and Multi Record as named individual instances of the Resource class, showing Resource as a rectangular node above rectangular nodes for Multi Record and Amendment. ](resource_types.png "Representation of Single Record and Multi Record as named individual instances of the Resource class.")
 
-### 3.3 Data Quality Needs, Data Quality Mechanisms, Data Quality Reports
+### 3.3 Data Quality Needs, Data Quality Mechanisms, Data Quality Reports (non-normative)
 
 The Fitness for Use Framework organizes data quality concepts into three core areas — Needs, Mechanisms, and Reports — which can be viewed as horizontal slices through the Framework (Veiga et al., 2017).
 
@@ -341,7 +336,7 @@ A useful way to think of the Framework is to divide it horizontally into Needs, 
 
 ![Diagram Illustrating both the horizontal (Needs/Solutions/Reports) layers and the vertical Test concepts (Validations, Issues, Measures and Amendments)](bdqffdq_data_quality_layers.svg "All four Tests concepts in the Needs Solutions, and Reports levels.")
 
-### 3.4 Responses
+### 3.4 Responses (non-normative)
 
 The content of this section is non-normative, related normative guidance is in section [5.1 The Response Object (normative)](../implementers/index.md#51-the-response-object-normative) of the [BDQ Implementer's Guide](../implementers/index.md).
 
@@ -357,13 +352,13 @@ Assertions are expected to assert Response objects. These will involve, in RDF, 
 
 See the section [Structure of a Response (normative)](../bdqtest/index.md#31-structure-of-response-normative) of the [BDQ Tests and Assertions](../bdqtest/index.md) for further normative guidance on Responses as RDF or as data structures in non-RDF settings.
 
-### 3.5 Organization of the bdqtest: classes 
+### 3.5 Organization of the bdqtest: classes  (non-normative)
 
 Following is a knowledge graph showing the is-a relationships between the classes in the Fitness for Use Framework:
 
 ![Diagram of the is-a class relationships of bdqffdq:, as a tree expanding left to right, with the root owl:Thing node not shown.](bdqffdq_class_diagram.png "Diagram showing the relationships among the bdqffdq: classes.")
 
-### 3.6 Example representation of a BDQ Test
+### 3.6 Example representation of a BDQ Test (non-normative)
 
 Below is a fragment in Turtle describing VALIDATION_COUNTRY_FOUND, composed of a `Validation`, linking an `Acted Upon` `Information Element`, a `Criterion`, and the `Resource Type` `Single Record`, with the `Validation` linked to a `Validation Method`, and from there a `Specification`. Also shown is a `Validation Policy` linking this `Validation` to a `Use Case`.
 
@@ -405,7 +400,7 @@ Below is a fragment in Turtle describing VALIDATION_COUNTRY_FOUND, composed of a
      	<bdqffdq:hasUseCase> <bdqffdq:Record-Management> ;
      	<bdqffdq:includesInPolicy> <bdqtest:01c6dafa-0886-4b7e-9881-2c3018c98bdc> , <bdqtest:0493bcfb-652e-4d17-815b-b0cce0742fbe> , <bdqtest:04b2c8f3-c71b-4e95-8e43-f70374c5fb92> , <bdqtest:06851339-843f-4a43-8422-4e61b9a00e75> , <bdqtest:0949110d-c06b-450e-9649-7c1374d940d1> , <bdqtest:0bb8297d-8f8a-42d2-80c1-558f29efe798> , <bdqtest:125b5493-052d-4a0d-a3e1-ed5bf792689e> , <bdqtest:14da5b87-8304-4b2b-911d-117e3c29e890> , <bdqtest:15f78619-811a-4c6f-997a-a4c7888ad849> , <bdqtest:17f03f1f-f74d-40c0-8071-2927cfc9487b> , <bdqtest:239ec40e-a729-4a8e-ba69-e0bf03ac1c44> , <bdqtest:2750c040-1d4a-4149-99fe-0512785f2d5f> , <bdqtest:2cd6884e-3d14-4476-94f7-1191cfff309b> , <bdqtest:3136236e-04b6-49ea-8b34-a65f25e3aba1> , <bdqtest:3667556d-d8f5-454c-922b-af8af38f613c> , <bdqtest:36ed36c9-b1a7-40b2-b5e2-0d012e772098> , <bdqtest:374b091a-fc90-4791-91e5-c1557c649169> , <bdqtest:3cff4dc4-72e9-4abe-9bf3-8a30f1618432> , <bdqtest:3f1db29a-bfa5-40db-9fd1-fde020d81939> , <bdqtest:3f335517-f442-4b98-b149-1e87ff16de45> , <bdqtest:401bf207-9a55-4dff-88a5-abcd58ad97fa> , <bdqtest:42408a00-bf71-4892-a399-4325e2bc1fb8> , <bdqtest:47ff73ba-0028-4f79-9ce1-ee7008d66498> , <bdqtest:4833a522-12eb-4fe0-b4cf-7f7a337a6048> , <bdqtest:49f1d386-5bed-43ae-bd43-deabf7df64fc> , <bdqtest:4c09f127-737b-4686-82a0-7c8e30841590> , <bdqtest:4daa7986-d9b0-4dd5-ad17-2d7a771ea71a> , <bdqtest:4eb48fdf-7299-4d63-9d08-246902e2857f> , <bdqtest:4f2bf8fd-fc5c-493f-a44c-e7b16153c803> , <bdqtest:5424e933-bee7-4125-839e-d8743ea69f93> , <bdqtest:5618f083-d55a-4ac2-92b5-b9fb227b832f> , <bdqtest:58486cb6-1114-4a8a-ba1e-bd89cfe887e9> , <bdqtest:66269bdd-9271-4e76-b25c-7ab81eebe1d8> , <bdqtest:69b2efdc-6269-45a4-aecb-4cb99c2ae134> , <bdqtest:6ce2b2b4-6afe-4d13-82a0-390d31ade01c> , <bdqtest:6eeac3ed-f691-457f-a42e-eaa9c8a71ce8> , <bdqtest:7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47> , <bdqtest:7bdb13a4-8a51-4ee5-be7f-20693fdb183e> , <bdqtest:7c4b9498-a8d9-4ebb-85f1-9f200c788595> , <bdqtest:7d2485d5-1ba7-4f25-90cb-f4480ff1a275> , <bdqtest:7e0c0418-fe16-4a39-98bd-80e19d95b9d1> , <bdqtest:81cc974d-43cc-4c0f-a5e0-afa23b455aa3> , <bdqtest:853b79a2-b314-44a2-ae46-34a1e7ed85e4> , <bdqtest:85803c7e-2a5a-42e1-b8d3-299a44cafc46> , <bdqtest:88d8598b-3318-483d-9475-a5acf9887404> , <bdqtest:8d787cb5-73e2-4c39-9cd1-67c7361dc02e> , <bdqtest:8f1e6e58-544b-4365-a569-fb781341644e> , <bdqtest:9a39d88c-7eee-46df-b32a-c109f9f81fb8> , <bdqtest:9beb9442-d942-4f42-8b6a-fcea01ee086a> , <bdqtest:ac2b7648-d5f9-48ca-9b07-8ad5879a2536> , <bdqtest:ad0c8855-de69-4843-a80c-a5387d20fbc8> , <bdqtest:b6ecda2a-ce36-437a-b515-3ae94948fe83> , <bdqtest:c09ecbf9-34e3-4f3e-b74a-8796af15e59f> , <bdqtest:c486546c-e6e5-48a7-b286-eba7f5ca56c4> , <bdqtest:c6adf2ea-3051-4498-97f4-4b2f8a105f57> , <bdqtest:c971fe3f-84c1-4636-9f44-b1ec31fd63c7> , <bdqtest:cdaabb0d-a863-49d0-bc0f-738d771acba5> , <bdqtest:d257eb98-27cb-48e5-8d3c-ab9fca4edd11> , <bdqtest:d708526b-6561-438e-aa1a-82cd80b06396> , <bdqtest:dc8aae4b-134f-4d75-8a71-c4186239178e> , <bdqtest:eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f> , <bdqtest:eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf> , <bdqtest:f2ce7d55-5b1d-426a-b00e-6d4efe3058ec> , <bdqtest:f51e15a6-a67d-4729-9c28-3766299d2985> , <bdqtest:ff59f77d-71e9-4eb1-aac9-8bd05c50ff70> .
 
-### 3.7 Cardinality of bdqffdq: terms
+### 3.7 Cardinality of bdqffdq: terms (non-normative)
 
 The content of this section is non-normative, see the [Fitness for Use Framework Ontology](../../bdqffdq/index.md) document for related normative guidance. 
 
@@ -450,7 +445,7 @@ Each `Implementation` produces one-to-many `Assertions`.
 
 It is important that the chain of relationships from an instance of an `Assertion` to a `Data Quality Need` (e.g., an instance of a `bdqffdq:Validation`) be a chain of one-to-one relationships. To identify what Test with what `Parameters` made an `Assertion`, it must be possible to follow the chain of relationships from an `Assertion` to a single `Implementation` to a single `Specification` (with zero-to-many `Parameters`) to a single method to a single `Data Quality Need` (e.g., a `Validation`, with one-to-many `Information Elements`). Multiplicity should only be possible following on through `Policy` to `Use Cases` (an `Assertion` may pertain to multiple `Use Cases`), or when going from a `Data Quality Need` to `Assertions`. It is expected that an instance of a `Validation` would produce many instances of `Validation Assertions`, each of those `Validation Assertions` must be able to be related to the sole `Validation` that produced it.
 
-## 4 Term index
+## 4 Term index (non-normative)
 
 
 
@@ -578,7 +573,7 @@ It is important that the chain of relationships from an instance of an `Assertio
 
 
 
-## 5 List of Terms with axioms in the Fitness For Use Framework ontology (portions normative, see 1.4)
+## 5 List of Terms with axioms in the Fitness For Use Framework ontology (normative)
 
 
 ### 5.1 Class terms
@@ -1366,19 +1361,19 @@ It is important that the chain of relationships from an instance of an `Assertio
 
 
 
-## Acronyms
+## Acronyms (non-normative)
 
-A list of Acronyms can be found in the [Acronyms](../../index.md#5-acronyms) section of the Biodiversity Data Quality (BDQ) landing page.
+A list of Acronyms can be found in the [Acronyms (non-normative)](../../index.md#5-acronyms-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.
 
-## Glossary
+## Glossary (non-normative)
 
-A glossary of terms additional to those in the various namespaces can be found in the [Glossary](../../index.md#6-glossary) section of the Biodiversity Data Quality (BDQ) landing page.
+A glossary of terms additional to those in the various namespaces can be found in the [Glossary (non-normative)](../../index.md#6-glossary-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.
 
-## References
+## References (non-normative)
 
-The references for the BDQ standard can be found in the [References](../../index.md#7-references) section of the Biodiversity Data Quality (BDQ) landing page.
+The references for the BDQ standard can be found in the [References (non-normative)](../../index.md#7-references-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.
 
-## Cite BDQ
+## Cite BDQ (non-normative)
 
 **To cite BDQ in general, use the peer-reviewed article:**
 

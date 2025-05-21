@@ -260,8 +260,8 @@ for term in termLists:
     # ---------------
     
     print('Generating term index by CURIE')
-    text = '### 3.1 Index By Term Name\n\n'
-    text += '(See also [3.2 Index By Label](#32-index-by-label))\n\n'
+    text = '### 3.1 Index By Term Name (non-normative)\n\n'
+    text += '(See also [3.2 Index By Label (non-normative)](#32-index-by-label-non-normative))\n\n'
     
     text += '**Classes**\n'
     text += '\n'
@@ -398,7 +398,7 @@ for term in termLists:
 
     print('Generating terms table')
     # generate the Markdown for the terms table
-    text = '## 4 Vocabulary\n'
+    text = '## 4 Vocabulary (normative)\n'
     if True:
         filtered_table = terms_sorted_by_localname
     

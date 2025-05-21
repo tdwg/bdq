@@ -43,17 +43,17 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
 Draft Standard for Review
 
 ## Table of Contents ##
-[1 Introduction](#1-introduction)
-  - [1.1 Purpose](#11-purpose)
-  - [1.2 Audience](#12-audience)
-  - [1.3 Associated Documents](#13-associated-documents)
-    - [1.3.1 Term List Distributions for the BDQ Standard](#131-term-list-distributions-for-the-bdq-standard)
-  - [1.4 Status of the Content of this Document](#14-status-of-the-content-of-this-document)
-  - [1.5 RFC 2119 key words](#15-rfc-2119-key-words)
-  - [1.6 Namespace Abbreviations](#16-namespace-abbreviations)
+[1 Introduction (non-normative)](#1-introduction-non-normative)
+  - [1.1 Purpose (non-normative)](#11-purpose-non-normative)
+  - [1.2 Audience (non-normative)](#12-audience-non-normative)
+  - [1.3 Associated Documents (non-normative)](#13-associated-documents-non-normative)
+    - [1.3.1 Term List Distributions for the BDQ Standard (non-normative)](#131-term-list-distributions-for-the-bdq-standard-non-normative)
+  - [1.4 Status of the Content of this Document (normative)](#14-status-of-the-content-of-this-document-normative)
+  - [1.5 RFC 2119 key words (normative)](#15-rfc-2119-key-words-normative)
+  - [1.6 Namespace Abbreviations (non-normative)](#16-namespace-abbreviations-non-normative)
   - [1.7 Referring to Terms (normative)](#17-referring-to-terms-normative)
 
-[2 A Brief Context for the BDQ Tests](#2-a-brief-context-for-the-bdq-tests)
+[2 A Brief Context for the BDQ Tests (non-normative)](#2-a-brief-context-for-the-bdq-tests-non-normative)
   - [2.1 What is meant by "Test"? (non-normative)](#21-what-is-meant-by-test?-non-normative)
   - [2.2 Test Types (non-normative)](#22-test-types-non-normative)
     - [2.2.1 Validation Tests (normative)](#221-validation-tests-normative)
@@ -69,25 +69,23 @@ Draft Standard for Review
   - [3.3 Parameterizing the Tests (normative)](#33-parameterizing-the-tests-normative)
     - [3.3.1 Parameter Examples (non-normative)](#331-parameter-examples-non-normative)
 
-[4 Term indices](#4-term-indices)
+[Acronyms (non-normative)](#acronyms-non-normative)
 
-[Acronyms](#acronyms)
+[Glossary (non-normative)](#glossary-non-normative)
 
-[Glossary](#glossary)
+[References (non-normative)](#references-non-normative)
 
-[References](#references)
+[Cite BDQ (non-normative)](#cite-bdq-non-normative)
 
-[Cite BDQ](#cite-bdq)
+## 1 Introduction (non-normative)
 
-## 1 Introduction
-
-### 1.1 Purpose
+### 1.1 Purpose (non-normative)
 
 The purpose of this document is to define and explain the BDQ Tests — the primary mechanism for evaluating the quality of biodiversity data in the BDQ standard. It describes the structure, types, and formal characteristics of the Tests, providing a clear and consistent specification that can be used by implementers, analysts, and quality assessors.
 
 This document is both normative and explanatory: it defines how each Test is modeled using standard vocabulary terms and how it should behave under various conditions. It also distinguishes among types of Tests (`Validation`, `Issue`, `Measure`, and `Amendment`), outlines the semantics of single- versus multi-record evaluation, and explains how `Parameters` influence Test behavior. The content here provides the foundation for interpreting and using the Tests in software and quality assessment workflows.
 
-### 1.2 Audience
+### 1.2 Audience (non-normative)
 
 This document is intended for audiences who need a detailed understanding of the BDQ Tests, including:
 
@@ -98,24 +96,24 @@ This document is intended for audiences who need a detailed understanding of the
 
 While some familiarity with controlled vocabularies and RDF modeling may be useful, the document is designed to be accessible to both technical and semi-technical users who want to apply, understand, or extend BDQ Tests.
 
-### 1.3 Associated Documents
+### 1.3 Associated Documents (non-normative)
 
 For the list and links to all associated documents see [The Biodiversity Data Quality (BDQ) Standard](../../index.md).
 
 The set of information most relevant to the Biodiversity Data Quality (BDQ) Tests can be found in the following subset of resources:
 
-- **BDQ Tests and Assertions** Defines how each Test is modeled using standard vocabulary terms and how it should behave under various conditions. This document.
-- [**BDQ Tests Quick Reference Guide**](../terms/bdqtest/index.md) Provides a concise, easy-to-read reference about the BDQ Tests.
+- **BDQ Tests and Assertions** - Defines how each Test is modeled using standard vocabulary terms and how it should behave under various conditions. This document.
+- [**BDQ Tests Quick Reference Guide**](../terms/bdqtest/index.md) - Provides a concise, easy-to-read reference about the BDQ Tests.
   - [BDQ Test Index by Use Case](../terms/bdqtest/qrg_index_by_usecase.md)
   - [BDQ Test Index by Information Element Acted Upon](../terms/bdqtest/qrg_index_by_ie_actedupon.md)
   - [BDQ Test Index by Information Element Class](../terms/bdqtest/qrg_index_by_ie_class.md)
   - [BDQ Test Index by Data Quality Dimension](../terms/bdqtest/qrg_index_by_dimension.md)
   - [BDQ Multi Record Measure Test Index](../terms/bdqtest/qrg_multirecord_index.md)
-- [**BDQ Tests and Assertions List of Terms**](../list/bdqtest/index.md) Provides the complete normative definitions of the BDQ Tests.
-- [**BDQ User's Guide**](../guide/users/index.md) For anyone interested in how to use the BDQ Tests in practice.
-- [**BDQ Implementer's Guide**](../guide/implementers/index.md) For anyone interested in the technical implementation of the BDQ Tests.
+- [**BDQ Tests and Assertions List of Terms**](../list/bdqtest/index.md) - Provides the complete normative definitions of the BDQ Tests.
+- [**BDQ User's Guide**](../guide/users/index.md) - For anyone interested in how to use the BDQ Tests in practice.
+- [**BDQ Implementer's Guide**](../guide/implementers/index.md) - For anyone interested in the technical implementation of the BDQ Tests.
 
-#### 1.3.1 Term List Distributions for the BDQ Standard
+#### 1.3.1 Term List Distributions for the BDQ Standard (non-normative)
 
 <!--- This same table appears in bdqtest_termlist_header. Edit here, edit there. --->
 | Description | IRI | Download URL | Note | 
@@ -128,25 +126,17 @@ The set of information most relevant to the Biodiversity Data Quality (BDQ) Test
 | Single Record Test CSV file | TBD | [Single Record Tests in CSV](../../dist/bdqtest_singlerecord_tests_current.csv) | CSV file listing just the Single Record Tests. |
 | Multi Record Test CSV file | TBD | [Multi Record Tests in CSV](../../dist/bdqtest_multirecord_tests_current.csv) | CSV file listing just the Multi Record Tests. |
 
-### 1.4 Status of the Content of this Document
+### 1.4 Status of the Content of this Document (normative)
 
-Section 1 is non-normative.
+Sections may be either normative (defines what is required to comply with the standard) or non-normative (supports understanding but is not binding) and are marked as such. 
 
-Parts of section 2 are normative.
+Any sentence or phrase beginning with "For example" or "e.g.", whether in a normative section or a non-normative section, is non-normative.
 
-Section 3 is normative.
-
-Any sentence or phrase beginning with "For example" or "e.g." is non-normative.
-
-Section 4 is non-normative.
-
-Section 5 is non-normative.
-
-### 1.5 RFC 2119 key words
+### 1.5 RFC 2119 key words (normative)
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119.
 
-### 1.6 Namespace Abbreviations
+### 1.6 Namespace Abbreviations (non-normative)
 
 The following namespace abbreviations are used in this document:
 
@@ -170,7 +160,7 @@ The following namespace abbreviations are used in this document:
 ### 1.7 Referring to Terms (normative)
 In any technical treatment of the BDQ standard, a precise reference to a class or property term SHOULD be made using its qualified name (the namespace prefix followed by the term local name; e.g., `bdqffdq:InformationElement`) and the namespace IRI corresponding to the namespace prefix (e.g., 'https://rs.tdwg.org/bdqffdq/terms' for `bdqffdq:`) MUST be provided. In less formal descriptions where the technical precision is not needed, the preferred label (skos:prefLabel, e.g., `Information Element`) or the term local name (e.g., `InformationElement`) MAY be used. You will find all of these methods of referring to BDQ-related terms throughout the BDQ documentation.
 
-## 2 A Brief Context for the BDQ Tests
+## 2 A Brief Context for the BDQ Tests (non-normative)
 
 The Authors acknowledge the fundamental importane of the work of:
 
@@ -178,7 +168,7 @@ The Authors acknowledge the fundamental importane of the work of:
 - The TDWG Data Quality Interest Group - Task Group 3 [Data Quality Use Cases](https://www.tdwg.org/community/bdq/tg-3/) for providing recommendations on Use Cases.
 - The TDWG [Annotations Interest Group](https://www.tdwg.org/community/annotations/) as to how the Test results may be reported against records.
 
-The terminology of BDQ is based primarily on the Fitness for use Framework (Veiga 2016, Veiga et al. 2017, Biodiversity Information standards (TDWG) Task Group 1) expressed as an ontology, but additional vocabularies are required for a complete description of the Tests and how to use them. See [2.4 Vocabularies](index.md#24-vocabularies) in [The Biodiversity Data Quality (BDQ) Standard](../../index.md).
+The terminology of BDQ is based primarily on the Fitness for use Framework (Veiga 2016, Veiga et al. 2017, Biodiversity Information standards (TDWG) Task Group 1) expressed as an ontology, but additional vocabularies are required for a complete description of the Tests and how to use them. See [2.4 Vocabularies](../../index.md#24-vocabularies-non-normative) in [The Biodiversity Data Quality (BDQ) Standard](../../index.md).
 
 BDQ Tests focus on values of a subset of [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) composed as `bdqffdq:InformationElements` as inputs to the Tests. Each Test is independent, to support the mixing and matching of Tests to meet particular `Data Quality Needs` and not impose a particular model of Test execution on implementation frameworks. Tests may execute in parallel, on data records in sequence, as queries on datasets and on unique values. Tests are paired in that all `Amendment` Tests are matched with a corresponding `Validation` Test that assesses some aspect of data quality. An `Amendment` Test may propose improvements to term values, but the BDQ standard recommends that all improvements be evaluated before application.
 
@@ -406,7 +396,7 @@ Values of `bdqffdq:hasAuthoritiesDefaults` SHOULD be a text string listing `Para
 
 The `bdqffdq:hasAuthoritiesDefaults` data property MAY be used without corresponding `bdqffdq:Arguments` and `bdqffdq:Parameters` when a Test is not parameterized, but a `bdq:sourceAuthority` is mentioned within a `bdqffdq:hasExpectedResponse` for the `bdqffdq:Specification` and the `bdqffdq:hasAuthoritiesDefaults` provides details on this `sourceAuthority`. This usage allows for simpler and easier-to-read expected responses.
 
-Section [2.3.2 Reading a Specification](../guide/implementers/index.md#232-reading-a-specification) of the [BDQ Implementer's Guide](../guide/implementers/index.md) contains additional guidance for handling parameters in BDQ Test `Implementations`.
+Section [2.3.2 Reading a Specification (non-normative)](../guide/implementers/index.md#232-reading-a-specification-non-normative) of the [BDQ Implementer's Guide](../guide/implementers/index.md) contains additional guidance for handling parameters in BDQ Test `Implementations`.
 
 #### 3.3.1 Parameter Examples (non-normative)
 
@@ -446,23 +436,19 @@ Example RDF Fragment from the `Specification` for [VALIDATION_COUNTRYCODE_STANDA
 
     <hasAuthoritiesDefaults xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bdq:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}</hasAuthoritiesDefaults>
     <hasExpectedResponse xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode is bdq:Empty; COMPLIANT if dwc:countryCode can be unambiguously interpreted as a valid ISO 3166-1-alpha-2 country code in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</hasExpectedResponse
+## Acronyms (non-normative)
 
-<!--
-## 4 Term indices
--->
-## Acronyms
+A list of Acronyms can be found in the [Acronyms (non-normative)](../../index.md#5-acronyms-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.
 
-A list of Acronyms can be found in the [Acronyms](../../index.md#5-acronyms) section of the Biodiversity Data Quality (BDQ) landing page.
+## Glossary (non-normative)
 
-## Glossary
+A glossary of terms additional to those in the various namespaces can be found in the [Glossary (non-normative)](../../index.md#6-glossary-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.
 
-A glossary of terms additional to those in the various namespaces can be found in the [Glossary](../../index.md#6-glossary) section of the Biodiversity Data Quality (BDQ) landing page.
+## References (non-normative)
 
-## References
+The references for the BDQ standard can be found in the [References (non-normative)](../../index.md#7-references-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.
 
-The references for the BDQ standard can be found in the [References](../../index.md#7-references) section of the Biodiversity Data Quality (BDQ) landing page.
-
-## Cite BDQ
+## Cite BDQ (non-normative)
 
 **To cite BDQ in general, use the peer-reviewed article:**
 

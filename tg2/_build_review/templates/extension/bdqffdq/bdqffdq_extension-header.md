@@ -42,9 +42,9 @@
 
 {toc}
 
-## 1. Introduction
+## 1. Introduction (non-normative)
 
-### 1.1 Purpose
+### 1.1 Purpose (non-normative)
 
 The purpose of this document is to define the official vocabulary extension for the `bdqffdq:` ontology. It provides additional axioms, such as range constraints and logical distinctions, that refine and extend the semantics of the core vocabulary terms in the BDQ Fitness for Use Framework.
 
@@ -52,7 +52,7 @@ These axioms enable more precise reasoning, validation, and integration with OWL
 
 This extension follows the TDWG Standards Documentation Specification and maintains a clear separation between core term definitions and ontology logic.
 
-### 1.2 Audience
+### 1.2 Audience (non-normative)
 
 This document is intended for ontology engineers, semantic modelers, and developers who are applying the BDQ Fitness for Use Framework in OWL environments. It will be especially useful for:
 
@@ -62,40 +62,38 @@ This document is intended for ontology engineers, semantic modelers, and develop
 
 This document assumes familiarity with OWL constructs, reasoning profiles, and RDF/OWL modeling practices.
 
-### 1.3 Associated Documents
+### 1.3 Associated Documents (non-normative)
 
 For the list and links to all associated documents see [The Biodiversity Data Quality (BDQ) Standard](../../../index.md).
 
 Information about the bdqffdq: ontology, its usage, and its extensions can be found in the following subset of Biodiversity Data Quality (BDQ) resources:
 
-- [**Fitness For Use Framework Ontology Guide**](../../guide/bdqffdq/index.md) Provides a visual and narrative introduction to the concepts and application of the ontology.
-- [**Fitness For Use Framework Ontology List of Terms**](../../list/bdqffdq/index.md) The term list document, which enumerates and describes the vocabulary terms.
-- [**Fitness for Use Framework Ontology**](../../bdqffdq/index.md) Provides normative guidance on the use of the vocabulary.
-- **Fitness For Use Framework Ontology Vocabulary Extension** Defines additional axioms extending the core vocabulary. This document.
-- [**Biodiversity Data Quality Fitness for Use Framework (Ontology)**](../../../vocabulary/bdqffdq.owl) The ontology, which provides the formal RDF/OWL representation of the vocabulary.
+- [**Fitness For Use Framework Ontology Guide**](../../guide/bdqffdq/index.md) - Provides a visual and narrative introduction to the concepts and application of the ontology.
+- [**Fitness For Use Framework Ontology List of Terms**](../../list/bdqffdq/index.md) - The term list document, which enumerates and describes the vocabulary terms.
+- [**Fitness for Use Framework Ontology**](../../bdqffdq/index.md) - Provides normative guidance on the use of the vocabulary.
+- **Fitness For Use Framework Ontology Vocabulary Extension** - Defines additional axioms extending the core vocabulary. This document.
+- [**Biodiversity Data Quality Fitness for Use Framework (Ontology)**](../../../vocabulary/bdqffdq.owl) - The ontology, which provides the formal RDF/OWL representation of the vocabulary.
 
-#### 1.3.1 Term List Distributions
+#### 1.3.1 Term List Distributions (non-normative)
 
 | Description | IRI | Download URL | Note | 
 | ----------- | --- | -----------  | ---- | 
 | HTML file   | {current_iri} | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/docs/extension/{pref_namespace_prefix}/index.md | This file | 
 | OWL Ontology | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/vocabulary/bdqffdq.owl | Turtle Serialization of the full ontology, including additional axioms | 
 
-### 1.4 Status of the content of this document
+### 1.4 Status of the content of this document (normative)
 
-Sections 1 and 3 are non-normative.
+Sections may be either normative (defines what is required to comply with the standard) or non-normative (supports understanding but is not binding) and are marked as such. 
 
-Section 2 is normative.
+Any sentence or phrase beginning with "For example" or "e.g.", whether in a normative section or a non-normative section, is non-normative.
 
-Section [1.7 Key to Vocabulary Terms](#17-key-to-vocabulary-terms) identifies which values in Section 4 are normative and which are non-normative.
+Section [1.7 Key to Vocabulary Terms (normative)](#17-key-to-vocabulary-terms-normative) identifies which values in Section 4 are normative and which are non-normative.
 
-Any sentence or phrase beginning with "For example" or "e.g." is non-normative.
-
-### 1.5 RFC 2119 key words
+### 1.5 RFC 2119 key words (normative)
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [BCP 14](https://www.rfc-editor.org/info/bcp14) [\[RFC 2119\]](https://datatracker.ietf.org/doc/html/rfc2119) and [\[RFC 8174\]](https://datatracker.ietf.org/doc/html/rfc8174) when, and only when, they appear in all capitals, as shown here.
 
-### 1.6 Namespace abbreviations
+### 1.6 Namespace abbreviations (non-normative)
 
 The following namespace abbreviations are used in this document:
 
@@ -109,7 +107,7 @@ The following namespace abbreviations are used in this document:
 | rdf:         | http://www.w3.org/1999/02/22-rdf-syntax-ns# |
 | rdfs:        | http://www.w3.org/2000/01/rdf-schema        |
 
-### 1.7 Key to Vocabulary Terms
+### 1.7 Key to Vocabulary Terms (normative)
 
 The terminology used to describe the terms in this vocabulary follows the [TDWG Standards Documentation Standard (SDS)](https://www.tdwg.org/standards/sds/) (SDS). Each term definition includes the original RDF definition, and may also provide a TDWG-specific interpretation from the SDS, as well as a definition tailored to this local context.
 

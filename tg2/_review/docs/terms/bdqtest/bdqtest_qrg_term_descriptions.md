@@ -55,19 +55,19 @@ Part of the [BDQ Tests Quick Reference Guide](index.md)
 
 **Notes** [non-normative]: Additional guidance that may be necessary for the accurate `Implementation` of the Tests. Example: "Locations outside of a jurisdiction covered by a country code should not have a value in the field dwc:countryCode. This Test will fail if there is leading or trailing whitespace or if there are leading or trailing non-printing characters."
 
-## Acronyms
+## Acronyms (non-normative)
 
-A list of Acronyms can be found in the [Acronyms](../../index.md#5-acronyms) section of the Biodiversity Data Quality (BDQ) landing page.
+A list of Acronyms can be found in the [Acronyms (non-normative)](../../index.md#5-acronyms-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.
 
-## Glossary
+## Glossary (non-normative)
 
-A glossary of terms additional to those in the various namespaces can be found in the [Glossary](../../index.md#6-glossary) section of the Biodiversity Data Quality (BDQ) landing page.
+A glossary of terms additional to those in the various namespaces can be found in the [Glossary (non-normative)](../../index.md#6-glossary-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.
 
-## References
+## References (non-normative)
 
-The references for the BDQ standard can be found in the [References](../../index.md#7-references) section of the Biodiversity Data Quality (BDQ) landing page.
+The references for the BDQ standard can be found in the [References (non-normative)](../../index.md#7-references-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.
 
-## Cite BDQ
+## Cite BDQ (non-normative)
 
 **To cite BDQ in general, use the peer-reviewed article:**
 

@@ -42,15 +42,15 @@
 
 {toc}
 
-## 1. Introduction
+## 1. Introduction (non-normative)
 
-### 1.1 Purpose
+### 1.1 Purpose (non-normative)
 
 The purpose of this document is to provide the full term list for the `bdq:` controlled vocabulary, which supports the specification and use of BDQ Tests. The `bdq:` vocabulary includes concepts used throughout the BDQ standard to describe parameters, data structures, source authorities, and special value cases relevant to the execution and behavior of Tests.
 
 This term list defines the formal structure and meanings of these concepts and provides reference material for `Implementation` and documentation purposes.
 
-### 1.2 Audience
+### 1.2 Audience (non-normative)
 
 This document is intended for technical users who need a precise understanding of the vocabulary elements used in BDQ Test `Specifications` and reports. It will be particularly useful for:
 
@@ -61,7 +61,7 @@ This document is intended for technical users who need a precise understanding o
 
 Familiarity with RDF vocabularies and the Fitness For Use Framework is recommended for full comprehension, but the document is organized to be accessible for any reader needing detailed term definitions.
 
-### 1.3 Data Quality Vocabulary Terms
+### 1.3 Data Quality Vocabulary Terms (non-normative)
 
 The `bdq:` vocabulary includes four groups of concepts used across the BDQ standard:
 
@@ -72,32 +72,30 @@ The `bdq:` vocabulary includes four groups of concepts used across the BDQ stand
 
 These terms ensure consistent representation and enable structured interpretation of Test configurations and outcomes.
 
-### 1.4 Associated Documents
+### 1.4 Associated Documents (non-normative)
 
 For the list and links to all associated documents see [The Biodiversity Data Quality (BDQ) Standard](../../../index.md).
 
-### 1.5 Term List Distributions
+### 1.5 Term List Distributions (non-normative)
 
 | Description | IRI | Download URL |
 | ----------- | --- | -----------  |
 | HTML file   | {current_iri} | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/docs/list/{pref_namespace_prefix}/index.md |
 | RDF/XML file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/dist/{pref_namespace_prefix}.xml |
 
-### 1.6 Status of the content of this document
+### 1.6 Status of the content of this document (normative)
 
-Sections 1 and 3 are non-normative.
+Sections may be either normative (defines what is required to comply with the standard) or non-normative (supports understanding but is not binding) and are marked as such. 
 
-Section 2 is normative.
+Any sentence or phrase beginning with "For example" or "e.g.", whether in a normative section or a non-normative section, is non-normative.
 
-Section [1.9 Key to Vocabulary Terms](#19-key-to-vocabulary-terms) identifies which values in Section 4 are normative and which are non-normative.
+Section [1.9 Key to Vocabulary Terms (normative)](#19-key-to-vocabulary-terms-normative) identifies which values in Section 4 are normative and which are non-normative.
 
-Any sentence or phrase beginning with "For example" or "e.g." is non-normative.
-
-### 1.7 RFC 2119 key words
+### 1.7 RFC 2119 key words (normative)
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [BCP 14](https://www.rfc-editor.org/info/bcp14) [\[RFC 2119\]](https://datatracker.ietf.org/doc/html/rfc2119) and [\[RFC 8174\]](https://datatracker.ietf.org/doc/html/rfc8174) when, and only when, they appear in all capitals, as shown here.
 
-### 1.8 Namespace abbreviations
+### 1.8 Namespace abbreviations (non-normative)
 
 The following namespace abbreviations are used in this document:
 
@@ -116,7 +114,7 @@ The following namespace abbreviations are used in this document:
 | skos:        | http://www.w3.org/2004/02/skos/core#        |
 | tdwgutility: | http://rs.tdwg.org/dwc/terms/attributes/    |
 
-### 1.9 Key to Vocabulary Terms
+### 1.9 Key to Vocabulary Terms (normative)
 
 The terminology used to describe the terms in this vocabulary follows the TDWG [Standards Documentation Specification](https://github.com/tdwg/vocab/blob/master/sds/documentation-specification.md) (SDS). Each term definition includes the original RDF definition, and may also provide a TDWG-specific interpretation from the SDS, as well as a definition tailored to this local context.
 
@@ -126,4 +124,4 @@ The terminology used to describe the terms in this vocabulary follows the TDWG [
 
 In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use the Term IRI (e.g., 'http://rs.tdwg.org/bdq/bdqffdq/InformationElement') or Term Qualified name (e.g., `bdqffdq:InformationElement`). In a non-RDF context in which resources may be used by software (e.g., a value in a spreadsheet or database table) the Controlled Value String (Local name, e.g., `InformationElement`) SHOULD be used. In a purely human context a label (e.g., `Information Element`) MAY be used.
 
-## 3 Term index (non-normative)
+## 3 Term index (normative)

@@ -95,7 +95,7 @@ organized_in_categories = True
 # If not organized into categories, the value is irrelevant. There just needs to be one item in the list.
 
 display_order = ['Validation','Issue','Measure','Amendment'] # categories to split into.
-display_label = ['Index to Validation Tests','Index to Issue Tests','Index to Measure Tests','Index to Amendment Tests'] # these are the section labels for the categories in the page
+display_label = ['Index to Validation Tests (non-normative)','Index to Issue Tests (non-normative)','Index to Measure Tests (non-normative)','Index to Amendment Tests (non-normative)'] # these are the section labels for the categories in the page
 display_comments = ['','','','Including MultiRecord Measures'] # these are the comments about the category to be appended following the section labels
 display_id = ['Type'] # these are the fragment identifiers for the associated sections for the categories
 
@@ -320,7 +320,7 @@ for term in termLists:
     
     print('Generating terms table')
     # generate the Markdown for the terms table
-    text = '## 4 Vocabulary\n'
+    text = '## 4 Vocabulary (normative)\n'
     if True:
         filtered_table = terms_sorted_by_label
         for row_index,row in filtered_table.iterrows():

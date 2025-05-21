@@ -40,45 +40,45 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
 Draft Standard for Review
 
 ## Table of Contents ##
-[1 Introduction](#1-introduction)
-  - [1.1 Purpose](#11-purpose)
-  - [1.2 Audience](#12-audience)
-  - [1.3 Associated Documents](#13-associated-documents)
-  - [1.4 Term List Distributions](#14-term-list-distributions)
-  - [1.5 Status of the Content of this Document](#15-status-of-the-content-of-this-document)
-  - [1.6 RFC 2119 key words](#16-rfc-2119-key-words)
-  - [1.7 Namespace abbreviations](#17-namespace-abbreviations)
+[1 Introduction (non-normative)](#1-introduction-non-normative)
+  - [1.1 Purpose (non-normative)](#11-purpose-non-normative)
+  - [1.2 Audience (non-normative)](#12-audience-non-normative)
+  - [1.3 Associated Documents (non-normative)](#13-associated-documents-non-normative)
+  - [1.4 Term List Distributions (non-normative)](#14-term-list-distributions-non-normative)
+  - [1.5 Status of the Content of this Document (normative)](#15-status-of-the-content-of-this-document-normative)
+  - [1.6 RFC 2119 key words (normative)](#16-rfc-2119-key-words-normative)
+  - [1.7 Namespace abbreviations (non-normative)](#17-namespace-abbreviations-non-normative)
   - [1.8 Referring to Terms (normative)](#18-referring-to-terms-normative)
   - [1.9 Test Types (non-normative)](#19-test-types-non-normative)
-  - [1.10 Key to Vocabulary Terms](#110-key-to-vocabulary-terms)
+  - [1.10 Key to Vocabulary Terms (normative)](#110-key-to-vocabulary-terms-normative)
 
 [2 Use of Terms (normative)](#2-use-of-terms-normative)
 
-[3 Term Indices](#3-term-indices)
-  - [3.1 Index to Validation Tests](#31-index-to-validation-tests)
-  - [3.2 Index to Issue Tests](#32-index-to-issue-tests)
-  - [3.3 Index to Measure Tests](#33-index-to-measure-tests)
-  - [3.4 Index to Amendment Tests](#34-index-to-amendment-tests)
+[3 Term Indices (non-normative)](#3-term-indices-non-normative)
+  - [3.1 Index to Validation Tests (non-normative)](#31-index-to-validation-tests-non-normative)
+  - [3.2 Index to Issue Tests (non-normative)](#32-index-to-issue-tests-non-normative)
+  - [3.3 Index to Measure Tests (non-normative)](#33-index-to-measure-tests-non-normative)
+  - [3.4 Index to Amendment Tests (non-normative)](#34-index-to-amendment-tests-non-normative)
 
-[4 Vocabulary](#4-vocabulary)
+[4 Vocabulary (normative)](#4-vocabulary-normative)
 
-[Acronyms](#acronyms)
+[Acronyms (non-normative)](#acronyms-non-normative)
 
-[Glossary](#glossary)
+[Glossary (non-normative)](#glossary-non-normative)
 
-[References](#references)
+[References (non-normative)](#references-non-normative)
 
-[Cite BDQ](#cite-bdq)
+[Cite BDQ (non-normative)](#cite-bdq-non-normative)
 
-## 1 Introduction
+## 1 Introduction (non-normative)
 
-### 1.1 Purpose
+### 1.1 Purpose (non-normative)
 
 The purpose of this document is to list and describe the terms that define the BDQ Tests, each represented as a term in the `bdqtest:` namespace. This document provides normative values and explanations for the properties used to describe each Test, including its label, expected input, outputs, parameters, and relationships to `Use Cases` and quality `Dimensions`.
 
 The Tests defined here are intended to be modular and interoperable. They can be combined into `Profiles` tailored to particular `Data Quality Needs` or assessment goals. Each Test is specified independently to support implementation flexibility, but all Tests are grounded in the principles of fitness for use as described in the Fitness for Use Framework.
 
-### 1.2 Audience
+### 1.2 Audience (non-normative)
 
 This document is intended for users who need to understand the detailed structure and semantics of the BDQ Tests. It is particularly useful for:
 
@@ -89,22 +89,22 @@ This document is intended for users who need to understand the detailed structur
 
 Familiarity with RDF vocabularies, Darwin Core, and fitness for use principles will help readers make full use of this document, though the structure and examples are designed to support a broad technical audience.
 
-### 1.3 Associated Documents
+### 1.3 Associated Documents (non-normative)
 
 For the list and links to all associated documents see [The Biodiversity Data Quality (BDQ) Standard](../../../index.md).
 
 The set of information most relevant to the BDQ Tests can be found in the following subset of resources:
 
-- **BDQ Tests and Assertions** Defines how each Test is modeled using standard vocabulary terms and how it should behave under various conditions. This document.
-- [**BDQ Tests Quick Reference Guide**](../../terms/bdqtest/index.md) Provides a concise, easy-to-read reference about the BDQ Tests.
-- [**BDQ Tests and Assertions List of Terms**](../..list/bdqtest/index.md) Provides the complete normative definitions of the BDQ Tests.
+- **BDQ Tests and Assertions** - Defines how each Test is modeled using standard vocabulary terms and how it should behave under various conditions. This document.
+- [**BDQ Tests Quick Reference Guide**](../../terms/bdqtest/index.md) - Provides a concise, easy-to-read reference about the BDQ Tests.
+- [**BDQ Tests and Assertions List of Terms**](../..list/bdqtest/index.md) - Provides the complete normative definitions of the BDQ Tests.
   - [**CSV list of BDQ Tests**](../../../vocabulary/bdqtest_terms.csv) 
   - [**RDF/Turtle Serialization of BDQ Tests**](../../../dist/bdqtest.ttl) 
   - [**RDF/XML Serialization of BDQ Tests**](../../../dist/bdqtest.xml) 
-- [**BDQ User's Guide**](../../guide/users/index.md) For anyone interested in how to use the BDQ Tests in practice.
-- [**BDQ Implementer's Guide**](../../guide/implementers/index.md) For anyone interested in the technical implementation of the BDQ Tests.
+- [**BDQ User's Guide**](../../guide/users/index.md) - For anyone interested in how to use the BDQ Tests in practice.
+- [**BDQ Implementer's Guide**](../../guide/implementers/index.md) - For anyone interested in the technical implementation of the BDQ Tests.
 
-### 1.4 Term List Distributions
+### 1.4 Term List Distributions (non-normative)
 
 <!--- This same table appears in bdqtest_landing_header. Edit here, edit there. --->
 | Description | IRI | Download URL | Note | 
@@ -117,21 +117,19 @@ The set of information most relevant to the BDQ Tests can be found in the follow
 | Single Record Test CSV file | TBD | [Single Record Tests in CSV](../../../dist/bdqtest_singlerecord_tests_current.csv) | CSV file listing just the `Single Record` Tests. |
 | Multi Record Test CSV file | TBD | [Multi Record Tests in CSV](../../../dist/bdqtest_multirecord_tests_current.csv) | CSV file listing just the 		`Multi Record` Tests. |
 
-### 1.5 Status of the Content of this Document
+### 1.5 Status of the Content of this Document (normative)
 
-Sections 1 and 3 are non-normative.
+Sections may be either normative (defines what is required to comply with the standard) or non-normative (supports understanding but is not binding) and are marked as such. 
 
-Section 2 is normative.
+Any sentence or phrase beginning with "For example" or "e.g.", whether in a normative section or a non-normative section, is non-normative.
 
-Section [1.9 Key to Vocabulary Terms](#19-key-to-vocabulary-terms) identifies which values in Section 4 are normative and which are non-normative.
+Section [1.9 Key to Vocabulary Terms (normative)](#19-key-to-vocabulary-terms-normative) identifies which values in Section 4 are normative and which are non-normative.
 
-Any sentence or phrase beginning with "For example" or "e.g." is non-normative.
-
-### 1.6 RFC 2119 key words
+### 1.6 RFC 2119 key words (normative)
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [RFC 2119](https://tools.ietf.org/html/rfc2119).
 
-### 1.7 Namespace abbreviations
+### 1.7 Namespace abbreviations (non-normative)
 
 The following namespace abbreviations are used in this document:
 
@@ -163,15 +161,15 @@ There are four types of BDQ Tests: `Validations`, `Issues`, `Measures` and `Amen
 
 **Issue Tests** can be thought of as warning flags. They don't necessarily mean the data are wrong, but they highlight something that might be a problem for some users. For example, [ISSUE_DATAGENERALIZATIONS_NOTEMPTY](../../terms/bdqtest/index.md#ISSUE_DATAGENERALIZATIONS_NOTEMPTY) alerts users to a `NotEmpty` value that should be examined against their `Data Quality Needs`. 
 
-**Amendment Tests** can be thought of as suggestions for improvement. `Amendment` Tests examine the values of [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) and may propose changes or additions to improve the quality. An example is [AMENDMENT_COUNTRYCODE_STANDARDIZED](../../terms/bdqtest/index.md#AMENDMENT_COUNTRYCODE_STANDARDIZED), where a valid ISO country code could be inferred.
-
 **Measure Tests** can be thought of as metrics. `Measure` Tests either count things, or assert that data evaluate as fit for some use (COMPLETE), or not fit for some use (NOT_COMPLETE). An example is [MEASURE_VALIDATIONTESTS_NOTCOMPLIANT](../../terms/bdqtest/index.md#MEASURE_VALIDATIONTESTS_NOTCOMPLIANT), which returns the number of Tests of Type `Validation` that had a response of "NOT_COMPLIANT" on a record.
 
-### 1.10 Key to Vocabulary Terms
+**Amendment Tests** can be thought of as suggestions for improvement. `Amendment` Tests examine the values of [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) and may propose changes or additions to improve the quality. An example is [AMENDMENT_COUNTRYCODE_STANDARDIZED](../../terms/bdqtest/index.md#AMENDMENT_COUNTRYCODE_STANDARDIZED), where a valid ISO country code could be inferred.
+
+### 1.10 Key to Vocabulary Terms (normative)
 
 These "Test Descriptors" are terms that are necessary to comprehensively describe each Test. Some terms, such as those labeled `Term Version IRI` (`rdf:about`), `Term IRI` (`dcterms:isVersionOf`) and `Term Name` (`rdf:value`) are intended for machine consumption. Some terms such as the `Description` (`rdfs:comment`) are designed to be human-readable and to be understood by consumers of biodiversity `Data Quality Reports`s. Terms such as the `Specification` (`bdqffdq:Specification`) ensure that implementers have no ambiguity about how the Test should be coded.
 
-Terms used to describe the terms in this vocabulary follow the guidance of the [TDWG Standards Documentation Standard (SDS)](https://www.tdwg.org/standards/sds/). Term definitions include the definition of the underlying RDF vocabulary term, and may include a TDWG-specific meaning from the SDS, and may also include a specific definition in this local context. See section [2.4.1 Listing Identifiers for Tests](../../supplement/index.md#241-Listing-Identifiers-for-Tests) in [BDQ Supplemental Information](../../supplement/index.md) for a competency question clarifying the relationships among `Term Version IRI`, `Term IRI`, `Term Name`, and `Label`.
+Terms used to describe the terms in this vocabulary follow the guidance of the [TDWG Standards Documentation Standard (SDS)](https://www.tdwg.org/standards/sds/). Term definitions include the definition of the underlying RDF vocabulary term, and may include a TDWG-specific meaning from the SDS, and may also include a specific definition in this local context. See section [2.4.1 Listing Identifiers for Tests (non-normative)](../../supplement/index.md#241-listing-identifiers-for-tests-non-normative) in [BDQ Supplemental Information](../../supplement/index.md) for a competency question clarifying the relationships among `Term Version IRI`, `Term IRI`, `Term Name`, and `Label`.
 
 | Label (Term) | Normative | Definition | Example |
 | ------------ | --------- | ---------- | ------- |
@@ -207,11 +205,11 @@ Terms used to describe the terms in this vocabulary follow the guidance of the [
 
 In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use the Term IRI (e.g., 'http://rs.tdwg.org/bdq/bdqffdq/InformationElement') or Term Qualified name (e.g., `bdqffdq:InformationElement`). In a non-RDF context in which resources may be used by software (e.g., a value in a spreadsheet or database table) the Controlled Value String (Local name, e.g., `InformationElement`) MAY be used. In a purely human context a label (e.g., `Information Element`) MAY be used.
 
-## 3 Term Indices
+## 3 Term Indices (non-normative)
 
 
 
-### 3.1 Index to Validation Tests
+### 3.1 Index to Validation Tests (non-normative)
 
 [VALIDATION_BASISOFRECORD_NOTEMPTY](#bdqtest_ac2b7648-d5f9-48ca-9b07-8ad5879a2536) |
 [VALIDATION_BASISOFRECORD_STANDARD](#bdqtest_42408a00-bf71-4892-a399-4325e2bc1fb8) |
@@ -286,14 +284,14 @@ In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use th
 [VALIDATION_YEAR_INRANGE](#bdqtest_ad0c8855-de69-4843-a80c-a5387d20fbc8) |
 [VALIDATION_YEAR_NOTEMPTY](#bdqtest_c09ecbf9-34e3-4f3e-b74a-8796af15e59f) 
 
-### 3.2 Index to Issue Tests
+### 3.2 Index to Issue Tests (non-normative)
 
 [ISSUE_ANNOTATION_NOTEMPTY](#bdqtest_fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1) |
 [ISSUE_COORDINATES_CENTEROFCOUNTRY](#bdqtest_256e51b3-1e08-4349-bb7e-5186631c3f8e) |
 [ISSUE_DATAGENERALIZATIONS_NOTEMPTY](#bdqtest_13d5a10e-188e-40fd-a22c-dbaa87b91df2) |
 [ISSUE_ESTABLISHMENTMEANS_NOTEMPTY](#bdqtest_acc8dff2-d8d1-483a-946d-65a02a452700) 
 
-### 3.3 Index to Measure Tests
+### 3.3 Index to Measure Tests (non-normative)
 
 [MEASURE_AMENDMENTS_PROPOSED](#bdqtest_03049fe5-a575-404f-b564-ae63f5a1cf8b) |
 [MEASURE_EVENTDATE_DURATIONINSECONDS](#bdqtest_56b6c695-adf1-418e-95d2-da04cad7be53) |
@@ -445,7 +443,7 @@ In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use th
 [MULTIRECORD_MEASURE_QA_YEAR_INRANGE](#bdqtest_a0502c5f-608b-4e59-99da-d9490bb4d93b) |
 [MULTIRECORD_MEASURE_QA_YEAR_NOTEMPTY](#bdqtest_a8fef8a8-e7c7-4a2d-adaf-7da99c896c93) 
 
-### 3.4 Index to Amendment Tests
+### 3.4 Index to Amendment Tests (non-normative)
 
 Including MultiRecord Measures
 
@@ -479,7 +477,7 @@ Including MultiRecord Measures
 [AMENDMENT_TAXONRANK_STANDARDIZED](#bdqtest_e39098df-ef46-464c-9aef-bcdeee2a88cb) |
 [AMENDMENT_TYPESTATUS_STANDARDIZED](#bdqtest_b3471c65-b53e-453b-8282-abfa27bf1805) 
 
-## 4 Vocabulary
+## 4 Vocabulary (normative)
 <table>
 	<thead>
 		<tr>
@@ -23111,19 +23109,19 @@ Including MultiRecord Measures
 <br>
 <a href='#3-Term-Indices'>[🠱]</a>
 
-## Acronyms
+## Acronyms (non-normative)
 
-A list of Acronyms can be found in the [Acronyms](../../index.md#5-acronyms) section of the Biodiversity Data Quality (BDQ) landing page.
+A list of Acronyms can be found in the [Acronyms (non-normative)](../../index.md#5-acronyms-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.
 
-## Glossary
+## Glossary (non-normative)
 
-A glossary of terms additional to those in the various namespaces can be found in the [Glossary](../../index.md#6-glossary) section of the Biodiversity Data Quality (BDQ) landing page.
+A glossary of terms additional to those in the various namespaces can be found in the [Glossary (non-normative)](../../index.md#6-glossary-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.
 
-## References
+## References (non-normative)
 
-The references for the BDQ standard can be found in the [References](../../index.md#7-references) section of the Biodiversity Data Quality (BDQ) landing page.
+The references for the BDQ standard can be found in the [References (non-normative)](../../index.md#7-references-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.
 
-## Cite BDQ
+## Cite BDQ (non-normative)
 
 **To cite BDQ in general, use the peer-reviewed article:**
 

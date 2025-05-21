@@ -44,15 +44,15 @@
 
 {toc}
 
-## 1 Introduction
+## 1 Introduction (non-normative)
 
-### 1.1 Purpose
+### 1.1 Purpose (non-normative)
 
 The purpose of this document is to provide guidance for marking and identifying synthetic or modified biodiversity data that has been created for the purpose of validating BDQ Test `Implementations`. It establishes conventions for distinguishing such artificial or altered data from authentic biodiversity occurrence records, ensuring that validation datasets are not unintentionally incorporated into biodiversity analyses or downstream data pipelines.
 
 The document specifies how to explicitly mark validation data, including wholly synthetic records, real-world data with synthetic modifications, and real data reused for illustrative or example purposes. These practices support the integrity of analytical results and uphold trust in biodiversity data platforms.
 
-### 1.2 Audience
+### 1.2 Audience (non-normative)
 
 This document is intended for two primary audiences:
 
@@ -61,26 +61,22 @@ This document is intended for two primary audiences:
 
 The document assumes a working familiarity with biodiversity data concepts, but no prior knowledge of BDQ Test internals is required.
 
-### 1.3 Associated Documents
+### 1.3 Associated Documents (non-normative)
 
 For the list and links to all associated documents see [The Biodiversity Data Quality (BDQ) Standard](../../../index.md).
 
 The set of information most relevant to synthetic data for BDQ Tests can be found in the following subset of resources:
 
-- [BDQ Implementer's Guide](../implementers/index.md) For anyone interested in the technical implementation of the BDQ Tests.
-- **Guide to Marking and Identifying Synthetic and Modified Data** For anyone creating or using validation data, to distinguish blatant fabrications from real data. This document.
+- [BDQ Implementer's Guide](../implementers/index.md) - For anyone interested in the technical implementation of the BDQ Tests.
+- **Guide to Marking and Identifying Synthetic and Modified Data** - For anyone creating or using validation data, to distinguish blatant fabrications from real data. This document.
 
-### 1.4 Status of the content of this document
+### 1.4 Status of the content of this document (normative)
 
-Section 1 is non-normative.
+Sections may be either normative (defines what is required to comply with the standard) or non-normative (supports understanding but is not binding) and are marked as such. 
 
-Section 2 is normative.
+Any sentence or phrase beginning with "For example" or "e.g.", whether in a normative section or a non-normative section, is non-normative.
 
-Section 3 is non-normative.
-
-Any sentence or phrase beginning with "For example" or "e.g." is non-normative.
-
-### 1.5 RFC 2119 key words
+### 1.5 RFC 2119 key words (normative)
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [RFC 2119](https://tools.ietf.org/html/rfc2119).
 

@@ -40,42 +40,42 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
 Draft Standard for Review
 
 ## Table of Contents ##
-[1. Introduction](#1-introduction)
-  - [1.1 Purpose](#11-purpose)
-  - [1.2 Audience](#12-audience)
-  - [1.3 Data Quality Dimensions](#13-data-quality-dimensions)
-  - [1.4 Associated Documents](#14-associated-documents)
-  - [1.5 Term List Distributions](#15-term-list-distributions)
-  - [1.6 Status of the content of this document](#16-status-of-the-content-of-this-document)
-  - [1.7 RFC 2119 key words](#17-rfc-2119-key-words)
-  - [1.8 Namespace abbreviations](#18-namespace-abbreviations)
-  - [1.9 Key to Vocabulary Terms](#19-key-to-vocabulary-terms)
+[1. Introduction (non-normative)](#1-introduction-non-normative)
+  - [1.1 Purpose (non-normative)](#11-purpose-non-normative)
+  - [1.2 Audience (non-normative)](#12-audience-non-normative)
+  - [1.3 Data Quality Dimensions (non-normative)](#13-data-quality-dimensions-non-normative)
+  - [1.4 Associated Documents (non-normative)](#14-associated-documents-non-normative)
+  - [1.5 Term List Distributions (non-normative)](#15-term-list-distributions-non-normative)
+  - [1.6 Status of the content of this document (normative)](#16-status-of-the-content-of-this-document-normative)
+  - [1.7 RFC 2119 key words (normative)](#17-rfc-2119-key-words-normative)
+  - [1.8 Namespace abbreviations (non-normative)](#18-namespace-abbreviations-non-normative)
+  - [1.9 Key to Vocabulary Terms (normative)](#19-key-to-vocabulary-terms-normative)
 
 [2 Use of Terms (normative)](#2-use-of-terms-normative)
 
-[3 Term index](#3-term-index)
-  - [3.1 Index By Term Name](#31-index-by-term-name)
+[3 Term index (normative)](#3-term-index-normative)
+  - [3.1 Index By Term Name (non-normative)](#31-index-by-term-name-non-normative)
   - [3.2 Index By Label](#32-index-by-label)
 
-[4 Vocabulary](#4-vocabulary)
+[4 Vocabulary (normative)](#4-vocabulary-normative)
 
-[Acronyms](#acronyms)
+[Acronyms (non-normative)](#acronyms-non-normative)
 
-[Glossary](#glossary)
+[Glossary (non-normative)](#glossary-non-normative)
 
-[References](#references)
+[References (non-normative)](#references-non-normative)
 
-[Cite BDQ](#cite-bdq)
+[Cite BDQ (non-normative)](#cite-bdq-non-normative)
 
-## 1. Introduction
+## 1. Introduction (non-normative)
 
-### 1.1 Purpose
+### 1.1 Purpose (non-normative)
 
 The purpose of this document is to provide the full term list for the `bdqdim:` controlled vocabulary, which defines the values of `bdqffdq:DataQualityDimension` used in BDQ Tests. Each `Data Quality Dimension` describes a specific aspect of quality that a Test is intended to assess, such as completeness, conformance, or reliability.
 
 These `Dimensions` serve as a semantic anchor for describing the intent of Tests and enable structured classification and interpretation of Test results across diverse `Use Cases`.
 
-### 1.2 Audience
+### 1.2 Audience (non-normative)
 
 This document is intended for users who need a technical understanding of how BDQ Tests relate to conceptual `Dimensions` of data quality. It will be especially useful for:
 
@@ -85,7 +85,7 @@ This document is intended for users who need a technical understanding of how BD
 
 A working familiarity with the BDQ Test structure and the Fitness for Use Framework Ontology is helpful, though not required to benefit from this document.
 
-### 1.3 Data Quality Dimensions
+### 1.3 Data Quality Dimensions (non-normative)
 
 The concept of `bdqffdq:DataQualityDimension`, originally introduced by Veiga (2016) and Veiga et al. (2017), represents the aspect or attribute of data quality being evaluated. Common `Dimensions` include `Completeness`, `Conformance`, `Consistency`, `Likeliness`, `Reliability`, and `Resolution`. These serve as high-level categories that group Tests according to the type of quality issue they address.
 
@@ -95,32 +95,30 @@ Each BDQ Test typically evaluates one or more data values (`Information Elements
 
 Unlike `Criteria`, which apply only to `Validation` and `Issue` Tests, `Data Quality Dimensions` apply to all BDQ Test types: `bdqffdq:Validation`, `bdqffdq:Issue``bdqffdq:Measure`, and `bdqffdq:Amendment`.
 
-### 1.4 Associated Documents
+### 1.4 Associated Documents (non-normative)
 
 For the list and links to all associated documents see [The Biodiversity Data Quality (BDQ) Standard](../../../index.md).
 
-### 1.5 Term List Distributions
+### 1.5 Term List Distributions (non-normative)
 
 | Description | IRI | Download URL | Note | 
 | ----------- | --- | -----------  | ---- | 
 | HTML file   | http://rs.tdwg.org/bdq/bdqdim/terms/ | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/docs/list/bdqdim/index.md | This file | 
 | RDF/XML file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/dist/bdqdim.xml | Example for submission, to be generated | 
 
-### 1.6 Status of the content of this document
+### 1.6 Status of the content of this document (normative)
 
-Section 1 is non-normative.
+Sections may be either normative (defines what is required to comply with the standard) or non-normative (supports understanding but is not binding) and are marked as such. 
 
-Section 2 is normative.
+Any sentence or phrase beginning with "For example" or "e.g.", whether in a normative section or a non-normative section, is non-normative.
 
-Section [1.9 Key to Vocabulary Terms](#19-key-to-vocabulary-terms) identifies which values in Section 4 are normative and which are non-normative.
+Section [1.9 Key to Vocabulary Terms (normative)](#19-key-to-vocabulary-terms-normative) identifies which values in Section 4 are normative and which are non-normative.
 
-Any sentence or phrase beginning with "For example" or "e.g." is non-normative.
-
-### 1.7 RFC 2119 key words
+### 1.7 RFC 2119 key words (normative)
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [RFC 2119](https://tools.ietf.org/html/rfc2119).
 
-### 1.8 Namespace abbreviations
+### 1.8 Namespace abbreviations (non-normative)
 
 The following namespace abbreviations are used in this document:
 
@@ -137,7 +135,7 @@ The following namespace abbreviations are used in this document:
 | skos:        | http://www.w3.org/2004/02/skos/core#        |
 | tdwgutility: | http://rs.tdwg.org/dwc/terms/attributes/    |
 
-### 1.9 Key to Vocabulary Terms
+### 1.9 Key to Vocabulary Terms (normative)
 
 The terminology used to describe the terms in this vocabulary follows the TDWG [TDWG Standards Documentation Standard (SDS)](https://www.tdwg.org/standards/sds/) (SDS). Each term definition includes the original RDF definition, and may also provide a TDWG-specific interpretation from the SDS, as well as a definition tailored to this local context.
 
@@ -161,10 +159,10 @@ A value for `bdqffdq:hasdataQualityDimension` in an RDF context MUST be a Term I
 
 Each instance of a Test, regardless of Test type, SHOULD have exactly one `bdqffdq:hasdataQualityDimension` property relating it to a term in this `bdqdim:` vocabulary.
 
-## 3 Term index
-### 3.1 Index By Term Name
+## 3 Term index (normative)
+### 3.1 Index By Term Name (non-normative)
 
-(See also [3.2 Index By Label](#32-index-by-label))
+(See also [3.2 Index By Label (non-normative)](#32-index-by-label-non-normative))
 
 **Classes**
 
@@ -190,7 +188,7 @@ Each instance of a Test, regardless of Test type, SHOULD have exactly one `bdqff
 [Reliability](#bdqdim_Reliability) |
 [Resolution](#bdqdim_Resolution) 
 
-## 4 Vocabulary
+## 4 Vocabulary (normative)
 <table>
 	<thead>
 		<tr>
@@ -468,19 +466,19 @@ Each instance of a Test, regardless of Test type, SHOULD have exactly one `bdqff
 </table>
 
 
-## Acronyms
+## Acronyms (non-normative)
 
-A list of Acronyms can be found in the [Acronyms](../../index.md#5-acronyms) section of the Biodiversity Data Quality (BDQ) landing page.
+A list of Acronyms can be found in the [Acronyms (non-normative)](../../index.md#5-acronyms-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.
 
-## Glossary
+## Glossary (non-normative)
 
-A glossary of terms additional to those in the various namespaces can be found in the [Glossary](../../index.md#6-glossary) section of the Biodiversity Data Quality (BDQ) landing page.
+A glossary of terms additional to those in the various namespaces can be found in the [Glossary (non-normative)](../../index.md#6-glossary-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.
 
-## References
+## References (non-normative)
 
-The references for the BDQ standard can be found in the [References](../../index.md#7-references) section of the Biodiversity Data Quality (BDQ) landing page.
+The references for the BDQ standard can be found in the [References (non-normative)](../../index.md#7-references-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.
 
-## Cite BDQ
+## Cite BDQ (non-normative)
 
 **To cite BDQ in general, use the peer-reviewed article:**
 
