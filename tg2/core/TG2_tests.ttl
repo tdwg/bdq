@@ -1800,9 +1800,9 @@
   rdfs:comment "INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdq:NotEmpty; FILLED_IN the value of dwc:occurrenceStatus using the bdq:defaultOccurrenceStatus Parameter value if dwc:occurrenceStatus,dwc:individualCount and dwc:organismQuantity are bdq:Empty; otherwise NOT_AMENDED bdq:defaultOccurrenceStatus default = \"present\"";
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdq:NotEmpty; FILLED_IN the value of dwc:occurrenceStatus using the bdq:defaultOccurrenceStatus Parameter value if dwc:occurrenceStatus,dwc:individualCount and dwc:organismQuantity are bdq:Empty; otherwise NOT_AMENDED";
   rdfs:label "Specification for: AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT";
-  <https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:7e3ff1b8-4e97-4edb-8d8c-33f7b5a45bea> .
+  <https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:a558165b-7014-4029-839f-33badcb0842f> .
 
-<urn:uuid:7e3ff1b8-4e97-4edb-8d8c-33f7b5a45bea> a <https://rs.tdwg.org/bdqffdq/terms/Argument>;
+<urn:uuid:a558165b-7014-4029-839f-33badcb0842f> a <https://rs.tdwg.org/bdqffdq/terms/Argument>;
   <https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "present";
   rdfs:label "Default value for bdq:defaultOccurrenceStatus:\"present\"";
   <https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:defaultOccurrenceStatus> .
@@ -2841,9 +2841,9 @@
   rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:ocurrenceStatus is bdq:Empty; AMENDED the value of dwc:occurrenceStatus if it can be unambiguously interpreted as a value in the bdq:sourceAuthority; otherwise NOT_AMENDED bdq:sourceAuthority default = \"Regex present/absent\" {[\"^(present\\";
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:ocurrenceStatus is bdq:Empty; AMENDED the value of dwc:occurrenceStatus if it can be unambiguously interpreted as a value in the bdq:sourceAuthority; otherwise NOT_AMENDED";
   rdfs:label "Specification for: AMENDMENT_OCCURRENCESTATUS_STANDARDIZED";
-  <https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:858875d3-1ac0-42ec-8f8b-f3e7f6469786> .
+  <https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:59635d6c-f265-45dd-8814-b80a1dc41540> .
 
-<urn:uuid:858875d3-1ac0-42ec-8f8b-f3e7f6469786> a <https://rs.tdwg.org/bdqffdq/terms/Argument>;
+<urn:uuid:59635d6c-f265-45dd-8814-b80a1dc41540> a <https://rs.tdwg.org/bdqffdq/terms/Argument>;
   <https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "Regex present/absent";
   rdfs:label "Default value for bdq:sourceAuthority:\"Regex present/absent\"";
   <https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
@@ -2880,9 +2880,9 @@
   rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdq:Empty; COMPLIANT if the value of dwc:occurrenceStatus is resolved in the bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority default = \"Regex present/absent\" {[\"^(present\\";
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdq:Empty; COMPLIANT if the value of dwc:occurrenceStatus is resolved in the bdq:sourceAuthority; otherwise NOT_COMPLIANT";
   rdfs:label "Specification for: VALIDATION_OCCURRENCESTATUS_STANDARD";
-  <https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:73ec8307-a6dd-464a-8d7b-b8ddab763202> .
+  <https://rs.tdwg.org/bdqffdq/terms/hasArgument> <urn:uuid:74716bc2-c82e-49f3-938b-2298094554b4> .
 
-<urn:uuid:73ec8307-a6dd-464a-8d7b-b8ddab763202> a <https://rs.tdwg.org/bdqffdq/terms/Argument>;
+<urn:uuid:74716bc2-c82e-49f3-938b-2298094554b4> a <https://rs.tdwg.org/bdqffdq/terms/Argument>;
   <https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue> "Regex present/absent";
   rdfs:label "Default value for bdq:sourceAuthority:\"Regex present/absent\"";
   <https://rs.tdwg.org/bdqffdq/terms/hasParameter> <bdq:sourceAuthority> .
