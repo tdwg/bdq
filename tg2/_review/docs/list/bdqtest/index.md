@@ -2778,6 +2778,10 @@ Including MultiRecord Measures
 			<td>TG2 Amendment OTHER CODED Test VOCABULARY Completeness Parameterized CORE</td>
 		</tr>
 		<tr>
+			<td>Argument GUID</td>
+			<td>a558165b-7014-4029-839f-33badcb0842f</td>
+		</tr>
+		<tr>
 			<td>AmendmentMethod label</td>
 			<td>AmendmentMethod: AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT with Specification Specification for: AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT</td>
 		</tr>
@@ -2883,6 +2887,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Amendment OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
+			<td>Argument GUID</td>
+			<td>59635d6c-f265-45dd-8814-b80a1dc41540</td>
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
@@ -21111,6 +21119,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
+			<td>Argument GUID</td>
+			<td>74716bc2-c82e-49f3-938b-2298094554b4</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
