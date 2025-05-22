@@ -1091,7 +1091,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc event_date_qc Library (Morris & Lowery 2025)</td>
+			<td>Kurator/FilteredPush event_date_qc Library (Morris & Lowery 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -1190,7 +1190,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc event_date_qc Library (Morris & Lowery 2025)</td>
+			<td>Kurator/FilteredPush event_date_qc Library (Morris & Lowery 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -1614,7 +1614,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc event_date_qc Library (Morris & Lowery 2025)</td>
+			<td>Kurator/FilteredPush event_date_qc Library (Morris & Lowery 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -1717,7 +1717,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc event_date_qc Library (Morris & Lowery 2025)</td>
+			<td>Kurator/FilteredPush event_date_qc Library (Morris & Lowery 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -1820,7 +1820,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc event_date_qc Library (Morris & Lowery 2025)</td>
+			<td>Kurator/FilteredPush event_date_qc Library (Morris & Lowery 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -1919,7 +1919,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc event_date_qc Library (Morris & Lowery 2025)</td>
+			<td>Kurator/FilteredPush event_date_qc Library (Morris & Lowery 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -2022,7 +2022,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc event_date_qc Library (Morris & Lowery 2025)</td>
+			<td>Kurator/FilteredPush event_date_qc Library (Morris & Lowery 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -2648,7 +2648,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc event_date_qc Library (Morris & Lowery 2025)</td>
+			<td>Kurator/FilteredPush event_date_qc Library (Morris & Lowery 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -4110,7 +4110,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc event_date_qc Library (Morris & Lowery 2025)</td>
+			<td>Kurator/FilteredPush event_date_qc Library (Morris & Lowery 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -17351,7 +17351,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc event_date_qc Library (Morris & Lowery 2025)</td>
+			<td>Kurator/FilteredPush event_date_qc Library (Morris & Lowery 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -17450,7 +17450,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc event_date_qc Library (Morris & Lowery 2025)</td>
+			<td>Kurator/FilteredPush event_date_qc Library (Morris & Lowery 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -17545,7 +17545,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc event_date_qc Library (Morris & Lowery 2025)</td>
+			<td>Kurator/FilteredPush event_date_qc Library (Morris & Lowery 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -17644,7 +17644,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc event_date_qc Library (Morris & Lowery 2025)</td>
+			<td>Kurator/FilteredPush event_date_qc Library (Morris & Lowery 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -18432,7 +18432,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc event_date_qc Library (Morris & Lowery 2025)</td>
+			<td>Kurator/FilteredPush event_date_qc Library (Morris & Lowery 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -18650,7 +18650,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc event_date_qc Library (Morris & Lowery 2025)</td>
+			<td>Kurator/FilteredPush event_date_qc Library (Morris & Lowery 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -18749,7 +18749,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc event_date_qc Library (Morris & Lowery 2025)</td>
+			<td>Kurator/FilteredPush event_date_qc Library (Morris & Lowery 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -18848,7 +18848,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc event_date_qc Library (Morris & Lowery 2025)</td>
+			<td>Kurator/FilteredPush event_date_qc Library (Morris & Lowery 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -18947,7 +18947,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc event_date_qc Library (Morris & Lowery 2025)</td>
+			<td>Kurator/FilteredPush event_date_qc Library (Morris & Lowery 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -19046,7 +19046,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc event_date_qc Library (Morris & Lowery 2025)</td>
+			<td>Kurator/FilteredPush event_date_qc Library (Morris & Lowery 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -20702,7 +20702,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc event_date_qc Library (Morris & Lowery 2025)</td>
+			<td>Kurator/FilteredPush event_date_qc Library (Morris & Lowery 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -22235,7 +22235,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc event_date_qc Library (Morris & Lowery 2025)</td>
+			<td>Kurator/FilteredPush event_date_qc Library (Morris & Lowery 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -22980,7 +22980,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc event_date_qc Library (Morris & Lowery 2025)</td>
+			<td>Kurator/FilteredPush event_date_qc Library (Morris & Lowery 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -23079,7 +23079,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc event_date_qc Library (Morris & Lowery 2025)</td>
+			<td>Kurator/FilteredPush event_date_qc Library (Morris & Lowery 2025)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
