@@ -2,9 +2,9 @@
 <rdf:RDF
 	xmlns:rdfbeans="http://viceversatech.com/rdfbeans/2.0/"
 	xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
-	xmlns:bdqtest="https://rs.tdwg.org/bdqtest/terms"
 	xmlns:dwc="http://rs.tdwg.org/dwc/terms/"
 	xmlns:bdqenh="https://rs.tdwg.org/bdqenh/terms/"
+	xmlns:bdqtest="https://rs.tdwg.org/bdqtest/terms"
 	xmlns:bdqcrit="https://rs.tdwg.org/bdqcrit/terms/"
 	xmlns:dwcloud="http://datakurator.org/none/"
 	xmlns:dcterms="http://purl.org/dc/terms/"
@@ -65,7 +65,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:fb80d5bf-7777-4d88-b09f-116a38ab7bfa"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_COUNTRYCODE_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_COUNTRYCODE_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/20</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_COUNTRYCODE_STANDARD</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/fedf27b2-e01d-459f-98fc-7f0f39e3d4be"/>
@@ -109,7 +109,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:fb80d5bf-7777-4d88-b09f-116a38ab7bfa"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_COUNTRYCODE_STANDARD in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_COUNTRYCODE_STANDARD in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/20</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_STANDARD</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/38966850-3737-4a67-953c-c231469e0489"/>
@@ -156,7 +156,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:4d7d45ed-da78-44b0-8e93-e8c0423aa4a9"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_COUNTRY_FOUND in a record set are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_COUNTRY_FOUND in a record set are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/21</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_COUNTRY_FOUND</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/388e74b3-2e18-4d78-8112-3142d1177e25"/>
@@ -193,7 +193,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:4d7d45ed-da78-44b0-8e93-e8c0423aa4a9"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_COUNTRY_FOUND in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_COUNTRY_FOUND in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/21</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_FOUND</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/f15c38c3-d96d-4e9c-982d-410fb71cf2bc"/>
@@ -240,7 +240,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:6fa9dcd8-4e43-4fc7-acb6-1aff70e87f51"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_PHYLUM_FOUND in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_PHYLUM_FOUND in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/22</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_PHYLUM_FOUND</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/17364d16-37b7-4ccb-9614-bfb95ff1bca9"/>
@@ -277,7 +277,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:6fa9dcd8-4e43-4fc7-acb6-1aff70e87f51"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_PHYLUM_FOUND in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_PHYLUM_FOUND in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/22</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_PHYLUM_FOUND</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/65e66ca0-e9d1-4411-ad26-bb9c43f32afc"/>
@@ -324,11 +324,11 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:72ac3c31-cddf-4fcf-bb6d-2d10b6a1a18e"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/24</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_MINDEPTH_LESSTHAN_MAXDEPTH</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/fcabd2c9-392c-4841-a5d7-e2680c9587ab"/>
-	<skos:prefLabel>Measurement over MultiRecord for QualityAssurance of Validation  dwc:minimumDepthInMeters Less Than dwc:maximumDepthInMeters for MultiRecord</skos:prefLabel>
+	<skos:prefLabel>Measurement over MultiRecord for QualityAssurance of Validation dwc:minimumDepthInMeters less than dwc:maximumDepthInMeters for MultiRecord</skos:prefLabel>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:51b11dac-0a61-4ebf-a0b7-69244821f481">
@@ -361,11 +361,11 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:72ac3c31-cddf-4fcf-bb6d-2d10b6a1a18e"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/24</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINDEPTH_LESSTHAN_MAXDEPTH</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/b21256c2-4bb7-4deb-852d-a9eaa05345e7"/>
-	<skos:prefLabel>Measurement over MultiRecord Counting Compliance of Validation  dwc:minimumDepthInMeters Less Than dwc:maximumDepthInMeters for MultiRecord</skos:prefLabel>
+	<skos:prefLabel>Measurement over MultiRecord Counting Compliance of Validation dwc:minimumDepthInMeters less than dwc:maximumDepthInMeters for MultiRecord</skos:prefLabel>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:c4635758-9f98-4982-9d41-ff57ee475dc7">
@@ -408,7 +408,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:53ba0552-5eb5-4317-a5e7-dcaee30608b1"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_FAMILY_FOUND in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_FAMILY_FOUND in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/28</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_FAMILY_FOUND</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/a07d7147-2db8-48ce-81b8-e47595ad5f17"/>
@@ -445,7 +445,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:53ba0552-5eb5-4317-a5e7-dcaee30608b1"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_FAMILY_FOUND in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_FAMILY_FOUND in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/28</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_FAMILY_FOUND</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/97928242-11a9-4ab0-9dd7-3f0465834824"/>
@@ -492,7 +492,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:4328982c-cc3a-422e-9ac6-45cd7bc54f2c"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_DECIMALLONGITUDE_INRANGE in a record set are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_DECIMALLONGITUDE_INRANGE in a record set are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/30</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_DECIMALLONGITUDE_INRANGE</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/6f7a9b82-7d34-4111-a2a6-9efe5221fa44"/>
@@ -529,7 +529,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:4328982c-cc3a-422e-9ac6-45cd7bc54f2c"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_DECIMALLONGITUDE_INRANGE in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_DECIMALLONGITUDE_INRANGE in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/30</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLONGITUDE_INRANGE</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/c70c4950-2246-4acc-a59d-81eaa47edf2b"/>
@@ -584,7 +584,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:de36737d-3d44-4b90-b79e-754df1db1f8a"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_EVENTDATE_NOTEMPTY in a record set are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_EVENTDATE_NOTEMPTY in a record set are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/33</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_EVENTDATE_NOTEMPTY</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/c23cd67d-1b5c-4e9f-a1ce-8cc6b3e9b365"/>
@@ -621,7 +621,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:de36737d-3d44-4b90-b79e-754df1db1f8a"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_EVENTDATE_NOTEMPTY in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_EVENTDATE_NOTEMPTY in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/33</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_NOTEMPTY</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/3f62eaa2-747f-456b-85e6-1a6e74086a18"/>
@@ -668,7 +668,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:53b35bee-878a-4142-954b-92c03865a63c"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_EVENTDATE_INRANGE in a record set are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_EVENTDATE_INRANGE in a record set are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/36</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_EVENTDATE_INRANGE</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/d41a731b-2e2b-4442-9217-4c375ae92926"/>
@@ -705,7 +705,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:53b35bee-878a-4142-954b-92c03865a63c"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_EVENTDATE_INRANGE in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_EVENTDATE_INRANGE in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/36</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_INRANGE</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/c8250600-de61-4047-9d7c-6e06a38c7994"/>
@@ -752,7 +752,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:cbb53f33-ddc6-444c-b2f1-c06bb6759225"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_LICENSE_STANDARD in a record set are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_LICENSE_STANDARD in a record set are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/38</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_LICENSE_STANDARD</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/acd8d43e-7a2a-4372-b887-fb53a9972dc9"/>
@@ -789,7 +789,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:cbb53f33-ddc6-444c-b2f1-c06bb6759225"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_LICENSE_STANDARD in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_LICENSE_STANDARD in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/38</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_STANDARD</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/9d5be694-f5da-465d-8c7e-27e6dac69f9f"/>
@@ -836,7 +836,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:5cdd4160-7979-4e15-be8f-c8e3cc88e472"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_MINELEVATION_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_MINELEVATION_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/39</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_MINELEVATION_INRANGE</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/1ba18c8b-66a6-47d9-a709-404439332dba"/>
@@ -873,7 +873,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:5cdd4160-7979-4e15-be8f-c8e3cc88e472"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_MINELEVATION_INRANGE in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_MINELEVATION_INRANGE in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/39</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINELEVATION_INRANGE</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/071267a0-d993-4961-a3f7-d8210810d167"/>
@@ -920,7 +920,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:fd9bc73a-2b67-4940-ac2a-ad1dda03d0b7"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_LOCATION_NOTEMPTY in a record set are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_LOCATION_NOTEMPTY in a record set are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/40</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_LOCATION_NOTEMPTY</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/3b2e4791-1a5a-4087-9e8d-09c67cf8c816"/>
@@ -957,7 +957,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:fd9bc73a-2b67-4940-ac2a-ad1dda03d0b7"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_LOCATION_NOTEMPTY in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_LOCATION_NOTEMPTY in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/40</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_LOCATION_NOTEMPTY</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/bac852b5-1ba6-427b-aa8e-02018e99279c"/>
@@ -1004,7 +1004,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:545ce7c8-64e1-463e-a578-be2580d7d3c5"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_COUNTRY_NOTEMPTY in a record set are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_COUNTRY_NOTEMPTY in a record set are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/42</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_COUNTRY_NOTEMPTY</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/9c8df974-8fba-4537-8c67-31466787f732"/>
@@ -1041,7 +1041,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:545ce7c8-64e1-463e-a578-be2580d7d3c5"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_COUNTRY_NOTEMPTY in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_COUNTRY_NOTEMPTY in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/42</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_NOTEMPTY</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/6887c881-dc52-409b-8979-9c2f05e55569"/>
@@ -1088,7 +1088,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:9400633f-3e7a-4fbf-819e-8e2a0772494e"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_SCIENTIFICNAME_FOUND in a record set are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_SCIENTIFICNAME_FOUND in a record set are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/46</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_SCIENTIFICNAME_FOUND</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/a8aee02c-cf7c-4104-a601-d8afc4f9cbe2"/>
@@ -1125,7 +1125,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:9400633f-3e7a-4fbf-819e-8e2a0772494e"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_SCIENTIFICNAME_FOUND in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_SCIENTIFICNAME_FOUND in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/46</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_FOUND</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/4e70b0e4-3fd2-4899-802c-439671374eeb"/>
@@ -1172,7 +1172,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:c1f3287b-beca-49d7-b2e6-3e6de75ae598"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_OCCURRENCEID_NOTEMPTY in a record set are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_OCCURRENCEID_NOTEMPTY in a record set are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/47</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_OCCURRENCEID_NOTEMPTY</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/0028ef9a-6553-467b-a344-90327ed2babf"/>
@@ -1209,7 +1209,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:c1f3287b-beca-49d7-b2e6-3e6de75ae598"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_OCCURRENCEID_NOTEMPTY in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_OCCURRENCEID_NOTEMPTY in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/47</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCEID_NOTEMPTY</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/0c9a139e-5d23-44de-a495-14ec08c61a1c"/>
@@ -1256,7 +1256,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:189a1e19-a50d-492d-87e1-27338d16883b"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_YEAR_NOTEMPTY in a record set are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_YEAR_NOTEMPTY in a record set are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/49</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_YEAR_NOTEMPTY</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/a8fef8a8-e7c7-4a2d-adaf-7da99c896c93"/>
@@ -1293,7 +1293,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:189a1e19-a50d-492d-87e1-27338d16883b"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_YEAR_NOTEMPTY in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_YEAR_NOTEMPTY in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/49</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_NOTEMPTY</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/687d3ad1-93a3-4a1f-b69f-da5a1eb761a5"/>
@@ -1348,7 +1348,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:fb262b9b-a67b-45f9-92eb-fbcf58c72b0f"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT in a record set are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT in a record set are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/50</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_COORDINATESCOUNTRYCODE_CONSISTENT</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/86c28d5e-f778-4230-88d8-64cc01478601"/>
@@ -1385,7 +1385,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:fb262b9b-a67b-45f9-92eb-fbcf58c72b0f"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/50</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESCOUNTRYCODE_CONSISTENT</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/d68dc111-9704-4fc5-a8eb-5fa084809202"/>
@@ -1432,7 +1432,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:351049a9-bc84-42f6-af70-493e2e063153"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT in a record set are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT in a record set are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/51</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_COORDINATESTERRESTRIALMARINE_CONSISTENT</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/478dee00-98d0-4154-b66c-eca64dbbf86d"/>
@@ -1448,8 +1448,8 @@
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Specification"/>
 	<skos:example></skos:example>
 	<hasAuthoritiesDefaults xmlns="https://rs.tdwg.org/bdqffdq/terms/">bdq:taxonIsMarine default = "World Register of Marine Species (WoRMS)" {[https://www.marinespecies.org/]} {Web service [https://www.marinespecies.org/aphia.php?p=webservice]},bdq:geospatialLand default = "Union of NaturalEarth 10m-physical-vectors for Land and NaturalEarth Minor Islands" {[https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_land.zip], [https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_minor_islands.zip]},bdq:spatialBufferInMeters default = "3000",bdq:assumptionOnUnknownBiome default = "noassumption"</hasAuthoritiesDefaults>
-	<rdfs:comment>EXTERNAL_PREREQUISITES_NOT_MET if either bdq:taxonIsMarine or bdq:geospatialLand are not available; INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:scientificName is bdq:Empty or (2)  the values of dwc:decimalLatitude or dwc:decimalLongitude are bdq:Empty or (3) if bdq:assumptionOnUnknownBiome is noassumption and the marine/nonmarine status of the taxon is not interpretable from bdq:taxonIsMarine; COMPLIANT if (1) the taxon marine/nonmarine status from bdq:taxonIsMarine matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdq:geospatialLand plus an exterior buffer given by bdq:spatialBufferInMeters or (2)  if the marine/nonmarine status of the taxon is not interpretable from bdq:taxonIsMarine and bdq:assumptionOnUnknownBiome matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdq:geospatialLand plus an exterior buffer given by bdq:spatialBufferInMeters; otherwise NOT_COMPLIANT bdq:taxonIsMarine default = "World Register of Marine Species (WoRMS)" {[https://www.marinespecies.org/]} {Web service [https://www.marinespecies.org/aphia.php?p=webservice]},bdq:geospatialLand default = "Union of NaturalEarth 10m-physical-vectors for Land and NaturalEarth Minor Islands" {[https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_land.zip], [https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_minor_islands.zip]},bdq:spatialBufferInMeters default = "3000",bdq:assumptionOnUnknownBiome default = "noassumption"</rdfs:comment>
-	<hasExpectedResponse xmlns="https://rs.tdwg.org/bdqffdq/terms/">EXTERNAL_PREREQUISITES_NOT_MET if either bdq:taxonIsMarine or bdq:geospatialLand are not available; INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:scientificName is bdq:Empty or (2)  the values of dwc:decimalLatitude or dwc:decimalLongitude are bdq:Empty or (3) if bdq:assumptionOnUnknownBiome is noassumption and the marine/nonmarine status of the taxon is not interpretable from bdq:taxonIsMarine; COMPLIANT if (1) the taxon marine/nonmarine status from bdq:taxonIsMarine matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdq:geospatialLand plus an exterior buffer given by bdq:spatialBufferInMeters or (2)  if the marine/nonmarine status of the taxon is not interpretable from bdq:taxonIsMarine and bdq:assumptionOnUnknownBiome matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdq:geospatialLand plus an exterior buffer given by bdq:spatialBufferInMeters; otherwise NOT_COMPLIANT</hasExpectedResponse>
+	<rdfs:comment>EXTERNAL_PREREQUISITES_NOT_MET if either bdq:taxonIsMarine or bdq:geospatialLand are not available; INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:scientificName is bdq:Empty or (2) the values of dwc:decimalLatitude or dwc:decimalLongitude are bdq:Empty or (3) if bdq:assumptionOnUnknownBiome is noassumption and the marine/nonmarine status of the taxon is not interpretable from bdq:taxonIsMarine; COMPLIANT if (1) the taxon marine/nonmarine status from bdq:taxonIsMarine matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdq:geospatialLand plus an exterior buffer given by bdq:spatialBufferInMeters or (2) if the marine/nonmarine status of the taxon is not interpretable from bdq:taxonIsMarine and bdq:assumptionOnUnknownBiome matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdq:geospatialLand plus an exterior buffer given by bdq:spatialBufferInMeters; otherwise NOT_COMPLIANT bdq:taxonIsMarine default = "World Register of Marine Species (WoRMS)" {[https://www.marinespecies.org/]} {Web service [https://www.marinespecies.org/aphia.php?p=webservice]},bdq:geospatialLand default = "Union of NaturalEarth 10m-physical-vectors for Land and NaturalEarth Minor Islands" {[https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_land.zip], [https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_minor_islands.zip]},bdq:spatialBufferInMeters default = "3000",bdq:assumptionOnUnknownBiome default = "noassumption"</rdfs:comment>
+	<hasExpectedResponse xmlns="https://rs.tdwg.org/bdqffdq/terms/">EXTERNAL_PREREQUISITES_NOT_MET if either bdq:taxonIsMarine or bdq:geospatialLand are not available; INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:scientificName is bdq:Empty or (2) the values of dwc:decimalLatitude or dwc:decimalLongitude are bdq:Empty or (3) if bdq:assumptionOnUnknownBiome is noassumption and the marine/nonmarine status of the taxon is not interpretable from bdq:taxonIsMarine; COMPLIANT if (1) the taxon marine/nonmarine status from bdq:taxonIsMarine matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdq:geospatialLand plus an exterior buffer given by bdq:spatialBufferInMeters or (2) if the marine/nonmarine status of the taxon is not interpretable from bdq:taxonIsMarine and bdq:assumptionOnUnknownBiome matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdq:geospatialLand plus an exterior buffer given by bdq:spatialBufferInMeters; otherwise NOT_COMPLIANT</hasExpectedResponse>
 	<rdfs:label>Specification for: MULTIRECORD_MEASURE_QA_COORDINATESTERRESTRIALMARINE_CONSISTENT</rdfs:label>
 </rdf:Description>
 
@@ -1469,7 +1469,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:351049a9-bc84-42f6-af70-493e2e063153"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/51</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESTERRESTRIALMARINE_CONSISTENT</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/b67f41f4-198c-41e9-9419-ba3919c1be8b"/>
@@ -1485,8 +1485,8 @@
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Specification"/>
 	<skos:example></skos:example>
 	<hasAuthoritiesDefaults xmlns="https://rs.tdwg.org/bdqffdq/terms/">bdq:taxonIsMarine default = "World Register of Marine Species (WoRMS)" {[https://www.marinespecies.org/]} {Web service [https://www.marinespecies.org/aphia.php?p=webservice]},bdq:geospatialLand default = "Union of NaturalEarth 10m-physical-vectors for Land and NaturalEarth Minor Islands" {[https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_land.zip], [https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_minor_islands.zip]},bdq:spatialBufferInMeters default = "3000",bdq:assumptionOnUnknownBiome default = "noassumption"</hasAuthoritiesDefaults>
-	<rdfs:comment>EXTERNAL_PREREQUISITES_NOT_MET if either bdq:taxonIsMarine or bdq:geospatialLand are not available; INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:scientificName is bdq:Empty or (2)  the values of dwc:decimalLatitude or dwc:decimalLongitude are bdq:Empty or (3) if bdq:assumptionOnUnknownBiome is noassumption and the marine/nonmarine status of the taxon is not interpretable from bdq:taxonIsMarine; COMPLIANT if (1) the taxon marine/nonmarine status from bdq:taxonIsMarine matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdq:geospatialLand plus an exterior buffer given by bdq:spatialBufferInMeters or (2)  if the marine/nonmarine status of the taxon is not interpretable from bdq:taxonIsMarine and bdq:assumptionOnUnknownBiome matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdq:geospatialLand plus an exterior buffer given by bdq:spatialBufferInMeters; otherwise NOT_COMPLIANT bdq:taxonIsMarine default = "World Register of Marine Species (WoRMS)" {[https://www.marinespecies.org/]} {Web service [https://www.marinespecies.org/aphia.php?p=webservice]},bdq:geospatialLand default = "Union of NaturalEarth 10m-physical-vectors for Land and NaturalEarth Minor Islands" {[https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_land.zip], [https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_minor_islands.zip]},bdq:spatialBufferInMeters default = "3000",bdq:assumptionOnUnknownBiome default = "noassumption"</rdfs:comment>
-	<hasExpectedResponse xmlns="https://rs.tdwg.org/bdqffdq/terms/">EXTERNAL_PREREQUISITES_NOT_MET if either bdq:taxonIsMarine or bdq:geospatialLand are not available; INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:scientificName is bdq:Empty or (2)  the values of dwc:decimalLatitude or dwc:decimalLongitude are bdq:Empty or (3) if bdq:assumptionOnUnknownBiome is noassumption and the marine/nonmarine status of the taxon is not interpretable from bdq:taxonIsMarine; COMPLIANT if (1) the taxon marine/nonmarine status from bdq:taxonIsMarine matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdq:geospatialLand plus an exterior buffer given by bdq:spatialBufferInMeters or (2)  if the marine/nonmarine status of the taxon is not interpretable from bdq:taxonIsMarine and bdq:assumptionOnUnknownBiome matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdq:geospatialLand plus an exterior buffer given by bdq:spatialBufferInMeters; otherwise NOT_COMPLIANT</hasExpectedResponse>
+	<rdfs:comment>EXTERNAL_PREREQUISITES_NOT_MET if either bdq:taxonIsMarine or bdq:geospatialLand are not available; INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:scientificName is bdq:Empty or (2) the values of dwc:decimalLatitude or dwc:decimalLongitude are bdq:Empty or (3) if bdq:assumptionOnUnknownBiome is noassumption and the marine/nonmarine status of the taxon is not interpretable from bdq:taxonIsMarine; COMPLIANT if (1) the taxon marine/nonmarine status from bdq:taxonIsMarine matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdq:geospatialLand plus an exterior buffer given by bdq:spatialBufferInMeters or (2) if the marine/nonmarine status of the taxon is not interpretable from bdq:taxonIsMarine and bdq:assumptionOnUnknownBiome matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdq:geospatialLand plus an exterior buffer given by bdq:spatialBufferInMeters; otherwise NOT_COMPLIANT bdq:taxonIsMarine default = "World Register of Marine Species (WoRMS)" {[https://www.marinespecies.org/]} {Web service [https://www.marinespecies.org/aphia.php?p=webservice]},bdq:geospatialLand default = "Union of NaturalEarth 10m-physical-vectors for Land and NaturalEarth Minor Islands" {[https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_land.zip], [https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_minor_islands.zip]},bdq:spatialBufferInMeters default = "3000",bdq:assumptionOnUnknownBiome default = "noassumption"</rdfs:comment>
+	<hasExpectedResponse xmlns="https://rs.tdwg.org/bdqffdq/terms/">EXTERNAL_PREREQUISITES_NOT_MET if either bdq:taxonIsMarine or bdq:geospatialLand are not available; INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:scientificName is bdq:Empty or (2) the values of dwc:decimalLatitude or dwc:decimalLongitude are bdq:Empty or (3) if bdq:assumptionOnUnknownBiome is noassumption and the marine/nonmarine status of the taxon is not interpretable from bdq:taxonIsMarine; COMPLIANT if (1) the taxon marine/nonmarine status from bdq:taxonIsMarine matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdq:geospatialLand plus an exterior buffer given by bdq:spatialBufferInMeters or (2) if the marine/nonmarine status of the taxon is not interpretable from bdq:taxonIsMarine and bdq:assumptionOnUnknownBiome matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdq:geospatialLand plus an exterior buffer given by bdq:spatialBufferInMeters; otherwise NOT_COMPLIANT</hasExpectedResponse>
 	<rdfs:label>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESTERRESTRIALMARINE_CONSISTENT</rdfs:label>
 </rdf:Description>
 
@@ -1516,7 +1516,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:463c35d2-41c0-4e68-af22-4bb4c200b376"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT in a record set are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT in a record set are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/56</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_COORDINATESSTATEPROVINCE_CONSISTENT</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/7a8b0af3-fa7d-416a-921a-8992d56f8233"/>
@@ -1553,7 +1553,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:463c35d2-41c0-4e68-af22-4bb4c200b376"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/56</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESSTATEPROVINCE_CONSISTENT</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/c6c998af-6145-4361-b1e6-52c5b790340a"/>
@@ -1600,7 +1600,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:b90492ed-90da-4552-8ac0-e18e71db9d86"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_BASISOFRECORD_NOTEMPTY in a record set are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_BASISOFRECORD_NOTEMPTY in a record set are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/58</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_BASISOFRECORD_NOTEMPTY</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/c8c61535-ab1a-4ec6-b4e9-f5f02541d7d8"/>
@@ -1637,7 +1637,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:b90492ed-90da-4552-8ac0-e18e71db9d86"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_BASISOFRECORD_NOTEMPTY in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_BASISOFRECORD_NOTEMPTY in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/58</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_NOTEMPTY</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/b60c8c58-0137-4b6a-97e9-57d8ca5cf248"/>
@@ -1684,7 +1684,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:32f5c5c1-ec68-462a-8f73-f54c5236c0d1"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_GEODETICDATUM_STANDARD in a record set are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_GEODETICDATUM_STANDARD in a record set are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/59</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_GEODETICDATUM_STANDARD</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/cb88b6d9-85b2-4cd5-9bfa-c0d96f79552e"/>
@@ -1721,7 +1721,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:32f5c5c1-ec68-462a-8f73-f54c5236c0d1"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_GEODETICDATUM_STANDARD in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_GEODETICDATUM_STANDARD in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/59</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_STANDARD</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/8d8aba5c-f58a-49c9-a08d-1afb5ff1aa63"/>
@@ -1768,7 +1768,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:f4cf2376-f816-4184-bc70-0df700bcc1eb"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT in a record set are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT in a record set are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/62</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_COUNTRYCOUNTRYCODE_CONSISTENT</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/57b40d9a-67d7-4916-9c27-dbb395c6c27e"/>
@@ -1805,7 +1805,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:f4cf2376-f816-4184-bc70-0df700bcc1eb"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/62</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCOUNTRYCODE_CONSISTENT</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/26b46375-df2b-4677-a2e5-f96f86b8e242"/>
@@ -1852,7 +1852,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:b9dd90bd-0f4d-403d-b24e-8aed6c157946"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_EVENTDATE_STANDARD in a record set are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_EVENTDATE_STANDARD in a record set are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/66</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_EVENTDATE_STANDARD</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/14a1d51f-16ed-4148-9dc8-1e90157a9868"/>
@@ -1889,7 +1889,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:b9dd90bd-0f4d-403d-b24e-8aed6c157946"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_EVENTDATE_STANDARD in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_EVENTDATE_STANDARD in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/66</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_STANDARD</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/bffd7499-aca3-423f-bb43-f7bdc9260f4f"/>
@@ -1936,7 +1936,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:c2949d73-f230-443b-a9c4-16af595f09a3"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_EVENT_CONSISTENT in a record set are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_EVENT_CONSISTENT in a record set are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/67</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_EVENT_CONSISTENT</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/f375a3fd-4cf5-4ef4-955e-d71762ede2d8"/>
@@ -1973,7 +1973,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:c2949d73-f230-443b-a9c4-16af595f09a3"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_EVENT_CONSISTENT in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_EVENT_CONSISTENT in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/67</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENT_CONSISTENT</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/1919f212-b7db-4b6e-9697-41a715001bd6"/>
@@ -2020,7 +2020,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:bbb2cdf1-1565-48b9-8d6c-f5cee70a6e56"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_DATEIDENTIFIED_STANDARD in a record set are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_DATEIDENTIFIED_STANDARD in a record set are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/69</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_DATEIDENTIFIED_STANDARD</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/563872eb-f544-45a0-8f91-8098d62768d4"/>
@@ -2057,7 +2057,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:bbb2cdf1-1565-48b9-8d6c-f5cee70a6e56"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_DATEIDENTIFIED_STANDARD in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_DATEIDENTIFIED_STANDARD in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/69</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_DATEIDENTIFIED_STANDARD</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/49b787eb-7dce-4ace-97f5-7cbb47cd8cb9"/>
@@ -2104,7 +2104,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:993087b8-ab86-4f3a-b9aa-bde018b406b3"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_TAXON_UNAMBIGUOUS in a record set are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_TAXON_UNAMBIGUOUS in a record set are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/70</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_TAXON_UNAMBIGUOUS</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/0df03601-3768-4805-906a-bbd0a41b0fda"/>
@@ -2141,7 +2141,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:993087b8-ab86-4f3a-b9aa-bde018b406b3"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_TAXON_UNAMBIGUOUS in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_TAXON_UNAMBIGUOUS in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/70</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXON_UNAMBIGUOUS</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/782773c9-7b37-483d-8ce2-c6683ba81882"/>
@@ -2196,7 +2196,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:ba87601b-dcc0-424d-973d-3869f35586d0"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_DATEIDENTIFIED_INRANGE in a record set are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_DATEIDENTIFIED_INRANGE in a record set are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/76</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_DATEIDENTIFIED_INRANGE</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/6354376c-0cf2-435b-be40-850769c5a18a"/>
@@ -2211,8 +2211,8 @@
 <rdf:Description rdf:about="urn:uuid:8949abb1-4c5f-4733-9d3a-89c981fe6d30">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Specification"/>
 	<skos:example></skos:example>
-	<hasAuthoritiesDefaults xmlns="https://rs.tdwg.org/bdqffdq/terms/">,bdq:earliestValidDate default = "1753-01-01",bdq:latestValidDate default = "{current day}",bdq:includeEventDate default = "true"</hasAuthoritiesDefaults>
-	<rdfs:comment>INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:dateIdentified is bdq:Empty, or (2) dwc:dateIdentified contains an invalid value according to ISO 8601, or (3) bdq:includeEventDate=true and dwc:eventDate is not a valid ISO 8601 date; COMPLIANT if the value of dwc:dateIdentified is between bdq:earliestValidDate and bdq:latestValidDate inclusive and either (1) dwc:eventDate is bdq:Empty or bdq:includeEventDate=false, or (2) if dwc:eventDate is a valid ISO 8601 date and dwc:dateIdentified overlaps or is later than the dwc:eventDate; otherwise NOT_COMPLIANT ,bdq:earliestValidDate default = "1753-01-01",bdq:latestValidDate default = "{current day}",bdq:includeEventDate default = "true"</rdfs:comment>
+	<hasAuthoritiesDefaults xmlns="https://rs.tdwg.org/bdqffdq/terms/">bdq:earliestValidDate default = "1753-01-01",bdq:latestValidDate default = "{current day}",bdq:includeEventDate default = "true"</hasAuthoritiesDefaults>
+	<rdfs:comment>INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:dateIdentified is bdq:Empty, or (2) dwc:dateIdentified contains an invalid value according to ISO 8601, or (3) bdq:includeEventDate=true and dwc:eventDate is not a valid ISO 8601 date; COMPLIANT if the value of dwc:dateIdentified is between bdq:earliestValidDate and bdq:latestValidDate inclusive and either (1) dwc:eventDate is bdq:Empty or bdq:includeEventDate=false, or (2) if dwc:eventDate is a valid ISO 8601 date and dwc:dateIdentified overlaps or is later than the dwc:eventDate; otherwise NOT_COMPLIANT bdq:earliestValidDate default = "1753-01-01",bdq:latestValidDate default = "{current day}",bdq:includeEventDate default = "true"</rdfs:comment>
 	<hasExpectedResponse xmlns="https://rs.tdwg.org/bdqffdq/terms/">INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:dateIdentified is bdq:Empty, or (2) dwc:dateIdentified contains an invalid value according to ISO 8601, or (3) bdq:includeEventDate=true and dwc:eventDate is not a valid ISO 8601 date; COMPLIANT if the value of dwc:dateIdentified is between bdq:earliestValidDate and bdq:latestValidDate inclusive and either (1) dwc:eventDate is bdq:Empty or bdq:includeEventDate=false, or (2) if dwc:eventDate is a valid ISO 8601 date and dwc:dateIdentified overlaps or is later than the dwc:eventDate; otherwise NOT_COMPLIANT</hasExpectedResponse>
 	<rdfs:label>Specification for: MULTIRECORD_MEASURE_QA_DATEIDENTIFIED_INRANGE</rdfs:label>
 </rdf:Description>
@@ -2233,7 +2233,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:ba87601b-dcc0-424d-973d-3869f35586d0"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_DATEIDENTIFIED_INRANGE in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_DATEIDENTIFIED_INRANGE in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/76</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_DATEIDENTIFIED_INRANGE</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/c72fda2d-16e1-4ded-91a5-a7094339d603"/>
@@ -2248,8 +2248,8 @@
 <rdf:Description rdf:about="urn:uuid:f41b08a1-afb0-4075-b591-dfdb4174af51">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Specification"/>
 	<skos:example></skos:example>
-	<hasAuthoritiesDefaults xmlns="https://rs.tdwg.org/bdqffdq/terms/">,bdq:earliestValidDate default = "1753-01-01",bdq:latestValidDate default = "{current day}",bdq:includeEventDate default = "true"</hasAuthoritiesDefaults>
-	<rdfs:comment>INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:dateIdentified is bdq:Empty, or (2) dwc:dateIdentified contains an invalid value according to ISO 8601, or (3) bdq:includeEventDate=true and dwc:eventDate is not a valid ISO 8601 date; COMPLIANT if the value of dwc:dateIdentified is between bdq:earliestValidDate and bdq:latestValidDate inclusive and either (1) dwc:eventDate is bdq:Empty or bdq:includeEventDate=false, or (2) if dwc:eventDate is a valid ISO 8601 date and dwc:dateIdentified overlaps or is later than the dwc:eventDate; otherwise NOT_COMPLIANT ,bdq:earliestValidDate default = "1753-01-01",bdq:latestValidDate default = "{current day}",bdq:includeEventDate default = "true"</rdfs:comment>
+	<hasAuthoritiesDefaults xmlns="https://rs.tdwg.org/bdqffdq/terms/">bdq:earliestValidDate default = "1753-01-01",bdq:latestValidDate default = "{current day}",bdq:includeEventDate default = "true"</hasAuthoritiesDefaults>
+	<rdfs:comment>INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:dateIdentified is bdq:Empty, or (2) dwc:dateIdentified contains an invalid value according to ISO 8601, or (3) bdq:includeEventDate=true and dwc:eventDate is not a valid ISO 8601 date; COMPLIANT if the value of dwc:dateIdentified is between bdq:earliestValidDate and bdq:latestValidDate inclusive and either (1) dwc:eventDate is bdq:Empty or bdq:includeEventDate=false, or (2) if dwc:eventDate is a valid ISO 8601 date and dwc:dateIdentified overlaps or is later than the dwc:eventDate; otherwise NOT_COMPLIANT bdq:earliestValidDate default = "1753-01-01",bdq:latestValidDate default = "{current day}",bdq:includeEventDate default = "true"</rdfs:comment>
 	<hasExpectedResponse xmlns="https://rs.tdwg.org/bdqffdq/terms/">INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:dateIdentified is bdq:Empty, or (2) dwc:dateIdentified contains an invalid value according to ISO 8601, or (3) bdq:includeEventDate=true and dwc:eventDate is not a valid ISO 8601 date; COMPLIANT if the value of dwc:dateIdentified is between bdq:earliestValidDate and bdq:latestValidDate inclusive and either (1) dwc:eventDate is bdq:Empty or bdq:includeEventDate=false, or (2) if dwc:eventDate is a valid ISO 8601 date and dwc:dateIdentified overlaps or is later than the dwc:eventDate; otherwise NOT_COMPLIANT</hasExpectedResponse>
 	<rdfs:label>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DATEIDENTIFIED_INRANGE</rdfs:label>
 </rdf:Description>
@@ -2280,7 +2280,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:75264e67-1247-494f-bbc2-4355e5ea8246"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_CLASS_FOUND in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_CLASS_FOUND in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/77</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_CLASS_FOUND</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/21541436-641d-45a9-938c-537484d94eb7"/>
@@ -2317,7 +2317,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:75264e67-1247-494f-bbc2-4355e5ea8246"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_CLASS_FOUND in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_CLASS_FOUND in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/77</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASS_FOUND</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/7270a362-5f2e-41f0-955a-d7a8eaaf0f17"/>
@@ -2364,7 +2364,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:01835b18-0e6a-4947-a3e7-a39daec2061f"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_GEODETICDATUM_NOTEMPTY in a record set are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_GEODETICDATUM_NOTEMPTY in a record set are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/78</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_GEODETICDATUM_NOTEMPTY</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/488c1dff-21ec-4e68-a00a-7355505e180c"/>
@@ -2401,7 +2401,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:01835b18-0e6a-4947-a3e7-a39daec2061f"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_GEODETICDATUM_NOTEMPTY in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_GEODETICDATUM_NOTEMPTY in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/78</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_NOTEMPTY</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/63fbaf3c-3d41-4ab6-bfc0-904f1b26835f"/>
@@ -2448,7 +2448,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:f3a092ed-b307-4aa7-a308-a6de8f29f91c"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_DECIMALLATITUDE_INRANGE in a record set are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_DECIMALLATITUDE_INRANGE in a record set are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/79</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_DECIMALLATITUDE_INRANGE</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/3c8bc478-f6b2-4533-b7ce-45bae5d186c2"/>
@@ -2485,7 +2485,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:f3a092ed-b307-4aa7-a308-a6de8f29f91c"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_DECIMALLATITUDE_INRANGE in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_DECIMALLATITUDE_INRANGE in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/79</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLATITUDE_INRANGE</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/f0fb1c79-9e3d-4d6c-a5a9-087cf57ebd26"/>
@@ -2532,7 +2532,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:52c61f29-f440-4a97-888c-89bf4f1f143c"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_KINGDOM_FOUND in a record set are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_KINGDOM_FOUND in a record set are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/81</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_KINGDOM_FOUND</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/465d7ac1-d193-46c0-a302-56a9ef99215f"/>
@@ -2569,7 +2569,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:52c61f29-f440-4a97-888c-89bf4f1f143c"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_KINGDOM_FOUND in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_KINGDOM_FOUND in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/81</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_KINGDOM_FOUND</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/012eade5-fc64-458a-a13a-a614491bf4e0"/>
@@ -2616,7 +2616,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:0938b920-e3f0-4b1b-8e82-3bb2bcb26ad9"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_SCIENTIFICNAME_NOTEMPTY in a record set are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_SCIENTIFICNAME_NOTEMPTY in a record set are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/82</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_SCIENTIFICNAME_NOTEMPTY</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/b4d6a61c-64ff-4da0-974c-63a73fd20836"/>
@@ -2653,7 +2653,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:0938b920-e3f0-4b1b-8e82-3bb2bcb26ad9"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_SCIENTIFICNAME_NOTEMPTY in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_SCIENTIFICNAME_NOTEMPTY in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/82</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_NOTEMPTY</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/0f8b30e2-59dc-46ba-8b91-62049cd1a4e2"/>
@@ -2700,7 +2700,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:9f20b037-e607-47ce-8b54-c46fc6c83407"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_ORDER_FOUND in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_ORDER_FOUND in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/83</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_ORDER_FOUND</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/773bb288-fef3-4968-a65a-a69c74d6ecb5"/>
@@ -2737,7 +2737,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:9f20b037-e607-47ce-8b54-c46fc6c83407"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_ORDER_FOUND in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_ORDER_FOUND in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/83</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_ORDER_FOUND</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/f4fa449c-4b74-4dcf-b4cf-0b73e1496375"/>
@@ -2784,7 +2784,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:904e3e78-82d3-4d8a-90db-2be4bead51cc"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_YEAR_INRANGE in a record set are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_YEAR_INRANGE in a record set are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/84</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_YEAR_INRANGE</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/a0502c5f-608b-4e59-99da-d9490bb4d93b"/>
@@ -2821,7 +2821,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:904e3e78-82d3-4d8a-90db-2be4bead51cc"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_YEAR_INRANGE in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_YEAR_INRANGE in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/84</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_INRANGE</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/aee65eb8-8d1e-4b8f-bd37-5822e29f5734"/>
@@ -2868,7 +2868,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:0dd0bc56-a3c4-4a11-bde2-8051b8944ead"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_COORDINATES_NOTZERO in a record set are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_COORDINATES_NOTZERO in a record set are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/87</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_COORDINATES_NOTZERO</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/151b2d29-3460-4ba5-a226-86971dc8ad03"/>
@@ -2905,7 +2905,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:0dd0bc56-a3c4-4a11-bde2-8051b8944ead"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_COORDINATES_NOTZERO in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_COORDINATES_NOTZERO in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/87</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATES_NOTZERO</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/0e239a55-0f19-4c68-bdbf-20580f27a647"/>
@@ -2952,7 +2952,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:b6c0e87e-4b9a-4f6b-bbaf-9cf23b02ddee"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_EVENTTEMPORAL_NOTEMPTY in a record set are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_EVENTTEMPORAL_NOTEMPTY in a record set are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/88</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_EVENTTEMPORAL_NOTEMPTY</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/f22539ef-029b-4edb-ad17-add4363f7395"/>
@@ -2989,7 +2989,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:b6c0e87e-4b9a-4f6b-bbaf-9cf23b02ddee"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_EVENTTEMPORAL_NOTEMPTY in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_EVENTTEMPORAL_NOTEMPTY in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/88</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTTEMPORAL_NOTEMPTY</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/d3e282a1-3ff3-4ed0-bd08-fa23b6b8c161"/>
@@ -3036,7 +3036,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:3c6be17f-a7fc-4449-9d91-a528d012f415"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_DCTYPE_STANDARD in a record set are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_DCTYPE_STANDARD in a record set are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/91</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_DCTYPE_STANDARD</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/d9493fa0-d90e-41db-95f6-d1c1d243540e"/>
@@ -3051,8 +3051,8 @@
 <rdf:Description rdf:about="urn:uuid:3d5fc575-6ea0-4bff-bca9-172b6bb3b19d">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Specification"/>
 	<skos:example></skos:example>
-	<hasAuthoritiesDefaults xmlns="https://rs.tdwg.org/bdqffdq/terms/">DCMI Type Vocabulary" {[http://purl.org/dc/terms/DCMIType]} {"DCMI Type Vocabulary List Of Terms" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}</hasAuthoritiesDefaults>
-	<rdfs:comment>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the value of dc:type is bdq:Empty; COMPLIANT if the value of dc:type is a term name in the bdq:sourceAuthority; otherwise NOT_COMPLIANT DCMI Type Vocabulary" {[http://purl.org/dc/terms/DCMIType]} {"DCMI Type Vocabulary List Of Terms" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}</rdfs:comment>
+	<hasAuthoritiesDefaults xmlns="https://rs.tdwg.org/bdqffdq/terms/">DCMI Type Vocabulary" {[http://purl.org/dc/terms/DCMIType]} {"DCMI Type Vocabulary List of Terms" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}</hasAuthoritiesDefaults>
+	<rdfs:comment>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the value of dc:type is bdq:Empty; COMPLIANT if the value of dc:type is a term name in the bdq:sourceAuthority; otherwise NOT_COMPLIANT DCMI Type Vocabulary" {[http://purl.org/dc/terms/DCMIType]} {"DCMI Type Vocabulary List of Terms" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}</rdfs:comment>
 	<hasExpectedResponse xmlns="https://rs.tdwg.org/bdqffdq/terms/">EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the value of dc:type is bdq:Empty; COMPLIANT if the value of dc:type is a term name in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</hasExpectedResponse>
 	<rdfs:label>Specification for: MULTIRECORD_MEASURE_QA_DCTYPE_STANDARD</rdfs:label>
 </rdf:Description>
@@ -3073,7 +3073,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:3c6be17f-a7fc-4449-9d91-a528d012f415"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_DCTYPE_STANDARD in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_DCTYPE_STANDARD in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/91</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_DCTYPE_STANDARD</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/fbe47441-500f-44c7-a1bd-1e872edc5266"/>
@@ -3088,8 +3088,8 @@
 <rdf:Description rdf:about="urn:uuid:7c49e2d3-5d57-460f-b98a-8bba82b7156f">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Specification"/>
 	<skos:example></skos:example>
-	<hasAuthoritiesDefaults xmlns="https://rs.tdwg.org/bdqffdq/terms/">DCMI Type Vocabulary" {[http://purl.org/dc/terms/DCMIType]} {"DCMI Type Vocabulary List Of Terms" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}</hasAuthoritiesDefaults>
-	<rdfs:comment>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the value of dc:type is bdq:Empty; COMPLIANT if the value of dc:type is a term name in the bdq:sourceAuthority; otherwise NOT_COMPLIANT DCMI Type Vocabulary" {[http://purl.org/dc/terms/DCMIType]} {"DCMI Type Vocabulary List Of Terms" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}</rdfs:comment>
+	<hasAuthoritiesDefaults xmlns="https://rs.tdwg.org/bdqffdq/terms/">DCMI Type Vocabulary" {[http://purl.org/dc/terms/DCMIType]} {"DCMI Type Vocabulary List of Terms" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}</hasAuthoritiesDefaults>
+	<rdfs:comment>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the value of dc:type is bdq:Empty; COMPLIANT if the value of dc:type is a term name in the bdq:sourceAuthority; otherwise NOT_COMPLIANT DCMI Type Vocabulary" {[http://purl.org/dc/terms/DCMIType]} {"DCMI Type Vocabulary List of Terms" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}</rdfs:comment>
 	<hasExpectedResponse xmlns="https://rs.tdwg.org/bdqffdq/terms/">EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the value of dc:type is bdq:Empty; COMPLIANT if the value of dc:type is a term name in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</hasExpectedResponse>
 	<rdfs:label>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DCTYPE_STANDARD</rdfs:label>
 </rdf:Description>
@@ -3120,7 +3120,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:72a0dee0-ad16-4a3c-8045-c79c54f6193e"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_DECIMALLONGITUDE_NOTEMPTY in a record set are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_DECIMALLONGITUDE_NOTEMPTY in a record set are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/96</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_DECIMALLONGITUDE_NOTEMPTY</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/a94e986e-dbc8-4147-872d-5f2727945654"/>
@@ -3157,7 +3157,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:72a0dee0-ad16-4a3c-8045-c79c54f6193e"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_DECIMALLONGITUDE_NOTEMPTY in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_DECIMALLONGITUDE_NOTEMPTY in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/96</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLONGITUDE_NOTEMPTY</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/f948a30e-8084-48d5-b1ca-d77c476f181f"/>
@@ -3204,7 +3204,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:67e7259e-3421-4f5d-a31d-a92ce73d0baa"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_COUNTRYCODE_NOTEMPTY in a record set are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_COUNTRYCODE_NOTEMPTY in a record set are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/98</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_COUNTRYCODE_NOTEMPTY</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/942f63bd-d19d-4214-bf8e-cec0055b8909"/>
@@ -3241,7 +3241,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:67e7259e-3421-4f5d-a31d-a92ce73d0baa"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_COUNTRYCODE_NOTEMPTY in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_COUNTRYCODE_NOTEMPTY in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/98</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_NOTEMPTY</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/d71be8d4-1a04-4816-90c5-49808c823651"/>
@@ -3288,7 +3288,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:893e5d1d-d9e1-49d6-8b17-337b87419ae6"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_LICENSE_NOTEMPTY in a record set are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_LICENSE_NOTEMPTY in a record set are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/99</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_LICENSE_NOTEMPTY</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/4fccf163-9336-4f48-996c-57f5f66e72db"/>
@@ -3325,7 +3325,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:893e5d1d-d9e1-49d6-8b17-337b87419ae6"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_LICENSE_NOTEMPTY in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_LICENSE_NOTEMPTY in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/99</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_NOTEMPTY</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/47ee20d9-5087-4f76-a494-6fea05e50b8b"/>
@@ -3372,7 +3372,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:54ae4594-8bf0-47b5-9977-49c73ce10a74"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_POLYNOMIAL_CONSISTENT in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_POLYNOMIAL_CONSISTENT in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/101</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_POLYNOMIAL_CONSISTENT</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/ef05b45b-13b8-4877-9e9d-fa44b332d83c"/>
@@ -3409,7 +3409,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:54ae4594-8bf0-47b5-9977-49c73ce10a74"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_POLYNOMIAL_CONSISTENT in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_POLYNOMIAL_CONSISTENT in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/101</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_POLYNOMIAL_CONSISTENT</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/7da5428e-87b2-4ec2-be82-05b9398b7577"/>
@@ -3456,7 +3456,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:ed140634-27d9-474a-b107-279caf1b9e55"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_DCTYPE_NOTEMPTY in a record set are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_DCTYPE_NOTEMPTY in a record set are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/103</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_DCTYPE_NOTEMPTY</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/4d999a65-a431-4a76-b591-e0d86dcf244b"/>
@@ -3493,7 +3493,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:ed140634-27d9-474a-b107-279caf1b9e55"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_DCTYPE_NOTEMPTY in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_DCTYPE_NOTEMPTY in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/103</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_DCTYPE_NOTEMPTY</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/f041ab17-d834-4586-aa6b-090de2e571a8"/>
@@ -3540,7 +3540,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:fe9787e7-d5e8-4c40-a980-631686b3d16d"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_BASISOFRECORD_STANDARD in a record set are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_BASISOFRECORD_STANDARD in a record set are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/104</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_BASISOFRECORD_STANDARD</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/241a279c-76d5-499b-ab49-a47ad7f8df50"/>
@@ -3577,7 +3577,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:fe9787e7-d5e8-4c40-a980-631686b3d16d"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_BASISOFRECORD_STANDARD in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_BASISOFRECORD_STANDARD in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/104</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_STANDARD</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/f5dd74bd-6a22-4792-b675-c7ccf2a2c103"/>
@@ -3624,7 +3624,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:2c68f3a2-539a-43bf-99b2-972c98a90b68"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_TAXON_NOTEMPTY in a record set are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_TAXON_NOTEMPTY in a record set are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/105</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_TAXON_NOTEMPTY</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/2a9d4cfd-815a-46e0-bb51-60724582b762"/>
@@ -3661,7 +3661,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:2c68f3a2-539a-43bf-99b2-972c98a90b68"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_TAXON_NOTEMPTY in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_TAXON_NOTEMPTY in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/105</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXON_NOTEMPTY</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/54d290e8-ac48-4f31-8af3-676363573217"/>
@@ -3708,7 +3708,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:78d4bba2-ea16-42a4-a45d-c28cea71a2dc"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_MINDEPTH_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_MINDEPTH_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/107</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_MINDEPTH_INRANGE</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/49d756a8-e654-4267-a290-d1def5d2c5f9"/>
@@ -3745,7 +3745,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:78d4bba2-ea16-42a4-a45d-c28cea71a2dc"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_MINDEPTH_INRANGE in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_MINDEPTH_INRANGE in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/107</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINDEPTH_INRANGE</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/9c66c116-6644-45b4-b4c7-db7a4ee7c500"/>
@@ -3792,11 +3792,11 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:f379c9b1-f432-4a29-9e5f-8c8ad012aa38"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/108</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_MINELEVATION_LESSTHAN_MAXELEVATION</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/44f00697-ca66-43cf-8f16-646b40c0f514"/>
-	<skos:prefLabel>Measurement over MultiRecord for QualityAssurance of Validation dwc:minimumElevationInMeters Less Than dwcmaximumElevationInMeters for MultiRecord</skos:prefLabel>
+	<skos:prefLabel>Measurement over MultiRecord for QualityAssurance of Validation dwc:minimumElevationInMeters less than dwcmaximumElevationInMeters for MultiRecord</skos:prefLabel>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:7de2e2b3-2734-4f0d-b4d1-25942d628a6f">
@@ -3829,11 +3829,11 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:f379c9b1-f432-4a29-9e5f-8c8ad012aa38"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/108</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINELEVATION_LESSTHAN_MAXELEVATION</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/be2eb717-b390-47d1-b7ba-965a1101e215"/>
-	<skos:prefLabel>Measurement over MultiRecord Counting Compliance of Validation dwc:minimumElevationInMeters Less Than dwcmaximumElevationInMeters for MultiRecord</skos:prefLabel>
+	<skos:prefLabel>Measurement over MultiRecord Counting Compliance of Validation dwc:minimumElevationInMeters less than dwcmaximumElevationInMeters for MultiRecord</skos:prefLabel>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:d80952fd-a95b-4e83-b0db-55b85edd10ef">
@@ -3876,7 +3876,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:e96e00be-9b67-42df-a914-4873e05f9a34"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_COORDINATEUNCERTAINTY_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_COORDINATEUNCERTAINTY_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/109</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_COORDINATEUNCERTAINTY_INRANGE</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/d94b0130-7a13-4fa8-955c-eff5c47bd9de"/>
@@ -3892,8 +3892,8 @@
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Specification"/>
 	<skos:example></skos:example>
 	<hasAuthoritiesDefaults xmlns="https://rs.tdwg.org/bdqffdq/terms/"></hasAuthoritiesDefaults>
-	<rdfs:comment>INTERNAL_PREREQUISITES_NOT_MET if dwc:coordinateUncertaintyInMeters is bdq:Empty; COMPLIANT if the value of  dwc:coordinateUncertaintyInMeters is interpreted as a number between 1 and 20037509 inclusive; otherwise NOT_COMPLIANT</rdfs:comment>
-	<hasExpectedResponse xmlns="https://rs.tdwg.org/bdqffdq/terms/">INTERNAL_PREREQUISITES_NOT_MET if dwc:coordinateUncertaintyInMeters is bdq:Empty; COMPLIANT if the value of  dwc:coordinateUncertaintyInMeters is interpreted as a number between 1 and 20037509 inclusive; otherwise NOT_COMPLIANT</hasExpectedResponse>
+	<rdfs:comment>INTERNAL_PREREQUISITES_NOT_MET if dwc:coordinateUncertaintyInMeters is bdq:Empty; COMPLIANT if the value of dwc:coordinateUncertaintyInMeters is interpreted as a number between 1 and 20037509 inclusive; otherwise NOT_COMPLIANT</rdfs:comment>
+	<hasExpectedResponse xmlns="https://rs.tdwg.org/bdqffdq/terms/">INTERNAL_PREREQUISITES_NOT_MET if dwc:coordinateUncertaintyInMeters is bdq:Empty; COMPLIANT if the value of dwc:coordinateUncertaintyInMeters is interpreted as a number between 1 and 20037509 inclusive; otherwise NOT_COMPLIANT</hasExpectedResponse>
 	<rdfs:label>Specification for: MULTIRECORD_MEASURE_QA_COORDINATEUNCERTAINTY_INRANGE</rdfs:label>
 </rdf:Description>
 
@@ -3913,7 +3913,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:e96e00be-9b67-42df-a914-4873e05f9a34"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_COORDINATEUNCERTAINTY_INRANGE in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_COORDINATEUNCERTAINTY_INRANGE in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/109</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATEUNCERTAINTY_INRANGE</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/2d90d94b-d384-4bac-aa68-c6800d765882"/>
@@ -3929,8 +3929,8 @@
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Specification"/>
 	<skos:example></skos:example>
 	<hasAuthoritiesDefaults xmlns="https://rs.tdwg.org/bdqffdq/terms/"></hasAuthoritiesDefaults>
-	<rdfs:comment>INTERNAL_PREREQUISITES_NOT_MET if dwc:coordinateUncertaintyInMeters is bdq:Empty; COMPLIANT if the value of  dwc:coordinateUncertaintyInMeters is interpreted as a number between 1 and 20037509 inclusive; otherwise NOT_COMPLIANT</rdfs:comment>
-	<hasExpectedResponse xmlns="https://rs.tdwg.org/bdqffdq/terms/">INTERNAL_PREREQUISITES_NOT_MET if dwc:coordinateUncertaintyInMeters is bdq:Empty; COMPLIANT if the value of  dwc:coordinateUncertaintyInMeters is interpreted as a number between 1 and 20037509 inclusive; otherwise NOT_COMPLIANT</hasExpectedResponse>
+	<rdfs:comment>INTERNAL_PREREQUISITES_NOT_MET if dwc:coordinateUncertaintyInMeters is bdq:Empty; COMPLIANT if the value of dwc:coordinateUncertaintyInMeters is interpreted as a number between 1 and 20037509 inclusive; otherwise NOT_COMPLIANT</rdfs:comment>
+	<hasExpectedResponse xmlns="https://rs.tdwg.org/bdqffdq/terms/">INTERNAL_PREREQUISITES_NOT_MET if dwc:coordinateUncertaintyInMeters is bdq:Empty; COMPLIANT if the value of dwc:coordinateUncertaintyInMeters is interpreted as a number between 1 and 20037509 inclusive; otherwise NOT_COMPLIANT</hasExpectedResponse>
 	<rdfs:label>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATEUNCERTAINTY_INRANGE</rdfs:label>
 </rdf:Description>
 
@@ -3960,7 +3960,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:5079eace-ec39-4d44-b4ce-7894854b9eed"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_MAXELEVATION_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_MAXELEVATION_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/112</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_MAXELEVATION_INRANGE</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/7c5a6ba0-399d-4570-878a-4a064e2406fe"/>
@@ -3997,7 +3997,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:5079eace-ec39-4d44-b4ce-7894854b9eed"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_MAXELEVATION_INRANGE in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_MAXELEVATION_INRANGE in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/112</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_MAXELEVATION_INRANGE</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/6a3baf78-5ec3-4a84-8c6b-6876b3a4e3b5"/>
@@ -4044,7 +4044,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:3f67a77a-85c0-495d-948a-5ea0dec89ec7"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_OCCURRENCESTATUS_STANDARD in a record set are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_OCCURRENCESTATUS_STANDARD in a record set are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/116</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_OCCURRENCESTATUS_STANDARD</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/2fea4571-92d0-48a5-a5ba-6caecd647862"/>
@@ -4081,7 +4081,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:3f67a77a-85c0-495d-948a-5ea0dec89ec7"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_OCCURRENCESTATUS_STANDARD in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_OCCURRENCESTATUS_STANDARD in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/116</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCESTATUS_STANDARD</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/faca6558-dbff-4d26-a5cb-e11cdf632fe7"/>
@@ -4128,7 +4128,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:47b2efa0-bf97-45be-b133-f14cfc73ace5"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_OCCURRENCESTATUS_NOTEMPTY in a record set are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_OCCURRENCESTATUS_NOTEMPTY in a record set are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/117</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_OCCURRENCESTATUS_NOTEMPTY</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/d2922585-2070-4851-a033-15e51977f9dc"/>
@@ -4165,7 +4165,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:47b2efa0-bf97-45be-b133-f14cfc73ace5"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_OCCURRENCESTATUS_NOTEMPTY in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_OCCURRENCESTATUS_NOTEMPTY in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/117</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCESTATUS_NOTEMPTY</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/298db0c9-a85a-41ee-b111-d622fd969d71"/>
@@ -4212,7 +4212,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:66a62ee2-d3be-4370-a42b-6d488b5c9b84"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_DECIMALLATITUDE_NOTEMPTY in a record set are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_DECIMALLATITUDE_NOTEMPTY in a record set are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/119</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_DECIMALLATITUDE_NOTEMPTY</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/a2535b23-4407-40bd-b23b-30c8185d72a2"/>
@@ -4249,7 +4249,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:66a62ee2-d3be-4370-a42b-6d488b5c9b84"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_DECIMALLATITUDE_NOTEMPTY in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_DECIMALLATITUDE_NOTEMPTY in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/119</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLATITUDE_NOTEMPTY</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/bceae35a-52ab-4968-846f-069ace766513"/>
@@ -4296,7 +4296,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:05d4f647-0387-4e37-883f-810840711e6d"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_SCIENTIFICNAMEID_NOTEMPTY in a record set are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_SCIENTIFICNAMEID_NOTEMPTY in a record set are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/120</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEID_NOTEMPTY</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/4cf84216-c8a7-4865-a8e1-3ffd829d5a10"/>
@@ -4333,7 +4333,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:05d4f647-0387-4e37-883f-810840711e6d"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_SCIENTIFICNAMEID_NOTEMPTY in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_SCIENTIFICNAMEID_NOTEMPTY in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/120</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEID_NOTEMPTY</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/a9962d33-ad08-453a-8938-2972425034c2"/>
@@ -4380,7 +4380,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:de43b1ab-4e58-4510-97cf-c4c84e04c9bd"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_GENUS_FOUND in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_GENUS_FOUND in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/122</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_GENUS_FOUND</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/c5c8db83-3af0-4215-806f-e2f90574b138"/>
@@ -4396,8 +4396,8 @@
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Specification"/>
 	<skos:example></skos:example>
 	<hasAuthoritiesDefaults xmlns="https://rs.tdwg.org/bdqffdq/terms/">bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&amp;name=]}</hasAuthoritiesDefaults>
-	<rdfs:comment>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available;  INTERNAL_PREREQUISITES_NOT_MET if dwc:genus is bdq:Empty; COMPLIANT if the value of dwc:genus is found as a value at the rank of genus in the bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&amp;name=]}</rdfs:comment>
-	<hasExpectedResponse xmlns="https://rs.tdwg.org/bdqffdq/terms/">EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available;  INTERNAL_PREREQUISITES_NOT_MET if dwc:genus is bdq:Empty; COMPLIANT if the value of dwc:genus is found as a value at the rank of genus in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</hasExpectedResponse>
+	<rdfs:comment>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:genus is bdq:Empty; COMPLIANT if the value of dwc:genus is found as a value at the rank of genus in the bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&amp;name=]}</rdfs:comment>
+	<hasExpectedResponse xmlns="https://rs.tdwg.org/bdqffdq/terms/">EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:genus is bdq:Empty; COMPLIANT if the value of dwc:genus is found as a value at the rank of genus in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</hasExpectedResponse>
 	<rdfs:label>Specification for: MULTIRECORD_MEASURE_QA_GENUS_FOUND</rdfs:label>
 </rdf:Description>
 
@@ -4417,7 +4417,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:de43b1ab-4e58-4510-97cf-c4c84e04c9bd"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_GENUS_FOUND in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_GENUS_FOUND in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/122</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_GENUS_FOUND</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/977f7e75-a88e-4e29-a7b1-e8cdd35aa107"/>
@@ -4433,8 +4433,8 @@
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Specification"/>
 	<skos:example></skos:example>
 	<hasAuthoritiesDefaults xmlns="https://rs.tdwg.org/bdqffdq/terms/">bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&amp;name=]}</hasAuthoritiesDefaults>
-	<rdfs:comment>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available;  INTERNAL_PREREQUISITES_NOT_MET if dwc:genus is bdq:Empty; COMPLIANT if the value of dwc:genus is found as a value at the rank of genus in the bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&amp;name=]}</rdfs:comment>
-	<hasExpectedResponse xmlns="https://rs.tdwg.org/bdqffdq/terms/">EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available;  INTERNAL_PREREQUISITES_NOT_MET if dwc:genus is bdq:Empty; COMPLIANT if the value of dwc:genus is found as a value at the rank of genus in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</hasExpectedResponse>
+	<rdfs:comment>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:genus is bdq:Empty; COMPLIANT if the value of dwc:genus is found as a value at the rank of genus in the bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&amp;name=]}</rdfs:comment>
+	<hasExpectedResponse xmlns="https://rs.tdwg.org/bdqffdq/terms/">EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:genus is bdq:Empty; COMPLIANT if the value of dwc:genus is found as a value at the rank of genus in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</hasExpectedResponse>
 	<rdfs:label>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_GENUS_FOUND</rdfs:label>
 </rdf:Description>
 
@@ -4464,7 +4464,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:264375b3-9ecd-4a3e-bad2-e74fbab0dcf4"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_CLASSIFICATION_CONSISTENT in a record set are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_CLASSIFICATION_CONSISTENT in a record set are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/123</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_CLASSIFICATION_CONSISTENT</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/a2be4734-0a93-46dc-af4a-e2125b47dbd4"/>
@@ -4501,7 +4501,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:264375b3-9ecd-4a3e-bad2-e74fbab0dcf4"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_CLASSIFICATION_CONSISTENT in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_CLASSIFICATION_CONSISTENT in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/123</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASSIFICATION_CONSISTENT</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/a56fb342-c8ee-4611-8aab-e6c6357e8875"/>
@@ -4548,7 +4548,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:3acc77f6-1bbc-46b7-9aee-f75af5537d2a"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_DAY_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_DAY_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/125</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_DAY_INRANGE</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/85dc5d02-9847-420f-a026-6a0e70962d2a"/>
@@ -4585,7 +4585,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:3acc77f6-1bbc-46b7-9aee-f75af5537d2a"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_DAY_INRANGE in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_DAY_INRANGE in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/125</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_INRANGE</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/780480ff-8c4a-4276-aaca-cbd1248de9fa"/>
@@ -4632,7 +4632,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:5a033f48-4b60-4241-b5c3-4a7cb8de33f2"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_MONTH_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_MONTH_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/126</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_MONTH_STANDARD</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/b3c2bb86-e239-4532-ae0c-b121ec1ee025"/>
@@ -4669,7 +4669,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:5a033f48-4b60-4241-b5c3-4a7cb8de33f2"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_MONTH_STANDARD in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_MONTH_STANDARD in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/126</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_MONTH_STANDARD</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/c3b4cd93-a37f-4a0a-89dd-7ce53669f1f3"/>
@@ -4716,7 +4716,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:528771e2-c865-45d4-8fcb-765e502be2b8"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_STARTDAYOFYEAR_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_STARTDAYOFYEAR_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/130</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_STARTDAYOFYEAR_INRANGE</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/8c217eee-9cd0-48c3-aea0-90151c6c5bfd"/>
@@ -4753,7 +4753,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:528771e2-c865-45d4-8fcb-765e502be2b8"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_STARTDAYOFYEAR_INRANGE in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_STARTDAYOFYEAR_INRANGE in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/130</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_STARTDAYOFYEAR_INRANGE</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/76008c6b-c56a-4233-84e3-8584950037ec"/>
@@ -4800,7 +4800,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:dda8a095-0878-4b93-8a55-9b95f1700dae"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_ENDDAYOFYEAR_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_ENDDAYOFYEAR_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/131</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_ENDDAYOFYEAR_INRANGE</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/c04d428a-13d0-4766-9df7-4dfb2ef5d5d8"/>
@@ -4837,7 +4837,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:dda8a095-0878-4b93-8a55-9b95f1700dae"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_ENDDAYOFYEAR_INRANGE in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_ENDDAYOFYEAR_INRANGE in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/131</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_ENDDAYOFYEAR_INRANGE</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/7775309b-5331-4a65-b839-cbe959948d33"/>
@@ -4884,7 +4884,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:9a0e0a79-fe93-4270-943f-30662eb60e72"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_DAY_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_DAY_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/147</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_DAY_STANDARD</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/371035f6-42b5-494f-86d9-de2f44a6cdc6"/>
@@ -4921,7 +4921,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:9a0e0a79-fe93-4270-943f-30662eb60e72"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_DAY_STANDARD in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_DAY_STANDARD in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/147</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_STANDARD</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/c3e0100f-dfc3-4379-a855-df878eef295e"/>
@@ -4968,7 +4968,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:2e560d7e-864c-4d72-9cac-0bafbe1bbeea"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_TAXONRANK_NOTEMPTY in a record set are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_TAXONRANK_NOTEMPTY in a record set are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/161</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_TAXONRANK_NOTEMPTY</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/e0b8cff1-3322-40d2-b8b2-b99fc9ae130a"/>
@@ -5005,7 +5005,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:2e560d7e-864c-4d72-9cac-0bafbe1bbeea"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_TAXONRANK_NOTEMPTY in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_TAXONRANK_NOTEMPTY in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/161</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXONRANK_NOTEMPTY</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/de661615-b338-4557-af5b-d44a89de40fa"/>
@@ -5052,7 +5052,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:90508628-7333-4e71-b191-d1a0e0d431e6"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_TAXONRANK_STANDARD in a record set are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_TAXONRANK_STANDARD in a record set are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/162</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_TAXONRANK_STANDARD</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/f320ca83-8487-4011-b1ff-f4b1b4dd86ec"/>
@@ -5089,7 +5089,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:90508628-7333-4e71-b191-d1a0e0d431e6"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_TAXONRANK_STANDARD in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_TAXONRANK_STANDARD in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/162</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXONRANK_STANDARD</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/602bc457-6b1d-4f24-adef-d0d31bcdf2f0"/>
@@ -5136,7 +5136,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:3a4ce2f7-01a4-4a60-8dd3-2be0ac41cdf0"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_MAXDEPTH_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_MAXDEPTH_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/187</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_MAXDEPTH_INRANGE</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/c73d49d1-06e4-4272-8249-6a26e7f8abca"/>
@@ -5173,7 +5173,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:3a4ce2f7-01a4-4a60-8dd3-2be0ac41cdf0"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_MAXDEPTH_INRANGE in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_MAXDEPTH_INRANGE in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/187</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_MAXDEPTH_INRANGE</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/3de8af03-05d4-4fd8-8e6d-ba886dc5446f"/>
@@ -5220,7 +5220,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:03715043-0512-48a0-a1ac-45e6e2043a44"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_STATEPROVINCE_FOUND in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_STATEPROVINCE_FOUND in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/199</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_STATEPROVINCE_FOUND</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/9c1cdf6a-0dbf-4828-a2e3-fb368f74d194"/>
@@ -5257,7 +5257,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:03715043-0512-48a0-a1ac-45e6e2043a44"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_STATEPROVINCE_FOUND in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_STATEPROVINCE_FOUND in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/199</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_STATEPROVINCE_FOUND</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/58fdd5c1-6201-49a1-a7cd-f49c210dc0b6"/>
@@ -5304,7 +5304,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:fd67021a-c835-495c-a45c-832da0d37c2f"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS in a record set are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS in a record set are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/201</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_COUNTRYSTATEPROVINCE_UNAMBIGUOUS</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/23aced89-d613-479c-bc4c-837d74b73be0"/>
@@ -5341,7 +5341,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:fd67021a-c835-495c-a45c-832da0d37c2f"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/201</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYSTATEPROVINCE_UNAMBIGUOUS</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/8b73f37d-89ed-479a-8389-9e71ad2ac84d"/>
@@ -5388,7 +5388,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:951358d6-b8f5-42e0-a089-42bb2ecfa79b"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_SCIENTIFICNAMEID_COMPLETE in a record set are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_SCIENTIFICNAMEID_COMPLETE in a record set are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/212</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEID_COMPLETE</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/a9529e71-5470-4cb1-b04d-aa483926f532"/>
@@ -5425,7 +5425,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:951358d6-b8f5-42e0-a089-42bb2ecfa79b"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_SCIENTIFICNAMEID_COMPLETE in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_SCIENTIFICNAMEID_COMPLETE in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/212</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEID_COMPLETE</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/f174ad13-3c67-49f9-8d8b-aba4e933d6f6"/>
@@ -5472,7 +5472,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:8a63ca58-36c5-45d8-9d4c-7f0fd476d87c"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_KINGDOM_NOTEMPTY in a record set are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_KINGDOM_NOTEMPTY in a record set are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/216</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_KINGDOM_NOTEMPTY</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/3bc9df8b-0f57-4157-9374-b56a99090b22"/>
@@ -5509,7 +5509,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:8a63ca58-36c5-45d8-9d4c-7f0fd476d87c"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_KINGDOM_NOTEMPTY in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_KINGDOM_NOTEMPTY in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/216</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_KINGDOM_NOTEMPTY</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/342bd81c-e2b7-41d8-b32b-013992d19f99"/>
@@ -5556,7 +5556,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:2c7b6527-0918-401b-b679-cf3f0819ce9e"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY in a record set are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY in a record set are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/244</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/6dd6fecf-6ba1-425c-afbe-6a9ed7b65ed7"/>
@@ -5593,7 +5593,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:2c7b6527-0918-401b-b679-cf3f0819ce9e"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/244</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/dbf3cece-1d83-426e-a5e0-8158fcf9c0cd"/>
@@ -5640,7 +5640,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:59de7103-5a68-4fa2-8d9a-fe89256b4cab"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/259</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_NAMEPUBLISHEDINYEAR_NOTEMPTY</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/16059801-6adb-4e65-82f4-61eaa70d8df0"/>
@@ -5677,7 +5677,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:59de7103-5a68-4fa2-8d9a-fe89256b4cab"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/259</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_NAMEPUBLISHEDINYEAR_NOTEMPTY</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/36ea0a78-a079-4014-aca3-2f2b3b11e822"/>
@@ -5724,7 +5724,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:4d7d3e60-8242-48be-ab51-cfd40fe3b8e9"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_ESTABLISHMENTMEANS_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_ESTABLISHMENTMEANS_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/268</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_ESTABLISHMENTMEANS_STANDARD</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/8dfed701-01a9-415d-a9f8-539280b75975"/>
@@ -5761,7 +5761,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:4d7d3e60-8242-48be-ab51-cfd40fe3b8e9"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_ESTABLISHMENTMEANS_STANDARD in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_ESTABLISHMENTMEANS_STANDARD in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/268</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_ESTABLISHMENTMEANS_STANDARD</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/130bb875-6b7c-4965-b864-d53f9d05b2cd"/>
@@ -5808,7 +5808,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:3ea77d56-e4b4-45b2-88d7-c6ab7c1d0f36"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_DEGREEOFESTABLISHMENT_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_DEGREEOFESTABLISHMENT_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/275</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_DEGREEOFESTABLISHMENT_STANDARD</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/ba953672-6526-4375-97e8-b4e9d1a7d3a0"/>
@@ -5845,7 +5845,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:3ea77d56-e4b4-45b2-88d7-c6ab7c1d0f36"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_DEGREEOFESTABLISHMENT_STANDARD in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_DEGREEOFESTABLISHMENT_STANDARD in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/275</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_DEGREEOFESTABLISHMENT_STANDARD</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/1b8ae68e-63f1-41c0-9025-fbe64db38d64"/>
@@ -5892,7 +5892,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:79c96804-409c-44a5-bd7d-f149a7c0805e"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_PATHWAY_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_PATHWAY_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/277</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_PATHWAY_STANDARD</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/ef31ba02-cea7-4d76-990f-99ebbd201fb4"/>
@@ -5929,7 +5929,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:79c96804-409c-44a5-bd7d-f149a7c0805e"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_PATHWAY_STANDARD in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_PATHWAY_STANDARD in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/277</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_PATHWAY_STANDARD</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/15e0da1d-1a43-4075-8454-b2e618cdd25b"/>
@@ -5976,7 +5976,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:c449482f-64cd-4152-a434-3492ebdd4401"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_SEX_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_SEX_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/283</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_SEX_STANDARD</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/1b3bbac4-7c00-46d6-8179-1d57c92374ad"/>
@@ -6013,7 +6013,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:c449482f-64cd-4152-a434-3492ebdd4401"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_SEX_STANDARD in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_SEX_STANDARD in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/283</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_SEX_STANDARD</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/e4d35063-2366-4dda-8eaa-326340361da3"/>
@@ -6060,7 +6060,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:521ea0c6-8eb7-4d41-b1b6-40bbf1b2651e"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Measure if all VALIDATION_TYPESTATUS_STANDARD in a record set are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Measure if all VALIDATION_TYPESTATUS_STANDARD in a record set are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/285</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_QA_TYPESTATUS_STANDARD</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/1ca359ea-4df3-4dca-b92b-2bc8fa8e0c88"/>
@@ -6097,7 +6097,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:521ea0c6-8eb7-4d41-b1b6-40bbf1b2651e"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</dcterms:bibliographicCitation>
-	<rdfs:comment>Count the number of VALIDATION_TYPESTATUS_STANDARD in a record set that are COMPLIANT</rdfs:comment>
+	<rdfs:comment>Count the number of VALIDATION_TYPESTATUS_STANDARD in a record set that are COMPLIANT.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/285</skos:historyNote>
 	<rdfs:label>MULTIRECORD_MEASURE_COUNT_COMPLIANT_TYPESTATUS_STANDARD</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/b5a14d76-292e-499b-b80f-9546243311a0"/>

@@ -2,9 +2,9 @@
 <rdf:RDF
 	xmlns:rdfbeans="http://viceversatech.com/rdfbeans/2.0/"
 	xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
-	xmlns:bdqtest="https://rs.tdwg.org/bdqtest/terms"
 	xmlns:dwc="http://rs.tdwg.org/dwc/terms/"
 	xmlns:bdqenh="https://rs.tdwg.org/bdqenh/terms/"
+	xmlns:bdqtest="https://rs.tdwg.org/bdqtest/terms"
 	xmlns:bdqcrit="https://rs.tdwg.org/bdqcrit/terms/"
 	xmlns:dwcloud="http://datakurator.org/none/"
 	xmlns:dcterms="http://purl.org/dc/terms/"
@@ -56,7 +56,7 @@
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:Standard"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:25276f2d-a2d5-45b7-96ec-b55eec94171f">
+<rdf:Description rdf:about="urn:uuid:ab069837-d67e-4e25-bc85-df0fbfe2ed7d">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 </rdf:Description>
 
@@ -64,14 +64,14 @@
 	<rdfs:subClassOf rdf:resource="https://rs.tdwg.org/bdqffdq/terms/InformationElement"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:25276f2d-a2d5-45b7-96ec-b55eec94171f">
+<rdf:Description rdf:about="urn:uuid:ab069837-d67e-4e25-bc85-df0fbfe2ed7d">
 	<prefLabel xmlns="skos:">Information Element ActedUpon dwc:individualCount</prefLabel>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/individualCount"/>
 	<rdfs:label>Information Element ActedUpon dwc:individualCount</rdfs:label>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/43abded0-c3bf-44e7-8c1f-c4207608b1fa-2025-03-06">
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:25276f2d-a2d5-45b7-96ec-b55eec94171f"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:ab069837-d67e-4e25-bc85-df0fbfe2ed7d"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is dwc:individualCount an Integer ?</rdfs:comment>
@@ -147,7 +147,7 @@
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/fffdc42b-b15e-4450-9e6a-f4181a319106-2025-03-06">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:f3141ff8-76fa-4953-9c6c-9300816358cc"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
-	<dcterms:bibliographicCitation>Darwin Core Maintenance Group (2021). Pathway Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). (https://dwc.tdwg.org/pw/)&lt;/li&gt; &lt;li&gt;Groom et al. (2019). Improving Darwin Core for research and management of alien species. Biodiversity Information Science and Services 3: e38084 (https://doi.org/10.3897/biss.3.38084)</dcterms:bibliographicCitation>
+	<dcterms:bibliographicCitation>Darwin Core Maintenance Group (2021). Pathway Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). (https://dwc.tdwg.org/pw/); Groom et al. (2019). Improving Darwin Core for research and management of alien species. Biodiversity Information Science and Services 3: e38084 (https://doi.org/10.3897/biss.3.38084)</dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:pathway?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/289</skos:historyNote>
 	<rdfs:label>VALIDATION_PATHWAY_NOTEMPTY</rdfs:label>
@@ -198,7 +198,7 @@
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/0fa16c7e-eb9c-4add-9193-aca6087d6636-2025-03-06">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:c5abcb06-a1d0-4ed5-9513-c04c194293e6"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
-	<dcterms:bibliographicCitation>Darwin Core Maintenance Group (2021). Degree Of Establishment Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). (https://dwc.tdwg.org/doe/)&lt;/li&gt; &lt;li&gt;Groom et al. (2019). Improving Darwin Core for research and management of alien species (https://doi.org/10.3897/biss.3.38084)</dcterms:bibliographicCitation>
+	<dcterms:bibliographicCitation>Darwin Core Maintenance Group (2021). Degree Of Establishment Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). (https://dwc.tdwg.org/doe/); Groom et al. (2019). Improving Darwin Core for research and management of alien species (https://doi.org/10.3897/biss.3.38084)</dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:degreeOfEstablishment?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/288</skos:historyNote>
 	<rdfs:label>VALIDATION_DEGREEOFESTABLISHMENT_NOTEMPTY</rdfs:label>
@@ -254,7 +254,7 @@
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Conformance"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:9de85bfc-6815-4742-b997-901fce0ee3c4">
+<rdf:Description rdf:about="urn:uuid:a2182a66-8560-4620-8db7-55cb42675a55">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<prefLabel xmlns="skos:">Information Element ActedUpon dwc:reproductiveCondition</prefLabel>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/reproductiveCondition"/>
@@ -262,9 +262,9 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/10ef7660-3e08-4b74-95d3-66131275cf31-2024-09-05">
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:9de85bfc-6815-4742-b997-901fce0ee3c4"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:a2182a66-8560-4620-8db7-55cb42675a55"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-05</dcterms:issued>
-	<dcterms:bibliographicCitation>Darwin Core Maintenance Group (2021). Reproductive Condition Vocabulary List of Terms. Biodiversity Information Standards (TDWG). (https://dwc.tdwg.org/list/#dwc_reproductiveCondition)&lt;/li&gt; &lt;/ul&gt;</dcterms:bibliographicCitation>
+	<dcterms:bibliographicCitation>Darwin Core Maintenance Group (2021). Reproductive Condition Vocabulary List of Terms. Biodiversity Information Standards (TDWG). (https://dwc.tdwg.org/list/#dwc_reproductiveCondition)</dcterms:bibliographicCitation>
 	<rdfs:comment>Propose amendment to the value of dwc:preparations using bdq:sourceAuthority.</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/282</skos:historyNote>
 	<rdfs:label>AMENDMENT_REPRODUCTIVECONDITION_STANDARDIZED</rdfs:label>
@@ -295,7 +295,7 @@
 	<rdfs:label>Specification for: AMENDMENT_REPRODUCTIVECONDITION_STANDARDIZED</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:754a3159-15e0-4aa0-a0b0-7243b06042b3">
+<rdf:Description rdf:about="urn:uuid:f0717b2a-e312-41f5-b8ee-3a4b30e2e286">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Argument"/>
 	<hasArgumentValue xmlns="https://rs.tdwg.org/bdqffdq/terms/">Darwin Core reproductionCondition</hasArgumentValue>
 	<rdfs:label>Default value for bdq:sourceAuthority:"Darwin Core reproductionCondition"</rdfs:label>
@@ -305,12 +305,12 @@
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Parameter"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:754a3159-15e0-4aa0-a0b0-7243b06042b3">
+<rdf:Description rdf:about="urn:uuid:f0717b2a-e312-41f5-b8ee-3a4b30e2e286">
 	<hasParameter xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdq:sourceAuthority"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:42c9c755-2f1a-4d56-b6f8-889c148049d6">
-	<hasArgument xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:754a3159-15e0-4aa0-a0b0-7243b06042b3"/>
+	<hasArgument xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:f0717b2a-e312-41f5-b8ee-3a4b30e2e286"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:9116d7d1-5a12-4d72-aa79-82d377b4a6f6">
@@ -328,7 +328,7 @@
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Conformance"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:f5ddb8c1-da15-409d-8ea4-43b15c9539e8">
+<rdf:Description rdf:about="urn:uuid:a3464b19-94c7-41cc-b2ce-ad742994a819">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<prefLabel xmlns="skos:">Information Element ActedUpon dwc:preparations</prefLabel>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/preparations"/>
@@ -336,7 +336,7 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/8d0cbfee-4524-4da3-83d4-bebc4c4f7cd2-2024-09-05">
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:f5ddb8c1-da15-409d-8ea4-43b15c9539e8"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:a3464b19-94c7-41cc-b2ce-ad742994a819"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-05</dcterms:issued>
 	<dcterms:bibliographicCitation>Darwin Core Maintenance Group (2021). Preparations Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). (http://rs.tdwg.org/dwc/terms/preparations)</dcterms:bibliographicCitation>
 	<rdfs:comment>Propose amendment to the value of dwc:preparations using bdq:sourceAuthority.</rdfs:comment>
@@ -362,7 +362,7 @@
 	<rdfs:label>Specification for: AMENDMENT_PREPARATIONS_STANDARDIZED</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:530a90c1-2bec-4217-8e47-46501b3b9d2a">
+<rdf:Description rdf:about="urn:uuid:df6ae408-430d-4116-a150-6409214647e3">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Argument"/>
 	<hasArgumentValue xmlns="https://rs.tdwg.org/bdqffdq/terms/">DEFAULT</hasArgumentValue>
 	<rdfs:label>Default value for bdq:sourceAuthority</rdfs:label>
@@ -370,7 +370,7 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:9a034f38-7d86-463e-86c1-b5b3a482dbf5">
-	<hasArgument xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:530a90c1-2bec-4217-8e47-46501b3b9d2a"/>
+	<hasArgument xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:df6ae408-430d-4116-a150-6409214647e3"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:b339c443-d4cf-4bf3-b0cc-6b4c0d019de3">
@@ -388,7 +388,7 @@
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Conformance"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:94d0bbe2-548c-49dc-97be-cfe912d3c189">
+<rdf:Description rdf:about="urn:uuid:e460d9b4-f332-4ba3-8886-4e6f4ad64c59">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<prefLabel xmlns="skos:">Information Element ActedUpon dcterms:modified</prefLabel>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://purl.org/dc/terms/modified"/>
@@ -396,7 +396,7 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/dfb4a260-4cbc-45b2-bf86-28be49c2cceb-2025-03-06">
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:94d0bbe2-548c-49dc-97be-cfe912d3c189"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:e460d9b4-f332-4ba3-8886-4e6f4ad64c59"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>ISO 8601-1: Latest version (currently 2019(en)) Date and time — Representations for information interchange — Part 1: Basic rules (https://www.iso.org/obp/ui/#iso:std:iso:8601:-1:ed-1:v1:en); Wikipedia (2020). ISO 8601 (https://en.wikipedia.org/wiki/ISO_8601); Library of Congress (2019). Extended Date/Time Format (EDTF) (https://www.loc.gov/standards/datetime/)</dcterms:bibliographicCitation>
 	<rdfs:comment>Propose amendment of the value of dcterms:modified to a valid ISO date and time.</rdfs:comment>
@@ -437,7 +437,7 @@
 	<skos:note>This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Conformance"/>
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:Standard"/>
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:94d0bbe2-548c-49dc-97be-cfe912d3c189"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:e460d9b4-f332-4ba3-8886-4e6f4ad64c59"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>Dublin Core Metadata Terms (https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#modified) </dcterms:bibliographicCitation>
 	<rdfs:comment>Does the value of dcterms:modified a valid ISO date?</rdfs:comment>
@@ -480,7 +480,7 @@
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Conformance"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:0fbdf18c-e476-4b36-9786-8e01a527cf8a">
+<rdf:Description rdf:about="urn:uuid:2d53b6fb-b835-41ef-b732-66b549ea2428">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<prefLabel xmlns="skos:">Information Element ActedUpon dwc:lifeStage</prefLabel>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/lifeStage"/>
@@ -488,7 +488,7 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/07e79079-42e9-48e9-826e-4874ae34bce3-2025-03-06">
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:0fbdf18c-e476-4b36-9786-8e01a527cf8a"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:2d53b6fb-b835-41ef-b732-66b549ea2428"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Propose amendment to the value of dwc:lifeStage using bdq:sourceAuthority.</rdfs:comment>
@@ -516,7 +516,7 @@
 	<rdfs:label>Specification for: AMENDMENT_LIFESTAGE_STANDARDIZED</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:eb45d956-ab29-4659-b98e-e38dc097f92a">
+<rdf:Description rdf:about="urn:uuid:909b9430-b3c9-4282-8522-f54355b5b04a">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Argument"/>
 	<hasArgumentValue xmlns="https://rs.tdwg.org/bdqffdq/terms/">GBIF LifeStage Vocabulary</hasArgumentValue>
 	<rdfs:label>Default value for bdq:sourceAuthority:"GBIF LifeStage Vocabulary"</rdfs:label>
@@ -524,7 +524,7 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:1246660d-5aa0-4f17-b930-67e419a43f3c">
-	<hasArgument xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:eb45d956-ab29-4659-b98e-e38dc097f92a"/>
+	<hasArgument xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:909b9430-b3c9-4282-8522-f54355b5b04a"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:26d3a3d9-5c2f-451e-b26b-6e2bd983326b">
@@ -540,7 +540,7 @@
 	<skos:note>This test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters. This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Conformance"/>
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:Standard"/>
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:0fbdf18c-e476-4b36-9786-8e01a527cf8a"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:2d53b6fb-b835-41ef-b732-66b549ea2428"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Does the value of dwc:lifeStage occur in bdq:sourceAuthority?</rdfs:comment>
@@ -567,7 +567,7 @@
 	<rdfs:label>Specification for: VALIDATION_LIFESTAGE_STANDARD</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:917338d5-a2ad-4f27-b5ff-b52aa371e69f">
+<rdf:Description rdf:about="urn:uuid:658a7277-cdf6-4a46-b492-4715f6a18cf7">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Argument"/>
 	<hasArgumentValue xmlns="https://rs.tdwg.org/bdqffdq/terms/">GBIF LifeStage Vocabulary</hasArgumentValue>
 	<rdfs:label>Default value for bdq:sourceAuthority:"GBIF LifeStage Vocabulary"</rdfs:label>
@@ -575,7 +575,7 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:d023b94e-a82c-4c26-8ceb-3e34e4364b25">
-	<hasArgument xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:917338d5-a2ad-4f27-b5ff-b52aa371e69f"/>
+	<hasArgument xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:658a7277-cdf6-4a46-b492-4715f6a18cf7"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:69fc0414-461e-47a8-af63-8645a9103409">
@@ -745,7 +745,7 @@
 	<skos:note>The vast majority of current biodiversity data will be expected to not have a value in dwc:reproductiveCondition. This test could have value in determining 'quality' for a specific set of data quality needs/use cases.</skos:note>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Completeness"/>
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:9de85bfc-6815-4742-b997-901fce0ee3c4"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:a2182a66-8560-4620-8db7-55cb42675a55"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:reproductiveCondition?</rdfs:comment>
@@ -755,7 +755,7 @@
 	<skos:prefLabel>Missing prefLabel for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:36c6ab6b-a97f-4cf8-a707-179cea6895be">
+<rdf:Description rdf:about="urn:uuid:f04eed86-ceb5-4c02-a8f4-08868caa8b20">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
 	<skos:note>Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</skos:note>
 	<skos:note>Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1393</skos:note>
@@ -772,7 +772,7 @@
 	<rdfs:label>Specification for: VALIDATION_REPRODUCTIVECONDITION_NOTEMPTY</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:36c6ab6b-a97f-4cf8-a707-179cea6895be">
+<rdf:Description rdf:about="urn:uuid:f04eed86-ceb5-4c02-a8f4-08868caa8b20">
 	<hasSpecification xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:null"/>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<rdfs:label>ValidationMethod: VALIDATION_REPRODUCTIVECONDITION_NOTEMPTY with Specification for: VALIDATION_REPRODUCTIVECONDITION_NOTEMPTY</rdfs:label>
@@ -788,7 +788,7 @@
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:65bf491a-aa67-4fb1-b977-e17cf59a9594">
+<rdf:Description rdf:about="urn:uuid:8dce1897-126c-4473-835c-25e7488565bf">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<prefLabel xmlns="skos:">Information Element ActedUpon dwc:relationshipOfResource</prefLabel>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/relationshipOfResource"/>
@@ -796,7 +796,7 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/cd281f7e-13b3-43ae-8677-de06ffa70bb4-2025-03-06">
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:65bf491a-aa67-4fb1-b977-e17cf59a9594"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:8dce1897-126c-4473-835c-25e7488565bf"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:relationshipOfResource?</rdfs:comment>
@@ -837,7 +837,7 @@
 	<skos:note>Widely applicable for Occurrences vouchered by MateralSamples, but not generally applicable to observational Occurrence data.  This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists. See comments.</skos:note>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Completeness"/>
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:f5ddb8c1-da15-409d-8ea4-43b15c9539e8"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:a3464b19-94c7-41cc-b2ce-ad742994a819"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:preparations?</rdfs:comment>
@@ -880,7 +880,7 @@
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:60b611f1-c5fd-491e-aa07-ef71c26c09a2">
+<rdf:Description rdf:about="urn:uuid:c2a373eb-07b8-4ea4-82b6-09afd5d6b130">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<prefLabel xmlns="skos:">Information Element ActedUpon dwc:municipality</prefLabel>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/municipality"/>
@@ -888,7 +888,7 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/87537c73-4f70-4938-8114-7f5b149ed03c-2024-09-05">
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:60b611f1-c5fd-491e-aa07-ef71c26c09a2"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:c2a373eb-07b8-4ea4-82b6-09afd5d6b130"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-05</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:municipality?</rdfs:comment>
@@ -929,7 +929,7 @@
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:4ad525bd-0dfc-4e6e-9148-0a8e496fba5d">
+<rdf:Description rdf:about="urn:uuid:eeae5d16-e527-4bdc-a44e-82b7b54e9b77">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<prefLabel xmlns="skos:">Information Element ActedUpon dwc:georeferenceVerificationStatus</prefLabel>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/georeferenceVerificationStatus"/>
@@ -937,7 +937,7 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/53e02d0c-93bd-444f-aa7f-68832bdd3143-2024-09-05">
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:4ad525bd-0dfc-4e6e-9148-0a8e496fba5d"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:eeae5d16-e527-4bdc-a44e-82b7b54e9b77"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-05</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:georeferenceVerificationStatus?</rdfs:comment>
@@ -978,7 +978,7 @@
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:8c583771-7dea-4240-9f70-f82df076331d">
+<rdf:Description rdf:about="urn:uuid:075f2b0f-0f9b-4a4a-88fe-7084c09d9069">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<prefLabel xmlns="skos:">Information Element ActedUpon dwc:georeferencedDate</prefLabel>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/georeferencedDate"/>
@@ -986,7 +986,7 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/e1765718-0964-4b40-9451-a66b23ca6268-2024-09-05">
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:8c583771-7dea-4240-9f70-f82df076331d"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:075f2b0f-0f9b-4a4a-88fe-7084c09d9069"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-05</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:georeferencedDate?</rdfs:comment>
@@ -1027,7 +1027,7 @@
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:ed13a633-8cca-4d9b-b6f2-ba1fce092a04">
+<rdf:Description rdf:about="urn:uuid:e88d12a3-ec8f-4322-969e-3e55679adb3f">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<prefLabel xmlns="skos:">Information Element ActedUpon dwc:eventTime</prefLabel>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/eventTime"/>
@@ -1035,7 +1035,7 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/aaebbde6-a101-4665-ba1e-6d4d8c561a31-2025-03-06">
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:ed13a633-8cca-4d9b-b6f2-ba1fce092a04"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:e88d12a3-ec8f-4322-969e-3e55679adb3f"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:eventTime?</rdfs:comment>
@@ -1078,7 +1078,7 @@
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:ec942b8d-f147-49b5-8899-aa1c5380338b">
+<rdf:Description rdf:about="urn:uuid:bcb4982d-d508-4c38-b26b-d6f83a2b0083">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<prefLabel xmlns="skos:">Information Element ActedUpon dwc:vernacularName</prefLabel>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/vernacularName"/>
@@ -1086,7 +1086,7 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/eb9b70c7-9cf6-42ea-a708-5de527211df4-2025-03-06">
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:ec942b8d-f147-49b5-8899-aa1c5380338b"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:bcb4982d-d508-4c38-b26b-d6f83a2b0083"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:vernacularName?</rdfs:comment>
@@ -1129,7 +1129,7 @@
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:ca854c42-f44e-43eb-90dc-209d3e669bde">
+<rdf:Description rdf:about="urn:uuid:0adf79b6-f5a9-464c-8d12-af6ce0e15243">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<prefLabel xmlns="skos:">Information Element ActedUpon dwc:verbatimSRS</prefLabel>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/verbatimSRS"/>
@@ -1137,7 +1137,7 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/59d9dc66-8d86-4b8e-8f26-54b542d6c375-2024-09-05">
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:ca854c42-f44e-43eb-90dc-209d3e669bde"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:0adf79b6-f5a9-464c-8d12-af6ce0e15243"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-05</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:verbatimSRS?</rdfs:comment>
@@ -1178,7 +1178,7 @@
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:de80b8eb-2a46-46e7-8029-876b39b78f3b">
+<rdf:Description rdf:about="urn:uuid:a6f8d900-4b19-4b26-8523-29b7c99cef4e">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<prefLabel xmlns="skos:">Information Element ActedUpon dwc:verbatimLongitude</prefLabel>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/verbatimLongitude"/>
@@ -1186,7 +1186,7 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/6e62e8e3-cffd-4afe-957c-5b200a6eaa4e-2024-09-05">
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:de80b8eb-2a46-46e7-8029-876b39b78f3b"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:a6f8d900-4b19-4b26-8523-29b7c99cef4e"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-05</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:verbatimLongitude?</rdfs:comment>
@@ -1227,7 +1227,7 @@
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:b82385ad-6ea7-4040-961b-a4b00620f76a">
+<rdf:Description rdf:about="urn:uuid:d15dcdb5-e667-459b-a9e7-79ea0c9f9527">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<prefLabel xmlns="skos:">Information Element ActedUpon dwc:verbatimLatitude</prefLabel>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/verbatimLatitude"/>
@@ -1235,7 +1235,7 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/286fa10a-dab0-4f73-8732-76e379c932df-2024-09-05">
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:b82385ad-6ea7-4040-961b-a4b00620f76a"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:d15dcdb5-e667-459b-a9e7-79ea0c9f9527"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-05</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:verbatimLatitude?</rdfs:comment>
@@ -1276,7 +1276,7 @@
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:67148f62-ca46-46d7-8828-11347767f8e7">
+<rdf:Description rdf:about="urn:uuid:e9898e89-8510-4aaf-86b9-d3d455c1e407">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<prefLabel xmlns="skos:">Information Element ActedUpon dwc:verbatimEventDate</prefLabel>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/verbatimEventDate"/>
@@ -1284,7 +1284,7 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/9bc8b105-902a-489c-aae8-3b7075e1b948-2025-03-06">
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:67148f62-ca46-46d7-8828-11347767f8e7"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:e9898e89-8510-4aaf-86b9-d3d455c1e407"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:verbatimEventDate?</rdfs:comment>
@@ -1327,7 +1327,7 @@
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:cf9f182d-180f-4a53-8b47-95ad5f827e0e">
+<rdf:Description rdf:about="urn:uuid:d15d7744-d2a5-4ad3-82b0-1f7819f49cee">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<prefLabel xmlns="skos:">Information Element ActedUpon dwc:verbatimElevation</prefLabel>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/verbatimElevation"/>
@@ -1335,7 +1335,7 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/c9fc7ef1-7714-4dfa-8dea-589d5b43f432-2024-09-05">
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:cf9f182d-180f-4a53-8b47-95ad5f827e0e"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:d15d7744-d2a5-4ad3-82b0-1f7819f49cee"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-05</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:verbatimElevation?</rdfs:comment>
@@ -1376,7 +1376,7 @@
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:bdac5bd1-0866-427e-bdfe-eb2b3abf1572">
+<rdf:Description rdf:about="urn:uuid:34efa0fe-5ac9-4155-8ad3-a1723bd54d1f">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<prefLabel xmlns="skos:">Information Element ActedUpon dwc:verbatimDepth</prefLabel>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/verbatimDepth"/>
@@ -1384,7 +1384,7 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/402c0a7c-2fbd-45d4-b644-61a47a887779-2024-09-05">
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:bdac5bd1-0866-427e-bdfe-eb2b3abf1572"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:34efa0fe-5ac9-4155-8ad3-a1723bd54d1f"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-05</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:verbatimDepth?</rdfs:comment>
@@ -1425,7 +1425,7 @@
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:03114ebd-a6fa-449a-a551-0e076b2fe1c3">
+<rdf:Description rdf:about="urn:uuid:44965376-d3af-4463-84c7-7c2ea263d821">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<prefLabel xmlns="skos:">Information Element ActedUpon dwc:verbatimCoordinates</prefLabel>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/verbatimCoordinates"/>
@@ -1433,7 +1433,7 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/533118dd-eb18-4339-b2f8-0b7f71801305-2024-09-05">
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:03114ebd-a6fa-449a-a551-0e076b2fe1c3"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:44965376-d3af-4463-84c7-7c2ea263d821"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-05</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:verbatimCoordinates?</rdfs:comment>
@@ -1574,7 +1574,7 @@
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:d01067c3-c529-40fe-8059-b4114ca99930">
+<rdf:Description rdf:about="urn:uuid:8db54f94-3a5a-4e88-989e-42f894f91ef7">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<prefLabel xmlns="skos:">Information Element ActedUpon dwc:recordNumber</prefLabel>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/recordNumber"/>
@@ -1582,7 +1582,7 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/3bd2477c-6497-43b0-94e6-b811eed1b1cb-2025-03-06">
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:d01067c3-c529-40fe-8059-b4114ca99930"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:8db54f94-3a5a-4e88-989e-42f894f91ef7"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:recordNumber?</rdfs:comment>
@@ -1625,7 +1625,7 @@
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:c1ca869d-6edf-45f6-a850-5ede84b8a8ac">
+<rdf:Description rdf:about="urn:uuid:718e4fb9-a22a-4bb8-90c6-4f9d9bf289bc">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<prefLabel xmlns="skos:">Information Element ActedUpon dwc:recordedBy</prefLabel>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/recordedBy"/>
@@ -1633,7 +1633,7 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/986ad95d-ffa1-4e3b-a6cb-ed943c87be0d-2025-03-06">
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:c1ca869d-6edf-45f6-a850-5ede84b8a8ac"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:718e4fb9-a22a-4bb8-90c6-4f9d9bf289bc"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:recordedBy?</rdfs:comment>
@@ -1727,7 +1727,7 @@
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:e48bc9df-59a1-48cd-9187-a3e37144c9d4">
+<rdf:Description rdf:about="urn:uuid:d91926b7-5ad7-4812-ad75-dae55433cd1d">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<prefLabel xmlns="skos:">Information Element ActedUpon dwc:minimumElevation</prefLabel>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/minimumElevation"/>
@@ -1735,7 +1735,7 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/b8500bf0-273b-45c0-91a5-ebade24f1b04-2024-09-05">
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:e48bc9df-59a1-48cd-9187-a3e37144c9d4"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:d91926b7-5ad7-4812-ad75-dae55433cd1d"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-05</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:minimumElevation?</rdfs:comment>
@@ -1776,7 +1776,7 @@
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:19c08d34-4e24-4446-a0fa-48620c36f18b">
+<rdf:Description rdf:about="urn:uuid:1612f850-2ce3-4c46-b3c7-8cfee2ea002b">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<prefLabel xmlns="skos:">Information Element ActedUpon dwc:minimumDepth</prefLabel>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/minimumDepth"/>
@@ -1784,7 +1784,7 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/e10777f1-ca8c-4129-ab2a-7c81856a4ba5-2024-09-05">
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:19c08d34-4e24-4446-a0fa-48620c36f18b"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:1612f850-2ce3-4c46-b3c7-8cfee2ea002b"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-05</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:minimumDepth?</rdfs:comment>
@@ -1825,7 +1825,7 @@
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:4679c02a-a7b6-48db-a2f7-d5faef5c465b">
+<rdf:Description rdf:about="urn:uuid:e39eee01-4b19-437b-bc1c-8e97555c11f7">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<prefLabel xmlns="skos:">Information Element ActedUpon dwc:maximumElevation</prefLabel>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/maximumElevation"/>
@@ -1833,7 +1833,7 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/653d907a-af86-4c1d-9156-0e86f79cbd2a-2024-09-05">
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:4679c02a-a7b6-48db-a2f7-d5faef5c465b"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:e39eee01-4b19-437b-bc1c-8e97555c11f7"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-05</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:maximumElevation?</rdfs:comment>
@@ -1874,7 +1874,7 @@
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:720f8b94-d6c2-43be-a762-0a29372a3dc5">
+<rdf:Description rdf:about="urn:uuid:7b1fa9d1-c0fe-4e26-89e3-3c370657d5cc">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<prefLabel xmlns="skos:">Information Element ActedUpon dwc:maximumDepth</prefLabel>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/maximumDepth"/>
@@ -1882,7 +1882,7 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/7236d80f-53cc-4871-9359-fbd468808136-2024-09-05">
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:720f8b94-d6c2-43be-a762-0a29372a3dc5"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:7b1fa9d1-c0fe-4e26-89e3-3c370657d5cc"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-05</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:maximumDepth?</rdfs:comment>
@@ -1923,7 +1923,7 @@
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:31a2fa51-d796-4dcd-a403-3e08b18d0430">
+<rdf:Description rdf:about="urn:uuid:3c6af335-0e83-416e-a25c-8e292964155f">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<prefLabel xmlns="skos:">Information Element ActedUpon dwc:locality</prefLabel>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/locality"/>
@@ -1931,7 +1931,7 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/83282c46-0bd8-4f6c-a015-40506b0d5dc5-2024-09-05">
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:31a2fa51-d796-4dcd-a403-3e08b18d0430"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:3c6af335-0e83-416e-a25c-8e292964155f"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-05</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:locality?</rdfs:comment>
@@ -1970,7 +1970,7 @@
 	<skos:note>This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Completeness"/>
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:0fbdf18c-e476-4b36-9786-8e01a527cf8a"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:2d53b6fb-b835-41ef-b732-66b549ea2428"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:lifeStage?</rdfs:comment>
@@ -2013,7 +2013,7 @@
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:23cfce81-c184-4c01-8d16-a84414b6384b">
+<rdf:Description rdf:about="urn:uuid:a57f210d-ec43-4472-ab06-3f77c720cd64">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<prefLabel xmlns="skos:">Information Element ActedUpon dwc:islandGroup</prefLabel>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/islandGroup"/>
@@ -2021,7 +2021,7 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/0b90c114-5ff1-4024-a174-b866b7ca6b81-2024-09-05">
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:23cfce81-c184-4c01-8d16-a84414b6384b"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:a57f210d-ec43-4472-ab06-3f77c720cd64"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-05</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:islandGroup?</rdfs:comment>
@@ -2062,7 +2062,7 @@
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:00a6c82c-87e7-4252-beeb-04124d3594c2">
+<rdf:Description rdf:about="urn:uuid:a7cd987f-c213-471a-99ba-d23bf5860171">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<prefLabel xmlns="skos:">Information Element ActedUpon dwc:island</prefLabel>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/island"/>
@@ -2070,7 +2070,7 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/4d72c8d0-c785-4e8a-aea5-08c0a9f2d88b-2024-09-05">
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:00a6c82c-87e7-4252-beeb-04124d3594c2"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:a7cd987f-c213-471a-99ba-d23bf5860171"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-05</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:island?</rdfs:comment>
@@ -2109,7 +2109,7 @@
 	<skos:note>This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Completeness"/>
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:25276f2d-a2d5-45b7-96ec-b55eec94171f"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:ab069837-d67e-4e25-bc85-df0fbfe2ed7d"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:individualCount?</rdfs:comment>
@@ -2152,7 +2152,7 @@
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:b3e41770-f39c-4201-aa07-3ceb209e23cd">
+<rdf:Description rdf:about="urn:uuid:5fdb11f6-e7f9-4383-b5b7-5b864309c754">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<prefLabel xmlns="skos:">Information Element ActedUpon dwc:higherGeography</prefLabel>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/higherGeography"/>
@@ -2160,7 +2160,7 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/cfa2c8fd-e778-4f2b-8c16-2221d46e0006-2024-09-05">
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:b3e41770-f39c-4201-aa07-3ceb209e23cd"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:5fdb11f6-e7f9-4383-b5b7-5b864309c754"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-05</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:higherGeography?</rdfs:comment>
@@ -2201,7 +2201,7 @@
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:ce0046a3-946e-4fa0-abf6-585740e23535">
+<rdf:Description rdf:about="urn:uuid:5745fb3c-3175-465c-8d1e-0a1e1effcc65">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<prefLabel xmlns="skos:">Information Element ActedUpon dwc:higherClassification</prefLabel>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/higherClassification"/>
@@ -2209,7 +2209,7 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/72ed16f1-0587-4afd-a9fc-602c2f3f1975-2025-03-07">
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:ce0046a3-946e-4fa0-abf6-585740e23535"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:5745fb3c-3175-465c-8d1e-0a1e1effcc65"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:higherClassification?</rdfs:comment>
@@ -2249,7 +2249,7 @@
 	<skos:note>This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists. This test illustrates the need for a new set of tests (based on the TG2 template) that examine the quality of the Darwin Core geospatial values in a record.</skos:note>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Completeness"/>
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:4ad525bd-0dfc-4e6e-9148-0a8e496fba5d"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:eeae5d16-e527-4bdc-a44e-82b7b54e9b77"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-05</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:georeferenceVerificationStatus?</rdfs:comment>
@@ -2288,7 +2288,7 @@
 	<skos:note>This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists.</skos:note>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Completeness"/>
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:8c583771-7dea-4240-9f70-f82df076331d"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:075f2b0f-0f9b-4a4a-88fe-7084c09d9069"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-05</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:georeferencedDate?</rdfs:comment>
@@ -2329,7 +2329,7 @@
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:7407dbc1-0f6a-4fbf-8747-47b1e0575f9c">
+<rdf:Description rdf:about="urn:uuid:0931bd83-919d-4bbc-acba-009598d3adae">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<prefLabel xmlns="skos:">Information Element ActedUpon dwc:footprintWKT</prefLabel>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/footprintWKT"/>
@@ -2337,7 +2337,7 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/c6b705fc-7cf8-4af1-88ab-7a38d85f7109-2024-09-05">
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:7407dbc1-0f6a-4fbf-8747-47b1e0575f9c"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:0931bd83-919d-4bbc-acba-009598d3adae"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-05</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:footprintWKT?</rdfs:comment>
@@ -2378,7 +2378,7 @@
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:365c3d77-851b-40d6-8093-9b65760343a6">
+<rdf:Description rdf:about="urn:uuid:cd597d54-05ac-4401-9fa1-f5da32c28c32">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<prefLabel xmlns="skos:">Information Element ActedUpon dwc:disposition</prefLabel>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/disposition"/>
@@ -2386,7 +2386,7 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/b4c17611-2703-474f-b46a-93b08ecfee16-2025-03-06">
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:365c3d77-851b-40d6-8093-9b65760343a6"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:cd597d54-05ac-4401-9fa1-f5da32c28c32"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:disposition?</rdfs:comment>
@@ -2427,7 +2427,7 @@
 	<skos:note>This bdq:Supplementary test is not regarded as CORE (cf. bdq:CORE) because of one or more of the reasons: not being widely applicable; not informative; not straightforward to implement or likely to return a high percentage of either bdq:COMPLIANT or bdq:NOT_COMPLIANT results (cf bdq:Response.result). A Supplementary test may be implemented as CORE when a suitable use case exists. See Issue comments below.</skos:note>
 	<hasDataQualityDimension xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqdim:Completeness"/>
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:94d0bbe2-548c-49dc-97be-cfe912d3c189"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:e460d9b4-f332-4ba3-8886-4e6f4ad64c59"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dcterms:modified?</rdfs:comment>
@@ -2470,7 +2470,7 @@
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:7726b4e8-3e5c-4d46-9ecd-a8fcb6850e02">
+<rdf:Description rdf:about="urn:uuid:0639a3d0-69d8-457a-ac4d-182fc930793f">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<prefLabel xmlns="skos:">Information Element ActedUpon dwc:coordinatePrecision</prefLabel>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/coordinatePrecision"/>
@@ -2478,7 +2478,7 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/77b380ce-7c9d-498f-a2b5-3ac5c5bf23f7-2024-09-05">
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:7726b4e8-3e5c-4d46-9ecd-a8fcb6850e02"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:0639a3d0-69d8-457a-ac4d-182fc930793f"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-05</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:coordinatePrecision?</rdfs:comment>
@@ -2519,7 +2519,7 @@
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:040ef934-a9ef-4fde-8e8d-990a3b29d68a">
+<rdf:Description rdf:about="urn:uuid:8698db1e-dd0c-4c59-b90e-a3d23e73f694">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<prefLabel xmlns="skos:">Information Element ActedUpon dwc:continent, dwc:waterbody</prefLabel>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/continent"/>
@@ -2528,7 +2528,7 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/181c51da-d5d8-41e9-94f9-1387fa5a5a2b-2024-09-05">
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:040ef934-a9ef-4fde-8e8d-990a3b29d68a"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:8698db1e-dd0c-4c59-b90e-a3d23e73f694"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-05</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:continent?</rdfs:comment>
@@ -2569,7 +2569,7 @@
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:28774c6c-e887-4f11-9216-84c01e03adb0">
+<rdf:Description rdf:about="urn:uuid:af445d47-51f5-4b6d-a56d-19d3c964fcb5">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<prefLabel xmlns="skos:">Information Element ActedUpon dwc:specificEpithet</prefLabel>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/specificEpithet"/>
@@ -2577,7 +2577,7 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/cdb37443-292e-49b6-a012-4718f0d7ba64-2025-03-07">
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:28774c6c-e887-4f11-9216-84c01e03adb0"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:af445d47-51f5-4b6d-a56d-19d3c964fcb5"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:specificEpithet?</rdfs:comment>
@@ -2620,7 +2620,7 @@
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:NotEmpty"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:237b4727-bac1-4350-9440-ac8aa5ecbb8a">
+<rdf:Description rdf:about="urn:uuid:66b50951-7df6-4783-a32a-b7b3ba0078f9">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<prefLabel xmlns="skos:">Information Element ActedUpon dwc:infraspecificEpithet</prefLabel>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/infraspecificEpithet"/>
@@ -2628,7 +2628,7 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/77c6fde2-c3ca-4ad3-b2f2-3b81bba9a673-2025-03-07">
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:237b4727-bac1-4350-9440-ac8aa5ecbb8a"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:66b50951-7df6-4783-a32a-b7b3ba0078f9"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:infraspecificEpithet?</rdfs:comment>
@@ -2682,7 +2682,7 @@
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:8fe0d938-7aa4-40a2-87b7-5bd7e9727e95"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:30f9c7bf-4e05-46c6-81dc-9279cd352c4f">
+<rdf:Description rdf:about="urn:uuid:b92ba270-2a85-45de-9c19-c82953bae70b">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Consulted"/>
 </rdf:Description>
 
@@ -2690,14 +2690,14 @@
 	<rdfs:subClassOf rdf:resource="https://rs.tdwg.org/bdqffdq/terms/InformationElement"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:30f9c7bf-4e05-46c6-81dc-9279cd352c4f">
+<rdf:Description rdf:about="urn:uuid:b92ba270-2a85-45de-9c19-c82953bae70b">
 	<prefLabel xmlns="skos:">Information Element Consulted dwc:taxonRank</prefLabel>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/taxonRank"/>
 	<rdfs:label>Information Element Consulted dwc:taxonRank</rdfs:label>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/19bbd107-6b14-4c82-8d3e-f7a2a67df309-2025-03-07">
-	<hasConsultedInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:30f9c7bf-4e05-46c6-81dc-9279cd352c4f"/>
+	<hasConsultedInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:b92ba270-2a85-45de-9c19-c82953bae70b"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:phylum?</rdfs:comment>
@@ -2749,7 +2749,7 @@
 
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/d1c40fc8-d8ad-4148-82e0-b4b7ead70051-2025-03-07">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:b1b7b96f-79c7-414e-998f-4e31c23b6dec"/>
-	<hasConsultedInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:30f9c7bf-4e05-46c6-81dc-9279cd352c4f"/>
+	<hasConsultedInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:b92ba270-2a85-45de-9c19-c82953bae70b"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:order?</rdfs:comment>
@@ -2801,7 +2801,7 @@
 
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/5bfa043c-1e19-4224-8d55-b568ced347c2-2025-03-07">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:c3987992-230d-4c2e-816c-5b72d98218eb"/>
-	<hasConsultedInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:30f9c7bf-4e05-46c6-81dc-9279cd352c4f"/>
+	<hasConsultedInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:b92ba270-2a85-45de-9c19-c82953bae70b"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:family?</rdfs:comment>
@@ -2853,7 +2853,7 @@
 
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/d02c1ffd-af28-49bd-9c9c-e8e23a8b7258-2025-03-07">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:6417eb42-b07d-4b42-9a6a-13c592aeb5ea"/>
-	<hasConsultedInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:30f9c7bf-4e05-46c6-81dc-9279cd352c4f"/>
+	<hasConsultedInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:b92ba270-2a85-45de-9c19-c82953bae70b"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:genus?</rdfs:comment>
@@ -2905,7 +2905,7 @@
 
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/b854b179-3572-48b6-aab2-879e3172fd7d-2025-03-07">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:5b155af3-2ce0-432e-ab10-2e21d6ccd32a"/>
-	<hasConsultedInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:30f9c7bf-4e05-46c6-81dc-9279cd352c4f"/>
+	<hasConsultedInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:b92ba270-2a85-45de-9c19-c82953bae70b"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is there a value in dwc:class?</rdfs:comment>
@@ -2956,7 +2956,7 @@
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:Found"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:18bbb29e-f60e-42fb-bff0-1e46fa41d3c7">
+<rdf:Description rdf:about="urn:uuid:f766325e-a7c6-4172-9969-eec918789af4">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<prefLabel xmlns="skos:">Information Element ActedUpon dwc:subtribe</prefLabel>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/subtribe"/>
@@ -2964,7 +2964,7 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/4527c47e-61d9-4abb-af3e-f2999191be17-2025-03-07">
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:18bbb29e-f60e-42fb-bff0-1e46fa41d3c7"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:f766325e-a7c6-4172-9969-eec918789af4"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>GBIF Secretariat (2019). GBIF Backbone Taxonomy. Checklist dataset (https://doi.org/10.15468/39omei)</dcterms:bibliographicCitation>
 	<rdfs:comment>Does the value of dwc:subtribe occur at rank of Subtribe in bdq:sourceAuthority?</rdfs:comment>
@@ -2991,7 +2991,7 @@
 	<rdfs:label>Specification for: VALIDATION_SUBTRIBE_FOUND</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:1817fb04-02c4-4bf1-8fb0-86adb23fc3a9">
+<rdf:Description rdf:about="urn:uuid:48962819-2a40-4bfc-bc18-bf4118060f92">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Argument"/>
 	<hasArgumentValue xmlns="https://rs.tdwg.org/bdqffdq/terms/">GBIF Backbone Taxonomy</hasArgumentValue>
 	<rdfs:label>Default value for bdq:sourceAuthority:"GBIF Backbone Taxonomy"</rdfs:label>
@@ -2999,7 +2999,7 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:0e153bbb-d135-42be-aeb7-a742ea76fd5e">
-	<hasArgument xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:1817fb04-02c4-4bf1-8fb0-86adb23fc3a9"/>
+	<hasArgument xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:48962819-2a40-4bfc-bc18-bf4118060f92"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:00609b55-b2b9-4b01-9b8d-9ec8c3d60b24">
@@ -3017,7 +3017,7 @@
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:Found"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:9290e799-3b0f-4415-9fa3-b6bc08636fad">
+<rdf:Description rdf:about="urn:uuid:aa0d386c-41ab-4934-b0ca-06c7622f1915">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<prefLabel xmlns="skos:">Information Element ActedUpon dwc:tribe</prefLabel>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/tribe"/>
@@ -3025,7 +3025,7 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/8c15f351-26d5-4edd-b38e-07541dc64fd0-2025-03-07">
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:9290e799-3b0f-4415-9fa3-b6bc08636fad"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:aa0d386c-41ab-4934-b0ca-06c7622f1915"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>GBIF Secretariat (2019). GBIF Backbone Taxonomy. Checklist dataset (https://doi.org/10.15468/39omei)</dcterms:bibliographicCitation>
 	<rdfs:comment>Does the value of dwc:tribe occur at rank of Tribe in bdq:sourceAuthority?</rdfs:comment>
@@ -3052,7 +3052,7 @@
 	<rdfs:label>Specification for: VALIDATION_TRIBE_FOUND</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:baae4057-fd9b-4bab-8cc2-1ef12e11775f">
+<rdf:Description rdf:about="urn:uuid:c8c44292-5c4b-4176-827b-65848ab122ce">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Argument"/>
 	<hasArgumentValue xmlns="https://rs.tdwg.org/bdqffdq/terms/">GBIF Backbone Taxonomy</hasArgumentValue>
 	<rdfs:label>Default value for bdq:sourceAuthority:"GBIF Backbone Taxonomy"</rdfs:label>
@@ -3060,7 +3060,7 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:a11ce583-71b3-4562-94ea-8b0b67b72f2f">
-	<hasArgument xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:baae4057-fd9b-4bab-8cc2-1ef12e11775f"/>
+	<hasArgument xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:c8c44292-5c4b-4176-827b-65848ab122ce"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:8a7e5ab4-b7fc-4d1e-b8d2-ddba7bfe7b14">
@@ -3078,7 +3078,7 @@
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:Found"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:f0b2eeeb-b8a5-48e6-a7de-6c311a04c435">
+<rdf:Description rdf:about="urn:uuid:f1e8d4a2-fa59-4e29-8549-ff960cf299e1">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<prefLabel xmlns="skos:">Information Element ActedUpon dwc:superfamily</prefLabel>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/superfamily"/>
@@ -3086,7 +3086,7 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/2a45e0e9-446c-429f-992d-c3ec1d29eebb-2025-03-07">
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:f0b2eeeb-b8a5-48e6-a7de-6c311a04c435"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:f1e8d4a2-fa59-4e29-8549-ff960cf299e1"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
 	<dcterms:bibliographicCitation>GBIF Secretariat (2019). GBIF Backbone Taxonomy. Checklist dataset (https://doi.org/10.15468/39omei)</dcterms:bibliographicCitation>
 	<rdfs:comment>Does the value of dwc:superfamily occur at rank of Superfamily in bdq:sourceAuthority?</rdfs:comment>
@@ -3113,7 +3113,7 @@
 	<rdfs:label>Specification for: VALIDATION_SUPERFAMILY_FOUND</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:bd335552-6113-4d61-b629-3f639696702b">
+<rdf:Description rdf:about="urn:uuid:9c94a2ae-1d2a-4ea2-a114-d6cf9edcc05e">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Argument"/>
 	<hasArgumentValue xmlns="https://rs.tdwg.org/bdqffdq/terms/">GBIF Backbone Taxonomy</hasArgumentValue>
 	<rdfs:label>Default value for bdq:sourceAuthority:"GBIF Backbone Taxonomy"</rdfs:label>
@@ -3121,7 +3121,7 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:13f9168b-5bab-470f-a351-aefac6ec1e29">
-	<hasArgument xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:bd335552-6113-4d61-b629-3f639696702b"/>
+	<hasArgument xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:9c94a2ae-1d2a-4ea2-a114-d6cf9edcc05e"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:f4ad8cd3-fa4c-4c9d-a82e-8cd611d67e41">
@@ -3166,7 +3166,7 @@
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/e654f562-44f8-43fd-983b-2aaba4c6dda9-2025-03-05">
 	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:63ee37ac-d0ae-4578-82f8-7a956d92baf0"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-05</dcterms:issued>
-	<dcterms:bibliographicCitation>Chapman, AD and Wieczorek, JR (2020). Georeferencing Best Practices. Copenhagen: GBIF Secretariat (https://doi.org/10.15468/doc-gg7h-s853)&lt;/li&gt; &lt;li&gt;VertNet (2019). DwCVocabs (https://github.com/VertNet/DwCVocabs/blob/master/vocabs/Geography.csv)&lt;/li&gt; &lt;li&gt;Getty Research Institute (2017). Getty Thesaurus of Geographic Names Online (https://www.getty.edu/research/tools/vocabularies/tgn/index.html); ISO (n.dat.) ISO 3166 Country Codes. https://www.iso.org/iso-3166-country-codes.html; ISO (n.dat) 3166-1 alpha-2. https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2</dcterms:bibliographicCitation>
+	<dcterms:bibliographicCitation>Chapman, AD and Wieczorek, JR (2020). Georeferencing Best Practices. Copenhagen: GBIF Secretariat (https://doi.org/10.15468/doc-gg7h-s853); VertNet (2019). DwCVocabs (https://github.com/VertNet/DwCVocabs/blob/master/vocabs/Geography.csv); Getty Research Institute (2017). Getty Thesaurus of Geographic Names Online (https://www.getty.edu/research/tools/vocabularies/tgn/index.html); ISO (n.dat.) ISO 3166 Country Codes. https://www.iso.org/iso-3166-country-codes.html; ISO (n.dat) 3166-1 alpha-2. https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2</dcterms:bibliographicCitation>
 	<rdfs:comment>Are the combination of the values of dwc:country, dwc:stateProvince consistent with the values in the bdq:sourceAuthority?</rdfs:comment>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/200</skos:historyNote>
 	<rdfs:label>VALIDATION_COUNTRYSTATEPROVINCE_CONSISTENT</rdfs:label>
@@ -3191,7 +3191,7 @@
 	<rdfs:label>Specification for: VALIDATION_COUNTRYSTATEPROVINCE_CONSISTENT</rdfs:label>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:8111c686-1c5b-4ffd-b8b6-8d005c44f1a9">
+<rdf:Description rdf:about="urn:uuid:7c3b3ff6-5f29-4901-9468-432ef7f8339d">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Argument"/>
 	<hasArgumentValue xmlns="https://rs.tdwg.org/bdqffdq/terms/">The Getty Thesaurus of Geographic Names (TGN)</hasArgumentValue>
 	<rdfs:label>Default value for bdq:sourceAuthority:"The Getty Thesaurus of Geographic Names (TGN)"</rdfs:label>
@@ -3199,7 +3199,7 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:39cbb213-b33a-4e45-bfa4-967ee277455b">
-	<hasArgument xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:8111c686-1c5b-4ffd-b8b6-8d005c44f1a9"/>
+	<hasArgument xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:7c3b3ff6-5f29-4901-9468-432ef7f8339d"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:f93ba397-7bdf-4cb0-836b-467bc2a8a9f8">
@@ -3226,7 +3226,7 @@
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:Complete"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:d205027a-bb1c-41ea-a94c-075416a3f061">
+<rdf:Description rdf:about="urn:uuid:7fa1783f-ea9a-4ee5-bf0f-f108f37ccbac">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<prefLabel xmlns="skos:">Information Element ActedUpon dwc:taxonID</prefLabel>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/taxonID"/>
@@ -3234,7 +3234,7 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/a82c7e3a-3a50-4438-906c-6d0fefa9e984-2025-03-06">
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:d205027a-bb1c-41ea-a94c-075416a3f061"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:7fa1783f-ea9a-4ee5-bf0f-f108f37ccbac"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation>GBIF Secretariat (2019). GBIF Backbone Taxonomy. Checklist dataset: https://doi.org/10.15468/39omei; LSID (Life Science Identifier): https://en.wikipedia.org/wiki/LSID; URN (Uniform Resource Name): https://en.wikipedia.org/wiki/Uniform_Resource_Name; URI (Uniform Resource Identifier): https://en.wikipedia.org/wiki/Uniform_Resource_Identifier; NID (Namespace Identifier): A NID and NSS make up a URN, https://en.wikipedia.org/wiki/Uniform_Resource_Name; NSS (Namespace-Specific String): https://en.wikipedia.org/wiki/Uniform_Resource_Name</dcterms:bibliographicCitation>
 	<rdfs:comment>Does the value of dwc:taxonID contain a complete identifier?</rdfs:comment>
@@ -3285,7 +3285,7 @@
 	<hasCriterion xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="bdqcrit:Consistent"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:1be996a9-2bbe-471c-a4f5-c8e98536b1b3">
+<rdf:Description rdf:about="urn:uuid:aa5000cd-9349-4390-9710-3b06d47e2cb4">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<prefLabel xmlns="skos:">Information Element ActedUpon dwc:eventDate, dwc:dateIdentified</prefLabel>
 	<composedOf xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="http://rs.tdwg.org/dwc/terms/eventDate"/>
@@ -3294,7 +3294,7 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/391ca46d-3842-4a18-970c-0434cbc17f07-2025-03-06">
-	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:1be996a9-2bbe-471c-a4f5-c8e98536b1b3"/>
+	<hasActedUponInformationElement xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:resource="urn:uuid:aa5000cd-9349-4390-9710-3b06d47e2cb4"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
 	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
 	<rdfs:comment>Is the date of identification equal to, or later than the dwc:eventDate?</rdfs:comment>
