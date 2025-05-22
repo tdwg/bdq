@@ -15,7 +15,7 @@ The BDQ standard is complex. There are requirements about which documents must e
 ## 🚀 Choose Your Review Path
 
 ### A. Introduction
-First, read [**The Biodiversity Data Quality (BDQ) Standard**](./index.md). This is the introduction and landing page for the standard (see section '2.2.1 Standards landing page' in the [TDWG Standards Documentation Specification](https://github.com/tdwg/vocab/blob/master/sds/documentation-specification.md)). Then, you can approach the remainder of the review either from the practical perspective (the Tests) or from the theoretical one (the Framework). The landing pages provide overviews of the subjects they cover and refer to more detailed information in associated documents. The details of the individual terms are provided in the corresponding term list documents. The controlled vocabulary term list documents also act as the landing pages for those vocabularies.
+First, read [**The Biodiversity Data Quality (BDQ) Standard**](./index.md) page. This is the introduction and landing page for the standard (see section '2.2.1 Standards landing page' in the [TDWG Standards Documentation Specification](https://github.com/tdwg/vocab/blob/master/sds/documentation-specification.md)). Then, you can approach the remainder of the review either from the practical perspective (the Tests) or from the theoretical one (the Framework). The landing pages provide overviews of the subjects they cover and refer to more detailed information in associated documents. The details of the individual terms are provided in the corresponding term list documents. The controlled vocabulary term list documents also act as the landing pages for those vocabularies.
 
 ### B. Documents emphasizing BDQ in Practice (the Tests)
 Within the practical perspective there are two basic audiences, Users and Implementers, with fundamental interests in common. For either of these audiences, the [**BDQ Tests Quick Reference Guide**](docs/terms/bdqtest/index.md) is good continuation following the introductory [**The Biodiversity Data Quality (BDQ) Standard**](./index.md). The Quick Reference Guide is an informative go-to reference with only the essential information about the BDQ Tests. Also of common interest to Users and Implementers is the in-depth introduction and required landing page for the Tests vocabulary - [**BDQ Tests and Assertions**](docs/bdqtest/index.md). After all of this orientational material, there are guides specifically targeting Users and Implementers:
@@ -53,6 +53,8 @@ The standard is a result of a long history of development. The rationale for how
 
 ## 📥 How to Provide Feedback
 
-To be determined.
+To be determined. 
+
+Note that as a draft standard, this document includes the expected identifiers for entities that will only exist after the standard has been ratified and published on the TDWG infrastructure.  In consequence, you will encounter broken links in the form 'https://rs.tdwg.org/bdq/terms/bdqtest:...', which will not work until the standard is published.  The not yet working links are provided to indicate the expected form of the identifiers, and to provide a consistent format for the documentation.
 
 🙏 We appreciate your contributions to ensuring the clarity, relevance, and usability of the BDQ Standard!

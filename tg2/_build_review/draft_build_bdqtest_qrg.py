@@ -263,7 +263,7 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 				outputUseCaseIndex.write(f'{test}\n')
 				outputUseCaseIndex.write(f'- Term IRI: https://rs.tdwg.org/bdqtest/terms/{usecaseDict[useCase][test]}\n')
 				outputUseCaseIndex.write(f'- [Quick Reference Guide](index.md#{test})\n')
-				outputUseCaseIndex.write(f'- [Term List](../../list/bdqtext/index.md#bdqtest_{usecaseDict[useCase][test]})\n\n')
+				outputUseCaseIndex.write(f'- [Term List](../../list/bdqtest/index.md#bdqtest_{usecaseDict[useCase][test]})\n\n')
 			outputUseCaseIndex.write("\n\n")
 
 		# Index by information element
@@ -284,7 +284,7 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 				outputInformationElementIndex.write(f'{test}\n')
 				outputInformationElementIndex.write(f'- Term IRI: https://rs.tdwg.org/bdqtest/terms/{informationelementDict[ie][test]}\n')
 				outputInformationElementIndex.write(f'- [Quick Reference Guide](index.md#{test})\n')
-				outputInformationElementIndex.write(f'- [Term List](../../list/bdqtext/index.md#bdqtest_{informationelementDict[ie][test]})\n\n')
+				outputInformationElementIndex.write(f'- [Term List](../../list/bdqtest/index.md#bdqtest_{informationelementDict[ie][test]})\n\n')
 			outputInformationElementIndex.write("\n")
 
 		# Index by information element class
@@ -305,7 +305,7 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 				outputIEClassIndex.write(f'{test}\n')
 				outputIEClassIndex.write(f'- Term IRI: https://rs.tdwg.org/bdqtest/terms/{informationelementDict[ie][test]}\n')
 				outputIEClassIndex.write(f'- [Quick Reference Guide](index.md#{test})\n')
-				outputIEClassIndex.write(f'- [Term List](../../list/bdqtext/index.md#bdqtest_{informationelementDict[ie][test]})\n\n')
+				outputIEClassIndex.write(f'- [Term List](../../list/bdqtest/index.md#bdqtest_{informationelementDict[ie][test]})\n\n')
 			outputIEClassIndex.write("\n")
 
 		# Index by dimension
@@ -327,7 +327,7 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 				outputDimensionIndex.write(f'{test}\n')
 				outputDimensionIndex.write(f'- Term IRI: https://rs.tdwg.org/bdqtest/terms/{dimensionDict[dim][test]}\n')
 				outputDimensionIndex.write(f'- [Quick Reference Guide](index.md#{test})\n')
-				outputDimensionIndex.write(f'- [Term List](../../list/bdqtext/index.md#bdqtest_{dimensionDict[dim][test]})\n\n')
+				outputDimensionIndex.write(f'- [Term List](../../list/bdqtest/index.md#bdqtest_{dimensionDict[dim][test]})\n\n')
 			outputDimensionIndex.write("\n")
 
 		# Index for multirecord measures
@@ -337,7 +337,7 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 			outputMultiRecordMeasureIndex.write(f'{row["Label"]}\n')
 			outputMultiRecordMeasureIndex.write(f'- Term IRI: https://rs.tdwg.org/bdqtest/terms/{row["term_localName"]}\n')
 			outputMultiRecordMeasureIndex.write(f'- [Quick Reference Guide](index.md#{row["Label"]})\n')
-			outputMultiRecordMeasureIndex.write(f'- [Term List](../../list/bdqtext/index.md#bdqtest_{row["term_localName"]})\n\n')
+			outputMultiRecordMeasureIndex.write(f'- [Term List](../../list/bdqtest/index.md#bdqtest_{row["term_localName"]})\n\n')
 
 		#
 		# Base alphabetical index.
