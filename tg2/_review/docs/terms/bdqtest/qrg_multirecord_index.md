@@ -1,4 +1,6 @@
-# BDQ Multi Record Measure Test Index
+# BDQ Multi Record Measure Test Index (non-normative)
+
+This document is non-normative and part of the [BDQ Tests Quick Reference Guide](index.md).
 MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_NOTEMPTY
 - Term IRI: https://rs.tdwg.org/bdqtest/terms/b60c8c58-0137-4b6a-97e9-57d8ca5cf248
 - [Quick Reference Guide](index.md#MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_NOTEMPTY)

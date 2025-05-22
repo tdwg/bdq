@@ -3,7 +3,7 @@
 Title
 : Terms Used in the BDQ Tests Quick Reference Guide
 
-Part of the [BDQ Tests Quick Reference Guide](index.md)
+This document is non-normative and part of the [BDQ Tests Quick Reference Guide](index.md)
 
 <!-- This is the list of descriptions of bdqtest terms included in the Quick Reference Guide. -->
 
