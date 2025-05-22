@@ -1,4 +1,6 @@
 "Argument","Label","hasArgumentValue","Specification"
+"7e3ff1b8-4e97-4edb-8d8c-33f7b5a45bea"."""Default value for bdq:defaultOccurrenceStatus:""present""""","""present"""","9c150f88-1fc4-47b7-b826-f6357c104946"
+"858875d3-1ac0-42ec-8f8b-f3e7f6469786","""Default value for bdq:sourceAuthority:""Regex present/absent""""","""Regex present/absent""","fae50773-a832-4e44-87fe-d66a1332c3e7"
 "e35dd18a-9c69-4aef-9b70-3d36d7eb6bd4","""Default value for bdq:sourceAuthority:""GBIF Sex Vocabulary""""","""GBIF Sex Vocabulary""","08a4abb0-8977-4805-a4a1-c1a96b532322"
 "bd91e45d-691a-4d7e-9917-7b6231c05c43","""Default value for bdq:sourceAuthority:""GBIF Backbone Taxonomy""""","""GBIF Backbone Taxonomy""","1193230f-f188-4917-92da-bba3390ed3fa"
 "6304e753-423d-4188-bba4-0301c1a01769","""Default value for bdq:sourceAuthority:""GBIF Backbone Taxonomy""""","""GBIF Backbone Taxonomy""","15bbda19-dd18-471a-a5c3-56c7e543012f"
