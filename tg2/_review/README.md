@@ -55,6 +55,6 @@ The standard is a result of a long history of development. The rationale for how
 
 To be determined. 
 
-Note that as a draft standard, this document includes the expected identifiers for entities that will only exist after the standard has been ratified and published on the TDWG infrastructure.  In consequence, you will encounter broken links in the form 'https://rs.tdwg.org/bdq/terms/bdqtest:...', which will not work until the standard is published.  The not yet working links are provided to indicate the expected form of the identifiers, and to provide a consistent format for the documentation.
+Note that as a draft standard, this document includes the expected identifiers for entities that will only exist after the standard has been ratified and published on the TDWG infrastructure.  In consequence, you will encounter broken links in the form 'https://rs.tdwg.org/bdqtest/terms/...', which will not work until the standard is published.  The not yet working links are provided to indicate the expected form of the identifiers, and to provide a consistent format for the documentation.
 
 🙏 We appreciate your contributions to ensuring the clarity, relevance, and usability of the BDQ Standard!
