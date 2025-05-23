@@ -95,7 +95,7 @@ Sections may be either normative (defines what is required to comply with the st
 
 Any sentence or phrase beginning with "For example" or "e.g.", whether in a normative section or a non-normative section, is non-normative.
 
-Section [1.9 Key to Vocabulary Terms (normative)](#19-key-to-vocabulary-terms-normative) identifies which values in Section 4 are normative and which are non-normative.
+Section [1.10 Key to Vocabulary Terms (normative)](#110-key-to-vocabulary-terms-normative) identifies which values in Section 4 are normative and which are non-normative.
 
 ### 1.6 RFC 2119 key words (normative)
 
