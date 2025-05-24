@@ -467,8 +467,6 @@ The Fitness For Use Framework ontology is framed with limited constraints and no
 * ⋀ and (logical conjunction)
 * ∈ is a member of
 
-TODO: Update Domain/instance letters to reflect class name changes.
-
 ### 3.4 Derived Concepts (normative)
 #### 3.4.1 General (normative)
 ##### 3.4.1.1 Validation (normative)
