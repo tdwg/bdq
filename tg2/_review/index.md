@@ -142,10 +142,10 @@ The landing pages provide overviews of the subjects they cover and refer to more
 **The Biodiversity Data Quality (BDQ) Standard** - Overview of the BDQ standard. This page.<br>
 [**BDQ Tests and Assertions**](docs/bdqtest/index.md) - Overview of the Tests.<br>
 [**Fitness For Use Ontology**](docs/bdqffdq/index.md) - Overview of the Fitness for Use Framework.<br>
-[**BDQ Controlled Vocabulary List of Terms (bdq:)**](https://bdq.tdwg.org/bdq)<br>
-[**Data Quality Criterion Controlled Vocabulary List of Terms (bdqcrit:)**](https://bdq.tdwg.org/bdqcrit)<br>
-[**Data Quality Dimension Controlled Vocabulary List of Terms (bdqdim:)**](https://bdq.tdwg.org/bdqdim)<br>
-[**Data Quality Enhancement Controlled Vocabulary List of Terms (bdqenh:)**](https://bdq.tdwg.org/bdqenh)<br>
+[**BDQ Controlled Vocabulary List of Terms (bdq:)**](docs/list/bdq/index.md) (will be: https://bdq.tdwg.org/bdq)<br>
+[**Data Quality Criterion Controlled Vocabulary List of Terms (bdqcrit:)**](docs/list/bdqcrit/index.md) (will be: bdq.tdwg.org/bdqcrit)<br>
+[**Data Quality Dimension Controlled Vocabulary List of Terms (bdqdim:)**](docs/list/bdqdim/index.md) (will be: bdq.tdwg.org/bdqdim)<br>
+[**Data Quality Enhancement Controlled Vocabulary List of Terms (bdqenh:)**](docs/list/bdqdim/index.md) (will be: bdq.tdwg.org/bdqenh)<br>
 
 ### 2.3 Guides (non-normative)
 The Guides are explanatory documents targeting particular perspectives on the standard for particular audiences.<br>
