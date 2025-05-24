@@ -70,7 +70,8 @@ The set of information most relevant to the BDQ Tests can be found in the follow
 - **BDQ Tests and Assertions** - Defines how each Test is modeled using standard vocabulary terms and how it should behave under various conditions. This document.
 - [**BDQ Tests Quick Reference Guide**](../../terms/bdqtest/index.md) - Provides a concise, easy-to-read reference about the BDQ Tests.
 - [**BDQ Tests and Assertions List of Terms**](../..list/bdqtest/index.md) - Provides the complete normative definitions of the BDQ Tests.
-  - [**CSV list of BDQ Tests**](../../../vocabulary/bdqtest_terms.csv) 
+  - [**CSV list of BDQ Tests**](../../../dist/bdqtest_singlerecord_tests_current.csv) - A convenience CSV file listing single record Tests.
+  - [**CSV term-version file of BDQ Tests**](../../../vocabulary/bdqtest_term_versions.csv) 
   - [**RDF/Turtle Serialization of BDQ Tests**](../../../dist/bdqtest.ttl) 
   - [**RDF/XML Serialization of BDQ Tests**](../../../dist/bdqtest.xml) 
 - [**BDQ User's Guide**](../../guide/users/index.md) - For anyone interested in how to use the BDQ Tests in practice.
