@@ -795,7 +795,7 @@ These tags are retained as the "GitHub Issue Labels" (a `skos:note` on each `Met
 | Validation | A label to indicate a Test of Type Validation that describes a run of a Test for validity against a set of Criteria. | See [bdqffdq:Validation](../list/bdqffdq/index.md#Validation) |
 | VOCABULARY | A label to indicate that a Test requires a controlled Vocabulary. | |
 
-Supplementary Tests have been exported to a CSV list and have RDF representations have been generated with the same tools as the BDQ Tests, these files are in the [tg2/supplementary/](../../../supplementary) directory.
+Supplementary Tests have been exported to a CSV list and have RDF representations have been generated with the same tools as the BDQ Tests, these files are in the [tg2/supplementary/](https://github.com/tdwg/bdq/tg2/supplementary/) directory.
 
 The tag 'NEEDS WORK' was repeatedly added and removed to issues and was a valuable support for the evaluation of Tests in repeated feedback loops that included: Frame the description of a Test, independently produce validation data and an `Implementation`, run the `Implementation` against the validation data, evaluate cases where the expectations in the validation data differ from the Test results (which could be a defect in the `Implementation`, in the validation data, or a problem in the Test `Specification`), discuss as a group, make changes as needed, and repeat.
 
