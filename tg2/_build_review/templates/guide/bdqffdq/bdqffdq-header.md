@@ -65,7 +65,7 @@ Some familiarity with RDF/OWL ontologies is assumed.
 
 ### 1.3 Associated Documents (non-normative)
 
-For the list and links to all associated documents see [The Biodiversity Data Quality (BDQ) Standard](../../..index.md).
+For the list and links to all associated documents see [The Biodiversity Data Quality (BDQ) Standard](../../../index.md).
 
 Information about the Fitness For Use Framework ontology, its usage, and its extensions can be found in the following subset of BDQ resources:
 
