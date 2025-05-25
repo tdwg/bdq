@@ -194,7 +194,7 @@ So, a value of `dwc:minimumDepthInMeters` of 2000m would be NOT_COMPLIANT in thi
 
 ## 3 Context for Quality, Uses and Purposes (non-normative)
 
-Data do not have quality in the abstract; they only have quality with respect to a particular `Use Case`. The Fitness for Use Framework (see [Fitness For Use Framework Ontology Guide](../../bdqffdq/index.md)) used in the BDQ standard describes uses for data as `Use Cases`, and expects that Tests are run in suites that form `Policy` for data quality with respect to those `Use Cases`. That is, sets of Tests are expected to be run together in order to assess the quality of data for some specified use, and both Tests and the reports of their results should be interpreted in the context of that use.
+Data do not have quality in the abstract; they only have quality with respect to a particular use. The Fitness for Use Framework (see [Fitness For Use Framework Ontology Guide](../../bdqffdq/index.md)) used in the BDQ standard describes uses for data as `Use Cases`, and expects that Tests are run in suites that form `Policy` for data quality with respect to those `Use Cases`. That is, sets of Tests are expected to be run together in order to assess the quality of data for some specified use, and both Tests and the reports of their results should be interpreted in the context of that use.
 
 Tests for data quality may serve two purposes: Quality Control and Quality Assurance. 
 
