@@ -175,12 +175,12 @@ Supplemental Information includes the rationale for, the history of, and the cha
 ### 2.6 Distribution Files (non-normative)
 
 #### 2.6.1 Tests (non-normative)
-The Test definitions are provided in various serializations. Of these, the bdqtest_term_versions.csv is the canonical archive of all Tests versions, both recommended and historical. The documentation about the details of Tests for this standard are generated from this file.<br>
+The Test definitions are provided in various serializations. Of these, the bdqtest_term_versions.csv is the canonical archive of all Tests versions, both recommended and historical. The documentation about the details of Tests for this standard are generated from this file.  CSV files listing just the current test versions are also provided,<br>
 
 [**Biodiversity Data Quality Fitness for Use Framework (Ontology)**](vocabulary/bdqffdq.owl)<br>
 [**CSV List of all Tests (bdqtest_term_versions.csv)**](vocabulary/bdqtest_term_versions.csv)<br>
-[**CSV List of Single Record Tests**](dist/bdqtest_singlerecord_tests_current.csv)<br>
-[**CSV List of Multi Record Tests**](dist/bdqtest_multirecord_tests_current.csv)<br>
+[**CSV List of (current) Single Record Tests**](dist/bdqtest_singlerecord_tests_current.csv)<br>
+[**CSV List of (current) Multi Record Tests**](dist/bdqtest_multirecord_tests_current.csv)<br>
 [**Tests in RDF/XML**](dist/bdqtest.xml)<br>
 [**Tests in Turtle**](dist/bdqtest.ttl)<br>
 [**Tests in JSON-LD**](dist/bdqtest.json)
