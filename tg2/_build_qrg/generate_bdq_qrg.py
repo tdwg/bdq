@@ -123,7 +123,24 @@ def build_term_section(term, columns):
             continue
         if col not in ['term_iri', 'iri']:
             value = linkify_urls(value)
-        rows += f'<tr><td class="label">{col}</td><td>{value}</td></tr>'
+        ## not all column headers use the labels shown in the QRG key, so we need to map them
+        # important two for inteligibility are:
+        # prefLabel -> Preferred Label
+        # iri -> Term Version IRI
+        termLabel = col
+        if termLabel == 'iri':
+           termLabel = 'Term Version IRI'
+        if termLabel == 'prefLabel':
+           termLabel = 'Preferred Label'
+        if termLabel == 'ExpectedResponse':
+           termLabel = 'Expected Response'
+        if termLabel == 'AuthoritiesDefaults':
+           termLabel = 'Source Authorities/Defaults'
+        if termLabel == 'InformationElement:ActedUpon':
+           termLabel = 'Information Elements Acted Upon'
+        if termLabel == 'InformationElement:Consulted':
+           termLabel = 'Information Elements Consulted'
+        rows += f'<tr><td class="termLabel">{termLabel}</td><td>{value}</td></tr>'
     return f'<section class="term-section" id="{term_id}">\n<div class="field-header-wrapper"><h3>{label}</h3></div>\n<table class="term-table">{rows}</table>\n</section>'
 
 def build_field_index(terms):
@@ -143,6 +160,9 @@ def generate_qrg():
         raise ValueError("Missing 'organized_in' column in source CSV.")
 
     columns = [col for col in df.columns if col.strip() and col != 'organized_in']
+    # filter columns to one of quick reference guide key terms: Label, Preferred Label, Term Version IRI,Description, Expected Response, InformationElements ActedUpon, InformationElements Consulted, Parameters,SourceAuthorities/Defaults, Notes, Examples, Type.
+    # "Label","issueNumber","historyNoteUrl","iri","term_iri","issued","term_localName","DateLastUpdated","prefLabel","IE Class","InformationElement:ActedUpon","InformationElement:Consulted","Parameters","ExpectedResponse","SpecificationGuid","MethodGuid","AuthoritiesDefaults","Description","Type","Resource Type","Dimension","Criterion","Enhancement","Examples","Source","References","Example Implementations (Mechanisms)","Link to Specification Source Code","Notes","IssueState","IssueLabels","UseCases","ArgumentGuids","status","flags","organized_in"
+    columns = [col for col in columns if col in ['Label', 'prefLabel', 'iri', 'Description', 'ExpectedResponse', 'InformationElement:ActedUpon', 'InformationElement:Consulted', 'Parameters', 'AuthoritiesDefaults', 'Notes', 'Examples', 'Type', 'UseCases','Resource Type']]
     ordered_classes = ['Validation', 'Issue', 'Measure', 'Amendment']
     grouped = dict(tuple(df.groupby('organized_in')))
     grouped = {cls: grouped[cls] for cls in ordered_classes if cls in grouped}
