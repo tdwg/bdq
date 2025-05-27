@@ -51,6 +51,9 @@ The Tests and the Framework are linked with each other via **foundational vocabu
 The standard is a result of a long history of development. The rationale for how the Tests and standard are defined, challenges encountered, and specifications for tests not included in the release of the standard are captured in the document
 - [BDQ Supplemental Information](docs/supplement/index.md)
 
+### F. Alternative presentation
+All the human readable documents in this submission for review are presented in a consistent form as markdown files.  We anticipate that the final standard may be published with different renderings, and we have created a draft of a possible html rendering of the quick reference guide [**BDQ Tests Quick Reference Guide, alternative rendering**](https://tdwg.github.io/bdq/terms/bdqtest/) that is styled in a manner similar to the Darwin Core Quick Reference guide, and is easier to navigate that the markdown rendering.  The content is the same, but the layout and styling is different.  This alternative rendering is not part of the review, but is provided to give an idea of how the final standard could be presented.
+
 ## 📥 How to Provide Feedback
 
 To be determined. 
