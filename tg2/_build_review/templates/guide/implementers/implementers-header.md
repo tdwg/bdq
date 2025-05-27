@@ -48,9 +48,9 @@
 
 ### 1.1 Purpose (non-normative)
 
-The purpose of this document is to provide `Implementation` guidance for software developers and systems architects building tools or workflows that conform to the BDQ standard. It explains how to interpret and operationalize the BDQ Test `Specifications`, including the semantics of inputs and outputs, expected behaviors, parameter handling, dependency resolution, and result reporting.
+The purpose of this document is to provide implementation guidance for software developers and systems architects building tools or workflows that conform to the BDQ standard. It explains how to interpret and operationalize the BDQ Test `Specifications`, including the semantics of inputs and outputs, expected behaviors, parameter handling, dependency resolution, and result reporting.
 
-This guide supports consistent, standards-compliant `Implementations` across various environments by clarifying technical aspects of the Tests, detailing extension points, and describing validation procedures using shared datasets. It includes both normative content necessary for `Implementation` conformance and non-normative advice for implementers seeking efficiency, clarity, and compatibility.
+This guide supports consistent, standards-compliant implementations across various environments by clarifying technical aspects of the Tests, detailing extension points, and describing validation procedures using shared datasets. It includes both normative content necessary for `Implementation` conformance and non-normative advice for implementers seeking efficiency, clarity, and compatibility.
 
 ### 1.2 Audience (non-normative)
 
@@ -72,7 +72,7 @@ The set of information most relevant to implementers of Biodiversity Data Qualit
 - [**BDQ Tests and Assertions**](../../bdqtest/index.md) - Defines how each Test is modeled using standard vocabulary terms and how it should behave under various conditions.
 - [**BDQ Tests Quick Reference Guide**](../../terms/bdqtest/index.md) - Provides a concise, easy-to-read reference about the BDQ Tests.
 - [**BDQ User's Guide**](../users/index.md) - For anyone interested in how to use the BDQ Tests in practice.
-- **BDQ Implementer's Guide** - For anyone interested in the technical `Implementation` of the BDQ Tests. This document.
+- **BDQ Implementer's Guide** - For anyone interested in the technical implementation of the BDQ Tests. This document.
 - [**BDQ Supplemental Information**](../../supplement/index.md) - This supplementary information may be relevant for curators, aggregators, data publishers, data analysts, programmers/developers and other practitioners who wish to understand, evaluate and/or improve the quality of biodiversity data within their domain. This document provides some key developmental issues in the building of the BDQ standard that are not covered in other documents within the standard. This document may also be useful to those seeking to evaluate their current Tests or generate additional Tests for their domain.
 - [**Current Single Record Tests**](../../../dist/bdqtest_singlerecord_tests_current.csv) - Convenient list of BDQ `Single Record` Tests.
 - [**Current Multi Record Tests**](../../../dist/bdqtest_multirecord_tests_current.csv) - Convenient list of BDQ `Multi Record` Tests.
@@ -153,7 +153,7 @@ For CSV data, a column is either there or not in a dataset, but in an RDF repres
 
 #### 2.2.2 Example Implementation of a Function to Assess Empty (non-normative)
 
-Here is a Java function to evaluate Empty, using trim() to exclude U+0020 (space), U+000A (LF), U+000D (CR) and the other non-printing characters in the unicode range U+0000 to U+0020, and also evaluating null as Empty. Test `Implementations` can reuse a function like this for any Test that evaluates `bdq:Empty` in its `Specification`.
+Here is a Java function to evaluate Empty, using trim() to exclude U+0020 (space), U+000A (LF), U+000D (CR) and the other non-printing characters in the unicode range U+0000 to U+0020, and also evaluating null as Empty. Test implementations can reuse a function like this for any Test that evaluates `bdq:Empty` in its `Specification`.
 
     public boolean isEmpty(String aString)  {
         boolean result = true;
@@ -163,7 +163,7 @@ Here is a Java function to evaluate Empty, using trim() to exclude U+0020 (space
         return result;
     }
 
-Here is a MariaDB `Implementation` of a lightweight version of [VALIDATION_KINGDOM_NOTEMPTY](../../terms/bdqtest/index.md#VALIDATION_KINGDOM_NOTEMPTY), which provides a list of NOT_COMPLIANT records for some flat taxonomy table in a database, again handing off the responsibility for evaluation of non-printing characters to the trim function available in the language.
+Here is a MariaDB implementation of a lightweight version of [VALIDATION_KINGDOM_NOTEMPTY](../../terms/bdqtest/index.md#VALIDATION_KINGDOM_NOTEMPTY), which provides a list of NOT_COMPLIANT records for some flat taxonomy table in a database, again handing off the responsibility for evaluation of non-printing characters to the trim function available in the language.
 
     SELECT taxonomy_id, kingdom,
          'VALIDATION_KINGDOM_NOTEMPTY' as test, 'NOT_COMPLIANT' as response_result, 'RUN_HAS_RESULT' as response_status,
@@ -351,7 +351,7 @@ This library also includes a method whose signature does not include the paramet
 
 In the `Specifications` the phrase "interpreted as" SHOULD BE interpreted by Implementers to mean: 
 
-1. where Darwin Core (Wieczorek et al. 2012) data are serialized as strings, but the Test refers to data as numeric or other non-string data type, can the string value be cast into the target data type in the language of `Implementation` (e.g., "1" as the integer 1), **or**
+1. where Darwin Core (Wieczorek et al. 2012) data are serialized as strings, but the Test refers to data as numeric or other non-string data type, can the string value be cast into the target data type in the language of implementation (e.g., "1" as the integer 1), **or**
 2. matching a representation of a value unambiguously onto a controlled vocabulary (e.g., ‘WGS84’ to ’EPSG:4326’), **or**
 3. interpreting the representation of a numeric value (e.g., a Roman numeral) as a number (e.g., an integer).
 
@@ -441,7 +441,7 @@ Many Tests specify `bdqffdq:Parameters` that are intended to change the behavior
 
 A Parameterized Test will behave differently on the same data when using different `Parameter` values. 
 
-Implementers SHOULD only present non-default `Parameter` values to a Test `Implementation` if needed for local `Data Quality Needs`. When a Test is executed with non-default `Arguments` specified for `Parameters`, consumers of `Assertions` and Data Quality Reports resulting from such MUST be able to tell that non-default `Arguments` were used, and what the non-default values were.
+Implementers SHOULD only present non-default `Parameter` values to a Test implementation if needed for local `Data Quality Needs`. When a Test is executed with non-default `Arguments` specified for `Parameters`, consumers of `Assertions` and Data Quality Reports resulting from such MUST be able to tell that non-default `Arguments` were used, and what the non-default values were.
 
 When a Test is Parameterized, and a value other than the default value is used for some `Parameter`, reports SHOULD identify the Tests to you using at least the `Label` (`rdfs:label`) for the Test class, in combination with the `Parameter`, and the value of the argument that replaced the `Parameter` in this specific case.
 
@@ -455,7 +455,7 @@ Implementers MUST NOT produce Test `Implementations` identified by the same iden
 
 ### 6.2 Execution Process Agnostic (non-normative)
 
-The Test descriptions in the BDQ standard are designed to be able to be used anywhere in the life cycle of biodiversity data, and are designed to be independent of the environment in which the Tests are run. Test `Implementations` may be run within a framework that evaluates entire records one at at time, behind user interface elements that evaluate single `Information Elements` one at a time, on streams of data within workflows, on distinct values aggregated within streams of data within workflows, and more.
+The Test descriptions in the BDQ standard are designed to be able to be used anywhere in the life cycle of biodiversity data, and are designed to be independent of the environment in which the Tests are run. Test implementations may be run within a framework that evaluates entire records one at at time, behind user interface elements that evaluate single `Information Elements` one at a time, on streams of data within workflows, on distinct values aggregated within streams of data within workflows, and more.
 
 Tests may be run
 
@@ -549,11 +549,11 @@ One complexity introduced by the abstraction of Tests into APIs that take [Darwi
 
     public Response validationEnddayofyearInrange(String startDayOfYear, String eventDate) 
 
-If an `Implementation` framework calls this method, reversing the binding of `dwc:startDayOfYear` and `dwc:eventDate`, for example: 
+If an implementation framework calls this method, reversing the binding of `dwc:startDayOfYear` and `dwc:eventDate`, for example: 
 
     Response endDayTestResponse = validationEnddayofyearInrange(eventDate, startDayOfYear);
 
-the Test will not return the desired result, even if the `Implementation` is correct. Thus correct matching of input terms to the `Implementation` of each Test is critical. 
+the Test will not return the desired result, even if the implementation is correct. Thus correct matching of input terms to the `Implementation` of each Test is critical. 
 
 Multiple approaches are possible to correctly match input Darwin Core terms onto method signatures for methods that implement Tests. 
 
@@ -577,7 +577,7 @@ In Java, annotating method parameters and using reflection to bind between the e
 
 An execution framework can use reflection to determine, from the annotations on the parameter, which Darwin Core term to bind to which parameter.
 
-Additional metadata can be added in Java annotations. In the following, again from the FilteredPush `event_date_qc` (Morris & Lowery 2025) library, annotations enable an `Implementation` framework to look up a Test `Implementation` by the Test GUID, and can provide metadata about the Test to users. For maintenance, annotations can be used to determine if an `Implementation` is up to date with the latest version of a Test `Specification`.
+Additional metadata can be added in Java annotations. In the following, again from the FilteredPush `event_date_qc` (Morris & Lowery 2025) library, annotations enable an implementation framework to look up a Test `Implementation` by the Test GUID, and can provide metadata about the Test to users. For maintenance, annotations can be used to determine if an `Implementation` is up to date with the latest version of a Test `Specification`.
 
     @Validation(label="_ENDDAYOFYEAR_INRANGE", description="Is the value of dwc:endDayOfYear an integer between 1 and 365 inclusive, or 366 if a leap year?")
     @Provides("9a39d88c-7eee-46df-b32a-c109f9f81fb8")
@@ -658,9 +658,9 @@ Following is pseudocode that follows the same order of evaluation of the `Criter
 
 The `Criteria` for EXTERNAL_PREREQUISITES_NOT_MET do not have to be evaluated first, but would be expected to be raised from wherever in the sequence the external resource first fails to be invoked, and is handled within the construct that builds a `Result` object.
 
-Note that this `Implementation` will reach the block that can return EXTERNAL_PREREQUISITES_NOT_MET only if the input `dwc:countryCode` contains a value. This deviation from the logical sequence implied by the `Specification` (EXTERNAL_PREREQUISITES_NOT_MET if the `bdq:SourceAuthority` is not available; INTERNAL_PREREQUISITES_NOT_MET if the `dwc:countryCode` was EMPTY;) is perfectly acceptable, for the case of network resources being evaluated later in the `Implementation` than other conditions.
+Note that this implementation will reach the block that can return EXTERNAL_PREREQUISITES_NOT_MET only if the input `dwc:countryCode` contains a value. This deviation from the logical sequence implied by the `Specification` (EXTERNAL_PREREQUISITES_NOT_MET if the `bdq:SourceAuthority` is not available; INTERNAL_PREREQUISITES_NOT_MET if the `dwc:countryCode` was EMPTY;) is perfectly acceptable, for the case of network resources being evaluated later in the implementation than other conditions.
 
-Below is pseudocode for a similar `Implementation` as a method on a Darwin Core domain object, less general, and more tightly bound to the domain concept, but making the concern of correctly binding input data to domain concepts not a concern of the Test. 
+Below is pseudocode for a similar implementation as a method on a Darwin Core domain object, less general, and more tightly bound to the domain concept, but making the concern of correctly binding input data to domain concepts not a concern of the Test. 
 
 ```
     class flatDarwinCore {
@@ -708,7 +708,7 @@ hasExpectedResponse: INTERNAL_PREREQUISITES_NOT_MET if dwc:day is bdq:Empty; COM
 
 `Information Elements` `Acted Upon`: `dwc:day`
 
-Below is an example `Implementation` from the FilteredPush `event_date_qc` library (Morris & Lowery 2024). In this `Implementation`, Java annotations are used to provide metadata that can be used by an `Implementation` framework to pick out a Test to run by its Term Version IRI (`rdf:about`) or Term Name (`rdf:value`) and match an input Darwin Core term to a (Java) parameter in the method signature. The `Implementation` walks through the elements of the `Specification` in sequence, and return the first matching response in a `Response` object, which has `Response.state`, `Response.result` (here called value), and `Response.comment` properties.
+Below is an example `Implementation` from the FilteredPush `event_date_qc` library (Morris & Lowery 2024). In this `Implementation`, Java annotations are used to provide metadata that can be used by an implementation framework to pick out a Test to run by its Term Version IRI (`rdf:about`) or Term Name (`rdf:value`) and match an input Darwin Core term to a (Java) parameter in the method signature. The implementation walks through the elements of the `Specification` in sequence, and return the first matching response in a `Response` object, which has `Response.state`, `Response.result` (here called value), and `Response.comment` properties.
 
 ```
     @Validation(label="VALIDATION_DAY_STANDARD", description="Is the value of dwc:day an integer between 1 and 31 inclusive?")
@@ -745,7 +745,7 @@ Below is an example `Implementation` from the FilteredPush `event_date_qc` libra
 
 #### 6.4.6 Implementing an Abstract Test (normative)
 
-In some environments, an `Implementation` MAY be a lightweight `Implementation` of an abstract Test. Such abstract `Implementations` MAY encompass only the elements of the Test defined in an instance of `bdqffdq:DataQualityNeed`, plus its associated `bdqffdq:InformationElements`, and may not be able to produce instances of `bdqffdq:Assertion`, but SHOULD be able to produce analogs of `Response` objects (with `Response.status`, `Response.result`, and `Response.comment` properties). 
+In some environments, an implementation MAY be a lightweight implementation of an abstract Test. Such abstract implementations MAY encompass only the elements of the Test defined in an instance of `bdqffdq:DataQualityNeed`, plus its associated `bdqffdq:InformationElements`, and may not be able to produce instances of `bdqffdq:Assertion`, but SHOULD be able to produce analogs of `Response` objects (with `Response.status`, `Response.result`, and `Response.comment` properties). 
 
 Consider the `Validation` Test [VALIDATION_ENDDAYOFYEAR_INRANGE](../../terms/bdqtest/index.md#VALIDATION_ENDDAYOFYEAR_INRANGE)
 
@@ -776,7 +776,7 @@ An SQL query that implements the abstract concept of the `dwc:enddayofyear` bein
 
 #### 6.4.7 Implementing a Test in a Specific Environment (non-normative)
 
-Given data stored in a known and controlled environment, Test `Implementations` can be specifically tailored to that environment, both in language and in assumptions about formats and data types. 
+Given data stored in a known and controlled environment, Test implementations can be specifically tailored to that environment, both in language and in assumptions about formats and data types. 
 
 Consider the `Validation` Test [VALIDATION_DAY_STANDARD](../../terms/bdqtest/index.md#VALIDATION_DAY_STANDARD) with the `Specification`:
 
@@ -784,7 +784,7 @@ Consider the `Validation` Test [VALIDATION_DAY_STANDARD](../../terms/bdqtest/ind
 INTERNAL_PREREQUISITES_NOT_MET if dwc:day is EMPTY; COMPLIANT if the value of the field dwc:day is an integer between 1 and 31 inclusive; otherwise NOT_COMPLIANT."
 ```
 
-Given a hypothetical Event table with fields including a primary key `event_id` and an integer field `day`, an `Implementation` of VALIDATION_DAY_STANDARD in SQL that operates on data in the aggregate might look like:
+Given a hypothetical Event table with fields including a primary key `event_id` and an integer field `day`, an implementation of VALIDATION_DAY_STANDARD in SQL that operates on data in the aggregate might look like:
 
     SELECT
         ‘VALIDATION_DAY_STANDARD’ as test name, 
@@ -814,11 +814,11 @@ Given a hypothetical Event table with fields including a primary key `event_id` 
         WHERE day < 1 or day > 31
 
 
-This `Implementation` is dependent on the schema the data are stored in, in particular, the definition of `event.day` as a field holding integers.
+This implementation is dependent on the schema the data are stored in, in particular, the definition of `event.day` as a field holding integers.
 
-This `Implementation` does not generalize, as for example, day in a numeric data type that supports numbers in addition to integers would return incorrect values (per the Test `Specification`, which requires day to be an integer), for values of day such as "8.5"
+This implementation does not generalize, as for example, day in a numeric data type that supports numbers in addition to integers would return incorrect values (per the Test `Specification`, which requires day to be an integer), for values of day such as "8.5"
 
-`Implementations` should carefully consider the assumptions inherent in the environment on which Tests are being run. For example, the FilteredPush `Implementations` in `event_date_qc` (Morris & Lowery 2025), `sci_name_qc` (Morris & Dou 2025), `rec_occur_qc` (Morris 2025), and `geo_ref_qc` (Morris & Lowery 2025b), expect that all data will be presented to the Test methods as strings. Therefore each Test `Implementation` that deals with numeric values must convert the input strings to appropriate numeric types for evaluation, and can use the failure to convert the data type as a means to identify INTERNAL_PREREQUISITES_NOT_MET.
+Implementations should carefully consider the assumptions inherent in the environment on which Tests are being run. For example, the FilteredPush `Implementations` in `event_date_qc` (Morris & Lowery 2025), `sci_name_qc` (Morris & Dou 2025), `rec_occur_qc` (Morris 2025), and `geo_ref_qc` (Morris & Lowery 2025b), expect that all data will be presented to the Test methods as strings. Therefore each Test implementation that deals with numeric values must convert the input strings to appropriate numeric types for evaluation, and can use the failure to convert the data type as a means to identify INTERNAL_PREREQUISITES_NOT_MET.
 
 ## 7 Presentation of Results (normative)
 
@@ -888,7 +888,7 @@ When Test responses are persisted as `Annotations` in association with the annot
 
 ## 8 Validating Test Implementations (normative)
 
-Implementers of the BDQ Tests SHOULD validate the behavior of the internals of their Test `Implementations` with unit Tests, and MUST validate that each Test `Implementation` is capable of taking relevant input from a set of standard Test Validation Data, and returning the expected responses.
+Implementers of the BDQ Tests SHOULD validate the behavior of the internals of their Test implementations with unit Tests, and MUST validate that each Test `Implementation` is capable of taking relevant input from a set of standard Test Validation Data, and returning the expected responses.
 
 For synthetic Test Validation Data that could be conflated with actual data, see [Guide to Marking and Identifying Synthetic and Modified Data](../synthetic/index.md)
 
