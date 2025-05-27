@@ -112,7 +112,7 @@ In any technical treatment of the BDQ standard, a precise reference to a class o
 
 ### 2.1 Independence (normative) 
 
-Test `event_date_qc` SHOULD be independent of how data are stored and transported, data serializations, and the framework or environment in which the Tests are being executed. 
+Test implementations SHOULD be independent of how data are stored and transported, data serializations, and the framework or environment in which the Tests are being executed. 
 
 ### 2.2 The Concept of "EMPTY" in the BDQ Standard (normative)
 
