@@ -152,7 +152,7 @@ Acts upon  SingleRecord
 
 Is there a value in dwc:basisOfRecord?
 
-#### Specification
+#### Expected Response
 
 COMPLIANT if dwc:basisOfRecord is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
@@ -185,7 +185,7 @@ Acts upon  SingleRecord
 
 Does the value of dwc:basisOfRecord occur in the bdq:sourceAuthority?
 
-#### Specification
+#### Expected Response
 
 EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:basisOfRecord is bdq:Empty; COMPLIANT if the value of dwc:basisOfRecord is valid in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
 
@@ -230,7 +230,7 @@ Acts upon  SingleRecord
 
 Is there a value in dc:type?
 
-#### Specification
+#### Expected Response
 
 COMPLIANT if dc:type is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
@@ -263,7 +263,7 @@ Acts upon  SingleRecord
 
 Does the value of dc:type occur as a value in the DCMI type vocabulary?
 
-#### Specification
+#### Expected Response
 
 EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the value of dc:type is bdq:Empty; COMPLIANT if the value of dc:type is a term name in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
 
@@ -304,7 +304,7 @@ Acts upon  SingleRecord
 
 Is there a value in dcterms:license?
 
-#### Specification
+#### Expected Response
 
 COMPLIANT if dcterms:license is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
@@ -341,7 +341,7 @@ Acts upon  SingleRecord
 
 Does the value of dcterms:license occur in bdq:sourceAuthority?
 
-#### Specification
+#### Expected Response
 
 EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dcterms:license is bdq:Empty; COMPLIANT if the value of the term dcterms:license is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
 
@@ -386,7 +386,7 @@ Acts upon  SingleRecord
 
 Do the geographic coordinates fall on or within the boundaries of the territory given in dwc:countryCode or its Exclusive Economic Zone?
 
-#### Specification
+#### Expected Response
 
 EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if one or more of dwc:decimalLatitude, dwc:decimalLongitude, or dwc:countryCode are bdq:Empty or invalid; COMPLIANT if the geographic coordinates fall on or within the boundary defined by the union of the boundary of the country from dwc:countryCode plus it's Exclusive Economic Zone as found in the bdq:sourceAuthority, if any, plus an exterior buffer given by bdq:spatialBufferInMeters; otherwise NOT_COMPLIANT
 
@@ -433,7 +433,7 @@ Acts upon  SingleRecord
 
 Do the geographic coordinates fall on or within the boundary from the bdq:sourceAuthority for the given dwc:stateProvince or within the distance given by bdq:spatialBufferInMeters outside that boundary?
 
-#### Specification
+#### Expected Response
 
 EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the values of dwc:decimalLatitude or dwc:decimalLongitude are bdq:Empty or invalid, or dwc:stateProvince is bdq:Empty or not found in the bdq:sourceAuthority; COMPLIANT if the geographic coordinates fall on or within the boundary in the bdq:sourceAuthority for the given dwc:stateProvince (after coordinate reference system transformations, if any, have been accounted for), or within the distance given by bdq:spatialBufferInMeters outside that boundary; otherwise NOT_COMPLIANT.
 
@@ -478,7 +478,7 @@ Acts upon  SingleRecord
 
 Does the marine/non-marine biome of a taxon from the bdq:sourceAuthority match the biome at the location given by the coordinates?
 
-#### Specification
+#### Expected Response
 
 EXTERNAL_PREREQUISITES_NOT_MET if either bdq:taxonIsMarine or bdq:geospatialLand are not available; INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:scientificName is bdq:Empty or (2) the values of dwc:decimalLatitude or dwc:decimalLongitude are bdq:Empty or (3) if bdq:assumptionOnUnknownBiome is noassumption and the marine/nonmarine status of the taxon is not interpretable from bdq:taxonIsMarine; COMPLIANT if (1) the taxon marine/nonmarine status from bdq:taxonIsMarine matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdq:geospatialLand plus an exterior buffer given by bdq:spatialBufferInMeters or (2) if the marine/nonmarine status of the taxon is not interpretable from bdq:taxonIsMarine and bdq:assumptionOnUnknownBiome matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdq:geospatialLand plus an exterior buffer given by bdq:spatialBufferInMeters; otherwise NOT_COMPLIANT
 
@@ -526,7 +526,7 @@ Acts upon  SingleRecord
 
 Are the values of either dwc:decimalLatitude or dwc:decimalLongitude numbers that are not equal to 0?
 
-#### Specification
+#### Expected Response
 
 INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLatitude is bdq:Empty or is not interpretable as a number, or dwc:decimalLongitude is bdq:Empty or is not interpretable as a number; COMPLIANT if either the value of dwc:decimalLatitude is not = 0 or the value of dwc:decimalLongitude is not = 0; otherwise NOT_COMPLIANT
 
@@ -563,7 +563,7 @@ Acts upon  SingleRecord
 
 Is the value of dwc:coordinateUncertaintyInMeters a number between 1 and 20,037,509?
 
-#### Specification
+#### Expected Response
 
 INTERNAL_PREREQUISITES_NOT_MET if dwc:coordinateUncertaintyInMeters is bdq:Empty; COMPLIANT if the value of dwc:coordinateUncertaintyInMeters is interpreted as a number between 1 and 20037509 inclusive; otherwise NOT_COMPLIANT
 
@@ -600,7 +600,7 @@ Acts upon  SingleRecord
 
 Is there a value in dwc:countryCode?
 
-#### Specification
+#### Expected Response
 
 COMPLIANT if dwc:countryCode is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
@@ -637,7 +637,7 @@ Acts upon  SingleRecord
 
 Is the value of dwc:countryCode a valid ISO 3166-1-alpha-2 country code?
 
-#### Specification
+#### Expected Response
 
 EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode is bdq:Empty; COMPLIANT if dwc:countryCode can be unambiguously interpreted as a valid ISO 3166-1-alpha-2 country code in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
 
@@ -678,7 +678,7 @@ Acts upon  SingleRecord
 
 Does the ISO country code, determined from the value of dwc:country, equal the value of dwc:countryCode?
 
-#### Specification
+#### Expected Response
 
 EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if either of the terms dwc:country or dwc:countryCode are bdq:Empty; COMPLIANT if the values of dwc:country and dwc:countryCode match national-level country name and matching country code respectively in the bdq:sourceAuthority
 
@@ -719,7 +719,7 @@ Acts upon  SingleRecord
 
 Is the combination of the values of the terms dwc:country, dwc:stateProvince unique in the bdq:sourceAuthority?
 
-#### Specification
+#### Expected Response
 
 EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the terms dwc:country and dwc:stateProvince are bdq:Empty; COMPLIANT if the combination of values of dwc:country and dwc:stateProvince are unambiguously resolved to a single result with a child-parent relationship in the bdq:sourceAuthority and the entity matching the value of dwc:country in the bdq:sourceAuthority is an ISO 3166 country-like administrative entity in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
 
@@ -764,7 +764,7 @@ Acts upon  SingleRecord
 
 Does the value of dwc:country occur in the bdq:sourceAuthority?
 
-#### Specification
+#### Expected Response
 
 EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:country is bdq:Empty; COMPLIANT if value of dwc:country is a place type equivalent to administrative entity of "nation" in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
 
@@ -809,7 +809,7 @@ Acts upon  SingleRecord
 
 Is there a value in dwc:country?
 
-#### Specification
+#### Expected Response
 
 COMPLIANT if dwc:country is bdq:NotEmpty or dwc:countryCode has a value of "XZ" and either dwc:country is bdq:Empty or has a value of "High seas"; otherwise NOT_COMPLIANT ?
 
@@ -849,7 +849,7 @@ Acts upon  SingleRecord
 
 Is the value of dwc:decimalLatitude a number between -90 and 90 inclusive?
 
-#### Specification
+#### Expected Response
 
 INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLatitude is bdq:Empty or the value is not interpretable as a number; COMPLIANT if the value of dwc:decimalLatitude is between -90 and 90, inclusive; otherwise NOT_COMPLIANT
 
@@ -882,7 +882,7 @@ Acts upon  SingleRecord
 
 Is there a value in dwc:decimalLatitude?
 
-#### Specification
+#### Expected Response
 
 COMPLIANT if dwc:decimalLatitude is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
@@ -915,7 +915,7 @@ Acts upon  SingleRecord
 
 Is the value of dwc:decimalLongitude a number between -180 and 180 inclusive?
 
-#### Specification
+#### Expected Response
 
 INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLongitude is bdq:Empty or the value is not a number; COMPLIANT if the value of dwc:decimalLongitude is between -180 and 180 degrees, inclusive; otherwise NOT_COMPLIANT
 
@@ -948,7 +948,7 @@ Acts upon  SingleRecord
 
 Is there a value in dwc:decimalLongitude?
 
-#### Specification
+#### Expected Response
 
 COMPLIANT if dwc:decimalLongitude is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
@@ -981,7 +981,7 @@ Acts upon  SingleRecord
 
 Is there a value in dwc:geodeticDatum?
 
-#### Specification
+#### Expected Response
 
 COMPLIANT if dwc:geodeticDatum is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
@@ -1014,7 +1014,7 @@ Acts upon  SingleRecord
 
 Does the value of dwc:geodeticDatum occur as a valid geographic CRS, geodetic Datum or ellipsoid in bdq:sourceAuthority?
 
-#### Specification
+#### Expected Response
 
 EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; COMPLIANT if the value of dwc:geodeticDatum is a valid code from the bdq:sourceAuthority (in the form Authority:Number) for a Datum, or ellipsoid, or for a CRS appropriate for a 2D geographic coordinate in degrees, or is the value "not recorded"; otherwise NOT_COMPLIANT
 
@@ -1055,7 +1055,7 @@ Acts upon  SingleRecord
 
 Is there a value in any of the Darwin Core spatial terms that could specify a location?
 
-#### Specification
+#### Expected Response
 
 COMPLIANT if at least one term needed to determine the location of the entity exists and is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
@@ -1092,7 +1092,7 @@ Acts upon  SingleRecord
 
 Is the value of dwc:maximumDepthInMeters within the Parameter range?
 
-#### Specification
+#### Expected Response
 
 INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumDepthInMeters is bdq:Empty or is not interpretable as a number greater than or equal to zero; COMPLIANT if the value of dwc:maximumDepthInMeters is within the range of bdq:minimumValidDepthInMeters to bdq:maximumValidDepthInMeters inclusive; otherwise NOT_COMPLIANT
 
@@ -1137,7 +1137,7 @@ Acts upon  SingleRecord
 
 Is the value of dwc:maximumElevationInMeters within the Parameter range?
 
-#### Specification
+#### Expected Response
 
 INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumElevationInMeters is bdq:Empty or the value cannot be interpreted as a number; COMPLIANT if the value of dwc:maximumElevationInMeters is within the range of bdq:minimumValidElevationInMeters to bdq:maximumValidElevationInMeters inclusive; otherwise NOT_COMPLIANT
 
@@ -1182,7 +1182,7 @@ Acts upon  SingleRecord
 
 Is the value of dwc:minimumDepthInMeters within the Parameter range?
 
-#### Specification
+#### Expected Response
 
 INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters is bdq:Empty, or the value is not interpretable as number greater than or equal to zero; COMPLIANT if the value of dwc:minimumDepthInMeters is within the range of bdq:minimumValidDepthInMeters to bdq:maximumValidDepthInMeters inclusive; otherwise NOT_COMPLIANT
 
@@ -1227,7 +1227,7 @@ Acts upon  SingleRecord
 
 Is the value of dwc:minimumDepthInMeters a number less than or equal to the value of dwc:maximumDepthInMeters?
 
-#### Specification
+#### Expected Response
 
 INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters or dwc:maximumDepthInMeters is bdq:Empty, or if either are interpretable as not zero or a positive number; COMPLIANT if the value of dwc:minimumDepthInMeters is less than or equal to the value of dwc:maximumDepthInMeters; otherwise NOT_COMPLIANT
 
@@ -1260,7 +1260,7 @@ Acts upon  SingleRecord
 
 Is the value of dwc:minimumElevationInMeters within the Parameter range?
 
-#### Specification
+#### Expected Response
 
 INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumElevationInMeters is bdq:Empty or the value is not a number; COMPLIANT if the value of dwc:minimumElevationInMeters is within the range of bdq:minimumValidElevationInMeters to bdq:maximumValidElevationInMeters inclusive; otherwise NOT_COMPLIANT
 
@@ -1305,7 +1305,7 @@ Acts upon  SingleRecord
 
 Is the value of dwc:minimumElevationInMeters a number less than or equal to the value of dwc:maximumElevationInMeters?
 
-#### Specification
+#### Expected Response
 
 INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumlevationInMeters or dwc:minimumElevationInMeters is bdq:Empty, or if either is not a number; COMPLIANT if the value of dwc:minimumElevationInMeters is a number less than or equal to the value of the number dwc:maximumElevationInMeters, otherwise NOT_COMPLIANT
 
@@ -1338,7 +1338,7 @@ Acts upon  SingleRecord
 
 Does the value of dwc:stateProvince occur in the bdq:sourceAuthority?
 
-#### Specification
+#### Expected Response
 
 EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:stateProvince is bdq:Empty; COMPLIANT if the value of dwc:stateProvince occurs as an administrative entity that is a child to at least one entity representing an ISO 3166 country-like entity in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
 
@@ -1383,7 +1383,7 @@ Acts upon  SingleRecord
 
 Is the value of dwc:day interpretable as a valid integer between 1 and 28 inclusive, or is it validly 29, 30 or 31 given the dwc:month and dwc:year?
 
-#### Specification
+#### Expected Response
 
 INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:day is bdq:Empty, or (2) dwc:day is not interpretable as an integer, or (3) dwc:day is interpretable as an integer between 29 and 31 inclusive and dwc:month is not interpretable as an integer between 1 and 12, or (4) dwc:month is interpretable as the integer 2 and dwc:day is interpretable as the integer 29 and dwc:year is not interpretable as a valid ISO 8601 year; COMPLIANT if (1) the value of dwc:day is interpretable as an integer between 1 and 28 inclusive, or (2) dwc:day is interpretable as an integer between 29 and 30 and dwc:month is interpretable as an integer in the set (4,6,9,11), or (3) dwc:day is interpretable as an integer between 29 and 31 and dwc:month is interpretable as an integer in the set (1,3,5,7,8,10,12), or (4) dwc:day is interpretable as the integer 29 and dwc:month is interpretable as the integer 2 and dwc:year is interpretable as is a valid leap year (evenly divisible by 400 or (evenly divisible by 4 but not evenly divisible by 100)); otherwise NOT_COMPLIANT.
 
@@ -1420,7 +1420,7 @@ Acts upon  SingleRecord
 
 Is the value of dwc:day an integer between 1 and 31 inclusive?
 
-#### Specification
+#### Expected Response
 
 INTERNAL_PREREQUISITES_NOT_MET if dwc:day is bdq:Empty; COMPLIANT if the value of the field dwc:day is an integer between 1 and 31 inclusive; otherwise NOT_COMPLIANT.
 
@@ -1457,7 +1457,7 @@ Acts upon  SingleRecord
 
 Is the value of dwc:endDayOfYear an integer between 1 and 365 inclusive, or 366 if a leap year?
 
-#### Specification
+#### Expected Response
 
 INTERNAL_PREREQUISITES_NOT_MET if dwc:endDayOfYear is bdq:Empty or if the value of dwc:endDayOfYear is equal to 366 and (dwc:eventDate is bdq:Empty or the value of dwc:eventDate cannot be interpreted to find a single year or an end year in a range); COMPLIANT if the value of dwc:endDayOfYear is an integer between 1 and 365 inclusive, or if the value of dwc:endDayOfYear is 366 and the end year interpreted from dwc:eventDate is a leap year; otherwise NOT_COMPLIANT
 
@@ -1497,7 +1497,7 @@ Acts upon  SingleRecord
 
 Is the value of dwc:eventDate entirely with the Parameter range?
 
-#### Specification
+#### Expected Response
 
 INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty or if the value of dwc:eventDate is not a valid ISO 8601 date; COMPLIANT if the range of dwc:eventDate is entirely within the range bdq:earliestValidDate to bdq:latestValidDate, inclusive, otherwise NOT_COMPLIANT
 
@@ -1542,7 +1542,7 @@ Acts upon  SingleRecord
 
 Is there a value in dwc:eventDate?
 
-#### Specification
+#### Expected Response
 
 COMPLIANT if dwc:eventDate is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
@@ -1575,7 +1575,7 @@ Acts upon  SingleRecord
 
 Is the value of dwc:eventDate a valid ISO date?
 
-#### Specification
+#### Expected Response
 
 INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty; COMPLIANT if the value of dwc:eventDate is a valid ISO 8601 date; otherwise NOT_COMPLIANT
 
@@ -1612,7 +1612,7 @@ Acts upon  SingleRecord
 
 Is there a value in any of the terms dwc:eventDate, dwc:year, dwc:month, dwc:day, dwc:startDayOfYear, dwc:endDayOfYear, dwc:verbatimEventDate?
 
-#### Specification
+#### Expected Response
 
 COMPLIANT if any of dwc:eventDate, dwc:year, dwc:month, dwc:day, dwc:startDayOfYear, dwc:endDayOfYear, dwc:verbatimEventDate are bdq:NotEmpty; otherwise NOT_COMPLIANT.
 
@@ -1649,7 +1649,7 @@ Acts upon  SingleRecord
 
 Are the values in dwc:eventDate consistent with the values in dwc:year, dwc:month, dwc:day, dwc:startDayOfYear and dwc:endDayOfYear?
 
-#### Specification
+#### Expected Response
 
 INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty, or all of dwc:year, dwc:month, dwc:day, dwc:startDayOfYear and dwc:endDayOfYear are bdq:Empty; COMPLIANT if all of the following conditions are met (1) dwc:year is bdq:Empty or dwc:eventDate has a precision of one year or finer and and is within a single year and the provided value of dwc:year matches the year expressed in dwc:eventDate, and (2) dwc:month is bdq:Empty or dwc:eventDate has a precision of one month or finer and is within a single month and the provided value in dwc:month matches the month represented by dwc:eventDate, and (3) dwc:day is bdq:Empty or dwc:eventDate has a precision of a day or less and is within a single day and the provided value in dwc:day matches the day represented by dwc:eventDate, and (4) dwc:startDayOfYear is empty or dwc:eventDate has a precision of one day or finer and the provided value in dwc:startDayOfYear matches the start day of the year of the range represented by dwc:eventDate, and (5) dwc:endDayOfYear is empty or dwc:eventDate has a precision of one day or finer and the provided value in dwc:endDayOfYear matches the end day of the year of the range represented by dwc:eventDate; otherwise NOT_COMPLIANT.
 
@@ -1686,7 +1686,7 @@ Acts upon  SingleRecord
 
 Is the value of dwc:month interpretable as an integer between 1 and 12 inclusive?
 
-#### Specification
+#### Expected Response
 
 INTERNAL_PREREQUISITES_NOT_MET if dwc:month is bdq:Empty; COMPLIANT if the value of dwc:month is interpretable as an integer between 1 and 12 inclusive; otherwise NOT_COMPLIANT
 
@@ -1719,7 +1719,7 @@ Acts upon  SingleRecord
 
 Is the value of dwc:startDayOfYear an integer between 1 and 365 inclusive, or 366 if a leap year?
 
-#### Specification
+#### Expected Response
 
 INTERNAL_PREREQUISITES_NOT_MET if dwc:startDayOfYear is bdq:Empty or if the value of dwc:startDayOfYear is equal to 366 and (dwc:eventDate is bdq:Empty or the value of dwc:eventDate cannot be interpreted to find single year or a start year in a range); COMPLIANT if the value of dwc:startDayOfYear is an integer between 1 and 365, inclusive, or if the value of dwc:startDayOfYear is 366 and the start year interpreted from dwc:eventDate is a leap year; otherwise NOT_COMPLIANT
 
@@ -1759,7 +1759,7 @@ Acts upon  SingleRecord
 
 Is the value of dwc:year within the Parameter range?
 
-#### Specification
+#### Expected Response
 
 INTERNAL_PREREQUISITES_NOT_MET if dwc:year is bdq:Empty or cannot be interpreted as an integer; COMPLIANT if the value of dwc:year is within the range bdq:earliestValidDate to bdq:latestValidDate inclusive; otherwise NOT_COMPLIANT
 
@@ -1804,7 +1804,7 @@ Acts upon  SingleRecord
 
 Is there a value in dwc:year?
 
-#### Specification
+#### Expected Response
 
 COMPLIANT if dwc:year is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
@@ -1837,7 +1837,7 @@ Acts upon  SingleRecord
 
 Is the value of dwc:dateIdentified within Parameters range and does it overlap with or is it later than dwc:eventDate?
 
-#### Specification
+#### Expected Response
 
 INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:dateIdentified is bdq:Empty, or (2) dwc:dateIdentified contains an invalid value according to ISO 8601, or (3) bdq:includeEventDate=true and dwc:eventDate is not a valid ISO 8601 date; COMPLIANT if the value of dwc:dateIdentified is between bdq:earliestValidDate and bdq:latestValidDate inclusive and either (1) dwc:eventDate is bdq:Empty or bdq:includeEventDate=false, or (2) if dwc:eventDate is a valid ISO 8601 date and dwc:dateIdentified overlaps or is later than the dwc:eventDate; otherwise NOT_COMPLIANT
 
@@ -1885,7 +1885,7 @@ Acts upon  SingleRecord
 
 Is the value of dwc:dateIdentified a valid ISO date?
 
-#### Specification
+#### Expected Response
 
 INTERNAL_PREREQUISITES_NOT_MET if dwc:dateIdentified is bdq:Empty; COMPLIANT if the value of dwc:dateIdentified contains a valid ISO 8601 date; otherwise NOT_COMPLIANT
 
@@ -1918,7 +1918,7 @@ Acts upon  SingleRecord
 
 Does the value of dwc:degreeOfEstablishment occur in the bdq:sourceAuthority?
 
-#### Specification
+#### Expected Response
 
 EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:degreeOfEstablishment is bdq:Empty; COMPLIANT if the value of dwc:degreeOfEstablishment is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.
 
@@ -1963,7 +1963,7 @@ Acts upon  SingleRecord
 
 Does the value of dwc:establishmentMeans occur in the bdq:sourceAuthority?
 
-#### Specification
+#### Expected Response
 
 EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:establishmentMeans is bdq:Empty; COMPLIANT if the value of dwc:establishmentMeans is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.
 
@@ -2008,7 +2008,7 @@ Acts upon  SingleRecord
 
 Is there a value in dwc:occurrenceID?
 
-#### Specification
+#### Expected Response
 
 COMPLIANT if dwc:occurrenceID is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
@@ -2041,7 +2041,7 @@ Acts upon  SingleRecord
 
 Is there a value in dwc:occurrenceStatus?
 
-#### Specification
+#### Expected Response
 
 COMPLIANT if dwc:occurrenceStatus is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
@@ -2074,7 +2074,7 @@ Acts upon  SingleRecord
 
 Does the value of dwc:occurrenceStatus occur in the bdq:sourceAuthority?
 
-#### Specification
+#### Expected Response
 
 EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdq:Empty; COMPLIANT if the value of dwc:occurrenceStatus is resolved in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
 
@@ -2119,7 +2119,7 @@ Acts upon  SingleRecord
 
 Does the value of dwc:pathway occur in the bdq:sourceAuthority?
 
-#### Specification
+#### Expected Response
 
 EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:pathway is bdq:Empty; COMPLIANT if the value of dwc:pathway is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.
 
@@ -2164,7 +2164,7 @@ Acts upon  SingleRecord
 
 Does the value of dwc:sex occur in bdq:sourceAuthority?
 
-#### Specification
+#### Expected Response
 
 EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:sex is bdq:Empty; COMPLIANT if the value of dwc:sex is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.
 
@@ -2209,7 +2209,7 @@ Acts upon  SingleRecord
 
 Does the value of dwc:typeStatus occur in bdq:sourceAuthority?
 
-#### Specification
+#### Expected Response
 
 EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; COMPLIANT if the value of the first word in each &#124; delimited portion of dwc:typeStatus is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.
 
@@ -2254,7 +2254,7 @@ Acts upon  SingleRecord
 
 Is the combination of higher classification taxonomic terms consistent using bdq:sourceAuthority?
 
-#### Specification
+#### Expected Response
 
 EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if all of the fields dwc:kingdom dwc:phylum, dwc:class, dwc:order, dwc:superfamily, dwc:family, dwc:subfamily, dwc:tribe, dwc:subtribe, dwc:genus are bdq:Empty; COMPLIANT if the combination of values of higher classification taxonomic terms (dwc:kingdom, dwc:phylum, dwc:class, dwc:order, dwc:superfamily, dwc:family, dwc:subfamily, dwc:tribe, dwc:subtribe, dwc:genus) are consistent with the lowest ranking matched element in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
 
@@ -2299,7 +2299,7 @@ Acts upon  SingleRecord
 
 Does the value of dwc:class occur at the rank of Class in bdq:sourceAuthority?
 
-#### Specification
+#### Expected Response
 
 EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:class is bdq:Empty; COMPLIANT if the value of dwc:class is found as a value at the rank of Class in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
 
@@ -2344,7 +2344,7 @@ Acts upon  SingleRecord
 
 Does the value of dwc:family occur at the rank of Family in the bdq:sourceAuthority?
 
-#### Specification
+#### Expected Response
 
 EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:family is bdq:Empty; COMPLIANT if the value of dwc:family is found as a value at the rank of Family in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
 
@@ -2389,7 +2389,7 @@ Acts upon  SingleRecord
 
 Does the value of dwc:genus occur at the rank of Genus in the bdq:sourceAuthority?
 
-#### Specification
+#### Expected Response
 
 EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:genus is bdq:Empty; COMPLIANT if the value of dwc:genus is found as a value at the rank of genus in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
 
@@ -2434,7 +2434,7 @@ Acts upon  SingleRecord
 
 Does the value of dwc:kingdom occur at the rank of Kingdom in the bdq:sourceAuthority?
 
-#### Specification
+#### Expected Response
 
 EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:kingdom is bdq:Empty; COMPLIANT if the value of dwc:kingdom is found as a value at the rank of kingdom in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
 
@@ -2479,7 +2479,7 @@ Acts upon  SingleRecord
 
 Is there a value in dwc:kingdom?
 
-#### Specification
+#### Expected Response
 
 COMPLIANT if dwc:kingdom is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
@@ -2512,7 +2512,7 @@ Acts upon  SingleRecord
 
 Is there a value in dwc:namePublishedInYear?
 
-#### Specification
+#### Expected Response
 
 COMPLIANT if dwc:namePublishedInYear is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
@@ -2545,7 +2545,7 @@ Acts upon  SingleRecord
 
 Does the value of dwc:order occur at the rank of Order in bdq:sourceAuthority?
 
-#### Specification
+#### Expected Response
 
 EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:order is bdq:Empty; COMPLIANT if the value of dwc:order is found as a value at the rank of Order in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
 
@@ -2590,7 +2590,7 @@ Acts upon  SingleRecord
 
 Does the value of dwc:phylum occur at the rank of Phylum in the bdq:sourceAuthority?
 
-#### Specification
+#### Expected Response
 
 EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:phylum is bdq:Empty; COMPLIANT if the value of dwc:phylum is found as a value at the rank of Phylum in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
 
@@ -2635,7 +2635,7 @@ Acts upon  SingleRecord
 
 Is the polynomial represented in dwc:scientificName consistent with the equivalent values in dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet?
 
-#### Specification
+#### Expected Response
 
 INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificName is bdq:Empty, or all of dwc:genericName, dwc:specificEpithet and dwc:infraspecificEpithet are bdq:Empty; COMPLIANT if the polynomial, as represented in dwc:scientificName, is consistent with bdq:NotEmpty values of dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet; otherwise NOT_COMPLIANT.
 
@@ -2672,7 +2672,7 @@ Acts upon  SingleRecord
 
 Is there a value in dwc:scientificNameAuthorship?
 
-#### Specification
+#### Expected Response
 
 COMPLIANT if dwc:scientificNameAuthorship is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
@@ -2705,7 +2705,7 @@ Acts upon  SingleRecord
 
 Does the value of dwc:scientificNameID contain a complete identifier?
 
-#### Specification
+#### Expected Response
 
 INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is bdq:Empty; COMPLIANT if (1) dwc:scientificNameID is a validly formed LSID, or (2) dwc:scientificNameID is a validly formed URN with at least NID and NSS present, or (3) dwc:scientificNameID is in the form scope:value, or (4) dwc:scientificNameID is a validly formed URI with host and path where path consists of more than just "/"; otherwise NOT_COMPLIANT
 
@@ -2742,7 +2742,7 @@ Acts upon  SingleRecord
 
 Is there a value in dwc:scientificNameID?
 
-#### Specification
+#### Expected Response
 
 COMPLIANT if dwc:scientificNameID is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
@@ -2775,7 +2775,7 @@ Acts upon  SingleRecord
 
 Is there a match of the contents of dwc:scientificName with the bdq:sourceAuthority?
 
-#### Specification
+#### Expected Response
 
 EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificName is bdq:Empty; COMPLIANT if there is a match of the contents of dwc:scientificName in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
 
@@ -2820,7 +2820,7 @@ Acts upon  SingleRecord
 
 Is there a value in dwc:scientificName?
 
-#### Specification
+#### Expected Response
 
 COMPLIANT if dwc:scientificName is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
@@ -2853,7 +2853,7 @@ Acts upon  SingleRecord
 
 Is there a value in dwc:taxonRank?
 
-#### Specification
+#### Expected Response
 
 COMPLIANT if dwc:taxonRank is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
@@ -2886,7 +2886,7 @@ Acts upon  SingleRecord
 
 Does the value of dwc:taxonRank occur in the bdq:sourceAuthority?
 
-#### Specification
+#### Expected Response
 
 EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:taxonRank is bdq:Empty; COMPLIANT if the value of dwc:taxonRank is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.
 
@@ -2931,7 +2931,7 @@ Acts upon  SingleRecord
 
 Is there a value in any of the terms needed to determine that the taxon exists?
 
-#### Specification
+#### Expected Response
 
 COMPLIANT if at least one term needed to determine the taxon of the entity exists and is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
@@ -2968,7 +2968,7 @@ Acts upon  SingleRecord
 
 Can the taxon be unambiguously resolved from bdq:sourceAuthority using the available taxon terms?
 
-#### Specification
+#### Expected Response
 
 EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if all of dwc:scientificNameID, dwc:scientificName, dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship, dwc:cultivarEpithet are bdq:Empty; COMPLIANT if (1) dwc:scientificNameID references a single taxon record in the bdq:sourceAuthority, or (2) dwc:scientificNameID is bdq:Empty and dwc:scientificName references a single taxon record in the bdq:sourceAuthority, or (3) if dwc:scientificName and dwc:scientificNameID are bdq:Empty and if a combination of the values of the terms dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:cultivarEpithet, dwc:taxonRank, and dwc:scientificNameAuthorship can be unambiguously resolved to a unique taxon in the bdq:sourceAuthority, or (4) if ambiguity produced by multiple matches in (2) or (3) can be disambiguated to a unique Taxon using the values of dwc:tribe, dwc:subtribe, dwc:subgenus, dwc:genus, dwc:subfamily, dwc:family, dwc:superfamily, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:taxonID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID and dwc:vernacularName; otherwise NOT_COMPLIANT
 
@@ -3013,7 +3013,7 @@ Acts upon  SingleRecord
 
 A count of the number of distinct AMENDMENT Tests that have a Response.status="AMENDED" for a given record.
 
-#### Specification
+#### Expected Response
 
 The number of Tests of output type AMENDMENT that have been run against the record and have proposed changes to the record (Result.status="AMENDED")
 
@@ -3043,7 +3043,7 @@ Acts upon  SingleRecord
 
 Measures the number of distinct VALIDATION Tests that have a Response.status="COMPLIANT" for a given record.
 
-#### Specification
+#### Expected Response
 
 INTERNAL_PREREQUISITES_NOT_MET if no Tests of type VALIDATION were attempted to be run; Report the number of Tests of output type VALIDATION run against the record that were COMPLIANT (passed)
 
@@ -3077,7 +3077,7 @@ Acts upon  SingleRecord
 
 A count of the number of distinct VALIDATION Tests that have a Response.status="NOT_COMPLIANT" for a given record.
 
-#### Specification
+#### Expected Response
 
 INTERNAL_PREREQUISITES_NOT_MET if no Tests of type VALIDATION were attempted to be run; REPORT of the number of Tests of output type VALIDATION run against the record that have Response.result="NOT_COMPLIANT"
 
@@ -3111,7 +3111,7 @@ Acts upon  SingleRecord
 
 The number of distinct VALIDATION Tests that have a Response.status="EXTERNAL_PREREQUISITES_NOT_MET" or "INTERNAL_PREREQUISITES_NOT_MET" for a given record.
 
-#### Specification
+#### Expected Response
 
 INTERNAL_PREREQUISITES_NOT_MET if no Tests of type VALIDATION were run; Report the number of Tests of output type VALIDATION that did not run because prerequisites for those Tests were not met (Result.status="INTERNAL_PREREQUISITES_NOT_MET" or "EXTERNAL_PREREQUISITES_NOT_MET")
 
@@ -3145,7 +3145,7 @@ Acts upon  SingleRecord
 
 What is the duration of dwc:eventDate in seconds?
 
-#### Specification
+#### Expected Response
 
 INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty or if the value of dwc:eventDate is not a valid ISO 8601 date; otherwise RUN_HAS_RESULT with the result being the duration (sensu ISO 8601) expressed in the dwc:eventDate, in seconds.
 
@@ -3182,7 +3182,7 @@ Acts upon  SingleRecord
 
 Is there a value in dwc:dataGeneralizations?
 
-#### Specification
+#### Expected Response
 
 POTENTIAL_ISSUE if dwc:dataGeneralizations is bdq:NotEmpty; otherwise NOT_ISSUE
 
@@ -3219,7 +3219,7 @@ Acts upon  SingleRecord
 
 Are the supplied geographic coordinates within a defined buffer of the center of the country?
 
-#### Specification
+#### Expected Response
 
 EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if any of dwc:countryCode, dwc:decimalLatitude, dwc:decimalLongitude are bdq:Empty; POTENTIAL_ISSUE if (1) the geographic coordinates are within the distance given by bdq:spatialBufferInMeters from the center of the supplied dwc:countryCode as represented in the bdq:sourceAuthority (or one of the centers, if the bdq:sourceAuthority provides more than one per country code) and (2) the dwc:coordinateUncertaintyInMeters is bdq:Empty or less than half the square root of the area of the country; otherwise NOT_ISSUE.
 
@@ -3267,7 +3267,7 @@ Acts upon  SingleRecord
 
 Is there a value in dwc:establishmentMeans?
 
-#### Specification
+#### Expected Response
 
 POTENTIAL_ISSUE if dwc:establishmentMeans is bdq:NotEmpty; otherwise NOT_ISSUE
 
@@ -3300,7 +3300,7 @@ Acts upon  SingleRecord
 
 Are there any annotations associated with the record?
 
-#### Specification
+#### Expected Response
 
 EXTERNAL_PREREQUISITES_NOT_MET if the bdq:annotationSystem is not available; POTENTIAL_ISSUE if an annotation in the bdq:annotationSystem exists with a matching bdq:annotationAlertIf; otherwise NOT_ISSUE.
 
@@ -3344,7 +3344,7 @@ Acts upon  SingleRecord
 
 Proposes an amendment to the value of dwc:basisOfRecord using the bdq:sourceAuthority.
 
-#### Specification
+#### Expected Response
 
 EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:basisOfRecord is bdq:Empty; AMENDED the value of dwc:basisOfRecord if it could be unambiguously interpreted as a value in the bdq:sourceAuthority; otherwise NOT_AMENDED
 
@@ -3389,7 +3389,7 @@ Acts upon  SingleRecord
 
 Proposes an amendment to the value of dc:type using the DCMI type vocabulary.
 
-#### Specification
+#### Expected Response
 
 EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the value of dc:type is bdq:Empty; AMENDED the value of dc:type if it can be unambiguously interpreted as a term name in the bdq:sourceAuthority; otherwise NOT_AMENDED
 
@@ -3430,7 +3430,7 @@ Acts upon  SingleRecord
 
 Proposes an amendment to the value of dcterms:license using the bdq:sourceAuthority.
 
-#### Specification
+#### Expected Response
 
 EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; AMENDED value of dcterms:license if it could be unambiguously interpreted as a value in the bdq:sourceAuthority; otherwise NOT_AMENDED.
 
@@ -3475,7 +3475,7 @@ Acts upon  SingleRecord
 
 Proposes an amendment to the values of dwc:decimalLatitude, dwc:decimalLongitude, and dwc:geodeticDatum from geographic coordinate information in the verbatim coordinates terms.
 
-#### Specification
+#### Expected Response
 
 INTERNAL_PREREQUISITES_NOT_MET if 1) either dwc:decimalLatitude or dwc:decimalLongitude are bdq:NotEmpty, or 2) dwc:verbatimCoordinates and one of dwc:verbatimLatitude and dwc:verbatimLongitude are bdq:Empty; FILLED_IN the values of dwc:decimalLatitude, dwc:decimalLongitude and dwc:geodeticDatum (provided that the dwc:verbatimCoordinates can be unambiguously interpreted as geographic coordinates) from 1) dwc:verbatimLatitude, dwc:verbatimLongitude and dwc:verbatimSRS or 2) dwc:verbatimCoordinates and dwc:verbatimSRS; otherwise NOT_AMENDED.
 
@@ -3515,7 +3515,7 @@ Acts upon  SingleRecord
 
 Proposes an amendment of the signs of dwc:decimalLatitude and/or dwc:decimalLongitude to align the location with the dwc:countryCode.
 
-#### Specification
+#### Expected Response
 
 INTERNAL_PREREQUISITES_NOT_MET if any of dwc:decimalLatitude or dwc:decimalLongitude or dwc:countryCode are bdq:Empty; AMENDED dwc:decimalLatitude and dwc:decimalLongitude if the coordinates were transposed or one or more of the signs of the coordinates were reversed to align the location with dwc:countryCode according to the bdq:sourceAuthority; otherwise NOT_AMENDED
 
@@ -3563,7 +3563,7 @@ Acts upon  SingleRecord
 
 Proposes an amendment to the value of dwc:countryCode if dwc:decimalLatitude and dwc:decimalLongitude fall within a boundary from the bdq:countryShapes that is attributable to a single valid ISO 3166-1-alpha-2 country code.
 
-#### Specification
+#### Expected Response
 
 EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if either dwc:decimalLatitude or dwc:decimalLongitude is bdq:Empty, or if dwc:countryCode is bdq:NotEmpty; FILLED_IN dwc:countryCode if dwc:decimalLatitude and dwc:decimalLongitude fall within a boundary in the bdq:sourceAuthority that is attributable to a single valid country code; otherwise NOT_AMENDED.
 
@@ -3611,7 +3611,7 @@ Acts upon  SingleRecord
 
 Proposes an amendment to the value of dwc:countryCode if it can be interpreted as an ISO 3166-1-alpha-2 country code.
 
-#### Specification
+#### Expected Response
 
 EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISTITES_NOT_MET if the value of dwc:countryCode is bdq:Empty; AMENDED the value of dwc:countryCode if it can be unambiguously interpreted to a value in the bdq:sourceAuthority; otherwise NOT_AMENDED
 
@@ -3652,7 +3652,7 @@ Acts upon  SingleRecord
 
 Proposes an amendment to fill in dwc:geodeticDatum using a parameterized value if the dwc:geodeticDatum is empty.
 
-#### Specification
+#### Expected Response
 
 If dwc:geodeticDatum is bdq:Empty, fill in dwc:geodeticDatum using the value of bdq:defaultGeodeticDatum, report FILLED_IN and, if dwc:coordinateUncertaintyInMeters, dwc:decimalLatitude and dwc:decimalLongitude are bdq:NotEmpty, amend the value of dwc:coordinateUncertaintyInMeters by adding the maximum datum shift between the specified bdq:defaultGeodeticDatum and any other datum at the provided dwc:decimalLatitude and dwc:decimalLongitude and instead report AMENDED; otherwise NOT_AMENDED.
 
@@ -3700,7 +3700,7 @@ Acts upon  SingleRecord
 
 Proposes an amendment to the value of dwc:geodeticDatum using the bdq:sourceAuthority.
 
-#### Specification
+#### Expected Response
 
 EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; AMENDED the value of dwc:geodeticDatum if it could be unambiguously interpreted as a valid code from the bdq:sourceAuthority (in the form Authority:Number) for a Datum, Ellipsoid or a CRS appropriate for a 2D geographic coordinate in degrees, or as the value "not recorded"; otherwise NOT_AMENDED
 
@@ -3741,7 +3741,7 @@ Acts upon  SingleRecord
 
 Proposes amendments of the values of dwc:minimumDepthInMeters and dwc:maximumDepthInMeters if they can be interpreted from dwc:verbatimDepth.
 
-#### Specification
+#### Expected Response
 
 INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters or dwc:maximumDepthInMeters are bdq:NotEmpty or dwc:verbatimDepth is bdq:Empty; FILLED_IN the value of dwc:minimumDepthInMeters and dwc:maximumDepthInMeters if they can be unambiguously interpreted from dwc:verbatimDepth; otherwise NOT_AMENDED.
 
@@ -3781,7 +3781,7 @@ Acts upon  SingleRecord
 
 Proposes an amendment or amendments to the values of dwc:minimumElevationInMeters and dwc:maximumElevationInMeters if they can be interpreted from dwc:verbatimElevation.
 
-#### Specification
+#### Expected Response
 
 INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumElevationInMeters or dwc:maximumElevationInMeters are bdq:NotEmpty or dwc:verbatimElevation is bdq:Empty; FILLED_IN the values of dwc:minimumElevationInMeters and dwc:maximumElevationInMeters if they can be unambiguously interpreted from dwc:verbatimElevation; otherwise NOT_AMENDED
 
@@ -3821,7 +3821,7 @@ Acts upon  SingleRecord
 
 Proposes an amendment to the value of dwc:day as an integer between 1 and 31 inclusive.
 
-#### Specification
+#### Expected Response
 
 INTERNAL_PREREQUISITES_NOT_MET if dwc:day is bdq:Empty; AMENDED the value of dwc:day if the value is unambiguously interpreted as an integer between 1 and 31 inclusive; otherwise NOT_AMENDED
 
@@ -3858,7 +3858,7 @@ Acts upon  SingleRecord
 
 Proposes an amendment to the value of dwc:eventDate from the content of dwc:verbatimEventDate.
 
-#### Specification
+#### Expected Response
 
 INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:NotEmpty or the value of dwc:verbatimEventDate is bdq:Empty; FILLED_IN the value of dwc:eventDate if an unambiguous ISO 8601 date is interpreted from dwc:verbatimEventDate; otherwise NOT_AMENDED
 
@@ -3898,7 +3898,7 @@ Acts upon  SingleRecord
 
 Proposes an amendment to the value of dwc:eventDate from values in dwc:year, dwc:month and dwc:day.
 
-#### Specification
+#### Expected Response
 
 INTERNAL _PREREQUISITES_NOT_MET if dwc:eventDate is not EMPTY or dwc:year is EMPTY or is not interpretable as an integer; FILLED_IN the value of dwc:eventDate if an ISO 8601 date was interpreted from the values in dwc:year, dwc:month and dwc:day; otherwise NOT_AMENDED
 
@@ -3938,7 +3938,7 @@ Acts upon  SingleRecord
 
 Proposes an amendment to the value of dwc:eventDate from values in dwc:year, dwc:startDayOfYear and dwc:endDayOfYear.
 
-#### Specification
+#### Expected Response
 
 INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:NotEmpty or any of dwc:year, dwc:startDayOfYear, or dwc:endDayOfYear are bdq:Empty; FILLED_IN the value of dwc:eventDate from values in dwc:year, dwc:startDayOfYear and dwc:endDayOfYear if the values in each are independently interpretable and if the value of dwc:startDayOfYear is less than the value of dwc:endDayOfYear; otherwise NOT_AMENDED
 
@@ -3978,7 +3978,7 @@ Acts upon  SingleRecord
 
 Proposes an amendment of the value of dwc:eventDate to a valid ISO date.
 
-#### Specification
+#### Expected Response
 
 INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty; AMENDED if the value of dwc:eventDate is not a properly formatted ISO 8601 date but is unambiguous, and altered to be a valid ISO 8601 date; otherwise NOT_AMENDED
 
@@ -4015,7 +4015,7 @@ Acts upon  SingleRecord
 
 Proposes an amendment to values in any of dwc:year, dwc:month, dwc:day, dwc:startDayOfYear or dwc:endDayOfYear from the content of dwc:eventDate.
 
-#### Specification
+#### Expected Response
 
 INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty or contains an invalid value according to ISO 8601; FILLED_IN if any of (1) dwc:day from dwc:eventDate if dwc:day is bdq:Empty and dwc:eventDate has a precision of a day or finer and is within a single day, (2) dwc:month from dwc:eventDate if dwc:month is bdq:Empty and dwc:eventDate has a precision of a single month or finer and is within a single month, (3) dwc:year from dwc:eventDate if dwc:year is bdq:Empty and dwc:eventDate has a precision of a single year or finer and is within a single year, (4) dwc:startDayOfYear and dwc:endDayOfYear if they are bdq:Empty and dwc:eventDate has a precision of a day or better; otherwise NOT_AMENDED.
 
@@ -4055,7 +4055,7 @@ Acts upon  SingleRecord
 
 Proposes an amendment to the value of dwc:month as an integer between 1 and 12 inclusive.
 
-#### Specification
+#### Expected Response
 
 INTERNAL_PREREQUISITES_NOT_MET if dwc:month is bdq:Empty; AMENDED the value of dwc:month if it can be unambiguously interpreted as an integer between 1 and 12 inclusive; otherwise NOT_AMENDED
 
@@ -4092,7 +4092,7 @@ Acts upon  SingleRecord
 
 Proposes an amendment to the value of dwc:dateIdentified to a valid ISO date.
 
-#### Specification
+#### Expected Response
 
 INTERNAL_PREREQUISITES_NOT_MET if dwc:dateIdentified is bdq:Empty; AMENDED if the value of dwc:dateIdentified is not a properly formatted ISO 8601 date but is unambiguous and altered to be a valid ISO 8601 date; otherwise NOT_AMENDED.
 
@@ -4129,7 +4129,7 @@ Acts upon  SingleRecord
 
 Proposes an amendment to the value of dwc:degreeOfEstablishment using the bdq:sourceAuthority.
 
-#### Specification
+#### Expected Response
 
 EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:degreeOfEstablishment is bdq:Empty; AMENDED the value of dwc:degreeOfEstablishment if it can be unambiguously matched to a term in the bdq:sourceAuthority; otherwise NOT_AMENDED
 
@@ -4174,7 +4174,7 @@ Acts upon  SingleRecord
 
 Proposes an amendment to the value of dwc:establishmentMeans using the bdq:sourceAuthority.
 
-#### Specification
+#### Expected Response
 
 EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:establishmentMeans is bdq:Empty; AMENDED the value of dwc:establishmentMeans if it can be unambiguously matched to a term in the bdq:sourceAuthority; otherwise NOT_AMENDED
 
@@ -4215,7 +4215,7 @@ Acts upon  SingleRecord
 
 Proposes an amendment of the value of dwc:occurrenceStatus to the default parameter value if dwc:occurrenceStatus, dwc:individualCount and dwc:organismQuantity are empty.
 
-#### Specification
+#### Expected Response
 
 INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdq:NotEmpty; FILLED_IN the value of dwc:occurrenceStatus using the bdq:defaultOccurrenceStatus Parameter value if dwc:occurrenceStatus,dwc:individualCount and dwc:organismQuantity are bdq:Empty; otherwise NOT_AMENDED
 
@@ -4263,7 +4263,7 @@ Acts upon  SingleRecord
 
 Proposes an amendment to the value of dwc:occurrenceStatus using the bdq:sourceAuthority.
 
-#### Specification
+#### Expected Response
 
 EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:ocurrenceStatus is bdq:Empty; AMENDED the value of dwc:occurrenceStatus if it can be unambiguously interpreted as a value in the bdq:sourceAuthority; otherwise NOT_AMENDED
 
@@ -4308,7 +4308,7 @@ Acts upon  SingleRecord
 
 Proposes an amendment to the value of dwc:pathway using the bdq:sourceAuthority.
 
-#### Specification
+#### Expected Response
 
 EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:pathway is bdq:Empty; AMENDED the value of dwc:pathway if it can be unambiguously matched to a term in the bdq:sourceAuthority; otherwise NOT_AMENDED
 
@@ -4353,7 +4353,7 @@ Acts upon  SingleRecord
 
 Proposes an amendment to the value of dwc:sex using the bdq:sourceAuthority.
 
-#### Specification
+#### Expected Response
 
 EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:sex is bdq:Empty; AMENDED the value of dwc:sex if it can be unambiguously matched to a term in the bdq:sourceAuthority; otherwise NOT_AMENDED
 
@@ -4398,7 +4398,7 @@ Acts upon  SingleRecord
 
 Proposes an amendment to the value of dwc:typeStatus using the bdq:sourceAuthority.
 
-#### Specification
+#### Expected Response
 
 EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; AMENDED the value of the first word in each &#124; delimited portion of dwc:typeStatus if it can be unambiguously matched to a term in the bdq:sourceAuthority; otherwise NOT_AMENDED.
 
@@ -4443,7 +4443,7 @@ Acts upon  SingleRecord
 
 Proposes an amendment to the value of dwc:scientificNameID if it can be unambiguously resolved from bdq:sourceAuthority using the available taxon terms.
 
-#### Specification
+#### Expected Response
 
 EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is bdq:NotEmpty, or if all of dwc:scientificName, dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship, and dwc:cultivarEpithet are bdq:Empty, FILLED_IN the value of dwc:scientificNameID for an unambiguously resolved single taxon record in the bdq:sourceAuthority through (1) the value of dwc:scientificName or (2) if dwc:scientificName is bdq:Empty through values of the terms dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship and dwc:cultivarEpithet, or (3) if ambiguity produced by multiple matches in (1) or (2) can be disambiguated to a single Taxon using the values of dwc:subtribe, dwc:tribe, dwc:subgenus, dwc:genus, dwc:subfamily, dwc:family, dwc:superfamily, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:taxonID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID, dwc:taxonomicRank, and dwc:vernacularName; otherwise NOT_AMENDED
 
@@ -4491,7 +4491,7 @@ Acts upon  SingleRecord
 
 Proposes an amendment to the value of dwc:scientificName using the dwc:scientificNameID value from the bdq:sourceAuthority.
 
-#### Specification
+#### Expected Response
 
 EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is bdq:Empty, or dwc:scientificName is bdq:NotEmpty; FILLED_IN the value of dwc:scientificName if the value of dwc: scientificNameID could be unambiguously interpreted as a value in the bdq:sourceAuthority; otherwise NOT_AMENDED
 
@@ -4539,7 +4539,7 @@ Acts upon  SingleRecord
 
 Proposes an amendment to the value of dwc:taxonRank using the bdq:sourceAuthority.
 
-#### Specification
+#### Expected Response
 
 EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:taxonRank is bdq:Empty; AMENDED the value of dwc:taxonRank if it can be unambiguously matched to a term in the bdq:sourceAuthority; otherwise NOT_AMENDED
 

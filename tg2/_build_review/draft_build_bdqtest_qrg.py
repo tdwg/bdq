@@ -361,7 +361,7 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 			print()
 			print(row['Description'])
 			print()
-			print("#### Specification")
+			print("#### Expected Response")
 			print()
 			print(row['ExpectedResponse'])
 			print()
