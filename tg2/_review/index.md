@@ -309,8 +309,8 @@ There were many people who have made notable contributions at various times duri
 | iDigBio     | [Integrated Digitized BioCollections](https://www.idigbio.org/) |
 | IRI         | [Internationalized Resource Identifier](https://en.wikipedia.org/wiki/Internationalized_Resource_Identifier) |
 | ISO         | [International Standards Organization](https://www.iso.org/home.html) |
-| QA          | [Quality Assurance](https://en.wikipedia.org/wiki/Quality_assurance) |
-| QC          | [Quality Control](https://en.wikipedia.org/wiki/Quality_control) |
+| QA          | [Quality Assurance](docs/bdqffdq/index.md#3447-quality-assurance-normative) |
+| QC          | [Quality Control](docs/bdqffdq/index.md#3446-quality-control-normative) |
 | SDS         | [TDWG Standards Documentation Standard](https://www.tdwg.org/standards/sds/) |
 | TDWG        | [Biodiversity Information Standards](https://tdwg.org) |
 | TG1         | [Biodiversity Data Quality Interest Group - Task Group 1: Framework on Data Quality](https://github.com/tdwg/bdq/tree/master/tg1) |
