@@ -739,17 +739,17 @@ If a time zone is not included as a component of date and time, the date and tim
 
 Time of day is treated as out of scope for BDQ `Use Cases`. In cases where time zone data are important, dates within a `Multi Record` from multiple sources may have multiple plus or minus one day errors introduced. For example, the `event_date_qc` (Morris & Lowery 2025) `Implementation` of [AMENDMENT_EVENT_FROM_EVENTDATE](../terms/bdqtest/index.md#AMENDMENT_EVENT_FROM_EVENTDATE) contains the commented out block of code below that is pertinent to time zone issues. It would populate `dwc:eventTime` from `dwc:eventDate`, converting a local time in `dwc:eventDate` to UTC, where other blocks in the `Amendment` should, but may not have, taken account of a local time zone in populating `dwc:day`, `dwc:month`, `dwc:year`, `dwc:startDayOfYear` and `dwc:endDayOfYear`. The terms `dwc:day`, `dwc:month`, `dwc:year`, `dwc:startDayOfYear`, `dwc:endDayOfYear` and `dwc:eventTime` should all be consistent, but there aren't unit tests in place to confirm this.
 
-// Time could also be populated, but it isn't in scope for this issue.
-// Here is a minimal implementation,
-// which illustrates some issues in implementation (using Zulu Time or not, dealing with time in ranges...)
-if (DateUtils.isEmpty(eventTime)) {
+    // Time could also be populated, but it isn't in scope for this issue.
+    // Here is a minimal implementation,
+    // which illustrates some issues in implementation (using Zulu Time or not, dealing with time in ranges...)
+    if (DateUtils.isEmpty(eventTime)) {
         if (DateUtils.containsTime(eventDate)) {
                 String newTime = DateUtils.extractZuluTime(eventDate);
                 result.addResult("dwc:eventTime", newTime );
                 result.setResultState(ResultState.FILLED_IN);
             result.addComment("Added eventTime ["+ newTime +"] from eventDate ["+eventDate+"].");
         }
-}
+    }
 
 ![DateTime](https://imgs.xkcd.com/comics/datetime.png "DateTime")
 
