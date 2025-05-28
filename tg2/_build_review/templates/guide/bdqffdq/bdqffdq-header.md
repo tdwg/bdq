@@ -145,15 +145,15 @@ The Framework has an abstract concept of `Information Elements`. To frame Tests 
 
 #### 3.2.3 Concepts in the Framework, Test Types: Validation, Issue, Measure, Amendment (non-normative)
 
-The Framework defines four central concepts for describing and evaluating `Data Quality Needs`: `Validation`, `Issue`, `Measure`, and `Amendment`.
+The Framework defines four central concepts for describing and evaluating `Data Quality Needs`: `Validation`, `Issue`, `Measure`, and `Amendment`.  
 
 ![Diagram of Validation, Issue, Measure, and Amendment classes with DataQualityNeed as a parent node.](dataqualityneeds.png "The 4 central DataQualityNeed types in the Framework - Validation, Issue, Measure, and Amendment.")
 
-A `Validation` assesses compliance with a need. Data have quality if they are compliant with the requirements of the Validation Test. A `Validation` relates `Information Elements` and `Resource Types` with a `Specification` of exactly how to assess fitness of the data under some narrow `Criteria`, and themselves are assembled into `Validation Policies`, which are linked to other `Policies` to cover a description of the `Data Quality Needs` of a `Use Case`.
+A `Validation` assesses compliance with a need. Data have quality if they are compliant with the requirements of the Validation Test. A `Validation` relates `Information Elements` and `Resource Types` with a `Specification` of exactly how to assess fitness of the data under some narrow `Criteria`, and themselves are assembled into `Validation Policies`, which are linked to other `Policies` to cover a description of the `Data Quality Needs` of a `Use Case`.  Data have quality only with respect to some use, so `Validations` must be composed with `Use Cases` to be able to assess fitness for use.
 
 ![Diagram of the classes involved in expressing Data Quality Needs with Validations.](bdqffdq_data_quality_needs_validation.svg "Expressing `Data Quality Needs`: Validations.")
 
-`Issues` are the converse of `Validations`. Data lack quality if an `Issue` identifies a potential problem in the data that would require further human review to determine if the data have quality for some purpose.
+`Issues` are the converse of `Validations`. Data lack quality if an `Issue` identifies a potential problem in the data that would require further human review to determine if the data have quality for some purpose.  Like `Validations`, `Issues` relate `Information Elements` and `Resource Types` with a `Specification` of exactly how to assess fitness of the data under some `Use Case`.  No illustration is provided here, as the `Issue` concept is very similar to the `Validation` concept, but with a different focus on identifying potential problems rather than confirming compliance.  
 
 `Measures` make an aggregate summary of some specific aspect of data quality.
 
@@ -262,7 +262,7 @@ Below is a fragment in Turtle describing VALIDATION_COUNTRY_FOUND, composed of a
 
 ### 3.7 Cardinality of bdqffdq: terms (non-normative)
 
-The content of this section is non-normative, see the [Fitness for Use Framework Ontology](../../bdqffdq/index.md) document for related normative guidance. 
+The content of this section is non-normative, see the [Fitness for Use Framework Ontology](../../bdqffdq/index.md) document for related normative guidance.  These expectations are based on the mathematical formalization of the Fitness for Use Framework, and are intended to provide additional explanatory guidance on how class instances in `bdqffdq:` are expected to be related to each other through properties, failure to follow these expectations may result in an inability to use the Framework effectively.
 
 The expected relationships between classes in the Fitness for Use Framework can be expressed as cardinality statements. Selected cardinality statements are given here to provide additional explanatory guidance on how class instances in `bdqffdq:` are expected to be related to each other through object properties. Examples here are given for terms related to `Validations`.
 
