@@ -975,7 +975,7 @@ For synthetic Test Validation Data that could be conflated with actual data, see
 
 ### 8.1 Introduction to Validation (non-normative)
 
-A set of "Test Validation Data" accompanies the BDQ Test descriptors. These data are intended for implementers to use to evaluate whether or not their Test `Implementations` produce the expected `Response` values for a set of cases for each Test. Each Test `Specification` could be graphed as a flow chart with several paths, the Test Validation Data are intended to cover each node and each path within each Test `Specification` with at least a single case. These data are, however, not exhaustive unit Tests covering large numbers of edge cases, but rather a minimal set of Tests for expected behaviors.
+A set of "Test Validation Data" accompanies the BDQ Test descriptors. These data are intended for implementers to use to evaluate whether or not their Test implementations produce the expected `Response` values for a set of cases for each Test. Each Test specification could be graphed as a flow chart with several paths, the Test Validation Data are intended to cover each node and each path within each Test specification with at least a single case. These data are, however, not exhaustive unit Tests covering large numbers of edge cases, but rather a minimal set of Tests for expected behaviors.
 
 The Test Validation Data are organized as two flat CSV files. Each row in each file is intended for the single `Validation` of a single Test. The file has columns identifying the Test, the input data, the expected `Response.status`, `Response.result`, an example `Response.comment`, `Parameter` values (if any), and a set of [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021). Most of the terms for a given Test are `bdq:Empty`.
 
@@ -1052,7 +1052,7 @@ Both of these files have the same set of columns, but the latter has rows that c
 
 The non-printing characters file MUST only be edited with a tool that will maintain the non-printing characters.
 
-Both files have a header line identifying the `Specifications` as described in [Structure of the Test Validation Data (non-normative)](#82-structure-of-the-validation-data-non-normative).
+Both files have a header line identifying the columns as described in [Structure of the Test Validation Data (non-normative)](#82-structure-of-the-validation-data-non-normative).
 
 The `Response` when executed against a row as input is expected to contain "Response.status", "Response.result" and "Response.comment". An `Implementation` is expected to produce the exact `Response.status`, the exact `Response.result` (ignoring order of any key-value pairs for an `Amendment` `Response`), while `Response.comment` is an example of what a comment in English might look like.
 

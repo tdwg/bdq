@@ -163,7 +163,7 @@ A `Validation` assesses compliance with a need. Data have quality if they are co
 
 ![Diagram of the classes involved in expressing Data Quality Needs with Amendments.](bdqffdq_data_quality_needs_amendment.svg "Expressing Data Duality Needs: Amendments")
 
-Formally, in the `Data Quality Needs` level, the Framework starts with a `Use Case`, a framing of some use to which data may be put. `Use Cases` are related to the formal description of `Data Quality Needs` through `Policies` and `Contexts`. `Contexts` (`ContextualizedCriterion`, `ContextualizedDimension`, `ContextualizedEnhancement`, `ContextualizedIssue`) relate the `Specification` of a `Need Concept`, such as a `Validation`, to the `Information Elements` that need to be examined, and to the `Resource Type` that is operated on. Each of the Tests described in this standard has a formal `Specification` that includes each of these elements. A `Use Case` includes a set of `Policies`, `Policies` relate the `Use Case` to `Contexts`, `Contexts` link `Information Elements` to `Need Concepts` and to `Resource Types`, a `Need Concept` specifies what properties data must have to have quality. 
+Formally, in the `Data Quality Needs` level, the Framework starts with a `Use Case`, a framing of some use to which data may be put. `Use Cases` are related to the formal description of `Data Quality Needs` through `Policies` and `Contexts`. `Contexts` (`ContextualizedCriterion`, `ContextualizedDimension`, `ContextualizedEnhancement`, `ContextualizedIssue`) relate the `Specification` of a `Need Concept`, such as a `Validation`, to the `Information Elements` that need to be examined, and to the `Resource Type` that is operated on. Each of the Tests described in this standard has a formal specification that includes each of these elements. A `Use Case` includes a set of `Policies`, `Policies` relate the `Use Case` to `Contexts`, `Contexts` link `Information Elements` to `Need Concepts` and to `Resource Types`, a `Need Concept` specifies what properties data must have to have quality. 
 
 `Data Quality Needs` can relate to the data quality of single records (`bdqffdq:SingleRecord`) or of datasets (`bdqffdq:MultiRecord`).
 
@@ -174,11 +174,11 @@ Formally, in the `Data Quality Needs` level, the Framework starts with a `Use Ca
 The Fitness for Use Framework organizes data quality concepts into three core areas — Needs, Mechanisms, and Reports — which can be viewed as horizontal slices through the Framework (Veiga et al., 2017).
 
 **Data Quality Needs** begin with a `Use Case`, a formal description of a purpose for which data may be used. Each `Use Case` includes a set of `Policies`, which in turn relate to `Contexts`. `Contexts` (e.g., `ContextualizedCriterion`, `ContextualizedDimension`, `ContextualizedEnhancement`, `ContextualizedIssue`) specify the data quality requirement (Need), the relevant `Information Elements` (such as specific Darwin Core terms), and the `Resource Type` the requirement applies to. A 
-Need defines the properties data must have to be considered fit for use and may include ways to improve unfit data. The Tests described in this standard are formal `Specifications` of such Needs for BDQ purposes.
+Need defines the properties data must have to be considered fit for use and may include ways to improve unfit data. The Tests described in this standard are formal specifications of such Needs for BDQ purposes.
 
 **Data Quality Mechanisms** are formal descriptions of software or other tools that implement the Tests. They execute the `Specifications` defined in the Needs layer.
 
-**Data Quality Reports** are the outputs generated when `Mechanisms` are applied to data. The Tests include formal `Specifications` of `Assertions` that are expected to appear in these Reports.
+**Data Quality Reports** are the outputs generated when `Mechanisms` are applied to data. The Tests include formal specifications of `Assertions` that are expected to appear in these Reports.
 
 The Framework includes an abstract concept of `Information Elements`, which are concretely represented by specific Darwin Core terms within each Test to make evaluations practical.
 
