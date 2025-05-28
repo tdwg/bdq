@@ -177,11 +177,11 @@ In any technical treatment of the BDQ standard, a precise reference to a class o
 
 ### 1.8 Diagram of Classes and Properties (non-normative)
 
-The (non-normative) diagram below illustrating `Validation` related concepts across needs, solutions, and reports areas of the framework is intended to help understand the normative statements in section 2 below.  The diagram shows the relationships between `Validation`, `ValidationMethod`, and `ValidationAssertion` classes, as well as their connections to other classes such as `DataQualityNeed`, `DataQualitySolution`, and `DataQualityReport`.
+The (non-normative) diagram below illustrating `Validation` related concepts across needs, solutions, and reports areas of the framework is intended to help understand the normative statements in section 2 below.  The diagram shows the expected relationships among `Validation`, `ValidationMethod`, and `Specification` classes, as well as their expected connections to other subclasses of `DataQualityNeed`, `DataQualitySolution`, and `DataQualityReport`.  Section 2 below provides normative guidance on how properties are expected to be used to relate instances of these classes in a consistent way, as expectations limiting the open world assumptions of the RDF/OWL modeling of the `bdqffdq:` vocabulary.
 
 ![Diagram of Validation, ValidationMethod, and ValidationAssertion with related classes](../guide/bdqffdq/bdqffdq_data_quality_needs_solutions_report_validation.svg "Validation concepts in the Needs, Solutions, and Reports levels.")
 
-The use of classes and properties in [bdqtest:](../../dist/bdqtest.ttl) also follow the guidance provided in [2.1 Use of Properties (normative)](#21-use-of-properties-normative).  The blue (`DataQualityNeeds`) and green (`DataQualitySolutions`) concepts in this diagram illustrate how this guidance is used in bdqtest: to relate the set of terms used to define a `Validation`.  The tan (`DataQualityReports`) concepts in the diagram illustrate how a `ValidationAssertion` in a `DataQualityReport` can be related to a `Validation` and it's `Specification`.
+The use of classes and properties in [bdqtest:](../../dist/bdqtest.ttl) also follow the guidance provided in [2.1 Use of Properties (normative)](#21-use-of-properties-normative).  The blue (`DataQualityNeeds`) and green (`DataQualitySolutions`) concepts in this diagram illustrate how this guidance is used in `bdqtest:` to relate the set of terms used to define a `Validation`.  The tan (`DataQualityReports`) concepts in the diagram illustrate how a `ValidationAssertion` in a `DataQualityReport` can be related to a `Validation` and its `Specification`.
 
 ## 2 Use of Terms (normative) 
 
