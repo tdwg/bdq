@@ -201,6 +201,8 @@ The response of a `Validation` Test (i.e., an instance of a `bdqffdq:ValidationA
 3. A `Response.status` of "RUN_HAS_RESULT" when the prerequisites for running the Test have been met, and in this situation:
   - A `Response.result` of either "COMPLIANT" if the values of the `Information Elements` (`bdqffdq:InformationElement`) meet the `Criteria`, or "NOT_COMPLIANT" if they do not.
 
+In each case, a `Response.comment` MUST be present with text explaining to consumers of the `Data Quality Report` why the the Test produced this response in this case.
+
 #### 2.2.2 Issue Tests (normative)
 
 Each Issue Test is composed of an instance of `bdqffdq:Issue` (which expresses a data quality need in the abstract) with an instance of `bdqffdq:IssueMethod`, which links it to an instance of a `bdqffdq:Specification` (which gives details of how that data quality need is to be concretely assessed).
