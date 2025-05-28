@@ -53,7 +53,7 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
   - [1.4. Status of the Content of This Document (normative)](#14-status-of-the-content-of-this-document-normative)
   - [1.5 RFC 2119 key words (normative)](#15-rfc-2119-key-words-normative)
   - [1.6 Namespace Abbreviations (non-normative)](#16-namespace-abbreviations-non-normative)
-  - [1.7 Referring to Terms (normative)](#17-referring-to-terms-normative)<br>
+  - [1.7 Referring to Terms (normative)](#17-referring-to-terms-normative)
   
 [2. Parts of the Standard (non-normative)](#2-parts-of-the-standard-non-normative)
   - [2.1 BDQ Tests Quick Reference Guide (non-normative)](#21-quick-reference-guide-non-normative)
@@ -66,20 +66,21 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
   - [2.6 Distribution Files (non-normative)](#26-distribution-files-non-normative)
     - [2.6.1 Tests (non-normative)](#261-tests-non-normative)
     - [2.6.2 Test Validation Data (non-normative)](#262-test-validation-data-non-normative)
-    - [2.6.3 RDF Serializations of Controlled Vocabularies (non-normative)](#263-rdf-serializations-of-controlled-vocabularies-non-normative)
-    - [2.6.4 Java Implementation (non-normative)](#264-java-implementation-non-normative)<br>
+    - [2.6.3 Fitness For Use Framework (non-normative)](#263-fitness-for-use-framework-non-normative)
+    - [2.6.4 RDF Serializations of Controlled Vocabularies (non-normative)](#264-rdf-serializations-of-controlled-vocabularies-non-normative)
+    - [2.6.5 Java Implementation (non-normative)](#265-java-implementation-non-normative)
 
 [3. Design of the Tests (normative)](#3-design-of-the-tests-normative)
   - [3.1 Data Quality Control, Data Quality Assurance (normative)](#31-data-quality-control-data-quality-assurance-normative)
   - [3.2 When to Run Tests (normative)](#32-when-to-run-tests-normative)
   - [3.3 Results of Test Executions (normative)](#33-results-of-test-executions-normative)
-  - [3.4 Test Execution Environments and Workflows (non-normative)](#34-test-execution-environments-and-workflows-non-normative)<br>
+  - [3.4 Test Execution Environments and Workflows (non-normative)](#34-test-execution-environments-and-workflows-non-normative)
   
 [4. Contributions and Acknowledgments (non-normative)](#4-contributions-and-acknowledgments-non-normative)<br>
 [5. Acronyms (non-normative)](#5-acronyms-non-normative)<br>
 [6. Glossary (non-normative)](#6-glossary-non-normative)
   - [6.1 Term-Actions (non-normative)](#61-term-actions-non-normative)
-  - [6.2 General Glossary (non-normative)](#62-general-glossary-non-normative)<br>
+  - [6.2 General Glossary (non-normative)](#62-general-glossary-non-normative)
   
 [7. References (non-normative)](#7-references-non-normative)<br>
 [8. Cite BDQ (non-normative)](#8-cite-bdq-non-normative)
@@ -134,70 +135,90 @@ In any technical treatment of the BDQ standard, a precise reference to a class o
 This standard is comprised of the following documents and artifacts:
 
 ### 2.1 BDQ Tests Quick Reference Guide (non-normative)
-The Quick Reference Guide is a simple, informative reference and the first place to look for the most commonly used information about the Tests.<br>
-[**BDQ Tests Quick Reference Guide**](docs/terms/bdqtest/index.md)<br>
+
+The Quick Reference Guide is a simple, informative reference and the first place to look for the most commonly used information about the Tests.
+
+[**BDQ Tests Quick Reference Guide**](docs/terms/bdqtest/index.md)
 
 ### 2.2 Landing Pages (non-normative)
-The landing pages provide overviews of the subjects they cover and refer to more detailed information in associated documents. The details of the individual terms are provided in the corresponding term list documents. The controlled vocabulary term list documents also act as the landing pages for those vocabularies.<br>
-**The Biodiversity Data Quality (BDQ) Standard** - Overview of the BDQ standard. This page.<br>
-[**BDQ Tests and Assertions**](docs/bdqtest/index.md) - Overview of the Tests.<br>
-[**Fitness For Use Ontology**](docs/bdqffdq/index.md) - Overview of the Fitness for Use Framework.<br>
-[**BDQ Controlled Vocabulary List of Terms (bdq:)**](docs/list/bdq/index.md) (will be: https://bdq.tdwg.org/bdq)<br>
-[**Data Quality Criterion Controlled Vocabulary List of Terms (bdqcrit:)**](docs/list/bdqcrit/index.md) (will be: https://bdq.tdwg.org/bdqcrit)<br>
-[**Data Quality Dimension Controlled Vocabulary List of Terms (bdqdim:)**](docs/list/bdqdim/index.md) (will be: https://bdq.tdwg.org/bdqdim)<br>
-[**Data Quality Enhancement Controlled Vocabulary List of Terms (bdqenh:)**](docs/list/bdqdim/index.md) (will be: https://bdq.tdwg.org/bdqenh)<br>
+
+The landing pages provide overviews of the subjects they cover and refer to more detailed information in associated documents. The details of the individual terms are provided in the corresponding term list documents. The controlled vocabulary term list documents also act as the landing pages for those vocabularies.
+
+- **The Biodiversity Data Quality (BDQ) Standard** - Overview of the BDQ standard. This page.
+- [**BDQ Tests and Assertions**](docs/bdqtest/index.md) - Overview of the Tests.
+- [**Fitness For Use Ontology**](docs/bdqffdq/index.md) - Overview of the Fitness for Use Framework.
+- [**BDQ Controlled Vocabulary List of Terms (bdq:)**](docs/list/bdq/index.md) (will be: https://bdq.tdwg.org/bdq)
+- [**Data Quality Criterion Controlled Vocabulary List of Terms (bdqcrit:)**](docs/list/bdqcrit/index.md) (will be: https://bdq.tdwg.org/bdqcrit)
+- [**Data Quality Dimension Controlled Vocabulary List of Terms (bdqdim:)**](docs/list/bdqdim/index.md) (will be: https://bdq.tdwg.org/bdqdim)
+- [**Data Quality Enhancement Controlled Vocabulary List of Terms (bdqenh:)**](docs/list/bdqdim/index.md) (will be: https://bdq.tdwg.org/bdqenh)
 
 ### 2.3 Guides (non-normative)
-The Guides are explanatory documents targeting particular perspectives on the standard for particular audiences.<br>
-[**BDQ User's Guide**](docs/guide/users/index.md)<br>
-[**BDQ Implementer's Guide**](docs/guide/implementers/index.md)<br>
-[**Guide to Marking and Identifying Synthetic and Modified Data**](docs/guide/synthetic/index.md)<br>
-[**Fitness For Use Framework Ontology Guide**](docs/guide/bdqffdq/index.md)
+
+The Guides are explanatory documents targeting particular perspectives on the standard for particular audiences.
+
+- [**BDQ User's Guide**](docs/guide/users/index.md)
+- [**BDQ Implementer's Guide**](docs/guide/implementers/index.md)
+- [**Guide to Marking and Identifying Synthetic and Modified Data**](docs/guide/synthetic/index.md)
+- [**Fitness For Use Framework Ontology Guide**](docs/guide/bdqffdq/index.md)
 
 ### 2.4 Vocabularies (non-normative)
 #### 2.4.1 Foundational Vocabularies (non-normative)
-The Foundational Vocabularies cover the two main parts of the standard - the practical (the Tests) and the theoretical (the Framework).<br>
-[**Fitness For Use Framework Ontology List of Terms (bdqffdq:)**](docs/list/bdqffdq/index.md) - The definitions of terms in the bdqffdq: vocabulary.<br>
-[**Fitness For Use Framework Ontology Vocabulary Extension**](docs/extension/bdqffdq/index.md) - The axioms that extend the logic of the basic the bdqffdq: vocabulary.<br>
-[**BDQ Tests and Assertions List of Terms (bdqtest:)**](docs/list/bdqtest/index.md) - The complete list of terms that define the BDQ Tests.<br>
+
+The Foundational Vocabularies cover the two main parts of the standard - the practical (the Tests) and the theoretical (the Framework).
+
+- [**Fitness For Use Framework Ontology List of Terms (bdqffdq:)**](docs/list/bdqffdq/index.md) - The definitions of terms in the bdqffdq: vocabulary.
+- [**Fitness For Use Framework Ontology Vocabulary Extension**](docs/extension/bdqffdq/index.md) - The axioms that extend the logic of the basic the bdqffdq: vocabulary.
+- [**BDQ Tests and Assertions List of Terms (bdqtest:)**](docs/list/bdqtest/index.md) - The complete list of terms that define the BDQ Tests.
 
 #### 2.4.2 Supporting Vocabularies (non-normative)
-The Supporting Vocabularies are controlled vocabularies used in the technical definitions of the Tests.<br>
-[**BDQ Controlled Vocabulary List of Terms (bdq:)**](docs/list/bdq/index.md)<br>
-[**Data Quality Criterion Controlled Vocabulary List of Terms (bdqcrit:)**](docs/list/bdqcrit/index.md)<br>
-[**Data Quality Dimension Controlled Vocabulary List of Terms (bdqdim:)**](docs/list/bdqdim/index.md)<br>
-[**Data Quality Enhancement Controlled Vocabulary List of Terms (bdqenh:)**](docs/list/bdqenh/index.md)<br>
+
+The Supporting Vocabularies are controlled vocabularies used in the technical definitions of the Tests.
+
+- [**BDQ Controlled Vocabulary List of Terms (bdq:)**](docs/list/bdq/index.md)
+- [**Data Quality Criterion Controlled Vocabulary List of Terms (bdqcrit:)**](docs/list/bdqcrit/index.md)
+- [**Data Quality Dimension Controlled Vocabulary List of Terms (bdqdim:)**](docs/list/bdqdim/index.md)
+- [**Data Quality Enhancement Controlled Vocabulary List of Terms (bdqenh:)**](docs/list/bdqenh/index.md)
 
 ### 2.5 Supplemental Information (non-normative)
-Supplemental Information includes the rationale for, the history of, and the challenges met while describing the Tests.<br>
-[**BDQ Supplemental Information**](docs/supplement/index.md)
+
+Supplemental Information includes the rationale for, the history of, and the challenges met while describing the Tests.
+
+- [**BDQ Supplemental Information**](docs/supplement/index.md)
 
 ### 2.6 Distribution Files (non-normative)
 
 #### 2.6.1 Tests (non-normative)
-The Test definitions are provided in various serializations. Of these, the bdqtest_term_versions.csv is the canonical archive of all Tests versions, both recommended and historical. The documentation about the details of Tests for this standard are generated from this file.  CSV files listing just the current test versions are also provided,<br>
 
-[**Biodiversity Data Quality Fitness for Use Framework (Ontology)**](vocabulary/bdqffdq.owl)<br>
-[**CSV List of all Tests (bdqtest_term_versions.csv)**](vocabulary/bdqtest_term_versions.csv)<br>
-[**CSV List of (current) Single Record Tests**](dist/bdqtest_singlerecord_tests_current.csv)<br>
-[**CSV List of (current) Multi Record Tests**](dist/bdqtest_multirecord_tests_current.csv)<br>
-[**Tests in RDF/XML**](dist/bdqtest.xml)<br>
-[**Tests in Turtle**](dist/bdqtest.ttl)<br>
-[**Tests in JSON-LD**](dist/bdqtest.json)
+The Test definitions are provided in various serializations. Of these, the bdqtest_term_versions.csv is the canonical archive of all Tests versions, both recommended and historical. The documentation about the details of Tests for this standard are generated from this file.  CSV files listing just the current test versions are also provided,
+
+- [**CSV List of all Tests (bdqtest_term_versions.csv)**](vocabulary/bdqtest_term_versions.csv)
+- [**CSV List of (current) Single Record Tests**](dist/bdqtest_singlerecord_tests_current.csv)
+- [**CSV List of (current) Multi Record Tests**](dist/bdqtest_multirecord_tests_current.csv)
+- [**Tests in RDF/XML**](dist/bdqtest.xml)
+- [**Tests in Turtle**](dist/bdqtest.ttl)
+- [**Tests in JSON-LD**](dist/bdqtest.json)
 
 #### 2.6.2 Test Validation Data (non-normative)
-Test Validation Data are intended for implementers to use to evaluate whether Test Implementations produce the Expected Responses.<br>
 
-[**Test Validation Data**](docs/guide/implementers/TG2_test_validation_data.csv)<br>
-[**Test Validation Data for non-printing characters**](docs/guide/implementers/TG2_test_validation_data_nonprintingchars.csv)
+Test Validation Data are intended for implementers to use to evaluate whether Test Implementations produce the Expected Responses.
 
-#### 2.6.3 RDF Serializations of Controlled Vocabularies (non-normative)
-[**RDF/XML serialization of the bdq: terms**](dist/bdq.xml)<br>
-[**RDF/XML serialization of the bdqcrit: terms**](dist/bdqcrit.xml)<br>
-[**RDF/XML serialization of the bdqdim: terms**](dist/bdqdim.xml)<br>
-[**RDF/XML serialization of the bdqenh: terms**](dist/bdqenh.xml)
+- [**Test Validation Data**](docs/guide/implementers/TG2_test_validation_data.csv)
+- [**Test Validation Data for non-printing characters**](docs/guide/implementers/TG2_test_validation_data_nonprintingchars.csv)
 
-#### 2.6.4 Java Implementation (non-normative)
+#### 2.6.3 Fitness For Use Framework (non-normative)
+
+The Fittness For Use Framework is provided as an OWL ontology.
+
+- [**Biodiversity Data Quality Fitness for Use Framework (Ontology)**](vocabulary/bdqffdq.owl)
+
+#### 2.6.4 RDF Serializations of Controlled Vocabularies (non-normative)
+
+- [**RDF/XML serialization of the bdq: terms**](dist/bdq.xml)
+- [**RDF/XML serialization of the bdqcrit: terms**](dist/bdqcrit.xml)
+- [**RDF/XML serialization of the bdqdim: terms**](dist/bdqdim.xml)
+- [**RDF/XML serialization of the bdqenh: terms**](dist/bdqenh.xml)
+
+#### 2.6.5 Java Implementation (non-normative)
 
 While not part of the BDQ standard, a validated Java® implementation of the tests is provided in the [event_date_qc](https://github.com/FilteredPush/event_date_qc), [sci_name_qc](https://github.com/FilteredPush/sci_name_qc), [geo_ref_qc](https://github.com/FilteredPush/geo_ref_qc) and [rec_occur_qc](https://github.com/FilteredPush/rec_occur_qc) libraries.  Also see [bdqtestrunner](https://github.com/FilteredPush/bdqtestrunner/), which demonstrates conformance of these libraries with the provided [Test Validation Data](#262-test-validation-data-non-normative).      
 
