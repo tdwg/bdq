@@ -575,6 +575,8 @@ It is important that the chain of relationships from an instance of an `Assertio
 
 ## 5 List of Terms with axioms in the Fitness For Use Framework ontology (normative)
 
+This list brings together definitions of terms in the Fitness For Use Framework vocabulary, listed in more detail in [Fitness For Use Framework Ontology List of Terms](../../list/bdqffdq/index.md). with the additional axioms in the [Fitness For Use Framework Ontology Vocabulary Extension](../../extension/bdqffdq/index.md). 
+
 
 ### 5.1 Class terms (normative)
 #### AbstractInformationElement
