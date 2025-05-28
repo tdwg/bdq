@@ -149,10 +149,10 @@ The following namespace abbreviations are used in this document:
 | bdq:         | https://rs.tdwg.org/bdq/terms/              |
 | bdqtest:     | https://rs.tdwg.org/bdqtest/terms/          |
 | bdqdim:      | https://rs.tdwg.org/bdqdim/terms/           |
-| bdqffdq:     | https://rs.tdwg.org/bdqffdq/terms           |
+| bdqffdq:     | https://rs.tdwg.org/bdqffdq/terms/          |
 | owl:         | http://www.w3.org/2002/07/owl#              |
 | rdf:         | http://www.w3.org/1999/02/22-rdf-syntax-ns# |
-| rdfs:        | http://www.w3.org/2000/01/rdf-schema        |
+| rdfs:        | http://www.w3.org/2000/01/rdf-schema#       |
 
 ### 1.7 Key to Vocabulary Terms (normative)
 

@@ -78,14 +78,14 @@ The following namespace abbreviations are used in this document:
 | ------------ | -------------                               |
 | bdq:         | https://rs.tdwg.org/bdq/terms/              |
 | bdqtest:     | https://rs.tdwg.org/bdqtest/terms/          |
-| bdqffdq:     | https://rs.tdwg.org/bdqffdq/terms           |
+| bdqffdq:     | https://rs.tdwg.org/bdqffdq/terms/          |
 | dc:          | https://purl.org/dc/elements/1.1/           |
 | dcterms:     | http://purl.org/dc/terms/                   |
 | dwc:         | http://rs.tdwg.org/dwc/terms/               |
 | oa:          | https://www.w3.org/TR/annotation-vocab/     |
 | owl:         | http://www.w3.org/2002/07/owl#              |
 | rdf:         | http://www.w3.org/1999/02/22-rdf-syntax-ns# |
-| rdfs:        | http://www.w3.org/2000/01/rdf-schema        |
+| rdfs:        | http://www.w3.org/2000/01/rdf-schema#       |
 | skos:        | http://www.w3.org/2004/02/skos/core#        |
 | tdwgutility: | http://rs.tdwg.org/dwc/terms/attributes/    |
 | xsd:         | http://www.w3.org/2001/XMLSchema#           |
@@ -651,9 +651,9 @@ The development of the Tests and the vocabulary proceeded in parallel and inform
 
 After some years of work, our vocabularies and Tests were effectively merged with the Framework ontology. A good example of this evolution was the reformulation of Tests from 'negative' (having issues) to 'positive' (having quality). Tests such as VALIDATION_COUNTRY_NOTFOUND became [VALIDATION_COUNTRY_FOUND](../terms/bdqtest/index.md#VALIDATION_COUNTRY_FOUND). The independence of development of the Tests lead to improvements and clarifications in the Framework ontology. The BDQ Test development process identified very clear needs for Tests to be able to be parameterized and for Tests to be able to identify elements of the data that might be problematic for some `Use Case`. This lead to the introduction of the concepts of `bdqffdq:Parameter` and `bdqffdq:Issue`. The names of some terms in the ontology were very opaque, and names were not entirely consistent, so elements were renamed for clarity (e.g., "ContextualizedEnhancement" became `bdqffdq:Amendment`) and to follow consistent naming patterns.
 
-Once the vocabulary terms and their definitions had become stable, they were assigned to (or ported back into) specific namespaces: 
+Once the vocabulary terms and their definitions had become stable, they were assigned to (or ported back into) specific namespaces (following the pattern described in [TDWG Standards Metadata](https://tdwg.github.io/rs.tdwg.org/#3rd-level-iris-denoting-term-lists) with `terms` as the value of `sss`): 
 
-- bdqffdq: `https://rs.tdwg.org/bdqffdq/terms` for the ontology that forms the Framework for defining data quality
+- bdqffdq: `https://rs.tdwg.org/bdqffdq/terms/` for the ontology that forms the Framework for defining data quality
 - bdqdim: `https://rs.tdwg.org/bdqdim/terms/` for the `Data Quality Dimension` of the Tests
 - bdqcrit: `https://rs.tdwg.org/bdqcrit/terms/` for the `Criteria` of the `Validation` and `Issue` Tests
 - bdqenh: `https://rs.tdwg.org/bdqenh/terms/` for the `Enhancements` of the `Amendment` Tests

@@ -146,19 +146,19 @@ The following namespace abbreviations are used in this document:
 | bdqtest:     | https://rs.tdwg.org/bdqtest/terms/          |
 | bdqcrit:     | https://rs.tdwg.org/bdqcrit/terms/          |
 | bdqdim:      | https://rs.tdwg.org/bdqdim/terms/           |
-| bdqenh:      | https://rs.tdwg.org/bdqenh/terms            |
-| bdqffdq:     | https://rs.tdwg.org/bdqffdq/terms           |
+| bdqenh:      | https://rs.tdwg.org/bdqenh/terms/           |
+| bdqffdq:     | https://rs.tdwg.org/bdqffdq/terms/          |
 | dc:          | https://purl.org/dc/elements/1.1/           |
 | dcterms:     | http://purl.org/dc/terms/                   |
 | dwc:         | http://rs.tdwg.org/dwc/terms/               |
 | oa:          | https://www.w3.org/TR/annotation-vocab/     |
 | rdf:         | http://www.w3.org/1999/02/22-rdf-syntax-ns# |
-| rdfs:        | http://www.w3.org/2000/01/rdf-schema        |
+| rdfs:        | http://www.w3.org/2000/01/rdf-schema#       |
 | skos:        | http://www.w3.org/2004/02/skos/core#        |
 | xsd:         | http://www.w3.org/2001/XMLSchema#           |
 
 ### 1.7 Referring to Terms (normative)
-In any technical treatment of the BDQ standard, a precise reference to a class or property term SHOULD be made using its qualified name (the namespace prefix followed by the term local name; e.g., `bdqffdq:InformationElement`) and the namespace IRI corresponding to the namespace prefix (e.g., 'https://rs.tdwg.org/bdqffdq/terms' for `bdqffdq:`) MUST be provided. In less formal descriptions where the technical precision is not needed, the preferred label (skos:prefLabel, e.g., `Information Element`) or the term local name (e.g., `InformationElement`) MAY be used. You will find all of these methods of referring to BDQ-related terms throughout the BDQ documentation.
+In any technical treatment of the BDQ standard, a precise reference to a class or property term SHOULD be made using its qualified name (the namespace prefix followed by the term local name; e.g., `bdqffdq:InformationElement`) and the namespace IRI corresponding to the namespace prefix (e.g., 'https://rs.tdwg.org/bdqffdq/terms/' for `bdqffdq:`) MUST be provided. In less formal descriptions where the technical precision is not needed, the preferred label (skos:prefLabel, e.g., `Information Element`) or the term local name (e.g., `InformationElement`) MAY be used. You will find all of these methods of referring to BDQ-related terms throughout the BDQ documentation.
 
 ## 2 A Brief Context for the BDQ Tests (non-normative)
 
