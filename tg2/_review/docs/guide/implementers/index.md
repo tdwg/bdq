@@ -959,7 +959,7 @@ Results of the Biodiversity Data Quality (BDQ) Taxon Name-related Tests.
 
 ### 7.2 Annotations (normative)
 
-The `bdqffdq:` OWL representation of the [Fitness for Use Framework Ontology](../../bdqffdq/index.md) and the framing of the [BDQ Tests as RDF](../../../dist/bdq.xml) using that ontology make Test results particularly amenable to being wrapped in `Annotations` following the W3C Web Annotation Data Model (Sanderson et al. 2017). Test responses MAY be represented as `Annotations`.
+The `bdqffdq:` OWL representation of the [Fitness for Use Framework Ontology](../../bdqffdq/index.md) and the framing of the [BDQ Tests as RDF](../../../dist/bdq.xml) using that ontology make Test results particularly amenable to being wrapped in `Annotations` following the [W3C Web Annotation Data Model](https://www.w3.org/TR/annotation-model/) (Sanderson et al. 2017). Test responses MAY be represented as `Annotations`.
 
 The responses from Tests could be structured as elements that can be wrapped in the body `Annotation` document along with metadata from the Framework to describe which Test is being reported upon, and metadata within the target of the `Annotation` to describe which `DataResource` is being annotated, and the state it was in at the time of annotation.
 
