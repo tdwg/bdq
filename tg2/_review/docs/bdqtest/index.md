@@ -253,7 +253,7 @@ The response of an `Amendment` Test (an instance of a `bdqffdq:AmendmentAssertio
 2. A `Response.status` of "INTERNAL_PREREQUISITES_NOT_MET" when the values of one or more of the `Information Elements` are such that the Test cannot be meaningfully run.
 3. A `Response.status` of "FILLED_IN" when the prerequisites for running the Test have been met and a proposal is made to fill in a value for one or more input terms that were `Empty`, and in this situation:
   - A `Response.result` containing a list of key-value pairs of the terms for which values are to be filled in, and the proposed new values for those terms.
-3. A `Response.status` of "AMENDED" when the prerequisites for running the Test have been met and a proposal is made to change a value for one or more input terms that were Empty, and in this situation:
+4. A `Response.status` of "AMENDED" when the prerequisites for running the Test have been met and a proposal is made to change a value for one or more input terms that were Empty, and in this situation:
   - A `Response.result` containing a list of key-value pairs of the terms for which new values are proposed, and the proposed new values for those terms.
 
 In each case, a `Response.comment` MUST be present with text explaining to consumers of the `Data Quality Report` why the the Test produced this response in this case.
