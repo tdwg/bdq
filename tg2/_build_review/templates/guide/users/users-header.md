@@ -166,9 +166,9 @@ Data do not have quality in the abstract; they only have quality with respect to
 
 Tests for data quality may serve two purposes: Quality Control and Quality Assurance. 
 
-- In Quality Control, Tests are used to identify data that are not fit for particular uses, with the goal of improving the data quality.
+- In Quality Control (QC), Tests are used to identify data that are not fit for particular uses, with the goal of improving the data quality.
 
-- In Quality Assurance, data are evaluated for fitness for use (i.e., whether they meet the requirements of specific operational tasks) and are filtered accordingly so that only data that are fit for use are included.
+- In Quality Assurance (QA), data are evaluated for fitness for use (i.e., whether they meet the requirements of specific operational tasks) and are filtered accordingly so that only data that are fit for use are included.
 
 More broadly, the concept of fitness for purpose refers to whether data are adequate to support a given goal or objective beyond the immediate use — such as policy formulation, scientific modeling, or legal compliance. Achieving fitness for purpose may involve additional considerations such as provenance, trustworthiness, and completeness beyond what is required for fitness for use.
 
