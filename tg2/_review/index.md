@@ -54,6 +54,7 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
   - [1.5 RFC 2119 key words (normative)](#15-rfc-2119-key-words-normative)
   - [1.6 Namespace Abbreviations (non-normative)](#16-namespace-abbreviations-non-normative)
   - [1.7 Referring to Terms (normative)](#17-referring-to-terms-normative)
+  - [1.8 Notation Conventions (non-normative)](#18-notation-conventions-non-normative)
   
 [2. Parts of the Standard (non-normative)](#2-parts-of-the-standard-non-normative)
   - [2.1 BDQ Tests Quick Reference Guide (non-normative)](#21-quick-reference-guide-non-normative)
@@ -75,7 +76,6 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
   - [3.2 When to Run Tests (normative)](#32-when-to-run-tests-normative)
   - [3.3 Results of Test Executions (normative)](#33-results-of-test-executions-normative)
   - [3.4 Test Execution Environments and Workflows (non-normative)](#34-test-execution-environments-and-workflows-non-normative)
-  - [3.5 Notation Conventions (non-normative)](#35-notation-conventions-non-normative)
   
 [4. Contributions and Acknowledgments (non-normative)](#4-contributions-and-acknowledgments-non-normative)<br>
 [5. Acronyms (non-normative)](#5-acronyms-non-normative)<br>
@@ -135,6 +135,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 ### 1.7 Referring to Terms (normative)
 
 In any technical treatment of the BDQ standard, a precise reference to a class or property term SHOULD be made using its qualified name (the namespace prefix followed by the term local name; e.g., `bdqffdq:InformationElement`) and the namespace IRI corresponding to the namespace prefix (e.g., 'https://rs.tdwg.org/bdqffdq/terms' for `bdqffdq:`) MUST be provided. In less formal descriptions where the technical precision is not needed, the preferred label (skos:prefLabel, e.g., `Information Element`) or the term local name (e.g., `InformationElement`) MAY be used. You will find all of these methods of referring to BDQ-related terms throughout the BDQ documentation.
+
+### 1.8 Notation Conventions (non-normative)
+
+Throughout these descriptive documents, terms and phrases styled as inline code (e.g., `Validation`, `Information Element`, `Data Quality Need`) refer explicitly to classes, properties, or named individuals defined in the BDQ ontology bdqffdq: by their labels or by their term local name (e.g. `InformationElement').   Pluralized forms (e.g., `Data Quality Reports`) refer to multiple instances of the class. When a word that is also a bdqffdq class name is not styled in this way, it should be interpreted as a general English phrase or concept, not as a specific ontology term (for example, specification is general while `Specification' means `bdqffdq:Specification`, and implementation carries the general meaning while `Implementation' means `bdqffdq:Implementation`).  This convention is also used for qualified names such as `bdqffdq:InformationElement`, terms from other vocabularies, such as `dwc:countryCode`, and to denote some software artifacts such as `sci_name_qc`.
 
 ## 2. Parts of the Standard (non-normative)
 
@@ -258,10 +262,6 @@ A single validation step, with measures evaluating the results of the amendments
 Expanding on this single validation step, amendments can be run and their results fed back into a second phase of post-amendment validation, with measures again evaluating the results of validation of the input data if all changes proposed by amendments are accepted. Presentation of a data quality report would be an expected result from this workflow for Quality Control purposes, while using the Measures in the second step to filter data in a processing pipeline to just those that are fit for purpose for a particular use would be expected for Quality Assurance purposes.
 
 ![Diagram of workflow with pre-amendment validation+measure phase, followed by amendment phase, followed by post-amendment validation-measure phase](workflow_two_iterations.svg)
-
-### 3.5 Notation Conventions (non-normative)
-
-Throughout these descriptive documents, terms and phrases styled as inline code (e.g., `Validation`, `Information Element`, `Data Quality Need`) refer explicitly to classes, properties, or named individuals defined in the BDQ ontology bdqffdq: by their labels.   Pluralized forms (e.g., `Data Quality Reports`) refer to multiple instances of the class. When a term is not styled in this way, it should be interpreted as a general English phrase or concept, not as a specific ontology term (e.g. specification and `Specification', implementation and `Implementation').
 
 ## 4 Acknowledgments and Contributions (non-normative)
 
