@@ -75,6 +75,7 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
   - [3.2 When to Run Tests (normative)](#32-when-to-run-tests-normative)
   - [3.3 Results of Test Executions (normative)](#33-results-of-test-executions-normative)
   - [3.4 Test Execution Environments and Workflows (non-normative)](#34-test-execution-environments-and-workflows-non-normative)
+  - [3.5 Notation Conventions (non-normative)](#35-notation-conventions-non-normative)
   
 [4. Contributions and Acknowledgments (non-normative)](#4-contributions-and-acknowledgments-non-normative)<br>
 [5. Acronyms (non-normative)](#5-acronyms-non-normative)<br>
@@ -260,7 +261,7 @@ Expanding on this single validation step, amendments can be run and their result
 
 ### 3.5 Notation Conventions (non-normative)
 
-Throughout these descriptive documents, terms and phrases enclosed in backticks (e.g., `Validation`, `Information Element`, `Data Quality Need`) refer explicitly to classes, properties, or named individuals defined in the BDQ ontology bdqffdq: by their labels.   Pluralized forms (e.g., `Data Quality Reports`) refer to multiple instances of the class. When a term is not enclosed in backticks, it should be interpreted as a general English phrase or concept, not as a specific ontology term (e.g. specification and `Specification', implementation and `Implementation').
+Throughout these descriptive documents, terms and phrases styled as inline code (e.g., `Validation`, `Information Element`, `Data Quality Need`) refer explicitly to classes, properties, or named individuals defined in the BDQ ontology bdqffdq: by their labels.   Pluralized forms (e.g., `Data Quality Reports`) refer to multiple instances of the class. When a term is not styled in this way, it should be interpreted as a general English phrase or concept, not as a specific ontology term (e.g. specification and `Specification', implementation and `Implementation').
 
 ## 4 Acknowledgments and Contributions (non-normative)
 
