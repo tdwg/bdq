@@ -150,7 +150,7 @@ The landing pages provide overviews of the subjects they cover and refer to more
 - [**BDQ Controlled Vocabulary List of Terms (bdq:)**](docs/list/bdq/index.md) (will be: https://bdq.tdwg.org/bdq)
 - [**Data Quality Criterion Controlled Vocabulary List of Terms (bdqcrit:)**](docs/list/bdqcrit/index.md) (will be: https://bdq.tdwg.org/bdqcrit)
 - [**Data Quality Dimension Controlled Vocabulary List of Terms (bdqdim:)**](docs/list/bdqdim/index.md) (will be: https://bdq.tdwg.org/bdqdim)
-- [**Data Quality Enhancement Controlled Vocabulary List of Terms (bdqenh:)**](docs/list/bdqdim/index.md) (will be: https://bdq.tdwg.org/bdqenh)
+- [**Data Quality Enhancement Controlled Vocabulary List of Terms (bdqenh:)**](docs/list/bdqenh/index.md) (will be: https://bdq.tdwg.org/bdqenh)
 
 ### 2.3 Guides (non-normative)
 
