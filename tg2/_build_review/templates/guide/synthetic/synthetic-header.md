@@ -48,7 +48,7 @@
 
 ### 1.1 Purpose (non-normative)
 
-The purpose of this document is to provide guidance for marking and identifying synthetic or modified biodiversity data that has been created for the purpose of validating BDQ Test `Implementations`. It establishes conventions for distinguishing such artificial or altered data from authentic biodiversity occurrence records, ensuring that validation datasets are not unintentionally incorporated into biodiversity analyses or downstream data pipelines.
+The purpose of this document is to provide guidance for marking and identifying synthetic or modified biodiversity data that has been created for the purpose of validating BDQ Test implementations. It establishes conventions for distinguishing such artificial or altered data from authentic biodiversity occurrence records, ensuring that validation datasets are not unintentionally incorporated into biodiversity analyses or downstream data pipelines.
 
 The document specifies how to explicitly mark validation data, including wholly synthetic records, real-world data with synthetic modifications, and real data reused for illustrative or example purposes. These practices support the integrity of analytical results and uphold trust in biodiversity data platforms.
 
@@ -56,7 +56,7 @@ The document specifies how to explicitly mark validation data, including wholly 
 
 This document is intended for two primary audiences:
 
-- Dataset creators preparing synthetic or modified datasets to test or validate BDQ Test `Implementations`, who need to mark those datasets appropriately
+- Dataset creators preparing synthetic or modified datasets to test or validate BDQ Test implementations, who need to mark those datasets appropriately
 - Aggregators and data consumers, including biodiversity researchers and system integrators, who need to recognize and exclude synthetic or altered data to avoid contaminating biodiversity analyses.
 
 The document assumes a working familiarity with biodiversity data concepts, but no prior knowledge of BDQ Test internals is required.
@@ -82,15 +82,15 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 
 ## 2 Synthetic and Example Data (normative)
 
-Implementers of BDQ Tests, and other tests of biodiversity data quality may wish to use datasets containing known errors and issues for the purposes of testing the behavior of their Test `Implementations` and to validate that they perform as expected. To do so, they may wish to create modified example data or synthetic data into which known errors have been introduced (and then see if Test `Implementations` correctly identify those errors). To reduce the risk of such modified or synthetic data being mingled with actual biodiversity data in analyses, such data SHOULD BE marked in a consistent manner known to consumers of such data.
+Implementers of BDQ Tests, and other tests of biodiversity data quality may wish to use datasets containing known errors and issues for the purposes of testing the behavior of their Test implementations and to validate that they perform as expected. To do so, they may wish to create modified example data or synthetic data into which known errors have been introduced (and then see if Test implementations correctly identify those errors). To reduce the risk of such modified or synthetic data being mingled with actual biodiversity data in analyses, such data SHOULD BE marked in a consistent manner known to consumers of such data.
 
 ### 2.1 Identifying Example Data (normative)
 
-Datasets consisting of partly or wholly synthetic data, including datasets into which errors have been deliberately introduced, may be used to test, validate, and demonstrate the operation of `Implementations` of data quality Tests. It is important that such synthetic and modified data not become conflated with actual biodiversity data in analyses. The following processes SHOULD be followed to identify original, modified, and synthetic example biodiversity data.
+Datasets consisting of partly or wholly synthetic data, including datasets into which errors have been deliberately introduced, may be used to test, validate, and demonstrate the operation of implementations of data quality Tests. It is important that such synthetic and modified data not become conflated with actual biodiversity data in analyses. The following processes SHOULD be followed to identify original, modified, and synthetic example biodiversity data.
 
 ### 2.2 Data Fragments and dwc:Occurrence Datasets (normative)
 
-Inputs to unit tests and testing frameworks for individual Test `Implementations` are likely to be organized as fragments of `dwc:Occurrence` data not easily mistaken for actual data. A record forming a fragment of a `dwc:Occurrence` record for validating the behaviour of the `Implementation` of a particular Test SHOULD only contain the set of terms that form the `Information Element` for a particular Test, along with Test `Parameters`, expected outputs, and related metadata, and SHOULD NOT contain values in other [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) not relevant to the Test under consideration, except data fragments MAY be marked as synthetic by adding the term values described in 6.6.3 and 6.6.4. Testing frameworks MAY take as input more complete Darwin Core records, and when these are partly or wholly synthetic, they MUST be identified as synthetic, and MUST be treated as synthetic by consumers.
+Inputs to unit tests and testing frameworks for individual Test implementations are likely to be organized as fragments of `dwc:Occurrence` data not easily mistaken for actual data. A record forming a fragment of a `dwc:Occurrence` record for validating the behaviour of the implementation of a particular Test SHOULD only contain the set of terms that form the `Information Element` for a particular Test, along with Test `Parameters`, expected outputs, and related metadata, and SHOULD NOT contain values in other [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) not relevant to the Test under consideration, except data fragments MAY be marked as synthetic by adding the term values described in 6.6.3 and 6.6.4. Testing frameworks MAY take as input more complete Darwin Core records, and when these are partly or wholly synthetic, they MUST be identified as synthetic, and MUST be treated as synthetic by consumers.
 
 ### 2.3 Real Data Used as Examples (normative)
 
@@ -138,7 +138,7 @@ B. Each modified record MUST provide an identifier for the synthetic record. For
 
 ## 3 BDQ Validation Data (non-normative) 
 
-The BDQ standard includes two datasets for the validation of Test `Implementations`. These are sparsely populated data fragments unlikely to be mistaken for real data, and are not marked. 
+The BDQ standard includes two datasets for the validation of Test implementations. These are sparsely populated data fragments unlikely to be mistaken for real data, and are not marked. 
 
   - File: [Test Validation Data](../implementers/TG2_test_validation_data.csv "Test Validation Data CSV file")
   - File: [Test Validation Data for non-printing characters](../implementers/TG2_test_validation_data_nonprintingchars.csv "Test Validation Data CSV file for testing implementations of bdq:Empty, containing non-printing characters")
