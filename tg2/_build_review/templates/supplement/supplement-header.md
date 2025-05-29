@@ -799,17 +799,41 @@ Supplementary Tests have been exported to a CSV list and have RDF representation
 
 The tag 'NEEDS WORK' was repeatedly added and removed to issues and was a valuable support for the evaluation of Tests in repeated feedback loops that included: Frame the description of a Test, independently produce validation data and an implementation, run the implementation against the validation data, evaluate cases where the expectations in the validation data differ from the Test results (which could be a defect in the implementation, in the validation data, or a problem in the Test specification), discuss as a group, make changes as needed, and repeat.
 
-#### 5.2.1 Diagram of the NAME-oriented Tests and Information Elements Acted Upon (non-normative)
+### 5.2.1 Exploring relationships among tests (non-normative)
+
+The following diagrams of tests illustrate sets of tests that examine related `Information Elements: Acted Upon`, highlighting cases where several tests evaluate different quality properties of the same term.
+
+These diagrams could be used to assist in constructions of assertions in the form: 
+
+...
+VALIDATION_TAXONRANK_STANDARD targetedValidation of AMENDMENT_TAXONRANK_STANDARDIZED
+VALIDATION_COUNTRYCODE_STANDARD targetedValidation of AMENDMENT_COUNTRYCODE_FROM_COORDINATES
+VALIDATION_BASISOFRECORD_STANDARD targetedValidation of AMENDMENT_BASISOFRECORD_STANDARDIZED
+...
+
+#### 5.2.1.1 Diagram of the NAME-oriented Tests and Information Elements Acted Upon (non-normative)
+
 ![Diagram of the 'NAME'-oriented tests and Information Elements Acted Upon.](TestsName.png "NAME by Information Elements")
 
-#### 5.2.2 Diagram of the SPACE-oriented Tests and Information Elements Acted Upon (non-normative)
+This diagram illustrates the relationships among the Tests that are oriented towards the `dwc:Taxon` class, and the `Information Elements: Acted Upon` that are targeted by those Tests. The Tests in this diagram are all related to the `dwc:Taxon` class, and include `Validation`, `Issue`, `Measure`, and `Amendment` Tests. The diagram illustrates how these Tests interact with each other and with the `Information Elements: Acted Upon`.
+
+#### 5.2.1.2 Diagram of the SPACE-oriented Tests and Information Elements Acted Upon (non-normative)
+
 ![Diagram of the 'SPACE'-oriented tests and Information Elements Acted Upon.](TestsSpace.png "SPACE by Information Elements")
 
-#### 5.2.3 Diagram of the TIME-oriented Tests and Information Elements Acted Upon (non-normative)
+This diagram illustrates the relationships among the Tests that are oriented towards the `dwc:Location` class, and the `Information Elements: Acted Upon` that are targeted by those Tests. The Tests in this diagram are all related to the `dwc:Location` class, and include selected `Validation`, `Issue`, and `Amendment` Tests. The diagram illustrates how these Tests interact with each other and with the `Information Elements: Acted Upon`.
+
+#### 5.2.1.3 Diagram of the TIME-oriented Tests and Information Elements Acted Upon (non-normative)
+
 ![Diagram of the 'TIME'-oriented tests and Information Elements Acted Upon.](TestsTime.png "TIME by Information Elements")
 
-#### 5.2.4 Diagram of the OTHER-oriented Tests and Information Elements Acted Upon (non-normative)
+This diagram illustrates the relationships among the Tests that are oriented towards the `dwc:Event` class, and the `Information Elements: Acted Upon` that are targeted by those Tests. The Tests in this diagram are all related to the `dwc:Event` class, and include selected `Validation`, `Issue`, `Measure`, and `Amendment` Tests. The diagram illustrates how these Tests interact with each other and with the `Information Elements: Acted Upon`.
+
+#### 5.2.1.4 Diagram of the OTHER-oriented Tests and Information Elements Acted Upon (non-normative)
+
 ![Diagram of the 'OTHER'- oriented tests and Information Elements Acted Upon.](TestsOther.png "OTHER by Information Elements")
+
+This diagram illustrates the relationships among the Tests that are oriented towards Darwin Core metadata terms, and the `Information Elements: Acted Upon` that are targeted by those Tests. The Tests in this diagram are all related to metadata terms, and include selected `Validation`, `Issue`, and `Amendment` Tests. The diagram illustrates how these Tests interact with each other and with the `Information Elements: Acted Upon`.
 
 ### 5.3 Using Markdown Tables in GitHub Issues to Develop Test descriptors (non-normative)
 
@@ -868,7 +892,7 @@ Example: For [AMENDMENT_SCIENTIFICNAMEID_FROM_TAXON](../terms/bdqtest/index.md#A
 
 ## 6 Code for BDQ Components (non-normative)
 
-The specifications for the BDQ Tests were developed in Markdown Tables in GitHub issues (initially created by Alex Thompson by using the GitHub API from a spreadsheet of Tests developed in the BDQ TG2 Gainesville meeting). It was recognised early on that these would also need to be serialized to CSV (and later that this CSV would need to become a term-version file), so code was written (Python by Lee Belbin, and Java (`bdq_issue_to_csv` (Morris 2025))) to extract the Markdown tables to CSV lists of Tests. The descriptors in the issue Markdown tables changed over time, and the columns in the CSV also changed over time (most markedly in late 2024 while preparing the BDQ standard for submission). The `kurator-ffdq` (Lowery et al. 2025) code developed by David Lowery is capable of loading a CSV list of Test descriptors into a set of Java classes that can be serialized as RDF. This code was maintained and the configuration changed over time to accomodate changes in the Test CSV file. `Kurator-ffdq` was regularly used to produce RDF representations of the Tests. `Kurator-ffdq` is also able to generate stub Java (and Python) methods, and this functionality was used to add Tests to and maintain four FilteredPush/Kurator libraries of Test implementations.
+The specifications for the BDQ Tests were developed in Markdown Tables in GitHub issues (initially created by Alex Thompson by using the GitHub API from a spreadsheet of Tests developed in the BDQ TG2 Gainesville meeting). It was recognised early on that these would also need to be serialized to CSV (and later that this CSV would need to become a term-version file), so code was written (Python by Lee Belbin, and Java (`bdq_issue_to_csv` (Morris 2025))) to extract the Markdown tables to CSV lists of Tests. The descriptors in the issue Markdown tables changed over time, and the columns in the CSV also changed over time (most markedly in late 2024 while preparing the BDQ standard for submission). The `kurator-ffdq` (Lowery et al. 2025) code developed by David Lowery is capable of loading a CSV list of Test descriptors into a set of Java classes that model bdqffdq: and can serialize instances as RDF. This code was maintained and the configuration changed over time to accomodate changes in the Test CSV file. `Kurator-ffdq` was regularly used to produce RDF representations of the Tests. `Kurator-ffdq` is also able to generate stub Java (and Python) methods, and this functionality was used to add Tests to and maintain four FilteredPush/Kurator libraries of Test implementations.
 
 The preparation for public review of the BDQ standard was built with the following three sets of shell scripts:
 
