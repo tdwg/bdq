@@ -480,7 +480,7 @@ Note: `Issue` concepts would parallel `Validation` concepts, but are not shown f
 
 ##### 3.4.2.7 Acceptable Data Quality Measure (normative)
 
-     MEaq(me) = {va | me ∈ C D ⋀ va ⊂ C C}
+     MEaq(me) = {va | me ∈ VA ⋀ va ⊂ ME}
 
      meaq(me1) = {va1, va2}
 
@@ -552,7 +552,7 @@ Note: This is a representation of the `Multi Record` `Measures` that return COMP
      a(dr1) = {dqm1, dqm2, dqm3, dqv1, dqa1}
 
 ##### 3.4.4.6 Quality Control (normative)
-     QC(dr) = {dqv(dr) ⋃ dqa(dr) | dqv ∈ DQV , dqa ∈ DQI ⋀ dr ∈ DR}
+     QC(dr) = {dqv(dr) ⋃ dqa(dr) | dqv ∈ DQV , dqa ∈ DQA ⋀ dr ∈ DR}
 
      qc(dr1) = {dqv1, dqa1}
 
