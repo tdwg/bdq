@@ -71,7 +71,7 @@ Draft Standard for Review
 
 ### 1.1 Purpose (non-normative)
 
-The purpose of this document is to provide guidance for marking and identifying synthetic or modified biodiversity data that has been created for the purpose of validating BDQ Test implementations. It establishes conventions for distinguishing such artificial or altered data from authentic biodiversity occurrence records, ensuring that validation datasets are not unintentionally incorporated into biodiversity analyses or downstream data pipelines.
+The purpose of this document is to provide guidance for marking and identifying synthetic or modified biodiversity data that has been created for purposes such as validating BDQ Test implementations. It establishes conventions for distinguishing such artificial or altered data from authentic biodiversity occurrence records, ensuring that validation datasets are not unintentionally incorporated into biodiversity analyses or downstream data pipelines.
 
 The document specifies how to explicitly mark validation data, including wholly synthetic records, real-world data with synthetic modifications, and real data reused for illustrative or example purposes. These practices support the integrity of analytical results and uphold trust in biodiversity data platforms.
 
@@ -79,7 +79,7 @@ The document specifies how to explicitly mark validation data, including wholly 
 
 This document is intended for two primary audiences:
 
-- Dataset creators preparing synthetic or modified datasets to test or validate BDQ Test implementations, who need to mark those datasets appropriately
+- Dataset creators preparing synthetic or modified datasets to test or validate data quality code implementations, who need to mark those datasets appropriately
 - Aggregators and data consumers, including biodiversity researchers and system integrators, who need to recognize and exclude synthetic or altered data to avoid contaminating biodiversity analyses.
 
 The document assumes a working familiarity with biodiversity data concepts, but no prior knowledge of BDQ Test internals is required.
