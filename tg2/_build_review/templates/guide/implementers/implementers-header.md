@@ -48,7 +48,7 @@
 
 ### 1.1 Purpose (non-normative)
 
-The purpose of this document is to provide implementation guidance for software developers and systems architects building tools or workflows that conform to the BDQ standard. It explains how to interpret and operationalize the BDQ Test `Specifications`, including the semantics of inputs and outputs, expected behaviors, parameter handling, dependency resolution, and result reporting.
+The purpose of this document is to provide implementation guidance for software developers and systems architects building tools or workflows that conform to the BDQ standard. It explains how to interpret and operationalize the BDQ Test specifications, including the semantics of inputs and outputs, expected behaviors, parameter handling, dependency resolution, and result reporting.
 
 This guide supports consistent, standards-compliant implementations across various environments by clarifying technical aspects of the Tests, detailing extension points, and describing validation procedures using shared datasets. It includes both normative content necessary for implementation conformance and non-normative advice for implementers seeking efficiency, clarity, and compatibility.
 
@@ -147,13 +147,13 @@ The definition of `bdq:Empty` is not applicable to a discussion of what value to
 
 The evaluation of `bdq:Empty` MUST be at the point of evaluation of the Test. This allows the Tests to be independent of data serializations for transport and the representation of data in Test execution environments. 
 
-In the BDQ standard, `bdq:Empty` is used to evaluate `bdqffdq:InformationElements` within a Test `Specification`, it therefore means empty if the dataset being evaluated does not contain the term matching the `Information Element`, or if the dataset contains that term but the value for that term is empty. This is to allow the application programming interface expressed by the Test `bdqffdq:DataQualityNeed` to be agnostic about the structure presented to a framework for executing the Tests. 
+In the BDQ standard, `bdq:Empty` is used to evaluate `bdqffdq:InformationElements` within a Test specification, it therefore means empty if the dataset being evaluated does not contain the term matching the `Information Element`, or if the dataset contains that term but the value for that term is empty. This is to allow the application programming interface expressed by the Test `bdqffdq:DataQualityNeed` to be agnostic about the structure presented to a framework for executing the Tests. 
 
 For CSV data, a column is either there or not in a dataset, but in an RDF representation, some data objects could have relevant properties and others not - and the Tests are independent of that.
 
 #### 2.2.2 Example Implementation of a Function to Assess Empty (non-normative)
 
-Here is a Java function to evaluate Empty, using trim() to exclude U+0020 (space), U+000A (LF), U+000D (CR) and the other non-printing characters in the unicode range U+0000 to U+0020, and also evaluating null as Empty. Test implementations can reuse a function like this for any Test that evaluates `bdq:Empty` in its `Specification`.
+Here is a Java function to evaluate Empty, using trim() to exclude U+0020 (space), U+000A (LF), U+000D (CR) and the other non-printing characters in the unicode range U+0000 to U+0020, and also evaluating null as Empty. Test implementations can reuse a function like this for any Test that evaluates `bdq:Empty` in its specification (`hasExpectedResponse`).
 
     public boolean isEmpty(String aString)  {
         boolean result = true;
@@ -197,6 +197,7 @@ The descriptions of the Tests are complex. The following are the most important 
 #### 2.3.2 Reading a Specification (non-normative)
 
 Consider these properties of an example `Specification` (for the `Validation` [VALIDATION_PHYLUM_FOUND](../../terms/bdqtest/index.md#VALIDATION_PHYLUM_FOUND)): 
+
 hasExpectedResponse: 
 ```
 EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:phylum is bdq:Empty; COMPLIANT if the value of dwc:phylum is found as a value at the rank of Phylum in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
@@ -228,11 +229,11 @@ We regularly (particularly in examples) use `Response`, `Response.status`, `Resp
 
 ##### 2.3.2.2 Guidance for Reading a Specification (normative)
 
-A `bdqffdq:hasExpectedResponse` property of a `bdqffdq:Specification` provides expectations for the behavior of an implementation of a Test. A `bdqffdq:hasExpectedResponse` consists of a sequence of blocks of "RESPONSE, criteria;" Where a few `Amendment` Tests can propose values for multiple [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021), the "criteria" is a sequence of options for that "RESPONSE"". When reading a `Specification`, implementers SHOULD read each block in sequence, evaluating each of the "criteria" in sequence, and return the first response for which the specified "criteria" are met. An exception to this is the placement of EXTERNAL_PREREQUISITES_NOT_MET as the first "RESPONSE" in the `Specification`. This does not imply that the responsiveness of an external resource should be assessed first. Implementers MAY handle failure of an external resource in any appropriate manner, for example, with exception handling.
+A `bdqffdq:hasExpectedResponse` property of a `bdqffdq:Specification` provides expectations for the behavior of an implementation of a Test. A `bdqffdq:hasExpectedResponse` consists of a sequence of blocks of "RESPONSE, criteria;" Where a few `Amendment` Tests can propose values for multiple [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021), the "criteria" is a sequence of options for that "RESPONSE"". When reading a specification (`hasExpectedResponse`), implementers SHOULD read each block in sequence, evaluating each of the "criteria" in sequence, and return the first response for which the specified "criteria" are met. An exception to this is the placement of EXTERNAL_PREREQUISITES_NOT_MET as the first "RESPONSE" in the specification. This does not imply that the responsiveness of an external resource should be assessed first. Implementers MAY handle failure of an external resource in any appropriate manner, for example, with exception handling.
 
 ##### 2.3.2.3 Further Guidance for Reading a Specification (non-normative)
 
-`Responses` in a `Specification` are expressed in a concise and abbreviated form for readability by implementers, expanding these to string properties on a `Response` object gives:
+`Responses` in a `hasExpectedResponse` property of a `Specification` are expressed in a concise and abbreviated form for readability by implementers, expanding these to string properties on a `Response` object gives:
 
 EXTERNAL_PREREQUISITES_NOT_MET means 
 ```
@@ -349,13 +350,13 @@ This library also includes a method whose signature does not include the paramet
 
 #### 2.3.3 The Concept of "interpreted as" (normative)
 
-In the `Specifications` the phrase "interpreted as" SHOULD BE interpreted by Implementers to mean: 
+In the `hasExpectedResponses` of `Specifications` the phrase "interpreted as" SHOULD BE interpreted by Implementers to mean: 
 
 1. where Darwin Core (Wieczorek et al. 2012) data are serialized as strings, but the Test refers to data as numeric or other non-string data type, can the string value be cast into the target data type in the language of implementation (e.g., "1" as the integer 1), **or**
 2. matching a representation of a value unambiguously onto a controlled vocabulary (e.g., ‘WGS84’ to ’EPSG:4326’), **or**
 3. interpreting the representation of a numeric value (e.g., a Roman numeral) as a number (e.g., an integer).
 
-When interpretations of strings containing Roman numerals as numbers is intended, guidance associated with the text, usually in the `skos:note` for the Test, MUST be explicit about this meaning. For example, the `skos:note` for the Test [AMENDMENT_MONTH_STANDARDIZED](../../terms/bdqtest/index.md#AMENDMENT_MONTH_STANDARDIZED) states: "Implementations should translate interpretable Roman numerals in the range I-XII in dwc:month as integer month values 1-12, as some natural science domains use Roman numeral months to avoid language and day/month vs month/day order." This is explicit guidance for the meaning of "interpreted as" in the `Specification` for this Test: "AMENDED the value of dwc:month if it can be unambiguously interpreted as an integer between 1 and 12 inclusive".
+When interpretations of strings containing Roman numerals as numbers is intended, guidance associated with the text, usually in the `skos:note` for the Test, MUST be explicit about this meaning. For example, the `skos:note` for the Test [AMENDMENT_MONTH_STANDARDIZED](../../terms/bdqtest/index.md#AMENDMENT_MONTH_STANDARDIZED) states: "Implementations should translate interpretable Roman numerals in the range I-XII in dwc:month as integer month values 1-12, as some natural science domains use Roman numeral months to avoid language and day/month vs month/day order." This is explicit guidance for the meaning of "interpreted as" in the specification for this Test: "AMENDED the value of dwc:month if it can be unambiguously interpreted as an integer between 1 and 12 inclusive".
 
 #### 2.3.4 Handling Leading and Trailing Whitespace (normative)
 
@@ -371,7 +372,7 @@ In `bdqffdq:Validation` Tests that require the lookup of a `bdq:sourceAuthority`
 
 ## 3 Compliant Implementation (normative)
 
-The BDQ standard defines a library of Tests that can be used in `Data Quality Reports` and in Data Quality Assurance. However, the Tests can not assert or assure quality independently of a `Use Case`. A `Use Case` defining a suite of Tests needed to assert or filter for quality is required. Without it, an implementation of a Test Suite (a `Mechanism`) IS NOT compliant with the BDQ standard. Furthermore, all of the Tests required by a `Use Case` MUST be implemented and individually compliant with BDQ Test `Specifications` in order for the `Use Case` Test Suite to be compliant with the BDQ standard. Note that BDQ Compliance of a Test Suite implementation does not mean that the `Use Case` that defines the Test Suite is valid or useful, rather, it simply means that every Test in the `Use Case` is in the implementation and independently compliant with the Test's BDQ `Specification`.
+The BDQ standard defines a library of Tests that can be used in `Data Quality Reports` and in Data Quality Assurance. However, the Tests can not assert or assure quality independently of a `Use Case`. A `Use Case` defining a suite of Tests needed to assert or filter for quality is required. Without it, an implementation of a Test Suite (a `Mechanism`) IS NOT compliant with the BDQ standard. Furthermore, all of the Tests required by a `Use Case` MUST be implemented and individually compliant with BDQ Test specifications in order for the `Use Case` Test Suite to be compliant with the BDQ standard. Note that BDQ Compliance of a Test Suite implementation does not mean that the `Use Case` that defines the Test Suite is valid or useful, rather, it simply means that every Test in the `Use Case` is in the implementation and independently compliant with the Test's BDQ specification.
 
 An implementation of a Test Suite MUST include all `bdqtest:SingleRecord` `Validation`, `Measure`, and `Amendment` Tests for each `Use Case` it implements. An implementation MUST provide complete coverage for at least one `bdqffdq:UseCase`. Implementations MAY include additional Tests and additional `Use Cases`. Implementations SHOULD be explicit about the composition of implemented Tests into `Policies` and `Use Cases`.
 
@@ -385,7 +386,7 @@ implementations MUST provide Parameterized Tests that support the default `Param
 
 How a Test implementation responds when given a `Parameter` value that is not supported by the implementation is not specified. Implementers SHOULD handle this in a manner appropriate for their implementation framework. Unless otherwise noted in properties of the `Specification`, Implementations MUST NOT use `Response.status`="EXTERNAL_PREREQUISITES_NOT_MET" to indicate a non-supported parameter value.
 
-Implementers are encouraged to produce the means to test data quality in bulk in settings such as SQL queries on relational data stores where construction of `Response` objects is not feasible, but the logic of a `Specification` can be framed as a question on a data store. Such non-Framework implementations MUST NOT assert compliance with the BDQ standard.
+Implementers are encouraged to produce the means to test data quality in bulk in settings such as SQL queries on relational data stores where construction of `Response` objects is not feasible, but the logic of a specification (`hasExpectedResponse`) can be framed as a question on a data store. Such non-Framework implementations MUST NOT assert compliance with the BDQ standard.
 
 Within the `Response.result` for an `Amendment` Test, the order of key-value pairs is not specified and MAY vary.
 
@@ -533,7 +534,7 @@ The corresponding [NAME Tests diagram](../../supplement/index.md#521-diagram-of-
 
 See also the [SPACE Tests diagram](../../supplement/index.md#522-diagram-of-the-space-oriented-tests-and-information-elements-acted-upon-non-normative) and the [OTHER Tests diagram](../../supplement/index.md#524-diagram-of-the-other-oriented-tests-and-information-elements-acted-upon-non-normative).
 
-The BDQ standard does not specify how the ordering of these Tests should be accomplished. Ordering of Tests COULD be done by describing an `Amendment` Test with an expected response that specifies the execution of each Test in order. Such a composition of `Amendment` Tests would be the preferred method of sequencing under the Framework, but to keep Tests as independent a possible, and to allow the maximum flexibility for the composition of Tests in Profiles to support `bdqffdq:UseCases`, the BDQ standard does not provide such a Test `Specification`. Ordering of Tests could be done by providing a configuration file for a Test execution framework specifying Test dependencies. Ordering could be supported in a workflow environment by composing a workflow to execute these Tests in sequence. The order specified above SHOULD be followed.
+The BDQ standard does not specify how the ordering of these Tests should be accomplished. Ordering of Tests COULD be done by describing an `Amendment` Test with an expected response that specifies the execution of each Test in order. Such a composition of `Amendment` Tests would be the preferred method of sequencing under the Framework, but to keep Tests as independent a possible, and to allow the maximum flexibility for the composition of Tests in Profiles to support `bdqffdq:UseCases`, the BDQ standard does not provide such a Test specification. Ordering of Tests could be done by providing a configuration file for a Test execution framework specifying Test dependencies. Ordering could be supported in a workflow environment by composing a workflow to execute these Tests in sequence. The order specified above SHOULD be followed.
 
 ##### 6.4.2.1 Terms for describing Test Dependencies (non-normative)
 
@@ -616,7 +617,7 @@ Other approaches are also possible.
 
 ##### 6.4.5.1 Example in Pseudocode (non-normative)
 
-A `Specification` is a sequence of statements in the form of a string representing the `Response` followed by the `Criteria` that would result in that `Response`. Thus, given the following `Specification`: 
+A specification (the content of a `hasExpectedResponse` property of a `Specification`) is a sequence of statements in the form of a string representing the `Response` followed by the `Criteria` that would result in that `Response`. Thus, given the following specification: 
 
 ```
 EXTERNAL_PREREQUISITES_NOT_MET if the bdq:SourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode was EMPTY; COMPLIANT if the value of dwc:countryCode is found in bdq:sourceAuthority; otherwise NOT_COMPLIANT
@@ -658,7 +659,7 @@ Following is pseudocode that follows the same order of evaluation of the `Criter
 
 The `Criteria` for EXTERNAL_PREREQUISITES_NOT_MET do not have to be evaluated first, but would be expected to be raised from wherever in the sequence the external resource first fails to be invoked, and is handled within the construct that builds a `Result` object.
 
-Note that this implementation will reach the block that can return EXTERNAL_PREREQUISITES_NOT_MET only if the input `dwc:countryCode` contains a value. This deviation from the logical sequence implied by the `Specification` (EXTERNAL_PREREQUISITES_NOT_MET if the `bdq:SourceAuthority` is not available; INTERNAL_PREREQUISITES_NOT_MET if the `dwc:countryCode` was EMPTY;) is perfectly acceptable, for the case of network resources being evaluated later in the implementation than other conditions.
+Note that this implementation will reach the block that can return EXTERNAL_PREREQUISITES_NOT_MET only if the input `dwc:countryCode` contains a value. This deviation from the logical sequence implied by the specification (EXTERNAL_PREREQUISITES_NOT_MET if the `bdq:SourceAuthority` is not available; INTERNAL_PREREQUISITES_NOT_MET if the `dwc:countryCode` was EMPTY;) is perfectly acceptable, for the case of network resources being evaluated later in the implementation than other conditions.
 
 Below is pseudocode for a similar implementation as a method on a Darwin Core domain object, less general, and more tightly bound to the domain concept, but making the concern of correctly binding input data to domain concepts not a concern of the Test. 
 
@@ -708,7 +709,7 @@ hasExpectedResponse: INTERNAL_PREREQUISITES_NOT_MET if dwc:day is bdq:Empty; COM
 
 `Information Elements` `Acted Upon`: `dwc:day`
 
-Below is an example implementation from the FilteredPush `event_date_qc` library (Morris & Lowery 2024). In this implementation, Java annotations are used to provide metadata that can be used by an implementation framework to pick out a Test to run by its Term Version IRI (`rdf:about`) or Term Name (`rdf:value`) and match an input Darwin Core term to a (Java) parameter in the method signature. The implementation walks through the elements of the `Specification` in sequence, and return the first matching response in a `Response` object, which has `Response.state`, `Response.result` (here called value), and `Response.comment` properties.
+Below is an example implementation from the FilteredPush `event_date_qc` library (Morris & Lowery 2024). In this implementation, Java annotations are used to provide metadata that can be used by an implementation framework to pick out a Test to run by its Term Version IRI (`rdf:about`) or Term Name (`rdf:value`) and match an input Darwin Core term to a (Java) parameter in the method signature. The implementation walks through the elements of the `hasExpectedResponse` in sequence, and return the first matching response in a `Response` object, which has `Response.state`, `Response.result` (here called value), and `Response.comment` properties.
 
 ```
     @Validation(label="VALIDATION_DAY_STANDARD", description="Is the value of dwc:day an integer between 1 and 31 inclusive?")
@@ -749,7 +750,7 @@ In some environments, an implementation MAY be a lightweight implementation of a
 
 Consider the `Validation` Test [VALIDATION_ENDDAYOFYEAR_INRANGE](../../terms/bdqtest/index.md#VALIDATION_ENDDAYOFYEAR_INRANGE)
 
-An SQL query that implements the abstract concept of the `dwc:enddayofyear` being in range could take the following form, using available database fields that contain data related to the abstract `Information Element`, but are not precisely mapped to the concrete specified `Acted Upon` and `Consulted` [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) in the `Specification`. This query produces a `Data Quality Report` with: 
+An SQL query that implements the abstract concept of the `dwc:enddayofyear` being in range could take the following form, using available database fields that contain data related to the abstract `Information Element`, but are not precisely mapped to the concrete `Acted Upon` and `Consulted` [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) in the specification. This query produces a `Data Quality Report` with: 
 
 ```
     SELECT collecting_event_id, enddayofyear,
@@ -778,7 +779,7 @@ An SQL query that implements the abstract concept of the `dwc:enddayofyear` bein
 
 Given data stored in a known and controlled environment, Test implementations can be specifically tailored to that environment, both in language and in assumptions about formats and data types. 
 
-Consider the `Validation` Test [VALIDATION_DAY_STANDARD](../../terms/bdqtest/index.md#VALIDATION_DAY_STANDARD) with the `Specification`:
+Consider the `Validation` Test [VALIDATION_DAY_STANDARD](../../terms/bdqtest/index.md#VALIDATION_DAY_STANDARD) with the `hasExpectedResponse`:
 
 ```
 INTERNAL_PREREQUISITES_NOT_MET if dwc:day is EMPTY; COMPLIANT if the value of the field dwc:day is an integer between 1 and 31 inclusive; otherwise NOT_COMPLIANT."
@@ -816,7 +817,7 @@ Given a hypothetical Event table with fields including a primary key `event_id` 
 
 This implementation is dependent on the schema the data are stored in, in particular, the definition of `event.day` as a field holding integers.
 
-This implementation does not generalize, as for example, day in a numeric data type that supports numbers in addition to integers would return incorrect values (per the Test `Specification`, which requires day to be an integer), for values of day such as "8.5"
+This implementation does not generalize, as for example, day in a numeric data type that supports numbers in addition to integers would return incorrect values (per the Test specification, which requires day to be an integer), for values of day such as "8.5"
 
 Implementations should carefully consider the assumptions inherent in the environment on which Tests are being run. For example, the FilteredPush implementations in `event_date_qc` (Morris & Lowery 2025), `sci_name_qc` (Morris & Dou 2025), `rec_occur_qc` (Morris 2025), and `geo_ref_qc` (Morris & Lowery 2025b), expect that all data will be presented to the Test methods as strings. Therefore each Test implementation that deals with numeric values must convert the input strings to appropriate numeric types for evaluation, and can use the failure to convert the data type as a means to identify INTERNAL_PREREQUISITES_NOT_MET.
 
