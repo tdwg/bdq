@@ -115,6 +115,7 @@ Sections may be either normative (defines what is required to comply with the st
 Any sentence or phrase beginning with "For example" or "e.g.", whether in a normative section or a non-normative section, is non-normative.
 
 ### 1.5 RFC 2119 key words (normative)
+
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" are to be interpreted as described in [RFC 2119](https://www.rfc-editor.org/rfc/rfc2119.html).
 
 ### 1.6 Namespace Abbreviations (non_normative)
@@ -131,9 +132,11 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 | dwc:         | http://rs.tdwg.org/dwc/terms/ |
 
 ### 1.7 Referring to Terms (normative)
+
 In any technical treatment of the BDQ standard, a precise reference to a class or property term SHOULD be made using its qualified name (the namespace prefix followed by the term local name; e.g., `bdqffdq:InformationElement`) and the namespace IRI corresponding to the namespace prefix (e.g., 'https://rs.tdwg.org/bdqffdq/terms' for `bdqffdq:`) MUST be provided. In less formal descriptions where the technical precision is not needed, the preferred label (skos:prefLabel, e.g., `Information Element`) or the term local name (e.g., `InformationElement`) MAY be used. You will find all of these methods of referring to BDQ-related terms throughout the BDQ documentation.
 
 ## 2. Parts of the Standard (non-normative)
+
 This standard is comprised of the following documents and artifacts:
 
 ### 2.1 BDQ Tests Quick Reference Guide (non-normative)
@@ -254,6 +257,10 @@ A single validation step, with measures evaluating the results of the amendments
 Expanding on this single validation step, amendments can be run and their results fed back into a second phase of post-amendment validation, with measures again evaluating the results of validation of the input data if all changes proposed by amendments are accepted. Presentation of a data quality report would be an expected result from this workflow for Quality Control purposes, while using the Measures in the second step to filter data in a processing pipeline to just those that are fit for purpose for a particular use would be expected for Quality Assurance purposes.
 
 ![Diagram of workflow with pre-amendment validation+measure phase, followed by amendment phase, followed by post-amendment validation-measure phase](workflow_two_iterations.svg)
+
+### 3.5 Notation Conventions (non-normative)
+
+Throughout these descriptive documents, terms and phrases enclosed in backticks (e.g., `Validation`, `Information Element`, `Data Quality Need`) refer explicitly to classes, properties, or named individuals defined in the BDQ ontology bdqffdq: by their labels.   Pluralized forms (e.g., `Data Quality Reports`) refer to multiple instances of the class. When a term is not enclosed in backticks, it should be interpreted as a general English phrase or concept, not as a specific ontology term (e.g. specification and `Specification', implementation and `Implementation').
 
 ## 4 Acknowledgments and Contributions (non-normative)
 
