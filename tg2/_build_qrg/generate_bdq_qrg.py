@@ -7,6 +7,7 @@ import re
 
 CSV_PATH = '../_review/vocabulary/bdqtest_term_versions.csv'
 OUTPUT_PATH = '../_review/docs/terms/bdqtest/index.html'
+DEPLOY_PATH = '../../terms/bdqtest/index.html'
 
 TEMPLATE = '''<!DOCTYPE html>
 <html lang="en">
@@ -186,6 +187,9 @@ def generate_qrg():
     with open(OUTPUT_PATH, 'w', encoding='utf-8') as f:
         f.write(html)
     print(f"QRG successfully written to {OUTPUT_PATH}")
+    with open(DEPLOY_PATH, 'w', encoding='utf-8') as f1:
+        f1.write(html)
+    print(f"QRG successfully written to {DEPLOY_PATH}")
 
 if __name__ == '__main__':
     generate_qrg()
