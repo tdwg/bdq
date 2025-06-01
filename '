@@ -1,18 +1,17 @@
-<!--- This file is generated from templates by code, DO NOT EDIT by hand --->
-
-# BDQ Supplemental Information
+<!--- Template for header, values provided from yaml configuration --->
+# {document_title}
 
 **Title**<br>
-BDQ Supplemental Information
+{document_title}
 
 **Date version issued**<br>
-2025-05-10
+{ratification_date}
 
 **Date created**<br>
-2025-05-10
+{created_date}
 
 **Part of TDWG Standard**<br>
-<http://example.org/to_be_determined>
+<{standard_iri}>
 
 <!--
 **Preferred namespace abbreviation**<br>
@@ -20,96 +19,30 @@ BDQ Supplemental Information
 -->
 
 **This version**<br>
-<https://bdq.tdwg.org/vocabularies/2025-05-10>
+<{current_iri}{ratification_date}>
 
 **Latest version**<br>
-<https://bdq.tdwg.org/vocabularies/>
+<{current_iri}>
 
 **Previous version**<br>
+{previous_version_slot}
 
 **Abstract**<br>
-This document provides information supplementary to the BDQ standard, describing some of the history of its development, and rationale management for decisions made while describing the tests.
+{abstract}
 
 **Authors**<br>
-[Lee Belbin](https://orcid.org/0000-0001-8900-6203) ([Blatant Fabrications](https://www.wikidata.org/wiki/Q130304884)), [Arthur D. Chapman](https://orcid.org/0000-0003-1700-6962) ([Australian Biodiversity Information Services](http://www.wikidata.org/entity/Q100600913)), [Paul J. Morris](https://orcid.org/0000-0002-3673-444X) ([Museum of Comparative Zoology, Harvard University](http://www.wikidata.org/entity/Q1420782)), [John Wieczorek](https://orcid.org/0000-0003-1144-0290) (Rauthiflor LLC)
+{authors}
 
 **Creator**<br>
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
+{creator}
 
 **Bibliographic citation**<br>
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. BDQ Supplemental Information. Biodiversity Information Standards (TDWG). <https://bdq.tdwg.org/vocabularies/2025-05-10>
+{creator}. {year}. {document_title}. {publisher}. <{current_iri}{ratification_date}>
 
 **Status**<br>
-Draft Standard for Review
+{comment}
 
-## Table of Contents ##
-[1. Introduction (non-normative)](#1-introduction-non-normative)
-  - [1.1 Purpose (non-normative)](#11-purpose-non-normative)
-  - [1.2 Audience (non-normative)](#12-audience-non-normative)
-  - [1.3 Associated Documents (non-normative)](#13-associated-documents-non-normative)
-  - [1.4 Status of the content of this document (normative)](#14-status-of-the-content-of-this-document-normative)
-  - [1.5 Namespace abbreviations (non-normative)](#15-namespace-abbreviations-non-normative)
-
-[2 Historical Context (non-normative)](#2-historical-context-non-normative)
-  - [2.1 Definition of CORE (non-normative)](#21-definition-of-core-non-normative)
-    - [2.1.1 Tests tagged as DO NOT IMPLEMENT (non-normative)](#211-tests-tagged-as-do-not-implement-non-normative)
-  - [2.2 Use Case Development (non-normative)](#22-use-case-development-non-normative)
-  - [2.3 Data Quality Control and Data Quality Assurance (non-normative)](#23-data-quality-control-and-data-quality-assurance-non-normative)
-  - [2.4 Framework Competency Questions (non-normative)](#24-framework-competency-questions-non-normative)
-    - [2.4.1 Listing Identifiers for Tests (non-normative)](#241-listing-identifiers-for-tests-non-normative)
-    - [2.4.2 Framework Competency Question including an oa:annotation (non-normative)](#242-framework-competency-question-including-an-oaannotation-non-normative)
-
-[3 Developing the Tests (non-normative)](#3-developing-the-tests-non-normative)
-  - [3.1 Test Types (non-normative)](#31-test-types-non-normative)
-    - [3.1.1 Validation (non-normative)](#311-validation-non-normative)
-    - [3.1.2 Issues (non-normative)](#312-issues-non-normative)
-    - [3.1.3 Measures (non-normative)](#313-measures-non-normative)
-    - [3.1.4 Amendments (non-normative)](#314-amendments-non-normative)
-  - [3.2 MultiRecord Tests (non-normative)](#32-multirecord-tests-non-normative)
-    - [3.2.1 MultiRecord Validations, Issues, Amendments (non-normative)](#321-multirecord-validations-issues-amendments-non-normative)
-    - [3.2.2 MultiRecord Measures (non-normative)](#322-multirecord-measures-non-normative)
-    - [3.2.3 Considerations for use of MultiRecord Measures (non-normative)](#323-considerations-for-use-of-multirecord-measures-non-normative)
-  - [3.3 Data Quality Dimension and "Warning Types" (non-normative)](#33-data-quality-dimension-and-warning-types-non-normative)
-  - [3.4 Domain Scope of Tests (non-normative)](#34-domain-scope-of-tests-non-normative)
-  - [3.5 Parameterizing the Tests (non-normative)](#35-parameterizing-the-tests-non-normative)
-  - [3.6 Independence and Paired Tests (non-normative)](#36-independence-and-paired-tests-non-normative)
-  - [3.7 Vocabularies and Synonyms (non-normative)](#37-vocabularies-and-synonyms-non-normative)
-  - [3.8 Amendments and Annotations (non-normative)](#38-amendments-and-annotations-non-normative)
-  - [3.9 Aspirational Aspects of Some CORE Tests (non-normative)](#39-aspirational-aspects-of-some-core-tests-non-normative)
-    - [3.9.1 Vocabularies (non-normative)](#391-vocabularies-non-normative)
-    - [3.9.2 Georeferencing (non-normative)](#392-georeferencing-non-normative)
-    - [3.9.3 Annotations (non-normative)](#393-annotations-non-normative)
-    - [3.9.4 "High Seas" (non-normative)](#394-high-seas-non-normative)
-  - [3.10 Tests and Test Vocabularies (non-normative)](#310-tests-and-test-vocabularies-non-normative)
-  - [3.11 Principles of Test Design (non-normative)](#311-principles-of-test-design-non-normative)
-    - [3.11.1 General concepts for specifications (non-normative)](#3111-general-concepts-for-specifications-non-normative)
-    - [3.11.2 Principles (non-normative)](#3112-principles-non-normative)
-    - [3.11.3 Consistent behaviors (non-normative)](#3113-consistent-behaviors-non-normative)
-    - [3.11.4 Avoid Test interdependencies (non-normative)](#3114-avoid-test-interdependencies-non-normative)
-
-[4 Date and Time Issues (non-normative)](#4-date-and-time-issues-non-normative)
-  - [4.1 Dates and Calendars (non-normative)](#41-dates-and-calendars-non-normative)
-  - [4.2 Time (non-normative)](#42-time-non-normative)
-
-[5 Rationale Management Documentation (non-normative)](#5-rationale-management-documentation-non-normative)
-  - [5.1 Developing BDQ Tests Using GitHub Issues (non-normative)](#51-developing-bdq-tests-using-github-issues-non-normative)
-  - [5.2 GitHub Tags and Categorizing Issues (non-normative)](#52-github-tags-and-categorizing-issues-non-normative)
-  - [5.2.1 Exploring relationships among tests (non-normative)](#521-exploring-relationships-among-tests-non-normative)
-    - [5.2.1.1 Diagram of the NAME-oriented Tests and Information Elements Acted Upon (non-normative)](#5211-diagram-of-the-name-oriented-tests-and-information-elements-acted-upon-non-normative)
-    - [5.2.1.2 Diagram of the SPACE-oriented Tests and Information Elements Acted Upon (non-normative)](#5212-diagram-of-the-space-oriented-tests-and-information-elements-acted-upon-non-normative)
-    - [5.2.1.3 Diagram of the TIME-oriented Tests and Information Elements Acted Upon (non-normative)](#5213-diagram-of-the-time-oriented-tests-and-information-elements-acted-upon-non-normative)
-    - [5.2.1.4 Diagram of the OTHER-oriented Tests and Information Elements Acted Upon (non-normative)](#5214-diagram-of-the-other-oriented-tests-and-information-elements-acted-upon-non-normative)
-  - [5.3 Using Markdown Tables in GitHub Issues to Develop Test descriptors (non-normative)](#53-using-markdown-tables-in-github-issues-to-develop-test-descriptors-non-normative)
-
-[6 Code for BDQ Components (non-normative)](#6-code-for-bdq-components-non-normative)
-
-[Acronyms (non-normative)](#acronyms-non-normative)
-
-[Glossary (non-normative)](#glossary-non-normative)
-
-[References (non-normative)](#references-non-normative)
-
-[Cite BDQ (non-normative)](#cite-bdq-non-normative)
+{toc}
 
 ## 1. Introduction (non-normative)
 
@@ -758,7 +691,7 @@ Given that the Tests are based on Darwin Core terms, we 'piggy-back' on the comm
 **Account for uncertainty**. Except where required for reversibility, Tests must not ascribe certainty where it is unwarranted. For example, in [AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT](../terms/bdqtest/index.md#AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT), when the value "EPSG:4326" is assumed to be the `dwc:geodeticDatum`, the value of `dwc:coordinateUncertaintyInMeters` should be increased to reflect the added uncertainty, not left unchanged. Similarly, spatial buffering is explicitly REQUIRED in the specification for spatial intersections Tests (e.g., point in polygon, e.g., in [AMENDMENT_COUNTRYCODE_FROM_COORDINATES](../terms/bdqtest/index.md#AMENDMENT_COUNTRYCODE_FROM_COORDINATES)) to account for coordinate and boundary inaccuracies.
 In general, we decided, in the context of Darwin Core with limited ability to represent uncertainty, to favor reversibility in the Tests.
 
-**Realistic**. If testing the value of a term that has practical range (e.g., `dwc:maximumElevationInMeters`), a real-world value should be used as a limit. For example, the height of Mount Everest, 8848m, provides an appropriate global upper limit for any elevation value.
+**Realistic**. If testing the value of a term that has practical range (e.g., `dwc:maximumElevationInMeters`), a real-world value should be used as a limit. For example, the height of Mount Everest, 8848m, provides an appropriate upper limit for any elevation value.
 
 **Compare data with data**. When testing consistency between or among terms, a value in one term that is `bdq:NotEmpty` is not held to be inconsistent with a value in another corresponding term that is `bdq:Empty`. For example, in the Test [VALIDATION_EVENT_CONSISTENT](../terms/bdqtest/index.md#VALIDATION_EVENT_CONSISTENT), if `dwc:eventDate` is '2016-12-04' and `dwc:day` is '4', these are consistent. The other `dwc:Event` terms can be `Empty` and the absence of values in `dwc:year` and `dwc:month` does not make the values that are present inconsistent.
 
@@ -766,7 +699,7 @@ In general, we decided, in the context of Darwin Core with limited ability to re
 
 **Proven by implementation, validated with data**. We repeatedly found that an initial phrasing of the specifications of a Test did not survive implementation, and subsequent phrasings did not survive exposure to multiple Test values. Test specifications that are written without being implemented or validated against real-world data often conceal hidden assumptions, gaps in logic, or incorrect expectations about how an implementation will behave. Actually producing a Test implementation, and testing the implementation against input data values and expected response values (with cases provided by more than one person) have proved essential for Test specification development.
 
-**Conflicts between these principles can be expected**. For example, [AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT](../terms/bdqtest/index.md#AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT) and its related `Validation` proved difficult to develop, with conflicts between simplicity and the power of the Test, and conflicts between the guidance in the non-normative Darwin Core Comments for the term and best practices. Spatial data quality requirements expect `dwc:geodeticDatum` to clearly define the reference system for `dwc:decimalLatitude` and `dwc:decimalLongitude`, ideally using an EPSG code (e.g., EPSG:4326). However, much real-world data uses ambiguous text strings such as 'WGS84', which is the label for a coordinate reference system, a geodetic datum, and an ellipsoid. These Tests are therefore aspirational, aiming to encourage the adoption of clearer, standards-based practices. A simple Validation could ask if `dwc:geodeticDatum` matches any EPSG code in the form Authority:Number, but the definition of `dwc:geodeticDatum` explicitly limits values to those that represent the coordinate reference system for geographic coordinates expressed by `dwc:decimalLatitude` and `dwc:decimalLongitude`, or for a datum or ellipsoid appropriate for a geographic coordinate reference system. This means that only a subset of EPSG codes have quality, adding complexity to the Test definition and implementation. The GBIF vocabulary for `dwc:geodeticDatum` doesn't currently help, as it does not assert the authority for the numeric values (with both ESRI and EPSG authorities in use by consumers of spatial data), and it does not provide a means to identify which values are appropriate for `dwc:geodeticDatum`, given the limitations of the definition to geographic coordinate reference systems. The [Georeferencing Best Practices](https://docs.gbif.org/georeferencing-best-practices/1.0/en/) guide (Chapman and Wieczorek 2020) specifies the use of "not recorded" for unknown values (under specified conditions) and there has been recent agreement on `dwc:geodeticDatum` to accept this recommendation. We have to accept the best practice guide on the specified subset of EPSG codes. Thus, each Test specification must be "as simple as possible", with tradeoffs from other principles likely increasing the complexity.
+**Conflicts between these principles can be expected**. For example, [AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT](../terms/bdqtest/index.md#AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT) and its related `Validation` proved difficult to develop, with conflicts between simplicity and the power of the Test, and conflicts between the guidance in the non-normative Darwin Core Comments for the term and best practices. Spatial data quality requirements expect `dwc:geodeticDatum` to clearly define the reference system for `dwc:decimalLatitude` and `dwc:decimalLongitude`, ideally using an EPSG code (e.g., EPSG:4326). However, much real-world data uses ambiguous text strings (e.g., 'WGS84', which is the label for a coordinate reference system, a geodetic datum, and an ellipsoid). These Tests are therefore aspirational, aiming to encourage the adoption of clearer, standards-based practices. A simple Validation could ask if `dwc:geodeticDatum` matches any EPSG code in the form Authority:Number, but the definition of `dwc:geodeticDatum` explicitly limits values to those that represent the coordinate reference system for the geographic coordinate expressed by `dwc:decimalLatitude` and `dwc:decimalLongitude`, or for a datum or ellipsoid appropriate for a geographic coordinate reference system. This means that only a subset of EPSG codes have quality, adding complexity to the Test definition and implementation (with the GBIF vocabulary for `dwc:geodeticDatum` not helping, as it does not assert the authority for the numeric values (with both ESRI and EPSG authorities in use by consumers of spatial data), and it does not provide a means to identify which values are appropriate for `dwc:geodeticDatum`, given the limitations of the definition to geographic coordinate reference systems). Furthermore, the [Georeferencing Best Practices](https://docs.gbif.org/georeferencing-best-practices/1.0/en/) guide (Chapman and Wieczorek 2020), specifies the use of "not recorded" for unknown values (under specified conditions), while the Comments on `dwc:geodeticDatum` recommend the use of "unknown" (at the time of writing), here we support the best practice guide, but need to include the explicit value "not recorded" as valid for `dwc:geodeticDatum`, as well as a specified subset of EPSG codes. Thus, each Test specification must be "as simple as possible", with tradeoffs from other principles likely increasing the complexity.
 
 #### 3.11.3 Consistent behaviors (non-normative)
 
@@ -824,7 +757,7 @@ From [xkcd.com/2867](https://xkcd.com/2867/), by Randall Munroe, xkcd.com. Licen
 
 ### 5.1 Developing BDQ Tests Using GitHub Issues (non-normative)
 
-The Tests were developed as issues in the [tdwg/bdq](https://github.com/tdwg/bdq) GitHub repository. The reasoning was that GitHub provided a comprehensive and consistent environment in which to develop, expose, discuss and manage all aspects of the development of the BDQ standard. We used a standardized template as the first Comment on GitHub issues pages for documenting all Tests. This immediately exposed all proposed Tests to anyone following the work. GitHub then enabled anyone to comment on the Test issues, facilitating discussion. One issue documenting a Test had over 100 comments.  When there was general agreement among the Authors, the values within the template could be easily modified and documented. The comments in the issues served as a tool for rationale management as well as activity notifications, documenting why particular decisions were made about the Tests during their development. Note that the Tests as defined in GitHub issues are historical documentation, and should not be treated as the standard versions of the Tests. For that, use [BDQ Tests and Assertions List of Terms](../list/bdqtest/index.md).
+The Tests were developed as issues in the [tdwg/bdq](https://github.com/tdwg/bdq) GitHub repository. The reasoning was that GitHub provided a comprehensive and consistent environment in which to develop, expose, discuss and manage all aspects of the development of the BDQ standard. We used a standardized template as the first Comment on GitHub issues pages for documenting all Tests. This immediately exposed all proposed Tests to anyone following the work. GitHub then enabled anyone to comment on the Test issues, facilitating discussion. When there was general agreement among the Authors, the values within the template could be easily modified and documented. The comments in the issues served as a tool for rationale management as well as activity notifications, documenting why particular decisions were made about the Tests during their development. Note that the Tests as defined in GitHub issues are historical documentation, and should not be treated as the standard versions of the Tests. For that, use [BDQ Tests and Assertions List of Terms](../list/bdqtest/index.md).
 
 GitHub's API also provided ample latitude to 'scrape' and filter issues using GitHub tags (see below) to extract any subset of Tests by descriptors to CSV files that would be used in the submission and proposed maintenance of the BDQ standard. The [bdq_issue_to_csv](https://github.com/kurator-org/bdq_issue_to_csv) library (Morris 2024) uses GitHub's API to obtain a JSON representation of the GitHub issues, then parses the agreed-upon format for Markdown tables for describing issues into a CSV file (destined to become the [term-version CSV](../../vocabulary/bdqtest_term_versions.csv) file for the bdqtest: vocabulary).
 
@@ -862,7 +795,7 @@ These tags are retained as the "GitHub Issue Labels" (a `skos:note` on each `Met
 
 Supplementary Tests have been exported to a CSV list and have RDF representations have been generated with the same tools as the BDQ Tests, these files are in the [tg2/supplementary/](https://github.com/tdwg/bdq/blob/master/tg2/supplementary/) directory.
 
-The tag 'NEEDS WORK' was repeatedly added and removed to issues and was a valuable support for the evaluation of Tests in repeated feedback loops that included: Frame the description of a Test, independently produce validation data and an implementation, run the implementation against the validation data, evaluate cases where the expectations in the validation data differ from the Test results (which could be a defect in the implementation, in the validation data, or a problem in the Test specification), discuss as a group, find consensus, make changes as needed, and repeat.
+The tag 'NEEDS WORK' was repeatedly added and removed to issues and was a valuable support for the evaluation of Tests in repeated feedback loops that included: Frame the description of a Test, independently produce validation data and an implementation, run the implementation against the validation data, evaluate cases where the expectations in the validation data differ from the Test results (which could be a defect in the implementation, in the validation data, or a problem in the Test specification), discuss as a group, make changes as needed, and repeat.
 
 ### 5.2.1 Exploring relationships among tests (non-normative)
 
@@ -978,33 +911,3 @@ For more information see the following README files:
 - `sci_name_qc/generation` [README](https://github.com/FilteredPush/sci_name_qc/blob/master/generation/README.md)
 - `geo_ref_qc/generation` [README](https://github.com/FilteredPush/geo_ref_qc/blob/master/generation/README.md)
 - `rec_occur_qc/generation` [README](https://github.com/FilteredPush/rec_occur_qc/blob/master/generation/README.md)
-## Acronyms (non-normative)
-
-A list of Acronyms can be found in the [Acronyms (non-normative)](../../index.md#5-acronyms-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.
-
-## Glossary (non-normative)
-
-A glossary of terms additional to those in the various namespaces can be found in the [Glossary (non-normative)](../../index.md#6-glossary-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.
-
-## References (non-normative)
-
-The references for the BDQ standard can be found in the [References (non-normative)](../../index.md#7-references-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.
-
-## Cite BDQ (non-normative)
-
-**To cite BDQ in general, use the peer-reviewed article:**
-
-Chapman AD, Belbin L, Zermoglio PF, Wieczorek J, Morris PJ, Nicholls
-M, Rees ER, Veiga AK, Thompson A, Saraiva AM, James SA, Gendreau C,
-Benson A, Schigel D (2020). Developing Standards for Improved Data
-Quality and for Selecting Fit for Use Biodiversity Data.
-Biodiversity Information Science and Standards 4: e50889.
-https://doi.org/10.3897/biss.4.50889
-
-**To cite this document specifically, use the following:**
-
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. BDQ Supplemental Information. Biodiversity Information Standards (TDWG). <https://bdq.tdwg.org/vocabularies/2025-05-10>
-
-**Biodiversity Information Standards (TDWG)**
-
-This content made open by Biodiversity Information Standards (TDWG) is licensed under a [Licensed under a Creative Commons Attribution 4.0 International (CC BY) License.](http://creativecommons.org/licenses/by/4.0/)
