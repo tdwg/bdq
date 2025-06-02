@@ -420,7 +420,7 @@ Under the Fitness For Use Framework, `Amendments` may propose changes to process
 
 Nothing in this section should be taken as a requirement for a particular format or serialization of `bdqffdq:Assertions` or `Responses`. Implementations MAY serialize `Assertions` in any appropriate form. 
 
-Nothing in this section should be taken as a requirement for how `bdqffdq:Assertions` or `Responses` are to be presented to consumers of `Data Quality Report`s. Implementations MAY present the results of Tests in any form appropriate for their consumers.
+Nothing in this section should be taken as a requirement for how `bdqffdq:Assertions` or `Responses` are to be presented to consumers of `Data Quality Reports`. Implementations MAY present the results of Tests in any form appropriate for their consumers.
 
 See [3.1 Structure of a Response (normative)](../../bdqtest/index.md#31-structure-of-response-normative) in [BDQ Tests and Assertions](../../bdqtest/index.md) for further normative guidance on representing Responses as RDF or in data structures.
 
@@ -992,7 +992,7 @@ Human readable `Data Quality Reports` for Quality Control MAY take any appropria
 
 `Response.comment` values SHOULD be internationalized as appropriate for the the consumers of `Data Quality Reports`.
 
-`Response.status` and `Response.result` constants SHOULD be given internationalized labels as appropriate for the the consumers of `Data Quality Report`s.
+`Response.status` and `Response.result` constants SHOULD be given internationalized labels as appropriate for the the consumers of `Data Quality Reports`.
 
 For each Test in an implementation, that Test MUST produce the same results as are specified in a row of the validation data for that Test, except when a `bdq:sourceAuthority` parameter specifies a source other than the default `sourceAuthority` specified for that Test.
 
