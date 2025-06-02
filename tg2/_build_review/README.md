@@ -28,89 +28,87 @@ README.md  This file.
 
 The directory structure of the templates is as follows, with the files listed in each directory:
 
-...
-templates/
-├── bdqffdq
-│   ├── bdqffdq_landing-footer.md
-│   ├── bdqffdq_landing-header.md
-│   ├── document_configuration.yaml
-│   └── vocabulary_configuration.yaml
-├── bdqtest
-│   ├── bdqtest_landing-footer.md
-│   ├── bdqtest_landing-header.md
-│   └── document_configuration.yaml
-├── extension
-│   └── bdqffdq
-│       ├── bdqffdq_extension-footer.md
-│       ├── bdqffdq_extension-header.md
-│       ├── document_configuration.yaml
-│       └── vocabulary_configuration.yaml
-├── guide
-│   ├── bdqffdq
-│   │   ├── assertions.png
-│   │   ├── bdqffdq_class_diagram.png
-│   │   ├── bdqffdq_data_quality_layers.svg
-│   │   ├── bdqffdq_data_quality_needs_amendment.svg
-│   │   ├── bdqffdq_data_quality_needs_measure.svg
-│   │   ├── bdqffdq_data_quality_needs_solutions_report_validation.svg
-│   │   ├── bdqffdq_data_quality_needs_validation.svg
-│   │   ├── bdqffdq-footer.md
-│   │   ├── bdqffdq-header.md
-│   │   ├── dataqualityneeds.png
-│   │   ├── document_configuration.yaml
-│   │   └── resource_types.png
-│   ├── implementers
-│   │   ├── document_configuration.yaml
-│   │   ├── implementers-footer.md
-│   │   ├── implementers-header.md
-│   │   ├── TG2_test_validation_data.csv
-│   │   └── TG2_test_validation_data_nonprintingchars.csv
-│   ├── synthetic
-│   │   ├── document_configuration.yaml
-│   │   ├── synthetic-footer.md
-│   │   └── synthetic-header.md
-│   └── users
-│       ├── document_configuration.yaml
-│       ├── users-footer.md
-│       └── users-header.md
-├── list
-│   ├── bdq
-│   │   ├── bdq_termlist-footer.md
-│   │   ├── bdq_termlist-header.md
-│   │   └── document_configuration.yaml
-│   ├── bdqcrit
-│   │   ├── bdqcrit_termlist-footer.md
-│   │   ├── bdqcrit_termlist-header.md
-│   │   └── document_configuration.yaml
-│   ├── bdqdim
-│   │   ├── bdqdim_termlist-footer.md
-│   │   ├── bdqdim_termlist-header.md
-│   │   └── document_configuration.yaml
-│   ├── bdqenh
-│   │   ├── bdqenh_termlist-footer.md
-│   │   ├── bdqenh_termlist-header.md
-│   │   └── document_configuration.yaml
-│   ├── bdqffdq
-│   │   ├── bdqffdq_termlist-footer.md
-│   │   ├── bdqffdq_termlist-header.md
-│   │   └── document_configuration.yaml
-│   └── bdqtest
-│       ├── bdqtest_termlist-footer.md
-│       ├── bdqtest_termlist-header.md
-│       ├── document_configuration.yaml
-│       └── vocabulary_configuration.yaml
-├── supplement
-│   ├── document_configuration.yaml
-│   ├── supplement-footer.md
-│   ├── supplement-header.md
-│   ├── TestsName.png
-│   ├── TestsOther.png
-│   ├── TestsSpace.png
-│   └── TestsTime.png
-└── terms
-    └── bdqtest_qrg
-        ├── bdqtest_qrg_term_descriptions-header.md
-        ├── bdqtest_quickreference-footer.md
-        ├── bdqtest_quickreference-header.md
-        └── document_configuration.yaml
-...
+    templates/
+    ├── bdqffdq
+    │   ├── bdqffdq_landing-footer.md
+    │   ├── bdqffdq_landing-header.md
+    │   ├── document_configuration.yaml
+    │   └── vocabulary_configuration.yaml
+    ├── bdqtest
+    │   ├── bdqtest_landing-footer.md
+    │   ├── bdqtest_landing-header.md
+    │   └── document_configuration.yaml
+    ├── extension
+    │   └── bdqffdq
+    │       ├── bdqffdq_extension-footer.md
+    │       ├── bdqffdq_extension-header.md
+    │       ├── document_configuration.yaml
+    │       └── vocabulary_configuration.yaml
+    ├── guide
+    │   ├── bdqffdq
+    │   │   ├── assertions.png
+    │   │   ├── bdqffdq_class_diagram.png
+    │   │   ├── bdqffdq_data_quality_layers.svg
+    │   │   ├── bdqffdq_data_quality_needs_amendment.svg
+    │   │   ├── bdqffdq_data_quality_needs_measure.svg
+    │   │   ├── bdqffdq_data_quality_needs_solutions_report_validation.svg
+    │   │   ├── bdqffdq_data_quality_needs_validation.svg
+    │   │   ├── bdqffdq-footer.md
+    │   │   ├── bdqffdq-header.md
+    │   │   ├── dataqualityneeds.png
+    │   │   ├── document_configuration.yaml
+    │   │   └── resource_types.png
+    │   ├── implementers
+    │   │   ├── document_configuration.yaml
+    │   │   ├── implementers-footer.md
+    │   │   ├── implementers-header.md
+    │   │   ├── TG2_test_validation_data.csv
+    │   │   └── TG2_test_validation_data_nonprintingchars.csv
+    │   ├── synthetic
+    │   │   ├── document_configuration.yaml
+    │   │   ├── synthetic-footer.md
+    │   │   └── synthetic-header.md
+    │   └── users
+    │       ├── document_configuration.yaml
+    │       ├── users-footer.md
+    │       └── users-header.md
+    ├── list
+    │   ├── bdq
+    │   │   ├── bdq_termlist-footer.md
+    │   │   ├── bdq_termlist-header.md
+    │   │   └── document_configuration.yaml
+    │   ├── bdqcrit
+    │   │   ├── bdqcrit_termlist-footer.md
+    │   │   ├── bdqcrit_termlist-header.md
+    │   │   └── document_configuration.yaml
+    │   ├── bdqdim
+    │   │   ├── bdqdim_termlist-footer.md
+    │   │   ├── bdqdim_termlist-header.md
+    │   │   └── document_configuration.yaml
+    │   ├── bdqenh
+    │   │   ├── bdqenh_termlist-footer.md
+    │   │   ├── bdqenh_termlist-header.md
+    │   │   └── document_configuration.yaml
+    │   ├── bdqffdq
+    │   │   ├── bdqffdq_termlist-footer.md
+    │   │   ├── bdqffdq_termlist-header.md
+    │   │   └── document_configuration.yaml
+    │   └── bdqtest
+    │       ├── bdqtest_termlist-footer.md
+    │       ├── bdqtest_termlist-header.md
+    │       ├── document_configuration.yaml
+    │       └── vocabulary_configuration.yaml
+    ├── supplement
+    │   ├── document_configuration.yaml
+    │   ├── supplement-footer.md
+    │   ├── supplement-header.md
+    │   ├── TestsName.png
+    │   ├── TestsOther.png
+    │   ├── TestsSpace.png
+    │   └── TestsTime.png
+    └── terms
+        └── bdqtest_qrg
+            ├── bdqtest_qrg_term_descriptions-header.md
+            ├── bdqtest_quickreference-footer.md
+            ├── bdqtest_quickreference-header.md
+            └── document_configuration.yaml
