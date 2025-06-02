@@ -4443,7 +4443,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/58</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -4497,10 +4497,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_BASISOFRECORD_STANDARD.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "Darwin Core basisOfRecord" {[https://dwc.tdwg.org/terms/#dwc:basisOfRecord]}{dwc:basisOfRecord vocabulary [https://rs.gbif.org/vocabulary/dwc/basis_of_record.xml]}</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
@@ -4522,15 +4518,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/104</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>a723528a-ee73-44a7-818d-5315323ec4e9</td>
 		</tr>
 	</tbody>
 </table>
@@ -4580,10 +4572,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_CLASSIFICATION_CONSISTENT.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
@@ -4605,15 +4593,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/123</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test VOCABULARY Consistency Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>d6bc8db2-014b-47dc-9737-b0ecd98bf5bb</td>
 		</tr>
 	</tbody>
 </table>
@@ -4663,10 +4647,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_CLASS_FOUND.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
@@ -4688,15 +4668,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/77</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>cd12d17c-8404-40fa-bc15-5583564ddd14</td>
 		</tr>
 	</tbody>
 </table>
@@ -4746,10 +4722,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "10m-admin-1 boundaries UNION with Exclusive Economic Zones" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/] spatial UNION [https://www.marineregions.org/downloads.php#marbound]},bdq:spatialBufferInMeters default = "3000"</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
@@ -4771,15 +4743,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/50</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Consistency ISO/DCMI STANDARD Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>8a3f5702-a4e5-4b21-acb6-a4eae9a1ae09,972320cd-3ba3-4076-a8eb-f797095509cd</td>
 		</tr>
 	</tbody>
 </table>
@@ -4829,10 +4797,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "10m-admin-1 boundaries" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/]},bdq:spatialBufferInMeters default = "3000"</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
@@ -4854,15 +4818,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/56</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Consistency CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>b7c56646-56f1-4094-b2be-8546c7e18102,cceaf335-6cd3-44a0-9562-6fe8e7743854</td>
 		</tr>
 	</tbody>
 </table>
@@ -4912,10 +4872,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:taxonIsMarine default = "World Register of Marine Species (WoRMS)" {[https://www.marinespecies.org/]} {Web service [https://www.marinespecies.org/aphia.php?p=webservice]},bdq:geospatialLand default = "Union of NaturalEarth 10m-physical-vectors for Land and NaturalEarth Minor Islands" {[https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_land.zip], [https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_minor_islands.zip]},bdq:spatialBufferInMeters default = "3000",bdq:assumptionOnUnknownBiome default = "noassumption"</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
@@ -4937,15 +4893,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/51</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Consistency Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>3968f8d0-7364-4f3d-9993-96b8678f1653,cbb3483c-2bf7-4b42-9d74-71ddc0e41c5e,b3bf69d3-061c-4e2a-ac53-a73cb51ecbe2,e7012224-eb6d-4bb9-a4ef-2d40fd3b3471</td>
 		</tr>
 	</tbody>
 </table>
@@ -5016,7 +4968,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/87</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -5091,7 +5043,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/109</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -5166,7 +5118,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/98</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -5220,10 +5172,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_COUNTRYCODE_STANDARD.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
@@ -5245,7 +5193,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/20</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -5299,10 +5247,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
@@ -5324,7 +5268,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/62</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -5378,10 +5322,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
@@ -5403,15 +5343,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/201</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Conformance Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>aabaaac7-b26c-478e-9f04-3e2fbdba4a96</td>
 		</tr>
 	</tbody>
 </table>
@@ -5461,10 +5397,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_COUNTRY_FOUND.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
@@ -5486,15 +5418,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/21</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Conformance Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>3e00109a-13d3-416d-9a91-127c99b47473</td>
 		</tr>
 	</tbody>
 </table>
@@ -5565,7 +5493,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/42</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -5619,10 +5547,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_DATEIDENTIFIED_INRANGE.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:earliestValidDate default = "1753-01-01",bdq:latestValidDate default = "{current day}",bdq:includeEventDate default = "true"</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
@@ -5644,15 +5568,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/76</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Likeliness ISO/DCMI STANDARD Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>13c17157-1714-4f67-848b-9dc031917fee,030797c0-0b00-4272-9219-16d701e9da7c,739faad3-eb8a-4593-af8f-35b22630a920</td>
 		</tr>
 	</tbody>
 </table>
@@ -5723,7 +5643,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/69</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -5798,7 +5718,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/125</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -5873,7 +5793,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/147</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -5948,7 +5868,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/103</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -6002,10 +5922,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_DCTYPE_STANDARD.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>DCMI Type Vocabulary" {[http://purl.org/dc/terms/DCMIType]} {"DCMI Type Vocabulary List of Terms" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
@@ -6027,7 +5943,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/91</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -6102,7 +6018,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/79</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -6177,7 +6093,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/119</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -6252,7 +6168,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/30</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -6327,7 +6243,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/96</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -6381,10 +6297,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_DEGREEOFESTABLISHMENT_STANDARD.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "Degree of Establishment Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/doe/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/DegreeOfEstablishment/concepts]}</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
@@ -6406,15 +6318,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/275</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>8aac7359-311a-405f-8117-79bb4873011d</td>
 		</tr>
 	</tbody>
 </table>
@@ -6485,7 +6393,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/131</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -6539,10 +6447,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_ESTABLISHMENTMEANS_STANDARD.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "Establishment Means Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/em/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/EstablishmentMeans/concepts]}</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
@@ -6564,15 +6468,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/268</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>0c051c38-621f-4a52-ae92-5077afd46446</td>
 		</tr>
 	</tbody>
 </table>
@@ -6622,10 +6522,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_EVENTDATE_INRANGE.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:earliestValidDate default ="1582-11-15",bdq:latestValidDate default = "{current year}"</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
@@ -6647,15 +6543,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/36</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Conformance Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>8b223050-f314-4601-9e20-d5f3d59d8e79,2e5c3e37-b6a9-4928-8436-0d83bdb3f0fc</td>
 		</tr>
 	</tbody>
 </table>
@@ -6726,7 +6618,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/33</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -6801,7 +6693,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/66</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -6876,7 +6768,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/88</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -6951,7 +6843,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/67</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -7005,10 +6897,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_FAMILY_FOUND.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
@@ -7030,15 +6918,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/28</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>146784a4-b53c-4245-a813-c41896761279</td>
 		</tr>
 	</tbody>
 </table>
@@ -7088,10 +6972,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_GENUS_FOUND.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
@@ -7113,15 +6993,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/122</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>6304e753-423d-4188-bba4-0301c1a01769</td>
 		</tr>
 	</tbody>
 </table>
@@ -7192,7 +7068,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/78</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -7246,10 +7122,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_GEODETICDATUM_STANDARD.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority = "EPSG" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index]}</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
@@ -7271,7 +7143,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/59</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -7325,10 +7197,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_KINGDOM_FOUND.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
@@ -7350,15 +7218,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/81</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>a5055cb3-b1e5-4070-90df-f875b0d9ae8a</td>
 		</tr>
 	</tbody>
 </table>
@@ -7429,7 +7293,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/216</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -7504,7 +7368,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/99</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -7558,10 +7422,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_LICENSE_STANDARD.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "Creative Commons 4.0 Licenses or CC0" {[https://creativecommons.org/]} { Regular Expression ^(http(s){0,1}://creativecommons.org/licenses/(by&#124;by-sa&#124;by-nc&#124;by-nc-sa&#124;by-nd&#124;by-nc-nd)/4.0/((deed&#124;legalcode)(.(id&#124;eu&#124;da&#124;de&#124;en&#124;es&#124;fr&#124;fy&#124;hr&#124;it&#124;lv&#124;lt&#124;mi&#124;ni&#124;no&#124;pl&#124;pt&#124;ro&#124;si&#124;fi&#124;sv&#124;tr&#124;cs&#124;el&#124;ru&#124;uk&#124;ar&#124;jp&#124;zh-hans&#124;zh-hant&#124;ko)){0,1})&#124;(http(s){0,1}://creativecommons.org/publicdomain/zero/1.0/((deed&#124;legalcode)(.(id&#124;eu&#124;da&#124;de&#124;en&#124;es&#124;fr&#124;fy&#124;hr&#124;it&#124;lv&#124;lt&#124;ni&#124;no&#124;pl&#124;pt&#124;ro&#124;si&#124;fi&#124;sv&#124;tr&#124;cs&#124;el&#124;ru&#124;uk&#124;ar&#124;jp&#124;zh-hans&#124;zh-hant&#124;ko)){0,1})))$ }</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
@@ -7583,15 +7443,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/38</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>7308bf21-2648-40d8-bb2c-3f36d2789552</td>
 		</tr>
 	</tbody>
 </table>
@@ -7662,7 +7518,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/40</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -7716,10 +7572,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_MAXDEPTH_INRANGE.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:minimumValidDepthInMeters default="0",bdq:maximumValidDepthInMeters default="11000"</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
@@ -7741,15 +7593,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/187</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Conformance Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>edf69c59-056d-4c8a-b1fb-647ea684eb18,f41be58e-2e1e-409e-a322-1de95df2ce0b</td>
 		</tr>
 	</tbody>
 </table>
@@ -7799,10 +7647,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_MAXELEVATION_INRANGE.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:minimumValidElevationInMeters default = "-430",bdq:maximumValidElevationInMeters default = "8850"</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
@@ -7824,15 +7668,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/112</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Likeliness Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>3ab181c2-a3d8-4317-af4d-f88181e2773a,1766715d-e588-4361-8b27-1c9cc43662ab</td>
 		</tr>
 	</tbody>
 </table>
@@ -7882,10 +7722,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_MINDEPTH_INRANGE.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:minimumValidDepthInMeters default="0",bdq:maximumValidDepthInMeters default="11000"</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
@@ -7907,15 +7743,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/107</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Conformance Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>d23e61b3-07b6-4326-bac2-1457b030efef,9f12e2c3-17ac-42c0-91f4-c40a02d3f133</td>
 		</tr>
 	</tbody>
 </table>
@@ -7986,7 +7818,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/24</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -8040,10 +7872,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_MINELEVATION_INRANGE.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:minimumValidElevationInMeters default = "-430",bdq:maximumValidElevationInMeters default = "8850"</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
@@ -8065,15 +7893,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/39</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Conformance Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>6e07e4fe-ce7a-4e5f-9fa3-c26877b273a7,307b78fe-e168-422b-977f-cdb4e1c5e636</td>
 		</tr>
 	</tbody>
 </table>
@@ -8144,7 +7968,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/108</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -8219,7 +8043,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/126</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -8294,7 +8118,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/259</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -8369,7 +8193,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/47</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -8444,7 +8268,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/117</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -8498,10 +8322,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_OCCURRENCESTATUS_STANDARD.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "Regex present/absent" {["^(present\</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
@@ -8523,7 +8343,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/116</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -8577,10 +8397,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_ORDER_FOUND.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
@@ -8602,15 +8418,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/83</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>c169404f-d797-40a1-9c84-3edb2383b759</td>
 		</tr>
 	</tbody>
 </table>
@@ -8660,10 +8472,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_PATHWAY_STANDARD.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "Pathway Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/pw/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/Pathway/concepts]}</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
@@ -8685,15 +8493,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/277</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>136039c5-6ceb-41ec-90b3-eb1cd37d6eed</td>
 		</tr>
 	</tbody>
 </table>
@@ -8743,10 +8547,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_PHYLUM_FOUND.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
@@ -8768,15 +8568,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/22</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>bd91e45d-691a-4d7e-9917-7b6231c05c43</td>
 		</tr>
 	</tbody>
 </table>
@@ -8847,7 +8643,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/101</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -8922,7 +8718,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/244</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -8997,7 +8793,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/212</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -9072,7 +8868,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/120</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -9126,10 +8922,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_SCIENTIFICNAME_FOUND.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
@@ -9151,15 +8943,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/46</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>d9dc26f7-6c4e-4647-addc-20197ce50d2b</td>
 		</tr>
 	</tbody>
 </table>
@@ -9230,7 +9018,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/82</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -9284,10 +9072,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_SEX_STANDARD.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "GBIF Sex Vocabulary" [https://api.gbif.org/v1/vocabularies/Sex]} {"dwc:sex vocabulary API" [https://api.gbif.org/v1/vocabularies/Sex/concepts]}</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
@@ -9309,15 +9093,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/283</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test VOCABULARY Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>2964d61f-eab0-4a21-9ac6-3f6a7c4fbf86</td>
 		</tr>
 	</tbody>
 </table>
@@ -9388,7 +9168,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/130</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -9442,10 +9222,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_STATEPROVINCE_FOUND.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
@@ -9467,15 +9243,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/199</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Conformance Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>41461142-2c1e-4fc1-bc97-f83a7b2a893d</td>
 		</tr>
 	</tbody>
 </table>
@@ -9546,7 +9318,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/161</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -9600,10 +9372,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_TAXONRANK_STANDARD.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "GBIF TaxonRank Vocabulary" [https://api.gbif.org/v1/vocabularies/TaxonRank]} {"dwc:taxonRank vocabulary API" [https://api.gbif.org/v1/vocabularies/TaxonRank/concepts]}</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
@@ -9625,15 +9393,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/162</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>da536dda-d467-450e-8b0a-6b6903fd1a1b</td>
 		</tr>
 	</tbody>
 </table>
@@ -9704,7 +9468,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/105</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -9758,10 +9522,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_TAXON_UNAMBIGUOUS.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
@@ -9783,15 +9543,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/70</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>1f9a778a-7949-4574-8826-55de1e4c1e32</td>
 		</tr>
 	</tbody>
 </table>
@@ -9841,10 +9597,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_TYPESTATUS_STANDARD.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "GBIF TypeStatus Vocabulary" {[https://api.gbif.org/v1/vocabularies/TypeStatus]} {dwc:typeStatus vocabulary API [https://api.gbif.org/v1/vocabularies/TypeStatus/concepts]}</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
@@ -9866,15 +9618,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/285</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>63b0193f-a8df-4345-8d60-caf667cd62b0</td>
 		</tr>
 	</tbody>
 </table>
@@ -9924,10 +9672,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_YEAR_INRANGE.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:earliestValidDate default = "1582",bdq:latestValidDate default = "{current year}"</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set.</td>
 		</tr>
@@ -9949,15 +9693,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/84</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Conformance Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>9167035f-14a8-4a0f-81eb-86a5a93bf6d9,fa6e83af-40c3-4330-aca0-937fc22b3a27</td>
 		</tr>
 	</tbody>
 </table>
@@ -10028,7 +9768,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/49</td>
+			<td>https://github.com/tdwg/bdq/issues/296</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -10103,7 +9843,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/58</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -10157,10 +9897,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_BASISOFRECORD_STANDARD.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "Darwin Core basisOfRecord" {[https://dwc.tdwg.org/terms/#dwc:basisOfRecord]}{dwc:basisOfRecord vocabulary [https://rs.gbif.org/vocabulary/dwc/basis_of_record.xml]}</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
@@ -10182,15 +9918,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/104</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>a723528a-ee73-44a7-818d-5315323ec4e9</td>
 		</tr>
 	</tbody>
 </table>
@@ -10240,10 +9972,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_CLASSIFICATION_CONSISTENT.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
@@ -10265,15 +9993,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/123</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test VOCABULARY Consistency Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>d6bc8db2-014b-47dc-9737-b0ecd98bf5bb</td>
 		</tr>
 	</tbody>
 </table>
@@ -10323,10 +10047,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_CLASS_FOUND.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
@@ -10348,15 +10068,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/77</td>
+			<td>https://github.com/tdwg/bdq/issues/297</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>cd12d17c-8404-40fa-bc15-5583564ddd14</td>
 		</tr>
 	</tbody>
 </table>
@@ -10406,10 +10122,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "10m-admin-1 boundaries UNION with Exclusive Economic Zones" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/] spatial UNION [https://www.marineregions.org/downloads.php#marbound]},bdq:spatialBufferInMeters default = "3000"</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
@@ -10431,15 +10143,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/50</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Consistency ISO/DCMI STANDARD Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>8a3f5702-a4e5-4b21-acb6-a4eae9a1ae09,972320cd-3ba3-4076-a8eb-f797095509cd</td>
 		</tr>
 	</tbody>
 </table>
@@ -10489,10 +10197,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "10m-admin-1 boundaries" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/]},bdq:spatialBufferInMeters default = "3000"</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
@@ -10514,15 +10218,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/56</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Consistency CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>b7c56646-56f1-4094-b2be-8546c7e18102,cceaf335-6cd3-44a0-9562-6fe8e7743854</td>
 		</tr>
 	</tbody>
 </table>
@@ -10572,10 +10272,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:taxonIsMarine default = "World Register of Marine Species (WoRMS)" {[https://www.marinespecies.org/]} {Web service [https://www.marinespecies.org/aphia.php?p=webservice]},bdq:geospatialLand default = "Union of NaturalEarth 10m-physical-vectors for Land and NaturalEarth Minor Islands" {[https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_land.zip], [https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_minor_islands.zip]},bdq:spatialBufferInMeters default = "3000",bdq:assumptionOnUnknownBiome default = "noassumption"</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
@@ -10597,15 +10293,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/51</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Consistency Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>3968f8d0-7364-4f3d-9993-96b8678f1653,cbb3483c-2bf7-4b42-9d74-71ddc0e41c5e,b3bf69d3-061c-4e2a-ac53-a73cb51ecbe2,e7012224-eb6d-4bb9-a4ef-2d40fd3b3471</td>
 		</tr>
 	</tbody>
 </table>
@@ -10676,7 +10368,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/87</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -10751,7 +10443,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/109</td>
+			<td>https://github.com/tdwg/bdq/issues/297</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -10826,7 +10518,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/98</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -10880,10 +10572,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_COUNTRYCODE_STANDARD.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
@@ -10905,7 +10593,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/20</td>
+			<td>https://github.com/tdwg/bdq/issues/297</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -10959,10 +10647,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
@@ -10984,7 +10668,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/62</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -11038,10 +10722,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
@@ -11063,15 +10743,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/201</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Conformance Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>aabaaac7-b26c-478e-9f04-3e2fbdba4a96</td>
 		</tr>
 	</tbody>
 </table>
@@ -11121,10 +10797,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_COUNTRY_FOUND.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
@@ -11146,15 +10818,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/21</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Conformance Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>3e00109a-13d3-416d-9a91-127c99b47473</td>
 		</tr>
 	</tbody>
 </table>
@@ -11225,7 +10893,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/42</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -11279,10 +10947,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_DATEIDENTIFIED_INRANGE.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:earliestValidDate default = "1753-01-01",bdq:latestValidDate default = "{current day}",bdq:includeEventDate default = "true"</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
@@ -11304,15 +10968,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/76</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Likeliness ISO/DCMI STANDARD Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>13c17157-1714-4f67-848b-9dc031917fee,030797c0-0b00-4272-9219-16d701e9da7c,739faad3-eb8a-4593-af8f-35b22630a920</td>
 		</tr>
 	</tbody>
 </table>
@@ -11383,7 +11043,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/69</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -11458,7 +11118,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/125</td>
+			<td>https://github.com/tdwg/bdq/issues/297</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -11533,7 +11193,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/147</td>
+			<td>https://github.com/tdwg/bdq/issues/297</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -11608,7 +11268,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/103</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -11662,10 +11322,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_DCTYPE_STANDARD.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>DCMI Type Vocabulary" {[http://purl.org/dc/terms/DCMIType]} {"DCMI Type Vocabulary List of Terms" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
@@ -11687,7 +11343,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/91</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -11762,7 +11418,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/79</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -11837,7 +11493,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/119</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -11912,7 +11568,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/30</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -11987,7 +11643,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/96</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -12041,10 +11697,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_DEGREEOFESTABLISHMENT_STANDARD.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "Degree of Establishment Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/doe/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/DegreeOfEstablishment/concepts]}</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
@@ -12066,15 +11718,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/275</td>
+			<td>https://github.com/tdwg/bdq/issues/297</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>8aac7359-311a-405f-8117-79bb4873011d</td>
 		</tr>
 	</tbody>
 </table>
@@ -12145,7 +11793,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/131</td>
+			<td>https://github.com/tdwg/bdq/issues/297</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -12199,10 +11847,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_ESTABLISHMENTMEANS_STANDARD.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "Establishment Means Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/em/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/EstablishmentMeans/concepts]}</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
@@ -12224,15 +11868,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/268</td>
+			<td>https://github.com/tdwg/bdq/issues/297</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>0c051c38-621f-4a52-ae92-5077afd46446</td>
 		</tr>
 	</tbody>
 </table>
@@ -12282,10 +11922,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_EVENTDATE_INRANGE.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:earliestValidDate default ="1582-11-15",bdq:latestValidDate default = "{current year}"</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
@@ -12307,15 +11943,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/36</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Conformance Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>8b223050-f314-4601-9e20-d5f3d59d8e79,2e5c3e37-b6a9-4928-8436-0d83bdb3f0fc</td>
 		</tr>
 	</tbody>
 </table>
@@ -12386,7 +12018,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/33</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -12461,7 +12093,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/66</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -12536,7 +12168,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/88</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -12611,7 +12243,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/67</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -12665,10 +12297,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_FAMILY_FOUND.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
@@ -12690,15 +12318,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/28</td>
+			<td>https://github.com/tdwg/bdq/issues/297</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>146784a4-b53c-4245-a813-c41896761279</td>
 		</tr>
 	</tbody>
 </table>
@@ -12748,10 +12372,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_GENUS_FOUND.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
@@ -12773,15 +12393,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/122</td>
+			<td>https://github.com/tdwg/bdq/issues/297</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>6304e753-423d-4188-bba4-0301c1a01769</td>
 		</tr>
 	</tbody>
 </table>
@@ -12852,7 +12468,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/78</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -12906,10 +12522,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_GEODETICDATUM_STANDARD.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority = "EPSG" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index]}</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
@@ -12931,7 +12543,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/59</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -12985,10 +12597,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_KINGDOM_FOUND.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
@@ -13010,15 +12618,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/81</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>a5055cb3-b1e5-4070-90df-f875b0d9ae8a</td>
 		</tr>
 	</tbody>
 </table>
@@ -13089,7 +12693,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/216</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -13164,7 +12768,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/99</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -13218,10 +12822,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_LICENSE_STANDARD.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "Creative Commons 4.0 Licenses or CC0" {[https://creativecommons.org/]} { Regular Expression ^(http(s){0,1}://creativecommons.org/licenses/(by&#124;by-sa&#124;by-nc&#124;by-nc-sa&#124;by-nd&#124;by-nc-nd)/4.0/((deed&#124;legalcode)(.(id&#124;eu&#124;da&#124;de&#124;en&#124;es&#124;fr&#124;fy&#124;hr&#124;it&#124;lv&#124;lt&#124;mi&#124;ni&#124;no&#124;pl&#124;pt&#124;ro&#124;si&#124;fi&#124;sv&#124;tr&#124;cs&#124;el&#124;ru&#124;uk&#124;ar&#124;jp&#124;zh-hans&#124;zh-hant&#124;ko)){0,1})&#124;(http(s){0,1}://creativecommons.org/publicdomain/zero/1.0/((deed&#124;legalcode)(.(id&#124;eu&#124;da&#124;de&#124;en&#124;es&#124;fr&#124;fy&#124;hr&#124;it&#124;lv&#124;lt&#124;ni&#124;no&#124;pl&#124;pt&#124;ro&#124;si&#124;fi&#124;sv&#124;tr&#124;cs&#124;el&#124;ru&#124;uk&#124;ar&#124;jp&#124;zh-hans&#124;zh-hant&#124;ko)){0,1})))$ }</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
@@ -13243,15 +12843,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/38</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>7308bf21-2648-40d8-bb2c-3f36d2789552</td>
 		</tr>
 	</tbody>
 </table>
@@ -13322,7 +12918,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/40</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -13376,10 +12972,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_MAXDEPTH_INRANGE.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:minimumValidDepthInMeters default="0",bdq:maximumValidDepthInMeters default="11000"</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
@@ -13401,15 +12993,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/187</td>
+			<td>https://github.com/tdwg/bdq/issues/297</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Conformance Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>edf69c59-056d-4c8a-b1fb-647ea684eb18,f41be58e-2e1e-409e-a322-1de95df2ce0b</td>
 		</tr>
 	</tbody>
 </table>
@@ -13459,10 +13047,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_MAXELEVATION_INRANGE.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:minimumValidElevationInMeters default = "-430",bdq:maximumValidElevationInMeters default = "8850"</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
@@ -13484,15 +13068,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/112</td>
+			<td>https://github.com/tdwg/bdq/issues/297</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Likeliness Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>3ab181c2-a3d8-4317-af4d-f88181e2773a,1766715d-e588-4361-8b27-1c9cc43662ab</td>
 		</tr>
 	</tbody>
 </table>
@@ -13542,10 +13122,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_MINDEPTH_INRANGE.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:minimumValidDepthInMeters default="0",bdq:maximumValidDepthInMeters default="11000"</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
@@ -13567,15 +13143,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/107</td>
+			<td>https://github.com/tdwg/bdq/issues/297</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Conformance Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>d23e61b3-07b6-4326-bac2-1457b030efef,9f12e2c3-17ac-42c0-91f4-c40a02d3f133</td>
 		</tr>
 	</tbody>
 </table>
@@ -13646,7 +13218,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/24</td>
+			<td>https://github.com/tdwg/bdq/issues/297</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -13700,10 +13272,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_MINELEVATION_INRANGE.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:minimumValidElevationInMeters default = "-430",bdq:maximumValidElevationInMeters default = "8850"</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
@@ -13725,15 +13293,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/39</td>
+			<td>https://github.com/tdwg/bdq/issues/297</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Conformance Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>6e07e4fe-ce7a-4e5f-9fa3-c26877b273a7,307b78fe-e168-422b-977f-cdb4e1c5e636</td>
 		</tr>
 	</tbody>
 </table>
@@ -13804,7 +13368,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/108</td>
+			<td>https://github.com/tdwg/bdq/issues/297</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -13879,7 +13443,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/126</td>
+			<td>https://github.com/tdwg/bdq/issues/297</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -13954,7 +13518,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/259</td>
+			<td>https://github.com/tdwg/bdq/issues/297</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -14029,7 +13593,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/47</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -14104,7 +13668,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/117</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -14158,10 +13722,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_OCCURRENCESTATUS_STANDARD.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "Regex present/absent" {["^(present\</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
@@ -14183,7 +13743,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/116</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -14237,10 +13797,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_ORDER_FOUND.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
@@ -14262,15 +13818,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/83</td>
+			<td>https://github.com/tdwg/bdq/issues/297</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>c169404f-d797-40a1-9c84-3edb2383b759</td>
 		</tr>
 	</tbody>
 </table>
@@ -14320,10 +13872,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_PATHWAY_STANDARD.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "Pathway Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/pw/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/Pathway/concepts]}</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
@@ -14345,15 +13893,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/277</td>
+			<td>https://github.com/tdwg/bdq/issues/297</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>136039c5-6ceb-41ec-90b3-eb1cd37d6eed</td>
 		</tr>
 	</tbody>
 </table>
@@ -14403,10 +13947,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_PHYLUM_FOUND.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
@@ -14428,15 +13968,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/22</td>
+			<td>https://github.com/tdwg/bdq/issues/297</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>bd91e45d-691a-4d7e-9917-7b6231c05c43</td>
 		</tr>
 	</tbody>
 </table>
@@ -14507,7 +14043,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/101</td>
+			<td>https://github.com/tdwg/bdq/issues/297</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -14582,7 +14118,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/244</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -14657,7 +14193,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/212</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -14732,7 +14268,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/120</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -14786,10 +14322,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_SCIENTIFICNAME_FOUND.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
@@ -14811,15 +14343,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/46</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>d9dc26f7-6c4e-4647-addc-20197ce50d2b</td>
 		</tr>
 	</tbody>
 </table>
@@ -14890,7 +14418,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/82</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -14944,10 +14472,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_SEX_STANDARD.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "GBIF Sex Vocabulary" [https://api.gbif.org/v1/vocabularies/Sex]} {"dwc:sex vocabulary API" [https://api.gbif.org/v1/vocabularies/Sex/concepts]}</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
@@ -14969,15 +14493,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/283</td>
+			<td>https://github.com/tdwg/bdq/issues/297</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test VOCABULARY Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>2964d61f-eab0-4a21-9ac6-3f6a7c4fbf86</td>
 		</tr>
 	</tbody>
 </table>
@@ -15048,7 +14568,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/130</td>
+			<td>https://github.com/tdwg/bdq/issues/297</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -15102,10 +14622,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_STATEPROVINCE_FOUND.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
@@ -15127,15 +14643,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/199</td>
+			<td>https://github.com/tdwg/bdq/issues/297</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Conformance Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>41461142-2c1e-4fc1-bc97-f83a7b2a893d</td>
 		</tr>
 	</tbody>
 </table>
@@ -15206,7 +14718,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/161</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -15260,10 +14772,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_TAXONRANK_STANDARD.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "GBIF TaxonRank Vocabulary" [https://api.gbif.org/v1/vocabularies/TaxonRank]} {"dwc:taxonRank vocabulary API" [https://api.gbif.org/v1/vocabularies/TaxonRank/concepts]}</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
@@ -15285,15 +14793,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/162</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>da536dda-d467-450e-8b0a-6b6903fd1a1b</td>
 		</tr>
 	</tbody>
 </table>
@@ -15364,7 +14868,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/105</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
@@ -15418,10 +14922,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_TAXON_UNAMBIGUOUS.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
@@ -15443,15 +14943,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/70</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>1f9a778a-7949-4574-8826-55de1e4c1e32</td>
 		</tr>
 	</tbody>
 </table>
@@ -15501,10 +14997,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_TYPESTATUS_STANDARD.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "GBIF TypeStatus Vocabulary" {[https://api.gbif.org/v1/vocabularies/TypeStatus]} {dwc:typeStatus vocabulary API [https://api.gbif.org/v1/vocabularies/TypeStatus/concepts]}</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
@@ -15526,15 +15018,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/285</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>63b0193f-a8df-4345-8d60-caf667cd62b0</td>
 		</tr>
 	</tbody>
 </table>
@@ -15584,10 +15072,6 @@ Including MultiRecord Measures
 			<td>bdq:VALIDATION_YEAR_INRANGE.Response</td>
 		</tr>
 		<tr>
-			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:earliestValidDate default = "1582",bdq:latestValidDate default = "{current year}"</td>
-		</tr>
-		<tr>
 			<td>Notes</td>
 			<td>For Quality Assurance, filter record set until this measure is COMPLETE.</td>
 		</tr>
@@ -15609,15 +15093,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/84</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Conformance Parameterized CORE</td>
-		</tr>
-		<tr>
-			<td>Argument GUID</td>
-			<td>9167035f-14a8-4a0f-81eb-86a5a93bf6d9,fa6e83af-40c3-4330-aca0-937fc22b3a27</td>
 		</tr>
 	</tbody>
 </table>
@@ -15688,7 +15168,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Developed As GitHub Issue</td>
-			<td>https://github.com/tdwg/bdq/issues/49</td>
+			<td>https://github.com/tdwg/bdq/issues/295</td>
 		</tr>
 		<tr>
 			<td>GitHub Issue Labels</td>
