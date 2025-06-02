@@ -723,7 +723,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Proposes an amendment of the signs of dwc:decimalLatitude and/or dwc:decimalLongitude to align the location with the dwc:countryCode.</td>
+			<td>Proposes an amendment transposing or changing the signs of dwc:decimalLatitude and/or dwc:decimalLongitude to align the location with the dwc:countryCode.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
@@ -16182,7 +16182,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>This Test will return 'NOT_COMPLIANT' for records on the "High seas" where dwc:countryCode is bdq:Empty. Darwin Core recommends that data from the high seas (outside national jurisdictions) use dwc:countryCode = "XZ".</td>
+			<td>Darwin Core recommends that data from the high seas (outside national jurisdictions) use dwc:countryCode = "XZ".</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
@@ -16281,7 +16281,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>Locations outside of a jurisdiction covered by a country code may have a value in the field dwc:countryCode, the ISO user defined codes include XZ used by the UN for installations on the high seas and suitable for a marker for the high seas. Also available in the ISO user defined codes is ZZ, used by Darwin Core and GBIF to mark unknown countries. This Test should accept both XZ and ZZ as COMPLIANT country codes. This Test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.</td>
+			<td>Locations outside of a jurisdiction covered by a country code may have a value in the field dwc:countryCode, the ISO user defined codes include XZ used by the UN for installations on the high seas and recommended in Darwin Core to designate the high seas. Also available in the ISO user defined codes is ZZ, used by Darwin Core and GBIF to mark unknown countries. This Test should accept both XZ and ZZ as COMPLIANT country codes. This Test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
