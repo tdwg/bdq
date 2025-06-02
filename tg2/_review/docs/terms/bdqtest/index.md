@@ -622,7 +622,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 #### Notes
 
-This Test will return 'NOT_COMPLIANT' for records on the "High seas" where dwc:countryCode is bdq:Empty. We recommend that data from the high seas (outside national jurisdictions) use dwc:countryCode = "XZ" and dwc:country = "High seas" until an agreement has been made.
+This Test will return 'NOT_COMPLIANT' for records on the "High seas" where dwc:countryCode is bdq:Empty. Darwin Core recommends that data from the high seas (outside national jurisdictions) use dwc:countryCode = "XZ".
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -663,7 +663,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 #### Notes
 
-Locations outside of a jurisdiction covered by a country code may have a value in the field dwc:countryCode, the ISO user defined codes include XZ used by the UN for installations on the high seas and suitable for a marker for the high seas. Also available in the ISO user defined codes is ZZ, used by GBIF to mark unknown countries. This Test should accept both XZ and ZZ as COMPLIANT country codes. This Test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.
+Locations outside of a jurisdiction covered by a country code may have a value in the field dwc:countryCode, the ISO user defined codes include XZ used by the UN for installations on the high seas and suitable for a marker for the high seas. Also available in the ISO user defined codes is ZZ, used by Darwin Core and GBIF to mark unknown countries. This Test should accept both XZ and ZZ as COMPLIANT country codes. This Test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -704,7 +704,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 #### Notes
 
-The country code determination service should be able to match the name of a country in the original or any language in the source authority. When dwc:countryCode="XZ" to mark the high seas, country should be empty until a time when a dwc:country="High seas" or similar is adopted. This Test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.
+The country code determination service should be able to match the name of a country in the original or any language in the source authority. When dwc:countryCode="XZ" to designate "high seas", dwc:country should be empty. This Test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -3587,7 +3587,7 @@ bdq:sourceAuthority default = "10m-admin-1 boundaries UNION with Exclusive Econo
 
 dwc:decimalLatitude="-25.23", dwc:decimalLongitude="135.43", dwc:countryCode="": Response.status=FILLED_IN, Response.result=dwc:countryCode="AU", Response.comment="dwc:decimalLatitude and dwc:decimalLongitude contain interpretable values"
 
-dwc:decimalLatitude="-38.280937", dwc:decimalLongitude="72.047790", dwc:countryCode="": Response.status=NOT_AMENDED, Response.result="", Response.comment="Coordinates do not fall in the boundary of any country"
+dwc:decimalLatitude="-38.280937", dwc:decimalLongitude="72.047790", dwc:countryCode="": Response.status=FILLED_IN, Response.result=dwc:countryCode="XZ", Response.comment="Coordinates do not fall in the boundary of any national jurisdiction, using XZ for high seas"
 
 
 #### Use Cases
@@ -3596,7 +3596,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 #### Notes
 
-This amendment simply fills dwc:countryCode from a lookup of dwc:decimalLatitude and dwc:decimalLongitude. dwc:coordinateUncertaintyInMeters and dwc:coordinatePrecision (if present) imply a buffer around the provided coordinates. Likewise, country polygons cannot be 100% accurate at all scales (Dooley 2005), so a spatial buffer of the country boundaries is also justified. Taking spatial buffers into account does, however, greatly complicate the logic and the implementation of this and related Tests. In this Test, a detection of multiple country codes by sampling within the buffer, while possible, is not considered.
+This amendment simply fills dwc:countryCode from a lookup of dwc:decimalLatitude and dwc:decimalLongitude.  If the coordinate falls in the high seas outside any national jurisdiction dwc:countryCode="XZ" should be asserted.  Values in dwc:coordinateUncertaintyInMeters and dwc:coordinatePrecision (if present) imply a buffer around the provided coordinates. Likewise, country polygons cannot be 100% accurate at all scales (Dooley 2005), so a spatial buffer of the country boundaries is also justified. Taking spatial buffers into account does, however, greatly complicate the logic and the implementation of this and related Tests. In this Test, a detection of multiple country codes by sampling within the buffer, while possible, is not considered.
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -3637,7 +3637,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 #### Notes
 
-This Test supports conformance with the recommendation in the comment on dwc:countryCode: "Recommended best practice is to use an ISO 3166-1-alpha-2 country code." Three letter codes should be amended to the matching two-letter code.
+This Test supports conformance with the recommendation in the comment on dwc:countryCode: "Recommended best practice is to use an ISO 3166-1-alpha-2 country code." Darwin Core also recommends the use of the XZ for high seas and ZZ for unknown. Three letter codes should be amended to the matching two-letter code.
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************

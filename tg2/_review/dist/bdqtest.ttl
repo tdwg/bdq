@@ -21,7 +21,7 @@
 <https://rs.tdwg.org/bdqtest/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe-2025-03-07>
   a <https://rs.tdwg.org/bdqffdq/terms/Validation>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord>;
-  skos:note "Locations outside of a jurisdiction covered by a country code may have a value in the field dwc:countryCode, the ISO user defined codes include XZ used by the UN for installations on the high seas and suitable for a marker for the high seas. Also available in the ISO user defined codes is ZZ, used by GBIF to mark unknown countries. This Test should accept both XZ and ZZ as COMPLIANT country codes. This Test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.";
+  skos:note "Locations outside of a jurisdiction covered by a country code may have a value in the field dwc:countryCode, the ISO user defined codes include XZ used by the UN for installations on the high seas and suitable for a marker for the high seas. Also available in the ISO user defined codes is ZZ, used by Darwin Core and GBIF to mark unknown countries. This Test should accept both XZ and ZZ as COMPLIANT country codes. This Test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Conformance>;
   <https://rs.tdwg.org/bdqffdq/terms/hasCriterion> <bdqcrit:Standard>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:c3620a97-65d6-4f9c-8a03-32e0d240a423>;
@@ -806,7 +806,7 @@
   a <https://rs.tdwg.org/bdqffdq/terms/Amendment>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord>;
   <https://rs.tdwg.org/bdqffdq/terms/hasEnhancement> <bdqenh:Standardized>;
-  skos:note "This Test supports conformance with the recommendation in the comment on dwc:countryCode: \"Recommended best practice is to use an ISO 3166-1-alpha-2 country code.\" Three letter codes should be amended to the matching two-letter code.";
+  skos:note "This Test supports conformance with the recommendation in the comment on dwc:countryCode: \"Recommended best practice is to use an ISO 3166-1-alpha-2 country code.\" Darwin Core also recommends the use of the XZ for high seas and ZZ for unknown. Three letter codes should be amended to the matching two-letter code.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Conformance>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:c3620a97-65d6-4f9c-8a03-32e0d240a423>;
   dcterms:issued "2025-03-07"^^xsd:date;
@@ -1346,7 +1346,7 @@
 <https://rs.tdwg.org/bdqtest/terms/b23110e7-1be7-444a-a677-cdee0cf4330c-2025-03-07>
   a <https://rs.tdwg.org/bdqffdq/terms/Validation>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord>;
-  skos:note "The country code determination service should be able to match the name of a country in the original or any language in the source authority. When dwc:countryCode=\"XZ\" to mark the high seas, country should be empty until a time when a dwc:country=\"High seas\" or similar is adopted. This Test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.";
+  skos:note "The country code determination service should be able to match the name of a country in the original or any language in the source authority. When dwc:countryCode=\"XZ\" to designate \"high seas\", dwc:country should be empty. This Test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Consistency>;
   <https://rs.tdwg.org/bdqffdq/terms/hasCriterion> <bdqcrit:Consistent>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:9cada38d-ed7c-485d-8b9b-ea57e4124253>;
@@ -1713,7 +1713,7 @@
   a <https://rs.tdwg.org/bdqffdq/terms/Amendment>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord>;
   <https://rs.tdwg.org/bdqffdq/terms/hasEnhancement> <bdqenh:FilledInFrom>;
-  skos:note "This amendment simply fills dwc:countryCode from a lookup of dwc:decimalLatitude and dwc:decimalLongitude. dwc:coordinateUncertaintyInMeters and dwc:coordinatePrecision (if present) imply a buffer around the provided coordinates. Likewise, country polygons cannot be 100% accurate at all scales (Dooley 2005), so a spatial buffer of the country boundaries is also justified. Taking spatial buffers into account does, however, greatly complicate the logic and the implementation of this and related Tests. In this Test, a detection of multiple country codes by sampling within the buffer, while possible, is not considered.";
+  skos:note "This amendment simply fills dwc:countryCode from a lookup of dwc:decimalLatitude and dwc:decimalLongitude.  If the coordinate falls in the high seas outside any national jurisdiction dwc:countryCode=\"XZ\" should be asserted.  Values in dwc:coordinateUncertaintyInMeters and dwc:coordinatePrecision (if present) imply a buffer around the provided coordinates. Likewise, country polygons cannot be 100% accurate at all scales (Dooley 2005), so a spatial buffer of the country boundaries is also justified. Taking spatial buffers into account does, however, greatly complicate the logic and the implementation of this and related Tests. In this Test, a detection of multiple country codes by sampling within the buffer, while possible, is not considered.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Completeness>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:c3620a97-65d6-4f9c-8a03-32e0d240a423>;
   <https://rs.tdwg.org/bdqffdq/terms/hasConsultedInformationElement> <urn:uuid:c3849b5d-feb7-4388-ab95-ec54ff1031ea>;
@@ -1742,7 +1742,7 @@
 
 <urn:uuid:95ac057e-a941-416f-b7dc-ad7aca875cff> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
   skos:example "dwc:decimalLatitude=\"-25.23\", dwc:decimalLongitude=\"135.43\", dwc:countryCode=\"\": Response.status=FILLED_IN, Response.result=dwc:countryCode=\"AU\", Response.comment=\"dwc:decimalLatitude and dwc:decimalLongitude contain interpretable values\"",
-    "dwc:decimalLatitude=\"-38.280937\", dwc:decimalLongitude=\"72.047790\", dwc:countryCode=\"\": Response.status=NOT_AMENDED, Response.result=\"\", Response.comment=\"Coordinates do not fall in the boundary of any country\"";
+    "dwc:decimalLatitude=\"-38.280937\", dwc:decimalLongitude=\"72.047790\", dwc:countryCode=\"\": Response.status=FILLED_IN, Response.result=dwc:countryCode=\"XZ\", Response.comment=\"Coordinates do not fall in the boundary of any national jurisdiction, using XZ for high seas\"";
   <https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:sourceAuthority default = \"10m-admin-1 boundaries UNION with Exclusive Economic Zones\" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/] spatial UNION [https://www.marineregions.org/downloads.php#marbound]}";
   rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if either dwc:decimalLatitude or dwc:decimalLongitude is bdq:Empty, or if dwc:countryCode is bdq:NotEmpty; FILLED_IN dwc:countryCode if dwc:decimalLatitude and dwc:decimalLongitude fall within a boundary in the bdq:sourceAuthority that is attributable to a single valid country code; otherwise NOT_AMENDED. bdq:sourceAuthority default = \"10m-admin-1 boundaries UNION with Exclusive Economic Zones\" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/] spatial UNION [https://www.marineregions.org/downloads.php#marbound]}";
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if either dwc:decimalLatitude or dwc:decimalLongitude is bdq:Empty, or if dwc:countryCode is bdq:NotEmpty; FILLED_IN dwc:countryCode if dwc:decimalLatitude and dwc:decimalLongitude fall within a boundary in the bdq:sourceAuthority that is attributable to a single valid country code; otherwise NOT_AMENDED.";
@@ -2386,7 +2386,7 @@
 <https://rs.tdwg.org/bdqtest/terms/853b79a2-b314-44a2-ae46-34a1e7ed85e4-2025-03-07>
   a <https://rs.tdwg.org/bdqffdq/terms/Validation>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord>;
-  skos:note "This Test will return 'NOT_COMPLIANT' for records on the \"High seas\" where dwc:countryCode is bdq:Empty. We recommend that data from the high seas (outside national jurisdictions) use dwc:countryCode = \"XZ\" and dwc:country = \"High seas\" until an agreement has been made.";
+  skos:note "This Test will return 'NOT_COMPLIANT' for records on the \"High seas\" where dwc:countryCode is bdq:Empty. Darwin Core recommends that data from the high seas (outside national jurisdictions) use dwc:countryCode = \"XZ\".";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Completeness>;
   <https://rs.tdwg.org/bdqffdq/terms/hasCriterion> <bdqcrit:NotEmpty>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:c3620a97-65d6-4f9c-8a03-32e0d240a423>;
