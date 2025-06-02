@@ -2,16 +2,30 @@ Scripts to copy updated authoritative artifacts from the tdwg/bdq/ tree into the
 
 WARNING: All files listed in the copy_files.sh script MUST NOT be edited in their destination files in the _review directory.  Current authoritative and maintained copies live elsewhere.  See the file lists below.
 
-**copy_files.sh**  Copies authoritative files from outside the _review tree into their target locations in the _review tree.
+**copy_files.sh**  Copies authoritative files from outside the _review tree into their target locations in the _review tree, and uses kurator-ffdq to build the RDF representations of the test descriptions from the authoritative csv term-version file.
 
 **do_build.sh** Executes the python scripts in `_build_review/` to build artifacts from the templates, configuration files, and vocabulary documents in the `_build_review/` tree.
 
-Third party Python libraries required by the scripts:
+Third party Python libraries required by the python scripts:
 ```
 pandas
 pyyaml
 rdflib
 ```
+
+Third party application required by copy_files.sh, see instructions in copy_files.sh:
+```
+kurator-ffdq
+```
+
+To build _review, run the following commands in the bdq/tg2/_make_review directory:
+
+```bash
+copy_files.sh
+do_build.sh
+```
+
+Also in bdq/tg2/_build_qrg is **generate_bdq_qrg.py**, which generates a proof of concept html representation of the quick reference guide for the bdqtest vocabulary.  
 
 # Structure of source and target directories for the build.
 
