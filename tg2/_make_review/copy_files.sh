@@ -12,18 +12,16 @@
 # of all test descriptions.
 cp ../core/TG2_tests.csv ../_review/vocabulary/bdqtest_term_versions.csv
 
+# create a convenience copy of the current single record tests
 # TODO: replace the next step with invocation of:
-# draft_build_bdqtest_singlerecord_tests_current.py
+# draft_build_bdqtest_singlerecord_tests_current.py  (will need to filter for just current versions of recommended tests)
 cp ../core/TG2_tests.csv ../_review/dist/bdqtest_singlerecord_tests_current.csv
-
-# Replace these steps with creation of these files with kurator-ffdq below
-# cp ../core/TG2_tests.xml ../_review/dist/bdqtest.xml
-# cp ../core/TG2_tests.ttl ../_review/dist/bdqtest.ttl
-# cp ../core/TG2_tests.json ../_review/dist/bdqtest.json
 
 # TODO: The above term-versions file will become the master copy, and include the multi-record measures.
 # append multi-record measures to csv list of core tests
 grep -v prefLabel ../core/TG2_multirecord_measure_tests.csv >> ../_review/vocabulary/bdqtest_term_versions.csv
+
+# create a convinence csv file of just the multi-record measure tests (will need to filter for just current versions of recommended tests)
 grep -v SingleRecord ../_review/vocabulary/bdqtest_term_versions.csv > ../_review/dist/bdqtest_multirecord_tests_current.csv
 
 # CSV files of test validation data
@@ -36,6 +34,11 @@ grep -v SingleRecord ../_review/vocabulary/bdqtest_term_versions.csv > ../_revie
 # Assuming that bdq/tg2/_make_review/ is at the same level as kurator-ffdq/ (e.g. in a ~/git/ directory)
 # move up to the shared (e.g. ~/git/) directory
 cd ../../../
+# commands needed to build kurator-ffdq
+#git clone https://github.com/kurator-org/kurator-ffdq.git
+#cd kurator-ffdq
+#mvn clean install
+#cd ../
 # moved down into kurator-ffdq/ directory
 cd kurator-ffdq/
 # copy tests into the kurator-ffdq data directory from the bdq project
