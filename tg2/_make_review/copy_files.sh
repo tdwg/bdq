@@ -32,3 +32,18 @@ grep -v SingleRecord ../_review/vocabulary/bdqtest_term_versions.csv > ../_revie
 # versions.
 #cp ../core/TG2_test_validation_data.csv  ../_build_review/templates/guide/implementers/TG2_test_validation_data.csv 
 #cp ../core/TG2_test_validation_data_nonprintingchars.csv ../_build_review/templates/guide/implementers/TG2_test_validation_data_nonprintingchars.csv
+
+# Assuming that bdq/tg2/_make_review/ is at the same level as kurator-ffdq/ (e.g. in a ~/git/ directory)
+# move up to the shared (e.g. ~/git/) directory
+cd ../../../
+# moved down into kurator-ffdq/ directory
+cd kurator-ffdq/
+# copy tests into the kurator-ffdq data directory from the bdq project
+grep -v "AllAmendmentTestsRunOnSingleRecord" ../bdq/tg2/core/TG2_tests.csv  | grep -v "AllDarwin" > data/TG2_tests.csv
+cp ../bdq/tg2/core/TG2_multirecord_measure_tests.csv data/TG2_multirecord_measure_tests.csv
+# run test-util.sh to generate various RDF serializations of the tests.
+./test-util.sh -config data/tg2_tests.properties -format RDFXML -out ../bdq/tg2/core/TG2_tests.xml -in  data/TG2_tests.csv -guidFile ../bdq/tg2/core/TG2_tests_additional_guids.csv -useCaseFile ../bdq/tg2/core/usecase_test_list.csv -ieGuidFile ../bdq/tg2/core/information_element_guids.csv
+./test-util.sh -config data/tg2_tests.properties -format TURTLE -out ../bdq/tg2/core/TG2_tests.ttl -in  data/TG2_tests.csv -guidFile ../bdq/tg2/core/TG2_tests_additional_guids.csv -useCaseFile ../bdq/tg2/core/usecase_test_list.csv -ieGuidFile ../bdq/tg2/core/information_element_guids.csv
+./test-util.sh -config data/tg2_tests.properties -format JSON-LD -out ../bdq/tg2/core/TG2_tests.json -in  data/TG2_tests.csv -guidFile ../bdq/tg2/core/TG2_tests_additional_guids.csv -useCaseFile ../bdq/tg2/core/usecase_test_list.csv -ieGuidFile ../bdq/tg2/core/information_element_guids.csv
+./test-util.sh -config data/tg2_tests.properties -format RDFXML -out ../bdq/tg2/core/TG2_multirecord_measure_tests.xml -in  data/TG2_multirecord_measure_tests.csv -guidFile ../bdq/tg2/core/TG2_tests_additional_guids.csv -useCaseFile ../bdq/tg2/core/usecase_test_list.csv -ieGuidFile ../bdq/tg2/core/information_element_guids.csv
+./test-util.sh -config data/tg2_tests.properties -format TURTLE -out ../bdq/tg2/core/TG2_multirecord_measure_tests.ttl -in  data/TG2_multirecord_measure_tests.csv -guidFile ../bdq/tg2/core/TG2_tests_additional_guids.csv -useCaseFile ../bdq/tg2/core/usecase_test_list.csv -ieGuidFile ../bdq/tg2/core/information_element_guids.csv
