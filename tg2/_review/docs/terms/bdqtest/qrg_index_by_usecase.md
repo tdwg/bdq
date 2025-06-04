@@ -1,7 +1,7 @@
 # BDQ Test Index by Use Case (non-normative)
 This document is non-normative and part of the [BDQ Tests Quick Reference Guide](index.md).
 ## bdq:Taxon-Management
-A bdqffdq:UseCase that documents the management of the quality of taxonomic names (see examples in Rees ER & Nicholls M (2020) Data Quality Use Case Study Results Biodiversity Information Science and Standards 4: e50889, suppl. 2. https://doi.org/10.3897/biss.4.50889.suppl2).
+A bdqffdq:UseCase that documents the management of the quality of taxonomic names (see examples in Rees ER and Nicholls M (2020) Data Quality Use Case Study Results Biodiversity Information Science and Standards 4: e50889, suppl. 2. https://doi.org/10.3897/biss.4.50889.suppl2).
 
 VALIDATION_BASISOFRECORD_NOTEMPTY
 - Term IRI: https://rs.tdwg.org/bdqtest/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536
@@ -451,7 +451,7 @@ AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID
 
 
 ## bdq:Spatial-Temporal_Patterns
-Research uses forming a bdqffdq:UseCase for dwc:Occurrence data 1) where the Information Elements concern what dwc:Organism occurred where and when and 2) that are used for analysis of spatial and/or temporal patterns of biodiversity (see examples in Rees ER & Nicholls M (2020) Data Quality Use Case Study Results. Biodiversity Information Science and Standards 4: e50889, suppl. 2. https://doi.org/10.3897/biss.4.50889.suppl2).
+Research uses forming a bdqffdq:UseCase for dwc:Occurrence data 1) where the Information Elements concern what dwc:Organism occurred where and when and 2) that are used for analysis of spatial and/or temporal patterns of biodiversity (see examples in Rees ER and Nicholls M (2020) Data Quality Use Case Study Results. Biodiversity Information Science and Standards 4: e50889, suppl. 2. https://doi.org/10.3897/biss.4.50889.suppl2).
 
 VALIDATION_BASISOFRECORD_NOTEMPTY
 - Term IRI: https://rs.tdwg.org/bdqtest/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536
@@ -836,7 +836,7 @@ AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID
 
 
 ## bdq:Record-Management
-A bdqffdq:UseCase that documents the management of the quality of biodiversity data records (see examples in Rees ER & Nicholls M (2020) Data Quality Use Case Study Results. Biodiversity Information Science and Standards 4: e50889, suppl. 2. https://doi.org/10.3897/biss.4.50889.suppl2).
+A bdqffdq:UseCase that documents the management of the quality of biodiversity data records (see examples in Rees ER and Nicholls M (2020) Data Quality Use Case Study Results. Biodiversity Information Science and Standards 4: e50889, suppl. 2. https://doi.org/10.3897/biss.4.50889.suppl2).
 
 VALIDATION_BASISOFRECORD_NOTEMPTY
 - Term IRI: https://rs.tdwg.org/bdqtest/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536
