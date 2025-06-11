@@ -141,6 +141,9 @@ def build_term_section(term, columns):
            termLabel = 'Information Elements Acted Upon'
         if termLabel == 'InformationElement:Consulted':
            termLabel = 'Information Elements Consulted'
+        # if termLabel is Examples, insert a <br> to separate the examples in the cell at each ],[
+        if termLabel == 'Examples':
+            value = value.replace('],[', '],<br>[')
         rows += f'<tr><td class="termLabel">{termLabel}</td><td>{value}</td></tr>'
     return f'<section class="term-section" id="{term_id}">\n<div class="field-header-wrapper"><h3>{label}</h3></div>\n<table class="term-table">{rows}</table>\n</section>'
 
