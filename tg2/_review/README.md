@@ -2,6 +2,7 @@
 
 Thank you for participating in the review of the proposed **Biodiversity Data Quality (BDQ)** standard.  
 This folder includes documents that are intended to form part of the standard, as well as supporting resources to use, develop and maintain it.
+Placeholder: [Notes for the Review Manager](https://github.com/tdwg/bdq/issues/306)
 
 ## 🧭 How to Approach the Review
 
