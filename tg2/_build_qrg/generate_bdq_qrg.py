@@ -101,7 +101,13 @@ TEMPLATE = '''<!DOCTYPE html>
         {content}
     </main>
     <aside class="nav-menu">
-        <a href="#top"><strong>&uarr; Back to Top</strong></a>
+        &uarr; <a href="#top"><strong>Back to Top</strong></a>
+
+        <h3>Categories</h3>
+        <nav class="class-index">
+            {category_links}
+        </nav>
+
         <h3>Test Types</h3>
         <nav class="class-index">
             {class_links}
@@ -155,6 +161,67 @@ def build_field_index(terms):
         links.append(f'<a class="field-box" href="#{term_id}">{label}</a>')
     return f'<nav class="field-index">' + ''.join(links) + '</nav>'
 
+def _row_category_from_issuelabels(value: str) -> str | None:
+    """
+    Returns one of TIME/SPACE/NAME/OTHER if found as a substring of IssueLabels (case-insensitive),
+    otherwise None. Assumes at most one category occurs per value.
+    """
+    s = str(value or '').upper()
+    for cat in ('TIME', 'SPACE', 'NAME', 'OTHER'):
+        if cat in s:
+            return cat
+    return None
+
+def build_category_sections(df: pd.DataFrame) -> str:
+    """
+    Builds main-page anchor sections for TIME/SPACE/NAME/OTHER, each with an index of terms.
+    Uses substring matching in column 'IssueLabels'.
+    """
+    categories = ['TIME', 'SPACE', 'NAME', 'OTHER']
+    col = 'IssueLabels'
+    if col not in df.columns:
+        return ''
+
+    # derive category per row once
+    cats = df[col].apply(_row_category_from_issuelabels)
+
+    out = []
+    for cat in categories:
+        subset = df[cats == cat]
+        if subset.empty:
+            continue
+
+        terms = sorted(
+            subset.to_dict('records'),
+            key=lambda r: r.get('Label', '').lower()
+        )
+
+        out.append(
+            f'<section class="category-section" id="cat-{cat}">\n'
+            f'  <div class="class-header-wrapper"><h2>{cat}</h2></div>\n'
+            f'  {build_field_index(terms)}\n'
+            f'</section>\n'
+        )
+    return ''.join(out)
+
+def build_category_links(df: pd.DataFrame) -> str:
+    """
+    Builds right-menu links to the category anchor sections.
+    Uses substring matching in column 'IssueLabels'.
+    """
+    categories = ['TIME', 'SPACE', 'NAME', 'OTHER']
+    col = 'IssueLabels'
+    if col not in df.columns:
+        return ''
+
+    present = set(df[col].apply(_row_category_from_issuelabels).dropna().tolist())
+
+    links = []
+    for cat in categories:
+        if cat in present:
+            links.append(f'<a class="class-box" href="#cat-{cat}">{cat}</a>\n')
+    return ''.join(links)
+
 def generate_qrg():
     print(f"Loading CSV from {CSV_PATH}...")
     df = pd.read_csv(CSV_PATH)
@@ -167,12 +234,17 @@ def generate_qrg():
     # filter columns to one of quick reference guide key terms: Label, Preferred Label, Term Version IRI,Description, Expected Response, InformationElements ActedUpon, InformationElements Consulted, Parameters,SourceAuthorities/Defaults, Notes, Examples, Type.
     # "Label","issueNumber","historyNoteUrl","iri","term_iri","issued","term_localName","DateLastUpdated","prefLabel","IE Class","InformationElement:ActedUpon","InformationElement:Consulted","Parameters","ExpectedResponse","SpecificationGuid","MethodGuid","AuthoritiesDefaults","Description","Type","Resource Type","Dimension","Criterion","Enhancement","Examples","Source","References","Example Implementations (Mechanisms)","Link to Specification Source Code","Notes","IssueState","IssueLabels","UseCases","ArgumentGuids","status","flags","organized_in"
     columns = [col for col in columns if col in ['Label', 'prefLabel', 'iri', 'Description', 'ExpectedResponse', 'InformationElement:ActedUpon', 'InformationElement:Consulted', 'Parameters', 'AuthoritiesDefaults', 'Notes', 'Examples', 'Type', 'UseCases','Resource Type']]
-    ordered_classes = ['Validation', 'Issue', 'Measure', 'Amendment']
+    ordered_classes = ['Amendment', 'Issue', 'Measure', 'Validation']
     grouped = dict(tuple(df.groupby('organized_in')))
     grouped = {cls: grouped[cls] for cls in ordered_classes if cls in grouped}
 
-    content = ''
+    # --- ADD: Category sections (anchors + indexes)
+    category_sections = build_category_sections(df)
+
+    content = category_sections
     class_links = ''
+    # --- ADD: Right-menu category links
+    category_links = build_category_links(df)
 
     for group, terms in grouped.items():
         anchor = group.strip().replace(' ', '_')
@@ -183,9 +255,9 @@ def generate_qrg():
         for _, row in terms.iterrows():
             content += build_term_section(row, columns)
 
-        class_links += '<div class="menu-separator"></div>\n'
+#        class_links += '<div class="menu-separator"></div>\n'
 
-    html = TEMPLATE.format(content=content, class_links=class_links)
+    html = TEMPLATE.format(content=content, class_links=class_links, category_links=category_links)
     os.makedirs(os.path.dirname(OUTPUT_PATH), exist_ok=True)
     with open(OUTPUT_PATH, 'w', encoding='utf-8') as f:
         f.write(html)
