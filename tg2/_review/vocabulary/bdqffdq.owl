@@ -207,7 +207,7 @@ bdqffdq:hasDataQualityDimension rdf:type owl:ObjectProperty ;
                                              owl:someValuesFrom bdqffdq:DataQualityDimension
                                            ] ;
                                 dcterms:issued "2024-09-30"^^xsd:date ;
-                                rdfs:comment """Used to link a derived concept of a bdqffdq:DataQualityNeed (a Test, whether rdf:type Validation, Issue, Measure, or Amendment) to the bdqffdq:FundamentalConcept of a bdqffdq:DataQualityDimension. For a bdqffdq:Validation or bdqffdq:Issue, the bdqffdq:Dimension of data quality assessed. For a bdqffdq:Measure, the bdqffdq:Dimension of data quality measured. For a bdqffdq:Amendment, the bdqffdq:Dimension of data quality to be improved.
+                                rdfs:comment """Used to link a derived concept of a bdqffdq:DataQualityNeed (a Test, whether rdf:type Validation, Issue, Measure, or Amendment) to the bdqffdq:FundamentalConcept of a bdqffdq:DataQualityDimension. For a bdqffdq:Validation or bdqffdq:Issue, the bdqffdq:DataQualityDimension of data quality assessed. For a bdqffdq:Measure, the bdqffdq:DataQualityDimension of data quality measured. For a bdqffdq:Amendment, the bdqffdq:DataQualityDimension of data quality to be improved.
 
 Under the original formulation of the Framework, only Measures have Dimensions."""@en ;
                                 rdfs:label "has Data Quality Dimension"@en ;
@@ -880,7 +880,7 @@ bdqffdq:MeasurementMethod rdf:type owl:Class ;
                           rdfs:subClassOf bdqffdq:DataQualityMethod ,
                                           bdqffdq:MeasurementConcept ;
                           dcterms:issued "2024-09-30"^^xsd:date ;
-                          rdfs:comment """A bdqffdq:MeasurementMethod is a data quality Solutions layer concept (see Figure 3 in Veiga et al., 2017) describing the relationship between a bdqffdq:Specification (technical description of a Test) and a bdqffdq:Measurement (a bdqffdq:Dimension in the context of bdqffdq:ResourceType (bdqffdq:SingleRecord or bdqffdq:MultiRecord) and associated bdqffdq:InformationElements).
+                          rdfs:comment """A bdqffdq:MeasurementMethod is a data quality Solutions layer concept (see Figure 3 in Veiga et al., 2017) describing the relationship between a bdqffdq:Specification (technical description of a Test) and a bdqffdq:Measurement (a bdqffdq:DataQualityDimension in the context of bdqffdq:ResourceType (bdqffdq:SingleRecord or bdqffdq:MultiRecord) and associated bdqffdq:InformationElements).
 
 MM(me) = {s | s ⊂ S ⋀ me ∈ ME}"""@en ;
                           rdfs:label "Measurement Method"@en ;
