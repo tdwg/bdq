@@ -6,21 +6,9 @@
 ## Link to draft the BDQ standard
 - https://github.com/tdwg/bdq/blob/master/tg2/_review/index.md
 
-## Link to the BDQ Tests Quick Reference Guide
-- https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/terms/bdqtest/index.md
-
-## Link to vocabularies:
-- https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/vocabularies/index.md
-
-## Link to testdata:
--    https://github.com/tdwg/bdq/tree/master/tg2/core/testdata
-
 ## Link to github issues used to develop the tests: 
 -    https://github.com/tdwg/bdq/projects/2
 
-## Link to OLD Version of draft Standard:
--    https://github.com/tdwg/bdq/wiki/OLD-BDQ-CORE-Standards-Document-%E2%80%90-NO-LONGER-IN-USE
-  
 <h2>Outcomes</h2>
 The group has been working for over 10 years to evaluate and refine 'data quality'/'fitness for use' tests that have been run by-
 <ul>
