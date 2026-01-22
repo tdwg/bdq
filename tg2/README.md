@@ -10,7 +10,9 @@
 -    https://github.com/tdwg/bdq/projects/2
 
 <h2>Outcomes</h2>
-The group has been working for over 10 years to evaluate and refine 'data quality'/'fitness for use' tests that have been run by-
+TG2 has been working for over 10 years to evaluate, refine and develop new tests that evaluate 'data quality'/'fitness for use' of biodiversity coded using the Darwin Core Standard. TG2 has developed a framework for describing, running and evaluating a standard suite of tests, test data and comprehensive vocabularies.
+
+We acknowledge the use of tests in use by
 <ul>
 <li>The Atlas of Living Australia (ALA)</<li>
 <li>The Global Biodiversity Information Facility (GBIF)</li>
@@ -20,6 +22,3 @@ The group has been working for over 10 years to evaluate and refine 'data qualit
 <li>Biodiversity Information Serving Our Nation (BISON)</li>
 <li>Vertnet</li>
   </ul>
-  
-and to generate new CORE tests. In the process, we have come up with a standard suite of descriptors/specifications for each of the tests, test data and a comprehensive vocabulary as noted above.
-  
