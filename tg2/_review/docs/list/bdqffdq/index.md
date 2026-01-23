@@ -680,7 +680,7 @@ DQM(dr) = {dqm | dqm =< me, s, m, r >, me ∈ ME, s ∈ S, m ∈ M , r ∈ R ⋀
 - Preferred Label: Measurement Method
 - Definition: A data quality bdqffdq:SolutionsConcept that relates a bdqffdq:Measure to its bdqffdq:Specifications.
 - SubClass Of: DataQualityMethod; MeasurementConcept
-- Comments: A bdqffdq:MeasurementMethod is a data quality Solutions layer concept (see Figure 3 in Veiga et al., 2017) describing the relationship between a bdqffdq:Specification (technical description of a Test) and a bdqffdq:Measurement (a bdqffdq:Dimension in the context of bdqffdq:ResourceType (bdqffdq:SingleRecord or bdqffdq:MultiRecord) and associated bdqffdq:InformationElements).  
+- Comments: A bdqffdq:MeasurementMethod is a data quality Solutions layer concept (see Figure 3 in Veiga et al., 2017) describing the relationship between a bdqffdq:Specification (technical description of a Test) and a bdqffdq:Measurement (a bdqffdq:DataQualityDimension in the context of bdqffdq:ResourceType (bdqffdq:SingleRecord or bdqffdq:MultiRecord) and associated bdqffdq:InformationElements).  
 MM(me) = {s | s ⊂ S ⋀ me ∈ ME}
 
 ********************
@@ -1002,7 +1002,7 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }
 - Preferred Label: has Data Quality Dimension
 - Definition: The bdqffdq:DataQualityDimension to which a bdqffdq:DataQualityNeed applies.
 - SubClass Of: amendmentProperty; issueProperty; measurementProperty; validationProperty
-- Comments: Used to link a derived concept of a bdqffdq:DataQualityNeed (a Test, whether rdf:type Validation, Issue, Measure, or Amendment) to the bdqffdq:FundamentalConcept of a bdqffdq:DataQualityDimension. For a bdqffdq:Validation or bdqffdq:Issue, the bdqffdq:Dimension of data quality assessed. For a bdqffdq:Measure, the bdqffdq:Dimension of data quality measured. For a bdqffdq:Amendment, the bdqffdq:Dimension of data quality to be improved.  
+- Comments: Used to link a derived concept of a bdqffdq:DataQualityNeed (a Test, whether rdf:type Validation, Issue, Measure, or Amendment) to the bdqffdq:FundamentalConcept of a bdqffdq:DataQualityDimension. For a bdqffdq:Validation or bdqffdq:Issue, the bdqffdq:DataQualityDimension of data quality assessed. For a bdqffdq:Measure, the bdqffdq:DataQualityDimension of data quality measured. For a bdqffdq:Amendment, the bdqffdq:DataQualityDimension of data quality to be improved.  
 Under the original formulation of the Framework, only Measures have Dimensions.
 
 ********************
