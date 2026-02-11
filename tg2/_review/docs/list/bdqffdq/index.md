@@ -811,7 +811,7 @@ The bdqffdq:ResponseResult is represented as a value or a result object for bdqf
 - Preferred Label: Use Case
 - Definition: A bdqffdq:NeedConcept expressing a purpose to which data are put for which the data must have quality for the result to have meaning and reliability.
 - SubClass Of: FundamentalConcept; NeedConcept
-- Comments: A bdqffdq:UseCase describes a data quality control use case. The bdqffdq:ValidationPolicies, bdqffdq:MeasurementPolicies and bdqffdq:AmendmentPolicies that make up a bdqffdq:UseCase define which bdqffdq:Assertions cover a given bdqffdq:UseCase. An example of a bdqffdq:UseCase could be 'Check for internal consistency of dates', with bdqffdq:ValidationPolicies for checking consistency between atomic date fields and a bdqffdq:Amendment such as 'eventDate filled in from verbatim'. A bdqffdq:UseCase is not the same as a use cases in the software engineering sense, it is a similar formal bdqffdq: statement derived from analyis of user stories.
+- Comments: A bdqffdq:UseCase describes a purpose or use for which data must have quality. The bdqffdq:ValidationPolicies, bdqffdq:MeasurementPolicies and bdqffdq:AmendmentPolicies that make up a bdqffdq:UseCase define which bdqffdq:Assertions cover a given bdqffdq:UseCase. An example of a bdqffdq:UseCase could be 'Check for internal consistency of dates', with bdqffdq:ValidationPolicies for checking consistency between atomic date fields and a bdqffdq:Amendment such as 'eventDate filled in from verbatim'. A bdqffdq:UseCase is not the same as a use cases in the software engineering sense, but is similar in that it is a formal bdqffdq: statement derived from analyis of user stories concerning data use.
 
 ********************
 

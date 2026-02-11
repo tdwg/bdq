@@ -3204,7 +3204,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 #### Notes
 
-This is not specific to spatial data, any value in the dwc:dataGeneralizations field will cause this flag to be raised, but the primary use case is expected to be that dwc:dataGeneralizations demonstrates obfuscated locations.
+This is not specific to spatial data, any value in the dwc:dataGeneralizations field will cause this flag to be raised, but the primary Use Case is expected to be that dwc:dataGeneralizations demonstrates obfuscated locations.
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************

@@ -772,7 +772,7 @@ In general, we decided, in the context of Darwin Core with limited ability to re
 
 `Amendments` must be explicit about whether they propose to fill in `Empty` values, or propose changes to existing values.
 
-Tests may be parameterized to accommodate national requirements or use case-specific variations in quality needs. For example, "minimum depth in meters is greater than indicated on GEBCO chart"". Defaults in different `Use Cases` will need to be accommodated. For example, 'EPSG:4326' is assumed as a `dwc:geodeticDatum` in many cases, but not all, and such cases should be addressed by parameterizing Tests to allow for different behaviors of the same Test for different data quality needs.
+Tests may be parameterized to accommodate national requirements or Use Case specific variations in quality needs. For example, "minimum depth in meters is greater than indicated on GEBCO chart"". Defaults in different `Use Cases` will need to be accommodated. For example, 'EPSG:4326' is assumed as a `dwc:geodeticDatum` in many cases, but not all, and such cases should be addressed by parameterizing Tests to allow for different behaviors of the same Test for different data quality needs.
 
 Leading/trailing whitespace or non-printing characters in values should cause `Validations` against controlled vocabularies to be NOT_COMPLIANT, and should be proposed to be removed by `Amendments`, and may be ignored when evaluating numeric values.
 

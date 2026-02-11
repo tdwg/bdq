@@ -1667,7 +1667,7 @@
 <https://rs.tdwg.org/bdqtest/terms/13d5a10e-188e-40fd-a22c-dbaa87b91df2-2025-03-06>
   a <https://rs.tdwg.org/bdqffdq/terms/Issue>;
   <https://rs.tdwg.org/bdqffdq/terms/hasResourceType> <bdqffdq:SingleRecord>;
-  skos:note "This is not specific to spatial data, any value in the dwc:dataGeneralizations field will cause this flag to be raised, but the primary use case is expected to be that dwc:dataGeneralizations demonstrates obfuscated locations.";
+  skos:note "This is not specific to spatial data, any value in the dwc:dataGeneralizations field will cause this flag to be raised, but the primary Use Case is expected to be that dwc:dataGeneralizations demonstrates obfuscated locations.";
   <https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension> <bdqdim:Resolution>;
   <https://rs.tdwg.org/bdqffdq/terms/hasCriterion> <bdqcrit:NotEmpty>;
   <https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement> <urn:uuid:8c10d361-5bf7-4c9d-8464-c813cdf7dda3>;
@@ -8899,14 +8899,99 @@
   rdfs:label "Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TYPESTATUS_STANDARD" .
 
 <urn:uuid:08c7162d-11af-481b-bee1-738c9ac2fc68> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementPolicy>;
-  rdfs:label "MeasurementPolicy: (3) measures  in UseCase bdq:Taxon-Management";
-  <https://rs.tdwg.org/bdqffdq/terms/hasUseCase> <https://rs.tdwg.org/bdqffdq/terms/Taxon-Management>;
+  rdfs:label "MeasurementPolicy: (4) measures  in UseCase bdq:Spatial-Temporal_Patterns";
+  <https://rs.tdwg.org/bdqffdq/terms/hasUseCase> <https://rs.tdwg.org/bdqffdq/terms/Spatial-Temporal_Patterns>;
   <https://rs.tdwg.org/bdqffdq/terms/includesInPolicy> <https://rs.tdwg.org/bdqtest/terms/453844ae-9df4-439f-8e24-c52498eca84a-2024-09-24>,
     <https://rs.tdwg.org/bdqtest/terms/49a94636-a562-4e6b-803c-665c80628a3d-2024-09-25>,
-    <https://rs.tdwg.org/bdqtest/terms/45fb49eb-4a1b-4b49-876f-15d5034dfc73-2024-09-25> .
+    <https://rs.tdwg.org/bdqtest/terms/45fb49eb-4a1b-4b49-876f-15d5034dfc73-2024-09-25>,
+    <https://rs.tdwg.org/bdqtest/terms/56b6c695-adf1-418e-95d2-da04cad7be53-2025-03-07> .
 
-<https://rs.tdwg.org/bdqffdq/terms/Taxon-Management> a <https://rs.tdwg.org/bdqffdq/terms/UseCase>;
-  rdfs:label "bdq:Taxon-Management" .
+<https://rs.tdwg.org/bdqffdq/terms/Spatial-Temporal_Patterns> a <https://rs.tdwg.org/bdqffdq/terms/UseCase>;
+  rdfs:label "bdq:Spatial-Temporal_Patterns" .
+
+<urn:uuid:089b6974-1a6e-438a-a8f3-19f2e2dd1d2d> a <https://rs.tdwg.org/bdqffdq/terms/ValidationPolicy>;
+  rdfs:label "ValidationPolicy: (22) validations  in UseCase bdq:Biotic-Relationships";
+  <https://rs.tdwg.org/bdqffdq/terms/hasUseCase> <https://rs.tdwg.org/bdqffdq/terms/Biotic-Relationships>;
+  <https://rs.tdwg.org/bdqffdq/terms/includesInPolicy> <https://rs.tdwg.org/bdqtest/terms/0949110d-c06b-450e-9649-7c1374d940d1-2025-03-07>,
+    <https://rs.tdwg.org/bdqtest/terms/f51e15a6-a67d-4729-9c28-3766299d2985-2025-03-07>,
+    <https://rs.tdwg.org/bdqtest/terms/3f335517-f442-4b98-b149-1e87ff16de45-2025-03-06>,
+    <https://rs.tdwg.org/bdqtest/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2025-03-07>,
+    <https://rs.tdwg.org/bdqtest/terms/4f2bf8fd-fc5c-493f-a44c-e7b16153c803-2025-03-06>,
+    <https://rs.tdwg.org/bdqtest/terms/5618f083-d55a-4ac2-92b5-b9fb227b832f-2025-03-06>,
+    <https://rs.tdwg.org/bdqtest/terms/4c09f127-737b-4686-82a0-7c8e30841590-2025-03-06>,
+    <https://rs.tdwg.org/bdqtest/terms/2cd6884e-3d14-4476-94f7-1191cfff309b-2025-03-06>,
+    <https://rs.tdwg.org/bdqtest/terms/b6ecda2a-ce36-437a-b515-3ae94948fe83-2025-03-07>,
+    <https://rs.tdwg.org/bdqtest/terms/7c4b9498-a8d9-4ebb-85f1-9f200c788595-2025-03-06>,
+    <https://rs.tdwg.org/bdqtest/terms/cdaabb0d-a863-49d0-bc0f-738d771acba5-2025-03-07>,
+    <https://rs.tdwg.org/bdqtest/terms/9beb9442-d942-4f42-8b6a-fcea01ee086a-2025-03-07>,
+    <https://rs.tdwg.org/bdqtest/terms/374b091a-fc90-4791-91e5-c1557c649169-2025-03-07>,
+    <https://rs.tdwg.org/bdqtest/terms/42408a00-bf71-4892-a399-4325e2bc1fb8-2025-03-07>,
+    <https://rs.tdwg.org/bdqtest/terms/06851339-843f-4a43-8422-4e61b9a00e75-2025-03-06>,
+    <https://rs.tdwg.org/bdqtest/terms/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2025-03-07>,
+    <https://rs.tdwg.org/bdqtest/terms/eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf-2025-03-07>,
+    <https://rs.tdwg.org/bdqtest/terms/f2ce7d55-5b1d-426a-b00e-6d4efe3058ec-2025-03-06>,
+    <https://rs.tdwg.org/bdqtest/terms/2750c040-1d4a-4149-99fe-0512785f2d5f-2025-03-06>,
+    <https://rs.tdwg.org/bdqtest/terms/4eb48fdf-7299-4d63-9d08-246902e2857f-2025-03-07>,
+    <https://rs.tdwg.org/bdqtest/terms/5424e933-bee7-4125-839e-d8743ea69f93-2025-03-07>,
+    <https://rs.tdwg.org/bdqtest/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2025-03-07>;
+  skos:prefLabel "ValidationPolicy: (22) validations  in UseCase bdq:Biotic-Relationships" .
+
+<https://rs.tdwg.org/bdqffdq/terms/Biotic-Relationships> a <https://rs.tdwg.org/bdqffdq/terms/UseCase>;
+  rdfs:label "bdq:Biotic-Relationships" .
+
+<urn:uuid:0053ca4f-7d45-41ea-912e-c8847bb70142> a <https://rs.tdwg.org/bdqffdq/terms/ValidationPolicy>;
+  rdfs:label "ValidationPolicy: (49) validations  in UseCase bdq:Spatial-Temporal_Patterns";
+  <https://rs.tdwg.org/bdqffdq/terms/hasUseCase> <https://rs.tdwg.org/bdqffdq/terms/Spatial-Temporal_Patterns>;
+  <https://rs.tdwg.org/bdqffdq/terms/includesInPolicy> <https://rs.tdwg.org/bdqtest/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe-2025-03-07>,
+    <https://rs.tdwg.org/bdqtest/terms/69b2efdc-6269-45a4-aecb-4cb99c2ae134-2025-03-07>,
+    <https://rs.tdwg.org/bdqtest/terms/8f1e6e58-544b-4365-a569-fb781341644e-2025-03-07>,
+    <https://rs.tdwg.org/bdqtest/terms/0949110d-c06b-450e-9649-7c1374d940d1-2025-03-07>,
+    <https://rs.tdwg.org/bdqtest/terms/f51e15a6-a67d-4729-9c28-3766299d2985-2025-03-07>,
+    <https://rs.tdwg.org/bdqtest/terms/3cff4dc4-72e9-4abe-9bf3-8a30f1618432-2025-03-06>,
+    <https://rs.tdwg.org/bdqtest/terms/0bb8297d-8f8a-42d2-80c1-558f29efe798-2025-03-07>,
+    <https://rs.tdwg.org/bdqtest/terms/58486cb6-1114-4a8a-ba1e-bd89cfe887e9-2025-03-07>,
+    <https://rs.tdwg.org/bdqtest/terms/6ce2b2b4-6afe-4d13-82a0-390d31ade01c-2025-03-07>,
+    <https://rs.tdwg.org/bdqtest/terms/3f335517-f442-4b98-b149-1e87ff16de45-2025-03-06>,
+    <https://rs.tdwg.org/bdqtest/terms/c09ecbf9-34e3-4f3e-b74a-8796af15e59f-2025-03-06>,
+    <https://rs.tdwg.org/bdqtest/terms/adb27d29-9f0d-4d52-b760-a77ba57a69c9-2025-03-07>,
+    <https://rs.tdwg.org/bdqtest/terms/b9c184ce-a859-410c-9d12-71a338200380-2025-03-07>,
+    <https://rs.tdwg.org/bdqtest/terms/f18a470b-3fe1-4aae-9c65-a6d3db6b550c-2025-03-07>,
+    <https://rs.tdwg.org/bdqtest/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2025-03-07>,
+    <https://rs.tdwg.org/bdqtest/terms/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2025-03-07>,
+    <https://rs.tdwg.org/bdqtest/terms/b23110e7-1be7-444a-a677-cdee0cf4330c-2025-03-07>,
+    <https://rs.tdwg.org/bdqtest/terms/4f2bf8fd-fc5c-493f-a44c-e7b16153c803-2025-03-06>,
+    <https://rs.tdwg.org/bdqtest/terms/66269bdd-9271-4e76-b25c-7ab81eebe1d8-2025-03-07>,
+    <https://rs.tdwg.org/bdqtest/terms/4c09f127-737b-4686-82a0-7c8e30841590-2025-03-06>,
+    <https://rs.tdwg.org/bdqtest/terms/dc8aae4b-134f-4d75-8a71-c4186239178e-2025-03-07>,
+    <https://rs.tdwg.org/bdqtest/terms/239ec40e-a729-4a8e-ba69-e0bf03ac1c44-2025-03-07>,
+    <https://rs.tdwg.org/bdqtest/terms/b6ecda2a-ce36-437a-b515-3ae94948fe83-2025-03-07>,
+    <https://rs.tdwg.org/bdqtest/terms/7c4b9498-a8d9-4ebb-85f1-9f200c788595-2025-03-06>,
+    <https://rs.tdwg.org/bdqtest/terms/ad0c8855-de69-4843-a80c-a5387d20fbc8-2025-03-06>,
+    <https://rs.tdwg.org/bdqtest/terms/1bf0e210-6792-4128-b8cc-ab6828aa4871-2025-03-07>,
+    <https://rs.tdwg.org/bdqtest/terms/41267642-60ff-4116-90eb-499fee2cd83f-2025-03-06>,
+    <https://rs.tdwg.org/bdqtest/terms/cdaabb0d-a863-49d0-bc0f-738d771acba5-2025-03-07>,
+    <https://rs.tdwg.org/bdqtest/terms/9beb9442-d942-4f42-8b6a-fcea01ee086a-2025-03-07>,
+    <https://rs.tdwg.org/bdqtest/terms/853b79a2-b314-44a2-ae46-34a1e7ed85e4-2025-03-07>,
+    <https://rs.tdwg.org/bdqtest/terms/374b091a-fc90-4791-91e5-c1557c649169-2025-03-07>,
+    <https://rs.tdwg.org/bdqtest/terms/42408a00-bf71-4892-a399-4325e2bc1fb8-2025-03-07>,
+    <https://rs.tdwg.org/bdqtest/terms/06851339-843f-4a43-8422-4e61b9a00e75-2025-03-06>,
+    <https://rs.tdwg.org/bdqtest/terms/04b2c8f3-c71b-4e95-8e43-f70374c5fb92-2025-03-07>,
+    <https://rs.tdwg.org/bdqtest/terms/d708526b-6561-438e-aa1a-82cd80b06396-2025-03-07>,
+    <https://rs.tdwg.org/bdqtest/terms/c6adf2ea-3051-4498-97f4-4b2f8a105f57-2025-03-07>,
+    <https://rs.tdwg.org/bdqtest/terms/c971fe3f-84c1-4636-9f44-b1ec31fd63c7-2025-03-07>,
+    <https://rs.tdwg.org/bdqtest/terms/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2025-03-07>,
+    <https://rs.tdwg.org/bdqtest/terms/eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf-2025-03-07>,
+    <https://rs.tdwg.org/bdqtest/terms/7d2485d5-1ba7-4f25-90cb-f4480ff1a275-2025-03-07>,
+    <https://rs.tdwg.org/bdqtest/terms/8d787cb5-73e2-4c39-9cd1-67c7361dc02e-2025-03-06>,
+    <https://rs.tdwg.org/bdqtest/terms/01c6dafa-0886-4b7e-9881-2c3018c98bdc-2025-03-06>,
+    <https://rs.tdwg.org/bdqtest/terms/85803c7e-2a5a-42e1-b8d3-299a44cafc46-2025-03-06>,
+    <https://rs.tdwg.org/bdqtest/terms/9a39d88c-7eee-46df-b32a-c109f9f81fb8-2025-03-06>,
+    <https://rs.tdwg.org/bdqtest/terms/47ff73ba-0028-4f79-9ce1-ee7008d66498-2025-03-06>,
+    <https://rs.tdwg.org/bdqtest/terms/3f1db29a-bfa5-40db-9fd1-fde020d81939-2025-03-07>,
+    <https://rs.tdwg.org/bdqtest/terms/4daa7986-d9b0-4dd5-ad17-2d7a771ea71a-2025-03-07>,
+    <https://rs.tdwg.org/bdqtest/terms/d257eb98-27cb-48e5-8d3c-ab9fca4edd11-2025-03-07>,
+    <https://rs.tdwg.org/bdqtest/terms/4eb48fdf-7299-4d63-9d08-246902e2857f-2025-03-07>;
+  skos:prefLabel "ValidationPolicy: (49) validations  in UseCase bdq:Spatial-Temporal_Patterns" .
 
 <urn:uuid:022bd662-3052-4771-8e54-f4f74803ccc5> a <https://rs.tdwg.org/bdqffdq/terms/ValidationPolicy>;
   rdfs:label "ValidationPolicy: (31) validations  in UseCase bdq:Taxon-Management";
@@ -8944,155 +9029,51 @@
     <https://rs.tdwg.org/bdqtest/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2025-03-07>;
   skos:prefLabel "ValidationPolicy: (31) validations  in UseCase bdq:Taxon-Management" .
 
-<urn:uuid:089b6974-1a6e-438a-a8f3-19f2e2dd1d2d> a <https://rs.tdwg.org/bdqffdq/terms/ValidationPolicy>;
-  rdfs:label "ValidationPolicy: (32) validations  in UseCase bdq:Alien-Species";
-  <https://rs.tdwg.org/bdqffdq/terms/hasUseCase> <https://rs.tdwg.org/bdqffdq/terms/Alien-Species>;
-  <https://rs.tdwg.org/bdqffdq/terms/includesInPolicy> <https://rs.tdwg.org/bdqtest/terms/0949110d-c06b-450e-9649-7c1374d940d1-2025-03-07>,
-    <https://rs.tdwg.org/bdqtest/terms/f51e15a6-a67d-4729-9c28-3766299d2985-2025-03-07>,
-    <https://rs.tdwg.org/bdqtest/terms/3f335517-f442-4b98-b149-1e87ff16de45-2025-03-06>,
-    <https://rs.tdwg.org/bdqtest/terms/c09ecbf9-34e3-4f3e-b74a-8796af15e59f-2025-03-06>,
-    <https://rs.tdwg.org/bdqtest/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2025-03-07>,
-    <https://rs.tdwg.org/bdqtest/terms/4f2bf8fd-fc5c-493f-a44c-e7b16153c803-2025-03-06>,
-    <https://rs.tdwg.org/bdqtest/terms/5618f083-d55a-4ac2-92b5-b9fb227b832f-2025-03-06>,
-    <https://rs.tdwg.org/bdqtest/terms/4c09f127-737b-4686-82a0-7c8e30841590-2025-03-06>,
-    <https://rs.tdwg.org/bdqtest/terms/2cd6884e-3d14-4476-94f7-1191cfff309b-2025-03-06>,
-    <https://rs.tdwg.org/bdqtest/terms/b6ecda2a-ce36-437a-b515-3ae94948fe83-2025-03-07>,
-    <https://rs.tdwg.org/bdqtest/terms/7c4b9498-a8d9-4ebb-85f1-9f200c788595-2025-03-06>,
-    <https://rs.tdwg.org/bdqtest/terms/ad0c8855-de69-4843-a80c-a5387d20fbc8-2025-03-06>,
-    <https://rs.tdwg.org/bdqtest/terms/cdaabb0d-a863-49d0-bc0f-738d771acba5-2025-03-07>,
-    <https://rs.tdwg.org/bdqtest/terms/9beb9442-d942-4f42-8b6a-fcea01ee086a-2025-03-07>,
-    <https://rs.tdwg.org/bdqtest/terms/374b091a-fc90-4791-91e5-c1557c649169-2025-03-07>,
-    <https://rs.tdwg.org/bdqtest/terms/42408a00-bf71-4892-a399-4325e2bc1fb8-2025-03-07>,
-    <https://rs.tdwg.org/bdqtest/terms/06851339-843f-4a43-8422-4e61b9a00e75-2025-03-06>,
-    <https://rs.tdwg.org/bdqtest/terms/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2025-03-07>,
-    <https://rs.tdwg.org/bdqtest/terms/eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf-2025-03-07>,
-    <https://rs.tdwg.org/bdqtest/terms/7d2485d5-1ba7-4f25-90cb-f4480ff1a275-2025-03-07>,
-    <https://rs.tdwg.org/bdqtest/terms/401bf207-9a55-4dff-88a5-abcd58ad97fa-2025-03-06>,
-    <https://rs.tdwg.org/bdqtest/terms/f2ce7d55-5b1d-426a-b00e-6d4efe3058ec-2025-03-06>,
-    <https://rs.tdwg.org/bdqtest/terms/2750c040-1d4a-4149-99fe-0512785f2d5f-2025-03-06>,
-    <https://rs.tdwg.org/bdqtest/terms/85803c7e-2a5a-42e1-b8d3-299a44cafc46-2025-03-06>,
-    <https://rs.tdwg.org/bdqtest/terms/4daa7986-d9b0-4dd5-ad17-2d7a771ea71a-2025-03-07>,
-    <https://rs.tdwg.org/bdqtest/terms/6eeac3ed-f691-457f-a42e-eaa9c8a71ce8-2025-03-06>,
-    <https://rs.tdwg.org/bdqtest/terms/49f1d386-5bed-43ae-bd43-deabf7df64fc-2025-03-06>,
-    <https://rs.tdwg.org/bdqtest/terms/4eb48fdf-7299-4d63-9d08-246902e2857f-2025-03-07>,
-    <https://rs.tdwg.org/bdqtest/terms/060e7734-607d-4737-8b2c-bfa17788bf1a-2025-03-07>,
-    <https://rs.tdwg.org/bdqtest/terms/5424e933-bee7-4125-839e-d8743ea69f93-2025-03-07>,
-    <https://rs.tdwg.org/bdqtest/terms/88d8598b-3318-483d-9475-a5acf9887404-2025-03-07>,
-    <https://rs.tdwg.org/bdqtest/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2025-03-07>;
-  skos:prefLabel "ValidationPolicy: (32) validations  in UseCase bdq:Alien-Species" .
-
-<https://rs.tdwg.org/bdqffdq/terms/Alien-Species> a <https://rs.tdwg.org/bdqffdq/terms/UseCase>;
-  rdfs:label "bdq:Alien-Species" .
-
-<urn:uuid:0053ca4f-7d45-41ea-912e-c8847bb70142> a <https://rs.tdwg.org/bdqffdq/terms/ValidationPolicy>;
-  rdfs:label "ValidationPolicy: (69) validations  in UseCase bdq:Record-Management";
-  <https://rs.tdwg.org/bdqffdq/terms/hasUseCase> <https://rs.tdwg.org/bdqffdq/terms/Record-Management>;
-  <https://rs.tdwg.org/bdqffdq/terms/includesInPolicy> <https://rs.tdwg.org/bdqtest/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe-2025-03-07>,
-    <https://rs.tdwg.org/bdqtest/terms/69b2efdc-6269-45a4-aecb-4cb99c2ae134-2025-03-07>,
-    <https://rs.tdwg.org/bdqtest/terms/eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f-2025-03-06>,
-    <https://rs.tdwg.org/bdqtest/terms/8f1e6e58-544b-4365-a569-fb781341644e-2025-03-07>,
-    <https://rs.tdwg.org/bdqtest/terms/3667556d-d8f5-454c-922b-af8af38f613c-2025-03-06>,
-    <https://rs.tdwg.org/bdqtest/terms/0949110d-c06b-450e-9649-7c1374d940d1-2025-03-07>,
-    <https://rs.tdwg.org/bdqtest/terms/f51e15a6-a67d-4729-9c28-3766299d2985-2025-03-07>,
-    <https://rs.tdwg.org/bdqtest/terms/3cff4dc4-72e9-4abe-9bf3-8a30f1618432-2025-03-06>,
-    <https://rs.tdwg.org/bdqtest/terms/3136236e-04b6-49ea-8b34-a65f25e3aba1-2025-03-07>,
-    <https://rs.tdwg.org/bdqtest/terms/0bb8297d-8f8a-42d2-80c1-558f29efe798-2025-03-07>,
-    <https://rs.tdwg.org/bdqtest/terms/58486cb6-1114-4a8a-ba1e-bd89cfe887e9-2025-03-07>,
-    <https://rs.tdwg.org/bdqtest/terms/6ce2b2b4-6afe-4d13-82a0-390d31ade01c-2025-03-07>,
-    <https://rs.tdwg.org/bdqtest/terms/3f335517-f442-4b98-b149-1e87ff16de45-2025-03-06>,
-    <https://rs.tdwg.org/bdqtest/terms/c486546c-e6e5-48a7-b286-eba7f5ca56c4-2025-03-07>,
-    <https://rs.tdwg.org/bdqtest/terms/c09ecbf9-34e3-4f3e-b74a-8796af15e59f-2025-03-06>,
-    <https://rs.tdwg.org/bdqtest/terms/b9c184ce-a859-410c-9d12-71a338200380-2025-03-07>,
-    <https://rs.tdwg.org/bdqtest/terms/f18a470b-3fe1-4aae-9c65-a6d3db6b550c-2025-03-07>,
-    <https://rs.tdwg.org/bdqtest/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2025-03-07>,
-    <https://rs.tdwg.org/bdqtest/terms/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2025-03-07>,
-    <https://rs.tdwg.org/bdqtest/terms/b23110e7-1be7-444a-a677-cdee0cf4330c-2025-03-07>,
-    <https://rs.tdwg.org/bdqtest/terms/4f2bf8fd-fc5c-493f-a44c-e7b16153c803-2025-03-06>,
-    <https://rs.tdwg.org/bdqtest/terms/5618f083-d55a-4ac2-92b5-b9fb227b832f-2025-03-06>,
-    <https://rs.tdwg.org/bdqtest/terms/66269bdd-9271-4e76-b25c-7ab81eebe1d8-2025-03-07>,
-    <https://rs.tdwg.org/bdqtest/terms/4c09f127-737b-4686-82a0-7c8e30841590-2025-03-06>,
-    <https://rs.tdwg.org/bdqtest/terms/dc8aae4b-134f-4d75-8a71-c4186239178e-2025-03-07>,
-    <https://rs.tdwg.org/bdqtest/terms/2cd6884e-3d14-4476-94f7-1191cfff309b-2025-03-06>,
-    <https://rs.tdwg.org/bdqtest/terms/239ec40e-a729-4a8e-ba69-e0bf03ac1c44-2025-03-07>,
-    <https://rs.tdwg.org/bdqtest/terms/b6ecda2a-ce36-437a-b515-3ae94948fe83-2025-03-07>,
-    <https://rs.tdwg.org/bdqtest/terms/125b5493-052d-4a0d-a3e1-ed5bf792689e-2025-03-06>,
-    <https://rs.tdwg.org/bdqtest/terms/7c4b9498-a8d9-4ebb-85f1-9f200c788595-2025-03-06>,
-    <https://rs.tdwg.org/bdqtest/terms/81cc974d-43cc-4c0f-a5e0-afa23b455aa3-2025-03-06>,
-    <https://rs.tdwg.org/bdqtest/terms/ad0c8855-de69-4843-a80c-a5387d20fbc8-2025-03-06>,
-    <https://rs.tdwg.org/bdqtest/terms/41267642-60ff-4116-90eb-499fee2cd83f-2025-03-06>,
-    <https://rs.tdwg.org/bdqtest/terms/cdaabb0d-a863-49d0-bc0f-738d771acba5-2025-03-07>,
-    <https://rs.tdwg.org/bdqtest/terms/9beb9442-d942-4f42-8b6a-fcea01ee086a-2025-03-07>,
-    <https://rs.tdwg.org/bdqtest/terms/853b79a2-b314-44a2-ae46-34a1e7ed85e4-2025-03-07>,
-    <https://rs.tdwg.org/bdqtest/terms/15f78619-811a-4c6f-997a-a4c7888ad849-2025-03-07>,
-    <https://rs.tdwg.org/bdqtest/terms/17f03f1f-f74d-40c0-8071-2927cfc9487b-2025-03-06>,
-    <https://rs.tdwg.org/bdqtest/terms/374b091a-fc90-4791-91e5-c1557c649169-2025-03-07>,
-    <https://rs.tdwg.org/bdqtest/terms/42408a00-bf71-4892-a399-4325e2bc1fb8-2025-03-07>,
-    <https://rs.tdwg.org/bdqtest/terms/06851339-843f-4a43-8422-4e61b9a00e75-2025-03-06>,
-    <https://rs.tdwg.org/bdqtest/terms/04b2c8f3-c71b-4e95-8e43-f70374c5fb92-2025-03-07>,
-    <https://rs.tdwg.org/bdqtest/terms/d708526b-6561-438e-aa1a-82cd80b06396-2025-03-07>,
-    <https://rs.tdwg.org/bdqtest/terms/c6adf2ea-3051-4498-97f4-4b2f8a105f57-2025-03-07>,
-    <https://rs.tdwg.org/bdqtest/terms/c971fe3f-84c1-4636-9f44-b1ec31fd63c7-2025-03-07>,
-    <https://rs.tdwg.org/bdqtest/terms/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2025-03-07>,
-    <https://rs.tdwg.org/bdqtest/terms/eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf-2025-03-07>,
-    <https://rs.tdwg.org/bdqtest/terms/7d2485d5-1ba7-4f25-90cb-f4480ff1a275-2025-03-07>,
-    <https://rs.tdwg.org/bdqtest/terms/401bf207-9a55-4dff-88a5-abcd58ad97fa-2025-03-06>,
-    <https://rs.tdwg.org/bdqtest/terms/f2ce7d55-5b1d-426a-b00e-6d4efe3058ec-2025-03-06>,
-    <https://rs.tdwg.org/bdqtest/terms/2750c040-1d4a-4149-99fe-0512785f2d5f-2025-03-06>,
-    <https://rs.tdwg.org/bdqtest/terms/8d787cb5-73e2-4c39-9cd1-67c7361dc02e-2025-03-06>,
-    <https://rs.tdwg.org/bdqtest/terms/01c6dafa-0886-4b7e-9881-2c3018c98bdc-2025-03-06>,
-    <https://rs.tdwg.org/bdqtest/terms/85803c7e-2a5a-42e1-b8d3-299a44cafc46-2025-03-06>,
-    <https://rs.tdwg.org/bdqtest/terms/9a39d88c-7eee-46df-b32a-c109f9f81fb8-2025-03-06>,
-    <https://rs.tdwg.org/bdqtest/terms/47ff73ba-0028-4f79-9ce1-ee7008d66498-2025-03-06>,
-    <https://rs.tdwg.org/bdqtest/terms/14da5b87-8304-4b2b-911d-117e3c29e890-2025-03-06>,
-    <https://rs.tdwg.org/bdqtest/terms/7bdb13a4-8a51-4ee5-be7f-20693fdb183e-2025-03-06>,
-    <https://rs.tdwg.org/bdqtest/terms/3f1db29a-bfa5-40db-9fd1-fde020d81939-2025-03-07>,
-    <https://rs.tdwg.org/bdqtest/terms/4daa7986-d9b0-4dd5-ad17-2d7a771ea71a-2025-03-07>,
-    <https://rs.tdwg.org/bdqtest/terms/d257eb98-27cb-48e5-8d3c-ab9fca4edd11-2025-03-07>,
-    <https://rs.tdwg.org/bdqtest/terms/6eeac3ed-f691-457f-a42e-eaa9c8a71ce8-2025-03-06>,
-    <https://rs.tdwg.org/bdqtest/terms/36ed36c9-b1a7-40b2-b5e2-0d012e772098-2025-03-06>,
-    <https://rs.tdwg.org/bdqtest/terms/49f1d386-5bed-43ae-bd43-deabf7df64fc-2025-03-06>,
-    <https://rs.tdwg.org/bdqtest/terms/ff59f77d-71e9-4eb1-aac9-8bd05c50ff70-2025-03-06>,
-    <https://rs.tdwg.org/bdqtest/terms/4eb48fdf-7299-4d63-9d08-246902e2857f-2025-03-07>,
-    <https://rs.tdwg.org/bdqtest/terms/5424e933-bee7-4125-839e-d8743ea69f93-2025-03-07>,
-    <https://rs.tdwg.org/bdqtest/terms/88d8598b-3318-483d-9475-a5acf9887404-2025-03-07>,
-    <https://rs.tdwg.org/bdqtest/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2025-03-07>;
-  skos:prefLabel "ValidationPolicy: (69) validations  in UseCase bdq:Record-Management" .
-
-<https://rs.tdwg.org/bdqffdq/terms/Record-Management> a <https://rs.tdwg.org/bdqffdq/terms/UseCase>;
-  rdfs:label "bdq:Record-Management" .
-
-<urn:uuid:05b21497-a98f-4024-af0e-36d8de5cc317> a <https://rs.tdwg.org/bdqffdq/terms/AmendmentPolicy>;
-  rdfs:label "AmendmentPolicy: (8) amendments  in UseCase bdq:Taxon-Management";
-  <https://rs.tdwg.org/bdqffdq/terms/hasUseCase> <https://rs.tdwg.org/bdqffdq/terms/Taxon-Management>;
-  <https://rs.tdwg.org/bdqffdq/terms/includesInPolicy> <https://rs.tdwg.org/bdqtest/terms/39bb2280-1215-447b-9221-fd13bc990641-2025-03-07>,
-    <https://rs.tdwg.org/bdqtest/terms/bd385eeb-44a2-464b-a503-7abe407ef904-2025-03-07>,
-    <https://rs.tdwg.org/bdqtest/terms/431467d6-9b4b-48fa-a197-cd5379f5e889-2025-03-06>,
-    <https://rs.tdwg.org/bdqtest/terms/07c28ace-561a-476e-a9b9-3d5ad6e35933-2025-03-07>,
-    <https://rs.tdwg.org/bdqtest/terms/f01fb3f9-2f7e-418b-9f51-adf50f202aea-2025-03-06>,
-    <https://rs.tdwg.org/bdqtest/terms/e39098df-ef46-464c-9aef-bcdeee2a88cb-2025-03-06>,
-    <https://rs.tdwg.org/bdqtest/terms/33c45ae1-e2db-462a-a59e-7169bb01c5d6-2025-03-07>,
-    <https://rs.tdwg.org/bdqtest/terms/b3471c65-b53e-453b-8282-abfa27bf1805-2025-03-07> .
+<https://rs.tdwg.org/bdqffdq/terms/Taxon-Management> a <https://rs.tdwg.org/bdqffdq/terms/UseCase>;
+  rdfs:label "bdq:Taxon-Management" .
 
 <urn:uuid:10e8008c-c947-4327-867e-7899de98eb2c> a <https://rs.tdwg.org/bdqffdq/terms/AmendmentPolicy>;
-  rdfs:label "AmendmentPolicy: (10) amendments  in UseCase bdq:Alien-Species";
-  <https://rs.tdwg.org/bdqffdq/terms/hasUseCase> <https://rs.tdwg.org/bdqffdq/terms/Alien-Species>;
+  rdfs:label "AmendmentPolicy: (7) amendments  in UseCase bdq:Biotic-Relationships";
+  <https://rs.tdwg.org/bdqffdq/terms/hasUseCase> <https://rs.tdwg.org/bdqffdq/terms/Biotic-Relationships>;
   <https://rs.tdwg.org/bdqffdq/terms/includesInPolicy> <https://rs.tdwg.org/bdqtest/terms/bd385eeb-44a2-464b-a503-7abe407ef904-2025-03-07>,
-    <https://rs.tdwg.org/bdqtest/terms/07c28ace-561a-476e-a9b9-3d5ad6e35933-2025-03-07>,
     <https://rs.tdwg.org/bdqtest/terms/f01fb3f9-2f7e-418b-9f51-adf50f202aea-2025-03-06>,
     <https://rs.tdwg.org/bdqtest/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2025-03-07>,
     <https://rs.tdwg.org/bdqtest/terms/f8f3a093-042c-47a3-971a-a482aaaf3b75-2025-03-07>,
     <https://rs.tdwg.org/bdqtest/terms/15d15927-7a22-43f8-88d6-298f5eb45c4c-2025-03-07>,
-    <https://rs.tdwg.org/bdqtest/terms/74ef1034-e289-4596-b5b0-cde73796697d-2025-03-07>,
     <https://rs.tdwg.org/bdqtest/terms/f9205977-f145-44f5-8cb9-e3e2e35ce908-2025-03-07>,
-    <https://rs.tdwg.org/bdqtest/terms/33c45ae1-e2db-462a-a59e-7169bb01c5d6-2025-03-07>,
     <https://rs.tdwg.org/bdqtest/terms/b3471c65-b53e-453b-8282-abfa27bf1805-2025-03-07> .
 
+<urn:uuid:05b21497-a98f-4024-af0e-36d8de5cc317> a <https://rs.tdwg.org/bdqffdq/terms/AmendmentPolicy>;
+  rdfs:label "AmendmentPolicy: (19) amendments  in UseCase bdq:Spatial-Temporal_Patterns";
+  <https://rs.tdwg.org/bdqffdq/terms/hasUseCase> <https://rs.tdwg.org/bdqffdq/terms/Spatial-Temporal_Patterns>;
+  <https://rs.tdwg.org/bdqffdq/terms/includesInPolicy> <https://rs.tdwg.org/bdqtest/terms/39bb2280-1215-447b-9221-fd13bc990641-2025-03-07>,
+    <https://rs.tdwg.org/bdqtest/terms/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e-2025-03-07>,
+    <https://rs.tdwg.org/bdqtest/terms/bd385eeb-44a2-464b-a503-7abe407ef904-2025-03-07>,
+    <https://rs.tdwg.org/bdqtest/terms/fec5ffe6-3958-4312-82d9-ebcca0efb350-2025-03-07>,
+    <https://rs.tdwg.org/bdqtest/terms/710fe118-17e1-440f-b428-88ba3f547d6d-2025-03-06>,
+    <https://rs.tdwg.org/bdqtest/terms/f2b4a50a-6b2f-4930-b9df-da87b6a21082-2025-03-07>,
+    <https://rs.tdwg.org/bdqtest/terms/c5658b83-4471-4f57-9d94-bf7d0a96900c-2025-03-07>,
+    <https://rs.tdwg.org/bdqtest/terms/0345b325-836d-4235-96d0-3b5caf150fc0-2025-03-07>,
+    <https://rs.tdwg.org/bdqtest/terms/718dfc3c-cb52-4fca-b8e2-0e722f375da7-2025-03-06>,
+    <https://rs.tdwg.org/bdqtest/terms/07c28ace-561a-476e-a9b9-3d5ad6e35933-2025-03-07>,
+    <https://rs.tdwg.org/bdqtest/terms/2d638c8b-4c62-44a0-a14d-fa147bf9823d-2025-03-07>,
+    <https://rs.tdwg.org/bdqtest/terms/f01fb3f9-2f7e-418b-9f51-adf50f202aea-2025-03-06>,
+    <https://rs.tdwg.org/bdqtest/terms/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae-2025-03-07>,
+    <https://rs.tdwg.org/bdqtest/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2025-03-07>,
+    <https://rs.tdwg.org/bdqtest/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2025-03-07>,
+    <https://rs.tdwg.org/bdqtest/terms/f8f3a093-042c-47a3-971a-a482aaaf3b75-2025-03-07>,
+    <https://rs.tdwg.org/bdqtest/terms/b129fa4d-b25b-43f7-9645-5ed4d44b357b-2025-03-06>,
+    <https://rs.tdwg.org/bdqtest/terms/2e371d57-1eb3-4fe3-8a61-dff43ced50cf-2025-03-06>,
+    <https://rs.tdwg.org/bdqtest/terms/15d15927-7a22-43f8-88d6-298f5eb45c4c-2025-03-07> .
+
 <urn:uuid:3400d096-4b78-4c17-add4-0c42fd20267f> a <https://rs.tdwg.org/bdqffdq/terms/IssuePolicy>;
-  rdfs:label "IssuePolicy: (1) issues  in UseCase bdq:Alien-Species";
-  <https://rs.tdwg.org/bdqffdq/terms/hasUseCase> <https://rs.tdwg.org/bdqffdq/terms/Alien-Species>;
+  rdfs:label "IssuePolicy: (1) issues  in UseCase bdq:Biotic-Relationships";
+  <https://rs.tdwg.org/bdqffdq/terms/hasUseCase> <https://rs.tdwg.org/bdqffdq/terms/Biotic-Relationships>;
   <https://rs.tdwg.org/bdqffdq/terms/includesInPolicy> <https://rs.tdwg.org/bdqtest/terms/acc8dff2-d8d1-483a-946d-65a02a452700-2025-03-07> .
 
 <urn:uuid:26fdef6a-c268-40f2-aaaf-a8ac930bcf86> a <https://rs.tdwg.org/bdqffdq/terms/IssuePolicy>;
-  rdfs:label "IssuePolicy: (1) issues  in UseCase bdq:Record-Management";
-  <https://rs.tdwg.org/bdqffdq/terms/hasUseCase> <https://rs.tdwg.org/bdqffdq/terms/Record-Management>;
-  <https://rs.tdwg.org/bdqffdq/terms/includesInPolicy> <https://rs.tdwg.org/bdqtest/terms/13d5a10e-188e-40fd-a22c-dbaa87b91df2-2025-03-06> .
+  rdfs:label "IssuePolicy: (3) issues  in UseCase bdq:Spatial-Temporal_Patterns";
+  <https://rs.tdwg.org/bdqffdq/terms/hasUseCase> <https://rs.tdwg.org/bdqffdq/terms/Spatial-Temporal_Patterns>;
+  <https://rs.tdwg.org/bdqffdq/terms/includesInPolicy> <https://rs.tdwg.org/bdqtest/terms/13d5a10e-188e-40fd-a22c-dbaa87b91df2-2025-03-06>,
+    <https://rs.tdwg.org/bdqtest/terms/acc8dff2-d8d1-483a-946d-65a02a452700-2025-03-07>,
+    <https://rs.tdwg.org/bdqtest/terms/256e51b3-1e08-4349-bb7e-5186631c3f8e-2025-03-07> .

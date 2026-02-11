@@ -117,7 +117,7 @@ namespaces:
   label: BDQ Controlled Vocabulary Terms
 
   # Description of the term list used in machine-readable metadata.
-  description: This list includes terms defined in the BDQ name space for parameters and use cases.
+  description: This list includes terms defined in the BDQ name space for Parameters and Use Cases.
 
   # The following values are used to set up redirects to the list of terms document.
 
