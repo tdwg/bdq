@@ -782,7 +782,7 @@ In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use th
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>An evaluation of a value, which in the context of the evaluation, returns true if the value does not contain any characters or values other than those in the range U+0000 to U+0020, otherwise returns false. </td>
+			<td>An evaluation of a value, which in the context of the evaluation, returns false if the value contains any characters or values other than those in the range U+0000 to U+0020, otherwise returns true. </td>
 		</tr>
 		<tr>
 			<td>Comments</td>
@@ -1150,7 +1150,7 @@ In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use th
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>An evaluation of a value, which in the context of the evaluation, returns false if the value contains any characters or values other than those in the range U+0000 to U+0020, otherwise returns true. </td>
+			<td>An evaluation of a value, which in the context of the evaluation, returns true if the value contains any characters or values other than those in the range U+0000 to U+0020, otherwise returns false. </td>
 		</tr>
 		<tr>
 			<td>Comments</td>
