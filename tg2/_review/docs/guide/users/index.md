@@ -52,17 +52,23 @@ Draft Standard for Review
   - [1.6 Namespace abbreviations (non-normative)](#16-namespace-abbreviations-non-normative)
   - [1.7 Referring to Terms (normative)](#17-referring-to-terms-normative)
 
-[2 A Guide to the Tests (non-normative)](#2-a-guide-to-the-tests-non-normative)
-  - [2.1 Test Types (non-normative)](#21-test-types-non-normative)
-  - [2.2 Test Inputs and Outputs (non-normative)](#22-test-inputs-and-outputs-non-normative)
-    - [2.2.1 Inputs to Tests (non-normative)](#221-inputs-to-tests-non-normative)
-    - [2.2.2 Outputs: Data Quality Reports (non-normative)](#222-outputs-data-quality-reports-non-normative)
-    - [2.2.3 Outputs: Responses From Tests (normative)](#223-outputs-responses-from-tests-normative)
-  - [2.3 Amendments Propose Changes (normative)](#23-amendments-propose-changes-normative)
-  - [2.4 Test Parameters (normative)](#24-test-parameters-normative)
-    - [2.4.1 Test Parameters Example (non-normative)](#241-test-parameters-example-non-normative)
+[2 Context for Quality, Uses and Purposes (non-normative)](#2-context-for-quality-uses-and-purposes-non-normative)
 
-[3 Context for Quality, Uses and Purposes (non-normative)](#3-context-for-quality-uses-and-purposes-non-normative)
+[2.1 Quality Control and Quality Assurance (non-normative)](#21-quality-control-and-quality-assurance-non-normative)
+
+[2.1.1 Quality Assurance (non-normative)](#211-quality-assurance-non-normative)
+
+[2.1.2 Quality Control (non-normative)](#212-quality-control-non-normative)
+
+[3 A Guide to the Tests (non-normative)](#3-a-guide-to-the-tests-non-normative)
+  - [3.1 Test Types (non-normative)](#31-test-types-non-normative)
+  - [3.2 Test Inputs and Outputs (non-normative)](#32-test-inputs-and-outputs-non-normative)
+    - [3.2.1 Inputs to Tests (non-normative)](#321-inputs-to-tests-non-normative)
+    - [3.2.2 Outputs: Data Quality Reports (non-normative)](#322-outputs-data-quality-reports-non-normative)
+    - [3.2.3 Outputs: Responses From Tests (normative)](#323-outputs-responses-from-tests-normative)
+  - [3.3 Amendments Propose Changes (normative)](#33-amendments-propose-changes-normative)
+  - [3.4 Test Parameters (normative)](#34-test-parameters-normative)
+    - [3.4.1 Test Parameters Example (non-normative)](#341-test-parameters-example-non-normative)
 
 [4 Using the BDQ Tests Quick Reference Guide (non-normative)](#4-using-the-bdq-tests-quick-reference-guide-non-normative)
 
@@ -130,81 +136,34 @@ The following namespace abbreviations are used in this document:
 | skos:        | http://www.w3.org/2004/02/skos/core#        |
 
 ### 1.7 Referring to Terms (normative)
+
 In any technical treatment of the BDQ standard, a precise reference to a class or property term SHOULD be made using its qualified name (the namespace prefix followed by the term local name; e.g., `bdqffdq:InformationElement`) and the namespace IRI corresponding to the namespace prefix (e.g., `https://rs.tdwg.org/bdqffdq/terms/` for `bdqffdq:`) MUST be provided. In less formal descriptions where the technical precision is not needed, the preferred label (skos:prefLabel, e.g., `Information Element`) or the term local name (e.g., `InformationElement`) MAY be used. You will find all of these methods of referring to BDQ-related terms throughout the BDQ documentation.
 
-## 2 A Guide to the Tests (non-normative)
+## 2 Context for Quality, Uses and Purposes (non-normative)
 
-The BDQ standard defines a set of Tests to assess the quality of biodiversity data. Implementations of these Tests may produce `Data Quality Reports`. The format of such `Data Quality Reports` may vary, but they should contain specific information about outputs from each Test. This guide describes the Tests, their inputs, expectations about their outputs, how they may be used for Quality Control and Quality Assurance, and describes the [BDQ Tests Quick Reference Guide](../../terms/bdqtest/index.md), which gives the details of each BDQ Test. 
+Data do not have quality in the abstract; they only have quality with respect to a particular use. The Fitness for Use Framework (see [Fitness For Use Framework Ontology Guide](../bdqffdq/index.md)) in the BDQ standard describes uses for data as `Use Cases`.
 
-Biodiversity data encompasses information about the variety of life on Earth. This includes observations of where and when organisms were found (such as the date and location of a bird sighting including the species name, and potentially other details about its behavior, observed habitat, or physical characteristics. The BDQ standard is designed to assess the quality of these data for a variety of uses including research and conservation. Implementations of the Tests defined in BDQ examine such `dwc:Occurrence` data expressed using Darwin Core terms. Darwin Core is a standardized set of terms used to describe biodiversity data, it provides a common vocabulary that allows different databases and researchers to share information in a consistent way.
+A set of `Tests` appropriate to some `Use Case` is run on some set of data and a `Data Quality Report` is produced. Both the Tests and the associated report should be interpreted in the context of that `Use Case`.
 
-The BDQ Tests are each very specific. Some Tests are very simple and self explanatory, such as the Test that asserts that the value of `dwc:day` should be an integer in the range 1 to 31. Other Tests reference external authoritative sources of information to evaluate data quality, these are referred to as source authorities. For example, testing values of `dwc:countryCode` involves comparison with the `sourceAuthority` that is the list of valid ISO country codes.
-
-### 2.1 Test Types (non-normative)
-
-There are four types of Tests: `Validation`, `Issue`, `Measure`, and `Amendment`. Each Test is intended to examine just one specific aspect of data quality. Tests are assembled into Test suites (`Policies`) that assess the fitness of data for a specific use.
-
-**Validation Tests** can be thought of as fact-checking. They compare the data against known standards or rules. `Validation` Tests examine the values of one or more [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) against a `Criterion` for quality. An example is [VALIDATION_COUNTRYCODE_STANDARD](../../terms/bdqtest/index.md#VALIDATION_COUNTRYCODE_STANDARD) where `dwc:countryCode` is checked against a `sourceAuthority` for validity.
-
-**Issue Tests** can be thought of as warning flags. They don't necessarily mean the data are wrong, but they highlight something that might be a problem for some users. For example, [ISSUE_DATAGENERALIZATIONS_NOTEMPTY](../../terms/bdqtest/index.md#ISSUE_DATAGENERALIZATIONS_NOTEMPTY) alerts users to a `NotEmpty` value that should be examined against their `Data Quality Needs`. 
-
-**Measure Tests** can be thought of as metrics. `Measure` Tests either count things, or assert that data evaluate as fit for some use (COMPLETE), or not fit for some use (NOT_COMPLETE). An example is [MEASURE_VALIDATIONTESTS_NOTCOMPLIANT](../../terms/bdqtest/index.md#MEASURE_VALIDATIONTESTS_NOTCOMPLIANT), which returns the number of Tests of Type `Validation` that had a response of "NOT_COMPLIANT" on a record.
-
-**Amendment Tests** can be thought of as suggestions for improvement. `Amendment` Tests examine the values of [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) and may propose changes or additions to improve the quality. An example is [AMENDMENT_COUNTRYCODE_STANDARDIZED](../../terms/bdqtest/index.md#AMENDMENT_COUNTRYCODE_STANDARDIZED), where a valid ISO country code could be inferred.
-
-### 2.2 Test Inputs and Outputs (non-normative)
-
-#### 2.2.1 Inputs to Tests (non-normative)
-
-Each Test is defined to take a specific set of input terms (`Information Elements`, generally [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021)), and then perform some tightly specified evaluation of those inputs to produce a specific output (the Response, see below). All of the BDQ `Validation`, `Issue`, and `Amendment` Tests examine a set of Darwin Core terms from a `Single Record` (e.g., from a single `dwc:Occurrence` record) rather than looking at the input term(s) over multiple records.
-
-Consider the Test [VALIDATION_EVENTDATE_STANDARD](../../terms/bdqtest/index.md#VALIDATION_EVENTDATE_STANDARD). It takes as input value of the `Information Element` `dwc:eventDate` from a `Single Record`, and then asks, "Is the value of dwc:eventDate a valid ISO date?". It will then produce a Response describing the conclusion it reached when analyzing that record.
-
-Tests can also operate on a dataset (a `Multi Record`), and examine the values for `Information Elements` across the entire dataset. The only `Multi Record` Tests currently defined in BDQ are `Measures`, which take the outputs of `Single Record` Tests as their inputs and report on the results of those `Single Record` Tests aggregated across the dataset. The names of these Tests all begin with "MULTIRECORD_". 
-
-#### 2.2.2 Outputs: Data Quality Reports (non-normative) 
-
-Software that include an implementation of a Test may produce `Data Quality Reports`. The form that such `Data Quality Reports` may take is not specified by the BDQ standard, however, it does specify elements that should be present in such reports (see [7.1 Data Quality Reports (normative)](../implementers/index.md#71-data-quality-reports-normative)) in the [Implementer's Guide](../implementers/index.md).
-
-#### 2.2.3 Outputs: Responses From Tests (normative) 
-
-The specifications for the structure of a response from running a Test can be found in [3.1 Structure of Response (normative)](../../bdqtest/index.md#31-structure-of-response-normative) in the document [BDQ Tests and Assertions](../../bdqtest/index.md).
-
-### 2.3 Amendments Propose Changes (normative)
-
-Amendment Tests **propose changes** to data. It is up to the consumers of `Data Quality Reports` to choose whether or not to accept those changes, particularly into an authoritative database of record. Consumers of `Data Quality Reports` MAY choose to change data based on `Assertions` made by `Amendment` Tests, or consumers of `Data Quality Reports` MAY choose to not change their data based on `Assertions` made by `Amendment` Tests. Databases of record SHOULD NOT automatically alter data based on `Assertions` made by `Amendment` Tests without human evaluation of the proposed changes.
-
-### 2.4 Test Parameters (normative) 
-
-Some Tests are parameterized. When a Test is parameterized, and a value other than the default value is used for some `Parameter`, reports SHOULD identify the Tests using at least the Label (`rdfs:label`) for the Test class, in combination with the `Parameter` and the value of the `Argument` that replaced the `Parameter` in this specific case.
-
-Values of `Parameters`, other than the defaults, SHOULD also be present in the `Response.comment`.
-
-More normative guidance on Test `Parameters` can be found in the section [6.1 Parameters and Changing the Behavior of a Test (normative)](../implementers/index.md#61-parameters-and-changing-the-behavior-of-a-test-normative) of the [BDQ Implementer's Guide](../implementers/index.md).
-
-#### 2.4.1 Test Parameters Example (non-normative) 
-
-If a Test with a non-default `Parameter` value is used, this should be represented with at least the Label (`rdfs:label`) for the Test class (e.g., [VALIDATION_MINDEPTH_INRANGE](../../terms/bdqtest/index.md#VALIDATION_MINDEPTH_INRANGE)) in combination with the `Parameter` (e.g., `bdq:maximumValidDepthInMeters`) and the value of the argument that replaced the default `Parameter` value in this specific case (e.g., 1642). For example:
-
-	`VALIDATION_MAXDEPTH_INRANGE with bdq:maximumValidDepthInMeters=1642`
-
-should be accompanied by a `Response.comment` that includes text expressing something similar to "Non-default bdq:maximumValidDepthInMeters=1642".
-
-So, a value of `dwc:minimumDepthInMeters` of 2000m would be NOT_COMPLIANT in this case, while with the default value for that parameter (11000), it would be COMPLIANT.
-
-## 3 Context for Quality, Uses and Purposes (non-normative)
-
-Data do not have quality in the abstract; they only have quality with respect to a particular use. The Fitness for Use Framework (see [Fitness For Use Framework Ontology Guide](../bdqffdq/index.md)) used in the BDQ standard describes uses for data as `Use Cases`, and expects that Tests are run in suites that form `Policy` for data quality with respect to those `Use Cases`. That is, sets of Tests are expected to be run together in order to assess the quality of data for some specified use, and both Tests and the reports of their results should be interpreted in the context of that use.
-
-Tests for data quality may serve two purposes: Quality Control and Quality Assurance. 
-
-- In Quality Control (QC), Tests are used to identify data that are not fit for particular uses, with the goal of improving the data quality.
-
-- In Quality Assurance (QA), data are evaluated for fitness for use (i.e., whether they meet the requirements of specific operational tasks) and are filtered accordingly so that only data that are fit for use are included.
+More formally, Tests are run in suites that form `Policy` for data quality with respect to `Use Cases`.   More importantly, sets of Tests are expected to be run together in order to assess the quality of data for some specified use, and both Tests and the reports of their results should be interpreted in the context of that specified use.  Just as data do not have quality in the abstract, the results of a test on some data have meaning only in the context of a particular use.
 
 More broadly, the concept of fitness for purpose refers to whether data are adequate to support a given goal or objective beyond the immediate use — such as policy formulation, scientific modeling, or legal compliance. Achieving fitness for purpose may involve additional considerations such as provenance, trustworthiness, and completeness, and it is possible to frame additional Tests to assess these `Dimensions` of data quality.
 
+## 2.1 Quality Control and Quality Assurance (non-normative)
+
+Tests for data quality may serve two purposes: Quality Control and Quality Assurance. 
+
+- In Quality Assurance (QA), data are evaluated for fitness for use and are filtered down to just those data that are fit for that use.
+
+- In Quality Control (QC), Tests are used to identify data that are not fit for particular uses, with the goal of improving the data quality, and the tests may propose changes to improve the quality of the data.
+
+The success of `Quality Assurance` and `Quality Control` depends on organisational context and resources. These include establishing clear validation, monitoring, and feedback procedures to maintain high quality data, and encouraging collaboration among data custodians, analysts, and end-users to ensure data quality aligns with practical needs and supports reliable decisions. It also requires developing formal methodologies to understand and process the Test outputs in the `Data Quality Reports`.
+
+## 2.1.1 Quality Assurance (non-normative)
+
 The Fitness for use Framework (Veiga 2016, Veiga et al., 2017) provides a formal means for filtering records for [Quality Assurance](../../bdqffdq/index.md#3447-quality-assurance-normative) (involving only Measures), but informally, data may be thought as being fit for some use if all `Validation` Tests comprising that `Use Case` have a `Response.result`="COMPLIANT", and all non-numeric `Measure` Tests comprising that `Use Case` have a `Response.result`="COMPLETE". The BDQ Tests include a set of `Multi Record` `Measures` whose purpose is to enable formal filtering (Quality Assurance) and reporting (for Quality Control) under the [Fitness for Use Framework Ontology](../../bdqffdq/index.md).
+
+## 2.1.2 Quality Control (non-normative)
 
 The Framework provides a formal statement of [Quality Control](../../bdqffdq/index.md#3446-quality-control-normative), but the application of Quality Control 'in the wild' is more nuanced; more complex than simple filtering under Quality Assurance. The context of Quality Control may affect how Tests and their results are applied to data, information systems and processes.
 
@@ -221,6 +180,66 @@ When performing Quality Control while preparing data for aggregation, or when re
 Quality Control to improve data during downstream analysis of aggregated data has other challenges. The volume of aggregated data may be large enough to make both examination of the proposed `Amendments` and reporting of proposed changes to upstream databases of record infeasible. Quality Control in the workflow processing of data streams from large scale aggregation may include acceptance of proposals from `Amendments` into a data stream for downstream analysis. This should be done with some care in checking that the proposed `Amendments` are not introducing errors or false precision, and both unamended and amended data should be preserved, with accepted proposals from `Amendments` clearly identifiable as manipulations of the data stream.
 
 To maintain the integrity and reliability of the BDQ Framework, we have been careful to avoid proposing `Amendments` in cases where there is significant uncertainty — whether due to ambiguous data, unclear provenance, or unresolved conflicts between sources. This principle helps ensure that changes are justifiable and that the risks of introducing erroneous or misleading data through overcorrection are minimized.
+
+## 3 A Guide to the Tests (non-normative)
+
+The BDQ standard defines a set of Tests to assess the quality of biodiversity data. Implementations of these Tests may produce `Data Quality Reports`. The format of such `Data Quality Reports` may vary, but they should contain specific information about outputs from each Test. This guide describes the Tests, their inputs, expectations about their outputs, how they may be used for Quality Control and Quality Assurance, and describes the [BDQ Tests Quick Reference Guide](../../terms/bdqtest/index.md), which gives the details of each BDQ Test. 
+
+Biodiversity data encompasses information about the variety of life on Earth. This includes observations of where and when organisms were found (such as the date and location of a bird sighting including the species name, and potentially other details about its behavior, observed habitat, or physical characteristics. The BDQ standard is designed to assess the quality of these data for a variety of uses including research and conservation. Implementations of the Tests defined in BDQ examine such `dwc:Occurrence` data expressed using Darwin Core terms. Darwin Core is a standardized set of terms used to describe biodiversity data, it provides a common vocabulary that allows different databases and researchers to share information in a consistent way.
+
+The BDQ Tests are each very specific. Some Tests are very simple and self explanatory, such as the Test that asserts that the value of `dwc:day` should be an integer in the range 1 to 31. Other Tests reference external authoritative sources of information to evaluate data quality, these are referred to as source authorities. For example, testing values of `dwc:countryCode` involves comparison with the `sourceAuthority` that is the list of valid ISO country codes.
+
+### 3.1 Test Types (non-normative)
+
+There are four types of Tests: `Validation`, `Issue`, `Measure`, and `Amendment`. Each Test is intended to examine just one specific aspect of data quality. Tests are assembled into Test suites (`Policies`) that assess the fitness of data for a specific use.
+
+**Validation Tests** can be thought of as fact-checking. They compare the data against known standards or rules. `Validation` Tests examine the values of one or more [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) against a `Criterion` for quality. An example is [VALIDATION_COUNTRYCODE_STANDARD](../../terms/bdqtest/index.md#VALIDATION_COUNTRYCODE_STANDARD) where `dwc:countryCode` is checked against a `sourceAuthority` for validity.
+
+**Issue Tests** can be thought of as warning flags. They don't necessarily mean the data are wrong, but they highlight something that might be a problem for some users. For example, [ISSUE_DATAGENERALIZATIONS_NOTEMPTY](../../terms/bdqtest/index.md#ISSUE_DATAGENERALIZATIONS_NOTEMPTY) alerts users to a `NotEmpty` value that should be examined against their `Data Quality Needs`. 
+
+**Measure Tests** can be thought of as metrics. `Measure` Tests either count things, or assert that data evaluate as fit for some use (COMPLETE), or not fit for some use (NOT_COMPLETE). An example is [MEASURE_VALIDATIONTESTS_NOTCOMPLIANT](../../terms/bdqtest/index.md#MEASURE_VALIDATIONTESTS_NOTCOMPLIANT), which returns the number of Tests of Type `Validation` that had a response of "NOT_COMPLIANT" on a record.
+
+**Amendment Tests** can be thought of as suggestions for improvement. `Amendment` Tests examine the values of [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) and may propose changes or additions to improve the quality. An example is [AMENDMENT_COUNTRYCODE_STANDARDIZED](../../terms/bdqtest/index.md#AMENDMENT_COUNTRYCODE_STANDARDIZED), where a valid ISO country code could be inferred.
+
+### 3.2 Test Inputs and Outputs (non-normative)
+
+#### 3.2.1 Inputs to Tests (non-normative)
+
+Each Test is defined to take a specific set of input terms (`Information Elements`, generally [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021)), and then perform some tightly specified evaluation of those inputs to produce a specific output (the Response, see below). All of the BDQ `Validation`, `Issue`, and `Amendment` Tests examine a set of Darwin Core terms from a `Single Record` (e.g., from a single `dwc:Occurrence` record) rather than looking at the input term(s) over multiple records.
+
+Consider the Test [VALIDATION_EVENTDATE_STANDARD](../../terms/bdqtest/index.md#VALIDATION_EVENTDATE_STANDARD). It takes as input value of the `Information Element` `dwc:eventDate` from a `Single Record`, and then asks, "Is the value of dwc:eventDate a valid ISO date?". It will then produce a Response describing the conclusion it reached when analyzing that record.
+
+Tests can also operate on a dataset (a `Multi Record`), and examine the values for `Information Elements` across the entire dataset. The only `Multi Record` Tests currently defined in BDQ are `Measures`, which take the outputs of `Single Record` Tests as their inputs and report on the results of those `Single Record` Tests aggregated across the dataset. The names of these Tests all begin with "MULTIRECORD_". 
+
+#### 3.2.2 Outputs: Data Quality Reports (non-normative) 
+
+Software that include an implementation of a Test may produce `Data Quality Reports`. The form that such `Data Quality Reports` may take is not specified by the BDQ standard, however, it does specify elements that should be present in such reports (see [7.1 Data Quality Reports (normative)](../implementers/index.md#71-data-quality-reports-normative)) in the [Implementer's Guide](../implementers/index.md).
+
+#### 3.2.3 Outputs: Responses From Tests (normative) 
+
+The specifications for the structure of a response from running a Test can be found in [3.1 Structure of Response (normative)](../../bdqtest/index.md#31-structure-of-response-normative) in the document [BDQ Tests and Assertions](../../bdqtest/index.md).
+
+### 3.3 Amendments Propose Changes (normative)
+
+Amendment Tests **propose changes** to data. It is up to the consumers of `Data Quality Reports` to choose whether or not to accept those changes, particularly into an authoritative database of record. Consumers of `Data Quality Reports` MAY choose to change data based on `Assertions` made by `Amendment` Tests, or consumers of `Data Quality Reports` MAY choose to not change their data based on `Assertions` made by `Amendment` Tests. Databases of record SHOULD NOT automatically alter data based on `Assertions` made by `Amendment` Tests without human evaluation of the proposed changes.
+
+### 3.4 Test Parameters (normative) 
+
+Some Tests are parameterized. When a Test is parameterized, and a value other than the default value is used for some `Parameter`, reports SHOULD identify the Tests using at least the Label (`rdfs:label`) for the Test class, in combination with the `Parameter` and the value of the `Argument` that replaced the `Parameter` in this specific case.
+
+Values of `Parameters`, other than the defaults, SHOULD also be present in the `Response.comment`.
+
+More normative guidance on Test `Parameters` can be found in the section [6.1 Parameters and Changing the Behavior of a Test (normative)](../implementers/index.md#61-parameters-and-changing-the-behavior-of-a-test-normative) of the [BDQ Implementer's Guide](../implementers/index.md).
+
+#### 3.4.1 Test Parameters Example (non-normative) 
+
+If a Test with a non-default `Parameter` value is used, this should be represented with at least the Label (`rdfs:label`) for the Test class (e.g., [VALIDATION_MINDEPTH_INRANGE](../../terms/bdqtest/index.md#VALIDATION_MINDEPTH_INRANGE)) in combination with the `Parameter` (e.g., `bdq:maximumValidDepthInMeters`) and the value of the argument that replaced the default `Parameter` value in this specific case (e.g., 1642). For example:
+
+	`VALIDATION_MAXDEPTH_INRANGE with bdq:maximumValidDepthInMeters=1642`
+
+should be accompanied by a `Response.comment` that includes text expressing something similar to "Non-default bdq:maximumValidDepthInMeters=1642".
+
+So, a value of `dwc:minimumDepthInMeters` of 2000m would be NOT_COMPLIANT in this case, while with the default value for that parameter (11000), it would be COMPLIANT.
 
 ## 4 Using the BDQ Tests Quick Reference Guide (non-normative)
 
