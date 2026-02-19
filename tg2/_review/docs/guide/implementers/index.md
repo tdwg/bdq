@@ -210,21 +210,27 @@ Data that have passed through arbitrary serializations and transformations can c
 
 #### 2.2.1 The Concept of Empty (normative)
 
-(1) Spaces, tabs, and other non-printing characters MUST be treated as `bdq:Empty`.
+(1) Spaces, tabs, and other non-printing characters are `bdq:Empty`.
 
-Objects that are null, or have null values in a relational database, at the point of Test execution, MUST be treated as `bdq:Empty`.
+Unicode characters in the range U+0000 to U+0020, equivalent to ASCII characters 0-32, MUST be treated as `bdq:Empty`.
 
-(2) Serializations of NULL are treated as `bdq:NotEmpty`.
+(2) Actual NULLs are`bdq:Empty`.
 
-Data serialized from relational database systems may contain string representations of NULL.
+Objects that are null (or are null values in a relational database) at the point of Test execution MUST be treated as `bdq:Empty`.
 
-We considered, and explicitly rejected, treating common string serializations of null such as "&#92;N" and "NULL" as empty values. String serializations of NULL outside of a database, present at the point of evaluation of a Test, MUST be treated as `bdq:NotEmpty`. A Test execution environment MAY deserialize these string serializations of NULL.
+(3) Serializations of NULL are `bdq:NotEmpty`.
 
-(3) Data values indicating an unknown are treated as `bdq:NotEmpty`.
+Data serialized from relational database systems may contain string representations of NULL.  We considered, and explicitly rejected, treating common string serializations of null such as "&#92;N" and "NULL" as empty values. 
+
+String serializations of NULL outside of a database, present at the point of evaluation of a Test, MUST be treated as `bdq:NotEmpty`. 
+
+A Test execution environment MAY deserialize these string serializations of NULL as null objects (see 5), and present them to a test as NULL objects (where they would evaluate as `bdq:notEmpty` (see 2)).
+
+(4) Data values indicating an unknown are treated as `bdq:NotEmpty`.
 
 The definition of `bdq:Empty` is not applicable to a discussion of what value to include in a controlled vocabulary to indicate that no meaningful value is present, so no suggestion is made that "EMPTY" should be used as a data value to represent some form of "null", "unknown", "not recorded", etc. Choices there would fall into the semantics for some set of controlled vocabularies. The relevance to such a discussion is that this definition would treat an empty string as an empty value, with no semantics attached as to why the value is empty.
 
-(4) Independence of Tests from the execution framework. 
+(5) Independence of Tests from the execution framework. 
 
 The evaluation of `bdq:Empty` MUST be at the point of evaluation of the Test. This allows the Tests to be independent of data serializations for transport and the representation of data in Test execution environments. 
 
