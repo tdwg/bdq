@@ -67,7 +67,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdfs:label xml:lang="en">annotationAlertIf</rdfs:label>
      <skos:prefLabel xml:lang="en">annotationAlertIf</skos:prefLabel>
      <rdfs:comment xml:lang="en">Used in Test "ANNOTATION_ISSUE_NOTEMPTY" (bdqtest:fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1).</rdfs:comment>
-     <skos:definition xml:lang="en">Optionally establishes if an annotation exists in a bdq:ParamaterizedTest within a bdq:annotationSystem by describing the criteria for relating annotations in the system to records within the bdq:ParameterizedTest.</skos:definition>
+     <skos:definition xml:lang="en">Optionally establishes if an annotation exists in a bdq:ParameterizedTest within a bdq:annotationSystem by describing the criteria for relating annotations in the system to records within the bdq:ParameterizedTest.</skos:definition>
      <rdf:value>annotationAlertIf</rdf:value>
      <skos:inScheme rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <rdf:type rdf:resource="bdqffdq:Parameter, owl:NamedIndividual"/>
@@ -81,7 +81,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdfs:label xml:lang="en">annotationSystem</rdfs:label>
      <skos:prefLabel xml:lang="en">annotationSystem</skos:prefLabel>
      <rdfs:comment xml:lang="en">Used in Test "ANNOTATION_ISSUE_NOTEMPTY" (bdqtest:fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1).</rdfs:comment>
-     <skos:definition xml:lang="en">Optionally establishes a system for annotations in a bdq:ParamaterizedTest, with the default being the W3C Annotations Data Model's "oa:Annotation"</skos:definition>
+     <skos:definition xml:lang="en">Optionally establishes a system for annotations in a bdq:ParameterizedTest, with the default being the W3C Annotations Data Model's "oa:Annotation"</skos:definition>
      <rdf:value>annotationSystem</rdf:value>
      <skos:inScheme rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <rdf:type rdf:resource="bdqffdq:Parameter, owl:NamedIndividual"/>
@@ -123,7 +123,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdfs:label xml:lang="en">defaultGeodeticDatum</rdfs:label>
      <skos:prefLabel xml:lang="en">defaultGeodeticDatum</skos:prefLabel>
      <rdfs:comment xml:lang="en">See Test AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT (bdqtest:7498ca76-c4d4-42e2-8103-acacccbdffa7).</rdfs:comment>
-     <skos:definition xml:lang="en">Optionally establishes the default dwc:geodeticDatum in a bdq:ParamaterizedTest. A default dwc:geodeticDatum is supplied in cases where a bdq:Parameter is not set at the time the Test is run.</skos:definition>
+     <skos:definition xml:lang="en">Optionally establishes the default dwc:geodeticDatum in a bdq:ParameterizedTest. A default dwc:geodeticDatum is supplied in cases where a bdq:Parameter is not set at the time the Test is run.</skos:definition>
      <rdf:value>defaultGeodeticDatum</rdf:value>
      <skos:inScheme rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <rdf:type rdf:resource="bdqffdq:Parameter, owl:NamedIndividual"/>
@@ -165,7 +165,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdfs:label xml:lang="en">earliestValidDate</rdfs:label>
      <skos:prefLabel xml:lang="en">earliestValidDate</skos:prefLabel>
      <rdfs:comment xml:lang="en"></rdfs:comment>
-     <skos:definition xml:lang="en">Optionally establishes the earliest date in a bdq:ParamaterizedTest. A default date is supplied in cases where a bdq:Parameter is not set at the time the Test is run.</skos:definition>
+     <skos:definition xml:lang="en">Optionally establishes the earliest date in a bdq:ParameterizedTest. A default date is supplied in cases where a bdq:Parameter is not set at the time the Test is run.</skos:definition>
      <rdf:value>earliestValidDate</rdf:value>
      <skos:inScheme rdf:resource="http://rs.tdwg.org/bdq/terms/"/>
      <rdf:type rdf:resource="bdqffdq:Parameter, owl:NamedIndividual"/>

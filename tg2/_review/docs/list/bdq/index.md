@@ -414,7 +414,7 @@ In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use th
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>Optionally establishes if an annotation exists in a bdq:ParamaterizedTest within a bdq:annotationSystem by describing the criteria for relating annotations in the system to records within the bdq:ParameterizedTest.</td>
+			<td>Optionally establishes if an annotation exists in a bdq:ParameterizedTest within a bdq:annotationSystem by describing the criteria for relating annotations in the system to records within the bdq:ParameterizedTest.</td>
 		</tr>
 		<tr>
 			<td>Comments</td>
@@ -460,7 +460,7 @@ In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use th
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>Optionally establishes a system for annotations in a bdq:ParamaterizedTest, with the default being the W3C Annotations Data Model's "oa:Annotation"</td>
+			<td>Optionally establishes a system for annotations in a bdq:ParameterizedTest, with the default being the W3C Annotations Data Model's "oa:Annotation"</td>
 		</tr>
 		<tr>
 			<td>Comments</td>
@@ -598,7 +598,7 @@ In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use th
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>Optionally establishes the default dwc:geodeticDatum in a bdq:ParamaterizedTest. A default dwc:geodeticDatum is supplied in cases where a bdq:Parameter is not set at the time the Test is run.</td>
+			<td>Optionally establishes the default dwc:geodeticDatum in a bdq:ParameterizedTest. A default dwc:geodeticDatum is supplied in cases where a bdq:Parameter is not set at the time the Test is run.</td>
 		</tr>
 		<tr>
 			<td>Comments</td>
@@ -736,7 +736,7 @@ In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use th
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>Optionally establishes the earliest date in a bdq:ParamaterizedTest. A default date is supplied in cases where a bdq:Parameter is not set at the time the Test is run.</td>
+			<td>Optionally establishes the earliest date in a bdq:ParameterizedTest. A default date is supplied in cases where a bdq:Parameter is not set at the time the Test is run.</td>
 		</tr>
 		<tr>
 			<td>Comments</td>
