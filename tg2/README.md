@@ -5,9 +5,10 @@
 
 ## Link to draft the BDQ standard
 - https://github.com/tdwg/bdq/blob/master/tg2/_review/index.md
+- [Draft standard Quick Reference Guide to the tests](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/terms/bdqtest/index.md)
 
 ## Link to github issues used to develop the tests: 
--    https://github.com/tdwg/bdq/projects/2
+-    [Closed Issues Labeled CORE](https://github.com/tdwg/bdq/issues/?q=is%3Aissue%20state%3Aclosed%20label%3ACORE)
 
 <h2>Outcomes</h2>
 TG2 has been working for over 10 years to evaluate, refine and develop new tests that evaluate 'data quality'/'fitness for use' of biodiversity coded using the Darwin Core Standard. TG2 has developed a framework for describing, running and evaluating a standard suite of tests, test data and comprehensive vocabularies.
