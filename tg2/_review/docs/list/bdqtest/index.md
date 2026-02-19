@@ -18891,7 +18891,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Preferred Label</td>
-			<td>Vaildation dwc:geodeticDatum Standard</td>
+			<td>Validation dwc:geodeticDatum Standard</td>
 		</tr>
 		<tr>
 			<td>Term IRI</td>

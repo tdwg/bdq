@@ -1252,7 +1252,7 @@
   skos:historyNote "https://github.com/tdwg/bdq/issues/59";
   rdfs:label "VALIDATION_GEODETICDATUM_STANDARD";
   dcterms:isVersionOf <https://rs.tdwg.org/bdqtest/terms/7e0c0418-fe16-4a39-98bd-80e19d95b9d1>;
-  skos:prefLabel "Vaildation dwc:geodeticDatum Standard for SingleRecord" .
+  skos:prefLabel "Validation dwc:geodeticDatum Standard for SingleRecord" .
 
 <urn:uuid:2d1e1a48-f915-4db5-beba-ae73017f3f8b> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
   <skos:prefLabel> "Information Element ActedUpon dwc:geodeticDatum";

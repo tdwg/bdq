@@ -465,7 +465,7 @@ EP(u) = {am | am ⊂ AM ⋀ u ∈ U }
 #### Consulted
 
 - Name: bdqffdq:Consulted
-- Preferred Label: Acted Upon
+- Preferred Label: Consulted
 - Definition: A bdqffdq:InformationElement, expressed in concrete terms, about which a bdqffdq:DataQualityNeed examines in order to expresses bdqffdq:Assertions about the data quality in another bdqffdq:InformationElement.
 - SubClass Of: InformationElement
 - Comments: A bdqffdq:InformationElement the content of which is examined to assert a result on one or more other bdqffdq:InformationElements.

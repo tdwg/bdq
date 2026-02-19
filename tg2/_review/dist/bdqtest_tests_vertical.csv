@@ -21,7 +21,7 @@
 "VALIDATION_DECIMALLONGITUDE_INRANGE","Validation dwc:decimalLongitude In Range","bdqtest:0949110d-c06b-450e-9649-7c1374d940d1"
 "VALIDATION_DECIMALLONGITUDE_NOTEMPTY","Validation dwc:decimalLongitude Not Empty","bdqtest:9beb9442-d942-4f42-8b6a-fcea01ee086a"
 "VALIDATION_GEODETICDATUM_NOTEMPTY","Validation dwc:geodeticDatum Not Empty","bdqtest:239ec40e-a729-4a8e-ba69-e0bf03ac1c44"
-"VALIDATION_GEODETICDATUM_STANDARD","Vaildation dwc:geodeticDatum Standard","bdqtest:7e0c0418-fe16-4a39-98bd-80e19d95b9d1"
+"VALIDATION_GEODETICDATUM_STANDARD","Validation dwc:geodeticDatum Standard","bdqtest:7e0c0418-fe16-4a39-98bd-80e19d95b9d1"
 "VALIDATION_LOCATION_NOTEMPTY","Validation dcterms:Location Not Empty","bdqtest:58486cb6-1114-4a8a-ba1e-bd89cfe887e9"
 "VALIDATION_MAXDEPTH_INRANGE","Validation dwc:maximumDepthInMeters In Range","bdqtest:3f1db29a-bfa5-40db-9fd1-fde020d81939"
 "VALIDATION_MAXELEVATION_INRANGE","Validation dwc:maximumElevationInMeters In Range","bdqtest:c971fe3f-84c1-4636-9f44-b1ec31fd63c7"

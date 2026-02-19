@@ -1857,7 +1857,7 @@
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/59</skos:historyNote>
 	<rdfs:label>VALIDATION_GEODETICDATUM_STANDARD</rdfs:label>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/7e0c0418-fe16-4a39-98bd-80e19d95b9d1"/>
-	<skos:prefLabel>Vaildation dwc:geodeticDatum Standard for SingleRecord</skos:prefLabel>
+	<skos:prefLabel>Validation dwc:geodeticDatum Standard for SingleRecord</skos:prefLabel>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:344cb9f6-68e1-4d7c-a976-7edcd9f20935">

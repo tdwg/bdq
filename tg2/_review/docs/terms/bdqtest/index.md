@@ -1006,7 +1006,7 @@ bdq:Spatial-Temporal_Patterns, bdq:Record-Management
 
 ###  VALIDATION_GEODETICDATUM_STANDARD
 
-####  Vaildation dwc:geodeticDatum Standard
+####  Validation dwc:geodeticDatum Standard
 https://rs.tdwg.org/bdqtest/terms/7e0c0418-fe16-4a39-98bd-80e19d95b9d1/2025-03-03
 Acts upon  SingleRecord
 

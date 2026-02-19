@@ -640,7 +640,7 @@ bdqffdq:Consulted rdf:type owl:Class ;
                   rdfs:comment "A bdqffdq:InformationElement the content of which is examined to assert a result on one or more other bdqffdq:InformationElements."@en ;
                   rdfs:label "Consulted"@en ;
                   skos:definition "A bdqffdq:InformationElement, expressed in concrete terms, about which a bdqffdq:DataQualityNeed examines in order to expresses bdqffdq:Assertions about the data quality in another bdqffdq:InformationElement."@en ;
-                  skos:prefLabel "Acted Upon"@en .
+                  skos:prefLabel "Consulted"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/Criterion

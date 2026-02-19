@@ -5401,7 +5401,7 @@
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
             {
-                "@value": "Vaildation dwc:geodeticDatum Standard for SingleRecord"
+                "@value": "Validation dwc:geodeticDatum Standard for SingleRecord"
             }
         ]
     },
