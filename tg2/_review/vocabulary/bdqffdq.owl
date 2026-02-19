@@ -550,7 +550,7 @@ bdqffdq:Amendment rdf:type owl:Class ;
                   rdfs:subClassOf bdqffdq:AmendmentConcept ,
                                   bdqffdq:DataQualityNeed ;
                   dcterms:issued "2024-09-30"^^xsd:date ;
-                  rdfs:comment """ContextualizedEnhacement in the original framework. Describes an instance of a bdqffdq:Enhancement in the context of the associated bdqffdq:InformationElements from a controlled vocabulary (fields bdqffdq:ActedUpon or bdqffdq:Consulted), and a bdqffdq:ResourceType of bdqffdq:SingleRecord or bdqffdq:MultiRecord.
+                  rdfs:comment """ContextualizedEnhancement in the original framework. Describes an instance of a bdqffdq:Enhancement in the context of the associated bdqffdq:InformationElements from a controlled vocabulary (fields bdqffdq:ActedUpon or bdqffdq:Consulted), and a bdqffdq:ResourceType of bdqffdq:SingleRecord or bdqffdq:MultiRecord.
 
 Describes a proposal for a bdqffdq:Enhancement of original data, which if accepted, would improve the quality of the data for a use. For example: 'Recommends valid value for taxon name in a Single Record.'
 
