@@ -677,8 +677,8 @@
 <urn:uuid:317e79db-680a-4bbe-8a3e-e805c69514b8> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
   skos:example "dc:type=\"evnt\": Response.status=AMENDED, Response.result=dc:type=\"Event\", Response.comment=\"dc:type contains an interpretable value\"",
     "dc:type=\"X\": Response.status=NOT_AMENDED, Response.result=\"\", Response.comment=\"dc:type contains an uninterpretable value\"";
-  <https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:sourceAuthority is \"DCMI Type Vocabulary\" {[http://purl.org/dc/terms/DCMIType]} {\"DCMI Type Vocabulary List of Terms\" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}";
-  rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the value of dc:type is bdq:Empty; AMENDED the value of dc:type if it can be unambiguously interpreted as a term name in the bdq:sourceAuthority; otherwise NOT_AMENDED bdq:sourceAuthority is \"DCMI Type Vocabulary\" {[http://purl.org/dc/terms/DCMIType]} {\"DCMI Type Vocabulary List of Terms\" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}";
+  <https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "bdq:sourceAuthority = \"DCMI Type Vocabulary\" {[http://purl.org/dc/terms/DCMIType]} {\"DCMI Type Vocabulary List of Terms\" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}";
+  rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the value of dc:type is bdq:Empty; AMENDED the value of dc:type if it can be unambiguously interpreted as a term name in the bdq:sourceAuthority; otherwise NOT_AMENDED bdq:sourceAuthority = \"DCMI Type Vocabulary\" {[http://purl.org/dc/terms/DCMIType]} {\"DCMI Type Vocabulary List of Terms\" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}";
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the value of dc:type is bdq:Empty; AMENDED the value of dc:type if it can be unambiguously interpreted as a term name in the bdq:sourceAuthority; otherwise NOT_AMENDED";
   rdfs:label "Specification for: AMENDMENT_DCTYPE_STANDARDIZED" .
 
@@ -716,8 +716,8 @@
   skos:example "dwc:country=\"Eswatini\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:country is bdq:NotEmpty\"",
     "dwc:country=\"\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"dwc:country is bdq:Empty\"";
   <https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "";
-  rdfs:comment "COMPLIANT if dwc:country is bdq:NotEmpty or dwc:countryCode has a value of \"XZ\" and either dwc:country is bdq:Empty or has a value of \"High seas\"; otherwise NOT_COMPLIANT ?";
-  <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "COMPLIANT if dwc:country is bdq:NotEmpty or dwc:countryCode has a value of \"XZ\" and either dwc:country is bdq:Empty or has a value of \"High seas\"; otherwise NOT_COMPLIANT ?";
+  rdfs:comment "COMPLIANT if dwc:country is bdq:NotEmpty or dwc:countryCode has a value of \"XZ\" and either dwc:country is bdq:Empty or has a value of \"High seas\"; otherwise NOT_COMPLIANT";
+  <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "COMPLIANT if dwc:country is bdq:NotEmpty or dwc:countryCode has a value of \"XZ\" and either dwc:country is bdq:Empty or has a value of \"High seas\"; otherwise NOT_COMPLIANT";
   rdfs:label "Specification for: VALIDATION_COUNTRY_NOTEMPTY" .
 
 <https://rs.tdwg.org/bdqtest/terms/3f335517-f442-4b98-b149-1e87ff16de45-2025-03-06>
