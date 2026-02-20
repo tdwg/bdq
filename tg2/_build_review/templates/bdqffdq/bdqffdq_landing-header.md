@@ -202,25 +202,25 @@ Each instance of `bdqffdq:AbstractInformationElement` SHOULD have `rdfs:label` a
 
 Each description of a data quality Test SHOULD include the properties and related instances given below.
 
-The `bdqffdq:forValidation` object property SHOULD have have an individual with a type that is a subclass of `bdqffdq:ValidationMethod` as its subject.
+The `bdqffdq:forValidation` object property SHOULD have an individual with a type that is a subclass of `bdqffdq:ValidationMethod` as its subject.
 
 An axiom places an `owl:restriction` on the object of the `bdqffdq:forValidation` object property as a `bdqffdq:Validation`.
 
 Each `bdqffdq:Validation` method SHOULD have exactly one `bdqffdq:forValidation` object property.
 
-The `bdqffdq:forAmendment` object property SHOULD have have an individual with a type that is a subclass of `bdqffdq:AmendmentMethod` as its subject.
+The `bdqffdq:forAmendment` object property SHOULD have an individual with a type that is a subclass of `bdqffdq:AmendmentMethod` as its subject.
 
 An axiom places an `owl:restriction` on the object of the `bdqffdq:forAmendment` object property as a `bdqffdq:Amendment`.
 
 Each `bdqffdq:Amendment` method SHOULD have exactly one `bdqffdq:forAmendment` object property.
 
-The `bdqffdq:forMeasure` object property SHOULD have have an individual with a type that is a subclass of `bdqffdq:MeasureMethod` as its subject.
+The `bdqffdq:forMeasure` object property SHOULD have an individual with a type that is a subclass of `bdqffdq:MeasureMethod` as its subject.
 
 An axiom places an `owl:restriction` on the object of the `bdqffdq:forMeasure` object property as a `bdqffdq:Measure`.
 
 Each `bdqffdq:Measure` method SHOULD have exactly one `bdqffdq:forMeasure` object property.
 
-The `bdqffdq:forIssue` object property SHOULD have have an individual with a type that is a subclass of `bdqffdq:IssueMethod` as its subject.
+The `bdqffdq:forIssue` object property SHOULD have an individual with a type that is a subclass of `bdqffdq:IssueMethod` as its subject.
 
 An axiom places an `owl:restriction` on the object of the `bdqffdq:forIssue` object property as a `bdqffdq:Issue`.
 

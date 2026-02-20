@@ -162,7 +162,7 @@ In any technical treatment of the BDQ standard, a precise reference to a class o
 
 ## 2 A Brief Context for the BDQ Tests (non-normative)
 
-The Authors acknowledge the fundamental importane of the work of:
+The Authors acknowledge the fundamental importance of the work of:
 
 - The TDWG Data Quality Interest Group - Task Group 1 [BDQFramework](https://tdwg.github.io/bdq/tg1/site/), which provided the Framework for the BDQ Tests.
 - The TDWG Data Quality Interest Group - Task Group 3 [Data Quality Use Cases](https://www.tdwg.org/community/bdq/tg-3/) for providing recommendations on Use Cases.
@@ -201,7 +201,7 @@ The response of a `Validation` Test (i.e., an instance of a `bdqffdq:ValidationA
 3. A `Response.status` of "RUN_HAS_RESULT" when the prerequisites for running the Test have been met, and in this situation:
   - A `Response.result` of either "COMPLIANT" if the values of the `Information Elements` (`bdqffdq:InformationElement`) meet the `Criteria`, or "NOT_COMPLIANT" if they do not.
 
-In each case, a `Response.comment` MUST be present with text explaining to consumers of the `Data Quality Report` why the the Test produced this response in this case.
+In each case, a `Response.comment` MUST be present with text explaining to consumers of the `Data Quality Report` why the Test produced this response in this case.
 
 #### 2.2.2 Issue Tests (normative)
 
@@ -218,7 +218,7 @@ The response of an `Issue` Test (an instance of a `bdqffdq:IssueAssertion`) MUST
 3. A `Response.status` of "RUN_HAS_RESULT" when the prerequisites for running the Test have been met, and in this case:
   - A `Response.result`="POTENTIAL_ISSUE", a `Response.result`="NOT_ISSUE", or a `Response.result`="IS_ISSUE".
 
-In each case, a `Response.comment` MUST be present with text explaining to consumers of the `Data Quality Report` why the the Test produced this response in this case.
+In each case, a `Response.comment` MUST be present with text explaining to consumers of the `Data Quality Report` why the Test produced this response in this case.
 
 None of the currently defined BDQ Issue Tests return a `Response.result` of IS_ISSUE.
 
@@ -241,7 +241,7 @@ The response of a `Measure` Test (an instance of a `bdqffdq:MeasureAssertion`) M
 or
   - a `Response.result` containing a single number.
 
-In each case, a `Response.comment` MUST be present with text explaining to consumers of the `Data Quality Report` why the the Test produced this response in this case.
+In each case, a `Response.comment` MUST be present with text explaining to consumers of the `Data Quality Report` why the Test produced this response in this case.
 
 #### 2.2.4 Amendment Tests (normative) 
 
@@ -258,7 +258,7 @@ The response of an `Amendment` Test (an instance of a `bdqffdq:AmendmentAssertio
 4. A `Response.status` of "AMENDED" when the prerequisites for running the Test have been met and a proposal is made to change a value for one or more input terms that were Empty, and in this situation:
   - A `Response.result` containing a list of key-value pairs of the terms for which new values are proposed, and the proposed new values for those terms.
 
-In each case, a `Response.comment` MUST be present with text explaining to consumers of the `Data Quality Report` why the the Test produced this response in this case.
+In each case, a `Response.comment` MUST be present with text explaining to consumers of the `Data Quality Report` why the Test produced this response in this case.
 
 ### 2.3 Single Record and Multi Record Tests (non-normative) 
 
