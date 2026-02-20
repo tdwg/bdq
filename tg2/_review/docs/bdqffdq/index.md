@@ -428,6 +428,8 @@ This is a Summary of pp.89-108 in: Veiga, A.K. 2016. A conceptual framework on b
 The following changes have been made to the original formulation: 
 
 - `dcmitype:Dataset` replaced with `Multi Record`.
+- `Dimension` replaced with `Data Quality Dimension`.
+- 'Data Quality Dimension' can apply to classes other than `Measure`, that is `Validation`, `Issue`, and `Amendment` can have `Data Quality Dimensions`.
 - Improvement Method changed to Enhancement `Method`.
 - Improvement Policy changed to Enhancement `Policy`.
 - Data Quality Improvement changed to Data Quality `Amendment`.
