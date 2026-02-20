@@ -103,7 +103,7 @@ Intended for:
 - Standards developers aligning their work with the BDQ standard
 - Data managers interpreting outputs of Test runs
 
-No technical background in ontology is required to understand the Tests or most of the standard.  Familiarity with ontology concepts is helpful, but not essential, for understanding the Fittness For Use Framework, which is the theoretical basis for the BDQ standard. The BDQ standard is designed to be accessible to a wide audience, including those who may not have a deep understanding of data quality concepts or technical standards.
+No technical background in ontology is required to understand the Tests or most of the standard.  Familiarity with ontology concepts is helpful, but not essential, for understanding the Fitness For Use Framework, which is the theoretical basis for the BDQ standard. The BDQ standard is designed to be accessible to a wide audience, including those who may not have a deep understanding of data quality concepts or technical standards.
 
 ### 1.3 Associated Documents (non_normative)
 
@@ -217,7 +217,7 @@ Test Validation Data are intended for implementers to use to evaluate whether Te
 
 #### 2.6.3 Fitness For Use Framework (non-normative)
 
-The Fittness For Use Framework is provided as an OWL ontology.
+The Fitness For Use Framework is provided as an OWL ontology.
 
 - [**Biodiversity Data Quality Fitness for Use Framework (Ontology)**](vocabulary/bdqffdq.owl)
 
