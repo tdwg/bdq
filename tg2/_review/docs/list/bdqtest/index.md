@@ -17501,7 +17501,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:decimalLatitude="0": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:decimalLatiitude is bdq:NotEmpty"],[dwc:decimalLatitude="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:decimalLatiitude is bdq:Empty"]</td>
+			<td>[dwc:decimalLatitude="0": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:decimalLatitude is bdq:NotEmpty"],[dwc:decimalLatitude="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:decimalLatitude is bdq:Empty"]</td>
 		</tr>
 		<tr>
 			<td>Type</td>

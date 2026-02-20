@@ -2946,8 +2946,8 @@
   <https://rs.tdwg.org/bdqffdq/terms/forValidation> <https://rs.tdwg.org/bdqtest/terms/7d2485d5-1ba7-4f25-90cb-f4480ff1a275-2025-03-07> .
 
 <urn:uuid:0067fa60-5503-490e-8c94-93fb79cc7da2> a <https://rs.tdwg.org/bdqffdq/terms/Specification>;
-  skos:example "dwc:decimalLatitude=\"0\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:decimalLatiitude is bdq:NotEmpty\"",
-    "dwc:decimalLatitude=\"\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"dwc:decimalLatiitude is bdq:Empty\"";
+  skos:example "dwc:decimalLatitude=\"0\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:decimalLatitude is bdq:NotEmpty\"",
+    "dwc:decimalLatitude=\"\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"dwc:decimalLatitude is bdq:Empty\"";
   <https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults> "";
   rdfs:comment "COMPLIANT if dwc:decimalLatitude is bdq:NotEmpty; otherwise NOT_COMPLIANT";
   <https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse> "COMPLIANT if dwc:decimalLatitude is bdq:NotEmpty; otherwise NOT_COMPLIANT";

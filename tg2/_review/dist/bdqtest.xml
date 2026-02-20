@@ -4194,8 +4194,8 @@
 
 <rdf:Description rdf:about="urn:uuid:0067fa60-5503-490e-8c94-93fb79cc7da2">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Specification"/>
-	<skos:example>dwc:decimalLatitude="0": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:decimalLatiitude is bdq:NotEmpty"</skos:example>
-	<skos:example>dwc:decimalLatitude="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:decimalLatiitude is bdq:Empty"</skos:example>
+	<skos:example>dwc:decimalLatitude="0": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:decimalLatitude is bdq:NotEmpty"</skos:example>
+	<skos:example>dwc:decimalLatitude="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:decimalLatitude is bdq:Empty"</skos:example>
 	<hasAuthoritiesDefaults xmlns="https://rs.tdwg.org/bdqffdq/terms/"></hasAuthoritiesDefaults>
 	<rdfs:comment>COMPLIANT if dwc:decimalLatitude is bdq:NotEmpty; otherwise NOT_COMPLIANT</rdfs:comment>
 	<hasExpectedResponse xmlns="https://rs.tdwg.org/bdqffdq/terms/">COMPLIANT if dwc:decimalLatitude is bdq:NotEmpty; otherwise NOT_COMPLIANT</hasExpectedResponse>

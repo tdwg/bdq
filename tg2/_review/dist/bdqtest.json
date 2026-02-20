@@ -12848,10 +12848,10 @@
         ],
         "http://www.w3.org/2004/02/skos/core#example": [
             {
-                "@value": "dwc:decimalLatitude=\"0\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:decimalLatiitude is bdq:NotEmpty\""
+                "@value": "dwc:decimalLatitude=\"0\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:decimalLatitude is bdq:NotEmpty\""
             },
             {
-                "@value": "dwc:decimalLatitude=\"\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"dwc:decimalLatiitude is bdq:Empty\""
+                "@value": "dwc:decimalLatitude=\"\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"dwc:decimalLatitude is bdq:Empty\""
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults": [

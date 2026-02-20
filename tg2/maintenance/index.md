@@ -71,7 +71,7 @@ Templates for proposals of new and change issues are available at https://github
 3. Review the proposal, including evaluating that the expected response follows a path an implementer can understand, that the Information Elements are referenced in the expected response, and whether parameters are present and formatted as desired.
 4. Confirm that the proposal is not a duplicate of an existing issue, including both those with the label 'Do Not Implement' and the label 'Immature/Incomplete'.
 5. Discussion at any point may conclude that the Test is not able to be implemented or should not be implemented as results would be misleading or problematic, label as 'DO NOT IMPLEMENT', describe why in comments on the issue, and close the issue.
-6. Discussion at any point may conclude that the Test is reasonable, but can't be implemented as some needed resource, such a a controlled vocabulary, does not yet exist. Label as 'Immature/Incomplete'. Describe why in comments on the issue, leave open.
+6. Discussion at any point may conclude that the Test is reasonable, but can't be implemented as some needed resource, such a controlled vocabulary, does not yet exist. Label as 'Immature/Incomplete'. Describe why in comments on the issue, leave open.
 7. Produce example data covering each path through the expected response, add these to a validation sheet.
 8. The Markdown table from the Test can be exported to a list of proposed Tests in a CSV file. This CSV-based list can be used by implementers to generate code stubs for Tests to be implemented.
 9. Implementers produce at least one implementation of the Test, this will provide feedback on the expected response, and whether or not the Test is implementable.
