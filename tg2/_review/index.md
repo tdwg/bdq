@@ -46,7 +46,7 @@ Biodiversity Data Quality Maintenance Group. 2025. The Biodiversity Data Quality
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 # Table of Contents
-[1. Introduction (non-normative)](#1-introduction-non-normative)
+[1 Introduction (non-normative)](#1-introduction-non-normative)
   - [1.1 Purpose (non-normative)](#11-purpose-non-normative)
   - [1.2 Audience (non-normative)](#12-audience-non-normative)
   - [1.3 Associated Documents (non-normative)](#13-associated-documents-non-normative)
@@ -56,7 +56,7 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
   - [1.7 Referring to Terms (normative)](#17-referring-to-terms-normative)
   - [1.8 Notation Conventions (non-normative)](#18-notation-conventions-non-normative)
   
-[2. Parts of the Standard (non-normative)](#2-parts-of-the-standard-non-normative)
+[2 Parts of the Standard (non-normative)](#2-parts-of-the-standard-non-normative)
   - [2.1 BDQ Tests Quick Reference Guide (non-normative)](#21-quick-reference-guide-non-normative)
   - [2.2 Landing Pages (non-normative)](#22-landing-pages-non-normative)
   - [2.3 Guides (non-normative)](#23-guides-non-normative)
@@ -71,22 +71,22 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
     - [2.6.4 RDF Serializations of Controlled Vocabularies (non-normative)](#264-rdf-serializations-of-controlled-vocabularies-non-normative)
     - [2.6.5 Java Implementation (non-normative)](#265-java-implementation-non-normative)
 
-[3. Design of the Tests (normative)](#3-design-of-the-tests-normative)
+[3 Design of the Tests (normative)](#3-design-of-the-tests-normative)
   - [3.1 Data Quality Control, Data Quality Assurance (normative)](#31-data-quality-control-data-quality-assurance-normative)
   - [3.2 When to Run Tests (normative)](#32-when-to-run-tests-normative)
   - [3.3 Results of Test Executions (normative)](#33-results-of-test-executions-normative)
   - [3.4 Test Execution Environments and Workflows (non-normative)](#34-test-execution-environments-and-workflows-non-normative)
   
-[4. Contributions and Acknowledgments (non-normative)](#4-contributions-and-acknowledgments-non-normative)<br>
-[5. Acronyms (non-normative)](#5-acronyms-non-normative)<br>
-[6. Glossary (non-normative)](#6-glossary-non-normative)
+[4 Contributions and Acknowledgments (non-normative)](#4-contributions-and-acknowledgments-non-normative)<br>
+[5 Acronyms (non-normative)](#5-acronyms-non-normative)<br>
+[6 Glossary (non-normative)](#6-glossary-non-normative)
   - [6.1 Term-Actions (non-normative)](#61-term-actions-non-normative)
   - [6.2 General Glossary (non-normative)](#62-general-glossary-non-normative)
   
-[7. References (non-normative)](#7-references-non-normative)<br>
-[8. Cite BDQ (non-normative)](#8-cite-bdq-non-normative)
+[7 References (non-normative)](#7-references-non-normative)<br>
+[8 Cite BDQ (non-normative)](#8-cite-bdq-non-normative)
 
-## 1. Introduction (non-normative)
+## 1 Introduction (non-normative)
 
 ### 1.1 Purpose (non-normative)
 
@@ -140,7 +140,7 @@ In any technical treatment of the BDQ standard, a precise reference to a class o
 
 Throughout these descriptive documents, terms and phrases styled as inline code (e.g., `Validation`, `Information Element`, `Data Quality Need`) refer explicitly to classes, properties, or named individuals defined in the BDQ ontology bdqffdq: by their labels or by their term local name (e.g. `InformationElement`).   Pluralized forms (e.g., `Data Quality Reports`) refer to multiple instances of the class. When a word that is also a bdqffdq class name is not styled in this way, it should be interpreted as a general English phrase or concept, not as a specific ontology term (for example, specification is general while `Specification` means `bdqffdq:Specification`, and implementation carries the general meaning while `Implementation` means `bdqffdq:Implementation`).  This convention is also used for qualified names such as `bdqffdq:InformationElement`, terms from other vocabularies, such as `dwc:countryCode`, and to denote some software artifacts such as `sci_name_qc`.
 
-## 2. Parts of the Standard (non-normative)
+## 2 Parts of the Standard (non-normative)
 
 This standard is comprised of the following documents and artifacts:
 
@@ -390,7 +390,7 @@ Glossary of terms used in the BDQ standard that are in addition to those include
 | YEARMONTHDAY | A general category of specific bdq:InformationElements that represents a combination of the Darwin Core terms dwc:year, dwc:month, dwc:day. | bdqffdq:InformationElement |
 | YEARSTARTDAYOFYEARENDDAYOFYEAR | A general category of specific bdq:InformationElements that represents a combination of the Darwin Core terms dwc:year, dwc:startDayOfYear, dwc:endDayofYear. | bdqffdq:InformationElement |
 
-## 7. References (non-normative)
+## 7 References (non-normative)
 
 We have used the formatting recommended by Pensoft, see https://checklist.pensoft.net/about#AuthorsGuidelines. 
 
@@ -486,7 +486,7 @@ We have used the formatting recommended by Pensoft, see https://checklist.pensof
 <li>WoRMS (2019) WoRMS - World Register of Marine Species. https://www.marinespecies.org</li> 
 </ul>
 
-## 8. Cite BDQ (non-normative)
+## 8 Cite BDQ (non-normative)
 
 **To cite BDQ in general, use the peer-reviewed article:**
 

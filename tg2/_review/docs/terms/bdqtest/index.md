@@ -272,7 +272,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 Acted upon: 
 dc:type
 
-#### Source Authoritiy
+#### Source Authority
 
 DCMI Type Vocabulary" {[http://purl.org/dc/terms/DCMIType]} {"DCMI Type Vocabulary List of Terms" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}
 
@@ -646,7 +646,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 Acted upon: 
 dwc:countryCode
 
-#### Source Authoritiy
+#### Source Authority
 
 bdq:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}
 
@@ -687,7 +687,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 Acted upon: 
 dwc:country,dwc:countryCode
 
-#### Source Authoritiy
+#### Source Authority
 
 bdq:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}
 
@@ -1023,7 +1023,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTE
 Acted upon: 
 dwc:geodeticDatum
 
-#### Source Authoritiy
+#### Source Authority
 
 bdq:sourceAuthority = "EPSG" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index]}
 
@@ -3398,7 +3398,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 Acted upon: 
 dc:type
 
-#### Source Authoritiy
+#### Source Authority
 
 bdq:sourceAuthority = "DCMI Type Vocabulary" {[http://purl.org/dc/terms/DCMIType]} {"DCMI Type Vocabulary List of Terms" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}
 
@@ -3620,7 +3620,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 Acted upon: 
 dwc:countryCode
 
-#### Source Authoritiy
+#### Source Authority
 
 bdq:sourceAuthority default = "ISO 3166-1-alpha-2" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}
 
@@ -3709,7 +3709,7 @@ EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTE
 Acted upon: 
 dwc:geodeticDatum
 
-#### Source Authoritiy
+#### Source Authority
 
 bdq:sourceAuthority = "EPSG" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index#/Datum]}
 

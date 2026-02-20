@@ -44,7 +44,7 @@
 
 {toc}
 
-## 1. Introduction (non-normative)
+## 1 Introduction (non-normative)
 
 ### 1.1 Purpose (non-normative)
 

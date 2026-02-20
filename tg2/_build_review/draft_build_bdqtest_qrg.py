@@ -384,7 +384,7 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 				if not pandas.isna(row['Parameters']) : 
 					print("#### Default Parameter Values")
 				else: 
-					print("#### Source Authoritiy")
+					print("#### Source Authority")
 				print()
 				print(row['AuthoritiesDefaults'])
 				print()

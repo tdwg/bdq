@@ -40,7 +40,7 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
 Draft Standard for Review
 
 ## Table of Contents ##
-[1. Introduction (non-normative)](#1-introduction-non-normative)
+[1 Introduction (non-normative)](#1-introduction-non-normative)
   - [1.1 Purpose (non-normative)](#11-purpose-non-normative)
   - [1.2 Audience (non-normative)](#12-audience-non-normative)
   - [1.3 Data Quality Vocabulary Terms (non-normative)](#13-data-quality-vocabulary-terms-non-normative)
@@ -67,7 +67,7 @@ Draft Standard for Review
 
 [Cite BDQ (non-normative)](#cite-bdq-non-normative)
 
-## 1. Introduction (non-normative)
+## 1 Introduction (non-normative)
 
 ### 1.1 Purpose (non-normative)
 
