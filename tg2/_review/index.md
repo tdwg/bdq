@@ -263,7 +263,7 @@ Expanding on this single validation step, amendments can be run and their result
 
 ![Diagram of workflow with pre-amendment validation+measure phase, followed by amendment phase, followed by post-amendment validation-measure phase](workflow_two_iterations.svg)
 
-## 4 Acknowledgments and Contributions (non-normative)
+## 4 Contributions and Acknowledgments (non-normative)
 
 ### 4.1 Acknowledgments (non-normative)
 
