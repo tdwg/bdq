@@ -149,11 +149,14 @@ The Framework defines four central concepts for describing and evaluating `Data 
 
 ![Diagram of Validation, Issue, Measure, and Amendment classes with DataQualityNeed as a parent node.](dataqualityneeds.png "The 4 central DataQualityNeed types in the Framework - Validation, Issue, Measure, and Amendment.")
 
+
 A `Validation` assesses compliance with a need. Data have quality if they are compliant with the requirements of the Validation Test. A `Validation` relates `Information Elements` and `Resource Types` with a `Specification` of exactly how to assess fitness of the data under some narrow `Criteria`, and themselves are assembled into `Validation Policies`, which are linked to other `Policies` to cover a description of the `Data Quality Needs` of a `Use Case`.  Data have quality only with respect to some use, so `Validations` must be composed with `Use Cases` to be able to assess fitness for use.
 
 ![Diagram of the classes involved in expressing Data Quality Needs with Validations.](bdqffdq_data_quality_needs_validation.svg "Expressing `Data Quality Needs`: Validations.")
 
 `Issues` are the converse of `Validations`. Data lack quality if an `Issue` identifies a potential problem in the data that would require further human review to determine if the data have quality for some purpose.  Like `Validations`, `Issues` relate `Information Elements` and `Resource Types` with a `Specification` of exactly how to assess fitness of the data under some `Use Case`.  No illustration is provided here, as the `Issue` concept is very similar to the `Validation` concept, but with a different focus on identifying potential problems rather than confirming compliance.  
+
+`Validations`, `Measures`, `Amendments`, and `Issues` all share a similar set of relationships to other classes in the Framework.  The following diagrams for `Measures` and `Amendments'  highlight these similarities, with classes and relationships that differ called out with thicker line weights.
 
 `Measures` make an aggregate summary of some specific aspect of data quality.
 
