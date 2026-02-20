@@ -5,36 +5,8 @@
    viewBox="0 0 1657.3191 863.10371"
    version="1.1"
    id="svg2688"
-   sodipodi:docname="bdqffdq_data_quality_needs_amendment.svg"
-   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
-   inkscape:export-filename="../../../../stuff/Projects/BDQ/bdqffdq_data_quality_needs3.png"
-   inkscape:export-xdpi="96"
-   inkscape:export-ydpi="96"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
-  <sodipodi:namedview
-     id="namedview2690"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:showpageshadow="2"
-     inkscape:pageopacity="0.0"
-     inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#d1d1d1"
-     inkscape:document-units="pt"
-     showgrid="false"
-     inkscape:zoom="0.52921828"
-     inkscape:cx="1109.1832"
-     inkscape:cy="478.06361"
-     inkscape:window-width="1738"
-     inkscape:window-height="1002"
-     inkscape:window-x="27"
-     inkscape:window-y="24"
-     inkscape:window-maximized="0"
-     inkscape:current-layer="surface31859" />
   <defs
      id="defs1581">
     <rect
@@ -49,12 +21,9 @@
        refX="0"
        refY="0"
        orient="auto-start-reverse"
-       inkscape:stockid="EmptyTriangleIn"
        markerWidth="5.8241119"
        markerHeight="6.7330775"
        viewBox="0 0 5.8241121 6.7330776"
-       inkscape:isstock="true"
-       inkscape:collect="always"
        preserveAspectRatio="xMidYMid">
       <path
          transform="scale(0.5)"
@@ -68,12 +37,9 @@
        refX="0"
        refY="0"
        orient="auto-start-reverse"
-       inkscape:stockid="EmptyTriangleIn"
        markerWidth="6.8239999"
        markerHeight="7.8890181"
        viewBox="0 0 5.8241121 6.7330776"
-       inkscape:isstock="true"
-       inkscape:collect="always"
        preserveAspectRatio="xMidYMid">
       <path
          transform="scale(0.5)"
@@ -667,9 +633,6 @@
       </symbol>
     </g>
     <filter
-       inkscape:label="Fill Background"
-       inkscape:menu="Fill and Transparency"
-       inkscape:menu-tooltip="Adds a colorizable opaque background"
        style="color-interpolation-filters:sRGB"
        id="filter4968"
        x="-0.013402433"
@@ -681,10 +644,6 @@
          flood-color="rgb(255,255,255)"
          flood-opacity="1"
          id="feFlood4956" />
-      <feImage
-         xlink:href=""
-         result="result2"
-         id="feImage4958" />
       <feBlend
          result="result4"
          in2="result1"
@@ -702,9 +661,6 @@
       </feMerge>
     </filter>
     <filter
-       inkscape:label="Fill Background"
-       inkscape:menu="Fill and Transparency"
-       inkscape:menu-tooltip="Adds a colorizable opaque background"
        style="color-interpolation-filters:sRGB"
        id="filter4968-3"
        x="-0.013402433"
@@ -716,10 +672,6 @@
          flood-color="rgb(255,255,255)"
          flood-opacity="1"
          id="feFlood4956-6" />
-      <feImage
-         xlink:href=""
-         result="result2"
-         id="feImage4958-1" />
       <feBlend
          result="result4"
          in2="result1"
@@ -738,7 +690,6 @@
     </filter>
     <filter
        style="color-interpolation-filters:sRGB"
-       inkscape:label="Drop Shadow"
        id="filter8030"
        x="-0.036574129"
        y="-0.06162786"
@@ -774,12 +725,11 @@
     </filter>
     <filter
        style="color-interpolation-filters:sRGB"
-       inkscape:label="Drop Shadow"
        id="filter9105"
-       x="-0.032570615"
-       y="-0.075671356"
-       width="1.0813374"
-       height="1.1916344">
+       x="-0.037981681"
+       y="-0.08048669"
+       width="1.0921595"
+       height="1.1977235">
       <feFlood
          flood-opacity="0.498039"
          flood-color="rgb(0,0,0)"
@@ -810,7 +760,6 @@
     </filter>
     <filter
        style="color-interpolation-filters:sRGB"
-       inkscape:label="Drop Shadow"
        id="filter9891"
        x="-0.034394498"
        y="-0.068817198"
@@ -846,7 +795,6 @@
     </filter>
     <filter
        style="color-interpolation-filters:sRGB"
-       inkscape:label="Drop Shadow"
        id="filter10677"
        x="-0.025311755"
        y="-0.058513525"
@@ -882,7 +830,6 @@
     </filter>
     <filter
        style="color-interpolation-filters:sRGB"
-       inkscape:label="Drop Shadow"
        id="filter11115"
        x="-0.018447651"
        y="-0.032687627"
@@ -951,7 +898,6 @@
     </filter>
     <filter
        style="color-interpolation-filters:sRGB"
-       inkscape:label="Drop Shadow"
        id="filter11127"
        x="-0.036229564"
        y="-0.067865219"
@@ -986,9 +932,6 @@
          id="feComposite11125" />
     </filter>
     <filter
-       inkscape:label="Fill Background"
-       inkscape:menu="Fill and Transparency"
-       inkscape:menu-tooltip="Adds a colorizable opaque background"
        style="color-interpolation-filters:sRGB"
        id="filter4968-37"
        x="-0.0094553707"
@@ -1000,10 +943,6 @@
          flood-color="rgb(255,255,255)"
          flood-opacity="1"
          id="feFlood4956-4" />
-      <feImage
-         xlink:href=""
-         result="result2"
-         id="feImage4958-5" />
       <feBlend
          result="result4"
          in2="result1"
@@ -1021,9 +960,6 @@
       </feMerge>
     </filter>
     <filter
-       inkscape:label="Fill Background"
-       inkscape:menu="Fill and Transparency"
-       inkscape:menu-tooltip="Adds a colorizable opaque background"
        style="color-interpolation-filters:sRGB"
        id="filter4968-37-3"
        x="-0.0094553707"
@@ -1035,10 +971,6 @@
          flood-color="rgb(255,255,255)"
          flood-opacity="1"
          id="feFlood4956-4-0" />
-      <feImage
-         xlink:href=""
-         result="result2"
-         id="feImage4958-5-7" />
       <feBlend
          result="result4"
          in2="result1"
@@ -1057,7 +989,6 @@
     </filter>
     <filter
        style="color-interpolation-filters:sRGB"
-       inkscape:label="Drop Shadow"
        id="filter13383"
        x="-0.62525493"
        y="-1.0535872"
@@ -1092,9 +1023,6 @@
          id="feComposite13381" />
     </filter>
     <filter
-       inkscape:label="Fill Background"
-       inkscape:menu="Fill and Transparency"
-       inkscape:menu-tooltip="Adds a colorizable opaque background"
        style="color-interpolation-filters:sRGB"
        id="filter4968-9"
        x="0"
@@ -1106,10 +1034,6 @@
          flood-color="rgb(255,255,255)"
          flood-opacity="1"
          id="feFlood4956-2" />
-      <feImage
-         xlink:href=""
-         result="result2"
-         id="feImage4958-6" />
       <feBlend
          result="result4"
          in2="result1"
@@ -1128,7 +1052,6 @@
     </filter>
     <filter
        style="color-interpolation-filters:sRGB"
-       inkscape:label="Drop Shadow"
        id="filter22872"
        x="-0.13677789"
        y="-0.36421052"
@@ -1197,7 +1120,6 @@
     </filter>
     <filter
        style="color-interpolation-filters:sRGB"
-       inkscape:label="Drop Shadow"
        id="filter8030-7"
        x="-0.036574129"
        y="-0.06162786"
@@ -1233,12 +1155,11 @@
     </filter>
     <filter
        style="color-interpolation-filters:sRGB"
-       inkscape:label="Drop Shadow"
        id="filter8030-6"
-       x="-0.036574129"
-       y="-0.06162786"
-       width="1.0908047"
-       height="1.1551128">
+       x="-0.040212352"
+       y="-0.067758311"
+       width="1.0980812"
+       height="1.1673737">
       <feFlood
          flood-opacity="0.498039"
          flood-color="rgb(0,0,0)"
@@ -1268,9 +1189,6 @@
          id="feComposite8028-9" />
     </filter>
     <filter
-       inkscape:label="Fill Background"
-       inkscape:menu="Fill and Transparency"
-       inkscape:menu-tooltip="Adds a colorizable opaque background"
        style="color-interpolation-filters:sRGB"
        id="filter4968-9-9"
        x="0"
@@ -1282,10 +1200,6 @@
          flood-color="rgb(255,255,255)"
          flood-opacity="1"
          id="feFlood4956-2-0" />
-      <feImage
-         xlink:href=""
-         result="result2"
-         id="feImage4958-6-9" />
       <feBlend
          result="result4"
          in2="result1"
@@ -1303,9 +1217,6 @@
       </feMerge>
     </filter>
     <filter
-       inkscape:label="Fill Background"
-       inkscape:menu="Fill and Transparency"
-       inkscape:menu-tooltip="Adds a colorizable opaque background"
        style="color-interpolation-filters:sRGB"
        id="filter4968-9-9-9"
        x="0"
@@ -1317,10 +1228,6 @@
          flood-color="rgb(255,255,255)"
          flood-opacity="1"
          id="feFlood4956-2-0-7" />
-      <feImage
-         xlink:href=""
-         result="result2"
-         id="feImage4958-6-9-7" />
       <feBlend
          result="result4"
          in2="result1"
@@ -1339,7 +1246,6 @@
     </filter>
     <filter
        style="color-interpolation-filters:sRGB"
-       inkscape:label="Drop Shadow"
        id="filter8030-7-3"
        x="-0.036574129"
        y="-0.06162786"
@@ -1375,7 +1281,6 @@
     </filter>
     <filter
        style="color-interpolation-filters:sRGB"
-       inkscape:label="Drop Shadow"
        id="filter8030-7-39"
        x="-0.036574129"
        y="-0.06162786"
@@ -1411,7 +1316,6 @@
     </filter>
     <filter
        style="color-interpolation-filters:sRGB"
-       inkscape:label="Drop Shadow"
        id="filter9105-4"
        x="-0.032570615"
        y="-0.069020145"
@@ -1446,9 +1350,6 @@
          id="feComposite9103-0" />
     </filter>
     <filter
-       inkscape:label="Fill Background"
-       inkscape:menu="Fill and Transparency"
-       inkscape:menu-tooltip="Adds a colorizable opaque background"
        style="color-interpolation-filters:sRGB"
        id="filter4968-9-6"
        x="0"
@@ -1460,10 +1361,6 @@
          flood-color="rgb(255,255,255)"
          flood-opacity="1"
          id="feFlood4956-2-3" />
-      <feImage
-         xlink:href=""
-         result="result2"
-         id="feImage4958-6-1" />
       <feBlend
          result="result4"
          in2="result1"
@@ -1481,9 +1378,6 @@
       </feMerge>
     </filter>
     <filter
-       inkscape:label="Fill Background"
-       inkscape:menu="Fill and Transparency"
-       inkscape:menu-tooltip="Adds a colorizable opaque background"
        style="color-interpolation-filters:sRGB"
        id="filter4968-9-6-9"
        x="0"
@@ -1495,10 +1389,6 @@
          flood-color="rgb(255,255,255)"
          flood-opacity="1"
          id="feFlood4956-2-3-6" />
-      <feImage
-         xlink:href=""
-         result="result2"
-         id="feImage4958-6-1-4" />
       <feBlend
          result="result4"
          in2="result1"
@@ -1516,9 +1406,6 @@
       </feMerge>
     </filter>
     <filter
-       inkscape:label="Fill Background"
-       inkscape:menu="Fill and Transparency"
-       inkscape:menu-tooltip="Adds a colorizable opaque background"
        style="color-interpolation-filters:sRGB"
        id="filter4968-9-6-4"
        x="0"
@@ -1530,10 +1417,6 @@
          flood-color="rgb(255,255,255)"
          flood-opacity="1"
          id="feFlood4956-2-3-8" />
-      <feImage
-         xlink:href=""
-         result="result2"
-         id="feImage4958-6-1-8" />
       <feBlend
          result="result4"
          in2="result1"
@@ -1551,9 +1434,6 @@
       </feMerge>
     </filter>
     <filter
-       inkscape:label="Fill Background"
-       inkscape:menu="Fill and Transparency"
-       inkscape:menu-tooltip="Adds a colorizable opaque background"
        style="color-interpolation-filters:sRGB"
        id="filter4968-9-9-3"
        x="0"
@@ -1565,10 +1445,6 @@
          flood-color="rgb(255,255,255)"
          flood-opacity="1"
          id="feFlood4956-2-0-0" />
-      <feImage
-         xlink:href=""
-         result="result2"
-         id="feImage4958-6-9-9" />
       <feBlend
          result="result4"
          in2="result1"
@@ -1586,9 +1462,6 @@
       </feMerge>
     </filter>
     <filter
-       inkscape:label="Fill Background"
-       inkscape:menu="Fill and Transparency"
-       inkscape:menu-tooltip="Adds a colorizable opaque background"
        style="color-interpolation-filters:sRGB"
        id="filter4968-9-9-3-6"
        x="0"
@@ -1600,10 +1473,6 @@
          flood-color="rgb(255,255,255)"
          flood-opacity="1"
          id="feFlood4956-2-0-0-9" />
-      <feImage
-         xlink:href=""
-         result="result2"
-         id="feImage4958-6-9-9-2" />
       <feBlend
          result="result4"
          in2="result1"
@@ -1622,12 +1491,11 @@
     </filter>
     <filter
        style="color-interpolation-filters:sRGB"
-       inkscape:label="Drop Shadow"
        id="filter8030-7-3-8"
-       x="-0.036574129"
-       y="-0.06162786"
-       width="1.0908047"
-       height="1.1551128">
+       x="-0.041346526"
+       y="-0.069669407"
+       width="1.1003495"
+       height="1.1711958">
       <feFlood
          flood-opacity="0.498039"
          flood-color="rgb(0,0,0)"
@@ -1658,7 +1526,6 @@
     </filter>
     <filter
        style="color-interpolation-filters:sRGB"
-       inkscape:label="Drop Shadow"
        id="filter8030-7-3-80"
        x="-0.036574129"
        y="-0.06162786"
@@ -1694,7 +1561,6 @@
     </filter>
     <filter
        style="color-interpolation-filters:sRGB"
-       inkscape:label="Drop Shadow"
        id="filter8030-7-3-8-5"
        x="-0.036574129"
        y="-0.06162786"
@@ -1729,9 +1595,6 @@
          id="feComposite8028-2-2-3-2" />
     </filter>
     <filter
-       inkscape:label="Fill Background"
-       inkscape:menu="Fill and Transparency"
-       inkscape:menu-tooltip="Adds a colorizable opaque background"
        style="color-interpolation-filters:sRGB"
        id="filter4968-9-9-3-0"
        x="0"
@@ -1743,10 +1606,6 @@
          flood-color="rgb(255,255,255)"
          flood-opacity="1"
          id="feFlood4956-2-0-0-6" />
-      <feImage
-         xlink:href=""
-         result="result2"
-         id="feImage4958-6-9-9-29" />
       <feBlend
          result="result4"
          in2="result1"
@@ -1765,7 +1624,6 @@
     </filter>
     <filter
        style="color-interpolation-filters:sRGB"
-       inkscape:label="Drop Shadow"
        id="filter9891-9"
        x="-0.016867913"
        y="-0.074139782"
@@ -1801,7 +1659,6 @@
     </filter>
     <filter
        style="color-interpolation-filters:sRGB"
-       inkscape:label="Drop Shadow"
        id="filter8030-7-0"
        x="-0.036574129"
        y="-0.06162786"
@@ -1836,9 +1693,6 @@
          id="feComposite8028-2-7" />
     </filter>
     <filter
-       inkscape:label="Fill Background"
-       inkscape:menu="Fill and Transparency"
-       inkscape:menu-tooltip="Adds a colorizable opaque background"
        style="color-interpolation-filters:sRGB"
        id="filter4968-9-6-4-4"
        x="0"
@@ -1850,10 +1704,6 @@
          flood-color="rgb(255,255,255)"
          flood-opacity="1"
          id="feFlood4956-2-3-8-8" />
-      <feImage
-         xlink:href=""
-         result="result2"
-         id="feImage4958-6-1-8-0" />
       <feBlend
          result="result4"
          in2="result1"
@@ -1872,7 +1722,6 @@
     </filter>
     <filter
        style="color-interpolation-filters:sRGB"
-       inkscape:label="Drop Shadow"
        id="filter9891-2"
        x="-0.034394499"
        y="-0.068817198"
@@ -1907,9 +1756,6 @@
          id="feComposite9889-9" />
     </filter>
     <filter
-       inkscape:label="Fill Background"
-       inkscape:menu="Fill and Transparency"
-       inkscape:menu-tooltip="Adds a colorizable opaque background"
        style="color-interpolation-filters:sRGB"
        id="filter4968-9-6-4-4-3"
        x="0"
@@ -1921,10 +1767,6 @@
          flood-color="rgb(255,255,255)"
          flood-opacity="1"
          id="feFlood4956-2-3-8-8-5" />
-      <feImage
-         xlink:href=""
-         result="result2"
-         id="feImage4958-6-1-8-0-1" />
       <feBlend
          result="result4"
          in2="result1"
@@ -1942,9 +1784,6 @@
       </feMerge>
     </filter>
     <filter
-       inkscape:label="Fill Background"
-       inkscape:menu="Fill and Transparency"
-       inkscape:menu-tooltip="Adds a colorizable opaque background"
        style="color-interpolation-filters:sRGB"
        id="filter4968-4"
        x="-0.013402433"
@@ -1956,10 +1795,6 @@
          flood-color="rgb(255,255,255)"
          flood-opacity="1"
          id="feFlood4956-22" />
-      <feImage
-         xlink:href=""
-         result="result2"
-         id="feImage4958-64" />
       <feBlend
          result="result4"
          in2="result1"
@@ -1978,7 +1813,6 @@
     </filter>
     <filter
        style="color-interpolation-filters:sRGB"
-       inkscape:label="Drop Shadow"
        id="filter9105-4-8"
        x="-0.032570615"
        y="-0.069020145"
@@ -2013,9 +1847,6 @@
          id="feComposite9103-0-3" />
     </filter>
     <filter
-       inkscape:label="Fill Background"
-       inkscape:menu="Fill and Transparency"
-       inkscape:menu-tooltip="Adds a colorizable opaque background"
        style="color-interpolation-filters:sRGB"
        id="filter4968-9-6-0"
        x="0"
@@ -2027,10 +1858,6 @@
          flood-color="rgb(255,255,255)"
          flood-opacity="1"
          id="feFlood4956-2-3-4" />
-      <feImage
-         xlink:href=""
-         result="result2"
-         id="feImage4958-6-1-7" />
       <feBlend
          result="result4"
          in2="result1"
@@ -2049,7 +1876,6 @@
     </filter>
     <filter
        style="color-interpolation-filters:sRGB"
-       inkscape:label="Drop Shadow"
        id="filter8030-7-39-2"
        x="-0.036574129"
        y="-0.061627861"
@@ -2085,7 +1911,6 @@
     </filter>
     <filter
        style="color-interpolation-filters:sRGB"
-       inkscape:label="Drop Shadow"
        id="filter9891-7"
        x="-0.034394499"
        y="-0.068817198"
@@ -2121,7 +1946,6 @@
     </filter>
     <filter
        style="color-interpolation-filters:sRGB"
-       inkscape:label="Drop Shadow"
        id="filter9891-7-2"
        x="-0.034394499"
        y="-0.068817198"
@@ -2157,7 +1981,6 @@
     </filter>
     <filter
        style="color-interpolation-filters:sRGB"
-       inkscape:label="Drop Shadow"
        id="filter9891-7-1"
        x="-0.034394499"
        y="-0.068817198"
@@ -2193,7 +2016,6 @@
     </filter>
     <filter
        style="color-interpolation-filters:sRGB"
-       inkscape:label="Drop Shadow"
        id="filter9891-2-2"
        x="-0.031166788"
        y="-0.069425936"
@@ -2228,9 +2050,6 @@
          id="feComposite9889-9-4" />
     </filter>
     <filter
-       inkscape:label="Fill Background"
-       inkscape:menu="Fill and Transparency"
-       inkscape:menu-tooltip="Adds a colorizable opaque background"
        style="color-interpolation-filters:sRGB"
        id="filter4968-9-6-4-4-8"
        x="0"
@@ -2242,10 +2061,6 @@
          flood-color="rgb(255,255,255)"
          flood-opacity="1"
          id="feFlood4956-2-3-8-8-1" />
-      <feImage
-         xlink:href=""
-         result="result2"
-         id="feImage4958-6-1-8-0-2" />
       <feBlend
          result="result4"
          in2="result1"
@@ -2263,9 +2078,6 @@
       </feMerge>
     </filter>
     <filter
-       inkscape:label="Fill Background"
-       inkscape:menu="Fill and Transparency"
-       inkscape:menu-tooltip="Adds a colorizable opaque background"
        style="color-interpolation-filters:sRGB"
        id="filter4968-3-3"
        x="0"
@@ -2277,10 +2089,6 @@
          flood-color="rgb(255,255,255)"
          flood-opacity="1"
          id="feFlood4956-6-6" />
-      <feImage
-         xlink:href=""
-         result="result2"
-         id="feImage4958-1-7" />
       <feBlend
          result="result4"
          in2="result1"
@@ -2298,9 +2106,6 @@
       </feMerge>
     </filter>
     <filter
-       inkscape:label="Fill Background"
-       inkscape:menu="Fill and Transparency"
-       inkscape:menu-tooltip="Adds a colorizable opaque background"
        style="color-interpolation-filters:sRGB"
        id="filter4968-3-3-3"
        x="0"
@@ -2312,10 +2117,6 @@
          flood-color="rgb(255,255,255)"
          flood-opacity="1"
          id="feFlood4956-6-6-7" />
-      <feImage
-         xlink:href=""
-         result="result2"
-         id="feImage4958-1-7-5" />
       <feBlend
          result="result4"
          in2="result1"
@@ -2334,7 +2135,6 @@
     </filter>
     <filter
        style="color-interpolation-filters:sRGB"
-       inkscape:label="Drop Shadow"
        id="filter9105-4-3"
        x="-0.032570615"
        y="-0.069020141"
@@ -2370,7 +2170,6 @@
     </filter>
     <filter
        style="color-interpolation-filters:sRGB"
-       inkscape:label="Drop Shadow"
        id="filter9105-4-8-9"
        x="-0.032570615"
        y="-0.069020141"
@@ -2406,7 +2205,6 @@
     </filter>
     <filter
        style="color-interpolation-filters:sRGB"
-       inkscape:label="Drop Shadow"
        id="filter9105-4-8-3"
        x="-0.032570615"
        y="-0.069020141"
@@ -2441,9 +2239,6 @@
          id="feComposite9103-0-3-5" />
     </filter>
     <filter
-       inkscape:label="Fill Background"
-       inkscape:menu="Fill and Transparency"
-       inkscape:menu-tooltip="Adds a colorizable opaque background"
        style="color-interpolation-filters:sRGB"
        id="filter4968-9-6-3"
        x="0"
@@ -2455,10 +2250,6 @@
          flood-color="rgb(255,255,255)"
          flood-opacity="1"
          id="feFlood4956-2-3-61" />
-      <feImage
-         xlink:href=""
-         result="result2"
-         id="feImage4958-6-1-0" />
       <feBlend
          result="result4"
          in2="result1"
@@ -2476,9 +2267,6 @@
       </feMerge>
     </filter>
     <filter
-       inkscape:label="Fill Background"
-       inkscape:menu="Fill and Transparency"
-       inkscape:menu-tooltip="Adds a colorizable opaque background"
        style="color-interpolation-filters:sRGB"
        id="filter4968-9-6-9-1"
        x="0"
@@ -2490,10 +2278,6 @@
          flood-color="rgb(255,255,255)"
          flood-opacity="1"
          id="feFlood4956-2-3-6-5" />
-      <feImage
-         xlink:href=""
-         result="result2"
-         id="feImage4958-6-1-4-5" />
       <feBlend
          result="result4"
          in2="result1"
@@ -2511,9 +2295,6 @@
       </feMerge>
     </filter>
     <filter
-       inkscape:label="Fill Background"
-       inkscape:menu="Fill and Transparency"
-       inkscape:menu-tooltip="Adds a colorizable opaque background"
        style="color-interpolation-filters:sRGB"
        id="filter4968-9-6-4-6"
        x="0"
@@ -2525,10 +2306,6 @@
          flood-color="rgb(255,255,255)"
          flood-opacity="1"
          id="feFlood4956-2-3-8-9" />
-      <feImage
-         xlink:href=""
-         result="result2"
-         id="feImage4958-6-1-8-3" />
       <feBlend
          result="result4"
          in2="result1"
@@ -2546,9 +2323,6 @@
       </feMerge>
     </filter>
     <filter
-       inkscape:label="Fill Background"
-       inkscape:menu="Fill and Transparency"
-       inkscape:menu-tooltip="Adds a colorizable opaque background"
        style="color-interpolation-filters:sRGB"
        id="filter4968-9-6-0-5"
        x="0"
@@ -2560,10 +2334,6 @@
          flood-color="rgb(255,255,255)"
          flood-opacity="1"
          id="feFlood4956-2-3-4-4" />
-      <feImage
-         xlink:href=""
-         result="result2"
-         id="feImage4958-6-1-7-7" />
       <feBlend
          result="result4"
          in2="result1"
@@ -2581,9 +2351,6 @@
       </feMerge>
     </filter>
     <filter
-       inkscape:label="Fill Background"
-       inkscape:menu="Fill and Transparency"
-       inkscape:menu-tooltip="Adds a colorizable opaque background"
        style="color-interpolation-filters:sRGB"
        id="filter4968-9-6-0-2"
        x="0"
@@ -2595,10 +2362,6 @@
          flood-color="rgb(255,255,255)"
          flood-opacity="1"
          id="feFlood4956-2-3-4-9" />
-      <feImage
-         xlink:href=""
-         result="result2"
-         id="feImage4958-6-1-7-1" />
       <feBlend
          result="result4"
          in2="result1"
@@ -2616,9 +2379,6 @@
       </feMerge>
     </filter>
     <filter
-       inkscape:label="Fill Background"
-       inkscape:menu="Fill and Transparency"
-       inkscape:menu-tooltip="Adds a colorizable opaque background"
        style="color-interpolation-filters:sRGB"
        id="filter4968-9-6-0-23"
        x="0"
@@ -2630,10 +2390,6 @@
          flood-color="rgb(255,255,255)"
          flood-opacity="1"
          id="feFlood4956-2-3-4-7" />
-      <feImage
-         xlink:href=""
-         result="result2"
-         id="feImage4958-6-1-7-5" />
       <feBlend
          result="result4"
          in2="result1"
@@ -2665,8 +2421,7 @@
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.897784;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
        d="m 211.7085,143.67049 c -6.88357,-33.55866 -43.12073,-16.06666 -40.10916,-41.58096"
-       id="path2165-0-4-8"
-       sodipodi:nodetypes="cc" />
+       id="path2165-0-4-8" />
     <path
        style="display:inline;fill:#abd7e6;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;filter:url(#filter8030-7-0)"
        d="m 463.17683,605.17686 c 0,25.98828 -35.5,47.0586 -79.28906,47.0586 -43.79298,0 -79.29298,-21.07032 -79.29298,-47.0586 0,-25.98828 35.5,-47.05468 79.29298,-47.05468 43.78906,0 79.28906,21.0664 79.28906,47.05468"
@@ -2675,8 +2430,7 @@
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.569;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
        d="m 1234.4413,490.62833 c -71.8835,-17.5969 -57.3344,115.02674 -123.2418,98.89277"
-       id="path2165-0-1-0-1"
-       sodipodi:nodetypes="cc" />
+       id="path2165-0-1-0-1" />
     <path
        style="fill:#abd7e6;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:2.13287;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;filter:url(#filter10677)"
        d="m 375.02339,187.57627 c 0,27.68597 -51.88193,50.12888 -115.88582,50.12888 -63.99944,0 -115.8814,-22.44291 -115.8814,-50.12888 0,-27.68597 51.88196,-50.12888 115.8814,-50.12888 64.00389,0 115.88582,22.44291 115.88582,50.12888"
@@ -2703,10 +2457,9 @@
        id="path1877-1"
        transform="matrix(1.1444896,0,0,0.92791498,-42.041902,-53.445877)" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
+       style="fill:none;stroke:#000000;stroke-width:4.099;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none"
        d="m 567.48211,279.90772 c -153.82032,0 -85.18605,99.22247 -229.27199,99.22247"
-       id="path1913"
-       sodipodi:nodetypes="cc" />
+       id="path1913" />
     <path
        style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
        d="m 562.91096,279.4464 -10,-5 2.5,5 -2.5,5 z m 0,0"
@@ -2714,8 +2467,7 @@
     <path
        style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none"
        d="m 400.83593,284.99814 c 53.67485,32.67313 92.91736,54.0744 101.94922,0 v 17.5 H 400.83593 Z"
-       id="path1917"
-       sodipodi:nodetypes="ccccc" />
+       id="path1917" />
     <path
        style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
        d="m 694.39063,314.42393 c -53.6133,0 -27.58594,81.82812 -71.46486,81.82812"
@@ -2739,15 +2491,13 @@
       <path
          style="fill:#abd7e6;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.66167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
          d="m 123.09458,381.66005 c 0,22.52803 -38.700004,33.62189 -86.442067,33.62189 -47.738752,0 -86.438768,-11.09386 -86.438768,-33.62189 0,-22.52804 38.700016,-40.78982 86.438768,-40.78982 47.742063,0 86.442067,18.26178 86.442067,40.78982"
-         id="path1741-3"
-         sodipodi:nodetypes="csssc" />
+         id="path1741-3" />
       <text
          xml:space="preserve"
          style="font-style:normal;font-weight:normal;font-size:24px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
          x="-21.891626"
          y="387.63605"
          id="text3842"><tspan
-           sodipodi:role="line"
            id="tspan3840"
            style="font-size:24px;stroke-width:0.75"
            x="-21.891626"
@@ -2756,13 +2506,11 @@
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
        d="m 152.44698,209.18523 c -70.957262,17.76264 -42.03876,52.15275 -92.539032,49.6475"
-       id="path2165-0-0"
-       sodipodi:nodetypes="cc" />
+       id="path2165-0-0" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.897784;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
        d="m 146.57358,192.4501 c -58.886521,5.76882 -23.4457,-31.57791 -95.19577,-31.51438"
-       id="path2165-0-4"
-       sodipodi:nodetypes="cc" />
+       id="path2165-0-4" />
     <path
        style="display:inline;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
        d="m 45.77206,159.97297 10,-5 -2.5,5 2.5,5 z m 0,0"
@@ -2785,7 +2533,6 @@
          x="-67.859467"
          y="242.69775"
          id="text3788"><tspan
-           sodipodi:role="line"
            id="tspan3786"
            style="font-size:24px;stroke-width:0.75"
            x="-67.859467"
@@ -2805,17 +2552,15 @@
          x="-67.859467"
          y="242.69775"
          id="text3788-4"><tspan
-           sodipodi:role="line"
            id="tspan3786-0"
            style="font-size:24px;stroke-width:0.75"
            x="-67.859467"
            y="242.69775">AbstractInformationElement</tspan></text>
     </g>
     <path
-       style="display:inline;fill:#c2f5c2;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.66167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;filter:url(#filter9105)"
+       style="display:inline;fill:#c2f5c2;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:3.53260919;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;filter:url(#filter9105);stroke-dasharray:none"
        d="m 373.55335,443.72074 c 0,22.52803 -33.96661,40.79267 -81.70868,40.79267 -47.73875,0 -91.17215,-18.26464 -91.17215,-40.79267 0,-22.52804 38.70001,-40.78982 86.43876,-40.78982 47.74207,0 86.44207,18.26178 86.44207,40.78982"
        id="path1741-3-68"
-       sodipodi:nodetypes="csssc"
        transform="matrix(1.4230341,0,0,0.94612679,-184.64509,-44.497847)" />
     <text
        xml:space="preserve"
@@ -2823,7 +2568,6 @@
        x="154.06714"
        y="194.15121"
        id="text3846"><tspan
-         sodipodi:role="line"
          id="tspan3844"
          style="font-size:22px;stroke-width:0.75"
          x="154.06714"
@@ -2834,12 +2578,11 @@
        x="117.69701"
        y="384.64835"
        id="text3846-2"><tspan
-         sodipodi:role="line"
          id="tspan13371"
          x="117.69701"
          y="384.64835">AmendmentMethod</tspan></text>
     <path
-       style="display:inline;fill:#abd7e6;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;filter:url(#filter8030-6)"
+       style="display:inline;fill:#abd7e6;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:3.15391374;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;filter:url(#filter8030-6);stroke-dasharray:none"
        d="m 463.17683,605.17686 c 0,25.98828 -35.5,47.0586 -79.28906,47.0586 -43.79298,0 -79.29298,-21.07032 -79.29298,-47.0586 0,-25.98828 35.5,-47.05468 79.29298,-47.05468 43.78906,0 79.28906,21.0664 79.28906,47.05468"
        id="path1877-1-4"
        transform="matrix(1.6996649,0,0,0.99378608,47.103238,-336.06271)" />
@@ -2849,7 +2592,6 @@
        x="594.73126"
        y="276.62836"
        id="text3846-1"><tspan
-         sodipodi:role="line"
          id="tspan20765"
          x="594.73126"
          y="276.62836">Amendment</tspan></text>
@@ -2859,7 +2601,6 @@
        x="343.69345"
        y="513.953"
        id="text3846-5"><tspan
-         sodipodi:role="line"
          id="tspan3844-4"
          style="font-size:22px;stroke-width:0.75"
          x="343.69345"
@@ -2870,7 +2611,6 @@
        x="462.98172"
        y="401.79465"
        id="text3846-5-6"><tspan
-         sodipodi:role="line"
          id="tspan3844-4-9"
          style="font-size:22px;stroke-width:0.75"
          x="462.98172"
@@ -2886,7 +2626,6 @@
        x="622.69983"
        y="514.67505"
        id="text3846-5-7"><tspan
-         sodipodi:role="line"
          id="tspan3844-4-6"
          style="font-size:22px;stroke-width:0.75"
          x="622.69983"
@@ -2895,27 +2634,21 @@
        xml:space="preserve"
        transform="scale(0.75)"
        id="text3848"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect3850);display:inline;fill:#000000;fill-opacity:1;stroke:none"
-       inkscape:label="text3848" />
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect3850);display:inline;fill:#000000;fill-opacity:1;stroke:none" />
     <path
        style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.19351;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#EmptyTriangleIn)"
        d="M 493.22494,436.00266 468.30908,471.4622"
-       id="path5831"
-       inkscape:connector-type="polyline"
-       inkscape:connector-curvature="0" />
+       id="path5831" />
     <path
        style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.35447;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker7948)"
        d="m 592.86835,423.59595 30.47979,41.51014"
-       id="path5829"
-       inkscape:connector-type="polyline"
-       inkscape:connector-curvature="0" />
+       id="path5829" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:20px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75;filter:url(#filter4968)"
        x="91.580238"
        y="239.39421"
        id="text4277"><tspan
-         sodipodi:role="line"
          id="tspan4275"
          style="font-size:20px;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.75;stroke-opacity:1"
          x="91.580238"
@@ -2926,7 +2659,6 @@
        x="394.54974"
        y="325.51984"
        id="text4277-04"><tspan
-         sodipodi:role="line"
          id="tspan30624"
          x="394.54974"
          y="325.51984">forAmendment</tspan></text>
@@ -2936,41 +2668,18 @@
        x="89.093407"
        y="182.04736"
        id="text4277-0"><tspan
-         sodipodi:role="line"
          id="tspan4275-6"
          style="font-size:20px;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.75;stroke-opacity:1"
          x="89.093407"
          y="182.04736">is a</tspan></text>
     <path
-       sodipodi:type="star"
        style="fill:#d577dc;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
        id="path8138"
-       inkscape:flatsided="true"
-       sodipodi:sides="4"
-       sodipodi:cx="575.21423"
-       sodipodi:cy="800.34045"
-       sodipodi:r1="44.729671"
-       sodipodi:r2="22.364836"
-       sodipodi:arg1="1.5250861"
-       sodipodi:arg2="2.3104843"
-       inkscape:rounded="0"
-       inkscape:randomized="0"
        d="m 577.25812,845.0234 -46.72684,-42.63905 42.63906,-46.72685 46.72684,42.63906 z"
        transform="matrix(0.23207467,0,0,0.31935265,190.76651,251.05773)" />
     <path
-       sodipodi:type="star"
        style="display:inline;fill:#d577dc;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
        id="path8138-5"
-       inkscape:flatsided="true"
-       sodipodi:sides="4"
-       sodipodi:cx="575.21423"
-       sodipodi:cy="800.34045"
-       sodipodi:r1="44.729671"
-       sodipodi:r2="22.364836"
-       sodipodi:arg1="1.5250861"
-       sodipodi:arg2="2.3104843"
-       inkscape:rounded="0"
-       inkscape:randomized="0"
        d="m 577.25812,845.0234 -46.72684,-42.63905 42.63906,-46.72685 46.72684,42.63906 z"
        transform="matrix(0.23207467,0,0,0.31935265,477.98794,252.81819)" />
     <text
@@ -2979,7 +2688,6 @@
        x="581.3551"
        y="351.22903"
        id="text4277-04-1"><tspan
-         sodipodi:role="line"
          id="tspan20836-5"
          x="581.3551"
          y="351.22903">hasResourceType</tspan></text>
@@ -2989,7 +2697,6 @@
        x="372.1116"
        y="228.50153"
        id="text4277-04-1-5"><tspan
-         sodipodi:role="line"
          id="tspan20836-5-6"
          x="372.1116"
          y="228.50153">hasInformationElement</tspan></text>
@@ -3009,7 +2716,6 @@
        x="911.13495"
        y="496.55576"
        id="text3846-5-6-3"><tspan
-         sodipodi:role="line"
          id="tspan3844-4-9-8"
          style="font-size:22px;stroke-width:0.75"
          x="911.13495"
@@ -3020,7 +2726,6 @@
        x="1270.0422"
        y="500.89005"
        id="text3846-5-6-5"><tspan
-         sodipodi:role="line"
          id="tspan3844-4-9-6"
          style="font-size:22px;stroke-width:0.75"
          x="1270.0422"
@@ -3028,13 +2733,11 @@
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.569;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
        d="m 1231.7993,489.14722 c -71.8835,-17.5969 -53.7441,21.39887 -119.6515,5.2649"
-       id="path2165-0-1"
-       sodipodi:nodetypes="cc" />
+       id="path2165-0-1" />
     <path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:2.50762;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:4.099;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none"
        d="M 881.1313,586.34581 C 813.253,565.45315 825.32099,307.9342 766.20783,307.9342"
-       id="path2165-0-15"
-       sodipodi:nodetypes="cc" />
+       id="path2165-0-15" />
     <path
        style="display:inline;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
        d="m 1243.4397,490.08119 -10,-5 2.5,5 -2.5,5 z m 0,0"
@@ -3054,20 +2757,17 @@
        x="728.2406"
        y="434.33826"
        id="text4277-04-1-59"><tspan
-         sodipodi:role="line"
          id="tspan19435">includedInPolicy</tspan></text>
     <path
        id="rect32199"
        style="fill:#fcfcdf;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:10"
-       d="M 995.03579,13.142498 1359.1895,11.398134 V 136.7678 H 970.60467 V 33.944881 Z"
-       sodipodi:nodetypes="cccccc" />
+       d="M 995.03579,13.142498 1359.1895,11.398134 V 136.7678 H 970.60467 V 33.944881 Z" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
        x="1017.868"
        y="47.652576"
        id="text32203"><tspan
-         sodipodi:role="line"
          id="tspan33534"
          x="1017.868"
          y="47.652576">Expressing</tspan></text>
@@ -3077,7 +2777,6 @@
        x="1017.868"
        y="82.785843"
        id="text32203-0"><tspan
-         sodipodi:role="line"
          id="tspan33534-0"
          x="1017.868"
          y="82.785843">Data Quality Needs:</tspan></text>
@@ -3087,12 +2786,11 @@
        x="1020.7781"
        y="116.62403"
        id="text32203-0-3"><tspan
-         sodipodi:role="line"
          id="tspan33534-0-9"
          x="1020.7781"
          y="116.62403">Measures</tspan></text>
     <path
-       style="display:inline;fill:#abd7e6;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:0.535978;filter:url(#filter8030-7-3-8)"
+       style="display:inline;fill:#abd7e6;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:3.51363269;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:0.535978;filter:url(#filter8030-7-3-8);stroke-dasharray:none"
        d="m 463.17683,605.17686 c 0,25.98828 -35.5,47.0586 -79.28906,47.0586 -43.79298,0 -79.29298,-21.07032 -79.29298,-47.0586 0,-25.98828 35.5,-47.05468 79.29298,-47.05468 43.78906,0 79.28906,21.0664 79.28906,47.05468"
        id="path1877-1-2-9-6"
        transform="matrix(1.4712742,0,0,0.92501654,434.32157,35.680515)" />
@@ -3104,13 +2802,11 @@
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.569;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
        d="m 1239.4017,491.53092 c -71.8835,-17.5969 -51.7486,210.7155 -131.946,211.74206"
-       id="path2165-0-1-0"
-       sodipodi:nodetypes="cc" />
+       id="path2165-0-1-0" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.569;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
        d="M 1234.4238,488.92558 C 1180.4942,466.16307 1129.4255,397.94909 1063.5181,381.81512"
-       id="path2165-0-1-0-8"
-       sodipodi:nodetypes="cc" />
+       id="path2165-0-1-0-8" />
     <path
        style="display:inline;fill:#abd7e6;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:0.511822;filter:url(#filter8030-7-3-8-5)"
        d="m 463.17683,605.17686 c 0,25.98828 -35.5,47.0586 -79.28906,47.0586 -43.79298,0 -79.29298,-21.07032 -79.29298,-47.0586 0,-25.98828 35.5,-47.05468 79.29298,-47.05468 43.78906,0 79.28906,21.0664 79.28906,47.05468"
@@ -3122,7 +2818,6 @@
        x="938.37653"
        y="711.0014"
        id="text3846-5-6-3-6"><tspan
-         sodipodi:role="line"
          id="tspan3844-4-9-8-2"
          style="font-size:22px;stroke-width:0.75"
          x="938.37653"
@@ -3134,7 +2829,6 @@
        y="623.25275"
        id="text3846-5-6-3-8"
        transform="scale(1.0303381,0.97055519)"><tspan
-         sodipodi:role="line"
          id="tspan3844-4-9-8-4"
          style="font-size:22.6674px;stroke-width:0.772754"
          x="865.97736"
@@ -3145,7 +2839,6 @@
        x="885.17419"
        y="388.83188"
        id="text3846-5-6-3-7"><tspan
-         sodipodi:role="line"
          id="tspan3844-4-9-8-24"
          style="font-size:22px;stroke-width:0.75"
          x="885.17419"
@@ -3156,12 +2849,11 @@
        x="1127.6842"
        y="530.33826"
        id="text4277-04-1-59-3"><tspan
-         sodipodi:role="line"
          id="tspan20836-5-4-1"
          x="1127.6842"
          y="530.33826">hasUseCase</tspan></text>
     <rect
-       style="display:inline;fill:#e3dedb;fill-opacity:1;stroke:#000000;stroke-width:3.53171;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       style="display:inline;fill:#e3dedb;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
        id="rect27789-6"
        width="436.1235"
        height="60.605366"
@@ -3173,7 +2865,6 @@
        x="865.00696"
        y="211.82564"
        id="text57772"><tspan
-         sodipodi:role="line"
          id="tspan57810"
          x="865.00696"
          y="211.82564">rdfs:label</tspan></text>
@@ -3183,7 +2874,6 @@
        x="866.21729"
        y="230.4931"
        id="text57772-1"><tspan
-         sodipodi:role="line"
          id="tspan31956"
          x="866.21729"
          y="230.4931">(e.g AMENDMENT_DAY_STANDARDIZED)</tspan></text>
@@ -3193,20 +2883,17 @@
        x="641.53265"
        y="73.836845"
        id="text3846-10"><tspan
-         sodipodi:role="line"
          id="tspan57839"
          x="641.53265"
          y="73.836845">DataQualityDimension</tspan></text>
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
        d="m 706.8352,219.2192 c -20.53845,-37.92301 61.88969,-49.78318 45.72932,-103.89145"
-       id="path1789-0-4"
-       sodipodi:nodetypes="cc" />
+       id="path1789-0-4" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
        d="m 764.95359,228.30598 c 11.5092,-31.11351 30.78948,-30.71225 93.44677,-28.89498"
-       id="path1789-0-4-2"
-       sodipodi:nodetypes="cc" />
+       id="path1789-0-4-2" />
     <path
        style="display:inline;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
        d="m 754.49165,112.58419 -5,10 5,-2.5 5,2.5 z m 0,0"
@@ -3217,7 +2904,6 @@
        x="637.37677"
        y="160.32637"
        id="text4277-04-2-64-1-4"><tspan
-         sodipodi:role="line"
          id="tspan63509"
          x="637.37677"
          y="160.32637">hasDataQualityDimension</tspan></text>
@@ -3227,7 +2913,6 @@
        x="176.4005"
        y="128.70108"
        id="text4277-9"><tspan
-         sodipodi:role="line"
          id="tspan4275-2"
          style="font-size:20px;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.75;stroke-opacity:1"
          x="176.4005"
@@ -3252,7 +2937,6 @@
        x="436.19507"
        y="657.25183"
        id="text3846-2-4-0-8"><tspan
-         sodipodi:role="line"
          id="tspan64896-6"
          x="436.19507"
          y="657.25183">Class, Data Quality Needs</tspan></text>
@@ -3262,7 +2946,6 @@
        x="434.96841"
        y="711.01575"
        id="text3846-2-4-0-8-8"><tspan
-         sodipodi:role="line"
          id="tspan64896-6-3"
          x="434.96841"
          y="711.01575">Class, Data Quality Solutions</tspan></text>
@@ -3272,7 +2955,6 @@
        x="433.78384"
        y="764.93176"
        id="text3846-2-4-0-8-8-5"><tspan
-         sodipodi:role="line"
          id="tspan66148"
          x="433.78384"
          y="764.93176">Individual (Class instance)</tspan></text>
@@ -3284,19 +2966,8 @@
        x="332.68301"
        y="790.9021" />
     <path
-       sodipodi:type="star"
        style="display:inline;fill:#d577dc;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
        id="path8138-2"
-       inkscape:flatsided="true"
-       sodipodi:sides="4"
-       sodipodi:cx="575.21423"
-       sodipodi:cy="800.34045"
-       sodipodi:r1="44.729671"
-       sodipodi:r2="22.364836"
-       sodipodi:arg1="1.5250861"
-       sodipodi:arg2="2.3104843"
-       inkscape:rounded="0"
-       inkscape:randomized="0"
        d="m 577.25812,845.0234 -46.72684,-42.63905 42.63906,-46.72685 46.72684,42.63906 z"
        transform="matrix(0.23207467,0,0,0.31935265,218.13831,504.44383)" />
     <text
@@ -3305,7 +2976,6 @@
        x="436.8855"
        y="809.0282"
        id="text3846-2-4-0-8-8-5-4"><tspan
-         sodipodi:role="line"
          id="tspan66146"
          x="436.8855"
          y="809.0282">Data Value</tspan></text>
@@ -3322,7 +2992,6 @@
        x="717.37091"
        y="810.1673"
        id="text3846-2-4-0-8-8-5-4-4"><tspan
-         sodipodi:role="line"
          id="tspan66199"
          x="717.37091"
          y="810.1673">Annotation</tspan></text>
@@ -3336,35 +3005,32 @@
     <g
        id="g3862-3"
        transform="translate(501.7331,-112.93258)"
-       style="display:inline;filter:url(#filter9891-2-2)">
+       style="display:inline;filter:url(#filter9891-2-2);stroke-width:4.099;stroke-dasharray:none">
       <path
-         style="fill:#abd7e6;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.69941;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
+         style="fill:#abd7e6;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:4.099;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none"
          d="m 80.070868,233.69694 c 0,22.4722 -40.578676,40.68872 -90.638352,40.68872 -50.056206,0 -90.634896,-18.21652 -90.634896,-40.68872 0,-22.47221 40.57869,-40.68872 90.634896,-40.68872 50.059676,0 90.638352,18.21651 90.638352,40.68872"
          id="path1741-3-6-60" />
       <text
          xml:space="preserve"
-         style="font-style:normal;font-weight:normal;font-size:24px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
+         style="font-style:normal;font-weight:normal;font-size:24px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:4.099;stroke-dasharray:none"
          x="-86.475754"
          y="242.70461"
          id="text3788-5"><tspan
-           sodipodi:role="line"
            id="tspan3786-02"
-           style="font-size:24px;stroke-width:0.75"
+           style="font-size:24px;stroke-width:4.099;stroke-dasharray:none"
            x="-86.475754"
            y="242.70461">Enhancement</tspan></text>
     </g>
     <path
-       style="display:inline;fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
+       style="display:inline;fill:none;stroke:#000000;stroke-width:4.099;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none"
        d="M 641.12004,222.84446 C 620.58159,184.92145 560.50906,212.19193 544.34869,158.08367"
-       id="path1789-0"
-       sodipodi:nodetypes="cc" />
+       id="path1789-0" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75;filter:url(#filter4968-9-6-4-4-8)"
        x="512.64294"
        y="194.52919"
        id="text4277-04-2-64-1"><tspan
-         sodipodi:role="line"
          id="tspan58470"
          x="512.64294"
          y="194.52919">hasEnhancement</tspan></text>
@@ -3378,7 +3044,6 @@
        x="464.16818"
        y="455.6575"
        id="text4277-0-2"><tspan
-         sodipodi:role="line"
          id="tspan3965"
          x="464.16818"
          y="455.6575">type</tspan></text>
@@ -3388,7 +3053,6 @@
        x="592.50153"
        y="449.95969"
        id="text4277-0-2-9"><tspan
-         sodipodi:role="line"
          id="tspan3965-7"
          x="592.50153"
          y="449.95969">type</tspan></text>
@@ -3396,19 +3060,16 @@
        style="display:inline;fill:#c2f5c2;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.66167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;filter:url(#filter9105-4-3)"
        d="m 373.55335,443.72074 c 0,22.52803 -33.96661,40.79267 -81.70868,40.79267 -47.73875,0 -91.17215,-18.26464 -91.17215,-40.79267 0,-22.52804 38.70001,-40.78982 86.43876,-40.78982 47.74207,0 86.44207,18.26178 86.44207,40.78982"
        id="path1741-3-68-4"
-       sodipodi:nodetypes="csssc"
        transform="matrix(0.99963391,0,0,1.0780207,-210.97619,143.38671)" />
     <path
        style="display:inline;fill:#c2f5c2;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.66167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;filter:url(#filter9105-4-8-9)"
        d="m 373.55335,443.72074 c 0,22.52803 -33.96661,40.79267 -81.70868,40.79267 -47.73875,0 -91.17215,-18.26464 -91.17215,-40.79267 0,-22.52804 38.70001,-40.78982 86.43876,-40.78982 47.74207,0 86.44207,18.26178 86.44207,40.78982"
        id="path1741-3-68-4-3"
-       sodipodi:nodetypes="csssc"
        transform="matrix(0.99963391,0,0,1.0780207,-379.72707,-23.98093)" />
     <path
        style="display:inline;fill:#c2f5c2;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.66167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;filter:url(#filter9105-4-8-3)"
        d="m 373.55335,443.72074 c 0,22.52803 -33.96661,40.79267 -81.70868,40.79267 -47.73875,0 -91.17215,-18.26464 -91.17215,-40.79267 0,-22.52804 38.70001,-40.78982 86.43876,-40.78982 47.74207,0 86.44207,18.26178 86.44207,40.78982"
        id="path1741-3-68-4-3-6"
-       sodipodi:nodetypes="csssc"
        transform="matrix(0.99963391,0,0,1.0780207,-415.40573,110.50485)" />
     <text
        xml:space="preserve"
@@ -3416,22 +3077,19 @@
        x="15.367844"
        y="627.68811"
        id="text3846-2-4"><tspan
-         sodipodi:role="line"
          id="tspan25396"
          x="15.367844"
          y="627.68811">Specification</tspan></text>
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.89713;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
        d="m 131.90994,583.97955 c 12.3267,-60.10901 79.60913,-118.13061 73.54679,-173.50095"
-       id="path2165-0-47"
-       sodipodi:nodetypes="cc" />
+       id="path2165-0-47" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75;filter:url(#filter4968-9-6-3)"
        x="98.540939"
        y="505.35828"
        id="text4277-04-2"><tspan
-         sodipodi:role="line"
          id="tspan20836-1"
          x="98.540939"
          y="505.35828">hasSpecification</tspan></text>
@@ -3479,20 +3137,17 @@
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
        d="m 89.93844,668.613 c -5.74273,29.57449 -23.84389,68.97967 -59.50575,73.92693"
-       id="path2165-0-18"
-       sodipodi:nodetypes="cc" />
+       id="path2165-0-18" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
        d="M 106.08054,669.49335 C 104.97641,746.14883 65.77969,812.19503 30.11782,817.14229"
-       id="path2165-0-18-5"
-       sodipodi:nodetypes="cc" />
+       id="path2165-0-18-5" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75;filter:url(#filter4968-9-6-9-1)"
        x="56.805077"
        y="772.59485"
        id="text4277-04-2-6"><tspan
-         sodipodi:role="line"
          id="tspan20836-1-0"
          x="56.805077"
          y="772.59485">hasAuthoritiesDefaults</tspan></text>
@@ -3502,7 +3157,6 @@
        x="48.849113"
        y="696.19507"
        id="text4277-04-2-64"><tspan
-         sodipodi:role="line"
          id="tspan20836-1-3"
          x="48.849113"
          y="696.19507">hasExpectedResponse</tspan></text>
@@ -3513,20 +3167,17 @@
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.89713;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
        d="M 13.57706,589.27042 C -18.19301,567.83688 10.86397,554.69447 -40.71275,570.24948"
-       id="path2165-0-47-8"
-       sodipodi:nodetypes="cc" />
+       id="path2165-0-47-8" />
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.89713;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
        d="m -92.56437,545.09747 c -7.53676,-6.60043 10.579,-33.14454 5.87789,-29.33591 -7.86748,6.37388 26.60242,10.3485 26.47975,-8.67175"
-       id="path2165-0-47-8-9"
-       sodipodi:nodetypes="csc" />
+       id="path2165-0-47-8-9" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75;filter:url(#filter4968-9-6-0-5)"
        x="-30.182114"
        y="564.06549"
        id="text4277-04-2-68"><tspan
-         sodipodi:role="line"
          id="tspan1193"
          x="-30.182114"
          y="564.06549">hasArgument</tspan></text>
@@ -3536,7 +3187,6 @@
        x="-119.62024"
        y="530.64886"
        id="text4277-04-2-68-3"><tspan
-         sodipodi:role="line"
          id="tspan64845-6"
          x="-119.62024"
          y="530.64886">hasParameter</tspan></text>
@@ -3550,7 +3200,6 @@
        x="-146.47043"
        y="462.94653"
        id="text3846-2-4-0"><tspan
-         sodipodi:role="line"
          id="tspan64896"
          x="-146.47043"
          y="462.94653">Parameter</tspan></text>
@@ -3560,7 +3209,6 @@
        x="-180.98264"
        y="597.30493"
        id="text3846-2-4-0-0"><tspan
-         sodipodi:role="line"
          id="tspan1191"
          x="-180.98264"
          y="597.30493">Argument</tspan></text>
@@ -3571,30 +3219,26 @@
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:1.89713;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
        d="m -80.89437,674.91245 c -18.17498,-27.87386 4.28103,-19.15192 4.10746,-46.06374"
-       id="path2165-0-47-8-9-0"
-       sodipodi:nodetypes="cc" />
+       id="path2165-0-47-8-9-0" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75;filter:url(#filter4968-9-6-0-23)"
        x="-196.90836"
        y="660.28113"
        id="text4277-04-2-68-9"><tspan
-         sodipodi:role="line"
          id="tspan1944"
          x="-196.90836"
          y="660.28113">hasArgumentValue</tspan></text>
     <path
        id="rect32199-4"
        style="display:inline;fill:#fcfcdf;fill-opacity:1;stroke:#000000;stroke-width:1.3564;stroke-miterlimit:10"
-       d="M -186.27384,315.61223 59.222144,314.4221 v 85.53571 H -202.74419 v -70.15278 z"
-       sodipodi:nodetypes="cccccc" />
+       d="M -186.27384,315.61223 59.222144,314.4221 v 85.53571 H -202.74419 v -70.15278 z" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
        x="-187.00822"
        y="341.56274"
        id="text32203-09-9"><tspan
-         sodipodi:role="line"
          id="tspan65648"
          x="-187.00822"
          y="341.56274">Parameters optionally</tspan></text>
@@ -3604,7 +3248,6 @@
        x="-187.80814"
        y="365.55157"
        id="text32203-09-9-3"><tspan
-         sodipodi:role="line"
          id="tspan65677"
          x="-187.80814"
          y="365.55157">change the behavior</tspan></text>
@@ -3614,7 +3257,6 @@
        x="-186.58829"
        y="389.12415"
        id="text32203-09-9-3-7"><tspan
-         sodipodi:role="line"
          id="tspan65706"
          x="-186.58829"
          y="389.12415">of a test.</tspan></text>
