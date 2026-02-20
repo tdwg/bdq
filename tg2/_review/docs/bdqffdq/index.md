@@ -1,9 +1,9 @@
 <!--- This file is generated from templates by code, DO NOT EDIT by hand --->
 
-# Fitness for Use Framework Ontology
+# Fitness For Use Framework Ontology
 
 **Title**<br>
-Fitness for Use Framework Ontology
+Fitness For Use Framework Ontology
 
 **Date version issued**<br>
 2025-05-10
@@ -36,7 +36,7 @@ This document is a reference for the BDQ standard, describing the Fitness for Us
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 **Bibliographic citation**<br>
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Fitness for Use Framework Ontology. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqffdq/2025-05-10>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Fitness For Use Framework Ontology. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqffdq/2025-05-10>
 
 **Status**<br>
 Draft Standard for Review
@@ -63,9 +63,9 @@ Draft Standard for Review
     - [2.1.6 Identifying the Test that produced an Assertion (normative)](#216-identifying-the-test-that-produced-an-assertion-normative)
       - [2.1.6.1 Properties that should be one-to-one (normative)](#2161-properties-that-should-be-one-to-one-normative)
 
-[3. Fitness For Use Framework Summary of Mathematical Formalization (normative)](#3-fitness-for-use-framework-summary-of-mathematical-formalization-normative)
+[3 Fitness For Use Framework Summary of Mathematical Formalization (normative)](#3-fitness-for-use-framework-summary-of-mathematical-formalization-normative)
   - [3.1 Fundamental Concepts (normative)](#31-fundamental-concepts-normative)
-  - [3.2. Properties (normative)](#32-properties-normative)
+  - [3.2 Properties (normative)](#32-properties-normative)
   - [3.3 Notation (normative)](#33-notation-normative)
   - [3.4 Derived Concepts (normative)](#34-derived-concepts-normative)
     - [3.4.1 General (normative)](#341-general-normative)
@@ -139,7 +139,7 @@ Information about the Fitness for Use ontology, its usage, and its extensions ca
 
 | Description | IRI | Download URL | Note | 
 | ----------- | --- | -----------  | ---- | 
-| Owl ontology | TBD | [Biodiversity Data Quality Fitness for Use Framework (Ontology)](../../vocabulary/bdqffdq.owl) | The formal RDF/OWL representation of the vocabulary. |
+| Owl ontology | TBD | [Biodiversity Data Quality Fitness For Use Framework (Ontology)](../../vocabulary/bdqffdq.owl) | The formal RDF/OWL representation of the vocabulary. |
 
 ### 1.4 Namespace abbreviations (non-normative)
 
@@ -421,7 +421,7 @@ Where, in this query, the text {id of assertion to look up} is a placeholder to 
 - Each instance of a `bdqffdq:Implementation` MAY be the subject of zero to many `bdqffdq:producesAssertion` properties.
 - Each instance of a `bdqffdq:AmendmentAssertion` SHOULD be the object of one and only one `bdqffdq:producesAssertion` property.
 
-## 3. Fitness For Use Framework Summary of Mathematical Formalization (normative) 
+## 3 Fitness For Use Framework Summary of Mathematical Formalization (normative) 
 
 This is a Summary of pp.89-108 in: Veiga, A.K. 2016. A conceptual framework on biodiversity data quality. Tese (Doutorado) [Doctoral Thesis] Escola Politécnica da Universidade de São Paulo. Departamento de Engenharia de Computação e Sistemas Digitais.156p. 
 
@@ -449,7 +449,7 @@ The Fitness For Use Framework ontology is framed with limited constraints and no
 * E = `Enhancement` (description of a means by which data could be improved, e.g., recommend replacement value from a controlled vocabulary).
 * S = `Specification` (specification of how a `Criterion` is to be evaluated, e.g., "Iterate records and calculate the proportion of records with scientific name different from null").
 
-### 3.2. Properties (normative)
+### 3.2 Properties (normative)
 * US = Usages 
 * ID = Identifier for a resource
 * RT = `Resource Type` {`Single Record`, `Multi Record`}
@@ -650,7 +650,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Fitness for Use Framework Ontology. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqffdq/2025-05-10>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Fitness For Use Framework Ontology. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqffdq/2025-05-10>
 
 **Biodiversity Information Standards (TDWG)**
 

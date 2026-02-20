@@ -76,7 +76,7 @@ Information about the Fitness for Use ontology, its usage, and its extensions ca
 
 | Description | IRI | Download URL | Note | 
 | ----------- | --- | -----------  | ---- | 
-| Owl ontology | TBD | [Biodiversity Data Quality Fitness for Use Framework (Ontology)](../../vocabulary/bdqffdq.owl) | The formal RDF/OWL representation of the vocabulary. |
+| Owl ontology | TBD | [Biodiversity Data Quality Fitness For Use Framework (Ontology)](../../vocabulary/bdqffdq.owl) | The formal RDF/OWL representation of the vocabulary. |
 
 ### 1.4 Namespace abbreviations (non-normative)
 
@@ -358,7 +358,7 @@ Where, in this query, the text {id of assertion to look up} is a placeholder to 
 - Each instance of a `bdqffdq:Implementation` MAY be the subject of zero to many `bdqffdq:producesAssertion` properties.
 - Each instance of a `bdqffdq:AmendmentAssertion` SHOULD be the object of one and only one `bdqffdq:producesAssertion` property.
 
-## 3. Fitness For Use Framework Summary of Mathematical Formalization (normative) 
+## 3 Fitness For Use Framework Summary of Mathematical Formalization (normative) 
 
 This is a Summary of pp.89-108 in: Veiga, A.K. 2016. A conceptual framework on biodiversity data quality. Tese (Doutorado) [Doctoral Thesis] Escola Politécnica da Universidade de São Paulo. Departamento de Engenharia de Computação e Sistemas Digitais.156p. 
 
@@ -386,7 +386,7 @@ The Fitness For Use Framework ontology is framed with limited constraints and no
 * E = `Enhancement` (description of a means by which data could be improved, e.g., recommend replacement value from a controlled vocabulary).
 * S = `Specification` (specification of how a `Criterion` is to be evaluated, e.g., "Iterate records and calculate the proportion of records with scientific name different from null").
 
-### 3.2. Properties (normative)
+### 3.2 Properties (normative)
 * US = Usages 
 * ID = Identifier for a resource
 * RT = `Resource Type` {`Single Record`, `Multi Record`}
