@@ -132,7 +132,7 @@ Information about the Fitness for Use ontology, its usage, and its extensions ca
 
 - [**Fitness For Use Framework Ontology Guide**](../guide/bdqffdq/index.md) - Provides a visual and narrative introduction to the concepts and application of the ontology.
 - [**Fitness For Use Framework Ontology List of Terms**](../list/bdqffdq/index.md) - The term list document, which enumerates and describes the vocabulary terms.
-- **Fitness for Use Framework Ontology** - Provides normative guidance on the use of the vocabulary. This document.
+- **Fitness For Use Framework Ontology** - Provides normative guidance on the use of the vocabulary. This document.
 - [**Fitness For Use Framework Ontology Vocabulary Extension**](../extension/bdqffdq/index.md) - Defines additional axioms extending the core vocabulary.
 
 #### 1.3.1 Distributions (non-normative)

@@ -90,21 +90,21 @@ PREFIX bdqenh: <https://rs.tdwg.org/bdqenh/terms/>
 with open(contributors_yaml_file) as cyf:
 	contributors_yaml = yaml.load(cyf, Loader=yaml.FullLoader)
 
-## Build key of vocabulary used in the quick reference guide
+## Build key of vocabulary used in the Quick Reference Guide
 terms_in_qrg = [ 'skos:prefLabel', 'rdfs:label', 'rdf:about', 'rdfs:comment','bdqffdq:hasAuthoritiesDefaults','bdqffdq:hasExpectedResponse','skos:example','bdqffdq:composedOf','skos:note','bdqffdq:Parameter','bdqffdq:Specification','rdf:type','bdqffdq:hasUseCase' ]
-# Load the vocabulary configuration YAML file from its local location and filter to just the terms used in the quick reference guide
+# Load the vocabulary configuration YAML file from its local location and filter to just the terms used in the Quick Reference Guide
 with open(vocabulary_configuration_yaml_file) as vcfy:
 	term_concept_dictionary = yaml.load(vcfy, Loader=yaml.FullLoader)
 	term_concept_dictionary = {key: value for key, value in term_concept_dictionary.items() if value.get('term') in terms_in_qrg}
 
-# build definition table (key) for terms used in the quick reference guide
+# build definition table (key) for terms used in the Quick Reference Guide
 #
-# Code copied from the build bdqtest terms-list script, modified to construct the key for the terms used in the quick reference guide.
+# Code copied from the build bdqtest terms-list script, modified to construct the key for the terms used in the Quick Reference Guide.
 termLists = ['bdqtest']
 term = 'bdqtest'
 term_history_csv = "../_review/vocabulary/bdqtest_term_versions.csv".format(term)
 term_lists_info = []
-# column_list tuned to just columns in the quick reference guide.
+# column_list tuned to just columns in the Quick Reference Guide.
 column_list = ["Label","iri","term_iri","term_localName","prefLabel","InformationElement:ActedUpon","InformationElement:Consulted","Parameters","ExpectedResponse","AuthoritiesDefaults","Description","Type","Resource Type","Examples","Notes","UseCases","status"]
 # Likely will be provided from rs.tdwg.org after ratification, currently obtain from local file
 #frame = pd.read_csv(githubBaseUri + term_list_document, na_filter=False)
@@ -134,7 +134,7 @@ for term_list in term_lists_info:
         frame = pd.read_csv(data_url, na_filter=False)
         for index,row in frame.iterrows():
             # PJM: TODO: just use column list?
-            # row_list tuned to just columns in the quick reference guide.
+            # row_list tuned to just columns in the Quick Reference Guide.
             row_list = [ row['Label'], row['iri'], row['term_iri'], row['term_localName'], row['prefLabel'], row['InformationElement:ActedUpon'], row['InformationElement:Consulted'], row['Parameters'], row['ExpectedResponse'], row['AuthoritiesDefaults'], row['Description'], row['Type'], row['Resource Type'], row['Examples'], row['Notes'], row['UseCases'], row["status"] ]
     
             table_list.append(row_list)
@@ -149,7 +149,7 @@ terms_sorted_by_localname = terms_df.iloc[terms_df.prefLabel.str.lower().argsort
 
 definitionTable = build_term_key(term_concept_dictionary,terms_sorted_by_localname)
 
-# Load the vocabulary and produce the quick reference guide
+# Load the vocabulary and produce the Quick Reference Guide
 
 with open ("../_review/vocabulary/bdq_term_versions.csv") as vocabfile: 
 	try: 
@@ -223,7 +223,7 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 	
 		warning = "<!--- This file is generated from templates by code, DO NOT EDIT by hand --->\n"
 
-		# Provide a list of definitions of terms in the quick reference guide in a separate document.
+		# Provide a list of definitions of terms in the Quick Reference Guide in a separate document.
 		keyHeaderObject = open(keyHeaderFileName, 'rt', encoding='utf-8')
 		keyHeader = keyHeaderObject.read()
 		keyHeaderObject.close()
@@ -471,7 +471,7 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 		footer = footer.replace('{ratification_date}', document_configuration_yaml['doc_modified'])
 		print(footer)
 
-		# Write out the key to the terms used in the quick reference guide in a separate file.	
+		# Write out the key to the terms used in the Quick Reference Guide in a separate file.	
 		outputKeyFile = open(outputKeyFilename,"w")
 		outputKeyFile.write(warning)
 		outputKeyFile.write(keyHeader)

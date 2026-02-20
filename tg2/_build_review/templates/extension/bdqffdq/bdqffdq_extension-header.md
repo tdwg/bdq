@@ -46,7 +46,7 @@
 
 ### 1.1 Purpose (non-normative)
 
-The purpose of this document is to define the official vocabulary extension for the `bdqffdq:` ontology. It provides additional axioms, such as range constraints and logical distinctions, that refine and extend the semantics of the core vocabulary terms in the BDQ Fitness for Use Framework.
+The purpose of this document is to define the official vocabulary extension for the `bdqffdq:` ontology. It provides additional axioms, such as range constraints and logical distinctions, that refine and extend the semantics of the core vocabulary terms in the BDQ Fitness For Use Framework.
 
 These axioms enable more precise reasoning, validation, and integration with OWL tools. They are intended to complement the human-readable term list provided in the main ontology documentation without altering the open and minimally constrained design of the core Fitness For Use Framework.  Additional normative expectations, which are not formally represented in the ontology or included here, are listed in [Section 2 of the bdqffdq: landing page](../../bdqffdq/index.md#2-use-of-terms-normative) to clarify the intended use of these terms in practice.
 
@@ -54,11 +54,11 @@ This extension follows the TDWG Standards Documentation Specification and mainta
 
 ### 1.2 Audience (non-normative)
 
-This document is intended for ontology engineers, semantic modelers, and developers who are applying the BDQ Fitness for Use Framework in OWL environments. It will be especially useful for:
+This document is intended for ontology engineers, semantic modelers, and developers who are applying the BDQ Fitness For Use Framework in OWL environments. It will be especially useful for:
 
 - Implementers using OWL reasoners or validators to enforce or explore logical structures
 - Developers of semantic tooling and metadata pipelines based on the BDQ Standard
-- Standards developers needing a detailed view of the formal semantics behind Fitness for Use Framework concepts.
+- Standards developers needing a detailed view of the formal semantics behind Fitness For Use Framework concepts.
 
 This document assumes familiarity with OWL constructs, reasoning profiles, and RDF/OWL modeling practices.
 
@@ -70,9 +70,9 @@ Information about the bdqffdq: ontology, its usage, and its extensions can be fo
 
 - [**Fitness For Use Framework Ontology Guide**](../../guide/bdqffdq/index.md) - Provides a visual and narrative introduction to the concepts and application of the ontology.
 - [**Fitness For Use Framework Ontology List of Terms**](../../list/bdqffdq/index.md) - The term list document, which enumerates and describes the vocabulary terms.
-- [**Fitness for Use Framework Ontology**](../../bdqffdq/index.md) - Provides normative guidance on the use of the vocabulary.
+- [**Fitness For Use Framework Ontology**](../../bdqffdq/index.md) - Provides normative guidance on the use of the vocabulary.
 - **Fitness For Use Framework Ontology Vocabulary Extension** - Defines additional axioms extending the core vocabulary. This document.
-- [**Biodiversity Data Quality Fitness for Use Framework (Ontology)**](../../../vocabulary/bdqffdq.owl) - The ontology, which provides the formal RDF/OWL representation of the vocabulary.
+- [**Biodiversity Data Quality Fitness For Use Framework (Ontology)**](../../../vocabulary/bdqffdq.owl) - The ontology, which provides the formal RDF/OWL representation of the vocabulary.
 
 #### 1.3.1 Term List Distributions (non-normative)
 

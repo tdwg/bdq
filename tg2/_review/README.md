@@ -10,8 +10,8 @@ The BDQ standard is complex. There are requirements about which documents must e
 
 - **BDQ Tests and Assertions:**  
   Practical Tests and associated guidance for assessing biodiversity data quality.
-- **Fitness for Use Framework:**  
-  The theoretical foundation that defines key concepts of data quality "Fitness for Use".
+- **Fitness For Use Framework:**  
+  The theoretical foundation that defines key concepts of data quality "Fitness For Use".
 
 ## 🚀 Choose Your Review Path
 
@@ -33,12 +33,12 @@ Within the practical perspective there are two basic audiences, Users and Implem
 - [**Guide to Marking and Identifying Synthetic and Modified Data**](docs/guide/synthetic/index.md)
 
 ### C. Documents emphasizing **BDQ in Theory (the Framework)**:
-The theoretical perspective is formally based on the [**Biodiversity Data Quality Fitness for Use Framework (Ontology)**](vocabulary/bdqffdq.owl). The following documents explain the ontology and how it is extended for use with the BDQ Tests and Assertions (the Tests):
+The theoretical perspective is formally based on the [**Biodiversity Data Quality Fitness For Use Framework (Ontology)**](vocabulary/bdqffdq.owl). The following documents explain the ontology and how it is extended for use with the BDQ Tests and Assertions (the Tests):
 
-- [**Fitness for Use Ontology**](docs/bdqffdq/index.md)
-- [**Fitness for Use Framework Vocabulary Extension**](docs/extension/bdqffdq/index.md)
-- [**Fitness for Use Framework Ontology Guide**](docs/guide/bdqffdq/index.md)
-- [**Biodiversity Data Quality Fitness for Use Framework (Ontology)**](vocabulary/bdqffdq.owl)
+- [**Fitness For Use Ontology**](docs/bdqffdq/index.md)
+- [**Fitness For Use Framework Vocabulary Extension**](docs/extension/bdqffdq/index.md)
+- [**Fitness For Use Framework Ontology Guide**](docs/guide/bdqffdq/index.md)
+- [**Biodiversity Data Quality Fitness For Use Framework (Ontology)**](vocabulary/bdqffdq.owl)
 
 ### D. Vocabularies
 The Tests and the Framework are linked with each other via **foundational vocabularies** and **controlled vocabularies of values**. The terms in these vocabularies are formally defined in the **List of terms** documents, one for each vocabulary defined by the BDQ standard.  IRIs in these documents follow the patterns in [TDWG Standards Metadata](https://tdwg.github.io/rs.tdwg.org/#2-iri-patterns). Following the guidance of the [TDWG Standards Documentation Specification](https://github.com/tdwg/vocab/blob/master/sds/documentation-specification.md), the Fitness For Use Ontology has term definitions in a List of Terms document (below), and axioms providing additional ontology logic in a Vocabulary Extension document (above). We recommend reviewing these vocabularies carefully as well:

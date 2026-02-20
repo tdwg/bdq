@@ -231,7 +231,7 @@ def generate_qrg():
         raise ValueError("Missing 'organized_in' column in source CSV.")
 
     columns = [col for col in df.columns if col.strip() and col != 'organized_in']
-    # filter columns to one of quick reference guide key terms: Label, Preferred Label, Term Version IRI,Description, Expected Response, InformationElements ActedUpon, InformationElements Consulted, Parameters,SourceAuthorities/Defaults, Notes, Examples, Type.
+    # filter columns to one of Quick Reference Guide key terms: Label, Preferred Label, Term Version IRI,Description, Expected Response, InformationElements ActedUpon, InformationElements Consulted, Parameters,SourceAuthorities/Defaults, Notes, Examples, Type.
     # "Label","issueNumber","historyNoteUrl","iri","term_iri","issued","term_localName","DateLastUpdated","prefLabel","IE Class","InformationElement:ActedUpon","InformationElement:Consulted","Parameters","ExpectedResponse","SpecificationGuid","MethodGuid","AuthoritiesDefaults","Description","Type","Resource Type","Dimension","Criterion","Enhancement","Examples","Source","References","Example Implementations (Mechanisms)","Link to Specification Source Code","Notes","IssueState","IssueLabels","UseCases","ArgumentGuids","status","flags","organized_in"
     columns = [col for col in columns if col in ['Label', 'prefLabel', 'iri', 'Description', 'ExpectedResponse', 'InformationElement:ActedUpon', 'InformationElement:Consulted', 'Parameters', 'AuthoritiesDefaults', 'Notes', 'Examples', 'Type', 'UseCases','Resource Type']]
     ordered_classes = ['Amendment', 'Issue', 'Measure', 'Validation']

@@ -25,7 +25,7 @@ copy_files.sh
 do_build.sh
 ```
 
-Also in bdq/tg2/_build_qrg is **generate_bdq_qrg.py**, which generates a proof of concept html representation of the quick reference guide for the bdqtest vocabulary.  
+Also in bdq/tg2/_build_qrg is **generate_bdq_qrg.py**, which generates a proof of concept html representation of the Quick Reference Guide for the bdqtest vocabulary.  
 
 # Structure of source and target directories for the build.
 
@@ -118,7 +118,7 @@ _review/
 │   │   ├── index.md  Generated file. **Do not edit.**
 │   │   └── *.png  Files copied here from build. **Do not edit.**
 │   └── terms  Build targets for Quick Reference Guides.
-│       └── bdqtest Quick reference guide to the tests
+│       └── bdqtest Quick Reference Guide to the tests
 │           ├── bdqtest_qrg_term_descriptions.md  Terms key for index.md. Generated file. **Do not edit.**
 │           ├── index.md  Generated file. **Do not edit.**
 │           ├── index.html  Generated file. Proof of concept html rendering of the QRG deployed at https://tdwg.github.io/bdq/terms/bdqtest/ **Do not edit.**
@@ -138,7 +138,7 @@ _review/
 	Note: Current master files for the tests are: tg2/core/TG2_tests.csv and  tg2/core/TG2_multirecord_measure_tests.csv 
 </pre>
 
-# Build file for proof of concept html representation of the quick reference guide
+# Build file for proof of concept html representation of the Quick Reference Guide
 
 tg2/\_build_html/generate_bdq_qrg.py
 

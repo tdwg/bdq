@@ -86,15 +86,15 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
 [7. References (non-normative)](#7-references-non-normative)<br>
 [8. Cite BDQ (non-normative)](#8-cite-bdq-non-normative)
 
-## 1. Introduction (non_normative)
+## 1. Introduction (non-normative)
 
-### 1.1 Purpose (non_normative)
+### 1.1 Purpose (non-normative)
 
 Beyond data availability, data quality is probably the most significant issue for users of biodiversity data. Data quality is treated as fitness for a particular use, not as an inherent characteristic of data as described in detail in [3. Context for Quality, Uses and Purposes](docs/guide/users/index.md#3-context-for-quality-uses-and-purposes-non-normative) in the [BDQ User's Guide](docs/guide/users/index.md). The Biodiversity Data Quality (BDQ) standard is meant to provide a modular, extensible framework for assessing the quality of biodiversity data relative to specific uses.
 
 The BDQ standard defines a set of Tests that can be used to evaluate the quality of biodiversity data for a set of defined uses. Each Test is designed to assess a specific aspect of data quality, such as completeness, consistency, or accuracy, and Tests are assembled into suites that can be used to evaluate the quality of data for specific purposes. The Tests are defined in a way that allows them to be implemented in various programming languages and environments, making them accessible to a wide range of users.  The BDQ standard allows for extension by the addition of new Tests as needed. It is intended to be used in a variety of contexts, from small-scale data curation projects to large-scale biodiversity aggregation systems. The standard provides a common vocabulary and framework for describing and implementing data quality tests, making it easier for different members of the community to collaborate and share information about data quality.
 
-### 1.2 Audience (non_normative)
+### 1.2 Audience (non-normative)
 
 Intended for:
 - Practitioners and data curators
@@ -105,7 +105,7 @@ Intended for:
 
 No technical background in ontology is required to understand the Tests or most of the standard.  Familiarity with ontology concepts is helpful, but not essential, for understanding the Fitness For Use Framework, which is the theoretical basis for the BDQ standard. The BDQ standard is designed to be accessible to a wide audience, including those who may not have a deep understanding of data quality concepts or technical standards.
 
-### 1.3 Associated Documents (non_normative)
+### 1.3 Associated Documents (non-normative)
 
 See all documents listed in [2. Parts of the Standard (non-normative)](#2-parts-of-the-standard-non-normative).
 
@@ -119,7 +119,7 @@ Any sentence or phrase beginning with "For example" or "e.g.", whether in a norm
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" are to be interpreted as described in [RFC 2119](https://www.rfc-editor.org/rfc/rfc2119.html).
 
-### 1.6 Namespace Abbreviations (non_normative)
+### 1.6 Namespace Abbreviations (non-normative)
 
 | Abbreviation | Namespace |
 |--------------|-----------|

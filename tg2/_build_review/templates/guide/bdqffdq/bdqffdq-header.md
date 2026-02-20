@@ -48,13 +48,13 @@
 
 ### 1.1 Purpose (non-normative)
 
-The purpose of this document is to provide a practical guide to understanding and using the [Biodiversity Data Quality Fitness for Use Framework Ontology](../../../vocabulary/bdqffdq.owl), represented by the `bdqffdq:` vocabulary. This ontology defines a formal framework for describing data quality in the context of biodiversity data, emphasizing that quality is always relative to a particular purpose or use.
+The purpose of this document is to provide a practical guide to understanding and using the [Biodiversity Data Quality Fitness For Use Framework Ontology](../../../vocabulary/bdqffdq.owl), represented by the `bdqffdq:` vocabulary. This ontology defines a formal framework for describing data quality in the context of biodiversity data, emphasizing that quality is always relative to a particular purpose or use.
 
 The document explains key concepts from the ontology, including `Use Case`, `Information Element`, `Specification`, and `Criterion`, and shows how they support the structure and semantics of BDQ Tests. It provides context, illustrative examples, and guidance for interpreting the ontology as applied in real-world implementations.
 
 ### 1.2 Audience (non-normative)
 
-This guide is intended for users who need a technical understanding of the Fitness for Use Framework and its ontology. It will be particularly useful for:
+This guide is intended for users who need a technical understanding of the Fitness For Use Framework and its ontology. It will be particularly useful for:
 
 - Ontology engineers and information modelers incorporating the BDQ standard into semantic systems
 - Standards developers aligning other biodiversity data quality frameworks with the BDQ standard
@@ -71,9 +71,9 @@ Information about the Fitness For Use Framework ontology, its usage, and its ext
 
 - **Fitness For Use Framework Ontology Guide** - Provides a visual and narrative introduction to the concepts and application of the ontology. This document.
 - [**Fitness For Use Framework Ontology List of Terms**](../../list/bdqffdq/index.md) - The term list document, which enumerates and describes the vocabulary terms.
-- [**Fitness for Use Framework Ontology**](../../bdqffdq/index.md) - Provides normative guidance on the use of the vocabulary.
+- [**Fitness For Use Framework Ontology**](../../bdqffdq/index.md) - Provides normative guidance on the use of the vocabulary.
 - [**Fitness For Use Framework Ontology Vocabulary Extension**](../../extension/bdqffdq/index.md) - Defines additional axioms extending the core vocabulary.
-- [**Biodiversity Data Quality Fitness for Use Framework (Ontology)**](../../../vocabulary/bdqffdq.owl) - The ontology, which provides the formal RDF/OWL representation of the vocabulary.
+- [**Biodiversity Data Quality Fitness For Use Framework (Ontology)**](../../../vocabulary/bdqffdq.owl) - The ontology, which provides the formal RDF/OWL representation of the vocabulary.
 
 ### 1.4 Status of the content of this document (normative)
 
@@ -174,7 +174,7 @@ Formally, in the `Data Quality Needs` level, the Framework starts with a `Use Ca
 
 ### 3.3 Data Quality Needs, Data Quality Mechanisms, Data Quality Reports (non-normative)
 
-The Fitness for Use Framework organizes data quality concepts into three core areas — Needs, Mechanisms, and Reports — which can be viewed as horizontal slices through the Framework (Veiga et al., 2017).
+The Fitness For Use Framework organizes data quality concepts into three core areas — Needs, Mechanisms, and Reports — which can be viewed as horizontal slices through the Framework (Veiga et al., 2017).
 
 **Data Quality Needs** begin with a `Use Case`, a formal description of a purpose for which data may be used. Each `Use Case` includes a set of `Policies`, which in turn relate to `Contexts`. `Contexts` (e.g., `ContextualizedCriterion`, `ContextualizedDimension`, `ContextualizedEnhancement`, `ContextualizedIssue`) specify the data quality requirement (Need), the relevant `Information Elements` (such as specific Darwin Core terms), and the `Resource Type` the requirement applies to. A 
 Need defines the properties data must have to be considered fit for use and may include ways to improve unfit data. The Tests described in this standard are formal specifications of such Needs for BDQ purposes.
