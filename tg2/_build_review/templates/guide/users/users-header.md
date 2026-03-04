@@ -220,3 +220,38 @@ The definitions of the terms used for the Tests can be found in [Terms Used in t
 ## 5 Time of Day and Time Zones (non-normative)
 
 Time of day (as opposed to dates) is not considered in any of the BDQ Tests. There are `Use Cases` where the time zone is important. Dates within a dataset (`bdqffdq:MultiRecord`) aggregated from multiple sources may have plus or minus one day errors introduced. New Tests are required if ignorance of time would make such data unfit for a purpose. For further information, see Section [4.2 Time (non-normative)](../../supplement/index.md#42-time-non-normative) in [BDQ Supplemental Information](../../supplement/index.md).
+
+## 6 Creating New Tests (non-normative)
+
+The `Tests` in the BDQ Standard are a subset of all the possible tests that could be developed for testing biodiversity data quality, even within the `Darwin Core` environment. [2.1 Definition of Core](../../supplement/index.md#21-definition-of-core-non-normative) in the [BDQ Supplemental Information](../../supplement/index.md) provides the background context as to why the current suite of Tests were chosen.
+
+Users and communities are free to define, implement, and use their own tests for their own purposes, and may propose tests for inclusion within the BDQ Standard.
+
+When developing a new test, , there are a number of Tests that were proposed but not included in BDQ tagged “`Supplementary`” in GitHub, and other tests that were proposed but rejected tagged "`DO_NOT_IMPLEMENT`" and users are urged to review these tests before proposing a new Test from scratch. The `Supplementary` Tests may provide a close fit or a template to build from for some desired test.  The comments on `DO_NOT_IMPLEMENT` tests describe why these particular test proposals were viewed as problematic and rationale for why they were rejected.
+
+Implementers are free to implement a subset of the `CORE` Tests, or `Supplementary` Tests, or new Tests when there is a particular data quality need within their domain - e.g., testing for a value of sub-genus against a taxonomic name authority or testing for a valid depth against maximum depth around the location of an observation. Note however, that an implementation of BDQ will only be compliant with the standard if all `Tests` for at least one `Use Case` are implemented. 
+
+### 6.1 Elements of a New Test (non-normative)
+
+Formally, the description of a test is complex.  Informally, there are a few central elements that describe a test and what it does.  First, a Test serves some purpose, it evaluates some way in which data are fit for some purpose, thus each Test starts from one or more `Use Cases`.     Secondly, a Test operates on specific inputs, specific elements of data, these are the `Information Elements`.  Thirdly, a test has some specific purpose, described in simple language.  Forthly, this plain language description of the test must be expanded into specific language that allows an implementer to understand exactly what code implementing a Test should do, and what outputs it should provide for different possible input values, this is the `Expected Response`.   It is also important to be clear whether a Test evaluates a `SingleRecord` or operates over multiple records in a data set (a `MultiRecord` test).
+
+Tests may be expected to form related clusters, for example, a `Validation` that assesses whether the value of ac:  in a `SingleRecord` is found in a controlled vocabulary, combined with an `Amendment` that proposes changes to values of ac: to conform them to that controlled vocabulary, combined with a `MultiRecord` `Measure` that counts the number of `COMPLIANT` values for the `Validation` evaluated for each record in a data set.  Under `QualityControl`, this `Measure` can evaluate how much the data set could be improved for some purpose if all the proposed changes from the `Amendment` were accepted (by runing the tests in pre-amendment, amendment, and post-amendment phases) 
+
+### 6.2 Proposing to add a Test to the BDQ Standard (non-normative)
+
+To propose to add a Test to the BDQ Standard, follow the instructions provided by the BDQ Maintenance Group.
+
+## 7 Creating New Use Cases (non-normative)
+
+BDQ is based on `Use Cases`: An evaluation of ‘data quality’ must be within the context of a `Use Case`. `Use Cases` are subtypes of the `DataQualityNeeds` that express what `Assertions` may be made about data with respect to fitness for use and should link to in the relevant Tests that apply to that `Use Case`.
+
+Five over-arching `Use Cases` have been used in the BDQ Standard. These were developed through the TDWG Biodiversity Data Quality Interest Group Task Group 3: Data Quality Use Cases (Rees and Nicholls, 2020). These, of course, are only a small subset of all possible `Use Cases` and users may wish to develop `Use Cases` for their own purposes.
+
+### 7.1 Elements of a New Test (non-normative)
+
+`Use Cases` are straightforward to describe.  A `Use Case` has a name, a description, and a list of Tests.  The list of Tests is expressed as four `Policies`, a `ValidationPolicy` comprised of the `Validations` related to the `Use Case`, an 'AmendmentPolicy` listing related `Amendments`, a `MeasurementPolicy` listing related `Measurements`, and an `IssuePolicy` listing any related `Issues`.   
+
+### 6.2 Proposing to add a Use Case to the BDQ Standard (non-normative)
+
+To propose to add a new `Use Case` to the BDQ Standard, follow the instructions provided by the BDQ Maintenance Group.
+
