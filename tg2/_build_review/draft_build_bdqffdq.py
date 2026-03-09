@@ -547,7 +547,7 @@ for r in queryResult :
 	text = text + "\n********************\n\n"
 
 text = text + "### 4.4 NamedIndividual terms (normative)\n"
-sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment ?type  WHERE {  ?subject a owl:NamedIndividual . ?subject a ?type . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . ?subject rdfs:comment ?comment . FILTER ( ?type != owl:NamedIndividual) . }  ORDER BY ?type ?subject"
+sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment ?type  WHERE {  ?subject a owl:NamedIndividual . ?subject a ?type . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . OPTIONAL { ?subject rdfs:comment ?comment } . FILTER ( ?type != owl:NamedIndividual) . }  ORDER BY ?type ?subject"
 queryResult = graph.query(sparql)
 for r in queryResult : 
 	entity = r.subject
