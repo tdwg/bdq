@@ -21,7 +21,7 @@ import yaml		# Library to parse yaml files
 import glob
 import shutil
 # run sparql queries on rdf 
-import rdflib     
+import rdflib
 from rdflib import Graph 
 import function_lib # library of reusable functions for TDWG build scripts
 from function_lib import build_authors_contributors_markdown, build_contributors_markdown
@@ -352,7 +352,7 @@ for templatePath, document in directories.items() :
 			disj = disjoint_map.get(subject_iri, [])
 			if disj:
 				# display without the bdqffdq: prefix
- 				disj_short = [x.replace("bdqffdq:", "") for x in disj]
+				disj_short = [x.replace("bdqffdq:", "") for x in disj]
 				text = text + "- Disjoint With: {}\n".format(", ".join(disj_short))
 			# text = text + "- Notes: {}\n".format(r.comment.replace("\n\n","\n").replace("\n","  \n"))
 			text = text + "\n********************\n\n"
