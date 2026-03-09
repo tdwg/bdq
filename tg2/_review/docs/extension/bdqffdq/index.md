@@ -454,11 +454,11 @@ In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use th
 
 #### 4.3.2 AllDisjointClasses (normative)
 
-- ne1848b8c02a64977b46c4ba9b638bc0eb16 owl:members
+- n97f922924a5c4f2e8abbf98e39365b3bb16 owl:members
   - https://rs.tdwg.org/bdqffdq/terms/AbstractInformationElement
   - https://rs.tdwg.org/bdqffdq/terms/ActedUpon
   - https://rs.tdwg.org/bdqffdq/terms/Consulted
-- ne1848b8c02a64977b46c4ba9b638bc0eb20 owl:members
+- n97f922924a5c4f2e8abbf98e39365b3bb20 owl:members
   - https://rs.tdwg.org/bdqffdq/terms/Amendment
   - https://rs.tdwg.org/bdqffdq/terms/Issue
   - https://rs.tdwg.org/bdqffdq/terms/Measure

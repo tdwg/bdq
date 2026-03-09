@@ -158,19 +158,18 @@ Draft Standard for Review
     - [MultiRecord](#multirecord)
     - [SingleRecord](#singlerecord)
     - [COMPLETE](#complete)
+    - [COMPLIANT](#compliant)
     - [IS_ISSUE](#is_issue)
     - [NOT_COMPLETE](#not_complete)
+    - [NOT_COMPLIANT](#not_compliant)
     - [NOT_ISSUE](#not_issue)
     - [POTENTIAL_ISSUE](#potential_issue)
     - [AMENDED](#amended)
+    - [EXTERNAL_PREREQUISITES_NOT_MET](#external_prerequisites_not_met)
+    - [FILLED_IN](#filled_in)
+    - [INTERNAL_PREREQUISITES_NOT_MET](#internal_prerequisites_not_met)
     - [NOT_AMENDED](#not_amended)
     - [RUN_HAS_RESULT](#run_has_result)
-  - [4.3 General Axioms (normative)](#43-general-axioms-normative)
-    - [4.3.1 Disjointness (normative)](#431-disjointness-normative)
-    - [4.3.2 AllDisjointClasses (normative)](#432-alldisjointclasses-normative)
-    - [4.3.3 EquivalentClass (normative)](#433-equivalentclass-normative)
-    - [4.3.4 EquivalentProperty (normative)](#434-equivalentproperty-normative)
-    - [4.3.5 InverseOf (normative)](#435-inverseof-normative)
 
 ## 1 Introduction (non-normative)
 
@@ -1320,6 +1319,16 @@ A bdqffdq:SingleRecord, like a bdqffdq:MultiRecord, consists of data with a defi
 
 ********************
 
+#### COMPLIANT
+
+- Name: bdqffdq:COMPLIANT
+- Type: bdqffdq:ResponseResult
+- Preferred Label: COMPLIANT
+- Definition: A bdqffdq:ResponseResult of a bdqffdq:Validation where the data conforms to the bdqffdq:Criteria for quality in the Test bdqffdq:Specification.
+- Comments:
+
+********************
+
 #### IS_ISSUE
 
 - Name: bdqffdq:IS_ISSUE
@@ -1337,6 +1346,16 @@ A bdqffdq:SingleRecord, like a bdqffdq:MultiRecord, consists of data with a defi
 - Preferred Label: NOT_COMPLETE
 - Definition: A bdqffdq:ResponseResult of a bdqffdq:Measure which asserts that data are not present or are not sufficiently comprehensive for a use.
 - Comments: This value can be used to exclude data for Quality Assurance. This value can be asserted, for example, by bdqffdq:Measures of bdqffdq:MultiRecords where not all the bdqffdq:Validation bdqffdq:ResponseResult from all included records in the dataset have a bdqffdq:ResponseResult of bdqffdq:COMPLIANT.
+
+********************
+
+#### NOT_COMPLIANT
+
+- Name: bdqffdq:NOT_COMPLIANT
+- Type: bdqffdq:ResponseResult
+- Preferred Label: NOT_COMPLIANT
+- Definition: A bdqffdq:ResponseResult of a bdqffdq:Validation where the data do not conform to the bdqffdq:Criteria for quality in the Test bdqffdq:Specification.
+- Comments:
 
 ********************
 
@@ -1370,6 +1389,36 @@ A bdqffdq:SingleRecord, like a bdqffdq:MultiRecord, consists of data with a defi
 
 ********************
 
+#### EXTERNAL_PREREQUISITES_NOT_MET
+
+- Name: bdqffdq:EXTERNAL_PREREQUISITES_NOT_MET
+- Type: bdqffdq:ResponseStatus
+- Preferred Label: EXTERNAL_PREREQUISITES_NOT_MET
+- Definition: A bdqffdq:ResponseStatus used to indicate that a bdqffdq:ResponseResult was not generated because a bdq:sourceAuthority was not accessible. If the Test is run at a later time, it may produce a different bdqffdq:ResponseStatus.
+- Comments:
+
+********************
+
+#### FILLED_IN
+
+- Name: bdqffdq:FILLED_IN
+- Type: bdqffdq:ResponseStatus
+- Preferred Label: FILLED_IN
+- Definition: A bdqffdq:ResponseStatus used to indicate that a bdqffdq:Amendment contains a proposed change to a record in a bdqffdq:hasResponseResultValue where the bdqffdq:InformationElement was bdq:Empty.
+- Comments:
+
+********************
+
+#### INTERNAL_PREREQUISITES_NOT_MET
+
+- Name: bdqffdq:INTERNAL_PREREQUISITES_NOT_MET
+- Type: bdqffdq:ResponseStatus
+- Preferred Label: INTERNAL_PREREQUISITES_NOT_MET
+- Definition: A bdqffdq:ResponseStatus used to indicate that a bdqffdq:ResponseResult was not generated because values of the bdqffdq:InformationElement were insufficient to run the Test. If the Test is run at a later time on unmodified data, it should produce the same bdqffdq:ResponseStatus.
+- Comments:
+
+********************
+
 #### NOT_AMENDED
 
 - Name: bdqffdq:NOT_AMENDED
@@ -1389,31 +1438,6 @@ A bdqffdq:SingleRecord, like a bdqffdq:MultiRecord, consists of data with a defi
 - Comments: Applies to bdqffdq:Validations, bdqffdq:Issues and bdqfdfq:Measures, but not bdqffdq:Amendments. For a bdqffdq:Validation or a bdqffdq:Issue, the value will be found as a bdqffdq:ResponseResult object by following bdqffdq:hasResponseResult. For a bdqffdq:Measure, the value could be either in the data property bdqffdq:hasResponseResultValue or could be a ResponseResult object.
 
 ********************
-
-### 4.3 General Axioms (normative)
-#### 4.3.1 Disjointness (normative)
-
-
-#### 4.3.2 AllDisjointClasses (normative)
-
-- n0e783af9f54c4b08826f4fb1b7d77581b16 owl:members
-  - https://rs.tdwg.org/bdqffdq/terms/AbstractInformationElement
-  - https://rs.tdwg.org/bdqffdq/terms/ActedUpon
-  - https://rs.tdwg.org/bdqffdq/terms/Consulted
-- n0e783af9f54c4b08826f4fb1b7d77581b20 owl:members
-  - https://rs.tdwg.org/bdqffdq/terms/Amendment
-  - https://rs.tdwg.org/bdqffdq/terms/Issue
-  - https://rs.tdwg.org/bdqffdq/terms/Measure
-  - https://rs.tdwg.org/bdqffdq/terms/Validation
-
-#### 4.3.3 EquivalentClass (normative)
-
-
-#### 4.3.4 EquivalentProperty (normative)
-
-
-#### 4.3.5 InverseOf (normative)
-
 
 ## Acronyms (non-normative)
 
