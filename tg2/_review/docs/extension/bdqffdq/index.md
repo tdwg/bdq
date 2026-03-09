@@ -451,27 +451,31 @@ In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use th
 ### 4.3 General Axioms (normative)
 #### 4.3.1 Disjointness (normative)
 
+None
 
 #### 4.3.2 AllDisjointClasses (normative)
 
-- necc9d5de26ca41b88705c567b30a8f7db16 owl:members
-  - https://rs.tdwg.org/bdqffdq/terms/AbstractInformationElement
-  - https://rs.tdwg.org/bdqffdq/terms/ActedUpon
-  - https://rs.tdwg.org/bdqffdq/terms/Consulted
-- necc9d5de26ca41b88705c567b30a8f7db20 owl:members
-  - https://rs.tdwg.org/bdqffdq/terms/Amendment
-  - https://rs.tdwg.org/bdqffdq/terms/Issue
-  - https://rs.tdwg.org/bdqffdq/terms/Measure
-  - https://rs.tdwg.org/bdqffdq/terms/Validation
+| Property | Value |
+| -------- | ----- |
+| Axiom | owl:AllDisjointClasses |
+| Members | bdqffdq:AbstractInformationElement, bdqffdq:ActedUpon, bdqffdq:Consulted |
+
+| Property | Value |
+| -------- | ----- |
+| Axiom | owl:AllDisjointClasses |
+| Members | bdqffdq:Amendment, bdqffdq:Issue, bdqffdq:Measure, bdqffdq:Validation |
 
 #### 4.3.3 EquivalentClass (normative)
 
+None
 
 #### 4.3.4 EquivalentProperty (normative)
 
+None
 
 #### 4.3.5 InverseOf (normative)
 
+None
 
 ## Acronyms (non-normative)
 
