@@ -20,6 +20,13 @@ from function_lib import build_term_key, build_authors_contributors_markdown
 from function_lib import build_contributors_markdown, build_authors_markdown
 from function_lib import markdown_heading_to_link, generate_markdown_toc
 
+def optional_replace(object,old,new):
+	# convenience to avoid exceptions when a query OPTIONAL binding is missing (None)
+	if object is None:
+		return ""
+	return object.replace(old,new)
+
+
 # Configuration: common configuration
 
 # set debug = True for additional debugging output
@@ -108,7 +115,7 @@ graph.parse(inputTermsOwlFilename, format="ttl")
 # TODO: range, differentFrom 
 # column_list = ['term_iri', 'iri', 'term_localName', 'prefLabel', 'label', 'comments', 'definition', 'rdf_type', 'superclass', 'range', 'differentFrom']
 column_list = ['term_iri', 'iri', 'term_localName', 'prefLabel', 'label', 'comments', 'definition', 'rdf_type', 'superclass']
-sparql = prefixes + "SELECT DISTINCT (str(?subject) as ?term_iri) (str(?subject) as ?iri) (?subject as ?term_localName)  ?prefLabel ?label ?comment ?definition ?rdf_type (GROUP_CONCAT(?parent; SEPARATOR='; ') AS ?parents)  WHERE {  ?subject a owl:Class . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . ?subject rdf:type ?rdf_type . ?subject rdfs:label ?label . OPTIONAL { ?subject rdfs:subClassOf ?parent } . ?subject rdfs:comment ?comment } GROUP BY ?subject ?prefLabel ?label ?comment ?definition ?rdf_type ORDER BY ?subject"
+sparql = prefixes + "SELECT DISTINCT (str(?subject) as ?term_iri) (str(?subject) as ?iri) (?subject as ?term_localName)  ?prefLabel ?label ?comment ?definition ?rdf_type (GROUP_CONCAT(?parent; SEPARATOR='; ') AS ?parents)  WHERE {  ?subject a owl:Class . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . ?subject rdf:type ?rdf_type . ?subject rdfs:label ?label . OPTIONAL { ?subject rdfs:subClassOf ?parent } . OPTIONAL { ?subject rdfs:comment ?comment } } GROUP BY ?subject ?prefLabel ?label ?comment ?definition ?rdf_type ORDER BY ?subject"
 queryResult = graph.query(sparql)
 
 terms_df = pd.DataFrame(queryResult, columns = column_list)
@@ -198,7 +205,7 @@ text = ""
 # 
 # text = text + "\n## 4 Vocabulary\n"
 # text = text + "\n### 4.1 Class terms\n"
-# sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment (GROUP_CONCAT(?parent; SEPARATOR='; ') AS ?parents)  WHERE {  ?subject a owl:Class . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . OPTIONAL { ?subject rdfs:subClassOf ?parent } . ?subject rdfs:comment ?comment } GROUP BY ?subject ?prefLabel ?definition ?comment ORDER BY ?subject"
+# sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment (GROUP_CONCAT(?parent; SEPARATOR='; ') AS ?parents)  WHERE {  ?subject a owl:Class . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . OPTIONAL { ?subject rdfs:subClassOf ?parent } . OPTIONAL { ?subject rdfs:comment ?comment } } GROUP BY ?subject ?prefLabel ?definition ?comment ORDER BY ?subject"
 # queryResult = graph.query(sparql)
 # for r in queryResult : 
 # 	entity = r.subject
@@ -210,12 +217,12 @@ text = ""
 # 	text = text + "- Definition: {}\n".format(r.definition)
 # 	if (r.parents) :
 # 		text = text + "- SubClass Of: {}\n".format(r.parents.replace("https://rs.tdwg.org/bdqffdq/terms/",""))
-# 	text = text + "- Comments: {}\n".format(r.comment.replace("\n\n","\n").replace("\n","  \n"))
+# 	text = text + "- Comments: {}\n".format(optional_replace(r.comment,"\n\n","\n").replace("\n","  \n"))
 # 	text = text + "- View in: [term-list](../list/bdqffdq/index.md#{})\n".format(term)
 # 	text = text + "\n********************\n\n"
 # 
 # text = text + "### 4.2 ObjectProperty terms\n"
-# sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment ?range ?restrictedRange ?restriction  (GROUP_CONCAT(?parent; SEPARATOR='; ') AS ?parents)  WHERE {  ?subject a owl:ObjectProperty . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . OPTIONAL { ?subject rdfs:subPropertyOf ?parent } . OPTIONAL { ?subject rdfs:range ?range . optional { ?range a owl:Restriction . ?range owl:onProperty ?restrictedRange . ?range  ?restriction ?x . FILTER ( ?restriction != owl:onProperty && ?restriction != rdf:type  ) }  } . ?subject rdfs:comment ?comment } GROUP BY ?subject ?prefLabel ?definition ?comment ORDER BY ?subject"
+# sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment ?range ?restrictedRange ?restriction  (GROUP_CONCAT(?parent; SEPARATOR='; ') AS ?parents)  WHERE {  ?subject a owl:ObjectProperty . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . OPTIONAL { ?subject rdfs:subPropertyOf ?parent } . OPTIONAL { ?subject rdfs:range ?range . optional { ?range a owl:Restriction . ?range owl:onProperty ?restrictedRange . ?range  ?restriction ?x . FILTER ( ?restriction != owl:onProperty && ?restriction != rdf:type  ) }  } . OPTIONAL { ?subject rdfs:comment ?comment } } GROUP BY ?subject ?prefLabel ?definition ?comment ORDER BY ?subject"
 # queryResult = graph.query(sparql)
 # for r in queryResult : 
 # 	entity = r.subject
@@ -232,13 +239,13 @@ text = ""
 # 			text = text + "- Range [ {} {} ]\n".format(r.restriction.replace("http://www.w3.org/2002/07/owl#","owl:"), r.restrictedRange.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:"))
 # 		else :
 # 			text = text + "- Range {}\n".format(r.range.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:"))
-# 	text = text + "- Comments: {}\n".format(r.comment.replace("\n\n","\n").replace("\n","  \n"))
+# 	text = text + "- Comments: {}\n".format(optional_replace(r.comment,"\n\n","\n").replace("\n","  \n"))
 # 	text = text + "- View in: [term-list](../list/bdqffdq/index.md#{})\n".format(term)
 # 	text = text + "\n********************\n\n"
 # 
 # 
 # text = text + "### 4.3 DataProperty terms\n"
-# sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment ?range WHERE { ?subject a owl:DatatypeProperty . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . ?subject rdfs:comment ?comment . OPTIONAL { ?subject rdfs:range ?range }  }  ORDER BY ?subject"
+# sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment ?range WHERE { ?subject a owl:DatatypeProperty . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . OPTIONAL { ?subject rdfs:comment ?comment } . OPTIONAL { ?subject rdfs:range ?range }  }  ORDER BY ?subject"
 # queryResult = graph.query(sparql)
 # for r in queryResult : 
 # 	entity = r.subject
@@ -250,7 +257,7 @@ text = ""
 # 	text = text + "- Definition: {}\n".format(r.definition)
 # 	if (r.range) :
 # 		text = text + "- Range {}\n".format(r.range.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:").replace("http://www.w3.org/2001/XMLSchema#","xsd:"))
-# 	text = text + "- Comments: {}\n".format(r.comment.replace("\n\n","\n").replace("\n","  \n"))
+# 	text = text + "- Comments: {}\n".format(optional_replace(r.comment,"\n\n","\n").replace("\n","  \n"))
 # 	text = text + "- View in: [term-list](../list/bdqffdq/index.md#{})\n".format(term)
 # 	text = text + "\n********************\n\n"
 # 
@@ -270,7 +277,7 @@ text = ""
 # 		different = r.differentFrom.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:");
 # 		text = text + "- DifferentFrom: {}\n".format(different)
 # 	text = text + "- Definition: {}\n".format(r.definition)
-# 	text = text + "- Comments: {}\n".format(r.comment.replace("\n\n","\n").replace("\n","  \n"))
+# 	text = text + "- Comments: {}\n".format(optional_replace(r.comment,"\n\n","\n").replace("\n","  \n"))
 # 	text = text + "- View in: [term-list](../list/bdqffdq/index.md#{})\n".format(term)
 # 	text = text + "\n********************\n\n"
 
@@ -289,6 +296,47 @@ footer = footer.replace('{document_title}', document_configuration_yaml['documen
 footer = footer.replace('{current_iri}', document_configuration_yaml['current_iri'])
 footer = footer.replace('{ratification_date}', document_configuration_yaml['doc_modified'])
    
+text = text + "### 4.3 General Axioms (normative)\n"
+
+text = text + "#### 4.3.1 Disjointness (normative)\n\n"
+sparql = prefixes + "SELECT DISTINCT ?a ?b WHERE { ?a owl:disjointWith ?b . } ORDER BY ?a ?b"
+queryResult = graph.query(sparql)
+for r in queryResult :
+	text = text + "- {} owl:disjointWith {}\n".format(r.a, r.b)
+text = text + "\n"
+
+text = text + "#### 4.3.2 AllDisjointClasses (normative)\n\n"
+sparql = prefixes + "SELECT DISTINCT ?adc ?member WHERE { ?adc a owl:AllDisjointClasses . ?adc owl:members ?list . ?list rdf:rest*/rdf:first ?member . } ORDER BY ?adc ?member"
+queryResult = graph.query(sparql)
+current_adc = None
+for r in queryResult :
+	if current_adc != r.adc:
+		current_adc = r.adc
+		text = text + "- {} owl:members\n".format(current_adc)
+	text = text + "  - {}\n".format(r.member)
+text = text + "\n"
+
+text = text + "#### 4.3.3 EquivalentClass (normative)\n\n"
+sparql = prefixes + "SELECT DISTINCT ?a ?b WHERE { ?a owl:equivalentClass ?b . } ORDER BY ?a ?b"
+queryResult = graph.query(sparql)
+for r in queryResult :
+	text = text + "- {} owl:equivalentClass {}\n".format(r.a, r.b)
+text = text + "\n"
+
+text = text + "#### 4.3.4 EquivalentProperty (normative)\n\n"
+sparql = prefixes + "SELECT DISTINCT ?a ?b WHERE { ?a owl:equivalentProperty ?b . } ORDER BY ?a ?b"
+queryResult = graph.query(sparql)
+for r in queryResult :
+	text = text + "- {} owl:equivalentProperty {}\n".format(r.a, r.b)
+text = text + "\n"
+
+text = text + "#### 4.3.5 InverseOf (normative)\n\n"
+sparql = prefixes + "SELECT DISTINCT ?a ?b WHERE { ?a owl:inverseOf ?b . } ORDER BY ?a ?b"
+queryResult = graph.query(sparql)
+for r in queryResult :
+	text = text + "- {} owl:inverseOf {}\n".format(r.a, r.b)
+text = text + "\n"
+
 ## Produce a table of contents from the headings 
 toc = generate_markdown_toc((header+text+footer).splitlines())
 header = header.replace('{toc}', toc)
@@ -357,7 +405,7 @@ graph = rdflib.Graph()
 graph.parse(inputTermsOwlFilename, format="ttl")
 #column_list = ['iri', 'term_localName', 'prefLabel', 'label', 'comments', 'definition', 'rdf_type', 'organized_in','issued','status','term_iri','flags']
 column_list = ['term_iri', 'iri', 'term_localName', 'prefLabel', 'label', 'comments', 'definition', 'rdf_type', 'superclass']
-sparql = prefixes + "SELECT DISTINCT (str(?subject) as ?term_iri) (str(?subject) as ?iri) (?subject as ?term_localName)  ?prefLabel ?label ?comment ?definition ?rdf_type (GROUP_CONCAT(?parent; SEPARATOR='; ') AS ?parents)  WHERE {  ?subject a owl:Class . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . ?subject rdf:type ?rdf_type . ?subject rdfs:label ?label . OPTIONAL { ?subject rdfs:subClassOf ?parent } . ?subject rdfs:comment ?comment } GROUP BY ?subject ?prefLabel ?label ?comment ?definition ?rdf_type ORDER BY ?subject"
+sparql = prefixes + "SELECT DISTINCT (str(?subject) as ?term_iri) (str(?subject) as ?iri) (?subject as ?term_localName)  ?prefLabel ?label ?comment ?definition ?rdf_type (GROUP_CONCAT(?parent; SEPARATOR='; ') AS ?parents)  WHERE {  ?subject a owl:Class . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . ?subject rdf:type ?rdf_type . ?subject rdfs:label ?label . OPTIONAL { ?subject rdfs:subClassOf ?parent } . OPTIONAL { ?subject rdfs:comment ?comment } } GROUP BY ?subject ?prefLabel ?label ?comment ?definition ?rdf_type ORDER BY ?subject"
 queryResult = graph.query(sparql)
 
 terms_df = pd.DataFrame(queryResult, columns = column_list)
@@ -445,7 +493,7 @@ for r in queryResult :
 
 text = text + "\n## 4 Vocabulary (normative)\n"
 text = text + "\n### 4.1 Class terms (normative)\n"
-sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment (GROUP_CONCAT(?parent; SEPARATOR='; ') AS ?parents)  WHERE {  ?subject a owl:Class . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . OPTIONAL { ?subject rdfs:subClassOf ?parent } . ?subject rdfs:comment ?comment } GROUP BY ?subject ?prefLabel ?definition ?comment ORDER BY ?subject"
+sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment (GROUP_CONCAT(?parent; SEPARATOR='; ') AS ?parents)  WHERE {  ?subject a owl:Class . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . OPTIONAL { ?subject rdfs:subClassOf ?parent } . OPTIONAL { ?subject rdfs:comment ?comment } } GROUP BY ?subject ?prefLabel ?definition ?comment ORDER BY ?subject"
 queryResult = graph.query(sparql)
 for r in queryResult : 
 	entity = r.subject
@@ -457,11 +505,11 @@ for r in queryResult :
 	text = text + "- Definition: {}\n".format(r.definition)
 	if (r.parents) :
 		text = text + "- SubClass Of: {}\n".format(r.parents.replace("https://rs.tdwg.org/bdqffdq/terms/",""))
-	text = text + "- Comments: {}\n".format(r.comment.replace("\n\n","\n").replace("\n","  \n"))
+	text = text + "- Comments: {}\n".format(optional_replace(r.comment,"\n\n","\n").replace("\n","  \n"))
 	text = text + "\n********************\n\n"
 
 text = text + "### 4.2 ObjectProperty terms (normative)\n"
-sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment ?range ?restrictedRange ?restriction  (GROUP_CONCAT(?parent; SEPARATOR='; ') AS ?parents)  WHERE {  ?subject a owl:ObjectProperty . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . OPTIONAL { ?subject rdfs:subPropertyOf ?parent } . OPTIONAL { ?subject rdfs:range ?range . optional { ?range a owl:Restriction . ?range owl:onProperty ?restrictedRange . ?range  ?restriction ?x . FILTER ( ?restriction != owl:onProperty && ?restriction != rdf:type  ) }  } . ?subject rdfs:comment ?comment } GROUP BY ?subject ?prefLabel ?definition ?comment ORDER BY ?subject"
+sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment ?range ?restrictedRange ?restriction  (GROUP_CONCAT(?parent; SEPARATOR='; ') AS ?parents)  WHERE {  ?subject a owl:ObjectProperty . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . OPTIONAL { ?subject rdfs:subPropertyOf ?parent } . OPTIONAL { ?subject rdfs:range ?range . optional { ?range a owl:Restriction . ?range owl:onProperty ?restrictedRange . ?range  ?restriction ?x . FILTER ( ?restriction != owl:onProperty && ?restriction != rdf:type  ) }  } . OPTIONAL { ?subject rdfs:comment ?comment } } GROUP BY ?subject ?prefLabel ?definition ?comment ORDER BY ?subject"
 queryResult = graph.query(sparql)
 for r in queryResult : 
 	entity = r.subject
@@ -478,12 +526,12 @@ for r in queryResult :
 	#		text = text + "- Range [ {} {} ]\n".format(r.restriction.replace("http://www.w3.org/2002/07/owl#","owl:"), r.restrictedRange.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:"))
 	#	else :
 	#		text = text + "- Range {}\n".format(r.range.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:"))
-	text = text + "- Comments: {}\n".format(r.comment.replace("\n\n","\n").replace("\n","  \n"))
+	text = text + "- Comments: {}\n".format(optional_replace(r.comment,"\n\n","\n").replace("\n","  \n"))
 	text = text + "\n********************\n\n"
 
 
 text = text + "### 4.3 DataProperty terms (normative)\n"
-sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment ?range WHERE { ?subject a owl:DatatypeProperty . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . ?subject rdfs:comment ?comment . OPTIONAL { ?subject rdfs:range ?range }  }  ORDER BY ?subject"
+sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment ?range WHERE { ?subject a owl:DatatypeProperty . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . OPTIONAL { ?subject rdfs:comment ?comment } . OPTIONAL { ?subject rdfs:range ?range }  }  ORDER BY ?subject"
 queryResult = graph.query(sparql)
 for r in queryResult : 
 	entity = r.subject
@@ -495,7 +543,7 @@ for r in queryResult :
 	text = text + "- Definition: {}\n".format(r.definition)
 	#if (r.range) :
 	#	text = text + "- Range {}\n".format(r.range.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:").replace("http://www.w3.org/2001/XMLSchema#","xsd:"))
-	text = text + "- Comments: {}\n".format(r.comment.replace("\n\n","\n").replace("\n","  \n"))
+	text = text + "- Comments: {}\n".format(optional_replace(r.comment,"\n\n","\n").replace("\n","  \n"))
 	text = text + "\n********************\n\n"
 
 text = text + "### 4.4 NamedIndividual terms (normative)\n"
@@ -517,8 +565,49 @@ for r in queryResult :
 	if r.comment is None:
 		text = text + "- Comments:\n"
 	else:
-		text = text + "- Comments: {}\n".format(r.comment.replace("\n\n","\n").replace("\n","  \n"))
+		text = text + "- Comments: {}\n".format(optional_replace(r.comment,"\n\n","\n").replace("\n","  \n"))
 	text = text + "\n********************\n\n"
+
+text = text + "### 4.3 General Axioms (normative)\n"
+
+text = text + "#### 4.3.1 Disjointness (normative)\n\n"
+sparql = prefixes + "SELECT DISTINCT ?a ?b WHERE { ?a owl:disjointWith ?b . } ORDER BY ?a ?b"
+queryResult = graph.query(sparql)
+for r in queryResult :
+	text = text + "- {} owl:disjointWith {}\n".format(r.a, r.b)
+text = text + "\n"
+
+text = text + "#### 4.3.2 AllDisjointClasses (normative)\n\n"
+sparql = prefixes + "SELECT DISTINCT ?adc ?member WHERE { ?adc a owl:AllDisjointClasses . ?adc owl:members ?list . ?list rdf:rest*/rdf:first ?member . } ORDER BY ?adc ?member"
+queryResult = graph.query(sparql)
+current_adc = None
+for r in queryResult :
+	if current_adc != r.adc:
+		current_adc = r.adc
+		text = text + "- {} owl:members\n".format(current_adc)
+	text = text + "  - {}\n".format(r.member)
+text = text + "\n"
+
+text = text + "#### 4.3.3 EquivalentClass (normative)\n\n"
+sparql = prefixes + "SELECT DISTINCT ?a ?b WHERE { ?a owl:equivalentClass ?b . } ORDER BY ?a ?b"
+queryResult = graph.query(sparql)
+for r in queryResult :
+	text = text + "- {} owl:equivalentClass {}\n".format(r.a, r.b)
+text = text + "\n"
+
+text = text + "#### 4.3.4 EquivalentProperty (normative)\n\n"
+sparql = prefixes + "SELECT DISTINCT ?a ?b WHERE { ?a owl:equivalentProperty ?b . } ORDER BY ?a ?b"
+queryResult = graph.query(sparql)
+for r in queryResult :
+	text = text + "- {} owl:equivalentProperty {}\n".format(r.a, r.b)
+text = text + "\n"
+
+text = text + "#### 4.3.5 InverseOf (normative)\n\n"
+sparql = prefixes + "SELECT DISTINCT ?a ?b WHERE { ?a owl:inverseOf ?b . } ORDER BY ?a ?b"
+queryResult = graph.query(sparql)
+for r in queryResult :
+	text = text + "- {} owl:inverseOf {}\n".format(r.a, r.b)
+text = text + "\n"
 
 ## Produce a table of contents from the headings 
 toc = generate_markdown_toc((header+text+footer).splitlines())
@@ -639,6 +728,7 @@ header = header.replace('{term_key}', definitionTable)
 text = "\n"
 text = text + "- [Range Axioms (normative)](#41-range-axioms-normative)\n"
 text = text + "- [Different From Axioms (normative)](#42-different-from-axioms-normative)\n"
+text = text + "- [General Axioms (normative)](#43-general-axioms-normative)\n"
 text = text + "\n## 4 Vocabulary Extension (normative)\n"
 text = text + "\n### 4.1 Range Axioms (normative)\n"
 sparql = prefixes + "SELECT ?subject ?type ?range ?restriction ?restrictedRange WHERE { ?subject rdf:type ?type . ?subject rdfs:range ?range. optional { ?range a owl:Restriction . ?range owl:onProperty ?restrictedRange . ?range  ?restriction ?x . FILTER ( ?restriction != owl:onProperty && ?restriction != rdf:type  ) } } ORDER BY ?type ?subject "
@@ -677,6 +767,47 @@ for r in queryResult :
 	text = text + "| Type | {} |\n".format(r.type.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:"))
 	text = text + "| Different From | {} |\n".format(r.differentFromAggregate.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:"))
 	text = text + "\n\n"
+
+text = text + "### 4.3 General Axioms (normative)\n"
+
+text = text + "#### 4.3.1 Disjointness (normative)\n\n"
+sparql = prefixes + "SELECT DISTINCT ?a ?b WHERE { ?a owl:disjointWith ?b . } ORDER BY ?a ?b"
+queryResult = graph.query(sparql)
+for r in queryResult :
+	text = text + "- {} owl:disjointWith {}\n".format(r.a, r.b)
+text = text + "\n"
+
+text = text + "#### 4.3.2 AllDisjointClasses (normative)\n\n"
+sparql = prefixes + "SELECT DISTINCT ?adc ?member WHERE { ?adc a owl:AllDisjointClasses . ?adc owl:members ?list . ?list rdf:rest*/rdf:first ?member . } ORDER BY ?adc ?member"
+queryResult = graph.query(sparql)
+current_adc = None
+for r in queryResult :
+	if current_adc != r.adc:
+		current_adc = r.adc
+		text = text + "- {} owl:members\n".format(current_adc)
+	text = text + "  - {}\n".format(r.member)
+text = text + "\n"
+
+text = text + "#### 4.3.3 EquivalentClass (normative)\n\n"
+sparql = prefixes + "SELECT DISTINCT ?a ?b WHERE { ?a owl:equivalentClass ?b . } ORDER BY ?a ?b"
+queryResult = graph.query(sparql)
+for r in queryResult :
+	text = text + "- {} owl:equivalentClass {}\n".format(r.a, r.b)
+text = text + "\n"
+
+text = text + "#### 4.3.4 EquivalentProperty (normative)\n\n"
+sparql = prefixes + "SELECT DISTINCT ?a ?b WHERE { ?a owl:equivalentProperty ?b . } ORDER BY ?a ?b"
+queryResult = graph.query(sparql)
+for r in queryResult :
+	text = text + "- {} owl:equivalentProperty {}\n".format(r.a, r.b)
+text = text + "\n"
+
+text = text + "#### 4.3.5 InverseOf (normative)\n\n"
+sparql = prefixes + "SELECT DISTINCT ?a ?b WHERE { ?a owl:inverseOf ?b . } ORDER BY ?a ?b"
+queryResult = graph.query(sparql)
+for r in queryResult :
+	text = text + "- {} owl:inverseOf {}\n".format(r.a, r.b)
+text = text + "\n"
 
 ## Produce a table of contents from the headings 
 toc = generate_markdown_toc((header+text+footer).splitlines())
