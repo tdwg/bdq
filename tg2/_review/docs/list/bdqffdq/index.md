@@ -66,6 +66,7 @@ Draft Standard for Review
     - [ActedUpon](#actedupon)
     - [Amendment](#amendment)
     - [AmendmentAssertion](#amendmentassertion)
+    - [AmendmentConcept](#amendmentconcept)
     - [AmendmentMethod](#amendmentmethod)
     - [AmendmentPolicy](#amendmentpolicy)
     - [Argument](#argument)
@@ -90,6 +91,7 @@ Draft Standard for Review
     - [IssuePolicy](#issuepolicy)
     - [Measure](#measure)
     - [MeasurementAssertion](#measurementassertion)
+    - [MeasurementConcept](#measurementconcept)
     - [MeasurementMethod](#measurementmethod)
     - [MeasurementPolicy](#measurementpolicy)
     - [Mechanism](#mechanism)
@@ -146,6 +148,7 @@ Draft Standard for Review
     - [usesSpecification](#usesspecification)
     - [validationProperty](#validationproperty)
   - [4.3 DataProperty terms (normative)](#43-dataproperty-terms-normative)
+    - [hasArgumentValue](#hasargumentvalue)
     - [hasAuthoritiesDefaults](#hasauthoritiesdefaults)
     - [hasDateLastUpdated](#hasdatelastupdated)
     - [hasExpectedResponse](#hasexpectedresponse)
@@ -162,6 +165,12 @@ Draft Standard for Review
     - [AMENDED](#amended)
     - [NOT_AMENDED](#not_amended)
     - [RUN_HAS_RESULT](#run_has_result)
+  - [4.3 General Axioms (normative)](#43-general-axioms-normative)
+    - [4.3.1 Disjointness (normative)](#431-disjointness-normative)
+    - [4.3.2 AllDisjointClasses (normative)](#432-alldisjointclasses-normative)
+    - [4.3.3 EquivalentClass (normative)](#433-equivalentclass-normative)
+    - [4.3.4 EquivalentProperty (normative)](#434-equivalentproperty-normative)
+    - [4.3.5 InverseOf (normative)](#435-inverseof-normative)
 
 ## 1 Introduction (non-normative)
 
@@ -420,6 +429,15 @@ DQA(dr) = {dqa | dqa = < am, s, m, r >, am ∈ AM, s ∈ S, m ∈ M , r ∈ R �
 
 ********************
 
+#### AmendmentConcept
+
+- Name: bdqffdq:AmendmentConcept
+- Preferred Label: Amendment Concept
+- Definition: A term involved in proposals of changes to data or process to improve data quality to fit an expressed bdqffdq:DataQualityNeed.
+- Comments: 
+
+********************
+
 #### AmendmentMethod
 
 - Name: bdqffdq:AmendmentMethod
@@ -671,6 +689,15 @@ AM(me) = {va | me ∈ C D ⋀ va ⊂ C C}
 - Comments: A bdqffdq:MeasurementAssertion is a Report layer concept (see Figure 3 in Veiga et al., 2017) that describes the results of the execution of a Test that performs a bdqffdq:MeasurementMethod following a bdqffdq:Specification to assess a data quality bdqffdq:Measure.   
 A MeasurementAssertion is expected to carry a bdqffdq:ResponseResult of bdqffdq:COMPLETE or bdqffdq:NOT_COMPLETE or a numeric measured value (e.g., a bdqffdq:Measure of a dwc:eventDate duration in seconds).  
 DQM(dr) = {dqm | dqm =< me, s, m, r >, me ∈ ME, s ∈ S, m ∈ M , r ∈ R ⋀ dr ∈ DR}
+
+********************
+
+#### MeasurementConcept
+
+- Name: bdqffdq:MeasurementConcept
+- Preferred Label: Measurement Concept
+- Definition: A term involved in measurement of data quality with regards to expressed bdqffdq:DataQualityNeed.
+- Comments: 
 
 ********************
 
@@ -1207,6 +1234,15 @@ Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:Impro
 ********************
 
 ### 4.3 DataProperty terms (normative)
+#### hasArgumentValue
+
+- Name: bdqffdq:hasArgumentValue
+- Preferred Label: has Argument value
+- Definition: The value of a bdqffdq:Argument that is used in a bdqffdq:Specification to replace a Formal Parameter to determine the behavior of the bdqffdq:Specification.
+- Comments: 
+
+********************
+
 #### hasAuthoritiesDefaults
 
 - Name: bdqffdq:hasAuthoritiesDefaults
@@ -1353,6 +1389,31 @@ A bdqffdq:SingleRecord, like a bdqffdq:MultiRecord, consists of data with a defi
 - Comments: Applies to bdqffdq:Validations, bdqffdq:Issues and bdqfdfq:Measures, but not bdqffdq:Amendments. For a bdqffdq:Validation or a bdqffdq:Issue, the value will be found as a bdqffdq:ResponseResult object by following bdqffdq:hasResponseResult. For a bdqffdq:Measure, the value could be either in the data property bdqffdq:hasResponseResultValue or could be a ResponseResult object.
 
 ********************
+
+### 4.3 General Axioms (normative)
+#### 4.3.1 Disjointness (normative)
+
+
+#### 4.3.2 AllDisjointClasses (normative)
+
+- n0e783af9f54c4b08826f4fb1b7d77581b16 owl:members
+  - https://rs.tdwg.org/bdqffdq/terms/AbstractInformationElement
+  - https://rs.tdwg.org/bdqffdq/terms/ActedUpon
+  - https://rs.tdwg.org/bdqffdq/terms/Consulted
+- n0e783af9f54c4b08826f4fb1b7d77581b20 owl:members
+  - https://rs.tdwg.org/bdqffdq/terms/Amendment
+  - https://rs.tdwg.org/bdqffdq/terms/Issue
+  - https://rs.tdwg.org/bdqffdq/terms/Measure
+  - https://rs.tdwg.org/bdqffdq/terms/Validation
+
+#### 4.3.3 EquivalentClass (normative)
+
+
+#### 4.3.4 EquivalentProperty (normative)
+
+
+#### 4.3.5 InverseOf (normative)
+
 
 ## Acronyms (non-normative)
 

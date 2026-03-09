@@ -88,6 +88,12 @@ Draft Standard for Review
     - [AMENDED](#amended)
     - [EXTERNAL_PREREQUISITES_NOT_MET](#external_prerequisites_not_met)
     - [FILLED_IN](#filled_in)
+  - [4.3 General Axioms (normative)](#43-general-axioms-normative)
+    - [4.3.1 Disjointness (normative)](#431-disjointness-normative)
+    - [4.3.2 AllDisjointClasses (normative)](#432-alldisjointclasses-normative)
+    - [4.3.3 EquivalentClass (normative)](#433-equivalentclass-normative)
+    - [4.3.4 EquivalentProperty (normative)](#434-equivalentproperty-normative)
+    - [4.3.5 InverseOf (normative)](#435-inverseof-normative)
 
 ## 1 Introduction (non-normative)
 
@@ -175,6 +181,7 @@ In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use th
 
 - [Range Axioms (normative)](#41-range-axioms-normative)
 - [Different From Axioms (normative)](#42-different-from-axioms-normative)
+- [General Axioms (normative)](#43-general-axioms-normative)
 
 ## 4 Vocabulary Extension (normative)
 
@@ -439,6 +446,31 @@ In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use th
 | Name | bdqffdq:FILLED_IN |
 | Type | bdqffdq:ResponseStatus |
 | Different From | bdqffdq:NOT_AMENDED |
+
+
+### 4.3 General Axioms (normative)
+#### 4.3.1 Disjointness (normative)
+
+
+#### 4.3.2 AllDisjointClasses (normative)
+
+- ne1848b8c02a64977b46c4ba9b638bc0eb16 owl:members
+  - https://rs.tdwg.org/bdqffdq/terms/AbstractInformationElement
+  - https://rs.tdwg.org/bdqffdq/terms/ActedUpon
+  - https://rs.tdwg.org/bdqffdq/terms/Consulted
+- ne1848b8c02a64977b46c4ba9b638bc0eb20 owl:members
+  - https://rs.tdwg.org/bdqffdq/terms/Amendment
+  - https://rs.tdwg.org/bdqffdq/terms/Issue
+  - https://rs.tdwg.org/bdqffdq/terms/Measure
+  - https://rs.tdwg.org/bdqffdq/terms/Validation
+
+#### 4.3.3 EquivalentClass (normative)
+
+
+#### 4.3.4 EquivalentProperty (normative)
+
+
+#### 4.3.5 InverseOf (normative)
 
 
 ## Acronyms (non-normative)

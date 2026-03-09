@@ -96,6 +96,12 @@ Draft Standard for Review
       - [3.4.4.5 Data Quality Assessment (normative)](#3445-data-quality-assessment-normative)
       - [3.4.4.6 Quality Control (normative)](#3446-quality-control-normative)
       - [3.4.4.7 Quality Assurance (normative)](#3447-quality-assurance-normative)
+  - [4.3 General Axioms (normative)](#43-general-axioms-normative)
+    - [4.3.1 Disjointness (normative)](#431-disjointness-normative)
+    - [4.3.2 AllDisjointClasses (normative)](#432-alldisjointclasses-normative)
+    - [4.3.3 EquivalentClass (normative)](#433-equivalentclass-normative)
+    - [4.3.4 EquivalentProperty (normative)](#434-equivalentproperty-normative)
+    - [4.3.5 InverseOf (normative)](#435-inverseof-normative)
 
 [Acronyms (non-normative)](#acronyms-non-normative)
 
@@ -625,6 +631,31 @@ Note: This is a representation of the `Multi Record` `Measures` that return COMP
      QA(dr) = {dqv(dr) | dqv ∈ DQV ⋀ dr ∈ DR}
 
      qa(dr1) = {dqv1, dqv2}
+### 4.3 General Axioms (normative)
+#### 4.3.1 Disjointness (normative)
+
+
+#### 4.3.2 AllDisjointClasses (normative)
+
+- nac32ca504bc54174868efe246bb3ccd8b16 owl:members
+  - https://rs.tdwg.org/bdqffdq/terms/AbstractInformationElement
+  - https://rs.tdwg.org/bdqffdq/terms/ActedUpon
+  - https://rs.tdwg.org/bdqffdq/terms/Consulted
+- nac32ca504bc54174868efe246bb3ccd8b20 owl:members
+  - https://rs.tdwg.org/bdqffdq/terms/Amendment
+  - https://rs.tdwg.org/bdqffdq/terms/Issue
+  - https://rs.tdwg.org/bdqffdq/terms/Measure
+  - https://rs.tdwg.org/bdqffdq/terms/Validation
+
+#### 4.3.3 EquivalentClass (normative)
+
+
+#### 4.3.4 EquivalentProperty (normative)
+
+
+#### 4.3.5 InverseOf (normative)
+
+
 ## Acronyms (non-normative)
 
 A list of Acronyms can be found in the [Acronyms (non-normative)](../../index.md#5-acronyms-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.
