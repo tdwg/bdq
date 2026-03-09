@@ -595,6 +595,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 - Name: bdqffdq:AbstractInformationElement
 - Definition: A bdqffdq:InformationElement described in abstract terms and not linked with any concrete terms.
 - SubClass Of: InformationElement
+- Disjoint With: ActedUpon, Consulted
 
 ********************
 
@@ -603,6 +604,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 - Name: bdqffdq:ActedUpon
 - Definition: A bdqffdq:InformationElement, expressed in concrete terms, about which a bdqffdq:DataQualityNeed expresses bdqffdq:Assertions about the data quality in that bdqffdq:InformationElement.
 - SubClass Of: InformationElement
+- Disjoint With: AbstractInformationElement, Consulted
 
 ********************
 
@@ -611,6 +613,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 - Name: bdqffdq:Amendment
 - Definition: A bdqffdq:DataQualityNeed that expresses how proposals may be made to improve the fitness for use of data.
 - SubClass Of: AmendmentConcept; DataQualityNeed
+- Disjoint With: Issue, Measure, Validation
 
 ********************
 
@@ -666,6 +669,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 - Name: bdqffdq:Consulted
 - Definition: A bdqffdq:InformationElement, expressed in concrete terms, about which a bdqffdq:DataQualityNeed examines in order to expresses bdqffdq:Assertions about the data quality in another bdqffdq:InformationElement.
 - SubClass Of: InformationElement
+- Disjoint With: AbstractInformationElement, ActedUpon
 
 ********************
 
@@ -769,6 +773,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 - Name: bdqffdq:Issue
 - Definition: A bdqffdq:DataQualityNeed that expresses how quality problems may be identified in data.
 - SubClass Of: DataQualityNeed; IssueConcept
+- Disjoint With: Amendment, Measure, Validation
 
 ********************
 
@@ -808,6 +813,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 - Name: bdqffdq:Measure
 - Definition: A bdqffdq:DataQualityNeed that expresses how the fitness of data for some use may be measured.
 - SubClass Of: DataQualityNeed; MeasurementConcept
+- Disjoint With: Amendment, Issue, Validation
 
 ********************
 
@@ -940,6 +946,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 - Name: bdqffdq:Validation
 - Definition: A bdqffdq:DataQualityNeed that expresses how data may be evaluated for fitness for use.
 - SubClass Of: DataQualityNeed; ValidationConcept
+- Disjoint With: Amendment, Issue, Measure
 
 ********************
 
