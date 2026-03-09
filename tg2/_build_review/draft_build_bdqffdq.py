@@ -686,46 +686,117 @@ for r in queryResult :
 	text = text + "| Different From | {} |\n".format(r.differentFromAggregate.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:"))
 	text = text + "\n\n"
 
+# --- General Axioms (normative) ---------------------------------------------
+
+def to_curie(value):
+	"""Best-effort CURIE shortening for display."""
+	if value is None:
+		return ""
+	s = str(value)
+	s = s.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:")
+	s = s.replace("https://rs.tdwg.org/bdqdim/terms/","bdqdim:")
+	s = s.replace("https://rs.tdwg.org/bdqcrit/terms/","bdqcrit:")
+	s = s.replace("https://rs.tdwg.org/bdqenh/terms/","bdqenh:")
+	s = s.replace("http://www.w3.org/2002/07/owl#","owl:")
+	s = s.replace("http://www.w3.org/1999/02/22-rdf-syntax-ns#","rdf:")
+	s = s.replace("http://www.w3.org/2000/01/rdf-schema#","rdfs:")
+	s = s.replace("http://www.w3.org/2001/XMLSchema#","xsd:")
+	return s
+
+def render_none_if_empty(row_count):
+	if row_count == 0:
+		# Keep it simple and consistent with the rest of the doc
+		return "None\n\n"
+	return ""
+
 text = text + "### 4.3 General Axioms (normative)\n"
 
+# 4.3.1 Disjointness
 text = text + "#### 4.3.1 Disjointness (normative)\n\n"
 sparql = prefixes + "SELECT DISTINCT ?a ?b WHERE { ?a owl:disjointWith ?b . } ORDER BY ?a ?b"
-queryResult = graph.query(sparql)
-for r in queryResult :
-	text = text + "- {} owl:disjointWith {}\n".format(r.a, r.b)
-text = text + "\n"
+queryResult = list(graph.query(sparql))
+text = text + render_none_if_empty(len(queryResult))
+for r in queryResult:
+	text = text + "| Property | Value |\n"
+	text = text + "| -------- | ----- |\n"
+	text = text + "| Axiom | owl:disjointWith |\n"
+	text = text + "| Subject | {} |\n".format(to_curie(r.a))
+	text = text + "| Object | {} |\n".format(to_curie(r.b))
+	text = text + "\n"
 
+# 4.3.2 AllDisjointClasses
 text = text + "#### 4.3.2 AllDisjointClasses (normative)\n\n"
 sparql = prefixes + "SELECT DISTINCT ?adc ?member WHERE { ?adc a owl:AllDisjointClasses . ?adc owl:members ?list . ?list rdf:rest*/rdf:first ?member . } ORDER BY ?adc ?member"
-queryResult = graph.query(sparql)
-current_adc = None
-for r in queryResult :
-	if current_adc != r.adc:
-		current_adc = r.adc
-		text = text + "- {} owl:members\n".format(current_adc)
-	text = text + "  - {}\n".format(r.member)
-text = text + "\n"
+rows = list(graph.query(sparql))
+text = text + render_none_if_empty(len(rows))
+if rows:
+	# group members by axiom node (usually a bnode); do not print the bnode id
+	current_adc = None
+	members = []
+	for r in rows:
+		adc = r.adc
+		member = r.member
+		if current_adc is None:
+			current_adc = adc
+		if adc != current_adc:
+			# flush previous group
+			text = text + "| Property | Value |\n"
+			text = text + "| -------- | ----- |\n"
+			text = text + "| Axiom | owl:AllDisjointClasses |\n"
+			text = text + "| Members | {} |\n".format(", ".join([to_curie(m) for m in members]))
+			text = text + "\n"
+			# start new group
+			current_adc = adc
+			members = []
+		members.append(member)
 
+	# flush last group
+	if members:
+		text = text + "| Property | Value |\n"
+		text = text + "| -------- | ----- |\n"
+		text = text + "| Axiom | owl:AllDisjointClasses |\n"
+		text = text + "| Members | {} |\n".format(", ".join([to_curie(m) for m in members]))
+		text = text + "\n"
+
+# 4.3.3 EquivalentClass
 text = text + "#### 4.3.3 EquivalentClass (normative)\n\n"
 sparql = prefixes + "SELECT DISTINCT ?a ?b WHERE { ?a owl:equivalentClass ?b . } ORDER BY ?a ?b"
-queryResult = graph.query(sparql)
-for r in queryResult :
-	text = text + "- {} owl:equivalentClass {}\n".format(r.a, r.b)
-text = text + "\n"
+queryResult = list(graph.query(sparql))
+text = text + render_none_if_empty(len(queryResult))
+for r in queryResult:
+	text = text + "| Property | Value |\n"
+	text = text + "| -------- | ----- |\n"
+	text = text + "| Axiom | owl:equivalentClass |\n"
+	text = text + "| Subject | {} |\n".format(to_curie(r.a))
+	text = text + "| Object | {} |\n".format(to_curie(r.b))
+	text = text + "\n"
 
+# 4.3.4 EquivalentProperty
 text = text + "#### 4.3.4 EquivalentProperty (normative)\n\n"
 sparql = prefixes + "SELECT DISTINCT ?a ?b WHERE { ?a owl:equivalentProperty ?b . } ORDER BY ?a ?b"
-queryResult = graph.query(sparql)
-for r in queryResult :
-	text = text + "- {} owl:equivalentProperty {}\n".format(r.a, r.b)
-text = text + "\n"
+queryResult = list(graph.query(sparql))
+text = text + render_none_if_empty(len(queryResult))
+for r in queryResult:
+	text = text + "| Property | Value |\n"
+	text = text + "| -------- | ----- |\n"
+	text = text + "| Axiom | owl:equivalentProperty |\n"
+	text = text + "| Subject | {} |\n".format(to_curie(r.a))
+	text = text + "| Object | {} |\n".format(to_curie(r.b))
+	text = text + "\n"
 
+# 4.3.5 InverseOf
 text = text + "#### 4.3.5 InverseOf (normative)\n\n"
 sparql = prefixes + "SELECT DISTINCT ?a ?b WHERE { ?a owl:inverseOf ?b . } ORDER BY ?a ?b"
-queryResult = graph.query(sparql)
-for r in queryResult :
-	text = text + "- {} owl:inverseOf {}\n".format(r.a, r.b)
-text = text + "\n"
+queryResult = list(graph.query(sparql))
+text = text + render_none_if_empty(len(queryResult))
+for r in queryResult:
+	text = text + "| Property | Value |\n"
+	text = text + "| -------- | ----- |\n"
+	text = text + "| Axiom | owl:inverseOf |\n"
+	text = text + "| Subject | {} |\n".format(to_curie(r.a))
+	text = text + "| Object | {} |\n".format(to_curie(r.b))
+	text = text + "\n"
+
 
 ## Produce a table of contents from the headings 
 toc = generate_markdown_toc((header+text+footer).splitlines())
