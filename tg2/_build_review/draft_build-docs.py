@@ -28,7 +28,8 @@ from function_lib import build_authors_contributors_markdown, build_contributors
 from function_lib import build_authors_markdown
 #from function_lib import markdown_heading_to_link
 from function_lib import generate_markdown_toc
-
+# To build dictionary of disjointWith axioms for bdqffdq
+from collections import defaultdict
 
 # -----------------
 # Configuration section
@@ -223,6 +224,61 @@ for templatePath, document in directories.items() :
 
 	if document == 'bdqffdq' : 
 		# Special handling of bdqffdq, load minimal ontology documentation, add to header
+		
+		## Helper functions to compile a dictionary of disjnct axioms
+		def curie_for_bdqffdq(iri: str) -> str:
+			return iri.replace("https://rs.tdwg.org/bdqffdq/terms/", "bdqffdq:")
+		
+		def build_disjoint_map(graph, prefixes: str):
+			"""
+			Returns dict[str, list[str]] mapping term IRI string -> sorted list of disjoint term CURIEs.
+			Includes:
+			  - explicit owl:disjointWith
+			  - pairwise disjointness derived from owl:AllDisjointClasses/owl:members lists
+			"""
+			disjoint = defaultdict(set)
+		
+			# 1) explicit owl:disjointWith (symmetric by OWL semantics; make symmetric here)
+			sparql = prefixes + """
+			SELECT DISTINCT ?a ?b WHERE {
+			  ?a owl:disjointWith ?b .
+			}
+			"""
+			for r in graph.query(sparql):
+				a = str(r.a); b = str(r.b)
+				disjoint[a].add(b)
+				disjoint[b].add(a)
+		
+			# 2) owl:AllDisjointClasses membership -> pairwise disjointness
+			sparql = prefixes + """
+			SELECT DISTINCT ?adc ?member WHERE {
+			  ?adc a owl:AllDisjointClasses .
+			  ?adc owl:members ?list .
+			  ?list rdf:rest*/rdf:first ?member .
+			}
+			ORDER BY ?adc ?member
+			"""
+			members_by_adc = defaultdict(list)
+			for r in graph.query(sparql):
+				members_by_adc[str(r.adc)].append(str(r.member))
+		
+			for members in members_by_adc.values():
+				# pairwise
+				for i, a in enumerate(members):
+					for b in members[i+1:]:
+						disjoint[a].add(b)
+						disjoint[b].add(a)
+		
+			# convert to sorted CURIE lists
+			disjoint_curie = {}
+			for a, bs in disjoint.items():
+				# only show bdqffdq terms, otherwise it can get noisy; you can remove this filter if desired
+				bs2 = [curie_for_bdqffdq(b) for b in bs if b.startswith("https://rs.tdwg.org/bdqffdq/terms/")]
+				disjoint_curie[a] = sorted(set(bs2), key=str.lower)
+		
+			return disjoint_curie	
+
+
 		# ---------------
 		# Load rdf
 		# ---------------
@@ -230,6 +286,9 @@ for templatePath, document in directories.items() :
 		graph = rdflib.Graph()
 		graph.parse(inputTermsOwlFilename, format="ttl")
 		
+		## Build disjoint map for bdqffdq
+		disjoint_map = build_disjoint_map(graph, prefixes)
+
 		indextext = "\n"
 		indextext = indextext + "- [Classes](#51-class-terms-normative)\n"
 		indextext = indextext + "- [Object Properties](#52-objectproperty-terms-normative)\n"
@@ -281,6 +340,7 @@ for templatePath, document in directories.items() :
 		queryResult = graph.query(sparql)
 		for r in queryResult : 
 			entity = r.subject
+			subject_iri = str(r.subject)
 			entity = entity.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:");
 			term = entity.replace("bdqffdq:","");
 			text = text + "#### {}\n\n".format(term)
@@ -289,6 +349,11 @@ for templatePath, document in directories.items() :
 			text = text + "- Definition: {}\n".format(r.definition)
 			if (r.parents) :
 				text = text + "- SubClass Of: {}\n".format(r.parents.replace("https://rs.tdwg.org/bdqffdq/terms/",""))
+			disj = disjoint_map.get(subject_iri, [])
+			if disj:
+				# display without the bdqffdq: prefix
+ 				disj_short = [x.replace("bdqffdq:", "") for x in disj]
+				text = text + "- Disjoint With: {}\n".format(", ".join(disj_short))
 			# text = text + "- Notes: {}\n".format(r.comment.replace("\n\n","\n").replace("\n","  \n"))
 			text = text + "\n********************\n\n"
 		
