@@ -296,47 +296,6 @@ footer = footer.replace('{document_title}', document_configuration_yaml['documen
 footer = footer.replace('{current_iri}', document_configuration_yaml['current_iri'])
 footer = footer.replace('{ratification_date}', document_configuration_yaml['doc_modified'])
    
-text = text + "### 4.3 General Axioms (normative)\n"
-
-text = text + "#### 4.3.1 Disjointness (normative)\n\n"
-sparql = prefixes + "SELECT DISTINCT ?a ?b WHERE { ?a owl:disjointWith ?b . } ORDER BY ?a ?b"
-queryResult = graph.query(sparql)
-for r in queryResult :
-	text = text + "- {} owl:disjointWith {}\n".format(r.a, r.b)
-text = text + "\n"
-
-text = text + "#### 4.3.2 AllDisjointClasses (normative)\n\n"
-sparql = prefixes + "SELECT DISTINCT ?adc ?member WHERE { ?adc a owl:AllDisjointClasses . ?adc owl:members ?list . ?list rdf:rest*/rdf:first ?member . } ORDER BY ?adc ?member"
-queryResult = graph.query(sparql)
-current_adc = None
-for r in queryResult :
-	if current_adc != r.adc:
-		current_adc = r.adc
-		text = text + "- {} owl:members\n".format(current_adc)
-	text = text + "  - {}\n".format(r.member)
-text = text + "\n"
-
-text = text + "#### 4.3.3 EquivalentClass (normative)\n\n"
-sparql = prefixes + "SELECT DISTINCT ?a ?b WHERE { ?a owl:equivalentClass ?b . } ORDER BY ?a ?b"
-queryResult = graph.query(sparql)
-for r in queryResult :
-	text = text + "- {} owl:equivalentClass {}\n".format(r.a, r.b)
-text = text + "\n"
-
-text = text + "#### 4.3.4 EquivalentProperty (normative)\n\n"
-sparql = prefixes + "SELECT DISTINCT ?a ?b WHERE { ?a owl:equivalentProperty ?b . } ORDER BY ?a ?b"
-queryResult = graph.query(sparql)
-for r in queryResult :
-	text = text + "- {} owl:equivalentProperty {}\n".format(r.a, r.b)
-text = text + "\n"
-
-text = text + "#### 4.3.5 InverseOf (normative)\n\n"
-sparql = prefixes + "SELECT DISTINCT ?a ?b WHERE { ?a owl:inverseOf ?b . } ORDER BY ?a ?b"
-queryResult = graph.query(sparql)
-for r in queryResult :
-	text = text + "- {} owl:inverseOf {}\n".format(r.a, r.b)
-text = text + "\n"
-
 ## Produce a table of contents from the headings 
 toc = generate_markdown_toc((header+text+footer).splitlines())
 header = header.replace('{toc}', toc)
@@ -567,47 +526,6 @@ for r in queryResult :
 	else:
 		text = text + "- Comments: {}\n".format(optional_replace(r.comment,"\n\n","\n").replace("\n","  \n"))
 	text = text + "\n********************\n\n"
-
-text = text + "### 4.3 General Axioms (normative)\n"
-
-text = text + "#### 4.3.1 Disjointness (normative)\n\n"
-sparql = prefixes + "SELECT DISTINCT ?a ?b WHERE { ?a owl:disjointWith ?b . } ORDER BY ?a ?b"
-queryResult = graph.query(sparql)
-for r in queryResult :
-	text = text + "- {} owl:disjointWith {}\n".format(r.a, r.b)
-text = text + "\n"
-
-text = text + "#### 4.3.2 AllDisjointClasses (normative)\n\n"
-sparql = prefixes + "SELECT DISTINCT ?adc ?member WHERE { ?adc a owl:AllDisjointClasses . ?adc owl:members ?list . ?list rdf:rest*/rdf:first ?member . } ORDER BY ?adc ?member"
-queryResult = graph.query(sparql)
-current_adc = None
-for r in queryResult :
-	if current_adc != r.adc:
-		current_adc = r.adc
-		text = text + "- {} owl:members\n".format(current_adc)
-	text = text + "  - {}\n".format(r.member)
-text = text + "\n"
-
-text = text + "#### 4.3.3 EquivalentClass (normative)\n\n"
-sparql = prefixes + "SELECT DISTINCT ?a ?b WHERE { ?a owl:equivalentClass ?b . } ORDER BY ?a ?b"
-queryResult = graph.query(sparql)
-for r in queryResult :
-	text = text + "- {} owl:equivalentClass {}\n".format(r.a, r.b)
-text = text + "\n"
-
-text = text + "#### 4.3.4 EquivalentProperty (normative)\n\n"
-sparql = prefixes + "SELECT DISTINCT ?a ?b WHERE { ?a owl:equivalentProperty ?b . } ORDER BY ?a ?b"
-queryResult = graph.query(sparql)
-for r in queryResult :
-	text = text + "- {} owl:equivalentProperty {}\n".format(r.a, r.b)
-text = text + "\n"
-
-text = text + "#### 4.3.5 InverseOf (normative)\n\n"
-sparql = prefixes + "SELECT DISTINCT ?a ?b WHERE { ?a owl:inverseOf ?b . } ORDER BY ?a ?b"
-queryResult = graph.query(sparql)
-for r in queryResult :
-	text = text + "- {} owl:inverseOf {}\n".format(r.a, r.b)
-text = text + "\n"
 
 ## Produce a table of contents from the headings 
 toc = generate_markdown_toc((header+text+footer).splitlines())
