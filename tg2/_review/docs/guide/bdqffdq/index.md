@@ -78,6 +78,7 @@ Draft Standard for Review
     - [ActedUpon](#actedupon)
     - [Amendment](#amendment)
     - [AmendmentAssertion](#amendmentassertion)
+    - [AmendmentConcept](#amendmentconcept)
     - [AmendmentMethod](#amendmentmethod)
     - [AmendmentPolicy](#amendmentpolicy)
     - [Argument](#argument)
@@ -102,6 +103,7 @@ Draft Standard for Review
     - [IssuePolicy](#issuepolicy)
     - [Measure](#measure)
     - [MeasurementAssertion](#measurementassertion)
+    - [MeasurementConcept](#measurementconcept)
     - [MeasurementMethod](#measurementmethod)
     - [MeasurementPolicy](#measurementpolicy)
     - [Mechanism](#mechanism)
@@ -158,6 +160,7 @@ Draft Standard for Review
     - [usesSpecification](#usesspecification)
     - [validationProperty](#validationproperty)
   - [5.3 DataProperty terms (normative)](#53-dataproperty-terms-normative)
+    - [hasArgumentValue](#hasargumentvalue)
     - [hasAuthoritiesDefaults](#hasauthoritiesdefaults)
     - [hasDateLastUpdated](#hasdatelastupdated)
     - [hasExpectedResponse](#hasexpectedresponse)
@@ -167,12 +170,17 @@ Draft Standard for Review
     - [MultiRecord](#multirecord)
     - [SingleRecord](#singlerecord)
     - [COMPLETE](#complete)
+    - [COMPLIANT](#compliant)
     - [IS_ISSUE](#is_issue)
     - [IS_ISSUE](#is_issue)
     - [NOT_COMPLETE](#not_complete)
+    - [NOT_COMPLIANT](#not_compliant)
     - [NOT_ISSUE](#not_issue)
     - [POTENTIAL_ISSUE](#potential_issue)
     - [AMENDED](#amended)
+    - [EXTERNAL_PREREQUISITES_NOT_MET](#external_prerequisites_not_met)
+    - [FILLED_IN](#filled_in)
+    - [INTERNAL_PREREQUISITES_NOT_MET](#internal_prerequisites_not_met)
     - [NOT_AMENDED](#not_amended)
     - [RUN_HAS_RESULT](#run_has_result)
 
@@ -614,6 +622,13 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 ********************
 
+#### AmendmentConcept
+
+- Name: bdqffdq:AmendmentConcept
+- Definition: A term involved in proposals of changes to data or process to improve data quality to fit an expressed bdqffdq:DataQualityNeed.
+
+********************
+
 #### AmendmentMethod
 
 - Name: bdqffdq:AmendmentMethod
@@ -801,6 +816,13 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 - Name: bdqffdq:MeasurementAssertion
 - Definition: A bdqffdq:Assertion expressing the result of a bdqffdq:Implementation measuring a particular bdqffdq:DataQualityNeed in a particular bdqffdq:DataResource.
 - SubClass Of: Assertion; MeasurementConcept
+
+********************
+
+#### MeasurementConcept
+
+- Name: bdqffdq:MeasurementConcept
+- Definition: A term involved in measurement of data quality with regards to expressed bdqffdq:DataQualityNeed.
 
 ********************
 
@@ -1231,6 +1253,13 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 ********************
 
 ### 5.3 DataProperty terms (normative)
+#### hasArgumentValue
+
+- Name: bdqffdq:hasArgumentValue
+- Definition: The value of a bdqffdq:Argument that is used in a bdqffdq:Specification to replace a Formal Parameter to determine the behavior of the bdqffdq:Specification.
+
+********************
+
 #### hasAuthoritiesDefaults
 
 - Name: bdqffdq:hasAuthoritiesDefaults
@@ -1296,6 +1325,15 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 ********************
 
+#### COMPLIANT
+
+- Name: bdqffdq:COMPLIANT
+- Type: bdqffdq:ResponseResult
+- DifferentFrom: bdqffdq:NOT_COMPLIANT
+- Definition: A bdqffdq:ResponseResult of a bdqffdq:Validation where the data conforms to the bdqffdq:Criteria for quality in the Test bdqffdq:Specification.
+
+********************
+
 #### IS_ISSUE
 
 - Name: bdqffdq:IS_ISSUE
@@ -1322,6 +1360,14 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 ********************
 
+#### NOT_COMPLIANT
+
+- Name: bdqffdq:NOT_COMPLIANT
+- Type: bdqffdq:ResponseResult
+- Definition: A bdqffdq:ResponseResult of a bdqffdq:Validation where the data do not conform to the bdqffdq:Criteria for quality in the Test bdqffdq:Specification.
+
+********************
+
 #### NOT_ISSUE
 
 - Name: bdqffdq:NOT_ISSUE
@@ -1345,6 +1391,32 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 - Type: bdqffdq:ResponseStatus
 - DifferentFrom: bdqffdq:NOT_AMENDED
 - Definition: A bdqffdq:ResponseStatus used to indicate that a bdqffdq:hasResponseResultValue from a bdqffdq:Amendment contains a proposed change.
+
+********************
+
+#### EXTERNAL_PREREQUISITES_NOT_MET
+
+- Name: bdqffdq:EXTERNAL_PREREQUISITES_NOT_MET
+- Type: bdqffdq:ResponseStatus
+- DifferentFrom: bdqffdq:INTERNAL_PREREQUISITES_NOT_MET
+- Definition: A bdqffdq:ResponseStatus used to indicate that a bdqffdq:ResponseResult was not generated because a bdq:sourceAuthority was not accessible. If the Test is run at a later time, it may produce a different bdqffdq:ResponseStatus.
+
+********************
+
+#### FILLED_IN
+
+- Name: bdqffdq:FILLED_IN
+- Type: bdqffdq:ResponseStatus
+- DifferentFrom: bdqffdq:NOT_AMENDED
+- Definition: A bdqffdq:ResponseStatus used to indicate that a bdqffdq:Amendment contains a proposed change to a record in a bdqffdq:hasResponseResultValue where the bdqffdq:InformationElement was bdq:Empty.
+
+********************
+
+#### INTERNAL_PREREQUISITES_NOT_MET
+
+- Name: bdqffdq:INTERNAL_PREREQUISITES_NOT_MET
+- Type: bdqffdq:ResponseStatus
+- Definition: A bdqffdq:ResponseStatus used to indicate that a bdqffdq:ResponseResult was not generated because values of the bdqffdq:InformationElement were insufficient to run the Test. If the Test is run at a later time on unmodified data, it should produce the same bdqffdq:ResponseStatus.
 
 ********************
 
