@@ -55,11 +55,9 @@ Draft Standard for Review
 [2 Context for Quality, Uses and Purposes (non-normative)](#2-context-for-quality-uses-and-purposes-non-normative)
 
 [2.1 Quality Control and Quality Assurance (non-normative)](#21-quality-control-and-quality-assurance-non-normative)
-
-[2.1.1 Quality Assurance (non-normative)](#211-quality-assurance-non-normative)
-
-[2.1.2 Quality Control (non-normative)](#212-quality-control-non-normative)
-  - [2.1 Quality Control in Data Aggregation (non-normative)](#21-quality-control-in-data-aggregation-non-normative)
+  - [2.1.1 Quality Assurance (non-normative)](#211-quality-assurance-non-normative)
+  - [2.1.2 Quality Control (non-normative)](#212-quality-control-non-normative)
+  - [2.1.3 Quality Control in Data Aggregation (non-normative)](#213-quality-control-in-data-aggregation-non-normative)
 
 [3 A Guide to the Tests (non-normative)](#3-a-guide-to-the-tests-non-normative)
   - [3.1 Test Types (non-normative)](#31-test-types-non-normative)
@@ -67,6 +65,11 @@ Draft Standard for Review
     - [3.2.1 Inputs to Tests (non-normative)](#321-inputs-to-tests-non-normative)
     - [3.2.2 Outputs: Data Quality Reports (non-normative)](#322-outputs-data-quality-reports-non-normative)
     - [3.2.3 Outputs: Responses From Tests (normative)](#323-outputs-responses-from-tests-normative)
+      - [3.2.3.1 Shorthand For Responses From Tests (non-normative)](#3231-shorthand-for-responses-from-tests-non-normative)
+      - [3.2.3.2 Validation Test Reports (non-normative)](#3232-validation-test-reports-non-normative)
+      - [3.2.3.3 Issue Test Reports (non-normative)](#3233-issue-test-reports-non-normative)
+      - [3.2.3.4 Measure Test Reports (non-normative)](#3234-measure-test-reports-non-normative)
+      - [3.2.3.5 Amendment Test Reports (non-normative)](#3235-amendment-test-reports-non-normative)
   - [3.3 Amendments Propose Changes (normative)](#33-amendments-propose-changes-normative)
     - [3.3.1 Caution in Proposing Changes (non-normative)](#331-caution-in-proposing-changes-non-normative)
   - [3.4 Test Parameters (normative)](#34-test-parameters-normative)
@@ -76,13 +79,15 @@ Draft Standard for Review
 
 [5 Time of Day and Time Zones (non-normative)](#5-time-of-day-and-time-zones-non-normative)
 
-[6 Creating New Tests (non-normative)](#6-creating-new-tests-non-normative)
-  - [6.1 Elements of a New Test (non-normative)](#61-elements-of-a-new-test-non-normative)
-  - [6.2 Proposing to add a Test to the BDQ Standard (non-normative)](#62-proposing-to-add-a-test-to-the-bdq-standard-non-normative)
+[6 Dates and Calendars (non-normative)](#6-dates-and-calendars-non-normative)
 
-[7 Creating New Use Cases (non-normative)](#7-creating-new-use-cases-non-normative)
-  - [7.1 Elements of a New Use Case (non-normative)](#71-elements-of-a-new-use-case-non-normative)
-  - [7.3 Proposing to add a Use Case to the BDQ Standard (non-normative)](#73-proposing-to-add-a-use-case-to-the-bdq-standard-non-normative)
+[7 Creating New Tests (non-normative)](#7-creating-new-tests-non-normative)
+  - [7.1 Elements of a New Test (non-normative)](#71-elements-of-a-new-test-non-normative)
+  - [7.2 Proposing to add a Test to the BDQ Standard (non-normative)](#72-proposing-to-add-a-test-to-the-bdq-standard-non-normative)
+
+[8 Creating New Use Cases (non-normative)](#8-creating-new-use-cases-non-normative)
+  - [8.1 Elements of a New Use Case (non-normative)](#81-elements-of-a-new-use-case-non-normative)
+  - [8.2 Proposing to add a Use Case to the BDQ Standard (non-normative)](#82-proposing-to-add-a-use-case-to-the-bdq-standard-non-normative)
 
 [Acronyms (non-normative)](#acronyms-non-normative)
 
@@ -169,11 +174,11 @@ Tests for data quality may serve two purposes: Quality Control and Quality Assur
 
 The success of `Quality Assurance` and `Quality Control` depends on organisational context and resources. These include establishing clear validation, monitoring, and feedback procedures to maintain high quality data, and encouraging collaboration among data custodians, analysts, and end-users to ensure data quality aligns with practical needs and supports reliable decisions. It also requires developing formal methodologies to understand and process the Test outputs in the `Data Quality Reports`.
 
-## 2.1.1 Quality Assurance (non-normative)
+### 2.1.1 Quality Assurance (non-normative)
 
 The Fitness for use Framework (Veiga 2016, Veiga et al., 2017) provides a formal means for filtering records for [Quality Assurance](../../bdqffdq/index.md#3447-quality-assurance-normative) (involving only Measures), but informally, data may be thought as being fit for some use if all `Validation` Tests comprising that `Use Case` have a `Response.result`="COMPLIANT", and all non-numeric `Measure` Tests comprising that `Use Case` have a `Response.result`="COMPLETE". The BDQ Tests include a set of `Multi Record` `Measures` whose purpose is to enable formal filtering (Quality Assurance) and reporting (for Quality Control) under the [Fitness for Use Framework Ontology](../../bdqffdq/index.md).
 
-## 2.1.2 Quality Control (non-normative)
+### 2.1.2 Quality Control (non-normative)
 
 The Framework provides a formal statement of [Quality Control](../../bdqffdq/index.md#3446-quality-control-normative), but the application of Quality Control 'in the wild' is more nuanced; more complex than simple filtering under Quality Assurance. The context of Quality Control may affect how Tests and their results are applied to data, information systems and processes.
 
@@ -185,12 +190,11 @@ Complicating the analysis of `Data Quality Reports` on databases of record is th
  
 Correcting issues subsequent to data capture introduces further complexities in that any amendment to existing values requires careful human evaluation and a forking of data records to maintain original data and an audit trail. Data cleaning often requires far more time than data analysis.
 
-### 2.1 Quality Control in Data Aggregation (non-normative)
+### 2.1.3 Quality Control in Data Aggregation (non-normative)
 
 When a data provider is performing `Quality Control` while preparing data for aggregation (or when reports are provided by aggregators back to upstream data providers) analysis of the resulting reports can uncover both simple errors introduced in mapping data onto Darwin Core terms (e.g, field transpositions in mapping) as well as to underlying problems in the data itself.   Data validation at this stage may also reveal cases where the database of record holds more authoritative information than resource relied upon as a `sourceAuthority` for a Test, meaning that the data in the database of record could be correct despite NOT_COMPLIANT `Validation` Test results.  Careful analysis of `Quality Control` reports is essential, to understand the origin of potential problems, what changes may be acceptable in a database of record, and as data cleaning involves significant effort, is is essential to identify specific areas for targeted data cleaning projects.
 
 `Quality Control` in downstream analysis of aggregated data faces other challenges. The volume of aggregated data is likely to be large, making it infeasable to either review all proposed `Amendments` or to report of proposed changes to upstream databases of record. Quality Control in the workflow processing of data streams from large scale aggregation may include acceptance of proposals from `Amendments` into a data stream for downstream analysis. This should be done with some care in checking that the proposed `Amendments` are not introducing errors or false precision, and both unamended and amended data should be preserved, with accepted proposals from `Amendments` clearly identifiable as changes to the data stream.
-
 
 ## 3 A Guide to the Tests (non-normative)
 
@@ -229,6 +233,99 @@ Software that includes an implementation of one or more Tests may produce `Data 
 #### 3.2.3 Outputs: Responses From Tests (normative) 
 
 The specifications for the structure of a response from running a Test can be found in [3.1 Structure of Response (normative)](../../bdqtest/index.md#31-structure-of-response-normative) in the document [BDQ Tests and Assertions](../../bdqtest/index.md).
+
+##### 3.2.3.1 Shorthand For Responses From Tests (non-normative) 
+
+A `Data Quality Report` from a BDQ `Test` is expected to include a `Response` for each `Test` run.   In brief, each `Response` includes the following elements:
+
+* __`Response.status`__ - Metadata describing the status of the `Test` run, including whether the `Test` was executed successfully.  Values include `RUN_HAS_RESULT`, `INTERNAL_PREREQUISITES_NOT_MET` and `EXTERNAL_PREREQUISITES_NOT_MET`.
+* __`Response.result`__ - The result of the evaluation of the `Test` against the input data.  Values include "COMPLIANT", "NOT_COMPLIANT", "COMPLETE", "NOT_COMPLETE", or data values, depending on the type of `Test`.
+* __`Response.comment`__ - A human-readable comment providing additional context or information to assist users in the interpretation of the `Test` result.
+
+The presentation of this `Response` to users is not defined by the BDQ standard and will vary.
+
+##### 3.2.3.2 Validation Test Reports (non-normative)
+
+As `Validation` tests compare the data against known standards or rules., the `Response.result` for a `Validation` Test is expected to be either "COMPLIANT" or "NOT_COMPLIANT". 
+
+The Test `VALIDATION_DAY_INRANGE` checks if the value of `dwc:day` is interpretable as a valid integer between 1 and 28 inclusive, or if it is validly 29, 30 or 31 given the `dwc:month` and `dwc:year`.
+
+For example, where input data has `dwc:day`` = “15” and no month or year; a `Response` may be: 
+* Response.status=RUN_HAS_RESULT
+* Response.result=COMPLIANT
+* Response.comment="The provided value of dwc:day [15] is in range"
+
+Alternatively, if the input data has values `dwc:day`="30", `dwc:month`="2", `dwc:year`="1952"; a `Response` may be:
+
+* Response.status=RUN_HAS_RESULT
+* Response.result=NOT_COMPLIANT 
+* Response.comment="The provided value of dwc:day [30] is not in range for the provided dwc:month [2] and dwc:year [1952]".
+
+The content of Response.comment is not defined by the BDQ standard and may vary, so phrasing such as "There was no day 30 in February of 1952" is also acceptable.
+
+Another case is that the input data contain values that cannot be interpreted within the definition of the test, for example, where the input data has `dwc:day`="31", `dwc:month`="", `dwc:year`="1932"; a `Response` may specify that the test could not be evaluated because a prerequisite in the input data was not met, for example:
+
+* Response.status=INTERNAL_PREREQUISITES_NOT_MET
+* Response.result=
+* Response.comment="The provided value of dwc:day [31] cannot be evaluated for compliance because the prerequisites of a valid dwc:month and dwc:year were not met for days between 29 and 31."
+
+A Response.status of INTERNAL_PREREQUISITES_NOT_MET indicates that the data themselves did not meet the prerequisites for the test to be evaluated, and thus the test could not be evaluated, and will always return this result with the same input data. In contrast, a Response.status of EXTERNAL_PREREQUISITES_NOT_MET indicates that the test could not be evaluated because some external resource (e.g., a source authority) was not available at the test was run, and running the test again at a different time might yield a different result.
+
+##### 3.2.3.3 Issue Test Reports (non-normative)
+
+`Issue` Tests can be thought of as warning flags. These Tests provide a warning that an issue may need further investigation by a human who could determine what action should be taken.
+
+If we look at the Test `ISSUE_DATAGENERALIZATIONS_NOTEMPTY`, the Test alerts users that there is value in the field that indicates that the data may have been generalized in some way.
+For example, the field for `dwc:dataGeneralizations` may say "placed on quarter degree grid". A `Response` could be:
+
+* Response.status=RUN_HAS_RESULT, 
+* Response.result=POTENTIAL_ISSUE, 
+* Response.comment="dwc:dataGeneralizations is bdq:NotEmpty this data has been generalized in some way and may or may not be fit for your use".
+
+Alternatively, if there is nothing in the `dwc:dataGeneralization` field, i.e. it is empty; the `Response` may be:
+
+* Response.status=RUN_HAS_RESULT, 
+* Response.result=NOT_ISSUE, 
+* Response.comment="dwc:dataGeneralizations is bdq:Empty".
+
+##### 3.2.3.4 Measure Test Reports (non-normative)
+
+`Measure` Tests can be thought of as metrics. These Tests either count things, or assert that data evaluate as fit for some use (COMPLETE), or not fit for some use (NOT_COMPLETE).  Almost all of the `Measure` Tests defined in BDQ are `Multi Record` Tests that are powerfull tools for formal support of `Quality Control` and `Quality Assurance` under the [Fitness for Use Framework Ontology](../../bdqffdq/index.md).  
+
+There is one `Single Record` `Measure` Test that provides a metric on a Darwin Core term in a `Single Record`, MEASURE_EVENTDATE_DURATION_SECONDS, which provides a measure of the duration in seconds of the `dwc:eventDate`.  This test is intended to allow consumers of data quality reports to quickly identify records where the collecting event is known to a precision of about a day or less, or about a year or less, or any arbitrary time range that may be of interest to a particular use. For example, if the `dwc:eventDate` is "2020", the `Response` would be:
+The duration of a year in seconds is about , so the `Response` would be:
+
+* Response.status=RUN_HAS_RESULT
+* Response.result="31622400"
+* Response.comment="The provided dwc:eventDate [2020] represents a time interval of a year that was a leap year, so it had 366 days or 31622400 seconds"
+
+There are a small set of `Measures` that count up the results of other tests run on the same `SingleRecord` one of these is the Test `MEASURE_AMENDMENTS_PROPOSED`, it provides a count of the number of Amendment Tests that proposed changes to that record.
+
+For example, if 17 tests proposed amendments on a particular `SingleRecord`; the `Response` would be
+
+* Response.status=RUN_HAS_RESULT 
+* Response.result="17"
+* Response.comment="17 Tests of TYPE AMENDMENT proposed changes to the record"
+
+Most `Measure` Tests are `Multi Record` Tests that take as input the results of `Single Record` Test on some data set and provide metrics or filters on those data.  These support formal application of `Quality Control` and `Quality Assurance` and are not discussed further here.
+
+##### 3.2.3.5 Amendment Test Reports (non-normative)
+
+`Amendment` Tests can be thought of as suggestions for improvement. These Tests examine input values and may propose changes or additions to improve the quality (they could also propose changes to processes, but BDQ includes only `Amendments` that propose changes to data values).
+
+If we look at the Test ` AMENDMENT_DAY_STANDARDIZED`, the Test may suggest changing a value to comply with the requirements for `dwc:day`, i.e. that it is interpretable as a valid integer.
+
+For example, for a record where the `dwc:day` is given as the “23rd” the suggestion may be to change this to “23” – a `Response` may be: 
+
+* Response.status=AMENDED
+* Response.result={dwc:day="23"} 
+* Response.comment="The provided value for dwc:day [23rd] is interpretable as 23, which is compliant with the requirements for dwc:day, so the value has been standardized to 23"
+
+Alternatively, for a record where the day is given as “X” which is ambiguous, the `Response` may be:
+
+* Response.status=NOT_AMENDED
+* Response.result=
+* Response.comment="The provided value of dwc:day [X] is ambiguous."
 
 ### 3.3 Amendments Propose Changes (normative)
 
@@ -274,7 +371,11 @@ The definitions of the terms used for the Tests can be found in [Terms Used in t
 
 Time of day (as opposed to dates) is not considered in any of the BDQ Tests. There are `Use Cases` where the time zone is important. Dates within a dataset (`bdqffdq:MultiRecord`) aggregated from multiple sources may have plus or minus one day errors introduced. New Tests are required if ignorance of time would make such data unfit for a purpose. For further information, see Section [4.2 Time (non-normative)](../../supplement/index.md#42-time-non-normative) in [BDQ Supplemental Information](../../supplement/index.md).
 
-## 6 Creating New Tests (non-normative)
+## 6 Dates and Calendars (non-normative)
+
+Different calendars have been used at different times in different places, and the transcription of an original date in one calendar into dwc:eventDate, where a Gregorian Calendar is assumed, may or may not have been done with the correct translation of the date. Metadata may or not be present to even identify such records. For more details of how the differences in Calendar dates should be treated see Section [4.1 Dates and Calendars (non-normative)](../../supplement/index.md#41-dates-and-calendars-non-normative) in [BDQ Supplemental Information](../../supplement/index.md).
+
+## 7 Creating New Tests (non-normative)
 
 The `Tests` in the BDQ Standard are a subset of all the possible tests that could be developed for testing biodiversity data quality, even within the `Darwin Core` environment. [2.1 Definition of Core](../../supplement/index.md#21-definition-of-core-non-normative) in the [BDQ Supplemental Information](../../supplement/index.md) provides the background context as to why the current suite of Tests were chosen.
 
@@ -286,27 +387,27 @@ there are a number of Tests that were proposed but not included in BDQ tagged �
 
 Implementers are free to implement a subset of the `CORE` Tests, or `Supplementary` Tests, or new Tests when there is a particular data quality need within their domain - e.g., testing for a value of sub-genus against a taxonomic name authority or testing for a valid depth against maximum depth around the location of an observation. Note however, that an implementation of BDQ will only be compliant with the standard if all `Tests` for at least one `Use Case` are implemented. 
 
-### 6.1 Elements of a New Test (non-normative)
+### 7.1 Elements of a New Test (non-normative)
 
 Formally, the description of a test is complex.  Informally, there are a few central elements that describe a test and what it does.  First, a Test serves some purpose, it evaluates some way in which data are fit for some purpose, thus each Test starts from one or more `Use Cases`.     Secondly, a Test operates on specific inputs, specific elements of data, these are the `Information Elements`.  Thirdly, a test has some specific purpose, described in simple language.  Fourthly, this plain language description of the test must be expanded into specific language that allows an implementer to understand exactly what code implementing a Test should do, and what outputs it should provide for different possible input values, this is the `Expected Response`.   It is also important to be clear whether a Test evaluates a `SingleRecord` or operates over multiple records in a data set (a `MultiRecord` test).
 
 Tests may be expected to form related clusters, for example, a `Validation` that assesses whether the value of ac:variantLiteral in a `SingleRecord` is found in as a controlled value string in the Audiovisual Core variant: List of Terms, combined with an `Amendment` that proposes changes to values of ac:variantLiteral to conform them to that controlled vocabulary, combined with a `MultiRecord` `Measure` that counts the number of `COMPLIANT` values for the `Validation` evaluated for each record in a data set.  Under `QualityControl`, this `Measure` can evaluate how much the data set could be improved for some purpose if all the proposed changes from the `Amendment` were accepted (by running the tests in pre-amendment, amendment, and post-amendment phases) 
 
-### 6.2 Proposing to add a Test to the BDQ Standard (non-normative)
+### 7.2 Proposing to add a Test to the BDQ Standard (non-normative)
 
 To propose to add a Test to the BDQ Standard, follow the instructions provided by the BDQ Maintenance Group.
 
-## 7 Creating New Use Cases (non-normative)
+## 8 Creating New Use Cases (non-normative)
 
 BDQ is based on `Use Cases`: An evaluation of ‘data quality’ must be within the context of a `Use Case`. `Use Cases` are subtypes of the `DataQualityNeeds` that express what `Assertions` may be made about data with respect to fitness for use and should link to in the relevant Tests that apply to that `Use Case`.
 
 Five over-arching `Use Cases` have been used in the BDQ Standard. These were developed through the TDWG Biodiversity Data Quality Interest Group Task Group 3: Data Quality Use Cases (Rees and Nicholls, 2020). These, of course, are only a small subset of all possible `Use Cases` and users may wish to develop `Use Cases` for their own purposes.
 
-### 7.1 Elements of a New Use Case (non-normative)
+### 8.1 Elements of a New Use Case (non-normative)
 
 `Use Cases` are straightforward to describe.  A `Use Case` has a name, a description, and a list of Tests.  The list of Tests is expressed as four `Policies`, a `ValidationPolicy` comprised of the `Validations` related to the `Use Case`, an `AmendmentPolicy` listing related `Amendments`, a `MeasurementPolicy` listing related `Measurements`, and an `IssuePolicy` listing any related `Issues`.   
 
-### 7.3 Proposing to add a Use Case to the BDQ Standard (non-normative)
+### 8.2 Proposing to add a Use Case to the BDQ Standard (non-normative)
 
 To propose to add a new `Use Case` to the BDQ Standard, follow the instructions provided by the BDQ Maintenance Group.
 
