@@ -139,9 +139,9 @@ Correcting issues subsequent to data capture introduces further complexities in 
 
 ### 2.1.3 Quality Control in Data Aggregation (non-normative)
 
-When a data provider is performing `Quality Control` while preparing data for aggregation (or when reports are provided by aggregators back to upstream data providers) analysis of the resulting reports can uncover both simple errors introduced in mapping data onto Darwin Core terms (e.g, field transpositions in mapping) as well as to underlying problems in the data itself.   Data validation at this stage may also reveal cases where the database of record holds more authoritative information than resource relied upon as a `sourceAuthority` for a Test, meaning that the data in the database of record could be correct despite NOT_COMPLIANT `Validation` Test results.  Careful analysis of `Quality Control` reports is essential, to understand the origin of potential problems, what changes may be acceptable in a database of record, and as data cleaning involves significant effort, is is essential to identify specific areas for targeted data cleaning projects.
+When a data provider is performing `Quality Control` while preparing data for aggregation (or when reports are provided by aggregators back to upstream data providers) analysis of the resulting reports can uncover both simple errors introduced in mapping data onto Darwin Core terms (e.g, field transpositions in mapping) as well as to underlying problems in the data itself.   Data validation at this stage may also reveal cases where the database of record holds more authoritative information than resource relied upon as a `sourceAuthority` for a Test, meaning that the data in the database of record could be correct despite NOT_COMPLIANT `Validation` Test results.  Careful analysis of `Quality Control` reports is essential, to understand the origin of potential problems, what changes may be acceptable in a database of record, and as data cleaning involves significant effort, it is essential to identify specific areas for targeted data cleaning projects.
 
-`Quality Control` in downstream analysis of aggregated data faces other challenges. The volume of aggregated data is likely to be large, making it infeasable to either review all proposed `Amendments` or to report of proposed changes to upstream databases of record. Quality Control in the workflow processing of data streams from large scale aggregation may include acceptance of proposals from `Amendments` into a data stream for downstream analysis. This should be done with some care in checking that the proposed `Amendments` are not introducing errors or false precision, and both unamended and amended data should be preserved, with accepted proposals from `Amendments` clearly identifiable as changes to the data stream.
+`Quality Control` in downstream analysis of aggregated data faces other challenges. The volume of aggregated data is likely to be large, making it infeasible to either review all proposed `Amendments` or to report of proposed changes to upstream databases of record. Quality Control in the workflow processing of data streams from large scale aggregation may include acceptance of proposals from `Amendments` into a data stream for downstream analysis. This should be done with some care in checking that the proposed `Amendments` are not introducing errors or false precision, and both unamended and amended data should be preserved, with accepted proposals from `Amendments` clearly identifiable as changes to the data stream.
 
 ## 3 A Guide to the Tests (non-normative)
 
@@ -237,10 +237,10 @@ Alternatively, if there is nothing in the `dwc:dataGeneralization` field, i.e. i
 
 ##### 3.2.3.4 Measure Test Reports (non-normative)
 
-`Measure` Tests can be thought of as metrics. These Tests either count things, or assert that data evaluate as fit for some use (COMPLETE), or not fit for some use (NOT_COMPLETE).  Almost all of the `Measure` Tests defined in BDQ are `Multi Record` Tests that are powerfull tools for formal support of `Quality Control` and `Quality Assurance` under the [Fitness for Use Framework Ontology](../../bdqffdq/index.md).  
+`Measure` Tests can be thought of as metrics. These Tests either count things, or assert that data evaluate as fit for some use (COMPLETE), or not fit for some use (NOT_COMPLETE).  Almost all of the `Measure` Tests defined in BDQ are `Multi Record` Tests that are powerful tools for formal support of `Quality Control` and `Quality Assurance` under the [Fitness for Use Framework Ontology](../../bdqffdq/index.md).  
 
 There is one `Single Record` `Measure` Test that provides a metric on a Darwin Core term in a `Single Record`, MEASURE_EVENTDATE_DURATION_SECONDS, which provides a measure of the duration in seconds of the `dwc:eventDate`.  This test is intended to allow consumers of data quality reports to quickly identify records where the collecting event is known to a precision of about a day or less, or about a year or less, or any arbitrary time range that may be of interest to a particular use. For example, if the `dwc:eventDate` is "2020", the `Response` would be:
-The duration of a year in seconds is about , so the `Response` would be:
+The duration of a year in seconds is about 31,536,000 seconds (or about 31,622,400 in a leap year, about as sometimes there are leap seconds as well (complexities that contributed to us not defining `Validations` for event dates shorter than a year)) so the `Response` would be:
 
 * Response.status=RUN_HAS_RESULT
 * Response.result="31622400"
@@ -328,7 +328,7 @@ The `Tests` in the BDQ Standard are a subset of all the possible tests that coul
 
 Users and communities are free to define, implement, and use their own tests for their own purposes, and may propose tests for inclusion within the BDQ Standard.
 
-When developing a new test, , 
+When developing a new test, , **TODO**
 
 there are a number of Tests that were proposed but not included in BDQ tagged “`Supplementary`” in GitHub, and other tests that were proposed but rejected tagged "`DO_NOT_IMPLEMENT`" and users are urged to review these tests before proposing a new Test from scratch. The `Supplementary` Tests may provide a close fit or a template to build from for some desired test.  The comments on `DO_NOT_IMPLEMENT` tests describe why these particular test proposals were viewed as problematic and rationale for why they were rejected.
 
