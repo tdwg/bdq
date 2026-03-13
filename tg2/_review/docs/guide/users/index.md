@@ -72,7 +72,8 @@ Draft Standard for Review
       - [3.2.3.5 Amendment Test Reports (non-normative)](#3235-amendment-test-reports-non-normative)
   - [3.3 Amendments Propose Changes (normative)](#33-amendments-propose-changes-normative)
     - [3.3.1 Caution in Proposing Changes (non-normative)](#331-caution-in-proposing-changes-non-normative)
-  - [3.4 Test Parameters (normative)](#34-test-parameters-normative)
+  - [3.4 Test Parameters (non-normative)](#34-test-parameters-non-normative)
+  - [3.4 Test Parameters in Reports (normative)](#34-test-parameters-in-reports-normative)
     - [3.4.1 Test Parameters Example (non-normative)](#341-test-parameters-example-non-normative)
 
 [4 Using the BDQ Tests Quick Reference Guide (non-normative)](#4-using-the-bdq-tests-quick-reference-guide-non-normative)
@@ -207,7 +208,7 @@ The BDQ Tests are each very specific. Some Tests are very simple and self-explan
 
 ### 3.1 Test Types (non-normative)
 
-There are four types of Tests: `Validation`, `Issue`, `Measure`, and `Amendment`. Each Test is intended to examine just one specific aspect of data quality. Tests are assembled into Test suites (`Policies`) that assess the fitness of data for a specific use (`Use Case`).  In the Fittness for Use Framework, `Policies` are the formal mechanism for linking a `Use Case` to the relevant `DataQualityNeed` instances (Tests).
+There are four types of Tests: `Validation`, `Issue`, `Measure`, and `Amendment`. Each Test is intended to examine just one specific aspect of data quality. Tests are assembled into Test suites (`Policies`) that assess the fitness of data for a specific use (`Use Case`).  In the Fitness for Use Framework, `Policies` are the formal mechanism for linking a `Use Case` to the relevant `DataQualityNeed` instances (Tests).
 
 **`Validation` Tests** can be thought of as fact-checking. They compare the data against known standards or rules. `Validation` Tests examine the values of one or more [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) against a `Criterion` for quality. An example is [VALIDATION_COUNTRYCODE_STANDARD](../../terms/bdqtest/index.md#VALIDATION_COUNTRYCODE_STANDARD) where `dwc:countryCode` is checked against a `sourceAuthority` for validity.
 
@@ -344,9 +345,17 @@ Amendment Tests **propose changes** to data. It is up to the consumers of `Data 
 
 To maintain the integrity and reliability of the BDQ Framework, we have been careful to avoid proposing `Amendments` in cases where there is significant uncertainty — whether due to ambiguous data, unclear provenance, or unresolved conflicts between sources. This principle helps ensure that changes are justifiable and that the risks of introducing erroneous or misleading data through overcorrection are minimized.
 
-### 3.4 Test Parameters (normative) 
+### 3.4 Test Parameters (non-normative) 
 
-Some Tests are parameterized. When a Test is parameterized, and a value other than the default value is used for some `Parameter`, reports SHOULD identify the Tests using at least the Label (`rdfs:label`) for the Test class, in combination with the `Parameter` and the value of the `Argument` that replaced the `Parameter` in this specific case.
+Some tests are parameterized.  Parameters allows those running a Test to change the behavior of the test at the time it is run.  This allows users to easily adapt the tests to their specific needs and contexts, making them more flexible and applicable to a wider range of scenarios.  One important use of parameters is to allow users working with data from just one country to change a defaults such as `source authority` to to use ones that are more appropriate for that country, all while retaining the same decision making process within the Test.
+
+For example, a user working with data from just one country may wish to change a default `bdq:sourceAuthority` for some test to an authority that is more appropriate for that particular country – e.g. to change the default species names authority (which covers the whole world) to one specific for just that country. For more details see [3.3](../../bdqtest/index.md#33-parameterizing-the-tests-normative) in the [BDQ Tests and Assertions](../../bdqtest/index.md) document.
+
+Similarly a parameterized Test may change default numerical values to values more appropriate to the local area – e.g. setting a maximum elevation that is more appropriate to the country, rather than using a default global maximum, such that for some parameterized `Validation` elevations higher than the local maximum, but still lower than the global maximum elevation would be `NOT_COMPLIANT`, fitting the local needs, while they would be `COMPLIANT` and not identified as problematic for local needs if the  the default global maximum elevation were used.
+
+### 3.4 Test Parameters in Reports (normative) 
+
+When a Test is parameterized, and a value other than the default value is used for some `Parameter`, reports SHOULD identify the Tests using at least the Label (`rdfs:label`) for the Test class, in combination with the `Parameter` and the value of the `Argument` that replaced the `Parameter` in this specific case.
 
 Values of `Parameters`, other than the defaults, SHOULD also be present in the `Response.comment`.
 
@@ -354,13 +363,27 @@ More normative guidance on Test `Parameters` can be found in the section [6.1 Pa
 
 #### 3.4.1 Test Parameters Example (non-normative) 
 
-If a Test with a non-default `Parameter` value is used, this should be represented with at least the Label (`rdfs:label`) for the Test class (e.g., [VALIDATION_MINDEPTH_INRANGE](../../terms/bdqtest/index.md#VALIDATION_MINDEPTH_INRANGE)) in combination with the `Parameter` (e.g., `bdq:maximumValidDepthInMeters`) and the value of the argument that replaced the default `Parameter` value in this specific case (e.g., 1642). For example:
+Consider the Test `VALIDATION_MAXELEVATION_INRANGE`.  If you are evaluating data that could come from anywhere in the world, you would want to use the default value for the 'Parameter' that sets the maximum elevation to that of the highest point on Earth.  However, if you are working on a dataset consisting entirely of data pertaining to locations in New Zealand, you may wish to set the `Parameter` bdq:maximumValidElevationInMeters value to the maximum elevation in New Zealand (i.e., 3724 meters).  
 
-	`VALIDATION_MAXDEPTH_INRANGE with bdq:maximumValidDepthInMeters=1642`
+So, for a record where dwc:maximumElevationinMeters is given as "4500" which is out of range for New Zealand, the Response for the test with the default value for the parameter would be:
 
-should be accompanied by a `Response.comment` that includes text expressing something similar to "Non-default bdq:maximumValidDepthInMeters=1642".
+* `Response.status`=RUN_HAS_RESULT
+* `Response.result`=COMPLIANT
+* `Response.comment`="The provided value of dwc:maximumElevationInMeters [4500] is in range`.
 
-So, a value of `dwc:minimumDepthInMeters` of 2000m would be NOT_COMPLIANT in this case, while with the default value for that parameter (11000), it would be COMPLIANT.
+But if the test is run on the same data, but with the parameter bqd:maximumValidElevationInMeters set to 3724, appropriate for New Zealand, the Response would be:
+
+* `Response.status`=RUN_HAS_RESULT
+* `Response.result`=NOT_COMPLIANT
+* `Response.comment`="The provided value of dwc:maximumElevationInMeters [4500] is out of range using the non-default bdq:maximumValidElevationInMeters=3724`.
+
+Thus the parameter changes the behavior of the test to fit local needs.
+
+It is important to identify the use of non-default parameter values in reports, so that users can understand the context in the test results.
+
+If a Test with a non-default `Parameter` value is used, this should be represented to consumers of data quality reports by combining at least the Label (`rdfs:label`) for the Test class (e.g., [VALIDATION_MINDEPTH_INRANGE](../../terms/bdqtest/index.md#VALIDATION_MINDEPTH_INRANGE)) in combination with the `Parameter` (e.g., `bdq:maximumValidDepthInMeters`) and the value of the argument that replaced the default `Parameter` value in this specific case (e.g., 1642). For example, a Data Quality Report could identify this Test as `VALIDATION_MAXDEPTH_INRANGE with bdq:maximumValidDepthInMeters=1642` rather than simply `VALIDATION_MAXDEPTH_INRANGE`
+
+Similarly, Test Results should be accompanied by a `Response.comment` that includes text expressing something similar to "Non-default bdq:maximumValidDepthInMeters=1642" as in the example above.  Both are important to help users understand the context of test results, and to allow users to identify where non-default parameter values are used.
 
 ## 4 Using the BDQ Tests Quick Reference Guide (non-normative)
 
