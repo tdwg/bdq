@@ -330,9 +330,9 @@ The `Tests` in the BDQ Standard are a subset of all the possible tests that coul
 
 Users and communities are free to define, implement, and use their own tests for their own purposes, and may propose tests for inclusion within the BDQ Standard.
 
-When developing a new test, , **TODO**
+When considering development of a new Test, users are urged to first review existing Test proposals in GitHub that may be related to their intended Test. In particular, there are a number of Tests that were proposed but not included in BDQ and tagged “`Supplementary`”, as well as Tests that were proposed but rejected and tagged “`DO_NOT_IMPLEMENT`”.
 
-there are a number of Tests that were proposed but not included in BDQ tagged “`Supplementary`” in GitHub, and other tests that were proposed but rejected tagged "`DO_NOT_IMPLEMENT`" and users are urged to review these tests before proposing a new Test from scratch. The `Supplementary` Tests may provide a close fit or a template to build from for some desired test.  The comments on `DO_NOT_IMPLEMENT` tests describe why these particular test proposals were viewed as problematic and rationale for why they were rejected.
+The `Supplementary` Tests may provide a close match for a specific `Use Case`, or may provide a useful template to build from, and should be reviewed before proposing a new Test from scratch. The `DO_NOT_IMPLEMENT` Tests document proposals that were judged to be problematic; the accompanying comments describe the rationale for rejection, and reviewing them can help avoid re-proposing Tests with similar issues.
 
 Implementers are free to implement a subset of the `CORE` Tests, or `Supplementary` Tests, or new Tests when there is a particular data quality need within their domain - e.g., testing for a value of sub-genus against a taxonomic name authority or testing for a valid depth against maximum depth around the location of an observation. Note however, that an implementation of BDQ will only be compliant with the standard if all `Tests` for at least one `Use Case` are implemented. 
 
