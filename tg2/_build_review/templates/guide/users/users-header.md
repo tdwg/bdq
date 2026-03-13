@@ -124,7 +124,7 @@ The success of `Quality Assurance` and `Quality Control` depends on organisation
 
 ### 2.1.1 Quality Assurance (non-normative)
 
-The Fitness for use Framework (Veiga 2016, Veiga et al., 2017) provides a formal means for filtering records for [Quality Assurance](../../bdqffdq/index.md#3447-quality-assurance-normative) (involving only Measures), but informally, data may be thought as being fit for some use if all `Validation` Tests comprising that `Use Case` have a `Response.result`="COMPLIANT", and all non-numeric `Measure` Tests comprising that `Use Case` have a `Response.result`="COMPLETE". The BDQ Tests include a set of `Multi Record` `Measures` whose purpose is to enable formal filtering (Quality Assurance) and reporting (for Quality Control) under the [Fitness for Use Framework Ontology](../../bdqffdq/index.md).
+The Fitness for Use Framework (Veiga 2016, Veiga et al., 2017) provides a formal means for filtering records for [Quality Assurance](../../bdqffdq/index.md#3447-quality-assurance-normative) (involving only Measures), but informally, data may be thought of as being fit for some use if all `Validation` Tests comprising that `Use Case` have a `Response.result`="COMPLIANT", and all non-numeric `Measure` Tests comprising that `Use Case` have a `Response.result`="COMPLETE". The BDQ Tests include a set of `Multi Record` `Measures` whose purpose is to enable formal filtering (Quality Assurance) and reporting (for Quality Control) under the [Fitness for Use Framework Ontology](../../bdqffdq/index.md).
 
 ### 2.1.2 Quality Control (non-normative)
 
@@ -148,7 +148,7 @@ When a data provider is performing `Quality Control` while preparing data for ag
 
 The BDQ standard defines a set of Tests to assess the quality of biodiversity data. Implementations of these Tests may produce `Data Quality Reports`. The format of such `Data Quality Reports` may vary, but they should contain specific information about outputs from each Test. This guide describes the Tests, their inputs, expectations about their outputs, how they may be used for Quality Control and Quality Assurance, and describes the [BDQ Tests Quick Reference Guide](../../terms/bdqtest/index.md), which gives the details of each BDQ Test. 
 
-Biodiversity data encompasses information about the variety of life on Earth. This includes observations of where and when organisms were found (such as the date and location of a bird sighting including the species name, and potentially other details about its behavior, observed habitat, or physical characteristics. The BDQ standard is designed to assess the quality of these data for a variety of uses including research and conservation. Implementations of the Tests defined in BDQ examine such `dwc:Occurrence` data expressed using Darwin Core terms. Darwin Core is a standardized set of terms used to describe biodiversity data, it provides a common vocabulary that allows different databases and researchers to share information in a consistent way.
+Biodiversity data encompasses information about the variety of life on Earth, including observations of where and when organisms were found. For example, a record of a bird sighting might include the date, location, and species name, along with additional observed details such as behavior, habitat, or physical characteristics.  The BDQ standard is designed to assess the quality of these data for a variety of uses, including research and conservation. Implementations of the BDQ Tests examine such `dwc:Occurrence` data expressed using Darwin Core terms. Darwin Core provides a standardized set of terms—a common vocabulary that allows different databases and researchers to share biodiversity data in a consistent way.
 
 The BDQ Tests are each very specific. Some Tests are very simple and self-explanatory, such as the Test that asserts that the value of `dwc:day` should be an integer in the range 1 to 31. Other Tests reference external authoritative sources of information to evaluate data quality, these are referred to as source authorities. For example, testing values of `dwc:countryCode` involves comparison with the `sourceAuthority` that is the list of valid ISO country codes.
 
@@ -202,7 +202,7 @@ As `Validation` tests compare the data against known standards or rules, the `Re
 
 The Test `VALIDATION_DAY_INRANGE` checks if the value of `dwc:day` is interpretable as a valid integer between 1 and 28 inclusive, or if it is validly 29, 30 or 31 given the `dwc:month` and `dwc:year`.
 
-For example, where input data has `dwc:day` = "15” and no month or year; a Response may be: 
+For example, where input data has `dwc:day` = "15" and no month or year; a Response may be: 
 
 * `Response.status`=RUN_HAS_RESULT
 * `Response.result`=COMPLIANT
@@ -233,7 +233,7 @@ For example, the field for `dwc:dataGeneralizations` may say "placed on quarter 
 
 * `Response.status`=RUN_HAS_RESULT 
 * `Response.result`=POTENTIAL_ISSUE 
-* `Response.comment`="dwc:dataGeneralizations is bdq:NotEmpty this data has been generalized in some way and may or may not be fit for your use"
+* `Response.comment`="dwc:dataGeneralizations contains some value, these data have been generalized in some way and may or may not be fit for your use."
 
 Alternatively, if there is nothing in the `dwc:dataGeneralizations` field, i.e. it is empty; the Response may be:
 
@@ -253,7 +253,7 @@ For example, if the `dwc:eventDate` is "2020", the Response would be:
 * `Response.result`="31622400"
 * `Response.comment`="The provided dwc:eventDate [2020] represents a time interval of a year that was a leap year, so it had 366 days or 31622400 seconds"
 
-A calendar year is usually 31,536,000 seconds (365 days), but it is not always that simple: some years have 366 days (leap years), and in some time scales additional leap seconds may be inserted.  (Because of these complexities, it is not straightforward to make precise assertions such as “this `dwc:eventDate` represents a duration of less than a year”.  Such complexities that contributed to us not defining specific `Validation` Tests that would ask such questions, this measure allows users to determine what determine what duration of event dates provides sufficient quality for their specific purposes.)
+A calendar year is usually 31,536,000 seconds (365 days), but it is not always that simple: some years have 366 days (leap years), and in some time scales additional leap seconds may be inserted.  (Because of these complexities, it is not straightforward to make precise assertions such as “this `dwc:eventDate` represents a duration of less than a year".  Such complexities contributed to us not defining specific `Validation` Tests that would ask such questions, this measure allows users to determine what duration of event dates provides sufficient quality for their specific purposes.)
 
 There are a small set of `Measures` that count up the results of other tests run on the same `SingleRecord` one of these is the Test `MEASURE_AMENDMENTS_PROPOSED`, it provides a count of the number of Amendment Tests that proposed changes to that record.
 
@@ -271,13 +271,13 @@ Most `Measure` Tests are `Multi Record` Tests that take as input the results of 
 
 If we look at the Test `AMENDMENT_DAY_STANDARDIZED`, the Test may suggest changing a value to comply with the requirements for `dwc:day`, i.e. that it is interpretable as a valid integer.
 
-For example, for a record where the `dwc:day` is given as the "23rd” the suggestion may be to change this to "23” – a Response may be: 
+For example, for a record where the `dwc:day` is given as the "23rd" the suggestion may be to change this to "23" – a Response may be: 
 
 * `Response.status`=AMENDED
 * `Response.result`={dwc:day="23"} 
 * `Response.comment`="The provided value for dwc:day [23rd] is interpretable as 23, which is compliant with the requirements for dwc:day, so the value has been standardized to 23."
 
-Alternatively, for a record where the day is given as "X” which is ambiguous, the Response may be:
+Alternatively, for a record where the day is given as "X" which is ambiguous, the Response may be:
 
 * `Response.status`=NOT_AMENDED
 * `Response.result`=
@@ -337,7 +337,7 @@ The `Tests` in the BDQ Standard are a subset of all the possible tests that coul
 
 Users and communities are free to define, implement, and use their own tests for their own purposes, and may propose tests for inclusion within the BDQ Standard.
 
-When considering development of a new Test, users are urged to first review existing Test proposals in GitHub that may be related to their intended Test. In particular, there are a number of Tests that were proposed but not included in BDQ and tagged "`Supplementary`”, as well as Tests that were proposed but rejected and tagged "`DO_NOT_IMPLEMENT`”.
+When considering development of a new Test, users are urged to first review existing Test proposals in GitHub that may be related to their intended Test. In particular, there are a number of Tests that were proposed but not included in BDQ and tagged "`Supplementary`", as well as Tests that were proposed but rejected and tagged "`DO_NOT_IMPLEMENT`".
 
 The `Supplementary` Tests may provide a close match for a specific `Use Case`, or may provide a useful template to build from, and should be reviewed before proposing a new Test from scratch. The `DO_NOT_IMPLEMENT` Tests document proposals that were judged to be problematic; the accompanying comments describe the rationale for rejection, and reviewing them can help avoid re-proposing Tests with similar issues.
 
@@ -345,7 +345,13 @@ Implementers are free to implement a subset of the `CORE` Tests, or `Supplementa
 
 ### 7.1 Elements of a New Test (non-normative)
 
-Formally, the description of a Test is complex.  Informally, there are a few central elements that describe a test and what it does.  First, a Test serves some purpose, it evaluates some way in which data are fit for some purpose, thus each Test starts from one or more `Use Cases`.     Secondly, a Test operates on specific inputs, specific elements of data, these are the `Information Elements`.  Thirdly, a test has some specific purpose, described in simple language.  Fourthly, this plain language description of the test must be expanded into specific language that allows an implementer to understand exactly what code implementing a Test should do, and what outputs it should provide for different possible input values, this is the `Expected Response`.   It is also important to be clear whether a Test evaluates a `SingleRecord` or operates over multiple records in a data set (a `MultiRecord` test).
+Formally, the description of a Test is complex.  Informally, there are a few central elements that describe a test and what it does.  
+
+* First, a Test serves some purpose. A Test evaluates some way in which data are fit for some purpose, thus each Test starts from one or more `Use Cases`. 
+* Second, a Test operates on specific inputs, specific elements of data, these are the `Information Elements`.  
+* Third, a Test has some specific purpose, described in simple language.  This is the Test Description.
+* Fourth, this plain language description of the Test must be expanded into specific language that allows an implementer to understand exactly what code implementing a Test should do, and what outputs it should provide for different possible input values, this is the `Expected Response`.   
+* Fifth, it is important to be clear whether a Test evaluates a `SingleRecord` or operates over multiple records in a data set (a `MultiRecord` test).
 
 Tests may be expected to form related clusters, for example, a `Validation` that assesses whether the value of `ac:variantLiteral` in a `SingleRecord` is found in as a controlled value string in the Audiovisual Core variant: List of Terms, combined with an `Amendment` that proposes changes to values of `ac:variantLiteral` to conform them to that controlled vocabulary, combined with a `MultiRecord` `Measure` that counts the number of `COMPLIANT` values for the `Validation` evaluated for each record in a data set.  Under `QualityControl`, this `Measure` can evaluate how much the data set could be improved for some purpose if all the proposed changes from the `Amendment` were accepted (by running the tests in pre-amendment, amendment, and post-amendment phases) 
 
