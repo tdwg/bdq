@@ -154,7 +154,7 @@ The BDQ Tests are each very specific. Some Tests are very simple and self-explan
 
 ### 3.1 Test Types (non-normative)
 
-There are four types of Tests: `Validation`, `Issue`, `Measure`, and `Amendment`. Each Test is intended to examine just one specific aspect of data quality. Tests are assembled into Test suites (`Policies`) that assess the fitness of data for a specific use (`Use Case`).
+There are four types of Tests: `Validation`, `Issue`, `Measure`, and `Amendment`. Each Test is intended to examine just one specific aspect of data quality. Tests are assembled into Test suites (`Policies`) that assess the fitness of data for a specific use (`Use Case`).  In the Fittness for Use Framework, `Policies` are the formal mechanism for linking a `Use Case` to the relevant `DataQualityNeed` instances (Tests).
 
 **`Validation` Tests** can be thought of as fact-checking. They compare the data against known standards or rules. `Validation` Tests examine the values of one or more [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) against a `Criterion` for quality. An example is [VALIDATION_COUNTRYCODE_STANDARD](../../terms/bdqtest/index.md#VALIDATION_COUNTRYCODE_STANDARD) where `dwc:countryCode` is checked against a `sourceAuthority` for validity.
 
@@ -362,7 +362,7 @@ To propose to add a Test to the BDQ Standard, follow the instructions provided b
 ## 8 Creating New Use Cases (non-normative)
 
 BDQ is based on `Use Cases`: An evaluation of data quality must be within the context of a `Use Case`.  In the Fitness for Use Framework, `Use Cases` are needs-layer concepts.
-A `Use Case` is linked to sets of relevant Tests through `Policies` (e.g., `ValidationPolicy`, `IssuePolicy`, `MeasurementPolicy`, and `AmendmentPolicy`). Together, these `Policies` identify which `Assertions` may be made about data, and which Tests should be run, for that `Use Case`.
+A `Use Case` is linked to sets of relevant Tests through `Policies` (e.g., `ValidationPolicy`, `IssuePolicy`, `MeasurementPolicy`, and `AmendmentPolicy`). Together, these `Policies` identify which Tests should be run for a given `Use Case` and, therefore, which `Assertions` about data quality are expected from running that set of Tests.
 
 Five over-arching `Use Cases` have been used in the BDQ Standard. These were developed through the TDWG Biodiversity Data Quality Interest Group Task Group 3: Data Quality Use Cases (Rees and Nicholls, 2020). These, of course, are only a small subset of all possible `Use Cases` and users may wish to develop `Use Cases` for their own purposes.
 
