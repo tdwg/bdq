@@ -193,9 +193,9 @@ Correcting issues subsequent to data capture introduces further complexities in 
 
 ### 2.1.3 Quality Control in Data Aggregation (non-normative)
 
-When a data provider is performing `Quality Control` while preparing data for aggregation (or when reports are provided by aggregators back to upstream data providers) analysis of the resulting reports can uncover both simple errors introduced in mapping data onto Darwin Core terms (e.g, field transpositions in mapping) as well as to underlying problems in the data itself.   Data validation at this stage may also reveal cases where the database of record contains more authoritative information than the resource used as a `sourceAuthority` for a Test.  In such cases the data in the database of record could be correct even if a `Validation` Test returns `NOT_COMPLIANT`.  Careful analysis of `Quality Control` reports is essential, to understand the origin of potential problems, what changes may be acceptable in a database of record, and as data cleaning involves significant effort, it is essential to identify specific areas for targeted data cleaning projects.
+When a data provider is performing `Quality Control` while preparing data for aggregation (or when reports are provided by aggregators back to upstream data providers) analysis of the resulting reports can uncover both simple errors introduced in mapping data onto Darwin Core terms (e.g., field transpositions in mapping) as well as underlying problems in the data itself.   Data validation at this stage may also reveal cases where the database of record contains more authoritative information than the resource used as a `sourceAuthority` for a Test.  In such cases the data in the database of record could be correct even if a `Validation` Test returns `NOT_COMPLIANT`.  Careful analysis of `Quality Control` reports is essential, to understand the origin of potential problems, what changes may be acceptable in a database of record, and as data cleaning involves significant effort, it is essential to identify specific areas for targeted data cleaning projects.
 
-`Quality Control` in downstream analysis of aggregated data faces other challenges. The volume of aggregated data is likely to be large, making it infeasible to either review all proposed `Amendments` or to report of proposed changes to upstream databases of record. Quality Control in the workflow processing of data streams from large scale aggregation may include acceptance of proposals from `Amendments` into a data stream for downstream analysis. This should be done with some care in checking that the proposed `Amendments` are not introducing errors or false precision, and both unamended and amended data should be preserved, with accepted proposals from `Amendments` clearly identifiable as changes to the data stream.
+`Quality Control` in downstream analysis of aggregated data faces other challenges. The volume of aggregated data is likely to be large, making it infeasible to either review all proposed `Amendments` or to report proposed changes to upstream databases of record. Quality Control in the workflow processing of data streams from large scale aggregation may include acceptance of proposals from `Amendments` into a data stream for downstream analysis. This should be done with some care in checking that the proposed `Amendments` are not introducing errors or false precision, and both unamended and amended data should be preserved, with accepted proposals from `Amendments` clearly identifiable as changes to the data stream.
 
 ## 3 A Guide to the Tests (non-normative)
 
@@ -221,7 +221,7 @@ There are four types of Tests: `Validation`, `Issue`, `Measure`, and `Amendment`
 
 #### 3.2.1 Inputs to Tests (non-normative)
 
-Each Test is defined to take a specific set of input terms (`Information Elements`, generally [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021)), and then perform some tightly specified evaluation of those inputs to produce a specific output (the Response, see below). All of the BDQ `Validation`, `Issue`, and `Amendment` Tests examine a set of Darwin Core terms from a `Single Record` (e.g., from a single `dwc:Occurrence` record) rather than looking at the input term(s) over multiple records.
+Each Test is defined to take a specific set of input terms (`Information Elements`), generally [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021), but `Information Elements` may be from other vocabularies (such as [Dublin Core](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/), e.g. `dcterms:license`). The Test performs some tightly specified evaluation of those inputs to produce a specific output (the Response, see below). All of the BDQ `Validation`, `Issue`, and `Amendment` Tests examine a set of Darwin Core terms from a `Single Record` (e.g., from a single `dwc:Occurrence` record) rather than looking at the input term(s) over multiple records.
 
 Consider the Test [VALIDATION_EVENTDATE_STANDARD](../../terms/bdqtest/index.md#VALIDATION_EVENTDATE_STANDARD). It takes as input value of the `Information Element` `dwc:eventDate` from a `Single Record`, and then asks, "Is the value of dwc:eventDate a valid ISO date?". It will then produce a Response describing the conclusion it reached when analyzing that record.
 
@@ -229,7 +229,7 @@ Tests can also operate on a dataset (a `Multi Record`), and examine the values f
 
 #### 3.2.2 Outputs: Data Quality Reports (non-normative) 
 
-Software that includes an implementation of one or more Tests may produce `Data Quality Reports`. The form that such `Data Quality Reports` may take is not specified by the BDQ standard, however, it does specify elements that should be present in such reports (see [7.1 Data Quality Reports (normative)](../implementers/index.md#71-data-quality-reports-normative)) in the [Implementer's Guide](../implementers/index.md).  A detailed discussion of how `Data Quality Reports` relate to the Tests can be found at [3.1](../../bdqtest/index.md#31-structure-of-response-normative) in the [BDQ Tests and Assertions Document](../..//bdqtest/index.md).
+Software that includes an implementation of one or more Tests may produce `Data Quality Reports`. The form that such `Data Quality Reports` may take is not specified by the BDQ standard, however, it does specify elements that should be present in such reports (see [7.1 Data Quality Reports (normative)](../implementers/index.md#71-data-quality-reports-normative)) in the [Implementer's Guide](../implementers/index.md).  A detailed discussion of how `Data Quality Reports` relate to the Tests can be found at [3.1](../../bdqtest/index.md#31-structure-of-response-normative) in the [BDQ Tests and Assertions Document](../../bdqtest/index.md).
 
 #### 3.2.3 Outputs: Responses From Tests (normative) 
 
@@ -284,7 +284,7 @@ For example, the field for `dwc:dataGeneralizations` may say "placed on quarter 
 * `Response.result`=POTENTIAL_ISSUE, 
 * `Response.comment`="dwc:dataGeneralizations is bdq:NotEmpty this data has been generalized in some way and may or may not be fit for your use".
 
-Alternatively, if there is nothing in the `dwc:dataGeneralization` field, i.e. it is empty; the Response may be:
+Alternatively, if there is nothing in the `dwc:dataGeneralizations` field, i.e. it is empty; the Response may be:
 
 * `Response.status`=RUN_HAS_RESULT, 
 * `Response.result`=NOT_ISSUE, 
@@ -297,9 +297,9 @@ Alternatively, if there is nothing in the `dwc:dataGeneralization` field, i.e. i
 There is one `Single Record` `Measure` Test that provides a metric on a Darwin Core term in a `Single Record`, MEASURE_EVENTDATE_DURATION_SECONDS, which provides a measure of the duration in seconds of the `dwc:eventDate`.  This test is intended to allow consumers of data quality reports to quickly identify records where the collecting event is known to a precision of about a day or less, or about a year or less, or any arbitrary time range that may be of interest to a particular use. For example, if the `dwc:eventDate` is "2020", the Response would be:
 The duration of a year in seconds is about 31,536,000 seconds (or about 31,622,400 in a leap year, about as sometimes there are leap seconds as well (complexities that contributed to us not defining `Validations` for event dates shorter than a year)) so the Response would be:
 
-* `Response.status=RUN_HAS_RESULT
-* `Response.result="31622400"
-* `Response.comment="The provided dwc:eventDate [2020] represents a time interval of a year that was a leap year, so it had 366 days or 31622400 seconds"
+* `Response.status`=RUN_HAS_RESULT
+* `Response.result`="31622400"
+* `Response.comment`="The provided dwc:eventDate [2020] represents a time interval of a year that was a leap year, so it had 366 days or 31622400 seconds"
 
 There are a small set of `Measures` that count up the results of other tests run on the same `SingleRecord` one of these is the Test `MEASURE_AMENDMENTS_PROPOSED`, it provides a count of the number of Amendment Tests that proposed changes to that record.
 
@@ -315,7 +315,7 @@ Most `Measure` Tests are `Multi Record` Tests that take as input the results of 
 
 `Amendment` Tests can be thought of as suggestions for improvement. These Tests examine input values and may propose changes or additions to improve the quality (they could also propose changes to processes, but BDQ includes only `Amendments` that propose changes to data values).
 
-If we look at the Test ` AMENDMENT_DAY_STANDARDIZED`, the Test may suggest changing a value to comply with the requirements for `dwc:day`, i.e. that it is interpretable as a valid integer.
+If we look at the Test `AMENDMENT_DAY_STANDARDIZED`, the Test may suggest changing a value to comply with the requirements for `dwc:day`, i.e. that it is interpretable as a valid integer.
 
 For example, for a record where the `dwc:day` is given as the “23rd” the suggestion may be to change this to “23” – a Response may be: 
 
@@ -383,9 +383,9 @@ The `Tests` in the BDQ Standard are a subset of all the possible tests that coul
 
 Users and communities are free to define, implement, and use their own tests for their own purposes, and may propose tests for inclusion within the BDQ Standard.
 
-When developing a new test, , **TODO**
+When considering development of a new Test, users are urged to first review existing Test proposals in GitHub that may be related to their intended Test. In particular, there are a number of Tests that were proposed but not included in BDQ and tagged “`Supplementary`”, as well as Tests that were proposed but rejected and tagged “`DO_NOT_IMPLEMENT`”.
 
-there are a number of Tests that were proposed but not included in BDQ tagged “`Supplementary`” in GitHub, and other tests that were proposed but rejected tagged "`DO_NOT_IMPLEMENT`" and users are urged to review these tests before proposing a new Test from scratch. The `Supplementary` Tests may provide a close fit or a template to build from for some desired test.  The comments on `DO_NOT_IMPLEMENT` tests describe why these particular test proposals were viewed as problematic and rationale for why they were rejected.
+The `Supplementary` Tests may provide a close match for a specific `Use Case`, or may provide a useful template to build from, and should be reviewed before proposing a new Test from scratch. The `DO_NOT_IMPLEMENT` Tests document proposals that were judged to be problematic; the accompanying comments describe the rationale for rejection, and reviewing them can help avoid re-proposing Tests with similar issues.
 
 Implementers are free to implement a subset of the `CORE` Tests, or `Supplementary` Tests, or new Tests when there is a particular data quality need within their domain - e.g., testing for a value of sub-genus against a taxonomic name authority or testing for a valid depth against maximum depth around the location of an observation. Note however, that an implementation of BDQ will only be compliant with the standard if all `Tests` for at least one `Use Case` are implemented. 
 
