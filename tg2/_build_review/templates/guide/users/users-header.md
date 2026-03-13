@@ -184,21 +184,25 @@ The specifications for the structure of a response from running a Test can be fo
 
 ##### 3.2.3.1 Shorthand For Responses From Tests (non-normative) 
 
-A `Data Quality Report` from a BDQ `Test` is expected to include a Response for each `Test` run.   In brief, each Response includes the following elements:
+A `Data Quality Report` from a BDQ `Test` is expected to include a Response for each `Test` run.   
+
+Response is shorthand for a formal Fitness for Use Framework concept: an instance of a subtype of `bdqffdq:Assertion` produced by running a Test, which carries a response status, result, comment and optional qualifier via the `bdqffdq:hasResponseStatus`, `bdqffdq:hasResponseResult`/`bdqffdq:hasResponseResultValue`, `bdqffdq:hasResponseComment`, and `bdqffdq:hasResponseQualifier` properties.
+
+In brief, each Response consists of the following elements:
 
 * __`Response.status`__ - Metadata describing the status of the `Test` run, including whether the `Test` was executed successfully.  Values include `RUN_HAS_RESULT`, `INTERNAL_PREREQUISITES_NOT_MET` and `EXTERNAL_PREREQUISITES_NOT_MET`.
-* __`Response.result`__ - The result of the evaluation of the `Test` against the input data.  Values include "COMPLIANT", "NOT_COMPLIANT", "COMPLETE", "NOT_COMPLETE", or data values, depending on the type of `Test`.
+* __`Response.result`__ - The result of the evaluation of the `Test` against the input data.  Values include "COMPLIANT", "NOT_COMPLIANT", "COMPLETE", "NOT_COMPLETE", or data values (such as numeric measurement values), depending on the type of `Test`.
 * __`Response.comment`__ - A human-readable comment providing additional context or information to assist users in the interpretation of the `Test` result.
 
-The presentation of this Response to users is not defined by the BDQ standard and will vary.
+The presentation of a Response to users is not defined by the BDQ standard and will vary.
 
 ##### 3.2.3.2 Validation Test Reports (non-normative)
 
-As `Validation` tests compare the data against known standards or rules., the `Response.result` for a `Validation` Test is expected to be either "COMPLIANT" or "NOT_COMPLIANT". 
+As `Validation` tests compare the data against known standards or rules, the `Response.result` for a `Validation` Test is expected to be either "COMPLIANT" or "NOT_COMPLIANT". 
 
 The Test `VALIDATION_DAY_INRANGE` checks if the value of `dwc:day` is interpretable as a valid integer between 1 and 28 inclusive, or if it is validly 29, 30 or 31 given the `dwc:month` and `dwc:year`.
 
-For example, where input data has `dwc:day` = “15” and no month or year; a Response may be: 
+For example, where input data has `dwc:day` = "15” and no month or year; a Response may be: 
 
 * `Response.status`=RUN_HAS_RESULT
 * `Response.result`=COMPLIANT
@@ -218,7 +222,7 @@ Another case is that the input data contain values that cannot be interpreted wi
 * `Response.result`=
 * `Response.comment`="The provided value of dwc:day [31] cannot be evaluated for compliance because the prerequisites of a valid dwc:month and dwc:year were not met for days between 29 and 31."
 
-A Response.status of INTERNAL_PREREQUISITES_NOT_MET indicates that the data themselves did not meet the prerequisites for the test to be evaluated, and thus the test could not be evaluated, and will always return this result with the same input data. In contrast, a Response.status of EXTERNAL_PREREQUISITES_NOT_MET indicates that the test could not be evaluated because some external resource (e.g., a source authority) was not available at the test was run, and running the test again at a different time might yield a different result.
+A Response.status of INTERNAL_PREREQUISITES_NOT_MET indicates that the data themselves did not meet the prerequisites for the test to be evaluated, and thus the test could not be evaluated, and will always return this result with the same input data. In contrast, a Response.status of EXTERNAL_PREREQUISITES_NOT_MET indicates that the test could not be evaluated because some external resource (e.g., a source authority) was not available at the time the test was run, and running the test again at a different time might yield a different result.
 
 ##### 3.2.3.3 Issue Test Reports (non-normative)
 
@@ -227,26 +231,29 @@ A Response.status of INTERNAL_PREREQUISITES_NOT_MET indicates that the data them
 If we look at the Test `ISSUE_DATAGENERALIZATIONS_NOTEMPTY`, the Test alerts users that there is value in the field that indicates that the data may have been generalized in some way.
 For example, the field for `dwc:dataGeneralizations` may say "placed on quarter degree grid". A Response could be:
 
-* `Response.status`=RUN_HAS_RESULT, 
-* `Response.result`=POTENTIAL_ISSUE, 
-* `Response.comment`="dwc:dataGeneralizations is bdq:NotEmpty this data has been generalized in some way and may or may not be fit for your use".
+* `Response.status`=RUN_HAS_RESULT 
+* `Response.result`=POTENTIAL_ISSUE 
+* `Response.comment`="dwc:dataGeneralizations is bdq:NotEmpty this data has been generalized in some way and may or may not be fit for your use"
 
 Alternatively, if there is nothing in the `dwc:dataGeneralizations` field, i.e. it is empty; the Response may be:
 
-* `Response.status`=RUN_HAS_RESULT, 
-* `Response.result`=NOT_ISSUE, 
-* `Response.comment`="dwc:dataGeneralizations is bdq:Empty".
+* `Response.status`=RUN_HAS_RESULT 
+* `Response.result`=NOT_ISSUE 
+* `Response.comment`="dwc:dataGeneralizations is bdq:Empty"
 
 ##### 3.2.3.4 Measure Test Reports (non-normative)
 
 `Measure` Tests can be thought of as metrics. These Tests either count things, or assert that data evaluate as fit for some use (COMPLETE), or not fit for some use (NOT_COMPLETE).  Almost all of the `Measure` Tests defined in BDQ are `Multi Record` Tests that are powerful tools for formal support of `Quality Control` and `Quality Assurance` under the [Fitness for Use Framework Ontology](../../bdqffdq/index.md).  
 
-There is one `Single Record` `Measure` Test that provides a metric on a Darwin Core term in a `Single Record`, MEASURE_EVENTDATE_DURATION_SECONDS, which provides a measure of the duration in seconds of the `dwc:eventDate`.  This test is intended to allow consumers of data quality reports to quickly identify records where the collecting event is known to a precision of about a day or less, or about a year or less, or any arbitrary time range that may be of interest to a particular use. For example, if the `dwc:eventDate` is "2020", the Response would be:
-The duration of a year in seconds is about 31,536,000 seconds (or about 31,622,400 in a leap year, about as sometimes there are leap seconds as well (complexities that contributed to us not defining `Validations` for event dates shorter than a year)) so the Response would be:
+There is one `Single Record` `Measure` Test that provides a metric on a Darwin Core term in a `Single Record`, MEASURE_EVENTDATE_DURATION_SECONDS, which provides a measure of the duration in seconds of the `dwc:eventDate`.  This test is intended to allow consumers of data quality reports to quickly identify records where the collecting event is known to a precision of about a day or less, or about a year or less, or any arbitrary time range that may be of interest to a particular use. 
+
+For example, if the `dwc:eventDate` is "2020", the Response would be:
 
 * `Response.status`=RUN_HAS_RESULT
 * `Response.result`="31622400"
 * `Response.comment`="The provided dwc:eventDate [2020] represents a time interval of a year that was a leap year, so it had 366 days or 31622400 seconds"
+
+A calendar year is usually 31,536,000 seconds (365 days), but it is not always that simple: some years have 366 days (leap years), and in some time scales additional leap seconds may be inserted.  (Because of these complexities, it is not straightforward to make precise assertions such as “this `dwc:eventDate` represents a duration of less than a year”.  Such complexities that contributed to us not defining specific `Validation` Tests that would ask such questions, this measure allows users to determine what determine what duration of event dates provides sufficient quality for their specific purposes.)
 
 There are a small set of `Measures` that count up the results of other tests run on the same `SingleRecord` one of these is the Test `MEASURE_AMENDMENTS_PROPOSED`, it provides a count of the number of Amendment Tests that proposed changes to that record.
 
@@ -264,13 +271,13 @@ Most `Measure` Tests are `Multi Record` Tests that take as input the results of 
 
 If we look at the Test `AMENDMENT_DAY_STANDARDIZED`, the Test may suggest changing a value to comply with the requirements for `dwc:day`, i.e. that it is interpretable as a valid integer.
 
-For example, for a record where the `dwc:day` is given as the “23rd” the suggestion may be to change this to “23” – a Response may be: 
+For example, for a record where the `dwc:day` is given as the "23rd” the suggestion may be to change this to "23” – a Response may be: 
 
 * `Response.status`=AMENDED
 * `Response.result`={dwc:day="23"} 
-* `Response.comment`="The provided value for dwc:day [23rd] is interpretable as 23, which is compliant with the requirements for dwc:day, so the value has been standardized to 23"
+* `Response.comment`="The provided value for dwc:day [23rd] is interpretable as 23, which is compliant with the requirements for dwc:day, so the value has been standardized to 23."
 
-Alternatively, for a record where the day is given as “X” which is ambiguous, the Response may be:
+Alternatively, for a record where the day is given as "X” which is ambiguous, the Response may be:
 
 * `Response.status`=NOT_AMENDED
 * `Response.result`=
@@ -330,7 +337,7 @@ The `Tests` in the BDQ Standard are a subset of all the possible tests that coul
 
 Users and communities are free to define, implement, and use their own tests for their own purposes, and may propose tests for inclusion within the BDQ Standard.
 
-When considering development of a new Test, users are urged to first review existing Test proposals in GitHub that may be related to their intended Test. In particular, there are a number of Tests that were proposed but not included in BDQ and tagged “`Supplementary`”, as well as Tests that were proposed but rejected and tagged “`DO_NOT_IMPLEMENT`”.
+When considering development of a new Test, users are urged to first review existing Test proposals in GitHub that may be related to their intended Test. In particular, there are a number of Tests that were proposed but not included in BDQ and tagged "`Supplementary`”, as well as Tests that were proposed but rejected and tagged "`DO_NOT_IMPLEMENT`”.
 
 The `Supplementary` Tests may provide a close match for a specific `Use Case`, or may provide a useful template to build from, and should be reviewed before proposing a new Test from scratch. The `DO_NOT_IMPLEMENT` Tests document proposals that were judged to be problematic; the accompanying comments describe the rationale for rejection, and reviewing them can help avoid re-proposing Tests with similar issues.
 
@@ -338,9 +345,9 @@ Implementers are free to implement a subset of the `CORE` Tests, or `Supplementa
 
 ### 7.1 Elements of a New Test (non-normative)
 
-Formally, the description of a test is complex.  Informally, there are a few central elements that describe a test and what it does.  First, a Test serves some purpose, it evaluates some way in which data are fit for some purpose, thus each Test starts from one or more `Use Cases`.     Secondly, a Test operates on specific inputs, specific elements of data, these are the `Information Elements`.  Thirdly, a test has some specific purpose, described in simple language.  Fourthly, this plain language description of the test must be expanded into specific language that allows an implementer to understand exactly what code implementing a Test should do, and what outputs it should provide for different possible input values, this is the `Expected Response`.   It is also important to be clear whether a Test evaluates a `SingleRecord` or operates over multiple records in a data set (a `MultiRecord` test).
+Formally, the description of a Test is complex.  Informally, there are a few central elements that describe a test and what it does.  First, a Test serves some purpose, it evaluates some way in which data are fit for some purpose, thus each Test starts from one or more `Use Cases`.     Secondly, a Test operates on specific inputs, specific elements of data, these are the `Information Elements`.  Thirdly, a test has some specific purpose, described in simple language.  Fourthly, this plain language description of the test must be expanded into specific language that allows an implementer to understand exactly what code implementing a Test should do, and what outputs it should provide for different possible input values, this is the `Expected Response`.   It is also important to be clear whether a Test evaluates a `SingleRecord` or operates over multiple records in a data set (a `MultiRecord` test).
 
-Tests may be expected to form related clusters, for example, a `Validation` that assesses whether the value of ac:variantLiteral in a `SingleRecord` is found in as a controlled value string in the Audiovisual Core variant: List of Terms, combined with an `Amendment` that proposes changes to values of ac:variantLiteral to conform them to that controlled vocabulary, combined with a `MultiRecord` `Measure` that counts the number of `COMPLIANT` values for the `Validation` evaluated for each record in a data set.  Under `QualityControl`, this `Measure` can evaluate how much the data set could be improved for some purpose if all the proposed changes from the `Amendment` were accepted (by running the tests in pre-amendment, amendment, and post-amendment phases) 
+Tests may be expected to form related clusters, for example, a `Validation` that assesses whether the value of `ac:variantLiteral` in a `SingleRecord` is found in as a controlled value string in the Audiovisual Core variant: List of Terms, combined with an `Amendment` that proposes changes to values of `ac:variantLiteral` to conform them to that controlled vocabulary, combined with a `MultiRecord` `Measure` that counts the number of `COMPLIANT` values for the `Validation` evaluated for each record in a data set.  Under `QualityControl`, this `Measure` can evaluate how much the data set could be improved for some purpose if all the proposed changes from the `Amendment` were accepted (by running the tests in pre-amendment, amendment, and post-amendment phases) 
 
 ### 7.2 Proposing to add a Test to the BDQ Standard (non-normative)
 
@@ -348,13 +355,14 @@ To propose to add a Test to the BDQ Standard, follow the instructions provided b
 
 ## 8 Creating New Use Cases (non-normative)
 
-BDQ is based on `Use Cases`: An evaluation of ‘data quality’ must be within the context of a `Use Case`. `Use Cases` are subtypes of the `DataQualityNeeds` that express what `Assertions` may be made about data with respect to fitness for use and should link to in the relevant Tests that apply to that `Use Case`.
+BDQ is based on `Use Cases`: An evaluation of data quality must be within the context of a `Use Case`.  In the Fitness for Use Framework, `Use Cases` are needs-layer concepts.
+A `Use Case` is linked to sets of relevant Tests through `Policies` (e.g., `ValidationPolicy`, `IssuePolicy`, `MeasurementPolicy`, and `AmendmentPolicy`). Together, these `Policies` identify which `Assertions` may be made about data, and which Tests should be run, for that `Use Case`.
 
 Five over-arching `Use Cases` have been used in the BDQ Standard. These were developed through the TDWG Biodiversity Data Quality Interest Group Task Group 3: Data Quality Use Cases (Rees and Nicholls, 2020). These, of course, are only a small subset of all possible `Use Cases` and users may wish to develop `Use Cases` for their own purposes.
 
 ### 8.1 Elements of a New Use Case (non-normative)
 
-`Use Cases` are straightforward to describe.  A `Use Case` has a name, a description, and a list of Tests.  The list of Tests is expressed as four `Policies`, a `ValidationPolicy` comprised of the `Validations` related to the `Use Case`, an `AmendmentPolicy` listing related `Amendments`, a `MeasurementPolicy` listing related `Measurements`, and an `IssuePolicy` listing any related `Issues`.   
+`Use Cases` are straightforward to describe.  A `Use Case` has a name, a description, and a list of Tests.  The list of Tests is expressed as four `Policies`, a `ValidationPolicy` comprised of the `Validations` related to the `Use Case`, an `AmendmentPolicy` listing related `Amendments`, a `MeasurementPolicy` listing related `Measures`, and an `IssuePolicy` listing any related `Issues`.   
 
 ### 8.2 Proposing to add a Use Case to the BDQ Standard (non-normative)
 
