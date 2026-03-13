@@ -285,7 +285,7 @@ Alternatively, for a record where the day is given as "X" which is ambiguous, th
 
 ### 3.3 Amendments Propose Changes (normative)
 
-Amendment Tests **propose changes** to data. It is up to the consumers of `Data Quality Reports` to choose whether or not to accept those changes, particularly into an authoritative database of record. Consumers of `Data Quality Reports` MAY choose to change data based on `Assertions` made by `Amendment` Tests, or consumers of `Data Quality Reports` MAY choose to not change their data based on `Assertions` made by `Amendment` Tests. Databases of record SHOULD NOT automatically alter data based on `Assertions` made by `Amendment` Tests without human evaluation of the proposed changes.
+Amendment Tests **propose changes** to data. It is up to the consumers of `Data Quality Reports` to choose whether or not to accept those changes, particularly into an authoritative database of record. Consumers of `Data Quality Reports` MAY choose to change data based on `Assertions` made by `Amendment` Tests, or consumers of `Data Quality Reports` MAY choose to **not** change their data based on `Assertions` made by `Amendment` Tests. Databases of record SHOULD NOT **automatically** alter data based on `Assertions` made by `Amendment` Tests without human evaluation of the proposed changes.
 
 #### 3.3.1 Caution in Proposing Changes (non-normative)
 
@@ -299,7 +299,7 @@ For example, a user working with data from just one country may wish to change a
 
 Similarly a parameterized Test may change default numerical values to values more appropriate to the local area – e.g. setting a maximum elevation that is more appropriate to the country, rather than using a default global maximum, such that for some parameterized `Validation` elevations higher than the local maximum, but still lower than the global maximum elevation would be `NOT_COMPLIANT`, fitting the local needs, while they would be `COMPLIANT` and not identified as problematic for local needs if the  the default global maximum elevation were used.
 
-### 3.4 Test Parameters in Reports (normative) 
+### 3.4.1 Test Parameters in Reports (normative) 
 
 When a Test is parameterized, and a value other than the default value is used for some `Parameter`, reports SHOULD identify the Tests using at least the Label (`rdfs:label`) for the Test class, in combination with the `Parameter` and the value of the `Argument` that replaced the `Parameter` in this specific case.
 
@@ -307,7 +307,7 @@ Values of `Parameters`, other than the defaults, SHOULD also be present in the `
 
 More normative guidance on Test `Parameters` can be found in the section [6.1 Parameters and Changing the Behavior of a Test (normative)](../implementers/index.md#61-parameters-and-changing-the-behavior-of-a-test-normative) of the [BDQ Implementer's Guide](../implementers/index.md).
 
-#### 3.4.1 Test Parameters Example (non-normative) 
+#### 3.4.2 Test Parameters Example (non-normative) 
 
 Consider the Test `VALIDATION_MAXELEVATION_INRANGE`.  If you are evaluating data that could come from anywhere in the world, you would want to use the default value for the 'Parameter' that sets the maximum elevation to that of the highest point on Earth.  However, if you are working on a dataset consisting entirely of data pertaining to locations in New Zealand, you may wish to set the `Parameter` bdq:maximumValidElevationInMeters value to the maximum elevation in New Zealand (i.e., 3724 meters).  
 
