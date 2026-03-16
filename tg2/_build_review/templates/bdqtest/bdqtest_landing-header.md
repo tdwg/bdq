@@ -91,7 +91,7 @@ The set of information most relevant to the Biodiversity Data Quality (BDQ) Test
 | RDF/XML file | TBD | [Tests in RDF/XML](../../dist/bdqtest.xml) | An RDF representation of the Tests in an RDF/XML serialization. | 
 | Turtle file | TBD | [Tests in Turtle](../../dist/bdqtest.ttl) | An RDF representation of the Tests in a Turtle serialization. | 
 | JSON-LD file | TBD | [Tests in JSON/LD](../../dist/bdqtest.json) | An RDF representation of the Tests in a JSON-LD serialization. | 
-| CSV file | TBD | [Tests in CSV](../../vocabulary/bdqtest_term_versions.csv) | CSV file listing all of the Tests. | 
+| CSV file | TBD | [Tests in CSV](../../vocabulary/bdqtest_term_versions.csv) | CSV file listing all BDQ Tests. | 
 | Single Record Test CSV file | TBD | [Single Record Tests in CSV](../../dist/bdqtest_singlerecord_tests_current.csv) | CSV file listing just the Single Record Tests. |
 | Multi Record Test CSV file | TBD | [Multi Record Tests in CSV](../../dist/bdqtest_multirecord_tests_current.csv) | CSV file listing just the Multi Record Tests. |
 
@@ -137,9 +137,9 @@ The Authors acknowledge the fundamental importance of the work of:
 - The TDWG Data Quality Interest Group - Task Group 3 [Data Quality Use Cases](https://www.tdwg.org/community/bdq/tg-3/) for providing recommendations on Use Cases.
 - The TDWG [Annotations Interest Group](https://www.tdwg.org/community/annotations/) as to how the Test results may be reported against records.
 
-The terminology of BDQ is based primarily on the Fitness for use Framework (Veiga 2016, Veiga et al. 2017, Biodiversity Information standards (TDWG) Task Group 1) expressed as an ontology, but additional vocabularies are required for a complete description of the Tests and how to use them. See [2.4 Vocabularies](../../index.md#24-vocabularies-non-normative) in [The Biodiversity Data Quality (BDQ) Standard](../../index.md).
+The terminology of BDQ is based primarily on the Fitness for Use Framework (Veiga 2016, Veiga et al. 2017, Biodiversity Information Standards (TDWG) Task Group 1) expressed as an ontology, but additional vocabularies are required for a complete description of the Tests and how to use them. See [2.4 Vocabularies](../../index.md#24-vocabularies-non-normative) in [The Biodiversity Data Quality (BDQ) Standard](../../index.md).
 
-BDQ Tests focus on values of a subset of [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) composed as `bdqffdq:InformationElements` as inputs to the Tests. Each Test is independent, to support the mixing and matching of Tests to meet particular `Data Quality Needs` and not impose a particular model of Test execution on implementation frameworks. Tests may execute in parallel, on data records in sequence, as queries on datasets and on unique values. Tests are paired in that all `Amendment` Tests are matched with a corresponding `Validation` Test that assesses some aspect of data quality. An `Amendment` Test may propose improvements to term values, but the BDQ standard recommends that all improvements be evaluated before application.
+BDQ `Tests` focus on values of a subset of [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) composed as `bdqffdq:InformationElements` as inputs to the Tests. Each Test is independent, to support the mixing and matching of Tests to meet particular `Data Quality Needs` and not impose a particular model of Test execution on implementation frameworks. Tests may execute in parallel, on data records in sequence, as queries on datasets and on unique values. Tests are paired in that all `Amendment` Tests are matched with a corresponding `Validation` Test that assesses some aspect of data quality. An `Amendment` Test may propose improvements to term values, but the BDQ standard recommends that all improvements be evaluated before application.
 
 Some BDQ Tests also require reference to external data such as standard vocabularies of terms or names.
 
