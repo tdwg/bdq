@@ -46,11 +46,13 @@
 
 ## 1 Introduction (non-normative)
 
+The BDQ standard defines a suite of Tests for evaluating biodiversity data quality. This document provides both normative specifications and explanatory guidance for the BDQ Tests. It defines how each Test is modeled using standard vocabulary terms and how conforming implementations are expected to behave under a range of conditions. It also distinguishes among Test types (`Validation`, `Issue`, `Measure`, and `Amendment`), outlines the semantics of single- versus multi-record evaluation, and explains how `Parameters` influence Test behavior. Together, these sections provide the foundation for interpreting BDQ Test descriptions and implementing BDQ-conformant test suites and reports.
+
+Data quality is an evolving field, and there will always be additional tests that could be conceived. BDQ therefore focuses on a suite of Tests that has reached community consensus and that provides broad coverage of commonly used Darwin Core terms. The BDQ framework is modular and extensible: communities may define additional Tests to address domain-specific needs, and future versions of the standard may incorporate new Tests as consensus and practice evolve. Within BDQ, Tests are applied in the context of the use of data (`Use Cases` via `Policies`), allowing users select and apply Tests relevant to their stated data quality needs.
+
 ### 1.1 Purpose (non-normative)
 
-The purpose of this document is to define and explain the BDQ Tests — the primary mechanism for evaluating the quality of biodiversity data in the BDQ standard. It describes the structure, types, and formal characteristics of the Tests, providing a clear and consistent specification that can be used by implementers, analysts, and quality assessors.
-
-This document is both normative and explanatory: it defines how each Test is modeled using standard vocabulary terms and how it should behave under various conditions. It also distinguishes among types of Tests (`Validation`, `Issue`, `Measure`, and `Amendment`), outlines the semantics of single- versus multi-record evaluation, and explains how `Parameters` influence Test behavior. The content here provides the foundation for interpreting and using the Tests in software and quality assessment workflows.
+The purpose of this document is to define and explain the BDQ `Tests` — the primary mechanism for evaluating the quality of biodiversity data in the BDQ standard.  This document describes the structure, types, and formal characteristics of the Tests, providing a clear and consistent specification that can be used by implementers, analysts, and quality assessors.
 
 ### 1.2 Audience (non-normative)
 
@@ -61,7 +63,7 @@ This document is intended for audiences who need a detailed understanding of the
 - Researchers and data managers evaluating dataset readiness for specific uses
 - Standards developers integrating BDQ Test logic into broader biodiversity data infrastructures.
 
-While some familiarity with controlled vocabularies and RDF modeling may be useful, the document is designed to be accessible to both technical and semi-technical users who want to apply, understand, or extend BDQ Tests.
+While familiarity with controlled vocabularies and RDF modeling may be useful, this document is designed to be accessible to both technical and semi-technical users who want to understand, apply, or extend BDQ `Tests`.
 
 ### 1.3 Associated Documents (non-normative)
 
@@ -69,7 +71,7 @@ For the list and links to all associated documents see [The Biodiversity Data Qu
 
 The set of information most relevant to the Biodiversity Data Quality (BDQ) Tests can be found in the following subset of resources:
 
-- **BDQ Tests and Assertions** - Defines how each Test is modeled using standard vocabulary terms and how it should behave under various conditions. This document.
+- **BDQ Tests and Assertions** - Defines how each Test is modelled using standard vocabulary terms and how it should behave under various conditions.  This document.
 - [**BDQ Tests Quick Reference Guide**](../terms/bdqtest/index.md) - Provides a concise, easy-to-read reference about the BDQ Tests.
   - [BDQ Test Index by Use Case](../terms/bdqtest/qrg_index_by_usecase.md)
   - [BDQ Test Index by Information Element Acted Upon](../terms/bdqtest/qrg_index_by_ie_actedupon.md)
@@ -125,7 +127,7 @@ The following namespace abbreviations are used in this document:
 | xsd:         | http://www.w3.org/2001/XMLSchema#           |
 
 ### 1.7 Referring to Terms (normative)
-In any technical treatment of the BDQ standard, a precise reference to a class or property term SHOULD be made using its qualified name (the namespace prefix followed by the term local name; e.g., `bdqffdq:InformationElement`) and the namespace IRI corresponding to the namespace prefix (e.g., 'https://rs.tdwg.org/bdqffdq/terms/' for `bdqffdq:`) MUST be provided. In less formal descriptions where the technical precision is not needed, the preferred label (skos:prefLabel, e.g., `Information Element`) or the term local name (e.g., `InformationElement`) MAY be used. You will find all of these methods of referring to BDQ-related terms throughout the BDQ documentation.
+In any technical treatment of the BDQ standard, a precise reference to a class or property term SHOULD be made using its qualified name (the namespace prefix followed by the term local name; e.g., `bdqffdq:InformationElement`) and the namespace IRI corresponding to the namespace prefix (e.g., 'https://rs.tdwg.org/bdqffdq/terms/' for `bdqffdq:`) MUST be provided. In less formal descriptions where the technical precision is not needed, the preferred label (skos:prefLabel, e.g., `Information Element`) or the term local name (e.g., `InformationElement`) MAY be used. The BDQ documents use all these methods.
 
 ## 2 A Brief Context for the BDQ Tests (non-normative)
 

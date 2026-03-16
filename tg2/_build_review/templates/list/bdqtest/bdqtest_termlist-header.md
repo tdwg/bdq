@@ -123,8 +123,9 @@ The following namespace abbreviations are used in this document:
 | skos:        | http://www.w3.org/2004/02/skos/core#        |
 | tdwgutility: | http://rs.tdwg.org/dwc/terms/attributes/    |
 
-### 1.8 Referring to Terms (normative)
-In any technical treatment of the BDQ standard, a precise reference to a class or property term SHOULD be made using its qualified name (the namespace prefix followed by the term local name; e.g., `bdqffdq:InformationElement`) and the namespace IRI corresponding to the namespace prefix (e.g., 'https://rs.tdwg.org/bdqffdq/terms/' for `bdqffdq:`) MUST be provided. In less formal descriptions where the technical precision is not needed, the preferred label (skos:prefLabel, e.g., `Information Element`) or the term local name (e.g., `InformationElement`) MAY be used. You will find all of these methods of referring to BDQ-related terms throughout the BDQ documentation.
+## 1.8 Use of Terms (normative)
+
+In an RDF context, a reference to a term in the `bdqtest:` namespace MUST use the Term IRI (e.g., `http://rs.tdwg.org/bdq/bdqtest/b3471c65-b53e-453b-8282-abfa27bf1805`) or Term Qualified name (e.g., `bdqtest:b3471c65-b53e-453b-8282-abfa27bf1805`). In a non-RDF context, to identify a test to software agents, the Term IRI or Term Qualified Name (either the base IRI or the versioned IRI) . In a non-RDF context in which resources are expected to be read by humans (e.g., a value in a spreadsheet or database table) the Label (rdfs:label, e.g., `AMENDMENT_TYPESTATUS_STANDARDIZED`) SHOULD be used. In a purely human context for readability or accessibility, the preferred label (e.g., `Amendment dwc:typeStatus Standardized`) MAY be used.
 
 ### 1.9 Test Types (non-normative)
 
