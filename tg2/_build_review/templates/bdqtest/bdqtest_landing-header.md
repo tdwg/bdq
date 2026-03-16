@@ -85,8 +85,8 @@ The set of information most relevant to the Biodiversity Data Quality (BDQ) Test
 #### 1.3.1 Term List Distributions for the BDQ Standard (non-normative)
 
 <!--- This same table appears in bdqtest_termlist_header. Edit here, edit there. --->
-| Description | IRI | Download URL | Note | 
-| ----------- | --- | -----------  | ---- | 
+| Description | IRI | Download URL | Notes | 
+| ----------- | --- | -----------  | ----- | 
 | HTML file   | TBD | [BDQ Tests and Assertions List of Terms](../list/bdqtest/index.md) | Complete term list for the bdqtest: vocabulary as a web page. | 
 | RDF/XML file | TBD | [Tests in RDF/XML](../../dist/bdqtest.xml) | An RDF representation of the Tests in an RDF/XML serialization. | 
 | Turtle file | TBD | [Tests in Turtle](../../dist/bdqtest.ttl) | An RDF representation of the Tests in a Turtle serialization. | 

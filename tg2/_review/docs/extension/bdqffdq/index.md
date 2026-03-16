@@ -129,8 +129,8 @@ Information about the bdqffdq: ontology, its usage, and its extensions can be fo
 
 #### 1.3.1 Term List Distributions (non-normative)
 
-| Description | IRI | Download URL | Note | 
-| ----------- | --- | -----------  | ---- | 
+| Description | IRI | Download URL | Notes | 
+| ----------- | --- | -----------  | ----- | 
 | HTML file   | http://rs.tdwg.org/bdqffdq/extension/ | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/docs/extension/bdqffdq/index.md | This file | 
 | OWL Ontology | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/vocabulary/bdqffdq.owl | Turtle Serialization of the full ontology, including additional axioms | 
 

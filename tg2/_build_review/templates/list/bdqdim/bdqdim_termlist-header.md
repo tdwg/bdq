@@ -76,8 +76,8 @@ For the list and links to all associated documents see [The Biodiversity Data Qu
 
 ### 1.5 Term List Distributions (non-normative)
 
-| Description | IRI | Download URL | Note | 
-| ----------- | --- | -----------  | ---- | 
+| Description | IRI | Download URL | Notes | 
+| ----------- | --- | -----------  | ----- | 
 | HTML file   | {current_iri} | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/docs/list/{pref_namespace_prefix}/index.md | This file | 
 | RDF/XML file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/dist/{pref_namespace_prefix}.xml | Example for submission, to be generated | 
 

@@ -137,8 +137,8 @@ Information about the Fitness for Use ontology, its usage, and its extensions ca
 
 #### 1.3.1 Distributions (non-normative)
 
-| Description | IRI | Download URL | Note | 
-| ----------- | --- | -----------  | ---- | 
+| Description | IRI | Download URL | Notes | 
+| ----------- | --- | -----------  | ----- | 
 | Owl ontology | TBD | [Biodiversity Data Quality Fitness For Use Framework (Ontology)](../../vocabulary/bdqffdq.owl) | The formal RDF/OWL representation of the vocabulary. |
 
 ### 1.4 Namespace abbreviations (non-normative)

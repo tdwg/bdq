@@ -109,8 +109,8 @@ The set of information most relevant to the BDQ Tests can be found in the follow
 ### 1.4 Term List Distributions (non-normative)
 
 <!--- This same table appears in bdqtest_landing_header. Edit here, edit there. --->
-| Description | IRI | Download URL | Note | 
-| ----------- | --- | -----------  | ---- | 
+| Description | IRI | Download URL | Notes | 
+| ----------- | --- | -----------  | ----- | 
 | HTML file   | TBD | [BDQ Tests and Assertions List of Terms](../../list/bdqtest/index.md) | Complete term list for the `bdqtest:` vocabulary as a web page. | 
 | RDF/XML file | TBD | [Tests in RDF/XML](../../../dist/bdqtest.xml) | An RDF representation of the Tests in an RDF/XML serialization. | 
 | Turtle file | TBD | [Tests in Turtle](../../../dist/bdqtest.ttl) | An RDF representation of the Tests in a Turtle serialization. | 
