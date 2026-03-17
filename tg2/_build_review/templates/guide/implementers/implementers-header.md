@@ -843,7 +843,37 @@ Reports MAY describe Tests to consumers of those reports using the Description (
 
 `Information Elements` may be `bdqffdq:ActedUpon` or `bdqffdq:Consulted` (the sub-types of `bdqffdq:InformationElement`). Presentations of data quality results MAY use `Information Element` sub-types to identify which specific values `Assertions` are being made about, and which values are being used to support those `Assertions`. `Information Elements` `Acted Upon` are those for which a `Validation` Test is asserting compliance/non-compliance, or for which an `Amendment` Test is proposing an improvement to the data. `Information Elements` `Consulted` are those which inform such decisions, but are not themselves the subject of the decision. For example, in the Test [AMENDMENT_EVENTDATE_FROM_VERBATIM](../../terms/bdqtest/index.md#AMENDMENT_EVENTDATE_FROM_VERBATIM), the `Information Element` `dwc:eventDate` is `Acted Upon`, while the `Information Element` `dwc:verbatimEventDate` is `Consulted`. Implementers may wish to clearly represent to consumers of `Data Quality Reports` (particularly `Data Quality Reports` in the form of spreadsheets), which terms are particular Tests are making `Assertions` about.
 
-Data quality reports SHOULD NOT assert that `Information Elements` `Consulted` for a `Validation` are NOT_COMPLIANT with respect to that `Validation`.
+Data quality reports should be clear which input terms are subject to compliance tests and thus SHOULD NOT assert that `Information Elements` `Consulted` for a `Validation` are NOT_COMPLIANT with respect to that `Validation`.
+
+##### 7.1.2. Information Elements Acted Upon and Consulted Example (non-normative)
+
+The `Test` VALIDATION_COUNTRY_NOTEMPTY has two `Information Elements` in its specification: `dwc:country` is the `Information Element` `Acted Upon`, and `dwc:countryCode` is the `Information Element` `Consulted`.   
+
+VALIDATION_COUNTRY_NOTEMPTY has the `expectedResponse`: COMPLIANT if dwc:country is bdq:NotEmpty or dwc:countryCode has a value of "XZ" and either dwc:country is bdq:Empty or has a value of "High seas"; otherwise NOT_COMPLIANT
+
+Given the following record as input:
+
+* dwc:country = ""
+* dwc:countryCode = "US"
+
+In this case, the `Information Element` `Acted Upon` is `dwc:country`, and the `Information Element` `Consulted` is `dwc:countryCode`. The Test would return NOT_COMPLIANT for this record, with a comment that dwc:country is empty, and that the value of dwc:countryCode does not have the value "XZ". The Test would not return NOT_COMPLIANT because of the value of dwc:countryCode, but because of the value of dwc:country. The value of dwc:countryCode is consulted in the Test, but is not itself the subject of a non-compliance assertion.  Therefore, when presenting the results of this Test, it would be important to make clear that the non-compliance is with respect to dwc:country, and not dwc:countryCode.
+
+A hypothetical (partial) presentation of the results of this `Test` in a spreadsheet might color code the `Information Element` `Acted Upon` (dwc:country) in red to indicate that it is the subject of a non-compliance assertion, while the `Information Element` `Consulted` (dwc:countryCode) should not be similarly marked as it is not the subject of a non-compliance assertion, even though it was consulted in the `Test`.
+
+<table>
+  <thead>
+    <tr>
+      <th>dwc:country</th>
+      <th>dwc:countryCode</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="background-color: #ffcccc;">&nbsp;</td>
+      <td>US</td>
+    </tr>
+  </tbody>
+</table>
 
 #### 7.1.3 Example (non-normative)
 
