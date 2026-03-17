@@ -464,7 +464,7 @@ In `bdqffdq:Validation` Tests that require the lookup of a `bdq:sourceAuthority`
 
 ## 3 Compliant Implementation (normative)
 
-The BDQ standard defines a library of Tests that can be used in `Data Quality Reports` and in Data Quality Assurance. However, the Tests can not assert or assure quality independently of a `Use Case`. A `Use Case` defining a suite of Tests needed to assert or filter for quality is required. Without it, an implementation of a Test Suite (a `Mechanism`) IS NOT compliant with the BDQ standard. Furthermore, all of the Tests required by a `Use Case` MUST be implemented and individually compliant with BDQ Test specifications in order for the `Use Case` Test Suite to be compliant with the BDQ standard. Note that BDQ Compliance of a Test Suite implementation does not mean that the `Use Case` that defines the Test Suite is valid or useful, rather, it simply means that every Test in the `Use Case` is in the implementation and independently compliant with the Test's BDQ specification.
+The BDQ standard defines a library of Tests that can produce `Data Quality Reports` and can be used in `Quality Control` and `Quality Assurance`. However, the Tests can not assert or assure quality independently of a `Use Case`. A `Use Case` defining a suite of Tests needed to assert or filter for quality is required. Without it, an implementation of a Test Suite (a `Mechanism`) IS NOT compliant with the BDQ standard. Furthermore, all of the Tests required by a `Use Case` MUST be implemented and individually compliant with BDQ Test specifications in order for the `Use Case` Test Suite to be compliant with the BDQ standard. Note that BDQ Compliance of a Test Suite implementation does not mean that the `Use Case` that defines the Test Suite is valid or useful, rather, it simply means that every Test in the `Use Case` is in the implementation and independently compliant with the Test's BDQ specification.
 
 An implementation of a Test Suite MUST include all `bdqtest:SingleRecord` `Validation`, `Measure`, and `Amendment` Tests for each `Use Case` it implements. An implementation MUST provide complete coverage for at least one `bdqffdq:UseCase`. Implementations MAY include additional Tests and additional `Use Cases`. Implementations SHOULD be explicit about the composition of implemented Tests into `Policies` and `Use Cases`.
 
@@ -1032,7 +1032,7 @@ The Test Validation Data are intended as input into a testing system that can ev
 The header for the data in the Test Validation Data files includes a column for each
 `Information Element` and each `Parameter` among all those used in the BDQ standard. Following are definitions for a subset of all columns in the Test Validation Data files:
 
-| column name | definition |
+| Column Name | Description |
 | ------ | ---------- |
 | Last Updated | The date on which this validation record was last updated. |
 | GitHub Issue | The URL of the GitHub issue number where rationale management of the Test under validation is maintained. |
