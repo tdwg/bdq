@@ -860,20 +860,7 @@ In this case, the `Information Element` `Acted Upon` is `dwc:country`, and the `
 
 A hypothetical (partial) presentation of the results of this `Test` in a spreadsheet might color code the `Information Element` `Acted Upon` (dwc:country) in red to indicate that it is the subject of a non-compliance assertion, while the `Information Element` `Consulted` (dwc:countryCode) should not be similarly marked as it is not the subject of a non-compliance assertion, even though it was consulted in the `Test`.
 
-<table>
-  <thead>
-    <tr>
-      <th>dwc:country</th>
-      <th>dwc:countryCode</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="background-color: #ffcccc;">&nbsp;</td>
-      <td>US</td>
-    </tr>
-  </tbody>
-</table>
+![Example Spreadsheet presentation with just the `actedUpon` for a `Validation` highlighted.](validation_actedupon_cell_red.png "Example Spreadsheet presentation with just the `actedUpon` for a `Validation` highlighted, a spreadsheet with column headers dwc:country and dwc:countryCode and one row of data, the data cell under dwc:country is empty but has a background color of red, while the data cell under dwc:countryCode contains the value US and has no background color set.")
 
 #### 7.1.3 Example (non-normative)
 
