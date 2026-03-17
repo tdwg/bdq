@@ -949,7 +949,7 @@ The Test Validation Data are intended as input into a testing system that can ev
 The header for the data in the Test Validation Data files includes a column for each
 `Information Element` and each `Parameter` among all those used in the BDQ standard. Following are definitions for a subset of all columns in the Test Validation Data files:
 
-| column name | definition |
+| Column Name | Description |
 | ------ | ---------- |
 | Last Updated | The date on which this validation record was last updated. |
 | GitHub Issue | The URL of the GitHub issue number where rationale management of the Test under validation is maintained. |
