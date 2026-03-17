@@ -191,6 +191,7 @@ The descriptions of the Tests are complex. The following are the most important 
 
 - Term Name (`rdf:value`) - a UUID that identifies the Test (e.g., 3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e).
 - Term IRI (`dcterms:isVersionOf`) - the machine readable identifier for the Test, in the form of an IRI terminating in the Term Name UUID (https://rs.tdwg.org/bdqtest/terms/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e).
+- Versioned IRI - the machine readable identifier for a specific version of the Test, in the form of an IRI terminating in the Term Name UUID and a date (https://rs.tdwg.org/bdqtest/terms/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e-2025-03-07)  Term IRI and Versioned IRI follow the guidance of the [TDWG Metadata Standards](https://tdwg.github.io/rs.tdwg.org/README-2020-02-03.html#4th-level-terms) document for IRIs for Terms.
 - Label (`rdfs:label`) - a human readable identifier for the Test (e.g., VALIDATION_COUNTRYCODE_STANDARD).
 - ExpectedResponse (`bdqffdq:hasExpectedResponse`) - the description of the expected behavior of a Test implementation.
 - SourceAuthorities/Defaults (`bdqffdq:hasAuthoritiesDefaults`) - information about source authorities and parameters listed in the expected response, including default values for parameters.
@@ -199,6 +200,8 @@ The descriptions of the Tests are complex. The following are the most important 
 - Parameters (`bdqffdq:Parameter`) - optional inputs to a Test that can change the behavior of the Test by changing the range or scope of values or the authority to use.
 - Examples (`skos:example`) - examples of expected inputs and outputs from a Test implementation.
 - Notes (`skos:note`) - additional notes about the Test, including clarification and guidance for implementation.
+
+
 
 #### 2.3.2 Reading a Specification (non-normative)
 
@@ -429,6 +432,14 @@ Nothing in this section should be taken as a requirement for a particular format
 Nothing in this section should be taken as a requirement for how `bdqffdq:Assertions` or `Responses` are to be presented to consumers of `Data Quality Reports`. Implementations MAY present the results of Tests in any form appropriate for their consumers.
 
 See [3.1 Structure of a Response (normative)](../../bdqtest/index.md#31-structure-of-response-normative) in [BDQ Tests and Assertions](../../bdqtest/index.md) for further normative guidance on representing Responses as RDF or in data structures.
+
+### 5.1.1 Results from Measures (normative)
+
+Measure Tests that return numeric values MUST return a single numeric value in `Response.result`. The value MAY be zero, a positive or negative integer, or a real number. Implementers SHOULD be mindful of interoperability issues when numbers are serialized or exchanged across programming languages, runtimes, or storage systems (for example, loss of integer precision, floating-point rounding differences, and handling of non-finite values such as NaN or ±Infinity).
+
+`Measure` Tests that return "COMPLETE" or "NOT_COMPLETE" MUST return one of those two values as the `Response.result`. 
+
+A single `Measure` Test MUST NOT return a list of numbers.  A single `Measure` Test MUST NOT return a list of "COMPLETE"/"NOT_COMPLETE" values.
 
 ### 5.2 Framework Elements Not Included in BDQ Test Descriptions (normative)
 
