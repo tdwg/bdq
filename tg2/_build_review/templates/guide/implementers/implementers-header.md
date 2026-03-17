@@ -379,25 +379,45 @@ In `bdqffdq:Validation` Tests that require the lookup of a `bdq:sourceAuthority`
 
 `Amendments` SHOULD propose changes with leading or trailing whitespace removed unless the Test specifies otherwise.
 
-## 3 Compliant Implementation (normative)
+## 3 Compliant Implementation (non-normative)
+
+The BDQ Tests are part of a coherent framework for describing and reporting on data quality, and the Tests are intended to be implemented as suites of Tests that fit particular `Use Cases` (see [BDQ Fitness for Use Framework](../../bdqffdq/index.md)). The following sections provide normative guidance on what is required for an implementation of a Test Suite to be compliant with the BDQ standard, and non-normative guidance on the rationale for these requirements and expectations for how implementers will design their Test Suites.
+
+![Diagram illustrating the relationships among Use Cases, Profiles, Tests, Parameters, and Reports](bdqffdq_overview_diagram.svg)
+
+### 3.1 Compliance depends on `Use Case` (normative)
 
 The BDQ standard defines a library of Tests that can produce `Data Quality Reports` and can be used in `Quality Control` and `Quality Assurance`. However, the Tests can not assert or assure quality independently of a `Use Case`. A `Use Case` defining a suite of Tests needed to assert or filter for quality is required. Without it, an implementation of a Test Suite (a `Mechanism`) IS NOT compliant with the BDQ standard. Furthermore, all of the Tests required by a `Use Case` MUST be implemented and individually compliant with BDQ Test specifications in order for the `Use Case` Test Suite to be compliant with the BDQ standard. Note that BDQ Compliance of a Test Suite implementation does not mean that the `Use Case` that defines the Test Suite is valid or useful, rather, it simply means that every Test in the `Use Case` is in the implementation and independently compliant with the Test's BDQ specification.
 
+### 3.2 Minimum Test Suite composition (normative)
+
 An implementation of a Test Suite MUST include all `bdqtest:SingleRecord` `Validation`, `Measure`, and `Amendment` Tests for each `Use Case` it implements. An implementation MUST provide complete coverage for at least one `bdqffdq:UseCase`. Implementations MAY include additional Tests and additional `Use Cases`. Implementations SHOULD be explicit about the composition of implemented Tests into `Policies` and `Use Cases`.
+
+### 3.3 Rationale and expectations for suite design (non-normative)
 
 The most important elements of the BDQ standard are the structure that holds explicit descriptions of what a data quality Test is intended to do, and the consistent structure for reporting the results from the execution of a Test upon data. We expect that implementers will implement suites of these Tests that fit their `Data Quality Needs` (their `Use Case`), including Tests that are specifically suited for their domain. The BDQ standard provides a coherent library of Tests that can be applied to the set of defined `bdqffdq:UseCases` in BDQ, and considerable thought has gone into describing Tests that isolate particular data quality issues and work together as a coherent suite.
 
+### 3.4 Required outputs for every Test execution (normative)
+
 Results from each Test MUST be produced in the form `Response.status`, `Response.result`, and `Response.comment`, with one Test producing one Response. Results MAY include `Response.qualifier` (see section [4 Extension Points](#4-extension-points-normative)). The values of `Response.status` and `Response.result` MUST be those specified. This standard is agnostic concerning data structures and serializations of a `Response`. The standard is agnostic concerning internationalization and languages of labels applied to human readable presentations of values within a `Response`. See  [3.1 Structure of Response (normative)](../../bdqtest/index.md#31-structure-of-response-normative) in [BDQ Tests and Assertions](../../bdqtest/index.md) for further normative guidance on `Responses` as RDF or as data structures. See section [5.1 The Response Object](#51-the-response-object-normative) for further normative guidance on `Responses`.
+
+#### 3.4.1 Amendment Response.result ordering (normative)
+
+Within the `Response.result` for an `Amendment` Test, the order of key-value pairs is not specified and MAY vary.
+
+### 3.5 Describing additional Tests (normative)
 
 Additional Tests that conform to the BDQ standard MUST describe those Tests using the BDQ [Fitness for Use Framework Ontology](../../bdqffdq/index.md), those Tests MUST use the same `Response` structures, and those Tests MUST be related to `bdqffdq:UseCases`, either those defined in the standard or additional `Use Cases`.
 
-implementations MUST provide Parameterized Tests that support the default `Parameter` values. implementations SHOULD provide for Parameterized Tests to take parameters, but MAY produce animplementation of a Parameterized Test that takes no parameters but only uses a default parameter value applicable within their domain.
+### 3.6 Parameterized Tests: default behavior and unsupported values (normative)
 
-How a Test implementation responds when given a `Parameter` value that is not supported by the implementation is not specified. Implementers SHOULD handle this in a manner appropriate for their implementation framework. Unless otherwise noted in properties of the `Specification`, Implementations MUST NOT use `Response.status`="EXTERNAL_PREREQUISITES_NOT_MET" to indicate a non-supported parameter value.
+Implementations MUST provide Parameterized Tests that support the default `Parameter` values. implementations SHOULD provide for Parameterized Tests to take parameters, but MAY produce animplementation of a Parameterized Test that takes no parameters but only uses a default parameter value applicable within their domain.
+
+How a Test implementation responds when given a `Parameter` value that is not supported by the implementation is not specified. Implementers SHOULD handle this in a manner appropriate for their implementation framework. Unless otherwise noted in properties of the `Specification`, implementations MUST NOT use `Response.status`="EXTERNAL_PREREQUISITES_NOT_MET" to indicate a non-supported parameter value.
+
+### 3.7 Bulk / non-Framework execution (normative)
 
 Implementers are encouraged to produce the means to test data quality in bulk in settings such as SQL queries on relational data stores where construction of `Response` objects is not feasible, but the logic of a specification (`hasExpectedResponse`) can be framed as a question on a data store. Such non-Framework implementations MUST NOT assert compliance with the BDQ standard.
-
-Within the `Response.result` for an `Amendment` Test, the order of key-value pairs is not specified and MAY vary.
 
 ## 4 Extension Points (normative)
 
