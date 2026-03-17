@@ -68,7 +68,7 @@ Draft Standard for Review
     - [2.3.3 The Concept of "interpreted as" (normative)](#233-the-concept-of-interpreted-as-normative)
     - [2.3.4 Handling Leading and Trailing Whitespace (normative)](#234-handling-leading-and-trailing-whitespace-normative)
 
-[3 Compliant Implementation (non-normative)](#3-compliant-implementation-non-normative)
+[3 Compliant Implementation (normative)](#3-compliant-implementation-normative)
   - [3.1 Compliance depends on `Use Case` (normative)](#31-compliance-depends-on-`use-case`-normative)
   - [3.2 Minimum Test Suite composition (normative)](#32-minimum-test-suite-composition-normative)
   - [3.3 Rationale and expectations for suite design (non-normative)](#33-rationale-and-expectations-for-suite-design-non-normative)
@@ -470,15 +470,15 @@ In `bdqffdq:Validation` Tests that require the lookup of a `bdq:sourceAuthority`
 
 `Amendments` SHOULD propose changes with leading or trailing whitespace removed unless the Test specifies otherwise.
 
-## 3 Compliant Implementation (non-normative)
+## 3 Compliant Implementation (normative)
 
 The BDQ Tests are part of a coherent framework for describing and reporting on data quality, and the Tests are intended to be implemented as suites of Tests that fit particular `Use Cases` (see [BDQ Fitness for Use Framework](../../bdqffdq/index.md)). The following sections provide normative guidance on what is required for an implementation of a Test Suite to be compliant with the BDQ standard, and non-normative guidance on the rationale for these requirements and expectations for how implementers will design their Test Suites.
 
-![Diagram illustrating the relationships among Use Cases, Profiles, Tests, Parameters, and Reports](bdqffdq_overview_diagram.svg)
+![Non-normative diagram illustrating the relationships among Use Cases, Policies, Tests, Parameters, and Reports](bdqffdq_overview_diagram.svg)
 
 ### 3.1 Compliance depends on `Use Case` (normative)
 
-The BDQ standard defines a library of Tests that can produce `Data Quality Reports` and can be used in `Quality Control` and `Quality Assurance`. However, the Tests can not assert or assure quality independently of a `Use Case`. A `Use Case` defining a suite of Tests needed to assert or filter for quality is required. Without it, an implementation of a Test Suite (a `Mechanism`) IS NOT compliant with the BDQ standard. Furthermore, all of the Tests required by a `Use Case` MUST be implemented and individually compliant with BDQ Test specifications in order for the `Use Case` Test Suite to be compliant with the BDQ standard. Note that BDQ Compliance of a Test Suite implementation does not mean that the `Use Case` that defines the Test Suite is valid or useful, rather, it simply means that every Test in the `Use Case` is in the implementation and independently compliant with the Test's BDQ specification.
+The BDQ standard defines a library of Tests that can produce `Data Quality Reports` and can be used in `Quality Control` and `Quality Assurance`. However, the Tests can not assert or assure quality independently of a `Use Case`.  A `Use Case` (through a set of `Policies') defining a suite of Tests needed to assert or filter for quality is required. Without it, an implementation of a set of Tests in a `Mechanism` IS NOT compliant with the BDQ standard. Furthermore, all of the Tests required by the `Policies' of a `Use Case` MUST be implemented and individually compliant with BDQ Test specifications in order for the `Use Case` Test Suite to be compliant with the BDQ standard. Note that BDQ Compliance of a Test Suite implementation does not mean that the `Use Case` that defines the Test Suite is valid or useful, rather, it simply means that every Test in the `Use Case` is in the implementation and independently compliant with the Test's BDQ specification.
 
 ### 3.2 Minimum Test Suite composition (normative)
 
