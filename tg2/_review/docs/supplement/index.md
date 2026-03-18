@@ -153,6 +153,7 @@ The following namespace abbreviations are used in this document:
 | rdf:         | http://www.w3.org/1999/02/22-rdf-syntax-ns# |
 | rdfs:        | http://www.w3.org/2000/01/rdf-schema#       |
 | skos:        | http://www.w3.org/2004/02/skos/core#        |
+| prov:        | http://www.w3.org/ns/prov#>                 |
 | tdwgutility: | http://rs.tdwg.org/dwc/terms/attributes/    |
 | xsd:         | http://www.w3.org/2001/XMLSchema#           |
 
@@ -457,6 +458,7 @@ The Fitness for Use Framework represents the results of `Validation` Tests as `A
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     PREFIX owl: <http://www.w3.org/2002/07/owl#>
     PREFIX oa: <http://www.w3.org/ns/oa#>
+    PREFIX dcterms: <http://purl.org/dc/terms/>
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
@@ -468,18 +470,28 @@ The Fitness for Use Framework represents the results of `Validation` Tests as `A
          ?specification bdqffdq:hasArgument ?argument . ?argument bdqffdq:hasArgumentValue ?argumentValue . ?argument bdqffdq:hasParameter ?parameter .
          BIND (CONCAT(STR(?parameter), "=" , ?argumentValue ) as ?params )
       } .
-      ?implementation bdqffdq:usesSpecification ?specification . ?implementation bdqffdq:producesAssertion ?assertion .
-      ?assertion bdqffdq:hasResponseStatus ?responsestatus .
-      ?assertion bdqffdq:hasResponseResult ?responseresult .
-      ?assertion bdqffdq:hasResponseComment ?responsecomment .
+      ?implementation bdqffdq:usesSpecification ?specification . 
+      ?implementation bdqffdq:producesAssertion ?assertion .
       ?implementation bdqffdq:implementedBy ?mechanism .
+      ?assertion bdqffdq:hasResponseStatus ?responsestatus .
+      OPTIONAL { ?assertion bdqffdq:hasResponseResult ?responseresult . }
+      ?assertion bdqffdq:hasResponseComment ?responsecomment .
+      ?annotation a oa:Annotation .
       ?annotation oa:body ?assertion .
       ?annotation oa:target ?target .
-      OPTIONAL { ?annotation oa:motivation ?motivation . } .
+      OPTIONAL { ?annotation oa:motivatedBy ?motivation . } .
       OPTIONAL { ?annotation dcterms:created ?annotationdate . } .
-      FILTER (STR(?target) = "https://mczbase.mcz.harvard.edu/guid/MCZ:Mala:280832")
+      FILTER (?target = <https://mczbase.mcz.harvard.edu/guid/MCZ:Mala:280832>)
     }
     GROUP BY ?responsestatus ?responseresult ?responsecomment ?test ?label ?description ?mechanism ?motivation ?annotationdate
+
+Note that a `Validation` will produce a hasResponseResult only if the hasResponseStatus is bdqffdq:RUN_HAS_RESULT, so in this query, this clause is optional to include results where the status indicated a failure case.   For other test types, the result may be returned either as an object (bdqffdq:hasResponseResult) or a literal (bdqffdq:hasResponseResultValue), so to generalize this query to generalize to other test types add an additional of optional clause, remembering that also for prerequisite-not-met statuses, neither will be present.  
+
+      OPTIONAL { ?assertion bdqffdq:hasResponseResult ?responseresult . }
+      OPTIONAL { ?assertion bdqffdq:hasResponseResultValue ?responseresultvalue . }
+
+
+
 
 ## 3 Developing the Tests (non-normative)
 
@@ -667,6 +679,12 @@ A `bdqffdq:Assertion`, with its `Response.status`, `Response.result`, and a `Res
 
 Below is an example of a `bdqffdq:Assertion` forming the body of an `oa:Annotation`, with triples indicating the implementation that produced the `Assertion` and relating it back to a `bdqtest:Specification` (from which the metadata about the Test that was run can be identified).
 
+    @prefix bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/> .
+    @prefix oa:      <http://www.w3.org/ns/oa#> .
+    @prefix dcterms: <http://purl.org/dc/terms/> .
+    @prefix prov:    <http://www.w3.org/ns/prov#> .
+    @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+
     <https://example.org/bdq/assertion/51967574-7be9-4e38-938c-5dfec2d4d61d> a bdqffdq:ValidationAssertion ;
         bdqffdq:hasResponseStatus bdqffdq:RUN_HAS_RESULT ;
         bdqffdq:hasResponseResult bdqffdq:COMPLIANT ;
@@ -676,17 +694,20 @@ Below is an example of a `bdqffdq:Assertion` forming the body of an `oa:Annotati
     <https://example.org/annotation/519ab16d-6c00-4a94-a3bd-5418ad391717> a oa:Annotation ;
         oa:body <https://example.org/bdq/assertion/51967574-7be9-4e38-938c-5dfec2d4d61d> ;
         oa:target <https://mczbase.mcz.harvard.edu/guid/MCZ:Mala:280832> ;
-        oa:created "2015-01-28T12:00:00Z" ;
+        dcterms:created "2015-01-28T12:00:00Z" ;
         oa:creator <urn:uuid:90516df7-838c-4d53-81d9-8131be6ac713> ;
-        oa:motivation oa:assessing .
+        oa:motivatedBy oa:assessing .
 
-    <urn:uuid:90516df7-838c-4d53-81d9-8131be6ac713> a bdqffd:Mechanism ;
-        a oa:Software ;
+    <urn:uuid:90516df7-838c-4d53-81d9-8131be6ac713> a bdqffdq:Mechanism ;
+        a prov:SoftwareAgent ;
         rdfs:label "Kurator: Scientific Name Validator - DwCSciNameDQ:v1.1.1-SNAPSHOT" .
 
 	<urn:uuid:f3a41284-093c-4b7e-8054-a32456a7a427> a bdqffdq:Implementation ;
         bdqffdq:implementedBy <urn:uuid:90516df7-838c-4d53-81d9-8131be6ac713> ;
+        bdqffdq:producesAssertion <https://example.org/bdq/assertion/51967574-7be9-4e38-938c-5dfec2d4d61d> ;
         bdqffdq:usesSpecification <urn:uuid:3c2fe7e9-186f-4ceb-8274-8bbcb4a62de4> .
+
+Combined with `bdqtest:` these triples will return a result from the competency question in [2.4.2](#242-framework-competency-question-including-an-oaannotation-non-normative).
 
 ### 3.9 Aspirational Aspects of Some CORE Tests (non-normative)
 

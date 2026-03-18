@@ -198,6 +198,7 @@ The following namespace abbreviations are used in this document:
 | rdf:         | http://www.w3.org/1999/02/22-rdf-syntax-ns# |
 | rdfs:        | http://www.w3.org/2000/01/rdf-schema#       |
 | skos:        | http://www.w3.org/2004/02/skos/core#        |
+| prov:        | http://www.w3.org/ns/prov#>                 |
 | tdwgutility: | http://rs.tdwg.org/dwc/terms/attributes/    |
 
 ### 1.7 Referring to Terms (normative)
@@ -1056,57 +1057,57 @@ When Test responses are persisted as `Annotations` in association with the annot
 
 #### 7.2.1 Example of Test Responses as Annotations (non-normative)
 
-The following is an example of a Test response represented as an `Annotation` in JSON-LD format following the W3C Web Annotation Data Model (Sanderson et al. 2017). The body of the `Annotation` contains the Test response, and the metadata about the Test and the mechanism that generated the response are included in the body of the `Annotation`. The target of the `Annotation` is a URI for a particular record in a dataset.
+The following is an example of a Test response represented as an `Annotation` in TURTLE format following the W3C Web Annotation Data Model (Sanderson et al. 2017). The body of the `Annotation` contains the Test response, and the metadata about the Test and the mechanism that generated the response are included in the body of the `Annotation`. The target of the `Annotation` is a URI for a particular record in a dataset.
 
-```json
-{
-  "@context": [
-    "http://www.w3.org/ns/anno.jsonld",
-    {
-      "bdqffdq": "https://rs.tdwg.org/bdqffdq/terms/",
-      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+This example is written to be consistent with the following expectations:
 
-      "hasResponseStatus": { "@id": "bdqffdq:hasResponseStatus", "@type": "@id" },
-      "hasResponseResult": { "@id": "bdqffdq:hasResponseResult", "@type": "@id" },
-      "hasResponseComment": { "@id": "bdqffdq:hasResponseComment" },
+* The oa:body of the oa:Annotation is the Assertion.
+* The oa:target of the oa:Annotation is the IRI of the record being annotated.
+* The dcterms:created value on the oa:Annotation provides the annotation date.
+* The oa:motivatedBy value on the oa:Annotation provides the motivation for creating the annotation.
+* The Implementation is related to the Assertion it generated using bdqffdq:producesAssertion, is related to the Specification it ran using bdqffdq:usesSpecification, and is related to the Mechanism that executed it using bdqffdq:implementedBy.
+* The bdqffdq:usesSpecification property points to the specific instance of bdqffdq:Specification that the Implementation used for the Test execution.
 
-      "producesAssertion": { "@id": "bdqffdq:producesAssertion", "@type": "@id" },
-      "implementedBy": { "@id": "bdqffdq:implementedBy", "@type": "@id" },
-      "usesSpecification": { "@id": "bdqffdq:usesSpecification", "@type": "@id" },
-      "appliesTo": { "@id": "bdqffdq:appliesTo", "@type": "@id" }
-    }
-  ],
+In a complete dataset the Specification is linked (via a Method instance) to the corresponding Test in bdqtest, that is, we could look up that the Test is VALIDATION_DAY_STANDARD given the `Specification` IRI. 
 
-  "id": "http://example.org/annotation/1",
-  "type": "Annotation",
+```
+@prefix bdq:     <https://rs.tdwg.org/bdq/terms/> .
+@prefix bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix oa:      <http://www.w3.org/ns/oa#> .
+@prefix prov:    <http://www.w3.org/ns/prov#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 
-  "body": [
-    {
-      "id": "http://example.org/assertion/1",
-      "type": "bdqffdq:ValidationAssertion",
-      "appliesTo": "http://example.org/dataset/record/12345",
-      "hasResponseStatus": "bdqffdq:RUN_HAS_RESULT",
-      "hasResponseResult": "bdqffdq:NOT_COMPLIANT",
-      "hasResponseComment": "Provided value for day '32' is not an integer in the range 1 to 31."
-    },
-    {
-      "id": "http://example.org/implementation/1",
-      "type": "bdqffdq:Implementation",
-      "producesAssertion": "http://example.org/assertion/1",
-      "implementedBy": "http://example.org/mechanism/kurator-dwcsciNameDQ-v1.0.1",
-      "usesSpecification": "https://rs.tdwg.org/bdq/terms/47ff73ba-0028-4f79-9ce1-ee7008d66498/2023-09-18"
-    },
-    {
-      "id": "http://example.org/mechanism/kurator-dwcsciNameDQ-v1.0.1",
-      "type": "bdqffdq:Mechanism",
-      "rdfs:label": "Kurator Scientific Name Validator - DwCSciNameDQ:v1.0.1"
-    }
-  ],
+<https://example.org/bdq/assertion/1>
+  a bdqffdq:ValidationAssertion ;
+  bdqffdq:hasResponseStatus bdqffdq:RUN_HAS_RESULT ;
+  bdqffdq:hasResponseResult bdqffdq:NOT_COMPLIANT ;
+  bdqffdq:hasResponseComment "Provided value for day '32' is not an integer in the range 1 to 31."^^xsd:string ;
+  bdqffdq:appliesTo <http://example.org/dataset/record/12345> .
 
-  "target": "http://example.org/dataset/record/12345"
-}
-`
-See also (Framework Competency Question including an oa:annotation](../../supplementary/index.md#242-framework-competency-question-including-an-oaannotation-non-normative) in the [Supplementary Material](../../supplementary/index.md). 
+<https://example.org/bdq/implementation/1>
+  a bdqffdq:Implementation ;
+  bdqffdq:producesAssertion <https://example.org/bdq/assertion/1> ;
+  bdqffdq:implementedBy <https://example.org/bdq/mechanism/kurator-dwcsciNameDQ-v1.0.1> ;
+  bdqffdq:usesSpecification <https://rs.tdwg.org/bdqtest/terms/47ff73ba-0028-4f79-9ce1-ee7008d66498-2025-03-06> .
+
+<https://example.org/bdq/mechanism/kurator-dwcsciNameDQ-v1.0.1>
+  a bdqffdq:Mechanism ,
+    prov:SoftwareAgent ;
+  rdfs:label "Kurator Scientific Name Validator - DwCSciNameDQ:v1.0.1"^^xsd:string .
+
+<https://example.org/annotation/1>
+  a oa:Annotation ;
+  oa:body <https://example.org/bdq/assertion/1> ;
+  oa:target <http://example.org/dataset/record/12345> ;
+  dcterms:created "2015-01-28T12:00:00Z"^^xsd:dateTime ;
+  oa:creator <https://example.org/bdq/mechanism/kurator-dwcsciNameDQ-v1.0.1> ;
+  oa:motivatedBy oa:assessing .
+```
+
+See also (Framework Competency Question including an oa:annotation](../../supplementary/index.md#242-framework-competency-question-including-an-oaannotation-non-normative) and the [discussion](../../supplement/index.md#38-amendments-and-annotations-non-normative) in the [Supplementary Material](../../supplementary/index.md). 
 
 ## 8 Validating Test Implementations (normative)
 
