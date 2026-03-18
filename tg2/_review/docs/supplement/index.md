@@ -709,6 +709,19 @@ Below is an example of a `bdqffdq:Assertion` forming the body of an `oa:Annotati
 
 Combined with `bdqtest:` these triples will return a result from the competency question in [2.4.2](#242-framework-competency-question-including-an-oaannotation-non-normative).
 
+| Field | Value |
+| ----- | ----- |
+| `?responsestatus` | `bdqffdq:RUN_HAS_RESULT` |
+| `?responseresult` | `bdqffdq:COMPLIANT` |
+| `?responsecomment` | `Exact Match found for [Chicoreus palmarosae (Lamarck, 1822)] to [https://www.gbif.org/species/4365662] running VALIDATION_SCIENTIFICNAME_FOUND.` |
+| `?test` | `<https://rs.tdwg.org/bdqtest/terms/3f335517-f442-4b98-b149-1e87ff16de45-2025-03-06>` |
+| `?label` | `VALIDATION_SCIENTIFICNAME_FOUND` |
+| `?description` | `EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificName is bdq:Empty; COMPLIANT if there is a match of the contents of dwc:scientificName in the bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}` |
+| `?parameters` | `https://rs.tdwg.org/bdq/terms/sourceAuthority=GBIF Backbone Taxonomy` |
+| `?mechanism` | `<urn:uuid:90516df7-838c-4d53-81d9-8131be6ac713>` |
+| `?motivation` | `oa:assessing` |
+| `?annotationdate` | `"2015-01-28T12:00:00Z"` |
+
 ### 3.9 Aspirational Aspects of Some CORE Tests (non-normative)
 
 #### 3.9.1 Vocabularies (non-normative)
