@@ -110,7 +110,7 @@ Draft Standard for Review
   - [7.1 Data Quality Reports (normative)](#71-data-quality-reports-normative)
     - [7.1.1 Identifying Tests (normative)](#711-identifying-tests-normative)
     - [7.1.2 Information Elements Acted Upon and Consulted in Results (normative)](#712-information-elements-acted-upon-and-consulted-in-results-normative)
-      - [7.1.2. Information Elements Acted Upon and Consulted Example (non-normative)](#712-information-elements-acted-upon-and-consulted-example-non-normative)
+      - [7.1.2.1 Information Elements Acted Upon and Consulted Example (non-normative)](#7121-information-elements-acted-upon-and-consulted-example-non-normative)
     - [7.1.3 Example (non-normative)](#713-example-non-normative)
   - [7.2 Annotations (normative)](#72-annotations-normative)
 
@@ -967,7 +967,7 @@ Reports MAY describe Tests to consumers of those reports using the Description (
 
 Data quality reports should be clear which input terms are subject to compliance tests and thus SHOULD NOT assert that `Information Elements` `Consulted` for a `Validation` are NOT_COMPLIANT with respect to that `Validation`.
 
-##### 7.1.2. Information Elements Acted Upon and Consulted Example (non-normative)
+##### 7.1.2.1 Information Elements Acted Upon and Consulted Example (non-normative)
 
 The `Test` VALIDATION_COUNTRY_NOTEMPTY has two `Information Elements` in its specification: `dwc:country` is the `Information Element` `Acted Upon`, and `dwc:countryCode` is the `Information Element` `Consulted`.   
 
