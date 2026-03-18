@@ -1105,7 +1105,8 @@ The following is an example of a Test response represented as an `Annotation` in
 
   "target": "http://example.org/dataset/record/12345"
 }
-```
+`
+See also (Framework Competency Question including an oa:annotation](../../supplementary/index.md#242-framework-competency-question-including-an-oaannotation-non-normative) in the [Supplementary Material](../../supplementary/index.md). 
 
 ## 8 Validating Test Implementations (normative)
 

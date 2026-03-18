@@ -232,7 +232,7 @@ The following namespace abbreviations are used in this document:
 | bdqffdq:     | https://rs.tdwg.org/bdqffdq/terms/          |
 | dcterms:     | http://purl.org/dc/terms/                   |
 | dwc:         | http://rs.tdwg.org/dwc/terms/               |
-| oa:          | https://www.w3.org/TR/annotation-vocab/     |
+| oa:          | http://www.w3.org/ns/oa#                    |
 | owl:         | http://www.w3.org/2002/07/owl#              |
 | rdf:         | http://www.w3.org/1999/02/22-rdf-syntax-ns# |
 | rdfs:        | http://www.w3.org/2000/01/rdf-schema#       |

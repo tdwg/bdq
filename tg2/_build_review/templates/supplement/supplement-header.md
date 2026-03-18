@@ -81,7 +81,7 @@ The following namespace abbreviations are used in this document:
 | dc:          | https://purl.org/dc/elements/1.1/           |
 | dcterms:     | http://purl.org/dc/terms/                   |
 | dwc:         | http://rs.tdwg.org/dwc/terms/               |
-| oa:          | https://www.w3.org/TR/annotation-vocab/     |
+| oa:          | http://www.w3.org/ns/oa#                    |
 | owl:         | http://www.w3.org/2002/07/owl#              |
 | rdf:         | http://www.w3.org/1999/02/22-rdf-syntax-ns# |
 | rdfs:        | http://www.w3.org/2000/01/rdf-schema#       |
@@ -319,7 +319,7 @@ What `Validations` and `Amendments` share `Information Elements` `Acted Upon`?
     }
     ORDER BY ?term
 
-What `Information Elements` are `Acted Upon` by more that one `Annotation`?
+What `Information Elements` are `Acted Upon` by more that one `Amendment`?
 
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     PREFIX owl: <http://www.w3.org/2002/07/owl#>
@@ -389,7 +389,7 @@ The Fitness for Use Framework represents the results of `Validation` Tests as `A
 
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     PREFIX owl: <http://www.w3.org/2002/07/owl#>
-    PREFIX oa: <https://www.w3.org/TR/annotation-vocab/>
+    PREFIX oa: <http://www.w3.org/ns/oa#>
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
@@ -403,14 +403,14 @@ The Fitness for Use Framework represents the results of `Validation` Tests as `A
       } .
       ?implementation bdqffdq:usesSpecification ?specification . ?implementation bdqffdq:producesAssertion ?assertion .
       ?assertion bdqffdq:hasResponseStatus ?responsestatus .
-      ?assertion bdqffdq:hasResponseResult ?responseResult .
+      ?assertion bdqffdq:hasResponseResult ?responseresult .
       ?assertion bdqffdq:hasResponseComment ?responsecomment .
       ?implementation bdqffdq:implementedBy ?mechanism .
       ?annotation oa:body ?assertion .
       ?annotation oa:target ?target .
       OPTIONAL { ?annotation oa:motivation ?motivation . } .
-      OPTIONAL { ?annotation oa:generated ?annotationdate . } .
-      FILTER (STR(?target) = "https//mczbase.mcz.harvard.edu/guid/MCZ:Mala:280832")
+      OPTIONAL { ?annotation dcterms:created ?annotationdate . } .
+      FILTER (STR(?target) = "https://mczbase.mcz.harvard.edu/guid/MCZ:Mala:280832")
     }
     GROUP BY ?responsestatus ?responseresult ?responsecomment ?test ?label ?description ?mechanism ?motivation ?annotationdate
 
@@ -601,9 +601,9 @@ A `bdqffdq:Assertion`, with its `Response.status`, `Response.result`, and a `Res
 Below is an example of a `bdqffdq:Assertion` forming the body of an `oa:Annotation`, with triples indicating the implementation that produced the `Assertion` and relating it back to a `bdqtest:Specification` (from which the metadata about the Test that was run can be identified).
 
     <https://example.org/bdq/assertion/51967574-7be9-4e38-938c-5dfec2d4d61d> a bdqffdq:ValidationAssertion ;
-        oa:hasResponseStatus bdqffdq:RUN_HAS_RESULT ;
-        oa:hasResponseResult bdqffdq:COMPLIANT ;
-        oa:hasResponseComment "Exact Match found for [Chicoreus palmarosae (Lamarck, 1822)] to [https://www.gbif.org/species/4365662] running VALIDATION_SCIENTIFICNAME_FOUND." ;
+        bdqffdq:hasResponseStatus bdqffdq:RUN_HAS_RESULT ;
+        bdqffdq:hasResponseResult bdqffdq:COMPLIANT ;
+        bdqffdq:hasResponseComment "Exact Match found for [Chicoreus palmarosae (Lamarck, 1822)] to [https://www.gbif.org/species/4365662] running VALIDATION_SCIENTIFICNAME_FOUND." ;
         bdqffdq:appliesTo <https://mczbase.mcz.harvard.edu/guid/MCZ:Mala:280832>
 
     <https://example.org/annotation/519ab16d-6c00-4a94-a3bd-5418ad391717> a oa:Annotation ;
