@@ -103,7 +103,7 @@ The following namespace abbreviations are used in this document:
 | rdf:         | http://www.w3.org/1999/02/22-rdf-syntax-ns# |
 | rdfs:        | http://www.w3.org/2000/01/rdf-schema#       |
 | skos:        | http://www.w3.org/2004/02/skos/core#        |
-| prov:        | http://www.w3.org/ns/prov#>                 |
+| prov:        | http://www.w3.org/ns/prov#                  |
 | tdwgutility: | http://rs.tdwg.org/dwc/terms/attributes/    |
 
 ### 1.7 Referring to Terms (normative)
@@ -134,7 +134,7 @@ Data that have passed through arbitrary serializations and transformations can c
 
 Unicode characters in the range U+0000 to U+0020, equivalent to ASCII characters 0-32, MUST be treated as `bdq:Empty`.
 
-(2) Actual NULLs are`bdq:Empty`.
+(2) Actual NULLs are `bdq:Empty`.
 
 Objects that are null (or are null values in a relational database) at the point of Test execution MUST be treated as `bdq:Empty`.
 
@@ -276,6 +276,8 @@ EXTERNAL_PREREQUISITES_NOT_MET means
    bdqffdq:hasResponseStatus bdqffdq:EXTERNAL_PREREQUISITES_NOT_MET ;
    bdqffdq:hasResponseComment "Source authority service was not available at time of evaluation."^^xsd:string .
 ```
+Note that in RDF representations, the `Response` is an instance of `bdqffdq:Assertion`, and the `Response.status` is a value of `bdqffdq:hasResponseStatus`, while the `Response.result` may be either a literal using `bdqffdq:hasResponseResultValue` or a Named Individual using bdqffdq:hasResponseResult, or, as a best practice with RDF, when null, is ommitted, and the `Response.comment` is a value of `bdqffdq:hasResponseComment`.
+
 
 For example, the `bdqffdq:hasExpectedResponse` for the `Specification` for [VALIDATION_COUNTRYCODE_STANDARD](../../terms/bdqtest/index.md#VALIDATION_COUNTRYCODE_STANDARD) states:
 
@@ -401,7 +403,7 @@ The BDQ Tests are part of a coherent framework for describing and reporting on d
 
 ### 3.1 Compliance depends on `Use Case` (normative)
 
-The BDQ standard defines a library of Tests that can produce `Data Quality Reports` and can be used in `Quality Control` and `Quality Assurance`.  See the discussion of `Quality Control` and `Quality Assurance` in the [Users Guide](../../guide/users/index.md#21-quality-control-and-quality-assurance-non-normative) However, the Tests can not assert or assure quality independently of a `Use Case`.  A `Use Case` (through a set of `Policies') defining a suite of Tests needed to assert or filter for quality is required. Without it, an implementation of a set of Tests in a `Mechanism` IS NOT compliant with the BDQ standard. Furthermore, all of the Tests required by the `Policies` of a `Use Case` MUST be implemented and individually compliant with BDQ Test specifications in order for the `Use Case` Test Suite to be compliant with the BDQ standard. Note that BDQ Compliance of a Test Suite implementation does not mean that the `Use Case` that defines the Test Suite is valid or useful, rather, it simply means that every Test in the `Use Case` is in the implementation and independently compliant with the Test's BDQ specification.
+The BDQ standard defines a library of Tests that can produce `Data Quality Reports` and can be used in `Quality Control` and `Quality Assurance`.  See the discussion of `Quality Control` and `Quality Assurance` in the [Users Guide](../../guide/users/index.md#21-quality-control-and-quality-assurance-non-normative) However, the Tests can not assert or assure quality independently of a `Use Case`.  A `Use Case` (through a set of `Policies`) defining a suite of Tests needed to assert or filter for quality is required. Without it, an implementation of a set of Tests in a `Mechanism` IS NOT compliant with the BDQ standard. Furthermore, all of the Tests required by the `Policies` of a `Use Case` MUST be implemented and individually compliant with BDQ Test specifications in order for the `Use Case` Test Suite to be compliant with the BDQ standard. Note that BDQ Compliance of a Test Suite implementation does not mean that the `Use Case` that defines the Test Suite is valid or useful, rather, it simply means that every Test in the `Use Case` is in the implementation and independently compliant with the Test's BDQ specification.
 
 ### 3.2 Minimum Test Suite composition (normative)
 
@@ -461,7 +463,7 @@ An `Amendment` Test may propose a change to a value found in an existing Darwin 
 
 An `Amendment` Test `Response.result` SHOULD consist of a set of key:value pairs, where each key is an `Information Element` to be modified, and each value is a proposed new value for that `Information Element`. The `Response.result` key:value pairs SHOULD be a JSON serialization of the proposed changes.
 
-Under the Fitness For Use Framework, `Amendment` Tests may propose changes to processes as well as data.  BDQ prescribes no structure for the `Response.result` of an `Amendment` Test' that proposes changes to processes.  Implementers MAY develop their own structures and serializations for the `Response.result` of `Amendment` Tests that propose changes to processes.
+Under the Fitness For Use Framework, `Amendment` Tests may propose changes to processes as well as data.  BDQ prescribes no structure for the `Response.result` of an `Amendment` Test that proposes changes to processes.  Implementers MAY develop their own structures and serializations for the `Response.result` of `Amendment` Tests that propose changes to processes.
 
 ### 5.1.2 Response Serialization and Presentation (normative)
 
@@ -469,13 +471,13 @@ Nothing in this section should be taken as a requirement for a particular format
 
 Nothing in this document should be taken as a requirement for how `bdqffdq:Assertions` or `Responses` are to be presented to consumers of `Data Quality Reports`. Implementations MAY present the results of Tests in any form appropriate for their consumers.
 
-### 5.1.1 Further Guidance on Responses (non-normative)
+### 5.1.3 Further Guidance on Responses (non-normative)
 
 See [3.1 Structure of a Response (normative)](../../bdqtest/index.md#31-structure-of-response-normative) in [BDQ Tests and Assertions](../../bdqtest/index.md) for further normative guidance on representing Responses as RDF or in data structures.
 
 See [Definitions for Named Individuals](../../list/bdqffdq/index.md#complete) in the `bdqffdq:` ontology for formal definitions of the named individuals that are used as values (e.g. COMPLIANT, NOT_COMPLIANT, RUN_HAS_RESULT) for `Response.status` and `Response.result` in the expected responses of Test specifications.
 
-### 5.1.1 Results from Measures (normative)
+### 5.1.3 Results from Measures (normative)
 
 Measure Tests that return numeric values MUST return a single numeric value in `Response.result`. The value MAY be zero, a positive or negative integer, or a real number. Implementers SHOULD be mindful of interoperability issues when numbers are serialized or exchanged across programming languages, runtimes, or storage systems (for example, loss of integer precision, floating-point rounding differences, and handling of non-finite values such as NaN or ±Infinity).
 
