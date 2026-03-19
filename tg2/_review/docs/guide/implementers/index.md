@@ -323,13 +323,13 @@ These properties describe the expected behavior of an Implementation of this Tes
 
 We regularly (particularly in examples) use `Response`, `Response.status`, `Response.result`, and `Response.comment` as shorthand for a more complicated set of `bdqffdq:` classes, object properties and datatype properties. The table below describes how these concepts are related.
 
-| Concept | bdqffdq Term(s) | Description |
-| ------- | ------- | ----------- |
-| Response | bdqffdq:Assertion | The report from a single execution of a single Test, consisting of a bdq:Response.status, a bdq:Response.result, a bdq:Response.comment, and optionally, a bdq:Response.qualifier. | 
-| Response.status | bdqffdq:ResponseStatus, bdqffdq:hasResponseStatus | A metadata element in a bdq:Response indicating whether a Test was able to be performed or not. | 
-| Response.result | bdqffdq:ResponseResult, bdqffdq:hasResponseResult, bdqffdq:hasResponseResultValue | The element in a bdq:Response containing the value returned by a Test. |
-| Response.comment | bdqffdq:hasResponseComment | A human readable interpretation of the results of the Test. |
-| Response.qualifier | bdqffdq:ResponseQualifier, bdqffdq:hasResponseQualifier | Additional structured information that qualifies the bdq:Response, intended as an extension point for uncertainty. |
+| Shorthand Concept | bdqffdq Term(s) | Description |
+| ----------------- | --------------- | ----------- |
+| Response          | bdqffdq:Assertion | The report from a single execution of a single Test, consisting of a Response.status, a Response.result, a Response.comment, and optionally, a Response.qualifier. | 
+| Response.status   | bdqffdq:ResponseStatus, bdqffdq:hasResponseStatus | A metadata element in a Response indicating whether a Test was able to be performed or not. | 
+| Response.result   | bdqffdq:ResponseResult, bdqffdq:hasResponseResult, bdqffdq:hasResponseResultValue | The element in a Response containing the value returned by a Test. |
+| Response.comment  | bdqffdq:hasResponseComment | A human readable interpretation of the results of the Test. |
+| Response.qualifier | bdqffdq:ResponseQualifier, bdqffdq:hasResponseQualifier | Additional structured information that qualifies the Response, intended as an extension point for uncertainty. |
 
 ##### 2.3.2.2 Guidance for Reading a Specification (normative)
 
@@ -469,7 +469,7 @@ This library also includes a method whose signature does not include the paramet
 
 #### 2.3.3 The Concept of "interpreted as" (normative)
 
-In the `hasExpectedResponses` of `Specifications` the phrase "interpreted as" SHOULD BE interpreted by Implementers to mean: 
+In the `hasExpectedResponse` of a `Specification` the phrase "interpreted as" SHOULD BE interpreted by Implementers to mean: 
 
 1. where Darwin Core (Wieczorek et al. 2012) data are serialized as strings, but the Test refers to data as numeric or other non-string data type, can the string value be cast into the target data type in the language of implementation (e.g., "1" as the integer 1), **or**
 2. matching a representation of a value unambiguously onto a controlled vocabulary (e.g., ‘WGS84’ to ’EPSG:4326’), **or**
@@ -586,9 +586,9 @@ Implementers SHOULD create an instance of `bdqffdq:Mechanism` to uniquely identi
 
 Implementations producing `Data Quality Reports` SHOULD create instances of `bdqffdq:Assertions` grouped in `bdqffdq:DataQualityReports` that also specify the `bdqffdq:DataResource` that the `bdqffdq:DataQualityReport` concerns.
 
-Implementers MUST provide `bdq:Response` data in `Data Quality Reports` consisting of `bdq:Response.status`, `bdq:Response.result`, and `bdq:Response.comment`.
+Implementers MUST provide `Response` data in `Data Quality Reports` consisting of `Response.status`, `Response.result`, and `Response.comment`.
 
-Implementations MAY perform data Quality Control, data Quality Assurance, or both. 
+Implementations MAY perform data `Quality Control`, data `Quality Assurance`, or both. 
 
 ## 6 Guidelines for Implementers (normative)
 
