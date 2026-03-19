@@ -614,7 +614,7 @@ See also the [Test Parameters](../../guide/users/index.md#34-test-parameters-non
 
 ### 6.2 Execution Process Agnostic (non-normative)
 
-The Test descriptions in the BDQ standard are designed to be able to be used anywhere in the life cycle of biodiversity data, and are designed to be independent of the environment in which the Tests are run. Test implementations may be run within a framework that evaluates entire records one at at time, behind user interface elements that evaluate single `Information Elements` one at a time, on streams of data within workflows, on distinct values aggregated within streams of data within workflows, and more.
+The Test descriptions in the BDQ standard are designed to be able to be used anywhere in the life cycle of biodiversity data, and are designed to be independent of the environment in which the Tests are run. Test implementations may be run within a framework that evaluates entire records one at a time, behind user interface elements that evaluate single `Information Elements` one at a time, on streams of data within workflows, on distinct values aggregated within streams of data within workflows, and more.
 
 Tests may be run
 

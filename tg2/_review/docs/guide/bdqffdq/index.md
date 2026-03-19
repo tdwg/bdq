@@ -295,12 +295,14 @@ The Framework has an abstract concept of `Information Elements`. To frame Tests 
 
 The Framework defines four central concepts for describing and evaluating `Data Quality Needs`: `Validation`, `Issue`, `Measure`, and `Amendment`.  
 
-![Diagram of Validation, Issue, Measure, and Amendment classes with DataQualityNeed as a parent node.](dataqualityneeds.png "The 4 central DataQualityNeed types in the Framework - Validation, Issue, Measure, and Amendment.")
+![Diagram of Validation, Issue, Measure, and Amendment classes with DataQualityNeed as a parent node.](dataqualityneeds.png)
+*The 4 central DataQualityNeed types in the Framework - Validation, Issue, Measure, and Amendment.*
 
 
 A `Validation` assesses compliance with a need. Data have quality if they are compliant with the requirements of the Validation Test. A `Validation` relates `Information Elements` and `Resource Types` with a `Specification` of exactly how to assess fitness of the data under some narrow `Criteria`, and themselves are assembled into `Validation Policies`, which are linked to other `Policies` to cover a description of the `Data Quality Needs` of a `Use Case`.  Data have quality only with respect to some use, so `Validations` must be composed with `Use Cases` to be able to assess fitness for use.
 
-![Diagram of the classes involved in expressing Data Quality Needs with Validations.](bdqffdq_data_quality_needs_validation.svg "Expressing `Data Quality Needs`: Validations.")
+![Diagram of the classes involved in expressing Data Quality Needs with Validations.](bdqffdq_data_quality_needs_validation.svg)
+*Expressing `Data Quality Needs`: Validations.*
 
 `Issues` are the converse of `Validations`. Data lack quality if an `Issue` identifies a potential problem in the data that would require further human review to determine if the data have quality for some purpose.  Like `Validations`, `Issues` relate `Information Elements` and `Resource Types` with a `Specification` of exactly how to assess fitness of the data under some `Use Case`.  No illustration is provided here, as the `Issue` concept is very similar to the `Validation` concept, but with a different focus on identifying potential problems rather than confirming compliance.  
 
@@ -308,17 +310,20 @@ A `Validation` assesses compliance with a need. Data have quality if they are co
 
 `Measures` make an aggregate summary of some specific aspect of data quality.
 
-![Diagram of the classes involved in expressing Data Quality Needs with Measures.](bdqffdq_data_quality_needs_measure.svg "Expressing Data Quality Needs: Measures")
+![Diagram of the classes involved in expressing Data Quality Needs with Measures.](bdqffdq_data_quality_needs_measure.svg)
+*Expressing Data Quality Needs: Measures.*
 
 `Amendments` propose changes to data or processes that, if accepted, may improve the fitness of data for a specific use.
 
-![Diagram of the classes involved in expressing Data Quality Needs with Amendments.](bdqffdq_data_quality_needs_amendment.svg "Expressing Data Duality Needs: Amendments")
+![Diagram of the classes involved in expressing Data Quality Needs with Amendments.](bdqffdq_data_quality_needs_amendment.svg)
+*Expressing Data Duality Needs: Amendments.*
 
 Formally, in the `Data Quality Needs` level, the Framework starts with a `Use Case`, a framing of some use to which data may be put. `Use Cases` are related to the formal description of `Data Quality Needs` through `Policies` and `Contexts`. `Contexts` (`ContextualizedCriterion`, `ContextualizedDimension`, `ContextualizedEnhancement`, `ContextualizedIssue`) relate the `Specification` of a `Need Concept`, such as a `Validation`, to the `Information Elements` that need to be examined, and to the `Resource Type` that is operated on. Each of the Tests described in this standard has a formal specification that includes each of these elements. A `Use Case` includes a set of `Policies`, `Policies` relate the `Use Case` to `Contexts`, `Contexts` link `Information Elements` to `Need Concepts` and to `Resource Types`, a `Need Concept` specifies what properties data must have to have quality. 
 
 `Data Quality Needs` can relate to the data quality of single records (`bdqffdq:SingleRecord`) or of datasets (`bdqffdq:MultiRecord`).
 
-![Diagram of Single Record and Multi Record as named individual instances of the Resource class, showing Resource as a rectangular node above rectangular nodes for Multi Record and Amendment. ](resource_types.png "Representation of Single Record and Multi Record as named individual instances of the Resource class.")
+![Diagram of Single Record and Multi Record as named individual instances of the Resource class, showing Resource as a rectangular node above rectangular nodes for Multi Record and Amendment. ](resource_types.png)
+*Representation of Single Record and Multi Record as named individual instances of the Resource class.*
 
 ### 3.3 Data Quality Needs, Data Quality Mechanisms, Data Quality Reports (non-normative)
 
@@ -337,21 +342,24 @@ For **Quality Assurance**, the Framework defines `Measures` that operate on `Mul
 
 For **Quality Control**, `Multi Record` `Measures` can return a count of `COMPLIANT` results for `Validations`, thereby indicating how fit a dataset is for its intended purpose and what adjustments are needed to make it fully fit.
 
-![Diagram of ValidationAssertion, IssueAssertion, MeasureAssertion and AmendmentAssertion classes as subtypes of the Assertion class with ReportConcept as its parent.](assertions.png "The 4 central Assertion types in the Framework - ValidationAssertion, IssueAssertion, MeasureAssertion and AmendmentAssertion.")
+![Diagram of ValidationAssertion, IssueAssertion, MeasureAssertion and AmendmentAssertion classes as subtypes of the Assertion class with ReportConcept as its parent.](assertions.png)
+*The 4 central Assertion types in the Framework - ValidationAssertion, IssueAssertion, MeasureAssertion and AmendmentAssertion.*
 
 Diagram of the composition of `Validation`, `Validation Method`, and `Validation Assertion` illustrating the `Data Quality Needs`, `Solutions`, and `Reports` layers of the Fitness for Use Framework, with the responsibilities of `bdqtest:` (solid lines), and implementations (dashed lines).
 
-![Diagram of Validation, ValidationMethod, and ValidationAssertion with related classes](bdqffdq_data_quality_needs_solutions_report_validation.svg "Validation concepts in the Needs, Solutions, and Reports levels.")
+![Diagram of Validation, ValidationMethod, and ValidationAssertion with related classes](bdqffdq_data_quality_needs_solutions_report_validation.svg)
+*Validation concepts in the Needs, Solutions, and Reports levels.*
 
 A useful way to think of the Framework is to divide it horizontally into Needs, Solutions, and Reports layers, and then track the Test concepts vertically through each layer (see [Figure 3](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0178731#pone-0178731-g003) in Veiga et al., 2017). Below is a diagram that brings together the horizontal Needs, Solutions, and Reports layers with the vertical Test concepts (`Validations`, `Issues`, `Measures` and `Amendments`), with `Validation`-related concepts expanded to show all related entities in the Fitness for Use Framework.
 
-![Diagram Illustrating both the horizontal (Needs/Solutions/Reports) layers and the vertical Test concepts (Validations, Issues, Measures and Amendments)](bdqffdq_data_quality_layers.svg "All four Tests concepts in the Needs Solutions, and Reports levels.")
+![Diagram Illustrating both the horizontal (Needs/Solutions/Reports) layers and the vertical Test concepts (Validations, Issues, Measures and Amendments)](bdqffdq_data_quality_layers.svg)
+*All four Tests concepts in the Needs Solutions, and Reports levels.*
 
 ### 3.4 Responses (non-normative)
 
 The content of this section is non-normative, related normative guidance is in section [5.1 The Response Object (normative)](../implementers/index.md#51-the-response-object-normative) of the [BDQ Implementer's Guide](../implementers/index.md).
 
-Assertions are expected to assert Response objects. These will involve, in RDF, a combination of object properties and data properties.
+Assertions are expected to assert Response objects. These will involve, in RDF, a combination of object properties and data properties on an `Assertion`.  In an object oriented language like Java, a Response might be an object with properties, and in a tabular format, a Response might be a row with columns for each of the properties. The following table gives an overview of the expected properties of a Response object, and the corresponding terms in the `bdqffdq:` vocabulary.
 
 | Shorthand Concept | bdqffdq: Term(s) | Description |
 | ----------------- | ---------------- | ----------- |
@@ -367,7 +375,8 @@ See [3.1 Structure of a Response (normative)](../../bdqtest/index.md#31-structur
 
 Following is a knowledge graph showing the is-a relationships between the classes in the Fitness for Use Framework:
 
-![Diagram of the is-a class relationships of bdqffdq:, as a tree expanding left to right, with the root owl:Thing node not shown.](bdqffdq_class_diagram.png "Diagram showing the relationships among the bdqffdq: classes.")
+![Diagram of the is-a class relationships of bdqffdq:, as a tree expanding left to right, with the root owl:Thing node not shown.](bdqffdq_class_diagram.png)
+*Diagram showing the relationships among the bdqffdq: classes.*
 
 ### 3.6 Example representation of a BDQ Test (non-normative)
 
