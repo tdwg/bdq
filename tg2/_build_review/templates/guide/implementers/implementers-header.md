@@ -477,7 +477,7 @@ See [3.1 Structure of a Response (normative)](../../bdqtest/index.md#31-structur
 
 See [Definitions for Named Individuals](../../list/bdqffdq/index.md#complete) in the `bdqffdq:` ontology for formal definitions of the named individuals that are used as values (e.g. COMPLIANT, NOT_COMPLIANT, RUN_HAS_RESULT) for `Response.status` and `Response.result` in the expected responses of Test specifications.
 
-### 5.1.3 Results from Measures (normative)
+### 5.1.4 Results from Measures (normative)
 
 Measure Tests that return numeric values MUST return a single numeric value in `Response.result`. The value MAY be zero, a positive or negative integer, or a real number. Implementers SHOULD be mindful of interoperability issues when numbers are serialized or exchanged across programming languages, runtimes, or storage systems (for example, loss of integer precision, floating-point rounding differences, and handling of non-finite values such as NaN or ±Infinity).
 

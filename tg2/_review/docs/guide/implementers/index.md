@@ -85,7 +85,7 @@ Draft Standard for Review
   - [5.1.1 Amendment Test Responses (normative)](#511-amendment-test-responses-normative)
   - [5.1.2 Response Serialization and Presentation (normative)](#512-response-serialization-and-presentation-normative)
   - [5.1.3 Further Guidance on Responses (non-normative)](#513-further-guidance-on-responses-non-normative)
-  - [5.1.3 Results from Measures (normative)](#513-results-from-measures-normative)
+  - [5.1.4 Results from Measures (normative)](#514-results-from-measures-normative)
   - [5.2 Framework Elements Not Included in BDQ Test Descriptions (normative)](#52-framework-elements-not-included-in-bdq-test-descriptions-normative)
 
 [6 Guidelines for Implementers (normative)](#6-guidelines-for-implementers-normative)
@@ -572,7 +572,7 @@ See [3.1 Structure of a Response (normative)](../../bdqtest/index.md#31-structur
 
 See [Definitions for Named Individuals](../../list/bdqffdq/index.md#complete) in the `bdqffdq:` ontology for formal definitions of the named individuals that are used as values (e.g. COMPLIANT, NOT_COMPLIANT, RUN_HAS_RESULT) for `Response.status` and `Response.result` in the expected responses of Test specifications.
 
-### 5.1.3 Results from Measures (normative)
+### 5.1.4 Results from Measures (normative)
 
 Measure Tests that return numeric values MUST return a single numeric value in `Response.result`. The value MAY be zero, a positive or negative integer, or a real number. Implementers SHOULD be mindful of interoperability issues when numbers are serialized or exchanged across programming languages, runtimes, or storage systems (for example, loss of integer precision, floating-point rounding differences, and handling of non-finite values such as NaN or ±Infinity).
 
