@@ -144,7 +144,7 @@ Data serialized from relational database systems may contain string representati
 
 String serializations of NULL outside of a database, present at the point of evaluation of a Test, MUST be treated as `bdq:NotEmpty`. 
 
-A Test execution environment MAY deserialize these string serializations of NULL as null objects (see 5), and present them to a test as NULL objects (where they would evaluate as `bdq:notEmpty` (see 2)).
+A Test execution environment MAY deserialize these string serializations of NULL as null objects (see 5), and present them to a test as NULL objects, where they would evaluate as `bdq:notEmpty` (see 2).
 
 (4) Data values indicating an unknown are treated as `bdq:NotEmpty`.
 
@@ -396,7 +396,8 @@ In `bdqffdq:Validation` Tests that require the lookup of a `bdq:sourceAuthority`
 
 The BDQ Tests are part of a coherent framework for describing and reporting on data quality, and the Tests are intended to be implemented as suites of Tests that fit particular `Use Cases` (see [BDQ Fitness for Use Framework](../../bdqffdq/index.md)). The following sections provide normative guidance on what is required for an implementation of a Test Suite to be compliant with the BDQ standard, and non-normative guidance on the rationale for these requirements and expectations for how implementers will design their Test Suites.
 
-![Non-normative diagram illustrating the relationships among Use Cases, Policies, Tests, Parameters, and Reports](bdqffdq_overview_diagram.svg)
+![Non-normative diagram illustrating the relationships among Use Cases, Policies, Tests, Parameters, Implementations and Reports in bdqffdq, use cases are at the top of the diagram linked down to tests (Validations, Measures, Amendments, Issues) via Policies, Tests are shown to be complex composed of many classes and properties, including Specifications which can take Parameters, below these sit Implementations, which can produce data quality reports containing assertions (Response objects):](bdqffdq_overview_diagram.svg)
+*Non-normative diagram illustrating the relationships among Use Cases, Policies, Tests, Parameters, Implementations and Reports in bdqffdq:*
 
 ### 3.1 Compliance depends on `Use Case` (normative)
 
@@ -511,6 +512,8 @@ When a non-default `Argument` is used, a new instance of an `Implementation` lin
 When a non-default `Argument` is used, a `Response.comment` SHOULD include the `Parameter` and the non-default value. This provides the non-default value for human consumers.
 
 Implementers MUST NOT produce Test `Implementations` identified by the same identifiers that only implement non-default `Parameter` values. An implementation of a Test MUST support the Test execution with the default `Parameter` values, and MAY optionally support other `Parameter` values. Provided `Parameters` MUST NOT change the behavior of the Test to depart from the `bdqffdq:Specification.expectedResponse`. `Parameters` MUST only change the behavior of the Test as specified in the `bdqffdq:Specification.expectedResponse`.
+
+See also the [Test Parameters](../../guide/users/index.md#34-test-parameters-non-normative) section in the [User's Guide)](../../guide/users/index.md) for further guidance on `Parameters` and `Arguments`.
 
 ### 6.2 Execution Process Agnostic (non-normative)
 

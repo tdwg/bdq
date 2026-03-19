@@ -299,7 +299,7 @@ For example, a user working with data from just one country may wish to change a
 
 Similarly a parameterized Test may change default numerical values to values more appropriate to the local area – e.g. setting a maximum elevation that is more appropriate to the country, rather than using a default global maximum, such that for some parameterized `Validation` elevations higher than the local maximum, but still lower than the global maximum elevation would be `NOT_COMPLIANT`, fitting the local needs, while they would be `COMPLIANT` and not identified as problematic for local needs if the default global maximum elevation were used.
 
-### 3.4.1 Test Parameters in Reports (normative) 
+#### 3.4.1 Test Parameters in Reports (normative) 
 
 When a Test is parameterized, and a value other than the default value is used for some `Parameter`, reports SHOULD identify the Tests using at least the Label (`rdfs:label`) for the Test class, in combination with the `Parameter` and the value of the `Argument` that replaced the `Parameter` in this specific case.
 
