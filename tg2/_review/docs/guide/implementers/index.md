@@ -608,7 +608,7 @@ When a non-default `Argument` is used, a new instance of an `Implementation` lin
 
 When a non-default `Argument` is used, a `Response.comment` SHOULD include the `Parameter` and the non-default value. This provides the non-default value for human consumers.
 
-Implementers MUST NOT produce Test `Implementations` identified by the same identifiers that only implement non-default `Parameter` values. An implementation of a Test MUST support the Test execution with the default `Parameter` values, and MAY optionally support other `Parameter` values. Provided `Parameters` MUST NOT change the behavior of the Test to depart from the `bdqffdq:Specification.expectedResponse`. `Parameters` MUST only change the behavior of the Test as specified in the `bdqffdq:Specification.expectedResponse`.
+Implementers MUST NOT produce Test `Implementations` identified by the same identifiers that only implement non-default `Parameter` values. An implementation of a Test MUST support the Test execution with the default `Parameter` values, and MAY optionally support other `Parameter` values. Provided `Parameters` MUST NOT change the behavior of the Test to depart from the `bdqffdq:Specification` `hasExpectedResponse`. `Parameters` MUST only change the behavior of the Test as specified in the `bdqffdq:Specification` `hasExpectedResponse`.
 
 See also the [Test Parameters](../../guide/users/index.md#34-test-parameters-non-normative) section in the [User's Guide)](../../guide/users/index.md) for further guidance on `Parameters` and `Arguments`.
 
@@ -1066,14 +1066,14 @@ The following is an example of a Test response represented as an `Annotation` in
 
 This example is written to be consistent with the following expectations:
 
-* The oa:body of the oa:Annotation is the Assertion.
-* The oa:target of the oa:Annotation is the IRI of the record being annotated.
-* The dcterms:created value on the oa:Annotation provides the annotation date.
-* The oa:motivatedBy value on the oa:Annotation provides the motivation for creating the annotation.
-* The Implementation is related to the Assertion it generated using bdqffdq:producesAssertion, is related to the Specification it ran using bdqffdq:usesSpecification, and is related to the Mechanism that executed it using bdqffdq:implementedBy.
-* The bdqffdq:usesSpecification property points to the specific instance of bdqffdq:Specification that the Implementation used for the Test execution.
+* The `oa:body` of the `oa:Annotation` is the `Assertion`.
+* The `oa:target` of the `oa:Annotation` is the IRI of the record being annotated.
+* The `dcterms:created` value on the `oa:Annotation` provides the annotation date.
+* The `oa:motivatedBy` value on the `oa:Annotation` provides the motivation for creating the annotation.
+* The `Implementation` is related to the `Assertion` it generated using `bdqffdq:producesAssertion`, is related to the `Specification` it ran using `bdqffdq:usesSpecification`, and is related to the `Mechanism` that executed it using `bdqffdq:implementedBy`.
+* The `bdqffdq:usesSpecification` property points to the specific instance of `bdqffdq:Specification` that the `Implementation` used for the Test execution.
 
-In a complete dataset the Specification is linked (via a Method instance) to the corresponding Test in bdqtest, that is, we could look up that the Test is VALIDATION_DAY_STANDARD given the `Specification` IRI. 
+In a complete dataset the `Specification` is linked (via a `Method` instance) to the corresponding Test in bdqtest, that is, we could look up that the Test is VALIDATION_DAY_STANDARD given the `Specification` IRI. 
 
 ```
 @prefix bdq:     <https://rs.tdwg.org/bdq/terms/> .

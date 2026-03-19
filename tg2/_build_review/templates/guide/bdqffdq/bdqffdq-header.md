@@ -303,7 +303,7 @@ Each `Specification` is used in zero-to-many `Implementations`.
 Each `Mechanism` implements one-to-many `Implementations`.
 Each `Assertion` is produced by one and only one `Implementation`.
 Each `Implementation` uses one and only one `Specification`.
-Each `Implementation` is implemented by one and only one `Mechansism`.
+Each `Implementation` is implemented by one and only one `Mechanism`.
 Each `Implementation` produces one-to-many `Assertions`.
 
 It is important that the chain of relationships from an instance of an `Assertion` to a `Data Quality Need` (e.g., an instance of a `bdqffdq:Validation`) be a chain of one-to-one relationships. To identify what Test with what `Parameters` made an `Assertion`, it must be possible to follow the chain of relationships from an `Assertion` to a single `Implementation` to a single `Specification` (with zero-to-many `Parameters`) to a single method to a single `Data Quality Need` (e.g., a `Validation`, with one-to-many `Information Elements`). Multiplicity should only be possible following on through `Policy` to `Use Cases` (an `Assertion` may pertain to multiple `Use Cases`), or when going from a `Data Quality Need` to `Assertions`. It is expected that an instance of a `Validation` would produce many instances of `Validation Assertions`, each of those `Validation Assertions` must be able to be related to the sole `Validation` that produced it.
