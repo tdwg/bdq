@@ -144,7 +144,7 @@ See the list of the documents that comprise the standard in [2. Parts of the Sta
 
 These documents are not part of the BDQ standard.
 
-• An AI generated high-level ‘podcast’-style summary of the BDQ standard [Audio File](https://github.com/tdwg/bdq/raw/refs/heads/master/tg2/products/BDQ_Overview_2025-07-26_8m.mp3).
+* An AI generated high-level ‘podcast’-style summary of the BDQ standard [Audio File](https://github.com/tdwg/bdq/raw/refs/heads/master/tg2/products/BDQ_Overview_2025-07-26_8m.mp3).
 * Veiga AK, et. al. (2017) [A conceptual framework for quality assessment and management of biodiversity data.](https://doi.org/10.1371/journal.pone.0178731).
 * Veiga AK (2016). [A conceptual framework on biodiversity data quality.](http://www.teses.usp.br/teses/disponiveis/3/3141/tde-17032017-085248/).
 
