@@ -1,102 +1,51 @@
-<!--- This file is generated from templates by code, DO NOT EDIT by hand --->
-
+<!--- Template for header, values provided from yaml configuration --->
 <!--- layout: home --->
-# The Biodiversity Data Quality (BDQ) Standard
+# {document_title}
 <!--- {:.lead} --->
 
 **Title**<br>
-The Biodiversity Data Quality (BDQ) Standard
+{document_title}
 
 **Category**<br>
 Technical Specification
 
 **Publisher**<br>
-Biodiversity Information Standards (TDWG)
+{publisher}
 
 **Status**<br>
-Draft Standard for Review
+{comment}
 
 **Permanent IRI (for citations and links)**<br>
-<http://example.org/to_be_determined>
+<{standard_iri}>
 
 **Date version issued**<br>
-2025-05-10
+{ratification_date}
 
 **Date created**<br>
-2025-05-10
+{created_date}
 
 **This version**<br>
-<http://rs.tdwg.org/bdqffdq/2025-05-10>
+<{current_iri}{ratification_date}>
 
 **Latest version**<br>
-<http://rs.tdwg.org/bdqffdq/>
+<{current_iri}>
 
 **Previous version**<br>
+{previous_version_slot}
 
 **Bibliographic citation**<br>
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. The Biodiversity Data Quality (BDQ) Standard. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqffdq/2025-05-10>
+{creator}. {year}. {document_title}. {publisher}. <{current_iri}{ratification_date}>
 
 **Abstract**<br>
-This is the landing and overview page for the **Biodiversity Data Quality (BDQ)** standard.<br>  BDQ is a standard maintained by the Biodiversity Data Quality Maintenance Interest Group (to be constituted) and designed to facilitate the consistent development and use of a set of biodiversity data quality tests and assertions. The standard consists of vocabularies needed to define the tests, a guide to support the implementation of tests, a guide to support the interpretation of outputs of implemented tests, test data and expected responses from tests against this data to validate implemented tests.
+{abstract}
 
 **Authors**<br>
-[Lee Belbin](https://orcid.org/0000-0001-8900-6203) ([Blatant Fabrications](https://www.wikidata.org/wiki/Q130304884)), [Arthur D. Chapman](https://orcid.org/0000-0003-1700-6962) ([Australian Biodiversity Information Services](http://www.wikidata.org/entity/Q100600913)), [Paul J. Morris](https://orcid.org/0000-0002-3673-444X) ([Museum of Comparative Zoology, Harvard University](http://www.wikidata.org/entity/Q1420782)), [John Wieczorek](https://orcid.org/0000-0003-1144-0290) (Rauthiflor LLC)
+{authors}
 
 **Creator**<br>
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
+{creator}
 
-## Table of Contents ##
-[1 Introduction (non-normative)](#1-introduction-non-normative)
-  - [1.1 Purpose (non-normative)](#11-purpose-non-normative)
-  - [1.2 Audience (non-normative)](#12-audience-non-normative)
-  - [1.3 Contributing TDWG Interest and Task Groups (non-normative)](#13-contributing-tdwg-interest-and-task-groups-non-normative)
-  - [1.4 Associated Documents (non-normative)](#14-associated-documents-non-normative)
-    - [1.4.2 Background Documents (non-normative)](#142-background-documents-non-normative)
-  - [1.5 Status of the Content of This Document (normative)](#15-status-of-the-content-of-this-document-normative)
-  - [1.6 RFC 2119 key words (normative)](#16-rfc-2119-key-words-normative)
-  - [1.7 Namespace Abbreviations (non-normative)](#17-namespace-abbreviations-non-normative)
-  - [1.8 Referring to Terms (normative)](#18-referring-to-terms-normative)
-  - [1.9 Notation Conventions (non-normative)](#19-notation-conventions-non-normative)
-
-[2 Parts of the Standard (non-normative)](#2-parts-of-the-standard-non-normative)
-  - [2.1 BDQ Tests Quick Reference Guide (non-normative)](#21-bdq-tests-quick-reference-guide-non-normative)
-  - [2.2 Landing Pages (non-normative)](#22-landing-pages-non-normative)
-  - [2.3 Guides (non-normative)](#23-guides-non-normative)
-  - [2.4 Vocabularies (non-normative)](#24-vocabularies-non-normative)
-    - [2.4.1 Foundational Vocabularies (non-normative)](#241-foundational-vocabularies-non-normative)
-    - [2.4.2 Supporting Vocabularies (non-normative)](#242-supporting-vocabularies-non-normative)
-  - [2.5 Supplemental Information (non-normative)](#25-supplemental-information-non-normative)
-  - [2.6 Distribution Files (non-normative)](#26-distribution-files-non-normative)
-    - [2.6.1 Tests (non-normative)](#261-tests-non-normative)
-    - [2.6.2 Test Validation Data (non-normative)](#262-test-validation-data-non-normative)
-    - [2.6.3 Fitness For Use Framework (non-normative)](#263-fitness-for-use-framework-non-normative)
-    - [2.6.4 RDF Serializations of Controlled Vocabularies (non-normative)](#264-rdf-serializations-of-controlled-vocabularies-non-normative)
-    - [3 Implementations (non-normative)](#3-implementations-non-normative)
-    - [3.1 Java Implementation (non-normative)](#31-java-implementation-non-normative)
-
-[4 Design of the Tests (normative)](#4-design-of-the-tests-normative)
-  - [4.1 Data Quality Control, Data Quality Assurance (normative)](#41-data-quality-control-data-quality-assurance-normative)
-  - [4.2 When to Run Tests (normative)](#42-when-to-run-tests-normative)
-  - [4.3 Results of Test Executions (normative)](#43-results-of-test-executions-normative)
-  - [4.4 Test Execution Environments and Workflows (non-normative)](#44-test-execution-environments-and-workflows-non-normative)
-
-[5 Contributions and Acknowledgments (non-normative)](#5-contributions-and-acknowledgments-non-normative)
-  - [5.1 Acknowledgments (non-normative)](#51-acknowledgments-non-normative)
-    - [5.1.1 Funding and Support for Meetings (non-normative)](#511-funding-and-support-for-meetings-non-normative)
-  - [5.2 Contributions (non-normative)](#52-contributions-non-normative)
-    - [5.2.1 Authors (non-normative)](#521-authors-non-normative)
-    - [5.2.2 Contributors (non-normative)](#522-contributors-non-normative)
-
-[6 Glossary (non-normative)](#6-glossary-non-normative)
-  - [6.1 Acronyms](#61-acronyms)
-  - [6.2 Term-Actions](#62-term-actions)
-  - [6.3 General Glossary (non-normative)](#63-general-glossary-non-normative)
-
-[7 References (non-normative)](#7-references-non-normative)
-
-[8 Cite BDQ (non-normative)](#8-cite-bdq-non-normative)
-
-[Cite BDQ (non-normative)](#cite-bdq-non-normative)
+{toc}
 
 ## 1 Introduction (non-normative)
 
@@ -543,25 +492,6 @@ https://doi.org/10.3897/biss.4.50889
 **To cite this document specifically, use the following:**
 
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. The Biodiversity Data Quality (BDQ) Standard. Biodiversity Information Standards (TDWG). <https://bdq.tdwg/org/vocabularies/2025-05-10>
-
-**Biodiversity Information Standards (TDWG)**
-
-This content made open by Biodiversity Information Standards (TDWG) is licensed under a [Licensed under a Creative Commons Attribution 4.0 International (CC BY) License.](http://creativecommons.org/licenses/by/4.0/)
-
-## Cite BDQ (non-normative)
-
-**To cite BDQ in general, use the peer-reviewed article:**
-
-Chapman AD, Belbin L, Zermoglio PF, Wieczorek J, Morris PJ, Nicholls
-M, Rees ER, Veiga AK, Thompson A, Saraiva AM, James SA, Gendreau C,
-Benson A, Schigel D (2020). Developing Standards for Improved Data
-Quality and for Selecting Fit for Use Biodiversity Data.
-Biodiversity Information Science and Standards 4: e50889.
-https://doi.org/10.3897/biss.4.50889
-
-**To cite this document specifically, use the following:**
-
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. The Biodiversity Data Quality (BDQ) Standard. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqffdq/2025-05-10>
 
 **Biodiversity Information Standards (TDWG)**
 

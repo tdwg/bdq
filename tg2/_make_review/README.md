@@ -64,9 +64,9 @@ Summary of files in the tg2/\_review directory:
 <pre>
 _review/
 ├── README.md  Introduction for public review of the draft **Editable.**
-├── index.md  Landing page for the standard. **Editable.** (the references are embedded in this file)
-├── workflow_single_iteration.svg  image file used in index.md, **Editable.**
-├── workflow_two_iterations.svg image file used in index.md, **Editable.**
+├── index.md  Landing page for the standard. Generated file. **Do not edit.**
+├── workflow_single_iteration.svg  image file used in index.md, (copied from templates/standard_landing/) **Do not edit.** 
+├── workflow_two_iterations.svg image file used in index.md, (copied from templates/standard_landing/) **Do not edit.**
 ├── dist  Generated CSV distribution files for building other artifacts.
 │   ├── bdq.xml  Generated RDF for bdq vocabulary (built with draft_build-termlist.py).
 │   ├── bdqtest.json  JSON serialization of the RDF representation of test descriptions, built by kurator-ffdq from bdq/tg2/core/TG2_tests.csv as bdq/tg2/core/TG2_tests.ttl.

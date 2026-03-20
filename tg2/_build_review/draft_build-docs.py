@@ -42,7 +42,7 @@ debug = False
 # See assumptions below.
 # directories, list of key:value pairs of templatePath:document
 #directories = {'vocabularies':'vocabularies', 'intro':'intro', 'supplement':'supplement', 'synthetic':'synthetic','guide/users':'users','guide/implementers':'implementers','guide/bdqffdq':'bdqffdq', 'bdqtest':'bdqtest_landing','references':'references'}
-directories = {'supplement':'supplement', 'guide/synthetic':'synthetic','guide/users':'users','guide/implementers':'implementers','guide/bdqffdq':'bdqffdq', 'bdqtest':'bdqtest_landing'}
+directories = {'supplement':'supplement', 'guide/synthetic':'synthetic','guide/users':'users','guide/implementers':'implementers','guide/bdqffdq':'bdqffdq', 'bdqtest':'bdqtest_landing', 'standard_landing':'standard_landing'}
 
 # This is the base URL for raw files from the branch of the repo that has been pushed to GitHub
 github_branch = 'master' # "master" for production, something else for development
@@ -131,7 +131,10 @@ for templatePath, document in directories.items() :
 	headerFileName = '{}{}-header.md'.format(sourceDirectory,document)
 	footerFileName = '{}{}-footer.md'.format(sourceDirectory,document)
 	document_configuration_yaml_file = 'templates/{}/document_configuration.yaml'.format(templatePath)
-	if document.find("_landing") > -1 :
+	if document.find("standard_landing") > -1 :
+		# The landing page for the standard goes at the top level directory.
+		outputDirectory = '../_review/'
+	elif document.find("_landing") > -1 :
 		outputDirectory = '../_review/docs/{}/'.format(templatePath)
 	elif templatePath.find("guide/") == -1 :
 		outputDirectory = '../_review/docs/{}/'.format(document)

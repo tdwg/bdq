@@ -29,6 +29,10 @@ README.md  This file.
 The directory structure of the templates is as follows, with the files listed in each directory:
 
     templates/
+    ├── standard_landing
+    │   ├── standard_landing-footer.md
+    │   ├── standard_landing-header.md
+    │   └── document_configuration.yaml
     ├── bdqffdq
     │   ├── bdqffdq_landing-footer.md
     │   ├── bdqffdq_landing-header.md
