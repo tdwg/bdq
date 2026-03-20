@@ -428,7 +428,8 @@ When a Test is defined as parameterized, implementations SHOULD support the para
 
 When a Test is defined as parameterized:
 - Implementations MAY choose to only support the default value.
-- Implementations MAY choose to not inlcude the parameter(s) in the Test API, that is, only support the default value internally to the Test (note that implementations that choose to do so will be unable to validate against all of the Test Validation Data (see [8 Validating Test Implementations](#8-validating-test-implementations-normative))).
+- Implementations MAY choose to not include the parameter(s) in the Test API, that is, only support the default value internally to the Test.
+--  Note that some Test Validation Data provide non-default `Parameter` values, and implementations that only support the default value will be unable to validate against all of the Test Validation Data (see [8 Validating Test Implementations](#8-validating-test-implementations-normative))).
 
 When the parameter has a default value and a resource, and an implementation includes the parameter in its API, that implementation MUST support the string literal given as the default value, and internally choose the resource "{[resource]}" or "{API endpoint [resource]}" based on that string literal "default value". Implementations MAY also accept other values including the "{[resource]}" or "{API endpoint [resource]}" as the value for the parameter in the API for the Test implementation.
 
