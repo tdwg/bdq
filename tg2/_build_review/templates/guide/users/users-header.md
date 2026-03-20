@@ -112,7 +112,7 @@ More formally, Tests are run in suites that form `Policy` for data quality with 
 
 More broadly, the concept of fitness for purpose refers to whether data are adequate to support a given goal or objective beyond the immediate use — such as policy formulation, scientific modeling, or legal compliance. Achieving fitness for purpose may involve additional considerations such as provenance, trustworthiness, and completeness, and it is possible to frame additional Tests to assess these `Dimensions` of data quality.
 
-## 2.1 Quality Control and Quality Assurance (non-normative)
+### 2.1 Quality Control and Quality Assurance (non-normative)
 
 Tests for data quality may serve two purposes: Quality Control and Quality Assurance. 
 
@@ -122,11 +122,11 @@ Tests for data quality may serve two purposes: Quality Control and Quality Assur
 
 The success of `Quality Assurance` and `Quality Control` depends on organisational context and resources. These include establishing clear validation, monitoring, and feedback procedures to maintain high quality data, and encouraging collaboration among data custodians, analysts, and end-users to ensure data quality aligns with practical needs and supports reliable decisions. It also requires developing formal methodologies to understand and process the Test outputs in the `Data Quality Reports`.
 
-### 2.1.1 Quality Assurance (non-normative)
+#### 2.1.1 Quality Assurance (non-normative)
 
 The Fitness for Use Framework (Veiga 2016, Veiga et al., 2017) provides a formal means for filtering records for [Quality Assurance](../../bdqffdq/index.md#3447-quality-assurance-normative) (involving only Measures), but informally, data may be thought of as being fit for some use if all `Validation` Tests comprising that `Use Case` have a `Response.result`="COMPLIANT", and all non-numeric `Measure` Tests comprising that `Use Case` have a `Response.result`="COMPLETE". The BDQ Tests include a set of `Multi Record` `Measures` whose purpose is to enable formal filtering (Quality Assurance) and reporting (for Quality Control) under the [Fitness for Use Framework Ontology](../../bdqffdq/index.md).
 
-### 2.1.2 Quality Control (non-normative)
+#### 2.1.2 Quality Control (non-normative)
 
 The Framework provides a formal statement of [Quality Control](../../bdqffdq/index.md#3446-quality-control-normative), but the application of Quality Control 'in the wild' is more nuanced; more complex than simple filtering under Quality Assurance. The context of Quality Control may affect how Tests and their results are applied to data, information systems and processes.
 
@@ -138,7 +138,7 @@ Complicating the analysis of `Data Quality Reports` on databases of record is th
  
 Correcting issues subsequent to data capture introduces further complexities in that any amendment to existing values requires careful human evaluation and a forking of data records to maintain original data and an audit trail. Data cleaning often requires far more time than data analysis.
 
-### 2.1.3 Quality Control in Data Aggregation (non-normative)
+#### 2.1.3 Quality Control in Data Aggregation (non-normative)
 
 When a data provider is performing `Quality Control` while preparing data for aggregation (or when reports are provided by aggregators back to upstream data providers) analysis of the resulting reports can uncover both simple errors introduced in mapping data onto Darwin Core terms (e.g., field transpositions in mapping) as well as underlying problems in the data itself.   Data validation at this stage may also reveal cases where the database of record contains more authoritative information than the resource used as a `sourceAuthority` for a Test.  In such cases the data in the database of record could be correct even if a `Validation` Test returns `NOT_COMPLIANT`.  Careful analysis of `Quality Control` reports is essential, to understand the origin of potential problems, what changes may be acceptable in a database of record, and as data cleaning involves significant effort, it is essential to identify specific areas for targeted data cleaning projects.
 
