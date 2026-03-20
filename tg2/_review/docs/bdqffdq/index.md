@@ -59,7 +59,7 @@ Draft Standard for Review
     - [2.1.2 Properties Relating Data Quality Needs to Data Quality Solutions (normative)](#212-properties-relating-data-quality-needs-to-data-quality-solutions-normative)
     - [2.1.3 Properties Relating to Data Quality Solutions Provided in a Test Description (normative)](#213-properties-relating-to-data-quality-solutions-provided-in-a-test-description-normative)
     - [2.1.4 Properties relating to data quality solutions provided by an implementation (normative)](#214-properties-relating-to-data-quality-solutions-provided-by-an-implementation-normative)
-    - [2.1.5 Properties relating `Data Quality Reports` (normative)](#215-properties-relating-`data-quality-reports`-normative)
+    - [2.1.5 Properties relating `Data Quality Reports` (normative)](#215-properties-relating-data-quality-reports-normative)
     - [2.1.6 Identifying the Test that produced an Assertion (normative)](#216-identifying-the-test-that-produced-an-assertion-normative)
       - [2.1.6.1 Properties that should be one-to-one (normative)](#2161-properties-that-should-be-one-to-one-normative)
 
