@@ -90,6 +90,11 @@ Draft Standard for Review
 
 [6 Guidelines for Implementers (normative)](#6-guidelines-for-implementers-normative)
   - [6.1 Parameters and Changing the Behavior of a Test (normative)](#61-parameters-and-changing-the-behavior-of-a-test-normative)
+    - [6.1.1 Identifying non-default `Parameter` values in reports (normative)](#611-identifying-non-default-`parameter`-values-in-reports-normative)
+    - [6.1.2 Identifying non-default `Parameter` values in `Response.comment` (normative)](#612-identifying-non-default-`parameter`-values-in-`responsecomment`-normative)
+    - [6.1.3 Expectations for Tests with `Parameters` (normative)](#613-expectations-for-tests-with-`parameters`-normative)
+    - [6.1.4 Test departures from specifications (normative)](#614-test-departures-from-specifications-normative)
+    - [6.1.3 Further guidance on `Parameters` and `Arguments` (non-normative)](#613-further-guidance-on-`parameters`-and-`arguments`-non-normative)
   - [6.2 Execution Process Agnostic (non-normative)](#62-execution-process-agnostic-non-normative)
   - [6.3 Considerations for Test Execution (normative)](#63-considerations-for-test-execution-normative)
   - [6.4 Order of Test Execution (normative)](#64-order-of-test-execution-normative)
@@ -421,7 +426,9 @@ See section [Parameterizing the Tests (normative)](../../bdqtest/index.md#33-par
 
 When a Test is defined as parameterized, implementations SHOULD support the parameter in addition to the `Information Elements`. 
 
-When a Test is defined as parameterized, implementations MAY choose to only support the default value, and MAY do so internally to the Test, without including the parameter(s) in the Test API (note that implementations that choose to do so, will be unable to validate against all of the Test Validation Data (see [8 Validating Test Implementations](#8-validating-test-implementations-normative))).
+When a Test is defined as parameterized:
+- Implementations MAY choose to only support the default value.
+- Implementations MAY choose to not inlcude the parameter(s) in the Test API, that is, only support the default value internally to the Test (note that implementations that choose to do so will be unable to validate against all of the Test Validation Data (see [8 Validating Test Implementations](#8-validating-test-implementations-normative))).
 
 When the parameter has a default value and a resource, and an implementation includes the parameter in its API, that implementation MUST support the string literal given as the default value, and internally choose the resource "{[resource]}" or "{API endpoint [resource]}" based on that string literal "default value". Implementations MAY also accept other values including the "{[resource]}" or "{API endpoint [resource]}" as the value for the parameter in the API for the Test implementation.
 
@@ -498,7 +505,12 @@ The BDQ Tests are part of a coherent framework for describing and reporting on d
 
 ### 3.1 Compliance depends on `Use Case` (normative)
 
-The BDQ standard defines a library of Tests that can produce `Data Quality Reports` and can be used in `Quality Control` and `Quality Assurance`.  See the discussion of `Quality Control` and `Quality Assurance` in the [Users Guide](../../guide/users/index.md#21-quality-control-and-quality-assurance-non-normative) However, the Tests can not assert or assure quality independently of a `Use Case`.  A `Use Case` (through a set of `Policies`) defining a suite of Tests needed to assert or filter for quality is required. Without it, an implementation of a set of Tests in a `Mechanism` IS NOT compliant with the BDQ standard. Furthermore, all of the Tests required by the `Policies` of a `Use Case` MUST be implemented and individually compliant with BDQ Test specifications in order for the `Use Case` Test Suite to be compliant with the BDQ standard. Note that BDQ Compliance of a Test Suite implementation does not mean that the `Use Case` that defines the Test Suite is valid or useful, rather, it simply means that every Test in the `Use Case` is in the implementation and independently compliant with the Test's BDQ specification.
+The BDQ standard defines a library of Tests that can produce `Data Quality Reports` and can be used in `Quality Control` and `Quality Assurance`.  See the discussion of `Quality Control` and `Quality Assurance` in the [Users Guide](../../guide/users/index.md#21-quality-control-and-quality-assurance-non-normative).  Compliance of Test implementations with the BDQ standard depend upon several conditions:
+- Tests can not assert or assure quality independently of a `Use Case`.  
+- A `Use Case` (through a set of `Policies`) defining a suite of Tests needed to assert or filter for quality is required. Without it, an implementation of a set of Tests in a `Mechanism` IS NOT compliant with the BDQ standard. 
+- All of the Tests required by the `Policies` of a `Use Case` MUST be implemented and individually compliant with BDQ Test specifications in order for the `Use Case` Test suite to be compliant with the BDQ standard. 
+
+Note that BDQ Compliance of a Test Suite implementation does not mean that the `Use Case` that defines the Test Suite is valid or useful, rather, it simply means that every Test in the `Use Case` is (1) in the implementation and (2) each Test implementation is independently compliant with the Test's BDQ specification.
 
 ### 3.2 Minimum Test Suite composition (normative)
 
@@ -598,17 +610,44 @@ Many Tests specify `bdqffdq:Parameters` that are intended to change the behavior
 
 A Parameterized Test will behave differently on the same data when using different `Parameter` values. 
 
-Implementers SHOULD only present non-default `Parameter` values to a Test implementation if needed for local `Data Quality Needs`. When a Test is executed with non-default `Arguments` specified for `Parameters`, consumers of `Assertions` and Data Quality Reports resulting from such MUST be able to tell that non-default `Arguments` were used, and what the non-default values were.
+Implementers SHOULD only present non-default `Parameter` values to a Test implementation if needed for local `Data Quality Needs`. 
 
-When a Test is Parameterized, and a value other than the default value is used for some `Parameter`, reports SHOULD identify the Tests to you using at least the `Label` (`rdfs:label`) for the Test class, in combination with the `Parameter`, and the value of the argument that replaced the `Parameter` in this specific case.
+#### 6.1.1 Identifying non-default `Parameter` values in reports (normative)
 
-For example: "VALIDATION_MINDEPTH_INRANGE with bdq:maximumValidDepthInMeters=1642"
+When a Test is executed with non-default `Arguments` specified for `Parameters`, consumers of `Assertions` and Data Quality Reports resulting from such MUST be able to tell that non-default `Arguments` were used, and what the non-default values were.
 
-When a non-default `Argument` is used, a new instance of an `Implementation` linked to a new instance of a `Specification` linked to an instance of an `Argument` asserting the non-default value SHOULD be used. When `Assertions` are represented in RDF, an `Assertion` produced by a Test run with a non-default `Argument` value MUST NOT be linked to the instance of the `Specification` with the `Argument` with the default value, but MUST be linked to novel instances of `Implementation`, `Specification`, and `Argument`, such that a query on the `Assertion` can identify what `Argument` value was used for the `Parameter` to produce the `Assertion`. It is the novel instances of these classes that provides the non-default value for software consumers.
+When a Test is Parameterized, and a value other than the default value is used for some `Parameter`, reports: SHOULD identify the Tests using at least:
+- the `Label` (`rdfs:label`) for the Test class, 
+- in combination with the `Parameter`, 
+- and the value of the argument that replaced the `Parameter` in this specific case.
+
+For example: "VALIDATION_MINDEPTH_INRANGE with bdq:maximumValidDepthInMeters=1642"  (Label with Parameter=non-default value).
+
+When a non-default `Argument` is used, a new instance of an `Implementation` linked to a new instance of a `Specification` linked to an instance of an `Argument` asserting the non-default value SHOULD be used. 
+
+When `Assertions` are represented in RDF an `Assertion` produced by a Test run with a non-default `Argument` value
+- MUST NOT be linked to the instance of the `Specification` with the `Argument` with the default value, 
+- MUST be linked to novel instances of `Implementation`, `Specification`, and `Argument`, such that a query on the `Assertion` can identify what `Argument` value was used for the `Parameter` to produce the `Assertion`. It is the novel instances of these classes that provides the non-default value for software consumers.
+
+#### 6.1.2 Identifying non-default `Parameter` values in `Response.comment` (normative)
 
 When a non-default `Argument` is used, a `Response.comment` SHOULD include the `Parameter` and the non-default value. This provides the non-default value for human consumers.
 
-Implementers MUST NOT produce Test `Implementations` identified by the same identifiers that only implement non-default `Parameter` values. An implementation of a Test MUST support the Test execution with the default `Parameter` values, and MAY optionally support other `Parameter` values. Provided `Parameters` MUST NOT change the behavior of the Test to depart from the `bdqffdq:Specification` `hasExpectedResponse`. `Parameters` MUST only change the behavior of the Test as specified in the `bdqffdq:Specification` `hasExpectedResponse`.
+#### 6.1.3 Expectations for Tests with `Parameters` (normative)
+
+An implementation of a Test:
+- MUST support the Test execution with the default `Parameter` values.
+- MAY optionally support other `Parameter` values. 
+- Provided `Parameters` MUST NOT change the behavior of the Test to depart from the `Specification` `hasExpectedResponse`. 
+- `Parameters` MUST only change the behavior of the Test as specified in the `Specification` `hasExpectedResponse`.
+
+#### 6.1.4 Test departures from specifications (normative)
+
+An implementation of a Test that, by design, has a behavior that departs from the `Specification` `hasExpectedResponse` MUST be identified by different identifiers than the BDQ Test from which it departs.  
+
+An implementation of a parameterized Test that only supports non-default `Parameter` values MUST be identified by different identifiers than the BDQ Test that supports the default `Parameter` values.  For example, an implementation of VALIDATION_LICENSE_STANDARD that does not support the default bdq:sourceAuthority "Creative Commons 4.0 Licenses or CC0", but only supports a different source authority is not the same test as VALIDATION_LICENSE_STANDARD, and must be identified by a different identifier.
+
+#### 6.1.3 Further guidance on `Parameters` and `Arguments` (non-normative)
 
 See also the [Test Parameters](../../guide/users/index.md#34-test-parameters-non-normative) section in the [User's Guide)](../../guide/users/index.md) for further guidance on `Parameters` and `Arguments`.
 
