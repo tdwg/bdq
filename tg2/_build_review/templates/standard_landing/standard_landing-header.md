@@ -136,6 +136,8 @@ This standard is comprised of the following documents and artifacts:
 
 The Quick Reference Guide is a simple, informative reference and the first place to look for the most commonly used information about the Tests.
 
+**Note:** These sections in this document are non-normative, the documents linked out to here contain the normative content of the standard.
+
 [**BDQ Tests Quick Reference Guide**](docs/terms/bdqtest/index.md)
 
 ### 2.2 Landing Pages (non-normative)
@@ -145,10 +147,14 @@ The landing pages provide overviews of the subjects they cover and refer to more
 - **The Biodiversity Data Quality (BDQ) Standard** - Overview of the BDQ standard. This page.
 - [**BDQ Tests and Assertions**](docs/bdqtest/index.md) - Overview of the Tests.
 - [**Fitness For Use Ontology**](docs/bdqffdq/index.md) - Overview of the Fitness for Use Framework.
+
+<!--- 
+Note: bdqffdq and bdqtest have separate landing pages and term list documents, for each of the following documents the landing page IRI will resolve to the term list document.
 - [**BDQ Controlled Vocabulary List of Terms (bdq:)**](docs/list/bdq/index.md) (will be: https://bdq.tdwg.org/bdq)
 - [**Data Quality Criterion Controlled Vocabulary List of Terms (bdqcrit:)**](docs/list/bdqcrit/index.md) (will be: https://bdq.tdwg.org/bdqcrit)
 - [**Data Quality Dimension Controlled Vocabulary List of Terms (bdqdim:)**](docs/list/bdqdim/index.md) (will be: https://bdq.tdwg.org/bdqdim)
 - [**Data Quality Enhancement Controlled Vocabulary List of Terms (bdqenh:)**](docs/list/bdqenh/index.md) (will be: https://bdq.tdwg.org/bdqenh)
+--->
 
 ### 2.3 Guides (non-normative)
 
