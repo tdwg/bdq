@@ -110,6 +110,10 @@ The directory structure of the templates is as follows, with the files listed in
     │   ├── TestsOther.png
     │   ├── TestsSpace.png
     │   └── TestsTime.png
+    ├── tutorial
+    │   ├── tutorial_landing-footer.md
+    │   ├── tutorial_landing-header.md
+    │   └── document_configuration.yaml
     └── terms
         └── bdqtest_qrg
             ├── bdqtest_qrg_term_descriptions-header.md

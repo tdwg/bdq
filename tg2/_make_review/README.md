@@ -117,6 +117,8 @@ _review/
 │   ├── supplement
 │   │   ├── index.md  Generated file. **Do not edit.**
 │   │   └── *.png  Files copied here from build. **Do not edit.**
+│   ├── tutorial
+│   │   └── index.md Generated file. **Do not edit.**
 │   └── terms  Build targets for Quick Reference Guides.
 │       └── bdqtest Quick Reference Guide to the tests
 │           ├── bdqtest_qrg_term_descriptions.md  Terms key for index.md. Generated file. **Do not edit.**

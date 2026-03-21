@@ -42,7 +42,7 @@ debug = False
 # See assumptions below.
 # directories, list of key:value pairs of templatePath:document
 #directories = {'vocabularies':'vocabularies', 'intro':'intro', 'supplement':'supplement', 'synthetic':'synthetic','guide/users':'users','guide/implementers':'implementers','guide/bdqffdq':'bdqffdq', 'bdqtest':'bdqtest_landing','references':'references'}
-directories = {'supplement':'supplement', 'guide/synthetic':'synthetic','guide/users':'users','guide/implementers':'implementers','guide/bdqffdq':'bdqffdq', 'bdqtest':'bdqtest_landing', 'standard_landing':'standard_landing'}
+directories = {'supplement':'supplement', 'guide/synthetic':'synthetic','guide/users':'users','guide/implementers':'implementers','guide/bdqffdq':'bdqffdq', 'bdqtest':'bdqtest_landing', 'standard_landing':'standard_landing','tutorial':'tutorial'}
 
 # This is the base URL for raw files from the branch of the repo that has been pushed to GitHub
 github_branch = 'master' # "master" for production, something else for development
