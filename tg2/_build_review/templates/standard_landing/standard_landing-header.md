@@ -132,17 +132,19 @@ Throughout these descriptive documents, terms and phrases styled as inline code 
 
 This standard is comprised of the following documents and artifacts:
 
+**Note:** These sections in this document are marked as non-normative, however, most of the documents linked out to here contain normative content.
+
+**Note:** See the TDWG Standards Documentation Specification (SDS) for an explanation of concepts such as landing page, distribution file, term-list, and vocabulary extension.
+
 ### 2.1 BDQ Tests Quick Reference Guide (non-normative)
 
 The Quick Reference Guide is a simple, informative reference and the first place to look for the most commonly used information about the Tests.
-
-**Note:** These sections in this document are non-normative, the documents linked out to here contain the normative content of the standard.
 
 [**BDQ Tests Quick Reference Guide**](docs/terms/bdqtest/index.md)
 
 ### 2.2 Landing Pages (non-normative)
 
-The landing pages provide overviews of the subjects they cover and refer to more detailed information in associated documents. The details of the individual terms are provided in the corresponding term list documents. (Note: The controlled vocabulary term list documents below also act as thet landing pages for those vocabularies).
+The landing pages provide overviews of the subjects they cover and refer to more detailed information in associated documents. The details of the individual terms are provided in the corresponding term list documents. 
 
 - **The Biodiversity Data Quality (BDQ) Standard** - Overview of the BDQ standard. This page.
 - [**BDQ Tests and Assertions**](docs/bdqtest/index.md) - Overview of the Tests.
@@ -176,18 +178,26 @@ The Foundational Vocabularies cover the two main parts of the standard - the pra
 
 #### 2.4.2 Supporting Vocabularies (non-normative)
 
-The Supporting Vocabularies are controlled vocabularies used in the technical definitions of the Tests.
+The Supporting Vocabularies are controlled vocabularies used in the technical definitions of the Tests.   (Note: The suporting controlled vocabulary term list documents below also act as the landing pages for those vocabularies).
 
 - [**BDQ Controlled Vocabulary List of Terms (bdq:)**](docs/list/bdq/index.md)
 - [**Data Quality Criterion Controlled Vocabulary List of Terms (bdqcrit:)**](docs/list/bdqcrit/index.md)
 - [**Data Quality Dimension Controlled Vocabulary List of Terms (bdqdim:)**](docs/list/bdqdim/index.md)
 - [**Data Quality Enhancement Controlled Vocabulary List of Terms (bdqenh:)**](docs/list/bdqenh/index.md)
 
-### 2.5 Supplemental Information (non-normative)
+### 2.5 Additional Documents (non-normative)
 
-Supplemental Information includes the rationale for, the history of, and the challenges met while describing the Tests.
+#### 2.5.1 Supplemental Information (non-normative)
+
+The non-normative Supplemental Information includes the rationale for, the history of, and the challenges met while describing the Tests.
 
 - [**BDQ Supplemental Information**](docs/supplement/index.md)
+
+#### 2.5.1 Tutorial (non-normative)
+
+The non-normative Tutorial provides a worked through example of the thought process in defining a 'Use Case' and a Test that supports the `Use Case`.
+
+- [**BDQ Tutorial**](docs/tutorial/index.md)
 
 ### 2.6 Distribution Files (non-normative)
 
