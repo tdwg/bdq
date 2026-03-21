@@ -193,7 +193,7 @@ The Quick Reference Guide is a simple, informative reference and the first place
 
 ### 2.2 Landing Pages (non-normative)
 
-The landing pages provide overviews of the subjects they cover and refer to more detailed information in associated documents. The details of the individual terms are provided in the corresponding term list documents. The controlled vocabulary term list documents also act as the landing pages for those vocabularies.
+The landing pages provide overviews of the subjects they cover and refer to more detailed information in associated documents. The details of the individual terms are provided in the corresponding term list documents. (Note: The controlled vocabulary term list documents below also act as thet landing pages for those vocabularies).
 
 - **The Biodiversity Data Quality (BDQ) Standard** - Overview of the BDQ standard. This page.
 - [**BDQ Tests and Assertions**](docs/bdqtest/index.md) - Overview of the Tests.
