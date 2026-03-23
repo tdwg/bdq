@@ -152,6 +152,7 @@ Draft Standard for Review
     - [hasAuthoritiesDefaults](#hasauthoritiesdefaults)
     - [hasDateLastUpdated](#hasdatelastupdated)
     - [hasExpectedResponse](#hasexpectedresponse)
+    - [hasFitnessRequirements](#hasfitnessrequirements)
     - [hasResponseComment](#hasresponsecomment)
     - [hasResponseResultValue](#hasresponseresultvalue)
   - [4.4 NamedIndividual terms (normative)](#44-namedindividual-terms-normative)
@@ -359,6 +360,7 @@ In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use th
 [hasAuthoritiesDefaults](#hasAuthoritiesDefaults)
 [hasDateLastUpdated](#hasDateLastUpdated)
 [hasExpectedResponse](#hasExpectedResponse)
+[hasFitnessRequirements](#hasFitnessRequirements)
 [hasResponseComment](#hasResponseComment)
 [hasResponseResultValue](#hasResponseResultValue)
 ### 3.4 Alphabetical Index of named individuals (non-normative)
@@ -837,7 +839,7 @@ The bdqffdq:ResponseResult is represented as a value or a result object for bdqf
 - Preferred Label: Use Case
 - Definition: A bdqffdq:NeedConcept expressing a purpose to which data are put for which the data must have quality for the result to have meaning and reliability.
 - SubClass Of: FundamentalConcept; NeedConcept
-- Comments: A bdqffdq:UseCase describes a purpose or use for which data must have quality. The bdqffdq:ValidationPolicies, bdqffdq:MeasurementPolicies and bdqffdq:AmendmentPolicies that make up a bdqffdq:UseCase define which bdqffdq:Assertions cover a given bdqffdq:UseCase. An example of a bdqffdq:UseCase could be 'Check for internal consistency of dates', with bdqffdq:ValidationPolicies for checking consistency between atomic date fields and a bdqffdq:Amendment such as 'eventDate filled in from verbatim'. A bdqffdq:UseCase is not the same as a use cases in the software engineering sense, but is similar in that it is a formal bdqffdq: statement derived from analyis of user stories concerning data use.
+- Comments: A bdqffdq:UseCase describes a purpose or use for which data must have quality. The bdqffdq:ValidationPolicies, bdqffdq:MeasurementPolicies and bdqffdq:AmendmentPolicies that make up a bdqffdq:UseCase define which bdqffdq:Assertions cover a given bdqffdq:UseCase. An example of a bdqffdq:UseCase could be 'Check for internal consistency of dates', with bdqffdq:ValidationPolicies for checking consistency between atomic date fields and a bdqffdq:Amendment such as 'eventDate filled in from verbatim'. A bdqffdq:UseCase is not the same as a use cases in the software engineering sense, but is similar in that it is a formal bdqffdq: statement derived from analyis of user stories concerning data use.  A bdqffdq:UseCase is expected to have a bdqffdq:hasFitnessRequirements property.
 
 ********************
 
@@ -1266,6 +1268,15 @@ Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:Impro
 - Preferred Label: has Expected Response
 - Definition: Text describing the logic to be followed by a bdqffdq:Implementation of a bdqffdq:Specification specifying the values of bdqffdq:ResponseStatus and bdqffdq:ResponseResults that should be produced from the evaluation of input bdqffdq:InformationElements.
 - Comments: The description of the logic of a Test Specification. A bdqffdq:hasExpectedResponse is expected to be a data property of a Specification.
+
+********************
+
+#### hasFitnessRequirements
+
+- Name: bdqffdq:hasFitnessRequirements
+- Preferred Label: has Fitness Requirements
+- Definition: The property of a bdqffdq:UseCase that provides text listing the qualities that data must have to be fit for a given use.
+- Comments: The bdqffdq:hasFitnessRequirements should sumarize the properties that data need to have to be fit for purpose for that bdqffdq:UseCase.   It should briefly list the general properties that bdqffdq:DataQualityNeeds associated with the UseCase need to assess (for example, stating that georeferences must be correctly formatted and have adequate metadata), and can identify particular threshold values (such as a coordinate uncertainty greater than some value) that would make data unfit for that use.   The hasFitnessRequirements property should not, however, simply list bdqffdq:DataQualityNeeds instances, but should provide a succinct human readable summary of the quality requirements.
 
 ********************
 

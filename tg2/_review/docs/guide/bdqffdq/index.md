@@ -164,6 +164,7 @@ Draft Standard for Review
     - [hasAuthoritiesDefaults](#hasauthoritiesdefaults)
     - [hasDateLastUpdated](#hasdatelastupdated)
     - [hasExpectedResponse](#hasexpectedresponse)
+    - [hasFitnessRequirements](#hasfitnessrequirements)
     - [hasResponseComment](#hasresponsecomment)
     - [hasResponseResultValue](#hasresponseresultvalue)
   - [5.4 NamedIndividual terms (normative)](#54-namedindividual-terms-normative)
@@ -570,6 +571,7 @@ It is important that the chain of relationships from an instance of an `Assertio
 [hasAuthoritiesDefaults](#hasAuthoritiesDefaults)
 [hasDateLastUpdated](#hasDateLastUpdated)
 [hasExpectedResponse](#hasExpectedResponse)
+[hasFitnessRequirements](#hasFitnessRequirements)
 [hasResponseComment](#hasResponseComment)
 [hasResponseResultValue](#hasResponseResultValue)
 
@@ -1297,6 +1299,13 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 - Name: bdqffdq:hasExpectedResponse
 - Definition: Text describing the logic to be followed by a bdqffdq:Implementation of a bdqffdq:Specification specifying the values of bdqffdq:ResponseStatus and bdqffdq:ResponseResults that should be produced from the evaluation of input bdqffdq:InformationElements.
 - Range xsd:string
+
+********************
+
+#### hasFitnessRequirements
+
+- Name: bdqffdq:hasFitnessRequirements
+- Definition: The property of a bdqffdq:UseCase that provides text listing the qualities that data must have to be fit for a given use.
 
 ********************
 
