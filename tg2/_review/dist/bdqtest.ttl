@@ -8900,18 +8900,18 @@
 
 <urn:uuid:08c7162d-11af-481b-bee1-738c9ac2fc68> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementPolicy>;
   rdfs:label "MeasurementPolicy: (4) measures  in UseCase bdq:Spatial-Temporal_Patterns";
-  <https://rs.tdwg.org/bdqffdq/terms/hasUseCase> <https://rs.tdwg.org/bdqffdq/terms/Spatial-Temporal_Patterns>;
+  <https://rs.tdwg.org/bdqffdq/terms/hasUseCase> bdq:Spatial-Temporal_Patterns;
   <https://rs.tdwg.org/bdqffdq/terms/includesInPolicy> <https://rs.tdwg.org/bdqtest/terms/453844ae-9df4-439f-8e24-c52498eca84a-2024-09-24>,
     <https://rs.tdwg.org/bdqtest/terms/49a94636-a562-4e6b-803c-665c80628a3d-2024-09-25>,
     <https://rs.tdwg.org/bdqtest/terms/45fb49eb-4a1b-4b49-876f-15d5034dfc73-2024-09-25>,
     <https://rs.tdwg.org/bdqtest/terms/56b6c695-adf1-418e-95d2-da04cad7be53-2025-03-07> .
 
-<https://rs.tdwg.org/bdqffdq/terms/Spatial-Temporal_Patterns> a <https://rs.tdwg.org/bdqffdq/terms/UseCase>;
+bdq:Spatial-Temporal_Patterns a <https://rs.tdwg.org/bdqffdq/terms/UseCase>;
   rdfs:label "bdq:Spatial-Temporal_Patterns" .
 
 <urn:uuid:0053ca4f-7d45-41ea-912e-c8847bb70142> a <https://rs.tdwg.org/bdqffdq/terms/ValidationPolicy>;
   rdfs:label "ValidationPolicy: (49) validations  in UseCase bdq:Spatial-Temporal_Patterns";
-  <https://rs.tdwg.org/bdqffdq/terms/hasUseCase> <https://rs.tdwg.org/bdqffdq/terms/Spatial-Temporal_Patterns>;
+  <https://rs.tdwg.org/bdqffdq/terms/hasUseCase> bdq:Spatial-Temporal_Patterns;
   <https://rs.tdwg.org/bdqffdq/terms/includesInPolicy> <https://rs.tdwg.org/bdqtest/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe-2025-03-07>,
     <https://rs.tdwg.org/bdqtest/terms/69b2efdc-6269-45a4-aecb-4cb99c2ae134-2025-03-07>,
     <https://rs.tdwg.org/bdqtest/terms/8f1e6e58-544b-4365-a569-fb781341644e-2025-03-07>,
@@ -8965,7 +8965,7 @@
 
 <urn:uuid:089b6974-1a6e-438a-a8f3-19f2e2dd1d2d> a <https://rs.tdwg.org/bdqffdq/terms/ValidationPolicy>;
   rdfs:label "ValidationPolicy: (22) validations  in UseCase bdq:Biotic-Relationships";
-  <https://rs.tdwg.org/bdqffdq/terms/hasUseCase> <https://rs.tdwg.org/bdqffdq/terms/Biotic-Relationships>;
+  <https://rs.tdwg.org/bdqffdq/terms/hasUseCase> bdq:Biotic-Relationships;
   <https://rs.tdwg.org/bdqffdq/terms/includesInPolicy> <https://rs.tdwg.org/bdqtest/terms/0949110d-c06b-450e-9649-7c1374d940d1-2025-03-07>,
     <https://rs.tdwg.org/bdqtest/terms/f51e15a6-a67d-4729-9c28-3766299d2985-2025-03-07>,
     <https://rs.tdwg.org/bdqtest/terms/3f335517-f442-4b98-b149-1e87ff16de45-2025-03-06>,
@@ -8990,12 +8990,12 @@
     <https://rs.tdwg.org/bdqtest/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2025-03-07>;
   skos:prefLabel "ValidationPolicy: (22) validations  in UseCase bdq:Biotic-Relationships" .
 
-<https://rs.tdwg.org/bdqffdq/terms/Biotic-Relationships> a <https://rs.tdwg.org/bdqffdq/terms/UseCase>;
+bdq:Biotic-Relationships a <https://rs.tdwg.org/bdqffdq/terms/UseCase>;
   rdfs:label "bdq:Biotic-Relationships" .
 
 <urn:uuid:022bd662-3052-4771-8e54-f4f74803ccc5> a <https://rs.tdwg.org/bdqffdq/terms/ValidationPolicy>;
   rdfs:label "ValidationPolicy: (31) validations  in UseCase bdq:Taxon-Management";
-  <https://rs.tdwg.org/bdqffdq/terms/hasUseCase> <https://rs.tdwg.org/bdqffdq/terms/Taxon-Management>;
+  <https://rs.tdwg.org/bdqffdq/terms/hasUseCase> bdq:Taxon-Management;
   <https://rs.tdwg.org/bdqffdq/terms/includesInPolicy> <https://rs.tdwg.org/bdqtest/terms/eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f-2025-03-06>,
     <https://rs.tdwg.org/bdqtest/terms/3667556d-d8f5-454c-922b-af8af38f613c-2025-03-06>,
     <https://rs.tdwg.org/bdqtest/terms/0949110d-c06b-450e-9649-7c1374d940d1-2025-03-07>,
@@ -9029,12 +9029,12 @@
     <https://rs.tdwg.org/bdqtest/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2025-03-07>;
   skos:prefLabel "ValidationPolicy: (31) validations  in UseCase bdq:Taxon-Management" .
 
-<https://rs.tdwg.org/bdqffdq/terms/Taxon-Management> a <https://rs.tdwg.org/bdqffdq/terms/UseCase>;
+bdq:Taxon-Management a <https://rs.tdwg.org/bdqffdq/terms/UseCase>;
   rdfs:label "bdq:Taxon-Management" .
 
 <urn:uuid:05b21497-a98f-4024-af0e-36d8de5cc317> a <https://rs.tdwg.org/bdqffdq/terms/AmendmentPolicy>;
   rdfs:label "AmendmentPolicy: (19) amendments  in UseCase bdq:Spatial-Temporal_Patterns";
-  <https://rs.tdwg.org/bdqffdq/terms/hasUseCase> <https://rs.tdwg.org/bdqffdq/terms/Spatial-Temporal_Patterns>;
+  <https://rs.tdwg.org/bdqffdq/terms/hasUseCase> bdq:Spatial-Temporal_Patterns;
   <https://rs.tdwg.org/bdqffdq/terms/includesInPolicy> <https://rs.tdwg.org/bdqtest/terms/39bb2280-1215-447b-9221-fd13bc990641-2025-03-07>,
     <https://rs.tdwg.org/bdqtest/terms/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e-2025-03-07>,
     <https://rs.tdwg.org/bdqtest/terms/bd385eeb-44a2-464b-a503-7abe407ef904-2025-03-07>,
@@ -9057,7 +9057,7 @@
 
 <urn:uuid:10e8008c-c947-4327-867e-7899de98eb2c> a <https://rs.tdwg.org/bdqffdq/terms/AmendmentPolicy>;
   rdfs:label "AmendmentPolicy: (7) amendments  in UseCase bdq:Biotic-Relationships";
-  <https://rs.tdwg.org/bdqffdq/terms/hasUseCase> <https://rs.tdwg.org/bdqffdq/terms/Biotic-Relationships>;
+  <https://rs.tdwg.org/bdqffdq/terms/hasUseCase> bdq:Biotic-Relationships;
   <https://rs.tdwg.org/bdqffdq/terms/includesInPolicy> <https://rs.tdwg.org/bdqtest/terms/bd385eeb-44a2-464b-a503-7abe407ef904-2025-03-07>,
     <https://rs.tdwg.org/bdqtest/terms/f01fb3f9-2f7e-418b-9f51-adf50f202aea-2025-03-06>,
     <https://rs.tdwg.org/bdqtest/terms/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2025-03-07>,
@@ -9068,12 +9068,12 @@
 
 <urn:uuid:26fdef6a-c268-40f2-aaaf-a8ac930bcf86> a <https://rs.tdwg.org/bdqffdq/terms/IssuePolicy>;
   rdfs:label "IssuePolicy: (3) issues  in UseCase bdq:Spatial-Temporal_Patterns";
-  <https://rs.tdwg.org/bdqffdq/terms/hasUseCase> <https://rs.tdwg.org/bdqffdq/terms/Spatial-Temporal_Patterns>;
+  <https://rs.tdwg.org/bdqffdq/terms/hasUseCase> bdq:Spatial-Temporal_Patterns;
   <https://rs.tdwg.org/bdqffdq/terms/includesInPolicy> <https://rs.tdwg.org/bdqtest/terms/13d5a10e-188e-40fd-a22c-dbaa87b91df2-2025-03-06>,
     <https://rs.tdwg.org/bdqtest/terms/acc8dff2-d8d1-483a-946d-65a02a452700-2025-03-07>,
     <https://rs.tdwg.org/bdqtest/terms/256e51b3-1e08-4349-bb7e-5186631c3f8e-2025-03-07> .
 
 <urn:uuid:3400d096-4b78-4c17-add4-0c42fd20267f> a <https://rs.tdwg.org/bdqffdq/terms/IssuePolicy>;
   rdfs:label "IssuePolicy: (1) issues  in UseCase bdq:Biotic-Relationships";
-  <https://rs.tdwg.org/bdqffdq/terms/hasUseCase> <https://rs.tdwg.org/bdqffdq/terms/Biotic-Relationships>;
+  <https://rs.tdwg.org/bdqffdq/terms/hasUseCase> bdq:Biotic-Relationships;
   <https://rs.tdwg.org/bdqffdq/terms/includesInPolicy> <https://rs.tdwg.org/bdqtest/terms/acc8dff2-d8d1-483a-946d-65a02a452700-2025-03-07> .
