@@ -358,6 +358,54 @@ What `Amendments` have `Information Elements` `Acted Upon` that are `Acted Upon`
        } 
     } 
 
+List all `UseCases`, and the Tests associated with the comments on each `DataQualityNeed` and its related `Specification`, formulated to run directly on triples found in bdqtest.ttl without inference.
+
+    PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
+    
+    SELECT DISTINCT
+      ?useCase 
+      ?needType ?needComment
+      ?specComment
+    WHERE {
+      # Use Cases
+      ?useCase rdf:type bdqffdq:UseCase .
+      OPTIONAL { ?useCase rdfs:label ?useCaseLabel . }
+    
+      # Policies tie UseCases to included Needs
+      ?policy bdqffdq:hasUseCase ?useCase ;
+              bdqffdq:includesInPolicy ?need .
+    
+      # Need is a Test (using the concrete types that are subclasses of bdqffdq:DataQualityNeed, no inference required)
+      ?need rdf:type ?needType .
+      FILTER(?needType IN (bdqffdq:Validation, bdqffdq:Issue, bdqffdq:Measure, bdqffdq:Amendment))
+    
+      OPTIONAL { ?need rdfs:label ?needLabel . }
+      OPTIONAL { ?need rdfs:comment ?needComment . }
+    
+      # Method -> Need link (explicit properties; no inference required)
+      ?method bdqffdq:hasSpecification ?spec .
+      {
+        ?method bdqffdq:forValidation ?need .
+      } UNION {
+        ?method bdqffdq:forIssue ?need .
+      } UNION {
+        ?method bdqffdq:forMeasure ?need .
+      } UNION {
+        ?method bdqffdq:forAmendment ?need .
+      }
+    
+      # Specification details (we could include the expectedResponse in the output instead, but the comment on the Specification has more details on arguments.
+      OPTIONAL { ?spec bdqffdq:hasExpectedResponse ?expectedResponse . }
+      OPTIONAL { ?spec rdfs:comment ?specComment . }
+    }
+    ORDER BY
+      LCASE(STR(?useCaseLabel))
+      LCASE(STR(?needLabel))
+      STR(?need)
+
+
 #### 2.4.1 Listing Identifiers for Tests (non-normative)
 
 The Fitness for Use Framework organizes data quality Tests as ontology individuals, each with associated human-readable labels and persistent identifiers. To support automated processing and reference, it is often necessary to retrieve a list of these `Validation` Tests with their identifiers and version-specific IRIs. The following competency question demonstrates how to query the ontology to obtain this information using SPARQL.
