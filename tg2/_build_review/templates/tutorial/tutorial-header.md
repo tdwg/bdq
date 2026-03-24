@@ -97,41 +97,29 @@ By following this workflow, you move from a human-centric research need
 
 Clearly stating the problem that we are trying to solve ensures that the test is grounded in real-world needs and not just theoretical ideals.
 
+* **User:** A conservation biologist.
+* **Description:** Checking that each record in a data set of "Expert Distributions" of taxa is usable for identifying outliers in other occurrence data.  The data consist of one record per taxon with fields identifying the taxon, providing the expert distribution as geospatial data, along with metadata about the source of the record.
+* **Fitness for Use Requirements**: To be fit for this purpose each record in the data set must have these properties:
+** A taxonomic name is present and can be found in GBIF's backbone taxonomy.
+** A machine readable identifier taxonomic name for that taxon is present.
+** A polygon providing the spatial footprint of the expert distribution for that taxon is present.
+** Metadata providing source for each taxon distribution is present.
 
--   **User:** A conservation biologist.
+Now let is consider in a little more detail what fields are present in the data that is to be evaluated, and how can we map them onto terms in known vocabularies.
 
--   **Context:** Identifying candidate data records to validate
-    observations for "Expert Distributions" of taxa.
+** A valid taxonomic name: dwc:scientificName, dwc:scientificNameAuthorship, dwc:taxonRank
+** A machine readable identifier for the taxonomic name: dwc:taxonID
+** A polygon of the taxon footprint: dwc:footprintWKT.
+** Metadata providing source for each taxon distribution: prov:wasAttributedTo (ORCiD), foaf:name (Author name), dcterms:source (publication or dataset source)  
 
--   **Justification:** For this context, coordinates alone are
-    insufficient; a polygonal footprint (dwc:footprintWKT) defining the
-    observed area must be present.
+Now we can define our `UseCase`.  We need to specify three elements, a name for the use case, a description, and a statement of fittness for use requirements.  We will also need a unique identifier for the `UseCase` that software can use.
 
--   **Fitness for Use Requirements**:
+* **Name** Validated Distribution Authority
+* **Description**
+* **hasFitnessRequirements**
 
-    -   A valid taxonomic name (dwc:scientificName)
 
-    -   An observation date (dwc:eventDate)
-
-    -   Geographic coordinates present and accurate to within 100m
-        (dwc:decimalLatitude, dwc:decimalLongitude,
-        dwc:coordinateUncertaintyInMeters)
-
-    -   A polygon of the taxa footprint (candidate expert distribution)
-        must be present (dwc:footprintWKT).
-
-    -   The records have not been annotated
-
-    -   The records have not had their locations generalized to a grid
-        or similar
-
-What our \`Use Case\` needs is a validated taxa with ‘accurate’
-coordinates and a dwc:footprintWKT (a polygonal footprint) that defines
-the area where the taxon was observed. The proposed Test will only need
-to confirm the presence of a non-empty dwc:footprintWKT, as existing BDQ
-Tests will cover other requirements.
-
-### 2. Gap Analysis and Test Suites
+### 3.2 Gap Analysis and Reuse of Existing Tests
 
 **The Strategy:** Do not attempt to incorporate all criteria into a
 single test. Instead, identify which existing BDQ tests already
