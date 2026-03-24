@@ -51,3 +51,7 @@ rdf_type:
   label: Type
   normative: 'true'
   term: rdf:type
+hasFitnessRequirements:
+  label: Fitness Requirements
+  normative: 'false'
+  term: bdqffdq:hasFitnessRequirements

@@ -178,6 +178,8 @@ for term in termLists:
     #column_list = ['pref_ns_prefix', 'pref_ns_uri', 'term_localName', 'label', 'definition', 'usage', 'notes', 'term_modified', 'term_deprecated', 'type']
     if vocab_type == 2:
         column_list += ['controlled_value_string']
+    if term == "bdq" :
+        column_list += ['hasFitnessRequirements']
     #elif vocab_type == 3:
     #    column_list += ['controlled_value_string', 'skos_broader']
     #if organized_in_categories:
@@ -211,8 +213,8 @@ for term in termLists:
                 #row_list = [term_list['pref_ns_prefix'], term_list['pref_ns_uri'], row['term_localName'], row['label'], row['definition'], row['usage'], row['notes'], row['term_modified'], row['term_deprecated'], row['type']]
                 if vocab_type == 2:
                     row_list += [row['controlled_value_string']]
-                    if debug :
-                        print(row_list)
+                if term == "bdq" :
+                    row_list += [row['hasFitnessRequirements']]
         #        elif vocab_type == 3:
         #            if row['skos_broader'] =='':
         #                row_list += [row['controlled_value_string'], '']
@@ -220,6 +222,8 @@ for term in termLists:
         #                row_list += [row['controlled_value_string'], term_list['pref_ns_prefix'] + ':' + row['skos_broader']]
         #        if organized_in_categories:
         #            row_list.append(row['tdwgutility_organizedInClass'])
+                if debug :
+                    print(row_list)
         
                 # Borrowed terms really don't have implemented versions. They may be lacking values for version_status.
                 # In their case, their version IRI will be omitted.
@@ -427,6 +431,9 @@ for term in termLists:
             outputRdf += '     <skos:inScheme rdf:resource="http://rs.tdwg.org/{}/terms/"/>\n'.format(term)
             outputRdf += '     <rdf:type rdf:resource="{}"/>\n'.format(row['rdf_type'])
             outputRdf += '     <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/{}/terms/{}"/>\n'.format(term,row['term_localName'])
+            if term == "bdq" :
+                if row['hasFitnessRequirements'] and row['hasFitnessRequirements'] != '' :
+                    outputRdf += '     <bdqffdq:hasFitnessRequirements rdf:datatype="http://www.w3.org/2001/XMLSchema#string">{}</bdqffdq:hasFitnessRequirements>\n'.format(row['hasFitnessRequirements'])
             outputRdf += '</rdf:Description>\n'
             text += '<table>\n'
             curie = term + ":" + row['term_localName']
@@ -488,6 +495,12 @@ for term in termLists:
             text += '\t\t\t<td>' + row['comments'] + '</td>\n'
             #text += '\t\t\t<td>' + row['definition'] + '</td>\n'
             text += '\t\t</tr>\n'
+
+            if term == 'bdq' and row['hasFitnessRequirements'] and row['hasFitnessRequirements'] != '' :
+               text += '\t\t<tr>\n'
+               text += '\t\t\t<td>Fitness requirements</td>\n'
+               text += '\t\t\t<td>' + row['hasFitnessRequirements'] + '</td>\n'
+               text += '\t\t</tr>\n'
     
     #        if row['dcterms_description'] != '':
     #        #if row['notes'] != '':
@@ -600,10 +613,10 @@ for term in termLists:
     # Determine whether there was a previous version of the document.
     if document_configuration_yaml['doc_created'] != document_configuration_yaml['doc_modified']:
         # Load versions list from document versions data in the rs.tdwg.org repo and find most recent version.
-		# TODO: This file will need to be created post ratification, it contains the columsn current_iri and version_iri
-		## example from Darwin Core:
-		## current_iri,version_iri
-		## http://rs.tdwg.org/abcd/doc/primer/,http://rs.tdwg.org/abcd/doc/primer/2006-07-27
+        # TODO: This file will need to be created post ratification, it contains the columsn current_iri and version_iri
+        ## example from Darwin Core:
+        ## current_iri,version_iri
+        ## http://rs.tdwg.org/abcd/doc/primer/,http://rs.tdwg.org/abcd/doc/primer/2006-07-27
         versions_data_url = githubBaseUri + 'docs/docs-versions.csv'
         versions_list_df = pd.read_csv(versions_data_url, na_filter=False)
         # Slice all rows for versions of this document.
@@ -639,7 +652,7 @@ for term in termLists:
     footer = footer.replace('{current_iri}', document_configuration_yaml['current_iri'])
     footer = footer.replace('{ratification_date}', document_configuration_yaml['doc_modified'])
     
-	## Produce a table of contents from the headings 
+    ## Produce a table of contents from the headings 
     toc = generate_markdown_toc((header+text+footer).splitlines())
     header = header.replace('{toc}', toc)
 

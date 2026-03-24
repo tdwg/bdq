@@ -155,6 +155,7 @@ The terminology used to describe the terms in this vocabulary follows the TDWG [
 | Status (tdwgutility:status) |  | Used to indicate if the term is recommended for use or if it is only of historical significance. | recommended |
 | Controlled Value String () | normative |  | Alien-Species |
 | Type (rdf:type) | normative | The subject is an instance of a class. | bdqffdq:UseCase |
+| Fitness Requirements (bdqffdq:hasFitnessRequirements) | non-normative | The property of a bdqffdq:UseCase that provides text listing the qualities that data must have to be fit for a given use. | Data are fit for the Use Case bdq:Biotic-Relationships when occurrence records support consistent interpretation of biotic relationship evidence by providing a resolvable taxonomic identification, minimally usable spatial and temporal context, and key controlled descriptors that are present and standardizable (e.g., record type, occurrence status, establishment context, pathway, type status). <ul> <li>Taxon terms are sufficient to support resolution of the organism where possible and are internally consistent with an appropriate source authority.</li> <li>Core controlled descriptors needed to interpret the record are present and use standard values or can be standardized (e.g., record type, basis of record, type status).</li> <li>Occurrence context is explicit and comparable across records because occurrence status uses standard values or can be standardized.</li> <li>Establishment and pathway context, where used, employs standard values or can be standardized so ecological context is comparable.</li> <li>Time and place are minimally usable: event date is present and in standard form (and consistent with any atomized date parts provided), and coordinates are present as needed and within valid ranges.</li> </ul> |
 
 
 ## 2 Use of Terms (normative)
@@ -557,6 +558,10 @@ In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use th
 		<tr>
 			<td>Comments</td>
 			<td></td>
+		</tr>
+		<tr>
+			<td>Fitness requirements</td>
+			<td>Data are fit for the Use Case bdq:Biotic-Relationships when occurrence records support consistent interpretation of biotic relationship evidence by providing a resolvable taxonomic identification, minimally usable spatial and temporal context, and key controlled descriptors that are present and standardizable (e.g., record type, occurrence status, establishment context, pathway, type status). <ul> <li>Taxon terms are sufficient to support resolution of the organism where possible and are internally consistent with an appropriate source authority.</li> <li>Core controlled descriptors needed to interpret the record are present and use standard values or can be standardized (e.g., record type, basis of record, type status).</li> <li>Occurrence context is explicit and comparable across records because occurrence status uses standard values or can be standardized.</li> <li>Establishment and pathway context, where used, employs standard values or can be standardized so ecological context is comparable.</li> <li>Time and place are minimally usable: event date is present and in standard form (and consistent with any atomized date parts provided), and coordinates are present as needed and within valid ranges.</li> </ul></td>
 		</tr>
 		<tr>
 			<td>Status</td>
@@ -1295,6 +1300,10 @@ In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use th
 			<td></td>
 		</tr>
 		<tr>
+			<td>Fitness requirements</td>
+			<td>Data are fit for the Use Case bdq:Spatial-Temporal_Patterns when occurrence records can be reliably interpreted as organism occurrences in space and time: the organism identity is usable, the location is usable (with adequate precision/metadata), textual geography data is consistent with the coordinates, the event date is usable and internally consistent, and any generalization (spatial or temporal) is detectable so users can decide whether the record is fit at the intended analysis scale.      • Organism identity is usable: taxon/scientific name terms (e.g., dwc:scientificName and related taxon terms) are present and sufficiently resolvable/consistent to support analyses of spatiotemporal patterns of organisms. <ul><li>Location is usable and interpretable (including precision/metadata): coordinates are present, are in-range, and are accompanied by adequate spatial metadata (e.g., uncertainty and spatial reference such as datum); obvious artifact coordinates (e.g., zeros) are detectable. </li> <li> Textual geography is coherent with coordinates: textual geography fields (e.g., dwc:countryCode, dwc:country, dwc:stateProvince) are valid/standardizable and consistent with the coordinates.</li> <li>Time is usable and internally consistent: dwc:eventDate is present, valid, in standard form and consistent with other temporal terms (e.g. dwc:year) terms when those are provided. </li> </li>Generalization an low precision is detectable: any indication that the record has been generalized (via dwc:dataGeneralizations)is available along with coordinate uncertainty, broad/interval event dates, and taxonomic rank so that users can judge whether  records are fit for the intended spatial/temporal resolution.</li></ul></td>
+		</tr>
+		<tr>
 			<td>Status</td>
 			<td>recommended</td>
 		</tr>
@@ -1385,6 +1394,10 @@ In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use th
 		<tr>
 			<td>Comments</td>
 			<td></td>
+		</tr>
+		<tr>
+			<td>Fitness requirements</td>
+			<td>Data are fit for the Use Case bdq:Taxon-Management when occurrence records support taxon curation: taxon terms are sufficient to resolve the organism (or flag ambiguity), core name/rank terms (e.g., dwc:scientificName, dwc:taxonRank) are present and align with an appropriate bdq:sourceAuthority, name strings are consistent with atomized name fields and identifiers/authorship, identification dates are valid and plausible, and key contextual metadata (e.g., dwc:basisOfRecord, and controlled fields such as dwc:typeStatus/dwc:sex where relevant) are usable. <ul><li>Taxon can be resolved: taxon terms are present and sufficient to support unambiguous resolution when possible.</li><li>Names and ranks are authoritative: dwc:scientificName and required rank/classification terms are present, standardizable, and consistent with the bdq:sourceAuthority.</li><li>Name fields are consistent: dwc:scientificName agrees with atomized name fields; authorship is provided where needed.</li><li>Identifiers are usable: identifiers (e.g., dwc:scientificNameID) are present when available and correctly formed; dwc:taxonRank is present and valid.</li><li>Identification timing is usable: dwc:dateIdentified is present when needed, ISO-valid, and temporally plausible (and consistent with dwc:eventDate when provided).</li><li>Supporting context is usable: dwc:basisOfRecord and other relevant controlled/context fields are present/valid; basic space/time fields are in standard form where used to support curation decisions.</li></ul></td>
 		</tr>
 		<tr>
 			<td>Status</td>
