@@ -38,10 +38,17 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
 Draft Standard for Review
 
 ## Table of Contents ##
-[Overview](#overview)
+[1 Introduction (non-normative)](#1-introduction-non-normative)
+  - [1.1 Purpose (non-normative)](#11-purpose-non-normative)
+  - [1.2 Audience (non-normative)](#12-audience-non-normative)
+  - [1.3 Associated Documents (non-normative)](#13-associated-documents-non-normative)
+  - [1.4 Status of the content of this document (normative)](#14-status-of-the-content-of-this-document-normative)
+  - [1.6 Namespace abbreviations (non-normative)](#16-namespace-abbreviations-non-normative)
 
-[Phase 1: Context and Strategy (The "Problem")](#phase-1-context-and-strategy-the-problem)
-  - [1. Define the Use Case and Fitness-for-Use](#1-define-the-use-case-and-fitness-for-use)
+[2 Overview (non-normative)](#2-overview-non-normative)
+
+[3 Tutorial Phase 1: Context and Strategy (The "Problem") (non-normative)](#3-tutorial-phase-1-context-and-strategy-the-problem-non-normative)
+  - [3.1 Define the Use Case and Fitness-for-Use Requirements (non-normative)](#31-define-the-use-case-and-fitness-for-use-requirements-non-normative)
   - [2. Gap Analysis and Test Suites](#2-gap-analysis-and-test-suites)
 
 [Phase 2: Identity and Logic (The "Naming")](#phase-2-identity-and-logic-the-naming)
@@ -75,35 +82,64 @@ Draft Standard for Review
 
 [Cite BDQ (non-normative)](#cite-bdq-non-normative)
 
-## Overview
+## 1 Introduction (non-normative)
 
-This tutorial provides the reasoning, technical justifications, and
-logical choices behind the creation of a new Biodiversity Data Quality
-(BDQ) test, using the specific example VALIDATION_FOOTPRINTWKT_NOTEMPTY.
-This test was considered a ‘[Supplementary test](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/supplement/index.md)’
-rather than a BDQ \`Core\` test as we considered it of marginal use for
-the BDQ \`Use Cases\`. As noted in the [BDQ Supplement
-Information](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/supplement/index.md),
-the test could be useful in certain \`Use Cases\`, as noted below.
+### 1.1 Purpose (non-normative)
 
-**Note** that a proposed **BDQ Maintenance Group** will be established
-to maintain the BDQ Standard. This group will take responsibility for
-advising on processes for editing the BDQ standard and evaluating new
-BDQ \`Tests\`, \`Use Cases\` and likely more.
+This document provides, in the form of a tutorial, an overview of the concepts, reasoning, technical justifications, and logical choices behind the creation of a new Biodiversity Data Quality (BDQ) Test.  It can be used to understand the components of the BDQ standard and to guide users and implementers in describing new tests using the BDQ Fitness for Use Framework.  It is also intended to assist the proposed BDQ Maintenance Group in evaluating proposals for new tests and edits to existing tests.
+
+### 1.2 Audience (non-normative)
+
+This document is intended for users and implementers seeking to understand the components of the BDQ standard through examining the reasoning and technical justifications behind the creation of a new BDQ test. 
+
+This document is also intended for those interested in describing new tests using the BDQ Fittness for Use Framework.
+
+### 1.3 Associated Documents (non-normative)
+
+For the list and links to all associated documents see [The Biodiversity Data Quality (BDQ) Standard](../../../index.md).
+
+### 1.4 Status of the content of this document (normative)
+
+This document is non-normative.
+
+### 1.6 Namespace abbreviations (non-normative)
+
+The following namespace abbreviations are used in this document:
+
+| **Abbreviation** | **Namespace** |
+| ------------ | -------------                               |
+| bdq:         | https://rs.tdwg.org/bdq/terms/              |
+| bdqtest:     | https://rs.tdwg.org/bdqtest/terms/          |
+| bdqcrit:     | https://rs.tdwg.org/bdqcrit/terms/          |
+| bdqdim:      | https://rs.tdwg.org/bdqdim/terms/           |
+| bdqffdq:     | https://rs.tdwg.org/bdqffdq/terms/          |
+| dcterms:     | http://purl.org/dc/terms/                   |
+| dwc:         | http://rs.tdwg.org/dwc/terms/               |
+| owl:         | http://www.w3.org/2002/07/owl#              |
+| rdfs:        | http://www.w3.org/2000/01/rdf-schema#       |
+| skos:        | http://www.w3.org/2004/02/skos/core#        |
+| xsd:         | http://www.w3.org/2001/XMLSchema#           |
+
+## 2 Overview (non-normative)
+
+This tutorial works through VALIDATION_FOOTPRINTWKT_NOTEMPTY as a specific example.  This test was considered a ‘[Supplementary test](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/supplement/index.md)’ rather than a BDQ \`Core\` test as we considered it of marginal use for the BDQ \`Use Cases\`. As noted in the [BDQ Supplement
+Information](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/supplement/index.md), the test could be useful in certain \`Use Cases\`, as noted below.
+
+**Note** that a proposed **BDQ Maintenance Group** will be established to maintain the BDQ Standard. This group will take responsibility for advising on processes for editing the BDQ standard and evaluating new BDQ \`Tests\`, \`Use Cases\` and other components of the BDQ Standard.
 
 By following this workflow, you move from a human-centric research need
-to a machine-readable technical standard.
+ to a machine-readable technical standard.
 
-## Phase 1: Context and Strategy (The "Problem")
+## 3 Tutorial Phase 1: Context and Strategy (The "Problem") (non-normative)
 
-*Before defining a test, we must justify why it exists and how it fits
-into the broader ecosystem of the standard.*
+*Before defining a test, we must justify why it exists and how it fits into the broader ecosystem of the standard.*
 
-### 1. Define the Use Case and Fitness-for-Use
+### 3.1 Define the Use Case and Fitness-for-Use Requirements (non-normative)
 
-**The Reasoning:** A test is only as good as the problem it solves. We
-begin by establishing a clear perspective on who the data user is and
-what makes the data "fit for use" for them.
+**The Reasoning:** A test is only as good as the problem it solves. We begin by establishing a clear perspective on who the data user is, what use the data are to be put, what makes the data "fit for use" for that use, and what problems in the data would make it unfit for that use. 
+
+Clearly stating the problem that we are trying to solve ensures that the test is grounded in real-world needs and not just theoretical ideals.
+
 
 -   **User:** A conservation biologist.
 
@@ -113,8 +149,6 @@ what makes the data "fit for use" for them.
 -   **Justification:** For this context, coordinates alone are
     insufficient; a polygonal footprint (dwc:footprintWKT) defining the
     observed area must be present.
-
-<!-- -->
 
 -   **Fitness for Use Requirements**:
 
