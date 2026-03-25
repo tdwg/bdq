@@ -303,7 +303,7 @@ The BDQ Tests are designed to be run at any point in the life cycle of biodivers
 
 ### 4.3 Results of Test Executions (normative)
 
-The BDQ standard is agnostic about the format of presentation of results from BDQ Tests. BDQ does, however, specify that Test implementations and presentations MUST return structured data with at least bdq:Response.status, bdq:Response.result, and bdq:Response.comment. Responses MAY also contain more information in Response.qualifier.
+The BDQ standard is agnostic about the format of presentation of results from BDQ Tests. BDQ does, however, specify that Test implementations and presentations MUST return structured data with at least Response.status, Response.result, and Response.comment. Responses MAY also contain more information in Response.qualifier.
 See the [Implementer's Guide](docs/guide/implementers/index.md) section on [Presentation of Results](docs/guide/implementers/index.md#7-presentation-of-results-normative) for further normative and non-normative guidance about result presentation. See [Structure of a Response](docs/bdqtest/index.md#31-structure-of-response-normative) in the [BDQ Tests and Assertions](docs/bdqtest/index.md) document for normative guidance on Responses as RDF or as data structures.
 
 The results of the execution of implementations of the BDQ Tests MAY be presented as Data Quality reports. The Framework Ontology provides vocabulary and structure that MAY be used for such data quality reports.
