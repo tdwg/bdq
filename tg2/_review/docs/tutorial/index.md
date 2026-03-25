@@ -69,7 +69,28 @@ Draft Standard for Review
 [4.7 Define the Test Specification (non-normative)](#47-define-the-test-specification-non-normative)
 
 [4.8 List the properties of the Test (non-normative)](#48-list-the-properties-of-the-test-non-normative)
-  - [4.6.1 Summary of the Test Definition](#461-summary-of-the-test-definition)
+  - [4.8.1 Summary of the Test Definition](#481-summary-of-the-test-definition)
+
+[6.1 A Simple Description of the Test (non-normative)](#61-a-simple-description-of-the-test-non-normative)
+
+[6.2 Identify the Information Elements (non-normative)](#62-identify-the-information-elements-non-normative)
+
+[6.3 Select the Test Type (non-normative)](#63-select-the-test-type-non-normative)
+
+[6.4 Name The Test (non-normative)](#64-name-the-test-non-normative)
+
+[6.5 Identify the Data Quality Dimension and Criterion (non-normative)](#65-identify-the-data-quality-dimension-and-criterion-non-normative)
+
+[6.6 How many records are we examining at once? (non-normative)](#66-how-many-records-are-we-examining-at-once?-non-normative)
+
+[6.7 Define the Test Specification (non-normative)](#67-define-the-test-specification-non-normative)
+
+[6.8 Source Authority (non-normative)](#68-source-authority-non-normative)
+
+[6.9 Generalize, add a parameter (non-normative)](#69-generalize-add-a-parameter-non-normative)
+
+[6.10 List the properties of the Test (non-normative)](#610-list-the-properties-of-the-test-non-normative)
+  - [6.10.1 Summary of the Test Definition](#6101-summary-of-the-test-definition)
   - [5. Selecting the Test Mechanism](#5-selecting-the-test-mechanism)
 
 [Phase 3: Formal Specification (The "Blueprint")](#phase-3-formal-specification-the-blueprint)
@@ -397,23 +418,85 @@ Now let's put all of this together into a structured format that lists the prope
 
 To formally express this test in RDF we would need to add some more identifiers and structures, but the above are the key properties that define the test and provide the information needed for an implementer to understand and implement the test.  See the bdqffdq: ontology guide for details about the full formal structure.
 
-### 4.6.1 Summary of the Test Definition
+### 4.8.1 Summary of the Test Definition
 
 So, VALIDATION_FOOTPRINTWKT_NOTEMPTY is is a `Validation` test, that takes dwc:footprintWKT as input, and askes a very simple question, "Is there a value in dwc:footprintWKT?", This question is spelled out very clearly for an implementer in the `Expected Response`.  The expected response is COMPLIANT if there is a value in dwc:footprintWKT, and NOT_COMPLIANT if there is not a value.  This is exactly the simple presence check we need for our `Use Case`.
 
 Thus we could include this test in our `Use Case`, even though it is not yet accepted into the BDQ standard (and we could implement it, test the implementation, and put it forward to the Maintinence group for consideration for inclusion in the standard). This test would fill the gap of a simple presence check for dwc:footprintWKT.
 
-# 5 Defining a more complicated Test (non-normative)
+# 5 Test for another Gap (non-normative)
 
-The next gap we identified in the 'Use Case'  
+Another gap we identified in the `Use Case` was evaluating whether prof:wasAttributedTo contains a value, and whether that value is a valid ORCiD.  Under the principle of keeping tests focused on a single aspect of data quality, we can break this down into two separate tests:
 
-** prov:wasAttributedTo (ORCiD is present) **Gap**
+* prov:wasAttributedTo (contains a value) **Gap**
+* prov:wasAttributedTo (ORCiD is valid) **Gap**
 
-TODO: describe this test briefly.
+The first of these is a simple presence check for prov:wasAttributedTo, which is a term in the PROV ontology that provides metadata, in this case, about the source of each taxon distribution.  We could define a test for this gap in a similar way to the test we just defined for dwc:footprintWKT.  The test would be a `Validation` test, it would take prov:wasAttributedTo as input, and it would ask the question "Is there a value in prov:wasAttributedTo?"  The expected response would be COMPLIANT if there is a value in prov:wasAttributedTo, and NOT_COMPLIANT if there is not a value.
 
-Then: Next Gap: 
+* **Description** Is there a value in prov:wasAttributedTo?
+* **Label** VALIDATION_WASATTRIBUTEDTO_NOTEMPTY 
+* **Preferred Label** Validation prov:wasAttributedTo Not Empty 
+* **Term Name** {some UUID}
+* **Modified** 2026-03-25
+* **Test Type** Validation
+* **Data Quality Dimension** Completeness
+* **Resource Type** SingleRecord
+* **Criterion** NotEmpty
+* **Information Elements Acted Upon** prov:wasAttributedTo
+* **Expected Response** COMPLIANT if prov:wasAttributedTo is bdq:NotEmpty; otherwise NOT_COMPLIANT
+
+# 6 Defining a more complicated Test (non-normative)
+
+The next gap we identified in the `Use Case` was: 
 
 ** prov:wasAttributedTo (ORCiD is valid) **Gap**
+
+This is a more complicated test, as it requires not just checking for the presence of a value, but also checking that the value is a valid ORCiD.  
+
+## 6.1 A Simple Description of the Test (non-normative)
+
+The Description of the test is an easy-to-understand, concise explanation of what the test does. It is a human-oriented explanation.  
+
+We could phrase this as "Is there a value in prov:wasAttributedTo, and if so, is it a valid ORCiD?"  This, however, is combining two questions into one.
+
+We want this test to evaluate a single aspect of data quality, which is whether the value in prov:wasAttributedTo is a valid ORCiD.  Thus we can phrase the description as follows:
+
+* **Description** Is the value in prov:wasAttributedTo a valid ORCiD?
+
+## 6.2 Identify the Information Elements (non-normative)
+
+The `Information Element` that this test will evaluate is prov:wasAttributedTo, which is a term in the PROV ontology that provides metadata about the source of each taxon distribution.  This `Information Element` is `ActedUpon`, as it is the primary focus of the test.  This test does not require any supporting information, so there are no `Information Elements` that are `Consulted`.
+
+* **Information Elements Acted Upon** prov:wasAttributedTo
+
+## 6.3 Select the Test Type (non-normative)
+
+We are asserting whether the value in prov:wasAttributedTo is a valid ORCiD, so we are asserting whether data meets specific criteria (COMPLIANT vs. NOT_COMPLIANT), thus we choose VALIDATION for this test.
+
+* **Test Type** Validation
+
+## 6.4 Name The Test (non-normative)
+
+Now we can name the test, following the naming conventions in BDQ.  The test is a Validation, it is evaluating the Information Element prov:wasAttributedTo, and it is evaluating whether the value in prov:wasAttributedTo is a valid ORCiD, that is whether it can be found in an authoritative list of ORCiDs.  So the label for this test could be VALIDATION_WASATTRIBUTEDTO_STANDARD.  
+
+* **Label** VALIDATION_WASATTRIBUTEDTO_STANDARD
+
+We will also want to provide a more readable and translatable Preferred Label, and a machine readable identifier, and a version date for this test.
+
+* **Preferred Label** "Validation prov:wasAttributedTo Standard".  
+* **Term Name** {some UUID}
+* **Modified** 2026-03-25
+
+## 6.5 Identify the Data Quality Dimension and Criterion (non-normative)
+
+
+## 6.6 How many records are we examining at once? (non-normative)
+## 6.7 Define the Test Specification (non-normative)
+## 6.8 Source Authority (non-normative)
+## 6.9 Generalize, add a parameter (non-normative)
+## 6.10 List the properties of the Test (non-normative)
+### 6.10.1 Summary of the Test Definition
+
 
 TODO: Repeate the logic, but here add in source authority, and then recongnise that a parameter is needed to allow for alternative authorities like VIAF, as the test can be more general than just ORCiD, and thus more broadly applicable.
 
