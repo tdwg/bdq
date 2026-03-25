@@ -84,8 +84,7 @@ Information](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/supplement
 
 **Note** that a proposed **BDQ Maintenance Group** will be established to maintain the BDQ Standard. This group will take responsibility for advising on processes for editing the BDQ standard and evaluating new BDQ \`Tests\`, \`Use Cases\` and other components of the BDQ Standard.
 
-By following this workflow, you move from a human-centric research need
- to a machine-readable technical standard.
+By following this workflow, you move from a human-centric research need to a machine-readable technical standard.
 
 ## 3 Tutorial Phase 1: Context and Strategy (The "Problem") (non-normative)
 
@@ -98,51 +97,126 @@ By following this workflow, you move from a human-centric research need
 Clearly stating the problem that we are trying to solve ensures that the test is grounded in real-world needs and not just theoretical ideals.
 
 * **User:** A conservation biologist.
-* **Description:** Checking that each record in a data set of "Expert Distributions" of taxa is usable for identifying outliers in other occurrence data.  The data consist of one record per taxon with fields identifying the taxon, providing the expert distribution as geospatial data, along with metadata about the source of the record.
-* **Fitness for Use Requirements**: To be fit for this purpose each record in the data set must have these properties:
-** A taxonomic name is present and can be found in GBIF's backbone taxonomy.
-** A machine readable identifier taxonomic name for that taxon is present.
-** A polygon providing the spatial footprint of the expert distribution for that taxon is present.
-** Metadata providing source for each taxon distribution is present.
+* **Context:** We have a data set consisting of "Expert Distributions" of taxa.  We want to validate that this dataset is is usable for identifying outliers in other occurrence data (and for doing other things we may want to do with a set of expert distributions like drawing maps).  The data consist a taxon oriented data set (e.g. one record per taxon) with fields identifying the taxon, providing the expert distribution as geospatial data (vector data providing shapes rather than point occurrences), along with metadata about the source of each record. 
+* **What makes data Fit for this Use?**: To be fit for this purpose each record in the data set must have:  A taxonomic name.  This taxonomic name can be found in a relevant authority on taxon names.  The taxon is also represented with a machine readable identifier.  The spatial footprint of the expert distribution of that taxon is provided as a polygon. That polygon is a valid shape.  Each taxon distribution has its source identified (the data set as a whole may have been compiled from multiple sources of taxon distributions.
 
-Now let is consider in a little more detail what fields are present in the data that is to be evaluated, and how can we map them onto terms in known vocabularies.
-
-** A valid taxonomic name: dwc:scientificName, dwc:scientificNameAuthorship, dwc:taxonRank
-** A machine readable identifier for the taxonomic name: dwc:taxonID
-** A polygon of the taxon footprint: dwc:footprintWKT.
-** Metadata providing source for each taxon distribution: prov:wasAttributedTo (ORCiD), foaf:name (Author name), dcterms:source (publication or dataset source)  
-
-Now we can define our `UseCase`.  We need to specify three elements, a name for the use case, a description, and a statement of fittness for use requirements.  We will also need a unique identifier for the `UseCase` that software can use.
+Now we can define our `UseCase`.  We need to specify three elements, a name for the use case, a description, and a statement of fittness for use requirements.  We want to refine our statement of the problem into concise and clear statements.   (We will also need a unique identifier for the `UseCase` that software can use, but we won't examine these machine readable identifiers at this point).  
 
 * **Name** Validated Distribution Authority
-* **Description**
-* **hasFitnessRequirements**
+* **Description** Validating that Taxon oriented data can provide an authoritative resource for mapping known distributions of taxa, for identifying occurrence records in other data sets that have coordinates within the known ranges of taxa or are outliers, or for similar purposes.
+* **hasFitnessRequirements** Data are fit for the `UseCase` "Validated Distribution Authority" and can provide a resource for validating that occurrence records are in range if they are taxon oriented data with fields identifying the taxon, providing expert validated distributions as geospatial data, along with metadata about the sources of the distributions.  To be fit for this purpose each record in the data set must have:
+** A taxonomic name is present and can be found in GBIF's backbone taxonomy.
+** A well formed machine readable identifier taxonomic name for that taxon is present.
+** A polygon providing the spatial footprint of the expert distribution for that taxon is present and valid.
+** Metadata providing the source for each taxon distribution is present.
 
+It is helpfull, but by no means required, to state the `hasFitnessRequirements` as a brief summary paragraph followed by a set of brief bullet points.  The `UseCase` is describing what we are trying to accomplish at a high level, without getting too far into the details.  
 
-### 3.2 Gap Analysis and Reuse of Existing Tests
+### 3.2 Identify The Information Elements (non-normative)
 
-**The Strategy:** Do not attempt to incorporate all criteria into a
-single test. Instead, identify which existing BDQ tests already
-contribute to the use case.
+Now let is consider in a little more detail what fields are present in the data that is to be evaluated and how can we map those fields onto terms in vocabularies like Darwin Core.  In the Fittnes for Use Framework, input fields or terms for a Test are generalized as `Information Elements`
 
--   **Existing Support:** Tests for valid coordinates, scientific names,
-    and event dates already exist e.g.,
+We can expand each of the bullet points in the hasFitnessRequirements statement into a set of terms that are likely to map onto the data.  We may understand these well at the start, or as we consider data in the wild and start defining and implementing tests we will very likely need to come back and refine this list.
 
-    -   [VALIDATION_COORDINATES_NOTZERO](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/list/bdqtest/index.md#bdqtest_1bf0e210-6792-4128-b8cc-ab6828aa4871) 
+* A valid taxonomic name: 
+** dwc:scientificName
+** dwc:scientificNameAuthorship
+* A machine readable identifier for the taxonomic name:
+**  dwc:scientificNameID
+* A polygon of the taxon footprint: 
+** dwc:footprintWKT (the expert distribution)
+** dwc:geodeticDatum (for the footprintWKT)
+* Metadata providing source for each taxon distribution: 
+** prov:wasAttributedTo (ORCiD)
+** foaf:name (Author name)
+** dcterms:source (publication or dataset source)  
 
-    -   [VALIDATION_COORDINATEUNCERTAINTY_INRANGE](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/list/bdqtest/index.md#bdqtest_c6adf2ea-3051-4498-97f4-4b2f8a105f57) 
+Now, we want to identify a set of tests to be applied to these `Information Elements` to evaluate whether the data are fit for use.  
 
-    -   [VALIDATION_DECIMALLATITUDE_INRANGE](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/list/bdqtest/index.md#bdqtest_b6ecda2a-ce36-437a-b515-3ae94948fe83) 
+There are two key elements to the strategy at this point: (1) we want identify and use existing tests that can be applied before defining new tests and (2) we want each test to be as focused as possible on a single aspect of data quality.
 
-    -   [VALIDATION_DECIMALLONGITUDE_INRANGE](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/list/bdqtest/index.md#bdqtest_0949110d-c06b-450e-9649-7c1374d940d1)
+### 3.3 Reuse of Existing Tests and Gap Analysis (non-normative)
 
-    -   [VALIDATION_EVENTDATE_STANDARD](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/list/bdqtest/index.md#bdqtest_4f2bf8fd-fc5c-493f-a44c-e7b16153c803) 
+Lets identify which existing BDQ tests might already be able to apply to these `Information Elements` for this `Use Case`.
 
-    -   [VALIDATION_SCIENTIFICNAME_FOUND](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/list/bdqtest/index.md#bdqtest_3f335517-f442-4b98-b149-1e87ff16de45) 
+We can start with a simple presence check for each of these `Information Elements` and then add more complex tests as needed.
 
-    -   [ISSUE_ANNOTATION_NOTEMPTY](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/list/bdqtest/index.md#bdqtest_fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1)
+We are looking for existing `Validation` Tests, as we are trying to assert whether data meets specific criteria (COMPLIANT vs. NOT_COMPLIANT).  By convention in BDQ, the names of these tests start with VALODATION_.  Simple presence tests for does an `Information Element` contain a value, by convention have a name that ends with  NOTEMPTY.   Between these two parts, again by convention, the name of the `Information Element` (or the name of a concept (e.g. LOCATION, EVENT) for several `Information Elements`)  being tested is included.
 
-    -   [ISSUE_DATAGENERALIZATIONS_NOTEMPTY](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/list/bdqtest/index.md#bdqtest_13d5a10e-188e-40fd-a22c-dbaa87b91df2) 
+For example, VALIDATION_SCIENTIFICNAME_NOTEMPTY is a test that checks if there is a value in dwc:scientificName.
+
+There are several places we could look for existing tests within BDQ, including the Quick Reference Guide, and the [index](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/list/bdqtest/index.md#31-index-to-validation-tests-non-normative) of the bdqtest: term-list document.  An easy place to look for Tests that operate on particular `Information Elements` is the Quick Reference Guide's [BDQ Test Index by Information Element Acted Upon](../terms/bdqtest/qrg_index_by_ie_actedupon.md#bdq-test-index-by-information-element-acted-upon-non-normative)
+
+Looking here for simple presence checks for the `Information Elements` we can identify the following existing BDQ tests (and gaps):
+
+* A valid taxonomic name is present: 
+** dwc:scientificName VALIDATION_SCIENTIFICNAME_NOTEMPTY
+** dwc:scientificNameAuthorshipa VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY
+* A machine readable identifier for the taxonomic name is present:
+**  dwc:scientificNameID VALIDATION_SCIENTIFICNAMEID_NOTEMPTY
+* A polygon of the taxon footprint is present: 
+** dwc:footprintWKT **Gap**
+** dwc:geodeticDatum VALIDATION_GEODETICDATUM_NOTEMPTY
+* Metadata providing source for each taxon distribution is present: 
+** prov:wasAttributedTo (ORCiD) **Gap**
+** foaf:name (Author name) **Gap**
+** dcterms:source (publication or dataset source) **Gap**
+
+Our `Use Case' calls for more than just a presence check for these `Information Elements`, so we would want to fill in in more candiate tests for these `Information Elements`, until we've got tests that cover each of the hasFitnessRequirements we identified for the Use Case.  Filling in, for example, a few more tests:  
+
+* A taxonomic name is present and can be found in GBIF's backbone taxonomy.
+** dwc:scientificName
+*** VALIDATION_SCIENTIFICNAME_NOTEMPTY
+*** VALIDATION_SCIENTIFICNAME_FOUND (check if the name can be found in an authority, GBIF's backbone taxonomy by default)
+** dwc:scientificNameAuthorship
+*** VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY
+* A well formed machine readable identifier taxonomic name for that taxon is present.
+** dwc:scientificNameID 
+*** VALIDATION_SCIENTIFICNAMEID_NOTEMPTY
+*** VALIDATION_SCIENTIFICNAMEID_COMPLETE (check if the identifier is well formed)
+
+But, let's focus on the gaps.  There is somewhere else we want to check for potential tests that aren't already defined in BDQ, and that's the BDQ Issues in GitHub.
+
+For dwc:footprintWKT, we could guess the name of the test, following the naming conventions, as VALIDATION_FOOTPRINTWKT_NOTEMPTY, and search the issues for [that name](https://github.com/tdwg/bdq/issues?q=VALIDATION_FOOTPRINTWKT_NOTEMPTY).  That does return a match, but it is a bit fragile, as the desired test might not have a name exactly matching that, and GitHub issue searches don't have good substring search support, so a better broader strategy is to search for: 
+
+* Are there existing proposals tagged as [SUPPLEMENTARY](https://github.com/tdwg/bdq/issues?q=label%3ASupplementary) that would fill the desired gap.
+* Are there existing proposals tagged as [DO NOT IMPLEMENT](https://github.com/tdwg/bdq/issues?q=label%3A%22DO%20NOT%20IMPLEMENT%22) that would fill the desired gap, but have been rejected for implementation, and should be reconsidered only with great caution.
+* **Note that all of these issues in GitHub are Closed, the default issue search which includes is:open will not find them.**
+
+So there is an existing definition for a test VALIDATION_FOOTPRINTWKT_NOTEMPTY, in the documented Supplementary tests.  
+
+Looking at the description of that test we see:
+
+* **Label** VALIDATION_FOOTPRINTWKT_NOTEMPTY
+* **Description** Is there a value in dwc:footprintWKT?
+* **TestType** Validation
+* **Information Elements Acted Upon** dwc:footprintWKT
+* **Expected Response** COMPLIANT if dwc:footprintWKT is bdq:NotEmpty; otherwise NOT_COMPLIANT
+
+This is telling us, much like an entry in the Quick Reference Guide or the more detailed entry in the bdqtest: term-list document, that this test is a simple presence check for dwc:footprintWKT.
+
+It is a `Validation` test, that takes dwc:footprintWKT as input, and askes a very simple question, "Is there a value in dwc:footprintWKT?", This question is spelled out very clearly for an implementer in the `Expected Response`.  The expected response is COMPLIANT if there is a value in dwc:footprintWKT, and NOT_COMPLIANT if there is not a value.  This is exactly the simple presence check we need for our `Use Case`.
+
+Thus we could include this test in our `Use Case`, even though it is not yet accepted into the BDQ standard (and we could implement it, test the implementation, and put it forward to the Maintinence group for consideration for inclusion in the standard). This test would fill the gap of a simple presence check for dwc:footprintWKT.
+
+**TODO: Key bit missing: doesn't state SingleRecord**
+
+Next Gap: 
+
+** prov:wasAttributedTo (ORCiD is present) **Gap**
+
+TODO: Develop this test, following Lee's logic, but be comprehensive.
+
+Next Gap: 
+
+** prov:wasAttributedTo (ORCiD is valid) **Gap**
+
+TODO: Repeate the logic, but here add in source authority, and then recongnise that a parameter is needed to allow for alternative authorities like VIAF, as the test can be more general than just ORCiD, and thus more broadly applicable.
+
+TODO: Then return to UseCase->Policy->Test, and purpose of the use case being Quality Control (we want to find and fix errrors), thus develop/explain the multi-record measures needed for that purpose.
+
+---------
+
 
 -   **The Gap:** Our proposed test only needs to confirm the presence of
     a non-empty dwc:footprintWKT, filling the specific missing
