@@ -52,22 +52,24 @@ Draft Standard for Review
   - [3.2 Identify The Information Elements (non-normative)](#32-identify-the-information-elements-non-normative)
   - [3.3 Reuse of Existing Tests and Gap Analysis (non-normative)](#33-reuse-of-existing-tests-and-gap-analysis-non-normative)
 
-[4.1 Identify the Information Elements (non-normative)](#41-identify-the-information-elements-non-normative)
+[4.1 A Simple Description of the Test (non-normative)](#41-a-simple-description-of-the-test-non-normative)
 
-[4.2 Select the Test Type (non-normative)](#42-select-the-test-type-non-normative)
+[4.2 Identify the Information Elements (non-normative)](#42-identify-the-information-elements-non-normative)
 
-[4.3 Identify the Data Quality Dimension and Criterion (non-normative)](#43-identify-the-data-quality-dimension-and-criterion-non-normative)
+[4.3 Select the Test Type (non-normative)](#43-select-the-test-type-non-normative)
 
-[4.4 How many records are we examining at once? (non-normative)](#44-how-many-records-are-we-examining-at-once?-non-normative)
+[4.4 Name The Test (non-normative)](#44-name-the-test-non-normative)
+  - [4.4.1 Anatomy of a Test Label (non-normative)](#441-anatomy-of-a-test-label-non-normative)
+  - [4.4.2 Identifiers supporting software and developers (non-normative)](#442-identifiers-supporting-software-and-developers-non-normative)
 
-[4.5 Define the Test Specification (non-normative)](#45-define-the-test-specification-non-normative)
+[4.5 Identify the Data Quality Dimension and Criterion (non-normative)](#45-identify-the-data-quality-dimension-and-criterion-non-normative)
 
-[4.6 Name the Test and list its properties (non-normative)](#46-name-the-test-and-list-its-properties-non-normative)
+[4.6 How many records are we examining at once? (non-normative)](#46-how-many-records-are-we-examining-at-once?-non-normative)
+
+[4.7 Define the Test Specification (non-normative)](#47-define-the-test-specification-non-normative)
+
+[4.8 List the properties of the Test (non-normative)](#48-list-the-properties-of-the-test-non-normative)
   - [4.6.1 Summary of the Test Definition](#461-summary-of-the-test-definition)
-
-[Phase 2: Identity and Logic (The "Naming")](#phase-2-identity-and-logic-the-naming)
-  - [3. A Simple Description of the Test](#3-a-simple-description-of-the-test)
-  - [4. Anatomy of a Test Label](#4-anatomy-of-a-test-label)
   - [5. Selecting the Test Mechanism](#5-selecting-the-test-mechanism)
 
 [Phase 3: Formal Specification (The "Blueprint")](#phase-3-formal-specification-the-blueprint)
@@ -136,8 +138,9 @@ The following namespace abbreviations are used in this document:
 
 ## 2 Overview (non-normative)
 
-This tutorial works through VALIDATION_FOOTPRINTWKT_NOTEMPTY as a specific example.  This test was considered a ‘[Supplementary test](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/supplement/index.md)’ rather than a BDQ \`Core\` test as we considered it of marginal use for the BDQ \`Use Cases\`. As noted in the [BDQ Supplement
-Information](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/supplement/index.md), the test could be useful in certain \`Use Cases\`, as noted below.
+This tutorial works through the development of a `Use Case`, then walks through two examples of the development of Tests.  One of the examples of a test is simple, the other is more complex.  This tutorial then comes back to the `Use Case` and describes how Measure Tests can be developed to evaluate the results of the Validation Tests for the purpose of `Quality Control`.  
+
+The simpler of the two Tests examined is VALIDATION_FOOTPRINTWKT_NOTEMPTY, which was considered a ‘[Supplementary test](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/supplement/index.md)’ rather than a BDQ \`Core\` test as we considered it of marginal use for the BDQ \`Use Cases\`. As noted in the [BDQ Supplement Information](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/supplement/index.md), the test could be useful in certain \`Use Cases\`, as noted below.
 
 **Note** that a proposed **BDQ Maintenance Group** will be established to maintain the BDQ Standard. This group will take responsibility for advising on processes for editing the BDQ standard and evaluating new BDQ \`Tests\`, \`Use Cases\` and other components of the BDQ Standard.
 
@@ -260,9 +263,19 @@ This is telling us, much like an entry in the Quick Reference Guide or the more 
 
 # 4 Defining a New Test (non-normative)
 
-Let's walk through the decisions involved in defining a test, using VALIDATION_FOOTPRINTWKT_NOTEMPTY as an example, and see how the components of the test are justified and how they fit together.
+Let's walk through the steps and decisions involved in defining a test, using VALIDATION_FOOTPRINTWKT_NOTEMPTY as an example, and see how the components of the test are justified and how they fit together.
 
-## 4.1 Identify the Information Elements (non-normative)
+## 4.1 A Simple Description of the Test (non-normative)
+
+The Description of the test is an easy-to-understand, concise explanation of what the test does. It is a human-oriented explanation.  It is a good starting point for defining a Test.
+
+* **Description** “Is there a value in dwc:footprintWKT?”
+
+As descriptions go, it doesn’t get simpler than that.
+
+This description will also be used in Data Quality Reports to explain to users what the test is doing, so it should be clear and concise.  It should not include details about how the test might implemented, but it should provide just enough information for a user to understand what the test is checking for.
+
+## 4.2 Identify the Information Elements (non-normative)
 
 **Purpose** Identify the specific fields in the input data (Information Elements) that the test will evaluate.
 
@@ -270,7 +283,7 @@ For this test we want to evaluate one `Information Element`, dwc:footprintWKT, w
 
 An `Information Element` is classified as either `ActedUpon` or `Consulted`.  An `Information Element` is `ActedUpon` if it is the primary focus of the test, and it is `Consulted` if it is supporting information used to run the test.  In this case, dwc:footprintWKT is the primary focus of the test, so it is an `Information Element` that is `ActedUpon`.  This test does not require any supporting information, so there are no `Information Elements` that are `Consulted`.
 
-## 4.2 Select the Test Type (non-normative)
+## 4.3 Select the Test Type (non-normative)
 
 **Purpose**: Determine in what way the test evaluates data quality.
 
@@ -283,7 +296,47 @@ There are four test types in BDQ:
 
 We choose VALIDATION for this test because we are asserting whether data meets specific criteria (COMPLIANT vs. NOT_COMPLIANT).
 
-## 4.3 Identify the Data Quality Dimension and Criterion (non-normative)
+## 4.4 Name The Test (non-normative)
+
+**Purpose**: Create human and machine readable names for the test.
+
+### 4.4.1 Anatomy of a Test Label (non-normative)
+
+**The Reasoning:** BDQ uses a standardized naming pattern to ensure labels are predictable and descriptive: **TESTTYPE_INFORMATIONELEMENTS_EVALUATION**.
+
+The use of all upper case with underscores is a convention inherited from the use of Java constants to identify tests in some early contributing projects.
+
+The label provides a concise summary of the test's purpose and logic.  The components of the label are:
+
+* **Test Type** one of VALIDATION, AMENDMENT, MEASURE, or ISSUE, as described above.
+* **Information Elements** Expressed as the "simple English term" for the `Information Element` being evaluated, or if multiple `Information Elements` are being evaluated together, a suscinct more general concept (like LOCATION or EVENT) that encompasses those `Information Elements`
+  * The use of "simple English terms" in the label (e.g., FOOTPRINTWKT) rather than the formal prefixed term (dwc:footprintWKT) to make it more accessible to human readers., and allows the label to be used as a string constant in many programming languages.
+* **Evaluation:** What is the test testing? 
+  * Examples of evaluations include "NOTEMPTY" (a value is present), “FOUND” (the value can be found in an authority), “INRANGE” (the value is within an expected range), etc.  See the bdq: vocabulary for a list of standard criteria,
+
+This test is a Validation, it is evaluating the Information Element dwc:footprintWKT, and it is evaluating whether there is a value in dwc:footprintWKT, so the label is VALIDATION_FOOTPRINTWKT_NOTEMPTY.  This label is expected to be a constant that does not change, even in translation.
+
+In order to support accessibility (the ability of screen readers to read the label in a more human friendly way), and to provide for translations of the name of the test into additional languages we will also want to create a Preferred Label for the test.
+
+The Preferred Label for this test could be "Validation dwc:footprintWKT Not Empty".  This Preferred Label is expected to be translated into different languages.
+
+This gives us the following names for the test: 
+* **Label** VALIDATION_FOOTPRINTWKT_NOTEMPTY
+* **Preferred Label** Validation dwc:footprintWKT Not Empty 
+
+### 4.4.2 Identifiers supporting software and developers (non-normative)
+
+While the label is a human-friendly identifier for the test, we need a machine-readable identifier that can be used by software to identify the test.  In BDQ, this is the `Term Name`, which is a UUID.  This allows software to unambiguously identify the test, and to ensure that a search for the test results in only this specific test being identified/located.
+
+We also need to provide a date for the test definition, and to update that date if the test definition is modified.
+
+This gives us the following additional properties for the test:
+* **Term Name** c6b705fc-7cf8-4af1-88ab-7a38d85f7109 
+* **Modified** 2024-01-29
+
+(Once accepted into BDQ, these properties would be combined to form the fully qualified Term IRI for the test (e.g. https://rs.tdwg.org/ bdqtest/terms/version/07c28ace-561a-476e-a9b9-3d5ad6e35933) and the Term Version IRI for a particular version of the test (e.g. https://rs.tdwg.org/ bdqtest/terms/version/07c28ace-561a-476e-a9b9-3d5ad6e35933-2024-07-24))
+
+## 4.5 Identify the Data Quality Dimension and Criterion (non-normative)
 
 **Purpose**: Classify the test according to the aspect of data quality it addresses.
 
@@ -302,7 +355,7 @@ This seems a very trivial test.  It is.  That is important.  We do not wish to o
 
 BDQ `Validations` also have a `Criterion` property.  Each Criterion represents an abstract way of evaluating whether a data value meets expectations for a particular Use Case.  These are formally defined int he bdqcrit: vocabulary.  For example, the Criterion `NotEmpty` is defined as "The data value is not empty (i.e., it contains some data)".  This is exactly the criterion we are applying in this test, so we will use the `NotEmpty` criterion for this test.  
 
-## 4.4 How many records are we examining at once? (non-normative)
+## 4.6 How many records are we examining at once? (non-normative)
 
 **Purpose**: Determine whether the test is applied to single records or multiple records.
 
@@ -312,7 +365,7 @@ We wish to step through the input data set one record at a time and for each rec
 
 We will come back later and define another test to measure how much of the data set is compliant for this test, and that will be a "MultiRecord" test, but for now we are just defining a simple presence check for dwc:footprintWKT that is applied to single records.
 
-## 4.5 Define the Test Specification (non-normative)
+## 4.7 Define the Test Specification (non-normative)
 
 **Purpose**: Provide a clear, unambiguous description of the test's logic and expected outcomes.
 
@@ -324,30 +377,23 @@ Since this is a `Validation`, the test will return either COMPLIANT or NOT_COMPL
 
 **Expected Response** COMPLIANT if dwc:footprintWKT is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
-## 4.6 Name the Test and list its properties (non-normative)
+## 4.8 List the properties of the Test (non-normative)
 
 **Purpose**: Create a human-readable label for the test and list its properties in a structured format.
 
 Now let's put all of this together into a structured format that lists the properties of the test, including its label, description, test type, information elements acted upon, and expected response.  See the bdqtest: term-list document for examples (like the very similar [VALIDATION_COUNTRYCODE_NOTEMPTY](../list/bdqtest/index.md#bdqtest_853b79a2-b314-44a2-ae46-34a1e7ed85e4).  For our test, we have:
 
-* **Label** VALIDATION_FOOTPRINTWKT_NOTEMPTY 
-  *(the primary identifier for humans for this test)
 * **Description** Is there a value in dwc:footprintWKT?
+* **Label** VALIDATION_FOOTPRINTWKT_NOTEMPTY 
+* **Preferred Label** Validation dwc:footprintWLT Not Empty 
+* **Term Name** c6b705fc-7cf8-4af1-88ab-7a38d85f7109 
+* **Modified** 2024-01-29
 * **Test Type** Validation
 * **Data Quality Dimension** Completeness
 * **Resource Type** SingleRecord
 * **Criterion** NotEmpty
 * **Information Elements Acted Upon** dwc:footprintWKT
 * **Expected Response** COMPLIANT if dwc:footprintWKT is bdq:NotEmpty; otherwise NOT_COMPLIANT
-
-We will want to add a few properties to the test for accessability, machine readability, and to provide information about the test for implementers.  These include:
-
-* **Preferred Label** Validation dwc:footprintWLT Not Empty 
-  * (a more human friendly label for the test, suitable for screen readers, translations, etc)
-* **Term Name** c6b705fc-7cf8-4af1-88ab-7a38d85f7109 
-  * (a machine readable identifer for the test)
-* **Modified** 2024-01-29
-  *(the date the test definition was last modified in a way that would affect implementations, to let implementers know if they need to update their implementations)
 
 To formally express this test in RDF we would need to add some more identifiers and structures, but the above are the key properties that define the test and provide the information needed for an implementer to understand and implement the test.  See the bdqffdq: ontology guide for details about the full formal structure.
 
@@ -359,7 +405,7 @@ Thus we could include this test in our `Use Case`, even though it is not yet acc
 
 # 5 Defining a more complicated Test (non-normative)
 
-Next Gap: 
+The next gap we identified in the 'Use Case'  
 
 ** prov:wasAttributedTo (ORCiD is present) **Gap**
 
@@ -375,45 +421,10 @@ TODO: Then return to UseCase->Policy->Test, and purpose of the use case being Qu
 
 ---------
 
-**TODO: Work the following text from Lee into section 4 above.**
-
-
-## Phase 2: Identity and Logic (The "Naming")
-
-*This phase creates the machine and human-readable identifiers that
-allow the test to be discovered and readily understood.*
-
-### 3. A Simple Description of the Test
-
-The Description of the test is an easy-to-understand, concise
-explanation of what the test does. It is a human-oriented explanation.
-
-> “Is there a value in dwc:footprintWKT?”
-
-As descriptions go, it doesn’t get simpler than that.
-
-### 4. Anatomy of a Test Label
-
-**The Reasoning:** BDQ uses a standardized naming pattern to ensure
-labels are predictable and descriptive:
-**TESTTYPE_INFORMATIONELEMENTS_EVALUATION**.
-
--   **The Choice:** The use of "simple English terms" in the label
-    (e.g., FOOTPRINTWKT) rather than the formal prefixed term
-    (dwc:footprintWKT) to make it more accessible to human readers.
-
--   **Globally Unique Identifier:** While the label is human-friendly,
-    the \`**GUID\`** is the primary key used by machines to ensure that
-    a search results in only this specific test. Note: The GUID
-    <u>IS</u> the key identifier for the test. It has to be globally
-    unique, in that for example, a Google search will result in ONLY
-    this test being identified/located. The test Label uses a
-    combination developed by BDQ that follows the pattern.
-
--   **Evaluation:** What is the test testing? Examples of evaluations
-    include “**COMPLETE”, “FOUND”, “INRANGE”, “STANDARD”,** etc
+**TODO: Work the correct parts of the following text from Lee into section 4 above.**
 
 ### 5. Selecting the Test Mechanism
+**??? Mechanism?  That is software that implements Tests, what is described here is the Data Quality Need** 
 
 The test type is the first part of the test label
 
@@ -448,6 +459,8 @@ developer to implement the test.*
 
 ### 6. Technical Identity (ActedUpon vs. Consulted)
 
+**??This is is about information elements, not about the specification???**
+
 This component of the \`Specification\` focuses on the terms that the
 test requires to run. BDQ calls all the terms \`Information Elements\`
 and generally assumes that these are predominantly [Darwin Core
@@ -481,6 +494,8 @@ document. In our new test, we could use the following phrase-
 -   **Justification for bdq: Prefix:** We prefix NotEmpty with bdq: to
     ensure the test uses the standard's explicit definition of
     "\`Empty\`", preventing ambiguity during implementation.
+
+**TODO: Work this into section 5**
 
 ### **8.** Defining Prerequisites and Authorities
 
@@ -542,6 +557,8 @@ the example above, BDQ allows for parameters where an implementation of
 BDQ requires a unique, non-globally accepted authority, as may be the
 case for example when legislation or tradition requires taxonomic names
 to be checked against a national names list.
+
+**TODO: Work this into section 4** 
 
 ## Phase 4: Validation and Community (The "Real-World")
 
@@ -653,6 +670,9 @@ Review will be determined and managed by the BDQ Maintenance Group.
 
 6.  **Test Interactions**: Consider how multiple tests might interact on
     the same data
+
+**TODO: Section on MultiRecord Measures and Quality Control goes here**
+
 
 ### 14. Framework Integration
 
