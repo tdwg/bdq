@@ -103,6 +103,8 @@ Clearly stating the problem that we are trying to solve ensures that the test is
 * **Context:** We have a data set consisting of "Expert Distributions" of taxa.  We want to validate that this dataset is usable for identifying outliers in other occurrence data (and for doing other things we may want to do with a set of expert distributions like drawing maps).  The data consist of a taxon oriented data set (e.g. one record per taxon) with fields identifying the taxon, providing the expert distribution as geospatial data (vector data providing shapes rather than point occurrences), along with metadata about the source of each record. 
 * **What makes data Fit for this Use?**: To be fit for this purpose each record in the data set must have:  A taxonomic name.  This taxonomic name can be found in a relevant authority on taxon names.  The taxon is also represented with a machine-readable identifier.  The spatial footprint of the expert distribution of that taxon is provided as a polygon. That polygon is a valid shape.  Each taxon distribution has its source identified (the data set as a whole may have been compiled from multiple sources of taxon distributions).
 
+#### 3.1.1 Refine and Formalize the Use Case (non-normative)
+
 Now we can define our `UseCase`.  We need to specify three elements, a name for the use case, a description, and a statement of fitness for use requirements.  We want to refine our statement of the problem into concise and clear statements.   (We will also need a unique identifier for the `UseCase` that software can use, but we won't examine these machine-readable identifiers at this point).  
 
 * **Name** Validated Distribution Authority
@@ -223,11 +225,11 @@ Looking at the description of that test we see:
 
 This is telling us, much like an entry in the Quick Reference Guide or the more detailed entry in the bdqtest: term-list document, that this test is a simple presence check for dwc:footprintWKT.
 
-# 4 Defining a New Test (non-normative)
+## 4 Defining a New Test (non-normative)
 
 Let's walk through the steps and decisions involved in defining a test, using VALIDATION_FOOTPRINTWKT_NOTEMPTY as an example, and see how the components of the test are justified and how they fit together.
 
-## 4.1 A Simple Description of the Test (non-normative)
+### 4.1 A Simple Description of the Test (non-normative)
 
 The Description of the test is an easy-to-understand, concise explanation of what the test does. It is a human-oriented explanation.  It is a good starting point for defining a Test.
 
@@ -241,7 +243,7 @@ This description will also be used in Data Quality Reports to explain to users w
 
 See also [Principles for Defining Tests](../supplement/index.md#3112-principles-non-normative) in the Supplement.
 
-## 4.2 Identify the Information Elements (non-normative)
+### 4.2 Identify the Information Elements (non-normative)
 
 **Purpose** Identify the specific fields in the input data (Information Elements) that the test will evaluate.
 
@@ -252,7 +254,7 @@ An `Information Element` is classified as either `ActedUpon` or `Consulted`.  An
 * **Information Elements Acted Upon** dwc:footprintWKT
 * **Information Elements Consulted** None
 
-## 4.3 Select the Test Type (non-normative)
+### 4.3 Select the Test Type (non-normative)
 
 **Purpose**: Determine in what way the test evaluates data quality.
 
@@ -271,11 +273,11 @@ See Also:
 * [Test Types](../bdqtest/index.md#22-test-types-non-normative) in the bdqtest: term-list document.
 * [Test Types](../guide/users/index.md#31-test-types-non-normative) in the User Guide.
 
-## 4.4 Name the Test (non-normative)
+### 4.4 Name the Test (non-normative)
 
 **Purpose**: Create human and machine-readable names for the test.
 
-### 4.4.1 Anatomy of a Test Label (non-normative)
+#### 4.4.1 Anatomy of a Test Label (non-normative)
 
 **The Reasoning:** BDQ uses a convention for the naming pattern so that Test labels are predictable and descriptive: **TESTTYPE_INFORMATIONELEMENTS_EVALUATION**.
 
@@ -301,7 +303,7 @@ This gives us the following names for the test:
 
 See Also: the [Evaluations](../../index.md#62-evaluations-in-test-labels-non-normative) list in the landing page for the BDQ standard.
 
-### 4.4.2 Identifiers supporting software and developers (non-normative)
+#### 4.4.2 Identifiers supporting software and developers (non-normative)
 
 While the label is a human-friendly identifier for the test, we need a machine-readable identifier that can be used by software to identify the test.  In BDQ, this is the `Term Name`, which is a UUID.  This allows software to unambiguously identify the test, and to ensure that a search for the test results in only this specific test being identified/located.
 
@@ -315,7 +317,7 @@ This gives us the following additional properties for the test:
 
 See Also: [Key to bdqtest: Vocabulary Terms](../list/bdqtest/index.md#110-key-to-vocabulary-terms-normative) in the bdqtest: term-list document.
 
-## 4.5 Identify the Data Quality Dimension and Criterion (non-normative)
+### 4.5 Identify the Data Quality Dimension and Criterion (non-normative)
 
 **Purpose**: Classify the test according to the aspect of data quality it addresses.
 
@@ -347,7 +349,7 @@ See also:
 * [bdqcrit:](../list/bdqcrit/index.md) for the criteria vocabulary.
 * [bdqenh:](../list/bdqenh/index.md) for the enhancement vocabulary.
 
-## 4.6 How many records are we examining at once? (non-normative)
+### 4.6 How many records are we examining at once? (non-normative)
 
 **Purpose**: Determine whether the test is applied to single records or multiple records.
 
@@ -361,7 +363,7 @@ We will come back later and define another test to measure how much of the data 
 
 See also: [Resource Types](../bdqtest/index.md#32-resource-types-normative) in the bdqtest: term-list document.
 
-## 4.7 Define the Test Specification (non-normative)
+### 4.7 Define the Test Specification (non-normative)
 
 **Purpose**: Provide a clear, unambiguous description of the test's logic and expected outcomes.
 
@@ -390,7 +392,7 @@ In this simple case, if dwc:footprintWKT is bdq:NotEmpty, the test should return
 See also: 
 * [Reading a Specification](../guide/implementers/index.md#232-reading-a-specification-non-normative) in the Implementers Guide.
 
-### 4.7.1 What Isn't Said in the Test Specification (non-normative)
+#### 4.7.1 What Isn't Said in the Test Specification (non-normative)
 
 For the purposes of simplicity and clarity, the expected response does not include all of the details of a Response from a test, just the key elements that implementers need to understand the logic of the Test.  The response from a Test is required to contain metadata (`bdqffdq:hasResponseStatus`), the value of the result of the test (`bdqffdq:hasResponseResult` or `bdqffdq:hasResponseResultValue`) and a human readable statement about why the test reached the conclusion it did in a particular case (`bdqffdq:hasResponseComment`).   
 
@@ -425,7 +427,7 @@ In BDQ, if different users of a Test might have slighly different data quality n
 
 In this test, we are simply checking for the presence of a value in dwc:footprintWKT, so there is no need to generalize the test with a parameter.
 
-## 4.10 List the properties of the Test (non-normative)
+### 4.10 List the properties of the Test (non-normative)
 
 **Purpose**: Create a human-readable label for the test and list its properties in a structured format.
 
@@ -448,7 +450,7 @@ To formally express this test in RDF we would need to add some more identifiers 
 See also: 
 * [Reading Test Descriptors](../guide/users/index.md#31-test-types-non-normative) in the Imlementers Guide.
 
-### 4.10.1 Formal RDF Representation of the Test (non-normative)
+#### 4.10.1 Formal RDF Representation of the Test (non-normative)
 
 This simple list of properties is sufficient for a human reader to understand the test and for a developer to implement the test.  However, to formally express this test in RDF we would need to add some more identifiers and structures, but the above are the key properties that define the test and provide the information needed for an implementer to understand and implement the test.  The bdqffdq: ontology guide gives the details about the full formal structure.  We won't go into the details of the RDF representation here.
 
@@ -457,13 +459,13 @@ See Also:
 * [Example RDF for a test](../index.md#24-example-rdf-non-normative) in the bdqtest: landing page.
 * [Example RDF for a test](../guide/bdqffdq/index.md#36-example-representation-of-a-bdq-test-non-normative) in the bdqffdq: ontology guide.
 
-### 4.10.2 Summary of the Test Definition
+#### 4.10.2 Summary of the Test Definition
 
 So, VALIDATION_FOOTPRINTWKT_NOTEMPTY is a `Validation` test, that takes dwc:footprintWKT as input, and askes a very simple question, "Is there a value in dwc:footprintWKT?", This question is spelled out very clearly for an implementer in the `Expected Response`.  The expected response is COMPLIANT if there is a value in dwc:footprintWKT, and NOT_COMPLIANT if there is not a value.  This is exactly the simple presence check we need for our `Use Case`.
 
 Thus, we could include this test in our `Use Case`, even though it is not yet accepted into the BDQ standard (and we could implement it, test the implementation, and put it forward to the Maintinence group for consideration for inclusion in the standard). This test would fill the gap of a simple presence check for dwc:footprintWKT.
 
-# 5 Test for another Gap (non-normative)
+## 5 Test for another Gap (non-normative)
 
 Another gap we identified in the `Use Case` was evaluating whether prof:wasAttributedTo contains a value, and whether that value is a valid ORCID ID.  Under the principle of keeping tests focused on a single aspect of data quality, we can break this down into two separate tests:
 
@@ -484,7 +486,7 @@ The first of these is a simple presence check for prov:wasAttributedTo, which is
 * **Information Elements Acted Upon** prov:wasAttributedTo
 * **Expected Response** COMPLIANT if prov:wasAttributedTo is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
-# 6 Defining a more complicated Test (non-normative)
+## 6 Defining a more complicated Test (non-normative)
 
 The next gap we identified in the `Use Case` was: 
 
@@ -494,7 +496,7 @@ This is a more complicated test, as it requires not just checking for the presen
 
 Note than on the principle of one Test evaluates one simple thing, we are asking whether the value has the correct structure for an ORCID ID, but we are not asking whether the value is actually a valid ORCID ID (e.g. by checking if it can be found in an authority like the ORCID ID registry).  We would define a separate test for that second question, and thus keep each test focused on a single aspect of data quality.
 
-## 6.1 A Simple Description of the Test (non-normative)
+### 6.1 A Simple Description of the Test (non-normative)
 
 The Description of the test is an easy-to-understand, concise explanation of what the test does. It is a human-oriented explanation.  
 
@@ -504,19 +506,19 @@ We want this test to evaluate a single aspect of data quality, which is whether 
 
 * **Description** Is the value in prov:wasAttributedTo a valid ORCID ID?
 
-## 6.2 Identify the Information Elements (non-normative)
+### 6.2 Identify the Information Elements (non-normative)
 
 The `Information Element` that this test will evaluate is prov:wasAttributedTo, which is a term in the PROV ontology that provides metadata about the source of each taxon distribution.  This `Information Element` is `ActedUpon`, as it is the primary focus of the test.  This test does not require any supporting information, so there are no `Information Elements` that are `Consulted`.
 
 * **Information Elements Acted Upon** prov:wasAttributedTo
 
-## 6.3 Select the Test Type (non-normative)
+### 6.3 Select the Test Type (non-normative)
 
 We are asserting whether the value in prov:wasAttributedTo is a valid ORCID ID, so we are asserting whether data meets specific criteria (COMPLIANT vs. NOT_COMPLIANT), thus we choose VALIDATION for this test.
 
 * **Test Type** Validation
 
-## 6.4 Name The Test (non-normative)
+### 6.4 Name The Test (non-normative)
 
 Now we can name the test, following the naming conventions in BDQ.  The test is a Validation, it is evaluating the Information Element prov:wasAttributedTo, and it is evaluating whether the value in prov:wasAttributedTo is a valid ORCID ID, that is whether it can be found in an authoritative list of ORCID IDs.  So the label for this test could be VALIDATION_WASATTRIBUTEDTO_STANDARD.  
 
@@ -528,7 +530,7 @@ We will also want to provide a more readable and translatable Preferred Label, a
 * **Term Name** {some UUID}
 * **Modified** 2026-03-25
 
-## 6.5 Identify the Data Quality Dimension and Criterion (non-normative)
+### 6.5 Identify the Data Quality Dimension and Criterion (non-normative)
 
 This Test is a `Validation`, so it will have both a `Data Quality Dimension` and Criterion.  
 
@@ -541,13 +543,13 @@ Similarly in the bdqcrit: vocabulary we find 'Standard' defined as "Data in a bd
 
 In contrast, in another test that evaluates whether the ORCID ID is valid by checking if it can be found in an authority like the ORCID ID registry, we would use a `Data Quality Dimension` of `Conformance`, but a `Criterion` of **`Found`**.
 
-## 6.6 How many records are we examining at once? (non-normative)
+### 6.6 How many records are we examining at once? (non-normative)
 
 This test would evaluate the value of prov:wasAttributedTo for each record, so we are applying this test to single records, and thus this is a "SingleRecord" test.
 
 * **Resource Type** SingleRecord
 
-## 6.7 Define the Test Specification (non-normative)
+### 6.7 Define the Test Specification (non-normative)
 
 We could make a very simple specification for this test, such as "COMPLIANT if the value in prov:wasAttributedTo is a valid ORCID ID; otherwise NOT_COMPLIANT".  However, this is not very clear or specific for an implementer.  What does it mean for a value to be a valid ORCID ID?  How would an implementer determine that?  We need to provide more specific guidance in the specification to ensure that different implementers will implement the test in a consistent way and thus get comparable results.
 
@@ -560,7 +562,7 @@ So we could phrase our test specification as a sequence of:
 
 This could work for our `Use Case`, but what does it mean for a value to conform to the expected format for an ORCID ID?  We need to provide more specific guidance on what we mean by that.  We could be more explicit in the Specification, but bdqffdq: provides a means for us to separate out these specifics, the `Source Authority` (which will then set the stage for making this test more generally applicable).
 
-### 6.7.1 Source Authority (non-normative)
+#### 6.7.1 Source Authority (non-normative)
 
 TODO: Repeate the logic, but here add in source authority, and then recongnise that a parameter is needed to allow for alternative authorities like VIAF, as the test can be more general than just ORCID ID, and thus more broadly applicable.
 
@@ -611,7 +613,7 @@ Which, combining the Expected Response with the default sourceAuthority, could b
 * COMPLIANT if the value in prov:wasAttributedTo conforms to the expected format of "^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$"
 * otherwise NOT_COMPLIANT.
 
-### 6.7.2 Generalize, add a parameter (non-normative)
+#### 6.7.2 Generalize, add a parameter (non-normative)
 
 We could make this test more general by allowing for alternative authorities, and thus more broadly applicable, by adding a parameter to the test that allows an implementer to specify which authority to use for evaluating whether the value in prov:wasAttributedTo conforms to the expected format for an ORCID ID.  This would allow the test to be used not just for ORCID IDs, but also for other types of identifiers that have a well-defined format and an authority that can be referenced for that format.
 
@@ -647,11 +649,14 @@ We can make the bdq:sourceAuthority as a parameter for this test, meaning that u
 
 * **Parameter** bdq:sourceAuthority
 
-### 6.7.3  Revisiting the Test Specification (non-normative)
+#### 6.7.3  Revisiting the Test Specification (non-normative)
 
+Having asserted that a bdq:sourceAuthority is needed in the test definition (and that the test can take this as a parameter to allow for different implementations to use different authorities), we now need to revisit the Description and Expected Response to make sure that we have included this generalization.
+
+* **Description** Does value in prov:wasAttributedTo conform to the format of the bdq:sourceAuthority?
 * **Expected Response**  INTERNAL_PREREQUISITES_NOT_MET if prov:wasAttributedTo is bdq:Empty; COMPLIANT if the value in prov:wasAttributedTo conforms to the expected format of bdq:sourceAuthority; otherwise NOT_COMPLIANT.
 
-## 6.8 Notes (non-normative)
+### 6.8 Notes (non-normative)
 
 Notes are present when some aspects of a test may not be obvious to the casual user or implementer, or if we want to describe aspects of the behaivior of the test in a non-normative way. 
 Notes might want to comment on variations in the expected structure of an ORCID ID, for example, the expected format of an ORCID ID is https://orcid.org/0000-0002-1825-0097, which can be tested for with this regular expression pattern: ^https://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$
@@ -660,10 +665,10 @@ But we might or might not want to allow for http:// as well as https:// and allo
 
 * **Notes** The expected format of an ORCID ID is ^https://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$, but we allow for protocol variants of http:// as well as https:// in the identifier and relax to the regex ^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$.  We expect the ORCID ID to be in resolvable form, not the bare identifier.  ORCID IDs are a subset of ISNI in the range 0000-0001-5000-0007 to 0000-0003-5000-0001, but this test only evaluates the format, not the range.  The form ORCID:0000-0001-5000-0007 should be treated as NOT_COMPLIANT by this test.
 
-## 6.9 List the properties of the Test (non-normative)
+### 6.9 List the properties of the Test (non-normative)
 
 * **Label** VALIDATION_WASATTRIBUTEDTO_STANDARD
-* **Description** Is the value in prov:wasAttributedTo a valid ORCID ID?
+* **Description** Does value in prov:wasAttributedTo conform to the format of the bdq:sourceAuthority?
 * **Preferred Label** "Validation prov:wasAttributedTo Standard".  
 * **Term Name** {some UUID}
 * **Modified** 2026-03-25
@@ -672,17 +677,27 @@ But we might or might not want to allow for http:// as well as https:// and allo
 * **Expected Response**  INTERNAL_PREREQUISITES_NOT_MET if prov:wasAttributedTo is bdq:Empty; COMPLIANT if the value in prov:wasAttributedTo conforms to the expected format of the bdq:sourceAuthority; otherwise NOT_COMPLIANT.
 * **hasAuthoritiesDefaults** bdq:sourceAuthority default = "Resolvable ORCID ID rexex" `{[^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$]}`
 * **Parameter** bdq:sourceAuthority
-* **Notes**
+* **Notes** The expected format of an ORCID ID is ^https://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$, but we allow for protocol variants of http:// as well as https:// in the identifier and relax to the regex ^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$.  We expect the ORCID ID to be in resolvable form, not the bare identifier.  ORCID IDs are a subset of ISNI in the range 0000-0001-5000-0007 to 0000-0003-5000-0001, but this test only evaluates the format, not the range.  The form ORCID:0000-0001-5000-0007 should be treated as NOT_COMPLIANT by this test.
 
-### 6.8.1 Summary of the Test Definition
+#### 6.9.1 Summary of the Test Definition
 
-# 7 Validation and Community (The "Real-World")
+VALIDATION_WASATTRIBUTEDTO_STANDARD is a `Validation` test, that takes prov:wasAttributedTo as input, and asks the question "Does the value in prov:wasAttributedTo conform to the format of [a specified authority]?"  The expected response is COMPLIANT if there is a value in prov:wasAttributedTo and that value conforms to the expected format for an ORCID ID as defined by the default source authority; otherwise NOT_COMPLIANT.  If there is no value in prov:wasAttributedTo, then this test cannot return a result, and thus returns INTERNAL_PREREQUISITES_NOT_MET.  This test has a parameter for the source authority, allowing for different implementations to use different authorities for evaluating whether the value in prov:wasAttributedTo conforms to the expected format for different identifiers, while still retaining the same overall logic and purpose of the test.
+
+#### 6.9.2 Iterate
+
+Earlier we said _"Treat this `UseCase` definition (and everything else that follows from it) as a first draft."_
+
+This is a critical point in the process, as we have now defined tests that fill gaps in our `Use Case`, and we have defined these tests in a way that is consistent with the principles of BDQ, and we have provided detailed specifications for these tests.  However, we have not yet implemented these tests, and we have not yet thrown any real data at these tests to see how they respond.  Thus, we should treat this as a first draft of the test definitions, and be prepared to iterate on these definitions based on implementation feedback and real-world data.
+
+## 7 Validation and Community (The "Real-World")
 
 *No test is final until it is implemented and thrown at actual data to confirm it responds correctly.*
 
-## 7.1 Unit Tests
+### 7.1 Unit Tests
 
-## 7.2 Test Validation Data and Edge Cases
+When implementing a Test, implementors are encouraged to use a test driven development approach, where they first create unit tests for a Test implementation covering each expected path in the specification, as well as edge cases, and then implement the Test internals to pass those unit tests.  This helps ensures that the Test is implemented correctly and that it responds correctly to a variety of test cases, including edge cases.
+
+### 7.2 Test Validation Data and Edge Cases
 
 **TODO: Check Lee's Text**
 
@@ -726,7 +741,7 @@ understanding.
     the naive," such as leading/trailing whitespace or non-printing
     characters, which should typically fail validation.
 
-# 9 Best Practices
+## 8 Best Practices
 
 1. **Atomic Tests**: Make each Test evaluate one single simple aspect of data quality.
 1. **Start Simple**: Begin defining basic validation tests before considering more complex amendments.
@@ -738,7 +753,7 @@ understanding.
 1. **Plan for Evolution**: Consider how tests might need to change over time.
 1. **Consider Test Interactions**: Consider how multiple tests might interact on the same data.
 
-# 10 Use an implementation for Quality Control (non-normative)
+## 9 Use an implementation for Quality Control (non-normative)
 
 So, for our `Use Case` **Validated Distribution Authority** we have identified a set of specific tests to evaluate whether some data set is fit for the purpose of being used as a "validated distribution authority" for biodiversity science.  
 
@@ -756,8 +771,13 @@ TODO: Then return to UseCase->Policy->Test, and purpose of the use case being Qu
 
 **TODO: Section on MultiRecord Measures and Quality Control goes here**
 
-**TODO** Rework from here on, below not integrated yet.
+### 9.1 MultiRecord Measures for Quality Control
 
+### 9.2 Quality Control Workflow
+
+****************************
+
+**TODO** Rework from here on, below not integrated yet.
 
 
 
