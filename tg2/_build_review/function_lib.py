@@ -52,7 +52,7 @@ def markdown_heading_to_link(input_heading):
     # Create anchor
     anchor = heading_text.lower()
     anchor = anchor.replace(" ", "-")
-    anchor = anchor.translate(str.maketrans("", "", "():,.`'\""))
+    anchor = anchor.translate(str.maketrans("", "", "():,.?`'\""))
 
     link = f"[{heading_text}](#{anchor})"
     return link
