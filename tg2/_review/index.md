@@ -91,7 +91,7 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
 
 [6 Glossary (non-normative)](#6-glossary-non-normative)
   - [6.1 Acronyms](#61-acronyms)
-  - [6.2 Term-Actions](#62-term-actions)
+  - [6.2 Evaluations in Test Labels (non-normative)](#62-evaluations-in-test-labels-non-normative)
   - [6.3 General Glossary (non-normative)](#63-general-glossary-non-normative)
 
 [7 References (non-normative)](#7-references-non-normative)
@@ -391,9 +391,9 @@ The glossary of terms used in the BDQ standard include acronyms and these terms 
 | TG3         | [Biodiversity Data Quality Interest Group - Task Group 3: Data Quality Use Cases](https://github.com/tdwg/bdq/tree/master/tg3) |
 | TG4         | [Biodiversity Data Quality Interest Group - Task Group 4: Best Practices for Development of Vocabularies of Values](https://github.com/tdwg/bdq/tree/master/tg4) |
 
-### 6.2 Term-Actions
+### 6.2 Evaluations in Test Labels (non-normative)
 
-A Test label reflects its Test type, the `bdqffdq:InformationElement` the Test acts upon, and the nature of the evaluation that is being done. The Test type is one of `Validation`, `Issue`, `Measure` or `Amendment`. The term-action is the combination of the `bdqffdq:InformationElement` and the nature of the evaluation. For example, the Test with the label "VALIDATION_COUNTRYCODE_STANDARD" has the type `Validation`, the `bdqffdq:InformationElement` `dwc:countryCode` and the nature of the evaluation "STANDARD". Following is a table of distinct values for the nature of the evaluation part of the term-action, along with a definition and a usage comment with examples.
+A Test label in BDQ follows a convention that reflects the Test type, the `bdqffdq:InformationElement` the Test acts upon, and the nature of the evaluation that is being done. The Test type is one of `Validation`, `Issue`, `Measure` or `Amendment` (the Test types in bdqffdq:).  The combination of `Information Element` and evaluation nature is called the Term-Action.  The Term part is a word for the`Information Elements` that are the subject of the Test, and the nature of the evaluation is, but convention, a term from the table below that describes the nature of the evaluation being done in the Test.  By covention, these elements are placed in upper case and separated by underscores in the Test label.  For example, the Test with the label "VALIDATION_COUNTRYCODE_STANDARD" has the type `Validation`, the `bdqffdq:InformationElement` `dwc:countryCode` and the nature of the evaluation "STANDARD". Following is a table of distinct values for the nature of the evaluation part of the Term-Action, along with a definition and a usage comment with examples.  This represents a convention, and Evaluations are not a formal controlled vocabulary with a namespace (unlike the terms in bdq: and the other supporting vocablularies in BDQ).
 
 | Label | Comment | Example |
 | ----- | ------- | ------- |

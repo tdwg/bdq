@@ -54,7 +54,7 @@ Draft Standard for Review
   - [1.7 Referring to Terms (normative)](#17-referring-to-terms-normative)
 
 [2 A Brief Context for the BDQ Tests (non-normative)](#2-a-brief-context-for-the-bdq-tests-non-normative)
-  - [2.1 What is meant by "Test"? (non-normative)](#21-what-is-meant-by-test?-non-normative)
+  - [2.1 What is meant by "Test"? (non-normative)](#21-what-is-meant-by-test-non-normative)
   - [2.2 Test Types (non-normative)](#22-test-types-non-normative)
     - [2.2.1 Validation Tests (normative)](#221-validation-tests-normative)
     - [2.2.2 Issue Tests (normative)](#222-issue-tests-normative)

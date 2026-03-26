@@ -2089,7 +2089,7 @@ bdq:sourceAuthority
 
 #### Default Parameter Values
 
-bdq:sourceAuthority default = "Regex present/absent" {["^(present\
+bdq:sourceAuthority default = "Regex present/absent" {["^(present|absent)$"]}
 
 #### Examples
 
@@ -4278,7 +4278,7 @@ bdq:sourceAuthority
 
 #### Default Parameter Values
 
-bdq:sourceAuthority default = "Regex present/absent" {["^(present\
+bdq:sourceAuthority default = "Regex present/absent" {["^(present|absent)$"]}
 
 #### Examples
 
