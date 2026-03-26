@@ -4052,8 +4052,8 @@
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Specification"/>
 	<skos:example>dwc:occurrenceStatus="1": Response.status=AMENDED, Response.result=dwc:occurrenceStatus="present", Response.comment="Input field contains an interpretable value. "</skos:example>
 	<skos:example>dwc:occurrenceStatus="X": Response.status=NOT_AMENDED, Response.result=, Response.comment="Input field contains uninterpretable value "X"</skos:example>
-	<hasAuthoritiesDefaults xmlns="https://rs.tdwg.org/bdqffdq/terms/">bdq:sourceAuthority default = "Regex present/absent" {["^(present\</hasAuthoritiesDefaults>
-	<rdfs:comment>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:ocurrenceStatus is bdq:Empty; AMENDED the value of dwc:occurrenceStatus if it can be unambiguously interpreted as a value in the bdq:sourceAuthority; otherwise NOT_AMENDED bdq:sourceAuthority default = "Regex present/absent" {["^(present\</rdfs:comment>
+	<hasAuthoritiesDefaults xmlns="https://rs.tdwg.org/bdqffdq/terms/">bdq:sourceAuthority default = "Regex present/absent" {["^(present|absent)$"]}</hasAuthoritiesDefaults>
+	<rdfs:comment>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:ocurrenceStatus is bdq:Empty; AMENDED the value of dwc:occurrenceStatus if it can be unambiguously interpreted as a value in the bdq:sourceAuthority; otherwise NOT_AMENDED bdq:sourceAuthority default = "Regex present/absent" {["^(present|absent)$"]}</rdfs:comment>
 	<hasExpectedResponse xmlns="https://rs.tdwg.org/bdqffdq/terms/">EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:ocurrenceStatus is bdq:Empty; AMENDED the value of dwc:occurrenceStatus if it can be unambiguously interpreted as a value in the bdq:sourceAuthority; otherwise NOT_AMENDED</hasExpectedResponse>
 	<rdfs:label>Specification for: AMENDMENT_OCCURRENCESTATUS_STANDARDIZED</rdfs:label>
 </rdf:Description>
@@ -4103,8 +4103,8 @@
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Specification"/>
 	<skos:example>dwc:occurrenceStatus="present": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:occurrenceStatus matches a term in the bdq:sourceAuthority"</skos:example>
 	<skos:example>dwc:occurrenceStatus="presence": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:occurrenceStatus does not match a term in the bdq:sourceAuthority"</skos:example>
-	<hasAuthoritiesDefaults xmlns="https://rs.tdwg.org/bdqffdq/terms/">bdq:sourceAuthority default = "Regex present/absent" {["^(present\</hasAuthoritiesDefaults>
-	<rdfs:comment>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdq:Empty; COMPLIANT if the value of dwc:occurrenceStatus is resolved in the bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority default = "Regex present/absent" {["^(present\</rdfs:comment>
+	<hasAuthoritiesDefaults xmlns="https://rs.tdwg.org/bdqffdq/terms/">bdq:sourceAuthority default = "Regex present/absent" {["^(present|absent)$"]}</hasAuthoritiesDefaults>
+	<rdfs:comment>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdq:Empty; COMPLIANT if the value of dwc:occurrenceStatus is resolved in the bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority default = "Regex present/absent" {["^(present|absent)$"]}</rdfs:comment>
 	<hasExpectedResponse xmlns="https://rs.tdwg.org/bdqffdq/terms/">EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdq:Empty; COMPLIANT if the value of dwc:occurrenceStatus is resolved in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</hasExpectedResponse>
 	<rdfs:label>Specification for: VALIDATION_OCCURRENCESTATUS_STANDARD</rdfs:label>
 </rdf:Description>

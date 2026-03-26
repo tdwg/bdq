@@ -12375,12 +12375,12 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults": [
             {
-                "@value": "bdq:sourceAuthority default = \"Regex present/absent\" {[\"^(present\\"
+                "@value": "bdq:sourceAuthority default = \"Regex present/absent\" {[\"^(present|absent)$\"]}"
             }
         ],
         "http://www.w3.org/2000/01/rdf-schema#comment": [
             {
-                "@value": "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:ocurrenceStatus is bdq:Empty; AMENDED the value of dwc:occurrenceStatus if it can be unambiguously interpreted as a value in the bdq:sourceAuthority; otherwise NOT_AMENDED bdq:sourceAuthority default = \"Regex present/absent\" {[\"^(present\\"
+                "@value": "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:ocurrenceStatus is bdq:Empty; AMENDED the value of dwc:occurrenceStatus if it can be unambiguously interpreted as a value in the bdq:sourceAuthority; otherwise NOT_AMENDED bdq:sourceAuthority default = \"Regex present/absent\" {[\"^(present|absent)$\"]}"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse": [
@@ -12544,12 +12544,12 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults": [
             {
-                "@value": "bdq:sourceAuthority default = \"Regex present/absent\" {[\"^(present\\"
+                "@value": "bdq:sourceAuthority default = \"Regex present/absent\" {[\"^(present|absent)$\"]}"
             }
         ],
         "http://www.w3.org/2000/01/rdf-schema#comment": [
             {
-                "@value": "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdq:Empty; COMPLIANT if the value of dwc:occurrenceStatus is resolved in the bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority default = \"Regex present/absent\" {[\"^(present\\"
+                "@value": "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdq:Empty; COMPLIANT if the value of dwc:occurrenceStatus is resolved in the bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority default = \"Regex present/absent\" {[\"^(present|absent)$\"]}"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse": [
