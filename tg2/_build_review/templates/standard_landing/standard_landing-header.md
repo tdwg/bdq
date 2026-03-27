@@ -193,7 +193,7 @@ The non-normative Supplemental Information includes the rationale for, the histo
 
 - [**BDQ Supplemental Information**](docs/supplement/index.md)
 
-#### 2.5.1 Tutorial (non-normative)
+#### 2.5.2 Tutorial (non-normative)
 
 The non-normative Tutorial provides a worked through example of the thought process in defining a 'Use Case' and a Test that supports the `Use Case`.
 

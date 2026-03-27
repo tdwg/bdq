@@ -67,7 +67,7 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
     - [2.4.2 Supporting Vocabularies (non-normative)](#242-supporting-vocabularies-non-normative)
   - [2.5 Additional Documents (non-normative)](#25-additional-documents-non-normative)
     - [2.5.1 Supplemental Information (non-normative)](#251-supplemental-information-non-normative)
-    - [2.5.1 Tutorial (non-normative)](#251-tutorial-non-normative)
+    - [2.5.2 Tutorial (non-normative)](#252-tutorial-non-normative)
   - [2.6 Distribution Files (non-normative)](#26-distribution-files-non-normative)
     - [2.6.1 Tests (non-normative)](#261-tests-non-normative)
     - [2.6.2 Test Validation Data (non-normative)](#262-test-validation-data-non-normative)
@@ -246,7 +246,7 @@ The non-normative Supplemental Information includes the rationale for, the histo
 
 - [**BDQ Supplemental Information**](docs/supplement/index.md)
 
-#### 2.5.1 Tutorial (non-normative)
+#### 2.5.2 Tutorial (non-normative)
 
 The non-normative Tutorial provides a worked through example of the thought process in defining a 'Use Case' and a Test that supports the `Use Case`.
 
