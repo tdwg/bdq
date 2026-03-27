@@ -115,11 +115,12 @@ Draft Standard for Review
     - [6.4.7 Implementing a Test in a Specific Environment (non-normative)](#647-implementing-a-test-in-a-specific-environment-non-normative)
 
 [6.5 Common Pattern for Implementing a Test (non-normative)](#65-common-pattern-for-implementing-a-test-non-normative)
+  - [6.5.1 Responsibilities of a Test (non-normative)](#651-responsibilities-of-a-test-non-normative)
   - [6.5.1 Checklist for a Validation test (non-normative)](#651-checklist-for-a-validation-test-non-normative)
   - [6.5.2 Checklist for Implementing an Amendment Test (non-normative)](#652-checklist-for-implementing-an-amendment-test-non-normative)
 
-[6.6 What a `Test` Execution Framework Must Do (non-normative)](#66-what-a-test-execution-framework-must-do-non-normative)
-  - [6.6.1 General responsibilities of a framework (non-normative)](#661-general-responsibilities-of-a-framework-non-normative)
+[6.6 Responsibilities of a Test Execution Framework (non-normative)](#66-responsibilities-of-a-test-execution-framework-non-normative)
+  - [6.6.1 Linking raw input terms, Tests, and outputs in a workflow (non-normative)](#661-linking-raw-input-terms-tests-and-outputs-in-a-workflow-non-normative)
 
 [7 Presentation of Results (normative)](#7-presentation-of-results-normative)
   - [7.1 Data Quality Reports (normative)](#71-data-quality-reports-normative)
@@ -1028,11 +1029,16 @@ Implementations should carefully consider the assumptions inherent in the enviro
 
 This section provides language- and framework-agnostic checklists that implementers can use to write (or review) implementations of BDQ `Validation` and `Amendment` Tests. It summarizes common conventions used in existing implementations, while remaining independent of any particular execution environment.
 
+
+### 6.5.1 Responsibilities of a Test (non-normative)
+
 BDQ keeps Tests portable by standardizing semantics (inputs, decision rules, outputs).  It deliberately leaves execution mechanics (binding to input data, orchestration of test execution, presentation of test output) to whatever framework fits the implementer's environment.  
 
 The definition of a test focuses on (1) the inputs (`Information Elements` `Acted Upon` and `Consulted`, and any `Parameters`), then (2) the logic or decision rules of the expected response, with (3) all tests returning a similarly structured Response consisting of a `Response.status`, `Response.result`, and `Response.comment`. 
 
-The description of a test, in essence, frames an API with `Information Element` and `Parameter` inputs, and a standard Response output, encapsulating the logic and decision rules of the expected response. The checklists below are designed to help implementers ensure that their implementations of Tests are consistent with the semantics of the Test as defined in the BDQ standard, and that they produce the expected structured outputs.
+The description of a test, in essence, frames an API with `Information Element` and `Parameter` inputs, and a standard Response output, encapsulating the logic and decision rules of the expected response. The responsibility of a Test implementation lies in correctly implementing the logic and decision rules of the expected response, and in producing the expected structured output.  The responsibility of an execution framework lies in correctly binding input data to the `Information Elements` and `Parameters` of a Test implementation, and in correctly presenting the structured output from a Test implementation.
+
+The checklists below are designed to help implementers ensure that their implementations of Tests follow this separation of concerns, are consistent with the semantics of the Test as defined in the BDQ standard, and that they produce the expected structured outputs.
 
 ### 6.5.1 Checklist for a Validation test (non-normative)
 
@@ -1132,14 +1138,14 @@ The description of a test, in essence, frames an API with `Information Element` 
   - The application of a Response.result from an `Amendment` Test is a separate concern from the generation of that proposal, and external to the Test API. Implementations should keep these concerns separate.
   - Implementations may support pipelines that apply proposals downstream for Quality Assurance use cases, but must preserve the ability to retain the original (unamended) values and to report both pre- and post-amendment results (see Section 6.4.1 “Phases: Pre-Amendment, Amendment, Post-Amendment (normative)”).
 
-## 6.6 What a `Test` Execution Framework Must Do (non-normative)
+## 6.6 Responsibilities of a Test Execution Framework (non-normative)
 
 BDQ `Test` descriptions are intentionally independent of any particular software framework, data storage system, serialization, or workflow environment. This separation of concerns supports portability:
 
 * The `Test` descriptor defines **what** must be evaluated (via the `Specification`, `Information Elements`, and any `Parameters`) and **what** must be reported (via `Response.status`, `Response.result`, and `Response.comment`).  The logic or decision rules of the `Test` are internal to the Test
-* An execution framework defines **how** to obtain the required values from raw data, **how** to invoke the corresponding `Implementation`, and **how** to package results into `Data Quality Reports`.
+* An execution framework defines **how** to obtain the required values from raw data, **how** to invoke the corresponding `Implementation`, and **how** to package results into `Data Quality Reports` or for other downstream processes.
 
-### 6.6.1 General responsibilities of a framework (non-normative)
+### 6.6.1 Linking raw input terms, Tests, and outputs in a workflow (non-normative)
 
 A `Test` execution framework (or “runner”) typically needs to accomplish the following steps between raw input data, a Test `Implementation`, and handling output from a Test:
 

@@ -671,6 +671,19 @@ But we might or might not want to allow for http:// as well as https:// and allo
 
 * **Notes** The expected format of an ORCID ID is ^https://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$, but we allow for protocol variants of http:// as well as https:// in the identifier and relax to the regex ^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$.  We expect the ORCID ID to be in resolvable form, not the bare identifier.  ORCID IDs are a subset of ISNI in the range 0000-0001-5000-0007 to 0000-0003-5000-0001, but this test only evaluates the format, not the range.  The form ORCID:0000-0001-5000-0007 should be treated as NOT_COMPLIANT by this test.
 
+#### 6.8.1 Example Complex Implementation Notes
+
+Notes are present when some aspects of a test may not be obvious to the casual user or implementer. In some cases, no notes should be required, but notes can be very helpful as in the example of the BDQ Test [VALIDATION_COUNTRYCODE_STANDARD](../list/bdqtest/index.md#bdqtest_0493bcfb-652e-4d17-815b-b0cce0742fbe):
+
+> “Locations outside of a jurisdiction covered by a country code may
+> have a value in the field dwc:countryCode, the ISO user defined codes
+> include XZ used by the UN for installations on the high seas and
+> suitable for a marker for the high seas. Also available in the ISO
+> user defined codes is ZZ, used by GBIF to mark unknown countries. This
+> test should accept both XZ and ZZ as COMPLIANT country codes. This
+> test must return NOT_COMPLIANT if there is leading or trailing
+> whitespace or there are leading or trailing non-printing characters.”
+
 ### 6.9 List the properties of the Test (non-normative)
 
 * **Label** VALIDATION_WASATTRIBUTEDTO_STANDARD
@@ -711,56 +724,136 @@ A BDQ Test implementation has a consistent scope and API shape across languages:
 * Logic (decision rules): evaluate the clauses in the Specification (hasExpectedResponse) in order, returning the first matching outcome (handling EXTERNAL_PREREQUISITES_NOT_MET via exception/error handling where appropriate).
 Output: exactly one structured Response per run, always providing Response.status + Response.comment, and providing Response.result only when Response.status indicates a result (typically RUN_HAS_RESULT).
 
-BDQ keeps Tests portable by standardizing semantics (inputs, decision rules, outputs), but it leaves execution mechanics (binding to input data, orchestration of test execution) to whatever framework fits the implementer’s environment.  This means that the behavior of the implementation of an individual test should be tested in isolation, presenting the test with known inputs, and confirming that the test produces the expected outputs based on the logic of the decision rules in the specification.  This means that test validation is expected to be performed on the level of individual test implementations.
+BDQ keeps Tests portable by standardizing semantics (inputs, decision rules, outputs), but it leaves execution mechanics (binding to input data, orchestration of test execution) to whatever framework fits the implementer's environment.  This means that the behavior of the implementation of an individual test should be tested in isolation, presenting the test with known inputs, and confirming that the test produces the expected outputs based on the logic of the decision rules in the specification.  This means that test validation is expected to be performed on the level of individual test implementations.
 
 
 ### 7.2 Unit Tests (non-normative)
 
 When implementing a Test, implementors are encouraged to use a test driven development approach, where they first create unit tests for a Test implementation covering each expected path in the specification, as well as edge cases, and then implement the Test internals to pass those unit tests.  This helps ensures that the Test is implemented correctly and that it responds correctly to a variety of test cases, including edge cases.
 
+Unit tests, however, are integral parts of the code base for a test implementation, and thus do not provide a basis for confirming that different test implementations in different languages behave in the same ways when presented with identical inputs.
+
 ### 7.3 Test Validation Data and Edge Cases (non-normative)
 
-**TODO: Check Lee's Text**
+The documentation of a test should include validation data, providing inputs for a test, and for each input, providing the expected outputs for that test for those inputs.  Such a validation data set can be used to validate that any implementation of the test is responding as expected. 
 
-The only way to validate a test is to implement it and then throw
-sufficient examples of data at that test to confirm that it responds
-correctly. Always start with the two examples as noted above, then add
-any additional data to ensure comprehensive coverage.
+An implementation of a test then needs to be connected to a test validation harness that can read the example data for each test, present the test with the specified inputs, and confirm that the outputs from the test match the expected outputs for those inputs.  This is a critical step in confirming that a test implementation is correct and behaves as expected, and it is also a critical step in confirming that different implementations of the same test in different languages behave in the same way when presented with identical inputs.  It would also be possible to frame test validation data that has the same structure as the expected inputs for a `Use Case`, but such data are much harder to produce in a way that tests individual decision paths within individual tests in isolation, and thus it is more difficult to use such data to confirm that individual tests are behaving as expected.  If such integration test data include synthetic values, they should be marked so as to be clearly distinguishable from actual data. 
 
-**Purpose**: Ensure that a test can be correctly implemented
+See also: [Guide to Marking and Identifying Synthetic and Modified Data](../guide/synthetic/index.md)
+
+#### 7.3.1 Example Test Validation Data (non-normative)
+
+The test validation data set that accompanies the BDQ implementer's guide includes these (and other) rows for VALIDATION_COUNTRYCODE_STANDARD, which is a test that evaluates whether the value in dwc:countryCode is a valid ISO 3166-1-alpha-2 country code.  
+
+| Label | dwc:countryCode | Response.status | Response.result | Response.comment | Term Name |
+| --- | --- | --- | --- | --- | --- |
+| VALIDATION_COUNTRYCODE_STANDARD |  | INTERNAL_PREREQUISITES_NOT_MET |  | dwc:countryCode is bdq:Empty | 0493bcfb-652e-4d17-815b-b0cce0742fbe |
+| VALIDATION_COUNTRYCODE_STANDARD | GL | RUN_HAS_RESULT | COMPLIANT | dwc:countryCode is a valid ISO (ISO 3166-1-alpha-2 country codes) value | 0493bcfb-652e-4d17-815b-b0cce0742fbe |
+| VALIDATION_COUNTRYCODE_STANDARD | GRL | RUN_HAS_RESULT | NOT_COMPLIANT | dwc:countryCode is not a valid ISO (ISO 3166-1-alpha-2 country codes) value | 0493bcfb-652e-4d17-815b-b0cce0742fbe |
+| VALIDATION_COUNTRYCODE_STANDARD | XZ | RUN_HAS_RESULT | COMPLIANT | dwc:countryCode is a valid code for high seas taken from UN/Locode | 0493bcfb-652e-4d17-815b-b0cce0742fbe |
+| VALIDATION_COUNTRYCODE_STANDARD | Austria | RUN_HAS_RESULT | NOT_COMPLIANT | dwc:countryCode is not a valid ISO (ISO 3166-1-alpha-2 country codes) value  | 0493bcfb-652e-4d17-815b-b0cce0742fbe |
+| VALIDATION_COUNTRYCODE_STANDARD | ZZ | RUN_HAS_RESULT | COMPLIANT | dwc countryCode is a user- defined ISO 2-letter country code | 0493bcfb-652e-4d17-815b-b0cce0742fbe |
+
+This includes the human readable (Label) and machine readable identifiers (Term Name) for the Test, the input value for the Information Element being evaluated (dwc:countryCode), and the expected outputs for the test for that input value (Response.status, Response.result, Response.comment).  This validation data includes edge cases such as an empty value for dwc:countryCode, a valid ISO 3166-1-alpha-2 country code, an invalid ISO 3166-1-alpha-2 country code, a valid code for high seas taken from UN/Locode, and the user-defined ISO 2-letter country code ZZ.
+
+See also: 
+[VALIDATION_COUNTRYCODE_STANDARD](../list/bdqtest/index.md#bdqtest_0493bcfb-652e-4d17-815b-b0cce0742fbe) in the bdqtest: term-list document.
+[High Seas](../supplement/index.md#394-high-seas-non-normative) in the Supplement.
+
+#### 7.3.2 Validation data for our proposed VALIDATION_WASATTRIBUTEDTO_STANDARD Test (non-normative)
+
+A possible set of test validation data for our proposed `VALIDATION_WASATTRIBUTEDTO_STANDARD` Test are: 
+
+| Label | prov:wasAttributedTo | Response.status | Response.result | Response.comment |
+| --- | --- | --- | --- | --- |
+| VALIDATION_WASATTRIBUTEDTO_STANDARD |  | INTERNAL_PREREQUISITES_NOT_MET |  | prov:wasAttributedTo is bdq:Empty |
+| VALIDATION_WASATTRIBUTEDTO_STANDARD | `   ` | INTERNAL_PREREQUISITES_NOT_MET |  | prov:wasAttributedTo is bdq:Empty (whitespace only) |
+| VALIDATION_WASATTRIBUTEDTO_STANDARD | https://orcid.org/0000-0001-5000-0007 | RUN_HAS_RESULT | COMPLIANT | prov:wasAttributedTo matches expected resolvable ORCID ID format (^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$) |
+| VALIDATION_WASATTRIBUTEDTO_STANDARD | http://orcid.org/0000-0001-5000-0007 | RUN_HAS_RESULT | COMPLIANT | prov:wasAttributedTo matches expected resolvable ORCID ID format allowing http:// as well as https:// |
+| VALIDATION_WASATTRIBUTEDTO_STANDARD | https://orcid.org/0000-0002-1825-0097 | RUN_HAS_RESULT | COMPLIANT | prov:wasAttributedTo matches expected resolvable ORCID ID format (format only; range not evaluated) |
+| VALIDATION_WASATTRIBUTEDTO_STANDARD | ORCID:0000-0001-5000-0007 | RUN_HAS_RESULT | NOT_COMPLIANT | prov:wasAttributedTo is not in resolvable URL form (expected http(s)://orcid.org/...) |
+| VALIDATION_WASATTRIBUTEDTO_STANDARD | 0000-0001-5000-0007 | RUN_HAS_RESULT | NOT_COMPLIANT | prov:wasAttributedTo is not in resolvable URL form (bare identifier not allowed) |
+| VALIDATION_WASATTRIBUTEDTO_STANDARD | https://orcid.org/0000-0001-5000-0007/ | RUN_HAS_RESULT | NOT_COMPLIANT | prov:wasAttributedTo does not match expected format (trailing slash not allowed by regex) |
+| VALIDATION_WASATTRIBUTEDTO_STANDARD | https://orcid.org/0000-0001-5000-0007?foo=bar | RUN_HAS_RESULT | NOT_COMPLIANT | prov:wasAttributedTo does not match expected format (query string not allowed by regex) |
+| VALIDATION_WASATTRIBUTEDTO_STANDARD | https://orcid.org/0000-0001-5000-00070 | RUN_HAS_RESULT | NOT_COMPLIANT | prov:wasAttributedTo does not match expected format (extra digit at end) |
+| VALIDATION_WASATTRIBUTEDTO_STANDARD | https://orcid.org/0000-0001-5000-000X | RUN_HAS_RESULT | NOT_COMPLIANT | prov:wasAttributedTo does not match expected format (final group must be 3 digits plus [0-9X]) |
+| VALIDATION_WASATTRIBUTEDTO_STANDARD | https://orcid.org/0000-0001-5000-0007X | RUN_HAS_RESULT | NOT_COMPLIANT | prov:wasAttributedTo does not match expected format (unexpected extra character) |
+| VALIDATION_WASATTRIBUTEDTO_STANDARD | https://orcid.org/0000-0001-5000-0007  | RUN_HAS_RESULT | NOT_COMPLIANT | prov:wasAttributedTo does not match expected format (trailing whitespace not allowed) |
+| VALIDATION_WASATTRIBUTEDTO_STANDARD |  https://orcid.org/0000-0001-5000-0007 | RUN_HAS_RESULT | NOT_COMPLIANT | prov:wasAttributedTo does not match expected format (leading whitespace not allowed) |
+| VALIDATION_WASATTRIBUTEDTO_STANDARD | HTTPS://orcid.org/0000-0001-5000-0007 | RUN_HAS_RESULT | NOT_COMPLIANT | prov:wasAttributedTo does not match expected format (scheme is case-sensitive in this regex) |
+| VALIDATION_WASATTRIBUTEDTO_STANDARD | https://ORCID.org/0000-0001-5000-0007 | RUN_HAS_RESULT | NOT_COMPLIANT | prov:wasAttributedTo does not match expected format (host is case-sensitive in this regex) |
+| VALIDATION_WASATTRIBUTEDTO_STANDARD | https://orcid.org/0000-0001-5000-0007#fragment | RUN_HAS_RESULT | NOT_COMPLIANT | prov:wasAttributedTo does not match expected format (fragment not allowed by regex) |
+| VALIDATION_WASATTRIBUTEDTO_STANDARD | https://orcid.org/0000-0001-5000-000 | RUN_HAS_RESULT | NOT_COMPLIANT | prov:wasAttributedTo does not match expected format (too short) |
+| VALIDATION_WASATTRIBUTEDTO_STANDARD | https://example.org/0000-0001-5000-0007 | RUN_HAS_RESULT | NOT_COMPLIANT | prov:wasAttributedTo does not match expected format (wrong domain; expected orcid.org) |
+
+Some of these test cases are "edge cases" that might not be immediately obvious to an implementer, such as the case where the value in prov:wasAttributedTo is whitespace only, or the case where there is a trailing slash at the end of the ORCID ID, or the case where there is a query string at the end of the ORCID ID, or the case where there is an extra digit at the end of the ORCID ID, or the case where there is an unexpected extra character at the end of the ORCID ID, or the case where there is leading or trailing whitespace around the ORCID ID, or the case where there is a fragment at the end of the ORCID ID.  These edge cases are important to include in the test validation data set because they help ensure that an implementation of this test will correctly handle these cases and not produce false positives or false negatives.
+
+Some of these tests also highlight hidden assumptions in our test specification, in particular, the assumption that the scheme in the ORCID ID is case-sensitive and the assumption that the host in the ORCID ID is case-sensitive.  By including these edge cases in our test validation data set, we can confirm that our test specification is clear about these assumptions and that implementations of this test will correctly handle these cases.
+
+Since the scheme (https) and host (orcid.org) in the ORCID ID are technically case-insensitive according to the URI specification, but our regex pattern is case-sensitive, we need to be clear in our test specification and in our test validation data that we are expecting the scheme and host to be in lowercase, and that if they are not, then the test should return NOT_COMPLIANT.  The case insensitivity scheme and host in the URI specification may well also mean that we want to revisit our regex pattern to allow for case-insensitivity in the scheme and host.  This is an example of a "pitfall for the naive" when defining a test.
+
+So, we might want to change our default source authority to relax the regex pattern to allow for case-insensitivity in the scheme and host, and thus we might want to change our default source authority:
+* From: **hasAuthoritiesDefaults** bdq:sourceAuthority default = "Resolvable ORCID ID regex" `{[^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$]}`
+* To: **hasAuthoritiesDefaults** bdq:sourceAuthority default = "Resolvable ORCID ID regex" `{[^(?i:http(s){0,1}://orcid\.org/)\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$]}`
+And then change the validation data accordingly to reflect this change in the expected format for a compliant ORCID ID (so that the "HTTPS://orcid.org" and "https://ORCID.org" would be COMPLIANT).
+
+Note, that when evaluating whether a Test implementation responds as expected to a given input, the Response.status and Response.result must be exact matches, but the Response.comment only needs to be bdq:NotEmpty.  The Response.comment in the test validation data provides a general guide to implementers for what the comment could say for a given input, but more importantly provides documentation and explanation for that particular validation case.
+
+#### 7.3.3 Enumerating Test Validation Data (non-normative)
+
+**Purpose**: Ensure that a Test can be correctly implemented, and that the Test specification is clear, unambiguous, and has logic that handles real world data and edge cases.
+
+The only way to validate a test is to implement it and then throw sufficient examples of data at that test to confirm that it responds as expected, and that the Test specification is a good fit to real world data.
+
+To frame a Test validation data set, start with the `Expected Response`, split that into separate clauses, and add a test case for each clause, then examine the Test notes for any discussion of special cases, look a the distribution of real values of data in the wild and add additional data to ensure comprehensive coverage of the Test decision path under both likely to be encountered data and edge cases.
 
 **Validation Process**:
-
--   Create comprehensive test data covering all scenarios
-
--   Include edge cases and boundary conditions
-
--   Test with different data encodings and formats
-
--   Validate against expected responses
+* Create comprehensive test data covering all decision paths in the Expected Response
+* Include edge cases and boundary conditions
+* Test with different data encodings and formats
+* Validate against expected responses
+* Include both "pass" and "fail" cases.
+* Optionally include cases for non-default parameter values if the test has parameters.
 
 **Test Data Categories**:
+* Valid compliant data
+* Valid non-compliant data
+* Missing/empty data (nulls, whitespace only data, empty strings, etc)
+* Malformed data
+* Edge cases (leading or trailing whitespace on data, very large numbers, very small numbers, zero, etc)
 
--   Valid compliant data
+**Minimal Starting point** One validation case for each clause in the `Expected Response`.
 
--   Valid non-compliant data
+The **Expected Response** "INTERNAL_PREREQUISITES_NOT_MET if prov:wasAttributedTo is bdq:Empty; COMPLIANT if the value in prov:wasAttributedTo conforms to the expected format of bdq:sourceAuthority; otherwise NOT_COMPLIANT." can be read as the following three clauses:
+* INTERNAL_PREREQUISITES_NOT_MET if prov:wasAttributedTo is bdq:Empty; 
+* COMPLIANT if the value in prov:wasAttributedTo conforms to the expected format of "^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$"
+* otherwise NOT_COMPLIANT.
 
--   Missing/empty data
+* INTERNAL_PREREQUISITES_NOT_MET if prov:wasAttributedTo is bdq:Empty; 
+  * Test Label: VALIDATION_WASATTRIBUTEDTO_STANDARD
+  * prov:wasAttributedTo: 
+  * Response.status: INTERNAL_PREREQUISITES_NOT_MET
+  * Response.result:  
+  * Response.comment: prov:wasAttributedTo is bdq:Empty, so its format cannot be evaluated.
 
--   Malformed data
+* COMPLIANT if the value in prov:wasAttributedTo conforms to the expected format of "^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$"
+  * Test Label: VALIDATION_WASATTRIBUTEDTO_STANDARD
+  * prov:wasAttributedTo: https://orcid.org/0000-0001-5000-0007 
+  * Response.status: RUN_HAS_RESULT
+  * Response.result: COMPLIANT 
+  * Response.comment: prov:wasAttributedTo matches expected resolvable ORCID ID format (^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$)
 
--   Edge cases (nulls, whitespace, non-printing characters)
+* otherwise NOT_COMPLIANT.
+  * Test Label: VALIDATION_WASATTRIBUTEDTO_STANDARD 
+  * prov:wasAttributedTo: https://orcid.org/0000-0001-5000-0007/ 
+  * Response.status: RUN_HAS_RESULT
+  * Response.result: NOT_COMPLIANT
+  * Response.comment: prov:wasAttributedTo does not match expected format (trailing slash not allowed) 
 
-**Our Test:** Provide a "pass" and "fail" example to aid developer
-understanding.
+**Critical Thinking:** Both those defining a test and implementers must consider "pitfalls for the naive", and the domain experts defining a test are likely to percieve a different set of pitfalls from developers implementing a test.  Multiple iterations and a conversation mediated by test validation data is necessary for developing a robust test description.
 
--   **Compliant Example:** A valid polygon string.
-
--   **Non-Compliant Example:** An empty string ("").
-
--   **Critical Thinking:** Implementers must also consider "pitfalls for
-    the naive," such as leading/trailing whitespace or non-printing
-    characters, which should typically fail validation.
+See also: 
+* [Validation Test Implementations](../guide/implementers/index.md#8-validating-test-implementations-normative) in the BDQ Implementer's Guide.
 
 ### 7.4 Execution Frameworks (non-normative)
 
@@ -831,13 +924,15 @@ In short: BDQ keeps Tests portable by standardizing semantics (inputs, decision 
 
 So, for our `Use Case` **Validated Distribution Authority** we have identified a set of specific tests to evaluate whether some data set is fit for the purpose of being used as a "validated distribution authority" for biodiversity science.  
 
-Implicit in our `Use Case`, and we will want to spell this out explicitly, is that we want to use the results of these tests to find and fix errors in a data set, thus improving the quality of the data set for this purpose.  
-
 The Fitness for Use Framework enables Tests to be used for either `Quality Control` (finding and fixing errors), or `Quality Assurance` (filtering a data set down to a subset of records that are fit for some purpose).
+
+Implicit in our `Use Case`, and we will want to spell this out explicitly (again, iterate), is that we want to use the results of these tests to find and fix errors in a data set, thus improving the quality of the data set for this purpose, that is, our `Use Case` is focused on `Quality Control`.  
 
 The mechanism that the Fitness for Use Framework uses for both of these is `MultiRecord` `Measures`, which are measures that take the results of multiple records from one or more tests, and combine those results in some way to produce a measure of the quality of the data set as a whole for some purpose.  For example, we could have a `MultiRecord Measure` that takes the results of the VALIDATION_FOOTPRINTWKT_NOTEMPTY test for all records in a data set, and counts the number of records that are COMPLIANT with that test, combining this count with the number of records in the data set gives us a measure of how many records are missing values in the dwc:footprintWKT field in that data set.  
 
-**TODO: Return to UseCase->Policy->Test, and purpose of the use case being Quality Control (we want to find and fix errrors), thus develop/explain the multi-record measures needed for that purpose.**
+In listing a set of `Validations` for our `Use Case`, we are setting a `Validation Policy` for the `Use Case`.  A `Validation Policy` is the set of `Validations` that are relevant to a particular `Use Case`.   A `Use Case` also has an 'Amendment Policy' (the set of `Amendments` that are relevant to that `Use Case`) and a 'Measurement Policy' (the set of `Measures` that are relevant to that `Use Case`), and an `Issue Policy` (the set of `Issues` that are relevant to that `Use Case`).
+
+For our **Validated Distribution Authority** `Use Case` we would likely wish to define one or more `Amendment` tests to propose changes to fix problems identified by the `Validations` that are relevant to that `Use Case`, but we won't explore these here.  Instead, we will focus on the `MultiRecord` `Measures` that we would want to use to evaluate the quality of a data set for this `Use Case`, and to track improvements in that quality as we find and fix errors in the data set.
 
 ### 9.1 MultiRecord Measures for Quality Control (non-normative)
 
@@ -856,7 +951,9 @@ Conceptually what we want to do with `MultiRecord` `Measures` is:
 1. Choose a `Use Case` (e.g., "Validated Distribution Authority"), and from the `ValidationPolicy` that relates the `Use Case' to `Validations`, the `SingleRecord` `Validation` Tests for that `Use Case`.
 2. Run the relevant `SingleRecord` `Validation` Tests over all records in the dataset.
 3. Collect the resulting Responses (`Assertions`).
-4. Run one or more `MultiRecord` `Measures` that take these `Assertions` as input to summarize.
+4. Run one or more `MultiRecord` `Measures` that take these `Assertions` as input to summarize how many quality issues exist where in the dataset.
+   * If there are only a small number of problems, we can fix them, and repeat the process to confirm that the fixes worked.
+   * If there are a large number of problems, we can use the `MultiRecord` `Measures` to prioritize which problems to fix first, that is identify where to focus effort for improving the data quality for the `Use Case`.
 5. Act upon the results of those `MultiRecord` `Measures` to prioritize and direct `Quality Control` efforts (or filter records for `Quality Assurance`).
 
 This separation on `Resource Type` (`SingleRecord` or `MultiRecord`) is important: it keeps each `SingleRecord` Test atomic and easy to implement, while providing a consistent, standards-aligned way to summarize results for dataset-level decision making.
@@ -917,43 +1014,90 @@ In other words:
 
 This pattern supports interoperability while still enabling rich `Quality Control` reporting in practical systems.
 
+## 9.2 Quality Control Workflow (non-normative)
 
-### 9.2 Quality Control Workflow
+In contrast to `Quality Assurance`, which focuses on filtering a dataset down to records that are fit for a stated purpose, `Quality Control` focuses on *understanding* why data are not fit, and on identifying tractable actions that can improve quality over time. In practice, `Quality Control` is often iterative: run a suite of Tests, interpret the resulting `Data Quality Reports`, make targeted changes (to data, mappings, or workflows), and then re-run the Tests to confirm improvement.
 
-****************************
+### 9.2.1 Start with patterns, not individual records
 
-**TODO** Rework from here on, below not integrated yet.
+For real-world datasets, the number of `NOT_COMPLIANT` results can be large. A productive first step is to summarize results in ways that reveal patterns:
+
+- **By `Test` (`Validation` / `Issue`)**: Which Tests fail most often? Which failures are most likely to affect your intended `Use Case`?
+- **By `Information Element`**: Are failures concentrated in a small set of terms (e.g., `dwc:countryCode`, `dwc:eventDate`, `dwc:scientificName`)?
+- **By source / provider / collection / pipeline stage**: Are failures clustered by dataset subset, indicating differences in upstream practices?
+- **By repeated value**: Do many failures share the same few problematic values (e.g., a common misspelling, code system mismatch, or placeholder value)?
+
+These summaries help distinguish “many unique problems” from “one recurring problem”, and they help avoid spending time reviewing records one-by-one when the underlying cause is systematic.
+
+### 9.2.2 Look for point causes and systemic errors
+
+Many apparent record-level failures have *point causes*: a single upstream issue that propagates broadly when data are transformed, denormalized, or aggregated. Examples include:
+
+- a mapping error that swaps fields or applies the wrong delimiter,
+- an export rule that adds leading/trailing whitespace,
+- a controlled vocabulary change that was not reflected in a pick-list,
+- a missing join key that causes large-scale loss of related values.
+
+A key Quality Control technique is therefore to ask: “Could these many failures be explained by a small number of causes?” Investigating this can have high leverage: fixing a single cause can remediate thousands of records (or prevent future errors at ingestion).
+
+### 9.2.3 Focus on Results
+
+`Response.status` values are useful for triage.  Look first to `RUN_HAS_RESULT` with `Response.result` = `NOT_COMPLIANT` for specific non-conformances that can be fixed.  In contrast, `INTERNAL_PREREQUISITES_NOT_MET` may be harder to interpret, they may come from some mixture of missing and uninterpretable values, and very likely (if you have designed the test suite well) are covered by `Validations` that test for empty and incorrectly formatted values.  
+
+- `RUN_HAS_RESULT` with `Response.result` = `NOT_COMPLIANT` indicates the Test ran and found a specific non-conformance. This often points to easily identifiable *fixable* issues such as:
+  - Mismatch of values with a controlled vocabulary (e.g., 3 letter country codes used where 2 letter codes are required)
+  - Formatting problems (e.g., date formats, coordinate formats)
+
+- `INTERNAL_PREREQUISITES_NOT_MET` can indicate some combination of *missing, incomplete, or uninterpretable* inputs. This may reflect:
+  - legitimate unknowns (e.g., historical records with incomplete labels),
+  - data entry constraints not enforced at capture time,
+  - schema or mapping gaps (values exist upstream but are not being exported).
+
+Treating these categories differently helps focus effort: “fill in missing values” and “standardize or correct values” are distinct work types with different feasibility and risk profiles.
+
+### 9.2.4 Prioritize work for greatest impact
+
+`Quality Control` can require substantial human effort, so prioritization matters. A practical prioritization approach is to consider:
+
+- **Impact on the target `Use Case`**: failures in core requirements (e.g., location, time, taxon) usually matter more than peripheral metadata.
+- **Fixability at scale**: problems that can be corrected via deterministic rules, controlled vocabularies, or workflow changes typically yield high return.
+- **Risk of introducing error**: changes that require interpretation or could introduce false precision should be deferred, flagged for review, or handled via `Amendment` proposals rather than automatic edits.
+- **Prevention vs remediation**: improving upstream capture/validation rules prevents future errors and is often more cost-effective than repeatedly cleaning exports.
+
+Summaries from `MultiRecord` `Measures` (counts and completeness-style outcomes) are particularly helpful here: they provide quick indicators of where quality improvement will most increase fitness for purpose, and they support tracking progress over time.
+
+### 9.2.5 Close the loop: re-run Tests to confirm improvements
+
+Quality Control actions should be followed by re-running the same Test suite (and regenerating `Data Quality Reports`) to verify that:
+
+- targeted corrections had the intended effect,
+- improvements did not create new failures elsewhere, and
+- quality has improved with respect to the selected `Use Case`.
+
+This “run → analyze patterns → fix causes → re-run” loop is the core Quality Control workflow supported by the BDQ Tests and the Fitness for Use Framework.
+
+
+## 9.3 Quality Assurance Workflow (non-normative)
+
+In contrast to `Quality Control`, which focuses on finding and fixing errors, `Quality Assurance` is about filtering a dataset down to a subset of records that are fit for some purpose.  The mechanism for this in the Fittness for Use Framework is to define a set of `MultiRecord` `Measures` that return `COMPLETE` if the dataset meets a dataset-level requirement derived from `SingleRecord` Test outcomes, and `NOT_COMPLETE` otherwise, and if `NOT_COMPLETE`, filter out records based on underlying `Validation` problems until the `Measure` returns `COMPLETE`.   When all the `MultiRecord` `Measures` of this sort for a `Use Case` (as specified by `Policy`) are 'COMPLETE`, the filtered data set is fit for use with respect to the selected `Use Case`.
 
 
 
-### 11. Implementation Notes
+## 10 Round-Up
 
-Notes are present when some aspects of a test may not be obvious to the
-casual user or implementer. In our case, no notes should be required,
-but notes can be very helpful as in the example of the BDQ Test
-[VALIDATION_COUNTRYCODE_STANDARD](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/list/bdqtest/index.md#bdqtest_0493bcfb-652e-4d17-815b-b0cce0742fbe):
+There are pitfalls in defining tests for the naive. Just make sure that the `Expected Response` doesn’t hide any edge cases. Easier said than done sometimes: 11 years work went into the BDQ standard, and we were often surprised by "emergent properties" and differing assumptions.  There are pitfalls in defining tests for the experienced.  
 
-> “Locations outside of a jurisdiction covered by a country code may
-> have a value in the field dwc:countryCode, the ISO user defined codes
-> include XZ used by the UN for installations on the high seas and
-> suitable for a marker for the high seas. Also available in the ISO
-> user defined codes is ZZ, used by GBIF to mark unknown countries. This
-> test should accept both XZ and ZZ as COMPLIANT country codes. This
-> test must return NOT_COMPLIANT if there is leading or trailing
-> whitespace or there are leading or trailing non-printing characters.”
+Critical to the process of defining a new test is to iterate.  Start with a draft definition, create one or more independent implementations, have someone who isn't writing the implementation produce validation data (including looking at values found in the wild), validate the implemenation(s) against this data, and discuss any discrepancies between the expected and actual results.  In all but the most trivial cases, it will be necessary to iterate and refine the test specifications, test implementations, and the test validation data.  This process of iteration is critical for producing a robust test specification that is clear, unambiguous, and has logic that handles real world data and edge cases. 
 
-When a test provides an AMENDMENT (a proposed fix), it **MUST NOT** be
-blindly applied to a "database of record" without human review, as
-automated changes can have unintended consequences on sensitive data.
+### 10.1 Summary of the BDQ Philosophy
 
-You can see that there are pitfalls for the naive. Just make sure that
-the \`Expected Response\` doesn’t hide any edge cases. Easier said than
-done sometimes: 11 years work went into the BDQ standard, and we were
-often surprised by 'emergent properties’
+Through these steps, the BDQ standard aims to be "comprehensive but not exhaustive". By providing clear rationale, identifying abstract `Information Elements`, and anchoring tests in community-vetted `Use Cases`, the standard creates a stable framework for biodiversity science.
 
-## Round-Up
+***********************************
 
-### 12. Documentation and Review
+**TODO** Rework from here on, below not examined or integrated yet.
+
+## 12. Documentation and Review
 
 **Purpose**: Complete test specification for community review. Community
 Review will be determined and managed by the BDQ Maintenance Group.
@@ -973,7 +1117,7 @@ Review will be determined and managed by the BDQ Maintenance Group.
 
 
 
-### 14. Framework Integration
+## 14. Framework Integration
 
 This workflow integrates with the broader BDQ framework by:
 
@@ -1004,10 +1148,3 @@ After completing this workflow:
 
 5.  Contribute results back to the TDWG community
 
-## Summary of the BDQ Philosophy
-
-Through these steps, the BDQ standard aims to be **comprehensive but not
-exhaustive**. By providing clear rationale, identifying abstract
-**Information Elements**, and anchoring tests in community-vetted **Use
-Cases**, the standard creates a stable framework for biodiversity
-science.
