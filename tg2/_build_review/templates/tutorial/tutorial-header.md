@@ -693,17 +693,32 @@ VALIDATION_WASATTRIBUTEDTO_STANDARD is a `Validation` test, that takes prov:wasA
 
 Earlier we said _"Treat this `Use Case` definition (and everything else that follows from it) as a first draft."_
 
-This is a critical point in the process, as we have now defined tests that fill gaps in our `Use Case`, and we have defined these tests in a way that is consistent with the principles of BDQ, and we have provided detailed specifications for these tests.  However, we have not yet implemented these tests, and we have not yet thrown any real data at these tests to see how they respond.  Thus, we should treat this as a first draft of the test definitions, and be prepared to iterate on these definitions based on implementation feedback and real-world data.
+This is a critical point in the process, as we have now defined tests that fill gaps in our `Use Case`, and we have defined these tests in a way that is consistent with the principles of BDQ, and we have provided detailed specifications for these tests.  However, we have not yet implemented these tests, and we have not yet thrown any real data at these tests to see how they respond.  Thus, we should treat this as a first draft of the `Use Case` and Test definitions, and be prepared to iterate on these definitions based on implementation feedback and real-world data.
 
 ## 7 Validation and Community (The "Real-World")
 
 *No test is final until it is implemented and thrown at actual data to confirm it responds correctly.*
 
-### 7.1 Unit Tests
+### 7.1 Implementation (non-normative)
+
+A Test specification may sound perfectly clear and straightforward to its writers, but it may not be clear to developers who are trying to implement the test based on the specification.  Thus, the only way to confirm that a Test specification is clear and can be implemented correctly is to actually implement the Test based on the specification, and then throw real data at that implementation to see if it responds correctly.  Expect that an initial Test specification will need revision based on questions raised in implementation and on testing the behavior of the implementation against real world data.
+
+BDQ is deliberately agnostic about programing languages and execution frameworks for Test implementations.
+
+A BDQ Test implementation has a consistent scope and API shape across languages:
+
+* Inputs: the Information Element(s) Acted Upon (and any Consulted values if needed), plus optional Parameter(s) (e.g., bdq:sourceAuthority) where implementations MUST support the default parameter string literal if the parameter is exposed.
+* Logic (decision rules): evaluate the clauses in the Specification (hasExpectedResponse) in order, returning the first matching outcome (handling EXTERNAL_PREREQUISITES_NOT_MET via exception/error handling where appropriate).
+Output: exactly one structured Response per run, always providing Response.status + Response.comment, and providing Response.result only when Response.status indicates a result (typically RUN_HAS_RESULT).
+
+BDQ keeps Tests portable by standardizing semantics (inputs, decision rules, outputs), but it leaves execution mechanics (binding to input data, orchestration of test execution) to whatever framework fits the implementer’s environment.  This means that the behavior of the implementation of an individual test should be tested in isolation, presenting the test with known inputs, and confirming that the test produces the expected outputs based on the logic of the decision rules in the specification.  This means that test validation is expected to be performed on the level of individual test implementations.
+
+
+### 7.2 Unit Tests (non-normative)
 
 When implementing a Test, implementors are encouraged to use a test driven development approach, where they first create unit tests for a Test implementation covering each expected path in the specification, as well as edge cases, and then implement the Test internals to pass those unit tests.  This helps ensures that the Test is implemented correctly and that it responds correctly to a variety of test cases, including edge cases.
 
-### 7.2 Test Validation Data and Edge Cases
+### 7.3 Test Validation Data and Edge Cases (non-normative)
 
 **TODO: Check Lee's Text**
 
@@ -747,15 +762,68 @@ understanding.
     the naive," such as leading/trailing whitespace or non-printing
     characters, which should typically fail validation.
 
+### 7.4 Execution Frameworks (non-normative)
+
+The BDQ Test specifications (the Specification text in bdqffdq:hasExpectedResponse, plus any Parameters/defaults) are framework agnostic because they define only:
+
+* What inputs are required (the `Information Elements` `Acted Upon` and `Consulted`, and any `Parameter` values),
+* What outputs must be produced (a structured Response with Response.status, Response.result, Response.comment), and
+* What decision logic must be followed (evaluate the criteria blocks in order and return the first applicable response),
+
+…but they do not constrain:
+
+* How data are stored (RDBMS, CSV, JSON, RDF, objects) or accessed.
+* How records are streamed/batched/parallelized in a workflow.
+* What programming language(s) are used.
+* How methods are discovered/invoked (reflection, registry, function pointers, workflow nodes).
+* How Responses are serialized/persisted (objects, rows, RDF bdqffdq:Assertion, annotations).
+
+#### 7.4.1 What an execution framework must do between raw data and a Test implementation (non-normative)
+
+A framework’s job is to act as the “adapter layer” that turns heterogeneous input into the canonical inputs/outputs implied by the ontology and the Test descriptors:
+
+* Select the scope / unit of execution
+  * Decide what constitutes a bdqffdq:SingleRecord (e.g., one Simple Darwin Core row; one dwc:Occurrence graph root) or a bdqffdq:MultiRecord (a dataset), and iterate accordingly.
+
+* Bind raw data to the Test API
+  * Map raw fields/properties onto the Test’s Information Elements:
+    * provide the value(s) for the Acted Upon term(s),
+    * provide any Consulted term(s),
+    * supply Parameter argument values (or omit them and let defaults apply).
+  * This is the core “plumbing” step: e.g. ensure dwc:countryCode actually lands in the method parameter that represents dwc:countryCode, etc. 
+	* This could be via annotations, configuration, naming conventions, or explicit mapping code.
+	* The FilteredPush implementations use Java Annotations for this purpose, but other frameworks could use different approaches.
+
+* Invoke the correct implementation
+  * Locate the right Implementation for a given Test (e.g., by Label, GUID/Term Name, or versioned IRI), then call it with the bound inputs.
+
+* Capture and normalize outputs into a Response
+  * Ensure every execution yields exactly one structured Response with:
+    * Response.status from the controlled vocabulary,
+    * Response.result present/absent as required by status and Test Type,
+    * a Response.comment that is bdq:NotEmpty.
+  * Optionally wrap/serialize as RDF assertions (bdqffdq:Assertion) or as W3C Annotations, as that representation choice is outside the Test itself.
+
+* Present results to users and/or downstream processes
+  * This could be as simple as logging, or as complex as a dashboard or API response.
+  * BDQ is explicitly agnostic about this presentation layer.
+
+* Manage common cross-cutting concerns
+  * caching and retry for external authorities.
+  * concurrency/parallel execution.
+  * attaching Responses back to records.
+
+In short: BDQ keeps Tests portable by standardizing semantics (inputs, decision rules, outputs), while leaving execution mechanics (binding, orchestration, serialization) to whatever framework fits the implementer’s environment.
+
 ## 8 Best Practices
 
 1. **Atomic Tests**: Make each Test evaluate one single simple aspect of data quality.
-1. **Start Simple**: Begin defining basic validation tests before considering more complex amendments.
+1. **Start Simple**: Begin defining basic validation tests before considering more complex tests and amendments.
 1. **Consider Edge Cases**: Include tests for empty values, nulls, and whitespace.
 1. **Iterate**: Refine tests based on implementation feedback and real-world data.
 1. **Use Established Authorities**: Reference widely accepted standards when possible.
-1. **Generalize Appropriate**: Consider how different parts of the community might want to use a test in slightly different ways.
-1. **Document Assumptions**: Be explicit about interpretations and defaults.
+1. **Generalize Appropriately**: Consider how different parts of the community might want to use a test in slightly different ways.
+1. **Document Assumptions**: Be explicit about why paricular choices were made in the development of a test including choices of default values.
 1. **Plan for Evolution**: Consider how tests might need to change over time.
 1. **Consider Test Interactions**: Consider how multiple tests might interact on the same data.
 
@@ -769,15 +837,86 @@ The Fitness for Use Framework enables Tests to be used for either `Quality Contr
 
 The mechanism that the Fitness for Use Framework uses for both of these is `MultiRecord` `Measures`, which are measures that take the results of multiple records from one or more tests, and combine those results in some way to produce a measure of the quality of the data set as a whole for some purpose.  For example, we could have a `MultiRecord Measure` that takes the results of the VALIDATION_FOOTPRINTWKT_NOTEMPTY test for all records in a data set, and counts the number of records that are COMPLIANT with that test, combining this count with the number of records in the data set gives us a measure of how many records are missing values in the dwc:footprintWKT field in that data set.  
 
+**TODO: Return to UseCase->Policy->Test, and purpose of the use case being Quality Control (we want to find and fix errrors), thus develop/explain the multi-record measures needed for that purpose.**
+
+### 9.1 MultiRecord Measures for Quality Control (non-normative)
+
+The Fittness For Use Framework is intended to support two different but related purposes: `Quality Control` and `Quality Assurance`.  `Quality Control` is the process of finding and fixing errors in a data set, while `Quality Assurance` is the process of filtering a data set down to a subset of records that are fit for some purpose.  Both of these processes rely on an examination of the the results of `SingleRecord` Tests, but they use those results in different ways.  The `Use Case` we have been working with in this tutorial is focused on `Quality Control` (we want to fix problems in a dataset of distributions that would itself be used to evaluate other datasets), so we will examine on how to use the results of `SingleRecord` Tests for that purpose.
+
+This tutorial has focused on defining `SingleRecord` Tests (primarily `Validations`) that evaluate one record at a time. In practice, `Quality Control` almost always requires a dataset-level view: curators, data managers, and developers need to know **how prevalent** a particular problem is, **where** it occurs, and **whether** proposed changes would measurably improve fitness for a `Use Case`.
+
+In the BDQ Fitness for Use Framework, that dataset-level view is provided by `MultiRecord` `Measures` (`bdqffdq:Measure` with resource type `bdqffdq:MultiRecord`). These `Measures` operate over the collection of Responses (i.e., `Assertions`) produced by running one or more `SingleRecord` Tests across all records in a dataset, and they return a **single summary value** in `Response.result` (either a single number, or one of `COMPLETE`/`NOT_COMPLETE`).
+
+#### 9.1.1 What a MultiRecord Measure takes as input (non-normative)
+
+A `MultiRecord` `Measure` does not typically examine raw input (e.g. Darwin Core) values directly. Instead, it uses as input the outputs of `SingleRecord` Tests — the set of Responses with their `Response.status`, `Response.result`, and `Response.comment`.   `MultiRecord` `Measures` can also be defined to take raw data as input, for example, a `MultiRecord` `Measure` could be defined to calculate the average dwc:individualCount across all records in a dataset, but we won't conider that use of `MultiRecord` `Measures` here.
+
+Conceptually what we want to do with `MultiRecord` `Measures` is:
+
+1. Choose a `Use Case` (e.g., "Validated Distribution Authority"), and from the `ValidationPolicy` that relates the `Use Case' to `Validations`, the `SingleRecord` `Validation` Tests for that `Use Case`.
+2. Run the relevant `SingleRecord` `Validation` Tests over all records in the dataset.
+3. Collect the resulting Responses (`Assertions`).
+4. Run one or more `MultiRecord` `Measures` that take these `Assertions` as input to summarize.
+5. Act upon the results of those `MultiRecord` `Measures` to prioritize and direct `Quality Control` efforts (or filter records for `Quality Assurance`).
+
+This separation on `Resource Type` (`SingleRecord` or `MultiRecord`) is important: it keeps each `SingleRecord` Test atomic and easy to implement, while providing a consistent, standards-aligned way to summarize results for dataset-level decision making.
+
+#### 9.1.2 Two common patterns of MultiRecord Measures
+
+BDQ includes (and encourages) two practical patterns of `MultiRecord` `Measures`:
+
+**(A) Counts / prevalence measures (numeric results)**  
+These return a single number, such as the count of records that are `COMPLIANT`, `NOT_COMPLIANT`, or have `INTERNAL_PREREQUISITES_NOT_MET` for a particular `SingleRecord` Test.
+
+These are particularly useful for `Quality Control` because they let you:
+
+- quantify the scale of a problem (e.g., “how many records are missing `dwc:footprintWKT`?”)
+- prioritize work (fix the highest-impact problems first)
+- track improvement over time (before/after a cleanup project, or between data releases)
+
+**(B) Completeness-as-fitness measures (`COMPLETE` / `NOT_COMPLETE`)**  
+These return `COMPLETE` if the dataset meets a dataset-level requirement derived from `SingleRecord` Test outcomes, and `NOT_COMPLETE` otherwise.
+
+While these measures are central to formal `Quality Assurance` filtering, they can also support `Quality Control` by providing a clear “done/not done” indicator for a dataset with respect to a selected `Use Case` and its included Tests.
+
+#### 9.1.3 Interpreting MultiRecord measures under Quality Control
+
+A key idea in `Quality Control` is that dataset-level metrics should be interpreted in the context of the `Use Case`:
+
+- A low count of `COMPLIANT` outcomes for a critical `Validation` indicates a major barrier to fitness for that `Use Case`.
+- A high count of `INTERNAL_PREREQUISITES_NOT_MET` often points to upstream data capture or mapping gaps (e.g., a term not supplied at all, or supplied inconsistently).
+- Changes in counts between a “pre-amendment” and “post-amendment” phase provide an estimate of how much quality could improve if proposed `Amendments` were accepted (or implemented by a curator).
+
+Because `MultiRecord` `Measures` return only a single value, they are often paired with reporting or visualization outside of the Framework (e.g., spreadsheets, dashboards, or issue lists) that link summary counts back to the specific records needing attention.
+
+#### 9.1.3.1 Constrast with Quality Assurance.
+
+In contrast, in `Quality Assurance`, the focus is on filtering records based on `SingleRecord` Test outcomes.  The mechanism for this in the Fittness for Use Framework is to define a `MultiRecord` `Measure` that returns `COMPLETE` if the dataset meets a dataset-level requirement derived from `SingleRecord` Test outcomes, and `NOT_COMPLETE` otherwise, and if `NOT_COMPLETE`, filter out records until the `Measure` returns `COMPLETE`.   When all the `MultiRecord` `Measures` of this sort for a `Use Case` (as specified by `Policy`) are 'COMPLETE`, the filtered data set is fit for use with respect to the selected `Use Case`.
+
+#### 9.1.4 A worked example (building on VALIDATION_FOOTPRINTWKT_NOTEMPTY)
+
+Suppose we run `VALIDATION_FOOTPRINTWKT_NOTEMPTY` on a dataset of 10,000 records.
+
+A `Quality Control` workflow commonly includes at least these dataset-level measures:
+
+- A `MultiRecord` `Measure` that counts records where `Response.status=RUN_HAS_RESULT` and `Response.result=COMPLIANT` for `VALIDATION_FOOTPRINTWKT_NOTEMPTY`.
+- A `MultiRecord` `Measure` that counts records where `Response.status=RUN_HAS_RESULT` and `Response.result=NOT_COMPLIANT` for the same `Validation`.
+- Optionally, a `MultiRecord` `Measure` that counts `INTERNAL_PREREQUISITES_NOT_MET` outcomes (useful when prerequisites exist).
+
+These counts tell you, at a glance, whether the dataset is close to meeting the needs of the `Use Case`, and whether effort should be directed toward data completion, remediation, or improved ingestion/mapping.
+
+#### 9.1.5 Practical note: summary values vs. details
+
+`MultiRecord` `Measures` are intentionally constrained to produce a single value in `Response.result`. If you need more detail than one number (for example, mean and standard deviation), implementations may place additional structured detail in `Response.qualifier` (as an extension point), while keeping `Response.result` to a single number as required for `Measure` outputs, but your preference should be to define additional `MultiRecord` `Measures` if you need multiple summary values, rather than overloading a single `Measure`, such as one `Measure` that counts Response.status `INTERNAL_PREREQUISITES_NOT_MET` and another that counts Response.result `NOT_COMPLIANT` outcomes.  Separating these into separate `Measures` keeps each `Measure` focused and easier to interpret and allows for more flexible reporting and visualization of the results to answer particular `Quality Control` questions.
 
 
+In other words:
 
+- `Response.result` answers “what is the one metric?”
+- `Response.qualifier` (optional) can answer “what else helps interpret that metric?”
 
-TODO: Then return to UseCase->Policy->Test, and purpose of the use case being Quality Control (we want to find and fix errrors), thus develop/explain the multi-record measures needed for that purpose.
+This pattern supports interoperability while still enabling rich `Quality Control` reporting in practical systems.
 
-**TODO: Section on MultiRecord Measures and Quality Control goes here**
-
-### 9.1 MultiRecord Measures for Quality Control
 
 ### 9.2 Quality Control Workflow
 
