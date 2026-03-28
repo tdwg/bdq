@@ -2845,7 +2845,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "Regex present/absent" {["^(present|absent)$"]}</td>
+			<td>bdq:sourceAuthority default = "Regex present/absent" {["^(present|absent)$]}</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -20557,7 +20557,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "Regex present/absent" {["^(present|absent)$"]}</td>
+			<td>bdq:sourceAuthority default = "Regex present/absent" {["^(present\</td>
 		</tr>
 		<tr>
 			<td>Notes</td>

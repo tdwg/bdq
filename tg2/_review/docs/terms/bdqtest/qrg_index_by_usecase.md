@@ -1388,6 +1388,11 @@ VALIDATION_DECIMALLATITUDE_INRANGE
 - [Quick Reference Guide](index.md#VALIDATION_DECIMALLATITUDE_INRANGE)
 - [Term List](../../list/bdqtest/index.md#bdqtest_b6ecda2a-ce36-437a-b515-3ae94948fe83)
 
+VALIDATION_DECIMALLATITUDE_NOTEMPTY
+- Term IRI: https://rs.tdwg.org/bdqtest/terms/7d2485d5-1ba7-4f25-90cb-f4480ff1a275
+- [Quick Reference Guide](index.md#VALIDATION_DECIMALLATITUDE_NOTEMPTY)
+- [Term List](../../list/bdqtest/index.md#bdqtest_7d2485d5-1ba7-4f25-90cb-f4480ff1a275)
+
 VALIDATION_DECIMALLONGITUDE_INRANGE
 - Term IRI: https://rs.tdwg.org/bdqtest/terms/0949110d-c06b-450e-9649-7c1374d940d1
 - [Quick Reference Guide](index.md#VALIDATION_DECIMALLONGITUDE_INRANGE)

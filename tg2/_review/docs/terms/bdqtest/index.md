@@ -900,7 +900,7 @@ dwc:decimalLatitude="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMP
 
 #### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -2089,7 +2089,7 @@ bdq:sourceAuthority
 
 #### Default Parameter Values
 
-bdq:sourceAuthority default = "Regex present/absent" {["^(present|absent)$"]}
+bdq:sourceAuthority default = "Regex present/absent" {["^(present\
 
 #### Examples
 
@@ -4278,7 +4278,7 @@ bdq:sourceAuthority
 
 #### Default Parameter Values
 
-bdq:sourceAuthority default = "Regex present/absent" {["^(present|absent)$"]}
+bdq:sourceAuthority default = "Regex present/absent" {["^(present|absent)$]}
 
 #### Examples
 
