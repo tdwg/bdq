@@ -11,8 +11,9 @@ These are the authoritative descriptors of the BDQ Tests, extracted from GitHub 
 
 These are produced from the CSV files above using [kurator-ffdq](https://github.com/kurator-org/kurator-ffdq).  See instructions in [this README](https://github.com/kurator-org/bdq_issue_to_csv/blob/master/README.md)
 
-- TG2_tests.ttl
-- TG2_tests.xml
+- TG2_tests.ttl (now _review/dist/bdqtests.ttl)
+- TG2_tests.xml (now _review/dist/bdqtests.xml)
+
 - TG2_multirecord_measure_tests.ttl
 - TG2_multirecord_measure_tests.xml
 
@@ -20,10 +21,16 @@ These are produced from the CSV files above using [kurator-ffdq](https://github.
 
 These files allow kurator-ffdq to preserve the identifiers of objects in the RDF when regenerating from the CSV into RDF.
 
-information_element_guids.csv
-usecase_test_list.csv
-TG2_tests_additional_guids.csv
-test_label_mappings.csv
+- information_element_guids.csv
+- TG2_tests_additional_guids.csv
+- TG2_policy_guids.csv
+- TG2_tests_argument_guids.csv
+
+test_label_mappings.csv (?no longer used?)
+
+Deprecated file formerly used for test-usecase mapping, now replaced by the UseCases colunn in the TG2_tests.csv file.
+
+usecase_test_list_deprecated.csv
 
 ## Test Validation Data 
 
