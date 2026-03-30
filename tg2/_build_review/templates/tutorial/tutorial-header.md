@@ -307,7 +307,7 @@ The label provides a concise summary of the Test's purpose and logic.  The compo
 
 This Test is a Validation, it is evaluating the Information Element `dwc:footprintWKT`, and it is evaluating whether there is a value in `dwc:footprintWKT`, so the label is VALIDATION_FOOTPRINTWKT_NOTEMPTY.  This label is expected to be a constant that does not change, even in translation.
 
-We need to create a `Preferred Label` for the Test to support accessibility (the ability of screen readers to read the label in a more human friendly way), and to provide for translations of the name of the Test into additional languages.
+We need to create a Preferred Label for the Test to support accessibility (the ability of screen readers to read the label in a more human friendly way), and to provide for translations of the name of the Test into additional languages.
 
 The Preferred Label for this Test could be "Validation dwc:footprintWKT Not Empty".  This Preferred Label is expected to be translated into different languages (e.g. "Dilysu dwc:footprintWKT Ddim yn Wag"@cy)
 
@@ -487,14 +487,15 @@ VALIDATION_FOOTPRINTWKT_NOTEMPTY is a `Validation` Test that takes `dwc:footprin
 
 Thus, we could include this Test in our `Use Case`, even though it is not yet accepted into the BDQ standard. We could implement it, Test the implementation, and put it forward to the Maintenance group for consideration for inclusion in the standard. This Test would fill the gap of a simple presence check for `dwc:footprintWKT`.
 
-## 5 Test for another Gap (non-normative)
+## 5 A Test to Fill another Gap (non-normative)
 
-Another gap we identified in the `Use Case` was evaluating whether prof:wasAttributedTo contains a value, and whether that value is a valid ORCID ID.  Under the principle of keeping tests focused on a single aspect of data quality, we can break this down into two separate tests:
+Another gap we identified in the `Use Case` was evaluating whether `prov:wasAttributedTo` contains a value, and whether that value is a valid ORCID ID.  Under the principle of keeping tests focused on a single aspect of data quality, we can break this down into three separate tests:
 
-* prov:wasAttributedTo (contains a value) **Gap**
-* prov:wasAttributedTo (ORCID ID is valid) **Gap**
+* prov:wasAttributedTo (Contains a value) **Gap**
+* prov:wasAttributedTo (Conforms to the structure of an ORCID ID) **Gap**
+* prov:wasAttributedTo (Is found in an ORCID ID registry) **Gap**
 
-The first of these is a simple presence check for prov:wasAttributedTo, which is a term in the PROV ontology that provides metadata, in this case, about the source of each taxon distribution.  We could define a test for this gap in a similar way to the test we just defined for dwc:footprintWKT.  The test would be a `Validation` test, it would take prov:wasAttributedTo as input, and it would ask the question "Is there a value in prov:wasAttributedTo?"  The expected response would be COMPLIANT if there is a value in prov:wasAttributedTo, and NOT_COMPLIANT if there is not a value.
+The first of these is a simple presence check for `prov:wasAttributedTo`, which is a term in the PROV ontology that provides metadata, in this case, about the source of each taxon distribution.  We could define a Test for this gap in a similar way to the Test we just defined for dwc:footprintWKT.  The Test would be a `Validation` Test, it would take `prov:wasAttributedTo` as input, and it would ask the question "Is there a value in prov:wasAttributedTo?"  The expected response would be COMPLIANT if there is a value in `prov:wasAttributedTo`, and NOT_COMPLIANT if there is not a value.
 
 * **Description** Is there a value in prov:wasAttributedTo?
 * **Label** VALIDATION_WASATTRIBUTEDTO_NOTEMPTY 
@@ -508,45 +509,45 @@ The first of these is a simple presence check for prov:wasAttributedTo, which is
 * **Information Elements Acted Upon** prov:wasAttributedTo
 * **Expected Response** COMPLIANT if prov:wasAttributedTo is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
-## 6 Defining a more complicated Test (non-normative)
+## 6 Defining a more complicated Test with a Source Authority(non-normative)
 
 The next gap we identified in the `Use Case` was: 
 
-** prov:wasAttributedTo (Conforms to the structure of an ORCID ID identifier) **Gap**
+** prov:wasAttributedTo (Conforms to the structure of an ORCID ID) **Gap**
 
-This is a more complicated test, as it requires not just checking for the presence of a value, but also checking that the value conforms with the expected structure of an ORCID ID.  
+This is a more complex Test, as it requires not simply checking for the presence of a value, but rather checking that a value conforms with the expected structure of an ORCID ID.  
 
-Note than on the principle of one Test evaluates one simple thing, we are asking whether the value has the correct structure for an ORCID ID, but we are not asking whether the value is actually a valid ORCID ID (e.g. by checking if it can be found in an authority like the ORCID ID registry).  We would define a separate test for that second question, and thus keep each test focused on a single aspect of data quality.
+Note than on the principle of one Test evaluates one simple thing, we are asking whether the value has the correct structure for an ORCID ID, but we are not asking whether the value is actually a valid ORCID ID (e.g. by checking if it can be found in an authority like the ORCID ID registry).  We would define a separate Test for that second question, and thus keep each Test focused on a single aspect of data quality.
 
 ### 6.1 A Simple Description of the Test (non-normative)
 
-The Description of the test is an easy-to-understand, concise explanation of what the test does. It is a human-oriented explanation.  
+The Description of the Test is an easy-to-understand, concise explanation of what the Test does. It is a human-oriented explanation.  
 
-We could phrase this as "Is there a value in prov:wasAttributedTo, and if so, is it a valid ORCID ID?"  This, however, is combining two questions into one.
+We could phrase this as "Is there a value in prov:wasAttributedTo, and if so, does the value conform to the expected structure of an ORCID ID?"  This, however, is combining two questions into one.
 
-We want this test to evaluate a single aspect of data quality, which is whether the value in prov:wasAttributedTo is a valid ORCID ID.  Thus we can phrase the description as follows:
+We want this Test to evaluate a single aspect of data quality, which is whether the value in `prov:wasAttributedTo` has the structure of an ORCID ID, that is, does it have the right format.  Thus we can phrase the description as follows:
 
-* **Description** Is the value in prov:wasAttributedTo a valid ORCID ID?
+* **Description** Does the value in prov:wasAttributedTo conform to the format of an ORCID ID* 
 
 ### 6.2 Identify the Information Elements (non-normative)
 
-The `Information Element` that this test will evaluate is prov:wasAttributedTo, which is a term in the PROV ontology that provides metadata about the source of each taxon distribution.  This `Information Element` is `ActedUpon`, as it is the primary focus of the test.  This test does not require any supporting information, so there are no `Information Elements` that are `Consulted`.
+The `Information Element` that this Test will evaluate is `prov:wasAttributedTo`, which is a term in the [PROV ontology](https://www.w3.org/TR/prov-o/) that provides metadata about the source of each taxon distribution.  This `Information Element` is `ActedUpon`, as it is the primary focus of the Test.  This Test does not require any supporting information, so there are no `Information Elements` that are `Consulted`.
 
 * **Information Elements Acted Upon** prov:wasAttributedTo
 
 ### 6.3 Select the Test Type (non-normative)
 
-We are asserting whether the value in prov:wasAttributedTo is a valid ORCID ID, so we are asserting whether data meets specific criteria (COMPLIANT vs. NOT_COMPLIANT), thus we choose VALIDATION for this test.
+We are asserting whether the value in `prov:wasAttributedTo` conforms to the structure of an ORCID ID, so we are asserting whether data meets specific criteria (COMPLIANT vs. NOT_COMPLIANT), thus we choose VALIDATION for this Test.
 
 * **Test Type** Validation
 
-### 6.4 Name The Test (non-normative)
+### 6.4 Name the Test (non-normative)
 
-Now we can name the test, following the naming conventions in BDQ.  The test is a Validation, it is evaluating the Information Element prov:wasAttributedTo, and it is evaluating whether the value in prov:wasAttributedTo is a valid ORCID ID, that is whether it can be found in an authoritative list of ORCID IDs.  So the label for this test could be VALIDATION_WASATTRIBUTEDTO_STANDARD.  
+Now we can name the Test, following the naming conventions in BDQ.  The Test is a `Validation`, it is evaluating the `Information Element` `prov:wasAttributedTo`, and it is evaluating whether the value in `prov:wasAttributedTo` has the expected format of an ORCID ID.  So, the label for this Test could be VALIDATION_WASATTRIBUTEDTO_STANDARD.  (In contrast, we could frame another Test to check if the value in `prov:wasAttributedTo` can be found in an authoritative list of ORCID IDs, which could be labeled VALIDATION_WASATTRIBUTEDTO_FOUND.  There is some overlap in the words used for this [evaluation](../index.md#62-evaluations-in-test-labels-non-normativeypically) part of the names, typically, _FOUND is used for matches against large and changing authorities, like taxon names, and _STANDARD for correct formatting, as in dates, or matches to short stable controlled vocabularies like taxon rank.)  
 
 * **Label** VALIDATION_WASATTRIBUTEDTO_STANDARD
 
-We will also want to provide a more readable and translatable Preferred Label, and a machine-readable identifier, and a version date for this test.
+We will also want to provide a more readable and translatable Preferred Label, and a machine-readable identifier, and a version date for this Test.
 
 * **Preferred Label** "Validation prov:wasAttributedTo Standard".  
 * **Term Name** {some UUID}
@@ -554,78 +555,85 @@ We will also want to provide a more readable and translatable Preferred Label, a
 
 ### 6.5 Identify the Data Quality Dimension and Criterion (non-normative)
 
-This Test is a `Validation`, so it will have both a `Data Quality Dimension` and Criterion.  
+This Test is a `Validation`, so it will have both a `Data Quality Dimension` and a `Criterion`.  
 
-The `Data Quality Dimension` is the aspect of data quality that this test is addressing, looking at the bdqdim; vocabulary we find 'Conformance` defined as "Where data in a bdqffdq:InformationElement conform to a format, syntax, data type, range, or standard."  We are asking if the value in prov:wasAttributedTo conforms to the expected format for an ORCID ID, so this is a good fit.
+The `Data Quality Dimension` is the aspect of data quality that this Test is addressing, looking at the bdqdim; vocabulary we find 'Conformance` defined as "Where data in a bdqffdq:InformationElement conform to a format, syntax, data type, range, or standard."  We are asking if the value in prov:wasAttributedTo conforms to the expected format for an ORCID ID, so this is a good fit.
 
-Similarly in the bdqcrit: vocabulary we find 'Standard' defined as "Data in a bdqffdq:InformationElement conform to a format, syntax, data type, or standard. Corresponding dimension is bdqdim:Conformance."  Again, this sounds like a good fit.
+Similarly, in the [bdqcrit: vocabulary](../list/bdqcrit/index.md) we find 'Standard' defined as "Data in a bdqffdq:InformationElement conform to a format, syntax, data type, or standard. Corresponding dimension is bdqdim:Conformance."  Again, this sounds like a good fit.
 
 * **Data Quality Dimension** Conformance
 * **Criterion** Standard
 
-In contrast, in another test that evaluates whether the ORCID ID is valid by checking if it can be found in an authority like the ORCID ID registry, we would use a `Data Quality Dimension` of `Conformance`, but a `Criterion` of **`Found`**.
+In contrast, in another Test that evaluates whether the ORCID ID is valid by checking if it can be found in an authority like the ORCID ID registry, we would use a `Data Quality Dimension` of `Conformance`, but a `Criterion` of **`Found`**.
 
 ### 6.6 How many records are we examining at once? (non-normative)
 
-This test would evaluate the value of prov:wasAttributedTo for each record, so we are applying this test to single records, and thus this is a "SingleRecord" test.
+This Test would evaluate the value of `prov:wasAttributedTo` for each record, so we are applying this Test to single records, and thus this is a "SingleRecord" Test.
 
 * **Resource Type** SingleRecord
 
 ### 6.7 Define the Test Specification (non-normative)
 
-We could make a very simple specification for this test, such as "COMPLIANT if the value in prov:wasAttributedTo is a valid ORCID ID; otherwise NOT_COMPLIANT".  However, this is not very clear or specific for an implementer.  What does it mean for a value to be a valid ORCID ID?  How would an implementer determine that?  We need to provide more specific guidance in the specification to ensure that different implementers will implement the test in a consistent way and thus get comparable results.
+We could make a very simple specification for this Test, such as "COMPLIANT if the value in prov:wasAttributedTo is a valid ORCID ID; otherwise NOT_COMPLIANT".  However, this is not very clear or specific for an implementer.  What does it mean for a value to be a valid ORCID ID?  How would an implementer determine that?  We need to provide more specific guidance in the specification to ensure that different implementers will implement the Test in a consistent way and thus get comparable results.
 
-We are asking not if the the value in prov:wasAttributedTo is Found in some authority, but if it Conforms to the expected format for an ORCID ID.  Thus we could phrase the specification as "COMPLIANT if the value in prov:wasAttributedTo conforms to the expected format for an ORCID ID; otherwise NOT_COMPLIANT".  This is better, but what happens if the value in prov:wasAttributedTo is empty?  That would be NOT_COMPLIANT, but it would not be because the value does not conform to the expected format for an ORCID ID, it would be because there is no value at all, and this Test would overlap in what it is testing with VALIDATION_WASATTRIBUTEDTO_NOTEMPTY, which is our separate test above that checks for the presence of a value in prov:wasAttributedTo.  We want to keep these two tests separate and focused on different aspects of data quality, so we need to make sure the specification for this test is clear that it is only evaluating whether a value that is present conforms to the expected format for an ORCID ID, and it is not evaluating whether a value is present at all. We accomplish this by asserting that the presence of some value in prov:wasAttributedTo is a prerequisite for this test, and if that prerequisite is not met, then this test cannot return a result.
+We are asking not if the the value in `prov:wasAttributedTo` is found in some authority, but if it conforms to the expected format for an ORCID ID.  Thus we could phrase the specification as "COMPLIANT if the value in prov:wasAttributedTo conforms to the expected format for an ORCID ID; otherwise NOT_COMPLIANT".  This is better, but what happens if there is no value in `prov:wasAttributedTo`, if it is `bdq:Empty`?  That would be NOT_COMPLIANT, but it would not be because the value does not conform to the expected format for an ORCID ID, it would be because there is no value at all, and this Test would overlap in what it is testing with VALIDATION_WASATTRIBUTEDTO_NOTEMPTY, which is our separate Test above that checks for the presence of a value in `prov:wasAttributedTo`.  We want to keep these two Tests separate and focused on different aspects of data quality, so we need to make sure the specification for this Test is clear that it is only evaluating whether a value that is present conforms to the expected format for an ORCID ID, and it is not evaluating whether a value is present at all. We accomplish this by asserting that the presence of some value in `prov:wasAttributedTo` is a prerequisite for this Test, and if that prerequisite is not met, then this Test cannot return a result.
 
-So we could phrase our test specification as a sequence of:
+So, we could phrase our Test specification (our `Expected Response`) as a sequence of:
 * INTERNAL_PREREQUISITES_NOT_MET if prov:wasAttributedTo is bdq:Empty;
 * COMPLIANT if the value in prov:wasAttributedTo conforms to the expected format for an ORCID ID; 
 * otherwise NOT_COMPLIANT
 
-This could work for our `Use Case`, but what does it mean for a value to conform to the expected format for an ORCID ID?  We need to provide more specific guidance on what we mean by that.  We could be more explicit in the Specification, but bdqffdq: provides a means for us to separate out these specifics, the `Source Authority` (which will then set the stage for making this test more generally applicable).
+This could work for our `Use Case`, but what does it mean for a value to conform to the expected format for an ORCID ID?  We need to provide more specific guidance on what we mean by that.  We could be more explicit in the specification: 
+
+* INTERNAL_PREREQUISITES_NOT_MET if prov:wasAttributedTo is bdq:Empty;
+* COMPLIANT if the value in prov:wasAttributedTo conforms to the regular expression "^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$"
+* otherwise NOT_COMPLIANT
+
+But, where did that regular expression "^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$" come from?  It isn't inherent in the definition of `prov:wasAttributedTo`, it is something specific to some external authority.  In bdqffdq: is a means for us to separate out these specifics, the `Source Authority` (which will then set the stage for making this test more generally applicable).
 
 #### 6.7.1 Source Authority (non-normative)
 
-TODO: Repeat the logic, but here add in source authority, and then recognize that a parameter is needed to allow for alternative authorities like VIAF, as the test can be more general than just ORCID ID, and thus more broadly applicable.
+When a Test references some external authoritative source, e.g. a controlled vocabulary, an authority file, a registry, etc., outside of the BDQ namespaces (the ontology or vocabularies that form the BDQ standard), or the definition of terms used as `Information Elements`, we must specify that external dependency, that Source Authority in the Test definition.  
 
-**TODO: Check Lee's Text** 
+As noted in the BDQ documentation, many aspects of 'data quality’ or 'fitness for use’ cannot be evaluated IF no authority exists to which to evaluate data values.  For example, we cannot evaluate whether a value is a valid ORCID ID if we do not have an authority that defines what a valid ORCID ID looks like.  In this case, the authority is the ORCID organization itself, which provides documentation on the expected format for ORCID IDs.  We can reference this authority in our Test definition, and then use the information from that authority to define the expected format for ORCID IDs in our Test specification.  This is an externallity we must reference in our Test definition, and thus we need to specify the source authority for this Test.
 
-This component of a test is required IF it must reference some
-authorities outside the BDQ namespaces (the ontology or vocabularies
-that form the BDQ standard). These are external dependencies and
-therefore are outside the domain and responsibility of BDQ.
+In bdqffdq:, a `Specification` has a hasExpectedResponse property that contains the text of the Expected Response, and it can also have a hasAuthoritiesDefaults property.  The hasAuthoritiesDefaults property provides information on source authorities.
 
-As noted in the BDQ documentation, many aspects of 'data quality’ or
-'fitness for use’ cannot be evaluated IF no authority exists to which to
-evaluate data values.
+BDQ details a convention for the structure and format of source authorities (`bdqffdq:hasAuthoritiesDefaults` as follows:
 
-BDQ details the structure and format of source authorities as follows
+* **Convention One**: An authority with a URI providing information about the authority.
+  * `“Fixed String Identifier” {\[URL\]}`
 
-**TODO: Clarify this is a convention, not controled by normative statement**
-**TODO: Fix error, "Name of Authority" is a fixed text string identifier for implementers to embed in code, not the name of the authority**
-> bdq:sourceAuthority default = “Name of Authority” {\[URL\]}{optional
-> API name if available\[URL of the API\]}
+* Example: bdq:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}
+  * Fixed string identifier:  "The Getty Thesaurus of Geographic Names (TGN)" 
+  * URI: {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}
 
-Alternative: "Fixed identifier" {["regular expression pattern"]}
+* **Convention Two**: An authority with a URI providing information about the authority, and an API endpoint for checking values against the authority.
+  * `“Fixed String Identifier” {\[URL\]}{API name\[URL of the API\]}`
 
-Here are three examples, each divided into its component parts:
-
-* bdq:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}
+* Example: bdq:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}
   * Fixed string Identifier: "ISO 3166 Country Codes" (the name of the authority)
   * URI: {[https://www.iso.org/iso-3166-country-codes.html]}
   * API: {ISO 3166-1-alpha-2 Country Code search \[https://www.iso.org/obp/ui/#search\]}
     * A label for the API: "ISO 3166-1-alpha-2 Country Code search" 
     * An API endpoint: [https://www.iso.org/obp/ui/#search]
 
-* bdq:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}
-  * Fixed string identifier:  "The Getty Thesaurus of Geographic Names (TGN)" 
-  * URI: {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}
+* **Convention Three**: An authority that is defined using a regular expression pattern.
+  * `“Fixed String Identifier” {\[Regular Expression Pattern\]}`
 
-* bdq:sourceAuthority default = "Regex present/absent" {["^(present|absent)$"]}
+* Example: bdq:sourceAuthority default = "Regex present/absent" {["^(present|absent)$"]}
   * Fixed string identifier: "Regex present/absent" 
   * Regular Expression Pattern: "^(present|absent)$" (matches only the strings "present" or "absent" (the leading and trailing [{ enclose the pattern, but aren't part of it))
 
-For this test, we can use the regular expression pattern for a resolvable ORCID ID as the source authority, thus we could specify the source authority as follows:
+Regular expressions are a tool used in multiple programing languages. A regular expression is sequence of characters that defines a search pattern, often used for string matching, and thus can be used to evaluate whether a value conforms to a particular format.  
+
+The source authority allows implementers to know where to look for the authoritative information that they need to run the Test. The source authority also allows users of the Test results to understand the basis for the Test's logic.  Critical to all three of these is the "Fixed String Identifier", this is a string that identifies the source authority, and will be expected to be embedded in code that implements Tests that take Parameters (which we will come back to shortly).  
+
+For this Test, we can use the regular expression pattern for a resolvable ORCID ID as the source authority.
+
+An ORCID ID is a unique identifier for researchers, and it has a specific format that can be expressed as a regular expression.  The expected format for an ORCID ID is a resolvable URL that starts with "http://orcid.org/" or "https://orcid.org/", followed by four groups of four digits, separated by hyphens, and ending with a single digit or the letter 'X'.  This can be expressed as the following regular expression: "^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$".  This regular expression matches strings that start with "http://" or "https://", followed by "orcid.org/", then four groups of four digits separated by hyphens, and ending with a single digit or 'X'.
+
+Thus we could specify the source authority as follows:
 
 * **hasAuthoritiesDefaults** bdq:sourceAuthority default = "Resolvable ORCID ID regex" `{["^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$"]}`
 * **Expected Response**  INTERNAL_PREREQUISITES_NOT_MET if prov:wasAttributedTo is bdq:Empty; COMPLIANT if the value in prov:wasAttributedTo conforms to the expected format of bdq:sourceAuthority; otherwise NOT_COMPLIANT.
@@ -637,50 +645,44 @@ Which, combining the Expected Response with the default sourceAuthority, could b
 
 #### 6.7.2 Generalize, add a parameter (non-normative)
 
-We could make this test more general by allowing for alternative authorities, and thus more broadly applicable, by adding a parameter to the test that allows an implementer to specify which authority to use for evaluating whether the value in prov:wasAttributedTo conforms to the expected format for an ORCID ID.  This would allow the test to be used not just for ORCID IDs, but also for other types of identifiers that have a well-defined format and an authority that can be referenced for that format.
+Some Tests have `Parameters`.  A Test with a `Parameter` will produce different results for the same input `Information Element` values, depending on the value of the parameter.  This allows for a single Test to be used in different contexts, with different expectations for how it will respond in certain conditions.  Parameters allow a test to be generalized to serve a broader range of use cases, while still maintaining a clear and specific test specification that can be implemented in a consistent way across different implementations.
 
-**TODO: Evaluate Lee's Text:**
+We could make this Test more general by allowing for alternative authorities, and thus more broadly applicable, by adding a parameter to the Test that allows an implementer to specify which authority to use for evaluating whether the value in prov:wasAttributedTo conforms to the expected format for an ORCID ID.  This would allow the Test to be used not just for ORCID IDs, but also for other types of identifiers that have a well-defined format and an authority that can be referenced for that format.
 
-Some tests have \`parameters\` that can be edited to change how the test
-will respond in certain conditions. Parameters can be one of three
-types:
+Parameters can include:
 
--   Date ranges (e.g., bdq:earliestValidDate)
+- Date ranges (e.g., bdq:earliestValidDate)
+- Thresholds (e.g., dwc:minimumElevationInMeters)
+- Alternative source authorities
+  * Alternative source authority vocabularies (e.g., taxonomic name authorities)
+  * Alternative regular expression patterns for evaluating the format of identifiers.
 
--   Thresholds (e.g., dwc:minimumLEveationInMeters)
+BDQ allows for parameters where an local variant on a `Use Case` requires some locally accepted authority, distinct from a globaly accepted authority that would apply to most applications of that `Use Case`.  This may be the case, for example, when legislation requires taxonomic names to be checked against a national names list, rather than a global names list.  In such cases, we can use parameters on a Test to allow for these variations in local needs, while still retaining the same overall logic and structure of the Test.
 
--   Alternative authorities or vocabularies (e.g., taxonomic names
-    authorities)
+Note that IF there is only one source authority that everyone would use, such as an ISO format specified in a term definition, the source authority would not be accompanied by a parameter value, as there is no local need to generalize to. 
 
-Note that IF there is only one source authority, such as \`ISO\`, there
-is no parameter value as no other source has the authority. As noted in
-the example above, BDQ allows for parameters where an implementation of
-BDQ requires a unique, non-globally accepted authority, as may be the
-case for example when legislation or tradition requires taxonomic names
-to be checked against a national names list.
-
-Some users may wish to store ORCID ID values with an ORCID: prefix, instead of the canonical https://orcid.org/ resolvable form, and thus we might want to allow for a parameter that allows for this variation in format.  This would be a parameter that allows for an alternative regex pattern to be used for evaluating the format of the ORCID ID, and when used, would change the behavior of the Test such that https://orcid.org/0000-0002-1825-0097 would be NOT_COMPLIANT while ORCID:0000-0002-1825-0097 would be COMPLIANT.  This would allow the test to be used for data sets that use this alternative format for ORCID IDs, while still allowing the test to be used for data sets that use the canonical resolvable form of ORCID IDs, without any change to the specifiction of the test itself. 
+Some users may wish to store ORCID ID values with an ORCID: prefix, instead of the canonical https://orcid.org/ resolvable form, and thus we might want to allow for a parameter that allows for this variation in format.  This would be a parameter that allows for an alternative regex pattern to be used for evaluating the format of the ORCID ID, and when used, would change the behavior of the Test such that https://orcid.org/0000-0002-1825-0097 would be NOT_COMPLIANT while ORCID:0000-0002-1825-0097 would be COMPLIANT.  This would allow the Test to be used for data sets that use this alternative format for ORCID IDs, while still allowing the Test to be used for data sets that use the canonical resolvable form of ORCID IDs, without any change to the specifiction of the Test itself. 
 
 * "Bare ORCID ID regex" `{[^ORCID:\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$]}`
 
-Other users might wish to allow for VIAF or other identifiers in wasAttributedTo, thus they could use the same test, but with an implementation that supports a parameter value that encompasses their needs (e.g. "VIAF ID regex" `{[^https?://viaf\.org/viaf/\d+$]}`, or "VIAF or ORCID ID regex" `{[^https?://viaf\.org/viaf/\d+$|^https://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$]}`), and thus they could use the same test for their needs without any change to the specifiction of the test itself.
+Other users might wish to allow for VIAF or other identifiers in wasAttributedTo, thus they could use the same Test, but with an implementation that supports a parameter value that encompasses their needs (e.g. "VIAF ID regex" `{[^https?://viaf\.org/viaf/\d+$]}`, or "VIAF or ORCID ID regex" `{[^https?://viaf\.org/viaf/\d+$|^https://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$]}`), and thus they could use the same Test for their needs without any change to the specifiction of the Test itself.
 
-Parameters allow a test to be generalized to serve a broader range of use cases, while still maintaining a clear and specific test specification that can be implemented in a consistent way across different implementations.
+Now the purpose of the “Fixed String Identifier” in the  source authority becomes clear.  These values are expected to to be embedded in code that implements parameterized Test, and that the presentation of these "Fixed String Identifier" values will allow different implementations of the same Test to recognize which parameter  to use.  For example, if an implementation of this Test is designed to allow for both the default regex for resolvable ORCID IDs and an alternative regex for ORCID IDs with the ORCID: prefix, then the implementation would look for the "Fixed String Identifier" in the source authority to determine which regex pattern to use for evaluating the format of the value in `prov:wasAttributedTo`.  If the "Fixed String Identifier" is "Resolvable ORCID ID regex", then the implementation would use the default regex pattern for resolvable ORCID IDs.  If the "Fixed String Identifier" is "Bare ORCID ID regex", then the implementation would use the alternative regex pattern for ORCID IDs with the ORCID: prefix.
 
-We can make the bdq:sourceAuthority as a parameter for this test, meaning that users could supply different sourceAuthority values as parameters to change the behavior of a test implementation to fit their specific local needs, while retaining the overall meaning and purpose of the test.  Under the expectations of BDQ, all implementations must support the default parameter value.  A caveat, a brand new parameter value for a test must be accompanied by implementation supporting that value, and not every implementation of the test may support every proposed parameter.
+We can make the bdq:sourceAuthority as a parameter for this Test, meaning that users could supply different sourceAuthority values as parameters to change the behavior of a Test implementation to fit their specific local needs, while retaining the overall meaning and purpose of the Test.  Under the expectations of BDQ, all implementations must support the default parameter value.  A caveat, a brand new parameter value for a Test must be accompanied by implementation supporting that value, and not every implementation of the Test may support every proposed parameter.
 
 * **Parameter** bdq:sourceAuthority
 
 #### 6.7.3  Revisiting the Test Specification (non-normative)
 
-Having asserted that a bdq:sourceAuthority is needed in the test definition (and that the test can take this as a parameter to allow for different implementations to use different authorities), we now need to revisit the Description and Expected Response to make sure that we have included this generalization.
+Having asserted that a `bdq:sourceAuthority` is needed in the Test definition (and that the Test can take this as a parameter to allow for different implementations to use different authorities), we now need to revisit the `Description` and `Expected Response` to make sure that we have included this generalization.
 
 * **Description** Does value in prov:wasAttributedTo conform to the format of the bdq:sourceAuthority?
 * **Expected Response**  INTERNAL_PREREQUISITES_NOT_MET if prov:wasAttributedTo is bdq:Empty; COMPLIANT if the value in prov:wasAttributedTo conforms to the expected format of bdq:sourceAuthority; otherwise NOT_COMPLIANT.
 
 ### 6.8 Notes (non-normative)
 
-Notes are present when some aspects of a test may not be obvious to the casual user or implementer, or if we want to describe aspects of the behaivior of the test in a non-normative way. 
+Notes are present when some aspects of a Test may not be obvious to the casual user or implementer, or if we want to describe aspects of the behaivior of the Test in a non-normative way. 
 Notes might want to comment on variations in the expected structure of an ORCID ID, for example, the expected format of an ORCID ID is https://orcid.org/0000-0002-1825-0097, which can be tested for with this regular expression pattern: ^https://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$
 
 But we might or might not want to allow for http:// as well as https:// and allow a case error where x is used instead of X, and comment on the rationalle for these decisions in the Notes. For example: 
@@ -689,7 +691,7 @@ But we might or might not want to allow for http:// as well as https:// and allo
 
 #### 6.8.1 Example Complex Implementation Notes
 
-Notes are present when some aspects of a test may not be obvious to the casual user or implementer. In some cases, no notes should be required, but notes can be very helpful as in the example of the BDQ Test [VALIDATION_COUNTRYCODE_STANDARD](../list/bdqtest/index.md#bdqtest_0493bcfb-652e-4d17-815b-b0cce0742fbe):
+Notes are present when some aspects of a Test may not be obvious to the casual user or implementer. In some cases, Notes are not required, but Motes can be very helpful as in the example of the BDQ Test [VALIDATION_COUNTRYCODE_STANDARD](../list/bdqtest/index.md#bdqtest_0493bcfb-652e-4d17-815b-b0cce0742fbe):
 
 > “Locations outside of a jurisdiction covered by a country code may
 > have a value in the field dwc:countryCode, the ISO user defined codes
@@ -701,6 +703,8 @@ Notes are present when some aspects of a test may not be obvious to the casual u
 > whitespace or there are leading or trailing non-printing characters.”
 
 ### 6.9 List the properties of the Test (non-normative)
+
+So, our set of Test descriptors (the values of various bdqffdq: properties attached to instances of `Data Quality Need` subclasses, `Method` subclasses, and `Specifications`) for this Test would be as follows:
 
 * **Label** VALIDATION_WASATTRIBUTEDTO_STANDARD
 * **Description** Does value in prov:wasAttributedTo conform to the format of the bdq:sourceAuthority?
@@ -716,13 +720,13 @@ Notes are present when some aspects of a test may not be obvious to the casual u
 
 #### 6.9.1 Summary of the Test Definition
 
-VALIDATION_WASATTRIBUTEDTO_STANDARD is a `Validation` test, that takes prov:wasAttributedTo as input, and asks the question "Does the value in prov:wasAttributedTo conform to the format of [a specified authority]?"  The expected response is COMPLIANT if there is a value in prov:wasAttributedTo and that value conforms to the expected format for an ORCID ID as defined by the default source authority; otherwise NOT_COMPLIANT.  If there is no value in prov:wasAttributedTo, then this test cannot return a result, and thus returns INTERNAL_PREREQUISITES_NOT_MET.  This test has a parameter for the source authority, allowing for different implementations to use different authorities for evaluating whether the value in prov:wasAttributedTo conforms to the expected format for different identifiers, while still retaining the same overall logic and purpose of the test.
+VALIDATION_WASATTRIBUTEDTO_STANDARD is a `Validation` Test, that takes prov:wasAttributedTo as input, and asks the question "Does the value in prov:wasAttributedTo conform to the format of [a specified authority]?"  The expected response is COMPLIANT if there is a value in prov:wasAttributedTo and that value conforms to the expected format for an ORCID ID as defined by the default source authority; otherwise NOT_COMPLIANT.  If there is no value in prov:wasAttributedTo, then this Test cannot return a Response.result, and thus returns the Response.status INTERNAL_PREREQUISITES_NOT_MET.  This Test has a parameter for the source authority, allowing for different implementations to use different authorities for evaluating whether the value in prov:wasAttributedTo conforms to the expected format for different identifiers, while still retaining the same overall logic and purpose of the Test.
 
 #### 6.9.2 Iterate
 
 Earlier we said _"Treat this `Use Case` definition (and everything else that follows from it) as a first draft."_
 
-This is a critical point in the process, as we have now defined tests that fill gaps in our `Use Case`, and we have defined these tests in a way that is consistent with the principles of BDQ, and we have provided detailed specifications for these tests.  However, we have not yet implemented these tests, and we have not yet thrown any real data at these tests to see how they respond.  Thus, we should treat this as a first draft of the `Use Case` and Test definitions, and be prepared to iterate on these definitions based on implementation feedback and real-world data.
+This is a critical point in the process. We have now defined Tests that fill gaps in our `Use Case`, and we have defined these Tests in a way that is consistent with the principles of BDQ, and we have provided detailed specifications for these Tests.  However, we have not yet implemented these Tests, or thrown any real data at these Tests to see how they respond.  Thus, we should treat this as a first draft of the `Use Case` and Test definitions, and be prepared to iterate on these definitions based on implementation feedback and real-world data.
 
 ## 7 Validation and Community (The "Real-World")
 
