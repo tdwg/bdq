@@ -53,9 +53,7 @@ Draft Standard for Review
   - [1.9 Test Types (non-normative)](#19-test-types-non-normative)
   - [1.10 Key to Vocabulary Terms (normative)](#110-key-to-vocabulary-terms-normative)
 
-[2 Use of Terms (normative)](#2-use-of-terms-normative)
-
-[3 Term Indices (non-normative)](#3-term-indices-non-normative)
+[2 Term Indices (non-normative)](#2-term-indices-non-normative)
   - [3.1 Index to Validation Tests (non-normative)](#31-index-to-validation-tests-non-normative)
   - [3.2 Index to Issue Tests (non-normative)](#32-index-to-issue-tests-non-normative)
   - [3.3 Index to Measure Tests (non-normative)](#33-index-to-measure-tests-non-normative)
@@ -154,7 +152,7 @@ The following namespace abbreviations are used in this document:
 
 ## 1.8 Use of Terms (normative)
 
-In an RDF context, a reference to a term in the `bdqtest:` namespace MUST use the Term IRI (e.g., `http://rs.tdwg.org/bdq/bdqtest/b3471c65-b53e-453b-8282-abfa27bf1805`) or Term Qualified name (e.g., `bdqtest:b3471c65-b53e-453b-8282-abfa27bf1805`). In a non-RDF context, to identify a test to software agents, the Term IRI or Term Qualified Name (either the base IRI or the versioned IRI) . In a non-RDF context in which resources are expected to be read by humans (e.g., a value in a spreadsheet or database table) the Label (rdfs:label, e.g., `AMENDMENT_TYPESTATUS_STANDARDIZED`) SHOULD be used. In a purely human context for readability or accessibility, the preferred label (e.g., `Amendment dwc:typeStatus Standardized`) MAY be used.
+In an RDF context, a reference to a term in the `bdqtest:` namespace MUST use the Term IRI (e.g., `http://rs.tdwg.org/bdq/bdqtest/b3471c65-b53e-453b-8282-abfa27bf1805`) or Term Qualified name (e.g., `bdqtest:b3471c65-b53e-453b-8282-abfa27bf1805`). In a non-RDF context, to identify a test to software agents, the Term IRI or Term Qualified Name (either the base IRI or the versioned IRI) SHOULD be used. In a non-RDF context in which resources are expected to be read by humans (e.g., a value in a spreadsheet or database table) the Label (rdfs:label, e.g., `AMENDMENT_TYPESTATUS_STANDARDIZED`) SHOULD be used. In a purely human context for readability or accessibility, the preferred label (e.g., `Amendment dwc:typeStatus Standardized`) MAY be used.
 
 ### 1.9 Test Types (non-normative)
 
@@ -205,11 +203,7 @@ See section [2.4.1 Listing Identifiers for Tests (non-normative)](../../suppleme
 | Argument GUID (bdqffdq:Argument) | normative | A value that, when provided to a Test bdqffdq:Specification to replace a bdqffdq:Parameter changes the behavior of the Test in a defined manner. | 1b66a16a-5e76-4eca-a400-d097ac136ac1 |
 
 
-## 2 Use of Terms (normative)
-
-In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use the Term IRI (e.g., `http://rs.tdwg.org/bdq/bdqffdq/InformationElement`) or Term Qualified name (e.g., `bdqffdq:InformationElement`). In a non-RDF context in which resources may be used by software (e.g., a value in a spreadsheet or database table) the Controlled Value String (Local name, e.g., `InformationElement`) MAY be used. In a purely human context a label (e.g., `Information Element`) MAY be used.
-
-## 3 Term Indices (non-normative)
+## 2 Term Indices (non-normative)
 
 
 

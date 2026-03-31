@@ -47,7 +47,7 @@ Draft Standard for Review
 
 [2 Overview (non-normative)](#2-overview-non-normative)
 
-[3 Tutorial Phase 1: Context and Strategy (The "Problem") (non-normative)](#3-tutorial-phase-1-context-and-strategy-the-problem-non-normative)
+[3 Defining a Use Case (non-normative)](#3-defining-a-use-case-non-normative)
   - [3.1 Define the Use Case and Fitness-for-Use Requirements (non-normative)](#31-define-the-use-case-and-fitness-for-use-requirements-non-normative)
     - [3.1.1 Refine and Formalize the Use Case (non-normative)](#311-refine-and-formalize-the-use-case-non-normative)
   - [3.2 Identify the Information Elements (non-normative)](#32-identify-the-information-elements-non-normative)
@@ -109,15 +109,13 @@ Draft Standard for Review
     - [9.1.3.1 Constrast with Quality Assurance.](#9131-constrast-with-quality-assurance)
     - [9.1.4 A worked example (building on VALIDATION_FOOTPRINTWKT_NOTEMPTY)](#914-a-worked-example-building-on-validation_footprintwkt_notempty)
     - [9.1.5 Practical note: summary values vs. details](#915-practical-note-summary-values-vs-details)
-
-[9.2 Quality Control Workflow (non-normative)](#92-quality-control-workflow-non-normative)
-  - [9.2.1 Start with patterns, not individual records](#921-start-with-patterns-not-individual-records)
-  - [9.2.2 Look for point causes and systemic errors](#922-look-for-point-causes-and-systemic-errors)
-  - [9.2.3 Focus on Results](#923-focus-on-results)
-  - [9.2.4 Prioritize work for greatest impact](#924-prioritize-work-for-greatest-impact)
-  - [9.2.5 Close the loop: re-run Tests to confirm improvements](#925-close-the-loop-re-run-tests-to-confirm-improvements)
-
-[9.3 Quality Assurance Workflow (non-normative)](#93-quality-assurance-workflow-non-normative)
+  - [9.2 Quality Control Workflow (non-normative)](#92-quality-control-workflow-non-normative)
+    - [9.2.1 Start with patterns, not individual records](#921-start-with-patterns-not-individual-records)
+    - [9.2.2 Look for point causes and systemic errors](#922-look-for-point-causes-and-systemic-errors)
+    - [9.2.3 Focus on Results](#923-focus-on-results)
+    - [9.2.4 Prioritize work for greatest impact](#924-prioritize-work-for-greatest-impact)
+    - [9.2.5 Close the loop: re-run Tests to confirm improvements](#925-close-the-loop-re-run-tests-to-confirm-improvements)
+  - [9.3 Quality Assurance Workflow (non-normative)](#93-quality-assurance-workflow-non-normative)
 
 [10 Round-Up](#10-round-up)
   - [10.1 Summary of the BDQ Philosophy](#101-summary-of-the-bdq-philosophy)
@@ -185,7 +183,7 @@ The simpler of the two Tests examined is VALIDATION_FOOTPRINTWKT_NOTEMPTY, which
 
 By following this workflow, you move from a human-centric research need to a machine-readable technical standard.
 
-## 3 Tutorial Phase 1: Context and Strategy (The "Problem") (non-normative)
+## 3 Defining a Use Case (non-normative)
 
 *Before defining a test, we must justify why it exists and how it fits into the broader ecosystem of the standard.*
 
@@ -478,7 +476,7 @@ See also: [Resource Types](../bdqtest/index.md#32-resource-types-normative) in t
 
 **Purpose**: Provide a clear, unambiguous description of the Test's logic and expected outcomes.
 
-Now we need to provide the unambiguous technical details required for a developer to implement the Test.
+Now we need to provide the unambiguous technical details required for a developer to implement the Test.  
 
 Let's start with the question the test is asking, very simply phrased:  **Is there a value in dwc:footprintWKT?**
 
@@ -500,7 +498,7 @@ This means that implementers should examine the input data, evaluate the stateme
 
 In this simple case, if `dwc:footprintWKT` is `bdq:NotEmpty`, the Test should return COMPLIANT and stop there.  If `dwc:footprintWKT` is not `bdq:NotEmpty` (i.e. is `bdq:Empty`), the Test should return NOT_COMPLIANT.
  
-Formally in bdqffdq:, a Specification is a class, which has a bdqffdq:hasExpectedResponse property (containing the text of the Expected Response). The Specification can have other properties for source authorities, parameters and default values.  
+Formally in the bdqffdq: ontology, `Specification` is a class, which has a `bdqffdq:hasExpectedResponse` property (the `Expected Response` text). The Specification can have other properties for source authorities, parameters and default values.  The specification for a simple Test is found in the text of the `hasExpectedResponse`, in a more complex test, the specification is found split across all these properties of the `Specification` class instance.  When we talk about the specification of a Test, we mean the `Expected Response`, sometimes combined with other properties of a `Specification`.
 
 See also: 
 * [Reading a Specification](../guide/implementers/index.md#232-reading-a-specification-non-normative) in the Implementers Guide.
@@ -517,7 +515,7 @@ This is shorthand for the explicit, but much harder to read:
 * bdqffdq:hasResponseStatus is RUN_HAS_RESULT and bdqffdq:hasResponseResult is COMPLIANT with an explanatory bdqffdq:hasResponseComment that dwc:footprintWKT contains a value if dwc:footprintWKT is bdq:NotEmpty; 
 * otherwise bdqffdq:hasResponseStatus is RUN_HAS_RESULT and bdqffdq:hasResponseResult is NOT_COMPLIANT with an explanatory bdqffdq:hasResponseComment stating that dwc:footprintWKT contains no value.
 
-Responses from Tests must have the tripartite status, result, and comment structure, but the Expected Response in the test specification is a concise statement of the logic of the test, without all of these details (details for which the content is explicit in the BDQ standard, e.g. if the result is COMPLIANT, the status must be RUN_HAS_RESULT, and there must be a comment).
+Responses from Tests must have the tripartite status, result, and comment structure, but the `Expected Response` in the test specification is a concise statement of the logic of the test, without all of these details (details for which the content is explicit in the BDQ standard, e.g. if the result is COMPLIANT, the status must be RUN_HAS_RESULT, and there must be a comment).
 
 The conventions of evaluating clauses in sequence, returning a result from the first clause that evaluates to true, and highlighting only the key differences in each clause are very important in making complex Expected Responses readable and understandable to implementers.  (see, for example, the Expected Response for [VALIDATION_DATEIDENTIFIED_INRANGE](../terms/bdqtest/index.md#validation_dateidentified_inrange)).
 
@@ -693,9 +691,9 @@ When a Test references some external authoritative source, e.g. a controlled voc
 
 As noted in the BDQ documentation, many aspects of 'data quality’ or 'fitness for use’ cannot be evaluated IF no authority exists to which to evaluate data values.  For example, we cannot evaluate whether a value is a valid ORCID ID if we do not have an authority that defines what a valid ORCID ID looks like.  In this case, the authority is the ORCID organization itself, which provides documentation on the expected format for ORCID IDs.  We can reference this authority in our Test definition, and then use the information from that authority to define the expected format for ORCID IDs in our Test specification.  This is an externallity we must reference in our Test definition, and thus we need to specify the source authority for this Test.
 
-In bdqffdq:, a `Specification` has a hasExpectedResponse property that contains the text of the Expected Response, and it can also have a hasAuthoritiesDefaults property.  The hasAuthoritiesDefaults property provides information on source authorities.
+In bdqffdq:, a `Specification` has a `hasExpectedResponse` property that contains the text of the Expected Response, and it can also have a `hasAuthoritiesDefaults` property.  The `hasAuthoritiesDefaults` property provides information on source authorities (and defaults for parameterized tests).
 
-BDQ details a convention for the structure and format of source authorities (`bdqffdq:hasAuthoritiesDefaults` as follows:
+BDQ details a convention for the structure and format of source authorities (in `bdqffdq:hasAuthoritiesDefaults`) as follows:
 
 * **Convention One**: An authority with a URI providing information about the authority.
   * `“Fixed String Identifier” {\[URL\]}`
@@ -830,17 +828,17 @@ This is a critical point in the process. We have now defined Tests that fill gap
 
 ### 7.1 Implementation (non-normative)
 
-A Test specification may sound perfectly clear and straightforward to its writers, but it may not be clear to developers who are trying to implement the test based on the specification.  Thus, the only way to confirm that a Test specification is clear and can be implemented correctly is to actually implement the Test based on the specification, and then throw real data at that implementation to see if it responds correctly.  Expect that an initial Test specification will need revision based on questions raised in implementation and on testing the behavior of the implementation against real world data.
+A Test specification may sound perfectly clear and straightforward to its writers, but it may not be clear to developers who are trying to implement the Test based on the specification.  The only way to confirm that a Test specification is clear and can be implemented correctly is to actually implement the Test based on the specification, and then throw real data at that implementation to see if it responds correctly.  Expect that an initial Test specification will need revision based on questions raised in implementation and on testing the behavior of the implementation against real world data.
 
 BDQ is deliberately agnostic about programing languages and execution frameworks for Test implementations.
 
 A BDQ Test implementation has a consistent scope and API shape across languages:
 
-* Inputs: the Information Element(s) Acted Upon (and any Consulted values if needed), plus optional Parameter(s) (e.g., bdq:sourceAuthority) where implementations MUST support the default parameter string literal if the parameter is exposed.
-* Logic (decision rules): evaluate the clauses in the Specification (hasExpectedResponse) in order, returning the first matching outcome (handling EXTERNAL_PREREQUISITES_NOT_MET via exception/error handling where appropriate).
-Output: exactly one structured Response per run, always providing Response.status + Response.comment, and providing Response.result only when Response.status indicates a result (typically RUN_HAS_RESULT).
+* Inputs: the Information Element(s) Acted Upon (and any Consulted values if needed), plus optional Parameter(s) (e.g., `bdq:sourceAuthority`).
+* Logic (decision rules): evaluate the clauses in the specification (`hasExpectedResponse`) in order, returning the first matching outcome (handling EXTERNAL_PREREQUISITES_NOT_MET via exception/error handling where appropriate).
+Output: exactly one structured Response per run, always providing a Response.status and a Response.comment, and providing a Response.result only when Response.status indicates a result (typically RUN_HAS_RESULT).
 
-BDQ keeps Tests portable by standardizing semantics (inputs, decision rules, outputs), but it leaves execution mechanics (binding to input data, orchestration of test execution) to whatever framework fits the implementer's environment.  This means that the behavior of the implementation of an individual test should be tested in isolation, presenting the test with known inputs, and confirming that the test produces the expected outputs based on the logic of the decision rules in the specification.  This means that test validation is expected to be performed on the level of individual test implementations.
+BDQ keeps Tests portable by standardizing semantics (inputs, decision rules, outputs), but it leaves execution mechanics (binding to input data, orchestration of test execution) to whatever framework fits the implementer's environment.  This means that the behavior of the implementation of an individual Test should be tested in isolation, presenting the Test with known inputs, and confirming that the Test produces the expected outputs based on the logic of the decision rules in the specification.  This means that Test validation is expected to be performed on the level of individual Test implementations.
 
 
 ### 7.2 Unit Tests (non-normative)
@@ -1130,11 +1128,11 @@ In other words:
 
 This pattern supports interoperability while still enabling rich `Quality Control` reporting in practical systems.
 
-## 9.2 Quality Control Workflow (non-normative)
+### 9.2 Quality Control Workflow (non-normative)
 
 In contrast to `Quality Assurance`, which focuses on filtering a dataset down to records that are fit for a stated purpose, `Quality Control` focuses on *understanding* why data are not fit, and on identifying tractable actions that can improve quality over time. In practice, `Quality Control` is often iterative: run a suite of Tests, interpret the resulting `Data Quality Reports`, make targeted changes (to data, mappings, or workflows), and then re-run the Tests to confirm improvement.
 
-### 9.2.1 Start with patterns, not individual records
+#### 9.2.1 Start with patterns, not individual records
 
 For real-world datasets, the number of `NOT_COMPLIANT` results can be large. A productive first step is to summarize results in ways that reveal patterns:
 
@@ -1145,7 +1143,7 @@ For real-world datasets, the number of `NOT_COMPLIANT` results can be large. A p
 
 These summaries help distinguish “many unique problems” from “one recurring problem”, and they help avoid spending time reviewing records one-by-one when the underlying cause is systematic.
 
-### 9.2.2 Look for point causes and systemic errors
+#### 9.2.2 Look for point causes and systemic errors
 
 Many apparent record-level failures have *point causes*: a single upstream issue that propagates broadly when data are transformed, denormalized, or aggregated. Examples include:
 
@@ -1156,7 +1154,7 @@ Many apparent record-level failures have *point causes*: a single upstream issue
 
 A key Quality Control technique is therefore to ask: “Could these many failures be explained by a small number of causes?” Investigating this can have high leverage: fixing a single cause can remediate thousands of records (or prevent future errors at ingestion).
 
-### 9.2.3 Focus on Results
+#### 9.2.3 Focus on Results
 
 `Response.status` values are useful for triage.  Look first to `RUN_HAS_RESULT` with `Response.result` = `NOT_COMPLIANT` for specific non-conformances that can be fixed.  In contrast, `INTERNAL_PREREQUISITES_NOT_MET` may be harder to interpret, they may come from some mixture of missing and uninterpretable values, and very likely (if you have designed the test suite well) are covered by `Validations` that test for empty and incorrectly formatted values.  
 
@@ -1171,7 +1169,7 @@ A key Quality Control technique is therefore to ask: “Could these many failure
 
 Treating these categories differently helps focus effort: “fill in missing values” and “standardize or correct values” are distinct work types with different feasibility and risk profiles.
 
-### 9.2.4 Prioritize work for greatest impact
+#### 9.2.4 Prioritize work for greatest impact
 
 `Quality Control` can require substantial human effort, so prioritization matters. A practical prioritization approach is to consider:
 
@@ -1182,7 +1180,7 @@ Treating these categories differently helps focus effort: “fill in missing val
 
 Summaries from `MultiRecord` `Measures` (counts and completeness-style outcomes) are particularly helpful here: they provide quick indicators of where quality improvement will most increase fitness for purpose, and they support tracking progress over time.
 
-### 9.2.5 Close the loop: re-run Tests to confirm improvements
+#### 9.2.5 Close the loop: re-run Tests to confirm improvements
 
 Quality Control actions should be followed by re-running the same Test suite (and regenerating `Data Quality Reports`) to verify that:
 
@@ -1193,7 +1191,7 @@ Quality Control actions should be followed by re-running the same Test suite (an
 This “run → analyze patterns → fix causes → re-run” loop is the core Quality Control workflow supported by the BDQ Tests and the Fitness for Use Framework.
 
 
-## 9.3 Quality Assurance Workflow (non-normative)
+### 9.3 Quality Assurance Workflow (non-normative)
 
 In contrast to `Quality Control`, which focuses on finding and fixing errors, `Quality Assurance` is about filtering a dataset down to a subset of records that are fit for some purpose.  The mechanism for this in the Fittness for Use Framework is to define a set of `MultiRecord` `Measures` that return `COMPLETE` if the dataset meets a dataset-level requirement derived from `SingleRecord` Test outcomes, and `NOT_COMPLETE` otherwise, and if `NOT_COMPLETE`, filter out records based on underlying `Validation` problems until the `Measure` returns `COMPLETE`.   When all the `MultiRecord` `Measures` of this sort for a `Use Case` (as specified by `Policy`) are 'COMPLETE`, the filtered data set is fit for use with respect to the selected `Use Case`.
 
