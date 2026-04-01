@@ -194,7 +194,7 @@ Given a `Use Case`, can one find `Validation` Tests and their `Specifications`?
 
         # Filter by a specific Use Case
     
-         FILTER( ?uc = <https://rs.tdwg.org/bdqffdq/terms/Taxon-Management> )
+         FILTER( ?uc = <https://rs.tdwg.org/bdq/terms/Taxon-Management> )
     }
 
 Given a `Use Case`, can one find the `Information Elements` that were `Acted Upon`?
@@ -224,7 +224,7 @@ Given a `Use Case`, can one find the `Information Elements` that were `Acted Upo
     
        # Filter by a specific Use Case
 
-       FILTER( ?uc = <https://rs.tdwg.org/bdqffdq/terms/Taxon-Management> )
+       FILTER( ?uc = <https://rs.tdwg.org/bdq/terms/Taxon-Management> )
     
     }
 
@@ -236,7 +236,7 @@ Can one find a summary of Tests by `Data Quality Dimension` with specific Darwin
     PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
     PREFIX bdqtest: <https://rs.tdwg.org/bdqtest/terms/>
-    SELECT (count(?test) as ?ct) ?dimension ?sie
+    SELECT (STR(count(?test)) as ?ct) ?dimension ?sie
     WHERE {
        ?ie bdqffdq:composedOf ?sie .
        ?test bdqffdq:hasActedUponInformationElement ?ie .
@@ -255,7 +255,7 @@ Can one find a summary of Tests by Test Type with specific Darwin Core Terms in 
     PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
     PREFIX bdqtest: <https://rs.tdwg.org/bdqtest/terms/>
-    SELECT (count(?test) as ?ct) ?testType ?sie
+    SELECT (STR(count(?test)) as ?ct) ?testType ?sie
     WHERE {
         ?ie bdqffdq:composedOf ?sie .
         ?test bdqffdq:hasActedUponInformationElement ?ie .
@@ -268,21 +268,25 @@ Can one find a summary of Tests by Test Type with specific Darwin Core Terms in 
 Given a `Specification` (as would be known when starting with a `bdqffdq:Assertion` and following `bdqffdq:producesAssertion` to a `bdqffdq:Implementation` then `bdqffdq:usesSpecification`), which Test was run with which argument values for which `Parameters`?
 
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-    PREFIX owl: <http://www.w3.org/2002/07/owl#>
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
-    SELECT ?test ?label ?description  (GROUP_CONCAT(DISTINCT ?params; separator='; ') as ?parameters) 
-    WHERE { 
-      ?test rdf:type bdqffdq:Validation . ?test rdfs:label ?label . ?method bdqffdq:forValidation ?test .
-      ?method bdqffdq:hasSpecification ?specification . ?specification rdfs:comment ?description .
-      OPTIONAL { 
-         ?specification bdqffdq:hasArgument ?argument . ?argument bdqffdq:hasArgumentValue ?argumentValue . ?argument bdqffdq:hasParameter ?parameter .
-         BIND (CONCAT(STR(?parameter), "=" , ?argumentValue ) as ?params )
-      } .
-      FILTER (STR(?specification) = "urn:uuid:f3e03531-7ee5-4721-aae2-f554389e0544")
+    
+    SELECT ?test ?label ?description ?parameter ?argumentValue
+    WHERE {
+      ?method bdqffdq:hasSpecification <urn:uuid:f3e03531-7ee5-4721-aae2-f554389e0544> .
+      ?method bdqffdq:forValidation ?test .
+    
+      ?test rdf:type bdqffdq:Validation .
+      ?test rdfs:label ?label .
+    
+      <urn:uuid:f3e03531-7ee5-4721-aae2-f554389e0544> rdfs:comment ?description .
+    
+      OPTIONAL {
+        <urn:uuid:f3e03531-7ee5-4721-aae2-f554389e0544> bdqffdq:hasArgument ?argument .
+        ?argument bdqffdq:hasParameter ?parameter .
+        ?argument bdqffdq:hasArgumentValue ?argumentValue .
+      }
     }
-    GROUP BY ?test ?label ?description
 
 Given an `Assertion`, which Test was run with which `has Argument values` for which `Parameters` by which `Mechanism` to produce it: 
 
@@ -327,7 +331,7 @@ What `Information Elements` are `Acted Upon` by more that one `Amendment`?
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
-    SELECT ?term ( count( distinct ?alabel) as ?ct )
+    SELECT ?term (STR(count(distinct ?alabel)) as ?ctstr)  ( count( distinct ?alabel) as ?ct )
     WHERE {
        ?validation a bdqffdq:Validation . ?validation rdfs:label ?vlabel . ?validation bdqffdq:hasActedUponInformationElement ?ie .
        ?ie bdqffdq:composedOf ?term . ?iea bdqffdq:composedOf ?term . ?amendment bdqffdq:hasActedUponInformationElement ?iea .
@@ -335,7 +339,7 @@ What `Information Elements` are `Acted Upon` by more that one `Amendment`?
     }
     GROUP BY ?term 
     HAVING ( ?ct > 1 )
-    ORDER BY ?term
+    ORDER BY ?ct ?term
 
 What `Amendments` have `Information Elements` `Acted Upon` that are `Acted Upon` by more than one `Amendment`:
 
@@ -366,7 +370,7 @@ List all `UseCases`, and the Tests associated with the comments on each `DataQua
     
     SELECT DISTINCT
       ?useCase 
-      ?needType ?needComment
+      ?needType (STR(?needCommentRaw) as ?needComment)
       ?specComment
     WHERE {
       # Use Cases
@@ -382,7 +386,7 @@ List all `UseCases`, and the Tests associated with the comments on each `DataQua
       FILTER(?needType IN (bdqffdq:Validation, bdqffdq:Issue, bdqffdq:Measure, bdqffdq:Amendment))
     
       OPTIONAL { ?need rdfs:label ?needLabel . }
-      OPTIONAL { ?need rdfs:comment ?needComment . }
+      OPTIONAL { ?need rdfs:comment ?needCommentRaw . }
     
       # Method -> Need link (explicit properties; no inference required)
       ?method bdqffdq:hasSpecification ?spec .
@@ -587,33 +591,34 @@ A "Warning Type" for each BDQ Test was envisioned to provide insight into the na
 
 **Table 1**: `Data Quality Dimension` vs Warning Type (as of 2023) with the number of Tests as cell values.
 
-The following SPARQL query to count Tests by Type and `Data Quality Dimension`: 
+The following SPARQL query to counts Tests by Type and `Data Quality Dimension`: 
 <pre>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
-PREFIX bdqtest: <https://rs.tdwg.org/bdqtest/terms/>
-SELECT (count(?test) as ?ct) ?dimension ?testType
+
+SELECT ?dimension ?testType ?resourceType (COUNT(?test) AS ?ct)
 WHERE {
-?test bdqffdq:hasDataQualityDimension ?dimension .
-?test rdf:type ?testType .
-FILTER (?testType != owl:NamedIndividual)
+  ?test bdqffdq:hasDataQualityDimension ?dimension .
+  ?test rdf:type ?testType .
+  FILTER (?testType != owl:NamedIndividual) .
+  OPTIONAL { ?test bdqffdq:hasResourceType ?resourceType . }
 }
-GROUP BY ?dimension ?testType
+GROUP BY ?dimension ?testType ?resourceType
+ORDER BY ?dimension ?testType ?resourceType
 </pre>
 
-gives the following distribution of Test Types by `Dimension`:
+gives the following distribution of Test Types by `Dimension`, with `MultiRecord` `Measures` split out:
 
-| Data Quality Dimension | Validation | Amendment | Issue | Measure |
-|:----------------------:|:----------:|:---------:|:-----:|:-------:|
-| Conformance            |     41     |    17     |   1   |         |
-| Consistency            |      7     |     1     |       |         |
-| Completeness           |     22     |    11     |   1   |    1    |
-| Likeliness             |      2     |           |       |         |
-| Resolution             |            |           |   1   |    1    |
-| Reliability            |            |           |       |    2    |
+| Data Quality Dimension | Validation | Amendment | Issue | Measure | MultiRecord Measure |
+|:----------------------:|:----------:|:---------:|:-----:|:-------:|:-------------------:|
+| Completeness           |      22    |     11    |   1   |    1    |         44          |
+| Conformance            |      41    |     17    |   1   |         |         82          |
+| Consistency            |       7    |     1     |       |         |         14          |
+| Likeliness             |       2    |           |       |         |         4           |
+| Reliability            |            |           |       |    2    |                     |
+| Resolution             |            |           |   1   |    1    |                     |
+
 
 ### 3.4 Domain Scope of Tests (non-normative)
 
