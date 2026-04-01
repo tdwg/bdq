@@ -1302,6 +1302,7 @@ In a complete dataset the `Specification` is linked (via a `Method` instance) to
 ```
 @prefix bdq:     <https://rs.tdwg.org/bdq/terms/> .
 @prefix bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/> .
+@prefix bdqtest: <https://rs.tdwg.org/bdqtest/terms/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix oa:      <http://www.w3.org/ns/oa#> .
 @prefix prov:    <http://www.w3.org/ns/prov#> .
@@ -1320,7 +1321,7 @@ In a complete dataset the `Specification` is linked (via a `Method` instance) to
   a bdqffdq:Implementation ;
   bdqffdq:producesAssertion <https://example.org/bdq/assertion/1> ;
   bdqffdq:implementedBy <https://example.org/bdq/mechanism/kurator-dwcsciNameDQ-v1.0.1> ;
-  bdqffdq:usesSpecification <https://rs.tdwg.org/bdqtest/terms/47ff73ba-0028-4f79-9ce1-ee7008d66498-2025-03-06> .
+  bdqffdq:usesSpecification bdqtest:47ff73ba-0028-4f79-9ce1-ee7008d66498-2025-03-06 .
 
 <https://example.org/bdq/mechanism/kurator-dwcsciNameDQ-v1.0.1>
   a bdqffdq:Mechanism ,
