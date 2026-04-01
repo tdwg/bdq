@@ -367,12 +367,12 @@ Given an `Assertion`, the following query returns which Test was run with which 
     SELECT ?test ?label ?description  (GROUP_CONCAT(DISTINCT ?params; separator='; ') as ?parameters) ?mechanism
     WHERE {
       ?test rdf:type bdqffdq:Validation . ?test rdfs:label ?label . ?method bdqffdq:forValidation ?test .
-      ?method `bdqffdq:hasSpecification` ?specification . ?specification rdfs:comment ?description .
+      ?method bdqffdq:hasSpecification ?specification . ?specification rdfs:comment ?description .
       OPTIONAL {
          ?specification bdqffdq:hasArgument ?argument . ?argument bdqffdq:hasArgumentValue ?argumentValue . ?argument bdqffdq:hasParameter ?parameter .
          BIND (CONCAT(STR(?parameter), "=" , ?argumentValue ) as ?params )
       } .
-      ?implementation bdqffdq:usesSpecification ?specification . ?implementation `bdqffdq:producesAssertion` ?assertion .
+      ?implementation bdqffdq:usesSpecification ?specification . ?implementation bdqffdq:producesAssertion ?assertion .
       ?implementation bdqffdq:implementedBy ?mechanism .
       FILTER (STR(?assertion) = "{id of assertion to look up}")
     }

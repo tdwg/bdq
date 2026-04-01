@@ -234,43 +234,87 @@ Following is a knowledge graph showing the is-a relationships between the classe
 
 Below is a fragment in Turtle describing VALIDATION_COUNTRY_FOUND, composed of a `Validation`, linking an `Acted Upon` `Information Element`, a `Criterion`, and the `Resource Type` `Single Record`, with the `Validation` linked to a `Validation Method`, and from there a `Specification`. Also shown is a `Validation Policy` linking this `Validation` to a `Use Case`.
 
-     <bdqtest:69b2efdc-6269-45a4-aecb-4cb99c2ae134> a <bdqffdq:Validation> ;
-         rdfs:comment "Does the value of dwc:country occur in the bdq:sourceAuthority?" ;
-         rdfs:label "Does the value of dwc:country occur in the bdq:sourceAuthority? Validation for SingleRecord" ;
-         skos:prefLabel "VALIDATION_COUNTRY_FOUND" ;
-         <bdqffdq:hasActedUponInformationElement> <urn:uuid:8a2bbe0d-7218-4861-8d70-e4f2108a6dc4> ;
-         <bdqffdq:hasCriterion> <bdqcrit:Found> ;
-         <bdqffdq:hasDataQualityDimension> <bdqdim:Conformance> ;
-         <bdqffdq:hasResourceType> <bdqffdq:SingleRecord> .
-     
-     <urn:uuid:8a2bbe0d-7218-4861-8d70-e4f2108a6dc4> a <bdqffdq:ActedUpon> ;
-         rdfs:label "Information Element ActedUpon dwc:country" ;
-         <bdqffdq:composedOf> dwc:country ;
-         <skos:prefLabel> "Information Element ActedUpon dwc:country" .
-     
-     <bdqcrit:Found> a <bdqffdq:Criterion> ;
-         rdfs:label "Found" .
+    bdqtest:69b2efdc-6269-45a4-aecb-4cb99c2ae134-2025-03-07 a bdqffdq:Validation;
+      bdqffdq:hasResourceType bdqffdq:SingleRecord;
+      skos:note "Non-country information such as \"high seas\" will fail this Test (high seas should use dwc:countryCode = \"XZ\" and have dwc:country empty). Getty Place Types for administrative level \"nation\" are 81010 nation, 81011 independent sovereign nation, and 81012 independent nation. Multiple values in the dwc:country field (whether to signify on a border or in a list of possibilities) will fail this Test. Locations outside of a jurisdiction covered by a country code should not have a value in the field dwc:countryCode. This Test should find any matches at the Getty \"nation\" level including internationalized names and historical representations of that nation (where boundaries are same). This Test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.";
+      bdqffdq:hasDataQualityDimension bdqdim:Conformance;
+      bdqffdq:hasCriterion bdqcrit:Found;
+      bdqffdq:hasActedUponInformationElement <urn:uuid:30db5994-81fa-4684-ac54-cfc226209d27>;
+      dcterms:issued "2025-03-07"^^xsd:date;
+      dcterms:bibliographicCitation "Getty Research Institute (2017) Getty Thesaurus of Geographic Names Online. https://www.getty.edu/research/tools/vocabularies/tgn/index.html; Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853";
+      rdfs:comment "Does the value of dwc:country occur in the bdq:sourceAuthority?";
+      skos:historyNote "https://github.com/tdwg/bdq/issues/21";
+      rdfs:label "VALIDATION_COUNTRY_FOUND";
+      dcterms:isVersionOf bdqtest:69b2efdc-6269-45a4-aecb-4cb99c2ae134;
+      skos:prefLabel "Validation dwc:country Found for SingleRecord" .
+    
+    bdqcrit:Found a bdqffdq:Criterion;
+      rdfs:label "Found" . 
+    
+    bdqdim:Conformance a bdqffdq:DataQualityDimension;
+      rdfs:label "Conformance" .
+    
+    <urn:uuid:30db5994-81fa-4684-ac54-cfc226209d27> a bdqffdq:ActedUpon;
+      bdqffdq:composedOf dwc:country;
+      rdfs:label "Information Element ActedUpon dwc:country";
+      skos:prefLabel "Information Element ActedUpon dwc:country" .
+    
+    <urn:uuid:04cee4e0-0c83-40cc-8de2-e7391f0a97a9> a bdqffdq:ValidationMethod;
+      skos:note "Example Implementations: Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)",
+        "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L158",
+        "TG2 Validation SPACE CODED Test VOCABULARY Conformance Parameterized CORE";
+      bdqffdq:hasSpecification <urn:uuid:051f6ad7-1a4b-4e6c-8a1d-2af76de24848>;
+      skos:historyNote "Source: ALA, GBIF";
+      rdfs:label "ValidationMethod: VALIDATION_COUNTRY_FOUND with Specification for: VALIDATION_COUNTRY_FOUND";
+      skos:prefLabel "ValidationMethod: VALIDATION_COUNTRY_FOUND with Specification for: VALIDATION_COUNTRY_FOUND";
+      bdqffdq:forValidation bdqtest:69b2efdc-6269-45a4-aecb-4cb99c2ae134-2025-03-07 .
+    
+    <urn:uuid:051f6ad7-1a4b-4e6c-8a1d-2af76de24848> a bdqffdq:Specification;
+      skos:example "dwc:country=\"Eswatini\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:country is a valid country name in the bdq:sourceAuthority\"",
+        "dwc:country=\"Tasmania\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"Tasmania is not found at the level of national in the bdq:sourceAuthority\"";
+      bdqffdq:hasAuthoritiesDefaults "bdq:sourceAuthority default = \"The Getty Thesaurus of Geographic Names (TGN)\" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}";
+      rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:country is bdq:Empty; COMPLIANT if value of dwc:country is a place type equivalent to administrative entity of \"nation\" in the bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority default = \"The Getty Thesaurus of Geographic Names (TGN)\" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}";
+      bdqffdq:hasExpectedResponse "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:country is bdq:Empty; COMPLIANT if value of dwc:country is a place type equivalent to administrative entity of \"nation\" in the bdq:sourceAuthority; otherwise NOT_COMPLIANT";
+      rdfs:label "Specification for: VALIDATION_COUNTRY_FOUND";
+      bdqffdq:hasArgument <urn:uuid:3e00109a-13d3-416d-9a91-127c99b47473> .
+    
+    <urn:uuid:3e00109a-13d3-416d-9a91-127c99b47473> a bdqffdq:Argument;
+      bdqffdq:hasArgumentValue "The Getty Thesaurus of Geographic Names (TGN)";
+      rdfs:label "Default value for bdq:sourceAuthority:\"The Getty Thesaurus of Geographic Names (TGN)\"";
+      bdqffdq:hasParameter bdq:sourceAuthority .
+  
+    bdq:sourceAuthority a bdqffdq:Parameter .     
+    
+    <urn:uuid:0053ca4f-7d45-41ea-912e-c8847bb70142> a bdqffdq:ValidationPolicy;
+      rdfs:label "ValidationPolicy: (49) validations  in UseCase bdq:Spatial-Temporal_Patterns";
+      bdqffdq:hasUseCase bdq:Spatial-Temporal_Patterns;
+      bdqffdq:includesInPolicy bdqtest:0493bcfb-652e-4d17-815b-b0cce0742fbe-2025-03-07,
+        bdqtest:69b2efdc-6269-45a4-aecb-4cb99c2ae134-2025-03-07, bdqtest:8f1e6e58-544b-4365-a569-fb781341644e-2025-03-07,
+        bdqtest:0949110d-c06b-450e-9649-7c1374d940d1-2025-03-07, bdqtest:f51e15a6-a67d-4729-9c28-3766299d2985-2025-03-07,
+        bdqtest:3cff4dc4-72e9-4abe-9bf3-8a30f1618432-2025-03-06, bdqtest:0bb8297d-8f8a-42d2-80c1-558f29efe798-2025-03-07,
+        bdqtest:58486cb6-1114-4a8a-ba1e-bd89cfe887e9-2025-03-07, bdqtest:6ce2b2b4-6afe-4d13-82a0-390d31ade01c-2025-03-07,
+        bdqtest:3f335517-f442-4b98-b149-1e87ff16de45-2025-03-06, bdqtest:c09ecbf9-34e3-4f3e-b74a-8796af15e59f-2025-03-06,
+        bdqtest:adb27d29-9f0d-4d52-b760-a77ba57a69c9-2025-03-07, bdqtest:b9c184ce-a859-410c-9d12-71a338200380-2025-03-07,
+        bdqtest:f18a470b-3fe1-4aae-9c65-a6d3db6b550c-2025-03-07, bdqtest:ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2025-03-07,
+        bdqtest:7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2025-03-07, bdqtest:b23110e7-1be7-444a-a677-cdee0cf4330c-2025-03-07,
+        bdqtest:4f2bf8fd-fc5c-493f-a44c-e7b16153c803-2025-03-06, bdqtest:66269bdd-9271-4e76-b25c-7ab81eebe1d8-2025-03-07,
+        bdqtest:4c09f127-737b-4686-82a0-7c8e30841590-2025-03-06, bdqtest:dc8aae4b-134f-4d75-8a71-c4186239178e-2025-03-07,
+        bdqtest:239ec40e-a729-4a8e-ba69-e0bf03ac1c44-2025-03-07, bdqtest:b6ecda2a-ce36-437a-b515-3ae94948fe83-2025-03-07,
+        bdqtest:7c4b9498-a8d9-4ebb-85f1-9f200c788595-2025-03-06, bdqtest:ad0c8855-de69-4843-a80c-a5387d20fbc8-2025-03-06,
+        bdqtest:1bf0e210-6792-4128-b8cc-ab6828aa4871-2025-03-07, bdqtest:41267642-60ff-4116-90eb-499fee2cd83f-2025-03-06,
+        bdqtest:cdaabb0d-a863-49d0-bc0f-738d771acba5-2025-03-07, bdqtest:9beb9442-d942-4f42-8b6a-fcea01ee086a-2025-03-07,
+        bdqtest:853b79a2-b314-44a2-ae46-34a1e7ed85e4-2025-03-07, bdqtest:374b091a-fc90-4791-91e5-c1557c649169-2025-03-07,
+        bdqtest:42408a00-bf71-4892-a399-4325e2bc1fb8-2025-03-07, bdqtest:06851339-843f-4a43-8422-4e61b9a00e75-2025-03-06,
+        bdqtest:04b2c8f3-c71b-4e95-8e43-f70374c5fb92-2025-03-07, bdqtest:d708526b-6561-438e-aa1a-82cd80b06396-2025-03-07,
+        bdqtest:c6adf2ea-3051-4498-97f4-4b2f8a105f57-2025-03-07, bdqtest:c971fe3f-84c1-4636-9f44-b1ec31fd63c7-2025-03-07,
+        bdqtest:7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2025-03-07, bdqtest:eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf-2025-03-07,
+        bdqtest:7d2485d5-1ba7-4f25-90cb-f4480ff1a275-2025-03-07, bdqtest:8d787cb5-73e2-4c39-9cd1-67c7361dc02e-2025-03-06,
+        bdqtest:01c6dafa-0886-4b7e-9881-2c3018c98bdc-2025-03-06, bdqtest:85803c7e-2a5a-42e1-b8d3-299a44cafc46-2025-03-06,
+        bdqtest:9a39d88c-7eee-46df-b32a-c109f9f81fb8-2025-03-06, bdqtest:47ff73ba-0028-4f79-9ce1-ee7008d66498-2025-03-06,
+        bdqtest:3f1db29a-bfa5-40db-9fd1-fde020d81939-2025-03-07, bdqtest:4daa7986-d9b0-4dd5-ad17-2d7a771ea71a-2025-03-07,
+        bdqtest:d257eb98-27cb-48e5-8d3c-ab9fca4edd11-2025-03-07, bdqtest:4eb48fdf-7299-4d63-9d08-246902e2857f-2025-03-07;
+      skos:prefLabel "ValidationPolicy: (49) validations  in UseCase bdq:Spatial-Temporal_Patterns" .
 
-     <bdqdim:Conformance> a <bdqffdq:DataQualityDimension> ;
-         rdfs:label "Conformance" .     
-
-     <urn:uuid:04cee4e0-0c83-40cc-8de2-e7391f0a97a9> a <bdqffdq:ValidationMethod> ;
-         rdfs:label "ValidationMethod: Does the value of dwc:country occur in the bdq:sourceAuthority? Validation for SingleRecord with Specification for: VALIDATION_COUNTRY_FOUND" ;
-         skos:prefLabel "ValidationMethod: Does the value of dwc:country occur in the bdq:sourceAuthority? Validation for SingleRecord with Specification for: VALIDATION_COUNTRY_FOUND" ;
-         <bdqffdq:forValidation> <bdqtest:69b2efdc-6269-45a4-aecb-4cb99c2ae134> ;
-         <bdqffdq:hasSpecification> <urn:uuid:051f6ad7-1a4b-4e6c-8a1d-2af76de24848> .
-     
-     <urn:uuid:051f6ad7-1a4b-4e6c-8a1d-2af76de24848> a <bdqffdq:Specification> ;
-         rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:country is bdq:Empty; COMPLIANT if value of dwc:country is a place type equivalent to administrative entity of \"nation\" in the bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority default = \"The Getty Thesaurus of Geographic Names (TGN)\" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}" ;
-         rdfs:label "Specification for: VALIDATION_COUNTRY_FOUND" ;
-         <bdqffdq:hasAuthoritiesDefaults> "bdq:sourceAuthority default = \"The Getty Thesaurus of Geographic Names (TGN)\" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}" ;
-         <bdqffdq:hasExpectedResponse> "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:country is bdq:Empty; COMPLIANT if value of dwc:country is a place type equivalent to administrative entity of \"nation\" in the bdq:sourceAuthority; otherwise NOT_COMPLIANT" .
-     
-     <urn:uuid:0053ca4f-7d45-41ea-912e-c8847bb70142> a <bdqffdq:ValidationPolicy> ;
-     	rdfs:label "ValidationPolicy: (65) validations  in UseCase bdq:Record-Management" ;
-     	<http://www.w3.org/2004/02/skos/core#prefLabel> "ValidationPolicy: (65) validations  in UseCase bdq:Record-Management" ;
-     	<bdqffdq:hasUseCase> <bdqffdq:Record-Management> ;
-     	<bdqffdq:includesInPolicy> <bdqtest:01c6dafa-0886-4b7e-9881-2c3018c98bdc> , <bdqtest:0493bcfb-652e-4d17-815b-b0cce0742fbe> , <bdqtest:04b2c8f3-c71b-4e95-8e43-f70374c5fb92> , <bdqtest:06851339-843f-4a43-8422-4e61b9a00e75> , <bdqtest:0949110d-c06b-450e-9649-7c1374d940d1> , <bdqtest:0bb8297d-8f8a-42d2-80c1-558f29efe798> , <bdqtest:125b5493-052d-4a0d-a3e1-ed5bf792689e> , <bdqtest:14da5b87-8304-4b2b-911d-117e3c29e890> , <bdqtest:15f78619-811a-4c6f-997a-a4c7888ad849> , <bdqtest:17f03f1f-f74d-40c0-8071-2927cfc9487b> , <bdqtest:239ec40e-a729-4a8e-ba69-e0bf03ac1c44> , <bdqtest:2750c040-1d4a-4149-99fe-0512785f2d5f> , <bdqtest:2cd6884e-3d14-4476-94f7-1191cfff309b> , <bdqtest:3136236e-04b6-49ea-8b34-a65f25e3aba1> , <bdqtest:3667556d-d8f5-454c-922b-af8af38f613c> , <bdqtest:36ed36c9-b1a7-40b2-b5e2-0d012e772098> , <bdqtest:374b091a-fc90-4791-91e5-c1557c649169> , <bdqtest:3cff4dc4-72e9-4abe-9bf3-8a30f1618432> , <bdqtest:3f1db29a-bfa5-40db-9fd1-fde020d81939> , <bdqtest:3f335517-f442-4b98-b149-1e87ff16de45> , <bdqtest:401bf207-9a55-4dff-88a5-abcd58ad97fa> , <bdqtest:42408a00-bf71-4892-a399-4325e2bc1fb8> , <bdqtest:47ff73ba-0028-4f79-9ce1-ee7008d66498> , <bdqtest:4833a522-12eb-4fe0-b4cf-7f7a337a6048> , <bdqtest:49f1d386-5bed-43ae-bd43-deabf7df64fc> , <bdqtest:4c09f127-737b-4686-82a0-7c8e30841590> , <bdqtest:4daa7986-d9b0-4dd5-ad17-2d7a771ea71a> , <bdqtest:4eb48fdf-7299-4d63-9d08-246902e2857f> , <bdqtest:4f2bf8fd-fc5c-493f-a44c-e7b16153c803> , <bdqtest:5424e933-bee7-4125-839e-d8743ea69f93> , <bdqtest:5618f083-d55a-4ac2-92b5-b9fb227b832f> , <bdqtest:58486cb6-1114-4a8a-ba1e-bd89cfe887e9> , <bdqtest:66269bdd-9271-4e76-b25c-7ab81eebe1d8> , <bdqtest:69b2efdc-6269-45a4-aecb-4cb99c2ae134> , <bdqtest:6ce2b2b4-6afe-4d13-82a0-390d31ade01c> , <bdqtest:6eeac3ed-f691-457f-a42e-eaa9c8a71ce8> , <bdqtest:7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47> , <bdqtest:7bdb13a4-8a51-4ee5-be7f-20693fdb183e> , <bdqtest:7c4b9498-a8d9-4ebb-85f1-9f200c788595> , <bdqtest:7d2485d5-1ba7-4f25-90cb-f4480ff1a275> , <bdqtest:7e0c0418-fe16-4a39-98bd-80e19d95b9d1> , <bdqtest:81cc974d-43cc-4c0f-a5e0-afa23b455aa3> , <bdqtest:853b79a2-b314-44a2-ae46-34a1e7ed85e4> , <bdqtest:85803c7e-2a5a-42e1-b8d3-299a44cafc46> , <bdqtest:88d8598b-3318-483d-9475-a5acf9887404> , <bdqtest:8d787cb5-73e2-4c39-9cd1-67c7361dc02e> , <bdqtest:8f1e6e58-544b-4365-a569-fb781341644e> , <bdqtest:9a39d88c-7eee-46df-b32a-c109f9f81fb8> , <bdqtest:9beb9442-d942-4f42-8b6a-fcea01ee086a> , <bdqtest:ac2b7648-d5f9-48ca-9b07-8ad5879a2536> , <bdqtest:ad0c8855-de69-4843-a80c-a5387d20fbc8> , <bdqtest:b6ecda2a-ce36-437a-b515-3ae94948fe83> , <bdqtest:c09ecbf9-34e3-4f3e-b74a-8796af15e59f> , <bdqtest:c486546c-e6e5-48a7-b286-eba7f5ca56c4> , <bdqtest:c6adf2ea-3051-4498-97f4-4b2f8a105f57> , <bdqtest:c971fe3f-84c1-4636-9f44-b1ec31fd63c7> , <bdqtest:cdaabb0d-a863-49d0-bc0f-738d771acba5> , <bdqtest:d257eb98-27cb-48e5-8d3c-ab9fca4edd11> , <bdqtest:d708526b-6561-438e-aa1a-82cd80b06396> , <bdqtest:dc8aae4b-134f-4d75-8a71-c4186239178e> , <bdqtest:eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f> , <bdqtest:eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf> , <bdqtest:f2ce7d55-5b1d-426a-b00e-6d4efe3058ec> , <bdqtest:f51e15a6-a67d-4729-9c28-3766299d2985> , <bdqtest:ff59f77d-71e9-4eb1-aac9-8bd05c50ff70> .
 
 ### 3.7 Cardinality of bdqffdq: terms (non-normative)
 

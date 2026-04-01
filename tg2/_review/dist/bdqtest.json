@@ -417,12 +417,12 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
             {
-                "@id": "bdq:sourceAuthority"
+                "@id": "https://rs.tdwg.org/bdq/terms/sourceAuthority"
             }
         ]
     },
     {
-        "@id": "bdq:sourceAuthority",
+        "@id": "https://rs.tdwg.org/bdq/terms/sourceAuthority",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Parameter"
         ]
@@ -613,7 +613,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
             {
-                "@id": "bdq:sourceAuthority"
+                "@id": "https://rs.tdwg.org/bdq/terms/sourceAuthority"
             }
         ]
     },
@@ -1172,7 +1172,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
             {
-                "@id": "bdq:sourceAuthority"
+                "@id": "https://rs.tdwg.org/bdq/terms/sourceAuthority"
             }
         ]
     },
@@ -2106,12 +2106,12 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
             {
-                "@id": "bdq:earliestValidDate"
+                "@id": "https://rs.tdwg.org/bdq/terms/earliestValidDate"
             }
         ]
     },
     {
-        "@id": "bdq:earliestValidDate",
+        "@id": "https://rs.tdwg.org/bdq/terms/earliestValidDate",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Parameter"
         ]
@@ -2302,7 +2302,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
             {
-                "@id": "bdq:sourceAuthority"
+                "@id": "https://rs.tdwg.org/bdq/terms/sourceAuthority"
             }
         ]
     },
@@ -2492,12 +2492,12 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
             {
-                "@id": "bdq:minimumValidElevationInMeters"
+                "@id": "https://rs.tdwg.org/bdq/terms/minimumValidElevationInMeters"
             }
         ]
     },
     {
-        "@id": "bdq:minimumValidElevationInMeters",
+        "@id": "https://rs.tdwg.org/bdq/terms/minimumValidElevationInMeters",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Parameter"
         ]
@@ -3237,7 +3237,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
             {
-                "@id": "bdq:sourceAuthority"
+                "@id": "https://rs.tdwg.org/bdq/terms/sourceAuthority"
             }
         ]
     },
@@ -3913,7 +3913,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
             {
-                "@id": "bdq:sourceAuthority"
+                "@id": "https://rs.tdwg.org/bdq/terms/sourceAuthority"
             }
         ]
     },
@@ -4132,12 +4132,12 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
             {
-                "@id": "bdq:taxonIsMarine"
+                "@id": "https://rs.tdwg.org/bdq/terms/taxonIsMarine"
             }
         ]
     },
     {
-        "@id": "bdq:taxonIsMarine",
+        "@id": "https://rs.tdwg.org/bdq/terms/taxonIsMarine",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Parameter"
         ]
@@ -4525,7 +4525,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
             {
-                "@id": "bdq:sourceAuthority"
+                "@id": "https://rs.tdwg.org/bdq/terms/sourceAuthority"
             }
         ]
     },
@@ -4885,7 +4885,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
             {
-                "@id": "bdq:sourceAuthority"
+                "@id": "https://rs.tdwg.org/bdq/terms/sourceAuthority"
             }
         ]
     },
@@ -5170,7 +5170,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
             {
-                "@id": "bdq:sourceAuthority"
+                "@id": "https://rs.tdwg.org/bdq/terms/sourceAuthority"
             }
         ]
     },
@@ -6120,7 +6120,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
             {
-                "@id": "bdq:sourceAuthority"
+                "@id": "https://rs.tdwg.org/bdq/terms/sourceAuthority"
             }
         ]
     },
@@ -7044,7 +7044,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
             {
-                "@id": "bdq:sourceAuthority"
+                "@id": "https://rs.tdwg.org/bdq/terms/sourceAuthority"
             }
         ]
     },
@@ -7239,7 +7239,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
             {
-                "@id": "bdq:sourceAuthority"
+                "@id": "https://rs.tdwg.org/bdq/terms/sourceAuthority"
             }
         ]
     },
@@ -7628,7 +7628,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
             {
-                "@id": "bdq:sourceAuthority"
+                "@id": "https://rs.tdwg.org/bdq/terms/sourceAuthority"
             }
         ]
     },
@@ -7858,12 +7858,12 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
             {
-                "@id": "bdq:defaultOccurrenceStatus"
+                "@id": "https://rs.tdwg.org/bdq/terms/defaultOccurrenceStatus"
             }
         ]
     },
     {
-        "@id": "bdq:defaultOccurrenceStatus",
+        "@id": "https://rs.tdwg.org/bdq/terms/defaultOccurrenceStatus",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Parameter"
         ]
@@ -8049,7 +8049,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
             {
-                "@id": "bdq:earliestValidDate"
+                "@id": "https://rs.tdwg.org/bdq/terms/earliestValidDate"
             }
         ]
     },
@@ -8234,7 +8234,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
             {
-                "@id": "bdq:sourceAuthority"
+                "@id": "https://rs.tdwg.org/bdq/terms/sourceAuthority"
             }
         ]
     },
@@ -8726,7 +8726,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
             {
-                "@id": "bdq:sourceAuthority"
+                "@id": "https://rs.tdwg.org/bdq/terms/sourceAuthority"
             }
         ]
     },
@@ -9059,7 +9059,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
             {
-                "@id": "bdq:sourceAuthority"
+                "@id": "https://rs.tdwg.org/bdq/terms/sourceAuthority"
             }
         ]
     },
@@ -9228,7 +9228,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
             {
-                "@id": "bdq:earliestValidDate"
+                "@id": "https://rs.tdwg.org/bdq/terms/earliestValidDate"
             }
         ]
     },
@@ -11000,12 +11000,12 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
             {
-                "@id": "bdq:defaultGeodeticDatum"
+                "@id": "https://rs.tdwg.org/bdq/terms/defaultGeodeticDatum"
             }
         ]
     },
     {
-        "@id": "bdq:defaultGeodeticDatum",
+        "@id": "https://rs.tdwg.org/bdq/terms/defaultGeodeticDatum",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Parameter"
         ]
@@ -11318,7 +11318,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
             {
-                "@id": "bdq:sourceAuthority"
+                "@id": "https://rs.tdwg.org/bdq/terms/sourceAuthority"
             }
         ]
     },
@@ -11744,12 +11744,12 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
             {
-                "@id": "bdq:minimumValidDepthInMeters"
+                "@id": "https://rs.tdwg.org/bdq/terms/minimumValidDepthInMeters"
             }
         ]
     },
     {
-        "@id": "bdq:minimumValidDepthInMeters",
+        "@id": "https://rs.tdwg.org/bdq/terms/minimumValidDepthInMeters",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Parameter"
         ]
@@ -12247,7 +12247,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
             {
-                "@id": "bdq:minimumValidElevationInMeters"
+                "@id": "https://rs.tdwg.org/bdq/terms/minimumValidElevationInMeters"
             }
         ]
     },
@@ -12416,7 +12416,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
             {
-                "@id": "bdq:sourceAuthority"
+                "@id": "https://rs.tdwg.org/bdq/terms/sourceAuthority"
             }
         ]
     },
@@ -12585,7 +12585,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
             {
-                "@id": "bdq:sourceAuthority"
+                "@id": "https://rs.tdwg.org/bdq/terms/sourceAuthority"
             }
         ]
     },
@@ -13204,7 +13204,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
             {
-                "@id": "bdq:sourceAuthority"
+                "@id": "https://rs.tdwg.org/bdq/terms/sourceAuthority"
             }
         ]
     },
@@ -13421,7 +13421,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
             {
-                "@id": "bdq:sourceAuthority"
+                "@id": "https://rs.tdwg.org/bdq/terms/sourceAuthority"
             }
         ]
     },
@@ -14744,7 +14744,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
             {
-                "@id": "bdq:sourceAuthority"
+                "@id": "https://rs.tdwg.org/bdq/terms/sourceAuthority"
             }
         ]
     },
@@ -15616,7 +15616,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
             {
-                "@id": "bdq:sourceAuthority"
+                "@id": "https://rs.tdwg.org/bdq/terms/sourceAuthority"
             }
         ]
     },
@@ -15785,7 +15785,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
             {
-                "@id": "bdq:sourceAuthority"
+                "@id": "https://rs.tdwg.org/bdq/terms/sourceAuthority"
             }
         ]
     },
@@ -15975,7 +15975,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
             {
-                "@id": "bdq:minimumValidDepthInMeters"
+                "@id": "https://rs.tdwg.org/bdq/terms/minimumValidDepthInMeters"
             }
         ]
     },
@@ -16165,7 +16165,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
             {
-                "@id": "bdq:sourceAuthority"
+                "@id": "https://rs.tdwg.org/bdq/terms/sourceAuthority"
             }
         ]
     },
@@ -16358,7 +16358,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
             {
-                "@id": "bdq:sourceAuthority"
+                "@id": "https://rs.tdwg.org/bdq/terms/sourceAuthority"
             }
         ]
     },
@@ -17152,7 +17152,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
             {
-                "@id": "bdq:sourceAuthority"
+                "@id": "https://rs.tdwg.org/bdq/terms/sourceAuthority"
             }
         ]
     },
@@ -17321,7 +17321,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
             {
-                "@id": "bdq:sourceAuthority"
+                "@id": "https://rs.tdwg.org/bdq/terms/sourceAuthority"
             }
         ]
     },
@@ -17511,7 +17511,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
             {
-                "@id": "bdq:sourceAuthority"
+                "@id": "https://rs.tdwg.org/bdq/terms/sourceAuthority"
             }
         ]
     },
@@ -17680,7 +17680,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
             {
-                "@id": "bdq:sourceAuthority"
+                "@id": "https://rs.tdwg.org/bdq/terms/sourceAuthority"
             }
         ]
     },
@@ -17870,7 +17870,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
             {
-                "@id": "bdq:sourceAuthority"
+                "@id": "https://rs.tdwg.org/bdq/terms/sourceAuthority"
             }
         ]
     },
@@ -18039,7 +18039,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
             {
-                "@id": "bdq:sourceAuthority"
+                "@id": "https://rs.tdwg.org/bdq/terms/sourceAuthority"
             }
         ]
     },
@@ -18229,7 +18229,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
             {
-                "@id": "bdq:sourceAuthority"
+                "@id": "https://rs.tdwg.org/bdq/terms/sourceAuthority"
             }
         ]
     },
@@ -18398,7 +18398,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
             {
-                "@id": "bdq:sourceAuthority"
+                "@id": "https://rs.tdwg.org/bdq/terms/sourceAuthority"
             }
         ]
     },
@@ -18588,7 +18588,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
             {
-                "@id": "bdq:sourceAuthority"
+                "@id": "https://rs.tdwg.org/bdq/terms/sourceAuthority"
             }
         ]
     },
@@ -18757,7 +18757,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
             {
-                "@id": "bdq:sourceAuthority"
+                "@id": "https://rs.tdwg.org/bdq/terms/sourceAuthority"
             }
         ]
     },
@@ -18952,12 +18952,12 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
             {
-                "@id": "bdq:spatialBufferInMeters"
+                "@id": "https://rs.tdwg.org/bdq/terms/spatialBufferInMeters"
             }
         ]
     },
     {
-        "@id": "bdq:spatialBufferInMeters",
+        "@id": "https://rs.tdwg.org/bdq/terms/spatialBufferInMeters",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Parameter"
         ]
