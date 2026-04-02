@@ -92,13 +92,14 @@ By following this workflow, you move from a human-centric research need to a mac
 ### 2.1 Best Practices
 
 1. **Atomic Tests**: Make each Test evaluate one single simple aspect of data quality.
-1. **Start Simple**: Begin defining basic validation tests before considering more complex tests and amendments.
-1. **Consider Edge Cases**: Include tests for empty values, nulls, and whitespace.
-1. **Iterate**: Refine tests based on implementation feedback and real-world data.
+1. **Start Simple**: Begin defining basic `Validation` Tests before considering more complex Tests and `Amendments`.
+1. **Consider Edge Cases**: Define Tests for empty values, nulls, whitespace, and out of range values.
 1. **Use Established Authorities**: Reference widely accepted standards when possible.
 1. **Generalize Appropriately**: Consider how different parts of the community might want to use a test in slightly different ways.
 1. **Document Assumptions**: Be explicit about why paricular choices were made in the development of a test including choices of default values.
 1. **Plan for Evolution**: Consider how tests might need to change over time.
+1. **Iterate**: Refine Tests based on implementation feedback and real-world data.
+1. **Conformance Test**: Evaluate whether Test implementations produce the expected outputs for a range of given inputs covering all decision paths in each Test.
 1. **Consider Test Interactions**: Consider how multiple tests might interact on the same data.
 
 ## 3 Defining a Use Case (non-normative)
@@ -740,24 +741,27 @@ Earlier we said _"Treat this `Use Case` definition (and everything else that fol
 
 This is a critical point in the process. We have now defined Tests that fill gaps in our `Use Case`, and we have defined these Tests in a way that is consistent with the principles of BDQ, and we have provided detailed specifications for these Tests.  However, we have not yet implemented these Tests, or thrown any real data at these Tests to see how they respond.  Thus, we should treat this as a first draft of the `Use Case` and Test definitions, and be prepared to iterate on these definitions based on implementation feedback and real-world data.
 
-## 7 Validation and Community (The "Real-World")
+## 7 Test Validation and Community Feedback (The "real-world")
 
-*No test is final until it is implemented and thrown at actual data to confirm it responds correctly.*
+*No Test is final until it is implemented and thrown at actual data to confirm it responds correctly.*
 
 ### 7.1 Implementation (non-normative)
 
-A Test specification may sound perfectly clear and straightforward to its writers, but it may not be clear to developers who are trying to implement the Test based on the specification.  The only way to confirm that a Test specification is clear and can be implemented correctly is to actually implement the Test based on the specification, and then throw real data at that implementation to see if it responds correctly.  Expect that an initial Test specification will need revision based on questions raised in implementation and on testing the behavior of the implementation against real world data.
+A Test specification may sound perfectly clear and straightforward to its writers, but it may not be clear to developers who are trying to implement the Test based on the specification.  In BDQ, the decision logic of a Test is expressed in the `hasExpectedResponse` and `hasAuthoritiesDefaults' properties of its `Specification`.  The only way to confirm that a Test specification is clear and can be implemented correctly is to actually implement the Test based on the specification, and then throw real data at that implementation to see if it responds correctly.  Expect that an initial Test specification will need revision based on questions raised in implementation and on testing the behavior of the implementation against real world data.
 
-BDQ is deliberately agnostic about programing languages and execution frameworks for Test implementations.
+BDQ is deliberately agnostic about programming languages and execution frameworks for Test implementations.
 
-A BDQ Test implementation has a consistent scope and API shape across languages:
+A BDQ Test implementation is expected to have a consistent scope and API shape across languages:
 
-* Inputs: the Information Element(s) Acted Upon (and any Consulted values if needed), plus optional Parameter(s) (e.g., `bdq:sourceAuthority`).
-* Logic (decision rules): evaluate the clauses in the specification (`hasExpectedResponse`) in order, returning the first matching outcome (handling EXTERNAL_PREREQUISITES_NOT_MET via exception/error handling where appropriate).
-Output: exactly one structured Response per run, always providing a Response.status and a Response.comment, and providing a Response.result only when Response.status indicates a result (typically RUN_HAS_RESULT).
+* Inputs: the `Information Element(s)` `Acted Upon` (and any `Consulted` values if needed), plus optional `Parameter(s)` (e.g., `bdq:sourceAuthority`).
+* Logic (decision rules): evaluate the clauses in the specification (`hasExpectedResponse`) in order, returning the first matching outcome (handling EXTERNAL_PREREQUISITES_NOT_MET via exception/error handling where appropriate).  
+* Output: exactly one structured Response per run, always providing a `Response.status` and a `Response.comment`, and providing a `Response.result` only when `Response.status` indicates a result (typically RUN_HAS_RESULT).
 
-BDQ keeps Tests portable by standardizing semantics (inputs, decision rules, outputs), but it leaves execution mechanics (binding to input data, orchestration of test execution) to whatever framework fits the implementer's environment.  This means that the behavior of the implementation of an individual Test should be tested in isolation, presenting the Test with known inputs, and confirming that the Test produces the expected outputs based on the logic of the decision rules in the specification.  This means that Test validation is expected to be performed on the level of individual Test implementations.
+BDQ keeps Tests portable by standardizing semantics (inputs, decision rules, outputs), but it leaves binding of raw data inputs to `InformationElements` and execution mechanics (orchestration of test execution) to whatever framework fits the implementer's environment.  This means that the behavior of the implementation of an individual Test should be tested in isolation, presenting the Test with known inputs, and confirming that the Test produces the expected outputs based on the logic of the decision rules in the specification.  This means that Test conformance testing is expected to be performed on the level of individual Test implementations.
 
+See also: 
+* [Responsibilities of a Test](../guide/implementers/index.md#651-responsibilities-of-a-test-non-normative) in the implementers guide.
+* [Responsibilities of a Test Execution Framework](../guide/implementers/index.md#66-responsibilities-of-a-test-execution-framework-non-normative) in the implementers guide.
 
 ### 7.2 Unit Tests (non-normative)
 
@@ -765,17 +769,17 @@ When implementing a Test, implementors are encouraged to use a test driven devel
 
 Unit tests, however, are integral parts of the code base for a test implementation, and thus do not provide a basis for confirming that different test implementations in different languages behave in the same ways when presented with identical inputs.
 
-### 7.3 Test Validation Data and Edge Cases (non-normative)
+### 7.3 Data for Conformance Testing and Edge Cases (non-normative)
 
-The documentation of a test should include validation data, providing inputs for a test, and for each input, providing the expected outputs for that test for those inputs.  Such a validation data set can be used to validate that any implementation of the test is responding as expected. 
+The documentation of a test should include conformance testing data.  Such conformance testing data should provide inputs for a test, and for each input, the expected outputs.  Such a conformance testing data set can be used to validate that any implementation of the test is responding as expected. 
 
-An implementation of a test then needs to be connected to a test validation harness that can read the example data for each test, present the test with the specified inputs, and confirm that the outputs from the test match the expected outputs for those inputs.  This is a critical step in confirming that a test implementation is correct and behaves as expected, and it is also a critical step in confirming that different implementations of the same test in different languages behave in the same way when presented with identical inputs.  It would also be possible to frame test validation data that has the same structure as the expected inputs for a `Use Case`, but such data are much harder to produce in a way that tests individual decision paths within individual tests in isolation, and thus it is more difficult to use such data to confirm that individual tests are behaving as expected.  If such integration test data include synthetic values, they should be marked so as to be clearly distinguishable from actual data. 
+An implementation of a test then needs to be connected to a conformance testing harness that can read the example data for each test, present the test with the specified inputs, and confirm that the outputs from the test match the expected outputs for those inputs.  This is a critical step in confirming that a test implementation is correct and behaves as expected, and it is also a critical step in confirming that different implementations of the same test in different languages behave in the same way when presented with identical inputs.  It would also be possible to frame conformance testing data that has the same structure as the expected inputs for a `Use Case`, but such data are much harder to produce in a way that tests individual decision paths within individual tests in isolation, and thus it is more difficult to use such data to confirm that individual tests are behaving as expected.  If such integration test data include synthetic values, they should be marked so as to be clearly distinguishable from actual data. 
 
 See also: [Guide to Marking and Identifying Synthetic and Modified Data](../guide/synthetic/index.md)
 
-#### 7.3.1 Example Test Validation Data (non-normative)
+#### 7.3.1 Example Conformance Testing Data (non-normative)
 
-The test validation data set that accompanies the BDQ implementer's guide includes these (and other) rows for VALIDATION_COUNTRYCODE_STANDARD, which is a test that evaluates whether the value in dwc:countryCode is a valid ISO 3166-1-alpha-2 country code.  
+The conformance testing data set that accompanies the BDQ implementer's guide includes these (and other) rows for VALIDATION_COUNTRYCODE_STANDARD, which is a test that evaluates whether the value in dwc:countryCode is a valid ISO 3166-1-alpha-2 country code.  
 
 | Label | dwc:countryCode | Response.status | Response.result | Response.comment | Term Name |
 | --- | --- | --- | --- | --- | --- |
@@ -786,15 +790,15 @@ The test validation data set that accompanies the BDQ implementer's guide includ
 | VALIDATION_COUNTRYCODE_STANDARD | Austria | RUN_HAS_RESULT | NOT_COMPLIANT | dwc:countryCode is not a valid ISO (ISO 3166-1-alpha-2 country codes) value  | 0493bcfb-652e-4d17-815b-b0cce0742fbe |
 | VALIDATION_COUNTRYCODE_STANDARD | ZZ | RUN_HAS_RESULT | COMPLIANT | dwc countryCode is a user- defined ISO 2-letter country code | 0493bcfb-652e-4d17-815b-b0cce0742fbe |
 
-This includes the human readable (Label) and machine readable identifiers (Term Name) for the Test, the input value for the Information Element being evaluated (dwc:countryCode), and the expected outputs for the test for that input value (Response.status, Response.result, Response.comment).  This validation data includes edge cases such as an empty value for dwc:countryCode, a valid ISO 3166-1-alpha-2 country code, an invalid ISO 3166-1-alpha-2 country code, a valid code for high seas taken from UN/Locode, and the user-defined ISO 2-letter country code ZZ.
+This includes the human readable (Label) and machine readable identifiers (Term Name) for the Test, the input value for the Information Element being evaluated (dwc:countryCode), and the expected outputs for the test for that input value (Response.status, Response.result, Response.comment).  This conformance testing data includes edge cases such as an empty value for dwc:countryCode, a valid ISO 3166-1-alpha-2 country code, an invalid ISO 3166-1-alpha-2 country code, a valid code for high seas taken from UN/Locode, and the user-defined ISO 2-letter country code ZZ.
 
 See also: 
 [VALIDATION_COUNTRYCODE_STANDARD](../list/bdqtest/index.md#bdqtest_0493bcfb-652e-4d17-815b-b0cce0742fbe) in the bdqtest: term-list document.
 [High Seas](../supplement/index.md#394-high-seas-non-normative) in the Supplement.
 
-#### 7.3.2 Validation data for our proposed VALIDATION_WASATTRIBUTEDTO_STANDARD Test (non-normative)
+#### 7.3.2 Conformance testing data for our proposed VALIDATION_WASATTRIBUTEDTO_STANDARD Test (non-normative)
 
-A possible set of test validation data for our proposed `VALIDATION_WASATTRIBUTEDTO_STANDARD` Test are: 
+A possible set of conformance testing data for our proposed `VALIDATION_WASATTRIBUTEDTO_STANDARD` Test are: 
 
 | Label | prov:wasAttributedTo | Response.status | Response.result | Response.comment |
 | --- | --- | --- | --- | --- |
@@ -818,26 +822,26 @@ A possible set of test validation data for our proposed `VALIDATION_WASATTRIBUTE
 | VALIDATION_WASATTRIBUTEDTO_STANDARD | https://orcid.org/0000-0001-5000-000 | RUN_HAS_RESULT | NOT_COMPLIANT | prov:wasAttributedTo does not match expected format (too short) |
 | VALIDATION_WASATTRIBUTEDTO_STANDARD | https://example.org/0000-0001-5000-0007 | RUN_HAS_RESULT | NOT_COMPLIANT | prov:wasAttributedTo does not match expected format (wrong domain; expected orcid.org) |
 
-Some of these test cases are "edge cases" that might not be immediately obvious to an implementer, such as the case where the value in prov:wasAttributedTo is whitespace only, or the case where there is a trailing slash at the end of the ORCID ID, or the case where there is a query string at the end of the ORCID ID, or the case where there is an extra digit at the end of the ORCID ID, or the case where there is an unexpected extra character at the end of the ORCID ID, or the case where there is leading or trailing whitespace around the ORCID ID, or the case where there is a fragment at the end of the ORCID ID.  These edge cases are important to include in the test validation data set because they help ensure that an implementation of this test will correctly handle these cases and not produce false positives or false negatives.
+Some of these test cases are "edge cases" that might not be immediately obvious to an implementer, such as the case where the value in prov:wasAttributedTo is whitespace only, or the case where there is a trailing slash at the end of the ORCID ID, or the case where there is a query string at the end of the ORCID ID, or the case where there is an extra digit at the end of the ORCID ID, or the case where there is an unexpected extra character at the end of the ORCID ID, or the case where there is leading or trailing whitespace around the ORCID ID, or the case where there is a fragment at the end of the ORCID ID.  These edge cases are important to include in the conformance testing data set because they help ensure that an implementation of this test will correctly handle these cases and not produce false positives or false negatives.
 
-Some of these tests also highlight hidden assumptions in our test specification, in particular, the assumption that the scheme in the ORCID ID is case-sensitive and the assumption that the host in the ORCID ID is case-sensitive.  By including these edge cases in our test validation data set, we can confirm that our test specification is clear about these assumptions and that implementations of this test will correctly handle these cases.
+Some of these tests also highlight hidden assumptions in our test specification, in particular, the assumption that the scheme in the ORCID ID is case-sensitive and the assumption that the host in the ORCID ID is case-sensitive.  By including these edge cases in our conformance testing data set, we can confirm that our test specification is clear about these assumptions and that implementations of this test will correctly handle these cases.
 
-Since the scheme (https) and host (orcid.org) in the ORCID ID are technically case-insensitive according to the URI specification, but our regex pattern is case-sensitive, we need to be clear in our test specification and in our test validation data that we are expecting the scheme and host to be in lowercase, and that if they are not, then the test should return NOT_COMPLIANT.  The case insensitivity scheme and host in the URI specification may well also mean that we want to revisit our regex pattern to allow for case-insensitivity in the scheme and host.  This is an example of a "pitfall for the naive" when defining a test.
+Since the scheme (https) and host (orcid.org) in the ORCID ID are technically case-insensitive according to the URI specification, but our regex pattern is case-sensitive, we need to be clear in our test specification and in our conformance testing data that we are expecting the scheme and host to be in lowercase, and that if they are not, then the test should return NOT_COMPLIANT.  The case insensitivity scheme and host in the URI specification may well also mean that we want to revisit our regex pattern to allow for case-insensitivity in the scheme and host.  This is an example of a "pitfall for the naive" when defining a test.
 
 So, we might want to change our default source authority to relax the regex pattern to allow for case-insensitivity in the scheme and host, and thus we might want to change our default source authority:
 * From: **hasAuthoritiesDefaults** bdq:sourceAuthority default = "Resolvable ORCID ID regex" `{[^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$]}`
 * To: **hasAuthoritiesDefaults** bdq:sourceAuthority default = "Resolvable ORCID ID regex" `{[^(?i:http(s){0,1}://orcid\.org/)\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$]}`
-And then change the validation data accordingly to reflect this change in the expected format for a compliant ORCID ID (so that the "HTTPS://orcid.org" and "https://ORCID.org" would be COMPLIANT).
+And then change the conformance testing data accordingly to reflect this change in the expected format for a compliant ORCID ID (so that the "HTTPS://orcid.org" and "https://ORCID.org" would be COMPLIANT).
 
-Note, that when evaluating whether a Test implementation responds as expected to a given input, the Response.status and Response.result must be exact matches, but the Response.comment only needs to be bdq:NotEmpty.  The Response.comment in the test validation data provides a general guide to implementers for what the comment could say for a given input, but more importantly provides documentation and explanation for that particular validation case.
+Note, that when evaluating whether a Test implementation responds as expected to a given input, the Response.status and Response.result must be exact matches, but the Response.comment only needs to be bdq:NotEmpty.  The Response.comment in the conformance testing data provides a general guide to implementers for what the comment could say for a given input, but more importantly provides documentation and explanation for that particular case.
 
-#### 7.3.3 Enumerating Test Validation Data (non-normative)
+#### 7.3.3 Enumerating Test Conformance Data (non-normative)
 
 **Purpose**: Ensure that a Test can be correctly implemented, and that the Test specification is clear, unambiguous, and has logic that handles real world data and edge cases.
 
 The only way to validate a test is to implement it and then throw sufficient examples of data at that test to confirm that it responds as expected, and that the Test specification is a good fit to real world data.
 
-To frame a Test validation data set, start with the `Expected Response`, split that into separate clauses, and add a test case for each clause, then examine the Test notes for any discussion of special cases, look a the distribution of real values of data in the wild and add additional data to ensure comprehensive coverage of the Test decision path under both likely to be encountered data and edge cases.
+To frame a Test conformance testing data set, start with the `Expected Response`, split that into separate clauses, and add a test case for each clause, then examine the Test notes for any discussion of special cases, look a the distribution of real values of data in the wild and add additional data to ensure comprehensive coverage of the Test decision path under both likely to be encountered data and edge cases.
 
 **Validation Process**:
 * Create comprehensive test data covering all decision paths in the Expected Response
@@ -882,10 +886,10 @@ The **Expected Response** "INTERNAL_PREREQUISITES_NOT_MET if prov:wasAttributedT
   * Response.result: NOT_COMPLIANT
   * Response.comment: prov:wasAttributedTo does not match expected format (trailing slash not allowed) 
 
-**Critical Thinking:** Both those defining a test and implementers must consider "pitfalls for the naive", and the domain experts defining a test are likely to percieve a different set of pitfalls from developers implementing a test.  Multiple iterations and a conversation mediated by test validation data is necessary for developing a robust test description.
+**Critical Thinking:** Both those defining a test and implementers must consider "pitfalls for the naive", and the domain experts defining a test are likely to percieve a different set of pitfalls from developers implementing a test.  Multiple iterations and a conversation mediated by test conformance testing data is necessary for developing a robust test description.
 
 See also: 
-* [Validation Test Implementations](../guide/implementers/index.md#8-validating-test-implementations-normative) in the BDQ Implementer's Guide.
+* [Conformance Testing Implementations](../guide/implementers/index.md#8-conformance-testing-implementations-normative) in the BDQ Implementer's Guide.
 
 ### 7.4 Execution Frameworks (non-normative)
 
@@ -1106,7 +1110,7 @@ In contrast to `Quality Control`, which focuses on finding and fixing errors, `Q
 
 There are pitfalls in defining tests for the naive. Just make sure that the `Expected Response` doesn’t hide any edge cases. Easier said than done sometimes: 11 years work went into the BDQ standard, and we were often surprised by "emergent properties" and differing assumptions.  There are pitfalls in defining tests for the experienced.  
 
-Critical to the process of defining a new test is to iterate.  Start with a draft definition, create one or more independent implementations, have someone who isn't writing the implementation produce validation data (including looking at values found in the wild), validate the implemenation(s) against this data, and discuss any discrepancies between the expected and actual results.  In all but the most trivial cases, it will be necessary to iterate and refine the test specifications, test implementations, and the test validation data.  This process of iteration is critical for producing a robust test specification that is clear, unambiguous, and has logic that handles real world data and edge cases. 
+Critical to the process of defining a new test is to iterate.  Start with a draft definition, create one or more independent implementations, have someone who isn't writing the implementation produce conformance testing data (including looking at values found in the wild), validate the implemenation(s) against this data, and discuss any discrepancies between the expected and actual results.  In all but the most trivial cases, it will be necessary to iterate and refine the test specifications, test implementations, and the test conformance testing data.  This process of iteration is critical for producing a robust test specification that is clear, unambiguous, and has logic that handles real world data and edge cases. 
 
 ### 9.1 Summary of the BDQ Philosophy
 

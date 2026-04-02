@@ -57,7 +57,7 @@ Draft Standard for Review
   - [2.4 Real Data with Synthetic Modifications Used as Examples (normative)](#24-real-data-with-synthetic-modifications-used-as-examples-normative)
   - [2.5 Wholly Synthetic Data (normative)](#25-wholly-synthetic-data-normative)
 
-[3 BDQ Validation Data (non-normative)](#3-bdq-validation-data-non-normative)
+[3 BDQ Conformance Testing Data (non-normative)](#3-bdq-conformance-testing-data-non-normative)
 
 [Acronyms (non-normative)](#acronyms-non-normative)
 
@@ -71,9 +71,9 @@ Draft Standard for Review
 
 ### 1.1 Purpose (non-normative)
 
-The purpose of this document is to provide guidance for marking and identifying synthetic or modified biodiversity data that has been created for purposes such as validating BDQ Test implementations. It establishes conventions for distinguishing such artificial or altered data from authentic biodiversity occurrence records, ensuring that validation datasets are not unintentionally incorporated into biodiversity analyses or downstream data pipelines.
+The purpose of this document is to provide guidance for marking and identifying synthetic or modified biodiversity data that has been created for purposes such as conformance testing BDQ Test implementations. It establishes conventions for distinguishing such artificial or altered data from authentic biodiversity occurrence records, ensuring that conformance testing datasets are not unintentionally incorporated into biodiversity analyses or downstream data pipelines.
 
-The document specifies how to explicitly mark validation data, including wholly synthetic records, real-world data with synthetic modifications, and real data reused for illustrative or example purposes. These practices support the integrity of analytical results and uphold trust in biodiversity data platforms.
+The document specifies how to explicitly mark confomance testing data, including wholly synthetic records, real-world data with synthetic modifications, and real data reused for illustrative or example purposes. These practices support the integrity of analytical results and uphold trust in biodiversity data platforms.
 
 ### 1.2 Audience (non-normative)
 
@@ -91,7 +91,7 @@ For the list and links to all associated documents see [The Biodiversity Data Qu
 The set of information most relevant to synthetic data for BDQ Tests can be found in the following subset of resources:
 
 - [BDQ Implementer's Guide](../implementers/index.md) - For anyone interested in the technical implementation of the BDQ Tests.
-- **Guide to Marking and Identifying Synthetic and Modified Data** - For anyone creating or using validation data, to distinguish blatant fabrications from real data. This document.
+- **Guide to Marking and Identifying Synthetic and Modified Data** - For anyone creating or using conformance testing data, to distinguish blatant fabrications from real data. This document.
 
 ### 1.4 Status of the content of this document (normative)
 
@@ -159,12 +159,12 @@ B. Each modified record MUST provide an identifier for the synthetic record. For
 
 `dwc:occurrenceID` = urn:uuid: + a random type 4 UUID
 
-## 3 BDQ Validation Data (non-normative) 
+## 3 BDQ Conformance Testing Data (non-normative) 
 
-The BDQ standard includes two datasets for the validation of Test implementations. These are sparsely populated data fragments unlikely to be mistaken for real data, and are not marked. 
+The BDQ standard includes two datasets for the conformance testing of Test implementations. These are sparsely populated data fragments unlikely to be mistaken for real data, and are not marked. 
 
-  - File: [Test Validation Data](../implementers/TG2_test_validation_data.csv "Test Validation Data CSV file")
-  - File: [Test Validation Data for non-printing characters](../implementers/TG2_test_validation_data_nonprintingchars.csv "Test Validation Data CSV file for testing implementations of bdq:Empty, containing non-printing characters")
+  - File: [Test Conformance Testing Data](../implementers/TG2_test_validation_data.csv "Test Conformance Testing Data CSV file")
+  - File: [Test Conformance Testing Data for non-printing characters](../implementers/TG2_test_validation_data_nonprintingchars.csv "Test Conformance Testing Data CSV file for testing implementations of bdq:Empty, containing non-printing characters")
 ## Acronyms (non-normative)
 
 A list of Acronyms can be found in the [Acronyms (non-normative)](../../../index.md#5-acronyms-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.

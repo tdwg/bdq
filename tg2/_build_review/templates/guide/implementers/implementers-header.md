@@ -50,7 +50,7 @@
 
 The purpose of this document is to provide implementation guidance for software developers and systems architects building tools or workflows that conform to the BDQ standard. It explains how to interpret and operationalize the BDQ Test specifications, including the semantics of inputs and outputs, expected behaviors, parameter handling, dependency resolution, and result reporting.
 
-This guide supports consistent, standards-compliant implementations across various environments by clarifying technical aspects of the Tests, detailing extension points, and describing validation procedures using shared datasets. It includes both normative content necessary for implementation conformance and non-normative advice for implementers seeking efficiency, clarity, and compatibility.
+This guide supports consistent, standards-compliant implementations across various environments by clarifying technical aspects of the Tests, detailing extension points, and describing conformance testing procedures using shared datasets. It includes both normative content necessary for implementation conformance and non-normative advice for implementers seeking efficiency, clarity, and compatibility.
 
 ### 1.2 Audience (non-normative)
 
@@ -329,7 +329,7 @@ When a Test is defined as parameterized, implementations SHOULD support the para
 When a Test is defined as parameterized:
 - Implementations MAY choose to only support the default value.
 - Implementations MAY choose to not include the parameter(s) in the Test API, that is, only support the default value internally to the Test.
---  Note that some Test Validation Data provide non-default `Parameter` values, and implementations that only support the default value will be unable to validate against all of the Test Validation Data (see [8 Validating Test Implementations](#8-validating-test-implementations-normative))).
+--  Note that some Test Conformance Testing Data provide non-default `Parameter` values, and implementations that only support the default value will be unable to validate against all of the Test Conformance Testing Data (see [8 Validating Test Implementations](#8-validating-test-implementations-normative))).
 
 When the parameter has a default value and a resource, and an implementation includes the parameter in its API, that implementation MUST support the string literal given as the default value, and internally choose the resource "{[resource]}" or "{API endpoint [resource]}" based on that string literal "default value". Implementations MAY also accept other values including the "{[resource]}" or "{API endpoint [resource]}" as the value for the parameter in the API for the Test implementation.
 
@@ -1231,55 +1231,55 @@ In a complete dataset the `Specification` is linked (via a `Method` instance) to
 
 See also (Framework Competency Question including an oa:annotation](../../supplementary/index.md#242-framework-competency-question-including-an-oaannotation-non-normative) and the [discussion](../../supplement/index.md#38-amendments-and-annotations-non-normative) in the [Supplementary Material](../../supplementary/index.md). 
 
-## 8 Validating Test Implementations (normative)
+## 8 Conformance Testing Implementations (normative)
 
-Implementers of the BDQ Tests SHOULD validate the behavior of the internals of their Test implementations with unit tests, and MUST validate that each Test implementation is capable of taking relevant input from a set of standard Test Validation Data, and returning the expected responses.
+Implementers of the BDQ Tests SHOULD validate the behavior of the internals of their Test implementations with unit tests, and MUST validate that each Test implementation is capable of taking relevant input from a set of standard Test Conformance Testing Data, and returning the expected responses.
 
-For synthetic Test Validation Data that could be conflated with actual data, see [Guide to Marking and Identifying Synthetic and Modified Data](../synthetic/index.md)
+For synthetic Test Conformance Testing Data that could be conflated with actual data, see [Guide to Marking and Identifying Synthetic and Modified Data](../synthetic/index.md)
 
-### 8.1 Introduction to Validation (non-normative)
+### 8.1 Introduction to Test Conformance Testing (non-normative)
 
-A set of "Test Validation Data" accompanies the BDQ Test descriptors. These data are intended for implementers to use to evaluate whether or not their Test implementations produce the expected `Response` values for a set of cases for each Test. Each Test specification could be graphed as a flow chart with several paths, the Test Validation Data are intended to cover each node and each path within each Test specification with at least a single case. These data are, however, not exhaustive unit tests covering large numbers of edge cases, but rather a minimal set of Tests for expected behaviors.
+A set of "Test Conformance Testing Data" accompanies the BDQ Test descriptors. These data are intended for implementers for conformance testing, that is to use to evaluate whether or not their Test implementations produce the expected `Response` values for a set of input cases for each Test. Each Test specification could be graphed as a flow chart with several paths, the Test Conformance Testing Data are intended to cover each node and each path within each Test specification with at least a single case. These data are, however, not exhaustive unit tests covering large numbers of edge cases, but rather a minimal set of Tests for conformance with expected behaviors.
 
-The Test Validation Data are organized as two flat CSV files. Each row in each file is intended for the single `Validation` of a single Test. The file has columns identifying the Test, the input data, the expected `Response.status`, `Response.result`, an example `Response.comment`, `Parameter` values (if any), and a set of [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021). Most of the terms for a given Test are `bdq:Empty`.
+The Test Conformance Testing Data are organized as two flat CSV files. Each row in each file is intended for the evaluation of a single behavior of a single Test, that is, each row represents a single test case. The file has columns identifying the Test, the input data, the expected `Response.status`, `Response.result`, an example `Response.comment`, `Parameter` values (if any), and a set of [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021). Most of the terms for a given Test are `bdq:Empty`.
 
-The Test Validation Data records are all fragmentary [Simple Darwin Core](https://dwc.tdwg.org/simple/) (Wieczorek et al. 2012) dwc:Occurrence records. Each row contains values for only those Darwin Core terms that are relevant input to the particular `Validation` and consists of a mixture of real and artificial data. The validation data consist of over 1100 records, with an average of about 10 validation cases for each Test (designed to exercise all of the decision pathways in the specification of the Test (that is, all paths within each Expected Response)). The set of rows for a given Test are intended to be sufficient to validate that an implementation of that particular Test performs as expected against the specification.
+The Test Conformance Testing Data records are all fragmentary [Simple Darwin Core](https://dwc.tdwg.org/simple/) (Wieczorek et al. 2012) dwc:Occurrence records. Each row contains values for only those Darwin Core terms that are relevant input to the particular cate and consists of a mixture of real and artificial data. The conformance testing data consist of over 1100 records, with an average of about 10 cases for each Test (designed to exercise all of the decision pathways in the specification of the Test (that is, all paths within each Expected Response)). The set of rows for a given Test are intended to be sufficient to validate that an implementation of that particular Test performs as expected against the specification.
 
-#### 8.1.1 DataID as a validation data record identifier (normative)
+#### 8.1.1 DataID as a conformance testing data record identifier (normative)
 
-Test Validation Data rows SHOULD be uniquely identified within the validation dataset with a dataID.
+Test Conformance Testing Data rows SHOULD be uniquely identified within the conformance testing dataset with a dataID.
 
-Additional Test records can be readily generated or adapted from real data using the following template based on the specifications below. In consideration of the community, the `dataID` values MUST uniquely identify a `Validation` case for each additional Test data record and the resulting data SHOULD be added to the appropriate [TG2_test_validation_data*.csv](../../../../core/) file.
-Frameworks that validate Test implementations against the Test Validation Data SHOULD report failure cases including the `dataID` of the validation data for rows that did not validate.
+Additional Test records can be readily generated or adapted from real data using the following template based on the specifications below. In consideration of the community, the `dataID` values MUST uniquely identify a conformance test case for each additional Test data record and the resulting data SHOULD be added to the appropriate [TG2_test_validation_data.csv](./TG2_test_validation_data.csv) or [TG2_test_validation_data_nonprintingchars.csv](TG2_test_validation_data_nonprintingchars.csv) file. 
+Frameworks that validate Test implementations against the Test Conformance Testing Data SHOULD report failure cases including the `dataID` of the conformance testing data for rows that did not validate.
 
-### 8.2 Structure of the Test Validation Data (non-normative)
+### 8.2 Structure of the Test Conformance Testing Data (non-normative)
 
-The Test Validation Data are intended as input into a testing system that can evaluate the implementations of Tests, evaluating each Test independently. Each Test Validation Data record contains only the values of the `Information Elements` ([Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021)) for a single Test as input. A `Validation` framework is expected to present those `Information Elements` as input to a Test implementation and assesses whether the `Response` from the Test implementation for that input conforms to the expected `Response` values for that row in the Test Validation Data. 
+The Test Conformance Testing Data are intended as input into a testing system that can evaluate the implementations of Tests, evaluating each Test independently. Each Test Conformance Testing Data record contains only the values of the `Information Elements` ([Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021)) for a single Test as input. A conformance testing framework is expected to present those `Information Elements` as input to a Test implementation and assesses whether the `Response` from the Test implementation for that input conforms to the expected `Response` values for that row in the Test Conformance Testing Data.
 
-The Test Validation Data could be processed as input for unit tests using some unit testing framework for Test implementations, or it could be used as the basis for presenting synthetic records to a larger Test execution system. The Test Validation Data are designed to be used at a level where individual Tests are being assessed.  The structure of the validation data sits at a middle level of abstraction above the method signature specificity needed in unit tests and below the level of full system testing with complete Darwin Core records as inputs and rich `Data Quality Reports` as output.  That is, the structure of the Test Validation Data is generic, not specific to a particular Test, but still at a level that is examining individual Test implementations.
+The Test Conformance Testing Data could be processed as input for unit tests using some unit testing framework for Test implementations, or it could be used as the basis for presenting synthetic records to a larger Test execution system. The Test Conformance Testing Data are designed to be used at a level where individual Tests are being assessed.  The structure of the conformance testing data sits at a middle level of abstraction above the method signature specificity needed in unit tests and below the level of full system testing with complete Darwin Core records as inputs and rich `Data Quality Reports` as output.  That is, the structure of the Test Conformance Testing Data is generic, not specific to a particular Test, but still at a level that is examining individual Test implementations.
 
-The chosen level of abstraction for the Test Validation Data avoids forcing particular formats on `Data Quality Reports` as a whole, as the responses from individual Tests are validated, not `Data Quality Reports`.
+The chosen level of abstraction for the Test Conformance Testing Data avoids forcing particular formats on `Data Quality Reports` as a whole, as the responses from individual Tests are validated, not `Data Quality Reports`.
 
-The header for the data in the Test Validation Data files includes a column for each
-`Information Element` and each `Parameter` among all those used in the BDQ standard. Following are definitions for a subset of all columns in the Test Validation Data files:
+The header for the data in the Test Conformance Testing Data files includes a column for each
+`Information Element` and each `Parameter` among all those used in the BDQ standard. Following are definitions for a subset of all columns in the Test Conformance Testing Data files:
 
 | Column Name | Description |
 | ------ | ---------- |
-| Last Updated | The date on which this validation record was last updated. |
-| GitHub Issue | The URL of the GitHub issue number where rationale management of the Test under validation is maintained. |
+| Last Updated | The date on which this conformance test record was last updated. |
+| GitHub Issue | The URL of the GitHub issue number where rationale management of the Test under conformance testing is maintained. |
 | GitHubIssueNo | The last section of the GitHub Issue URL - a number, e.g., 20 can be found at https://github.com/tdwg/bdq/issues/20. |
-| GUID | The machine readable identifier for the Test under validation (the Term Name (rdf:value) for the Test), e.g., 69b2efdc-6269-45a4-aecb-4cb99c2ae134. |
+| GUID | The machine readable identifier for the Test being evaluated (the Term Name (rdf:value) for the Test), e.g., 69b2efdc-6269-45a4-aecb-4cb99c2ae134. |
 | Test Type | The type of the Test (i.e., `Validation`, `Issue`, `Amendment` or `Measure`. |
 | Label | The second two components of the full English Test label, for example 'COUNTRYCODE_STANDARD' (`concat(upper(Test Type),"\_",Label)` to get the Test rdfs:label.) |
 | Data Dimension | Does the Test apply to data that is essentially [NAME](../../../index.md#6-glossary-non-normative), [SPACE](../../../index.md#6-glossary-non-normative), [TIME](../../../index.md#6-glossary-non-normative) or [OTHER](../../../index.md#6-glossary-non-normative)? |
-| dataID | A local to the Test Validation Data unique integer to identify each Test Validation Data record. | 
+| dataID | A local to the Test Conformance Testing Data unique integer to identify each Test Conformance Testing Data record. | 
 | LineForTest | An local identifier for Test records within one Test. This is present for maintaining the sort order within a Test, and with two special cases: "88" when Input.data contains a NULL character and "99" when Input.data contains non-printing characters (both managed in a separate file). | 
 | Input.data | Data for the Information Elements that are required by the Specification for unambiguous running of the Test, (e.g., for [VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT](../../terms/bdqtest/index.md#VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT), dwc:country="México", dwc:countryCode="MX"). |
 | Output.data | For Amendments only and when Response.status="AMENDED", suggested changes to the Input.data to improve quality, in the same format as Input.data. |
 | Response.status | The status on applying the Test to the data record. For VALIDATIONS, one of the terms `EXTERNAL_PREREQUISITES_NOT_MET`, `INTERNAL_PREREQUISITES_NOT_MET` or `RUN_HAS_RESULT`. For AMENDMENTS, one of the terms `EXTERNAL_PREREQUISITES_NOT_MET`, `INTERNAL_PREREQUISITES_NOT_MET`, `FILLED_IN`, `AMENDED` or `NOT_AMENDED`. For ISSUE, one of the terms `INTERNAL_PREREQUISITES_NOT_MET` or `RUN_HAS_RESULT`. For MEASURES, either `RUN_HAS_RESULT` or `INTERNAL_PREREQUISITES_NOT_MET`. |
 | Response.result | The result of running the Test on the data record. For VALIDATIONS and AMENDMENTS, NULL where the Response.status is either `EXTERNAL_PREREQUISITES_NOT_MET`, `INTERNAL_PREREQUISITES_NOT_MET`. For VALIDATIONS, either `COMPLIANT` or `NOT_COMPLIANT` where Response.status is `RUN_HAS_RESULT`. For AMENDMENTS where Response.status is either `FILLED_IN` or `AMENDED`, the Response.result is a JSON structure containing a key:value list of Darwin Core terms and values for changes proposed by the AMENDMENT. For MEASURES, a resulting value or `NOT_REPORTED`. |
 | Response.comment | A human-readable example statement identifying the reason for the Test result given the input data. Implementations are not expected to produce this exact value. |
-| IssuesWithThisRow | A working column for recording issues while developing validation data. Used only for management while developing Test Validation Data. |
+| IssuesWithThisRow | A working column for recording issues while developing conformance testing data. Used only for management while developing Test Conformance Testing Data. |
 | bdq:annotation | A placeholder for an annotation when Testing for their presence (this value does not imply the existence of the term annotation in the bdq: namespace). |
 | bdq:sourceAuthority | Input parameter for some Parameterized Tests. |
 
@@ -1289,15 +1289,15 @@ The header for the data in the Test Validation Data files includes a column for 
 bdq:taxonomyIsMarine="https://invalid/invalidservice", dwc:decimalLatitude="", dwc:decimalLongitude="", dwc:scientificName=""
 ```
 
-### 8.3 Examples of the Data for Validating Tests (non-normative)
+### 8.3 Examples of the Data for Conformance Testing (non-normative)
 
-The validation files contain one column (e.g., `dwc:countryCode`) for each of [Dublin Core](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/) and [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) that are referenced as an `Information Element` somewhere in the BDQ standard, but only terms relevant to the particular validation case for the row are populated, therefore the validation files are sparse. They contain fragments of [Simple Darwin Core](https://dwc.tdwg.org/simple/) records. 
+The conformance testing files contain one column (e.g., `dwc:countryCode`) for each of [Dublin Core](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/) and [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) that are referenced as an `Information Element` somewhere in the BDQ standard, but only terms relevant to the particular case for the row are populated, therefore the conformance testing files are sparse. They contain fragments of [Simple Darwin Core](https://dwc.tdwg.org/simple/) records. 
 
-For example, given the header line for the Test Validation Data files:
+For example, given the header line for the Test Conformance Testing Data files:
 
 "LineNumber","dataID","LineForTest","GitHubIssueNo","GUID","Label","Response.status","Response.result","Response.comment","IssuesWithThisRow","bdq:annotation","bdq:sourceAuthority","dc:type","dcterms:license","dwc:acceptedNameUsageID","dwc:basisOfRecord","dwc:class","dwc:continent","dwc:coordinateUncertaintyInMeters","dwc:country","dwc:countryCode","dwc:county","dwc:dataGeneralizations","dwc:dateIdentified","dwc:day","dwc:decimalLatitude","dwc:decimalLongitude","dwc:endDayOfYear","dwc:establishmentMeans","dwc:eventDate","dwc:family","dwc:genus","dwc:geodeticDatum","dwc:higherClassification","dwc:higherGeography","dwc:higherGeographyID","dwc:infraspecificEpithet","dwc:island","dwc:islandGroup","dwc:kingdom","dwc:locality","dwc:locationID","dwc:maximumDepthInMeters","dwc:maximumElevationInMeters","dwc:minimumDepthInMeters","dwc:minimumElevationInMeters","dwc:month","dwc:municipality","dwc:occurrenceID","dwc:occurrenceStatus","dwc:order","dwc:originalNameUsageID","dwc:parentNameUsageID","dwc:phylum","dwc:scientificName","dwc:scientificNameAuthorship","dwc:scientificNameID","dwc:specificEpithet","dwc:startDayOfYear","dwc:stateProvince","dwc:subgenus","dwc:taxon","dwc:taxonConceptID","dwc:taxonID","dwc:taxonRank","dwc:verbatimCoordinateSystem","dwc:verbatimCoordinates","dwc:verbatimDepth","dwc:verbatimElevation","dwc:verbatimEventDate","dwc:verbatimLatitude","dwc:verbatimLocality","dwc:verbatimLongitude","dwc:verbatimSRS","dwc:vernacularName","dwc:waterBody","dwc:year","dwc:subfamily","dwc:superfamily","dwc:tribe","dwc:subtribe","dwc:genericName","dwc:infragenericEpithet","dwc:cultivarEpithet","dwc:individualCount","dwc:organismQuantity","dwc:footprintWKT","dwc:coordinatePrecision","dwc:namePublishedInYear","dwc:sex","dwc:typeStatus","dwc:pathway","dwc:degreeOfEstablishment","bdq:taxonIsMarine","bdq:geospatialLand","bdq:assumptionOnUnknownBiome","bdq:latestValidDate","bdq:earliestValidDate",
 
-a validation Test case evaluating `bdq:Empty`, where no `dwc:` term columns contain a value (dataID=1) would look like this:
+a conformance test case evaluating `bdq:Empty`, where no `dwc:` term columns contain a value (dataID=1) would look like this:
 
 "2","1","1","20","0493bcfb-652e-4d17-815b-b0cce0742fbe","VALIDATION_COUNTRYCODE_STANDARD","INTERNAL_PREREQUISITES_NOT_MET","","dwc:countryCode is EMPTY","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""
 
@@ -1309,18 +1309,18 @@ A `Validation` Test case for a `Validation` where the input data result in a `Re
 
 "9","8","8","20","0493bcfb-652e-4d17-815b-b0cce0742fbe","VALIDATION_COUNTRYCODE_STANDARD","RUN_HAS_RESULT","COMPLIANT","dwc countryCode is a valid ISO (ISO 3166-1-alpha-2 country codes) value","","","","","","","","","","","","US","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""
 
-### 8.4 Where to Get the Test Validation Data (non-normative)
+### 8.4 Where to Get the Test Conformance Testing Data (non-normative)
 
-The validation data are in two files, one containing normal data values, the other containing validation cases using non-printing characters.
+The conformance testing data are in two files, one containing normal data values, the other containing test cases containing non-printing characters.
 
-1. [TG2_test_validation_data.csv](../../../../core/TG2_test_validation_data.csv) - file containing data values that might be expected to be encountered in real-world data.
-2. [TG2_test_validation_data_nonprintingchars.csv](../../../../core/TG2_test_validation_data_nonprintingchars.csv) - file containing non-printing characters for testing implementation of `bdq:Empty`.
+1. [TG2_test_validation_data.csv](./TG2_test_validation_data.csv) - file containing data values that might be expected to be encountered in real-world data.
+2. [TG2_test_validation_data_nonprintingchars.csv](./TG2_test_validation_data_nonprintingchars.csv) - file containing non-printing characters for testing implementation of `bdq:Empty`.
 
 Both of these files have the same set of columns, but the latter has rows that contain input values for selected [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) that are either the `0x00` null character (e.g., `dwc:scientificName="0x00"`), or a pair of ASCII control characters (`0x0E` and `0x0F`, e.g., `dwc:day="0x0E0x0F`). This file is intended to validate that Test implementations are consistently evaluating inputs as consistent with the definition of `bdq:Empty`.
 
 The non-printing characters file MUST only be edited with a tool that will maintain the non-printing characters.
 
-Both files have a header line identifying the columns as described in [Structure of the Test Validation Data (non-normative)](#82-structure-of-the-validation-data-non-normative).
+Both files have a header line identifying the columns as described in [Structure of the Test Conformance Testing Data (non-normative)](#82-structure-of-the-test-conformance-testing-data-non-normative).
 
 The `Response` when executed against a row as input is expected to contain "Response.status", "Response.result" and "Response.comment". An implementation is expected to produce the exact `Response.status`, the exact `Response.result` (ignoring order of any key-value pairs for an `Amendment` `Response`), while `Response.comment` is an example of what a comment in English might look like.
 
@@ -1328,7 +1328,7 @@ Parameter values are specified in a `bdq:sourceAuthority` column, when more than
 
 Dublin Core and Darwin Core term input columns are specified with the appropriate namespace abbreviation prepended (e.g., `dc:type`, `dcterms:license`, `dwc:acceptedNameUsageID`).
 
-### 8.5 Implementation and the Validation Data (normative)
+### 8.5 Implementation and the Conformance Testing Data (normative)
 
 To be compliant with the BDQ standard, an implementation of a Test MUST fulfill all of the REQUIRED elements of this section.
 
@@ -1342,13 +1342,13 @@ Human readable `Data Quality Reports` for Quality Control MAY take any appropria
 
 `Response.status` and `Response.result` constants SHOULD be given internationalized labels as appropriate for the the consumers of `Data Quality Reports`.
 
-For each Test in an implementation, that Test MUST produce the same results as are specified in a row of the validation data for that Test, except when a `bdq:sourceAuthority` parameter specifies a source other than the default `sourceAuthority` specified for that Test.
+For each Test in an implementation, that Test MUST produce the same results as are specified in a row of the conformance testing data for that Test, except when a `bdq:sourceAuthority` parameter specifies a source other than the default `sourceAuthority` specified for that Test.
 
 ### 8.6 Existing Software tools (non-normative) 
 
-#### 8.6.1 Tools for Validating Test Implementations with the Validation Data (non-normative) 
+#### 8.6.1 Tools for Validating Test Implementations with the Conformance Testing Data (non-normative) 
 
-The `bdqtestrunner` tool (Morris, 2024), written in Java, was written to validate the implementations of the BDQ Tests in various FilteredPush data quality libraries against the Test Validation Data. This tool uses Java annotations on methods that implement Tests in order to match inputs from the validation data to methods under Test that implement individual Tests. The tool could be reused to validate implementations in other Java classes that follow the same use of `ffdq-api` (Lowery and Morris 2024).
+The `bdqtestrunner` tool (Morris, 2024), written in Java, was written to validate the implementations of the BDQ Tests in various FilteredPush data quality libraries against the Test Conformance Testing Data. This tool uses Java annotations on methods that implement Tests in order to match inputs from the conformance testing data to methods under Test that implement individual Tests. The tool could be reused to validate implementations in other Java classes that follow the same use of `ffdq-api` (Lowery and Morris 2024).
 
 Java annotations can be used to match Test implementation methods to Tests and `Information Elements` to method parameters. The [ffdq-api](https://github.com/kurator-org/ffdq-api) (Lowery and Morris 2024) provides a set of annotations intended to enable code using Java reflection to detect methods that implement particular Tests, and then again through Java reflection, bind Darwin Core terms and other `Information Elements` in input data onto appropriate method parameters.
 

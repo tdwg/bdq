@@ -212,12 +212,12 @@ The Test definitions are provided in various serializations. Of these, the bdqte
 - [**Tests in Turtle**](dist/bdqtest.ttl)
 - [**Tests in JSON-LD**](dist/bdqtest.json)
 
-#### 2.6.2 Test Validation Data (non-normative)
+#### 2.6.2 Test Conformance Testing Data (non-normative)
 
-Test Validation Data are intended for implementers to use to evaluate whether Test Implementations produce the Expected Responses.
+Test Confomance Testing Data are intended for implementers to use to evaluate whether Test Implementations produce the Expected Responses.
 
-- [**Test Validation Data**](docs/guide/implementers/TG2_test_validation_data.csv)
-- [**Test Validation Data for non-printing characters**](docs/guide/implementers/TG2_test_validation_data_nonprintingchars.csv)
+- [**Test Conformance Testing Data**](docs/guide/implementers/TG2_test_validation_data.csv)
+- [**Test Conformance Testing Data for non-printing characters**](docs/guide/implementers/TG2_test_validation_data_nonprintingchars.csv)
 
 #### 2.6.3 Fitness For Use Framework (non-normative)
 
@@ -236,7 +236,7 @@ The Fitness For Use Framework is provided as an OWL ontology.
 
 #### 3.1 Java Implementation (non-normative)
 
-While not part of the BDQ standard, a validated Java® implementation of the tests is provided in the [event_date_qc](https://github.com/FilteredPush/event_date_qc), [sci_name_qc](https://github.com/FilteredPush/sci_name_qc), [geo_ref_qc](https://github.com/FilteredPush/geo_ref_qc) and [rec_occur_qc](https://github.com/FilteredPush/rec_occur_qc) libraries.  Also see [bdqtestrunner](https://github.com/FilteredPush/bdqtestrunner/), which demonstrates conformance of these libraries with the provided [Test Validation Data](#262-test-validation-data-non-normative).      
+While **not part of the BDQ standard**, a validated Java® implementation of the tests is provided in the [event_date_qc](https://github.com/FilteredPush/event_date_qc), [sci_name_qc](https://github.com/FilteredPush/sci_name_qc), [geo_ref_qc](https://github.com/FilteredPush/geo_ref_qc) and [rec_occur_qc](https://github.com/FilteredPush/rec_occur_qc) libraries.  Also see [bdqtestrunner](https://github.com/FilteredPush/bdqtestrunner/), which demonstrates conformance of these libraries with the provided [Test Conformance Testing Data](#262-test-validation-data-non-normative).      
 
 ## 4 Design of the Tests (normative)
 
@@ -289,9 +289,9 @@ The São Paulo Research Foundation (FAPESP), the Universidade de São Paulo (USP
 
 We recognize four people as authors of the standard, having contributed consistently over the last decade and having been heavily engaged in writing the BDQ Test Descriptions and the documentation for the BDQ standard.
 
-- **Lee Belbin (Blatant Fabrications Pty Ltd)**: Convener of TDWG Data Quality Task Group 2 (Data Quality Tests and Assertions); Test descriptions; author of the BDQ standard documents; Test Validation Data.
+- **Lee Belbin (Blatant Fabrications Pty Ltd)**: Convener of TDWG Data Quality Task Group 2 (Data Quality Tests and Assertions); Test descriptions; author of the BDQ standard documents; Test Conformance Testing Data.
 - **Arthur D Chapman (Australian Biodiversity Information Services)**: Co-convener of the TDWG Data Quality Interest Group; Test descriptions; author of the BDQ standard documents; vocabularies. 
-- **Paul J Morris (Museum of Comparative Zoology, Harvard University)**: Test descriptions; Fitness For Use Framework ontology; Java Test implementations in filteredpush packages; author of the BDQ standard documents; Test Validation Data. 
+- **Paul J Morris (Museum of Comparative Zoology, Harvard University)**: Test descriptions; Fitness For Use Framework ontology; Java Test implementations in filteredpush packages; author of the BDQ standard documents; Test Conformance Testing Data. 
 - **John Wieczorek (Rauthiflor LLC)**: Test descriptions; Test implementations; author of the BDQ standard documents; Darwin Core liaison.
 
 #### 5.2.2 Contributors (non-normative)

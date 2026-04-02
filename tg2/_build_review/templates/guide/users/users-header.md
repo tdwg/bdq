@@ -345,7 +345,7 @@ For each Test, the [BDQ Tests Quick Reference Guide](../../terms/bdqtest/index.m
 
 The Quick Reference Guide also identifies whether a Test operates on `Single Records` or a `Multi Record` (a dataset). A brief description of what the Test is intended to do follows, with a more detailed description for implementers, consisting of `Expected Response`, `Information Elements` `Acted Upon` and `Consulted`, any `Parameters` that could change the behavior of the Tests, default values for any `Parameters` or `bdq:sourceAuthority` consulted by the Test.
 
-Two Examples of Test data input and output are provided to illustrate opposing behaviors of the Test. For `Validation` Tests, one example provides a `Response.result`="COMPLIANT", the other "NOT_COMPLIANT". See the [BDQ Implementer's Guide](../implementers/index.md) for information about Test Validation Data. 
+Two Examples of Test data input and output are provided to illustrate opposing behaviors of the Test. For `Validation` Tests, one example provides a `Response.result`="COMPLIANT", the other "NOT_COMPLIANT". See the [BDQ Implementer's Guide](../implementers/index.md) for information about data for Conformance Testing of Test implementations. 
 
 Each Test lists `Use Cases` describing `Data Quality Needs` to which each Test is applicable. Notes provide additional guidance for understanding Test results and for implementation.
 

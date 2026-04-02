@@ -46,6 +46,7 @@ Draft Standard for Review
   - [1.5 Namespace abbreviations (non-normative)](#15-namespace-abbreviations-non-normative)
 
 [2 Overview (non-normative)](#2-overview-non-normative)
+  - [2.1 Best Practices](#21-best-practices)
 
 [3 Defining a Use Case (non-normative)](#3-defining-a-use-case-non-normative)
   - [3.1 Define the Use Case and Fitness-for-Use Requirements (non-normative)](#31-define-the-use-case-and-fitness-for-use-requirements-non-normative)
@@ -89,41 +90,34 @@ Draft Standard for Review
     - [6.9.1 Summary of the Test Definition](#691-summary-of-the-test-definition)
     - [6.9.2 Iterate](#692-iterate)
 
-[7 Validation and Community (The "Real-World")](#7-validation-and-community-the-real-world)
+[7 Test Validation and Community Feedback (The "real-world")](#7-test-validation-and-community-feedback-the-real-world)
   - [7.1 Implementation (non-normative)](#71-implementation-non-normative)
   - [7.2 Unit Tests (non-normative)](#72-unit-tests-non-normative)
-  - [7.3 Test Validation Data and Edge Cases (non-normative)](#73-test-validation-data-and-edge-cases-non-normative)
-    - [7.3.1 Example Test Validation Data (non-normative)](#731-example-test-validation-data-non-normative)
-    - [7.3.2 Validation data for our proposed VALIDATION_WASATTRIBUTEDTO_STANDARD Test (non-normative)](#732-validation-data-for-our-proposed-validation_wasattributedto_standard-test-non-normative)
-    - [7.3.3 Enumerating Test Validation Data (non-normative)](#733-enumerating-test-validation-data-non-normative)
+  - [7.3 Data for Conformance Testing and Edge Cases (non-normative)](#73-data-for-conformance-testing-and-edge-cases-non-normative)
+    - [7.3.1 Example Conformance Testing Data (non-normative)](#731-example-conformance-testing-data-non-normative)
+    - [7.3.2 Conformance testing data for our proposed VALIDATION_WASATTRIBUTEDTO_STANDARD Test (non-normative)](#732-conformance-testing-data-for-our-proposed-validation_wasattributedto_standard-test-non-normative)
+    - [7.3.3 Enumerating Test Conformance Data (non-normative)](#733-enumerating-test-conformance-data-non-normative)
   - [7.4 Execution Frameworks (non-normative)](#74-execution-frameworks-non-normative)
     - [7.4.1 What an execution framework must do between raw data and a Test implementation (non-normative)](#741-what-an-execution-framework-must-do-between-raw-data-and-a-test-implementation-non-normative)
 
-[8 Best Practices](#8-best-practices)
+[8 Use an implementation for Quality Control (non-normative)](#8-use-an-implementation-for-quality-control-non-normative)
+  - [8.1 MultiRecord Measures for Quality Control (non-normative)](#81-multirecord-measures-for-quality-control-non-normative)
+    - [8.1.1 What a MultiRecord Measure takes as input (non-normative)](#811-what-a-multirecord-measure-takes-as-input-non-normative)
+    - [8.1.2 Two common patterns of MultiRecord Measures](#812-two-common-patterns-of-multirecord-measures)
+    - [8.1.3 Interpreting MultiRecord measures under Quality Control](#813-interpreting-multirecord-measures-under-quality-control)
+    - [8.1.3.1 Constrast with Quality Assurance.](#8131-constrast-with-quality-assurance)
+    - [8.1.4 A worked example (building on VALIDATION_FOOTPRINTWKT_NOTEMPTY)](#814-a-worked-example-building-on-validation_footprintwkt_notempty)
+    - [8.1.5 Practical note: summary values vs. details](#815-practical-note-summary-values-vs-details)
+  - [8.2 Quality Control Workflow (non-normative)](#82-quality-control-workflow-non-normative)
+    - [8.2.1 Start with patterns, not individual records](#821-start-with-patterns-not-individual-records)
+    - [8.2.2 Look for point causes and systemic errors](#822-look-for-point-causes-and-systemic-errors)
+    - [8.2.3 Focus on Results](#823-focus-on-results)
+    - [8.2.4 Prioritize work for greatest impact](#824-prioritize-work-for-greatest-impact)
+    - [8.2.5 Close the loop: re-run Tests to confirm improvements](#825-close-the-loop-re-run-tests-to-confirm-improvements)
+  - [8.3 Quality Assurance Workflow (non-normative)](#83-quality-assurance-workflow-non-normative)
 
-[9 Use an implementation for Quality Control (non-normative)](#9-use-an-implementation-for-quality-control-non-normative)
-  - [9.1 MultiRecord Measures for Quality Control (non-normative)](#91-multirecord-measures-for-quality-control-non-normative)
-    - [9.1.1 What a MultiRecord Measure takes as input (non-normative)](#911-what-a-multirecord-measure-takes-as-input-non-normative)
-    - [9.1.2 Two common patterns of MultiRecord Measures](#912-two-common-patterns-of-multirecord-measures)
-    - [9.1.3 Interpreting MultiRecord measures under Quality Control](#913-interpreting-multirecord-measures-under-quality-control)
-    - [9.1.3.1 Constrast with Quality Assurance.](#9131-constrast-with-quality-assurance)
-    - [9.1.4 A worked example (building on VALIDATION_FOOTPRINTWKT_NOTEMPTY)](#914-a-worked-example-building-on-validation_footprintwkt_notempty)
-    - [9.1.5 Practical note: summary values vs. details](#915-practical-note-summary-values-vs-details)
-  - [9.2 Quality Control Workflow (non-normative)](#92-quality-control-workflow-non-normative)
-    - [9.2.1 Start with patterns, not individual records](#921-start-with-patterns-not-individual-records)
-    - [9.2.2 Look for point causes and systemic errors](#922-look-for-point-causes-and-systemic-errors)
-    - [9.2.3 Focus on Results](#923-focus-on-results)
-    - [9.2.4 Prioritize work for greatest impact](#924-prioritize-work-for-greatest-impact)
-    - [9.2.5 Close the loop: re-run Tests to confirm improvements](#925-close-the-loop-re-run-tests-to-confirm-improvements)
-  - [9.3 Quality Assurance Workflow (non-normative)](#93-quality-assurance-workflow-non-normative)
-
-[10 Round-Up](#10-round-up)
-  - [10.1 Summary of the BDQ Philosophy](#101-summary-of-the-bdq-philosophy)
-
-[12. Documentation and Review](#12-documentation-and-review)
-
-[14. Framework Integration](#14-framework-integration)
-  - [15. Next Steps](#15-next-steps)
+[9 Round-Up](#9-round-up)
+  - [9.1 Summary of the BDQ Philosophy](#91-summary-of-the-bdq-philosophy)
 
 [Acronyms (non-normative)](#acronyms-non-normative)
 
@@ -182,6 +176,19 @@ The simpler of the two Tests examined is VALIDATION_FOOTPRINTWKT_NOTEMPTY, which
 **Note** that a proposed **BDQ Maintenance Group** will be established to maintain the BDQ Standard. This group will take responsibility for advising on processes for editing the BDQ standard and evaluating new BDQ Tests, `Use Cases` and other components of the BDQ Standard.
 
 By following this workflow, you move from a human-centric research need to a machine-readable technical standard.
+
+### 2.1 Best Practices
+
+1. **Atomic Tests**: Make each Test evaluate one single simple aspect of data quality.
+1. **Start Simple**: Begin defining basic `Validation` Tests before considering more complex Tests and `Amendments`.
+1. **Consider Edge Cases**: Define Tests for empty values, nulls, whitespace, and out of range values.
+1. **Use Established Authorities**: Reference widely accepted standards when possible.
+1. **Generalize Appropriately**: Consider how different parts of the community might want to use a test in slightly different ways.
+1. **Document Assumptions**: Be explicit about why paricular choices were made in the development of a test including choices of default values.
+1. **Plan for Evolution**: Consider how tests might need to change over time.
+1. **Iterate**: Refine Tests based on implementation feedback and real-world data.
+1. **Conformance Test**: Evaluate whether Test implementations produce the expected outputs for a range of given inputs covering all decision paths in each Test.
+1. **Consider Test Interactions**: Consider how multiple tests might interact on the same data.
 
 ## 3 Defining a Use Case (non-normative)
 
@@ -822,24 +829,27 @@ Earlier we said _"Treat this `Use Case` definition (and everything else that fol
 
 This is a critical point in the process. We have now defined Tests that fill gaps in our `Use Case`, and we have defined these Tests in a way that is consistent with the principles of BDQ, and we have provided detailed specifications for these Tests.  However, we have not yet implemented these Tests, or thrown any real data at these Tests to see how they respond.  Thus, we should treat this as a first draft of the `Use Case` and Test definitions, and be prepared to iterate on these definitions based on implementation feedback and real-world data.
 
-## 7 Validation and Community (The "Real-World")
+## 7 Test Validation and Community Feedback (The "real-world")
 
-*No test is final until it is implemented and thrown at actual data to confirm it responds correctly.*
+*No Test is final until it is implemented and thrown at actual data to confirm it responds correctly.*
 
 ### 7.1 Implementation (non-normative)
 
-A Test specification may sound perfectly clear and straightforward to its writers, but it may not be clear to developers who are trying to implement the Test based on the specification.  The only way to confirm that a Test specification is clear and can be implemented correctly is to actually implement the Test based on the specification, and then throw real data at that implementation to see if it responds correctly.  Expect that an initial Test specification will need revision based on questions raised in implementation and on testing the behavior of the implementation against real world data.
+A Test specification may sound perfectly clear and straightforward to its writers, but it may not be clear to developers who are trying to implement the Test based on the specification.  In BDQ, the decision logic of a Test is expressed in the `hasExpectedResponse` and `hasAuthoritiesDefaults' properties of its `Specification`.  The only way to confirm that a Test specification is clear and can be implemented correctly is to actually implement the Test based on the specification, and then throw real data at that implementation to see if it responds correctly.  Expect that an initial Test specification will need revision based on questions raised in implementation and on testing the behavior of the implementation against real world data.
 
-BDQ is deliberately agnostic about programing languages and execution frameworks for Test implementations.
+BDQ is deliberately agnostic about programming languages and execution frameworks for Test implementations.
 
-A BDQ Test implementation has a consistent scope and API shape across languages:
+A BDQ Test implementation is expected to have a consistent scope and API shape across languages:
 
-* Inputs: the Information Element(s) Acted Upon (and any Consulted values if needed), plus optional Parameter(s) (e.g., `bdq:sourceAuthority`).
-* Logic (decision rules): evaluate the clauses in the specification (`hasExpectedResponse`) in order, returning the first matching outcome (handling EXTERNAL_PREREQUISITES_NOT_MET via exception/error handling where appropriate).
-Output: exactly one structured Response per run, always providing a Response.status and a Response.comment, and providing a Response.result only when Response.status indicates a result (typically RUN_HAS_RESULT).
+* Inputs: the `Information Element(s)` `Acted Upon` (and any `Consulted` values if needed), plus optional `Parameter(s)` (e.g., `bdq:sourceAuthority`).
+* Logic (decision rules): evaluate the clauses in the specification (`hasExpectedResponse`) in order, returning the first matching outcome (handling EXTERNAL_PREREQUISITES_NOT_MET via exception/error handling where appropriate).  
+* Output: exactly one structured Response per run, always providing a `Response.status` and a `Response.comment`, and providing a `Response.result` only when `Response.status` indicates a result (typically RUN_HAS_RESULT).
 
-BDQ keeps Tests portable by standardizing semantics (inputs, decision rules, outputs), but it leaves execution mechanics (binding to input data, orchestration of test execution) to whatever framework fits the implementer's environment.  This means that the behavior of the implementation of an individual Test should be tested in isolation, presenting the Test with known inputs, and confirming that the Test produces the expected outputs based on the logic of the decision rules in the specification.  This means that Test validation is expected to be performed on the level of individual Test implementations.
+BDQ keeps Tests portable by standardizing semantics (inputs, decision rules, outputs), but it leaves binding of raw data inputs to `InformationElements` and execution mechanics (orchestration of test execution) to whatever framework fits the implementer's environment.  This means that the behavior of the implementation of an individual Test should be tested in isolation, presenting the Test with known inputs, and confirming that the Test produces the expected outputs based on the logic of the decision rules in the specification.  This means that Test conformance testing is expected to be performed on the level of individual Test implementations.
 
+See also: 
+* [Responsibilities of a Test](../guide/implementers/index.md#651-responsibilities-of-a-test-non-normative) in the implementers guide.
+* [Responsibilities of a Test Execution Framework](../guide/implementers/index.md#66-responsibilities-of-a-test-execution-framework-non-normative) in the implementers guide.
 
 ### 7.2 Unit Tests (non-normative)
 
@@ -847,17 +857,17 @@ When implementing a Test, implementors are encouraged to use a test driven devel
 
 Unit tests, however, are integral parts of the code base for a test implementation, and thus do not provide a basis for confirming that different test implementations in different languages behave in the same ways when presented with identical inputs.
 
-### 7.3 Test Validation Data and Edge Cases (non-normative)
+### 7.3 Data for Conformance Testing and Edge Cases (non-normative)
 
-The documentation of a test should include validation data, providing inputs for a test, and for each input, providing the expected outputs for that test for those inputs.  Such a validation data set can be used to validate that any implementation of the test is responding as expected. 
+The documentation of a test should include conformance testing data.  Such conformance testing data should provide inputs for a test, and for each input, the expected outputs.  Such a conformance testing data set can be used to validate that any implementation of the test is responding as expected. 
 
-An implementation of a test then needs to be connected to a test validation harness that can read the example data for each test, present the test with the specified inputs, and confirm that the outputs from the test match the expected outputs for those inputs.  This is a critical step in confirming that a test implementation is correct and behaves as expected, and it is also a critical step in confirming that different implementations of the same test in different languages behave in the same way when presented with identical inputs.  It would also be possible to frame test validation data that has the same structure as the expected inputs for a `Use Case`, but such data are much harder to produce in a way that tests individual decision paths within individual tests in isolation, and thus it is more difficult to use such data to confirm that individual tests are behaving as expected.  If such integration test data include synthetic values, they should be marked so as to be clearly distinguishable from actual data. 
+An implementation of a test then needs to be connected to a conformance testing harness that can read the example data for each test, present the test with the specified inputs, and confirm that the outputs from the test match the expected outputs for those inputs.  This is a critical step in confirming that a test implementation is correct and behaves as expected, and it is also a critical step in confirming that different implementations of the same test in different languages behave in the same way when presented with identical inputs.  It would also be possible to frame conformance testing data that has the same structure as the expected inputs for a `Use Case`, but such data are much harder to produce in a way that tests individual decision paths within individual tests in isolation, and thus it is more difficult to use such data to confirm that individual tests are behaving as expected.  If such integration test data include synthetic values, they should be marked so as to be clearly distinguishable from actual data. 
 
 See also: [Guide to Marking and Identifying Synthetic and Modified Data](../guide/synthetic/index.md)
 
-#### 7.3.1 Example Test Validation Data (non-normative)
+#### 7.3.1 Example Conformance Testing Data (non-normative)
 
-The test validation data set that accompanies the BDQ implementer's guide includes these (and other) rows for VALIDATION_COUNTRYCODE_STANDARD, which is a test that evaluates whether the value in dwc:countryCode is a valid ISO 3166-1-alpha-2 country code.  
+The conformance testing data set that accompanies the BDQ implementer's guide includes these (and other) rows for VALIDATION_COUNTRYCODE_STANDARD, which is a test that evaluates whether the value in dwc:countryCode is a valid ISO 3166-1-alpha-2 country code.  
 
 | Label | dwc:countryCode | Response.status | Response.result | Response.comment | Term Name |
 | --- | --- | --- | --- | --- | --- |
@@ -868,15 +878,15 @@ The test validation data set that accompanies the BDQ implementer's guide includ
 | VALIDATION_COUNTRYCODE_STANDARD | Austria | RUN_HAS_RESULT | NOT_COMPLIANT | dwc:countryCode is not a valid ISO (ISO 3166-1-alpha-2 country codes) value  | 0493bcfb-652e-4d17-815b-b0cce0742fbe |
 | VALIDATION_COUNTRYCODE_STANDARD | ZZ | RUN_HAS_RESULT | COMPLIANT | dwc countryCode is a user- defined ISO 2-letter country code | 0493bcfb-652e-4d17-815b-b0cce0742fbe |
 
-This includes the human readable (Label) and machine readable identifiers (Term Name) for the Test, the input value for the Information Element being evaluated (dwc:countryCode), and the expected outputs for the test for that input value (Response.status, Response.result, Response.comment).  This validation data includes edge cases such as an empty value for dwc:countryCode, a valid ISO 3166-1-alpha-2 country code, an invalid ISO 3166-1-alpha-2 country code, a valid code for high seas taken from UN/Locode, and the user-defined ISO 2-letter country code ZZ.
+This includes the human readable (Label) and machine readable identifiers (Term Name) for the Test, the input value for the Information Element being evaluated (dwc:countryCode), and the expected outputs for the test for that input value (Response.status, Response.result, Response.comment).  This conformance testing data includes edge cases such as an empty value for dwc:countryCode, a valid ISO 3166-1-alpha-2 country code, an invalid ISO 3166-1-alpha-2 country code, a valid code for high seas taken from UN/Locode, and the user-defined ISO 2-letter country code ZZ.
 
 See also: 
 [VALIDATION_COUNTRYCODE_STANDARD](../list/bdqtest/index.md#bdqtest_0493bcfb-652e-4d17-815b-b0cce0742fbe) in the bdqtest: term-list document.
 [High Seas](../supplement/index.md#394-high-seas-non-normative) in the Supplement.
 
-#### 7.3.2 Validation data for our proposed VALIDATION_WASATTRIBUTEDTO_STANDARD Test (non-normative)
+#### 7.3.2 Conformance testing data for our proposed VALIDATION_WASATTRIBUTEDTO_STANDARD Test (non-normative)
 
-A possible set of test validation data for our proposed `VALIDATION_WASATTRIBUTEDTO_STANDARD` Test are: 
+A possible set of conformance testing data for our proposed `VALIDATION_WASATTRIBUTEDTO_STANDARD` Test are: 
 
 | Label | prov:wasAttributedTo | Response.status | Response.result | Response.comment |
 | --- | --- | --- | --- | --- |
@@ -900,26 +910,26 @@ A possible set of test validation data for our proposed `VALIDATION_WASATTRIBUTE
 | VALIDATION_WASATTRIBUTEDTO_STANDARD | https://orcid.org/0000-0001-5000-000 | RUN_HAS_RESULT | NOT_COMPLIANT | prov:wasAttributedTo does not match expected format (too short) |
 | VALIDATION_WASATTRIBUTEDTO_STANDARD | https://example.org/0000-0001-5000-0007 | RUN_HAS_RESULT | NOT_COMPLIANT | prov:wasAttributedTo does not match expected format (wrong domain; expected orcid.org) |
 
-Some of these test cases are "edge cases" that might not be immediately obvious to an implementer, such as the case where the value in prov:wasAttributedTo is whitespace only, or the case where there is a trailing slash at the end of the ORCID ID, or the case where there is a query string at the end of the ORCID ID, or the case where there is an extra digit at the end of the ORCID ID, or the case where there is an unexpected extra character at the end of the ORCID ID, or the case where there is leading or trailing whitespace around the ORCID ID, or the case where there is a fragment at the end of the ORCID ID.  These edge cases are important to include in the test validation data set because they help ensure that an implementation of this test will correctly handle these cases and not produce false positives or false negatives.
+Some of these test cases are "edge cases" that might not be immediately obvious to an implementer, such as the case where the value in prov:wasAttributedTo is whitespace only, or the case where there is a trailing slash at the end of the ORCID ID, or the case where there is a query string at the end of the ORCID ID, or the case where there is an extra digit at the end of the ORCID ID, or the case where there is an unexpected extra character at the end of the ORCID ID, or the case where there is leading or trailing whitespace around the ORCID ID, or the case where there is a fragment at the end of the ORCID ID.  These edge cases are important to include in the conformance testing data set because they help ensure that an implementation of this test will correctly handle these cases and not produce false positives or false negatives.
 
-Some of these tests also highlight hidden assumptions in our test specification, in particular, the assumption that the scheme in the ORCID ID is case-sensitive and the assumption that the host in the ORCID ID is case-sensitive.  By including these edge cases in our test validation data set, we can confirm that our test specification is clear about these assumptions and that implementations of this test will correctly handle these cases.
+Some of these tests also highlight hidden assumptions in our test specification, in particular, the assumption that the scheme in the ORCID ID is case-sensitive and the assumption that the host in the ORCID ID is case-sensitive.  By including these edge cases in our conformance testing data set, we can confirm that our test specification is clear about these assumptions and that implementations of this test will correctly handle these cases.
 
-Since the scheme (https) and host (orcid.org) in the ORCID ID are technically case-insensitive according to the URI specification, but our regex pattern is case-sensitive, we need to be clear in our test specification and in our test validation data that we are expecting the scheme and host to be in lowercase, and that if they are not, then the test should return NOT_COMPLIANT.  The case insensitivity scheme and host in the URI specification may well also mean that we want to revisit our regex pattern to allow for case-insensitivity in the scheme and host.  This is an example of a "pitfall for the naive" when defining a test.
+Since the scheme (https) and host (orcid.org) in the ORCID ID are technically case-insensitive according to the URI specification, but our regex pattern is case-sensitive, we need to be clear in our test specification and in our conformance testing data that we are expecting the scheme and host to be in lowercase, and that if they are not, then the test should return NOT_COMPLIANT.  The case insensitivity scheme and host in the URI specification may well also mean that we want to revisit our regex pattern to allow for case-insensitivity in the scheme and host.  This is an example of a "pitfall for the naive" when defining a test.
 
 So, we might want to change our default source authority to relax the regex pattern to allow for case-insensitivity in the scheme and host, and thus we might want to change our default source authority:
 * From: **hasAuthoritiesDefaults** bdq:sourceAuthority default = "Resolvable ORCID ID regex" `{[^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$]}`
 * To: **hasAuthoritiesDefaults** bdq:sourceAuthority default = "Resolvable ORCID ID regex" `{[^(?i:http(s){0,1}://orcid\.org/)\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$]}`
-And then change the validation data accordingly to reflect this change in the expected format for a compliant ORCID ID (so that the "HTTPS://orcid.org" and "https://ORCID.org" would be COMPLIANT).
+And then change the conformance testing data accordingly to reflect this change in the expected format for a compliant ORCID ID (so that the "HTTPS://orcid.org" and "https://ORCID.org" would be COMPLIANT).
 
-Note, that when evaluating whether a Test implementation responds as expected to a given input, the Response.status and Response.result must be exact matches, but the Response.comment only needs to be bdq:NotEmpty.  The Response.comment in the test validation data provides a general guide to implementers for what the comment could say for a given input, but more importantly provides documentation and explanation for that particular validation case.
+Note, that when evaluating whether a Test implementation responds as expected to a given input, the Response.status and Response.result must be exact matches, but the Response.comment only needs to be bdq:NotEmpty.  The Response.comment in the conformance testing data provides a general guide to implementers for what the comment could say for a given input, but more importantly provides documentation and explanation for that particular case.
 
-#### 7.3.3 Enumerating Test Validation Data (non-normative)
+#### 7.3.3 Enumerating Test Conformance Data (non-normative)
 
 **Purpose**: Ensure that a Test can be correctly implemented, and that the Test specification is clear, unambiguous, and has logic that handles real world data and edge cases.
 
 The only way to validate a test is to implement it and then throw sufficient examples of data at that test to confirm that it responds as expected, and that the Test specification is a good fit to real world data.
 
-To frame a Test validation data set, start with the `Expected Response`, split that into separate clauses, and add a test case for each clause, then examine the Test notes for any discussion of special cases, look a the distribution of real values of data in the wild and add additional data to ensure comprehensive coverage of the Test decision path under both likely to be encountered data and edge cases.
+To frame a Test conformance testing data set, start with the `Expected Response`, split that into separate clauses, and add a test case for each clause, then examine the Test notes for any discussion of special cases, look a the distribution of real values of data in the wild and add additional data to ensure comprehensive coverage of the Test decision path under both likely to be encountered data and edge cases.
 
 **Validation Process**:
 * Create comprehensive test data covering all decision paths in the Expected Response
@@ -964,10 +974,10 @@ The **Expected Response** "INTERNAL_PREREQUISITES_NOT_MET if prov:wasAttributedT
   * Response.result: NOT_COMPLIANT
   * Response.comment: prov:wasAttributedTo does not match expected format (trailing slash not allowed) 
 
-**Critical Thinking:** Both those defining a test and implementers must consider "pitfalls for the naive", and the domain experts defining a test are likely to percieve a different set of pitfalls from developers implementing a test.  Multiple iterations and a conversation mediated by test validation data is necessary for developing a robust test description.
+**Critical Thinking:** Both those defining a test and implementers must consider "pitfalls for the naive", and the domain experts defining a test are likely to percieve a different set of pitfalls from developers implementing a test.  Multiple iterations and a conversation mediated by test conformance testing data is necessary for developing a robust test description.
 
 See also: 
-* [Validation Test Implementations](../guide/implementers/index.md#8-validating-test-implementations-normative) in the BDQ Implementer's Guide.
+* [Conformance Testing Implementations](../guide/implementers/index.md#8-conformance-testing-implementations-normative) in the BDQ Implementer's Guide.
 
 ### 7.4 Execution Frameworks (non-normative)
 
@@ -1022,19 +1032,7 @@ A framework’s job is to act as the “adapter layer” that turns heterogeneou
 
 In short: BDQ keeps Tests portable by standardizing semantics (inputs, decision rules, outputs), while leaving execution mechanics (binding, orchestration, serialization) to whatever framework fits the implementer’s environment.
 
-## 8 Best Practices
-
-1. **Atomic Tests**: Make each Test evaluate one single simple aspect of data quality.
-1. **Start Simple**: Begin defining basic validation tests before considering more complex tests and amendments.
-1. **Consider Edge Cases**: Include tests for empty values, nulls, and whitespace.
-1. **Iterate**: Refine tests based on implementation feedback and real-world data.
-1. **Use Established Authorities**: Reference widely accepted standards when possible.
-1. **Generalize Appropriately**: Consider how different parts of the community might want to use a test in slightly different ways.
-1. **Document Assumptions**: Be explicit about why paricular choices were made in the development of a test including choices of default values.
-1. **Plan for Evolution**: Consider how tests might need to change over time.
-1. **Consider Test Interactions**: Consider how multiple tests might interact on the same data.
-
-## 9 Use an implementation for Quality Control (non-normative)
+## 8 Use an implementation for Quality Control (non-normative)
 
 So, for our `Use Case` **Validated Distribution Authority** we have identified a set of specific tests to evaluate whether some data set is fit for the purpose of being used as a "validated distribution authority" for biodiversity science.  
 
@@ -1048,7 +1046,7 @@ In listing a set of `Validations` for our `Use Case`, we are setting a `Validati
 
 For our **Validated Distribution Authority** `Use Case` we would likely wish to define one or more `Amendment` tests to propose changes to fix problems identified by the `Validations` that are relevant to that `Use Case`, but we won't explore these here.  Instead, we will focus on the `MultiRecord` `Measures` that we would want to use to evaluate the quality of a data set for this `Use Case`, and to track improvements in that quality as we find and fix errors in the data set.
 
-### 9.1 MultiRecord Measures for Quality Control (non-normative)
+### 8.1 MultiRecord Measures for Quality Control (non-normative)
 
 The Fittness For Use Framework is intended to support two different but related purposes: `Quality Control` and `Quality Assurance`.  `Quality Control` is the process of finding and fixing errors in a data set, while `Quality Assurance` is the process of filtering a data set down to a subset of records that are fit for some purpose.  Both of these processes rely on an examination of the the results of `SingleRecord` Tests, but they use those results in different ways.  The `Use Case` we have been working with in this tutorial is focused on `Quality Control` (we want to fix problems in a dataset of distributions that would itself be used to evaluate other datasets), so we will examine on how to use the results of `SingleRecord` Tests for that purpose.
 
@@ -1056,7 +1054,7 @@ This tutorial has focused on defining `SingleRecord` Tests (primarily `Validatio
 
 In the BDQ Fitness for Use Framework, that dataset-level view is provided by `MultiRecord` `Measures` (`bdqffdq:Measure` with resource type `bdqffdq:MultiRecord`). These `Measures` operate over the collection of Responses (i.e., `Assertions`) produced by running one or more `SingleRecord` Tests across all records in a dataset, and they return a **single summary value** in `Response.result` (either a single number, or one of `COMPLETE`/`NOT_COMPLETE`).
 
-#### 9.1.1 What a MultiRecord Measure takes as input (non-normative)
+#### 8.1.1 What a MultiRecord Measure takes as input (non-normative)
 
 A `MultiRecord` `Measure` does not typically examine raw input (e.g. Darwin Core) values directly. Instead, it uses as input the outputs of `SingleRecord` Tests — the set of Responses with their `Response.status`, `Response.result`, and `Response.comment`.   `MultiRecord` `Measures` can also be defined to take raw data as input, for example, a `MultiRecord` `Measure` could be defined to calculate the average dwc:individualCount across all records in a dataset, but we won't conider that use of `MultiRecord` `Measures` here.
 
@@ -1072,7 +1070,7 @@ Conceptually what we want to do with `MultiRecord` `Measures` is:
 
 This separation on `Resource Type` (`SingleRecord` or `MultiRecord`) is important: it keeps each `SingleRecord` Test atomic and easy to implement, while providing a consistent, standards-aligned way to summarize results for dataset-level decision making.
 
-#### 9.1.2 Two common patterns of MultiRecord Measures
+#### 8.1.2 Two common patterns of MultiRecord Measures
 
 BDQ includes (and encourages) two practical patterns of `MultiRecord` `Measures`:
 
@@ -1090,7 +1088,7 @@ These return `COMPLETE` if the dataset meets a dataset-level requirement derived
 
 While these measures are central to formal `Quality Assurance` filtering, they can also support `Quality Control` by providing a clear “done/not done” indicator for a dataset with respect to a selected `Use Case` and its included Tests.
 
-#### 9.1.3 Interpreting MultiRecord measures under Quality Control
+#### 8.1.3 Interpreting MultiRecord measures under Quality Control
 
 A key idea in `Quality Control` is that dataset-level metrics should be interpreted in the context of the `Use Case`:
 
@@ -1100,11 +1098,11 @@ A key idea in `Quality Control` is that dataset-level metrics should be interpre
 
 Because `MultiRecord` `Measures` return only a single value, they are often paired with reporting or visualization outside of the Framework (e.g., spreadsheets, dashboards, or issue lists) that link summary counts back to the specific records needing attention.
 
-#### 9.1.3.1 Constrast with Quality Assurance.
+#### 8.1.3.1 Constrast with Quality Assurance.
 
 In contrast, in `Quality Assurance`, the focus is on filtering records based on `SingleRecord` Test outcomes.  The mechanism for this in the Fittness for Use Framework is to define a `MultiRecord` `Measure` that returns `COMPLETE` if the dataset meets a dataset-level requirement derived from `SingleRecord` Test outcomes, and `NOT_COMPLETE` otherwise, and if `NOT_COMPLETE`, filter out records until the `Measure` returns `COMPLETE`.   When all the `MultiRecord` `Measures` of this sort for a `Use Case` (as specified by `Policy`) are 'COMPLETE`, the filtered data set is fit for use with respect to the selected `Use Case`.
 
-#### 9.1.4 A worked example (building on VALIDATION_FOOTPRINTWKT_NOTEMPTY)
+#### 8.1.4 A worked example (building on VALIDATION_FOOTPRINTWKT_NOTEMPTY)
 
 Suppose we run `VALIDATION_FOOTPRINTWKT_NOTEMPTY` on a dataset of 10,000 records.
 
@@ -1116,7 +1114,7 @@ A `Quality Control` workflow commonly includes at least these dataset-level meas
 
 These counts tell you, at a glance, whether the dataset is close to meeting the needs of the `Use Case`, and whether effort should be directed toward data completion, remediation, or improved ingestion/mapping.
 
-#### 9.1.5 Practical note: summary values vs. details
+#### 8.1.5 Practical note: summary values vs. details
 
 `MultiRecord` `Measures` are intentionally constrained to produce a single value in `Response.result`. If you need more detail than one number (for example, mean and standard deviation), implementations may place additional structured detail in `Response.qualifier` (as an extension point), while keeping `Response.result` to a single number as required for `Measure` outputs, but your preference should be to define additional `MultiRecord` `Measures` if you need multiple summary values, rather than overloading a single `Measure`, such as one `Measure` that counts Response.status `INTERNAL_PREREQUISITES_NOT_MET` and another that counts Response.result `NOT_COMPLIANT` outcomes.  Separating these into separate `Measures` keeps each `Measure` focused and easier to interpret and allows for more flexible reporting and visualization of the results to answer particular `Quality Control` questions.
 
@@ -1128,11 +1126,11 @@ In other words:
 
 This pattern supports interoperability while still enabling rich `Quality Control` reporting in practical systems.
 
-### 9.2 Quality Control Workflow (non-normative)
+### 8.2 Quality Control Workflow (non-normative)
 
 In contrast to `Quality Assurance`, which focuses on filtering a dataset down to records that are fit for a stated purpose, `Quality Control` focuses on *understanding* why data are not fit, and on identifying tractable actions that can improve quality over time. In practice, `Quality Control` is often iterative: run a suite of Tests, interpret the resulting `Data Quality Reports`, make targeted changes (to data, mappings, or workflows), and then re-run the Tests to confirm improvement.
 
-#### 9.2.1 Start with patterns, not individual records
+#### 8.2.1 Start with patterns, not individual records
 
 For real-world datasets, the number of `NOT_COMPLIANT` results can be large. A productive first step is to summarize results in ways that reveal patterns:
 
@@ -1143,7 +1141,7 @@ For real-world datasets, the number of `NOT_COMPLIANT` results can be large. A p
 
 These summaries help distinguish “many unique problems” from “one recurring problem”, and they help avoid spending time reviewing records one-by-one when the underlying cause is systematic.
 
-#### 9.2.2 Look for point causes and systemic errors
+#### 8.2.2 Look for point causes and systemic errors
 
 Many apparent record-level failures have *point causes*: a single upstream issue that propagates broadly when data are transformed, denormalized, or aggregated. Examples include:
 
@@ -1154,7 +1152,7 @@ Many apparent record-level failures have *point causes*: a single upstream issue
 
 A key Quality Control technique is therefore to ask: “Could these many failures be explained by a small number of causes?” Investigating this can have high leverage: fixing a single cause can remediate thousands of records (or prevent future errors at ingestion).
 
-#### 9.2.3 Focus on Results
+#### 8.2.3 Focus on Results
 
 `Response.status` values are useful for triage.  Look first to `RUN_HAS_RESULT` with `Response.result` = `NOT_COMPLIANT` for specific non-conformances that can be fixed.  In contrast, `INTERNAL_PREREQUISITES_NOT_MET` may be harder to interpret, they may come from some mixture of missing and uninterpretable values, and very likely (if you have designed the test suite well) are covered by `Validations` that test for empty and incorrectly formatted values.  
 
@@ -1169,7 +1167,7 @@ A key Quality Control technique is therefore to ask: “Could these many failure
 
 Treating these categories differently helps focus effort: “fill in missing values” and “standardize or correct values” are distinct work types with different feasibility and risk profiles.
 
-#### 9.2.4 Prioritize work for greatest impact
+#### 8.2.4 Prioritize work for greatest impact
 
 `Quality Control` can require substantial human effort, so prioritization matters. A practical prioritization approach is to consider:
 
@@ -1180,7 +1178,7 @@ Treating these categories differently helps focus effort: “fill in missing val
 
 Summaries from `MultiRecord` `Measures` (counts and completeness-style outcomes) are particularly helpful here: they provide quick indicators of where quality improvement will most increase fitness for purpose, and they support tracking progress over time.
 
-#### 9.2.5 Close the loop: re-run Tests to confirm improvements
+#### 8.2.5 Close the loop: re-run Tests to confirm improvements
 
 Quality Control actions should be followed by re-running the same Test suite (and regenerating `Data Quality Reports`) to verify that:
 
@@ -1191,76 +1189,25 @@ Quality Control actions should be followed by re-running the same Test suite (an
 This “run → analyze patterns → fix causes → re-run” loop is the core Quality Control workflow supported by the BDQ Tests and the Fitness for Use Framework.
 
 
-### 9.3 Quality Assurance Workflow (non-normative)
+### 8.3 Quality Assurance Workflow (non-normative)
 
 In contrast to `Quality Control`, which focuses on finding and fixing errors, `Quality Assurance` is about filtering a dataset down to a subset of records that are fit for some purpose.  The mechanism for this in the Fittness for Use Framework is to define a set of `MultiRecord` `Measures` that return `COMPLETE` if the dataset meets a dataset-level requirement derived from `SingleRecord` Test outcomes, and `NOT_COMPLETE` otherwise, and if `NOT_COMPLETE`, filter out records based on underlying `Validation` problems until the `Measure` returns `COMPLETE`.   When all the `MultiRecord` `Measures` of this sort for a `Use Case` (as specified by `Policy`) are 'COMPLETE`, the filtered data set is fit for use with respect to the selected `Use Case`.
 
 
-
-## 10 Round-Up
+## 9 Round-Up
 
 There are pitfalls in defining tests for the naive. Just make sure that the `Expected Response` doesn’t hide any edge cases. Easier said than done sometimes: 11 years work went into the BDQ standard, and we were often surprised by "emergent properties" and differing assumptions.  There are pitfalls in defining tests for the experienced.  
 
-Critical to the process of defining a new test is to iterate.  Start with a draft definition, create one or more independent implementations, have someone who isn't writing the implementation produce validation data (including looking at values found in the wild), validate the implemenation(s) against this data, and discuss any discrepancies between the expected and actual results.  In all but the most trivial cases, it will be necessary to iterate and refine the test specifications, test implementations, and the test validation data.  This process of iteration is critical for producing a robust test specification that is clear, unambiguous, and has logic that handles real world data and edge cases. 
+Critical to the process of defining a new test is to iterate.  Start with a draft definition, create one or more independent implementations, have someone who isn't writing the implementation produce conformance testing data (including looking at values found in the wild), validate the implemenation(s) against this data, and discuss any discrepancies between the expected and actual results.  In all but the most trivial cases, it will be necessary to iterate and refine the test specifications, test implementations, and the test conformance testing data.  This process of iteration is critical for producing a robust test specification that is clear, unambiguous, and has logic that handles real world data and edge cases. 
 
-### 10.1 Summary of the BDQ Philosophy
+### 9.1 Summary of the BDQ Philosophy
 
 Through these steps, the BDQ standard aims to be "comprehensive but not exhaustive". By providing clear rationale, identifying abstract `Information Elements`, and anchoring tests in community-vetted `Use Cases`, the standard creates a stable framework for biodiversity science.
 
-***********************************
-
-**TODO** Rework from here on, below not examined or integrated yet.
-
-## 12. Documentation and Review
-
-**Purpose**: Complete test specification for community review. Community
-Review will be determined and managed by the BDQ Maintenance Group.
-
-**Documentation Requirements**:
-
--   Clear rationale for test necessity
-
--   Examples of real-world data quality issues addressed
-
--   Implementation notes and warnings
-
--   Performance considerations
-
--   Relationship with other BDQ \`Tests\`
 
 
 
 
-## 14. Framework Integration
-
-This workflow integrates with the broader BDQ framework by:
-
--   **Connecting to Use Cases**: Tests are grounded in real user needs
-
--   **Supporting Fitness for Use**: Tests directly address data user
-    requirements
-
--   **Enabling Quality Reports**: Standardized responses support
-    automated reporting
-
--   **Facilitating Comparison**: Common structure allows comparison
-    across implementations
-
-### 15. Next Steps
-
-After completing this workflow:
-
-1.  The BDQ Maintenance Group will determine how new tests are proposed
-    from time to time – this may include templates for new Tests and
-    existing Test editing
-
-2.  Implement test in your chosen programming language
-
-3.  Validate implementation against test data
-
-4.  Integrate into data quality assessment pipeline
-
-5.  Contribute results back to the TDWG community
 
 ## Acronyms (non-normative)
 
