@@ -84,6 +84,7 @@ Draft Standard for Review
     - [6.7.1 Source Authority (non-normative)](#671-source-authority-non-normative)
     - [6.7.2 Generalize, add a parameter (non-normative)](#672-generalize-add-a-parameter-non-normative)
     - [6.7.3  Revisiting the Test Specification (non-normative)](#673--revisiting-the-test-specification-non-normative)
+    - [6.7.4 Clarifying Related Concepts (non-normative)](#674-clarifying-related-concepts-non-normative)
   - [6.8 Notes (non-normative)](#68-notes-non-normative)
     - [6.8.1 Example Complex Implementation Notes](#681-example-complex-implementation-notes)
   - [6.9 List the properties of the Test (non-normative)](#69-list-the-properties-of-the-test-non-normative)
@@ -800,6 +801,33 @@ Having asserted that a `bdq:sourceAuthority` is needed in the Test definition (a
 * **Description** Does value in prov:wasAttributedTo conform to the format of the bdq:sourceAuthority?
 * **Expected Response**  INTERNAL_PREREQUISITES_NOT_MET if prov:wasAttributedTo is bdq:Empty; COMPLIANT if the value in prov:wasAttributedTo conforms to the expected format of bdq:sourceAuthority; otherwise NOT_COMPLIANT.
 
+#### 6.7.4 Clarifying Related Concepts (non-normative)
+
+The concept of `Source Authority` can blur several related ideas including the authority itself (e.g. ORCID documentation/registry) an implementation strategy (e.g. regex validation of a resolvable ORCID URL) and a fixed string identifier (e.g. "Resolvable ORCID ID regex") that is used to identify the authority and implementation strategy in code.  It is important to be clear about these related concepts when defining a Test with a `Source Authority`.  The values in `Source Authority` should distinguish between "what is authoritative" from "how you check it." from "what you call it in code".  For example, for this Test, we have:  
+
+* **hasAuthoritiesDefaults** bdq:sourceAuthority default = "Resolvable ORCID ID regex" `{["^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$"]}`
+* **Parameter** bdq:sourceAuthority
+
+* Authority: ORCID documentation 
+* Fixed string identifier: "Resolvable ORCID ID regex"
+* Default checking mechanism: regex for resolvable form of ORCID IDs
+* Parameterization: allowing alternative acceptable forms
+  * Alternative checking mechanism: regex for non resolvable form of ORCID IDs
+
+Some Tests specify a `Source Authority` that is a controlled vocabulary which has a defined set of acceptable values and is also available at an API endpoint.
+
+For example [VALIDATION_PHYLUM_FOUND](../terms/index.md#VALIDATION_PHYLUM_FOUND):
+
+* **Expected Response** EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:phylum is bdq:Empty; COMPLIANT if the value of dwc:phylum is found as a value at the rank of Phylum in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
+* **hasAuthoritiesDefaults** bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
+* **Parameters** bdq:sourceAuthority
+
+* Authority: GBIF Backbone Taxonomy
+* Fixed string identifier: "GBIF Backbone Taxonomy"
+* Default checking mechanism: API endpoint: [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]
+* Parameterization: allowing alternative acceptable forms
+  * Alternative checking mechanism: API endpoint for another taxonomic authority
+
 ### 6.8 Notes (non-normative)
 
 Notes are present when some aspects of a Test may not be obvious to the casual user or implementer, or if we want to describe aspects of the behaivior of the Test in a non-normative way. 
@@ -1091,17 +1119,23 @@ See also:
 
 ## 8 Use an implementation for Quality Control (non-normative)
 
-So, for our `Use Case` **Validated Distribution Authority** we have identified a set of specific tests to evaluate whether some data set is fit for the purpose of being used as a "validated distribution authority" for biodiversity science.  
+So, for our `Use Case` **Validated Distribution Authority** we have identified a set of specific Tests to evaluate whether some data set is fit for the purpose of being used as a "validated distribution authority" for biodiversity science.  
 
-The Fitness for Use Framework enables Tests to be used for either `Quality Control` (finding and fixing errors), or `Quality Assurance` (filtering a data set down to a subset of records that are fit for some purpose).
+The Fitness For Use Framework is designed to support two different but related purposes: `Quality Control` and `Quality Assurance`.  `Quality Control` is the process of finding and fixing errors in a data set, while `Quality Assurance` is the process of filtering a data set down to a subset of records that are fit for some purpose.  
 
-Implicit in our `Use Case`, and we will want to spell this out explicitly (again, iterate), is that we want to use the results of these tests to find and fix errors in a data set, thus improving the quality of the data set for this purpose, that is, our `Use Case` is focused on `Quality Control`.  
+Implicit in our `Use Case`, and we will want to spell this out explicitly (again, iterate), is that, in this **Validated Distribution Authority** `Use Case`, we want to use the results of Tests to find and fix errors in a data set, thus improving the quality of the data set for this purpose, that is, our `Use Case` is focused on `Quality Control`. 
 
-The mechanism that the Fitness for Use Framework uses for both of these is `MultiRecord` `Measures`, which are measures that take the results of multiple records from one or more tests, and combine those results in some way to produce a measure of the quality of the data set as a whole for some purpose.  For example, we could have a `MultiRecord Measure` that takes the results of the VALIDATION_FOOTPRINTWKT_NOTEMPTY test for all records in a data set, and counts the number of records that are COMPLIANT with that test, combining this count with the number of records in the data set gives us a measure of how many records are missing values in the dwc:footprintWKT field in that data set.  
+The formal mechanism that the Fitness for Use Framework provides to support both `Quality Control` and `Quality Assurance` is the use of `MultiRecord` `Measures`.  These ``MultiRecord` `Measures`  take as input the output results from `SingleRecord` Tests over multiple records, and combine those results in some way to produce a measure of the quality of the data set as a whole for some purpose.  For example, we could have a `MultiRecord` `Measure` that takes the results of the VALIDATION_FOOTPRINTWKT_NOTEMPTY Test for all records in a data set, and counts the number of records that are COMPLIANT with that Test, combining this count with the number of records in the data set gives us a measure of how many records are missing values in the `dwc:footprintWKT` field in that data set.  
+
+Both `Quality Control` and `Quality Assurance` rely on an examination of the the results of `SingleRecord` Tests, but they use those results in different ways.
+
+It is important to recognize that BDQ does not standardize full `Quality Control` or `Quality Assurance` workflows; it standardizes the semantics of Tests and their Responses and provides `Measure` patterns to support `Quality Control` and `Quality Assurance` workflows.  
 
 In listing a set of `Validations` for our `Use Case`, we are setting a `Validation Policy` for the `Use Case`.  A `Validation Policy` is the set of `Validations` that are relevant to a particular `Use Case`.   A `Use Case` also has an 'Amendment Policy' (the set of `Amendments` that are relevant to that `Use Case`) and a 'Measurement Policy' (the set of `Measures` that are relevant to that `Use Case`), and an `Issue Policy` (the set of `Issues` that are relevant to that `Use Case`).
 
-For our **Validated Distribution Authority** `Use Case` we would likely wish to define one or more `Amendment` tests to propose changes to fix problems identified by the `Validations` that are relevant to that `Use Case`, but we won't explore these here.  Instead, we will focus on the `MultiRecord` `Measures` that we would want to use to evaluate the quality of a data set for this `Use Case`, and to track improvements in that quality as we find and fix errors in the data set.
+Informally, to perform `Quality Control` we could run the set of `Validation` Tests in the `Validation Policy` for our `Use Case`, and simply examine the outputs for NOT_COMPLIANT `Response.result` values, and then locate and fix those problems in the data set.  BDQ does not constrain how we do that examination and fixing, but it does provide a standard way to report the results of those `Validations` (the `Data Quality Report`), and it provides a standard way to summarize those results across records in the data set (the `MultiRecord` `Measures`) to help us prioritize and track our `Quality Control` efforts. 
+
+For our **Validated Distribution Authority** `Use Case` we would likely wish to define one or more `Amendment` Tests to propose changes to fix problems identified by the `Validations` that are relevant to that `Use Case`, but we won't explore these here.  Instead, we will focus on the `MultiRecord` `Measures` that we would want to use to evaluate the quality of a data set for this `Use Case`, and to track improvements in that quality as we find and fix errors in the data set.
 
 See also:
 - [Quality Control and Quality Assurance](../guide/users/index.md#21-quality-control-and-quality-assurance-non-normative) in the User's Guide.
@@ -1110,7 +1144,7 @@ See also:
 
 ### 8.1 MultiRecord Measures for Quality Control (non-normative)
 
-The Fitness For Use Framework is intended to support two different but related purposes: `Quality Control` and `Quality Assurance`.  `Quality Control` is the process of finding and fixing errors in a data set, while `Quality Assurance` is the process of filtering a data set down to a subset of records that are fit for some purpose.  Both of these processes rely on an examination of the the results of `SingleRecord` Tests, but they use those results in different ways.  The `Use Case` we have been working with in this tutorial is focused on `Quality Control` (we want to fix problems in a dataset of distributions that would itself be used to evaluate other datasets), so we will examine on how to use the results of `SingleRecord` Tests for that purpose.
+The `Use Case` we have been working with in this tutorial is focused on `Quality Control` (we want to fix problems in a dataset of distributions that would itself be used to evaluate other datasets), so we will examine on how the Fitness for Use Framework supports using the results of `SingleRecord` Tests for that purpose.
 
 This tutorial has focused on defining `SingleRecord` Tests (primarily `Validations`) that evaluate one record at a time. In practice, `Quality Control` almost always requires a dataset-level view: curators, data managers, and developers need to know **how prevalent** a particular problem is, **where** it occurs, and **whether** proposed changes would measurably improve fitness for a `Use Case`.
 
@@ -1250,21 +1284,21 @@ Quality Control actions should be followed by re-running the same Test suite (an
 
 This “run → analyze patterns → fix causes → re-run” loop is the core Quality Control workflow supported by the BDQ Tests and the Fitness for Use Framework.
 
-
 ### 8.3 Quality Assurance Workflow (non-normative)
 
-In contrast to `Quality Control`, which focuses on finding and fixing errors, `Quality Assurance` is about filtering a dataset down to a subset of records that are fit for some purpose.  The mechanism for this in the Fitness for Use Framework is to define a set of `MultiRecord` `Measures` that return `COMPLETE` if the dataset meets a dataset-level requirement derived from `SingleRecord` Test outcomes, and `NOT_COMPLETE` otherwise, and if `NOT_COMPLETE`, filter out records based on underlying `Validation` problems until the `Measure` returns `COMPLETE`.   When all the `MultiRecord` `Measures` of this sort for a `Use Case` (as specified by `Policy`) are `COMPLETE`, the filtered data set is fit for use with respect to the selected `Use Case`.
+In contrast to `Quality Control`, which focuses on finding and fixing errors, `Quality Assurance` is about filtering a dataset down to a subset of records that are fit for some purpose.  The mechanism to support this provided by the Fitness for Use Framework is the use of a set of `MultiRecord` `Measures` that return `COMPLETE` if the dataset meets a dataset-level requirement derived from `SingleRecord` Test outcomes, and `NOT_COMPLETE` otherwise.  Then, if some set of `Measures` in the `Use Case's` `MeasurementPolicy` are `NOT_COMPLETE`, data are filtered out of the dataset based on underlying `Validation` problems until the set `Measures` all return `COMPLETE`.   When all the `MultiRecord` `Measures` of this sort for a `Use Case` (as specified by `Policy`) are `COMPLETE`, the filtered data set is fit for use with respect to the selected `Use Case`.   
+
+BDQ does not constrain how workflows may perform `Quality Assurance`, but it does provide a standard means for defining dataset-level requirements where `SingleRecord` Test outcomes, potentially modified by adopting proposals for improving the fittness of data from `Amendments` can be aggregated and measured for formal filtering of the data (using the `MultiRecord` `Measures`) to provide formal  `Quality Assurance` of a data set for a `Use Case`.
 
 ## 9 Round-Up
 
-There are pitfalls in defining tests for the naive. Just make sure that the `Expected Response` doesn’t hide any edge cases. Easier said than done sometimes: 11 years work went into the BDQ standard, and we were often surprised by "emergent properties" and differing assumptions.  There are pitfalls in defining tests for the experienced.  
+There are pitfalls in defining Tests for the naive. Just make sure that the `Expected Response` doesn’t hide any edge cases. Easier said than done sometimes: 11 years work went into the BDQ standard, and we were often surprised by "emergent properties" and differing assumptions.  There are pitfalls in defining Tests for the experienced.  
 
-Critical to the process of defining a new test is to iterate.  Start with a draft definition, create one or more independent implementations, have someone who isn't writing the implementation produce conformance testing data (including looking at values found in the wild), validate the implementation(s) against this data, and discuss any discrepancies between the expected and actual results.  In all but the most trivial cases, it will be necessary to iterate and refine the test specifications, test implementations, and the test conformance testing data.  This process of iteration is critical for producing a robust test specification that is clear, unambiguous, and has logic that handles real world data and edge cases. 
+Critical to the process of defining a new Test is to iterate.  Start with a draft definition, create one or more independent implementations, have someone who isn't writing the implementation produce conformance testing data (including looking at values found in the wild), validate the implementation(s) against this data, and discuss any discrepancies between the expected and actual results.  In all but the most trivial cases, it will be necessary to iterate and refine the Test specifications, Test implementations, and the Test conformance testing data.  This process of iteration is critical for producing a robust Test specification that is clear, unambiguous, and has logic that handles real world data and edge cases. 
 
 ### 9.1 Summary of the BDQ Philosophy
 
-Through these steps, the BDQ standard aims to be "comprehensive but not exhaustive". By providing clear rationale, identifying abstract `Information Elements`, and anchoring tests in community-vetted `Use Cases`, the standard creates a stable framework for biodiversity science.
-
+Through these steps, the BDQ standard aims to be "comprehensive but not exhaustive". By providing clear rationale, identifying abstract `Information Elements`, and anchoring Tests in community-vetted `Use Cases`, the standard creates a stable framework for evaluating data quality. The emphasis on iteration, conformance testing, and real-world edge cases helps ensure that Tests are not only theoretically sound but also practically effective in improving data fitness for biodiversity science.
 
 
 ## Acronyms (non-normative)
