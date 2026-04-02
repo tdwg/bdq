@@ -111,10 +111,10 @@ Draft Standard for Review
     - [8.1.4 A worked example (building on VALIDATION_FOOTPRINTWKT_NOTEMPTY)](#814-a-worked-example-building-on-validation_footprintwkt_notempty)
     - [8.1.5 Practical note: summary values vs. details](#815-practical-note-summary-values-vs-details)
   - [8.2 Quality Control Workflow (non-normative)](#82-quality-control-workflow-non-normative)
-    - [8.2.1 Start with patterns, not individual records](#821-start-with-patterns-not-individual-records)
-    - [8.2.2 Look for point causes and systemic errors](#822-look-for-point-causes-and-systemic-errors)
+    - [8.2.1 Start with Patterns, Not Individual Records](#821-start-with-patterns-not-individual-records)
+    - [8.2.2 Look for Point Causes and Systemic Errors](#822-look-for-point-causes-and-systemic-errors)
     - [8.2.3 Focus on Results](#823-focus-on-results)
-    - [8.2.4 Prioritize work for greatest impact](#824-prioritize-work-for-greatest-impact)
+    - [8.2.4 Prioritize Work for Greatest Impact](#824-prioritize-work-for-greatest-impact)
     - [8.2.5 Close the loop: re-run Tests to confirm improvements](#825-close-the-loop-re-run-tests-to-confirm-improvements)
   - [8.3 Quality Assurance Workflow (non-normative)](#83-quality-assurance-workflow-non-normative)
 
@@ -1212,7 +1212,7 @@ These counts tell you, at a glance, whether the dataset is close to meeting the 
 
 #### 8.1.5 Practical note: summary values vs. details
 
-`MultiRecord` `Measures` are intentionally constrained to produce a single value in `Response.result`. If you need more detail than one number (for example, mean and standard deviation), implementations may place additional structured detail in `Response.qualifier` (as an extension point), while keeping `Response.result` to a single number as required for `Measure` outputs, but your preference should be to define additional `MultiRecord` `Measures` if you need multiple summary values, rather than overloading a single `Measure`, such as one `Measure` that counts Response.status `INTERNAL_PREREQUISITES_NOT_MET` and another that counts Response.result `NOT_COMPLIANT` outcomes.  Separating these into separate `Measures` keeps each `Measure` focused and easier to interpret and allows for more flexible reporting and visualization of the results to answer particular `Quality Control` questions.
+`MultiRecord` `Measures` are intentionally constrained to produce a single value in `Response.result`. If you need more detail than one number (for example, mean and standard deviation), implementations may place additional structured detail in `Response.qualifier` (as an extension point), while keeping `Response.result` to a single number as required for the BDQ `Measure` outputs, but your preference should be to define additional `MultiRecord` `Measures` if you need multiple summary values, rather than overloading a single `Measure`, such as one `Measure` that counts Response.status `INTERNAL_PREREQUISITES_NOT_MET` and another that counts Response.result `NOT_COMPLIANT` outcomes.  Separating these into separate `Measures` keeps each `Measure` focused and easier to interpret and allows for more flexible reporting and visualization of the results to answer particular `Quality Control` questions.
 
 
 In other words:
@@ -1226,9 +1226,9 @@ This pattern supports interoperability while still enabling rich `Quality Contro
 
 In contrast to `Quality Assurance`, which focuses on filtering a dataset down to records that are fit for a stated purpose, `Quality Control` focuses on *understanding* why data are not fit, and on identifying tractable actions that can improve quality over time. In practice, `Quality Control` is often iterative: run a suite of Tests, interpret the resulting `Data Quality Reports`, make targeted changes (to data, mappings, or workflows), and then re-run the Tests to confirm improvement.
 
-#### 8.2.1 Start with patterns, not individual records
+#### 8.2.1 Start with Patterns, Not Individual Records
 
-For real-world datasets, the number of `NOT_COMPLIANT` results can be large. A productive first step is to summarize results in ways that reveal patterns:
+For real-world datasets, the number of `NOT_COMPLIANT` results can be large. A productive first step in a practical workflow is to summarize results in ways that reveal patterns:
 
 - **By `Test` (`Validation` / `Issue`)**: Which Tests fail most often? Which failures are most likely to affect your intended `Use Case`?
 - **By `Information Element`**: Are failures concentrated in a small set of terms (e.g., `dwc:countryCode`, `dwc:eventDate`, `dwc:scientificName`)?
@@ -1237,12 +1237,13 @@ For real-world datasets, the number of `NOT_COMPLIANT` results can be large. A p
 
 These summaries help distinguish “many unique problems” from “one recurring problem”, and they help avoid spending time reviewing records one-by-one when the underlying cause is systematic.
 
-#### 8.2.2 Look for point causes and systemic errors
+#### 8.2.2 Look for Point Causes and Systemic Errors
 
-Many apparent record-level failures have *point causes*: a single upstream issue that propagates broadly when data are transformed, denormalized, or aggregated. Examples include:
+Many record-level problems that appear as widespread in a data set have *point causes*: a single upstream issue that propagates broadly when data are transformed, denormalized, or aggregated. Examples include:
 
 - a mapping error that swaps fields or applies the wrong delimiter,
 - an export rule that adds leading/trailing whitespace,
+- an error in an authority table (such as a taxon name table) that propagates to many related records in denormalized exports (e.g. identifications),
 - a controlled vocabulary change that was not reflected in a pick-list,
 - a missing join key that causes large-scale loss of related values.
 
@@ -1250,7 +1251,7 @@ A key Quality Control technique is therefore to ask: “Could these many failure
 
 #### 8.2.3 Focus on Results
 
-`Response.status` values are useful for triage.  Look first to `RUN_HAS_RESULT` with `Response.result` = `NOT_COMPLIANT` for specific non-conformances that can be fixed.  In contrast, `INTERNAL_PREREQUISITES_NOT_MET` may be harder to interpret, they may come from some mixture of missing and uninterpretable values, and very likely (if you have designed the test suite well) are covered by `Validations` that test for empty and incorrectly formatted values.  
+`Response.status` values are useful for triage.  Look first to `RUN_HAS_RESULT` with `Response.result` = `NOT_COMPLIANT` for specific non-conformances that can be fixed.  In contrast, `INTERNAL_PREREQUISITES_NOT_MET` may be harder to interpret, they may come from a mixture of missing and uninterpretable values, and very likely (if you have designed the test suite well) are covered by `Validations` that test for empty and incorrectly formatted values.  
 
 - `RUN_HAS_RESULT` with `Response.result` = `NOT_COMPLIANT` indicates the Test ran and found a specific non-conformance. This often points to easily identifiable *fixable* issues such as:
   - Mismatch of values with a controlled vocabulary (e.g., 3 letter country codes used where 2 letter codes are required)
@@ -1263,7 +1264,7 @@ A key Quality Control technique is therefore to ask: “Could these many failure
 
 Treating these categories differently helps focus effort: “fill in missing values” and “standardize or correct values” are distinct work types with different feasibility and risk profiles.
 
-#### 8.2.4 Prioritize work for greatest impact
+#### 8.2.4 Prioritize Work for Greatest Impact
 
 `Quality Control` can require substantial human effort, so prioritization matters. A practical prioritization approach is to consider:
 
@@ -1278,27 +1279,27 @@ Summaries from `MultiRecord` `Measures` (counts and completeness-style outcomes)
 
 Quality Control actions should be followed by re-running the same Test suite (and regenerating `Data Quality Reports`) to verify that:
 
-- targeted corrections had the intended effect,
-- improvements did not create new failures elsewhere, and
-- quality has improved with respect to the selected `Use Case`.
+- Targeted corrections had the intended effect.
+- Improvements did not create new failures elsewhere.
+- Quality has improved with respect to the selected `Use Case`.
 
-This “run → analyze patterns → fix causes → re-run” loop is the core Quality Control workflow supported by the BDQ Tests and the Fitness for Use Framework.
+This “run → analyze patterns → fix causes → re-run” loop is a Quality Control workflow supported by the BDQ Tests and the Fitness for Use Framework.
 
 ### 8.3 Quality Assurance Workflow (non-normative)
 
-In contrast to `Quality Control`, which focuses on finding and fixing errors, `Quality Assurance` is about filtering a dataset down to a subset of records that are fit for some purpose.  The mechanism to support this provided by the Fitness for Use Framework is the use of a set of `MultiRecord` `Measures` that return `COMPLETE` if the dataset meets a dataset-level requirement derived from `SingleRecord` Test outcomes, and `NOT_COMPLETE` otherwise.  Then, if some set of `Measures` in the `Use Case's` `MeasurementPolicy` are `NOT_COMPLETE`, data are filtered out of the dataset based on underlying `Validation` problems until the set `Measures` all return `COMPLETE`.   When all the `MultiRecord` `Measures` of this sort for a `Use Case` (as specified by `Policy`) are `COMPLETE`, the filtered data set is fit for use with respect to the selected `Use Case`.   
+`Quality Assurance` is about filtering a dataset down to a subset of records that are fit for some purpose.  The mechanism to support this provided by the Fitness for Use Framework is the use of a set of `MultiRecord` `Measures` that return `COMPLETE` if the dataset meets a dataset-level requirement derived from `SingleRecord` Test outcomes, and `NOT_COMPLETE` otherwise.  Then, if some set of `Measures` in the `Use Case's` `MeasurementPolicy` are `NOT_COMPLETE`, data are filtered out of the dataset based on underlying `Validation` problems until the set `Measures` all return `COMPLETE`.   When all the `MultiRecord` `Measures` of this sort for a `Use Case` (as specified by `Policy`) are `COMPLETE`, the filtered data set is fit for use with respect to the selected `Use Case`.   
 
 BDQ does not constrain how workflows may perform `Quality Assurance`, but it does provide a standard means for defining dataset-level requirements where `SingleRecord` Test outcomes, potentially modified by adopting proposals for improving the fittness of data from `Amendments` can be aggregated and measured for formal filtering of the data (using the `MultiRecord` `Measures`) to provide formal  `Quality Assurance` of a data set for a `Use Case`.
 
 ## 9 Round-Up
 
-There are pitfalls in defining Tests for the naive. Just make sure that the `Expected Response` doesn’t hide any edge cases. Easier said than done sometimes: 11 years work went into the BDQ standard, and we were often surprised by "emergent properties" and differing assumptions.  There are pitfalls in defining Tests for the experienced.  
+Our eleven year journey with the development of BDQ illustrates that there are many pitfalls in defining Tests.  Make sure that the `Expected Response` doesn’t hide any edge cases, and that is often easier said than done.  The development of the BDQ standard often surprised us with "emergent properties" and differing assumptions.  There are pitfalls in defining Tests for both the experienced and the inexperienced.  
 
-Critical to the process of defining a new Test is to iterate.  Start with a draft definition, create one or more independent implementations, have someone who isn't writing the implementation produce conformance testing data (including looking at values found in the wild), validate the implementation(s) against this data, and discuss any discrepancies between the expected and actual results.  In all but the most trivial cases, it will be necessary to iterate and refine the Test specifications, Test implementations, and the Test conformance testing data.  This process of iteration is critical for producing a robust Test specification that is clear, unambiguous, and has logic that handles real world data and edge cases. 
+Critical to the process of defining a new Test is to iterate.  Start with a draft definition, create one or more independent implementations, have someone who isn't writing the implementation produce conformance testing data (including looking at values found in the wild), validate the implementation(s) against this data, and discuss any discrepancies between the expected and actual results.  It will usually be necessary to iterate and refine the Test specifications, Test implementations, and the Test conformance testing data.  This process of iteration is critical for producing a robust Test specification that is clear, unambiguous, and has logic that handles real world data and edge cases. 
 
 ### 9.1 Summary of the BDQ Philosophy
 
-Through these steps, the BDQ standard aims to be "comprehensive but not exhaustive". By providing clear rationale, identifying abstract `Information Elements`, and anchoring Tests in community-vetted `Use Cases`, the standard creates a stable framework for evaluating data quality. The emphasis on iteration, conformance testing, and real-world edge cases helps ensure that Tests are not only theoretically sound but also practically effective in improving data fitness for biodiversity science.
+Through these steps, the BDQ standard aims to be "comprehensive but not exhaustive". By providing clear rationale, identifying abstract `Information Elements`, and anchoring Tests in community-vetted `Use Cases`, the standard creates a stable framework for evaluating data quality. The emphasis on iteration, conformance testing, and real-world edge cases helps ensure that Tests are not only theoretically sound but also practically effective in improving data fitness for biodiversity data science.
 
 
 ## Acronyms (non-normative)
