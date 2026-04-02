@@ -100,7 +100,7 @@ See also:
 1. **Consider Edge Cases**: Define Tests for empty values, nulls, whitespace, and out of range values.
 1. **Use Established Authorities**: Reference widely accepted standards when possible.
 1. **Generalize Appropriately**: Consider how different parts of the community might want to use a test in slightly different ways.
-1. **Document Assumptions**: Be explicit about why paricular choices were made in the development of a test including choices of default values.
+1. **Document Assumptions**: Be explicit about why particular choices were made in the development of a test including choices of default values.
 1. **Plan for Evolution**: Consider how tests might need to change over time.
 1. **Iterate**: Refine Tests based on implementation feedback and real-world data.
 1. **Conformance Test**: Evaluate whether Test implementations produce the expected outputs for a range of given inputs covering all decision paths in each Test.
@@ -182,7 +182,7 @@ We can start with a simple presence check for each of these `Information Element
 
 We are looking for existing `Validation` Tests, as we are trying to assert whether data meets specific criteria (COMPLIANT vs. NOT_COMPLIANT).  By convention in BDQ, the names of these tests start with VALIDATION_.  Simple presence tests for "does an `Information Element` contain a value", by convention have a name that ends with  NOTEMPTY.   Between these two parts, again by convention, we use the name of the `Information Element` (or the name of a concept (e.g. LOCATION, EVENT) for several `Information Elements`).
 
-For example, [VALIDATION_SCIENTIFICNAME_NOTEMPTY](../terms/bdqtest/index.md#VALIDATION_SCIENTIFICNAMEID_NOTEMPTY) is a BDQ Test that checks if there is a value in dwc:scientificName.
+For example, [VALIDATION_SCIENTIFICNAME_NOTEMPTY](../terms/bdqtest/index.md#VALIDATION_SCIENTIFICNAME_NOTEMPTY) is a BDQ Test that checks if there is a value in dwc:scientificName.
 
 There are several places we could look for existing Tests within BDQ, including the [Quick Reference Guide](../terms/bdqtest/index.md), and the [index](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/list/bdqtest/index.md#31-index-to-validation-tests-non-normative) of the bdqtest: term-list document.  An easy place to look for Tests that operate on particular `Information Elements` is the Quick Reference Guide's [BDQ Test Index by Information Element Acted Upon](../terms/bdqtest/qrg_index_by_ie_actedupon.md).  
 
@@ -309,7 +309,7 @@ We choose VALIDATION for this test because we are asserting whether data meets s
 
 * **Test Type** Validation
 
-See Also: 
+See also: 
 * [Test Types](../bdqtest/index.md#22-test-types-non-normative) in the bdqtest: term-list document.
 * [Test Types](../guide/users/index.md#31-test-types-non-normative) in the User Guide.
 
@@ -341,7 +341,7 @@ This gives us the following names for the Test:
 * **Label** VALIDATION_FOOTPRINTWKT_NOTEMPTY
 * **Preferred Label** Validation dwc:footprintWKT Not Empty 
 
-See Also: the [Evaluations](../../index.md#62-evaluations-in-test-labels-non-normative) list in the landing page for the BDQ standard.
+See also: the [Evaluations](../../index.md#62-evaluations-in-test-labels-non-normative) list in the landing page for the BDQ standard.
 
 #### 4.4.2 Identifiers supporting software and developers (non-normative)
 
@@ -355,7 +355,7 @@ This gives us the following additional properties for the Test:
 
 (Once accepted into BDQ, these properties would be combined to form the fully qualified Term IRI for the Test (e.g. https://rs.tdwg.org/ bdqtest/terms/version/07c28ace-561a-476e-a9b9-3d5ad6e35933) and the Term Version IRI for a particular version of the Test (e.g. https://rs.tdwg.org/ bdqtest/terms/version/07c28ace-561a-476e-a9b9-3d5ad6e35933-2024-07-24))
 
-See Also: [Key to bdqtest: Vocabulary Terms](../list/bdqtest/index.md#110-key-to-vocabulary-terms-normative) in the bdqtest: term-list document.
+See also: [Key to bdqtest: Vocabulary Terms](../list/bdqtest/index.md#110-key-to-vocabulary-terms-normative) in the bdqtest: term-list document.
 
 ### 4.5 Identify the Data Quality Dimension and Criterion (non-normative)
 
@@ -460,7 +460,7 @@ See also:
 
 **Purpose**: If the Test references an external authoritative source, specify that source authority in the Test definition.
 
-In BDQ, if a Test references some external authoritative source, e.g. a controlled vocabulary, an authority file, a registry, etc., it is important to specify that source authority in the Test definition.  This allows implementers to know where to look for the authoritative information that they need to run the Test. The souurce authority also allows users of the Test results to understand the basis for the Test's logic.
+In BDQ, if a Test references some external authoritative source, e.g. a controlled vocabulary, an authority file, a registry, etc., it is important to specify that source authority in the Test definition.  This allows implementers to know where to look for the authoritative information that they need to run the Test. The source authority also allows users of the Test results to understand the basis for the Test's logic.
 
 The new Test is not referencing any external authoritative source.  We are simply checking for the presence of a value in `dwc:footprintWKT`, so there is no source authority to specify.  Note that the definition of `dwc:footprintWKT` in Darwin Core is authoritative for this Test, but we do not need to specify that as a source authority in the Test definition, as it is implicit in the use of the term `dwc:footprintWKT` itself.
 
@@ -502,7 +502,7 @@ See also:
 
 This simple list of properties is sufficient for a human reader to understand the Test and for a developer to implement the Test.  However, to formally express this Test in RDF we would need to add some more identifiers and structures, but the above are the key properties that define the Test and provide the information needed for an implementer to understand and implement the Test.  The [bdqffdq: ontology guide](../guide/bdqffdq/index.md) gives the details about the full formal structure.  We won't go into the details of the RDF representation here.
 
-See Also:
+See also:
 * [Diagram of Test Concepts](../guide/implementers/index.md#3-compliant-implementation-normative) in the implementers guide.
 * [Example RDF for a test](../bdqtest/index.md#24-example-rdf-non-normative) in the bdqtest: landing page (VALIDATION_COUNTRYCODE_STANDARD in an RDF/XML serialization).
 * [Example RDF for a test](../guide/bdqffdq/index.md#36-example-representation-of-a-bdq-test-non-normative) in the bdqffdq: ontology guide (VALIDATION_COUNTRY_FOUND in a Turtle serialization). 
@@ -594,7 +594,7 @@ In contrast, in another Test that evaluates whether the ORCID ID is valid by che
 
 ### 6.6 How many records are we examining at once? (non-normative)
 
-This Test would evaluate the value of `prov:wasAttributedTo` for each record, so we are applying this Test to single records, and thus this is a "SingleRecord" Test.
+This Test would evaluate the value of `prov:wasAttributedTo` for each record, so we are applying this Test to single records, and thus this is a `SingleRecord` Test.
 
 * **Resource Type** SingleRecord
 
@@ -621,7 +621,7 @@ But, where did that regular expression "^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\
 
 When a Test references some external authoritative source, e.g. a controlled vocabulary, an authority file, a registry, etc., outside of the BDQ namespaces (the ontology or vocabularies that form the BDQ standard), or the definition of terms used as `Information Elements`, we must specify that external dependency, that Source Authority in the Test definition.  
 
-As noted in the BDQ documentation, many aspects of 'data quality’ or 'fitness for use’ cannot be evaluated IF no authority exists to which to evaluate data values.  For example, we cannot evaluate whether a value is a valid ORCID ID if we do not have an authority that defines what a valid ORCID ID looks like.  In this case, the authority is the ORCID organization itself, which provides documentation on the expected format for ORCID IDs.  We can reference this authority in our Test definition, and then use the information from that authority to define the expected format for ORCID IDs in our Test specification.  This is an externallity we must reference in our Test definition, and thus we need to specify the source authority for this Test.
+As noted in the BDQ documentation, many aspects of 'data quality’ or 'fitness for use’ cannot be evaluated IF no authority exists to which to evaluate data values.  For example, we cannot evaluate whether a value is a valid ORCID ID if we do not have an authority that defines what a valid ORCID ID looks like.  In this case, the authority is the ORCID organization itself, which provides documentation on the expected format for ORCID IDs.  We can reference this authority in our Test definition, and then use the information from that authority to define the expected format for ORCID IDs in our Test specification.  This is an externality we must reference in our Test definition, and thus we need to specify the source authority for this Test.
 
 In bdqffdq:, a `Specification` has a `hasExpectedResponse` property that contains the text of the Expected Response, and it can also have a `hasAuthoritiesDefaults` property.  The `hasAuthoritiesDefaults` property provides information on source authorities (and defaults for parameterized tests).
 
@@ -651,7 +651,7 @@ BDQ details a convention for the structure and format of source authorities (in 
   * Fixed string identifier: "Regex present/absent" 
   * Regular Expression Pattern: "^(present|absent)$" (matches only the strings "present" or "absent" (the leading and trailing [{ enclose the pattern, but aren't part of it))
 
-Regular expressions are a tool used in multiple programing languages. A regular expression is sequence of characters that defines a search pattern, often used for string matching, and thus can be used to evaluate whether a value conforms to a particular format.  
+Regular expressions are a tool used in multiple programming languages. A regular expression is sequence of characters that defines a search pattern, often used for string matching, and thus can be used to evaluate whether a value conforms to a particular format.  
 
 The source authority allows implementers to know where to look for the authoritative information that they need to run the Test. The source authority also allows users of the Test results to understand the basis for the Test's logic.  Critical to all three of these is the "Fixed String Identifier", this is a string that identifies the source authority, and will be expected to be embedded in code that implements Tests that take Parameters (which we will come back to shortly).  
 
@@ -683,7 +683,7 @@ Parameters can include:
   * Alternative source authority vocabularies (e.g., taxonomic name authorities)
   * Alternative regular expression patterns for evaluating the format of identifiers.
 
-BDQ allows for parameters where an local variant on a `Use Case` requires some locally accepted authority, distinct from a globaly accepted authority that would apply to most applications of that `Use Case`.  This may be the case, for example, when legislation requires taxonomic names to be checked against a national names list, rather than a global names list.  In such cases, we can use parameters on a Test to allow for these variations in local needs, while still retaining the same overall logic and structure of the Test.
+BDQ allows for parameters where an local variant on a `Use Case` requires some locally accepted authority, distinct from a globally accepted authority that would apply to most applications of that `Use Case`.  This may be the case, for example, when legislation requires taxonomic names to be checked against a national names list, rather than a global names list.  In such cases, we can use parameters on a Test to allow for these variations in local needs, while still retaining the same overall logic and structure of the Test.
 
 Note that IF there is only one source authority that everyone would use, such as an ISO format specified in a term definition, the source authority would not be accompanied by a parameter value, as there is no local need to generalize to. 
 
@@ -716,13 +716,13 @@ Having asserted that a `bdq:sourceAuthority` is needed in the Test definition (a
 Notes are present when some aspects of a Test may not be obvious to the casual user or implementer, or if we want to describe aspects of the behaivior of the Test in a non-normative way. 
 Notes might want to comment on variations in the expected structure of an ORCID ID, for example, the expected format of an ORCID ID is https://orcid.org/0000-0002-1825-0097, which can be tested for with this regular expression pattern: ^https://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$
 
-But we might or might not want to allow for http:// as well as https:// and allow a case error where x is used instead of X, and comment on the rationalle for these decisions in the Notes. For example: 
+But we might or might not want to allow for http:// as well as https:// and allow a case error where x is used instead of X, and comment on the rationale for these decisions in the Notes. For example: 
 
 * **Notes** The expected format of an ORCID ID is ^https://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$, but we allow for protocol variants of http:// as well as https:// in the identifier and relax to the regex ^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$.  We expect the ORCID ID to be in resolvable form, not the bare identifier.  ORCID IDs are a subset of ISNI in the range 0000-0001-5000-0007 to 0000-0003-5000-0001, but this test only evaluates the format, not the range.  The form ORCID:0000-0001-5000-0007 should be treated as NOT_COMPLIANT by this test.
 
 #### 6.8.1 Example Complex Implementation Notes
 
-Notes are present when some aspects of a Test may not be obvious to the casual user or implementer. In some cases, Notes are not required, but Motes can be very helpful as in the example of the BDQ Test [VALIDATION_COUNTRYCODE_STANDARD](../list/bdqtest/index.md#bdqtest_0493bcfb-652e-4d17-815b-b0cce0742fbe):
+Notes are present when some aspects of a Test may not be obvious to the casual user or implementer. In some cases, Notes are not required, but Notes can be very helpful as in the example of the BDQ Test [VALIDATION_COUNTRYCODE_STANDARD](../list/bdqtest/index.md#bdqtest_0493bcfb-652e-4d17-815b-b0cce0742fbe):
 
 > “Locations outside of a jurisdiction covered by a country code may
 > have a value in the field dwc:countryCode, the ISO user defined codes
@@ -964,7 +964,7 @@ The BDQ Test specifications (the Specification text in bdqffdq:hasExpectedRespon
 A framework’s job is to act as the “adapter layer” that turns heterogeneous input into the canonical inputs/outputs implied by the ontology and the Test descriptors:
 
 * Select the scope / unit of execution
-  * Decide what constitutes a `bdqffdq:SingleRecord` (e.g., one Simple Darwin Core row; one `dwc:Occurrence` graph root) or a `bdqffdq:MultiRecord` (a dataset), and iterate accordingly.
+  * Decide what constitutes a `SingleRecord` (e.g., one Simple Darwin Core row; one `dwc:Occurrence` graph root) or a `MultiRecord` (a dataset), and iterate accordingly.
 
 * Bind raw data to the Test API
   * Map raw fields/properties onto the Test’s `Information Elements`:
@@ -996,7 +996,7 @@ A framework’s job is to act as the “adapter layer” that turns heterogeneou
 
 In short: BDQ keeps Tests portable by standardizing semantics (inputs, decision rules, outputs), while leaving execution mechanics (binding, orchestration, serialization) to whatever framework fits the implementer’s environment.
 
-See Also: 
+See also: 
 * [Responsibilities of a Test](../guide/implementers/index.md#651-responsibilities-of-a-test-non-normative) in the implementers guide.
 * [Responsibilities of a Test Execution Framework](../guide/implementers/index.md#66-responsibilities-of-a-test-execution-framework-non-normative) in the implementers guide.
 
@@ -1021,7 +1021,7 @@ See also:
 
 ### 8.1 MultiRecord Measures for Quality Control (non-normative)
 
-The Fittness For Use Framework is intended to support two different but related purposes: `Quality Control` and `Quality Assurance`.  `Quality Control` is the process of finding and fixing errors in a data set, while `Quality Assurance` is the process of filtering a data set down to a subset of records that are fit for some purpose.  Both of these processes rely on an examination of the the results of `SingleRecord` Tests, but they use those results in different ways.  The `Use Case` we have been working with in this tutorial is focused on `Quality Control` (we want to fix problems in a dataset of distributions that would itself be used to evaluate other datasets), so we will examine on how to use the results of `SingleRecord` Tests for that purpose.
+The Fitness For Use Framework is intended to support two different but related purposes: `Quality Control` and `Quality Assurance`.  `Quality Control` is the process of finding and fixing errors in a data set, while `Quality Assurance` is the process of filtering a data set down to a subset of records that are fit for some purpose.  Both of these processes rely on an examination of the the results of `SingleRecord` Tests, but they use those results in different ways.  The `Use Case` we have been working with in this tutorial is focused on `Quality Control` (we want to fix problems in a dataset of distributions that would itself be used to evaluate other datasets), so we will examine on how to use the results of `SingleRecord` Tests for that purpose.
 
 This tutorial has focused on defining `SingleRecord` Tests (primarily `Validations`) that evaluate one record at a time. In practice, `Quality Control` almost always requires a dataset-level view: curators, data managers, and developers need to know **how prevalent** a particular problem is, **where** it occurs, and **whether** proposed changes would measurably improve fitness for a `Use Case`.
 
@@ -1029,7 +1029,7 @@ In the BDQ Fitness for Use Framework, that dataset-level view is provided by `Mu
 
 #### 8.1.1 What a MultiRecord Measure takes as input (non-normative)
 
-A `MultiRecord` `Measure` does not typically examine raw input (e.g. Darwin Core) values directly. Instead, it uses as input the outputs of `SingleRecord` Tests — the set of Responses with their `Response.status`, `Response.result`, and `Response.comment`.   `MultiRecord` `Measures` can also be defined to take raw data as input, for example, a `MultiRecord` `Measure` could be defined to calculate the average dwc:individualCount across all records in a dataset, but we won't conider that use of `MultiRecord` `Measures` here.
+A `MultiRecord` `Measure` does not typically examine raw input (e.g. Darwin Core) values directly. Instead, it uses as input the outputs of `SingleRecord` Tests — the set of Responses with their `Response.status`, `Response.result`, and `Response.comment`.   `MultiRecord` `Measures` can also be defined to take raw data as input, for example, a `MultiRecord` `Measure` could be defined to calculate the average dwc:individualCount across all records in a dataset, but we won't consider that use of `MultiRecord` `Measures` here.
 
 Conceptually what we want to do with `MultiRecord` `Measures` is:
 
@@ -1071,9 +1071,9 @@ A key idea in `Quality Control` is that dataset-level metrics should be interpre
 
 Because `MultiRecord` `Measures` return only a single value, they are often paired with reporting or visualization outside of the Framework (e.g., spreadsheets, dashboards, or issue lists) that link summary counts back to the specific records needing attention.
 
-#### 8.1.3.1 Constrast with Quality Assurance.
+#### 8.1.3.1 Contrast with Quality Assurance.
 
-In contrast, in `Quality Assurance`, the focus is on filtering records based on `SingleRecord` Test outcomes.  The mechanism for this in the Fittness for Use Framework is to define a `MultiRecord` `Measure` that returns `COMPLETE` if the dataset meets a dataset-level requirement derived from `SingleRecord` Test outcomes, and `NOT_COMPLETE` otherwise, and if `NOT_COMPLETE`, filter out records until the `Measure` returns `COMPLETE`.   When all the `MultiRecord` `Measures` of this sort for a `Use Case` (as specified by `Policy`) are 'COMPLETE`, the filtered data set is fit for use with respect to the selected `Use Case`.
+In contrast, in `Quality Assurance`, the focus is on filtering records based on `SingleRecord` Test outcomes.  The mechanism for this in the Fitness for Use Framework is to define a `MultiRecord` `Measure` that returns `COMPLETE` if the dataset meets a dataset-level requirement derived from `SingleRecord` Test outcomes, and `NOT_COMPLETE` otherwise, and if `NOT_COMPLETE`, filter out records until the `Measure` returns `COMPLETE`.   When all the `MultiRecord` `Measures` of this sort for a `Use Case` (as specified by `Policy`) are 'COMPLETE`, the filtered data set is fit for use with respect to the selected `Use Case`.
 
 #### 8.1.4 A worked example (building on VALIDATION_FOOTPRINTWKT_NOTEMPTY)
 
@@ -1164,13 +1164,13 @@ This “run → analyze patterns → fix causes → re-run” loop is the core Q
 
 ### 8.3 Quality Assurance Workflow (non-normative)
 
-In contrast to `Quality Control`, which focuses on finding and fixing errors, `Quality Assurance` is about filtering a dataset down to a subset of records that are fit for some purpose.  The mechanism for this in the Fittness for Use Framework is to define a set of `MultiRecord` `Measures` that return `COMPLETE` if the dataset meets a dataset-level requirement derived from `SingleRecord` Test outcomes, and `NOT_COMPLETE` otherwise, and if `NOT_COMPLETE`, filter out records based on underlying `Validation` problems until the `Measure` returns `COMPLETE`.   When all the `MultiRecord` `Measures` of this sort for a `Use Case` (as specified by `Policy`) are `COMPLETE`, the filtered data set is fit for use with respect to the selected `Use Case`.
+In contrast to `Quality Control`, which focuses on finding and fixing errors, `Quality Assurance` is about filtering a dataset down to a subset of records that are fit for some purpose.  The mechanism for this in the Fitness for Use Framework is to define a set of `MultiRecord` `Measures` that return `COMPLETE` if the dataset meets a dataset-level requirement derived from `SingleRecord` Test outcomes, and `NOT_COMPLETE` otherwise, and if `NOT_COMPLETE`, filter out records based on underlying `Validation` problems until the `Measure` returns `COMPLETE`.   When all the `MultiRecord` `Measures` of this sort for a `Use Case` (as specified by `Policy`) are `COMPLETE`, the filtered data set is fit for use with respect to the selected `Use Case`.
 
 ## 9 Round-Up
 
 There are pitfalls in defining tests for the naive. Just make sure that the `Expected Response` doesn’t hide any edge cases. Easier said than done sometimes: 11 years work went into the BDQ standard, and we were often surprised by "emergent properties" and differing assumptions.  There are pitfalls in defining tests for the experienced.  
 
-Critical to the process of defining a new test is to iterate.  Start with a draft definition, create one or more independent implementations, have someone who isn't writing the implementation produce conformance testing data (including looking at values found in the wild), validate the implemenation(s) against this data, and discuss any discrepancies between the expected and actual results.  In all but the most trivial cases, it will be necessary to iterate and refine the test specifications, test implementations, and the test conformance testing data.  This process of iteration is critical for producing a robust test specification that is clear, unambiguous, and has logic that handles real world data and edge cases. 
+Critical to the process of defining a new test is to iterate.  Start with a draft definition, create one or more independent implementations, have someone who isn't writing the implementation produce conformance testing data (including looking at values found in the wild), validate the implementation(s) against this data, and discuss any discrepancies between the expected and actual results.  In all but the most trivial cases, it will be necessary to iterate and refine the test specifications, test implementations, and the test conformance testing data.  This process of iteration is critical for producing a robust test specification that is clear, unambiguous, and has logic that handles real world data and edge cases. 
 
 ### 9.1 Summary of the BDQ Philosophy
 
