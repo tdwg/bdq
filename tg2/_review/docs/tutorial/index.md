@@ -90,13 +90,14 @@ Draft Standard for Review
     - [6.9.1 Summary of the Test Definition](#691-summary-of-the-test-definition)
     - [6.9.2 Iterate](#692-iterate)
 
-[7 Test Validation and Community Feedback (The "real-world")](#7-test-validation-and-community-feedback-the-real-world)
+[7 Implementation, Conformance Testing, and Community Feedback (The "real-world")](#7-implementation-conformance-testing-and-community-feedback-the-real-world)
   - [7.1 Implementation (non-normative)](#71-implementation-non-normative)
-  - [7.2 Unit Tests (non-normative)](#72-unit-tests-non-normative)
-  - [7.3 Data for Conformance Testing and Edge Cases (non-normative)](#73-data-for-conformance-testing-and-edge-cases-non-normative)
-    - [7.3.1 Example Conformance Testing Data (non-normative)](#731-example-conformance-testing-data-non-normative)
-    - [7.3.2 Conformance testing data for our proposed VALIDATION_WASATTRIBUTEDTO_STANDARD Test (non-normative)](#732-conformance-testing-data-for-our-proposed-validation_wasattributedto_standard-test-non-normative)
-    - [7.3.3 Enumerating Test Conformance Data (non-normative)](#733-enumerating-test-conformance-data-non-normative)
+  - [7.2 Conformance Testing Data and exposing Assumptions (non-normative)](#72-conformance-testing-data-and-exposing-assumptions-non-normative)
+    - [7.2.1 Unit Tests (non-normative)](#721-unit-tests-non-normative)
+    - [7.2.2 Data for Conformance Testing and Edge Cases (non-normative)](#722-data-for-conformance-testing-and-edge-cases-non-normative)
+      - [7.2.2.1 Example Conformance Testing Data (non-normative)](#7221-example-conformance-testing-data-non-normative)
+      - [7.2.2.2 Conformance testing data for our proposed VALIDATION_WASATTRIBUTEDTO_STANDARD Test (non-normative)](#7222-conformance-testing-data-for-our-proposed-validation_wasattributedto_standard-test-non-normative)
+      - [7.2.2.3 Enumerating Test Conformance Data (non-normative)](#7223-enumerating-test-conformance-data-non-normative)
   - [7.4 Execution Frameworks (non-normative)](#74-execution-frameworks-non-normative)
     - [7.4.1 What an execution framework must do between raw data and a Test implementation (non-normative)](#741-what-an-execution-framework-must-do-between-raw-data-and-a-test-implementation-non-normative)
 
@@ -829,7 +830,7 @@ Earlier we said _"Treat this `Use Case` definition (and everything else that fol
 
 This is a critical point in the process. We have now defined Tests that fill gaps in our `Use Case`, and we have defined these Tests in a way that is consistent with the principles of BDQ, and we have provided detailed specifications for these Tests.  However, we have not yet implemented these Tests, or thrown any real data at these Tests to see how they respond.  Thus, we should treat this as a first draft of the `Use Case` and Test definitions, and be prepared to iterate on these definitions based on implementation feedback and real-world data.
 
-## 7 Test Validation and Community Feedback (The "real-world")
+## 7 Implementation, Conformance Testing, and Community Feedback (The "real-world")
 
 *No Test is final until it is implemented and thrown at actual data to confirm it responds correctly.*
 
@@ -851,42 +852,61 @@ See also:
 * [Responsibilities of a Test](../guide/implementers/index.md#651-responsibilities-of-a-test-non-normative) in the implementers guide.
 * [Responsibilities of a Test Execution Framework](../guide/implementers/index.md#66-responsibilities-of-a-test-execution-framework-non-normative) in the implementers guide.
 
-### 7.2 Unit Tests (non-normative)
+### 7.2 Conformance Testing Data and exposing Assumptions (non-normative)
 
-When implementing a Test, implementors are encouraged to use a test driven development approach, where they first create unit tests for a Test implementation covering each expected path in the specification, as well as edge cases, and then implement the Test internals to pass those unit tests.  This helps ensures that the Test is implemented correctly and that it responds correctly to a variety of test cases, including edge cases.
+Conformance testing data that provides the expected outputs from a Test for a variety of inputs, including edge cases is an integral part of the process of confirming that a Test implementation is correct and behaves as expected, but also in developing a clear and unambiguous Test specification.
 
-Unit tests, however, are integral parts of the code base for a test implementation, and thus do not provide a basis for confirming that different test implementations in different languages behave in the same ways when presented with identical inputs.
+The description and specification of a Test may involve hidden assumptions by those who defined the Test.  Conformance testing data provided by more than one person, especially if those people have different perspectives and examples of the data being evaluated by the Test can help to expose these assumptions.  For example, if the Test specification includes a clause that says "COMPLIANT if the value in prov:wasAttributedTo conforms to the expected format for an ORCID ID", there may be a hidden assumption that the expected format for an ORCID ID is only the canonical resolvable form of ORCID IDs (e.g. https://orcid.org/0000-0002-1825-0097), but some users may have data with ORCID IDs in a different format (e.g. ORCID:0000-0002-1825-0097), and they may have an assumption that this the expected format for an ORCID ID.  If multiple people provide conformance testing data, it is likely to includes examples of both formats.  Testing can thus expose these assumptions and feedback to clarification of the Test specification to make it clear which formats are expected to be COMPLIANT and which are expected to be NOT_COMPLIANT.  Expect that the Test specification will need revision based on questions raised in implementation and on testing the behavior of the implementation against real world data, and that this process will be iterative until the Test specification is clear and unambiguous, and Test implementations behave as expected when presented with a variety of test cases, including edge cases.
 
-### 7.3 Data for Conformance Testing and Edge Cases (non-normative)
+See also: [Conformance Testing Implementations](../guide/implementers/index.md#8-conformance-testing-implementations-normative) in the implementers guide.
 
-The documentation of a test should include conformance testing data.  Such conformance testing data should provide inputs for a test, and for each input, the expected outputs.  Such a conformance testing data set can be used to validate that any implementation of the test is responding as expected. 
+#### 7.2.1 Unit Tests (non-normative)
 
-An implementation of a test then needs to be connected to a conformance testing harness that can read the example data for each test, present the test with the specified inputs, and confirm that the outputs from the test match the expected outputs for those inputs.  This is a critical step in confirming that a test implementation is correct and behaves as expected, and it is also a critical step in confirming that different implementations of the same test in different languages behave in the same way when presented with identical inputs.  It would also be possible to frame conformance testing data that has the same structure as the expected inputs for a `Use Case`, but such data are much harder to produce in a way that tests individual decision paths within individual tests in isolation, and thus it is more difficult to use such data to confirm that individual tests are behaving as expected.  If such integration test data include synthetic values, they should be marked so as to be clearly distinguishable from actual data. 
+When implementing a Test, implementors are encouraged to use a test-driven development approach, where they first create unit tests for a Test implementation covering each expected path in the specification, as well as edge cases, and then implement the Test internals to pass those unit tests.  This strategy helps ensures that the Test is implemented correctly and that it responds correctly to a variety of test cases, including edge cases.  
+
+Unit tests, however, are integral parts of the code base for a test implementation and thus do not provide a basis for confirming that different test implementations in different languages behave in the same ways when presented with identical inputs.  An implementation independent conformation testing data set is needed for this purpose.
+
+#### 7.2.2 Data for Conformance Testing and Edge Cases (non-normative)
+
+The documentation of a Test should include conformance testing data.  Such conformance testing data should provide inputs for a Test, and for each input, the expected outputs.  Such a conformance testing data set can be used to validate that any implementation of the Test is responding as expected. 
+
+An implementation of a Test then needs to be connected to a conformance testing harness that can read the example data for each Test, present the Test with the specified inputs, and confirm that the outputs from the Test match the expected outputs for those inputs.  This is a critical step in confirming that a Test implementation is correct and behaves as expected, and it is also a critical step in confirming that different implementations of the same Test in different languages behave in the same way when presented with identical inputs.  It would also be possible to frame conformance testing data that has the same structure as the expected inputs for a `Use Case`, but such data are much harder to produce in a way that evaluates conformance of individual decision paths within individual Tests in isolation, and thus it is more difficult to use such data to confirm that individual Tests are behaving as expected.  If such integration test data include synthetic values, they should be marked so as to be clearly distinguishable from actual data. 
 
 See also: [Guide to Marking and Identifying Synthetic and Modified Data](../guide/synthetic/index.md)
 
-#### 7.3.1 Example Conformance Testing Data (non-normative)
+##### 7.2.2.1 Example Conformance Testing Data (non-normative)
 
-The conformance testing data set that accompanies the BDQ implementer's guide includes these (and other) rows for VALIDATION_COUNTRYCODE_STANDARD, which is a test that evaluates whether the value in dwc:countryCode is a valid ISO 3166-1-alpha-2 country code.  
+Consider the Test [VALIDATION_COUNTRYCODE_STANDARD](../terms/bdqtest/index.md#VALIDATION_COUNTRYCODE_STANDARD), which evaluates whether the value in dwc:countryCode is a valid ISO 3166-1-alpha-2 country code.  
 
-| Label | dwc:countryCode | Response.status | Response.result | Response.comment | Term Name |
+* **Expected Response**  EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode is bdq:Empty; COMPLIANT if dwc:countryCode can be unambiguously interpreted as a valid ISO 3166-1-alpha-2 country code in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
+* **Source Authority** bdq:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}
+* **Notes** Locations outside of a jurisdiction covered by a country code may have a value in the field dwc:countryCode, the ISO user defined codes include XZ used by the UN for installations on the high seas and recommended in Darwin Core to designate the high seas. Also available in the ISO user defined codes is ZZ, used by Darwin Core and GBIF to mark unknown countries. This Test should accept both XZ and ZZ as COMPLIANT country codes. This Test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.
+
+The conformance testing data set that accompanies the BDQ implementer's guide includes these following (and other) rows for this Test:
+
+| Label | dwc:countryCode | Response.status | Response.result | Response.comment |
 | --- | --- | --- | --- | --- | --- |
-| VALIDATION_COUNTRYCODE_STANDARD |  | INTERNAL_PREREQUISITES_NOT_MET |  | dwc:countryCode is bdq:Empty | 0493bcfb-652e-4d17-815b-b0cce0742fbe |
-| VALIDATION_COUNTRYCODE_STANDARD | GL | RUN_HAS_RESULT | COMPLIANT | dwc:countryCode is a valid ISO (ISO 3166-1-alpha-2 country codes) value | 0493bcfb-652e-4d17-815b-b0cce0742fbe |
-| VALIDATION_COUNTRYCODE_STANDARD | GRL | RUN_HAS_RESULT | NOT_COMPLIANT | dwc:countryCode is not a valid ISO (ISO 3166-1-alpha-2 country codes) value | 0493bcfb-652e-4d17-815b-b0cce0742fbe |
-| VALIDATION_COUNTRYCODE_STANDARD | XZ | RUN_HAS_RESULT | COMPLIANT | dwc:countryCode is a valid code for high seas taken from UN/Locode | 0493bcfb-652e-4d17-815b-b0cce0742fbe |
-| VALIDATION_COUNTRYCODE_STANDARD | Austria | RUN_HAS_RESULT | NOT_COMPLIANT | dwc:countryCode is not a valid ISO (ISO 3166-1-alpha-2 country codes) value  | 0493bcfb-652e-4d17-815b-b0cce0742fbe |
-| VALIDATION_COUNTRYCODE_STANDARD | ZZ | RUN_HAS_RESULT | COMPLIANT | dwc countryCode is a user- defined ISO 2-letter country code | 0493bcfb-652e-4d17-815b-b0cce0742fbe |
+| VALIDATION_COUNTRYCODE_STANDARD |  | INTERNAL_PREREQUISITES_NOT_MET |  | dwc:countryCode is bdq:Empty | 
+| VALIDATION_COUNTRYCODE_STANDARD | GL | RUN_HAS_RESULT | COMPLIANT | dwc:countryCode is a valid ISO (ISO 3166-1-alpha-2 country codes) value | 
+| VALIDATION_COUNTRYCODE_STANDARD | GRL | RUN_HAS_RESULT | NOT_COMPLIANT | dwc:countryCode is not a valid ISO (ISO 3166-1-alpha-2 country codes) value | 
+| VALIDATION_COUNTRYCODE_STANDARD | XZ | RUN_HAS_RESULT | COMPLIANT | dwc:countryCode is a valid code for high seas taken from UN/Locode | 
+| VALIDATION_COUNTRYCODE_STANDARD | Austria | RUN_HAS_RESULT | NOT_COMPLIANT | dwc:countryCode is not a valid ISO (ISO 3166-1-alpha-2 country codes) value  | 
+| VALIDATION_COUNTRYCODE_STANDARD | ZZ | RUN_HAS_RESULT | COMPLIANT | dwc countryCode is a user- defined ISO 2-letter country code | 
 
-This includes the human readable (Label) and machine readable identifiers (Term Name) for the Test, the input value for the Information Element being evaluated (dwc:countryCode), and the expected outputs for the test for that input value (Response.status, Response.result, Response.comment).  This conformance testing data includes edge cases such as an empty value for dwc:countryCode, a valid ISO 3166-1-alpha-2 country code, an invalid ISO 3166-1-alpha-2 country code, a valid code for high seas taken from UN/Locode, and the user-defined ISO 2-letter country code ZZ.
+The columns shown here are the human readable identifier (Label) for the Test, the input value for the Information Element being evaluated (dwc:countryCode), and the expected outputs for the Test for that input value (`Response.status`, `Response.result`, and `Response.comment`).  Not shown here, but quite important, are columns for the machine readable identifier for a Test (Term Name) to allow a conformance testing harness to connect the test data to the correct Test implementation, and the DataID column identifying a particular conformance test case to facilitate discussion of specific conformance failure cases.
+
+This conformance testing data includes edge cases such as an empty value for dwc:countryCode, a valid ISO 3166-1-alpha-2 country code, some cases that are not 2 letter country codes, and edge cases taken from the notes: a valid code for high seas taken from UN/Locode, and the user-defined ISO 2-letter country code ZZ.  
 
 See also: 
 [VALIDATION_COUNTRYCODE_STANDARD](../list/bdqtest/index.md#bdqtest_0493bcfb-652e-4d17-815b-b0cce0742fbe) in the bdqtest: term-list document.
 [High Seas](../supplement/index.md#394-high-seas-non-normative) in the Supplement.
 
-#### 7.3.2 Conformance testing data for our proposed VALIDATION_WASATTRIBUTEDTO_STANDARD Test (non-normative)
+##### 7.2.2.2 Conformance testing data for our proposed VALIDATION_WASATTRIBUTEDTO_STANDARD Test (non-normative)
 
-A possible set of conformance testing data for our proposed `VALIDATION_WASATTRIBUTEDTO_STANDARD` Test are: 
+A possible set of conformance testing data for our proposed `VALIDATION_WASATTRIBUTEDTO_STANDARD` Test are below: 
+
+* **Expected Response**  INTERNAL_PREREQUISITES_NOT_MET if prov:wasAttributedTo is bdq:Empty; COMPLIANT if the value in prov:wasAttributedTo conforms to the expected format of the bdq:sourceAuthority; otherwise NOT_COMPLIANT.
+* **hasAuthoritiesDefaults** bdq:sourceAuthority default = "Resolvable ORCID ID regex" `{[^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$]}`
 
 | Label | prov:wasAttributedTo | Response.status | Response.result | Response.comment |
 | --- | --- | --- | --- | --- |
@@ -910,82 +930,94 @@ A possible set of conformance testing data for our proposed `VALIDATION_WASATTRI
 | VALIDATION_WASATTRIBUTEDTO_STANDARD | https://orcid.org/0000-0001-5000-000 | RUN_HAS_RESULT | NOT_COMPLIANT | prov:wasAttributedTo does not match expected format (too short) |
 | VALIDATION_WASATTRIBUTEDTO_STANDARD | https://example.org/0000-0001-5000-0007 | RUN_HAS_RESULT | NOT_COMPLIANT | prov:wasAttributedTo does not match expected format (wrong domain; expected orcid.org) |
 
-Some of these test cases are "edge cases" that might not be immediately obvious to an implementer, such as the case where the value in prov:wasAttributedTo is whitespace only, or the case where there is a trailing slash at the end of the ORCID ID, or the case where there is a query string at the end of the ORCID ID, or the case where there is an extra digit at the end of the ORCID ID, or the case where there is an unexpected extra character at the end of the ORCID ID, or the case where there is leading or trailing whitespace around the ORCID ID, or the case where there is a fragment at the end of the ORCID ID.  These edge cases are important to include in the conformance testing data set because they help ensure that an implementation of this test will correctly handle these cases and not produce false positives or false negatives.
+Some of these test cases are "edge cases" that might not be immediately obvious to an implementer or the person who defined a test, such as:
+* The value in prov:wasAttributedTo is whitespace only.
+* There is a trailing slash at the end of the ORCID ID.
+* There is a query string at the end of the ORCID ID.
+* There is an extra digit at the end of the ORCID ID.
+* The scheme for the ORCID ID is http instead of https.
+* There is an unexpected extra character at the end of the ORCID ID.
+* There is leading or trailing whitespace around the ORCID ID.
+* There is a fragment at the end of the ORCID ID.
 
-Some of these tests also highlight hidden assumptions in our test specification, in particular, the assumption that the scheme in the ORCID ID is case-sensitive and the assumption that the host in the ORCID ID is case-sensitive.  By including these edge cases in our conformance testing data set, we can confirm that our test specification is clear about these assumptions and that implementations of this test will correctly handle these cases.
+These edge cases are important to include in the conformance testing data set because they help ensure that an implementation of this Test will produce the expected outputs for these cases and not produce false positives or false negatives.  
 
-Since the scheme (https) and host (orcid.org) in the ORCID ID are technically case-insensitive according to the URI specification, but our regex pattern is case-sensitive, we need to be clear in our test specification and in our conformance testing data that we are expecting the scheme and host to be in lowercase, and that if they are not, then the test should return NOT_COMPLIANT.  The case insensitivity scheme and host in the URI specification may well also mean that we want to revisit our regex pattern to allow for case-insensitivity in the scheme and host.  This is an example of a "pitfall for the naive" when defining a test.
+Some of these test cases also highlight hidden assumptions in our Test specification, in particular, the assumption that the scheme in the ORCID ID is case-sensitive and the assumption that the host in the ORCID ID is case-sensitive.  By including these edge cases in our conformance testing data set, we can confirm that our Test specification is clear about these assumptions and that implementations of this Test will correctly handle these cases.
 
-So, we might want to change our default source authority to relax the regex pattern to allow for case-insensitivity in the scheme and host, and thus we might want to change our default source authority:
+Since the scheme (https) and host (orcid.org) in the ORCID ID are technically case-insensitive according to the URI specification, but our regex pattern is case-sensitive, we need to be clear in our Test specification and in our conformance testing data that we are expecting the scheme and host to be in lowercase, and that if they are not, then the Test should return NOT_COMPLIANT.  The case insensitivity scheme and host in the URI specification may well also mean that we want to revisit our regex pattern to allow for case-insensitivity in the scheme and host.  This is an example of a "pitfall for the naive" when defining a Test.
+
+So, we might want to relax the default regex pattern to allow for case-insensitivity in the scheme and host, and thus we might want to change our default `Source Authority`:
+
 * From: **hasAuthoritiesDefaults** bdq:sourceAuthority default = "Resolvable ORCID ID regex" `{[^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$]}`
 * To: **hasAuthoritiesDefaults** bdq:sourceAuthority default = "Resolvable ORCID ID regex" `{[^(?i:http(s){0,1}://orcid\.org/)\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$]}`
-And then change the conformance testing data accordingly to reflect this change in the expected format for a compliant ORCID ID (so that the "HTTPS://orcid.org" and "https://ORCID.org" would be COMPLIANT).
 
-Note, that when evaluating whether a Test implementation responds as expected to a given input, the Response.status and Response.result must be exact matches, but the Response.comment only needs to be bdq:NotEmpty.  The Response.comment in the conformance testing data provides a general guide to implementers for what the comment could say for a given input, but more importantly provides documentation and explanation for that particular case.
+And then change the conformance testing data accordingly to reflect this change in the expected format for a compliant ORCID ID (so that the "HTTPS://orcid.org" and "https://ORCID.org" would be COMPLIANT).  Similarly, two resolvable identifiers with different schemes (e.g. http://orcid.org/0000-0001-5000-0007 and https://orcid.org/0000-0001-5000-0007) are technically identifiers for different resources, and careful consideration of whether the the regex should allow for either http or https may be needed.
 
-#### 7.3.3 Enumerating Test Conformance Data (non-normative)
+Note, that when evaluating whether a Test implementation responds as expected to a given input, the `Response.status` and `Response.result` must be exact matches, but the `Response.comment` in the response needs to be bdq:NotEmpty.  The `Response.comment` in the conformance testing data provides a general guide to implementers for what the comment could say for a given input, but more importantly provides documentation and explanation for that particular case.
+
+##### 7.2.2.3 Enumerating Test Conformance Data (non-normative)
 
 **Purpose**: Ensure that a Test can be correctly implemented, and that the Test specification is clear, unambiguous, and has logic that handles real world data and edge cases.
 
-The only way to validate a test is to implement it and then throw sufficient examples of data at that test to confirm that it responds as expected, and that the Test specification is a good fit to real world data.
+The only way to validate a Test is to implement it and then throw sufficient examples of data at that Test to confirm that it responds as expected, and that the Test specification is a good fit to real world data.
 
-To frame a Test conformance testing data set, start with the `Expected Response`, split that into separate clauses, and add a test case for each clause, then examine the Test notes for any discussion of special cases, look a the distribution of real values of data in the wild and add additional data to ensure comprehensive coverage of the Test decision path under both likely to be encountered data and edge cases.
+**Minimal Starting point:** One validation case for each clause in the `Expected Response`.
 
-**Validation Process**:
-* Create comprehensive test data covering all decision paths in the Expected Response
-* Include edge cases and boundary conditions
-* Test with different data encodings and formats
-* Validate against expected responses
-* Include both "pass" and "fail" cases.
-* Optionally include cases for non-default parameter values if the test has parameters.
+The `Expected Response` "INTERNAL_PREREQUISITES_NOT_MET if prov:wasAttributedTo is bdq:Empty; COMPLIANT if the value in prov:wasAttributedTo conforms to the expected format of bdq:sourceAuthority; otherwise NOT_COMPLIANT." can be read as the following three clauses, to be evaluated in order:
 
-**Test Data Categories**:
-* Valid compliant data
-* Valid non-compliant data
-* Missing/empty data (nulls, whitespace only data, empty strings, etc)
-* Malformed data
-* Edge cases (leading or trailing whitespace on data, very large numbers, very small numbers, zero, etc)
+1. INTERNAL_PREREQUISITES_NOT_MET if prov:wasAttributedTo is bdq:Empty; 
+1. COMPLIANT if the value in prov:wasAttributedTo conforms to the expected format of "^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$"
+1. otherwise NOT_COMPLIANT.
 
-**Minimal Starting point** One validation case for each clause in the `Expected Response`.
+For clause 1, we would want to include at least one test case where prov:wasAttributedTo is bdq:Empty, and the expected response is INTERNAL_PREREQUISITES_NOT_MET.  For clause 2, we would want to include at least one test case where prov:wasAttributedTo conforms to the expected format for an ORCID ID, and the expected response is COMPLIANT.  For clause 3, we would want to include at least one test case where prov:wasAttributedTo does not conform to the expected format for an ORCID ID, and the expected response is NOT_COMPLIANT.
 
-The **Expected Response** "INTERNAL_PREREQUISITES_NOT_MET if prov:wasAttributedTo is bdq:Empty; COMPLIANT if the value in prov:wasAttributedTo conforms to the expected format of bdq:sourceAuthority; otherwise NOT_COMPLIANT." can be read as the following three clauses:
-* INTERNAL_PREREQUISITES_NOT_MET if prov:wasAttributedTo is bdq:Empty; 
-* COMPLIANT if the value in prov:wasAttributedTo conforms to the expected format of "^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$"
-* otherwise NOT_COMPLIANT.
-
-* INTERNAL_PREREQUISITES_NOT_MET if prov:wasAttributedTo is bdq:Empty; 
+* A test case for clause 1 `INTERNAL_PREREQUISITES_NOT_MET if prov:wasAttributedTo is bdq:Empty;`:
   * Test Label: VALIDATION_WASATTRIBUTEDTO_STANDARD
   * prov:wasAttributedTo: 
   * Response.status: INTERNAL_PREREQUISITES_NOT_MET
   * Response.result:  
   * Response.comment: prov:wasAttributedTo is bdq:Empty, so its format cannot be evaluated.
 
-* COMPLIANT if the value in prov:wasAttributedTo conforms to the expected format of "^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$"
+* A test cases for clause 2 `COMPLIANT if the value in prov:wasAttributedTo conforms to the expected format of "^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$"`:
   * Test Label: VALIDATION_WASATTRIBUTEDTO_STANDARD
   * prov:wasAttributedTo: https://orcid.org/0000-0001-5000-0007 
   * Response.status: RUN_HAS_RESULT
   * Response.result: COMPLIANT 
   * Response.comment: prov:wasAttributedTo matches expected resolvable ORCID ID format (^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$)
 
-* otherwise NOT_COMPLIANT.
+* A test case for clause 3 `otherwise NOT_COMPLIANT':
   * Test Label: VALIDATION_WASATTRIBUTEDTO_STANDARD 
   * prov:wasAttributedTo: https://orcid.org/0000-0001-5000-0007/ 
   * Response.status: RUN_HAS_RESULT
   * Response.result: NOT_COMPLIANT
   * Response.comment: prov:wasAttributedTo does not match expected format (trailing slash not allowed) 
 
-**Critical Thinking:** Both those defining a test and implementers must consider "pitfalls for the naive", and the domain experts defining a test are likely to percieve a different set of pitfalls from developers implementing a test.  Multiple iterations and a conversation mediated by test conformance testing data is necessary for developing a robust test description.
+That is just a starting point, to create comprehensive test data covering all decision paths in the `Expected Response` split the `Expected Response` into separate clauses, then: 
+
+* Add a pass and fail test case for each clause.
+* Examine the Test notes for any discussion of special cases and add test cases for each of those.
+* Look at a the distribution of real values of data in the wild and add additional test cases, particularly for unusual values.
+  * Valid compliant data.
+  * Malformed data.
+  * Missing or empty values.
+  * Edge cases (leading or trailing whitespace on data, very large numbers, very small numbers, zero, etc)
+  * Boundary conditions (e.g., for a test that evaluates whether a number is between 1 and 10, include test cases for 1, 10, and values just outside the boundaries like 0.999 and 10.001)
+* Optionally include cases for non-default parameter values if the Test has parameters.
+
+Consideration of all of these will help ensure comprehensive coverage of the Test decision path for both inputs that are likely to be encountered and edge cases.
+
+**Critical Thinking:** Both those defining a Test and those implementing it must consider "pitfalls for the naive".  The domain experts defining a Test are likely to percieve a different set of pitfalls from developers implementing a Test.  Multiple iterations and a conversation mediated by Test conformance Testing data is necessary for developing a robust Test description and specification (`Description`, `Information Elements`, `hasAuthoritiesDefaults`, `hasSourceAuthority`, and `Parameters`) 
 
 See also: 
 * [Conformance Testing Implementations](../guide/implementers/index.md#8-conformance-testing-implementations-normative) in the BDQ Implementer's Guide.
 
 ### 7.4 Execution Frameworks (non-normative)
 
-The BDQ Test specifications (the Specification text in bdqffdq:hasExpectedResponse, plus any Parameters/defaults) are framework agnostic because they define only:
+The BDQ Test specifications (the Specification text in bdqffdq:hasExpectedResponse, plus any Parameters/defaults) are execution framework agnostic because they define only:
 
 * What inputs are required (the `Information Elements` `Acted Upon` and `Consulted`, and any `Parameter` values),
-* What outputs must be produced (a structured Response with Response.status, Response.result, Response.comment), and
-* What decision logic must be followed (evaluate the criteria blocks in order and return the first applicable response),
+* What outputs must be produced (a structured Response with `Response.status`, `Response.result`, `Response.comment`), and
+* What decision logic must be followed (evaluate the criteria blocks in the `hasExpectedResponse` in order and return the first applicable response),
 
 …but they do not constrain:
 
@@ -994,35 +1026,36 @@ The BDQ Test specifications (the Specification text in bdqffdq:hasExpectedRespon
 * What programming language(s) are used.
 * How methods are discovered/invoked (reflection, registry, function pointers, workflow nodes).
 * How Responses are serialized/persisted (objects, rows, RDF bdqffdq:Assertion, annotations).
+* How Responses are presented to users or downstream processes (logs, dashboards, annotations).
 
 #### 7.4.1 What an execution framework must do between raw data and a Test implementation (non-normative)
 
 A framework’s job is to act as the “adapter layer” that turns heterogeneous input into the canonical inputs/outputs implied by the ontology and the Test descriptors:
 
 * Select the scope / unit of execution
-  * Decide what constitutes a bdqffdq:SingleRecord (e.g., one Simple Darwin Core row; one dwc:Occurrence graph root) or a bdqffdq:MultiRecord (a dataset), and iterate accordingly.
+  * Decide what constitutes a `bdqffdq:SingleRecord` (e.g., one Simple Darwin Core row; one `dwc:Occurrence` graph root) or a `bdqffdq:MultiRecord` (a dataset), and iterate accordingly.
 
 * Bind raw data to the Test API
-  * Map raw fields/properties onto the Test’s Information Elements:
-    * provide the value(s) for the Acted Upon term(s),
-    * provide any Consulted term(s),
-    * supply Parameter argument values (or omit them and let defaults apply).
-  * This is the core “plumbing” step: e.g. ensure dwc:countryCode actually lands in the method parameter that represents dwc:countryCode, etc. 
-	* This could be via annotations, configuration, naming conventions, or explicit mapping code.
-	* The FilteredPush implementations use Java Annotations for this purpose, but other frameworks could use different approaches.
+  * Map raw fields/properties onto the Test’s `Information Elements`:
+    * provide the value(s) for the `Acted Upon` term(s),
+    * provide any `Consulted` term(s),
+    * supply `Parameter` argument values (or omit them and let defaults apply).
+  * This is the core “plumbing” step: e.g. ensure `dwc:countryCode` actually lands in the method parameter that represents `dwc:countryCode`, etc. 
+	* This mapping could be via annotations, configuration, naming conventions, or explicit mapping code.
+	* The FilteredPush implementations use Java Annotations for this purpose, but other frameworks are free to use different approaches.
 
 * Invoke the correct implementation
   * Locate the right Implementation for a given Test (e.g., by Label, GUID/Term Name, or versioned IRI), then call it with the bound inputs.
 
 * Capture and normalize outputs into a Response
   * Ensure every execution yields exactly one structured Response with:
-    * Response.status from the controlled vocabulary,
-    * Response.result present/absent as required by status and Test Type,
-    * a Response.comment that is bdq:NotEmpty.
-  * Optionally wrap/serialize as RDF assertions (bdqffdq:Assertion) or as W3C Annotations, as that representation choice is outside the Test itself.
+    * `Response.status` from the controlled vocabulary (e.g. RUN_HAS_RESULT, EXTERNAL_PREREQUISITES_NOT_MET),
+    * `Response.result` as required by status and `Test Type`, and
+    * a `Response.comment` that is `bdq:NotEmpty`.
+  * Optionally wrap/serialize as RDF assertions (`bdqffdq:Assertion`) or as W3C Annotations, as that representation choice is outside the Test itself.
 
 * Present results to users and/or downstream processes
-  * This could be as simple as logging, or as complex as a dashboard or API response.
+  * This could be as simple as logging, or as complex as a dashboard or API response (e.g., BDQEmail). 
   * BDQ is explicitly agnostic about this presentation layer.
 
 * Manage common cross-cutting concerns
@@ -1031,6 +1064,10 @@ A framework’s job is to act as the “adapter layer” that turns heterogeneou
   * attaching Responses back to records.
 
 In short: BDQ keeps Tests portable by standardizing semantics (inputs, decision rules, outputs), while leaving execution mechanics (binding, orchestration, serialization) to whatever framework fits the implementer’s environment.
+
+See Also: 
+* [Responsibilities of a Test](../guide/implementers/index.md#651-responsibilities-of-a-test-non-normative) in the implementers guide.
+* [Responsibilities of a Test Execution Framework](../guide/implementers/index.md#66-responsibilities-of-a-test-execution-framework-non-normative) in the implementers guide.
 
 ## 8 Use an implementation for Quality Control (non-normative)
 
