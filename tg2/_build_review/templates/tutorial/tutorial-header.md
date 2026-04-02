@@ -89,6 +89,10 @@ The simpler of the two Tests examined is VALIDATION_FOOTPRINTWKT_NOTEMPTY, which
 
 By following this workflow, you move from a human-centric research need to a machine-readable technical standard.
 
+See also:
+- [What is meant by "Test"?](../bdqtest/index.md#21-what-is-meant-by-test-non-normative) in the bdqtest: term-list document.
+- [Data Quality Needs, Data Quality Mechanisms, Data Quality Reports](../guide/bdqffdq/index.md#33-data-quality-needs-data-quality-mechanisms-data-quality-reports-non-normative) in the bdqffdq: ontology guide.
+
 ### 2.1 Best Practices
 
 1. **Atomic Tests**: Make each Test evaluate one single simple aspect of data quality.
@@ -136,6 +140,10 @@ In each of the bullet points, the properties that are needed for fitness are exp
 
 Treat this `Use Case` definition (and everything else that follows from it) as a first draft.  We will likely need to come back and refine this `Use Case` definition as we consider the data in the wild and start defining and implementing tests.  We may find that we need to add additional fitness requirements, or that we need to clarify the existing fitness requirements, or that we need to change the way we have stated the fitness requirements.  That is all part of the process.  It is critically important to be flexible and iterative in this process. 
 
+See also: 
+* [Context for Quality, Uses and Purposes](../guide/users/index.md#2-context-for-quality-uses-and-purposes-non-normative) in the User's Guide.
+* [Concepts in the Framework (Use Cases, Policies, Contexts)](../guide/bdqffdq/index.md#323-concepts-in-the-framework-test-types-validation-issue-measure-amendment-non-normative) in the bdqffdq: ontology guide.
+
 ### 3.2 Identify the Information Elements (non-normative)
 
 **Purpose:** Determine which fields (mapped to vocabulary terms such as Darwin Core terms) are in the data and are relevant to your use case.
@@ -162,6 +170,7 @@ Most of these terms are from Darwin Core, but we have also included some terms f
 Now, we want to identify a set of tests to be applied to these `Information Elements` to evaluate whether the data are fit for use.  
 
 There are two key elements to the strategy at this point: (1) we want to identify and use existing tests that can be applied before defining new tests and (2) we want each test to be as focused as possible on a single aspect of data quality.
+
 
 ### 3.3 Reuse of Existing Tests and Gap Analysis (non-normative)
 
@@ -281,6 +290,10 @@ The Test we are developing does not require any supporting information, so there
 * **Information Elements Acted Upon** dwc:footprintWKT
 * **Information Elements Consulted** None
 
+See also:
+- [Inputs to Tests](../guide/users/index.md#321-inputs-to-tests-non-normative) in the User's Guide.
+- [Information Elements](../guide/bdqffdq/index.md#322-information-elements-non-normative) in the bdqffdq: ontology guide.
+
 ### 4.3 Select the Test Type (non-normative)
 
 **Purpose**: Determine in what way the test evaluates data quality.
@@ -359,7 +372,7 @@ BDQ Data Quality Dimensions include:
 
 The question we wish to ask is whether there is a value in `dwc:footprintWKT`.  In this Test we are only asking if any value is present.  We are not asking if it is correctly formatted Well Known Text spatial data, or whether it contains in-range values, or anything else, we are simply asking if any value is present.  So this test is addressing the Completeness dimension of data quality.
 
-This seems a very trivial test.  It is.  That is important.  We do not wish to overcomplicate our tests.  We want to ask simple questions that are easy to understand and implement, and that address specific aspects of data quality.  We assemble multiple simple atomic Tests to evaluate distinct aspects of data quality in a `Use Case.
+This seems a very trivial test.  It is.  That is important.  We do not wish to overcomplicate our tests.  We want to ask simple questions that are easy to understand and implement, and that address specific aspects of data quality.  We assemble multiple simple atomic Tests to evaluate distinct aspects of data quality in a `Use Case`.
 
 If some data are absent and other data are incorrectly formatted, a more complicated test that checks for both presence and correct formatting will not be able to distinguish between these two problems, and thus will not be as useful for our `Use Case` as a simple presence check (combined with a separate test to assess correct formatting).  
 
@@ -570,7 +583,7 @@ We will also want to provide a more readable and translatable Preferred Label, a
 
 This Test is a `Validation`, so it will have both a `Data Quality Dimension` and a `Criterion`.  
 
-The `Data Quality Dimension` is the aspect of data quality that this Test is addressing, looking at the bdqdim; vocabulary we find 'Conformance` defined as "Where data in a bdqffdq:InformationElement conform to a format, syntax, data type, range, or standard."  We are asking if the value in prov:wasAttributedTo conforms to the expected format for an ORCID ID, so this is a good fit.
+The `Data Quality Dimension` is the aspect of data quality that this Test is addressing, looking at the bdqdim; vocabulary we find `Conformance` defined as "Where data in a bdqffdq:InformationElement conform to a format, syntax, data type, range, or standard."  We are asking if the value in prov:wasAttributedTo conforms to the expected format for an ORCID ID, so this is a good fit.
 
 Similarly, in the [bdqcrit: vocabulary](../list/bdqcrit/index.md) we find 'Standard' defined as "Data in a bdqffdq:InformationElement conform to a format, syntax, data type, or standard. Corresponding dimension is bdqdim:Conformance."  Again, this sounds like a good fit.
 
@@ -686,6 +699,11 @@ We can make the bdq:sourceAuthority as a parameter for this Test, meaning that u
 
 * **Parameter** bdq:sourceAuthority
 
+See also:
+- [Parameterizing the Tests](../bdqtest/index.md#33-parameterizing-the-tests-normative) in the bdqtest: landing page.
+- [3.4 Test Parameters](../guide/users/index.md#34-test-parameters-non-normative) in the Users Guide.
+- [Test Parameters in Reports](../guide/users/index.md#341-test-parameters-in-reports-normative) in the Users Guide.
+
 #### 6.7.3  Revisiting the Test Specification (non-normative)
 
 Having asserted that a `bdq:sourceAuthority` is needed in the Test definition (and that the Test can take this as a parameter to allow for different implementations to use different authorities), we now need to revisit the `Description` and `Expected Response` to make sure that we have included this generalization.
@@ -747,7 +765,7 @@ This is a critical point in the process. We have now defined Tests that fill gap
 
 ### 7.1 Implementation (non-normative)
 
-A Test specification may sound perfectly clear and straightforward to its writers, but it may not be clear to developers who are trying to implement the Test based on the specification.  In BDQ, the decision logic of a Test is expressed in the `hasExpectedResponse` and `hasAuthoritiesDefaults' properties of its `Specification`.  The only way to confirm that a Test specification is clear and can be implemented correctly is to actually implement the Test based on the specification, and then throw real data at that implementation to see if it responds correctly.  Expect that an initial Test specification will need revision based on questions raised in implementation and on testing the behavior of the implementation against real world data.
+A Test specification may sound perfectly clear and straightforward to its writers, but it may not be clear to developers who are trying to implement the Test based on the specification.  In BDQ, the decision logic of a Test is expressed in the `hasExpectedResponse` and `hasAuthoritiesDefaults` properties of its `Specification`.  The only way to confirm that a Test specification is clear and can be implemented correctly is to actually implement the Test based on the specification, and then throw real data at that implementation to see if it responds correctly.  Expect that an initial Test specification will need revision based on questions raised in implementation and on testing the behavior of the implementation against real world data.
 
 BDQ is deliberately agnostic about programming languages and execution frameworks for Test implementations.
 
@@ -769,7 +787,9 @@ Conformance testing data that provides the expected outputs from a Test for a va
 
 The description and specification of a Test may involve hidden assumptions by those who defined the Test.  Conformance testing data provided by more than one person, especially if those people have different perspectives and examples of the data being evaluated by the Test can help to expose these assumptions.  For example, if the Test specification includes a clause that says "COMPLIANT if the value in prov:wasAttributedTo conforms to the expected format for an ORCID ID", there may be a hidden assumption that the expected format for an ORCID ID is only the canonical resolvable form of ORCID IDs (e.g. https://orcid.org/0000-0002-1825-0097), but some users may have data with ORCID IDs in a different format (e.g. ORCID:0000-0002-1825-0097), and they may have an assumption that this the expected format for an ORCID ID.  If multiple people provide conformance testing data, it is likely to includes examples of both formats.  Testing can thus expose these assumptions and feedback to clarification of the Test specification to make it clear which formats are expected to be COMPLIANT and which are expected to be NOT_COMPLIANT.  Expect that the Test specification will need revision based on questions raised in implementation and on testing the behavior of the implementation against real world data, and that this process will be iterative until the Test specification is clear and unambiguous, and Test implementations behave as expected when presented with a variety of test cases, including edge cases.
 
-See also: [Conformance Testing Implementations](../guide/implementers/index.md#8-conformance-testing-implementations-normative) in the implementers guide.
+See also: 
+* [Conformance Testing Implementations](../guide/implementers/index.md#8-conformance-testing-implementations-normative) in the implementers guide.
+* [Structure of Response](../bdqtest/index.md#31-structure-of-response-normative) in the bdqtest: landing page.
 
 #### 7.2.1 Unit Tests (non-normative)
 
@@ -896,7 +916,7 @@ For clause 1, we would want to include at least one test case where prov:wasAttr
   * Response.result: COMPLIANT 
   * Response.comment: prov:wasAttributedTo matches expected resolvable ORCID ID format (^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$)
 
-* A test case for clause 3 `otherwise NOT_COMPLIANT':
+* A test case for clause 3 `otherwise NOT_COMPLIANT`:
   * Test Label: VALIDATION_WASATTRIBUTEDTO_STANDARD 
   * prov:wasAttributedTo: https://orcid.org/0000-0001-5000-0007/ 
   * Response.status: RUN_HAS_RESULT
@@ -993,6 +1013,11 @@ The mechanism that the Fitness for Use Framework uses for both of these is `Mult
 In listing a set of `Validations` for our `Use Case`, we are setting a `Validation Policy` for the `Use Case`.  A `Validation Policy` is the set of `Validations` that are relevant to a particular `Use Case`.   A `Use Case` also has an 'Amendment Policy' (the set of `Amendments` that are relevant to that `Use Case`) and a 'Measurement Policy' (the set of `Measures` that are relevant to that `Use Case`), and an `Issue Policy` (the set of `Issues` that are relevant to that `Use Case`).
 
 For our **Validated Distribution Authority** `Use Case` we would likely wish to define one or more `Amendment` tests to propose changes to fix problems identified by the `Validations` that are relevant to that `Use Case`, but we won't explore these here.  Instead, we will focus on the `MultiRecord` `Measures` that we would want to use to evaluate the quality of a data set for this `Use Case`, and to track improvements in that quality as we find and fix errors in the data set.
+
+See also:
+- [Quality Control and Quality Assurance](../guide/users/index.md#21-quality-control-and-quality-assurance-non-normative) in the User's Guide.
+- [Single Record and Multi Record Tests](../bdqtest/index.md#23-single-record-and-multi-record-tests-non-normative) in the bdqtest: landing page.
+- [Data Quality Control and Data Quality Assurance](../guide/bdqffdq/index.md#321-data-quality-control-and-data-quality-assurance-non-normative) in the bdqffdq ontology guide.
 
 ### 8.1 MultiRecord Measures for Quality Control (non-normative)
 
@@ -1139,8 +1164,7 @@ This “run → analyze patterns → fix causes → re-run” loop is the core Q
 
 ### 8.3 Quality Assurance Workflow (non-normative)
 
-In contrast to `Quality Control`, which focuses on finding and fixing errors, `Quality Assurance` is about filtering a dataset down to a subset of records that are fit for some purpose.  The mechanism for this in the Fittness for Use Framework is to define a set of `MultiRecord` `Measures` that return `COMPLETE` if the dataset meets a dataset-level requirement derived from `SingleRecord` Test outcomes, and `NOT_COMPLETE` otherwise, and if `NOT_COMPLETE`, filter out records based on underlying `Validation` problems until the `Measure` returns `COMPLETE`.   When all the `MultiRecord` `Measures` of this sort for a `Use Case` (as specified by `Policy`) are 'COMPLETE`, the filtered data set is fit for use with respect to the selected `Use Case`.
-
+In contrast to `Quality Control`, which focuses on finding and fixing errors, `Quality Assurance` is about filtering a dataset down to a subset of records that are fit for some purpose.  The mechanism for this in the Fittness for Use Framework is to define a set of `MultiRecord` `Measures` that return `COMPLETE` if the dataset meets a dataset-level requirement derived from `SingleRecord` Test outcomes, and `NOT_COMPLETE` otherwise, and if `NOT_COMPLETE`, filter out records based on underlying `Validation` problems until the `Measure` returns `COMPLETE`.   When all the `MultiRecord` `Measures` of this sort for a `Use Case` (as specified by `Policy`) are `COMPLETE`, the filtered data set is fit for use with respect to the selected `Use Case`.
 
 ## 9 Round-Up
 
@@ -1151,9 +1175,6 @@ Critical to the process of defining a new test is to iterate.  Start with a draf
 ### 9.1 Summary of the BDQ Philosophy
 
 Through these steps, the BDQ standard aims to be "comprehensive but not exhaustive". By providing clear rationale, identifying abstract `Information Elements`, and anchoring tests in community-vetted `Use Cases`, the standard creates a stable framework for biodiversity science.
-
-
-
 
 
 
