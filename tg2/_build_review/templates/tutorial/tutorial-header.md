@@ -711,6 +711,33 @@ Having asserted that a `bdq:sourceAuthority` is needed in the Test definition (a
 * **Description** Does value in prov:wasAttributedTo conform to the format of the bdq:sourceAuthority?
 * **Expected Response**  INTERNAL_PREREQUISITES_NOT_MET if prov:wasAttributedTo is bdq:Empty; COMPLIANT if the value in prov:wasAttributedTo conforms to the expected format of bdq:sourceAuthority; otherwise NOT_COMPLIANT.
 
+#### 6.7.4 Clarifying Related Concepts (non-normative)
+
+The concept of `Source Authority` can blur several related ideas including the authority itself (e.g. ORCID documentation/registry) an implementation strategy (e.g. regex validation of a resolvable ORCID URL) and a fixed string identifier (e.g. "Resolvable ORCID ID regex") that is used to identify the authority and implementation strategy in code.  It is important to be clear about these related concepts when defining a Test with a `Source Authority`.  The values in `Source Authority` should distinguish between "what is authoritative" from "how you check it." from "what you call it in code".  For example, for this Test, we have:  
+
+* **hasAuthoritiesDefaults** bdq:sourceAuthority default = "Resolvable ORCID ID regex" `{["^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$"]}`
+* **Parameter** bdq:sourceAuthority
+
+* Authority: ORCID documentation 
+* Fixed string identifier: "Resolvable ORCID ID regex"
+* Default checking mechanism: regex for resolvable form of ORCID IDs
+* Parameterization: allowing alternative acceptable forms
+  * Alternative checking mechanism: regex for non resolvable form of ORCID IDs
+
+Some Tests specify a `Source Authority` that is a controlled vocabulary which has a defined set of acceptable values and is also available at an API endpoint.
+
+For example [VALIDATION_PHYLUM_FOUND](../terms/index.md#VALIDATION_PHYLUM_FOUND):
+
+* **Expected Response** EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:phylum is bdq:Empty; COMPLIANT if the value of dwc:phylum is found as a value at the rank of Phylum in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
+* **hasAuthoritiesDefaults** bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
+* **Parameters** bdq:sourceAuthority
+
+* Authority: GBIF Backbone Taxonomy
+* Fixed string identifier: "GBIF Backbone Taxonomy"
+* Default checking mechanism: API endpoint: [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]
+* Parameterization: allowing alternative acceptable forms
+  * Alternative checking mechanism: API endpoint for another taxonomic authority
+
 ### 6.8 Notes (non-normative)
 
 Notes are present when some aspects of a Test may not be obvious to the casual user or implementer, or if we want to describe aspects of the behaivior of the Test in a non-normative way. 
