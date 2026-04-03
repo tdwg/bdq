@@ -53,6 +53,8 @@ Draft Standard for Review
 
 [2 Use of Terms (normative)](#2-use-of-terms-normative)
 
+[2 Use of Terms (normative)](#2-use-of-terms-normative)
+
 [3 Term index (non-normative)](#3-term-index-non-normative)
   - [3.1 Index By Term Name (non-normative)](#31-index-by-term-name-non-normative)
   - [3.2 Index By Label (non-normative)](#32-index-by-label-non-normative)
@@ -152,11 +154,13 @@ The terminology used to describe the terms in this vocabulary follows the TDWG [
 
 ## 2 Use of Terms (normative)
 
-A value for `bdqffdq:hasCriterion` in an RDF context MUST be a Term IRI (e.g., `https://rs.tdwg.org/bdqcrit/terms/NotEmpty`) or Term Qualified name (e.g., `bdqcrit:NotEmpty`) from the `bdqcrit:` namespace. In a non-RDF context in which resources may be used by software (e.g., a value in a spreadsheet or database table) the Controlled Value String (Local name, e.g., `NotEmpty`) MAY be used. In a purely human context a label (e.g., `Not Empty`) MAY be used.
+In an RDF context, a reference to a term in the `bdqcrit:` namespace MUST use the Term IRI (e.g., `https://rs.tdwg.org/bdqcrit/terms/InRange`) or Term Qualified name (e.g., `bdqcrit:InRange`). In a non-RDF context in which resources may be used by software (e.g., a value in a spreadsheet or database table) the Controlled Value String (local name, e.g., `InRange`) SHOULD be used. In a purely human context a label (e.g., `In Range`) MAY be used.
 
 Each instance of `bdqffdq:Validation` and `bdqffdq:Issue` SHOULD have exactly one `bdqffdq:hasCriterion` property relating it to a term in this `bdqcrit:` vocabulary.
 
 An instance of `bdqffdq:Measure` or `bdqffdq:Amendment` SHOULD NOT have a `bdqffdq:hasCriterion` property relating it to a term in this `bdqcrit: vocabulary`.
+
+## 2 Use of Terms (normative)
 
 ## 3 Term index (non-normative)
 ### 3.1 Index By Term Name (non-normative)

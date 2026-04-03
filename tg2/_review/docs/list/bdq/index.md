@@ -160,7 +160,7 @@ The terminology used to describe the terms in this vocabulary follows the TDWG [
 
 ## 2 Use of Terms (normative)
 
-In an RDF context, a reference to a term in the `bdq:` namespace MUST use the Term IRI (e.g., `http://rs.tdwg.org/bdq/bdq/NotEmpty`) or Term Qualified name (e.g., `bdq:NotEmpty`). In a non-RDF context in which resources may be used by software (e.g., a value in a spreadsheet or database table) the Controlled Value String (Local name, e.g., `NotEmpty`) SHOULD be used. In a purely human context a label (e.g., `Not Empty`) MAY be used.
+In an RDF context, a reference to a term in the `bdq:` namespace MUST use the Term IRI (e.g., `https://rs.tdwg.org/bdq/terms/NotEmpty`) or Term Qualified name (e.g., `bdq:NotEmpty`). In a non-RDF context in which resources may be used by software (e.g., a value in a spreadsheet or database table) the Controlled Value String (local name, e.g., `NotEmpty`) SHOULD be used. In a purely human context a label (e.g., `Not Empty`) MAY be used.
 
 ## 3 Term index (non-normative)
 ### 3.1 Index By Term Name (non-normative)
