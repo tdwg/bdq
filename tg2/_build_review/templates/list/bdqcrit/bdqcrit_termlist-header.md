@@ -121,6 +121,4 @@ Each instance of `bdqffdq:Validation` and `bdqffdq:Issue` SHOULD have exactly on
 
 An instance of `bdqffdq:Measure` or `bdqffdq:Amendment` SHOULD NOT have a `bdqffdq:hasCriterion` property relating it to a term in this `bdqcrit: vocabulary`.
 
-## 2 Use of Terms (normative)
-
 ## 3 Term index (non-normative)

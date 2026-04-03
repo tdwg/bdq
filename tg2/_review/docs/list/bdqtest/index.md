@@ -48,12 +48,13 @@ Draft Standard for Review
   - [1.5 Status of the Content of this Document (normative)](#15-status-of-the-content-of-this-document-normative)
   - [1.6 RFC 2119 key words (normative)](#16-rfc-2119-key-words-normative)
   - [1.7 Namespace abbreviations (non-normative)](#17-namespace-abbreviations-non-normative)
+  - [1.8 Key to Vocabulary Terms (normative)](#18-key-to-vocabulary-terms-normative)
 
-[1.8 Use of Terms (normative)](#18-use-of-terms-normative)
-  - [1.9 Test Types (non-normative)](#19-test-types-non-normative)
-  - [1.10 Key to Vocabulary Terms (normative)](#110-key-to-vocabulary-terms-normative)
+[2 Use of Terms (normative)](#2-use-of-terms-normative)
 
-[2 Term Indices (non-normative)](#2-term-indices-non-normative)
+[3 Test Types (non-normative)](#3-test-types-non-normative)
+
+[4 Term Indices (non-normative)](#4-term-indices-non-normative)
   - [3.1 Index to Validation Tests (non-normative)](#31-index-to-validation-tests-non-normative)
   - [3.2 Index to Issue Tests (non-normative)](#32-index-to-issue-tests-non-normative)
   - [3.3 Index to Measure Tests (non-normative)](#33-index-to-measure-tests-non-normative)
@@ -150,23 +151,7 @@ The following namespace abbreviations are used in this document:
 | skos:        | http://www.w3.org/2004/02/skos/core#        |
 | tdwgutility: | http://rs.tdwg.org/dwc/terms/attributes/    |
 
-## 1.8 Use of Terms (normative)
-
-In an RDF context, a reference to a term in the `bdqtest:` namespace MUST use the Term IRI (e.g., `https://rs.tdwg.org/bdqtest/terms/b3471c65-b53e-453b-8282-abfa27bf1805`) or Term Qualified name (e.g., `bdqtest:b3471c65-b53e-453b-8282-abfa27bf1805`).  In a non-RDF context in which resources may be used by software (e.g., a Java method annotation, or a value in a database table), the Term IRI or Term Qualified Name (either the base IRI or the versioned IRI) SHOULD be used. In a non-RDF context in which resources are expected to be read by humans (e.g., a value in a spreadsheet or database table) the Label (`rdfs:label`, e.g., `AMENDMENT_TYPESTATUS_STANDARDIZED`) SHOULD be used. In a purely human context for readability or accessibility, the preferred label (e.g., `Amendment dwc:typeStatus Standardized`) MAY be used.
-
-### 1.9 Test Types (non-normative)
-
-There are four types of BDQ Tests: `Validations`, `Issues`, `Measures` and `Amendments`. Each Test is intended to examine just one specific aspect of data quality. Tests are assembled into Test suites (`bdqffdq:Policies`) that assess the fitness for use of data for a specific use (`bdqffdq:UseCase`).
-
-**Validation Tests** can be thought of as fact-checking. They compare the data against known standards or rules. `Validation` Tests examine the values of one or more [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) against a `Criterion` for quality. An example is [VALIDATION_COUNTRYCODE_STANDARD](../../terms/bdqtest/index.md#VALIDATION_COUNTRYCODE_STANDARD) where `dwc:countryCode` is checked against a `sourceAuthority` for validity.
-
-**Issue Tests** can be thought of as warning flags. They don't necessarily mean the data are wrong, but they highlight something that might be a problem for some users. For example, [ISSUE_DATAGENERALIZATIONS_NOTEMPTY](../../terms/bdqtest/index.md#ISSUE_DATAGENERALIZATIONS_NOTEMPTY) alerts users to a `NotEmpty` value that should be examined against their `Data Quality Needs`. 
-
-**Measure Tests** can be thought of as metrics. `Measure` Tests either count things, or assert that data evaluate as fit for some use (COMPLETE), or not fit for some use (NOT_COMPLETE). An example is [MEASURE_VALIDATIONTESTS_NOTCOMPLIANT](../../terms/bdqtest/index.md#MEASURE_VALIDATIONTESTS_NOTCOMPLIANT), which returns the number of Tests of Type `Validation` that had a response of "NOT_COMPLIANT" on a record.
-
-**Amendment Tests** can be thought of as suggestions for improvement. `Amendment` Tests examine the values of [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) and may propose changes or additions to improve the quality. An example is [AMENDMENT_COUNTRYCODE_STANDARDIZED](../../terms/bdqtest/index.md#AMENDMENT_COUNTRYCODE_STANDARDIZED), where a valid ISO country code could be inferred.
-
-### 1.10 Key to Vocabulary Terms (normative)
+### 1.8 Key to Vocabulary Terms (normative)
 
 These "Test Descriptors" are terms that are necessary to comprehensively describe each Test. Some terms, such as those labeled `Term Version IRI` (`rdf:about`), `Term IRI` (`dcterms:isVersionOf`) and `Term Name` (`rdf:value`) are intended for machine consumption. Some terms such as the `Description` (`rdfs:comment`) are designed to be human-readable and to be understood by consumers of biodiversity `Data Quality Reports`. Terms such as the `Specification` (`bdqffdq:Specification`) ensure that implementers have no ambiguity about how the Test should be coded.
 
@@ -203,7 +188,24 @@ See section [2.4.1 Listing Identifiers for Tests (non-normative)](../../suppleme
 | Argument GUID (bdqffdq:Argument) | normative | A value that, when provided to a Test bdqffdq:Specification to replace a bdqffdq:Parameter changes the behavior of the Test in a defined manner. | 1b66a16a-5e76-4eca-a400-d097ac136ac1 |
 
 
-## 2 Term Indices (non-normative)
+## 2 Use of Terms (normative)
+
+In an RDF context, a reference to a term in the `bdqtest:` namespace MUST use the Term IRI (e.g., `https://rs.tdwg.org/bdqtest/terms/b3471c65-b53e-453b-8282-abfa27bf1805`) or Term Qualified name (e.g., `bdqtest:b3471c65-b53e-453b-8282-abfa27bf1805`).  In a non-RDF context in which resources may be used by software (e.g., a Java method annotation, or a value in a database table), the Term IRI or Term Qualified Name (either the base IRI or the versioned IRI) SHOULD be used. In a non-RDF context in which resources are expected to be read by humans (e.g., a value in a spreadsheet or database table) the Label (`rdfs:label`, e.g., `AMENDMENT_TYPESTATUS_STANDARDIZED`) SHOULD be used. In a purely human context for readability or accessibility, the preferred label (e.g., `Amendment dwc:typeStatus Standardized`) MAY be used.
+
+## 3 Test Types (non-normative)
+
+There are four types of BDQ Tests: `Validations`, `Issues`, `Measures` and `Amendments`. Each Test is intended to examine just one specific aspect of data quality. Tests are assembled into Test suites (`bdqffdq:Policies`) that assess the fitness for use of data for a specific use (`bdqffdq:UseCase`).
+
+**Validation Tests** can be thought of as fact-checking. They compare the data against known standards or rules. `Validation` Tests examine the values of one or more [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) against a `Criterion` for quality. An example is [VALIDATION_COUNTRYCODE_STANDARD](../../terms/bdqtest/index.md#VALIDATION_COUNTRYCODE_STANDARD) where `dwc:countryCode` is checked against a `sourceAuthority` for validity.
+
+**Issue Tests** can be thought of as warning flags. They don't necessarily mean the data are wrong, but they highlight something that might be a problem for some users. For example, [ISSUE_DATAGENERALIZATIONS_NOTEMPTY](../../terms/bdqtest/index.md#ISSUE_DATAGENERALIZATIONS_NOTEMPTY) alerts users to a `NotEmpty` value that should be examined against their `Data Quality Needs`. 
+
+**Measure Tests** can be thought of as metrics. `Measure` Tests either count things, or assert that data evaluate as fit for some use (COMPLETE), or not fit for some use (NOT_COMPLETE). An example is [MEASURE_VALIDATIONTESTS_NOTCOMPLIANT](../../terms/bdqtest/index.md#MEASURE_VALIDATIONTESTS_NOTCOMPLIANT), which returns the number of Tests of Type `Validation` that had a response of "NOT_COMPLIANT" on a record.
+
+**Amendment Tests** can be thought of as suggestions for improvement. `Amendment` Tests examine the values of [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) and may propose changes or additions to improve the quality. An example is [AMENDMENT_COUNTRYCODE_STANDARDIZED](../../terms/bdqtest/index.md#AMENDMENT_COUNTRYCODE_STANDARDIZED), where a valid ISO country code could be inferred.
+
+
+## 4 Term Indices (non-normative)
 
 
 

@@ -53,8 +53,6 @@ Draft Standard for Review
 
 [2 Use of Terms (normative)](#2-use-of-terms-normative)
 
-[2 Use of Terms (normative)](#2-use-of-terms-normative)
-
 [3 Term index (non-normative)](#3-term-index-non-normative)
   - [3.1 Index By Term Name (non-normative)](#31-index-by-term-name-non-normative)
   - [3.2 Index By Label (non-normative)](#32-index-by-label-non-normative)
@@ -159,8 +157,6 @@ In an RDF context, a reference to a term in the `bdqcrit:` namespace MUST use th
 Each instance of `bdqffdq:Validation` and `bdqffdq:Issue` SHOULD have exactly one `bdqffdq:hasCriterion` property relating it to a term in this `bdqcrit:` vocabulary.
 
 An instance of `bdqffdq:Measure` or `bdqffdq:Amendment` SHOULD NOT have a `bdqffdq:hasCriterion` property relating it to a term in this `bdqcrit: vocabulary`.
-
-## 2 Use of Terms (normative)
 
 ## 3 Term index (non-normative)
 ### 3.1 Index By Term Name (non-normative)
