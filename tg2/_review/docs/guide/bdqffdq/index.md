@@ -52,7 +52,7 @@ Draft Standard for Review
   - [1.6 Namespace abbreviations (non-normative)](#16-namespace-abbreviations-non-normative)
   - [1.7 Referring to Terms (normative)](#17-referring-to-terms-normative)
 
-[2 Use of Terms (normative)](#2-use-of-terms-normative)
+[2 Guidance for Use of Terms (normative)](#2-guidance-for-use-of-terms-normative)
 
 [3 Framework for describing data quality (non-normative)](#3-framework-for-describing-data-quality-non-normative)
   - [3.1 Introduction and Context (non-normative)](#31-introduction-and-context-non-normative)
@@ -258,11 +258,11 @@ The following namespace abbreviations are used in this document:
 
 In any technical treatment of the BDQ standard, a precise reference to a class or property term SHOULD be made using its qualified name (the namespace prefix followed by the term local name; e.g., `bdqffdq:InformationElement`) and the namespace IRI corresponding to the namespace prefix (e.g., `https://rs.tdwg.org/bdqffdq/terms/` for `bdqffdq:`) MUST be provided. In less formal descriptions where the technical precision is not needed, the preferred label (`skos:prefLabel`, e.g., `Information Element`) or the term local name (e.g., `InformationElement`) MAY be used. The BDQ documents use all these methods.
 
-## 2 Use of Terms (normative)
+## 2 Guidance for Use of Terms (normative)
 
-When not represented as objects, controlled value strings MUST be used as values of `bdqffdq:ResponseStatus`, and `bdqffdq:ResponseResult`.
-
-IRIs MUST be used as values for all individual class instances and object properties when using bdqffdq: terms.
+For normative guidance on the use of terms in the `bdqffdq:` vocabulary, see the following sections in the associated documents:
+[Use of Ontology Terms (normative)](../../bdqffdq/index.md#2-use-of-ontology-terms-normative) in the Fitness For Use Framework Ontology landing page document.
+[Use of Terms (normative)](../../list/index.md#2-use-of-terms-normative) in the bdqffdq: term-list document.
 
 ## 3 Framework for describing data quality (non-normative)
 

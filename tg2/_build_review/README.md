@@ -25,6 +25,7 @@ README.md  This file.
    - image and graphics files linked to in the generated document (and copied by the build script to a target directory).
  - templates/guide/implementers also contains the master copy of the test validation data files:
    - TG2_test_validation_data.csv and TG2_test_validation_data_nonprintingchars.csv 
+- [**tools/**](tools/) - Directory for tools used for quality control of the BDQ documentation.
 
 The directory structure of the templates is as follows, with the files listed in each directory:
 
