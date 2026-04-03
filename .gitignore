@@ -6,3 +6,4 @@ tg2/hold/
 .DS_Store
 # LibreOffice Lock files
 .~lock.*
+tg2/_build_review/tools/*.csv

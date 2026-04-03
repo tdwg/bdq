@@ -1338,7 +1338,7 @@ In a complete dataset the `Specification` is linked (via a `Method` instance) to
   oa:motivatedBy oa:assessing .
 ```
 
-See also (Framework Competency Question including an oa:annotation](../../supplementary/index.md#242-framework-competency-question-including-an-oaannotation-non-normative) and the [discussion](../../supplement/index.md#38-amendments-and-annotations-non-normative) in the [Supplementary Material](../../supplementary/index.md). 
+See also (Framework Competency Question including an oa:annotation](../../supplementary/index.md#242-framework-competency-question-including-an-oaannotation-non-normative) and the [discussion](../../supplement/index.md#38-amendments-and-annotations-non-normative) in the [Supplementary Material](../../supplement/index.md). 
 
 ## 8 Conformance Testing Implementations (normative)
 

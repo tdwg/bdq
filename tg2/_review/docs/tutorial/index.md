@@ -143,7 +143,7 @@ This document is also intended for those interested in describing new tests usin
 
 ### 1.3 Associated Documents (non-normative)
 
-For the list and links to all associated documents see [The Biodiversity Data Quality (BDQ) Standard](../../../index.md).
+For the list and links to all associated documents see [The Biodiversity Data Quality (BDQ) Standard](../../index.md).
 
 ### 1.4 Status of the content of this document (normative)
 
@@ -449,7 +449,7 @@ This gives us the following additional properties for the Test:
 
 (Once accepted into BDQ, these properties would be combined to form the fully qualified Term IRI for the Test (e.g. https://rs.tdwg.org/ bdqtest/terms/version/07c28ace-561a-476e-a9b9-3d5ad6e35933) and the Term Version IRI for a particular version of the Test (e.g. https://rs.tdwg.org/ bdqtest/terms/version/07c28ace-561a-476e-a9b9-3d5ad6e35933-2024-07-24))
 
-See also: [Key to bdqtest: Vocabulary Terms](../list/bdqtest/index.md#110-key-to-vocabulary-terms-normative) in the bdqtest: term-list document.
+See also: [Key to bdqtest: Vocabulary Terms](../list/bdqtest/index.md#18-key-to-vocabulary-terms-normative) in the bdqtest: term-list document.
 
 ### 4.5 Identify the Data Quality Dimension and Criterion (non-normative)
 
@@ -476,7 +476,7 @@ This gives us the following additional properties for the Test:
 * **Data Quality Dimension** Completeness
 * **Criterion** NotEmpty
 
-All BDQ Test types have a `Data Quality Dimension` (taking values from the [bdqdim:](../list/bdqdim/index.md) vocabulary).  Only `Validations` and `Issues` have a `Criterion` (taking values from the [bdqcrit:](../list/bdqrit/index.md) vocabulary), while `Amendments` have an `Enhancement` (taking values from the [bdqenh:](../list/bdqenh/index.md) vocabulary).  `Measures` have only the `Data Quality Dimension`.
+All BDQ Test types have a `Data Quality Dimension` (taking values from the [bdqdim:](../list/bdqdim/index.md) vocabulary).  Only `Validations` and `Issues` have a `Criterion` (taking values from the [bdqcrit:](../list/bdqcrit/index.md) vocabulary), while `Amendments` have an `Enhancement` (taking values from the [bdqenh:](../list/bdqenh/index.md) vocabulary).  `Measures` have only the `Data Quality Dimension`.
 
 See also:
 * Diagrams of Test Types and their Properties in [Concepts in the Framework](../guide/bdqffdq/index.md#323-concepts-in-the-framework-test-types-validation-issue-measure-amendment-non-normative) in the bdqffdq: guide.
@@ -663,7 +663,7 @@ We are asserting whether the value in `prov:wasAttributedTo` conforms to the str
 
 ### 6.4 Name the Test (non-normative)
 
-Now we can name the Test, following the naming conventions in BDQ.  The Test is a `Validation`, it is evaluating the `Information Element` `prov:wasAttributedTo`, and it is evaluating whether the value in `prov:wasAttributedTo` has the expected format of an ORCID ID.  So, the label for this Test could be VALIDATION_WASATTRIBUTEDTO_STANDARD.  (In contrast, we could frame another Test to check if the value in `prov:wasAttributedTo` can be found in an authoritative list of ORCID IDs, which could be labeled VALIDATION_WASATTRIBUTEDTO_FOUND.  There is some overlap in the words used for this [evaluation](../index.md#62-evaluations-in-test-labels-non-normativeypically) part of the names, typically, _FOUND is used for matches against large and changing authorities, like taxon names, and _STANDARD for correct formatting, as in dates, or matches to short stable controlled vocabularies like taxon rank.)  
+Now we can name the Test, following the naming conventions in BDQ.  The Test is a `Validation`, it is evaluating the `Information Element` `prov:wasAttributedTo`, and it is evaluating whether the value in `prov:wasAttributedTo` has the expected format of an ORCID ID.  So, the label for this Test could be VALIDATION_WASATTRIBUTEDTO_STANDARD.  (In contrast, we could frame another Test to check if the value in `prov:wasAttributedTo` can be found in an authoritative list of ORCID IDs, which could be labeled VALIDATION_WASATTRIBUTEDTO_FOUND.  There is some overlap in the words used for this [evaluation](../../index.md#62-evaluations-in-test-labels-non-normative) part of the names, typically, _FOUND is used for matches against large and changing authorities, like taxon names, and _STANDARD for correct formatting, as in dates, or matches to short stable controlled vocabularies like taxon rank.)  
 
 * **Label** VALIDATION_WASATTRIBUTEDTO_STANDARD
 
@@ -820,7 +820,7 @@ The concept of `Source Authority` can blur several related ideas including the a
 
 Some Tests specify a `Source Authority` that is a controlled vocabulary which has a defined set of acceptable values and is also available at an API endpoint.
 
-For example [VALIDATION_PHYLUM_FOUND](../terms/index.md#VALIDATION_PHYLUM_FOUND):
+For example [VALIDATION_PHYLUM_FOUND](../terms/bdqtest/index.md#VALIDATION_PHYLUM_FOUND):
 
 * **Expected Response** EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:phylum is bdq:Empty; COMPLIANT if the value of dwc:phylum is found as a value at the rank of Phylum in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
 * **hasAuthoritiesDefaults** bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
