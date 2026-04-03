@@ -57,6 +57,7 @@ Draft Standard for Review
     - [2.1.1 Quality Assurance (non-normative)](#211-quality-assurance-non-normative)
     - [2.1.2 Quality Control (non-normative)](#212-quality-control-non-normative)
     - [2.1.3 Quality Control in Data Aggregation (non-normative)](#213-quality-control-in-data-aggregation-non-normative)
+    - [2.1.4 Measures for Quality Control and Quality Assurance (non-normative)](#214-measures-for-quality-control-and-quality-assurance-non-normative)
 
 [3 A Guide to the Tests (non-normative)](#3-a-guide-to-the-tests-non-normative)
   - [3.1 Test Types (non-normative)](#31-test-types-non-normative)
@@ -68,6 +69,7 @@ Draft Standard for Review
       - [3.2.3.2 Validation Test Reports (non-normative)](#3232-validation-test-reports-non-normative)
       - [3.2.3.3 Issue Test Reports (non-normative)](#3233-issue-test-reports-non-normative)
       - [3.2.3.4 Measure Test Reports (non-normative)](#3234-measure-test-reports-non-normative)
+        - [3.2.3.4.1 Measures Counting Results on Other Tests (non-normative)](#32341-measures-counting-results-on-other-tests-non-normative)
       - [3.2.3.5 Amendment Test Reports (non-normative)](#3235-amendment-test-reports-non-normative)
   - [3.3 Amendments Propose Changes (normative)](#33-amendments-propose-changes-normative)
     - [3.3.1 Caution in Proposing Changes (non-normative)](#331-caution-in-proposing-changes-non-normative)
@@ -197,6 +199,13 @@ When a data provider is performing `Quality Control` while preparing data for ag
 
 `Quality Control` in downstream analysis of aggregated data faces other challenges. The volume of aggregated data is likely to be large, making it infeasible to either review all proposed `Amendments` or to report proposed changes to upstream databases of record. Quality Control in the workflow processing of data streams from large scale aggregation may include acceptance of proposals from `Amendments` into a data stream for downstream analysis. This should be done with some care in checking that the proposed `Amendments` are not introducing errors or false precision, and both unamended and amended data should be preserved, with accepted proposals from `Amendments` clearly identifiable as changes to the data stream.
 
+#### 2.1.4 Measures for Quality Control and Quality Assurance (non-normative)
+
+`Multi Record` `Measures` that take the outputs of other Tests as their inputs support both **Quality Assurance** and **Quality Control**, but they are used in different ways:
+
+- **Quality Assurance:** `Multi Record` `Measures` that examine the results of other Tests and return `Response.result`=`COMPLETE` or `NOT_COMPLETE` are used as dataset-level filters to retain only records that are fit for a particular `Use Case`.
+- **Quality Control:** `Multi Record` `Measures` that examine the results of other Tests and return numeric counts or other metrics are used to summarize patterns across a dataset, helping to prioritize targeted data cleanup and to compare potential improvement scenarios (e.g., comparing results pre-amendment with those post-amendment, to evaluate how much acceptance of proposed `Amendments` would improve the fitness of the data).
+
 ## 3 A Guide to the Tests (non-normative)
 
 The BDQ standard defines a set of Tests to assess the quality of biodiversity data. Implementations of these Tests may produce `Data Quality Reports`. The format of such `Data Quality Reports` may vary, but they should contain specific information about outputs from each Test. This guide describes the Tests, their inputs, expectations about their outputs, how they may be used for Quality Control and Quality Assurance, and describes the [BDQ Tests Quick Reference Guide](../../terms/bdqtest/index.md), which gives the details of each BDQ Test. 
@@ -296,9 +305,9 @@ Alternatively, if there is nothing in the `dwc:dataGeneralizations` field, i.e. 
 
 ##### 3.2.3.4 Measure Test Reports (non-normative)
 
-`Measure` Tests can be thought of as metrics. These Tests either count things or assert that data evaluate as fit for some use (COMPLETE), or not fit for some use (NOT_COMPLETE).  Almost all the `Measure` Tests defined in BDQ are `Multi Record` Tests that are powerful tools for formal support of `Quality Control` and `Quality Assurance` under the [Fitness for Use Framework Ontology](../../bdqffdq/index.md).  
+`Measure` Tests can be thought of as metrics. These Tests either return a numeric value (including counts), or assert that data evaluate as fit for some use (`COMPLETE`) or not fit for some use (`NOT_COMPLETE`). Almost all the `Measure` Tests defined in BDQ are `Multi Record` Tests that are powerful tools for formal support of `Quality Control` and `Quality Assurance` under the [Fitness for Use Framework Ontology](../../bdqffdq/index.md).
 
-There is one `Single Record` `Measure` Test that provides a metric on a Darwin Core term in a `Single Record`, MEASURE_EVENTDATE_DURATION_SECONDS, which provides a measure of the duration in seconds of the `dwc:eventDate`.  This test is intended to allow consumers of data quality reports to quickly identify records where the collecting event is known to a precision of about a day or less, or about a year or less, or any arbitrary time range that may be of interest to a particular use. 
+There is one `Single Record` `Measure` Test that provides a metric on a Darwin Core term in a `Single Record`, [MEASURE_EVENTDATE_DURATIONINSECONDS](../../terms/bdqtest/index.md#MEASURE_EVENTDATE_DURATIONINSECONDS).  This Test provides a measure of the duration in seconds of the `dwc:eventDate`.  This test is intended to allow consumers of data quality reports to quickly identify records where, for example, a collecting event is known to a precision of about a day or less, or about a year or less, or any arbitrary time range that may be of interest to a particular use. 
 
 For example, if the `dwc:eventDate` is "2020", the Response would be:
 
@@ -306,9 +315,13 @@ For example, if the `dwc:eventDate` is "2020", the Response would be:
 * `Response.result`="31622400"
 * `Response.comment`="The provided dwc:eventDate [2020] represents a time interval of a year that was a leap year, so it had 366 days or 31622400 seconds"
 
-A calendar year is usually 31,536,000 seconds (365 days), but it is not always that simple: some years have 366 days (leap years), and in some time scales additional leap seconds may be inserted.  (Because of these complexities, it is not straightforward to make precise assertions such as “this `dwc:eventDate` represents a duration of less than a year".  Such complexities contributed to us not defining specific `Validation` Tests that would ask such questions, this measure allows users to determine what duration of event dates provides sufficient quality for their specific purposes.)
+A calendar year is usually 31,536,000 seconds (365 days), but it is not always that simple: some years have 366 days (leap years), and in some time scales additional leap seconds may be inserted.  (Because of these complexities, it is not straightforward to make precise assertions such as "this `dwc:eventDate` represents a duration of less than a year".  Such complexities contributed to us not defining specific `Validation` Tests that would ask such questions; this measure allows users to determine what duration of event dates provides sufficient quality for their specific purposes.)
 
-There are a small set of `Measures` that count the results of other tests run on the same `SingleRecord` one of these is the Test `MEASURE_AMENDMENTS_PROPOSED`, it provides a count of the number of Amendment Tests that proposed changes to that record.
+MEASURE_EVENTDATE_DURATIONINSECONDS is an exemplar of a `Single Record` `Measure` Test that **directly measures an `Information Element` value** (here `dwc:eventDate`) and returns a numeric metric (here the duration in seconds of the time interval represented by that value), which can be used to assess fittness relative to a given analytical threshold.  Consumers of `Data Quality Reports` can apply use-specific thresholds to such metrics (e.g., “duration ≤ 86401 seconds” for day-level precision) to decide whether an individual `Single Record` has sufficient temporal precision to be fit for a particular `Use Case`.  Some terms (e.g. dwc:coordinateUncertaintyInMeters) have a more straightforward relationship between the value of the term and fitness for use, and thus `Validation` Tests that directly assert whether or not the value of the term is fit for some use are appropriate.  For other terms (e.g. dwc:eventDate), the relationship between the value of the term and fitness for use is more complex, and `SingleRecord` `Measure` Tests that convert values to a metric can be more appropriate to assess fitness relative to a given analytical threshold.
+
+###### 3.2.3.4.1 Measures Counting Results on Other Tests (non-normative)
+
+There are a small set of `Measures` that count the results of other tests run on the same `SingleRecord`.  These `Single Record` `Measures` that take the output of other tests as their input are intended as informative and do not have a formal purpose in the Fitness for Use Framework.  One of these is the Test `MEASURE_AMENDMENTS_PROPOSED`, it provides a count of the number of Amendment Tests that proposed changes to that record.  
 
 For example, if 17 tests proposed amendments on a particular `SingleRecord`; the Response would be
 
@@ -316,7 +329,12 @@ For example, if 17 tests proposed amendments on a particular `SingleRecord`; the
 * `Response.result`="17"
 * `Response.comment`="17 Tests of TYPE AMENDMENT proposed changes to the record"
 
-Most `Measure` Tests are `Multi Record` Tests that take as input the results of `Single Record` Test on some data set and provide metrics or filters on those data.  These support formal application of `Quality Control` and `Quality Assurance` and are not discussed further here.
+Most `Measure` Tests defined in BDQ are `Multi Record` Tests that take as input the results of `Single Record` Test on some data set and provide metrics or filters on those data.  These Tests are central to formal application of `Quality Control` and `Quality Assurance` in the Fitness for Use Framework. See the discussion in [Quality Control and Quality Assurance](#21-quality-control-and-quality-assurance-non-normative) above.
+
+`Measures` may be: 
+- `Single Record` `Measures` that directly measure an `Information Element` value and return a metric (e.g., MEASURE_EVENTDATE_DURATIONINSECONDS), or that count the results of other tests on the same `SingleRecord` (e.g., MEASURE_AMENDMENTS_PROPOSED).
+- `Single Record` `Measures` that take the outputs of other `Single Record` Tests as their inputs and return metrics on those particular records (e.g., MEASURE_AMENDMENTS_PROPOSED).
+- `Multi Record` `Measures` that take the outputs of `Single Record` Tests as their inputs and return metrics or filters on those data (e.g., MEASURE_VALIDATIONTESTS_NOTCOMPLIANT).
 
 ##### 3.2.3.5 Amendment Test Reports (non-normative)
 
