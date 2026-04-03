@@ -313,6 +313,10 @@ See also:
 * [Test Types](../bdqtest/index.md#22-test-types-non-normative) in the bdqtest: term-list document.
 * [Test Types](../guide/users/index.md#31-test-types-non-normative) in the User Guide.
 
+> **Alternative Pattern: metric + analytical threshold**
+>
+> In some cases, the relationship between the value of an `Information Element` and fitness for use is not well captured as a single `Validation` rule. In those situations a `Single Record` `Measure` can return a numeric metric that consumers of `Data Quality Reports` can interpret using an analytical threshold that is specific to their `Use Case` (for example, using [MEASURE_EVENTDATE_DURATIONINSECONDS](../terms/bdqtest/index.md#MEASURE_EVENTDATE_DURATIONINSECONDS) and applying a threshold such as “duration ≤ 86401 seconds” to identify records with day-level temporal precision).
+
 ### 4.4 Name the Test (non-normative)
 
 **Purpose**: Create human and machine-readable names for the test.
@@ -1060,6 +1064,14 @@ This tutorial has focused on defining `SingleRecord` Tests (primarily `Validatio
 
 In the BDQ Fitness for Use Framework, that dataset-level view is provided by `MultiRecord` `Measures` (`bdqffdq:Measure` with resource type `bdqffdq:MultiRecord`). These `Measures` operate over the collection of Responses (i.e., `Assertions`) produced by running one or more `SingleRecord` Tests across all records in a dataset, and they return a **single summary value** in `Response.result` (either a single number, or one of `COMPLETE`/`NOT_COMPLETE`).
 
+Before we focus on `Multi Record` `Measures`, it is helpful to distinguish three common patterns of `Measures` in BDQ:
+
+- `Single Record` `Measures` that directly measure an `Information Element` value and return a metric (e.g., [MEASURE_EVENTDATE_DURATIONINSECONDS](../terms/bdqtest/index.md#MEASURE_EVENTDATE_DURATIONINSECONDS)).
+- `Single Record` `Measures` that summarize outcomes of other `Single Record` Tests on the same `SingleRecord` (e.g., `MEASURE_AMENDMENTS_PROPOSED`).
+- `Multi Record` `Measures` that take the outputs of `Single Record` Tests as their inputs and return metrics or filters across a dataset (e.g., [MEASURE_VALIDATIONTESTS_NOTCOMPLIANT](../terms/bdqtest/index.md#MEASURE_VALIDATIONTESTS_NOTCOMPLIANT)).
+
+The remainder of this section focuses on `Multi Record` `Measures`, because they are central to practical `Quality Control` workflows on datasets.
+
 #### 8.1.1 What a MultiRecord Measure takes as input (non-normative)
 
 A `MultiRecord` `Measure` does not typically examine raw input (e.g. Darwin Core) values directly. Instead, it uses as input the outputs of `SingleRecord` Tests — the set of Responses with their `Response.status`, `Response.result`, and `Response.comment`.   `MultiRecord` `Measures` can also be defined to take raw data as input, for example, a `MultiRecord` `Measure` could be defined to calculate the average dwc:individualCount across all records in a dataset, but we won't consider that use of `MultiRecord` `Measures` here.
@@ -1108,6 +1120,8 @@ Because `MultiRecord` `Measures` return only a single value, they are often pair
 
 In contrast, in `Quality Assurance`, the focus is on filtering records based on `SingleRecord` Test outcomes.  The mechanism for this in the Fitness for Use Framework is to define a `MultiRecord` `Measure` that returns `COMPLETE` if the dataset meets a dataset-level requirement derived from `SingleRecord` Test outcomes, and `NOT_COMPLETE` otherwise, and if `NOT_COMPLETE`, filter out records until the `Measure` returns `COMPLETE`.   When all the `MultiRecord` `Measures` of this sort for a `Use Case` (as specified by `Policy`) are 'COMPLETE`, the filtered data set is fit for use with respect to the selected `Use Case`.
 
+A related pattern occurs at the `SingleRecord` level: when fitness depends on a user-defined analytical threshold rather than a single universal rule, a `Single Record` `Measure` may return a numeric metric that consumers interpret relative to their `Use Case`. For example, [MEASURE_EVENTDATE_DURATIONINSECONDS](../terms/bdqtest/index.md#MEASURE_EVENTDATE_DURATIONINSECONDS) returns the duration (in seconds) of the time interval represented by `dwc:eventDate`; consumers can then apply a threshold (e.g., “duration ≤ 86401 seconds” for day-level precision) to decide whether an individual `SingleRecord` has sufficient temporal precision for their `Use Case`.
+
 #### 8.1.4 A worked example (building on VALIDATION_FOOTPRINTWKT_NOTEMPTY)
 
 Suppose we run `VALIDATION_FOOTPRINTWKT_NOTEMPTY` on a dataset of 10,000 records.
@@ -1146,6 +1160,8 @@ For real-world datasets, the number of `NOT_COMPLIANT` results can be large. A p
 - **By repeated value**: Do many failures share the same few problematic values (e.g., a common misspelling, code system mismatch, or placeholder value)?
 
 These summaries help distinguish “many unique problems” from “one recurring problem”, and they help avoid spending time reviewing records one-by-one when the underlying cause is systematic.
+
+In addition to dataset-level summaries, some `Single Record` `Measures` (e.g., `MEASURE_AMENDMENTS_PROPOSED`) can be useful for triage by identifying individual records that have many proposed changes and therefore may benefit from focused review.
 
 #### 8.2.2 Look for Point Causes and Systemic Errors
 
