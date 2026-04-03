@@ -109,7 +109,6 @@ Draft Standard for Review
     - [8.1.3 Interpreting MultiRecord measures under Quality Control](#813-interpreting-multirecord-measures-under-quality-control)
     - [8.1.3.1 Contrast with Quality Assurance.](#8131-contrast-with-quality-assurance)
     - [8.1.4 A worked example (building on VALIDATION_FOOTPRINTWKT_NOTEMPTY)](#814-a-worked-example-building-on-validation_footprintwkt_notempty)
-    - [8.1.4 A worked example (building on VALIDATION_FOOTPRINTWKT_NOTEMPTY)](#814-a-worked-example-building-on-validation_footprintwkt_notempty)
     - [8.1.5 Practical note: summary values vs. details](#815-practical-note-summary-values-vs-details)
   - [8.2 Quality Control Workflow (non-normative)](#82-quality-control-workflow-non-normative)
     - [8.2.1 Start with Patterns, Not Individual Records](#821-start-with-patterns-not-individual-records)
@@ -210,16 +209,16 @@ See also:
 Clearly stating the problem that we are trying to solve ensures that the test is grounded in real-world needs and not just theoretical ideals.
 
 * **User:** A conservation biologist.
-* **Context:** We have a data set consisting of "Expert Distributions" of taxa.  We want to validate that this dataset is usable for identifying outliers in other occurrence data (and for doing other things we may want to do with a set of expert distributions like, mapping distributions of species).  The data consist of a taxon-oriented data set (e.g. one record per taxon) with fields identifying the taxon, providing the expert distribution as geospatial data (vector data providing shapes rather than point occurrences), along with metadata about the source of each record. 
-* **What makes data Fit for this Use?**: To be fit for this purpose each record in the data set must have:  A taxonomic name.  This taxonomic name can be found in a relevant authority on taxon names.  The taxon is also represented with a machine-readable identifier.  The spatial footprint of the expert distribution of that taxon is provided as a polygon. That polygon is a valid shape.  Each taxon distribution has its source identified as the data set may have been compiled from multiple sources of taxon distributions.
+* **Context:** We have a dataset consisting of "Expert Distributions" of taxa.  We want to validate that this dataset is usable for identifying outliers in other occurrence data (and for doing other things we may want to do with a set of expert distributions like, mapping distributions of species).  The data consist of a taxon-oriented dataset (e.g. one record per taxon) with fields identifying the taxon, providing the expert distribution as geospatial data (vector data providing shapes rather than point occurrences), along with metadata about the source of each record. 
+* **What makes data Fit for this Use?**: To be fit for this purpose each record in the dataset must have:  A taxonomic name.  This taxonomic name can be found in a relevant authority on taxon names.  The taxon is also represented with a machine-readable identifier.  The spatial footprint of the expert distribution of that taxon is provided as a polygon. That polygon is a valid shape.  Each taxon distribution has its source identified as the dataset may have been compiled from multiple sources of taxon distributions.
 
 #### 3.1.1 Refine and Formalize the Use Case (non-normative)
 
 Now we can define our `Use Case`.  We need to specify three elements, a name for the use case, a description, and a statement of fitness for use requirements.  We want to refine our statement of the problem into concise and clear statements.  We will also need a unique identifier for the `Use Case` that software can use, but we won't examine these machine-readable identifiers at this point.  
 
 * **Name** Validated Distribution Authority
-* **Description** Validating that Taxon oriented data can provide an authoritative resource for mapping known distributions of taxa, for identifying occurrence records in other data sets that have coordinates within the known ranges of taxa, are outliers, or for similar purposes.
-* **hasFitnessRequirements** Data are fit for the `Use Case` "Validated Distribution Authority" and can provide a resource for validating that occurrence records are in range if they are taxon-oriented data with fields that identify the taxon, that provide expert validated distributions as geospatial data, and provide metadata about the sources of the distributions.  To be fit for this purpose each record in the data set must have the following properties:
+* **Description** Validating that Taxon oriented data can provide an authoritative resource for mapping known distributions of taxa, for identifying occurrence records in other datasets that have coordinates within the known ranges of taxa, are outliers, or for similar purposes.
+* **hasFitnessRequirements** Data are fit for the `Use Case` "Validated Distribution Authority" and can provide a resource for validating that occurrence records are in range if they are taxon-oriented data with fields that identify the taxon, that provide expert validated distributions as geospatial data, and provide metadata about the sources of the distributions.  To be fit for this purpose each record in the dataset must have the following properties:
   * A taxonomic name is present and can be found in GBIF's backbone taxonomy.
   * A well-formed machine-readable taxonomic name identifier for that taxon is present.
   * A polygon providing the spatial footprint of the expert distribution for that taxon is present and valid.
@@ -491,9 +490,9 @@ See also:
 
 In BDQ, Tests can be applied to single data records or to multiple records.  A Test that is applied to a single record is called a "SingleRecord" Test, and a Test that is applied to multiple records is called a "MultiRecord" Test.  The distinction between these two types of Tests is important because it affects how the Test is implemented and how the results are interpreted.
 
-We wish to step through the input data set one record at a time and for each record assess whether or not there is a value in dwc:footprintWKT.  Thus we are applying this Test to single records, and thus this is a `SingleRecord` Test.  
+We wish to step through the input dataset one record at a time and for each record assess whether or not there is a value in dwc:footprintWKT.  Thus we are applying this Test to single records, and thus this is a `SingleRecord` Test.  
 
-We will come back later and define another Test to measure how much of the data set is compliant for this Test, and that will be a `MultiRecord` Test.
+We will come back later and define another Test to measure how much of the dataset is compliant for this Test, and that will be a `MultiRecord` Test.
 
 * **Resource Type** SingleRecord
 
@@ -563,7 +562,7 @@ The new Test is not referencing any external authoritative source.  We are simpl
 
 **Purpose**: If different users of the Test might have slightly different data quality needs with regard to that Test, consider generalizing the Test with a parameter.
 
-Different users of a Test might have slightly different data quality needs with regard to that Test.  For example, checking if elevation values are in range within national boundaries for some national data set, rather than more general global minimum and maximum possible elevations.  In such cases, in BDQ, the Test can be generalized with one or parameters, allowing different users to specify slightly different behaviors for the Test, while retaining the same internal logic.
+Different users of a Test might have slightly different data quality needs with regard to that Test.  For example, checking if elevation values are in range within national boundaries for some national dataset, rather than more general global minimum and maximum possible elevations.  In such cases, in BDQ, the Test can be generalized with one or parameters, allowing different users to specify slightly different behaviors for the Test, while retaining the same internal logic.
 
 In this Test, we are simply checking for the presence of a value in `dwc:footprintWKT`, so there is no need to generalize the Test with a parameter.
 
@@ -680,7 +679,7 @@ This Test is a `Validation`, so it will have both a `Data Quality Dimension` and
 
 The `Data Quality Dimension` is the aspect of data quality that this Test is addressing, looking at the bdqdim; vocabulary we find `Conformance` defined as "Where data in a bdqffdq:InformationElement conform to a format, syntax, data type, range, or standard."  We are asking if the value in prov:wasAttributedTo conforms to the expected format for an ORCID ID, so this is a good fit.
 
-Similarly, in the [bdqcrit: vocabulary](../list/bdqcrit/index.md) we find 'Standard' defined as "Data in a bdqffdq:InformationElement conform to a format, syntax, data type, or standard. Corresponding dimension is bdqdim:Conformance."  Again, this sounds like a good fit.
+Similarly, in the [bdqcrit: vocabulary](../list/bdqcrit/index.md) we find `Standard` defined as "Data in a bdqffdq:InformationElement conform to a format, syntax, data type, or standard. Corresponding dimension is bdqdim:Conformance."  Again, this sounds like a good fit.
 
 * **Data Quality Dimension** Conformance
 * **Criterion** Standard
@@ -716,7 +715,7 @@ But, where did that regular expression "^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\
 
 When a Test references some external authoritative source, e.g. a controlled vocabulary, an authority file, a registry, etc., outside of the BDQ namespaces (the ontology or vocabularies that form the BDQ standard), or the definition of terms used as `Information Elements`, we must specify that external dependency, that Source Authority in the Test definition.  
 
-As noted in the BDQ documentation, many aspects of 'data quality’ or 'fitness for use’ cannot be evaluated IF no authority exists to which to evaluate data values.  For example, we cannot evaluate whether a value is a valid ORCID ID if we do not have an authority that defines what a valid ORCID ID looks like.  In this case, the authority is the ORCID organization itself, which provides documentation on the expected format for ORCID IDs.  We can reference this authority in our Test definition, and then use the information from that authority to define the expected format for ORCID IDs in our Test specification.  This is an externality we must reference in our Test definition, and thus we need to specify the source authority for this Test.
+As noted in the BDQ documentation, many aspects of "data quality" or "fitness for use" cannot be evaluated IF no authority exists to which to evaluate data values.  For example, we cannot evaluate whether a value is a valid ORCID ID if we do not have an authority that defines what a valid ORCID ID looks like.  In this case, the authority is the ORCID organization itself, which provides documentation on the expected format for ORCID IDs.  We can reference this authority in our Test definition, and then use the information from that authority to define the expected format for ORCID IDs in our Test specification.  This is an externality we must reference in our Test definition, and thus we need to specify the source authority for this Test.
 
 In bdqffdq:, a `Specification` has a `hasExpectedResponse` property that contains the text of the Expected Response, and it can also have a `hasAuthoritiesDefaults` property.  The `hasAuthoritiesDefaults` property provides information on source authorities (and defaults for parameterized tests).
 
@@ -782,7 +781,7 @@ BDQ allows for parameters where an local variant on a `Use Case` requires some l
 
 Note that IF there is only one source authority that everyone would use, such as an ISO format specified in a term definition, the source authority would not be accompanied by a parameter value, as there is no local need to generalize to. 
 
-Some users may wish to store ORCID ID values with an ORCID: prefix, instead of the canonical https://orcid.org/ resolvable form, and thus we might want to allow for a parameter that allows for this variation in format.  This would be a parameter that allows for an alternative regex pattern to be used for evaluating the format of the ORCID ID, and when used, would change the behavior of the Test such that https://orcid.org/0000-0002-1825-0097 would be NOT_COMPLIANT while ORCID:0000-0002-1825-0097 would be COMPLIANT.  This would allow the Test to be used for data sets that use this alternative format for ORCID IDs, while still allowing the Test to be used for data sets that use the canonical resolvable form of ORCID IDs, without any change to the specifiction of the Test itself. 
+Some users may wish to store ORCID ID values with an ORCID: prefix, instead of the canonical https://orcid.org/ resolvable form, and thus we might want to allow for a parameter that allows for this variation in format.  This would be a parameter that allows for an alternative regex pattern to be used for evaluating the format of the ORCID ID, and when used, would change the behavior of the Test such that https://orcid.org/0000-0002-1825-0097 would be NOT_COMPLIANT while ORCID:0000-0002-1825-0097 would be COMPLIANT.  This would allow the Test to be used for datasets that use this alternative format for ORCID IDs, while still allowing the Test to be used for datasets that use the canonical resolvable form of ORCID IDs, without any change to the specifiction of the Test itself. 
 
 * "Bare ORCID ID regex" `{[^ORCID:\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$]}`
 
@@ -897,6 +896,8 @@ A BDQ Test implementation is expected to have a consistent scope and API shape a
 * Logic (decision rules): evaluate the clauses in the specification (`hasExpectedResponse`) in order, returning the first matching outcome (handling EXTERNAL_PREREQUISITES_NOT_MET via exception/error handling where appropriate).  
 * Output: exactly one structured Response per run, always providing a `Response.status` and a `Response.comment`, and providing a `Response.result` only when `Response.status` indicates a result (typically RUN_HAS_RESULT).
 
+We use Response as shorthand for the `Assertion` produced by running a Test, which carries `Response.status`, `Response.result`, and `Response.comment` properties (see [Structure of Response](../bdqtest/index.md#31-structure-of-response-normative) in the bdqtest: landing page).
+
 BDQ keeps Tests portable by standardizing semantics (inputs, decision rules, outputs), but it leaves binding of raw data inputs to `InformationElements` and execution mechanics (orchestration of test execution) to whatever framework fits the implementer's environment.  This means that the behavior of the implementation of an individual Test should be tested in isolation, presenting the Test with known inputs, and confirming that the Test produces the expected outputs based on the logic of the decision rules in the specification.  This means that Test conformance testing is expected to be performed on the level of individual Test implementations.
 
 See also: 
@@ -917,11 +918,11 @@ See also:
 
 When implementing a Test, implementors are encouraged to use a test-driven development approach, where they first create unit tests for a Test implementation covering each expected path in the specification, as well as edge cases, and then implement the Test internals to pass those unit tests.  This strategy helps ensures that the Test is implemented correctly and that it responds correctly to a variety of test cases, including edge cases.  
 
-Unit tests, however, are integral parts of the code base for a test implementation and thus do not provide a basis for confirming that different test implementations in different languages behave in the same ways when presented with identical inputs.  An implementation independent conformation testing data set is needed for this purpose.
+Unit tests, however, are integral parts of the code base for a test implementation and thus do not provide a basis for confirming that different test implementations in different languages behave in the same ways when presented with identical inputs.  An implementation independent conformation testing dataset is needed for this purpose.
 
 #### 7.2.2 Data for Conformance Testing and Edge Cases (non-normative)
 
-The documentation of a Test should include conformance testing data.  Such conformance testing data should provide inputs for a Test, and for each input, the expected outputs.  Such a conformance testing data set can be used to validate that any implementation of the Test is responding as expected. 
+The documentation of a Test should include conformance testing data.  Such conformance testing data should provide inputs for a Test, and for each input, the expected outputs.  Such a conformance testing dataset can be used to validate that any implementation of the Test is responding as expected. 
 
 An implementation of a Test then needs to be connected to a conformance testing harness that can read the example data for each Test, present the Test with the specified inputs, and confirm that the outputs from the Test match the expected outputs for those inputs.  This is a critical step in confirming that a Test implementation is correct and behaves as expected, and it is also a critical step in confirming that different implementations of the same Test in different languages behave in the same way when presented with identical inputs.  It would also be possible to frame conformance testing data that has the same structure as the expected inputs for a `Use Case`, but such data are much harder to produce in a way that evaluates conformance of individual decision paths within individual Tests in isolation, and thus it is more difficult to use such data to confirm that individual Tests are behaving as expected.  If such integration test data include synthetic values, they should be marked so as to be clearly distinguishable from actual data. 
 
@@ -935,7 +936,7 @@ Consider the Test [VALIDATION_COUNTRYCODE_STANDARD](../terms/bdqtest/index.md#VA
 * **Source Authority** bdq:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}
 * **Notes** Locations outside of a jurisdiction covered by a country code may have a value in the field dwc:countryCode, the ISO user defined codes include XZ used by the UN for installations on the high seas and recommended in Darwin Core to designate the high seas. Also available in the ISO user defined codes is ZZ, used by Darwin Core and GBIF to mark unknown countries. This Test should accept both XZ and ZZ as COMPLIANT country codes. This Test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.
 
-The conformance testing data set that accompanies the BDQ implementer's guide includes these following (and other) rows for this Test:
+The conformance testing dataset that accompanies the BDQ implementer's guide includes these following (and other) rows for this Test:
 
 | Label | dwc:countryCode | Response.status | Response.result | Response.comment |
 | --- | --- | --- | --- | --- | --- |
@@ -993,9 +994,9 @@ Some of these test cases are "edge cases" that might not be immediately obvious 
 * There is leading or trailing whitespace around the ORCID ID.
 * There is a fragment at the end of the ORCID ID.
 
-These edge cases are important to include in the conformance testing data set because they help ensure that an implementation of this Test will produce the expected outputs for these cases and not produce false positives or false negatives.  
+These edge cases are important to include in the conformance testing dataset because they help ensure that an implementation of this Test will produce the expected outputs for these cases and not produce false positives or false negatives.  
 
-Some of these test cases also highlight hidden assumptions in our Test specification, in particular, the assumption that the scheme in the ORCID ID is case-sensitive and the assumption that the host in the ORCID ID is case-sensitive.  By including these edge cases in our conformance testing data set, we can confirm that our Test specification is clear about these assumptions and that implementations of this Test will correctly handle these cases.
+Some of these test cases also highlight hidden assumptions in our Test specification, in particular, the assumption that the scheme in the ORCID ID is case-sensitive and the assumption that the host in the ORCID ID is case-sensitive.  By including these edge cases in our conformance testing dataset, we can confirm that our Test specification is clear about these assumptions and that implementations of this Test will correctly handle these cases.
 
 Since the scheme (https) and host (orcid.org) in the ORCID ID are technically case-insensitive according to the URI specification, but our regex pattern is case-sensitive, we need to be clear in our Test specification and in our conformance testing data that we are expecting the scheme and host to be in lowercase, and that if they are not, then the Test should return NOT_COMPLIANT.  The case insensitivity scheme and host in the URI specification may well also mean that we want to revisit our regex pattern to allow for case-insensitivity in the scheme and host.  This is an example of a "pitfall for the naive" when defining a Test.
 
@@ -1124,23 +1125,23 @@ See also:
 
 ## 8 Use an implementation for Quality Control (non-normative)
 
-So, for our `Use Case` **Validated Distribution Authority** we have identified a set of specific Tests to evaluate whether some data set is fit for the purpose of being used as a "validated distribution authority" for biodiversity science.  
+So, for our `Use Case` **Validated Distribution Authority** we have identified a set of specific Tests to evaluate whether some dataset is fit for the purpose of being used as a "validated distribution authority" for biodiversity science.  
 
-The Fitness For Use Framework is designed to support two different but related purposes: `Quality Control` and `Quality Assurance`.  `Quality Control` is the process of finding and fixing errors in a data set, while `Quality Assurance` is the process of filtering a data set down to a subset of records that are fit for some purpose.  
+The Fitness For Use Framework is designed to support two different but related purposes: `Quality Control` and `Quality Assurance`.  `Quality Control` is the process of finding and fixing errors in a dataset, while `Quality Assurance` is the process of filtering a dataset down to a subset of records that are fit for some purpose.  
 
-Implicit in our `Use Case`, and we will want to spell this out explicitly (again, iterate), is that, in this **Validated Distribution Authority** `Use Case`, we want to use the results of Tests to find and fix errors in a data set, thus improving the quality of the data set for this purpose, that is, our `Use Case` is focused on `Quality Control`. 
+Implicit in our `Use Case`, and we will want to spell this out explicitly (again, iterate), is that, in this **Validated Distribution Authority** `Use Case`, we want to use the results of Tests to find and fix errors in a dataset, thus improving the quality of the dataset for this purpose, that is, our `Use Case` is focused on `Quality Control`. 
 
-The formal mechanism that the Fitness for Use Framework provides to support both `Quality Control` and `Quality Assurance` is the use of `MultiRecord` `Measures`.  These `MultiRecord` `Measures`  take as input the output results from `SingleRecord` Tests over multiple records, and combine those results in some way to produce a measure of the quality of the data set as a whole for some purpose.  For example, we could have a `MultiRecord` `Measure` that takes the results of the VALIDATION_FOOTPRINTWKT_NOTEMPTY Test for all records in a data set, and counts the number of records that are COMPLIANT with that Test, combining this count with the number of records in the data set gives us a measure of how many records are missing values in the `dwc:footprintWKT` field in that data set.  
+The formal mechanism that the Fitness for Use Framework provides to support both `Quality Control` and `Quality Assurance` is the use of `MultiRecord` `Measures`.  These `MultiRecord` `Measures`  take as input the output results from `SingleRecord` Tests over multiple records, and combine those results in some way to produce a measure of the quality of the dataset as a whole for some purpose.  For example, we could have a `MultiRecord` `Measure` that takes the results of the VALIDATION_FOOTPRINTWKT_NOTEMPTY Test for all records in a dataset, and counts the number of records that are NOT_COMPLIANT with that Test, combining this count with the number of records in the dataset gives us a measure of how many records are missing values in the `dwc:footprintWKT` field in that dataset.  
 
 Both `Quality Control` and `Quality Assurance` rely on an examination of the results of `SingleRecord` Tests, but they use those results in different ways.
 
 It is important to recognize that BDQ does not standardize full `Quality Control` or `Quality Assurance` workflows; it standardizes the semantics of Tests and their Responses and provides `Measure` patterns to support `Quality Control` and `Quality Assurance` workflows.  
 
-In listing a set of `Validations` for our `Use Case`, we are setting a `Validation Policy` for the `Use Case`.  A `ValidationPolicy` is the set of `Validations` that are relevant to a particular `Use Case`.   A `Use Case` also has an `AmendmentPolicy` (the set of `Amendments` that are relevant to that `Use Case`) and a 'MeasurementPolicy' (the set of `Measures` that are relevant to that `Use Case`), and an `IssuePolicy` (the set of `Issues` that are relevant to that `Use Case`).
+In listing a set of `Validations` for our `Use Case`, we are setting a `ValidationPolicy` for the `Use Case`.  A `ValidationPolicy` is the set of `Validations` that are relevant to a particular `Use Case`.   A `Use Case` also has an `AmendmentPolicy` (the set of `Amendments` that are relevant to that `Use Case`) and a `MeasurementPolicy` (the set of `Measures` that are relevant to that `Use Case`), and an `IssuePolicy` (the set of `Issues` that are relevant to that `Use Case`).
 
-Informally, to perform `Quality Control` we could run the set of `Validation` Tests in the `ValidationPolicy` for our `Use Case`, and simply examine the outputs for NOT_COMPLIANT `Response.result` values, and then locate and fix those problems in the data set.  BDQ does not constrain how we do that examination and fixing, but it does provide a standard way to report the results of those `Validations` (the `Data Quality Report`), and it provides a standard way to summarize those results across records in the data set (the `MultiRecord` `Measures`) to help us prioritize and track our `Quality Control` efforts. 
+Informally, to perform `Quality Control` we could run the set of `Validation` Tests in the `ValidationPolicy` for our `Use Case`, and simply examine the outputs for NOT_COMPLIANT `Response.result` values, and then locate and fix those problems in the dataset.  BDQ does not constrain how we do that examination and fixing, but it does provide a standard way to report the results of those `Validations` (the `Data Quality Report`), and it provides a standard way to summarize those results across records in the dataset (the `MultiRecord` `Measures`) to help us prioritize and track our `Quality Control` efforts. 
 
-For our **Validated Distribution Authority** `Use Case` we would likely wish to define one or more `Amendment` Tests to propose changes to fix problems identified by the `Validations` that are relevant to that `Use Case`, but we won't explore these here.  Instead, we will focus on the `MultiRecord` `Measures` that we would want to use to evaluate the quality of a data set for this `Use Case`, and to track improvements in that quality as we find and fix errors in the data set.
+For our **Validated Distribution Authority** `Use Case` we would likely wish to define one or more `Amendment` Tests to propose changes to fix problems identified by the `Validations` that are relevant to that `Use Case`, but we won't explore these here.  Instead, we will focus on the `MultiRecord` `Measures` that we would want to use to evaluate the quality of a dataset for this `Use Case`, and to track improvements in that quality as we find and fix errors in the dataset.
 
 See also:
 - [Quality Control and Quality Assurance](../guide/users/index.md#21-quality-control-and-quality-assurance-non-normative) in the User's Guide.
@@ -1209,21 +1210,9 @@ Because `MultiRecord` `Measures` return only a single value, they are often pair
 
 #### 8.1.3.1 Contrast with Quality Assurance.
 
-In contrast, in `Quality Assurance`, the focus is on filtering records based on `SingleRecord` Test outcomes.  The mechanism for this in the Fitness for Use Framework is to define a `MultiRecord` `Measure` that returns `COMPLETE` if the dataset meets a dataset-level requirement derived from `SingleRecord` Test outcomes, and `NOT_COMPLETE` otherwise, and if `NOT_COMPLETE`, conceptually filter out records until the `Measure` returns `COMPLETE` (the exact filtering strategy would implementation-defined).   When all the `MultiRecord` `Measures` of this sort for a `Use Case` (as specified by `Policy`) are `COMPLETE`, the filtered data set is fit for use with respect to the selected `Use Case`.  Alternately, remediation couuld be applied (as in applying `Amendments` to fix problems identified by `Validations`) and filtering such that the `MultiRecord` `Measures` return `COMPLETE`, at which point the data set is fit for use with respect to the selected `Use Case`.  BDQ does not specify a workflow, it fundamentally supports the representation of completeness conditions via `MultiRecord` `Measures`, and it is up to implementers to decide how to use those `Measures` in a workflow, whether for `Quality Control` or `Quality Assurance`.  BDQ defines how to represent `Quality Assurance` conditions and outcomes, not how to implement the filtering loop.
+In contrast, in `Quality Assurance`, the focus is on filtering records based on `SingleRecord` Test outcomes.  The mechanism for this in the Fitness for Use Framework is to define a `MultiRecord` `Measure` that returns `COMPLETE` if the dataset meets a dataset-level requirement derived from `SingleRecord` Test outcomes, and `NOT_COMPLETE` otherwise, and if `NOT_COMPLETE`.  This `MultiRecord` `Measure` can be used as a completeness condition;  A `Quality Assurance` workflow may filter records until the remaining dataset satisfies that condition (the `Measure` returns `COMPLETE`).  When all the `MultiRecord` `Measures` of this sort for a `Use Case` (as specified by `Policy`) are `COMPLETE`, the (filtered) dataset is fit for use with respect to the selected `Use Case`.  Alternately, remediation could be applied (as in applying `Amendments` to fix problems identified by `Validations`) and filtering such that the `MultiRecord` `Measures` return `COMPLETE`, at which point the dataset is fit for use with respect to the selected `Use Case`.  BDQ does not specify a workflow, it fundamentally supports the representation of completeness conditions via `MultiRecord` `Measures`, and it is up to implementers to decide how to use those `Measures` in a workflow, whether for `Quality Control` or `Quality Assurance`.  BDQ defines how to represent `Quality Assurance` conditions and outcomes. A filtering or remediation strategy is outside the scope of BDQ and would be up to an implementation.
 
 A related pattern occurs at the `SingleRecord` level: when fitness depends on a user-defined analytical threshold rather than a single universal rule, a `SingleRecord` `Measure` may return a numeric metric that consumers interpret relative to their `Use Case`. For example, [MEASURE_EVENTDATE_DURATIONINSECONDS](../terms/bdqtest/index.md#MEASURE_EVENTDATE_DURATIONINSECONDS) returns the duration (in seconds) of the time interval represented by `dwc:eventDate`; consumers can then apply a threshold (e.g., “duration ≤ 86401 seconds” for day-level precision) to decide whether an individual `SingleRecord` has sufficient temporal precision for their `Use Case`.
-
-#### 8.1.4 A worked example (building on VALIDATION_FOOTPRINTWKT_NOTEMPTY)
-
-Suppose we run `VALIDATION_FOOTPRINTWKT_NOTEMPTY` on a dataset of 10,000 records.
-
-A `Quality Control` workflow commonly includes at least these dataset-level measures:
-
-- A `MultiRecord` `Measure` that counts records where `Response.status=RUN_HAS_RESULT` and `Response.result=COMPLIANT` for `VALIDATION_FOOTPRINTWKT_NOTEMPTY`.
-- A `MultiRecord` `Measure` that counts records where `Response.status=RUN_HAS_RESULT` and `Response.result=NOT_COMPLIANT` for the same `Validation`.
-- Optionally, a `MultiRecord` `Measure` that counts `INTERNAL_PREREQUISITES_NOT_MET` outcomes (useful when prerequisites exist).
-
-These counts tell you, at a glance, whether the dataset is close to meeting the needs of the `Use Case`, and whether effort should be directed toward data completion, remediation, or improved ingestion/mapping.
 
 #### 8.1.4 A worked example (building on VALIDATION_FOOTPRINTWKT_NOTEMPTY)
 
@@ -1269,7 +1258,7 @@ In addition to dataset-level summaries, some `SingleRecord` `Measures` (e.g., `M
 
 #### 8.2.2 Look for Point Causes and Systemic Errors
 
-Many record-level problems that appear as widespread in a data set have *point causes*: a single upstream issue that propagates broadly when data are transformed, denormalized, or aggregated. Examples include:
+Many record-level problems that appear as widespread in a dataset have *point causes*: a single upstream issue that propagates broadly when data are transformed, denormalized, or aggregated. Examples include:
 
 - a mapping error that swaps fields or applies the wrong delimiter,
 - an export rule that adds leading/trailing whitespace,
@@ -1317,9 +1306,9 @@ This “run → analyze patterns → fix causes → re-run” loop is a Quality 
 
 ### 8.3 Quality Assurance Workflow (non-normative)
 
-`Quality Assurance` is about filtering a dataset down to a subset of records that are fit for some purpose.  The mechanism to support this provided by the Fitness for Use Framework is the use of a set of `MultiRecord` `Measures` that return `COMPLETE` if the dataset meets a dataset-level requirement derived from `SingleRecord` Test outcomes, and `NOT_COMPLETE` otherwise.  Then, if some set of `Measures` in the `Use Case's` `MeasurementPolicy` are `NOT_COMPLETE`, data are filtered out of the dataset based on underlying `Validation` problems until the set `Measures` all return `COMPLETE`.   When all the `MultiRecord` `Measures` of this sort for a `Use Case` (as specified by `Policy`) are `COMPLETE`, the filtered data set is fit for use with respect to the selected `Use Case`.   
+`Quality Assurance` is about filtering a dataset down to a subset of records that are fit for some purpose.  The mechanism to support this provided by the Fitness for Use Framework is the use of a set of `MultiRecord` `Measures` that return `COMPLETE` if the dataset meets a dataset-level requirement derived from `SingleRecord` Test outcomes, and `NOT_COMPLETE` otherwise.  Then, if some set of `Measures` in the `MeasurementPolicy` of the `UseCase` are `NOT_COMPLETE`, data are filtered out of the dataset based on underlying `Validation` problems until the set `Measures` all return `COMPLETE`.   When all the `MultiRecord` `Measures` of this sort for a `Use Case` (as specified by `Policy`) are `COMPLETE`, the filtered dataset is fit for use with respect to the selected `Use Case`.   
 
-BDQ does not constrain how workflows may perform `Quality Assurance`, but it does provide a standard means for defining dataset-level requirements where `SingleRecord` Test outcomes, potentially modified by adopting proposals for improving the fitness of data from `Amendments` can be aggregated and measured for formal filtering of the data (using the `MultiRecord` `Measures`) to provide formal  `Quality Assurance` of a data set for a `Use Case`.
+BDQ does not constrain how workflows may perform `Quality Assurance`, but it does provide a standard means for defining dataset-level requirements where `SingleRecord` Test outcomes, potentially modified by adopting proposals for improving the fitness of data from `Amendments` can be aggregated and measured for formal filtering of the data (using the `MultiRecord` `Measures`) to provide formal  `Quality Assurance` of a dataset for a `Use Case`.
 
 ## 9 Round-Up
 
