@@ -122,17 +122,43 @@ The use of classes and properties in [bdqtest:](../../dist/bdqtest.ttl) also fol
 
 ## 2 Use of Terms (normative) 
 
-When not represented as objects, controlled value strings MUST be used as values of `bdqffdq:ResponseStatus`, and `bdqffdq:ResponseResult`.
+This guidance describes the use of the Framework Ontology (the Fitness for Use `bdqffdq:` vocabulary terms) in an RDF context. This guidance MAY be used to develop models of the Fitness For Use Framework in more constrained forms, including UML object models, information models, classes in a programming language, or database schemas.
 
-### 2.1 Use of Properties (normative) 
+### 2.1 Properties of Assertions (normative) 
 
-This guidance describes the use of the Framework Ontology, that is the Fitness for Use (`bdqffdq:`) vocabulary terms, in an RDF context. This guidance MAY be used to develop models of the Fitness For Use Framework in more constrained forms, including UML object models, information models, classes in a programming language, or database schemas. 
+In an RDF context, the status property of an `Assertion` MUST be represented using an IRI (e.g., `bdqffdq:RUN_HAS_RESULT`) as the object of `bdqffdq:hasResponseStatus`.
+
+In an RDF context, the result property of an `Assertion` MUST be represented using:
+- `bdqffdq:hasResponseResult` when the result is categorical and comes from the controlled set of `bdqffdq:ResponseResult` named individuals (e.g., `bdqffdq:COMPLIANT`, `bdqffdq:NOT_COMPLIANT`, `bdqffdq:COMPLETE`, `bdqffdq:NOT_COMPLETE`, `bdqffdq:POTENTIAL_ISSUE`, `bdqffdq:NOT_ISSUE`); or
+- `bdqffdq:hasResponseResultValue` when the result is a literal payload (e.g., a numeric measurement, a string, or structured text such as JSON for an `Amendment` proposal). The value of `bdqffdq:hasResponseResultValue` MUST be a literal and SHOULD use an appropriate datatype (e.g., `xsd:integer`, `rdf:JSON`).
+
+In a non-RDF structured-data context (JSON, database, CSV), where `bdqffdq:ResponseStatus` and `bdqffdq:ResponseResult` are represented as strings, controlled values MUST be used and the values MUST be the local names (e.g., `RUN_HAS_RESULT`, `COMPLIANT`), unless the result is a literal value (corresponding to use of `bdqffdq:hasResponseResultValue` in RDF), in which case the value MUST be that literal.
+
+Labels MAY be used purely for display.
+
+This section summarises representation choices. Full normative constraints on the response structure of `Assertions` is found in [3.1 Structure of Response (normative)
+](../bdqtest/index.md#31-structure-of-response-normative) of the [bdqtest: landing page](../bdqtest/index.md).
+
+#### 2.1.1 Table of Representations of Assertion Properties (non-normative)
+
+| Context | Informal Assertion property | RDF predicate / field | Required representation | Example |
+|---------|-----------------------------|-----------------------|-------------------------|---------|
+| RDF | `Response.status` (categorical) | `bdqffdq:hasResponseStatus` | IRI of a named individual | `bdqffdq:RUN_HAS_RESULT` |
+| RDF | `Response.result` (categorical) | `bdqffdq:hasResponseResult` | IRI of a named individual | `bdqffdq:COMPLIANT` |
+| RDF | `Response.result` (literal) | `bdqffdq:hasResponseResultValue` | Literal (SHOULD use an appropriate datatype) | `"17"^^xsd:integer` |
+| RDF | `Response.comment` (literal) | `bdqffdq:hasResponseComment` | Literal (string; MAY be language-tagged) | `"Provided value 11 is a valid dwc:day."@en` |
+| Non-RDF structured data (categorical) | `Response.status` | string corresponding to `bdqffdq:ResponseStatus` | controlled value local name string | `RUN_HAS_RESULT` |
+| Non-RDF structured data (categorical) | `Response.result` | string corresponding to `bdqffdq:ResponseResult` | controlled value local name string | `COMPLIANT` |
+| Non-RDF structured data (literal) | `Response.result` | field corresponding to `bdqffdq:hasResponseResultValue` | literal | `17` |
+| Non-RDF structured data (literal) | `Response.comment` | field corresponding to `bdqffdq:hasResponseComment` | literal (string) | `Provided value 11 is a valid dwc:day.` |
+
+### 2.2.Use of Properties (normative) 
 
 This section describes normative expectations for the use of object and datatype properties to related instances of `bdqffdq:` classes in their intended ways given the open world limited use of domains, ranges, and other axioms in the [Biodiversity Data Quality Fitness for Use Framework (Ontology)](../../vocabulary/bdqffdq.owl) ontology. This guidance builds on the normative definitions of `bdqffdq:` object properties and datatype properties to describe how `bdqffdq:` terms can be composed in a useful and consistent way.
 
 Section [2.1.6 Identifying the Test that produced an Assertion (normative)](#216-identifying-the-test-that-produced-an-assertion-normative) highlights the importance of using the object properties with the correct cardinality to preserve the relationship between an `Assertion` produced by a Test and the particular Test that produced it.
 
-#### 2.1.1 Properties Relating to Data Quality Needs (normative)
+#### 2.2.1 Properties Relating to Data Quality Needs (normative)
 
 Each description of a data quality Test SHOULD include the properties and related instances described in the following paragraphs.
 
@@ -198,7 +224,7 @@ Each instance of a subclass of `bdqffdq:DataQualityNeed` MAY have a `bdqffdq:has
 
 Each instance of `bdqffdq:AbstractInformationElement` SHOULD have `rdfs:label` and `rdfs:comment` properties describing the scope of the `Information Element` with the `rdfs:label` corresponding to the INFORMATIONELEMENT portion of the `rdfs:label` for an instance of a subclass of `bdqffdq:DataQualityNeed` following the convention described above in this section. 
 
-#### 2.1.2 Properties Relating Data Quality Needs to Data Quality Solutions (normative)
+#### 2.2.2 Properties Relating Data Quality Needs to Data Quality Solutions (normative)
 
 Each description of a data quality Test SHOULD include the properties and related instances given below.
 
@@ -226,7 +252,7 @@ An axiom places an `owl:restriction` on the object of the `bdqffdq:forIssue` obj
 
 Each `bdqffdq:Issue` method SHOULD have exactly one `bdqffdq:forIssue` object property.
 
-#### 2.1.3 Properties Relating to Data Quality Solutions Provided in a Test Description (normative)
+#### 2.2.3 Properties Relating to Data Quality Solutions Provided in a Test Description (normative)
 
 Each description of a data quality Test SHOULD include the following properties and related instances.
 
@@ -250,7 +276,7 @@ The `bdqffdq:hasParameter` object property SHOULD have a `bdqffdq:Argument` as i
 
 An axiom types the object of the `bdqffdq:hasParameter` object property as a `bdqffdq:Parameter`.
 
-#### 2.1.4 Properties relating to data quality solutions provided by an implementation (normative)
+#### 2.2.4 Properties relating to data quality solutions provided by an implementation (normative)
 
 Each data quality `Mechanism` that produces `Data Quality Reports` using the `bdqffdq:` vocabulary SHOULD include the following properties and related instances.
 
@@ -268,7 +294,7 @@ Each `bdqffdq:Implementation` SHOULD have a `bdqffdq:implementedBy` object prope
 
 A `bdqffdq:Implementation` SHOULD have one and only one `bdqffdq:implementedBy` object property.
 
-#### 2.1.5 Properties relating `Data Quality Reports` (normative)
+#### 2.2.5 Properties relating `Data Quality Reports` (normative)
 
 Each data quality `Mechanism` that produces `Data Quality Reports` using the `bdqffdq:` vocabulary SHOULD include the following properties and related instances.
 
@@ -282,7 +308,7 @@ Each instance of a `bdqffdq:Implementation` MAY have zero to many `bdqffdq:produ
 
 Each instance of a `bdqffdq:Asssertion` SHOULD be the object of exactly one `bdqffdq:producesAssertion` object property. 
 
-#### 2.1.6 Identifying the Test that produced an Assertion (normative)
+#### 2.2.6 Identifying the Test that produced an Assertion (normative)
 
 Following the object properties from an instance of a `bdqffdq:Assertion` to an instance of a subclass of a `bdqffdq:DataQualityNeed` SHOULD identify one and only one instance of a subclass of a `bdqffdq:DataQualityNeed` for a single instance of a `bdqffdq:Assertion`. If this condition is not met, it is not possible to tell which Test with which `Parameter` argument values produced the `Assertion`.
 
@@ -317,7 +343,7 @@ Given an `Assertion`, the following query returns which Test was run with which 
 
 Where, in this query, the text {id of assertion to look up} is a placeholder to replace with the id of the instance of the `bdqffdq:Assertion` to look up.
 
-##### 2.1.6.1 Properties that should be one-to-one (normative)
+##### 2.2.6.1 Properties that should be one-to-one (normative)
 
 **Validation**
 
