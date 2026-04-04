@@ -139,6 +139,8 @@ We use the informal term "Test" to describe these four vertical themes, a Test i
 
 The Framework draws a distinction between **Quality Control** and **Quality Assurance**. Quality Control processes seek to assess the quality of data for some purpose, then identify changes to the data or to processes around the data to improve their quality. Quality Assurance processes seek to filter some set of data to a subset that is fit for some purpose, that is, to assure that data used for some purpose are fit for that purpose.
 
+It is important to recognize that BDQ does not standardize complete `Quality Control` or `Quality Assurance` workflows (e.g., user roles, review and remediation procedures, pipelines, thresholds, or reporting formats). Instead, BDQ standardizes the semantics of `Tests` and their Responses (as `Assertions`) and provides `Measure` patterns that can be used to support `Quality Control` and `Quality Assurance` workflows in a consistent way.
+
 #### 3.2.2 Information Elements (non-normative)
 
 The Framework has an abstract concept of `Information Elements`. To frame Tests on Darwin Core terms in a usable way, we list specific Darwin Core terms as the `Information Elements` in each Test.
@@ -190,9 +192,9 @@ Need defines the properties data must have to be considered fit for use and may 
 
 The Framework includes an abstract concept of `Information Elements`, which are concretely represented by specific Darwin Core terms within each Test to make evaluations practical.
 
-For **Quality Assurance**, the Framework defines `Measures` that operate on `Multi Records` and return a `Response.result` of `COMPLETE` or `NOT_COMPLETE`. A `Multi Record` `Measure` may be `COMPLETE` if all instances of a related `Single Record` `Validation` are `COMPLIANT`.
+For **Quality Assurance**, the Framework defines `Measures` that operate on `Multi Records` and return a `Response.result` of `COMPLETE` or `NOT_COMPLETE`. A `Multi Record` `Measure` may be `COMPLETE` if all aggregated instances of a related `Single Record` `Validation` are `COMPLIANT`.
 
-For **Quality Control**, `Multi Record` `Measures` can return a count of `COMPLIANT` results for `Validations`, thereby indicating how fit a dataset is for its intended purpose and what adjustments are needed to make it fully fit.
+For **Quality Control**, `Multi Record` `Measures` can return numeric summaries of the results of other tests (e.g. count of `COMPLIANT` results for a `Validation`), thereby indicating how fit a dataset is for its intended purpose and what adjustments are needed to make it fully fit.
 
 ![Diagram of ValidationAssertion, IssueAssertion, MeasureAssertion and AmendmentAssertion classes as subtypes of the Assertion class with ReportConcept as its parent.](assertions.png)
 *The 4 central Assertion types in the Framework - ValidationAssertion, IssueAssertion, MeasureAssertion and AmendmentAssertion.*

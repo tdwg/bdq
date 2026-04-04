@@ -197,6 +197,81 @@ Given a `Use Case`, can one find `Validation` Tests and their `Specifications`?
          FILTER( ?uc = <https://rs.tdwg.org/bdq/terms/Taxon-Management> )
     }
 
+Given a `Use Case`, can one find the `Single Record` `Validations` related to that `Use Case`?  This is a question that an implementation of Tests might ask of an RDF representation of the bdqtest: vocabulary (list of Tests) in order to determine which Tests to run against each record in a dataset, given a target `Use Case` as a user selection in that implementation.
+
+    PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX skos:    <http://www.w3.org/2004/02/skos/core#>
+    PREFIX dcterms: <http://purl.org/dc/terms/>
+    
+    PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
+    PREFIX bdq:     <https://rs.tdwg.org/bdq/terms/>
+    PREFIX bdqtest: <https://rs.tdwg.org/bdqtest/terms/>
+    
+    # 1) Choose a Use Case (edit the VALUES line below).
+    # 2) From the ValidationPolicy that relates the Use Case to Validations,
+    #    identify the SingleRecord Validation Tests for that Use Case.
+    
+    SELECT DISTINCT
+      ?useCase
+      ?validation
+      ?validationLabel
+      ?validationPrefLabel
+      ?issued
+    WHERE {
+      # ---- Choose the Use Case ----
+      # Option A: by URI (recommended)
+      VALUES ?useCase { bdq:Spatial-Temporal_Patterns }
+    
+      # Option B: by label (uncomment if you prefer label-based selection)
+      # VALUES ?useCaseLabel { "Spatial-Temporal Patterns" }
+    
+      # ---- Use Case label (optional) ----
+      OPTIONAL { ?useCase rdfs:label ?useCaseLabel }
+    
+      # ---- Follow ValidationPolicy -> Validations ----
+      ?policy a bdqffdq:ValidationPolicy ;
+              bdqffdq:hasUseCase ?useCase ;
+              bdqffdq:includesInPolicy ?validation .
+    
+      OPTIONAL { ?policy rdfs:label ?policyLabel }
+    
+      # ---- Restrict to Validation tests on SingleRecord ----
+      ?validation a bdqffdq:Validation ;
+                  bdqffdq:hasResourceType bdqffdq:SingleRecord ;
+                  rdfs:label ?validationLabel .
+    
+      OPTIONAL { ?validation skos:prefLabel ?validationPrefLabel }
+      OPTIONAL { ?validation dcterms:issued ?issued }
+    }
+    ORDER BY LCASE(STR(?validationLabel)) STR(?issued)
+
+Or, to just get the UUID of these tests (for example to lookup relevant methods using Java annotations), asking: Given a `Use Case`, can one find the UUIDs of the `Single Record` `Validations` related to that `Use Case`?
+
+    PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX dcterms: <http://purl.org/dc/terms/>
+    
+    PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
+    PREFIX bdq:     <https://rs.tdwg.org/bdq/terms/>
+    
+    SELECT DISTINCT
+        ?isVersionOf 
+    WHERE {
+      # ---- Choose the Use Case ----
+      VALUES ?useCase { bdq:Spatial-Temporal_Patterns }
+    
+      # ---- Follow ValidationPolicy -> Validations ----
+      ?policy a bdqffdq:ValidationPolicy ;
+              bdqffdq:hasUseCase ?useCase ;
+              bdqffdq:includesInPolicy ?validation .
+    
+      # ---- Restrict to Validation tests on SingleRecord ----
+      ?validation a bdqffdq:Validation ;
+                  bdqffdq:hasResourceType bdqffdq:SingleRecord ;
+                  dcterms:isVersionOf ?isVersionOf .
+    }
+
 Given a `Use Case`, can one find the `Information Elements` that were `Acted Upon`?
 
     PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>

@@ -1047,9 +1047,9 @@ Both `Quality Control` and `Quality Assurance` rely on an examination of the res
 
 It is important to recognize that BDQ does not standardize full `Quality Control` or `Quality Assurance` workflows; it standardizes the semantics of Tests and their Responses and provides `Measure` patterns to support `Quality Control` and `Quality Assurance` workflows.  
 
-In listing a set of `Validations` for our `Use Case`, we are setting a `ValidationPolicy` for the `Use Case`.  A `ValidationPolicy` is the set of `Validations` that are relevant to a particular `Use Case`.   A `Use Case` also has an `AmendmentPolicy` (the set of `Amendments` that are relevant to that `Use Case`) and a `MeasurementPolicy` (the set of `Measures` that are relevant to that `Use Case`), and an `IssuePolicy` (the set of `Issues` that are relevant to that `Use Case`).
+In listing a set of `Validations` for our `Use Case`, we are setting a `ValidationPolicy` for the `Use Case`.  A `ValidationPolicy` is the set of `Validations` that are relevant to a particular `Use Case`.   A `Use Case` also has an `AmendmentPolicy` (the set of `Amendments` that are relevant to that `Use Case`) and a `MeasurementPolicy` (the set of `Measures` that are relevant to that `Use Case`), and an `IssuePolicy` (the set of `Issues` that are relevant to that `Use Case`).  The set of Tests associated with a `Use Case` in its `Policies` can be referred to as a Test suite.
 
-Informally, to perform `Quality Control` we could run the set of `Validation` Tests in the `ValidationPolicy` for our `Use Case`, and simply examine the outputs for NOT_COMPLIANT `Response.result` values, and then locate and fix those problems in the dataset.  BDQ does not constrain how we do that examination and fixing, but it does provide a standard way to report the results of those `Validations` (the `Data Quality Report`), and it provides a standard way to summarize those results across records in the dataset (the `MultiRecord` `Measures`) to help us prioritize and track our `Quality Control` efforts. 
+Informally, to perform `Quality Control` we could run the set of `Validation` Tests in the `ValidationPolicy` for our `Use Case`, and simply examine the outputs for NOT_COMPLIANT `Response.result` values, and then locate and fix those problems in the dataset.  BDQ does not constrain how we do that examination and remediation, but it does provide a standard way to report the results of those `Validations` (the `Data Quality Report`), and it provides a standard way to summarize those results across records in the dataset (the `MultiRecord` `Measures`) to help us prioritize and track our `Quality Control` efforts. 
 
 For our **Validated Distribution Authority** `Use Case` we would likely wish to define one or more `Amendment` Tests to propose changes to fix problems identified by the `Validations` that are relevant to that `Use Case`, but we won't explore these here.  Instead, we will focus on the `MultiRecord` `Measures` that we would want to use to evaluate the quality of a dataset for this `Use Case`, and to track improvements in that quality as we find and fix errors in the dataset.
 
@@ -1060,7 +1060,7 @@ See also:
 
 ### 8.1 MultiRecord Measures for Quality Control (non-normative)
 
-The `Use Case` we have been working with in this tutorial is focused on `Quality Control` (we want to fix problems in a dataset of distributions that would itself be used to evaluate other datasets), so we will examine on how the Fitness for Use Framework supports using the results of `SingleRecord` Tests for that purpose.
+The `Use Case` we have been working with in this tutorial is focused on `Quality Control` (we want to fix problems in a dataset of distributions that would itself be used to evaluate other datasets), so we will examine how the Fitness for Use Framework supports using the results of `SingleRecord` Tests for that purpose.
 
 This tutorial has focused on defining `SingleRecord` Tests (primarily `Validations`) that evaluate one record at a time. In practice, `Quality Control` almost always requires a dataset-level view: curators, data managers, and developers need to know **how prevalent** a particular problem is, **where** it occurs, and **whether** proposed changes would measurably improve fitness for a `Use Case`.
 
@@ -1072,7 +1072,7 @@ Before we focus on `MultiRecord` `Measures`, it is helpful to distinguish three 
 - `SingleRecord` `Measures` that summarize outcomes of other `SingleRecord` Tests on the same `SingleRecord` (e.g., `MEASURE_AMENDMENTS_PROPOSED`).
 - `MultiRecord` `Measures` that take the outputs of `SingleRecord` Tests as their inputs and return metrics or filters across a dataset (e.g., [MEASURE_VALIDATIONTESTS_NOTCOMPLIANT](../terms/bdqtest/index.md#MEASURE_VALIDATIONTESTS_NOTCOMPLIANT)).
 
-The remainder of this section focuses on `MultiRecord` `Measures`, because they are central to practical `Quality Control` workflows on datasets.
+The remainder of this section focuses on `MultiRecord` `Measures` that take the output of other tests as their input, because such `Measures` are central to practical `Quality Control` workflows on datasets.
 
 #### 8.1.1 What a MultiRecord Measure takes as input (non-normative)
 
@@ -1080,7 +1080,7 @@ A `MultiRecord` `Measure` does not typically examine raw input (e.g. Darwin Core
 
 Conceptually what we want to do with `MultiRecord` `Measures` is:
 
-1. Choose a `Use Case` (e.g., "Validated Distribution Authority"), and from the `ValidationPolicy` that relates the `Use Case` to `Validations`, the `SingleRecord` `Validation` Tests for that `Use Case`.
+1. Choose a `Use Case` (e.g., "Validated Distribution Authority"), and from the `ValidationPolicy` that relates the `Use Case` to `Validations`, identify the `SingleRecord` `Validation` Tests for that `Use Case`.
 2. Run the relevant `SingleRecord` `Validation` Tests over all records in the dataset.
 3. Collect the resulting Responses (`Assertions`).
 4. Run one or more `MultiRecord` `Measures` that take these `Assertions` as input to summarize how many quality issues exist where in the dataset.
@@ -1089,6 +1089,8 @@ Conceptually what we want to do with `MultiRecord` `Measures` is:
 5. Act upon the results of those `MultiRecord` `Measures` to prioritize and direct `Quality Control` efforts (or filter records for `Quality Assurance`).
 
 This separation on `Resource Type` (`SingleRecord` or `MultiRecord`) is important: it keeps each `SingleRecord` Test atomic and easy to implement, while providing a consistent, standards-aligned way to summarize results for dataset-level decision making.
+
+See also [Framework Competency Questions](../supplement/index.md#24-framework-competency-questions-non-normative) in the Supplement for examples of sparql queries that select the set of `SingleRecord` `Validations` associated by `Policy` with a `Use Case`.
 
 #### 8.1.2 Two common patterns of MultiRecord Measures
 
@@ -1118,9 +1120,11 @@ A key idea in `Quality Control` is that dataset-level metrics should be interpre
 
 Because `MultiRecord` `Measures` return only a single value, they are often paired with reporting or visualization outside of the Framework (e.g., spreadsheets, dashboards, or issue lists) that link summary counts back to the specific records needing attention.
 
+See also: [Phases: Pre-Amendment, Amendment, Post-Amendment](../guide/implementers/index.md#641-phases-pre-amendment-amendment-post-amendment-normative) in the implementers guide for a discussion of "pre-amendment" and "post-amendment" phases in a `Quality Control` workflow.
+
 #### 8.1.3.1 Contrast with Quality Assurance.
 
-In contrast, in `Quality Assurance`, the focus is on filtering records based on `SingleRecord` Test outcomes.  The mechanism for this in the Fitness for Use Framework is to define a `MultiRecord` `Measure` that returns `COMPLETE` if the dataset meets a dataset-level requirement derived from `SingleRecord` Test outcomes, and `NOT_COMPLETE` otherwise, and if `NOT_COMPLETE`.  This `MultiRecord` `Measure` can be used as a completeness condition;  A `Quality Assurance` workflow may filter records until the remaining dataset satisfies that condition (the `Measure` returns `COMPLETE`).  When all the `MultiRecord` `Measures` of this sort for a `Use Case` (as specified by `Policy`) are `COMPLETE`, the (filtered) dataset is fit for use with respect to the selected `Use Case`.  Alternately, remediation could be applied (as in applying `Amendments` to fix problems identified by `Validations`) and filtering such that the `MultiRecord` `Measures` return `COMPLETE`, at which point the dataset is fit for use with respect to the selected `Use Case`.  BDQ does not specify a workflow, it fundamentally supports the representation of completeness conditions via `MultiRecord` `Measures`, and it is up to implementers to decide how to use those `Measures` in a workflow, whether for `Quality Control` or `Quality Assurance`.  BDQ defines how to represent `Quality Assurance` conditions and outcomes. A filtering or remediation strategy is outside the scope of BDQ and would be up to an implementation.
+In contrast, in `Quality Assurance`, the focus is on filtering records based on `SingleRecord` Test outcomes.  The mechanism for this in the Fitness for Use Framework is to define a `MultiRecord` `Measure` that returns `COMPLETE` if the dataset meets a dataset-level requirement derived from `SingleRecord` Test outcomes, and `NOT_COMPLETE` otherwise, and if `NOT_COMPLETE`.  This `MultiRecord` `Measure` can be used as a completeness condition.  A `Quality Assurance` workflow may filter records until the remaining dataset satisfies that condition (the `Measure` returns `COMPLETE`).  When all the `MultiRecord` `Measures` of this sort for a `Use Case` (as specified by `Policy`) are `COMPLETE`, the (filtered) dataset is fit for use with respect to the selected `Use Case`.  Alternately, remediation could be applied (as in applying `Amendments` to fix problems identified by `Validations`) and filtering such that the `MultiRecord` `Measures` return `COMPLETE`, at which point the dataset is fit for use with respect to the selected `Use Case`.  BDQ does not specify a workflow, it fundamentally supports the representation of completeness conditions via `MultiRecord` `Measures`, and it is up to implementers to decide how to use those `Measures` in a workflow, whether for `Quality Control` or `Quality Assurance`.  BDQ defines how to represent `Quality Assurance` conditions and outcomes. A filtering or remediation strategy is outside the scope of BDQ and would be up to an implementation.
 
 A related pattern occurs at the `SingleRecord` level: when fitness depends on a user-defined analytical threshold rather than a single universal rule, a `SingleRecord` `Measure` may return a numeric metric that consumers interpret relative to their `Use Case`. For example, [MEASURE_EVENTDATE_DURATIONINSECONDS](../terms/bdqtest/index.md#MEASURE_EVENTDATE_DURATIONINSECONDS) returns the duration (in seconds) of the time interval represented by `dwc:eventDate`; consumers can then apply a threshold (e.g., “duration ≤ 86401 seconds” for day-level precision) to decide whether an individual `SingleRecord` has sufficient temporal precision for their `Use Case`.
 
@@ -1135,15 +1139,19 @@ A `Quality Control` workflow commonly uses `MultiRecord` `Measures` to summarize
 
 These summary counts are useful in `Quality Control` because they quickly show the *prevalence* of a specific quality issue (here: missing spatial footprints), and they support prioritization and tracking of improvements over time (for example, comparing a baseline run to a run after a targeted data cleanup or a mapping fix).  Values like percentages would be computed outside the Framework (unless you define separate Measures for them).
 
-If a test suite is well designed, `MultiRecord` `Measures` that count `Validations` with `Response.status=INTERNAL_PREREQUISITES_NOT_MET` are likely less helpful from overlaps with `COMPLIANT` and `NOT_COMPLIANT`results from other `Validations` that test for empty and incorrectly formatted values.  A `MultiRecord` `Measure` that counts records where `Response.status=EXTERNAL_PREREQUISITES_NOT_MET` may be informative in some workflow settings to identify cases where tests may need to be run again later due to some problem connecting to some external source authority.
+Depending on how your Test suite is designed, `MultiRecord` `Measures` that count `Validations` with `Response.status=INTERNAL_PREREQUISITES_NOT_MET` may be less informative than counts of `COMPLIANT` and `NOT_COMPLIANT` results from other (e.g. `NotEmpty`, `Standard`, or `InRange`) `Validations` because missing, incorrectly formatted, or uninterpretable values may be directly identified by those other `Validations` Tests.  Thus, separate counts of missing prerequisites may be less actionable than counts of compliance or non-compliance, depending on the design of a Test suite.  
+
+A `MultiRecord` `Measure` that counts records where `Response.status=EXTERNAL_PREREQUISITES_NOT_MET` may be informative in some workflow settings to identify cases where Tests may need to be run again later due to some problem connecting to some external source authority at run time.
+
+**`Use Case` and `Policy` design note**: In practice, the utility of counting  INTERNAL_PREREQUISITES_NOT_MET outcomes depends on how your specification (`Expected Response`) clauses are written across a suite of tests.  Suites that include explicit prerequisite checks (e.g., “INTERNAL_PREREQUISITES_NOT_MET if dwc:month is bdq:Empty”) will surface more of these statuses, while suites that instead express missingness and non-interpretability as direct NOT_COMPLIANT outcomes in focused Validation Tests (e.g., separate ...\_NOTEMPTY and ...\_STANDARD Tests) will enable clearly identifying those cases in more actionable compliance/non-compliance counts.  Again, iterate in `Use Case` and Test design.
 
 #### 8.1.5 Practical note: summary values vs. details
 
 `MultiRecord` `Measures` are intentionally constrained to produce a single value in `Response.result`. If you need more detail than one number (for example, mean and standard deviation), implementations may place additional structured detail in `Response.qualifier` (as an extension point), while keeping `Response.result` to a single number as required for the BDQ `Measure` outputs, but your preference should be to define additional `MultiRecord` `Measures` if you need multiple summary values, rather than overloading a single `Measure`, such as one `Measure` that counts Response.status `INTERNAL_PREREQUISITES_NOT_MET` and another that counts Response.result `NOT_COMPLIANT` outcomes.  Separating these into separate `Measures` keeps each `Measure` focused and easier to interpret and allows for more flexible reporting and visualization of the results to answer particular `Quality Control` questions.
 
+In other words for a `Measure`:
 
-In other words:
-
+- `Response.status` answers “was the metric calculated?”
 - `Response.result` answers “what is the one metric?”
 - `Response.qualifier` (optional) can answer “what else helps interpret that metric?”
 
@@ -1171,6 +1179,7 @@ In addition to dataset-level summaries, some `SingleRecord` `Measures` (e.g., `M
 Many record-level problems that appear as widespread in a dataset have *point causes*: a single upstream issue that propagates broadly when data are transformed, denormalized, or aggregated. Examples include:
 
 - a mapping error that swaps fields or applies the wrong delimiter,
+- characters set transformations that corrupted values (e.g., UTF-8 vs Latin-1 issues),
 - an export rule that adds leading/trailing whitespace,
 - an error in an authority table (such as a taxon name table) that propagates to many related records in denormalized exports (e.g. identifications),
 - a controlled vocabulary change that was not reflected in a pick-list,
@@ -1188,21 +1197,26 @@ A key Quality Control technique is therefore to ask: “Could these many failure
 
 - `INTERNAL_PREREQUISITES_NOT_MET` can indicate some combination of *missing, incomplete, or uninterpretable* inputs. This may reflect:
   - legitimate unknowns (e.g., historical records with incomplete labels),
+  - missing values that could be filled in,
+  - values that could be standardized or corrected (e.g., “USA” instead of “US” for country code),
+  - errors in transformation on export (e.g., incorrect format of database date fields into string literal dates),
   - data entry constraints not enforced at capture time,
   - schema or mapping gaps (values exist upstream but are not being exported).
 
-Treating these categories differently helps focus effort: “fill in missing values” and “standardize or correct values” are distinct work types with different feasibility and risk profiles.
+Treating these categories differently and focusing on `RUN_HAS_RESULT` helps focus effort to specific known problem types, e.g. “fill in missing values” and “standardize or correct values” are distinct work types with different feasibility and risk profiles, and they are often easier to interpret and act upon from Tests targeted to identify them than the more ambiguous `INTERNAL_PREREQUISITES_NOT_MET` category.
 
 #### 8.2.4 Prioritize Work for Greatest Impact
 
 `Quality Control` can require substantial human effort, so prioritization matters. A practical prioritization approach is to consider:
 
-- **Impact on the target `Use Case`**: failures in core requirements (e.g., location, time, taxon) usually matter more than peripheral metadata.
+- **Impact on the target `Use Case`**: failures in core requirements (e.g., location, time, taxon) may matter more than peripheral metadata.
 - **Fixability at scale**: problems that can be corrected via deterministic rules, controlled vocabularies, or workflow changes typically yield high return.
-- **Risk of introducing error**: changes that require interpretation or could introduce false precision should be deferred, flagged for review, or handled via `Amendment` proposals rather than automatic edits.
+- **Risk of introducing error**: changes that require interpretation or could introduce false precision should be deferred, flagged for careful review.
 - **Prevention vs remediation**: improving upstream capture/validation rules prevents future errors and is often more cost-effective than repeatedly cleaning exports.
 
-Summaries from `MultiRecord` `Measures` (counts and completeness-style outcomes) are particularly helpful here: they provide quick indicators of where quality improvement will most increase fitness for purpose, and they support tracking progress over time.
+These may be coupled.  For example, in some institution, an uncontrolled database field that maps onto a Darwin Core term for which there is a controlled vocabulary may be identified as a high-impact, fixable problem.  Then a remediation strategy may involve a large scale data cleanup project within some institution where existing values are mapped onto the controlled vocabulary, some of which are straitforward and done at scale, others of which may need carefull case by case examination in context.  Then, in paralell, to reduce the introduction of new inconsistencies, user interface elements may be added to restrict users to only enter allowed values in that field.  Then, when the cleanup project is complete use of the controlled vocabulary may be enforced at the database level, preventing the introduction of new problems in that field.  In this example, the combination of a large scale cleanup project and prevention measures may be more effective than repeated cleanup of exports with no prevention measures. 
+
+Summaries from `MultiRecord` `Measures` (particularly count outcomes) are particularly helpful for setting priorities for institutional data cleanup projects: they provide quick indicators of where quality improvement will most increase fitness for purpose, and they support tracking progress over time.
 
 #### 8.2.5 Close the loop: re-run Tests to confirm improvements
 
@@ -1212,11 +1226,11 @@ Quality Control actions should be followed by re-running the same Test suite (an
 - Improvements did not create new failures elsewhere.
 - Quality has improved with respect to the selected `Use Case`.
 
-This “run → analyze patterns → fix causes → re-run” loop is a Quality Control workflow supported by the BDQ Tests and the Fitness for Use Framework.
+This “run → analyze patterns → fix causes → re-run” loop is a Quality Control workflow pattern supported by the BDQ Tests and the Fitness for Use Framework.
 
 ### 8.3 Quality Assurance Workflow (non-normative)
 
-`Quality Assurance` is about filtering a dataset down to a subset of records that are fit for some purpose.  The mechanism to support this provided by the Fitness for Use Framework is the use of a set of `MultiRecord` `Measures` that return `COMPLETE` if the dataset meets a dataset-level requirement derived from `SingleRecord` Test outcomes, and `NOT_COMPLETE` otherwise.  Then, if some set of `Measures` in the `MeasurementPolicy` of the `UseCase` are `NOT_COMPLETE`, data are filtered out of the dataset based on underlying `Validation` problems until the set `Measures` all return `COMPLETE`.   When all the `MultiRecord` `Measures` of this sort for a `Use Case` (as specified by `Policy`) are `COMPLETE`, the filtered dataset is fit for use with respect to the selected `Use Case`.   
+`Quality Assurance` is about filtering a dataset down to a subset of records that are fit for some purpose.  The mechanism to support this provided by the Fitness for Use Framework is the use of a set of `MultiRecord` `Measures` that return `COMPLETE` if the dataset meets a dataset-level requirement derived from `SingleRecord` Test outcomes, and `NOT_COMPLETE` otherwise.  Then, if some set of `Measures` in the `MeasurementPolicy` of the `Use Case` are `NOT_COMPLETE`, data may be filtered out of the dataset based on underlying `Validation` problems (or remediated with `Amendment` results) such that the  `Measures` all return `COMPLETE`.   When all the `MultiRecord` `Measures` of this sort for a `Use Case` (as specified by `Policy`) are `COMPLETE`, the filtered dataset is fit for use with respect to the selected `Use Case`.   
 
 BDQ does not constrain how workflows may perform `Quality Assurance`, but it does provide a standard means for defining dataset-level requirements where `SingleRecord` Test outcomes, potentially modified by adopting proposals for improving the fitness of data from `Amendments` can be aggregated and measured for formal filtering of the data (using the `MultiRecord` `Measures`) to provide formal  `Quality Assurance` of a dataset for a `Use Case`.
 
