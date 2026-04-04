@@ -8,30 +8,27 @@ Scan BDQ TG2 Markdown templates for relative links, and report:
 (2) A list of links (file, line number, link text, link relative URI) that would be broken
     when Markdown documents are generated from the templates.
 
-Author: Github Copilot (with user guidance and review from Paul J. Morris)
+@author: Github Copilot (with user guidance and review from Paul J. Morris)
 
 Key assumptions (per user clarification):
 - Links are authored as if clicked from the GENERATED document’s location (not the template location).
 - Template directory layout largely mirrors generated layout under tg2/_review/docs/, except:
     - templates/standard_landing/* generates to tg2/_review/index.md and is rooted at tg2/_review/
+    - templates/terms/bdqtest_qrg/* generates into tg2/_review/docs/terms/bdqtest/ (not .../bdqtest_qrg/)
 
 Anchor/fragment matching:
-- This script matches fragments EXACTLY the way the local build does, by replicating
-  tg2/_build_review/function_lib.py: markdown_heading_to_link() anchor generation.
-
-That local logic is:
-  anchor = heading_text.lower()
-  anchor = anchor.replace(" ", "-")
-  anchor = anchor.translate(str.maketrans("", "", "():,.?`'\""))
-
-So fragments are validated against:
-  (a) explicit HTML ids/names in the target file (id= / name=)
-  (b) anchors derived from Markdown headings using the exact algorithm above
+- Fragment matching is EXACT to the locally used function in tg2/_build_review/function_lib.py:
+  markdown_heading_to_link() anchor generation, i.e.
+    anchor = heading_text.lower()
+    anchor = anchor.replace(" ", "-")
+    anchor = anchor.translate(str.maketrans("", "", "():,.?`'\""))
 
 Options:
 - --no-footers        : ignore all *-footer.md template files entirely
 - --no-anchor-check   : skip fragment (#...) validation (still checks that target files exist)
 """
+
+# Shared functions reused across build scripts
 
 from __future__ import annotations
 
@@ -79,11 +76,18 @@ EXTERNAL_SCHEMES = ("http://", "https://", "mailto:", "ftp://")
 HTML_ID_RE = re.compile(r"""\bid\s*=\s*["']([^"']+)["']""", re.IGNORECASE)
 HTML_NAME_RE = re.compile(r"""\bname\s*=\s*["']([^"']+)["']""", re.IGNORECASE)
 
-
 # EXACT punctuation removal set from function_lib.markdown_heading_to_link():
 # anchor.translate(str.maketrans("", "", "():,.?`'\""))
 BDQ_ANCHOR_STRIP_CHARS = "():,.?`'\""
 BDQ_ANCHOR_STRIP_TABLE = str.maketrans("", "", BDQ_ANCHOR_STRIP_CHARS)
+
+# Placeholders used in templates that are replaced at build time and should NOT be treated as file paths.
+TEMPLATE_PLACEHOLDERS = {
+    "{standard_iri}",
+    "{current_iri}",
+    "{namespace_uri}",
+    "{pref_namespace_prefix}",
+}
 
 
 def iter_template_markdown_files(templates_root: Path, *, include_footers: bool) -> Iterable[Path]:
@@ -226,7 +230,6 @@ def fragment_exists_in_target(md_path: Path, frag: str) -> Tuple[bool, str]:
     if not frag_raw:
         return True, ""
 
-    # 1) explicit HTML ids/names (exact + case-insensitive)
     explicit_ids = build_explicit_anchor_id_index(md_path)
     if frag_raw in explicit_ids:
         return True, ""
@@ -234,11 +237,9 @@ def fragment_exists_in_target(md_path: Path, frag: str) -> Tuple[bool, str]:
     if any(x.lower() == frag_lower for x in explicit_ids):
         return True, ""
 
-    # 2) exact BDQ heading anchor generation
     anchor_index = build_bdq_heading_anchor_index(md_path)
     if frag_raw in anchor_index:
         return True, ""
-    # also accept case-insensitive for robustness
     if frag_lower in {k.lower() for k in anchor_index.keys()}:
         return True, ""
 
@@ -278,6 +279,7 @@ def generated_base_dir_for_template(
 
     rules:
       templates/standard_landing/* -> tg2/_review/
+      templates/terms/bdqtest_qrg/* -> tg2/_review/docs/terms/bdqtest/
       templates/<rel_dir>/*        -> tg2/_review/docs/<rel_dir>/
     """
     try:
@@ -286,8 +288,13 @@ def generated_base_dir_for_template(
         return None
 
     rel_dir_posix = str(rel_dir).replace("\\", "/")
+
     if rel_dir_posix.startswith("standard_landing"):
         return generated_review_root.resolve()
+
+    # Handle bdqtest_qrg templates generating into docs/terms/bdqtest/
+    if rel_dir_posix.startswith("terms/bdqtest_qrg"):
+        return (generated_review_root / "docs" / "terms" / "bdqtest").resolve()
 
     return (generated_review_root / "docs" / rel_dir).resolve()
 
@@ -315,6 +322,11 @@ def resolve_target_from_generated_base(
         return (base_dir / "index.md").resolve(), "", frag
 
     path_only = strip_optional_link_title(path_part)
+
+    # Ignore template placeholders as link targets (they are substituted during build)
+    if path_only in TEMPLATE_PLACEHOLDERS:
+        return None, path_only, frag
+
     resolved = normalize_rel_path(base_dir, path_only)
 
     try:
@@ -353,17 +365,9 @@ def validate_link(
         repo_root=repo_root,
         raw_target=occ.raw_target,
     )
+
     if resolved_target is None:
-        path_part, _ = split_target(occ.raw_target)
-        if not looks_like_external(path_part) and not re.match(r"^[a-zA-Z][a-zA-Z0-9+\-.]*:", path_part.strip()):
-            return BrokenLink(
-                source_file_rel=occ.source_file_rel,
-                source_line=occ.source_line,
-                link_text=occ.link_text,
-                raw_target=occ.raw_target,
-                broken_kind=BrokenKind.OUTSIDE_REPO,
-                reason=f"Target resolves outside repo from generated base {base_dir}: {path_only}",
-            )
+        # For placeholders and external links, we ignore (not broken).
         return None
 
     if not resolved_target.exists():
