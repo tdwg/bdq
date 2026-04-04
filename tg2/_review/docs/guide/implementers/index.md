@@ -297,7 +297,7 @@ The Tests defined in BDQ are described in the [BDQ Tests Quick Reference Guide](
 
 #### 2.3.1 Key Parts of a Test Descriptor (non-normative)
 
-The descriptions of the Tests are complex. The following (abstracted from [the Key to bdqtest: vocabulary terms](../../list/bdqtest/index.md#110-key-to-vocabulary-terms-normative) and the `bdqffdq:` [ontology](../../list/bdqffdq/index.md)) are the most important terms to understand for implementation:
+The descriptions of the Tests are complex. The following (abstracted from [the Key to bdqtest: vocabulary terms](../../list/bdqtest/index.md#18-key-to-vocabulary-terms-normative) and the `bdqffdq:` [ontology](../../list/bdqffdq/index.md)) are the most important terms to understand for implementation:
 
 - Term Name (`rdf:value`) - a UUID that identifies the Test (e.g., 3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e).
 - Term IRI (`dcterms:isVersionOf`) - the machine readable identifier for the Test, in the form of an IRI terminating in the Term Name UUID (https://rs.tdwg.org/bdqtest/terms/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e).
@@ -438,7 +438,7 @@ When a Test is defined as parameterized, implementations SHOULD support the para
 When a Test is defined as parameterized:
 - Implementations MAY choose to only support the default value.
 - Implementations MAY choose to not include the parameter(s) in the Test API, that is, only support the default value internally to the Test.
---  Note that some Test Conformance Testing Data provide non-default `Parameter` values, and implementations that only support the default value will be unable to validate against all of the Test Conformance Testing Data (see [8 Validating Test Implementations](#8-validating-test-implementations-normative))).
+--  Note that some Test Conformance Testing Data provide non-default `Parameter` values, and implementations that only support the default value will be unable to validate against all of the Test Conformance Testing Data (see [8 Conformance Testing Implementations](#8-conformance-testing-implementations-normative))).
 
 When the parameter has a default value and a resource, and an implementation includes the parameter in its API, that implementation MUST support the string literal given as the default value, and internally choose the resource "{[resource]}" or "{API endpoint [resource]}" based on that string literal "default value". Implementations MAY also accept other values including the "{[resource]}" or "{API endpoint [resource]}" as the value for the parameter in the API for the Test implementation.
 
@@ -726,7 +726,7 @@ For `dwc:eventDate`:
 | 4 | [AMENDMENT_EVENTDATE_STANDARDIZED](../../terms/bdqtest/index.md#AMENDMENT_EVENTDATE_STANDARDIZED) |
 | 5 | [AMENDMENT_EVENT_FROM_EVENTDATE](../../terms/bdqtest/index.md#AMENDMENT_EVENT_FROM_EVENTDATE)
 
-See [5.2.1 Diagram of the NAME-oriented Tests and Information Elements Acted Upon (non-normative)](../../supplement/index.md#523-diagram-of-the-time-oriented-tests-and-information-elements-acted-upon-non-normative) in [BDQ Supplemental Information](../../supplement/index.md)for the relationships between the Tests and associated `Information Elements` `Acted Upon` that operate on aspects of date and time (Darwin Core class `dwc:Event`). 
+See [Diagram of the TIME-oriented Tests and Information Elements Acted Upon (non-normative)](../../supplement/index.md#5213-diagram-of-the-time-oriented-tests-and-information-elements-acted-upon-non-normative) in [BDQ Supplemental Information](../../supplement/index.md)for the relationships between the Tests and associated `Information Elements` `Acted Upon` that operate on aspects of date and time (Darwin Core class `dwc:Event`). 
 
 Similarly, for `dwc:taxonID`:
 
@@ -735,9 +735,9 @@ Similarly, for `dwc:taxonID`:
 | 1 | [AMENDMENT_SCIENTIFICNAMEID_FROM_TAXON](../../terms/bdqtest/index.md#AMENDMENT_SCIENTIFICNAMEID_FROM_TAXON) |
 | 2 | [AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID](../../terms/bdqtest/index.md#AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID) |
 
-The corresponding [NAME Tests diagram](../../supplement/index.md#521-diagram-of-the-name-oriented-tests-and-information-elements-acted-upon-non-normative) displays the Tests and associated `Information Elements` `Acted Upon` that operate on aspects of taxonomic name (Darwin Core class `dwc:Taxon`).
+The corresponding [NAME Tests diagram](../../supplement/index.md#5211-diagram-of-the-name-oriented-tests-and-information-elements-acted-upon-non-normative) displays the Tests and associated `Information Elements` `Acted Upon` that operate on aspects of taxonomic name (Darwin Core class `dwc:Taxon`).
 
-See also the [SPACE Tests diagram](../../supplement/index.md#522-diagram-of-the-space-oriented-tests-and-information-elements-acted-upon-non-normative) and the [OTHER Tests diagram](../../supplement/index.md#524-diagram-of-the-other-oriented-tests-and-information-elements-acted-upon-non-normative).
+See also the [SPACE Tests diagram](../../supplement/index.md#5212-diagram-of-the-space-oriented-tests-and-information-elements-acted-upon-non-normative) and the [OTHER Tests diagram](../../supplement/index.md#5214-diagram-of-the-other-oriented-tests-and-information-elements-acted-upon-non-normative).
 
 The BDQ standard does not specify how the ordering of these Tests should be accomplished. Ordering of Tests COULD be done by describing an `Amendment` Test with an expected response that specifies the execution of each Test in order. Such a composition of `Amendment` Tests would be the preferred method of sequencing under the Framework, but to keep Tests as independent a possible, and to allow the maximum flexibility for the composition of Tests in Profiles to support `bdqffdq:UseCases`, the BDQ standard does not provide such a Test specification. Ordering of Tests could be done by providing a configuration file for a Test execution framework specifying Test dependencies. Ordering could be supported in a workflow environment by composing a workflow to execute these Tests in sequence. The order specified above SHOULD be followed.
 

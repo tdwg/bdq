@@ -262,7 +262,7 @@ In any technical treatment of the BDQ standard, a precise reference to a class o
 
 For normative guidance on the use of terms in the `bdqffdq:` vocabulary, see the following sections in the associated documents:
 [Use of Ontology Terms (normative)](../../bdqffdq/index.md#2-use-of-ontology-terms-normative) in the Fitness For Use Framework Ontology landing page document.
-[Use of Terms (normative)](../../list/index.md#2-use-of-terms-normative) in the bdqffdq: term-list document.
+[Use of Terms (normative)](../../list/bdqffdq/index.md#2-use-of-terms-normative) in the bdqffdq: term-list document.
 
 ## 3 Framework for describing data quality (non-normative)
 

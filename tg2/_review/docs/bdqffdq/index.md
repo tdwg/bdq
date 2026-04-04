@@ -56,7 +56,7 @@ Draft Standard for Review
 [2 Use of Ontology Terms (normative)](#2-use-of-ontology-terms-normative)
   - [2.1 Properties of Assertions (normative)](#21-properties-of-assertions-normative)
     - [2.1.1 Table of Representations of Assertion Properties (non-normative)](#211-table-of-representations-of-assertion-properties-non-normative)
-  - [2.2.Use of Properties (normative)](#22use-of-properties-normative)
+  - [2.2 Use of Properties (normative)](#22-use-of-properties-normative)
     - [2.2.1 Properties Relating to Data Quality Needs (normative)](#221-properties-relating-to-data-quality-needs-normative)
     - [2.2.2 Properties Relating Data Quality Needs to Data Quality Solutions (normative)](#222-properties-relating-data-quality-needs-to-data-quality-solutions-normative)
     - [2.2.3 Properties Relating to Data Quality Solutions Provided in a Test Description (normative)](#223-properties-relating-to-data-quality-solutions-provided-in-a-test-description-normative)
@@ -180,11 +180,11 @@ In any technical treatment of the BDQ standard, a precise reference to a class o
 
 ### 1.8 Relating Classes and Properties (non-normative)
 
-The (non-normative) diagram below illustrating `Validation` related concepts across needs, solutions, and reports areas of the framework is intended to help understand the normative statements in [2 Use of Terms (normative)](#2-use-of-terms-normative).  The diagram shows the expected relationships among `Validation`, `ValidationMethod`, and `Specification` classes, as well as their expected connections to other subclasses of `DataQualityNeed`, `DataQualitySolution`, and `DataQualityReport`.  Section [2 Use of Terms (normative)](#2-use-of-terms-normative) provides normative guidance on how properties are expected to be used to relate instances of these classes in a consistent way, as expectations limiting the open world assumptions of the RDF/OWL modeling of the `bdqffdq:` vocabulary.
+The (non-normative) diagram below illustrating `Validation` related concepts across needs, solutions, and reports areas of the framework is intended to help understand the normative statements in [2 Use of Ontology Terms (normative)](#2-use-of-ontology-terms-normative).  The diagram shows the expected relationships among `Validation`, `ValidationMethod`, and `Specification` classes, as well as their expected connections to other subclasses of `DataQualityNeed`, `DataQualitySolution`, and `DataQualityReport`.  Section [2 Use of Ontology Terms (normative)](#2-use-of-ontology-terms-normative) provides normative guidance on how properties are expected to be used to relate instances of these classes in a consistent way, as expectations limiting the open world assumptions of the RDF/OWL modeling of the `bdqffdq:` vocabulary.
 
 ![Diagram of Validation, ValidationMethod, and ValidationAssertion with related classes](../guide/bdqffdq/bdqffdq_data_quality_needs_solutions_report_validation.svg "Validation concepts in the Needs, Solutions, and Reports levels.")
 
-The use of classes and properties in [bdqtest:](../../dist/bdqtest.ttl) also follow the guidance provided in [2.1 Use of Properties (normative)](#21-use-of-properties-normative).  The`DataQualityNeeds` (blue here) and `DataQualitySolutions` (green here) concepts in this diagram illustrate how this guidance is used in `bdqtest:` to relate the set of terms used to define a `Validation`.  The `DataQualityReports` (tan here) concepts in the diagram illustrate how a `ValidationAssertion` in a `DataQualityReport` can be related to a `Validation` and its `Specification`.  The minimal use of rdfs:range and other global axioms in `bdqffdq:` aligns with best practices for ontologies intended for reuse, integration, and extension.  This approach trades strict, machine-enforceable validation and inference for flexibility, extensibility, and a low barrier to adoption.  The normative guidance in this document mitigates the risk of inconsistent usage that is allowed by the open world design of `bdqffdq:`.
+The use of classes and properties in [bdqtest:](../../dist/bdqtest.ttl) also follow the guidance provided in [2.2 Use of Properties (normative)](#22-use-of-properties-normative).  The`DataQualityNeeds` (blue here) and `DataQualitySolutions` (green here) concepts in this diagram illustrate how this guidance is used in `bdqtest:` to relate the set of terms used to define a `Validation`.  The `DataQualityReports` (tan here) concepts in the diagram illustrate how a `ValidationAssertion` in a `DataQualityReport` can be related to a `Validation` and its `Specification`.  The minimal use of rdfs:range and other global axioms in `bdqffdq:` aligns with best practices for ontologies intended for reuse, integration, and extension.  This approach trades strict, machine-enforceable validation and inference for flexibility, extensibility, and a low barrier to adoption.  The normative guidance in this document mitigates the risk of inconsistent usage that is allowed by the open world design of `bdqffdq:`.
 
 ## 2 Use of Ontology Terms (normative) 
 
@@ -218,11 +218,11 @@ This section summarises representation choices. Full normative constraints on th
 | Non-RDF structured data (literal) | `Response.result` | field corresponding to `bdqffdq:hasResponseResultValue` | literal | `17` |
 | Non-RDF structured data (literal) | `Response.comment` | field corresponding to `bdqffdq:hasResponseComment` | literal (string) | `Provided value 11 is a valid dwc:day.` |
 
-### 2.2.Use of Properties (normative) 
+### 2.2 Use of Properties (normative) 
 
 This section describes normative expectations for the use of object and datatype properties to related instances of `bdqffdq:` classes in their intended ways given the open world limited use of domains, ranges, and other axioms in the [Biodiversity Data Quality Fitness for Use Framework (Ontology)](../../vocabulary/bdqffdq.owl) ontology. This guidance builds on the normative definitions of `bdqffdq:` object properties and datatype properties to describe how `bdqffdq:` terms can be composed in a useful and consistent way.
 
-Section [2.1.6 Identifying the Test that produced an Assertion (normative)](#216-identifying-the-test-that-produced-an-assertion-normative) highlights the importance of using the object properties with the correct cardinality to preserve the relationship between an `Assertion` produced by a Test and the particular Test that produced it.
+Section [2.2.6 Identifying the Test that produced an Assertion (normative)](#226-identifying-the-test-that-produced-an-assertion-normative) highlights the importance of using the object properties with the correct cardinality to preserve the relationship between an `Assertion` produced by a Test and the particular Test that produced it.
 
 #### 2.2.1 Properties Relating to Data Quality Needs (normative)
 
