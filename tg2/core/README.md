@@ -23,8 +23,9 @@ These files allow kurator-ffdq to preserve the identifiers of objects in the RDF
 
 - information_element_guids.csv
 - TG2_tests_additional_guids.csv
-- TG2_policy_guids.csv
-- TG2_tests_argument_guids.csv
+- TG2_policy_guids.csv 
+- TG2_tests_argument_guids.csv 
+- TG2_citation_guids.csv  for dcterms:BibliographciResource objects extracted from "References" columns in the TG2_tests.csv file.
 
 test_label_mappings.csv (?no longer used?)
 
