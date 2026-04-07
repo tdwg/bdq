@@ -26,11 +26,6 @@
 	<rdf:type rdf:resource="http://purl.org/dc/terms/BibliographicResource"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://georeferencing.org/georefcalculator/gc.html">
-	<dcterms:bibliographicCitation>Wieczorek C and Wieczorek J (2021) Georeferencing Calculator. http://georeferencing.org/georefcalculator/gc.html</dcterms:bibliographicCitation>
-	<rdf:type rdf:resource="http://purl.org/dc/terms/BibliographicResource"/>
-</rdf:Description>
-
 <rdf:Description rdf:about="http://rs.gbif.org/vocabulary/gbif/type_status">
 	<dcterms:bibliographicCitation>GBIF (2021) Darwin Core Vocabulary: Nomenclatural Type Status Vocabulary. http://rs.gbif.org/vocabulary/gbif/type_status</dcterms:bibliographicCitation>
 	<rdf:type rdf:resource="http://purl.org/dc/terms/BibliographicResource"/>
@@ -146,8 +141,13 @@
 	<rdf:type rdf:resource="http://purl.org/dc/terms/BibliographicResource"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://georepository.com/">
-	<dcterms:bibliographicCitation>Geomatic Solutions (2018) Georepository. Version 9.0.0.1062. https://georepository.com/</dcterms:bibliographicCitation>
+<rdf:Description rdf:about="https://epsg.org/about.html">
+	<dcterms:bibliographicCitation>Geomatic Solutions (2026) GeoRepository. https://epsg.org/about.html</dcterms:bibliographicCitation>
+	<rdf:type rdf:resource="http://purl.org/dc/terms/BibliographicResource"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://georeferencing.org/calculator/">
+	<dcterms:bibliographicCitation>Wieczorek C and Wieczorek J (2021) Georeferencing Calculator. https://georeferencing.org/calculator/</dcterms:bibliographicCitation>
 	<rdf:type rdf:resource="http://purl.org/dc/terms/BibliographicResource"/>
 </rdf:Description>
 
@@ -426,11 +426,11 @@
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/0345b325-836d-4235-96d0-3b5caf150fc0-2025-03-07">
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/0345b325-836d-4235-96d0-3b5caf150fc0"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
-	<dcterms:references rdf:resource="http://georeferencing.org/georefcalculator/gc.html"/>
 	<dcterms:references rdf:resource="https://doi.org/10.15468/doc-gg7h-s853"/>
 	<dcterms:references rdf:resource="https://epsg.io/"/>
 	<dcterms:references rdf:resource="https://epsg.org/"/>
-	<dcterms:references rdf:resource="https://georepository.com/"/>
+	<dcterms:references rdf:resource="https://epsg.org/about.html"/>
+	<dcterms:references rdf:resource="https://georeferencing.org/calculator/"/>
 	<dcterms:references rdf:resource="https://spatialreference.org/"/>
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Amendment"/>
 	<rdfs:comment>Proposes an amendment to the value of dwc:geodeticDatum using the bdq:sourceAuthority.</rdfs:comment>
@@ -2256,17 +2256,17 @@
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7-2025-03-07">
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/7498ca76-c4d4-42e2-8103-acacccbdffa7"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
-	<dcterms:references rdf:resource="http://georeferencing.org/georefcalculator/gc.html"/>
 	<dcterms:references rdf:resource="https://doi.org/10.15468/doc-gg7h-s853"/>
 	<dcterms:references rdf:resource="https://epsg.io/"/>
 	<dcterms:references rdf:resource="https://epsg.org/"/>
-	<dcterms:references rdf:resource="https://georepository.com/"/>
+	<dcterms:references rdf:resource="https://epsg.org/about.html"/>
+	<dcterms:references rdf:resource="https://georeferencing.org/calculator/"/>
 	<dcterms:references rdf:resource="https://spatialreference.org/"/>
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Amendment"/>
 	<rdfs:comment>Proposes an amendment to fill in dwc:geodeticDatum using a parameterized value if the dwc:geodeticDatum is empty.</rdfs:comment>
 	<rdfs:label>AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT</rdfs:label>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/102</skos:historyNote>
-	<skos:note>The value of dwc:geodeticDatum applies to dwc:decimalLatitude and dwc:decimalLongitude, thus EPSG:4326 (https://epsg.org/crs_4326/WGS-84.html) is the appropriate EPSG code as it applies to the WGS84 datum used with a geographic coordinate system. If the dwc:coordinateUncertaintyInMeters is bdq:Empty, not interpretable, or not valid, this amendment should not provide a dwc:coordinateUncertaintyInMeters. If the dwc:coordinateUncertaintyInMeters is bdq:NotEmpty and is valid, this amendment should add to the dwc:coordinateUncertaintyInMeters the uncertainty contributed by the maximum datum shift at the given coordinates. Since different systems have differing requirements for what the default datum should be, it is left unspecified, but should match whatever the target datum is in AMENDMENT_COORDINATES_CONVERTED (620749b9-7d9c-4890-97d2-be3d1cde6da8). After the amendment is performed, the dwc:geodeticDatum field should be the assumed default datum as parameterized. An example implementation to determine the uncertainty added by asserting a default datum (datum shift) where a known datum is not declared can be found in [datumshiftproj.py](https://github.com/VertNet/georefcalculator/blob/master/source/python/datumshiftproj.py) in the source code for the [Georeferencing Calculator](http://georeferencing.org/georefcalculator/gc.html) (Wieczorek &amp; Wieczorek 2021). Included in the source code is a [5-degree grid](https://github.com/VertNet/georefcalculator/blob/master/datumerrordata.js) of datum shifts from an unknown datum to WGS84.</skos:note>
+	<skos:note>The value of dwc:geodeticDatum applies to dwc:decimalLatitude and dwc:decimalLongitude, thus EPSG:4326 (https://epsg.org/crs_4326/WGS-84.html) is the appropriate EPSG code as it applies to the WGS84 datum used with a geographic coordinate system. If the dwc:coordinateUncertaintyInMeters is bdq:Empty, not interpretable, or not valid, this amendment should not provide a dwc:coordinateUncertaintyInMeters. If the dwc:coordinateUncertaintyInMeters is bdq:NotEmpty and is valid, this amendment should add to the dwc:coordinateUncertaintyInMeters the uncertainty contributed by the maximum datum shift at the given coordinates. Since different systems have differing requirements for what the default datum should be, it is left unspecified, but should match whatever the target datum is in AMENDMENT_COORDINATES_CONVERTED (620749b9-7d9c-4890-97d2-be3d1cde6da8). After the amendment is performed, the dwc:geodeticDatum field should be the assumed default datum as parameterized. An example implementation to determine the uncertainty added by asserting a default datum (datum shift) where a known datum is not declared can be found in [datumshiftproj.py](https://github.com/VertNet/georefcalculator/blob/master/source/python/datumshiftproj.py) in the source code for the [Georeferencing Calculator](https://georeferencing.org/calculator/) (Wieczorek &amp; Wieczorek 2021). Included in the source code is a [5-degree grid](https://github.com/VertNet/georefcalculator/blob/master/datumerrordata.js) of datum shifts from an unknown datum to WGS84.</skos:note>
 	<skos:prefLabel>Amendment dwc:geodeticDatum Assumed Default for SingleRecord</skos:prefLabel>
 	<bdqffdq:hasActedUponInformationElement rdf:resource="urn:uuid:a543e69c-08a5-4408-a25a-3cdc53d4ce71"/>
 	<bdqffdq:hasConsultedInformationElement rdf:resource="urn:uuid:c3849b5d-feb7-4388-ab95-ec54ff1031ea"/>
@@ -2478,11 +2478,11 @@
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2025-03-07">
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/7e0c0418-fe16-4a39-98bd-80e19d95b9d1"/>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
-	<dcterms:references rdf:resource="http://georeferencing.org/georefcalculator/gc.html"/>
 	<dcterms:references rdf:resource="https://doi.org/10.15468/doc-gg7h-s853"/>
 	<dcterms:references rdf:resource="https://epsg.io/"/>
 	<dcterms:references rdf:resource="https://epsg.org/"/>
-	<dcterms:references rdf:resource="https://georepository.com/"/>
+	<dcterms:references rdf:resource="https://epsg.org/about.html"/>
+	<dcterms:references rdf:resource="https://georeferencing.org/calculator/"/>
 	<dcterms:references rdf:resource="https://spatialreference.org/"/>
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 	<rdfs:comment>Does the value of dwc:geodeticDatum occur as a valid geographic CRS, geodetic Datum or ellipsoid in bdq:sourceAuthority?</rdfs:comment>
@@ -4079,8 +4079,8 @@
 	<dcterms:references rdf:resource="https://github.com/nvkelso/natural-earth-vector/releases/tag/v5.1.2"/>
 	<dcterms:references rdf:resource="https://technicalgeography.org/pdf/sp_i_2010/12_introducing_natural_earth_data__naturaleart.pdf"/>
 	<dcterms:references rdf:resource="https://www.arcgis.com/home/item.html?id=f0ceb8af000a4ffbae75d742538c548b"/>
+	<dcterms:references rdf:resource="https://www.geonames.org/"/>
 	<dcterms:references rdf:resource="https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/"/>
-	<dcterms:references rdf:resource="https://www.programmableweb.com/api/geonames"/>
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
 	<rdfs:comment>Do the geographic coordinates fall on or within the boundary from the bdq:sourceAuthority for the given dwc:stateProvince or within the distance given by bdq:spatialBufferInMeters outside that boundary?</rdfs:comment>
 	<rdfs:label>VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT</rdfs:label>
@@ -4381,6 +4381,11 @@
 	<rdf:type rdf:resource="http://purl.org/dc/terms/BibliographicResource"/>
 </rdf:Description>
 
+<rdf:Description rdf:about="https://www.geonames.org/">
+	<dcterms:bibliographicCitation>ProgrammableWeb (2006) GeoNames API. https://www.geonames.org/</dcterms:bibliographicCitation>
+	<rdf:type rdf:resource="http://purl.org/dc/terms/BibliographicResource"/>
+</rdf:Description>
+
 <rdf:Description rdf:about="https://www.getty.edu/research/tools/vocabularies/tgn/index.html">
 	<dcterms:bibliographicCitation>Getty Research Institute (2017) Getty Thesaurus of Geographic Names Online. https://www.getty.edu/research/tools/vocabularies/tgn/index.html</dcterms:bibliographicCitation>
 	<rdf:type rdf:resource="http://purl.org/dc/terms/BibliographicResource"/>
@@ -4423,11 +4428,6 @@
 
 <rdf:Description rdf:about="https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-minor-islands/">
 	<dcterms:bibliographicCitation>Natural Earth (2009) Minor Islands. https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-minor-islands/</dcterms:bibliographicCitation>
-	<rdf:type rdf:resource="http://purl.org/dc/terms/BibliographicResource"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://www.programmableweb.com/api/geonames">
-	<dcterms:bibliographicCitation>ProgrammableWeb (2006) GeoNames API. https://www.programmableweb.com/api/geonames</dcterms:bibliographicCitation>
 	<rdf:type rdf:resource="http://purl.org/dc/terms/BibliographicResource"/>
 </rdf:Description>
 

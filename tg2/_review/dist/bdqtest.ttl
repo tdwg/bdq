@@ -1174,7 +1174,7 @@ bdqtest:f18a470b-3fe1-4aae-9c65-a6d3db6b550c-2025-03-07 a bdqffdq:Validation;
     <https://technicalgeography.org/pdf/sp_i_2010/12_introducing_natural_earth_data__naturaleart.pdf>,
     <https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/>,
     <https://github.com/nvkelso/natural-earth-vector/releases/tag/v5.1.2>, <https://www.arcgis.com/home/item.html?id=f0ceb8af000a4ffbae75d742538c548b>,
-    <https://www.programmableweb.com/api/geonames>;
+    <https://www.geonames.org/>;
   skos:historyNote "https://github.com/tdwg/bdq/issues/56";
   rdfs:label "VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT";
   dcterms:isVersionOf bdqtest:f18a470b-3fe1-4aae-9c65-a6d3db6b550c;
@@ -1188,8 +1188,8 @@ bdqtest:f18a470b-3fe1-4aae-9c65-a6d3db6b550c-2025-03-07 a bdqffdq:Validation;
 <https://www.arcgis.com/home/item.html?id=f0ceb8af000a4ffbae75d742538c548b> a dcterms:BibliographicResource;
   dcterms:bibliographicCitation "ESRI (2020) World Administrative Divisions. https://www.arcgis.com/home/item.html?id=f0ceb8af000a4ffbae75d742538c548b" .
 
-<https://www.programmableweb.com/api/geonames> a dcterms:BibliographicResource;
-  dcterms:bibliographicCitation "ProgrammableWeb (2006) GeoNames API. https://www.programmableweb.com/api/geonames" .
+<https://www.geonames.org/> a dcterms:BibliographicResource;
+  dcterms:bibliographicCitation "ProgrammableWeb (2006) GeoNames API. https://www.geonames.org/" .
 
 <urn:uuid:315a198d-3811-40dd-918a-756f598f3294> a bdqffdq:ValidationMethod;
   skos:note "Example Implementations: Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)",
@@ -1313,7 +1313,7 @@ bdqtest:7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2025-03-07 a bdqffdq:Validation;
   dcterms:issued "2025-03-07"^^xsd:date;
   rdfs:comment "Does the value of dwc:geodeticDatum occur as a valid geographic CRS, geodetic Datum or ellipsoid in bdq:sourceAuthority?";
   dcterms:references <https://epsg.io/>, <https://epsg.org/>, <https://spatialreference.org/>,
-    <https://georepository.com/>, <https://doi.org/10.15468/doc-gg7h-s853>, <http://georeferencing.org/georefcalculator/gc.html>;
+    <https://epsg.org/about.html>, <https://doi.org/10.15468/doc-gg7h-s853>, <https://georeferencing.org/calculator/>;
   skos:historyNote "https://github.com/tdwg/bdq/issues/59";
   rdfs:label "VALIDATION_GEODETICDATUM_STANDARD";
   dcterms:isVersionOf bdqtest:7e0c0418-fe16-4a39-98bd-80e19d95b9d1;
@@ -1333,11 +1333,11 @@ bdqtest:7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2025-03-07 a bdqffdq:Validation;
 <https://spatialreference.org/> a dcterms:BibliographicResource;
   dcterms:bibliographicCitation "Spatial Reference (2024) What is SpatialReference.org. https://spatialreference.org/" .
 
-<https://georepository.com/> a dcterms:BibliographicResource;
-  dcterms:bibliographicCitation "Geomatic Solutions (2018) Georepository. Version 9.0.0.1062. https://georepository.com/" .
+<https://epsg.org/about.html> a dcterms:BibliographicResource;
+  dcterms:bibliographicCitation "Geomatic Solutions (2026) GeoRepository. https://epsg.org/about.html" .
 
-<http://georeferencing.org/georefcalculator/gc.html> a dcterms:BibliographicResource;
-  dcterms:bibliographicCitation "Wieczorek C and Wieczorek J (2021) Georeferencing Calculator. http://georeferencing.org/georefcalculator/gc.html" .
+<https://georeferencing.org/calculator/> a dcterms:BibliographicResource;
+  dcterms:bibliographicCitation "Wieczorek C and Wieczorek J (2021) Georeferencing Calculator. https://georeferencing.org/calculator/" .
 
 <urn:uuid:344cb9f6-68e1-4d7c-a976-7edcd9f20935> a bdqffdq:ValidationMethod;
   skos:note "Example Implementations: Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)",
@@ -1366,7 +1366,7 @@ bdqtest:0345b325-836d-4235-96d0-3b5caf150fc0-2025-03-07 a bdqffdq:Amendment;
   dcterms:issued "2025-03-07"^^xsd:date;
   rdfs:comment "Proposes an amendment to the value of dwc:geodeticDatum using the bdq:sourceAuthority.";
   dcterms:references <https://epsg.io/>, <https://epsg.org/>, <https://spatialreference.org/>,
-    <https://georepository.com/>, <https://doi.org/10.15468/doc-gg7h-s853>, <http://georeferencing.org/georefcalculator/gc.html>;
+    <https://epsg.org/about.html>, <https://doi.org/10.15468/doc-gg7h-s853>, <https://georeferencing.org/calculator/>;
   skos:historyNote "https://github.com/tdwg/bdq/issues/60";
   rdfs:label "AMENDMENT_GEODETICDATUM_STANDARDIZED";
   dcterms:isVersionOf bdqtest:0345b325-836d-4235-96d0-3b5caf150fc0;
@@ -2550,14 +2550,14 @@ bdqtest:17f03f1f-f74d-40c0-8071-2927cfc9487b-2025-03-06 a bdqffdq:Validation;
 bdqtest:7498ca76-c4d4-42e2-8103-acacccbdffa7-2025-03-07 a bdqffdq:Amendment;
   bdqffdq:hasResourceType bdqffdq:SingleRecord;
   bdqffdq:hasEnhancement bdqenh:AssumedDefault;
-  skos:note "The value of dwc:geodeticDatum applies to dwc:decimalLatitude and dwc:decimalLongitude, thus EPSG:4326 (https://epsg.org/crs_4326/WGS-84.html) is the appropriate EPSG code as it applies to the WGS84 datum used with a geographic coordinate system. If the dwc:coordinateUncertaintyInMeters is bdq:Empty, not interpretable, or not valid, this amendment should not provide a dwc:coordinateUncertaintyInMeters. If the dwc:coordinateUncertaintyInMeters is bdq:NotEmpty and is valid, this amendment should add to the dwc:coordinateUncertaintyInMeters the uncertainty contributed by the maximum datum shift at the given coordinates. Since different systems have differing requirements for what the default datum should be, it is left unspecified, but should match whatever the target datum is in AMENDMENT_COORDINATES_CONVERTED (620749b9-7d9c-4890-97d2-be3d1cde6da8). After the amendment is performed, the dwc:geodeticDatum field should be the assumed default datum as parameterized. An example implementation to determine the uncertainty added by asserting a default datum (datum shift) where a known datum is not declared can be found in [datumshiftproj.py](https://github.com/VertNet/georefcalculator/blob/master/source/python/datumshiftproj.py) in the source code for the [Georeferencing Calculator](http://georeferencing.org/georefcalculator/gc.html) (Wieczorek & Wieczorek 2021). Included in the source code is a [5-degree grid](https://github.com/VertNet/georefcalculator/blob/master/datumerrordata.js) of datum shifts from an unknown datum to WGS84.";
+  skos:note "The value of dwc:geodeticDatum applies to dwc:decimalLatitude and dwc:decimalLongitude, thus EPSG:4326 (https://epsg.org/crs_4326/WGS-84.html) is the appropriate EPSG code as it applies to the WGS84 datum used with a geographic coordinate system. If the dwc:coordinateUncertaintyInMeters is bdq:Empty, not interpretable, or not valid, this amendment should not provide a dwc:coordinateUncertaintyInMeters. If the dwc:coordinateUncertaintyInMeters is bdq:NotEmpty and is valid, this amendment should add to the dwc:coordinateUncertaintyInMeters the uncertainty contributed by the maximum datum shift at the given coordinates. Since different systems have differing requirements for what the default datum should be, it is left unspecified, but should match whatever the target datum is in AMENDMENT_COORDINATES_CONVERTED (620749b9-7d9c-4890-97d2-be3d1cde6da8). After the amendment is performed, the dwc:geodeticDatum field should be the assumed default datum as parameterized. An example implementation to determine the uncertainty added by asserting a default datum (datum shift) where a known datum is not declared can be found in [datumshiftproj.py](https://github.com/VertNet/georefcalculator/blob/master/source/python/datumshiftproj.py) in the source code for the [Georeferencing Calculator](https://georeferencing.org/calculator/) (Wieczorek & Wieczorek 2021). Included in the source code is a [5-degree grid](https://github.com/VertNet/georefcalculator/blob/master/datumerrordata.js) of datum shifts from an unknown datum to WGS84.";
   bdqffdq:hasDataQualityDimension bdqdim:Completeness;
   bdqffdq:hasActedUponInformationElement <urn:uuid:a543e69c-08a5-4408-a25a-3cdc53d4ce71>;
   bdqffdq:hasConsultedInformationElement <urn:uuid:c3849b5d-feb7-4388-ab95-ec54ff1031ea>;
   dcterms:issued "2025-03-07"^^xsd:date;
   rdfs:comment "Proposes an amendment to fill in dwc:geodeticDatum using a parameterized value if the dwc:geodeticDatum is empty.";
   dcterms:references <https://epsg.io/>, <https://epsg.org/>, <https://spatialreference.org/>,
-    <https://georepository.com/>, <https://doi.org/10.15468/doc-gg7h-s853>, <http://georeferencing.org/georefcalculator/gc.html>;
+    <https://epsg.org/about.html>, <https://doi.org/10.15468/doc-gg7h-s853>, <https://georeferencing.org/calculator/>;
   skos:historyNote "https://github.com/tdwg/bdq/issues/102";
   rdfs:label "AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT";
   dcterms:isVersionOf bdqtest:7498ca76-c4d4-42e2-8103-acacccbdffa7;
