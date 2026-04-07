@@ -21680,7 +21680,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>References</td>
-			<td><ul><li>Darwin Core Maintenance Group (2021) Pathway Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). https://dwc.tdwg.org/pw/</li> <li>Groom et al. (2019) Improving Darwin Core for research and management of alien species. Biodiversity Information Science and Standards 3: e38084 https://doi.org/10.3897/biss.3.38084</li> </ul></td>
+			<td><ul><li>Darwin Core Maintenance Group (2021) Pathway Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). https://dwc.tdwg.org/pw/</li> <li>Groom et al. (2019) Improving Darwin Core for research and management of alien species. Biodiversity Information Science and Standards 3: e38084. https://doi.org/10.3897/biss.3.38084</li> </ul></td>
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
@@ -22310,7 +22310,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>References</td>
-			<td><ul><li>GBIF Secretariat (2023) GBIF Backbone Taxonomy. Checklist dataset https://doi.org/10.15468/39omei</li> </ul></td>
+			<td><ul><li>GBIF Secretariat (2023) GBIF Backbone Taxonomy. Checklist dataset. https://doi.org/10.15468/39omei</li> </ul></td>
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
