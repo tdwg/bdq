@@ -42,16 +42,16 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:468ca34f-8c89-479b-bee3-89e7d60c61a4"
+                "@id": "https://www.iso.org/iso-3166-country-codes.html"
             },
             {
-                "@id": "urn:uuid:cb36ac2e-9c32-42f6-af6b-adcdb7f2f528"
+                "@id": "https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2"
             },
             {
-                "@id": "urn:uuid:84b6b5ba-6fd0-439a-acba-34e870a2a564"
+                "@id": "https://datahub.io/core/country-list"
             },
             {
-                "@id": "urn:uuid:aeba764f-4927-48da-b2cb-b868c20dca0b"
+                "@id": "https://doi.org/10.15468/doc-gg7h-s853"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -146,7 +146,7 @@
         ]
     },
     {
-        "@id": "urn:uuid:468ca34f-8c89-479b-bee3-89e7d60c61a4",
+        "@id": "https://www.iso.org/iso-3166-country-codes.html",
         "@type": [
             "http://purl.org/dc/terms/BibliographicResource"
         ],
@@ -157,7 +157,7 @@
         ]
     },
     {
-        "@id": "urn:uuid:cb36ac2e-9c32-42f6-af6b-adcdb7f2f528",
+        "@id": "https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2",
         "@type": [
             "http://purl.org/dc/terms/BibliographicResource"
         ],
@@ -168,7 +168,7 @@
         ]
     },
     {
-        "@id": "urn:uuid:84b6b5ba-6fd0-439a-acba-34e870a2a564",
+        "@id": "https://datahub.io/core/country-list",
         "@type": [
             "http://purl.org/dc/terms/BibliographicResource"
         ],
@@ -179,7 +179,7 @@
         ]
     },
     {
-        "@id": "urn:uuid:aeba764f-4927-48da-b2cb-b868c20dca0b",
+        "@id": "https://doi.org/10.15468/doc-gg7h-s853",
         "@type": [
             "http://purl.org/dc/terms/BibliographicResource"
         ],
@@ -316,10 +316,10 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:dca23e9c-3fbd-4bd8-ad98-8fe35a7a5ce5"
+                "@id": "https://www.getty.edu/research/tools/vocabularies/tgn/index.html"
             },
             {
-                "@id": "urn:uuid:aeba764f-4927-48da-b2cb-b868c20dca0b"
+                "@id": "https://doi.org/10.15468/doc-gg7h-s853"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -376,7 +376,7 @@
         ]
     },
     {
-        "@id": "urn:uuid:dca23e9c-3fbd-4bd8-ad98-8fe35a7a5ce5",
+        "@id": "https://www.getty.edu/research/tools/vocabularies/tgn/index.html",
         "@type": [
             "http://purl.org/dc/terms/BibliographicResource"
         ],
@@ -537,7 +537,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:2035df3b-4533-4f91-8faa-29fe17b6b99c"
+                "@id": "https://doi.org/10.15468/39omei"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -583,7 +583,7 @@
         ]
     },
     {
-        "@id": "urn:uuid:2035df3b-4533-4f91-8faa-29fe17b6b99c",
+        "@id": "https://doi.org/10.15468/39omei",
         "@type": [
             "http://purl.org/dc/terms/BibliographicResource"
         ],
@@ -738,7 +738,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:aeba764f-4927-48da-b2cb-b868c20dca0b"
+                "@id": "https://doi.org/10.15468/doc-gg7h-s853"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -916,13 +916,13 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:adb87907-a424-4eef-bc22-f99a6c12bc10"
+                "@id": "https://www.iso.org/obp/ui/"
             },
             {
-                "@id": "urn:uuid:2f947fa8-606a-46d7-a697-7ea5538d3666"
+                "@id": "https://en.wikipedia.org/wiki/ISO_8601"
             },
             {
-                "@id": "urn:uuid:b79124d7-66eb-4175-8892-7d88bc87f433"
+                "@id": "https://www.loc.gov/standards/datetime/"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -987,7 +987,7 @@
         ]
     },
     {
-        "@id": "urn:uuid:adb87907-a424-4eef-bc22-f99a6c12bc10",
+        "@id": "https://www.iso.org/obp/ui/",
         "@type": [
             "http://purl.org/dc/terms/BibliographicResource"
         ],
@@ -998,7 +998,7 @@
         ]
     },
     {
-        "@id": "urn:uuid:2f947fa8-606a-46d7-a697-7ea5538d3666",
+        "@id": "https://en.wikipedia.org/wiki/ISO_8601",
         "@type": [
             "http://purl.org/dc/terms/BibliographicResource"
         ],
@@ -1009,7 +1009,7 @@
         ]
     },
     {
-        "@id": "urn:uuid:b79124d7-66eb-4175-8892-7d88bc87f433",
+        "@id": "https://www.loc.gov/standards/datetime/",
         "@type": [
             "http://purl.org/dc/terms/BibliographicResource"
         ],
@@ -1146,7 +1146,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:2035df3b-4533-4f91-8faa-29fe17b6b99c"
+                "@id": "https://doi.org/10.15468/39omei"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -1336,7 +1336,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:aeba764f-4927-48da-b2cb-b868c20dca0b"
+                "@id": "https://doi.org/10.15468/doc-gg7h-s853"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -1696,7 +1696,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:aeba764f-4927-48da-b2cb-b868c20dca0b"
+                "@id": "https://doi.org/10.15468/doc-gg7h-s853"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -2091,13 +2091,13 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:adb87907-a424-4eef-bc22-f99a6c12bc10"
+                "@id": "https://www.iso.org/obp/ui/"
             },
             {
-                "@id": "urn:uuid:2f947fa8-606a-46d7-a697-7ea5538d3666"
+                "@id": "https://en.wikipedia.org/wiki/ISO_8601"
             },
             {
-                "@id": "urn:uuid:b79124d7-66eb-4175-8892-7d88bc87f433"
+                "@id": "https://www.loc.gov/standards/datetime/"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -2272,10 +2272,10 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:e404c446-3ed2-40b2-ba52-08175f3586e6"
+                "@id": "https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/LicenseDocument/"
             },
             {
-                "@id": "urn:uuid:4897e23f-5544-45f8-985c-0fc53de978d3"
+                "@id": "https://creativecommons.org/licenses/"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -2321,7 +2321,7 @@
         ]
     },
     {
-        "@id": "urn:uuid:e404c446-3ed2-40b2-ba52-08175f3586e6",
+        "@id": "https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/LicenseDocument/",
         "@type": [
             "http://purl.org/dc/terms/BibliographicResource"
         ],
@@ -2332,7 +2332,7 @@
         ]
     },
     {
-        "@id": "urn:uuid:4897e23f-5544-45f8-985c-0fc53de978d3",
+        "@id": "https://creativecommons.org/licenses/",
         "@type": [
             "http://purl.org/dc/terms/BibliographicResource"
         ],
@@ -2487,13 +2487,13 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:b26a2c59-ec3a-43bb-8d2d-0c16126664b3"
+                "@id": "https://en.wikipedia.org/wiki/List_of_elevation_extremes_by_country_"
             },
             {
-                "@id": "urn:uuid:cc67baaf-13b4-4a9e-ba36-e83fb5d18e46"
+                "@id": "https://en.wikipedia.org/wiki/Extreme_points_of_Antarctica"
             },
             {
-                "@id": "urn:uuid:73ae49f1-12b6-4a7d-9b01-7c84d6c201a0"
+                "@id": "https://doi.org/10.15468/doc-gg7h-s853"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -2539,7 +2539,7 @@
         ]
     },
     {
-        "@id": "urn:uuid:b26a2c59-ec3a-43bb-8d2d-0c16126664b3",
+        "@id": "https://en.wikipedia.org/wiki/List_of_elevation_extremes_by_country_",
         "@type": [
             "http://purl.org/dc/terms/BibliographicResource"
         ],
@@ -2550,24 +2550,13 @@
         ]
     },
     {
-        "@id": "urn:uuid:cc67baaf-13b4-4a9e-ba36-e83fb5d18e46",
+        "@id": "https://en.wikipedia.org/wiki/Extreme_points_of_Antarctica",
         "@type": [
             "http://purl.org/dc/terms/BibliographicResource"
         ],
         "http://purl.org/dc/terms/bibliographicCitation": [
             {
                 "@value": "Wikipedia (2020) Extreme points of Antarctica. https://en.wikipedia.org/wiki/Extreme_points_of_Antarctica"
-            }
-        ]
-    },
-    {
-        "@id": "urn:uuid:73ae49f1-12b6-4a7d-9b01-7c84d6c201a0",
-        "@type": [
-            "http://purl.org/dc/terms/BibliographicResource"
-        ],
-        "http://purl.org/dc/terms/bibliographicCitation": [
-            {
-                "@value": "Chapman AD and Wieczorek, JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853"
             }
         ]
     },
@@ -2722,7 +2711,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:aeba764f-4927-48da-b2cb-b868c20dca0b"
+                "@id": "https://doi.org/10.15468/doc-gg7h-s853"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -2943,7 +2932,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:393e3313-f577-42ab-bf17-14dbecafb4d3"
+                "@id": "https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -2989,7 +2978,7 @@
         ]
     },
     {
-        "@id": "urn:uuid:393e3313-f577-42ab-bf17-14dbecafb4d3",
+        "@id": "https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/",
         "@type": [
             "http://purl.org/dc/terms/BibliographicResource"
         ],
@@ -3123,7 +3112,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:aeba764f-4927-48da-b2cb-b868c20dca0b"
+                "@id": "https://doi.org/10.15468/doc-gg7h-s853"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -3282,7 +3271,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:1404b05f-6c95-4e67-a517-66ca55d85a23"
+                "@id": "https://doi.org/10.15468/39omei"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -3324,17 +3313,6 @@
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
             {
                 "@value": "Information Element ActedUpon dwc:scientificName"
-            }
-        ]
-    },
-    {
-        "@id": "urn:uuid:1404b05f-6c95-4e67-a517-66ca55d85a23",
-        "@type": [
-            "http://purl.org/dc/terms/BibliographicResource"
-        ],
-        "http://purl.org/dc/terms/bibliographicCitation": [
-            {
-                "@value": "GBIF Secretariat (2023) GBIF Backbone Taxonomy. Checklist dataset https://doi.org/10.15468/39omei"
             }
         ]
     },
@@ -3642,16 +3620,16 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:468ca34f-8c89-479b-bee3-89e7d60c61a4"
+                "@id": "https://www.iso.org/iso-3166-country-codes.html"
             },
             {
-                "@id": "urn:uuid:bb21973d-9945-4add-a498-ce25734e27ad"
+                "@id": "https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2"
             },
             {
-                "@id": "urn:uuid:84b6b5ba-6fd0-439a-acba-34e870a2a564"
+                "@id": "https://datahub.io/core/country-list"
             },
             {
-                "@id": "urn:uuid:aeba764f-4927-48da-b2cb-b868c20dca0b"
+                "@id": "https://doi.org/10.15468/doc-gg7h-s853"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -3672,17 +3650,6 @@
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
             {
                 "@value": "Amendment dwc:countryCode Standard for SingleRecord"
-            }
-        ]
-    },
-    {
-        "@id": "urn:uuid:bb21973d-9945-4add-a498-ce25734e27ad",
-        "@type": [
-            "http://purl.org/dc/terms/BibliographicResource"
-        ],
-        "http://purl.org/dc/terms/bibliographicCitation": [
-            {
-                "@value": "Wikipedia (2020) ISO 3166-1 alpha-2. https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2"
             }
         ]
     },
@@ -3959,28 +3926,28 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:468ca34f-8c89-479b-bee3-89e7d60c61a4"
+                "@id": "https://www.iso.org/iso-3166-country-codes.html"
             },
             {
-                "@id": "urn:uuid:bb21973d-9945-4add-a498-ce25734e27ad"
+                "@id": "https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2"
             },
             {
-                "@id": "urn:uuid:8e4f8856-f348-401e-a398-fb770fb3703e"
+                "@id": "https://doi.org/10.14284/628"
             },
             {
-                "@id": "urn:uuid:5b80a8ef-34a2-4a8d-b0dc-8f6af08fe3a5"
+                "@id": "https://technicalgeography.org/pdf/sp_i_2010/12_introducing_natural_earth_data__naturaleart.pdf"
             },
             {
-                "@id": "urn:uuid:bce3c355-0123-4baf-96d6-685f8f5340b3"
+                "@id": "https://github.com/nvkelso/natural-earth-vector/releases/tag/v5.1.2"
             },
             {
-                "@id": "urn:uuid:38562cf7-9796-4d96-8c98-a55a459acbe9"
+                "@id": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/"
             },
             {
-                "@id": "urn:uuid:aeba764f-4927-48da-b2cb-b868c20dca0b"
+                "@id": "https://doi.org/10.15468/doc-gg7h-s853"
             },
             {
-                "@id": "urn:uuid:38333f7d-62ee-4233-b931-83f9de03da9d"
+                "@id": "http://www.fao.org/3/a0118e/a0118e00.htm#Contents"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -4043,7 +4010,7 @@
         ]
     },
     {
-        "@id": "urn:uuid:8e4f8856-f348-401e-a398-fb770fb3703e",
+        "@id": "https://doi.org/10.14284/628",
         "@type": [
             "http://purl.org/dc/terms/BibliographicResource"
         ],
@@ -4054,7 +4021,7 @@
         ]
     },
     {
-        "@id": "urn:uuid:5b80a8ef-34a2-4a8d-b0dc-8f6af08fe3a5",
+        "@id": "https://technicalgeography.org/pdf/sp_i_2010/12_introducing_natural_earth_data__naturaleart.pdf",
         "@type": [
             "http://purl.org/dc/terms/BibliographicResource"
         ],
@@ -4065,18 +4032,18 @@
         ]
     },
     {
-        "@id": "urn:uuid:bce3c355-0123-4baf-96d6-685f8f5340b3",
+        "@id": "https://github.com/nvkelso/natural-earth-vector/releases/tag/v5.1.2",
         "@type": [
             "http://purl.org/dc/terms/BibliographicResource"
         ],
         "http://purl.org/dc/terms/bibliographicCitation": [
             {
-                "@value": "Natural Earth (2022) Natural Earth Free vector and raster map data at 1:10m, 1:50m, and 1:110m scales. v5.1.2. https://www.naturalearthdata.com/,https://github.com/nvkelso/natural-earth-vector/releases/tag/v5.1.2."
+                "@value": "Natural Earth (2022) Natural Earth Free vector and raster map data at 1:10m, 1:50m, and 1:110m scales. v5.1.2. https://www.naturalearthdata.com/,https://github.com/nvkelso/natural-earth-vector/releases/tag/v5.1.2"
             }
         ]
     },
     {
-        "@id": "urn:uuid:38562cf7-9796-4d96-8c98-a55a459acbe9",
+        "@id": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/",
         "@type": [
             "http://purl.org/dc/terms/BibliographicResource"
         ],
@@ -4087,7 +4054,7 @@
         ]
     },
     {
-        "@id": "urn:uuid:38333f7d-62ee-4233-b931-83f9de03da9d",
+        "@id": "http://www.fao.org/3/a0118e/a0118e00.htm#Contents",
         "@type": [
             "http://purl.org/dc/terms/BibliographicResource"
         ],
@@ -4250,34 +4217,34 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:88c7ee1b-b596-4488-a093-2dcc5e2d4740"
+                "@id": "https://www.marinespecies.org/"
             },
             {
-                "@id": "urn:uuid:9dbce010-adea-4a8e-b2b8-9fb85e594651"
+                "@id": "https://www.irmng.org/"
             },
             {
-                "@id": "urn:uuid:5b80a8ef-34a2-4a8d-b0dc-8f6af08fe3a5"
+                "@id": "https://technicalgeography.org/pdf/sp_i_2010/12_introducing_natural_earth_data__naturaleart.pdf"
             },
             {
-                "@id": "urn:uuid:eef0ae45-ad00-4dbc-b4c6-a1d39cf74558"
+                "@id": "https://obis.org/"
             },
             {
-                "@id": "urn:uuid:aeba764f-4927-48da-b2cb-b868c20dca0b"
+                "@id": "https://doi.org/10.15468/doc-gg7h-s853"
             },
             {
-                "@id": "urn:uuid:38333f7d-62ee-4233-b931-83f9de03da9d"
+                "@id": "http://www.fao.org/3/a0118e/a0118e00.htm#Contents"
             },
             {
-                "@id": "urn:uuid:38562cf7-9796-4d96-8c98-a55a459acbe9"
+                "@id": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/"
             },
             {
-                "@id": "urn:uuid:a7142163-f542-4073-b5fc-3d3526c5b52f"
+                "@id": "https://github.com/nvkelso/natural-earth-vector/releases/tag/v5.1.2"
             },
             {
-                "@id": "urn:uuid:170ed219-908d-40e2-9b4b-406fa30a255e"
+                "@id": "https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-minor-islands/"
             },
             {
-                "@id": "urn:uuid:f5d0dff6-63da-418a-8824-fae6bd2508e4"
+                "@id": "https://developers.google.com/maps/documentation/javascript/examples/geocoding-reverse"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -4347,7 +4314,7 @@
         ]
     },
     {
-        "@id": "urn:uuid:88c7ee1b-b596-4488-a093-2dcc5e2d4740",
+        "@id": "https://www.marinespecies.org/",
         "@type": [
             "http://purl.org/dc/terms/BibliographicResource"
         ],
@@ -4358,7 +4325,7 @@
         ]
     },
     {
-        "@id": "urn:uuid:9dbce010-adea-4a8e-b2b8-9fb85e594651",
+        "@id": "https://www.irmng.org/",
         "@type": [
             "http://purl.org/dc/terms/BibliographicResource"
         ],
@@ -4369,7 +4336,7 @@
         ]
     },
     {
-        "@id": "urn:uuid:eef0ae45-ad00-4dbc-b4c6-a1d39cf74558",
+        "@id": "https://obis.org/",
         "@type": [
             "http://purl.org/dc/terms/BibliographicResource"
         ],
@@ -4380,29 +4347,18 @@
         ]
     },
     {
-        "@id": "urn:uuid:a7142163-f542-4073-b5fc-3d3526c5b52f",
+        "@id": "https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-minor-islands/",
         "@type": [
             "http://purl.org/dc/terms/BibliographicResource"
         ],
         "http://purl.org/dc/terms/bibliographicCitation": [
             {
-                "@value": "Natural Earth (2022) Natural Earth Free vector and raster map data at 1:10m, 1:50m, and 1:110m scales. v5.1.2. https://github.com/nvkelso/natural-earth-vector/releases/tag/v5.1.2."
+                "@value": "Natural Earth (2009) Minor Islands. https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-minor-islands/"
             }
         ]
     },
     {
-        "@id": "urn:uuid:170ed219-908d-40e2-9b4b-406fa30a255e",
-        "@type": [
-            "http://purl.org/dc/terms/BibliographicResource"
-        ],
-        "http://purl.org/dc/terms/bibliographicCitation": [
-            {
-                "@value": "Natural Earth (2009) Minor Islands. https//www.naturalearthdata.com/download/10m/physical/ne_10m_minor_islands.zip"
-            }
-        ]
-    },
-    {
-        "@id": "urn:uuid:f5d0dff6-63da-418a-8824-fae6bd2508e4",
+        "@id": "https://developers.google.com/maps/documentation/javascript/examples/geocoding-reverse",
         "@type": [
             "http://purl.org/dc/terms/BibliographicResource"
         ],
@@ -4568,13 +4524,13 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:adb87907-a424-4eef-bc22-f99a6c12bc10"
+                "@id": "https://www.iso.org/obp/ui/"
             },
             {
-                "@id": "urn:uuid:2f947fa8-606a-46d7-a697-7ea5538d3666"
+                "@id": "https://en.wikipedia.org/wiki/ISO_8601"
             },
             {
-                "@id": "urn:uuid:b79124d7-66eb-4175-8892-7d88bc87f433"
+                "@id": "https://www.loc.gov/standards/datetime/"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -4776,7 +4732,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:aeba764f-4927-48da-b2cb-b868c20dca0b"
+                "@id": "https://doi.org/10.15468/doc-gg7h-s853"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -4961,7 +4917,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:aeba764f-4927-48da-b2cb-b868c20dca0b"
+                "@id": "https://doi.org/10.15468/doc-gg7h-s853"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -5120,28 +5076,28 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:aeba764f-4927-48da-b2cb-b868c20dca0b"
+                "@id": "https://doi.org/10.15468/doc-gg7h-s853"
             },
             {
-                "@id": "urn:uuid:38333f7d-62ee-4233-b931-83f9de03da9d"
+                "@id": "http://www.fao.org/3/a0118e/a0118e00.htm#Contents"
             },
             {
-                "@id": "urn:uuid:f5d0dff6-63da-418a-8824-fae6bd2508e4"
+                "@id": "https://developers.google.com/maps/documentation/javascript/examples/geocoding-reverse"
             },
             {
-                "@id": "urn:uuid:5b80a8ef-34a2-4a8d-b0dc-8f6af08fe3a5"
+                "@id": "https://technicalgeography.org/pdf/sp_i_2010/12_introducing_natural_earth_data__naturaleart.pdf"
             },
             {
-                "@id": "urn:uuid:38562cf7-9796-4d96-8c98-a55a459acbe9"
+                "@id": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/"
             },
             {
-                "@id": "urn:uuid:bce3c355-0123-4baf-96d6-685f8f5340b3"
+                "@id": "https://github.com/nvkelso/natural-earth-vector/releases/tag/v5.1.2"
             },
             {
-                "@id": "urn:uuid:14dc5a6c-50fc-48a8-9a6a-672802990000"
+                "@id": "https://www.arcgis.com/home/item.html?id=f0ceb8af000a4ffbae75d742538c548b"
             },
             {
-                "@id": "urn:uuid:96ef55b5-d303-4d0c-bfb7-8b3926772a59"
+                "@id": "https://www.programmableweb.com/api/geonames"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -5193,7 +5149,7 @@
         ]
     },
     {
-        "@id": "urn:uuid:14dc5a6c-50fc-48a8-9a6a-672802990000",
+        "@id": "https://www.arcgis.com/home/item.html?id=f0ceb8af000a4ffbae75d742538c548b",
         "@type": [
             "http://purl.org/dc/terms/BibliographicResource"
         ],
@@ -5204,7 +5160,7 @@
         ]
     },
     {
-        "@id": "urn:uuid:96ef55b5-d303-4d0c-bfb7-8b3926772a59",
+        "@id": "https://www.programmableweb.com/api/geonames",
         "@type": [
             "http://purl.org/dc/terms/BibliographicResource"
         ],
@@ -5364,7 +5320,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:2035df3b-4533-4f91-8faa-29fe17b6b99c"
+                "@id": "https://doi.org/10.15468/39omei"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -5803,22 +5759,22 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:49999604-d2ad-466e-976f-59a0f9690b57"
+                "@id": "https://epsg.io/"
             },
             {
-                "@id": "urn:uuid:b6510dcf-cedd-4fe5-b1ac-331eaa80cbe6"
+                "@id": "https://epsg.org/"
             },
             {
-                "@id": "urn:uuid:b2bb52e1-5cb9-4a23-bb3a-80bebee51cd3"
+                "@id": "https://spatialreference.org/"
             },
             {
-                "@id": "urn:uuid:2e5613fb-0202-4ce0-8615-f3b01cce4e94"
+                "@id": "https://georepository.com/"
             },
             {
-                "@id": "urn:uuid:aeba764f-4927-48da-b2cb-b868c20dca0b"
+                "@id": "https://doi.org/10.15468/doc-gg7h-s853"
             },
             {
-                "@id": "urn:uuid:74cc416c-d59f-462e-9b52-a27db97ee182"
+                "@id": "http://georeferencing.org/georefcalculator/gc.html"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -5864,7 +5820,7 @@
         ]
     },
     {
-        "@id": "urn:uuid:49999604-d2ad-466e-976f-59a0f9690b57",
+        "@id": "https://epsg.io/",
         "@type": [
             "http://purl.org/dc/terms/BibliographicResource"
         ],
@@ -5875,7 +5831,7 @@
         ]
     },
     {
-        "@id": "urn:uuid:b6510dcf-cedd-4fe5-b1ac-331eaa80cbe6",
+        "@id": "https://epsg.org/",
         "@type": [
             "http://purl.org/dc/terms/BibliographicResource"
         ],
@@ -5886,7 +5842,7 @@
         ]
     },
     {
-        "@id": "urn:uuid:b2bb52e1-5cb9-4a23-bb3a-80bebee51cd3",
+        "@id": "https://spatialreference.org/",
         "@type": [
             "http://purl.org/dc/terms/BibliographicResource"
         ],
@@ -5897,7 +5853,7 @@
         ]
     },
     {
-        "@id": "urn:uuid:2e5613fb-0202-4ce0-8615-f3b01cce4e94",
+        "@id": "https://georepository.com/",
         "@type": [
             "http://purl.org/dc/terms/BibliographicResource"
         ],
@@ -5908,7 +5864,7 @@
         ]
     },
     {
-        "@id": "urn:uuid:74cc416c-d59f-462e-9b52-a27db97ee182",
+        "@id": "http://georeferencing.org/georefcalculator/gc.html",
         "@type": [
             "http://purl.org/dc/terms/BibliographicResource"
         ],
@@ -6037,22 +5993,22 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:49999604-d2ad-466e-976f-59a0f9690b57"
+                "@id": "https://epsg.io/"
             },
             {
-                "@id": "urn:uuid:b6510dcf-cedd-4fe5-b1ac-331eaa80cbe6"
+                "@id": "https://epsg.org/"
             },
             {
-                "@id": "urn:uuid:b2bb52e1-5cb9-4a23-bb3a-80bebee51cd3"
+                "@id": "https://spatialreference.org/"
             },
             {
-                "@id": "urn:uuid:2e5613fb-0202-4ce0-8615-f3b01cce4e94"
+                "@id": "https://georepository.com/"
             },
             {
-                "@id": "urn:uuid:aeba764f-4927-48da-b2cb-b868c20dca0b"
+                "@id": "https://doi.org/10.15468/doc-gg7h-s853"
             },
             {
-                "@id": "urn:uuid:74cc416c-d59f-462e-9b52-a27db97ee182"
+                "@id": "http://georeferencing.org/georefcalculator/gc.html"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -6195,13 +6151,13 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:adb87907-a424-4eef-bc22-f99a6c12bc10"
+                "@id": "https://www.iso.org/obp/ui/"
             },
             {
-                "@id": "urn:uuid:2f947fa8-606a-46d7-a697-7ea5538d3666"
+                "@id": "https://en.wikipedia.org/wiki/ISO_8601"
             },
             {
-                "@id": "urn:uuid:b79124d7-66eb-4175-8892-7d88bc87f433"
+                "@id": "https://www.loc.gov/standards/datetime/"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -6344,13 +6300,13 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:468ca34f-8c89-479b-bee3-89e7d60c61a4"
+                "@id": "https://www.iso.org/iso-3166-country-codes.html"
             },
             {
-                "@id": "urn:uuid:84b6b5ba-6fd0-439a-acba-34e870a2a564"
+                "@id": "https://datahub.io/core/country-list"
             },
             {
-                "@id": "urn:uuid:aeba764f-4927-48da-b2cb-b868c20dca0b"
+                "@id": "https://doi.org/10.15468/doc-gg7h-s853"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -6681,13 +6637,13 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:adb87907-a424-4eef-bc22-f99a6c12bc10"
+                "@id": "https://www.iso.org/obp/ui/"
             },
             {
-                "@id": "urn:uuid:2f947fa8-606a-46d7-a697-7ea5538d3666"
+                "@id": "https://en.wikipedia.org/wiki/ISO_8601"
             },
             {
-                "@id": "urn:uuid:b79124d7-66eb-4175-8892-7d88bc87f433"
+                "@id": "https://www.loc.gov/standards/datetime/"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -7009,7 +6965,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:aeba764f-4927-48da-b2cb-b868c20dca0b"
+                "@id": "https://doi.org/10.15468/doc-gg7h-s853"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -7192,13 +7148,13 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:adb87907-a424-4eef-bc22-f99a6c12bc10"
+                "@id": "https://www.iso.org/obp/ui/"
             },
             {
-                "@id": "urn:uuid:2f947fa8-606a-46d7-a697-7ea5538d3666"
+                "@id": "https://en.wikipedia.org/wiki/ISO_8601"
             },
             {
-                "@id": "urn:uuid:b79124d7-66eb-4175-8892-7d88bc87f433"
+                "@id": "https://www.loc.gov/standards/datetime/"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -7336,7 +7292,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:2035df3b-4533-4f91-8faa-29fe17b6b99c"
+                "@id": "https://doi.org/10.15468/39omei"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -7617,7 +7573,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:2035df3b-4533-4f91-8faa-29fe17b6b99c"
+                "@id": "https://doi.org/10.15468/39omei"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -7807,10 +7763,10 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:b19c2d7d-9470-4ad7-8975-8f46f29e5209"
+                "@id": "https://doi.org/10.15468/doc-5jp4-5g10"
             },
             {
-                "@id": "urn:uuid:aeba764f-4927-48da-b2cb-b868c20dca0b"
+                "@id": "https://doi.org/10.15468/doc-gg7h-s853"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -7875,13 +7831,13 @@
         ]
     },
     {
-        "@id": "urn:uuid:b19c2d7d-9470-4ad7-8975-8f46f29e5209",
+        "@id": "https://doi.org/10.15468/doc-5jp4-5g10",
         "@type": [
             "http://purl.org/dc/terms/BibliographicResource"
         ],
         "http://purl.org/dc/terms/bibliographicCitation": [
             {
-                "@value": "Chapman AD (2020) Current Best Practices for Generalizing Sensitive Species Occurrence Data. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-5jp4-5g10."
+                "@value": "Chapman AD (2020) Current Best Practices for Generalizing Sensitive Species Occurrence Data. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-5jp4-5g10"
             }
         ]
     },
@@ -8017,28 +7973,28 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:aeba764f-4927-48da-b2cb-b868c20dca0b"
+                "@id": "https://doi.org/10.15468/doc-gg7h-s853"
             },
             {
-                "@id": "urn:uuid:b1a479b5-d6a0-4165-ac66-73070f5be338"
+                "@id": "https://www.marineregions.org/downloads.php#marbound"
             },
             {
-                "@id": "urn:uuid:38333f7d-62ee-4233-b931-83f9de03da9d"
+                "@id": "http://www.fao.org/3/a0118e/a0118e00.htm#Contents"
             },
             {
-                "@id": "urn:uuid:bb21973d-9945-4add-a498-ce25734e27ad"
+                "@id": "https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2"
             },
             {
-                "@id": "urn:uuid:84b6b5ba-6fd0-439a-acba-34e870a2a564"
+                "@id": "https://datahub.io/core/country-list"
             },
             {
-                "@id": "urn:uuid:5b80a8ef-34a2-4a8d-b0dc-8f6af08fe3a5"
+                "@id": "https://technicalgeography.org/pdf/sp_i_2010/12_introducing_natural_earth_data__naturaleart.pdf"
             },
             {
-                "@id": "urn:uuid:38562cf7-9796-4d96-8c98-a55a459acbe9"
+                "@id": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/"
             },
             {
-                "@id": "urn:uuid:bce3c355-0123-4baf-96d6-685f8f5340b3"
+                "@id": "https://github.com/nvkelso/natural-earth-vector/releases/tag/v5.1.2"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -8087,7 +8043,7 @@
         ]
     },
     {
-        "@id": "urn:uuid:b1a479b5-d6a0-4165-ac66-73070f5be338",
+        "@id": "https://www.marineregions.org/downloads.php#marbound",
         "@type": [
             "http://purl.org/dc/terms/BibliographicResource"
         ],
@@ -8478,13 +8434,13 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:adb87907-a424-4eef-bc22-f99a6c12bc10"
+                "@id": "https://www.iso.org/obp/ui/"
             },
             {
-                "@id": "urn:uuid:2f947fa8-606a-46d7-a697-7ea5538d3666"
+                "@id": "https://en.wikipedia.org/wiki/ISO_8601"
             },
             {
-                "@id": "urn:uuid:b79124d7-66eb-4175-8892-7d88bc87f433"
+                "@id": "https://www.loc.gov/standards/datetime/"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -8664,7 +8620,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:2035df3b-4533-4f91-8faa-29fe17b6b99c"
+                "@id": "https://doi.org/10.15468/39omei"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -8849,7 +8805,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:aeba764f-4927-48da-b2cb-b868c20dca0b"
+                "@id": "https://doi.org/10.15468/doc-gg7h-s853"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -8987,7 +8943,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:aeba764f-4927-48da-b2cb-b868c20dca0b"
+                "@id": "https://doi.org/10.15468/doc-gg7h-s853"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -9151,7 +9107,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:2035df3b-4533-4f91-8faa-29fe17b6b99c"
+                "@id": "https://doi.org/10.15468/39omei"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -9341,7 +9297,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:2035df3b-4533-4f91-8faa-29fe17b6b99c"
+                "@id": "https://doi.org/10.15468/39omei"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -9484,7 +9440,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:2035df3b-4533-4f91-8faa-29fe17b6b99c"
+                "@id": "https://doi.org/10.15468/39omei"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -9843,13 +9799,13 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:adb87907-a424-4eef-bc22-f99a6c12bc10"
+                "@id": "https://www.iso.org/obp/ui/"
             },
             {
-                "@id": "urn:uuid:2f947fa8-606a-46d7-a697-7ea5538d3666"
+                "@id": "https://en.wikipedia.org/wiki/ISO_8601"
             },
             {
-                "@id": "urn:uuid:b79124d7-66eb-4175-8892-7d88bc87f433"
+                "@id": "https://www.loc.gov/standards/datetime/"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -10013,7 +9969,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:aeba764f-4927-48da-b2cb-b868c20dca0b"
+                "@id": "https://doi.org/10.15468/doc-gg7h-s853"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -10344,7 +10300,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:393e3313-f577-42ab-bf17-14dbecafb4d3"
+                "@id": "https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -10492,13 +10448,13 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:adb87907-a424-4eef-bc22-f99a6c12bc10"
+                "@id": "https://www.iso.org/obp/ui/"
             },
             {
-                "@id": "urn:uuid:2f947fa8-606a-46d7-a697-7ea5538d3666"
+                "@id": "https://en.wikipedia.org/wiki/ISO_8601"
             },
             {
-                "@id": "urn:uuid:b79124d7-66eb-4175-8892-7d88bc87f433"
+                "@id": "https://www.loc.gov/standards/datetime/"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -10827,7 +10783,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:aeba764f-4927-48da-b2cb-b868c20dca0b"
+                "@id": "https://doi.org/10.15468/doc-gg7h-s853"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -10965,13 +10921,13 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:468ca34f-8c89-479b-bee3-89e7d60c61a4"
+                "@id": "https://www.iso.org/iso-3166-country-codes.html"
             },
             {
-                "@id": "urn:uuid:bb21973d-9945-4add-a498-ce25734e27ad"
+                "@id": "https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2"
             },
             {
-                "@id": "urn:uuid:84b6b5ba-6fd0-439a-acba-34e870a2a564"
+                "@id": "https://datahub.io/core/country-list"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -11109,10 +11065,10 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:e404c446-3ed2-40b2-ba52-08175f3586e6"
+                "@id": "https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/LicenseDocument/"
             },
             {
-                "@id": "urn:uuid:4897e23f-5544-45f8-985c-0fc53de978d3"
+                "@id": "https://creativecommons.org/licenses/"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -11250,7 +11206,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:2035df3b-4533-4f91-8faa-29fe17b6b99c"
+                "@id": "https://doi.org/10.15468/39omei"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -11428,22 +11384,22 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:49999604-d2ad-466e-976f-59a0f9690b57"
+                "@id": "https://epsg.io/"
             },
             {
-                "@id": "urn:uuid:b6510dcf-cedd-4fe5-b1ac-331eaa80cbe6"
+                "@id": "https://epsg.org/"
             },
             {
-                "@id": "urn:uuid:b2bb52e1-5cb9-4a23-bb3a-80bebee51cd3"
+                "@id": "https://spatialreference.org/"
             },
             {
-                "@id": "urn:uuid:2e5613fb-0202-4ce0-8615-f3b01cce4e94"
+                "@id": "https://georepository.com/"
             },
             {
-                "@id": "urn:uuid:aeba764f-4927-48da-b2cb-b868c20dca0b"
+                "@id": "https://doi.org/10.15468/doc-gg7h-s853"
             },
             {
-                "@id": "urn:uuid:74cc416c-d59f-462e-9b52-a27db97ee182"
+                "@id": "http://georeferencing.org/georefcalculator/gc.html"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -11642,7 +11598,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:393e3313-f577-42ab-bf17-14dbecafb4d3"
+                "@id": "https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -12180,10 +12136,10 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:34a488b3-3228-4580-a540-b4fadf00aafb"
+                "@id": "https://en.wikipedia.org/wiki/Extreme_points_of_Earth"
             },
             {
-                "@id": "urn:uuid:aeba764f-4927-48da-b2cb-b868c20dca0b"
+                "@id": "https://doi.org/10.15468/doc-gg7h-s853"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -12229,7 +12185,7 @@
         ]
     },
     {
-        "@id": "urn:uuid:34a488b3-3228-4580-a540-b4fadf00aafb",
+        "@id": "https://en.wikipedia.org/wiki/Extreme_points_of_Earth",
         "@type": [
             "http://purl.org/dc/terms/BibliographicResource"
         ],
@@ -12390,7 +12346,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:aeba764f-4927-48da-b2cb-b868c20dca0b"
+                "@id": "https://doi.org/10.15468/doc-gg7h-s853"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -12533,10 +12489,10 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:400b66c7-6f9b-42a1-9fae-870ee5fa9d91"
+                "@id": "https://en.wikipedia.org/wiki/Great-circle_distance"
             },
             {
-                "@id": "urn:uuid:aeba764f-4927-48da-b2cb-b868c20dca0b"
+                "@id": "https://doi.org/10.15468/doc-gg7h-s853"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -12582,7 +12538,7 @@
         ]
     },
     {
-        "@id": "urn:uuid:400b66c7-6f9b-42a1-9fae-870ee5fa9d91",
+        "@id": "https://en.wikipedia.org/wiki/Great-circle_distance",
         "@type": [
             "http://purl.org/dc/terms/BibliographicResource"
         ],
@@ -12711,13 +12667,13 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:b26a2c59-ec3a-43bb-8d2d-0c16126664b3"
+                "@id": "https://en.wikipedia.org/wiki/List_of_elevation_extremes_by_country_"
             },
             {
-                "@id": "urn:uuid:cc67baaf-13b4-4a9e-ba36-e83fb5d18e46"
+                "@id": "https://en.wikipedia.org/wiki/Extreme_points_of_Antarctica"
             },
             {
-                "@id": "urn:uuid:aeba764f-4927-48da-b2cb-b868c20dca0b"
+                "@id": "https://doi.org/10.15468/doc-gg7h-s853"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -13373,7 +13329,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:aeba764f-4927-48da-b2cb-b868c20dca0b"
+                "@id": "https://doi.org/10.15468/doc-gg7h-s853"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -13516,7 +13472,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:2035df3b-4533-4f91-8faa-29fe17b6b99c"
+                "@id": "https://doi.org/10.15468/39omei"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -13659,7 +13615,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:2035df3b-4533-4f91-8faa-29fe17b6b99c"
+                "@id": "https://doi.org/10.15468/39omei"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -13849,7 +13805,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:2035df3b-4533-4f91-8faa-29fe17b6b99c"
+                "@id": "https://doi.org/10.15468/39omei"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -14066,13 +14022,13 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:adb87907-a424-4eef-bc22-f99a6c12bc10"
+                "@id": "https://www.iso.org/obp/ui/"
             },
             {
-                "@id": "urn:uuid:2f947fa8-606a-46d7-a697-7ea5538d3666"
+                "@id": "https://en.wikipedia.org/wiki/ISO_8601"
             },
             {
-                "@id": "urn:uuid:b79124d7-66eb-4175-8892-7d88bc87f433"
+                "@id": "https://www.loc.gov/standards/datetime/"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -15031,10 +14987,10 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:adb87907-a424-4eef-bc22-f99a6c12bc10"
+                "@id": "https://www.iso.org/obp/ui/"
             },
             {
-                "@id": "urn:uuid:2f947fa8-606a-46d7-a697-7ea5538d3666"
+                "@id": "https://en.wikipedia.org/wiki/ISO_8601"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -15204,10 +15160,10 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:e404c446-3ed2-40b2-ba52-08175f3586e6"
+                "@id": "https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/LicenseDocument/"
             },
             {
-                "@id": "urn:uuid:4897e23f-5544-45f8-985c-0fc53de978d3"
+                "@id": "https://creativecommons.org/licenses/"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -15619,10 +15575,10 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:adb87907-a424-4eef-bc22-f99a6c12bc10"
+                "@id": "https://www.iso.org/obp/ui/"
             },
             {
-                "@id": "urn:uuid:2f947fa8-606a-46d7-a697-7ea5538d3666"
+                "@id": "https://en.wikipedia.org/wiki/ISO_8601"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -15903,7 +15859,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:3e7bd589-4f2d-4044-9728-884a527e2762"
+                "@id": "https://rs.gbif.org/vocabulary/gbif/rank.xml"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -15949,7 +15905,7 @@
         ]
     },
     {
-        "@id": "urn:uuid:3e7bd589-4f2d-4044-9728-884a527e2762",
+        "@id": "https://rs.gbif.org/vocabulary/gbif/rank.xml",
         "@type": [
             "http://purl.org/dc/terms/BibliographicResource"
         ],
@@ -16078,7 +16034,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:1a903881-b5e3-46cf-875b-fe67d07b0576"
+                "@id": "https://registry.gbif.org/vocabulary/TaxonRank/concepts"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -16103,7 +16059,7 @@
         ]
     },
     {
-        "@id": "urn:uuid:1a903881-b5e3-46cf-875b-fe67d07b0576",
+        "@id": "https://registry.gbif.org/vocabulary/TaxonRank/concepts",
         "@type": [
             "http://purl.org/dc/terms/BibliographicResource"
         ],
@@ -16258,7 +16214,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:1a903881-b5e3-46cf-875b-fe67d07b0576"
+                "@id": "https://registry.gbif.org/vocabulary/TaxonRank/concepts"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -16427,10 +16383,10 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:34a488b3-3228-4580-a540-b4fadf00aafb"
+                "@id": "https://en.wikipedia.org/wiki/Extreme_points_of_Earth"
             },
             {
-                "@id": "urn:uuid:aeba764f-4927-48da-b2cb-b868c20dca0b"
+                "@id": "https://doi.org/10.15468/doc-gg7h-s853"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -16620,16 +16576,16 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:dca23e9c-3fbd-4bd8-ad98-8fe35a7a5ce5"
+                "@id": "https://www.getty.edu/research/tools/vocabularies/tgn/index.html"
             },
             {
-                "@id": "urn:uuid:aeba764f-4927-48da-b2cb-b868c20dca0b"
+                "@id": "https://doi.org/10.15468/doc-gg7h-s853"
             },
             {
-                "@id": "urn:uuid:468ca34f-8c89-479b-bee3-89e7d60c61a4"
+                "@id": "https://www.iso.org/iso-3166-country-codes.html"
             },
             {
-                "@id": "urn:uuid:cb36ac2e-9c32-42f6-af6b-adcdb7f2f528"
+                "@id": "https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -16819,19 +16775,19 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:aeba764f-4927-48da-b2cb-b868c20dca0b"
+                "@id": "https://doi.org/10.15468/doc-gg7h-s853"
             },
             {
-                "@id": "urn:uuid:03cbeef6-37ab-4f0a-9aa1-76dbc8d9b6ab"
+                "@id": "https://github.com/VertNet/DwCVocabs/tree/master/vocabs"
             },
             {
-                "@id": "urn:uuid:dca23e9c-3fbd-4bd8-ad98-8fe35a7a5ce5"
+                "@id": "https://www.getty.edu/research/tools/vocabularies/tgn/index.html"
             },
             {
-                "@id": "urn:uuid:468ca34f-8c89-479b-bee3-89e7d60c61a4"
+                "@id": "https://www.iso.org/iso-3166-country-codes.html"
             },
             {
-                "@id": "urn:uuid:cb36ac2e-9c32-42f6-af6b-adcdb7f2f528"
+                "@id": "https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -16880,7 +16836,7 @@
         ]
     },
     {
-        "@id": "urn:uuid:03cbeef6-37ab-4f0a-9aa1-76dbc8d9b6ab",
+        "@id": "https://github.com/VertNet/DwCVocabs/tree/master/vocabs",
         "@type": [
             "http://purl.org/dc/terms/BibliographicResource"
         ],
@@ -17035,10 +16991,10 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:2035df3b-4533-4f91-8faa-29fe17b6b99c"
+                "@id": "https://doi.org/10.15468/39omei"
             },
             {
-                "@id": "urn:uuid:f565383e-3340-4816-86ce-aa9c6e1e715c"
+                "@id": "https://en.wikipedia.org/wiki/LSID"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -17074,7 +17030,7 @@
         ]
     },
     {
-        "@id": "urn:uuid:f565383e-3340-4816-86ce-aa9c6e1e715c",
+        "@id": "https://en.wikipedia.org/wiki/LSID",
         "@type": [
             "http://purl.org/dc/terms/BibliographicResource"
         ],
@@ -17659,10 +17615,10 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:b1ab1419-db68-47a8-8528-fc28bf20a021"
+                "@id": "http://rs.tdwg.org/dwc/doc/em/"
             },
             {
-                "@id": "urn:uuid:9df92b8b-aa3e-4431-996b-34ca12fc0ac5"
+                "@id": "https://doi.org/10.3897/biss.3.38084"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -17687,7 +17643,7 @@
         ]
     },
     {
-        "@id": "urn:uuid:b1ab1419-db68-47a8-8528-fc28bf20a021",
+        "@id": "http://rs.tdwg.org/dwc/doc/em/",
         "@type": [
             "http://purl.org/dc/terms/BibliographicResource"
         ],
@@ -17698,7 +17654,7 @@
         ]
     },
     {
-        "@id": "urn:uuid:9df92b8b-aa3e-4431-996b-34ca12fc0ac5",
+        "@id": "https://doi.org/10.3897/biss.3.38084",
         "@type": [
             "http://purl.org/dc/terms/BibliographicResource"
         ],
@@ -17853,10 +17809,10 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:b1ab1419-db68-47a8-8528-fc28bf20a021"
+                "@id": "http://rs.tdwg.org/dwc/doc/em/"
             },
             {
-                "@id": "urn:uuid:9df92b8b-aa3e-4431-996b-34ca12fc0ac5"
+                "@id": "https://doi.org/10.3897/biss.3.38084"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -18025,10 +17981,10 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:a92ae619-d5dc-47e1-b1be-d2e4cae6008d"
+                "@id": "http://dwc.tdwg.org/doe/"
             },
             {
-                "@id": "urn:uuid:9df92b8b-aa3e-4431-996b-34ca12fc0ac5"
+                "@id": "https://doi.org/10.3897/biss.3.38084"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -18074,7 +18030,7 @@
         ]
     },
     {
-        "@id": "urn:uuid:a92ae619-d5dc-47e1-b1be-d2e4cae6008d",
+        "@id": "http://dwc.tdwg.org/doe/",
         "@type": [
             "http://purl.org/dc/terms/BibliographicResource"
         ],
@@ -18229,10 +18185,10 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:a92ae619-d5dc-47e1-b1be-d2e4cae6008d"
+                "@id": "http://dwc.tdwg.org/doe/"
             },
             {
-                "@id": "urn:uuid:9df92b8b-aa3e-4431-996b-34ca12fc0ac5"
+                "@id": "https://doi.org/10.3897/biss.3.38084"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -18401,10 +18357,10 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:ef6148d0-6c8b-435d-a2d2-65a83185161a"
+                "@id": "https://dwc.tdwg.org/pw/"
             },
             {
-                "@id": "urn:uuid:0892e132-a5d6-43c5-8c3f-ce5c819017a7"
+                "@id": "https://doi.org/10.3897/biss.3.38084"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -18450,24 +18406,13 @@
         ]
     },
     {
-        "@id": "urn:uuid:ef6148d0-6c8b-435d-a2d2-65a83185161a",
+        "@id": "https://dwc.tdwg.org/pw/",
         "@type": [
             "http://purl.org/dc/terms/BibliographicResource"
         ],
         "http://purl.org/dc/terms/bibliographicCitation": [
             {
                 "@value": "Darwin Core Maintenance Group (2021) Pathway Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). https://dwc.tdwg.org/pw/"
-            }
-        ]
-    },
-    {
-        "@id": "urn:uuid:0892e132-a5d6-43c5-8c3f-ce5c819017a7",
-        "@type": [
-            "http://purl.org/dc/terms/BibliographicResource"
-        ],
-        "http://purl.org/dc/terms/bibliographicCitation": [
-            {
-                "@value": "Groom et al. (2019) Improving Darwin Core for research and management of alien species. Biodiversity Information Science and Standards 3: e38084 https://doi.org/10.3897/biss.3.38084"
             }
         ]
     },
@@ -18616,7 +18561,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:ef6148d0-6c8b-435d-a2d2-65a83185161a"
+                "@id": "https://dwc.tdwg.org/pw/"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -18785,7 +18730,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:bce5cff0-1bd0-4fe8-a5ea-2b69639629f2"
+                "@id": "https://rs.gbif.org/vocabulary/gbif/sex.xml"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -18831,7 +18776,7 @@
         ]
     },
     {
-        "@id": "urn:uuid:bce5cff0-1bd0-4fe8-a5ea-2b69639629f2",
+        "@id": "https://rs.gbif.org/vocabulary/gbif/sex.xml",
         "@type": [
             "http://purl.org/dc/terms/BibliographicResource"
         ],
@@ -18986,7 +18931,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:bce5cff0-1bd0-4fe8-a5ea-2b69639629f2"
+                "@id": "https://rs.gbif.org/vocabulary/gbif/sex.xml"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -19155,7 +19100,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:99294a4f-3708-448d-a017-7bef54868afb"
+                "@id": "http://rs.gbif.org/vocabulary/gbif/type_status"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -19201,7 +19146,7 @@
         ]
     },
     {
-        "@id": "urn:uuid:99294a4f-3708-448d-a017-7bef54868afb",
+        "@id": "http://rs.gbif.org/vocabulary/gbif/type_status",
         "@type": [
             "http://purl.org/dc/terms/BibliographicResource"
         ],
@@ -19356,7 +19301,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:99294a4f-3708-448d-a017-7bef54868afb"
+                "@id": "http://rs.gbif.org/vocabulary/gbif/type_status"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -19530,7 +19475,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:13c7d43a-cb6c-4a78-9c8e-10a50b633842"
+                "@id": "https://doi.org/10.3897/biss.7.110728"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -19576,7 +19521,7 @@
         ]
     },
     {
-        "@id": "urn:uuid:13c7d43a-cb6c-4a78-9c8e-10a50b633842",
+        "@id": "https://doi.org/10.3897/biss.7.110728",
         "@type": [
             "http://purl.org/dc/terms/BibliographicResource"
         ],
@@ -19732,7 +19677,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -19789,7 +19734,7 @@
         ]
     },
     {
-        "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b",
+        "@id": "https://doi.org/10.1371/journal.pone.0178731",
         "@type": [
             "http://purl.org/dc/terms/BibliographicResource"
         ],
@@ -19904,7 +19849,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -20033,7 +19978,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -20183,7 +20128,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -20312,7 +20257,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -20462,7 +20407,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -20591,7 +20536,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -20741,7 +20686,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -20870,7 +20815,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -21020,7 +20965,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -21149,7 +21094,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -21299,7 +21244,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -21428,7 +21373,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -21578,7 +21523,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -21707,7 +21652,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -21857,7 +21802,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -21986,7 +21931,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -22136,7 +22081,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -22265,7 +22210,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -22415,7 +22360,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -22544,7 +22489,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -22694,7 +22639,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -22823,7 +22768,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -22973,7 +22918,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -23102,7 +23047,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -23252,7 +23197,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -23381,7 +23326,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -23531,7 +23476,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -23660,7 +23605,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -23810,7 +23755,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -23939,7 +23884,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -24089,7 +24034,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -24218,7 +24163,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -24368,7 +24313,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -24497,7 +24442,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -24647,7 +24592,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -24776,7 +24721,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -24926,7 +24871,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -25055,7 +25000,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -25205,7 +25150,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -25334,7 +25279,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -25484,7 +25429,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -25613,7 +25558,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -25763,7 +25708,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -25892,7 +25837,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -26042,7 +25987,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -26171,7 +26116,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -26321,7 +26266,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -26450,7 +26395,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -26600,7 +26545,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -26729,7 +26674,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -26879,7 +26824,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -27008,7 +26953,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -27158,7 +27103,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -27287,7 +27232,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -27437,7 +27382,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -27566,7 +27511,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -27716,7 +27661,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -27845,7 +27790,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -27995,7 +27940,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -28124,7 +28069,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -28274,7 +28219,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -28403,7 +28348,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -28553,7 +28498,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -28682,7 +28627,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -28832,7 +28777,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -28961,7 +28906,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -29111,7 +29056,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -29240,7 +29185,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -29390,7 +29335,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -29519,7 +29464,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -29669,7 +29614,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -29798,7 +29743,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -29948,7 +29893,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -30077,7 +30022,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -30227,7 +30172,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -30356,7 +30301,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -30506,7 +30451,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -30635,7 +30580,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -30785,7 +30730,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -30914,7 +30859,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -31064,7 +31009,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -31193,7 +31138,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -31343,7 +31288,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -31472,7 +31417,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -31622,7 +31567,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -31751,7 +31696,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -31901,7 +31846,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -32030,7 +31975,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -32180,7 +32125,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -32309,7 +32254,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -32459,7 +32404,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -32588,7 +32533,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -32738,7 +32683,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -32867,7 +32812,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -33017,7 +32962,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -33146,7 +33091,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -33296,7 +33241,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -33425,7 +33370,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -33575,7 +33520,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -33704,7 +33649,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -33854,7 +33799,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -33983,7 +33928,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -34133,7 +34078,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -34262,7 +34207,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -34412,7 +34357,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -34541,7 +34486,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -34691,7 +34636,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -34820,7 +34765,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -34970,7 +34915,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -35099,7 +35044,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -35249,7 +35194,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -35378,7 +35323,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -35528,7 +35473,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -35657,7 +35602,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -35807,7 +35752,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -35936,7 +35881,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -36086,7 +36031,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -36215,7 +36160,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -36365,7 +36310,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -36494,7 +36439,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -36644,7 +36589,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -36773,7 +36718,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -36923,7 +36868,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -37052,7 +36997,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -37202,7 +37147,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -37331,7 +37276,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -37481,7 +37426,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -37610,7 +37555,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -37760,7 +37705,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -37889,7 +37834,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -38039,7 +37984,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -38168,7 +38113,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -38318,7 +38263,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -38447,7 +38392,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -38597,7 +38542,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -38726,7 +38671,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -38876,7 +38821,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -39005,7 +38950,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -39155,7 +39100,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -39284,7 +39229,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -39434,7 +39379,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -39563,7 +39508,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
@@ -39713,7 +39658,7 @@
         ],
         "http://purl.org/dc/terms/references": [
             {
-                "@id": "urn:uuid:56ba4d4a-dce8-4a47-bf0b-bf530fc1578b"
+                "@id": "https://doi.org/10.1371/journal.pone.0178731"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#historyNote": [
