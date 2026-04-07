@@ -102,30 +102,41 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
 
 ## 1 Introduction (non-normative)
 
-Beyond data availability, data quality is probably the most significant issue for users of biodiversity data. BDQ establishes a comprehensive framework for evaluating the ‘quality’ of biodiversity data. Data quality is treated as fitness for a particular use, not as an inherent characteristic of data. 
+<!-- This is the place for a brief high level overview of the standard --->
 
-BDQ defines a set of vocabularies, and uses those vocabularies to define structured **Tests**.  The BDQ Tests evaluate the quality of biodiversity data for a set of defined uses (`Use Cases`). Each BDQ Test is designed to assess and report on a specific aspect of data quality (`Data Quality Dimension`), such as `Completeness`, `Consistency`, or `Conformance` in a consistent manner.  Executing the set of Tests related to a `Use Case` on a set of data provides an evaluation of the fittness of that data for that particular use.  
+Beyond data availability, data quality is probably the most significant issue for users of biodiversity data. The Biodiversity Data Quality Standrd (BDQ) establishes a comprehensive framework for evaluating the ‘quality’ of biodiversity data. Data quality is treated as fitness for a particular use, not as an inherent characteristic of data. 
+
+<!-- The following text could move into section 2, making the section 1 material very brief and then making it clear that (as with other documents) the meat begins in section 2 -->
+<!-- that would be the inverse of Lee's approach that mixes stuff from section 2 and on into section 1, but omits key elements -->
+
+BDQ defines a set of vocabularies, and uses those vocabularies to define structured **Tests**.  The BDQ Tests evaluate the quality of biodiversity data for a set of defined uses (`Use Cases`). Each BDQ Test is designed to assess and report on a specific aspect of data quality (`Data Quality Dimension`), such as `Completeness`, `Consistency`, or `Conformance` in a consistent manner.  Executing the set of Tests related to a `Use Case` on a set of data provides an evaluation of the fitness of that data for that particular use.  
 
 BDQ can be used in a variety of contexts, from small-scale data curation projects to large-scale biodiversity aggregation systems.
 The BDQ Tests are defined to allow implementation in various programming languages and environments.
 
-The Tests defined BDQ focus on terms from the Darwin Core standard (Wieczorek et al. 2012). The foundational principles of BDQ, however, apply to many domains or data encodings where data requires a fitness for use evaluation.
+The Tests defined in BDQ focus on terms from the Darwin Core standard (Wieczorek et al. 2012). The foundational principles of BDQ, however, apply to many domains or data encodings where data requires a fitness for use evaluation.
 
 The BDQ standard allows for the definition and addition of new Tests as needed.  New Tests may be added to the standard following instructions provided by the BDQ Maintenance Group (to be constituted). 
 
 ### 1.1 Purpose (non-normative)
+
+<!-- TODO: This is the place for the value proposition the reviewers want: why use the standard --->
 
 The Biodiversity Data Quality (BDQ) standard provides a modular, extensible framework for assessing and reporting on the quality of biodiversity data relative to specific uses.
 The BDQ standard provides a structured process for `Quality Assurance (QA)` and `Quality Control (QC)` for biodiversity data, see [2. Context for Quality, Uses and Purposes](docs/guide/users/index.md#2-context-for-quality-uses-and-purposes-non-normative) in the [BDQ User's Guide](docs/guide/users/index.md).  BDQ’s common framework with vocabularies for describing and implementing data quality tests make it easier for different members of the community to collaborate and share information about data quality in a consistent manner.
 
 ### 1.2 Audience (non-normative)
 
-Intended for:
+<!-- TODO: is this for the audience for this document, or for the standard? language in sections above (and in Lee's proposals for changes) suggests it should be about the standard --->
+
+The BDQ Standard is intended for:
 - Practitioners and data curators
 - Software developers implementing Tests
 - Researchers evaluating dataset suitability
 - Standards developers aligning their work with the BDQ standard
 - Data managers interpreting outputs of Test runs
+
+<!-- TODO:Brief purposes for the two main components: the bdqtest: and bdqffdq: + supporting vocabularies --->
 
 The Fitness For Use Framework provides the theoretical basis for the BDQ standard and includes an ontology of data quality terms. No background in ontology is however required to understand the Tests or most of the BDQ standard.
 
@@ -179,7 +190,7 @@ In any technical treatment of the BDQ standard, a precise reference to a class o
 
 ### 1.9 Notation Conventions (non-normative)
 
-Throughout these descriptive documents, terms and phrases styled as inline code (e.g., `Validation`, `Information Element`, `Data Quality Need`) refer explicitly to classes, properties, or named individuals defined in the BDQ ontology bdqffdq: by their labels or by their term local name (e.g. `InformationElement`).   Pluralized forms (e.g., `Data Quality Reports`) refer to multiple instances of the class. When a word that is also a bdqffdq class name is not styled in this way, it should be interpreted as a general English phrase or concept, not as a specific ontology term (for example, specification is general while `Specification` means `bdqffdq:Specification`, and implementation carries the general meaning while `Implementation` means `bdqffdq:Implementation`).  This convention is also used for qualified names such as `bdqffdq:InformationElement`, terms from other vocabularies, such as `dwc:countryCode`, and to denote some software artifacts such as `sci_name_qc`.
+Throughout these descriptive documents, terms and phrases styled as inline code (e.g., `Validation`, `Information Element`, `Data Quality Need`) refer explicitly to classes, properties, or named individuals defined in the BDQ ontology bdqffdq: by their labels or by their term local name (e.g. `InformationElement`).  Pluralized forms (e.g., `Data Quality Reports`) refer to multiple instances of the class. When a word that is also a bdqffdq class name is not styled in this way, it should be interpreted as a general English phrase or concept, not as a specific ontology term (for example, specification is general while `Specification` means `bdqffdq:Specification`, and implementation carries the general meaning while `Implementation` means `bdqffdq:Implementation`).  This convention is also used for qualified names such as `bdqffdq:InformationElement`, terms from other vocabularies, such as `dwc:countryCode`, and to denote some software artifacts such as `sci_name_qc`.
 
 ## 2 Parts of the Standard (non-normative)
 
@@ -494,7 +505,6 @@ We have used the formatting recommended by Pensoft, see https://checklist.pensof
 <li>GBIF (2021) Darwin Core Vocabulary: Nomenclatural Type Status Vocabulary. http://rs.gbif.org/vocabulary/gbif/type_status</li> 
 <li>GBIF Registry (2023) GBIF Vocabulary: Taxonomic Rank. https://registry.gbif.org/vocabulary/TaxonRank/concepts</li>
 <li>GBIF Secretariat (2023) GBIF Backbone Taxonomy. Checklist dataset. https://doi.org/10.15468/39omei</li>
-<li>Geomatic Solutions (2018) Georepository. Version 9.0.0.1062. https://georepository.com</li> 
 <li>Geomatic Solutions (2026) GeoRepository. https://epsg.org/about.html</li>
 <li>Getty Research Institute (2017) Getty Thesaurus of Geographic Names Online. https://www.getty.edu/research/tools/vocabularies/tgn/index.html</li>
 <li>Google Maps Platform (2020) Reverse Geocoding API. https://developers.google.com/maps/documentation/javascript/examples/geocoding-reverse</li>
