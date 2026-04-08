@@ -540,7 +540,7 @@ The first of these is a simple presence check for `prov:wasAttributedTo`, which 
 * **Information Elements Acted Upon** prov:wasAttributedTo
 * **Expected Response** COMPLIANT if prov:wasAttributedTo is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
-## 6 Defining a more complicated Test with a Source Authority(non-normative)
+## 6 Defining a more complicated Test with a Source Authority (non-normative)
 
 The next gap we identified in the `Use Case` was: 
 

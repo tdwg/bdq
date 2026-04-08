@@ -73,7 +73,7 @@ Draft Standard for Review
 
 [5 A Test to Fill another Gap (non-normative)](#5-a-test-to-fill-another-gap-non-normative)
 
-[6 Defining a more complicated Test with a Source Authority(non-normative)](#6-defining-a-more-complicated-test-with-a-source-authoritynon-normative)
+[6 Defining a more complicated Test with a Source Authority (non-normative)](#6-defining-a-more-complicated-test-with-a-source-authority-non-normative)
   - [6.1 A Simple Description of the Test (non-normative)](#61-a-simple-description-of-the-test-non-normative)
   - [6.2 Identify the Information Elements (non-normative)](#62-identify-the-information-elements-non-normative)
   - [6.3 Select the Test Type (non-normative)](#63-select-the-test-type-non-normative)
@@ -632,7 +632,7 @@ The first of these is a simple presence check for `prov:wasAttributedTo`, which 
 * **Information Elements Acted Upon** prov:wasAttributedTo
 * **Expected Response** COMPLIANT if prov:wasAttributedTo is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
-## 6 Defining a more complicated Test with a Source Authority(non-normative)
+## 6 Defining a more complicated Test with a Source Authority (non-normative)
 
 The next gap we identified in the `Use Case` was: 
 
