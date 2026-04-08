@@ -53,13 +53,17 @@ Technical Specification
 
 Beyond data availability, data quality is probably the most significant issue for users of biodiversity data. The Biodiversity Data Quality Standard (BDQ) establishes a comprehensive, common, interoperable framework for evaluating the *quality* of biodiversity data as *fitness for a particular use*, rather than as an inherent characteristic of data. 
 
-### 1.1 Purpose (non-normative)
+### 1.1 Purpose of the BDQ Standard (non-normative)
 
 <!-- Brief purpose and value proposition statement: what is the standard, why use it --->
 
 The Biodiversity Data Quality (BDQ) standard provides a community-defined, modular, extensible set of biodiversity data quality Tests (`bdqtest:`), together with a formal framework (`bdqffdq:`) and supporting vocabularies (`bdq:`, `bdqdim:`, `bdqcrit:`, and `bdqenh:`) for defining Tests, their inputs (`Information Elements`), and their structured output Responses (as `Assertions`). BDQ standardizes the semantics of what a Test means and what information a Response must contain. BDQ does not prescribe the execution concerns (e.g., data loading, scheduling, or parallelization of Test execution) or human process concerns (e.g., presentation, review, and remediation) of `Quality Assurance` (QA) or `Quality Control` (QC) workflows; instead, it provides a consistent semantic layer at the level of Test inputs and outputs that can be applied within many different operational settings. The presentation and serialization of `Data Quality Reports` is intentionally flexible, so long as the required Response elements are available to consumers. This standardization improves interoperability by making Test results comparable and reusable across organizations, software tools, and data pipelines, reducing duplicated effort and ambiguity in “what was tested” and “what the outcome means.” As a result, BDQ helps data providers, aggregators, and researchers consistently assess fitness for use, prioritize quality improvement work, and support transparent, repeatable decisions about whether and how to use biodiversity data.
 
-### 1.2 Audience (non-normative)
+#### 1.1. Purpose of this document (non_normative)
+
+This document is an guide and index to BDQ documents and related resources. This document provides an overview of the BDQ Standard and links to normative documents that formally describe the BDQ standard. This document also links to resources that will assist various communities (see [Audience](#12-audience-for-the-bdq-standard-non-normative) below) to better understand and make effective use of BDQ within their environments or communities. 
+
+### 1.2 Audience for the BDQ Standard (non-normative)
 
 <!--- The audience for the BDQ Standard as a whole --->
 
