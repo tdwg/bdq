@@ -110,12 +110,14 @@ Draft Standard for Review
     - [8.1.3.1 Contrast with Quality Assurance.](#8131-contrast-with-quality-assurance)
     - [8.1.4 A worked example (building on VALIDATION_FOOTPRINTWKT_NOTEMPTY)](#814-a-worked-example-building-on-validation_footprintwkt_notempty)
     - [8.1.5 Practical note: summary values vs. details](#815-practical-note-summary-values-vs-details)
+    - [8.1.6 Example Quality Control Measures for the Validated Distribution Authority Use Case](#816-example-quality-control-measures-for-the-validated-distribution-authority-use-case)
   - [8.2 Quality Control Workflow (non-normative)](#82-quality-control-workflow-non-normative)
     - [8.2.1 Start with Patterns, Not Individual Records](#821-start-with-patterns-not-individual-records)
     - [8.2.2 Look for Point Causes and Systemic Errors](#822-look-for-point-causes-and-systemic-errors)
     - [8.2.3 Focus on Results](#823-focus-on-results)
     - [8.2.4 Prioritize Work for Greatest Impact](#824-prioritize-work-for-greatest-impact)
     - [8.2.5 Close the loop: re-run Tests to confirm improvements](#825-close-the-loop-re-run-tests-to-confirm-improvements)
+    - [8.2.6 Example Quality Control Workflow Validated Distribution Authority Use Case](#826-example-quality-control-workflow-validated-distribution-authority-use-case)
   - [8.3 Quality Assurance Workflow (non-normative)](#83-quality-assurance-workflow-non-normative)
 
 [9 Round-Up](#9-round-up)
@@ -320,6 +322,7 @@ Our `Use Case` calls for more than just a presence check for these `Information 
     * Is consistent with the ORCID ID. **Gap**
   * dcterms:source 
     * Is present: (publication or dataset source) **Gap**
+
 
 Let's focus on the gaps.  The BDQ Issues in GitHub that define tests are a good place to start.  These tests are a superset of the BDQ Tests and have had some level of documentation.
 
@@ -696,7 +699,7 @@ This Test would evaluate the value of `prov:wasAttributedTo` for each record, so
 
 We could make a very simple specification for this Test, such as "COMPLIANT if the value in prov:wasAttributedTo is a valid ORCID ID; otherwise NOT_COMPLIANT".  However, this is not very clear or specific for an implementer.  What does it mean for a value to be a valid ORCID ID?  How would an implementer determine that?  We need to provide more specific guidance in the specification to ensure that different implementers will implement the Test in a consistent way and thus get comparable results.
 
-We are asking not if the the value in `prov:wasAttributedTo` is found in some authority, but if it conforms to the expected format for an ORCID ID.  Thus we could phrase the specification as "COMPLIANT if the value in prov:wasAttributedTo conforms to the expected format for an ORCID ID; otherwise NOT_COMPLIANT".  This is better, but what happens if there is no value in `prov:wasAttributedTo`, if it is `bdq:Empty`?  That would be NOT_COMPLIANT, but it would not be because the value does not conform to the expected format for an ORCID ID, it would be because there is no value at all, and this Test would overlap in what it is testing with VALIDATION_WASATTRIBUTEDTO_NOTEMPTY, which is our separate Test above that checks for the presence of a value in `prov:wasAttributedTo`.  We want to keep these two Tests separate and focused on different aspects of data quality, so we need to make sure the specification for this Test is clear that it is only evaluating whether a value that is present conforms to the expected format for an ORCID ID, and it is not evaluating whether a value is present at all. We accomplish this by asserting that the presence of some value in `prov:wasAttributedTo` is a prerequisite for this Test, and if that prerequisite is not met, then this Test cannot return a result.
+We are asking not if the value in `prov:wasAttributedTo` is found in some authority, but if it conforms to the expected format for an ORCID ID.  Thus we could phrase the specification as "COMPLIANT if the value in prov:wasAttributedTo conforms to the expected format for an ORCID ID; otherwise NOT_COMPLIANT".  This is better, but what happens if there is no value in `prov:wasAttributedTo`, if it is `bdq:Empty`?  That would be NOT_COMPLIANT, but it would not be because the value does not conform to the expected format for an ORCID ID, it would be because there is no value at all, and this Test would overlap in what it is testing with VALIDATION_WASATTRIBUTEDTO_NOTEMPTY, which is our separate Test above that checks for the presence of a value in `prov:wasAttributedTo`.  We want to keep these two Tests separate and focused on different aspects of data quality, so we need to make sure the specification for this Test is clear that it is only evaluating whether a value that is present conforms to the expected format for an ORCID ID, and it is not evaluating whether a value is present at all. We accomplish this by asserting that the presence of some value in `prov:wasAttributedTo` is a prerequisite for this Test, and if that prerequisite is not met, then this Test cannot return a result.
 
 So, we could phrase our Test specification (our `Expected Response`) as a sequence of:
 * INTERNAL_PREREQUISITES_NOT_MET if prov:wasAttributedTo is bdq:Empty;
@@ -1247,6 +1250,36 @@ In other words for a `Measure`:
 
 This pattern supports interoperability while still enabling rich `Quality Control` reporting in practical systems.
 
+#### 8.1.6 Example Quality Control Measures for the Validated Distribution Authority Use Case
+
+For our **Validated Distribution Authority** `Use Case`, we might define the following `MultiRecord` `Measures` to summarize the results of the `SingleRecord` `Validations` in the `ValidationPolicy` for that `Use Case`, framing a separate `Measure` to count COMPLIANT results for each `Validation` Test (and one `Measure` to summarize overall compliance across all `Validations` (that is, a policy-level completeness measure)):
+
+* MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_NOTEMPTY 
+  * Count of records where VALIDATION_SCIENTIFICNAME_NOTEMPTY is COMPLIANT (i.e., has dwc:scientificName) 
+* MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_FOUND 
+  * Count of records where VALIDATION_SCIENTIFICNAME_FOUND is COMPLIANT (i.e., has a resolvable scientific name) 
+* MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEID_NOTEMPTY 
+  * Count of records where VALIDATION_SCIENTIFICNAMEID_NOTEMPTY is COMPLIANT (i.e., has dwc:scientificNameID) 
+* MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEID_COMPLETE 
+  * Count of records where VALIDATION_SCIENTIFICNAMEID_COMPLETE is COMPLIANT (i.e., has a complete scientificNameID) 
+* MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_NOTEMPTY 
+  * Count of records where VALIDATION_GEODETICDATUM_NOTEMPTY is COMPLIANT (i.e., has dwc:geodeticDatum) 
+* MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_STANDARD 
+  * Count of records where VALIDATION_GEODETICDATUM_STANDARD is COMPLIANT (i.e., has a standard geodeticDatum) 
+* MULTIRECORD_MEASURE_COUNT_COMPLIANT_FOOTPRINTWKT_NOTEMPTY 
+  * Count of records where VALIDATION_FOOTPRINTWKT_NOTEMPTY is COMPLIANT (i.e., has dwc:footprintWKT) 
+* MULTIRECORD_MEASURE_COUNT_COMPLIANT_FOOTPRINTWKT_VALID 
+  * Count of records where VALIDATION_FOOTPRINTWKT_VALID is COMPLIANT (i.e., has a valid dwc:footprintWKT)
+* MULTIRECORD_MEASURE_COUNT_COMPLIANT_WASATTRIBUTEDTO_NOTEMPTY 
+  * Count of records where VALIDATION_WASATTRIBUTEDTO_NOTEMPTY is COMPLIANT (i.e., has prov:wasAttributedTo) 
+* MULTIRECORD_MEASURE_COUNT_COMPLIANT_WASATTRIBUTEDTO_STANDARD 
+  * Count of records where VALIDATION_WASATTRIBUTEDTO_STANDARD is COMPLIANT (i.e., has a standard prov:wasAttributedTo)
+* MULTIRECORD_MEASURE_QA_VALIDATIONPOLICY_COMPLIANT
+  * COMPLETE if all `Validations` in the `ValidationPolicy` for the `Use Case` are COMPLIANT (i.e., has all required values and those values are valid)
+  * This is a dataset-level and policy-level completeness measure across multiple Validations.
+
+These Tests follow a naming convention of MULTIRECORD_MEASURE_COUNT_COMPLIANT_{validation_label} for the individual counts, and MULTIRECORD_MEASURE_QA_{condition} for `Measures` that return COMPLETE/NOT_COMPLETE.  
+
 ### 8.2 Quality Control Workflow (non-normative)
 
 In contrast to `Quality Assurance`, which focuses on filtering a dataset down to records that are fit for a stated purpose, `Quality Control` focuses on *understanding* why data are not fit, and on identifying tractable actions that can improve quality over time. In practice, `Quality Control` is often iterative: run a suite of Tests, interpret the resulting `Data Quality Reports`, make targeted changes (to data, mappings, or workflows), and then re-run the Tests to confirm improvement.
@@ -1317,6 +1350,45 @@ Quality Control actions should be followed by re-running the same Test suite (an
 - Quality has improved with respect to the selected `Use Case`.
 
 This “run → analyze patterns → fix causes → re-run” loop is a Quality Control workflow pattern supported by the BDQ Tests and the Fitness for Use Framework.
+
+#### 8.2.6 Example Quality Control Workflow Validated Distribution Authority Use Case
+
+Let's assume that we've got a set of distribution data, and that we can map that data onto the `Information Elements` required by the `SingleRecord` `Validations` in our `ValidationPolicy` for the **Validated Distribution Authority** `Use Case`, and that we have implemented those `Validations` in some execution framework.
+
+Our dataset would include the following `Information Elements` `scientificName, scientificNameAuthorship, scientificNameID, geodeticDatum, footprintWKT, wasAttributedTo`.
+
+Now we could run the set of Tests against our dataset (of, say, 10000 records).  The workflow may include taking the resulting Responses (`Assertions`), and using them as input for the `MultiRecord` `Measures` listed above to get counts of compliant records for each of those `Validations`.  We could then use those counts to prioritize our `Quality Control` efforts.
+
+We might find:
+| Test | Count of COMPLIANT records | Calculated percentage of all records |
+| ---- | -------------------------- | ------------------------------------ |
+| MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_NOTEMPTY | 9950 | 99.5% |
+| MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_FOUND | 9000 | 90% |
+| MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEID_NOTEMPTY | 0 | 0% |
+| MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEID_COMPLETE | 0 | 0% |
+| MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_NOTEMPTY | 10000 | 100% |
+| MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_STANDARD | 9980 | 99.8% |
+| MULTIRECORD_MEASURE_COUNT_COMPLIANT_FOOTPRINTWKT_NOTEMPTY | 9500 | 95% |
+| MULTIRECORD_MEASURE_COUNT_COMPLIANT_FOOTPRINTWKT_VALID | 9400 | 94% |
+| MULTIRECORD_MEASURE_COUNT_COMPLIANT_WASATTRIBUTEDTO_NOTEMPTY | 9900 | 99% |
+| MULTIRECORD_MEASURE_COUNT_COMPLIANT_WASATTRIBUTEDTO_STANDARD | 0 | 0% |
+
+And:
+* MULTIRECORD_MEASURE_QA_VALIDATIONPOLICY_COMPLIANT = NOT_COMPLETE because not all the `Validations` are COMPLIANT.
+
+We can quickly see two large gaps in the data: the `scientificNameID` field is completely empty, and the `prov:wasAttributedTo` field is present but does not conform to the expected standard.  These might be good targets for automated `Quality Control` efforts.  An examination of the data values or the `Response.comment` values from the underlying `SingleRecord` `Validations` may help identify specific problems and potential fixes.  For example, if the comment indicates that `prov:wasAttributedTo` values are present but do not match the expected ORCID format, we could look for common patterns in those values to design a mapping or transformation to fix them at scale.  We can see that 90% of records have a resolvable scientific name, so for that 90% it should be very straightforward to look up a corresponding `scientificNameID` value, so that might be a good target for an automated lookup (e.g. including [AMENDMENT_SCIENTIFICNAMEID_FROM_TAXON](../terms/bdqtest/index.md#AMENDMENT_SCIENTIFICNAMEID_FROM_TAXON) in the `Use Case` and workflow) to fix that problem at scale. 
+
+The 10% of records with an unresolvable scientific name likely require manual review and a focused data cleaning project by a domain specialist with an understanding of the taxonomy involved in order to identify why these records are not matched to the taxonomic source authority, to resolve any problems, and to, in the process, find the correct `scientificNameID` value for these records.  This focused manual review should be carried out on distinct values of `dwc:scientificName` that are not resolvable, rather than on individual records. On examination of distinct values, these 1000 records might be a single typo in a single name, or they might involve many distinct names and many distinct problems.
+
+The 5% of records missing `dwc:footprintWKT` are a core manual task for the domain specialist curators this data set.  They will need to find the distributions for taxa that don't have them.  
+
+The 6% of records with invalid `dwc:footprintWKT` likely need to be addressed by a GIS specialist. 
+
+Thus, these measure results not only provide a picture of the quality of the dataset, but also provide a starting point for a roadmap for how to improve the quality of the dataset for the `Use Case` of being a "validated distribution authority" for biodiversity science, with different types of problems that require different types of expertise to fix, and different types of fixes, some of which can be automated at scale, others of which will require manual evaluation.
+
+Once these problems are fixed, we can re-run the same Test suite to confirm that the fixes had the intended effect, and to confirm that the quality of the dataset has improved with respect to the selected `Use Case`.  We can also track improvement over time by comparing the results of these `MultiRecord` `Measures` before and after the fixes.  This iterative process of running Tests, interpreting results, fixing problems, and re-running Tests is a common `Quality Control` workflow pattern supported by the BDQ Tests and the Fitness for Use Framework.  
+
+When all the problems have been fixed and the entire dataset is fit for this `Use Case`, the MULTIRECORD_MEASURE_QA_VALIDATIONPOLICY_COMPLIANT will return COMPLETE, and the dataset will be fit for use as a "validated distribution authority" for biodiversity science.
 
 ### 8.3 Quality Assurance Workflow (non-normative)
 
