@@ -177,6 +177,8 @@ Tests for data quality may serve two purposes: Quality Control and Quality Assur
 
 The success of `Quality Assurance` and `Quality Control` depends on organisational context and resources. These include establishing clear validation, monitoring, and feedback procedures to maintain high quality data, and encouraging collaboration among data custodians, analysts, and end-users to ensure data quality aligns with practical needs and supports reliable decisions. It also requires developing formal methodologies to understand and process the Test outputs in the `Data Quality Reports`.
 
+BDQ does not prescribe how QA/QC workflows should operate; it standardizes Tests, Responses, and patterns for aggregating Responses, in ways that enable a variety of workflows for QA/QC. The BDQ standard provides a formal framework for both QA and QC, but the application of these concepts in practice may be more nuanced and context-dependent than simple filtering or reporting.
+
 #### 2.1.1 Quality Assurance (non-normative)
 
 The Fitness for Use Framework (Veiga 2016, Veiga et al., 2017) provides a formal means for filtering records for [Quality Assurance](../../bdqffdq/index.md#3447-quality-assurance-normative) (involving only Measures), but informally, data may be thought of as being fit for some use if all `Validation` Tests comprising that `Use Case` have a `Response.result`="COMPLIANT", and all non-numeric `Measure` Tests comprising that `Use Case` have a `Response.result`="COMPLETE". The BDQ Tests include a set of `Multi Record` `Measures` whose purpose is to enable formal filtering (Quality Assurance) and reporting (for Quality Control) under the [Fitness for Use Framework Ontology](../../bdqffdq/index.md).
