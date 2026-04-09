@@ -76,8 +76,10 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
     - [3.6.2 Test Conformance Testing Data (non-normative)](#362-test-conformance-testing-data-non-normative)
     - [3.6.3 Fitness For Use Framework (non-normative)](#363-fitness-for-use-framework-non-normative)
     - [3.6.4 RDF Serializations of Controlled Vocabularies (non-normative)](#364-rdf-serializations-of-controlled-vocabularies-non-normative)
-    - [4 Implementations (non-normative)](#4-implementations-non-normative)
-    - [4.1 Java Implementation (non-normative)](#41-java-implementation-non-normative)
+
+[4 Implementations (non-normative)](#4-implementations-non-normative)
+  - [4.1 Java Implementation (non-normative)](#41-java-implementation-non-normative)
+  - [4.2 BDQEmail](#42-bdqemail)
 
 [5 Design of the Tests (normative)](#5-design-of-the-tests-normative)
   - [5.1 Data Quality Control, Data Quality Assurance (normative)](#51-data-quality-control-data-quality-assurance-normative)
@@ -117,7 +119,7 @@ The Biodiversity Data Quality (BDQ) standard provides a community-defined, modul
 
 #### 1.1.1 Purpose of this document (non_normative)
 
-This document is an guide and index to BDQ documents and related resources. This document provides an overview of the BDQ Standard and links to normative documents that formally describe the BDQ standard. This document also links to resources that will assist various communities (see [Audience](#12-audience-for-the-bdq-standard-non-normative) below) to better understand and make effective use of BDQ within their environments or communities. 
+This document is a guide and index to BDQ documents and related resources. This document provides an overview of the BDQ Standard and links to normative documents that formally describe the BDQ standard. This document also links to resources that will assist various communities (see [Audience](#12-audience-for-the-bdq-standard-non-normative) below) to better understand and make effective use of BDQ within their environments or communities. 
 
 ### 1.2 Audience for the BDQ Standard (non-normative)
 
@@ -133,7 +135,7 @@ The BDQ standard is intended for:
 
 For practitioners, researchers, collection managers, and data managers, the BDQ `Tests` (`bdqtest:`) provide a shared, community-defined set of Test definitions that can be selected and run as suites to evaluate fitness for use for particular specified uses of biodiversity data.
 
-For developers, standards developers, and knowledge engineers, the Fitness For Use Framework (`bdqffdq:`) and supporting vocabularies (e.g., `bdq:`, `bdqdim:`, `bdqcrit:`, and `bdqenh:`) provide the common semantic model used to define `Tests`, identify their inputs (`Information Elements`), and represent their outputs (Responses as `Assertions`) in a consistent and interoperable way.  No background in ontologies is required to understand or apply the `Tests`, though familiarity with RDF/OWL will be helpful for those working directly with the ontologies or exchanging `Data Quality Reports` as RDF.
+For developers, standards developers, and knowledge engineers, the Fitness for Use Framework (`bdqffdq:`) and supporting vocabularies (e.g., `bdq:`, `bdqdim:`, `bdqcrit:`, and `bdqenh:`) provide the common semantic model used to define `Tests`, identify their inputs (`Information Elements`), and represent their outputs (Responses as `Assertions`) in a consistent and interoperable way.  No background in ontologies is required to understand or apply the `Tests`, though familiarity with RDF/OWL will be helpful for those working directly with the ontologies or exchanging `Data Quality Reports` as RDF.
 
 ### 1.3 Contributing TDWG Interest and Task Groups (non-normative)
 
@@ -229,7 +231,7 @@ The landing pages provide overviews of the subjects they cover and refer to more
 
 - **The Biodiversity Data Quality (BDQ) Standard** - Overview of the BDQ standard. This page.
 - [**BDQ Tests and Assertions**](docs/bdqtest/index.md) - Overview of the Tests.
-- [**Fitness For Use Ontology**](docs/bdqffdq/index.md) - Overview of the Fitness for Use Framework.
+- [**Fitness for Use Ontology**](docs/bdqffdq/index.md) - Overview of the Fitness for Use Framework.
 
 <!--- 
 Note: bdqffdq and bdqtest have separate landing pages and term list documents, for each of the following documents the landing page IRI will resolve to the term list document.
@@ -246,15 +248,15 @@ The Guides are explanatory documents targeting particular perspectives on the st
 - [**BDQ User's Guide**](docs/guide/users/index.md)
 - [**BDQ Implementer's Guide**](docs/guide/implementers/index.md)
 - [**Guide to Marking and Identifying Synthetic and Modified Data**](docs/guide/synthetic/index.md)
-- [**Fitness For Use Framework Ontology Guide**](docs/guide/bdqffdq/index.md)
+- [**Fitness for Use Framework Ontology Guide**](docs/guide/bdqffdq/index.md)
 
 ### 3.4 Vocabularies (non-normative)
 #### 3.4.1 Foundational Vocabularies (non-normative)
 
 The Foundational Vocabularies cover the two main parts of the standard - the practical (the Tests) and the theoretical (the Framework).
 
-- [**Fitness For Use Framework Ontology List of Terms (bdqffdq:)**](docs/list/bdqffdq/index.md) - The definitions of terms in the bdqffdq: vocabulary.
-- [**Fitness For Use Framework Ontology Vocabulary Extension**](docs/extension/bdqffdq/index.md) - The axioms that extend the logic of the basic the bdqffdq: vocabulary.
+- [**Fitness for Use Framework Ontology List of Terms (bdqffdq:)**](docs/list/bdqffdq/index.md) - The definitions of terms in the bdqffdq: vocabulary.
+- [**Fitness for Use Framework Ontology Vocabulary Extension**](docs/extension/bdqffdq/index.md) - The axioms that extend the logic of the basic the bdqffdq: vocabulary.
 - [**BDQ Tests and Assertions List of Terms (bdqtest:)**](docs/list/bdqtest/index.md) - The complete list of terms that define the BDQ Tests.
 
 #### 3.4.2 Supporting Vocabularies (non-normative)
@@ -302,7 +304,7 @@ Test Confomance Testing Data are intended for implementers to use to evaluate wh
 
 #### 3.6.3 Fitness For Use Framework (non-normative)
 
-The Fitness For Use Framework is provided as an OWL ontology.
+The Fitness for Use Framework is provided as an OWL ontology.
 
 - [**Biodiversity Data Quality Fitness for Use Framework (Ontology)**](vocabulary/bdqffdq.owl)
 
@@ -313,13 +315,21 @@ The Fitness For Use Framework is provided as an OWL ontology.
 - [**RDF/XML serialization of the bdqdim: terms**](dist/bdqdim.xml)
 - [**RDF/XML serialization of the bdqenh: terms**](dist/bdqenh.xml)
 
-#### 4 Implementations (non-normative)
+## 4 Implementations (non-normative)
 
-#### 4.1 Java Implementation (non-normative)
+The BDQ standard does not include implementations of tests, but there are external implementations of the tests that are available for use and demonstration of the standard.  These implementations are not part of the standard, but they are provided as resources for implementers and users of the standard.
+
+### 4.1 Java Implementation (non-normative)
 
 While **not part of the BDQ standard**, a validated Java® implementation of the tests is provided in the [event_date_qc](https://github.com/FilteredPush/event_date_qc), [sci_name_qc](https://github.com/FilteredPush/sci_name_qc), [geo_ref_qc](https://github.com/FilteredPush/geo_ref_qc) and [rec_occur_qc](https://github.com/FilteredPush/rec_occur_qc) libraries.  Also see [bdqtestrunner](https://github.com/FilteredPush/bdqtestrunner/), which demonstrates conformance of these libraries with the provided [Test Conformance Testing Data](#262-test-conformance-testing-data-non-normative).      
 
+### 4.2 BDQEmail
+
+While **not part of the BDQ standard**, GBIF Norway has developed a tool called BDQEmail that allows users to submit records for testing and receive results via email. This tool wraps the Java implementation of the tests with an email and large language model processing system and provides an accessible way for users to evaluate the quality of their biodiversity data using the BDQ Tests without needing to implement the tests themselves.  The tool ([gbif-norway/bdq-multirecord-agent](https://github.com/gbif-norway/bdq-multirecord-agent)) is described at: [https://www.gbif.no/services/index.html](https://www.gbif.no/services/index.html).
+
 ## 5 Design of the Tests (normative)
+
+BDQ `Tests` are designed with a clear boundary of responsibility: they take a defined set of input `Information Elements` (and optional `Parameters`) and return a structured `Response` describing the outcome. This standardization of inputs and outputs means a `Test` implementation can be treated as a small, self-contained component whose behavior is determined by its `Specification` and is consistent across programming languages and environments. The surrounding execution framework is responsible for obtaining and binding raw data to the required `Information Elements`, selecting which `Tests` to run (e.g., by `Use Case` via `Policies`), and assembling the resulting `Responses` into `Data Quality Reports`. In this way, BDQ separates the semantics of `Test` behavior (what is evaluated and how results are expressed) from the mechanics of test execution (how data are accessed, orchestrated, filtered, and reported).
 
 ### 5.1 Data Quality Control, Data Quality Assurance (normative)
 
@@ -372,7 +382,7 @@ We recognize four people as authors of the standard, having contributed consiste
 
 - **Lee Belbin (Blatant Fabrications Pty Ltd)**: Convener of TDWG Data Quality Task Group 2 (Data Quality Tests and Assertions); Test descriptions; author of the BDQ standard documents; Test Conformance Testing Data.
 - **Arthur D Chapman (Australian Biodiversity Information Services)**: Co-convener of the TDWG Data Quality Interest Group; Test descriptions; author of the BDQ standard documents; vocabularies. 
-- **Paul J Morris (Museum of Comparative Zoology, Harvard University)**: Test descriptions; Fitness For Use Framework ontology; Java Test implementations in filteredpush packages; author of the BDQ standard documents; Test Conformance Testing Data. 
+- **Paul J Morris (Museum of Comparative Zoology, Harvard University)**: Test descriptions; Fitness for Use Framework ontology; Java Test implementations in filteredpush packages; author of the BDQ standard documents; Test Conformance Testing Data. 
 - **John Wieczorek (Rauthiflor LLC)**: Test descriptions; Test implementations; author of the BDQ standard documents; Darwin Core liaison.
 
 #### 6.2.2 Contributors (non-normative)
