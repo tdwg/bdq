@@ -61,7 +61,7 @@ The Biodiversity Data Quality (BDQ) standard provides a community-defined, modul
 
 #### 1.1.1 Purpose of this document (non_normative)
 
-This document is an guide and index to BDQ documents and related resources. This document provides an overview of the BDQ Standard and links to normative documents that formally describe the BDQ standard. This document also links to resources that will assist various communities (see [Audience](#12-audience-for-the-bdq-standard-non-normative) below) to better understand and make effective use of BDQ within their environments or communities. 
+This document is a guide and index to BDQ documents and related resources. This document provides an overview of the BDQ Standard and links to normative documents that formally describe the BDQ standard. This document also links to resources that will assist various communities (see [Audience](#12-audience-for-the-bdq-standard-non-normative) below) to better understand and make effective use of BDQ within their environments or communities. 
 
 ### 1.2 Audience for the BDQ Standard (non-normative)
 
