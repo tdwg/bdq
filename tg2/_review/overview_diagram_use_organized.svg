@@ -1,0 +1,744 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1400"
+   height="950"
+   viewBox="0 0 1400 950"
+   version="1.1"
+   id="svg163"
+   sodipodi:docname="overview_diagram_use_organized.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview165"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="0.89263158"
+     inkscape:cx="697.37618"
+     inkscape:cy="475"
+     inkscape:window-width="1878"
+     inkscape:window-height="1046"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg163" />
+  <metadata
+     id="metadata2">
+    <rdf:RDF>
+      <rdf:Description
+         rdf:about="">
+        <dc:title>BDQ Standard – Documents by Audience and Reading Order</dc:title>
+        <dc:creator>Paul J. Morris</dc:creator>
+        <dc:contributor>Assistance from an AI model provided by OpenAI (ChatGPT)</dc:contributor>
+        <dc:date>2026-04-10</dc:date>
+        <dc:description>
+          Conceptual diagram showing how BDQ documents relate to three user groups.
+        </dc:description>
+      </rdf:Description>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs9">
+    <style
+       type="text/css"
+       id="style4"><![CDATA[
+      .title {
+        font-family: Arial, sans-serif;
+        font-size: 24px;
+        font-weight: bold;
+      }
+      .subtitle {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        font-weight: bold;
+      }
+      .audience-title {
+        font-family: Arial, sans-serif;
+        font-size: 15px;
+        font-weight: bold;
+      }
+      .label {
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+      }
+      .small {
+        font-family: Arial, sans-serif;
+        font-size: 11px;
+      }
+      .note {
+        font-family: Arial, sans-serif;
+        font-size: 11px;
+        font-style: italic;
+        fill: #555555;
+      }
+      .col-bg {
+        fill: #f5f5f5;
+        stroke: #cccccc;
+        stroke-width: 1;
+      }
+      /* Color coding for content types */
+      .guide-box {
+        fill: #e6f2ff;
+        stroke: #7aa6e6;
+        stroke-width: 1.2;
+      }
+      .core-box {
+        fill: #e8f9f0;
+        stroke: #5fbf8f;
+        stroke-width: 1.2;
+      }
+      .support-box {
+        fill: #fffbe5;
+        stroke: #e0cf8d;
+        stroke-width: 1.2;
+      }
+      .tutorial-box {
+        fill: #f6e6ff;
+        stroke: #b78cd9;
+        stroke-width: 1.2;
+      }
+      .supplement-box {
+        fill: #ffffff;
+        stroke: #bbbbbb;
+        stroke-width: 1.0;
+      }
+      .landing-box {
+        fill: #ffffff;
+        stroke: #666666;
+        stroke-width: 1.5;
+      }
+      .legend-box {
+        fill: #ffffff;
+        stroke: #bbbbbb;
+        stroke-width: 1;
+      }
+      .arrow-main {
+        stroke: #444444;
+        stroke-width: 1.8;
+        marker-end: url(#arrowhead);
+        fill: none;
+      }
+    ]]></style>
+    <marker
+       id="arrowhead"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5"
+       markerWidth="6"
+       markerHeight="6"
+       orient="auto">
+      <path
+         d="M 0 0 L 10 5 L 0 10 z"
+         fill="#444444"
+         id="path6" />
+    </marker>
+  </defs>
+  <!-- Title -->
+  <text
+     x="700"
+     y="40"
+     text-anchor="middle"
+     class="title"
+     id="text11">
+    BDQ Standard – Key Documents by Audience and Reading Order
+  </text>
+  <!-- Landing page at top -->
+  <rect
+     x="400"
+     y="70"
+     width="600"
+     height="80"
+     rx="10"
+     ry="10"
+     class="landing-box"
+     id="rect13" />
+  <text
+     x="700"
+     y="105"
+     text-anchor="middle"
+     class="subtitle"
+     id="text15">
+    The Biodiversity Data Quality (BDQ) Standard [Landing Page]
+  </text>
+  <text
+     x="700"
+     y="127"
+     text-anchor="middle"
+     class="note"
+     id="text17">
+    Common entry point – choose a column based on your role
+  </text>
+  <!-- Three column backgrounds -->
+  <!-- Left column: Readers and Interpreters -->
+  <rect
+     x="40.018257"
+     y="190.01825"
+     width="429.76767"
+     height="699.9635"
+     rx="12.89303"
+     ry="11.999374"
+     class="col-bg"
+     id="rect19" />
+  <!-- Center column: Implementers -->
+  <rect
+     x="500.02161"
+     y="190.02159"
+     width="435.32791"
+     height="699.95679"
+     rx="13.059837"
+     ry="11.99926"
+     class="col-bg"
+     id="rect21" />
+  <!-- Right column: Designers of New Tests -->
+  <rect
+     x="960"
+     y="190"
+     width="400"
+     height="700"
+     rx="12"
+     ry="12"
+     class="col-bg"
+     id="rect23" />
+  <!-- Column titles -->
+  <text
+     x="60"
+     y="215"
+     class="audience-title"
+     id="text25">
+    Readers and Interpreters of Test Results
+  </text>
+  <text
+     x="60"
+     y="235"
+     class="small"
+     id="text27">
+    People who see BDQ test results and need to understand what they mean.
+  </text>
+  <text
+     x="520"
+     y="215"
+     class="audience-title"
+     id="text29">
+    Implementers of Tests
+  </text>
+  <text
+     x="520"
+     y="235"
+     class="small"
+     id="text31">
+    People who implement existing BDQ tests in tools or workflows.
+  </text>
+  <text
+     x="980"
+     y="215"
+     class="audience-title"
+     id="text33">
+    Designers of New Tests
+  </text>
+  <text
+     x="980"
+     y="235"
+     class="small"
+     id="text35">
+    People who define new BDQ tests or extend the framework.
+  </text>
+  <!-- Arrows from landing page to top of each column (avoid text) -->
+  <line
+     x1="460"
+     y1="150"
+     x2="240"
+     y2="190"
+     class="arrow-main"
+     id="line37" />
+  <line
+     x1="700"
+     y1="150"
+     x2="700"
+     y2="190"
+     class="arrow-main"
+     id="line39" />
+  <line
+     x1="940"
+     y1="150"
+     x2="1180"
+     y2="190"
+     class="arrow-main"
+     id="line41" />
+  <!-- ===================== LEFT COLUMN: READERS ===================== -->
+  <!-- 1. Quick Reference (core for readers) -->
+  <rect
+     x="60.027046"
+     y="260.02478"
+     width="391.77435"
+     height="89.992439"
+     rx="8.7060966"
+     ry="7.9993277"
+     class="core-box"
+     id="rect43" />
+  <text
+     x="75"
+     y="285"
+     class="label"
+     id="text45">
+    BDQ Tests Quick Reference Guide
+  </text>
+  <text
+     x="75"
+     y="305"
+     class="small"
+     id="text47">
+    Concise descriptions of BDQ tests and assertions.
+  </text>
+  <text
+     x="75"
+     y="323"
+     class="note"
+     id="text49">
+    First stop after the landing page for understanding test names and outcomes.
+  </text>
+  <!-- 2. User’s Guide (guide) -->
+  <rect
+     x="60.027046"
+     y="370.01553"
+     width="391.77435"
+     height="99.991592"
+     rx="8.7060966"
+     ry="7.9993277"
+     class="guide-box"
+     id="rect51" />
+  <text
+     x="75"
+     y="395"
+     class="label"
+     id="text53">
+    BDQ User’s Guide
+  </text>
+  <text
+     x="75"
+     y="415"
+     class="small"
+     id="text55">
+    Explains how to interpret BDQ test results and what they imply for
+  </text>
+  <text
+     x="75"
+     y="433"
+     class="small"
+     id="text57">
+    data quality and use decisions.
+  </text>
+  <!-- 3. Core definitions (optional deeper dive) -->
+  <rect
+     x="60.027046"
+     y="490.00546"
+     width="391.77435"
+     height="99.991592"
+     rx="8.7060966"
+     ry="7.9993277"
+     class="core-box"
+     id="rect59" />
+  <text
+     x="75"
+     y="515"
+     class="label"
+     id="text61">
+    BDQ Tests Vocabulary and Definitions
+  </text>
+  <text
+     x="75"
+     y="535"
+     class="small"
+     id="text63">
+    Normative definitions of the tests themselves, for readers
+  </text>
+  <text
+     x="75"
+     y="553"
+     class="small"
+     id="text65">
+    who need exact meanings or wish to trace provenance.
+  </text>
+  <!-- 4. Supplemental (bottom) -->
+  <rect
+     x="60.027046"
+     y="739.98444"
+     width="391.77435"
+     height="109.99075"
+     rx="8.7060966"
+     ry="7.9993277"
+     class="supplement-box"
+     id="rect67" />
+  <text
+     x="75"
+     y="765"
+     class="label"
+     id="text69">
+    Supplemental Information
+  </text>
+  <text
+     x="75"
+     y="785"
+     class="small"
+     id="text71">
+    Background, rationale, and historical context for BDQ tests.
+  </text>
+  <text
+     x="75"
+     y="803"
+     class="small"
+     id="text73">
+    Useful for deeper understanding, but not required for routine use.
+  </text>
+  <!-- ===================== CENTER COLUMN: IMPLEMENTERS ===================== -->
+  <!-- 1. Quick Reference (shared core) -->
+  <rect
+     x="520.02997"
+     y="260.0275"
+     width="395.31113"
+     height="89.99202"
+     rx="8.7846918"
+     ry="7.9992905"
+     class="core-box"
+     id="rect75" />
+  <text
+     x="535"
+     y="285"
+     class="label"
+     id="text77">
+    BDQ Tests Quick Reference Guide
+  </text>
+  <text
+     x="535"
+     y="305"
+     class="small"
+     id="text79">
+    Overview of test purposes and outcomes; index into detailed definitions.
+  </text>
+  <!-- 2. Implementer’s Guide (guide, central) -->
+  <rect
+     x="520.02997"
+     y="370.01773"
+     width="395.31113"
+     height="109.99024"
+     rx="8.7846918"
+     ry="7.9992905"
+     class="guide-box"
+     id="rect81" />
+  <text
+     x="535"
+     y="395"
+     class="label"
+     id="text83">
+    BDQ Implementer’s Guide
+  </text>
+  <text
+     x="535"
+     y="415"
+     class="small"
+     id="text85">
+    Explains how to implement BDQ tests: inputs, outputs, edge cases,
+  </text>
+  <text
+     x="535"
+     y="433"
+     class="small"
+     id="text87">
+    and how to use the test descriptions and vocabularies in software.
+  </text>
+  <!-- 3. Core test definitions (normative) -->
+  <rect
+     x="520.02997"
+     y="500.0062"
+     width="395.31113"
+     height="89.99202"
+     rx="8.7846918"
+     ry="7.9992905"
+     class="core-box"
+     id="rect89" />
+  <text
+     x="535"
+     y="525"
+     class="label"
+     id="text91">
+    Canonical Test Definitions and Serializations
+  </text>
+  <text
+     x="535"
+     y="545"
+     class="small"
+     id="text93">
+    Normative machine‑readable definitions and versioned lists of tests.
+  </text>
+  <!-- 4. Conformance validation data (support) -->
+  <rect
+     x="520.02997"
+     y="609.99646"
+     width="395.31113"
+     height="89.99202"
+     rx="8.7846918"
+     ry="7.9992905"
+     class="support-box"
+     id="rect95" />
+  <text
+     x="535"
+     y="635"
+     class="label"
+     id="text97">
+    Test Conformance Validation Data
+  </text>
+  <text
+     x="535"
+     y="655"
+     class="small"
+     id="text99">
+    Example datasets and expected results for checking implementations.
+  </text>
+  <!-- 5. Tutorial (support, but important) -->
+  <rect
+     x="520.02997"
+     y="719.98669"
+     width="395.31113"
+     height="89.99202"
+     rx="8.7846918"
+     ry="7.9992905"
+     class="tutorial-box"
+     id="rect101" />
+  <text
+     x="535"
+     y="745"
+     class="label"
+     id="text103">
+    Tutorial: From Use Case to Test
+  </text>
+  <text
+     x="535"
+     y="765"
+     class="small"
+     id="text105">
+    Worked example that clarifies the logic behind tests you implement.
+  </text>
+  <!-- 6. Supplemental (bottom) -->
+  <rect
+     x="520.02997"
+     y="829.97693"
+     width="395.31113"
+     height="49.995567"
+     rx="8.7846918"
+     ry="7.9992905"
+     class="supplement-box"
+     id="rect107" />
+  <text
+     x="535"
+     y="855"
+     class="label"
+     id="text109">
+    Supplemental Information
+  </text>
+  <!-- ===================== RIGHT COLUMN: DESIGNERS ===================== -->
+  <!-- 1. Tutorial (entry) -->
+  <rect
+     x="980"
+     y="260"
+     width="360"
+     height="90"
+     rx="8"
+     ry="8"
+     class="tutorial-box"
+     id="rect111" />
+  <text
+     x="995"
+     y="285"
+     class="label"
+     id="text113">
+    Tutorial: From Use Case to Test
+  </text>
+  <text
+     x="995"
+     y="305"
+     class="small"
+     id="text115">
+    Recommended starting point for designing a new BDQ test.
+  </text>
+  <!-- 2. Framework ontology and guide (core) -->
+  <rect
+     x="980"
+     y="370"
+     width="360"
+     height="110"
+     rx="8"
+     ry="8"
+     class="core-box"
+     id="rect117" />
+  <text
+     x="995"
+     y="395"
+     class="label"
+     id="text119">
+    Fitness for Use Framework (bdqffdq) and Guide
+  </text>
+  <text
+     x="995"
+     y="415"
+     class="small"
+     id="text121">
+    Normative concepts and logic describing data quality needs and layers,
+  </text>
+  <text
+     x="995"
+     y="433"
+     class="small"
+     id="text123">
+    with explanatory guide text.
+  </text>
+  <!-- 3. Supporting vocabularies (support) -->
+  <rect
+     x="980"
+     y="500"
+     width="360"
+     height="110"
+     rx="8"
+     ry="8"
+     class="support-box"
+     id="rect125" />
+  <text
+     x="995"
+     y="525"
+     class="label"
+     id="text127">
+    Supporting Vocabularies
+  </text>
+  <text
+     x="995"
+     y="545"
+     class="small"
+     id="text129">
+    Controlled vocabularies for criteria, dimensions, enhancements,
+  </text>
+  <text
+     x="995"
+     y="563"
+     class="small"
+     id="text131">
+    and other elements needed to specify new tests.
+  </text>
+  <!-- 4. Tests vocabulary and canonical definitions (core reference) -->
+  <rect
+     x="980"
+     y="630"
+     width="360"
+     height="90"
+     rx="8"
+     ry="8"
+     class="core-box"
+     id="rect133" />
+  <text
+     x="995"
+     y="655"
+     class="label"
+     id="text135">
+    BDQ Tests Vocabulary and Canonical Definitions
+  </text>
+  <text
+     x="995"
+     y="675"
+     class="small"
+     id="text137">
+    Examples of how existing tests are formally defined and versioned.
+  </text>
+  <!-- 5. Supplemental (bottom) -->
+  <rect
+     x="980"
+     y="740"
+     width="360"
+     height="110"
+     rx="8"
+     ry="8"
+     class="supplement-box"
+     id="rect139" />
+  <text
+     x="995"
+     y="765"
+     class="label"
+     id="text141">
+    Supplemental Information
+  </text>
+  <text
+     x="995"
+     y="785"
+     class="small"
+     id="text143">
+    Background, history, and rationale that help inform new test designs.
+  </text>
+  <!-- ===================== Legend (Color Key) ===================== -->
+  <rect
+     x="40"
+     y="900"
+     width="1320"
+     height="40"
+     rx="8"
+     ry="8"
+     class="legend-box"
+     id="rect145" />
+  <!-- Guides -->
+  <rect
+     x="55"
+     y="908"
+     width="22"
+     height="14"
+     class="guide-box"
+     id="rect147" />
+  <text
+     x="85"
+     y="920"
+     class="small"
+     id="text149">Guides (User’s, Implementer’s, Framework)</text>
+  <!-- Core normative -->
+  <rect
+     x="380"
+     y="908"
+     width="22"
+     height="14"
+     class="core-box"
+     id="rect151" />
+  <text
+     x="410"
+     y="920"
+     class="small"
+     id="text153">Core normative documents</text>
+  <!-- Supporting vocabularies -->
+  <rect
+     x="790"
+     y="908"
+     width="22"
+     height="14"
+     class="support-box"
+     id="rect155" />
+  <text
+     x="820"
+     y="920"
+     class="small"
+     id="text157">Supporting vocabularies</text>
+  <!-- Tutorial and supplement -->
+  <rect
+     x="1160"
+     y="908"
+     width="22"
+     height="14"
+     class="tutorial-box"
+     id="rect159" />
+  <text
+     x="1190"
+     y="920"
+     class="small"
+     id="text161">Non-Normative Tutorial and Supplement</text>
+</svg>

@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1400"
+   height="900"
+   viewBox="0 0 1400 900"
+   version="1.1"
+   id="svg151"
+   sodipodi:docname="overview_diagram.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <metadata
+     id="metadata2">
+    <rdf:RDF>
+      <rdf:Description
+         rdf:about="">
+        <dc:title>BDQ Standard – Documents</dc:title>
+        <dc:creator>Paul J. Morris</dc:creator>
+        <dc:contributor>Assistance from an AI model provided by OpenAI (ChatGPT)</dc:contributor>
+        <dc:date>2026-04-10</dc:date>
+        <dc:description>
+          Conceptual diagram showing organization of parts of the BDQ Standard.
+        </dc:description>
+      </rdf:Description>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     id="namedview153"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="0.66625172"
+     inkscape:cx="650.65498"
+     inkscape:cy="450.28026"
+     inkscape:window-width="1690"
+     inkscape:window-height="1080"
+     inkscape:window-x="64"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg151" />
+  <defs
+     id="defs7">
+    <style
+       type="text/css"
+       id="style2"><![CDATA[
+      .title {
+        font-family: Arial, sans-serif;
+        font-size: 24px;
+        font-weight: bold;
+      }
+      .subtitle {
+        font-family: Arial, sans-serif;
+        font-size: 18px;
+        font-weight: bold;
+      }
+      .label {
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+      }
+      .small {
+        font-family: Arial, sans-serif;
+        font-size: 11px;
+      }
+      .normnote {
+        font-family: Arial, sans-serif;
+        font-size: 11px;
+        font-style: italic;
+        fill: #555555;
+      }
+      .section {
+        fill: #f5f5f5;
+        stroke: #999999;
+        stroke-width: 1.5;
+      }
+      .subsection {
+        fill: #ffffff;
+        stroke: #cccccc;
+        stroke-width: 1;
+      }
+      .arrow {
+        stroke: #666666;
+        stroke-width: 1.5;
+        marker-end: url(#arrowhead);
+        fill: none;
+      }
+    ]]></style>
+    <marker
+       id="arrowhead"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5"
+       markerWidth="6"
+       markerHeight="6"
+       orient="auto">
+      <path
+         d="M 0,0 10,5 0,10 Z"
+         fill="#666666"
+         id="path4" />
+    </marker>
+  </defs>
+  <!-- Title -->
+  <text
+     x="694"
+     y="74"
+     text-anchor="middle"
+     class="title"
+     id="text9">Biodiversity Data Quality (BDQ) Standard – Overview of Parts</text>
+  <!-- Central: BDQ Standard -->
+  <!-- Container for parts -->
+  <rect
+     x="9.6156301"
+     y="167.55345"
+     width="1383.6201"
+     height="693.68213"
+     rx="12.578364"
+     ry="11.891695"
+     class="section"
+     id="rect17" />
+  <text
+     x="36"
+     y="127"
+     class="subtitle"
+     id="text19">Main Parts of the BDQ Standard</text>
+  <text
+     x="36"
+     y="147"
+     class="normnote"
+     id="text21">Boxes group content, all but the Supplement and Tutorial have some normative content.</text>
+  <!-- Quick Reference & Landing Pages (top left) -->
+  <rect
+     x="437.74796"
+     y="296.54953"
+     width="500.50409"
+     height="284.07861"
+     rx="10.536928"
+     ry="10.330132"
+     class="subsection"
+     id="rect23"
+     style="fill:#b0ffd5;fill-opacity:0.327699" />
+  <text
+     x="447.60123"
+     y="321.40283"
+     class="subtitle"
+     id="text25">Quick Reference Guide and Vocabulary Landing Pages</text>
+  <text
+     x="447.60123"
+     y="341.40283"
+     class="normnote"
+     id="text27">Entry points and concise overviews for users</text>
+  <text
+     x="457.60123"
+     y="366.40283"
+     class="label"
+     id="text29"
+     style="-inkscape-font-specification:'Arial, sans-serif, Bold';font-family:Arial, sans-serif;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:13px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">• BDQ Tests Quick Reference Guide</text>
+  <text
+     x="467.6012"
+     y="386.40283"
+     class="small"
+     id="text31">Summaries of BDQ tests and assertions; links to detailed term definitions.</text>
+  <text
+     x="457.60123"
+     y="416.40283"
+     class="label"
+     id="text33">• BDQ Standard Landing Page</text>
+  <text
+     x="467.6012"
+     y="436.40283"
+     class="small"
+     id="text35">Overview of the standard and links to other parts.</text>
+  <text
+     x="457.60123"
+     y="466.40283"
+     class="label"
+     id="text37">• Tests and Assertions Overview</text>
+  <text
+     x="467.6012"
+     y="486.40283"
+     class="small"
+     id="text39">High‑level description of BDQ tests and how they are organized.</text>
+  <text
+     x="457.60123"
+     y="516.40283"
+     class="label"
+     id="text41">• Fitness for Use Framework Overview</text>
+  <text
+     x="467.6012"
+     y="536.40283"
+     class="small"
+     id="text43">Conceptual introduction to the Fitness for Use ontology.</text>
+  <!-- Guides (top right) -->
+  <rect
+     x="30.83532"
+     y="294.44531"
+     width="379.91504"
+     height="259.85147"
+     rx="7.9982114"
+     ry="9.4491453"
+     class="subsection"
+     id="rect45"
+     style="fill:#e6ffff;fill-opacity:1" />
+  <text
+     x="40.792885"
+     y="325.4028"
+     class="subtitle"
+     id="text47">Guides</text>
+  <text
+     x="40.792885"
+     y="345.4028"
+     class="normnote"
+     id="text49">Audience‑specific explanations and how‑to documents</text>
+  <text
+     x="50.792885"
+     y="370.4028"
+     class="label"
+     id="text51"
+     style="-inkscape-font-specification:'Arial, sans-serif, Bold';font-family:Arial, sans-serif;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:13px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal">• User’s Guide</text>
+  <text
+     x="60.792885"
+     y="390.40283"
+     class="small"
+     id="text53">How end‑users understand and apply BDQ concepts and tests.</text>
+  <text
+     x="50.792885"
+     y="415.40283"
+     class="label"
+     id="text55">• Implementer’s Guide</text>
+  <text
+     x="60.792885"
+     y="435.40283"
+     class="small"
+     id="text57">Guidance and examples for implementing BDQ tests in software.</text>
+  <text
+     x="50.792885"
+     y="460.40283"
+     class="label"
+     id="text59">• Guide to Synthetic / Modified Data</text>
+  <text
+     x="60.792885"
+     y="480.40283"
+     class="small"
+     id="text61">Recommendations for marking and using synthetic or altered records.</text>
+  <text
+     x="50.792885"
+     y="505.40283"
+     class="label"
+     id="text63">• Fitness for Use Framework Guide</text>
+  <text
+     x="60.792885"
+     y="525.40283"
+     class="small"
+     id="text65">Explanation of the underlying ontology and data quality layers.</text>
+  <!-- Vocabularies (center, spanning width) -->
+  <rect
+     x="431.89548"
+     y="599.20514"
+     width="506.38208"
+     height="250.49965"
+     rx="4.8226867"
+     ry="10.019985"
+     class="subsection"
+     id="rect67"
+     style="fill:#ffffee;fill-opacity:1" />
+  <text
+     x="447.56924"
+     y="634.06201"
+     class="subtitle"
+     id="text69">Vocabularies</text>
+  <text
+     x="447.56924"
+     y="654.06201"
+     class="normnote"
+     id="text71">Core terms and controlled vocabularies used to define tests and the framework</text>
+  <!-- Foundational -->
+  <text
+     x="457.56924"
+     y="684.06201"
+     class="label"
+     id="text73">Foundational vocabularies</text>
+  <text
+     x="467.56921"
+     y="704.06201"
+     class="small"
+     id="text75">• Fitness for Use Framework ontology terms (framework concepts and relationships)</text>
+  <text
+     x="467.56921"
+     y="724.06201"
+     class="small"
+     id="text77">• BDQ Tests and Assertions terms (formal definitions of individual tests)</text>
+  <!-- Supporting -->
+  <text
+     x="457.56924"
+     y="754.06201"
+     class="label"
+     id="text79">Supporting controlled vocabularies</text>
+  <text
+     x="467.56921"
+     y="774.06201"
+     class="small"
+     id="text81">• General BDQ term set (common concepts across the standard)</text>
+  <text
+     x="467.56921"
+     y="794.06201"
+     class="small"
+     id="text83">• Criterion, Dimension, and Enhancement vocabularies</text>
+  <text
+     x="467.56921"
+     y="814.06201"
+     class="small"
+     id="text85">Used to describe the purpose, aspect, and outcome of BDQ tests.</text>
+  <!-- Additional docs (bottom left) -->
+  <rect
+     x="25.225586"
+     y="677.82617"
+     width="380"
+     height="150"
+     rx="8"
+     ry="8"
+     class="subsection"
+     id="rect87" />
+  <text
+     x="35.225586"
+     y="702.82617"
+     class="subtitle"
+     id="text89">Supplemental Information and Tutorial</text>
+  <text
+     x="35.225586"
+     y="722.82617"
+     class="normnote"
+     id="text91">Non‑normative background, examples, and storytelling</text>
+  <text
+     x="45.225586"
+     y="747.82617"
+     class="label"
+     id="text93">• Supplemental information</text>
+  <text
+     x="55.225586"
+     y="767.82617"
+     class="small"
+     id="text95">Rationale, history, and discussion of key design decisions.</text>
+  <text
+     x="45.225586"
+     y="792.82617"
+     class="label"
+     id="text97">• Tutorial</text>
+  <text
+     x="55.225586"
+     y="812.82617"
+     class="small"
+     id="text99">Worked example of defining a use case and a supporting test.</text>
+  <!-- Distribution files (right column) -->
+  <rect
+     x="956.98615"
+     y="293.82373"
+     width="400"
+     height="490"
+     rx="8"
+     ry="8"
+     class="subsection"
+     id="rect101"
+     style="fill:#fffff3;fill-opacity:1" />
+  <text
+     x="966.98615"
+     y="318.82373"
+     class="subtitle"
+     id="text103">Distribution Artifacts</text>
+  <text
+     x="966.98615"
+     y="338.82373"
+     class="normnote"
+     id="text105">Machine‑readable serializations and implementation support</text>
+  <!-- Tests -->
+  <text
+     x="976.98615"
+     y="368.82373"
+     class="label"
+     id="text107">Test definitions</text>
+  <text
+     x="986.98615"
+     y="388.82373"
+     class="small"
+     id="text109">• Canonical list of all test versions</text>
+  <text
+     x="986.98615"
+     y="408.82373"
+     class="small"
+     id="text111">• Extracts of current single‑record and multi‑record tests</text>
+  <text
+     x="986.98615"
+     y="428.82373"
+     class="small"
+     id="text113">• Serializations in CSV, RDF/XML, Turtle, JSON‑LD</text>
+  <!-- Conformance data -->
+  <text
+     x="976.98615"
+     y="458.82373"
+     class="label"
+     id="text115">Test conformance data</text>
+  <text
+     x="986.98615"
+     y="478.82373"
+     class="small"
+     id="text117">• Sample datasets and expected outcomes</text>
+  <text
+     x="986.98615"
+     y="498.82373"
+     class="small"
+     id="text119">• Special cases (e.g., non‑printing characters)</text>
+  <!-- Framework ontology -->
+  <text
+     x="976.98615"
+     y="528.82373"
+     class="label"
+     id="text121">Framework ontology</text>
+  <text
+     x="986.98615"
+     y="548.82373"
+     class="small"
+     id="text123">• OWL representation of the Fitness for Use Framework</text>
+  <!-- RDF serializations of vocabularies -->
+  <text
+     x="976.98615"
+     y="578.82373"
+     class="label"
+     id="text125">RDF serializations of vocabularies</text>
+  <text
+     x="986.98615"
+     y="598.82373"
+     class="small"
+     id="text127">• RDF/XML or similar exports of the core controlled vocabularies</text>
+  <!-- Diagrams and workflows -->
+  <text
+     x="976.98615"
+     y="628.82373"
+     class="label"
+     id="text129">Diagrams workflows</text>
+  <text
+     x="986.98615"
+     y="648.82373"
+     class="small"
+     id="text131">• Visual representations of data quality layers and workflows</text>
+  <!-- Implementation notes -->
+  <text
+     x="976.98615"
+     y="678.82373"
+     class="label"
+     id="text133">Implementation support</text>
+  <text
+     x="986.98615"
+     y="698.82373"
+     class="small"
+     id="text135">• Example validation data and screenshots</text>
+  <!-- Normativity note -->
+  <text
+     x="976.98615"
+     y="738.82373"
+     class="normnote"
+     id="text137">Many of these artifacts are non‑normative,</text>
+  <text
+     x="976.98615"
+     y="755.82373"
+     class="normnote"
+     id="text139">but generated from (or directly express) normative vocabularies and tests.</text>
+  <!-- Arrows from central BDQ Standard to main clusters -->
+  <rect
+     x="396.25232"
+     y="189.99068"
+     width="560.34509"
+     height="79.632889"
+     rx="15.565141"
+     ry="9.9541111"
+     class="section"
+     id="rect11" />
+  <text
+     x="669.51337"
+     y="224.80713"
+     text-anchor="middle"
+     class="subtitle"
+     id="text13">The Biodiversity Data Quality (BDQ) Standard [landing page]</text>
+  <text
+     x="669.51337"
+     y="246.80713"
+     text-anchor="middle"
+     class="normnote"
+     id="text15">High‑level overview and entry point</text>
+</svg>

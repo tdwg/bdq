@@ -57,11 +57,18 @@ Beyond data availability, data quality is probably the most significant issue fo
 
 <!-- Brief purpose and value proposition statement: what is the standard, why use it --->
 
-The Biodiversity Data Quality (BDQ) standard provides a community-defined, modular, extensible set of biodiversity data quality Tests (`bdqtest:`), together with a formal framework (`bdqffdq:`) and supporting vocabularies (`bdq:`, `bdqdim:`, `bdqcrit:`, and `bdqenh:`) for defining Tests, their inputs (`Information Elements`), and their structured output Responses (as `Assertions`). BDQ standardizes the semantics of what a Test means and what information a Response must contain. BDQ does not prescribe the execution concerns (e.g., data loading, scheduling, or parallelization of Test execution) or human process concerns (e.g., presentation, review, and remediation) of `Quality Assurance` (QA) or `Quality Control` (QC) workflows; instead, it provides a consistent semantic layer at the level of Test inputs and outputs that can be applied within many different operational settings. The presentation and serialization of `Data Quality Reports` is intentionally flexible, so long as the required Response elements are available to consumers. This standardization improves interoperability by making Test results comparable and reusable across organizations, software tools, and data pipelines, reducing duplicated effort and ambiguity in “what was tested” and “what the outcome means.” As a result, BDQ helps data providers, aggregators, and researchers consistently assess fitness for use, prioritize quality improvement work, and support transparent, repeatable decisions about whether and how to use biodiversity data.
+The Biodiversity Data Quality (BDQ) standard establishes a community-defined, modular, and extensible environment for biodiversity data quality.  It integrates a comprehensive set of Tests (`bdqtest:`) initially focused on Darwin Core (Wieczorek et al., 2012), but not restricted to it, with a formal Framework (`bdqffdq:`) and supporting vocabularies (`bdq:`, `bdqdim:`, `bdqcrit:`, and `bdqenh:`) to define Tests, their inputs (`Information Elements`), and their structured output Responses (as `Assertions`). 
+
+At its core, BDQ focuses on the semantics of data quality.  It defines what a Test means and precisely what information a Response must contain. BDQ intentionally avoids prescribing both execution concerns, such as data loading or parallelization of Test execution, and human centric concerns like presentation or remediation processes.  By providing a consistent semantic layer focused on Test inputs and outputs, the standard allows for flexible application within diverse operational settings supporting both `Quality Assurance` (QA) and `Quality Control` (QC). 
+
+The primary objective of the BDQ standard is to enhance interoperability.  By making Test results comparable and reusable across different organizations, software tools, and data pipelines, it reduces duplicated effort and ambiguity regarding "what was tested" and "what the outcome means."  Ultimately, this enables data providers, aggregators, and researchers to consistently assess *fitness for use*, prioritize quality improvements, and support transparent, repeatable scientific decisions about the use of biodiversity data.
+
+TODO: Integrate this thought into the above: 
+_The presentation and serialization of `Data Quality Reports` is intentionally flexible, so long as the required Response elements are available to consumers._
 
 #### 1.1.1 Purpose of this document (non_normative)
 
-This document is a guide and index to BDQ documents and related resources. This document provides an overview of the BDQ Standard and links to normative documents that formally describe the BDQ standard. This document also links to resources that will assist various communities (see [Audience](#12-audience-for-the-bdq-standard-non-normative) below) to better understand and make effective use of BDQ within their environments or communities. 
+This document serves as the central gateway and index for the Biodiversity Data Quality (BDQ) standard.  It provides a high level overview of the standard and contains links to the normative documents that formally define its specifications.  Aditionally, it directs diverse audiences to supporting resources designed to facilitate the understanding and effective implementation of BDQ within their specific communities and operational environments.
 
 ### 1.2 Audience for the BDQ Standard (non-normative)
 
@@ -135,23 +142,24 @@ Terms in text that are specific to the BDQ Standard are Capitalised (e.g. Test
 
 When a word that is also a bdqffdq class name is not capitalized and styled as inline code, it should be interpreted as a general English phrase or concept, not as a specific ontology term.  For example, specification is general while `Specification` means `bdqffdq:Specification`, and implementation carries the general meaning while `Implementation` means `bdqffdq:Implementation`).  This convention is also used for qualified names such as `bdqffdq:InformationElement`, terms from other vocabularies, such as `dwc:countryCode`, and to denote some software artifacts such as `sci_name_qc`.
 
-##  2 A guide to the BDQ Standard (non-normative)
+See also section [3.12 Naming Conventions (non-normative)](docs/supplement/index.md#312-naming-conventions-non-normative) in the [BDQ Supplemental Information](docs/supplement/index.md).
 
-BDQ defines a set of vocabulary (and ontology) terms, which are used to define structured **Tests**.  The BDQ Tests evaluate the quality of biodiversity data for a set of defined uses (`Use Cases`). Each BDQ Test is designed to assess and report on a specific aspect of data quality: `Accuracy`, `Completeness`, `Consistency`, `Conformance`, `Likelyness`, or `Reliability` (see the bdqdim: vocabulary) in a consistent manner.  The Tests are defined to allow implementation in various programming languages and environments and in a variety of contexts, from small-scale data curation projects to large-scale biodiversity aggregation systems.  
+## 2 A guide to the BDQ Standard (non-normative)
 
-*TODO: Rework from here.*
+BDQ defines a set of vocabularies (and an ontology) that are used to define structured **Tests**. The BDQ Tests evaluate biodiversity data in the context of defined `Use Cases`, and each `Test` is designed to assess and report on a specific aspect of data quality (e.g., `Accuracy`, `Completeness`, `Consistency`, `Conformance`, `Likeliness`, or `Reliability`; see the `bdqdim:` vocabulary). Because BDQ specifies Tests in an implementation-agnostic way, the same Test definitions can be implemented in different programming languages and environments and applied in contexts ranging from small-scale data curation to large-scale biodiversity aggregation.
 
-Executing the set of Tests related to a `Use Case` on a set of data provides an evaluation of the fitness of that data for that particular use.  
+BDQ is organized as a set of complementary documents that together define *what* to test, *how* to describe Tests and their results consistently, and *how* to apply those Tests in practice. At the core are the BDQ Tests (`bdqtest:`), which specify reusable, implementable evaluations over clearly identified inputs (`Information Elements` plus optional `Parameters`) and produce structured Responses (as `Assertions`) that can be reported and exchanged across systems.  
 
-BDQ can be used in a variety of contexts, from small-scale data curation projects to large-scale biodiversity aggregation systems.
-The BDQ Tests are defined to allow implementation in various programming languages and environments.
+The semantics and shared terminology used by the `Tests` are provided by the Fitness For Use Framework (`bdqffdq:`) and supporting vocabularies (`bdq:`, `bdqdim:`, `bdqcrit:`, and `bdqenh:`). Together, these vocabularies make it possible to define each `Test` and interpret its Responses in a consistent way, so that results from different implementations can be treated as comparable statements about fitness for use.
 
-The Tests defined in BDQ focus on terms from the Darwin Core standard (Wieczorek et al. 2012). The foundational principles of BDQ, however, apply to many domains or data encodings where data requires a fitness for use evaluation.
+BDQ supports both `Quality Assurance` (QA) and `Quality Control` (QC) by providing standardized `Tests`, structured Responses, and `Measure` patterns that can be composed into Test suites for particular `Use Cases` (see [2. Context for Quality, Uses and Purposes](docs/guide/users/index.md#2-context-for-quality-uses-and-purposes-non-normative) in the [BDQ User's Guide](docs/guide/users/index.md)). Running the set of `Tests` associated with a `Use Case` on a dataset produces an evaluation of the fitness of that dataset for that specified use, and yields results that can be compared and shared across organizations. By using a common framework and shared vocabularies to define and report `Tests`, BDQ makes it easier for the community to collaborate on data quality assessment, implementation, and interpretation in a consistent manner.
 
-The BDQ standard allows for the definition and addition of new Tests as needed.  New Tests may be added to the standard following instructions provided by the BDQ Maintenance Group (to be constituted). 
+BDQ currently focuses on commonly used biodiversity data expressed with Darwin Core terms (Wieczorek et al. 2012), but the standard is modular and extensible: communities may define additional `Use Cases`, propose new `Tests`, and align other vocabularies to the BDQ model while retaining interoperable Test semantics and Responses.
 
-The Biodiversity Data Quality (BDQ) standard provides a modular, extensible framework for assessing and reporting on the quality of biodiversity data relative to specific uses.
-The BDQ standard provides a structured process for `Quality Assurance (QA)` and `Quality Control (QC)` for biodiversity data, see [2. Context for Quality, Uses and Purposes](docs/guide/users/index.md#2-context-for-quality-uses-and-purposes-non-normative) in the [BDQ User's Guide](docs/guide/users/index.md).  BDQ’s common framework with vocabularies for describing and implementing data quality tests make it easier for different members of the community to collaborate and share information about data quality in a consistent manner.
+Readers can approach the standard in different ways depending on their needs. The **BDQ Test Quick Reference Guide** provides a reference for the most comonly used information about the Tests. If you want to *run* BDQ and understand outputs, start with the **BDQ User’s Guide**, which explains how Tests relate to `Use Cases`, how `Quality Control` and `Quality Assurance` can be supported using suites of Tests, and how to interpret `Data Quality Reports` in real-world data curation and aggregation settings. If you want to *implement* BDQ in software, start with the **BDQ Implementer’s Guide**, which provides normative requirements for conforming implementations, including Response structure, handling of `Empty`, parameter behavior, and report requirements. If you want to understand the formal model behind BDQ and how Tests are defined in RDF/OWL, see the **Fitness For Use Framework Ontology** landing page and the **Fitness For Use Framework Ontology Guide**; for complete normative term definitions, consult the relevant **List of Terms** documents.  If you wish to define new `Use Cases` or `Tests`, the **BDQ Tutorial** provides worked examples.
+
+![Diagram of approaches to the BDQ documentation](overview_diagram_use_organized.svg)
+
 
 ## 3 Parts of the Standard (non-normative)
 
@@ -259,7 +267,7 @@ The Fitness for Use Framework is provided as an OWL ontology.
 
 ## 4 Implementations (non-normative)
 
-The BDQ standard does not include implementations of tests, but there are external implementations of the tests that are available for use and demonstration of the standard.  These implementations are not part of the standard, but they are provided as resources for implementers and users of the standard.
+The BDQ standard does not include implementations of Tests, but there are external implementations of the Tests that are available for use and demonstration of the standard.  These implementations are not part of the standard, but they are provided as resources for implementers and users of the standard.
 
 ### 4.1 Java Implementation (non-normative)
 
@@ -272,6 +280,16 @@ While **not part of the BDQ standard**, GBIF Norway has developed a tool called 
 ## 5 Design of the Tests (normative)
 
 BDQ `Tests` are designed with a clear boundary of responsibility: they take a defined set of input `Information Elements` (and optional `Parameters`) and return a structured `Response` describing the outcome. This standardization of inputs and outputs means a `Test` implementation can be treated as a small, self-contained component whose behavior is determined by its `Specification` and is consistent across programming languages and environments. The surrounding execution framework is responsible for obtaining and binding raw data to the required `Information Elements`, selecting which `Tests` to run (e.g., by `Use Case` via `Policies`), and assembling the resulting `Responses` into `Data Quality Reports`. In this way, BDQ separates the semantics of `Test` behavior (what is evaluated and how results are expressed) from the mechanics of test execution (how data are accessed, orchestrated, filtered, and reported).
+
+### 5.1.1 What is a "Test" (non-normative)
+
+A Test is a defined evaluation that takes specific inputs and produces a structured output. A Test is defined using a set of `bdqffdq:` classes and properties that specify the inputs to the Test (the relevant `Information Elements` and any `Parameters`) and how those input values are to be evaluated under a `Specification` to produce a structured output (a `Response`, represented as an `Assertion`) that can be interpreted consistently across implementations. The Test definitions are provided in the `bdqtest:` vocabulary, and the semantics of the terms used in those definitions are provided by the `bdqffdq:` vocabulary and supporting vocabularies.
+
+![Diagram of the relationship between the concept Test and the bdqffdq: classes and properties that define it](docs/guide/implementers/bdqffdq_overview_diagram.svg)
+
+A Test is not a software implementation; it is a formal definition of an evaluation that *can* be implemented in software. In the Fitness For Use Framework, each Test is an instance of a subtype of `Data Quality Need` that identifies what is being evaluated (through its required `Information Elements` and its `Resource Type`) and why it matters (through its association with one or more `Use Cases` via `Policies`). The Test is linked to a `Method`, which in turn links to a `Specification` that describes expected behavior and expected outcomes (e.g., via `hasExpectedResponse`), and may reference `Parameters` and source authorities that further constrain or parameterize execution. When an `Implementation` runs a Test, it produces one or more `Assertions` (Responses) that can be assembled into `Data Quality Reports` for interpretation, filtering, and aggregation.
+
+Conceptually, Tests can be viewed in two complementary ways: vertically, they connect the `Data Quality Needs` and `Data Quality Solutions` layers and produce outputs in the `Data Quality Reports` layer; and horizontally by type, BDQ defines four main categories of Tests—`Validation`, `Issue`, `Measure`, and `Amendment`—each of which produces corresponding kinds of `Assertions`.
 
 ### 5.1 Data Quality Control, Data Quality Assurance (normative)
 

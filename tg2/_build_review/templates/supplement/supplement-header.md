@@ -879,6 +879,51 @@ Each Test should be able to run without dependencies on other Tests. Sequence of
 
 Because Darwin Core is intentionally permissive, multiple terms can share in the expression of the same concept (e.g., `dwc:eventDate`, `dwc:day`, `dwc:month`, `dwc:year`, `dwc:startDayOfYear`, `dwc:endDayOfYear`). To manage this, canonical terms (e.g., `dwc:eventDate`) need to be designated and Tests should be structured to improve those terms. For example, an `Amendment` should not populate a `NotEmpty` `dwc:eventDate` from `dwc:day`, `dwc:month`, and `dwc:year`, but should populate it from `dwc:day`, `dwc:month`, and `dwc:year` if it is `Empty`. The order of operations matters, and related `Amendments` must avoid overwriting existing values in canonical terms with those from other terms. `Amendments` are defined to improve canonical terms using supporting terms, assuming consumers will rely on the canonical term for the highest-quality data.
 
+### 3.12 Naming Conventions (non-normative)
+
+BDQ generally follows the conventions used in Darwin Core, viz-
+* Class terms in bdqffdq: are nouns in UpperCamelCase and have a label that separates the words.
+  * Example: `bdqffdq:AmendmentConcept` with its `rdfs:label` "Amendment Concept".
+  * In the text of the standard we may use `bdqffdq:AmendmentConcept` or `Amendment Concept` or `Amendment Concepts` or `AmendmentConcept` to refer to a class term.
+* Object property terms and Datatype property terms in bdqffdq: are verbs in lowerCamelCase, and have a label that separates out words, and preserves the case.
+  * Example `bdqffdq:composedOf` with its `rdfs:label` "composed Of".
+  * In the text of the standard we may use `bdqffdq:composedOf` or `composedOf` to refer to a property term.
+* Some named individuals in bdqffdq: are nouns in UpperCamelCase and have a label that separates the words.
+  * Example: `bdqffdq:MultiRecord` with `rdfs:label` "Multi Record".
+  * In the text of the standard we may use `bdqffdq:MultiRecord` or `MultiRecord` to refer to this named individual.
+* Values in the bdq:, bdqdim:, bdqcrit:, and bdqenh: controlled vocabularies vocabularies are in UpperCamelCase and have matching labels and controlled values.
+  * Example: `bdq:NotEmpty` with `rdfs:label` "NotEmpty".
+  * Exception, bdq: terms that are bdqffdq:Parameters are in lowerCamelCase and have matching labels.
+	* Example: `bdq:defaultGeodeticDatum` with `rdfs:label` "defaultGeodeticDatum".
+
+However, all UPPER CASE is used for the names of Tests and for the identifiers and labels of terms that are likely to be (and historically have been) represented as string constants or enumerations in code.  
+* Most bdqffdq: Named Individuals have names and matching labels in all upper case characters.
+  * Example: bdqffdq:AMENDED` with its `rdfs:label` "AMENDED"
+* The labels of Tests in the `bdqtest:` namespace are in all upper case characters, with words separated by underscores.
+  * Example: `bdqtest:47ff73ba-0028-4f79-9ce1-ee7008d66498` has `rdfs:label` "VALIDATION_DAY_STANDARD".
+  * A machine readable identifier for a test with no semantic content was a deliberate choice to support stability in the identification of tests by code implementations, as we found the labels of tests would change over time as we refined the specifications.  The rdfs:label is indended as the human identifier, and a skos:preferredLabel with spaces between words is intended to support accessibility and translations.
+
+The labels of Tests follow a small number of patterns.
+
+The general pattern for `SingleRecord` Test labels is {TESTTYPE}_{INFORMATIONELEMENT}_{EVALUATION} where the first part indicates the type of Test, the second part indicates the term or terms that is the target of the Test, and the third part is a concise description of the action or evaluation performed by the Test. 
+* Example: [VALIDATION_DAY_STANDARD](../terms/bdqtest/index.md#VALIDATION_DAY_STANDARD) 
+  * This is a `Validation` Test,
+  * it targets the `Information Element` `dwc:day`,
+  * and it evaluates whether the value of dwc:day is in standard form (that is an integer in the range 1 to 31 inclusive).  
+  * That this is a `SingleRecord` Test is implicit.  
+The words used for Evaluations and their definitions are listed in [Evaluations in Test Labels](../../index.md#72-evaluations-in-test-labels-non-normative) in the landing page for the BDQ Standard, and these are guidance, not a formal normative vocabulary in BDQ.
+
+The labels of `MultiRecord` tests follow a similar pattern, but prefixed by MULTIRECORD_.  
+
+The `MultiRecord` `Measures` follow a naming convention of:
+* MULTIRECORD_MEASURE_COUNT_COMPLIANT_{INFORMATIONELEMENT_ACTON} for those that take the outputs of validations as their input and return a count, that it is a validation is implicit.
+  * Example: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_STANDARD, which counts the number of records that are COMPLIANT for the Test VALIDATION_DAY_STANDARD.
+  * This would generalize as MULTIRECORD_MEASURE_COUNT_{THINGCOUNTED}_{TEST_LABEL}.
+* MULTIRECORD_MEASURE_QA_{CONDITION} for `Measures` that return COMPLETE/NOT_COMPLETE (and have a primary purpose for Quality Assurance.  
+  * Example: MULTIRECORD_MEASURE_QA_BASISOFRECORD_STANDARD which returns COMPLETE if all records are COMPLIANT for the Test VALIDATION_BASISOFRECORD_STANDARD, and NOT_COMPLETE otherwise.
+
+All of the `MultiRecord` Tests initially defined in the BDQ Standard are `MultiRecord` `Measures`, though `MultiRecord` tests are not limited to `Measures` in the Framework.
+
 ## 4 Date and Time Issues (non-normative)
 
 The BDQ standard avoids analysis of two 'time' and 'date' issues, time zones and geographic and temporal variation in the change from Julian to Gregorian calendars.
