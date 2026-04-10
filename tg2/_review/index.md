@@ -228,7 +228,6 @@ Readers can approach the standard in different ways depending on their needs. Th
     </tr>
   </thead>
   <tbody>
-    <!-- Row 1: Recommended first documents -->
     <tr>
       <td valign="top">
         <strong>Start with:</strong><br>
@@ -249,8 +248,6 @@ Readers can approach the standard in different ways depending on their needs. Th
         Recommended starting point for designing a new BDQ test.
       </td>
     </tr>
-
-    <!-- Row 2: Main guides -->
     <tr>
       <td valign="top">
         <span style="background-color:#e6f2ff; padding:2px 4px; border:1px solid #7aa6e6;">Guide</span>
@@ -268,8 +265,6 @@ Readers can approach the standard in different ways depending on their needs. Th
         Normative concepts and logic describing data quality needs and layers, with an explanatory guide.
       </td>
     </tr>
-
-    <!-- Row 3: Core / vocabularies -->
     <tr>
       <td valign="top">
         <span style="background-color:#e8f9f0; padding:2px 4px; border:1px solid #5fbf8f;">Core</span>
@@ -287,8 +282,6 @@ Readers can approach the standard in different ways depending on their needs. Th
         Controlled vocabularies for criteria, dimensions, enhancements, and other elements needed to specify new tests.
       </td>
     </tr>
-
-    <!-- Row 4: Additional important docs for each role -->
     <tr>
       <td valign="top">
         <!-- leave blank or add “optional deeper dives” if you want -->
@@ -304,8 +297,6 @@ Readers can approach the standard in different ways depending on their needs. Th
         Examples of how existing tests are formally defined and versioned; useful patterns for new test design.
       </td>
     </tr>
-
-    <!-- Row 5: Tutorial / supplemental for implementers and designers -->
     <tr>
       <td valign="top">
         <!-- optional: you could mention the tutorial here as “nice to read” -->
@@ -319,8 +310,6 @@ Readers can approach the standard in different ways depending on their needs. Th
         <!-- already listed above as entry point -->
       </td>
     </tr>
-
-    <!-- Row 6: Supplemental info at bottom of each column -->
     <tr>
       <td valign="top">
         <span style="background-color:#ffffff; padding:2px 4px; border:1px solid #bbbbbb;">Supplement</span>
