@@ -160,6 +160,128 @@ Readers can approach the standard in different ways depending on their needs. Th
 
 ![Diagram of approaches to the BDQ documentation](overview_diagram_use_organized.svg)
 
+<table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+  <thead>
+    <tr>
+      <th style="width: 33%;">Readers &amp; Interpreters of Test Results</th>
+      <th style="width: 34%;">Implementers of Tests</th>
+      <th style="width: 33%;">Designers of New Tests</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Row 1: Recommended first documents -->
+    <tr>
+      <td valign="top">
+        <strong>Start with:</strong><br>
+        <span style="background-color:#e8f9f0; padding:2px 4px; border:1px solid #5fbf8f;">Core</span>
+        <strong>BDQ Tests Quick Reference Guide</strong><br>
+        Concise descriptions of BDQ tests and assertions. First stop after the landing page for understanding test names and outcomes.
+      </td>
+      <td valign="top">
+        <strong>Start with:</strong><br>
+        <span style="background-color:#e8f9f0; padding:2px 4px; border:1px solid #5fbf8f;">Core</span>
+        <strong>BDQ Tests Quick Reference Guide</strong><br>
+        Overview of test purposes and outcomes; index into detailed definitions.
+      </td>
+      <td valign="top">
+        <strong>Start with:</strong><br>
+        <span style="background-color:#f6e6ff; padding:2px 4px; border:1px solid #b78cd9;">Tutorial</span>
+        <strong>Tutorial: From Use Case to Test</strong><br>
+        Recommended starting point for designing a new BDQ test.
+      </td>
+    </tr>
+
+    <!-- Row 2: Main guides -->
+    <tr>
+      <td valign="top">
+        <span style="background-color:#e6f2ff; padding:2px 4px; border:1px solid #7aa6e6;">Guide</span>
+        <strong>BDQ User’s Guide</strong><br>
+        Explains how to interpret BDQ test results and what they imply for data quality and use decisions.
+      </td>
+      <td valign="top">
+        <span style="background-color:#e6f2ff; padding:2px 4px; border:1px solid #7aa6e6;">Guide</span>
+        <strong>BDQ Implementer’s Guide</strong><br>
+        Explains how to implement BDQ tests: inputs, outputs, edge cases, and how to use the test descriptions and vocabularies in software.
+      </td>
+      <td valign="top">
+        <span style="background-color:#e8f9f0; padding:2px 4px; border:1px solid #5fbf8f;">Core</span>
+        <strong>Fitness for Use Framework (bdqffdq) &amp; Framework Guide</strong><br>
+        Normative concepts and logic describing data quality needs and layers, with an explanatory guide.
+      </td>
+    </tr>
+
+    <!-- Row 3: Core / vocabularies -->
+    <tr>
+      <td valign="top">
+        <span style="background-color:#e8f9f0; padding:2px 4px; border:1px solid #5fbf8f;">Core</span>
+        <strong>BDQ Tests Vocabulary &amp; Definitions</strong><br>
+        Normative definitions of the tests themselves, for readers who need exact meanings or wish to trace provenance.
+      </td>
+      <td valign="top">
+        <span style="background-color:#e8f9f0; padding:2px 4px; border:1px solid #5fbf8f;">Core</span>
+        <strong>Canonical Test Definitions &amp; Serializations</strong><br>
+        Normative machine‑readable definitions and versioned lists of tests.
+      </td>
+      <td valign="top">
+        <span style="background-color:#fffbe5; padding:2px 4px; border:1px solid #e0cf8d;">Supporting vocabularies</span>
+        <strong>Supporting Vocabularies</strong><br>
+        Controlled vocabularies for criteria, dimensions, enhancements, and other elements needed to specify new tests.
+      </td>
+    </tr>
+
+    <!-- Row 4: Additional important docs for each role -->
+    <tr>
+      <td valign="top">
+        <!-- leave blank or add “optional deeper dives” if you want -->
+      </td>
+      <td valign="top">
+        <span style="background-color:#fffbe5; padding:2px 4px; border:1px solid #e0cf8d;">Supporting</span>
+        <strong>Test Conformance Validation Data</strong><br>
+        Example datasets and expected results for checking implementations.
+      </td>
+      <td valign="top">
+        <span style="background-color:#e8f9f0; padding:2px 4px; border:1px solid #5fbf8f;">Core</span>
+        <strong>BDQ Tests Vocabulary &amp; Canonical Definitions</strong><br>
+        Examples of how existing tests are formally defined and versioned; useful patterns for new test design.
+      </td>
+    </tr>
+
+    <!-- Row 5: Tutorial / supplemental for implementers and designers -->
+    <tr>
+      <td valign="top">
+        <!-- optional: you could mention the tutorial here as “nice to read” -->
+      </td>
+      <td valign="top">
+        <span style="background-color:#f6e6ff; padding:2px 4px; border:1px solid #b78cd9;">Tutorial</span>
+        <strong>Tutorial: From Use Case to Test</strong><br>
+        Worked example that clarifies the logic behind tests you implement.
+      </td>
+      <td valign="top">
+        <!-- already listed above as entry point -->
+      </td>
+    </tr>
+
+    <!-- Row 6: Supplemental info at bottom of each column -->
+    <tr>
+      <td valign="top">
+        <span style="background-color:#ffffff; padding:2px 4px; border:1px solid #bbbbbb;">Supplement</span>
+        <strong>Supplemental Information</strong><br>
+        Background, rationale, and historical context for BDQ tests. Helpful but not required for routine interpretation.
+      </td>
+      <td valign="top">
+        <span style="background-color:#ffffff; padding:2px 4px; border:1px solid #bbbbbb;">Supplement</span>
+        <strong>Supplemental Information</strong><br>
+        Background and rationale that clarify why tests and implementations are structured as they are.
+      </td>
+      <td valign="top">
+        <span style="background-color:#ffffff; padding:2px 4px; border:1px solid #bbbbbb;">Supplement</span>
+        <strong>Supplemental Information</strong><br>
+        Background, history, and rationale that help inform new test designs.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 
 ## 3 Parts of the Standard (non-normative)
 
