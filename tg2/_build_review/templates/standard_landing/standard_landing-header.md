@@ -97,7 +97,7 @@ The Authors acknowledge the fundamental importance of the work of:
 
 ### 1.4 Associated Documents (non-normative)
 
-See the list of the documents that comprise the standard in [2. Parts of the Standard (non-normative)](#2-parts-of-the-standard-non-normative).
+See the list of the documents that comprise the standard in [3. Parts of the Standard (non-normative)](#3-parts-of-the-standard-non-normative).
 
 #### 1.4.2 Background Documents (non-normative)
 
@@ -271,7 +271,7 @@ The BDQ standard does not include implementations of Tests, but there are extern
 
 ### 4.1 Java Implementation (non-normative)
 
-While **not part of the BDQ standard**, a validated Java® implementation of the tests is provided in the [event_date_qc](https://github.com/FilteredPush/event_date_qc), [sci_name_qc](https://github.com/FilteredPush/sci_name_qc), [geo_ref_qc](https://github.com/FilteredPush/geo_ref_qc) and [rec_occur_qc](https://github.com/FilteredPush/rec_occur_qc) libraries.  Also see [bdqtestrunner](https://github.com/FilteredPush/bdqtestrunner/), which demonstrates conformance of these libraries with the provided [Test Conformance Testing Data](#262-test-conformance-testing-data-non-normative).      
+While **not part of the BDQ standard**, a validated Java® implementation of the tests is provided in the [event_date_qc](https://github.com/FilteredPush/event_date_qc), [sci_name_qc](https://github.com/FilteredPush/sci_name_qc), [geo_ref_qc](https://github.com/FilteredPush/geo_ref_qc) and [rec_occur_qc](https://github.com/FilteredPush/rec_occur_qc) libraries.  Also see [bdqtestrunner](https://github.com/FilteredPush/bdqtestrunner/), which demonstrates conformance of these libraries with the provided [Test Conformance Testing Data](#362-test-conformance-testing-data-non-normative).      
 
 ### 4.2 BDQEmail
 
@@ -367,7 +367,7 @@ There were many people who have made notable contributions at various times duri
 
 The glossary of terms used in the BDQ standard include acronyms and these terms are additional to the terms used in the BDQ and other referenced vocabularies. Note: ‘Darwin Core terms’ refer to [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021).
 
-### 7.1 Acronyms
+### 7.1 Acronyms (non-normative)
 
 | Acronym | Explanation |
 |---------|-------------|

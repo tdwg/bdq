@@ -172,7 +172,7 @@ The Authors acknowledge the fundamental importance of the work of:
 - The TDWG Data Quality Interest Group - Task Group 3 [Data Quality Use Cases](https://www.tdwg.org/community/bdq/tg-3/) for providing recommendations on Use Cases.
 - The TDWG [Annotations Interest Group](https://www.tdwg.org/community/annotations/) as to how the Test results may be reported against records.
 
-The terminology of BDQ is based primarily on the Fitness for Use Framework (Veiga 2016, Veiga et al. 2017, Biodiversity Information Standards (TDWG) Task Group 1) expressed as an ontology, but additional vocabularies are required for a complete description of the Tests and how to use them. See [2.4 Vocabularies](../../index.md#24-vocabularies-non-normative) in [The Biodiversity Data Quality (BDQ) Standard](../../index.md).
+The terminology of BDQ is based primarily on the Fitness for Use Framework (Veiga 2016, Veiga et al. 2017, Biodiversity Information Standards (TDWG) Task Group 1) expressed as an ontology, but additional vocabularies are required for a complete description of the Tests and how to use them. See [3.4 Vocabularies](../../index.md#34-vocabularies-non-normative) in [The Biodiversity Data Quality (BDQ) Standard](../../index.md).
 
 BDQ `Tests` focus on values of a subset of [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) composed as `bdqffdq:InformationElements` as inputs to the Tests. Each Test is independent, to support the mixing and matching of Tests to meet particular `Data Quality Needs` and not impose a particular model of Test execution on implementation frameworks. Tests may execute in parallel, on data records in sequence, as queries on datasets and on unique values. Tests are paired in that all `Amendment` Tests are matched with a corresponding `Validation` Test that assesses some aspect of data quality. An `Amendment` Test may propose improvements to term values, but the BDQ standard recommends that all improvements be evaluated before application.
 
@@ -453,15 +453,15 @@ Example RDF Fragment from the `Specification` for [VALIDATION_COUNTRYCODE_STANDA
     <hasExpectedResponse xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode is bdq:Empty; COMPLIANT if dwc:countryCode can be unambiguously interpreted as a valid ISO 3166-1-alpha-2 country code in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</hasExpectedResponse
 ## Acronyms (non-normative)
 
-A list of Acronyms can be found in the [Acronyms (non-normative)](../../index.md#5-acronyms-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.
+A list of Acronyms can be found in the [Acronyms (non-normative)](../../index.md#71-acronyms-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.
 
 ## Glossary (non-normative)
 
-A glossary of terms additional to those in the various namespaces can be found in the [Glossary (non-normative)](../../index.md#6-glossary-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.
+A glossary of terms additional to those in the various namespaces can be found in the [General Glossary (non-normative)](../../index.md#73-general-glossary-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.
 
 ## References (non-normative)
 
-The references for the BDQ standard can be found in the [References (non-normative)](../../index.md#7-references-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.
+The references for the BDQ standard can be found in the [References (non-normative)](../../index.md#8-references-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.
 
 ## Cite BDQ (non-normative)
 

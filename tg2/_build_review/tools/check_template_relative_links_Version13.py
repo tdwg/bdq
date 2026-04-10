@@ -87,6 +87,8 @@ TEMPLATE_PLACEHOLDERS = {
     "{current_iri}",
     "{namespace_uri}",
     "{pref_namespace_prefix}",
+    "{license_statement}",
+    "{license_uri}"
 }
 
 

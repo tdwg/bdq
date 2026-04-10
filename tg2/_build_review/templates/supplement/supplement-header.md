@@ -821,7 +821,7 @@ Once the vocabulary terms and their definitions had become stable, they were ass
 
 These vocabularies all fed into a formal description of the Tests as terms in the `bdqtest:`, where the Tests with their descriptions were framed using the other vocabularies.
 
-A few terms in the vocabulary table were seen as glossary terms (e.g., "geodetic datum") as external formal definitions existed so a vocabulary entry was not required. These are presented in the [References (non-normative)](../../index.md#7-references-non-normative) section of [The Biodiversity Data Quality (BDQ) Standard](../../index.md).
+A few terms in the vocabulary table were seen as glossary terms (e.g., "geodetic datum") as external formal definitions existed so a vocabulary entry was not required. These are presented in the [References (non-normative)](../../index.md#8-references-non-normative) section of [The Biodiversity Data Quality (BDQ) Standard](../../index.md).
 
 ### 3.11 Principles of Test Design (non-normative)
 
