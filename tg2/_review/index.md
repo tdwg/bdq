@@ -222,9 +222,12 @@ Readers can approach the standard in different ways depending on their needs. Th
 <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
   <thead>
     <tr>
-      <th style="width: 33%;">Readers &amp; Interpreters of Test Results</th>
-      <th style="width: 34%;">Implementers of Tests</th>
-      <th style="width: 33%;">Designers of New Tests</th>
+      <th style="width: 100%;" colspan="3">The Biodiversity Data Quality (BDQ) Standard [Landing Page]</th>
+    </tr>
+    <tr>
+      <th style="width: 33%;"><strong>Readers &amp; Interpreters of Test Results</strong></th>
+      <th style="width: 34%;"><strong>Implementers of Tests</strong></th>
+      <th style="width: 33%;"><strong>Designers of New Tests</strong></th>
     </tr>
   </thead>
   <tbody>
@@ -232,19 +235,19 @@ Readers can approach the standard in different ways depending on their needs. Th
       <td valign="top">
         <strong>Start with:</strong><br>
         <span style="background-color:#e8f9f0; padding:2px 4px; border:1px solid #5fbf8f;">Core</span>
-        <strong>BDQ Tests Quick Reference Guide</strong><br>
+        <strong>[BDQ Tests Quick Reference Guide](docs/terms/bdqtest/index.md)</strong><br>
         Concise descriptions of BDQ tests and assertions. First stop after the landing page for understanding test names and outcomes.
       </td>
       <td valign="top">
         <strong>Start with:</strong><br>
         <span style="background-color:#e8f9f0; padding:2px 4px; border:1px solid #5fbf8f;">Core</span>
-        <strong>BDQ Tests Quick Reference Guide</strong><br>
+        <strong>[BDQ Tests Quick Reference Guide](docs/terms/bdqtest/index.md)</strong><br>
         Overview of test purposes and outcomes; index into detailed definitions.
       </td>
       <td valign="top">
         <strong>Start with:</strong><br>
         <span style="background-color:#f6e6ff; padding:2px 4px; border:1px solid #b78cd9;">Tutorial</span>
-        <strong>Tutorial: From Use Case to Test</strong><br>
+        <strong>[Tutorial: From Use Case to Test](docs/tutorial/index.md)</strong><br>
         Recommended starting point for designing a new BDQ test.
       </td>
     </tr>
@@ -284,7 +287,9 @@ Readers can approach the standard in different ways depending on their needs. Th
     </tr>
     <tr>
       <td valign="top">
-        <!-- leave blank or add “optional deeper dives” if you want -->
+        <span style="background-color:#f6e6ff; padding:2px 4px; border:1px solid #b78cd9;">Tutorial</span>
+        <strong>Tutorial: From Use Case to Test</strong><br>
+        Worked examples that clarifies the logic of test design.
       </td>
       <td valign="top">
         <span style="background-color:#fffbe5; padding:2px 4px; border:1px solid #e0cf8d;">Supporting</span>
@@ -299,7 +304,6 @@ Readers can approach the standard in different ways depending on their needs. Th
     </tr>
     <tr>
       <td valign="top">
-        <!-- optional: you could mention the tutorial here as “nice to read” -->
       </td>
       <td valign="top">
         <span style="background-color:#f6e6ff; padding:2px 4px; border:1px solid #b78cd9;">Tutorial</span>
@@ -307,7 +311,6 @@ Readers can approach the standard in different ways depending on their needs. Th
         Worked example that clarifies the logic behind tests you implement.
       </td>
       <td valign="top">
-        <!-- already listed above as entry point -->
       </td>
     </tr>
     <tr>
