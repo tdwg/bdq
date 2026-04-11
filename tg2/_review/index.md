@@ -59,7 +59,7 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
   - [1.8 Referring to Terms (normative)](#18-referring-to-terms-normative)
   - [1.9 Notation Conventions (non-normative)](#19-notation-conventions-non-normative)
 
-[2 A Roadmap on the BDQ Standard (non‑normative)](#2-a-roadmap-on-the-bdq-standard-non‑normative)
+[2 A Roadmap to the BDQ Standard (non‑normative)](#2-a-roadmap-to-the-bdq-standard-non‑normative)
 
 [3 Parts of the Standard (non-normative)](#3-parts-of-the-standard-non-normative)
   - [3.1 BDQ Tests Quick Reference Guide (non-normative)](#31-bdq-tests-quick-reference-guide-non-normative)
@@ -203,7 +203,7 @@ When a word that is also a bdqffdq class name is not capitalized and styled as i
 
 See also section [3.12 Naming Conventions (non-normative)](docs/supplement/index.md#312-naming-conventions-non-normative) in the [BDQ Supplemental Information](docs/supplement/index.md).
 
-## 2 A Roadmap on the BDQ Standard (non‑normative)
+## 2 A Roadmap to the BDQ Standard (non‑normative)
 
 The Biodiversity Data Quality (BDQ) Standard is documented as a set of complementary resources, rather than as a single, linear specification.  These resources are designed to support different audiences and goals, such as interpreting test results, implementing BDQ Tests in software, or defining new Tests and `Use Cases`.
 
@@ -242,61 +242,61 @@ Readers can approach the standard in different ways depending on their needs. Th
     <tr>
       <td valign="top">
         <strong>Start with:</strong><br>
-        <span style="background-color:#e8f9f0; padding:2px 4px; border:1px solid #5fbf8f;">Core</span>
+		:green_book:
         <strong><a href="./docs/terms/bdqtest/index.md">BDQ Tests Quick Reference Guide</a></strong><br>
         Concise descriptions of BDQ tests and assertions. First stop after the landing page for understanding test names and outcomes.
       </td>
       <td valign="top">
         <strong>Start with:</strong><br>
-        <span style="background-color:#e8f9f0; padding:2px 4px; border:1px solid #5fbf8f;">Core</span>
+		:green_book:
         <strong><a href="./docs/terms/bdqtest/index.md">BDQ Tests Quick Reference Guide</a></strong><br>
         Overview of test purposes and outcomes; index into detailed definitions.
       </td>
       <td valign="top">
         <strong>Start with:</strong><br>
-        <span style="background-color:#f6e6ff; padding:2px 4px; border:1px solid #b78cd9;">Tutorial</span>
+		:orange_book:
         <strong><a href="./docs/tutorial/index.md">Tutorial: From Use Case to Test</a>]</strong><br>
         Recommended starting point for designing a new BDQ test.
       </td>
     </tr>
     <tr>
       <td valign="top">
-        <span style="background-color:#e6f2ff; padding:2px 4px; border:1px solid #7aa6e6;">Guide</span>
-        <strong>BDQ User’s Guide</strong><br>
+		:green_book:
+        <strong><a href="./docs/guide/users/index.md">BDQ User’s Guide</a></strong><br>
         Explains how to interpret BDQ test results and what they imply for data quality and use decisions.
       </td>
       <td valign="top">
-        <span style="background-color:#e6f2ff; padding:2px 4px; border:1px solid #7aa6e6;">Guide</span>
+		:green_book:
         <strong>BDQ Implementer’s Guide</strong><br>
         Explains how to implement BDQ tests: inputs, outputs, edge cases, and how to use the test descriptions and vocabularies in software.
       </td>
       <td valign="top">
-        <span style="background-color:#e8f9f0; padding:2px 4px; border:1px solid #5fbf8f;">Core</span>
+		:green_book:
         <strong>Fitness for Use Framework (bdqffdq) &amp; Framework Guide</strong><br>
         Normative concepts and logic describing data quality needs and layers, with an explanatory guide.
       </td>
     </tr>
     <tr>
       <td valign="top">
-        <span style="background-color:#e8f9f0; padding:2px 4px; border:1px solid #5fbf8f;">Core</span>
+		:blue_book:
         <strong>BDQ Tests Vocabulary &amp; Definitions</strong><br>
         Normative definitions of the tests themselves, for readers who need exact meanings or wish to trace provenance.
       </td>
       <td valign="top">
-        <span style="background-color:#e8f9f0; padding:2px 4px; border:1px solid #5fbf8f;">Core</span>
+		:blue_book:
         <strong>Canonical Test Definitions &amp; Serializations</strong><br>
         Normative machine‑readable definitions and versioned lists of tests.
       </td>
       <td valign="top">
-        <span style="background-color:#fffbe5; padding:2px 4px; border:1px solid #e0cf8d;">Supporting vocabularies</span>
+		:blue_book:
         <strong>Supporting Vocabularies</strong><br>
         Controlled vocabularies for criteria, dimensions, enhancements, and other elements needed to specify new tests.
       </td>
     </tr>
     <tr>
       <td valign="top">
-        <span style="background-color:#f6e6ff; padding:2px 4px; border:1px solid #b78cd9;">Tutorial</span>
-        <strong>Tutorial: From Use Case to Test</strong><br>
+		:orange_book:
+        <strong><a href="./docs/tutorial/index.md">Tutorial: From Use Case to Test</a>]</strong><br>
         Worked examples that clarifies the logic of test design.
       </td>
       <td valign="top">
@@ -305,7 +305,7 @@ Readers can approach the standard in different ways depending on their needs. Th
         Example datasets and expected results for checking implementations.
       </td>
       <td valign="top">
-        <span style="background-color:#e8f9f0; padding:2px 4px; border:1px solid #5fbf8f;">Core</span>
+		:blue_book:
         <strong>BDQ Tests Vocabulary &amp; Canonical Definitions</strong><br>
         Examples of how existing tests are formally defined and versioned; useful patterns for new test design.
       </td>
@@ -314,7 +314,7 @@ Readers can approach the standard in different ways depending on their needs. Th
       <td valign="top">
       </td>
       <td valign="top">
-        <span style="background-color:#f6e6ff; padding:2px 4px; border:1px solid #b78cd9;">Tutorial</span>
+		:orange_book:
         <strong>Tutorial: From Use Case to Test</strong><br>
         Worked example that clarifies the logic behind tests you implement.
       </td>
@@ -323,18 +323,18 @@ Readers can approach the standard in different ways depending on their needs. Th
     </tr>
     <tr>
       <td valign="top">
-        <span style="background-color:#ffffff; padding:2px 4px; border:1px solid #bbbbbb;">Supplement</span>
-        <strong>Supplemental Information</strong><br>
+		:notebook:
+        <strong><a href="./docs/supplement/index.md">Supplemental Information</a></strong><br>
         Background, rationale, and historical context for BDQ tests. Helpful but not required for routine interpretation.
       </td>
       <td valign="top">
-        <span style="background-color:#ffffff; padding:2px 4px; border:1px solid #bbbbbb;">Supplement</span>
-        <strong>Supplemental Information</strong><br>
+		:notebook:
+        <strong><a href="./docs/supplement/index.md">Supplemental Information</a></strong><br>
         Background and rationale that clarify why tests and implementations are structured as they are.
       </td>
       <td valign="top">
-        <span style="background-color:#ffffff; padding:2px 4px; border:1px solid #bbbbbb;">Supplement</span>
-        <strong>Supplemental Information</strong><br>
+		:notebook:
+        <strong><a href="./docs/supplement/index.md">Supplemental Information</a></strong><br>
         Background, history, and rationale that help inform new test designs.
       </td>
     </tr>
