@@ -59,7 +59,7 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
   - [1.8 Referring to Terms (normative)](#18-referring-to-terms-normative)
   - [1.9 Notation Conventions (non-normative)](#19-notation-conventions-non-normative)
 
-[2 A guide to the BDQ Standard (non-normative)](#2-a-guide-to-the-bdq-standard-non-normative)
+[2 A Roadmap on the BDQ Standard (non‑normative)](#2-a-roadmap-on-the-bdq-standard-non‑normative)
 
 [3 Parts of the Standard (non-normative)](#3-parts-of-the-standard-non-normative)
   - [3.1 BDQ Tests Quick Reference Guide (non-normative)](#31-bdq-tests-quick-reference-guide-non-normative)
@@ -203,8 +203,14 @@ When a word that is also a bdqffdq class name is not capitalized and styled as i
 
 See also section [3.12 Naming Conventions (non-normative)](docs/supplement/index.md#312-naming-conventions-non-normative) in the [BDQ Supplemental Information](docs/supplement/index.md).
 
-## 2 A guide to the BDQ Standard (non-normative)
+## 2 A Roadmap on the BDQ Standard (non‑normative)
 
+The Biodiversity Data Quality (BDQ) Standard is documented as a set of complementary resources, rather than as a single, linear specification.  These resources are designed to support different audiences and goals, such as interpreting test results, implementing BDQ Tests in software, or defining new Tests and `Use Cases`.
+
+This section provides a reader‑focused roadmap to that document set. Its purpose is to help readers quickly identify the most appropriate entry point based on their immediate needs, without restating the purpose, principles, or detailed content of the BDQ Standard, which are described elsewhere in this document and in the normative specifications.  The table below maps common reader intentions to the primary BDQ resources that address them. It is intended solely as a navigational aid; each linked document remains the authoritative source for its respective content.
+
+<!--
+ 
 BDQ defines a set of vocabularies (and an ontology) that are used to define structured **Tests**. The BDQ Tests evaluate biodiversity data in the context of defined `Use Cases`, and each `Test` is designed to assess and report on a specific aspect of data quality (e.g., `Accuracy`, `Completeness`, `Consistency`, `Conformance`, `Likeliness`, or `Reliability`; see the `bdqdim:` vocabulary). Because BDQ specifies Tests in an implementation-agnostic way, the same Test definitions can be implemented in different programming languages and environments and applied in contexts ranging from small-scale data curation to large-scale biodiversity aggregation.
 
 BDQ is organized as a set of complementary documents that together define *what* to test, *how* to describe Tests and their results consistently, and *how* to apply those Tests in practice. At the core are the BDQ Tests (`bdqtest:`), which specify reusable, implementable evaluations over clearly identified inputs (`Information Elements` plus optional `Parameters`) and produce structured Responses (as `Assertions`) that can be reported and exchanged across systems.  
@@ -218,6 +224,8 @@ BDQ currently focuses on commonly used biodiversity data expressed with Darwin C
 Readers can approach the standard in different ways depending on their needs. The **BDQ Test Quick Reference Guide** provides a reference for the most comonly used information about the Tests. If you want to *run* BDQ and understand outputs, start with the **BDQ User’s Guide**, which explains how Tests relate to `Use Cases`, how `Quality Control` and `Quality Assurance` can be supported using suites of Tests, and how to interpret `Data Quality Reports` in real-world data curation and aggregation settings. If you want to *implement* BDQ in software, start with the **BDQ Implementer’s Guide**, which provides normative requirements for conforming implementations, including Response structure, handling of `Empty`, parameter behavior, and report requirements. If you want to understand the formal model behind BDQ and how Tests are defined in RDF/OWL, see the **Fitness For Use Framework Ontology** landing page and the **Fitness For Use Framework Ontology Guide**; for complete normative term definitions, consult the relevant **List of Terms** documents.  If you wish to define new `Use Cases` or `Tests`, the **BDQ Tutorial** provides worked examples.
 
 ![Diagram of approaches to the BDQ documentation](overview_diagram_use_organized.svg)
+
+-->
 
 <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
   <thead>
@@ -235,19 +243,19 @@ Readers can approach the standard in different ways depending on their needs. Th
       <td valign="top">
         <strong>Start with:</strong><br>
         <span style="background-color:#e8f9f0; padding:2px 4px; border:1px solid #5fbf8f;">Core</span>
-        <strong>[BDQ Tests Quick Reference Guide](docs/terms/bdqtest/index.md)</strong><br>
+        <strong><a href="./docs/terms/bdqtest/index.md">BDQ Tests Quick Reference Guide</a></strong><br>
         Concise descriptions of BDQ tests and assertions. First stop after the landing page for understanding test names and outcomes.
       </td>
       <td valign="top">
         <strong>Start with:</strong><br>
         <span style="background-color:#e8f9f0; padding:2px 4px; border:1px solid #5fbf8f;">Core</span>
-        <strong>[BDQ Tests Quick Reference Guide](docs/terms/bdqtest/index.md)</strong><br>
+        <strong><a href="./docs/terms/bdqtest/index.md">BDQ Tests Quick Reference Guide</a></strong><br>
         Overview of test purposes and outcomes; index into detailed definitions.
       </td>
       <td valign="top">
         <strong>Start with:</strong><br>
         <span style="background-color:#f6e6ff; padding:2px 4px; border:1px solid #b78cd9;">Tutorial</span>
-        <strong>[Tutorial: From Use Case to Test](docs/tutorial/index.md)</strong><br>
+        <strong><a href="./docs/tutorial/index.md">Tutorial: From Use Case to Test</a>]</strong><br>
         Recommended starting point for designing a new BDQ test.
       </td>
     </tr>
