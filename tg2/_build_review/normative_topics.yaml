@@ -1,0 +1,55 @@
+topics:
+  - id: response
+    label: Responses and Assertions
+    cues:
+      code_terms:
+        - "Response.status"
+        - "Response.result"
+        - "Response.comment"
+        - "Response.qualifier"
+        - "bdqffdq:Assertion"
+        - "bdqffdq:ValidationAssertion"
+        - "bdqffdq:IssueAssertion"
+        - "bdqffdq:MeasurementAssertion"
+        - "bdqffdq:AmendmentAssertion"
+      keywords:
+        - "Assertion"
+        - "Response"
+        - "Data Quality Report"
+  - id: resource_types
+    label: Resource Types (SingleRecord / MultiRecord)
+    cues:
+      code_terms:
+        - "bdqffdq:hasResourceType"
+        - "bdqffdq:SingleRecord"
+        - "bdqffdq:MultiRecord"
+        - "SingleRecord"
+        - "MultiRecord"
+  - id: parameters_authorities
+    label: Parameters and Source Authorities
+    cues:
+      code_terms:
+        - "bdqffdq:Parameter"
+        - "bdqffdq:Argument"
+        - "bdqffdq:hasArgument"
+        - "bdqffdq:hasArgumentValue"
+        - "bdqffdq:hasAuthoritiesDefaults"
+        - "bdq:sourceAuthority"
+      keywords:
+        - "API endpoint"
+        - "authority"
+        - "default"
+  - id: test_types
+    label: Test Types (Validation / Issue / Measure / Amendment)
+    cues:
+      code_terms:
+        - "bdqffdq:Validation"
+        - "bdqffdq:Issue"
+        - "bdqffdq:Measure"
+        - "bdqffdq:Amendment"
+        - "Validation"
+        - "Issue"
+        - "Measure"
+        - "Amendment"
+      keywords:
+        - "Test Type"
