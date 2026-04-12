@@ -185,19 +185,22 @@ Readers can approach the standard in different ways depending on their needs. Th
         <strong>Start with:</strong><br>
 		:green_book:
         <strong><a href="./docs/terms/bdqtest/index.md">BDQ Tests Quick Reference Guide</a></strong><br>
-        Concise descriptions of BDQ tests and assertions. First stop after the landing page for understanding test names and outcomes.
+        Concise descriptions of BDQ tests and assertions. First stop after the landing page for understanding test names and outcomes.</a>
+		See also: <a href="./docs/guide/users/index.md#31-test-types-non-normative">Test Types</a> and <a href="./docs/guide/users/index.md#32-test-inputs-and-outputs-non-normative">Test Inputs and Outputs</a> in the Users Guide.
       </td>
       <td valign="top">
         <strong>Start with:</strong><br>
 		:green_book:
         <strong><a href="./docs/terms/bdqtest/index.md">BDQ Tests Quick Reference Guide</a></strong><br>
         Overview of test purposes and outcomes; index into detailed definitions.
+		See also: <a href="./docs/bdqtest/index.md#21-what-is-meant-by-test-non-normative">What is meant by "Test"</a> and <a href="./docs/bdqtest/index.md#22-test-types-non-normative">Test Types</a> in the bdqtest: landing page.
       </td>
       <td valign="top">
         <strong>Start with:</strong><br>
 		:orange_book:
-        <strong><a href="./docs/tutorial/index.md">Tutorial: From Use Case to Test</a>]</strong><br>
+        <strong><a href="./docs/tutorial/index.md">Tutorial: From Use Case to Test</a></strong><br>
         Recommended starting point for designing a new BDQ test.
+		See also: <a href="./docs/guide/users/index.md#31-test-types-non-normative">Test Types</a> and <a href="./docs/guide/users/index.md#32-test-inputs-and-outputs-non-normative">Test Inputs and Outputs</a> in the Users Guide.
       </td>
     </tr>
     <tr>
@@ -208,47 +211,56 @@ Readers can approach the standard in different ways depending on their needs. Th
       </td>
       <td valign="top">
 		:green_book:
-        <strong>BDQ Implementer’s Guide</strong><br>
+        <strong><a href="./docs/guide/implementers/index.md">BDQ Implementer’s Guide</a></strong><br>
         Explains how to implement BDQ tests: inputs, outputs, edge cases, and how to use the test descriptions and vocabularies in software.
       </td>
       <td valign="top">
 		:green_book:
-        <strong>Fitness for Use Framework (bdqffdq) &amp; Framework Guide</strong><br>
+        <strong>Fitness for Use Framework (bdqffdq:) &amp; Framework Guide</strong><br>
         Normative concepts and logic describing data quality needs and layers, with an explanatory guide.
+		Framework Guide: <a href="./docs/guide/bdqffdq/index.md">Landing Page</a><br>
+		bdqffdq: <a href="./docs/list/bdqffdq/index.md">Landing Page</a> and <a href="./docs/list/bdqffdq/list/index.md">Term List</a><br>
+		and serialized version: <a href="./vocabulary/bdqffdq.owl">OWL Ontology</a>.
       </td>
     </tr>
     <tr>
       <td valign="top">
 		:blue_book:
-        <strong>BDQ Tests Vocabulary &amp; Definitions</strong><br>
-        Normative definitions of the tests themselves, for readers who need exact meanings or wish to trace provenance.
+        <strong>Test Vocabulary &amp; Definitions</strong><br>
+        Normative definitions of the tests themselves, for readers who need exact meanings or wish to trace provenance.<br>
+		bdqtest: <a href="./docs/bdqtest/index.md">Landing Page</a> and <a href="./docs/list/bdqtest/list/index.md">Term List</a>.
       </td>
       <td valign="top">
 		:blue_book:
-        <strong>Canonical Test Definitions &amp; Serializations</strong><br>
+        <strong>Test Vocabulary, Definitions &amp; Serializations</strong><br>
         Normative machine‑readable definitions and versioned lists of tests.
+		bdqtest: <a href="./docs/bdqtest/index.md">Landing Page</a> and <a href="./docs/list/bdqtest/list/index.md">Term List</a><br>
+		and serialized versions: <a href="./dist/bdqtest.xml">RDF/XML</a>, <a href="./dist/bdqtest.ttl">Turtle</a>, <a href="./dist/bdqtest.json">JSON-LD</a>.
       </td>
       <td valign="top">
 		:blue_book:
         <strong>Supporting Vocabularies</strong><br>
         Controlled vocabularies for criteria, dimensions, enhancements, and other elements needed to specify new tests.
+		<a href="./docs/list/bdq/index.md">bdq: Vocabulary</a>, <a href="./docs/list/bdqcrit/index.md">bdqcrit: Vocabulary</a>, <a href="./docs/list/bdqdim/index.md">bdqdim: Vocabulary</a>, <a href="./docs/list/bdqenh/index.md">bdqenh: Vocabulary</a>.
       </td>
     </tr>
     <tr>
       <td valign="top">
 		:orange_book:
-        <strong><a href="./docs/tutorial/index.md">Tutorial: From Use Case to Test</a>]</strong><br>
+        <strong><a href="./docs/tutorial/index.md">Tutorial: From Use Case to Test</a></strong><br>
         Worked examples that clarifies the logic of test design.
       </td>
       <td valign="top">
-        <span style="background-color:#fffbe5; padding:2px 4px; border:1px solid #e0cf8d;">Supporting</span>
+		:blue_book:
         <strong>Test Conformance Validation Data</strong><br>
         Example datasets and expected results for checking implementations.
+		<a href="./docs/guide/implementers/TG2_test_validation_data.csv">Conformance Testing Data</a>
       </td>
       <td valign="top">
 		:blue_book:
         <strong>BDQ Tests Vocabulary &amp; Canonical Definitions</strong><br>
-        Examples of how existing tests are formally defined and versioned; useful patterns for new test design.
+        Examples of how existing tests are formally defined and versioned; useful patterns for new test design.<br>
+		bdqtest: <a href="./docs/bdqtest/index.md">Landing Page</a> and <a href="./docs/list/bdqtest/list/index.md">Term List</a>
       </td>
     </tr>
     <tr>
@@ -256,7 +268,7 @@ Readers can approach the standard in different ways depending on their needs. Th
       </td>
       <td valign="top">
 		:orange_book:
-        <strong>Tutorial: From Use Case to Test</strong><br>
+        <strong><a href="./docs/tutorial/index.md">Tutorial: From Use Case to Test</a></strong><br>
         Worked example that clarifies the logic behind tests you implement.
       </td>
       <td valign="top">
