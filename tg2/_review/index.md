@@ -244,21 +244,21 @@ Readers can approach the standard in different ways depending on their needs. Th
         <strong>Start with:</strong><br>
 		:green_book:
         <strong><a href="./docs/terms/bdqtest/index.md">BDQ Tests Quick Reference Guide</a></strong><br>
-        Concise descriptions of BDQ tests and assertions. First stop after the landing page for understanding test names and outcomes.</a>
+        Concise descriptions of BDQ tests and assertions. First stop after the landing page for understanding test names and outcomes.</a><br>
 		See also: <a href="./docs/guide/users/index.md#31-test-types-non-normative">Test Types</a> and <a href="./docs/guide/users/index.md#32-test-inputs-and-outputs-non-normative">Test Inputs and Outputs</a> in the Users Guide.
       </td>
       <td valign="top">
         <strong>Start with:</strong><br>
 		:green_book:
         <strong><a href="./docs/terms/bdqtest/index.md">BDQ Tests Quick Reference Guide</a></strong><br>
-        Overview of test purposes and outcomes; index into detailed definitions.
+        Overview of test purposes and outcomes; index into detailed definitions.<br>
 		See also: <a href="./docs/bdqtest/index.md#21-what-is-meant-by-test-non-normative">What is meant by "Test"</a> and <a href="./docs/bdqtest/index.md#22-test-types-non-normative">Test Types</a> in the bdqtest: landing page.
       </td>
       <td valign="top">
         <strong>Start with:</strong><br>
 		:orange_book:
         <strong><a href="./docs/tutorial/index.md">Tutorial: From Use Case to Test</a></strong><br>
-        Recommended starting point for designing a new BDQ test.
+        Recommended starting point for designing a new BDQ test.<br>
 		See also: <a href="./docs/guide/users/index.md#31-test-types-non-normative">Test Types</a> and <a href="./docs/guide/users/index.md#32-test-inputs-and-outputs-non-normative">Test Inputs and Outputs</a> in the Users Guide.
       </td>
     </tr>
@@ -277,7 +277,7 @@ Readers can approach the standard in different ways depending on their needs. Th
 		:green_book:
         <strong>Fitness for Use Framework (bdqffdq:) &amp; Framework Guide</strong><br>
         Normative concepts and logic describing data quality needs and layers, with an explanatory guide.
-		Framework Guide: <a href="./docs/guide/bdqffdq/index.md">Landing Page</a><br>
+		<a href="./docs/guide/bdqffdq/index.md">Framework Guide</a><br>
 		bdqffdq: <a href="./docs/list/bdqffdq/index.md">Landing Page</a> and <a href="./docs/list/bdqffdq/list/index.md">Term List</a><br>
 		and serialized version: <a href="./vocabulary/bdqffdq.owl">OWL Ontology</a>.
       </td>
@@ -299,7 +299,7 @@ Readers can approach the standard in different ways depending on their needs. Th
       <td valign="top">
 		:blue_book:
         <strong>Supporting Vocabularies</strong><br>
-        Controlled vocabularies for criteria, dimensions, enhancements, and other elements needed to specify new tests.
+        Controlled vocabularies for criteria, dimensions, enhancements, and other elements needed to specify new tests.</a>
 		<a href="./docs/list/bdq/index.md">bdq: Vocabulary</a>, <a href="./docs/list/bdqcrit/index.md">bdqcrit: Vocabulary</a>, <a href="./docs/list/bdqdim/index.md">bdqdim: Vocabulary</a>, <a href="./docs/list/bdqenh/index.md">bdqenh: Vocabulary</a>.
       </td>
     </tr>
