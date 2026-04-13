@@ -23,6 +23,9 @@ Topical index:
 
 This script is designed to be run from tg2/_build_review/ (e.g., by make_review/do_build.sh) and writes to:
   tg2/_review/docs/normative_index.md
+
+@author GitHub Copilot, with guidance and manual adjustments by Paul J. Morris
+
 """
 
 from __future__ import annotations
@@ -524,6 +527,12 @@ def heading_indent(level: int) -> str:
         return "      "
     return "        "
 
+def display_title(title: str) -> str:
+    """
+    For link text, omit the literal '(normative)' marker to reduce visual noise.
+    Keep anchors unchanged (they still include '-normative').
+    """
+    return title.replace(" (normative)", "").replace("(normative)", "").rstrip()
 
 def render_topical_index(indices: List[DocumentNormativeIndex], topics: List[TopicDefinition]) -> List[str]:
     lines: List[str] = []
@@ -562,7 +571,7 @@ def render_topical_index(indices: List[DocumentNormativeIndex], topics: List[Top
             lines.append(f"- **{doc_title}**: [{doc_link}]({doc_link})")
             for doc, sec, score in entries:
                 # keep output clean; score can be useful during tuning but is noisy in final docs
-                lines.append(f"  - [{sec.title}]({doc.rel_link}#{sec.anchor})")
+                lines.append(f"  - [{display_title(sec.title)}]({doc.rel_link}#{sec.anchor})")
         lines.append("")
 
     if not rendered_any:
@@ -571,23 +580,85 @@ def render_topical_index(indices: List[DocumentNormativeIndex], topics: List[Top
 
     return lines
 
-
 def render_document_index(indices: List[DocumentNormativeIndex]) -> List[str]:
     """
-    Existing behavior: per-document TOC-style list of normative headings.
+    Per-document TOC-style list of normative headings.
+
+    Fix:
+    - Compute list nesting from the *numeric section numbering* (e.g., 2.2.1), not from Markdown heading level.
+    - Promote headings whose numbered parents (e.g., 2, 2.2) are NOT included in the normative set.
+      Example: if 2.2 and 2 are not normative, then 2.2.1 should be rendered as a top-level entry under Document.
+    - Nest headings under included parents when present (e.g., 3.1 under 3).
     """
     lines: List[str] = []
+    lines.append("## List of normative sections in each document (generated)")
+    lines.append("")
+    lines.append("This section lists the normative sections in each BDQ Document.")
+    lines.append("")
+
+    # Matches a leading section number like "2", "2.2", "2.2.1" at start of heading title.
+    number_re = re.compile(r"^\s*(\d+(?:\.\d+)*)\b")
+
+    def parents(num: str) -> List[str]:
+        parts = num.split(".")
+        out = []
+        while len(parts) > 1:
+            parts = parts[:-1]
+            out.append(".".join(parts))
+        return out  # nearest parent first: ["2.2", "2"]
+
+    def indent_for_depth(depth: int) -> str:
+        # Depth 0 means "top-level under Document:" which is 2 spaces.
+        return "  " * (depth + 1)
+
     for doc in indices:
         lines.append(f"## {doc.title}")
         lines.append("")
         lines.append(f"- Document: [{doc.rel_link}]({doc.rel_link})")
-        lines.append("")
-        for sec in doc.sections:
-            indent = heading_indent(sec.level)
-            lines.append(f"{indent}- [{sec.title}]({doc.rel_link}#{sec.anchor})")
-        lines.append("")
-    return lines
 
+        # Build map: section -> section_number (if any)
+        sec_num: Dict[NormativeSection, Optional[str]] = {}
+        nums_present: set[str] = set()
+        for sec in doc.sections:
+            m = number_re.match(sec.title.replace("(normative)", "").strip())
+            num = m.group(1) if m else None
+            sec_num[sec] = num
+            if num:
+                nums_present.add(num)
+
+        # Compute effective depths for numbered headings
+        computed_depth: Dict[str, int] = {}
+
+        def depth_for_num(num: str) -> int:
+            if num in computed_depth:
+                return computed_depth[num]
+
+            # Find nearest included parent, if any.
+            for p in parents(num):
+                if p in nums_present:
+                    d = depth_for_num(p) + 1
+                    computed_depth[num] = d
+                    return d
+
+            computed_depth[num] = 0
+            return 0
+
+        # Render each normative section in document order
+        for sec in doc.sections:
+            num = sec_num.get(sec)
+            if num:
+                depth = depth_for_num(num)
+            else:
+                # No numbering: keep it top-level under Document
+                depth = 0
+
+            indent = indent_for_depth(depth)
+            lines.append(f"{indent}- [{display_title(sec.title)}]({doc.rel_link}#{sec.anchor})")
+
+        lines.append("")
+        lines.append("")
+
+    return lines
 
 def render_markdown(indices: List[DocumentNormativeIndex], topics: List[TopicDefinition]) -> str:
     lines: List[str] = []

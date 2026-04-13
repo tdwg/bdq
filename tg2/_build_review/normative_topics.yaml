@@ -1,12 +1,54 @@
+# Curated topical index configuration for tg2/_build_review/generate_normative_index.py
+#
+# Design goals:
+# - Topics correspond to BDQ *concepts* (especially bdqffdq: concepts), not repeated editorial headings.
+# - Granularity supports navigation: broad topics (e.g., "Test Types (general)") plus narrower topics
+#   (e.g., "Validation Tests") without double-classifying the same section into both.
+# - To reduce overlap:
+#   - "General" topics use cues that are common *conceptual* signals but avoid the specific subclass names.
+#   - Specific topics include subclass names and other distinctive cues.
+#   - Where overlap is still possible, add exclude_phrases to keep sections from being assigned to both.
+
 topics:
-  - id: response
-    label: Responses and Assertions
+  # ----------------------------
+  # Responses / Assertions / Reporting
+  # ----------------------------
+
+  - id: response_structure
+    label: Response structure and required fields
+    description: Normative requirements for the structure of Responses/Assertions (status/result/comment/qualifier) and their RDF vs non-RDF representations.
     cues:
       code_terms:
         - "Response.status"
         - "Response.result"
         - "Response.comment"
         - "Response.qualifier"
+        - "bdqffdq:hasResponseStatus"
+        - "bdqffdq:hasResponseResult"
+        - "bdqffdq:hasResponseResultValue"
+        - "bdqffdq:hasResponseComment"
+        - "bdqffdq:hasResponseQualifier"
+        - "bdqffdq:ResponseStatus"
+        - "bdqffdq:ResponseResult"
+      keywords:
+        - "Structure of Response"
+        - "structured data"
+        - "RDF"
+        - "data structure"
+        - "JSON"
+        - "serialize"
+        - "serialization"
+      phrases:
+        - "MUST be structured data"
+        - "MUST include the following"
+        - "When responses are in the form of RDF"
+        - "When the Response is represented as a data structure"
+
+  - id: assertion_types
+    label: Assertion types (ValidationAssertion, IssueAssertion, MeasurementAssertion, AmendmentAssertion)
+    description: Normative statements about how Assertions are typed and represented (including RDF typing expectations).
+    cues:
+      code_terms:
         - "bdqffdq:Assertion"
         - "bdqffdq:ValidationAssertion"
         - "bdqffdq:IssueAssertion"
@@ -14,10 +56,207 @@ topics:
         - "bdqffdq:AmendmentAssertion"
       keywords:
         - "Assertion"
-        - "Response"
+        - "Assertions"
+        - "typed"
+        - "subclass"
+      phrases:
+        - "MUST be an instance of"
+        - "or one of its subclasses"
+      # keep this focused on typing, not on report packaging
+      exclude_phrases:
+        - "Data Quality Reports"
+        - "Annotations"
+
+  - id: response_status_result_values
+    label: Response.status and Response.result controlled values
+    description: Normative requirements for controlled vocabulary values used in Responses (RUN_HAS_RESULT, COMPLIANT, NOT_COMPLIANT, COMPLETE, etc.).
+    cues:
+      code_terms:
+        - "RUN_HAS_RESULT"
+        - "INTERNAL_PREREQUISITES_NOT_MET"
+        - "EXTERNAL_PREREQUISITES_NOT_MET"
+        - "COMPLIANT"
+        - "NOT_COMPLIANT"
+        - "COMPLETE"
+        - "NOT_COMPLETE"
+        - "POTENTIAL_ISSUE"
+        - "NOT_ISSUE"
+        - "IS_ISSUE"
+        - "AMENDED"
+        - "NOT_AMENDED"
+        - "FILLED_IN"
+        - "bdqffdq:RUN_HAS_RESULT"
+        - "bdqffdq:INTERNAL_PREREQUISITES_NOT_MET"
+        - "bdqffdq:EXTERNAL_PREREQUISITES_NOT_MET"
+        - "bdqffdq:COMPLIANT"
+        - "bdqffdq:NOT_COMPLIANT"
+        - "bdqffdq:COMPLETE"
+        - "bdqffdq:NOT_COMPLETE"
+        - "bdqffdq:POTENTIAL_ISSUE"
+        - "bdqffdq:NOT_ISSUE"
+        - "bdqffdq:IS_ISSUE"
+        - "bdqffdq:AMENDED"
+        - "bdqffdq:NOT_AMENDED"
+        - "bdqffdq:FILLED_IN"
+      keywords:
+        - "controlled vocabulary"
+        - "named individuals"
+        - "local names"
+      phrases:
+        - "MUST be one of"
+        - "MUST take one of"
+
+  - id: dq_reports_annotations
+    label: Data Quality Reports and Annotations (packaging and identification)
+    description: Normative statements about what must be present in Data Quality Reports, and how Assertions may be wrapped or presented (incl. Annotations).
+    cues:
+      code_terms:
         - "Data Quality Report"
+        - "Data Quality Reports"
+        - "oa:Annotation"
+        - "oa:Annotations"
+        - "bdqffdq:DataQualityReport"
+        - "bdqffdq:DataQualityAssessment"
+        - "bdqffdq:producesAssertion"
+        - "bdqffdq:hasUseCase"
+      keywords:
+        - "report"
+        - "reports"
+        - "presentation"
+        - "identify"
+        - "identifying"
+      phrases:
+        - "Data Quality Reports"
+        - "wrapped in"
+
+  # ----------------------------
+  # Test types: general + per-type (mutually exclusive cues)
+  # ----------------------------
+
+  - id: test_types_general
+    label: Test Types (general)
+    description: Normative framing that distinguishes Validation/Issue/Measure/Amendment as the four BDQ Test Types, without focusing on any one type.
+    cues:
+      # Avoid the specific bdqffdq:Validation etc to prevent overlap with per-type topics
+      keywords:
+        - "Test Types"
+        - "four types"
+        - "four central"
+        - "vertical themes"
+      phrases:
+        - "four types of Tests"
+        - "four central concepts"
+      exclude_phrases:
+        - "Validation Tests"
+        - "Issue Tests"
+        - "Measure Tests"
+        - "Amendment Tests"
+
+  - id: validation_tests
+    label: Validation Tests (normative behavior)
+    description: Normative requirements and semantics specific to Validation Tests and their expected Responses.
+    cues:
+      code_terms:
+        - "bdqffdq:Validation"
+        - "bdqffdq:ValidationMethod"
+        - "bdqffdq:ValidationAssertion"
+        - "Validation"
+        - "ValidationMethod"
+        - "ValidationAssertion"
+      keywords:
+        - "Validation Tests"
+        - "Validations"
+      phrases:
+        - "The response of a `Validation` Test"
+        - "Data are found to be fit"
+      exclude_phrases:
+        - "Issue Tests"
+        - "Measure Tests"
+        - "Amendment Tests"
+        - "Test Types"
+
+  - id: issue_tests
+    label: Issue Tests (normative behavior)
+    description: Normative requirements and semantics specific to Issue Tests and their expected Responses.
+    cues:
+      code_terms:
+        - "bdqffdq:Issue"
+        - "bdqffdq:IssueMethod"
+        - "bdqffdq:IssueAssertion"
+        - "Issue"
+        - "IssueMethod"
+        - "IssueAssertion"
+      keywords:
+        - "Issue Tests"
+        - "Issues"
+      phrases:
+        - "The response of an `Issue` Test"
+      exclude_phrases:
+        - "Validation Tests"
+        - "Measure Tests"
+        - "Amendment Tests"
+        - "Test Types"
+
+  - id: measure_tests
+    label: Measure Tests (normative behavior)
+    description: Normative requirements and semantics specific to Measure Tests, including numeric vs COMPLETE/NOT_COMPLETE results.
+    cues:
+      code_terms:
+        - "bdqffdq:Measure"
+        - "bdqffdq:MeasurementMethod"
+        - "bdqffdq:MeasureAssertion"
+        - "bdqffdq:MeasurementAssertion"
+        - "Measure"
+        - "MeasurementMethod"
+        - "MeasureAssertion"
+        - "MeasurementAssertion"
+      keywords:
+        - "Measure Tests"
+        - "Measures"
+      phrases:
+        - "The response of a `Measure` Test"
+        - "return a `Response.result`"
+      exclude_phrases:
+        - "Validation Tests"
+        - "Issue Tests"
+        - "Amendment Tests"
+        - "Test Types"
+
+  - id: amendment_tests
+    label: Amendment Tests (normative behavior)
+    description: Normative requirements and semantics specific to Amendment Tests, including AMENDED/FILLED_IN proposals and structured results.
+    cues:
+      code_terms:
+        - "bdqffdq:Amendment"
+        - "bdqffdq:AmendmentMethod"
+        - "bdqffdq:AmendmentAssertion"
+        - "Amendment"
+        - "AmendmentMethod"
+        - "AmendmentAssertion"
+        - "AMENDED"
+        - "FILLED_IN"
+        - "NOT_AMENDED"
+      keywords:
+        - "Amendment Tests"
+        - "Amendments"
+        - "propose"
+        - "proposal"
+      phrases:
+        - "The response of an `Amendment` Test"
+        - "MUST always be treated as a proposal"
+      exclude_phrases:
+        - "Validation Tests"
+        - "Issue Tests"
+        - "Measure Tests"
+        - "Test Types"
+
+  # ----------------------------
+  # Resource types, execution, phases
+  # ----------------------------
+
   - id: resource_types
     label: Resource Types (SingleRecord / MultiRecord)
+    description: Normative requirements about what Resource Type a Test operates on and constraints related to SingleRecord vs MultiRecord.
     cues:
       code_terms:
         - "bdqffdq:hasResourceType"
@@ -25,31 +264,167 @@ topics:
         - "bdqffdq:MultiRecord"
         - "SingleRecord"
         - "MultiRecord"
+        - "Single Record"
+        - "Multi Record"
+      keywords:
+        - "Resource Types"
+        - "dataset"
+      phrases:
+        - "MUST have exactly one"
+        - "Single Record"
+        - "Multi Record"
+
+  - id: phases_execution_order
+    label: Test execution order and phases (Pre-Amendment / Amendment / Post-Amendment)
+    description: Normative requirements about ordering, phases, dependencies, and execution guidance (especially around Amendments).
+    cues:
+      code_terms:
+        - "Pre-Amendment"
+        - "Post-Amendment"
+        - "Amendment"
+      keywords:
+        - "Order of Test Execution"
+        - "Phases"
+        - "dependencies"
+        - "bulk"
+        - "execution"
+      phrases:
+        - "Pre-Amendment, Amendment, Post-Amendment"
+        - "Test Dependencies"
+
+  # ----------------------------
+  # Specifications, parameters, and authorities
+  # ----------------------------
+
+  - id: specification_expected_response
+    label: Specifications and Expected Response
+    description: Normative guidance about Specifications and how Expected Responses are expressed and interpreted.
+    cues:
+      code_terms:
+        - "bdqffdq:Specification"
+        - "Specification"
+        - "bdqffdq:hasExpectedResponse"
+        - "bdqffdq:hasSpecification"
+        - "Expected Response"
+      keywords:
+        - "Specification"
+        - "Expected"
+        - "prerequisite"
+        - "prerequisites"
+      phrases:
+        - "hasExpectedResponse"
+        - "Expected Response"
+
   - id: parameters_authorities
-    label: Parameters and Source Authorities
+    label: Parameters, Arguments, and Source Authorities
+    description: Normative statements about Parameterization (Parameters, Arguments, default values, and sourceAuthority/authorities defaults).
     cues:
       code_terms:
         - "bdqffdq:Parameter"
         - "bdqffdq:Argument"
         - "bdqffdq:hasArgument"
         - "bdqffdq:hasArgumentValue"
+        - "bdqffdq:hasParameter"
         - "bdqffdq:hasAuthoritiesDefaults"
         - "bdq:sourceAuthority"
+        - "Parameter"
+        - "Argument"
+        - "sourceAuthority"
       keywords:
+        - "Parameterizing"
+        - "default"
         - "API endpoint"
         - "authority"
-        - "default"
-  - id: test_types
-    label: Test Types (Validation / Issue / Measure / Amendment)
+        - "AuthoritiesDefaults"
+      phrases:
+        - "parameter default"
+        - "Values of `bdqffdq:hasAuthoritiesDefaults`"
+
+  # ----------------------------
+  # Ontology modeling and one-to-one chains
+  # ----------------------------
+
+  - id: one_to_one_chain_provenance
+    label: Identifying the Test that produced an Assertion (one-to-one chain)
+    description: Normative guidance about traversing from Assertions to Tests/Specifications/Implementations and expectations of one-to-one relationships.
     cues:
       code_terms:
-        - "bdqffdq:Validation"
-        - "bdqffdq:Issue"
-        - "bdqffdq:Measure"
-        - "bdqffdq:Amendment"
-        - "Validation"
-        - "Issue"
-        - "Measure"
-        - "Amendment"
+        - "bdqffdq:producesAssertion"
+        - "bdqffdq:usesSpecification"
+        - "bdqffdq:implementedBy"
+        - "bdqffdq:forValidation"
+        - "bdqffdq:forIssue"
+        - "bdqffdq:forMeasure"
+        - "bdqffdq:forAmendment"
       keywords:
-        - "Test Type"
+        - "one-to-one"
+        - "identify"
+        - "Identifying the Test"
+        - "produced an Assertion"
+      phrases:
+        - "should be one-to-one"
+        - "returns which Test was run"
+
+  - id: needs_solutions_reports_layers
+    label: Framework layers (Needs / Solutions / Reports) and core concepts
+    description: Normative material that formalizes the Fitness for Use Framework structure and derived concepts across Needs, Solutions, and Reports.
+    cues:
+      code_terms:
+        - "Data Quality Needs"
+        - "Data Quality Solutions"
+        - "Data Quality Reports"
+        - "bdqffdq:DataQualityNeed"
+        - "bdqffdq:DataQualityMethod"
+        - "bdqffdq:Implementation"
+        - "bdqffdq:Mechanism"
+      keywords:
+        - "Fundamental Concepts"
+        - "Derived Concepts"
+        - "Formalization"
+        - "Properties"
+        - "Notation"
+      phrases:
+        - "Summary of Mathematical Formalization"
+        - "Derived Concepts"
+
+  # ----------------------------
+  # Controlled vocabularies / term lists
+  # ----------------------------
+
+  - id: controlled_vocabularies
+    label: Controlled vocabularies (bdq:, bdqcrit:, bdqdim:, bdqenh:, bdqtest:)
+    description: Normative sections that define or enumerate controlled vocabulary terms and their use in the BDQ standard.
+    cues:
+      curies:
+        - "bdq:"
+        - "bdqcrit:"
+        - "bdqdim:"
+        - "bdqenh:"
+        - "bdqtest:"
+      keywords:
+        - "Vocabulary"
+        - "controlled vocabulary"
+      phrases:
+        - "List of Terms"
+        - "Vocabulary"
+
+  # ----------------------------
+  # Conformance and compliance
+  # ----------------------------
+
+  - id: conformance_compliance
+    label: Conformance and compliant implementations
+    description: Normative requirements for what it means to be a compliant implementation, including required outputs, suites, and conformance testing.
+    cues:
+      keywords:
+        - "Compliant"
+        - "Compliance"
+        - "conformance"
+        - "Conformance Testing"
+        - "Minimum Test Suite"
+        - "Required outputs"
+        - "Extension Points"
+      phrases:
+        - "Compliant Implementation"
+        - "Conformance Testing Implementations"
+        - "Required outputs for every Test execution"
