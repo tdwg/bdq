@@ -77,12 +77,11 @@ Draft Standard for Review
     - [AbstractInformationElement](#abstractinformationelement)
     - [ActedUpon](#actedupon)
     - [Amendment](#amendment)
-    - [AmendmentAssertion](#amendmentassertion)
     - [AmendmentConcept](#amendmentconcept)
     - [AmendmentMethod](#amendmentmethod)
     - [AmendmentPolicy](#amendmentpolicy)
+    - [AmendmentResponse](#amendmentresponse)
     - [Argument](#argument)
-    - [Assertion](#assertion)
     - [Consulted](#consulted)
     - [Criterion](#criterion)
     - [DataQualityDimension](#dataqualitydimension)
@@ -97,21 +96,22 @@ Draft Standard for Review
     - [ImprovementTarget](#improvementtarget)
     - [InformationElement](#informationelement)
     - [Issue](#issue)
-    - [IssueAssertion](#issueassertion)
     - [IssueConcept](#issueconcept)
     - [IssueMethod](#issuemethod)
     - [IssuePolicy](#issuepolicy)
+    - [IssueResponse](#issueresponse)
     - [Measure](#measure)
-    - [MeasurementAssertion](#measurementassertion)
     - [MeasurementConcept](#measurementconcept)
     - [MeasurementMethod](#measurementmethod)
     - [MeasurementPolicy](#measurementpolicy)
+    - [MeasurementResponse](#measurementresponse)
     - [Mechanism](#mechanism)
     - [NeedConcept](#needconcept)
     - [Parameter](#parameter)
     - [Policy](#policy)
     - [ReportConcept](#reportconcept)
     - [ResourceType](#resourcetype)
+    - [Response](#response)
     - [ResponseQualifier](#responsequalifier)
     - [ResponseResult](#responseresult)
     - [ResponseStatus](#responsestatus)
@@ -119,15 +119,15 @@ Draft Standard for Review
     - [Specification](#specification)
     - [UseCase](#usecase)
     - [Validation](#validation)
-    - [ValidationAssertion](#validationassertion)
     - [ValidationConcept](#validationconcept)
     - [ValidationMethod](#validationmethod)
     - [ValidationPolicy](#validationpolicy)
+    - [ValidationResponse](#validationresponse)
   - [5.2 ObjectProperty terms (normative)](#52-objectproperty-terms-normative)
     - [amendmentProperty](#amendmentproperty)
     - [appliesTo](#appliesto)
     - [composedOf](#composedof)
-    - [containsAssertion](#containsassertion)
+    - [containsResponse](#containsresponse)
     - [forAmendment](#foramendment)
     - [forDataQualityNeed](#fordataqualityneed)
     - [forIssue](#forissue)
@@ -152,7 +152,7 @@ Draft Standard for Review
     - [includedInPolicy](#includedinpolicy)
     - [issueProperty](#issueproperty)
     - [measurementProperty](#measurementproperty)
-    - [producesAssertion](#producesassertion)
+    - [producesResponse](#producesresponse)
     - [reportProperty](#reportproperty)
     - [targetedIssue](#targetedissue)
     - [targetedMeasure](#targetedmeasure)
@@ -526,12 +526,11 @@ It is important that the chain of relationships from an instance of an `Assertio
 [AbstractInformationElement](#AbstractInformationElement)
 [ActedUpon](#ActedUpon)
 [Amendment](#Amendment)
-[AmendmentAssertion](#AmendmentAssertion)
 [AmendmentConcept](#AmendmentConcept)
 [AmendmentMethod](#AmendmentMethod)
 [AmendmentPolicy](#AmendmentPolicy)
+[AmendmentResponse](#AmendmentResponse)
 [Argument](#Argument)
-[Assertion](#Assertion)
 [Consulted](#Consulted)
 [Criterion](#Criterion)
 [DataQualityDimension](#DataQualityDimension)
@@ -546,21 +545,22 @@ It is important that the chain of relationships from an instance of an `Assertio
 [ImprovementTarget](#ImprovementTarget)
 [InformationElement](#InformationElement)
 [Issue](#Issue)
-[IssueAssertion](#IssueAssertion)
 [IssueConcept](#IssueConcept)
 [IssueMethod](#IssueMethod)
 [IssuePolicy](#IssuePolicy)
+[IssueResponse](#IssueResponse)
 [Measure](#Measure)
-[MeasurementAssertion](#MeasurementAssertion)
 [MeasurementConcept](#MeasurementConcept)
 [MeasurementMethod](#MeasurementMethod)
 [MeasurementPolicy](#MeasurementPolicy)
+[MeasurementResponse](#MeasurementResponse)
 [Mechanism](#Mechanism)
 [NeedConcept](#NeedConcept)
 [Parameter](#Parameter)
 [Policy](#Policy)
 [ReportConcept](#ReportConcept)
 [ResourceType](#ResourceType)
+[Response](#Response)
 [ResponseQualifier](#ResponseQualifier)
 [ResponseResult](#ResponseResult)
 [ResponseStatus](#ResponseStatus)
@@ -568,17 +568,17 @@ It is important that the chain of relationships from an instance of an `Assertio
 [Specification](#Specification)
 [UseCase](#UseCase)
 [Validation](#Validation)
-[ValidationAssertion](#ValidationAssertion)
 [ValidationConcept](#ValidationConcept)
 [ValidationMethod](#ValidationMethod)
 [ValidationPolicy](#ValidationPolicy)
+[ValidationResponse](#ValidationResponse)
 
 ### 4.2 Alphabetical Index of object properties (non-normative)
 
 [amendmentProperty](#amendmentProperty)
 [appliesTo](#appliesTo)
 [composedOf](#composedOf)
-[containsAssertion](#containsAssertion)
+[containsResponse](#containsResponse)
 [forAmendment](#forAmendment)
 [forDataQualityNeed](#forDataQualityNeed)
 [forIssue](#forIssue)
@@ -603,7 +603,7 @@ It is important that the chain of relationships from an instance of an `Assertio
 [includedInPolicy](#includedInPolicy)
 [issueProperty](#issueProperty)
 [measurementProperty](#measurementProperty)
-[producesAssertion](#producesAssertion)
+[producesResponse](#producesResponse)
 [reportProperty](#reportProperty)
 [targetedIssue](#targetedIssue)
 [targetedMeasure](#targetedMeasure)
@@ -659,7 +659,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 #### ActedUpon
 
 - Name: bdqffdq:ActedUpon
-- Definition: A bdqffdq:InformationElement, expressed in concrete terms, about which a bdqffdq:DataQualityNeed expresses bdqffdq:Assertions about the data quality in that bdqffdq:InformationElement.
+- Definition: A bdqffdq:InformationElement, expressed in concrete terms, about which a bdqffdq:DataQualityNeed expresses bdqffdq:Responses about the data quality in that bdqffdq:InformationElement.
 - SubClass Of: InformationElement
 - Disjoint With: AbstractInformationElement, Consulted
 
@@ -671,14 +671,6 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 - Definition: A bdqffdq:DataQualityNeed that expresses how proposals may be made to improve the fitness for use of data.
 - SubClass Of: AmendmentConcept; DataQualityNeed
 - Disjoint With: Issue, Measure, Validation
-
-********************
-
-#### AmendmentAssertion
-
-- Name: bdqffdq:AmendmentAssertion
-- Definition: A bdqffdq:Assertion expressing the result of a bdqffdq:Implementation evaluating a bdqffdq:Amendment supporting a particular bdqffdq:DataQualityNeed to improve a particular bdqffdq:DataResource.
-- SubClass Of: AmendmentConcept; Assertion
 
 ********************
 
@@ -705,6 +697,14 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 ********************
 
+#### AmendmentResponse
+
+- Name: bdqffdq:AmendmentResponse
+- Definition: A bdqffdq:Response expressing the result of a bdqffdq:Implementation evaluating a bdqffdq:Amendment supporting a particular bdqffdq:DataQualityNeed to improve a particular bdqffdq:DataResource.
+- SubClass Of: AmendmentConcept; Response
+
+********************
+
 #### Argument
 
 - Name: bdqffdq:Argument
@@ -713,18 +713,10 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 ********************
 
-#### Assertion
-
-- Name: bdqffdq:Assertion
-- Definition: A bdqffdq:ReportConcept expressing a statement about a data quality bdqffdq:Assertion following a bdqffdq:Specification produced by a bdqffdq:Implementation pertaining to a bdqffdq:DataResource.
-- SubClass Of: ReportConcept
-
-********************
-
 #### Consulted
 
 - Name: bdqffdq:Consulted
-- Definition: A bdqffdq:InformationElement, expressed in concrete terms, about which a bdqffdq:DataQualityNeed examines in order to expresses bdqffdq:Assertions about the data quality in another bdqffdq:InformationElement.
+- Definition: A bdqffdq:InformationElement, expressed in concrete terms, about which a bdqffdq:DataQualityNeed examines in order to expresses bdqffdq:Responses about the data quality in another bdqffdq:InformationElement.
 - SubClass Of: InformationElement
 - Disjoint With: AbstractInformationElement, ActedUpon
 
@@ -757,7 +749,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 #### DataQualityNeed
 
 - Name: bdqffdq:DataQualityNeed
-- Definition: A bdqffdq:NeedConcept that expresses what bdqffdq:Assertions may be made about data with respect to fitness for use.
+- Definition: A bdqffdq:NeedConcept that expresses what bdqffdq:Responses may be made about data with respect to fitness for use.
 - SubClass Of: NeedConcept
 
 ********************
@@ -773,7 +765,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 #### DataQualityReport
 
 - Name: bdqffdq:DataQualityReport
-- Definition: A bdqffdq:ReportConcept comprising a set of data quality bdqffdq:Assertions.
+- Definition: A bdqffdq:ReportConcept comprising a set of data quality bdqffdq:Responses.
 - SubClass Of: ReportConcept
 
 ********************
@@ -781,7 +773,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 #### DataResource
 
 - Name: bdqffdq:DataResource
-- Definition: An owl:Thing to which a data quality bdqffdq:Assertion applies.
+- Definition: An owl:Thing to which a data quality bdqffdq:Response applies.
 - SubClass Of: ReportConcept
 
 ********************
@@ -834,14 +826,6 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 ********************
 
-#### IssueAssertion
-
-- Name: bdqffdq:IssueAssertion
-- Definition: A bdqffdq:Assertion expressing the result of a bdqffdq:Implementation evaluating a bdqffdq:Issue for a particular bdqffdq:DataQualityNeed in a particular bdqffdq:DataResource.
-- SubClass Of: Assertion; IssueConcept
-
-********************
-
 #### IssueConcept
 
 - Name: bdqffdq:IssueConcept
@@ -865,20 +849,20 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 ********************
 
+#### IssueResponse
+
+- Name: bdqffdq:IssueResponse
+- Definition: A bdqffdq:Response expressing the result of a bdqffdq:Implementation evaluating a bdqffdq:Issue for a particular bdqffdq:DataQualityNeed in a particular bdqffdq:DataResource.
+- SubClass Of: IssueConcept; Response
+
+********************
+
 #### Measure
 
 - Name: bdqffdq:Measure
 - Definition: A bdqffdq:DataQualityNeed that expresses how the fitness of data for some use may be measured.
 - SubClass Of: DataQualityNeed; MeasurementConcept
 - Disjoint With: Amendment, Issue, Validation
-
-********************
-
-#### MeasurementAssertion
-
-- Name: bdqffdq:MeasurementAssertion
-- Definition: A bdqffdq:Assertion expressing the result of a bdqffdq:Implementation measuring a particular bdqffdq:DataQualityNeed in a particular bdqffdq:DataResource.
-- SubClass Of: Assertion; MeasurementConcept
 
 ********************
 
@@ -902,6 +886,14 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 - Name: bdqffdq:MeasurementPolicy
 - Definition: A bdqffdq:NeedConcept that relates a bdqffdq:UseCase to a set of supporting bdqffdq:Measures.
 - SubClass Of: MeasurementConcept; Policy
+
+********************
+
+#### MeasurementResponse
+
+- Name: bdqffdq:MeasurementResponse
+- Definition: A bdqffdq:Response expressing the result of a bdqffdq:Implementation measuring a particular bdqffdq:DataQualityNeed in a particular bdqffdq:DataResource.
+- SubClass Of: MeasurementConcept; Response
 
 ********************
 
@@ -946,15 +938,23 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 #### ResourceType
 
 - Name: bdqffdq:ResourceType
-- Definition: Category of things that are data objects about which data quality bdqffdq:Assertions may be made.
+- Definition: Category of things that are data objects about which data quality bdqffdq:Responses may be made.
 - SubClass Of: FundamentalConcept
+
+********************
+
+#### Response
+
+- Name: bdqffdq:Response
+- Definition: A bdqffdq:ReportConcept produced by a bdqffdq:Implementation expressing a statement about data quality resulting from the application of the logic of a bdqffdq:Specification to a bdqffdq:DataResource.
+- SubClass Of: ReportConcept
 
 ********************
 
 #### ResponseQualifier
 
 - Name: bdqffdq:ResponseQualifier
-- Definition: A bdqffdq:ReportConcept to which additional bdqffdq:Assertions providing additional information beyond that of bdqffdq:ResponseResult from the execution of the bdqffdq:Specification of a bdqffdq:DataQualityNeed are attached.
+- Definition: A bdqffdq:ReportConcept to which additional bdqffdq:Responses providing additional information beyond that of bdqffdq:ResponseResult from the execution of the bdqffdq:Specification of a bdqffdq:DataQualityNeed are attached.
 - SubClass Of: ReportConcept
 
 ********************
@@ -962,7 +962,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 #### ResponseResult
 
 - Name: bdqffdq:ResponseResult
-- Definition: A bdqffdq:ReportConcept to which controlled vocabulary bdqffdq:Assertions about the result of the execution of the bdqffdq:Specification of a bdqffdq:DataQualityNeed are attached.
+- Definition: A bdqffdq:ReportConcept to which controlled vocabulary bdqffdq:Responses about the result of the execution of the bdqffdq:Specification of a bdqffdq:DataQualityNeed are attached.
 - SubClass Of: ReportConcept
 
 ********************
@@ -1007,14 +1007,6 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 ********************
 
-#### ValidationAssertion
-
-- Name: bdqffdq:ValidationAssertion
-- Definition: A bdqffdq:Assertion expressing the result of a bdqffdq:Implementation validating compliance with a particular bdqffdq:DataQualityNeed in a particular bdqffdq:DataResource.
-- SubClass Of: Assertion; ValidationConcept
-
-********************
-
 #### ValidationConcept
 
 - Name: bdqffdq:ValidationConcept
@@ -1038,6 +1030,14 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 ********************
 
+#### ValidationResponse
+
+- Name: bdqffdq:ValidationResponse
+- Definition: A bdqffdq:Response expressing the result of a bdqffdq:Implementation validating compliance with a particular bdqffdq:DataQualityNeed in a particular bdqffdq:DataResource.
+- SubClass Of: Response; ValidationConcept
+
+********************
+
 ### 5.2 ObjectProperty terms (normative)
 #### amendmentProperty
 
@@ -1049,7 +1049,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 #### appliesTo
 
 - Name: bdqffdq:appliesTo
-- Definition: Describes the bdqffdq:DataResource about which a bdqffdq:Assertion is made.
+- Definition: Describes the bdqffdq:DataResource about which a bdqffdq:Response is made.
 
 ********************
 
@@ -1060,10 +1060,10 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 ********************
 
-#### containsAssertion
+#### containsResponse
 
-- Name: bdqffdq:containsAssertion
-- Definition: Connects a bdqffdq:DataQualityReport with bdqffdq:Assertions that comprise that bdqffdq:DataQualityReport.
+- Name: bdqffdq:containsResponse
+- Definition: Connects a bdqffdq:DataQualityReport with bdqffdq:Responses that comprise that bdqffdq:DataQualityReport.
 
 ********************
 
@@ -1113,7 +1113,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 #### hasActedUponInformationElement
 
 - Name: bdqffdq:hasActedUponInformationElement
-- Definition: Describes the bdqffdq:ActedUpon bdqffdq:InformationElements assessed by a bdqffdq:DataQualityNeed about which bdqffdq:Assertions arising from the bdqffdq:DataQualityNeed would apply.
+- Definition: Describes the bdqffdq:ActedUpon bdqffdq:InformationElements assessed by a bdqffdq:DataQualityNeed about which bdqffdq:Responses arising from the bdqffdq:DataQualityNeed would apply.
 - SubClass Of: hasInformationElement
 
 ********************
@@ -1129,7 +1129,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 #### hasConsultedInformationElement
 
 - Name: bdqffdq:hasConsultedInformationElement
-- Definition: Describes the bdqffdq:InformationElements assessed by a bdqffdq:DataQualityNeed in order to make bdqffdq:Assertions concerning bdqffdq:ActedUpon bdqffdq:InformationElements.
+- Definition: Describes the bdqffdq:InformationElements assessed by a bdqffdq:DataQualityNeed in order to make bdqffdq:Responses concerning bdqffdq:ActedUpon bdqffdq:InformationElements.
 - SubClass Of: hasInformationElement
 
 ********************
@@ -1188,7 +1188,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 #### hasResponseQualifier
 
 - Name: bdqffdq:hasResponseQualifier
-- Definition: ResponseQualifier object asserted by an Assertion.
+- Definition: ResponseQualifier object asserted by an Response.
 - SubClass Of: reportProperty
 
 ********************
@@ -1196,7 +1196,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 #### hasResponseResult
 
 - Name: bdqffdq:hasResponseResult
-- Definition: The bdqffdq:ResponseResult object asserted by a bdqffdq:Assertion.
+- Definition: The bdqffdq:ResponseResult object asserted by a bdqffdq:Response.
 - SubClass Of: reportProperty
 
 ********************
@@ -1204,7 +1204,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 #### hasResponseStatus
 
 - Name: bdqffdq:hasResponseStatus
-- Definition: The bdqffdq:ResponseStatus object asserted by a bdqffdq:Assertion.
+- Definition: The bdqffdq:ResponseStatus object asserted by a bdqffdq:Response.
 - SubClass Of: reportProperty
 
 ********************
@@ -1236,7 +1236,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 #### improvedBy
 
 - Name: bdqffdq:improvedBy
-- Definition: The bdqffdq:ImprovementTarget that would have data quality improved by bdqffdq:Assertions resulting from a bdqffdq:Amendment.
+- Definition: The bdqffdq:ImprovementTarget that would have data quality improved by bdqffdq:Responses resulting from a bdqffdq:Amendment.
 - Range [ owl:someValuesFrom bdqffdq:improvedBy ]
 
 ********************
@@ -1262,17 +1262,17 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 ********************
 
-#### producesAssertion
+#### producesResponse
 
-- Name: bdqffdq:producesAssertion
-- Definition: Connects an entity with a bdqffdq:Assertion that the entity created.
+- Name: bdqffdq:producesResponse
+- Definition: Connects an entity with a bdqffdq:Response that the entity created.
 
 ********************
 
 #### reportProperty
 
 - Name: bdqffdq:reportProperty
-- Definition: Category of object properties that apply to bdqffdq:Assertions.
+- Definition: Category of object properties that apply to bdqffdq:Responses.
 
 ********************
 
@@ -1358,7 +1358,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 #### hasResponseComment
 
 - Name: bdqffdq:hasResponseComment
-- Definition: Free text describing the bdqffdq:Assertion made in the response and why that conclusion was reached.
+- Definition: Free text describing the bdqffdq:Response made in the response and why that conclusion was reached.
 - Range xsd:string
 
 ********************
@@ -1366,7 +1366,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 #### hasResponseResultValue
 
 - Name: bdqffdq:hasResponseResultValue
-- Definition: Data property carrying the value of a bdqffdq:Assertion when the value is not an object.
+- Definition: Data property carrying the value of a bdqffdq:Response when the value is not an object.
 
 ********************
 

@@ -231,7 +231,7 @@ We regularly (particularly in examples) use `Response`, `Response.status`, `Resp
 
 | Shorthand Concept | bdqffdq Term(s) | Description |
 | ----------------- | --------------- | ----------- |
-| Response          | bdqffdq:Assertion | The report from a single execution of a single Test, consisting of a Response.status, a Response.result, a Response.comment, and optionally, a Response.qualifier. | 
+| Response          | bdqffdq:Response | The report from a single execution of a single Test, consisting of a Response.status, a Response.result, a Response.comment, and optionally, a Response.qualifier. | 
 | Response.status   | bdqffdq:ResponseStatus, bdqffdq:hasResponseStatus | A metadata element in a Response indicating whether a Test was able to be performed or not. | 
 | Response.result   | bdqffdq:ResponseResult, bdqffdq:hasResponseResult, bdqffdq:hasResponseResultValue | The element in a Response containing the value returned by a Test. |
 | Response.comment  | bdqffdq:hasResponseComment | A human readable interpretation of the results of the Test. |
@@ -262,22 +262,22 @@ COMPLIANT means
 Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment={some bdq:NotEmpty description of the success condition}.
 ```
 
-Expressed with `bdqffdq:` terms, as would be if Assertions are expressed in RDF, the first example above these would be:
+Expressed with `bdqffdq:` terms, as would be if `Responses` are expressed in RDF, the first example above these would be:
 
 EXTERNAL_PREREQUISITES_NOT_MET means 
 ```
 @prefix bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/> .
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 
-# Example: an Assertion with Response.status = EXTERNAL_PREREQUISITES_NOT_MET
+# Example: a Response with Response.status = EXTERNAL_PREREQUISITES_NOT_MET
 # In this case, Response.result is omitted (i.e., there is no hasResponseResult triple),
 # which matches the BDQ guidance that the result MUST be empty/null for this status.
 
-[] a bdqffdq:Assertion ;
+[] a bdqffdq:Response ;
    bdqffdq:hasResponseStatus bdqffdq:EXTERNAL_PREREQUISITES_NOT_MET ;
    bdqffdq:hasResponseComment "Source authority service was not available at time of evaluation."^^xsd:string .
 ```
-Note that in RDF representations, the `Response` is an instance of `bdqffdq:Assertion`, and the `Response.status` is a value of `bdqffdq:hasResponseStatus`, while the `Response.result` may be either a literal using `bdqffdq:hasResponseResultValue` or a Named Individual using bdqffdq:hasResponseResult, or, as a best practice with RDF, when null, is ommitted, and the `Response.comment` is a value of `bdqffdq:hasResponseComment`.
+Note that in RDF representations, the `Response` is an instance of `bdqffdq:Response`, and the `Response.status` is a value of `bdqffdq:hasResponseStatus`, while the `Response.result` may be either a literal using `bdqffdq:hasResponseResultValue` or a Named Individual using bdqffdq:hasResponseResult, or, as a best practice with RDF, when null, is ommitted, and the `Response.comment` is a value of `bdqffdq:hasResponseComment`.
 
 
 For example, the `bdqffdq:hasExpectedResponse` for the `Specification` for [VALIDATION_COUNTRYCODE_STANDARD](../../terms/bdqtest/index.md#VALIDATION_COUNTRYCODE_STANDARD) states:
@@ -424,7 +424,7 @@ The most important elements of the BDQ standard are the structure that holds exp
 
 ### 3.4 Required outputs for every Test execution (normative)
 
-Results from each Test MUST be produced in the form `Response.status`, `Response.result`, and `Response.comment`, with one Test producing one Response. Results MAY include `Response.qualifier` (see section [4 Extension Points](#4-extension-points-normative)). The values of `Response.status` and `Response.result` MUST be those specified. This standard is agnostic concerning data structures and serializations of a `Response`. The standard is agnostic concerning internationalization and languages of labels applied to human readable presentations of values within a `Response`. See  [3.1 Structure of Response (normative)](../../bdqtest/index.md#31-structure-of-response-normative) in [BDQ Tests and Assertions](../../bdqtest/index.md) for further normative guidance on `Responses` as RDF or as data structures. See section [5.1 The Response Object](#51-the-response-object-normative) for further normative guidance on `Responses`.
+Results from each Test MUST be produced in the form `Response.status`, `Response.result`, and `Response.comment`, with one Test producing one `Response`. Results MAY include `Response.qualifier` (see section [4 Extension Points](#4-extension-points-normative)). The values of `Response.status` and `Response.result` MUST be those specified. This standard is agnostic concerning data structures and serializations of a `Response`. The standard is agnostic concerning internationalization and languages of labels applied to human readable presentations of values within a `Response`. See  [3.1 Structure of Response (normative)](../../bdqtest/index.md#31-structure-of-response-normative) in [BDQ Tests and Assertions](../../bdqtest/index.md) for further normative guidance on `Responses` as RDF or as data structures. See section [5.1 The Response Object](#51-the-response-object-normative) for further normative guidance on `Responses`.
 
 #### 3.4.1 Amendment Response.result ordering (normative)
 
@@ -446,7 +446,7 @@ Implementers are encouraged to produce the means to test data quality in bulk in
 
 ## 4 Extension Points (normative)
 
-A response MAY include a `Response.qualifier` (in RDF, a `bdqffdq:hasResponseQualifier` object property on an instance of a `bdqffdq:Assertion`). This is intended as a place to include structured `Assertions` concerning uncertainty in a response. This is also intended as a place to include structured `Assertions` about the details of `Amendment` Tests (e.g., TRANSPOSED MAY be attached to a `Response.qualifier` for some `Amendment` Tests).
+A response MAY include a `Response.qualifier` (in RDF, a `bdqffdq:hasResponseQualifier` object property on an instance of a `bdqffdq:Response`). This is intended as a place to include structured `Responses` concerning uncertainty in a response. This is also intended as a place to include structured `Responses` about the details of `Amendment` Tests (e.g., TRANSPOSED MAY be attached to a `Response.qualifier` for some `Amendment` Tests).
 
 `MultiRecord` (`bdqffdq:MultiRecord`) `Measures` that count results from `SingleRecord` Tests (that is, that return counts where the input `Information Element` consists of `Response` values from Tests on `Single Records` (`bdqffdq:SingleRecord`)) MUST report only a single count as the `Response.result`.  Such `MultiRecord` `Measures` MAY provide a `Response.qualifier` containing structured data describing additional information such as the total number of `Single Records` evaluated (to calculate percentages), the number of each value of `Response.status` encountered, and the number of each `Response.result` encountered. `Measures` under the Framework are only allowed to return "COMPLETE", "NOT_COMPLETE", or a single number. If it is desirable for any `Measure` to return more than a single number, `Response.qualifier` is the extension point to use. 
 
@@ -454,15 +454,15 @@ A response MAY include a `Response.qualifier` (in RDF, a `bdqffdq:hasResponseQua
 
 ### 5.1 The Response Object (normative)
 
-The four Test Types (`Validation`, `Issue`, `Amendment`, and `Measure`) all provide a `Response` from the execution of the Test. The `Response` from a Test is an `Assertion` which MAY form part of a `Data Quality Report` or MAY be wrapped in an `Annotation`.   
+The four Test Types (`Validation`, `Issue`, `Amendment`, and `Measure`) all provide a `Response` from the execution of the Test. The `Response` from a Test is an assertion which MAY form part of a `Data Quality Report` or MAY be wrapped in an `Annotation`.   
 
 Responses from each of the Tests MUST consist of structured data, and MUST NOT be simple pass fail flags. 
 
-The Response MUST include the following three components: 
+The `Response` MUST include the following three components: 
 
 1. `Response.result` is a result returned for a Test - a controlled vocabulary consisting of "COMPLIANT" or "NOT_COMPLIANT" for `Validation` Tests, "NOT_ISSUE" or "POTENTIAL_ISSUE" for `Issue` Tests, either a numeric value or a controlled vocabulary consisting of "COMPLETE" or "NOT_COMPLETE" for `Measure` Tests, and a data structure (e.g., a list of key value pairs) for proposed changes for `Amendment` Tests.
 
-2. `Response.status` provides a controlled vocabulary, metadata concerning the success, failure, or problems with the Test. The `Response.status` also serves as a link to information about warning type values and, in the future, probabilistic `Assertions` about the likeliness of the value could be made. 
+2. `Response.status` provides a controlled vocabulary, metadata concerning the success, failure, or problems with the Test. The `Response.status` also serves as a link to information about warning type values and, in the future, probabilistic assertions about the likeliness of the value could be made. 
 
 3. The `Response.comment` supplies human-readable text describing reasons for the Test result.
 
@@ -476,13 +476,13 @@ Under the Fitness For Use Framework, `Amendment` Tests may propose changes to pr
 
 ### 5.1.2 Response Serialization and Presentation (normative)
 
-Nothing in this section should be taken as a requirement for a particular format or serialization of `bdqffdq:Assertions` or `Responses`. Implementations MAY serialize `Assertions` in any appropriate form for their needs.
+Nothing in this section should be taken as a requirement for a particular format or serialization of `bdqffdq:Responses`. Implementations MAY serialize `Responses` in any appropriate form for their needs.
 
-Nothing in this document should be taken as a requirement for how `bdqffdq:Assertions` or `Responses` are to be presented to consumers of `Data Quality Reports`. Implementations MAY present the results of Tests in any form appropriate for their consumers.
+Nothing in this document should be taken as a requirement for how `bdqffdq:Responses` are to be presented to consumers of `Data Quality Reports`. Implementations MAY present the results of Tests in any form appropriate for their consumers.
 
 ### 5.1.3 Further Guidance on Responses (non-normative)
 
-See [3.1 Structure of a Response (normative)](../../bdqtest/index.md#31-structure-of-response-normative) in [BDQ Tests and Assertions](../../bdqtest/index.md) for further normative guidance on representing Responses as RDF or in data structures.
+See [3.1 Structure of a Response (normative)](../../bdqtest/index.md#31-structure-of-response-normative) in [BDQ Tests and Assertions](../../bdqtest/index.md) for further normative guidance on representing `Responses` as RDF or in data structures.
 
 See [Definitions for Named Individuals](../../list/bdqffdq/index.md#complete) in the `bdqffdq:` ontology for formal definitions of the named individuals that are used as values (e.g. COMPLIANT, NOT_COMPLIANT, RUN_HAS_RESULT) for `Response.status` and `Response.result` in the expected responses of Test specifications.
 
@@ -498,7 +498,7 @@ A single `Measure` Test MUST NOT return a list of numbers.  A single `Measure` T
 
 Implementers SHOULD create an instance of `bdqffdq:Mechanism` to uniquely identify their suite of Test `Implementations`.
 
-Implementations producing `Data Quality Reports` SHOULD create instances of `bdqffdq:Assertions` grouped in `bdqffdq:DataQualityReports` that also specify the `bdqffdq:DataResource` that the `bdqffdq:DataQualityReport` concerns.
+Implementations producing `Data Quality Reports` SHOULD create instances of `bdqffdq:Responses` grouped in `bdqffdq:DataQualityReports` that also specify the `bdqffdq:DataResource` that the `bdqffdq:DataQualityReport` concerns.
 
 Implementers MUST provide `Response` data in `Data Quality Reports` consisting of `Response.status`, `Response.result`, and `Response.comment`.
 
@@ -516,7 +516,7 @@ Implementers SHOULD only present non-default `Parameter` values to a Test implem
 
 #### 6.1.1 Identifying non-default `Parameter` values in reports (normative)
 
-When a Test is executed with non-default `Arguments` specified for `Parameters`, consumers of `Assertions` and Data Quality Reports resulting from such MUST be able to tell that non-default `Arguments` were used, and what the non-default values were.
+When a Test is executed with non-default `Arguments` specified for `Parameters`, consumers of `Responses` and Data Quality Reports resulting from such MUST be able to tell that non-default `Arguments` were used, and what the non-default values were.
 
 When a Test is Parameterized, and a value other than the default value is used for some `Parameter`, reports: SHOULD identify the Tests using at least:
 - the `Label` (`rdfs:label`) for the Test class, 
@@ -527,9 +527,9 @@ For example: "VALIDATION_MINDEPTH_INRANGE with bdq:maximumValidDepthInMeters=164
 
 When a non-default `Argument` is used, a new instance of an `Implementation` linked to a new instance of a `Specification` linked to an instance of an `Argument` asserting the non-default value SHOULD be used. 
 
-When `Assertions` are represented in RDF an `Assertion` produced by a Test run with a non-default `Argument` value
+When `Responses` are represented in RDF an `Response` produced by a Test run with a non-default `Argument` value
 - MUST NOT be linked to the instance of the `Specification` with the `Argument` with the default value, 
-- MUST be linked to novel instances of `Implementation`, `Specification`, and `Argument`, such that a query on the `Assertion` can identify what `Argument` value was used for the `Parameter` to produce the `Assertion`. It is the novel instances of these classes that provides the non-default value for software consumers.
+- MUST be linked to novel instances of `Implementation`, `Specification`, and `Argument`, such that a query on the `Response` can identify what `Argument` value was used for the `Parameter` to produce the `Response`. It is the novel instances of these classes that provides the non-default value for software consumers.
 
 #### 6.1.2 Identifying non-default `Parameter` values in `Response.comment` (normative)
 
@@ -590,7 +590,7 @@ Tests MAY be run in Pre-Amendment, Amendment, and Post-Amendment phases.
 
 ##### 6.4.1.1 Explanation of Phases (non-normative)
 
-A good practice for executing the BDQ Tests is to follow a sequence that begins by executing all `bdqffdq:SingleRecord` `Validation` and `Measure` Tests in a pre-amendment phase. Then, to execute all `Amendment` Tests in an amendment phase. Finally, re-run all `Validation` and `Measure` Tests on the data with the proposed changes asserted by the `Amendments` applied to the data in a post-amendment phase. Such a sequence of phases allows `Assertions` to be made first about the quality of the data as they were initially presented, and then about how much the quality of the data would be improved if all proposed changes from the `Amendments` were accepted. The order and method of running `Validation` and `Measure` Tests within the pre-amendment and post-amendment phases is not specified by the BDQ standard. Within pre-amendment and post-amendment phases, the `Validation` and `Measure` Tests are agnostic about the order in which they are run, the extent to which they are run in parallel, or the extent to which they are run on single records or on unique values within a dataset.
+A good practice for executing the BDQ Tests is to follow a sequence that begins by executing all `bdqffdq:SingleRecord` `Validation` and `Measure` Tests in a pre-amendment phase. Then, to execute all `Amendment` Tests in an amendment phase. Finally, re-run all `Validation` and `Measure` Tests on the data with the proposed changes asserted by the `Amendments` applied to the data in a post-amendment phase. Such a sequence of phases allows `Responses` to be made first about the quality of the data as they were initially presented, and then about how much the quality of the data would be improved if all proposed changes from the `Amendments` were accepted. The order and method of running `Validation` and `Measure` Tests within the pre-amendment and post-amendment phases is not specified by the BDQ standard. Within pre-amendment and post-amendment phases, the `Validation` and `Measure` Tests are agnostic about the order in which they are run, the extent to which they are run in parallel, or the extent to which they are run on single records or on unique values within a dataset.
 
 ##### 6.4.1.2 Phases and Quality Assurance (normative)
 
@@ -639,7 +639,7 @@ The [Fitness for Use Framework Ontology](../../bdqffdq/index.md) does not includ
 
 #### 6.4.3 Implementing a complete Test (normative)
 
-An implementation of a Test MAY be complete as described with `bdqffdq:` terms in [BDQ Tests and Assertions List of Terms](../../list/bdqtest/index.md). A complete Test implementation MUST encompass the elements of the Test defined in an instance of `bdqffdq:DataQualityNeed`, plus its associated `bdqffdq:InformationElements`, instance of a subclass of `bdqffdq:Method`, instance of `bdqffdq:Specification`, any related `Arguments` and `Parameters`, and MUST be able to produce instances of `bdqffdq:Assertion` (carrying `Response.status`, `Response.result`, `Response.comment`). In contrast, see Section [6.4.6 Implementing an Abstract Test (normative)](#646-implementing-an-abstract-test-normative) for settings where implementations may abstractly consider only the instance of `bdqffdq:DataQualityNeed` with its associated `bdqffdq:InformationElements`.
+An implementation of a Test MAY be complete as described with `bdqffdq:` terms in [BDQ Tests and Assertions List of Terms](../../list/bdqtest/index.md). A complete Test implementation MUST encompass the elements of the Test defined in an instance of `bdqffdq:DataQualityNeed`, plus its associated `bdqffdq:InformationElements`, instance of a subclass of `bdqffdq:Method`, instance of `bdqffdq:Specification`, any related `Arguments` and `Parameters`, and MUST be able to produce instances of `bdqffdq:Response` (carrying `Response.status`, `Response.result`, `Response.comment`). In contrast, see Section [6.4.6 Implementing an Abstract Test (normative)](#646-implementing-an-abstract-test-normative) for settings where implementations may abstractly consider only the instance of `bdqffdq:DataQualityNeed` with its associated `bdqffdq:InformationElements`.
 
 #### 6.4.4 Presenting Darwin Core Data to a Method that Implements a Test (non-normative)
 
@@ -843,7 +843,7 @@ Below is an example implementation from the FilteredPush `event_date_qc` library
 
 #### 6.4.6 Implementing an Abstract Test (normative)
 
-In some environments, an implementation MAY be a lightweight implementation of an abstract Test. Such abstract implementations MAY encompass only the elements of the Test defined in an instance of `bdqffdq:DataQualityNeed`, plus its associated `bdqffdq:InformationElements`, and may not be able to produce instances of `bdqffdq:Assertion`, but SHOULD be able to produce analogs of `Response` objects (with `Response.status`, `Response.result`, and `Response.comment` properties). 
+In some environments, an implementation MAY be a lightweight implementation of an abstract Test. Such abstract implementations MAY encompass only the elements of the Test defined in an instance of `bdqffdq:DataQualityNeed`, plus its associated `bdqffdq:InformationElements`, and may not be able to produce instances of `bdqffdq:Response`, but SHOULD be able to produce analogs of `Response` objects (with `Response.status`, `Response.result`, and `Response.comment` properties). 
 
 Consider the `Validation` Test [VALIDATION_ENDDAYOFYEAR_INRANGE](../../terms/bdqtest/index.md#VALIDATION_ENDDAYOFYEAR_INRANGE)
 
@@ -927,9 +927,9 @@ This section provides language- and framework-agnostic checklists that implement
 
 BDQ keeps Tests portable by standardizing semantics (inputs, decision rules, outputs).  It deliberately leaves execution mechanics (binding to input data, orchestration of test execution, presentation of test output) to whatever framework fits the implementer's environment.  
 
-The definition of a test focuses on (1) the inputs (`Information Elements` `Acted Upon` and `Consulted`, and any `Parameters`), then (2) the logic or decision rules of the expected response, with (3) all tests returning a similarly structured Response consisting of a `Response.status`, `Response.result`, and `Response.comment`. 
+The definition of a test focuses on (1) the inputs (`Information Elements` `Acted Upon` and `Consulted`, and any `Parameters`), then (2) the logic or decision rules of the expected response, with (3) all tests returning a similarly structured `Response` consisting of a `Response.status`, `Response.result`, and `Response.comment` as output. 
 
-The description of a test, in essence, frames an API with `Information Element` and `Parameter` inputs, and a standard Response output, encapsulating the logic and decision rules of the expected response. The responsibility of a Test implementation lies in correctly implementing the logic and decision rules of the expected response, and in producing the expected structured output.  The responsibility of an execution framework lies in correctly binding input data to the `Information Elements` and `Parameters` of a Test implementation, and in correctly presenting the structured output from a Test implementation.
+The description of a test, in essence, frames an API with `Information Element` and `Parameter` inputs, and a standard `Response` output, encapsulating the logic and decision rules of the expected response. The responsibility of a Test implementation lies in correctly implementing the logic and decision rules of the expected response, and in producing the expected structured output.  The responsibility of an execution framework lies in correctly binding input data to the `Information Elements` and `Parameters` of a Test implementation, and in correctly presenting the structured output from a Test implementation.
 
 The checklists below are designed to help implementers ensure that their implementations of Tests follow this separation of concerns, are consistent with the semantics of the Test as defined in the BDQ standard, and that they produce the expected structured outputs.
 
@@ -1076,7 +1076,7 @@ A `Test` execution framework (or “runner”) typically needs to accomplish the
    - Invoke the `Implementation` with the bound inputs in a way that is consistent and repeatable.
 
 1. **Execute a Test and Capture results as a structured `Response`**
-   - Ensure that every Test execution yields one Response containing:
+   - Ensure that every Test execution yields one `Response` containing:
      - `Response.status`
      - `Response.result` (present only when appropriate for the status and `Test Type`)
      - `Response.comment` (a human-readable `bdq:NotEmpty` explanation)
@@ -1091,7 +1091,7 @@ A `Test` execution framework (or “runner”) typically needs to accomplish the
    - If the framework uses aggregation of distinct values for `Single Record` Tests, ensure that the `Response` for each distinct value is correctly associated with all records that contain that value to pass down a processing pipeline or to return in the final `Data Quality Report`.
 
 1. **Serialize and report results**
-   - Record or transmit results as part of a `Data Quality Report` (or as `bdqffdq:Assertion` instances in RDF), in any serialization that fits the implementation environment.
+   - Record or transmit results as part of a `Data Quality Report` (or as `bdqffdq:Response` instances in RDF), in any serialization that fits the implementation environment.
    - When non-default `Parameter`(s) are used, ensure the report can communicate which `Argument` value(s) were applied (for both human and machine consumers), consistent with the guidance in this standard.
 
 ## 7 Presentation of Results (normative)
@@ -1108,7 +1108,7 @@ Reports MAY describe Tests to consumers of those reports using the Description (
 
 #### 7.1.2 Information Elements Acted Upon and Consulted in Results (normative)
 
-`Information Elements` may be `bdqffdq:ActedUpon` or `bdqffdq:Consulted` (the sub-types of `bdqffdq:InformationElement`). Presentations of data quality results MAY use `Information Element` sub-types to identify which specific values `Assertions` are being made about, and which values are being used to support those `Assertions`. `Information Elements` `Acted Upon` are those for which a `Validation` Test is asserting compliance/non-compliance, or for which an `Amendment` Test is proposing an improvement to the data. `Information Elements` `Consulted` are those which inform such decisions, but are not themselves the subject of the decision. For example, in the Test [AMENDMENT_EVENTDATE_FROM_VERBATIM](../../terms/bdqtest/index.md#AMENDMENT_EVENTDATE_FROM_VERBATIM), the `Information Element` `dwc:eventDate` is `Acted Upon`, while the `Information Element` `dwc:verbatimEventDate` is `Consulted`. Implementers may wish to clearly represent to consumers of `Data Quality Reports` (particularly `Data Quality Reports` in the form of spreadsheets), which terms are particular Tests are making `Assertions` about.
+`Information Elements` may be `bdqffdq:ActedUpon` or `bdqffdq:Consulted` (the sub-types of `bdqffdq:InformationElement`). Presentations of data quality results MAY use `Information Element` sub-types to identify which specific values `Responses` are being made about, and which values are being used to support those `Responses`. `Information Elements` `Acted Upon` are those for which a `Validation` Test is asserting compliance/non-compliance, or for which an `Amendment` Test is proposing an improvement to the data. `Information Elements` `Consulted` are those which inform such decisions, but are not themselves the subject of the decision. For example, in the Test [AMENDMENT_EVENTDATE_FROM_VERBATIM](../../terms/bdqtest/index.md#AMENDMENT_EVENTDATE_FROM_VERBATIM), the `Information Element` `dwc:eventDate` is `Acted Upon`, while the `Information Element` `dwc:verbatimEventDate` is `Consulted`. Implementers may wish to clearly represent to consumers of `Data Quality Reports` (particularly `Data Quality Reports` in the form of spreadsheets), which terms are particular Tests are making `Responses` about.
 
 Data quality reports should be clear which input terms are subject to compliance tests and thus SHOULD NOT assert that `Information Elements` `Consulted` for a `Validation` are NOT_COMPLIANT with respect to that `Validation`.
 
@@ -1183,11 +1183,11 @@ The following is an example of a Test response represented as an `Annotation` in
 
 This example is written to be consistent with the following expectations:
 
-* The `oa:body` of the `oa:Annotation` is the `Assertion`.
+* The `oa:body` of the `oa:Annotation` is the `Response`.
 * The `oa:target` of the `oa:Annotation` is the IRI of the record being annotated.
 * The `dcterms:created` value on the `oa:Annotation` provides the annotation date.
 * The `oa:motivatedBy` value on the `oa:Annotation` provides the motivation for creating the annotation.
-* The `Implementation` is related to the `Assertion` it generated using `bdqffdq:producesAssertion`, is related to the `Specification` it ran using `bdqffdq:usesSpecification`, and is related to the `Mechanism` that executed it using `bdqffdq:implementedBy`.
+* The `Implementation` is related to the `Response` it generated using `bdqffdq:producesResponse`, is related to the `Specification` it ran using `bdqffdq:usesSpecification`, and is related to the `Mechanism` that executed it using `bdqffdq:implementedBy`.
 * The `bdqffdq:usesSpecification` property points to the specific instance of `bdqffdq:Specification` that the `Implementation` used for the Test execution.
 
 In a complete dataset the `Specification` is linked (via a `Method` instance) to the corresponding Test in bdqtest, that is, we could look up that the Test is VALIDATION_DAY_STANDARD given the `Specification` IRI. 
@@ -1204,7 +1204,7 @@ In a complete dataset the `Specification` is linked (via a `Method` instance) to
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 
 <https://example.org/bdq/assertion/1>
-  a bdqffdq:ValidationAssertion ;
+  a bdqffdq:ValidationResponse ;
   bdqffdq:hasResponseStatus bdqffdq:RUN_HAS_RESULT ;
   bdqffdq:hasResponseResult bdqffdq:NOT_COMPLIANT ;
   bdqffdq:hasResponseComment "Provided value for day '32' is not an integer in the range 1 to 31."^^xsd:string ;
@@ -1212,7 +1212,7 @@ In a complete dataset the `Specification` is linked (via a `Method` instance) to
 
 <https://example.org/bdq/implementation/1>
   a bdqffdq:Implementation ;
-  bdqffdq:producesAssertion <https://example.org/bdq/assertion/1> ;
+  bdqffdq:producesResponse <https://example.org/bdq/assertion/1> ;
   bdqffdq:implementedBy <https://example.org/bdq/mechanism/kurator-dwcsciNameDQ-v1.0.1> ;
   bdqffdq:usesSpecification bdqtest:47ff73ba-0028-4f79-9ce1-ee7008d66498-2025-03-06 .
 
@@ -1355,7 +1355,7 @@ Java annotations can be used to match Test implementation methods to Tests and `
 
 #### 8.6.2 Tools to assist with Implementations and RDF presentation (non-normative) 
 
-The Test implementations listed below use Java Annotations (as shown in the example in [2.3.2.5 Example Interpretation of a Parameter String Default Value (non-normative)](#2325-example-interpretation-of-a-parameter-string-default-value-non-normative) to carry metadata to identify Tests and to allow binding of Darwin Core terms to Java method parameters. The Java Annotations are themselves related to Fitness For Use Framework concepts, are available in a library ffdq-api (Lowery and Morris 2024), and are intended to be used with rdfbeans to serialize Java result objects produced by Test implementations into `bdqffdq:Assertion` objects in RDF. In addition, a Java library, `kurator-ffdq` (Lowery et al., 2025) is available for working with Test descriptions as RDF, being an implementation of the Framework Ontology in Java. The `kurator-ffdq` library also includes classes for generating stub methods for each Test in either Java or Python.
+The Test implementations listed below use Java Annotations (as shown in the example in [2.3.2.5 Example Interpretation of a Parameter String Default Value (non-normative)](#2325-example-interpretation-of-a-parameter-string-default-value-non-normative) to carry metadata to identify Tests and to allow binding of Darwin Core terms to Java method parameters. The Java Annotations are themselves related to Fitness For Use Framework concepts, are available in a library ffdq-api (Lowery and Morris 2024), and are intended to be used with rdfbeans to serialize Java result objects produced by Test implementations into `bdqffdq:Response` objects in RDF. In addition, a Java library, `kurator-ffdq` (Lowery et al., 2025) is available for working with Test descriptions as RDF, being an implementation of the Framework Ontology in Java. The `kurator-ffdq` library also includes classes for generating stub methods for each Test in either Java or Python.
 
 - [ffdq-api](https://github.com/kurator-org/ffdq-api) (Lowery and Morris 2024) Java annotations for decorating Test implementations.
 - [kurator-ffdq](https://github.com/kurator-org/kurator-ffdq) (Lowery et al. 2025) Java class representation of `bdqffdq:` classes, able to produce stub code for Test implementations in Java or Python. `kurator-ffdq` is also able (code is rusty as of v3.0.0) to run Java Test implementations annotated with `ffdq-api` annotations and produce `Data Quality Report` spreadsheets.
