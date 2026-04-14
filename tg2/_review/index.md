@@ -79,7 +79,7 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
 
 [4 Implementations (non-normative)](#4-implementations-non-normative)
   - [4.1 Java Implementation (non-normative)](#41-java-implementation-non-normative)
-  - [4.2 BDQEmail](#42-bdqemail)
+  - [4.2 BDQEmail (non-normative)](#42-bdqemail-non-normative)
 
 [5 Design of the Tests (normative)](#5-design-of-the-tests-normative)
   - [5.1.1 What is a "Test" (non-normative)](#511-what-is-a-test-non-normative)
@@ -466,7 +466,7 @@ The BDQ standard does not include implementations of Tests, but there are extern
 
 While **not part of the BDQ standard**, a validated Java® implementation of the tests is provided in the [event_date_qc](https://github.com/FilteredPush/event_date_qc), [sci_name_qc](https://github.com/FilteredPush/sci_name_qc), [geo_ref_qc](https://github.com/FilteredPush/geo_ref_qc) and [rec_occur_qc](https://github.com/FilteredPush/rec_occur_qc) libraries.  Also see [bdqtestrunner](https://github.com/FilteredPush/bdqtestrunner/), which demonstrates conformance of these libraries with the provided [Test Conformance Testing Data](#362-test-conformance-testing-data-non-normative).      
 
-### 4.2 BDQEmail
+### 4.2 BDQEmail (non-normative)
 
 While **not part of the BDQ standard**, GBIF Norway has developed a tool called BDQEmail that allows users to submit records for testing and receive results via email. This tool wraps the Java implementation of the tests with an email and large language model processing system and provides an accessible way for users to evaluate the quality of their biodiversity data using the BDQ Tests without needing to implement the tests themselves.  The tool ([gbif-norway/bdq-multirecord-agent](https://github.com/gbif-norway/bdq-multirecord-agent)) is described at: [https://www.gbif.no/services/index.html](https://www.gbif.no/services/index.html).
 
