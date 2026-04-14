@@ -139,7 +139,7 @@ We use the informal term "Test" to describe these four vertical themes, a Test i
 
 The Framework draws a distinction between **Quality Control** and **Quality Assurance**. Quality Control processes seek to assess the quality of data for some purpose, then identify changes to the data or to processes around the data to improve their quality. Quality Assurance processes seek to filter some set of data to a subset that is fit for some purpose, that is, to assure that data used for some purpose are fit for that purpose.
 
-It is important to recognize that BDQ does not standardize complete `Quality Control` or `Quality Assurance` workflows (e.g., user roles, review and remediation procedures, pipelines, thresholds, or reporting formats). Instead, BDQ standardizes the semantics of `Tests` and their Responses (as `Assertions`) and provides `Measure` patterns that can be used to support `Quality Control` and `Quality Assurance` workflows in a consistent way.
+It is important to recognize that BDQ does not standardize complete `Quality Control` or `Quality Assurance` workflows (e.g., user roles, review and remediation procedures, pipelines, thresholds, or reporting formats). Instead, BDQ standardizes the semantics of `Tests` and their `Responses` and provides `Measure` patterns that can be used to support `Quality Control` and `Quality Assurance` workflows in a consistent way.
 
 #### 3.2.2 Information Elements (non-normative)
 
@@ -188,7 +188,7 @@ Need defines the properties data must have to be considered fit for use and may 
 
 **Data Quality Mechanisms** are formal descriptions of software or other tools that implement the Tests. They execute the `Specifications` defined in the Needs layer.
 
-**Data Quality Reports** are the outputs generated when `Mechanisms` are applied to data. The Tests include formal specifications of `Assertions` that are expected to appear in these Reports.
+**Data Quality Reports** are the outputs generated when `Mechanisms` are applied to data. The Tests include formal specifications of `Responses` that are expected to appear in these Reports.
 
 The Framework includes an abstract concept of `Information Elements`, which are concretely represented by specific Darwin Core terms within each Test to make evaluations practical.
 
@@ -196,12 +196,12 @@ For **Quality Assurance**, the Framework defines `Measures` that operate on `Mul
 
 For **Quality Control**, `Multi Record` `Measures` can return numeric summaries of the results of other tests (e.g. count of `COMPLIANT` results for a `Validation`), thereby indicating how fit a dataset is for its intended purpose and what adjustments are needed to make it fully fit.
 
-![Diagram of ValidationAssertion, IssueAssertion, MeasureAssertion and AmendmentAssertion classes as subtypes of the Assertion class with ReportConcept as its parent.](assertions.png)
-*The 4 central Assertion types in the Framework - ValidationAssertion, IssueAssertion, MeasureAssertion and AmendmentAssertion.*
+![Diagram of ValidationResponse, IssueResponse, MeasureResponse and AmendmentResponse classes as subtypes of the Response class with ReportConcept as its parent.](assertions.png)
+*The 4 Response types in the Framework - ValidationResponse, IssueResponse, MeasureResponse and AmendmentResponse.*
 
-Diagram of the composition of `Validation`, `Validation Method`, and `Validation Assertion` illustrating the `Data Quality Needs`, `Solutions`, and `Reports` layers of the Fitness for Use Framework, with the responsibilities of `bdqtest:` (solid lines), and implementations (dashed lines).
+Diagram of the composition of `Validation`, `Validation Method`, and `Validation Response` illustrating the `Data Quality Needs`, `Solutions`, and `Reports` layers of the Fitness for Use Framework, with the responsibilities of `bdqtest:` (solid lines), and implementations (dashed lines).
 
-![Diagram of Validation, ValidationMethod, and ValidationAssertion with related classes](bdqffdq_data_quality_needs_solutions_report_validation.svg)
+![Diagram of Validation, ValidationMethod, and ValidationResponse with related classes](bdqffdq_data_quality_needs_solutions_report_validation.svg)
 *Validation concepts in the Needs, Solutions, and Reports levels.*
 
 A useful way to think of the Framework is to divide it horizontally into Needs, Solutions, and Reports layers, and then track the Test concepts vertically through each layer (see [Figure 3](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0178731#pone-0178731-g003) in Veiga et al., 2017). Below is a diagram that brings together the horizontal Needs, Solutions, and Reports layers with the vertical Test concepts (`Validations`, `Issues`, `Measures` and `Amendments`), with `Validation`-related concepts expanded to show all related entities in the Fitness for Use Framework.
@@ -213,11 +213,11 @@ A useful way to think of the Framework is to divide it horizontally into Needs, 
 
 The content of this section is non-normative, related normative guidance is in section [5.1 The Response Object (normative)](../implementers/index.md#51-the-response-object-normative) of the [BDQ Implementer's Guide](../implementers/index.md).
 
-Assertions are expected to assert Response objects. These will involve, in RDF, a combination of object properties and data properties on an `Assertion`.  In an object oriented language like Java, a Response might be an object with properties, and in a tabular format, a Response might be a row with columns for each of the properties. The following table gives an overview of the expected properties of a Response object, and the corresponding terms in the `bdqffdq:` vocabulary.
+It is expected that `Response` objects instances will involve, in RDF, a combination of object properties and data properties on an `Response`.  In an object oriented language like Java, a Response might be an object with properties, and in a tabular format, a Response might be a row with columns for each of the properties. The following table gives an overview of the expected properties of a Response object, and the corresponding terms in the `bdqffdq:` vocabulary.
 
 | Shorthand Concept | bdqffdq: Term(s) | Description |
 | ----------------- | ---------------- | ----------- |
-| Response | bdqffdq:Assertion | The report from a single execution of a single Test, consisting of a Response.status, a Response.result, a Response.comment, and optionally, a Response.qualifier.| 
+| Response | bdqffdq:Response | The report from a single execution of a single Test, consisting of a Response.status, a Response.result, a Response.comment, and optionally, a Response.qualifier.| 
 | Response.status | bdqffdq:ResponseStatus, bdqffdq:hasResponseStatus | A metadata element in a Response indicating whether a particular Test (bdqffdq:Validation, bdqffdq:Issue, bdqffdq:Measure, or bdqffdq:Amendment) was able to be performed or not. |
 | Response.result | bdqffdq:ResponseResult, bdqffdq:hasResponseResult, bdqffdq:hasResponseResultValue | The element in a Response containing the value returned by a Test (bdqffdq:Validation, bdqffdq:Issue, bdqffdq:Measure, or bdqffdq:Amendment)|
 | Response.comment | bdqffdq:hasResponseComment | A human readable interpretation of the results of the Test.|
@@ -352,16 +352,16 @@ Each `Specification` has zero-to-many `Arguments`.
 Each `Argument` has one and only one `Parameter`.
 Each `Argument` has one and only one `hasArgumentValue`.
 
-An `Implementation` looks like, but is not, an associative entity relating `Specifications`, `Mechanisms`, and `Assertions`.
+An `Implementation` looks like, but is not, an associative entity relating `Specifications`, `Mechanisms`, and `Responses`.
 
 Each `Specification` is used in zero-to-many `Implementations`.
 Each `Mechanism` implements one-to-many `Implementations`.
-Each `Assertion` is produced by one and only one `Implementation`.
+Each `Response` is produced by one and only one `Implementation`.
 Each `Implementation` uses one and only one `Specification`.
 Each `Implementation` is implemented by one and only one `Mechanism`.
-Each `Implementation` produces one-to-many `Assertions`.
+Each `Implementation` produces one-to-many `Responses`.
 
-It is important that the chain of relationships from an instance of an `Assertion` to a `Data Quality Need` (e.g., an instance of a `bdqffdq:Validation`) be a chain of one-to-one relationships. To identify what Test with what `Parameters` made an `Assertion`, it must be possible to follow the chain of relationships from an `Assertion` to a single `Implementation` to a single `Specification` (with zero-to-many `Parameters`) to a single method to a single `Data Quality Need` (e.g., a `Validation`, with one-to-many `Information Elements`). Multiplicity should only be possible following on through `Policy` to `Use Cases` (an `Assertion` may pertain to multiple `Use Cases`), or when going from a `Data Quality Need` to `Assertions`. It is expected that an instance of a `Validation` would produce many instances of `Validation Assertions`, each of those `Validation Assertions` must be able to be related to the sole `Validation` that produced it.
+It is important that the chain of relationships from an instance of a `Response` to a `Data Quality Need` (e.g., an instance of a `bdqffdq:Validation`) be a chain of one-to-one relationships. To identify what Test with what `Parameters` made a `Response`, it must be possible to follow the chain of relationships from a `Response` to a single `Implementation` to a single `Specification` (with zero-to-many `Parameters`) to a single method to a single `Data Quality Need` (e.g., a `Validation`, with one-to-many `Information Elements`). Multiplicity should only be possible following on through `Policy` to `Use Cases` (a `Response` may pertain to multiple `Use Cases`), or when going from a `Data Quality Need` to `Responses`. It is expected that an instance of a `Validation` would produce many instances of `Validation Responses`, each of those `Validation Responses` must be able to be related to the sole `Validation` that produced it.
 
 ## 4 Term index (non-normative)
 

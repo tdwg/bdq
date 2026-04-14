@@ -527,7 +527,7 @@ For example: "VALIDATION_MINDEPTH_INRANGE with bdq:maximumValidDepthInMeters=164
 
 When a non-default `Argument` is used, a new instance of an `Implementation` linked to a new instance of a `Specification` linked to an instance of an `Argument` asserting the non-default value SHOULD be used. 
 
-When `Responses` are represented in RDF an `Response` produced by a Test run with a non-default `Argument` value
+When `Responses` are represented in RDF a `Response` produced by a Test run with a non-default `Argument` value
 - MUST NOT be linked to the instance of the `Specification` with the `Argument` with the default value, 
 - MUST be linked to novel instances of `Implementation`, `Specification`, and `Argument`, such that a query on the `Response` can identify what `Argument` value was used for the `Parameter` to produce the `Response`. It is the novel instances of these classes that provides the non-default value for software consumers.
 

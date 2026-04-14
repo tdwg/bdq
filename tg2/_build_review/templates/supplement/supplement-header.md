@@ -92,7 +92,7 @@ The following namespace abbreviations are used in this document:
 
 ## 2 Historical Context (non-normative)
 
-An internationally agreed standard suite of Tests and resulting `Assertions` can be used by all data providers, data collectors and data users to improve the quality of biodiversity data. This will facilitate more appropriate and more accurate use of biodiversity data. Other than data availability, ‘Data Quality’ is probably the most significant issue for users of biodiversity data and this is especially so for the research community. The BDQ Tests will not correct all issues that exist with the data, but reports from the Tests will hopefully identify issues that need to be addressed by users of the data. Such issues will require the user to make decisions - i.e., data that may need to be excluded, data that may need improvement before use, and data that can be used as they are. It is always the responsibility of the user to decide what data are of suitable quality for their use.
+An internationally agreed standard suite of Tests and resulting `Responses` can be used by all data providers, data collectors and data users to improve the quality of biodiversity data. This will facilitate more appropriate and more accurate use of biodiversity data. Other than data availability, ‘Data Quality’ is probably the most significant issue for users of biodiversity data and this is especially so for the research community. The BDQ Tests will not correct all issues that exist with the data, but reports from the Tests will hopefully identify issues that need to be addressed by users of the data. Such issues will require the user to make decisions - i.e., data that may need to be excluded, data that may need improvement before use, and data that can be used as they are. It is always the responsibility of the user to decide what data are of suitable quality for their use.
 
 ### 2.1 Definition of CORE (non-normative)
 
@@ -340,7 +340,7 @@ Can one find a summary of Tests by Test Type with specific Darwin Core Terms in 
     GROUP BY ?sie ?testType
     ORDER BY ?sie ?testType
 
-Given a `Specification` (as would be known when starting with a `bdqffdq:Assertion` and following `bdqffdq:producesAssertion` to a `bdqffdq:Implementation` then `bdqffdq:usesSpecification`), which Test was run with which argument values for which `Parameters`?
+Given a `Specification` (as would be known when starting with a `bdqffdq:Response` and following `bdqffdq:producesResponse` to a `bdqffdq:Implementation` then `bdqffdq:usesSpecification`), which Test was run with which argument values for which `Parameters`?
 
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -363,7 +363,7 @@ Given a `Specification` (as would be known when starting with a `bdqffdq:Asserti
       }
     }
 
-Given an `Assertion`, which Test was run with which `has Argument values` for which `Parameters` by which `Mechanism` to produce it: 
+Given an `Response`, which Test was run with which `has Argument values` for which `Parameters` by which `Mechanism` to produce it: 
 
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     PREFIX owl: <http://www.w3.org/2002/07/owl#>
@@ -378,7 +378,7 @@ Given an `Assertion`, which Test was run with which `has Argument values` for wh
          ?specification bdqffdq:hasArgument ?argument . ?argument bdqffdq:hasArgumentValue ?argumentValue . ?argument bdqffdq:hasParameter ?parameter .
          BIND (CONCAT(STR(?parameter), "=" , ?argumentValue ) as ?params )
       } .
-      ?implementation bdqffdq:usesSpecification ?specification . ?implementation bdqffdq:producesAssertion ?assertion .
+      ?implementation bdqffdq:usesSpecification ?specification . ?implementation bdqffdq:producesResponse ?assertion .
       ?implementation bdqffdq:implementedBy ?mechanism .
       FILTER (STR(?assertion) = "{id of assertion to look up}")
     }
@@ -513,7 +513,7 @@ The label is intended as the identifier of a Test for humans, the Term Name as a
 
 #### 2.4.2 Framework Competency Question including an oa:annotation (non-normative)
 
-The Fitness for Use Framework represents the results of `Validation` Tests as `Assertions`, which can be linked to biodiversity data records through `Annotations` following the W3C Web Annotation model. This structure allows detailed provenance and context to be recorded alongside each `Assertion`. The following competency question demonstrates how to retrieve all `Assertions` generated for a specific `dwc:Occurrence` record, including metadata such as the associated `Validation` Test, `Annotation` motivation, date of generation, and relevant `Parameters`.
+The Fitness for Use Framework represents the results of `Validation` Tests as `Responses`, which can be linked to biodiversity data records through `Annotations` following the W3C Web Annotation model. This structure allows detailed provenance and context to be recorded alongside each `Response`. The following competency question demonstrates how to retrieve all `Responses` generated for a specific `dwc:Occurrence` record, including metadata such as the associated `Validation` Test, `Annotation` motivation, date of generation, and relevant `Parameters`.
 
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     PREFIX owl: <http://www.w3.org/2002/07/owl#>
@@ -531,7 +531,7 @@ The Fitness for Use Framework represents the results of `Validation` Tests as `A
          BIND (CONCAT(STR(?parameter), "=" , ?argumentValue ) as ?params )
       } .
       ?implementation bdqffdq:usesSpecification ?specification . 
-      ?implementation bdqffdq:producesAssertion ?assertion .
+      ?implementation bdqffdq:producesResponse ?assertion .
       ?implementation bdqffdq:implementedBy ?mechanism .
       ?assertion bdqffdq:hasResponseStatus ?responsestatus .
       OPTIONAL { ?assertion bdqffdq:hasResponseResult ?responseresult . }
@@ -569,7 +569,7 @@ At one point, we aligned the documentation for over sixty Tests that were tagged
 
 The team identified a fundamental problem early in the development of the Tests: Darwin Core lacked a comprehensive suite of controlled vocabularies. We could not test for quality of values when there was no vocabulary of values available.  We recognized the value of the original lack of constraints on terms in the Darwin Core standard, yet we also recognized that quality and potential improvement of data could not be assessed without controlled vocabularies in many cases.  This conclusion effectively initiated [Data Quality Task Group 4: Best Practices for Development of Vocabularies of Values](https://www.tdwg.org/community/bdq/tg-4/) to provide a framework for how these vocabularies could be developed for a priority set of Darwin Core Terms where such vocabularies would b valuable. This in turn has resulted in GBIF initiating https://github.com/gbif/vocabulary, and see also the document [GBIF Vocabularies](https://dev.gbif.org/issues/browse/GBIF-121/gbif-vocabularies-review_v01.docx).
 
-Over the course of the development of the Tests, we encountered significant difficulties with choices of words to describe the Tests. In the original formulation of the Framework (Veiga 2016), different words were used to describe parallel concepts at the levels of Data Quality Needs, Solutions, and Reports, and the words used for fundamental concepts overlapped with those for derived concepts. We settled on `Criterion`, `Dimension`, and `Enhancement` as the words for fundamental concepts, and variations on `Validation` (`Validation`, `ValidationMethod`, `ValidationAssertion`), `Issue`, `Measure`, and `Amendment` for derived concepts. It was very late in development of the Test specifications that we realized that the heart of what we were calling `Validation` mapped to the derived concept of `CriterionInContext`/`ContextualizedCriterion` in the Framework (Veiga et al. 2017), so we have renamed the Framework concepts for clarity.
+Over the course of the development of the Tests, we encountered significant difficulties with choices of words to describe the Tests. In the original formulation of the Framework (Veiga 2016), different words were used to describe parallel concepts at the levels of Data Quality Needs, Solutions, and Reports, and the words used for fundamental concepts overlapped with those for derived concepts. We settled on `Criterion`, `Dimension`, and `Enhancement` as the words for fundamental concepts, and variations on `Validation` (`Validation`, `ValidationMethod`, `ValidationResponse`), `Issue`, `Measure`, and `Amendment` for derived concepts. It was very late in development of the Test specifications that we realized that the heart of what we were calling `Validation` mapped to the derived concept of `CriterionInContext`/`ContextualizedCriterion` in the Framework (Veiga et al. 2017), so we have renamed the Framework concepts for clarity.
 
 Early on we also recognized that the Data Quality Framework required us to frame `Multi Record` `Measures` in order to support the formal requirements in the Fitness For Use Framework for Quality Control and Quality Assurance, which are defined as only involving `Measures`. We recognized that these would be simple, repetitive, formal statements about the results of `Validations`, so we put off defining these until very late in the process. They proved straightforward to frame and then generate from the set of adopted CORE `Single Record` Tests.
 
@@ -586,7 +586,7 @@ Tests are identified by the bdqffdq: namespace classes of Validation, Issue, Mea
 3. A `Response.status` of "RUN_HAS_RESULT" when the prerequisites for running the Test have been met, and in this situation:
   - A `Response.result` of either "COMPLIANT" if the values of the `Information Elements` meet the `Criteria`, or "NOT_COMPLIANT" when they do not.
 
-During the development of the BDQ standard, there were significant discussions about how Tests were to be phrased. For several contributors (and all Tests implemented by agencies such as the ALA and GBIF), the most natural form seemed to be to describe `Assertions` in the negative sense, identifying problems. The BDQ [Fitness for Use Framework Ontology](../bdqffdq/index.md), however, focused entirely on positive statements, identifying data that have quality and are fit for purpose. Over the evolution of the description of the Tests, we conformed the language to the positive sense of the Framework in almost all cases. `Validations` are thus phrased in the Framework sense of being COMPLIANT if the data have quality with respect to the Test evaluation `Criteria`. There were, however, a set of cases that didn't fit well into this positive sense, see [3.1.2 Issues (non-normative)](#312-issues-non-normative).
+During the development of the BDQ standard, there were significant discussions about how Tests were to be phrased. For several contributors (and all Tests implemented by agencies such as the ALA and GBIF), the most natural form seemed to be to describe `Responses` in the negative sense, identifying problems. The BDQ [Fitness for Use Framework Ontology](../bdqffdq/index.md), however, focused entirely on positive statements, identifying data that have quality and are fit for purpose. Over the evolution of the description of the Tests, we conformed the language to the positive sense of the Framework in almost all cases. `Validations` are thus phrased in the Framework sense of being COMPLIANT if the data have quality with respect to the Test evaluation `Criteria`. There were, however, a set of cases that didn't fit well into this positive sense, see [3.1.2 Issues (non-normative)](#312-issues-non-normative).
 
 #### 3.1.2 Issues (non-normative)
 
@@ -608,13 +608,13 @@ Most `Single Record` `Measure` Tests defined in the BDQ standard count the numbe
 
 `Amendment` Tests may propose a change to one or more [Darwin Core Terms](http://rs.tdwg.org/dwc/doc/list/) (Darwin Core Maintenance Group 2021) values or fill in missing values. `Amendments` are intended to improve one or more components of the quality of the record. The `Response.result` from an `Amendment` is a proposal for a change that is not to be blindly applied to a database of record when a `Data Quality Report` is used for Quality Control of an existing record. Consumers of `Data Quality Reports` under Quality Assurance may choose to (blindly - not recommended, or after review) accept all proposed `Amendments` as part of a pipeline in preparing data for an analysis. We urge that `Amendments` do not overwrite existing information within a database; that existing information is preserved, as well as the potential changes.
 
-The Framework also supports `Amendments` where the `Response.result` is a proposal to a change in procedure, such as suggesting that a constraint should be placed on a database field to restrict allowed values, or that a mapping of a dataset onto [Darwin Core Terms](http://rs.tdwg.org/dwc/doc/list/) (Darwin Core Maintenance Group 2021) has transposed a set of fields. We have not framed any such Tests of this form in the BDQ standard, nor have we considered how such `Assertions` should be represented in a `Response.result`.
+The Framework also supports `Amendments` where the `Response.result` is a proposal to a change in procedure, such as suggesting that a constraint should be placed on a database field to restrict allowed values, or that a mapping of a dataset onto [Darwin Core Terms](http://rs.tdwg.org/dwc/doc/list/) (Darwin Core Maintenance Group 2021) has transposed a set of fields. We have not framed any such Tests of this form in the BDQ standard, nor have we considered how such `Responses` should be represented in a `Response.result`.
 
 In the BDQ standard, we have taken a pragmatic approach to implementing `Amendments` by incorporating code in our Tests that attempts to identify likely unambiguous matches. While this is not an ideal solution, it enables `Amendments` to add potential value to Darwin Core data records.
 
 ### 3.2 MultiRecord Tests (non-normative)
 
-When defining a Test, the Test Type (`Validation`, `Issue`, `Measure`, `Amendment`) is composed with a `Resource Type` (`bdqffdq:SingleRecord` or `bdqffdq:MultiRecord`). This determines if the Test results in `Assertions` about a single record or a dataset as a whole.
+When defining a Test, the Test Type (`Validation`, `Issue`, `Measure`, `Amendment`) is composed with a `Resource Type` (`bdqffdq:SingleRecord` or `bdqffdq:MultiRecord`). This determines if the Test results in `Responses` about a single record or a dataset as a whole.
 
 #### 3.2.1 MultiRecord Validations, Issues, Amendments (non-normative)
 
@@ -711,7 +711,7 @@ Where there are options available for a resource that supports the Test, it will
 
 `Parameters` within the namespace `bdqffdq:` have been modeled as falling within the realm of data quality solutions.  Parameters are not attributes of the data, nor are they attributes of `Data Quality Needs`.
 
-Since a value supplied for a `Parameter` for the Test is an attribute of the `Mechanism` (of the system assessing the data quality), the specification of a Test cannot evaluate the validity of `Parameter` values as a part of the Test logic. Consequences from problems with the validity of values of `Parameters` (e.g., an incorrect IRI for a `sourceAuthority` API endpoint) may only result in `Response.status`="EXTERNAL_PREREQUISITES_NOT_MET" values, as `Parameters` are `Assertions` about externalities to the data and may change if the same data are applied to the same Test with a different `Parameter` configuration.
+Since a value supplied for a `Parameter` for the Test is an attribute of the `Mechanism` (of the system assessing the data quality), the specification of a Test cannot evaluate the validity of `Parameter` values as a part of the Test logic. Consequences from problems with the validity of values of `Parameters` (e.g., an incorrect IRI for a `sourceAuthority` API endpoint) may only result in `Response.status`="EXTERNAL_PREREQUISITES_NOT_MET" values, as `Parameters` are assertions about externalities to the data and may change if the same data are applied to the same Test with a different `Parameter` configuration.
 
 `Parameters` are not intended to relax the definition of data having quality for core needs. The specifications deliberately do not include `Parameters` that would relax Tests on secondary terms for downstream research users or tighten them for upstream data capture. Tests serving the needs of users engaged in data capture or preparing data for aggregation, but not serving the needs of downstream aggregators or research users were considered, but deemed not CORE. We have similarly resisted the temptation to Parameterize Tests to meet the needs of different portions of the data life cycle.
 
@@ -735,10 +735,10 @@ BDQ `Amendment`-type Tests **propose** changes. It is the responsibility of the 
 
 The [Biodiversity Information Standards (TDWG) Annotations Interest Group](https://github.com/tdwg/annotations) has identified the W3C Web Annotation Data Model (W3C 2017) as a viable model for `Annotations`. The BDQ standard supports the W3C Annotation Data Model (W3C 2017) for reporting the results from Tests, including `Amendment`-type Tests. 
 
-A `bdqffdq:Assertion`, with its `Response.status`, `Response.result`, and a `Response.comment` can form the body of an annotation, which can be related to an `oa:Annotation` through `oa:body`. A competency question in [2.4 Framework Competency Questions (non-normative)](#24-framework-competency-questions-non-normative) illustrates how `Assertions` made by BDQ Tests that are wrapped in `oa:Annotations` could be retrieved. One Test, [ISSUE_ANNOTATION_NOTEMPTY](../terms/bdqtest/index.md#ISSUE_ANNOTATION_NOTEMPTY), specifically targets record `Annotations`.
+A `bdqffdq:Response`, with its `Response.status`, `Response.result`, and a `Response.comment` can form the body of an annotation, which can be related to an `oa:Annotation` through `oa:body`. A competency question in [2.4 Framework Competency Questions (non-normative)](#24-framework-competency-questions-non-normative) illustrates how `Responses` made by BDQ Tests that are wrapped in `oa:Annotations` could be retrieved. One Test, [ISSUE_ANNOTATION_NOTEMPTY](../terms/bdqtest/index.md#ISSUE_ANNOTATION_NOTEMPTY), specifically targets record `Annotations`.
 
 
-Below is an example of a `bdqffdq:Assertion` forming the body of an `oa:Annotation`, with triples indicating the implementation that produced the `Assertion` and relating it back to a `bdqtest:Specification` (from which the metadata about the Test that was run can be identified).
+Below is an example of a `bdqffdq:Response` forming the body of an `oa:Annotation`, with triples indicating the implementation that produced the `Response` and relating it back to a `bdqtest:Specification` (from which the metadata about the Test that was run can be identified).
 
     @prefix bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/> .
     @prefix oa:      <http://www.w3.org/ns/oa#> .
@@ -746,7 +746,7 @@ Below is an example of a `bdqffdq:Assertion` forming the body of an `oa:Annotati
     @prefix prov:    <http://www.w3.org/ns/prov#> .
     @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
 
-    <https://example.org/bdq/assertion/51967574-7be9-4e38-938c-5dfec2d4d61d> a bdqffdq:ValidationAssertion ;
+    <https://example.org/bdq/assertion/51967574-7be9-4e38-938c-5dfec2d4d61d> a bdqffdq:ValidationResponse ;
         bdqffdq:hasResponseStatus bdqffdq:RUN_HAS_RESULT ;
         bdqffdq:hasResponseResult bdqffdq:COMPLIANT ;
         bdqffdq:hasResponseComment "Exact Match found for [Chicoreus palmarosae (Lamarck, 1822)] to [https://www.gbif.org/species/4365662] running VALIDATION_SCIENTIFICNAME_FOUND." ;
@@ -765,7 +765,7 @@ Below is an example of a `bdqffdq:Assertion` forming the body of an `oa:Annotati
 
 	<urn:uuid:f3a41284-093c-4b7e-8054-a32456a7a427> a bdqffdq:Implementation ;
         bdqffdq:implementedBy <urn:uuid:90516df7-838c-4d53-81d9-8131be6ac713> ;
-        bdqffdq:producesAssertion <https://example.org/bdq/assertion/51967574-7be9-4e38-938c-5dfec2d4d61d> ;
+        bdqffdq:producesResponse <https://example.org/bdq/assertion/51967574-7be9-4e38-938c-5dfec2d4d61d> ;
         bdqffdq:usesSpecification <urn:uuid:3c2fe7e9-186f-4ceb-8274-8bbcb4a62de4> .
 
 Combined with `bdqtest:` these triples will return a result from the competency question in [2.4.2](#242-framework-competency-question-including-an-oaannotation-non-normative).
@@ -803,7 +803,7 @@ A number of BDQ Tests assert a 'lack of quality' for records representing events
 
 ### 3.10 Tests and Test Vocabularies (non-normative)
 
-The BDQ Tests and their associated `Assertions` were the central focus of our work. To produce those outputs, we needed to describe each Test in a way that was both comprehensive and consistent. Although the Data Quality Framework (Veiga 2016; Veiga et al. 2017) had already developed a formal model for representing data quality concepts, along with an ontology for describing 'data quality' and 'fitness for use', our initial approach to modeling Tests was largely independent and bottom-up in nature.  We saw this as a useful strategy, as time would tell how the Framework and our Tests interacted.
+The BDQ Tests and their associated `Responses` were the central focus of our work. To produce those outputs, we needed to describe each Test in a way that was both comprehensive and consistent. Although the Data Quality Framework (Veiga 2016; Veiga et al. 2017) had already developed a formal model for representing data quality concepts, along with an ontology for describing 'data quality' and 'fitness for use', our initial approach to modeling Tests was largely independent and bottom-up in nature.  We saw this as a useful strategy, as time would tell how the Framework and our Tests interacted.
 
 As described earlier, we began by surveying the types of data quality Tests already in use by agencies and other community stakeholders. We identified gaps, then developed inclusion and exclusion `Criteria` to determine which Tests should be part of the BDQ standard. From there, we began standardizing how each included Test was described, which led to the creation of a shared set of descriptive terms.
 
@@ -843,7 +843,7 @@ Given that the Tests are based on Darwin Core terms, we 'piggy-back' on the comm
 
 **Simple**. Each Test specification must be as simple as possible. The more complex a Test, the more difficult it will be to implement and to evaluate against real-world data. While the human-readable description of the Test may be open to interpretation, Test specifications were written to allow for no ambiguity. In some cases, this has meant that some specifications are lengthy, but required if implementation and interpretation are to be accurate. For example, [VALIDATION_GEOGRAPHY_STANDARD](https://github.com/tdwg/bdq/issues/139) was proposed, but abandoned after discussion and tagged as "DO NOT IMPLEMENT" because it would be too complex to capture in a clean and simple specification. Conversely, [VALIDATION_DAY_STANDARD](../terms/bdqtest/index.md#VALIDATION_DAY_STANDARD) asks one simple question: is the value of `dwc:day` an integer in the range 1 to 31 inclusive.
 
-**Atomic**. Specification should be as atomic as possible, dealing with only a single evaluation. For example, evaluating `dwc:minimumDepthInMeters` should involve separate Tests to evaluate if a value is present, if the value is numeric, if the value is within a reasonable range, or if the `dwc:minimumDepthInMeters` is smaller (shallower) or equal to the `dwc:maximumDepthInMeters`. These should not be combined into a single Test. Tests that rely upon an interpretable value may build on a logic that evaluates as INTERNAL_PREREQUISITES_NOT_MET if no value is present or if it is not interpretable before proceeding to the central `Assertion` of the Test. Each Test should be designed to be independent of other Tests. For example, the Test [ISSUE_DAYMONTH_SWAPPED](https://github.com/tdwg/bdq/issues/37) was proposed, but abandoned and tagged as "DO NOT IMPLEMENT", in part because of the comment identifying potentially entangled causes and a lack of atomicity: "It would seem this Test assumes that there is a transposition as opposed to just an error in the month field. It is risky to assume that, and could lead to other or greater issues." [comment by Paula Zermoglio](https://github.com/tdwg/bdq/issues/37#issuecomment-357280140). Conversely, [VALIDATION_DAY_STANDARD](../terms/bdqtest/index.md#VALIDATION_DAY_STANDARD) and [VALIDATION_DAY_INRANGE](../terms/bdqtest/index.md#VALIDATION_DAY_INRANGE) are related in terms of their target, `dwc:day`, but different in terms of questions about the value of that term, each separating out a distinct element of quality.
+**Atomic**. Specification should be as atomic as possible, dealing with only a single evaluation. For example, evaluating `dwc:minimumDepthInMeters` should involve separate Tests to evaluate if a value is present, if the value is numeric, if the value is within a reasonable range, or if the `dwc:minimumDepthInMeters` is smaller (shallower) or equal to the `dwc:maximumDepthInMeters`. These should not be combined into a single Test. Tests that rely upon an interpretable value may build on a logic that evaluates as INTERNAL_PREREQUISITES_NOT_MET if no value is present or if it is not interpretable before proceeding to the central assertion and thus `Response` of the Test. Each Test should be designed to be independent of other Tests. For example, the Test [ISSUE_DAYMONTH_SWAPPED](https://github.com/tdwg/bdq/issues/37) was proposed, but abandoned and tagged as "DO NOT IMPLEMENT", in part because of the comment identifying potentially entangled causes and a lack of atomicity: "It would seem this Test assumes that there is a transposition as opposed to just an error in the month field. It is risky to assume that, and could lead to other or greater issues." [comment by Paula Zermoglio](https://github.com/tdwg/bdq/issues/37#issuecomment-357280140). Conversely, [VALIDATION_DAY_STANDARD](../terms/bdqtest/index.md#VALIDATION_DAY_STANDARD) and [VALIDATION_DAY_INRANGE](../terms/bdqtest/index.md#VALIDATION_DAY_INRANGE) are related in terms of their target, `dwc:day`, but different in terms of questions about the value of that term, each separating out a distinct element of quality.
 
 **Deterministic**. Tests should be deterministic. When presented with the same input and the same configuration, different Test implementations and different runs of the same Test should produce the same results. Each Test that references a controlled vocabulary must do so with an explicit statement of what the `sourceAuthority` for that vocabulary is.
 
@@ -1044,7 +1044,7 @@ This diagram illustrates the relationships among the Tests that are oriented tow
 
 Each Test issue in GitHub begins with a table in Markdown format describing the Test. The terminology of the Test descriptors in this Markdown table documented below differs slightly from the terms used in the Framework, but represent all key aspects of each Test. Some descriptors such as the GUID are intended for machine consumption. Others, such as the "Description" are designed to be human-readable for consumers of biodiversity `Data Quality Reports` while descriptors such as the "Specification" ensure that implementers have no ambiguity about how the Test should behave.
 
-**Title** [non-normative]: A standardized, human readable name of the Test/Assertion based roughly on the template TG2-TESTTYPE_INFORMATIONELEMENT_CRITERIA, for example `TG2-VALIDATION_BASISOFRECORD_STANDARD`. These names were considered helpful for human-human communication and assisted with code implementation, maintenance and searches. A number of the Tests did however, only loosely conform to this template due to the difficulty of rendering them otherwise, for example `TG2-VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION`, but the titles remained obvious and therefore useful.
+**Title** [non-normative]: A standardized, human readable name of the Test based roughly on the template TG2-TESTTYPE_INFORMATIONELEMENT_CRITERIA, for example `TG2-VALIDATION_BASISOFRECORD_STANDARD`. These names were considered helpful for human-human communication and assisted with code implementation, maintenance and searches. A number of the Tests did however, only loosely conform to this template due to the difficulty of rendering them otherwise, for example `TG2-VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION`, but the titles remained obvious and therefore useful.
 
 **GUID** [normative]: A globally unique identifier (e.g., 8f1e6e58-544b-4365-a569-fb781341644e) that allows software to uniquely identify each Test. The GUID in the Markdown table becomes the local part of the IRI for the Test (e.g., `https://rs.tdwg.org/bdqtest/terms/8f1e6e58-544b-4365-a569-fb781341644e`) when translated to RDF.
 

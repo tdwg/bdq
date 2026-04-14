@@ -444,7 +444,7 @@ See also:
 
 #### 4.7.1 What Isn't Said in the Test Specification (non-normative)
 
-For the purposes of simplicity and clarity, the expected response does not include all the details of a Response from a Test, just the key elements that implementers need to understand the logic of the Test.  The response from a Test is required to contain metadata (`bdqffdq:hasResponseStatus`), the value of the result of the Test (`bdqffdq:hasResponseResult` or `bdqffdq:hasResponseResultValue`) and a human readable statement about why the Test reached the conclusion it did in a particular case (`bdqffdq:hasResponseComment`).   
+For the purposes of simplicity and clarity, the expected response does not include all the details of a `Response` from a Test, just the key elements that implementers need to understand the logic of the Test.  The response from a Test is required to contain metadata (`bdqffdq:hasResponseStatus`), the value of the result of the Test (`bdqffdq:hasResponseResult` or `bdqffdq:hasResponseResultValue`) and a human readable statement about why the Test reached the conclusion it did in a particular case (`bdqffdq:hasResponseComment`).   
 
 **Expected Response** COMPLIANT if dwc:footprintWKT is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
@@ -452,7 +452,7 @@ This is shorthand for the explicit, but much harder to read:
 * bdqffdq:hasResponseStatus is RUN_HAS_RESULT and bdqffdq:hasResponseResult is COMPLIANT with an explanatory bdqffdq:hasResponseComment that dwc:footprintWKT contains a value if dwc:footprintWKT is bdq:NotEmpty; 
 * otherwise bdqffdq:hasResponseStatus is RUN_HAS_RESULT and bdqffdq:hasResponseResult is NOT_COMPLIANT with an explanatory bdqffdq:hasResponseComment stating that dwc:footprintWKT contains no value.
 
-Responses from Tests must have the tripartite status, result, and comment structure, but the `Expected Response` in the test specification is a concise statement of the logic of the test, without all of these details (details for which the content is explicit in the BDQ standard, e.g. if the result is COMPLIANT, the status must be RUN_HAS_RESULT, and there must be a comment).
+`Responses` from Tests must have the tripartite status, result, and comment structure, but the `Expected Response` in the test specification is a concise statement of the logic of the test, without all of these details (details for which the content is explicit in the BDQ standard, e.g. if the result is COMPLIANT, the status must be RUN_HAS_RESULT, and there must be a comment).
 
 The conventions of evaluating clauses in sequence, returning a result from the first clause that evaluates to true, and highlighting only the key differences in each clause are very important in making complex Expected Responses readable and understandable to implementers.  (see, for example, the Expected Response for [VALIDATION_DATEIDENTIFIED_INRANGE](../terms/bdqtest/index.md#validation_dateidentified_inrange)).
 
@@ -807,7 +807,7 @@ A BDQ Test implementation is expected to have a consistent scope and API shape a
 * Logic (decision rules): evaluate the clauses in the specification (`hasExpectedResponse`) in order, returning the first matching outcome (handling EXTERNAL_PREREQUISITES_NOT_MET via exception/error handling where appropriate).  
 * Output: exactly one structured Response per run, always providing a `Response.status` and a `Response.comment`, and providing a `Response.result` only when `Response.status` indicates a result (typically RUN_HAS_RESULT).
 
-We use Response as shorthand for the `Assertion` produced by running a Test, which carries `Response.status`, `Response.result`, and `Response.comment` properties (see [Structure of Response](../bdqtest/index.md#31-structure-of-response-normative) in the bdqtest: landing page).
+We use a shorthand for the set of properties associated with a `Response` that are produced by running a Test.  A `Response` carries `Response.status`, `Response.result`, and `Response.comment` properties (see [Structure of Response](../bdqtest/index.md#31-structure-of-response-normative) in the bdqtest: landing page).
 
 BDQ keeps Tests portable by standardizing semantics (inputs, decision rules, outputs), but it leaves binding of raw data inputs to `InformationElements` and execution mechanics (orchestration of test execution) to whatever framework fits the implementer's environment.  This means that the behavior of the implementation of an individual Test should be tested in isolation, presenting the Test with known inputs, and confirming that the Test produces the expected outputs based on the logic of the decision rules in the specification.  This means that Test conformance testing is expected to be performed on the level of individual Test implementations.
 
@@ -990,7 +990,7 @@ The BDQ Test specifications (the Specification text in bdqffdq:hasExpectedRespon
 * How records are streamed/batched/parallelized in a workflow.
 * What programming language(s) are used.
 * How methods are discovered/invoked (reflection, registry, function pointers, workflow nodes).
-* How Responses are serialized/persisted (objects, rows, RDF bdqffdq:Assertion, annotations).
+* How Responses are serialized/persisted (objects, rows, RDF bdqffdq:Response, annotations).
 * How Responses are presented to users or downstream processes (logs, dashboards, annotations).
 
 #### 7.4.1 What an execution framework must do between raw data and a Test implementation (non-normative)
@@ -1017,7 +1017,7 @@ A framework’s job is to act as the “adapter layer” that turns heterogeneou
     * `Response.status` from the controlled vocabulary (e.g. RUN_HAS_RESULT, EXTERNAL_PREREQUISITES_NOT_MET),
     * `Response.result` as required by status and `Test Type`, and
     * a `Response.comment` that is `bdq:NotEmpty`.
-  * Optionally wrap/serialize as RDF assertions (`bdqffdq:Assertion`) or as W3C Annotations, as that representation choice is outside the Test itself.
+  * Optionally wrap/serialize as RDF assertions (`bdqffdq:Response`) or as W3C Annotations, as that representation choice is outside the Test itself.
 
 * Present results to users and/or downstream processes
   * This could be as simple as logging, or as complex as a dashboard or API response (e.g., BDQEmail). 
@@ -1065,7 +1065,7 @@ The `Use Case` we have been working with in this tutorial is focused on `Quality
 
 This tutorial has focused on defining `SingleRecord` Tests (primarily `Validations`) that evaluate one record at a time. In practice, `Quality Control` almost always requires a dataset-level view: curators, data managers, and developers need to know **how prevalent** a particular problem is, **where** it occurs, and **whether** proposed changes would measurably improve fitness for a `Use Case`.
 
-In the BDQ Fitness for Use Framework, that dataset-level view is provided by `MultiRecord` `Measures` (`bdqffdq:Measure` with resource type `bdqffdq:MultiRecord`). These `Measures` operate over the collection of Responses (i.e., `Assertions`) produced by running one or more `SingleRecord` Tests across all records in a dataset, and they return a **single summary value** in `Response.result` (either a single number, or one of `COMPLETE`/`NOT_COMPLETE`).
+In the BDQ Fitness for Use Framework, that dataset-level view is provided by `MultiRecord` `Measures` (`bdqffdq:Measure` with resource type `bdqffdq:MultiRecord`). These `Measures` operate over the collection of `Responses` produced by running one or more `SingleRecord` Tests across all records in a dataset, and they return a **single summary value** in `Response.result` (either a single number, or one of `COMPLETE`/`NOT_COMPLETE`).
 
 Before we focus on `MultiRecord` `Measures`, it is helpful to distinguish three common patterns of `Measures` in BDQ:
 
@@ -1083,8 +1083,8 @@ Conceptually what we want to do with `MultiRecord` `Measures` is:
 
 1. Choose a `Use Case` (e.g., "Validated Distribution Authority"), and from the `ValidationPolicy` that relates the `Use Case` to `Validations`, identify the `SingleRecord` `Validation` Tests for that `Use Case`.
 2. Run the relevant `SingleRecord` `Validation` Tests over all records in the dataset.
-3. Collect the resulting Responses (`Assertions`).
-4. Run one or more `MultiRecord` `Measures` that take these `Assertions` as input to summarize how many quality issues exist where in the dataset.
+3. Collect the resulting `Responses`.
+4. Run one or more `MultiRecord` `Measures` that take these `Responses` as input to summarize how many quality issues exist where in the dataset.
    * If there are only a small number of problems, we can fix them, and repeat the process to confirm that the fixes worked.
    * If there are a large number of problems, we can use the `MultiRecord` `Measures` to prioritize which problems to fix first, that is identify where to focus effort for improving the data quality for the `Use Case`.
 5. Act upon the results of those `MultiRecord` `Measures` to prioritize and direct `Quality Control` efforts (or filter records for `Quality Assurance`).
@@ -1265,7 +1265,7 @@ Let's assume that we've got a set of distribution data, and that we can map that
 
 Our dataset would include the following `Information Elements` `scientificName, scientificNameAuthorship, scientificNameID, geodeticDatum, footprintWKT, wasAttributedTo`.
 
-Now we could run the set of Tests against our dataset (of, say, 10000 records).  The workflow may include taking the resulting Responses (`Assertions`), and using them as input for the `MultiRecord` `Measures` listed above to get counts of compliant records for each of those `Validations`.  We could then use those counts to prioritize our `Quality Control` efforts.
+Now we could run the set of Tests against our dataset (of, say, 10000 records).  The workflow may include taking the resulting `Responses`, and using them as input for the `MultiRecord` `Measures` listed above to get counts of compliant records for each of those `Validations`.  We could then use those counts to prioritize our `Quality Control` efforts.
 
 We might find:
 | Test | Count of COMPLIANT records | Calculated percentage of all records |
