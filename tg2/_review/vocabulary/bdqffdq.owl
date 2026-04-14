@@ -59,9 +59,9 @@ bdqffdq:amendmentProperty rdf:type owl:ObjectProperty ;
 ###  https://rs.tdwg.org/bdqffdq/terms/appliesTo
 bdqffdq:appliesTo rdf:type owl:ObjectProperty ;
                   dcterms:issued "2024-09-30"^^xsd:date ;
-                  rdfs:comment "If a bdqffdq:Assertion forms the oa:body of an oa:Annotation, the bdqffdq:appliesTo bdqffdq:DataResource would be the oa:target of the bdqffdq:Annotation. If bdqffdq:Assertions are composed in bdqffdq:DataQualityReports, the bdqffdq:appliesTo bdqffdq:DataResource is an item examined as part of the bdqffdq:DataQualityReport. Expectation for bdqffdq:SingleRecord Test bdqffdq:Assertions on Darwin Core data in the BDQ standard is that bdqffdq:appliesTo would point at a dwc:Occurrence record."@en ;
+                  rdfs:comment "If a bdqffdq:Response forms the oa:body of an oa:Annotation, the bdqffdq:appliesTo bdqffdq:DataResource would be the oa:target of the bdqffdq:Annotation. If bdqffdq:Responses are composed in bdqffdq:DataQualityReports, the bdqffdq:appliesTo bdqffdq:DataResource is an item examined as part of the bdqffdq:DataQualityReport. Expectation for bdqffdq:SingleRecord Test bdqffdq:Responses on Darwin Core data in the BDQ standard is that bdqffdq:appliesTo would point at a dwc:Occurrence record."@en ;
                   rdfs:label "applies To"@en ;
-                  skos:definition "Describes the bdqffdq:DataResource about which a bdqffdq:Assertion is made."@en ;
+                  skos:definition "Describes the bdqffdq:DataResource about which a bdqffdq:Response is made."@en ;
                   skos:prefLabel "applies To"@en .
 
 
@@ -74,13 +74,13 @@ bdqffdq:composedOf rdf:type owl:ObjectProperty ;
                    skos:prefLabel "composed Of"@en .
 
 
-###  https://rs.tdwg.org/bdqffdq/terms/containsAssertion
-bdqffdq:containsAssertion rdf:type owl:ObjectProperty ;
+###  https://rs.tdwg.org/bdqffdq/terms/containsResponse
+bdqffdq:containsResponse rdf:type owl:ObjectProperty ;
                           dcterms:issued "2024-09-30"^^xsd:date ;
-                          rdfs:comment "Connects bdqffdq:Assertions together into bdqffdq:DataQualityReports. Alternatively, bdqffdq:Assertions can be contained in oa:Annotations, in which case this property is not used."@en ;
-                          rdfs:label "contains Assertion"@en ;
-                          skos:definition "Connects a bdqffdq:DataQualityReport with bdqffdq:Assertions that comprise that bdqffdq:DataQualityReport."@en ;
-                          skos:prefLabel "contains Assertion"@en .
+                          rdfs:comment "Connects bdqffdq:Responses together into bdqffdq:DataQualityReports. Alternatively, bdqffdq:Responses can be contained in oa:Annotations, in which case this property is not used."@en ;
+                          rdfs:label "contains Response"@en ;
+                          skos:definition "Connects a bdqffdq:DataQualityReport with bdqffdq:Responses that comprise that bdqffdq:DataQualityReport."@en ;
+                          skos:prefLabel "contains Response"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/forAmendment
@@ -158,7 +158,7 @@ bdqffdq:hasActedUponInformationElement rdf:type owl:ObjectProperty ;
                                        dcterms:issued "2024-09-30"^^xsd:date ;
                                        rdfs:comment "Provides a relationship between bdqffdq: concepts and the bdqffdq:InformationElements that are bdqffdq:ActedUpon in a Test."@en ;
                                        rdfs:label "has Acted Upon Information Element"@en ;
-                                       skos:definition "Describes the bdqffdq:ActedUpon bdqffdq:InformationElements assessed by a bdqffdq:DataQualityNeed about which bdqffdq:Assertions arising from the bdqffdq:DataQualityNeed would apply."@en ;
+                                       skos:definition "Describes the bdqffdq:ActedUpon bdqffdq:InformationElements assessed by a bdqffdq:DataQualityNeed about which bdqffdq:Responses arising from the bdqffdq:DataQualityNeed would apply."@en ;
                                        skos:prefLabel "has Acted Upon Information Element"@en .
 
 
@@ -178,7 +178,7 @@ bdqffdq:hasConsultedInformationElement rdf:type owl:ObjectProperty ;
                                        dcterms:issued "2024-09-30"^^xsd:date ;
                                        rdfs:comment "Provides a relationship between bdqffdq: concepts and the bdqffdq:InformationElements that are bdqffdq:Consulted, but not bdqffdq:ActedUpon in a Test."@en ;
                                        rdfs:label "has Consulted Information Element"@en ;
-                                       skos:definition "Describes the bdqffdq:InformationElements assessed by a bdqffdq:DataQualityNeed in order to make bdqffdq:Assertions concerning bdqffdq:ActedUpon bdqffdq:InformationElements."@en ;
+                                       skos:definition "Describes the bdqffdq:InformationElements assessed by a bdqffdq:DataQualityNeed in order to make bdqffdq:Responses concerning bdqffdq:ActedUpon bdqffdq:InformationElements."@en ;
                                        skos:prefLabel "has Consulted Information Element"@en .
 
 
@@ -240,7 +240,7 @@ bdqffdq:hasInformationElement rdf:type owl:ObjectProperty ;
                               dcterms:issued "2024-09-30"^^xsd:date ;
                               rdfs:comment """Provides a relationship between bdqffdq:DataQualityNeed concepts and bdqffdq:InformationElements. For example, bdqffdq:Validation uses this property with bdqffdq:hasResourceType to define a bdqffdq:Criterion in the context of related bdqffdq:InformationElements.
 
-Subtypes bdqffdq:hasActedUponInformationElement and bdqffdq:hasConsultedInformationElement allow a bdqffdq:DataQualityNeed to be related to specific bdqffdq:InformationElement terms in a way that allows bdqffdq:DataQualityReports to distinguish for consumers which bdqffdq:InformationElements a Test makes bdqffdq:Assertions about (and which only informed that bdqffdq:Assertion)."""@en ;
+Subtypes bdqffdq:hasActedUponInformationElement and bdqffdq:hasConsultedInformationElement allow a bdqffdq:DataQualityNeed to be related to specific bdqffdq:InformationElement terms in a way that allows bdqffdq:DataQualityReports to distinguish for consumers which bdqffdq:InformationElements a Test makes bdqffdq:Responses about (and which only informed that bdqffdq:Response)."""@en ;
                               rdfs:label "has Information Element"@en ;
                               skos:definition "Describes the bdqffdq:InformationElements assessed by a bdqffdq:DataQualityNeed."@en ;
                               skos:prefLabel "has Information Element"@en .
@@ -271,7 +271,7 @@ bdqffdq:hasResponseQualifier rdf:type owl:ObjectProperty ;
                              dcterms:issued "2024-09-30"^^xsd:date ;
                              rdfs:comment "Optional extension point, could be used to add structured information about uncertainty."@en ;
                              rdfs:label "has Response Qualifier"@en ;
-                             skos:definition "ResponseQualifier object asserted by an Assertion."@en ;
+                             skos:definition "ResponseQualifier object asserted by an Response."@en ;
                              skos:prefLabel "has Response Qualifier"@en .
 
 
@@ -279,11 +279,11 @@ bdqffdq:hasResponseQualifier rdf:type owl:ObjectProperty ;
 bdqffdq:hasResponseResult rdf:type owl:ObjectProperty ;
                           rdfs:subPropertyOf bdqffdq:reportProperty ;
                           dcterms:issued "2024-09-30"^^xsd:date ;
-                          rdfs:comment """Used in a bdqffdq:DataQualityReport to describe bdqffdq:ResponseResult objects. For example, values could be bdqffdq:COMPLIANT or bdqffdq:NOT_COMPLIANT for bdqffdq:ValidationAssertions. Both bdqffdq:ValidationAssertions and bdqffdq:IssueAssertions have bdqffdq:ResponseResults as objects. The bdqffdq:AmendmentAssertions have bdqffdq:ResponseResults that are data properties, so they are not expected to use this object property. The bdqffdq:MeasurementAssertion bdqffdq:ResponseResults may be objects or data.
+                          rdfs:comment """Used in a bdqffdq:DataQualityReport to describe bdqffdq:ResponseResult objects. For example, values could be bdqffdq:COMPLIANT or bdqffdq:NOT_COMPLIANT for bdqffdq:ValidationResponses. Both bdqffdq:ValidationResponses and bdqffdq:IssueResponses have bdqffdq:ResponseResults as objects. The bdqffdq:AmendmentResponses have bdqffdq:ResponseResults that are data properties, so they are not expected to use this object property. The bdqffdq:MeasurementResponse bdqffdq:ResponseResults may be objects or data.
 
 If bdqffdq:ResponseResults are not objects, use the datatype property bdqffdq:hasResponseResultValue."""@en ;
                           rdfs:label "has Response Result"@en ;
-                          skos:definition "The bdqffdq:ResponseResult object asserted by a bdqffdq:Assertion."@en ;
+                          skos:definition "The bdqffdq:ResponseResult object asserted by a bdqffdq:Response."@en ;
                           skos:prefLabel "has Response Result"@en .
 
 
@@ -291,11 +291,11 @@ If bdqffdq:ResponseResults are not objects, use the datatype property bdqffdq:ha
 bdqffdq:hasResponseStatus rdf:type owl:ObjectProperty ;
                           rdfs:subPropertyOf bdqffdq:reportProperty ;
                           dcterms:issued "2024-09-30"^^xsd:date ;
-                          rdfs:comment """Used in a bdqffdq:DataQualityReport to describe bdqffdq:ResponseStatus. For example, in the case of a bdqffdq:ValidationAssertion, bdqffdq:ResponseStatus values could be bdqffdq:RUN_HAS_RESULT, bdqffdq:INTERNAL_PREREQUISITES_NOT_MET, or bdqffdq:EXTERNAL_PREREQISITES_NOT_MET. Similarly, bdqffdq:AmendmentAssertions can assert bdqffdq:ResponesStatus objects including bdqffdq:AMENDED or bdqffdq:FILLED_IN.
+                          rdfs:comment """Used in a bdqffdq:DataQualityReport to describe bdqffdq:ResponseStatus. For example, in the case of a bdqffdq:ValidationResponse, bdqffdq:ResponseStatus values could be bdqffdq:RUN_HAS_RESULT, bdqffdq:INTERNAL_PREREQUISITES_NOT_MET, or bdqffdq:EXTERNAL_PREREQISITES_NOT_MET. Similarly, bdqffdq:AmendmentResponses can assert bdqffdq:ResponesStatus objects including bdqffdq:AMENDED or bdqffdq:FILLED_IN.
 
 The bdqffdq:ResponseStatus is always an object, unlike bdqffdq:ResponseResult, where either the object property bdqffdq:hasResponseResult or the data property bdqffdq:hasResponseResultValue may apply."""@en ;
                           rdfs:label "has Response Status"@en ;
-                          skos:definition "The bdqffdq:ResponseStatus object asserted by a bdqffdq:Assertion."@en ;
+                          skos:definition "The bdqffdq:ResponseStatus object asserted by a bdqffdq:Response."@en ;
                           skos:prefLabel "has Response Status"@en .
 
 
@@ -349,7 +349,7 @@ bdqffdq:improvedBy rdf:type owl:ObjectProperty ;
 
 Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:ImprovementTarget, that would improve data bdqffdq:ActedUpon by a set of bdqffdq:Measures or bdqffdq:Validations. This can be used to determine which bdqffdq:Measures and bdqffdq:Validations are improved upon by a given bdqffdq:Amendment."""@en ;
                    rdfs:label "improved By"@en ;
-                   skos:definition "The bdqffdq:ImprovementTarget that would have data quality improved by bdqffdq:Assertions resulting from a bdqffdq:Amendment."@en ;
+                   skos:definition "The bdqffdq:ImprovementTarget that would have data quality improved by bdqffdq:Responses resulting from a bdqffdq:Amendment."@en ;
                    skos:prefLabel "improved By"@en .
 
 
@@ -380,21 +380,21 @@ bdqffdq:measurementProperty rdf:type owl:ObjectProperty ;
                             skos:prefLabel "measurement Property"@en .
 
 
-###  https://rs.tdwg.org/bdqffdq/terms/producesAssertion
-bdqffdq:producesAssertion rdf:type owl:ObjectProperty ;
+###  https://rs.tdwg.org/bdqffdq/terms/producesResponse
+bdqffdq:producesResponse rdf:type owl:ObjectProperty ;
                           dcterms:issued "2024-09-30"^^xsd:date ;
-                          rdfs:comment "Connects bdqffdq:Implementations (Solutions layer, see Figure 3 in Veiga et al., 2017) with the bdqffdq:Assertions (Reports layer, see Figure 3 in Veiga et al., 2017) that they produce from the execution of a bdqffdq:Specification."@en ;
-                          rdfs:label "produces Assertion"@en ;
-                          skos:definition "Connects an entity with a bdqffdq:Assertion that the entity created."@en ;
-                          skos:prefLabel "produces Assertion"@en .
+                          rdfs:comment "Connects bdqffdq:Implementations (Solutions layer, see Figure 3 in Veiga et al., 2017) with the bdqffdq:Responses (Reports layer, see Figure 3 in Veiga et al., 2017) that they produce from the execution of a bdqffdq:Specification."@en ;
+                          rdfs:label "produces Response"@en ;
+                          skos:definition "Connects an entity with a bdqffdq:Response that the entity created."@en ;
+                          skos:prefLabel "produces Response"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/reportProperty
 bdqffdq:reportProperty rdf:type owl:ObjectProperty ;
                        dcterms:issued "2024-09-30"^^xsd:date ;
-                       rdfs:comment "Category of properties used in reports (object properties associated with response objects (bdqffdq:Assertions)). See also the data properties bdqffdq:hasResponseComment and bdqffdq:hasResponseResultValue."@en ;
+                       rdfs:comment "Category of properties used in reports (object properties associated with response objects (bdqffdq:Responses)). See also the data properties bdqffdq:hasResponseComment and bdqffdq:hasResponseResultValue."@en ;
                        rdfs:label "report Property"@en ;
-                       skos:definition "Category of object properties that apply to bdqffdq:Assertions."@en ;
+                       skos:definition "Category of object properties that apply to bdqffdq:Responses."@en ;
                        skos:prefLabel "report Property"@en .
 
 
@@ -516,18 +516,18 @@ bdqffdq:hasFitnessRequirements rdf:type owl:DatatypeProperty ;
 bdqffdq:hasResponseComment rdf:type owl:DatatypeProperty ;
                            rdfs:range xsd:string ;
                            dcterms:issued "2024-09-30"^^xsd:date ;
-                           rdfs:comment "Intended for consumption by human readers of bdqffdq:DataQualityReports to understand why particular bdqffdq:Assertions were made."@en ;
+                           rdfs:comment "Intended for consumption by human readers of bdqffdq:DataQualityReports to understand why particular bdqffdq:Responses were made."@en ;
                            rdfs:label "has Response Comment"@en ;
-                           skos:definition "Free text describing the bdqffdq:Assertion made in the response and why that conclusion was reached."@en ;
+                           skos:definition "Free text describing the bdqffdq:Response made in the response and why that conclusion was reached."@en ;
                            skos:prefLabel "has Response Comment"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/hasResponseResultValue
 bdqffdq:hasResponseResultValue rdf:type owl:DatatypeProperty ;
                                dcterms:issued "2024-09-30"^^xsd:date ;
-                               rdfs:comment "Applies to bdqffdq:AmendmentAssertions. To support bdqtest: Tests, bdqffdq:hasResponseResultValue is expected to carry a key:value list where the keys are the names of bdqffdq:ActedUpon bdqffdq:InformationElements, and the values are the proposed new values (filling in or replacing the values of those terms in the input). Applies to bdqffdq:MeasureAssertions that assert a numeric value."@en ;
+                               rdfs:comment "Applies to bdqffdq:AmendmentResponses. To support bdqtest: Tests, bdqffdq:hasResponseResultValue is expected to carry a key:value list where the keys are the names of bdqffdq:ActedUpon bdqffdq:InformationElements, and the values are the proposed new values (filling in or replacing the values of those terms in the input). Applies to bdqffdq:MeasureResponses that assert a numeric value."@en ;
                                rdfs:label "has response result value"@en ;
-                               skos:definition "Data property carrying the value of a bdqffdq:Assertion when the value is not an object."@en ;
+                               skos:definition "Data property carrying the value of a bdqffdq:Response when the value is not an object."@en ;
                                skos:prefLabel "has response result value"@en .
 
 
@@ -551,7 +551,7 @@ bdqffdq:ActedUpon rdf:type owl:Class ;
                   dcterms:issued "2024-09-30"^^xsd:date ;
                   rdfs:comment "A bdqffdq:InformationElement to which a bdqffdq:ResponseResult applies."@en ;
                   rdfs:label "Acted Upon"@en ;
-                  skos:definition "A bdqffdq:InformationElement, expressed in concrete terms, about which a bdqffdq:DataQualityNeed expresses bdqffdq:Assertions about the data quality in that bdqffdq:InformationElement."@en ;
+                  skos:definition "A bdqffdq:InformationElement, expressed in concrete terms, about which a bdqffdq:DataQualityNeed expresses bdqffdq:Responses about the data quality in that bdqffdq:InformationElement."@en ;
                   skos:prefLabel "Acted Upon"@en .
 
 
@@ -566,7 +566,7 @@ Describes a proposal for a bdqffdq:Enhancement of original data, which if accept
 
 bdqffdq:Amendments may describe proposed changes to data values, or proposed changes to processes for the production and manipulation of data, for example, a bdqffdq:Amendment on a bdqffdq:SingleRecord may provide bdqffdq:Criteria for proposing that dwc:decimalLatitude and dwc:decimalLongitude are transposed in that record. Similarly, a bdqffdq:Amendment on a bdqffdq:MultiRecord may provide bdqffdq:Critera for proposing that all dwc:decimalLatitudes and dwc:decimalLongitudes from a data source have been transposed, and the mapping of data values to transport terms should be changed.
 
-A bdqffdq:Amendment is the bdqffdq:DataQualityNeed that parallels a bdqffdq:AmendmentMethod in the Solutions layer (see Figure 3 in Veiga et al., 2017), and a bdqffdq:AmendmentAssertion in the Report layer (see Figure 3 in Veiga et al., 2017).
+A bdqffdq:Amendment is the bdqffdq:DataQualityNeed that parallels a bdqffdq:AmendmentMethod in the Solutions layer (see Figure 3 in Veiga et al., 2017), and a bdqffdq:AmendmentResponse in the Report layer (see Figure 3 in Veiga et al., 2017).
 
 AM = { am | am = < ie, e, rt >, ie ∈ IE, e ∈ E ⋀ rt ∈ RT }"""@en ;
                   rdfs:label "Amendment"@en ;
@@ -639,7 +639,7 @@ bdqffdq:Consulted rdf:type owl:Class ;
                   dcterms:issued "2024-09-30"^^xsd:date ;
                   rdfs:comment "A bdqffdq:InformationElement the content of which is examined to assert a result on one or more other bdqffdq:InformationElements."@en ;
                   rdfs:label "Consulted"@en ;
-                  skos:definition "A bdqffdq:InformationElement, expressed in concrete terms, about which a bdqffdq:DataQualityNeed examines in order to expresses bdqffdq:Assertions about the data quality in another bdqffdq:InformationElement."@en ;
+                  skos:definition "A bdqffdq:InformationElement, expressed in concrete terms, about which a bdqffdq:DataQualityNeed examines in order to expresses bdqffdq:Responses about the data quality in another bdqffdq:InformationElement."@en ;
                   skos:prefLabel "Consulted"@en .
 
 
@@ -681,7 +681,7 @@ bdqffdq:DataQualityNeed rdf:type owl:Class ;
                         dcterms:issued "2024-09-30"^^xsd:date ;
                         rdfs:comment "Subtypes of bdqffdq:DataQualityNeed are the Test Types (Validation, Issue, Measure, and Amendment). The bdqffdq:DataQualityNeed appoximates the informal concept of a Test as used in the BDQ standard."@en ;
                         rdfs:label "Data Quality Need"@en ;
-                        skos:definition "A bdqffdq:NeedConcept that expresses what bdqffdq:Assertions may be made about data with respect to fitness for use."@en ;
+                        skos:definition "A bdqffdq:NeedConcept that expresses what bdqffdq:Responses may be made about data with respect to fitness for use."@en ;
                         skos:prefLabel "Data Quality Need"@en .
 
 
@@ -689,7 +689,7 @@ bdqffdq:DataQualityNeed rdf:type owl:Class ;
 bdqffdq:DataQualityProfile rdf:type owl:Class ;
                            rdfs:subClassOf bdqffdq:NeedConcept ;
                            dcterms:issued "2024-09-30"^^xsd:date ;
-                           rdfs:comment """The bdqffdq:DataQualityProfile is a data quality Need layer concept (see Figure 3 in Veiga et al., 2017) describing the bdqffdq:UseCases that make up a data quality operation such as the behavior of a single actor or workflow producing the relevant bdqffdq:Assertions.
+                           rdfs:comment """The bdqffdq:DataQualityProfile is a data quality Need layer concept (see Figure 3 in Veiga et al., 2017) describing the bdqffdq:UseCases that make up a data quality operation such as the behavior of a single actor or workflow producing the relevant bdqffdq:Responses.
 
 DQP (u) = {dqp | dqp = mp(u) ⋃ vp(u) ⋃ ep(u), mp ∈ MP , vp ∈ VP , ep ∈ EP ⋀ u ∈ U }"""@en ;
                            rdfs:label "Data Quality Profile"@en ;
@@ -701,9 +701,9 @@ DQP (u) = {dqp | dqp = mp(u) ⋃ vp(u) ⋃ ep(u), mp ∈ MP , vp ∈ VP , ep ∈
 bdqffdq:DataQualityReport rdf:type owl:Class ;
                           rdfs:subClassOf bdqffdq:ReportConcept ;
                           dcterms:issued "2024-09-30"^^xsd:date ;
-                          rdfs:comment "A bdqffdq:DataQualityReport consists of a set of bdqffdq:Assertions (bdqffdq:ValidationAssertions, bdqffdq:IssueAssertions, bdqffdq:MeasureAssertions, and bdqffdq:AmendmentAssertions) that represent the output of a workflow/actor run. These bdqffdq:Assertions form an account of the fitness for use of a tested data set for a specified bdqffdq:UseCase, as produced by a bdqffdq:Mechanism."@en ;
+                          rdfs:comment "A bdqffdq:DataQualityReport consists of a set of bdqffdq:Responses (bdqffdq:ValidationResponses, bdqffdq:IssueResponses, bdqffdq:MeasureResponses, and bdqffdq:AmendmentResponses) that represent the output of a workflow/actor run. These bdqffdq:Responses form an account of the fitness for use of a tested data set for a specified bdqffdq:UseCase, as produced by a bdqffdq:Mechanism."@en ;
                           rdfs:label "Data Quality Report"@en ;
-                          skos:definition "A bdqffdq:ReportConcept comprising a set of data quality bdqffdq:Assertions."@en ;
+                          skos:definition "A bdqffdq:ReportConcept comprising a set of data quality bdqffdq:Responses."@en ;
                           skos:prefLabel "Data Quality Report"@en .
 
 
@@ -711,13 +711,13 @@ bdqffdq:DataQualityReport rdf:type owl:Class ;
 bdqffdq:DataResource rdf:type owl:Class ;
                      rdfs:subClassOf bdqffdq:ReportConcept ;
                      dcterms:issued "2024-09-30"^^xsd:date ;
-                     rdfs:comment """Describes a bdqffdq:DataResource containing terms from a vocabulary such as Darwin Core that can be related to bdqffdq:InformationElements, and represents the original values of the data operated on by a bdqffdq:Assertion Test (e.g., an instance of dwc:Occurrence). Ideally, bdqffdq:DataResources have persistent GUIDs.
+                     rdfs:comment """Describes a bdqffdq:DataResource containing terms from a vocabulary such as Darwin Core that can be related to bdqffdq:InformationElements, and represents the original values of the data operated on by a bdqffdq:Response Test (e.g., an instance of dwc:Occurrence). Ideally, bdqffdq:DataResources have persistent GUIDs.
 
-A bdqffdq:DataResource could be the oa:target of a oa:Annotation of which a bdqffdq:Assertion is the oa:body.
+A bdqffdq:DataResource could be the oa:target of a oa:Annotation of which a bdqffdq:Response is the oa:body.
 
 DR = { dr | dr = < id, rt, v >, id ∈ I D, rt ∈ RT , (rt = sr ⋁ rt = ds) ⋀ v ∈ V }"""@en ;
                      rdfs:label "Data Resource"@en ;
-                     skos:definition "An owl:Thing to which a data quality bdqffdq:Assertion applies."@en ;
+                     skos:definition "An owl:Thing to which a data quality bdqffdq:Response applies."@en ;
                      skos:prefLabel "Data Resource"@en .
 
 
@@ -770,7 +770,7 @@ IT(am) = {me ⋃ va | me ∈ ME, va ∈ VA ⋀ am ∈ AM}"""@en ;
 bdqffdq:InformationElement rdf:type owl:Class ;
                            rdfs:subClassOf bdqffdq:FundamentalConcept ;
                            dcterms:issued "2024-09-30"^^xsd:date ;
-                           rdfs:comment "A bdqffdq:InformationElement identifies a portion of data to which a Test pertains. A bdqffdq:InformationElement can be represented as a single or composite element that consists of one or more terms from a controlled vocabulary (fields bdqffdq:ActedUpon or bdqffdq:Consulted by a bdqffdq:Assertion Test) that identifies concepts in data relevant to a bdqffdq:UseCase. An abstraction or a concrete term that represents relevant content (e.g., coordinates; dwc:decimalLatitude, dwc:decimalLongitude)."@en ;
+                           rdfs:comment "A bdqffdq:InformationElement identifies a portion of data to which a Test pertains. A bdqffdq:InformationElement can be represented as a single or composite element that consists of one or more terms from a controlled vocabulary (fields bdqffdq:ActedUpon or bdqffdq:Consulted by a bdqffdq:Response Test) that identifies concepts in data relevant to a bdqffdq:UseCase. An abstraction or a concrete term that represents relevant content (e.g., coordinates; dwc:decimalLatitude, dwc:decimalLongitude)."@en ;
                            rdfs:label "Information Element"@en ;
                            skos:definition "A portion of data with which a bdqffdq:DataQualityNeed is concerned."@en ;
                            skos:prefLabel "Information Element"@en .
@@ -781,7 +781,7 @@ bdqffdq:Issue rdf:type owl:Class ;
               rdfs:subClassOf bdqffdq:DataQualityNeed ,
                               bdqffdq:IssueConcept ;
               dcterms:issued "2024-09-30"^^xsd:date ;
-              rdfs:comment """Added to the original framework. Inverse of ContextualizedCriterion in the original framework. Describes an instance of the bdqffdq:IssueConcept in terms of the associated bdqffdq:InformationElements from a controlled vocabulary (fields bdqffdq:ActedUpon or bdqffdq:Consulted), and a bdqffdq:ResourceType of bdqffdq:SingleRecord or bdqffdq:MultiRecord. Describes bdqffdq:Criteria by which data that lack quality for some purpose may be identified. A bdqffdq:Issue is phrased in a negative sense, and approximates an inverse of a bdqffdq:Validation. A bdqffdq:Issue identifies data that lack or may lack quality. A bdqffdq:Issue may flag a bdqffdq:POTENTIAL_ISSUE that would need further review to determine if the data have quality for some purpose. If the conditions described by a bdqffdq:Issue are identified by a Test, the bdqffdq:ResponseResult will be either bdqffdq:IS_ISSUE or bdqffdq:POTENTIAL_ISSUE, if no bdqffdq:Issue is found with the data, the bdqffdq:ResponseResult will be bdqffdq:NOT_ISSUE. The term bdqffdq:NOT_ISSUE, unlike bdqffdq:COMPLIANT for a bdqffdq:Validation, does not assert that data are fit for some purpose. A bdqffdq:Issue is the bdqffdq:DataQualityNeed concept that parallels a bdqffdq:IssueMethod in the Solutions layer (see Figure 3 in Veiga et al., 2017), and a bdqffdq:IssueAssertion in the Report layer (see Figure 3 in Veiga et al., 2017).
+              rdfs:comment """Added to the original framework. Inverse of ContextualizedCriterion in the original framework. Describes an instance of the bdqffdq:IssueConcept in terms of the associated bdqffdq:InformationElements from a controlled vocabulary (fields bdqffdq:ActedUpon or bdqffdq:Consulted), and a bdqffdq:ResourceType of bdqffdq:SingleRecord or bdqffdq:MultiRecord. Describes bdqffdq:Criteria by which data that lack quality for some purpose may be identified. A bdqffdq:Issue is phrased in a negative sense, and approximates an inverse of a bdqffdq:Validation. A bdqffdq:Issue identifies data that lack or may lack quality. A bdqffdq:Issue may flag a bdqffdq:POTENTIAL_ISSUE that would need further review to determine if the data have quality for some purpose. If the conditions described by a bdqffdq:Issue are identified by a Test, the bdqffdq:ResponseResult will be either bdqffdq:IS_ISSUE or bdqffdq:POTENTIAL_ISSUE, if no bdqffdq:Issue is found with the data, the bdqffdq:ResponseResult will be bdqffdq:NOT_ISSUE. The term bdqffdq:NOT_ISSUE, unlike bdqffdq:COMPLIANT for a bdqffdq:Validation, does not assert that data are fit for some purpose. A bdqffdq:Issue is the bdqffdq:DataQualityNeed concept that parallels a bdqffdq:IssueMethod in the Solutions layer (see Figure 3 in Veiga et al., 2017), and a bdqffdq:IssueResponse in the Report layer (see Figure 3 in Veiga et al., 2017).
 
 IS = { is | is = < ie, c, rt >, ie ∈ IE, c ∈ ∁C ⋀ rt ∈ RT }"""@en ;
               rdfs:label "Issue"@en ;
@@ -842,7 +842,7 @@ bdqffdq:Measure rdf:type owl:Class ;
 
 Describes the bdqffdq:Criteria for measuring an aspect of data quality related to a bdqffdq:DataQualityNeed. May be bdqffdq:Criteria for determining that data are bdqffdq:COMPLETE or bdqffdq:NOT_COMPLETE, or may be bdqffdq:Criteria for asserting a numeric bdqffdq:Measure. The bdqffdq:COMPLETE and bdqffdq:NOT_COMPLETE bdqffdq:Measures are fundamental to data quality control, as a set of data is filtered to the subset of data that have quality for some need if all records are bdqffdq:COMPLETE for all pertinent bdqffdq:Measures.
 
-A bdqffdq:Measure is the bdqffdq:DataQualityNeed concept that parallels a bdqffdq:MeasurementMethod in the Solutions layer (see Figure 3 in Veiga et al., 2017), and a bdqffdq:MeasurementAssertion in the Report layer (see Figure 3 in Veiga et al., 2017).
+A bdqffdq:Measure is the bdqffdq:DataQualityNeed concept that parallels a bdqffdq:MeasurementMethod in the Solutions layer (see Figure 3 in Veiga et al., 2017), and a bdqffdq:MeasurementResponse in the Report layer (see Figure 3 in Veiga et al., 2017).
 
 ME = { me | me =< ie, d, rt >, ie ∈ IE, d ∈ D ⋀ rt ∈ RT }
 also acceptable bdqffdq:Measure
@@ -908,7 +908,7 @@ bdqffdq:Mechanism rdf:type owl:Class ;
                   dcterms:issued "2024-09-30"^^xsd:date ;
                   rdfs:comment """A bdqffdq:Mechanism may produce bdqffdq:DataQualityReports as products.
 
-A bdqffdq:Mechanism describes the entity that performs a bdqffdq:Assertion Test (code, external service, actor, etc.). Tied to a bdqffdq:Specification via the concept of a bdqffdq:Implementation."""@en ;
+A bdqffdq:Mechanism describes the entity that performs a bdqffdq:Response Test (code, external service, actor, etc.). Tied to a bdqffdq:Specification via the concept of a bdqffdq:Implementation."""@en ;
                   rdfs:label "Mechanism"@en ;
                   skos:definition "An entity that can execute bdqffdq:DataQualityMethods."@en ;
                   skos:prefLabel "Mechanism"@en .
@@ -958,7 +958,7 @@ bdqffdq:ResourceType rdf:type owl:Class ;
                      dcterms:issued "2024-09-30"^^xsd:date ;
                      rdfs:comment "The concept of bdqffdq:ResourceType has instances for bdqffdq:SingleRecord or bdqffdq:MultiRecord."@en ;
                      rdfs:label "Resource Type"@en ;
-                     skos:definition "Category of things that are data objects about which data quality bdqffdq:Assertions may be made."@en ;
+                     skos:definition "Category of things that are data objects about which data quality bdqffdq:Responses may be made."@en ;
                      skos:prefLabel "Resource Type"@en .
 
 
@@ -966,7 +966,7 @@ bdqffdq:ResourceType rdf:type owl:Class ;
 bdqffdq:Response rdf:type owl:Class ;
                  rdfs:subClassOf bdqffdq:ReportConcept ;
                  dcterms:issued "2024-04-13" ;
-                 rdfs:comment "The bdqffdq:Response type is the bdqffdq:FundamentalConcept that makes up a bdqffdq:DataQualityReport. A bdqffdq:Response can be any one of four types (represented as subclasses), bdqffdq:ValidationResponse, bdqffdq:IssueResponse, bdqffdq:MeasureResponse, and bdqffdq:AmendmentResponse. The bdqffdq:Response concept relates a bdqffdq:Specification (the technical description of a performed Test), a bdqffdq:DataResource (initial values of input data expressed in terms of a controlled vocabulary), the bdqffdq:Mechanism (external service, actor, or code that performs the Test), and represents the output of the performed Test.  Response was called Assertion in the original formulation of the Framework."@en ;
+                 rdfs:comment "The bdqffdq:Response type is the bdqffdq:FundamentalConcept that makes up a bdqffdq:DataQualityReport. A bdqffdq:Response can be any one of four types (represented as subclasses), bdqffdq:ValidationResponse, bdqffdq:IssueResponse, bdqffdq:MeasureResponse, and bdqffdq:AmendmentResponse. The bdqffdq:Response concept relates a bdqffdq:Specification (the technical description of a performed Test), a bdqffdq:DataResource (initial values of input data expressed in terms of a controlled vocabulary), the bdqffdq:Mechanism (external service, actor, or code that performs the Test), and represents the output of the performed Test.  Response was called Response in the original formulation of the Framework."@en ;
                  rdfs:label "Response"@en ;
                  skos:definition "A bdqffdq:ReportConcept produced by a bdqffdq:Implementation expressing a statement about data quality resulting from the application of the logic of a bdqffdq:Specification to a bdqffdq:DataResource."@en ;
                  skos:prefLabel "Response"@en .
@@ -978,7 +978,7 @@ bdqffdq:ResponseQualifier rdf:type owl:Class ;
                           dcterms:issued "2024-09-30"^^xsd:date ;
                           rdfs:comment "Intended as an extension point for qualifying information about uncertainty or ambiguity."@en ;
                           rdfs:label "Response Qualifier"@en ;
-                          skos:definition "A bdqffdq:ReportConcept to which additional bdqffdq:Assertions providing additional information beyond that of bdqffdq:ResponseResult from the execution of the bdqffdq:Specification of a bdqffdq:DataQualityNeed are attached."@en ;
+                          skos:definition "A bdqffdq:ReportConcept to which additional bdqffdq:Responses providing additional information beyond that of bdqffdq:ResponseResult from the execution of the bdqffdq:Specification of a bdqffdq:DataQualityNeed are attached."@en ;
                           skos:prefLabel "Response Qualifier"@en .
 
 
@@ -988,9 +988,9 @@ bdqffdq:ResponseResult rdf:type owl:Class ;
                        dcterms:issued "2024-09-30"^^xsd:date ;
                        rdfs:comment """For a bdqffdq:Validation, a bdqffdq:ResponseResult may be bdqffdq:COMPLIANT, or bdqffdq:NOT_COMPLIANT. For a bdqffdq:Measure, a bdqffdq:ResponseResult object may be bdqffdq:COMPLETE or bdqffdq:NOT_COMPLETE. For a bdqffdq:Issue, a bdqffdq:ResponseResult may be bdqffdq:IS_ISSUE, bdqffdq:POTENTIAL_ISSUE, or bdqffdq:NOT_ISSUE. A bdqffdq:Measure may also use a numeric data property. A bdqffdq:Amendment asserts a string data property.
 
-The bdqffdq:ResponseResult is represented as a value or a result object for bdqffdq:MeasureAsssertions, or just a result object for bdqffdq:ValidationAssertions or just values for changes proposed in bdqffdq:AmendmentAssertions."""@en ;
+The bdqffdq:ResponseResult is represented as a value or a result object for bdqffdq:MeasureAsssertions, or just a result object for bdqffdq:ValidationResponses or just values for changes proposed in bdqffdq:AmendmentResponses."""@en ;
                        rdfs:label "Response.result"@en ;
-                       skos:definition "A bdqffdq:ReportConcept to which controlled vocabulary bdqffdq:Assertions about the result of the execution of the bdqffdq:Specification of a bdqffdq:DataQualityNeed are attached."@en ;
+                       skos:definition "A bdqffdq:ReportConcept to which controlled vocabulary bdqffdq:Responses about the result of the execution of the bdqffdq:Specification of a bdqffdq:DataQualityNeed are attached."@en ;
                        skos:prefLabel "Response.result"@en .
 
 
@@ -998,7 +998,7 @@ The bdqffdq:ResponseResult is represented as a value or a result object for bdqf
 bdqffdq:ResponseStatus rdf:type owl:Class ;
                        rdfs:subClassOf bdqffdq:ReportConcept ;
                        dcterms:issued "2024-09-30"^^xsd:date ;
-                       rdfs:comment "The bdqffdq:ResponseStatus is metadata, indicating if data should be present in a bdqffdq:ResponseResult. Any bdqffdq:Assertion may have the values bdqffdq:INTERNAL_PREREQUISITES_NOT_MET or bdqffdq:EXTERNAL_PREREQUISITES_NOT_MET, indicating that no value would be present in the accompanying bdqffdq:ResponseResult. Other values depend on the bdqffdq:Assertion type; bdqffdq:RUN_HAS_RESULT for a bdqffdq:Validation, bdqffdq:Issue or bdqffdq:Measure, and bdqffdq:FILLED_IN, bdqffdq:AMENDED, or bdqffdq:NOT_AMENDED for a bdqffdq:Amendment. Additional metadata qualifying the bdqffdq:Assertion in a bdqffdq:ResponseResult, such as statements of uncertainy or ambiguity may be placed in the bdqffdq:ResponseQualifier."@en ;
+                       rdfs:comment "The bdqffdq:ResponseStatus is metadata, indicating if data should be present in a bdqffdq:ResponseResult. Any bdqffdq:Response may have the values bdqffdq:INTERNAL_PREREQUISITES_NOT_MET or bdqffdq:EXTERNAL_PREREQUISITES_NOT_MET, indicating that no value would be present in the accompanying bdqffdq:ResponseResult. Other values depend on the bdqffdq:Response type; bdqffdq:RUN_HAS_RESULT for a bdqffdq:Validation, bdqffdq:Issue or bdqffdq:Measure, and bdqffdq:FILLED_IN, bdqffdq:AMENDED, or bdqffdq:NOT_AMENDED for a bdqffdq:Amendment. Additional metadata qualifying the bdqffdq:Response in a bdqffdq:ResponseResult, such as statements of uncertainy or ambiguity may be placed in the bdqffdq:ResponseQualifier."@en ;
                        rdfs:label "Response.status"@en ;
                        skos:definition "A bdqffdq:ReportConcept expressing controlled vocabulary values about the exit state of an execution process of a data quality bdqffdq:Specification by a bdqffdq:Implementation."@en ;
                        skos:prefLabel "Response.status"@en .
@@ -1018,7 +1018,7 @@ bdqffdq:Specification rdf:type owl:Class ;
                       rdfs:subClassOf bdqffdq:FundamentalConcept ,
                                       bdqffdq:SolutionsConcept ;
                       dcterms:issued "2024-09-30"^^xsd:date ;
-                      rdfs:comment "A bdqffdq:Specification is a technical description of a bdqffdq:Assertion Test. A bdqffdq:Specification is expected to have the following properties:  (1) bdqffdq:hasExpectedResponse and (2) bdqffdq:hasAuthoritiesDefaults."@en ;
+                      rdfs:comment "A bdqffdq:Specification is a technical description of a bdqffdq:Response Test. A bdqffdq:Specification is expected to have the following properties:  (1) bdqffdq:hasExpectedResponse and (2) bdqffdq:hasAuthoritiesDefaults."@en ;
                       rdfs:label "Specification"@en ;
                       skos:definition "A specific statement about how to evaluate a bdqffdq:DataQualityNeed."@en ;
                       skos:prefLabel "Specification"@en .
@@ -1029,7 +1029,7 @@ bdqffdq:UseCase rdf:type owl:Class ;
                 rdfs:subClassOf bdqffdq:FundamentalConcept ,
                                 bdqffdq:NeedConcept ;
                 dcterms:issued "2024-09-30"^^xsd:date ;
-                rdfs:comment "A bdqffdq:UseCase describes a purpose or use for which data must have quality. The bdqffdq:ValidationPolicies, bdqffdq:MeasurementPolicies and bdqffdq:AmendmentPolicies that make up a bdqffdq:UseCase define which bdqffdq:Assertions cover a given bdqffdq:UseCase. An example of a bdqffdq:UseCase could be 'Check for internal consistency of dates', with bdqffdq:ValidationPolicies for checking consistency between atomic date fields and a bdqffdq:Amendment such as 'eventDate filled in from verbatim'. A bdqffdq:UseCase is not the same as a use cases in the software engineering sense, but is similar in that it is a formal bdqffdq: statement derived from analyis of user stories concerning data use.  A bdqffdq:UseCase is expected to have a bdqffdq:hasFitnessRequirements property."@en ;
+                rdfs:comment "A bdqffdq:UseCase describes a purpose or use for which data must have quality. The bdqffdq:ValidationPolicies, bdqffdq:MeasurementPolicies and bdqffdq:AmendmentPolicies that make up a bdqffdq:UseCase define which bdqffdq:Responses cover a given bdqffdq:UseCase. An example of a bdqffdq:UseCase could be 'Check for internal consistency of dates', with bdqffdq:ValidationPolicies for checking consistency between atomic date fields and a bdqffdq:Amendment such as 'eventDate filled in from verbatim'. A bdqffdq:UseCase is not the same as a use cases in the software engineering sense, but is similar in that it is a formal bdqffdq: statement derived from analyis of user stories concerning data use.  A bdqffdq:UseCase is expected to have a bdqffdq:hasFitnessRequirements property."@en ;
                 rdfs:label "Use Case"@en ;
                 skos:definition "A bdqffdq:NeedConcept expressing a purpose to which data are put for which the data must have quality for the result to have meaning and reliability."@en ;
                 skos:prefLabel "Use Case"@en .
@@ -1044,7 +1044,7 @@ bdqffdq:Validation rdf:type owl:Class ;
 
 A bdqffdq:Validation is phrased in a positive sense. It identifies data which have quality for some need. For example, the value of dwc:basisOfRecord of bdqffdq:SingleRecords must be in the controlled vocabulary for dwc:basisOfRecord.
 
-A bdqffdq:Validation is the bdqffdq:DataQualityNeed that parallels a bdqffdq:ValidationMethod in the Solutions layer (see Figure 3 in Veiga et al., 2017), and a bdqffdq:ValidationAssertion in the Report layer (see Figure 3 in Veiga et al., 2017). A bdqffdq:ValidationAssertion may specify a result that is bdqffdq:COMPLIANT, where the data have quality, or bdqffdq:NOT_COMPLIANT, where the data lack quality for a bdqffdq:UseCase.
+A bdqffdq:Validation is the bdqffdq:DataQualityNeed that parallels a bdqffdq:ValidationMethod in the Solutions layer (see Figure 3 in Veiga et al., 2017), and a bdqffdq:ValidationResponse in the Report layer (see Figure 3 in Veiga et al., 2017). A bdqffdq:ValidationResponse may specify a result that is bdqffdq:COMPLIANT, where the data have quality, or bdqffdq:NOT_COMPLIANT, where the data lack quality for a bdqffdq:UseCase.
 
 VA = { va | va = < ie, c, rt >, ie ∈ IE, c ∈ C ⋀ rt ∈ RT }"""@en ;
                    rdfs:label "Validation"@en ;
