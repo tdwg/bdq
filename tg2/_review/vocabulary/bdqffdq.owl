@@ -505,11 +505,11 @@ bdqffdq:hasExpectedResponse rdf:type owl:DatatypeProperty ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/hasFitnessRequirements
 bdqffdq:hasFitnessRequirements rdf:type owl:DatatypeProperty ;
-                              dcterms:issued "2026-03-23" ;
-                              rdfs:comment "The bdqffdq:hasFitnessRequirements should sumarize the properties that data need to have to be fit for purpose for that bdqffdq:UseCase.   It should briefly list the general properties that bdqffdq:DataQualityNeeds associated with the UseCase need to assess (for example, stating that georeferences must be correctly formatted and have adequate metadata), and can identify particular threshold values (such as a coordinate uncertainty greater than some value) that would make data unfit for that use.   The hasFitnessRequirements property should not, however, simply list bdqffdq:DataQualityNeeds instances, but should provide a succinct human readable summary of the quality requirements."@en ;
-                              rdfs:label "has Fitness Requirements"@en ;
-                              skos:definition "The property of a bdqffdq:UseCase that provides text listing the qualities that data must have to be fit for a given use."@en ;
-                              skos:prefLabel "has Fitness Requirements"@en .
+                               dcterms:issued "2026-03-23" ;
+                               rdfs:comment "The bdqffdq:hasFitnessRequirements should sumarize the properties that data need to have to be fit for purpose for that bdqffdq:UseCase.   It should briefly list the general properties that bdqffdq:DataQualityNeeds associated with the UseCase need to assess (for example, stating that georeferences must be correctly formatted and have adequate metadata), and can identify particular threshold values (such as a coordinate uncertainty greater than some value) that would make data unfit for that use.   The hasFitnessRequirements property should not, however, simply list bdqffdq:DataQualityNeeds instances, but should provide a succinct human readable summary of the quality requirements."@en ;
+                               rdfs:label "has Fitness Requirements"@en ;
+                               skos:definition "The property of a bdqffdq:UseCase that provides text listing the qualities that data must have to be fit for a given use."@en ;
+                               skos:prefLabel "has Fitness Requirements"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/hasResponseComment
@@ -574,21 +574,6 @@ AM = { am | am = < ie, e, rt >, ie ∈ IE, e ∈ E ⋀ rt ∈ RT }"""@en ;
                   skos:prefLabel "Amendment"@en .
 
 
-###  https://rs.tdwg.org/bdqffdq/terms/AmendmentAssertion
-bdqffdq:AmendmentAssertion rdf:type owl:Class ;
-                           rdfs:subClassOf bdqffdq:AmendmentConcept ,
-                                           bdqffdq:Assertion ;
-                           dcterms:issued "2024-09-30"^^xsd:date ;
-                           rdfs:comment """The bdqffdq:AmendmentAssertion type is a Report layer concept (see Figure 3 in Veiga et al., 2017) that describes the results of the execution of a Test that performs a bdqffdq:AmendmentMethod following a bdqffdq:Specification to propose changes based on a bdqffdq:Amendment. 
-
-A bdqffdq:Amendment is expected to carry a bdqffdq:ResponseStatus result that includes a status bdqffdq:FILLED_IN or bdqffdq:AMENDED, as well as a bdqffdq:ResponseResult that asserts proposed changes to values from the original data.
-
-DQA(dr) = {dqa | dqa = < am, s, m, r >, am ∈ AM, s ∈ S, m ∈ M , r ∈ R ⋀ dr ∈ DR}"""@en ;
-                           rdfs:label "Amendment Assertion"@en ;
-                           skos:definition "A bdqffdq:Assertion expressing the result of a bdqffdq:Implementation evaluating a bdqffdq:Amendment supporting a particular bdqffdq:DataQualityNeed to improve a particular bdqffdq:DataResource."@en ;
-                           skos:prefLabel "Amendment Assertion"@en .
-
-
 ###  https://rs.tdwg.org/bdqffdq/terms/AmendmentConcept
 bdqffdq:AmendmentConcept rdf:type owl:Class ;
                          dcterms:issued "2024-09-30"^^xsd:date ;
@@ -623,6 +608,21 @@ EP(u) = {am | am ⊂ AM ⋀ u ∈ U }"""@en ;
                         skos:prefLabel "Amendment Policy"@en .
 
 
+###  https://rs.tdwg.org/bdqffdq/terms/AmendmentResponse
+bdqffdq:AmendmentResponse rdf:type owl:Class ;
+                          rdfs:subClassOf bdqffdq:AmendmentConcept ,
+                                          bdqffdq:Response ;
+                          dcterms:issued "2026-04-13" ;
+                          rdfs:comment """The bdqffdq:AmendmentResponse type is a Report layer concept (see Figure 3 in Veiga et al., 2017) that describes the results of the execution of a Test that performs a bdqffdq:AmendmentMethod following a bdqffdq:Specification to propose changes based on a bdqffdq:Amendment. 
+
+A bdqffdq:AmendmentResponse is expected to carry, through bdqffdq:hasResponseStatus, a bdqffdq:ResponseStatus result that includes a status bdqffdq:FILLED_IN or bdqffdq:AMENDED, as well as a bdqffdq:hasResponseResultValue that asserts proposed changes to values from the original data.
+
+DQA(dr) = {dqa | dqa = < am, s, m, r >, am ∈ AM, s ∈ S, m ∈ M , r ∈ R ⋀ dr ∈ DR}"""@en ;
+                          rdfs:label "Amendment Response"@en ;
+                          skos:definition "A bdqffdq:Response expressing the result of a bdqffdq:Implementation evaluating a bdqffdq:Amendment supporting a particular bdqffdq:DataQualityNeed to improve a particular bdqffdq:DataResource."@en ;
+                          skos:prefLabel "Amendment Response"@en .
+
+
 ###  https://rs.tdwg.org/bdqffdq/terms/Argument
 bdqffdq:Argument rdf:type owl:Class ;
                  rdfs:subClassOf bdqffdq:SolutionsConcept ;
@@ -631,16 +631,6 @@ bdqffdq:Argument rdf:type owl:Class ;
                  rdfs:label "Argument"@en ;
                  skos:definition "A value that, when provided to a Test bdqffdq:Specification to replace a bdqffdq:Parameter changes the behavior of the Test in a defined manner."@en ;
                  skos:prefLabel "Argument"@en .
-
-
-###  https://rs.tdwg.org/bdqffdq/terms/Assertion
-bdqffdq:Assertion rdf:type owl:Class ;
-                  rdfs:subClassOf bdqffdq:ReportConcept ;
-                  dcterms:issued "2024-09-30"^^xsd:date ;
-                  rdfs:comment "The bdqffdq:Assertion type is the bdqffdq:FundamentalConcept that makes up a bdqffdq:DataQualityReport. A bdqffdq:Assertion can be any one of four types (represented as subclasses), bdqffdq:Validation, bdqffdq:Issue, bdqffdq:Measure, and bdqffdq:Amendment. The bdqffdq:Assertion concept consists of a bdqffdq:Specification (the technical description of a performed Test), a bdqffdq:DataResource (initial values of input data expressed in terms of a controlled vocabulary), the bdqffdq:Mechanism (external service, actor, or code that performs the Test), and a form of result."@en ;
-                  rdfs:label "Assertion"@en ;
-                  skos:definition "A bdqffdq:ReportConcept expressing a statement about a data quality bdqffdq:Assertion following a bdqffdq:Specification produced by a bdqffdq:Implementation pertaining to a bdqffdq:DataResource."@en ;
-                  skos:prefLabel "Assertion"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/Consulted
@@ -799,19 +789,6 @@ IS = { is | is = < ie, c, rt >, ie ∈ IE, c ∈ ∁C ⋀ rt ∈ RT }"""@en ;
               skos:prefLabel "Issue"@en .
 
 
-###  https://rs.tdwg.org/bdqffdq/terms/IssueAssertion
-bdqffdq:IssueAssertion rdf:type owl:Class ;
-                       rdfs:subClassOf bdqffdq:Assertion ,
-                                       bdqffdq:IssueConcept ;
-                       dcterms:issued "2024-09-30"^^xsd:date ;
-                       rdfs:comment """The bdqffdq:DataQualityReport concept describing the result of a Test in the negative (i.e., identifying the potential absence of data quality). 
-
-If a problem was found, the bdqffdq:ResponseResult is expected to carry a value of bdqffdq:IS_ISSUE, if a potential problem was found that requires human review, the bdqffdq:ResponseResult is expected to be bdqffdq:POTENTIAL_ISSUE, otherwise if the bdqffdq:ResponseStatus is bdqffdq:RUN_HAS_RESULT, the bdqffdq:ResponseResult is expected to be bdqffdq:NOT_ISSUE."""@en ;
-                       rdfs:label "Issue Assertion"@en ;
-                       skos:definition "A bdqffdq:Assertion expressing the result of a bdqffdq:Implementation evaluating a bdqffdq:Issue for a particular bdqffdq:DataQualityNeed in a particular bdqffdq:DataResource."@en ;
-                       skos:prefLabel "Issue Assertion"@en .
-
-
 ###  https://rs.tdwg.org/bdqffdq/terms/IssueConcept
 bdqffdq:IssueConcept rdf:type owl:Class ;
                      dcterms:issued "2024-09-30"^^xsd:date ;
@@ -843,6 +820,19 @@ bdqffdq:IssuePolicy rdf:type owl:Class ;
                     skos:prefLabel "Issue Policy"@en .
 
 
+###  https://rs.tdwg.org/bdqffdq/terms/IssueResponse
+bdqffdq:IssueResponse rdf:type owl:Class ;
+                      rdfs:subClassOf bdqffdq:IssueConcept ,
+                                      bdqffdq:Response ;
+                      dcterms:issued "2026-04-13" ;
+                      rdfs:comment """The bdqffdq:DataQualityReport concept describing the output of a Test in the negative (i.e., identifying the potential absence of data quality). 
+
+If a problem was found, the bdqffdq:IssueResponse is expected to carry, through bdqffdq:hasResponseResult, a bdqffdq:ResponseResult value of bdqffdq:IS_ISSUE, if a potential problem was found that requires human review, the bdqffdq:ResponseResult is expected to be bdqffdq:POTENTIAL_ISSUE, otherwise if the bdqffdq:ResponseStatus is bdqffdq:RUN_HAS_RESULT, the bdqffdq:ResponseResult is expected to be bdqffdq:NOT_ISSUE."""@en ;
+                      rdfs:label "Issue Response"@en ;
+                      skos:definition "A bdqffdq:Response expressing the result of a bdqffdq:Implementation evaluating a bdqffdq:Issue for a particular bdqffdq:DataQualityNeed in a particular bdqffdq:DataResource."@en ;
+                      skos:prefLabel "Issue Response"@en .
+
+
 ###  https://rs.tdwg.org/bdqffdq/terms/Measure
 bdqffdq:Measure rdf:type owl:Class ;
                 rdfs:subClassOf bdqffdq:DataQualityNeed ,
@@ -860,21 +850,6 @@ AM(me) = {va | me ∈ C D ⋀ va ⊂ C C}"""@en ;
                 rdfs:label "Measure"@en ;
                 skos:definition "A bdqffdq:DataQualityNeed that expresses how the fitness of data for some use may be measured."@en ;
                 skos:prefLabel "Measure"@en .
-
-
-###  https://rs.tdwg.org/bdqffdq/terms/MeasurementAssertion
-bdqffdq:MeasurementAssertion rdf:type owl:Class ;
-                             rdfs:subClassOf bdqffdq:Assertion ,
-                                             bdqffdq:MeasurementConcept ;
-                             dcterms:issued "2024-09-30"^^xsd:date ;
-                             rdfs:comment """A bdqffdq:MeasurementAssertion is a Report layer concept (see Figure 3 in Veiga et al., 2017) that describes the results of the execution of a Test that performs a bdqffdq:MeasurementMethod following a bdqffdq:Specification to assess a data quality bdqffdq:Measure. 
-
-A MeasurementAssertion is expected to carry a bdqffdq:ResponseResult of bdqffdq:COMPLETE or bdqffdq:NOT_COMPLETE or a numeric measured value (e.g., a bdqffdq:Measure of a dwc:eventDate duration in seconds).
-
-DQM(dr) = {dqm | dqm =< me, s, m, r >, me ∈ ME, s ∈ S, m ∈ M , r ∈ R ⋀ dr ∈ DR}"""@en ;
-                             rdfs:label "Measurement Assertion"@en ;
-                             skos:definition "A bdqffdq:Assertion expressing the result of a bdqffdq:Implementation measuring a particular bdqffdq:DataQualityNeed in a particular bdqffdq:DataResource."@en ;
-                             skos:prefLabel "Measurement Assertion"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/MeasurementConcept
@@ -909,6 +884,21 @@ MP(u) = {me | me ⊂ ME ⋀ u ∈ U }"""@en ;
                           rdfs:label "Measurement Policy"@en ;
                           skos:definition "A bdqffdq:NeedConcept that relates a bdqffdq:UseCase to a set of supporting bdqffdq:Measures."@en ;
                           skos:prefLabel "Measurement Policy"@en .
+
+
+###  https://rs.tdwg.org/bdqffdq/terms/MeasurementResponse
+bdqffdq:MeasurementResponse rdf:type owl:Class ;
+                            rdfs:subClassOf bdqffdq:MeasurementConcept ,
+                                            bdqffdq:Response ;
+                            dcterms:issued "2026-04-13" ;
+                            rdfs:comment """A bdqffdq:MeasurementResponse is a Report layer concept (see Figure 3 in Veiga et al., 2017) that describes the output of the execution of a Test that performs a bdqffdq:MeasurementMethod following a bdqffdq:Specification to assess a data quality bdqffdq:Measure. 
+
+A MeasuremenResponse is expected to carry a bdqffdq:ResponseResult, through bdqffdq:hasResponseResult of bdqffdq:COMPLETE or bdqffdq:NOT_COMPLETE or a numeric measured value (e.g., a bdqffdq:Measure of a dwc:eventDate duration in seconds).
+
+DQM(dr) = {dqm | dqm =< me, s, m, r >, me ∈ ME, s ∈ S, m ∈ M , r ∈ R ⋀ dr ∈ DR}"""@en ;
+                            rdfs:label "Measurement Response"@en ;
+                            skos:definition "A bdqffdq:Response expressing the result of a bdqffdq:Implementation measuring a particular bdqffdq:DataQualityNeed in a particular bdqffdq:DataResource."@en ;
+                            skos:prefLabel "Measurement Response"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/Mechanism
@@ -970,6 +960,16 @@ bdqffdq:ResourceType rdf:type owl:Class ;
                      rdfs:label "Resource Type"@en ;
                      skos:definition "Category of things that are data objects about which data quality bdqffdq:Assertions may be made."@en ;
                      skos:prefLabel "Resource Type"@en .
+
+
+###  https://rs.tdwg.org/bdqffdq/terms/Response
+bdqffdq:Response rdf:type owl:Class ;
+                 rdfs:subClassOf bdqffdq:ReportConcept ;
+                 dcterms:issued "2024-04-13" ;
+                 rdfs:comment "The bdqffdq:Response type is the bdqffdq:FundamentalConcept that makes up a bdqffdq:DataQualityReport. A bdqffdq:Response can be any one of four types (represented as subclasses), bdqffdq:ValidationResponse, bdqffdq:IssueResponse, bdqffdq:MeasureResponse, and bdqffdq:AmendmentResponse. The bdqffdq:Response concept relates a bdqffdq:Specification (the technical description of a performed Test), a bdqffdq:DataResource (initial values of input data expressed in terms of a controlled vocabulary), the bdqffdq:Mechanism (external service, actor, or code that performs the Test), and represents the output of the performed Test.  Response was called Assertion in the original formulation of the Framework."@en ;
+                 rdfs:label "Response"@en ;
+                 skos:definition "A bdqffdq:ReportConcept produced by a bdqffdq:Implementation expressing a statement about data quality resulting from the application of the logic of a bdqffdq:Specification to a bdqffdq:DataResource."@en ;
+                 skos:prefLabel "Response"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/ResponseQualifier
@@ -1052,21 +1052,6 @@ VA = { va | va = < ie, c, rt >, ie ∈ IE, c ∈ C ⋀ rt ∈ RT }"""@en ;
                    skos:prefLabel "Validation"@en .
 
 
-###  https://rs.tdwg.org/bdqffdq/terms/ValidationAssertion
-bdqffdq:ValidationAssertion rdf:type owl:Class ;
-                            rdfs:subClassOf bdqffdq:Assertion ,
-                                            bdqffdq:ValidationConcept ;
-                            dcterms:issued "2024-09-30"^^xsd:date ;
-                            rdfs:comment """The bdqffdq:ValidationAssertion is a Report layer concept (see Figure 3 in Veiga et al., 2017) that describes the results of the execution of a Test that performs a bdqffdq:ValidationMethod following a bdqffdq:Specification to assess the validity of some data with respect to the bdqffdq:Criteria of a bdqffdq:Validation. 
-
-The bdqffdq:ValidationAssertion concept is expected to carry a bdqffdq:ResponseResult of bdqffdq:COMPLIANT or bdqffdq:NON_COMPLIANT.
-
-DQV(dr) = {dqv | dqv = < va, s, m, r >, va ∈ VA, s ∈ S, m ∈ M , r ∈ R ⋀ dr ∈ DR}"""@en ;
-                            rdfs:label "Validation Assertion"@en ;
-                            skos:definition "A bdqffdq:Assertion expressing the result of a bdqffdq:Implementation validating compliance with a particular bdqffdq:DataQualityNeed in a particular bdqffdq:DataResource."@en ;
-                            skos:prefLabel "Validation Assertion"@en .
-
-
 ###  https://rs.tdwg.org/bdqffdq/terms/ValidationConcept
 bdqffdq:ValidationConcept rdf:type owl:Class ;
                           dcterms:issued "2024-09-30"^^xsd:date ;
@@ -1100,6 +1085,21 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }"""@en ;
                          rdfs:label "Validation Policy"@en ;
                          skos:definition "A bdqffdq:NeedConcept that relates a bdqffdq:UseCase to a set of supporting bdqffdq:Validations."@en ;
                          skos:prefLabel "Validation Policy"@en .
+
+
+###  https://rs.tdwg.org/bdqffdq/terms/ValidationResponse
+bdqffdq:ValidationResponse rdf:type owl:Class ;
+                           rdfs:subClassOf bdqffdq:Response ,
+                                           bdqffdq:ValidationConcept ;
+                           dcterms:issued "2026-04-13" ;
+                           rdfs:comment """The bdqffdq:ValidationResponse is a Report layer concept (see Figure 3 in Veiga et al., 2017) that describes the output of the execution of a Test that performs a bdqffdq:ValidationMethod following a bdqffdq:Specification to assess the validity of some data with respect to the bdqffdq:Criteria of a bdqffdq:Validation. 
+
+The bdqffdq:ValidationResponse concept is expected to carry through bdqffdq:hasResponseResult a bdqffdq:ResponseResult of bdqffdq:COMPLIANT or bdqffdq:NON_COMPLIANT.
+
+DQV(dr) = {dqv | dqv = < va, s, m, r >, va ∈ VA, s ∈ S, m ∈ M , r ∈ R ⋀ dr ∈ DR}"""@en ;
+                           rdfs:label "Validation Response"@en ;
+                           skos:definition "A bdqffdq:Response expressing the result of a bdqffdq:Implementation validating compliance with a particular bdqffdq:DataQualityNeed in a particular bdqffdq:DataResource."@en ;
+                           skos:prefLabel "Validation Response"@en .
 
 
 #################################################################
