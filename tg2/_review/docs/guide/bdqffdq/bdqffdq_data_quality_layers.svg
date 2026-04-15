@@ -4558,7 +4558,7 @@
          sodipodi:role="line"
          id="tspan7561"
          x="-10.946724"
-         y="764.80884">Assertion</tspan></text>
+         y="764.80884">Response</tspan></text>
     <path
        style="display:inline;fill:#f4e3d7;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.66167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:6.64668, 1.66167;stroke-dashoffset:0.664668;stroke-opacity:1;filter:url(#filter9105-4-8-1-0-3-1-4)"
        d="m 373.55335,443.72074 c 0,22.52803 -33.96661,40.79267 -81.70868,40.79267 -47.73875,0 -91.17215,-18.26464 -91.17215,-40.79267 0,-22.52804 38.70001,-40.78982 86.43876,-40.78982 47.74207,0 86.44207,18.26178 86.44207,40.78982"
@@ -4574,7 +4574,7 @@
          sodipodi:role="line"
          id="tspan7682"
          x="-0.32733917"
-         y="897.1369">ValidationAssertion</tspan></text>
+         y="897.1369">ValidationResponse</tspan></text>
     <path
        style="display:inline;fill:#f4e3d7;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.66167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:6.64668, 1.66167;stroke-dashoffset:0.664668;stroke-opacity:1;filter:url(#filter9105-4-8-1-0-3-1-3)"
        d="m 373.55335,443.72074 c 0,22.52803 -33.96661,40.79267 -81.70868,40.79267 -47.73875,0 -91.17215,-18.26464 -91.17215,-40.79267 0,-22.52804 38.70001,-40.78982 86.43876,-40.78982 47.74207,0 86.44207,18.26178 86.44207,40.78982"
@@ -4654,7 +4654,7 @@
        transform="translate(-276.44836,-228.40481)"><tspan
          id="tspan8086"
          x="153.82343"
-         y="717.68445">producesAssertion</tspan></text>
+         y="717.68445">producesResponse</tspan></text>
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.897784;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
        d="m 110.69995,848.20093 c 3.60356,-11.5167 -2.33393,-15.91439 -6.01092,-19.65415 C 91.9171,815.55679 70.818529,819.42537 73.156893,799.61453"
@@ -4888,7 +4888,7 @@
          sodipodi:role="line"
          id="tspan52924"
          x="622.27478"
-         y="660.63281">AmendmentAssertion</tspan></text>
+         y="660.63281">AmendmentResponse</tspan></text>
     <path
        style="display:inline;fill:#f4e3d7;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.66167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:6.64668, 1.66167;stroke-dashoffset:0.664668;stroke-opacity:1;filter:url(#filter9105-4-8-1-0-3-1-4-8)"
        d="m 373.55335,443.72074 c 0,22.52803 -33.96661,40.79267 -81.70868,40.79267 -47.73875,0 -91.17215,-18.26464 -91.17215,-40.79267 0,-22.52804 38.70001,-40.78982 86.43876,-40.78982 47.74207,0 86.44207,18.26178 86.44207,40.78982"
@@ -4904,7 +4904,7 @@
          sodipodi:role="line"
          id="tspan52922"
          x="949.12921"
-         y="659.8822">MeasureAssertion</tspan></text>
+         y="659.8822">MeasureResponse</tspan></text>
     <path
        style="display:inline;fill:#f4e3d7;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.66167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:6.64668, 1.66167;stroke-dashoffset:0.664668;stroke-opacity:1;filter:url(#filter9105-4-8-1-0-3-1-4-2)"
        d="m 373.55335,443.72074 c 0,22.52803 -33.96661,40.79267 -81.70868,40.79267 -47.73875,0 -91.17215,-18.26464 -91.17215,-40.79267 0,-22.52804 38.70001,-40.78982 86.43876,-40.78982 47.74207,0 86.44207,18.26178 86.44207,40.78982"
@@ -4920,7 +4920,7 @@
          sodipodi:role="line"
          id="tspan52920"
          x="1260.8315"
-         y="663.45892">IssueAssertion</tspan></text>
+         y="663.45892">IssueResponse</tspan></text>
     <path
        style="display:inline;fill:#c2f5c2;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.66167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;filter:url(#filter9105-4-7)"
        d="m 373.55335,443.72074 c 0,22.52803 -33.96661,40.79267 -81.70868,40.79267 -47.73875,0 -91.17215,-18.26464 -91.17215,-40.79267 0,-22.52804 38.70001,-40.78982 86.43876,-40.78982 47.74207,0 86.44207,18.26178 86.44207,40.78982"
@@ -5132,7 +5132,7 @@
          sodipodi:role="line"
          id="tspan13929"
          x="154.22298"
-         y="777.89594">containsAssertion</tspan></text>
+         y="777.89594">containsResponse</tspan></text>
     <path
        style="display:inline;fill:#c2f5c2;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.66167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;filter:url(#filter9105-4-8-4)"
        d="m 373.55335,443.72074 c 0,22.52803 -33.96661,40.79267 -81.70868,40.79267 -47.73875,0 -91.17215,-18.26464 -91.17215,-40.79267 0,-22.52804 38.70001,-40.78982 86.43876,-40.78982 47.74207,0 86.44207,18.26178 86.44207,40.78982"

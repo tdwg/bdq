@@ -197,7 +197,7 @@ For **Quality Assurance**, the Framework defines `Measures` that operate on `Mul
 For **Quality Control**, `Multi Record` `Measures` can return numeric summaries of the results of other tests (e.g. count of `COMPLIANT` results for a `Validation`), thereby indicating how fit a dataset is for its intended purpose and what adjustments are needed to make it fully fit.
 
 ![Diagram of ValidationResponse, IssueResponse, MeasureResponse and AmendmentResponse classes as subtypes of the Response class with ReportConcept as its parent.](assertions.png)
-*The 4 Response types in the Framework - ValidationResponse, IssueResponse, MeasureResponse and AmendmentResponse.*
+*The 4 `Response` types in the Framework - `ValidationResponse`, `IssueResponse`, `MeasureResponse` and `AmendmentResponse`.*
 
 Diagram of the composition of `Validation`, `Validation Method`, and `Validation Response` illustrating the `Data Quality Needs`, `Solutions`, and `Reports` layers of the Fitness for Use Framework, with the responsibilities of `bdqtest:` (solid lines), and implementations (dashed lines).
 
@@ -213,15 +213,15 @@ A useful way to think of the Framework is to divide it horizontally into Needs, 
 
 The content of this section is non-normative, related normative guidance is in section [5.1 The Response Object (normative)](../implementers/index.md#51-the-response-object-normative) of the [BDQ Implementer's Guide](../implementers/index.md).
 
-It is expected that `Response` objects instances will involve, in RDF, a combination of object properties and data properties on an `Response`.  In an object oriented language like Java, a Response might be an object with properties, and in a tabular format, a Response might be a row with columns for each of the properties. The following table gives an overview of the expected properties of a Response object, and the corresponding terms in the `bdqffdq:` vocabulary.
+It is expected that `Response` objects instances will involve, in RDF, a combination of object properties and data properties on an `Response`.  In an object oriented language like Java, a `Response` might be an object with properties, and in a tabular format, a `Response` might be a row with columns for each of the properties. The following table gives an overview of the expected properties of a `Response` object, and the corresponding terms in the `bdqffdq:` vocabulary.
 
 | Shorthand Concept | bdqffdq: Term(s) | Description |
 | ----------------- | ---------------- | ----------- |
 | Response | bdqffdq:Response | The report from a single execution of a single Test, consisting of a Response.status, a Response.result, a Response.comment, and optionally, a Response.qualifier.| 
-| Response.status | bdqffdq:ResponseStatus, bdqffdq:hasResponseStatus | A metadata element in a Response indicating whether a particular Test (bdqffdq:Validation, bdqffdq:Issue, bdqffdq:Measure, or bdqffdq:Amendment) was able to be performed or not. |
-| Response.result | bdqffdq:ResponseResult, bdqffdq:hasResponseResult, bdqffdq:hasResponseResultValue | The element in a Response containing the value returned by a Test (bdqffdq:Validation, bdqffdq:Issue, bdqffdq:Measure, or bdqffdq:Amendment)|
+| Response.status | bdqffdq:ResponseStatus, bdqffdq:hasResponseStatus | A metadata element in a `Response` indicating whether a particular Test (bdqffdq:Validation, bdqffdq:Issue, bdqffdq:Measure, or bdqffdq:Amendment) was able to be performed or not. |
+| Response.result | bdqffdq:ResponseResult, bdqffdq:hasResponseResult, bdqffdq:hasResponseResultValue | The element in a `Response` containing the value returned by a Test (bdqffdq:Validation, bdqffdq:Issue, bdqffdq:Measure, or bdqffdq:Amendment)|
 | Response.comment | bdqffdq:hasResponseComment | A human readable interpretation of the results of the Test.|
-| Response.qualifier | bdqffdq:ResponseQualifier, bdqffdq:hasResponseQualifier | Additional structured information that qualifies the Response, intended as an extension point for uncertainty.|
+| Response.qualifier | bdqffdq:ResponseQualifier, bdqffdq:hasResponseQualifier | Additional structured information that qualifies the `Response`, intended as an extension point for uncertainty.|
 
 See [3.1 Structure of a Response (normative)](../../bdqtest/index.md#31-structure-of-response-normative) in [BDQ Tests and Assertions](../../bdqtest/index.md) for further normative guidance on Responses as RDF or as data structures in non-RDF settings.
 

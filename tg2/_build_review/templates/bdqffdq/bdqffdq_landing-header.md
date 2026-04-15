@@ -153,6 +153,8 @@ This section summarises representation choices. Full normative constraints on th
 | Non-RDF structured data (literal) | `Response.result` | field corresponding to `bdqffdq:hasResponseResultValue` | literal | `17` |
 | Non-RDF structured data (literal) | `Response.comment` | field corresponding to `bdqffdq:hasResponseComment` | literal (string) | `Provided value 11 is a valid dwc:day.` |
 
+A bdqffdq:hasResponseStatus is always categorical, a bdqffdq:hasResponseComment is always literal, a Response.result may be either a categorical bdqffdq:hasResponseResult or a literal bdqffdq:hasResponseResultValue.  
+
 ### 2.2 Use of Properties (normative) 
 
 This section describes normative expectations for the use of object and datatype properties to related instances of `bdqffdq:` classes in their intended ways given the open world limited use of domains, ranges, and other axioms in the [Biodiversity Data Quality Fitness for Use Framework (Ontology)](../../vocabulary/bdqffdq.owl) ontology. This guidance builds on the normative definitions of `bdqffdq:` object properties and datatype properties to describe how `bdqffdq:` terms can be composed in a useful and consistent way.

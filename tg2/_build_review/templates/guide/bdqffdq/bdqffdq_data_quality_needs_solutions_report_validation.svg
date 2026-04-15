@@ -4075,7 +4075,7 @@
          sodipodi:role="line"
          id="tspan7561"
          x="370.83981"
-         y="812.43939">Assertion</tspan></text>
+         y="812.43939">Response</tspan></text>
     <path
        style="display:inline;fill:#f4e3d7;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.66167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:6.64668, 1.66167;stroke-dashoffset:0.664668;stroke-opacity:1;filter:url(#filter9105-4-8-1-0-3-1-4)"
        d="m 373.55335,443.72074 c 0,22.52803 -33.96661,40.79267 -81.70868,40.79267 -47.73875,0 -91.17215,-18.26464 -91.17215,-40.79267 0,-22.52804 38.70001,-40.78982 86.43876,-40.78982 47.74207,0 86.44207,18.26178 86.44207,40.78982"
@@ -4091,7 +4091,7 @@
          sodipodi:role="line"
          id="tspan7682"
          x="381.4592"
-         y="938.76746">ValidationAssertion</tspan></text>
+         y="938.76746">ValidationResponse</tspan></text>
     <path
        style="display:inline;fill:#f4e3d7;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.66167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:6.64668, 1.66167;stroke-dashoffset:0.664668;stroke-opacity:1;filter:url(#filter9105-4-8-1-0-3-1-3)"
        d="m 373.55335,443.72074 c 0,22.52803 -33.96661,40.79267 -81.70868,40.79267 -47.73875,0 -91.17215,-18.26464 -91.17215,-40.79267 0,-22.52804 38.70001,-40.78982 86.43876,-40.78982 47.74207,0 86.44207,18.26178 86.44207,40.78982"
@@ -4181,7 +4181,7 @@
        transform="translate(0,13.5)"><tspan
          id="tspan8086"
          x="153.82343"
-         y="717.68445">producesAssertion</tspan></text>
+         y="717.68445">producesResponse</tspan></text>
     <path
        style="display:inline;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
        d="m 348.02925,785.89004 -3.53553,-10.6066 -1.76777,5.3033 -5.3033,1.76777 z m 0,0"
@@ -4322,7 +4322,7 @@
          sodipodi:role="line"
          id="tspan13929"
          x="92.365837"
-         y="857.38525">containsAssertion</tspan></text>
+         y="857.38525">containsResponse</tspan></text>
     <path
        style="display:inline;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"
        d="m 335.53312,802.90561 -9.99999,-5 2.49999,5 -2.49999,5 z m 0,0"

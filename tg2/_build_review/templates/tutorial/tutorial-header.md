@@ -981,7 +981,7 @@ See also:
 The BDQ Test specifications (the Specification text in bdqffdq:hasExpectedResponse, plus any Parameters/defaults) are execution framework agnostic because they define only:
 
 * What inputs are required (the `Information Elements` `Acted Upon` and `Consulted`, and any `Parameter` values),
-* What outputs must be produced (a structured Response with `Response.status`, `Response.result`, `Response.comment`), and
+* What outputs must be produced (a structured `Response` with `Response.status`, `Response.result`, `Response.comment`), and
 * What decision logic must be followed (evaluate the criteria blocks in the `hasExpectedResponse` in order and return the first applicable response),
 
 …but they do not constrain:
@@ -990,7 +990,7 @@ The BDQ Test specifications (the Specification text in bdqffdq:hasExpectedRespon
 * How records are streamed/batched/parallelized in a workflow.
 * What programming language(s) are used.
 * How methods are discovered/invoked (reflection, registry, function pointers, workflow nodes).
-* How Responses are serialized/persisted (objects, rows, RDF bdqffdq:Response, annotations).
+* How Responses are serialized/persisted (objects, rows, RDF `bdqffdq:Response`, annotations).
 * How Responses are presented to users or downstream processes (logs, dashboards, annotations).
 
 #### 7.4.1 What an execution framework must do between raw data and a Test implementation (non-normative)
@@ -1012,8 +1012,8 @@ A framework’s job is to act as the “adapter layer” that turns heterogeneou
 * Invoke the correct implementation
   * Locate the right Implementation for a given Test (e.g., by Label, GUID/Term Name, or versioned IRI), then call it with the bound inputs.
 
-* Capture and normalize outputs into a Response
-  * Ensure every execution yields exactly one structured Response with:
+* Capture and normalize outputs into a `Response`
+  * Ensure every execution yields exactly one structured `Response` with:
     * `Response.status` from the controlled vocabulary (e.g. RUN_HAS_RESULT, EXTERNAL_PREREQUISITES_NOT_MET),
     * `Response.result` as required by status and `Test Type`, and
     * a `Response.comment` that is `bdq:NotEmpty`.

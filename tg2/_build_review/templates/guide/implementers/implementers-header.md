@@ -232,10 +232,10 @@ We regularly (particularly in examples) use `Response`, `Response.status`, `Resp
 | Shorthand Concept | bdqffdq Term(s) | Description |
 | ----------------- | --------------- | ----------- |
 | Response          | bdqffdq:Response | The report from a single execution of a single Test, consisting of a Response.status, a Response.result, a Response.comment, and optionally, a Response.qualifier. | 
-| Response.status   | bdqffdq:ResponseStatus, bdqffdq:hasResponseStatus | A metadata element in a Response indicating whether a Test was able to be performed or not. | 
-| Response.result   | bdqffdq:ResponseResult, bdqffdq:hasResponseResult, bdqffdq:hasResponseResultValue | The element in a Response containing the value returned by a Test. |
+| Response.status   | bdqffdq:ResponseStatus, bdqffdq:hasResponseStatus | A metadata element in a `Response` indicating whether a Test was able to be performed or not. | 
+| Response.result   | bdqffdq:ResponseResult, bdqffdq:hasResponseResult, bdqffdq:hasResponseResultValue | The element in a `Response` containing the value returned by a Test. |
 | Response.comment  | bdqffdq:hasResponseComment | A human readable interpretation of the results of the Test. |
-| Response.qualifier | bdqffdq:ResponseQualifier, bdqffdq:hasResponseQualifier | Additional structured information that qualifies the Response, intended as an extension point for uncertainty. |
+| Response.qualifier | bdqffdq:ResponseQualifier, bdqffdq:hasResponseQualifier | Additional structured information that qualifies the `Response`, intended as an extension point for uncertainty. |
 
 ##### 2.3.2.2 Guidance for Reading a Specification (normative)
 
@@ -1244,7 +1244,7 @@ A set of "Test Conformance Testing Data" accompanies the BDQ Test descriptors. T
 
 The Test Conformance Testing Data are organized as two flat CSV files. Each row in each file is intended for the evaluation of a single behavior of a single Test, that is, each row represents a single test case. The file has columns identifying the Test, the input data, the expected `Response.status`, `Response.result`, an example `Response.comment`, `Parameter` values (if any), and a set of [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021). Most of the terms for a given Test are `bdq:Empty`.
 
-The Test Conformance Testing Data records are all fragmentary [Simple Darwin Core](https://dwc.tdwg.org/simple/) (Wieczorek et al. 2012) dwc:Occurrence records. Each row contains values for only those Darwin Core terms that are relevant input to the particular cate and consists of a mixture of real and artificial data. The conformance testing data consist of over 1100 records, with an average of about 10 cases for each Test (designed to exercise all of the decision pathways in the specification of the Test (that is, all paths within each Expected Response)). The set of rows for a given Test are intended to be sufficient to validate that an implementation of that particular Test performs as expected against the specification.
+The Test Conformance Testing Data records are all fragmentary [Simple Darwin Core](https://dwc.tdwg.org/simple/) (Wieczorek et al. 2012) dwc:Occurrence records. Each row contains values for only those Darwin Core terms that are relevant input to the particular cate and consists of a mixture of real and artificial data. The conformance testing data consist of over 1100 records, with an average of about 10 cases for each Test (designed to exercise all of the decision pathways in the specification of the Test (that is, all paths within each `ExpectedResponse`)). The set of rows for a given Test are intended to be sufficient to validate that an implementation of that particular Test performs as expected against the specification.
 
 #### 8.1.1 DataID as a conformance testing data record identifier (normative)
 

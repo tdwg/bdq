@@ -248,7 +248,7 @@ The specifications for the structure of a response from running a Test can be fo
 
 ##### 3.2.3.1 Shorthand for Responses from Tests (non-normative) 
 
-A `Data Quality Report` from a BDQ `Test` is expected to include a Response for each `Test` run.   
+A `Data Quality Report` from a BDQ `Test` is expected to include a `Response` for each `Test` run.   
 
 We use a shorthand to describe a collection of formal Fitness for Use Framework concepts: an instance of a subtype of `bdqffdq:Response` produced by running a Test, which carries a response status, result, comment and optional qualifier via the `bdqffdq:hasResponseStatus`, `bdqffdq:hasResponseResult`/`bdqffdq:hasResponseResultValue`, `bdqffdq:hasResponseComment`, and `bdqffdq:hasResponseQualifier` properties.
 
