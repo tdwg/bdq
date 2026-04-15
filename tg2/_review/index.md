@@ -360,7 +360,7 @@ This standard is comprised of the following documents and artifacts:
 
 **Note:** These sections in this document are marked as non-normative, however, most of the documents linked out to here contain normative content.
 
-**Note:** See the TDWG Standards Documentation Specification (SDS) for an explanation of concepts such as landing page, distribution file, term-list, and vocabulary extension.
+**Note:** See the [TDWG Standards Documentation Specification (SDS)](https://sds.tdwg.org/specification), the [TDWG Vocabulary Maintenance Specification (VMS)](https://vms.tdwg.org/specification) and the [TDWG Standards Metadata](https://tdwg.github.io/rs.tdwg.org/) document for an explanation of concepts such as landing page, distribution file, term-list, and vocabulary extension and for an explanation of the structure of TDWG resource IRIs and their uses.
 
 ### 3.1 BDQ Tests Quick Reference Guide (non-normative)
 
@@ -722,6 +722,7 @@ We have used the formatting recommended by Pensoft, see https://checklist.pensof
 <li>Vertnet (2022) DwC Vocabs. https://github.com/VertNet/DwCVocabs/tree/master/vocabs</li>
 <li>VLIZ (2023). Marineregions.org. https://www.marineregions.org/downloads.php#marbound</li>
 <li>Vocabulary Maintenance Specification Task Group (2017). Standards Documentation Standard. Biodiversity Information Standards (TDWG) http://www.tdwg.org/standards/147</li>
+<li>Vocabulary Maintenance Specification Task Group (2017). Vocabulary Maintenance Standard. Biodiversity Information Standards (TDWG) http://www.tdwg.org/standards/642</li>
 <li>W3C (2017) Web Annotation Data Model. https://www.w3.org/TR/annotation-model/</li>
 <li>W3C (2017) Web Annotation Data Model: Annotation. https://www.w3.org/TR/annotation-vocab/#annotation</li>
 <li>Waller JT (2023) Processing Country Centroids at the Global Biodiversity Information Facility. Biodiversity Information Science and Standards 7: e110728. https://doi.org/10.3897/biss.7.110728</li> 
