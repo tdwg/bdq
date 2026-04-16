@@ -55,6 +55,8 @@ Draft Standard for Review
 
 [2 A Brief Context for the BDQ Tests (non-normative)](#2-a-brief-context-for-the-bdq-tests-non-normative)
   - [2.1 What is meant by "Test"? (non-normative)](#21-what-is-meant-by-test-non-normative)
+  - [2.2 Use Cases (non normative)](#22-use-cases-non-normative)
+  - [2.3 Structure of the Responses from Tests (normative)](#23-structure-of-the-responses-from-tests-normative)
   - [2.2 Test Types (non-normative)](#22-test-types-non-normative)
     - [2.2.1 Validation Tests (normative)](#221-validation-tests-normative)
     - [2.2.2 Issue Tests (normative)](#222-issue-tests-normative)
@@ -79,13 +81,13 @@ Draft Standard for Review
 
 ## 1 Introduction (non-normative)
 
-The BDQ standard defines a suite of Tests for evaluating biodiversity data quality. This document provides both normative specifications and explanatory guidance for the BDQ Tests. It defines how each Test is modeled using standard vocabulary terms and how conforming implementations are expected to behave under a range of conditions. It also distinguishes among Test types (`Validation`, `Issue`, `Measure`, and `Amendment`), outlines the semantics of single- versus multi-record evaluation, and explains how `Parameters` influence Test behavior. Together, these sections provide the foundation for interpreting BDQ Test descriptions and implementing BDQ-conformant test suites and reports.
+This document provides both normative specifications and explanatory guidance for the BDQ Tests. It defines how each Test is modeled using standard vocabulary terms and how conforming implementations are expected to behave under various conditions. It also distinguishes among Test types (`Validation`, `Issue`, `Measure`, and `Amendment`), outlines the semantics of single- versus multi-record evaluation, and explains how `Parameters` influence Test behavior. The content here provides the foundation for interpreting BDQ Test descriptions and for implementing BDQ-conformant test suites and reports.
 
-Data quality is an evolving field, and there will always be additional tests that could be conceived. BDQ therefore focuses on a suite of Tests that has reached community consensus and that provides broad coverage of commonly used Darwin Core terms. The BDQ framework is modular and extensible: communities may define additional Tests to address domain-specific needs, and future versions of the standard may incorporate new Tests as consensus and practice evolve. Within BDQ, Tests are applied in the context of the use of data (`Use Cases` via `Policies`), allowing users select and apply Tests relevant to their stated data quality needs.
+Data quality is an evolving field, and there will always be "one more test" that we could conceive. BDQ focuses on a suite of Tests that have reached community consensus.  By mapping these tests across key Darwin Core terms, BDQ provides high coverage for the data that researchers use the most. The BDQ framework is modular and extensible: communities may define additional Tests to address domain-specific needs, and future versions of the standard may incorporate new Tests as consensus and practice evolve. Within BDQ, Tests are applied in the context of the use of data (`Use Cases` via `Policies`), allowing users select and apply Tests relevant to their stated data quality needs.
 
 ### 1.1 Purpose (non-normative)
 
-The purpose of this document is to define and explain the BDQ `Tests` — the primary mechanism for evaluating the quality of biodiversity data in the BDQ standard.  This document describes the structure, types, and formal characteristics of the Tests, providing a clear and consistent specification that can be used by implementers, analysts, and quality assessors.
+The purpose of this document is to define and explain the BDQ Tests — the primary mechanism for evaluating the quality of biodiversity data in the BDQ standard.  This document describes the structure, types, and formal characteristics of the Tests, providing a clear and consistent specification that can be used by implementers, analysts, and quality assessors.
 
 ### 1.2 Audience (non-normative)
 
@@ -96,7 +98,7 @@ This document is intended for audiences who need a detailed understanding of the
 - Researchers and data managers evaluating dataset readiness for specific uses
 - Standards developers integrating BDQ Test logic into broader biodiversity data infrastructures.
 
-While familiarity with controlled vocabularies and RDF modeling may be useful, this document is designed to be accessible to both technical and semi-technical users who want to understand, apply, or extend BDQ `Tests`.
+While familiarity with controlled vocabularies and RDF modeling may be useful, this document is designed to be accessible to both technical and semi-technical users who want to understand, apply, or extend BDQ Tests.
 
 ### 1.3 Associated Documents (non-normative)
 
@@ -104,7 +106,7 @@ For the list and links to all associated documents see [The Biodiversity Data Qu
 
 The set of information most relevant to the Biodiversity Data Quality (BDQ) Tests can be found in the following subset of resources:
 
-- **BDQ Tests and Assertions** - Defines how each Test is modelled using standard vocabulary terms and how it should behave under various conditions.  This document.
+- **BDQ Tests and Assertions** - This document. Defines how each Test is modelled using standard vocabulary terms and how it should behave under various conditions.
 - [**BDQ Tests Quick Reference Guide**](../terms/bdqtest/index.md) - Provides a concise, easy-to-read reference about the BDQ Tests.
   - [BDQ Test Index by Use Case](../terms/bdqtest/qrg_index_by_usecase.md)
   - [BDQ Test Index by Information Element Acted Upon](../terms/bdqtest/qrg_index_by_ie_actedupon.md)
@@ -166,27 +168,40 @@ In any technical treatment of the BDQ standard, a precise reference to a class o
 
 ## 2 A Brief Context for the BDQ Tests (non-normative)
 
-The Authors acknowledge the fundamental importance of the work of:
-
-- The TDWG Data Quality Interest Group - Task Group 1 [BDQFramework](https://tdwg.github.io/bdq/tg1/site/), which provided the Framework for the BDQ Tests.
-- The TDWG Data Quality Interest Group - Task Group 3 [Data Quality Use Cases](https://www.tdwg.org/community/bdq/tg-3/) for providing recommendations on Use Cases.
-- The TDWG [Annotations Interest Group](https://www.tdwg.org/community/annotations/) as to how the Test results may be reported against records.
-
 The terminology of BDQ is based primarily on the Fitness for Use Framework (Veiga 2016, Veiga et al. 2017, Biodiversity Information Standards (TDWG) Task Group 1) expressed as an ontology, but additional vocabularies are required for a complete description of the Tests and how to use them. See [3.4 Vocabularies](../../index.md#34-vocabularies-non-normative) in [The Biodiversity Data Quality (BDQ) Standard](../../index.md).
 
-BDQ `Tests` focus on values of a subset of [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) composed as `bdqffdq:InformationElements` as inputs to the Tests. Each Test is independent, to support the mixing and matching of Tests to meet particular `Data Quality Needs` and not impose a particular model of Test execution on implementation frameworks. Tests may execute in parallel, on data records in sequence, as queries on datasets and on unique values. Tests are paired in that all `Amendment` Tests are matched with a corresponding `Validation` Test that assesses some aspect of data quality. An `Amendment` Test may propose improvements to term values, but the BDQ standard recommends that all improvements be evaluated before application.
+BDQ Tests focus on values of a subset of [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) composed as `bdqffdq:InformationElements` as inputs (along with optional `Parameters`) to the Tests.  Tests have defined outputs expressed as `Responses` and specifications of what input values should produce what `Responses`.  Each Test is independent, to support the mixing and matching of Tests to meet particular `Data Quality Needs` and not impose a particular model of Test execution on implementation frameworks. Tests may execute in parallel, on data records in sequence, as queries on datasets and on unique values. Tests are paired in that all `Amendment` Tests are matched with a corresponding `Validation` Test that assesses some aspect of data quality. An `Amendment` Test may propose improvements to term values, but the BDQ standard recommends that all proposed improvements be evaluated before application.
 
 Some BDQ Tests also require reference to external data such as standard vocabularies of terms or names.
 
-While the most important BDQ Tests apply to a `Single Record` (`bdqffdq:SingleRecord`), Test results may also be accumulated across multiple records (`bdqffdq:MultiRecord`), for example reporting that 75% of the records do not have a valid value for `dwc:basisOfRecord`. Tests that accumulate information about results across multiple records are necessary for formal application of Quality Assurance and Quality Control principles.
+The emphasis in BDQ is on Tests that evaluate values from a `Single Record` (`bdqffdq:SingleRecord`). Test results may also be accumulated across multiple records (`bdqffdq:MultiRecord`). Tests that accumulate information about results across multiple records are necessary for formal application of Quality Assurance and Quality Control principles.
 
 ### 2.1 What is meant by "Test"? (non-normative)
 
-We use the capitalized term "Test" to mean something specific in the BDQ Standard. A "Test" is any instance of a subclass of `bdqffdq:DataQualityNeed` (e.g., `bdqffdq:Validation`) composed with an instance of a subclass of `bdqffdq:Method` (e.g., `bdqffdq:ValidationMethod`) composed with an instance of `bdqffdq:Specification`. When run by an `Implementation`, each BDQ Test can produce a `Data Quality Report` consisting of `bdqffdq:Responses`. See the diagrams and further information in the [Fitness For Use Framework Ontology Guide](../guide/bdqffdq/index.md).
+We use the capitalized term "Test" to mean something specific in the BDQ Standard. A Test is any instance of a subclass of `bdqffdq:DataQualityNeed` (e.g., `bdqffdq:Validation`) composed with an instance of a subclass of `bdqffdq:Method` (e.g., `bdqffdq:ValidationMethod`) composed with an instance of `bdqffdq:Specification`. When run by a `bdqffdq:Implementation`, each BDQ Test can produce a `bdqffdq:DataQualityReport` consisting of `bdqffdq:Responses`. See the diagram in [What is a "Test"](../../index.md#511-what-is-a-test-non-normative) in [The Biodiversity Data Quality (BDQ) Standard](../../index.md).
 
 The scope of each BDQ Test is largely provided by the properties of a `bdqffdq:Specification`. The [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) used in the specification are included in the `Information Elements` (`bdqffdq:InformationElement`). The specification also includes references to external authorities (external to the test specification, and usually also external to the Darwin Core standard, Wieczorek et al. 2012) that are required to implement the Test, for example, references to an ISO standard or a GBIF maintained controlled vocabulary. Such authoritative references are listed under `sourceAuthority` (`bdq:sourceAuthority`) with a link to the authority and optionally, a link to a specific online resource required for the `Implementation` of the Test.
 
-Each BDQ Test is defined to operate on a `Single Record` or a `Multi Record`. The Framework allows for `Multi Record` Tests able to identify outliers within a dataset, or other Tests that look across data values in a `Multi Record` to evaluate data quality. No BDQ Tests have been defined to use data in other records within a dataset to evaluate the quality of data in a `Single Record`. The only `Multi Record` Tests included in BDQ accumulate the outputs of other Tests.
+Each BDQ Test is defined to operate on a `SingleRecord` or a `MultiRecord`. The Framework allows `MultiRecord` Tests to take data as input, for example to able to identify outliers within a dataset, or for `MultiRecord` Tests that take the output of `SingleRecord` tests as their input to provide an assessment of quality across the dataset.  No BDQ `MultiRecord` Tests have been defined to take data as input (but such could be defined).  No BDQ `SingleRecord` Tests have been defined to use data in other records within a dataset to evaluate the quality of data in a `Single Record` (but such could be defined).  The only `Multi Record` Tests included in BDQ accumulate the outputs of other Tests.
+
+### 2.2 Use Cases (non normative)
+
+BDQ Tests are designed to be applied in the context of particular uses of data. The BDQ standard defines a set of `Use Cases` that represent common uses of biodiversity data. Each `Use Case` is associated with one or more Tests that can be used to evaluate whether data meet that need. By applying the appropriate Tests for a given `Use Case`, users can assess the fitness of their data for that particular use and identify areas for improvement.
+
+BDQ defines five 'Use Cases`.  These use cases were based on the work of Data Quality Task Group 3 ([Data Quality Use Cases](https://www.tdwg.org/community/bdq/tg-3/)). The BDQ Tests can only relate to the concept of ‘quality’ as a consequence of their application to a specific use case.  The five use cases included in the BDQ standard were intended to cover a range of applications that were considered in common use, but they are far from being comprehensive. The use cases were intended as a template or guide for those who may want to generate other use cases for their environments.  See the [Tutorial](../tutorial/index.md) for a step-by-step example of how to define a `Use Case` and select appropriate Tests for that `Use Case`.
+
+The BDQ `Use Cases` are:
+* [bdq:Alien-Species](../list/bdq/index.md#bdq_Alien-Species)
+* [bdq:Biotic-Relationships](../list/bdq/index.md#bdq_Biotic-Relationships)
+* [bdq:Record-Management](../list/bdq/index.md#bdq_Record-Management)
+* [bdq:Spatial-Temporal_Patterns](../list/bdq/index.md#bdq_Spatial-Temporal_Patterns)
+* [bdq:Taxon-Management](../list/bdq/index.md#bdq_Taxon-Management)
+
+Under the principle that data has quality only with respect to use, each of the BDQ Tests is allocated to at least one `Use Case`.  Note that there is a many-to-many relationship here: One BDQ Test can be in multiple `Use Cases` and one `Use Case` may have many associated BDQ Tests, with `Policies` relating Tests to `Use Cases`.  See [Compliance depends on Use Case](../guide/implementers/index.md#31-compliance-depends-on-use-case-normative) in the Implementer's Guide for further explanation.
+
+### 2.3 Structure of the Responses from Tests (normative)
+
+TODO: Move here, rework/renumber from here.  
 
 ### 2.2 Test Types (non-normative)
 
