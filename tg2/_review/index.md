@@ -490,7 +490,13 @@ The BDQ standard draws a distinction between Quality Control and Quality Assuran
 
 ### 5.2 When to Run Tests (normative)
 
-The BDQ Tests are designed to be run at any point in the life cycle of biodiversity data. They MAY be run at the point of initial collection or observation of organisms. They MAY be run to support data transcription. They MAY be run in loading data into databases of record from field or transcription sources. They MAY be run in preparing data from databases of record for aggregation. They MAY be run during data aggregation and the presentation of aggregated data. They MAY be run in workflows for analysis of data for research purposes.
+The BDQ Tests are designed to be run at any point in the life cycle of biodiversity data. 
+* They MAY be run at the point of initial collection or observation of organisms. 
+* They MAY be run to support data transcription. 
+* They MAY be run in loading data into databases of record from field or transcription sources. 
+* They MAY be run in preparing data from databases of record for aggregation. 
+* They MAY be run during data aggregation and the presentation of aggregated data. 
+* They MAY be run in workflows for analysis of data for research purposes.
 
 ### 5.3 Results of Test Executions (normative)
 
