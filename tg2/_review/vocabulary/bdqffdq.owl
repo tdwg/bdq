@@ -76,11 +76,11 @@ bdqffdq:composedOf rdf:type owl:ObjectProperty ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/containsResponse
 bdqffdq:containsResponse rdf:type owl:ObjectProperty ;
-                          dcterms:issued "2024-09-30"^^xsd:date ;
-                          rdfs:comment "Connects bdqffdq:Responses together into bdqffdq:DataQualityReports. Alternatively, bdqffdq:Responses can be contained in oa:Annotations, in which case this property is not used."@en ;
-                          rdfs:label "contains Response"@en ;
-                          skos:definition "Connects a bdqffdq:DataQualityReport with bdqffdq:Responses that comprise that bdqffdq:DataQualityReport."@en ;
-                          skos:prefLabel "contains Response"@en .
+                         dcterms:issued "2024-09-30"^^xsd:date ;
+                         rdfs:comment "Connects bdqffdq:Responses together into bdqffdq:DataQualityReports. Alternatively, bdqffdq:Responses can be contained in oa:Annotations, in which case this property is not used."@en ;
+                         rdfs:label "contains Response"@en ;
+                         skos:definition "Connects a bdqffdq:DataQualityReport with bdqffdq:Responses that comprise that bdqffdq:DataQualityReport."@en ;
+                         skos:prefLabel "contains Response"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/forAmendment
@@ -382,11 +382,11 @@ bdqffdq:measurementProperty rdf:type owl:ObjectProperty ;
 
 ###  https://rs.tdwg.org/bdqffdq/terms/producesResponse
 bdqffdq:producesResponse rdf:type owl:ObjectProperty ;
-                          dcterms:issued "2024-09-30"^^xsd:date ;
-                          rdfs:comment "Connects bdqffdq:Implementations (Solutions layer, see Figure 3 in Veiga et al., 2017) with the bdqffdq:Responses (Reports layer, see Figure 3 in Veiga et al., 2017) that they produce from the execution of a bdqffdq:Specification."@en ;
-                          rdfs:label "produces Response"@en ;
-                          skos:definition "Connects an entity with a bdqffdq:Response that the entity created."@en ;
-                          skos:prefLabel "produces Response"@en .
+                         dcterms:issued "2024-09-30"^^xsd:date ;
+                         rdfs:comment "Connects bdqffdq:Implementations (Solutions layer, see Figure 3 in Veiga et al., 2017) with the bdqffdq:Responses (Reports layer, see Figure 3 in Veiga et al., 2017) that they produce from the execution of a bdqffdq:Specification."@en ;
+                         rdfs:label "produces Response"@en ;
+                         skos:definition "Connects an entity with a bdqffdq:Response that the entity created."@en ;
+                         skos:prefLabel "produces Response"@en .
 
 
 ###  https://rs.tdwg.org/bdqffdq/terms/reportProperty
@@ -539,7 +539,7 @@ bdqffdq:hasResponseResultValue rdf:type owl:DatatypeProperty ;
 bdqffdq:AbstractInformationElement rdf:type owl:Class ;
                                    rdfs:subClassOf bdqffdq:InformationElement ;
                                    dcterms:issued "2024-09-30"^^xsd:date ;
-                                   rdfs:comment "Such bdqffdq:InformationElements as DATE and DAY are abstract, they could reference any representation of those concepts. In contrast, dwc:eventDate and dwc:day can be linked to concrete bdqffdq:ActedUponInformationElements or bdqffdq:ConsultedInformationElements."@en ;
+                                   rdfs:comment "Such bdqffdq:InformationElements as DATE and DAY are abstract, they could reference any representation of those concepts. In contrast, dwc:eventDate and dwc:day can be linked to concrete bdqffdq:ActedUponInformationElements or bdqffdq:ConsultedInformationElements.   A MIDS Information Element such as mids:Chronostratigraphy corresponds to a bdqffdq:AbstractInformationElement."@en ;
                                    rdfs:label "Abstract Information Element"@en ;
                                    skos:definition "A bdqffdq:InformationElement described in abstract terms and not linked with any concrete terms."@en ;
                                    skos:prefLabel "Abstract Information Element"@en .

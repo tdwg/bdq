@@ -251,7 +251,7 @@ The terminology used to describe the terms in this vocabulary follows the TDWG [
 | Term Version IRI (rdf:about) | normative | The HTTP IRI that identifies the version of the term that is currently in force. | [https://rs.tdwg.org/ bdqffdq/terms/ AbstractInformationElement](https://rs.tdwg.org/bdqffdq/terms/AbstractInformationElement) |
 | Label (rdfs:label) | normative | A human-readable name for the subject. TDWG SDS: A a word or short phrase that serves as a human-readable name for the term. | Abstract Information Element |
 | Definition (skos:definition) | normative | A statement or formal explanation of the meaning of a concept. TDWG SDS: The normative definition of the term, written in English. | A bdqffdq:InformationElement described in abstract terms and not linked with any concrete terms. |
-| Comments (rdfs:comment) | non-normative | A description of the subject resource. | Such bdqffdq:InformationElements as DATE and DAY are abstract, they could reference any representation of those concepts. In contrast, dwc:eventDate and dwc:day can be linked to concrete bdqffdq:ActedUponInformationElements or bdqffdq:ConsultedInformationElements. |
+| Comments (rdfs:comment) | non-normative | A description of the subject resource. | Such bdqffdq:InformationElements as DATE and DAY are abstract, they could reference any representation of those concepts. In contrast, dwc:eventDate and dwc:day can be linked to concrete bdqffdq:ActedUponInformationElements or bdqffdq:ConsultedInformationElements.   A MIDS Information Element such as mids:Chronostratigraphy corresponds to a bdqffdq:AbstractInformationElement. |
 | Type (rdf:type) | normative | The subject is an instance of a class. | [http://www.w3.org/2002/07/ owl#Class](http://www.w3.org/2002/07/owl#Class) |
 
 
@@ -390,7 +390,7 @@ In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use th
 - Preferred Label: Abstract Information Element
 - Definition: A bdqffdq:InformationElement described in abstract terms and not linked with any concrete terms.
 - SubClass Of: InformationElement
-- Comments: Such bdqffdq:InformationElements as DATE and DAY are abstract, they could reference any representation of those concepts. In contrast, dwc:eventDate and dwc:day can be linked to concrete bdqffdq:ActedUponInformationElements or bdqffdq:ConsultedInformationElements.
+- Comments: Such bdqffdq:InformationElements as DATE and DAY are abstract, they could reference any representation of those concepts. In contrast, dwc:eventDate and dwc:day can be linked to concrete bdqffdq:ActedUponInformationElements or bdqffdq:ConsultedInformationElements.   A MIDS Information Element such as mids:Chronostratigraphy corresponds to a bdqffdq:AbstractInformationElement.
 
 ********************
 
