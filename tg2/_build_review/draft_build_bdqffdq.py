@@ -364,7 +364,7 @@ graph = rdflib.Graph()
 graph.parse(inputTermsOwlFilename, format="ttl")
 #column_list = ['iri', 'term_localName', 'prefLabel', 'label', 'comments', 'definition', 'rdf_type', 'organized_in','issued','status','term_iri','flags']
 column_list = ['term_iri', 'iri', 'term_localName', 'prefLabel', 'label', 'comments', 'definition', 'rdf_type', 'superclass']
-sparql = prefixes + "SELECT DISTINCT (str(?subject) as ?term_iri) (str(?subject) as ?iri) (?subject as ?term_localName)  ?prefLabel ?label ?comment ?definition ?rdf_type (GROUP_CONCAT(?parent; SEPARATOR='; ') AS ?parents)  WHERE {  ?subject a owl:Class . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . ?subject rdf:type ?rdf_type . ?subject rdfs:label ?label . OPTIONAL { ?subject rdfs:subClassOf ?parent } . OPTIONAL { ?subject rdfs:comment ?comment } } GROUP BY ?subject ?prefLabel ?label ?comment ?definition ?rdf_type ORDER BY ?subject"
+sparql = prefixes + "SELECT DISTINCT (str(?subject) as ?term_iri) (str(?subject) as ?iri) (?subject as ?term_localName)  ?prefLabel ?label ?comment ?definition ?rdf_type (GROUP_CONCAT(?parent; SEPARATOR='; ') AS ?parents)  WHERE {  ?subject a owl:Class . ?subject rdfs:comment ?definition . ?subject skos:prefLabel ?prefLabel . ?subject rdf:type ?rdf_type . ?subject rdfs:label ?label . OPTIONAL { ?subject rdfs:subClassOf ?parent } . OPTIONAL { ?subject skos:note ?comment } } GROUP BY ?subject ?prefLabel ?label ?comment ?definition ?rdf_type ORDER BY ?subject"
 queryResult = graph.query(sparql)
 
 terms_df = pd.DataFrame(queryResult, columns = column_list)
@@ -452,7 +452,7 @@ for r in queryResult :
 
 text = text + "\n## 4 Vocabulary (normative)\n"
 text = text + "\n### 4.1 Class terms (normative)\n"
-sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment (GROUP_CONCAT(?parent; SEPARATOR='; ') AS ?parents)  WHERE {  ?subject a owl:Class . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . OPTIONAL { ?subject rdfs:subClassOf ?parent } . OPTIONAL { ?subject rdfs:comment ?comment } } GROUP BY ?subject ?prefLabel ?definition ?comment ORDER BY ?subject"
+sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment (GROUP_CONCAT(?parent; SEPARATOR='; ') AS ?parents)  WHERE {  ?subject a owl:Class . ?subject rdfs:comment ?definition . ?subject skos:prefLabel ?prefLabel . OPTIONAL { ?subject rdfs:subClassOf ?parent } . OPTIONAL { ?subject skos:note ?comment } } GROUP BY ?subject ?prefLabel ?definition ?comment ORDER BY ?subject"
 queryResult = graph.query(sparql)
 for r in queryResult : 
 	entity = r.subject
@@ -468,7 +468,7 @@ for r in queryResult :
 	text = text + "\n********************\n\n"
 
 text = text + "### 4.2 ObjectProperty terms (normative)\n"
-sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment ?range ?restrictedRange ?restriction  (GROUP_CONCAT(?parent; SEPARATOR='; ') AS ?parents)  WHERE {  ?subject a owl:ObjectProperty . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . OPTIONAL { ?subject rdfs:subPropertyOf ?parent } . OPTIONAL { ?subject rdfs:range ?range . optional { ?range a owl:Restriction . ?range owl:onProperty ?restrictedRange . ?range  ?restriction ?x . FILTER ( ?restriction != owl:onProperty && ?restriction != rdf:type  ) }  } . OPTIONAL { ?subject rdfs:comment ?comment } } GROUP BY ?subject ?prefLabel ?definition ?comment ORDER BY ?subject"
+sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment ?range ?restrictedRange ?restriction  (GROUP_CONCAT(?parent; SEPARATOR='; ') AS ?parents)  WHERE {  ?subject a owl:ObjectProperty . ?subject rdfs:comment ?definition . ?subject skos:prefLabel ?prefLabel . OPTIONAL { ?subject rdfs:subPropertyOf ?parent } . OPTIONAL { ?subject rdfs:range ?range . optional { ?range a owl:Restriction . ?range owl:onProperty ?restrictedRange . ?range  ?restriction ?x . FILTER ( ?restriction != owl:onProperty && ?restriction != rdf:type  ) }  } . OPTIONAL { ?subject skos:note ?comment } } GROUP BY ?subject ?prefLabel ?definition ?comment ORDER BY ?subject"
 queryResult = graph.query(sparql)
 for r in queryResult : 
 	entity = r.subject
@@ -490,7 +490,7 @@ for r in queryResult :
 
 
 text = text + "### 4.3 DataProperty terms (normative)\n"
-sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment ?range WHERE { ?subject a owl:DatatypeProperty . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . OPTIONAL { ?subject rdfs:comment ?comment } . OPTIONAL { ?subject rdfs:range ?range }  }  ORDER BY ?subject"
+sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment ?range WHERE { ?subject a owl:DatatypeProperty . ?subject rdfs:comment ?definition . ?subject skos:prefLabel ?prefLabel . OPTIONAL { ?subject skos:note ?comment } . OPTIONAL { ?subject rdfs:range ?range }  }  ORDER BY ?subject"
 queryResult = graph.query(sparql)
 for r in queryResult : 
 	entity = r.subject
@@ -506,7 +506,7 @@ for r in queryResult :
 	text = text + "\n********************\n\n"
 
 text = text + "### 4.4 NamedIndividual terms (normative)\n"
-sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment ?type  WHERE {  ?subject a owl:NamedIndividual . ?subject a ?type . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . OPTIONAL { ?subject rdfs:comment ?comment } . FILTER ( ?type != owl:NamedIndividual) . }  ORDER BY ?type ?subject"
+sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment ?type  WHERE {  ?subject a owl:NamedIndividual . ?subject a ?type . ?subject rdfs:comment ?definition . ?subject skos:prefLabel ?prefLabel . OPTIONAL { ?subject skos:note ?comment } . FILTER ( ?type != owl:NamedIndividual) . }  ORDER BY ?type ?subject"
 queryResult = graph.query(sparql)
 for r in queryResult : 
 	entity = r.subject
