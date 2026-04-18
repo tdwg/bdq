@@ -91,7 +91,7 @@ with open(contributors_yaml_file) as cyf:
 	contributors_yaml = yaml.load(cyf, Loader=yaml.FullLoader)
 
 ## Build key of vocabulary used in the Quick Reference Guide
-terms_in_qrg = [ 'skos:prefLabel', 'rdfs:label', 'rdf:about', 'rdfs:comment','bdqffdq:hasAuthoritiesDefaults','bdqffdq:hasExpectedResponse','skos:example','bdqffdq:composedOf','skos:note','bdqffdq:Parameter','bdqffdq:Specification','rdf:type','bdqffdq:hasUseCase' ]
+terms_in_qrg = [ 'skos:prefLabel', 'rdfs:label', 'rdf:about', 'dcterms:description','bdqffdq:hasAuthoritiesDefaults','bdqffdq:hasExpectedResponse','skos:example','bdqffdq:composedOf','skos:note','bdqffdq:Parameter','bdqffdq:Specification','rdf:type','bdqffdq:hasUseCase' ]
 # Load the vocabulary configuration YAML file from its local location and filter to just the terms used in the Quick Reference Guide
 with open(vocabulary_configuration_yaml_file) as vcfy:
 	term_concept_dictionary = yaml.load(vcfy, Loader=yaml.FullLoader)

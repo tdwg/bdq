@@ -60,7 +60,7 @@ Description:
   append: A brief description of what the Test does.
   label: Description
   normative: 'false'
-  term: rdfs:comment
+  term: dcterms:description
   sort_order: 7
 ExpectedResponse:
   append: The formal definition of how the Test must be implemented.
