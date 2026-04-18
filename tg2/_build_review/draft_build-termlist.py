@@ -425,7 +425,8 @@ for term in termLists:
             outputRdf += '     <tdwgutility:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recommended</tdwgutility:status>\n'
             outputRdf += '     <rdfs:label xml:lang="en">{}</rdfs:label>\n'.format(row['label'])
             outputRdf += '     <skos:prefLabel xml:lang="en">{}</skos:prefLabel>\n'.format(row['prefLabel'])
-            outputRdf += '     <rdfs:comment xml:lang="en">{}</rdfs:comment>\n'.format(row['comments'])
+            outputRdf += '     <skos:note xml:lang="en">{}</skos:note>\n'.format(row['comments'])
+            outputRdf += '     <rdfs:comment xml:lang="en">{}</rdfs:comment>\n'.format(row['definition'])
             outputRdf += '     <skos:definition xml:lang="en">{}</skos:definition>\n'.format(row['definition'])
             outputRdf += '     <rdf:value>{}</rdf:value>\n'.format(row['term_localName'])
             outputRdf += '     <skos:inScheme rdf:resource="http://rs.tdwg.org/{}/terms/"/>\n'.format(term)

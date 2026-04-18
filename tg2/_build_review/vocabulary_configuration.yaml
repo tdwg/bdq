@@ -34,11 +34,16 @@ label:
 definition:
   label: Definition
   normative: 'true'
-  term: skos:definition
+  term: rdfs:comment
+# TODO: also place definition in skos:definition
+#definition:
+#  label: Definition
+#  normative: 'true'
+#  term: skos:definition
 comments:
   label: Comments
   normative: 'false'
-  term: rdfs:comment
+  term: skos:note
 status:
   label: Status
   normative: ''

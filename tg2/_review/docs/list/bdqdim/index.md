@@ -146,8 +146,8 @@ The terminology used to describe the terms in this vocabulary follows the TDWG [
 | Modified (dcterms:issued) | normative | Date of formal issuance of the resource. TDWG SDS: The date in ISO 8601 Date format on which the most recent version of the term was issued. | 2024-09-30 |
 | Term Version IRI (rdf:about) | normative | The HTTP IRI that identifies the version of the term that is currently in force. | [https://rs.tdwg.org/ bdqdim/terms/version/ Completeness-2024-09-30](https://rs.tdwg.org/bdqdim/terms/version/Completeness-2024-09-30) |
 | Label (rdfs:label) | normative | A human-readable name for the subject. TDWG SDS: A a word or short phrase that serves as a human-readable name for the term. | Completeness |
-| Definition (skos:definition) | normative | A statement or formal explanation of the meaning of a concept. TDWG SDS: The normative definition of the term, written in English. | The extent to which data in a bdqffdq:InformationElement are present and sufficiently comprehensive for use. |
-| Comments (rdfs:comment) | non-normative | A description of the subject resource. | Definition from the Fitness for Use Framework: Data Quality Dimensions Document https://github.com/tdwg/bdq/wiki/TG2-Data-Quality-Dimension. |
+| Definition (rdfs:comment) | normative | A description of the subject resource. TDWG SDS: The normative definition of the term, written in English. | The extent to which data in a bdqffdq:InformationElement are present and sufficiently comprehensive for use. |
+| Comments (skos:note) | non-normative | A general note, for any purpose. | Definition from the Fitness for Use Framework: Data Quality Dimensions Document https://github.com/tdwg/bdq/wiki/TG2-Data-Quality-Dimension. |
 | Status (tdwgutility:status) |  | Used to indicate if the term is recommended for use or if it is only of historical significance. | recommended |
 | Controlled Value String () | normative |  | Completeness |
 | Type (rdf:type) | normative | The subject is an instance of a class. | bdqffdq:DataQualityDimension |
