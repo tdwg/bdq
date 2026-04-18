@@ -30,11 +30,11 @@ prefLabel:
 comments:
   label: Comments
   normative: 'false'
-  term: rdfs:comment
+  term: skos:note
 definition:
   label: Definition
   normative: 'true'
-  term: skos:definition
+  term: rdfs:comment
 rdf_type:
   label: Type
   normative: 'true'

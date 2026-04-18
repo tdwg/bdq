@@ -115,7 +115,7 @@ graph.parse(inputTermsOwlFilename, format="ttl")
 # TODO: range, differentFrom 
 # column_list = ['term_iri', 'iri', 'term_localName', 'prefLabel', 'label', 'comments', 'definition', 'rdf_type', 'superclass', 'range', 'differentFrom']
 column_list = ['term_iri', 'iri', 'term_localName', 'prefLabel', 'label', 'comments', 'definition', 'rdf_type', 'superclass']
-sparql = prefixes + "SELECT DISTINCT (str(?subject) as ?term_iri) (str(?subject) as ?iri) (?subject as ?term_localName)  ?prefLabel ?label ?comment ?definition ?rdf_type (GROUP_CONCAT(?parent; SEPARATOR='; ') AS ?parents)  WHERE {  ?subject a owl:Class . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . ?subject rdf:type ?rdf_type . ?subject rdfs:label ?label . OPTIONAL { ?subject rdfs:subClassOf ?parent } . OPTIONAL { ?subject rdfs:comment ?comment } } GROUP BY ?subject ?prefLabel ?label ?comment ?definition ?rdf_type ORDER BY ?subject"
+sparql = prefixes + "SELECT DISTINCT (str(?subject) as ?term_iri) (str(?subject) as ?iri) (?subject as ?term_localName)  ?prefLabel ?label ?comment ?definition ?rdf_type (GROUP_CONCAT(?parent; SEPARATOR='; ') AS ?parents)  WHERE {  ?subject a owl:Class . ?subject rdfs:comment ?definition . ?subject skos:prefLabel ?prefLabel . ?subject rdf:type ?rdf_type . ?subject rdfs:label ?label . OPTIONAL { ?subject rdfs:subClassOf ?parent } . OPTIONAL { ?subject skos:note ?comment } } GROUP BY ?subject ?prefLabel ?label ?comment ?definition ?rdf_type ORDER BY ?subject"
 queryResult = graph.query(sparql)
 
 terms_df = pd.DataFrame(queryResult, columns = column_list)
