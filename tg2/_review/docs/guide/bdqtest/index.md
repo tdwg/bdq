@@ -1,15 +1,15 @@
 <!--- This file is generated from templates by code, DO NOT EDIT by hand --->
 
-# BDQ Tests and Assertions
+# Guide to the BDQ Tests and Their Use
 
 **Title**<br>
-BDQ Tests and Assertions
+Guide to the BDQ Tests and Their Use
 
 **Date version issued**<br>
-2025-05-10
+2026-04-19
 
 **Date created**<br>
-2025-05-10
+2026-04-19
 
 **Part of TDWG Standard**<br>
 <http://example.org/to_be_determined>
@@ -20,15 +20,15 @@ BDQ Tests and Assertions
 -->
 
 **This version**<br>
-<http://rs.tdwg.org/bdqtest/terms/2025-05-10>
+<http://rs.tdwg.org/bdq/docs/guide/bdqtest/2026-04-19>
 
 **Latest version**<br>
-<http://rs.tdwg.org/bdqtest/terms/>
+<http://rs.tdwg.org/bdq/docs/guide/bdqtest/>
 
 **Previous version**<br>
 
 **Abstract**<br>
-This document is a reference for the BDQ standard, documenting the tests in the bdqtest: vocabulary, using terms from the bdqffdq ontology.
+This document is a reference for the BDQ standard, providing context for and normative guidance on use of terms in the bdqtest: vocabulary.
 
 **Authors**<br>
 [Lee Belbin](https://orcid.org/0000-0001-8900-6203) ([Blatant Fabrications](https://www.wikidata.org/wiki/Q130304884)), [Arthur D. Chapman](https://orcid.org/0000-0003-1700-6962) ([Australian Biodiversity Information Services](http://www.wikidata.org/entity/Q100600913)), [Paul J. Morris](https://orcid.org/0000-0002-3673-444X) ([Museum of Comparative Zoology, Harvard University](http://www.wikidata.org/entity/Q1420782)), [John Wieczorek](https://orcid.org/0000-0003-1144-0290) (Rauthiflor LLC)
@@ -37,7 +37,7 @@ This document is a reference for the BDQ standard, documenting the tests in the 
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 **Bibliographic citation**<br>
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. BDQ Tests and Assertions. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqtest/terms/2025-05-10>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. Guide to the BDQ Tests and Their Use. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/docs/guide/bdqtest/2026-04-19>
 
 **Status**<br>
 Draft Standard for Review
@@ -81,13 +81,13 @@ Draft Standard for Review
 
 ## 1 Introduction (non-normative)
 
-This document provides both normative specifications and explanatory guidance for the BDQ Tests. It defines how each Test is modeled using standard vocabulary terms and how conforming implementations are expected to behave under various conditions. It also distinguishes among Test types (`Validation`, `Issue`, `Measure`, and `Amendment`), outlines the semantics of single- versus multi-record evaluation, and explains how `Parameters` influence Test behavior. The content here provides the foundation for interpreting BDQ Test descriptions and for implementing BDQ-conformant test suites and reports.
+This document provides both normative specifications and explanatory guidance for the BDQ Tests. It defines how each Test is modeled using standard vocabulary terms and how conforming implementations are expected to behave under various conditions. It also distinguishes among Test types (`Validation`, `Issue`, `Measure`, and `Amendment`), outlines the semantics of single- versus multi-record evaluation, and explains how `Parameters` influence Test behavior. The content here provides the foundation for interpreting BDQ Test descriptions and for implementing BDQ-conformant test suites and reports.  This document also provides context on the role of Tests within the broader BDQ standard, including their relationship to `Use Cases`, `Policies`, and `Implementations` and the products that result from running Tests, `Responses` and `Data Quality Reports`.
 
 Data quality is an evolving field, and there will always be "one more test" that we could conceive. BDQ focuses on a suite of Tests that have reached community consensus.  By mapping these tests across key Darwin Core terms, BDQ provides high coverage for the data that researchers use the most. The BDQ framework is modular and extensible: communities may define additional Tests to address domain-specific needs, and future versions of the standard may incorporate new Tests as consensus and practice evolve. Within BDQ, Tests are applied in the context of the use of data (`Use Cases` via `Policies`), allowing users select and apply Tests relevant to their stated data quality needs.
 
 ### 1.1 Purpose (non-normative)
 
-The purpose of this document is to define and explain the BDQ Tests — the primary mechanism for evaluating the quality of biodiversity data in the BDQ standard.  This document describes the structure, types, and formal characteristics of the Tests, providing a clear and consistent specification that can be used by implementers, analysts, and quality assessors.
+The purpose of this document is to define and explain the BDQ Tests — the primary mechanism for evaluating the quality of biodiversity data in the BDQ standard.  This document describes the structure, types, and formal characteristics of the Tests, along with description of their context within BDQ, providing a clear and consistent specification that can be used by implementers, analysts, and quality assessors.
 
 ### 1.2 Audience (non-normative)
 
@@ -486,7 +486,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. BDQ Tests and Assertions. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqtest/terms/2025-05-10>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. Guide to the BDQ Tests and Their Use. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/docs/guide/bdqtest/2026-04-19>
 
 **Biodiversity Information Standards (TDWG)**
 
