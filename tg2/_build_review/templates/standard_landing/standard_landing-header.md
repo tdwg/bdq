@@ -144,7 +144,7 @@ When a word that is also a bdqffdq class name is not capitalized and styled as i
 
 See also section [3.12 Naming Conventions (non-normative)](docs/supplement/index.md#312-naming-conventions-non-normative) in the [BDQ Supplemental Information](docs/supplement/index.md).
 
-## 2 A Roadmap to the BDQ Standard (non‑normative)
+## 2 A Roadmap to the BDQ Standard (non-normative)
 
 The Biodiversity Data Quality (BDQ) Standard is documented as a set of complementary resources, rather than as a single, linear specification.  These resources are designed to support different audiences and goals, such as interpreting test results, implementing BDQ Tests in software, or defining new Tests and `Use Cases`.
 
@@ -345,7 +345,7 @@ The Supporting Vocabularies are controlled vocabularies used in the technical de
 - [**Data Quality Dimension Controlled Vocabulary List of Terms (bdqdim:)**](docs/list/bdqdim/index.md)
 - [**Data Quality Enhancement Controlled Vocabulary List of Terms (bdqenh:)**](docs/list/bdqenh/index.md)
 
-### 3.4.3 Landing Page IRIs (non-normative)
+#### 3.4.3 Landing Page IRIs (non-normative)
 
 Note: or each of the following documents the landing page IRI will resolve to the term list document when HTML is requested.
 
