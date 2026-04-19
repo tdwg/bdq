@@ -63,11 +63,12 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
 
 [3 Parts of the Standard (non-normative)](#3-parts-of-the-standard-non-normative)
   - [3.1 BDQ Tests Quick Reference Guide (non-normative)](#31-bdq-tests-quick-reference-guide-non-normative)
-  - [3.2 Landing Pages (non-normative)](#32-landing-pages-non-normative)
+  - [3.2 Normative Guidance Documents (non-normative)](#32-normative-guidance-documents-non-normative)
   - [3.3 Guides (non-normative)](#33-guides-non-normative)
   - [3.4 Vocabularies (non-normative)](#34-vocabularies-non-normative)
     - [3.4.1 Foundational Vocabularies (non-normative)](#341-foundational-vocabularies-non-normative)
     - [3.4.2 Supporting Vocabularies (non-normative)](#342-supporting-vocabularies-non-normative)
+  - [3.4.3 Landing Page IRIs (non-normative)](#343-landing-page-iris-non-normative)
   - [3.5 Additional Documents (non-normative)](#35-additional-documents-non-normative)
     - [3.5.1 Supplemental Information (non-normative)](#351-supplemental-information-non-normative)
     - [3.5.2 Tutorial (non-normative)](#352-tutorial-non-normative)
@@ -80,13 +81,6 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
 [4 Implementations (non-normative)](#4-implementations-non-normative)
   - [4.1 Java Implementation (non-normative)](#41-java-implementation-non-normative)
   - [4.2 BDQEmail (non-normative)](#42-bdqemail-non-normative)
-
-[5 Design of the Tests (normative)](#5-design-of-the-tests-normative)
-  - [5.1.1 What is a "Test" (non-normative)](#511-what-is-a-test-non-normative)
-  - [5.1 Data Quality Control, Data Quality Assurance (normative)](#51-data-quality-control-data-quality-assurance-normative)
-  - [5.2 When to Run Tests (normative)](#52-when-to-run-tests-normative)
-  - [5.3 Results of Test Executions (normative)](#53-results-of-test-executions-normative)
-  - [5.4 Test Execution Environments and Workflows (non-normative)](#54-test-execution-environments-and-workflows-non-normative)
 
 [6 Contributions and Acknowledgments (non-normative)](#6-contributions-and-acknowledgments-non-normative)
   - [6.1 Acknowledgments (non-normative)](#61-acknowledgments-non-normative)
@@ -293,7 +287,8 @@ Readers can approach the standard in different ways depending on their needs. Th
 		:blue_book:
         <strong>Test Vocabulary, Definitions &amp; Serializations</strong><br>
         Normative machine‑readable definitions and versioned lists of tests.
-		bdqtest: <a href="./docs/bdqtest/index.md">Landing Page</a> and <a href="./docs/list/bdqtest/list/index.md">Term List</a><br>
+		<a href="./docs/guides/bdqtest/index.md">Understanding and using Tests in bdqtest:</a><br>
+		bdqtest: <a href="./docs/list/bdqtest/list/index.md">Term List</a><br>
 		and serialized versions: <a href="./dist/bdqtest.xml">RDF/XML</a>, <a href="./dist/bdqtest.ttl">Turtle</a>, <a href="./dist/bdqtest.json">JSON-LD</a>.
       </td>
       <td valign="top">
@@ -368,21 +363,13 @@ The Quick Reference Guide is a simple, informative reference and the first place
 
 [**BDQ Tests Quick Reference Guide**](docs/terms/bdqtest/index.md)
 
-### 3.2 Landing Pages (non-normative)
+### 3.2 Normative Guidance Documents (non-normative)
 
-The landing pages provide overviews of the subjects they cover and refer to more detailed information in associated documents. The details of the individual terms are provided in the corresponding term list documents. 
+These documents provide overviews and normative guidance of the subjects they cover. The details of the individual terms are provided in the corresponding term list documents. 
 
-- **The Biodiversity Data Quality (BDQ) Standard** - Overview of the BDQ standard. This page.
 - [**BDQ Tests and Assertions**](docs/bdqtest/index.md) - Overview of the Tests.
 - [**Fitness for Use Ontology**](docs/bdqffdq/index.md) - Overview of the Fitness for Use Framework.
 
-<!--- 
-Note: bdqffdq and bdqtest have separate landing pages and term list documents, for each of the following documents the landing page IRI will resolve to the term list document.
-- [**BDQ Controlled Vocabulary List of Terms (bdq:)**](docs/list/bdq/index.md) (will be: https://bdq.tdwg.org/bdq)
-- [**Data Quality Criterion Controlled Vocabulary List of Terms (bdqcrit:)**](docs/list/bdqcrit/index.md) (will be: https://bdq.tdwg.org/bdqcrit)
-- [**Data Quality Dimension Controlled Vocabulary List of Terms (bdqdim:)**](docs/list/bdqdim/index.md) (will be: https://bdq.tdwg.org/bdqdim)
-- [**Data Quality Enhancement Controlled Vocabulary List of Terms (bdqenh:)**](docs/list/bdqenh/index.md) (will be: https://bdq.tdwg.org/bdqenh)
---->
 
 ### 3.3 Guides (non-normative)
 
@@ -410,6 +397,26 @@ The Supporting Vocabularies are controlled vocabularies used in the technical de
 - [**Data Quality Criterion Controlled Vocabulary List of Terms (bdqcrit:)**](docs/list/bdqcrit/index.md)
 - [**Data Quality Dimension Controlled Vocabulary List of Terms (bdqdim:)**](docs/list/bdqdim/index.md)
 - [**Data Quality Enhancement Controlled Vocabulary List of Terms (bdqenh:)**](docs/list/bdqenh/index.md)
+
+### 3.4.3 Landing Page IRIs (non-normative)
+
+Note: or each of the following documents the landing page IRI will resolve to the term list document when HTML is requested.
+
+Note: None of these links will work until deployment of the standard, but they are included here to show the intended structure of the IRIs and to provide a complete list of the landing page IRIs for the standard.
+
+
+- **The Biodiversity Data Quality (BDQ) Standard** - Overview of the BDQ standard. This page. [RDF Metadata](https://rs.tdwg.org/bdq.ttl)
+- [**BDQ Tests and Assertions (bdqtest:)**](https://bdq.tdwg.org/bdqtest/)  [RDF Metadata](https://rs.tdwg.org/bdqtest.ttl)
+- [**BDQ Fittness For Use Vocabulary (bdqffdq:)**](https://bdq.tdwg.org/bdqffdq/) [RDF Metadata](https://rs.tdwg.org/bdqffdq.ttl)
+- [**BDQ Controlled Vocabulary List of Terms (bdq:)**](https://bdq.tdwg.org/bdq) [RDF Metadata](https://rs.tdwg.org/bdqtest.ttl)
+- [**Data Quality Criterion Controlled Vocabulary List of Terms (bdqcrit:)**](https://bdq.tdwg.org/bdqcrit) [RDF Metadata](https://bdq.tdwg.org/bdqcrit.ttl)
+- [**Data Quality Dimension Controlled Vocabulary List of Terms (bdqdim:)**](https://bdq.tdwg.org/bdqdim) [RDF Metadata](https://bdq.tdwg.org/bdqdim.ttl)
+- [**Data Quality Enhancement Controlled Vocabulary List of Terms (bdqenh:)**](https://bdq.tdwg.org/bdqenh) [RDF Metadata](https://bdq.tdwg.org/bdqdim.ttl)
+
+TODO: Redo as table of links to resources, and metadata documents for all documents in the standard.
+| Vocabulary | Landing Page IRI | Vocabulary RDF Metadata IRI | Term List RDF Metadata IRI |
+|------------|------------------|-----------------------------|----------------------------|
+| bdqtest: | https://bdq.tdwg.org/bdqtest/ | https://rs.tdwg.org/bdqtest.ttl | https://rs.tdwg.org/bdqtest/terms.rdf |
 
 ### 3.5 Additional Documents (non-normative)
 
@@ -469,55 +476,6 @@ While **not part of the BDQ standard**, a validated Java® implementation of the
 ### 4.2 BDQEmail (non-normative)
 
 While **not part of the BDQ standard**, GBIF Norway has developed a tool called BDQEmail that allows users to submit records for testing and receive results via email. This tool wraps the Java implementation of the tests with an email and large language model processing system and provides an accessible way for users to evaluate the quality of their biodiversity data using the BDQ Tests without needing to implement the tests themselves.  The tool ([gbif-norway/bdq-multirecord-agent](https://github.com/gbif-norway/bdq-multirecord-agent)) is described at: [https://www.gbif.no/services/index.html](https://www.gbif.no/services/index.html).
-
-## 5 Design of the Tests (normative)
-
-BDQ `Tests` are designed with a clear boundary of responsibility: they take a defined set of input `Information Elements` (and optional `Parameters`) and return a structured `Response` describing the outcome. This standardization of inputs and outputs means a `Test` implementation can be treated as a small, self-contained component whose behavior is determined by its `Specification` and is consistent across programming languages and environments. The surrounding execution framework is responsible for obtaining and binding raw data to the required `Information Elements`, selecting which `Tests` to run (e.g., by `Use Case` via `Policies`), and assembling the resulting `Responses` into `Data Quality Reports`. In this way, BDQ separates the semantics of `Test` behavior (what is evaluated and how results are expressed) from the mechanics of test execution (how data are accessed, orchestrated, filtered, and reported).
-
-### 5.1.1 What is a "Test" (non-normative)
-
-A Test is a defined evaluation that takes specific inputs and produces a structured output. A Test is defined using a set of `bdqffdq:` classes and properties that specify the inputs to the Test (the relevant `Information Elements` and any `Parameters`) and how those input values are to be evaluated under a `Specification` to produce a structured output (a `Response`) that can be interpreted consistently across implementations. The Test definitions are provided in the `bdqtest:` vocabulary, and the semantics of the terms used in those definitions are provided by the `bdqffdq:` vocabulary and supporting vocabularies.
-
-![Diagram of the relationship between the concept Test and the bdqffdq: classes and properties that define it](docs/guide/implementers/bdqffdq_overview_diagram.svg)
-
-A Test is not a software implementation; it is a formal definition of an evaluation that *can* be implemented in software. In the Fitness For Use Framework, each Test is an instance of a subtype of `Data Quality Need` that identifies what is being evaluated (through its required `Information Elements` and its `Resource Type`) and why it matters (through its association with one or more `Use Cases` via `Policies`). The Test is linked to a `Method`, which in turn links to a `Specification` that describes expected behavior and expected outcomes (e.g., via `hasExpectedResponse`), and may reference `Parameters` and source authorities that further constrain or parameterize execution. When an `Implementation` runs a Test, it produces one or more `Responses` that can be assembled into `Data Quality Reports` for interpretation, filtering, and aggregation.
-
-Conceptually, Tests can be viewed in two complementary ways: vertically, they connect the `Data Quality Needs` and `Data Quality Solutions` layers and produce outputs in the `Data Quality Reports` layer; and horizontally by type, BDQ defines four main categories of Tests—`Validation`, `Issue`, `Measure`, and `Amendment`—each of which produces corresponding kinds of `Responses`.
-
-### 5.1 Data Quality Control, Data Quality Assurance (normative)
-
-The BDQ standard draws a distinction between Quality Control and Quality Assurance. Quality Control processes seek to assess the quality of data for some purpose, then identify changes to the data or to processes around the data for improving the quality of the data. Quality Assurance processes seek to filter some set of data to a subset that is fit for some purpose, that is to assure that data used for some purpose are fit for that purpose. Implementations of the BDQ Tests MAY be used to perform Quality Control, Quality Assurance, or both. The [mathematical formalization](docs/bdqffdq/index.md#3-fitness-for-use-framework-summary-of-mathematical-formalization-normative) of the [Fitness for Use Ontology](docs/bdqffdq/index.md) provides a formal definition of Quality Control and Quality Assurance, and how Test `Responses` SHOULD be used for each.
-
-### 5.2 When to Run Tests (normative)
-
-The BDQ Tests are designed to be run at any point in the life cycle of biodiversity data. 
-* They MAY be run at the point of initial collection or observation of organisms. 
-* They MAY be run to support data transcription. 
-* They MAY be run in loading data into databases of record from field or transcription sources. 
-* They MAY be run in preparing data from databases of record for aggregation. 
-* They MAY be run during data aggregation and the presentation of aggregated data. 
-* They MAY be run in workflows for analysis of data for research purposes.
-
-### 5.3 Results of Test Executions (normative)
-
-The BDQ standard is agnostic about the format of presentation of results from BDQ Tests. BDQ does, however, specify that Test implementations and presentations MUST return structured data with at least Response.status, Response.result, and Response.comment. Responses MAY also contain more information in Response.qualifier.
-See the [Implementer's Guide](docs/guide/implementers/index.md) section on [Presentation of Results](docs/guide/implementers/index.md#7-presentation-of-results-normative) for further normative and non-normative guidance about result presentation. See [Structure of a Response](docs/bdqtest/index.md#31-structure-of-response-normative) in the [BDQ Tests and Assertions](docs/bdqtest/index.md) document for normative guidance on `Responses` as RDF or as data structures.
-
-The results of the execution of implementations of the BDQ Tests MAY be presented as Data Quality reports. The Framework Ontology provides vocabulary and structure that MAY be used for such data quality reports.
-
-The bdqffdq: vocabulary enables the wrapping of the results of BDQ Tests within annotations. The bdqffdq: vocabularies in particular are intended to support the framing of `Responses` from Tests within annotations that follow the W3C Web Annotation Data Model (Sanderson et al. 2017), and are suitable for inclusion in semantic data stores. See the [Implementer's Guide](docs/guide/implementers/index.md) section on [Annotations](docs/guide/implementers/index.md#72-annotations-normative) for more guidance.
-
-### 5.4 Test Execution Environments and Workflows (non-normative)
-
-Neither the Test descriptions nor the framework impose constraints on environments or workflows for execution. One possible workflow is to run all validations, then all amendments, then all validations again on a modified copy of the input data to which all proposed amendments have been applied.
-
-A single validation step, with measures evaluating the results of the amendments could look like the diagram below.
-
-![Diagram of workflow through single validation step](workflow_single_iteration.svg)
-
-Expanding on this single validation step, amendments can be run and their results fed back into a second phase of post-amendment validation, with measures again evaluating the results of validation of the input data if all changes proposed by amendments are accepted. Presentation of a data quality report would be an expected result from this workflow for Quality Control purposes, while using the Measures in the second step to filter data in a processing pipeline to just those that are fit for purpose for a particular use would be expected for Quality Assurance purposes.
-
-![Diagram of workflow with pre-amendment validation+measure phase, followed by amendment phase, followed by post-amendment validation-measure phase](workflow_two_iterations.svg)
 
 ## 6 Contributions and Acknowledgments (non-normative)
 
