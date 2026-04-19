@@ -46,13 +46,13 @@
 
 ## 1 Introduction (non-normative)
 
-This document provides both normative specifications and explanatory guidance for the BDQ Tests. It defines how each Test is modeled using standard vocabulary terms and how conforming implementations are expected to behave under various conditions. It also distinguishes among Test types (`Validation`, `Issue`, `Measure`, and `Amendment`), outlines the semantics of single- versus multi-record evaluation, and explains how `Parameters` influence Test behavior. The content here provides the foundation for interpreting BDQ Test descriptions and for implementing BDQ-conformant test suites and reports.
+This document provides both normative specifications and explanatory guidance for the BDQ Tests. It defines how each Test is modeled using standard vocabulary terms and how conforming implementations are expected to behave under various conditions. It also distinguishes among Test types (`Validation`, `Issue`, `Measure`, and `Amendment`), outlines the semantics of single- versus multi-record evaluation, and explains how `Parameters` influence Test behavior. The content here provides the foundation for interpreting BDQ Test descriptions and for implementing BDQ-conformant test suites and reports.  This document also provides context on the role of Tests within the broader BDQ standard, including their relationship to `Use Cases`, `Policies`, and `Implementations` and the products that result from running Tests, `Responses` and `Data Quality Reports`.
 
 Data quality is an evolving field, and there will always be "one more test" that we could conceive. BDQ focuses on a suite of Tests that have reached community consensus.  By mapping these tests across key Darwin Core terms, BDQ provides high coverage for the data that researchers use the most. The BDQ framework is modular and extensible: communities may define additional Tests to address domain-specific needs, and future versions of the standard may incorporate new Tests as consensus and practice evolve. Within BDQ, Tests are applied in the context of the use of data (`Use Cases` via `Policies`), allowing users select and apply Tests relevant to their stated data quality needs.
 
 ### 1.1 Purpose (non-normative)
 
-The purpose of this document is to define and explain the BDQ Tests — the primary mechanism for evaluating the quality of biodiversity data in the BDQ standard.  This document describes the structure, types, and formal characteristics of the Tests, providing a clear and consistent specification that can be used by implementers, analysts, and quality assessors.
+The purpose of this document is to define and explain the BDQ Tests — the primary mechanism for evaluating the quality of biodiversity data in the BDQ standard.  This document describes the structure, types, and formal characteristics of the Tests, along with description of their context within BDQ, providing a clear and consistent specification that can be used by implementers, analysts, and quality assessors.
 
 ### 1.2 Audience (non-normative)
 
