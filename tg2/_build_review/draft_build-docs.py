@@ -42,7 +42,7 @@ debug = False
 # See assumptions below.
 # directories, list of key:value pairs of templatePath:document
 #directories = {'vocabularies':'vocabularies', 'intro':'intro', 'supplement':'supplement', 'synthetic':'synthetic','guide/users':'users','guide/implementers':'implementers','guide/bdqffdq':'bdqffdq', 'bdqtest':'bdqtest_landing','references':'references'}
-directories = {'supplement':'supplement', 'guide/synthetic':'synthetic','guide/users':'users','guide/implementers':'implementers','guide/bdqffdq':'bdqffdq', 'bdqtest':'bdqtest_landing', 'standard_landing':'standard_landing','tutorial':'tutorial'}
+directories = {'supplement':'supplement', 'guide/synthetic':'synthetic','guide/users':'users','guide/implementers':'implementers','guide/bdqffdq':'bdqffdq', 'guide/bdqtest':'bdqtest', 'standard_landing':'standard_landing','tutorial':'tutorial'}
 
 # This is the base URL for raw files from the branch of the repo that has been pushed to GitHub
 github_branch = 'master' # "master" for production, something else for development
@@ -127,6 +127,7 @@ term_lists_info = []
 for templatePath, document in directories.items() :
 	print('Filling in header and footer template and saving file')
 	print('Generating files for {}.'.format(document))
+	print('Template Path {}.'.format(templatePath))
 	sourceDirectory = 'templates/{}/'.format(templatePath)
 	headerFileName = '{}{}-header.md'.format(sourceDirectory,document)
 	footerFileName = '{}{}-footer.md'.format(sourceDirectory,document)
