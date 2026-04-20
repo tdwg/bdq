@@ -79,14 +79,14 @@ _review/
 │   ├── bdqdim.xml  Generated RDF for bdqdim vocabulary (built with draft_build-termlist.py).
 │   └── bdqenh.xml  Generated RDF for bdqenh vocabulary (built with draft_build-termlist.py).
 ├── docs  Human-readable documentation files built from files in build directory.
-│   ├── bdqtest  Landing page for bdqtest, with normative statements.
-│   │   └── index.md  Generated file. **Do not edit.**
-│   ├── bdqffdq  Landing page for bdqffdq, with normative statements.
+│   ├── bdqffdq  Landing page for bdqffdq, with normative statements.  DEPRECATED, will move into guide/bdqffdq
 │   │   └── index.md  Generated file. **Do not edit.**
 │   ├── extension  Build targets for Human readable vocabulary extension documents.
 │   │   └── bdqffdq
 │   │       └── index.md  Generated vocabulary extension document. **Do not edit.**
 │   ├── guide  Descriptive document build targets.
+│   │   ├── bdqtest  The guide to bdqtest with normative statements and context.
+│   │   │   └── index.md  Generated file. **Do not edit.**
 │   │   ├── bdqffdq  The guide to bdqffdq
 │   │   │   ├── *.svg and *.png  Files copied here from _build_review. **Do not edit.**
 │   │   │   └── index.md  Generated file. **Do not edit.**

@@ -34,15 +34,11 @@ The directory structure of the templates is as follows, with the files listed in
     │   ├── standard_landing-footer.md
     │   ├── standard_landing-header.md
     │   └── document_configuration.yaml
-    ├── bdqffdq
+    ├── bdqffdq DEPRECATED content will move into guide/bdqffdq/bdqffdq-header.
     │   ├── bdqffdq_landing-footer.md
     │   ├── bdqffdq_landing-header.md
     │   ├── document_configuration.yaml
     │   └── vocabulary_configuration.yaml
-    ├── bdqtest
-    │   ├── bdqtest_landing-footer.md
-    │   ├── bdqtest_landing-header.md
-    │   └── document_configuration.yaml
     ├── extension
     │   └── bdqffdq
     │       ├── bdqffdq_extension-footer.md
@@ -50,6 +46,10 @@ The directory structure of the templates is as follows, with the files listed in
     │       ├── document_configuration.yaml
     │       └── vocabulary_configuration.yaml
     ├── guide
+    │   ├── bdqtest
+    │   │   ├── document_configuration.yaml
+    │   │   ├── bdqtest-header.md
+    │   │   └── bdqtest-footer.png
     │   ├── bdqffdq
     │   │   ├── assertions.png
     │   │   ├── bdqffdq_class_diagram.png
