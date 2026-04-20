@@ -3,10 +3,10 @@
 # ----------------
 
 # Official title of the document assigned by authors.
-documentTitle: Fitness For Use Framework Ontology Guide
+documentTitle: 'Fitness For Use Framework Ontology: Concepts and Use'
 
 # Abstract of document written by authors.
-abstract: 'This document is a user''s guide for the BDQ standard, describing the organization and use of the bdqffdq: ontology. The Fitness For Use Framework ontology formally describes the terms and relationships between them for evaluating the quality of biodiversity data. Because of its comprehensive nature, the Fitness For Use Framework supports varied interpretations and uses by different stakeholders. The Framework also provides a base for the bdq: and bdqtest: namespace vocabularies.'
+abstract: 'This document is a guide for the BDQ standard, describing the organization of the bdqffdq: ontology and providing normative guidance on its use. The Fitness For Use Framework ontology formally describes the terms and relationships between them for evaluating the quality of biodiversity data. Because of its comprehensive nature, the Fitness For Use Framework supports varied interpretations and uses by different stakeholders. The Framework also provides a base for the bdq: and bdqtest: namespace vocabularies.'
 
 # This value is generally the name of the task group that created the document.
 creator: 'TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions'

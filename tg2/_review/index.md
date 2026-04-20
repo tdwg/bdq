@@ -246,7 +246,7 @@ Readers can approach the standard in different ways depending on their needs. Th
 		:green_book:
         <strong><a href="./docs/terms/bdqtest/index.md">BDQ Tests Quick Reference Guide</a></strong><br>
         Overview of test purposes and outcomes; index into detailed definitions.<br>
-		See also: <a href="./docs/bdqtest/index.md#21-what-is-meant-by-test-non-normative">What is meant by "Test"</a> and <a href="./docs/bdqtest/index.md#22-test-types-non-normative">Test Types</a> in the bdqtest: landing page.
+		See also: <a href="./docs/guide/bdqtest/index.md#21-what-is-meant-by-test-non-normative">What is meant by "Test"</a> and <a href="./docs/guide/bdqtest/index.md#3-test-types-non-normative">Test Types</a> in BDQ Tests, Concepts, and Use.</a>
       </td>
       <td valign="top">
         <strong>Start with:</strong><br>
@@ -269,10 +269,10 @@ Readers can approach the standard in different ways depending on their needs. Th
       </td>
       <td valign="top">
 		:green_book:
-        <strong>Fitness for Use Framework (bdqffdq:) &amp; Framework Guide</strong><br>
+        <strong>Fitness for Use Framework (bdqffdq:) &amp; Concepts and Use</strong><br>
         Normative concepts and logic describing data quality needs and layers, with an explanatory guide.
-		<a href="./docs/guide/bdqffdq/index.md">Framework Guide</a><br>
-		bdqffdq: <a href="./docs/list/bdqffdq/index.md">Landing Page</a> and <a href="./docs/list/bdqffdq/list/index.md">Term List</a><br>
+		<a href="./docs/guide/bdqffdq/index.md">Fitness For Use Framework Ontology: Concepts and Use</a><br>
+		bdqffdq: <a href="./docs/list/bdqffdq/list/index.md">Term List</a><br>
 		and serialized version: <a href="./vocabulary/bdqffdq.owl">OWL Ontology</a>.
       </td>
     </tr>
@@ -281,13 +281,14 @@ Readers can approach the standard in different ways depending on their needs. Th
 		:blue_book:
         <strong>Test Vocabulary &amp; Definitions</strong><br>
         Normative definitions of the tests themselves, for readers who need exact meanings or wish to trace provenance.<br>
-		bdqtest: <a href="./docs/bdqtest/index.md">Landing Page</a> and <a href="./docs/list/bdqtest/list/index.md">Term List</a>.
+		bdqtest: <a href="./docs/list/bdqtest/list/index.md">Term List</a>.
       </td>
       <td valign="top">
 		:blue_book:
         <strong>Test Vocabulary, Definitions &amp; Serializations</strong><br>
+        Explanations and Normative Guidance on the Tests and their Uses.
+		<a href="./docs/guides/bdqtest/index.md">BDQ Tests: Concepts, Types, and Use</a>.<br>
         Normative machine‑readable definitions and versioned lists of tests.
-		<a href="./docs/guides/bdqtest/index.md">Understanding and using Tests in bdqtest:</a><br>
 		bdqtest: <a href="./docs/list/bdqtest/list/index.md">Term List</a><br>
 		and serialized versions: <a href="./dist/bdqtest.xml">RDF/XML</a>, <a href="./dist/bdqtest.ttl">Turtle</a>, <a href="./dist/bdqtest.json">JSON-LD</a>.
       </td>
@@ -314,7 +315,7 @@ Readers can approach the standard in different ways depending on their needs. Th
 		:blue_book:
         <strong>BDQ Tests Vocabulary &amp; Canonical Definitions</strong><br>
         Examples of how existing tests are formally defined and versioned; useful patterns for new test design.<br>
-		bdqtest: <a href="./docs/bdqtest/index.md">Landing Page</a> and <a href="./docs/list/bdqtest/list/index.md">Term List</a>
+		bdqtest: <a href="./docs/list/bdqtest/list/index.md">Term List</a>
       </td>
     </tr>
     <tr>
@@ -367,18 +368,16 @@ The Quick Reference Guide is a simple, informative reference and the first place
 
 These documents provide overviews and normative guidance of the subjects they cover. The details of the individual terms are provided in the corresponding term list documents. 
 
-- [**BDQ Tests and Assertions**](docs/bdqtest/index.md) - Overview of the Tests.
-- [**Fitness for Use Ontology**](docs/bdqffdq/index.md) - Overview of the Fitness for Use Framework.
-
+- [**BDQ Tests: Concepts Types, and Uses**](docs/guide/bdqtest/index.md) - Normative guidance and overview of the Tests.
+- [**Fitness For Use Framework Ontology: Concepts and Use**](docs/guide/bdqffdq/index.md) - Normative guidance and overview of the Fitness for Use Framework.
 
 ### 3.3 Guides (non-normative)
 
 The Guides are explanatory documents targeting particular perspectives on the standard for particular audiences.
 
-- [**BDQ User's Guide**](docs/guide/users/index.md)
-- [**BDQ Implementer's Guide**](docs/guide/implementers/index.md)
-- [**Guide to Marking and Identifying Synthetic and Modified Data**](docs/guide/synthetic/index.md)
-- [**Fitness for Use Framework Ontology Guide**](docs/guide/bdqffdq/index.md)
+- [**BDQ User's Guide**](docs/guide/users/index.md) - The User's Guide provides guidance for interpreting Test results.
+- [**BDQ Implementer's Guide**](docs/guide/implementers/index.md) - The Implementer's Guide provides normative and explanatory guidance for implementing the Tests in software.
+- [**Guide to Marking and Identifying Synthetic and Modified Data**](docs/guide/synthetic/index.md) - The Guide to Marking and Identifying Synthetic and Modified Data provides normative and explanatory guidance for marking Test evaluation data as synthetic or modified.
 
 ### 3.4 Vocabularies (non-normative)
 #### 3.4.1 Foundational Vocabularies (non-normative)
@@ -391,7 +390,7 @@ The Foundational Vocabularies cover the two main parts of the standard - the pra
 
 #### 3.4.2 Supporting Vocabularies (non-normative)
 
-The Supporting Vocabularies are controlled vocabularies used in the technical definitions of the Tests.   (Note: The suporting controlled vocabulary term list documents below also act as the landing pages for those vocabularies).
+The Supporting Vocabularies are controlled vocabularies used in the technical definitions of the Tests.   
 
 - [**BDQ Controlled Vocabulary List of Terms (bdq:)**](docs/list/bdq/index.md)
 - [**Data Quality Criterion Controlled Vocabulary List of Terms (bdqcrit:)**](docs/list/bdqcrit/index.md)
@@ -400,23 +399,37 @@ The Supporting Vocabularies are controlled vocabularies used in the technical de
 
 #### 3.4.3 Landing Page IRIs (non-normative)
 
-Note: or each of the following documents the landing page IRI will resolve to the term list document when HTML is requested.
+Note: For each of the following documents the landing page IRI will resolve to the term list document when HTML is requested.
 
-Note: None of these links will work until deployment of the standard, but they are included here to show the intended structure of the IRIs and to provide a complete list of the landing page IRIs for the standard.
+Note: None of these links will work until deployment of the standard, but they are included here to show the intended structure of the IRIs and to provide a complete list of the landing page, term list IRIs, and related RDF metadata documents for the standard.
 
-
-- **The Biodiversity Data Quality (BDQ) Standard** - Overview of the BDQ standard. This page. [RDF Metadata](https://rs.tdwg.org/bdq.ttl)
-- [**BDQ Tests and Assertions (bdqtest:)**](https://bdq.tdwg.org/bdqtest/)  [RDF Metadata](https://rs.tdwg.org/bdqtest.ttl)
-- [**BDQ Fittness For Use Vocabulary (bdqffdq:)**](https://bdq.tdwg.org/bdqffdq/) [RDF Metadata](https://rs.tdwg.org/bdqffdq.ttl)
-- [**BDQ Controlled Vocabulary List of Terms (bdq:)**](https://bdq.tdwg.org/bdq) [RDF Metadata](https://rs.tdwg.org/bdqtest.ttl)
-- [**Data Quality Criterion Controlled Vocabulary List of Terms (bdqcrit:)**](https://bdq.tdwg.org/bdqcrit) [RDF Metadata](https://bdq.tdwg.org/bdqcrit.ttl)
-- [**Data Quality Dimension Controlled Vocabulary List of Terms (bdqdim:)**](https://bdq.tdwg.org/bdqdim) [RDF Metadata](https://bdq.tdwg.org/bdqdim.ttl)
-- [**Data Quality Enhancement Controlled Vocabulary List of Terms (bdqenh:)**](https://bdq.tdwg.org/bdqenh) [RDF Metadata](https://bdq.tdwg.org/bdqdim.ttl)
-
-TODO: Redo as table of links to resources, and metadata documents for all documents in the standard.
-| Vocabulary | Landing Page IRI | Vocabulary RDF Metadata IRI | Term List RDF Metadata IRI |
-|------------|------------------|-----------------------------|----------------------------|
-| bdqtest: | https://bdq.tdwg.org/bdqtest/ | https://rs.tdwg.org/bdqtest.ttl | https://rs.tdwg.org/bdqtest/terms.rdf |
+- **The Biodiversity Data Quality (BDQ) Standard** - Overview of the BDQ standard. This page. 
+  - [Standard IRI](https://www.tdwg.org/standards/nnnn/) redirects to [HTML](https://bdq.tdwg.org/)
+  - [RDF Metadata](https://rs.tdwg.org/bdq.ttl)
+- [**BDQ Tests and Assertions Vocabulary (bdqtest:)**](https://bdq.tdwg.org/bdqtest/)  
+  - [Vocabulary IRI](https://rs.tdwg.org/bdqtest/) redirects to [HTML Terms List](https://bdq.tdwg.org/bdqtest/terms/)
+  - [RDF Metadata](https://rs.tdwg.org/bdqtest.ttl)
+  - [Term List RDF Metadata](https://rs.tdwg.org/bdqtest/terms.rdf)
+- [**BDQ Fittness For Use Vocabulary (bdqffdq:)**](https://bdq.tdwg.org/bdqffdq/) 
+  - [Vocabulary IRI](https://rs.tdwg.org/bdqffdq/) redirects to [HTML Terms List](https://bdq.tdwg.org/bdqffdq/terms/)
+  - [RDF Metadata](https://rs.tdwg.org/bdqffdq.ttl)
+  - [Term List RDF Metadata](https://rs.tdwg.org/bdqffdq/terms.rdf)
+- [**BDQ Controlled Vocabulary  (bdq:)**](https://bdq.tdwg.org/bdq/)
+  - [Vocabulary IRI](https://rs.tdwg.org/bdq/) redirects to [HTML Terms List](https://bdq.tdwg.org/bdq/terms)
+  - [RDF Metadata](https://rs.tdwg.org/bdqtest.ttl)
+  - [Term List RDF Metadata](https://rs.tdwg.org/bdq/terms.rdf)
+- [**Data Quality Criterion Controlled Vocabulary (bdqcrit:)**](https://bdq.tdwg.org/bdqcrit/) 
+  - [Vocabulary IRI](https://rs.tdwg.org/bdqcrit/) redirects to [HTML Terms List](https://bdq.tdwg.org/bdqcrit/terms)
+  - [RDF Metadata](https://bdq.tdwg.org/bdqcrit.ttl)
+  - [Term List RDF Metadata](https://rs.tdwg.org/bdqcrit/terms.rdf)
+- [**Data Quality Dimension Controlled Vocabulary (bdqdim:)**](https://bdq.tdwg.org/bdqdim/)
+  - [Vocabulary IRI](https://rs.tdwg.org/bdqdim/) redirects to [HTML Terms List](https://bdq.tdwg.org/bdqdim/terms)
+  - [RDF Metadata](https://bdq.tdwg.org/bdqdim.ttl)
+  - [Term List RDF Metadata](https://rs.tdwg.org/bdqdim/terms.rdf)
+- [**Data Quality Enhancement Controlled Vocabulary (bdqenh:)**](https://bdq.tdwg.org/bdqenh/) 
+  - [Vocabulary IRI](https://rs.tdwg.org/bdqenh/) redirects to [HTML Terms List](https://bdq.tdwg.org/bdqenh/terms)
+  - [RDF Metadata](https://bdq.tdwg.org/bdqdim.ttl)
+  - [Term List RDF Metadata](https://rs.tdwg.org/bdqenh/terms.rdf)
 
 ### 3.5 Additional Documents (non-normative)
 
