@@ -1,9 +1,9 @@
 <!--- This file is generated from templates by code, DO NOT EDIT by hand --->
 
-# Guide to the BDQ Tests and Their Use
+# BDQ Tests: Concepts, Types, and Use
 
 **Title**<br>
-Guide to the BDQ Tests and Their Use
+BDQ Tests: Concepts, Types, and Use
 
 **Date version issued**<br>
 2026-04-19
@@ -28,7 +28,7 @@ Guide to the BDQ Tests and Their Use
 **Previous version**<br>
 
 **Abstract**<br>
-This document is a reference for the BDQ standard, providing context for and normative guidance on use of terms in the bdqtest: vocabulary.
+This document is a reference for the BDQ standard, providing context for and normative guidance on use of the bdqtest: vocabulary.
 
 **Authors**<br>
 [Lee Belbin](https://orcid.org/0000-0001-8900-6203) ([Blatant Fabrications](https://www.wikidata.org/wiki/Q130304884)), [Arthur D. Chapman](https://orcid.org/0000-0003-1700-6962) ([Australian Biodiversity Information Services](http://www.wikidata.org/entity/Q100600913)), [Paul J. Morris](https://orcid.org/0000-0002-3673-444X) ([Museum of Comparative Zoology, Harvard University](http://www.wikidata.org/entity/Q1420782)), [John Wieczorek](https://orcid.org/0000-0003-1144-0290) (Rauthiflor LLC)
@@ -37,7 +37,7 @@ This document is a reference for the BDQ standard, providing context for and nor
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 **Bibliographic citation**<br>
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. Guide to the BDQ Tests and Their Use. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/docs/guide/bdqtest/2026-04-19>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Tests: Concepts, Types, and Use. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/docs/guide/bdqtest/2026-04-19>
 
 **Status**<br>
 Draft Standard for Review
@@ -542,7 +542,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. Guide to the BDQ Tests and Their Use. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/docs/guide/bdqtest/2026-04-19>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Tests: Concepts, Types, and Use. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/docs/guide/bdqtest/2026-04-19>
 
 **Biodiversity Information Standards (TDWG)**
 
