@@ -182,7 +182,7 @@ The simpler of the two Tests examined is VALIDATION_FOOTPRINTWKT_NOTEMPTY, which
 By following this workflow, you move from a human-centric research need to a machine-readable technical standard.
 
 See also:
-- [What is meant by "Test"?](../bdqtest/index.md#21-what-is-meant-by-test-non-normative) in the bdqtest: term-list document.
+- [What is meant by "Test"?](../guide/bdqtest/index.md#21-what-is-meant-by-test-non-normative) in the bdqtest: term-list document.
 - [Data Quality Needs, Data Quality Mechanisms, Data Quality Reports](../guide/bdqffdq/index.md#33-data-quality-needs-data-quality-mechanisms-data-quality-reports-non-normative) in the bdqffdq: ontology guide.
 
 ### 2.1 Best Practices
@@ -403,7 +403,7 @@ We choose VALIDATION for this test because we are asserting whether data meets s
 * **Test Type** Validation
 
 See also: 
-* [Test Types](../bdqtest/index.md#22-test-types-non-normative) in the bdqtest: term-list document.
+* [Test Types](../guide/bdqtest/index.md#22-test-types-non-normative) in the bdqtest: term-list document.
 * [Test Types](../guide/users/index.md#31-test-types-non-normative) in the User Guide.
 
 > **Alternative Pattern: metric + analytical threshold**
@@ -499,7 +499,7 @@ We will come back later and define another Test to measure how much of the datas
 
 * **Resource Type** SingleRecord
 
-See also: [Resource Types](../bdqtest/index.md#32-resource-types-normative) in the bdqtest: term-list document.
+See also: [Resource Types](../guide/bdqtest/index.md#32-resource-types-normative) in the bdqtest: term-list document.
 
 ### 4.7 Define the Test Specification (non-normative)
 
@@ -593,7 +593,7 @@ To formally express this Test in RDF we would need to add some more identifiers 
 
 See also: 
 * [Reading Test Descriptors](../guide/users/index.md#31-test-types-non-normative) in the Implementer’s Guide.
-* [Relating Classes and Properties](../bdqffdq/index.md#18-relating-classes-and-properties-non-normative) in the bdqffdq: landing page.
+* [Relating Classes and Properties](../guide/bdqffdq/index.md#18-relating-classes-and-properties-non-normative) in the bdqffdq: landing page.
 
 #### 4.10.1 Formal RDF Representation of the Test (non-normative)
 
@@ -601,7 +601,7 @@ This simple list of properties is sufficient for a human reader to understand th
 
 See also:
 * [Diagram of Test Concepts](../guide/implementers/index.md#3-compliant-implementation-normative) in the implementers guide.
-* [Example RDF for a test](../bdqtest/index.md#24-example-rdf-non-normative) in the bdqtest: landing page (VALIDATION_COUNTRYCODE_STANDARD in an RDF/XML serialization).
+* [Example RDF for a test](../guide/bdqtest/index.md#24-example-rdf-non-normative) in the bdqtest: landing page (VALIDATION_COUNTRYCODE_STANDARD in an RDF/XML serialization).
 * [Example RDF for a test](../guide/bdqffdq/index.md#36-example-representation-of-a-bdq-test-non-normative) in the bdqffdq: ontology guide (VALIDATION_COUNTRY_FOUND in a Turtle serialization). 
 
 #### 4.10.2 Summary of the Test Definition
@@ -797,7 +797,7 @@ We can make the bdq:sourceAuthority as a parameter for this Test, meaning that u
 * **Parameter** bdq:sourceAuthority
 
 See also:
-- [Parameterizing the Tests](../bdqtest/index.md#33-parameterizing-the-tests-normative) in the bdqtest: landing page.
+- [Parameterizing the Tests](../guide/bdqtest/index.md#33-parameterizing-the-tests-normative) in the bdqtest: landing page.
 - [3.4 Test Parameters](../guide/users/index.md#34-test-parameters-non-normative) in the Users Guide.
 - [Test Parameters in Reports](../guide/users/index.md#341-test-parameters-in-reports-normative) in the Users Guide.
 
@@ -899,7 +899,7 @@ A BDQ Test implementation is expected to have a consistent scope and API shape a
 * Logic (decision rules): evaluate the clauses in the specification (`hasExpectedResponse`) in order, returning the first matching outcome (handling EXTERNAL_PREREQUISITES_NOT_MET via exception/error handling where appropriate).  
 * Output: exactly one structured Response per run, always providing a `Response.status` and a `Response.comment`, and providing a `Response.result` only when `Response.status` indicates a result (typically RUN_HAS_RESULT).
 
-We use a shorthand for the set of properties associated with a `Response` that are produced by running a Test.  A `Response` carries `Response.status`, `Response.result`, and `Response.comment` properties (see [Structure of Response](../bdqtest/index.md#31-structure-of-response-normative) in the bdqtest: landing page).
+We use a shorthand for the set of properties associated with a `Response` that are produced by running a Test.  A `Response` carries `Response.status`, `Response.result`, and `Response.comment` properties (see [Structure of Response](../guide/bdqtest/index.md#31-structure-of-response-normative) in the bdqtest: landing page).
 
 BDQ keeps Tests portable by standardizing semantics (inputs, decision rules, outputs), but it leaves binding of raw data inputs to `InformationElements` and execution mechanics (orchestration of test execution) to whatever framework fits the implementer's environment.  This means that the behavior of the implementation of an individual Test should be tested in isolation, presenting the Test with known inputs, and confirming that the Test produces the expected outputs based on the logic of the decision rules in the specification.  This means that Test conformance testing is expected to be performed on the level of individual Test implementations.
 
@@ -915,7 +915,7 @@ The description and specification of a Test may involve hidden assumptions by th
 
 See also: 
 * [Conformance Testing Implementations](../guide/implementers/index.md#8-conformance-testing-implementations-normative) in the implementers guide.
-* [Structure of Response](../bdqtest/index.md#31-structure-of-response-normative) in the bdqtest: landing page.
+* [Structure of Response](../guide/bdqtest/index.md#31-structure-of-response-normative) in the bdqtest: landing page.
 
 #### 7.2.1 Unit Tests (non-normative)
 
@@ -1148,7 +1148,7 @@ For our **Validated Distribution Authority** `Use Case` we would likely wish to 
 
 See also:
 - [Quality Control and Quality Assurance](../guide/users/index.md#21-quality-control-and-quality-assurance-non-normative) in the User's Guide.
-- [Single Record and MultiRecord Tests](../bdqtest/index.md#23-single-record-and-multi-record-tests-non-normative) in the bdqtest: landing page.
+- [Single Record and MultiRecord Tests](../guide/bdqtest/index.md#23-single-record-and-multi-record-tests-non-normative) in the bdqtest: landing page.
 - [Data Quality Control and Data Quality Assurance](../guide/bdqffdq/index.md#321-data-quality-control-and-data-quality-assurance-non-normative) in the bdqffdq ontology guide.
 
 ### 8.1 MultiRecord Measures for Quality Control (non-normative)

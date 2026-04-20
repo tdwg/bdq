@@ -48,7 +48,7 @@
 
 The purpose of this document is to define the official vocabulary extension for the `bdqffdq:` ontology. It provides additional axioms, such as range constraints and logical distinctions, that refine and extend the semantics of the core vocabulary terms in the BDQ Fitness For Use Framework.
 
-These axioms enable more precise reasoning, validation, and integration with OWL tools. They are intended to complement the human-readable term list provided in the main ontology documentation without altering the open and minimally constrained design of the core Fitness For Use Framework.  Additional normative expectations, which are not formally represented in the ontology or included here, are listed in [Section 2 of the bdqffdq: landing page](../../bdqffdq/index.md#2-use-of-ontology-terms-normative) to clarify the intended use of these terms in practice.
+These axioms enable more precise reasoning, validation, and integration with OWL tools. They are intended to complement the human-readable term list provided in the main ontology documentation without altering the open and minimally constrained design of the core Fitness For Use Framework.  Additional normative expectations, which are not formally represented in the ontology or included here, are listed in [Section 2 of the bdqffdq: landing page](../../guide/bdqffdq/index.md#2-use-of-ontology-terms-normative) to clarify the intended use of these terms in practice.
 
 This extension follows the TDWG Standards Documentation Specification and maintains a clear separation between core term definitions and ontology logic.
 
@@ -70,7 +70,7 @@ Information about the bdqffdq: ontology, its usage, and its extensions can be fo
 
 - [**Fitness For Use Framework Ontology Guide**](../../guide/bdqffdq/index.md) - Provides a visual and narrative introduction to the concepts and application of the ontology.
 - [**Fitness For Use Framework Ontology List of Terms**](../../list/bdqffdq/index.md) - The term list document, which enumerates and describes the vocabulary terms.
-- [**Fitness For Use Framework Ontology**](../../bdqffdq/index.md) - Provides normative guidance on the use of the vocabulary.
+- [**Fitness For Use Framework Ontology**](../../guide/bdqffdq/index.md) - Provides normative guidance on the use of the vocabulary.
 - **Fitness For Use Framework Ontology Vocabulary Extension** - Defines additional axioms extending the core vocabulary. This document.
 - [**Biodiversity Data Quality Fitness For Use Framework (Ontology)**](../../../vocabulary/bdqffdq.owl) - The ontology, which provides the formal RDF/OWL representation of the vocabulary.
 

@@ -69,7 +69,7 @@ For the list and links to all associated documents see [The Biodiversity Data Qu
 
 The set of information most relevant to users of Biodiversity Data Quality (BDQ) Tests can be found in the following subset of resources:
 
-- [**BDQ Tests and Assertions**](../../bdqtest/index.md) - Defines how each Test is modeled using standard vocabulary terms and how it should behave under various conditions.
+- [**BDQ Tests: Concepts, Types, and Use**](\1guide/bdqtest/index.md) - Defines how each Test is modeled using standard vocabulary terms and how it should behave under various conditions.
 - [**BDQ Tests Quick Reference Guide**](../../terms/bdqtest/index.md) - Provides a concise, easy-to-read reference about the BDQ Tests.
 - **BDQ User's Guide** - For anyone interested in how to use the BDQ Tests in practice. This document.
 - [**BDQ Implementer's Guide**](../implementers/index.md) - For anyone interested in the technical implementation of the BDQ Tests.
@@ -104,7 +104,7 @@ In any technical treatment of the BDQ standard, a precise reference to a class o
 
 ## 2 Context for Quality, Uses and Purposes (non-normative)
 
-Data do not have quality in the abstract; they only have quality with respect to a particular use. The Fitness for Use Framework (see [Fitness For Use Framework Ontology Guide](../bdqffdq/index.md)) in the BDQ standard describes uses for data as `Use Cases`.
+Data do not have quality in the abstract; they only have quality with respect to a particular use. The Fitness for Use Framework (see [Fitness For Use Framework Ontology Guide](../guide/bdqffdq/index.md)) in the BDQ standard describes uses for data as `Use Cases`.
 
 A set of `Tests` appropriate to a`Use Case` is run on a set of data and a `Data Quality Report` is produced. Both the Tests and the associated report should be interpreted in the context of that `Use Case`.
 
@@ -126,11 +126,11 @@ BDQ does not prescribe how QA/QC workflows should operate; it standardizes Tests
 
 #### 2.1.1 Quality Assurance (non-normative)
 
-The Fitness for Use Framework (Veiga 2016, Veiga et al., 2017) provides a formal means for filtering records for [Quality Assurance](../../bdqffdq/index.md#3447-quality-assurance-normative) (involving only Measures), but informally, data may be thought of as being fit for some use if all `Validation` Tests comprising that `Use Case` have a `Response.result`="COMPLIANT", and all non-numeric `Measure` Tests comprising that `Use Case` have a `Response.result`="COMPLETE". The BDQ Tests include a set of `Multi Record` `Measures` whose purpose is to enable formal filtering (Quality Assurance) and reporting (for Quality Control) under the [Fitness for Use Framework Ontology](../../bdqffdq/index.md).
+The Fitness for Use Framework (Veiga 2016, Veiga et al., 2017) provides a formal means for filtering records for [Quality Assurance](../../guide/bdqffdq/index.md#3447-quality-assurance-normative) (involving only Measures), but informally, data may be thought of as being fit for some use if all `Validation` Tests comprising that `Use Case` have a `Response.result`="COMPLIANT", and all non-numeric `Measure` Tests comprising that `Use Case` have a `Response.result`="COMPLETE". The BDQ Tests include a set of `Multi Record` `Measures` whose purpose is to enable formal filtering (Quality Assurance) and reporting (for Quality Control) under the [Fitness for Use Framework Ontology](../../guide/bdqffdq/index.md).
 
 #### 2.1.2 Quality Control (non-normative)
 
-The Framework provides a formal statement of [Quality Control](../../bdqffdq/index.md#3446-quality-control-normative), but the application of Quality Control 'in the wild' is more nuanced; more complex than simple filtering under Quality Assurance. The context of Quality Control may affect how Tests and their results are applied to data, information systems and processes.
+The Framework provides a formal statement of [Quality Control](../../guide/bdqffdq/index.md#3446-quality-control-normative), but the application of Quality Control 'in the wild' is more nuanced; more complex than simple filtering under Quality Assurance. The context of Quality Control may affect how Tests and their results are applied to data, information systems and processes.
 
 Quality Control is most efficient at the time of data capture where the prevention of incorrect values avoids subsequent, far less efficient issue detection and correction. For example, issues such as transposition of values are far easier to detect and correct at the point of recording than during subsequent downstream processing where context may be lost or held on paper records remote from data entry, and errors may be propagated. `Validation` Tests may be thought of as framing constraints to impose on data entry interfaces, such as validation of data against a controlled vocabulary being imposed by the presentation of the controlled vocabulary as a pick list in a user interface, or they may be implemented as checks on entered data values with immediate feedback for users. 
 
@@ -185,11 +185,11 @@ Tests can also operate on a dataset (a `Multi Record`) and examine the values fo
 
 #### 3.2.2 Outputs: Data Quality Reports (non-normative) 
 
-Software that includes an implementation of one or more Tests may produce `Data Quality Reports`. The form that such `Data Quality Reports` may take is not specified by the BDQ standard, however, it does specify elements that should be present in such reports (see [7.1 Data Quality Reports (normative)](../implementers/index.md#71-data-quality-reports-normative) in the [Implementer's Guide](../implementers/index.md)).  A detailed discussion of how `Data Quality Reports` relate to the Tests can be found at [3.1](../../bdqtest/index.md#31-structure-of-response-normative) in the [BDQ Tests and Assertions Document](../../bdqtest/index.md).
+Software that includes an implementation of one or more Tests may produce `Data Quality Reports`. The form that such `Data Quality Reports` may take is not specified by the BDQ standard, however, it does specify elements that should be present in such reports (see [7.1 Data Quality Reports (normative)](../implementers/index.md#71-data-quality-reports-normative) in the [Implementer's Guide](../implementers/index.md)).  A detailed discussion of how `Data Quality Reports` relate to the Tests can be found at [3.1](../../guide/bdqtest/index.md#31-structure-of-response-normative) in the [BDQ Tests and Assertions Document](../../guide/bdqtest/index.md).
 
 #### 3.2.3 Outputs: Responses from Tests (normative) 
 
-The specifications for the structure of a response from running a Test can be found in [3.1 Structure of Response (normative)](../../bdqtest/index.md#31-structure-of-response-normative) in the document [BDQ Tests and Assertions](../../bdqtest/index.md).
+The specifications for the structure of a response from running a Test can be found in [3.1 Structure of Response (normative)](../../guide/bdqtest/index.md#31-structure-of-response-normative) in the document [BDQ Tests and Assertions](../../guide/bdqtest/index.md).
 
 ##### 3.2.3.1 Shorthand for Responses from Tests (non-normative) 
 
@@ -252,7 +252,7 @@ Alternatively, if there is nothing in the `dwc:dataGeneralizations` field, i.e. 
 
 ##### 3.2.3.4 Measure Test Reports (non-normative)
 
-`Measure` Tests can be thought of as metrics. These Tests either return a numeric value (including counts), or assert that data evaluate as fit for some use (`COMPLETE`) or not fit for some use (`NOT_COMPLETE`). Almost all the `Measure` Tests defined in BDQ are `Multi Record` Tests that are powerful tools for formal support of `Quality Control` and `Quality Assurance` under the [Fitness for Use Framework Ontology](../../bdqffdq/index.md).
+`Measure` Tests can be thought of as metrics. These Tests either return a numeric value (including counts), or assert that data evaluate as fit for some use (`COMPLETE`) or not fit for some use (`NOT_COMPLETE`). Almost all the `Measure` Tests defined in BDQ are `Multi Record` Tests that are powerful tools for formal support of `Quality Control` and `Quality Assurance` under the [Fitness for Use Framework Ontology](../../guide/bdqffdq/index.md).
 
 There is one `Single Record` `Measure` Test that provides a metric on a Darwin Core term in a `Single Record`, [MEASURE_EVENTDATE_DURATIONINSECONDS](../../terms/bdqtest/index.md#MEASURE_EVENTDATE_DURATIONINSECONDS).  This Test provides a measure of the duration in seconds of the `dwc:eventDate`.  This test is intended to allow consumers of data quality reports to quickly identify records where, for example, a collecting event is known to a precision of about a day or less, or about a year or less, or any arbitrary time range that may be of interest to a particular use. 
 
@@ -313,7 +313,7 @@ To maintain the integrity and reliability of the BDQ Framework, we have been car
 
 Some tests are parameterized.  Parameters allow those running a Test to change the behavior of the test at the time it is run.  This allows users to easily adapt the tests to their specific needs and contexts, making them more flexible and applicable to a wider range of scenarios.  
 
-For example, a user working with data from just one country may wish to change a default `bdq:sourceAuthority` for some test to an authority that is more appropriate for that particular country – e.g. to change the default species names authority (which covers the whole world) to one specific for just that country, all while retaining the same decision making process within the Test. For more details see [3.3](../../bdqtest/index.md#33-parameterizing-the-tests-normative) in the [BDQ Tests and Assertions](../../bdqtest/index.md) document.
+For example, a user working with data from just one country may wish to change a default `bdq:sourceAuthority` for some test to an authority that is more appropriate for that particular country – e.g. to change the default species names authority (which covers the whole world) to one specific for just that country, all while retaining the same decision making process within the Test. For more details see [3.3](../../guide/bdqtest/index.md#33-parameterizing-the-tests-normative) in the [BDQ Tests and Assertions](../../guide/bdqtest/index.md) document.
 
 Similarly a parameterized Test may change default numerical values to values more appropriate to the local area – e.g. setting a maximum elevation that is more appropriate to the country, rather than using a default global maximum, such that for some parameterized `Validation` elevations higher than the local maximum, but still lower than the global maximum elevation would be `NOT_COMPLIANT`, fitting the local needs, while they would be `COMPLIANT` and not identified as problematic for local needs if the default global maximum elevation were used.
 

@@ -71,7 +71,7 @@ Information about the Fitness For Use Framework ontology, its usage, and its ext
 
 - **Fitness For Use Framework Ontology Guide** - Provides a visual and narrative introduction to the concepts and application of the ontology. This document.
 - [**Fitness For Use Framework Ontology List of Terms**](../../list/bdqffdq/index.md) - The term list document, which enumerates and describes the vocabulary terms.
-- [**Fitness For Use Framework Ontology**](../../bdqffdq/index.md) - Provides normative guidance on the use of the vocabulary.
+- [**Fitness For Use Framework Ontology**](../../guide/bdqffdq/index.md) - Provides normative guidance on the use of the vocabulary.
 - [**Fitness For Use Framework Ontology Vocabulary Extension**](../../extension/bdqffdq/index.md) - Defines additional axioms extending the core vocabulary.
 - [**Biodiversity Data Quality Fitness For Use Framework (Ontology)**](../../../vocabulary/bdqffdq.owl) - The ontology, which provides the formal RDF/OWL representation of the vocabulary.
 
@@ -128,7 +128,7 @@ In a non-RDF structured-data context (JSON, database, CSV), where `bdqffdq:Respo
 Labels MAY be used purely for display.
 
 This section summarises representation choices. Full normative constraints on the response structure of `Responses` is found in [3.1 Structure of Response (normative)
-](../bdqtest/index.md#31-structure-of-response-normative) of the [bdqtest: landing page](../bdqtest/index.md).
+](../guide/bdqtest/index.md#31-structure-of-response-normative) of the [bdqtest: landing page](../guide/bdqtest/index.md).
 
 #### 2.1.1 Table of Representations of Response Properties (non-normative)
 
@@ -385,7 +385,7 @@ The `bdqffdq:` portion of the BDQ standard is a specification for a framework fo
 
 This document provides a background for understanding the `bdqtest:` Test descriptions. Each of the Tests in the `bdqtest:` namespace have been designed and described within this Framework and are framed using the terms and concepts from the Framework. The Fitness for Use Framework provides the context for each Test, and has shaped decisions made about each Test.
 
-See the [Fitness for Use Framework Ontology](../../bdqffdq/index.md) for a concise description and normative information about the `bdqffdq:` ontology and a summary of the mathematical formalization. See the [Fitness For Use Framework Ontology List of Terms](../../list/bdqffdq/index.md) document for the list of terms in the `bdqffdq:` vocabulary. See the [Fitness For Use Framework Ontology Vocabulary Extension](../../extension/bdqffdq/index.md) for documentation on additional axioms. See the [Biodiversity Data Quality Fitness for Use Framework (Ontology)](../../../vocabulary/bdqffdq.owl) for the formal representation of the vocabulary as an OWL ontology. The mathematical formalization provides a description of inferences and reasoning that may be made with the terms in the vocabulary.
+See the [Fitness for Use Framework Ontology](../../guide/bdqffdq/index.md) for a concise description and normative information about the `bdqffdq:` ontology and a summary of the mathematical formalization. See the [Fitness For Use Framework Ontology List of Terms](../../list/bdqffdq/index.md) document for the list of terms in the `bdqffdq:` vocabulary. See the [Fitness For Use Framework Ontology Vocabulary Extension](../../extension/bdqffdq/index.md) for documentation on additional axioms. See the [Biodiversity Data Quality Fitness for Use Framework (Ontology)](../../../vocabulary/bdqffdq.owl) for the formal representation of the vocabulary as an OWL ontology. The mathematical formalization provides a description of inferences and reasoning that may be made with the terms in the vocabulary.
 
 ### 3.2 Description of the Fitness For Use Framework ontology (non-normative)
 
@@ -485,7 +485,7 @@ It is expected that `Response` objects instances will involve, in RDF, a combina
 | Response.comment | bdqffdq:hasResponseComment | A human readable interpretation of the results of the Test.|
 | Response.qualifier | bdqffdq:ResponseQualifier, bdqffdq:hasResponseQualifier | Additional structured information that qualifies the `Response`, intended as an extension point for uncertainty.|
 
-See [3.1 Structure of a Response (normative)](../../bdqtest/index.md#31-structure-of-response-normative) in [BDQ Tests and Assertions](../../bdqtest/index.md) for further normative guidance on Responses as RDF or as data structures in non-RDF settings.
+See [3.1 Structure of a Response (normative)](../../guide/bdqtest/index.md#31-structure-of-response-normative) in [BDQ Tests and Assertions](../../guide/bdqtest/index.md) for further normative guidance on Responses as RDF or as data structures in non-RDF settings.
 
 ### 3.5 Organization of the bdqtest: classes  (non-normative)
 
@@ -582,7 +582,7 @@ Below is a fragment in Turtle describing VALIDATION_COUNTRY_FOUND, composed of a
 
 ### 3.7 Cardinality of bdqffdq: terms (non-normative)
 
-The content of this section is non-normative, see the [Fitness for Use Framework Ontology](../../bdqffdq/index.md) document for related normative guidance.  These expectations are based on the mathematical formalization of the Fitness for Use Framework, and are intended to provide additional explanatory guidance on how class instances in `bdqffdq:` are expected to be related to each other through properties, failure to follow these expectations may result in an inability to use the Framework effectively.
+The content of this section is non-normative, see the [Fitness for Use Framework Ontology](../../guide/bdqffdq/index.md) document for related normative guidance.  These expectations are based on the mathematical formalization of the Fitness for Use Framework, and are intended to provide additional explanatory guidance on how class instances in `bdqffdq:` are expected to be related to each other through properties, failure to follow these expectations may result in an inability to use the Framework effectively.
 
 The expected relationships between classes in the Fitness for Use Framework can be expressed as cardinality statements. Selected cardinality statements are given here to provide additional explanatory guidance on how class instances in `bdqffdq:` are expected to be related to each other through object properties. Examples here are given for terms related to `Validations`.
 

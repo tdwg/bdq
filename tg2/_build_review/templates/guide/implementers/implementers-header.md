@@ -69,7 +69,7 @@ For the list and links to all associated documents see [The Biodiversity Data Qu
 
 The set of information most relevant to implementers of Biodiversity Data Quality (BDQ) Tests can be found in the following subset of resources:
 
-- [**BDQ Tests and Assertions**](../../bdqtest/index.md) - Defines how each Test is modeled using standard vocabulary terms and how it should behave under various conditions.
+- [**BDQ Tests: Concepts, Types, and Use**](\1guide/bdqtest/index.md) - Defines how each Test is modeled using standard vocabulary terms and how it should behave under various conditions.
 - [**BDQ Tests Quick Reference Guide**](../../terms/bdqtest/index.md) - Provides a concise, easy-to-read reference about the BDQ Tests.
 - [**BDQ User's Guide**](../users/index.md) - For anyone interested in how to use the BDQ Tests in practice.
 - **BDQ Implementer's Guide** - For anyone interested in the technical implementation of the BDQ Tests. This document.
@@ -321,7 +321,7 @@ Values of `bdqffdq:hasAuthoritiesDefaults` are text strings listing parameters i
 
 The `bdqffdq:hasAuthoritiesDefaults` property may be present in isolation (to make the expected response easier to read) as in the Test [VALIDATION_COUNTRYCODE_STANDARD](../../terms/bdqtest/index.md#VALIDATION_COUNTRYCODE_STANDARD) example above when a Test is not parameterized, or when a Test is parameterized, with corresponding `bdqffdq:Arguments` and `bdqffdq:Parameters`.
 
-See section [Parameterizing the Tests (normative)](../../bdqtest/index.md#33-parameterizing-the-tests-normative) of the [BDQ Tests and Assertions](../../bdqtest/index.md) page for further guidance on `bdq:sourceAuthority` values, `Parameters`, and `Arguments`. 
+See section [Parameterizing the Tests (normative)](../../guide/bdqtest/index.md#33-parameterizing-the-tests-normative) of the [BDQ Tests and Assertions](../../guide/bdqtest/index.md) page for further guidance on `bdq:sourceAuthority` values, `Parameters`, and `Arguments`. 
 
 ##### 2.3.2.4 Default Value Strings in Parameters (normative)
 
@@ -401,7 +401,7 @@ In `bdqffdq:Validation` Tests that require the lookup of a `bdq:sourceAuthority`
 
 ## 3 Compliant Implementation (normative)
 
-The BDQ Tests are part of a coherent framework for describing and reporting on data quality, and the Tests are intended to be implemented as suites of Tests that fit particular `Use Cases` (see [BDQ Fitness for Use Framework](../../bdqffdq/index.md)). The following sections provide normative guidance on what is required for an implementation of a Test Suite to be compliant with the BDQ standard, and non-normative guidance on the rationale for these requirements and expectations for how implementers will design their Test Suites.
+The BDQ Tests are part of a coherent framework for describing and reporting on data quality, and the Tests are intended to be implemented as suites of Tests that fit particular `Use Cases` (see [BDQ Fitness for Use Framework](../../guide/bdqffdq/index.md)). The following sections provide normative guidance on what is required for an implementation of a Test Suite to be compliant with the BDQ standard, and non-normative guidance on the rationale for these requirements and expectations for how implementers will design their Test Suites.
 
 ![Non-normative diagram illustrating the relationships among Use Cases, Policies, Tests, Parameters, Implementations and Reports in bdqffdq, use cases are at the top of the diagram linked down to tests (Validations, Measures, Amendments, Issues) via Policies, Tests are shown to be complex composed of many classes and properties, including Specifications which can take Parameters, below these sit Implementations, which can produce data quality reports containing assertions (Response objects):](bdqffdq_overview_diagram.svg)
 *Non-normative diagram illustrating the relationships among Use Cases, Policies, Tests, Parameters, Implementations and Reports in bdqffdq:*
@@ -425,7 +425,7 @@ The most important elements of the BDQ standard are the structure that holds exp
 
 ### 3.4 Required outputs for every Test execution (normative)
 
-Results from each Test MUST be produced in the form `Response.status`, `Response.result`, and `Response.comment`, with one Test producing one `Response`. Results MAY include `Response.qualifier` (see section [4 Extension Points](#4-extension-points-normative)). The values of `Response.status` and `Response.result` MUST be those specified. This standard is agnostic concerning data structures and serializations of a `Response`. The standard is agnostic concerning internationalization and languages of labels applied to human readable presentations of values within a `Response`. See  [3.1 Structure of Response (normative)](../../bdqtest/index.md#31-structure-of-response-normative) in [BDQ Tests and Assertions](../../bdqtest/index.md) for further normative guidance on `Responses` as RDF or as data structures. See section [5.1 The Response Object](#51-the-response-object-normative) for further normative guidance on `Responses`.
+Results from each Test MUST be produced in the form `Response.status`, `Response.result`, and `Response.comment`, with one Test producing one `Response`. Results MAY include `Response.qualifier` (see section [4 Extension Points](#4-extension-points-normative)). The values of `Response.status` and `Response.result` MUST be those specified. This standard is agnostic concerning data structures and serializations of a `Response`. The standard is agnostic concerning internationalization and languages of labels applied to human readable presentations of values within a `Response`. See  [3.1 Structure of Response (normative)](../../guide/bdqtest/index.md#31-structure-of-response-normative) in [BDQ Tests and Assertions](../../guide/bdqtest/index.md) for further normative guidance on `Responses` as RDF or as data structures. See section [5.1 The Response Object](#51-the-response-object-normative) for further normative guidance on `Responses`.
 
 #### 3.4.1 Amendment Response.result ordering (normative)
 
@@ -433,7 +433,7 @@ Within the `Response.result` for an `Amendment` Test, the order of key-value pai
 
 ### 3.5 Describing additional Tests (normative)
 
-Additional Tests that conform to the BDQ standard MUST describe those Tests using the BDQ [Fitness for Use Framework Ontology](../../bdqffdq/index.md), those Tests MUST use the same `Response` structures, and those Tests MUST be related to `bdqffdq:UseCases`, either those defined in the standard or additional `Use Cases`.
+Additional Tests that conform to the BDQ standard MUST describe those Tests using the BDQ [Fitness for Use Framework Ontology](../../guide/bdqffdq/index.md), those Tests MUST use the same `Response` structures, and those Tests MUST be related to `bdqffdq:UseCases`, either those defined in the standard or additional `Use Cases`.
 
 ### 3.6 Parameterized Tests: default behavior and unsupported values (normative)
 
@@ -483,7 +483,7 @@ Nothing in this document should be taken as a requirement for how `bdqffdq:Respo
 
 ### 5.1.3 Further Guidance on Responses (non-normative)
 
-See [3.1 Structure of a Response (normative)](../../bdqtest/index.md#31-structure-of-response-normative) in [BDQ Tests and Assertions](../../bdqtest/index.md) for further normative guidance on representing `Responses` as RDF or in data structures.
+See [3.1 Structure of a Response (normative)](../../guide/bdqtest/index.md#31-structure-of-response-normative) in [BDQ Tests and Assertions](../../guide/bdqtest/index.md) for further normative guidance on representing `Responses` as RDF or in data structures.
 
 See [Definitions for Named Individuals](../../list/bdqffdq/index.md#complete) in the `bdqffdq:` ontology for formal definitions of the named individuals that are used as values (e.g. COMPLIANT, NOT_COMPLIANT, RUN_HAS_RESULT) for `Response.status` and `Response.result` in the expected responses of Test specifications.
 
@@ -636,7 +636,7 @@ The BDQ standard does not specify how the ordering of these Tests should be acco
 
 ##### 6.4.2.1 Terms for describing Test Dependencies (non-normative)
 
-The [Fitness for Use Framework Ontology](../../bdqffdq/index.md) does not include a property to describe sequence inter-dependencies among `Amendments`. The Ontology does provide the terms `bdqffdq:targetedMeasure`, `bdqffdq:targetedValidation`, and `bdqffdq:TargetedIssue`, which could be used, together with `bdqffdq:improvedBy` to relate `Amendment` Tests to `Validation`, `Measure`, and `Issue` Tests. The BDQ standard does not use these terms to describe Test interrelationships, though they could be used for this purpose. 
+The [Fitness for Use Framework Ontology](../../guide/bdqffdq/index.md) does not include a property to describe sequence inter-dependencies among `Amendments`. The Ontology does provide the terms `bdqffdq:targetedMeasure`, `bdqffdq:targetedValidation`, and `bdqffdq:TargetedIssue`, which could be used, together with `bdqffdq:improvedBy` to relate `Amendment` Tests to `Validation`, `Measure`, and `Issue` Tests. The BDQ standard does not use these terms to describe Test interrelationships, though they could be used for this purpose. 
 
 #### 6.4.3 Implementing a complete Test (normative)
 
@@ -1200,7 +1200,7 @@ Results of the Biodiversity Data Quality (BDQ) Taxon Name-related Tests.
 
 ### 7.2 Annotations (normative)
 
-The `bdqffdq:` OWL representation of the [Fitness for Use Framework Ontology](../../bdqffdq/index.md) and the framing of the [BDQ Tests as RDF](../../../dist/bdq.xml) using that ontology make Test results particularly amenable to being wrapped in `Annotations` following the [W3C Web Annotation Data Model](https://www.w3.org/TR/annotation-model/) (Sanderson et al. 2017). Test responses MAY be represented as `Annotations`.
+The `bdqffdq:` OWL representation of the [Fitness for Use Framework Ontology](../../guide/bdqffdq/index.md) and the framing of the [BDQ Tests as RDF](../../../dist/bdq.xml) using that ontology make Test results particularly amenable to being wrapped in `Annotations` following the [W3C Web Annotation Data Model](https://www.w3.org/TR/annotation-model/) (Sanderson et al. 2017). Test responses MAY be represented as `Annotations`.
 
 The responses from Tests could be structured as elements that can be wrapped in the body `Annotation` document along with metadata from the Framework to describe which Test is being reported upon, and metadata within the target of the `Annotation` to describe which `DataResource` is being annotated, and the state it was in at the time of annotation.
 
