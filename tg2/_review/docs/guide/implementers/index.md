@@ -1041,24 +1041,24 @@ The description of a test, in essence, frames an API with `Information Element` 
 
 The checklists below are designed to help implementers ensure that their implementations of Tests follow this separation of concerns, are consistent with the semantics of the Test as defined in the BDQ standard, and that they produce the expected structured outputs.
 
-### 6.5.1 Checklist for a Validation test (non-normative)
+### 6.5.2 Checklist for a Validation test (non-normative)
 
-1 Implement utility functions or methods to evaluate `bdq:Empty` and bdq:NotEmpty consistently (see Section 2.2, “The Concept of `EMPTY` in the BDQ Standard (normative)”).
+1. Implement utility functions or methods to evaluate `bdq:Empty` and bdq:NotEmpty consistently (see Section 2.2, “The Concept of `EMPTY` in the BDQ Standard (normative)”).
 
-1 **Confirm the required inputs**
+1. **Confirm the required inputs**
    - Identify the `Information Element`(s) `Acted Upon` and `Consulted` named in the `Specification` (the value of `bdqffdq:hasExpectedResponse`).
    - Identify any `Parameter`(s) and their default value(s) (from `bdqffdq:hasAuthoritiesDefaults` and/or `bdqffdq:hasArgument` / `bdqffdq:Argument`).
 
-1 **Expose a stable callable API**
+1. **Expose a stable callable API**
    - Implement the `Test` as a callable unit (function/method) whose inputs correspond to the `Information Element`(s) and any supported `Parameter`(s).
    - If your API exposes a `Parameter`:
      * it must accept the **string literal** default value exactly as it appears in the Test descriptor (see “Default Value Strings in Parameters (normative)” in this guide).
      * it may also support other **string literal** values of that `Parameter` to produce different behavior.
 
-1 **Write a Unit Test**
+1. **Write a Unit Test**
   * Examine the decision rules in the `hasExpectedResponse` property of the `Specification` and write a unit test that covers each of the criteria in the expected response, including EXTERNAL_PREREQUISITES_NOT_MET, INTERNAL_PREREQUISITES_NOT_MET, COMPLIANT, and NOT_COMPLIANT. If the expected response includes multiple criteria for a given `Response.status`, write unit tests to cover each of those criteria.  Include tests for edge case values including empty values, values that are just inside and just outside of any specified ranges, and values that are not in the expected format. If the Test includes `Parameters`, write unit tests to cover the default value(s) and any non-default value(s) that your implementation supports.
 
-1 **Implement the Test logic (decision rules) following the expected response criteria in order**
+1. **Implement the Test logic (decision rules) following the expected response criteria in order**
    * Follow the sequence of criteria in the `hasExpectedResponse` property of the `Specification`, returning the first matching `Response` for the first matched criterion.
    * Handle EXTERNAL_PREREQUISITES_NOT_MET as an exception raised from an invocation of an external resource, and return that response immediately when such an exception is raised.
    * **Evaluate internal prerequisites first**
@@ -1083,25 +1083,25 @@ The checklists below are designed to help implementers ensure that their impleme
       - `Response.comment` containing a `bdq:NotEmpty` explanation
     * If a non-default `Parameter` value was used, `Response.comment` should include the `Parameter` name and the non-default value (see Section 6.1.2, “Identifying non-default `Parameter` values in `Response.comment` (normative)”).
 
-### 6.5.2 Checklist for Implementing an Amendment Test (non-normative)
+### 6.5.3 Checklist for Implementing an Amendment Test (non-normative)
 
-1 Implement utility functions to evaluate `bdq:Empty` and bdq:NotEmpty consistently (see Section 2.2, “The Concept of `EMPTY` in the BDQ Standard (normative)”).
+1. Implement utility functions to evaluate `bdq:Empty` and bdq:NotEmpty consistently (see Section 2.2, “The Concept of `EMPTY` in the BDQ Standard (normative)”).
 
-1 **Confirm the required inputs and intended outputs**
+1. **Confirm the required inputs and intended outputs**
    - Identify the `Information Element`(s) `Acted Upon` and `Consulted` named in the `Specification` (the value of `bdqffdq:hasExpectedResponse`).
    - Identify any `Parameter`(s) and their default value(s) (from `bdqffdq:hasAuthoritiesDefaults` and/or `bdqffdq:hasArgument` / `bdqffdq:Argument`).
    - Identify which `Information Element`(s) may appear as keys in the `Response.result` payload when the result is an amendment proposal (some `Amendment` Tests propose changes to more than one `Information Element`).
 
-1 **Expose a stable callable API**
+1. **Expose a stable callable API**
    - Implement the `Test` as a callable unit (function/method) whose inputs correspond to the `Information Element`(s) and any supported `Parameter`(s).
    - If your API exposes a `Parameter`, 
      * it must accept the **string literal** default value exactly as it appears in the Test descriptor (see Section 2.3.2.4 “Default Value Strings in Parameters (normative)”).
      * it may also support other **string literal** values of that `Parameter` to produce different behavior.
 
-1 **Write a Unit Test**
+1. **Write a Unit Test**
   * Examine the decision rules in the `hasExpectedResponse` property of the `Specification` and write a unit test that covers each of the criteria in the expected response, including EXTERNAL_PREREQUISITES_NOT_MET, INTERNAL_PREREQUISITES_NOT_MET, FILLED_IN, AMENDED, and NOT_AMENDED. If the expected response includes multiple criteria for a given `Response.status`, write unit tests to cover each of those criteria.  Include tests for edge case values including empty values, values that are just inside and just outside of any specified ranges, and values that are not in the expected format. If the Test includes `Parameters`, write unit tests to cover the default value(s) and any non-default value(s) that your implementation supports.
 
-1 **Implement the Test logic (decision rules) following the expected response criteria in order**
+1. **Implement the Test logic (decision rules) following the expected response criteria in order**
    * **Evaluate internal prerequisites first**
      - Evaluate `bdq:Empty` and `bdq:NotEmpty` consistently (with utilty functions).
      - If the `Specification` states that one or more required `Information Element`(s) being `bdq:Empty` prevents generating a proposal, return:
@@ -1134,7 +1134,7 @@ The checklists below are designed to help implementers ensure that their impleme
        - `Response.result` must be omitted / null.
        - `Response.comment` must be `bdq:NotEmpty` and should explain why no proposal was made (e.g., ambiguous input, not interpretable, no unambiguous match in authority).
 
-1 **Keep `Amendment` semantics clearly distinct from applying changes**
+1. **Keep `Amendment` semantics clearly distinct from applying changes**
   - An `Amendment` `Response.result` is a proposal. Implementations should not automatically apply the proposed changes to authoritative data.
   - The application of a Response.result from an `Amendment` Test is a separate concern from the generation of that proposal, and external to the Test API. Implementations should keep these concerns separate.
   - Implementations may support pipelines that apply proposals downstream for Quality Assurance use cases, but must preserve the ability to retain the original (unamended) values and to report both pre- and post-amendment results (see Section 6.4.1 “Phases: Pre-Amendment, Amendment, Post-Amendment (normative)”).
