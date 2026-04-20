@@ -599,7 +599,7 @@ It is RECOMMENDED, for Quality Assurance with the current suite of BDQ Tests, to
 
 ##### 6.4.1.3 Phases and Quality Control (normative)
 
-Under Quality Control, `bdqffdq:MultiRecord` `Measure` Tests that return numeric values MAY be used to assess the prevalence of quality issues in the data with respect to the selected `bdqffdq:UseCase`. This MAY be done in a pre-amendment phase and again in a post-amendment phase with all proposed changes applied to the data stream to evaluate how much accepting proposed `Amendments` would improve the data. Acceptance of proposals for changes to the data in a processing stream SHOULD NOT be done blindly, and SHOULD involve thoughtful consideration of the proposed changes.
+Under Quality Control, `bdqffdq:MultiRecord` `Measure` Tests that return numeric values MAY be used to assess the prevalence of quality issues in the data with respect to the selected `bdqffdq:UseCase`. This MAY be done in a pre-amendment phase and again in a post-amendment phase with all proposed changes applied to the data stream to evaluate how much accepting proposed `Amendments` would improve the data. Acceptance of proposals for changes to the data in a processing stream SHOULD NOT be done blindly, and SHOULD involve thoughtful consideration of the proposed changes.  See: [5.1.1 Amendment Test Responses (normative)](#511-amendment-test-responses-normative) for further normative guidance on the use of `Amendment` Test `Responses`.
 
 Numeric values from `MultiRecord` `Measure` Tests under Quality Control MAY be used to identify areas to target effort to improve data quality in a database of record for one or more `Use Cases`.
 
