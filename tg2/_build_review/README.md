@@ -34,7 +34,7 @@ The directory structure of the templates is as follows, with the files listed in
     │   ├── standard_landing-footer.md
     │   ├── standard_landing-header.md
     │   └── document_configuration.yaml
-    ├── bdqffdq DEPRECATED content will move into guide/bdqffdq/bdqffdq-header.
+    ├── bdqffdq (minimal landing page to link the bdqffdq: term list, vocabulary extension, and the bdqffdq guide).
     │   ├── bdqffdq_landing-footer.md
     │   ├── bdqffdq_landing-header.md
     │   ├── document_configuration.yaml

@@ -79,7 +79,7 @@ _review/
 │   ├── bdqdim.xml  Generated RDF for bdqdim vocabulary (built with draft_build-termlist.py).
 │   └── bdqenh.xml  Generated RDF for bdqenh vocabulary (built with draft_build-termlist.py).
 ├── docs  Human-readable documentation files built from files in build directory.
-│   ├── bdqffdq  Landing page for bdqffdq, with normative statements.  DEPRECATED, will move into guide/bdqffdq
+│   ├── bdqffdq  Minimal landing page for bdqffdq, with links to term list and vocabulary extension. 
 │   │   └── index.md  Generated file. **Do not edit.**
 │   ├── extension  Build targets for Human readable vocabulary extension documents.
 │   │   └── bdqffdq
