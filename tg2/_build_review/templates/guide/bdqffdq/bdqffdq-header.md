@@ -48,20 +48,24 @@
 
 ### 1.1 Purpose (non-normative)
 
-The purpose of this document is to provide a practical guide to understanding and using the [Biodiversity Data Quality Fitness For Use Framework Ontology](../../../vocabulary/bdqffdq.owl), represented by the `bdqffdq:` vocabulary. This ontology defines a formal framework for describing data quality in the context of biodiversity data, emphasizing that quality is always relative to a particular purpose or use.
+The purpose of this document is to present the formal ontology of the Biodiversity Data Quality Fitness for Use Framework (the Framework), represented by the `bdqffdq:` vocabulary. This ontology defines the classes, properties, and relationships used to express data quality concepts in a structured and interoperable way, emphasizing that data quality is always relative to a particular purpose (`Use Case`) and the specific `Information Elements` and expectations that apply to that use.
 
-The document explains key concepts from the ontology, including `Use Case`, `Information Element`, `Specification`, and `Criterion`, and shows how they support the structure and semantics of BDQ Tests. It provides context, illustrative examples, and guidance for interpreting the ontology as applied in real-world implementations.
+This document combines two complementary roles. First, it provides a practical, explanatory guide to understanding the Framework concepts and how they support the structure and semantics of BDQ Tests, with context and illustrative examples for interpretation and implementation. Second, it serves as the normative companion for use of the ontology: it consolidates the normative guidance on how `bdqffdq:` terms are intended to be used together in RDF/OWL (and, where relevant, in non-RDF representations), including guidance that reflects the open world assumptions of RDF/OWL modeling.
+
+Normative statements in this document specify expected patterns for relating key concepts such as `Use Case`, `Specification`, `Criterion`, `Data Quality Dimension`, `Enhancement`, `Mechanism`, and `Response` in consistent ways that support interoperable `Data Quality Reports` and workflows. The normative definitions of individual terms (e.g., labels, definitions, and axioms for each class or property) are provided in the `bdqffdq:` term-list document, vocabulary extension document, and the OWL ontology itself; this document focuses instead on the normative rules and explanatory rationale for using those terms together coherently.
 
 ### 1.2 Audience (non-normative)
 
 This guide is intended for users who need a technical understanding of the Fitness For Use Framework and its ontology. It will be particularly useful for:
 
-- Ontology engineers and information modelers incorporating the BDQ standard into semantic systems
-- Standards developers aligning other biodiversity data quality frameworks with the BDQ standard
-- Implementers needing to understand how BDQ Tests are formally structured and classified
+- Ontology engineers and information modelers incorporating the BDQ standard into semantic systems.
+- Standards developers seeking to align other vocabularies with the BDQ standard.
+- Implementers generating or consuming RDF data that describes BDQ Tests or their results.
+- Implementers needing to understand how BDQ Tests are formally structured and classified.
+- Researchers modeling `Use Cases` for biodiversity data quality assessments.
 - Advanced users exploring the logical foundation behind BDQ Test design.
 
-Some familiarity with RDF/OWL ontologies is assumed.
+Readers should be familiar with ontology concepts, RDF/OWL syntax, and open world reasoning.
 
 ### 1.3 Associated Documents (non-normative)
 
@@ -69,9 +73,8 @@ For the list and links to all associated documents see [The Biodiversity Data Qu
 
 Information about the Fitness For Use Framework ontology, its usage, and its extensions can be found in the following subset of BDQ resources:
 
-- **Fitness For Use Framework Ontology Guide** - Provides a visual and narrative introduction to the concepts and application of the ontology. This document.
+- **Fitness For Use Framework Ontology: Concepts and Use** - Provides a visual and narrative introduction to the concepts and application of the ontology. This document.
 - [**Fitness For Use Framework Ontology List of Terms**](../../list/bdqffdq/index.md) - The term list document, which enumerates and describes the vocabulary terms.
-- [**Fitness For Use Framework Ontology**](../../guide/bdqffdq/index.md) - Provides normative guidance on the use of the vocabulary.
 - [**Fitness For Use Framework Ontology Vocabulary Extension**](../../extension/bdqffdq/index.md) - Defines additional axioms extending the core vocabulary.
 - [**Biodiversity Data Quality Fitness For Use Framework (Ontology)**](../../../vocabulary/bdqffdq.owl) - The ontology, which provides the formal RDF/OWL representation of the vocabulary.
 
