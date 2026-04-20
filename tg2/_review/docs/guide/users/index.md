@@ -159,7 +159,7 @@ In any technical treatment of the BDQ standard, a precise reference to a class o
 
 ## 2 Context for Quality, Uses and Purposes (non-normative)
 
-Data do not have quality in the abstract; they only have quality with respect to a particular use. The Fitness for Use Framework (see [Fitness For Use Framework Ontology Guide](../guide/bdqffdq/index.md)) in the BDQ standard describes uses for data as `Use Cases`.
+Data do not have quality in the abstract; they only have quality with respect to a particular use. The Fitness for Use Framework (see [Fitness For Use Framework Ontology Guide](../bdqffdq/index.md)) in the BDQ standard describes uses for data as `Use Cases`.
 
 A set of `Tests` appropriate to a`Use Case` is run on a set of data and a `Data Quality Report` is produced. Both the Tests and the associated report should be interpreted in the context of that `Use Case`.
 
@@ -244,7 +244,7 @@ Software that includes an implementation of one or more Tests may produce `Data 
 
 #### 3.2.3 Outputs: Responses from Tests (normative) 
 
-The specifications for the structure of a response from running a Test can be found in [3.1 Structure of Response (normative)](../../guide/bdqtest/index.md#31-structure-of-response-normative) in the document [BDQ Tests: Concepts, Types, and Use](../../guide/bdqtest/index.md).
+The specifications for the structure of a response from running a Test can be found in [4.1 Structure of Response (normative)](../../guide/bdqtest/index.md#41-structure-of-response-normative) in the document [BDQ Tests: Concepts, Types, and Use](../../guide/bdqtest/index.md).
 
 ##### 3.2.3.1 Shorthand for Responses from Tests (non-normative) 
 
