@@ -116,8 +116,8 @@ Draft Standard for Review
 
 [6.5 Common Pattern for Implementing a Test (non-normative)](#65-common-pattern-for-implementing-a-test-non-normative)
   - [6.5.1 Responsibilities of a Test (non-normative)](#651-responsibilities-of-a-test-non-normative)
-  - [6.5.1 Checklist for a Validation test (non-normative)](#651-checklist-for-a-validation-test-non-normative)
-  - [6.5.2 Checklist for Implementing an Amendment Test (non-normative)](#652-checklist-for-implementing-an-amendment-test-non-normative)
+  - [6.5.2 Checklist for a Validation test (non-normative)](#652-checklist-for-a-validation-test-non-normative)
+  - [6.5.3 Checklist for Implementing an Amendment Test (non-normative)](#653-checklist-for-implementing-an-amendment-test-non-normative)
 
 [6.6 Responsibilities of a Test Execution Framework (non-normative)](#66-responsibilities-of-a-test-execution-framework-non-normative)
   - [6.6.1 Linking raw input terms, Tests, and outputs in a workflow (non-normative)](#661-linking-raw-input-terms-tests-and-outputs-in-a-workflow-non-normative)
@@ -1043,49 +1043,49 @@ The checklists below are designed to help implementers ensure that their impleme
 
 ### 6.5.2 Checklist for a Validation test (non-normative)
 
-1. Implement utility functions or methods to evaluate `bdq:Empty` and bdq:NotEmpty consistently (see Section 2.2, “The Concept of `EMPTY` in the BDQ Standard (normative)”).
+1. Implement utility functions or methods to evaluate `bdq:Empty` and `bdq:NotEmpty` consistently [see Section 2.2, “The Concept of `EMPTY` in the BDQ Standard (normative)”](#22-the-concept-of-`EMPTY-in-the-bdq-standard-(normative)).
 
 1. **Confirm the required inputs**
    - Identify the `Information Element`(s) `Acted Upon` and `Consulted` named in the `Specification` (the value of `bdqffdq:hasExpectedResponse`).
    - Identify any `Parameter`(s) and their default value(s) (from `bdqffdq:hasAuthoritiesDefaults` and/or `bdqffdq:hasArgument` / `bdqffdq:Argument`).
 
 1. **Expose a stable callable API**
-   - Implement the `Test` as a callable unit (function/method) whose inputs correspond to the `Information Element`(s) and any supported `Parameter`(s).
+   - Implement the Test as a callable unit (function/method) whose inputs correspond to the `Information Element`(s) and any supported `Parameter`(s).
    - If your API exposes a `Parameter`:
-     * it must accept the **string literal** default value exactly as it appears in the Test descriptor (see “Default Value Strings in Parameters (normative)” in this guide).
-     * it may also support other **string literal** values of that `Parameter` to produce different behavior.
+     - it must accept the **string literal** default value exactly as it appears in the Test descriptor [see 2.3.2.4 "Default Value Strings in Parameters (normative)”] (#2324-default-value-strings-in-parameters-(normative)).
+     - it may also support other **string literal** values of that `Parameter` to produce different behavior.
 
 1. **Write a Unit Test**
-  * Examine the decision rules in the `hasExpectedResponse` property of the `Specification` and write a unit test that covers each of the criteria in the expected response, including EXTERNAL_PREREQUISITES_NOT_MET, INTERNAL_PREREQUISITES_NOT_MET, COMPLIANT, and NOT_COMPLIANT. If the expected response includes multiple criteria for a given `Response.status`, write unit tests to cover each of those criteria.  Include tests for edge case values including empty values, values that are just inside and just outside of any specified ranges, and values that are not in the expected format. If the Test includes `Parameters`, write unit tests to cover the default value(s) and any non-default value(s) that your implementation supports.
+   - Examine the decision rules in the `hasExpectedResponse` property of the `Specification` and write a unit test that covers each of the criteria in the expected response, including EXTERNAL_PREREQUISITES_NOT_MET, INTERNAL_PREREQUISITES_NOT_MET, COMPLIANT, and NOT_COMPLIANT. If the expected response includes multiple criteria for a given `Response.status`, write unit tests to cover each of those criteria.  Include tests for edge case values including empty values, values that are just inside and just outside of any specified ranges, and values that are not in the expected format. If the Test includes `Parameters`, write unit tests to cover the default value(s) and any non-default value(s) that your implementation supports.
 
 1. **Implement the Test logic (decision rules) following the expected response criteria in order**
-   * Follow the sequence of criteria in the `hasExpectedResponse` property of the `Specification`, returning the first matching `Response` for the first matched criterion.
-   * Handle EXTERNAL_PREREQUISITES_NOT_MET as an exception raised from an invocation of an external resource, and return that response immediately when such an exception is raised.
-   * **Evaluate internal prerequisites first**
+   - Follow the sequence of criteria in the `hasExpectedResponse` property of the `Specification`, returning the first matching `Response` for the first matched criterion.
+   - Handle EXTERNAL_PREREQUISITES_NOT_MET as an exception raised from an invocation of an external resource, and return that response immediately when such an exception is raised.
+   - **Evaluate internal prerequisites first**
      - Evaluate `bdq:Empty` and `bdq:NotEmpty` consistently (with utility functions).
-     - Implement `bdq:Empty` consistently (see Section 2.2, “The Concept of `EMPTY` in the BDQ Standard (normative)”).
+     - Implement `bdq:Empty` consistently [see Section 2.2, “The Concept of `EMPTY` in the BDQ Standard (normative)”](#22-example-implementation-of-a-function-to-assess-empty-(non-normative)).
      - If the `Specification` states that an `Information Element` being `bdq:Empty` prevents evaluation, return:
        - `Response.status` = `INTERNAL_PREREQUISITES_NOT_MET`
        - `Response.result` omitted / null
        - `Response.comment` containing a `bdq:NotEmpty` explanation
-   * **Handle external prerequisites and parameter support separately**
-     * If a `Parameter` value is not supplied, substitute the default value.
-     * If the `Test` depends on an external resource (e.g., a `bdq:sourceAuthority`) and that resource is unavailable at runtime, return:
+   - **Handle external prerequisites and parameter support separately**
+     - If a `Parameter` value is not supplied, substitute the default value.
+     - If the Test depends on an external resource (e.g., a `bdq:sourceAuthority`) and that resource is unavailable at runtime, return:
        - `Response.status` = `EXTERNAL_PREREQUISITES_NOT_MET`
        - `Response.result` omitted / null
        - `Response.comment` containing a `bdq:NotEmpty` explanation
-     * If an unsupported non-default `Parameter` value is supplied, implementations must not use `Response.status` = `EXTERNAL_PREREQUISITES_NOT_MET` to report “unsupported parameter value” (see Section 3.6, “Parameterized Tests: default behavior and unsupported values (normative)”).
-  * **Run the core validation and return a conforming `Response`**
-    * Apply the `Test`’s stated criterion (e.g., exact match, interpretation rules, range checks) exactly as described in the `Specification`, and avoid undocumented preprocessing.
-    * When evaluation succeeds, return:
-      - `Response.status` = `RUN_HAS_RESULT`
-      - `Response.result` = `COMPLIANT` or `NOT_COMPLIANT`
-      - `Response.comment` containing a `bdq:NotEmpty` explanation
-    * If a non-default `Parameter` value was used, `Response.comment` should include the `Parameter` name and the non-default value (see Section 6.1.2, “Identifying non-default `Parameter` values in `Response.comment` (normative)”).
+     - If an unsupported non-default `Parameter` value is supplied, implementations must not use `Response.status` = `EXTERNAL_PREREQUISITES_NOT_MET` to report “unsupported parameter value” [see Section 3.6, “Parameterized Tests: default behavior and unsupported values (normative)”] (#36-parameterized-tests:-default-behavior-and-unsupported-values-(normative)).
+   - **Run the core validation and return a conforming `Response`**
+     - Apply the Test’s stated criterion (e.g., exact match, interpretation rules, range checks) exactly as described in the `Specification`, and avoid undocumented preprocessing.
+     - When evaluation succeeds, return:
+       - `Response.status` = `RUN_HAS_RESULT`
+       - `Response.result` = `COMPLIANT` or `NOT_COMPLIANT`
+       - `Response.comment` containing a `bdq:NotEmpty` explanation
+     - If a non-default `Parameter` value was used, `Response.comment` should include the `Parameter` name and the non-default value (see Section 6.1.2, “Identifying non-default `Parameter` values in `Response.comment` (normative)”).
 
 ### 6.5.3 Checklist for Implementing an Amendment Test (non-normative)
 
-1. Implement utility functions to evaluate `bdq:Empty` and bdq:NotEmpty consistently (see Section 2.2, “The Concept of `EMPTY` in the BDQ Standard (normative)”).
+1. Implement utility functions to evaluate `bdq:Empty` and `bdq:NotEmpty` consistently (see Section 2.2, “The Concept of `EMPTY` in the BDQ Standard (normative)”).
 
 1. **Confirm the required inputs and intended outputs**
    - Identify the `Information Element`(s) `Acted Upon` and `Consulted` named in the `Specification` (the value of `bdqffdq:hasExpectedResponse`).
@@ -1093,36 +1093,36 @@ The checklists below are designed to help implementers ensure that their impleme
    - Identify which `Information Element`(s) may appear as keys in the `Response.result` payload when the result is an amendment proposal (some `Amendment` Tests propose changes to more than one `Information Element`).
 
 1. **Expose a stable callable API**
-   - Implement the `Test` as a callable unit (function/method) whose inputs correspond to the `Information Element`(s) and any supported `Parameter`(s).
+   - Implement the Test as a callable unit (function/method) whose inputs correspond to the `Information Element`(s) and any supported `Parameter`(s).
    - If your API exposes a `Parameter`, 
-     * it must accept the **string literal** default value exactly as it appears in the Test descriptor (see Section 2.3.2.4 “Default Value Strings in Parameters (normative)”).
-     * it may also support other **string literal** values of that `Parameter` to produce different behavior.
+     - it must accept the **string literal** default value exactly as it appears in the Test descriptor [see Section 2.3.2.4 “Default Value Strings in Parameters (normative)”](#2324-default-value-strings-in-parameters-(normative)).
+     - it may also support other **string literal** values of that `Parameter` to produce different behavior.
 
 1. **Write a Unit Test**
-  * Examine the decision rules in the `hasExpectedResponse` property of the `Specification` and write a unit test that covers each of the criteria in the expected response, including EXTERNAL_PREREQUISITES_NOT_MET, INTERNAL_PREREQUISITES_NOT_MET, FILLED_IN, AMENDED, and NOT_AMENDED. If the expected response includes multiple criteria for a given `Response.status`, write unit tests to cover each of those criteria.  Include tests for edge case values including empty values, values that are just inside and just outside of any specified ranges, and values that are not in the expected format. If the Test includes `Parameters`, write unit tests to cover the default value(s) and any non-default value(s) that your implementation supports.
+   - Examine the decision rules in the `hasExpectedResponse` property of the `Specification` and write a unit test that covers each of the criteria in the expected response, including EXTERNAL_PREREQUISITES_NOT_MET, INTERNAL_PREREQUISITES_NOT_MET, FILLED_IN, AMENDED, and NOT_AMENDED. If the expected response includes multiple criteria for a given `Response.status`, write unit tests to cover each of those criteria.  Include tests for edge case values including empty values, values that are just inside and just outside of any specified ranges, and values that are not in the expected format. If the Test includes `Parameters`, write unit tests to cover the default value(s) and any non-default value(s) that your implementation supports.
 
 1. **Implement the Test logic (decision rules) following the expected response criteria in order**
-   * **Evaluate internal prerequisites first**
+   - **Evaluate internal prerequisites first**
      - Evaluate `bdq:Empty` and `bdq:NotEmpty` consistently (with utilty functions).
      - If the `Specification` states that one or more required `Information Element`(s) being `bdq:Empty` prevents generating a proposal, return:
        - `Response.status` = `INTERNAL_PREREQUISITES_NOT_MET`
        - `Response.result` omitted / null
        - `Response.comment` containing a `bdq:NotEmpty` explanation
 
-   * **Handle external prerequisites and parameter support separately**
+   - **Handle external prerequisites and parameter support separately**
      - If a `Parameter` value is not supplied, substitute the default value.
-     - If the `Test` depends on an external resource (e.g., a `bdq:sourceAuthority`) and that resource is unavailable at runtime, return:
+     - If the Test depends on an external resource (e.g., a `bdq:sourceAuthority`) and that resource is unavailable at runtime, return:
        - `Response.status` = `EXTERNAL_PREREQUISITES_NOT_MET`
        - `Response.result` omitted / null
        - `Response.comment` containing a `bdq:NotEmpty` explanation
-     - If an unsupported non-default `Parameter` value is supplied, implementations must not use `Response.status` = `EXTERNAL_PREREQUISITES_NOT_MET` to report “unsupported parameter value” (see Section 3.6 “Parameterized Tests: default behavior and unsupported values (normative)”).
+     - If an unsupported non-default `Parameter` value is supplied, implementations must not use `Response.status` = `EXTERNAL_PREREQUISITES_NOT_MET` to report “unsupported parameter value” [see Section 3.6 “Parameterized Tests: default behavior and unsupported values (normative)”](#36-parameterized-tests:-default-behavior-and-unsupported-values-(normative)).
 
-   * **Generate a proposal (or decide no proposal is warranted)**
-     - Apply the `Test`’s criterion exactly as described in the `Specification`, including any “interpreted as” rules (see Section 2.3.3 “The Concept of ‘interpreted as’ (normative)”).
+   - **Generate a proposal (or decide no proposal is warranted)**
+     - Apply the Test’s criterion exactly as described in the `Specification`, including any “interpreted as” rules [see Section 2.3.3 “The Concept of ‘interpreted as’ (normative)”](#233-the-concept-of-"interpreted-as"-(normative)).
      - Do not propose changes that are not explicitly allowed by the `Specification`. In particular, avoid “helpful” normalizations that would alter meaning or introduce false precision unless specified.
      - If a proposal is made, represent the proposed changes as structured data (typically a list/map of key:value pairs where keys are `Information Element` identifiers and values are proposed new values).
 
-   * **Return a conforming `Response` for an `Amendment`**
+   - **Return a conforming `Response` for an `Amendment`**
      - When evaluation succeeds, use `Response.status` values appropriate to `Amendment` Tests:
        - `FILLED_IN` when proposing new value(s) for `Information Element`(s) that were `bdq:Empty`.
        - `AMENDED` when proposing changes to existing `bdq:NotEmpty` value(s).
@@ -1135,24 +1135,24 @@ The checklists below are designed to help implementers ensure that their impleme
        - `Response.comment` must be `bdq:NotEmpty` and should explain why no proposal was made (e.g., ambiguous input, not interpretable, no unambiguous match in authority).
 
 1. **Keep `Amendment` semantics clearly distinct from applying changes**
-  - An `Amendment` `Response.result` is a proposal. Implementations should not automatically apply the proposed changes to authoritative data.
-  - The application of a Response.result from an `Amendment` Test is a separate concern from the generation of that proposal, and external to the Test API. Implementations should keep these concerns separate.
-  - Implementations may support pipelines that apply proposals downstream for Quality Assurance use cases, but must preserve the ability to retain the original (unamended) values and to report both pre- and post-amendment results (see Section 6.4.1 “Phases: Pre-Amendment, Amendment, Post-Amendment (normative)”).
+   - An `Amendment` `Response.result` is a proposal. Implementations should not automatically apply the proposed changes to authoritative data.
+   - The application of a Response.result from an `Amendment` Test is a separate concern from the generation of that proposal, and external to the Test API. Implementations should keep these concerns separate.
+   - Implementations may support pipelines that apply proposals downstream for Quality Assurance use cases, but must preserve the ability to retain the original (unamended) values and to report both pre- and post-amendment results [see Section 6.4.1 “Phases: Pre-Amendment, Amendment, Post-Amendment (normative)”](#641-phases:-pre-amendment,-amendment,-post-amendment-(normative).)
 
 ## 6.6 Responsibilities of a Test Execution Framework (non-normative)
 
-BDQ `Test` descriptions are intentionally independent of any particular software framework, data storage system, serialization, or workflow environment. This separation of concerns supports portability:
+BDQ Test descriptions are intentionally independent of any particular software framework, data storage system, serialization, or workflow environment. This separation of concerns supports portability:
 
-* The `Test` descriptor defines **what** must be evaluated (via the `Specification`, `Information Elements`, and any `Parameters`) and **what** must be reported (via `Response.status`, `Response.result`, and `Response.comment`).  The logic or decision rules of the `Test` are internal to the Test
+* The Test descriptor defines **what** must be evaluated (via the `Specification`, `Information Elements`, and any `Parameters`) and **what** must be reported (via `Response.status`, `Response.result`, and `Response.comment`).  The logic or decision rules of the `Test` are internal to the Test
 * An execution framework defines **how** to obtain the required values from raw data, **how** to invoke the corresponding `Implementation`, and **how** to package results into `Data Quality Reports` or for other downstream processes.
 
 ### 6.6.1 Linking raw input terms, Tests, and outputs in a workflow (non-normative)
 
-A `Test` execution framework (or “runner”) typically needs to accomplish the following steps between raw input data, a Test `Implementation`, and handling output from a Test:
+A Test execution framework (or “runner”) typically needs to accomplish the following steps between raw input data, a Test `Implementation`, and handling output from a Test:
 
 1. **Pick a `Use Case` and its associated `Policies`**
    - Determine which `Use Case` is being addressed, and which `Policies` are relevant to that `Use Case`.
-   - Identify which `Tests` are required by the relevant `Policies`.
+   - Identify which Tests are required by the relevant `Policies`.
 
 1. **Choose the unit of evaluation**
    - Determine whether input is being treated as a `Single Record` (`bdqffdq:SingleRecord`) or a `Multi Record` (`bdqffdq:MultiRecord`) resource.
@@ -1173,13 +1173,13 @@ A `Test` execution framework (or “runner”) typically needs to accomplish the
    - Aggregation should normally be by distinct values of the set of `Information Elements` for each Test, and not by distinct values of a single `Information Elements`, to ensure that the correct `Response` is associated with the correct combination of input values.
    - If aggregation is used, ensure that the `Response` for each distinct value is correctly associated with all records that contain that value to pass down a processing pipeline or to return in the final `Data Quality Report`.
 
-1. **Bind raw data to the `Test` API**
-   - Map the framework’s internal representation of data (rows, objects, RDF graphs, etc.) onto the specific `Information Element`(s) required by the `Test`.
+1. **Bind raw data to the Test API**
+   - Map the framework’s internal representation of data (rows, objects, RDF graphs, etc.) onto the specific `Information Element`(s) required by the Test.
    - Ensure correct binding of `Acted Upon` values and `Consulted` values to the correct inputs of the `Implementation`.
    - Provide values for `Parameter`(s), or omit them and rely on default behavior where supported.
 
 1. **Locate and invoke the correct Tests**
-   - The `Policies` from the `Use Case` identify which `Tests` are required, but an execution framework must still determine how to locate the corresponding implementation for each Test.
+   - The `Policies` from the `Use Case` identify which Tests are required, but an execution framework must still determine how to locate the corresponding implementation for each Test.
    - Resolve which callable unit implements which Test (preferably by Term Name (UUID), or Versioned IRI).
    - Invoke the `Implementation` with the bound inputs in a way that is consistent and repeatable.
 
@@ -1192,7 +1192,7 @@ A `Test` execution framework (or “runner”) typically needs to accomplish the
    - Exceptions raised from within a Test must be be captured and handled according to the expected response criteria in the `Specification` (e.g., returning `EXTERNAL_PREREQUISITES_NOT_MET` when an external resource is unavailable, with an appropriate comment).  An exception within a test should not be raised into the execution framework.
 
 1. **Consider Handling of EXTERNAL_PREREQUISITES_NOT_MET**
-   - If a `Test` implementation raises an exception or error due to an unavailable external resource, the test is expected to capture that and return a `Response` with `Response.status` = `EXTERNAL_PREREQUISITES_NOT_MET`, and a `Response.comment` containing a `bdq:NotEmpty` explanation.
+   - If a Test implementation raises an exception or error due to an unavailable external resource, the test is expected to capture that and return a `Response` with `Response.status` = `EXTERNAL_PREREQUISITES_NOT_MET`, and a `Response.comment` containing a `bdq:NotEmpty` explanation.
    - A framework for Test execution may choose to simply pass these failure conditions on, or to handle such exceptions at a higher level (e.g., by skipping all Tests that depend on that resource for the remainder of a run, or by retrying after a delay), but must ultimately ensure that the appropriate `Response` is returned for each individual Test execution that encounters an unavailable external resource.
 
 1. **If unique values were aggregated, deaggregate and associate results with all relevant records**
@@ -1222,9 +1222,9 @@ Data quality reports should be clear which input terms are subject to compliance
 
 ##### 7.1.2.1 Information Elements Acted Upon and Consulted Example (non-normative)
 
-The `Test` VALIDATION_COUNTRY_NOTEMPTY has two `Information Elements` in its specification: `dwc:country` is the `Information Element` `Acted Upon`, and `dwc:countryCode` is the `Information Element` `Consulted`.   
+The Test VALIDATION_COUNTRY_NOTEMPTY has two `Information Elements` in its specification: `dwc:country` is the `Information Element` `Acted Upon`, and `dwc:countryCode` is the `Information Element` `Consulted`.   
 
-VALIDATION_COUNTRY_NOTEMPTY has the `expectedResponse`: COMPLIANT if dwc:country is bdq:NotEmpty or dwc:countryCode has a value of "XZ" and either dwc:country is bdq:Empty or has a value of "High seas"; otherwise NOT_COMPLIANT
+VALIDATION_COUNTRY_NOTEMPTY has the `Expected Response`: `COMPLIANT if dwc:country is bdq:NotEmpty or dwc:countryCode has a value of "XZ" and either dwc:country is bdq:Empty or has a value of "High seas"; otherwise NOT_COMPLIANT`
 
 Given the following record as input:
 
@@ -1233,7 +1233,7 @@ Given the following record as input:
 
 In this case, the `Information Element` `Acted Upon` is `dwc:country`, and the `Information Element` `Consulted` is `dwc:countryCode`. The Test would return NOT_COMPLIANT for this record, with a comment that dwc:country is empty, and that the value of dwc:countryCode does not have the value "XZ".  The Test would return NOT_COMPLIANT because of the value of dwc:country, not because of the value of dwc:countryCode. The value of dwc:countryCode is consulted in the Test, but is not itself the subject of a non-compliance assertion.  Therefore, when presenting the results of this Test, it would be important to make clear that the non-compliance is with respect to dwc:country, and not dwc:countryCode.
 
-A hypothetical (partial) presentation of the results of this `Test` in a spreadsheet might color code the `Information Element` `Acted Upon` (dwc:country) in red to indicate that it is the subject of a non-compliance assertion, while the `Information Element` `Consulted` (dwc:countryCode) should not be similarly marked as it is not the subject of a non-compliance assertion, even though it was consulted in the `Test`.
+A hypothetical (partial) presentation of the results of this Test in a spreadsheet might color code the `Information Element` `Acted Upon` (dwc:country) in red to indicate that it is the subject of a non-compliance assertion, while the `Information Element` `Consulted` (dwc:countryCode) should not be similarly marked as it is not the subject of a non-compliance assertion, even though it was consulted in the Test.
 
 ![Example Spreadsheet presentation with just the `actedUpon` for a `Validation` highlighted.](validation_actedupon_cell_red.png "Example Spreadsheet presentation with just the `actedUpon` for a `Validation` highlighted, a spreadsheet with column headers dwc:country and dwc:countryCode and one row of data, the data cell under dwc:country is empty but has a background color of red, while the data cell under dwc:countryCode contains the value US and has no background color set.")
 
