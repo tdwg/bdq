@@ -56,13 +56,14 @@ Draft Standard for Review
   - [2.1 Properties of Responses (normative)](#21-properties-of-responses-normative)
     - [2.1.1 Table of Representations of Response Properties (non-normative)](#211-table-of-representations-of-response-properties-non-normative)
   - [2.2 Use of Properties (normative)](#22-use-of-properties-normative)
-    - [2.2.1 Properties Relating to Data Quality Needs (normative)](#221-properties-relating-to-data-quality-needs-normative)
-    - [2.2.2 Properties Relating Data Quality Needs to Data Quality Solutions (normative)](#222-properties-relating-data-quality-needs-to-data-quality-solutions-normative)
-    - [2.2.3 Properties Relating to Data Quality Solutions Provided in a Test Description (normative)](#223-properties-relating-to-data-quality-solutions-provided-in-a-test-description-normative)
-    - [2.2.4 Properties relating to data quality solutions provided by an implementation (normative)](#224-properties-relating-to-data-quality-solutions-provided-by-an-implementation-normative)
-    - [2.2.5 Properties relating `Data Quality Reports` (normative)](#225-properties-relating-data-quality-reports-normative)
-    - [2.2.6 Identifying the Test that produced a Response (normative)](#226-identifying-the-test-that-produced-a-response-normative)
-      - [2.2.6.1 Properties that should be one-to-one (normative)](#2261-properties-that-should-be-one-to-one-normative)
+  - [2.2.1 Relating Classes and Properties (non-normative)](#221-relating-classes-and-properties-non-normative)
+    - [2.2.2 Properties Relating to Data Quality Needs (normative)](#222-properties-relating-to-data-quality-needs-normative)
+    - [2.2.3 Properties Relating Data Quality Needs to Data Quality Solutions (normative)](#223-properties-relating-data-quality-needs-to-data-quality-solutions-normative)
+    - [2.2.4 Properties Relating to Data Quality Solutions Provided in a Test Description (normative)](#224-properties-relating-to-data-quality-solutions-provided-in-a-test-description-normative)
+    - [2.2.5 Properties relating to data quality solutions provided by an implementation (normative)](#225-properties-relating-to-data-quality-solutions-provided-by-an-implementation-normative)
+    - [2.2.6 Properties relating `Data Quality Reports` (normative)](#226-properties-relating-data-quality-reports-normative)
+    - [2.2.7 Identifying the Test that produced a Response (normative)](#227-identifying-the-test-that-produced-a-response-normative)
+      - [2.3 Properties that should be one-to-one (normative)](#23-properties-that-should-be-one-to-one-normative)
 
 [3 Framework for describing data quality (non-normative)](#3-framework-for-describing-data-quality-non-normative)
   - [3.1 Introduction and Context (non-normative)](#31-introduction-and-context-non-normative)
@@ -339,11 +340,20 @@ A bdqffdq:hasResponseStatus is always categorical, a bdqffdq:hasResponseComment 
 
 ### 2.2 Use of Properties (normative) 
 
+### 2.2.1 Relating Classes and Properties (non-normative)
+
+The (non-normative) diagram below illustrating `Validation` related concepts across needs, solutions, and reports areas of the framework is intended to help understand the normative statements in [2 Use of Ontology Terms (normative)](#2-use-of-ontology-terms-normative).  The diagram shows the expected relationships among `Validation`, `ValidationMethod`, and `Specification` classes, as well as their expected connections to other subclasses of `DataQualityNeed`, `DataQualitySolution`, and `DataQualityReport`.  Section [2 Use of Ontology Terms (normative)](#2-use-of-ontology-terms-normative) provides normative guidance on how properties are expected to be used to relate instances of these classes in a consistent way, as expectations limiting the open world assumptions of the RDF/OWL modeling of the `bdqffdq:` vocabulary.
+
+![Diagram of Validation, ValidationMethod, and ValidationResponse with related classes](../guide/bdqffdq/bdqffdq_data_quality_needs_solutions_report_validation.svg "Validation concepts in the Needs, Solutions, and Reports levels.")
+
+The use of classes and properties in [bdqtest:](../../dist/bdqtest.ttl) also follow the guidance provided in [2.2 Use of Properties (normative)](#22-use-of-properties-normative).  The`DataQualityNeeds` (blue here) and `DataQualitySolutions` (green here) concepts in this diagram illustrate how this guidance is used in `bdqtest:` to relate the set of terms used to define a `Validation`.  The `DataQualityReports` (tan here) concepts in the diagram illustrate how a `ValidationResponse` in a `DataQualityReport` can be related to a `Validation` and its `Specification`.  The minimal use of rdfs:range and other global axioms in `bdqffdq:` aligns with best practices for ontologies intended for reuse, integration, and extension.  This approach trades strict, machine-enforceable validation and inference for flexibility, extensibility, and a low barrier to adoption.  The normative guidance in this document mitigates the risk of inconsistent usage that is allowed by the open world design of `bdqffdq:`.
+
+
 This section describes normative expectations for the use of object and datatype properties to related instances of `bdqffdq:` classes in their intended ways given the open world limited use of domains, ranges, and other axioms in the [Biodiversity Data Quality Fitness for Use Framework (Ontology)](../../../vocabulary/bdqffdq.owl) ontology. This guidance builds on the normative definitions of `bdqffdq:` object properties and datatype properties to describe how `bdqffdq:` terms can be composed in a useful and consistent way.
 
 Section [2.2.6 Identifying the Test that produced a Response (normative)](#226-identifying-the-test-that-produced-a-response-normative) highlights the importance of using the object properties with the correct cardinality to preserve the relationship between a `Response` produced by a Test and the particular Test that produced it.
 
-#### 2.2.1 Properties Relating to Data Quality Needs (normative)
+#### 2.2.2 Properties Relating to Data Quality Needs (normative)
 
 Each description of a data quality Test SHOULD include the properties and related instances described in the following paragraphs.
 
@@ -409,7 +419,7 @@ Each instance of a subclass of `bdqffdq:DataQualityNeed` MAY have a `bdqffdq:has
 
 Each instance of `bdqffdq:AbstractInformationElement` SHOULD have `rdfs:label` and `rdfs:comment` properties describing the scope of the `Information Element` with the `rdfs:label` corresponding to the INFORMATIONELEMENT portion of the `rdfs:label` for an instance of a subclass of `bdqffdq:DataQualityNeed` following the convention described above in this section. 
 
-#### 2.2.2 Properties Relating Data Quality Needs to Data Quality Solutions (normative)
+#### 2.2.3 Properties Relating Data Quality Needs to Data Quality Solutions (normative)
 
 Each description of a data quality Test SHOULD include the properties and related instances given below.
 
@@ -437,7 +447,7 @@ An axiom places an `owl:restriction` on the object of the `bdqffdq:forIssue` obj
 
 Each `bdqffdq:Issue` method SHOULD have exactly one `bdqffdq:forIssue` object property.
 
-#### 2.2.3 Properties Relating to Data Quality Solutions Provided in a Test Description (normative)
+#### 2.2.4 Properties Relating to Data Quality Solutions Provided in a Test Description (normative)
 
 Each description of a data quality Test SHOULD include the following properties and related instances.
 
@@ -461,7 +471,7 @@ The `bdqffdq:hasParameter` object property SHOULD have a `bdqffdq:Argument` as i
 
 An axiom types the object of the `bdqffdq:hasParameter` object property as a `bdqffdq:Parameter`.
 
-#### 2.2.4 Properties relating to data quality solutions provided by an implementation (normative)
+#### 2.2.5 Properties relating to data quality solutions provided by an implementation (normative)
 
 Each data quality `Mechanism` that produces `Data Quality Reports` using the `bdqffdq:` vocabulary SHOULD include the following properties and related instances.
 
@@ -479,7 +489,7 @@ Each `bdqffdq:Implementation` SHOULD have a `bdqffdq:implementedBy` object prope
 
 A `bdqffdq:Implementation` SHOULD have one and only one `bdqffdq:implementedBy` object property.
 
-#### 2.2.5 Properties relating `Data Quality Reports` (normative)
+#### 2.2.6 Properties relating `Data Quality Reports` (normative)
 
 Each data quality `Mechanism` that produces `Data Quality Reports` using the `bdqffdq:` vocabulary SHOULD include the following properties and related instances.
 
@@ -493,7 +503,7 @@ Each instance of a `bdqffdq:Implementation` MAY have zero to many `bdqffdq:produ
 
 Each instance of a `bdqffdq:Asssertion` SHOULD be the object of exactly one `bdqffdq:producesResponse` object property. 
 
-#### 2.2.6 Identifying the Test that produced a Response (normative)
+#### 2.2.7 Identifying the Test that produced a Response (normative)
 
 Following the object properties from an instance of a `bdqffdq:Response` to an instance of a subclass of a `bdqffdq:DataQualityNeed` SHOULD identify one and only one instance of a subclass of a `bdqffdq:DataQualityNeed` for a single instance of a `bdqffdq:Response`. If this condition is not met, it is not possible to tell which Test with which `Parameter` argument values produced the `Response`.
 
@@ -528,7 +538,7 @@ Given a `Response`, the following query returns which Test was run with which ar
 
 Where, in this query, the text {id of assertion to look up} is a placeholder to replace with the id of the instance of the `bdqffdq:Response` to look up.
 
-##### 2.2.6.1 Properties that should be one-to-one (normative)
+##### 2.3 Properties that should be one-to-one (normative)
 
 **Validation**
 

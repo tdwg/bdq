@@ -311,7 +311,7 @@ We choose VALIDATION for this test because we are asserting whether data meets s
 * **Test Type** Validation
 
 See also: 
-* [Test Types](../guide/bdqtest/index.md#22-test-types-non-normative) in the bdqtest: term-list document.
+* [Test Types](../guide/bdqtest/index.md#3-test-types-non-normative) in the BDQ Tests: Concepts, Types, and Use document.
 * [Test Types](../guide/users/index.md#31-test-types-non-normative) in the User Guide.
 
 > **Alternative Pattern: metric + analytical threshold**
@@ -407,7 +407,7 @@ We will come back later and define another Test to measure how much of the datas
 
 * **Resource Type** SingleRecord
 
-See also: [Resource Types](../guide/bdqtest/index.md#32-resource-types-normative) in the bdqtest: term-list document.
+See also: [Resource Types](../guide/bdqtest/index.md#42-resource-types-normative) in the BDQ Tests: Concepts, Types, and Use document.
 
 ### 4.7 Define the Test Specification (non-normative)
 
@@ -497,11 +497,12 @@ For our Test, we have:
 * **Information Elements Acted Upon** dwc:footprintWKT
 * **Expected Response** COMPLIANT if dwc:footprintWKT is bdq:NotEmpty; otherwise NOT_COMPLIANT
 
-To formally express this Test in RDF we would need to add some more identifiers and structures, but the above are the key properties that define the Test and provide the information needed for an implementer to understand and implement the Test.  See the [bdqffdq: ontology guide](../guide/bdqffdq/index.md) for details about the full formal structure.
+To formally express this Test in RDF we would need to add some more identifiers and structures, but the above are the key properties that define the Test and provide the information needed for an implementer to understand and implement the Test.  See the [Fitness For Use Framework Ontology: Concepts and Use](../guide/bdqffdq/index.md) document for details about the full formal structure.
 
 See also: 
-* [Reading Test Descriptors](../guide/users/index.md#31-test-types-non-normative) in the Implementer’s Guide.
-* [Relating Classes and Properties](../guide/bdqffdq/index.md#18-relating-classes-and-properties-non-normative) in the bdqffdq: landing page.
+* [Test Types](../guide/users/index.md#31-test-types-non-normative) in the User’s Guide.
+* [Reading Test Descriptors](../guide/implementers/index.md#23-reading-test-descriptors-non-normative) in the Implementer’s Guide.
+* [Relating Classes and Properties](../guide/bdqffdq/index.md#221-relating-classes-and-properties-non-normative) in the Fitness For Use Framework Ontology: Concepts and Use document.
 
 #### 4.10.1 Formal RDF Representation of the Test (non-normative)
 
@@ -509,8 +510,8 @@ This simple list of properties is sufficient for a human reader to understand th
 
 See also:
 * [Diagram of Test Concepts](../guide/implementers/index.md#3-compliant-implementation-normative) in the implementers guide.
-* [Example RDF for a test](../guide/bdqtest/index.md#24-example-rdf-non-normative) in the bdqtest: landing page (VALIDATION_COUNTRYCODE_STANDARD in an RDF/XML serialization).
-* [Example RDF for a test](../guide/bdqffdq/index.md#36-example-representation-of-a-bdq-test-non-normative) in the bdqffdq: ontology guide (VALIDATION_COUNTRY_FOUND in a Turtle serialization). 
+* [Example RDF for a test](../guide/bdqtest/index.md#6-example-rdf-description-of-a-test-non-normative) in the BDQ Tests: Concepts, Types, and Use document (VALIDATION_COUNTRYCODE_STANDARD in an RDF/XML serialization).
+* [Example RDF for a test](../guide/bdqffdq/index.md#36-example-representation-of-a-bdq-test-non-normative) in the Fitness For Use Framework Ontology: Concepts and Use (VALIDATION_COUNTRY_FOUND in a Turtle serialization). 
 
 #### 4.10.2 Summary of the Test Definition
 
@@ -1056,8 +1057,8 @@ For our **Validated Distribution Authority** `Use Case` we would likely wish to 
 
 See also:
 - [Quality Control and Quality Assurance](../guide/users/index.md#21-quality-control-and-quality-assurance-non-normative) in the User's Guide.
-- [Single Record and MultiRecord Tests](../guide/bdqtest/index.md#23-single-record-and-multi-record-tests-non-normative) in the bdqtest: landing page.
-- [Data Quality Control and Data Quality Assurance](../guide/bdqffdq/index.md#321-data-quality-control-and-data-quality-assurance-non-normative) in the bdqffdq ontology guide.
+- [Single Record and MultiRecord Tests](../guide/bdqtest/index.md#35-single-record-and-multi-record-tests-non-normative) in the BDQ Tests: Concepts, Types, and Use document.
+- [Data Quality Control and Data Quality Assurance](../guide/bdqffdq/index.md#321-data-quality-control-and-data-quality-assurance-non-normative) in the Fitness For Use Framework Ontology: Concepts and Use document.
 
 ### 8.1 MultiRecord Measures for Quality Control (non-normative)
 
