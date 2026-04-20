@@ -937,8 +937,8 @@ The checklists below are designed to help implementers ensure that their impleme
 ### 6.5.2 Checklist for a Validation test (non-normative)
 
 1. **Setup for Consistency**
-   - Implement utility functions or methods to evaluate `bdq:Empty` and `bdq:NotEmpty` consistently [see Section 2.2, “The Concept of `EMPTY` in the BDQ Standard (normative)”](#22-the-concept-of-`EMPTY-in-the-bdq-standard-(normative)).
-   - Define a standard `Response` object or structure with `Response.status`, `Response.result`, and `Response.comment` properties, and use that object or structure for the output from Test implementations. See: [Section 4.1, “Structure of `Response` (normative)”](../../guide/bdqtest/index.md#41-structure-of-response-normative) in the [BDQ Tests Guide](../../guide/bdqtest/index.md).
+   - Implement utility functions or methods to evaluate `bdq:Empty` and `bdq:NotEmpty` consistently. See: [The Concept of EMPTY in the BDQ Standard (normative)”](#22-the-concept-of-empty-in-the-bdq-standard-normative).
+   - Define a standard `Response` object or structure with `Response.status`, `Response.result`, and `Response.comment` properties, and use that object or structure for the output from Test implementations. See: [Structure of Response](../../guide/bdqtest/index.md#41-structure-of-response-normative) in the [BDQ Tests Guide](../../guide/bdqtest/index.md).
 
 1. **Confirm the required inputs**
    - Identify the `Information Elements` `Acted Upon` and `Consulted` named in the `Specification` (the value of `bdqffdq:hasExpectedResponse`).
@@ -947,7 +947,7 @@ The checklists below are designed to help implementers ensure that their impleme
 1. **Expose a stable callable API**
    - Implement the Test as a callable unit (function/method) whose inputs correspond to the `Information Elements` and any supported `Parameters`.
    - If your API exposes a `Parameter`:
-     - it must accept the **string literal** default value exactly as it appears in the Test descriptor [see 2.3.2.4 "Default Value Strings in Parameters (normative)”](#2324-default-value-strings-in-parameters-(normative)).
+     - it must accept the **string literal** default value exactly as it appears in the Test descriptor. See: [Default Value Strings in Parameters”](#2324-default-value-strings-in-parameters-normative).
      - it may also support other **string literal** values of that `Parameter` to produce different behavior.
    - Return a structured `Response` object (consuming exceptions).
 
@@ -964,7 +964,7 @@ The checklists below are designed to help implementers ensure that their impleme
    - Handle EXTERNAL_PREREQUISITES_NOT_MET as an exception raised from an invocation of an external resource, and return that response immediately when such an exception is raised.
    - **Evaluate internal prerequisites first**
      - Evaluate `bdq:Empty` and `bdq:NotEmpty` consistently (with utility functions).
-     - Implement `bdq:Empty` consistently [see Section 2.2, “The Concept of `EMPTY` in the BDQ Standard (normative)”](#22-example-implementation-of-a-function-to-assess-empty-(non-normative)).
+     - Implement `bdq:Empty` consistently.  See [Example Implementation of a Function to Assess Empty](#222-example-implementation-of-a-function-to-assess-empty-non-normative).
      - If the `Specification` states that an `Information Element` being `bdq:Empty` prevents evaluation, return:
        - `Response.status` = `INTERNAL_PREREQUISITES_NOT_MET`
        - `Response.result` omitted / null
@@ -975,7 +975,7 @@ The checklists below are designed to help implementers ensure that their impleme
        - `Response.status` = `EXTERNAL_PREREQUISITES_NOT_MET`
        - `Response.result` omitted / null
        - `Response.comment` containing a `bdq:NotEmpty` explanation
-     - If an unsupported non-default `Parameter` value is supplied, implementations must not use `Response.status` = `EXTERNAL_PREREQUISITES_NOT_MET` to report “unsupported parameter value” [see Section 3.6, “Parameterized Tests: default behavior and unsupported values (normative)”](#36-parameterized-tests:-default-behavior-and-unsupported-values-(normative)).
+     - If an unsupported non-default `Parameter` value is supplied, implementations must not use `Response.status` = `EXTERNAL_PREREQUISITES_NOT_MET` to report “unsupported parameter value”.  See: [3.6, Parameterized Tests: default behavior and unsupported values](#36-parameterized-tests-default-behavior-and-unsupported-values-normative).
    - **Run the core validation and return a conforming `Response`**
      - Apply the Test’s stated criterion (e.g., exact match, interpretation rules, range checks) exactly as described in the `Specification`, and avoid undocumented preprocessing.
      - When evaluation succeeds, return:
@@ -987,18 +987,18 @@ The checklists below are designed to help implementers ensure that their impleme
 ### 6.5.3 Checklist for Implementing an Amendment Test (non-normative)
 
 1. **Setup for Consistency**
-   - Implement utility functions or methods to evaluate `bdq:Empty` and `bdq:NotEmpty` consistently [see Section 2.2, “The Concept of `EMPTY` in the BDQ Standard (normative)”](#22-the-concept-of-`EMPTY-in-the-bdq-standard-(normative)).
-   - Define a standard `Response` object or structure with `Response.status`, `Response.result`, and `Response.comment` properties, and use that object or structure for the output from Test implementations. See: [Section 4.1, “Structure of `Response` (normative)”](../../guide/bdqtest/index.md#41-structure-of-response-normative) in the [BDQ Tests Guide](../../guide/bdqtest/index.md).
+   - Implement utility functions or methods to evaluate `bdq:Empty` and `bdq:NotEmpty` consistently.  See: [2.2 The Concept of EMPTY in the BDQ Standard”](#22-the-concept-of-empty-in-the-bdq-standard-normative).
+   - Define a standard `Response` object or structure with `Response.status`, `Response.result`, and `Response.comment` properties, and use that object or structure for the output from Test implementations. See: [Section 4.1 Structure of Response (normative)](../../guide/bdqtest/index.md#41-structure-of-response-normative) in the [BDQ Tests Guide](../../guide/bdqtest/index.md).
 
 1. **Confirm the required inputs and intended outputs**
-   - Identify the `Information Elements `Acted Upon` and `Consulted` named in the `Specification` (the value of `bdqffdq:hasExpectedResponse`).
+   - Identify the `Information Elements` `Acted Upon` and `Consulted` named in the `Specification` (the value of `bdqffdq:hasExpectedResponse`).
    - Identify any `Parameters` and their default values (from `bdqffdq:hasAuthoritiesDefaults` and/or `bdqffdq:hasArgument` / `bdqffdq:Argument`).
    - Identify which `Information Elements` may appear as keys in the `Response.result` payload when the result is an amendment proposal (some `Amendment` Tests propose changes to more than one `Information Element`).
 
 1. **Expose a stable callable API**
    - Implement the Test as a callable unit (function/method) whose inputs correspond to the `Information Elements` and any supported `Parameters`.
    - If your API exposes a `Parameter`, 
-     - it must accept the **string literal** default value exactly as it appears in the Test descriptor [see Section 2.3.2.4 “Default Value Strings in Parameters (normative)”](#2324-default-value-strings-in-parameters-(normative)).
+     - it must accept the **string literal** default value exactly as it appears in the Test descriptor.  See: [2.3.2.4 Default Value Strings in Parameters](#2324-default-value-strings-in-parameters-normative).
      - it may also support other **string literal** values of that `Parameter` to produce different behavior.
    - Return a structured `Response` object (consuming exceptions).
 
@@ -1024,10 +1024,10 @@ The checklists below are designed to help implementers ensure that their impleme
        - `Response.status` = `EXTERNAL_PREREQUISITES_NOT_MET`
        - `Response.result` omitted / null
        - `Response.comment` containing a `bdq:NotEmpty` explanation
-     - If an unsupported non-default `Parameter` value is supplied, implementations must not use `Response.status` = `EXTERNAL_PREREQUISITES_NOT_MET` to report “unsupported parameter value” [see Section 3.6 “Parameterized Tests: default behavior and unsupported values (normative)”](#36-parameterized-tests:-default-behavior-and-unsupported-values-(normative)).
+     - If an unsupported non-default `Parameter` value is supplied, implementations must not use `Response.status` = `EXTERNAL_PREREQUISITES_NOT_MET` to report “unsupported parameter value”.  See: [3.6 Parameterized Tests: default behavior and unsupported values normative](#36-parameterized-tests-default-behavior-and-unsupported-values-normative).
 
    - **Generate a proposal (or decide no proposal is warranted)**
-     - Apply the Test’s criterion exactly as described in the `Specification`, including any “interpreted as” rules [see Section 2.3.3 “The Concept of ‘interpreted as’ (normative)”](#233-the-concept-of-"interpreted-as"-(normative)).
+     - Apply the Test’s criterion exactly as described in the `Specification`, including any "interpreted as" rules. See: [2.3.3 The Concept of Interpreted As”](#233-the-concept-of-interpreted-as-normative).
      - Do not propose changes that are not explicitly allowed by the `Specification`. In particular, avoid “helpful” normalizations that would alter meaning or introduce false precision unless specified.
      - If a proposal is made, represent the proposed changes as structured data (typically a list/map of key:value pairs where keys are `Information Element` identifiers and values are proposed new values).
 
@@ -1046,7 +1046,7 @@ The checklists below are designed to help implementers ensure that their impleme
 1. **Keep `Amendment` semantics clearly distinct from applying changes**
    - An `Amendment` `Response.result` is a proposal. Implementations should not automatically apply the proposed changes to authoritative data.
    - The application of a Response.result from an `Amendment` Test is a separate concern from the generation of that proposal, and external to the Test API. Implementations should keep these concerns separate.
-   - Implementations may support pipelines that apply proposals downstream for Quality Assurance use cases, but must preserve the ability to retain the original (unamended) values and to report both pre- and post-amendment results [see Section 6.4.1 “Phases: Pre-Amendment, Amendment, Post-Amendment (normative)”](#641-phases:-pre-amendment,-amendment,-post-amendment-(normative).)
+   - Implementations may support pipelines that apply proposals downstream for Quality Assurance use cases, but must preserve the ability to retain the original (unamended) values and to report both pre- and post-amendment results. See: [6.4.1 Phases: Pre-Amendment, Amendment, Post-Amendment](#641-phases-pre-amendment-amendment-post-amendment-normative).
 
 ## 6.6 Responsibilities of a Test Execution Framework (non-normative)
 
