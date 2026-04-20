@@ -109,33 +109,33 @@ While familiarity with controlled vocabularies and RDF modeling may be useful, t
 
 ### 1.3 Associated Documents (non-normative)
 
-For the list and links to all associated documents see [The Biodiversity Data Quality (BDQ) Standard](../../index.md).
+For the list and links to all associated documents see [The Biodiversity Data Quality (BDQ) Standard](../../../index.md).
 
 The set of information most relevant to the Biodiversity Data Quality (BDQ) Tests can be found in the following subset of resources:
 
 - **BDQ Tests and Assertions** - This document. Defines how each Test is modelled using standard vocabulary terms and how it should behave under various conditions.
-- [**BDQ Tests Quick Reference Guide**](../terms/bdqtest/index.md) - Provides a concise, easy-to-read reference about the BDQ Tests.
-  - [BDQ Test Index by Use Case](../terms/bdqtest/qrg_index_by_usecase.md)
-  - [BDQ Test Index by Information Element Acted Upon](../terms/bdqtest/qrg_index_by_ie_actedupon.md)
-  - [BDQ Test Index by Information Element Class](../terms/bdqtest/qrg_index_by_ie_class.md)
-  - [BDQ Test Index by Data Quality Dimension](../terms/bdqtest/qrg_index_by_dimension.md)
-  - [BDQ Multi Record Measure Test Index](../terms/bdqtest/qrg_multirecord_index.md)
-- [**BDQ Tests and Assertions List of Terms**](../list/bdqtest/index.md) - Provides the complete normative definitions of the BDQ Tests.
-- [**BDQ User's Guide**](../guide/users/index.md) - For anyone interested in how to use the BDQ Tests in practice.
-- [**BDQ Implementer's Guide**](../guide/implementers/index.md) - For anyone interested in the technical implementation of the BDQ Tests.
+- [**BDQ Tests Quick Reference Guide**](../../terms/bdqtest/index.md) - Provides a concise, easy-to-read reference about the BDQ Tests.
+  - [BDQ Test Index by Use Case](../../terms/bdqtest/qrg_index_by_usecase.md)
+  - [BDQ Test Index by Information Element Acted Upon](../../terms/bdqtest/qrg_index_by_ie_actedupon.md)
+  - [BDQ Test Index by Information Element Class](../../terms/bdqtest/qrg_index_by_ie_class.md)
+  - [BDQ Test Index by Data Quality Dimension](../../terms/bdqtest/qrg_index_by_dimension.md)
+  - [BDQ Multi Record Measure Test Index](../../terms/bdqtest/qrg_multirecord_index.md)
+- [**BDQ Tests and Assertions List of Terms**](../../list/bdqtest/index.md) - Provides the complete normative definitions of the BDQ Tests.
+- [**BDQ User's Guide**](../users/index.md) - For anyone interested in how to use the BDQ Tests in practice.
+- [**BDQ Implementer's Guide**](../implementers/index.md) - For anyone interested in the technical implementation of the BDQ Tests.
 
 #### 1.3.1 Term List Distributions for the BDQ Standard (non-normative)
 
 <!--- This same table appears in bdqtest_termlist_header. Edit here, edit there. --->
 | Description | IRI | Download URL | Notes | 
 | ----------- | --- | -----------  | ----- | 
-| HTML file   | TBD | [BDQ Tests and Assertions List of Terms](../list/bdqtest/index.md) | Complete term list for the bdqtest: vocabulary as a web page. | 
-| RDF/XML file | TBD | [Tests in RDF/XML](../../dist/bdqtest.xml) | An RDF representation of the Tests in an RDF/XML serialization. | 
-| Turtle file | TBD | [Tests in Turtle](../../dist/bdqtest.ttl) | An RDF representation of the Tests in a Turtle serialization. | 
-| JSON-LD file | TBD | [Tests in JSON/LD](../../dist/bdqtest.json) | An RDF representation of the Tests in a JSON-LD serialization. | 
-| CSV file | TBD | [Tests in CSV](../../vocabulary/bdqtest_term_versions.csv) | CSV file listing all BDQ Tests. | 
-| Single Record Test CSV file | TBD | [Single Record Tests in CSV](../../dist/bdqtest_singlerecord_tests_current.csv) | CSV file listing just the Single Record Tests. |
-| Multi Record Test CSV file | TBD | [Multi Record Tests in CSV](../../dist/bdqtest_multirecord_tests_current.csv) | CSV file listing just the Multi Record Tests. |
+| HTML file   | TBD | [BDQ Tests and Assertions List of Terms](../../list/bdqtest/index.md) | Complete term list for the bdqtest: vocabulary as a web page. | 
+| RDF/XML file | TBD | [Tests in RDF/XML](../../../dist/bdqtest.xml) | An RDF representation of the Tests in an RDF/XML serialization. | 
+| Turtle file | TBD | [Tests in Turtle](../../../dist/bdqtest.ttl) | An RDF representation of the Tests in a Turtle serialization. | 
+| JSON-LD file | TBD | [Tests in JSON/LD](../../../dist/bdqtest.json) | An RDF representation of the Tests in a JSON-LD serialization. | 
+| CSV file | TBD | [Tests in CSV](../../../vocabulary/bdqtest_term_versions.csv) | CSV file listing all BDQ Tests. | 
+| Single Record Test CSV file | TBD | [Single Record Tests in CSV](../../../dist/bdqtest_singlerecord_tests_current.csv) | CSV file listing just the Single Record Tests. |
+| Multi Record Test CSV file | TBD | [Multi Record Tests in CSV](../../../dist/bdqtest_multirecord_tests_current.csv) | CSV file listing just the Multi Record Tests. |
 
 ### 1.4 Status of the Content of this Document (normative)
 
@@ -175,7 +175,7 @@ In any technical treatment of the BDQ standard, a precise reference to a class o
 
 ## 2 A Brief Context for the BDQ Tests (non-normative)
 
-The terminology of BDQ is based primarily on the Fitness for Use Framework (Veiga 2016, Veiga et al. 2017, Biodiversity Information Standards (TDWG) Task Group 1) expressed as an ontology, but additional vocabularies are required for a complete description of the Tests and how to use them. See [3.4 Vocabularies](../../index.md#34-vocabularies-non-normative) in [The Biodiversity Data Quality (BDQ) Standard](../../index.md).
+The terminology of BDQ is based primarily on the Fitness for Use Framework (Veiga 2016, Veiga et al. 2017, Biodiversity Information Standards (TDWG) Task Group 1) expressed as an ontology, but additional vocabularies are required for a complete description of the Tests and how to use them. See [3.4 Vocabularies](../../../index.md#34-vocabularies-non-normative) in [The Biodiversity Data Quality (BDQ) Standard](../../../index.md).
 
 BDQ Tests focus on values of a subset of [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) composed as `bdqffdq:InformationElements` as inputs (along with optional `Parameters`) to the Tests.  Tests have defined outputs expressed as `Responses` and specifications of what input values should produce what `Responses`.  Each Test is independent, to support the mixing and matching of Tests to meet particular data quality needs and not impose a particular model of Test execution on implementation frameworks. Tests may execute in parallel, on data records in sequence, as queries on datasets and on unique values. Tests are paired in that all `Amendment` Tests are matched with a corresponding `Validation` Test that assesses some aspect of data quality. An `Amendment` Test may propose improvements to term values, but the BDQ standard recommends that all proposed improvements be evaluated before application.
 
@@ -185,7 +185,7 @@ The emphasis in BDQ is on Tests that evaluate values from a `Single Record` (`bd
 
 ### 2.1 What is meant by "Test"? (non-normative)
 
-We use the capitalized term "Test" to mean something specific in the BDQ Standard. A Test is any instance of a subclass of `bdqffdq:DataQualityNeed` (e.g., `bdqffdq:Validation`) composed with an instance of a subclass of `bdqffdq:Method` (e.g., `bdqffdq:ValidationMethod`) composed with an instance of `bdqffdq:Specification`. When run by a `bdqffdq:Implementation`, each BDQ Test can produce a `bdqffdq:DataQualityReport` consisting of `bdqffdq:Responses`. See the diagram in [What is a "Test"](../../index.md#511-what-is-a-test-non-normative) in [The Biodiversity Data Quality (BDQ) Standard](../../index.md).
+We use the capitalized term "Test" to mean something specific in the BDQ Standard. A Test is any instance of a subclass of `bdqffdq:DataQualityNeed` (e.g., `bdqffdq:Validation`) composed with an instance of a subclass of `bdqffdq:Method` (e.g., `bdqffdq:ValidationMethod`) composed with an instance of `bdqffdq:Specification`. When run by a `bdqffdq:Implementation`, each BDQ Test can produce a `bdqffdq:DataQualityReport` consisting of `bdqffdq:Responses`. See the diagram in [What is a "Test"](../../../index.md#511-what-is-a-test-non-normative) in [The Biodiversity Data Quality (BDQ) Standard](../../../index.md).
 
 The scope of each BDQ Test is largely provided by the properties of a `bdqffdq:Specification`. The [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) used in the specification are included in the `Information Elements` (`bdqffdq:InformationElement`). The specification also includes references to external authorities (external to the test specification, and usually also external to the Darwin Core standard, Wieczorek et al. 2012) that are required to implement the Test, for example, references to an ISO standard or a GBIF maintained controlled vocabulary. Such authoritative references are listed under `sourceAuthority` (`bdq:sourceAuthority`) with a link to the authority and optionally, a link to a specific online resource required for the `Implementation` of the Test.
 
@@ -195,16 +195,16 @@ Each BDQ Test is defined to operate on a `SingleRecord` or a `MultiRecord`. The 
 
 BDQ Tests are designed to be applied in the context of particular uses of data. The BDQ standard defines a set of `Use Cases` that represent common uses of biodiversity data. Each `Use Case` is associated with one or more Tests that can be used to evaluate whether data meet that need. By applying the appropriate Tests for a given `Use Case`, users can assess the fitness of their data for that particular use and identify areas for improvement.
 
-BDQ defines five 'Use Cases`.  These use cases were based on the work of Data Quality Task Group 3 ([Data Quality Use Cases](https://www.tdwg.org/community/bdq/tg-3/)). The BDQ Tests can only relate to the concept of ‘quality’ as a consequence of their application to a specific use case.  The five use cases included in the BDQ standard were intended to cover a range of applications that were considered in common use, but they are far from being comprehensive. The use cases were intended as a template or guide for those who may want to generate other use cases for their environments.  See the [Tutorial](../tutorial/index.md) for a step-by-step example of how to define a `Use Case` and select appropriate Tests for that `Use Case`.
+BDQ defines five 'Use Cases`.  These use cases were based on the work of Data Quality Task Group 3 ([Data Quality Use Cases](https://www.tdwg.org/community/bdq/tg-3/)). The BDQ Tests can only relate to the concept of ‘quality’ as a consequence of their application to a specific use case.  The five use cases included in the BDQ standard were intended to cover a range of applications that were considered in common use, but they are far from being comprehensive. The use cases were intended as a template or guide for those who may want to generate other use cases for their environments.  See the [Tutorial](../../tutorial/index.md) for a step-by-step example of how to define a `Use Case` and select appropriate Tests for that `Use Case`.
 
 The BDQ `Use Cases` are:
-* [bdq:Alien-Species](../list/bdq/index.md#bdq_Alien-Species)
-* [bdq:Biotic-Relationships](../list/bdq/index.md#bdq_Biotic-Relationships)
-* [bdq:Record-Management](../list/bdq/index.md#bdq_Record-Management)
-* [bdq:Spatial-Temporal_Patterns](../list/bdq/index.md#bdq_Spatial-Temporal_Patterns)
-* [bdq:Taxon-Management](../list/bdq/index.md#bdq_Taxon-Management)
+* [bdq:Alien-Species](../../list/bdq/index.md#bdq_Alien-Species)
+* [bdq:Biotic-Relationships](../../list/bdq/index.md#bdq_Biotic-Relationships)
+* [bdq:Record-Management](../../list/bdq/index.md#bdq_Record-Management)
+* [bdq:Spatial-Temporal_Patterns](../../list/bdq/index.md#bdq_Spatial-Temporal_Patterns)
+* [bdq:Taxon-Management](../../list/bdq/index.md#bdq_Taxon-Management)
 
-Under the principle that data has quality only with respect to use, each of the BDQ Tests is allocated to at least one `Use Case`.  Note that there is a many-to-many relationship here: One BDQ Test can be in multiple `Use Cases` and one `Use Case` may have many associated BDQ Tests, with `Policies` relating Tests to `Use Cases`.  See [Compliance depends on Use Case](../guide/implementers/index.md#31-compliance-depends-on-use-case-normative) in the Implementer's Guide for further explanation.
+Under the principle that data has quality only with respect to use, each of the BDQ Tests is allocated to at least one `Use Case`.  Note that there is a many-to-many relationship here: One BDQ Test can be in multiple `Use Cases` and one `Use Case` may have many associated BDQ Tests, with `Policies` relating Tests to `Use Cases`.  See [Compliance depends on Use Case](../implementers/index.md#31-compliance-depends-on-use-case-normative) in the Implementer's Guide for further explanation.
 
 ## 3 Test Types (non-normative)
 
@@ -214,7 +214,7 @@ The concept of 'Tests' in the context of BDQ include four distinct types: `Valid
 
 Each `Validation` Test is composed of an instance of `bdqffdq:Validation` (which expresses a data quality need in the abstract) with an instance of `bdqffdq:ValidationMethod` linking it to an instance of a `bdqffdq:Specification` (which gives details of how that data quality need is to be concretely assessed).
 
-`Validation` Tests in BDQ evaluate values in one or more [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) for fitness for a particular `Data Quality Need`. In some cases, `Validation` Tests check for the presence or the lack of a value. `Validation` Tests are phrased as positive statements consistent with the Fitness For Use Framework (Veiga 2016, Veiga et al. 2017). For example, [VALIDATION_TAXONRANK_NOTEMPTY](../terms/bdqtest/index.md#VALIDATION_TAXONRANK_NOTEMPTY) will return a `Response.status`="RUN_HAS_RESULT" and `Response.result`="COMPLIANT" if a record being tested contains a value in `dwc:taxonRank`, rather than being phrased in the negative (i.e., VALIDATION_TAXONRANK_EMPTY) and flagging a potential problem. Data are found to be fit for some use if all `Validations` comprising a corresponding `Use Case` have a `Response.result`="COMPLIANT".
+`Validation` Tests in BDQ evaluate values in one or more [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) for fitness for a particular `Data Quality Need`. In some cases, `Validation` Tests check for the presence or the lack of a value. `Validation` Tests are phrased as positive statements consistent with the Fitness For Use Framework (Veiga 2016, Veiga et al. 2017). For example, [VALIDATION_TAXONRANK_NOTEMPTY](../../terms/bdqtest/index.md#VALIDATION_TAXONRANK_NOTEMPTY) will return a `Response.status`="RUN_HAS_RESULT" and `Response.result`="COMPLIANT" if a record being tested contains a value in `dwc:taxonRank`, rather than being phrased in the negative (i.e., VALIDATION_TAXONRANK_EMPTY) and flagging a potential problem. Data are found to be fit for some use if all `Validations` comprising a corresponding `Use Case` have a `Response.result`="COMPLIANT".
 
 The response of a `Validation` Test (i.e., an instance of a `bdqffdq:ValidationResponse`) MUST take one of three forms.
 
@@ -231,7 +231,7 @@ Each Issue Test is composed of an instance of `bdqffdq:Issue` (which expresses a
 
 `Issue` Tests are a form of warning flag where the Test is drawing attention to potential problem with the value of an `Information Element` for at least one use of the data.
 
-We have used `Issue` Tests for a small number of cases where we wished to flag a value that might indicate a record is not fit for some purpose, but the evaluation of these cases would take human review. For example, the Test [ISSUE_ANNOTATION_NOTEMPTY](../terms/bdqtest/index.md#ISSUE_ANNOTATION_NOTEMPTY) is informing the tester than there is at least one annotation associated with a record and this should be evaluated before using the record. Similarly for the other two `Issue` Tests: [ISSUE_DATAGENERALIZATIONS_NOTEMPTY](../terms/bdqtest/index.md#ISSUE_DATAGENERALIZATIONS_NOTEMPTY) where some form of transformation has occurred, and the Test [ISSUE_ESTABLISHMENTMEANS_NOTEMPTY](../terms/bdqtest/index.md#ISSUE_ESTABLISHMENTMEANS_NOTEMPTY) where the value needs to be assessed for utility.
+We have used `Issue` Tests for a small number of cases where we wished to flag a value that might indicate a record is not fit for some purpose, but the evaluation of these cases would take human review. For example, the Test [ISSUE_ANNOTATION_NOTEMPTY](../../terms/bdqtest/index.md#ISSUE_ANNOTATION_NOTEMPTY) is informing the tester than there is at least one annotation associated with a record and this should be evaluated before using the record. Similarly for the other two `Issue` Tests: [ISSUE_DATAGENERALIZATIONS_NOTEMPTY](../../terms/bdqtest/index.md#ISSUE_DATAGENERALIZATIONS_NOTEMPTY) where some form of transformation has occurred, and the Test [ISSUE_ESTABLISHMENTMEANS_NOTEMPTY](../../terms/bdqtest/index.md#ISSUE_ESTABLISHMENTMEANS_NOTEMPTY) where the value needs to be assessed for utility.
 
 The response of an `Issue` Test (an instance of a `bdqffdq:IssueResponse`) MUST take one of three forms.
 
@@ -250,7 +250,7 @@ Each `Measure` Test is composed of an instance of `bdqffdq:Measure` (which expre
 
 `Measure` Tests return a `Response.result` of either a numeric value or one of the values "COMPLETE" or "NOT_COMPLETE". `Measure` Tests may directly measure properties of data. Alternatively, `Measure` Tests may measure the outputs of other Tests, for example, a `Measure` may count the number of `Response.results` from all COMPLIANT `Validation` Tests run on a `bdqffdq:SingleRecord`.
 
-The only `Measure` defined in the BDQ standard that directly examines data is the Test [MEASURE_EVENTDATE_DURATIONINSECONDS](../terms/bdqtest/index.md#MEASURE_EVENTDATE_DURATIONINSECONDS). This Test returns a `Response.result` measuring the amount of time represented by the value in `dwc:eventDate`, and can be used in Quality Assurance under specific research `Data Quality Needs` to identify `dwc:Occurrences` where the date observed or collected is known well enough for particular analytical needs (e.g., to at least one day for phenology studies, to at least one year for other purposes). The Test basically interprets the results of running the `Validation` and `Amendment` Tests and provides an indication of the length of the period of the value of `dwc:eventDate`.
+The only `Measure` defined in the BDQ standard that directly examines data is the Test [MEASURE_EVENTDATE_DURATIONINSECONDS](../../terms/bdqtest/index.md#MEASURE_EVENTDATE_DURATIONINSECONDS). This Test returns a `Response.result` measuring the amount of time represented by the value in `dwc:eventDate`, and can be used in Quality Assurance under specific research `Data Quality Needs` to identify `dwc:Occurrences` where the date observed or collected is known well enough for particular analytical needs (e.g., to at least one day for phenology studies, to at least one year for other purposes). The Test basically interprets the results of running the `Validation` and `Amendment` Tests and provides an indication of the length of the period of the value of `dwc:eventDate`.
 
 Most `Single Record` `Measure` Tests defined in the BDQ standard count the number of `Validation` or `Amendment` Tests with a specified `Response.result` from a `Single Record` Test.
 
@@ -286,7 +286,7 @@ In each case, a `Response.comment` MUST be present with text explaining to consu
 
 Tests may operate on a `Single Record` (e.g., one row of [Simple Darwin Core](https://dwc.tdwg.org/simple/)) or on a `Multi Record` (a dataset).
 
-The BDQ [Fitness for Use Framework](../guide/bdqffdq/index.md) allows for Tests of all types to operate on either (`bdqffdq:hasResourceType`) `Single Record` or `Multi Record`. In the BDQ standard, the only `Multi Record` Tests that have been defined are `Measures`. We refer to these as `Multi Record` `Measures` (instances of `bdqffdq:Measure` that are the subject of a `bdqffdq:hasResourceType` property whose object is `bdqffdq:MultiRecord`).
+The BDQ [Fitness for Use Framework](../bdqffdq/index.md) allows for Tests of all types to operate on either (`bdqffdq:hasResourceType`) `Single Record` or `Multi Record`. In the BDQ standard, the only `Multi Record` Tests that have been defined are `Measures`. We refer to these as `Multi Record` `Measures` (instances of `bdqffdq:Measure` that are the subject of a `bdqffdq:hasResourceType` property whose object is `bdqffdq:MultiRecord`).
 
 The focus of the BDQ Tests are the `Single Record` Tests. To allow for standard means for summarizing the results of these Tests, and for filtering data under Quality Assurance, we have also defined two sets of `Multi Record` `Measures`.
 
@@ -294,22 +294,22 @@ In the BDQ standard, for each `Single Record` `Validation` Test, we have defined
 
 In the BDQ standard, for each `Single Record` `Validation` Test, we have also defined a `Multi Record` `Measure` Test that returns a `Response.result` counting the number of `Response.results` from that `Validation` Test that are COMPLIANT (or in a few cases, COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET). Under Quality Control, these `Multi Record` `Measures` allow calculation of how much the quality of a dataset would be improved by accepting changes proposed by `Amendments`, and allow identification of areas in the data where quality improvement is most needed to fit the needs of some `Use Case`.
 
-See the [Fitness For Use Framework Summary of Mathematical Formalization (normative)](../guide/bdqffdq/index.md#3-fitness-for-use-framework-summary-of-mathematical-formalization-normative) for the formal expression of how `Measures` are intended to be used in Quality Control and Quality Assurance, and User's Guide section [2 Context for Quality, Uses and Purposes (non-normative)](../guide/users/index.md#2-context-for-quality-uses-and-purposes-non-normative) for a further explanation.
+See the [Fitness For Use Framework Summary of Mathematical Formalization (normative)](../bdqffdq/index.md#3-fitness-for-use-framework-summary-of-mathematical-formalization-normative) for the formal expression of how `Measures` are intended to be used in Quality Control and Quality Assurance, and User's Guide section [2 Context for Quality, Uses and Purposes (non-normative)](../users/index.md#2-context-for-quality-uses-and-purposes-non-normative) for a further explanation.
 
 ## 4 Use of Terms (normative)
 
-The technical (normative) details of the BDQ Test terms (those in the `bdqtest:` namespace) are found in the [BDQ Tests and Assertions List of Terms](../list/bdqtest/index.md).
+The technical (normative) details of the BDQ Test terms (those in the `bdqtest:` namespace) are found in the [BDQ Tests and Assertions List of Terms](../../list/bdqtest/index.md).
 
 The technical definitions of the `bdqtest:` terms are supported by terms in several additional namespaces in the BDQ standard, namely `bdq:`, `bdqffdq:`, `bdqdim:`, `bdqenh:`, and `bdqcrit:`. For the details and rationale, see Chapman et al. (2017).
 
 | **Abbreviation**  | **Technical List of Terms** |
 | -------- | ----------------------- |
-| bdq:     | [BDQ Controlled Vocabulary List of Terms](../list/bdq/index.md) |
-| bdqtest: | [BDQ Tests and Assertions List of Terms](../list/bdqtest/index.md) |
-| bdqcrit: | [Data Quality Criterion Controlled Vocabulary List of Terms](../list/bdqcrit/index.md) |
-| bdqdim:  | [Data Quality Dimension Controlled Vocabulary List of Terms](../list/bdqdim/index.md) |
-| bdqenh:  | [Data Quality Enhancement Controlled Vocabulary List of Terms](../list/bdqenh/index.md) |
-| bdqffdq: | [Fitness For Use Framework Ontology List of Terms](../list/bdqffdq/index.md) |
+| bdq:     | [BDQ Controlled Vocabulary List of Terms](../../list/bdq/index.md) |
+| bdqtest: | [BDQ Tests and Assertions List of Terms](../../list/bdqtest/index.md) |
+| bdqcrit: | [Data Quality Criterion Controlled Vocabulary List of Terms](../../list/bdqcrit/index.md) |
+| bdqdim:  | [Data Quality Dimension Controlled Vocabulary List of Terms](../../list/bdqdim/index.md) |
+| bdqenh:  | [Data Quality Enhancement Controlled Vocabulary List of Terms](../../list/bdqenh/index.md) |
+| bdqffdq: | [Fitness For Use Framework Ontology List of Terms](../../list/bdqffdq/index.md) |
 
 ### 4.1 Structure of Response (normative)
 
@@ -358,7 +358,7 @@ Each BDQ Test (each instance of a `bdqffdq:DataQualityNeed`) MUST have exactly o
 
 Tests operate on data. Data may be understood as representing a single record or multiple records. The `Single Record` (`bdqffdq:SingleRecord`) BDQ Tests MAY be applied to a single [Simple Darwin Core](https://dwc.tdwg.org/simple/)) record, or to a single instance of a Darwin Core `dwc:Occurrence`, `dwc:Taxon`, `dwc:Event`, or other class, and MAY extend across one to many relations from that class instance to instances of classes of other types in a structured representation of Darwin Core data (Wieczorek et al. 2012). A BDQ `Single Record` Test SHOULD NOT take multiple rows from a flat file (e.g. Simple Darwin Core) as input. A BDQ `Single Record` Test SHOULD NOT take multiple objects of the same core type in structured Darwin Core as input (for example, input Darwin Core data in RDF should be presented to a BDQ `Single Record` Test one `dwc:Occurrence` at a time, although the `dwc:Occurrence` could be linked to multiple other instances of other classes such as `dwc:Identifications`).
 
-The BDQ Test [ISSUE_ANNOTATION_NOTEMPTY](../terms/bdqtest/index.md#ISSUE_ANNOTATION_NOTEMPTY) similarly operates on a single Simple Darwin Core record, or a single core Darwin Core class instance, and asks whether `Annotations` exist related to that class, here this standard encourages the implementation of a standard for annotating `dwc:Occurrence` records beyond the [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021).
+The BDQ Test [ISSUE_ANNOTATION_NOTEMPTY](../../terms/bdqtest/index.md#ISSUE_ANNOTATION_NOTEMPTY) similarly operates on a single Simple Darwin Core record, or a single core Darwin Core class instance, and asks whether `Annotations` exist related to that class, here this standard encourages the implementation of a standard for annotating `dwc:Occurrence` records beyond the [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021).
 
 BDQ `Multi Record` (`bdqffdq:MultiRecord`) Tests operate on a dataset as a whole. BDQ `Multi Record` Tests in `bdqtest:` sum up results across all records for each `bdqffdq:SingleRecord` Test.
 
@@ -378,7 +378,7 @@ Values of `bdqffdq:hasAuthoritiesDefaults` SHOULD be a text string listing `Para
 
 The `bdqffdq:hasAuthoritiesDefaults` data property MAY be used without corresponding `bdqffdq:Arguments` and `bdqffdq:Parameters` when a Test is not parameterized, but a `bdq:sourceAuthority` is mentioned within a `bdqffdq:hasExpectedResponse` for the `bdqffdq:Specification` and the `bdqffdq:hasAuthoritiesDefaults` provides details on this `sourceAuthority`. This usage allows for simpler and easier-to-read expected responses.
 
-Section [2.3.2 Reading a Specification (non-normative)](../guide/implementers/index.md#232-reading-a-specification-non-normative) of the [BDQ Implementer's Guide](../guide/implementers/index.md) contains additional guidance for handling parameters in BDQ Test `Implementations`.
+Section [2.3.2 Reading a Specification (non-normative)](../implementers/index.md#232-reading-a-specification-non-normative) of the [BDQ Implementer's Guide](../implementers/index.md) contains additional guidance for handling parameters in BDQ Test `Implementations`.
 
 #### 4.3.1 Parameter Examples (non-normative)
 
@@ -414,7 +414,7 @@ Example RDF fragment showing use of `Arguments` and `bdqffdq:hasAuthoritiesDefau
         ...
     </rdf:Description>
 
-Example RDF Fragment from the `Specification` for [VALIDATION_COUNTRYCODE_STANDARD](../terms/bdqtest/index.md#VALIDATION_COUNTRYCODE_STANDARD), where `bdqffdq:hasAuthoritiesDefaults` is present to provide a `bdq:sourceAuthority` for the `Specification`, but the Test is not parameterized, so no `bdqffdq:hasArgument` properties are present: 
+Example RDF Fragment from the `Specification` for [VALIDATION_COUNTRYCODE_STANDARD](../../terms/bdqtest/index.md#VALIDATION_COUNTRYCODE_STANDARD), where `bdqffdq:hasAuthoritiesDefaults` is present to provide a `bdq:sourceAuthority` for the `Specification`, but the Test is not parameterized, so no `bdqffdq:hasArgument` properties are present: 
 
     <hasAuthoritiesDefaults xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bdq:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}</hasAuthoritiesDefaults>
     <hasExpectedResponse xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode is bdq:Empty; COMPLIANT if dwc:countryCode can be unambiguously interpreted as a valid ISO 3166-1-alpha-2 country code in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</hasExpectedResponse
@@ -427,7 +427,7 @@ BDQ `Tests` are designed with a clear boundary of responsibility: they take a de
 
 A Test is a defined evaluation that takes specific inputs and produces a structured output. A Test is defined using a set of `bdqffdq:` classes and properties that specify the inputs to the Test (the relevant `Information Elements` and any `Parameters`) and how those input values are to be evaluated under a `Specification` to produce a structured output (a `Response`) that can be interpreted consistently across implementations. The Test definitions are provided in the `bdqtest:` vocabulary, and the semantics of the terms used in those definitions are provided by the `bdqffdq:` vocabulary and supporting vocabularies.
 
-![Diagram of the relationship between the concept Test and the bdqffdq: classes and properties that define it](docs/guide/implementers/bdqffdq_overview_diagram.svg)
+![Diagram of the relationship between the concept Test and the bdqffdq: classes and properties that define it](../implementers/bdqffdq_overview_diagram.svg)
 
 A Test is not a software implementation; it is a formal definition of an evaluation that *can* be implemented in software. In the Fitness For Use Framework, each Test is an instance of a subtype of `Data Quality Need` that identifies what is being evaluated (through its required `Information Elements` and its `Resource Type`) and why it matters (through its association with one or more `Use Cases` via `Policies`). The Test is linked to a `Method`, which in turn links to a `Specification` that describes expected behavior and expected outcomes (e.g., via `hasExpectedResponse`), and may reference `Parameters` and source authorities that further constrain or parameterize execution. When an `Implementation` runs a Test, it produces one or more `Responses` that can be assembled into `Data Quality Reports` for interpretation, filtering, and aggregation.
 
@@ -435,7 +435,7 @@ Conceptually, Tests can be viewed in two complementary ways: vertically, they co
 
 ### 5.1 Data Quality Control, Data Quality Assurance (normative)
 
-The BDQ standard draws a distinction between Quality Control and Quality Assurance. Quality Control processes seek to assess the quality of data for some purpose, then identify changes to the data or to processes around the data for improving the quality of the data. Quality Assurance processes seek to filter some set of data to a subset that is fit for some purpose, that is to assure that data used for some purpose are fit for that purpose. Implementations of the BDQ Tests MAY be used to perform Quality Control, Quality Assurance, or both. The [mathematical formalization](docs/bdqffdq/index.md#3-fitness-for-use-framework-summary-of-mathematical-formalization-normative) of the [Fitness for Use Ontology](docs/bdqffdq/index.md) provides a formal definition of Quality Control and Quality Assurance, and how Test `Responses` SHOULD be used for each.
+The BDQ standard draws a distinction between Quality Control and Quality Assurance. Quality Control processes seek to assess the quality of data for some purpose, then identify changes to the data or to processes around the data for improving the quality of the data. Quality Assurance processes seek to filter some set of data to a subset that is fit for some purpose, that is to assure that data used for some purpose are fit for that purpose. Implementations of the BDQ Tests MAY be used to perform Quality Control, Quality Assurance, or both. The [mathematical formalization](../bdqffdq/index.md#3-fitness-for-use-framework-summary-of-mathematical-formalization-normative) of the [Fitness for Use Ontology](../bdqffdq/index.md) provides a formal definition of Quality Control and Quality Assurance, and how Test `Responses` SHOULD be used for each.
 
 ### 5.2 When to Run Tests (normative)
 
@@ -450,11 +450,11 @@ The BDQ Tests are designed to be run at any point in the life cycle of biodivers
 ### 5.3 Results of Test Executions (normative)
 
 The BDQ standard is agnostic about the format of presentation of results from BDQ Tests. BDQ does, however, specify that Test implementations and presentations MUST return structured data with at least Response.status, Response.result, and Response.comment. Responses MAY also contain more information in Response.qualifier.
-See the [Implementer's Guide](docs/guide/implementers/index.md) section on [Presentation of Results](docs/guide/implementers/index.md#7-presentation-of-results-normative) for further normative and non-normative guidance about result presentation. See [Structure of a Response](docs/bdqtest/index.md#31-structure-of-response-normative) in the [BDQ Tests and Assertions](docs/bdqtest/index.md) document for normative guidance on `Responses` as RDF or as data structures.
+See the [Implementer's Guide](../implementers/index.md) section on [Presentation of Results](../implementers/index.md#7-presentation-of-results-normative) for further normative and non-normative guidance about result presentation. See [Structure of a Response](../bdqtest/index.md#31-structure-of-response-normative) in the [BDQ Tests and Assertions](../bdqtest/index.md) document for normative guidance on `Responses` as RDF or as data structures.
 
 The results of the execution of implementations of the BDQ Tests MAY be presented as Data Quality reports. The Framework Ontology provides vocabulary and structure that MAY be used for such data quality reports.
 
-The bdqffdq: vocabulary enables the wrapping of the results of BDQ Tests within annotations. The bdqffdq: vocabularies in particular are intended to support the framing of `Responses` from Tests within annotations that follow the W3C Web Annotation Data Model (Sanderson et al. 2017), and are suitable for inclusion in semantic data stores. See the [Implementer's Guide](docs/guide/implementers/index.md) section on [Annotations](docs/guide/implementers/index.md#72-annotations-normative) for more guidance.
+The bdqffdq: vocabulary enables the wrapping of the results of BDQ Tests within annotations. The bdqffdq: vocabularies in particular are intended to support the framing of `Responses` from Tests within annotations that follow the W3C Web Annotation Data Model (Sanderson et al. 2017), and are suitable for inclusion in semantic data stores. See the [Implementer's Guide](../implementers/index.md) section on [Annotations](../implementers/index.md#72-annotations-normative) for more guidance.
 
 ### 5.4 Test Execution Environments and Workflows (non-normative)
 
@@ -470,7 +470,7 @@ Expanding on this single validation step, amendments can be run and their result
 
 ### 6 Example RDF description of a Test (non-normative) 
 
-A complete description of BDQ Tests can be found in the RDF representation of this vocabulary. Following the Fitness for Use Framework Ontology (`bdqffdq:`), a Test is composed of an instance of a subclass of a `bdqffdq:DataQualityNeed` (e.g., `bdqffdq:Validation`), an instance of a `bdqffdq:ActedUpon` `Information Element`, optionally an instance of a `bdqffdq:Consulted` `Information Element`, an instance of a subclass of `bdqffdq:Method` (e.g., `bdqffdq:ValidationMethod`), and an instance of a `bdqffdq:Specification`. Most of the information associated with a `bdqtest:` term is expressed in other vocabularies, in particular `bdqffdq:`. This structure and dependence on other vocabularies can be seen in the formal example description of [VALIDATION_COUNTRYCODE_STANDARD](../terms/bdqtest/index.md#VALIDATION_COUNTRYCODE_STANDARD), below.
+A complete description of BDQ Tests can be found in the RDF representation of this vocabulary. Following the Fitness for Use Framework Ontology (`bdqffdq:`), a Test is composed of an instance of a subclass of a `bdqffdq:DataQualityNeed` (e.g., `bdqffdq:Validation`), an instance of a `bdqffdq:ActedUpon` `Information Element`, optionally an instance of a `bdqffdq:Consulted` `Information Element`, an instance of a subclass of `bdqffdq:Method` (e.g., `bdqffdq:ValidationMethod`), and an instance of a `bdqffdq:Specification`. Most of the information associated with a `bdqtest:` term is expressed in other vocabularies, in particular `bdqffdq:`. This structure and dependence on other vocabularies can be seen in the formal example description of [VALIDATION_COUNTRYCODE_STANDARD](../../terms/bdqtest/index.md#VALIDATION_COUNTRYCODE_STANDARD), below.
 
     <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe-2025-03-07">
         <dcterms:bibliographicCitation>ISO (n.dat.) ISO 3166 Country Codes. https://www.iso.org/iso-3166-country-codes.html; ISO (n.dat) 3166-1 alpha-2. https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2; DataHub (2018) List of all countries with their two digit codes (ISO 3166-1). https://datahub.io/core/country-list; Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</dcterms:bibliographicCitation>
