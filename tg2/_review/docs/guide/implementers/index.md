@@ -1052,7 +1052,7 @@ The checklists below are designed to help implementers ensure that their impleme
 1. **Expose a stable callable API**
    - Implement the Test as a callable unit (function/method) whose inputs correspond to the `Information Element`(s) and any supported `Parameter`(s).
    - If your API exposes a `Parameter`:
-     - it must accept the **string literal** default value exactly as it appears in the Test descriptor [see 2.3.2.4 "Default Value Strings in Parameters (normative)”] (#2324-default-value-strings-in-parameters-(normative)).
+     - it must accept the **string literal** default value exactly as it appears in the Test descriptor [see 2.3.2.4 "Default Value Strings in Parameters (normative)”](#2324-default-value-strings-in-parameters-(normative)).
      - it may also support other **string literal** values of that `Parameter` to produce different behavior.
 
 1. **Write a Unit Test**
@@ -1074,7 +1074,7 @@ The checklists below are designed to help implementers ensure that their impleme
        - `Response.status` = `EXTERNAL_PREREQUISITES_NOT_MET`
        - `Response.result` omitted / null
        - `Response.comment` containing a `bdq:NotEmpty` explanation
-     - If an unsupported non-default `Parameter` value is supplied, implementations must not use `Response.status` = `EXTERNAL_PREREQUISITES_NOT_MET` to report “unsupported parameter value” [see Section 3.6, “Parameterized Tests: default behavior and unsupported values (normative)”] (#36-parameterized-tests:-default-behavior-and-unsupported-values-(normative)).
+     - If an unsupported non-default `Parameter` value is supplied, implementations must not use `Response.status` = `EXTERNAL_PREREQUISITES_NOT_MET` to report “unsupported parameter value” [see Section 3.6, “Parameterized Tests: default behavior and unsupported values (normative)”](#36-parameterized-tests:-default-behavior-and-unsupported-values-(normative)).
    - **Run the core validation and return a conforming `Response`**
      - Apply the Test’s stated criterion (e.g., exact match, interpretation rules, range checks) exactly as described in the `Specification`, and avoid undocumented preprocessing.
      - When evaluation succeeds, return:
