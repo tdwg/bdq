@@ -1043,7 +1043,9 @@ The checklists below are designed to help implementers ensure that their impleme
 
 ### 6.5.2 Checklist for a Validation test (non-normative)
 
-1. Implement utility functions or methods to evaluate `bdq:Empty` and `bdq:NotEmpty` consistently [see Section 2.2, “The Concept of `EMPTY` in the BDQ Standard (normative)”](#22-the-concept-of-`EMPTY-in-the-bdq-standard-(normative)).
+1. **Setup for Consistency**
+   - Implement utility functions or methods to evaluate `bdq:Empty` and `bdq:NotEmpty` consistently [see Section 2.2, “The Concept of `EMPTY` in the BDQ Standard (normative)”](#22-the-concept-of-`EMPTY-in-the-bdq-standard-(normative)).
+   - Define a standard `Response` object or structure with `Response.status`, `Response.result`, and `Response.comment` properties, and use that object or structure for the output from Test implementations. See: [Section 4.1, “Structure of `Response` (normative)”](../../guide/bdqtest/index.md#41-structure-of-response-normative) in the [BDQ Tests Guide](../../guide/bdqtest/index.md).
 
 1. **Confirm the required inputs**
    - Identify the `Information Element`(s) `Acted Upon` and `Consulted` named in the `Specification` (the value of `bdqffdq:hasExpectedResponse`).
@@ -1054,6 +1056,7 @@ The checklists below are designed to help implementers ensure that their impleme
    - If your API exposes a `Parameter`:
      - it must accept the **string literal** default value exactly as it appears in the Test descriptor [see 2.3.2.4 "Default Value Strings in Parameters (normative)”](#2324-default-value-strings-in-parameters-(normative)).
      - it may also support other **string literal** values of that `Parameter` to produce different behavior.
+   - Return a structured `Response` object (consuming exceptions).
 
 1. **Write a Unit Test**
    - Examine the decision rules in the `hasExpectedResponse` property of the `Specification` and write a unit test that covers each of the criteria in the expected response, including EXTERNAL_PREREQUISITES_NOT_MET, INTERNAL_PREREQUISITES_NOT_MET, COMPLIANT, and NOT_COMPLIANT. If the expected response includes multiple criteria for a given `Response.status`, write unit tests to cover each of those criteria.  Include tests for edge case values including empty values, values that are just inside and just outside of any specified ranges, and values that are not in the expected format. If the Test includes `Parameters`, write unit tests to cover the default value(s) and any non-default value(s) that your implementation supports.
@@ -1085,7 +1088,9 @@ The checklists below are designed to help implementers ensure that their impleme
 
 ### 6.5.3 Checklist for Implementing an Amendment Test (non-normative)
 
-1. Implement utility functions to evaluate `bdq:Empty` and `bdq:NotEmpty` consistently (see Section 2.2, “The Concept of `EMPTY` in the BDQ Standard (normative)”).
+1. **Setup for Consistency**
+   - Implement utility functions or methods to evaluate `bdq:Empty` and `bdq:NotEmpty` consistently [see Section 2.2, “The Concept of `EMPTY` in the BDQ Standard (normative)”](#22-the-concept-of-`EMPTY-in-the-bdq-standard-(normative)).
+   - Define a standard `Response` object or structure with `Response.status`, `Response.result`, and `Response.comment` properties, and use that object or structure for the output from Test implementations. See: [Section 4.1, “Structure of `Response` (normative)”](../../guide/bdqtest/index.md#41-structure-of-response-normative) in the [BDQ Tests Guide](../../guide/bdqtest/index.md).
 
 1. **Confirm the required inputs and intended outputs**
    - Identify the `Information Element`(s) `Acted Upon` and `Consulted` named in the `Specification` (the value of `bdqffdq:hasExpectedResponse`).
@@ -1097,6 +1102,7 @@ The checklists below are designed to help implementers ensure that their impleme
    - If your API exposes a `Parameter`, 
      - it must accept the **string literal** default value exactly as it appears in the Test descriptor [see Section 2.3.2.4 “Default Value Strings in Parameters (normative)”](#2324-default-value-strings-in-parameters-(normative)).
      - it may also support other **string literal** values of that `Parameter` to produce different behavior.
+   - Return a structured `Response` object (consuming exceptions).
 
 1. **Write a Unit Test**
    - Examine the decision rules in the `hasExpectedResponse` property of the `Specification` and write a unit test that covers each of the criteria in the expected response, including EXTERNAL_PREREQUISITES_NOT_MET, INTERNAL_PREREQUISITES_NOT_MET, FILLED_IN, AMENDED, and NOT_AMENDED. If the expected response includes multiple criteria for a given `Response.status`, write unit tests to cover each of those criteria.  Include tests for edge case values including empty values, values that are just inside and just outside of any specified ranges, and values that are not in the expected format. If the Test includes `Parameters`, write unit tests to cover the default value(s) and any non-default value(s) that your implementation supports.
