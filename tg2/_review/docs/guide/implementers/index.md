@@ -436,9 +436,10 @@ See section [Parameterizing the Tests (normative)](../../bdqtest/index.md#33-par
 When a Test is defined as parameterized, implementations SHOULD support the parameter in addition to the `Information Elements`. 
 
 When a Test is defined as parameterized:
-- Implementations MAY choose to only support the default value.
+- Implementations MUST support the default value.
+- Implementations MAY choose to support only the default value.
 - Implementations MAY choose to not include the parameter(s) in the Test API, that is, only support the default value internally to the Test.
---  Note that some Test Conformance Testing Data provide non-default `Parameter` values, and implementations that only support the default value will be unable to validate against all of the Test Conformance Testing Data (see [8 Conformance Testing Implementations](#8-conformance-testing-implementations-normative))).
+  -  Note that some Test Conformance Testing Data provide non-default `Parameter` values, and implementations that only support the default value will be unable to validate against all of the Test Conformance Testing Data (see [8 Conformance Testing Implementations](#8-conformance-testing-implementations-normative))).
 
 When the parameter has a default value and a resource, and an implementation includes the parameter in its API, that implementation MUST support the string literal given as the default value, and internally choose the resource "{[resource]}" or "{API endpoint [resource]}" based on that string literal "default value". Implementations MAY also accept other values including the "{[resource]}" or "{API endpoint [resource]}" as the value for the parameter in the API for the Test implementation.
 
@@ -1059,7 +1060,12 @@ The checklists below are designed to help implementers ensure that their impleme
    - Return a structured `Response` object (consuming exceptions).
 
 1. **Write a Unit Test**
-   - Examine the decision rules in the `hasExpectedResponse` property of the `Specification` and write a unit test that covers each of the criteria in the expected response, including EXTERNAL_PREREQUISITES_NOT_MET, INTERNAL_PREREQUISITES_NOT_MET, COMPLIANT, and NOT_COMPLIANT. If the expected response includes multiple criteria for a given `Response.status`, write unit tests to cover each of those criteria.  Include tests for edge case values including empty values, values that are just inside and just outside of any specified ranges, and values that are not in the expected format. If the Test includes `Parameters`, write unit tests to cover the default value(s) and any non-default value(s) that your implementation supports.
+   - Examine the decision rules in the `hasExpectedResponse` property of the `Specification` and write a unit test that covers each of the criteria in the expected response, including EXTERNAL_PREREQUISITES_NOT_MET, INTERNAL_PREREQUISITES_NOT_MET, COMPLIANT, and NOT_COMPLIANT. 
+     - Include data values found in the wild that would be expected to evaluate as COMPLIANT.
+     - Include data values found in the wild that would be expected to evaluate as NOT_COMPLIANT.
+   - If the expected response includes multiple criteria for a given `Response.status`, write unit tests to cover each of those criteria.  
+   - Include tests for edge case values including empty values, values that are just inside and just outside of any specified ranges, and values that are not in the expected format. 
+   - If the Test includes `Parameters`, write unit tests to cover the default value(s) and any non-default value(s) that your implementation supports.
 
 1. **Implement the Test logic (decision rules) following the expected response criteria in order**
    - Follow the sequence of criteria in the `hasExpectedResponse` property of the `Specification`, returning the first matching `Response` for the first matched criterion.
@@ -1105,7 +1111,12 @@ The checklists below are designed to help implementers ensure that their impleme
    - Return a structured `Response` object (consuming exceptions).
 
 1. **Write a Unit Test**
-   - Examine the decision rules in the `hasExpectedResponse` property of the `Specification` and write a unit test that covers each of the criteria in the expected response, including EXTERNAL_PREREQUISITES_NOT_MET, INTERNAL_PREREQUISITES_NOT_MET, FILLED_IN, AMENDED, and NOT_AMENDED. If the expected response includes multiple criteria for a given `Response.status`, write unit tests to cover each of those criteria.  Include tests for edge case values including empty values, values that are just inside and just outside of any specified ranges, and values that are not in the expected format. If the Test includes `Parameters`, write unit tests to cover the default value(s) and any non-default value(s) that your implementation supports.
+   - Examine the decision rules in the `hasExpectedResponse` property of the `Specification` and write a unit test that covers each of the criteria in the expected response, including EXTERNAL_PREREQUISITES_NOT_MET, INTERNAL_PREREQUISITES_NOT_MET, FILLED_IN, AMENDED, and NOT_AMENDED. 
+     - Include a range of data values found in the wild that can be effectively amended to test the FILLED_IN and AMENDED responses.
+     - Include a range of data values found in the wild that are ambiguous and cannot be effectively amended to test the NOT_AMENDED response.
+   - If the expected response includes multiple criteria for a given `Response.status`, write unit tests to cover each of those criteria.  
+   - Include tests for edge case values including empty values, values that are just inside and just outside of any specified ranges, and values that are not in the expected format.
+   - If the Test includes `Parameters`, write unit tests to cover the default value(s) and any non-default value(s) that your implementation supports.
 
 1. **Implement the Test logic (decision rules) following the expected response criteria in order**
    - **Evaluate internal prerequisites first**
@@ -1149,8 +1160,22 @@ The checklists below are designed to help implementers ensure that their impleme
 
 BDQ Test descriptions are intentionally independent of any particular software framework, data storage system, serialization, or workflow environment. This separation of concerns supports portability:
 
-* The Test descriptor defines **what** must be evaluated (via the `Specification`, `Information Elements`, and any `Parameters`) and **what** must be reported (via `Response.status`, `Response.result`, and `Response.comment`).  The logic or decision rules of the `Test` are internal to the Test
-* An execution framework defines **how** to obtain the required values from raw data, **how** to invoke the corresponding `Implementation`, and **how** to package results into `Data Quality Reports` or for other downstream processes.
+* The Test descriptor defines an API for a Test, including:
+  * The inputs of a Test, that is **what** must be evaluated (via `Information Elements`, and any `Parameters`).
+  * The behavior of the Test, that is the **logic** of the Test on a given input (via the `Specification`).
+    * The logic or decision rules of the Test are internal to the Test.
+    * Tests should handle exceptions and always return a structured `Response` and should not raise exceptions to be handled by an execution framework.
+  * The outputs of a Test, that is **what** must be reported (via `Response.status`, `Response.result`, and `Response.comment`).  
+
+* An execution framework has the responsibility to determine everything outside that API, including:
+    * How and from where to **load** the raw data.
+    * How to **bind** elements of the raw data onto the correct Test inputs (e.g., mapping a column in a CSV file to a particular `Information Element`),
+    * What execution mechanics and **workflow** (including paralellization) to follow.
+    * **Which** Tests to execute (e.g. by `Use Case` and `Policy`), 
+      * Determine the **order** of Test excution.
+    * **Invoke** the correct implementation for a given Test (e.g., by Label, GUID/Term Name, or versioned IRI) with the correct bound inputs.
+    * **Package** `Responses` into `Data Quality Reports` or pass them on to other downstream processes.
+    * Display or otherwise **present** the results to users.
 
 ### 6.6.1 Linking raw input terms, Tests, and outputs in a workflow (non-normative)
 
