@@ -249,17 +249,17 @@ Some `Amendment` Tests can propose values for a single [Darwin Core Term](https:
 
 EXTERNAL_PREREQUISITES_NOT_MET means 
 ```
-Response.status=EXTERNAL_PREREQUISITES_NOT_MET, Response.result=null, Response.comment={some `bdq:NotEmpty` description of the failure condition}
+Response.status=EXTERNAL_PREREQUISITES_NOT_MET, Response.result=null, Response.comment={some bdq:NotEmpty description of the failure condition}
 ```
 
 INTERNAL_PREREQUISITES_NOT_MET means 
 ```
-Response.status=INTERNAL_PREREQUISITES_NOT_MET, Response.result=null, Response.comment={some `bdq:NotEmpty` description of the failure condition}.
+Response.status=INTERNAL_PREREQUISITES_NOT_MET, Response.result=null, Response.comment={some bdq:NotEmpty description of the failure condition}.
 ```
 
 COMPLIANT means 
 ```
-Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment={some `bdq:NotEmpty` description of the success condition}.
+Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment={some bdq:NotEmpty description of the success condition}.
 ```
 
 Expressed with `bdqffdq:` terms, as would be if `Responses` are expressed in RDF, the first example above these would be:
