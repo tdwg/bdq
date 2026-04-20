@@ -1028,9 +1028,9 @@ The checklists below are designed to help implementers ensure that their impleme
        - `Response.comment` must be `bdq:NotEmpty` and should explain why no proposal was made (e.g., ambiguous input, not interpretable, no unambiguous match in authority).
 
 1. **Keep `Amendment` semantics clearly distinct from applying changes**
-  - An `Amendment` `Response.result` is a proposal. Implementations should not automatically apply the proposed changes to authoritative data.
-  - The application of a Response.result from an `Amendment` Test is a separate concern from the generation of that proposal, and external to the Test API. Implementations should keep these concerns separate.
-  - Implementations may support pipelines that apply proposals downstream for Quality Assurance use cases, but must preserve the ability to retain the original (unamended) values and to report both pre- and post-amendment results [see Section 6.4.1 “Phases: Pre-Amendment, Amendment, Post-Amendment (normative)”](#641-phases:-pre-amendment,-amendment,-post-amendment-(normative).)
+   - An `Amendment` `Response.result` is a proposal. Implementations should not automatically apply the proposed changes to authoritative data.
+   - The application of a Response.result from an `Amendment` Test is a separate concern from the generation of that proposal, and external to the Test API. Implementations should keep these concerns separate.
+   - Implementations may support pipelines that apply proposals downstream for Quality Assurance use cases, but must preserve the ability to retain the original (unamended) values and to report both pre- and post-amendment results [see Section 6.4.1 “Phases: Pre-Amendment, Amendment, Post-Amendment (normative)”](#641-phases:-pre-amendment,-amendment,-post-amendment-(normative).)
 
 ## 6.6 Responsibilities of a Test Execution Framework (non-normative)
 
