@@ -330,7 +330,7 @@ When a Test is defined as parameterized, implementations SHOULD support the para
 When a Test is defined as parameterized:
 - Implementations MUST support the default value.
 - Implementations MAY choose to support only the default value.
-- Implementations MAY choose to not include the parameter(s) in the Test API, that is, only support the default value internally to the Test.
+- Implementations MAY choose to not include the `Parameters` in the Test API, that is, only support the default value internally to the Test.
   -  Note that some Test Conformance Testing Data provide non-default `Parameter` values, and implementations that only support the default value will be unable to validate against all of the Test Conformance Testing Data (see [8 Conformance Testing Implementations](#8-conformance-testing-implementations-normative))).
 
 When the parameter has a default value and a resource, and an implementation includes the parameter in its API, that implementation MUST support the string literal given as the default value, and internally choose the resource "{[resource]}" or "{API endpoint [resource]}" based on that string literal "default value". Implementations MAY also accept other values including the "{[resource]}" or "{API endpoint [resource]}" as the value for the parameter in the API for the Test implementation.
@@ -941,11 +941,11 @@ The checklists below are designed to help implementers ensure that their impleme
    - Define a standard `Response` object or structure with `Response.status`, `Response.result`, and `Response.comment` properties, and use that object or structure for the output from Test implementations. See: [Section 4.1, “Structure of `Response` (normative)”](../../guide/bdqtest/index.md#41-structure-of-response-normative) in the [BDQ Tests Guide](../../guide/bdqtest/index.md).
 
 1. **Confirm the required inputs**
-   - Identify the `Information Element`(s) `Acted Upon` and `Consulted` named in the `Specification` (the value of `bdqffdq:hasExpectedResponse`).
-   - Identify any `Parameter`(s) and their default value(s) (from `bdqffdq:hasAuthoritiesDefaults` and/or `bdqffdq:hasArgument` / `bdqffdq:Argument`).
+   - Identify the `Information Elements` `Acted Upon` and `Consulted` named in the `Specification` (the value of `bdqffdq:hasExpectedResponse`).
+   - Identify any `Parameters` and their default value (from `bdqffdq:hasAuthoritiesDefaults` and/or `bdqffdq:hasArgument` / `bdqffdq:Argument`).
 
 1. **Expose a stable callable API**
-   - Implement the Test as a callable unit (function/method) whose inputs correspond to the `Information Element`(s) and any supported `Parameter`(s).
+   - Implement the Test as a callable unit (function/method) whose inputs correspond to the `Information Elements` and any supported `Parameters`.
    - If your API exposes a `Parameter`:
      - it must accept the **string literal** default value exactly as it appears in the Test descriptor [see 2.3.2.4 "Default Value Strings in Parameters (normative)”](#2324-default-value-strings-in-parameters-(normative)).
      - it may also support other **string literal** values of that `Parameter` to produce different behavior.
@@ -991,12 +991,12 @@ The checklists below are designed to help implementers ensure that their impleme
    - Define a standard `Response` object or structure with `Response.status`, `Response.result`, and `Response.comment` properties, and use that object or structure for the output from Test implementations. See: [Section 4.1, “Structure of `Response` (normative)”](../../guide/bdqtest/index.md#41-structure-of-response-normative) in the [BDQ Tests Guide](../../guide/bdqtest/index.md).
 
 1. **Confirm the required inputs and intended outputs**
-   - Identify the `Information Element`(s) `Acted Upon` and `Consulted` named in the `Specification` (the value of `bdqffdq:hasExpectedResponse`).
-   - Identify any `Parameter`(s) and their default value(s) (from `bdqffdq:hasAuthoritiesDefaults` and/or `bdqffdq:hasArgument` / `bdqffdq:Argument`).
-   - Identify which `Information Element`(s) may appear as keys in the `Response.result` payload when the result is an amendment proposal (some `Amendment` Tests propose changes to more than one `Information Element`).
+   - Identify the `Information Elements `Acted Upon` and `Consulted` named in the `Specification` (the value of `bdqffdq:hasExpectedResponse`).
+   - Identify any `Parameters` and their default values (from `bdqffdq:hasAuthoritiesDefaults` and/or `bdqffdq:hasArgument` / `bdqffdq:Argument`).
+   - Identify which `Information Elements` may appear as keys in the `Response.result` payload when the result is an amendment proposal (some `Amendment` Tests propose changes to more than one `Information Element`).
 
 1. **Expose a stable callable API**
-   - Implement the Test as a callable unit (function/method) whose inputs correspond to the `Information Element`(s) and any supported `Parameter`(s).
+   - Implement the Test as a callable unit (function/method) whose inputs correspond to the `Information Elements` and any supported `Parameters`.
    - If your API exposes a `Parameter`, 
      - it must accept the **string literal** default value exactly as it appears in the Test descriptor [see Section 2.3.2.4 “Default Value Strings in Parameters (normative)”](#2324-default-value-strings-in-parameters-(normative)).
      - it may also support other **string literal** values of that `Parameter` to produce different behavior.
@@ -1013,7 +1013,7 @@ The checklists below are designed to help implementers ensure that their impleme
 1. **Implement the Test logic (decision rules) following the expected response criteria in order**
    - **Evaluate internal prerequisites first**
      - Evaluate `bdq:Empty` and `bdq:NotEmpty` consistently (with utilty functions).
-     - If the `Specification` states that one or more required `Information Element`(s) being `bdq:Empty` prevents generating a proposal, return:
+     - If the `Specification` states that one or more required `Information Elements` being `bdq:Empty` prevents generating a proposal, return:
        - `Response.status` = `INTERNAL_PREREQUISITES_NOT_MET`
        - `Response.result` omitted / null
        - `Response.comment` containing a `bdq:NotEmpty` explanation
@@ -1033,7 +1033,7 @@ The checklists below are designed to help implementers ensure that their impleme
 
    - **Return a conforming `Response` for an `Amendment`**
      - When evaluation succeeds, use `Response.status` values appropriate to `Amendment` Tests:
-       - `FILLED_IN` when proposing new value(s) for `Information Element`(s) that were `bdq:Empty`.
+       - `FILLED_IN` when proposing new value(s) for `Information Elements` that were `bdq:Empty`.
        - `AMENDED` when proposing changes to existing `bdq:NotEmpty` value(s).
        - `NOT_AMENDED` when prerequisites are met but no proposal is made.
      - For `FILLED_IN` and `AMENDED`:
@@ -1097,9 +1097,9 @@ A Test execution framework (or “runner”) typically needs to accomplish the f
    - If aggregation is used, ensure that the `Response` for each distinct value is correctly associated with all records that contain that value to pass down a processing pipeline or to return in the final `Data Quality Report`.
 
 1. **Bind raw data to the Test API**
-   - Map the framework’s internal representation of data (rows, objects, RDF graphs, etc.) onto the specific `Information Element`(s) required by the Test.
+   - Map the framework’s internal representation of data (rows, objects, RDF graphs, etc.) onto the specific `Information Elements` required by the Test.
    - Ensure correct binding of `Acted Upon` values and `Consulted` values to the correct inputs of the `Implementation`.
-   - Provide values for `Parameter`(s), or omit them and rely on default behavior where supported.
+   - Provide values for `Parameters`, or omit them and rely on default behavior where supported.
 
 1. **Locate and invoke the correct Tests**
    - The `Policies` from the `Use Case` identify which Tests are required, but an execution framework must still determine how to locate the corresponding implementation for each Test.
@@ -1123,7 +1123,7 @@ A Test execution framework (or “runner”) typically needs to accomplish the f
 
 1. **Serialize and report results**
    - Record or transmit results as part of a `Data Quality Report` (or as `bdqffdq:Response` instances in RDF), in any serialization that fits the implementation environment.
-   - When non-default `Parameter`(s) are used, ensure the report can communicate which `Argument` value(s) were applied (for both human and machine consumers), consistent with the guidance in this standard.
+   - When non-default `Parameters` are used, ensure the report can communicate which `Argument` value(s) were applied (for both human and machine consumers), consistent with the guidance in this standard.
 
 ## 7 Presentation of Results (normative)
 
