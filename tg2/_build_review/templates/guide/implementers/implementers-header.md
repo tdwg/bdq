@@ -944,36 +944,36 @@ The checklists below are designed to help implementers ensure that their impleme
 1. **Expose a stable callable API**
    - Implement the Test as a callable unit (function/method) whose inputs correspond to the `Information Element`(s) and any supported `Parameter`(s).
    - If your API exposes a `Parameter`:
-     * it must accept the **string literal** default value exactly as it appears in the Test descriptor [see 2.3.2.4 "Default Value Strings in Parameters (normative)”] (#2324-default-value-strings-in-parameters-(normative)).
-     * it may also support other **string literal** values of that `Parameter` to produce different behavior.
+     - it must accept the **string literal** default value exactly as it appears in the Test descriptor [see 2.3.2.4 "Default Value Strings in Parameters (normative)”] (#2324-default-value-strings-in-parameters-(normative)).
+     - it may also support other **string literal** values of that `Parameter` to produce different behavior.
 
 1. **Write a Unit Test**
    - Examine the decision rules in the `hasExpectedResponse` property of the `Specification` and write a unit test that covers each of the criteria in the expected response, including EXTERNAL_PREREQUISITES_NOT_MET, INTERNAL_PREREQUISITES_NOT_MET, COMPLIANT, and NOT_COMPLIANT. If the expected response includes multiple criteria for a given `Response.status`, write unit tests to cover each of those criteria.  Include tests for edge case values including empty values, values that are just inside and just outside of any specified ranges, and values that are not in the expected format. If the Test includes `Parameters`, write unit tests to cover the default value(s) and any non-default value(s) that your implementation supports.
 
 1. **Implement the Test logic (decision rules) following the expected response criteria in order**
-   * Follow the sequence of criteria in the `hasExpectedResponse` property of the `Specification`, returning the first matching `Response` for the first matched criterion.
-   * Handle EXTERNAL_PREREQUISITES_NOT_MET as an exception raised from an invocation of an external resource, and return that response immediately when such an exception is raised.
-   * **Evaluate internal prerequisites first**
+   - Follow the sequence of criteria in the `hasExpectedResponse` property of the `Specification`, returning the first matching `Response` for the first matched criterion.
+   - Handle EXTERNAL_PREREQUISITES_NOT_MET as an exception raised from an invocation of an external resource, and return that response immediately when such an exception is raised.
+   - **Evaluate internal prerequisites first**
      - Evaluate `bdq:Empty` and `bdq:NotEmpty` consistently (with utility functions).
      - Implement `bdq:Empty` consistently [see Section 2.2, “The Concept of `EMPTY` in the BDQ Standard (normative)”](#22-example-implementation-of-a-function-to-assess-empty-(non-normative)).
      - If the `Specification` states that an `Information Element` being `bdq:Empty` prevents evaluation, return:
        - `Response.status` = `INTERNAL_PREREQUISITES_NOT_MET`
        - `Response.result` omitted / null
        - `Response.comment` containing a `bdq:NotEmpty` explanation
-   * **Handle external prerequisites and parameter support separately**
-     * If a `Parameter` value is not supplied, substitute the default value.
-     * If the Test depends on an external resource (e.g., a `bdq:sourceAuthority`) and that resource is unavailable at runtime, return:
+   - **Handle external prerequisites and parameter support separately**
+     - If a `Parameter` value is not supplied, substitute the default value.
+     - If the Test depends on an external resource (e.g., a `bdq:sourceAuthority`) and that resource is unavailable at runtime, return:
        - `Response.status` = `EXTERNAL_PREREQUISITES_NOT_MET`
        - `Response.result` omitted / null
        - `Response.comment` containing a `bdq:NotEmpty` explanation
-     * If an unsupported non-default `Parameter` value is supplied, implementations must not use `Response.status` = `EXTERNAL_PREREQUISITES_NOT_MET` to report “unsupported parameter value” [see Section 3.6, “Parameterized Tests: default behavior and unsupported values (normative)”] (#36-parameterized-tests:-default-behavior-and-unsupported-values-(normative)).
-  * **Run the core validation and return a conforming `Response`**
-    * Apply the Test’s stated criterion (e.g., exact match, interpretation rules, range checks) exactly as described in the `Specification`, and avoid undocumented preprocessing.
-    * When evaluation succeeds, return:
+     - If an unsupported non-default `Parameter` value is supplied, implementations must not use `Response.status` = `EXTERNAL_PREREQUISITES_NOT_MET` to report “unsupported parameter value” [see Section 3.6, “Parameterized Tests: default behavior and unsupported values (normative)”] (#36-parameterized-tests:-default-behavior-and-unsupported-values-(normative)).
+  - **Run the core validation and return a conforming `Response`**
+    - Apply the Test’s stated criterion (e.g., exact match, interpretation rules, range checks) exactly as described in the `Specification`, and avoid undocumented preprocessing.
+    - When evaluation succeeds, return:
       - `Response.status` = `RUN_HAS_RESULT`
       - `Response.result` = `COMPLIANT` or `NOT_COMPLIANT`
       - `Response.comment` containing a `bdq:NotEmpty` explanation
-    * If a non-default `Parameter` value was used, `Response.comment` should include the `Parameter` name and the non-default value (see Section 6.1.2, “Identifying non-default `Parameter` values in `Response.comment` (normative)”).
+    - If a non-default `Parameter` value was used, `Response.comment` should include the `Parameter` name and the non-default value (see Section 6.1.2, “Identifying non-default `Parameter` values in `Response.comment` (normative)”).
 
 ### 6.5.3 Checklist for Implementing an Amendment Test (non-normative)
 
@@ -987,22 +987,22 @@ The checklists below are designed to help implementers ensure that their impleme
 1. **Expose a stable callable API**
    - Implement the Test as a callable unit (function/method) whose inputs correspond to the `Information Element`(s) and any supported `Parameter`(s).
    - If your API exposes a `Parameter`, 
-     * it must accept the **string literal** default value exactly as it appears in the Test descriptor [see Section 2.3.2.4 “Default Value Strings in Parameters (normative)”](#2324-default-value-strings-in-parameters-(normative)).
-     * it may also support other **string literal** values of that `Parameter` to produce different behavior..
-     * it may also support other **string literal** values of that `Parameter` to produce different behavior.
+     - it must accept the **string literal** default value exactly as it appears in the Test descriptor [see Section 2.3.2.4 “Default Value Strings in Parameters (normative)”](#2324-default-value-strings-in-parameters-(normative)).
+     - it may also support other **string literal** values of that `Parameter` to produce different behavior..
+     - it may also support other **string literal** values of that `Parameter` to produce different behavior.
 
 1. **Write a Unit Test**
-  * Examine the decision rules in the `hasExpectedResponse` property of the `Specification` and write a unit test that covers each of the criteria in the expected response, including EXTERNAL_PREREQUISITES_NOT_MET, INTERNAL_PREREQUISITES_NOT_MET, FILLED_IN, AMENDED, and NOT_AMENDED. If the expected response includes multiple criteria for a given `Response.status`, write unit tests to cover each of those criteria.  Include tests for edge case values including empty values, values that are just inside and just outside of any specified ranges, and values that are not in the expected format. If the Test includes `Parameters`, write unit tests to cover the default value(s) and any non-default value(s) that your implementation supports.
+   - Examine the decision rules in the `hasExpectedResponse` property of the `Specification` and write a unit test that covers each of the criteria in the expected response, including EXTERNAL_PREREQUISITES_NOT_MET, INTERNAL_PREREQUISITES_NOT_MET, FILLED_IN, AMENDED, and NOT_AMENDED. If the expected response includes multiple criteria for a given `Response.status`, write unit tests to cover each of those criteria.  Include tests for edge case values including empty values, values that are just inside and just outside of any specified ranges, and values that are not in the expected format. If the Test includes `Parameters`, write unit tests to cover the default value(s) and any non-default value(s) that your implementation supports.
 
 1. **Implement the Test logic (decision rules) following the expected response criteria in order**
-   * **Evaluate internal prerequisites first**
+   - **Evaluate internal prerequisites first**
      - Evaluate `bdq:Empty` and `bdq:NotEmpty` consistently (with utilty functions).
      - If the `Specification` states that one or more required `Information Element`(s) being `bdq:Empty` prevents generating a proposal, return:
        - `Response.status` = `INTERNAL_PREREQUISITES_NOT_MET`
        - `Response.result` omitted / null
        - `Response.comment` containing a `bdq:NotEmpty` explanation
 
-   * **Handle external prerequisites and parameter support separately**
+   - **Handle external prerequisites and parameter support separately**
      - If a `Parameter` value is not supplied, substitute the default value.
      - If the Test depends on an external resource (e.g., a `bdq:sourceAuthority`) and that resource is unavailable at runtime, return:
        - `Response.status` = `EXTERNAL_PREREQUISITES_NOT_MET`
@@ -1010,12 +1010,12 @@ The checklists below are designed to help implementers ensure that their impleme
        - `Response.comment` containing a `bdq:NotEmpty` explanation
      - If an unsupported non-default `Parameter` value is supplied, implementations must not use `Response.status` = `EXTERNAL_PREREQUISITES_NOT_MET` to report “unsupported parameter value” [see Section 3.6 “Parameterized Tests: default behavior and unsupported values (normative)”](#36-parameterized-tests:-default-behavior-and-unsupported-values-(normative)).
 
-   * **Generate a proposal (or decide no proposal is warranted)**
+   - **Generate a proposal (or decide no proposal is warranted)**
      - Apply the Test’s criterion exactly as described in the `Specification`, including any “interpreted as” rules [see Section 2.3.3 “The Concept of ‘interpreted as’ (normative)”](#233-the-concept-of-"interpreted-as"-(normative)).
      - Do not propose changes that are not explicitly allowed by the `Specification`. In particular, avoid “helpful” normalizations that would alter meaning or introduce false precision unless specified.
      - If a proposal is made, represent the proposed changes as structured data (typically a list/map of key:value pairs where keys are `Information Element` identifiers and values are proposed new values).
 
-   * **Return a conforming `Response` for an `Amendment`**
+   - **Return a conforming `Response` for an `Amendment`**
      - When evaluation succeeds, use `Response.status` values appropriate to `Amendment` Tests:
        - `FILLED_IN` when proposing new value(s) for `Information Element`(s) that were `bdq:Empty`.
        - `AMENDED` when proposing changes to existing `bdq:NotEmpty` value(s).
