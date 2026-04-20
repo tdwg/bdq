@@ -705,8 +705,8 @@ We can make the bdq:sourceAuthority as a parameter for this Test, meaning that u
 * **Parameter** bdq:sourceAuthority
 
 See also:
-- [Parameterizing the Tests](../guide/bdqtest/index.md#33-parameterizing-the-tests-normative) in the bdqtest: landing page.
-- [3.4 Test Parameters](../guide/users/index.md#34-test-parameters-non-normative) in the Users Guide.
+- [Parameterizing the Tests](../guide/bdqtest/index.md#43-parameterizing-the-tests-normative) in the bdqtest: landing page.
+- [Test Parameters](../guide/users/index.md#34-test-parameters-non-normative) in the Users Guide.
 - [Test Parameters in Reports](../guide/users/index.md#341-test-parameters-in-reports-normative) in the Users Guide.
 
 #### 6.7.3  Revisiting the Test Specification (non-normative)
@@ -807,7 +807,7 @@ A BDQ Test implementation is expected to have a consistent scope and API shape a
 * Logic (decision rules): evaluate the clauses in the specification (`hasExpectedResponse`) in order, returning the first matching outcome (handling EXTERNAL_PREREQUISITES_NOT_MET via exception/error handling where appropriate).  
 * Output: exactly one structured Response per run, always providing a `Response.status` and a `Response.comment`, and providing a `Response.result` only when `Response.status` indicates a result (typically RUN_HAS_RESULT).
 
-We use a shorthand for the set of properties associated with a `Response` that are produced by running a Test.  A `Response` carries `Response.status`, `Response.result`, and `Response.comment` properties (see [Structure of Response](../guide/bdqtest/index.md#31-structure-of-response-normative) in the bdqtest: landing page).
+We use a shorthand for the set of properties associated with a `Response` that are produced by running a Test.  A `Response` carries `Response.status`, `Response.result`, and `Response.comment` properties (see [Structure of Response](../guide/bdqtest/index.md#41-structure-of-response-normative) in the bdqtest: landing page).
 
 BDQ keeps Tests portable by standardizing semantics (inputs, decision rules, outputs), but it leaves binding of raw data inputs to `InformationElements` and execution mechanics (orchestration of test execution) to whatever framework fits the implementer's environment.  This means that the behavior of the implementation of an individual Test should be tested in isolation, presenting the Test with known inputs, and confirming that the Test produces the expected outputs based on the logic of the decision rules in the specification.  This means that Test conformance testing is expected to be performed on the level of individual Test implementations.
 
@@ -823,7 +823,7 @@ The description and specification of a Test may involve hidden assumptions by th
 
 See also: 
 * [Conformance Testing Implementations](../guide/implementers/index.md#8-conformance-testing-implementations-normative) in the implementers guide.
-* [Structure of Response](../guide/bdqtest/index.md#31-structure-of-response-normative) in the bdqtest: landing page.
+* [Structure of Response](../guide/bdqtest/index.md#41-structure-of-response-normative) in the bdqtest: landing page.
 
 #### 7.2.1 Unit Tests (non-normative)
 

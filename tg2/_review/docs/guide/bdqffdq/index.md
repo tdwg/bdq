@@ -320,8 +320,7 @@ In a non-RDF structured-data context (JSON, database, CSV), where `bdqffdq:Respo
 
 Labels MAY be used purely for display.
 
-This section summarises representation choices. Full normative constraints on the response structure of `Responses` is found in [3.1 Structure of Response (normative)
-](../guide/bdqtest/index.md#31-structure-of-response-normative) of the [bdqtest: landing page](../guide/bdqtest/index.md).
+This section summarises representation choices. Full normative constraints on the response structure of `Responses` is found in [4.1 Structure of Response (normative)](../bdqtest/index.md#41-structure-of-response-normative) of the [BDQ Tests: Concepts, Types, and Use](../bdqtest/index.md).
 
 #### 2.1.1 Table of Representations of Response Properties (non-normative)
 
@@ -340,7 +339,7 @@ A bdqffdq:hasResponseStatus is always categorical, a bdqffdq:hasResponseComment 
 
 ### 2.2 Use of Properties (normative) 
 
-This section describes normative expectations for the use of object and datatype properties to related instances of `bdqffdq:` classes in their intended ways given the open world limited use of domains, ranges, and other axioms in the [Biodiversity Data Quality Fitness for Use Framework (Ontology)](../../vocabulary/bdqffdq.owl) ontology. This guidance builds on the normative definitions of `bdqffdq:` object properties and datatype properties to describe how `bdqffdq:` terms can be composed in a useful and consistent way.
+This section describes normative expectations for the use of object and datatype properties to related instances of `bdqffdq:` classes in their intended ways given the open world limited use of domains, ranges, and other axioms in the [Biodiversity Data Quality Fitness for Use Framework (Ontology)](../../../vocabulary/bdqffdq.owl) ontology. This guidance builds on the normative definitions of `bdqffdq:` object properties and datatype properties to describe how `bdqffdq:` terms can be composed in a useful and consistent way.
 
 Section [2.2.6 Identifying the Test that produced a Response (normative)](#226-identifying-the-test-that-produced-a-response-normative) highlights the importance of using the object properties with the correct cardinality to preserve the relationship between a `Response` produced by a Test and the particular Test that produced it.
 
@@ -484,7 +483,7 @@ A `bdqffdq:Implementation` SHOULD have one and only one `bdqffdq:implementedBy` 
 
 Each data quality `Mechanism` that produces `Data Quality Reports` using the `bdqffdq:` vocabulary SHOULD include the following properties and related instances.
 
-Nothing in this section is to be construed as relaxing the normative statements in the [User's Guide](../guide/users/index.md) and [Implementer's Guide](../guide/implementers/index.md) concerning the expression of data quality responses in forms other than RDF. Each data quality `Mechanism` MUST produce results corresponding to `bdqffdq:Responses` with `bdqffdq:hasResponseStatus`, `bdqffdq:hasResponseResult`, and `bdqffdq:hasResponseComment` as specified in those guides. 
+Nothing in this section is to be construed as relaxing the normative statements in the [User's Guide](../users/index.md) and [Implementer's Guide](../implementers/index.md) concerning the expression of data quality responses in forms other than RDF. Each data quality `Mechanism` MUST produce results corresponding to `bdqffdq:Responses` with `bdqffdq:hasResponseStatus`, `bdqffdq:hasResponseResult`, and `bdqffdq:hasResponseComment` as specified in those guides. 
 
 The `bdqffdq:producesResponse` object property SHOULD have an instance of `bdqffdq:Implementation` as its subject.
 
@@ -615,7 +614,7 @@ A `Validation` assesses compliance with a need. Data have quality if they are co
 
 `Issues` are the converse of `Validations`. Data lack quality if an `Issue` identifies a potential problem in the data that would require further human review to determine if the data have quality for some purpose.  Like `Validations`, `Issues` relate `Information Elements` and `Resource Types` with a `Specification` of exactly how to assess fitness of the data under some `Use Case`.  No illustration is provided here, as the `Issue` concept is very similar to the `Validation` concept, but with a different focus on identifying potential problems rather than confirming compliance.  
 
-`Validations`, `Measures`, `Amendments`, and `Issues` all share a similar set of relationships to other classes in the Framework.  The following diagrams for `Measures` and `Amendments'  highlight these similarities, with classes and relationships that differ called out with thicker line weights.
+`Validations`, `Measures`, `Amendments`, and `Issues` all share a similar set of relationships to other classes in the Framework.  The following diagrams for `Measures` and `Amendments` highlight these similarities, with classes and relationships that differ called out with thicker line weights.
 
 `Measures` make an aggregate summary of some specific aspect of data quality.
 
@@ -678,7 +677,7 @@ It is expected that `Response` objects instances will involve, in RDF, a combina
 | Response.comment | bdqffdq:hasResponseComment | A human readable interpretation of the results of the Test.|
 | Response.qualifier | bdqffdq:ResponseQualifier, bdqffdq:hasResponseQualifier | Additional structured information that qualifies the `Response`, intended as an extension point for uncertainty.|
 
-See [3.1 Structure of a Response (normative)](../../guide/bdqtest/index.md#31-structure-of-response-normative) in [BDQ Tests and Assertions](../../guide/bdqtest/index.md) for further normative guidance on Responses as RDF or as data structures in non-RDF settings.
+See [4.1 Structure of a Response (normative)](../../guide/bdqtest/index.md#41-structure-of-response-normative) in [BDQ Tests and Assertions](../../guide/bdqtest/index.md) for further normative guidance on Responses as RDF or as data structures in non-RDF settings.
 
 ### 3.5 Organization of the bdqtest: classes  (non-normative)
 
