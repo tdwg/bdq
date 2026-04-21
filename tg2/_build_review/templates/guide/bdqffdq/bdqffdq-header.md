@@ -120,17 +120,17 @@ The `bdqffdq:` portion of the BDQ standard is a specification for a framework fo
 
 This document provides a background for understanding the `bdqtest:` Test descriptions. Each of the Tests in the `bdqtest:` namespace have been designed and described within this Framework and are framed using the terms and concepts from the Framework. The Fitness for Use Framework provides the context for each Test, and has shaped decisions made about each Test.
 
-See the [Fitness for Use Framework Ontology](../../guide/bdqffdq/index.md) for a concise description and normative information about the `bdqffdq:` ontology and a summary of the mathematical formalization. See the [Fitness For Use Framework Ontology List of Terms](../../list/bdqffdq/index.md) document for the list of terms in the `bdqffdq:` vocabulary. See the [Fitness For Use Framework Ontology Vocabulary Extension](../../extension/bdqffdq/index.md) for documentation on additional axioms. See the [Biodiversity Data Quality Fitness for Use Framework (Ontology)](../../../vocabulary/bdqffdq.owl) for the formal representation of the vocabulary as an OWL ontology. The mathematical formalization provides a description of inferences and reasoning that may be made with the terms in the vocabulary.
+This document provides a concise description and normative information about the `bdqffdq:` ontology and a summary of the mathematical formalization. See the [Fitness For Use Framework Ontology List of Terms](../../list/bdqffdq/index.md) document for the list of terms in the `bdqffdq:` vocabulary. See the [Fitness For Use Framework Ontology Vocabulary Extension](../../extension/bdqffdq/index.md) for documentation on additional axioms. See the [Biodiversity Data Quality Fitness for Use Framework (Ontology)](../../../vocabulary/bdqffdq.owl) for the formal representation of the vocabulary as an OWL ontology. The mathematical formalization provides a description of inferences and reasoning that may be made with the terms in the vocabulary.
 
 ### 2.2 Description of the Fitness For Use Framework ontology (non-normative)
 
-The Fitness for Use Framework defines data quality in relation to a specified use, emphasizing that data quality is not abstract but purpose-dependent. It provides a formal way to describe a `Use Case` (`bdqffdq:UseCase`) and the `Criteria` for evaluating whether a dataset is fit for that purpose. By linking data quality explicitly to use, the Framework enables consistent assessment and assurance of fitness for a given purpose.
+The Fitness for Use Framework defines data quality in relation to a specified use, emphasizing that data quality is not abstract but purpose-dependent. It provides a formal way to describe a `Use Case` (`bdqffdq:UseCase`) and the criteria for evaluating whether a dataset is fit for that purpose. By linking data quality explicitly to use, the Framework enables consistent assessment and assurance of fitness for a given purpose.
 
 The Framework can be conceptually divided into three horizontal layers: `Data Quality Needs`, `Data Quality Solutions`, and `Data Quality Reports`. Needs describe what it means for data to have quality for some use, Solutions describe tools to evaluate quality, and Reports are produced by Solutions to describe the evaluation of quality in particular datasets.
 
 The Framework can also be conceptually divided into four vertical themes, four sets of related concepts that carry through the Needs, Solutions, and Reports layers. These concepts are `Validation`, `Issue`, `Measure`, and `Amendment`. 
 
-We use the informal term "Test" to describe these four vertical themes, a Test involves terms in both Needs and Solutions, and Tests produce particular reporting elements.
+We use the informal term "Test" to describe these four vertical themes, a Test involves terms in both Needs and Solutions, and Tests produce particular reporting elements.  See the diagram in [What is a "Test"](../bdqtest/index.md#511-what-is-a-test-non-normative).
 
 #### 2.2.1 Data Quality Control and Data Quality Assurance (non-normative)
 
@@ -147,6 +147,7 @@ The Framework has an abstract concept of `Information Elements`. To frame Tests 
 The Framework defines four central concepts for describing and evaluating `Data Quality Needs`: `Validation`, `Issue`, `Measure`, and `Amendment`.  
 
 ![Diagram of Validation, Issue, Measure, and Amendment classes with DataQualityNeed as a parent node.](dataqualityneeds.png)
+
 *The 4 central DataQualityNeed types in the Framework - Validation, Issue, Measure, and Amendment.*
 
 
@@ -169,14 +170,19 @@ A `Validation` assesses compliance with a need. Data have quality if they are co
 ![Diagram of the classes involved in expressing Data Quality Needs with Amendments.](bdqffdq_data_quality_needs_amendment.svg)
 *Expressing Data Duality Needs: Amendments.*
 
-Formally, in the `Data Quality Needs` level, the Framework starts with a `Use Case`, a framing of some use to which data may be put. `Use Cases` are related to the formal description of `Data Quality Needs` through `Policies` and `Contexts`. `Contexts` (`ContextualizedCriterion`, `ContextualizedDimension`, `ContextualizedEnhancement`, `ContextualizedIssue`) relate the `Specification` of a `Need Concept`, such as a `Validation`, to the `Information Elements` that need to be examined, and to the `Resource Type` that is operated on. Each of the Tests described in this standard has a formal specification that includes each of these elements. A `Use Case` includes a set of `Policies`, `Policies` relate the `Use Case` to `Contexts`, `Contexts` link `Information Elements` to `Need Concepts` and to `Resource Types`, a `Need Concept` specifies what properties data must have to have quality. 
+Formally, in the `Data Quality Needs` level, the Framework starts with a `Use Case`, a framing of some use to which data may be put. `Use Cases` are related to the formal description of `Data Quality Needs` through `Policies`. `Data Quality Needs`, such as a `Validation` are related to the `Information Elements` that need to be examined, and to the `Resource Type` that is operated on.  `Methods` such as `ValidationMethod` relate the `Data Quality Needs` to `Specifications` for the evaluation of those needs.  The 'Data Quality Need` specifies in general terms what properties data must have to have quality, and the related `Specification` provides a formal description of how to evaluate that aspect of quality.
+
+Each of the Tests described in the BDQ standard has a formal specification that includes each of these elements. 
 
 `Data Quality Needs` can relate to the data quality of single records (`bdqffdq:SingleRecord`) or of datasets (`bdqffdq:MultiRecord`).
 
 ![Diagram of Single Record and Multi Record as named individual instances of the Resource class, showing Resource as a rectangular node above rectangular nodes for Multi Record and Amendment. ](resource_types.png)
+
 *Representation of Single Record and Multi Record as named individual instances of the Resource class.*
 
 ### 2.3 Data Quality Needs, Data Quality Mechanisms, Data Quality Reports (non-normative)
+
+**TODO: Review from here** seems some duplication with the above, and has error "Contexts", now renamed as "Data Quality Needs".  Needs carefull review.
 
 The Fitness For Use Framework organizes data quality concepts into three core areas — Needs, Mechanisms, and Reports — which can be viewed as horizontal slices through the Framework (Veiga et al., 2017).
 
