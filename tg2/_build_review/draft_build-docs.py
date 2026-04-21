@@ -300,7 +300,7 @@ for templatePath, document in directories.items() :
 		indextext = indextext + "- [Named Individuals](#54-namedindividual-terms-normative)\n"
 		indextext = indextext + "\n"
 		
-		indextext = indextext + "### 4.1 Alphabetical Index of classes (non-normative)\n\n"
+		indextext = indextext + "### 5.1 Alphabetical Index of classes (non-normative)\n\n"
 		sparql = prefixes + "SELECT ?subject WHERE {  ?subject a owl:Class . } "
 		queryResult = graph.query(sparql)
 		for r in queryResult : 
@@ -309,7 +309,7 @@ for templatePath, document in directories.items() :
 			indextext = indextext + "[{}](#{})\n".format(term,term)
 		
 		indextext = indextext + "\n"
-		indextext = indextext + "### 4.2 Alphabetical Index of object properties (non-normative)\n\n"
+		indextext = indextext + "### 5.2 Alphabetical Index of object properties (non-normative)\n\n"
 		sparql = prefixes + "SELECT ?subject WHERE {  ?subject a owl:ObjectProperty . } "
 		queryResult = graph.query(sparql)
 		for r in queryResult : 
@@ -318,7 +318,7 @@ for templatePath, document in directories.items() :
 			indextext = indextext + "[{}](#{})\n".format(term,term)
 		
 		indextext = indextext + "\n"
-		indextext = indextext + "### 4.3 Alphabetical Index of data properties (non-normative)\n\n"
+		indextext = indextext + "### 5.3 Alphabetical Index of data properties (non-normative)\n\n"
 		sparql = prefixes + "SELECT ?subject WHERE {  ?subject a owl:DatatypeProperty . } "
 		queryResult = graph.query(sparql)
 		for r in queryResult : 
@@ -327,7 +327,7 @@ for templatePath, document in directories.items() :
 			indextext = indextext + "[{}](#{})\n".format(term,term)
 		
 		indextext = indextext + "\n"
-		indextext = indextext + "### 4.4 Alphabetical Index of named individuals (non-normative)\n\n"
+		indextext = indextext + "### 5.4 Alphabetical Index of named individuals (non-normative)\n\n"
 		sparql = prefixes + "SELECT ?subject WHERE {  ?subject a owl:NamedIndividual . } "
 		queryResult = graph.query(sparql)
 		for r in queryResult : 
@@ -339,7 +339,7 @@ for templatePath, document in directories.items() :
 		header = header.replace('{term_index}','\n{}\n'.format(indextext))
 
 		text = ""
-		text = text + "### 5.1 Class terms (normative)\n"
+		text = text + "### 6.1 Class terms (normative)\n"
 		sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment (GROUP_CONCAT(?parent; SEPARATOR='; ') AS ?parents)  WHERE {  ?subject a owl:Class . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . OPTIONAL { ?subject rdfs:subClassOf ?parent } . OPTIONAL { ?subject rdfs:comment ?comment } . } GROUP BY ?subject ?prefLabel ?definition ?comment ORDER BY ?subject"
 		queryResult = graph.query(sparql)
 		for r in queryResult : 
@@ -348,20 +348,21 @@ for templatePath, document in directories.items() :
 			entity = entity.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:");
 			term = entity.replace("bdqffdq:","");
 			text = text + "#### {}\n\n".format(term)
-			text = text + "- Name: {}\n".format(entity)
+			text = text + "- Name: [{0}](../../list/bdqffdq/index.md#{1})\n".format(entity,term)
 			# text = text + "- Preferred Label: {}\n".format(r.prefLabel)
 			text = text + "- Definition: {}\n".format(r.definition)
 			if (r.parents) :
-				text = text + "- SubClass Of: {}\n".format(r.parents.replace("https://rs.tdwg.org/bdqffdq/terms/",""))
+				parentterm = r.parents.replace("https://rs.tdwg.org/bdqffdq/terms/","")
+				text = text + "- SubClass Of: [{0}](../../list/bdqffdq/index.md#{1})\n".format(parentterm,parentterm)
 			disj = disjoint_map.get(subject_iri, [])
 			if disj:
 				# display without the bdqffdq: prefix
 				disj_short = [x.replace("bdqffdq:", "") for x in disj]
-				text = text + "- Disjoint With: {}\n".format(", ".join(disj_short))
+				text = text + "- [Disjoint With](../../extension/bdqffdq/index.md#432-alldisjointclasses-normative): {}\n".format(", ".join(disj_short))
 			# text = text + "- Notes: {}\n".format(r.comment.replace("\n\n","\n").replace("\n","  \n"))
 			text = text + "\n********************\n\n"
 		
-		text = text + "### 5.2 ObjectProperty terms (normative)\n"
+		text = text + "### 6.2 ObjectProperty terms (normative)\n"
 		sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment ?range ?restrictedRange ?restriction  (GROUP_CONCAT(?parent; SEPARATOR='; ') AS ?parents)  WHERE {  ?subject a owl:ObjectProperty . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . OPTIONAL { ?subject rdfs:subPropertyOf ?parent } . OPTIONAL { ?subject rdfs:range ?range . optional { ?range a owl:Restriction . ?range owl:onProperty ?restrictedRange . ?range  ?restriction ?x . FILTER ( ?restriction != owl:onProperty && ?restriction != rdf:type  ) }  } . OPTIONAL { ?subject rdfs:comment ?comment } . } GROUP BY ?subject ?prefLabel ?definition ?comment ORDER BY ?subject"
 		queryResult = graph.query(sparql)
 		for r in queryResult : 
@@ -369,20 +370,22 @@ for templatePath, document in directories.items() :
 			entity = entity.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:");
 			term = entity.replace("bdqffdq:","");
 			text = text + "#### {}\n\n".format(term)
-			text = text + "- Name: {}\n".format(entity)
+			text = text + "- Name: [{0}](../../list/bdqffdq/index.md#{1})\n".format(entity,term)
 			# text = text + "- Preferred Label: {}\n".format(r.prefLabel)
 			text = text + "- Definition: {}\n".format(r.definition)
 			if (r.parents) :
+				parentterm = r.parents.replace("https://rs.tdwg.org/bdqffdq/terms/","")
+				text = text + "- SubClass Of: [{0}](../../list/bdqffdq/index.md#{1})\n".format(parentterm,parentterm)
 				text = text + "- SubClass Of: {}\n".format(r.parents.replace("https://rs.tdwg.org/bdqffdq/terms/",""))
 			if (r.range) :
 				if (r.restriction) :
-					text = text + "- Range [ {} {} ]\n".format(r.restriction.replace("http://www.w3.org/2002/07/owl#","owl:"), r.restrictedRange.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:"))
+					text = text + "- [Range](../../extension/bdqffdq/index.md#{0}) [ {1} {2} ]\n".format(term,r.restriction.replace("http://www.w3.org/2002/07/owl#","owl:"), r.restrictedRange.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:"))
 				else :
-					text = text + "- Range {}\n".format(r.range.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:"))
+					text = text + "- [Range](../../extension/bdqffdq/index.md{0}) {1}\n".format(term,r.range.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:"))
 			# text = text + "- Notes: {}\n".format(r.comment.replace("\n\n","\n").replace("\n","  \n"))
 			text = text + "\n********************\n\n"
 		
-		text = text + "### 5.3 DataProperty terms (normative)\n"
+		text = text + "### 6.3 DataProperty terms (normative)\n"
 		sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment ?range WHERE { ?subject a owl:DatatypeProperty . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . OPTIONAL { ?subject rdfs:comment ?comment } . OPTIONAL { ?subject rdfs:range ?range }  }  ORDER BY ?subject"
 		queryResult = graph.query(sparql)
 		for r in queryResult : 
@@ -390,15 +393,15 @@ for templatePath, document in directories.items() :
 			entity = entity.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:")
 			term = entity.replace("bdqffdq:","")
 			text = text + "#### {}\n\n".format(term)
-			text = text + "- Name: {}\n".format(entity)
+			text = text + "- Name: [{0}](../../list/bdqffdq/index.md#{1})\n".format(entity,term)
 			# text = text + "- Preferred Label: {}\n".format(r.prefLabel)
 			text = text + "- Definition: {}\n".format(r.definition)
 			if (r.range) :
-				text = text + "- Range {}\n".format(r.range.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:").replace("http://www.w3.org/2001/XMLSchema#","xsd:"))
+				text = text + "- [Range](../../extension/bdqffdq/index.md#{0}) {1}\n".format(term,r.range.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:").replace("http://www.w3.org/2001/XMLSchema#","xsd:"))
 			# text = text + "- Notes: {}\n".format(r.comment.replace("\n\n","\n").replace("\n","  \n"))
 			text = text + "\n********************\n\n"
 		
-		text = text + "### 5.4 NamedIndividual terms (normative)\n"
+		text = text + "### 6.4 NamedIndividual terms (normative)\n"
 		sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment ?type ?differentFrom WHERE {  ?subject a owl:NamedIndividual . ?subject a ?type . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . OPTIONAL { ?subject rdfs:comment ?comment } . FILTER ( ?type != owl:NamedIndividual) . OPTIONAL { ?subject owl:differentFrom ?differentFrom }  }  ORDER BY ?type ?subject"
 		queryResult = graph.query(sparql)
 		for r in queryResult : 
@@ -406,13 +409,13 @@ for templatePath, document in directories.items() :
 			entity = entity.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:");
 			term = entity.replace("bdqffdq:","");
 			text = text + "#### {}\n\n".format(term)
-			text = text + "- Name: {}\n".format(entity)
+			text = text + "- Name: [{0}](../../list/bdqffdq/index.md#{1})\n".format(entity,term)
 			rtype = r.type.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:");
 			text = text + "- Type: {}\n".format(rtype)
 			# text = text + "- Preferred Label: {}\n".format(r.prefLabel)
 			if (r.differentFrom) :
 				different = r.differentFrom.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:");
-				text = text + "- DifferentFrom: {}\n".format(different)
+				text = text + "- [DifferentFrom](../../extension/bdqffdq/index.md#{0}): {1}\n".format(term,different)
 			text = text + "- Definition: {}\n".format(r.definition)
 			# text = text + "- Notes: {}\n".format(r.comment.replace("\n\n","\n").replace("\n","  \n"))
 			text = text + "\n********************\n\n"

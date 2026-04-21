@@ -112,13 +112,13 @@ Draft Standard for Review
       - [4.4.4.7 Quality Assurance (normative)](#4447-quality-assurance-normative)
 
 [5 Term index (non-normative)](#5-term-index-non-normative)
-  - [4.1 Alphabetical Index of classes (non-normative)](#41-alphabetical-index-of-classes-non-normative)
-  - [4.2 Alphabetical Index of object properties (non-normative)](#42-alphabetical-index-of-object-properties-non-normative)
-  - [4.3 Alphabetical Index of data properties (non-normative)](#43-alphabetical-index-of-data-properties-non-normative)
-  - [4.4 Alphabetical Index of named individuals (non-normative)](#44-alphabetical-index-of-named-individuals-non-normative)
+  - [5.1 Alphabetical Index of classes (non-normative)](#51-alphabetical-index-of-classes-non-normative)
+  - [5.2 Alphabetical Index of object properties (non-normative)](#52-alphabetical-index-of-object-properties-non-normative)
+  - [5.3 Alphabetical Index of data properties (non-normative)](#53-alphabetical-index-of-data-properties-non-normative)
+  - [5.4 Alphabetical Index of named individuals (non-normative)](#54-alphabetical-index-of-named-individuals-non-normative)
 
 [6 List of Terms with axioms in the Fitness For Use Framework ontology (normative)](#6-list-of-terms-with-axioms-in-the-fitness-for-use-framework-ontology-normative)
-  - [5.1 Class terms (normative)](#51-class-terms-normative)
+  - [6.1 Class terms (normative)](#61-class-terms-normative)
     - [AbstractInformationElement](#abstractinformationelement)
     - [ActedUpon](#actedupon)
     - [Amendment](#amendment)
@@ -168,7 +168,7 @@ Draft Standard for Review
     - [ValidationMethod](#validationmethod)
     - [ValidationPolicy](#validationpolicy)
     - [ValidationResponse](#validationresponse)
-  - [5.2 ObjectProperty terms (normative)](#52-objectproperty-terms-normative)
+  - [6.2 ObjectProperty terms (normative)](#62-objectproperty-terms-normative)
     - [amendmentProperty](#amendmentproperty)
     - [appliesTo](#appliesto)
     - [composedOf](#composedof)
@@ -204,7 +204,7 @@ Draft Standard for Review
     - [targetedValidation](#targetedvalidation)
     - [usesSpecification](#usesspecification)
     - [validationProperty](#validationproperty)
-  - [5.3 DataProperty terms (normative)](#53-dataproperty-terms-normative)
+  - [6.3 DataProperty terms (normative)](#63-dataproperty-terms-normative)
     - [hasArgumentValue](#hasargumentvalue)
     - [hasAuthoritiesDefaults](#hasauthoritiesdefaults)
     - [hasDateLastUpdated](#hasdatelastupdated)
@@ -212,7 +212,7 @@ Draft Standard for Review
     - [hasFitnessRequirements](#hasfitnessrequirements)
     - [hasResponseComment](#hasresponsecomment)
     - [hasResponseResultValue](#hasresponseresultvalue)
-  - [5.4 NamedIndividual terms (normative)](#54-namedindividual-terms-normative)
+  - [6.4 NamedIndividual terms (normative)](#64-namedindividual-terms-normative)
     - [MultiRecord](#multirecord)
     - [SingleRecord](#singlerecord)
     - [COMPLETE](#complete)
@@ -1044,7 +1044,7 @@ Note: This is a representation of the `Multi Record` `Measures` that return COMP
 - [Data Properties](#53-dataproperty-terms-normative)
 - [Named Individuals](#54-namedindividual-terms-normative)
 
-### 4.1 Alphabetical Index of classes (non-normative)
+### 5.1 Alphabetical Index of classes (non-normative)
 
 [AbstractInformationElement](#AbstractInformationElement)
 [ActedUpon](#ActedUpon)
@@ -1096,7 +1096,7 @@ Note: This is a representation of the `Multi Record` `Measures` that return COMP
 [ValidationPolicy](#ValidationPolicy)
 [ValidationResponse](#ValidationResponse)
 
-### 4.2 Alphabetical Index of object properties (non-normative)
+### 5.2 Alphabetical Index of object properties (non-normative)
 
 [amendmentProperty](#amendmentProperty)
 [appliesTo](#appliesTo)
@@ -1134,7 +1134,7 @@ Note: This is a representation of the `Multi Record` `Measures` that return COMP
 [usesSpecification](#usesSpecification)
 [validationProperty](#validationProperty)
 
-### 4.3 Alphabetical Index of data properties (non-normative)
+### 5.3 Alphabetical Index of data properties (non-normative)
 
 [hasArgumentValue](#hasArgumentValue)
 [hasAuthoritiesDefaults](#hasAuthoritiesDefaults)
@@ -1144,7 +1144,7 @@ Note: This is a representation of the `Multi Record` `Measures` that return COMP
 [hasResponseComment](#hasResponseComment)
 [hasResponseResultValue](#hasResponseResultValue)
 
-### 4.4 Alphabetical Index of named individuals (non-normative)
+### 5.4 Alphabetical Index of named individuals (non-normative)
 
 [AMENDED](#AMENDED)
 [COMPLETE](#COMPLETE)
@@ -1169,734 +1169,748 @@ Note: This is a representation of the `Multi Record` `Measures` that return COMP
 This list brings together definitions of terms in the Fitness For Use Framework vocabulary, listed in more detail in [Fitness For Use Framework Ontology List of Terms](../../list/bdqffdq/index.md). with the additional axioms in the [Fitness For Use Framework Ontology Vocabulary Extension](../../extension/bdqffdq/index.md). 
 
 
-### 5.1 Class terms (normative)
+### 6.1 Class terms (normative)
 #### AbstractInformationElement
 
-- Name: bdqffdq:AbstractInformationElement
+- Name: [bdqffdq:AbstractInformationElement](../../list/bdqffdq/index.md#AbstractInformationElement)
 - Definition: A bdqffdq:InformationElement described in abstract terms and not linked with any concrete terms.
-- SubClass Of: InformationElement
-- Disjoint With: ActedUpon, Consulted
+- SubClass Of: [InformationElement](../../list/bdqffdq/index.md#InformationElement)
+- [Disjoint With](../../extension/bdqffdq/index.md#432-alldisjointclasses-normative): ActedUpon, Consulted
 
 ********************
 
 #### ActedUpon
 
-- Name: bdqffdq:ActedUpon
+- Name: [bdqffdq:ActedUpon](../../list/bdqffdq/index.md#ActedUpon)
 - Definition: A bdqffdq:InformationElement, expressed in concrete terms, about which a bdqffdq:DataQualityNeed expresses bdqffdq:Responses about the data quality in that bdqffdq:InformationElement.
-- SubClass Of: InformationElement
-- Disjoint With: AbstractInformationElement, Consulted
+- SubClass Of: [InformationElement](../../list/bdqffdq/index.md#InformationElement)
+- [Disjoint With](../../extension/bdqffdq/index.md#432-alldisjointclasses-normative): AbstractInformationElement, Consulted
 
 ********************
 
 #### Amendment
 
-- Name: bdqffdq:Amendment
+- Name: [bdqffdq:Amendment](../../list/bdqffdq/index.md#Amendment)
 - Definition: A bdqffdq:DataQualityNeed that expresses how proposals may be made to improve the fitness for use of data.
-- SubClass Of: AmendmentConcept; DataQualityNeed
-- Disjoint With: Issue, Measure, Validation
+- SubClass Of: [AmendmentConcept; DataQualityNeed](../../list/bdqffdq/index.md#AmendmentConcept; DataQualityNeed)
+- [Disjoint With](../../extension/bdqffdq/index.md#432-alldisjointclasses-normative): Issue, Measure, Validation
 
 ********************
 
 #### AmendmentConcept
 
-- Name: bdqffdq:AmendmentConcept
+- Name: [bdqffdq:AmendmentConcept](../../list/bdqffdq/index.md#AmendmentConcept)
 - Definition: A term involved in proposals of changes to data or process to improve data quality to fit an expressed bdqffdq:DataQualityNeed.
 
 ********************
 
 #### AmendmentMethod
 
-- Name: bdqffdq:AmendmentMethod
+- Name: [bdqffdq:AmendmentMethod](../../list/bdqffdq/index.md#AmendmentMethod)
 - Definition: A data quality bdqffdq:SolutionsConcept that relates a bdqffdq:Amendment to its bdqffdq:Specifications.
-- SubClass Of: AmendmentConcept; DataQualityMethod
+- SubClass Of: [AmendmentConcept; DataQualityMethod](../../list/bdqffdq/index.md#AmendmentConcept; DataQualityMethod)
 
 ********************
 
 #### AmendmentPolicy
 
-- Name: bdqffdq:AmendmentPolicy
+- Name: [bdqffdq:AmendmentPolicy](../../list/bdqffdq/index.md#AmendmentPolicy)
 - Definition: A bdqffdq:NeedConcept that relates a bdqffdq:UseCase to a set of supporting bdqffdq:Amendments.
-- SubClass Of: AmendmentConcept; Policy
+- SubClass Of: [AmendmentConcept; Policy](../../list/bdqffdq/index.md#AmendmentConcept; Policy)
 
 ********************
 
 #### AmendmentResponse
 
-- Name: bdqffdq:AmendmentResponse
+- Name: [bdqffdq:AmendmentResponse](../../list/bdqffdq/index.md#AmendmentResponse)
 - Definition: A bdqffdq:Response expressing the result of a bdqffdq:Implementation evaluating a bdqffdq:Amendment supporting a particular bdqffdq:DataQualityNeed to improve a particular bdqffdq:DataResource.
-- SubClass Of: AmendmentConcept; Response
+- SubClass Of: [AmendmentConcept; Response](../../list/bdqffdq/index.md#AmendmentConcept; Response)
 
 ********************
 
 #### Argument
 
-- Name: bdqffdq:Argument
+- Name: [bdqffdq:Argument](../../list/bdqffdq/index.md#Argument)
 - Definition: A value that, when provided to a Test bdqffdq:Specification to replace a bdqffdq:Parameter changes the behavior of the Test in a defined manner.
-- SubClass Of: SolutionsConcept
+- SubClass Of: [SolutionsConcept](../../list/bdqffdq/index.md#SolutionsConcept)
 
 ********************
 
 #### Consulted
 
-- Name: bdqffdq:Consulted
+- Name: [bdqffdq:Consulted](../../list/bdqffdq/index.md#Consulted)
 - Definition: A bdqffdq:InformationElement, expressed in concrete terms, about which a bdqffdq:DataQualityNeed examines in order to expresses bdqffdq:Responses about the data quality in another bdqffdq:InformationElement.
-- SubClass Of: InformationElement
-- Disjoint With: AbstractInformationElement, ActedUpon
+- SubClass Of: [InformationElement](../../list/bdqffdq/index.md#InformationElement)
+- [Disjoint With](../../extension/bdqffdq/index.md#432-alldisjointclasses-normative): AbstractInformationElement, ActedUpon
 
 ********************
 
 #### Criterion
 
-- Name: bdqffdq:Criterion
+- Name: [bdqffdq:Criterion](../../list/bdqffdq/index.md#Criterion)
 - Definition: Rule against which data are evaluated for conformance to quality bdqffdq:Criteria.
-- SubClass Of: FundamentalConcept; NeedConcept
+- SubClass Of: [FundamentalConcept; NeedConcept](../../list/bdqffdq/index.md#FundamentalConcept; NeedConcept)
 
 ********************
 
 #### DataQualityDimension
 
-- Name: bdqffdq:DataQualityDimension
+- Name: [bdqffdq:DataQualityDimension](../../list/bdqffdq/index.md#DataQualityDimension)
 - Definition: An aspect of data quality.
-- SubClass Of: FundamentalConcept; NeedConcept
+- SubClass Of: [FundamentalConcept; NeedConcept](../../list/bdqffdq/index.md#FundamentalConcept; NeedConcept)
 
 ********************
 
 #### DataQualityMethod
 
-- Name: bdqffdq:DataQualityMethod
+- Name: [bdqffdq:DataQualityMethod](../../list/bdqffdq/index.md#DataQualityMethod)
 - Definition: A bdqffdq:SolutionsConcept that relates a bdqffdq:DataQualityNeed to a bdqffdq:Specification.
-- SubClass Of: SolutionsConcept
+- SubClass Of: [SolutionsConcept](../../list/bdqffdq/index.md#SolutionsConcept)
 
 ********************
 
 #### DataQualityNeed
 
-- Name: bdqffdq:DataQualityNeed
+- Name: [bdqffdq:DataQualityNeed](../../list/bdqffdq/index.md#DataQualityNeed)
 - Definition: A bdqffdq:NeedConcept that expresses what bdqffdq:Responses may be made about data with respect to fitness for use.
-- SubClass Of: NeedConcept
+- SubClass Of: [NeedConcept](../../list/bdqffdq/index.md#NeedConcept)
 
 ********************
 
 #### DataQualityProfile
 
-- Name: bdqffdq:DataQualityProfile
+- Name: [bdqffdq:DataQualityProfile](../../list/bdqffdq/index.md#DataQualityProfile)
 - Definition: A bdqffdq:NeedConcept expressing the composition of bdqffdq:Policies to satisfy a bdqffdq:UseCase.
-- SubClass Of: NeedConcept
+- SubClass Of: [NeedConcept](../../list/bdqffdq/index.md#NeedConcept)
 
 ********************
 
 #### DataQualityReport
 
-- Name: bdqffdq:DataQualityReport
+- Name: [bdqffdq:DataQualityReport](../../list/bdqffdq/index.md#DataQualityReport)
 - Definition: A bdqffdq:ReportConcept comprising a set of data quality bdqffdq:Responses.
-- SubClass Of: ReportConcept
+- SubClass Of: [ReportConcept](../../list/bdqffdq/index.md#ReportConcept)
 
 ********************
 
 #### DataResource
 
-- Name: bdqffdq:DataResource
+- Name: [bdqffdq:DataResource](../../list/bdqffdq/index.md#DataResource)
 - Definition: An owl:Thing to which a data quality bdqffdq:Response applies.
-- SubClass Of: ReportConcept
+- SubClass Of: [ReportConcept](../../list/bdqffdq/index.md#ReportConcept)
 
 ********************
 
 #### Enhancement
 
-- Name: bdqffdq:Enhancement
+- Name: [bdqffdq:Enhancement](../../list/bdqffdq/index.md#Enhancement)
 - Definition: Description of a means by which data could be improved.
-- SubClass Of: AmendmentConcept; FundamentalConcept; NeedConcept
+- SubClass Of: [AmendmentConcept; FundamentalConcept; NeedConcept](../../list/bdqffdq/index.md#AmendmentConcept; FundamentalConcept; NeedConcept)
 
 ********************
 
 #### FundamentalConcept
 
-- Name: bdqffdq:FundamentalConcept
+- Name: [bdqffdq:FundamentalConcept](../../list/bdqffdq/index.md#FundamentalConcept)
 - Definition: Category of fitness for use concepts that are not derived by composition with other concepts.
 
 ********************
 
 #### Implementation
 
-- Name: bdqffdq:Implementation
+- Name: [bdqffdq:Implementation](../../list/bdqffdq/index.md#Implementation)
 - Definition: A bdqffdq:SolutionsConcept that describes the portion of a bdqffdq:Mechanism that carries out the proccess described in a particular bdqffdq:Specification.
-- SubClass Of: SolutionsConcept
+- SubClass Of: [SolutionsConcept](../../list/bdqffdq/index.md#SolutionsConcept)
 
 ********************
 
 #### ImprovementTarget
 
-- Name: bdqffdq:ImprovementTarget
+- Name: [bdqffdq:ImprovementTarget](../../list/bdqffdq/index.md#ImprovementTarget)
 - Definition: A specific bdqffdq:DataQualityNeed that a specific bdqffdq:Amendment is intended to improve.
-- SubClass Of: NeedConcept
+- SubClass Of: [NeedConcept](../../list/bdqffdq/index.md#NeedConcept)
 
 ********************
 
 #### InformationElement
 
-- Name: bdqffdq:InformationElement
+- Name: [bdqffdq:InformationElement](../../list/bdqffdq/index.md#InformationElement)
 - Definition: A portion of data with which a bdqffdq:DataQualityNeed is concerned.
-- SubClass Of: FundamentalConcept
+- SubClass Of: [FundamentalConcept](../../list/bdqffdq/index.md#FundamentalConcept)
 
 ********************
 
 #### Issue
 
-- Name: bdqffdq:Issue
+- Name: [bdqffdq:Issue](../../list/bdqffdq/index.md#Issue)
 - Definition: A bdqffdq:DataQualityNeed that expresses how quality problems may be identified in data.
-- SubClass Of: DataQualityNeed; IssueConcept
-- Disjoint With: Amendment, Measure, Validation
+- SubClass Of: [DataQualityNeed; IssueConcept](../../list/bdqffdq/index.md#DataQualityNeed; IssueConcept)
+- [Disjoint With](../../extension/bdqffdq/index.md#432-alldisjointclasses-normative): Amendment, Measure, Validation
 
 ********************
 
 #### IssueConcept
 
-- Name: bdqffdq:IssueConcept
+- Name: [bdqffdq:IssueConcept](../../list/bdqffdq/index.md#IssueConcept)
 - Definition: A term involved in flagging problems or potential problems in assessment of data quality that would or might prevent the data from meeting an expressed bdqffdq:DataQualityNeed.
 
 ********************
 
 #### IssueMethod
 
-- Name: bdqffdq:IssueMethod
+- Name: [bdqffdq:IssueMethod](../../list/bdqffdq/index.md#IssueMethod)
 - Definition: A data quality bdqffdq:SolutionsConcept that relates a bdqffdq:Issue to its bdqffdq:Specifications.
-- SubClass Of: DataQualityMethod; IssueConcept
+- SubClass Of: [DataQualityMethod; IssueConcept](../../list/bdqffdq/index.md#DataQualityMethod; IssueConcept)
 
 ********************
 
 #### IssuePolicy
 
-- Name: bdqffdq:IssuePolicy
+- Name: [bdqffdq:IssuePolicy](../../list/bdqffdq/index.md#IssuePolicy)
 - Definition: A bdqffdq:NeedConcept that relates a bdqffdq:UseCase to a set of supporting bdqffdq:Issues.
-- SubClass Of: IssueConcept; Policy
+- SubClass Of: [IssueConcept; Policy](../../list/bdqffdq/index.md#IssueConcept; Policy)
 
 ********************
 
 #### IssueResponse
 
-- Name: bdqffdq:IssueResponse
+- Name: [bdqffdq:IssueResponse](../../list/bdqffdq/index.md#IssueResponse)
 - Definition: A bdqffdq:Response expressing the result of a bdqffdq:Implementation evaluating a bdqffdq:Issue for a particular bdqffdq:DataQualityNeed in a particular bdqffdq:DataResource.
-- SubClass Of: IssueConcept; Response
+- SubClass Of: [IssueConcept; Response](../../list/bdqffdq/index.md#IssueConcept; Response)
 
 ********************
 
 #### Measure
 
-- Name: bdqffdq:Measure
+- Name: [bdqffdq:Measure](../../list/bdqffdq/index.md#Measure)
 - Definition: A bdqffdq:DataQualityNeed that expresses how the fitness of data for some use may be measured.
-- SubClass Of: DataQualityNeed; MeasurementConcept
-- Disjoint With: Amendment, Issue, Validation
+- SubClass Of: [DataQualityNeed; MeasurementConcept](../../list/bdqffdq/index.md#DataQualityNeed; MeasurementConcept)
+- [Disjoint With](../../extension/bdqffdq/index.md#432-alldisjointclasses-normative): Amendment, Issue, Validation
 
 ********************
 
 #### MeasurementConcept
 
-- Name: bdqffdq:MeasurementConcept
+- Name: [bdqffdq:MeasurementConcept](../../list/bdqffdq/index.md#MeasurementConcept)
 - Definition: A term involved in measurement of data quality with regards to expressed bdqffdq:DataQualityNeed.
 
 ********************
 
 #### MeasurementMethod
 
-- Name: bdqffdq:MeasurementMethod
+- Name: [bdqffdq:MeasurementMethod](../../list/bdqffdq/index.md#MeasurementMethod)
 - Definition: A data quality bdqffdq:SolutionsConcept that relates a bdqffdq:Measure to its bdqffdq:Specifications.
-- SubClass Of: DataQualityMethod; MeasurementConcept
+- SubClass Of: [DataQualityMethod; MeasurementConcept](../../list/bdqffdq/index.md#DataQualityMethod; MeasurementConcept)
 
 ********************
 
 #### MeasurementPolicy
 
-- Name: bdqffdq:MeasurementPolicy
+- Name: [bdqffdq:MeasurementPolicy](../../list/bdqffdq/index.md#MeasurementPolicy)
 - Definition: A bdqffdq:NeedConcept that relates a bdqffdq:UseCase to a set of supporting bdqffdq:Measures.
-- SubClass Of: MeasurementConcept; Policy
+- SubClass Of: [MeasurementConcept; Policy](../../list/bdqffdq/index.md#MeasurementConcept; Policy)
 
 ********************
 
 #### MeasurementResponse
 
-- Name: bdqffdq:MeasurementResponse
+- Name: [bdqffdq:MeasurementResponse](../../list/bdqffdq/index.md#MeasurementResponse)
 - Definition: A bdqffdq:Response expressing the result of a bdqffdq:Implementation measuring a particular bdqffdq:DataQualityNeed in a particular bdqffdq:DataResource.
-- SubClass Of: MeasurementConcept; Response
+- SubClass Of: [MeasurementConcept; Response](../../list/bdqffdq/index.md#MeasurementConcept; Response)
 
 ********************
 
 #### Mechanism
 
-- Name: bdqffdq:Mechanism
+- Name: [bdqffdq:Mechanism](../../list/bdqffdq/index.md#Mechanism)
 - Definition: An entity that can execute bdqffdq:DataQualityMethods.
-- SubClass Of: FundamentalConcept; SolutionsConcept
+- SubClass Of: [FundamentalConcept; SolutionsConcept](../../list/bdqffdq/index.md#FundamentalConcept; SolutionsConcept)
 
 ********************
 
 #### NeedConcept
 
-- Name: bdqffdq:NeedConcept
+- Name: [bdqffdq:NeedConcept](../../list/bdqffdq/index.md#NeedConcept)
 - Definition: A concept that expresses an aspect of a bdqffdq:DataQualityNeed.
 
 ********************
 
 #### Parameter
 
-- Name: bdqffdq:Parameter
+- Name: [bdqffdq:Parameter](../../list/bdqffdq/index.md#Parameter)
 - Definition: A placeholder for a value that, when provided to a Test bdqffdq:Specification changes the behavior of the Test in a defined manner.
-- SubClass Of: SolutionsConcept
+- SubClass Of: [SolutionsConcept](../../list/bdqffdq/index.md#SolutionsConcept)
 
 ********************
 
 #### Policy
 
-- Name: bdqffdq:Policy
+- Name: [bdqffdq:Policy](../../list/bdqffdq/index.md#Policy)
 - Definition: The set of bdqffdq:DataQualityNeeds for a bdqffdq:UseCase.
-- SubClass Of: NeedConcept
+- SubClass Of: [NeedConcept](../../list/bdqffdq/index.md#NeedConcept)
 
 ********************
 
 #### ReportConcept
 
-- Name: bdqffdq:ReportConcept
+- Name: [bdqffdq:ReportConcept](../../list/bdqffdq/index.md#ReportConcept)
 - Definition: A concept concerning data quality expressed in a bdqffdq:DataQualityReport.
 
 ********************
 
 #### ResourceType
 
-- Name: bdqffdq:ResourceType
+- Name: [bdqffdq:ResourceType](../../list/bdqffdq/index.md#ResourceType)
 - Definition: Category of things that are data objects about which data quality bdqffdq:Responses may be made.
-- SubClass Of: FundamentalConcept
+- SubClass Of: [FundamentalConcept](../../list/bdqffdq/index.md#FundamentalConcept)
 
 ********************
 
 #### Response
 
-- Name: bdqffdq:Response
+- Name: [bdqffdq:Response](../../list/bdqffdq/index.md#Response)
 - Definition: A bdqffdq:ReportConcept produced by a bdqffdq:Implementation expressing a statement about data quality resulting from the application of the logic of a bdqffdq:Specification to a bdqffdq:DataResource.
-- SubClass Of: ReportConcept
+- SubClass Of: [ReportConcept](../../list/bdqffdq/index.md#ReportConcept)
 
 ********************
 
 #### ResponseQualifier
 
-- Name: bdqffdq:ResponseQualifier
+- Name: [bdqffdq:ResponseQualifier](../../list/bdqffdq/index.md#ResponseQualifier)
 - Definition: A bdqffdq:ReportConcept to which additional bdqffdq:Responses providing additional information beyond that of bdqffdq:ResponseResult from the execution of the bdqffdq:Specification of a bdqffdq:DataQualityNeed are attached.
-- SubClass Of: ReportConcept
+- SubClass Of: [ReportConcept](../../list/bdqffdq/index.md#ReportConcept)
 
 ********************
 
 #### ResponseResult
 
-- Name: bdqffdq:ResponseResult
+- Name: [bdqffdq:ResponseResult](../../list/bdqffdq/index.md#ResponseResult)
 - Definition: A bdqffdq:ReportConcept to which controlled vocabulary bdqffdq:Responses about the result of the execution of the bdqffdq:Specification of a bdqffdq:DataQualityNeed are attached.
-- SubClass Of: ReportConcept
+- SubClass Of: [ReportConcept](../../list/bdqffdq/index.md#ReportConcept)
 
 ********************
 
 #### ResponseStatus
 
-- Name: bdqffdq:ResponseStatus
+- Name: [bdqffdq:ResponseStatus](../../list/bdqffdq/index.md#ResponseStatus)
 - Definition: A bdqffdq:ReportConcept expressing controlled vocabulary values about the exit state of an execution process of a data quality bdqffdq:Specification by a bdqffdq:Implementation.
-- SubClass Of: ReportConcept
+- SubClass Of: [ReportConcept](../../list/bdqffdq/index.md#ReportConcept)
 
 ********************
 
 #### SolutionsConcept
 
-- Name: bdqffdq:SolutionsConcept
+- Name: [bdqffdq:SolutionsConcept](../../list/bdqffdq/index.md#SolutionsConcept)
 - Definition: A concept that expresses an aspect of a data quality solution.
 
 ********************
 
 #### Specification
 
-- Name: bdqffdq:Specification
+- Name: [bdqffdq:Specification](../../list/bdqffdq/index.md#Specification)
 - Definition: A specific statement about how to evaluate a bdqffdq:DataQualityNeed.
-- SubClass Of: FundamentalConcept; SolutionsConcept
+- SubClass Of: [FundamentalConcept; SolutionsConcept](../../list/bdqffdq/index.md#FundamentalConcept; SolutionsConcept)
 
 ********************
 
 #### UseCase
 
-- Name: bdqffdq:UseCase
+- Name: [bdqffdq:UseCase](../../list/bdqffdq/index.md#UseCase)
 - Definition: A bdqffdq:NeedConcept expressing a purpose to which data are put for which the data must have quality for the result to have meaning and reliability.
-- SubClass Of: FundamentalConcept; NeedConcept
+- SubClass Of: [FundamentalConcept; NeedConcept](../../list/bdqffdq/index.md#FundamentalConcept; NeedConcept)
 
 ********************
 
 #### Validation
 
-- Name: bdqffdq:Validation
+- Name: [bdqffdq:Validation](../../list/bdqffdq/index.md#Validation)
 - Definition: A bdqffdq:DataQualityNeed that expresses how data may be evaluated for fitness for use.
-- SubClass Of: DataQualityNeed; ValidationConcept
-- Disjoint With: Amendment, Issue, Measure
+- SubClass Of: [DataQualityNeed; ValidationConcept](../../list/bdqffdq/index.md#DataQualityNeed; ValidationConcept)
+- [Disjoint With](../../extension/bdqffdq/index.md#432-alldisjointclasses-normative): Amendment, Issue, Measure
 
 ********************
 
 #### ValidationConcept
 
-- Name: bdqffdq:ValidationConcept
+- Name: [bdqffdq:ValidationConcept](../../list/bdqffdq/index.md#ValidationConcept)
 - Definition: A term involved in statements about the conformance of data to expressed bdqffdq:DataQualityNeeds.
 
 ********************
 
 #### ValidationMethod
 
-- Name: bdqffdq:ValidationMethod
+- Name: [bdqffdq:ValidationMethod](../../list/bdqffdq/index.md#ValidationMethod)
 - Definition: A data quality bdqffdq:SolutionsConcept that relates a bdqffdq:Validation to its bdqffdq:Specifications.
-- SubClass Of: DataQualityMethod; ValidationConcept
+- SubClass Of: [DataQualityMethod; ValidationConcept](../../list/bdqffdq/index.md#DataQualityMethod; ValidationConcept)
 
 ********************
 
 #### ValidationPolicy
 
-- Name: bdqffdq:ValidationPolicy
+- Name: [bdqffdq:ValidationPolicy](../../list/bdqffdq/index.md#ValidationPolicy)
 - Definition: A bdqffdq:NeedConcept that relates a bdqffdq:UseCase to a set of supporting bdqffdq:Validations.
-- SubClass Of: Policy; ValidationConcept
+- SubClass Of: [Policy; ValidationConcept](../../list/bdqffdq/index.md#Policy; ValidationConcept)
 
 ********************
 
 #### ValidationResponse
 
-- Name: bdqffdq:ValidationResponse
+- Name: [bdqffdq:ValidationResponse](../../list/bdqffdq/index.md#ValidationResponse)
 - Definition: A bdqffdq:Response expressing the result of a bdqffdq:Implementation validating compliance with a particular bdqffdq:DataQualityNeed in a particular bdqffdq:DataResource.
-- SubClass Of: Response; ValidationConcept
+- SubClass Of: [Response; ValidationConcept](../../list/bdqffdq/index.md#Response; ValidationConcept)
 
 ********************
 
-### 5.2 ObjectProperty terms (normative)
+### 6.2 ObjectProperty terms (normative)
 #### amendmentProperty
 
-- Name: bdqffdq:amendmentProperty
+- Name: [bdqffdq:amendmentProperty](../../list/bdqffdq/index.md#amendmentProperty)
 - Definition: Category of object properties that apply to bdqffdq:Amendments
 
 ********************
 
 #### appliesTo
 
-- Name: bdqffdq:appliesTo
+- Name: [bdqffdq:appliesTo](../../list/bdqffdq/index.md#appliesTo)
 - Definition: Describes the bdqffdq:DataResource about which a bdqffdq:Response is made.
 
 ********************
 
 #### composedOf
 
-- Name: bdqffdq:composedOf
+- Name: [bdqffdq:composedOf](../../list/bdqffdq/index.md#composedOf)
 - Definition: Specific vocabulary term that comprises a bdqffdq:InformationElement that is not a bdqffdq:AbstractInformationElement.
 
 ********************
 
 #### containsResponse
 
-- Name: bdqffdq:containsResponse
+- Name: [bdqffdq:containsResponse](../../list/bdqffdq/index.md#containsResponse)
 - Definition: Connects a bdqffdq:DataQualityReport with bdqffdq:Responses that comprise that bdqffdq:DataQualityReport.
 
 ********************
 
 #### forAmendment
 
-- Name: bdqffdq:forAmendment
+- Name: [bdqffdq:forAmendment](../../list/bdqffdq/index.md#forAmendment)
 - Definition: Relates a bdqffdq:AmendmentMethod to a bdqffdq:Amendment.
+- SubClass Of: [amendmentProperty; forDataQualityNeed](../../list/bdqffdq/index.md#amendmentProperty; forDataQualityNeed)
 - SubClass Of: amendmentProperty; forDataQualityNeed
-- Range [ owl:someValuesFrom bdqffdq:forAmendment ]
+- [Range](../../extension/bdqffdq/index.md#forAmendment) [ owl:someValuesFrom bdqffdq:forAmendment ]
 
 ********************
 
 #### forDataQualityNeed
 
-- Name: bdqffdq:forDataQualityNeed
+- Name: [bdqffdq:forDataQualityNeed](../../list/bdqffdq/index.md#forDataQualityNeed)
 - Definition: Category of properties that relates a bdqffdq:DataQualityNeed to specific bdqffdq:Methods.
 
 ********************
 
 #### forIssue
 
-- Name: bdqffdq:forIssue
+- Name: [bdqffdq:forIssue](../../list/bdqffdq/index.md#forIssue)
 - Definition: Relates a bdqffdq:IssueMethod to a bdqffdq:Issue.
+- SubClass Of: [forDataQualityNeed; issueProperty](../../list/bdqffdq/index.md#forDataQualityNeed; issueProperty)
 - SubClass Of: forDataQualityNeed; issueProperty
-- Range [ owl:someValuesFrom bdqffdq:forIssue ]
+- [Range](../../extension/bdqffdq/index.md#forIssue) [ owl:someValuesFrom bdqffdq:forIssue ]
 
 ********************
 
 #### forMeasure
 
-- Name: bdqffdq:forMeasure
+- Name: [bdqffdq:forMeasure](../../list/bdqffdq/index.md#forMeasure)
 - Definition: Relates a bdqffdq:MeasurementMethod to a bdqffdq:Measure.
+- SubClass Of: [forDataQualityNeed; measurementProperty](../../list/bdqffdq/index.md#forDataQualityNeed; measurementProperty)
 - SubClass Of: forDataQualityNeed; measurementProperty
-- Range [ owl:someValuesFrom bdqffdq:forMeasure ]
+- [Range](../../extension/bdqffdq/index.md#forMeasure) [ owl:someValuesFrom bdqffdq:forMeasure ]
 
 ********************
 
 #### forValidation
 
-- Name: bdqffdq:forValidation
+- Name: [bdqffdq:forValidation](../../list/bdqffdq/index.md#forValidation)
 - Definition: Relates a bdqffdq:ValidationMethod to a bdqffdq:Validation.
+- SubClass Of: [forDataQualityNeed; validationProperty](../../list/bdqffdq/index.md#forDataQualityNeed; validationProperty)
 - SubClass Of: forDataQualityNeed; validationProperty
-- Range [ owl:someValuesFrom bdqffdq:forValidation ]
+- [Range](../../extension/bdqffdq/index.md#forValidation) [ owl:someValuesFrom bdqffdq:forValidation ]
 
 ********************
 
 #### hasActedUponInformationElement
 
-- Name: bdqffdq:hasActedUponInformationElement
+- Name: [bdqffdq:hasActedUponInformationElement](../../list/bdqffdq/index.md#hasActedUponInformationElement)
 - Definition: Describes the bdqffdq:ActedUpon bdqffdq:InformationElements assessed by a bdqffdq:DataQualityNeed about which bdqffdq:Responses arising from the bdqffdq:DataQualityNeed would apply.
+- SubClass Of: [hasInformationElement](../../list/bdqffdq/index.md#hasInformationElement)
 - SubClass Of: hasInformationElement
 
 ********************
 
 #### hasArgument
 
-- Name: bdqffdq:hasArgument
+- Name: [bdqffdq:hasArgument](../../list/bdqffdq/index.md#hasArgument)
 - Definition: Relates a bdqffdq:Specification to a bdqffdq:Argument
-- Range bdqffdq:Argument
+- [Range](../../extension/bdqffdq/index.mdhasArgument) bdqffdq:Argument
 
 ********************
 
 #### hasConsultedInformationElement
 
-- Name: bdqffdq:hasConsultedInformationElement
+- Name: [bdqffdq:hasConsultedInformationElement](../../list/bdqffdq/index.md#hasConsultedInformationElement)
 - Definition: Describes the bdqffdq:InformationElements assessed by a bdqffdq:DataQualityNeed in order to make bdqffdq:Responses concerning bdqffdq:ActedUpon bdqffdq:InformationElements.
+- SubClass Of: [hasInformationElement](../../list/bdqffdq/index.md#hasInformationElement)
 - SubClass Of: hasInformationElement
 
 ********************
 
 #### hasCriterion
 
-- Name: bdqffdq:hasCriterion
+- Name: [bdqffdq:hasCriterion](../../list/bdqffdq/index.md#hasCriterion)
 - Definition: The bdqffdq:Criterion under which a bdqffdq:Validation or bdqffdq:Issue assesses for data quality.
+- SubClass Of: [issueProperty; validationProperty](../../list/bdqffdq/index.md#issueProperty; validationProperty)
 - SubClass Of: issueProperty; validationProperty
-- Range [ owl:someValuesFrom bdqffdq:hasCriterion ]
+- [Range](../../extension/bdqffdq/index.md#hasCriterion) [ owl:someValuesFrom bdqffdq:hasCriterion ]
 
 ********************
 
 #### hasDataQualityDimension
 
-- Name: bdqffdq:hasDataQualityDimension
+- Name: [bdqffdq:hasDataQualityDimension](../../list/bdqffdq/index.md#hasDataQualityDimension)
 - Definition: The bdqffdq:DataQualityDimension to which a bdqffdq:DataQualityNeed applies.
+- SubClass Of: [amendmentProperty; issueProperty; measurementProperty; validationProperty](../../list/bdqffdq/index.md#amendmentProperty; issueProperty; measurementProperty; validationProperty)
 - SubClass Of: amendmentProperty; issueProperty; measurementProperty; validationProperty
-- Range [ owl:someValuesFrom bdqffdq:hasDataQualityDimension ]
+- [Range](../../extension/bdqffdq/index.md#hasDataQualityDimension) [ owl:someValuesFrom bdqffdq:hasDataQualityDimension ]
 
 ********************
 
 #### hasEnhancement
 
-- Name: bdqffdq:hasEnhancement
+- Name: [bdqffdq:hasEnhancement](../../list/bdqffdq/index.md#hasEnhancement)
 - Definition: The bdqffdq:Enhancement that describes how a bdqffdq:Amendment may propose changes to improve data quality.
+- SubClass Of: [amendmentProperty](../../list/bdqffdq/index.md#amendmentProperty)
 - SubClass Of: amendmentProperty
-- Range [ owl:someValuesFrom bdqffdq:hasEnhancement ]
+- [Range](../../extension/bdqffdq/index.md#hasEnhancement) [ owl:someValuesFrom bdqffdq:hasEnhancement ]
 
 ********************
 
 #### hasInformationElement
 
-- Name: bdqffdq:hasInformationElement
+- Name: [bdqffdq:hasInformationElement](../../list/bdqffdq/index.md#hasInformationElement)
 - Definition: Describes the bdqffdq:InformationElements assessed by a bdqffdq:DataQualityNeed.
+- SubClass Of: [amendmentProperty; issueProperty; measurementProperty; validationProperty](../../list/bdqffdq/index.md#amendmentProperty; issueProperty; measurementProperty; validationProperty)
 - SubClass Of: amendmentProperty; issueProperty; measurementProperty; validationProperty
-- Range bdqffdq:InformationElement
+- [Range](../../extension/bdqffdq/index.mdhasInformationElement) bdqffdq:InformationElement
 
 ********************
 
 #### hasParameter
 
-- Name: bdqffdq:hasParameter
+- Name: [bdqffdq:hasParameter](../../list/bdqffdq/index.md#hasParameter)
 - Definition: Relates a bdqffdq:Argument to a bdqffdq:Parameter.
-- Range bdqffdq:Parameter
+- [Range](../../extension/bdqffdq/index.mdhasParameter) bdqffdq:Parameter
 
 ********************
 
 #### hasResourceType
 
-- Name: bdqffdq:hasResourceType
+- Name: [bdqffdq:hasResourceType](../../list/bdqffdq/index.md#hasResourceType)
 - Definition: The bdqffdq:ResourceType to which a bdqffdq:DataQualityNeed applies.
 
 ********************
 
 #### hasResponseQualifier
 
-- Name: bdqffdq:hasResponseQualifier
+- Name: [bdqffdq:hasResponseQualifier](../../list/bdqffdq/index.md#hasResponseQualifier)
 - Definition: ResponseQualifier object asserted by an Response.
+- SubClass Of: [reportProperty](../../list/bdqffdq/index.md#reportProperty)
 - SubClass Of: reportProperty
 
 ********************
 
 #### hasResponseResult
 
-- Name: bdqffdq:hasResponseResult
+- Name: [bdqffdq:hasResponseResult](../../list/bdqffdq/index.md#hasResponseResult)
 - Definition: The bdqffdq:ResponseResult object asserted by a bdqffdq:Response.
+- SubClass Of: [reportProperty](../../list/bdqffdq/index.md#reportProperty)
 - SubClass Of: reportProperty
 
 ********************
 
 #### hasResponseStatus
 
-- Name: bdqffdq:hasResponseStatus
+- Name: [bdqffdq:hasResponseStatus](../../list/bdqffdq/index.md#hasResponseStatus)
 - Definition: The bdqffdq:ResponseStatus object asserted by a bdqffdq:Response.
+- SubClass Of: [reportProperty](../../list/bdqffdq/index.md#reportProperty)
 - SubClass Of: reportProperty
 
 ********************
 
 #### hasSpecification
 
-- Name: bdqffdq:hasSpecification
+- Name: [bdqffdq:hasSpecification](../../list/bdqffdq/index.md#hasSpecification)
 - Definition: Relates a bdqffdq:Method to a bdqffdq:Specification.
-- Range [ owl:someValuesFrom bdqffdq:hasSpecification ]
+- [Range](../../extension/bdqffdq/index.md#hasSpecification) [ owl:someValuesFrom bdqffdq:hasSpecification ]
 
 ********************
 
 #### hasUseCase
 
-- Name: bdqffdq:hasUseCase
+- Name: [bdqffdq:hasUseCase](../../list/bdqffdq/index.md#hasUseCase)
 - Definition: Relates a bdqffdq:Policy to a bdqffdq:UseCase.
-- Range [ owl:someValuesFrom bdqffdq:hasUseCase ]
+- [Range](../../extension/bdqffdq/index.md#hasUseCase) [ owl:someValuesFrom bdqffdq:hasUseCase ]
 
 ********************
 
 #### implementedBy
 
-- Name: bdqffdq:implementedBy
+- Name: [bdqffdq:implementedBy](../../list/bdqffdq/index.md#implementedBy)
 - Definition: The bdqffdq:Mechanism that provides a bdqffdq:Implementation
-- Range [ owl:someValuesFrom bdqffdq:implementedBy ]
+- [Range](../../extension/bdqffdq/index.md#implementedBy) [ owl:someValuesFrom bdqffdq:implementedBy ]
 
 ********************
 
 #### improvedBy
 
-- Name: bdqffdq:improvedBy
+- Name: [bdqffdq:improvedBy](../../list/bdqffdq/index.md#improvedBy)
 - Definition: The bdqffdq:ImprovementTarget that would have data quality improved by bdqffdq:Responses resulting from a bdqffdq:Amendment.
-- Range [ owl:someValuesFrom bdqffdq:improvedBy ]
+- [Range](../../extension/bdqffdq/index.md#improvedBy) [ owl:someValuesFrom bdqffdq:improvedBy ]
 
 ********************
 
 #### includedInPolicy
 
-- Name: bdqffdq:includedInPolicy
+- Name: [bdqffdq:includedInPolicy](../../list/bdqffdq/index.md#includedInPolicy)
 - Definition: Assserts that a bdqffdq:DataQualityNeed is part of a bdqffdq:Policy.
 
 ********************
 
 #### issueProperty
 
-- Name: bdqffdq:issueProperty
+- Name: [bdqffdq:issueProperty](../../list/bdqffdq/index.md#issueProperty)
 - Definition: Category of object properties that apply to bdqffdq:Issues.
 
 ********************
 
 #### measurementProperty
 
-- Name: bdqffdq:measurementProperty
+- Name: [bdqffdq:measurementProperty](../../list/bdqffdq/index.md#measurementProperty)
 - Definition: Category of object properties that apply to bdqffdq:Measures.
 
 ********************
 
 #### producesResponse
 
-- Name: bdqffdq:producesResponse
+- Name: [bdqffdq:producesResponse](../../list/bdqffdq/index.md#producesResponse)
 - Definition: Connects an entity with a bdqffdq:Response that the entity created.
 
 ********************
 
 #### reportProperty
 
-- Name: bdqffdq:reportProperty
+- Name: [bdqffdq:reportProperty](../../list/bdqffdq/index.md#reportProperty)
 - Definition: Category of object properties that apply to bdqffdq:Responses.
 
 ********************
 
 #### targetedIssue
 
-- Name: bdqffdq:targetedIssue
+- Name: [bdqffdq:targetedIssue](../../list/bdqffdq/index.md#targetedIssue)
 - Definition: A bdqffdq:Issue for which the data conformance with a bdqffdq:NeedConcept may be improved by accepting proposals from a bdqffdq:Amendment via a bdqffdq:ImprovementTarget.
-- Range [ owl:someValuesFrom bdqffdq:targetedIssue ]
+- [Range](../../extension/bdqffdq/index.md#targetedIssue) [ owl:someValuesFrom bdqffdq:targetedIssue ]
 
 ********************
 
 #### targetedMeasure
 
-- Name: bdqffdq:targetedMeasure
+- Name: [bdqffdq:targetedMeasure](../../list/bdqffdq/index.md#targetedMeasure)
 - Definition: A bdqffdq:Measure for which the data conformance with a bdqffdq:NeedConcept may be improved by accepting proposals from a bdqffdq:Amendment via a bdqffdq:ImprovementTarget.
-- Range [ owl:someValuesFrom bdqffdq:targetedMeasure ]
+- [Range](../../extension/bdqffdq/index.md#targetedMeasure) [ owl:someValuesFrom bdqffdq:targetedMeasure ]
 
 ********************
 
 #### targetedValidation
 
-- Name: bdqffdq:targetedValidation
+- Name: [bdqffdq:targetedValidation](../../list/bdqffdq/index.md#targetedValidation)
 - Definition: A bdqffdq:Validation for which the data conformance with a bdqffdq:NeedConcept may be improved by accepting proposals from a bdqffdq:Amendment via a bdqffdq:ImprovementTarget.
+- SubClass Of: [http://www.w3.org/2002/07/owl#topObjectProperty](../../list/bdqffdq/index.md#http://www.w3.org/2002/07/owl#topObjectProperty)
 - SubClass Of: http://www.w3.org/2002/07/owl#topObjectProperty
-- Range [ owl:someValuesFrom bdqffdq:targetedValidation ]
+- [Range](../../extension/bdqffdq/index.md#targetedValidation) [ owl:someValuesFrom bdqffdq:targetedValidation ]
 
 ********************
 
 #### usesSpecification
 
-- Name: bdqffdq:usesSpecification
+- Name: [bdqffdq:usesSpecification](../../list/bdqffdq/index.md#usesSpecification)
 - Definition: The bdqffdq:Specification that a bdqffdq:Implementation implements.
-- Range [ owl:someValuesFrom bdqffdq:usesSpecification ]
+- [Range](../../extension/bdqffdq/index.md#usesSpecification) [ owl:someValuesFrom bdqffdq:usesSpecification ]
 
 ********************
 
 #### validationProperty
 
-- Name: bdqffdq:validationProperty
+- Name: [bdqffdq:validationProperty](../../list/bdqffdq/index.md#validationProperty)
 - Definition: Category of object properties that apply to bdqffdq:Validations.
 
 ********************
 
-### 5.3 DataProperty terms (normative)
+### 6.3 DataProperty terms (normative)
 #### hasArgumentValue
 
-- Name: bdqffdq:hasArgumentValue
+- Name: [bdqffdq:hasArgumentValue](../../list/bdqffdq/index.md#hasArgumentValue)
 - Definition: The value of a bdqffdq:Argument that is used in a bdqffdq:Specification to replace a Formal Parameter to determine the behavior of the bdqffdq:Specification.
 
 ********************
 
 #### hasAuthoritiesDefaults
 
-- Name: bdqffdq:hasAuthoritiesDefaults
+- Name: [bdqffdq:hasAuthoritiesDefaults](../../list/bdqffdq/index.md#hasAuthoritiesDefaults)
 - Definition: Text describing bdq:sourceAuthorities and bdqffdq:Parameters with their default values to attach to a bdqffdq:Specification to further specify the behavior described in the bdqffdq:hasExpectedResponse.
-- Range xsd:string
+- [Range](../../extension/bdqffdq/index.md#hasAuthoritiesDefaults) xsd:string
 
 ********************
 
 #### hasDateLastUpdated
 
-- Name: bdqffdq:hasDateLastUpdated
+- Name: [bdqffdq:hasDateLastUpdated](../../list/bdqffdq/index.md#hasDateLastUpdated)
 - Definition: Date of the most recent dcterms:issued for this class with a change that would be pertinent to a bdqffdq:Implementation.
-- Range xsd:date
+- [Range](../../extension/bdqffdq/index.md#hasDateLastUpdated) xsd:date
 
 ********************
 
 #### hasExpectedResponse
 
-- Name: bdqffdq:hasExpectedResponse
+- Name: [bdqffdq:hasExpectedResponse](../../list/bdqffdq/index.md#hasExpectedResponse)
 - Definition: Text describing the logic to be followed by a bdqffdq:Implementation of a bdqffdq:Specification specifying the values of bdqffdq:ResponseStatus and bdqffdq:ResponseResults that should be produced from the evaluation of input bdqffdq:InformationElements.
-- Range xsd:string
+- [Range](../../extension/bdqffdq/index.md#hasExpectedResponse) xsd:string
 
 ********************
 
 #### hasFitnessRequirements
 
-- Name: bdqffdq:hasFitnessRequirements
+- Name: [bdqffdq:hasFitnessRequirements](../../list/bdqffdq/index.md#hasFitnessRequirements)
 - Definition: The property of a bdqffdq:UseCase that provides text listing the qualities that data must have to be fit for a given use.
 
 ********************
 
 #### hasResponseComment
 
-- Name: bdqffdq:hasResponseComment
+- Name: [bdqffdq:hasResponseComment](../../list/bdqffdq/index.md#hasResponseComment)
 - Definition: Free text describing the bdqffdq:Response made in the response and why that conclusion was reached.
-- Range xsd:string
+- [Range](../../extension/bdqffdq/index.md#hasResponseComment) xsd:string
 
 ********************
 
 #### hasResponseResultValue
 
-- Name: bdqffdq:hasResponseResultValue
+- Name: [bdqffdq:hasResponseResultValue](../../list/bdqffdq/index.md#hasResponseResultValue)
 - Definition: Data property carrying the value of a bdqffdq:Response when the value is not an object.
 
 ********************
 
-### 5.4 NamedIndividual terms (normative)
+### 6.4 NamedIndividual terms (normative)
 #### MultiRecord
 
-- Name: bdqffdq:MultiRecord
+- Name: [bdqffdq:MultiRecord](../../list/bdqffdq/index.md#MultiRecord)
 - Type: bdqffdq:ResourceType
 - Definition: A set of one or more bdqffdq:SingleRecords.
 
@@ -1904,7 +1918,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 #### SingleRecord
 
-- Name: bdqffdq:SingleRecord
+- Name: [bdqffdq:SingleRecord](../../list/bdqffdq/index.md#SingleRecord)
 - Type: bdqffdq:ResourceType
 - Definition: A single entity comprised of encoded data with a defined structure that contains one instance of a core concept from the perspective of bdqffdq:InformationElements assessed for a bdqffdq:DataQualityNeed.
 
@@ -1912,43 +1926,43 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 #### COMPLETE
 
-- Name: bdqffdq:COMPLETE
+- Name: [bdqffdq:COMPLETE](../../list/bdqffdq/index.md#COMPLETE)
 - Type: bdqffdq:ResponseResult
-- DifferentFrom: bdqffdq:NOT_COMPLETE
+- [DifferentFrom](../../extension/bdqffdq/index.md#COMPLETE): bdqffdq:NOT_COMPLETE
 - Definition: A bdqffdq:ResponseResult of a bdqffdq:Measure that asserts that data are present and sufficiently comprehensive for use.
 
 ********************
 
 #### COMPLIANT
 
-- Name: bdqffdq:COMPLIANT
+- Name: [bdqffdq:COMPLIANT](../../list/bdqffdq/index.md#COMPLIANT)
 - Type: bdqffdq:ResponseResult
-- DifferentFrom: bdqffdq:NOT_COMPLIANT
+- [DifferentFrom](../../extension/bdqffdq/index.md#COMPLIANT): bdqffdq:NOT_COMPLIANT
 - Definition: A bdqffdq:ResponseResult of a bdqffdq:Validation where the data conforms to the bdqffdq:Criteria for quality in the Test bdqffdq:Specification.
 
 ********************
 
 #### IS_ISSUE
 
-- Name: bdqffdq:IS_ISSUE
+- Name: [bdqffdq:IS_ISSUE](../../list/bdqffdq/index.md#IS_ISSUE)
 - Type: bdqffdq:ResponseResult
-- DifferentFrom: bdqffdq:NOT_ISSUE
+- [DifferentFrom](../../extension/bdqffdq/index.md#IS_ISSUE): bdqffdq:NOT_ISSUE
 - Definition: A bdqffdq:ResponseResult of a bdqffdq:Issue indicating that the data do not have sufficient quality for a use.
 
 ********************
 
 #### IS_ISSUE
 
-- Name: bdqffdq:IS_ISSUE
+- Name: [bdqffdq:IS_ISSUE](../../list/bdqffdq/index.md#IS_ISSUE)
 - Type: bdqffdq:ResponseResult
-- DifferentFrom: bdqffdq:POTENTIAL_ISSUE
+- [DifferentFrom](../../extension/bdqffdq/index.md#IS_ISSUE): bdqffdq:POTENTIAL_ISSUE
 - Definition: A bdqffdq:ResponseResult of a bdqffdq:Issue indicating that the data do not have sufficient quality for a use.
 
 ********************
 
 #### NOT_COMPLETE
 
-- Name: bdqffdq:NOT_COMPLETE
+- Name: [bdqffdq:NOT_COMPLETE](../../list/bdqffdq/index.md#NOT_COMPLETE)
 - Type: bdqffdq:ResponseResult
 - Definition: A bdqffdq:ResponseResult of a bdqffdq:Measure which asserts that data are not present or are not sufficiently comprehensive for a use.
 
@@ -1956,7 +1970,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 #### NOT_COMPLIANT
 
-- Name: bdqffdq:NOT_COMPLIANT
+- Name: [bdqffdq:NOT_COMPLIANT](../../list/bdqffdq/index.md#NOT_COMPLIANT)
 - Type: bdqffdq:ResponseResult
 - Definition: A bdqffdq:ResponseResult of a bdqffdq:Validation where the data do not conform to the bdqffdq:Criteria for quality in the Test bdqffdq:Specification.
 
@@ -1964,16 +1978,16 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 #### NOT_ISSUE
 
-- Name: bdqffdq:NOT_ISSUE
+- Name: [bdqffdq:NOT_ISSUE](../../list/bdqffdq/index.md#NOT_ISSUE)
 - Type: bdqffdq:ResponseResult
-- DifferentFrom: bdqffdq:POTENTIAL_ISSUE
+- [DifferentFrom](../../extension/bdqffdq/index.md#NOT_ISSUE): bdqffdq:POTENTIAL_ISSUE
 - Definition: A bdqffdq:ResponseResult of a bdqffdq:Issue where no potential problems were detected.
 
 ********************
 
 #### POTENTIAL_ISSUE
 
-- Name: bdqffdq:POTENTIAL_ISSUE
+- Name: [bdqffdq:POTENTIAL_ISSUE](../../list/bdqffdq/index.md#POTENTIAL_ISSUE)
 - Type: bdqffdq:ResponseResult
 - Definition: A bdqffdq:ResponseResult of a bdqffdq:Issue that indicates that the data may not have sufficient quality for a use. The user will need to evaluate if the data are fit for their particular use or not.
 
@@ -1981,34 +1995,34 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 #### AMENDED
 
-- Name: bdqffdq:AMENDED
+- Name: [bdqffdq:AMENDED](../../list/bdqffdq/index.md#AMENDED)
 - Type: bdqffdq:ResponseStatus
-- DifferentFrom: bdqffdq:NOT_AMENDED
+- [DifferentFrom](../../extension/bdqffdq/index.md#AMENDED): bdqffdq:NOT_AMENDED
 - Definition: A bdqffdq:ResponseStatus used to indicate that a bdqffdq:hasResponseResultValue from a bdqffdq:Amendment contains a proposed change.
 
 ********************
 
 #### EXTERNAL_PREREQUISITES_NOT_MET
 
-- Name: bdqffdq:EXTERNAL_PREREQUISITES_NOT_MET
+- Name: [bdqffdq:EXTERNAL_PREREQUISITES_NOT_MET](../../list/bdqffdq/index.md#EXTERNAL_PREREQUISITES_NOT_MET)
 - Type: bdqffdq:ResponseStatus
-- DifferentFrom: bdqffdq:INTERNAL_PREREQUISITES_NOT_MET
+- [DifferentFrom](../../extension/bdqffdq/index.md#EXTERNAL_PREREQUISITES_NOT_MET): bdqffdq:INTERNAL_PREREQUISITES_NOT_MET
 - Definition: A bdqffdq:ResponseStatus used to indicate that a bdqffdq:ResponseResult was not generated because a bdq:sourceAuthority was not accessible. If the Test is run at a later time, it may produce a different bdqffdq:ResponseStatus.
 
 ********************
 
 #### FILLED_IN
 
-- Name: bdqffdq:FILLED_IN
+- Name: [bdqffdq:FILLED_IN](../../list/bdqffdq/index.md#FILLED_IN)
 - Type: bdqffdq:ResponseStatus
-- DifferentFrom: bdqffdq:NOT_AMENDED
+- [DifferentFrom](../../extension/bdqffdq/index.md#FILLED_IN): bdqffdq:NOT_AMENDED
 - Definition: A bdqffdq:ResponseStatus used to indicate that a bdqffdq:Amendment contains a proposed change to a record in a bdqffdq:hasResponseResultValue where the bdqffdq:InformationElement was bdq:Empty.
 
 ********************
 
 #### INTERNAL_PREREQUISITES_NOT_MET
 
-- Name: bdqffdq:INTERNAL_PREREQUISITES_NOT_MET
+- Name: [bdqffdq:INTERNAL_PREREQUISITES_NOT_MET](../../list/bdqffdq/index.md#INTERNAL_PREREQUISITES_NOT_MET)
 - Type: bdqffdq:ResponseStatus
 - Definition: A bdqffdq:ResponseStatus used to indicate that a bdqffdq:ResponseResult was not generated because values of the bdqffdq:InformationElement were insufficient to run the Test. If the Test is run at a later time on unmodified data, it should produce the same bdqffdq:ResponseStatus.
 
@@ -2016,7 +2030,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 #### NOT_AMENDED
 
-- Name: bdqffdq:NOT_AMENDED
+- Name: [bdqffdq:NOT_AMENDED](../../list/bdqffdq/index.md#NOT_AMENDED)
 - Type: bdqffdq:ResponseStatus
 - Definition: A bdqffdq:ResponseStatus used to indicate that a bdqffdq:Amendment proposed no change.
 
@@ -2024,7 +2038,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 #### RUN_HAS_RESULT
 
-- Name: bdqffdq:RUN_HAS_RESULT
+- Name: [bdqffdq:RUN_HAS_RESULT](../../list/bdqffdq/index.md#RUN_HAS_RESULT)
 - Type: bdqffdq:ResponseStatus
 - Definition: A bdqffdq:ResponseStatus used to indicate that that a result was correctly generated.
 
