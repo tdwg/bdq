@@ -90,11 +90,11 @@ Draft Standard for Review
 
 [6 Guidelines for Implementers (normative)](#6-guidelines-for-implementers-normative)
   - [6.1 Parameters and Changing the Behavior of a Test (normative)](#61-parameters-and-changing-the-behavior-of-a-test-normative)
-    - [6.1.1 Identifying non-default `Parameter` values in reports (normative)](#611-identifying-non-default-parameter-values-in-reports-normative)
-    - [6.1.2 Identifying non-default `Parameter` values in `Response.comment` (normative)](#612-identifying-non-default-parameter-values-in-responsecomment-normative)
-    - [6.1.3 Expectations for Tests with `Parameters` (normative)](#613-expectations-for-tests-with-parameters-normative)
+    - [6.1.1 Identifying non-default Parameter values in reports (normative)](#611-identifying-non-default-parameter-values-in-reports-normative)
+    - [6.1.2 Identifying non-default Parameter values in Response.comment (normative)](#612-identifying-non-default-parameter-values-in-responsecomment-normative)
+    - [6.1.3 Expectations for Tests with Parameters (normative)](#613-expectations-for-tests-with-parameters-normative)
     - [6.1.4 Test departures from specifications (normative)](#614-test-departures-from-specifications-normative)
-    - [6.1.3 Further guidance on `Parameters` and `Arguments` (non-normative)](#613-further-guidance-on-parameters-and-arguments-non-normative)
+    - [6.1.3 Further guidance on Parameters and Arguments (non-normative)](#613-further-guidance-on-parameters-and-arguments-non-normative)
   - [6.2 Execution Process Agnostic (non-normative)](#62-execution-process-agnostic-non-normative)
   - [6.3 Considerations for Test Execution (normative)](#63-considerations-for-test-execution-normative)
   - [6.4 Order of Test Execution (normative)](#64-order-of-test-execution-normative)
@@ -623,7 +623,7 @@ A Parameterized Test will behave differently on the same data when using differe
 
 Implementers SHOULD only present non-default `Parameter` values to a Test implementation if needed for local `Data Quality Needs`. 
 
-#### 6.1.1 Identifying non-default `Parameter` values in reports (normative)
+#### 6.1.1 Identifying non-default Parameter values in reports (normative)
 
 When a Test is executed with non-default `Arguments` specified for `Parameters`, consumers of `Responses` and Data Quality Reports resulting from such MUST be able to tell that non-default `Arguments` were used, and what the non-default values were.
 
@@ -640,11 +640,11 @@ When `Responses` are represented in RDF a `Response` produced by a Test run with
 - MUST NOT be linked to the instance of the `Specification` with the `Argument` with the default value, 
 - MUST be linked to novel instances of `Implementation`, `Specification`, and `Argument`, such that a query on the `Response` can identify what `Argument` value was used for the `Parameter` to produce the `Response`. It is the novel instances of these classes that provides the non-default value for software consumers.
 
-#### 6.1.2 Identifying non-default `Parameter` values in `Response.comment` (normative)
+#### 6.1.2 Identifying non-default Parameter values in Response.comment (normative)
 
 When a non-default `Argument` is used, a `Response.comment` SHOULD include the `Parameter` and the non-default value. This provides the non-default value for human consumers.
 
-#### 6.1.3 Expectations for Tests with `Parameters` (normative)
+#### 6.1.3 Expectations for Tests with Parameters (normative)
 
 An implementation of a Test:
 - MUST support the Test execution with the default `Parameter` values.
@@ -658,7 +658,7 @@ An implementation of a Test that, by design, has a behavior that departs from th
 
 An implementation of a parameterized Test that only supports non-default `Parameter` values MUST be identified by different identifiers than the BDQ Test that supports the default `Parameter` values.  For example, an implementation of VALIDATION_LICENSE_STANDARD that does not support the default bdq:sourceAuthority "Creative Commons 4.0 Licenses or CC0", but only supports a different source authority is not the same test as VALIDATION_LICENSE_STANDARD, and must be identified by a different identifier.
 
-#### 6.1.3 Further guidance on `Parameters` and `Arguments` (non-normative)
+#### 6.1.3 Further guidance on Parameters and Arguments (non-normative)
 
 See also the [Test Parameters](../../guide/users/index.md#34-test-parameters-non-normative) section in the [User's Guide)](../../guide/users/index.md) for further guidance on `Parameters` and `Arguments`.
 
@@ -1084,7 +1084,7 @@ The checklists below are designed to help implementers ensure that their impleme
        - `Response.result` omitted / null
        - `Response.comment` containing a `bdq:NotEmpty` explanation
      - If an unsupported non-default `Parameter` value is supplied, implementations must not use `Response.status` = `EXTERNAL_PREREQUISITES_NOT_MET` to report “unsupported parameter value”.  See: [3.6, Parameterized Tests: default behavior and unsupported values](#36-parameterized-tests-default-behavior-and-unsupported-values-normative).
-   - **Run the core validation and return a conforming `Response`**
+   - **Run the core validation and return a conforming Response**
      - Apply the Test’s stated criterion (e.g., exact match, interpretation rules, range checks) exactly as described in the `Specification`, and avoid undocumented preprocessing.
      - When evaluation succeeds, return:
        - `Response.status` = `RUN_HAS_RESULT`
@@ -1139,7 +1139,7 @@ The checklists below are designed to help implementers ensure that their impleme
      - Do not propose changes that are not explicitly allowed by the `Specification`. In particular, avoid “helpful” normalizations that would alter meaning or introduce false precision unless specified.
      - If a proposal is made, represent the proposed changes as structured data (typically a list/map of key:value pairs where keys are `Information Element` identifiers and values are proposed new values).
 
-   - **Return a conforming `Response` for an `Amendment`**
+   - **Return a conforming Response for an Amendment**
      - When evaluation succeeds, use `Response.status` values appropriate to `Amendment` Tests:
        - `FILLED_IN` when proposing new value(s) for `Information Elements` that were `bdq:Empty`.
        - `AMENDED` when proposing changes to existing `bdq:NotEmpty` value(s).
@@ -1151,7 +1151,7 @@ The checklists below are designed to help implementers ensure that their impleme
        - `Response.result` must be omitted / null.
        - `Response.comment` must be `bdq:NotEmpty` and should explain why no proposal was made (e.g., ambiguous input, not interpretable, no unambiguous match in authority).
 
-1. **Keep `Amendment` semantics clearly distinct from applying changes**
+1. **Keep Amendment semantics clearly distinct from applying changes**
    - An `Amendment` `Response.result` is a proposal. Implementations should not automatically apply the proposed changes to authoritative data.
    - The application of a Response.result from an `Amendment` Test is a separate concern from the generation of that proposal, and external to the Test API. Implementations should keep these concerns separate.
    - Implementations may support pipelines that apply proposals downstream for Quality Assurance use cases, but must preserve the ability to retain the original (unamended) values and to report both pre- and post-amendment results. See: [6.4.1 Phases: Pre-Amendment, Amendment, Post-Amendment](#641-phases-pre-amendment-amendment-post-amendment-normative).
@@ -1181,7 +1181,7 @@ BDQ Test descriptions are intentionally independent of any particular software f
 
 A Test execution framework (or “runner”) typically needs to accomplish the following steps between raw input data, a Test `Implementation`, and handling output from a Test:
 
-1. **Pick a `Use Case` and its associated `Policies`**
+1. **Pick a Use Case and its associated Policies**
    - Determine which `Use Case` is being addressed, and which `Policies` are relevant to that `Use Case`.
    - Identify which Tests are required by the relevant `Policies`.
 
@@ -1199,7 +1199,7 @@ A Test execution framework (or “runner”) typically needs to accomplish the f
      - Compare the results of `MultiRecord` `Measures` from the pre-and post-amendment phases (giving a measure of how much accepting the proposed changes from `Amendments` would improve the quality of the data for the `Use Case` at hand..
      - Produce a `Data Quality Report` that includes both pre- and post-amendment results, and that retains the original (unamended) values for reference. 
 
-1. **Consider Aggregation of unique values for `Single Record` Tests**
+1. **Consider Aggregation of unique values for Single Record Tests**
    - For `SingleRecord` tests, it may be appropriate to aggregate distinct input values and run the same Test implementation once per distinct value, rather than once per record (e.g., for a `Validation` Test that checks if a particular value is found in an authority, it may be more efficient to run the Test once per distinct value rather than once per record).
    - Aggregation should normally be by distinct values of the set of `Information Elements` for each Test, and not by distinct values of a single `Information Elements`, to ensure that the correct `Response` is associated with the correct combination of input values.
    - If aggregation is used, ensure that the `Response` for each distinct value is correctly associated with all records that contain that value to pass down a processing pipeline or to return in the final `Data Quality Report`.
@@ -1214,7 +1214,7 @@ A Test execution framework (or “runner”) typically needs to accomplish the f
    - Resolve which callable unit implements which Test (preferably by Term Name (UUID), or Versioned IRI).
    - Invoke the `Implementation` with the bound inputs in a way that is consistent and repeatable.
 
-1. **Execute a Test and Capture results as a structured `Response`**
+1. **Execute a Test and Capture results as a structured Response**
    - Ensure that every Test execution yields one `Response` containing:
      - `Response.status`
      - `Response.result` (present only when appropriate for the status and `Test Type`)
