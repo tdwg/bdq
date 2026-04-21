@@ -352,8 +352,13 @@ for templatePath, document in directories.items() :
 			# text = text + "- Preferred Label: {}\n".format(r.prefLabel)
 			text = text + "- Definition: {}\n".format(r.definition)
 			if (r.parents) :
-				parentterm = r.parents.replace("https://rs.tdwg.org/bdqffdq/terms/","")
-				text = text + "- SubClass Of: [{0}](../../list/bdqffdq/index.md#{1})\n".format(parentterm,parentterm)
+				parentterms = ""
+				separator = "";
+				for pt in r.parents.split("; ") :
+					parentterm = pt.replace("https://rs.tdwg.org/bdqffdq/terms/","")
+					parentterms = parentterms + "{0}[{1}](../../list/bdqffdq/index.md#{2})".format(separator,parentterm,parentterm)
+					separator = "; "
+				text = text + "- SubClass Of: {}\n".format(parentterms)
 			disj = disjoint_map.get(subject_iri, [])
 			if disj:
 				# display without the bdqffdq: prefix
@@ -374,9 +379,13 @@ for templatePath, document in directories.items() :
 			# text = text + "- Preferred Label: {}\n".format(r.prefLabel)
 			text = text + "- Definition: {}\n".format(r.definition)
 			if (r.parents) :
-				parentterm = r.parents.replace("https://rs.tdwg.org/bdqffdq/terms/","")
-				text = text + "- SubClass Of: [{0}](../../list/bdqffdq/index.md#{1})\n".format(parentterm,parentterm)
-				text = text + "- SubClass Of: {}\n".format(r.parents.replace("https://rs.tdwg.org/bdqffdq/terms/",""))
+				parentterms = ""
+				separator = "";
+				for pt in r.parents.split("; ") :
+					parentterm = pt.replace("https://rs.tdwg.org/bdqffdq/terms/","")
+					parentterms = parentterms + "{0}[{1}](../../list/bdqffdq/index.md#{2})".format(separator,parentterm,parentterm)
+					separator = "; "
+				text = text + "- SubClass Of: {}\n".format(parentterms)
 			if (r.range) :
 				if (r.restriction) :
 					text = text + "- [Range](../../extension/bdqffdq/index.md#{0}) [ {1} {2} ]\n".format(term,r.restriction.replace("http://www.w3.org/2002/07/owl#","owl:"), r.restrictedRange.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:"))

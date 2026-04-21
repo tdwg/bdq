@@ -1192,7 +1192,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 - Name: [bdqffdq:Amendment](../../list/bdqffdq/index.md#Amendment)
 - Definition: A bdqffdq:DataQualityNeed that expresses how proposals may be made to improve the fitness for use of data.
-- SubClass Of: [AmendmentConcept; DataQualityNeed](../../list/bdqffdq/index.md#AmendmentConcept; DataQualityNeed)
+- SubClass Of: [AmendmentConcept](../../list/bdqffdq/index.md#AmendmentConcept); [DataQualityNeed](../../list/bdqffdq/index.md#DataQualityNeed)
 - [Disjoint With](../../extension/bdqffdq/index.md#432-alldisjointclasses-normative): Issue, Measure, Validation
 
 ********************
@@ -1208,7 +1208,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 - Name: [bdqffdq:AmendmentMethod](../../list/bdqffdq/index.md#AmendmentMethod)
 - Definition: A data quality bdqffdq:SolutionsConcept that relates a bdqffdq:Amendment to its bdqffdq:Specifications.
-- SubClass Of: [AmendmentConcept; DataQualityMethod](../../list/bdqffdq/index.md#AmendmentConcept; DataQualityMethod)
+- SubClass Of: [AmendmentConcept](../../list/bdqffdq/index.md#AmendmentConcept); [DataQualityMethod](../../list/bdqffdq/index.md#DataQualityMethod)
 
 ********************
 
@@ -1216,7 +1216,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 - Name: [bdqffdq:AmendmentPolicy](../../list/bdqffdq/index.md#AmendmentPolicy)
 - Definition: A bdqffdq:NeedConcept that relates a bdqffdq:UseCase to a set of supporting bdqffdq:Amendments.
-- SubClass Of: [AmendmentConcept; Policy](../../list/bdqffdq/index.md#AmendmentConcept; Policy)
+- SubClass Of: [AmendmentConcept](../../list/bdqffdq/index.md#AmendmentConcept); [Policy](../../list/bdqffdq/index.md#Policy)
 
 ********************
 
@@ -1224,7 +1224,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 - Name: [bdqffdq:AmendmentResponse](../../list/bdqffdq/index.md#AmendmentResponse)
 - Definition: A bdqffdq:Response expressing the result of a bdqffdq:Implementation evaluating a bdqffdq:Amendment supporting a particular bdqffdq:DataQualityNeed to improve a particular bdqffdq:DataResource.
-- SubClass Of: [AmendmentConcept; Response](../../list/bdqffdq/index.md#AmendmentConcept; Response)
+- SubClass Of: [AmendmentConcept](../../list/bdqffdq/index.md#AmendmentConcept); [Response](../../list/bdqffdq/index.md#Response)
 
 ********************
 
@@ -1249,7 +1249,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 - Name: [bdqffdq:Criterion](../../list/bdqffdq/index.md#Criterion)
 - Definition: Rule against which data are evaluated for conformance to quality bdqffdq:Criteria.
-- SubClass Of: [FundamentalConcept; NeedConcept](../../list/bdqffdq/index.md#FundamentalConcept; NeedConcept)
+- SubClass Of: [FundamentalConcept](../../list/bdqffdq/index.md#FundamentalConcept); [NeedConcept](../../list/bdqffdq/index.md#NeedConcept)
 
 ********************
 
@@ -1257,7 +1257,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 - Name: [bdqffdq:DataQualityDimension](../../list/bdqffdq/index.md#DataQualityDimension)
 - Definition: An aspect of data quality.
-- SubClass Of: [FundamentalConcept; NeedConcept](../../list/bdqffdq/index.md#FundamentalConcept; NeedConcept)
+- SubClass Of: [FundamentalConcept](../../list/bdqffdq/index.md#FundamentalConcept); [NeedConcept](../../list/bdqffdq/index.md#NeedConcept)
 
 ********************
 
@@ -1305,7 +1305,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 - Name: [bdqffdq:Enhancement](../../list/bdqffdq/index.md#Enhancement)
 - Definition: Description of a means by which data could be improved.
-- SubClass Of: [AmendmentConcept; FundamentalConcept; NeedConcept](../../list/bdqffdq/index.md#AmendmentConcept; FundamentalConcept; NeedConcept)
+- SubClass Of: [AmendmentConcept](../../list/bdqffdq/index.md#AmendmentConcept); [FundamentalConcept](../../list/bdqffdq/index.md#FundamentalConcept); [NeedConcept](../../list/bdqffdq/index.md#NeedConcept)
 
 ********************
 
@@ -1344,7 +1344,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 - Name: [bdqffdq:Issue](../../list/bdqffdq/index.md#Issue)
 - Definition: A bdqffdq:DataQualityNeed that expresses how quality problems may be identified in data.
-- SubClass Of: [DataQualityNeed; IssueConcept](../../list/bdqffdq/index.md#DataQualityNeed; IssueConcept)
+- SubClass Of: [DataQualityNeed](../../list/bdqffdq/index.md#DataQualityNeed); [IssueConcept](../../list/bdqffdq/index.md#IssueConcept)
 - [Disjoint With](../../extension/bdqffdq/index.md#432-alldisjointclasses-normative): Amendment, Measure, Validation
 
 ********************
@@ -1360,7 +1360,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 - Name: [bdqffdq:IssueMethod](../../list/bdqffdq/index.md#IssueMethod)
 - Definition: A data quality bdqffdq:SolutionsConcept that relates a bdqffdq:Issue to its bdqffdq:Specifications.
-- SubClass Of: [DataQualityMethod; IssueConcept](../../list/bdqffdq/index.md#DataQualityMethod; IssueConcept)
+- SubClass Of: [DataQualityMethod](../../list/bdqffdq/index.md#DataQualityMethod); [IssueConcept](../../list/bdqffdq/index.md#IssueConcept)
 
 ********************
 
@@ -1368,7 +1368,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 - Name: [bdqffdq:IssuePolicy](../../list/bdqffdq/index.md#IssuePolicy)
 - Definition: A bdqffdq:NeedConcept that relates a bdqffdq:UseCase to a set of supporting bdqffdq:Issues.
-- SubClass Of: [IssueConcept; Policy](../../list/bdqffdq/index.md#IssueConcept; Policy)
+- SubClass Of: [IssueConcept](../../list/bdqffdq/index.md#IssueConcept); [Policy](../../list/bdqffdq/index.md#Policy)
 
 ********************
 
@@ -1376,7 +1376,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 - Name: [bdqffdq:IssueResponse](../../list/bdqffdq/index.md#IssueResponse)
 - Definition: A bdqffdq:Response expressing the result of a bdqffdq:Implementation evaluating a bdqffdq:Issue for a particular bdqffdq:DataQualityNeed in a particular bdqffdq:DataResource.
-- SubClass Of: [IssueConcept; Response](../../list/bdqffdq/index.md#IssueConcept; Response)
+- SubClass Of: [IssueConcept](../../list/bdqffdq/index.md#IssueConcept); [Response](../../list/bdqffdq/index.md#Response)
 
 ********************
 
@@ -1384,7 +1384,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 - Name: [bdqffdq:Measure](../../list/bdqffdq/index.md#Measure)
 - Definition: A bdqffdq:DataQualityNeed that expresses how the fitness of data for some use may be measured.
-- SubClass Of: [DataQualityNeed; MeasurementConcept](../../list/bdqffdq/index.md#DataQualityNeed; MeasurementConcept)
+- SubClass Of: [DataQualityNeed](../../list/bdqffdq/index.md#DataQualityNeed); [MeasurementConcept](../../list/bdqffdq/index.md#MeasurementConcept)
 - [Disjoint With](../../extension/bdqffdq/index.md#432-alldisjointclasses-normative): Amendment, Issue, Validation
 
 ********************
@@ -1400,7 +1400,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 - Name: [bdqffdq:MeasurementMethod](../../list/bdqffdq/index.md#MeasurementMethod)
 - Definition: A data quality bdqffdq:SolutionsConcept that relates a bdqffdq:Measure to its bdqffdq:Specifications.
-- SubClass Of: [DataQualityMethod; MeasurementConcept](../../list/bdqffdq/index.md#DataQualityMethod; MeasurementConcept)
+- SubClass Of: [DataQualityMethod](../../list/bdqffdq/index.md#DataQualityMethod); [MeasurementConcept](../../list/bdqffdq/index.md#MeasurementConcept)
 
 ********************
 
@@ -1408,7 +1408,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 - Name: [bdqffdq:MeasurementPolicy](../../list/bdqffdq/index.md#MeasurementPolicy)
 - Definition: A bdqffdq:NeedConcept that relates a bdqffdq:UseCase to a set of supporting bdqffdq:Measures.
-- SubClass Of: [MeasurementConcept; Policy](../../list/bdqffdq/index.md#MeasurementConcept; Policy)
+- SubClass Of: [MeasurementConcept](../../list/bdqffdq/index.md#MeasurementConcept); [Policy](../../list/bdqffdq/index.md#Policy)
 
 ********************
 
@@ -1416,7 +1416,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 - Name: [bdqffdq:MeasurementResponse](../../list/bdqffdq/index.md#MeasurementResponse)
 - Definition: A bdqffdq:Response expressing the result of a bdqffdq:Implementation measuring a particular bdqffdq:DataQualityNeed in a particular bdqffdq:DataResource.
-- SubClass Of: [MeasurementConcept; Response](../../list/bdqffdq/index.md#MeasurementConcept; Response)
+- SubClass Of: [MeasurementConcept](../../list/bdqffdq/index.md#MeasurementConcept); [Response](../../list/bdqffdq/index.md#Response)
 
 ********************
 
@@ -1424,7 +1424,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 - Name: [bdqffdq:Mechanism](../../list/bdqffdq/index.md#Mechanism)
 - Definition: An entity that can execute bdqffdq:DataQualityMethods.
-- SubClass Of: [FundamentalConcept; SolutionsConcept](../../list/bdqffdq/index.md#FundamentalConcept; SolutionsConcept)
+- SubClass Of: [FundamentalConcept](../../list/bdqffdq/index.md#FundamentalConcept); [SolutionsConcept](../../list/bdqffdq/index.md#SolutionsConcept)
 
 ********************
 
@@ -1509,7 +1509,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 - Name: [bdqffdq:Specification](../../list/bdqffdq/index.md#Specification)
 - Definition: A specific statement about how to evaluate a bdqffdq:DataQualityNeed.
-- SubClass Of: [FundamentalConcept; SolutionsConcept](../../list/bdqffdq/index.md#FundamentalConcept; SolutionsConcept)
+- SubClass Of: [FundamentalConcept](../../list/bdqffdq/index.md#FundamentalConcept); [SolutionsConcept](../../list/bdqffdq/index.md#SolutionsConcept)
 
 ********************
 
@@ -1517,7 +1517,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 - Name: [bdqffdq:UseCase](../../list/bdqffdq/index.md#UseCase)
 - Definition: A bdqffdq:NeedConcept expressing a purpose to which data are put for which the data must have quality for the result to have meaning and reliability.
-- SubClass Of: [FundamentalConcept; NeedConcept](../../list/bdqffdq/index.md#FundamentalConcept; NeedConcept)
+- SubClass Of: [FundamentalConcept](../../list/bdqffdq/index.md#FundamentalConcept); [NeedConcept](../../list/bdqffdq/index.md#NeedConcept)
 
 ********************
 
@@ -1525,7 +1525,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 - Name: [bdqffdq:Validation](../../list/bdqffdq/index.md#Validation)
 - Definition: A bdqffdq:DataQualityNeed that expresses how data may be evaluated for fitness for use.
-- SubClass Of: [DataQualityNeed; ValidationConcept](../../list/bdqffdq/index.md#DataQualityNeed; ValidationConcept)
+- SubClass Of: [DataQualityNeed](../../list/bdqffdq/index.md#DataQualityNeed); [ValidationConcept](../../list/bdqffdq/index.md#ValidationConcept)
 - [Disjoint With](../../extension/bdqffdq/index.md#432-alldisjointclasses-normative): Amendment, Issue, Measure
 
 ********************
@@ -1541,7 +1541,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 - Name: [bdqffdq:ValidationMethod](../../list/bdqffdq/index.md#ValidationMethod)
 - Definition: A data quality bdqffdq:SolutionsConcept that relates a bdqffdq:Validation to its bdqffdq:Specifications.
-- SubClass Of: [DataQualityMethod; ValidationConcept](../../list/bdqffdq/index.md#DataQualityMethod; ValidationConcept)
+- SubClass Of: [DataQualityMethod](../../list/bdqffdq/index.md#DataQualityMethod); [ValidationConcept](../../list/bdqffdq/index.md#ValidationConcept)
 
 ********************
 
@@ -1549,7 +1549,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 - Name: [bdqffdq:ValidationPolicy](../../list/bdqffdq/index.md#ValidationPolicy)
 - Definition: A bdqffdq:NeedConcept that relates a bdqffdq:UseCase to a set of supporting bdqffdq:Validations.
-- SubClass Of: [Policy; ValidationConcept](../../list/bdqffdq/index.md#Policy; ValidationConcept)
+- SubClass Of: [Policy](../../list/bdqffdq/index.md#Policy); [ValidationConcept](../../list/bdqffdq/index.md#ValidationConcept)
 
 ********************
 
@@ -1557,7 +1557,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 - Name: [bdqffdq:ValidationResponse](../../list/bdqffdq/index.md#ValidationResponse)
 - Definition: A bdqffdq:Response expressing the result of a bdqffdq:Implementation validating compliance with a particular bdqffdq:DataQualityNeed in a particular bdqffdq:DataResource.
-- SubClass Of: [Response; ValidationConcept](../../list/bdqffdq/index.md#Response; ValidationConcept)
+- SubClass Of: [Response](../../list/bdqffdq/index.md#Response); [ValidationConcept](../../list/bdqffdq/index.md#ValidationConcept)
 
 ********************
 
@@ -1594,8 +1594,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 - Name: [bdqffdq:forAmendment](../../list/bdqffdq/index.md#forAmendment)
 - Definition: Relates a bdqffdq:AmendmentMethod to a bdqffdq:Amendment.
-- SubClass Of: [amendmentProperty; forDataQualityNeed](../../list/bdqffdq/index.md#amendmentProperty; forDataQualityNeed)
-- SubClass Of: amendmentProperty; forDataQualityNeed
+- SubClass Of: [amendmentProperty](../../list/bdqffdq/index.md#amendmentProperty); [forDataQualityNeed](../../list/bdqffdq/index.md#forDataQualityNeed)
 - [Range](../../extension/bdqffdq/index.md#forAmendment) [ owl:someValuesFrom bdqffdq:forAmendment ]
 
 ********************
@@ -1611,8 +1610,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 - Name: [bdqffdq:forIssue](../../list/bdqffdq/index.md#forIssue)
 - Definition: Relates a bdqffdq:IssueMethod to a bdqffdq:Issue.
-- SubClass Of: [forDataQualityNeed; issueProperty](../../list/bdqffdq/index.md#forDataQualityNeed; issueProperty)
-- SubClass Of: forDataQualityNeed; issueProperty
+- SubClass Of: [forDataQualityNeed](../../list/bdqffdq/index.md#forDataQualityNeed); [issueProperty](../../list/bdqffdq/index.md#issueProperty)
 - [Range](../../extension/bdqffdq/index.md#forIssue) [ owl:someValuesFrom bdqffdq:forIssue ]
 
 ********************
@@ -1621,8 +1619,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 - Name: [bdqffdq:forMeasure](../../list/bdqffdq/index.md#forMeasure)
 - Definition: Relates a bdqffdq:MeasurementMethod to a bdqffdq:Measure.
-- SubClass Of: [forDataQualityNeed; measurementProperty](../../list/bdqffdq/index.md#forDataQualityNeed; measurementProperty)
-- SubClass Of: forDataQualityNeed; measurementProperty
+- SubClass Of: [forDataQualityNeed](../../list/bdqffdq/index.md#forDataQualityNeed); [measurementProperty](../../list/bdqffdq/index.md#measurementProperty)
 - [Range](../../extension/bdqffdq/index.md#forMeasure) [ owl:someValuesFrom bdqffdq:forMeasure ]
 
 ********************
@@ -1631,8 +1628,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 - Name: [bdqffdq:forValidation](../../list/bdqffdq/index.md#forValidation)
 - Definition: Relates a bdqffdq:ValidationMethod to a bdqffdq:Validation.
-- SubClass Of: [forDataQualityNeed; validationProperty](../../list/bdqffdq/index.md#forDataQualityNeed; validationProperty)
-- SubClass Of: forDataQualityNeed; validationProperty
+- SubClass Of: [forDataQualityNeed](../../list/bdqffdq/index.md#forDataQualityNeed); [validationProperty](../../list/bdqffdq/index.md#validationProperty)
 - [Range](../../extension/bdqffdq/index.md#forValidation) [ owl:someValuesFrom bdqffdq:forValidation ]
 
 ********************
@@ -1642,7 +1638,6 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 - Name: [bdqffdq:hasActedUponInformationElement](../../list/bdqffdq/index.md#hasActedUponInformationElement)
 - Definition: Describes the bdqffdq:ActedUpon bdqffdq:InformationElements assessed by a bdqffdq:DataQualityNeed about which bdqffdq:Responses arising from the bdqffdq:DataQualityNeed would apply.
 - SubClass Of: [hasInformationElement](../../list/bdqffdq/index.md#hasInformationElement)
-- SubClass Of: hasInformationElement
 
 ********************
 
@@ -1659,7 +1654,6 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 - Name: [bdqffdq:hasConsultedInformationElement](../../list/bdqffdq/index.md#hasConsultedInformationElement)
 - Definition: Describes the bdqffdq:InformationElements assessed by a bdqffdq:DataQualityNeed in order to make bdqffdq:Responses concerning bdqffdq:ActedUpon bdqffdq:InformationElements.
 - SubClass Of: [hasInformationElement](../../list/bdqffdq/index.md#hasInformationElement)
-- SubClass Of: hasInformationElement
 
 ********************
 
@@ -1667,8 +1661,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 - Name: [bdqffdq:hasCriterion](../../list/bdqffdq/index.md#hasCriterion)
 - Definition: The bdqffdq:Criterion under which a bdqffdq:Validation or bdqffdq:Issue assesses for data quality.
-- SubClass Of: [issueProperty; validationProperty](../../list/bdqffdq/index.md#issueProperty; validationProperty)
-- SubClass Of: issueProperty; validationProperty
+- SubClass Of: [issueProperty](../../list/bdqffdq/index.md#issueProperty); [validationProperty](../../list/bdqffdq/index.md#validationProperty)
 - [Range](../../extension/bdqffdq/index.md#hasCriterion) [ owl:someValuesFrom bdqffdq:hasCriterion ]
 
 ********************
@@ -1677,8 +1670,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 - Name: [bdqffdq:hasDataQualityDimension](../../list/bdqffdq/index.md#hasDataQualityDimension)
 - Definition: The bdqffdq:DataQualityDimension to which a bdqffdq:DataQualityNeed applies.
-- SubClass Of: [amendmentProperty; issueProperty; measurementProperty; validationProperty](../../list/bdqffdq/index.md#amendmentProperty; issueProperty; measurementProperty; validationProperty)
-- SubClass Of: amendmentProperty; issueProperty; measurementProperty; validationProperty
+- SubClass Of: [amendmentProperty](../../list/bdqffdq/index.md#amendmentProperty); [issueProperty](../../list/bdqffdq/index.md#issueProperty); [measurementProperty](../../list/bdqffdq/index.md#measurementProperty); [validationProperty](../../list/bdqffdq/index.md#validationProperty)
 - [Range](../../extension/bdqffdq/index.md#hasDataQualityDimension) [ owl:someValuesFrom bdqffdq:hasDataQualityDimension ]
 
 ********************
@@ -1688,7 +1680,6 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 - Name: [bdqffdq:hasEnhancement](../../list/bdqffdq/index.md#hasEnhancement)
 - Definition: The bdqffdq:Enhancement that describes how a bdqffdq:Amendment may propose changes to improve data quality.
 - SubClass Of: [amendmentProperty](../../list/bdqffdq/index.md#amendmentProperty)
-- SubClass Of: amendmentProperty
 - [Range](../../extension/bdqffdq/index.md#hasEnhancement) [ owl:someValuesFrom bdqffdq:hasEnhancement ]
 
 ********************
@@ -1697,8 +1688,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 - Name: [bdqffdq:hasInformationElement](../../list/bdqffdq/index.md#hasInformationElement)
 - Definition: Describes the bdqffdq:InformationElements assessed by a bdqffdq:DataQualityNeed.
-- SubClass Of: [amendmentProperty; issueProperty; measurementProperty; validationProperty](../../list/bdqffdq/index.md#amendmentProperty; issueProperty; measurementProperty; validationProperty)
-- SubClass Of: amendmentProperty; issueProperty; measurementProperty; validationProperty
+- SubClass Of: [amendmentProperty](../../list/bdqffdq/index.md#amendmentProperty); [issueProperty](../../list/bdqffdq/index.md#issueProperty); [measurementProperty](../../list/bdqffdq/index.md#measurementProperty); [validationProperty](../../list/bdqffdq/index.md#validationProperty)
 - [Range](../../extension/bdqffdq/index.mdhasInformationElement) bdqffdq:InformationElement
 
 ********************
@@ -1723,7 +1713,6 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 - Name: [bdqffdq:hasResponseQualifier](../../list/bdqffdq/index.md#hasResponseQualifier)
 - Definition: ResponseQualifier object asserted by an Response.
 - SubClass Of: [reportProperty](../../list/bdqffdq/index.md#reportProperty)
-- SubClass Of: reportProperty
 
 ********************
 
@@ -1732,7 +1721,6 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 - Name: [bdqffdq:hasResponseResult](../../list/bdqffdq/index.md#hasResponseResult)
 - Definition: The bdqffdq:ResponseResult object asserted by a bdqffdq:Response.
 - SubClass Of: [reportProperty](../../list/bdqffdq/index.md#reportProperty)
-- SubClass Of: reportProperty
 
 ********************
 
@@ -1741,7 +1729,6 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 - Name: [bdqffdq:hasResponseStatus](../../list/bdqffdq/index.md#hasResponseStatus)
 - Definition: The bdqffdq:ResponseStatus object asserted by a bdqffdq:Response.
 - SubClass Of: [reportProperty](../../list/bdqffdq/index.md#reportProperty)
-- SubClass Of: reportProperty
 
 ********************
 
@@ -1833,7 +1820,6 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 - Name: [bdqffdq:targetedValidation](../../list/bdqffdq/index.md#targetedValidation)
 - Definition: A bdqffdq:Validation for which the data conformance with a bdqffdq:NeedConcept may be improved by accepting proposals from a bdqffdq:Amendment via a bdqffdq:ImprovementTarget.
 - SubClass Of: [http://www.w3.org/2002/07/owl#topObjectProperty](../../list/bdqffdq/index.md#http://www.w3.org/2002/07/owl#topObjectProperty)
-- SubClass Of: http://www.w3.org/2002/07/owl#topObjectProperty
 - [Range](../../extension/bdqffdq/index.md#targetedValidation) [ owl:someValuesFrom bdqffdq:targetedValidation ]
 
 ********************
