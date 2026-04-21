@@ -1819,7 +1819,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 - Name: [bdqffdq:targetedValidation](../../list/bdqffdq/index.md#targetedValidation)
 - Definition: A bdqffdq:Validation for which the data conformance with a bdqffdq:NeedConcept may be improved by accepting proposals from a bdqffdq:Amendment via a bdqffdq:ImprovementTarget.
-- SubClass Of: [http://www.w3.org/2002/07/owl#topObjectProperty](../../list/bdqffdq/index.md#http://www.w3.org/2002/07/owl#topObjectProperty)
+- SubClass Of: owl:topObjectProperty
 - [Range](../../extension/bdqffdq/index.md#targetedValidation) [ owl:someValuesFrom bdqffdq:targetedValidation ]
 
 ********************
