@@ -190,7 +190,7 @@ The `bdqffdq:hasCriterion` object property SHOULD have an individual with a type
 
 The `bdqffdq:hasCriterion` object property MAY have an individual from the `bdqcrit:` vocabulary as its object.
 
-An axiom types the range of bdqffdq:hasCriterion as a bdqffdq:Criterion.
+An axiom types the range of `bdqffdq:hasCriterion` as a `bdqffdq:Criterion`.
 
 The `bdqffdq:hasEnhancement` object property SHOULD have an individual with a type that is a `bdqffdq:Amendment` as its subject.
 
