@@ -112,285 +112,9 @@ The following namespace abbreviations are used in this document:
 
 In any technical treatment of the BDQ standard, a precise reference to a class or property term SHOULD be made using its qualified name (the namespace prefix followed by the term local name; e.g., `bdqffdq:InformationElement`) and the namespace IRI corresponding to the namespace prefix (e.g., `https://rs.tdwg.org/bdqffdq/terms/` for `bdqffdq:`) MUST be provided. In less formal descriptions where the technical precision is not needed, the preferred label (`skos:prefLabel`, e.g., `Information Element`) or the term local name (e.g., `InformationElement`) MAY be used. The BDQ documents use all these methods.
 
-## 2 Use of Ontology Terms (normative) 
+## 2 Framework for describing data quality (non-normative)
 
-This guidance describes the use of the Framework Ontology (the Fitness for Use `bdqffdq:` vocabulary terms) in an RDF context. This guidance MAY be used to develop models of the Fitness For Use Framework in more constrained forms, including UML object models, information models, classes in a programming language, or database schemas.
-
-See also the [Use of Terms (normative)](../../list/bdqffdq/index.md#2-use-of-terms-normative) in the bdqffdq: term-list document.
-
-### 2.1 Properties of Responses (normative) 
-
-In an RDF context, the status property of a `Response` MUST be represented using an IRI (e.g., `bdqffdq:RUN_HAS_RESULT`) as the object of `bdqffdq:hasResponseStatus`.
-
-In an RDF context, the result property of a `Response` MUST be represented using:
-- `bdqffdq:hasResponseResult` when the result is categorical and comes from the controlled set of `bdqffdq:ResponseResult` named individuals (e.g., `bdqffdq:COMPLIANT`, `bdqffdq:NOT_COMPLIANT`, `bdqffdq:COMPLETE`, `bdqffdq:NOT_COMPLETE`, `bdqffdq:POTENTIAL_ISSUE`, `bdqffdq:NOT_ISSUE`); or
-- `bdqffdq:hasResponseResultValue` when the result is a literal payload (e.g., a numeric measurement, a string, or structured text such as JSON for an `Amendment` proposal). The value of `bdqffdq:hasResponseResultValue` MUST be a literal and SHOULD use an appropriate datatype (e.g., `xsd:integer`, `rdf:JSON`).
-
-In a non-RDF structured-data context (JSON, database, CSV), where `bdqffdq:ResponseStatus` and `bdqffdq:ResponseResult` are represented as strings, controlled values MUST be used and the values MUST be the local names (e.g., `RUN_HAS_RESULT`, `COMPLIANT`), unless the result is a literal value (corresponding to use of `bdqffdq:hasResponseResultValue` in RDF), in which case the value MUST be that literal.
-
-Labels MAY be used purely for display.
-
-This section summarises representation choices. Full normative constraints on the response structure of `Responses` is found in [4.1 Structure of Response (normative)](../bdqtest/index.md#41-structure-of-response-normative) of the [BDQ Tests: Concepts, Types, and Use](../bdqtest/index.md).
-
-#### 2.1.1 Table of Representations of Response Properties (non-normative)
-
-| Context | Informal Response property | RDF predicate / field | Required representation | Example |
-|---------|-----------------------------|-----------------------|-------------------------|---------|
-| RDF | `Response.status` (categorical) | `bdqffdq:hasResponseStatus` | IRI of a named individual | `bdqffdq:RUN_HAS_RESULT` |
-| RDF | `Response.result` (categorical) | `bdqffdq:hasResponseResult` | IRI of a named individual | `bdqffdq:COMPLIANT` |
-| RDF | `Response.result` (literal) | `bdqffdq:hasResponseResultValue` | Literal (SHOULD use an appropriate datatype) | `"17"^^xsd:integer` |
-| RDF | `Response.comment` (literal) | `bdqffdq:hasResponseComment` | Literal (string; MAY be language-tagged) | `"Provided value 11 is a valid dwc:day."@en` |
-| Non-RDF structured data (categorical) | `Response.status` | string corresponding to `bdqffdq:ResponseStatus` | controlled value local name string | `RUN_HAS_RESULT` |
-| Non-RDF structured data (categorical) | `Response.result` | string corresponding to `bdqffdq:ResponseResult` | controlled value local name string | `COMPLIANT` |
-| Non-RDF structured data (literal) | `Response.result` | field corresponding to `bdqffdq:hasResponseResultValue` | literal | `17` |
-| Non-RDF structured data (literal) | `Response.comment` | field corresponding to `bdqffdq:hasResponseComment` | literal (string) | `Provided value 11 is a valid dwc:day.` |
-
-A bdqffdq:hasResponseStatus is always categorical, a bdqffdq:hasResponseComment is always literal, a Response.result may be either a categorical bdqffdq:hasResponseResult or a literal bdqffdq:hasResponseResultValue.  
-
-### 2.2 Use of Properties (normative) 
-
-### 2.2.1 Relating Classes and Properties (non-normative)
-
-The (non-normative) diagram below illustrating `Validation` related concepts across needs, solutions, and reports areas of the framework is intended to help understand the normative statements in [2 Use of Ontology Terms (normative)](#2-use-of-ontology-terms-normative).  The diagram shows the expected relationships among `Validation`, `ValidationMethod`, and `Specification` classes, as well as their expected connections to other subclasses of `DataQualityNeed`, `DataQualitySolution`, and `DataQualityReport`.  Section [2 Use of Ontology Terms (normative)](#2-use-of-ontology-terms-normative) provides normative guidance on how properties are expected to be used to relate instances of these classes in a consistent way, as expectations limiting the open world assumptions of the RDF/OWL modeling of the `bdqffdq:` vocabulary.
-
-![Diagram of Validation, ValidationMethod, and ValidationResponse with related classes](../guide/bdqffdq/bdqffdq_data_quality_needs_solutions_report_validation.svg "Validation concepts in the Needs, Solutions, and Reports levels.")
-
-The use of classes and properties in [bdqtest:](../../../dist/bdqtest.ttl) also follow the guidance provided in [2.2 Use of Properties (normative)](#22-use-of-properties-normative).  The`DataQualityNeeds` (blue here) and `DataQualitySolutions` (green here) concepts in this diagram illustrate how this guidance is used in `bdqtest:` to relate the set of terms used to define a `Validation`.  The `DataQualityReports` (tan here) concepts in the diagram illustrate how a `ValidationResponse` in a `DataQualityReport` can be related to a `Validation` and its `Specification`.  The minimal use of rdfs:range and other global axioms in `bdqffdq:` aligns with best practices for ontologies intended for reuse, integration, and extension.  This approach trades strict, machine-enforceable validation and inference for flexibility, extensibility, and a low barrier to adoption.  The normative guidance in this document mitigates the risk of inconsistent usage that is allowed by the open world design of `bdqffdq:`.
-
-
-This section describes normative expectations for the use of object and datatype properties to related instances of `bdqffdq:` classes in their intended ways given the open world limited use of domains, ranges, and other axioms in the [Biodiversity Data Quality Fitness for Use Framework (Ontology)](../../../vocabulary/bdqffdq.owl) ontology. This guidance builds on the normative definitions of `bdqffdq:` object properties and datatype properties to describe how `bdqffdq:` terms can be composed in a useful and consistent way.
-
-Section [2.2.7 Identifying the Test that produced a Response (normative)](#227-identifying-the-test-that-produced-a-response-normative) highlights the importance of using the object properties with the correct cardinality to preserve the relationship between a `Response` produced by a Test and the particular Test that produced it.
-
-#### 2.2.2 Properties Relating to Data Quality Needs (normative)
-
-Each description of a data quality Test SHOULD include the properties and related instances described in the following paragraphs.
-
-The `bdqffdq:hasUseCase` object property SHOULD have an individual with a type that is a subclass of `bdqffdq:Policy` as its subject. 
-
-The `bdqffdq:hasUseCase` object property MAY have an individual from the `bdq:` vocabulary that represents a `bdqffdq:UseCase` as its object. 
-
-An axiom types the range of `bdqffdq:hasUseCase` as a `bdqffdq:UseCase`. 
-
-The `bdqffdq:includedInPolicy` object property SHOULD have an individual that is a subclass of `bdqffdq:Policy` as its subject.
-
-The `bdqffdq:includedInPolicy` object property SHOULD have an individual that is a subclass of `bdqffdq:DataQualityNeed` as its object.
-
-The four subclasses of `bdqffdq:DataQualityNeed` are `bdqffdq:Validation`, `bdqffdq:Issue`, `bdqffdq:Measure` and `bdqffdq:Amendment`.
-
-Each individual that is a subclass of `bdqffdq:DataQualityNeed` SHOULD have at least one `bdqffdq:includedInPolicy` relationship to an instance of a subclass of `bdqffdq:Policy`, which is in turn related to an instance of a `bdqffdq:UseCase`. 
-
-User communities MAY provide new Use Cases and MAY compose instances that are subtypes of `bdqffdq:DataQualityNeed` with instances of `bdqffdq:Policy` subclasses and instances of `bdqffdq:UseCase` with the object properties `bdqffdq:includesInPolicy` and `bdqffdq:hasUseCase` in new ways. 
-
-Each instance of a subclass of a `bdqffdq:DataQualityNeed` SHOULD have an `rdfs:label` in all upper case, with underscores separating components. Tests that have a `bdqffdq:hasResourceType` of `bdqffdq:SingleRecord` SHOULD follow the convention of the subclass of `bdqffdq:DataQualityNeed` in all upper case as the first word, and a representation of the `bdqffdq:AbstractInformationElement` as a single word in all upper case as the second word, in the form TESTTYPE_INFORMATIONELEMENT_CRITERIA or TESTTYPE_INFORMATIONELEMENT_ACTION_INFORMATIONELEMENT. Tests that have a `bdqffdq:hasResourceType` of `bdqffdq:MultiRecord` SHOULD have "MULTIRECORD_" as the first element in their `rdfs:label`, and MAY follow the pattern MULTIRECORD_TESTTYPE_COUNT_RESULT_INFORMATIONELEMENT_CRITERIA, or MULTIRECORD_TESTTYPE_QA_INFORMATIONELEMENT_CRITERIA. The `rdfs:label` of the instance of the subclass of `bdqffdq:DataQualityNeed` SHOULD be used by humans to identify Tests.
-
-Each instance of a subclass of `bdqffdq:DataQualityNeed` MUST have exactly one `bdqffdq:hasResourceType` object property linking it to a `bdqffdq:SingleRecord` or a `bdqffdq:MultiRecord`.
-
-The `bdqffdq:hasCriterion` object property SHOULD have an individual with a type that is a `bdqffdq:Validation` or a `bdqffdq:Issue` as its subject.
-
-The `bdqffdq:hasCriterion` object property MAY have an individual from the `bdqcrit:` vocabulary as its object.
-
-An axiom types the range of `bdqffdq:hasCriterion` as a `bdqffdq:Criterion`.
-
-The `bdqffdq:hasEnhancement` object property SHOULD have an individual with a type that is a `bdqffdq:Amendment` as its subject.
-
-The `bdqffdq:hasEnhancement` object property MAY have an individual from the `bdqenh:` vocabulary as its object.
-
-An axiom types the range of `bdqffdq:hasEnhancement` as a `bdqffdq:Enhancement`.
-
-The `bdqffdq:hasDataQualityDimension` object property SHOULD have an individual with a type that is a subclass of `bdqffdq:DataQualityNeed` as its subject.
-
-The `bdqffdq:hasDataQualityDimension` object property MAY have an individual in the `bdqdim:` vocabulary is its object. 
-
-An axiom types the range of `bdqffdq:hasDataQualityDimension` as a `bdqffdq:DataQualityDimension`.
-
-Each individual instance of a `bdqffdq:Validation` SHOULD have exactly one `bdqffdq:hasDataQualityDimension` property and exactly one `bdqffdq:Criterion` property.
-
-Each individual instance of a `bdqffdq:Issue` SHOULD have exactly one `bdqffdq:hasDataQualityDimension` property and exactly one `bdqffdq:Criterion` property.
-
-Each individual instance of a `bdqffdq:Measure` SHOULD have exactly one `bdqffdq:hasDataQualityDimension` property.
-
-Each individual instance of a `bdqffdq:Amendment` SHOULD have exactly one `bdqffdq:hasDataQualityDimension` property and exactly one `bdqffdq:Enhancement` property.
-
-A subproperty of the `bdqffdq:hasInformationElement` object property SHOULD have an individual that is a subclass of `bdqffdq:InformationElement` as its object.
-
-A subproperty of the `bdqffdq:hasInformationElement` object property SHOULD have an individual that is a subclass of `bdqffdq:DataQualityNeed` as its subject.
-
-Each instance of a subclass of `bdqffdq:DataQualityNeed` SHOULD have exactly one `bdqffdq:hasActedUponInformationElement` property linking it to a `bdqffdq:ActedUpon`. 
-
-Each instance of `bdqffdq:ActedUpon` SHOULD have one to many `bdqffdq:composedOf` object properties linking it to specific `Information Elements`.
-
-Each instance of a subclass of `bdqffdq:DataQualityNeed` MAY have exactly one `bdqffdq:hasConsultedInformationElement` property linking it to a `bdqffdq:Consulted`.
-
-Each instance of `bdqffdq:Consulted` SHOULD have one to many `bdqffdq:composedOf` object properties linking it to specific `Information Elements`.
-
-Each instance of a subclass of `bdqffdq:DataQualityNeed` MAY have a `bdqffdq:hasInformationElement` property linking it to a `bdqffdq:AbstractInformationElement`.
-
-Each instance of `bdqffdq:AbstractInformationElement` SHOULD have `rdfs:label` and `rdfs:comment` properties describing the scope of the `Information Element` with the `rdfs:label` corresponding to the INFORMATIONELEMENT portion of the `rdfs:label` for an instance of a subclass of `bdqffdq:DataQualityNeed` following the convention described above in this section. 
-
-#### 2.2.3 Properties Relating Data Quality Needs to Data Quality Solutions (normative)
-
-Each description of a data quality Test SHOULD include the properties and related instances given below.
-
-The `bdqffdq:forValidation` object property SHOULD have an individual with a type that is a subclass of `bdqffdq:ValidationMethod` as its subject.
-
-An axiom places an `owl:restriction` on the object of the `bdqffdq:forValidation` object property as a `bdqffdq:Validation`.
-
-Each `bdqffdq:Validation` method SHOULD have exactly one `bdqffdq:forValidation` object property.
-
-The `bdqffdq:forAmendment` object property SHOULD have an individual with a type that is a subclass of `bdqffdq:AmendmentMethod` as its subject.
-
-An axiom places an `owl:restriction` on the object of the `bdqffdq:forAmendment` object property as a `bdqffdq:Amendment`.
-
-Each `bdqffdq:Amendment` method SHOULD have exactly one `bdqffdq:forAmendment` object property.
-
-The `bdqffdq:forMeasure` object property SHOULD have an individual with a type that is a subclass of `bdqffdq:MeasureMethod` as its subject.
-
-An axiom places an `owl:restriction` on the object of the `bdqffdq:forMeasure` object property as a `bdqffdq:Measure`.
-
-Each `bdqffdq:Measure` method SHOULD have exactly one `bdqffdq:forMeasure` object property.
-
-The `bdqffdq:forIssue` object property SHOULD have an individual with a type that is a subclass of `bdqffdq:IssueMethod` as its subject.
-
-An axiom places an `owl:restriction` on the object of the `bdqffdq:forIssue` object property as a `bdqffdq:Issue`.
-
-Each `bdqffdq:Issue` method SHOULD have exactly one `bdqffdq:forIssue` object property.
-
-#### 2.2.4 Properties Relating to Data Quality Solutions Provided in a Test Description (normative)
-
-Each description of a data quality Test SHOULD include the following properties and related instances.
-
-The `bdqffdq:hasSpecification` object property SHOULD have an instance of a subclass of `bdqffdq:DataQualityMethod` as its subject.
-
-An axiom places an `owl:restriction` on the object of the `bdqffdq:hasSpecification` object property as a `bdqffdq:Specification`.
-
-An instance of `bdqffdq:Specification` SHOULD be the object of exactly one `bdqffdq:hasSpecification` property linking it to an instance of a subclass of `bdqffdq:DataQualityMethod`, which SHOULD be the subject of exactly one subproperty of a `bdqffdq:forDataQualityNeed` property linking it to a subclass of `bdqffdq:DataQualityNeed`.
-
-The `bdqffdq:hasArgument` object property SHOULD have a `bdqffdq:Specification` as its subject.
-
-An axiom types the object of the `bdqffdq:hasArgument` object as a `bdqffdq:Argument`.
-
-An instance of `bdqffdq:Argument` SHOULD have exactly one `bdqffdq:hasArgumentValue` data property holding the value of the argument that replaces the `bdqffdq:Parameter` in the `bdqffdq:hasExpectedResponse` of the `bdqffdq:Specification`. An instance of `bdqffdq:Argument` SHOULD have exactly one `bdqffdq:hasParameter` object property that denotes the parameter within the `bdqffdq:hasExpectedResponse` that is to be replaced by the value of the `bdqffdq:hasArgumentValue`. An instance of `bdqffdq:Argument` SHOULD be related to exactly one instance of a `bdqffdq:Specification` with the `bdqffdq:hasArgument` object property.
-
-Each instance of a `bdqffdq:Specification` MAY have zero to many `bdqffdq:hasArgument` object properties relating it to zero to many `bdqffdq:Argument` instances.
-
-Each instance of a `bdqffdq:Specification` with a `bdqffdq:hasAuthoritiesDefaults` value that references at least one parameter MUST have a corresponding `bdqffdq:hasArgument` object property. The instances of `bdqffdq:Argument` related through these `bdqffdq:hasArgument` object properties SHOULD have appropriate `bdqffdq:hasArgumentValue` and `bdqffdq:hasParameter` triples to express the actual and formal parameters for the `bdqffdq:Specification` instance.
-
-The `bdqffdq:hasParameter` object property SHOULD have a `bdqffdq:Argument` as its subject.
-
-An axiom types the object of the `bdqffdq:hasParameter` object property as a `bdqffdq:Parameter`.
-
-#### 2.2.5 Properties relating to data quality solutions provided by an implementation (normative)
-
-Each data quality `Mechanism` that produces `Data Quality Reports` using the `bdqffdq:` vocabulary SHOULD include the following properties and related instances.
-
-The `bdqffdq:usesSpecification` object property SHOULD have a `bdqffdq:Implementation` as its subject.
-
-An axiom places an `owl:restriction` on the object of the `bdqffdq:usesSpecification` object property as a `bdqffdq:Specification`.
-
-Each `bdqffdq:Implementation` SHOULD have one and only one `bdqffdq:usesSpecification` object property.
-
-The `bdqffdq:implementedBy` object property SHOULD have a `bdqffdq:Implementation` as its subject.
-
-An axiom places an `owl:restriction` on the object of the `bdqffdq:implementedBy` object property as a `bdqffdq:Mechanism`.
-
-Each `bdqffdq:Implementation` SHOULD have a `bdqffdq:implementedBy` object property.
-
-A `bdqffdq:Implementation` SHOULD have one and only one `bdqffdq:implementedBy` object property.
-
-#### 2.2.6 Properties relating `Data Quality Reports` (normative)
-
-Each data quality `Mechanism` that produces `Data Quality Reports` using the `bdqffdq:` vocabulary SHOULD include the following properties and related instances.
-
-Nothing in this section is to be construed as relaxing the normative statements in the [User's Guide](../users/index.md) and [Implementer's Guide](../implementers/index.md) concerning the expression of data quality responses in forms other than RDF. Each data quality `Mechanism` MUST produce results corresponding to `bdqffdq:Responses` with `bdqffdq:hasResponseStatus`, `bdqffdq:hasResponseResult`, and `bdqffdq:hasResponseComment` as specified in those guides. 
-
-The `bdqffdq:producesResponse` object property SHOULD have an instance of `bdqffdq:Implementation` as its subject.
-
-The `bdqffdq:producesResponse` object property SHOULD have an instance of a subclass of `bdqffdq:Response` as its object.
-
-Each instance of a `bdqffdq:Implementation` MAY have zero to many `bdqffdq:producesResponse` object properties.
-
-Each instance of a `bdqffdq:Asssertion` SHOULD be the object of exactly one `bdqffdq:producesResponse` object property. 
-
-#### 2.2.7 Identifying the Test that produced a Response (normative)
-
-Following the object properties from an instance of a `bdqffdq:Response` to an instance of a subclass of a `bdqffdq:DataQualityNeed` SHOULD identify one and only one instance of a subclass of a `bdqffdq:DataQualityNeed` for a single instance of a `bdqffdq:Response`. If this condition is not met, it is not possible to tell which Test with which `Parameter` argument values produced the `Response`.
-
-Each instance of a `bdqffdq:ValidationResponse` SHOULD be the object of one and only one `bdqffdq:producesResponse` property linking it to an instance of a `bdqffdq:Implementation`, which in turn SHOULD be the subject of one and only one `bdqffdq:usesSpecification` property linking it to an instance of a `bdqffdq:Specification`, which in turn SHOULD be the object of one and only one `bdqffdq:hasSpecification` property linking it to an instance of a `bdqffdq:ValidationMethod`, which in turn SHOULD be the subject for one and only one `bdqffdq:forValidation` property linking it to an instance of a `bdqffdq:Validation`.
-
-Each instance of a `bdqffdq:IssueResponse` SHOULD be the object of one and only one `bdqffdq:producesResponse` property linking it to an instance of a `bdqffdq:Implementation`, which in turn SHOULD be the subject of one and only one `bdqffdq:usesSpecification` property linking it to an instance of a `bdqffdq:Specification`, which in turn SHOULD be the object of one and only one `bdqffdq:hasSpecification` property linking it to an instance of a `bdqffdq:IssueMethod`, which in turn SHOULD be the subject for one and only one `bdqffdq:forIssue` property linking it to an instance of a `bdqffdq:Issue`.
-
-Each instance of a `bdqffdq:MeasurementResponse` SHOULD be the object of one and only one `bdqffdq:producesResponse` property linking it to an instance of a `bdqffdq:Implementation`, which in turn SHOULD be the subject of one and only one `bdqffdq:usesSpecification` property linking it to an instance of a `bdqffdq:Specification`, which in turn SHOULD be the object of one and only one `bdqffdq:hasSpecification` property linking it to an instance of a `bdqffdq:MeasurementMethod`, which in turn SHOULD be the subject for one and only one `bdqffdq:forMeasure` property linking it to an instance of a `bdqffdq:Measure`.
-
-Each instance of a `bdqffdq:AmendmentResponse` SHOULD be the object of one and only one `bdqffdq:producesResponse` property linking it to an instance of a `bdqffdq:Implementation`, which in turn SHOULD be the subject of one and only one `bdqffdq:usesSpecification` property linking it to an instance of a `bdqffdq:Specification`, which in turn SHOULD be the object of one and only one `bdqffdq:hasSpecification` property linking it to an instance of a `bdqffdq:AmendmentMethod`, which in turn SHOULD be the subject for one and only one `bdqffdq:forAmendment` property linking it to an instance of a `bdqffdq:Amendment`.
-
-Given a `Response`, the following query returns which Test was run with which argument values for which parameters by which mechanism to produce it. This query SHOULD only return a single row. 
- 
-    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-    PREFIX owl: <http://www.w3.org/2002/07/owl#>
-    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-    PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
-    SELECT ?test ?label ?description  (GROUP_CONCAT(DISTINCT ?params; separator='; ') as ?parameters) ?mechanism
-    WHERE {
-      ?test rdf:type bdqffdq:Validation . ?test rdfs:label ?label . ?method bdqffdq:forValidation ?test .
-      ?method bdqffdq:hasSpecification ?specification . ?specification rdfs:comment ?description .
-      OPTIONAL {
-         ?specification bdqffdq:hasArgument ?argument . ?argument bdqffdq:hasArgumentValue ?argumentValue . ?argument bdqffdq:hasParameter ?parameter .
-         BIND (CONCAT(STR(?parameter), "=" , ?argumentValue ) as ?params )
-      } .
-      ?implementation bdqffdq:usesSpecification ?specification . ?implementation bdqffdq:producesResponse ?assertion .
-      ?implementation bdqffdq:implementedBy ?mechanism .
-      FILTER (STR(?assertion) = "{id of assertion to look up}")
-    }
-    GROUP BY ?test ?label ?description ?mechanism
-
-Where, in this query, the text {id of assertion to look up} is a placeholder to replace with the id of the instance of the `bdqffdq:Response` to look up.
-
-##### 2.3 Properties that should be one-to-one (normative)
-
-**Validation**
-
-- Each instance of a `bdqffdq:Validation` SHOULD be the object of one and only one `bdqffdq:forValidation` property.
-- Each instance of a `bdqffdq:ValidationMethod` SHOULD be the subject of one and only one `bdqffdq:forValidation` property.
-- Each instance of a `bdqffdq:Specification` SHOULD be the object of one and only one `bdqffdq:hasSpecification` property.
-- Each instance of a `bdqffdq:Implementation` SHOULD be the subject of one and only one `bdqffdq:usesSpecification` property.
-- Each instance of a `bdqffdq:Implementation` MAY be the subject of zero to many `bdqffdq:producesResponse` properties.
-- Each instance of a `bdqffdq:ValidationResponse` SHOULD be the object of one and only one `bdqffdq:producesResponse` property.
-
-**Issue**
-
-- Each instance of a `bdqffdq:Issue` SHOULD be the object of one and only one `bdqffdq:forIssue` property.
-- Each instance of a `bdqffdq:IssueMethod` SHOULD be the subject of one and only one `bdqffdq:forIssue` property.
-- Each instance of a `bdqffdq:Specification` SHOULD be the object of one and only one `bdqffdq:hasSpecification` property.
-- Each instance of a `bdqffdq:Implementation` SHOULD be the subject of one and only one bdqffdq:usesSpecification property.
-- Each instance of a bdqffdq:Specification SHOULD be the object of one and only one bdqffdq:usesSpecification property.
-- Each instance of a `bdqffdq:Implementation` MAY be the subject of zero to many `bdqffdq:producesResponse` properties.
-- Each instance of a `bdqffdq:IssueResponse` SHOULD be the object of one and only one `bdqffdq:producesResponse` property.
-
-**Measure**
-
-- Each instance of a `bdqffdq:Measure` SHOULD be the object of one and only one `bdqffdq:forMeasure` property.
-- Each instance of a `bdqffdq:MeasurementMethod` SHOULD be the subject of one and only one `bdqffdq:forMeasure` property.
-- Each instance of a `bdqffdq:Specification` SHOULD be the object of one and only one `bdqffdq:hasSpecification` property.
-- Each instance of a `bdqffdq:Implementation` SHOULD be the subject of one and only one `bdqffdq:usesSpecification` property.
-- Each instance of a `bdqffdq:Specification` SHOULD be the object of one and only one `bdqffdq:usesSpecification` property.
-- Each instance of a `bdqffdq:Implementation` MAY be the subject of zero to many `bdqffdq:producesResponse` properties.
-- Each instance of a `bdqffdq:MeasurementResponse` SHOULD be the object of one and only one `bdqffdq:producesResponse` property.
-
-**Amendment**
-
-- Each instance of a `bdqffdq:Amendment` SHOULD be the object of one and only one `bdqffdq:forAmendment` property.
-- Each instance of a `bdqffdq:AmendmentMethod` SHOULD be the subject of one and only one `bdqffdq:forAmendment` property.
-- Each instance of a `bdqffdq:Specification` SHOULD be the object of one and only one `bdqffdq:hasSpecification` property.
-- Each instance of a `bdqffdq:Implementation` SHOULD be the subject of one and only one `bdqffdq:usesSpecification` property.
-- Each instance of a `bdqffdq:Specification` SHOULD be the object of one and only one `bdqffdq:usesSpecification` property.
-- Each instance of a `bdqffdq:Implementation` MAY be the subject of zero to many `bdqffdq:producesResponse` properties.
-- Each instance of a `bdqffdq:AmendmentResponse` SHOULD be the object of one and only one `bdqffdq:producesResponse` property.
-
-## 3 Framework for describing data quality (non-normative)
-
-### 3.1 Introduction and Context (non-normative)
+### 2.1 Introduction and Context (non-normative)
 
 The `bdqffdq:` portion of the BDQ standard is a specification for a framework for describing data quality. This Fitness for Use Framework (often referred to simply as "The Framework") is based on a mathematical formulation, using set theory (Veiga, 2016), and is represented as an OWL ontology. This document describes the organization and use of the OWL ontology.
 
@@ -398,7 +122,7 @@ This document provides a background for understanding the `bdqtest:` Test descri
 
 See the [Fitness for Use Framework Ontology](../../guide/bdqffdq/index.md) for a concise description and normative information about the `bdqffdq:` ontology and a summary of the mathematical formalization. See the [Fitness For Use Framework Ontology List of Terms](../../list/bdqffdq/index.md) document for the list of terms in the `bdqffdq:` vocabulary. See the [Fitness For Use Framework Ontology Vocabulary Extension](../../extension/bdqffdq/index.md) for documentation on additional axioms. See the [Biodiversity Data Quality Fitness for Use Framework (Ontology)](../../../vocabulary/bdqffdq.owl) for the formal representation of the vocabulary as an OWL ontology. The mathematical formalization provides a description of inferences and reasoning that may be made with the terms in the vocabulary.
 
-### 3.2 Description of the Fitness For Use Framework ontology (non-normative)
+### 2.2 Description of the Fitness For Use Framework ontology (non-normative)
 
 The Fitness for Use Framework defines data quality in relation to a specified use, emphasizing that data quality is not abstract but purpose-dependent. It provides a formal way to describe a `Use Case` (`bdqffdq:UseCase`) and the `Criteria` for evaluating whether a dataset is fit for that purpose. By linking data quality explicitly to use, the Framework enables consistent assessment and assurance of fitness for a given purpose.
 
@@ -408,17 +132,17 @@ The Framework can also be conceptually divided into four vertical themes, four s
 
 We use the informal term "Test" to describe these four vertical themes, a Test involves terms in both Needs and Solutions, and Tests produce particular reporting elements.
 
-#### 3.2.1 Data Quality Control and Data Quality Assurance (non-normative)
+#### 2.2.1 Data Quality Control and Data Quality Assurance (non-normative)
 
 The Framework draws a distinction between **Quality Control** and **Quality Assurance**. Quality Control processes seek to assess the quality of data for some purpose, then identify changes to the data or to processes around the data to improve their quality. Quality Assurance processes seek to filter some set of data to a subset that is fit for some purpose, that is, to assure that data used for some purpose are fit for that purpose.
 
 It is important to recognize that BDQ does not standardize complete `Quality Control` or `Quality Assurance` workflows (e.g., user roles, review and remediation procedures, pipelines, thresholds, or reporting formats). Instead, BDQ standardizes the semantics of `Tests` and their `Responses` and provides `Measure` patterns that can be used to support `Quality Control` and `Quality Assurance` workflows in a consistent way.
 
-#### 3.2.2 Information Elements (non-normative)
+#### 2.2.2 Information Elements (non-normative)
 
 The Framework has an abstract concept of `Information Elements`. To frame Tests on Darwin Core terms in a usable way, we list specific Darwin Core terms as the `Information Elements` in each Test.
 
-#### 3.2.3 Concepts in the Framework, Test Types: Validation, Issue, Measure, Amendment (non-normative)
+#### 2.2.3 Concepts in the Framework, Test Types: Validation, Issue, Measure, Amendment (non-normative)
 
 The Framework defines four central concepts for describing and evaluating `Data Quality Needs`: `Validation`, `Issue`, `Measure`, and `Amendment`.  
 
@@ -452,7 +176,7 @@ Formally, in the `Data Quality Needs` level, the Framework starts with a `Use Ca
 ![Diagram of Single Record and Multi Record as named individual instances of the Resource class, showing Resource as a rectangular node above rectangular nodes for Multi Record and Amendment. ](resource_types.png)
 *Representation of Single Record and Multi Record as named individual instances of the Resource class.*
 
-### 3.3 Data Quality Needs, Data Quality Mechanisms, Data Quality Reports (non-normative)
+### 2.3 Data Quality Needs, Data Quality Mechanisms, Data Quality Reports (non-normative)
 
 The Fitness For Use Framework organizes data quality concepts into three core areas — Needs, Mechanisms, and Reports — which can be viewed as horizontal slices through the Framework (Veiga et al., 2017).
 
@@ -482,7 +206,7 @@ A useful way to think of the Framework is to divide it horizontally into Needs, 
 ![Diagram Illustrating both the horizontal (Needs/Solutions/Reports) layers and the vertical Test concepts (Validations, Issues, Measures and Amendments)](bdqffdq_data_quality_layers.svg)
 *All four Tests concepts in the Needs Solutions, and Reports levels.*
 
-### 3.4 Responses (non-normative)
+### 2.4 Responses (non-normative)
 
 The content of this section is non-normative, related normative guidance is in section [5.1 The Response Object (normative)](../implementers/index.md#51-the-response-object-normative) of the [BDQ Implementer's Guide](../implementers/index.md).
 
@@ -498,14 +222,44 @@ It is expected that `Response` objects instances will involve, in RDF, a combina
 
 See [4.1 Structure of a Response (normative)](../../guide/bdqtest/index.md#41-structure-of-response-normative) in [BDQ Tests and Assertions](../../guide/bdqtest/index.md) for further normative guidance on Responses as RDF or as data structures in non-RDF settings.
 
-### 3.5 Organization of the bdqtest: classes  (non-normative)
+### 2.4.1 Properties of Responses (normative) 
+
+In an RDF context, the status property of a `Response` MUST be represented using an IRI (e.g., `bdqffdq:RUN_HAS_RESULT`) as the object of `bdqffdq:hasResponseStatus`.
+
+In an RDF context, the result property of a `Response` MUST be represented using:
+- `bdqffdq:hasResponseResult` when the result is categorical and comes from the controlled set of `bdqffdq:ResponseResult` named individuals (e.g., `bdqffdq:COMPLIANT`, `bdqffdq:NOT_COMPLIANT`, `bdqffdq:COMPLETE`, `bdqffdq:NOT_COMPLETE`, `bdqffdq:POTENTIAL_ISSUE`, `bdqffdq:NOT_ISSUE`); or
+- `bdqffdq:hasResponseResultValue` when the result is a literal payload (e.g., a numeric measurement, a string, or structured text such as JSON for an `Amendment` proposal). The value of `bdqffdq:hasResponseResultValue` MUST be a literal and SHOULD use an appropriate datatype (e.g., `xsd:integer`, `rdf:JSON`).
+
+In a non-RDF structured-data context (JSON, database, CSV), where `bdqffdq:ResponseStatus` and `bdqffdq:ResponseResult` are represented as strings, controlled values MUST be used and the values MUST be the local names (e.g., `RUN_HAS_RESULT`, `COMPLIANT`), unless the result is a literal value (corresponding to use of `bdqffdq:hasResponseResultValue` in RDF), in which case the value MUST be that literal.
+
+Labels MAY be used purely for display.
+
+This section summarises representation choices. Full normative constraints on the response structure of `Responses` is found in [4.1 Structure of Response (normative)](../bdqtest/index.md#41-structure-of-response-normative) of the [BDQ Tests: Concepts, Types, and Use](../bdqtest/index.md).
+
+#### 2.4.1.1 Table of Representations of Response Properties (non-normative)
+
+| Context | Informal Response property | RDF predicate / field | Required representation | Example |
+|---------|-----------------------------|-----------------------|-------------------------|---------|
+| RDF | `Response.status` (categorical) | `bdqffdq:hasResponseStatus` | IRI of a named individual | `bdqffdq:RUN_HAS_RESULT` |
+| RDF | `Response.result` (categorical) | `bdqffdq:hasResponseResult` | IRI of a named individual | `bdqffdq:COMPLIANT` |
+| RDF | `Response.result` (literal) | `bdqffdq:hasResponseResultValue` | Literal (SHOULD use an appropriate datatype) | `"17"^^xsd:integer` |
+| RDF | `Response.comment` (literal) | `bdqffdq:hasResponseComment` | Literal (string; MAY be language-tagged) | `"Provided value 11 is a valid dwc:day."@en` |
+| Non-RDF structured data (categorical) | `Response.status` | string corresponding to `bdqffdq:ResponseStatus` | controlled value local name string | `RUN_HAS_RESULT` |
+| Non-RDF structured data (categorical) | `Response.result` | string corresponding to `bdqffdq:ResponseResult` | controlled value local name string | `COMPLIANT` |
+| Non-RDF structured data (literal) | `Response.result` | field corresponding to `bdqffdq:hasResponseResultValue` | literal | `17` |
+| Non-RDF structured data (literal) | `Response.comment` | field corresponding to `bdqffdq:hasResponseComment` | literal (string) | `Provided value 11 is a valid dwc:day.` |
+
+A bdqffdq:hasResponseStatus is always categorical, a bdqffdq:hasResponseComment is always literal, a Response.result may be either a categorical bdqffdq:hasResponseResult or a literal bdqffdq:hasResponseResultValue.  
+
+
+### 2.5 Organization of the bdqtest: classes  (non-normative)
 
 Following is a knowledge graph showing the is-a relationships between the classes in the Fitness for Use Framework:
 
 ![Diagram of the is-a class relationships of bdqffdq:, as a tree expanding left to right, with the root owl:Thing node not shown.](bdqffdq_class_diagram.png)
 *Diagram showing the relationships among the bdqffdq: classes.*
 
-### 3.6 Example representation of a BDQ Test (non-normative)
+### 2.6 Example representation of a BDQ Test (non-normative)
 
 Below is a fragment in Turtle describing VALIDATION_COUNTRY_FOUND, composed of a `Validation`, linking an `Acted Upon` `Information Element`, a `Criterion`, and the `Resource Type` `Single Record`, with the `Validation` linked to a `Validation Method`, and from there a `Specification`. Also shown is a `Validation Policy` linking this `Validation` to a `Use Case`.
 
@@ -590,9 +344,256 @@ Below is a fragment in Turtle describing VALIDATION_COUNTRY_FOUND, composed of a
         bdqtest:d257eb98-27cb-48e5-8d3c-ab9fca4edd11-2025-03-07, bdqtest:4eb48fdf-7299-4d63-9d08-246902e2857f-2025-03-07;
       skos:prefLabel "ValidationPolicy: (49) validations  in UseCase bdq:Spatial-Temporal_Patterns" .
 
-### 3.7 Cardinality of bdqffdq: terms (non-normative)
+## 3 Use of Ontology Terms (normative) 
 
-The content of this section is non-normative, see the [Fitness for Use Framework Ontology](../../guide/bdqffdq/index.md) document for related normative guidance.  These expectations are based on the mathematical formalization of the Fitness for Use Framework, and are intended to provide additional explanatory guidance on how class instances in `bdqffdq:` are expected to be related to each other through properties, failure to follow these expectations may result in an inability to use the Framework effectively.
+This guidance describes the use of the Framework Ontology (the Fitness for Use `bdqffdq:` vocabulary terms) in an RDF context. This guidance MAY be used to develop models of the Fitness For Use Framework in more constrained forms, including UML object models, information models, classes in a programming language, or database schemas.
+
+See also the [Use of Terms (normative)](../../list/bdqffdq/index.md#2-use-of-terms-normative) in the bdqffdq: term-list document.
+
+### 3.1 Use of Properties (normative) 
+
+### 3.1.1 Relating Classes and Properties (non-normative)
+
+The (non-normative) diagram below illustrating `Validation` related concepts across needs, solutions, and reports areas of the framework is intended to help understand the normative statements in [3 Use of Ontology Terms (normative)](#3-use-of-ontology-terms-normative).  The diagram shows the expected relationships among `Validation`, `ValidationMethod`, and `Specification` classes, as well as their expected connections to other subclasses of `DataQualityNeed`, `DataQualitySolution`, and `DataQualityReport`.  Section [3 Use of Ontology Terms (normative)](#3-use-of-ontology-terms-normative) provides normative guidance on how properties are expected to be used to relate instances of these classes in a consistent way, as expectations limiting the open world assumptions of the RDF/OWL modeling of the `bdqffdq:` vocabulary.
+
+![Diagram of Validation, ValidationMethod, and ValidationResponse with related classes](../guide/bdqffdq/bdqffdq_data_quality_needs_solutions_report_validation.svg "Validation concepts in the Needs, Solutions, and Reports levels.")
+
+The use of classes and properties in [bdqtest:](../../../dist/bdqtest.ttl) follow the guidance provided in this section.  The`DataQualityNeeds` (blue here) and `DataQualitySolutions` (green here) concepts in this diagram illustrate how this guidance is used in `bdqtest:` to relate the set of terms used to define a `Validation`.  The `DataQualityReports` (tan here) concepts in the diagram illustrate how a `ValidationResponse` in a `DataQualityReport` can be related to a `Validation` and its `Specification`.  The minimal use of rdfs:range and other global axioms in `bdqffdq:` aligns with best practices for ontologies intended for reuse, integration, and extension.  This approach trades strict, machine-enforceable validation and inference for flexibility, extensibility, and a low barrier to adoption.  The normative guidance in this document mitigates the risk of inconsistent usage that is allowed by the open world design of `bdqffdq:`.
+
+
+This section describes normative expectations for the use of object and datatype properties to related instances of `bdqffdq:` classes in their intended ways given the open world limited use of domains, ranges, and other axioms in the [Biodiversity Data Quality Fitness for Use Framework (Ontology)](../../../vocabulary/bdqffdq.owl) ontology. This guidance builds on the normative definitions of `bdqffdq:` object properties and datatype properties to describe how `bdqffdq:` terms can be composed in a useful and consistent way.
+
+Section [3.2 Identifying the Test that produced a Response (normative)](#32-identifying-the-test-that-produced-a-response-normative) highlights the importance of using the object properties with the correct cardinality to preserve the relationship between a `Response` produced by a Test and the particular Test that produced it.
+
+#### 3.1.2 Properties Relating to Data Quality Needs (normative)
+
+Each description of a data quality Test SHOULD include the properties and related instances described in the following paragraphs.
+
+The `bdqffdq:hasUseCase` object property SHOULD have an individual with a type that is a subclass of `bdqffdq:Policy` as its subject. 
+
+The `bdqffdq:hasUseCase` object property MAY have an individual from the `bdq:` vocabulary that represents a `bdqffdq:UseCase` as its object. 
+
+An axiom types the range of `bdqffdq:hasUseCase` as a `bdqffdq:UseCase`. 
+
+The `bdqffdq:includedInPolicy` object property SHOULD have an individual that is a subclass of `bdqffdq:Policy` as its subject.
+
+The `bdqffdq:includedInPolicy` object property SHOULD have an individual that is a subclass of `bdqffdq:DataQualityNeed` as its object.
+
+The four subclasses of `bdqffdq:DataQualityNeed` are `bdqffdq:Validation`, `bdqffdq:Issue`, `bdqffdq:Measure` and `bdqffdq:Amendment`.
+
+Each individual that is a subclass of `bdqffdq:DataQualityNeed` SHOULD have at least one `bdqffdq:includedInPolicy` relationship to an instance of a subclass of `bdqffdq:Policy`, which is in turn related to an instance of a `bdqffdq:UseCase`. 
+
+User communities MAY provide new Use Cases and MAY compose instances that are subtypes of `bdqffdq:DataQualityNeed` with instances of `bdqffdq:Policy` subclasses and instances of `bdqffdq:UseCase` with the object properties `bdqffdq:includesInPolicy` and `bdqffdq:hasUseCase` in new ways. 
+
+Each instance of a subclass of a `bdqffdq:DataQualityNeed` SHOULD have an `rdfs:label` in all upper case, with underscores separating components. Tests that have a `bdqffdq:hasResourceType` of `bdqffdq:SingleRecord` SHOULD follow the convention of the subclass of `bdqffdq:DataQualityNeed` in all upper case as the first word, and a representation of the `bdqffdq:AbstractInformationElement` as a single word in all upper case as the second word, in the form TESTTYPE_INFORMATIONELEMENT_CRITERIA or TESTTYPE_INFORMATIONELEMENT_ACTION_INFORMATIONELEMENT. Tests that have a `bdqffdq:hasResourceType` of `bdqffdq:MultiRecord` SHOULD have "MULTIRECORD_" as the first element in their `rdfs:label`, and MAY follow the pattern MULTIRECORD_TESTTYPE_COUNT_RESULT_INFORMATIONELEMENT_CRITERIA, or MULTIRECORD_TESTTYPE_QA_INFORMATIONELEMENT_CRITERIA. The `rdfs:label` of the instance of the subclass of `bdqffdq:DataQualityNeed` SHOULD be used by humans to identify Tests.
+
+Each instance of a subclass of `bdqffdq:DataQualityNeed` MUST have exactly one `bdqffdq:hasResourceType` object property linking it to a `bdqffdq:SingleRecord` or a `bdqffdq:MultiRecord`.
+
+The `bdqffdq:hasCriterion` object property SHOULD have an individual with a type that is a `bdqffdq:Validation` or a `bdqffdq:Issue` as its subject.
+
+The `bdqffdq:hasCriterion` object property MAY have an individual from the `bdqcrit:` vocabulary as its object.
+
+An axiom types the range of `bdqffdq:hasCriterion` as a `bdqffdq:Criterion`.
+
+The `bdqffdq:hasEnhancement` object property SHOULD have an individual with a type that is a `bdqffdq:Amendment` as its subject.
+
+The `bdqffdq:hasEnhancement` object property MAY have an individual from the `bdqenh:` vocabulary as its object.
+
+An axiom types the range of `bdqffdq:hasEnhancement` as a `bdqffdq:Enhancement`.
+
+The `bdqffdq:hasDataQualityDimension` object property SHOULD have an individual with a type that is a subclass of `bdqffdq:DataQualityNeed` as its subject.
+
+The `bdqffdq:hasDataQualityDimension` object property MAY have an individual in the `bdqdim:` vocabulary is its object. 
+
+An axiom types the range of `bdqffdq:hasDataQualityDimension` as a `bdqffdq:DataQualityDimension`.
+
+Each individual instance of a `bdqffdq:Validation` SHOULD have exactly one `bdqffdq:hasDataQualityDimension` property and exactly one `bdqffdq:Criterion` property.
+
+Each individual instance of a `bdqffdq:Issue` SHOULD have exactly one `bdqffdq:hasDataQualityDimension` property and exactly one `bdqffdq:Criterion` property.
+
+Each individual instance of a `bdqffdq:Measure` SHOULD have exactly one `bdqffdq:hasDataQualityDimension` property.
+
+Each individual instance of a `bdqffdq:Amendment` SHOULD have exactly one `bdqffdq:hasDataQualityDimension` property and exactly one `bdqffdq:Enhancement` property.
+
+A subproperty of the `bdqffdq:hasInformationElement` object property SHOULD have an individual that is a subclass of `bdqffdq:InformationElement` as its object.
+
+A subproperty of the `bdqffdq:hasInformationElement` object property SHOULD have an individual that is a subclass of `bdqffdq:DataQualityNeed` as its subject.
+
+Each instance of a subclass of `bdqffdq:DataQualityNeed` SHOULD have exactly one `bdqffdq:hasActedUponInformationElement` property linking it to a `bdqffdq:ActedUpon`. 
+
+Each instance of `bdqffdq:ActedUpon` SHOULD have one to many `bdqffdq:composedOf` object properties linking it to specific `Information Elements`.
+
+Each instance of a subclass of `bdqffdq:DataQualityNeed` MAY have exactly one `bdqffdq:hasConsultedInformationElement` property linking it to a `bdqffdq:Consulted`.
+
+Each instance of `bdqffdq:Consulted` SHOULD have one to many `bdqffdq:composedOf` object properties linking it to specific `Information Elements`.
+
+Each instance of a subclass of `bdqffdq:DataQualityNeed` MAY have a `bdqffdq:hasInformationElement` property linking it to a `bdqffdq:AbstractInformationElement`.
+
+Each instance of `bdqffdq:AbstractInformationElement` SHOULD have `rdfs:label` and `rdfs:comment` properties describing the scope of the `Information Element` with the `rdfs:label` corresponding to the INFORMATIONELEMENT portion of the `rdfs:label` for an instance of a subclass of `bdqffdq:DataQualityNeed` following the convention described above in this section. 
+
+#### 3.1.3 Properties Relating Data Quality Needs to Data Quality Solutions (normative)
+
+Each description of a data quality Test SHOULD include the properties and related instances given below.
+
+The `bdqffdq:forValidation` object property SHOULD have an individual with a type that is a subclass of `bdqffdq:ValidationMethod` as its subject.
+
+An axiom places an `owl:restriction` on the object of the `bdqffdq:forValidation` object property as a `bdqffdq:Validation`.
+
+Each `bdqffdq:Validation` method SHOULD have exactly one `bdqffdq:forValidation` object property.
+
+The `bdqffdq:forAmendment` object property SHOULD have an individual with a type that is a subclass of `bdqffdq:AmendmentMethod` as its subject.
+
+An axiom places an `owl:restriction` on the object of the `bdqffdq:forAmendment` object property as a `bdqffdq:Amendment`.
+
+Each `bdqffdq:Amendment` method SHOULD have exactly one `bdqffdq:forAmendment` object property.
+
+The `bdqffdq:forMeasure` object property SHOULD have an individual with a type that is a subclass of `bdqffdq:MeasureMethod` as its subject.
+
+An axiom places an `owl:restriction` on the object of the `bdqffdq:forMeasure` object property as a `bdqffdq:Measure`.
+
+Each `bdqffdq:Measure` method SHOULD have exactly one `bdqffdq:forMeasure` object property.
+
+The `bdqffdq:forIssue` object property SHOULD have an individual with a type that is a subclass of `bdqffdq:IssueMethod` as its subject.
+
+An axiom places an `owl:restriction` on the object of the `bdqffdq:forIssue` object property as a `bdqffdq:Issue`.
+
+Each `bdqffdq:Issue` method SHOULD have exactly one `bdqffdq:forIssue` object property.
+
+#### 3.1.4 Properties Relating to Data Quality Solutions Provided in a Test Description (normative)
+
+Each description of a data quality Test SHOULD include the following properties and related instances.
+
+The `bdqffdq:hasSpecification` object property SHOULD have an instance of a subclass of `bdqffdq:DataQualityMethod` as its subject.
+
+An axiom places an `owl:restriction` on the object of the `bdqffdq:hasSpecification` object property as a `bdqffdq:Specification`.
+
+An instance of `bdqffdq:Specification` SHOULD be the object of exactly one `bdqffdq:hasSpecification` property linking it to an instance of a subclass of `bdqffdq:DataQualityMethod`, which SHOULD be the subject of exactly one subproperty of a `bdqffdq:forDataQualityNeed` property linking it to a subclass of `bdqffdq:DataQualityNeed`.
+
+The `bdqffdq:hasArgument` object property SHOULD have a `bdqffdq:Specification` as its subject.
+
+An axiom types the object of the `bdqffdq:hasArgument` object as a `bdqffdq:Argument`.
+
+An instance of `bdqffdq:Argument` SHOULD have exactly one `bdqffdq:hasArgumentValue` data property holding the value of the argument that replaces the `bdqffdq:Parameter` in the `bdqffdq:hasExpectedResponse` of the `bdqffdq:Specification`. An instance of `bdqffdq:Argument` SHOULD have exactly one `bdqffdq:hasParameter` object property that denotes the parameter within the `bdqffdq:hasExpectedResponse` that is to be replaced by the value of the `bdqffdq:hasArgumentValue`. An instance of `bdqffdq:Argument` SHOULD be related to exactly one instance of a `bdqffdq:Specification` with the `bdqffdq:hasArgument` object property.
+
+Each instance of a `bdqffdq:Specification` MAY have zero to many `bdqffdq:hasArgument` object properties relating it to zero to many `bdqffdq:Argument` instances.
+
+Each instance of a `bdqffdq:Specification` with a `bdqffdq:hasAuthoritiesDefaults` value that references at least one parameter MUST have a corresponding `bdqffdq:hasArgument` object property. The instances of `bdqffdq:Argument` related through these `bdqffdq:hasArgument` object properties SHOULD have appropriate `bdqffdq:hasArgumentValue` and `bdqffdq:hasParameter` triples to express the actual and formal parameters for the `bdqffdq:Specification` instance.
+
+The `bdqffdq:hasParameter` object property SHOULD have a `bdqffdq:Argument` as its subject.
+
+An axiom types the object of the `bdqffdq:hasParameter` object property as a `bdqffdq:Parameter`.
+
+#### 3.1.5 Properties relating to data quality solutions provided by an implementation (normative)
+
+Each data quality `Mechanism` that produces `Data Quality Reports` using the `bdqffdq:` vocabulary SHOULD include the following properties and related instances.
+
+The `bdqffdq:usesSpecification` object property SHOULD have a `bdqffdq:Implementation` as its subject.
+
+An axiom places an `owl:restriction` on the object of the `bdqffdq:usesSpecification` object property as a `bdqffdq:Specification`.
+
+Each `bdqffdq:Implementation` SHOULD have one and only one `bdqffdq:usesSpecification` object property.
+
+The `bdqffdq:implementedBy` object property SHOULD have a `bdqffdq:Implementation` as its subject.
+
+An axiom places an `owl:restriction` on the object of the `bdqffdq:implementedBy` object property as a `bdqffdq:Mechanism`.
+
+Each `bdqffdq:Implementation` SHOULD have a `bdqffdq:implementedBy` object property.
+
+A `bdqffdq:Implementation` SHOULD have one and only one `bdqffdq:implementedBy` object property.
+
+#### 3.1.6 Properties relating Data Quality Reports (normative)
+
+Each data quality `Mechanism` that produces `Data Quality Reports` using the `bdqffdq:` vocabulary SHOULD include the following properties and related instances.
+
+Nothing in this section is to be construed as relaxing the normative statements in the [User's Guide](../users/index.md) and [Implementer's Guide](../implementers/index.md) concerning the expression of data quality responses in forms other than RDF. Each data quality `Mechanism` MUST produce results corresponding to `bdqffdq:Responses` with `bdqffdq:hasResponseStatus`, `bdqffdq:hasResponseResult`, and `bdqffdq:hasResponseComment` as specified in those guides. 
+
+The `bdqffdq:producesResponse` object property SHOULD have an instance of `bdqffdq:Implementation` as its subject.
+
+The `bdqffdq:producesResponse` object property SHOULD have an instance of a subclass of `bdqffdq:Response` as its object.
+
+Each instance of a `bdqffdq:Implementation` MAY have zero to many `bdqffdq:producesResponse` object properties.
+
+Each instance of a `bdqffdq:Asssertion` SHOULD be the object of exactly one `bdqffdq:producesResponse` object property. 
+
+#### 3.2 Identifying the Test that produced a Response (normative)
+
+Following the object properties from an instance of a `bdqffdq:Response` to an instance of a subclass of a `bdqffdq:DataQualityNeed` SHOULD identify one and only one instance of a subclass of a `bdqffdq:DataQualityNeed` for a single instance of a `bdqffdq:Response`. If this condition is not met, it is not possible to tell which Test with which `Parameter` argument values produced the `Response`.
+
+Each instance of a `bdqffdq:ValidationResponse` SHOULD be the object of one and only one `bdqffdq:producesResponse` property linking it to an instance of a `bdqffdq:Implementation`, which in turn SHOULD be the subject of one and only one `bdqffdq:usesSpecification` property linking it to an instance of a `bdqffdq:Specification`, which in turn SHOULD be the object of one and only one `bdqffdq:hasSpecification` property linking it to an instance of a `bdqffdq:ValidationMethod`, which in turn SHOULD be the subject for one and only one `bdqffdq:forValidation` property linking it to an instance of a `bdqffdq:Validation`.
+
+Each instance of a `bdqffdq:IssueResponse` SHOULD be the object of one and only one `bdqffdq:producesResponse` property linking it to an instance of a `bdqffdq:Implementation`, which in turn SHOULD be the subject of one and only one `bdqffdq:usesSpecification` property linking it to an instance of a `bdqffdq:Specification`, which in turn SHOULD be the object of one and only one `bdqffdq:hasSpecification` property linking it to an instance of a `bdqffdq:IssueMethod`, which in turn SHOULD be the subject for one and only one `bdqffdq:forIssue` property linking it to an instance of a `bdqffdq:Issue`.
+
+Each instance of a `bdqffdq:MeasurementResponse` SHOULD be the object of one and only one `bdqffdq:producesResponse` property linking it to an instance of a `bdqffdq:Implementation`, which in turn SHOULD be the subject of one and only one `bdqffdq:usesSpecification` property linking it to an instance of a `bdqffdq:Specification`, which in turn SHOULD be the object of one and only one `bdqffdq:hasSpecification` property linking it to an instance of a `bdqffdq:MeasurementMethod`, which in turn SHOULD be the subject for one and only one `bdqffdq:forMeasure` property linking it to an instance of a `bdqffdq:Measure`.
+
+Each instance of a `bdqffdq:AmendmentResponse` SHOULD be the object of one and only one `bdqffdq:producesResponse` property linking it to an instance of a `bdqffdq:Implementation`, which in turn SHOULD be the subject of one and only one `bdqffdq:usesSpecification` property linking it to an instance of a `bdqffdq:Specification`, which in turn SHOULD be the object of one and only one `bdqffdq:hasSpecification` property linking it to an instance of a `bdqffdq:AmendmentMethod`, which in turn SHOULD be the subject for one and only one `bdqffdq:forAmendment` property linking it to an instance of a `bdqffdq:Amendment`.
+
+Given a `Response`, the following query returns which Test was run with which argument values for which parameters by which mechanism to produce it. This query SHOULD only return a single row. 
+ 
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX owl: <http://www.w3.org/2002/07/owl#>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+    PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
+    SELECT ?test ?label ?description  (GROUP_CONCAT(DISTINCT ?params; separator='; ') as ?parameters) ?mechanism
+    WHERE {
+      ?test rdf:type bdqffdq:Validation . ?test rdfs:label ?label . ?method bdqffdq:forValidation ?test .
+      ?method bdqffdq:hasSpecification ?specification . ?specification rdfs:comment ?description .
+      OPTIONAL {
+         ?specification bdqffdq:hasArgument ?argument . ?argument bdqffdq:hasArgumentValue ?argumentValue . ?argument bdqffdq:hasParameter ?parameter .
+         BIND (CONCAT(STR(?parameter), "=" , ?argumentValue ) as ?params )
+      } .
+      ?implementation bdqffdq:usesSpecification ?specification . ?implementation bdqffdq:producesResponse ?assertion .
+      ?implementation bdqffdq:implementedBy ?mechanism .
+      FILTER (STR(?assertion) = "{id of assertion to look up}")
+    }
+    GROUP BY ?test ?label ?description ?mechanism
+
+Where, in this query, the text {id of assertion to look up} is a placeholder to replace with the id of the instance of the `bdqffdq:Response` to look up.
+
+##### 3.3 Properties that should be one-to-one (normative)
+
+**Validation**
+
+- Each instance of a `bdqffdq:Validation` SHOULD be the object of one and only one `bdqffdq:forValidation` property.
+- Each instance of a `bdqffdq:ValidationMethod` SHOULD be the subject of one and only one `bdqffdq:forValidation` property.
+- Each instance of a `bdqffdq:Specification` SHOULD be the object of one and only one `bdqffdq:hasSpecification` property.
+- Each instance of a `bdqffdq:Implementation` SHOULD be the subject of one and only one `bdqffdq:usesSpecification` property.
+- Each instance of a `bdqffdq:Implementation` MAY be the subject of zero to many `bdqffdq:producesResponse` properties.
+- Each instance of a `bdqffdq:ValidationResponse` SHOULD be the object of one and only one `bdqffdq:producesResponse` property.
+
+**Issue**
+
+- Each instance of a `bdqffdq:Issue` SHOULD be the object of one and only one `bdqffdq:forIssue` property.
+- Each instance of a `bdqffdq:IssueMethod` SHOULD be the subject of one and only one `bdqffdq:forIssue` property.
+- Each instance of a `bdqffdq:Specification` SHOULD be the object of one and only one `bdqffdq:hasSpecification` property.
+- Each instance of a `bdqffdq:Implementation` SHOULD be the subject of one and only one bdqffdq:usesSpecification property.
+- Each instance of a bdqffdq:Specification SHOULD be the object of one and only one bdqffdq:usesSpecification property.
+- Each instance of a `bdqffdq:Implementation` MAY be the subject of zero to many `bdqffdq:producesResponse` properties.
+- Each instance of a `bdqffdq:IssueResponse` SHOULD be the object of one and only one `bdqffdq:producesResponse` property.
+
+**Measure**
+
+- Each instance of a `bdqffdq:Measure` SHOULD be the object of one and only one `bdqffdq:forMeasure` property.
+- Each instance of a `bdqffdq:MeasurementMethod` SHOULD be the subject of one and only one `bdqffdq:forMeasure` property.
+- Each instance of a `bdqffdq:Specification` SHOULD be the object of one and only one `bdqffdq:hasSpecification` property.
+- Each instance of a `bdqffdq:Implementation` SHOULD be the subject of one and only one `bdqffdq:usesSpecification` property.
+- Each instance of a `bdqffdq:Specification` SHOULD be the object of one and only one `bdqffdq:usesSpecification` property.
+- Each instance of a `bdqffdq:Implementation` MAY be the subject of zero to many `bdqffdq:producesResponse` properties.
+- Each instance of a `bdqffdq:MeasurementResponse` SHOULD be the object of one and only one `bdqffdq:producesResponse` property.
+
+**Amendment**
+
+- Each instance of a `bdqffdq:Amendment` SHOULD be the object of one and only one `bdqffdq:forAmendment` property.
+- Each instance of a `bdqffdq:AmendmentMethod` SHOULD be the subject of one and only one `bdqffdq:forAmendment` property.
+- Each instance of a `bdqffdq:Specification` SHOULD be the object of one and only one `bdqffdq:hasSpecification` property.
+- Each instance of a `bdqffdq:Implementation` SHOULD be the subject of one and only one `bdqffdq:usesSpecification` property.
+- Each instance of a `bdqffdq:Specification` SHOULD be the object of one and only one `bdqffdq:usesSpecification` property.
+- Each instance of a `bdqffdq:Implementation` MAY be the subject of zero to many `bdqffdq:producesResponse` properties.
+- Each instance of a `bdqffdq:AmendmentResponse` SHOULD be the object of one and only one `bdqffdq:producesResponse` property.
+
+### 3.3.1 Cardinality of bdqffdq: terms (non-normative)
+
+The non-normative expectations expressed in this section are based on the mathematical formalization of the Fitness for Use Framework, and are intended to expand upon the normative statements above to provide additional explanatory guidance on how class instances in `bdqffdq:` are expected to be related to each other through properties, failure to follow these expectations may result in an inability to use the Framework effectively.
 
 The expected relationships between classes in the Fitness for Use Framework can be expressed as cardinality statements. Selected cardinality statements are given here to provide additional explanatory guidance on how class instances in `bdqffdq:` are expected to be related to each other through object properties. Examples here are given for terms related to `Validations`.
 

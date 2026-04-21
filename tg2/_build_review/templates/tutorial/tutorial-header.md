@@ -91,7 +91,7 @@ By following this workflow, you move from a human-centric research need to a mac
 
 See also:
 - [What is meant by "Test"?](../guide/bdqtest/index.md#21-what-is-meant-by-test-non-normative) in the bdqtest: term-list document.
-- [Data Quality Needs, Data Quality Mechanisms, Data Quality Reports](../guide/bdqffdq/index.md#33-data-quality-needs-data-quality-mechanisms-data-quality-reports-non-normative) in the bdqffdq: ontology guide.
+- [Data Quality Needs, Data Quality Mechanisms, Data Quality Reports](../guide/bdqffdq/index.md#23-data-quality-needs-data-quality-mechanisms-data-quality-reports-non-normative) in the bdqffdq: ontology guide.
 
 ### 2.1 Best Practices
 
@@ -142,7 +142,7 @@ Treat this `Use Case` definition (and everything else that follows from it) as a
 
 See also: 
 * [Context for Quality, Uses and Purposes](../guide/users/index.md#2-context-for-quality-uses-and-purposes-non-normative) in the User's Guide.
-* [Concepts in the Framework (Use Cases, Policies, Contexts)](../guide/bdqffdq/index.md#323-concepts-in-the-framework-test-types-validation-issue-measure-amendment-non-normative) in the bdqffdq: ontology guide.
+* [Concepts in the Framework (Use Cases, Policies, Contexts)](../guide/bdqffdq/index.md#223-concepts-in-the-framework-test-types-validation-issue-measure-amendment-non-normative) in the bdqffdq: ontology guide.
 
 ### 3.2 Identify the Information Elements (non-normative)
 
@@ -293,7 +293,7 @@ The Test we are developing does not require any supporting information, so there
 
 See also:
 - [Inputs to Tests](../guide/users/index.md#321-inputs-to-tests-non-normative) in the User's Guide.
-- [Information Elements](../guide/bdqffdq/index.md#322-information-elements-non-normative) in the bdqffdq: ontology guide.
+- [Information Elements](../guide/bdqffdq/index.md#222-information-elements-non-normative) in the bdqffdq: ontology guide.
 
 ### 4.3 Select the Test Type (non-normative)
 
@@ -390,7 +390,7 @@ This gives us the following additional properties for the Test:
 All BDQ Test types have a `Data Quality Dimension` (taking values from the [bdqdim:](../list/bdqdim/index.md) vocabulary).  Only `Validations` and `Issues` have a `Criterion` (taking values from the [bdqcrit:](../list/bdqcrit/index.md) vocabulary), while `Amendments` have an `Enhancement` (taking values from the [bdqenh:](../list/bdqenh/index.md) vocabulary).  `Measures` have only the `Data Quality Dimension`.
 
 See also:
-* Diagrams of Test Types and their Properties in [Concepts in the Framework](../guide/bdqffdq/index.md#323-concepts-in-the-framework-test-types-validation-issue-measure-amendment-non-normative) in the bdqffdq: guide.
+* Diagrams of Test Types and their Properties in [Concepts in the Framework](../guide/bdqffdq/index.md#223-concepts-in-the-framework-test-types-validation-issue-measure-amendment-non-normative) in the bdqffdq: guide.
 * [bdqdim:](../list/bdqdim/index.md) for the data quality dimension vocabulary.
 * [bdqcrit:](../list/bdqcrit/index.md) for the criteria vocabulary.
 * [bdqenh:](../list/bdqenh/index.md) for the enhancement vocabulary.
@@ -440,7 +440,7 @@ Formally in the bdqffdq: ontology, `Specification` is a class, which has a `bdqf
 See also: 
 * [Reading a Specification](../guide/implementers/index.md#232-reading-a-specification-non-normative) in the Implementers Guide.
 * [The bdq: vocabulary](../list/bdq/index.md) for standard concepts that can be used in Test specifications.
-* The `Data Quality Solutions` portions of the diagrams in [Concepts in the Framework](../guide/bdqffdq/index.md#323-concepts-in-the-framework-test-types-validation-issue-measure-amendment-non-normative) in the bdqffdq: guide.
+* The `Data Quality Solutions` portions of the diagrams in [Concepts in the Framework](../guide/bdqffdq/index.md#223-concepts-in-the-framework-test-types-validation-issue-measure-amendment-non-normative) in the bdqffdq: guide.
 
 #### 4.7.1 What Isn't Said in the Test Specification (non-normative)
 
@@ -502,7 +502,7 @@ To formally express this Test in RDF we would need to add some more identifiers 
 See also: 
 * [Test Types](../guide/users/index.md#31-test-types-non-normative) in the User’s Guide.
 * [Reading Test Descriptors](../guide/implementers/index.md#23-reading-test-descriptors-non-normative) in the Implementer’s Guide.
-* [Relating Classes and Properties](../guide/bdqffdq/index.md#221-relating-classes-and-properties-non-normative) in the Fitness For Use Framework Ontology: Concepts and Use document.
+* [Relating Classes and Properties](../guide/bdqffdq/index.md#311-relating-classes-and-properties-non-normative) in the Fitness For Use Framework Ontology: Concepts and Use document.
 
 #### 4.10.1 Formal RDF Representation of the Test (non-normative)
 
@@ -511,7 +511,7 @@ This simple list of properties is sufficient for a human reader to understand th
 See also:
 * [Diagram of Test Concepts](../guide/implementers/index.md#3-compliant-implementation-normative) in the implementers guide.
 * [Example RDF for a test](../guide/bdqtest/index.md#6-example-rdf-description-of-a-test-non-normative) in the BDQ Tests: Concepts, Types, and Use document (VALIDATION_COUNTRYCODE_STANDARD in an RDF/XML serialization).
-* [Example RDF for a test](../guide/bdqffdq/index.md#36-example-representation-of-a-bdq-test-non-normative) in the Fitness For Use Framework Ontology: Concepts and Use (VALIDATION_COUNTRY_FOUND in a Turtle serialization). 
+* [Example RDF for a test](../guide/bdqffdq/index.md#26-example-representation-of-a-bdq-test-non-normative) in the Fitness For Use Framework Ontology: Concepts and Use (VALIDATION_COUNTRY_FOUND in a Turtle serialization). 
 
 #### 4.10.2 Summary of the Test Definition
 
@@ -1058,7 +1058,7 @@ For our **Validated Distribution Authority** `Use Case` we would likely wish to 
 See also:
 - [Quality Control and Quality Assurance](../guide/users/index.md#21-quality-control-and-quality-assurance-non-normative) in the User's Guide.
 - [Single Record and MultiRecord Tests](../guide/bdqtest/index.md#35-single-record-and-multi-record-tests-non-normative) in the BDQ Tests: Concepts, Types, and Use document.
-- [Data Quality Control and Data Quality Assurance](../guide/bdqffdq/index.md#321-data-quality-control-and-data-quality-assurance-non-normative) in the Fitness For Use Framework Ontology: Concepts and Use document.
+- [Data Quality Control and Data Quality Assurance](../guide/bdqffdq/index.md#221-data-quality-control-and-data-quality-assurance-non-normative) in the Fitness For Use Framework Ontology: Concepts and Use document.
 
 ### 8.1 MultiRecord Measures for Quality Control (non-normative)
 
