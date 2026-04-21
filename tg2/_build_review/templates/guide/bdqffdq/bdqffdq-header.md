@@ -590,7 +590,6 @@ Below is a fragment in Turtle describing VALIDATION_COUNTRY_FOUND, composed of a
         bdqtest:d257eb98-27cb-48e5-8d3c-ab9fca4edd11-2025-03-07, bdqtest:4eb48fdf-7299-4d63-9d08-246902e2857f-2025-03-07;
       skos:prefLabel "ValidationPolicy: (49) validations  in UseCase bdq:Spatial-Temporal_Patterns" .
 
-
 ### 3.7 Cardinality of bdqffdq: terms (non-normative)
 
 The content of this section is non-normative, see the [Fitness for Use Framework Ontology](../../guide/bdqffdq/index.md) document for related normative guidance.  These expectations are based on the mathematical formalization of the Fitness for Use Framework, and are intended to provide additional explanatory guidance on how class instances in `bdqffdq:` are expected to be related to each other through properties, failure to follow these expectations may result in an inability to use the Framework effectively.
@@ -644,15 +643,15 @@ The following changes have been made to the original formulation:
 
 - `dcmitype:Dataset` replaced with `Multi Record`.
 - `Dimension` replaced with `Data Quality Dimension`.
-- 'Data Quality Dimension' can apply to classes other than `Measure`, that is `Validation`, `Issue`, and `Amendment` can have `Data Quality Dimensions`.
-- Improvement Method changed to Enhancement `Method`.
-- Improvement Policy changed to Enhancement `Policy`.
-- Data Quality Improvement changed to Data Quality `Amendment`.
+- `Data Quality Dimension` can apply to classes other than `Measure`, that is `Validation`, `Issue`, and `Amendment` can have `Data Quality Dimensions`.
+- `Improvement Method` changed to `Enhancement Method`.
+- `Improvement Policy` changed to `Enhancement Policy`.
+- `Data Quality Improvement` changed to `Data Quality Amendment`.
 - `Issue`, `IssuePolicy`, `IssueMethod`, and `IssueResponse` added as converse of `Validation`.
-- Dimension in Context renamed `Measure`.
-- Criterion in Context renamed `Validation`.
-- Enhancement in Context renamed `Amendment`.
-- Assertion renamed `Response`.
+- `Dimension in Context` renamed `Measure`.
+- `Criterion in Context` renamed `Validation`.
+- `Enhancement in Context` renamed `Amendment`.
+- `Assertion` renamed `Response`.
 
 The Fitness For Use Framework ontology is framed with limited constraints and no `rdfs:range` axioms. Under open world principles, it could be used in ways other than the constraints framed by this mathematical formulation, but this formulation SHOULD be treated as a guide for how to phrase `Responses` using `bdqffdq:` terms, and how a set of `Responses` made with those terms SHOULD be queried.
 
@@ -670,9 +669,9 @@ The Fitness For Use Framework ontology is framed with limited constraints and no
 * ID = Identifier for a resource
 * RT = `Resource Type` {`Single Record`, `Multi Record`}
 * sr = instance of `Single Record` 
-* ds = instance of Dataset
+* ds = instance of `Multi Record` (dataset)
 * V = Data Resource Value
-* R = `Response` (result from a `Mechanism`, of `Validation`, `Measurement`, `Improvement` on Resource).
+* R = `Response` (result from a `Mechanism`, of `Validation`, `Measurement`, `Improvement` on a Resource).
 
 ### 4.3 Notation (normative)
 * X: Domain (Uppercase symbols) 
