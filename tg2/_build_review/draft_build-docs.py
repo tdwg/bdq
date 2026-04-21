@@ -383,7 +383,10 @@ for templatePath, document in directories.items() :
 				separator = "";
 				for pt in r.parents.split("; ") :
 					parentterm = pt.replace("https://rs.tdwg.org/bdqffdq/terms/","")
-					parentterms = parentterms + "{0}[{1}](../../list/bdqffdq/index.md#{2})".format(separator,parentterm,parentterm)
+					if (parentterm.startswith("http://www.w3.org/2002/07/owl#")) :
+						parentterms = parentterms + "{0}{1}".format(separator,parentterm.replace("http://www.w3.org/2002/07/owl#","owl:"))
+					else :
+						parentterms = parentterms + "{0}[{1}](../../list/bdqffdq/index.md#{2})".format(separator,parentterm,parentterm)
 					separator = "; "
 				text = text + "- SubClass Of: {}\n".format(parentterms)
 			if (r.range) :
