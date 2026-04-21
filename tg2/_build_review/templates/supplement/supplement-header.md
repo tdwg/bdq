@@ -926,9 +926,9 @@ All of the `MultiRecord` Tests initially defined in the BDQ Standard are `MultiR
 
 ### 3.13 Test Label Components (non-normative)
 
-The convention for Test labels we have followed reflects the `Test` type, the `bdqffdq:InformationElements` that the Test acts upon and the Quirky nature of the [Evaluation](../index.md#72-evaluations-in-test-labels-non-normative). 
+The convention for Test labels we have followed reflects the Test type (i.e. subclass of `Data Quality Need`), the `bdqffdq:InformationElements` that the Test acts upon and the Quirky nature of the [Evaluation](../../index.md#72-evaluations-in-test-labels-non-normative). 
 
-For example, consider the Test with the label "VALIDATION_COUNTRYCODE_STANDARD". This Test checks the value of the country code is within the `ISO` standard.  
+For example the Test with the label "VALIDATION_COUNTRYCODE_STANDARD" checks that the value of the country code is a valid ISO country code.
 
 * Test Type: `Validation`,
 * The `bdqffdq:InformationElement`: `dwc:countryCode`
