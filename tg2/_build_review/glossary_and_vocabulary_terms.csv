@@ -161,6 +161,8 @@
 "minimumValidElevationInMeters","bdq:minimumValidElevationInMeters","bdq:"
 "Modified","dcterms:issued","Key to Vocabulary Terms"
 "Multi Record","bdqffdq:MultiRecord","bdqffdq:"
+"MULTIRECORD_MEASURE_COUNT",,"Test Label Components"
+"MULTIRECORD_MEASURE_QA",,"Test Label Components"
 "NAME",,"Glossary"
 "Need Concept","bdqffdq:NeedConcept","bdqffdq:"
 "NEEDS WORK",,"Glossary"
