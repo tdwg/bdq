@@ -410,7 +410,7 @@ Note: None of these links will work until deployment of the standard, but they a
   - [Vocabulary IRI](https://rs.tdwg.org/bdqtest/) redirects to [HTML Terms List](https://bdq.tdwg.org/bdqtest/terms/)
   - [RDF Metadata](https://rs.tdwg.org/bdqtest.ttl)
   - [Term List RDF Metadata](https://rs.tdwg.org/bdqtest/terms.ttl)
-- [**BDQ Fittness For Use Vocabulary (bdqffdq:)**](https://bdq.tdwg.org/bdqffdq/) 
+- [**BDQ Fitness For Use Vocabulary (bdqffdq:)**](https://bdq.tdwg.org/bdqffdq/) 
   - [Vocabulary IRI](https://rs.tdwg.org/bdqffdq/) redirects to the [HTML Landing Page](https://bdq.tdwg.org/bdqffdq/)
   - [RDF Metadata](https://rs.tdwg.org/bdqffdq.ttl)
   - [HTML Terms List](https://bdq.tdwg.org/bdqffdq/terms/)

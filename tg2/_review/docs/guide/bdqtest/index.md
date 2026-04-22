@@ -577,7 +577,7 @@ See the [Tutorial](../../tutorial/index.md) for a worked out example of the defi
 
 ### 8.1 Elements of a New Use Case (non-normative)
 
-`Use Cases` are straightforward to describe.  A `Use Case` has a name, a definition, a statement of fittness requirements (`bdqffdq:hasFitnessRequirements`) and a list of Tests.  The list of Tests is expressed as four `Policies`, a `ValidationPolicy` comprised of the `Validations` related to the `Use Case`, an `AmendmentPolicy` listing related `Amendments`, a `MeasurementPolicy` listing related `Measures`, and an `IssuePolicy` listing any related `Issues`.   
+`Use Cases` are straightforward to describe.  A `Use Case` has a name, a definition, a statement of fitness requirements (`bdqffdq:hasFitnessRequirements`) and a list of Tests.  The list of Tests is expressed as four `Policies`, a `ValidationPolicy` comprised of the `Validations` related to the `Use Case`, an `AmendmentPolicy` listing related `Amendments`, a `MeasurementPolicy` listing related `Measures`, and an `IssuePolicy` listing any related `Issues`.   
 
 The definition for a new `Use Case` should include a clear statement of the purpose and nature of the use of the data in the `Use Case`, and the fitness requirements should provide a high level overview of what is needed for data to be fit for that specified use.   Once Tests have been identified (or newly described) `Policies` should be established to assert which Tests are relevant to the `Use Case`.   
 
