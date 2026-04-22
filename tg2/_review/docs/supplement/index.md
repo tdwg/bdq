@@ -506,7 +506,7 @@ What `Amendments` have `Information Elements` `Acted Upon` that are `Acted Upon`
        } 
     } 
 
-List all `UseCases`, and the Tests associated with the comments on each `DataQualityNeed` and its related `Specification`, formulated to run directly on triples found in bdqtest.ttl without inference.
+List all `Use Cases`, and the Tests associated with the comments on each `Data Quality Need` and its related `Specification`, formulated to run directly on triples found in bdqtest.ttl without inference.
 
     PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>

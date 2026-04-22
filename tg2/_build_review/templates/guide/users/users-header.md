@@ -163,7 +163,7 @@ The BDQ Tests are each very specific. Some Tests are very simple and self-explan
 
 ### 3.1 Test Types (non-normative)
 
-There are four types of Tests: `Validation`, `Issue`, `Measure`, and `Amendment`. Each Test is intended to examine just one specific aspect of data quality. Tests are assembled into Test suites (`Policies`) that assess the fitness of data for a specific use (`Use Case`).  In the Fitness for Use Framework, `Policies` are the formal mechanism for linking a `Use Case` to the relevant `DataQualityNeed` instances (Tests).
+There are four types of Tests: `Validation`, `Issue`, `Measure`, and `Amendment`. Each Test is intended to examine just one specific aspect of data quality. Tests are assembled into Test suites (`Policies`) that assess the fitness of data for a specific use (`Use Case`).  In the Fitness for Use Framework, `Policies` are the formal mechanism for linking a `Use Case` to the relevant `Data Quality Need` instances (Tests).
 
 **`Validation` Tests** can be thought of as fact-checking. They compare the data against known standards or rules. `Validation` Tests examine the values of one or more [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) against a `Criterion` for quality. An example is [VALIDATION_COUNTRYCODE_STANDARD](../../terms/bdqtest/index.md#VALIDATION_COUNTRYCODE_STANDARD) where `dwc:countryCode` is checked against a `sourceAuthority` for validity.
 
