@@ -191,7 +191,12 @@ for term in termLists:
     # Create list of lists metadata table
     table_list = []
     for term_list in term_lists_info:
+        if debug :
+            print('Processing term list for: {}.'.format(term))
+            print('Checking Term list preferred namespace prefix: {}.'.format(term_list['pref_ns_prefix']))
         if (term_list['pref_ns_prefix']==term) : 
+            if debug :
+                print('Matched term list {}.'.format(term_list['list_iri']))
             # retrieve versions metadata for term list
             # PJM: This is unavailable for a draft standard.
             versions_url = githubBaseUri + term_list['database'] + '-versions/' + term_list['database'] + '-versions.csv'
@@ -248,6 +253,8 @@ for term in termLists:
         print(column_list)
     # Turn list of lists into dataframe
     terms_df = pd.DataFrame(table_list, columns = column_list)
+    if debug :
+       print(terms_df)
     
     terms_sorted_by_label = terms_df.sort_values(by='label')
     #terms_sorted_by_localname = terms_df.sort_values(by='term_localName')
@@ -398,6 +405,9 @@ for term in termLists:
     # PJM: TODO: map from row column headers 
     # Dictionary of column heading: dictionary of label:, term, (could include normative}
 
+    print('Building term key')
+    if debug :
+        print(terms_sorted_by_localname)
     definitionTable = build_term_key(term_concept_dictionary, terms_sorted_by_localname)
 
     print('Generating terms table')
