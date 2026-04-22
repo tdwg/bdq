@@ -369,11 +369,17 @@ Each Test lists `Use Cases` describing `Data Quality Needs` to which each Test i
 
 The definitions of the terms used for the Tests can be found in [Terms Used in the BDQ Tests Quick Reference Guide](../../terms/bdqtest/bdqtest_qrg_term_descriptions.md).
 
-## 5 Time of Day and Time Zones (non-normative)
+## 5 Creating New Tests and Use Cases (non-normative)
+
+To propose to add a Test to the BDQ Standard, follow the instructions provided by the BDQ Maintenance Group. Details on how this would be done can be seen in [Creating New Tests](https://github.com/tdwg/bdq/blob/master/tg2/_build_review/templates/guide/bdqtest/bdqtest-header.md#7-creating-new-tests-non-normative)
+
+To propose to add a new `Use Case` to the BDQ Standard, follow the instructions provided by the BDQ Maintenance Group. Details on how this would be done can be seen in [Creating New Use Cases](https://github.com/tdwg/bdq/blob/master/tg2/_build_review/templates/guide/bdqtest/bdqtest-header.md#8-creating-new-use-cases-non-normative)
+
+## 6 Time of Day and Time Zones (non-normative)
 
 Time of day (as opposed to dates) is not considered in any of the BDQ Tests. There are `Use Cases` where the time zone is important. Dates within a dataset (`bdqffdq:MultiRecord`) aggregated from multiple sources may have plus or minus one day errors introduced. New Tests are required if ignorance of time would make such data unfit for a purpose. For further information, see Section [4.2 Time (non-normative)](../../supplement/index.md#42-time-non-normative) in [BDQ Supplemental Information](../../supplement/index.md).
 
-## 6 Dates and Calendars (non-normative)
+## 7 Dates and Calendars (non-normative)
 
 Different calendars have been used at different times in different places, and the transcription of an original date in one calendar into dwc:eventDate, where a Gregorian Calendar is assumed, may or may not have been done with the correct translation of the date. Metadata may or not be present to even identify such records. For more details of how the differences in Calendar dates should be treated see Section [4.1 Dates and Calendars (non-normative)](../../supplement/index.md#41-dates-and-calendars-non-normative) in [BDQ Supplemental Information](../../supplement/index.md).
 
