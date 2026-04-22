@@ -48,7 +48,7 @@
 
 The purpose of this document is to provide the full term list for the `bdq:` controlled vocabulary, which supports the specification and use of BDQ Tests. The `bdq:` vocabulary includes concepts used throughout the BDQ standard to describe parameters, data structures, source authorities, and special value cases relevant to the execution and behavior of Tests.
 
-This term list defines the formal structure and meanings of these concepts and provides reference material for `Implementation` and documentation purposes.
+This term list defines the formal structure and meanings of these concepts and provides reference material for implementation and documentation purposes.
 
 ### 1.2 Audience (non-normative)
 

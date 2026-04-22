@@ -497,7 +497,7 @@ A single `Measure` Test MUST NOT return a list of numbers.  A single `Measure` T
 
 ### 5.2 Framework Elements Not Included in BDQ Test Descriptions (normative)
 
-Implementers SHOULD create an instance of `bdqffdq:Mechanism` to uniquely identify their suite of Test `Implementations`.
+Implementers SHOULD create an instance of `bdqffdq:Mechanism` to uniquely identify their suite of Test implementations.
 
 Implementations producing `Data Quality Reports` SHOULD create instances of `bdqffdq:Responses` grouped in `bdqffdq:DataQualityReports` that also specify the `bdqffdq:DataResource` that the `bdqffdq:DataQualityReport` concerns.
 
@@ -1071,7 +1071,7 @@ BDQ Test descriptions are intentionally independent of any particular software f
 
 ### 6.6.1 Linking raw input terms, Tests, and outputs in a workflow (non-normative)
 
-A Test execution framework (or “runner”) typically needs to accomplish the following steps between raw input data, a Test `Implementation`, and handling output from a Test:
+A Test execution framework (or “runner”) typically needs to accomplish the following steps between raw input data, a Test implementation, and handling output from a Test:
 
 1. **Pick a Use Case and its associated Policies**
    - Determine which `Use Case` is being addressed, and which `Policies` are relevant to that `Use Case`.
@@ -1098,13 +1098,13 @@ A Test execution framework (or “runner”) typically needs to accomplish the f
 
 1. **Bind raw data to the Test API**
    - Map the framework’s internal representation of data (rows, objects, RDF graphs, etc.) onto the specific `Information Elements` required by the Test.
-   - Ensure correct binding of `Acted Upon` values and `Consulted` values to the correct inputs of the `Implementation`.
+   - Ensure correct binding of `Acted Upon` values and `Consulted` values to the correct inputs of the implementation.
    - Provide values for `Parameters`, or omit them and rely on default behavior where supported.
 
 1. **Locate and invoke the correct Tests**
    - The `Policies` from the `Use Case` identify which Tests are required, but an execution framework must still determine how to locate the corresponding implementation for each Test.
    - Resolve which callable unit implements which Test (preferably by Term Name (UUID), or Versioned IRI).
-   - Invoke the `Implementation` with the bound inputs in a way that is consistent and repeatable.
+   - Invoke the implementation with the bound inputs in a way that is consistent and repeatable.
 
 1. **Execute a Test and Capture results as a structured Response**
    - Ensure that every Test execution yields one `Response` containing:
