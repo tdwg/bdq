@@ -15,13 +15,13 @@ BDQ Controlled Vocabulary List of Terms
 <http://example.org/to_be_determined>
 
 **Preferred namespace abbreviation**<br>
-bdq
+bdqval
 
 **This version**<br>
-<http://rs.tdwg.org/bdq/terms/2025-05-10>
+<http://rs.tdwg.org/bdqval/terms/2025-05-10>
 
 **Latest version**<br>
-<http://rs.tdwg.org/bdq/terms/>
+<http://rs.tdwg.org/bdqval/terms/>
 
 **Previous version**<br>
 **Abstract**<br>
@@ -34,7 +34,7 @@ This document is a reference for the BDQ standard. It covers some terms used in 
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 **Bibliographic citation**<br>
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. BDQ Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/terms/2025-05-10>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. BDQ Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqval/terms/2025-05-10>
 
 **Status**<br>
 Draft Standard for Review
@@ -105,8 +105,8 @@ For the list and links to all associated documents see [The Biodiversity Data Qu
 
 | Description | IRI | Download URL |
 | ----------- | --- | -----------  |
-| HTML file   | http://rs.tdwg.org/bdq/terms/ | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/docs/list/bdq/index.md |
-| RDF/XML file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/dist/bdq.xml |
+| HTML file   | http://rs.tdwg.org/bdqval/terms/ | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/docs/list/bdqval/index.md |
+| RDF/XML file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/dist/bdqval.xml |
 
 ### 1.6 Status of the content of this document (normative)
 
@@ -160,7 +160,7 @@ The terminology used to describe the terms in this vocabulary follows the TDWG [
 
 ## 2 Use of Terms (normative)
 
-In an RDF context, a reference to a term in the `bdq:` namespace MUST use the Term IRI (e.g., `https://rs.tdwg.org/bdq/terms/NotEmpty`) or Term Qualified name (e.g., `bdq:NotEmpty`). In a non-RDF context in which resources may be used by software (e.g., a value in a spreadsheet or database table) the Controlled Value String (local name, e.g., `NotEmpty`) SHOULD be used. In a purely human context a label (e.g., `Not Empty`) MAY be used.
+In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the Term IRI (e.g., `https://rs.tdwg.org/bdqval/terms/NotEmpty`) or Term Qualified name (e.g., `bdqval:NotEmpty`). In a non-RDF context in which resources may be used by software (e.g., a value in a spreadsheet or database table) the Controlled Value String (local name, e.g., `NotEmpty`) SHOULD be used. In a purely human context a label (e.g., `Not Empty`) MAY be used.
 
 ## 3 Term index (non-normative)
 ### 3.1 Index By Term Name (non-normative)
@@ -171,41 +171,23 @@ In an RDF context, a reference to a term in the `bdq:` namespace MUST use the Te
 
 **Data**
 
-[bdq:Empty](#bdq_Empty) |
-[bdq:NotEmpty](#bdq_NotEmpty) 
+[bdqval:Empty](#bdqval_Empty) |
+[bdqval:NotEmpty](#bdqval_NotEmpty) 
 
-**bdq:Parameter**
-
-[bdq:annotationAlertIf](#bdq_annotationAlertIf) |
-[bdq:annotationSystem](#bdq_annotationSystem) |
-[bdq:assumptionOnUnknownBiome](#bdq_assumptionOnUnknownBiome) |
-[bdq:defaultGeodeticDatum](#bdq_defaultGeodeticDatum) |
-[bdq:DefaultSourceAuthority](#bdq_DefaultSourceAuthority) |
-[bdq:defaultValue](#bdq_defaultValue) |
-[bdq:earliestValidDate](#bdq_earliestValidDate) |
-[bdq:geospatialLand](#bdq_geospatialLand) |
-[bdq:includeEventDate](#bdq_includeEventDate) |
-[bdq:latestValidDate](#bdq_latestValidDate) |
-[bdq:maximumValidDepthInMeters](#bdq_maximumValidDepthInMeters) |
-[bdq:maximumValidElevationInMeters](#bdq_maximumValidElevationInMeters) |
-[bdq:minimumValidDepthInMeters](#bdq_minimumValidDepthInMeters) |
-[bdq:minimumValidElevationInMeters](#bdq_minimumValidElevationInMeters) |
-[bdq:sourceAuthority](#bdq_sourceAuthority) |
-[bdq:spatialBufferInMeters](#bdq_spatialBufferInMeters) |
-[bdq:taxonIsMarine](#bdq_taxonIsMarine) 
+**bdqval:Parameter**
 
 **bdqffdq:UseCase**
 
-[bdq:Alien-Species](#bdq_Alien-Species) |
-[bdq:Biotic-Relationships](#bdq_Biotic-Relationships) |
-[bdq:Record-Management](#bdq_Record-Management) |
-[bdq:Spatial-Temporal_Patterns](#bdq_Spatial-Temporal_Patterns) |
-[bdq:Taxon-Management](#bdq_Taxon-Management) 
+[bdqval:Alien-Species](#bdqval_Alien-Species) |
+[bdqval:Biotic-Relationships](#bdqval_Biotic-Relationships) |
+[bdqval:Record-Management](#bdqval_Record-Management) |
+[bdqval:Spatial-Temporal_Patterns](#bdqval_Spatial-Temporal_Patterns) |
+[bdqval:Taxon-Management](#bdqval_Taxon-Management) 
 
 **bdqffdq:InformationElement**
 
-[bdq:AllAmendmentTestsRunOnSingleRecord](#bdq_AllAmendmentTestsRunOnSingleRecord) |
-[bdq:AllValidationTestsRunOnSingleRecord](#bdq_AllValidationTestsRunOnSingleRecord) 
+[bdqval:AllAmendmentTestsRunOnSingleRecord](#bdqval_AllAmendmentTestsRunOnSingleRecord) |
+[bdqval:AllValidationTestsRunOnSingleRecord](#bdqval_AllValidationTestsRunOnSingleRecord) 
 
 ### 3.2 Index By Label (non-normative)
 
@@ -215,47 +197,29 @@ In an RDF context, a reference to a term in the `bdq:` namespace MUST use the Te
 
 **Data**
 
-[Empty](#bdq_Empty) |
-[NotEmpty](#bdq_NotEmpty) 
+[Empty](#bdqval_Empty) |
+[NotEmpty](#bdqval_NotEmpty) 
 
-**bdq:Parameter**
-
-[DefaultSourceAuthority](#bdq_DefaultSourceAuthority) |
-[annotationAlertIf](#bdq_annotationAlertIf) |
-[annotationSystem](#bdq_annotationSystem) |
-[assumptionOnUnknownBiome](#bdq_assumptionOnUnknownBiome) |
-[defaultGeodeticDatum](#bdq_defaultGeodeticDatum) |
-[defaultValue](#bdq_defaultValue) |
-[earliestValidDate](#bdq_earliestValidDate) |
-[geospatialLand](#bdq_geospatialLand) |
-[includeEventDate](#bdq_includeEventDate) |
-[latestValidDate](#bdq_latestValidDate) |
-[maximumValidDepthInMeters](#bdq_maximumValidDepthInMeters) |
-[maximumValidElevationInMeters](#bdq_maximumValidElevationInMeters) |
-[minimumValidDepthInMeters](#bdq_minimumValidDepthInMeters) |
-[minimumValidElevationInMeters](#bdq_minimumValidElevationInMeters) |
-[sourceAuthority](#bdq_sourceAuthority) |
-[spatialBufferInMeters](#bdq_spatialBufferInMeters) |
-[taxonIsMarine](#bdq_taxonIsMarine) 
+**bdqval:Parameter**
 
 **bdqffdq:UseCase**
 
-[Alien-Species](#bdq_Alien-Species) |
-[Biotic-Relationships](#bdq_Biotic-Relationships) |
-[Record-Management](#bdq_Record-Management) |
-[Spatial-Temporal Patterns](#bdq_Spatial-Temporal_Patterns) |
-[Taxon-Management](#bdq_Taxon-Management) 
+[Alien-Species](#bdqval_Alien-Species) |
+[Biotic-Relationships](#bdqval_Biotic-Relationships) |
+[Record-Management](#bdqval_Record-Management) |
+[Spatial-Temporal Patterns](#bdqval_Spatial-Temporal_Patterns) |
+[Taxon-Management](#bdqval_Taxon-Management) 
 
 **bdqffdq:InformationElement**
 
-[AllAmendmentTestsRunOnSingleRecord](#bdq_AllAmendmentTestsRunOnSingleRecord) |
-[AllValidationTestsRunOnSingleRecord](#bdq_AllValidationTestsRunOnSingleRecord) 
+[AllAmendmentTestsRunOnSingleRecord](#bdqval_AllAmendmentTestsRunOnSingleRecord) |
+[AllValidationTestsRunOnSingleRecord](#bdqval_AllValidationTestsRunOnSingleRecord) 
 
 ## 4 Vocabulary (normative)
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdq_Alien-Species"></a>Term Name  bdq:Alien-Species</th>
+			<th colspan="2"><a id="bdqval_Alien-Species"></a>Term Name  bdqval:Alien-Species</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -305,7 +269,7 @@ In an RDF context, a reference to a term in the `bdq:` namespace MUST use the Te
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdq_AllAmendmentTestsRunOnSingleRecord"></a>Term Name  bdq:AllAmendmentTestsRunOnSingleRecord</th>
+			<th colspan="2"><a id="bdqval_AllAmendmentTestsRunOnSingleRecord"></a>Term Name  bdqval:AllAmendmentTestsRunOnSingleRecord</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -351,7 +315,7 @@ In an RDF context, a reference to a term in the `bdq:` namespace MUST use the Te
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdq_AllValidationTestsRunOnSingleRecord"></a>Term Name  bdq:AllValidationTestsRunOnSingleRecord</th>
+			<th colspan="2"><a id="bdqval_AllValidationTestsRunOnSingleRecord"></a>Term Name  bdqval:AllValidationTestsRunOnSingleRecord</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -397,7 +361,7 @@ In an RDF context, a reference to a term in the `bdq:` namespace MUST use the Te
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdq_annotationAlertIf"></a>Term Name  bdq:annotationAlertIf</th>
+			<th colspan="2"><a id="bdqval_annotationAlertIf"></a>Term Name  bdqval:annotationAlertIf</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -443,7 +407,7 @@ In an RDF context, a reference to a term in the `bdq:` namespace MUST use the Te
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdq_annotationSystem"></a>Term Name  bdq:annotationSystem</th>
+			<th colspan="2"><a id="bdqval_annotationSystem"></a>Term Name  bdqval:annotationSystem</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -489,7 +453,7 @@ In an RDF context, a reference to a term in the `bdq:` namespace MUST use the Te
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdq_assumptionOnUnknownBiome"></a>Term Name  bdq:assumptionOnUnknownBiome</th>
+			<th colspan="2"><a id="bdqval_assumptionOnUnknownBiome"></a>Term Name  bdqval:assumptionOnUnknownBiome</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -535,7 +499,7 @@ In an RDF context, a reference to a term in the `bdq:` namespace MUST use the Te
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdq_Biotic-Relationships"></a>Term Name  bdq:Biotic-Relationships</th>
+			<th colspan="2"><a id="bdqval_Biotic-Relationships"></a>Term Name  bdqval:Biotic-Relationships</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -585,7 +549,7 @@ In an RDF context, a reference to a term in the `bdq:` namespace MUST use the Te
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdq_defaultGeodeticDatum"></a>Term Name  bdq:defaultGeodeticDatum</th>
+			<th colspan="2"><a id="bdqval_defaultGeodeticDatum"></a>Term Name  bdqval:defaultGeodeticDatum</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -631,7 +595,7 @@ In an RDF context, a reference to a term in the `bdq:` namespace MUST use the Te
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdq_DefaultSourceAuthority"></a>Term Name  bdq:DefaultSourceAuthority</th>
+			<th colspan="2"><a id="bdqval_DefaultSourceAuthority"></a>Term Name  bdqval:DefaultSourceAuthority</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -677,7 +641,7 @@ In an RDF context, a reference to a term in the `bdq:` namespace MUST use the Te
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdq_defaultValue"></a>Term Name  bdq:defaultValue</th>
+			<th colspan="2"><a id="bdqval_defaultValue"></a>Term Name  bdqval:defaultValue</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -723,7 +687,7 @@ In an RDF context, a reference to a term in the `bdq:` namespace MUST use the Te
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdq_earliestValidDate"></a>Term Name  bdq:earliestValidDate</th>
+			<th colspan="2"><a id="bdqval_earliestValidDate"></a>Term Name  bdqval:earliestValidDate</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -769,7 +733,7 @@ In an RDF context, a reference to a term in the `bdq:` namespace MUST use the Te
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdq_Empty"></a>Term Name  bdq:Empty</th>
+			<th colspan="2"><a id="bdqval_Empty"></a>Term Name  bdqval:Empty</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -815,7 +779,7 @@ In an RDF context, a reference to a term in the `bdq:` namespace MUST use the Te
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdq_geospatialLand"></a>Term Name  bdq:geospatialLand</th>
+			<th colspan="2"><a id="bdqval_geospatialLand"></a>Term Name  bdqval:geospatialLand</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -861,7 +825,7 @@ In an RDF context, a reference to a term in the `bdq:` namespace MUST use the Te
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdq_includeEventDate"></a>Term Name  bdq:includeEventDate</th>
+			<th colspan="2"><a id="bdqval_includeEventDate"></a>Term Name  bdqval:includeEventDate</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -907,7 +871,7 @@ In an RDF context, a reference to a term in the `bdq:` namespace MUST use the Te
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdq_latestValidDate"></a>Term Name  bdq:latestValidDate</th>
+			<th colspan="2"><a id="bdqval_latestValidDate"></a>Term Name  bdqval:latestValidDate</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -953,7 +917,7 @@ In an RDF context, a reference to a term in the `bdq:` namespace MUST use the Te
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdq_maximumValidDepthInMeters"></a>Term Name  bdq:maximumValidDepthInMeters</th>
+			<th colspan="2"><a id="bdqval_maximumValidDepthInMeters"></a>Term Name  bdqval:maximumValidDepthInMeters</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -999,7 +963,7 @@ In an RDF context, a reference to a term in the `bdq:` namespace MUST use the Te
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdq_maximumValidElevationInMeters"></a>Term Name  bdq:maximumValidElevationInMeters</th>
+			<th colspan="2"><a id="bdqval_maximumValidElevationInMeters"></a>Term Name  bdqval:maximumValidElevationInMeters</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -1045,7 +1009,7 @@ In an RDF context, a reference to a term in the `bdq:` namespace MUST use the Te
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdq_minimumValidDepthInMeters"></a>Term Name  bdq:minimumValidDepthInMeters</th>
+			<th colspan="2"><a id="bdqval_minimumValidDepthInMeters"></a>Term Name  bdqval:minimumValidDepthInMeters</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -1091,7 +1055,7 @@ In an RDF context, a reference to a term in the `bdq:` namespace MUST use the Te
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdq_minimumValidElevationInMeters"></a>Term Name  bdq:minimumValidElevationInMeters</th>
+			<th colspan="2"><a id="bdqval_minimumValidElevationInMeters"></a>Term Name  bdqval:minimumValidElevationInMeters</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -1137,7 +1101,7 @@ In an RDF context, a reference to a term in the `bdq:` namespace MUST use the Te
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdq_NotEmpty"></a>Term Name  bdq:NotEmpty</th>
+			<th colspan="2"><a id="bdqval_NotEmpty"></a>Term Name  bdqval:NotEmpty</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -1183,7 +1147,7 @@ In an RDF context, a reference to a term in the `bdq:` namespace MUST use the Te
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdq_Record-Management"></a>Term Name  bdq:Record-Management</th>
+			<th colspan="2"><a id="bdqval_Record-Management"></a>Term Name  bdqval:Record-Management</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -1233,7 +1197,7 @@ In an RDF context, a reference to a term in the `bdq:` namespace MUST use the Te
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdq_sourceAuthority"></a>Term Name  bdq:sourceAuthority</th>
+			<th colspan="2"><a id="bdqval_sourceAuthority"></a>Term Name  bdqval:sourceAuthority</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -1279,7 +1243,7 @@ In an RDF context, a reference to a term in the `bdq:` namespace MUST use the Te
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdq_Spatial-Temporal_Patterns"></a>Term Name  bdq:Spatial-Temporal_Patterns</th>
+			<th colspan="2"><a id="bdqval_Spatial-Temporal_Patterns"></a>Term Name  bdqval:Spatial-Temporal_Patterns</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -1329,7 +1293,7 @@ In an RDF context, a reference to a term in the `bdq:` namespace MUST use the Te
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdq_spatialBufferInMeters"></a>Term Name  bdq:spatialBufferInMeters</th>
+			<th colspan="2"><a id="bdqval_spatialBufferInMeters"></a>Term Name  bdqval:spatialBufferInMeters</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -1375,7 +1339,7 @@ In an RDF context, a reference to a term in the `bdq:` namespace MUST use the Te
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdq_Taxon-Management"></a>Term Name  bdq:Taxon-Management</th>
+			<th colspan="2"><a id="bdqval_Taxon-Management"></a>Term Name  bdqval:Taxon-Management</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -1425,7 +1389,7 @@ In an RDF context, a reference to a term in the `bdq:` namespace MUST use the Te
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdq_taxonIsMarine"></a>Term Name  bdq:taxonIsMarine</th>
+			<th colspan="2"><a id="bdqval_taxonIsMarine"></a>Term Name  bdqval:taxonIsMarine</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -1494,7 +1458,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. BDQ Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/terms/2025-05-10>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. BDQ Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqval/terms/2025-05-10>
 
 **Biodiversity Information Standards (TDWG)**
 
