@@ -341,7 +341,7 @@ Looking at the description of that test we see:
 * **Description** Is there a value in dwc:footprintWKT?
 * **TestType** Validation
 * **Information Elements Acted Upon** dwc:footprintWKT
-* **Expected Response** COMPLIANT if dwc:footprintWKT is bdq:NotEmpty; otherwise NOT_COMPLIANT
+* **Expected Response** COMPLIANT if dwc:footprintWKT is bdqval:NotEmpty; otherwise NOT_COMPLIANT
 
 This is telling us, much like an entry in the Quick Reference Guide or the more detailed entry in the bdqtest: term-list document, that this test is a simple presence check for dwc:footprintWKT.
 
@@ -517,31 +517,31 @@ Since this is a `Validation`, the Test will return either COMPLIANT or NOT_COMPL
 
 But, "contains some value" might be interpreted in different ways by different developers, so we will use an explicit concept from BDQ that allows developers to look in one place for the meaning of "contains some value", and know that this is a standard concept that gets reused.
 
-The [bdq:](../list/bdq/index.md) vocabulary contains a term for just this purpose: [bdq:NotEmpty](../list/bdq/index.md#bdq_NotEmpty), a standard definition of this common concept for reuse in many tests, preventing ambiguity in implementation. Thus, we can rephrase the expected response to link to this BDQ concept:
+The [bdqval:](../list/bdq/index.md) vocabulary contains a term for just this purpose: [bdqval:NotEmpty](../list/bdq/index.md#bdq_NotEmpty), a standard definition of this common concept for reuse in many tests, preventing ambiguity in implementation. Thus, we can rephrase the expected response to link to this BDQ concept:
 
-**Expected Response** COMPLIANT if dwc:footprintWKT is bdq:NotEmpty; otherwise NOT_COMPLIANT
+**Expected Response** COMPLIANT if dwc:footprintWKT is bdqval:NotEmpty; otherwise NOT_COMPLIANT
 
 This means that implementers should examine the input data, evaluate the statements in order, and return a result from the first statement that is true.
-* COMPLIANT if dwc:footprintWKT is bdq:NotEmpty; 
+* COMPLIANT if dwc:footprintWKT is bdqval:NotEmpty; 
 * otherwise NOT_COMPLIANT
 
-In this simple case, if `dwc:footprintWKT` is `bdq:NotEmpty`, the Test should return COMPLIANT and stop there.  If `dwc:footprintWKT` is not `bdq:NotEmpty` (i.e. is `bdq:Empty`), the Test should return NOT_COMPLIANT.
+In this simple case, if `dwc:footprintWKT` is `bdqval:NotEmpty`, the Test should return COMPLIANT and stop there.  If `dwc:footprintWKT` is not `bdqval:NotEmpty` (i.e. is `bdqval:Empty`), the Test should return NOT_COMPLIANT.
  
 Formally in the bdqffdq: ontology, `Specification` is a class, which has a `bdqffdq:hasExpectedResponse` property (the `Expected Response` text). The Specification can have other properties for source authorities, parameters and default values.  The specification for a simple Test is found in the text of the `hasExpectedResponse`, in a more complex test, the specification is found split across all these properties of the `Specification` class instance.  When we talk about the specification of a Test, we mean the `Expected Response`, sometimes combined with other properties of a `Specification`.
 
 See also: 
 * [Reading a Specification](../guide/implementers/index.md#232-reading-a-specification-non-normative) in the Implementers Guide.
-* [The bdq: vocabulary](../list/bdq/index.md) for standard concepts that can be used in Test specifications.
+* [The bdqval: vocabulary](../list/bdq/index.md) for standard concepts that can be used in Test specifications.
 * The `Data Quality Solutions` portions of the diagrams in [Concepts in the Framework](../guide/bdqffdq/index.md#223-concepts-in-the-framework-test-types-validation-issue-measure-amendment-non-normative) in the bdqffdq: guide.
 
 #### 4.7.1 What Isn't Said in the Test Specification (non-normative)
 
 For the purposes of simplicity and clarity, the expected response does not include all the details of a `Response` from a Test, just the key elements that implementers need to understand the logic of the Test.  The response from a Test is required to contain metadata (`bdqffdq:hasResponseStatus`), the value of the result of the Test (`bdqffdq:hasResponseResult` or `bdqffdq:hasResponseResultValue`) and a human readable statement about why the Test reached the conclusion it did in a particular case (`bdqffdq:hasResponseComment`).   
 
-**Expected Response** COMPLIANT if dwc:footprintWKT is bdq:NotEmpty; otherwise NOT_COMPLIANT
+**Expected Response** COMPLIANT if dwc:footprintWKT is bdqval:NotEmpty; otherwise NOT_COMPLIANT
 
 This is shorthand for the explicit, but much harder to read:
-* bdqffdq:hasResponseStatus is RUN_HAS_RESULT and bdqffdq:hasResponseResult is COMPLIANT with an explanatory bdqffdq:hasResponseComment that dwc:footprintWKT contains a value if dwc:footprintWKT is bdq:NotEmpty; 
+* bdqffdq:hasResponseStatus is RUN_HAS_RESULT and bdqffdq:hasResponseResult is COMPLIANT with an explanatory bdqffdq:hasResponseComment that dwc:footprintWKT contains a value if dwc:footprintWKT is bdqval:NotEmpty; 
 * otherwise bdqffdq:hasResponseStatus is RUN_HAS_RESULT and bdqffdq:hasResponseResult is NOT_COMPLIANT with an explanatory bdqffdq:hasResponseComment stating that dwc:footprintWKT contains no value.
 
 `Responses` from Tests must have the tripartite status, result, and comment structure, but the `Expected Response` in the test specification is a concise statement of the logic of the test, without all of these details (details for which the content is explicit in the BDQ standard, e.g. if the result is COMPLIANT, the status must be RUN_HAS_RESULT, and there must be a comment).
@@ -587,7 +587,7 @@ For our Test, we have:
 * **Resource Type** SingleRecord
 * **Criterion** NotEmpty
 * **Information Elements Acted Upon** dwc:footprintWKT
-* **Expected Response** COMPLIANT if dwc:footprintWKT is bdq:NotEmpty; otherwise NOT_COMPLIANT
+* **Expected Response** COMPLIANT if dwc:footprintWKT is bdqval:NotEmpty; otherwise NOT_COMPLIANT
 
 To formally express this Test in RDF we would need to add some more identifiers and structures, but the above are the key properties that define the Test and provide the information needed for an implementer to understand and implement the Test.  See the [Fitness For Use Framework Ontology: Concepts and Use](../guide/bdqffdq/index.md) document for details about the full formal structure.
 
@@ -631,7 +631,7 @@ The first of these is a simple presence check for `prov:wasAttributedTo`, which 
 * **Resource Type** SingleRecord
 * **Criterion** NotEmpty
 * **Information Elements Acted Upon** prov:wasAttributedTo
-* **Expected Response** COMPLIANT if prov:wasAttributedTo is bdq:NotEmpty; otherwise NOT_COMPLIANT
+* **Expected Response** COMPLIANT if prov:wasAttributedTo is bdqval:NotEmpty; otherwise NOT_COMPLIANT
 
 ## 6 Defining a more complicated Test with a Source Authority (non-normative)
 
@@ -700,16 +700,16 @@ This Test would evaluate the value of `prov:wasAttributedTo` for each record, so
 
 We could make a very simple specification for this Test, such as "COMPLIANT if the value in prov:wasAttributedTo is a valid ORCID ID; otherwise NOT_COMPLIANT".  However, this is not very clear or specific for an implementer.  What does it mean for a value to be a valid ORCID ID?  How would an implementer determine that?  We need to provide more specific guidance in the specification to ensure that different implementers will implement the Test in a consistent way and thus get comparable results.
 
-We are asking not if the value in `prov:wasAttributedTo` is found in some authority, but if it conforms to the expected format for an ORCID ID.  Thus we could phrase the specification as "COMPLIANT if the value in prov:wasAttributedTo conforms to the expected format for an ORCID ID; otherwise NOT_COMPLIANT".  This is better, but what happens if there is no value in `prov:wasAttributedTo`, if it is `bdq:Empty`?  That would be NOT_COMPLIANT, but it would not be because the value does not conform to the expected format for an ORCID ID, it would be because there is no value at all, and this Test would overlap in what it is testing with VALIDATION_WASATTRIBUTEDTO_NOTEMPTY, which is our separate Test above that checks for the presence of a value in `prov:wasAttributedTo`.  We want to keep these two Tests separate and focused on different aspects of data quality, so we need to make sure the specification for this Test is clear that it is only evaluating whether a value that is present conforms to the expected format for an ORCID ID, and it is not evaluating whether a value is present at all. We accomplish this by asserting that the presence of some value in `prov:wasAttributedTo` is a prerequisite for this Test, and if that prerequisite is not met, then this Test cannot return a result.
+We are asking not if the value in `prov:wasAttributedTo` is found in some authority, but if it conforms to the expected format for an ORCID ID.  Thus we could phrase the specification as "COMPLIANT if the value in prov:wasAttributedTo conforms to the expected format for an ORCID ID; otherwise NOT_COMPLIANT".  This is better, but what happens if there is no value in `prov:wasAttributedTo`, if it is `bdqval:Empty`?  That would be NOT_COMPLIANT, but it would not be because the value does not conform to the expected format for an ORCID ID, it would be because there is no value at all, and this Test would overlap in what it is testing with VALIDATION_WASATTRIBUTEDTO_NOTEMPTY, which is our separate Test above that checks for the presence of a value in `prov:wasAttributedTo`.  We want to keep these two Tests separate and focused on different aspects of data quality, so we need to make sure the specification for this Test is clear that it is only evaluating whether a value that is present conforms to the expected format for an ORCID ID, and it is not evaluating whether a value is present at all. We accomplish this by asserting that the presence of some value in `prov:wasAttributedTo` is a prerequisite for this Test, and if that prerequisite is not met, then this Test cannot return a result.
 
 So, we could phrase our Test specification (our `Expected Response`) as a sequence of:
-* INTERNAL_PREREQUISITES_NOT_MET if prov:wasAttributedTo is bdq:Empty;
+* INTERNAL_PREREQUISITES_NOT_MET if prov:wasAttributedTo is bdqval:Empty;
 * COMPLIANT if the value in prov:wasAttributedTo conforms to the expected format for an ORCID ID; 
 * otherwise NOT_COMPLIANT
 
 This could work for our `Use Case`, but what does it mean for a value to conform to the expected format for an ORCID ID?  We need to provide more specific guidance on what we mean by that.  We could be more explicit in the specification: 
 
-* INTERNAL_PREREQUISITES_NOT_MET if prov:wasAttributedTo is bdq:Empty;
+* INTERNAL_PREREQUISITES_NOT_MET if prov:wasAttributedTo is bdqval:Empty;
 * COMPLIANT if the value in prov:wasAttributedTo conforms to the regular expression "^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$"
 * otherwise NOT_COMPLIANT
 
@@ -728,14 +728,14 @@ BDQ details a convention for the structure and format of source authorities (in 
 * **Convention One**: An authority with a URI providing information about the authority.
   * `“Fixed String Identifier” {\[URL\]}`
 
-* Example: bdq:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}
+* Example: bdqval:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}
   * Fixed string identifier:  "The Getty Thesaurus of Geographic Names (TGN)" 
   * URI: {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}
 
 * **Convention Two**: An authority with a URI providing information about the authority, and an API endpoint for checking values against the authority.
   * `“Fixed String Identifier” {\[URL\]}{API name\[URL of the API\]}`
 
-* Example: bdq:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}
+* Example: bdqval:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}
   * Fixed string Identifier: "ISO 3166 Country Codes" (the name of the authority)
   * URI: {[https://www.iso.org/iso-3166-country-codes.html]}
   * API: {ISO 3166-1-alpha-2 Country Code search \[https://www.iso.org/obp/ui/#search\]}
@@ -745,7 +745,7 @@ BDQ details a convention for the structure and format of source authorities (in 
 * **Convention Three**: An authority that is defined using a regular expression pattern.
   * `“Fixed String Identifier” {\[Regular Expression Pattern\]}`
 
-* Example: bdq:sourceAuthority default = "Regex present/absent" {["^(present|absent)$"]}
+* Example: bdqval:sourceAuthority default = "Regex present/absent" {["^(present|absent)$"]}
   * Fixed string identifier: "Regex present/absent" 
   * Regular Expression Pattern: "^(present|absent)$" (matches only the strings "present" or "absent" (the leading and trailing [{ enclose the pattern, but aren't part of it))
 
@@ -759,11 +759,11 @@ An ORCID ID is a unique identifier for researchers, and it has a specific format
 
 Thus we could specify the source authority as follows:
 
-* **hasAuthoritiesDefaults** bdq:sourceAuthority default = "Resolvable ORCID ID regex" `{["^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$"]}`
-* **Expected Response**  INTERNAL_PREREQUISITES_NOT_MET if prov:wasAttributedTo is bdq:Empty; COMPLIANT if the value in prov:wasAttributedTo conforms to the expected format of bdq:sourceAuthority; otherwise NOT_COMPLIANT.
+* **hasAuthoritiesDefaults** bdqval:sourceAuthority default = "Resolvable ORCID ID regex" `{["^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$"]}`
+* **Expected Response**  INTERNAL_PREREQUISITES_NOT_MET if prov:wasAttributedTo is bdqval:Empty; COMPLIANT if the value in prov:wasAttributedTo conforms to the expected format of bdqval:sourceAuthority; otherwise NOT_COMPLIANT.
 
 Which, combining the Expected Response with the default sourceAuthority, could be read by an implementer as: 
-* INTERNAL_PREREQUISITES_NOT_MET if prov:wasAttributedTo is bdq:Empty; 
+* INTERNAL_PREREQUISITES_NOT_MET if prov:wasAttributedTo is bdqval:Empty; 
 * COMPLIANT if the value in prov:wasAttributedTo conforms to the expected format of "^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$"
 * otherwise NOT_COMPLIANT.
 
@@ -775,7 +775,7 @@ We could make this Test more general by allowing for alternative authorities, an
 
 Parameters can include:
 
-- Date ranges (e.g., bdq:earliestValidDate)
+- Date ranges (e.g., bdqval:earliestValidDate)
 - Thresholds (e.g., dwc:minimumElevationInMeters)
 - Alternative source authorities
   * Alternative source authority vocabularies (e.g., taxonomic name authorities)
@@ -793,9 +793,9 @@ Other users might wish to allow for VIAF or other identifiers in wasAttributedTo
 
 Now the purpose of the “Fixed String Identifier” in the  source authority becomes clear.  These values are expected to to be embedded in code that implements parameterized Test, and that the presentation of these "Fixed String Identifier" values will allow different implementations of the same Test to recognize which parameter  to use.  For example, if an implementation of this Test is designed to allow for both the default regex for resolvable ORCID IDs and an alternative regex for ORCID IDs with the ORCID: prefix, then the implementation would look for the "Fixed String Identifier" in the source authority to determine which regex pattern to use for evaluating the format of the value in `prov:wasAttributedTo`.  If the "Fixed String Identifier" is "Resolvable ORCID ID regex", then the implementation would use the default regex pattern for resolvable ORCID IDs.  If the "Fixed String Identifier" is "Bare ORCID ID regex", then the implementation would use the alternative regex pattern for ORCID IDs with the ORCID: prefix.
 
-We can make the bdq:sourceAuthority as a parameter for this Test, meaning that users could supply different sourceAuthority values as parameters to change the behavior of a Test implementation to fit their specific local needs, while retaining the overall meaning and purpose of the Test.  Under the expectations of BDQ, all implementations must support the default parameter value.  A caveat, a brand new parameter value for a Test must be accompanied by implementation supporting that value, and not every implementation of the Test may support every proposed parameter.
+We can make the bdqval:sourceAuthority as a parameter for this Test, meaning that users could supply different sourceAuthority values as parameters to change the behavior of a Test implementation to fit their specific local needs, while retaining the overall meaning and purpose of the Test.  Under the expectations of BDQ, all implementations must support the default parameter value.  A caveat, a brand new parameter value for a Test must be accompanied by implementation supporting that value, and not every implementation of the Test may support every proposed parameter.
 
-* **Parameter** bdq:sourceAuthority
+* **Parameter** bdqval:sourceAuthority
 
 See also:
 - [Parameterizing the Tests](../guide/bdqtest/index.md#43-parameterizing-the-tests-normative) in the bdqtest: landing page.
@@ -804,17 +804,17 @@ See also:
 
 #### 6.7.3  Revisiting the Test Specification (non-normative)
 
-Having asserted that a `bdq:sourceAuthority` is needed in the Test definition (and that the Test can take this as a parameter to allow for different implementations to use different authorities), we now need to revisit the `Description` and `Expected Response` to make sure that we have included this generalization.
+Having asserted that a `bdqval:sourceAuthority` is needed in the Test definition (and that the Test can take this as a parameter to allow for different implementations to use different authorities), we now need to revisit the `Description` and `Expected Response` to make sure that we have included this generalization.
 
-* **Description** Does value in prov:wasAttributedTo conform to the format of the bdq:sourceAuthority?
-* **Expected Response**  INTERNAL_PREREQUISITES_NOT_MET if prov:wasAttributedTo is bdq:Empty; COMPLIANT if the value in prov:wasAttributedTo conforms to the expected format of bdq:sourceAuthority; otherwise NOT_COMPLIANT.
+* **Description** Does value in prov:wasAttributedTo conform to the format of the bdqval:sourceAuthority?
+* **Expected Response**  INTERNAL_PREREQUISITES_NOT_MET if prov:wasAttributedTo is bdqval:Empty; COMPLIANT if the value in prov:wasAttributedTo conforms to the expected format of bdqval:sourceAuthority; otherwise NOT_COMPLIANT.
 
 #### 6.7.4 Clarifying Related Concepts (non-normative)
 
 The concept of `Source Authority` can blur several related ideas including the authority itself (e.g. ORCID documentation/registry) an implementation strategy (e.g. regex validation of a resolvable ORCID URL) and a fixed string identifier (e.g. "Resolvable ORCID ID regex") that is used to identify the authority and implementation strategy in code.  It is important to be clear about these related concepts when defining a Test with a `Source Authority`.  The values in `Source Authority` should distinguish between "what is authoritative" from "how you check it." from "what you call it in code".  For example, for this Test, we have:  
 
-* **hasAuthoritiesDefaults** bdq:sourceAuthority default = "Resolvable ORCID ID regex" `{["^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$"]}`
-* **Parameter** bdq:sourceAuthority
+* **hasAuthoritiesDefaults** bdqval:sourceAuthority default = "Resolvable ORCID ID regex" `{["^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$"]}`
+* **Parameter** bdqval:sourceAuthority
 
 * Authority: ORCID documentation 
 * Fixed string identifier: "Resolvable ORCID ID regex"
@@ -826,9 +826,9 @@ Some Tests specify a `Source Authority` that is a controlled vocabulary which ha
 
 For example [VALIDATION_PHYLUM_FOUND](../terms/bdqtest/index.md#VALIDATION_PHYLUM_FOUND):
 
-* **Expected Response** EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:phylum is bdq:Empty; COMPLIANT if the value of dwc:phylum is found as a value at the rank of Phylum in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
-* **hasAuthoritiesDefaults** bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
-* **Parameters** bdq:sourceAuthority
+* **Expected Response** EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:phylum is bdqval:Empty; COMPLIANT if the value of dwc:phylum is found as a value at the rank of Phylum in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT
+* **hasAuthoritiesDefaults** bdqval:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
+* **Parameters** bdqval:sourceAuthority
 
 * Authority: GBIF Backbone Taxonomy
 * Fixed string identifier: "GBIF Backbone Taxonomy"
@@ -863,15 +863,15 @@ Notes are present when some aspects of a Test may not be obvious to the casual u
 So, our set of Test descriptors (the values of various bdqffdq: properties attached to instances of `Data Quality Need` subclasses, `Method` subclasses, and `Specifications`) for this Test would be as follows:
 
 * **Label** VALIDATION_WASATTRIBUTEDTO_STANDARD
-* **Description** Does value in prov:wasAttributedTo conform to the format of the bdq:sourceAuthority?
+* **Description** Does value in prov:wasAttributedTo conform to the format of the bdqval:sourceAuthority?
 * **Preferred Label** "Validation prov:wasAttributedTo Standard".  
 * **Term Name** {some UUID}
 * **Modified** 2026-03-25
 * **Test Type** Validation
 * **Information Elements Acted Upon** prov:wasAttributedTo
-* **Expected Response**  INTERNAL_PREREQUISITES_NOT_MET if prov:wasAttributedTo is bdq:Empty; COMPLIANT if the value in prov:wasAttributedTo conforms to the expected format of the bdq:sourceAuthority; otherwise NOT_COMPLIANT.
-* **hasAuthoritiesDefaults** bdq:sourceAuthority default = "Resolvable ORCID ID regex" `{[^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$]}`
-* **Parameter** bdq:sourceAuthority
+* **Expected Response**  INTERNAL_PREREQUISITES_NOT_MET if prov:wasAttributedTo is bdqval:Empty; COMPLIANT if the value in prov:wasAttributedTo conforms to the expected format of the bdqval:sourceAuthority; otherwise NOT_COMPLIANT.
+* **hasAuthoritiesDefaults** bdqval:sourceAuthority default = "Resolvable ORCID ID regex" `{[^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$]}`
+* **Parameter** bdqval:sourceAuthority
 * **Notes** The expected format of an ORCID ID is ^https://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$, but we allow for protocol variants of http:// as well as https:// in the identifier and relax to the regex ^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$.  We expect the ORCID ID to be in resolvable form, not the bare identifier.  ORCID IDs are a subset of ISNI in the range 0000-0001-5000-0007 to 0000-0003-5000-0001, but this test only evaluates the format, not the range.  The form ORCID:0000-0001-5000-0007 should be treated as NOT_COMPLIANT by this test.
 
 #### 6.9.1 Summary of the Test Definition
@@ -896,7 +896,7 @@ BDQ is deliberately agnostic about programming languages and execution framework
 
 A BDQ Test implementation is expected to have a consistent scope and API shape across languages:
 
-* Inputs: the `Information Element(s)` `Acted Upon` (and any `Consulted` values if needed), plus optional `Parameter(s)` (e.g., `bdq:sourceAuthority`).
+* Inputs: the `Information Element(s)` `Acted Upon` (and any `Consulted` values if needed), plus optional `Parameter(s)` (e.g., `bdqval:sourceAuthority`).
 * Logic (decision rules): evaluate the clauses in the specification (`hasExpectedResponse`) in order, returning the first matching outcome (handling EXTERNAL_PREREQUISITES_NOT_MET via exception/error handling where appropriate).  
 * Output: exactly one structured Response per run, always providing a `Response.status` and a `Response.comment`, and providing a `Response.result` only when `Response.status` indicates a result (typically RUN_HAS_RESULT).
 
@@ -936,15 +936,15 @@ See also: [Guide to Marking and Identifying Synthetic and Modified Data](../guid
 
 Consider the Test [VALIDATION_COUNTRYCODE_STANDARD](../terms/bdqtest/index.md#VALIDATION_COUNTRYCODE_STANDARD), which evaluates whether the value in dwc:countryCode is a valid ISO 3166-1-alpha-2 country code.  
 
-* **Expected Response**  EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode is bdq:Empty; COMPLIANT if dwc:countryCode can be unambiguously interpreted as a valid ISO 3166-1-alpha-2 country code in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
-* **Source Authority** bdq:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}
+* **Expected Response**  EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode is bdqval:Empty; COMPLIANT if dwc:countryCode can be unambiguously interpreted as a valid ISO 3166-1-alpha-2 country code in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT
+* **Source Authority** bdqval:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}
 * **Notes** Locations outside of a jurisdiction covered by a country code may have a value in the field dwc:countryCode, the ISO user defined codes include XZ used by the UN for installations on the high seas and recommended in Darwin Core to designate the high seas. Also available in the ISO user defined codes is ZZ, used by Darwin Core and GBIF to mark unknown countries. This Test should accept both XZ and ZZ as COMPLIANT country codes. This Test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.
 
 The conformance testing dataset that accompanies the BDQ implementer's guide includes these following (and other) rows for this Test:
 
 | Label | dwc:countryCode | Response.status | Response.result | Response.comment |
 | --- | --- | --- | --- | --- | --- |
-| VALIDATION_COUNTRYCODE_STANDARD |  | INTERNAL_PREREQUISITES_NOT_MET |  | dwc:countryCode is bdq:Empty | 
+| VALIDATION_COUNTRYCODE_STANDARD |  | INTERNAL_PREREQUISITES_NOT_MET |  | dwc:countryCode is bdqval:Empty | 
 | VALIDATION_COUNTRYCODE_STANDARD | GL | RUN_HAS_RESULT | COMPLIANT | dwc:countryCode is a valid ISO (ISO 3166-1-alpha-2 country codes) value | 
 | VALIDATION_COUNTRYCODE_STANDARD | GRL | RUN_HAS_RESULT | NOT_COMPLIANT | dwc:countryCode is not a valid ISO (ISO 3166-1-alpha-2 country codes) value | 
 | VALIDATION_COUNTRYCODE_STANDARD | XZ | RUN_HAS_RESULT | COMPLIANT | dwc:countryCode is a valid code for high seas taken from UN/Locode | 
@@ -963,13 +963,13 @@ See also:
 
 A possible set of conformance testing data for our proposed `VALIDATION_WASATTRIBUTEDTO_STANDARD` Test are below: 
 
-* **Expected Response**  INTERNAL_PREREQUISITES_NOT_MET if prov:wasAttributedTo is bdq:Empty; COMPLIANT if the value in prov:wasAttributedTo conforms to the expected format of the bdq:sourceAuthority; otherwise NOT_COMPLIANT.
-* **hasAuthoritiesDefaults** bdq:sourceAuthority default = "Resolvable ORCID ID regex" `{[^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$]}`
+* **Expected Response**  INTERNAL_PREREQUISITES_NOT_MET if prov:wasAttributedTo is bdqval:Empty; COMPLIANT if the value in prov:wasAttributedTo conforms to the expected format of the bdqval:sourceAuthority; otherwise NOT_COMPLIANT.
+* **hasAuthoritiesDefaults** bdqval:sourceAuthority default = "Resolvable ORCID ID regex" `{[^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$]}`
 
 | Label | prov:wasAttributedTo | Response.status | Response.result | Response.comment |
 | --- | --- | --- | --- | --- |
-| VALIDATION_WASATTRIBUTEDTO_STANDARD |  | INTERNAL_PREREQUISITES_NOT_MET |  | prov:wasAttributedTo is bdq:Empty |
-| VALIDATION_WASATTRIBUTEDTO_STANDARD | `   ` | INTERNAL_PREREQUISITES_NOT_MET |  | prov:wasAttributedTo is bdq:Empty (whitespace only) |
+| VALIDATION_WASATTRIBUTEDTO_STANDARD |  | INTERNAL_PREREQUISITES_NOT_MET |  | prov:wasAttributedTo is bdqval:Empty |
+| VALIDATION_WASATTRIBUTEDTO_STANDARD | `   ` | INTERNAL_PREREQUISITES_NOT_MET |  | prov:wasAttributedTo is bdqval:Empty (whitespace only) |
 | VALIDATION_WASATTRIBUTEDTO_STANDARD | https://orcid.org/0000-0001-5000-0007 | RUN_HAS_RESULT | COMPLIANT | prov:wasAttributedTo matches expected resolvable ORCID ID format (^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$) |
 | VALIDATION_WASATTRIBUTEDTO_STANDARD | http://orcid.org/0000-0001-5000-0007 | RUN_HAS_RESULT | COMPLIANT | prov:wasAttributedTo matches expected resolvable ORCID ID format allowing http:// as well as https:// |
 | VALIDATION_WASATTRIBUTEDTO_STANDARD | https://orcid.org/0000-0002-1825-0097 | RUN_HAS_RESULT | COMPLIANT | prov:wasAttributedTo matches expected resolvable ORCID ID format (format only; range not evaluated) |
@@ -1006,12 +1006,12 @@ Since the scheme (https) and host (orcid.org) in the ORCID ID are technically ca
 
 So, we might want to relax the default regex pattern to allow for case-insensitivity in the scheme and host, and thus we might want to change our default `Source Authority`:
 
-* From: **hasAuthoritiesDefaults** bdq:sourceAuthority default = "Resolvable ORCID ID regex" `{[^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$]}`
-* To: **hasAuthoritiesDefaults** bdq:sourceAuthority default = "Resolvable ORCID ID regex" `{[^(?i:http(s){0,1}://orcid\.org/)\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$]}`
+* From: **hasAuthoritiesDefaults** bdqval:sourceAuthority default = "Resolvable ORCID ID regex" `{[^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$]}`
+* To: **hasAuthoritiesDefaults** bdqval:sourceAuthority default = "Resolvable ORCID ID regex" `{[^(?i:http(s){0,1}://orcid\.org/)\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$]}`
 
 And then change the conformance testing data accordingly to reflect this change in the expected format for a compliant ORCID ID (so that the "HTTPS://orcid.org" and "https://ORCID.org" would be COMPLIANT).  Similarly, two resolvable identifiers with different schemes (e.g. http://orcid.org/0000-0001-5000-0007 and https://orcid.org/0000-0001-5000-0007) are technically identifiers for different resources, and careful consideration of whether the the regex should allow for either http or https may be needed.
 
-Note, that when evaluating whether a Test implementation responds as expected to a given input, the `Response.status` and `Response.result` must be exact matches, but the `Response.comment` in the response needs to be bdq:NotEmpty.  The `Response.comment` in the conformance testing data provides a general guide to implementers for what the comment could say for a given input, but more importantly provides documentation and explanation for that particular case.
+Note, that when evaluating whether a Test implementation responds as expected to a given input, the `Response.status` and `Response.result` must be exact matches, but the `Response.comment` in the response needs to be bdqval:NotEmpty.  The `Response.comment` in the conformance testing data provides a general guide to implementers for what the comment could say for a given input, but more importantly provides documentation and explanation for that particular case.
 
 ##### 7.2.2.3 Enumerating Test Conformance Data (non-normative)
 
@@ -1021,20 +1021,20 @@ The only way to validate a Test is to implement it and then throw sufficient exa
 
 **Minimal Starting point:** One validation case for each clause in the `Expected Response`.
 
-The `Expected Response` "INTERNAL_PREREQUISITES_NOT_MET if prov:wasAttributedTo is bdq:Empty; COMPLIANT if the value in prov:wasAttributedTo conforms to the expected format of bdq:sourceAuthority; otherwise NOT_COMPLIANT." can be read as the following three clauses, to be evaluated in order:
+The `Expected Response` "INTERNAL_PREREQUISITES_NOT_MET if prov:wasAttributedTo is bdqval:Empty; COMPLIANT if the value in prov:wasAttributedTo conforms to the expected format of bdqval:sourceAuthority; otherwise NOT_COMPLIANT." can be read as the following three clauses, to be evaluated in order:
 
-1. INTERNAL_PREREQUISITES_NOT_MET if prov:wasAttributedTo is bdq:Empty; 
+1. INTERNAL_PREREQUISITES_NOT_MET if prov:wasAttributedTo is bdqval:Empty; 
 1. COMPLIANT if the value in prov:wasAttributedTo conforms to the expected format of "^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$"
 1. otherwise NOT_COMPLIANT.
 
-For clause 1, we would want to include at least one test case where prov:wasAttributedTo is bdq:Empty, and the expected response is INTERNAL_PREREQUISITES_NOT_MET.  For clause 2, we would want to include at least one test case where prov:wasAttributedTo conforms to the expected format for an ORCID ID, and the expected response is COMPLIANT.  For clause 3, we would want to include at least one test case where prov:wasAttributedTo does not conform to the expected format for an ORCID ID, and the expected response is NOT_COMPLIANT.
+For clause 1, we would want to include at least one test case where prov:wasAttributedTo is bdqval:Empty, and the expected response is INTERNAL_PREREQUISITES_NOT_MET.  For clause 2, we would want to include at least one test case where prov:wasAttributedTo conforms to the expected format for an ORCID ID, and the expected response is COMPLIANT.  For clause 3, we would want to include at least one test case where prov:wasAttributedTo does not conform to the expected format for an ORCID ID, and the expected response is NOT_COMPLIANT.
 
-* A test case for clause 1 `INTERNAL_PREREQUISITES_NOT_MET if prov:wasAttributedTo is bdq:Empty;`:
+* A test case for clause 1 `INTERNAL_PREREQUISITES_NOT_MET if prov:wasAttributedTo is bdqval:Empty;`:
   * Test Label: VALIDATION_WASATTRIBUTEDTO_STANDARD
   * prov:wasAttributedTo: 
   * Response.status: INTERNAL_PREREQUISITES_NOT_MET
   * Response.result:  
-  * Response.comment: prov:wasAttributedTo is bdq:Empty, so its format cannot be evaluated.
+  * Response.comment: prov:wasAttributedTo is bdqval:Empty, so its format cannot be evaluated.
 
 * A test cases for clause 2 `COMPLIANT if the value in prov:wasAttributedTo conforms to the expected format of "^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$"`:
   * Test Label: VALIDATION_WASATTRIBUTEDTO_STANDARD
@@ -1109,7 +1109,7 @@ A framework’s job is to act as the “adapter layer” that turns heterogeneou
   * Ensure every execution yields exactly one structured `Response` with:
     * `Response.status` from the controlled vocabulary (e.g. RUN_HAS_RESULT, EXTERNAL_PREREQUISITES_NOT_MET),
     * `Response.result` as required by status and `Test Type`, and
-    * a `Response.comment` that is `bdq:NotEmpty`.
+    * a `Response.comment` that is `bdqval:NotEmpty`.
   * Optionally wrap/serialize as RDF assertions (`bdqffdq:Response`) or as W3C Annotations, as that representation choice is outside the Test itself.
 
 * Present results to users and/or downstream processes
@@ -1237,7 +1237,7 @@ Depending on how your Test suite is designed, `MultiRecord` `Measures` that coun
 
 A `MultiRecord` `Measure` that counts records where `Response.status=EXTERNAL_PREREQUISITES_NOT_MET` may be informative in some workflow settings to identify cases where Tests may need to be run again later due to some problem connecting to some external source authority at run time.
 
-**`Use Case` and `Policy` design note**: In practice, the utility of counting  INTERNAL_PREREQUISITES_NOT_MET outcomes depends on how your specification (`Expected Response`) clauses are written across a suite of tests.  Suites that include explicit prerequisite checks (e.g., “INTERNAL_PREREQUISITES_NOT_MET if dwc:month is bdq:Empty”) will surface more of these statuses, while suites that instead express missingness and non-interpretability as direct NOT_COMPLIANT outcomes in focused Validation Tests (e.g., separate ...\_NOTEMPTY and ...\_STANDARD Tests) will enable clearly identifying those cases in more actionable compliance/non-compliance counts.  Again, iterate in `Use Case` and Test design.
+**`Use Case` and `Policy` design note**: In practice, the utility of counting  INTERNAL_PREREQUISITES_NOT_MET outcomes depends on how your specification (`Expected Response`) clauses are written across a suite of tests.  Suites that include explicit prerequisite checks (e.g., “INTERNAL_PREREQUISITES_NOT_MET if dwc:month is bdqval:Empty”) will surface more of these statuses, while suites that instead express missingness and non-interpretability as direct NOT_COMPLIANT outcomes in focused Validation Tests (e.g., separate ...\_NOTEMPTY and ...\_STANDARD Tests) will enable clearly identifying those cases in more actionable compliance/non-compliance counts.  Again, iterate in `Use Case` and Test design.
 
 #### 8.1.5 Practical note: summary values vs. details
 

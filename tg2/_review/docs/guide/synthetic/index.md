@@ -164,7 +164,7 @@ B. Each modified record MUST provide an identifier for the synthetic record. For
 The BDQ standard includes two datasets for the conformance testing of Test implementations. These are sparsely populated data fragments unlikely to be mistaken for real data, and are not marked. 
 
   - File: [Test Conformance Testing Data](../implementers/TG2_test_validation_data.csv "Test Conformance Testing Data CSV file")
-  - File: [Test Conformance Testing Data for non-printing characters](../implementers/TG2_test_validation_data_nonprintingchars.csv "Test Conformance Testing Data CSV file for testing implementations of bdq:Empty, containing non-printing characters")
+  - File: [Test Conformance Testing Data for non-printing characters](../implementers/TG2_test_validation_data_nonprintingchars.csv "Test Conformance Testing Data CSV file for testing implementations of bdqval:Empty, containing non-printing characters")
 ## Acronyms (non-normative)
 
 A list of Acronyms can be found in the [Acronyms (non-normative)](../../../index.md#71-acronyms-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.

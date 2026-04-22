@@ -71,7 +71,7 @@ Draft Standard for Review
 
 ### 1.1 Purpose (non-normative)
 
-The purpose of this document is to provide the full term list for the `bdq:` controlled vocabulary, which supports the specification and use of BDQ Tests. The `bdq:` vocabulary includes concepts used throughout the BDQ standard to describe parameters, data structures, source authorities, and special value cases relevant to the execution and behavior of Tests.
+The purpose of this document is to provide the full term list for the `bdqval:` controlled vocabulary, which supports the specification and use of BDQ Tests. The `bdqval:` vocabulary includes concepts used throughout the BDQ standard to describe parameters, data structures, source authorities, and special value cases relevant to the execution and behavior of Tests.
 
 This term list defines the formal structure and meanings of these concepts and provides reference material for implementation and documentation purposes.
 
@@ -88,12 +88,12 @@ Familiarity with RDF vocabularies and the Fitness For Use Framework is recommend
 
 ### 1.3 Data Quality Vocabulary Terms (non-normative)
 
-The `bdq:` vocabulary includes four groups of concepts used across the BDQ standard:
+The `bdqval:` vocabulary includes four groups of concepts used across the BDQ standard:
 
 - **Use Cases** (`bdqffdq:UseCase`) – formal representations of the purposes for which data might be evaluated using BDQ Tests.
-- **Test Parameters** (`bdqffdq:Parameter`) – concepts used to configure the behavior of Tests, including named parameters like `bdq:sourceAuthority`.
+- **Test Parameters** (`bdqffdq:Parameter`) – concepts used to configure the behavior of Tests, including named parameters like `bdqval:sourceAuthority`.
 - **Information Elements** – used by `MultiRecord` `Measure` Tests to refer to aggregated or referenced values.
-- **Empty/NotEmpty Concepts** – `bdq:Empty` and `bdq:NotEmpty`, which provide shared semantics for Tests dealing with missing or present values.
+- **Empty/NotEmpty Concepts** – `bdqval:Empty` and `bdqval:NotEmpty`, which provide shared semantics for Tests dealing with missing or present values.
 
 These terms ensure consistent representation and enable structured interpretation of Test configurations and outcomes.
 

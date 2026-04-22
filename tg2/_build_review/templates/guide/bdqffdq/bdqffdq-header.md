@@ -277,7 +277,7 @@ Below is a fragment in Turtle describing VALIDATION_COUNTRY_FOUND, composed of a
       bdqffdq:hasActedUponInformationElement <urn:uuid:30db5994-81fa-4684-ac54-cfc226209d27>;
       dcterms:issued "2025-03-07"^^xsd:date;
       dcterms:bibliographicCitation "Getty Research Institute (2017) Getty Thesaurus of Geographic Names Online. https://www.getty.edu/research/tools/vocabularies/tgn/index.html; Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853";
-      rdfs:comment "Does the value of dwc:country occur in the bdq:sourceAuthority?";
+      rdfs:comment "Does the value of dwc:country occur in the bdqval:sourceAuthority?";
       skos:historyNote "https://github.com/tdwg/bdq/issues/21";
       rdfs:label "VALIDATION_COUNTRY_FOUND";
       dcterms:isVersionOf bdqtest:69b2efdc-6269-45a4-aecb-4cb99c2ae134;
@@ -305,24 +305,24 @@ Below is a fragment in Turtle describing VALIDATION_COUNTRY_FOUND, composed of a
       bdqffdq:forValidation bdqtest:69b2efdc-6269-45a4-aecb-4cb99c2ae134-2025-03-07 .
     
     <urn:uuid:051f6ad7-1a4b-4e6c-8a1d-2af76de24848> a bdqffdq:Specification;
-      skos:example "dwc:country=\"Eswatini\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:country is a valid country name in the bdq:sourceAuthority\"",
-        "dwc:country=\"Tasmania\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"Tasmania is not found at the level of national in the bdq:sourceAuthority\"";
-      bdqffdq:hasAuthoritiesDefaults "bdq:sourceAuthority default = \"The Getty Thesaurus of Geographic Names (TGN)\" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}";
-      rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:country is bdq:Empty; COMPLIANT if value of dwc:country is a place type equivalent to administrative entity of \"nation\" in the bdq:sourceAuthority; otherwise NOT_COMPLIANT bdq:sourceAuthority default = \"The Getty Thesaurus of Geographic Names (TGN)\" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}";
-      bdqffdq:hasExpectedResponse "EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:country is bdq:Empty; COMPLIANT if value of dwc:country is a place type equivalent to administrative entity of \"nation\" in the bdq:sourceAuthority; otherwise NOT_COMPLIANT";
+      skos:example "dwc:country=\"Eswatini\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:country is a valid country name in the bdqval:sourceAuthority\"",
+        "dwc:country=\"Tasmania\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"Tasmania is not found at the level of national in the bdqval:sourceAuthority\"";
+      bdqffdq:hasAuthoritiesDefaults "bdqval:sourceAuthority default = \"The Getty Thesaurus of Geographic Names (TGN)\" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}";
+      rdfs:comment "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:country is bdqval:Empty; COMPLIANT if value of dwc:country is a place type equivalent to administrative entity of \"nation\" in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT bdqval:sourceAuthority default = \"The Getty Thesaurus of Geographic Names (TGN)\" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}";
+      bdqffdq:hasExpectedResponse "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:country is bdqval:Empty; COMPLIANT if value of dwc:country is a place type equivalent to administrative entity of \"nation\" in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT";
       rdfs:label "Specification for: VALIDATION_COUNTRY_FOUND";
       bdqffdq:hasArgument <urn:uuid:3e00109a-13d3-416d-9a91-127c99b47473> .
     
     <urn:uuid:3e00109a-13d3-416d-9a91-127c99b47473> a bdqffdq:Argument;
       bdqffdq:hasArgumentValue "The Getty Thesaurus of Geographic Names (TGN)";
-      rdfs:label "Default value for bdq:sourceAuthority:\"The Getty Thesaurus of Geographic Names (TGN)\"";
-      bdqffdq:hasParameter bdq:sourceAuthority .
+      rdfs:label "Default value for bdqval:sourceAuthority:\"The Getty Thesaurus of Geographic Names (TGN)\"";
+      bdqffdq:hasParameter bdqval:sourceAuthority .
   
-    bdq:sourceAuthority a bdqffdq:Parameter .     
+    bdqval:sourceAuthority a bdqffdq:Parameter .     
     
     <urn:uuid:0053ca4f-7d45-41ea-912e-c8847bb70142> a bdqffdq:ValidationPolicy;
-      rdfs:label "ValidationPolicy: (49) validations  in UseCase bdq:Spatial-Temporal_Patterns";
-      bdqffdq:hasUseCase bdq:Spatial-Temporal_Patterns;
+      rdfs:label "ValidationPolicy: (49) validations  in UseCase bdqval:Spatial-Temporal_Patterns";
+      bdqffdq:hasUseCase bdqval:Spatial-Temporal_Patterns;
       bdqffdq:includesInPolicy bdqtest:0493bcfb-652e-4d17-815b-b0cce0742fbe-2025-03-07,
         bdqtest:69b2efdc-6269-45a4-aecb-4cb99c2ae134-2025-03-07, bdqtest:8f1e6e58-544b-4365-a569-fb781341644e-2025-03-07,
         bdqtest:0949110d-c06b-450e-9649-7c1374d940d1-2025-03-07, bdqtest:f51e15a6-a67d-4729-9c28-3766299d2985-2025-03-07,
@@ -348,7 +348,7 @@ Below is a fragment in Turtle describing VALIDATION_COUNTRY_FOUND, composed of a
         bdqtest:9a39d88c-7eee-46df-b32a-c109f9f81fb8-2025-03-06, bdqtest:47ff73ba-0028-4f79-9ce1-ee7008d66498-2025-03-06,
         bdqtest:3f1db29a-bfa5-40db-9fd1-fde020d81939-2025-03-07, bdqtest:4daa7986-d9b0-4dd5-ad17-2d7a771ea71a-2025-03-07,
         bdqtest:d257eb98-27cb-48e5-8d3c-ab9fca4edd11-2025-03-07, bdqtest:4eb48fdf-7299-4d63-9d08-246902e2857f-2025-03-07;
-      skos:prefLabel "ValidationPolicy: (49) validations  in UseCase bdq:Spatial-Temporal_Patterns" .
+      skos:prefLabel "ValidationPolicy: (49) validations  in UseCase bdqval:Spatial-Temporal_Patterns" .
 
 ## 3 Use of Ontology Terms (normative) 
 
@@ -379,7 +379,7 @@ Each instance of `bdqffdq:UseCase` SHOULD have one `bdqffdq:hasFitnessRequiremen
 
 The `bdqffdq:hasUseCase` object property SHOULD have an individual with a type that is a subclass of `bdqffdq:Policy` as its subject. 
 
-The `bdqffdq:hasUseCase` object property MAY have an individual from the `bdq:` vocabulary that represents a `bdqffdq:UseCase` as its object. 
+The `bdqffdq:hasUseCase` object property MAY have an individual from the `bdqval:` vocabulary that represents a `bdqffdq:UseCase` as its object. 
 
 An axiom types the range of `bdqffdq:hasUseCase` as a `bdqffdq:UseCase`. 
 
@@ -819,7 +819,7 @@ Note: This is a representation of the `Multi Record` `Measures` that return COMP
 
      dqv(dr1) = {< va1, s1, m1, r1 >}
 
-* A DQ `Validation` asserts that the `Validation` "Geodetic Datum must be supplied" is COMPLIANT for a specific species `dwc:Occurrence` and this `Validation` was performed by the software Darwin Test by checking if the field `dwc:geodeticDatum` of the record was `bdq:NotEmpty`.
+* A DQ `Validation` asserts that the `Validation` "Geodetic Datum must be supplied" is COMPLIANT for a specific species `dwc:Occurrence` and this `Validation` was performed by the software Darwin Test by checking if the field `dwc:geodeticDatum` of the record was `bdqval:NotEmpty`.
 
 ##### 4.4.4.3 MeasurementResponse (normative)
      DQM(dr) = {dqm | dqm =< me, s, m, r >, me ∈ ME, s ∈ S, m ∈ M , r ∈ R ⋀ dr ∈ DR}

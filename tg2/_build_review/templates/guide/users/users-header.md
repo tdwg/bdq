@@ -248,7 +248,7 @@ Alternatively, if there is nothing in the `dwc:dataGeneralizations` field, i.e. 
 
 * `Response.status`=RUN_HAS_RESULT 
 * `Response.result`=NOT_ISSUE 
-* `Response.comment`="dwc:dataGeneralizations is bdq:Empty"
+* `Response.comment`="dwc:dataGeneralizations is bdqval:Empty"
 
 ##### 3.2.3.4 Measure Test Reports (non-normative)
 
@@ -313,7 +313,7 @@ To maintain the integrity and reliability of the BDQ Framework, we have been car
 
 Some tests are parameterized.  Parameters allow those running a Test to change the behavior of the test at the time it is run.  This allows users to easily adapt the tests to their specific needs and contexts, making them more flexible and applicable to a wider range of scenarios.  
 
-For example, a user working with data from just one country may wish to change a default `bdq:sourceAuthority` for some test to an authority that is more appropriate for that particular country – e.g. to change the default species names authority (which covers the whole world) to one specific for just that country, all while retaining the same decision making process within the Test. For more details see [Parameterizing the Tests](../../guide/bdqtest/index.md#43-parameterizing-the-tests-normative) in the [BDQ Tests: Concepts, Types, and Use](../../guide/bdqtest/index.md) document.
+For example, a user working with data from just one country may wish to change a default `bdqval:sourceAuthority` for some test to an authority that is more appropriate for that particular country – e.g. to change the default species names authority (which covers the whole world) to one specific for just that country, all while retaining the same decision making process within the Test. For more details see [Parameterizing the Tests](../../guide/bdqtest/index.md#43-parameterizing-the-tests-normative) in the [BDQ Tests: Concepts, Types, and Use](../../guide/bdqtest/index.md) document.
 
 Similarly a parameterized Test may change default numerical values to values more appropriate to the local area – e.g. setting a maximum elevation that is more appropriate to the country, rather than using a default global maximum, such that for some parameterized `Validation` elevations higher than the local maximum, but still lower than the global maximum elevation would be `NOT_COMPLIANT`, fitting the local needs, while they would be `COMPLIANT` and not identified as problematic for local needs if the default global maximum elevation were used.
 
@@ -327,7 +327,7 @@ More normative guidance on Test `Parameters` can be found in the section [6.1 Pa
 
 #### 3.4.2 Test Parameters Example (non-normative) 
 
-Consider the Test `VALIDATION_MAXELEVATION_INRANGE`.  If you are evaluating data that could come from anywhere in the world, you would want to use the default value for the 'Parameter' that sets the maximum elevation to that of the highest point on Earth.  However, if you are working on a dataset consisting entirely of data pertaining to locations in New Zealand, you may wish to set the `Parameter` bdq:maximumValidElevationInMeters value to the maximum elevation in New Zealand (i.e., 3724 meters).  
+Consider the Test `VALIDATION_MAXELEVATION_INRANGE`.  If you are evaluating data that could come from anywhere in the world, you would want to use the default value for the 'Parameter' that sets the maximum elevation to that of the highest point on Earth.  However, if you are working on a dataset consisting entirely of data pertaining to locations in New Zealand, you may wish to set the `Parameter` bdqval:maximumValidElevationInMeters value to the maximum elevation in New Zealand (i.e., 3724 meters).  
 
 So, for a record where dwc:maximumElevationinMeters is given as "4500" which is out of range for New Zealand, the `Response` for the test with the default value for the parameter would be:
 
@@ -339,15 +339,15 @@ But if the test is run on the same data, but with the parameter bqd:maximumValid
 
 * `Response.status`=RUN_HAS_RESULT
 * `Response.result`=NOT_COMPLIANT
-* `Response.comment`="The provided value of dwc:maximumElevationInMeters [4500] is out of range using the non-default bdq:maximumValidElevationInMeters=3724".
+* `Response.comment`="The provided value of dwc:maximumElevationInMeters [4500] is out of range using the non-default bdqval:maximumValidElevationInMeters=3724".
 
 Thus the parameter changes the behavior of the test to fit local needs.
 
 It is important to identify the use of non-default parameter values in reports, so that users can understand the context in the test results.
 
-If a Test with a non-default `Parameter` value is used, this should be represented to consumers of data quality reports by combining at least the Label (`rdfs:label`) for the Test class (e.g., [VALIDATION_MINDEPTH_INRANGE](../../terms/bdqtest/index.md#VALIDATION_MINDEPTH_INRANGE)) in combination with the `Parameter` (e.g., `bdq:maximumValidDepthInMeters`) and the value of the argument that replaced the default `Parameter` value in this specific case (e.g., 1642). For example, a Data Quality Report could identify this Test as `VALIDATION_MAXDEPTH_INRANGE with bdq:maximumValidDepthInMeters=1642` rather than simply `VALIDATION_MAXDEPTH_INRANGE`
+If a Test with a non-default `Parameter` value is used, this should be represented to consumers of data quality reports by combining at least the Label (`rdfs:label`) for the Test class (e.g., [VALIDATION_MINDEPTH_INRANGE](../../terms/bdqtest/index.md#VALIDATION_MINDEPTH_INRANGE)) in combination with the `Parameter` (e.g., `bdqval:maximumValidDepthInMeters`) and the value of the argument that replaced the default `Parameter` value in this specific case (e.g., 1642). For example, a Data Quality Report could identify this Test as `VALIDATION_MAXDEPTH_INRANGE with bdqval:maximumValidDepthInMeters=1642` rather than simply `VALIDATION_MAXDEPTH_INRANGE`
 
-Similarly, Test Results should be accompanied by a `Response.comment` that includes text expressing something similar to "Non-default bdq:maximumValidDepthInMeters=1642" as in the example above.  Both are important to help users understand the context of test results, and to allow users to identify where non-default parameter values are used.
+Similarly, Test Results should be accompanied by a `Response.comment` that includes text expressing something similar to "Non-default bdqval:maximumValidDepthInMeters=1642" as in the example above.  Both are important to help users understand the context of test results, and to allow users to identify where non-default parameter values are used.
 
 ## 4 Using the BDQ Tests Quick Reference Guide (non-normative)
 
@@ -361,7 +361,7 @@ For each Test, the [BDQ Tests Quick Reference Guide](../../terms/bdqtest/index.m
 * **skos:prefLabel:** - the human readable label spelled out in words (e.g. "Validation dwc:basisOfRecord` `Not Empty"). The prefLabel is expected to support translations, screen readers and other means for improving accessibility for humans in the identification of a Test.
 * **Versioned IRI:** - the means for software to identify the Test (e.g. https://rs.tdwg.org/bdqtest/terms/version/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2023-09-17)). The Versioned IRI is the definitive identifier for a particular version of a Test and is intended for use by software.
 
-The Quick Reference Guide also identifies whether a Test operates on `Single Records` or a `Multi Record` (a dataset). A brief description of what the Test is intended to do follows, with a more detailed description for implementers, consisting of `Expected Response`, `Information Elements` `Acted Upon` and `Consulted`, any `Parameters` that could change the behavior of the Tests, default values for any `Parameters` or `bdq:sourceAuthority` consulted by the Test.
+The Quick Reference Guide also identifies whether a Test operates on `Single Records` or a `Multi Record` (a dataset). A brief description of what the Test is intended to do follows, with a more detailed description for implementers, consisting of `Expected Response`, `Information Elements` `Acted Upon` and `Consulted`, any `Parameters` that could change the behavior of the Tests, default values for any `Parameters` or `bdqval:sourceAuthority` consulted by the Test.
 
 Two Examples of Test data input and output are provided to illustrate opposing behaviors of the Test. For `Validation` Tests, one example provides a `Response.result`="COMPLIANT", the other "NOT_COMPLIANT". See the [BDQ Implementer's Guide](../implementers/index.md) for information about data for Conformance Testing of Test implementations. 
 

@@ -20,10 +20,10 @@ BDQ Implementer's Guide
 -->
 
 **This version**<br>
-<http://rs.tdwg.org/bdq/terms/2025-05-10>
+<http://rs.tdwg.org/bdq/doc/implementers2025-05-10>
 
 **Latest version**<br>
-<http://rs.tdwg.org/bdq/terms/>
+<http://rs.tdwg.org/bdq/doc/implementers>
 
 **Previous version**<br>
 
@@ -37,7 +37,7 @@ This document is a users guide for the BDQ standard, providing guidance for thos
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 **Bibliographic citation**<br>
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. BDQ Implementer's Guide. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/terms/2025-05-10>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. BDQ Implementer's Guide. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/doc/implementers2025-05-10>
 
 **Status**<br>
 Draft Standard for Review
@@ -230,46 +230,46 @@ Test implementations SHOULD be independent of how data are stored and transporte
 
 | term | definition |
 | ---  | ---------- |
-| bdq:Empty | An evaluation of a value, which in the context of the evaluation, returns true if the value does not contain any characters or values other than those in the range U+0000 to U+0020, otherwise returns false. |
-| bdq:NotEmpty |An evaluation of a value, which in the context of the evaluation, returns false if the value contains any characters or values other than those in the range U+0000 to U+0020, otherwise returns true. |
+| bdqval:Empty | An evaluation of a value, which in the context of the evaluation, returns true if the value does not contain any characters or values other than those in the range U+0000 to U+0020, otherwise returns false. |
+| bdqval:NotEmpty |An evaluation of a value, which in the context of the evaluation, returns false if the value contains any characters or values other than those in the range U+0000 to U+0020, otherwise returns true. |
 
-See the formal definitions and usage comments of [bdq:Empty](../../list/bdq/index.md#bdq_Empty) and [bdq:NotEmpty](../../list/bdq/index.md#bdq_NotEmpty) terms in the [BDQ Controlled Vocabulary List of Terms](../../list/bdq/index.md)
+See the formal definitions and usage comments of [bdqval:Empty](../../list/bdq/index.md#bdq_Empty) and [bdqval:NotEmpty](../../list/bdq/index.md#bdq_NotEmpty) terms in the [BDQ Controlled Vocabulary List of Terms](../../list/bdq/index.md)
 
-Data that have passed through arbitrary serializations and transformations can contain anomalies. `bdq:Empty` is defined to allow Tests to clearly separate concerns. A `bdqffdq:InformationElement` containing invalid characters, (e.g., letters in an `Information Element` that would be expected to contain integers) or values (including string serializations of the NULL value) are `bdq:NotEmpty` and are the concern of Tests that evaluate `bdqdim:Conformance`. Presence or absence of data is a concern for Tests evaluating `bdqdim:Completeness`.
+Data that have passed through arbitrary serializations and transformations can contain anomalies. `bdqval:Empty` is defined to allow Tests to clearly separate concerns. A `bdqffdq:InformationElement` containing invalid characters, (e.g., letters in an `Information Element` that would be expected to contain integers) or values (including string serializations of the NULL value) are `bdqval:NotEmpty` and are the concern of Tests that evaluate `bdqdim:Conformance`. Presence or absence of data is a concern for Tests evaluating `bdqdim:Completeness`.
 
 #### 2.2.1 The Concept of Empty (normative)
 
-(1) Spaces, tabs, and other non-printing characters are `bdq:Empty`.
+(1) Spaces, tabs, and other non-printing characters are `bdqval:Empty`.
 
-Unicode characters in the range U+0000 to U+0020, equivalent to ASCII characters 0-32, MUST be treated as `bdq:Empty`.
+Unicode characters in the range U+0000 to U+0020, equivalent to ASCII characters 0-32, MUST be treated as `bdqval:Empty`.
 
-(2) Actual NULLs are `bdq:Empty`.
+(2) Actual NULLs are `bdqval:Empty`.
 
-Objects that are null (or are null values in a relational database) at the point of Test execution MUST be treated as `bdq:Empty`.
+Objects that are null (or are null values in a relational database) at the point of Test execution MUST be treated as `bdqval:Empty`.
 
-(3) Serializations of NULL are `bdq:NotEmpty`.
+(3) Serializations of NULL are `bdqval:NotEmpty`.
 
 Data serialized from relational database systems may contain string representations of NULL.  We considered, and explicitly rejected, treating common string serializations of null such as "&#92;N" and "NULL" as empty values. 
 
-String serializations of NULL outside of a database, present at the point of evaluation of a Test, MUST be treated as `bdq:NotEmpty`. 
+String serializations of NULL outside of a database, present at the point of evaluation of a Test, MUST be treated as `bdqval:NotEmpty`. 
 
-A Test execution environment MAY deserialize these string serializations of NULL as null objects (see 5), and present them to a test as NULL objects, where they would evaluate as `bdq:notEmpty` (see 2).
+A Test execution environment MAY deserialize these string serializations of NULL as null objects (see 5), and present them to a test as NULL objects, where they would evaluate as `bdqval:notEmpty` (see 2).
 
-(4) Data values indicating an unknown are treated as `bdq:NotEmpty`.
+(4) Data values indicating an unknown are treated as `bdqval:NotEmpty`.
 
-The definition of `bdq:Empty` is not applicable to a discussion of what value to include in a controlled vocabulary to indicate that no meaningful value is present, so no suggestion is made that "EMPTY" should be used as a data value to represent some form of "null", "unknown", "not recorded", etc. Choices there would fall into the semantics for some set of controlled vocabularies. The relevance to such a discussion is that this definition would treat an empty string as an empty value, with no semantics attached as to why the value is empty.
+The definition of `bdqval:Empty` is not applicable to a discussion of what value to include in a controlled vocabulary to indicate that no meaningful value is present, so no suggestion is made that "EMPTY" should be used as a data value to represent some form of "null", "unknown", "not recorded", etc. Choices there would fall into the semantics for some set of controlled vocabularies. The relevance to such a discussion is that this definition would treat an empty string as an empty value, with no semantics attached as to why the value is empty.
 
 (5) Independence of Tests from the execution framework. 
 
-The evaluation of `bdq:Empty` MUST be at the point of evaluation of the Test. This allows the Tests to be independent of data serializations for transport and the representation of data in Test execution environments. 
+The evaluation of `bdqval:Empty` MUST be at the point of evaluation of the Test. This allows the Tests to be independent of data serializations for transport and the representation of data in Test execution environments. 
 
-In the BDQ standard, `bdq:Empty` is used to evaluate `bdqffdq:InformationElements` within a Test specification, it therefore means empty if the dataset being evaluated does not contain the term matching the `Information Element`, or if the dataset contains that term but the value for that term is empty. This is to allow the application programming interface expressed by the Test `bdqffdq:DataQualityNeed` to be agnostic about the structure presented to a framework for executing the Tests. 
+In the BDQ standard, `bdqval:Empty` is used to evaluate `bdqffdq:InformationElements` within a Test specification, it therefore means empty if the dataset being evaluated does not contain the term matching the `Information Element`, or if the dataset contains that term but the value for that term is empty. This is to allow the application programming interface expressed by the Test `bdqffdq:DataQualityNeed` to be agnostic about the structure presented to a framework for executing the Tests. 
 
 For CSV data, a column is either there or not in a dataset, but in an RDF representation, some data objects could have relevant properties and others not - and the Tests are independent of that.
 
 #### 2.2.2 Example Implementation of a Function to Assess Empty (non-normative)
 
-Here is a Java function to evaluate Empty, using trim() to exclude U+0020 (space), U+000A (LF), U+000D (CR) and the other non-printing characters in the unicode range U+0000 to U+0020, and also evaluating null as Empty. Test implementations can reuse a function like this for any Test that evaluates `bdq:Empty` in its specification (`hasExpectedResponse`).
+Here is a Java function to evaluate Empty, using trim() to exclude U+0020 (space), U+000A (LF), U+000D (CR) and the other non-printing characters in the unicode range U+0000 to U+0020, and also evaluating null as Empty. Test implementations can reuse a function like this for any Test that evaluates `bdqval:Empty` in its specification (`hasExpectedResponse`).
 
     public boolean isEmpty(String aString)  {
         boolean result = true;
@@ -318,17 +318,17 @@ Consider these properties of an example `Specification` (for the `Validation` [V
 
 hasExpectedResponse: 
 ```
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:phylum is bdq:Empty; COMPLIANT if the value of dwc:phylum is found as a value at the rank of Phylum in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:phylum is bdqval:Empty; COMPLIANT if the value of dwc:phylum is found as a value at the rank of Phylum in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT
 ```
 
 hasAuthoritiesDefaults: 
 ```
-bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&amp;name=]}
+bdqval:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&amp;name=]}
 ```
 
 example: 
 ```
-dwc:phylum="Tracheophyta": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:phylum has an equivalent at the rank of Phylum in the bdq:sourceAuthority. GBIF.org uses Trachyophyta for the Phylum including ferns"
+dwc:phylum="Tracheophyta": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:phylum has an equivalent at the rank of Phylum in the bdqval:sourceAuthority. GBIF.org uses Trachyophyta for the Phylum including ferns"
 ```
 
 These properties describe the expected behavior of an Implementation of this Test. This section gives further guidance on how to interpret these properties in order to produce an implementation that follows this specification.
@@ -357,17 +357,17 @@ Some `Amendment` Tests can propose values for a single [Darwin Core Term](https:
 
 EXTERNAL_PREREQUISITES_NOT_MET means 
 ```
-Response.status=EXTERNAL_PREREQUISITES_NOT_MET, Response.result=null, Response.comment={some bdq:NotEmpty description of the failure condition}
+Response.status=EXTERNAL_PREREQUISITES_NOT_MET, Response.result=null, Response.comment={some bdqval:NotEmpty description of the failure condition}
 ```
 
 INTERNAL_PREREQUISITES_NOT_MET means 
 ```
-Response.status=INTERNAL_PREREQUISITES_NOT_MET, Response.result=null, Response.comment={some bdq:NotEmpty description of the failure condition}.
+Response.status=INTERNAL_PREREQUISITES_NOT_MET, Response.result=null, Response.comment={some bdqval:NotEmpty description of the failure condition}.
 ```
 
 COMPLIANT means 
 ```
-Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment={some bdq:NotEmpty description of the success condition}.
+Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment={some bdqval:NotEmpty description of the success condition}.
 ```
 
 Expressed with `bdqffdq:` terms, as would be if `Responses` are expressed in RDF, the first example above these would be:
@@ -391,19 +391,19 @@ Note that in RDF representations, the `Response` is an instance of `bdqffdq:Resp
 For example, the `bdqffdq:hasExpectedResponse` for the `Specification` for [VALIDATION_COUNTRYCODE_STANDARD](../../terms/bdqtest/index.md#VALIDATION_COUNTRYCODE_STANDARD) states:
 
 ```
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode is bdq:Empty; COMPLIANT if dwc:countryCode can be unambiguously interpreted as a valid ISO 3166-1-alpha-2 country code in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode is bdqval:Empty; COMPLIANT if dwc:countryCode can be unambiguously interpreted as a valid ISO 3166-1-alpha-2 country code in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT
 ```
 
-To understand the meaning of `bdq:sourceAuthority` in the expected response, see the `bdqffdq:hasAuthoritiesDefaults` for the `Specification`:
+To understand the meaning of `bdqval:sourceAuthority` in the expected response, see the `bdqffdq:hasAuthoritiesDefaults` for the `Specification`:
 
 ```
-bdq:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}
+bdqval:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}
 ```
 
 The `Specification` is thus intended to be read as: 
 
 1. Return EXTERNAL_PREREQUISITES_NOT_MET if the ISO Country codes list (https://www.iso.org/iso-3166-country-codes.html, searchable at https://www.iso.org/obp/ui/#search) is not available; 
-2. else Return INTERNAL_PREREQUISITES_NOT_MET if the `dwc:countryCode` is `bdq:Empty`; 
+2. else Return INTERNAL_PREREQUISITES_NOT_MET if the `dwc:countryCode` is `bdqval:Empty`; 
 3. else Return COMPLIANT if `dwc:countryCode` can be unambiguously interpreted as a valid ISO 3166-1-alpha-2 country code in the ISO Country Codes list; 
 4. otherwise NOT_COMPLIANT
 
@@ -411,7 +411,7 @@ This could be implemented with a local copy of the ISO 3166 Country Codes (likel
 
 Any EXTERNAL_PREREQUISITES_NOT_MET can also be read as exception handling, thus: 
 
-1. Return INTERNAL_PREREQUISITES_NOT_MET if the `dwc:countryCode` is `bdq:Empty`; 
+1. Return INTERNAL_PREREQUISITES_NOT_MET if the `dwc:countryCode` is `bdqval:Empty`; 
 2. else 
   - try :
     - Return COMPLIANT if `dwc:countryCode` can be unambiguously interpreted as a valid ISO 3166-1-alpha-2 country code in the ISO Country Codes list (https://www.iso.org/iso-3166-country-codes.html, searchable at https://www.iso.org/obp/ui/#search);
@@ -419,7 +419,7 @@ Any EXTERNAL_PREREQUISITES_NOT_MET can also be read as exception handling, thus:
     - Return EXTERNAL_PREREQUISITES_NOT_MET (as the the ISO Country codes list is not available); 
 3. otherwise NOT_COMPLIANT
 
-Where a Test is parameterized or when a `bdq:sourceAuthority` is specified in the text of the expected response the `Specification` should include a `bdqffdq:hasAuthoritiesDefaults` data type property containing the parameters, default values, and references to resources, including API endpoints that would provide access to values in the authority. 
+Where a Test is parameterized or when a `bdqval:sourceAuthority` is specified in the text of the expected response the `Specification` should include a `bdqffdq:hasAuthoritiesDefaults` data type property containing the parameters, default values, and references to resources, including API endpoints that would provide access to values in the authority. 
 
 Values of `bdqffdq:hasAuthoritiesDefaults` are text strings listing parameters in the form of a semicolon-delimited list of one or more of the following: 
  
@@ -429,7 +429,7 @@ Values of `bdqffdq:hasAuthoritiesDefaults` are text strings listing parameters i
 
 The `bdqffdq:hasAuthoritiesDefaults` property may be present in isolation (to make the expected response easier to read) as in the Test [VALIDATION_COUNTRYCODE_STANDARD](../../terms/bdqtest/index.md#VALIDATION_COUNTRYCODE_STANDARD) example above when a Test is not parameterized, or when a Test is parameterized, with corresponding `bdqffdq:Arguments` and `bdqffdq:Parameters`.
 
-See section [Parameterizing the Tests (normative)](../../guide/bdqtest/index.md#43-parameterizing-the-tests-normative) of the [BDQ Tests and Assertions](../../guide/bdqtest/index.md) page for further guidance on `bdq:sourceAuthority` values, `Parameters`, and `Arguments`. 
+See section [Parameterizing the Tests (normative)](../../guide/bdqtest/index.md#43-parameterizing-the-tests-normative) of the [BDQ Tests and Assertions](../../guide/bdqtest/index.md) page for further guidance on `bdqval:sourceAuthority` values, `Parameters`, and `Arguments`. 
 
 ##### 2.3.2.4 Default Value Strings in Parameters (normative)
 
@@ -447,13 +447,13 @@ When the parameter has a default value and a resource, and an implementation inc
 
 The following code snippet in Java from the FilteredPush `rec_occur_qc` library (Morris 2025) illustrates interpretation of the default value "Creative Commons" when provided as a parameter to an implementation of [AMENDMENT_LICENSE_STANDARDIZED](../../terms/bdqtest/index.md#AMENDMENT_LICENSE_STANDARDIZED). The literal "Creative Commons" is accepted as a parameter value.
 
-    @Amendment(label="AMENDMENT_LICENSE_STANDARDIZED", description="Propose amendment to the value of dwc:license using bdq:sourceAuthority.")
+    @Amendment(label="AMENDMENT_LICENSE_STANDARDIZED", description="Propose amendment to the value of dwc:license using bdqval:sourceAuthority.")
     @Provides("dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8")
-    @ProvidesVersion("https://rs.tdwg.org/bdq/terms/dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8-2023-09-18")
-    @Specification("EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; AMENDED value of dcterms:license if it could be unambiguously interpreted as a value in bdq:sourceAuthority; otherwise NOT_AMENDED. bdq:sourceAuthority default = 'Creative Commons' {[https://creativecommons.org/]} {Creative Commons licenses [https://creativecommons.org/about/cclicenses/]}")
+    @ProvidesVersion("https://rs.tdwg.org/bdqtest/terms/dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8-2023-09-18")
+    @Specification("EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; AMENDED value of dcterms:license if it could be unambiguously interpreted as a value in bdqval:sourceAuthority; otherwise NOT_AMENDED. bdqval:sourceAuthority default = 'Creative Commons' {[https://creativecommons.org/]} {Creative Commons licenses [https://creativecommons.org/about/cclicenses/]}")
     public static DQResponse<AmendmentValue> amendmentLicenseStandardized(
         @ActedUpon("dcterms:license") String license,
-        @Parameter(name="bdq:sourceAuthority") String sourceAuthority
+        @Parameter(name="bdqval:sourceAuthority") String sourceAuthority
     ) {
         DQResponse<AmendmentValue> result = new DQResponse<AmendmentValue>();
 
@@ -475,10 +475,10 @@ The following code snippet in Java from the FilteredPush `rec_occur_qc` library 
 
 This library also includes a method whose signature does not include the parameter, but which runs the implementation of [AMENDMENT_LICENSE_STANDARDIZED](../../terms/bdqtest/index.md#AMENDMENT_LICENSE_STANDARDIZED) with the default parameter.
 
-    @Amendment(label="AMENDMENT_LICENSE_STANDARDIZED", description="Propose amendment to the value of dwc:license using bdq:sourceAuthority.")
+    @Amendment(label="AMENDMENT_LICENSE_STANDARDIZED", description="Propose amendment to the value of dwc:license using bdqval:sourceAuthority.")
     @Provides("dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8")
-    @ProvidesVersion("https://rs.tdwg.org/bdq/terms/dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8-2023-09-18")
-    @Specification("EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; AMENDED value of dcterms:license if it could be unambiguously interpreted as a value in bdq:sourceAuthority; otherwise NOT_AMENDED. bdq:sourceAuthority default = 'Creative Commons' {[https://creativecommons.org/]} {Creative Commons licenses [https://creativecommons.org/about/cclicenses/]}")
+    @ProvidesVersion("https://rs.tdwg.org/bdqtest/terms/dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8-2023-09-18")
+    @Specification("EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; AMENDED value of dcterms:license if it could be unambiguously interpreted as a value in bdqval:sourceAuthority; otherwise NOT_AMENDED. bdqval:sourceAuthority default = 'Creative Commons' {[https://creativecommons.org/]} {Creative Commons licenses [https://creativecommons.org/about/cclicenses/]}")
     public static DQResponse<AmendmentValue> amendmentLicenseStandardized(
         @ActedUpon("dcterms:license") String license
     ) {
@@ -499,9 +499,9 @@ When interpretations of strings containing Roman numerals as numbers is intended
 
 Whitespace refers to characters such as spaces and tabs that affect rendering of printed or displayed output, but which themselves are not printed (see the [Glossary](../../../index.md#7-glossary-non-normative)). 
 
-A field that only includes whitespace MUST be treated as `bdq:Empty`.
+A field that only includes whitespace MUST be treated as `bdqval:Empty`.
 
-In `bdqffdq:Validation` Tests that require the lookup of a `bdq:sourceAuthority`, leading and/or trailing whitespace may cause the Test to return a NOT_COMPLIANT result as no preprocessing is performed on the data, and the literal value, with leading or trailing whitespace is not exactly matched in the `sourceAuthority`. This behavior MAY be subject to the internals and behavior of external source authorities, and may not be under the control of Test implementers. Leading and trailing whitespaces SHOULD be stripped out in a subsequent `bdqffdq:Amendment` Tests. When the same `bdqffdq:Validation` Test is re-run in a post-amendment phase with the proposed changes applied to its inputs, COMPLIANT results would be expected (if the value matches a value in the `sourceAuthority`).
+In `bdqffdq:Validation` Tests that require the lookup of a `bdqval:sourceAuthority`, leading and/or trailing whitespace may cause the Test to return a NOT_COMPLIANT result as no preprocessing is performed on the data, and the literal value, with leading or trailing whitespace is not exactly matched in the `sourceAuthority`. This behavior MAY be subject to the internals and behavior of external source authorities, and may not be under the control of Test implementers. Leading and trailing whitespaces SHOULD be stripped out in a subsequent `bdqffdq:Amendment` Tests. When the same `bdqffdq:Validation` Test is re-run in a post-amendment phase with the proposed changes applied to its inputs, COMPLIANT results would be expected (if the value matches a value in the `sourceAuthority`).
 
 `Validations` that match input values against a `sourceAuthority` SHOULD perform an exact match against that `sourceAuthority` (unless the Test specifies otherwise).
 
@@ -632,7 +632,7 @@ When a Test is Parameterized, and a value other than the default value is used f
 - in combination with the `Parameter`, 
 - and the value of the argument that replaced the `Parameter` in this specific case.
 
-For example: "VALIDATION_MINDEPTH_INRANGE with bdq:maximumValidDepthInMeters=1642"  (Label with Parameter=non-default value).
+For example: "VALIDATION_MINDEPTH_INRANGE with bdqval:maximumValidDepthInMeters=1642"  (Label with Parameter=non-default value).
 
 When a non-default `Argument` is used, a new instance of an `Implementation` linked to a new instance of a `Specification` linked to an instance of an `Argument` asserting the non-default value SHOULD be used. 
 
@@ -656,7 +656,7 @@ An implementation of a Test:
 
 An implementation of a Test that, by design, has a behavior that departs from the `Specification` `hasExpectedResponse` MUST be identified by different identifiers than the BDQ Test from which it departs.  
 
-An implementation of a parameterized Test that only supports non-default `Parameter` values MUST be identified by different identifiers than the BDQ Test that supports the default `Parameter` values.  For example, an implementation of VALIDATION_LICENSE_STANDARD that does not support the default bdq:sourceAuthority "Creative Commons 4.0 Licenses or CC0", but only supports a different source authority is not the same test as VALIDATION_LICENSE_STANDARD, and must be identified by a different identifier.
+An implementation of a parameterized Test that only supports non-default `Parameter` values MUST be identified by different identifiers than the BDQ Test that supports the default `Parameter` values.  For example, an implementation of VALIDATION_LICENSE_STANDARD that does not support the default bdqval:sourceAuthority "Creative Commons 4.0 Licenses or CC0", but only supports a different source authority is not the same test as VALIDATION_LICENSE_STANDARD, and must be identified by a different identifier.
 
 #### 6.1.3 Further guidance on Parameters and Arguments (non-normative)
 
@@ -685,11 +685,11 @@ Multiple sequential and parallel workflows that process streams of data are poss
 
 ### 6.3 Considerations for Test Execution (normative)
 
-Many Tests invoke external `bdq:sourceAuthorities`. Some of these `bdq:sourceAuthorities` are downloadable vocabulary files, others are web services with changing data.
+Many Tests invoke external `bdqval:sourceAuthorities`. Some of these `bdqval:sourceAuthorities` are downloadable vocabulary files, others are web services with changing data.
 
 Implementations of Tests SHOULD locally cache the results of calls to remote web services, particularly if they operate on a sequence of `bdqffdq:SingleRecords` instead of operating on distinct values of `bdqffdq:InformationElements`. Data sets typically contain many repeated values, and remote web services SHOULD NOT be subject to repeated requests using the same question. 
 
-Some source authorities are highly stable small vocabularies. Implementers MAY choose to query a local copy of such a vocabulary, even if a remote service is specified in a `bdq:sourceAuthority` for a Test. Implementers SHOULD monitor for changes to that vocabulary in the authoritative source and update local data when changes occur. 
+Some source authorities are highly stable small vocabularies. Implementers MAY choose to query a local copy of such a vocabulary, even if a remote service is specified in a `bdqval:sourceAuthority` for a Test. Implementers SHOULD monitor for changes to that vocabulary in the authoritative source and update local data when changes occur. 
 
 ### 6.4 Order of Test Execution (normative)
 
@@ -788,8 +788,8 @@ Additional metadata can be added in Java annotations. In the following, again fr
 
     @Validation(label="_ENDDAYOFYEAR_INRANGE", description="Is the value of dwc:endDayOfYear an integer between 1 and 365 inclusive, or 366 if a leap year?")
     @Provides("9a39d88c-7eee-46df-b32a-c109f9f81fb8")
-    @ProvidesVersion("https://rs.tdwg.org/bdq/terms/9a39d88c-7eee-46df-b32a-c109f9f81fb8-2023-09-18")
-    @Specification("INTERNAL_PREREQUISITES_NOT_MET if dwc:endDayOfYear is bdq:Empty or if the value of dwc:endDayOfYear is equal to 366 and (dwc:eventDate is bdq:Empty or the value of dwc:eventDate cannot be interpreted to find a single year or an end year in a range); COMPLIANT if the value of dwc:endDayOfYear is an integer between 1 and 365 inclusive, or if the value of dwc:endDayOfYear is 366 and the end year interpreted from dwc:eventDate is a leap year; otherwise NOT_COMPLIANT")
+    @ProvidesVersion("https://rs.tdwg.org/bdqtest/terms/9a39d88c-7eee-46df-b32a-c109f9f81fb8-2023-09-18")
+    @Specification("INTERNAL_PREREQUISITES_NOT_MET if dwc:endDayOfYear is bdqval:Empty or if the value of dwc:endDayOfYear is equal to 366 and (dwc:eventDate is bdqval:Empty or the value of dwc:eventDate cannot be interpreted to find a single year or an end year in a range); COMPLIANT if the value of dwc:endDayOfYear is an integer between 1 and 365 inclusive, or if the value of dwc:endDayOfYear is 366 and the end year interpreted from dwc:eventDate is a leap year; otherwise NOT_COMPLIANT")
     public static DQResponse<ComplianceValue> validationEnddayofyearInrange(
             @ActedUpon(value="dwc:endDayOfYear") String endDay,
             @Consulted(value="dwc:eventDate") String eventDate) {
@@ -826,10 +826,10 @@ Other approaches are also possible.
 A specification (the content of a `hasExpectedResponse` property of a `Specification`) is a sequence of statements in the form of a string representing the `Response` followed by the `Criteria` that would result in that `Response`. Thus, given the following specification: 
 
 ```
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:SourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode was EMPTY; COMPLIANT if the value of dwc:countryCode is found in bdq:sourceAuthority; otherwise NOT_COMPLIANT
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:SourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode was EMPTY; COMPLIANT if the value of dwc:countryCode is found in bdqval:sourceAuthority; otherwise NOT_COMPLIANT
 ```
 
-'EXTERNAL_PREREQUISITES_NOT_MET' is a `Response` and 'if the `bdq:SourceAuthority` is not available' is the `Criterion`.
+'EXTERNAL_PREREQUISITES_NOT_MET' is a `Response` and 'if the `bdqval:SourceAuthority` is not available' is the `Criterion`.
 
 The expected response provides a sequence of `Criteria` to evaluate. This should be done in the order specified in the expected response, except for EXTERNAL_PREREQUISITES_NOT_MET, which can be handled as an exception raised from an invocation of an external resource.
 
@@ -865,7 +865,7 @@ Following is pseudocode that follows the same order of evaluation of the `Criter
 
 The `Criteria` for EXTERNAL_PREREQUISITES_NOT_MET do not have to be evaluated first, but would be expected to be raised from wherever in the sequence the external resource first fails to be invoked, and is handled within the construct that builds a `Result` object.
 
-Note that this implementation will reach the block that can return EXTERNAL_PREREQUISITES_NOT_MET only if the input `dwc:countryCode` contains a value. This deviation from the logical sequence implied by the specification (EXTERNAL_PREREQUISITES_NOT_MET if the `bdq:SourceAuthority` is not available; INTERNAL_PREREQUISITES_NOT_MET if the `dwc:countryCode` was EMPTY;) is perfectly acceptable, for the case of network resources being evaluated later in the implementation than other conditions.
+Note that this implementation will reach the block that can return EXTERNAL_PREREQUISITES_NOT_MET only if the input `dwc:countryCode` contains a value. This deviation from the logical sequence implied by the specification (EXTERNAL_PREREQUISITES_NOT_MET if the `bdqval:SourceAuthority` is not available; INTERNAL_PREREQUISITES_NOT_MET if the `dwc:countryCode` was EMPTY;) is perfectly acceptable, for the case of network resources being evaluated later in the implementation than other conditions.
 
 Below is pseudocode for a similar implementation as a method on a Darwin Core domain object, less general, and more tightly bound to the domain concept, but making the concern of correctly binding input data to domain concepts not a concern of the Test. 
 
@@ -910,7 +910,7 @@ Consider the following Test `Specification` for [VALIDATION_DAY_STANDARD](../../
 Specification: 
 
 ```
-hasExpectedResponse: INTERNAL_PREREQUISITES_NOT_MET if dwc:day is bdq:Empty; COMPLIANT if the value of the field dwc:day is an integer between 1 and 31 inclusive; otherwise NOT_COMPLIANT.
+hasExpectedResponse: INTERNAL_PREREQUISITES_NOT_MET if dwc:day is bdqval:Empty; COMPLIANT if the value of the field dwc:day is an integer between 1 and 31 inclusive; otherwise NOT_COMPLIANT.
 ```
 
 `Information Elements` `Acted Upon`: `dwc:day`
@@ -920,7 +920,7 @@ Below is an example implementation from the FilteredPush `event_date_qc` library
 ```
     @Validation(label="VALIDATION_DAY_STANDARD", description="Is the value of dwc:day an integer between 1 and 31 inclusive?")
     @Provides("47ff73ba-0028-4f79-9ce1-ee7008d66498")
-    @ProvidesVersion("https://rs.tdwg.org/bdq/terms/47ff73ba-0028-4f79-9ce1-ee7008d66498-2023-09-18")
+    @ProvidesVersion("https://rs.tdwg.org/bdqtest/terms/47ff73ba-0028-4f79-9ce1-ee7008d66498-2023-09-18")
     @Specification("INTERNAL_PREREQUISITES_NOT_MET if dwc:day is EMPTY; COMPLIANT if the value of the field dwc:day is an integer between 1 and 31 inclusive; otherwise NOT_COMPLIANT.")
     public static DQResponse<ComplianceValue> validationDayStandard(@ActedUpon("dwc:day") String day) {
         DQResponse<ComplianceValue> result = new DQResponse<ComplianceValue>();
@@ -1045,7 +1045,7 @@ The checklists below are designed to help implementers ensure that their impleme
 ### 6.5.2 Checklist for a Validation test (non-normative)
 
 1. **Setup for Consistency**
-   - Implement utility functions or methods to evaluate `bdq:Empty` and `bdq:NotEmpty` consistently. See: [The Concept of EMPTY in the BDQ Standard (normative)”](#22-the-concept-of-empty-in-the-bdq-standard-normative).
+   - Implement utility functions or methods to evaluate `bdqval:Empty` and `bdqval:NotEmpty` consistently. See: [The Concept of EMPTY in the BDQ Standard (normative)”](#22-the-concept-of-empty-in-the-bdq-standard-normative).
    - Define a standard `Response` object or structure with `Response.status`, `Response.result`, and `Response.comment` properties, and use that object or structure for the output from Test implementations. See: [Structure of Response](../../guide/bdqtest/index.md#41-structure-of-response-normative) in the [BDQ Tests Guide](../../guide/bdqtest/index.md).
 
 1. **Confirm the required inputs**
@@ -1071,31 +1071,31 @@ The checklists below are designed to help implementers ensure that their impleme
    - Follow the sequence of criteria in the `hasExpectedResponse` property of the `Specification`, returning the first matching `Response` for the first matched criterion.
    - Handle EXTERNAL_PREREQUISITES_NOT_MET as an exception raised from an invocation of an external resource, and return that response immediately when such an exception is raised.
    - **Evaluate internal prerequisites first**
-     - Evaluate `bdq:Empty` and `bdq:NotEmpty` consistently (with utility functions).
-     - Implement `bdq:Empty` consistently.  See [Example Implementation of a Function to Assess Empty](#222-example-implementation-of-a-function-to-assess-empty-non-normative).
-     - If the `Specification` states that an `Information Element` being `bdq:Empty` prevents evaluation, return:
+     - Evaluate `bdqval:Empty` and `bdqval:NotEmpty` consistently (with utility functions).
+     - Implement `bdqval:Empty` consistently.  See [Example Implementation of a Function to Assess Empty](#222-example-implementation-of-a-function-to-assess-empty-non-normative).
+     - If the `Specification` states that an `Information Element` being `bdqval:Empty` prevents evaluation, return:
        - `Response.status` = `INTERNAL_PREREQUISITES_NOT_MET`
        - `Response.result` omitted / null
-       - `Response.comment` containing a `bdq:NotEmpty` explanation
+       - `Response.comment` containing a `bdqval:NotEmpty` explanation
    - **Handle external prerequisites and parameter support separately**
      - If a `Parameter` value is not supplied, substitute the default value.
-     - If the Test depends on an external resource (e.g., a `bdq:sourceAuthority`) and that resource is unavailable at runtime, return:
+     - If the Test depends on an external resource (e.g., a `bdqval:sourceAuthority`) and that resource is unavailable at runtime, return:
        - `Response.status` = `EXTERNAL_PREREQUISITES_NOT_MET`
        - `Response.result` omitted / null
-       - `Response.comment` containing a `bdq:NotEmpty` explanation
+       - `Response.comment` containing a `bdqval:NotEmpty` explanation
      - If an unsupported non-default `Parameter` value is supplied, implementations must not use `Response.status` = `EXTERNAL_PREREQUISITES_NOT_MET` to report “unsupported parameter value”.  See: [3.6, Parameterized Tests: default behavior and unsupported values](#36-parameterized-tests-default-behavior-and-unsupported-values-normative).
    - **Run the core validation and return a conforming Response**
      - Apply the Test’s stated criterion (e.g., exact match, interpretation rules, range checks) exactly as described in the `Specification`, and avoid undocumented preprocessing.
      - When evaluation succeeds, return:
        - `Response.status` = `RUN_HAS_RESULT`
        - `Response.result` = `COMPLIANT` or `NOT_COMPLIANT`
-       - `Response.comment` containing a `bdq:NotEmpty` explanation
+       - `Response.comment` containing a `bdqval:NotEmpty` explanation
      - If a non-default `Parameter` value was used, `Response.comment` should include the `Parameter` name and the non-default value (see Section 6.1.2, “Identifying non-default `Parameter` values in `Response.comment` (normative)”).
 
 ### 6.5.3 Checklist for Implementing an Amendment Test (non-normative)
 
 1. **Setup for Consistency**
-   - Implement utility functions or methods to evaluate `bdq:Empty` and `bdq:NotEmpty` consistently.  See: [2.2 The Concept of EMPTY in the BDQ Standard”](#22-the-concept-of-empty-in-the-bdq-standard-normative).
+   - Implement utility functions or methods to evaluate `bdqval:Empty` and `bdqval:NotEmpty` consistently.  See: [2.2 The Concept of EMPTY in the BDQ Standard”](#22-the-concept-of-empty-in-the-bdq-standard-normative).
    - Define a standard `Response` object or structure with `Response.status`, `Response.result`, and `Response.comment` properties, and use that object or structure for the output from Test implementations. See: [Section 4.1 Structure of Response (normative)](../../guide/bdqtest/index.md#41-structure-of-response-normative) in the [BDQ Tests Guide](../../guide/bdqtest/index.md).
 
 1. **Confirm the required inputs and intended outputs**
@@ -1120,18 +1120,18 @@ The checklists below are designed to help implementers ensure that their impleme
 
 1. **Implement the Test logic (decision rules) following the expected response criteria in order**
    - **Evaluate internal prerequisites first**
-     - Evaluate `bdq:Empty` and `bdq:NotEmpty` consistently (with utilty functions).
-     - If the `Specification` states that one or more required `Information Elements` being `bdq:Empty` prevents generating a proposal, return:
+     - Evaluate `bdqval:Empty` and `bdqval:NotEmpty` consistently (with utilty functions).
+     - If the `Specification` states that one or more required `Information Elements` being `bdqval:Empty` prevents generating a proposal, return:
        - `Response.status` = `INTERNAL_PREREQUISITES_NOT_MET`
        - `Response.result` omitted / null
-       - `Response.comment` containing a `bdq:NotEmpty` explanation
+       - `Response.comment` containing a `bdqval:NotEmpty` explanation
 
    - **Handle external prerequisites and parameter support separately**
      - If a `Parameter` value is not supplied, substitute the default value.
-     - If the Test depends on an external resource (e.g., a `bdq:sourceAuthority`) and that resource is unavailable at runtime, return:
+     - If the Test depends on an external resource (e.g., a `bdqval:sourceAuthority`) and that resource is unavailable at runtime, return:
        - `Response.status` = `EXTERNAL_PREREQUISITES_NOT_MET`
        - `Response.result` omitted / null
-       - `Response.comment` containing a `bdq:NotEmpty` explanation
+       - `Response.comment` containing a `bdqval:NotEmpty` explanation
      - If an unsupported non-default `Parameter` value is supplied, implementations must not use `Response.status` = `EXTERNAL_PREREQUISITES_NOT_MET` to report “unsupported parameter value”.  See: [3.6 Parameterized Tests: default behavior and unsupported values normative](#36-parameterized-tests-default-behavior-and-unsupported-values-normative).
 
    - **Generate a proposal (or decide no proposal is warranted)**
@@ -1141,15 +1141,15 @@ The checklists below are designed to help implementers ensure that their impleme
 
    - **Return a conforming Response for an Amendment**
      - When evaluation succeeds, use `Response.status` values appropriate to `Amendment` Tests:
-       - `FILLED_IN` when proposing new value(s) for `Information Elements` that were `bdq:Empty`.
-       - `AMENDED` when proposing changes to existing `bdq:NotEmpty` value(s).
+       - `FILLED_IN` when proposing new value(s) for `Information Elements` that were `bdqval:Empty`.
+       - `AMENDED` when proposing changes to existing `bdqval:NotEmpty` value(s).
        - `NOT_AMENDED` when prerequisites are met but no proposal is made.
      - For `FILLED_IN` and `AMENDED`:
        - `Response.result` MUST be present and MUST contain the structured proposal payload (e.g., JSON key:value pairs).
-       - `Response.comment` MUST be `bdq:NotEmpty` and SHOULD explain how the proposal was derived (including any non-default `Parameter` values used).
+       - `Response.comment` MUST be `bdqval:NotEmpty` and SHOULD explain how the proposal was derived (including any non-default `Parameter` values used).
      - For `NOT_AMENDED`:
        - `Response.result` must be omitted / null.
-       - `Response.comment` must be `bdq:NotEmpty` and should explain why no proposal was made (e.g., ambiguous input, not interpretable, no unambiguous match in authority).
+       - `Response.comment` must be `bdqval:NotEmpty` and should explain why no proposal was made (e.g., ambiguous input, not interpretable, no unambiguous match in authority).
 
 1. **Keep Amendment semantics clearly distinct from applying changes**
    - An `Amendment` `Response.result` is a proposal. Implementations should not automatically apply the proposed changes to authoritative data.
@@ -1218,12 +1218,12 @@ A Test execution framework (or “runner”) typically needs to accomplish the f
    - Ensure that every Test execution yields one `Response` containing:
      - `Response.status`
      - `Response.result` (present only when appropriate for the status and `Test Type`)
-     - `Response.comment` (a human-readable `bdq:NotEmpty` explanation)
+     - `Response.comment` (a human-readable `bdqval:NotEmpty` explanation)
    - Ensure returned values use the controlled vocabulary strings defined by the BDQ standard (e.g., `RUN_HAS_RESULT`, `COMPLIANT`, `NOT_COMPLIANT`).
    - Exceptions raised from within a Test must be be captured and handled according to the expected response criteria in the `Specification` (e.g., returning `EXTERNAL_PREREQUISITES_NOT_MET` when an external resource is unavailable, with an appropriate comment).  An exception within a test should not be raised into the execution framework.
 
 1. **Consider Handling of EXTERNAL_PREREQUISITES_NOT_MET**
-   - If a Test implementation raises an exception or error due to an unavailable external resource, the test is expected to capture that and return a `Response` with `Response.status` = `EXTERNAL_PREREQUISITES_NOT_MET`, and a `Response.comment` containing a `bdq:NotEmpty` explanation.
+   - If a Test implementation raises an exception or error due to an unavailable external resource, the test is expected to capture that and return a `Response` with `Response.status` = `EXTERNAL_PREREQUISITES_NOT_MET`, and a `Response.comment` containing a `bdqval:NotEmpty` explanation.
    - A framework for Test execution may choose to simply pass these failure conditions on, or to handle such exceptions at a higher level (e.g., by skipping all Tests that depend on that resource for the remainder of a run, or by retrying after a delay), but must ultimately ensure that the appropriate `Response` is returned for each individual Test execution that encounters an unavailable external resource.
 
 1. **If unique values were aggregated, deaggregate and associate results with all relevant records**
@@ -1243,7 +1243,7 @@ The BDQ standard is agnostic about the form and appearance of `Data Quality Repo
 
 Reports SHOULD identify Tests to consumers of those reports using at least the Label (`rdfs:label`) for the Test class (e.g., "VALIDATION_COUNTRY_FOUND" for [VALIDATION_COUNTRY_FOUND](../../terms/bdqtest/index.md#VALIDATION_COUNTRY_FOUND)).
 
-Reports MAY describe Tests to consumers of those reports using the Description (`rdfs:comment`) for the Test class (e.g., "Does the value of dwc:country occur in the bdq:sourceAuthority?" for [VALIDATION_COUNTRY_FOUND](../../terms/bdqtest/index.md#VALIDATION_COUNTRY_FOUND)).
+Reports MAY describe Tests to consumers of those reports using the Description (`rdfs:comment`) for the Test class (e.g., "Does the value of dwc:country occur in the bdqval:sourceAuthority?" for [VALIDATION_COUNTRY_FOUND](../../terms/bdqtest/index.md#VALIDATION_COUNTRY_FOUND)).
 
 #### 7.1.2 Information Elements Acted Upon and Consulted in Results (normative)
 
@@ -1255,7 +1255,7 @@ Data quality reports should be clear which input terms are subject to compliance
 
 The Test VALIDATION_COUNTRY_NOTEMPTY has two `Information Elements` in its specification: `dwc:country` is the `Information Element` `Acted Upon`, and `dwc:countryCode` is the `Information Element` `Consulted`.   
 
-VALIDATION_COUNTRY_NOTEMPTY has the `Expected Response`: `COMPLIANT if dwc:country is bdq:NotEmpty or dwc:countryCode has a value of "XZ" and either dwc:country is bdq:Empty or has a value of "High seas"; otherwise NOT_COMPLIANT`
+VALIDATION_COUNTRY_NOTEMPTY has the `Expected Response`: `COMPLIANT if dwc:country is bdqval:NotEmpty or dwc:countryCode has a value of "XZ" and either dwc:country is bdqval:Empty or has a value of "High seas"; otherwise NOT_COMPLIANT`
 
 Given the following record as input:
 
@@ -1286,7 +1286,7 @@ Results of the Biodiversity Data Quality (BDQ) Taxon Name-related Tests.
 |------------------|----------------------|---------|-----------------------|---------|
 | Is there a value in dwc:taxonRank? | **COMPLIANT** | Some value provided for taxonRank. | **COMPLIANT** | Some value provided for taxonRank. |
 | Is the combination of higher classification taxonomic terms consistent using GBIF? | **COMPLIANT** | Genus Chelydra found in GBIF_BACKBONE_TAXONOMY\|Matches to higher ranks found in GBIF_BACKBONE_TAXONOMY\|No more higher ranks found to compare | **COMPLIANT** | Genus Chelydra found in GBIF_BACKBONE_TAXONOMY\|Matches to higher ranks found in GBIF_BACKBONE_TAXONOMY\|No more higher ranks found to compare |
-| Does the value of dwc:taxonRank occur in bdq:sourceAuthority? | **COMPLIANT** | Provided value for taxonRank \[species\] found in the GBIF taxon rank vocabulary. | **COMPLIANT** | Provided value for taxonRank \[species\] found in the GBIF taxon rank vocabulary. |
+| Does the value of dwc:taxonRank occur in bdqval:sourceAuthority? | **COMPLIANT** | Provided value for taxonRank \[species\] found in the GBIF taxon rank vocabulary. | **COMPLIANT** | Provided value for taxonRank \[species\] found in the GBIF taxon rank vocabulary. |
 | Is there a value in dwc:taxonID? | **NOT_COMPLIANT** | No value provided for taxonID. | **COMPLIANT** | Some value provided for taxonID. |
 | dwc:scientificName contains a value | **COMPLIANT** | Some value provided for scientificName. | **COMPLIANT** | Some value provided for scientificName. |
 | dwc:family is known to GBIF | **COMPLIANT** | Exact match to provided Family found in GBIF Backbone Taxonomy at rank Family. | **COMPLIANT** | Exact match to provided Family found in GBIF Backbone Taxonomy at rank Family. |
@@ -1332,7 +1332,7 @@ This example is written to be consistent with the following expectations:
 In a complete dataset the `Specification` is linked (via a `Method` instance) to the corresponding Test in bdqtest, that is, we could look up that the Test is VALIDATION_DAY_STANDARD given the `Specification` IRI. 
 
 ```
-@prefix bdq:     <https://rs.tdwg.org/bdq/terms/> .
+@prefix bdqval:     <https://rs.tdwg.org/bdqval/terms/> .
 @prefix bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/> .
 @prefix bdqtest: <https://rs.tdwg.org/bdqtest/terms/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
@@ -1381,7 +1381,7 @@ For synthetic Test Conformance Testing Data that could be conflated with actual 
 
 A set of "Test Conformance Testing Data" accompanies the BDQ Test descriptors. These data are intended for implementers for conformance testing, that is to use to evaluate whether or not their Test implementations produce the expected `Response` values for a set of input cases for each Test. Each Test specification could be graphed as a flow chart with several paths, the Test Conformance Testing Data are intended to cover each node and each path within each Test specification with at least a single case. These data are, however, not exhaustive unit tests covering large numbers of edge cases, but rather a minimal set of Tests for conformance with expected behaviors.
 
-The Test Conformance Testing Data are organized as two flat CSV files. Each row in each file is intended for the evaluation of a single behavior of a single Test, that is, each row represents a single test case. The file has columns identifying the Test, the input data, the expected `Response.status`, `Response.result`, an example `Response.comment`, `Parameter` values (if any), and a set of [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021). Most of the terms for a given Test are `bdq:Empty`.
+The Test Conformance Testing Data are organized as two flat CSV files. Each row in each file is intended for the evaluation of a single behavior of a single Test, that is, each row represents a single test case. The file has columns identifying the Test, the input data, the expected `Response.status`, `Response.result`, an example `Response.comment`, `Parameter` values (if any), and a set of [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021). Most of the terms for a given Test are `bdqval:Empty`.
 
 The Test Conformance Testing Data records are all fragmentary [Simple Darwin Core](https://dwc.tdwg.org/simple/) (Wieczorek et al. 2012) `dwc:Occurrence` records. Each row contains values for only those Darwin Core terms that are relevant input to the particular cate and consists of a mixture of real and artificial data. The conformance testing data consist of over 1100 records, with an average of about 10 cases for each Test (designed to exercise all of the decision pathways in the specification of the Test (that is, all paths within each `ExpectedResponse`)). The set of rows for a given Test are intended to be sufficient to validate that an implementation of that particular Test performs as expected against the specification.
 
@@ -1420,13 +1420,13 @@ The header for the data in the Test Conformance Testing Data files includes a co
 | Response.result | The result of running the Test on the data record. For VALIDATIONS and AMENDMENTS, NULL where the Response.status is either `EXTERNAL_PREREQUISITES_NOT_MET`, `INTERNAL_PREREQUISITES_NOT_MET`. For VALIDATIONS, either `COMPLIANT` or `NOT_COMPLIANT` where Response.status is `RUN_HAS_RESULT`. For AMENDMENTS where Response.status is either `FILLED_IN` or `AMENDED`, the Response.result is a JSON structure containing a key:value list of Darwin Core terms and values for changes proposed by the AMENDMENT. For MEASURES, a resulting value or `NOT_REPORTED`. |
 | Response.comment | A human-readable example statement identifying the reason for the Test result given the input data. Implementations are not expected to produce this exact value. |
 | IssuesWithThisRow | A working column for recording issues while developing conformance testing data. Used only for management while developing Test Conformance Testing Data. |
-| bdq:annotation | A placeholder for an annotation when Testing for their presence (this value does not imply the existence of the term annotation in the bdq: namespace). |
-| bdq:sourceAuthority | Input parameter for some Parameterized Tests. |
+| bdqval:annotation | A placeholder for an annotation when Testing for their presence (this value does not imply the existence of the term annotation in the bdqval: namespace). |
+| bdqval:sourceAuthority | Input parameter for some Parameterized Tests. |
 
-**NOTE:** We have implemented examples of EXTERNAL_PREREQUISITES_NOT_MET using the `Input.Data` structure containing `bdq:sourceAuthority`=`https://invalid/invalidservice`, for example:
+**NOTE:** We have implemented examples of EXTERNAL_PREREQUISITES_NOT_MET using the `Input.Data` structure containing `bdqval:sourceAuthority`=`https://invalid/invalidservice`, for example:
 
 ```
-bdq:taxonomyIsMarine="https://invalid/invalidservice", dwc:decimalLatitude="", dwc:decimalLongitude="", dwc:scientificName=""
+bdqval:taxonomyIsMarine="https://invalid/invalidservice", dwc:decimalLatitude="", dwc:decimalLongitude="", dwc:scientificName=""
 ```
 
 ### 8.3 Examples of the Data for Conformance Testing (non-normative)
@@ -1435,9 +1435,9 @@ The conformance testing files contain one column (e.g., `dwc:countryCode`) for e
 
 For example, given the header line for the Test Conformance Testing Data files:
 
-"LineNumber","dataID","LineForTest","GitHubIssueNo","GUID","Label","Response.status","Response.result","Response.comment","IssuesWithThisRow","bdq:annotation","bdq:sourceAuthority","dc:type","dcterms:license","dwc:acceptedNameUsageID","dwc:basisOfRecord","dwc:class","dwc:continent","dwc:coordinateUncertaintyInMeters","dwc:country","dwc:countryCode","dwc:county","dwc:dataGeneralizations","dwc:dateIdentified","dwc:day","dwc:decimalLatitude","dwc:decimalLongitude","dwc:endDayOfYear","dwc:establishmentMeans","dwc:eventDate","dwc:family","dwc:genus","dwc:geodeticDatum","dwc:higherClassification","dwc:higherGeography","dwc:higherGeographyID","dwc:infraspecificEpithet","dwc:island","dwc:islandGroup","dwc:kingdom","dwc:locality","dwc:locationID","dwc:maximumDepthInMeters","dwc:maximumElevationInMeters","dwc:minimumDepthInMeters","dwc:minimumElevationInMeters","dwc:month","dwc:municipality","dwc:occurrenceID","dwc:occurrenceStatus","dwc:order","dwc:originalNameUsageID","dwc:parentNameUsageID","dwc:phylum","dwc:scientificName","dwc:scientificNameAuthorship","dwc:scientificNameID","dwc:specificEpithet","dwc:startDayOfYear","dwc:stateProvince","dwc:subgenus","dwc:taxon","dwc:taxonConceptID","dwc:taxonID","dwc:taxonRank","dwc:verbatimCoordinateSystem","dwc:verbatimCoordinates","dwc:verbatimDepth","dwc:verbatimElevation","dwc:verbatimEventDate","dwc:verbatimLatitude","dwc:verbatimLocality","dwc:verbatimLongitude","dwc:verbatimSRS","dwc:vernacularName","dwc:waterBody","dwc:year","dwc:subfamily","dwc:superfamily","dwc:tribe","dwc:subtribe","dwc:genericName","dwc:infragenericEpithet","dwc:cultivarEpithet","dwc:individualCount","dwc:organismQuantity","dwc:footprintWKT","dwc:coordinatePrecision","dwc:namePublishedInYear","dwc:sex","dwc:typeStatus","dwc:pathway","dwc:degreeOfEstablishment","bdq:taxonIsMarine","bdq:geospatialLand","bdq:assumptionOnUnknownBiome","bdq:latestValidDate","bdq:earliestValidDate",
+"LineNumber","dataID","LineForTest","GitHubIssueNo","GUID","Label","Response.status","Response.result","Response.comment","IssuesWithThisRow","bdqval:annotation","bdqval:sourceAuthority","dc:type","dcterms:license","dwc:acceptedNameUsageID","dwc:basisOfRecord","dwc:class","dwc:continent","dwc:coordinateUncertaintyInMeters","dwc:country","dwc:countryCode","dwc:county","dwc:dataGeneralizations","dwc:dateIdentified","dwc:day","dwc:decimalLatitude","dwc:decimalLongitude","dwc:endDayOfYear","dwc:establishmentMeans","dwc:eventDate","dwc:family","dwc:genus","dwc:geodeticDatum","dwc:higherClassification","dwc:higherGeography","dwc:higherGeographyID","dwc:infraspecificEpithet","dwc:island","dwc:islandGroup","dwc:kingdom","dwc:locality","dwc:locationID","dwc:maximumDepthInMeters","dwc:maximumElevationInMeters","dwc:minimumDepthInMeters","dwc:minimumElevationInMeters","dwc:month","dwc:municipality","dwc:occurrenceID","dwc:occurrenceStatus","dwc:order","dwc:originalNameUsageID","dwc:parentNameUsageID","dwc:phylum","dwc:scientificName","dwc:scientificNameAuthorship","dwc:scientificNameID","dwc:specificEpithet","dwc:startDayOfYear","dwc:stateProvince","dwc:subgenus","dwc:taxon","dwc:taxonConceptID","dwc:taxonID","dwc:taxonRank","dwc:verbatimCoordinateSystem","dwc:verbatimCoordinates","dwc:verbatimDepth","dwc:verbatimElevation","dwc:verbatimEventDate","dwc:verbatimLatitude","dwc:verbatimLocality","dwc:verbatimLongitude","dwc:verbatimSRS","dwc:vernacularName","dwc:waterBody","dwc:year","dwc:subfamily","dwc:superfamily","dwc:tribe","dwc:subtribe","dwc:genericName","dwc:infragenericEpithet","dwc:cultivarEpithet","dwc:individualCount","dwc:organismQuantity","dwc:footprintWKT","dwc:coordinatePrecision","dwc:namePublishedInYear","dwc:sex","dwc:typeStatus","dwc:pathway","dwc:degreeOfEstablishment","bdqval:taxonIsMarine","bdqval:geospatialLand","bdqval:assumptionOnUnknownBiome","bdqval:latestValidDate","bdqval:earliestValidDate",
 
-a conformance test case evaluating `bdq:Empty`, where no `dwc:` term columns contain a value (dataID=1) would look like this:
+a conformance test case evaluating `bdqval:Empty`, where no `dwc:` term columns contain a value (dataID=1) would look like this:
 
 "2","1","1","20","0493bcfb-652e-4d17-815b-b0cce0742fbe","VALIDATION_COUNTRYCODE_STANDARD","INTERNAL_PREREQUISITES_NOT_MET","","dwc:countryCode is EMPTY","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""
 
@@ -1454,9 +1454,9 @@ A `Validation` Test case for a `Validation` where the input data result in a `Re
 The conformance testing data are in two files, one containing normal data values, the other containing test cases containing non-printing characters.
 
 1. [TG2_test_validation_data.csv](./TG2_test_validation_data.csv) - file containing data values that might be expected to be encountered in real-world data.
-2. [TG2_test_validation_data_nonprintingchars.csv](./TG2_test_validation_data_nonprintingchars.csv) - file containing non-printing characters for testing implementation of `bdq:Empty`.
+2. [TG2_test_validation_data_nonprintingchars.csv](./TG2_test_validation_data_nonprintingchars.csv) - file containing non-printing characters for testing implementation of `bdqval:Empty`.
 
-Both of these files have the same set of columns, but the latter has rows that contain input values for selected [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) that are either the `0x00` null character (e.g., `dwc:scientificName="0x00"`), or a pair of ASCII control characters (`0x0E` and `0x0F`, e.g., `dwc:day="0x0E0x0F`). This file is intended to validate that Test implementations are consistently evaluating inputs as consistent with the definition of `bdq:Empty`.
+Both of these files have the same set of columns, but the latter has rows that contain input values for selected [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) that are either the `0x00` null character (e.g., `dwc:scientificName="0x00"`), or a pair of ASCII control characters (`0x0E` and `0x0F`, e.g., `dwc:day="0x0E0x0F`). This file is intended to validate that Test implementations are consistently evaluating inputs as consistent with the definition of `bdqval:Empty`.
 
 The non-printing characters file MUST only be edited with a tool that will maintain the non-printing characters.
 
@@ -1464,7 +1464,7 @@ Both files have a header line identifying the columns as described in [Structure
 
 The `Response` when executed against a row as input is expected to contain "Response.status", "Response.result" and "Response.comment". An implementation is expected to produce the exact `Response.status`, the exact `Response.result` (ignoring order of any key-value pairs for an `Amendment` `Response`), while `Response.comment` is an example of what a comment in English might look like.
 
-Parameter values are specified in a `bdq:sourceAuthority` column, when more than one `sourceAuthority` is involved, then these are given separate names.
+Parameter values are specified in a `bdqval:sourceAuthority` column, when more than one `sourceAuthority` is involved, then these are given separate names.
 
 Dublin Core and Darwin Core term input columns are specified with the appropriate namespace abbreviation prepended (e.g., `dc:type`, `dcterms:license`, `dwc:acceptedNameUsageID`).
 
@@ -1482,7 +1482,7 @@ Human readable `Data Quality Reports` for Quality Control MAY take any appropria
 
 `Response.status` and `Response.result` constants SHOULD be given internationalized labels as appropriate for the the consumers of `Data Quality Reports`.
 
-For each Test in an implementation, that Test MUST produce the same results as are specified in a row of the conformance testing data for that Test, except when a `bdq:sourceAuthority` parameter specifies a source other than the default `sourceAuthority` specified for that Test.
+For each Test in an implementation, that Test MUST produce the same results as are specified in a row of the conformance testing data for that Test, except when a `bdqval:sourceAuthority` parameter specifies a source other than the default `sourceAuthority` specified for that Test.
 
 ### 8.6 Existing Software tools (non-normative) 
 
@@ -1544,7 +1544,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. BDQ Implementer's Guide. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/terms/2025-05-10>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. BDQ Implementer's Guide. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/doc/implementers2025-05-10>
 
 **Biodiversity Information Standards (TDWG)**
 

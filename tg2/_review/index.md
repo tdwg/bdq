@@ -110,7 +110,7 @@ Beyond data availability, data quality is probably the most significant issue fo
 
 <!-- Brief purpose and value proposition statement: what is the standard, why use it --->
 
-The Biodiversity Data Quality (BDQ) standard establishes a community-defined, modular, and extensible environment for biodiversity data quality.  It integrates a comprehensive set of Tests (`bdqtest:`) initially focused on Darwin Core (Wieczorek et al., 2012), but not restricted to it, with a formal Framework (`bdqffdq:`) and supporting vocabularies (`bdq:`, `bdqdim:`, `bdqcrit:`, and `bdqenh:`) to define Tests, their inputs (`Information Elements`), and their structured output (`Responses`). 
+The Biodiversity Data Quality (BDQ) standard establishes a community-defined, modular, and extensible environment for biodiversity data quality.  It integrates a comprehensive set of Tests (`bdqtest:`) initially focused on Darwin Core (Wieczorek et al., 2012), but not restricted to it, with a formal Framework (`bdqffdq:`) and supporting vocabularies (`bdqval:`, `bdqdim:`, `bdqcrit:`, and `bdqenh:`) to define Tests, their inputs (`Information Elements`), and their structured output (`Responses`). 
 
 At its core, BDQ focuses on the semantics of data quality.  It defines what a Test means and precisely what information a `Response` must contain. BDQ intentionally avoids prescribing both execution concerns, such as data loading or parallelization of Test execution, and human centric concerns like presentation or remediation processes.  By providing a consistent semantic layer focused on Test inputs and outputs, the standard allows for flexible application within diverse operational settings supporting both `Quality Assurance` (QA) and `Quality Control` (QC). 
 
@@ -137,7 +137,7 @@ The BDQ standard is intended for:
 
 For practitioners, researchers, collection managers, and data managers, the BDQ `Tests` (`bdqtest:`) provide a shared, community-defined set of Test definitions that can be selected and run as suites to evaluate fitness for use for particular specified uses of biodiversity data.
 
-For developers, standards developers, and knowledge engineers, the Fitness for Use Framework (`bdqffdq:`) and supporting vocabularies (e.g., `bdq:`, `bdqdim:`, `bdqcrit:`, and `bdqenh:`) provide the common semantic model used to define `Tests`, identify their inputs (`Information Elements`), and represent their outputs (`Responses`) in a consistent and interoperable way.  No background in ontologies is required to understand or apply the `Tests`, though familiarity with RDF/OWL will be helpful for those working directly with the ontologies or exchanging `Data Quality Reports` as RDF.
+For developers, standards developers, and knowledge engineers, the Fitness for Use Framework (`bdqffdq:`) and supporting vocabularies (e.g., `bdqval:`, `bdqdim:`, `bdqcrit:`, and `bdqenh:`) provide the common semantic model used to define `Tests`, identify their inputs (`Information Elements`), and represent their outputs (`Responses`) in a consistent and interoperable way.  No background in ontologies is required to understand or apply the `Tests`, though familiarity with RDF/OWL will be helpful for those working directly with the ontologies or exchanging `Data Quality Reports` as RDF.
 
 ### 1.3 Contributing TDWG Interest and Task Groups (non-normative)
 
@@ -209,7 +209,7 @@ BDQ defines a set of vocabularies (and an ontology) that are used to define stru
 
 BDQ is organized as a set of complementary documents that together define *what* to test, *how* to describe Tests and their results consistently, and *how* to apply those Tests in practice. At the core are the BDQ Tests (`bdqtest:`), which specify reusable, implementable evaluations over clearly identified inputs (`Information Elements` plus optional `Parameters`) and produce structured outputs (`Responses`) that can be reported and exchanged across systems.  
 
-The semantics and shared terminology used by the `Tests` are provided by the Fitness For Use Framework (`bdqffdq:`) and supporting vocabularies (`bdq:`, `bdqdim:`, `bdqcrit:`, and `bdqenh:`). Together, these vocabularies make it possible to define each `Test` and interpret its Responses in a consistent way, so that results from different implementations can be treated as comparable statements about fitness for use.
+The semantics and shared terminology used by the `Tests` are provided by the Fitness For Use Framework (`bdqffdq:`) and supporting vocabularies (`bdqval:`, `bdqdim:`, `bdqcrit:`, and `bdqenh:`). Together, these vocabularies make it possible to define each `Test` and interpret its Responses in a consistent way, so that results from different implementations can be treated as comparable statements about fitness for use.
 
 BDQ supports both `Quality Assurance` (QA) and `Quality Control` (QC) by providing standardized `Tests`, structured Responses, and `Measure` patterns that can be composed into Test suites for particular `Use Cases` (see [2. Context for Quality, Uses and Purposes](docs/guide/users/index.md#2-context-for-quality-uses-and-purposes-non-normative) in the [BDQ User's Guide](docs/guide/users/index.md)). Running the set of `Tests` associated with a `Use Case` on a dataset produces an evaluation of the fitness of that dataset for that specified use, and yields results that can be compared and shared across organizations. By using a common framework and shared vocabularies to define and report `Tests`, BDQ makes it easier for the community to collaborate on data quality assessment, implementation, and interpretation in a consistent manner.
 
@@ -296,7 +296,7 @@ Readers can approach the standard in different ways depending on their needs. Th
 		:blue_book:
         <strong>Supporting Vocabularies</strong><br>
         Controlled vocabularies for criteria, dimensions, enhancements, and other elements needed to specify new tests.</a>
-		<a href="./docs/list/bdq/index.md">bdq: Vocabulary</a>, <a href="./docs/list/bdqcrit/index.md">bdqcrit: Vocabulary</a>, <a href="./docs/list/bdqdim/index.md">bdqdim: Vocabulary</a>, <a href="./docs/list/bdqenh/index.md">bdqenh: Vocabulary</a>.
+		<a href="./docs/list/bdq/index.md">bdqval: Vocabulary</a>, <a href="./docs/list/bdqcrit/index.md">bdqcrit: Vocabulary</a>, <a href="./docs/list/bdqdim/index.md">bdqdim: Vocabulary</a>, <a href="./docs/list/bdqenh/index.md">bdqenh: Vocabulary</a>.
       </td>
     </tr>
     <tr>
@@ -392,7 +392,7 @@ The Foundational Vocabularies cover the two main parts of the standard - the pra
 
 The Supporting Vocabularies are controlled vocabularies used in the technical definitions of the Tests.   
 
-- [**BDQ Controlled Vocabulary List of Terms (bdq:)**](docs/list/bdq/index.md)
+- [**BDQ Controlled Vocabulary List of Terms (bdqval:)**](docs/list/bdq/index.md)
 - [**Data Quality Criterion Controlled Vocabulary List of Terms (bdqcrit:)**](docs/list/bdqcrit/index.md)
 - [**Data Quality Dimension Controlled Vocabulary List of Terms (bdqdim:)**](docs/list/bdqdim/index.md)
 - [**Data Quality Enhancement Controlled Vocabulary List of Terms (bdqenh:)**](docs/list/bdqenh/index.md)
@@ -417,7 +417,7 @@ Note: None of these links will work until deployment of the standard, but they a
   - [Term List RDF Metadata](https://rs.tdwg.org/bdqffdq/terms.ttl)
   - [HTML Vocabulary Extension](https://bdq.tdwg.org/bdqffdq/extension/)
   - [Vocabulary Extension RDF Metadata](https://bdq.tdwg.org/bdqffdq/extension.ttl)
-- [**BDQ Controlled Vocabulary  (bdq:)**](https://bdq.tdwg.org/bdq/)
+- [**BDQ Controlled Vocabulary  (bdqval:)**](https://bdq.tdwg.org/bdq/)
   - [Vocabulary IRI](https://rs.tdwg.org/bdq/) redirects to [HTML Terms List](https://bdq.tdwg.org/bdq/terms)
   - [RDF Metadata](https://rs.tdwg.org/bdqtest.ttl)
   - [Term List RDF Metadata](https://rs.tdwg.org/bdq/terms.ttl)
@@ -476,7 +476,7 @@ The Fitness for Use Framework is provided as an OWL ontology.
 
 #### 3.6.4 RDF Serializations of Controlled Vocabularies (non-normative)
 
-- [**RDF/XML serialization of the bdq: terms**](dist/bdq.xml)
+- [**RDF/XML serialization of the bdqval: terms**](dist/bdq.xml)
 - [**RDF/XML serialization of the bdqcrit: terms**](dist/bdqcrit.xml)
 - [**RDF/XML serialization of the bdqdim: terms**](dist/bdqdim.xml)
 - [**RDF/XML serialization of the bdqenh: terms**](dist/bdqenh.xml)
@@ -564,28 +564,28 @@ The glossary of terms used in the BDQ standard include acronyms and these terms 
 
 ### 7.2 Evaluations in Test Labels (non-normative)
 
-A Test label in BDQ follows a convention that reflects the Test type, the `bdqffdq:InformationElement` the Test acts upon, and the nature of the evaluation that is being done. The Test type is one of `Validation`, `Issue`, `Measure` or `Amendment` (the Test types in bdqffdq:).  The combination of `Information Element` and evaluation nature is called the Term-Action.  The Term part is a word for the`Information Elements` that are the subject of the Test, and the nature of the evaluation is, but convention, a term from the table below that describes the nature of the evaluation being done in the Test.  By covention, these elements are placed in upper case and separated by underscores in the Test label.  For example, the Test with the label "VALIDATION_COUNTRYCODE_STANDARD" has the type `Validation`, the `bdqffdq:InformationElement` `dwc:countryCode` and the nature of the evaluation "STANDARD". Following is a table of distinct values for the nature of the evaluation part of the Term-Action, along with a definition and a usage comment with examples.  This represents a convention, and Evaluations are not a formal controlled vocabulary with a namespace (unlike the terms in bdq: and the other supporting vocablularies in BDQ).
+A Test label in BDQ follows a convention that reflects the Test type, the `bdqffdq:InformationElement` the Test acts upon, and the nature of the evaluation that is being done. The Test type is one of `Validation`, `Issue`, `Measure` or `Amendment` (the Test types in bdqffdq:).  The combination of `Information Element` and evaluation nature is called the Term-Action.  The Term part is a word for the`Information Elements` that are the subject of the Test, and the nature of the evaluation is, but convention, a term from the table below that describes the nature of the evaluation being done in the Test.  By covention, these elements are placed in upper case and separated by underscores in the Test label.  For example, the Test with the label "VALIDATION_COUNTRYCODE_STANDARD" has the type `Validation`, the `bdqffdq:InformationElement` `dwc:countryCode` and the nature of the evaluation "STANDARD". Following is a table of distinct values for the nature of the evaluation part of the Term-Action, along with a definition and a usage comment with examples.  This represents a convention, and Evaluations are not a formal controlled vocabulary with a namespace (unlike the terms in bdqval: and the other supporting vocablularies in BDQ).
 
 | Label | Comment | Example |
 | ----- | ------- | ------- |
-| ASSUMEDDEFAULT | A bdqffdq:Amendment that replaces a bdq:EMPTY term with a predefined default bdq:Parameter value. | [AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT](docs/terms/bdqtest/index.md#AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT) |
+| ASSUMEDDEFAULT | A bdqffdq:Amendment that replaces a bdqval:EMPTY term with a predefined default bdqval:Parameter value. | [AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT](docs/terms/bdqtest/index.md#AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT) |
 | CENTREOFCOUNTRY | Testing if bdqffdq:EnformationElements COORDINATES identify the center of the dwc:country, allowing for a spatial buffer. | [ISSUE_COORDINATES_CENTEROFCOUNTRY](docs/terms/bdqtest/index.md#ISSUE_COORDINATES_CENTEROFCOUNTRY) |
 | COMPLETE | Testing if the bdqffdq:InformationElement dwc:scientificNameId forms a valid and complete identifier. | [VALIDATION_SCIENTIFICNAMEID_COMPLETE](docs/terms/bdqtest/index.md#VALIDATION_SCIENTIFICNAMEID_COMPLETE) |
 | CONSISTENT | Identifies consistency among values between bdqffdq:InformationElements. | [VALIDATION_CLASSIFICATION_CONSISTENT](docs/terms/bdqtest/index.md#VALIDATION_CLASSIFICATION_CONSISTENT) |
 | COORDINATESTERRESTRIALMARINE | A terrestrial taxon that has geographic coordinates that fall within terrestrial boundaries, or a marine taxon that has geographic coordinates that fall within marine boundaries. | [VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT](docs/terms/bdqtest/index.md#VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT) |
-| DURATIONINSECONDS | The duration in seconds of the bdq:InformationElement dwc:eventDate. | | [MEASURE_EVENTDATE_DURATIONINSECONDS](docs/terms/bdqtest/index.md#MEASURE_EVENTDATE_DURATIONINSECONDS) |
-| FOUND | The value in a bdqffdq:InformationElement that matched a value in a bdq:sourceAuthority. | [VALIDATION_STATEPROVINCE_FOUND](docs/terms/bdqtest/index.md#VALIDATION_STATEPROVINCE_FOUND) |
+| DURATIONINSECONDS | The duration in seconds of the bdqval:InformationElement dwc:eventDate. | | [MEASURE_EVENTDATE_DURATIONINSECONDS](docs/terms/bdqtest/index.md#MEASURE_EVENTDATE_DURATIONINSECONDS) |
+| FOUND | The value in a bdqffdq:InformationElement that matched a value in a bdqval:sourceAuthority. | [VALIDATION_STATEPROVINCE_FOUND](docs/terms/bdqtest/index.md#VALIDATION_STATEPROVINCE_FOUND) |
 | FROM | An Output bdqffdq:InformationElement is being populated from a more primary Input bdqffdq:InformationElement. | [AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID](docs/terms/bdqtest/index.md#AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID) |
 | INRANGE | The value of bdqffdq:InformationElements that are within an acceptable range. | [VALIDATION_MAXDEPTH_INRANGE](docs/terms/bdqtest/index.md#VALIDATION_MAXDEPTH_INRANGE) |
-| LESSTHAN | A Term-Action indicating that the value in one bdq:InformationElement is less than the value in another bdq:InformationElement. | [VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH](docs/terms/bdqtest/index.md#VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH) |
-| NOTEMPTY | An bdqffdq:InformationElement contains a value that is bdq:NotEmpty. | | [VALIDATION_EVENTDATE_NOTEMPTY](docs/terms/bdqtest/index.md#VALIDATION_EVENTDATE_NOTEMPTY) |
-| PREREQUISITESNOTMET | A Test of type bdqffdq:Measure that counts the number of Tests of type bdqffdq:Validation that did not run due to one or more prerequisites not being met (bdq:INTERNAL_PREREQUISITES_NOT_MET or EXTERNAL_PREREQUISITES_NOT_MET). | | [MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET](docs/terms/bdqtest/index.md#MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET) |
+| LESSTHAN | A Term-Action indicating that the value in one bdqval:InformationElement is less than the value in another bdqval:InformationElement. | [VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH](docs/terms/bdqtest/index.md#VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH) |
+| NOTEMPTY | An bdqffdq:InformationElement contains a value that is bdqval:NotEmpty. | | [VALIDATION_EVENTDATE_NOTEMPTY](docs/terms/bdqtest/index.md#VALIDATION_EVENTDATE_NOTEMPTY) |
+| PREREQUISITESNOTMET | A Test of type bdqffdq:Measure that counts the number of Tests of type bdqffdq:Validation that did not run due to one or more prerequisites not being met (bdqval:INTERNAL_PREREQUISITES_NOT_MET or EXTERNAL_PREREQUISITES_NOT_MET). | | [MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET](docs/terms/bdqtest/index.md#MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET) |
 | PROPOSED | A Test of type bdqffdq:Measure that counts the number of bdqffdq:Amendments where an action to modify a value in some way through a change or addition is proposed. | | [MEASURE_AMENDMENTS_PROPOSED](docs/terms/bdqtest/index.md#MEASURE_AMENDMENTS_PROPOSED) |
-| STANDARD | A bdqffdq:Validation Test where a value in a bdqffdq:InformationElement matches a bdq:STANDARD value or format in a bdq:sourceAuthority. | [VALIDATION_TAXONRANK_STANDARD](docs/terms/bdqtest/index.md#VALIDATION_TAXONRANK_STANDARD) |
-| STANDARDIZED | A bdqffdq:Amendment where a bdq:STANDARD value for a bdqffdq:InformationElement is proposed. | [AMENDMENT_TAXONRANK_STANDARDIZED](docs/terms/bdqtest/index.md#AMENDMENT_TAXONRANK_STANDARDIZED) |
+| STANDARD | A bdqffdq:Validation Test where a value in a bdqffdq:InformationElement matches a bdqval:STANDARD value or format in a bdqval:sourceAuthority. | [VALIDATION_TAXONRANK_STANDARD](docs/terms/bdqtest/index.md#VALIDATION_TAXONRANK_STANDARD) |
+| STANDARDIZED | A bdqffdq:Amendment where a bdqval:STANDARD value for a bdqffdq:InformationElement is proposed. | [AMENDMENT_TAXONRANK_STANDARDIZED](docs/terms/bdqtest/index.md#AMENDMENT_TAXONRANK_STANDARDIZED) |
 | TRANSPOSED | A bdqffdq:Amendment where the sign and/or value of one or more bdqffdq:InformationElements were proposed to be swapped. | [AMENDMENT_COORDINATES_TRANSPOSED](docs/terms/bdqtest/index.md#AMENDMENT_COORDINATES_TRANSPOSED) |
-| UNAMBIGUOUS | A combination of bdqffdq:InformationElements is unambiguous in that they align to a unique result given a reference or a Source Authority (bdq:sourceAuthority). | | [VALIDATION_TAXON_UNAMBIGUOUS](docs/terms/bdqtest/index.md#VALIDATION_TAXON_UNAMBIGUOUS) |
-| VERBATIM | Refers to bdqffdq:Amendment Tests that attempt to extract explicit Darwin Core bdq:InformationElements values from Darwin Core verbatim term bdq:InformationElements. | | [AMENDMENT_EVENTDATE_FROM_VERBATIM](docs/terms/bdqtest/index.md#AMENDMENT_EVENTDATE_FROM_VERBATIM) |
+| UNAMBIGUOUS | A combination of bdqffdq:InformationElements is unambiguous in that they align to a unique result given a reference or a Source Authority (bdqval:sourceAuthority). | | [VALIDATION_TAXON_UNAMBIGUOUS](docs/terms/bdqtest/index.md#VALIDATION_TAXON_UNAMBIGUOUS) |
+| VERBATIM | Refers to bdqffdq:Amendment Tests that attempt to extract explicit Darwin Core bdqval:InformationElements values from Darwin Core verbatim term bdqval:InformationElements. | | [AMENDMENT_EVENTDATE_FROM_VERBATIM](docs/terms/bdqtest/index.md#AMENDMENT_EVENTDATE_FROM_VERBATIM) |
 
 ### 7.3 General Glossary (non-normative)
 
@@ -593,22 +593,22 @@ Glossary of terms used in the BDQ standard that are in addition to those include
 
 | Label | Definition | Context |
 | ---- | ---- | ---- |
-| Actual Parameter | The value that is provided when a function or method is called. Actual parameters are the real data that are passed to a function to replace the formal parameters. In the function f(x) = x^2, x is a formal parameter that can be replaced by the actual parameter value 4, and thus be evaluated as f(4) = 4^2 = 16. In VALIDATION_GENUS_FOUND, the formal parameter bdq:sourceAuthority may take the actual parameter "GBIF Backbone Taxonomy". | bdqffdq: |
-| COORDINATES | A general category of specific bdq:InformationElements that represents the combination of the Darwin Core terms dwc:decimalLatitude and dwc:decimalLongitude and may include metadata terms including dwc:geodeticDatum. | bdqffdq:InformationElement |
+| Actual Parameter | The value that is provided when a function or method is called. Actual parameters are the real data that are passed to a function to replace the formal parameters. In the function f(x) = x^2, x is a formal parameter that can be replaced by the actual parameter value 4, and thus be evaluated as f(4) = 4^2 = 16. In VALIDATION_GENUS_FOUND, the formal parameter bdqval:sourceAuthority may take the actual parameter "GBIF Backbone Taxonomy". | bdqffdq: |
+| COORDINATES | A general category of specific bdqval:InformationElements that represents the combination of the Darwin Core terms dwc:decimalLatitude and dwc:decimalLongitude and may include metadata terms including dwc:geodeticDatum. | bdqffdq:InformationElement |
 | CRS | Coordinate Reference System - (also referred to as 'spatial reference system'). A coordinate system defined in relation to a standard reference or datum (Chapman & Wieczorek 2020). | Test |
 | Database of record | An information system which holds an authoritative or master record of some data. Records in a database of record are held to be correct over different values for the same records that might be found in other datasets. This is in distinction from aggregated datasets, derived research dataset, datasets for portals and other holders of non-authoritative copies of the data. | BDQ standard |
 | geodetic coordinate reference system | A coordinate reference system based on a geodetic datum, used to describe positions on the surface of the earth (Chapman and Wieczorek 2020). | Test |
 | geodetic datum | A mathematical model that uses a reference ellipsoid to describe the size and shape of the surface of the earth and adds to it the information needed for the origin and orientation of coordinate systems on that surface (Chapman and Wieczorek 2000). | Test |
-| Formal Parameter | A placeholder defined in the function or method signature. It represents the input that the function expects. In the function f(x) = x^2, x is a formal parameter of the function f. In VALIDATION_GENUS_FOUND, bdq:sourceAuthority is a formal parameter. | bdqffdq: |
+| Formal Parameter | A placeholder defined in the function or method signature. It represents the input that the function expects. In the function f(x) = x^2, x is a formal parameter of the function f. In VALIDATION_GENUS_FOUND, bdqval:sourceAuthority is a formal parameter. | bdqffdq: |
 | Framework | The Fitness for Use Framework, the body of work that provides a fundamental structure for the BDQ Tests. The Fitness for Use Framework is derived from (Veiga 2016) and is the outcome of the TDWG Data Quality Task Group 1: Framework on Data Quality (Veiga et al. 2017). | bdqffdq: |
 | Framework Ontology | A model of the Framework (Veiga 2016, Veiga et al. 2017) as an OWL ontology, present as the bdqffdq: vocabulary in the BDQ standard. | bdqffdq: |
-| GEOGRAPHY | A general category of specific bdq:InformationElements that represents a combination of Darwin Core administrative geography terms dwc:continent, dwc:country, dwc:countryCode, dwc:stateProvince, dwc:county, dwc:municipality. | bdqffdq:InformationElement |
+| GEOGRAPHY | A general category of specific bdqval:InformationElements that represents a combination of Darwin Core administrative geography terms dwc:continent, dwc:country, dwc:countryCode, dwc:stateProvince, dwc:county, dwc:municipality. | bdqffdq:InformationElement |
 | Java | Java is a registered trademark of Oracle and/or its affiliates. | BDQ standard |
 | NAME | A bdq GitHub label to indicate that the Test is related to Darwin Core terms in the dwc:Taxon Class. | bdqffdq:InformationElement |
-| non-printing characters | ASCII 0-32 and 127 decimal. Non-printing characters or formatting marks that are not displayed when printing. These may include pilcrow, space, non-breaking space, tab character, etc. For the purposes of the Tests they are treated as bdq:Empty. | Data |
-| null | A value that is used in some databases to signify that a value is unknown or missing. It may be represented in serializations of data outside of database environments by strings such as "NULL", "Null", "null". "/n", "9999", "NA", etc. These serializations should be treated as bdq:NotEmpty. | Data |
+| non-printing characters | ASCII 0-32 and 127 decimal. Non-printing characters or formatting marks that are not displayed when printing. These may include pilcrow, space, non-breaking space, tab character, etc. For the purposes of the Tests they are treated as bdqval:Empty. | Data |
+| null | A value that is used in some databases to signify that a value is unknown or missing. It may be represented in serializations of data outside of database environments by strings such as "NULL", "Null", "null". "/n", "9999", "NA", etc. These serializations should be treated as bdqval:NotEmpty. | Data |
 | OTHER | A bdq GitHub label to indicate that the Test is related to Darwin Core terms other than Classes dwc:Taxon, dwc:Location or dwc:Event. | bdqffdq:InformationElement |
-| POLYNOMIAL | A general category of specific bdq:InformationElements that represents a combination of the Darwin Core terms dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet. See the Test [VALIDATION_POLYNOMIAL_CONSISTENT](docs/terms/bdqtest/index.md#VALIDATION_POLYNOMIAL_CONSISTENT). | bdqffdq:InformationElement |
+| POLYNOMIAL | A general category of specific bdqval:InformationElements that represents a combination of the Darwin Core terms dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet. See the Test [VALIDATION_POLYNOMIAL_CONSISTENT](docs/terms/bdqtest/index.md#VALIDATION_POLYNOMIAL_CONSISTENT). | bdqffdq:InformationElement |
 | Roman numerals | Numbers written with the characters I, V, X, L, C, D, and M in the latin alphabet, each letter representing an integer and combined to form arbitrary integers. Roman numerals are interpreted as the equivalent integer for months (e.g., "X" as "10") in certain Tests. Roman numerals may not be unambiguously interpreted for other Darwin Core terms such as dwc:day or in text fields as they may mean unknown or something else entirely. | Data | 
 | SPACE | A bdq GitHub label to indicate that the Test is related to Darwin Core terms in the dwc:Location Class. | bdqffdq:InformationElement |
 | SRS | spatial reference system - see CRS (Chapman and Wieczorek 2020). | Test |
@@ -617,10 +617,10 @@ Glossary of terms used in the BDQ standard that are in addition to those include
 | TestField | Column heading in the Markdown of the Tests in the [tdwg/bdq GitHub](https://github.com/tdwg/bdq/issues) that list all the normative and informative metadata elements that describe a Data Quality Test. | Test |
 | Test Type | There are four types of Tests: Validation (bdqffdq:Validation), Amendment (bdqffdq:Amendment), Issue (bdqffdq:Issue), and Measure (bdqffdq:Measure). | Test |
 | TIME | A bdq GitHub label to indicate that the Test is related to Darwin Core terms in the dwc:Event Class. | bdqffdq:InformationElement |
-| VERBATIM | A general category of specific bdq:InformationElements that represents a term containing an original value. | bdqffdq:InformationElement |
-| whitespace | Characters such as spaces and tabs that affect rendering of printed or displayed output, but which themselves are not printed. 1) A field that only includes whitespace is treated as bdq:Empty. 2) In bdqffdq:Validation Tests that require the look up of a bdq:sourceAuthority, leading and/or trailing whitespace will cause the Test to fail as no pre-processing is carried out on the data. These leading and trailing whitespaces may be stripped out in a subsequent bdqffdq:Amendment and thus pass when the bdqffdq:Validation Test is run again. | Data |
-| YEARMONTHDAY | A general category of specific bdq:InformationElements that represents a combination of the Darwin Core terms dwc:year, dwc:month, dwc:day. | bdqffdq:InformationElement |
-| YEARSTARTDAYOFYEARENDDAYOFYEAR | A general category of specific bdq:InformationElements that represents a combination of the Darwin Core terms dwc:year, dwc:startDayOfYear, dwc:endDayofYear. | bdqffdq:InformationElement |
+| VERBATIM | A general category of specific bdqval:InformationElements that represents a term containing an original value. | bdqffdq:InformationElement |
+| whitespace | Characters such as spaces and tabs that affect rendering of printed or displayed output, but which themselves are not printed. 1) A field that only includes whitespace is treated as bdqval:Empty. 2) In bdqffdq:Validation Tests that require the look up of a bdqval:sourceAuthority, leading and/or trailing whitespace will cause the Test to fail as no pre-processing is carried out on the data. These leading and trailing whitespaces may be stripped out in a subsequent bdqffdq:Amendment and thus pass when the bdqffdq:Validation Test is run again. | Data |
+| YEARMONTHDAY | A general category of specific bdqval:InformationElements that represents a combination of the Darwin Core terms dwc:year, dwc:month, dwc:day. | bdqffdq:InformationElement |
+| YEARSTARTDAYOFYEARENDDAYOFYEAR | A general category of specific bdqval:InformationElements that represents a combination of the Darwin Core terms dwc:year, dwc:startDayOfYear, dwc:endDayofYear. | bdqffdq:InformationElement |
 
 ## 8 References (non-normative)
 
