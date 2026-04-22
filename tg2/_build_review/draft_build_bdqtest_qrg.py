@@ -151,11 +151,11 @@ definitionTable = build_term_key(term_concept_dictionary,terms_sorted_by_localna
 
 # Load the vocabulary and produce the Quick Reference Guide
 
-with open ("../_review/vocabulary/bdq_term_versions.csv") as vocabfile: 
+with open ("../_review/vocabulary/bdqval_term_versions.csv") as vocabfile: 
 	try: 
 		vocabDataFrame = pandas.read_csv(vocabfile);
 	except pandas.errors.ParserError as e:
-		sys.exit("Error reading bdq vocabulary csv file: {}".format(e)) 
+		sys.exit("Error reading bdqval vocabulary csv file: {}".format(e)) 
 
 with open (inputTermsCsvFilename, newline='') as csvfile:
 	sys.stdout = open(outputFilename,"w")

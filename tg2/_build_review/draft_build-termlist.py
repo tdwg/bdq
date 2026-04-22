@@ -44,7 +44,7 @@ PREFIX bdqdim: <https://rs.tdwg.org/bdqdim/terms/>
 
 # This is a Python list of the names of the term lists for which documents are to be produced.
 # One set of documents is produced for each term.  See assumptions below.
-termLists = ['bdqdim','bdq','bdqenh','bdqcrit']
+termLists = ['bdqdim','bdqval','bdqenh','bdqcrit']
 
 # This is the base URL for raw files from the branch of the repo that has been pushed to GitHub
 github_branch = 'master' # "master" for production, something else for development
@@ -159,10 +159,10 @@ for term in termLists:
     outFileName = '../_review/docs/list/{}/index.md'.format(term)
     outRDFFileName = '../_review/dist/{}.xml'.format(term)
     term_history_csv = "../_review/vocabulary/{}_term_versions.csv".format(term)
-    if term == 'bdq' : 
+    if term == 'bdqval' : 
         organized_in_categories = True
-        display_order = ['Data','bdq:Parameter','bdqffdq:UseCase','bdqffdq:InformationElement']
-        display_label = ['Data','bdq:Parameter','bdqffdq:UseCase','bdqffdq:InformationElement']
+        display_order = ['Data','bdqval:Parameter','bdqffdq:UseCase','bdqffdq:InformationElement']
+        display_label = ['Data','bdqval:Parameter','bdqffdq:UseCase','bdqffdq:InformationElement']
     else : 
         organized_in_categories = False
         display_order = ['']
@@ -178,7 +178,7 @@ for term in termLists:
     #column_list = ['pref_ns_prefix', 'pref_ns_uri', 'term_localName', 'label', 'definition', 'usage', 'notes', 'term_modified', 'term_deprecated', 'type']
     if vocab_type == 2:
         column_list += ['controlled_value_string']
-    if term == "bdq" :
+    if term == "bdqval" :
         column_list += ['hasFitnessRequirements']
     #elif vocab_type == 3:
     #    column_list += ['controlled_value_string', 'skos_broader']
@@ -213,7 +213,7 @@ for term in termLists:
                 #row_list = [term_list['pref_ns_prefix'], term_list['pref_ns_uri'], row['term_localName'], row['label'], row['definition'], row['usage'], row['notes'], row['term_modified'], row['term_deprecated'], row['type']]
                 if vocab_type == 2:
                     row_list += [row['controlled_value_string']]
-                if term == "bdq" :
+                if term == "bdqval" :
                     row_list += [row['hasFitnessRequirements']]
         #        elif vocab_type == 3:
         #            if row['skos_broader'] =='':
@@ -353,7 +353,7 @@ for term in termLists:
     outputRdfHeader += 'xmlns:xsd="http://www.w3.org/2001/XMLSchema#"\n'
     outputRdfHeader += 'xmlns:owl="http://www.w3.org/2002/07/owl#"\n'
     outputRdfHeader += 'xmlns:dc="http://purl.org/dc/elements/1.1/"\n'
-    outputRdfHeader += 'xmlns:bdq="https://rs.tdwg.org/bdq/terms/"\n'
+    outputRdfHeader += 'xmlns:bdqval="https://rs.tdwg.org/bdqval/terms/"\n'
     outputRdfHeader += 'xmlns:bdqdim="https://rs.tdwg.org/bdqdim/terms/"\n'
     outputRdfHeader += 'xmlns:bdqenh="https://rs.tdwg.org/bdqenh/terms/"\n'
     outputRdfHeader += 'xmlns:bdqcrit="https://rs.tdwg.org/bdqcrit/terms/"\n'
@@ -432,7 +432,7 @@ for term in termLists:
             outputRdf += '     <skos:inScheme rdf:resource="http://rs.tdwg.org/{}/terms/"/>\n'.format(term)
             outputRdf += '     <rdf:type rdf:resource="{}"/>\n'.format(row['rdf_type'])
             outputRdf += '     <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/{}/terms/{}"/>\n'.format(term,row['term_localName'])
-            if term == "bdq" :
+            if term == "bdqval" :
                 if row['hasFitnessRequirements'] and row['hasFitnessRequirements'] != '' :
                     outputRdf += '     <bdqffdq:hasFitnessRequirements rdf:datatype="http://www.w3.org/2001/XMLSchema#string">{}</bdqffdq:hasFitnessRequirements>\n'.format(row['hasFitnessRequirements'])
             outputRdf += '</rdf:Description>\n'
@@ -497,7 +497,7 @@ for term in termLists:
             #text += '\t\t\t<td>' + row['definition'] + '</td>\n'
             text += '\t\t</tr>\n'
 
-            if term == 'bdq' and row['hasFitnessRequirements'] and row['hasFitnessRequirements'] != '' :
+            if term == 'bdqval' and row['hasFitnessRequirements'] and row['hasFitnessRequirements'] != '' :
                text += '\t\t<tr>\n'
                text += '\t\t\t<td>Fitness requirements</td>\n'
                text += '\t\t\t<td>' + row['hasFitnessRequirements'] + '</td>\n'
