@@ -375,6 +375,8 @@ Section [3.2 Identifying the Test that produced a Response (normative)](#32-iden
 
 Each description of a data quality Test SHOULD include the properties and related instances described in the following paragraphs.
 
+Each instance of `bdqffdq:UseCase` SHOULD have one `bdqffdq:hasFitnessRequirements` datatype property enumerating the general fitness requirements of data for that use.
+
 The `bdqffdq:hasUseCase` object property SHOULD have an individual with a type that is a subclass of `bdqffdq:Policy` as its subject. 
 
 The `bdqffdq:hasUseCase` object property MAY have an individual from the `bdq:` vocabulary that represents a `bdqffdq:UseCase` as its object. 
