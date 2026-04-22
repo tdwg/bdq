@@ -182,7 +182,7 @@ The simpler of the two Tests examined is VALIDATION_FOOTPRINTWKT_NOTEMPTY, which
 By following this workflow, you move from a human-centric research need to a machine-readable technical standard.
 
 See also:
-- [What is meant by "Test"?](../guide/bdqtest/index.md#21-what-is-meant-by-test-non-normative) in the bdqtest: term-list document.
+- [BDQ Tests: An Operational Perspective](../guide/bdqtest/index.md#51-bdq-tests-an-operational-perspective-non-normative) in the bdqtest: term-list document.
 - [Data Quality Needs, Data Quality Mechanisms, Data Quality Reports](../guide/bdqffdq/index.md#23-data-quality-needs-data-quality-mechanisms-data-quality-reports-non-normative) in the bdqffdq: ontology guide.
 
 ### 2.1 Best Practices

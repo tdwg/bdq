@@ -324,7 +324,7 @@ The Framework can be conceptually divided into three horizontal layers: `Data Qu
 
 The Framework can also be conceptually divided into four vertical themes, four sets of related concepts that carry through the Needs, Solutions, and Reports layers. These concepts are `Validation`, `Issue`, `Measure`, and `Amendment`. 
 
-We use the informal term "Test" to describe these four vertical themes, a Test involves terms in both Needs and Solutions, and Tests produce particular reporting elements.  See the diagram in [What is a "Test"](../bdqtest/index.md#511-what-is-a-test-non-normative).
+We use the informal term "Test" to describe these four vertical themes, a Test involves terms in both Needs and Solutions, and Tests produce particular reporting elements.  See the diagram in [BDQ Tests: An Operational Perspective](../bdqtest/index.md#51-bdq-tests-an-operational-perspective-non-normative).
 
 #### 2.2.1 Data Quality Control and Data Quality Assurance (non-normative)
 
