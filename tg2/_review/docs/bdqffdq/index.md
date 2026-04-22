@@ -94,7 +94,7 @@ The following namespace abbreviations are used in this document:
 
 | **Abbreviation** | **Namespace** |
 | ------------ | -------------                               |
-| bdq:         | https://rs.tdwg.org/bdq/terms/              |
+| bdqval:         | https://rs.tdwg.org/bdqval/terms/           |
 | bdqtest:     | https://rs.tdwg.org/bdqtest/terms/          |
 | bdqcrit:     | https://rs.tdwg.org/bdqcrit/terms/          |
 | bdqdim:      | https://rs.tdwg.org/bdqdim/terms/           |

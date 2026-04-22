@@ -174,7 +174,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 
 | Abbreviation | Namespace |
 |--------------|-----------|
-| bdq:         | https://rs.tdwg.org/bdq/terms/ |
+| bdqval:         | https://rs.tdwg.org/bdqval/terms/|
 | bdqtest:     | https://rs.tdwg.org/bdqtest/terms/ |
 | bdqcrit:     | https://rs.tdwg.org/bdqcrit/terms/ |
 | bdqdim:      | https://rs.tdwg.org/bdqdim/terms/ |

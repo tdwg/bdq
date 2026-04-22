@@ -201,7 +201,7 @@ The following namespace abbreviations are used in this document:
 
 | **Abbreviation** | **Namespace** |
 | ------------ | -------------                               |
-| bdq:         | https://rs.tdwg.org/bdq/terms/              |
+| bdqval:         | https://rs.tdwg.org/bdqval/terms/           |
 | bdqtest:     | https://rs.tdwg.org/bdqtest/terms/          |
 | bdqdim:      | https://rs.tdwg.org/bdqdim/terms/           |
 | bdqffdq:     | https://rs.tdwg.org/bdqffdq/terms/          |
