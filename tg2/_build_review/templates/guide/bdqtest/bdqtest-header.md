@@ -46,9 +46,16 @@
 
 ## 1 Introduction (non-normative)
 
-This document provides both normative specifications and explanatory guidance for the BDQ Tests. It defines how each Test is modeled using standard vocabulary terms and how conforming implementations are expected to behave under various conditions. It also distinguishes among Test types (`Validation`, `Issue`, `Measure`, and `Amendment`), outlines the semantics of single- versus multi-record evaluation, and explains how `Parameters` influence Test behavior. The content here provides the foundation for interpreting BDQ Test descriptions and for implementing BDQ-conformant test suites and reports.  This document also provides context on the role of Tests within the broader BDQ standard, including their relationship to `Use Cases`, `Policies`, and `Implementations` and the products that result from running Tests, `Responses` and `Data Quality Reports`.
+This document-
 
-Data quality is an evolving field, and there will always be "one more test" that we could conceive. BDQ focuses on a suite of Tests that have reached community consensus.  By mapping these tests across key Darwin Core terms, BDQ provides high coverage for the data that researchers use the most. The BDQ framework is modular and extensible: communities may define additional Tests to address domain-specific needs, and future versions of the standard may incorporate new Tests as consensus and practice evolve. Within BDQ, Tests are applied in the context of the use of data (`Use Cases` via `Policies`), allowing users select and apply Tests relevant to their stated data quality needs.
+- Provides normative specifications and non-normative guidance for BDQ Tests, describing how each Test is modeled using standard vocabulary terms and how conforming implementations are expected to behave.
+- Defines the Test types (Validation, Issue, Measure, Amendment), the semantics of single- versus multi-record evaluation and how Parameters influence Test behavior.
+- Is the basis for interpreting BDQ Test descriptions and for producing BDQ-conformant implementations and reports.
+- Explains the role of Tests within the BDQ standard and their relationship to Use Cases, Policies, and Implementations and the outputs of running Tests (Responses and Data Quality Reports). Tests are applied in the context of data use (Use Cases via Policies) so users can select those that match their data quality needs.
+
+Data quality needs evolve, but BDQ defines a community-agreed suite of Tests mapped to key Darwin Core terms to provide broad coverage of commonly used research data.
+The BDQ framework is modular and extensible: Communities may define domain-specific Tests, and future versions of the standard may incorporate new Tests as practice and consensus develop.
+
 
 ### 1.1 Purpose (non-normative)
 
@@ -138,13 +145,13 @@ The terminology of BDQ is based primarily on the Fitness for Use Framework (Veig
 
 BDQ Tests initially focus on values of a subset of [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) composed as `bdqffdq:InformationElements` as inputs (along with optional `Parameters`) to the Tests.  Tests have defined outputs expressed as `Responses` and specifications of what input values should produce what `Responses`.  Each Test is independent, to support the mixing and matching of Tests to meet particular data quality needs and not impose a particular model of Test execution on implementation frameworks. Tests may execute in parallel, on data records in sequence, as queries on datasets and on unique values. Tests are paired in that all `Amendment` Tests are matched with a corresponding `Validation` Test that assesses some aspect of data quality. An `Amendment` Test may propose improvements to term values, but the BDQ standard recommends that all proposed improvements be evaluated before application.
 
-Some BDQ Tests also require reference to external data such as standard vocabularies of terms or names.
+Some BDQ Tests also require reference to external data such as standard vocabularies of terms or names (bdq:sourceAuthority), [see Parameterizing the Tests](43-parameterizing-the-tests).
 
 The emphasis in BDQ is on Tests that evaluate values from a `Single Record` (`bdqffdq:SingleRecord`). Test results may also be accumulated across multiple records (`bdqffdq:MultiRecord`). Tests that accumulate information about results across multiple records are necessary for formal application of Quality Assurance and Quality Control principles.
 
-### 2.1 What is meant by "Test"? (non-normative)
+### 2.1 The BDQ Definition of “Test” (non-normative)
 
-We use the capitalized term "Test" to mean something specific in the BDQ Standard. A Test is any instance of a subclass of `bdqffdq:DataQualityNeed` (e.g., `bdqffdq:Validation`) composed with an instance of a subclass of `bdqffdq:Method` (e.g., `bdqffdq:ValidationMethod`) composed with an instance of `bdqffdq:Specification`. When run by a `bdqffdq:Implementation`, each BDQ Test can produce a `bdqffdq:DataQualityReport` consisting of `bdqffdq:Responses`. See the diagram in [What is a "Test"](#511-what-is-a-test-non-normative) below.
+This section defines the capitalized term “Test” as used in the BDQ standard and how it is constructed within the Fitness-for-Use framework. We use the capitalized term "Test" to mean something specific in the BDQ Standard. A Test is any instance of a subclass of `bdqffdq:DataQualityNeed` (e.g., `bdqffdq:Validation`) composed with an instance of a subclass of `bdqffdq:Method` (e.g., `bdqffdq:ValidationMethod`) composed with an instance of `bdqffdq:Specification`. When run by a `bdqffdq:Implementation`, each BDQ Test can produce a `bdqffdq:DataQualityReport` consisting of `bdqffdq:Responses`. See the diagram in [What is a "Test"](#511-what-is-a-test-non-normative) below.
 
 The scope of each BDQ Test is largely provided by the properties of a `bdqffdq:Specification`. The [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) used in the specification are included in the `Information Elements` (`bdqffdq:InformationElement`). The specification also includes references to external authorities (external to the test specification, and usually also external to the Darwin Core standard, Wieczorek et al. 2012) that are required to implement the Test, for example, references to an ISO standard or a GBIF maintained controlled vocabulary. Such authoritative references are listed under `sourceAuthority` (`bdq:sourceAuthority`) with a link to the authority and optionally, a link to a specific online resource required for the `Implementation` of the Test.
 
@@ -167,7 +174,7 @@ Under the principle that data has quality only with respect to use, each of the 
 
 ## 3 Test Types (non-normative)
 
-The concept of 'Tests' in the context of BDQ include four distinct types: `Validation` (`bdqffdq:Validation`); `Issue` (`bdqffdq:Issue`); `Amendment` (`bdqffdq:Amendment`) and `Measure` (`bdqffdq:Measure`).
+The concept of "Tests" in the context of BDQ include four distinct types: `Validation` (`bdqffdq:Validation`); `Issue` (`bdqffdq:Issue`); `Amendment` (`bdqffdq:Amendment`) and `Measure` (`bdqffdq:Measure`).
 
 ### 3.1 Validation Tests (normative)
 
@@ -382,21 +389,21 @@ Example RDF Fragment from the `Specification` for [VALIDATION_COUNTRYCODE_STANDA
 
 BDQ `Tests` are designed with a clear boundary of responsibility: they take a defined set of input `Information Elements` (and optional `Parameters`) and return a structured `Response` describing the outcome. This standardization of inputs and outputs means a `Test` implementation can be treated as a small, self-contained component whose behavior is determined by its `Specification` and is consistent across programming languages and environments. The surrounding execution framework is responsible for obtaining and binding raw data to the required `Information Elements`, selecting which `Tests` to run (e.g., by `Use Case` via `Policies`), and assembling the resulting `Responses` into `Data Quality Reports`. In this way, BDQ separates the semantics of `Test` behavior (what is evaluated and how results are expressed) from the mechanics of test execution (how data are accessed, orchestrated, filtered, and reported).
 
-### 5.1.1 What is a "Test" (non-normative)
+### 5.1 BDQ Tests: An Operational Perspective (non-normative)
 
 A Test is a defined evaluation that takes specific inputs and produces a structured output. A Test is defined using a set of `bdqffdq:` classes and properties that specify the inputs to the Test (the relevant `Information Elements` and any `Parameters`) and how those input values are to be evaluated under a `Specification` to produce a structured output (a `Response`) that can be interpreted consistently across implementations. The Test definitions are provided in the `bdqtest:` vocabulary, and the semantics of the terms used in those definitions are provided by the `bdqffdq:` vocabulary and supporting vocabularies.
 
 ![Diagram of the relationship between the concept Test and the bdqffdq: classes and properties that define it](../implementers/bdqffdq_overview_diagram.svg)
 
-A Test is not a software implementation; it is a formal definition of an evaluation that *can* be implemented in software. In the Fitness For Use Framework, each Test is an instance of a subtype of `Data Quality Need` that identifies what is being evaluated (through its required `Information Elements` and its `Resource Type`) and why it matters (through its association with one or more `Use Cases` via `Policies`). The Test is linked to a `Method`, which in turn links to a `Specification` that describes expected behavior and expected outcomes (e.g., via `hasExpectedResponse`), and may reference `Parameters` and source authorities that further constrain or parameterize execution. When an `Implementation` runs a Test, it produces one or more `Responses` that can be assembled into `Data Quality Reports` for interpretation, filtering, and aggregation.
+This section explains how Tests are expressed in BDQ vocabularies and how they behave when executed by an implementation. A Test is not a software implementation; it is a formal definition of an evaluation that *can* be implemented in software. In the Fitness For Use Framework, each Test is an instance of a subtype of `Data Quality Need` that identifies what is being evaluated (through its required `Information Elements` and its `Resource Type`) and why it matters (through its association with one or more `Use Cases` via `Policies`). The Test is linked to a `Method`, which in turn links to a `Specification` that describes expected behavior and expected outcomes (e.g., via `hasExpectedResponse`), and may reference `Parameters` and source authorities that further constrain or parameterize execution. When an `Implementation` runs a Test, it produces one or more `Responses` that can be assembled into `Data Quality Reports` for interpretation, filtering, and aggregation.
 
 Conceptually, Tests can be viewed in two complementary ways: vertically, they connect the `Data Quality Needs` and `Data Quality Solutions` layers and produce outputs in the `Data Quality Reports` layer; and horizontally by type, BDQ defines four main categories of Tests—`Validation`, `Issue`, `Measure`, and `Amendment`—each of which produces corresponding kinds of `Responses`.
 
-### 5.1 Data Quality Control, Data Quality Assurance (normative)
+### 5.2 Data Quality Control, Data Quality Assurance (normative)
 
 The BDQ standard draws a distinction between Quality Control and Quality Assurance. Quality Control processes seek to assess the quality of data for some purpose, then identify changes to the data or to processes around the data for improving the quality of the data. Quality Assurance processes seek to filter some set of data to a subset that is fit for some purpose, that is to assure that data used for some purpose are fit for that purpose. Implementations of the BDQ Tests MAY be used to perform Quality Control, Quality Assurance, or both. The [mathematical formalization](../bdqffdq/index.md#4-fitness-for-use-framework-summary-of-mathematical-formalization-normative) of the [Fitness for Use Ontology](../bdqffdq/index.md) provides a formal definition of Quality Control and Quality Assurance, and how Test `Responses` SHOULD be used for each.
 
-### 5.2 When to Run Tests (normative)
+### 5.3 When to Run Tests (normative)
 
 The BDQ Tests are designed to be run at any point in the life cycle of biodiversity data. 
 * They MAY be run at the point of initial collection or observation of organisms. 
@@ -406,7 +413,7 @@ The BDQ Tests are designed to be run at any point in the life cycle of biodivers
 * They MAY be run during data aggregation and the presentation of aggregated data. 
 * They MAY be run in workflows for analysis of data for research purposes.
 
-### 5.3 Results of Test Executions (normative)
+### 5.4 Results of Test Executions (normative)
 
 The BDQ standard is agnostic about the format of presentation of results from BDQ Tests. BDQ does, however, specify that Test implementations and presentations MUST return structured data with at least Response.status, Response.result, and Response.comment. Responses MAY also contain more information in Response.qualifier.
 See the [Implementer's Guide](../implementers/index.md) section on [Presentation of Results](../implementers/index.md#7-presentation-of-results-normative) for further normative and non-normative guidance about result presentation. See [Structure of a Response](../bdqtest/index.md#41-structure-of-response-normative) in the [BDQ Tests and Assertions](../bdqtest/index.md) document for normative guidance on `Responses` as RDF or as data structures.
@@ -415,7 +422,7 @@ The results of the execution of implementations of the BDQ Tests MAY be presente
 
 The `bdqffdq:` vocabulary enables the wrapping of the results of BDQ Tests within annotations. The `bdqffdq:` vocabularies in particular are intended to support the framing of `Responses` from Tests within annotations that follow the W3C Web Annotation Data Model (Sanderson et al. 2017), and are suitable for inclusion in semantic data stores. See the [Implementer's Guide](../implementers/index.md) section on [Annotations](../implementers/index.md#72-annotations-normative) for more guidance.
 
-### 5.4 Test Execution Environments and Workflows (non-normative)
+### 5.5 Test Execution Environments and Workflows (non-normative)
 
 Neither the Test descriptions nor the framework impose constraints on environments or workflows for execution. One possible workflow is to run all validations, then all amendments, then all validations again on a modified copy of the input data to which all proposed amendments have been applied.
 
