@@ -29,7 +29,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <skos:definition xml:lang="en">Research uses forming a bdqffdq:UseCase for dwc:Occurrence data of alien species that 1) allows the understanding of the spatial and temporal distribution of an alien species or 2) identifies records that contain valid terms (i.e. name, space, time, other) associated with alien species; i.e.1) where the Information Elements concern what dwc:Organism occurred where and when and the means, degree, and pathways of establishment, and that may used for analysis of spatial and/or temporal patterns of biodiversity (see examples in Groom et al. (2019). Improving Darwin Core for research and management of alien species. Biodiversity Information Science and Standards, 3: e38084.  https://doi.org/10.3897/biss.3.38084).</skos:definition>
      <rdf:value>Alien-Species</rdf:value>
      <skos:inScheme rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
-     <rdf:type rdf:resource="bdqffdq:UseCase"/>
+     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/UseCase"/>
      <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqval/terms/Alien-Species"/>
      <bdqffdq:hasFitnessRequirements rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data are fit for the Use Case bdqval:Alien-Species when occurrence records can be reliably interpreted for alien-species management: the organism identity is usable, occurrence semantics are usable and standardizable, and establishment context (e.g., establishment means, degree of establishment, pathway) is present and standardizable so that interpretation of alien-status is comparable across records and datasets.  <ul><li>Organism identity is usable: Taxon/scientific name terms (e.g., dwc:scientificName, related dwc:Taxon terms, and identifiers where provided) are present, sufficiently resolvable and consistent.  </li><li>Occurrence semantics are usable: dwc:occurrenceStatus is present, valid and  standardizable so records can be interpreted consistently for alien-species analyses and workflows.  </li><li>Alien-species context is usable: Alien-species related terms (e.g., dwc:establishmentMeans, dwc:degreeOfEstablishment, dwc:pathway) are present where expected, valid and standardizable against an appropriate authority so records are comparable.  </li><li>Core record typing supports interpretation: Values such as dwc:basisOfRecord and dc:type are present, valid and standardizable so record meaning is consistent in downstream use.  </li></ul> </bdqffdq:hasFitnessRequirements>
 </rdf:Description>
@@ -45,7 +45,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <skos:definition xml:lang="en">A list of bdqffdq:Amendment Tests that have been run on a bdqffdq:SingleRecord forming the input to another Test.</skos:definition>
      <rdf:value>AllAmendmentTestsRunOnSingleRecord</rdf:value>
      <skos:inScheme rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
-     <rdf:type rdf:resource="bdqffdq:InformationElement"/>
+     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/InformationElement"/>
      <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqval/terms/AllAmendmentTestsRunOnSingleRecord"/>
 </rdf:Description>
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqval/terms/version/AllValidationTestsRunOnSingleRecord-2026-04-22">
@@ -60,7 +60,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <skos:definition xml:lang="en">A list of bdqffdq:Validation Tests that have been run on a bdqffdq:SingleRecord.</skos:definition>
      <rdf:value>AllValidationTestsRunOnSingleRecord</rdf:value>
      <skos:inScheme rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
-     <rdf:type rdf:resource="bdqffdq:InformationElement"/>
+     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/InformationElement"/>
      <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqval/terms/AllValidationTestsRunOnSingleRecord"/>
 </rdf:Description>
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqval/terms/version/annotationAlertIf-2026-04-22">
@@ -75,7 +75,8 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <skos:definition xml:lang="en">Optionally establishes if an annotation exists in a bdqval:ParameterizedTest within a bdqval:annotationSystem by describing the criteria for relating annotations in the system to records within the bdqval:ParameterizedTest.</skos:definition>
      <rdf:value>annotationAlertIf</rdf:value>
      <skos:inScheme rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
-     <rdf:type rdf:resource="bdqffdq:Parameter, owl:NamedIndividual"/>
+     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Parameter"/>
+     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
      <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqval/terms/annotationAlertIf"/>
 </rdf:Description>
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqval/terms/version/annotationSystem-2026-04-22">
@@ -90,7 +91,8 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <skos:definition xml:lang="en">Optionally establishes a system for annotations in a bdqval:ParameterizedTest, with the default being the W3C Annotations Data Model's "oa:Annotation"</skos:definition>
      <rdf:value>annotationSystem</rdf:value>
      <skos:inScheme rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
-     <rdf:type rdf:resource="bdqffdq:Parameter, owl:NamedIndividual"/>
+     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Parameter"/>
+     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
      <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqval/terms/annotationSystem"/>
 </rdf:Description>
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqval/terms/version/assumptionOnUnknownBiome-2026-04-22">
@@ -101,11 +103,12 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdfs:label xml:lang="en">assumptionOnUnknownBiome</rdfs:label>
      <skos:prefLabel xml:lang="en">assumptionOnUnknownBiome</skos:prefLabel>
      <skos:note xml:lang="en">See VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT (bdqtest:b9c184ce-a859-410c-9d12-71a338200380).</skos:note>
-     <rdfs:comment xml:lang="en">Used when a bdqval:taxonomyIsMarine sourceAuthority is unable to assert the marine or non-marine status of a taxon, the biome (either "marine or "nonmarine") to assume, with the default being "noassumption".</rdfs:comment>
-     <skos:definition xml:lang="en">Used when a bdqval:taxonomyIsMarine sourceAuthority is unable to assert the marine or non-marine status of a taxon, the biome (either "marine or "nonmarine") to assume, with the default being "noassumption".</skos:definition>
+     <rdfs:comment xml:lang="en">Used when a bdqval:taxonomyIsMarine sourceAuthority is unable to assert the marine or non-marine status of a taxon, the biome (either "marine" or "nonmarine") to assume, with the default being "noassumption".</rdfs:comment>
+     <skos:definition xml:lang="en">Used when a bdqval:taxonomyIsMarine sourceAuthority is unable to assert the marine or non-marine status of a taxon, the biome (either "marine" or "nonmarine") to assume, with the default being "noassumption".</skos:definition>
      <rdf:value>assumptionOnUnknownBiome</rdf:value>
      <skos:inScheme rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
-     <rdf:type rdf:resource="bdqffdq:Parameter, owl:NamedIndividual"/>
+     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Parameter"/>
+     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
      <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqval/terms/assumptionOnUnknownBiome"/>
 </rdf:Description>
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqval/terms/version/Biotic-Relationships-2026-04-22">
@@ -120,7 +123,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <skos:definition xml:lang="en">Research uses forming a bdqffdq:UseCase for relationships between dwc:Organisms 1) where the bdqffdq:InformationElements concern what dwc:Organisms have a relationship and 2) that are used for analysis of the relationship of one dwc:Organism to another (see examples in: Poelen JH, Simons JD, Mungall CJ. (2014). Global Biotic Interactions: An open infrastructure to share and analyze species-interaction datasets. Ecological Informatics, 24, 148–159. https://doi.org/10.1016/j.ecoinf.2014.08.005). </skos:definition>
      <rdf:value>Biotic-Relationships</rdf:value>
      <skos:inScheme rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
-     <rdf:type rdf:resource="bdqffdq:UseCase"/>
+     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/UseCase"/>
      <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqval/terms/Biotic-Relationships"/>
      <bdqffdq:hasFitnessRequirements rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data are fit for the Use Case bdqval:Biotic-Relationships when occurrence records support consistent interpretation of biotic relationship evidenced by providing a resolvable taxonomic identification, minimally usable spatial and temporal context, and key controlled descriptors that are present and standardizable (e.g., record type, occurrence status, establishment context, pathway, type status).  <ul><li>Organism identity is usable: Taxon and scientific name terms are present and sufficiently resolvable, are internally consistent, and where possible are consistent with an appropriate source authority to support relationship interpretation and grouping.  </li><li>Occurrence semantics are usable: Key status/occurrence terms (e.g., dwc:occurrenceStatus) are present, and valid and standardizable so records are comparable.  </li><li>Location and time are usable: Spatial terms (coordinates and supporting metadata) and temporal terms (e.g., dwc:eventDate and related date terms) are present, valid, and internally consistent so records are comparable, and support consistent interpretation, and downstream use.  </li><li> </li><li>Supporting descriptors are usable: Core typing/descriptor terms (e.g., dwc:basisOfRecord, dc:type) are present, valid/ and standardizable so as to support consistent interpretation across sources.  </li></ul> </bdqffdq:hasFitnessRequirements>
 </rdf:Description>
@@ -136,7 +139,8 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <skos:definition xml:lang="en">Optionally establishes the default dwc:geodeticDatum in a bdqval:ParameterizedTest. A default dwc:geodeticDatum is supplied in cases where a bdqval:Parameter is not set at the time the Test is run.</skos:definition>
      <rdf:value>defaultGeodeticDatum</rdf:value>
      <skos:inScheme rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
-     <rdf:type rdf:resource="bdqffdq:Parameter, owl:NamedIndividual"/>
+     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Parameter"/>
+     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
      <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqval/terms/defaultGeodeticDatum"/>
 </rdf:Description>
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqval/terms/version/DefaultSourceAuthority-2026-04-22">
@@ -151,7 +155,8 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <skos:definition xml:lang="en">A provided default bdqval:sourceAuthority that is used when a required bdqval:Parameter specifying a bdqval:sourceAuthority has not been provided at the time the Test is run.</skos:definition>
      <rdf:value>DefaultSourceAuthority</rdf:value>
      <skos:inScheme rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
-     <rdf:type rdf:resource="bdqffdq:Parameter, owl:NamedIndividual"/>
+     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Parameter"/>
+     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
      <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqval/terms/DefaultSourceAuthority"/>
 </rdf:Description>
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqval/terms/version/defaultValue-2026-04-22">
@@ -166,7 +171,8 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <skos:definition xml:lang="en">A preselected value (e.g., year, elevation) to be used where a required bdqval:Parameter value has not been provided at the time the Test is run.</skos:definition>
      <rdf:value>defaultValue</rdf:value>
      <skos:inScheme rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
-     <rdf:type rdf:resource="bdqffdq:Parameter, owl:NamedIndividual"/>
+     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Parameter"/>
+     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
      <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqval/terms/defaultValue"/>
 </rdf:Description>
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqval/terms/version/earliestValidDate-2026-04-22">
@@ -181,7 +187,8 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <skos:definition xml:lang="en">Optionally establishes the earliest date in a bdqval:ParameterizedTest. A default date is supplied in cases where a bdqval:Parameter is not set at the time the Test is run.</skos:definition>
      <rdf:value>earliestValidDate</rdf:value>
      <skos:inScheme rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
-     <rdf:type rdf:resource="bdqffdq:Parameter, owl:NamedIndividual"/>
+     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Parameter"/>
+     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
      <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqval/terms/earliestValidDate"/>
 </rdf:Description>
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqval/terms/version/Empty-2026-04-22">
@@ -211,7 +218,8 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <skos:definition xml:lang="en">A bdqval:sourceAuthority consisting of polygons that have been derived from a union of Natural Earth vectors for Land and for Minor Islands at 1:10,000,000 resolution.</skos:definition>
      <rdf:value>geospatialLand</rdf:value>
      <skos:inScheme rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
-     <rdf:type rdf:resource="bdqffdq:Parameter, owl:NamedIndividual"/>
+     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Parameter"/>
+     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
      <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqval/terms/geospatialLand"/>
 </rdf:Description>
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqval/terms/version/includeEventDate-2026-04-22">
@@ -226,7 +234,8 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <skos:definition xml:lang="en">Allows dwc:eventDate to be excluded in a bdqval:ParameterizedTest. The default is to include the dwc:eventDate in the Test, but it may be excluded to allow a dwc:dateIdentified to be prior to the dwc:eventDate.</skos:definition>
      <rdf:value>includeEventDate</rdf:value>
      <skos:inScheme rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
-     <rdf:type rdf:resource="bdqffdq:Parameter, owl:NamedIndividual"/>
+     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Parameter"/>
+     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
      <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqval/terms/includeEventDate"/>
 </rdf:Description>
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqval/terms/version/latestValidDate-2026-04-22">
@@ -241,7 +250,8 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <skos:definition xml:lang="en">Optionally establishes the latest date in a bdqval:ParameterizedTest. A default date is supplied in cases where a bdqval:Parameter is not set at the time the Test is run.</skos:definition>
      <rdf:value>latestValidDate</rdf:value>
      <skos:inScheme rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
-     <rdf:type rdf:resource="bdqffdq:Parameter, owl:NamedIndividual"/>
+     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Parameter"/>
+     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
      <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqval/terms/latestValidDate"/>
 </rdf:Description>
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqval/terms/version/maximumValidDepthInMeters-2026-04-22">
@@ -256,7 +266,8 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <skos:definition xml:lang="en">Optionally establishes the maximum depth in a bdqval:ParameterizedTest. A default depth is supplied in cases where a bdqval:Parameter is not set at the time the Test is run.</skos:definition>
      <rdf:value>maximumValidDepthInMeters</rdf:value>
      <skos:inScheme rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
-     <rdf:type rdf:resource="bdqffdq:Parameter, owl:NamedIndividual"/>
+     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Parameter"/>
+     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
      <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqval/terms/maximumValidDepthInMeters"/>
 </rdf:Description>
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqval/terms/version/maximumValidElevationInMeters-2026-04-22">
@@ -271,7 +282,8 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <skos:definition xml:lang="en">Optionally establishes the highest elevation in a bdqval:ParameterizedTest. A default elevation is supplied in cases where a bdqval:Parameter is not set at the time the Test is run.</skos:definition>
      <rdf:value>maximumValidElevationInMeters</rdf:value>
      <skos:inScheme rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
-     <rdf:type rdf:resource="bdqffdq:Parameter, owl:NamedIndividual"/>
+     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Parameter"/>
+     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
      <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqval/terms/maximumValidElevationInMeters"/>
 </rdf:Description>
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqval/terms/version/minimumValidDepthInMeters-2026-04-22">
@@ -286,7 +298,8 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <skos:definition xml:lang="en">Optionally establishes the minimum depth in a bdqval:ParameterizedTest. A default depth is supplied in cases where a bdqval:Parameter is not set at the time the Test is run.</skos:definition>
      <rdf:value>minimumValidDepthInMeters</rdf:value>
      <skos:inScheme rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
-     <rdf:type rdf:resource="bdqffdq:Parameter, owl:NamedIndividual"/>
+     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Parameter"/>
+     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
      <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqval/terms/minimumValidDepthInMeters"/>
 </rdf:Description>
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqval/terms/version/minimumValidElevationInMeters-2026-04-22">
@@ -301,7 +314,8 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <skos:definition xml:lang="en">Optionally establishes the lowest elevation in a bdqval:ParameterizedTest. A default elevation is supplied in cases where a bdqval:Parameter is not set at the time the Test is run.</skos:definition>
      <rdf:value>minimumValidElevationInMeters</rdf:value>
      <skos:inScheme rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
-     <rdf:type rdf:resource="bdqffdq:Parameter, owl:NamedIndividual"/>
+     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Parameter"/>
+     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
      <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqval/terms/minimumValidElevationInMeters"/>
 </rdf:Description>
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqval/terms/version/NotEmpty-2026-04-22">
@@ -331,7 +345,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <skos:definition xml:lang="en">A bdqffdq:UseCase that documents the management of the quality of biodiversity data records, for example, where an agency wishes to do broad data quality checks across the whole of their database for checking for data errors, and for data cleaning (see examples in Rees ER and Nicholls M (2020) Data Quality Use Case Study Results. Biodiversity Information Science and Standards 4: e50889, suppl. 2. https://doi.org/10.3897/biss.4.50889.suppl2). </skos:definition>
      <rdf:value>Record-Management</rdf:value>
      <skos:inScheme rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
-     <rdf:type rdf:resource="bdqffdq:UseCase"/>
+     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/UseCase"/>
      <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqval/terms/Record-Management"/>
      <bdqffdq:hasFitnessRequirements rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data are fit for the Use Case bdqval:Record-Management when occurrence records can be reliably managed and curated: Core taxon identifiers and descriptors are present, values are valid and standardizable, spatial and temporal fields are usable and internally consistent, and potential data transformations or special conditions are detectable so records can be prioritized for remediation and maintained with clear semantics.  <ul><li>Core record content is usable: Key fields (e.g., identifiers, dwc:basisOfRecord, dc:type, and other essential descriptors) are present, valid and standardizable for consistent management workflows.  </li><li>Location and time are usable: Spatial terms (coordinates and supporting metadata) and temporal terms (e.g., dwc:eventDate and related date parts) are present, valid, and internally consistent enough to support curation, reporting, and downstream use.  </li><li>Taxon content is manageable: Taxon terms are sufficiently resolvable and consistent to support curation and management tasks (including standardization where applicable).  </li><li>Review triggers are detectable: Reports of generalization and transformations or other potential issues (e.g., generalizations and other warning-type fields) are available so curators can decide how to handle records for management purposes.  </li></ul> </bdqffdq:hasFitnessRequirements>
 </rdf:Description>
@@ -347,7 +361,8 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <skos:definition xml:lang="en">An authority using the "bdq" namespace that provides a reference for values required for a Test evaluation. Where the Test is a bdqval:ParameterizedTest a bdqval:defaultSourceAuthority ("bdqval:sourceAuthority default = xxx") is specified.</skos:definition>
      <rdf:value>sourceAuthority</rdf:value>
      <skos:inScheme rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
-     <rdf:type rdf:resource="bdqffdq:Parameter, owl:NamedIndividual"/>
+     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Parameter"/>
+     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
      <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqval/terms/sourceAuthority"/>
 </rdf:Description>
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqval/terms/version/Spatial-Temporal_Patterns-2026-04-22">
@@ -362,7 +377,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <skos:definition xml:lang="en">Research uses forming a bdqffdq:UseCase for dwc:Occurrence data 1) where the Information Elements concern what dwc:Organism occurred where and when and 2) that are used for analysis of spatial and/or temporal patterns of biodiversity or for use in species distribution / niche modeling, etc. (see examples in Rees ER and Nicholls M (2020) Data Quality Use Case Study Results. Biodiversity Information Science and Standards 4: e50889, suppl. 2. https://doi.org/10.3897/biss.4.50889.suppl2). </skos:definition>
      <rdf:value>Spatial-Temporal_Patterns</rdf:value>
      <skos:inScheme rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
-     <rdf:type rdf:resource="bdqffdq:UseCase"/>
+     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/UseCase"/>
      <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqval/terms/Spatial-Temporal_Patterns"/>
      <bdqffdq:hasFitnessRequirements rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data are fit for the Use Case bdqval:Spatial-Temporal_Patterns when occurrence records can be reliably interpreted as organism occurrences in space and time: the organism identity is usable, the location is usable (with adequate precision and metadata), textual geography data is consistent with the coordinates, the event date is usable and internally consistent, and any generalization (spatial or temporal) is detectable so users can decide whether the record is fit at the intended analysis scale. <ul><li>Organism identity is usable: Taxon and scientific name terms (e.g., dwc:scientificName and related taxon terms) are present and sufficiently resolvable and consistent to support analyses of spatio-temporal patterns of organisms.  </li><li>Location is usable and interpretable (including precision and metadata): Coordinates are present, are in-range, and are accompanied by adequate spatial metadata (e.g., uncertainty and spatial reference such as datum); obvious artifact coordinates (e.g., zeros) are detectable.  </li><li>Textual geography is coherent with coordinates: Textual geography fields (e.g., dwc:countryCode, dwc:country, dwc:stateProvince) are valid and standardizable and consistent with the coordinates.  </li><li>Date is usable and internally consistent: dwc:eventDate is present, valid, in standard form and consistent with other temporal terms (e.g. dwc:year) terms when those are provided. Generalization and low precision are detectable: Any indication that the record has been generalized (via dwc:dataGeneralizations) is available along with coordinate uncertainty, broad and interval event dates, and taxonomic rank so that users can judge whether records are fit for the intended spatial and temporal resolution.  </li></ul></bdqffdq:hasFitnessRequirements>
 </rdf:Description>
@@ -378,7 +393,8 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <skos:definition xml:lang="en">A buffer, in meters, from a polygon (geopolitical boundary, coastline, etc.).</skos:definition>
      <rdf:value>spatialBufferInMeters</rdf:value>
      <skos:inScheme rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
-     <rdf:type rdf:resource="bdqffdq:Parameter, owl:NamedIndividual"/>
+     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Parameter"/>
+     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
      <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqval/terms/spatialBufferInMeters"/>
 </rdf:Description>
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqval/terms/version/Taxon-Management-2026-04-22">
@@ -393,7 +409,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <skos:definition xml:lang="en">A bdqffdq:UseCase that documents the management of the quality of taxonomic names and associated information such as rank, authority, Type status, etc. (see examples in Rees ER and Nicholls M (2020) Data Quality Use Case Study Results Biodiversity Information Science and Standards 4: e50889, suppl. 2. https://doi.org/10.3897/biss.4.50889.suppl2).</skos:definition>
      <rdf:value>Taxon-Management</rdf:value>
      <skos:inScheme rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
-     <rdf:type rdf:resource="bdqffdq:UseCase"/>
+     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/UseCase"/>
      <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqval/terms/Taxon-Management"/>
      <bdqffdq:hasFitnessRequirements rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data are fit for the Use Case bdqval:Taxon-Management when occurrence records support taxon curation: Taxon terms are sufficient to resolve the organism (or flag ambiguity), core name and rank terms (e.g., dwc:scientificName, dwc:taxonRank) are present and align with an appropriate bdqval:sourceAuthority, name strings are consistent with atomized name fields and identifiers or authorship, identification dates are valid and plausible, and key contextual metadata (e.g., dwc:basisOfRecord, and controlled fields such as dwc:typeStatus and dwc:sex where relevant) are usable.  <ul><li>Taxon can be resolved: Taxon terms are present and sufficient to support unambiguous resolution when possible.  </li><li>Names and ranks are authoritative: dwc:scientificName and required rank and classification terms are present, standardizable, and consistent with the bdqval:sourceAuthority.  </li><li>Name fields are consistent: dwc:scientificName agrees with atomized name fields; authorship is provided where needed.  </li><li>Identifiers are usable: Identifiers (e.g., dwc:scientificNameID) are present when available and correctly formed; dwc:taxonRank is present and valid.  </li><li>Identification timing is usable: dwc:dateIdentified is present when needed, ISO-valid, and temporally plausible (and consistent with dwc:eventDate when provided).  </li><li>Supporting context is usable: dwc:basisOfRecord and other relevant controlled and context fields are present and valid; basic space/time fields are in standard form where used to support curation decisions. </li></ul></bdqffdq:hasFitnessRequirements>
 </rdf:Description>
@@ -409,7 +425,8 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <skos:definition xml:lang="en">A bdqval:sourceAuthority that uses dwc:scientificName to determine the "marine" or "non-marine" status of a dwc:Taxon using the "Environment" term obtained from the World Register of Marine Species (WORMS) database.</skos:definition>
      <rdf:value>taxonIsMarine</rdf:value>
      <skos:inScheme rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
-     <rdf:type rdf:resource="bdqffdq:Parameter, owl:NamedIndividual"/>
+     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Parameter"/>
+     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
      <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqval/terms/taxonIsMarine"/>
 </rdf:Description>
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqval/terms/">

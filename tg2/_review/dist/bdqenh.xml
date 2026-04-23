@@ -29,7 +29,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <skos:definition xml:lang="en">Data could be improved by setting an empty value to a default value.</skos:definition>
      <rdf:value>AssumedDefault</rdf:value>
      <skos:inScheme rdf:resource="https://rs.tdwg.org/bdqenh/terms/"/>
-     <rdf:type rdf:resource="bdqffdq:Enhancement"/>
+     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Enhancement"/>
      <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqenh/terms/AssumedDefault"/>
 </rdf:Description>
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqenh/terms/Converted-2024-09-30">
@@ -44,7 +44,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <skos:definition xml:lang="en">Data could be improved by converting from one representation to another.</skos:definition>
      <rdf:value>Converted</rdf:value>
      <skos:inScheme rdf:resource="https://rs.tdwg.org/bdqenh/terms/"/>
-     <rdf:type rdf:resource="bdqffdq:Enhancement"/>
+     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Enhancement"/>
      <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqenh/terms/Converted"/>
 </rdf:Description>
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqenh/terms/FilledInFrom-2024-09-30">
@@ -59,7 +59,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <skos:definition xml:lang="en">Data could be improved by using one data value to fill in the empty value in another.</skos:definition>
      <rdf:value>FilledInFrom</rdf:value>
      <skos:inScheme rdf:resource="https://rs.tdwg.org/bdqenh/terms/"/>
-     <rdf:type rdf:resource="bdqffdq:Enhancement"/>
+     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Enhancement"/>
      <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqenh/terms/FilledInFrom"/>
 </rdf:Description>
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqenh/terms/Standardized-2024-09-30">
@@ -74,7 +74,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <skos:definition xml:lang="en">Data could be improved by conforming them to a standard representation.</skos:definition>
      <rdf:value>Standardized</rdf:value>
      <skos:inScheme rdf:resource="https://rs.tdwg.org/bdqenh/terms/"/>
-     <rdf:type rdf:resource="bdqffdq:Enhancement"/>
+     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Enhancement"/>
      <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqenh/terms/Standardized"/>
 </rdf:Description>
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqenh/terms/Transposed-2024-09-30">
@@ -89,7 +89,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <skos:definition xml:lang="en">Data could be improved by switching values between two or more fields.</skos:definition>
      <rdf:value>Transposed</rdf:value>
      <skos:inScheme rdf:resource="https://rs.tdwg.org/bdqenh/terms/"/>
-     <rdf:type rdf:resource="bdqffdq:Enhancement"/>
+     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Enhancement"/>
      <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqenh/terms/Transposed"/>
 </rdf:Description>
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqenh/terms/">

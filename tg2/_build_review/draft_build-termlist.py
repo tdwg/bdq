@@ -380,26 +380,59 @@ for term in termLists:
     ## PJM: Decisions won't apply for draft standards.
     # decisions_df = pd.read_csv('https://raw.githubusercontent.com/tdwg/rs.tdwg.org/master/decisions/decisions-links.csv', na_filter=False)
 
-    # PJM: TODO: Write xml
+    # PJM: Write xml
+    # --- Namespace / prefix configuration (single source of truth) ---
+    # Keep these as a list of tuples to preserve a stable output order in RDF/XML.
+    # (You can use dict insertion order in Python 3.7+, but a list is explicit.)
+    XMLNS = [
+        ("rdf", "http://www.w3.org/1999/02/22-rdf-syntax-ns#"),
+        ("rdfs", "http://www.w3.org/2000/01/rdf-schema#"),
+        ("xsd", "http://www.w3.org/2001/XMLSchema#"),
+        ("owl", "http://www.w3.org/2002/07/owl#"),
+        ("dc", "http://purl.org/dc/elements/1.1/"),
+        ("bdqval", "https://rs.tdwg.org/bdqval/terms/"),
+        ("bdqdim", "https://rs.tdwg.org/bdqdim/terms/"),
+        ("bdqenh", "https://rs.tdwg.org/bdqenh/terms/"),
+        ("bdqcrit", "https://rs.tdwg.org/bdqcrit/terms/"),
+        ("bdqtest", "https://rs.tdwg.org/bdqtest/terms/"),
+        ("bdqffdq", "https://rs.tdwg.org/bdqffdq/terms/"),
+        ("dcterms", "http://purl.org/dc/terms/"),
+        ("dwc", "http://rs.tdwg.org/dwc/terms/"),
+        ("skos", "http://www.w3.org/2004/02/skos/core#"),
+        ("tdwgutility", "http://rs.tdwg.org/dwc/terms/attributes/"),
+        ("foaf", "http://xmlns.com/foaf/0.1/"),
+        ("dwciri", "http://rs.tdwg.org/dwc/iri/"),
+    ]
+    
+    # Convenience lookup for CURIE expansion.
+    NS_BY_PREFIX = {p: ns for (p, ns) in XMLNS}
+    
+    def expand_curie(value: str) -> str:
+        """
+        Expand a CURIE like 'owl:NamedIndividual' into a full IRI using NS_BY_PREFIX.
+        If the value already looks like a full IRI (http(s):// or urn:), return unchanged.
+        If it's not a CURIE and not a full IRI, return unchanged (so we don't accidentally
+        corrupt non-IRI strings).
+        """
+        if value is None:
+            return ""
+        v = value.strip()
+        if not v:
+            return v
+        if v.startswith("http://") or v.startswith("https://") or v.startswith("urn:"):
+            return v
+        if ":" in v:
+            prefix, local = v.split(":", 1)
+            if prefix in NS_BY_PREFIX:
+                return NS_BY_PREFIX[prefix] + local
+        return v
+    
+    # --- Build RDF/XML header using the namespace structure ---
     outputRdfHeader = "<rdf:RDF\n"
-    outputRdfHeader += 'xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"\n'
-    outputRdfHeader += 'xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"\n'
-    outputRdfHeader += 'xmlns:xsd="http://www.w3.org/2001/XMLSchema#"\n'
-    outputRdfHeader += 'xmlns:owl="http://www.w3.org/2002/07/owl#"\n'
-    outputRdfHeader += 'xmlns:dc="http://purl.org/dc/elements/1.1/"\n'
-    outputRdfHeader += 'xmlns:bdqval="https://rs.tdwg.org/bdqval/terms/"\n'
-    outputRdfHeader += 'xmlns:bdqdim="https://rs.tdwg.org/bdqdim/terms/"\n'
-    outputRdfHeader += 'xmlns:bdqenh="https://rs.tdwg.org/bdqenh/terms/"\n'
-    outputRdfHeader += 'xmlns:bdqcrit="https://rs.tdwg.org/bdqcrit/terms/"\n'
-    outputRdfHeader += 'xmlns:bdqtest="https://rs.tdwg.org/bdqtest/terms/"\n'
-    outputRdfHeader += 'xmlns:bdqffdq="https://rs.tdwg.org/bdqffdq/terms/"\n'
-    outputRdfHeader += 'xmlns:dcterms="http://purl.org/dc/terms/"\n'
-    outputRdfHeader += 'xmlns:dwc="http://rs.tdwg.org/dwc/terms/"\n'
-    outputRdfHeader += 'xmlns:skos="http://www.w3.org/2004/02/skos/core#"\n'
-    outputRdfHeader += 'xmlns:tdwgutility="http://rs.tdwg.org/dwc/terms/attributes/"\n'
-    outputRdfHeader += 'xmlns:foaf="http://xmlns.com/foaf/0.1/"\n'
-    outputRdfHeader += 'xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"\n'
+    for prefix, iri in XMLNS:
+        outputRdfHeader += f'xmlns:{prefix}="{iri}"\n'
     outputRdfHeader += ">\n"
+
     #
     outputRdf = ""
     #
@@ -467,7 +500,17 @@ for term in termLists:
             outputRdf += '     <skos:definition xml:lang="en">{}</skos:definition>\n'.format(row['definition'])
             outputRdf += '     <rdf:value>{}</rdf:value>\n'.format(row['term_localName'])
             outputRdf += '     <skos:inScheme rdf:resource="https://rs.tdwg.org/{}/terms/"/>\n'.format(term)
-            outputRdf += '     <rdf:type rdf:resource="{}"/>\n'.format(row['rdf_type'])
+            # row['rdf_type'] may be a single value like:
+            #   "bdqffdq:UseCase"
+            # or a comma-separated list like:
+            #   "bdqffdq:Parameter, owl:NamedIndividual"
+            #
+            # Emit one <rdf:type .../> element per type.
+            rdf_types_raw = (row.get('rdf_type') or "").strip()
+            if rdf_types_raw:
+                for rdf_type in [t.strip() for t in rdf_types_raw.split(",") if t.strip()]:
+                    rdf_type_expanded = expand_curie(rdf_type)
+                    outputRdf += '     <rdf:type rdf:resource="{}"/>\n'.format(rdf_type_expanded)
             outputRdf += '     <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/{}/terms/{}"/>\n'.format(term,row['term_localName'])
             if term == "bdqval" :
                 if row['hasFitnessRequirements'] and row['hasFitnessRequirements'] != '' :

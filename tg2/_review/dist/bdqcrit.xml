@@ -29,7 +29,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <skos:definition xml:lang="en">Data are present and sufficiently comprehensive for use.</skos:definition>
      <rdf:value>Complete</rdf:value>
      <skos:inScheme rdf:resource="https://rs.tdwg.org/bdqcrit/terms/"/>
-     <rdf:type rdf:resource="bdqffdq:Criterion"/>
+     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Criterion"/>
      <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcrit/terms/Complete"/>
 </rdf:Description>
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqcrit/terms/Consistent-2024-09-30">
@@ -44,7 +44,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <skos:definition xml:lang="en">Data are internally consistent and consistent with any authorities consulted. </skos:definition>
      <rdf:value>Consistent</rdf:value>
      <skos:inScheme rdf:resource="https://rs.tdwg.org/bdqcrit/terms/"/>
-     <rdf:type rdf:resource="bdqffdq:Criterion"/>
+     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Criterion"/>
      <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcrit/terms/Consistent"/>
 </rdf:Description>
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqcrit/terms/Found-2024-09-30">
@@ -59,7 +59,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <skos:definition xml:lang="en">Data conform to the values in an authority.</skos:definition>
      <rdf:value>Found</rdf:value>
      <skos:inScheme rdf:resource="https://rs.tdwg.org/bdqcrit/terms/"/>
-     <rdf:type rdf:resource="bdqffdq:Criterion"/>
+     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Criterion"/>
      <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcrit/terms/Found"/>
 </rdf:Description>
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqcrit/terms/InRange-2024-09-30">
@@ -74,7 +74,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <skos:definition xml:lang="en">Data conform to an expected range of values.</skos:definition>
      <rdf:value>InRange</rdf:value>
      <skos:inScheme rdf:resource="https://rs.tdwg.org/bdqcrit/terms/"/>
-     <rdf:type rdf:resource="bdqffdq:Criterion"/>
+     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Criterion"/>
      <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcrit/terms/InRange"/>
 </rdf:Description>
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqcrit/terms/Likely-2024-09-30">
@@ -89,7 +89,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <skos:definition xml:lang="en">Data are likely to be true or expected values.</skos:definition>
      <rdf:value>Likely</rdf:value>
      <skos:inScheme rdf:resource="https://rs.tdwg.org/bdqcrit/terms/"/>
-     <rdf:type rdf:resource="bdqffdq:Criterion"/>
+     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Criterion"/>
      <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcrit/terms/Likely"/>
 </rdf:Description>
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqcrit/terms/NotEmpty-2024-09-30">
@@ -104,7 +104,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <skos:definition xml:lang="en">Some data value is present.</skos:definition>
      <rdf:value>NotEmpty</rdf:value>
      <skos:inScheme rdf:resource="https://rs.tdwg.org/bdqcrit/terms/"/>
-     <rdf:type rdf:resource="bdqffdq:Criterion"/>
+     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Criterion"/>
      <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcrit/terms/NotEmpty"/>
 </rdf:Description>
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqcrit/terms/Standard-2024-09-30">
@@ -119,7 +119,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <skos:definition xml:lang="en">Data conform to a format, syntax, data type, or standard.</skos:definition>
      <rdf:value>Standard</rdf:value>
      <skos:inScheme rdf:resource="https://rs.tdwg.org/bdqcrit/terms/"/>
-     <rdf:type rdf:resource="bdqffdq:Criterion"/>
+     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Criterion"/>
      <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcrit/terms/Standard"/>
 </rdf:Description>
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqcrit/terms/Unambiguous-2024-09-30">
@@ -134,7 +134,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <skos:definition xml:lang="en">Data adequately identify a unique entity.</skos:definition>
      <rdf:value>Unambiguous</rdf:value>
      <skos:inScheme rdf:resource="https://rs.tdwg.org/bdqcrit/terms/"/>
-     <rdf:type rdf:resource="bdqffdq:Criterion"/>
+     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Criterion"/>
      <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcrit/terms/Unambiguous"/>
 </rdf:Description>
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqcrit/terms/">

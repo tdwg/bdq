@@ -479,7 +479,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>Used when a bdqval:taxonomyIsMarine sourceAuthority is unable to assert the marine or non-marine status of a taxon, the biome (either "marine or "nonmarine") to assume, with the default being "noassumption".</td>
+			<td>Used when a bdqval:taxonomyIsMarine sourceAuthority is unable to assert the marine or non-marine status of a taxon, the biome (either "marine" or "nonmarine") to assume, with the default being "noassumption".</td>
 		</tr>
 		<tr>
 			<td>Comments</td>

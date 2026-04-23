@@ -715,7 +715,7 @@ The `bdqffdq:producesResponse` object property SHOULD have an instance of a subc
 
 Each instance of a `bdqffdq:Implementation` MAY have zero to many `bdqffdq:producesResponse` object properties.
 
-Each instance of a `bdqffdq:Asssertion` SHOULD be the object of exactly one `bdqffdq:producesResponse` object property. 
+Each instance of a `bdqffdq:Response` SHOULD be the object of exactly one `bdqffdq:producesResponse` object property. 
 
 #### 3.2 Identifying the Test that produced a Response (normative)
 

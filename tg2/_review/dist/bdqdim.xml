@@ -29,7 +29,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <skos:definition xml:lang="en">The extent to which data in a bdqffdq:InformationElement are present and sufficiently comprehensive for use.</skos:definition>
      <rdf:value>Completeness</rdf:value>
      <skos:inScheme rdf:resource="https://rs.tdwg.org/bdqdim/terms/"/>
-     <rdf:type rdf:resource="bdqffdq:DataQualityDimension"/>
+     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/DataQualityDimension"/>
      <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqdim/terms/Completeness"/>
 </rdf:Description>
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqdim/terms/version/Conformance-2024-09-30">
@@ -44,7 +44,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <skos:definition xml:lang="en">Where data in a bdqffdq:InformationElement conform to a format, syntax, data type, range, or standard.</skos:definition>
      <rdf:value>Conformance</rdf:value>
      <skos:inScheme rdf:resource="https://rs.tdwg.org/bdqdim/terms/"/>
-     <rdf:type rdf:resource="bdqffdq:DataQualityDimension"/>
+     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/DataQualityDimension"/>
      <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqdim/terms/Conformance"/>
 </rdf:Description>
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqdim/terms/version/Consistency-2024-09-30">
@@ -59,7 +59,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <skos:definition xml:lang="en">Agreement among related bdqffdq:InformationElements that are present in the data. Note that missing bdqffdq:InformationElements do not make a test inconsistent.</skos:definition>
      <rdf:value>Consistency</rdf:value>
      <skos:inScheme rdf:resource="https://rs.tdwg.org/bdqdim/terms/"/>
-     <rdf:type rdf:resource="bdqffdq:DataQualityDimension"/>
+     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/DataQualityDimension"/>
      <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqdim/terms/Consistency"/>
 </rdf:Description>
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqdim/terms/version/Likeliness-2024-09-30">
@@ -74,7 +74,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <skos:definition xml:lang="en">The likelihood of one or more Darwin Core Terms having a true or expected values.</skos:definition>
      <rdf:value>Likeliness</rdf:value>
      <skos:inScheme rdf:resource="https://rs.tdwg.org/bdqdim/terms/"/>
-     <rdf:type rdf:resource="bdqffdq:DataQualityDimension"/>
+     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/DataQualityDimension"/>
      <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqdim/terms/Likeliness"/>
 </rdf:Description>
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqdim/terms/version/Reliability-2024-09-30">
@@ -89,7 +89,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <skos:definition xml:lang="en">A measure of the degree to which data values agree with and describe an identified source of truth (object, event or any abstract or real 'thing').</skos:definition>
      <rdf:value>Reliability</rdf:value>
      <skos:inScheme rdf:resource="https://rs.tdwg.org/bdqdim/terms/"/>
-     <rdf:type rdf:resource="bdqffdq:DataQualityDimension"/>
+     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/DataQualityDimension"/>
      <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqdim/terms/Reliability"/>
 </rdf:Description>
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqdim/terms/version/Resolution-2024-09-30">
@@ -104,7 +104,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <skos:definition xml:lang="en">The extent to which the data have sufficiently detailed information. A measure of the granularity of the data, or the smallest measurable increment.</skos:definition>
      <rdf:value>Resolution</rdf:value>
      <skos:inScheme rdf:resource="https://rs.tdwg.org/bdqdim/terms/"/>
-     <rdf:type rdf:resource="bdqffdq:DataQualityDimension"/>
+     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/DataQualityDimension"/>
      <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqdim/terms/Resolution"/>
 </rdf:Description>
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqdim/terms/">
