@@ -105,7 +105,7 @@ This guide explains the conceptual and operational structure of the Tests, their
 
 This guide is intended for biodiversity data users, curators, and quality assurance professionals who are responsible for evaluating the usability and reliability of biodiversity datasets. It is especially relevant for:
 
-- Data providers, curators, and aggregator staff seeking to understand test results and improve data quality
+- Data providers, curators, and aggregator staff seeking to understand Test results and improve data quality
 - Researchers assessing dataset suitability for specific projects or analyses
 - Data standards developers aiming to understand how the BDQ standard supports fitness-for-use evaluations
 - Anyone interpreting or configuring BDQ Tests, but not necessarily implementing them in software.
@@ -155,9 +155,9 @@ In any technical treatment of the BDQ standard, a precise reference to a class o
 
 Data do not have quality in the abstract; they only have quality with respect to a particular use. The Fitness for Use Framework (see [Fitness For Use Framework Ontology Guide](../bdqffdq/index.md)) in the BDQ standard describes uses for data as `Use Cases`.
 
-A set of `Tests` appropriate to a`Use Case` is run on a set of data and a `Data Quality Report` is produced. Both the Tests and the associated report should be interpreted in the context of that `Use Case`.
+A set of Tests appropriate to a`Use Case` is run on a set of data and a `Data Quality Report` is produced. Both the Tests and the associated report should be interpreted in the context of that `Use Case`.
 
-More formally, Tests are run in suites that form `Policy` for data quality with respect to `Use Cases`.   More importantly, sets of Tests are expected to be run together in order to assess the quality of data for some specified use, and both Tests and the reports of their results should be interpreted in the context of that specified use.  Just as data do not have quality in the abstract, the results of a test on some data have meaning only in the context of a particular use.
+More formally, Tests are run in suites that form `Policy` for data quality with respect to `Use Cases`.   More importantly, sets of Tests are expected to be run together in order to assess the quality of data for some specified use, and both Tests and the reports of their results should be interpreted in the context of that specified use.  Just as data do not have quality in the abstract, the results of a Test on some data have meaning only in the context of a particular use.
 
 More broadly, the concept of fitness for purpose refers to whether data are adequate to support a given goal or objective beyond the immediate use — such as policy formulation, scientific modeling, or legal compliance. Achieving fitness for purpose may involve additional considerations such as provenance, trustworthiness, and completeness, and it is possible to frame additional Tests to assess these `Dimensions` of data quality.
 
@@ -167,7 +167,7 @@ Tests for data quality may serve two purposes: Quality Control and Quality Assur
 
 - In Quality Assurance (QA), data are evaluated for fitness for use and are filtered down to just those data that are fit for that use.
 
-- In Quality Control (QC), Tests are used to identify data that are not fit for particular uses, with the goal of improving the data quality, and the tests may propose changes to improve the quality of the data.
+- In Quality Control (QC), Tests are used to identify data that are not fit for particular uses, with the goal of improving the data quality, and the Tests may propose changes to improve the quality of the data.
 
 The success of `Quality Assurance` and `Quality Control` depends on organisational context and resources. These include establishing clear validation, monitoring, and feedback procedures to maintain high quality data, and encouraging collaboration among data custodians, analysts, and end-users to ensure data quality aligns with practical needs and supports reliable decisions. It also requires developing formal methodologies to understand and process the Test outputs in the `Data Quality Reports`.
 
@@ -242,21 +242,21 @@ The specifications for the structure of a response from running a Test can be fo
 
 ##### 3.2.3.1 Shorthand for Responses from Tests (non-normative) 
 
-A `Data Quality Report` from a BDQ `Test` is expected to include a `Response` for each `Test` run.   
+A `Data Quality Report` from a BDQ Test is expected to include a `Response` for each Test run.   
 
 We use a shorthand to describe a collection of formal Fitness for Use Framework concepts: an instance of a subtype of `bdqffdq:Response` produced by running a Test, which carries a response status, result, comment and optional qualifier via the `bdqffdq:hasResponseStatus`, `bdqffdq:hasResponseResult`/`bdqffdq:hasResponseResultValue`, `bdqffdq:hasResponseComment`, and `bdqffdq:hasResponseQualifier` properties.
 
 In this shorthand, each `Response` consists of the following elements:
 
-* __`Response.status`__ - Metadata describing the status of the `Test` run, including whether the `Test` was executed successfully.  Values include `RUN_HAS_RESULT`, `INTERNAL_PREREQUISITES_NOT_MET` and `EXTERNAL_PREREQUISITES_NOT_MET`.
-* __`Response.result`__ - The result of the evaluation of the `Test` against the input data.  Values include "COMPLIANT", "NOT_COMPLIANT", "COMPLETE", "NOT_COMPLETE", or data values (such as numeric measurement values), depending on the type of `Test`.
-* __`Response.comment`__ - A human-readable comment providing additional context or information to assist users in the interpretation of the `Test` result.
+* __`Response.status`__ - Metadata describing the status of the Test run, including whether the Test was executed successfully.  Values include `RUN_HAS_RESULT`, `INTERNAL_PREREQUISITES_NOT_MET` and `EXTERNAL_PREREQUISITES_NOT_MET`.
+* __`Response.result`__ - The result of the evaluation of the Test against the input data.  Values include "COMPLIANT", "NOT_COMPLIANT", "COMPLETE", "NOT_COMPLETE", or data values (such as numeric measurement values), depending on the type of Test.
+* __`Response.comment`__ - A human-readable comment providing additional context or information to assist users in the interpretation of the Test result.
 
 The presentation of a `Response` to users is not defined by the BDQ standard and will vary.
 
 ##### 3.2.3.2 Validation Test Reports (non-normative)
 
-As `Validation` tests compare the data against known standards or rules, the `Response.result` for a `Validation` Test is expected to be either "COMPLIANT" or "NOT_COMPLIANT". 
+As `Validation` Tests compare the data against known standards or rules, the `Response.result` for a `Validation` Test is expected to be either "COMPLIANT" or "NOT_COMPLIANT". 
 
 The Test `VALIDATION_DAY_INRANGE` checks if the value of `dwc:day` is interpretable as a valid integer between 1 and 28 inclusive, or if it is validly 29, 30 or 31 given the `dwc:month` and `dwc:year`.
 
@@ -274,13 +274,13 @@ Alternatively, if the input data has values `dwc:day`="30", `dwc:month`="2", `dw
 
 The content of Response.comment is not defined by the BDQ standard and may vary, so phrasing such as "There was no day 30 in February of 1952" is also acceptable.
 
-Another case is that the input data contain values that cannot be interpreted within the definition of the test, for example, where the input data has `dwc:day`="31", `dwc:month`="", `dwc:year`="1932"; a `Response` may specify that the test could not be evaluated because a prerequisite in the input data was not met, for example:
+Another case is that the input data contain values that cannot be interpreted within the definition of the Test, for example, where the input data has `dwc:day`="31", `dwc:month`="", `dwc:year`="1932"; a `Response` may specify that the Test could not be evaluated because a prerequisite in the input data was not met, for example:
 
 * `Response.status`=INTERNAL_PREREQUISITES_NOT_MET
 * `Response.result`=
 * `Response.comment`="The provided value of dwc:day [31] cannot be evaluated for compliance because the prerequisites of a valid dwc:month and dwc:year were not met for days between 29 and 31."
 
-A Response.status of INTERNAL_PREREQUISITES_NOT_MET indicates that the data themselves did not meet the prerequisites for the test to be evaluated, and thus the test could not be evaluated, and will always return this result with the same input data. In contrast, a Response.status of EXTERNAL_PREREQUISITES_NOT_MET indicates that the test could not be evaluated because some external resource (e.g., a source authority) was not available at the time the test was run, and running the test again at a different time might yield a different result.
+A Response.status of INTERNAL_PREREQUISITES_NOT_MET indicates that the data themselves did not meet the prerequisites for the Test to be evaluated, and thus the Test could not be evaluated, and will always return this result with the same input data. In contrast, a Response.status of EXTERNAL_PREREQUISITES_NOT_MET indicates that the Test could not be evaluated because some external resource (e.g., a source authority) was not available at the time the Test was run, and running the Test again at a different time might yield a different result.
 
 ##### 3.2.3.3 Issue Test Reports (non-normative)
 
@@ -303,7 +303,7 @@ Alternatively, if there is nothing in the `dwc:dataGeneralizations` field, i.e. 
 
 `Measure` Tests can be thought of as metrics. These Tests either return a numeric value (including counts), or assert that data evaluate as fit for some use (`COMPLETE`) or not fit for some use (`NOT_COMPLETE`). Almost all the `Measure` Tests defined in BDQ are `Multi Record` Tests that are powerful tools for formal support of `Quality Control` and `Quality Assurance` under the [Fitness for Use Framework Ontology](../../guide/bdqffdq/index.md).
 
-There is one `Single Record` `Measure` Test that provides a metric on a Darwin Core term in a `Single Record`, [MEASURE_EVENTDATE_DURATIONINSECONDS](../../terms/bdqtest/index.md#MEASURE_EVENTDATE_DURATIONINSECONDS).  This Test provides a measure of the duration in seconds of the `dwc:eventDate`.  This test is intended to allow consumers of data quality reports to quickly identify records where, for example, a collecting event is known to a precision of about a day or less, or about a year or less, or any arbitrary time range that may be of interest to a particular use. 
+There is one `Single Record` `Measure` Test that provides a metric on a Darwin Core term in a `Single Record`, [MEASURE_EVENTDATE_DURATIONINSECONDS](../../terms/bdqtest/index.md#MEASURE_EVENTDATE_DURATIONINSECONDS).  This Test provides a measure of the duration in seconds of the `dwc:eventDate`.  This Test is intended to allow consumers of data quality reports to quickly identify records where, for example, a collecting event is known to a precision of about a day or less, or about a year or less, or any arbitrary time range that may be of interest to a particular use. 
 
 For example, if the `dwc:eventDate` is "2020", the `Response` would be:
 
@@ -317,9 +317,9 @@ MEASURE_EVENTDATE_DURATIONINSECONDS is an exemplar of a `Single Record` `Measure
 
 ###### 3.2.3.4.1 Measures Counting Results on Other Tests (non-normative)
 
-There are a small set of `Measures` that count the results of other tests run on the same `SingleRecord`.  These `Single Record` `Measures` that take the output of other tests as their input are intended as informative and do not have a formal purpose in the Fitness for Use Framework.  One of these is the Test `MEASURE_AMENDMENTS_PROPOSED`, it provides a count of the number of Amendment Tests that proposed changes to that record.  
+There are a small set of `Measures` that count the results of other Tests run on the same `SingleRecord`.  These `Single Record` `Measures` that take the output of other Tests as their input are intended as informative and do not have a formal purpose in the Fitness for Use Framework.  One of these is the Test `MEASURE_AMENDMENTS_PROPOSED`, it provides a count of the number of Amendment Tests that proposed changes to that record.  
 
-For example, if 17 tests proposed amendments on a particular `SingleRecord`; the `Response` would be
+For example, if 17 Tests proposed amendments on a particular `SingleRecord`; the `Response` would be
 
 * `Response.status`=RUN_HAS_RESULT 
 * `Response.result`="17"
@@ -328,7 +328,7 @@ For example, if 17 tests proposed amendments on a particular `SingleRecord`; the
 Most `Measure` Tests defined in BDQ are `Multi Record` Tests that take as input the results of `Single Record` Test on some data set and provide metrics or filters on those data.  These Tests are central to formal application of `Quality Control` and `Quality Assurance` in the Fitness for Use Framework. See the discussion in [Quality Control and Quality Assurance](#21-quality-control-and-quality-assurance-non-normative) above.
 
 `Measures` may be: 
-- `Single Record` `Measures` that directly measure an `Information Element` value and return a metric (e.g., MEASURE_EVENTDATE_DURATIONINSECONDS), or that count the results of other tests on the same `SingleRecord` (e.g., MEASURE_AMENDMENTS_PROPOSED).
+- `Single Record` `Measures` that directly measure an `Information Element` value and return a metric (e.g., MEASURE_EVENTDATE_DURATIONINSECONDS), or that count the results of other Tests on the same `SingleRecord` (e.g., MEASURE_AMENDMENTS_PROPOSED).
 - `Single Record` `Measures` that take the outputs of other `Single Record` Tests as their inputs and return metrics on those particular records (e.g., MEASURE_AMENDMENTS_PROPOSED).
 - `Multi Record` `Measures` that take the outputs of `Single Record` Tests as their inputs and return metrics or filters on those data (e.g., MEASURE_VALIDATIONTESTS_NOTCOMPLIANT).
 
@@ -360,9 +360,9 @@ To maintain the integrity and reliability of the BDQ Framework, we have been car
 
 ### 3.4 Test Parameters (non-normative) 
 
-Some tests are parameterized.  Parameters allow those running a Test to change the behavior of the test at the time it is run.  This allows users to easily adapt the tests to their specific needs and contexts, making them more flexible and applicable to a wider range of scenarios.  
+Some Tests are parameterized.  Parameters allow those running a Test to change the behavior of the Test at the time it is run.  This allows users to easily adapt the Tests to their specific needs and contexts, making them more flexible and applicable to a wider range of scenarios.  
 
-For example, a user working with data from just one country may wish to change a default `bdqval:sourceAuthority` for some test to an authority that is more appropriate for that particular country – e.g. to change the default species names authority (which covers the whole world) to one specific for just that country, all while retaining the same decision making process within the Test. For more details see [Parameterizing the Tests](../../guide/bdqtest/index.md#43-parameterizing-the-tests-normative) in the [BDQ Tests: Concepts, Types, and Use](../../guide/bdqtest/index.md) document.
+For example, a user working with data from just one country may wish to change a default `bdqval:sourceAuthority` for some Test to an authority that is more appropriate for that particular country – e.g. to change the default species names authority (which covers the whole world) to one specific for just that country, all while retaining the same decision making process within the Test. For more details see [Parameterizing the Tests](../../guide/bdqtest/index.md#43-parameterizing-the-tests-normative) in the [BDQ Tests: Concepts, Types, and Use](../../guide/bdqtest/index.md) document.
 
 Similarly a parameterized Test may change default numerical values to values more appropriate to the local area – e.g. setting a maximum elevation that is more appropriate to the country, rather than using a default global maximum, such that for some parameterized `Validation` elevations higher than the local maximum, but still lower than the global maximum elevation would be `NOT_COMPLIANT`, fitting the local needs, while they would be `COMPLIANT` and not identified as problematic for local needs if the default global maximum elevation were used.
 
@@ -378,25 +378,25 @@ More normative guidance on Test `Parameters` can be found in the section [6.1 Pa
 
 Consider the Test `VALIDATION_MAXELEVATION_INRANGE`.  If you are evaluating data that could come from anywhere in the world, you would want to use the default value for the 'Parameter' that sets the maximum elevation to that of the highest point on Earth.  However, if you are working on a dataset consisting entirely of data pertaining to locations in New Zealand, you may wish to set the `Parameter` bdqval:maximumValidElevationInMeters value to the maximum elevation in New Zealand (i.e., 3724 meters).  
 
-So, for a record where dwc:maximumElevationinMeters is given as "4500" which is out of range for New Zealand, the `Response` for the test with the default value for the parameter would be:
+So, for a record where dwc:maximumElevationinMeters is given as "4500" which is out of range for New Zealand, the `Response` for the Test with the default value for the parameter would be:
 
 * `Response.status`=RUN_HAS_RESULT
 * `Response.result`=COMPLIANT
 * `Response.comment`="The provided value of dwc:maximumElevationInMeters [4500] is in range".
 
-But if the test is run on the same data, but with the parameter bqd:maximumValidElevationInMeters set to 3724, appropriate for New Zealand, the `Response` would be:
+But if the Test is run on the same data, but with the parameter bqd:maximumValidElevationInMeters set to 3724, appropriate for New Zealand, the `Response` would be:
 
 * `Response.status`=RUN_HAS_RESULT
 * `Response.result`=NOT_COMPLIANT
 * `Response.comment`="The provided value of dwc:maximumElevationInMeters [4500] is out of range using the non-default bdqval:maximumValidElevationInMeters=3724".
 
-Thus the parameter changes the behavior of the test to fit local needs.
+Thus the parameter changes the behavior of the Test to fit local needs.
 
-It is important to identify the use of non-default parameter values in reports, so that users can understand the context in the test results.
+It is important to identify the use of non-default parameter values in reports, so that users can understand the context in the Test results.
 
 If a Test with a non-default `Parameter` value is used, this should be represented to consumers of data quality reports by combining at least the Label (`rdfs:label`) for the Test class (e.g., [VALIDATION_MINDEPTH_INRANGE](../../terms/bdqtest/index.md#VALIDATION_MINDEPTH_INRANGE)) in combination with the `Parameter` (e.g., `bdqval:maximumValidDepthInMeters`) and the value of the argument that replaced the default `Parameter` value in this specific case (e.g., 1642). For example, a Data Quality Report could identify this Test as `VALIDATION_MAXDEPTH_INRANGE with bdqval:maximumValidDepthInMeters=1642` rather than simply `VALIDATION_MAXDEPTH_INRANGE`
 
-Similarly, Test Results should be accompanied by a `Response.comment` that includes text expressing something similar to "Non-default bdqval:maximumValidDepthInMeters=1642" as in the example above.  Both are important to help users understand the context of test results, and to allow users to identify where non-default parameter values are used.
+Similarly, Test Results should be accompanied by a `Response.comment` that includes text expressing something similar to "Non-default bdqval:maximumValidDepthInMeters=1642" as in the example above.  Both are important to help users understand the context of Test results, and to allow users to identify where non-default parameter values are used.
 
 ## 4 Using the BDQ Tests Quick Reference Guide (non-normative)
 
@@ -404,7 +404,7 @@ The [BDQ Tests Quick Reference Guide](../../terms/bdqtest/index.md) is a compani
 
 While the [BDQ Tests Quick Reference Guide](../../terms/bdqtest/index.md) provides a description of each individual BDQ Test, `Data Quality Reports` may vary in how they present results from the execution of these Tests. Possible presentations include displaying Test results individually, aggregating counts of results for each Test run over all records in a dataset, and separating results into pre- and post-amendment phases. In the latter case, results may be shown for all `Validation` and `Measure` Tests run in a pre-amendment phase, then proposals for changes from all `Amendment` Tests run in an amendment phase, and then results from the same `Validation` and `Measure` Tests run in a post-amendment phase as if all proposed changes from the `Amendment` Tests were evaluated and accepted. It is thus important to identify both the Test for which results are being reported, and the context for the report. The [BDQ Tests Quick Reference Guide](../../terms/bdqtest/index.md) describes what each Test does independent of this context.
 
-For each Test, the [BDQ Tests Quick Reference Guide](../../terms/bdqtest/index.md) provides a set of test descriptors.  These include three ways to identify the Test, each serving a particular purpose:
+For each Test, the [BDQ Tests Quick Reference Guide](../../terms/bdqtest/index.md) provides a set of Test descriptors.  These include three ways to identify the Test, each serving a particular purpose:
 
 * **Label:** - the brief human readable means for identifying a Test (e.g. VALIDATION_BASISOFRECORD_NOTEMPTY). The Label is expected to be the primary means for humans to identify a Test.  
 * **skos:prefLabel:** - the human readable label spelled out in words (e.g. "Validation dwc:basisOfRecord` `Not Empty"). The prefLabel is expected to support translations, screen readers and other means for improving accessibility for humans in the identification of a Test.

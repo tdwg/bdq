@@ -330,7 +330,7 @@ We use the informal term "Test" to describe these four vertical themes, a Test i
 
 The Framework draws a distinction between **Quality Control** and **Quality Assurance**. Quality Control processes seek to assess the quality of data for some purpose, then identify changes to the data or to processes around the data to improve their quality. Quality Assurance processes seek to filter some set of data to a subset that is fit for some purpose, that is, to assure that data used for some purpose are fit for that purpose.
 
-It is important to recognize that BDQ does not standardize complete `Quality Control` or `Quality Assurance` workflows (e.g., user roles, review and remediation procedures, pipelines, thresholds, or reporting formats). Instead, BDQ standardizes the semantics of `Tests` and their `Responses` and provides `Measure` patterns that can be used to support `Quality Control` and `Quality Assurance` workflows in a consistent way.
+It is important to recognize that BDQ does not standardize complete `Quality Control` or `Quality Assurance` workflows (e.g., user roles, review and remediation procedures, pipelines, thresholds, or reporting formats). Instead, BDQ standardizes the semantics of Tests and their `Responses` and provides `Measure` patterns that can be used to support `Quality Control` and `Quality Assurance` workflows in a consistent way.
 
 #### 2.2.2 Information Elements (non-normative)
 
@@ -364,7 +364,7 @@ A `Validation` assesses compliance with a need. Data have quality if they are co
 ![Diagram of the classes involved in expressing Data Quality Needs with Amendments.](bdqffdq_data_quality_needs_amendment.svg)
 *Expressing Data Duality Needs: Amendments.*
 
-Formally, in the `Data Quality Needs` level, the Framework starts with a `Use Case`, a framing of some use to which data may be put. `Use Cases` are related to the formal description of `Data Quality Needs` through `Policies`. `Data Quality Needs`, such as a `Validation` are related to the `Information Elements` that need to be examined, and to the `Resource Type` that is operated on.  `Methods` such as `ValidationMethod` relate the `Data Quality Needs` to `Specifications` for the evaluation of those needs.  The 'Data Quality Need` specifies in general terms what properties data must have to have quality, and the related `Specification` provides a formal description of how to evaluate that aspect of quality.
+Formally, in the `Data Quality Needs` level, the Framework starts with a `Use Case`, a framing of some use to which data may be put. `Use Cases` are related to the formal description of `Data Quality Needs` through `Policies`. `Data Quality Needs`, such as a `Validation` are related to the `Information Elements` that need to be examined, and to the `Resource Type` that is operated on.  `Methods` such as `ValidationMethod` relate the `Data Quality Needs` to `Specifications` for the evaluation of those needs.  The `Data Quality Need` specifies in general terms what properties data must have to have quality, and the related `Specification` provides a formal description of how to evaluate that aspect of quality.
 
 Each of the Tests described in the BDQ standard has a formal specification that includes each of these elements. 
 
@@ -391,7 +391,7 @@ The Framework includes an abstract concept of `Information Elements`, which are 
 
 For **Quality Assurance**, the Framework defines `Measures` that operate on `Multi Records` and return a `Response.result` of `COMPLETE` or `NOT_COMPLETE`. A `Multi Record` `Measure` may be `COMPLETE` if all aggregated instances of a related `Single Record` `Validation` are `COMPLIANT`.
 
-For **Quality Control**, `Multi Record` `Measures` can return numeric summaries of the results of other tests (e.g. count of `COMPLIANT` results for a `Validation`), thereby indicating how fit a dataset is for its intended purpose and what adjustments are needed to make it fully fit.
+For **Quality Control**, `Multi Record` `Measures` can return numeric summaries of the results of other Tests (e.g. count of `COMPLIANT` results for a `Validation`), thereby indicating how fit a dataset is for its intended purpose and what adjustments are needed to make it fully fit.
 
 ![Diagram of ValidationResponse, IssueResponse, MeasureResponse and AmendmentResponse classes as subtypes of the Response class with ReportConcept as its parent.](assertions.png)
 *The 4 `Response` types in the Framework - `ValidationResponse`, `IssueResponse`, `MeasureResponse` and `AmendmentResponse`.*

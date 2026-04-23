@@ -116,7 +116,7 @@ Draft Standard for Review
 
 [6.5 Common Pattern for Implementing a Test (non-normative)](#65-common-pattern-for-implementing-a-test-non-normative)
   - [6.5.1 Responsibilities of a Test (non-normative)](#651-responsibilities-of-a-test-non-normative)
-  - [6.5.2 Checklist for a Validation test (non-normative)](#652-checklist-for-a-validation-test-non-normative)
+  - [6.5.2 Checklist for a Validation Test (non-normative)](#652-checklist-for-a-validation-test-non-normative)
   - [6.5.3 Checklist for Implementing an Amendment Test (non-normative)](#653-checklist-for-implementing-an-amendment-test-non-normative)
 
 [6.6 Responsibilities of a Test Execution Framework (non-normative)](#66-responsibilities-of-a-test-execution-framework-non-normative)
@@ -253,7 +253,7 @@ Data serialized from relational database systems may contain string representati
 
 String serializations of NULL outside of a database, present at the point of evaluation of a Test, MUST be treated as `bdqval:NotEmpty`. 
 
-A Test execution environment MAY deserialize these string serializations of NULL as null objects (see 5), and present them to a test as NULL objects, where they would evaluate as `bdqval:notEmpty` (see 2).
+A Test execution environment MAY deserialize these string serializations of NULL as null objects (see 5), and present them to a Test as NULL objects, where they would evaluate as `bdqval:notEmpty` (see 2).
 
 (4) Data values indicating an unknown are treated as `bdqval:NotEmpty`.
 
@@ -511,7 +511,7 @@ In `bdqffdq:Validation` Tests that require the lookup of a `bdqval:sourceAuthori
 
 The BDQ Tests are part of a coherent framework for describing and reporting on data quality, and the Tests are intended to be implemented as suites of Tests that fit particular `Use Cases` (see [BDQ Fitness for Use Framework](../../guide/bdqffdq/index.md)). The following sections provide normative guidance on what is required for an implementation of a Test Suite to be compliant with the BDQ standard, and non-normative guidance on the rationale for these requirements and expectations for how implementers will design their Test Suites.
 
-![Non-normative diagram illustrating the relationships among Use Cases, Policies, Tests, Parameters, Implementations and Reports in bdqffdq, use cases are at the top of the diagram linked down to tests (Validations, Measures, Amendments, Issues) via Policies, Tests are shown to be complex composed of many classes and properties, including Specifications which can take Parameters, below these sit Implementations, which can produce data quality reports containing assertions (Response objects):](bdqffdq_overview_diagram.svg)
+![Non-normative diagram illustrating the relationships among Use Cases, Policies, Tests, Parameters, Implementations and Reports in bdqffdq, use cases are at the top of the diagram linked down to Tests (Validations, Measures, Amendments, Issues) via Policies, Tests are shown to be complex composed of many classes and properties, including Specifications which can take Parameters, below these sit Implementations, which can produce data quality reports containing assertions (Response objects):](bdqffdq_overview_diagram.svg)
 *Non-normative diagram illustrating the relationships among Use Cases, Policies, Tests, Parameters, Implementations and Reports in bdqffdq:*
 
 ### 3.1 Compliance depends on `Use Case` (normative)
@@ -656,7 +656,7 @@ An implementation of a Test:
 
 An implementation of a Test that, by design, has a behavior that departs from the `Specification` `hasExpectedResponse` MUST be identified by different identifiers than the BDQ Test from which it departs.  
 
-An implementation of a parameterized Test that only supports non-default `Parameter` values MUST be identified by different identifiers than the BDQ Test that supports the default `Parameter` values.  For example, an implementation of VALIDATION_LICENSE_STANDARD that does not support the default bdqval:sourceAuthority "Creative Commons 4.0 Licenses or CC0", but only supports a different source authority is not the same test as VALIDATION_LICENSE_STANDARD, and must be identified by a different identifier.
+An implementation of a parameterized Test that only supports non-default `Parameter` values MUST be identified by different identifiers than the BDQ Test that supports the default `Parameter` values.  For example, an implementation of VALIDATION_LICENSE_STANDARD that does not support the default bdqval:sourceAuthority "Creative Commons 4.0 Licenses or CC0", but only supports a different source authority is not the same Test as VALIDATION_LICENSE_STANDARD, and must be identified by a different identifier.
 
 #### 6.1.3 Further guidance on Parameters and Arguments (non-normative)
 
@@ -713,7 +713,7 @@ Numeric values from `MultiRecord` `Measure` Tests under Quality Control MAY be u
 
 #### 6.4.2 Test Dependencies (normative)
 
-While BDQ Tests are designed to be independent and agnostic to sequence of test execution, some `Amendment` Tests have potential interactions given the by-design redundancies in Darwin Core (Wieczorek et al. 2012). In consequence the order of execution of some `Amendment` Tests can affect results. This is a particular concern when developing workflows with parallel data streams. When `Amendment` Tests are executed in a workflow where downstream `Amendments` operate on data with the changes proposed by upstream `Amendments` applied, the following sequences SHOULD be followed.
+While BDQ Tests are designed to be independent and agnostic to sequence of Test execution, some `Amendment` Tests have potential interactions given the by-design redundancies in Darwin Core (Wieczorek et al. 2012). In consequence the order of execution of some `Amendment` Tests can affect results. This is a particular concern when developing workflows with parallel data streams. When `Amendment` Tests are executed in a workflow where downstream `Amendments` operate on data with the changes proposed by upstream `Amendments` applied, the following sequences SHOULD be followed.
 
 Given that `Amendment` Tests propose a value to a primary term (e.g., `dwc:eventDate`, `dwc:taxonID`) from secondary terms (e.g., `dwc:day`, `dwc:year`, `dwc:scientificName`), primary-from-secondary SHOULD be applied before secondary-from-primary. Where multiple `Amendments` on secondary terms could propose conflicting changes to a primary term, the sequence of `Amendment` Tests SHOULD be ordered. 
 
@@ -1034,15 +1034,15 @@ This section provides language- and framework-agnostic checklists that implement
 
 ### 6.5.1 Responsibilities of a Test (non-normative)
 
-BDQ keeps Tests portable by standardizing semantics (inputs, decision rules, outputs).  It deliberately leaves execution mechanics (binding to input data, orchestration of test execution, presentation of test output) to whatever framework fits the implementer's environment.  
+BDQ keeps Tests portable by standardizing semantics (inputs, decision rules, outputs).  It deliberately leaves execution mechanics (binding to input data, orchestration of Test execution, presentation of Test output) to whatever framework fits the implementer's environment.  
 
-The definition of a test focuses on (1) the inputs (`Information Elements` `Acted Upon` and `Consulted`, and any `Parameters`), then (2) the logic or decision rules of the expected response, with (3) all tests returning a similarly structured `Response` consisting of a `Response.status`, `Response.result`, and `Response.comment` as output. 
+The definition of a Test focuses on (1) the inputs (`Information Elements` `Acted Upon` and `Consulted`, and any `Parameters`), then (2) the logic or decision rules of the expected response, with (3) all Tests returning a similarly structured `Response` consisting of a `Response.status`, `Response.result`, and `Response.comment` as output. 
 
-The description of a test, in essence, frames an API with `Information Element` and `Parameter` inputs, and a standard `Response` output, encapsulating the logic and decision rules of the expected response. The responsibility of a Test implementation lies in correctly implementing the logic and decision rules of the expected response, and in producing the expected structured output.  The responsibility of an execution framework lies in correctly binding input data to the `Information Elements` and `Parameters` of a Test implementation, and in correctly presenting the structured output from a Test implementation.
+The description of a Test, in essence, frames an API with `Information Element` and `Parameter` inputs, and a standard `Response` output, encapsulating the logic and decision rules of the expected response. The responsibility of a Test implementation lies in correctly implementing the logic and decision rules of the expected response, and in producing the expected structured output.  The responsibility of an execution framework lies in correctly binding input data to the `Information Elements` and `Parameters` of a Test implementation, and in correctly presenting the structured output from a Test implementation.
 
 The checklists below are designed to help implementers ensure that their implementations of Tests follow this separation of concerns, are consistent with the semantics of the Test as defined in the BDQ standard, and that they produce the expected structured outputs.
 
-### 6.5.2 Checklist for a Validation test (non-normative)
+### 6.5.2 Checklist for a Validation Test (non-normative)
 
 1. **Setup for Consistency**
    - Implement utility functions or methods to evaluate `bdqval:Empty` and `bdqval:NotEmpty` consistently. See: [The Concept of EMPTY in the BDQ Standard (normative)”](#22-the-concept-of-empty-in-the-bdq-standard-normative).
@@ -1192,15 +1192,15 @@ A Test execution framework (or “runner”) typically needs to accomplish the f
 1. **Determine the workflow for Test execution**
    - If the `Policies` for a `Use Case` include both `Validation` and `Amendment` Tests, determine the order of execution (e.g., run all `Validation` Tests first, then run `Amendment` Tests on the records that passed validation; or run each `Validation` Test followed immediately by its corresponding `Amendment` Test).
    - A workflow that may be expected, and is the responsibility of the execution framework, is to run:
-     - All `Validation` tests, all `Issue` tests and all `Measure` tests in a pre-amendent phase.
-     - Run all `Amendment` tests in an amendment phase.
-     - Apply all proposed changes from the `Amendment` tests to a copy of the input data.
-     - Apply all `Validation` tests, all `Issue` tests and all `Measure` tests in a post-amendment phase using the amended copy of the data as input.
+     - All `Validation` Tests, all `Issue` Tests and all `Measure` Tests in a pre-amendent phase.
+     - Run all `Amendment` Tests in an amendment phase.
+     - Apply all proposed changes from the `Amendment` Tests to a copy of the input data.
+     - Apply all `Validation` Tests, all `Issue` Tests and all `Measure` Tests in a post-amendment phase using the amended copy of the data as input.
      - Compare the results of `MultiRecord` `Measures` from the pre-and post-amendment phases (giving a measure of how much accepting the proposed changes from `Amendments` would improve the quality of the data for the `Use Case` at hand..
      - Produce a `Data Quality Report` that includes both pre- and post-amendment results, and that retains the original (unamended) values for reference. 
 
 1. **Consider Aggregation of unique values for Single Record Tests**
-   - For `SingleRecord` tests, it may be appropriate to aggregate distinct input values and run the same Test implementation once per distinct value, rather than once per record (e.g., for a `Validation` Test that checks if a particular value is found in an authority, it may be more efficient to run the Test once per distinct value rather than once per record).
+   - For `SingleRecord` Tests, it may be appropriate to aggregate distinct input values and run the same Test implementation once per distinct value, rather than once per record (e.g., for a `Validation` Test that checks if a particular value is found in an authority, it may be more efficient to run the Test once per distinct value rather than once per record).
    - Aggregation should normally be by distinct values of the set of `Information Elements` for each Test, and not by distinct values of a single `Information Elements`, to ensure that the correct `Response` is associated with the correct combination of input values.
    - If aggregation is used, ensure that the `Response` for each distinct value is correctly associated with all records that contain that value to pass down a processing pipeline or to return in the final `Data Quality Report`.
 
@@ -1220,10 +1220,10 @@ A Test execution framework (or “runner”) typically needs to accomplish the f
      - `Response.result` (present only when appropriate for the status and `Test Type`)
      - `Response.comment` (a human-readable `bdqval:NotEmpty` explanation)
    - Ensure returned values use the controlled vocabulary strings defined by the BDQ standard (e.g., `RUN_HAS_RESULT`, `COMPLIANT`, `NOT_COMPLIANT`).
-   - Exceptions raised from within a Test must be be captured and handled according to the expected response criteria in the `Specification` (e.g., returning `EXTERNAL_PREREQUISITES_NOT_MET` when an external resource is unavailable, with an appropriate comment).  An exception within a test should not be raised into the execution framework.
+   - Exceptions raised from within a Test must be be captured and handled according to the expected response criteria in the `Specification` (e.g., returning `EXTERNAL_PREREQUISITES_NOT_MET` when an external resource is unavailable, with an appropriate comment).  An exception within a Test should not be raised into the execution framework.
 
 1. **Consider Handling of EXTERNAL_PREREQUISITES_NOT_MET**
-   - If a Test implementation raises an exception or error due to an unavailable external resource, the test is expected to capture that and return a `Response` with `Response.status` = `EXTERNAL_PREREQUISITES_NOT_MET`, and a `Response.comment` containing a `bdqval:NotEmpty` explanation.
+   - If a Test implementation raises an exception or error due to an unavailable external resource, the Test is expected to capture that and return a `Response` with `Response.status` = `EXTERNAL_PREREQUISITES_NOT_MET`, and a `Response.comment` containing a `bdqval:NotEmpty` explanation.
    - A framework for Test execution may choose to simply pass these failure conditions on, or to handle such exceptions at a higher level (e.g., by skipping all Tests that depend on that resource for the remainder of a run, or by retrying after a delay), but must ultimately ensure that the appropriate `Response` is returned for each individual Test execution that encounters an unavailable external resource.
 
 1. **If unique values were aggregated, deaggregate and associate results with all relevant records**

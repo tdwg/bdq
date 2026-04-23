@@ -19,7 +19,7 @@
 #"IE Class",
 
 term_localName:
-  # the bare UUID for the test 
+  # the bare UUID for the Test 
   label: Term Name
   normative: 'true'
   term: rdf:value
@@ -155,7 +155,7 @@ Source:
   sort_order: 24
 historyNoteUrl:
   # Currently all tdwg/bdq issue numbers, but in future could be on a bdqtest repository.
-  # Expect multiplicity here for rationale management of changes to tests after acceptance.
+  # Expect multiplicity here for rationale management of changes to Tests after acceptance.
   append: A link to the GitHub issue that provided rationale management, recording a history (changes and comments) of the development of the Test.
   label: Developed As GitHub Issue
   normative: 'false'
@@ -206,7 +206,7 @@ ArgumentGuids:
 #  term: bdqffdq:DataQualityMethod
 #  sort_order: 33
 #status:
-#  # For future term-version use if tests are deprecated
+#  # For future term-version use if Tests are deprecated
 #  label: Status
 #  normative: ''
 #  term: tdwgutility:status

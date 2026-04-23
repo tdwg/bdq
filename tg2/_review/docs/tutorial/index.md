@@ -135,13 +135,13 @@ Draft Standard for Review
 
 ### 1.1 Purpose (non-normative)
 
-This document provides, in the form of a tutorial, an overview of the concepts, reasoning, technical justifications, and logical choices behind the creation of a new Biodiversity Data Quality (BDQ) Test.  It can be used to understand the components of the BDQ standard and to guide users and implementers in describing new tests using the BDQ Fitness for Use Framework.  It is also intended to assist the proposed BDQ Maintenance Group in evaluating proposals for new tests and edits to existing tests.
+This document provides, in the form of a tutorial, an overview of the concepts, reasoning, technical justifications, and logical choices behind the creation of a new Biodiversity Data Quality (BDQ) Test.  It can be used to understand the components of the BDQ standard and to guide users and implementers in describing new Tests using the BDQ Fitness for Use Framework.  It is also intended to assist the proposed BDQ Maintenance Group in evaluating proposals for new Tests and edits to existing Tests.
 
 ### 1.2 Audience (non-normative)
 
-This document is intended for users and implementers seeking to understand the components of the BDQ standard through examining the reasoning and technical justifications behind the creation of a new BDQ test. 
+This document is intended for users and implementers seeking to understand the components of the BDQ standard through examining the reasoning and technical justifications behind the creation of a new BDQ Test. 
 
-This document is also intended for those interested in describing new tests using the BDQ Fitness for Use Framework.
+This document is also intended for those interested in describing new Tests using the BDQ Fitness for Use Framework.
 
 ### 1.3 Associated Documents (non-normative)
 
@@ -173,9 +173,9 @@ The following namespace abbreviations are used in this document:
 
 ## 2 Overview (non-normative)
 
-This tutorial works through the development of a `Use Case`, then walks through two examples of the development of Tests.  One of the examples of a test is simple, the other is more complex.  This tutorial then comes back to the `Use Case` and describes how Measure Tests can be developed to evaluate the results of the Validation Tests for the purpose of `Quality Control`.  
+This tutorial works through the development of a `Use Case`, then walks through two examples of the development of Tests.  One of the examples of a Test is simple, the other is more complex.  This tutorial then comes back to the `Use Case` and describes how Measure Tests can be developed to evaluate the results of the Validation Tests for the purpose of `Quality Control`.  
 
-The simpler of the two Tests examined is VALIDATION_FOOTPRINTWKT_NOTEMPTY, which was considered a [Supplementary test](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/supplement/index.md) rather than a BDQ "Core" test as we considered it of marginal use for the BDQ `Use Cases`. As noted in the [BDQ Supplement Information](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/supplement/index.md), the test could be useful in certain `Use Cases`, as noted below.
+The simpler of the two Tests examined is VALIDATION_FOOTPRINTWKT_NOTEMPTY, which was considered a [Supplementary Test](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/supplement/index.md) rather than a BDQ "Core" Test as we considered it of marginal use for the BDQ `Use Cases`. As noted in the [BDQ Supplement Information](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/supplement/index.md), the Test could be useful in certain `Use Cases`, as noted below.
 
 **Note** that a proposed **BDQ Maintenance Group** will be established to maintain the BDQ Standard. This group will take responsibility for advising on processes for editing the BDQ standard and evaluating new BDQ Tests, `Use Cases` and other components of the BDQ Standard.
 
@@ -191,24 +191,24 @@ See also:
 1. **Start Simple**: Begin defining basic `Validation` Tests before considering more complex Tests and `Amendments`.
 1. **Consider Edge Cases**: Define Tests for empty values, nulls, whitespace, and out of range values.
 1. **Use Established Authorities**: Reference widely accepted standards when possible.
-1. **Generalize Appropriately**: Consider how different parts of the community might want to use a test in slightly different ways.
-1. **Document Assumptions**: Be explicit about why particular choices were made in the development of a test including choices of default values.
-1. **Plan for Evolution**: Consider how tests might need to change over time.
+1. **Generalize Appropriately**: Consider how different parts of the community might want to use a Test in slightly different ways.
+1. **Document Assumptions**: Be explicit about why particular choices were made in the development of a Test including choices of default values.
+1. **Plan for Evolution**: Consider how Tests might need to change over time.
 1. **Iterate**: Refine Tests based on implementation feedback and real-world data.
 1. **Conformance Test**: Evaluate whether Test implementations produce the expected outputs for a range of given inputs covering all decision paths in each Test.
-1. **Consider Test Interactions**: Consider how multiple tests might interact on the same data.
+1. **Consider Test Interactions**: Consider how multiple Tests might interact on the same data.
 
 ## 3 Defining a Use Case (non-normative)
 
-*Before defining a test, we must justify why it exists and how it fits into the broader ecosystem of the standard.*
+*Before defining a Test, we must justify why it exists and how it fits into the broader ecosystem of the standard.*
 
 ### 3.1 Define the Use Case and Fitness-for-Use Requirements (non-normative)
 
 **Purpose:** Establish the data user's perspective and fitness-for-use requirements
 
-**The Reasoning:** A test is only as good as the problem it solves. We begin by establishing a clear perspective on who the data user is, what use the data are to be put, what makes the data "fit for use" for that use, and what problems in the data would make it unfit for that use. 
+**The Reasoning:** A Test is only as good as the problem it solves. We begin by establishing a clear perspective on who the data user is, what use the data are to be put, what makes the data "fit for use" for that use, and what problems in the data would make it unfit for that use. 
 
-Clearly stating the problem that we are trying to solve ensures that the test is grounded in real-world needs and not just theoretical ideals.
+Clearly stating the problem that we are trying to solve ensures that the Test is grounded in real-world needs and not just theoretical ideals.
 
 * **User:** A conservation biologist.
 * **Context:** We have a dataset consisting of "Expert Distributions" of taxa.  We want to validate that this dataset is usable for identifying outliers in other occurrence data (and for doing other things we may want to do with a set of expert distributions like, mapping distributions of species).  The data consist of a taxon-oriented dataset (e.g. one record per taxon) with fields identifying the taxon, providing the expert distribution as geospatial data (vector data providing shapes rather than point occurrences), along with metadata about the source of each record. 
@@ -228,9 +228,9 @@ Now we can define our `Use Case`.  We need to specify three elements, a name for
 
 It is helpful, but by no means required, to state the `hasFitnessRequirements` as a brief summary paragraph followed by a set of brief bullet points.  The `Use Case` is describing what we are trying to accomplish at a high level, without getting too detailed.  
 
-In each of the bullet points, the properties that are needed for fitness are explicitly stated, e.g. "is present", "is valid", "found in an authority", etc.  These properties will be the basis for defining tests that evaluate whether the data meet these fitness requirements, and being explicit here will help us describe tests that separate concerns.  We will wish to be clear about fields that must be present for the data to have quality (i.e. "is present") and which fields are optional, but need to have certain properties if populated (e.g. "is valid if present")
+In each of the bullet points, the properties that are needed for fitness are explicitly stated, e.g. "is present", "is valid", "found in an authority", etc.  These properties will be the basis for defining Tests that evaluate whether the data meet these fitness requirements, and being explicit here will help us describe Tests that separate concerns.  We will wish to be clear about fields that must be present for the data to have quality (i.e. "is present") and which fields are optional, but need to have certain properties if populated (e.g. "is valid if present")
 
-Treat this `Use Case` definition (and everything else that follows from it) as a first draft.  We will likely need to come back and refine this `Use Case` definition as we consider the data in the wild and start defining and implementing tests.  We may find that we need to add additional fitness requirements, or that we need to clarify the existing fitness requirements, or that we need to change the way we have stated the fitness requirements.  That is all part of the process.  It is critically important to be flexible and iterative in this process. 
+Treat this `Use Case` definition (and everything else that follows from it) as a first draft.  We will likely need to come back and refine this `Use Case` definition as we consider the data in the wild and start defining and implementing Tests.  We may find that we need to add additional fitness requirements, or that we need to clarify the existing fitness requirements, or that we need to change the way we have stated the fitness requirements.  That is all part of the process.  It is critically important to be flexible and iterative in this process. 
 
 See also: 
 * [Context for Quality, Uses and Purposes](../guide/users/index.md#2-context-for-quality-uses-and-purposes-non-normative) in the User's Guide.
@@ -242,7 +242,7 @@ See also:
 
 In the Fitness for Use Framework, input fields or terms for a Test are generalized as `Information Elements`.  
 
-We can expand each of the bullet points in the hasFitnessRequirements statement into a set of terms that are likely to map onto the data.  We may understand these well at the start, but as we work with real data and implement tests, we will very likely need to refine this list.
+We can expand each of the bullet points in the hasFitnessRequirements statement into a set of terms that are likely to map onto the data.  We may understand these well at the start, but as we work with real data and implement Tests, we will very likely need to refine this list.
 
 * A valid taxonomic name: 
   * dwc:scientificName
@@ -259,26 +259,26 @@ We can expand each of the bullet points in the hasFitnessRequirements statement 
 
 Most of these terms are from Darwin Core, but we have also included some terms from other vocabularies that fit concepts in our data, such as PROV-O for provenance metadata and FOAF for person metadata.  We can use any terms from any vocabularies that are relevant to our `Use Case` and that map onto our data.
 
-Now, we want to identify a set of tests to be applied to these `Information Elements` to evaluate whether the data are fit for use.  
+Now, we want to identify a set of Tests to be applied to these `Information Elements` to evaluate whether the data are fit for use.  
 
-There are two key elements to the strategy at this point: (1) we want to identify and use existing tests that can be applied before defining new tests and (2) we want each test to be as focused as possible on a single aspect of data quality.
+There are two key elements to the strategy at this point: (1) we want to identify and use existing Tests that can be applied before defining new Tests and (2) we want each Test to be as focused as possible on a single aspect of data quality.
 
 
 ### 3.3 Reuse of Existing Tests and Gap Analysis (non-normative)
 
-**Purpose:** Identify existing BDQ Tests that can be applied to the `Information Elements` and identify gaps where new tests are needed.
+**Purpose:** Identify existing BDQ Tests that can be applied to the `Information Elements` and identify gaps where new Tests are needed.
 
 Let's identify which existing BDQ Tests might already be able to be applied to these `Information Elements` for this `Use Case`.
 
-We can start with a simple presence check for each of these `Information Elements` (building on the "is present" statements in the `hasFitnessRequirements`) and then add more complex tests as needed.
+We can start with a simple presence check for each of these `Information Elements` (building on the "is present" statements in the `hasFitnessRequirements`) and then add more complex Tests as needed.
 
-We are looking for existing `Validation` Tests, as we are trying to assert whether data meets specific criteria (COMPLIANT vs. NOT_COMPLIANT).  By convention in BDQ, the names of these tests start with VALIDATION_.  Simple presence tests for "does an `Information Element` contain a value", by convention have a name that ends with  NOTEMPTY.   Between these two parts, again by convention, we use the name of the `Information Element` (or the name of a concept (e.g. LOCATION, EVENT) for several `Information Elements`).
+We are looking for existing `Validation` Tests, as we are trying to assert whether data meets specific criteria (COMPLIANT vs. NOT_COMPLIANT).  By convention in BDQ, the names of these Tests start with VALIDATION_.  Simple presence Tests for "does an `Information Element` contain a value", by convention have a name that ends with  NOTEMPTY.   Between these two parts, again by convention, we use the name of the `Information Element` (or the name of a concept (e.g. LOCATION, EVENT) for several `Information Elements`).
 
 For example, [VALIDATION_SCIENTIFICNAME_NOTEMPTY](../terms/bdqtest/index.md#VALIDATION_SCIENTIFICNAME_NOTEMPTY) is a BDQ Test that checks if there is a value in dwc:scientificName.
 
 There are several places we could look for existing Tests within BDQ, including the [Quick Reference Guide](../terms/bdqtest/index.md), and the [index](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/list/bdqtest/index.md#31-index-to-validation-tests-non-normative) of the bdqtest: term-list document.  An easy place to look for Tests that operate on particular `Information Elements` is the Quick Reference Guide's [BDQ Test Index by Information Element Acted Upon](../terms/bdqtest/qrg_index_by_ie_actedupon.md).  
 
-Looking here for simple presence checks for the `Information Elements` we can identify the following existing BDQ tests (and gaps):
+Looking here for simple presence checks for the `Information Elements` we can identify the following existing BDQ Tests (and gaps):
 
 * A valid taxonomic name is present: 
   * dwc:scientificName [VALIDATION_SCIENTIFICNAME_NOTEMPTY](../terms/bdqtest/index.md#VALIDATION_SCIENTIFICNAME_NOTEMPTY)
@@ -293,7 +293,7 @@ Looking here for simple presence checks for the `Information Elements` we can id
   * foaf:name (Author name) **Gap**
   * dcterms:source (publication or dataset source) **Gap**
 
-Our `Use Case` calls for more than just a presence check for these `Information Elements`, so we would want to fill in in more candidate tests for these `Information Elements`, until we have tests that cover each of the hasFitnessRequirements we identified for the Use Case.  If there is an existing Test that can be applied to a particular `Information Element` and is relevant our `Use Case`, we should include that Test, and would need strong justification to do othewise.  Filling in a few more tests:  
+Our `Use Case` calls for more than just a presence check for these `Information Elements`, so we would want to fill in in more candidate Tests for these `Information Elements`, until we have Tests that cover each of the hasFitnessRequirements we identified for the Use Case.  If there is an existing Test that can be applied to a particular `Information Element` and is relevant our `Use Case`, we should include that Test, and would need strong justification to do othewise.  Filling in a few more Tests:  
 
 * A taxonomic name is present and can be found in GBIF's backbone taxonomy.
   * dwc:scientificName
@@ -324,18 +324,18 @@ Our `Use Case` calls for more than just a presence check for these `Information 
     * Is present: (publication or dataset source) **Gap**
 
 
-Let's focus on the gaps.  The BDQ Issues in GitHub that define tests are a good place to start.  These tests are a superset of the BDQ Tests and have had some level of documentation.
+Let's focus on the gaps.  The BDQ Issues in GitHub that define Tests are a good place to start.  These Tests are a superset of the BDQ Tests and have had some level of documentation.
 
-For dwc:footprintWKT, we could guess the name of the test, following the naming conventions, as VALIDATION_FOOTPRINTWKT_NOTEMPTY, and search the issues for [that name](https://github.com/tdwg/bdq/issues?q=VALIDATION_FOOTPRINTWKT_NOTEMPTY) or [the Information Element part of that name](https://github.com/tdwg/bdq/issues?q=FOOTPRINTWKT).  These searches may return a match, but guessing the name is a fragile strategy, as the desired test might not have a name exactly matching our guess, so a better broader strategy is to search and scan lists of issues:
+For dwc:footprintWKT, we could guess the name of the Test, following the naming conventions, as VALIDATION_FOOTPRINTWKT_NOTEMPTY, and search the issues for [that name](https://github.com/tdwg/bdq/issues?q=VALIDATION_FOOTPRINTWKT_NOTEMPTY) or [the Information Element part of that name](https://github.com/tdwg/bdq/issues?q=FOOTPRINTWKT).  These searches may return a match, but guessing the name is a fragile strategy, as the desired Test might not have a name exactly matching our guess, so a better broader strategy is to search and scan lists of issues:
 
 * Existing proposals tagged as [SUPPLEMENTARY](https://github.com/tdwg/bdq/issues?q=label%3ASupplementary) that would fill the desired gap.
 * Existing proposals tagged as [IMMATURE/INCOMPLETE](https://github.com/tdwg/bdq/issues?q=label%3AImmature%2FIncomplete) that may fill the gap, but are not yet fully developed.
-* Existing proposals tagged as [DO NOT IMPLEMENT](https://github.com/tdwg/bdq/issues?q=label%3A%22DO%20NOT%20IMPLEMENT%22) that would fill the desired gap, but have been rejected for implementation.  These tests should be reconsidered only with great caution.
+* Existing proposals tagged as [DO NOT IMPLEMENT](https://github.com/tdwg/bdq/issues?q=label%3A%22DO%20NOT%20IMPLEMENT%22) that would fill the desired gap, but have been rejected for implementation.  These Tests should be reconsidered only with great caution.
 * **Note that all of these issues in GitHub are Closed, the default issue search which includes is:open will not find them.**
 
-There is an existing definition for a test, [VALIDATION_FOOTPRINTWKT_NOTEMPTY](https://github.com/tdwg/bdq/issues/226), in the documented Supplementary tests.
+There is an existing definition for a Test, [VALIDATION_FOOTPRINTWKT_NOTEMPTY](https://github.com/tdwg/bdq/issues/226), in the documented Supplementary Tests.
 
-Looking at the description of that test we see:
+Looking at the description of that Test we see:
 
 * **Label** VALIDATION_FOOTPRINTWKT_NOTEMPTY
 * **Description** Is there a value in dwc:footprintWKT?
@@ -343,16 +343,16 @@ Looking at the description of that test we see:
 * **Information Elements Acted Upon** dwc:footprintWKT
 * **Expected Response** COMPLIANT if dwc:footprintWKT is bdqval:NotEmpty; otherwise NOT_COMPLIANT
 
-This is telling us, much like an entry in the Quick Reference Guide or the more detailed entry in the bdqtest: term-list document, that this test is a simple presence check for dwc:footprintWKT.
+This is telling us, much like an entry in the Quick Reference Guide or the more detailed entry in the bdqtest: term-list document, that this Test is a simple presence check for dwc:footprintWKT.
 
 See also: 
 * The [Quick Reference Guide](../terms/bdqtest/index.md) to the BDQ Tests.
-* The [BDQ Tests Term-List document](../terms/bdqtest/index.md) for more detailed descriptions of each tests.
+* The [BDQ Tests Term-List document](../terms/bdqtest/index.md) for more detailed descriptions of each Tests.
 * List of [DO_NOT_IMPLEMENT Tests](../supplement/index.md#211-tests-tagged-as-do-not-implement-non-normative) in the Supplement.
 
 ## 4 Defining a New Test (non-normative)
 
-Let's walk through the steps and decisions involved in defining a test, using VALIDATION_FOOTPRINTWKT_NOTEMPTY as an example, and see how the components of the test are justified and how they fit together.
+Let's walk through the steps and decisions involved in defining a Test, using VALIDATION_FOOTPRINTWKT_NOTEMPTY as an example, and see how the components of the Test are justified and how they fit together.
 
 ### 4.1 A Simple Description of the Test (non-normative)
 
@@ -389,7 +389,7 @@ See also:
 
 ### 4.3 Select the Test Type (non-normative)
 
-**Purpose**: Determine in what way the test evaluates data quality.
+**Purpose**: Determine in what way the Test evaluates data quality.
 
 There are four Test types in BDQ: 
 
@@ -398,7 +398,7 @@ There are four Test types in BDQ:
 * **Measure** Quantify an aspect of data quality (numerical result) or measure completeness (COMPLETE/NOT_COMPLETE)
 * **Issue** Flag potential problems for human review (POTENTIAL_ISSUE/NOT_ISSUE)  
 
-We choose VALIDATION for this test because we are asserting whether data meets specific criteria (COMPLIANT vs. NOT_COMPLIANT).
+We choose VALIDATION for this Test because we are asserting whether data meets specific criteria (COMPLIANT vs. NOT_COMPLIANT).
 
 * **Test Type** Validation
 
@@ -412,20 +412,20 @@ See also:
 
 ### 4.4 Name the Test (non-normative)
 
-**Purpose**: Create human and machine-readable names for the test.
+**Purpose**: Create human and machine-readable names for the Test.
 
 #### 4.4.1 Anatomy of a Test Label (non-normative)
 
 **The Reasoning:** BDQ uses a convention for the naming pattern so that Test labels are predictable and descriptive: **TESTTYPE_INFORMATIONELEMENTS_EVALUATION**.
 
-The use of all upper case with underscores is a convention inherited from the use of Java constants to identify tests in contributing projects.
+The use of all upper case with underscores is a convention inherited from the use of Java constants to identify Tests in contributing projects.
 
 The label provides a concise summary of the Test's purpose and logic.  The components of the label are:
 
 * **Test Type** one of VALIDATION, AMENDMENT, MEASURE, or ISSUE, as described above.
 * **Information Elements** Expressed as the "simple English term" for the `Information Element` being evaluated, or if multiple `Information Elements` are being evaluated together, a succinct more general concept (like LOCATION or EVENT) that encompasses those `Information Elements`
   * The use of "simple English terms" in the label (e.g., FOOTPRINTWKT) rather than the formal prefixed term (dwc:footprintWKT) to make it more accessible to human readers, and allows the label to be used as a string constant in many programming languages.
-* **Evaluation:** What is the test testing? 
+* **Evaluation:** What is the Test testing? 
   * Examples of evaluations include "NOTEMPTY" (a value is present), “FOUND” (the value can be found in a source authority), “INRANGE” (the value is within an expected range), etc.  See the [Evaluations](../../index.md#72-evaluations-in-test-labels-non-normative) list in the [landing page for the BDQ standard](../../index.md).
 
 This Test is a Validation, it is evaluating the Information Element `dwc:footprintWKT`, and it is evaluating whether there is a value in `dwc:footprintWKT`, so the label is VALIDATION_FOOTPRINTWKT_NOTEMPTY.  This label is expected to be a constant that does not change, even in translation.
@@ -467,11 +467,11 @@ BDQ Data Quality Dimensions include:
 * **Likeliness**: Do data values fall within expected ranges or distributions?
 * **Resolution**: Is the level of detail appropriate for the intended use?
 
-The question we wish to ask is whether there is a value in `dwc:footprintWKT`.  In this Test we are only asking if any value is present.  We are not asking if it is correctly formatted Well Known Text spatial data, or whether it contains in-range values, or anything else, we are simply asking if any value is present.  So this test is addressing the Completeness dimension of data quality.
+The question we wish to ask is whether there is a value in `dwc:footprintWKT`.  In this Test we are only asking if any value is present.  We are not asking if it is correctly formatted Well Known Text spatial data, or whether it contains in-range values, or anything else, we are simply asking if any value is present.  So this Test is addressing the Completeness dimension of data quality.
 
-This seems a very trivial test.  It is.  That is important.  We do not wish to overcomplicate our tests.  We want to ask simple questions that are easy to understand and implement, and that address specific aspects of data quality.  We assemble multiple simple atomic Tests to evaluate distinct aspects of data quality in a `Use Case`.
+This seems a very trivial Test.  It is.  That is important.  We do not wish to overcomplicate our Tests.  We want to ask simple questions that are easy to understand and implement, and that address specific aspects of data quality.  We assemble multiple simple atomic Tests to evaluate distinct aspects of data quality in a `Use Case`.
 
-If some data are absent and other data are incorrectly formatted, a more complicated test that checks for both presence and correct formatting will not be able to distinguish between these two problems, and thus will not be as useful for our `Use Case` as a simple presence check (combined with a separate test to assess correct formatting).  
+If some data are absent and other data are incorrectly formatted, a more complicated Test that checks for both presence and correct formatting will not be able to distinguish between these two problems, and thus will not be as useful for our `Use Case` as a simple presence check (combined with a separate Test to assess correct formatting).  
 
 BDQ `Validations` also have a `Criterion` property.  Each `Criterion` represents an abstract way of evaluating whether a data value meets expectations for a particular `Use Case`.  These criteria are formally defined in the [bdqcrit:](../list/bdqcrit/index.md) vocabulary.  For example, the Criterion `NotEmpty` is defined as "The data value is not empty (i.e., it contains some data)".  This is exactly the criterion we are applying in this Test, so we will use the `NotEmpty` criterion for this Test.  
 
@@ -489,7 +489,7 @@ See also:
 
 ### 4.6 How many records are we examining at once? (non-normative)
 
-**Purpose**: Determine whether the test is applied to single records or multiple records.
+**Purpose**: Determine whether the Test is applied to single records or multiple records.
 
 In BDQ, Tests can be applied to single data records or to multiple records.  A Test that is applied to a single record is called a "SingleRecord" Test, and a Test that is applied to multiple records is called a "MultiRecord" Test.  The distinction between these two types of Tests is important because it affects how the Test is implemented and how the results are interpreted.
 
@@ -507,7 +507,7 @@ See also: [Resource Types](../guide/bdqtest/index.md#42-resource-types-normative
 
 Now we need to provide the unambiguous technical details required for a developer to implement the Test.  
 
-Let's start with the question the test is asking, very simply phrased:  **Is there a value in dwc:footprintWKT?**
+Let's start with the question the Test is asking, very simply phrased:  **Is there a value in dwc:footprintWKT?**
 
 How do we phrase that question in a way that provides clear and unambiguous guidance to a developer who will implement the Test? In the BDQ standard, the phrasing follows a standard structure and terminology. 
 
@@ -517,7 +517,7 @@ Since this is a `Validation`, the Test will return either COMPLIANT or NOT_COMPL
 
 But, "contains some value" might be interpreted in different ways by different developers, so we will use an explicit concept from BDQ that allows developers to look in one place for the meaning of "contains some value", and know that this is a standard concept that gets reused.
 
-The [bdqval:](../list/bdqval/index.md) vocabulary contains a term for just this purpose: [bdqval:NotEmpty](../list/bdqval/index.md#bdqval_NotEmpty), a standard definition of this common concept for reuse in many tests, preventing ambiguity in implementation. Thus, we can rephrase the expected response to link to this BDQ concept:
+The [bdqval:](../list/bdqval/index.md) vocabulary contains a term for just this purpose: [bdqval:NotEmpty](../list/bdqval/index.md#bdqval_NotEmpty), a standard definition of this common concept for reuse in many Tests, preventing ambiguity in implementation. Thus, we can rephrase the expected response to link to this BDQ concept:
 
 **Expected Response** COMPLIANT if dwc:footprintWKT is bdqval:NotEmpty; otherwise NOT_COMPLIANT
 
@@ -527,7 +527,7 @@ This means that implementers should examine the input data, evaluate the stateme
 
 In this simple case, if `dwc:footprintWKT` is `bdqval:NotEmpty`, the Test should return COMPLIANT and stop there.  If `dwc:footprintWKT` is not `bdqval:NotEmpty` (i.e. is `bdqval:Empty`), the Test should return NOT_COMPLIANT.
  
-Formally in the bdqffdq: ontology, `Specification` is a class, which has a `bdqffdq:hasExpectedResponse` property (the `Expected Response` text). The Specification can have other properties for source authorities, parameters and default values.  The specification for a simple Test is found in the text of the `hasExpectedResponse`, in a more complex test, the specification is found split across all these properties of the `Specification` class instance.  When we talk about the specification of a Test, we mean the `Expected Response`, sometimes combined with other properties of a `Specification`.
+Formally in the bdqffdq: ontology, `Specification` is a class, which has a `bdqffdq:hasExpectedResponse` property (the `Expected Response` text). The Specification can have other properties for source authorities, parameters and default values.  The specification for a simple Test is found in the text of the `hasExpectedResponse`, in a more complex Test, the specification is found split across all these properties of the `Specification` class instance.  When we talk about the specification of a Test, we mean the `Expected Response`, sometimes combined with other properties of a `Specification`.
 
 See also: 
 * [Reading a Specification](../guide/implementers/index.md#232-reading-a-specification-non-normative) in the Implementers Guide.
@@ -544,7 +544,7 @@ This is shorthand for the explicit, but much harder to read:
 * bdqffdq:hasResponseStatus is RUN_HAS_RESULT and bdqffdq:hasResponseResult is COMPLIANT with an explanatory bdqffdq:hasResponseComment that dwc:footprintWKT contains a value if dwc:footprintWKT is bdqval:NotEmpty; 
 * otherwise bdqffdq:hasResponseStatus is RUN_HAS_RESULT and bdqffdq:hasResponseResult is NOT_COMPLIANT with an explanatory bdqffdq:hasResponseComment stating that dwc:footprintWKT contains no value.
 
-`Responses` from Tests must have the tripartite status, result, and comment structure, but the `Expected Response` in the test specification is a concise statement of the logic of the test, without all of these details (details for which the content is explicit in the BDQ standard, e.g. if the result is COMPLIANT, the status must be RUN_HAS_RESULT, and there must be a comment).
+`Responses` from Tests must have the tripartite status, result, and comment structure, but the `Expected Response` in the Test specification is a concise statement of the logic of the Test, without all of these details (details for which the content is explicit in the BDQ standard, e.g. if the result is COMPLIANT, the status must be RUN_HAS_RESULT, and there must be a comment).
 
 The conventions of evaluating clauses in sequence, returning a result from the first clause that evaluates to true, and highlighting only the key differences in each clause are very important in making complex Expected Responses readable and understandable to implementers.  (see, for example, the Expected Response for [VALIDATION_DATEIDENTIFIED_INRANGE](../terms/bdqtest/index.md#validation_dateidentified_inrange)).
 
@@ -602,8 +602,8 @@ This simple list of properties is sufficient for a human reader to understand th
 
 See also:
 * [Diagram of Test Concepts](../guide/implementers/index.md#3-compliant-implementation-normative) in the implementers guide.
-* [Example RDF for a test](../guide/bdqtest/index.md#6-example-rdf-description-of-a-test-non-normative) in the BDQ Tests: Concepts, Types, and Use document (VALIDATION_COUNTRYCODE_STANDARD in an RDF/XML serialization).
-* [Example RDF for a test](../guide/bdqffdq/index.md#26-example-representation-of-a-bdq-test-non-normative) in the Fitness For Use Framework Ontology: Concepts and Use (VALIDATION_COUNTRY_FOUND in a Turtle serialization). 
+* [Example RDF for a Test](../guide/bdqtest/index.md#6-example-rdf-description-of-a-test-non-normative) in the BDQ Tests: Concepts, Types, and Use document (VALIDATION_COUNTRYCODE_STANDARD in an RDF/XML serialization).
+* [Example RDF for a Test](../guide/bdqffdq/index.md#26-example-representation-of-a-bdq-test-non-normative) in the Fitness For Use Framework Ontology: Concepts and Use (VALIDATION_COUNTRY_FOUND in a Turtle serialization). 
 
 #### 4.10.2 Summary of the Test Definition
 
@@ -613,7 +613,7 @@ Thus, we could include this Test in our `Use Case`, even though it is not yet ac
 
 ## 5 A Test to Fill another Gap (non-normative)
 
-Another gap we identified in the `Use Case` was evaluating whether `prov:wasAttributedTo` contains a value, and whether that value is a valid ORCID ID.  Under the principle of keeping tests focused on a single aspect of data quality, we can break this down into three separate tests:
+Another gap we identified in the `Use Case` was evaluating whether `prov:wasAttributedTo` contains a value, and whether that value is a valid ORCID ID.  Under the principle of keeping Tests focused on a single aspect of data quality, we can break this down into three separate Tests:
 
 * prov:wasAttributedTo (Contains a value) **Gap**
 * prov:wasAttributedTo (Conforms to the structure of an ORCID ID) **Gap**
@@ -713,7 +713,7 @@ This could work for our `Use Case`, but what does it mean for a value to conform
 * COMPLIANT if the value in prov:wasAttributedTo conforms to the regular expression "^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$"
 * otherwise NOT_COMPLIANT
 
-But, where did that regular expression "^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$" come from?  It isn't inherent in the definition of `prov:wasAttributedTo`, it is something specific to some external authority.  In bdqffdq: is a means for us to separate out these specifics, the `Source Authority` (which will then set the stage for making this test more generally applicable).
+But, where did that regular expression "^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$" come from?  It isn't inherent in the definition of `prov:wasAttributedTo`, it is something specific to some external authority.  In bdqffdq: is a means for us to separate out these specifics, the `Source Authority` (which will then set the stage for making this Test more generally applicable).
 
 #### 6.7.1 Source Authority (non-normative)
 
@@ -721,7 +721,7 @@ When a Test references some external authoritative source, e.g. a controlled voc
 
 As noted in the BDQ documentation, many aspects of "data quality" or "fitness for use" cannot be evaluated IF no authority exists to which to evaluate data values.  For example, we cannot evaluate whether a value is a valid ORCID ID if we do not have an authority that defines what a valid ORCID ID looks like.  In this case, the authority is the ORCID organization itself, which provides documentation on the expected format for ORCID IDs.  We can reference this authority in our Test definition, and then use the information from that authority to define the expected format for ORCID IDs in our Test specification.  This is an externality we must reference in our Test definition, and thus we need to specify the source authority for this Test.
 
-In bdqffdq:, a `Specification` has a `hasExpectedResponse` property that contains the text of the Expected Response, and it can also have a `hasAuthoritiesDefaults` property.  The `hasAuthoritiesDefaults` property provides information on source authorities (and defaults for parameterized tests).
+In bdqffdq:, a `Specification` has a `hasExpectedResponse` property that contains the text of the Expected Response, and it can also have a `hasAuthoritiesDefaults` property.  The `hasAuthoritiesDefaults` property provides information on source authorities (and defaults for parameterized Tests).
 
 BDQ details a convention for the structure and format of source authorities (in `bdqffdq:hasAuthoritiesDefaults`) as follows:
 
@@ -769,7 +769,7 @@ Which, combining the Expected Response with the default sourceAuthority, could b
 
 #### 6.7.2 Generalize, add a parameter (non-normative)
 
-Some Tests have `Parameters`.  A Test with a `Parameter` will produce different results for the same input `Information Element` values, depending on the value of the parameter.  This allows for a single Test to be used in different contexts, with different expectations for how it will respond in certain conditions.  Parameters allow a test to be generalized to serve a broader range of use cases, while still maintaining a clear and specific test specification that can be implemented in a consistent way across different implementations.
+Some Tests have `Parameters`.  A Test with a `Parameter` will produce different results for the same input `Information Element` values, depending on the value of the parameter.  This allows for a single Test to be used in different contexts, with different expectations for how it will respond in certain conditions.  Parameters allow a Test to be generalized to serve a broader range of use cases, while still maintaining a clear and specific Test specification that can be implemented in a consistent way across different implementations.
 
 We could make this Test more general by allowing for alternative authorities, and thus more broadly applicable, by adding a parameter to the Test that allows an implementer to specify which authority to use for evaluating whether the value in prov:wasAttributedTo conforms to the expected format for an ORCID ID.  This would allow the Test to be used not just for ORCID IDs, but also for other types of identifiers that have a well-defined format and an authority that can be referenced for that format.
 
@@ -843,7 +843,7 @@ Notes might want to comment on variations in the expected structure of an ORCID 
 
 But we might or might not want to allow for http:// as well as https:// and allow a case error where x is used instead of X, and comment on the rationale for these decisions in the Notes. For example: 
 
-* **Notes** The expected format of an ORCID ID is ^https://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$, but we allow for protocol variants of http:// as well as https:// in the identifier and relax to the regex ^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$.  We expect the ORCID ID to be in resolvable form, not the bare identifier.  ORCID IDs are a subset of ISNI in the range 0000-0001-5000-0007 to 0000-0003-5000-0001, but this test only evaluates the format, not the range.  The form ORCID:0000-0001-5000-0007 should be treated as NOT_COMPLIANT by this test.
+* **Notes** The expected format of an ORCID ID is ^https://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$, but we allow for protocol variants of http:// as well as https:// in the identifier and relax to the regex ^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$.  We expect the ORCID ID to be in resolvable form, not the bare identifier.  ORCID IDs are a subset of ISNI in the range 0000-0001-5000-0007 to 0000-0003-5000-0001, but this Test only evaluates the format, not the range.  The form ORCID:0000-0001-5000-0007 should be treated as NOT_COMPLIANT by this Test.
 
 #### 6.8.1 Example Complex Implementation Notes
 
@@ -1166,7 +1166,7 @@ Before we focus on `MultiRecord` `Measures`, it is helpful to distinguish three 
 - `SingleRecord` `Measures` that summarize outcomes of other `SingleRecord` Tests on the same `SingleRecord` (e.g., `MEASURE_AMENDMENTS_PROPOSED`).
 - `MultiRecord` `Measures` that take the outputs of `SingleRecord` Tests as their inputs and return metrics or filters across a dataset (e.g., [MEASURE_VALIDATIONTESTS_NOTCOMPLIANT](../terms/bdqtest/index.md#MEASURE_VALIDATIONTESTS_NOTCOMPLIANT)).
 
-The remainder of this section focuses on `MultiRecord` `Measures` that take the output of other tests as their input, because such `Measures` are central to practical `Quality Control` workflows on datasets.
+The remainder of this section focuses on `MultiRecord` `Measures` that take the output of other Tests as their input, because such `Measures` are central to practical `Quality Control` workflows on datasets.
 
 #### 8.1.1 What a MultiRecord Measure takes as input (non-normative)
 
@@ -1237,7 +1237,7 @@ Depending on how your Test suite is designed, `MultiRecord` `Measures` that coun
 
 A `MultiRecord` `Measure` that counts records where `Response.status=EXTERNAL_PREREQUISITES_NOT_MET` may be informative in some workflow settings to identify cases where Tests may need to be run again later due to some problem connecting to some external source authority at run time.
 
-**`Use Case` and `Policy` design note**: In practice, the utility of counting  INTERNAL_PREREQUISITES_NOT_MET outcomes depends on how your specification (`Expected Response`) clauses are written across a suite of tests.  Suites that include explicit prerequisite checks (e.g., “INTERNAL_PREREQUISITES_NOT_MET if dwc:month is bdqval:Empty”) will surface more of these statuses, while suites that instead express missingness and non-interpretability as direct NOT_COMPLIANT outcomes in focused Validation Tests (e.g., separate ...\_NOTEMPTY and ...\_STANDARD Tests) will enable clearly identifying those cases in more actionable compliance/non-compliance counts.  Again, iterate in `Use Case` and Test design.
+**`Use Case` and `Policy` design note**: In practice, the utility of counting  INTERNAL_PREREQUISITES_NOT_MET outcomes depends on how your specification (`Expected Response`) clauses are written across a suite of Tests.  Suites that include explicit prerequisite checks (e.g., “INTERNAL_PREREQUISITES_NOT_MET if dwc:month is bdqval:Empty”) will surface more of these statuses, while suites that instead express missingness and non-interpretability as direct NOT_COMPLIANT outcomes in focused Validation Tests (e.g., separate ...\_NOTEMPTY and ...\_STANDARD Tests) will enable clearly identifying those cases in more actionable compliance/non-compliance counts.  Again, iterate in `Use Case` and Test design.
 
 #### 8.1.5 Practical note: summary values vs. details
 
@@ -1289,7 +1289,7 @@ In contrast to `Quality Assurance`, which focuses on filtering a dataset down to
 
 For real-world datasets, the number of `NOT_COMPLIANT` results can be large. A productive first step in a practical workflow is to summarize results in ways that reveal patterns:
 
-- **By `Test` (`Validation` / `Issue`)**: Which Tests fail most often? Which failures are most likely to affect your intended `Use Case`?
+- **By Test (`Validation`)**: Which Tests fail most often? Which failures are most likely to affect your intended `Use Case`?
 - **By `Information Element`**: Are failures concentrated in a small set of terms (e.g., `dwc:countryCode`, `dwc:eventDate`, `dwc:scientificName`)?
 - **By source / provider / collection / pipeline stage**: Are failures clustered by dataset subset, indicating differences in upstream practices?
 - **By repeated value**: Do many failures share the same few problematic values (e.g., a common misspelling, code system mismatch, or placeholder value)?

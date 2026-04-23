@@ -82,9 +82,9 @@ The BDQ standard is intended for:
 - Collection managers and data managers interpreting test results to support operational decisions and prioritization of data quality improvement efforts.
 - Standards developers and knowledge engineers aligning related work with BDQ vocabularies and extension points.
 
-For practitioners, researchers, collection managers, and data managers, the BDQ `Tests` (`bdqtest:`) provide a shared, community-defined set of Test definitions that can be selected and run as suites to evaluate fitness for use for particular specified uses of biodiversity data.
+For practitioners, researchers, collection managers, and data managers, the BDQ Tests (`bdqtest:`) provide a shared, community-defined set of Test definitions that can be selected and run as suites to evaluate fitness for use for particular specified uses of biodiversity data.
 
-For developers, standards developers, and knowledge engineers, the Fitness for Use Framework (`bdqffdq:`) and supporting vocabularies (e.g., `bdqval:`, `bdqdim:`, `bdqcrit:`, and `bdqenh:`) provide the common semantic model used to define `Tests`, identify their inputs (`Information Elements`), and represent their outputs (`Responses`) in a consistent and interoperable way.  No background in ontologies is required to understand or apply the `Tests`, though familiarity with RDF/OWL will be helpful for those working directly with the ontologies or exchanging `Data Quality Reports` as RDF.
+For developers, standards developers, and knowledge engineers, the Fitness for Use Framework (`bdqffdq:`) and supporting vocabularies (e.g., `bdqval:`, `bdqdim:`, `bdqcrit:`, and `bdqenh:`) provide the common semantic model used to define Tests, identify their inputs (`Information Elements`), and represent their outputs (`Responses`) in a consistent and interoperable way.  No background in ontologies is required to understand or apply the Tests, though familiarity with RDF/OWL will be helpful for those working directly with the ontologies or exchanging `Data Quality Reports` as RDF.
 
 ### 1.3 Contributing TDWG Interest and Task Groups (non-normative)
 
@@ -152,17 +152,17 @@ This section provides a reader‑focused roadmap to that document set. Its purpo
 
 <!--
  
-BDQ defines a set of vocabularies (and an ontology) that are used to define structured **Tests**. The BDQ Tests evaluate biodiversity data in the context of defined `Use Cases`, and each `Test` is designed to assess and report on a specific aspect of data quality (e.g., `Accuracy`, `Completeness`, `Consistency`, `Conformance`, `Likeliness`, or `Reliability`; see the `bdqdim:` vocabulary). Because BDQ specifies Tests in an implementation-agnostic way, the same Test definitions can be implemented in different programming languages and environments and applied in contexts ranging from small-scale data curation to large-scale biodiversity aggregation.
+BDQ defines a set of vocabularies (and an ontology) that are used to define structured **Tests**. The BDQ Tests evaluate biodiversity data in the context of defined `Use Cases`, and each Test is designed to assess and report on a specific aspect of data quality (e.g., `Accuracy`, `Completeness`, `Consistency`, `Conformance`, `Likeliness`, or `Reliability`; see the `bdqdim:` vocabulary). Because BDQ specifies Tests in an implementation-agnostic way, the same Test definitions can be implemented in different programming languages and environments and applied in contexts ranging from small-scale data curation to large-scale biodiversity aggregation.
 
 BDQ is organized as a set of complementary documents that together define *what* to test, *how* to describe Tests and their results consistently, and *how* to apply those Tests in practice. At the core are the BDQ Tests (`bdqtest:`), which specify reusable, implementable evaluations over clearly identified inputs (`Information Elements` plus optional `Parameters`) and produce structured outputs (`Responses`) that can be reported and exchanged across systems.  
 
-The semantics and shared terminology used by the `Tests` are provided by the Fitness For Use Framework (`bdqffdq:`) and supporting vocabularies (`bdqval:`, `bdqdim:`, `bdqcrit:`, and `bdqenh:`). Together, these vocabularies make it possible to define each `Test` and interpret its Responses in a consistent way, so that results from different implementations can be treated as comparable statements about fitness for use.
+The semantics and shared terminology used by the Tests are provided by the Fitness For Use Framework (`bdqffdq:`) and supporting vocabularies (`bdqval:`, `bdqdim:`, `bdqcrit:`, and `bdqenh:`). Together, these vocabularies make it possible to define each Test and interpret its Responses in a consistent way, so that results from different implementations can be treated as comparable statements about fitness for use.
 
-BDQ supports both `Quality Assurance` (QA) and `Quality Control` (QC) by providing standardized `Tests`, structured Responses, and `Measure` patterns that can be composed into Test suites for particular `Use Cases` (see [2. Context for Quality, Uses and Purposes](docs/guide/users/index.md#2-context-for-quality-uses-and-purposes-non-normative) in the [BDQ User's Guide](docs/guide/users/index.md)). Running the set of `Tests` associated with a `Use Case` on a dataset produces an evaluation of the fitness of that dataset for that specified use, and yields results that can be compared and shared across organizations. By using a common framework and shared vocabularies to define and report `Tests`, BDQ makes it easier for the community to collaborate on data quality assessment, implementation, and interpretation in a consistent manner.
+BDQ supports both `Quality Assurance` (QA) and `Quality Control` (QC) by providing standardized Tests, structured Responses, and `Measure` patterns that can be composed into Test suites for particular `Use Cases` (see [2. Context for Quality, Uses and Purposes](docs/guide/users/index.md#2-context-for-quality-uses-and-purposes-non-normative) in the [BDQ User's Guide](docs/guide/users/index.md)). Running the set of Tests associated with a `Use Case` on a dataset produces an evaluation of the fitness of that dataset for that specified use, and yields results that can be compared and shared across organizations. By using a common framework and shared vocabularies to define and report Tests, BDQ makes it easier for the community to collaborate on data quality assessment, implementation, and interpretation in a consistent manner.
 
-BDQ currently focuses on commonly used biodiversity data expressed with Darwin Core terms (Wieczorek et al. 2012), but the standard is modular and extensible: communities may define additional `Use Cases`, propose new `Tests`, and align other vocabularies to the BDQ model while retaining interoperable Test semantics and Responses.
+BDQ currently focuses on commonly used biodiversity data expressed with Darwin Core terms (Wieczorek et al. 2012), but the standard is modular and extensible: communities may define additional `Use Cases`, propose new Tests, and align other vocabularies to the BDQ model while retaining interoperable Test semantics and Responses.
 
-Readers can approach the standard in different ways depending on their needs. The **BDQ Test Quick Reference Guide** provides a reference for the most comonly used information about the Tests. If you want to *run* BDQ and understand outputs, start with the **BDQ User’s Guide**, which explains how Tests relate to `Use Cases`, how `Quality Control` and `Quality Assurance` can be supported using suites of Tests, and how to interpret `Data Quality Reports` in real-world data curation and aggregation settings. If you want to *implement* BDQ in software, start with the **BDQ Implementer’s Guide**, which provides normative requirements for conforming implementations, including `Response` structure, handling of `Empty`, parameter behavior, and report requirements. If you want to understand the formal model behind BDQ and how Tests are defined in RDF/OWL, see the **Fitness For Use Framework Ontology** landing page and the **Fitness For Use Framework Ontology Guide**; for complete normative term definitions, consult the relevant **List of Terms** documents.  If you wish to define new `Use Cases` or `Tests`, the **BDQ Tutorial** provides worked examples.
+Readers can approach the standard in different ways depending on their needs. The **BDQ Test Quick Reference Guide** provides a reference for the most comonly used information about the Tests. If you want to *run* BDQ and understand outputs, start with the **BDQ User’s Guide**, which explains how Tests relate to `Use Cases`, how `Quality Control` and `Quality Assurance` can be supported using suites of Tests, and how to interpret `Data Quality Reports` in real-world data curation and aggregation settings. If you want to *implement* BDQ in software, start with the **BDQ Implementer’s Guide**, which provides normative requirements for conforming implementations, including `Response` structure, handling of `Empty`, parameter behavior, and report requirements. If you want to understand the formal model behind BDQ and how Tests are defined in RDF/OWL, see the **Fitness For Use Framework Ontology** landing page and the **Fitness For Use Framework Ontology Guide**; for complete normative term definitions, consult the relevant **List of Terms** documents.  If you wish to define new `Use Cases` or Tests, the **BDQ Tutorial** provides worked examples.
 
 ![Diagram of approaches to the BDQ documentation](overview_diagram_use_organized.svg)
 
@@ -185,21 +185,21 @@ Readers can approach the standard in different ways depending on their needs. Th
         <strong>Start with:</strong><br>
 		:green_book:
         <strong><a href="./docs/terms/bdqtest/index.md">BDQ Tests Quick Reference Guide</a></strong><br>
-        Concise descriptions of BDQ tests and assertions. First stop after the landing page for understanding test names and outcomes.</a><br>
+        Concise descriptions of BDQ Tests and assertions. First stop after the landing page for understanding Test names and outcomes.</a><br>
 		See also: <a href="./docs/guide/users/index.md#31-test-types-non-normative">Test Types</a> and <a href="./docs/guide/users/index.md#32-test-inputs-and-outputs-non-normative">Test Inputs and Outputs</a> in the Users Guide.
       </td>
       <td valign="top">
         <strong>Start with:</strong><br>
 		:green_book:
         <strong><a href="./docs/terms/bdqtest/index.md">BDQ Tests Quick Reference Guide</a></strong><br>
-        Overview of test purposes and outcomes; index into detailed definitions.<br>
+        Overview of Test purposes and outcomes; index into detailed definitions.<br>
 		See also: <a href="./docs/guide/bdqtest/index.md#21-what-is-meant-by-test-non-normative">What is meant by "Test"</a> and <a href="./docs/guide/bdqtest/index.md#3-test-types-non-normative">Test Types</a> in BDQ Tests, Concepts, and Use.</a>
       </td>
       <td valign="top">
         <strong>Start with:</strong><br>
 		:orange_book:
         <strong><a href="./docs/tutorial/index.md">Tutorial: From Use Case to Test</a></strong><br>
-        Recommended starting point for designing a new BDQ test.<br>
+        Recommended starting point for designing a new BDQ Test.<br>
 		See also: <a href="./docs/guide/users/index.md#31-test-types-non-normative">Test Types</a> and <a href="./docs/guide/users/index.md#32-test-inputs-and-outputs-non-normative">Test Inputs and Outputs</a> in the Users Guide.
       </td>
     </tr>
@@ -207,13 +207,13 @@ Readers can approach the standard in different ways depending on their needs. Th
       <td valign="top">
 		:green_book:
         <strong><a href="./docs/guide/users/index.md">BDQ User’s Guide</a></strong><br>
-        Explains how to interpret BDQ test results and what they imply for data quality and use decisions.
+        Explains how to interpret BDQ Test results and what they imply for data quality and use decisions.
         See also <a href="./docs/guide/bdqtest/index.md#22-use-cases-non-normative">Use Cases</a> 
       </td>
       <td valign="top">
 		:green_book:
         <strong><a href="./docs/guide/implementers/index.md">BDQ Implementer’s Guide</a></strong><br>
-        Explains how to implement BDQ tests: inputs, outputs, edge cases, and how to use the test descriptions and vocabularies in software.
+        Explains how to implement BDQ Tests: inputs, outputs, edge cases, and how to use the Test descriptions and vocabularies in software.
         See also <a href="./docs/guide/bdqtest/index.md#22-use-cases-non-normative">Use Cases</a> 
       </td>
       <td valign="top">
@@ -229,7 +229,7 @@ Readers can approach the standard in different ways depending on their needs. Th
       <td valign="top">
 		:blue_book:
         <strong>Test Vocabulary &amp; Definitions</strong><br>
-        Normative definitions of the tests themselves, for readers who need exact meanings or wish to trace provenance.<br>
+        Normative definitions of the Tests themselves, for readers who need exact meanings or wish to trace provenance.<br>
 		bdqtest: <a href="./docs/list/bdqtest/list/index.md">Term List</a>.
       </td>
       <td valign="top">
@@ -237,14 +237,14 @@ Readers can approach the standard in different ways depending on their needs. Th
         <strong>Test Vocabulary, Definitions &amp; Serializations</strong><br>
         Explanations and Normative Guidance on the Tests and their Uses.
 		<a href="./docs/guides/bdqtest/index.md">BDQ Tests: Concepts, Types, and Use</a>.<br>
-        Normative machine‑readable definitions and versioned lists of tests.
+        Normative machine‑readable definitions and versioned lists of Tests.
 		bdqtest: <a href="./docs/list/bdqtest/list/index.md">Term List</a><br>
 		and serialized versions: <a href="./dist/bdqtest.xml">RDF/XML</a>, <a href="./dist/bdqtest.ttl">Turtle</a>, <a href="./dist/bdqtest.json">JSON-LD</a>.
       </td>
       <td valign="top">
 		:blue_book:
         <strong>Supporting Vocabularies</strong><br>
-        Controlled vocabularies for criteria, dimensions, enhancements, and other elements needed to specify new tests.</a>
+        Controlled vocabularies for criteria, dimensions, enhancements, and other elements needed to specify new Tests.</a>
 		<a href="./docs/list/bdqval/index.md">bdqval: Vocabulary</a>, <a href="./docs/list/bdqcrit/index.md">bdqcrit: Vocabulary</a>, <a href="./docs/list/bdqdim/index.md">bdqdim: Vocabulary</a>, <a href="./docs/list/bdqenh/index.md">bdqenh: Vocabulary</a>.
       </td>
     </tr>
@@ -263,7 +263,7 @@ Readers can approach the standard in different ways depending on their needs. Th
       <td valign="top">
 		:blue_book:
         <strong>BDQ Tests Vocabulary &amp; Canonical Definitions</strong><br>
-        Examples of how existing tests are formally defined and versioned; useful patterns for new test design.<br>
+        Examples of how existing Tests are formally defined and versioned; useful patterns for new Test design.<br>
 		bdqtest: <a href="./docs/list/bdqtest/list/index.md">Term List</a>
       </td>
     </tr>
@@ -273,7 +273,7 @@ Readers can approach the standard in different ways depending on their needs. Th
       <td valign="top">
 		:orange_book:
         <strong><a href="./docs/tutorial/index.md">Tutorial: From Use Case to Test</a></strong><br>
-        Worked example that clarifies the logic behind tests you implement.
+        Worked example that clarifies the logic behind Tests you implement.
       </td>
       <td valign="top">
       </td>
@@ -282,17 +282,17 @@ Readers can approach the standard in different ways depending on their needs. Th
       <td valign="top">
 		:notebook:
         <strong><a href="./docs/supplement/index.md">Supplemental Information</a></strong><br>
-        Background, rationale, and historical context for BDQ tests. Helpful but not required for routine interpretation.
+        Background, rationale, and historical context for BDQ Tests. Helpful but not required for routine interpretation.
       </td>
       <td valign="top">
 		:notebook:
         <strong><a href="./docs/supplement/index.md">Supplemental Information</a></strong><br>
-        Background and rationale that clarify why tests and implementations are structured as they are.
+        Background and rationale that clarify why Tests and implementations are structured as they are.
       </td>
       <td valign="top">
 		:notebook:
         <strong><a href="./docs/supplement/index.md">Supplemental Information</a></strong><br>
-        Background, history, and rationale that help inform new test designs.
+        Background, history, and rationale that help inform new Test designs.
       </td>
     </tr>
   </tbody>
@@ -436,11 +436,11 @@ The BDQ standard does not include implementations of Tests, but there are extern
 
 ### 4.1 Java Implementation (non-normative)
 
-While **not part of the BDQ standard**, a validated Java® implementation of the tests is provided in the [event_date_qc](https://github.com/FilteredPush/event_date_qc), [sci_name_qc](https://github.com/FilteredPush/sci_name_qc), [geo_ref_qc](https://github.com/FilteredPush/geo_ref_qc) and [rec_occur_qc](https://github.com/FilteredPush/rec_occur_qc) libraries.  Also see [bdqtestrunner](https://github.com/FilteredPush/bdqtestrunner/), which demonstrates conformance of these libraries with the provided [Test Conformance Testing Data](#362-test-conformance-testing-data-non-normative).      
+While **not part of the BDQ standard**, a validated Java® implementation of the Tests is provided in the [event_date_qc](https://github.com/FilteredPush/event_date_qc), [sci_name_qc](https://github.com/FilteredPush/sci_name_qc), [geo_ref_qc](https://github.com/FilteredPush/geo_ref_qc) and [rec_occur_qc](https://github.com/FilteredPush/rec_occur_qc) libraries.  Also see [bdqtestrunner](https://github.com/FilteredPush/bdqtestrunner/), which demonstrates conformance of these libraries with the provided [Test Conformance Testing Data](#362-test-conformance-testing-data-non-normative).      
 
 ### 4.2 BDQEmail (non-normative)
 
-While **not part of the BDQ standard**, GBIF Norway has developed a tool called BDQEmail that allows users to submit records for testing and receive results via email. This tool wraps the Java implementation of the tests with an email and large language model processing system and provides an accessible way for users to evaluate the quality of their biodiversity data using the BDQ Tests without needing to implement the tests themselves.  The tool ([gbif-norway/bdq-multirecord-agent](https://github.com/gbif-norway/bdq-multirecord-agent)) is described at: [https://www.gbif.no/services/index.html](https://www.gbif.no/services/index.html).
+While **not part of the BDQ standard**, GBIF Norway has developed a tool called BDQEmail that allows users to submit records for testing and receive results via email. This tool wraps the Java implementation of the Tests with an email and large language model processing system and provides an accessible way for users to evaluate the quality of their biodiversity data using the BDQ Tests without needing to implement the Tests themselves.  The tool ([gbif-norway/bdq-multirecord-agent](https://github.com/gbif-norway/bdq-multirecord-agent)) is described at: [https://www.gbif.no/services/index.html](https://www.gbif.no/services/index.html).
 
 ## 6 Contributions and Acknowledgments (non-normative)
 

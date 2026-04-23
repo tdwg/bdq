@@ -117,7 +117,7 @@ Data quality needs evolve, but BDQ defines a community-agreed suite of Tests ini
 This document is intended for audiences who need a detailed understanding of the BDQ Tests, including:
 
 - Data quality specialists configuring or analyzing BDQ Test outputs;
-- Data providers, curators, and aggregator staff seeking to understand test results and improve data quality;
+- Data providers, curators, and aggregator staff seeking to understand Test results and improve data quality;
 - Software developers and data platform architects implementing BDQ Tests;
 - Researchers and data managers evaluating dataset readiness for specific uses;
 - Standards developers integrating BDQ Test logic into broader biodiversity data infrastructures.
@@ -204,9 +204,9 @@ The emphasis in BDQ is on Tests that evaluate values from a `Single Record` (`bd
 
 This section defines the capitalized term “Test” as used in the BDQ standard and how it is constructed within the Fitness-for-Use framework. We use the capitalized term "Test" to mean something specific in the BDQ Standard. A Test is any instance of a subclass of `bdqffdq:DataQualityNeed` (e.g., `bdqffdq:Validation`) composed with an instance of a subclass of `bdqffdq:Method` (e.g., `bdqffdq:ValidationMethod`) composed with an instance of `bdqffdq:Specification`. When run by a `bdqffdq:Implementation`, each BDQ Test can produce a `bdqffdq:DataQualityReport` consisting of `bdqffdq:Responses`. See the diagram in [BDQ Tests: An Operational Perspective](#51-bdq-tests-an-operational-perspective-non-normative) below.
 
-The scope of each BDQ Test is largely provided by the properties of a `bdqffdq:Specification`. The [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) used in the specification are included in the `Information Elements` (`bdqffdq:InformationElement`). The specification also includes references to external authorities (external to the test specification, and usually also external to the Darwin Core standard, Wieczorek et al. 2012) that are required to implement the Test, for example, references to an ISO standard or a GBIF maintained controlled vocabulary. Such authoritative references are listed under `sourceAuthority` (`bdqval:sourceAuthority`) with a link to the authority and optionally, a link to a specific online resource required for the implementation of the Test.
+The scope of each BDQ Test is largely provided by the properties of a `bdqffdq:Specification`. The [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) used in the specification are included in the `Information Elements` (`bdqffdq:InformationElement`). The specification also includes references to external authorities (external to the Test specification, and usually also external to the Darwin Core standard, Wieczorek et al. 2012) that are required to implement the Test, for example, references to an ISO standard or a GBIF maintained controlled vocabulary. Such authoritative references are listed under `sourceAuthority` (`bdqval:sourceAuthority`) with a link to the authority and optionally, a link to a specific online resource required for the implementation of the Test.
 
-Each BDQ Test is defined to operate on a `SingleRecord` or a `MultiRecord`. The Framework allows `MultiRecord` Tests to take data as input, for example to identify outliers within a dataset, or for `MultiRecord` Tests that take the output of `SingleRecord` tests as their input to provide an assessment of quality across the dataset.  No BDQ `MultiRecord` Tests have been defined to take data as input (but such could be defined).  No BDQ `SingleRecord` Tests have been defined to use data in other records within a dataset to evaluate the quality of data in a `Single Record` (but such could be defined).  The only `Multi Record` Tests included in BDQ accumulate the outputs of other Tests.
+Each BDQ Test is defined to operate on a `SingleRecord` or a `MultiRecord`. The Framework allows `MultiRecord` Tests to take data as input, for example to identify outliers within a dataset, or for `MultiRecord` Tests that take the output of `SingleRecord` Tests as their input to provide an assessment of quality across the dataset.  No BDQ `MultiRecord` Tests have been defined to take data as input (but such could be defined).  No BDQ `SingleRecord` Tests have been defined to use data in other records within a dataset to evaluate the quality of data in a `Single Record` (but such could be defined).  The only `Multi Record` Tests included in BDQ accumulate the outputs of other Tests.
 
 ### 2.2 Use Cases (non normative)
 
@@ -233,7 +233,6 @@ A Response serves as the formal output of a Test and consists of three primary c
 
 Each `Validation` Test is composed of an instance of `bdqffdq:Validation` (which expresses a data quality need in the abstract) with an instance of `bdqffdq:ValidationMethod` linking it to an instance of a `bdqffdq:Specification` (which gives details of how that data quality need is to be concretely assessed).
 
-`Validation` Tests in BDQ evaluate values in one or more [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) for fitness for a particular `Data Quality Need`. In some cases, `Validation` Tests check for the presence or the lack of a value. `Validation` Tests are phrased as positive statements consistent with the Fitness For Use Framework (Veiga 2016, Veiga et al. 2017). For example, [VALIDATION_TAXONRANK_NOTEMPTY](../../terms/bdqtest/index.md#VALIDATION_TAXONRANK_NOTEMPTY) will return a `Response.status`="RUN_HAS_RESULT" and `Response.result`="COMPLIANT" if a record being tested contains a value in `dwc:taxonRank`, rather than being phrased in the negative (i.e., VALIDATION_TAXONRANK_EMPTY) and flagging a potential problem. Data are found to be fit for some use if all `Validations` comprising a corresponding `Use Case` have a `Response.result`="COMPLIANT".
 
 The response of a `Validation` Test (i.e., an instance of a `bdqffdq:ValidationResponse`) MUST take one of three forms.
 
@@ -440,7 +439,7 @@ Example RDF Fragment from the `Specification` for [VALIDATION_COUNTRYCODE_STANDA
 
 ## 5 Design of the Tests (normative)
 
-BDQ `Tests` are designed with a clear boundary of responsibility: they take a defined set of input `Information Elements` (and optional `Parameters`) and return a structured `Response` describing the outcome. This standardization of inputs and outputs means a `Test` implementation can be treated as a small, self-contained component whose behavior is determined by its `Specification` and is consistent across programming languages and environments. The surrounding execution framework is responsible for obtaining and binding raw data to the required `Information Elements`, selecting which `Tests` to run (e.g., by `Use Case` via `Policies`), and assembling the resulting `Responses` into `Data Quality Reports`. In this way, BDQ separates the semantics of `Test` behavior (what is evaluated and how results are expressed) from the mechanics of test execution (how data are accessed, orchestrated, filtered, and reported).
+BDQ Tests are designed with a clear boundary of responsibility: they take a defined set of input `Information Elements` (and optional `Parameters`) and return a structured `Response` describing the outcome. This standardization of inputs and outputs means a Test implementation can be treated as a small, self-contained component whose behavior is determined by its `Specification` and is consistent across programming languages and environments. The surrounding execution framework is responsible for obtaining and binding raw data to the required `Information Elements`, selecting which Tests to run (e.g., by `Use Case` via `Policies`), and assembling the resulting `Responses` into `Data Quality Reports`. In this way, BDQ separates the semantics of Test behavior (what is evaluated and how results are expressed) from the mechanics of test execution (how data are accessed, orchestrated, filtered, and reported).
 
 ### 5.1 BDQ Tests: An Operational Perspective (non-normative)
 
@@ -538,27 +537,27 @@ A complete description of BDQ Tests can be found in the RDF representation of th
 
 ## 7 Creating New Tests (non-normative)
 
-The `Tests` in the BDQ Standard are a subset of all the possible tests that could be developed for testing biodiversity data quality, even within the `Darwin Core` environment. [2.1 Definition of Core](../../supplement/index.md#21-definition-of-core-non-normative) in the [BDQ Supplemental Information](../../supplement/index.md) provides the background context as to why the current suite of Tests were chosen.
+The Tests in the BDQ Standard are a subset of all the possible tests that could be developed for testing biodiversity data quality, even within the `Darwin Core` environment. [2.1 Definition of Core](../../supplement/index.md#21-definition-of-core-non-normative) in the [BDQ Supplemental Information](../../supplement/index.md) provides the background context as to why the current suite of Tests were chosen.
 
-Users and communities are free to define, implement, and use their own tests for their own purposes, and may propose tests for inclusion within the BDQ Standard.
+Users and communities are free to define, implement, and use their own Tests for their own purposes, and may propose Tests for inclusion within the BDQ Standard.
 
 When considering development of a new Test, users are urged to first review existing Test proposals in GitHub that may be related to their intended Test. In particular, there are a number of Tests that were proposed but not included in BDQ and tagged "`Supplementary`", as well as Tests that were proposed but rejected and tagged "`DO_NOT_IMPLEMENT`".
 
 The `Supplementary` Tests may provide a close match for a specific `Use Case`, or may provide a useful template to build from, and should be reviewed before proposing a new Test from scratch. The `DO_NOT_IMPLEMENT` Tests document proposals that were judged to be problematic; the accompanying comments describe the rationale for rejection and reviewing them can help avoid re-proposing Tests with similar issues.
 
-Implementers are free to implement a subset of the `CORE` Tests, or `Supplementary` Tests, or new Tests when there is a particular data quality need within their domain - e.g., testing for a value of sub-genus against a taxonomic name authority or testing for a valid depth against maximum depth around the location of an observation. Note however, that an implementation of BDQ will only be compliant with the standard if all `Tests` for at least one `Use Case` are implemented. 
+Implementers are free to implement a subset of the `CORE` Tests, or `Supplementary` Tests, or new Tests when there is a particular data quality need within their domain - e.g., testing for a value of sub-genus against a taxonomic name authority or testing for a valid depth against maximum depth around the location of an observation. Note however, that an implementation of BDQ will only be compliant with the standard if all Tests for at least one `Use Case` are implemented. 
 
 ### 7.1 Elements of a New Test (non-normative)
 
-Formally, the description of a Test is complex.  Informally, there are a few central elements that describe a test and what it does.  
+Formally, the description of a Test is complex.  Informally, there are a few central elements that describe a Test and what it does.  
 
 * First, a Test serves some purpose. A Test evaluates some way in which data are fit for some purpose, thus each Test starts from one or more `Use Cases`. 
 * Second, a Test operates on specific inputs, specific elements of data, these are the `Information Elements`.  
 * Third, a Test has some specific purpose, described in simple language.  This is the Test Description.
 * Fourth, this plain language description of the Test must be expanded into specific language that allows an implementer to understand exactly what code implementing a Test should do, and what outputs it should provide for different possible input values, this is the `Expected Response`.   
-* Fifth, it is important to be clear whether a Test evaluates a `SingleRecord` or operates over multiple records in a data set (a `MultiRecord` test).
+* Fifth, it is important to be clear whether a Test evaluates a `SingleRecord` or operates over multiple records in a data set (a `MultiRecord` Test).
 
-Tests may be expected to form related clusters, for example, a `Validation` that assesses whether the value of `ac:variantLiteral` in a `SingleRecord` is found in as a controlled value string in the Audiovisual Core variant: List of Terms, combined with an `Amendment` that proposes changes to values of `ac:variantLiteral` to conform them to that controlled vocabulary, combined with a `MultiRecord` `Measure` that counts the number of `COMPLIANT` values for the `Validation` evaluated for each record in a data set.  Under `QualityControl`, this `Measure` can evaluate how much the data set could be improved for some purpose if all the proposed changes from the `Amendment` were accepted (by running the tests in pre-amendment, amendment, and post-amendment phases) 
+Tests may be expected to form related clusters, for example, a `Validation` that assesses whether the value of `ac:variantLiteral` in a `SingleRecord` is found in as a controlled value string in the Audiovisual Core variant: List of Terms, combined with an `Amendment` that proposes changes to values of `ac:variantLiteral` to conform them to that controlled vocabulary, combined with a `MultiRecord` `Measure` that counts the number of `COMPLIANT` values for the `Validation` evaluated for each record in a data set.  Under `QualityControl`, this `Measure` can evaluate how much the data set could be improved for some purpose if all the proposed changes from the `Amendment` were accepted (by running the Tests in pre-amendment, amendment, and post-amendment phases) 
 
 See the [Tutorial](../../tutorial/index.md) for a worked out example of the definition of a new Test.
 
