@@ -267,11 +267,15 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 			except:
 				outputUseCaseIndex.write("error extracting fitness requirements\n")
 				outputUseCaseIndex.write("\n")
+			#for test in usecaseDict[useCase]:
+			#	outputUseCaseIndex.write(f'{test}\n')
+			#	outputUseCaseIndex.write(f'- Term IRI: https://rs.tdwg.org/bdqtest/terms/{usecaseDict[useCase][test]}\n')
+			#	outputUseCaseIndex.write(f'- [Quick Reference Guide](index.md#{test})\n')
+			#	outputUseCaseIndex.write(f'- [Term List](../../list/bdqtest/index.md#bdqtest_{usecaseDict[useCase][test]})\n\n')
 			for test in usecaseDict[useCase]:
-				outputUseCaseIndex.write(f'{test}\n')
-				outputUseCaseIndex.write(f'- Term IRI: https://rs.tdwg.org/bdqtest/terms/{usecaseDict[useCase][test]}\n')
-				outputUseCaseIndex.write(f'- [Quick Reference Guide](index.md#{test})\n')
-				outputUseCaseIndex.write(f'- [Term List](../../list/bdqtest/index.md#bdqtest_{usecaseDict[useCase][test]})\n\n')
+				outputUseCaseIndex.write(f'{test}')
+				outputUseCaseIndex.write(f' [Quick Reference Guide](index.md#{test})')
+				outputUseCaseIndex.write(f' [Term List](../../list/bdqtest/index.md#bdqtest_{usecaseDict[useCase][test]})\n\n')
 			outputUseCaseIndex.write("\n\n")
 
 		# Index by information element
