@@ -326,7 +326,7 @@ topics:
         - "bdqffdq:hasArgumentValue"
         - "bdqffdq:hasParameter"
         - "bdqffdq:hasAuthoritiesDefaults"
-        - "bdq:sourceAuthority"
+        - "bdqval:sourceAuthority"
         - "Parameter"
         - "Argument"
         - "sourceAuthority"
@@ -392,11 +392,11 @@ topics:
   # ----------------------------
 
   - id: controlled_vocabularies
-    label: Controlled vocabularies (bdq:, bdqcrit:, bdqdim:, bdqenh:, bdqtest:)
+    label: Controlled vocabularies (bdqval:, bdqcrit:, bdqdim:, bdqenh:, bdqtest:)
     description: Normative sections that define or enumerate controlled vocabulary terms and their use in the BDQ standard.
     cues:
       curies:
-        - "bdq:"
+        - "bdqval:"
         - "bdqcrit:"
         - "bdqdim:"
         - "bdqenh:"

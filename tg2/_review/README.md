@@ -44,7 +44,7 @@ The theoretical perspective is formally based on the [**Biodiversity Data Qualit
 The Tests and the Framework are linked with each other via **foundational vocabularies** and **controlled vocabularies of values**. The terms in these vocabularies are formally defined in the **List of terms** documents, one for each vocabulary defined by the BDQ standard.  IRIs in these documents follow the patterns in [TDWG Standards Metadata](https://tdwg.github.io/rs.tdwg.org/#2-iri-patterns). Following the guidance of the [TDWG Standards Documentation Specification](https://github.com/tdwg/vocab/blob/master/sds/documentation-specification.md), the Fitness For Use Ontology has term definitions in a List of Terms document (below), and axioms providing additional ontology logic in a Vocabulary Extension document (above). We recommend reviewing these vocabularies carefully as well:
 
 - [**BDQ Tests and Assertions List of Terms (bdqtest:)**](docs/list/bdqtest/index.md)
-- [**BDQ Controlled Vocabulary List of Terms (bdq:)**](docs/list/bdq/index.md)
+- [**BDQ Controlled Vocabulary List of Terms (bdqval:)**](docs/list/bdqval/index.md)
 - [**Data Quality Criterion Controlled Vocabulary List of Terms (bdqcrit:)**](docs/list/bdqcrit/index.md)
 - [**Data Quality Dimension Controlled Vocabulary List of Terms (bdqdim:)**](docs/list/bdqdim/index.md)
 - [**Data Quality Enhancement Controlled Vocabulary List of Terms (bdqenh:)**](docs/list/bdqenh/index.md)

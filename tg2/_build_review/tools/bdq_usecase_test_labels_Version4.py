@@ -5,11 +5,11 @@ List BDQ Tests by Use Case from bdqtest.ttl, excluding `MultiRecord` `Measures`.
 @author: GitHub copilot with human review and adjustments by Paul J. Morris
 
 Outputs pairs of:
-- useCaseName: a CURIE-like identifier for the `Use Case` (e.g., "bdq:Biotic-Relationships")
+- useCaseName: a CURIE-like identifier for the `Use Case` (e.g., "bdqval:Biotic-Relationships")
 - testLabel: the Test's rdfs:label (e.g., "VALIDATION_COUNTRYCODE_STANDARD")
 
 Optional enhancements:
-- Filter to a single `Use Case` by its computed useCaseName (e.g., "bdq:Taxon-Management").
+- Filter to a single `Use Case` by its computed useCaseName (e.g., "bdqval:Taxon-Management").
 - Include the `rdfs:comment` from the `Specification` related to the Test via the appropriate `Method`.
 
 Important modeling assumption
@@ -67,7 +67,7 @@ PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
 
 PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
-PREFIX bdq:     <https://rs.tdwg.org/bdq/terms/>
+PREFIX bdqval:     <https://rs.tdwg.org/bdq/terms/>
 """
 
 # NOTE: useCaseName is BOUND in WHERE so it can be FILTERed reliably.
@@ -79,10 +79,10 @@ WHERE {
   ?policy bdqffdq:hasUseCase ?useCase ;
           bdqffdq:includesInPolicy ?test .
 
-  # Compute the display form of the Use Case IRI as a CURIE-like bdq:... if possible.
+  # Compute the display form of the Use Case IRI as a CURIE-like bdqval:... if possible.
   BIND(
-    IF(STRSTARTS(STR(?useCase), STR(bdq:)),
-      CONCAT("bdq:", STRAFTER(STR(?useCase), STR(bdq:))),
+    IF(STRSTARTS(STR(?useCase), STR(bdqval:)),
+      CONCAT("bdqval:", STRAFTER(STR(?useCase), STR(bdqval:))),
       STR(?useCase)
     )
     AS ?useCaseName
@@ -107,8 +107,8 @@ WHERE {
           bdqffdq:includesInPolicy ?test .
 
   BIND(
-    IF(STRSTARTS(STR(?useCase), STR(bdq:)),
-      CONCAT("bdq:", STRAFTER(STR(?useCase), STR(bdq:))),
+    IF(STRSTARTS(STR(?useCase), STR(bdqval:)),
+      CONCAT("bdqval:", STRAFTER(STR(?useCase), STR(bdqval:))),
       STR(?useCase)
     )
     AS ?useCaseName
@@ -217,7 +217,7 @@ def main() -> None:
         "--use-case-name",
         dest="use_case_name",
         default=None,
-        help='Optional filter to a single Use Case, matching the output column useCaseName (e.g. "bdq:Taxon-Management").',
+        help='Optional filter to a single Use Case, matching the output column useCaseName (e.g. "bdqval:Taxon-Management").',
     )
     ap.add_argument(
         "--include-spec-comment",

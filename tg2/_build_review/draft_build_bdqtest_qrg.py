@@ -251,7 +251,7 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 		for useCase in usecaseDict.keys(): 
 			outputUseCaseIndex.write("## "+useCase)
 			outputUseCaseIndex.write("\n")
-			definitionRow = vocabDataFrame.loc["bdq:"+vocabDataFrame["term_localName"]==useCase]
+			definitionRow = vocabDataFrame.loc["bdqval:"+vocabDataFrame["term_localName"]==useCase]
 			try: 
 				definitionCell = definitionRow.iloc[0]["definition"]
 				outputUseCaseIndex.write(definitionCell)
