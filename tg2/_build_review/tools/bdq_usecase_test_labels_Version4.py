@@ -31,7 +31,7 @@ Use Cases are related to Tests via Policies:
 Tests are related to Specifications via Methods (type-specific):
   Validation:  ?method a bdqffdq:ValidationMethod ;  bdqffdq:forValidation  ?test .
   Issue:       ?method a bdqffdq:IssueMethod ;       bdqffdq:forIssue       ?test .
-  Measure:     ?method a bdqffdq:MeasurementMethod ; bdqffdq:forMeasurement ?test .
+  Measure:     ?method a bdqffdq:MeasurementMethod ; bdqffdq:forMeasure ?test .
   Amendment:   ?method a bdqffdq:AmendmentMethod ;   bdqffdq:forAmendment   ?test .
 
 And then:
@@ -139,7 +139,7 @@ WHERE {
     {
       ?test a bdqffdq:Measure .
       ?method a bdqffdq:MeasurementMethod ;
-              bdqffdq:forMeasurement ?test .
+              bdqffdq:forMeasure ?test .
     }
     UNION
     {

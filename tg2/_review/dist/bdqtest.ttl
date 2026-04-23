@@ -384,11 +384,11 @@ bdqdim:Reliability a bdqffdq:DataQualityDimension;
 bdqffdq:Consulted rdfs:subClassOf bdqffdq:InformationElement .
 
 <urn:uuid:104854fb-68a4-41cc-8fa5-1ab76fbaa93b> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:453844ae-9df4-439f-8e24-c52498eca84a-2024-09-24;
   skos:note "TG2 Measure NAME SPACE TIME OTHER Test CORE";
   bdqffdq:hasSpecification <urn:uuid:1a7adc4a-58ee-480c-9765-3834ea433bf0>;
   skos:historyNote "Source: Lee Belbin";
   rdfs:label "MeasurementMethod: MEASURE_VALIDATIONTESTS_NOTCOMPLIANT with Specification Specification for: MEASURE_VALIDATIONTESTS_NOTCOMPLIANT";
-  bdqffdq:forMeasurement bdqtest:453844ae-9df4-439f-8e24-c52498eca84a-2024-09-24;
   skos:prefLabel "MeasurementMethod: MEASURE_VALIDATIONTESTS_NOTCOMPLIANT with Specification Specification for: MEASURE_VALIDATIONTESTS_NOTCOMPLIANT" .
 
 bdqffdq:MeasurementMethod rdfs:subClassOf bdqffdq:DataQualityMethod .
@@ -3430,11 +3430,11 @@ bdqtest:49a94636-a562-4e6b-803c-665c80628a3d-2024-09-25 a bdqffdq:Measure;
   skos:prefLabel "Measure Validation Tests Prerequisites Not Met for SingleRecord" .
 
 <urn:uuid:d1a8d273-8cd0-4f64-bcd4-1c3d2a42ccfa> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:49a94636-a562-4e6b-803c-665c80628a3d-2024-09-25;
   skos:note "TG2 Measure NAME SPACE TIME OTHER Test CORE";
   bdqffdq:hasSpecification <urn:uuid:aefe88ed-6d3a-4824-8c4a-a75714cb0351>;
   skos:historyNote "Source: TG2-Gainesville";
   rdfs:label "MeasurementMethod: MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET with Specification Specification for: MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET";
-  bdqffdq:forMeasurement bdqtest:49a94636-a562-4e6b-803c-665c80628a3d-2024-09-25;
   skos:prefLabel "MeasurementMethod: MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET with Specification Specification for: MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET" .
 
 <urn:uuid:aefe88ed-6d3a-4824-8c4a-a75714cb0351> a bdqffdq:Specification;
@@ -3457,11 +3457,11 @@ bdqtest:45fb49eb-4a1b-4b49-876f-15d5034dfc73-2024-09-25 a bdqffdq:Measure;
   skos:prefLabel "Measure Validation Tests Compliant for SingleRecord" .
 
 <urn:uuid:d25368be-5f39-4a47-adf3-9c1293499599> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:45fb49eb-4a1b-4b49-876f-15d5034dfc73-2024-09-25;
   skos:note "TG2 Measure NAME SPACE OTHER Test CORE";
   bdqffdq:hasSpecification <urn:uuid:b611e1b1-cbf5-405c-b24d-24e9a649cbf0>;
   skos:historyNote "Source: TG2-Gainesville";
   rdfs:label "MeasurementMethod: MEASURE_VALIDATIONTESTS_COMPLIANT with Specification Specification for: MEASURE_VALIDATIONTESTS_COMPLIANT";
-  bdqffdq:forMeasurement bdqtest:45fb49eb-4a1b-4b49-876f-15d5034dfc73-2024-09-25;
   skos:prefLabel "MeasurementMethod: MEASURE_VALIDATIONTESTS_COMPLIANT with Specification Specification for: MEASURE_VALIDATIONTESTS_COMPLIANT" .
 
 <urn:uuid:b611e1b1-cbf5-405c-b24d-24e9a649cbf0> a bdqffdq:Specification;
@@ -3485,13 +3485,13 @@ bdqtest:56b6c695-adf1-418e-95d2-da04cad7be53-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measure dwc:eventDate Duration in Seconds for SingleRecord" .
 
 <urn:uuid:d5732888-e5d4-4fa7-89dd-09baf1773e07> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:56b6c695-adf1-418e-95d2-da04cad7be53-2025-03-07;
   skos:note "Example Implementations: Kurator/FilteredPush event_date_qc Library (Morris & Lowery 2025)",
     "Example Implementations Source Code: https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L120",
     "TG2 Measure TIME CODED Test CORE";
   bdqffdq:hasSpecification <urn:uuid:be93a0ef-9bf7-417f-a26e-daae5d00dabb>;
   skos:historyNote "Source: Alex Thompson";
   rdfs:label "MeasurementMethod: MEASURE_EVENTDATE_DURATIONINSECONDS with Specification Specification for: MEASURE_EVENTDATE_DURATIONINSECONDS";
-  bdqffdq:forMeasurement bdqtest:56b6c695-adf1-418e-95d2-da04cad7be53-2025-03-07;
   skos:prefLabel "MeasurementMethod: MEASURE_EVENTDATE_DURATIONINSECONDS with Specification Specification for: MEASURE_EVENTDATE_DURATIONINSECONDS" .
 
 <urn:uuid:be93a0ef-9bf7-417f-a26e-daae5d00dabb> a bdqffdq:Specification;
@@ -4421,11 +4421,11 @@ bdqffdq:MultiRecord a bdqffdq:ResourceType;
   dcterms:bibliographicCitation "Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731" .
 
 <urn:uuid:994ce265-fa64-4c76-a3cb-3aadd74fa9b9> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:fedf27b2-e01d-459f-98fc-7f0f39e3d4be-2025-03-07;
   skos:note "TG2 Validation SPACE CODED Test VOCABULARY Conformance ISO/DCMI STANDARD CORE";
   bdqffdq:hasSpecification <urn:uuid:2c673ad9-f7df-4cf7-9c84-e730c25a12e1>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_COUNTRYCODE_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_COUNTRYCODE_STANDARD";
-  bdqffdq:forMeasurement bdqtest:fedf27b2-e01d-459f-98fc-7f0f39e3d4be-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_COUNTRYCODE_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_COUNTRYCODE_STANDARD" .
 
 <urn:uuid:2c673ad9-f7df-4cf7-9c84-e730c25a12e1> a bdqffdq:Specification;
@@ -4449,11 +4449,11 @@ bdqtest:38966850-3737-4a67-953c-c231469e0489-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:countryCode Standard for MultiRecord" .
 
 <urn:uuid:d7d0977d-c8d4-4f76-9fec-5da1c0b242f7> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:38966850-3737-4a67-953c-c231469e0489-2025-03-07;
   skos:note "TG2 Validation SPACE CODED Test VOCABULARY Conformance ISO/DCMI STANDARD CORE";
   bdqffdq:hasSpecification <urn:uuid:4365c5a8-2a44-493c-acbc-c6ed57b2c6ad>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_STANDARD";
-  bdqffdq:forMeasurement bdqtest:38966850-3737-4a67-953c-c231469e0489-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_STANDARD" .
 
 <urn:uuid:4365c5a8-2a44-493c-acbc-c6ed57b2c6ad> a bdqffdq:Specification;
@@ -4482,11 +4482,11 @@ bdqtest:388e74b3-2e18-4d78-8112-3142d1177e25-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_COUNTRY_FOUND.Response" .
 
 <urn:uuid:e1acf301-4f03-424a-af72-94ad1ad3201b> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:388e74b3-2e18-4d78-8112-3142d1177e25-2025-03-07;
   skos:note "TG2 Validation SPACE CODED Test VOCABULARY Conformance Parameterized CORE";
   bdqffdq:hasSpecification <urn:uuid:59566872-1968-40f5-916a-42297d58ac7b>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_COUNTRY_FOUND with Specification Specification for: MULTIRECORD_MEASURE_QA_COUNTRY_FOUND";
-  bdqffdq:forMeasurement bdqtest:388e74b3-2e18-4d78-8112-3142d1177e25-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_COUNTRY_FOUND with Specification Specification for: MULTIRECORD_MEASURE_QA_COUNTRY_FOUND" .
 
 <urn:uuid:59566872-1968-40f5-916a-42297d58ac7b> a bdqffdq:Specification;
@@ -4510,11 +4510,11 @@ bdqtest:f15c38c3-d96d-4e9c-982d-410fb71cf2bc-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:country Found for MultiRecord" .
 
 <urn:uuid:9489fa31-fe80-4e3a-b4ed-d547df73c29a> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:f15c38c3-d96d-4e9c-982d-410fb71cf2bc-2025-03-07;
   skos:note "TG2 Validation SPACE CODED Test VOCABULARY Conformance Parameterized CORE";
   bdqffdq:hasSpecification <urn:uuid:4badb4f9-f739-486f-aa0f-4fa351ed2e84>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_FOUND with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_FOUND";
-  bdqffdq:forMeasurement bdqtest:f15c38c3-d96d-4e9c-982d-410fb71cf2bc-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_FOUND with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_FOUND" .
 
 <urn:uuid:4badb4f9-f739-486f-aa0f-4fa351ed2e84> a bdqffdq:Specification;
@@ -4543,11 +4543,11 @@ bdqtest:17364d16-37b7-4ccb-9614-bfb95ff1bca9-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_PHYLUM_FOUND.Response" .
 
 <urn:uuid:f643ba35-9ddb-4e70-9959-01a6849331ed> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:17364d16-37b7-4ccb-9614-bfb95ff1bca9-2025-03-06;
   skos:note "TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE";
   bdqffdq:hasSpecification <urn:uuid:db818cf0-569e-4eb9-a309-a151d04b7bb4>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_PHYLUM_FOUND with Specification Specification for: MULTIRECORD_MEASURE_QA_PHYLUM_FOUND";
-  bdqffdq:forMeasurement bdqtest:17364d16-37b7-4ccb-9614-bfb95ff1bca9-2025-03-06;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_PHYLUM_FOUND with Specification Specification for: MULTIRECORD_MEASURE_QA_PHYLUM_FOUND" .
 
 <urn:uuid:db818cf0-569e-4eb9-a309-a151d04b7bb4> a bdqffdq:Specification;
@@ -4571,11 +4571,11 @@ bdqtest:65e66ca0-e9d1-4411-ad26-bb9c43f32afc-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:phylum Found for MultiRecord" .
 
 <urn:uuid:ec957d61-c1aa-4040-94ff-cbf439df3a52> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:65e66ca0-e9d1-4411-ad26-bb9c43f32afc-2025-03-06;
   skos:note "TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE";
   bdqffdq:hasSpecification <urn:uuid:315b59c1-85ab-428a-824c-9c9639f5fa7e>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_PHYLUM_FOUND with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_PHYLUM_FOUND";
-  bdqffdq:forMeasurement bdqtest:65e66ca0-e9d1-4411-ad26-bb9c43f32afc-2025-03-06;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_PHYLUM_FOUND with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_PHYLUM_FOUND" .
 
 <urn:uuid:315b59c1-85ab-428a-824c-9c9639f5fa7e> a bdqffdq:Specification;
@@ -4604,11 +4604,11 @@ bdqtest:fcabd2c9-392c-4841-a5d7-e2680c9587ab-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH.Response" .
 
 <urn:uuid:51b11dac-0a61-4ebf-a0b7-69244821f481> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:fcabd2c9-392c-4841-a5d7-e2680c9587ab-2025-03-07;
   skos:note "TG2 Validation SPACE CODED Test Conformance CORE";
   bdqffdq:hasSpecification <urn:uuid:ce7203a9-bb58-4780-833e-c759b8824fc6>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_MINDEPTH_LESSTHAN_MAXDEPTH with Specification Specification for: MULTIRECORD_MEASURE_QA_MINDEPTH_LESSTHAN_MAXDEPTH";
-  bdqffdq:forMeasurement bdqtest:fcabd2c9-392c-4841-a5d7-e2680c9587ab-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_MINDEPTH_LESSTHAN_MAXDEPTH with Specification Specification for: MULTIRECORD_MEASURE_QA_MINDEPTH_LESSTHAN_MAXDEPTH" .
 
 <urn:uuid:ce7203a9-bb58-4780-833e-c759b8824fc6> a bdqffdq:Specification;
@@ -4632,11 +4632,11 @@ bdqtest:b21256c2-4bb7-4deb-852d-a9eaa05345e7-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:minimumDepthInMeters less than dwc:maximumDepthInMeters for MultiRecord" .
 
 <urn:uuid:c4635758-9f98-4982-9d41-ff57ee475dc7> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:b21256c2-4bb7-4deb-852d-a9eaa05345e7-2025-03-07;
   skos:note "TG2 Validation SPACE CODED Test Conformance CORE";
   bdqffdq:hasSpecification <urn:uuid:18eca445-c05b-443e-9819-d6ec516d963e>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINDEPTH_LESSTHAN_MAXDEPTH with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINDEPTH_LESSTHAN_MAXDEPTH";
-  bdqffdq:forMeasurement bdqtest:b21256c2-4bb7-4deb-852d-a9eaa05345e7-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINDEPTH_LESSTHAN_MAXDEPTH with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINDEPTH_LESSTHAN_MAXDEPTH" .
 
 <urn:uuid:18eca445-c05b-443e-9819-d6ec516d963e> a bdqffdq:Specification;
@@ -4665,11 +4665,11 @@ bdqtest:a07d7147-2db8-48ce-81b8-e47595ad5f17-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_FAMILY_FOUND.Response" .
 
 <urn:uuid:c39f0686-c40f-4652-8bf7-020b85d365d2> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:a07d7147-2db8-48ce-81b8-e47595ad5f17-2025-03-06;
   skos:note "TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE";
   bdqffdq:hasSpecification <urn:uuid:86175f22-dbda-4322-8f6a-9af7f02f4f38>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_FAMILY_FOUND with Specification Specification for: MULTIRECORD_MEASURE_QA_FAMILY_FOUND";
-  bdqffdq:forMeasurement bdqtest:a07d7147-2db8-48ce-81b8-e47595ad5f17-2025-03-06;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_FAMILY_FOUND with Specification Specification for: MULTIRECORD_MEASURE_QA_FAMILY_FOUND" .
 
 <urn:uuid:86175f22-dbda-4322-8f6a-9af7f02f4f38> a bdqffdq:Specification;
@@ -4693,11 +4693,11 @@ bdqtest:97928242-11a9-4ab0-9dd7-3f0465834824-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:family Found for MultiRecord" .
 
 <urn:uuid:a36114dc-3370-4c9e-8cad-e0f871754365> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:97928242-11a9-4ab0-9dd7-3f0465834824-2025-03-06;
   skos:note "TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE";
   bdqffdq:hasSpecification <urn:uuid:6a4e4bdf-dc92-4a93-b127-093224b44c19>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_FAMILY_FOUND with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_FAMILY_FOUND";
-  bdqffdq:forMeasurement bdqtest:97928242-11a9-4ab0-9dd7-3f0465834824-2025-03-06;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_FAMILY_FOUND with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_FAMILY_FOUND" .
 
 <urn:uuid:6a4e4bdf-dc92-4a93-b127-093224b44c19> a bdqffdq:Specification;
@@ -4726,11 +4726,11 @@ bdqtest:6f7a9b82-7d34-4111-a2a6-9efe5221fa44-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_DECIMALLONGITUDE_INRANGE.Response" .
 
 <urn:uuid:c08463be-2be5-4f41-a70d-3a231958b4bb> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:6f7a9b82-7d34-4111-a2a6-9efe5221fa44-2025-03-07;
   skos:note "TG2 Validation SPACE CODED Test Conformance CORE";
   bdqffdq:hasSpecification <urn:uuid:2042e1fa-8bf7-457e-bd43-cb48bd8b838d>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_DECIMALLONGITUDE_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_DECIMALLONGITUDE_INRANGE";
-  bdqffdq:forMeasurement bdqtest:6f7a9b82-7d34-4111-a2a6-9efe5221fa44-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_DECIMALLONGITUDE_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_DECIMALLONGITUDE_INRANGE" .
 
 <urn:uuid:2042e1fa-8bf7-457e-bd43-cb48bd8b838d> a bdqffdq:Specification;
@@ -4754,11 +4754,11 @@ bdqtest:c70c4950-2246-4acc-a59d-81eaa47edf2b-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:decimalLongitude In Range for MultiRecord" .
 
 <urn:uuid:62c9ba6a-b8d3-4746-9c97-d4143f976439> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:c70c4950-2246-4acc-a59d-81eaa47edf2b-2025-03-07;
   skos:note "TG2 Validation SPACE CODED Test Conformance CORE";
   bdqffdq:hasSpecification <urn:uuid:2212fef0-54f8-4508-b925-4aa99b7a4715>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLONGITUDE_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLONGITUDE_INRANGE";
-  bdqffdq:forMeasurement bdqtest:c70c4950-2246-4acc-a59d-81eaa47edf2b-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLONGITUDE_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLONGITUDE_INRANGE" .
 
 <urn:uuid:2212fef0-54f8-4508-b925-4aa99b7a4715> a bdqffdq:Specification;
@@ -4787,11 +4787,11 @@ bdqtest:c23cd67d-1b5c-4e9f-a1ce-8cc6b3e9b365-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_EVENTDATE_NOTEMPTY.Response" .
 
 <urn:uuid:e79ed5f7-8da5-4212-9476-e150a6c372b5> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:c23cd67d-1b5c-4e9f-a1ce-8cc6b3e9b365-2025-03-07;
   skos:note "TG2 Validation TIME CODED Test Completeness CORE";
   bdqffdq:hasSpecification <urn:uuid:3929ac59-f8e8-49ea-bf6a-774d41ad869c>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_EVENTDATE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_EVENTDATE_NOTEMPTY";
-  bdqffdq:forMeasurement bdqtest:c23cd67d-1b5c-4e9f-a1ce-8cc6b3e9b365-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_EVENTDATE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_EVENTDATE_NOTEMPTY" .
 
 <urn:uuid:3929ac59-f8e8-49ea-bf6a-774d41ad869c> a bdqffdq:Specification;
@@ -4815,11 +4815,11 @@ bdqtest:3f62eaa2-747f-456b-85e6-1a6e74086a18-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:eventDate Not Empty for MultiRecord" .
 
 <urn:uuid:fd524e7d-a7fe-4c75-bfaa-0fc7d96cc8b7> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:3f62eaa2-747f-456b-85e6-1a6e74086a18-2025-03-07;
   skos:note "TG2 Validation TIME CODED Test Completeness CORE";
   bdqffdq:hasSpecification <urn:uuid:36de5de9-00d2-4b79-8ff7-b82b321fc35f>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_NOTEMPTY";
-  bdqffdq:forMeasurement bdqtest:3f62eaa2-747f-456b-85e6-1a6e74086a18-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_NOTEMPTY" .
 
 <urn:uuid:36de5de9-00d2-4b79-8ff7-b82b321fc35f> a bdqffdq:Specification;
@@ -4848,11 +4848,11 @@ bdqtest:d41a731b-2e2b-4442-9217-4c375ae92926-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_EVENTDATE_INRANGE.Response" .
 
 <urn:uuid:69a7c952-ecf0-4cb0-b005-b244926e8f03> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:d41a731b-2e2b-4442-9217-4c375ae92926-2025-03-06;
   skos:note "TG2 Validation TIME CODED Test Conformance Parameterized CORE";
   bdqffdq:hasSpecification <urn:uuid:6ff94a83-1f03-4f3d-aa10-14a16aa3fff9>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_EVENTDATE_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_EVENTDATE_INRANGE";
-  bdqffdq:forMeasurement bdqtest:d41a731b-2e2b-4442-9217-4c375ae92926-2025-03-06;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_EVENTDATE_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_EVENTDATE_INRANGE" .
 
 <urn:uuid:6ff94a83-1f03-4f3d-aa10-14a16aa3fff9> a bdqffdq:Specification;
@@ -4876,11 +4876,11 @@ bdqtest:c8250600-de61-4047-9d7c-6e06a38c7994-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:eventDate In Range for MultiRecord" .
 
 <urn:uuid:34e79155-98da-4d5f-afde-60c95b7f1a6e> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:c8250600-de61-4047-9d7c-6e06a38c7994-2025-03-06;
   skos:note "TG2 Validation TIME CODED Test Conformance Parameterized CORE";
   bdqffdq:hasSpecification <urn:uuid:5231f13b-bc40-40b3-b542-85d0f17c5b0c>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_INRANGE";
-  bdqffdq:forMeasurement bdqtest:c8250600-de61-4047-9d7c-6e06a38c7994-2025-03-06;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_INRANGE" .
 
 <urn:uuid:5231f13b-bc40-40b3-b542-85d0f17c5b0c> a bdqffdq:Specification;
@@ -4909,11 +4909,11 @@ bdqtest:acd8d43e-7a2a-4372-b887-fb53a9972dc9-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_LICENSE_STANDARD.Response" .
 
 <urn:uuid:f7786d53-07c1-4253-add9-3bf24d8a97c4> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:acd8d43e-7a2a-4372-b887-fb53a9972dc9-2025-03-07;
   skos:note "TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE";
   bdqffdq:hasSpecification <urn:uuid:5f5af361-e5fe-44de-9be4-5b02795a2adb>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_LICENSE_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_LICENSE_STANDARD";
-  bdqffdq:forMeasurement bdqtest:acd8d43e-7a2a-4372-b887-fb53a9972dc9-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_LICENSE_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_LICENSE_STANDARD" .
 
 <urn:uuid:5f5af361-e5fe-44de-9be4-5b02795a2adb> a bdqffdq:Specification;
@@ -4937,11 +4937,11 @@ bdqtest:9d5be694-f5da-465d-8c7e-27e6dac69f9f-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dcterms:license Standard for MultiRecord" .
 
 <urn:uuid:5c06b6ae-7229-49cc-a0e8-4c0bae153b4b> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:9d5be694-f5da-465d-8c7e-27e6dac69f9f-2025-03-07;
   skos:note "TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE";
   bdqffdq:hasSpecification <urn:uuid:68e86c5a-f444-4aff-b54c-47bc100bcf4b>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_STANDARD";
-  bdqffdq:forMeasurement bdqtest:9d5be694-f5da-465d-8c7e-27e6dac69f9f-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_STANDARD" .
 
 <urn:uuid:68e86c5a-f444-4aff-b54c-47bc100bcf4b> a bdqffdq:Specification;
@@ -4970,11 +4970,11 @@ bdqtest:1ba18c8b-66a6-47d9-a709-404439332dba-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_MINELEVATION_INRANGE.Response" .
 
 <urn:uuid:3ec54cad-c181-4dd6-8bd6-6119eb6ad6c0> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:1ba18c8b-66a6-47d9-a709-404439332dba-2025-03-07;
   skos:note "TG2 Validation SPACE CODED Test Conformance Parameterized CORE";
   bdqffdq:hasSpecification <urn:uuid:657e5f22-d146-4109-8f57-676fe7eb777f>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_MINELEVATION_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_MINELEVATION_INRANGE";
-  bdqffdq:forMeasurement bdqtest:1ba18c8b-66a6-47d9-a709-404439332dba-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_MINELEVATION_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_MINELEVATION_INRANGE" .
 
 <urn:uuid:657e5f22-d146-4109-8f57-676fe7eb777f> a bdqffdq:Specification;
@@ -4998,11 +4998,11 @@ bdqtest:071267a0-d993-4961-a3f7-d8210810d167-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:minimumElevationInMeters In Range for MultiRecord" .
 
 <urn:uuid:a684cc71-8c74-4c7e-b0db-3f93a874048e> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:071267a0-d993-4961-a3f7-d8210810d167-2025-03-07;
   skos:note "TG2 Validation SPACE CODED Test Conformance Parameterized CORE";
   bdqffdq:hasSpecification <urn:uuid:3cac6091-6898-48ea-86d9-3f5cd71c1efa>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINELEVATION_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINELEVATION_INRANGE";
-  bdqffdq:forMeasurement bdqtest:071267a0-d993-4961-a3f7-d8210810d167-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINELEVATION_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINELEVATION_INRANGE" .
 
 <urn:uuid:3cac6091-6898-48ea-86d9-3f5cd71c1efa> a bdqffdq:Specification;
@@ -5031,11 +5031,11 @@ bdqtest:3b2e4791-1a5a-4087-9e8d-09c67cf8c816-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_LOCATION_NOTEMPTY.Response" .
 
 <urn:uuid:e0078022-251d-4c34-9b52-d63f94f601dd> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:3b2e4791-1a5a-4087-9e8d-09c67cf8c816-2025-03-07;
   skos:note "TG2 Validation SPACE CODED Test Completeness CORE";
   bdqffdq:hasSpecification <urn:uuid:977ed65e-416f-46e8-85a3-079c6b735fa8>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_LOCATION_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_LOCATION_NOTEMPTY";
-  bdqffdq:forMeasurement bdqtest:3b2e4791-1a5a-4087-9e8d-09c67cf8c816-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_LOCATION_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_LOCATION_NOTEMPTY" .
 
 <urn:uuid:977ed65e-416f-46e8-85a3-079c6b735fa8> a bdqffdq:Specification;
@@ -5059,11 +5059,11 @@ bdqtest:bac852b5-1ba6-427b-aa8e-02018e99279c-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dcterms:Location Not Empty for MultiRecord" .
 
 <urn:uuid:63e51c38-5bb5-4422-9df0-3ea88bde5e17> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:bac852b5-1ba6-427b-aa8e-02018e99279c-2025-03-07;
   skos:note "TG2 Validation SPACE CODED Test Completeness CORE";
   bdqffdq:hasSpecification <urn:uuid:5fae3e9c-b1cc-4346-a845-e7f1573481ea>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_LOCATION_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_LOCATION_NOTEMPTY";
-  bdqffdq:forMeasurement bdqtest:bac852b5-1ba6-427b-aa8e-02018e99279c-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_LOCATION_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_LOCATION_NOTEMPTY" .
 
 <urn:uuid:5fae3e9c-b1cc-4346-a845-e7f1573481ea> a bdqffdq:Specification;
@@ -5092,11 +5092,11 @@ bdqtest:9c8df974-8fba-4537-8c67-31466787f732-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_COUNTRY_NOTEMPTY.Response" .
 
 <urn:uuid:f9cd9d66-e4d2-42da-877a-90e4a7ac3cf3> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:9c8df974-8fba-4537-8c67-31466787f732-2025-03-07;
   skos:note "TG2 Validation SPACE CODED Test Completeness CORE";
   bdqffdq:hasSpecification <urn:uuid:1c07234e-42de-45c5-9083-7b3e812835fb>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_COUNTRY_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_COUNTRY_NOTEMPTY";
-  bdqffdq:forMeasurement bdqtest:9c8df974-8fba-4537-8c67-31466787f732-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_COUNTRY_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_COUNTRY_NOTEMPTY" .
 
 <urn:uuid:1c07234e-42de-45c5-9083-7b3e812835fb> a bdqffdq:Specification;
@@ -5120,11 +5120,11 @@ bdqtest:6887c881-dc52-409b-8979-9c2f05e55569-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:country Not Empty for MultiRecord" .
 
 <urn:uuid:c7fe0448-b77d-4eb2-8123-d96a63ef4aa8> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:6887c881-dc52-409b-8979-9c2f05e55569-2025-03-07;
   skos:note "TG2 Validation SPACE CODED Test Completeness CORE";
   bdqffdq:hasSpecification <urn:uuid:2a5be256-6d25-4d05-bcc7-3b43a383d443>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_NOTEMPTY";
-  bdqffdq:forMeasurement bdqtest:6887c881-dc52-409b-8979-9c2f05e55569-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_NOTEMPTY" .
 
 <urn:uuid:2a5be256-6d25-4d05-bcc7-3b43a383d443> a bdqffdq:Specification;
@@ -5153,11 +5153,11 @@ bdqtest:a8aee02c-cf7c-4104-a601-d8afc4f9cbe2-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_SCIENTIFICNAME_FOUND.Response" .
 
 <urn:uuid:180a834f-d0e1-4abc-b31d-37558ef6352d> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:a8aee02c-cf7c-4104-a601-d8afc4f9cbe2-2025-03-06;
   skos:note "TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE";
   bdqffdq:hasSpecification <urn:uuid:44734c77-85b6-485b-bc43-2d96c0dde693>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_SCIENTIFICNAME_FOUND with Specification Specification for: MULTIRECORD_MEASURE_QA_SCIENTIFICNAME_FOUND";
-  bdqffdq:forMeasurement bdqtest:a8aee02c-cf7c-4104-a601-d8afc4f9cbe2-2025-03-06;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_SCIENTIFICNAME_FOUND with Specification Specification for: MULTIRECORD_MEASURE_QA_SCIENTIFICNAME_FOUND" .
 
 <urn:uuid:44734c77-85b6-485b-bc43-2d96c0dde693> a bdqffdq:Specification;
@@ -5181,11 +5181,11 @@ bdqtest:4e70b0e4-3fd2-4899-802c-439671374eeb-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:scientificName Found for MultiRecord" .
 
 <urn:uuid:a25d6216-e349-4a6e-bd2b-8857ca48628f> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:4e70b0e4-3fd2-4899-802c-439671374eeb-2025-03-06;
   skos:note "TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE";
   bdqffdq:hasSpecification <urn:uuid:c4969180-ef8f-4243-bf1a-a04cd115cfe7>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_FOUND with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_FOUND";
-  bdqffdq:forMeasurement bdqtest:4e70b0e4-3fd2-4899-802c-439671374eeb-2025-03-06;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_FOUND with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_FOUND" .
 
 <urn:uuid:c4969180-ef8f-4243-bf1a-a04cd115cfe7> a bdqffdq:Specification;
@@ -5214,11 +5214,11 @@ bdqtest:0028ef9a-6553-467b-a344-90327ed2babf-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_OCCURRENCEID_NOTEMPTY.Response" .
 
 <urn:uuid:18cf676f-83ab-4c52-825c-2f3849bcae9d> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:0028ef9a-6553-467b-a344-90327ed2babf-2025-03-07;
   skos:note "TG2 Validation OTHER CODED Test Completeness CORE";
   bdqffdq:hasSpecification <urn:uuid:a634c093-6502-489e-98fc-a365fd7d5d61>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_OCCURRENCEID_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_OCCURRENCEID_NOTEMPTY";
-  bdqffdq:forMeasurement bdqtest:0028ef9a-6553-467b-a344-90327ed2babf-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_OCCURRENCEID_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_OCCURRENCEID_NOTEMPTY" .
 
 <urn:uuid:a634c093-6502-489e-98fc-a365fd7d5d61> a bdqffdq:Specification;
@@ -5242,11 +5242,11 @@ bdqtest:0c9a139e-5d23-44de-a495-14ec08c61a1c-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:occurrenceID Not Empty for MultiRecord" .
 
 <urn:uuid:5fbbcdab-6cf5-482a-b963-1af053625f3a> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:0c9a139e-5d23-44de-a495-14ec08c61a1c-2025-03-07;
   skos:note "TG2 Validation OTHER CODED Test Completeness CORE";
   bdqffdq:hasSpecification <urn:uuid:35b82564-c496-461e-88ec-cc606d7a6112>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCEID_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCEID_NOTEMPTY";
-  bdqffdq:forMeasurement bdqtest:0c9a139e-5d23-44de-a495-14ec08c61a1c-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCEID_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCEID_NOTEMPTY" .
 
 <urn:uuid:35b82564-c496-461e-88ec-cc606d7a6112> a bdqffdq:Specification;
@@ -5275,11 +5275,11 @@ bdqtest:a8fef8a8-e7c7-4a2d-adaf-7da99c896c93-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_YEAR_NOTEMPTY.Response" .
 
 <urn:uuid:b95086d3-3d4d-4c95-9ea8-8b5894d0aede> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:a8fef8a8-e7c7-4a2d-adaf-7da99c896c93-2025-03-06;
   skos:note "TG2 Validation TIME CODED Test Completeness CORE";
   bdqffdq:hasSpecification <urn:uuid:8294c0a6-b46b-48a5-8221-993d35e09017>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_YEAR_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_YEAR_NOTEMPTY";
-  bdqffdq:forMeasurement bdqtest:a8fef8a8-e7c7-4a2d-adaf-7da99c896c93-2025-03-06;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_YEAR_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_YEAR_NOTEMPTY" .
 
 <urn:uuid:8294c0a6-b46b-48a5-8221-993d35e09017> a bdqffdq:Specification;
@@ -5303,11 +5303,11 @@ bdqtest:687d3ad1-93a3-4a1f-b69f-da5a1eb761a5-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:year Not Empty for MultiRecord" .
 
 <urn:uuid:d358d5cf-d6e6-4cd6-b195-7aa8643e4244> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:687d3ad1-93a3-4a1f-b69f-da5a1eb761a5-2025-03-06;
   skos:note "TG2 Validation TIME CODED Test Completeness CORE";
   bdqffdq:hasSpecification <urn:uuid:64d2893d-aa67-41df-b5e4-f9978a83e35e>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_NOTEMPTY";
-  bdqffdq:forMeasurement bdqtest:687d3ad1-93a3-4a1f-b69f-da5a1eb761a5-2025-03-06;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_NOTEMPTY" .
 
 <urn:uuid:64d2893d-aa67-41df-b5e4-f9978a83e35e> a bdqffdq:Specification;
@@ -5336,11 +5336,11 @@ bdqtest:86c28d5e-f778-4230-88d8-64cc01478601-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT.Response" .
 
 <urn:uuid:e2857b1c-9c3d-4445-9f1e-32000e2243ce> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:86c28d5e-f778-4230-88d8-64cc01478601-2025-03-07;
   skos:note "TG2 Validation SPACE CODED Test VOCABULARY Consistency ISO/DCMI STANDARD Parameterized CORE";
   bdqffdq:hasSpecification <urn:uuid:d95305ad-cf84-4473-8c24-09a4a236e262>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_COORDINATESCOUNTRYCODE_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_QA_COORDINATESCOUNTRYCODE_CONSISTENT";
-  bdqffdq:forMeasurement bdqtest:86c28d5e-f778-4230-88d8-64cc01478601-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_COORDINATESCOUNTRYCODE_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_QA_COORDINATESCOUNTRYCODE_CONSISTENT" .
 
 <urn:uuid:d95305ad-cf84-4473-8c24-09a4a236e262> a bdqffdq:Specification;
@@ -5364,11 +5364,11 @@ bdqtest:d68dc111-9704-4fc5-a8eb-5fa084809202-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation Coordinates dwc:countryCode Consistent for MultiRecord" .
 
 <urn:uuid:c3b3862b-5ea3-494b-9a09-8bb3d9dfe016> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:d68dc111-9704-4fc5-a8eb-5fa084809202-2025-03-07;
   skos:note "TG2 Validation SPACE CODED Test VOCABULARY Consistency ISO/DCMI STANDARD Parameterized CORE";
   bdqffdq:hasSpecification <urn:uuid:4299e1b9-042e-4967-a721-6e44569526e8>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESCOUNTRYCODE_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESCOUNTRYCODE_CONSISTENT";
-  bdqffdq:forMeasurement bdqtest:d68dc111-9704-4fc5-a8eb-5fa084809202-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESCOUNTRYCODE_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESCOUNTRYCODE_CONSISTENT" .
 
 <urn:uuid:4299e1b9-042e-4967-a721-6e44569526e8> a bdqffdq:Specification;
@@ -5397,11 +5397,11 @@ bdqtest:478dee00-98d0-4154-b66c-eca64dbbf86d-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT.Response" .
 
 <urn:uuid:2a044176-8820-4745-a797-9541c7e06ab2> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:478dee00-98d0-4154-b66c-eca64dbbf86d-2025-03-07;
   skos:note "TG2 Validation SPACE CODED Test VOCABULARY Consistency Parameterized CORE";
   bdqffdq:hasSpecification <urn:uuid:fcff1ad2-4469-4f4b-80b9-cbe82667682f>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_COORDINATESTERRESTRIALMARINE_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_QA_COORDINATESTERRESTRIALMARINE_CONSISTENT";
-  bdqffdq:forMeasurement bdqtest:478dee00-98d0-4154-b66c-eca64dbbf86d-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_COORDINATESTERRESTRIALMARINE_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_QA_COORDINATESTERRESTRIALMARINE_CONSISTENT" .
 
 <urn:uuid:fcff1ad2-4469-4f4b-80b9-cbe82667682f> a bdqffdq:Specification;
@@ -5425,11 +5425,11 @@ bdqtest:b67f41f4-198c-41e9-9419-ba3919c1be8b-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation Coordinates Terrestrial Marine for MultiRecord" .
 
 <urn:uuid:66e40165-c61e-461b-b91d-7d2b3c3427fe> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:b67f41f4-198c-41e9-9419-ba3919c1be8b-2025-03-07;
   skos:note "TG2 Validation SPACE CODED Test VOCABULARY Consistency Parameterized CORE";
   bdqffdq:hasSpecification <urn:uuid:dbedc71f-74ba-4046-812d-1d96f9382a91>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESTERRESTRIALMARINE_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESTERRESTRIALMARINE_CONSISTENT";
-  bdqffdq:forMeasurement bdqtest:b67f41f4-198c-41e9-9419-ba3919c1be8b-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESTERRESTRIALMARINE_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESTERRESTRIALMARINE_CONSISTENT" .
 
 <urn:uuid:dbedc71f-74ba-4046-812d-1d96f9382a91> a bdqffdq:Specification;
@@ -5458,11 +5458,11 @@ bdqtest:7a8b0af3-fa7d-416a-921a-8992d56f8233-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT.Response" .
 
 <urn:uuid:d1b7295f-9a2a-4a52-a066-6e3eac61b0c2> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:7a8b0af3-fa7d-416a-921a-8992d56f8233-2025-03-07;
   skos:note "TG2 Validation SPACE CODED Test VOCABULARY Consistency CORE";
   bdqffdq:hasSpecification <urn:uuid:809d2925-781f-432e-b5d6-4a91f1afe56c>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_COORDINATESSTATEPROVINCE_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_QA_COORDINATESSTATEPROVINCE_CONSISTENT";
-  bdqffdq:forMeasurement bdqtest:7a8b0af3-fa7d-416a-921a-8992d56f8233-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_COORDINATESSTATEPROVINCE_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_QA_COORDINATESSTATEPROVINCE_CONSISTENT" .
 
 <urn:uuid:809d2925-781f-432e-b5d6-4a91f1afe56c> a bdqffdq:Specification;
@@ -5486,11 +5486,11 @@ bdqtest:c6c998af-6145-4361-b1e6-52c5b790340a-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation Coordinates dwc:stateProvince Consistent for MultiRecord" .
 
 <urn:uuid:b64c6792-c08c-46da-b98b-e0bb0363c2ed> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:c6c998af-6145-4361-b1e6-52c5b790340a-2025-03-07;
   skos:note "TG2 Validation SPACE CODED Test VOCABULARY Consistency CORE";
   bdqffdq:hasSpecification <urn:uuid:e4de3444-b469-426d-abed-30b345328da4>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESSTATEPROVINCE_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESSTATEPROVINCE_CONSISTENT";
-  bdqffdq:forMeasurement bdqtest:c6c998af-6145-4361-b1e6-52c5b790340a-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESSTATEPROVINCE_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESSTATEPROVINCE_CONSISTENT" .
 
 <urn:uuid:e4de3444-b469-426d-abed-30b345328da4> a bdqffdq:Specification;
@@ -5519,11 +5519,11 @@ bdqtest:c8c61535-ab1a-4ec6-b4e9-f5f02541d7d8-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_BASISOFRECORD_NOTEMPTY.Response" .
 
 <urn:uuid:8768b9a9-2054-401a-8d85-60791d94df91> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:c8c61535-ab1a-4ec6-b4e9-f5f02541d7d8-2025-03-07;
   skos:note "TG2 Validation OTHER CODED Test Completeness CORE";
   bdqffdq:hasSpecification <urn:uuid:0782e4e5-010f-4e59-82d7-618a84ead70a>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_BASISOFRECORD_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_BASISOFRECORD_NOTEMPTY";
-  bdqffdq:forMeasurement bdqtest:c8c61535-ab1a-4ec6-b4e9-f5f02541d7d8-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_BASISOFRECORD_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_BASISOFRECORD_NOTEMPTY" .
 
 <urn:uuid:0782e4e5-010f-4e59-82d7-618a84ead70a> a bdqffdq:Specification;
@@ -5547,11 +5547,11 @@ bdqtest:b60c8c58-0137-4b6a-97e9-57d8ca5cf248-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:basisOfRecord Not Empty for MultiRecord" .
 
 <urn:uuid:2ffe66fb-9208-4ad5-a0e8-0df1fcd52e5f> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:b60c8c58-0137-4b6a-97e9-57d8ca5cf248-2025-03-07;
   skos:note "TG2 Validation OTHER CODED Test Completeness CORE";
   bdqffdq:hasSpecification <urn:uuid:221a02d3-c01e-48c8-9726-8ce423cc6434>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_NOTEMPTY";
-  bdqffdq:forMeasurement bdqtest:b60c8c58-0137-4b6a-97e9-57d8ca5cf248-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_NOTEMPTY" .
 
 <urn:uuid:221a02d3-c01e-48c8-9726-8ce423cc6434> a bdqffdq:Specification;
@@ -5580,11 +5580,11 @@ bdqtest:cb88b6d9-85b2-4cd5-9bfa-c0d96f79552e-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_GEODETICDATUM_STANDARD.Response" .
 
 <urn:uuid:fd0d38cd-1a3d-46cd-83ac-aab2a367e21f> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:cb88b6d9-85b2-4cd5-9bfa-c0d96f79552e-2025-03-07;
   skos:note "TG2 Validation SPACE CODED Test VOCABULARY Conformance CORE";
   bdqffdq:hasSpecification <urn:uuid:33e0b049-5d42-48d2-a825-c29b294eab9b>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_GEODETICDATUM_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_GEODETICDATUM_STANDARD";
-  bdqffdq:forMeasurement bdqtest:cb88b6d9-85b2-4cd5-9bfa-c0d96f79552e-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_GEODETICDATUM_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_GEODETICDATUM_STANDARD" .
 
 <urn:uuid:33e0b049-5d42-48d2-a825-c29b294eab9b> a bdqffdq:Specification;
@@ -5608,11 +5608,11 @@ bdqtest:8d8aba5c-f58a-49c9-a08d-1afb5ff1aa63-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Vaildation dwc:geodeticDatum Standard for MultiRecord" .
 
 <urn:uuid:95b63dab-dd45-49e0-892f-44a73e76fc00> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:8d8aba5c-f58a-49c9-a08d-1afb5ff1aa63-2025-03-07;
   skos:note "TG2 Validation SPACE CODED Test VOCABULARY Conformance CORE";
   bdqffdq:hasSpecification <urn:uuid:d2f89397-78f3-4e67-8994-79102470d305>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_STANDARD";
-  bdqffdq:forMeasurement bdqtest:8d8aba5c-f58a-49c9-a08d-1afb5ff1aa63-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_STANDARD" .
 
 <urn:uuid:d2f89397-78f3-4e67-8994-79102470d305> a bdqffdq:Specification;
@@ -5641,11 +5641,11 @@ bdqtest:57b40d9a-67d7-4916-9c27-dbb395c6c27e-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT.Response" .
 
 <urn:uuid:cda169b0-4a95-447d-8654-bdab5e180947> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:57b40d9a-67d7-4916-9c27-dbb395c6c27e-2025-03-07;
   skos:note "TG2 Validation SPACE CODED Test VOCABULARY Consistency ISO/DCMI STANDARD CORE";
   bdqffdq:hasSpecification <urn:uuid:daa9df47-98f7-44f4-9aed-acc8f8d9289b>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_COUNTRYCOUNTRYCODE_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_QA_COUNTRYCOUNTRYCODE_CONSISTENT";
-  bdqffdq:forMeasurement bdqtest:57b40d9a-67d7-4916-9c27-dbb395c6c27e-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_COUNTRYCOUNTRYCODE_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_QA_COUNTRYCOUNTRYCODE_CONSISTENT" .
 
 <urn:uuid:daa9df47-98f7-44f4-9aed-acc8f8d9289b> a bdqffdq:Specification;
@@ -5669,11 +5669,11 @@ bdqtest:26b46375-df2b-4677-a2e5-f96f86b8e242-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:country dwc:countryCode Consistent for MultiRecord" .
 
 <urn:uuid:0f7cc4a7-55b8-4108-bfdf-2b35d7f69262> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:26b46375-df2b-4677-a2e5-f96f86b8e242-2025-03-07;
   skos:note "TG2 Validation SPACE CODED Test VOCABULARY Consistency ISO/DCMI STANDARD CORE";
   bdqffdq:hasSpecification <urn:uuid:d2c47382-3a98-4855-a562-503ba125fa25>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCOUNTRYCODE_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCOUNTRYCODE_CONSISTENT";
-  bdqffdq:forMeasurement bdqtest:26b46375-df2b-4677-a2e5-f96f86b8e242-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCOUNTRYCODE_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCOUNTRYCODE_CONSISTENT" .
 
 <urn:uuid:d2c47382-3a98-4855-a562-503ba125fa25> a bdqffdq:Specification;
@@ -5702,11 +5702,11 @@ bdqtest:14a1d51f-16ed-4148-9dc8-1e90157a9868-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_EVENTDATE_STANDARD.Response" .
 
 <urn:uuid:28e09744-e189-487c-90f7-5dd4c88d7306> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:14a1d51f-16ed-4148-9dc8-1e90157a9868-2025-03-06;
   skos:note "TG2 Validation TIME CODED Test Conformance ISO/DCMI STANDARD CORE";
   bdqffdq:hasSpecification <urn:uuid:f7580626-6b32-499a-ad51-0aa22e3eaa4a>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_EVENTDATE_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_EVENTDATE_STANDARD";
-  bdqffdq:forMeasurement bdqtest:14a1d51f-16ed-4148-9dc8-1e90157a9868-2025-03-06;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_EVENTDATE_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_EVENTDATE_STANDARD" .
 
 <urn:uuid:f7580626-6b32-499a-ad51-0aa22e3eaa4a> a bdqffdq:Specification;
@@ -5730,11 +5730,11 @@ bdqtest:bffd7499-aca3-423f-bb43-f7bdc9260f4f-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:eventDate Standard for MultiRecord" .
 
 <urn:uuid:612e903c-56df-4e9a-afba-11a766900cfe> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:bffd7499-aca3-423f-bb43-f7bdc9260f4f-2025-03-06;
   skos:note "TG2 Validation TIME CODED Test Conformance ISO/DCMI STANDARD CORE";
   bdqffdq:hasSpecification <urn:uuid:5311be07-b9ce-4609-9859-bfb68ab958fc>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_STANDARD";
-  bdqffdq:forMeasurement bdqtest:bffd7499-aca3-423f-bb43-f7bdc9260f4f-2025-03-06;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_STANDARD" .
 
 <urn:uuid:5311be07-b9ce-4609-9859-bfb68ab958fc> a bdqffdq:Specification;
@@ -5763,11 +5763,11 @@ bdqtest:f375a3fd-4cf5-4ef4-955e-d71762ede2d8-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_EVENT_CONSISTENT.Response" .
 
 <urn:uuid:4383a0b8-ae96-4fbd-9537-394ffe6ce310> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:f375a3fd-4cf5-4ef4-955e-d71762ede2d8-2025-03-06;
   skos:note "TG2 Validation TIME CODED Test Consistency CORE";
   bdqffdq:hasSpecification <urn:uuid:06899170-252f-4938-9f98-95089ac0bc07>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_EVENT_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_QA_EVENT_CONSISTENT";
-  bdqffdq:forMeasurement bdqtest:f375a3fd-4cf5-4ef4-955e-d71762ede2d8-2025-03-06;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_EVENT_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_QA_EVENT_CONSISTENT" .
 
 <urn:uuid:06899170-252f-4938-9f98-95089ac0bc07> a bdqffdq:Specification;
@@ -5791,11 +5791,11 @@ bdqtest:1919f212-b7db-4b6e-9697-41a715001bd6-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:Event Consistent for MultiRecord" .
 
 <urn:uuid:0e8be8ac-143b-4f80-9b70-f037c041bc7a> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:1919f212-b7db-4b6e-9697-41a715001bd6-2025-03-06;
   skos:note "TG2 Validation TIME CODED Test Consistency CORE";
   bdqffdq:hasSpecification <urn:uuid:755db673-962e-4c3a-a033-fb5b05b1d66b>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENT_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENT_CONSISTENT";
-  bdqffdq:forMeasurement bdqtest:1919f212-b7db-4b6e-9697-41a715001bd6-2025-03-06;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENT_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENT_CONSISTENT" .
 
 <urn:uuid:755db673-962e-4c3a-a033-fb5b05b1d66b> a bdqffdq:Specification;
@@ -5824,11 +5824,11 @@ bdqtest:563872eb-f544-45a0-8f91-8098d62768d4-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_DATEIDENTIFIED_STANDARD.Response" .
 
 <urn:uuid:4d16917f-0c46-4d05-a7da-0512e6a37627> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:563872eb-f544-45a0-8f91-8098d62768d4-2025-03-07;
   skos:note "TG2 Validation TIME CODED Test Conformance ISO/DCMI STANDARD CORE";
   bdqffdq:hasSpecification <urn:uuid:79471c9d-a97c-4cb0-8c61-e74f1f15abce>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_DATEIDENTIFIED_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_DATEIDENTIFIED_STANDARD";
-  bdqffdq:forMeasurement bdqtest:563872eb-f544-45a0-8f91-8098d62768d4-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_DATEIDENTIFIED_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_DATEIDENTIFIED_STANDARD" .
 
 <urn:uuid:79471c9d-a97c-4cb0-8c61-e74f1f15abce> a bdqffdq:Specification;
@@ -5852,11 +5852,11 @@ bdqtest:49b787eb-7dce-4ace-97f5-7cbb47cd8cb9-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:dateIdentified Standard for MultiRecord" .
 
 <urn:uuid:f27a494c-aacf-4796-b1ff-f6187056e79d> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:49b787eb-7dce-4ace-97f5-7cbb47cd8cb9-2025-03-07;
   skos:note "TG2 Validation TIME CODED Test Conformance ISO/DCMI STANDARD CORE";
   bdqffdq:hasSpecification <urn:uuid:fee0daaa-9273-469c-9c7d-a62fafe05874>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DATEIDENTIFIED_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DATEIDENTIFIED_STANDARD";
-  bdqffdq:forMeasurement bdqtest:49b787eb-7dce-4ace-97f5-7cbb47cd8cb9-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DATEIDENTIFIED_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DATEIDENTIFIED_STANDARD" .
 
 <urn:uuid:fee0daaa-9273-469c-9c7d-a62fafe05874> a bdqffdq:Specification;
@@ -5885,11 +5885,11 @@ bdqtest:0df03601-3768-4805-906a-bbd0a41b0fda-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_TAXON_UNAMBIGUOUS.Response" .
 
 <urn:uuid:e780c2f1-4160-4ef2-b959-f3db56ceb62c> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:0df03601-3768-4805-906a-bbd0a41b0fda-2025-03-06;
   skos:note "TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE";
   bdqffdq:hasSpecification <urn:uuid:6ffe12f7-a29e-46a8-a3eb-8b7186214f4f>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_TAXON_UNAMBIGUOUS with Specification Specification for: MULTIRECORD_MEASURE_QA_TAXON_UNAMBIGUOUS";
-  bdqffdq:forMeasurement bdqtest:0df03601-3768-4805-906a-bbd0a41b0fda-2025-03-06;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_TAXON_UNAMBIGUOUS with Specification Specification for: MULTIRECORD_MEASURE_QA_TAXON_UNAMBIGUOUS" .
 
 <urn:uuid:6ffe12f7-a29e-46a8-a3eb-8b7186214f4f> a bdqffdq:Specification;
@@ -5913,11 +5913,11 @@ bdqtest:782773c9-7b37-483d-8ce2-c6683ba81882-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:Taxon Unambiguous for MultiRecord" .
 
 <urn:uuid:b189b2d9-a38f-464e-9a20-cdd584950a8b> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:782773c9-7b37-483d-8ce2-c6683ba81882-2025-03-06;
   skos:note "TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE";
   bdqffdq:hasSpecification <urn:uuid:b268bebc-75ed-40c4-8526-907be35e54f4>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXON_UNAMBIGUOUS with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXON_UNAMBIGUOUS";
-  bdqffdq:forMeasurement bdqtest:782773c9-7b37-483d-8ce2-c6683ba81882-2025-03-06;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXON_UNAMBIGUOUS with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXON_UNAMBIGUOUS" .
 
 <urn:uuid:b268bebc-75ed-40c4-8526-907be35e54f4> a bdqffdq:Specification;
@@ -5946,11 +5946,11 @@ bdqtest:6354376c-0cf2-435b-be40-850769c5a18a-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_DATEIDENTIFIED_INRANGE.Response" .
 
 <urn:uuid:5f314145-e988-4684-b507-7429c796d996> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:6354376c-0cf2-435b-be40-850769c5a18a-2025-03-07;
   skos:note "TG2 Validation TIME CODED Test Likeliness ISO/DCMI STANDARD Parameterized CORE";
   bdqffdq:hasSpecification <urn:uuid:8949abb1-4c5f-4733-9d3a-89c981fe6d30>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_DATEIDENTIFIED_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_DATEIDENTIFIED_INRANGE";
-  bdqffdq:forMeasurement bdqtest:6354376c-0cf2-435b-be40-850769c5a18a-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_DATEIDENTIFIED_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_DATEIDENTIFIED_INRANGE" .
 
 <urn:uuid:8949abb1-4c5f-4733-9d3a-89c981fe6d30> a bdqffdq:Specification;
@@ -5974,11 +5974,11 @@ bdqtest:c72fda2d-16e1-4ded-91a5-a7094339d603-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:dateIdentified In Range for MultiRecord" .
 
 <urn:uuid:f9ef8fc4-3169-48ae-ab8f-ab1d58fb82d7> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:c72fda2d-16e1-4ded-91a5-a7094339d603-2025-03-07;
   skos:note "TG2 Validation TIME CODED Test Likeliness ISO/DCMI STANDARD Parameterized CORE";
   bdqffdq:hasSpecification <urn:uuid:f41b08a1-afb0-4075-b591-dfdb4174af51>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DATEIDENTIFIED_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DATEIDENTIFIED_INRANGE";
-  bdqffdq:forMeasurement bdqtest:c72fda2d-16e1-4ded-91a5-a7094339d603-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DATEIDENTIFIED_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DATEIDENTIFIED_INRANGE" .
 
 <urn:uuid:f41b08a1-afb0-4075-b591-dfdb4174af51> a bdqffdq:Specification;
@@ -6007,11 +6007,11 @@ bdqtest:21541436-641d-45a9-938c-537484d94eb7-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_CLASS_FOUND.Response" .
 
 <urn:uuid:1ead6f88-824f-4d1f-a34b-11a1c3f8a871> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:21541436-641d-45a9-938c-537484d94eb7-2025-03-06;
   skos:note "TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE";
   bdqffdq:hasSpecification <urn:uuid:33abe762-eeca-41d0-a2b1-9847e2a07a59>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_CLASS_FOUND with Specification Specification for: MULTIRECORD_MEASURE_QA_CLASS_FOUND";
-  bdqffdq:forMeasurement bdqtest:21541436-641d-45a9-938c-537484d94eb7-2025-03-06;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_CLASS_FOUND with Specification Specification for: MULTIRECORD_MEASURE_QA_CLASS_FOUND" .
 
 <urn:uuid:33abe762-eeca-41d0-a2b1-9847e2a07a59> a bdqffdq:Specification;
@@ -6035,11 +6035,11 @@ bdqtest:7270a362-5f2e-41f0-955a-d7a8eaaf0f17-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:class Found for MultiRecord" .
 
 <urn:uuid:c779729f-1217-4023-ae22-405f271fae34> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:7270a362-5f2e-41f0-955a-d7a8eaaf0f17-2025-03-06;
   skos:note "TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE";
   bdqffdq:hasSpecification <urn:uuid:be57619a-9c9d-459f-8fb6-02aa912cd696>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASS_FOUND with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASS_FOUND";
-  bdqffdq:forMeasurement bdqtest:7270a362-5f2e-41f0-955a-d7a8eaaf0f17-2025-03-06;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASS_FOUND with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASS_FOUND" .
 
 <urn:uuid:be57619a-9c9d-459f-8fb6-02aa912cd696> a bdqffdq:Specification;
@@ -6068,11 +6068,11 @@ bdqtest:488c1dff-21ec-4e68-a00a-7355505e180c-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_GEODETICDATUM_NOTEMPTY.Response" .
 
 <urn:uuid:63ea1bbd-0184-4f59-83cb-302bb672fde0> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:488c1dff-21ec-4e68-a00a-7355505e180c-2025-03-07;
   skos:note "TG2 Validation SPACE CODED Test Completeness CORE";
   bdqffdq:hasSpecification <urn:uuid:6d868cda-6c34-4b02-9420-cbc51376114f>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_GEODETICDATUM_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_GEODETICDATUM_NOTEMPTY";
-  bdqffdq:forMeasurement bdqtest:488c1dff-21ec-4e68-a00a-7355505e180c-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_GEODETICDATUM_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_GEODETICDATUM_NOTEMPTY" .
 
 <urn:uuid:6d868cda-6c34-4b02-9420-cbc51376114f> a bdqffdq:Specification;
@@ -6096,11 +6096,11 @@ bdqtest:63fbaf3c-3d41-4ab6-bfc0-904f1b26835f-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:geodeticDatum Not Empty for MultiRecord" .
 
 <urn:uuid:624278a4-eebe-4d0d-89ea-416b697cdb9a> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:63fbaf3c-3d41-4ab6-bfc0-904f1b26835f-2025-03-07;
   skos:note "TG2 Validation SPACE CODED Test Completeness CORE";
   bdqffdq:hasSpecification <urn:uuid:a8a6e3a3-7df2-477a-ba35-552151f6f771>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_NOTEMPTY";
-  bdqffdq:forMeasurement bdqtest:63fbaf3c-3d41-4ab6-bfc0-904f1b26835f-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_NOTEMPTY" .
 
 <urn:uuid:a8a6e3a3-7df2-477a-ba35-552151f6f771> a bdqffdq:Specification;
@@ -6129,11 +6129,11 @@ bdqtest:3c8bc478-f6b2-4533-b7ce-45bae5d186c2-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_DECIMALLATITUDE_INRANGE.Response" .
 
 <urn:uuid:e8e0076e-930c-45bd-bc49-85f341b7b729> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:3c8bc478-f6b2-4533-b7ce-45bae5d186c2-2025-03-07;
   skos:note "TG2 Validation SPACE CODED Test Conformance CORE";
   bdqffdq:hasSpecification <urn:uuid:71b0f5c6-1e71-4dbb-bce3-9aa9366f2643>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_DECIMALLATITUDE_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_DECIMALLATITUDE_INRANGE";
-  bdqffdq:forMeasurement bdqtest:3c8bc478-f6b2-4533-b7ce-45bae5d186c2-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_DECIMALLATITUDE_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_DECIMALLATITUDE_INRANGE" .
 
 <urn:uuid:71b0f5c6-1e71-4dbb-bce3-9aa9366f2643> a bdqffdq:Specification;
@@ -6157,11 +6157,11 @@ bdqtest:f0fb1c79-9e3d-4d6c-a5a9-087cf57ebd26-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:decimalLatitude In Range for MultiRecord" .
 
 <urn:uuid:799beb58-39b8-40cf-b8a3-68aca8ec5beb> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:f0fb1c79-9e3d-4d6c-a5a9-087cf57ebd26-2025-03-07;
   skos:note "TG2 Validation SPACE CODED Test Conformance CORE";
   bdqffdq:hasSpecification <urn:uuid:7097d191-ad02-4dae-870e-fa88541cd0a7>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLATITUDE_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLATITUDE_INRANGE";
-  bdqffdq:forMeasurement bdqtest:f0fb1c79-9e3d-4d6c-a5a9-087cf57ebd26-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLATITUDE_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLATITUDE_INRANGE" .
 
 <urn:uuid:7097d191-ad02-4dae-870e-fa88541cd0a7> a bdqffdq:Specification;
@@ -6190,11 +6190,11 @@ bdqtest:465d7ac1-d193-46c0-a302-56a9ef99215f-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_KINGDOM_FOUND.Response" .
 
 <urn:uuid:ab20eec9-6bc3-40e6-95ab-76c2c79a7e6c> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:465d7ac1-d193-46c0-a302-56a9ef99215f-2025-03-06;
   skos:note "TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE";
   bdqffdq:hasSpecification <urn:uuid:3f846a5d-629b-45f4-94a0-2c32abe437e2>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_KINGDOM_FOUND with Specification Specification for: MULTIRECORD_MEASURE_QA_KINGDOM_FOUND";
-  bdqffdq:forMeasurement bdqtest:465d7ac1-d193-46c0-a302-56a9ef99215f-2025-03-06;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_KINGDOM_FOUND with Specification Specification for: MULTIRECORD_MEASURE_QA_KINGDOM_FOUND" .
 
 <urn:uuid:3f846a5d-629b-45f4-94a0-2c32abe437e2> a bdqffdq:Specification;
@@ -6218,11 +6218,11 @@ bdqtest:012eade5-fc64-458a-a13a-a614491bf4e0-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:kingdom Found for MultiRecord" .
 
 <urn:uuid:0f6f7d29-be39-4285-8e17-d71a9e350d38> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:012eade5-fc64-458a-a13a-a614491bf4e0-2025-03-06;
   skos:note "TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE";
   bdqffdq:hasSpecification <urn:uuid:5fc8b4cc-9da2-4f6a-8fb9-00f6ca3576f7>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_KINGDOM_FOUND with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_KINGDOM_FOUND";
-  bdqffdq:forMeasurement bdqtest:012eade5-fc64-458a-a13a-a614491bf4e0-2025-03-06;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_KINGDOM_FOUND with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_KINGDOM_FOUND" .
 
 <urn:uuid:5fc8b4cc-9da2-4f6a-8fb9-00f6ca3576f7> a bdqffdq:Specification;
@@ -6251,11 +6251,11 @@ bdqtest:b4d6a61c-64ff-4da0-974c-63a73fd20836-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_SCIENTIFICNAME_NOTEMPTY.Response" .
 
 <urn:uuid:63695de6-91f6-4f10-8bf7-59163c6e3ad9> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:b4d6a61c-64ff-4da0-974c-63a73fd20836-2025-03-06;
   skos:note "TG2 Validation NAME CODED Test Completeness CORE";
   bdqffdq:hasSpecification <urn:uuid:03c7280e-d1b9-459b-8bec-8bbd7ee6c886>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_SCIENTIFICNAME_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_SCIENTIFICNAME_NOTEMPTY";
-  bdqffdq:forMeasurement bdqtest:b4d6a61c-64ff-4da0-974c-63a73fd20836-2025-03-06;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_SCIENTIFICNAME_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_SCIENTIFICNAME_NOTEMPTY" .
 
 <urn:uuid:03c7280e-d1b9-459b-8bec-8bbd7ee6c886> a bdqffdq:Specification;
@@ -6279,11 +6279,11 @@ bdqtest:0f8b30e2-59dc-46ba-8b91-62049cd1a4e2-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:scientificName Not Empty for MultiRecord" .
 
 <urn:uuid:f43da890-5389-4465-a2ac-628ffbc79207> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:0f8b30e2-59dc-46ba-8b91-62049cd1a4e2-2025-03-06;
   skos:note "TG2 Validation NAME CODED Test Completeness CORE";
   bdqffdq:hasSpecification <urn:uuid:1424d363-511c-4230-94e1-1b07dea73db5>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_NOTEMPTY";
-  bdqffdq:forMeasurement bdqtest:0f8b30e2-59dc-46ba-8b91-62049cd1a4e2-2025-03-06;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_NOTEMPTY" .
 
 <urn:uuid:1424d363-511c-4230-94e1-1b07dea73db5> a bdqffdq:Specification;
@@ -6312,11 +6312,11 @@ bdqtest:773bb288-fef3-4968-a65a-a69c74d6ecb5-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_ORDER_FOUND.Response" .
 
 <urn:uuid:789f9110-5dca-411f-a742-1399175aa5be> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:773bb288-fef3-4968-a65a-a69c74d6ecb5-2025-03-06;
   skos:note "TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE";
   bdqffdq:hasSpecification <urn:uuid:d2fb98d8-70fc-4f24-8b20-71304f1ce35f>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_ORDER_FOUND with Specification Specification for: MULTIRECORD_MEASURE_QA_ORDER_FOUND";
-  bdqffdq:forMeasurement bdqtest:773bb288-fef3-4968-a65a-a69c74d6ecb5-2025-03-06;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_ORDER_FOUND with Specification Specification for: MULTIRECORD_MEASURE_QA_ORDER_FOUND" .
 
 <urn:uuid:d2fb98d8-70fc-4f24-8b20-71304f1ce35f> a bdqffdq:Specification;
@@ -6340,11 +6340,11 @@ bdqtest:f4fa449c-4b74-4dcf-b4cf-0b73e1496375-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:order Found for MultiRecord" .
 
 <urn:uuid:3cce3c7b-a343-4aed-be6d-7a66c4fa03a0> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:f4fa449c-4b74-4dcf-b4cf-0b73e1496375-2025-03-06;
   skos:note "TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE";
   bdqffdq:hasSpecification <urn:uuid:53c80627-1b2c-491e-bc9f-1b5ccf121a08>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_ORDER_FOUND with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_ORDER_FOUND";
-  bdqffdq:forMeasurement bdqtest:f4fa449c-4b74-4dcf-b4cf-0b73e1496375-2025-03-06;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_ORDER_FOUND with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_ORDER_FOUND" .
 
 <urn:uuid:53c80627-1b2c-491e-bc9f-1b5ccf121a08> a bdqffdq:Specification;
@@ -6373,11 +6373,11 @@ bdqtest:a0502c5f-608b-4e59-99da-d9490bb4d93b-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_YEAR_INRANGE.Response" .
 
 <urn:uuid:7647f9b5-28e4-4c31-948e-80b984422b0a> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:a0502c5f-608b-4e59-99da-d9490bb4d93b-2025-03-06;
   skos:note "TG2 Validation TIME CODED Test Conformance Parameterized CORE";
   bdqffdq:hasSpecification <urn:uuid:4bb3b33e-d8fd-44d0-96f2-7a0f8b373e46>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_YEAR_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_YEAR_INRANGE";
-  bdqffdq:forMeasurement bdqtest:a0502c5f-608b-4e59-99da-d9490bb4d93b-2025-03-06;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_YEAR_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_YEAR_INRANGE" .
 
 <urn:uuid:4bb3b33e-d8fd-44d0-96f2-7a0f8b373e46> a bdqffdq:Specification;
@@ -6401,11 +6401,11 @@ bdqtest:aee65eb8-8d1e-4b8f-bd37-5822e29f5734-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:year In Range for MultiRecord" .
 
 <urn:uuid:5a87d516-fae8-4d9d-b979-c9d3f299df99> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:aee65eb8-8d1e-4b8f-bd37-5822e29f5734-2025-03-06;
   skos:note "TG2 Validation TIME CODED Test Conformance Parameterized CORE";
   bdqffdq:hasSpecification <urn:uuid:296e60bb-6872-420d-9769-d3f26d205714>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_INRANGE";
-  bdqffdq:forMeasurement bdqtest:aee65eb8-8d1e-4b8f-bd37-5822e29f5734-2025-03-06;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_INRANGE" .
 
 <urn:uuid:296e60bb-6872-420d-9769-d3f26d205714> a bdqffdq:Specification;
@@ -6434,11 +6434,11 @@ bdqtest:151b2d29-3460-4ba5-a226-86971dc8ad03-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_COORDINATES_NOTZERO.Response" .
 
 <urn:uuid:10cfdb9f-a8d4-42fa-81be-3811d3c9f03a> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:151b2d29-3460-4ba5-a226-86971dc8ad03-2025-03-07;
   skos:note "TG2 Validation SPACE CODED Test Likeliness CORE";
   bdqffdq:hasSpecification <urn:uuid:663022f5-df42-471d-861c-c8198ffbde65>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_COORDINATES_NOTZERO with Specification Specification for: MULTIRECORD_MEASURE_QA_COORDINATES_NOTZERO";
-  bdqffdq:forMeasurement bdqtest:151b2d29-3460-4ba5-a226-86971dc8ad03-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_COORDINATES_NOTZERO with Specification Specification for: MULTIRECORD_MEASURE_QA_COORDINATES_NOTZERO" .
 
 <urn:uuid:663022f5-df42-471d-861c-c8198ffbde65> a bdqffdq:Specification;
@@ -6462,11 +6462,11 @@ bdqtest:0e239a55-0f19-4c68-bdbf-20580f27a647-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation Coordinates Not Zero for MultiRecord" .
 
 <urn:uuid:fc17791a-b09e-45ac-ab3d-cd745d202c2d> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:0e239a55-0f19-4c68-bdbf-20580f27a647-2025-03-07;
   skos:note "TG2 Validation SPACE CODED Test Likeliness CORE";
   bdqffdq:hasSpecification <urn:uuid:0a4b0450-5f8d-4425-9bf3-dc79498741c0>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATES_NOTZERO with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATES_NOTZERO";
-  bdqffdq:forMeasurement bdqtest:0e239a55-0f19-4c68-bdbf-20580f27a647-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATES_NOTZERO with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATES_NOTZERO" .
 
 <urn:uuid:0a4b0450-5f8d-4425-9bf3-dc79498741c0> a bdqffdq:Specification;
@@ -6495,11 +6495,11 @@ bdqtest:f22539ef-029b-4edb-ad17-add4363f7395-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_EVENTTEMPORAL_NOTEMPTY.Response" .
 
 <urn:uuid:36fcff08-e64e-4640-984f-5263b0407a97> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:f22539ef-029b-4edb-ad17-add4363f7395-2025-03-06;
   skos:note "TG2 Validation TIME CODED Test Completeness CORE";
   bdqffdq:hasSpecification <urn:uuid:3fc9b6a6-8c20-4fb7-a772-7f26d5aeaad0>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_EVENTTEMPORAL_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_EVENTTEMPORAL_NOTEMPTY";
-  bdqffdq:forMeasurement bdqtest:f22539ef-029b-4edb-ad17-add4363f7395-2025-03-06;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_EVENTTEMPORAL_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_EVENTTEMPORAL_NOTEMPTY" .
 
 <urn:uuid:3fc9b6a6-8c20-4fb7-a772-7f26d5aeaad0> a bdqffdq:Specification;
@@ -6523,11 +6523,11 @@ bdqtest:d3e282a1-3ff3-4ed0-bd08-fa23b6b8c161-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:Event Temporal Not Empty for MultiRecord" .
 
 <urn:uuid:9409ef24-baf9-4dfc-b4a8-7b6459cc1d54> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:d3e282a1-3ff3-4ed0-bd08-fa23b6b8c161-2025-03-06;
   skos:note "TG2 Validation TIME CODED Test Completeness CORE";
   bdqffdq:hasSpecification <urn:uuid:5e402929-b1c0-48e2-aaf6-cc6e365c9c42>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTTEMPORAL_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTTEMPORAL_NOTEMPTY";
-  bdqffdq:forMeasurement bdqtest:d3e282a1-3ff3-4ed0-bd08-fa23b6b8c161-2025-03-06;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTTEMPORAL_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTTEMPORAL_NOTEMPTY" .
 
 <urn:uuid:5e402929-b1c0-48e2-aaf6-cc6e365c9c42> a bdqffdq:Specification;
@@ -6556,11 +6556,11 @@ bdqtest:d9493fa0-d90e-41db-95f6-d1c1d243540e-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_DCTYPE_STANDARD.Response" .
 
 <urn:uuid:faa91223-c9f0-476d-a4d0-b42e13fc9022> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:d9493fa0-d90e-41db-95f6-d1c1d243540e-2025-03-07;
   skos:note "TG2 Validation OTHER CODED Test VOCABULARY Conformance ISO/DCMI STANDARD CORE";
   bdqffdq:hasSpecification <urn:uuid:3d5fc575-6ea0-4bff-bca9-172b6bb3b19d>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_DCTYPE_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_DCTYPE_STANDARD";
-  bdqffdq:forMeasurement bdqtest:d9493fa0-d90e-41db-95f6-d1c1d243540e-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_DCTYPE_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_DCTYPE_STANDARD" .
 
 <urn:uuid:3d5fc575-6ea0-4bff-bca9-172b6bb3b19d> a bdqffdq:Specification;
@@ -6584,11 +6584,11 @@ bdqtest:fbe47441-500f-44c7-a1bd-1e872edc5266-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dc:type Standard for MultiRecord" .
 
 <urn:uuid:73019d00-f6a5-4617-808b-6dc940f36654> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:fbe47441-500f-44c7-a1bd-1e872edc5266-2025-03-07;
   skos:note "TG2 Validation OTHER CODED Test VOCABULARY Conformance ISO/DCMI STANDARD CORE";
   bdqffdq:hasSpecification <urn:uuid:7c49e2d3-5d57-460f-b98a-8bba82b7156f>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DCTYPE_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DCTYPE_STANDARD";
-  bdqffdq:forMeasurement bdqtest:fbe47441-500f-44c7-a1bd-1e872edc5266-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DCTYPE_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DCTYPE_STANDARD" .
 
 <urn:uuid:7c49e2d3-5d57-460f-b98a-8bba82b7156f> a bdqffdq:Specification;
@@ -6617,11 +6617,11 @@ bdqtest:a94e986e-dbc8-4147-872d-5f2727945654-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_DECIMALLONGITUDE_NOTEMPTY.Response" .
 
 <urn:uuid:00d3e89b-b730-41f2-a5a2-8cf5e802a0c4> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:a94e986e-dbc8-4147-872d-5f2727945654-2025-03-07;
   skos:note "TG2 Validation SPACE CODED Test Completeness CORE";
   bdqffdq:hasSpecification <urn:uuid:333806e5-44f2-4761-80af-df91f9240385>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_DECIMALLONGITUDE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_DECIMALLONGITUDE_NOTEMPTY";
-  bdqffdq:forMeasurement bdqtest:a94e986e-dbc8-4147-872d-5f2727945654-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_DECIMALLONGITUDE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_DECIMALLONGITUDE_NOTEMPTY" .
 
 <urn:uuid:333806e5-44f2-4761-80af-df91f9240385> a bdqffdq:Specification;
@@ -6645,11 +6645,11 @@ bdqtest:f948a30e-8084-48d5-b1ca-d77c476f181f-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:decimalLongitude Not Empty for MultiRecord" .
 
 <urn:uuid:cf1fc4ae-bcec-4d85-ac3e-bbc50f116d66> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:f948a30e-8084-48d5-b1ca-d77c476f181f-2025-03-07;
   skos:note "TG2 Validation SPACE CODED Test Completeness CORE";
   bdqffdq:hasSpecification <urn:uuid:123392d9-c81c-4f3a-82bd-6f053eb41b65>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLONGITUDE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLONGITUDE_NOTEMPTY";
-  bdqffdq:forMeasurement bdqtest:f948a30e-8084-48d5-b1ca-d77c476f181f-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLONGITUDE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLONGITUDE_NOTEMPTY" .
 
 <urn:uuid:123392d9-c81c-4f3a-82bd-6f053eb41b65> a bdqffdq:Specification;
@@ -6678,11 +6678,11 @@ bdqtest:942f63bd-d19d-4214-bf8e-cec0055b8909-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_COUNTRYCODE_NOTEMPTY.Response" .
 
 <urn:uuid:cde5acd3-b95d-444b-817c-8a20adadf279> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:942f63bd-d19d-4214-bf8e-cec0055b8909-2025-03-07;
   skos:note "TG2 Validation SPACE CODED Test VOCABULARY Completeness CORE";
   bdqffdq:hasSpecification <urn:uuid:17bebf9d-e049-497b-bcca-dd08939398ea>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_COUNTRYCODE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_COUNTRYCODE_NOTEMPTY";
-  bdqffdq:forMeasurement bdqtest:942f63bd-d19d-4214-bf8e-cec0055b8909-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_COUNTRYCODE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_COUNTRYCODE_NOTEMPTY" .
 
 <urn:uuid:17bebf9d-e049-497b-bcca-dd08939398ea> a bdqffdq:Specification;
@@ -6706,11 +6706,11 @@ bdqtest:d71be8d4-1a04-4816-90c5-49808c823651-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:countryCode Not Empty for MultiRecord" .
 
 <urn:uuid:573e9d1a-f687-4efa-977d-5c696012c571> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:d71be8d4-1a04-4816-90c5-49808c823651-2025-03-07;
   skos:note "TG2 Validation SPACE CODED Test VOCABULARY Completeness CORE";
   bdqffdq:hasSpecification <urn:uuid:73a96a86-9ef2-4bb1-a8a0-f903c6744d75>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_NOTEMPTY";
-  bdqffdq:forMeasurement bdqtest:d71be8d4-1a04-4816-90c5-49808c823651-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_NOTEMPTY" .
 
 <urn:uuid:73a96a86-9ef2-4bb1-a8a0-f903c6744d75> a bdqffdq:Specification;
@@ -6739,11 +6739,11 @@ bdqtest:4fccf163-9336-4f48-996c-57f5f66e72db-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_LICENSE_NOTEMPTY.Response" .
 
 <urn:uuid:4de30040-b177-4b0d-a2f3-4c659f179494> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:4fccf163-9336-4f48-996c-57f5f66e72db-2025-03-07;
   skos:note "TG2 Validation OTHER CODED Test Completeness CORE";
   bdqffdq:hasSpecification <urn:uuid:2549297e-3643-41bb-b9d1-29a29b9026ed>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_LICENSE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_LICENSE_NOTEMPTY";
-  bdqffdq:forMeasurement bdqtest:4fccf163-9336-4f48-996c-57f5f66e72db-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_LICENSE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_LICENSE_NOTEMPTY" .
 
 <urn:uuid:2549297e-3643-41bb-b9d1-29a29b9026ed> a bdqffdq:Specification;
@@ -6767,11 +6767,11 @@ bdqtest:47ee20d9-5087-4f76-a494-6fea05e50b8b-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dcterms:license Not Empty for MultiRecord" .
 
 <urn:uuid:1683d750-e0bb-4ad7-baa9-9e59735d7de1> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:47ee20d9-5087-4f76-a494-6fea05e50b8b-2025-03-07;
   skos:note "TG2 Validation OTHER CODED Test Completeness CORE";
   bdqffdq:hasSpecification <urn:uuid:728b4db4-aff0-484f-9a5d-976b1f36cfb4>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_NOTEMPTY";
-  bdqffdq:forMeasurement bdqtest:47ee20d9-5087-4f76-a494-6fea05e50b8b-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_NOTEMPTY" .
 
 <urn:uuid:728b4db4-aff0-484f-9a5d-976b1f36cfb4> a bdqffdq:Specification;
@@ -6800,11 +6800,11 @@ bdqtest:ef05b45b-13b8-4877-9e9d-fa44b332d83c-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_POLYNOMIAL_CONSISTENT.Response" .
 
 <urn:uuid:a0cfa157-3665-42dd-8dcc-3a5d53d4f217> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:ef05b45b-13b8-4877-9e9d-fa44b332d83c-2025-03-06;
   skos:note "TG2 Validation NAME CODED Test Consistency CORE";
   bdqffdq:hasSpecification <urn:uuid:13ff592f-feb2-4350-95dc-fd8c8e434994>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_POLYNOMIAL_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_QA_POLYNOMIAL_CONSISTENT";
-  bdqffdq:forMeasurement bdqtest:ef05b45b-13b8-4877-9e9d-fa44b332d83c-2025-03-06;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_POLYNOMIAL_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_QA_POLYNOMIAL_CONSISTENT" .
 
 <urn:uuid:13ff592f-feb2-4350-95dc-fd8c8e434994> a bdqffdq:Specification;
@@ -6828,11 +6828,11 @@ bdqtest:7da5428e-87b2-4ec2-be82-05b9398b7577-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation Polynomial Consistent for MultiRecord" .
 
 <urn:uuid:f7719d75-d067-401b-af69-92cf82b12ba1> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:7da5428e-87b2-4ec2-be82-05b9398b7577-2025-03-06;
   skos:note "TG2 Validation NAME CODED Test Consistency CORE";
   bdqffdq:hasSpecification <urn:uuid:88fe8922-3eb1-4faa-b4aa-fe3daf742438>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_POLYNOMIAL_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_POLYNOMIAL_CONSISTENT";
-  bdqffdq:forMeasurement bdqtest:7da5428e-87b2-4ec2-be82-05b9398b7577-2025-03-06;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_POLYNOMIAL_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_POLYNOMIAL_CONSISTENT" .
 
 <urn:uuid:88fe8922-3eb1-4faa-b4aa-fe3daf742438> a bdqffdq:Specification;
@@ -6861,11 +6861,11 @@ bdqtest:4d999a65-a431-4a76-b591-e0d86dcf244b-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_DCTYPE_NOTEMPTY.Response" .
 
 <urn:uuid:5f76cfec-04ca-41a9-86bf-67824fd8e7e5> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:4d999a65-a431-4a76-b591-e0d86dcf244b-2025-03-07;
   skos:note "TG2 Validation OTHER CODED Test Completeness CORE";
   bdqffdq:hasSpecification <urn:uuid:94bce01c-2184-47ee-89c2-49acf77456f1>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_DCTYPE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_DCTYPE_NOTEMPTY";
-  bdqffdq:forMeasurement bdqtest:4d999a65-a431-4a76-b591-e0d86dcf244b-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_DCTYPE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_DCTYPE_NOTEMPTY" .
 
 <urn:uuid:94bce01c-2184-47ee-89c2-49acf77456f1> a bdqffdq:Specification;
@@ -6889,11 +6889,11 @@ bdqtest:f041ab17-d834-4586-aa6b-090de2e571a8-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dc:type Not Empty for MultiRecord" .
 
 <urn:uuid:57b42703-ccce-4f51-8c2c-c044d3af6c01> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:f041ab17-d834-4586-aa6b-090de2e571a8-2025-03-07;
   skos:note "TG2 Validation OTHER CODED Test Completeness CORE";
   bdqffdq:hasSpecification <urn:uuid:21fed9f3-89e6-466a-b7ce-4277038c84ea>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DCTYPE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DCTYPE_NOTEMPTY";
-  bdqffdq:forMeasurement bdqtest:f041ab17-d834-4586-aa6b-090de2e571a8-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DCTYPE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DCTYPE_NOTEMPTY" .
 
 <urn:uuid:21fed9f3-89e6-466a-b7ce-4277038c84ea> a bdqffdq:Specification;
@@ -6922,11 +6922,11 @@ bdqtest:241a279c-76d5-499b-ab49-a47ad7f8df50-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_BASISOFRECORD_STANDARD.Response" .
 
 <urn:uuid:6fba2f6c-4d87-4be6-bb3a-b553551c1d47> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:241a279c-76d5-499b-ab49-a47ad7f8df50-2025-03-07;
   skos:note "TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE";
   bdqffdq:hasSpecification <urn:uuid:f003048a-ad67-493c-8b87-e5f2cfb26981>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_BASISOFRECORD_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_BASISOFRECORD_STANDARD";
-  bdqffdq:forMeasurement bdqtest:241a279c-76d5-499b-ab49-a47ad7f8df50-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_BASISOFRECORD_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_BASISOFRECORD_STANDARD" .
 
 <urn:uuid:f003048a-ad67-493c-8b87-e5f2cfb26981> a bdqffdq:Specification;
@@ -6950,11 +6950,11 @@ bdqtest:f5dd74bd-6a22-4792-b675-c7ccf2a2c103-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:basisOfRecord Standard for MultiRecord" .
 
 <urn:uuid:c5482b41-234c-4ac0-b6f0-bebb1f93c51d> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:f5dd74bd-6a22-4792-b675-c7ccf2a2c103-2025-03-07;
   skos:note "TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE";
   bdqffdq:hasSpecification <urn:uuid:ef127cb0-c5c2-4bb0-aa4a-df4a42dfcabe>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_STANDARD";
-  bdqffdq:forMeasurement bdqtest:f5dd74bd-6a22-4792-b675-c7ccf2a2c103-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_STANDARD" .
 
 <urn:uuid:ef127cb0-c5c2-4bb0-aa4a-df4a42dfcabe> a bdqffdq:Specification;
@@ -6983,11 +6983,11 @@ bdqtest:2a9d4cfd-815a-46e0-bb51-60724582b762-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_TAXON_NOTEMPTY.Response" .
 
 <urn:uuid:d354faf8-cf72-48bd-93d5-10cd931df17c> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:2a9d4cfd-815a-46e0-bb51-60724582b762-2025-03-06;
   skos:note "TG2 Validation NAME CODED Test Completeness CORE";
   bdqffdq:hasSpecification <urn:uuid:91019397-5086-4383-b998-7bd1eeb78b9e>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_TAXON_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_TAXON_NOTEMPTY";
-  bdqffdq:forMeasurement bdqtest:2a9d4cfd-815a-46e0-bb51-60724582b762-2025-03-06;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_TAXON_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_TAXON_NOTEMPTY" .
 
 <urn:uuid:91019397-5086-4383-b998-7bd1eeb78b9e> a bdqffdq:Specification;
@@ -7011,11 +7011,11 @@ bdqtest:54d290e8-ac48-4f31-8af3-676363573217-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:Taxon Not Empty for MultiRecord" .
 
 <urn:uuid:3a7890d7-f8f5-4f27-a07d-97e8ea4d5b09> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:54d290e8-ac48-4f31-8af3-676363573217-2025-03-06;
   skos:note "TG2 Validation NAME CODED Test Completeness CORE";
   bdqffdq:hasSpecification <urn:uuid:4209fe3a-1fae-4cdb-b3cc-29696b4e7964>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXON_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXON_NOTEMPTY";
-  bdqffdq:forMeasurement bdqtest:54d290e8-ac48-4f31-8af3-676363573217-2025-03-06;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXON_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXON_NOTEMPTY" .
 
 <urn:uuid:4209fe3a-1fae-4cdb-b3cc-29696b4e7964> a bdqffdq:Specification;
@@ -7044,11 +7044,11 @@ bdqtest:49d756a8-e654-4267-a290-d1def5d2c5f9-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_MINDEPTH_INRANGE.Response" .
 
 <urn:uuid:1a5a97a2-925f-449e-a475-4a5e5494184f> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:49d756a8-e654-4267-a290-d1def5d2c5f9-2025-03-07;
   skos:note "TG2 Validation SPACE CODED Test Conformance Parameterized CORE";
   bdqffdq:hasSpecification <urn:uuid:e7f2383d-9406-497e-86b1-163b65955533>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_MINDEPTH_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_MINDEPTH_INRANGE";
-  bdqffdq:forMeasurement bdqtest:49d756a8-e654-4267-a290-d1def5d2c5f9-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_MINDEPTH_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_MINDEPTH_INRANGE" .
 
 <urn:uuid:e7f2383d-9406-497e-86b1-163b65955533> a bdqffdq:Specification;
@@ -7072,11 +7072,11 @@ bdqtest:9c66c116-6644-45b4-b4c7-db7a4ee7c500-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:minimumDepthInMeters In Range for MultiRecord" .
 
 <urn:uuid:de8001c9-2897-4fed-bbb3-b9b5c284e3ed> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:9c66c116-6644-45b4-b4c7-db7a4ee7c500-2025-03-07;
   skos:note "TG2 Validation SPACE CODED Test Conformance Parameterized CORE";
   bdqffdq:hasSpecification <urn:uuid:64a7fd81-396c-4000-a11d-f89d62a57740>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINDEPTH_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINDEPTH_INRANGE";
-  bdqffdq:forMeasurement bdqtest:9c66c116-6644-45b4-b4c7-db7a4ee7c500-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINDEPTH_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINDEPTH_INRANGE" .
 
 <urn:uuid:64a7fd81-396c-4000-a11d-f89d62a57740> a bdqffdq:Specification;
@@ -7105,11 +7105,11 @@ bdqtest:44f00697-ca66-43cf-8f16-646b40c0f514-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION.Response" .
 
 <urn:uuid:7de2e2b3-2734-4f0d-b4d1-25942d628a6f> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:44f00697-ca66-43cf-8f16-646b40c0f514-2025-03-07;
   skos:note "TG2 Validation SPACE CODED Test Conformance CORE";
   bdqffdq:hasSpecification <urn:uuid:e7ca116b-2b24-4995-af09-44ee80824188>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_MINELEVATION_LESSTHAN_MAXELEVATION with Specification Specification for: MULTIRECORD_MEASURE_QA_MINELEVATION_LESSTHAN_MAXELEVATION";
-  bdqffdq:forMeasurement bdqtest:44f00697-ca66-43cf-8f16-646b40c0f514-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_MINELEVATION_LESSTHAN_MAXELEVATION with Specification Specification for: MULTIRECORD_MEASURE_QA_MINELEVATION_LESSTHAN_MAXELEVATION" .
 
 <urn:uuid:e7ca116b-2b24-4995-af09-44ee80824188> a bdqffdq:Specification;
@@ -7133,11 +7133,11 @@ bdqtest:be2eb717-b390-47d1-b7ba-965a1101e215-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:minimumElevationInMeters less than dwcmaximumElevationInMeters for MultiRecord" .
 
 <urn:uuid:d80952fd-a95b-4e83-b0db-55b85edd10ef> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:be2eb717-b390-47d1-b7ba-965a1101e215-2025-03-07;
   skos:note "TG2 Validation SPACE CODED Test Conformance CORE";
   bdqffdq:hasSpecification <urn:uuid:ea0e998b-503c-4fff-92aa-9d96f56a65d8>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINELEVATION_LESSTHAN_MAXELEVATION with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINELEVATION_LESSTHAN_MAXELEVATION";
-  bdqffdq:forMeasurement bdqtest:be2eb717-b390-47d1-b7ba-965a1101e215-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINELEVATION_LESSTHAN_MAXELEVATION with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINELEVATION_LESSTHAN_MAXELEVATION" .
 
 <urn:uuid:ea0e998b-503c-4fff-92aa-9d96f56a65d8> a bdqffdq:Specification;
@@ -7166,11 +7166,11 @@ bdqtest:d94b0130-7a13-4fa8-955c-eff5c47bd9de-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_COORDINATEUNCERTAINTY_INRANGE.Response" .
 
 <urn:uuid:7b36926a-b3b2-4a3e-828e-696fb28a1d6e> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:d94b0130-7a13-4fa8-955c-eff5c47bd9de-2025-03-07;
   skos:note "TG2 Validation SPACE CODED Test Conformance CORE";
   bdqffdq:hasSpecification <urn:uuid:b749a6bd-db12-4808-a137-52c96c66ce03>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_COORDINATEUNCERTAINTY_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_COORDINATEUNCERTAINTY_INRANGE";
-  bdqffdq:forMeasurement bdqtest:d94b0130-7a13-4fa8-955c-eff5c47bd9de-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_COORDINATEUNCERTAINTY_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_COORDINATEUNCERTAINTY_INRANGE" .
 
 <urn:uuid:b749a6bd-db12-4808-a137-52c96c66ce03> a bdqffdq:Specification;
@@ -7194,11 +7194,11 @@ bdqtest:2d90d94b-d384-4bac-aa68-c6800d765882-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:coordinateUncertaintyInMeters In Range for MultiRecord" .
 
 <urn:uuid:ce0298ca-cda6-4952-81e1-9a2791483cb5> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:2d90d94b-d384-4bac-aa68-c6800d765882-2025-03-07;
   skos:note "TG2 Validation SPACE CODED Test Conformance CORE";
   bdqffdq:hasSpecification <urn:uuid:e281f245-452f-4afb-a900-3269ce97ff05>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATEUNCERTAINTY_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATEUNCERTAINTY_INRANGE";
-  bdqffdq:forMeasurement bdqtest:2d90d94b-d384-4bac-aa68-c6800d765882-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATEUNCERTAINTY_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATEUNCERTAINTY_INRANGE" .
 
 <urn:uuid:e281f245-452f-4afb-a900-3269ce97ff05> a bdqffdq:Specification;
@@ -7227,11 +7227,11 @@ bdqtest:7c5a6ba0-399d-4570-878a-4a064e2406fe-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_MAXELEVATION_INRANGE.Response" .
 
 <urn:uuid:127afdaf-1d01-47c8-9999-3bff64432c88> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:7c5a6ba0-399d-4570-878a-4a064e2406fe-2025-03-07;
   skos:note "TG2 Validation SPACE CODED Test Likeliness Parameterized CORE";
   bdqffdq:hasSpecification <urn:uuid:50426d4a-f11e-4402-b96e-f9c91c62d0da>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_MAXELEVATION_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_MAXELEVATION_INRANGE";
-  bdqffdq:forMeasurement bdqtest:7c5a6ba0-399d-4570-878a-4a064e2406fe-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_MAXELEVATION_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_MAXELEVATION_INRANGE" .
 
 <urn:uuid:50426d4a-f11e-4402-b96e-f9c91c62d0da> a bdqffdq:Specification;
@@ -7255,11 +7255,11 @@ bdqtest:6a3baf78-5ec3-4a84-8c6b-6876b3a4e3b5-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:maximumElevationInMeters In Range for MultiRecord" .
 
 <urn:uuid:00aa23d4-1278-4726-b6b2-6f08c37fce85> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:6a3baf78-5ec3-4a84-8c6b-6876b3a4e3b5-2025-03-07;
   skos:note "TG2 Validation SPACE CODED Test Likeliness Parameterized CORE";
   bdqffdq:hasSpecification <urn:uuid:43bdbdf5-cfa7-455c-80e3-dbd14117bb69>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MAXELEVATION_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MAXELEVATION_INRANGE";
-  bdqffdq:forMeasurement bdqtest:6a3baf78-5ec3-4a84-8c6b-6876b3a4e3b5-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MAXELEVATION_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MAXELEVATION_INRANGE" .
 
 <urn:uuid:43bdbdf5-cfa7-455c-80e3-dbd14117bb69> a bdqffdq:Specification;
@@ -7288,11 +7288,11 @@ bdqtest:2fea4571-92d0-48a5-a5ba-6caecd647862-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_OCCURRENCESTATUS_STANDARD.Response" .
 
 <urn:uuid:ba3bb2e3-b593-48ea-83b3-899e3a91ecd2> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:2fea4571-92d0-48a5-a5ba-6caecd647862-2025-03-07;
   skos:note "TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE";
   bdqffdq:hasSpecification <urn:uuid:e032ea6a-012d-436d-a442-da167a466b02>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_OCCURRENCESTATUS_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_OCCURRENCESTATUS_STANDARD";
-  bdqffdq:forMeasurement bdqtest:2fea4571-92d0-48a5-a5ba-6caecd647862-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_OCCURRENCESTATUS_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_OCCURRENCESTATUS_STANDARD" .
 
 <urn:uuid:e032ea6a-012d-436d-a442-da167a466b02> a bdqffdq:Specification;
@@ -7316,11 +7316,11 @@ bdqtest:faca6558-dbff-4d26-a5cb-e11cdf632fe7-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:occurrenceStatus Standard for MultiRecord" .
 
 <urn:uuid:66546be0-df63-4e9e-a339-a81f253ad317> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:faca6558-dbff-4d26-a5cb-e11cdf632fe7-2025-03-07;
   skos:note "TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE";
   bdqffdq:hasSpecification <urn:uuid:66e20810-2936-4932-950f-53e7680c7ca1>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCESTATUS_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCESTATUS_STANDARD";
-  bdqffdq:forMeasurement bdqtest:faca6558-dbff-4d26-a5cb-e11cdf632fe7-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCESTATUS_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCESTATUS_STANDARD" .
 
 <urn:uuid:66e20810-2936-4932-950f-53e7680c7ca1> a bdqffdq:Specification;
@@ -7349,11 +7349,11 @@ bdqtest:d2922585-2070-4851-a033-15e51977f9dc-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_OCCURRENCESTATUS_NOTEMPTY.Response" .
 
 <urn:uuid:a1252d6a-3cb8-4fce-bdba-453c82325a6f> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:d2922585-2070-4851-a033-15e51977f9dc-2025-03-07;
   skos:note "TG2 Validation OTHER CODED Test Completeness CORE";
   bdqffdq:hasSpecification <urn:uuid:8f1c623f-3e2c-4a6d-bc35-627100cab43b>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_OCCURRENCESTATUS_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_OCCURRENCESTATUS_NOTEMPTY";
-  bdqffdq:forMeasurement bdqtest:d2922585-2070-4851-a033-15e51977f9dc-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_OCCURRENCESTATUS_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_OCCURRENCESTATUS_NOTEMPTY" .
 
 <urn:uuid:8f1c623f-3e2c-4a6d-bc35-627100cab43b> a bdqffdq:Specification;
@@ -7377,11 +7377,11 @@ bdqtest:298db0c9-a85a-41ee-b111-d622fd969d71-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:occurrenceStatus Not Empty for MultiRecord" .
 
 <urn:uuid:c8273994-3c92-480e-a127-4e35a41bccae> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:298db0c9-a85a-41ee-b111-d622fd969d71-2025-03-07;
   skos:note "TG2 Validation OTHER CODED Test Completeness CORE";
   bdqffdq:hasSpecification <urn:uuid:1319a50d-2ded-4328-b3c2-2e9cb5e7c6bb>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCESTATUS_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCESTATUS_NOTEMPTY";
-  bdqffdq:forMeasurement bdqtest:298db0c9-a85a-41ee-b111-d622fd969d71-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCESTATUS_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCESTATUS_NOTEMPTY" .
 
 <urn:uuid:1319a50d-2ded-4328-b3c2-2e9cb5e7c6bb> a bdqffdq:Specification;
@@ -7410,11 +7410,11 @@ bdqtest:a2535b23-4407-40bd-b23b-30c8185d72a2-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_DECIMALLATITUDE_NOTEMPTY.Response" .
 
 <urn:uuid:63076250-647e-470e-9d0d-14a81681266f> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:a2535b23-4407-40bd-b23b-30c8185d72a2-2025-03-07;
   skos:note "TG2 Validation SPACE CODED Test Completeness CORE";
   bdqffdq:hasSpecification <urn:uuid:47010a99-41fa-41b7-9aac-189de9edc232>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_DECIMALLATITUDE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_DECIMALLATITUDE_NOTEMPTY";
-  bdqffdq:forMeasurement bdqtest:a2535b23-4407-40bd-b23b-30c8185d72a2-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_DECIMALLATITUDE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_DECIMALLATITUDE_NOTEMPTY" .
 
 <urn:uuid:47010a99-41fa-41b7-9aac-189de9edc232> a bdqffdq:Specification;
@@ -7438,11 +7438,11 @@ bdqtest:bceae35a-52ab-4968-846f-069ace766513-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:decimalLatitude Not Empty for MultiRecord" .
 
 <urn:uuid:b7faf32c-2560-4198-906a-5cad6cae4c24> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:bceae35a-52ab-4968-846f-069ace766513-2025-03-07;
   skos:note "TG2 Validation SPACE CODED Test Completeness CORE";
   bdqffdq:hasSpecification <urn:uuid:60d3d418-4eed-4190-9690-ae945fe34736>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLATITUDE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLATITUDE_NOTEMPTY";
-  bdqffdq:forMeasurement bdqtest:bceae35a-52ab-4968-846f-069ace766513-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLATITUDE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLATITUDE_NOTEMPTY" .
 
 <urn:uuid:60d3d418-4eed-4190-9690-ae945fe34736> a bdqffdq:Specification;
@@ -7471,11 +7471,11 @@ bdqtest:4cf84216-c8a7-4865-a8e1-3ffd829d5a10-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_SCIENTIFICNAMEID_NOTEMPTY.Response" .
 
 <urn:uuid:e3f80cb9-61c0-4fa4-9767-d7d4f415321d> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:4cf84216-c8a7-4865-a8e1-3ffd829d5a10-2025-03-06;
   skos:note "TG2 Validation NAME CODED Test Completeness CORE";
   bdqffdq:hasSpecification <urn:uuid:336865b2-1b21-49f6-a5f6-1112ed397400>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEID_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEID_NOTEMPTY";
-  bdqffdq:forMeasurement bdqtest:4cf84216-c8a7-4865-a8e1-3ffd829d5a10-2025-03-06;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEID_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEID_NOTEMPTY" .
 
 <urn:uuid:336865b2-1b21-49f6-a5f6-1112ed397400> a bdqffdq:Specification;
@@ -7499,11 +7499,11 @@ bdqtest:a9962d33-ad08-453a-8938-2972425034c2-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:scientificNameID Not Empty for MultiRecord" .
 
 <urn:uuid:968490ca-88c7-499b-8dc2-8f14db98eff1> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:a9962d33-ad08-453a-8938-2972425034c2-2025-03-06;
   skos:note "TG2 Validation NAME CODED Test Completeness CORE";
   bdqffdq:hasSpecification <urn:uuid:7dc4a4bd-8c04-45c5-9d1a-46080473e3d6>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEID_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEID_NOTEMPTY";
-  bdqffdq:forMeasurement bdqtest:a9962d33-ad08-453a-8938-2972425034c2-2025-03-06;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEID_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEID_NOTEMPTY" .
 
 <urn:uuid:7dc4a4bd-8c04-45c5-9d1a-46080473e3d6> a bdqffdq:Specification;
@@ -7532,11 +7532,11 @@ bdqtest:c5c8db83-3af0-4215-806f-e2f90574b138-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_GENUS_FOUND.Response" .
 
 <urn:uuid:5a90c547-205b-423f-9158-400652da905f> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:c5c8db83-3af0-4215-806f-e2f90574b138-2025-03-06;
   skos:note "TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE";
   bdqffdq:hasSpecification <urn:uuid:0c659160-9952-4ada-ac10-5a46ee52423a>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_GENUS_FOUND with Specification Specification for: MULTIRECORD_MEASURE_QA_GENUS_FOUND";
-  bdqffdq:forMeasurement bdqtest:c5c8db83-3af0-4215-806f-e2f90574b138-2025-03-06;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_GENUS_FOUND with Specification Specification for: MULTIRECORD_MEASURE_QA_GENUS_FOUND" .
 
 <urn:uuid:0c659160-9952-4ada-ac10-5a46ee52423a> a bdqffdq:Specification;
@@ -7560,11 +7560,11 @@ bdqtest:977f7e75-a88e-4e29-a7b1-e8cdd35aa107-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:genus Found for MultiRecord" .
 
 <urn:uuid:0cfe094e-c200-4a8c-b144-7fb0545e4cab> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:977f7e75-a88e-4e29-a7b1-e8cdd35aa107-2025-03-06;
   skos:note "TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE";
   bdqffdq:hasSpecification <urn:uuid:fcbc5474-422f-4e72-8419-48fee6bf578e>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_GENUS_FOUND with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_GENUS_FOUND";
-  bdqffdq:forMeasurement bdqtest:977f7e75-a88e-4e29-a7b1-e8cdd35aa107-2025-03-06;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_GENUS_FOUND with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_GENUS_FOUND" .
 
 <urn:uuid:fcbc5474-422f-4e72-8419-48fee6bf578e> a bdqffdq:Specification;
@@ -7593,11 +7593,11 @@ bdqtest:a2be4734-0a93-46dc-af4a-e2125b47dbd4-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_CLASSIFICATION_CONSISTENT.Response" .
 
 <urn:uuid:c5ab8254-22df-4d08-86e1-6633707ab22b> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:a2be4734-0a93-46dc-af4a-e2125b47dbd4-2025-03-06;
   skos:note "TG2 Validation NAME CODED Test VOCABULARY Consistency Parameterized CORE";
   bdqffdq:hasSpecification <urn:uuid:7701481b-dcb3-445a-ae50-b6bcde2163dd>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_CLASSIFICATION_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_QA_CLASSIFICATION_CONSISTENT";
-  bdqffdq:forMeasurement bdqtest:a2be4734-0a93-46dc-af4a-e2125b47dbd4-2025-03-06;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_CLASSIFICATION_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_QA_CLASSIFICATION_CONSISTENT" .
 
 <urn:uuid:7701481b-dcb3-445a-ae50-b6bcde2163dd> a bdqffdq:Specification;
@@ -7621,11 +7621,11 @@ bdqtest:a56fb342-c8ee-4611-8aab-e6c6357e8875-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation Classification Consistent for MultiRecord" .
 
 <urn:uuid:b4b92d16-40bf-4a3d-a802-112e9c282f23> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:a56fb342-c8ee-4611-8aab-e6c6357e8875-2025-03-06;
   skos:note "TG2 Validation NAME CODED Test VOCABULARY Consistency Parameterized CORE";
   bdqffdq:hasSpecification <urn:uuid:0f948339-0ec9-451f-b6ea-6272404be2c1>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASSIFICATION_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASSIFICATION_CONSISTENT";
-  bdqffdq:forMeasurement bdqtest:a56fb342-c8ee-4611-8aab-e6c6357e8875-2025-03-06;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASSIFICATION_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASSIFICATION_CONSISTENT" .
 
 <urn:uuid:0f948339-0ec9-451f-b6ea-6272404be2c1> a bdqffdq:Specification;
@@ -7654,11 +7654,11 @@ bdqtest:85dc5d02-9847-420f-a026-6a0e70962d2a-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_DAY_INRANGE.Response" .
 
 <urn:uuid:5001024d-da6b-4499-a616-d76322e2043b> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:85dc5d02-9847-420f-a026-6a0e70962d2a-2025-03-06;
   skos:note "TG2 Validation TIME CODED Test Conformance CORE";
   bdqffdq:hasSpecification <urn:uuid:f71db764-f571-4668-9a18-a3cafa5410c7>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_DAY_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_DAY_INRANGE";
-  bdqffdq:forMeasurement bdqtest:85dc5d02-9847-420f-a026-6a0e70962d2a-2025-03-06;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_DAY_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_DAY_INRANGE" .
 
 <urn:uuid:f71db764-f571-4668-9a18-a3cafa5410c7> a bdqffdq:Specification;
@@ -7682,11 +7682,11 @@ bdqtest:780480ff-8c4a-4276-aaca-cbd1248de9fa-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:day In Range for MultiRecord" .
 
 <urn:uuid:b6cbae5f-c4bd-4947-9a76-930592c52bb1> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:780480ff-8c4a-4276-aaca-cbd1248de9fa-2025-03-06;
   skos:note "TG2 Validation TIME CODED Test Conformance CORE";
   bdqffdq:hasSpecification <urn:uuid:df76475a-0207-4f98-b898-c1623d759442>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_INRANGE";
-  bdqffdq:forMeasurement bdqtest:780480ff-8c4a-4276-aaca-cbd1248de9fa-2025-03-06;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_INRANGE" .
 
 <urn:uuid:df76475a-0207-4f98-b898-c1623d759442> a bdqffdq:Specification;
@@ -7715,11 +7715,11 @@ bdqtest:b3c2bb86-e239-4532-ae0c-b121ec1ee025-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_MONTH_STANDARD.Response" .
 
 <urn:uuid:0f4b32e4-23c8-49ec-aa9f-3b7970d52b19> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:b3c2bb86-e239-4532-ae0c-b121ec1ee025-2025-03-06;
   skos:note "TG2 Validation TIME CODED Test Conformance CORE";
   bdqffdq:hasSpecification <urn:uuid:8fae3a40-10fd-433c-bd4a-368bd356a7f1>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_MONTH_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_MONTH_STANDARD";
-  bdqffdq:forMeasurement bdqtest:b3c2bb86-e239-4532-ae0c-b121ec1ee025-2025-03-06;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_MONTH_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_MONTH_STANDARD" .
 
 <urn:uuid:8fae3a40-10fd-433c-bd4a-368bd356a7f1> a bdqffdq:Specification;
@@ -7743,11 +7743,11 @@ bdqtest:c3b4cd93-a37f-4a0a-89dd-7ce53669f1f3-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:month Standard for MultiRecord" .
 
 <urn:uuid:0fc63cd3-953a-4a11-b193-aab8100c7720> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:c3b4cd93-a37f-4a0a-89dd-7ce53669f1f3-2025-03-06;
   skos:note "TG2 Validation TIME CODED Test Conformance CORE";
   bdqffdq:hasSpecification <urn:uuid:797b3653-1b79-4047-8f9a-82061b558a47>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MONTH_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MONTH_STANDARD";
-  bdqffdq:forMeasurement bdqtest:c3b4cd93-a37f-4a0a-89dd-7ce53669f1f3-2025-03-06;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MONTH_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MONTH_STANDARD" .
 
 <urn:uuid:797b3653-1b79-4047-8f9a-82061b558a47> a bdqffdq:Specification;
@@ -7778,11 +7778,11 @@ bdqtest:8c217eee-9cd0-48c3-aea0-90151c6c5bfd-2025-03-06 bdqffdq:hasActedUponInfo
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:startDayOfYear In Range for MultiRecord" .
 
 <urn:uuid:8b66559e-bbe2-497f-ae9b-2c85863db5ad> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:8c217eee-9cd0-48c3-aea0-90151c6c5bfd-2025-03-06;
   skos:note "TG2 Validation TIME CODED Test Conformance CORE";
   bdqffdq:hasSpecification <urn:uuid:9e2719f2-9006-454a-b0d3-afd931f9c05d>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_STARTDAYOFYEAR_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_STARTDAYOFYEAR_INRANGE";
-  bdqffdq:forMeasurement bdqtest:8c217eee-9cd0-48c3-aea0-90151c6c5bfd-2025-03-06;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_STARTDAYOFYEAR_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_STARTDAYOFYEAR_INRANGE" .
 
 <urn:uuid:9e2719f2-9006-454a-b0d3-afd931f9c05d> a bdqffdq:Specification;
@@ -7806,11 +7806,11 @@ bdqtest:76008c6b-c56a-4233-84e3-8584950037ec-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:startDayOfYear In Range for MultiRecord" .
 
 <urn:uuid:e8700081-32c3-45d0-9aae-d322ac94d864> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:76008c6b-c56a-4233-84e3-8584950037ec-2025-03-06;
   skos:note "TG2 Validation TIME CODED Test Conformance CORE";
   bdqffdq:hasSpecification <urn:uuid:9d7932d2-8b74-460c-a33a-74128d299c7a>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_STARTDAYOFYEAR_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_STARTDAYOFYEAR_INRANGE";
-  bdqffdq:forMeasurement bdqtest:76008c6b-c56a-4233-84e3-8584950037ec-2025-03-06;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_STARTDAYOFYEAR_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_STARTDAYOFYEAR_INRANGE" .
 
 <urn:uuid:9d7932d2-8b74-460c-a33a-74128d299c7a> a bdqffdq:Specification;
@@ -7839,11 +7839,11 @@ bdqtest:c04d428a-13d0-4766-9df7-4dfb2ef5d5d8-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_ENDDAYOFYEAR_INRANGE.Response" .
 
 <urn:uuid:893fd474-eab3-4265-865f-6cfe7635aa6b> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:c04d428a-13d0-4766-9df7-4dfb2ef5d5d8-2025-03-06;
   skos:note "TG2 Validation TIME CODED Test Conformance CORE";
   bdqffdq:hasSpecification <urn:uuid:c211fdc8-fae5-4fa5-a8b8-0664a643b6a5>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_ENDDAYOFYEAR_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_ENDDAYOFYEAR_INRANGE";
-  bdqffdq:forMeasurement bdqtest:c04d428a-13d0-4766-9df7-4dfb2ef5d5d8-2025-03-06;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_ENDDAYOFYEAR_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_ENDDAYOFYEAR_INRANGE" .
 
 <urn:uuid:c211fdc8-fae5-4fa5-a8b8-0664a643b6a5> a bdqffdq:Specification;
@@ -7867,11 +7867,11 @@ bdqtest:7775309b-5331-4a65-b839-cbe959948d33-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:endDayOfYear In Range for MultiRecord" .
 
 <urn:uuid:6878bd5c-cac6-4d0b-aa0e-119f1dcc010c> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:7775309b-5331-4a65-b839-cbe959948d33-2025-03-06;
   skos:note "TG2 Validation TIME CODED Test Conformance CORE";
   bdqffdq:hasSpecification <urn:uuid:4b92124d-ee59-4183-b3da-77833996c053>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_ENDDAYOFYEAR_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_ENDDAYOFYEAR_INRANGE";
-  bdqffdq:forMeasurement bdqtest:7775309b-5331-4a65-b839-cbe959948d33-2025-03-06;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_ENDDAYOFYEAR_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_ENDDAYOFYEAR_INRANGE" .
 
 <urn:uuid:4b92124d-ee59-4183-b3da-77833996c053> a bdqffdq:Specification;
@@ -7900,11 +7900,11 @@ bdqtest:371035f6-42b5-494f-86d9-de2f44a6cdc6-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_DAY_STANDARD.Response" .
 
 <urn:uuid:ebb501d7-405b-44fc-af0e-711d653f41e5> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:371035f6-42b5-494f-86d9-de2f44a6cdc6-2025-03-06;
   skos:note "TG2 Validation TIME CODED Test Conformance CORE";
   bdqffdq:hasSpecification <urn:uuid:745f8e6b-3f4a-4f1a-bf0c-97e0d91b545d>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_DAY_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_DAY_STANDARD";
-  bdqffdq:forMeasurement bdqtest:371035f6-42b5-494f-86d9-de2f44a6cdc6-2025-03-06;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_DAY_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_DAY_STANDARD" .
 
 <urn:uuid:745f8e6b-3f4a-4f1a-bf0c-97e0d91b545d> a bdqffdq:Specification;
@@ -7928,11 +7928,11 @@ bdqtest:c3e0100f-dfc3-4379-a855-df878eef295e-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:day Standard for MultiRecord" .
 
 <urn:uuid:317a82e3-3734-4163-b9e2-b13d93a8ce04> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:c3e0100f-dfc3-4379-a855-df878eef295e-2025-03-06;
   skos:note "TG2 Validation TIME CODED Test Conformance CORE";
   bdqffdq:hasSpecification <urn:uuid:e7bcd71f-7156-4e5b-9732-3fac13338f83>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_STANDARD";
-  bdqffdq:forMeasurement bdqtest:c3e0100f-dfc3-4379-a855-df878eef295e-2025-03-06;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_STANDARD" .
 
 <urn:uuid:e7bcd71f-7156-4e5b-9732-3fac13338f83> a bdqffdq:Specification;
@@ -7961,11 +7961,11 @@ bdqtest:e0b8cff1-3322-40d2-b8b2-b99fc9ae130a-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_TAXONRANK_NOTEMPTY.Response" .
 
 <urn:uuid:e4baa0f4-ee8c-4521-b9c0-89e6976d6c91> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:e0b8cff1-3322-40d2-b8b2-b99fc9ae130a-2025-03-06;
   skos:note "TG2 Validation NAME CODED Test Completeness CORE";
   bdqffdq:hasSpecification <urn:uuid:6317c75a-e514-4840-8b69-81e2e87461d0>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_TAXONRANK_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_TAXONRANK_NOTEMPTY";
-  bdqffdq:forMeasurement bdqtest:e0b8cff1-3322-40d2-b8b2-b99fc9ae130a-2025-03-06;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_TAXONRANK_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_TAXONRANK_NOTEMPTY" .
 
 <urn:uuid:6317c75a-e514-4840-8b69-81e2e87461d0> a bdqffdq:Specification;
@@ -7989,11 +7989,11 @@ bdqtest:de661615-b338-4557-af5b-d44a89de40fa-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:taxonRank Not Empty for MultiRecord" .
 
 <urn:uuid:3703bd95-abdc-4364-9152-b1774b17da6e> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:de661615-b338-4557-af5b-d44a89de40fa-2025-03-06;
   skos:note "TG2 Validation NAME CODED Test Completeness CORE";
   bdqffdq:hasSpecification <urn:uuid:e251b99c-9726-44e3-b44d-6fa0feacc3b3>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXONRANK_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXONRANK_NOTEMPTY";
-  bdqffdq:forMeasurement bdqtest:de661615-b338-4557-af5b-d44a89de40fa-2025-03-06;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXONRANK_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXONRANK_NOTEMPTY" .
 
 <urn:uuid:e251b99c-9726-44e3-b44d-6fa0feacc3b3> a bdqffdq:Specification;
@@ -8022,11 +8022,11 @@ bdqtest:f320ca83-8487-4011-b1ff-f4b1b4dd86ec-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_TAXONRANK_STANDARD.Response" .
 
 <urn:uuid:e9dd8019-0fbd-45a3-817e-f99bea3f8b19> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:f320ca83-8487-4011-b1ff-f4b1b4dd86ec-2025-03-06;
   skos:note "TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE";
   bdqffdq:hasSpecification <urn:uuid:aa2e919c-5655-488e-90ca-10f8bbd233ca>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_TAXONRANK_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_TAXONRANK_STANDARD";
-  bdqffdq:forMeasurement bdqtest:f320ca83-8487-4011-b1ff-f4b1b4dd86ec-2025-03-06;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_TAXONRANK_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_TAXONRANK_STANDARD" .
 
 <urn:uuid:aa2e919c-5655-488e-90ca-10f8bbd233ca> a bdqffdq:Specification;
@@ -8050,11 +8050,11 @@ bdqtest:602bc457-6b1d-4f24-adef-d0d31bcdf2f0-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:taxonRank Standard for MultiRecord" .
 
 <urn:uuid:2f70455e-1821-4968-b67e-29fc684a1c6c> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:602bc457-6b1d-4f24-adef-d0d31bcdf2f0-2025-03-06;
   skos:note "TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE";
   bdqffdq:hasSpecification <urn:uuid:68db640c-ed46-4503-8d3a-31d23eb6c73c>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXONRANK_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXONRANK_STANDARD";
-  bdqffdq:forMeasurement bdqtest:602bc457-6b1d-4f24-adef-d0d31bcdf2f0-2025-03-06;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXONRANK_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXONRANK_STANDARD" .
 
 <urn:uuid:68db640c-ed46-4503-8d3a-31d23eb6c73c> a bdqffdq:Specification;
@@ -8083,11 +8083,11 @@ bdqtest:c73d49d1-06e4-4272-8249-6a26e7f8abca-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_MAXDEPTH_INRANGE.Response" .
 
 <urn:uuid:66a9248a-4d93-443e-8f86-88b04e859d88> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:c73d49d1-06e4-4272-8249-6a26e7f8abca-2025-03-07;
   skos:note "TG2 Validation SPACE CODED Test Conformance Parameterized CORE";
   bdqffdq:hasSpecification <urn:uuid:dc982344-5bc9-49b5-85f8-434f1e304eba>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_MAXDEPTH_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_MAXDEPTH_INRANGE";
-  bdqffdq:forMeasurement bdqtest:c73d49d1-06e4-4272-8249-6a26e7f8abca-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_MAXDEPTH_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_MAXDEPTH_INRANGE" .
 
 <urn:uuid:dc982344-5bc9-49b5-85f8-434f1e304eba> a bdqffdq:Specification;
@@ -8111,11 +8111,11 @@ bdqtest:3de8af03-05d4-4fd8-8e6d-ba886dc5446f-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:maximumDepthInMeters In Range for MultiRecord" .
 
 <urn:uuid:686b728d-20c5-4593-8022-e8cc575dd737> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:3de8af03-05d4-4fd8-8e6d-ba886dc5446f-2025-03-07;
   skos:note "TG2 Validation SPACE CODED Test Conformance Parameterized CORE";
   bdqffdq:hasSpecification <urn:uuid:ec660fd1-3b67-47b3-907d-80e6799f43b9>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MAXDEPTH_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MAXDEPTH_INRANGE";
-  bdqffdq:forMeasurement bdqtest:3de8af03-05d4-4fd8-8e6d-ba886dc5446f-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MAXDEPTH_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MAXDEPTH_INRANGE" .
 
 <urn:uuid:ec660fd1-3b67-47b3-907d-80e6799f43b9> a bdqffdq:Specification;
@@ -8144,11 +8144,11 @@ bdqtest:9c1cdf6a-0dbf-4828-a2e3-fb368f74d194-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_STATEPROVINCE_FOUND.Response" .
 
 <urn:uuid:f61b4a56-28d2-45da-9f25-05a95890ab34> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:9c1cdf6a-0dbf-4828-a2e3-fb368f74d194-2025-03-07;
   skos:note "TG2 Validation SPACE CODED Test VOCABULARY Conformance Parameterized CORE";
   bdqffdq:hasSpecification <urn:uuid:8c7b24de-6e84-4c07-9d61-f07fee762281>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_STATEPROVINCE_FOUND with Specification Specification for: MULTIRECORD_MEASURE_QA_STATEPROVINCE_FOUND";
-  bdqffdq:forMeasurement bdqtest:9c1cdf6a-0dbf-4828-a2e3-fb368f74d194-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_STATEPROVINCE_FOUND with Specification Specification for: MULTIRECORD_MEASURE_QA_STATEPROVINCE_FOUND" .
 
 <urn:uuid:8c7b24de-6e84-4c07-9d61-f07fee762281> a bdqffdq:Specification;
@@ -8172,11 +8172,11 @@ bdqtest:58fdd5c1-6201-49a1-a7cd-f49c210dc0b6-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:stateProvince Found for MultiRecord" .
 
 <urn:uuid:a6efb3ed-c977-4e6f-9b60-ba9d639bdd86> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:58fdd5c1-6201-49a1-a7cd-f49c210dc0b6-2025-03-07;
   skos:note "TG2 Validation SPACE CODED Test VOCABULARY Conformance Parameterized CORE";
   bdqffdq:hasSpecification <urn:uuid:778976c3-2c33-4b8d-9135-a4d8ef36385f>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_STATEPROVINCE_FOUND with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_STATEPROVINCE_FOUND";
-  bdqffdq:forMeasurement bdqtest:58fdd5c1-6201-49a1-a7cd-f49c210dc0b6-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_STATEPROVINCE_FOUND with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_STATEPROVINCE_FOUND" .
 
 <urn:uuid:778976c3-2c33-4b8d-9135-a4d8ef36385f> a bdqffdq:Specification;
@@ -8205,11 +8205,11 @@ bdqtest:23aced89-d613-479c-bc4c-837d74b73be0-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS.Response" .
 
 <urn:uuid:acff5571-4240-4308-817b-6c467060ae36> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:23aced89-d613-479c-bc4c-837d74b73be0-2025-03-07;
   skos:note "TG2 Validation SPACE CODED Test VOCABULARY Conformance Parameterized CORE";
   bdqffdq:hasSpecification <urn:uuid:6232150a-9abc-469f-b533-44d61aa85054>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_COUNTRYSTATEPROVINCE_UNAMBIGUOUS with Specification Specification for: MULTIRECORD_MEASURE_QA_COUNTRYSTATEPROVINCE_UNAMBIGUOUS";
-  bdqffdq:forMeasurement bdqtest:23aced89-d613-479c-bc4c-837d74b73be0-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_COUNTRYSTATEPROVINCE_UNAMBIGUOUS with Specification Specification for: MULTIRECORD_MEASURE_QA_COUNTRYSTATEPROVINCE_UNAMBIGUOUS" .
 
 <urn:uuid:6232150a-9abc-469f-b533-44d61aa85054> a bdqffdq:Specification;
@@ -8233,11 +8233,11 @@ bdqtest:8b73f37d-89ed-479a-8389-9e71ad2ac84d-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:country dwc:stateProvince Unambiguous for MultiRecord" .
 
 <urn:uuid:683c56f0-23ec-4130-8e5e-28ea0ef66501> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:8b73f37d-89ed-479a-8389-9e71ad2ac84d-2025-03-07;
   skos:note "TG2 Validation SPACE CODED Test VOCABULARY Conformance Parameterized CORE";
   bdqffdq:hasSpecification <urn:uuid:809e0413-0fb4-4e44-bfa7-b3b728372fb8>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYSTATEPROVINCE_UNAMBIGUOUS with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYSTATEPROVINCE_UNAMBIGUOUS";
-  bdqffdq:forMeasurement bdqtest:8b73f37d-89ed-479a-8389-9e71ad2ac84d-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYSTATEPROVINCE_UNAMBIGUOUS with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYSTATEPROVINCE_UNAMBIGUOUS" .
 
 <urn:uuid:809e0413-0fb4-4e44-bfa7-b3b728372fb8> a bdqffdq:Specification;
@@ -8266,11 +8266,11 @@ bdqtest:a9529e71-5470-4cb1-b04d-aa483926f532-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_SCIENTIFICNAMEID_COMPLETE.Response" .
 
 <urn:uuid:8857d693-f25b-48aa-ba9b-29b692011bf2> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:a9529e71-5470-4cb1-b04d-aa483926f532-2025-03-06;
   skos:note "TG2 Validation NAME CODED Test Completeness CORE";
   bdqffdq:hasSpecification <urn:uuid:a908512b-be44-4987-bbc9-a27c4d2d6bd6>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEID_COMPLETE with Specification Specification for: MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEID_COMPLETE";
-  bdqffdq:forMeasurement bdqtest:a9529e71-5470-4cb1-b04d-aa483926f532-2025-03-06;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEID_COMPLETE with Specification Specification for: MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEID_COMPLETE" .
 
 <urn:uuid:a908512b-be44-4987-bbc9-a27c4d2d6bd6> a bdqffdq:Specification;
@@ -8294,11 +8294,11 @@ bdqtest:f174ad13-3c67-49f9-8d8b-aba4e933d6f6-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:scientificNameID Complete for MultiRecord" .
 
 <urn:uuid:486dd6c7-6034-4b63-9da8-842c317ea4af> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:f174ad13-3c67-49f9-8d8b-aba4e933d6f6-2025-03-06;
   skos:note "TG2 Validation NAME CODED Test Completeness CORE";
   bdqffdq:hasSpecification <urn:uuid:523f85e9-a15f-493a-82da-fe08119925ea>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEID_COMPLETE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEID_COMPLETE";
-  bdqffdq:forMeasurement bdqtest:f174ad13-3c67-49f9-8d8b-aba4e933d6f6-2025-03-06;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEID_COMPLETE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEID_COMPLETE" .
 
 <urn:uuid:523f85e9-a15f-493a-82da-fe08119925ea> a bdqffdq:Specification;
@@ -8327,11 +8327,11 @@ bdqtest:3bc9df8b-0f57-4157-9374-b56a99090b22-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_KINGDOM_NOTEMPTY.Response" .
 
 <urn:uuid:5c3ccce4-1a9d-4f04-b306-cb6c6f601f9e> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:3bc9df8b-0f57-4157-9374-b56a99090b22-2025-03-06;
   skos:note "TG2 Validation NAME CODED Test Completeness CORE";
   bdqffdq:hasSpecification <urn:uuid:4f0adc36-22b1-4534-a994-1246be02c1a8>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_KINGDOM_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_KINGDOM_NOTEMPTY";
-  bdqffdq:forMeasurement bdqtest:3bc9df8b-0f57-4157-9374-b56a99090b22-2025-03-06;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_KINGDOM_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_KINGDOM_NOTEMPTY" .
 
 <urn:uuid:4f0adc36-22b1-4534-a994-1246be02c1a8> a bdqffdq:Specification;
@@ -8355,11 +8355,11 @@ bdqtest:342bd81c-e2b7-41d8-b32b-013992d19f99-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:kingdom Not Empty for MultiRecord" .
 
 <urn:uuid:afb83bc1-4c79-4254-9938-ee470d2eecc2> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:342bd81c-e2b7-41d8-b32b-013992d19f99-2025-03-06;
   skos:note "TG2 Validation NAME CODED Test Completeness CORE";
   bdqffdq:hasSpecification <urn:uuid:1e548db5-3f69-43b3-ad99-98c75305762e>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_KINGDOM_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_KINGDOM_NOTEMPTY";
-  bdqffdq:forMeasurement bdqtest:342bd81c-e2b7-41d8-b32b-013992d19f99-2025-03-06;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_KINGDOM_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_KINGDOM_NOTEMPTY" .
 
 <urn:uuid:1e548db5-3f69-43b3-ad99-98c75305762e> a bdqffdq:Specification;
@@ -8388,11 +8388,11 @@ bdqtest:6dd6fecf-6ba1-425c-afbe-6a9ed7b65ed7-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY.Response" .
 
 <urn:uuid:e3f91e30-4a96-4772-a941-3107a27c6229> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:6dd6fecf-6ba1-425c-afbe-6a9ed7b65ed7-2025-03-06;
   skos:note "TG2 Validation NAME CODED Test Completeness CORE";
   bdqffdq:hasSpecification <urn:uuid:8f3b709b-0a01-4e0e-a43a-b43a9ee8aec8>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY";
-  bdqffdq:forMeasurement bdqtest:6dd6fecf-6ba1-425c-afbe-6a9ed7b65ed7-2025-03-06;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY" .
 
 <urn:uuid:8f3b709b-0a01-4e0e-a43a-b43a9ee8aec8> a bdqffdq:Specification;
@@ -8416,11 +8416,11 @@ bdqtest:dbf3cece-1d83-426e-a5e0-8158fcf9c0cd-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:scientificNameAuthorship Not Empty for MultiRecord" .
 
 <urn:uuid:7805aa92-8bb4-4cde-8095-45073bb1f9df> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:dbf3cece-1d83-426e-a5e0-8158fcf9c0cd-2025-03-06;
   skos:note "TG2 Validation NAME CODED Test Completeness CORE";
   bdqffdq:hasSpecification <urn:uuid:2b29c224-435f-49fd-b010-16def638be27>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY";
-  bdqffdq:forMeasurement bdqtest:dbf3cece-1d83-426e-a5e0-8158fcf9c0cd-2025-03-06;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY" .
 
 <urn:uuid:2b29c224-435f-49fd-b010-16def638be27> a bdqffdq:Specification;
@@ -8449,11 +8449,11 @@ bdqtest:16059801-6adb-4e65-82f4-61eaa70d8df0-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY.Response" .
 
 <urn:uuid:11927fb0-e11d-4e20-8fde-a9910103df2a> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:16059801-6adb-4e65-82f4-61eaa70d8df0-2025-03-06;
   skos:note "TG2 Validation NAME CODED Test Completeness CORE";
   bdqffdq:hasSpecification <urn:uuid:c26bf0a3-98e8-4a5e-8219-0fa576c28cfa>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_NAMEPUBLISHEDINYEAR_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_NAMEPUBLISHEDINYEAR_NOTEMPTY";
-  bdqffdq:forMeasurement bdqtest:16059801-6adb-4e65-82f4-61eaa70d8df0-2025-03-06;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_NAMEPUBLISHEDINYEAR_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_NAMEPUBLISHEDINYEAR_NOTEMPTY" .
 
 <urn:uuid:c26bf0a3-98e8-4a5e-8219-0fa576c28cfa> a bdqffdq:Specification;
@@ -8477,11 +8477,11 @@ bdqtest:36ea0a78-a079-4014-aca3-2f2b3b11e822-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:namePublishedInYear Not Empty for MultiRecord" .
 
 <urn:uuid:0d1254e9-aaee-4a0d-9dd4-8959ada7f0c6> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:36ea0a78-a079-4014-aca3-2f2b3b11e822-2025-03-06;
   skos:note "TG2 Validation NAME CODED Test Completeness CORE";
   bdqffdq:hasSpecification <urn:uuid:f711c764-0ee2-4e73-a0d1-82ae94634f7d>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_NAMEPUBLISHEDINYEAR_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_NAMEPUBLISHEDINYEAR_NOTEMPTY";
-  bdqffdq:forMeasurement bdqtest:36ea0a78-a079-4014-aca3-2f2b3b11e822-2025-03-06;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_NAMEPUBLISHEDINYEAR_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_NAMEPUBLISHEDINYEAR_NOTEMPTY" .
 
 <urn:uuid:f711c764-0ee2-4e73-a0d1-82ae94634f7d> a bdqffdq:Specification;
@@ -8510,11 +8510,11 @@ bdqtest:8dfed701-01a9-415d-a9f8-539280b75975-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_ESTABLISHMENTMEANS_STANDARD.Response" .
 
 <urn:uuid:17c7a364-86bb-41ec-a7c1-07087bea1c92> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:8dfed701-01a9-415d-a9f8-539280b75975-2025-03-07;
   skos:note "TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE";
   bdqffdq:hasSpecification <urn:uuid:b4bee0db-cb2a-422c-89a5-e0e866feb1cc>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_ESTABLISHMENTMEANS_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_ESTABLISHMENTMEANS_STANDARD";
-  bdqffdq:forMeasurement bdqtest:8dfed701-01a9-415d-a9f8-539280b75975-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_ESTABLISHMENTMEANS_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_ESTABLISHMENTMEANS_STANDARD" .
 
 <urn:uuid:b4bee0db-cb2a-422c-89a5-e0e866feb1cc> a bdqffdq:Specification;
@@ -8538,11 +8538,11 @@ bdqtest:130bb875-6b7c-4965-b864-d53f9d05b2cd-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:establishmentMeans Standard for MultiRecord" .
 
 <urn:uuid:dfee6537-6ecc-4359-95ce-553050d8be59> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:130bb875-6b7c-4965-b864-d53f9d05b2cd-2025-03-07;
   skos:note "TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE";
   bdqffdq:hasSpecification <urn:uuid:3863808c-ea76-4490-a09c-a87cfebb2fb4>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_ESTABLISHMENTMEANS_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_ESTABLISHMENTMEANS_STANDARD";
-  bdqffdq:forMeasurement bdqtest:130bb875-6b7c-4965-b864-d53f9d05b2cd-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_ESTABLISHMENTMEANS_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_ESTABLISHMENTMEANS_STANDARD" .
 
 <urn:uuid:3863808c-ea76-4490-a09c-a87cfebb2fb4> a bdqffdq:Specification;
@@ -8571,11 +8571,11 @@ bdqtest:ba953672-6526-4375-97e8-b4e9d1a7d3a0-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_DEGREEOFESTABLISHMENT_STANDARD.Response" .
 
 <urn:uuid:a5a657d0-7c16-4938-b542-057ffe4150cd> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:ba953672-6526-4375-97e8-b4e9d1a7d3a0-2025-03-07;
   skos:note "TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE";
   bdqffdq:hasSpecification <urn:uuid:50d4e600-ca37-4f18-8022-e7646f622fe2>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_DEGREEOFESTABLISHMENT_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_DEGREEOFESTABLISHMENT_STANDARD";
-  bdqffdq:forMeasurement bdqtest:ba953672-6526-4375-97e8-b4e9d1a7d3a0-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_DEGREEOFESTABLISHMENT_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_DEGREEOFESTABLISHMENT_STANDARD" .
 
 <urn:uuid:50d4e600-ca37-4f18-8022-e7646f622fe2> a bdqffdq:Specification;
@@ -8599,11 +8599,11 @@ bdqtest:1b8ae68e-63f1-41c0-9025-fbe64db38d64-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:degreeofEstablishment Standard for MultiRecord" .
 
 <urn:uuid:64c18cac-e64d-4985-95d6-79dc22b5a15f> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:1b8ae68e-63f1-41c0-9025-fbe64db38d64-2025-03-07;
   skos:note "TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE";
   bdqffdq:hasSpecification <urn:uuid:34f8599a-e720-4b9d-af0a-67096be7500c>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DEGREEOFESTABLISHMENT_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DEGREEOFESTABLISHMENT_STANDARD";
-  bdqffdq:forMeasurement bdqtest:1b8ae68e-63f1-41c0-9025-fbe64db38d64-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DEGREEOFESTABLISHMENT_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DEGREEOFESTABLISHMENT_STANDARD" .
 
 <urn:uuid:34f8599a-e720-4b9d-af0a-67096be7500c> a bdqffdq:Specification;
@@ -8632,11 +8632,11 @@ bdqtest:ef31ba02-cea7-4d76-990f-99ebbd201fb4-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_PATHWAY_STANDARD.Response" .
 
 <urn:uuid:06f4a965-9424-47fe-81f8-4264c30b6bf1> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:ef31ba02-cea7-4d76-990f-99ebbd201fb4-2025-03-07;
   skos:note "TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE";
   bdqffdq:hasSpecification <urn:uuid:b051707d-1f01-48a9-8251-7a0ffecbe2ec>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_PATHWAY_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_PATHWAY_STANDARD";
-  bdqffdq:forMeasurement bdqtest:ef31ba02-cea7-4d76-990f-99ebbd201fb4-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_PATHWAY_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_PATHWAY_STANDARD" .
 
 <urn:uuid:b051707d-1f01-48a9-8251-7a0ffecbe2ec> a bdqffdq:Specification;
@@ -8660,11 +8660,11 @@ bdqtest:15e0da1d-1a43-4075-8454-b2e618cdd25b-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:pathway Standard for MultiRecord" .
 
 <urn:uuid:0437ef18-2a7b-422c-8dbc-11dac268955b> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:15e0da1d-1a43-4075-8454-b2e618cdd25b-2025-03-07;
   skos:note "TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE";
   bdqffdq:hasSpecification <urn:uuid:420ffd9b-7eda-47a6-af3a-df69cf63b6d5>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_PATHWAY_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_PATHWAY_STANDARD";
-  bdqffdq:forMeasurement bdqtest:15e0da1d-1a43-4075-8454-b2e618cdd25b-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_PATHWAY_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_PATHWAY_STANDARD" .
 
 <urn:uuid:420ffd9b-7eda-47a6-af3a-df69cf63b6d5> a bdqffdq:Specification;
@@ -8693,11 +8693,11 @@ bdqtest:1b3bbac4-7c00-46d6-8179-1d57c92374ad-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_SEX_STANDARD.Response" .
 
 <urn:uuid:92c8e64a-7279-4934-8071-5807d1796cbd> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:1b3bbac4-7c00-46d6-8179-1d57c92374ad-2025-03-07;
   skos:note "TG2 Validation OTHER CODED Test VOCABULARY Parameterized CORE";
   bdqffdq:hasSpecification <urn:uuid:1449904c-2de3-4fd7-a63e-53882160a132>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_SEX_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_SEX_STANDARD";
-  bdqffdq:forMeasurement bdqtest:1b3bbac4-7c00-46d6-8179-1d57c92374ad-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_SEX_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_SEX_STANDARD" .
 
 <urn:uuid:1449904c-2de3-4fd7-a63e-53882160a132> a bdqffdq:Specification;
@@ -8721,11 +8721,11 @@ bdqtest:e4d35063-2366-4dda-8eaa-326340361da3-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:sex Standard for MultiRecord" .
 
 <urn:uuid:3cf9d546-bd23-4eb5-a866-4bafac20092f> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:e4d35063-2366-4dda-8eaa-326340361da3-2025-03-07;
   skos:note "TG2 Validation OTHER CODED Test VOCABULARY Parameterized CORE";
   bdqffdq:hasSpecification <urn:uuid:9f00505f-133d-47b5-9c81-4dc266896ad6>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SEX_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SEX_STANDARD";
-  bdqffdq:forMeasurement bdqtest:e4d35063-2366-4dda-8eaa-326340361da3-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SEX_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SEX_STANDARD" .
 
 <urn:uuid:9f00505f-133d-47b5-9c81-4dc266896ad6> a bdqffdq:Specification;
@@ -8754,11 +8754,11 @@ bdqtest:1ca359ea-4df3-4dca-b92b-2bc8fa8e0c88-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_TYPESTATUS_STANDARD.Response" .
 
 <urn:uuid:e581e111-a7ef-4f16-9899-175b131b304e> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:1ca359ea-4df3-4dca-b92b-2bc8fa8e0c88-2025-03-07;
   skos:note "TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE";
   bdqffdq:hasSpecification <urn:uuid:296980d9-a8bf-4fe4-8596-ee2bbd140e38>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_TYPESTATUS_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_TYPESTATUS_STANDARD";
-  bdqffdq:forMeasurement bdqtest:1ca359ea-4df3-4dca-b92b-2bc8fa8e0c88-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_TYPESTATUS_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_TYPESTATUS_STANDARD" .
 
 <urn:uuid:296980d9-a8bf-4fe4-8596-ee2bbd140e38> a bdqffdq:Specification;
@@ -8782,11 +8782,11 @@ bdqtest:b5a14d76-292e-499b-b80f-9546243311a0-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:typeStatus Standard for MultiRecord" .
 
 <urn:uuid:a2fcd8ee-3f1d-4aa7-af2e-95cf159fe3e2> a bdqffdq:MeasurementMethod;
+  bdqffdq:forMeasure bdqtest:b5a14d76-292e-499b-b80f-9546243311a0-2025-03-07;
   skos:note "TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE";
   bdqffdq:hasSpecification <urn:uuid:33f44f83-93ea-488a-bd24-2c34e6b8f513>;
   skos:historyNote "Source: TG2";
   rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TYPESTATUS_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TYPESTATUS_STANDARD";
-  bdqffdq:forMeasurement bdqtest:b5a14d76-292e-499b-b80f-9546243311a0-2025-03-07;
   skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TYPESTATUS_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TYPESTATUS_STANDARD" .
 
 <urn:uuid:33f44f83-93ea-488a-bd24-2c34e6b8f513> a bdqffdq:Specification;

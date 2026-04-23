@@ -4503,7 +4503,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE CODED Test Likeliness Parameterized CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MAXELEVATION_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MAXELEVATION_INRANGE</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/6a3baf78-5ec3-4a84-8c6b-6876b3a4e3b5-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/6a3baf78-5ec3-4a84-8c6b-6876b3a4e3b5-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:43bdbdf5-cfa7-455c-80e3-dbd14117bb69"/>
 </rdf:Description>
 
@@ -4513,7 +4513,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE CODED Test Completeness CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_DECIMALLONGITUDE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_DECIMALLONGITUDE_NOTEMPTY</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/a94e986e-dbc8-4147-872d-5f2727945654-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/a94e986e-dbc8-4147-872d-5f2727945654-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:333806e5-44f2-4761-80af-df91f9240385"/>
 </rdf:Description>
 
@@ -4661,7 +4661,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_PATHWAY_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_PATHWAY_STANDARD</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/15e0da1d-1a43-4075-8454-b2e618cdd25b-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/15e0da1d-1a43-4075-8454-b2e618cdd25b-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:420ffd9b-7eda-47a6-af3a-df69cf63b6d5"/>
 </rdf:Description>
 
@@ -4764,7 +4764,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_PATHWAY_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_PATHWAY_STANDARD</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/ef31ba02-cea7-4d76-990f-99ebbd201fb4-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/ef31ba02-cea7-4d76-990f-99ebbd201fb4-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:b051707d-1f01-48a9-8251-7a0ffecbe2ec"/>
 </rdf:Description>
 
@@ -5033,7 +5033,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_GENUS_FOUND with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_GENUS_FOUND</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/977f7e75-a88e-4e29-a7b1-e8cdd35aa107-2025-03-06"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/977f7e75-a88e-4e29-a7b1-e8cdd35aa107-2025-03-06"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:fcbc5474-422f-4e72-8419-48fee6bf578e"/>
 </rdf:Description>
 
@@ -5043,7 +5043,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation NAME CODED Test Completeness CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_NAMEPUBLISHEDINYEAR_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_NAMEPUBLISHEDINYEAR_NOTEMPTY</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/36ea0a78-a079-4014-aca3-2f2b3b11e822-2025-03-06"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/36ea0a78-a079-4014-aca3-2f2b3b11e822-2025-03-06"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:f711c764-0ee2-4e73-a0d1-82ae94634f7d"/>
 </rdf:Description>
 
@@ -5067,7 +5067,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation TIME CODED Test Consistency CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENT_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENT_CONSISTENT</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/1919f212-b7db-4b6e-9697-41a715001bd6-2025-03-06"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/1919f212-b7db-4b6e-9697-41a715001bd6-2025-03-06"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:755db673-962e-4c3a-a033-fb5b05b1d66b"/>
 </rdf:Description>
 
@@ -5077,7 +5077,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation TIME CODED Test Conformance CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_MONTH_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_MONTH_STANDARD</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/b3c2bb86-e239-4532-ae0c-b121ec1ee025-2025-03-06"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/b3c2bb86-e239-4532-ae0c-b121ec1ee025-2025-03-06"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:8fae3a40-10fd-433c-bd4a-368bd356a7f1"/>
 </rdf:Description>
 
@@ -5087,7 +5087,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_KINGDOM_FOUND with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_KINGDOM_FOUND</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/012eade5-fc64-458a-a13a-a614491bf4e0-2025-03-06"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/012eade5-fc64-458a-a13a-a614491bf4e0-2025-03-06"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:5fc8b4cc-9da2-4f6a-8fb9-00f6ca3576f7"/>
 </rdf:Description>
 
@@ -5097,7 +5097,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE CODED Test VOCABULARY Consistency ISO/DCMI STANDARD CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCOUNTRYCODE_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCOUNTRYCODE_CONSISTENT</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/26b46375-df2b-4677-a2e5-f96f86b8e242-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/26b46375-df2b-4677-a2e5-f96f86b8e242-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:d2c47382-3a98-4855-a562-503ba125fa25"/>
 </rdf:Description>
 
@@ -5116,7 +5116,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation TIME CODED Test Conformance CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MONTH_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MONTH_STANDARD</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/c3b4cd93-a37f-4a0a-89dd-7ce53669f1f3-2025-03-06"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/c3b4cd93-a37f-4a0a-89dd-7ce53669f1f3-2025-03-06"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:797b3653-1b79-4047-8f9a-82061b558a47"/>
 </rdf:Description>
 
@@ -5138,7 +5138,7 @@
 	<skos:historyNote>Source: Lee Belbin</skos:historyNote>
 	<skos:note>TG2 Measure NAME SPACE TIME OTHER Test CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MEASURE_VALIDATIONTESTS_NOTCOMPLIANT with Specification Specification for: MEASURE_VALIDATIONTESTS_NOTCOMPLIANT</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/453844ae-9df4-439f-8e24-c52498eca84a-2024-09-24"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/453844ae-9df4-439f-8e24-c52498eca84a-2024-09-24"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:1a7adc4a-58ee-480c-9765-3834ea433bf0"/>
 </rdf:Description>
 
@@ -5169,7 +5169,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE CODED Test Likeliness CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_COORDINATES_NOTZERO with Specification Specification for: MULTIRECORD_MEASURE_QA_COORDINATES_NOTZERO</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/151b2d29-3460-4ba5-a226-86971dc8ad03-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/151b2d29-3460-4ba5-a226-86971dc8ad03-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:663022f5-df42-471d-861c-c8198ffbde65"/>
 </rdf:Description>
 
@@ -5340,7 +5340,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation NAME CODED Test Completeness CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_NAMEPUBLISHEDINYEAR_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_NAMEPUBLISHEDINYEAR_NOTEMPTY</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/16059801-6adb-4e65-82f4-61eaa70d8df0-2025-03-06"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/16059801-6adb-4e65-82f4-61eaa70d8df0-2025-03-06"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:c26bf0a3-98e8-4a5e-8219-0fa576c28cfa"/>
 </rdf:Description>
 
@@ -5458,7 +5458,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE CODED Test Likeliness Parameterized CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_MAXELEVATION_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_MAXELEVATION_INRANGE</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/7c5a6ba0-399d-4570-878a-4a064e2406fe-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/7c5a6ba0-399d-4570-878a-4a064e2406fe-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:50426d4a-f11e-4402-b96e-f9c91c62d0da"/>
 </rdf:Description>
 
@@ -5608,7 +5608,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation OTHER CODED Test Completeness CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_NOTEMPTY</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/47ee20d9-5087-4f76-a494-6fea05e50b8b-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/47ee20d9-5087-4f76-a494-6fea05e50b8b-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:728b4db4-aff0-484f-9a5d-976b1f36cfb4"/>
 </rdf:Description>
 
@@ -5648,7 +5648,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_ESTABLISHMENTMEANS_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_ESTABLISHMENTMEANS_STANDARD</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/8dfed701-01a9-415d-a9f8-539280b75975-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/8dfed701-01a9-415d-a9f8-539280b75975-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:b4bee0db-cb2a-422c-89a5-e0e866feb1cc"/>
 </rdf:Description>
 
@@ -5677,7 +5677,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_SCIENTIFICNAME_FOUND with Specification Specification for: MULTIRECORD_MEASURE_QA_SCIENTIFICNAME_FOUND</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/a8aee02c-cf7c-4104-a601-d8afc4f9cbe2-2025-03-06"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/a8aee02c-cf7c-4104-a601-d8afc4f9cbe2-2025-03-06"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:44734c77-85b6-485b-bc43-2d96c0dde693"/>
 </rdf:Description>
 
@@ -5706,7 +5706,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation OTHER CODED Test Completeness CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_OCCURRENCEID_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_OCCURRENCEID_NOTEMPTY</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/0028ef9a-6553-467b-a344-90327ed2babf-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/0028ef9a-6553-467b-a344-90327ed2babf-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:a634c093-6502-489e-98fc-a365fd7d5d61"/>
 </rdf:Description>
 
@@ -5735,7 +5735,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE CODED Test Conformance Parameterized CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_MINDEPTH_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_MINDEPTH_INRANGE</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/49d756a8-e654-4267-a290-d1def5d2c5f9-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/49d756a8-e654-4267-a290-d1def5d2c5f9-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:e7f2383d-9406-497e-86b1-163b65955533"/>
 </rdf:Description>
 
@@ -5801,7 +5801,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_CLASS_FOUND with Specification Specification for: MULTIRECORD_MEASURE_QA_CLASS_FOUND</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/21541436-641d-45a9-938c-537484d94eb7-2025-03-06"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/21541436-641d-45a9-938c-537484d94eb7-2025-03-06"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:33abe762-eeca-41d0-a2b1-9847e2a07a59"/>
 </rdf:Description>
 
@@ -5957,7 +5957,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation TIME CODED Test Conformance ISO/DCMI STANDARD CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_EVENTDATE_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_EVENTDATE_STANDARD</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/14a1d51f-16ed-4148-9dc8-1e90157a9868-2025-03-06"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/14a1d51f-16ed-4148-9dc8-1e90157a9868-2025-03-06"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:f7580626-6b32-499a-ad51-0aa22e3eaa4a"/>
 </rdf:Description>
 
@@ -6026,7 +6026,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE CODED Test VOCABULARY Consistency Parameterized CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_COORDINATESTERRESTRIALMARINE_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_QA_COORDINATESTERRESTRIALMARINE_CONSISTENT</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/478dee00-98d0-4154-b66c-eca64dbbf86d-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/478dee00-98d0-4154-b66c-eca64dbbf86d-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:fcff1ad2-4469-4f4b-80b9-cbe82667682f"/>
 </rdf:Description>
 
@@ -6216,7 +6216,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXONRANK_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXONRANK_STANDARD</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/602bc457-6b1d-4f24-adef-d0d31bcdf2f0-2025-03-06"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/602bc457-6b1d-4f24-adef-d0d31bcdf2f0-2025-03-06"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:68db640c-ed46-4503-8d3a-31d23eb6c73c"/>
 </rdf:Description>
 
@@ -6237,7 +6237,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation OTHER CODED Test Completeness CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_NOTEMPTY</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/b60c8c58-0137-4b6a-97e9-57d8ca5cf248-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/b60c8c58-0137-4b6a-97e9-57d8ca5cf248-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:221a02d3-c01e-48c8-9726-8ce423cc6434"/>
 </rdf:Description>
 
@@ -6297,7 +6297,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation TIME CODED Test Conformance CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_STANDARD</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/c3e0100f-dfc3-4379-a855-df878eef295e-2025-03-06"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/c3e0100f-dfc3-4379-a855-df878eef295e-2025-03-06"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:e7bcd71f-7156-4e5b-9732-3fac13338f83"/>
 </rdf:Description>
 
@@ -6407,7 +6407,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation TIME CODED Test Conformance Parameterized CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_INRANGE</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/c8250600-de61-4047-9d7c-6e06a38c7994-2025-03-06"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/c8250600-de61-4047-9d7c-6e06a38c7994-2025-03-06"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:5231f13b-bc40-40b3-b542-85d0f17c5b0c"/>
 </rdf:Description>
 
@@ -6473,7 +6473,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation TIME CODED Test Completeness CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_EVENTTEMPORAL_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_EVENTTEMPORAL_NOTEMPTY</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/f22539ef-029b-4edb-ad17-add4363f7395-2025-03-06"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/f22539ef-029b-4edb-ad17-add4363f7395-2025-03-06"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:3fc9b6a6-8c20-4fb7-a772-7f26d5aeaad0"/>
 </rdf:Description>
 
@@ -6483,7 +6483,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation NAME CODED Test Completeness CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXONRANK_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXONRANK_NOTEMPTY</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/de661615-b338-4557-af5b-d44a89de40fa-2025-03-06"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/de661615-b338-4557-af5b-d44a89de40fa-2025-03-06"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:e251b99c-9726-44e3-b44d-6fa0feacc3b3"/>
 </rdf:Description>
 
@@ -6565,7 +6565,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation NAME CODED Test Completeness CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXON_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXON_NOTEMPTY</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/54d290e8-ac48-4f31-8af3-676363573217-2025-03-06"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/54d290e8-ac48-4f31-8af3-676363573217-2025-03-06"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:4209fe3a-1fae-4cdb-b3cc-29696b4e7964"/>
 </rdf:Description>
 
@@ -6644,7 +6644,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_ORDER_FOUND with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_ORDER_FOUND</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/f4fa449c-4b74-4dcf-b4cf-0b73e1496375-2025-03-06"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/f4fa449c-4b74-4dcf-b4cf-0b73e1496375-2025-03-06"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:53c80627-1b2c-491e-bc9f-1b5ccf121a08"/>
 </rdf:Description>
 
@@ -6654,7 +6654,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation OTHER CODED Test VOCABULARY Parameterized CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SEX_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SEX_STANDARD</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/e4d35063-2366-4dda-8eaa-326340361da3-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/e4d35063-2366-4dda-8eaa-326340361da3-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:9f00505f-133d-47b5-9c81-4dc266896ad6"/>
 </rdf:Description>
 
@@ -6762,7 +6762,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE CODED Test Conformance Parameterized CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_MINELEVATION_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_MINELEVATION_INRANGE</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/1ba18c8b-66a6-47d9-a709-404439332dba-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/1ba18c8b-66a6-47d9-a709-404439332dba-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:657e5f22-d146-4109-8f57-676fe7eb777f"/>
 </rdf:Description>
 
@@ -6892,7 +6892,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation TIME CODED Test Consistency CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_EVENT_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_QA_EVENT_CONSISTENT</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/f375a3fd-4cf5-4ef4-955e-d71762ede2d8-2025-03-06"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/f375a3fd-4cf5-4ef4-955e-d71762ede2d8-2025-03-06"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:06899170-252f-4938-9f98-95089ac0bc07"/>
 </rdf:Description>
 
@@ -6998,7 +6998,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation NAME CODED Test Completeness CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEID_COMPLETE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEID_COMPLETE</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/f174ad13-3c67-49f9-8d8b-aba4e933d6f6-2025-03-06"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/f174ad13-3c67-49f9-8d8b-aba4e933d6f6-2025-03-06"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:523f85e9-a15f-493a-82da-fe08119925ea"/>
 </rdf:Description>
 
@@ -7056,7 +7056,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation TIME CODED Test Conformance ISO/DCMI STANDARD CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_DATEIDENTIFIED_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_DATEIDENTIFIED_STANDARD</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/563872eb-f544-45a0-8f91-8098d62768d4-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/563872eb-f544-45a0-8f91-8098d62768d4-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:79471c9d-a97c-4cb0-8c61-e74f1f15abce"/>
 </rdf:Description>
 
@@ -7101,7 +7101,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation OTHER CODED Test Completeness CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_LICENSE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_LICENSE_NOTEMPTY</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/4fccf163-9336-4f48-996c-57f5f66e72db-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/4fccf163-9336-4f48-996c-57f5f66e72db-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:2549297e-3643-41bb-b9d1-29a29b9026ed"/>
 </rdf:Description>
 
@@ -7120,7 +7120,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation TIME CODED Test Conformance CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_DAY_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_DAY_INRANGE</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/85dc5d02-9847-420f-a026-6a0e70962d2a-2025-03-06"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/85dc5d02-9847-420f-a026-6a0e70962d2a-2025-03-06"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:f71db764-f571-4668-9a18-a3cafa5410c7"/>
 </rdf:Description>
 
@@ -7155,7 +7155,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE CODED Test Conformance CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_MINDEPTH_LESSTHAN_MAXDEPTH with Specification Specification for: MULTIRECORD_MEASURE_QA_MINDEPTH_LESSTHAN_MAXDEPTH</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/fcabd2c9-392c-4841-a5d7-e2680c9587ab-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/fcabd2c9-392c-4841-a5d7-e2680c9587ab-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:ce7203a9-bb58-4780-833e-c759b8824fc6"/>
 </rdf:Description>
 
@@ -7290,7 +7290,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE CODED Test VOCABULARY Completeness CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_NOTEMPTY</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/d71be8d4-1a04-4816-90c5-49808c823651-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/d71be8d4-1a04-4816-90c5-49808c823651-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:73a96a86-9ef2-4bb1-a8a0-f903c6744d75"/>
 </rdf:Description>
 
@@ -7300,7 +7300,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation OTHER CODED Test Completeness CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DCTYPE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DCTYPE_NOTEMPTY</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/f041ab17-d834-4586-aa6b-090de2e571a8-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/f041ab17-d834-4586-aa6b-090de2e571a8-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:21fed9f3-89e6-466a-b7ce-4277038c84ea"/>
 </rdf:Description>
 
@@ -7352,7 +7352,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation TIME CODED Test Conformance Parameterized CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_INRANGE</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/aee65eb8-8d1e-4b8f-bd37-5822e29f5734-2025-03-06"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/aee65eb8-8d1e-4b8f-bd37-5822e29f5734-2025-03-06"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:296e60bb-6872-420d-9769-d3f26d205714"/>
 </rdf:Description>
 
@@ -7362,7 +7362,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_GENUS_FOUND with Specification Specification for: MULTIRECORD_MEASURE_QA_GENUS_FOUND</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/c5c8db83-3af0-4215-806f-e2f90574b138-2025-03-06"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/c5c8db83-3af0-4215-806f-e2f90574b138-2025-03-06"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:0c659160-9952-4ada-ac10-5a46ee52423a"/>
 </rdf:Description>
 
@@ -7396,7 +7396,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_STANDARD</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/9d5be694-f5da-465d-8c7e-27e6dac69f9f-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/9d5be694-f5da-465d-8c7e-27e6dac69f9f-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:68e86c5a-f444-4aff-b54c-47bc100bcf4b"/>
 </rdf:Description>
 
@@ -7406,7 +7406,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation NAME CODED Test Completeness CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_KINGDOM_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_KINGDOM_NOTEMPTY</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/3bc9df8b-0f57-4157-9374-b56a99090b22-2025-03-06"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/3bc9df8b-0f57-4157-9374-b56a99090b22-2025-03-06"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:4f0adc36-22b1-4534-a994-1246be02c1a8"/>
 </rdf:Description>
 
@@ -7538,7 +7538,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation TIME CODED Test Likeliness ISO/DCMI STANDARD Parameterized CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_DATEIDENTIFIED_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_DATEIDENTIFIED_INRANGE</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/6354376c-0cf2-435b-be40-850769c5a18a-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/6354376c-0cf2-435b-be40-850769c5a18a-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:8949abb1-4c5f-4733-9d3a-89c981fe6d30"/>
 </rdf:Description>
 
@@ -7557,7 +7557,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation OTHER CODED Test Completeness CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_DCTYPE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_DCTYPE_NOTEMPTY</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/4d999a65-a431-4a76-b591-e0d86dcf244b-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/4d999a65-a431-4a76-b591-e0d86dcf244b-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:94bce01c-2184-47ee-89c2-49acf77456f1"/>
 </rdf:Description>
 
@@ -7576,7 +7576,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation OTHER CODED Test Completeness CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCEID_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCEID_NOTEMPTY</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/0c9a139e-5d23-44de-a495-14ec08c61a1c-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/0c9a139e-5d23-44de-a495-14ec08c61a1c-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:35b82564-c496-461e-88ec-cc606d7a6112"/>
 </rdf:Description>
 
@@ -7604,7 +7604,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation TIME CODED Test Conformance ISO/DCMI STANDARD CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_STANDARD</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/bffd7499-aca3-423f-bb43-f7bdc9260f4f-2025-03-06"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/bffd7499-aca3-423f-bb43-f7bdc9260f4f-2025-03-06"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:5311be07-b9ce-4609-9859-bfb68ab958fc"/>
 </rdf:Description>
 
@@ -7623,7 +7623,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE CODED Test Completeness CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_NOTEMPTY</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/63fbaf3c-3d41-4ab6-bfc0-904f1b26835f-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/63fbaf3c-3d41-4ab6-bfc0-904f1b26835f-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:a8a6e3a3-7df2-477a-ba35-552151f6f771"/>
 </rdf:Description>
 
@@ -7640,7 +7640,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE CODED Test Conformance CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLONGITUDE_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLONGITUDE_INRANGE</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/c70c4950-2246-4acc-a59d-81eaa47edf2b-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/c70c4950-2246-4acc-a59d-81eaa47edf2b-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:2212fef0-54f8-4508-b925-4aa99b7a4715"/>
 </rdf:Description>
 
@@ -7667,7 +7667,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE CODED Test Completeness CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_DECIMALLATITUDE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_DECIMALLATITUDE_NOTEMPTY</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/a2535b23-4407-40bd-b23b-30c8185d72a2-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/a2535b23-4407-40bd-b23b-30c8185d72a2-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:47010a99-41fa-41b7-9aac-189de9edc232"/>
 </rdf:Description>
 
@@ -7686,7 +7686,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation NAME CODED Test Completeness CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_SCIENTIFICNAME_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_SCIENTIFICNAME_NOTEMPTY</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/b4d6a61c-64ff-4da0-974c-63a73fd20836-2025-03-06"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/b4d6a61c-64ff-4da0-974c-63a73fd20836-2025-03-06"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:03c7280e-d1b9-459b-8bec-8bbd7ee6c886"/>
 </rdf:Description>
 
@@ -7722,7 +7722,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE CODED Test Completeness CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_LOCATION_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_LOCATION_NOTEMPTY</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/bac852b5-1ba6-427b-aa8e-02018e99279c-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/bac852b5-1ba6-427b-aa8e-02018e99279c-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:5fae3e9c-b1cc-4346-a845-e7f1573481ea"/>
 </rdf:Description>
 
@@ -7732,7 +7732,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE CODED Test Completeness CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_GEODETICDATUM_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_GEODETICDATUM_NOTEMPTY</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/488c1dff-21ec-4e68-a00a-7355505e180c-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/488c1dff-21ec-4e68-a00a-7355505e180c-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:6d868cda-6c34-4b02-9420-cbc51376114f"/>
 </rdf:Description>
 
@@ -7776,7 +7776,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DEGREEOFESTABLISHMENT_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DEGREEOFESTABLISHMENT_STANDARD</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/1b8ae68e-63f1-41c0-9025-fbe64db38d64-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/1b8ae68e-63f1-41c0-9025-fbe64db38d64-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:34f8599a-e720-4b9d-af0a-67096be7500c"/>
 </rdf:Description>
 
@@ -7813,7 +7813,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCESTATUS_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCESTATUS_STANDARD</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/faca6558-dbff-4d26-a5cb-e11cdf632fe7-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/faca6558-dbff-4d26-a5cb-e11cdf632fe7-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:66e20810-2936-4932-950f-53e7680c7ca1"/>
 </rdf:Description>
 
@@ -7830,7 +7830,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE CODED Test Conformance Parameterized CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_MAXDEPTH_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_MAXDEPTH_INRANGE</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/c73d49d1-06e4-4272-8249-6a26e7f8abca-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/c73d49d1-06e4-4272-8249-6a26e7f8abca-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:dc982344-5bc9-49b5-85f8-434f1e304eba"/>
 </rdf:Description>
 
@@ -7849,7 +7849,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE CODED Test VOCABULARY Consistency Parameterized CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESTERRESTRIALMARINE_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESTERRESTRIALMARINE_CONSISTENT</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/b67f41f4-198c-41e9-9419-ba3919c1be8b-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/b67f41f4-198c-41e9-9419-ba3919c1be8b-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:dbedc71f-74ba-4046-812d-1d96f9382a91"/>
 </rdf:Description>
 
@@ -7878,7 +7878,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE CODED Test VOCABULARY Conformance Parameterized CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYSTATEPROVINCE_UNAMBIGUOUS with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYSTATEPROVINCE_UNAMBIGUOUS</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/8b73f37d-89ed-479a-8389-9e71ad2ac84d-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/8b73f37d-89ed-479a-8389-9e71ad2ac84d-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:809e0413-0fb4-4e44-bfa7-b3b728372fb8"/>
 </rdf:Description>
 
@@ -7888,7 +7888,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE CODED Test Conformance Parameterized CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MAXDEPTH_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MAXDEPTH_INRANGE</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/3de8af03-05d4-4fd8-8e6d-ba886dc5446f-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/3de8af03-05d4-4fd8-8e6d-ba886dc5446f-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:ec660fd1-3b67-47b3-907d-80e6799f43b9"/>
 </rdf:Description>
 
@@ -7898,7 +7898,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation TIME CODED Test Conformance CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_ENDDAYOFYEAR_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_ENDDAYOFYEAR_INRANGE</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/7775309b-5331-4a65-b839-cbe959948d33-2025-03-06"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/7775309b-5331-4a65-b839-cbe959948d33-2025-03-06"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:4b92124d-ee59-4183-b3da-77833996c053"/>
 </rdf:Description>
 
@@ -7951,7 +7951,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation TIME CODED Test Conformance Parameterized CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_EVENTDATE_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_EVENTDATE_INRANGE</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/d41a731b-2e2b-4442-9217-4c375ae92926-2025-03-06"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/d41a731b-2e2b-4442-9217-4c375ae92926-2025-03-06"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:6ff94a83-1f03-4f3d-aa10-14a16aa3fff9"/>
 </rdf:Description>
 
@@ -8063,7 +8063,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_BASISOFRECORD_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_BASISOFRECORD_STANDARD</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/241a279c-76d5-499b-ab49-a47ad7f8df50-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/241a279c-76d5-499b-ab49-a47ad7f8df50-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:f003048a-ad67-493c-8b87-e5f2cfb26981"/>
 </rdf:Description>
 
@@ -8162,7 +8162,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation OTHER CODED Test VOCABULARY Conformance ISO/DCMI STANDARD CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DCTYPE_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DCTYPE_STANDARD</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/fbe47441-500f-44c7-a1bd-1e872edc5266-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/fbe47441-500f-44c7-a1bd-1e872edc5266-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:7c49e2d3-5d57-460f-b98a-8bba82b7156f"/>
 </rdf:Description>
 
@@ -8239,7 +8239,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation TIME CODED Test Conformance Parameterized CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_YEAR_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_YEAR_INRANGE</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/a0502c5f-608b-4e59-99da-d9490bb4d93b-2025-03-06"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/a0502c5f-608b-4e59-99da-d9490bb4d93b-2025-03-06"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:4bb3b33e-d8fd-44d0-96f2-7a0f8b373e46"/>
 </rdf:Description>
 
@@ -8312,7 +8312,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation NAME CODED Test Completeness CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/dbf3cece-1d83-426e-a5e0-8158fcf9c0cd-2025-03-06"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/dbf3cece-1d83-426e-a5e0-8158fcf9c0cd-2025-03-06"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:2b29c224-435f-49fd-b010-16def638be27"/>
 </rdf:Description>
 
@@ -8322,7 +8322,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_ORDER_FOUND with Specification Specification for: MULTIRECORD_MEASURE_QA_ORDER_FOUND</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/773bb288-fef3-4968-a65a-a69c74d6ecb5-2025-03-06"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/773bb288-fef3-4968-a65a-a69c74d6ecb5-2025-03-06"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:d2fb98d8-70fc-4f24-8b20-71304f1ce35f"/>
 </rdf:Description>
 
@@ -8381,7 +8381,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE CODED Test Conformance CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLATITUDE_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLATITUDE_INRANGE</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/f0fb1c79-9e3d-4d6c-a5a9-087cf57ebd26-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/f0fb1c79-9e3d-4d6c-a5a9-087cf57ebd26-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:7097d191-ad02-4dae-870e-fa88541cd0a7"/>
 </rdf:Description>
 
@@ -8398,7 +8398,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE CODED Test Conformance CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_COORDINATEUNCERTAINTY_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_COORDINATEUNCERTAINTY_INRANGE</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/d94b0130-7a13-4fa8-955c-eff5c47bd9de-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/d94b0130-7a13-4fa8-955c-eff5c47bd9de-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:b749a6bd-db12-4808-a137-52c96c66ce03"/>
 </rdf:Description>
 
@@ -8438,7 +8438,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE CODED Test Conformance CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_MINELEVATION_LESSTHAN_MAXELEVATION with Specification Specification for: MULTIRECORD_MEASURE_QA_MINELEVATION_LESSTHAN_MAXELEVATION</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/44f00697-ca66-43cf-8f16-646b40c0f514-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/44f00697-ca66-43cf-8f16-646b40c0f514-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:e7ca116b-2b24-4995-af09-44ee80824188"/>
 </rdf:Description>
 
@@ -8572,7 +8572,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation OTHER CODED Test Completeness CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_BASISOFRECORD_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_BASISOFRECORD_NOTEMPTY</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/c8c61535-ab1a-4ec6-b4e9-f5f02541d7d8-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/c8c61535-ab1a-4ec6-b4e9-f5f02541d7d8-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:0782e4e5-010f-4e59-82d7-618a84ead70a"/>
 </rdf:Description>
 
@@ -8594,7 +8594,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation NAME CODED Test Completeness CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEID_COMPLETE with Specification Specification for: MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEID_COMPLETE</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/a9529e71-5470-4cb1-b04d-aa483926f532-2025-03-06"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/a9529e71-5470-4cb1-b04d-aa483926f532-2025-03-06"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:a908512b-be44-4987-bbc9-a27c4d2d6bd6"/>
 </rdf:Description>
 
@@ -8620,7 +8620,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation TIME CODED Test Conformance CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_ENDDAYOFYEAR_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_ENDDAYOFYEAR_INRANGE</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/c04d428a-13d0-4766-9df7-4dfb2ef5d5d8-2025-03-06"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/c04d428a-13d0-4766-9df7-4dfb2ef5d5d8-2025-03-06"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:c211fdc8-fae5-4fa5-a8b8-0664a643b6a5"/>
 </rdf:Description>
 
@@ -8728,7 +8728,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation TIME CODED Test Conformance CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_STARTDAYOFYEAR_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_STARTDAYOFYEAR_INRANGE</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/8c217eee-9cd0-48c3-aea0-90151c6c5bfd-2025-03-06"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/8c217eee-9cd0-48c3-aea0-90151c6c5bfd-2025-03-06"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:9e2719f2-9006-454a-b0d3-afd931f9c05d"/>
 </rdf:Description>
 
@@ -8892,7 +8892,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation OTHER CODED Test VOCABULARY Parameterized CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_SEX_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_SEX_STANDARD</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/1b3bbac4-7c00-46d6-8179-1d57c92374ad-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/1b3bbac4-7c00-46d6-8179-1d57c92374ad-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:1449904c-2de3-4fd7-a63e-53882160a132"/>
 </rdf:Description>
 
@@ -8931,7 +8931,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation TIME CODED Test Completeness CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTTEMPORAL_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTTEMPORAL_NOTEMPTY</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/d3e282a1-3ff3-4ed0-bd08-fa23b6b8c161-2025-03-06"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/d3e282a1-3ff3-4ed0-bd08-fa23b6b8c161-2025-03-06"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:5e402929-b1c0-48e2-aaf6-cc6e365c9c42"/>
 </rdf:Description>
 
@@ -8966,7 +8966,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE CODED Test VOCABULARY Conformance Parameterized CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_FOUND with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_FOUND</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/f15c38c3-d96d-4e9c-982d-410fb71cf2bc-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/f15c38c3-d96d-4e9c-982d-410fb71cf2bc-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:4badb4f9-f739-486f-aa0f-4fa351ed2e84"/>
 </rdf:Description>
 
@@ -9015,7 +9015,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE CODED Test VOCABULARY Conformance CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_STANDARD</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/8d8aba5c-f58a-49c9-a08d-1afb5ff1aa63-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/8d8aba5c-f58a-49c9-a08d-1afb5ff1aa63-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:d2f89397-78f3-4e67-8994-79102470d305"/>
 </rdf:Description>
 
@@ -9044,7 +9044,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation NAME CODED Test Completeness CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEID_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEID_NOTEMPTY</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/a9962d33-ad08-453a-8938-2972425034c2-2025-03-06"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/a9962d33-ad08-453a-8938-2972425034c2-2025-03-06"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:7dc4a4bd-8c04-45c5-9d1a-46080473e3d6"/>
 </rdf:Description>
 
@@ -9094,7 +9094,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE CODED Test VOCABULARY Conformance ISO/DCMI STANDARD CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_COUNTRYCODE_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_COUNTRYCODE_STANDARD</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/fedf27b2-e01d-459f-98fc-7f0f39e3d4be-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/fedf27b2-e01d-459f-98fc-7f0f39e3d4be-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:2c673ad9-f7df-4cf7-9c84-e730c25a12e1"/>
 </rdf:Description>
 
@@ -9237,7 +9237,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation NAME CODED Test Consistency CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_POLYNOMIAL_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_QA_POLYNOMIAL_CONSISTENT</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/ef05b45b-13b8-4877-9e9d-fa44b332d83c-2025-03-06"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/ef05b45b-13b8-4877-9e9d-fa44b332d83c-2025-03-06"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:13ff592f-feb2-4350-95dc-fd8c8e434994"/>
 </rdf:Description>
 
@@ -9254,7 +9254,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation OTHER CODED Test Completeness CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_OCCURRENCESTATUS_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_OCCURRENCESTATUS_NOTEMPTY</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/d2922585-2070-4851-a033-15e51977f9dc-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/d2922585-2070-4851-a033-15e51977f9dc-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:8f1c623f-3e2c-4a6d-bc35-627100cab43b"/>
 </rdf:Description>
 
@@ -9282,7 +9282,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_FOUND with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_FOUND</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/4e70b0e4-3fd2-4899-802c-439671374eeb-2025-03-06"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/4e70b0e4-3fd2-4899-802c-439671374eeb-2025-03-06"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:c4969180-ef8f-4243-bf1a-a04cd115cfe7"/>
 </rdf:Description>
 
@@ -9303,7 +9303,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TYPESTATUS_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TYPESTATUS_STANDARD</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/b5a14d76-292e-499b-b80f-9546243311a0-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/b5a14d76-292e-499b-b80f-9546243311a0-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:33f44f83-93ea-488a-bd24-2c34e6b8f513"/>
 </rdf:Description>
 
@@ -9313,7 +9313,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_FAMILY_FOUND with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_FAMILY_FOUND</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/97928242-11a9-4ab0-9dd7-3f0465834824-2025-03-06"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/97928242-11a9-4ab0-9dd7-3f0465834824-2025-03-06"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:6a4e4bdf-dc92-4a93-b127-093224b44c19"/>
 </rdf:Description>
 
@@ -9365,7 +9365,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_DEGREEOFESTABLISHMENT_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_DEGREEOFESTABLISHMENT_STANDARD</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/ba953672-6526-4375-97e8-b4e9d1a7d3a0-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/ba953672-6526-4375-97e8-b4e9d1a7d3a0-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:50d4e600-ca37-4f18-8022-e7646f622fe2"/>
 </rdf:Description>
 
@@ -9408,7 +9408,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE CODED Test Conformance Parameterized CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINELEVATION_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINELEVATION_INRANGE</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/071267a0-d993-4961-a3f7-d8210810d167-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/071267a0-d993-4961-a3f7-d8210810d167-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:3cac6091-6898-48ea-86d9-3f5cd71c1efa"/>
 </rdf:Description>
 
@@ -9418,7 +9418,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE CODED Test VOCABULARY Conformance Parameterized CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_STATEPROVINCE_FOUND with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_STATEPROVINCE_FOUND</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/58fdd5c1-6201-49a1-a7cd-f49c210dc0b6-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/58fdd5c1-6201-49a1-a7cd-f49c210dc0b6-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:778976c3-2c33-4b8d-9135-a4d8ef36385f"/>
 </rdf:Description>
 
@@ -9499,7 +9499,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_KINGDOM_FOUND with Specification Specification for: MULTIRECORD_MEASURE_QA_KINGDOM_FOUND</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/465d7ac1-d193-46c0-a302-56a9ef99215f-2025-03-06"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/465d7ac1-d193-46c0-a302-56a9ef99215f-2025-03-06"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:3f846a5d-629b-45f4-94a0-2c32abe437e2"/>
 </rdf:Description>
 
@@ -9533,7 +9533,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE CODED Test VOCABULARY Conformance Parameterized CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_COUNTRYSTATEPROVINCE_UNAMBIGUOUS with Specification Specification for: MULTIRECORD_MEASURE_QA_COUNTRYSTATEPROVINCE_UNAMBIGUOUS</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/23aced89-d613-479c-bc4c-837d74b73be0-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/23aced89-d613-479c-bc4c-837d74b73be0-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:6232150a-9abc-469f-b533-44d61aa85054"/>
 </rdf:Description>
 
@@ -9593,7 +9593,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation NAME CODED Test Completeness CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_KINGDOM_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_KINGDOM_NOTEMPTY</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/342bd81c-e2b7-41d8-b32b-013992d19f99-2025-03-06"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/342bd81c-e2b7-41d8-b32b-013992d19f99-2025-03-06"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:1e548db5-3f69-43b3-ad99-98c75305762e"/>
 </rdf:Description>
 
@@ -9624,7 +9624,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXON_UNAMBIGUOUS with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXON_UNAMBIGUOUS</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/782773c9-7b37-483d-8ce2-c6683ba81882-2025-03-06"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/782773c9-7b37-483d-8ce2-c6683ba81882-2025-03-06"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:b268bebc-75ed-40c4-8526-907be35e54f4"/>
 </rdf:Description>
 
@@ -9689,7 +9689,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation NAME CODED Test VOCABULARY Consistency Parameterized CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASSIFICATION_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASSIFICATION_CONSISTENT</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/a56fb342-c8ee-4611-8aab-e6c6357e8875-2025-03-06"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/a56fb342-c8ee-4611-8aab-e6c6357e8875-2025-03-06"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:0f948339-0ec9-451f-b6ea-6272404be2c1"/>
 </rdf:Description>
 
@@ -9727,7 +9727,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE CODED Test VOCABULARY Consistency CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESSTATEPROVINCE_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESSTATEPROVINCE_CONSISTENT</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/c6c998af-6145-4361-b1e6-52c5b790340a-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/c6c998af-6145-4361-b1e6-52c5b790340a-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:e4de3444-b469-426d-abed-30b345328da4"/>
 </rdf:Description>
 
@@ -9756,7 +9756,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation TIME CODED Test Conformance CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_INRANGE</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/780480ff-8c4a-4276-aaca-cbd1248de9fa-2025-03-06"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/780480ff-8c4a-4276-aaca-cbd1248de9fa-2025-03-06"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:df76475a-0207-4f98-b898-c1623d759442"/>
 </rdf:Description>
 
@@ -9794,7 +9794,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE CODED Test Completeness CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLATITUDE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLATITUDE_NOTEMPTY</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/bceae35a-52ab-4968-846f-069ace766513-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/bceae35a-52ab-4968-846f-069ace766513-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:60d3d418-4eed-4190-9690-ae945fe34736"/>
 </rdf:Description>
 
@@ -9828,7 +9828,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation TIME CODED Test Completeness CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_YEAR_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_YEAR_NOTEMPTY</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/a8fef8a8-e7c7-4a2d-adaf-7da99c896c93-2025-03-06"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/a8fef8a8-e7c7-4a2d-adaf-7da99c896c93-2025-03-06"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:8294c0a6-b46b-48a5-8221-993d35e09017"/>
 </rdf:Description>
 
@@ -9856,7 +9856,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_OCCURRENCESTATUS_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_OCCURRENCESTATUS_STANDARD</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/2fea4571-92d0-48a5-a5ba-6caecd647862-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/2fea4571-92d0-48a5-a5ba-6caecd647862-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:e032ea6a-012d-436d-a442-da167a466b02"/>
 </rdf:Description>
 
@@ -9947,7 +9947,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE CODED Test Conformance CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_DECIMALLONGITUDE_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_DECIMALLONGITUDE_INRANGE</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/6f7a9b82-7d34-4111-a2a6-9efe5221fa44-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/6f7a9b82-7d34-4111-a2a6-9efe5221fa44-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:2042e1fa-8bf7-457e-bd43-cb48bd8b838d"/>
 </rdf:Description>
 
@@ -10059,7 +10059,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_FAMILY_FOUND with Specification Specification for: MULTIRECORD_MEASURE_QA_FAMILY_FOUND</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/a07d7147-2db8-48ce-81b8-e47595ad5f17-2025-03-06"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/a07d7147-2db8-48ce-81b8-e47595ad5f17-2025-03-06"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:86175f22-dbda-4322-8f6a-9af7f02f4f38"/>
 </rdf:Description>
 
@@ -10079,7 +10079,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE CODED Test VOCABULARY Consistency ISO/DCMI STANDARD Parameterized CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESCOUNTRYCODE_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESCOUNTRYCODE_CONSISTENT</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/d68dc111-9704-4fc5-a8eb-5fa084809202-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/d68dc111-9704-4fc5-a8eb-5fa084809202-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:4299e1b9-042e-4967-a721-6e44569526e8"/>
 </rdf:Description>
 
@@ -10108,7 +10108,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE CODED Test Conformance CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINDEPTH_LESSTHAN_MAXDEPTH with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINDEPTH_LESSTHAN_MAXDEPTH</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/b21256c2-4bb7-4deb-852d-a9eaa05345e7-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/b21256c2-4bb7-4deb-852d-a9eaa05345e7-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:18eca445-c05b-443e-9819-d6ec516d963e"/>
 </rdf:Description>
 
@@ -10127,7 +10127,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_STANDARD</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/f5dd74bd-6a22-4792-b675-c7ccf2a2c103-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/f5dd74bd-6a22-4792-b675-c7ccf2a2c103-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:ef127cb0-c5c2-4bb0-aa4a-df4a42dfcabe"/>
 </rdf:Description>
 
@@ -10137,7 +10137,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation NAME CODED Test VOCABULARY Consistency Parameterized CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_CLASSIFICATION_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_QA_CLASSIFICATION_CONSISTENT</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/a2be4734-0a93-46dc-af4a-e2125b47dbd4-2025-03-06"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/a2be4734-0a93-46dc-af4a-e2125b47dbd4-2025-03-06"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:7701481b-dcb3-445a-ae50-b6bcde2163dd"/>
 </rdf:Description>
 
@@ -10174,7 +10174,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASS_FOUND with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASS_FOUND</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/7270a362-5f2e-41f0-955a-d7a8eaaf0f17-2025-03-06"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/7270a362-5f2e-41f0-955a-d7a8eaaf0f17-2025-03-06"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:be57619a-9c9d-459f-8fb6-02aa912cd696"/>
 </rdf:Description>
 
@@ -10195,7 +10195,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE CODED Test Completeness CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_NOTEMPTY</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/6887c881-dc52-409b-8979-9c2f05e55569-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/6887c881-dc52-409b-8979-9c2f05e55569-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:2a5be256-6d25-4d05-bcc7-3b43a383d443"/>
 </rdf:Description>
 
@@ -10205,7 +10205,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation OTHER CODED Test Completeness CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCESTATUS_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCESTATUS_NOTEMPTY</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/298db0c9-a85a-41ee-b111-d622fd969d71-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/298db0c9-a85a-41ee-b111-d622fd969d71-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:1319a50d-2ded-4328-b3c2-2e9cb5e7c6bb"/>
 </rdf:Description>
 
@@ -10292,7 +10292,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE CODED Test VOCABULARY Consistency ISO/DCMI STANDARD CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_COUNTRYCOUNTRYCODE_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_QA_COUNTRYCOUNTRYCODE_CONSISTENT</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/57b40d9a-67d7-4916-9c27-dbb395c6c27e-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/57b40d9a-67d7-4916-9c27-dbb395c6c27e-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:daa9df47-98f7-44f4-9aed-acc8f8d9289b"/>
 </rdf:Description>
 
@@ -10302,7 +10302,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE CODED Test VOCABULARY Completeness CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_COUNTRYCODE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_COUNTRYCODE_NOTEMPTY</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/942f63bd-d19d-4214-bf8e-cec0055b8909-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/942f63bd-d19d-4214-bf8e-cec0055b8909-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:17bebf9d-e049-497b-bcca-dd08939398ea"/>
 </rdf:Description>
 
@@ -10312,7 +10312,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE CODED Test Conformance CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATEUNCERTAINTY_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATEUNCERTAINTY_INRANGE</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/2d90d94b-d384-4bac-aa68-c6800d765882-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/2d90d94b-d384-4bac-aa68-c6800d765882-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:e281f245-452f-4afb-a900-3269ce97ff05"/>
 </rdf:Description>
 
@@ -10349,7 +10349,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE CODED Test Completeness CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLONGITUDE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLONGITUDE_NOTEMPTY</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/f948a30e-8084-48d5-b1ca-d77c476f181f-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/f948a30e-8084-48d5-b1ca-d77c476f181f-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:123392d9-c81c-4f3a-82bd-6f053eb41b65"/>
 </rdf:Description>
 
@@ -10388,7 +10388,7 @@
 	<skos:historyNote>Source: TG2-Gainesville</skos:historyNote>
 	<skos:note>TG2 Measure NAME SPACE TIME OTHER Test CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET with Specification Specification for: MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/49a94636-a562-4e6b-803c-665c80628a3d-2024-09-25"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/49a94636-a562-4e6b-803c-665c80628a3d-2024-09-25"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:aefe88ed-6d3a-4824-8c4a-a75714cb0351"/>
 </rdf:Description>
 
@@ -10398,7 +10398,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE CODED Test VOCABULARY Consistency CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_COORDINATESSTATEPROVINCE_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_QA_COORDINATESSTATEPROVINCE_CONSISTENT</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/7a8b0af3-fa7d-416a-921a-8992d56f8233-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/7a8b0af3-fa7d-416a-921a-8992d56f8233-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:809d2925-781f-432e-b5d6-4a91f1afe56c"/>
 </rdf:Description>
 
@@ -10422,7 +10422,7 @@
 	<skos:historyNote>Source: TG2-Gainesville</skos:historyNote>
 	<skos:note>TG2 Measure NAME SPACE OTHER Test CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MEASURE_VALIDATIONTESTS_COMPLIANT with Specification Specification for: MEASURE_VALIDATIONTESTS_COMPLIANT</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/45fb49eb-4a1b-4b49-876f-15d5034dfc73-2024-09-25"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/45fb49eb-4a1b-4b49-876f-15d5034dfc73-2024-09-25"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:b611e1b1-cbf5-405c-b24d-24e9a649cbf0"/>
 </rdf:Description>
 
@@ -10470,7 +10470,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation NAME CODED Test Completeness CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_TAXON_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_TAXON_NOTEMPTY</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/2a9d4cfd-815a-46e0-bb51-60724582b762-2025-03-06"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/2a9d4cfd-815a-46e0-bb51-60724582b762-2025-03-06"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:91019397-5086-4383-b998-7bd1eeb78b9e"/>
 </rdf:Description>
 
@@ -10480,7 +10480,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation TIME CODED Test Completeness CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_NOTEMPTY</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/687d3ad1-93a3-4a1f-b69f-da5a1eb761a5-2025-03-06"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/687d3ad1-93a3-4a1f-b69f-da5a1eb761a5-2025-03-06"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:64d2893d-aa67-41df-b5e4-f9978a83e35e"/>
 </rdf:Description>
 
@@ -10499,7 +10499,7 @@
 	<skos:note>Example Implementations: Kurator/FilteredPush event_date_qc Library (Morris &amp; Lowery 2025)</skos:note>
 	<skos:note>TG2 Measure TIME CODED Test CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MEASURE_EVENTDATE_DURATIONINSECONDS with Specification Specification for: MEASURE_EVENTDATE_DURATIONINSECONDS</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/56b6c695-adf1-418e-95d2-da04cad7be53-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/56b6c695-adf1-418e-95d2-da04cad7be53-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:be93a0ef-9bf7-417f-a26e-daae5d00dabb"/>
 </rdf:Description>
 
@@ -10554,7 +10554,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE CODED Test VOCABULARY Conformance ISO/DCMI STANDARD CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_STANDARD</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/38966850-3737-4a67-953c-c231469e0489-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/38966850-3737-4a67-953c-c231469e0489-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:4365c5a8-2a44-493c-acbc-c6ed57b2c6ad"/>
 </rdf:Description>
 
@@ -10564,7 +10564,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE CODED Test Conformance CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINELEVATION_LESSTHAN_MAXELEVATION with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINELEVATION_LESSTHAN_MAXELEVATION</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/be2eb717-b390-47d1-b7ba-965a1101e215-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/be2eb717-b390-47d1-b7ba-965a1101e215-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:ea0e998b-503c-4fff-92aa-9d96f56a65d8"/>
 </rdf:Description>
 
@@ -10729,7 +10729,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE CODED Test Conformance Parameterized CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINDEPTH_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINDEPTH_INRANGE</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/9c66c116-6644-45b4-b4c7-db7a4ee7c500-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/9c66c116-6644-45b4-b4c7-db7a4ee7c500-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:64a7fd81-396c-4000-a11d-f89d62a57740"/>
 </rdf:Description>
 
@@ -10818,7 +10818,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_ESTABLISHMENTMEANS_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_ESTABLISHMENTMEANS_STANDARD</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/130bb875-6b7c-4965-b864-d53f9d05b2cd-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/130bb875-6b7c-4965-b864-d53f9d05b2cd-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:3863808c-ea76-4490-a09c-a87cfebb2fb4"/>
 </rdf:Description>
 
@@ -10828,7 +10828,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE CODED Test Completeness CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_LOCATION_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_LOCATION_NOTEMPTY</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/3b2e4791-1a5a-4087-9e8d-09c67cf8c816-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/3b2e4791-1a5a-4087-9e8d-09c67cf8c816-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:977ed65e-416f-46e8-85a3-079c6b735fa8"/>
 </rdf:Description>
 
@@ -10857,7 +10857,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE CODED Test VOCABULARY Conformance Parameterized CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_COUNTRY_FOUND with Specification Specification for: MULTIRECORD_MEASURE_QA_COUNTRY_FOUND</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/388e74b3-2e18-4d78-8112-3142d1177e25-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/388e74b3-2e18-4d78-8112-3142d1177e25-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:59566872-1968-40f5-916a-42297d58ac7b"/>
 </rdf:Description>
 
@@ -10892,7 +10892,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE CODED Test VOCABULARY Consistency ISO/DCMI STANDARD Parameterized CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_COORDINATESCOUNTRYCODE_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_QA_COORDINATESCOUNTRYCODE_CONSISTENT</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/86c28d5e-f778-4230-88d8-64cc01478601-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/86c28d5e-f778-4230-88d8-64cc01478601-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:d95305ad-cf84-4473-8c24-09a4a236e262"/>
 </rdf:Description>
 
@@ -10909,7 +10909,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation NAME CODED Test Completeness CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEID_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEID_NOTEMPTY</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/4cf84216-c8a7-4865-a8e1-3ffd829d5a10-2025-03-06"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/4cf84216-c8a7-4865-a8e1-3ffd829d5a10-2025-03-06"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:336865b2-1b21-49f6-a5f6-1112ed397400"/>
 </rdf:Description>
 
@@ -10919,7 +10919,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation NAME CODED Test Completeness CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/6dd6fecf-6ba1-425c-afbe-6a9ed7b65ed7-2025-03-06"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/6dd6fecf-6ba1-425c-afbe-6a9ed7b65ed7-2025-03-06"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:8f3b709b-0a01-4e0e-a43a-b43a9ee8aec8"/>
 </rdf:Description>
 
@@ -10929,7 +10929,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation NAME CODED Test Completeness CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_TAXONRANK_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_TAXONRANK_NOTEMPTY</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/e0b8cff1-3322-40d2-b8b2-b99fc9ae130a-2025-03-06"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/e0b8cff1-3322-40d2-b8b2-b99fc9ae130a-2025-03-06"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:6317c75a-e514-4840-8b69-81e2e87461d0"/>
 </rdf:Description>
 
@@ -10966,7 +10966,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_TYPESTATUS_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_TYPESTATUS_STANDARD</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/1ca359ea-4df3-4dca-b92b-2bc8fa8e0c88-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/1ca359ea-4df3-4dca-b92b-2bc8fa8e0c88-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:296980d9-a8bf-4fe4-8596-ee2bbd140e38"/>
 </rdf:Description>
 
@@ -11014,7 +11014,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_TAXON_UNAMBIGUOUS with Specification Specification for: MULTIRECORD_MEASURE_QA_TAXON_UNAMBIGUOUS</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/0df03601-3768-4805-906a-bbd0a41b0fda-2025-03-06"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/0df03601-3768-4805-906a-bbd0a41b0fda-2025-03-06"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:6ffe12f7-a29e-46a8-a3eb-8b7186214f4f"/>
 </rdf:Description>
 
@@ -11024,7 +11024,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation TIME CODED Test Completeness CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_EVENTDATE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_EVENTDATE_NOTEMPTY</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/c23cd67d-1b5c-4e9f-a1ce-8cc6b3e9b365-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/c23cd67d-1b5c-4e9f-a1ce-8cc6b3e9b365-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:3929ac59-f8e8-49ea-bf6a-774d41ad869c"/>
 </rdf:Description>
 
@@ -11061,7 +11061,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation TIME CODED Test Conformance CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_STARTDAYOFYEAR_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_STARTDAYOFYEAR_INRANGE</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/76008c6b-c56a-4233-84e3-8584950037ec-2025-03-06"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/76008c6b-c56a-4233-84e3-8584950037ec-2025-03-06"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:9d7932d2-8b74-460c-a33a-74128d299c7a"/>
 </rdf:Description>
 
@@ -11078,7 +11078,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE CODED Test Conformance CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_DECIMALLATITUDE_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_DECIMALLATITUDE_INRANGE</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/3c8bc478-f6b2-4533-b7ce-45bae5d186c2-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/3c8bc478-f6b2-4533-b7ce-45bae5d186c2-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:71b0f5c6-1e71-4dbb-bce3-9aa9366f2643"/>
 </rdf:Description>
 
@@ -11119,7 +11119,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_TAXONRANK_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_TAXONRANK_STANDARD</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/f320ca83-8487-4011-b1ff-f4b1b4dd86ec-2025-03-06"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/f320ca83-8487-4011-b1ff-f4b1b4dd86ec-2025-03-06"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:aa2e919c-5655-488e-90ca-10f8bbd233ca"/>
 </rdf:Description>
 
@@ -11155,7 +11155,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation TIME CODED Test Conformance CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_DAY_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_DAY_STANDARD</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/371035f6-42b5-494f-86d9-de2f44a6cdc6-2025-03-06"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/371035f6-42b5-494f-86d9-de2f44a6cdc6-2025-03-06"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:745f8e6b-3f4a-4f1a-bf0c-97e0d91b545d"/>
 </rdf:Description>
 
@@ -11181,7 +11181,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_PHYLUM_FOUND with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_PHYLUM_FOUND</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/65e66ca0-e9d1-4411-ad26-bb9c43f32afc-2025-03-06"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/65e66ca0-e9d1-4411-ad26-bb9c43f32afc-2025-03-06"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:315b59c1-85ab-428a-824c-9c9639f5fa7e"/>
 </rdf:Description>
 
@@ -11305,7 +11305,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation TIME CODED Test Conformance ISO/DCMI STANDARD CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DATEIDENTIFIED_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DATEIDENTIFIED_STANDARD</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/49b787eb-7dce-4ace-97f5-7cbb47cd8cb9-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/49b787eb-7dce-4ace-97f5-7cbb47cd8cb9-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:fee0daaa-9273-469c-9c7d-a62fafe05874"/>
 </rdf:Description>
 
@@ -11378,7 +11378,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation NAME CODED Test Completeness CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_NOTEMPTY</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/0f8b30e2-59dc-46ba-8b91-62049cd1a4e2-2025-03-06"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/0f8b30e2-59dc-46ba-8b91-62049cd1a4e2-2025-03-06"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:1424d363-511c-4230-94e1-1b07dea73db5"/>
 </rdf:Description>
 
@@ -11407,7 +11407,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE CODED Test VOCABULARY Conformance Parameterized CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_STATEPROVINCE_FOUND with Specification Specification for: MULTIRECORD_MEASURE_QA_STATEPROVINCE_FOUND</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/9c1cdf6a-0dbf-4828-a2e3-fb368f74d194-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/9c1cdf6a-0dbf-4828-a2e3-fb368f74d194-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:8c7b24de-6e84-4c07-9d61-f07fee762281"/>
 </rdf:Description>
 
@@ -11417,7 +11417,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_PHYLUM_FOUND with Specification Specification for: MULTIRECORD_MEASURE_QA_PHYLUM_FOUND</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/17364d16-37b7-4ccb-9614-bfb95ff1bca9-2025-03-06"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/17364d16-37b7-4ccb-9614-bfb95ff1bca9-2025-03-06"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:db818cf0-569e-4eb9-a309-a151d04b7bb4"/>
 </rdf:Description>
 
@@ -11466,7 +11466,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation NAME CODED Test Consistency CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_POLYNOMIAL_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_POLYNOMIAL_CONSISTENT</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/7da5428e-87b2-4ec2-be82-05b9398b7577-2025-03-06"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/7da5428e-87b2-4ec2-be82-05b9398b7577-2025-03-06"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:88fe8922-3eb1-4faa-b4aa-fe3daf742438"/>
 </rdf:Description>
 
@@ -11476,7 +11476,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_LICENSE_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_LICENSE_STANDARD</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/acd8d43e-7a2a-4372-b887-fb53a9972dc9-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/acd8d43e-7a2a-4372-b887-fb53a9972dc9-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:5f5af361-e5fe-44de-9be4-5b02795a2adb"/>
 </rdf:Description>
 
@@ -11553,7 +11553,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE CODED Test Completeness CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_COUNTRY_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_COUNTRY_NOTEMPTY</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/9c8df974-8fba-4537-8c67-31466787f732-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/9c8df974-8fba-4537-8c67-31466787f732-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:1c07234e-42de-45c5-9083-7b3e812835fb"/>
 </rdf:Description>
 
@@ -11563,7 +11563,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation TIME CODED Test Likeliness ISO/DCMI STANDARD Parameterized CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DATEIDENTIFIED_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DATEIDENTIFIED_INRANGE</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/c72fda2d-16e1-4ded-91a5-a7094339d603-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/c72fda2d-16e1-4ded-91a5-a7094339d603-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:f41b08a1-afb0-4075-b591-dfdb4174af51"/>
 </rdf:Description>
 
@@ -11584,7 +11584,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation OTHER CODED Test VOCABULARY Conformance ISO/DCMI STANDARD CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_DCTYPE_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_DCTYPE_STANDARD</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/d9493fa0-d90e-41db-95f6-d1c1d243540e-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/d9493fa0-d90e-41db-95f6-d1c1d243540e-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:3d5fc575-6ea0-4bff-bca9-172b6bb3b19d"/>
 </rdf:Description>
 
@@ -11649,7 +11649,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE CODED Test Likeliness CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATES_NOTZERO with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATES_NOTZERO</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/0e239a55-0f19-4c68-bdbf-20580f27a647-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/0e239a55-0f19-4c68-bdbf-20580f27a647-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:0a4b0450-5f8d-4425-9bf3-dc79498741c0"/>
 </rdf:Description>
 
@@ -11767,7 +11767,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE CODED Test VOCABULARY Conformance CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_GEODETICDATUM_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_GEODETICDATUM_STANDARD</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/cb88b6d9-85b2-4cd5-9bfa-c0d96f79552e-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/cb88b6d9-85b2-4cd5-9bfa-c0d96f79552e-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:33e0b049-5d42-48d2-a825-c29b294eab9b"/>
 </rdf:Description>
 
@@ -11789,7 +11789,7 @@
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation TIME CODED Test Completeness CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_NOTEMPTY</skos:prefLabel>
-	<bdqffdq:forMeasurement rdf:resource="https://rs.tdwg.org/bdqtest/terms/3f62eaa2-747f-456b-85e6-1a6e74086a18-2025-03-07"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/3f62eaa2-747f-456b-85e6-1a6e74086a18-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:36de5de9-00d2-4b79-8ff7-b82b321fc35f"/>
 </rdf:Description>
 

@@ -4248,6 +4248,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td><ul><li>ISO (2019) ISO 8601-1:2019(en) Date and time — Representations for information interchange — Part 1: Basic rules. https://www.iso.org/obp/ui/</li> <li>Wikipedia (2020) ISO 8601. https://en.wikipedia.org/wiki/ISO_8601</li> </ul></td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MEASURE_EVENTDATE_DURATIONINSECONDS with Specification Specification for: MEASURE_EVENTDATE_DURATIONINSECONDS</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MEASURE_EVENTDATE_DURATIONINSECONDS</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -4326,6 +4334,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Measure NAME SPACE OTHER Test CORE</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MEASURE_VALIDATIONTESTS_COMPLIANT with Specification Specification for: MEASURE_VALIDATIONTESTS_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MEASURE_VALIDATIONTESTS_COMPLIANT</td>
 		</tr>
 	</tbody>
 </table>
@@ -4406,6 +4422,14 @@ Including MultiRecord Measures
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Measure NAME SPACE TIME OTHER Test CORE</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MEASURE_VALIDATIONTESTS_NOTCOMPLIANT with Specification Specification for: MEASURE_VALIDATIONTESTS_NOTCOMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MEASURE_VALIDATIONTESTS_NOTCOMPLIANT</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -4484,6 +4508,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Measure NAME SPACE TIME OTHER Test CORE</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET with Specification Specification for: MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET</td>
 		</tr>
 	</tbody>
 </table>
@@ -4564,6 +4596,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_NOTEMPTY</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -4642,6 +4682,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -4722,6 +4770,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASSIFICATION_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASSIFICATION_CONSISTENT</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASSIFICATION_CONSISTENT</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -4800,6 +4856,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASS_FOUND with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASS_FOUND</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASS_FOUND</td>
 		</tr>
 	</tbody>
 </table>
@@ -4880,6 +4944,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESCOUNTRYCODE_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESCOUNTRYCODE_CONSISTENT</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESCOUNTRYCODE_CONSISTENT</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -4958,6 +5030,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESSTATEPROVINCE_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESSTATEPROVINCE_CONSISTENT</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESSTATEPROVINCE_CONSISTENT</td>
 		</tr>
 	</tbody>
 </table>
@@ -5038,6 +5118,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESTERRESTRIALMARINE_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESTERRESTRIALMARINE_CONSISTENT</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESTERRESTRIALMARINE_CONSISTENT</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -5116,6 +5204,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATES_NOTZERO with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATES_NOTZERO</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATES_NOTZERO</td>
 		</tr>
 	</tbody>
 </table>
@@ -5196,6 +5292,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATEUNCERTAINTY_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATEUNCERTAINTY_INRANGE</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATEUNCERTAINTY_INRANGE</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -5274,6 +5378,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -5354,6 +5466,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_STANDARD</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -5432,6 +5552,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCOUNTRYCODE_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCOUNTRYCODE_CONSISTENT</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCOUNTRYCODE_CONSISTENT</td>
 		</tr>
 	</tbody>
 </table>
@@ -5512,6 +5640,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYSTATEPROVINCE_UNAMBIGUOUS with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYSTATEPROVINCE_UNAMBIGUOUS</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYSTATEPROVINCE_UNAMBIGUOUS</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -5590,6 +5726,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_FOUND with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_FOUND</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_FOUND</td>
 		</tr>
 	</tbody>
 </table>
@@ -5670,6 +5814,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_NOTEMPTY</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -5748,6 +5900,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DATEIDENTIFIED_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DATEIDENTIFIED_INRANGE</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DATEIDENTIFIED_INRANGE</td>
 		</tr>
 	</tbody>
 </table>
@@ -5828,6 +5988,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DATEIDENTIFIED_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DATEIDENTIFIED_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DATEIDENTIFIED_STANDARD</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -5906,6 +6074,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_INRANGE</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_INRANGE</td>
 		</tr>
 	</tbody>
 </table>
@@ -5986,6 +6162,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_STANDARD</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -6064,6 +6248,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DCTYPE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DCTYPE_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DCTYPE_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -6144,6 +6336,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DCTYPE_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DCTYPE_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DCTYPE_STANDARD</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -6222,6 +6422,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLATITUDE_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLATITUDE_INRANGE</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLATITUDE_INRANGE</td>
 		</tr>
 	</tbody>
 </table>
@@ -6302,6 +6510,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLATITUDE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLATITUDE_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLATITUDE_NOTEMPTY</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -6380,6 +6596,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLONGITUDE_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLONGITUDE_INRANGE</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLONGITUDE_INRANGE</td>
 		</tr>
 	</tbody>
 </table>
@@ -6460,6 +6684,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLONGITUDE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLONGITUDE_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLONGITUDE_NOTEMPTY</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -6538,6 +6770,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DEGREEOFESTABLISHMENT_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DEGREEOFESTABLISHMENT_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DEGREEOFESTABLISHMENT_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -6618,6 +6858,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_ENDDAYOFYEAR_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_ENDDAYOFYEAR_INRANGE</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_ENDDAYOFYEAR_INRANGE</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -6696,6 +6944,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_ESTABLISHMENTMEANS_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_ESTABLISHMENTMEANS_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_ESTABLISHMENTMEANS_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -6776,6 +7032,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_INRANGE</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_INRANGE</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -6854,6 +7118,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -6934,6 +7206,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_STANDARD</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -7012,6 +7292,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTTEMPORAL_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTTEMPORAL_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTTEMPORAL_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -7092,6 +7380,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENT_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENT_CONSISTENT</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENT_CONSISTENT</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -7170,6 +7466,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_FAMILY_FOUND with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_FAMILY_FOUND</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_FAMILY_FOUND</td>
 		</tr>
 	</tbody>
 </table>
@@ -7250,6 +7554,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_GENUS_FOUND with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_GENUS_FOUND</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_GENUS_FOUND</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -7328,6 +7640,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -7408,6 +7728,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_STANDARD</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -7486,6 +7814,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_KINGDOM_FOUND with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_KINGDOM_FOUND</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_KINGDOM_FOUND</td>
 		</tr>
 	</tbody>
 </table>
@@ -7566,6 +7902,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_KINGDOM_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_KINGDOM_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_KINGDOM_NOTEMPTY</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -7644,6 +7988,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -7724,6 +8076,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_STANDARD</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -7802,6 +8162,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_LOCATION_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_LOCATION_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_LOCATION_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -7882,6 +8250,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MAXDEPTH_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MAXDEPTH_INRANGE</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MAXDEPTH_INRANGE</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -7960,6 +8336,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MAXELEVATION_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MAXELEVATION_INRANGE</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MAXELEVATION_INRANGE</td>
 		</tr>
 	</tbody>
 </table>
@@ -8040,6 +8424,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINDEPTH_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINDEPTH_INRANGE</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINDEPTH_INRANGE</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -8118,6 +8510,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINDEPTH_LESSTHAN_MAXDEPTH with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINDEPTH_LESSTHAN_MAXDEPTH</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINDEPTH_LESSTHAN_MAXDEPTH</td>
 		</tr>
 	</tbody>
 </table>
@@ -8198,6 +8598,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINELEVATION_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINELEVATION_INRANGE</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINELEVATION_INRANGE</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -8276,6 +8684,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINELEVATION_LESSTHAN_MAXELEVATION with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINELEVATION_LESSTHAN_MAXELEVATION</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINELEVATION_LESSTHAN_MAXELEVATION</td>
 		</tr>
 	</tbody>
 </table>
@@ -8356,6 +8772,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MONTH_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MONTH_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MONTH_STANDARD</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -8434,6 +8858,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_NAMEPUBLISHEDINYEAR_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_NAMEPUBLISHEDINYEAR_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_NAMEPUBLISHEDINYEAR_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -8514,6 +8946,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCEID_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCEID_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCEID_NOTEMPTY</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -8592,6 +9032,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCESTATUS_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCESTATUS_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCESTATUS_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -8672,6 +9120,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCESTATUS_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCESTATUS_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCESTATUS_STANDARD</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -8750,6 +9206,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_ORDER_FOUND with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_ORDER_FOUND</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_ORDER_FOUND</td>
 		</tr>
 	</tbody>
 </table>
@@ -8830,6 +9294,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_PATHWAY_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_PATHWAY_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_PATHWAY_STANDARD</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -8908,6 +9380,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_PHYLUM_FOUND with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_PHYLUM_FOUND</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_PHYLUM_FOUND</td>
 		</tr>
 	</tbody>
 </table>
@@ -8988,6 +9468,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_POLYNOMIAL_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_POLYNOMIAL_CONSISTENT</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_POLYNOMIAL_CONSISTENT</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -9066,6 +9554,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -9146,6 +9642,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEID_COMPLETE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEID_COMPLETE</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEID_COMPLETE</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -9224,6 +9728,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEID_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEID_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEID_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -9304,6 +9816,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_FOUND with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_FOUND</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_FOUND</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -9382,6 +9902,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -9462,6 +9990,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SEX_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SEX_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SEX_STANDARD</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -9540,6 +10076,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_STARTDAYOFYEAR_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_STARTDAYOFYEAR_INRANGE</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_STARTDAYOFYEAR_INRANGE</td>
 		</tr>
 	</tbody>
 </table>
@@ -9620,6 +10164,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_STATEPROVINCE_FOUND with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_STATEPROVINCE_FOUND</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_STATEPROVINCE_FOUND</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -9698,6 +10250,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXONRANK_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXONRANK_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXONRANK_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -9778,6 +10338,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXONRANK_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXONRANK_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXONRANK_STANDARD</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -9856,6 +10424,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXON_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXON_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXON_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -9936,6 +10512,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXON_UNAMBIGUOUS with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXON_UNAMBIGUOUS</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXON_UNAMBIGUOUS</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -10014,6 +10598,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TYPESTATUS_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TYPESTATUS_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TYPESTATUS_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -10094,6 +10686,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_INRANGE</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_INRANGE</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -10172,6 +10772,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -10252,6 +10860,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_BASISOFRECORD_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_BASISOFRECORD_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_BASISOFRECORD_NOTEMPTY</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -10330,6 +10946,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_BASISOFRECORD_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_BASISOFRECORD_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_BASISOFRECORD_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -10410,6 +11034,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_CLASSIFICATION_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_QA_CLASSIFICATION_CONSISTENT</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_CLASSIFICATION_CONSISTENT</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -10488,6 +11120,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_CLASS_FOUND with Specification Specification for: MULTIRECORD_MEASURE_QA_CLASS_FOUND</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_CLASS_FOUND</td>
 		</tr>
 	</tbody>
 </table>
@@ -10568,6 +11208,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_COORDINATESCOUNTRYCODE_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_QA_COORDINATESCOUNTRYCODE_CONSISTENT</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_COORDINATESCOUNTRYCODE_CONSISTENT</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -10646,6 +11294,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_COORDINATESSTATEPROVINCE_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_QA_COORDINATESSTATEPROVINCE_CONSISTENT</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_COORDINATESSTATEPROVINCE_CONSISTENT</td>
 		</tr>
 	</tbody>
 </table>
@@ -10726,6 +11382,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_COORDINATESTERRESTRIALMARINE_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_QA_COORDINATESTERRESTRIALMARINE_CONSISTENT</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_COORDINATESTERRESTRIALMARINE_CONSISTENT</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -10804,6 +11468,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_COORDINATES_NOTZERO with Specification Specification for: MULTIRECORD_MEASURE_QA_COORDINATES_NOTZERO</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_COORDINATES_NOTZERO</td>
 		</tr>
 	</tbody>
 </table>
@@ -10884,6 +11556,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_COORDINATEUNCERTAINTY_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_COORDINATEUNCERTAINTY_INRANGE</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_COORDINATEUNCERTAINTY_INRANGE</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -10962,6 +11642,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_COUNTRYCODE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_COUNTRYCODE_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_COUNTRYCODE_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -11042,6 +11730,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_COUNTRYCODE_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_COUNTRYCODE_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_COUNTRYCODE_STANDARD</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -11120,6 +11816,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_COUNTRYCOUNTRYCODE_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_QA_COUNTRYCOUNTRYCODE_CONSISTENT</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_COUNTRYCOUNTRYCODE_CONSISTENT</td>
 		</tr>
 	</tbody>
 </table>
@@ -11200,6 +11904,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_COUNTRYSTATEPROVINCE_UNAMBIGUOUS with Specification Specification for: MULTIRECORD_MEASURE_QA_COUNTRYSTATEPROVINCE_UNAMBIGUOUS</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_COUNTRYSTATEPROVINCE_UNAMBIGUOUS</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -11278,6 +11990,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_COUNTRY_FOUND with Specification Specification for: MULTIRECORD_MEASURE_QA_COUNTRY_FOUND</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_COUNTRY_FOUND</td>
 		</tr>
 	</tbody>
 </table>
@@ -11358,6 +12078,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_COUNTRY_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_COUNTRY_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_COUNTRY_NOTEMPTY</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -11436,6 +12164,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_DATEIDENTIFIED_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_DATEIDENTIFIED_INRANGE</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_DATEIDENTIFIED_INRANGE</td>
 		</tr>
 	</tbody>
 </table>
@@ -11516,6 +12252,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_DATEIDENTIFIED_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_DATEIDENTIFIED_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_DATEIDENTIFIED_STANDARD</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -11594,6 +12338,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_DAY_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_DAY_INRANGE</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_DAY_INRANGE</td>
 		</tr>
 	</tbody>
 </table>
@@ -11674,6 +12426,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_DAY_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_DAY_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_DAY_STANDARD</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -11752,6 +12512,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_DCTYPE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_DCTYPE_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_DCTYPE_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -11832,6 +12600,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_DCTYPE_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_DCTYPE_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_DCTYPE_STANDARD</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -11910,6 +12686,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_DECIMALLATITUDE_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_DECIMALLATITUDE_INRANGE</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_DECIMALLATITUDE_INRANGE</td>
 		</tr>
 	</tbody>
 </table>
@@ -11990,6 +12774,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_DECIMALLATITUDE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_DECIMALLATITUDE_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_DECIMALLATITUDE_NOTEMPTY</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -12068,6 +12860,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_DECIMALLONGITUDE_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_DECIMALLONGITUDE_INRANGE</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_DECIMALLONGITUDE_INRANGE</td>
 		</tr>
 	</tbody>
 </table>
@@ -12148,6 +12948,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_DECIMALLONGITUDE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_DECIMALLONGITUDE_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_DECIMALLONGITUDE_NOTEMPTY</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -12226,6 +13034,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_DEGREEOFESTABLISHMENT_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_DEGREEOFESTABLISHMENT_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_DEGREEOFESTABLISHMENT_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -12306,6 +13122,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_ENDDAYOFYEAR_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_ENDDAYOFYEAR_INRANGE</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_ENDDAYOFYEAR_INRANGE</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -12384,6 +13208,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_ESTABLISHMENTMEANS_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_ESTABLISHMENTMEANS_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_ESTABLISHMENTMEANS_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -12464,6 +13296,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_EVENTDATE_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_EVENTDATE_INRANGE</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_EVENTDATE_INRANGE</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -12542,6 +13382,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_EVENTDATE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_EVENTDATE_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_EVENTDATE_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -12622,6 +13470,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_EVENTDATE_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_EVENTDATE_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_EVENTDATE_STANDARD</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -12700,6 +13556,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_EVENTTEMPORAL_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_EVENTTEMPORAL_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_EVENTTEMPORAL_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -12780,6 +13644,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_EVENT_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_QA_EVENT_CONSISTENT</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_EVENT_CONSISTENT</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -12858,6 +13730,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_FAMILY_FOUND with Specification Specification for: MULTIRECORD_MEASURE_QA_FAMILY_FOUND</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_FAMILY_FOUND</td>
 		</tr>
 	</tbody>
 </table>
@@ -12938,6 +13818,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_GENUS_FOUND with Specification Specification for: MULTIRECORD_MEASURE_QA_GENUS_FOUND</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_GENUS_FOUND</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -13016,6 +13904,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_GEODETICDATUM_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_GEODETICDATUM_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_GEODETICDATUM_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -13096,6 +13992,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_GEODETICDATUM_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_GEODETICDATUM_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_GEODETICDATUM_STANDARD</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -13174,6 +14078,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_KINGDOM_FOUND with Specification Specification for: MULTIRECORD_MEASURE_QA_KINGDOM_FOUND</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_KINGDOM_FOUND</td>
 		</tr>
 	</tbody>
 </table>
@@ -13254,6 +14166,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_KINGDOM_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_KINGDOM_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_KINGDOM_NOTEMPTY</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -13332,6 +14252,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_LICENSE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_LICENSE_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_LICENSE_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -13412,6 +14340,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_LICENSE_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_LICENSE_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_LICENSE_STANDARD</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -13490,6 +14426,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_LOCATION_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_LOCATION_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_LOCATION_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -13570,6 +14514,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_MAXDEPTH_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_MAXDEPTH_INRANGE</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_MAXDEPTH_INRANGE</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -13648,6 +14600,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_MAXELEVATION_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_MAXELEVATION_INRANGE</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_MAXELEVATION_INRANGE</td>
 		</tr>
 	</tbody>
 </table>
@@ -13728,6 +14688,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_MINDEPTH_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_MINDEPTH_INRANGE</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_MINDEPTH_INRANGE</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -13806,6 +14774,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_MINDEPTH_LESSTHAN_MAXDEPTH with Specification Specification for: MULTIRECORD_MEASURE_QA_MINDEPTH_LESSTHAN_MAXDEPTH</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_MINDEPTH_LESSTHAN_MAXDEPTH</td>
 		</tr>
 	</tbody>
 </table>
@@ -13886,6 +14862,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_MINELEVATION_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_MINELEVATION_INRANGE</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_MINELEVATION_INRANGE</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -13964,6 +14948,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_MINELEVATION_LESSTHAN_MAXELEVATION with Specification Specification for: MULTIRECORD_MEASURE_QA_MINELEVATION_LESSTHAN_MAXELEVATION</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_MINELEVATION_LESSTHAN_MAXELEVATION</td>
 		</tr>
 	</tbody>
 </table>
@@ -14044,6 +15036,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_MONTH_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_MONTH_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_MONTH_STANDARD</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -14122,6 +15122,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_NAMEPUBLISHEDINYEAR_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_NAMEPUBLISHEDINYEAR_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_NAMEPUBLISHEDINYEAR_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -14202,6 +15210,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_OCCURRENCEID_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_OCCURRENCEID_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_OCCURRENCEID_NOTEMPTY</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -14280,6 +15296,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_OCCURRENCESTATUS_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_OCCURRENCESTATUS_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_OCCURRENCESTATUS_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -14360,6 +15384,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_OCCURRENCESTATUS_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_OCCURRENCESTATUS_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_OCCURRENCESTATUS_STANDARD</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -14438,6 +15470,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_ORDER_FOUND with Specification Specification for: MULTIRECORD_MEASURE_QA_ORDER_FOUND</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_ORDER_FOUND</td>
 		</tr>
 	</tbody>
 </table>
@@ -14518,6 +15558,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_PATHWAY_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_PATHWAY_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_PATHWAY_STANDARD</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -14596,6 +15644,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_PHYLUM_FOUND with Specification Specification for: MULTIRECORD_MEASURE_QA_PHYLUM_FOUND</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_PHYLUM_FOUND</td>
 		</tr>
 	</tbody>
 </table>
@@ -14676,6 +15732,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_POLYNOMIAL_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_QA_POLYNOMIAL_CONSISTENT</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_POLYNOMIAL_CONSISTENT</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -14754,6 +15818,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -14834,6 +15906,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEID_COMPLETE with Specification Specification for: MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEID_COMPLETE</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEID_COMPLETE</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -14912,6 +15992,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEID_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEID_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEID_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -14992,6 +16080,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_SCIENTIFICNAME_FOUND with Specification Specification for: MULTIRECORD_MEASURE_QA_SCIENTIFICNAME_FOUND</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_SCIENTIFICNAME_FOUND</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -15070,6 +16166,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_SCIENTIFICNAME_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_SCIENTIFICNAME_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_SCIENTIFICNAME_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -15150,6 +16254,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_SEX_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_SEX_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_SEX_STANDARD</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -15228,6 +16340,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_STARTDAYOFYEAR_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_STARTDAYOFYEAR_INRANGE</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_STARTDAYOFYEAR_INRANGE</td>
 		</tr>
 	</tbody>
 </table>
@@ -15308,6 +16428,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_STATEPROVINCE_FOUND with Specification Specification for: MULTIRECORD_MEASURE_QA_STATEPROVINCE_FOUND</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_STATEPROVINCE_FOUND</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -15386,6 +16514,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_TAXONRANK_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_TAXONRANK_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_TAXONRANK_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -15466,6 +16602,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_TAXONRANK_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_TAXONRANK_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_TAXONRANK_STANDARD</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -15544,6 +16688,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_TAXON_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_TAXON_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_TAXON_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
@@ -15624,6 +16776,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_TAXON_UNAMBIGUOUS with Specification Specification for: MULTIRECORD_MEASURE_QA_TAXON_UNAMBIGUOUS</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_TAXON_UNAMBIGUOUS</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -15702,6 +16862,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_TYPESTATUS_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_TYPESTATUS_STANDARD</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_TYPESTATUS_STANDARD</td>
 		</tr>
 	</tbody>
 </table>
@@ -15782,6 +16950,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_YEAR_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_YEAR_INRANGE</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_YEAR_INRANGE</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -15860,6 +17036,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_YEAR_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_YEAR_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MULTIRECORD_MEASURE_QA_YEAR_NOTEMPTY</td>
 		</tr>
 	</tbody>
 </table>
