@@ -347,7 +347,10 @@ for term in termLists:
                            text += '\t\t\t<td>{}</td>\n'.format(label)
                         else : 
                            text += '\t\t\t<td>{}</td>\n'.format(column)
-                        text += '\t\t\t<td>{}</td>\n'.format(row[column])
+                        if (column == 'AuthoritiesDefaults') and row[column] :
+                           text += '\t\t\t<td>`{}`</td>\n'.format(row[column])
+                        else :
+                           text += '\t\t\t<td>{}</td>\n'.format(row[column])
                         text += '\t\t</tr>\n'
 
             testType = row['Type']

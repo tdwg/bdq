@@ -128,7 +128,7 @@ def build_term_section(term, columns):
         value = str(term.get(col, '')).strip()
         if not value or value.lower() == 'nan':
             continue
-        if col not in ['term_iri', 'iri']:
+        if col not in ['term_iri', 'iri','AuthoritiesDefaults']:
             value = linkify_urls(value)
         ## not all column headers use the labels shown in the QRG key, so we need to map them
         # important two for inteligibility are:
