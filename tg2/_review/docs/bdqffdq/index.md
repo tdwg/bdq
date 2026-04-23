@@ -27,7 +27,7 @@ bdqffdq
 {previous_version_slot}
 
 **Abstract**<br>
-This document is a reference for the BDQ standard, linking to the Fitness for Use Framework ontology documents that cover its uses, its vocabulary, and its vocabulary extension.
+This document is a reference for the BDQ standard, linking to the Fitness For Use Framework ontology documents that cover its uses, its vocabulary, and its vocabulary extension.
 
 **Authors**<br>
 [Lee Belbin](https://orcid.org/0000-0001-8900-6203) ([Blatant Fabrications](https://www.wikidata.org/wiki/Q130304884)), [Arthur D. Chapman](https://orcid.org/0000-0003-1700-6962) ([Australian Biodiversity Information Services](http://www.wikidata.org/entity/Q100600913)), [Paul J. Morris](https://orcid.org/0000-0002-3673-444X) ([Museum of Comparative Zoology, Harvard University](http://www.wikidata.org/entity/Q1420782)), [John Wieczorek](https://orcid.org/0000-0003-1144-0290) (Rauthiflor LLC)
@@ -64,7 +64,7 @@ Draft Standard for Review
 
 ### 1.1 Purpose (non-normative)
 
-The purpose of this document is to facilitate naviation among the various documents related to the Biodiversity Data Quality Fitness for Use Framework (the "Framework"), and to provide an introduction to the formal ontology that underpins the BDQ standard. It serves as a landing page for the `bdqffdq:` vocabulary, which defines the core concepts and relationships used to represent data quality information in the context of biodiversity data, and points to the associated documents that provide normative guidance about the ontology, its terms, and its application.
+The purpose of this document is to facilitate naviation among the various documents related to the Biodiversity Data Quality Fitness For Use Framework (the "Framework"), and to provide an introduction to the formal ontology that underpins the BDQ standard. It serves as a landing page for the `bdqffdq:` vocabulary, which defines the core concepts and relationships used to represent data quality information in the context of biodiversity data, and points to the associated documents that provide normative guidance about the ontology, its terms, and its application.
 
 
 ### 1.2 Audience (non-normative)

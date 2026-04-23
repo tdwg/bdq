@@ -153,7 +153,7 @@ In any technical treatment of the BDQ standard, a precise reference to a class o
 
 ## 2 Context for Quality, Uses and Purposes (non-normative)
 
-Data do not have quality in the abstract; they only have quality with respect to a particular use. The Fitness for Use Framework (see [Fitness For Use Framework Ontology Guide](../bdqffdq/index.md)) in the BDQ standard describes uses for data as `Use Cases`.
+Data do not have quality in the abstract; they only have quality with respect to a particular use. The Fitness For Use Framework (see [Fitness For Use Framework Ontology Guide](../bdqffdq/index.md)) in the BDQ standard describes uses for data as `Use Cases`.
 
 A set of Tests appropriate to a`Use Case` is run on a set of data and a `Data Quality Report` is produced. Both the Tests and the associated report should be interpreted in the context of that `Use Case`.
 
@@ -175,7 +175,7 @@ BDQ does not prescribe how QA/QC workflows should operate; it standardizes Tests
 
 #### 2.1.1 Quality Assurance (non-normative)
 
-The Fitness for Use Framework (Veiga 2016, Veiga et al., 2017) provides a formal means for filtering records for [Quality Assurance](../../guide/bdqffdq/index.md#4447-quality-assurance-normative) (involving only Measures), but informally, data may be thought of as being fit for some use if all `Validation` Tests comprising that `Use Case` have a `Response.result`="COMPLIANT", and all non-numeric `Measure` Tests comprising that `Use Case` have a `Response.result`="COMPLETE". The BDQ Tests include a set of `Multi Record` `Measures` whose purpose is to enable formal filtering (Quality Assurance) and reporting (for Quality Control) under the [Fitness for Use Framework Ontology](../../guide/bdqffdq/index.md).
+The Fitness For Use Framework (Veiga 2016, Veiga et al., 2017) provides a formal means for filtering records for [Quality Assurance](../../guide/bdqffdq/index.md#4447-quality-assurance-normative) (involving only Measures), but informally, data may be thought of as being fit for some use if all `Validation` Tests comprising that `Use Case` have a `Response.result`="COMPLIANT", and all non-numeric `Measure` Tests comprising that `Use Case` have a `Response.result`="COMPLETE". The BDQ Tests include a set of `Multi Record` `Measures` whose purpose is to enable formal filtering (Quality Assurance) and reporting (for Quality Control) under the [Fitness For Use Framework Ontology](../../guide/bdqffdq/index.md).
 
 #### 2.1.2 Quality Control (non-normative)
 
@@ -212,7 +212,7 @@ The BDQ Tests are each very specific. Some Tests are very simple and self-explan
 
 ### 3.1 Test Types (non-normative)
 
-There are four types of Tests: `Validation`, `Issue`, `Measure`, and `Amendment`. Each Test is intended to examine just one specific aspect of data quality. Tests are assembled into Test suites (`Policies`) that assess the fitness of data for a specific use (`Use Case`).  In the Fitness for Use Framework, `Policies` are the formal mechanism for linking a `Use Case` to the relevant `Data Quality Need` instances (Tests).
+There are four types of Tests: `Validation`, `Issue`, `Measure`, and `Amendment`. Each Test is intended to examine just one specific aspect of data quality. Tests are assembled into Test suites (`Policies`) that assess the fitness of data for a specific use (`Use Case`).  In the Fitness For Use Framework, `Policies` are the formal mechanism for linking a `Use Case` to the relevant `Data Quality Need` instances (Tests).
 
 **`Validation` Tests** can be thought of as fact-checking. They compare the data against known standards or rules. `Validation` Tests examine the values of one or more [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) against a `Criterion` for quality. An example is [VALIDATION_COUNTRYCODE_STANDARD](../../terms/bdqtest/index.md#VALIDATION_COUNTRYCODE_STANDARD) where `dwc:countryCode` is checked against a `sourceAuthority` for validity.
 
@@ -244,7 +244,7 @@ The specifications for the structure of a response from running a Test can be fo
 
 A `Data Quality Report` from a BDQ Test is expected to include a `Response` for each Test run.   
 
-We use a shorthand to describe a collection of formal Fitness for Use Framework concepts: an instance of a subtype of `bdqffdq:Response` produced by running a Test, which carries a response status, result, comment and optional qualifier via the `bdqffdq:hasResponseStatus`, `bdqffdq:hasResponseResult`/`bdqffdq:hasResponseResultValue`, `bdqffdq:hasResponseComment`, and `bdqffdq:hasResponseQualifier` properties.
+We use a shorthand to describe a collection of formal Fitness For Use Framework concepts: an instance of a subtype of `bdqffdq:Response` produced by running a Test, which carries a response status, result, comment and optional qualifier via the `bdqffdq:hasResponseStatus`, `bdqffdq:hasResponseResult`/`bdqffdq:hasResponseResultValue`, `bdqffdq:hasResponseComment`, and `bdqffdq:hasResponseQualifier` properties.
 
 In this shorthand, each `Response` consists of the following elements:
 
@@ -301,7 +301,7 @@ Alternatively, if there is nothing in the `dwc:dataGeneralizations` field, i.e. 
 
 ##### 3.2.3.4 Measure Test Reports (non-normative)
 
-`Measure` Tests can be thought of as metrics. These Tests either return a numeric value (including counts), or assert that data evaluate as fit for some use (`COMPLETE`) or not fit for some use (`NOT_COMPLETE`). Almost all the `Measure` Tests defined in BDQ are `Multi Record` Tests that are powerful tools for formal support of `Quality Control` and `Quality Assurance` under the [Fitness for Use Framework Ontology](../../guide/bdqffdq/index.md).
+`Measure` Tests can be thought of as metrics. These Tests either return a numeric value (including counts), or assert that data evaluate as fit for some use (`COMPLETE`) or not fit for some use (`NOT_COMPLETE`). Almost all the `Measure` Tests defined in BDQ are `Multi Record` Tests that are powerful tools for formal support of `Quality Control` and `Quality Assurance` under the [Fitness For Use Framework Ontology](../../guide/bdqffdq/index.md).
 
 There is one `Single Record` `Measure` Test that provides a metric on a Darwin Core term in a `Single Record`, [MEASURE_EVENTDATE_DURATIONINSECONDS](../../terms/bdqtest/index.md#MEASURE_EVENTDATE_DURATIONINSECONDS).  This Test provides a measure of the duration in seconds of the `dwc:eventDate`.  This Test is intended to allow consumers of data quality reports to quickly identify records where, for example, a collecting event is known to a precision of about a day or less, or about a year or less, or any arbitrary time range that may be of interest to a particular use. 
 
@@ -317,7 +317,7 @@ MEASURE_EVENTDATE_DURATIONINSECONDS is an exemplar of a `Single Record` `Measure
 
 ###### 3.2.3.4.1 Measures Counting Results on Other Tests (non-normative)
 
-There are a small set of `Measures` that count the results of other Tests run on the same `SingleRecord`.  These `Single Record` `Measures` that take the output of other Tests as their input are intended as informative and do not have a formal purpose in the Fitness for Use Framework.  One of these is the Test `MEASURE_AMENDMENTS_PROPOSED`, it provides a count of the number of Amendment Tests that proposed changes to that record.  
+There are a small set of `Measures` that count the results of other Tests run on the same `SingleRecord`.  These `Single Record` `Measures` that take the output of other Tests as their input are intended as informative and do not have a formal purpose in the Fitness For Use Framework.  One of these is the Test `MEASURE_AMENDMENTS_PROPOSED`, it provides a count of the number of Amendment Tests that proposed changes to that record.  
 
 For example, if 17 Tests proposed amendments on a particular `SingleRecord`; the `Response` would be
 
@@ -325,7 +325,7 @@ For example, if 17 Tests proposed amendments on a particular `SingleRecord`; the
 * `Response.result`="17"
 * `Response.comment`="17 Tests of TYPE AMENDMENT proposed changes to the record"
 
-Most `Measure` Tests defined in BDQ are `Multi Record` Tests that take as input the results of `Single Record` Test on some data set and provide metrics or filters on those data.  These Tests are central to formal application of `Quality Control` and `Quality Assurance` in the Fitness for Use Framework. See the discussion in [Quality Control and Quality Assurance](#21-quality-control-and-quality-assurance-non-normative) above.
+Most `Measure` Tests defined in BDQ are `Multi Record` Tests that take as input the results of `Single Record` Test on some data set and provide metrics or filters on those data.  These Tests are central to formal application of `Quality Control` and `Quality Assurance` in the Fitness For Use Framework. See the discussion in [Quality Control and Quality Assurance](#21-quality-control-and-quality-assurance-non-normative) above.
 
 `Measures` may be: 
 - `Single Record` `Measures` that directly measure an `Information Element` value and return a metric (e.g., MEASURE_EVENTDATE_DURATIONINSECONDS), or that count the results of other Tests on the same `SingleRecord` (e.g., MEASURE_AMENDMENTS_PROPOSED).

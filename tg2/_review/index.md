@@ -137,7 +137,7 @@ The BDQ standard is intended for:
 
 For practitioners, researchers, collection managers, and data managers, the BDQ Tests (`bdqtest:`) provide a shared, community-defined set of Test definitions that can be selected and run as suites to evaluate fitness for use for particular specified uses of biodiversity data.
 
-For developers, standards developers, and knowledge engineers, the Fitness for Use Framework (`bdqffdq:`) and supporting vocabularies (e.g., `bdqval:`, `bdqdim:`, `bdqcrit:`, and `bdqenh:`) provide the common semantic model used to define Tests, identify their inputs (`Information Elements`), and represent their outputs (`Responses`) in a consistent and interoperable way.  No background in ontologies is required to understand or apply the Tests, though familiarity with RDF/OWL will be helpful for those working directly with the ontologies or exchanging `Data Quality Reports` as RDF.
+For developers, standards developers, and knowledge engineers, the Fitness For Use Framework (`bdqffdq:`) and supporting vocabularies (e.g., `bdqval:`, `bdqdim:`, `bdqcrit:`, and `bdqenh:`) provide the common semantic model used to define Tests, identify their inputs (`Information Elements`), and represent their outputs (`Responses`) in a consistent and interoperable way.  No background in ontologies is required to understand or apply the Tests, though familiarity with RDF/OWL will be helpful for those working directly with the ontologies or exchanging `Data Quality Reports` as RDF.
 
 ### 1.3 Contributing TDWG Interest and Task Groups (non-normative)
 
@@ -271,7 +271,7 @@ Readers can approach the standard in different ways depending on their needs. Th
       </td>
       <td valign="top">
 		:green_book:
-        <strong>Fitness for Use Framework (bdqffdq:) &amp; Concepts and Use</strong><br>
+        <strong>Fitness For Use Framework (bdqffdq:) &amp; Concepts and Use</strong><br>
         Normative concepts and logic describing data quality needs and layers, with an explanatory guide.
 		<a href="./docs/guide/bdqffdq/index.md">Fitness For Use Framework Ontology: Concepts and Use</a><br>
 		bdqffdq: <a href="./docs/list/bdqffdq/list/index.md">Term List</a><br>
@@ -371,7 +371,7 @@ The Quick Reference Guide is a simple, informative reference and the first place
 These documents provide overviews and normative guidance of the subjects they cover. The details of the individual terms are provided in the corresponding term list documents. 
 
 - [**BDQ Tests: Concepts Types, and Uses**](docs/guide/bdqtest/index.md) - Normative guidance and overview of the Tests.
-- [**Fitness For Use Framework Ontology: Concepts and Use**](docs/guide/bdqffdq/index.md) - Normative guidance and overview of the Fitness for Use Framework.
+- [**Fitness For Use Framework Ontology: Concepts and Use**](docs/guide/bdqffdq/index.md) - Normative guidance and overview of the Fitness For Use Framework.
 
 ### 3.3 Guides (non-normative)
 
@@ -386,8 +386,8 @@ The Guides are explanatory documents targeting particular perspectives on the st
 
 The Foundational Vocabularies cover the two main parts of the standard - the practical (the Tests) and the theoretical (the Framework).
 
-- [**Fitness for Use Framework Ontology List of Terms (bdqffdq:)**](docs/list/bdqffdq/index.md) - The definitions of terms in the bdqffdq: vocabulary.
-- [**Fitness for Use Framework Ontology Vocabulary Extension**](docs/extension/bdqffdq/index.md) - The axioms that extend the logic of the basic the bdqffdq: vocabulary.
+- [**Fitness For Use Framework Ontology List of Terms (bdqffdq:)**](docs/list/bdqffdq/index.md) - The definitions of terms in the bdqffdq: vocabulary.
+- [**Fitness For Use Framework Ontology Vocabulary Extension**](docs/extension/bdqffdq/index.md) - The axioms that extend the logic of the basic the bdqffdq: vocabulary.
 - [**BDQ Tests and Assertions List of Terms (bdqtest:)**](docs/list/bdqtest/index.md) - The complete list of terms that define the BDQ Tests.
 
 #### 3.4.2 Supporting Vocabularies (non-normative)
@@ -472,9 +472,9 @@ Test Confomance Testing Data are intended for implementers to use to evaluate wh
 
 #### 3.6.3 Fitness For Use Framework (non-normative)
 
-The Fitness for Use Framework is provided as an OWL ontology.
+The Fitness For Use Framework is provided as an OWL ontology.
 
-- [**Biodiversity Data Quality Fitness for Use Framework (Ontology)**](vocabulary/bdqffdq.owl)
+- [**Biodiversity Data Quality Fitness For Use Framework (Ontology)**](vocabulary/bdqffdq.owl)
 
 #### 3.6.4 RDF Serializations of Controlled Vocabularies (non-normative)
 
@@ -517,7 +517,7 @@ We recognize four people as authors of the standard, having contributed consiste
 
 - **Lee Belbin (Blatant Fabrications Pty Ltd)**: Convener of TDWG Data Quality Task Group 2 (Data Quality Tests and Assertions); Test descriptions; author of the BDQ standard documents; Test Conformance Testing Data.
 - **Arthur D Chapman (Australian Biodiversity Information Services)**: Co-convener of the TDWG Data Quality Interest Group; Test descriptions; author of the BDQ standard documents; vocabularies. 
-- **Paul J Morris (Museum of Comparative Zoology, Harvard University)**: Test descriptions; Fitness for Use Framework ontology; Java Test implementations in filteredpush packages; author of the BDQ standard documents; Test Conformance Testing Data. 
+- **Paul J Morris (Museum of Comparative Zoology, Harvard University)**: Test descriptions; Fitness For Use Framework ontology; Java Test implementations in filteredpush packages; author of the BDQ standard documents; Test Conformance Testing Data. 
 - **John Wieczorek (Rauthiflor LLC)**: Test descriptions; Test implementations; author of the BDQ standard documents; Darwin Core liaison.
 
 #### 6.2.2 Contributors (non-normative)
@@ -602,7 +602,7 @@ Glossary of terms used in the BDQ standard that are in addition to those include
 | geodetic coordinate reference system | A coordinate reference system based on a geodetic datum, used to describe positions on the surface of the earth (Chapman and Wieczorek 2020). | Test |
 | geodetic datum | A mathematical model that uses a reference ellipsoid to describe the size and shape of the surface of the earth and adds to it the information needed for the origin and orientation of coordinate systems on that surface (Chapman and Wieczorek 2000). | Test |
 | Formal Parameter | A placeholder defined in the function or method signature. It represents the input that the function expects. In the function f(x) = x^2, x is a formal parameter of the function f. In VALIDATION_GENUS_FOUND, bdqval:sourceAuthority is a formal parameter. | bdqffdq: |
-| Framework | The Fitness for Use Framework, the body of work that provides a fundamental structure for the BDQ Tests. The Fitness for Use Framework is derived from (Veiga 2016) and is the outcome of the TDWG Data Quality Task Group 1: Framework on Data Quality (Veiga et al. 2017). | bdqffdq: |
+| Framework | The Fitness For Use Framework, the body of work that provides a fundamental structure for the BDQ Tests. The Fitness For Use Framework is derived from (Veiga 2016) and is the outcome of the TDWG Data Quality Task Group 1: Framework on Data Quality (Veiga et al. 2017). | bdqffdq: |
 | Framework Ontology | A model of the Framework (Veiga 2016, Veiga et al. 2017) as an OWL ontology, present as the bdqffdq: vocabulary in the BDQ standard. | bdqffdq: |
 | GEOGRAPHY | A general category of specific bdqval:InformationElements that represents a combination of Darwin Core administrative geography terms dwc:continent, dwc:country, dwc:countryCode, dwc:stateProvince, dwc:county, dwc:municipality. | bdqffdq:InformationElement |
 | Java | Java is a registered trademark of Oracle and/or its affiliates. | BDQ standard |

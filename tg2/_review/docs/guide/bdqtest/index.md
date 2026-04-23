@@ -192,7 +192,7 @@ In any technical treatment of the BDQ standard, a precise reference to a class o
 
 ## 2 A Brief Context for the BDQ Tests (non-normative)
 
-The terminology of BDQ is based primarily on the Fitness for Use Framework (Veiga 2016, Veiga et al. 2017, Biodiversity Information Standards (TDWG) Task Group 1) expressed as an ontology, but additional vocabularies are required for a complete description of the Tests and how to use them. See [3.4 Vocabularies](../../../index.md#34-vocabularies-non-normative) in [The Biodiversity Data Quality (BDQ) Standard](../../../index.md).
+The terminology of BDQ is based primarily on the Fitness For Use Framework (Veiga 2016, Veiga et al. 2017, Biodiversity Information Standards (TDWG) Task Group 1) expressed as an ontology, but additional vocabularies are required for a complete description of the Tests and how to use them. See [3.4 Vocabularies](../../../index.md#34-vocabularies-non-normative) in [The Biodiversity Data Quality (BDQ) Standard](../../../index.md).
 
 BDQ Tests initially focus on values of a subset of [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) composed as `bdqffdq:InformationElements` as inputs (along with optional `Parameters`) to the Tests.  Tests have defined outputs expressed as `Responses` and specifications of what input values should produce what `Responses`.  Each Test is independent, to support the mixing and matching of Tests to meet particular data quality needs and not impose a particular model of Test execution on implementation frameworks. Tests may execute in parallel, on data records in sequence, as queries on datasets and on unique values. Tests are paired in that all `Amendment` Tests are matched with a corresponding `Validation` Test that assesses some aspect of data quality. An `Amendment` Test may propose improvements to term values, but the BDQ standard recommends that all proposed improvements be evaluated before application.
 
@@ -304,7 +304,7 @@ In each case, a `Response.comment` MUST be present with text explaining to consu
 
 Tests may operate on a `Single Record` (e.g., one row of [Simple Darwin Core](https://dwc.tdwg.org/simple/)) or on a `Multi Record` (a dataset).
 
-The BDQ [Fitness for Use Framework](../bdqffdq/index.md) allows for Tests of all types to operate on either (`bdqffdq:hasResourceType`) `Single Record` or `Multi Record`. In the BDQ standard, the only `Multi Record` Tests that have been defined are `Measures`. We refer to these as `Multi Record` `Measures` (instances of `bdqffdq:Measure` that are the subject of a `bdqffdq:hasResourceType` property whose object is `bdqffdq:MultiRecord`).
+The BDQ [Fitness For Use Framework](../bdqffdq/index.md) allows for Tests of all types to operate on either (`bdqffdq:hasResourceType`) `Single Record` or `Multi Record`. In the BDQ standard, the only `Multi Record` Tests that have been defined are `Measures`. We refer to these as `Multi Record` `Measures` (instances of `bdqffdq:Measure` that are the subject of a `bdqffdq:hasResourceType` property whose object is `bdqffdq:MultiRecord`).
 
 The focus of the BDQ Tests are the `Single Record` Tests. To allow for standard means for summarizing the results of these Tests, and for filtering data under Quality Assurance, we have also defined two sets of `Multi Record` `Measures`.
 
@@ -488,7 +488,7 @@ Expanding on this single validation step, amendments can be run and their result
 
 ### 6 Example RDF description of a Test (non-normative) 
 
-A complete description of BDQ Tests can be found in the RDF representation of this vocabulary. Following the Fitness for Use Framework Ontology (`bdqffdq:`), a Test is composed of an instance of a subclass of a `bdqffdq:DataQualityNeed` (e.g., `bdqffdq:Validation`), an instance of a `bdqffdq:ActedUpon` `Information Element`, optionally an instance of a `bdqffdq:Consulted` `Information Element`, an instance of a subclass of `bdqffdq:Method` (e.g., `bdqffdq:ValidationMethod`), and an instance of a `bdqffdq:Specification`. Most of the information associated with a `bdqtest:` term is expressed in other vocabularies, in particular `bdqffdq:`. This structure and dependence on other vocabularies can be seen in the formal example description of [VALIDATION_COUNTRYCODE_STANDARD](../../terms/bdqtest/index.md#VALIDATION_COUNTRYCODE_STANDARD), below.
+A complete description of BDQ Tests can be found in the RDF representation of this vocabulary. Following the Fitness For Use Framework Ontology (`bdqffdq:`), a Test is composed of an instance of a subclass of a `bdqffdq:DataQualityNeed` (e.g., `bdqffdq:Validation`), an instance of a `bdqffdq:ActedUpon` `Information Element`, optionally an instance of a `bdqffdq:Consulted` `Information Element`, an instance of a subclass of `bdqffdq:Method` (e.g., `bdqffdq:ValidationMethod`), and an instance of a `bdqffdq:Specification`. Most of the information associated with a `bdqtest:` term is expressed in other vocabularies, in particular `bdqffdq:`. This structure and dependence on other vocabularies can be seen in the formal example description of [VALIDATION_COUNTRYCODE_STANDARD](../../terms/bdqtest/index.md#VALIDATION_COUNTRYCODE_STANDARD), below.
 
     <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe-2025-03-07">
         <dcterms:bibliographicCitation>ISO (n.dat.) ISO 3166 Country Codes. https://www.iso.org/iso-3166-country-codes.html; ISO (n.dat) 3166-1 alpha-2. https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2; DataHub (2018) List of all countries with their two digit codes (ISO 3166-1). https://datahub.io/core/country-list; Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</dcterms:bibliographicCitation>
@@ -567,7 +567,7 @@ To propose to add a Test to the BDQ Standard, follow the instructions provided b
 
 ## 8 Creating New Use Cases (non-normative)
 
-BDQ is based on `Use Cases`: An evaluation of data quality must be within the context of a `Use Case`.  In the Fitness for Use Framework, `Use Cases` are needs-layer concepts.
+BDQ is based on `Use Cases`: An evaluation of data quality must be within the context of a `Use Case`.  In the Fitness For Use Framework, `Use Cases` are needs-layer concepts.
 A `Use Case` is linked to sets of relevant Tests through `Policies` (e.g., `ValidationPolicy`, `IssuePolicy`, `MeasurementPolicy`, and `AmendmentPolicy`). Together, these `Policies` identify which Tests should be run for a given `Use Case` and, therefore, which `Responses` about data quality are expected from running that set of Tests.
 
 Five over-arching `Use Cases` have been used in the BDQ Standard. These were developed through the TDWG Biodiversity Data Quality Interest Group Task Group 3: Data Quality Use Cases (Rees and Nicholls, 2020). These, of course, are only a small subset of all possible `Use Cases` and users may wish to develop `Use Cases` for their own purposes.

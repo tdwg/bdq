@@ -55,10 +55,10 @@ These `Dimensions` serve as a semantic anchor for describing the intent of Tests
 This document is intended for users who need a technical understanding of how BDQ Tests relate to conceptual `Dimensions` of data quality. It will be especially useful for:
 
 - Implementers who need to map Tests to `Dimensions` in automated systems
-- Standards developers and data quality modelers applying the Fitness for Use Framework Ontology
+- Standards developers and data quality modelers applying the Fitness For Use Framework Ontology
 - Analysts and curators needing to understand the conceptual basis for different Tests’ evaluation
 
-A working familiarity with the BDQ Test structure and the Fitness for Use Framework Ontology is helpful, though not required to benefit from this document.
+A working familiarity with the BDQ Test structure and the Fitness For Use Framework Ontology is helpful, though not required to benefit from this document.
 
 ### 1.3 Data Quality Dimensions (non-normative)
 

@@ -55,10 +55,10 @@ These terms are central to describing the logic of BDQ `Validation` and `Issue` 
 This document is intended for users who need a technical understanding of how BDQ Tests apply evaluation logic through the use of `Criteria`. It is especially useful for:
 
 - Implementers interpreting or building Tests that rely on data quality criteria
-- Standards developers and data quality modelers applying the Fitness for Use Framework Ontology
+- Standards developers and data quality modelers applying the Fitness For Use Framework Ontology
 - Analysts and curators needing to understand the conceptual basis for Test evaluations
 
-A working familiarity with the BDQ Test structure and the Fitness for Use Framework Ontology is helpful, though not required to benefit from this document.
+A working familiarity with the BDQ Test structure and the Fitness For Use Framework Ontology is helpful, though not required to benefit from this document.
 
 ### 1.3 Data Quality Criteria (non-normative)
 

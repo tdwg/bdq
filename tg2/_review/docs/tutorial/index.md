@@ -135,13 +135,13 @@ Draft Standard for Review
 
 ### 1.1 Purpose (non-normative)
 
-This document provides, in the form of a tutorial, an overview of the concepts, reasoning, technical justifications, and logical choices behind the creation of a new Biodiversity Data Quality (BDQ) Test.  It can be used to understand the components of the BDQ standard and to guide users and implementers in describing new Tests using the BDQ Fitness for Use Framework.  It is also intended to assist the proposed BDQ Maintenance Group in evaluating proposals for new Tests and edits to existing Tests.
+This document provides, in the form of a tutorial, an overview of the concepts, reasoning, technical justifications, and logical choices behind the creation of a new Biodiversity Data Quality (BDQ) Test.  It can be used to understand the components of the BDQ standard and to guide users and implementers in describing new Tests using the BDQ Fitness For Use Framework.  It is also intended to assist the proposed BDQ Maintenance Group in evaluating proposals for new Tests and edits to existing Tests.
 
 ### 1.2 Audience (non-normative)
 
 This document is intended for users and implementers seeking to understand the components of the BDQ standard through examining the reasoning and technical justifications behind the creation of a new BDQ Test. 
 
-This document is also intended for those interested in describing new Tests using the BDQ Fitness for Use Framework.
+This document is also intended for those interested in describing new Tests using the BDQ Fitness For Use Framework.
 
 ### 1.3 Associated Documents (non-normative)
 
@@ -240,7 +240,7 @@ See also:
 
 **Purpose:** Determine which fields (mapped to vocabulary terms such as Darwin Core terms) are in the data and are relevant to your use case.
 
-In the Fitness for Use Framework, input fields or terms for a Test are generalized as `Information Elements`.  
+In the Fitness For Use Framework, input fields or terms for a Test are generalized as `Information Elements`.  
 
 We can expand each of the bullet points in the hasFitnessRequirements statement into a set of terms that are likely to map onto the data.  We may understand these well at the start, but as we work with real data and implement Tests, we will very likely need to refine this list.
 
@@ -1135,7 +1135,7 @@ The Fitness For Use Framework is designed to support two different but related p
 
 Implicit in our `Use Case`, and we will want to spell this out explicitly (again, iterate), is that, in this **Validated Distribution Authority** `Use Case`, we want to use the results of Tests to find and fix errors in a dataset, thus improving the quality of the dataset for this purpose, that is, our `Use Case` is focused on `Quality Control`. 
 
-The formal mechanism that the Fitness for Use Framework provides to support both `Quality Control` and `Quality Assurance` is the use of `MultiRecord` `Measures`.  These `MultiRecord` `Measures`  take as input the output results from `SingleRecord` Tests over multiple records, and combine those results in some way to produce a measure of the quality of the dataset as a whole for some purpose.  For example, we could have a `MultiRecord` `Measure` that takes the results of the VALIDATION_FOOTPRINTWKT_NOTEMPTY Test for all records in a dataset, and counts the number of records that are NOT_COMPLIANT with that Test, combining this count with the number of records in the dataset gives us a measure of how many records are missing values in the `dwc:footprintWKT` field in that dataset.  
+The formal mechanism that the Fitness For Use Framework provides to support both `Quality Control` and `Quality Assurance` is the use of `MultiRecord` `Measures`.  These `MultiRecord` `Measures`  take as input the output results from `SingleRecord` Tests over multiple records, and combine those results in some way to produce a measure of the quality of the dataset as a whole for some purpose.  For example, we could have a `MultiRecord` `Measure` that takes the results of the VALIDATION_FOOTPRINTWKT_NOTEMPTY Test for all records in a dataset, and counts the number of records that are NOT_COMPLIANT with that Test, combining this count with the number of records in the dataset gives us a measure of how many records are missing values in the `dwc:footprintWKT` field in that dataset.  
 
 Both `Quality Control` and `Quality Assurance` rely on an examination of the results of `SingleRecord` Tests, but they use those results in different ways.
 
@@ -1154,11 +1154,11 @@ See also:
 
 ### 8.1 MultiRecord Measures for Quality Control (non-normative)
 
-The `Use Case` we have been working with in this tutorial is focused on `Quality Control` (we want to fix problems in a dataset of distributions that would itself be used to evaluate other datasets), so we will examine how the Fitness for Use Framework supports using the results of `SingleRecord` Tests for that purpose.
+The `Use Case` we have been working with in this tutorial is focused on `Quality Control` (we want to fix problems in a dataset of distributions that would itself be used to evaluate other datasets), so we will examine how the Fitness For Use Framework supports using the results of `SingleRecord` Tests for that purpose.
 
 This tutorial has focused on defining `SingleRecord` Tests (primarily `Validations`) that evaluate one record at a time. In practice, `Quality Control` almost always requires a dataset-level view: curators, data managers, and developers need to know **how prevalent** a particular problem is, **where** it occurs, and **whether** proposed changes would measurably improve fitness for a `Use Case`.
 
-In the BDQ Fitness for Use Framework, that dataset-level view is provided by `MultiRecord` `Measures` (`bdqffdq:Measure` with resource type `bdqffdq:MultiRecord`). These `Measures` operate over the collection of `Responses` produced by running one or more `SingleRecord` Tests across all records in a dataset, and they return a **single summary value** in `Response.result` (either a single number, or one of `COMPLETE`/`NOT_COMPLETE`).
+In the BDQ Fitness For Use Framework, that dataset-level view is provided by `MultiRecord` `Measures` (`bdqffdq:Measure` with resource type `bdqffdq:MultiRecord`). These `Measures` operate over the collection of `Responses` produced by running one or more `SingleRecord` Tests across all records in a dataset, and they return a **single summary value** in `Response.result` (either a single number, or one of `COMPLETE`/`NOT_COMPLETE`).
 
 Before we focus on `MultiRecord` `Measures`, it is helpful to distinguish three common patterns of `Measures` in BDQ:
 
@@ -1218,7 +1218,7 @@ See also: [Phases: Pre-Amendment, Amendment, Post-Amendment](../guide/implemente
 
 #### 8.1.3.1 Contrast with Quality Assurance.
 
-In contrast, in `Quality Assurance`, the focus is on filtering records based on `SingleRecord` Test outcomes.  The mechanism for this in the Fitness for Use Framework is to define a `MultiRecord` `Measure` that returns `COMPLETE` if the dataset meets a dataset-level requirement derived from `SingleRecord` Test outcomes, and `NOT_COMPLETE` otherwise, and if `NOT_COMPLETE`.  This `MultiRecord` `Measure` can be used as a completeness condition.  A `Quality Assurance` workflow may filter records until the remaining dataset satisfies that condition (the `Measure` returns `COMPLETE`).  When all the `MultiRecord` `Measures` of this sort for a `Use Case` (as specified by `Policy`) are `COMPLETE`, the (filtered) dataset is fit for use with respect to the selected `Use Case`.  Alternately, remediation could be applied (as in applying `Amendments` to fix problems identified by `Validations`) and filtering such that the `MultiRecord` `Measures` return `COMPLETE`, at which point the dataset is fit for use with respect to the selected `Use Case`.  BDQ does not specify a workflow, it fundamentally supports the representation of completeness conditions via `MultiRecord` `Measures`, and it is up to implementers to decide how to use those `Measures` in a workflow, whether for `Quality Control` or `Quality Assurance`.  BDQ defines how to represent `Quality Assurance` conditions and outcomes. A filtering or remediation strategy is outside the scope of BDQ and would be up to an implementation.
+In contrast, in `Quality Assurance`, the focus is on filtering records based on `SingleRecord` Test outcomes.  The mechanism for this in the Fitness For Use Framework is to define a `MultiRecord` `Measure` that returns `COMPLETE` if the dataset meets a dataset-level requirement derived from `SingleRecord` Test outcomes, and `NOT_COMPLETE` otherwise, and if `NOT_COMPLETE`.  This `MultiRecord` `Measure` can be used as a completeness condition.  A `Quality Assurance` workflow may filter records until the remaining dataset satisfies that condition (the `Measure` returns `COMPLETE`).  When all the `MultiRecord` `Measures` of this sort for a `Use Case` (as specified by `Policy`) are `COMPLETE`, the (filtered) dataset is fit for use with respect to the selected `Use Case`.  Alternately, remediation could be applied (as in applying `Amendments` to fix problems identified by `Validations`) and filtering such that the `MultiRecord` `Measures` return `COMPLETE`, at which point the dataset is fit for use with respect to the selected `Use Case`.  BDQ does not specify a workflow, it fundamentally supports the representation of completeness conditions via `MultiRecord` `Measures`, and it is up to implementers to decide how to use those `Measures` in a workflow, whether for `Quality Control` or `Quality Assurance`.  BDQ defines how to represent `Quality Assurance` conditions and outcomes. A filtering or remediation strategy is outside the scope of BDQ and would be up to an implementation.
 
 A related pattern occurs at the `SingleRecord` level: when fitness depends on a user-defined analytical threshold rather than a single universal rule, a `SingleRecord` `Measure` may return a numeric metric that consumers interpret relative to their `Use Case`. For example, [MEASURE_EVENTDATE_DURATIONINSECONDS](../terms/bdqtest/index.md#MEASURE_EVENTDATE_DURATIONINSECONDS) returns the duration (in seconds) of the time interval represented by `dwc:eventDate`; consumers can then apply a threshold (e.g., “duration ≤ 86401 seconds” for day-level precision) to decide whether an individual `SingleRecord` has sufficient temporal precision for their `Use Case`.
 
@@ -1350,7 +1350,7 @@ Quality Control actions should be followed by re-running the same Test suite (an
 - Improvements did not create new failures elsewhere.
 - Quality has improved with respect to the selected `Use Case`.
 
-This “run → analyze patterns → fix causes → re-run” loop is a Quality Control workflow pattern supported by the BDQ Tests and the Fitness for Use Framework.
+This “run → analyze patterns → fix causes → re-run” loop is a Quality Control workflow pattern supported by the BDQ Tests and the Fitness For Use Framework.
 
 #### 8.2.6 Example Quality Control Workflow Validated Distribution Authority Use Case
 
@@ -1387,13 +1387,13 @@ The 6% of records with invalid `dwc:footprintWKT` likely need to be addressed by
 
 Thus, these measure results not only provide a picture of the quality of the dataset, but also provide a starting point for a roadmap for how to improve the quality of the dataset for the `Use Case` of being a "validated distribution authority" for biodiversity science, with different types of problems that require different types of expertise to fix, and different types of fixes, some of which can be automated at scale, others of which will require manual evaluation.
 
-Once these problems are fixed, we can re-run the same Test suite to confirm that the fixes had the intended effect, and to confirm that the quality of the dataset has improved with respect to the selected `Use Case`.  We can also track improvement over time by comparing the results of these `MultiRecord` `Measures` before and after the fixes.  This iterative process of running Tests, interpreting results, fixing problems, and re-running Tests is a common `Quality Control` workflow pattern supported by the BDQ Tests and the Fitness for Use Framework.  
+Once these problems are fixed, we can re-run the same Test suite to confirm that the fixes had the intended effect, and to confirm that the quality of the dataset has improved with respect to the selected `Use Case`.  We can also track improvement over time by comparing the results of these `MultiRecord` `Measures` before and after the fixes.  This iterative process of running Tests, interpreting results, fixing problems, and re-running Tests is a common `Quality Control` workflow pattern supported by the BDQ Tests and the Fitness For Use Framework.  
 
 When all the problems have been fixed and the entire dataset is fit for this `Use Case`, the MULTIRECORD_MEASURE_QA_VALIDATIONPOLICY_COMPLIANT will return COMPLETE, and the dataset will be fit for use as a "validated distribution authority" for biodiversity science.
 
 ### 8.3 Quality Assurance Workflow (non-normative)
 
-`Quality Assurance` is about filtering a dataset down to a subset of records that are fit for some purpose.  The mechanism to support this provided by the Fitness for Use Framework is the use of a set of `MultiRecord` `Measures` that return `COMPLETE` if the dataset meets a dataset-level requirement derived from `SingleRecord` Test outcomes, and `NOT_COMPLETE` otherwise.  Then, if some set of `Measures` in the `MeasurementPolicy` of the `Use Case` are `NOT_COMPLETE`, data may be filtered out of the dataset based on underlying `Validation` problems (or remediated with `Amendment` results) such that the  `Measures` all return `COMPLETE`.   When all the `MultiRecord` `Measures` of this sort for a `Use Case` (as specified by `Policy`) are `COMPLETE`, the filtered dataset is fit for use with respect to the selected `Use Case`.   
+`Quality Assurance` is about filtering a dataset down to a subset of records that are fit for some purpose.  The mechanism to support this provided by the Fitness For Use Framework is the use of a set of `MultiRecord` `Measures` that return `COMPLETE` if the dataset meets a dataset-level requirement derived from `SingleRecord` Test outcomes, and `NOT_COMPLETE` otherwise.  Then, if some set of `Measures` in the `MeasurementPolicy` of the `Use Case` are `NOT_COMPLETE`, data may be filtered out of the dataset based on underlying `Validation` problems (or remediated with `Amendment` results) such that the  `Measures` all return `COMPLETE`.   When all the `MultiRecord` `Measures` of this sort for a `Use Case` (as specified by `Policy`) are `COMPLETE`, the filtered dataset is fit for use with respect to the selected `Use Case`.   
 
 BDQ does not constrain how workflows may perform `Quality Assurance`, but it does provide a standard means for defining dataset-level requirements where `SingleRecord` Test outcomes, potentially modified by adopting proposals for improving the fitness of data from `Amendments` can be aggregated and measured for formal filtering of the data (using the `MultiRecord` `Measures`) to provide formal  `Quality Assurance` of a dataset for a `Use Case`.
 

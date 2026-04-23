@@ -242,7 +242,7 @@ Draft Standard for Review
 
 ### 1.1 Purpose (non-normative)
 
-The purpose of this document is to present the formal ontology of the Biodiversity Data Quality Fitness for Use Framework (the Framework), represented by the `bdqffdq:` vocabulary. This ontology defines the classes, properties, and relationships used to express data quality concepts in a structured and interoperable way, emphasizing that data quality is always relative to a particular purpose (`Use Case`) and the specific `Information Elements` and expectations that apply to that use.
+The purpose of this document is to present the formal ontology of the Biodiversity Data Quality Fitness For Use Framework (the Framework), represented by the `bdqffdq:` vocabulary. This ontology defines the classes, properties, and relationships used to express data quality concepts in a structured and interoperable way, emphasizing that data quality is always relative to a particular purpose (`Use Case`) and the specific `Information Elements` and expectations that apply to that use.
 
 This document combines two complementary roles. First, it provides a practical, explanatory guide to understanding the Framework concepts and how they support the structure and semantics of BDQ Tests, with context and illustrative examples for interpretation and implementation. Second, it serves as the normative companion for use of the ontology: it consolidates the normative guidance on how `bdqffdq:` terms are intended to be used together in RDF/OWL (and, where relevant, in non-RDF representations), including guidance that reflects the open world assumptions of RDF/OWL modeling.
 
@@ -310,15 +310,15 @@ In any technical treatment of the BDQ standard, a precise reference to a class o
 
 ### 2.1 Introduction and Context (non-normative)
 
-The `bdqffdq:` portion of the BDQ standard is a specification for a framework for describing data quality. This Fitness for Use Framework (often referred to simply as "The Framework") is based on a mathematical formulation, using set theory (Veiga, 2016), and is represented as an OWL ontology. This document describes the organization and use of the OWL ontology.
+The `bdqffdq:` portion of the BDQ standard is a specification for a framework for describing data quality. This Fitness For Use Framework (often referred to simply as "The Framework") is based on a mathematical formulation, using set theory (Veiga, 2016), and is represented as an OWL ontology. This document describes the organization and use of the OWL ontology.
 
-This document provides a background for understanding the `bdqtest:` Test descriptions. Each of the Tests in the `bdqtest:` namespace have been designed and described within this Framework and are framed using the terms and concepts from the Framework. The Fitness for Use Framework provides the context for each Test, and has shaped decisions made about each Test.
+This document provides a background for understanding the `bdqtest:` Test descriptions. Each of the Tests in the `bdqtest:` namespace have been designed and described within this Framework and are framed using the terms and concepts from the Framework. The Fitness For Use Framework provides the context for each Test, and has shaped decisions made about each Test.
 
-This document provides a concise description and normative information about the `bdqffdq:` ontology and a summary of the mathematical formalization. See the [Fitness For Use Framework Ontology List of Terms](../../list/bdqffdq/index.md) document for the list of terms in the `bdqffdq:` vocabulary. See the [Fitness For Use Framework Ontology Vocabulary Extension](../../extension/bdqffdq/index.md) for documentation on additional axioms. See the [Biodiversity Data Quality Fitness for Use Framework (Ontology)](../../../vocabulary/bdqffdq.owl) for the formal representation of the vocabulary as an OWL ontology. The mathematical formalization provides a description of inferences and reasoning that may be made with the terms in the vocabulary.
+This document provides a concise description and normative information about the `bdqffdq:` ontology and a summary of the mathematical formalization. See the [Fitness For Use Framework Ontology List of Terms](../../list/bdqffdq/index.md) document for the list of terms in the `bdqffdq:` vocabulary. See the [Fitness For Use Framework Ontology Vocabulary Extension](../../extension/bdqffdq/index.md) for documentation on additional axioms. See the [Biodiversity Data Quality Fitness For Use Framework (Ontology)](../../../vocabulary/bdqffdq.owl) for the formal representation of the vocabulary as an OWL ontology. The mathematical formalization provides a description of inferences and reasoning that may be made with the terms in the vocabulary.
 
 ### 2.2 Description of the Fitness For Use Framework ontology (non-normative)
 
-The Fitness for Use Framework defines data quality in relation to a specified use, emphasizing that data quality is not abstract but purpose-dependent. It provides a formal way to describe a `Use Case` (`bdqffdq:UseCase`) and the criteria for evaluating whether a dataset is fit for that purpose. By linking data quality explicitly to use, the Framework enables consistent assessment and assurance of fitness for a given purpose.
+The Fitness For Use Framework defines data quality in relation to a specified use, emphasizing that data quality is not abstract but purpose-dependent. It provides a formal way to describe a `Use Case` (`bdqffdq:UseCase`) and the criteria for evaluating whether a dataset is fit for that purpose. By linking data quality explicitly to use, the Framework enables consistent assessment and assurance of fitness for a given purpose.
 
 The Framework can be conceptually divided into three horizontal layers: `Data Quality Needs`, `Data Quality Solutions`, and `Data Quality Reports`. Needs describe what it means for data to have quality for some use, Solutions describe tools to evaluate quality, and Reports are produced by Solutions to describe the evaluation of quality in particular datasets.
 
@@ -396,12 +396,12 @@ For **Quality Control**, `Multi Record` `Measures` can return numeric summaries 
 ![Diagram of ValidationResponse, IssueResponse, MeasureResponse and AmendmentResponse classes as subtypes of the Response class with ReportConcept as its parent.](assertions.png)
 *The 4 `Response` types in the Framework - `ValidationResponse`, `IssueResponse`, `MeasureResponse` and `AmendmentResponse`.*
 
-Diagram of the composition of `Validation`, `Validation Method`, and `Validation Response` illustrating the `Data Quality Needs`, `Solutions`, and `Reports` layers of the Fitness for Use Framework, with the responsibilities of `bdqtest:` (solid lines), and implementations (dashed lines).
+Diagram of the composition of `Validation`, `Validation Method`, and `Validation Response` illustrating the `Data Quality Needs`, `Solutions`, and `Reports` layers of the Fitness For Use Framework, with the responsibilities of `bdqtest:` (solid lines), and implementations (dashed lines).
 
 ![Diagram of Validation, ValidationMethod, and ValidationResponse with related classes](bdqffdq_data_quality_needs_solutions_report_validation.svg)
 *Validation concepts in the Needs, Solutions, and Reports levels.*
 
-A useful way to think of the Framework is to divide it horizontally into Needs, Solutions, and Reports layers, and then track the Test concepts vertically through each layer (see [Figure 3](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0178731#pone-0178731-g003) in Veiga et al., 2017). Below is a diagram that brings together the horizontal Needs, Solutions, and Reports layers with the vertical Test concepts (`Validations`, `Issues`, `Measures` and `Amendments`), with `Validation`-related concepts expanded to show all related entities in the Fitness for Use Framework.
+A useful way to think of the Framework is to divide it horizontally into Needs, Solutions, and Reports layers, and then track the Test concepts vertically through each layer (see [Figure 3](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0178731#pone-0178731-g003) in Veiga et al., 2017). Below is a diagram that brings together the horizontal Needs, Solutions, and Reports layers with the vertical Test concepts (`Validations`, `Issues`, `Measures` and `Amendments`), with `Validation`-related concepts expanded to show all related entities in the Fitness For Use Framework.
 
 ![Diagram Illustrating both the horizontal (Needs/Solutions/Reports) layers and the vertical Test concepts (Validations, Issues, Measures and Amendments)](bdqffdq_data_quality_layers.svg)
 *All four Tests concepts in the Needs Solutions, and Reports levels.*
@@ -454,7 +454,7 @@ A bdqffdq:hasResponseStatus is always categorical, a bdqffdq:hasResponseComment 
 
 ### 2.5 Organization of the bdqtest: classes  (non-normative)
 
-Following is a knowledge graph showing the is-a relationships between the classes in the Fitness for Use Framework:
+Following is a knowledge graph showing the is-a relationships between the classes in the Fitness For Use Framework:
 
 ![Diagram of the is-a class relationships of bdqffdq:, as a tree expanding left to right, with the root owl:Thing node not shown.](bdqffdq_class_diagram.png)
 *Diagram showing the relationships among the bdqffdq: classes.*
@@ -561,7 +561,7 @@ The (non-normative) diagram below illustrating `Validation` related concepts acr
 The use of classes and properties in [bdqtest:](../../../dist/bdqtest.ttl) follow the guidance provided in this section.  The`Data Quality Needs` (blue here) and `DataQualitySolutions` (green here) concepts in this diagram illustrate how this guidance is used in `bdqtest:` to relate the set of terms used to define a `Validation`.  The `DataQualityReports` (tan here) concepts in the diagram illustrate how a `ValidationResponse` in a `DataQualityReport` can be related to a `Validation` and its `Specification`.  The minimal use of rdfs:range and other global axioms in `bdqffdq:` aligns with best practices for ontologies intended for reuse, integration, and extension.  This approach trades strict, machine-enforceable validation and inference for flexibility, extensibility, and a low barrier to adoption.  The normative guidance in this document mitigates the risk of inconsistent usage that is allowed by the open world design of `bdqffdq:`.
 
 
-This section describes normative expectations for the use of object and datatype properties to related instances of `bdqffdq:` classes in their intended ways given the open world limited use of domains, ranges, and other axioms in the [Biodiversity Data Quality Fitness for Use Framework (Ontology)](../../../vocabulary/bdqffdq.owl) ontology. This guidance builds on the normative definitions of `bdqffdq:` object properties and datatype properties to describe how `bdqffdq:` terms can be composed in a useful and consistent way.
+This section describes normative expectations for the use of object and datatype properties to related instances of `bdqffdq:` classes in their intended ways given the open world limited use of domains, ranges, and other axioms in the [Biodiversity Data Quality Fitness For Use Framework (Ontology)](../../../vocabulary/bdqffdq.owl) ontology. This guidance builds on the normative definitions of `bdqffdq:` object properties and datatype properties to describe how `bdqffdq:` terms can be composed in a useful and consistent way.
 
 Section [3.2 Identifying the Test that produced a Response (normative)](#32-identifying-the-test-that-produced-a-response-normative) highlights the importance of using the object properties with the correct cardinality to preserve the relationship between a `Response` produced by a Test and the particular Test that produced it.
 
@@ -795,9 +795,9 @@ Where, in this query, the text {id of assertion to look up} is a placeholder to 
 
 ### 3.3.1 Cardinality of bdqffdq: terms (non-normative)
 
-The non-normative expectations expressed in this section are based on the mathematical formalization of the Fitness for Use Framework, and are intended to expand upon the normative statements above to provide additional explanatory guidance on how class instances in `bdqffdq:` are expected to be related to each other through properties, failure to follow these expectations may result in an inability to use the Framework effectively.
+The non-normative expectations expressed in this section are based on the mathematical formalization of the Fitness For Use Framework, and are intended to expand upon the normative statements above to provide additional explanatory guidance on how class instances in `bdqffdq:` are expected to be related to each other through properties, failure to follow these expectations may result in an inability to use the Framework effectively.
 
-The expected relationships between classes in the Fitness for Use Framework can be expressed as cardinality statements. Selected cardinality statements are given here to provide additional explanatory guidance on how class instances in `bdqffdq:` are expected to be related to each other through object properties. Examples here are given for terms related to `Validations`.
+The expected relationships between classes in the Fitness For Use Framework can be expressed as cardinality statements. Selected cardinality statements are given here to provide additional explanatory guidance on how class instances in `bdqffdq:` are expected to be related to each other through object properties. Examples here are given for terms related to `Validations`.
 
 A `Policy` is an associative entity relating a `Use Case` to a `Data Quality Need`.
 

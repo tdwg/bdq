@@ -401,7 +401,7 @@ In `bdqffdq:Validation` Tests that require the lookup of a `bdqval:sourceAuthori
 
 ## 3 Compliant Implementation (normative)
 
-The BDQ Tests are part of a coherent framework for describing and reporting on data quality, and the Tests are intended to be implemented as suites of Tests that fit particular `Use Cases` (see [BDQ Fitness for Use Framework](../../guide/bdqffdq/index.md)). The following sections provide normative guidance on what is required for an implementation of a Test Suite to be compliant with the BDQ standard, and non-normative guidance on the rationale for these requirements and expectations for how implementers will design their Test Suites.
+The BDQ Tests are part of a coherent framework for describing and reporting on data quality, and the Tests are intended to be implemented as suites of Tests that fit particular `Use Cases` (see [BDQ Fitness For Use Framework](../../guide/bdqffdq/index.md)). The following sections provide normative guidance on what is required for an implementation of a Test Suite to be compliant with the BDQ standard, and non-normative guidance on the rationale for these requirements and expectations for how implementers will design their Test Suites.
 
 ![Non-normative diagram illustrating the relationships among Use Cases, Policies, Tests, Parameters, Implementations and Reports in bdqffdq, use cases are at the top of the diagram linked down to Tests (Validations, Measures, Amendments, Issues) via Policies, Tests are shown to be complex composed of many classes and properties, including Specifications which can take Parameters, below these sit Implementations, which can produce data quality reports containing assertions (Response objects):](bdqffdq_overview_diagram.svg)
 *Non-normative diagram illustrating the relationships among Use Cases, Policies, Tests, Parameters, Implementations and Reports in bdqffdq:*
@@ -433,7 +433,7 @@ Within the `Response.result` for an `Amendment` Test, the order of key-value pai
 
 ### 3.5 Describing additional Tests (normative)
 
-Additional Tests that conform to the BDQ standard MUST describe those Tests using the BDQ [Fitness for Use Framework Ontology](../../guide/bdqffdq/index.md), those Tests MUST use the same `Response` structures, and those Tests MUST be related to `bdqffdq:UseCases`, either those defined in the standard or additional `Use Cases`.
+Additional Tests that conform to the BDQ standard MUST describe those Tests using the BDQ [Fitness For Use Framework Ontology](../../guide/bdqffdq/index.md), those Tests MUST use the same `Response` structures, and those Tests MUST be related to `bdqffdq:UseCases`, either those defined in the standard or additional `Use Cases`.
 
 ### 3.6 Parameterized Tests: default behavior and unsupported values (normative)
 
@@ -636,7 +636,7 @@ The BDQ standard does not specify how the ordering of these Tests should be acco
 
 ##### 6.4.2.1 Terms for describing Test Dependencies (non-normative)
 
-The [Fitness for Use Framework Ontology](../../guide/bdqffdq/index.md) does not include a property to describe sequence inter-dependencies among `Amendments`. The Ontology does provide the terms `bdqffdq:targetedMeasure`, `bdqffdq:targetedValidation`, and `bdqffdq:TargetedIssue`, which could be used, together with `bdqffdq:improvedBy` to relate `Amendment` Tests to `Validation`, `Measure`, and `Issue` Tests. The BDQ standard does not use these terms to describe Test interrelationships, though they could be used for this purpose. 
+The [Fitness For Use Framework Ontology](../../guide/bdqffdq/index.md) does not include a property to describe sequence inter-dependencies among `Amendments`. The Ontology does provide the terms `bdqffdq:targetedMeasure`, `bdqffdq:targetedValidation`, and `bdqffdq:TargetedIssue`, which could be used, together with `bdqffdq:improvedBy` to relate `Amendment` Tests to `Validation`, `Measure`, and `Issue` Tests. The BDQ standard does not use these terms to describe Test interrelationships, though they could be used for this purpose. 
 
 #### 6.4.3 Implementing a complete Test (normative)
 
@@ -1200,7 +1200,7 @@ Results of the Biodiversity Data Quality (BDQ) Taxon Name-related Tests.
 
 ### 7.2 Annotations (normative)
 
-The `bdqffdq:` OWL representation of the [Fitness for Use Framework Ontology](../../guide/bdqffdq/index.md) and the framing of the [BDQ Tests as RDF](../../../dist/bdqtest.ttl) using that ontology make Test results particularly amenable to being wrapped in `Annotations` following the [W3C Web Annotation Data Model](https://www.w3.org/TR/annotation-model/) (Sanderson et al. 2017). Test responses MAY be represented as `Annotations`.
+The `bdqffdq:` OWL representation of the [Fitness For Use Framework Ontology](../../guide/bdqffdq/index.md) and the framing of the [BDQ Tests as RDF](../../../dist/bdqtest.ttl) using that ontology make Test results particularly amenable to being wrapped in `Annotations` following the [W3C Web Annotation Data Model](https://www.w3.org/TR/annotation-model/) (Sanderson et al. 2017). Test responses MAY be represented as `Annotations`.
 
 The responses from Tests could be structured as elements that can be wrapped in the body `Annotation` document along with metadata from the Framework to describe which Test is being reported upon, and metadata within the target of the `Annotation` to describe which `DataResource` is being annotated, and the state it was in at the time of annotation.
 

@@ -46,7 +46,7 @@
 
 ### 1.1 Purpose (non-normative)
 
-The purpose of this document is to facilitate naviation among the various documents related to the Biodiversity Data Quality Fitness for Use Framework (the "Framework"), and to provide an introduction to the formal ontology that underpins the BDQ standard. It serves as a landing page for the `bdqffdq:` vocabulary, which defines the core concepts and relationships used to represent data quality information in the context of biodiversity data, and points to the associated documents that provide normative guidance about the ontology, its terms, and its application.
+The purpose of this document is to facilitate naviation among the various documents related to the Biodiversity Data Quality Fitness For Use Framework (the "Framework"), and to provide an introduction to the formal ontology that underpins the BDQ standard. It serves as a landing page for the `bdqffdq:` vocabulary, which defines the core concepts and relationships used to represent data quality information in the context of biodiversity data, and points to the associated documents that provide normative guidance about the ontology, its terms, and its application.
 
 
 ### 1.2 Audience (non-normative)

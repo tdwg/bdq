@@ -80,10 +80,10 @@ These terms support the formal description of how `Amendments` propose changes t
 This document is intended for users who need a technical understanding of how BDQ `Amendment` Tests describe proposed `Improvements` to data. It will be especially useful for:
 
 - Implementers developing systems that generate or evaluate data quality `Amendments`
-- Standards developers and data quality modelers working with the Fitness for Use Framework Ontology
+- Standards developers and data quality modelers working with the Fitness For Use Framework Ontology
 - Analysts and data curators reviewing Test results in the context of proposed changes to datasets
 
-Some familiarity with the structure of BDQ Tests and the Fitness for Use Framework Ontology is recommended.
+Some familiarity with the structure of BDQ Tests and the Fitness For Use Framework Ontology is recommended.
 
 ### 1.3 Data Quality Enhancements (non-normative)
 
