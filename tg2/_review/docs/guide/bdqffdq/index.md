@@ -517,7 +517,7 @@ Below is a fragment in Turtle describing VALIDATION_COUNTRY_FOUND, composed of a
     <urn:uuid:0053ca4f-7d45-41ea-912e-c8847bb70142> a bdqffdq:ValidationPolicy;
       rdfs:label "ValidationPolicy: (49) validations  in UseCase bdqval:Spatial-Temporal_Patterns";
       bdqffdq:hasUseCase bdqval:Spatial-Temporal_Patterns;
-      bdqffdq:includesInPolicy bdqtest:0493bcfb-652e-4d17-815b-b0cce0742fbe-2025-03-07,
+      bdqffdq:includedInPolicy bdqtest:0493bcfb-652e-4d17-815b-b0cce0742fbe-2025-03-07,
         bdqtest:69b2efdc-6269-45a4-aecb-4cb99c2ae134-2025-03-07, bdqtest:8f1e6e58-544b-4365-a569-fb781341644e-2025-03-07,
         bdqtest:0949110d-c06b-450e-9649-7c1374d940d1-2025-03-07, bdqtest:f51e15a6-a67d-4729-9c28-3766299d2985-2025-03-07,
         bdqtest:3cff4dc4-72e9-4abe-9bf3-8a30f1618432-2025-03-06, bdqtest:0bb8297d-8f8a-42d2-80c1-558f29efe798-2025-03-07,
@@ -585,7 +585,7 @@ The four subclasses of `bdqffdq:DataQualityNeed` are `bdqffdq:Validation`, `bdqf
 
 Each individual that is a subclass of `bdqffdq:DataQualityNeed` SHOULD have at least one `bdqffdq:includedInPolicy` relationship to an instance of a subclass of `bdqffdq:Policy`, which is in turn related to an instance of a `bdqffdq:UseCase`. 
 
-User communities MAY provide new Use Cases and MAY compose instances that are subtypes of `bdqffdq:DataQualityNeed` with instances of `bdqffdq:Policy` subclasses and instances of `bdqffdq:UseCase` with the object properties `bdqffdq:includesInPolicy` and `bdqffdq:hasUseCase` in new ways. 
+User communities MAY provide new Use Cases and MAY compose instances that are subtypes of `bdqffdq:DataQualityNeed` with instances of `bdqffdq:Policy` subclasses and instances of `bdqffdq:UseCase` with the object properties `bdqffdq:includedInPolicy` and `bdqffdq:hasUseCase` in new ways. 
 
 Each instance of a subclass of a `bdqffdq:DataQualityNeed` SHOULD have an `rdfs:label` in all upper case, with underscores separating components. Tests that have a `bdqffdq:hasResourceType` of `bdqffdq:SingleRecord` SHOULD follow the convention of the subclass of `bdqffdq:DataQualityNeed` in all upper case as the first word, and a representation of the `bdqffdq:AbstractInformationElement` as a single word in all upper case as the second word, in the form TESTTYPE_INFORMATIONELEMENT_CRITERIA or TESTTYPE_INFORMATIONELEMENT_ACTION_INFORMATIONELEMENT. Tests that have a `bdqffdq:hasResourceType` of `bdqffdq:MultiRecord` SHOULD have "MULTIRECORD_" as the first element in their `rdfs:label`, and MAY follow the pattern MULTIRECORD_TESTTYPE_COUNT_RESULT_INFORMATIONELEMENT_CRITERIA, or MULTIRECORD_TESTTYPE_QA_INFORMATIONELEMENT_CRITERIA. The `rdfs:label` of the instance of the subclass of `bdqffdq:DataQualityNeed` SHOULD be used by humans to identify Tests.
 

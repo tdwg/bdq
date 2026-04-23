@@ -166,7 +166,7 @@ def tests_for_use_case_curie(use_case_localname: str):
     query = sparql_prefixes + f"""
 SELECT DISTINCT ?label WHERE {{
   ?policy bdqffdq:hasUseCase bdqval:{use_case_localname} .
-  ?policy bdqffdq:includesInPolicy ?test .
+  ?policy bdqffdq:includedInPolicy ?test .
   ?test rdfs:label ?label .
   ?test bdqffdq:hasResourceType bdqffdq:SingleRecord .
 }}

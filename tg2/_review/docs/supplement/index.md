@@ -248,7 +248,7 @@ Given a `Use Case`, can one find `Validation` Tests and their `Specifications`?
     
         ?policy a bdqffdq:ValidationPolicy .
         ?policy bdqffdq:hasUseCase ?uc .
-        ?policy bdqffdq:includesInPolicy ?cc .
+        ?policy bdqffdq:includedInPolicy ?cc .
         ?uc rdfs:label ?useCase .
     
         # Find the specification from the validation method
@@ -301,7 +301,7 @@ Given a `Use Case`, can one find the `Single Record` `Validations` related to th
       # ---- Follow ValidationPolicy -> Validations ----
       ?policy a bdqffdq:ValidationPolicy ;
               bdqffdq:hasUseCase ?useCase ;
-              bdqffdq:includesInPolicy ?validation .
+              bdqffdq:includedInPolicy ?validation .
     
       OPTIONAL { ?policy rdfs:label ?policyLabel }
     
@@ -333,7 +333,7 @@ Or, to just get the UUID of these tests (for example to lookup relevant methods 
       # ---- Follow ValidationPolicy -> Validations ----
       ?policy a bdqffdq:ValidationPolicy ;
               bdqffdq:hasUseCase ?useCase ;
-              bdqffdq:includesInPolicy ?validation .
+              bdqffdq:includedInPolicy ?validation .
     
       # ---- Restrict to Validation tests on SingleRecord ----
       ?validation a bdqffdq:Validation ;
@@ -357,7 +357,7 @@ Given a `Use Case`, can one find the `Information Elements` that were `Acted Upo
     
        ?policy a bdqffdq:ValidationPolicy .
        ?policy bdqffdq:hasUseCase ?uc .
-       ?policy bdqffdq:includesInPolicy ?cc .
+       ?policy bdqffdq:includedInPolicy ?cc .
        ?uc rdfs:label ?useCase .
     
        # Find ActedUpon InformationElements 
@@ -523,7 +523,7 @@ List all `Use Cases`, and the Tests associated with the comments on each `Data Q
     
       # Policies tie UseCases to included Needs
       ?policy bdqffdq:hasUseCase ?useCase ;
-              bdqffdq:includesInPolicy ?need .
+              bdqffdq:includedInPolicy ?need .
     
       # Need is a Test (using the concrete types that are subclasses of bdqffdq:DataQualityNeed, no inference required)
       ?need rdf:type ?needType .

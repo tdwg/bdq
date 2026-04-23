@@ -26,7 +26,7 @@ Relationship patterns (from bdqtest.ttl)
 ----------------------------------------
 Use Cases are related to Tests via Policies:
   ?policy bdqffdq:hasUseCase ?useCase ;
-          bdqffdq:includesInPolicy ?test .
+          bdqffdq:includedInPolicy ?test .
 
 Tests are related to Specifications via Methods (type-specific):
   Validation:  ?method a bdqffdq:ValidationMethod ;  bdqffdq:forValidation  ?test .
@@ -77,7 +77,7 @@ SPARQL_BASE = (
 SELECT DISTINCT ?useCaseName ?testLabel
 WHERE {
   ?policy bdqffdq:hasUseCase ?useCase ;
-          bdqffdq:includesInPolicy ?test .
+          bdqffdq:includedInPolicy ?test .
 
   # Compute the display form of the Use Case IRI as a CURIE-like bdqval:... if possible.
   BIND(
@@ -104,7 +104,7 @@ SPARQL_WITH_SPEC_COMMENT = (
 SELECT DISTINCT ?useCaseName ?testLabel ?specComment
 WHERE {
   ?policy bdqffdq:hasUseCase ?useCase ;
-          bdqffdq:includesInPolicy ?test .
+          bdqffdq:includedInPolicy ?test .
 
   BIND(
     IF(STRSTARTS(STR(?useCase), STR(bdqval:)),

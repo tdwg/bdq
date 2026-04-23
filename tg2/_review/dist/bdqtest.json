@@ -39754,17 +39754,7 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/MeasurementPolicy"
         ],
-        "http://www.w3.org/2000/01/rdf-schema#label": [
-            {
-                "@value": "MeasurementPolicy: (64) measures  in UseCase bdqval:Alien-Species"
-            }
-        ],
-        "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
-            {
-                "@id": "https://rs.tdwg.org/bdqval/terms/Alien-Species"
-            }
-        ],
-        "https://rs.tdwg.org/bdqffdq/terms/includesInPolicy": [
+        "https://rs.tdwg.org/bdqffdq/terms/includedInPolicy": [
             {
                 "@id": "https://rs.tdwg.org/bdqtest/terms/6f7a9b82-7d34-4111-a2a6-9efe5221fa44-2025-03-07"
             },
@@ -39957,6 +39947,16 @@
             {
                 "@id": "https://rs.tdwg.org/bdqtest/terms/b5a14d76-292e-499b-b80f-9546243311a0-2025-03-07"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "MeasurementPolicy: (64) measures  in UseCase bdqval:Alien-Species"
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
+            {
+                "@id": "https://rs.tdwg.org/bdqval/terms/Alien-Species"
+            }
         ]
     },
     {
@@ -39975,17 +39975,7 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/MeasurementPolicy"
         ],
-        "http://www.w3.org/2000/01/rdf-schema#label": [
-            {
-                "@value": "MeasurementPolicy: (44) measures  in UseCase bdqval:Biotic-Relationships"
-            }
-        ],
-        "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
-            {
-                "@id": "https://rs.tdwg.org/bdqval/terms/Biotic-Relationships"
-            }
-        ],
-        "https://rs.tdwg.org/bdqffdq/terms/includesInPolicy": [
+        "https://rs.tdwg.org/bdqffdq/terms/includedInPolicy": [
             {
                 "@id": "https://rs.tdwg.org/bdqtest/terms/6f7a9b82-7d34-4111-a2a6-9efe5221fa44-2025-03-07"
             },
@@ -40118,6 +40108,16 @@
             {
                 "@id": "https://rs.tdwg.org/bdqtest/terms/b5a14d76-292e-499b-b80f-9546243311a0-2025-03-07"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "MeasurementPolicy: (44) measures  in UseCase bdqval:Biotic-Relationships"
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
+            {
+                "@id": "https://rs.tdwg.org/bdqval/terms/Biotic-Relationships"
+            }
         ]
     },
     {
@@ -40136,17 +40136,7 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/MeasurementPolicy"
         ],
-        "http://www.w3.org/2000/01/rdf-schema#label": [
-            {
-                "@value": "MeasurementPolicy: (142) measures  in UseCase bdqval:Record-Management"
-            }
-        ],
-        "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
-            {
-                "@id": "https://rs.tdwg.org/bdqval/terms/Record-Management"
-            }
-        ],
-        "https://rs.tdwg.org/bdqffdq/terms/includesInPolicy": [
+        "https://rs.tdwg.org/bdqffdq/terms/includedInPolicy": [
             {
                 "@id": "https://rs.tdwg.org/bdqtest/terms/453844ae-9df4-439f-8e24-c52498eca84a-2024-09-24"
             },
@@ -40573,6 +40563,16 @@
             {
                 "@id": "https://rs.tdwg.org/bdqtest/terms/b5a14d76-292e-499b-b80f-9546243311a0-2025-03-07"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "MeasurementPolicy: (142) measures  in UseCase bdqval:Record-Management"
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
+            {
+                "@id": "https://rs.tdwg.org/bdqval/terms/Record-Management"
+            }
         ]
     },
     {
@@ -40591,17 +40591,7 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/MeasurementPolicy"
         ],
-        "http://www.w3.org/2000/01/rdf-schema#label": [
-            {
-                "@value": "MeasurementPolicy: (102) measures  in UseCase bdqval:Spatial-Temporal_Patterns"
-            }
-        ],
-        "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
-            {
-                "@id": "https://rs.tdwg.org/bdqval/terms/Spatial-Temporal_Patterns"
-            }
-        ],
-        "https://rs.tdwg.org/bdqffdq/terms/includesInPolicy": [
+        "https://rs.tdwg.org/bdqffdq/terms/includedInPolicy": [
             {
                 "@id": "https://rs.tdwg.org/bdqtest/terms/453844ae-9df4-439f-8e24-c52498eca84a-2024-09-24"
             },
@@ -40908,6 +40898,16 @@
             {
                 "@id": "https://rs.tdwg.org/bdqtest/terms/130bb875-6b7c-4965-b864-d53f9d05b2cd-2025-03-07"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "MeasurementPolicy: (102) measures  in UseCase bdqval:Spatial-Temporal_Patterns"
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
+            {
+                "@id": "https://rs.tdwg.org/bdqval/terms/Spatial-Temporal_Patterns"
+            }
         ]
     },
     {
@@ -40926,17 +40926,7 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/MeasurementPolicy"
         ],
-        "http://www.w3.org/2000/01/rdf-schema#label": [
-            {
-                "@value": "MeasurementPolicy: (65) measures  in UseCase bdqval:Taxon-Management"
-            }
-        ],
-        "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
-            {
-                "@id": "https://rs.tdwg.org/bdqval/terms/Taxon-Management"
-            }
-        ],
-        "https://rs.tdwg.org/bdqffdq/terms/includesInPolicy": [
+        "https://rs.tdwg.org/bdqffdq/terms/includedInPolicy": [
             {
                 "@id": "https://rs.tdwg.org/bdqtest/terms/453844ae-9df4-439f-8e24-c52498eca84a-2024-09-24"
             },
@@ -41132,6 +41122,16 @@
             {
                 "@id": "https://rs.tdwg.org/bdqtest/terms/b5a14d76-292e-499b-b80f-9546243311a0-2025-03-07"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "MeasurementPolicy: (65) measures  in UseCase bdqval:Taxon-Management"
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
+            {
+                "@id": "https://rs.tdwg.org/bdqval/terms/Taxon-Management"
+            }
         ]
     },
     {
@@ -41150,17 +41150,7 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationPolicy"
         ],
-        "http://www.w3.org/2000/01/rdf-schema#label": [
-            {
-                "@value": "ValidationPolicy: (32) validations  in UseCase bdqval:Alien-Species"
-            }
-        ],
-        "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
-            {
-                "@id": "https://rs.tdwg.org/bdqval/terms/Alien-Species"
-            }
-        ],
-        "https://rs.tdwg.org/bdqffdq/terms/includesInPolicy": [
+        "https://rs.tdwg.org/bdqffdq/terms/includedInPolicy": [
             {
                 "@id": "https://rs.tdwg.org/bdqtest/terms/0949110d-c06b-450e-9649-7c1374d940d1-2025-03-07"
             },
@@ -41258,6 +41248,16 @@
                 "@id": "https://rs.tdwg.org/bdqtest/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2025-03-07"
             }
         ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ValidationPolicy: (32) validations  in UseCase bdqval:Alien-Species"
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
+            {
+                "@id": "https://rs.tdwg.org/bdqval/terms/Alien-Species"
+            }
+        ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
             {
                 "@value": "ValidationPolicy: (32) validations  in UseCase bdqval:Alien-Species"
@@ -41269,17 +41269,7 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationPolicy"
         ],
-        "http://www.w3.org/2000/01/rdf-schema#label": [
-            {
-                "@value": "ValidationPolicy: (23) validations  in UseCase bdqval:Biotic-Relationships"
-            }
-        ],
-        "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
-            {
-                "@id": "https://rs.tdwg.org/bdqval/terms/Biotic-Relationships"
-            }
-        ],
-        "https://rs.tdwg.org/bdqffdq/terms/includesInPolicy": [
+        "https://rs.tdwg.org/bdqffdq/terms/includedInPolicy": [
             {
                 "@id": "https://rs.tdwg.org/bdqtest/terms/0949110d-c06b-450e-9649-7c1374d940d1-2025-03-07"
             },
@@ -41350,6 +41340,16 @@
                 "@id": "https://rs.tdwg.org/bdqtest/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2025-03-07"
             }
         ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ValidationPolicy: (23) validations  in UseCase bdqval:Biotic-Relationships"
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
+            {
+                "@id": "https://rs.tdwg.org/bdqval/terms/Biotic-Relationships"
+            }
+        ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
             {
                 "@value": "ValidationPolicy: (23) validations  in UseCase bdqval:Biotic-Relationships"
@@ -41361,17 +41361,7 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationPolicy"
         ],
-        "http://www.w3.org/2000/01/rdf-schema#label": [
-            {
-                "@value": "ValidationPolicy: (69) validations  in UseCase bdqval:Record-Management"
-            }
-        ],
-        "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
-            {
-                "@id": "https://rs.tdwg.org/bdqval/terms/Record-Management"
-            }
-        ],
-        "https://rs.tdwg.org/bdqffdq/terms/includesInPolicy": [
+        "https://rs.tdwg.org/bdqffdq/terms/includedInPolicy": [
             {
                 "@id": "https://rs.tdwg.org/bdqtest/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe-2025-03-07"
             },
@@ -41580,6 +41570,16 @@
                 "@id": "https://rs.tdwg.org/bdqtest/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2025-03-07"
             }
         ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ValidationPolicy: (69) validations  in UseCase bdqval:Record-Management"
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
+            {
+                "@id": "https://rs.tdwg.org/bdqval/terms/Record-Management"
+            }
+        ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
             {
                 "@value": "ValidationPolicy: (69) validations  in UseCase bdqval:Record-Management"
@@ -41591,17 +41591,7 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationPolicy"
         ],
-        "http://www.w3.org/2000/01/rdf-schema#label": [
-            {
-                "@value": "ValidationPolicy: (49) validations  in UseCase bdqval:Spatial-Temporal_Patterns"
-            }
-        ],
-        "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
-            {
-                "@id": "https://rs.tdwg.org/bdqval/terms/Spatial-Temporal_Patterns"
-            }
-        ],
-        "https://rs.tdwg.org/bdqffdq/terms/includesInPolicy": [
+        "https://rs.tdwg.org/bdqffdq/terms/includedInPolicy": [
             {
                 "@id": "https://rs.tdwg.org/bdqtest/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe-2025-03-07"
             },
@@ -41750,6 +41740,16 @@
                 "@id": "https://rs.tdwg.org/bdqtest/terms/4eb48fdf-7299-4d63-9d08-246902e2857f-2025-03-07"
             }
         ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ValidationPolicy: (49) validations  in UseCase bdqval:Spatial-Temporal_Patterns"
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
+            {
+                "@id": "https://rs.tdwg.org/bdqval/terms/Spatial-Temporal_Patterns"
+            }
+        ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
             {
                 "@value": "ValidationPolicy: (49) validations  in UseCase bdqval:Spatial-Temporal_Patterns"
@@ -41761,17 +41761,7 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationPolicy"
         ],
-        "http://www.w3.org/2000/01/rdf-schema#label": [
-            {
-                "@value": "ValidationPolicy: (31) validations  in UseCase bdqval:Taxon-Management"
-            }
-        ],
-        "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
-            {
-                "@id": "https://rs.tdwg.org/bdqval/terms/Taxon-Management"
-            }
-        ],
-        "https://rs.tdwg.org/bdqffdq/terms/includesInPolicy": [
+        "https://rs.tdwg.org/bdqffdq/terms/includedInPolicy": [
             {
                 "@id": "https://rs.tdwg.org/bdqtest/terms/eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f-2025-03-06"
             },
@@ -41866,6 +41856,16 @@
                 "@id": "https://rs.tdwg.org/bdqtest/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2025-03-07"
             }
         ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ValidationPolicy: (31) validations  in UseCase bdqval:Taxon-Management"
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
+            {
+                "@id": "https://rs.tdwg.org/bdqval/terms/Taxon-Management"
+            }
+        ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
             {
                 "@value": "ValidationPolicy: (31) validations  in UseCase bdqval:Taxon-Management"
@@ -41877,17 +41877,7 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/AmendmentPolicy"
         ],
-        "http://www.w3.org/2000/01/rdf-schema#label": [
-            {
-                "@value": "AmendmentPolicy: (10) amendments  in UseCase bdqval:Alien-Species"
-            }
-        ],
-        "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
-            {
-                "@id": "https://rs.tdwg.org/bdqval/terms/Alien-Species"
-            }
-        ],
-        "https://rs.tdwg.org/bdqffdq/terms/includesInPolicy": [
+        "https://rs.tdwg.org/bdqffdq/terms/includedInPolicy": [
             {
                 "@id": "https://rs.tdwg.org/bdqtest/terms/bd385eeb-44a2-464b-a503-7abe407ef904-2025-03-07"
             },
@@ -41918,6 +41908,16 @@
             {
                 "@id": "https://rs.tdwg.org/bdqtest/terms/b3471c65-b53e-453b-8282-abfa27bf1805-2025-03-07"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "AmendmentPolicy: (10) amendments  in UseCase bdqval:Alien-Species"
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
+            {
+                "@id": "https://rs.tdwg.org/bdqval/terms/Alien-Species"
+            }
         ]
     },
     {
@@ -41925,17 +41925,7 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/AmendmentPolicy"
         ],
-        "http://www.w3.org/2000/01/rdf-schema#label": [
-            {
-                "@value": "AmendmentPolicy: (7) amendments  in UseCase bdqval:Biotic-Relationships"
-            }
-        ],
-        "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
-            {
-                "@id": "https://rs.tdwg.org/bdqval/terms/Biotic-Relationships"
-            }
-        ],
-        "https://rs.tdwg.org/bdqffdq/terms/includesInPolicy": [
+        "https://rs.tdwg.org/bdqffdq/terms/includedInPolicy": [
             {
                 "@id": "https://rs.tdwg.org/bdqtest/terms/bd385eeb-44a2-464b-a503-7abe407ef904-2025-03-07"
             },
@@ -41957,6 +41947,16 @@
             {
                 "@id": "https://rs.tdwg.org/bdqtest/terms/b3471c65-b53e-453b-8282-abfa27bf1805-2025-03-07"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "AmendmentPolicy: (7) amendments  in UseCase bdqval:Biotic-Relationships"
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
+            {
+                "@id": "https://rs.tdwg.org/bdqval/terms/Biotic-Relationships"
+            }
         ]
     },
     {
@@ -41964,17 +41964,7 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/AmendmentPolicy"
         ],
-        "http://www.w3.org/2000/01/rdf-schema#label": [
-            {
-                "@value": "AmendmentPolicy: (28) amendments  in UseCase bdqval:Record-Management"
-            }
-        ],
-        "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
-            {
-                "@id": "https://rs.tdwg.org/bdqval/terms/Record-Management"
-            }
-        ],
-        "https://rs.tdwg.org/bdqffdq/terms/includesInPolicy": [
+        "https://rs.tdwg.org/bdqffdq/terms/includedInPolicy": [
             {
                 "@id": "https://rs.tdwg.org/bdqtest/terms/39bb2280-1215-447b-9221-fd13bc990641-2025-03-07"
             },
@@ -42059,6 +42049,16 @@
             {
                 "@id": "https://rs.tdwg.org/bdqtest/terms/b3471c65-b53e-453b-8282-abfa27bf1805-2025-03-07"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "AmendmentPolicy: (28) amendments  in UseCase bdqval:Record-Management"
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
+            {
+                "@id": "https://rs.tdwg.org/bdqval/terms/Record-Management"
+            }
         ]
     },
     {
@@ -42066,17 +42066,7 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/AmendmentPolicy"
         ],
-        "http://www.w3.org/2000/01/rdf-schema#label": [
-            {
-                "@value": "AmendmentPolicy: (19) amendments  in UseCase bdqval:Spatial-Temporal_Patterns"
-            }
-        ],
-        "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
-            {
-                "@id": "https://rs.tdwg.org/bdqval/terms/Spatial-Temporal_Patterns"
-            }
-        ],
-        "https://rs.tdwg.org/bdqffdq/terms/includesInPolicy": [
+        "https://rs.tdwg.org/bdqffdq/terms/includedInPolicy": [
             {
                 "@id": "https://rs.tdwg.org/bdqtest/terms/39bb2280-1215-447b-9221-fd13bc990641-2025-03-07"
             },
@@ -42134,6 +42124,16 @@
             {
                 "@id": "https://rs.tdwg.org/bdqtest/terms/15d15927-7a22-43f8-88d6-298f5eb45c4c-2025-03-07"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "AmendmentPolicy: (19) amendments  in UseCase bdqval:Spatial-Temporal_Patterns"
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
+            {
+                "@id": "https://rs.tdwg.org/bdqval/terms/Spatial-Temporal_Patterns"
+            }
         ]
     },
     {
@@ -42141,17 +42141,7 @@
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/AmendmentPolicy"
         ],
-        "http://www.w3.org/2000/01/rdf-schema#label": [
-            {
-                "@value": "AmendmentPolicy: (8) amendments  in UseCase bdqval:Taxon-Management"
-            }
-        ],
-        "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
-            {
-                "@id": "https://rs.tdwg.org/bdqval/terms/Taxon-Management"
-            }
-        ],
-        "https://rs.tdwg.org/bdqffdq/terms/includesInPolicy": [
+        "https://rs.tdwg.org/bdqffdq/terms/includedInPolicy": [
             {
                 "@id": "https://rs.tdwg.org/bdqtest/terms/39bb2280-1215-447b-9221-fd13bc990641-2025-03-07"
             },
@@ -42176,12 +42166,27 @@
             {
                 "@id": "https://rs.tdwg.org/bdqtest/terms/b3471c65-b53e-453b-8282-abfa27bf1805-2025-03-07"
             }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "AmendmentPolicy: (8) amendments  in UseCase bdqval:Taxon-Management"
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
+            {
+                "@id": "https://rs.tdwg.org/bdqval/terms/Taxon-Management"
+            }
         ]
     },
     {
         "@id": "urn:uuid:3a854944-f3dd-4bd0-a764-8db0cdef735e",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/IssuePolicy"
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/includedInPolicy": [
+            {
+                "@id": "https://rs.tdwg.org/bdqtest/terms/acc8dff2-d8d1-483a-946d-65a02a452700-2025-03-07"
+            }
         ],
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
@@ -42192,17 +42197,17 @@
             {
                 "@id": "https://rs.tdwg.org/bdqval/terms/Alien-Species"
             }
-        ],
-        "https://rs.tdwg.org/bdqffdq/terms/includesInPolicy": [
-            {
-                "@id": "https://rs.tdwg.org/bdqtest/terms/acc8dff2-d8d1-483a-946d-65a02a452700-2025-03-07"
-            }
         ]
     },
     {
         "@id": "urn:uuid:3400d096-4b78-4c17-add4-0c42fd20267f",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/IssuePolicy"
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/includedInPolicy": [
+            {
+                "@id": "https://rs.tdwg.org/bdqtest/terms/acc8dff2-d8d1-483a-946d-65a02a452700-2025-03-07"
+            }
         ],
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
@@ -42213,17 +42218,17 @@
             {
                 "@id": "https://rs.tdwg.org/bdqval/terms/Biotic-Relationships"
             }
-        ],
-        "https://rs.tdwg.org/bdqffdq/terms/includesInPolicy": [
-            {
-                "@id": "https://rs.tdwg.org/bdqtest/terms/acc8dff2-d8d1-483a-946d-65a02a452700-2025-03-07"
-            }
         ]
     },
     {
         "@id": "urn:uuid:68924076-d5d3-4716-8bb4-dfc4d3272e09",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/IssuePolicy"
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/includedInPolicy": [
+            {
+                "@id": "https://rs.tdwg.org/bdqtest/terms/13d5a10e-188e-40fd-a22c-dbaa87b91df2-2025-03-06"
+            }
         ],
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
@@ -42234,17 +42239,23 @@
             {
                 "@id": "https://rs.tdwg.org/bdqval/terms/Record-Management"
             }
-        ],
-        "https://rs.tdwg.org/bdqffdq/terms/includesInPolicy": [
-            {
-                "@id": "https://rs.tdwg.org/bdqtest/terms/13d5a10e-188e-40fd-a22c-dbaa87b91df2-2025-03-06"
-            }
         ]
     },
     {
         "@id": "urn:uuid:26fdef6a-c268-40f2-aaaf-a8ac930bcf86",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/IssuePolicy"
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/includedInPolicy": [
+            {
+                "@id": "https://rs.tdwg.org/bdqtest/terms/13d5a10e-188e-40fd-a22c-dbaa87b91df2-2025-03-06"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqtest/terms/acc8dff2-d8d1-483a-946d-65a02a452700-2025-03-07"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqtest/terms/256e51b3-1e08-4349-bb7e-5186631c3f8e-2025-03-07"
+            }
         ],
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
@@ -42254,17 +42265,6 @@
         "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
             {
                 "@id": "https://rs.tdwg.org/bdqval/terms/Spatial-Temporal_Patterns"
-            }
-        ],
-        "https://rs.tdwg.org/bdqffdq/terms/includesInPolicy": [
-            {
-                "@id": "https://rs.tdwg.org/bdqtest/terms/13d5a10e-188e-40fd-a22c-dbaa87b91df2-2025-03-06"
-            },
-            {
-                "@id": "https://rs.tdwg.org/bdqtest/terms/acc8dff2-d8d1-483a-946d-65a02a452700-2025-03-07"
-            },
-            {
-                "@id": "https://rs.tdwg.org/bdqtest/terms/256e51b3-1e08-4349-bb7e-5186631c3f8e-2025-03-07"
             }
         ]
     }
