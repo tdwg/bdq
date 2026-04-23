@@ -259,6 +259,14 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 			except: 
 				outputUseCaseIndex.write("error extracting definition\n")
 			outputUseCaseIndex.write("\n")
+			try:
+				fitnessRequirementsCell = definitionRow.iloc[0]["hasFitnessRequirements"]
+				outputUseCaseIndex.write("Fitness Requirements: " + fitnessRequirementsCell)
+				outputUseCaseIndex.write("\n")
+				outputUseCaseIndex.write("\n")
+			except:
+				outputUseCaseIndex.write("error extracting fitness requirements\n")
+				outputUseCaseIndex.write("\n")
 			for test in usecaseDict[useCase]:
 				outputUseCaseIndex.write(f'{test}\n')
 				outputUseCaseIndex.write(f'- Term IRI: https://rs.tdwg.org/bdqtest/terms/{usecaseDict[useCase][test]}\n')
