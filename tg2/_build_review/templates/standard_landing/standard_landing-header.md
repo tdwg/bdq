@@ -208,11 +208,13 @@ Readers can approach the standard in different ways depending on their needs. Th
 		:green_book:
         <strong><a href="./docs/guide/users/index.md">BDQ User’s Guide</a></strong><br>
         Explains how to interpret BDQ test results and what they imply for data quality and use decisions.
+        See also <a href="./docs/guide/bdqtest/index.md#22-use-cases-non-normative">Use Cases</a> 
       </td>
       <td valign="top">
 		:green_book:
         <strong><a href="./docs/guide/implementers/index.md">BDQ Implementer’s Guide</a></strong><br>
         Explains how to implement BDQ tests: inputs, outputs, edge cases, and how to use the test descriptions and vocabularies in software.
+        See also <a href="./docs/guide/bdqtest/index.md#22-use-cases-non-normative">Use Cases</a> 
       </td>
       <td valign="top">
 		:green_book:
