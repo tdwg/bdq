@@ -147,8 +147,8 @@ The terminology used to describe the terms in this vocabulary follows the TDWG [
 | ------------ | --------- | ---------- | ------- |
 | Term Name (rdf:value) | normative | Idiomatic property used for structured values. TDWG SDS: The term name is a controlled value that represents the class, property, or concept described by the term definition. | Alien-Species |
 | Term IRI (dcterms:isVersionOf) | normative | A related resource of which the described resource is a version, edition, or adaptation. TDWG SDS: The HTTP IRI that uniquely identifies the current term. | [https://rs.tdwg.org/ bdqval/terms/ Alien-Species](https://rs.tdwg.org/bdqval/terms/Alien-Species) |
-| Modified (dcterms:issued) | normative | Date of formal issuance of the resource. TDWG SDS: The date in ISO 8601 Date format on which the most recent version of the term was issued. | 2024-09-30 |
-| Term Version IRI (rdf:about) | normative | The HTTP IRI that identifies the version of the term that is currently in force. | [https://rs.tdwg.org/ bdqval/terms/version/ Alien-Species-2024-09-30](https://rs.tdwg.org/bdqval/terms/version/Alien-Species-2024-09-30) |
+| Modified (dcterms:issued) | normative | Date of formal issuance of the resource. TDWG SDS: The date in ISO 8601 Date format on which the most recent version of the term was issued. | 2026-04-22 |
+| Term Version IRI (rdf:about) | normative | The HTTP IRI that identifies the version of the term that is currently in force. | [https://rs.tdwg.org/ bdqval/terms/version/ Alien-Species-2026-04-22](https://rs.tdwg.org/bdqval/terms/version/Alien-Species-2026-04-22) |
 | Label (rdfs:label) | normative | A human-readable name for the subject. TDWG SDS: A a word or short phrase that serves as a human-readable name for the term. | Alien-Species |
 | Definition (rdfs:comment) | normative | A description of the subject resource. TDWG SDS: The normative definition of the term, written in English. | Research uses forming a bdqffdq:UseCase for dwc:Occurrence data of alien species that 1) allows the understanding of the spatial and temporal distribution of an alien species or 2) identifies records that contain valid terms (i.e. name, space, time, other) associated with alien species; i.e.1) where the Information Elements concern what dwc:Organism occurred where and when and the means, degree, and pathways of establishment, and that may used for analysis of spatial and/or temporal patterns of biodiversity (see examples in Groom et al. (2019). Improving Darwin Core for research and management of alien species. Biodiversity Information Science and Standards, 3: e38084.  https://doi.org/10.3897/biss.3.38084). |
 | Comments (skos:note) | non-normative | A general note, for any purpose. | Used in Measure of Single Record Tests |
@@ -229,11 +229,11 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-30</td>
+			<td>2026-04-22</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/Alien-Species-2024-09-30">https://rs.tdwg.org/bdqval/terms/version/Alien-Species-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/Alien-Species-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/Alien-Species-2026-04-22</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -279,11 +279,11 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-30</td>
+			<td>2026-04-22</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/AllAmendmentTestsRunOnSingleRecord-2024-09-30">https://rs.tdwg.org/bdqval/terms/version/AllAmendmentTestsRunOnSingleRecord-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/AllAmendmentTestsRunOnSingleRecord-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/AllAmendmentTestsRunOnSingleRecord-2026-04-22</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -325,11 +325,11 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-30</td>
+			<td>2026-04-22</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/AllValidationTestsRunOnSingleRecord-2024-09-30">https://rs.tdwg.org/bdqval/terms/version/AllValidationTestsRunOnSingleRecord-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/AllValidationTestsRunOnSingleRecord-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/AllValidationTestsRunOnSingleRecord-2026-04-22</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -371,11 +371,11 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-30</td>
+			<td>2026-04-22</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/annotationAlertIf-2024-09-30">https://rs.tdwg.org/bdqval/terms/version/annotationAlertIf-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/annotationAlertIf-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/annotationAlertIf-2026-04-22</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -417,11 +417,11 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-30</td>
+			<td>2026-04-22</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/annotationSystem-2024-09-30">https://rs.tdwg.org/bdqval/terms/version/annotationSystem-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/annotationSystem-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/annotationSystem-2026-04-22</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -463,11 +463,11 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-30</td>
+			<td>2026-04-22</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/assumptionOnUnknownBiome-2024-09-30">https://rs.tdwg.org/bdqval/terms/version/assumptionOnUnknownBiome-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/assumptionOnUnknownBiome-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/assumptionOnUnknownBiome-2026-04-22</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -509,11 +509,11 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-30</td>
+			<td>2026-04-22</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/Biotic-Relationships-2024-09-30">https://rs.tdwg.org/bdqval/terms/version/Biotic-Relationships-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/Biotic-Relationships-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/Biotic-Relationships-2026-04-22</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -559,11 +559,11 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-30</td>
+			<td>2026-04-22</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/defaultGeodeticDatum-2024-09-30">https://rs.tdwg.org/bdqval/terms/version/defaultGeodeticDatum-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/defaultGeodeticDatum-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/defaultGeodeticDatum-2026-04-22</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -605,11 +605,11 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-30</td>
+			<td>2026-04-22</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/DefaultSourceAuthority-2024-09-30">https://rs.tdwg.org/bdqval/terms/version/DefaultSourceAuthority-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/DefaultSourceAuthority-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/DefaultSourceAuthority-2026-04-22</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -651,11 +651,11 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-30</td>
+			<td>2026-04-22</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/defaultValue-2024-09-30">https://rs.tdwg.org/bdqval/terms/version/defaultValue-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/defaultValue-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/defaultValue-2026-04-22</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -697,11 +697,11 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-30</td>
+			<td>2026-04-22</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/earliestValidDate-2024-09-30">https://rs.tdwg.org/bdqval/terms/version/earliestValidDate-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/earliestValidDate-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/earliestValidDate-2026-04-22</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -743,11 +743,11 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-30</td>
+			<td>2026-04-22</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/Empty-2024-09-30">https://rs.tdwg.org/bdqval/terms/version/Empty-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/Empty-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/Empty-2026-04-22</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -789,11 +789,11 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-30</td>
+			<td>2026-04-22</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/geospatialLand-2024-09-30">https://rs.tdwg.org/bdqval/terms/version/geospatialLand-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/geospatialLand-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/geospatialLand-2026-04-22</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -835,11 +835,11 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-30</td>
+			<td>2026-04-22</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/includeEventDate-2024-09-30">https://rs.tdwg.org/bdqval/terms/version/includeEventDate-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/includeEventDate-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/includeEventDate-2026-04-22</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -881,11 +881,11 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-30</td>
+			<td>2026-04-22</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/latestValidDate-2024-09-30">https://rs.tdwg.org/bdqval/terms/version/latestValidDate-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/latestValidDate-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/latestValidDate-2026-04-22</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -927,11 +927,11 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-30</td>
+			<td>2026-04-22</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/maximumValidDepthInMeters-2024-09-30">https://rs.tdwg.org/bdqval/terms/version/maximumValidDepthInMeters-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/maximumValidDepthInMeters-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/maximumValidDepthInMeters-2026-04-22</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -973,11 +973,11 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-30</td>
+			<td>2026-04-22</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/maximumValidElevationInMeters-2024-09-30">https://rs.tdwg.org/bdqval/terms/version/maximumValidElevationInMeters-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/maximumValidElevationInMeters-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/maximumValidElevationInMeters-2026-04-22</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -1019,11 +1019,11 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-30</td>
+			<td>2026-04-22</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/minimumValidDepthInMeters-2024-09-30">https://rs.tdwg.org/bdqval/terms/version/minimumValidDepthInMeters-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/minimumValidDepthInMeters-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/minimumValidDepthInMeters-2026-04-22</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -1065,11 +1065,11 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-30</td>
+			<td>2026-04-22</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/minimumValidElevationInMeters-2024-09-30">https://rs.tdwg.org/bdqval/terms/version/minimumValidElevationInMeters-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/minimumValidElevationInMeters-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/minimumValidElevationInMeters-2026-04-22</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -1111,11 +1111,11 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-30</td>
+			<td>2026-04-22</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/NotEmpty-2024-09-30">https://rs.tdwg.org/bdqval/terms/version/NotEmpty-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/NotEmpty-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/NotEmpty-2026-04-22</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -1157,11 +1157,11 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-30</td>
+			<td>2026-04-22</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/Record-Management-2024-09-30">https://rs.tdwg.org/bdqval/terms/version/Record-Management-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/Record-Management-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/Record-Management-2026-04-22</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -1207,11 +1207,11 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-30</td>
+			<td>2026-04-22</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/sourceAuthority-2024-09-30">https://rs.tdwg.org/bdqval/terms/version/sourceAuthority-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/sourceAuthority-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/sourceAuthority-2026-04-22</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -1253,11 +1253,11 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-30</td>
+			<td>2026-04-22</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/Spatial-Temporal_Patterns-2024-09-30">https://rs.tdwg.org/bdqval/terms/version/Spatial-Temporal_Patterns-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/Spatial-Temporal_Patterns-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/Spatial-Temporal_Patterns-2026-04-22</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -1303,11 +1303,11 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-30</td>
+			<td>2026-04-22</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/spatialBufferInMeters-2024-09-30">https://rs.tdwg.org/bdqval/terms/version/spatialBufferInMeters-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/spatialBufferInMeters-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/spatialBufferInMeters-2026-04-22</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -1349,11 +1349,11 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-30</td>
+			<td>2026-04-22</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/Taxon-Management-2024-09-30">https://rs.tdwg.org/bdqval/terms/version/Taxon-Management-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/Taxon-Management-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/Taxon-Management-2026-04-22</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -1399,11 +1399,11 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-30</td>
+			<td>2026-04-22</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/taxonIsMarine-2024-09-30">https://rs.tdwg.org/bdqval/terms/version/taxonIsMarine-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/taxonIsMarine-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/taxonIsMarine-2026-04-22</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
