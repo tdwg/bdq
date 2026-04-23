@@ -8,7 +8,7 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix bdqdim: <https://rs.tdwg.org/bdqdim/terms/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix bdq: <https://rs.tdwg.org/bdq/terms/> .
+@prefix bdqval: <https://rs.tdwg.org/bdqval/terms/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -41,9 +41,9 @@
   rdfs:label "Conformance" .
 
 <urn:uuid:fb80d5bf-7777-4d88-b09f-116a38ab7bfa> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_COUNTRYCODE_STANDARD.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_COUNTRYCODE_STANDARD.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_COUNTRYCODE_STANDARD.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_COUNTRYCODE_STANDARD.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_COUNTRYCODE_STANDARD.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_COUNTRYCODE_STANDARD.Response" .
 
 <https://rs.tdwg.org/bdqffdq/terms/ActedUpon> rdfs:subClassOf <https://rs.tdwg.org/bdqffdq/terms/InformationElement> .
 
@@ -108,9 +108,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:country Found for MultiRecord" .
 
 <urn:uuid:4d7d45ed-da78-44b0-8e93-e8c0423aa4a9> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_COUNTRY_FOUND.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_COUNTRY_FOUND.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_COUNTRY_FOUND.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_COUNTRY_FOUND.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_COUNTRY_FOUND.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_COUNTRY_FOUND.Response" .
 
 <urn:uuid:e1acf301-4f03-424a-af72-94ad1ad3201b> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation SPACE CODED Test VOCABULARY Conformance Parameterized CORE";
@@ -171,9 +171,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:phylum Found for MultiRecord" .
 
 <urn:uuid:6fa9dcd8-4e43-4fc7-acb6-1aff70e87f51> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_PHYLUM_FOUND.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_PHYLUM_FOUND.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_PHYLUM_FOUND.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_PHYLUM_FOUND.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_PHYLUM_FOUND.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_PHYLUM_FOUND.Response" .
 
 <urn:uuid:f643ba35-9ddb-4e70-9959-01a6849331ed> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE";
@@ -234,9 +234,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:minimumDepthInMeters less than dwc:maximumDepthInMeters for MultiRecord" .
 
 <urn:uuid:72ac3c31-cddf-4fcf-bb6d-2d10b6a1a18e> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH.Response" .
 
 <urn:uuid:51b11dac-0a61-4ebf-a0b7-69244821f481> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation SPACE CODED Test Conformance CORE";
@@ -297,9 +297,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:family Found for MultiRecord" .
 
 <urn:uuid:53ba0552-5eb5-4317-a5e7-dcaee30608b1> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_FAMILY_FOUND.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_FAMILY_FOUND.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_FAMILY_FOUND.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_FAMILY_FOUND.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_FAMILY_FOUND.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_FAMILY_FOUND.Response" .
 
 <urn:uuid:c39f0686-c40f-4652-8bf7-020b85d365d2> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE";
@@ -360,9 +360,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:decimalLongitude In Range for MultiRecord" .
 
 <urn:uuid:4328982c-cc3a-422e-9ac6-45cd7bc54f2c> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_DECIMALLONGITUDE_INRANGE.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_DECIMALLONGITUDE_INRANGE.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_DECIMALLONGITUDE_INRANGE.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_DECIMALLONGITUDE_INRANGE.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_DECIMALLONGITUDE_INRANGE.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_DECIMALLONGITUDE_INRANGE.Response" .
 
 <urn:uuid:c08463be-2be5-4f41-a70d-3a231958b4bb> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation SPACE CODED Test Conformance CORE";
@@ -426,9 +426,9 @@
   rdfs:label "Completeness" .
 
 <urn:uuid:de36737d-3d44-4b90-b79e-754df1db1f8a> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_EVENTDATE_NOTEMPTY.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_EVENTDATE_NOTEMPTY.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_EVENTDATE_NOTEMPTY.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_EVENTDATE_NOTEMPTY.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_EVENTDATE_NOTEMPTY.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_EVENTDATE_NOTEMPTY.Response" .
 
 <urn:uuid:e79ed5f7-8da5-4212-9476-e150a6c372b5> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation TIME CODED Test Completeness CORE";
@@ -489,9 +489,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:eventDate In Range for MultiRecord" .
 
 <urn:uuid:53b35bee-878a-4142-954b-92c03865a63c> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_EVENTDATE_INRANGE.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_EVENTDATE_INRANGE.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_EVENTDATE_INRANGE.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_EVENTDATE_INRANGE.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_EVENTDATE_INRANGE.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_EVENTDATE_INRANGE.Response" .
 
 <urn:uuid:69a7c952-ecf0-4cb0-b005-b244926e8f03> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation TIME CODED Test Conformance Parameterized CORE";
@@ -552,9 +552,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dcterms:license Standard for MultiRecord" .
 
 <urn:uuid:cbb53f33-ddc6-444c-b2f1-c06bb6759225> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_LICENSE_STANDARD.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_LICENSE_STANDARD.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_LICENSE_STANDARD.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_LICENSE_STANDARD.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_LICENSE_STANDARD.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_LICENSE_STANDARD.Response" .
 
 <urn:uuid:f7786d53-07c1-4253-add9-3bf24d8a97c4> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE";
@@ -615,9 +615,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:minimumElevationInMeters In Range for MultiRecord" .
 
 <urn:uuid:5cdd4160-7979-4e15-be8f-c8e3cc88e472> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_MINELEVATION_INRANGE.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_MINELEVATION_INRANGE.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_MINELEVATION_INRANGE.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_MINELEVATION_INRANGE.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_MINELEVATION_INRANGE.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_MINELEVATION_INRANGE.Response" .
 
 <urn:uuid:3ec54cad-c181-4dd6-8bd6-6119eb6ad6c0> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation SPACE CODED Test Conformance Parameterized CORE";
@@ -678,9 +678,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dcterms:Location Not Empty for MultiRecord" .
 
 <urn:uuid:fd9bc73a-2b67-4940-ac2a-ad1dda03d0b7> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_LOCATION_NOTEMPTY.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_LOCATION_NOTEMPTY.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_LOCATION_NOTEMPTY.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_LOCATION_NOTEMPTY.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_LOCATION_NOTEMPTY.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_LOCATION_NOTEMPTY.Response" .
 
 <urn:uuid:e0078022-251d-4c34-9b52-d63f94f601dd> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation SPACE CODED Test Completeness CORE";
@@ -741,9 +741,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:country Not Empty for MultiRecord" .
 
 <urn:uuid:545ce7c8-64e1-463e-a578-be2580d7d3c5> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_COUNTRY_NOTEMPTY.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_COUNTRY_NOTEMPTY.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_COUNTRY_NOTEMPTY.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_COUNTRY_NOTEMPTY.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_COUNTRY_NOTEMPTY.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_COUNTRY_NOTEMPTY.Response" .
 
 <urn:uuid:f9cd9d66-e4d2-42da-877a-90e4a7ac3cf3> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation SPACE CODED Test Completeness CORE";
@@ -804,9 +804,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:scientificName Found for MultiRecord" .
 
 <urn:uuid:9400633f-3e7a-4fbf-819e-8e2a0772494e> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_SCIENTIFICNAME_FOUND.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_SCIENTIFICNAME_FOUND.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_SCIENTIFICNAME_FOUND.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_SCIENTIFICNAME_FOUND.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_SCIENTIFICNAME_FOUND.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_SCIENTIFICNAME_FOUND.Response" .
 
 <urn:uuid:180a834f-d0e1-4abc-b31d-37558ef6352d> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE";
@@ -867,9 +867,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:occurrenceID Not Empty for MultiRecord" .
 
 <urn:uuid:c1f3287b-beca-49d7-b2e6-3e6de75ae598> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_OCCURRENCEID_NOTEMPTY.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_OCCURRENCEID_NOTEMPTY.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_OCCURRENCEID_NOTEMPTY.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_OCCURRENCEID_NOTEMPTY.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_OCCURRENCEID_NOTEMPTY.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_OCCURRENCEID_NOTEMPTY.Response" .
 
 <urn:uuid:18cf676f-83ab-4c52-825c-2f3849bcae9d> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation OTHER CODED Test Completeness CORE";
@@ -930,9 +930,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:year Not Empty for MultiRecord" .
 
 <urn:uuid:189a1e19-a50d-492d-87e1-27338d16883b> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_YEAR_NOTEMPTY.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_YEAR_NOTEMPTY.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_YEAR_NOTEMPTY.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_YEAR_NOTEMPTY.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_YEAR_NOTEMPTY.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_YEAR_NOTEMPTY.Response" .
 
 <urn:uuid:b95086d3-3d4d-4c95-9ea8-8b5894d0aede> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation TIME CODED Test Completeness CORE";
@@ -996,9 +996,9 @@
   rdfs:label "Consistency" .
 
 <urn:uuid:fb262b9b-a67b-45f9-92eb-fbcf58c72b0f> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT.Response" .
 
 <urn:uuid:e2857b1c-9c3d-4445-9f1e-32000e2243ce> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation SPACE CODED Test VOCABULARY Consistency ISO/DCMI STANDARD Parameterized CORE";
@@ -1059,9 +1059,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation Coordinates Terrestrial Marine for MultiRecord" .
 
 <urn:uuid:351049a9-bc84-42f6-af70-493e2e063153> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT.Response" .
 
 <urn:uuid:2a044176-8820-4745-a797-9541c7e06ab2> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation SPACE CODED Test VOCABULARY Consistency Parameterized CORE";
@@ -1122,9 +1122,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation Coordinates dwc:stateProvince Consistent for MultiRecord" .
 
 <urn:uuid:463c35d2-41c0-4e68-af22-4bb4c200b376> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT.Response" .
 
 <urn:uuid:d1b7295f-9a2a-4a52-a066-6e3eac61b0c2> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation SPACE CODED Test VOCABULARY Consistency CORE";
@@ -1185,9 +1185,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:basisOfRecord Not Empty for MultiRecord" .
 
 <urn:uuid:b90492ed-90da-4552-8ac0-e18e71db9d86> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_BASISOFRECORD_NOTEMPTY.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_BASISOFRECORD_NOTEMPTY.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_BASISOFRECORD_NOTEMPTY.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_BASISOFRECORD_NOTEMPTY.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_BASISOFRECORD_NOTEMPTY.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_BASISOFRECORD_NOTEMPTY.Response" .
 
 <urn:uuid:8768b9a9-2054-401a-8d85-60791d94df91> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation OTHER CODED Test Completeness CORE";
@@ -1248,9 +1248,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Vaildation dwc:geodeticDatum Standard for MultiRecord" .
 
 <urn:uuid:32f5c5c1-ec68-462a-8f73-f54c5236c0d1> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_GEODETICDATUM_STANDARD.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_GEODETICDATUM_STANDARD.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_GEODETICDATUM_STANDARD.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_GEODETICDATUM_STANDARD.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_GEODETICDATUM_STANDARD.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_GEODETICDATUM_STANDARD.Response" .
 
 <urn:uuid:fd0d38cd-1a3d-46cd-83ac-aab2a367e21f> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation SPACE CODED Test VOCABULARY Conformance CORE";
@@ -1311,9 +1311,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:country dwc:countryCode Consistent for MultiRecord" .
 
 <urn:uuid:f4cf2376-f816-4184-bc70-0df700bcc1eb> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT.Response" .
 
 <urn:uuid:cda169b0-4a95-447d-8654-bdab5e180947> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation SPACE CODED Test VOCABULARY Consistency ISO/DCMI STANDARD CORE";
@@ -1374,9 +1374,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:eventDate Standard for MultiRecord" .
 
 <urn:uuid:b9dd90bd-0f4d-403d-b24e-8aed6c157946> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_EVENTDATE_STANDARD.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_EVENTDATE_STANDARD.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_EVENTDATE_STANDARD.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_EVENTDATE_STANDARD.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_EVENTDATE_STANDARD.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_EVENTDATE_STANDARD.Response" .
 
 <urn:uuid:28e09744-e189-487c-90f7-5dd4c88d7306> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation TIME CODED Test Conformance ISO/DCMI STANDARD CORE";
@@ -1437,9 +1437,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:Event Consistent for MultiRecord" .
 
 <urn:uuid:c2949d73-f230-443b-a9c4-16af595f09a3> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_EVENT_CONSISTENT.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_EVENT_CONSISTENT.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_EVENT_CONSISTENT.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_EVENT_CONSISTENT.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_EVENT_CONSISTENT.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_EVENT_CONSISTENT.Response" .
 
 <urn:uuid:4383a0b8-ae96-4fbd-9537-394ffe6ce310> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation TIME CODED Test Consistency CORE";
@@ -1500,9 +1500,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:dateIdentified Standard for MultiRecord" .
 
 <urn:uuid:bbb2cdf1-1565-48b9-8d6c-f5cee70a6e56> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_DATEIDENTIFIED_STANDARD.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_DATEIDENTIFIED_STANDARD.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_DATEIDENTIFIED_STANDARD.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_DATEIDENTIFIED_STANDARD.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_DATEIDENTIFIED_STANDARD.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_DATEIDENTIFIED_STANDARD.Response" .
 
 <urn:uuid:4d16917f-0c46-4d05-a7da-0512e6a37627> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation TIME CODED Test Conformance ISO/DCMI STANDARD CORE";
@@ -1563,9 +1563,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:Taxon Unambiguous for MultiRecord" .
 
 <urn:uuid:993087b8-ab86-4f3a-b9aa-bde018b406b3> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_TAXON_UNAMBIGUOUS.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_TAXON_UNAMBIGUOUS.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_TAXON_UNAMBIGUOUS.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_TAXON_UNAMBIGUOUS.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_TAXON_UNAMBIGUOUS.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_TAXON_UNAMBIGUOUS.Response" .
 
 <urn:uuid:e780c2f1-4160-4ef2-b959-f3db56ceb62c> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE";
@@ -1629,9 +1629,9 @@
   rdfs:label "Likeliness" .
 
 <urn:uuid:ba87601b-dcc0-424d-973d-3869f35586d0> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_DATEIDENTIFIED_INRANGE.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_DATEIDENTIFIED_INRANGE.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_DATEIDENTIFIED_INRANGE.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_DATEIDENTIFIED_INRANGE.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_DATEIDENTIFIED_INRANGE.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_DATEIDENTIFIED_INRANGE.Response" .
 
 <urn:uuid:5f314145-e988-4684-b507-7429c796d996> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation TIME CODED Test Likeliness ISO/DCMI STANDARD Parameterized CORE";
@@ -1692,9 +1692,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:class Found for MultiRecord" .
 
 <urn:uuid:75264e67-1247-494f-bbc2-4355e5ea8246> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_CLASS_FOUND.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_CLASS_FOUND.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_CLASS_FOUND.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_CLASS_FOUND.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_CLASS_FOUND.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_CLASS_FOUND.Response" .
 
 <urn:uuid:1ead6f88-824f-4d1f-a34b-11a1c3f8a871> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE";
@@ -1755,9 +1755,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:geodeticDatum Not Empty for MultiRecord" .
 
 <urn:uuid:01835b18-0e6a-4947-a3e7-a39daec2061f> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_GEODETICDATUM_NOTEMPTY.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_GEODETICDATUM_NOTEMPTY.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_GEODETICDATUM_NOTEMPTY.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_GEODETICDATUM_NOTEMPTY.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_GEODETICDATUM_NOTEMPTY.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_GEODETICDATUM_NOTEMPTY.Response" .
 
 <urn:uuid:63ea1bbd-0184-4f59-83cb-302bb672fde0> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation SPACE CODED Test Completeness CORE";
@@ -1818,9 +1818,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:decimalLatitude In Range for MultiRecord" .
 
 <urn:uuid:f3a092ed-b307-4aa7-a308-a6de8f29f91c> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_DECIMALLATITUDE_INRANGE.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_DECIMALLATITUDE_INRANGE.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_DECIMALLATITUDE_INRANGE.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_DECIMALLATITUDE_INRANGE.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_DECIMALLATITUDE_INRANGE.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_DECIMALLATITUDE_INRANGE.Response" .
 
 <urn:uuid:e8e0076e-930c-45bd-bc49-85f341b7b729> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation SPACE CODED Test Conformance CORE";
@@ -1881,9 +1881,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:kingdom Found for MultiRecord" .
 
 <urn:uuid:52c61f29-f440-4a97-888c-89bf4f1f143c> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_KINGDOM_FOUND.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_KINGDOM_FOUND.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_KINGDOM_FOUND.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_KINGDOM_FOUND.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_KINGDOM_FOUND.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_KINGDOM_FOUND.Response" .
 
 <urn:uuid:ab20eec9-6bc3-40e6-95ab-76c2c79a7e6c> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE";
@@ -1944,9 +1944,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:scientificName Not Empty for MultiRecord" .
 
 <urn:uuid:0938b920-e3f0-4b1b-8e82-3bb2bcb26ad9> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_SCIENTIFICNAME_NOTEMPTY.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_SCIENTIFICNAME_NOTEMPTY.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_SCIENTIFICNAME_NOTEMPTY.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_SCIENTIFICNAME_NOTEMPTY.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_SCIENTIFICNAME_NOTEMPTY.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_SCIENTIFICNAME_NOTEMPTY.Response" .
 
 <urn:uuid:63695de6-91f6-4f10-8bf7-59163c6e3ad9> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation NAME CODED Test Completeness CORE";
@@ -2007,9 +2007,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:order Found for MultiRecord" .
 
 <urn:uuid:9f20b037-e607-47ce-8b54-c46fc6c83407> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_ORDER_FOUND.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_ORDER_FOUND.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_ORDER_FOUND.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_ORDER_FOUND.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_ORDER_FOUND.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_ORDER_FOUND.Response" .
 
 <urn:uuid:789f9110-5dca-411f-a742-1399175aa5be> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE";
@@ -2070,9 +2070,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:year In Range for MultiRecord" .
 
 <urn:uuid:904e3e78-82d3-4d8a-90db-2be4bead51cc> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_YEAR_INRANGE.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_YEAR_INRANGE.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_YEAR_INRANGE.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_YEAR_INRANGE.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_YEAR_INRANGE.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_YEAR_INRANGE.Response" .
 
 <urn:uuid:7647f9b5-28e4-4c31-948e-80b984422b0a> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation TIME CODED Test Conformance Parameterized CORE";
@@ -2133,9 +2133,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation Coordinates Not Zero for MultiRecord" .
 
 <urn:uuid:0dd0bc56-a3c4-4a11-bde2-8051b8944ead> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_COORDINATES_NOTZERO.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_COORDINATES_NOTZERO.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_COORDINATES_NOTZERO.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_COORDINATES_NOTZERO.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_COORDINATES_NOTZERO.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_COORDINATES_NOTZERO.Response" .
 
 <urn:uuid:10cfdb9f-a8d4-42fa-81be-3811d3c9f03a> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation SPACE CODED Test Likeliness CORE";
@@ -2196,9 +2196,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:Event Temporal Not Empty for MultiRecord" .
 
 <urn:uuid:b6c0e87e-4b9a-4f6b-bbaf-9cf23b02ddee> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_EVENTTEMPORAL_NOTEMPTY.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_EVENTTEMPORAL_NOTEMPTY.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_EVENTTEMPORAL_NOTEMPTY.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_EVENTTEMPORAL_NOTEMPTY.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_EVENTTEMPORAL_NOTEMPTY.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_EVENTTEMPORAL_NOTEMPTY.Response" .
 
 <urn:uuid:36fcff08-e64e-4640-984f-5263b0407a97> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation TIME CODED Test Completeness CORE";
@@ -2259,9 +2259,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dc:type Standard for MultiRecord" .
 
 <urn:uuid:3c6be17f-a7fc-4449-9d91-a528d012f415> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_DCTYPE_STANDARD.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_DCTYPE_STANDARD.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_DCTYPE_STANDARD.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_DCTYPE_STANDARD.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_DCTYPE_STANDARD.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_DCTYPE_STANDARD.Response" .
 
 <urn:uuid:faa91223-c9f0-476d-a4d0-b42e13fc9022> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation OTHER CODED Test VOCABULARY Conformance ISO/DCMI STANDARD CORE";
@@ -2322,9 +2322,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:decimalLongitude Not Empty for MultiRecord" .
 
 <urn:uuid:72a0dee0-ad16-4a3c-8045-c79c54f6193e> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_DECIMALLONGITUDE_NOTEMPTY.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_DECIMALLONGITUDE_NOTEMPTY.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_DECIMALLONGITUDE_NOTEMPTY.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_DECIMALLONGITUDE_NOTEMPTY.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_DECIMALLONGITUDE_NOTEMPTY.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_DECIMALLONGITUDE_NOTEMPTY.Response" .
 
 <urn:uuid:00d3e89b-b730-41f2-a5a2-8cf5e802a0c4> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation SPACE CODED Test Completeness CORE";
@@ -2387,9 +2387,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:countryCode Not Empty for MultiRecord" .
 
 <urn:uuid:67e7259e-3421-4f5d-a31d-a92ce73d0baa> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_COUNTRYCODE_NOTEMPTY.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_COUNTRYCODE_NOTEMPTY.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_COUNTRYCODE_NOTEMPTY.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_COUNTRYCODE_NOTEMPTY.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_COUNTRYCODE_NOTEMPTY.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_COUNTRYCODE_NOTEMPTY.Response" .
 
 <urn:uuid:cde5acd3-b95d-444b-817c-8a20adadf279> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation SPACE CODED Test VOCABULARY Completeness CORE";
@@ -2450,9 +2450,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dcterms:license Not Empty for MultiRecord" .
 
 <urn:uuid:893e5d1d-d9e1-49d6-8b17-337b87419ae6> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_LICENSE_NOTEMPTY.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_LICENSE_NOTEMPTY.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_LICENSE_NOTEMPTY.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_LICENSE_NOTEMPTY.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_LICENSE_NOTEMPTY.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_LICENSE_NOTEMPTY.Response" .
 
 <urn:uuid:4de30040-b177-4b0d-a2f3-4c659f179494> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation OTHER CODED Test Completeness CORE";
@@ -2513,9 +2513,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation Polynomial Consistent for MultiRecord" .
 
 <urn:uuid:54ae4594-8bf0-47b5-9977-49c73ce10a74> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_POLYNOMIAL_CONSISTENT.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_POLYNOMIAL_CONSISTENT.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_POLYNOMIAL_CONSISTENT.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_POLYNOMIAL_CONSISTENT.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_POLYNOMIAL_CONSISTENT.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_POLYNOMIAL_CONSISTENT.Response" .
 
 <urn:uuid:a0cfa157-3665-42dd-8dcc-3a5d53d4f217> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation NAME CODED Test Consistency CORE";
@@ -2576,9 +2576,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dc:type Not Empty for MultiRecord" .
 
 <urn:uuid:ed140634-27d9-474a-b107-279caf1b9e55> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_DCTYPE_NOTEMPTY.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_DCTYPE_NOTEMPTY.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_DCTYPE_NOTEMPTY.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_DCTYPE_NOTEMPTY.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_DCTYPE_NOTEMPTY.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_DCTYPE_NOTEMPTY.Response" .
 
 <urn:uuid:5f76cfec-04ca-41a9-86bf-67824fd8e7e5> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation OTHER CODED Test Completeness CORE";
@@ -2639,9 +2639,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:basisOfRecord Standard for MultiRecord" .
 
 <urn:uuid:fe9787e7-d5e8-4c40-a980-631686b3d16d> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_BASISOFRECORD_STANDARD.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_BASISOFRECORD_STANDARD.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_BASISOFRECORD_STANDARD.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_BASISOFRECORD_STANDARD.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_BASISOFRECORD_STANDARD.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_BASISOFRECORD_STANDARD.Response" .
 
 <urn:uuid:6fba2f6c-4d87-4be6-bb3a-b553551c1d47> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE";
@@ -2702,9 +2702,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:Taxon Not Empty for MultiRecord" .
 
 <urn:uuid:2c68f3a2-539a-43bf-99b2-972c98a90b68> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_TAXON_NOTEMPTY.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_TAXON_NOTEMPTY.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_TAXON_NOTEMPTY.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_TAXON_NOTEMPTY.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_TAXON_NOTEMPTY.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_TAXON_NOTEMPTY.Response" .
 
 <urn:uuid:d354faf8-cf72-48bd-93d5-10cd931df17c> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation NAME CODED Test Completeness CORE";
@@ -2765,9 +2765,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:minimumDepthInMeters In Range for MultiRecord" .
 
 <urn:uuid:78d4bba2-ea16-42a4-a45d-c28cea71a2dc> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_MINDEPTH_INRANGE.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_MINDEPTH_INRANGE.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_MINDEPTH_INRANGE.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_MINDEPTH_INRANGE.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_MINDEPTH_INRANGE.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_MINDEPTH_INRANGE.Response" .
 
 <urn:uuid:1a5a97a2-925f-449e-a475-4a5e5494184f> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation SPACE CODED Test Conformance Parameterized CORE";
@@ -2828,9 +2828,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:minimumElevationInMeters less than dwcmaximumElevationInMeters for MultiRecord" .
 
 <urn:uuid:f379c9b1-f432-4a29-9e5f-8c8ad012aa38> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION.Response" .
 
 <urn:uuid:7de2e2b3-2734-4f0d-b4d1-25942d628a6f> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation SPACE CODED Test Conformance CORE";
@@ -2891,9 +2891,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:coordinateUncertaintyInMeters In Range for MultiRecord" .
 
 <urn:uuid:e96e00be-9b67-42df-a914-4873e05f9a34> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_COORDINATEUNCERTAINTY_INRANGE.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_COORDINATEUNCERTAINTY_INRANGE.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_COORDINATEUNCERTAINTY_INRANGE.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_COORDINATEUNCERTAINTY_INRANGE.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_COORDINATEUNCERTAINTY_INRANGE.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_COORDINATEUNCERTAINTY_INRANGE.Response" .
 
 <urn:uuid:7b36926a-b3b2-4a3e-828e-696fb28a1d6e> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation SPACE CODED Test Conformance CORE";
@@ -2954,9 +2954,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:maximumElevationInMeters In Range for MultiRecord" .
 
 <urn:uuid:5079eace-ec39-4d44-b4ce-7894854b9eed> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_MAXELEVATION_INRANGE.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_MAXELEVATION_INRANGE.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_MAXELEVATION_INRANGE.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_MAXELEVATION_INRANGE.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_MAXELEVATION_INRANGE.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_MAXELEVATION_INRANGE.Response" .
 
 <urn:uuid:127afdaf-1d01-47c8-9999-3bff64432c88> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation SPACE CODED Test Likeliness Parameterized CORE";
@@ -3017,9 +3017,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:occurrenceStatus Standard for MultiRecord" .
 
 <urn:uuid:3f67a77a-85c0-495d-948a-5ea0dec89ec7> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_OCCURRENCESTATUS_STANDARD.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_OCCURRENCESTATUS_STANDARD.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_OCCURRENCESTATUS_STANDARD.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_OCCURRENCESTATUS_STANDARD.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_OCCURRENCESTATUS_STANDARD.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_OCCURRENCESTATUS_STANDARD.Response" .
 
 <urn:uuid:ba3bb2e3-b593-48ea-83b3-899e3a91ecd2> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE";
@@ -3080,9 +3080,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:occurrenceStatus Not Empty for MultiRecord" .
 
 <urn:uuid:47b2efa0-bf97-45be-b133-f14cfc73ace5> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_OCCURRENCESTATUS_NOTEMPTY.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_OCCURRENCESTATUS_NOTEMPTY.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_OCCURRENCESTATUS_NOTEMPTY.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_OCCURRENCESTATUS_NOTEMPTY.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_OCCURRENCESTATUS_NOTEMPTY.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_OCCURRENCESTATUS_NOTEMPTY.Response" .
 
 <urn:uuid:a1252d6a-3cb8-4fce-bdba-453c82325a6f> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation OTHER CODED Test Completeness CORE";
@@ -3143,9 +3143,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:decimalLatitude Not Empty for MultiRecord" .
 
 <urn:uuid:66a62ee2-d3be-4370-a42b-6d488b5c9b84> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_DECIMALLATITUDE_NOTEMPTY.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_DECIMALLATITUDE_NOTEMPTY.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_DECIMALLATITUDE_NOTEMPTY.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_DECIMALLATITUDE_NOTEMPTY.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_DECIMALLATITUDE_NOTEMPTY.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_DECIMALLATITUDE_NOTEMPTY.Response" .
 
 <urn:uuid:63076250-647e-470e-9d0d-14a81681266f> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation SPACE CODED Test Completeness CORE";
@@ -3206,9 +3206,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:scientificNameID Not Empty for MultiRecord" .
 
 <urn:uuid:05d4f647-0387-4e37-883f-810840711e6d> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_SCIENTIFICNAMEID_NOTEMPTY.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_SCIENTIFICNAMEID_NOTEMPTY.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_SCIENTIFICNAMEID_NOTEMPTY.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_SCIENTIFICNAMEID_NOTEMPTY.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_SCIENTIFICNAMEID_NOTEMPTY.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_SCIENTIFICNAMEID_NOTEMPTY.Response" .
 
 <urn:uuid:e3f80cb9-61c0-4fa4-9767-d7d4f415321d> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation NAME CODED Test Completeness CORE";
@@ -3269,9 +3269,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:genus Found for MultiRecord" .
 
 <urn:uuid:de43b1ab-4e58-4510-97cf-c4c84e04c9bd> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_GENUS_FOUND.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_GENUS_FOUND.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_GENUS_FOUND.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_GENUS_FOUND.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_GENUS_FOUND.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_GENUS_FOUND.Response" .
 
 <urn:uuid:5a90c547-205b-423f-9158-400652da905f> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE";
@@ -3332,9 +3332,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation Classification Consistent for MultiRecord" .
 
 <urn:uuid:264375b3-9ecd-4a3e-bad2-e74fbab0dcf4> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_CLASSIFICATION_CONSISTENT.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_CLASSIFICATION_CONSISTENT.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_CLASSIFICATION_CONSISTENT.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_CLASSIFICATION_CONSISTENT.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_CLASSIFICATION_CONSISTENT.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_CLASSIFICATION_CONSISTENT.Response" .
 
 <urn:uuid:c5ab8254-22df-4d08-86e1-6633707ab22b> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation NAME CODED Test VOCABULARY Consistency Parameterized CORE";
@@ -3395,9 +3395,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:day In Range for MultiRecord" .
 
 <urn:uuid:3acc77f6-1bbc-46b7-9aee-f75af5537d2a> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_DAY_INRANGE.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_DAY_INRANGE.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_DAY_INRANGE.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_DAY_INRANGE.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_DAY_INRANGE.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_DAY_INRANGE.Response" .
 
 <urn:uuid:5001024d-da6b-4499-a616-d76322e2043b> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation TIME CODED Test Conformance CORE";
@@ -3458,9 +3458,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:month Standard for MultiRecord" .
 
 <urn:uuid:5a033f48-4b60-4241-b5c3-4a7cb8de33f2> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_MONTH_STANDARD.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_MONTH_STANDARD.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_MONTH_STANDARD.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_MONTH_STANDARD.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_MONTH_STANDARD.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_MONTH_STANDARD.Response" .
 
 <urn:uuid:0f4b32e4-23c8-49ec-aa9f-3b7970d52b19> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation TIME CODED Test Conformance CORE";
@@ -3521,9 +3521,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:startDayOfYear In Range for MultiRecord" .
 
 <urn:uuid:528771e2-c865-45d4-8fcb-765e502be2b8> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_STARTDAYOFYEAR_INRANGE.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_STARTDAYOFYEAR_INRANGE.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_STARTDAYOFYEAR_INRANGE.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_STARTDAYOFYEAR_INRANGE.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_STARTDAYOFYEAR_INRANGE.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_STARTDAYOFYEAR_INRANGE.Response" .
 
 <urn:uuid:8b66559e-bbe2-497f-ae9b-2c85863db5ad> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation TIME CODED Test Conformance CORE";
@@ -3584,9 +3584,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:endDayOfYear In Range for MultiRecord" .
 
 <urn:uuid:dda8a095-0878-4b93-8a55-9b95f1700dae> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_ENDDAYOFYEAR_INRANGE.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_ENDDAYOFYEAR_INRANGE.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_ENDDAYOFYEAR_INRANGE.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_ENDDAYOFYEAR_INRANGE.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_ENDDAYOFYEAR_INRANGE.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_ENDDAYOFYEAR_INRANGE.Response" .
 
 <urn:uuid:893fd474-eab3-4265-865f-6cfe7635aa6b> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation TIME CODED Test Conformance CORE";
@@ -3647,9 +3647,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:day Standard for MultiRecord" .
 
 <urn:uuid:9a0e0a79-fe93-4270-943f-30662eb60e72> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_DAY_STANDARD.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_DAY_STANDARD.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_DAY_STANDARD.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_DAY_STANDARD.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_DAY_STANDARD.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_DAY_STANDARD.Response" .
 
 <urn:uuid:ebb501d7-405b-44fc-af0e-711d653f41e5> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation TIME CODED Test Conformance CORE";
@@ -3710,9 +3710,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:taxonRank Not Empty for MultiRecord" .
 
 <urn:uuid:2e560d7e-864c-4d72-9cac-0bafbe1bbeea> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_TAXONRANK_NOTEMPTY.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_TAXONRANK_NOTEMPTY.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_TAXONRANK_NOTEMPTY.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_TAXONRANK_NOTEMPTY.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_TAXONRANK_NOTEMPTY.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_TAXONRANK_NOTEMPTY.Response" .
 
 <urn:uuid:e4baa0f4-ee8c-4521-b9c0-89e6976d6c91> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation NAME CODED Test Completeness CORE";
@@ -3773,9 +3773,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:taxonRank Standard for MultiRecord" .
 
 <urn:uuid:90508628-7333-4e71-b191-d1a0e0d431e6> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_TAXONRANK_STANDARD.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_TAXONRANK_STANDARD.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_TAXONRANK_STANDARD.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_TAXONRANK_STANDARD.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_TAXONRANK_STANDARD.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_TAXONRANK_STANDARD.Response" .
 
 <urn:uuid:e9dd8019-0fbd-45a3-817e-f99bea3f8b19> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE";
@@ -3836,9 +3836,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:maximumDepthInMeters In Range for MultiRecord" .
 
 <urn:uuid:3a4ce2f7-01a4-4a60-8dd3-2be0ac41cdf0> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_MAXDEPTH_INRANGE.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_MAXDEPTH_INRANGE.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_MAXDEPTH_INRANGE.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_MAXDEPTH_INRANGE.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_MAXDEPTH_INRANGE.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_MAXDEPTH_INRANGE.Response" .
 
 <urn:uuid:66a9248a-4d93-443e-8f86-88b04e859d88> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation SPACE CODED Test Conformance Parameterized CORE";
@@ -3899,9 +3899,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:stateProvince Found for MultiRecord" .
 
 <urn:uuid:03715043-0512-48a0-a1ac-45e6e2043a44> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_STATEPROVINCE_FOUND.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_STATEPROVINCE_FOUND.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_STATEPROVINCE_FOUND.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_STATEPROVINCE_FOUND.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_STATEPROVINCE_FOUND.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_STATEPROVINCE_FOUND.Response" .
 
 <urn:uuid:f61b4a56-28d2-45da-9f25-05a95890ab34> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation SPACE CODED Test VOCABULARY Conformance Parameterized CORE";
@@ -3962,9 +3962,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:country dwc:stateProvince Unambiguous for MultiRecord" .
 
 <urn:uuid:fd67021a-c835-495c-a45c-832da0d37c2f> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS.Response" .
 
 <urn:uuid:acff5571-4240-4308-817b-6c467060ae36> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation SPACE CODED Test VOCABULARY Conformance Parameterized CORE";
@@ -4025,9 +4025,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:scientificNameID Complete for MultiRecord" .
 
 <urn:uuid:951358d6-b8f5-42e0-a089-42bb2ecfa79b> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_SCIENTIFICNAMEID_COMPLETE.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_SCIENTIFICNAMEID_COMPLETE.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_SCIENTIFICNAMEID_COMPLETE.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_SCIENTIFICNAMEID_COMPLETE.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_SCIENTIFICNAMEID_COMPLETE.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_SCIENTIFICNAMEID_COMPLETE.Response" .
 
 <urn:uuid:8857d693-f25b-48aa-ba9b-29b692011bf2> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation NAME CODED Test Completeness CORE";
@@ -4088,9 +4088,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:kingdom Not Empty for MultiRecord" .
 
 <urn:uuid:8a63ca58-36c5-45d8-9d4c-7f0fd476d87c> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_KINGDOM_NOTEMPTY.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_KINGDOM_NOTEMPTY.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_KINGDOM_NOTEMPTY.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_KINGDOM_NOTEMPTY.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_KINGDOM_NOTEMPTY.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_KINGDOM_NOTEMPTY.Response" .
 
 <urn:uuid:5c3ccce4-1a9d-4f04-b306-cb6c6f601f9e> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation NAME CODED Test Completeness CORE";
@@ -4151,9 +4151,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:scientificNameAuthorship Not Empty for MultiRecord" .
 
 <urn:uuid:2c7b6527-0918-401b-b679-cf3f0819ce9e> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY.Response" .
 
 <urn:uuid:e3f91e30-4a96-4772-a941-3107a27c6229> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation NAME CODED Test Completeness CORE";
@@ -4214,9 +4214,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:namePublishedInYear Not Empty for MultiRecord" .
 
 <urn:uuid:59de7103-5a68-4fa2-8d9a-fe89256b4cab> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY.Response" .
 
 <urn:uuid:11927fb0-e11d-4e20-8fde-a9910103df2a> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation NAME CODED Test Completeness CORE";
@@ -4277,9 +4277,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:establishmentMeans Standard for MultiRecord" .
 
 <urn:uuid:4d7d3e60-8242-48be-ab51-cfd40fe3b8e9> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_ESTABLISHMENTMEANS_STANDARD.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_ESTABLISHMENTMEANS_STANDARD.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_ESTABLISHMENTMEANS_STANDARD.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_ESTABLISHMENTMEANS_STANDARD.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_ESTABLISHMENTMEANS_STANDARD.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_ESTABLISHMENTMEANS_STANDARD.Response" .
 
 <urn:uuid:17c7a364-86bb-41ec-a7c1-07087bea1c92> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE";
@@ -4340,9 +4340,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:degreeofEstablishment Standard for MultiRecord" .
 
 <urn:uuid:3ea77d56-e4b4-45b2-88d7-c6ab7c1d0f36> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_DEGREEOFESTABLISHMENT_STANDARD.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_DEGREEOFESTABLISHMENT_STANDARD.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_DEGREEOFESTABLISHMENT_STANDARD.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_DEGREEOFESTABLISHMENT_STANDARD.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_DEGREEOFESTABLISHMENT_STANDARD.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_DEGREEOFESTABLISHMENT_STANDARD.Response" .
 
 <urn:uuid:a5a657d0-7c16-4938-b542-057ffe4150cd> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE";
@@ -4403,9 +4403,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:pathway Standard for MultiRecord" .
 
 <urn:uuid:79c96804-409c-44a5-bd7d-f149a7c0805e> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_PATHWAY_STANDARD.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_PATHWAY_STANDARD.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_PATHWAY_STANDARD.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_PATHWAY_STANDARD.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_PATHWAY_STANDARD.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_PATHWAY_STANDARD.Response" .
 
 <urn:uuid:06f4a965-9424-47fe-81f8-4264c30b6bf1> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE";
@@ -4466,9 +4466,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:sex Standard for MultiRecord" .
 
 <urn:uuid:c449482f-64cd-4152-a434-3492ebdd4401> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_SEX_STANDARD.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_SEX_STANDARD.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_SEX_STANDARD.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_SEX_STANDARD.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_SEX_STANDARD.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_SEX_STANDARD.Response" .
 
 <urn:uuid:92c8e64a-7279-4934-8071-5807d1796cbd> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation OTHER CODED Test VOCABULARY Parameterized CORE";
@@ -4529,9 +4529,9 @@
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:typeStatus Standard for MultiRecord" .
 
 <urn:uuid:521ea0c6-8eb7-4d41-b1b6-40bbf1b2651e> a <https://rs.tdwg.org/bdqffdq/terms/ActedUpon>;
-  <skos:prefLabel> "Information Element ActedUpon bdq:VALIDATION_TYPESTATUS_STANDARD.Response";
-  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdq:VALIDATION_TYPESTATUS_STANDARD.Response;
-  rdfs:label "Information Element ActedUpon bdq:VALIDATION_TYPESTATUS_STANDARD.Response" .
+  <skos:prefLabel> "Information Element ActedUpon bdqval:VALIDATION_TYPESTATUS_STANDARD.Response";
+  <https://rs.tdwg.org/bdqffdq/terms/composedOf> bdqval:VALIDATION_TYPESTATUS_STANDARD.Response;
+  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_TYPESTATUS_STANDARD.Response" .
 
 <urn:uuid:e581e111-a7ef-4f16-9899-175b131b304e> a <https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod>;
   skos:note "TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE";

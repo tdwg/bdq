@@ -154,7 +154,7 @@ Is there a value in dwc:basisOfRecord?
 
 #### Expected Response
 
-COMPLIANT if dwc:basisOfRecord is bdq:NotEmpty; otherwise NOT_COMPLIANT
+COMPLIANT if dwc:basisOfRecord is bdqval:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -163,14 +163,14 @@ dwc:basisOfRecord
 
 #### Examples
 
-dwc:basisOfRecord="PreservedSpecimen": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:basisOfRecord is bdq:NotEmpty"
+dwc:basisOfRecord="PreservedSpecimen": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:basisOfRecord is bdqval:NotEmpty"
 
-dwc:basisOfRecord="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:basisOfRecord is bdq:Empty"
+dwc:basisOfRecord="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:basisOfRecord is bdqval:Empty"
 
 
 #### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -183,11 +183,11 @@ Acts upon  SingleRecord
 
 #### Description
 
-Does the value of dwc:basisOfRecord occur in the bdq:sourceAuthority?
+Does the value of dwc:basisOfRecord occur in the bdqval:sourceAuthority?
 
 #### Expected Response
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:basisOfRecord is bdq:Empty; COMPLIANT if the value of dwc:basisOfRecord is valid in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:basisOfRecord is bdqval:Empty; COMPLIANT if the value of dwc:basisOfRecord is valid in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -196,11 +196,11 @@ dwc:basisOfRecord
 
 #### Parameters
 
-bdq:sourceAuthority
+bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdq:sourceAuthority default = "Darwin Core basisOfRecord" {[https://dwc.tdwg.org/terms/#dwc:basisOfRecord]}{dwc:basisOfRecord vocabulary [https://rs.gbif.org/vocabulary/dwc/basis_of_record.xml]}
+bdqval:sourceAuthority default = "Darwin Core basisOfRecord" {[https://dwc.tdwg.org/terms/#dwc:basisOfRecord]}{dwc:basisOfRecord vocabulary [https://rs.gbif.org/vocabulary/dwc/basis_of_record.xml]}
 
 #### Examples
 
@@ -211,7 +211,7 @@ dwc:basisOfRecord="Specimen": Response.status=RUN_HAS_RESULT, Response.result=NO
 
 #### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 
@@ -232,7 +232,7 @@ Is there a value in dc:type?
 
 #### Expected Response
 
-COMPLIANT if dc:type is bdq:NotEmpty; otherwise NOT_COMPLIANT
+COMPLIANT if dc:type is bdqval:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -241,14 +241,14 @@ dc:type
 
 #### Examples
 
-dc:type="?": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dc:type is bdq:NotEmpty"
+dc:type="?": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dc:type is bdqval:NotEmpty"
 
-dc:type=" ": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dc:type is bdq:Empty"
+dc:type=" ": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dc:type is bdqval:Empty"
 
 
 #### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -265,7 +265,7 @@ Does the value of dc:type occur as a value in the DCMI type vocabulary?
 
 #### Expected Response
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the value of dc:type is bdq:Empty; COMPLIANT if the value of dc:type is a term name in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the value of dc:type is bdqval:Empty; COMPLIANT if the value of dc:type is a term name in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -285,7 +285,7 @@ dc:type="StillerImage": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMP
 
 #### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 
@@ -306,7 +306,7 @@ Is there a value in dcterms:license?
 
 #### Expected Response
 
-COMPLIANT if dcterms:license is bdq:NotEmpty; otherwise NOT_COMPLIANT
+COMPLIANT if dcterms:license is bdqval:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -315,14 +315,14 @@ dcterms:license
 
 #### Examples
 
-dcterms:license="CC0 1.0": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dcterms:license is bdq:NotEmpty"
+dcterms:license="CC0 1.0": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dcterms:license is bdqval:NotEmpty"
 
-dcterms:license=" ": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dcterms:license is bdq:Empty"
+dcterms:license=" ": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dcterms:license is bdqval:Empty"
 
 
 #### Use Cases
 
-bdq:Record-Management
+bdqval:Record-Management
 
 #### Notes
 
@@ -339,11 +339,11 @@ Acts upon  SingleRecord
 
 #### Description
 
-Does the value of dcterms:license occur in bdq:sourceAuthority?
+Does the value of dcterms:license occur in bdqval:sourceAuthority?
 
 #### Expected Response
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dcterms:license is bdq:Empty; COMPLIANT if the value of the term dcterms:license is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dcterms:license is bdqval:Empty; COMPLIANT if the value of the term dcterms:license is in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -352,22 +352,22 @@ dcterms:license
 
 #### Parameters
 
-bdq:sourceAuthority
+bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdq:sourceAuthority default = "Creative Commons 4.0 Licenses or CC0" {[https://creativecommons.org/]} { Regular Expression ^(http(s){0,1}://creativecommons.org/licenses/(by&#124;by-sa&#124;by-nc&#124;by-nc-sa&#124;by-nd&#124;by-nc-nd)/4.0/((deed&#124;legalcode)(.(id&#124;eu&#124;da&#124;de&#124;en&#124;es&#124;fr&#124;fy&#124;hr&#124;it&#124;lv&#124;lt&#124;mi&#124;ni&#124;no&#124;pl&#124;pt&#124;ro&#124;si&#124;fi&#124;sv&#124;tr&#124;cs&#124;el&#124;ru&#124;uk&#124;ar&#124;jp&#124;zh-hans&#124;zh-hant&#124;ko)){0,1})&#124;(http(s){0,1}://creativecommons.org/publicdomain/zero/1.0/((deed&#124;legalcode)(.(id&#124;eu&#124;da&#124;de&#124;en&#124;es&#124;fr&#124;fy&#124;hr&#124;it&#124;lv&#124;lt&#124;ni&#124;no&#124;pl&#124;pt&#124;ro&#124;si&#124;fi&#124;sv&#124;tr&#124;cs&#124;el&#124;ru&#124;uk&#124;ar&#124;jp&#124;zh-hans&#124;zh-hant&#124;ko)){0,1})))$ }
+bdqval:sourceAuthority default = "Creative Commons 4.0 Licenses or CC0" {[https://creativecommons.org/]} { Regular Expression ^(http(s){0,1}://creativecommons.org/licenses/(by&#124;by-sa&#124;by-nc&#124;by-nc-sa&#124;by-nd&#124;by-nc-nd)/4.0/((deed&#124;legalcode)(.(id&#124;eu&#124;da&#124;de&#124;en&#124;es&#124;fr&#124;fy&#124;hr&#124;it&#124;lv&#124;lt&#124;mi&#124;ni&#124;no&#124;pl&#124;pt&#124;ro&#124;si&#124;fi&#124;sv&#124;tr&#124;cs&#124;el&#124;ru&#124;uk&#124;ar&#124;jp&#124;zh-hans&#124;zh-hant&#124;ko)){0,1})&#124;(http(s){0,1}://creativecommons.org/publicdomain/zero/1.0/((deed&#124;legalcode)(.(id&#124;eu&#124;da&#124;de&#124;en&#124;es&#124;fr&#124;fy&#124;hr&#124;it&#124;lv&#124;lt&#124;ni&#124;no&#124;pl&#124;pt&#124;ro&#124;si&#124;fi&#124;sv&#124;tr&#124;cs&#124;el&#124;ru&#124;uk&#124;ar&#124;jp&#124;zh-hans&#124;zh-hant&#124;ko)){0,1})))$ }
 
 #### Examples
 
-dcterms:license="https://creativecommons.org/licenses/by/4.0/": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT,Response.comment="dcterms:license matches a term in the bdq:sourceAuthority"
+dcterms:license="https://creativecommons.org/licenses/by/4.0/": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT,Response.comment="dcterms:license matches a term in the bdqval:sourceAuthority"
 
-dcterms:license="GPL": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dcterms:license does not match a term in the bdq:sourceAuthority"
+dcterms:license="GPL": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dcterms:license does not match a term in the bdqval:sourceAuthority"
 
 
 #### Use Cases
 
-bdq:Record-Management
+bdqval:Record-Management
 
 #### Notes
 
@@ -388,7 +388,7 @@ Do the geographic coordinates fall on or within the boundaries of the territory 
 
 #### Expected Response
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if one or more of dwc:decimalLatitude, dwc:decimalLongitude, or dwc:countryCode are bdq:Empty or invalid; COMPLIANT if the geographic coordinates fall on or within the boundary defined by the union of the boundary of the country from dwc:countryCode plus it's Exclusive Economic Zone as found in the bdq:sourceAuthority, if any, plus an exterior buffer given by bdq:spatialBufferInMeters; otherwise NOT_COMPLIANT
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if one or more of dwc:decimalLatitude, dwc:decimalLongitude, or dwc:countryCode are bdqval:Empty or invalid; COMPLIANT if the geographic coordinates fall on or within the boundary defined by the union of the boundary of the country from dwc:countryCode plus it's Exclusive Economic Zone as found in the bdqval:sourceAuthority, if any, plus an exterior buffer given by bdqval:spatialBufferInMeters; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -397,11 +397,11 @@ dwc:countryCode,dwc:decimalLatitude,dwc:decimalLongitude
 
 #### Parameters
 
-bdq:sourceAuthority,bdq:spatialBufferInMeters
+bdqval:sourceAuthority,bdqval:spatialBufferInMeters
 
 #### Default Parameter Values
 
-bdq:sourceAuthority default = "10m-admin-1 boundaries UNION with Exclusive Economic Zones" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/] spatial UNION [https://www.marineregions.org/downloads.php#marbound]},bdq:spatialBufferInMeters default = "3000"
+bdqval:sourceAuthority default = "10m-admin-1 boundaries UNION with Exclusive Economic Zones" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/] spatial UNION [https://www.marineregions.org/downloads.php#marbound]},bdqval:spatialBufferInMeters default = "3000"
 
 #### Examples
 
@@ -414,11 +414,11 @@ dwc:countryCode="ZX", dwc:decimalLatitude="-41.0525925872862", dwc:decimalLongit
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns
+bdqval:Spatial-Temporal_Patterns
 
 #### Notes
 
-dwc:coordinatePrecision and dwc:coordinateUncertaintyInMeters (if present) imply a potential displacement of the provided coordinates. These two terms can be considered spatial buffers. Likewise, country polygons cannot be 100% accurate at all scales (Dooley 2005), so a spatial buffer of the country boundaries is justified. When dwc:countryCode=XZ (for High Seas), the coordinate should fall into a marine region out side of the EEZ of any country. Taking the spatial buffers into account does however greatly complicate both the logic and the implementation of such Tests. The same applies to potential conversion of the Spatial Reference System (SRS) of dwc:decimalLatitude and dwc:decimalLongitude to the SRS used in the bdq:sourceAuthority.
+dwc:coordinatePrecision and dwc:coordinateUncertaintyInMeters (if present) imply a potential displacement of the provided coordinates. These two terms can be considered spatial buffers. Likewise, country polygons cannot be 100% accurate at all scales (Dooley 2005), so a spatial buffer of the country boundaries is justified. When dwc:countryCode=XZ (for High Seas), the coordinate should fall into a marine region out side of the EEZ of any country. Taking the spatial buffers into account does however greatly complicate both the logic and the implementation of such Tests. The same applies to potential conversion of the Spatial Reference System (SRS) of dwc:decimalLatitude and dwc:decimalLongitude to the SRS used in the bdqval:sourceAuthority.
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -431,11 +431,11 @@ Acts upon  SingleRecord
 
 #### Description
 
-Do the geographic coordinates fall on or within the boundary from the bdq:sourceAuthority for the given dwc:stateProvince or within the distance given by bdq:spatialBufferInMeters outside that boundary?
+Do the geographic coordinates fall on or within the boundary from the bdqval:sourceAuthority for the given dwc:stateProvince or within the distance given by bdqval:spatialBufferInMeters outside that boundary?
 
 #### Expected Response
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the values of dwc:decimalLatitude or dwc:decimalLongitude are bdq:Empty or invalid, or dwc:stateProvince is bdq:Empty or not found in the bdq:sourceAuthority; COMPLIANT if the geographic coordinates fall on or within the boundary in the bdq:sourceAuthority for the given dwc:stateProvince (after coordinate reference system transformations, if any, have been accounted for), or within the distance given by bdq:spatialBufferInMeters outside that boundary; otherwise NOT_COMPLIANT.
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the values of dwc:decimalLatitude or dwc:decimalLongitude are bdqval:Empty or invalid, or dwc:stateProvince is bdqval:Empty or not found in the bdqval:sourceAuthority; COMPLIANT if the geographic coordinates fall on or within the boundary in the bdqval:sourceAuthority for the given dwc:stateProvince (after coordinate reference system transformations, if any, have been accounted for), or within the distance given by bdqval:spatialBufferInMeters outside that boundary; otherwise NOT_COMPLIANT.
 
 #### Information Elements
 
@@ -444,11 +444,11 @@ dwc:stateProvince,dwc:decimalLatitude,dwc:decimalLongitude
 
 #### Parameters
 
-bdq:sourceAuthority,bdq:spatialBufferInMeters
+bdqval:sourceAuthority,bdqval:spatialBufferInMeters
 
 #### Default Parameter Values
 
-bdq:sourceAuthority default = "10m-admin-1 boundaries" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/]},bdq:spatialBufferInMeters default = "3000"
+bdqval:sourceAuthority default = "10m-admin-1 boundaries" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/]},bdqval:spatialBufferInMeters default = "3000"
 
 #### Examples
 
@@ -459,7 +459,7 @@ dwc:stateProvince="Córdoba", dwc:decimalLatitude="-41.0525925872862", dwc:decim
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -476,11 +476,11 @@ Acts upon  SingleRecord
 
 #### Description
 
-Does the marine/non-marine biome of a taxon from the bdq:sourceAuthority match the biome at the location given by the coordinates?
+Does the marine/non-marine biome of a taxon from the bdqval:sourceAuthority match the biome at the location given by the coordinates?
 
 #### Expected Response
 
-EXTERNAL_PREREQUISITES_NOT_MET if either bdq:taxonIsMarine or bdq:geospatialLand are not available; INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:scientificName is bdq:Empty or (2) the values of dwc:decimalLatitude or dwc:decimalLongitude are bdq:Empty or (3) if bdq:assumptionOnUnknownBiome is noassumption and the marine/nonmarine status of the taxon is not interpretable from bdq:taxonIsMarine; COMPLIANT if (1) the taxon marine/nonmarine status from bdq:taxonIsMarine matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdq:geospatialLand plus an exterior buffer given by bdq:spatialBufferInMeters or (2) if the marine/nonmarine status of the taxon is not interpretable from bdq:taxonIsMarine and bdq:assumptionOnUnknownBiome matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdq:geospatialLand plus an exterior buffer given by bdq:spatialBufferInMeters; otherwise NOT_COMPLIANT
+EXTERNAL_PREREQUISITES_NOT_MET if either bdqval:taxonIsMarine or bdqval:geospatialLand are not available; INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:scientificName is bdqval:Empty or (2) the values of dwc:decimalLatitude or dwc:decimalLongitude are bdqval:Empty or (3) if bdqval:assumptionOnUnknownBiome is noassumption and the marine/nonmarine status of the taxon is not interpretable from bdqval:taxonIsMarine; COMPLIANT if (1) the taxon marine/nonmarine status from bdqval:taxonIsMarine matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdqval:geospatialLand plus an exterior buffer given by bdqval:spatialBufferInMeters or (2) if the marine/nonmarine status of the taxon is not interpretable from bdqval:taxonIsMarine and bdqval:assumptionOnUnknownBiome matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdqval:geospatialLand plus an exterior buffer given by bdqval:spatialBufferInMeters; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -492,11 +492,11 @@ dwc:scientificName
 
 #### Parameters
 
-bdq:taxonIsMarine,bdq:geospatialLand,bdq:spatialBufferInMeters,bdq:assumptionOnUnknownBiome
+bdqval:taxonIsMarine,bdqval:geospatialLand,bdqval:spatialBufferInMeters,bdqval:assumptionOnUnknownBiome
 
 #### Default Parameter Values
 
-bdq:taxonIsMarine default = "World Register of Marine Species (WoRMS)" {[https://www.marinespecies.org/]} {Web service [https://www.marinespecies.org/aphia.php?p=webservice]},bdq:geospatialLand default = "Union of NaturalEarth 10m-physical-vectors for Land and NaturalEarth Minor Islands" {[https://naciscdn.org/naturalearth/10m/physical/ne_10m_land.zip], [https://naciscdn.org/naturalearth/10m/physical/ne_10m_minor_islands.zip]},bdq:spatialBufferInMeters default = "3000",bdq:assumptionOnUnknownBiome default = "noassumption"
+bdqval:taxonIsMarine default = "World Register of Marine Species (WoRMS)" {[https://www.marinespecies.org/]} {Web service [https://www.marinespecies.org/aphia.php?p=webservice]},bdqval:geospatialLand default = "Union of NaturalEarth 10m-physical-vectors for Land and NaturalEarth Minor Islands" {[https://naciscdn.org/naturalearth/10m/physical/ne_10m_land.zip], [https://naciscdn.org/naturalearth/10m/physical/ne_10m_minor_islands.zip]},bdqval:spatialBufferInMeters default = "3000",bdqval:assumptionOnUnknownBiome default = "noassumption"
 
 #### Examples
 
@@ -507,11 +507,11 @@ dwc:decimalLatitude="20.0", dwc:decimalLongitude="-30.0", dwc:scientificName="Vi
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
-dwc:coordinatePrecision and dwc:coordinateUncertaintyInMeters (if present) imply a potential displacement of the provided coordinates. These two terms can be considered spatial buffers. Likewise, country polygons cannot be 100% accurate at all scales (Dooley 2005), so a spatial buffer of the country boundaries is justified. Taking the spatial buffers into account does however greatly complicate both the logic and the implementation of such Tests. The same applies to potential conversion of the Spatial Reference System (SRS) of dwc:decimalLatitude and dwc:decimalLongitude to the SRS used in the bdq:sourceAuthority. Note that in the current implementation Tests treat "brackish" in WoRMS as both marine and terrestrial. Note that both bdq:taxonIsMarine and bdq:geospatialLand are bdq:sourceAuthorities, but as they form two parameters, distinct names are used for them.
+dwc:coordinatePrecision and dwc:coordinateUncertaintyInMeters (if present) imply a potential displacement of the provided coordinates. These two terms can be considered spatial buffers. Likewise, country polygons cannot be 100% accurate at all scales (Dooley 2005), so a spatial buffer of the country boundaries is justified. Taking the spatial buffers into account does however greatly complicate both the logic and the implementation of such Tests. The same applies to potential conversion of the Spatial Reference System (SRS) of dwc:decimalLatitude and dwc:decimalLongitude to the SRS used in the bdqval:sourceAuthority. Note that in the current implementation Tests treat "brackish" in WoRMS as both marine and terrestrial. Note that both bdqval:taxonIsMarine and bdqval:geospatialLand are bdqval:sourceAuthorities, but as they form two parameters, distinct names are used for them.
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -528,7 +528,7 @@ Are the values of either dwc:decimalLatitude or dwc:decimalLongitude numbers tha
 
 #### Expected Response
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLatitude is bdq:Empty or is not interpretable as a number, or dwc:decimalLongitude is bdq:Empty or is not interpretable as a number; COMPLIANT if either the value of dwc:decimalLatitude is not = 0 or the value of dwc:decimalLongitude is not = 0; otherwise NOT_COMPLIANT
+INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLatitude is bdqval:Empty or is not interpretable as a number, or dwc:decimalLongitude is bdqval:Empty or is not interpretable as a number; COMPLIANT if either the value of dwc:decimalLatitude is not = 0 or the value of dwc:decimalLongitude is not = 0; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -544,7 +544,7 @@ dwc:decimalLatitude="0", dwc:decimalLongitude="0",: Response.status=RUN_HAS_RESU
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns
+bdqval:Spatial-Temporal_Patterns
 
 #### Notes
 
@@ -565,7 +565,7 @@ Is the value of dwc:coordinateUncertaintyInMeters a number between 1 and 20,037,
 
 #### Expected Response
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:coordinateUncertaintyInMeters is bdq:Empty; COMPLIANT if the value of dwc:coordinateUncertaintyInMeters is interpreted as a number between 1 and 20037509 inclusive; otherwise NOT_COMPLIANT
+INTERNAL_PREREQUISITES_NOT_MET if dwc:coordinateUncertaintyInMeters is bdqval:Empty; COMPLIANT if the value of dwc:coordinateUncertaintyInMeters is interpreted as a number between 1 and 20037509 inclusive; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -581,7 +581,7 @@ dwc:coordinateUncertaintyInMeters="-1": Response.status=RUN_HAS_RESULT, Response
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -602,7 +602,7 @@ Is there a value in dwc:countryCode?
 
 #### Expected Response
 
-COMPLIANT if dwc:countryCode is bdq:NotEmpty; otherwise NOT_COMPLIANT
+COMPLIANT if dwc:countryCode is bdqval:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -611,14 +611,14 @@ dwc:countryCode
 
 #### Examples
 
-dwc:countryCode="Australia": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:countryCode is bdq:NotEmpty"
+dwc:countryCode="Australia": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:countryCode is bdqval:NotEmpty"
 
-dwc:countryCode="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:countryCode is bdq:Empty"
+dwc:countryCode="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:countryCode is bdqval:Empty"
 
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -639,7 +639,7 @@ Is the value of dwc:countryCode a valid ISO 3166-1-alpha-2 country code?
 
 #### Expected Response
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode is bdq:Empty; COMPLIANT if dwc:countryCode can be unambiguously interpreted as a valid ISO 3166-1-alpha-2 country code in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode is bdqval:Empty; COMPLIANT if dwc:countryCode can be unambiguously interpreted as a valid ISO 3166-1-alpha-2 country code in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -648,7 +648,7 @@ dwc:countryCode
 
 #### Source Authority
 
-bdq:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}
+bdqval:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}
 
 #### Examples
 
@@ -659,7 +659,7 @@ dwc:countryCode="GRL": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPL
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -680,7 +680,7 @@ Does the ISO country code, determined from the value of dwc:country, equal the v
 
 #### Expected Response
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if either of the terms dwc:country or dwc:countryCode are bdq:Empty; COMPLIANT if the values of dwc:country and dwc:countryCode match national-level country name and matching country code respectively in the bdq:sourceAuthority
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if either of the terms dwc:country or dwc:countryCode are bdqval:Empty; COMPLIANT if the values of dwc:country and dwc:countryCode match national-level country name and matching country code respectively in the bdqval:sourceAuthority
 
 #### Information Elements
 
@@ -689,7 +689,7 @@ dwc:country,dwc:countryCode
 
 #### Source Authority
 
-bdq:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}
+bdqval:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}
 
 #### Examples
 
@@ -700,7 +700,7 @@ dwc:country="United States Minor Outlying Islands", dwc:countryCode="US": Respon
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -717,11 +717,11 @@ Acts upon  SingleRecord
 
 #### Description
 
-Is the combination of the values of the terms dwc:country, dwc:stateProvince unique in the bdq:sourceAuthority?
+Is the combination of the values of the terms dwc:country, dwc:stateProvince unique in the bdqval:sourceAuthority?
 
 #### Expected Response
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the terms dwc:country and dwc:stateProvince are bdq:Empty; COMPLIANT if the combination of values of dwc:country and dwc:stateProvince are unambiguously resolved to a single result with a child-parent relationship in the bdq:sourceAuthority and the entity matching the value of dwc:country in the bdq:sourceAuthority is an ISO 3166 country-like administrative entity in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the terms dwc:country and dwc:stateProvince are bdqval:Empty; COMPLIANT if the combination of values of dwc:country and dwc:stateProvince are unambiguously resolved to a single result with a child-parent relationship in the bdqval:sourceAuthority and the entity matching the value of dwc:country in the bdqval:sourceAuthority is an ISO 3166 country-like administrative entity in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -730,11 +730,11 @@ dwc:country,dwc:stateProvince
 
 #### Parameters
 
-bdq:sourceAuthority
+bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdq:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}
+bdqval:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}
 
 #### Examples
 
@@ -745,7 +745,7 @@ dwc:country="", dwc:stateProvince="WA": Response.status=RUN_HAS_RESULT, Response
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -762,11 +762,11 @@ Acts upon  SingleRecord
 
 #### Description
 
-Does the value of dwc:country occur in the bdq:sourceAuthority?
+Does the value of dwc:country occur in the bdqval:sourceAuthority?
 
 #### Expected Response
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:country is bdq:Empty; COMPLIANT if value of dwc:country is a place type equivalent to administrative entity of "nation" in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:country is bdqval:Empty; COMPLIANT if value of dwc:country is a place type equivalent to administrative entity of "nation" in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -775,22 +775,22 @@ dwc:country
 
 #### Parameters
 
-bdq:sourceAuthority
+bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdq:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}
+bdqval:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}
 
 #### Examples
 
-dwc:country="Eswatini": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:country is a valid country name in the bdq:sourceAuthority"
+dwc:country="Eswatini": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:country is a valid country name in the bdqval:sourceAuthority"
 
-dwc:country="Tasmania": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="Tasmania is not found at the level of national in the bdq:sourceAuthority"
+dwc:country="Tasmania": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="Tasmania is not found at the level of national in the bdqval:sourceAuthority"
 
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -811,7 +811,7 @@ Is there a value in dwc:country?
 
 #### Expected Response
 
-COMPLIANT if dwc:country is bdq:NotEmpty or dwc:countryCode has a value of "XZ" and either dwc:country is bdq:Empty or has a value of "High seas"; otherwise NOT_COMPLIANT
+COMPLIANT if dwc:country is bdqval:NotEmpty or dwc:countryCode has a value of "XZ" and either dwc:country is bdqval:Empty or has a value of "High seas"; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -823,18 +823,18 @@ dwc:countryCode
 
 #### Examples
 
-dwc:country="Eswatini": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:country is bdq:NotEmpty"
+dwc:country="Eswatini": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:country is bdqval:NotEmpty"
 
-dwc:country="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:country is bdq:Empty"
+dwc:country="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:country is bdqval:Empty"
 
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
-Country is expected to be either bdq:Empty or, ideally, have a value of "High seas" or an agreed equivalent if material comes from the high seas, or from those portions of Antarctica outside of any sovereign nation.
+Country is expected to be either bdqval:Empty or, ideally, have a value of "High seas" or an agreed equivalent if material comes from the high seas, or from those portions of Antarctica outside of any sovereign nation.
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -851,7 +851,7 @@ Is the value of dwc:decimalLatitude a number between -90 and 90 inclusive?
 
 #### Expected Response
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLatitude is bdq:Empty or the value is not interpretable as a number; COMPLIANT if the value of dwc:decimalLatitude is between -90 and 90, inclusive; otherwise NOT_COMPLIANT
+INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLatitude is bdqval:Empty or the value is not interpretable as a number; COMPLIANT if the value of dwc:decimalLatitude is between -90 and 90, inclusive; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -867,7 +867,7 @@ dwc:decimalLatitude="121.0534": Response.status=RUN_HAS_RESULT, Response.result=
 
 #### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -884,7 +884,7 @@ Is there a value in dwc:decimalLatitude?
 
 #### Expected Response
 
-COMPLIANT if dwc:decimalLatitude is bdq:NotEmpty; otherwise NOT_COMPLIANT
+COMPLIANT if dwc:decimalLatitude is bdqval:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -893,14 +893,14 @@ dwc:decimalLatitude
 
 #### Examples
 
-dwc:decimalLatitude="0": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:decimalLatitude is bdq:NotEmpty"
+dwc:decimalLatitude="0": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:decimalLatitude is bdqval:NotEmpty"
 
-dwc:decimalLatitude="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:decimalLatitude is bdq:Empty"
+dwc:decimalLatitude="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:decimalLatitude is bdqval:Empty"
 
 
 #### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -917,7 +917,7 @@ Is the value of dwc:decimalLongitude a number between -180 and 180 inclusive?
 
 #### Expected Response
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLongitude is bdq:Empty or the value is not a number; COMPLIANT if the value of dwc:decimalLongitude is between -180 and 180 degrees, inclusive; otherwise NOT_COMPLIANT
+INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLongitude is bdqval:Empty or the value is not a number; COMPLIANT if the value of dwc:decimalLongitude is between -180 and 180 degrees, inclusive; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -933,7 +933,7 @@ dwc:decimalLongitude="181.0554": Response.status=RUN_HAS_RESULT, Response.result
 
 #### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -950,7 +950,7 @@ Is there a value in dwc:decimalLongitude?
 
 #### Expected Response
 
-COMPLIANT if dwc:decimalLongitude is bdq:NotEmpty; otherwise NOT_COMPLIANT
+COMPLIANT if dwc:decimalLongitude is bdqval:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -959,14 +959,14 @@ dwc:decimalLongitude
 
 #### Examples
 
-dwc:decimalLongitude="0": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:decimalLongitude is bdq:NotEmpty"
+dwc:decimalLongitude="0": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:decimalLongitude is bdqval:NotEmpty"
 
-dwc:decimalLongitude=" ": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:decimalLongitude is bdq:Empty"
+dwc:decimalLongitude=" ": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:decimalLongitude is bdqval:Empty"
 
 
 #### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -983,7 +983,7 @@ Is there a value in dwc:geodeticDatum?
 
 #### Expected Response
 
-COMPLIANT if dwc:geodeticDatum is bdq:NotEmpty; otherwise NOT_COMPLIANT
+COMPLIANT if dwc:geodeticDatum is bdqval:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -992,14 +992,14 @@ dwc:geodeticDatum
 
 #### Examples
 
-dwc:geodeticDatum="UTM": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:geodeticDatum is bdq:NotEmpty"
+dwc:geodeticDatum="UTM": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:geodeticDatum is bdqval:NotEmpty"
 
-dwc:geodeticDatum="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:geodeticDatum is bdq:Empty."
+dwc:geodeticDatum="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:geodeticDatum is bdqval:Empty."
 
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -1012,11 +1012,11 @@ Acts upon  SingleRecord
 
 #### Description
 
-Does the value of dwc:geodeticDatum occur as a valid geographic CRS, geodetic Datum or ellipsoid in bdq:sourceAuthority?
+Does the value of dwc:geodeticDatum occur as a valid geographic CRS, geodetic Datum or ellipsoid in bdqval:sourceAuthority?
 
 #### Expected Response
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; COMPLIANT if the value of dwc:geodeticDatum is a valid code from the bdq:sourceAuthority (in the form Authority:Number) for a Datum, or ellipsoid, or for a CRS appropriate for a 2D geographic coordinate in degrees, or is the value "not recorded"; otherwise NOT_COMPLIANT
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available, INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdqval:Empty; COMPLIANT if the value of dwc:geodeticDatum is a valid code from the bdqval:sourceAuthority (in the form Authority:Number) for a Datum, or ellipsoid, or for a CRS appropriate for a 2D geographic coordinate in degrees, or is the value "not recorded"; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -1025,18 +1025,18 @@ dwc:geodeticDatum
 
 #### Source Authority
 
-bdq:sourceAuthority = "EPSG" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index]}
+bdqval:sourceAuthority = "EPSG" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index]}
 
 #### Examples
 
-dwc:geodeticDatum="EPSG:4326": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:geodeticDatum matches an unambiguous alphanumeric CRS or datum code value in the bdq:sourceAuthority"
+dwc:geodeticDatum="EPSG:4326": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:geodeticDatum matches an unambiguous alphanumeric CRS or datum code value in the bdqval:sourceAuthority"
 
-dwc:geodeticDatum="7030": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:geodeticDatum doesn't match values in the bdq:sourceAuthority, 7030 is a bare number without an authority.
+dwc:geodeticDatum="7030": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:geodeticDatum doesn't match values in the bdqval:sourceAuthority, 7030 is a bare number without an authority.
 
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -1057,7 +1057,7 @@ Is there a value in any of the Darwin Core spatial terms that could specify a lo
 
 #### Expected Response
 
-COMPLIANT if at least one term needed to determine the location of the entity exists and is bdq:NotEmpty; otherwise NOT_COMPLIANT
+COMPLIANT if at least one term needed to determine the location of the entity exists and is bdqval:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -1066,14 +1066,14 @@ dwc:higherGeographyID,dwc:higherGeography,dwc:continent,dwc:country,dwc:countryC
 
 #### Examples
 
-dwc:locationID="https://opencontext.org/subjects/e54377f7-4452-4315-b676-40679b10c4d9", dwc:higherGeographyID="", dwc:higherGeography="",dwc:continent="", dwc:waterBody="", dwc:islandGroup="", dwc:island="", dwc:country="", dwc:countryCode="", dwc:stateProvince="", dwc:county="", dwc:municipality="", dwc:locality="", dwc:verbatimLocality="", dwc:decimalLatitude="", dwc:decimalLongitude="", dwc:coordinateUncertaintyInMeters="", dwc:geodeticDatum="", dwc:verbatimCoordinates="", dwc:verbatimLatitude="", dwc:verbatimLongitude="", dwc:footprintWKT="": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:LocationID is bdq:NotEmpty"
+dwc:locationID="https://opencontext.org/subjects/e54377f7-4452-4315-b676-40679b10c4d9", dwc:higherGeographyID="", dwc:higherGeography="",dwc:continent="", dwc:waterBody="", dwc:islandGroup="", dwc:island="", dwc:country="", dwc:countryCode="", dwc:stateProvince="", dwc:county="", dwc:municipality="", dwc:locality="", dwc:verbatimLocality="", dwc:decimalLatitude="", dwc:decimalLongitude="", dwc:coordinateUncertaintyInMeters="", dwc:geodeticDatum="", dwc:verbatimCoordinates="", dwc:verbatimLatitude="", dwc:verbatimLongitude="", dwc:footprintWKT="": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:LocationID is bdqval:NotEmpty"
 
-dwc:locationID="", dwc:higherGeographyID="", dwc:higherGeography="", dwc:continent="", dwc:waterBody="", dwc:islandGroup="", dwc:island="", dwc:country="", dwc:countryCode="", dwc:stateProvince="", dwc:county="", dwc:municipality="", dwc:locality="", dwc:verbatimLocality="", dwc:decimalLatitude="", dwc:decimalLongitude="", dwc:coordinateUncertaintyInMeters="", dwc:geodeticDatum="", dwc:verbatimCoordinates="", dwc:verbatimLatitude="", dwc:verbatimLongitude="", dwc:footprintWKT="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="All location fields are bdq:Empty"
+dwc:locationID="", dwc:higherGeographyID="", dwc:higherGeography="", dwc:continent="", dwc:waterBody="", dwc:islandGroup="", dwc:island="", dwc:country="", dwc:countryCode="", dwc:stateProvince="", dwc:county="", dwc:municipality="", dwc:locality="", dwc:verbatimLocality="", dwc:decimalLatitude="", dwc:decimalLongitude="", dwc:coordinateUncertaintyInMeters="", dwc:geodeticDatum="", dwc:verbatimCoordinates="", dwc:verbatimLatitude="", dwc:verbatimLongitude="", dwc:footprintWKT="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="All location fields are bdqval:Empty"
 
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -1094,7 +1094,7 @@ Is the value of dwc:maximumDepthInMeters within the Parameter range?
 
 #### Expected Response
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumDepthInMeters is bdq:Empty or is not interpretable as a number greater than or equal to zero; COMPLIANT if the value of dwc:maximumDepthInMeters is within the range of bdq:minimumValidDepthInMeters to bdq:maximumValidDepthInMeters inclusive; otherwise NOT_COMPLIANT
+INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumDepthInMeters is bdqval:Empty or is not interpretable as a number greater than or equal to zero; COMPLIANT if the value of dwc:maximumDepthInMeters is within the range of bdqval:minimumValidDepthInMeters to bdqval:maximumValidDepthInMeters inclusive; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -1103,11 +1103,11 @@ dwc:maximumDepthInMeters
 
 #### Parameters
 
-bdq:minimumValidDepthInMeters,bdq:maximumValidDepthInMeters
+bdqval:minimumValidDepthInMeters,bdqval:maximumValidDepthInMeters
 
 #### Default Parameter Values
 
-bdq:minimumValidDepthInMeters default="0",bdq:maximumValidDepthInMeters default="11000"
+bdqval:minimumValidDepthInMeters default="0",bdqval:maximumValidDepthInMeters default="11000"
 
 #### Examples
 
@@ -1118,11 +1118,11 @@ dwc:maximumDepthInMeters="99999": Response.status=RUN_HAS_RESULT, Response.resul
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
-The Challenger Deep in the Mariana Trench is the deepest known point in Earth's oceans at 10,994 meters below sea level. We have rounded up bdq:maximumValidDepthInMeters.
+The Challenger Deep in the Mariana Trench is the deepest known point in Earth's oceans at 10,994 meters below sea level. We have rounded up bdqval:maximumValidDepthInMeters.
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -1139,7 +1139,7 @@ Is the value of dwc:maximumElevationInMeters within the Parameter range?
 
 #### Expected Response
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumElevationInMeters is bdq:Empty or the value cannot be interpreted as a number; COMPLIANT if the value of dwc:maximumElevationInMeters is within the range of bdq:minimumValidElevationInMeters to bdq:maximumValidElevationInMeters inclusive; otherwise NOT_COMPLIANT
+INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumElevationInMeters is bdqval:Empty or the value cannot be interpreted as a number; COMPLIANT if the value of dwc:maximumElevationInMeters is within the range of bdqval:minimumValidElevationInMeters to bdqval:maximumValidElevationInMeters inclusive; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -1148,11 +1148,11 @@ dwc:maximumElevationInMeters
 
 #### Parameters
 
-bdq:minimumValidElevationInMeters,bdq:maximumValidElevationInMeters
+bdqval:minimumValidElevationInMeters,bdqval:maximumValidElevationInMeters
 
 #### Default Parameter Values
 
-bdq:minimumValidElevationInMeters default = "-430",bdq:maximumValidElevationInMeters default = "8850"
+bdqval:minimumValidElevationInMeters default = "-430",bdqval:maximumValidElevationInMeters default = "8850"
 
 #### Examples
 
@@ -1163,7 +1163,7 @@ dwc:maximumElevationInMeters="-500": Response.status=RUN_HAS_RESULT, Response.re
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -1184,7 +1184,7 @@ Is the value of dwc:minimumDepthInMeters within the Parameter range?
 
 #### Expected Response
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters is bdq:Empty, or the value is not interpretable as number greater than or equal to zero; COMPLIANT if the value of dwc:minimumDepthInMeters is within the range of bdq:minimumValidDepthInMeters to bdq:maximumValidDepthInMeters inclusive; otherwise NOT_COMPLIANT
+INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters is bdqval:Empty, or the value is not interpretable as number greater than or equal to zero; COMPLIANT if the value of dwc:minimumDepthInMeters is within the range of bdqval:minimumValidDepthInMeters to bdqval:maximumValidDepthInMeters inclusive; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -1193,11 +1193,11 @@ dwc:minimumDepthInMeters
 
 #### Parameters
 
-bdq:minimumValidDepthInMeters,bdq:maximumValidDepthInMeters
+bdqval:minimumValidDepthInMeters,bdqval:maximumValidDepthInMeters
 
 #### Default Parameter Values
 
-bdq:minimumValidDepthInMeters default="0",bdq:maximumValidDepthInMeters default="11000"
+bdqval:minimumValidDepthInMeters default="0",bdqval:maximumValidDepthInMeters default="11000"
 
 #### Examples
 
@@ -1208,11 +1208,11 @@ dwc:minimumDepthInMeters="12000": Response.status=RUN_HAS_RESULT, Response.resul
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
-The Challenger Deep in the Mariana Trench is the deepest known point in Earth's oceans at 10,994 meters below sea level. We have rounded up bdq:maximumValidDepthInMeters.
+The Challenger Deep in the Mariana Trench is the deepest known point in Earth's oceans at 10,994 meters below sea level. We have rounded up bdqval:maximumValidDepthInMeters.
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -1229,7 +1229,7 @@ Is the value of dwc:minimumDepthInMeters a number less than or equal to the valu
 
 #### Expected Response
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters or dwc:maximumDepthInMeters is bdq:Empty, or if either are interpretable as not zero or a positive number; COMPLIANT if the value of dwc:minimumDepthInMeters is less than or equal to the value of dwc:maximumDepthInMeters; otherwise NOT_COMPLIANT
+INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters or dwc:maximumDepthInMeters is bdqval:Empty, or if either are interpretable as not zero or a positive number; COMPLIANT if the value of dwc:minimumDepthInMeters is less than or equal to the value of dwc:maximumDepthInMeters; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -1245,7 +1245,7 @@ dwc:minimumDepthInMeters="1", dwc:maximumDepthInMeters="0": Response.status=RUN_
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -1262,7 +1262,7 @@ Is the value of dwc:minimumElevationInMeters within the Parameter range?
 
 #### Expected Response
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumElevationInMeters is bdq:Empty or the value is not a number; COMPLIANT if the value of dwc:minimumElevationInMeters is within the range of bdq:minimumValidElevationInMeters to bdq:maximumValidElevationInMeters inclusive; otherwise NOT_COMPLIANT
+INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumElevationInMeters is bdqval:Empty or the value is not a number; COMPLIANT if the value of dwc:minimumElevationInMeters is within the range of bdqval:minimumValidElevationInMeters to bdqval:maximumValidElevationInMeters inclusive; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -1271,11 +1271,11 @@ dwc:minimumElevationInMeters
 
 #### Parameters
 
-bdq:minimumValidElevationInMeters,bdq:maximumValidElevationInMeters
+bdqval:minimumValidElevationInMeters,bdqval:maximumValidElevationInMeters
 
 #### Default Parameter Values
 
-bdq:minimumValidElevationInMeters default = "-430",bdq:maximumValidElevationInMeters default = "8850"
+bdqval:minimumValidElevationInMeters default = "-430",bdqval:maximumValidElevationInMeters default = "8850"
 
 #### Examples
 
@@ -1286,7 +1286,7 @@ dwc:minimumElevationInMeters="-500": Response.status=RUN_HAS_RESULT, Response.re
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -1307,7 +1307,7 @@ Is the value of dwc:minimumElevationInMeters a number less than or equal to the 
 
 #### Expected Response
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumlevationInMeters or dwc:minimumElevationInMeters is bdq:Empty, or if either is not a number; COMPLIANT if the value of dwc:minimumElevationInMeters is a number less than or equal to the value of the number dwc:maximumElevationInMeters, otherwise NOT_COMPLIANT
+INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumlevationInMeters or dwc:minimumElevationInMeters is bdqval:Empty, or if either is not a number; COMPLIANT if the value of dwc:minimumElevationInMeters is a number less than or equal to the value of the number dwc:maximumElevationInMeters, otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -1323,7 +1323,7 @@ dwc:minimumElevationInMeters="1", dwc:maximumElevationInMeters="0": Response.sta
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -1336,11 +1336,11 @@ Acts upon  SingleRecord
 
 #### Description
 
-Does the value of dwc:stateProvince occur in the bdq:sourceAuthority?
+Does the value of dwc:stateProvince occur in the bdqval:sourceAuthority?
 
 #### Expected Response
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:stateProvince is bdq:Empty; COMPLIANT if the value of dwc:stateProvince occurs as an administrative entity that is a child to at least one entity representing an ISO 3166 country-like entity in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:stateProvince is bdqval:Empty; COMPLIANT if the value of dwc:stateProvince occurs as an administrative entity that is a child to at least one entity representing an ISO 3166 country-like entity in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -1349,22 +1349,22 @@ dwc:stateProvince
 
 #### Parameters
 
-bdq:sourceAuthority
+bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdq:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}
+bdqval:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}
 
 #### Examples
 
-dwc:stateProvince="Florida": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:stateProvince found in bdq:sourceAuthority"
+dwc:stateProvince="Florida": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:stateProvince found in bdqval:sourceAuthority"
 
-dwc:stateProvince="Taswegian": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:stateProvince not found in bdq:sourceAuthority"
+dwc:stateProvince="Taswegian": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:stateProvince not found in bdqval:sourceAuthority"
 
 
 #### Use Cases
 
-bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -1385,7 +1385,7 @@ Is the value of dwc:day interpretable as a valid integer between 1 and 28 inclus
 
 #### Expected Response
 
-INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:day is bdq:Empty, or (2) dwc:day is not interpretable as an integer, or (3) dwc:day is interpretable as an integer between 29 and 31 inclusive and dwc:month is not interpretable as an integer between 1 and 12, or (4) dwc:month is interpretable as the integer 2 and dwc:day is interpretable as the integer 29 and dwc:year is not interpretable as a valid ISO 8601 year; COMPLIANT if (1) the value of dwc:day is interpretable as an integer between 1 and 28 inclusive, or (2) dwc:day is interpretable as an integer between 29 and 30 and dwc:month is interpretable as an integer in the set (4,6,9,11), or (3) dwc:day is interpretable as an integer between 29 and 31 and dwc:month is interpretable as an integer in the set (1,3,5,7,8,10,12), or (4) dwc:day is interpretable as the integer 29 and dwc:month is interpretable as the integer 2 and dwc:year is interpretable as is a valid leap year (evenly divisible by 400 or (evenly divisible by 4 but not evenly divisible by 100)); otherwise NOT_COMPLIANT.
+INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:day is bdqval:Empty, or (2) dwc:day is not interpretable as an integer, or (3) dwc:day is interpretable as an integer between 29 and 31 inclusive and dwc:month is not interpretable as an integer between 1 and 12, or (4) dwc:month is interpretable as the integer 2 and dwc:day is interpretable as the integer 29 and dwc:year is not interpretable as a valid ISO 8601 year; COMPLIANT if (1) the value of dwc:day is interpretable as an integer between 1 and 28 inclusive, or (2) dwc:day is interpretable as an integer between 29 and 30 and dwc:month is interpretable as an integer in the set (4,6,9,11), or (3) dwc:day is interpretable as an integer between 29 and 31 and dwc:month is interpretable as an integer in the set (1,3,5,7,8,10,12), or (4) dwc:day is interpretable as the integer 29 and dwc:month is interpretable as the integer 2 and dwc:year is interpretable as is a valid leap year (evenly divisible by 400 or (evenly divisible by 4 but not evenly divisible by 100)); otherwise NOT_COMPLIANT.
 
 #### Information Elements
 
@@ -1401,7 +1401,7 @@ dwc:day="30", dwc:month="2", dwc:year="1952": Response.status=RUN_HAS_RESULT, Re
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -1422,7 +1422,7 @@ Is the value of dwc:day an integer between 1 and 31 inclusive?
 
 #### Expected Response
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:day is bdq:Empty; COMPLIANT if the value of the field dwc:day is an integer between 1 and 31 inclusive; otherwise NOT_COMPLIANT.
+INTERNAL_PREREQUISITES_NOT_MET if dwc:day is bdqval:Empty; COMPLIANT if the value of the field dwc:day is an integer between 1 and 31 inclusive; otherwise NOT_COMPLIANT.
 
 #### Information Elements
 
@@ -1438,7 +1438,7 @@ dwc:day="32": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Res
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -1459,7 +1459,7 @@ Is the value of dwc:endDayOfYear an integer between 1 and 365 inclusive, or 366 
 
 #### Expected Response
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:endDayOfYear is bdq:Empty or if the value of dwc:endDayOfYear is equal to 366 and (dwc:eventDate is bdq:Empty or the value of dwc:eventDate cannot be interpreted to find a single year or an end year in a range); COMPLIANT if the value of dwc:endDayOfYear is an integer between 1 and 365 inclusive, or if the value of dwc:endDayOfYear is 366 and the end year interpreted from dwc:eventDate is a leap year; otherwise NOT_COMPLIANT
+INTERNAL_PREREQUISITES_NOT_MET if dwc:endDayOfYear is bdqval:Empty or if the value of dwc:endDayOfYear is equal to 366 and (dwc:eventDate is bdqval:Empty or the value of dwc:eventDate cannot be interpreted to find a single year or an end year in a range); COMPLIANT if the value of dwc:endDayOfYear is an integer between 1 and 365 inclusive, or if the value of dwc:endDayOfYear is 366 and the end year interpreted from dwc:eventDate is a leap year; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -1478,7 +1478,7 @@ dwc:eventDate="", dwc:endDayOfYear="x": Response.status=RUN_HAS_RESULT, Response
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -1499,7 +1499,7 @@ Is the value of dwc:eventDate entirely with the Parameter range?
 
 #### Expected Response
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty or if the value of dwc:eventDate is not a valid ISO 8601 date; COMPLIANT if the range of dwc:eventDate is entirely within the range bdq:earliestValidDate to bdq:latestValidDate, inclusive, otherwise NOT_COMPLIANT
+INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdqval:Empty or if the value of dwc:eventDate is not a valid ISO 8601 date; COMPLIANT if the range of dwc:eventDate is entirely within the range bdqval:earliestValidDate to bdqval:latestValidDate, inclusive, otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -1508,11 +1508,11 @@ dwc:eventDate
 
 #### Parameters
 
-bdq:earliestValidDate,bdq:latestValidDate
+bdqval:earliestValidDate,bdqval:latestValidDate
 
 #### Default Parameter Values
 
-bdq:earliestValidDate default ="1582-11-15",bdq:latestValidDate default = "{current year}"
+bdqval:earliestValidDate default ="1582-11-15",bdqval:latestValidDate default = "{current year}"
 
 #### Examples
 
@@ -1523,7 +1523,7 @@ dwc:eventDate="2300-11-01T10:00": Response.status=RUN_HAS_RESULT, Response.resul
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -1544,7 +1544,7 @@ Is there a value in dwc:eventDate?
 
 #### Expected Response
 
-COMPLIANT if dwc:eventDate is bdq:NotEmpty; otherwise NOT_COMPLIANT
+COMPLIANT if dwc:eventDate is bdqval:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -1553,14 +1553,14 @@ dwc:eventDate
 
 #### Examples
 
-dwc:eventDate="1964-11-01T10:00-0600": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:eventdate is bdq:NotEmpty"
+dwc:eventDate="1964-11-01T10:00-0600": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:eventdate is bdqval:NotEmpty"
 
-dwc:eventDate="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:eventDate is bdq:Empty"
+dwc:eventDate="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:eventDate is bdqval:Empty"
 
 
 #### Use Cases
 
-bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -1577,7 +1577,7 @@ Is the value of dwc:eventDate a valid ISO date?
 
 #### Expected Response
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty; COMPLIANT if the value of dwc:eventDate is a valid ISO 8601 date; otherwise NOT_COMPLIANT
+INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdqval:Empty; COMPLIANT if the value of dwc:eventDate is a valid ISO 8601 date; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -1593,7 +1593,7 @@ dwc:eventDate="1963-03-08T14:67-0600": Response.status=RUN_HAS_RESULT, Response.
 
 #### Use Cases
 
-bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 
@@ -1614,7 +1614,7 @@ Is there a value in any of the terms dwc:eventDate, dwc:year, dwc:month, dwc:day
 
 #### Expected Response
 
-COMPLIANT if any of dwc:eventDate, dwc:year, dwc:month, dwc:day, dwc:startDayOfYear, dwc:endDayOfYear, dwc:verbatimEventDate are bdq:NotEmpty; otherwise NOT_COMPLIANT.
+COMPLIANT if any of dwc:eventDate, dwc:year, dwc:month, dwc:day, dwc:startDayOfYear, dwc:endDayOfYear, dwc:verbatimEventDate are bdqval:NotEmpty; otherwise NOT_COMPLIANT.
 
 #### Information Elements
 
@@ -1623,18 +1623,18 @@ dwc:eventDate,dwc:year,dwc:month,dwc:day,dwc:startDayOfYear,dwc:endDayOfYear,dwc
 
 #### Examples
 
-dwc:day="", dwc:month="", dwc:year="", dwc:eventDate="1962-11-01T10:00-0600", dwc:verbatimEventDate="", dwc:startDayOfYear="", dwc:endDayOfYear="": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:eventDate is bdq:NotEmpty"
+dwc:day="", dwc:month="", dwc:year="", dwc:eventDate="1962-11-01T10:00-0600", dwc:verbatimEventDate="", dwc:startDayOfYear="", dwc:endDayOfYear="": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:eventDate is bdqval:NotEmpty"
 
-dwc:dateIdentified="", dwc:day="", dwc:month="", dwc:year="", dwc:eventDate="", dwc:verbatimEventDate="", dwc:startDayOfYear="", dwc:endDayOfYear="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="All input fields bdq:Empty"
+dwc:dateIdentified="", dwc:day="", dwc:month="", dwc:year="", dwc:eventDate="", dwc:verbatimEventDate="", dwc:startDayOfYear="", dwc:endDayOfYear="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="All input fields bdqval:Empty"
 
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
-Only fails if all of the relevant fields of the Darwin Core Event class are bdq:Empty or do not exist. Relevant Darwin Core fields include dwc:eventDate, dwc:verbatimEventDate, dwc:year, dwc:month, dwc:day, dwc:startDayOfYear, dwc:endDayOfYear. The terms dwc:eventID (if populated may or may not point to temporal information accessible to the user of the data) and dwc:eventTime (which is rare) are not included.
+Only fails if all of the relevant fields of the Darwin Core Event class are bdqval:Empty or do not exist. Relevant Darwin Core fields include dwc:eventDate, dwc:verbatimEventDate, dwc:year, dwc:month, dwc:day, dwc:startDayOfYear, dwc:endDayOfYear. The terms dwc:eventID (if populated may or may not point to temporal information accessible to the user of the data) and dwc:eventTime (which is rare) are not included.
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -1651,7 +1651,7 @@ Are the values in dwc:eventDate consistent with the values in dwc:year, dwc:mont
 
 #### Expected Response
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty, or all of dwc:year, dwc:month, dwc:day, dwc:startDayOfYear and dwc:endDayOfYear are bdq:Empty; COMPLIANT if all of the following conditions are met (1) dwc:year is bdq:Empty or dwc:eventDate has a precision of one year or finer and and is within a single year and the provided value of dwc:year matches the year expressed in dwc:eventDate, and (2) dwc:month is bdq:Empty or dwc:eventDate has a precision of one month or finer and is within a single month and the provided value in dwc:month matches the month represented by dwc:eventDate, and (3) dwc:day is bdq:Empty or dwc:eventDate has a precision of a day or less and is within a single day and the provided value in dwc:day matches the day represented by dwc:eventDate, and (4) dwc:startDayOfYear is empty or dwc:eventDate has a precision of one day or finer and the provided value in dwc:startDayOfYear matches the start day of the year of the range represented by dwc:eventDate, and (5) dwc:endDayOfYear is empty or dwc:eventDate has a precision of one day or finer and the provided value in dwc:endDayOfYear matches the end day of the year of the range represented by dwc:eventDate; otherwise NOT_COMPLIANT.
+INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdqval:Empty, or all of dwc:year, dwc:month, dwc:day, dwc:startDayOfYear and dwc:endDayOfYear are bdqval:Empty; COMPLIANT if all of the following conditions are met (1) dwc:year is bdqval:Empty or dwc:eventDate has a precision of one year or finer and and is within a single year and the provided value of dwc:year matches the year expressed in dwc:eventDate, and (2) dwc:month is bdqval:Empty or dwc:eventDate has a precision of one month or finer and is within a single month and the provided value in dwc:month matches the month represented by dwc:eventDate, and (3) dwc:day is bdqval:Empty or dwc:eventDate has a precision of a day or less and is within a single day and the provided value in dwc:day matches the day represented by dwc:eventDate, and (4) dwc:startDayOfYear is empty or dwc:eventDate has a precision of one day or finer and the provided value in dwc:startDayOfYear matches the start day of the year of the range represented by dwc:eventDate, and (5) dwc:endDayOfYear is empty or dwc:eventDate has a precision of one day or finer and the provided value in dwc:endDayOfYear matches the end day of the year of the range represented by dwc:eventDate; otherwise NOT_COMPLIANT.
 
 #### Information Elements
 
@@ -1667,7 +1667,7 @@ dwc:day="15", dwc:month="9", dwc:year="1949", dwc:eventDate="1949-09-16T12:34", 
 
 #### Use Cases
 
-bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Alien-Species, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 
@@ -1688,7 +1688,7 @@ Is the value of dwc:month interpretable as an integer between 1 and 12 inclusive
 
 #### Expected Response
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:month is bdq:Empty; COMPLIANT if the value of dwc:month is interpretable as an integer between 1 and 12 inclusive; otherwise NOT_COMPLIANT
+INTERNAL_PREREQUISITES_NOT_MET if dwc:month is bdqval:Empty; COMPLIANT if the value of dwc:month is interpretable as an integer between 1 and 12 inclusive; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -1704,7 +1704,7 @@ dwc:month="v": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Re
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -1721,7 +1721,7 @@ Is the value of dwc:startDayOfYear an integer between 1 and 365 inclusive, or 36
 
 #### Expected Response
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:startDayOfYear is bdq:Empty or if the value of dwc:startDayOfYear is equal to 366 and (dwc:eventDate is bdq:Empty or the value of dwc:eventDate cannot be interpreted to find single year or a start year in a range); COMPLIANT if the value of dwc:startDayOfYear is an integer between 1 and 365, inclusive, or if the value of dwc:startDayOfYear is 366 and the start year interpreted from dwc:eventDate is a leap year; otherwise NOT_COMPLIANT
+INTERNAL_PREREQUISITES_NOT_MET if dwc:startDayOfYear is bdqval:Empty or if the value of dwc:startDayOfYear is equal to 366 and (dwc:eventDate is bdqval:Empty or the value of dwc:eventDate cannot be interpreted to find single year or a start year in a range); COMPLIANT if the value of dwc:startDayOfYear is an integer between 1 and 365, inclusive, or if the value of dwc:startDayOfYear is 366 and the start year interpreted from dwc:eventDate is a leap year; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -1740,7 +1740,7 @@ dwc:eventDate="", dwc:startDayOfYear="0": Response.status=RUN_HAS_RESULT, Respon
 
 #### Use Cases
 
-bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -1761,7 +1761,7 @@ Is the value of dwc:year within the Parameter range?
 
 #### Expected Response
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:year is bdq:Empty or cannot be interpreted as an integer; COMPLIANT if the value of dwc:year is within the range bdq:earliestValidDate to bdq:latestValidDate inclusive; otherwise NOT_COMPLIANT
+INTERNAL_PREREQUISITES_NOT_MET if dwc:year is bdqval:Empty or cannot be interpreted as an integer; COMPLIANT if the value of dwc:year is within the range bdqval:earliestValidDate to bdqval:latestValidDate inclusive; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -1770,11 +1770,11 @@ dwc:year
 
 #### Parameters
 
-bdq:earliestValidDate,bdq:latestValidDate
+bdqval:earliestValidDate,bdqval:latestValidDate
 
 #### Default Parameter Values
 
-bdq:earliestValidDate default = "1582",bdq:latestValidDate default = "{current year}"
+bdqval:earliestValidDate default = "1582",bdqval:latestValidDate default = "{current year}"
 
 #### Examples
 
@@ -1785,7 +1785,7 @@ dwc:year="9999": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, 
 
 #### Use Cases
 
-bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -1806,7 +1806,7 @@ Is there a value in dwc:year?
 
 #### Expected Response
 
-COMPLIANT if dwc:year is bdq:NotEmpty; otherwise NOT_COMPLIANT
+COMPLIANT if dwc:year is bdqval:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -1815,14 +1815,14 @@ dwc:year
 
 #### Examples
 
-dwc:year="1949": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:year is bdq:NotEmpty"
+dwc:year="1949": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:year is bdqval:NotEmpty"
 
-dwc:year="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:year is bdq:Empty"
+dwc:year="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:year is bdqval:Empty"
 
 
 #### Use Cases
 
-bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -1839,7 +1839,7 @@ Is the value of dwc:dateIdentified within Parameters range and does it overlap w
 
 #### Expected Response
 
-INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:dateIdentified is bdq:Empty, or (2) dwc:dateIdentified contains an invalid value according to ISO 8601, or (3) bdq:includeEventDate=true and dwc:eventDate is not a valid ISO 8601 date; COMPLIANT if the value of dwc:dateIdentified is between bdq:earliestValidDate and bdq:latestValidDate inclusive and either (1) dwc:eventDate is bdq:Empty or bdq:includeEventDate=false, or (2) if dwc:eventDate is a valid ISO 8601 date and dwc:dateIdentified overlaps or is later than the dwc:eventDate; otherwise NOT_COMPLIANT
+INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:dateIdentified is bdqval:Empty, or (2) dwc:dateIdentified contains an invalid value according to ISO 8601, or (3) bdqval:includeEventDate=true and dwc:eventDate is not a valid ISO 8601 date; COMPLIANT if the value of dwc:dateIdentified is between bdqval:earliestValidDate and bdqval:latestValidDate inclusive and either (1) dwc:eventDate is bdqval:Empty or bdqval:includeEventDate=false, or (2) if dwc:eventDate is a valid ISO 8601 date and dwc:dateIdentified overlaps or is later than the dwc:eventDate; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -1851,11 +1851,11 @@ dwc:eventDate
 
 #### Parameters
 
-bdq:earliestValidDate,bdq:latestValidDate,bdq:includeEventDate
+bdqval:earliestValidDate,bdqval:latestValidDate,bdqval:includeEventDate
 
 #### Default Parameter Values
 
-bdq:earliestValidDate default = "1753-01-01",bdq:latestValidDate default = "{current day}",bdq:includeEventDate default = "true"
+bdqval:earliestValidDate default = "1753-01-01",bdqval:latestValidDate default = "{current day}",bdqval:includeEventDate default = "true"
 
 #### Examples
 
@@ -1866,11 +1866,11 @@ dwc:dateIdentified="1963-03-08T14:07-0600", dwc:eventDate="1964-11-01T10:00-0600
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Taxon-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Taxon-Management
 
 #### Notes
 
-There may be valid identifications prior to Linnaeus, but this Test will flag these under the default value of bdq:earliestValidDate, as for most biodiversity data, pre-Linnaean identification dates are likely to be errors. If a parameter is not set, then the default is 1753-01-01. This Test will, by design, flag as problematic cases (such as LTER plots and marine mammal sightings) where a known individual organism is identified by a specialist and then subsequently observed without new taxonomic identifications being made.
+There may be valid identifications prior to Linnaeus, but this Test will flag these under the default value of bdqval:earliestValidDate, as for most biodiversity data, pre-Linnaean identification dates are likely to be errors. If a parameter is not set, then the default is 1753-01-01. This Test will, by design, flag as problematic cases (such as LTER plots and marine mammal sightings) where a known individual organism is identified by a specialist and then subsequently observed without new taxonomic identifications being made.
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -1887,7 +1887,7 @@ Is the value of dwc:dateIdentified a valid ISO date?
 
 #### Expected Response
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:dateIdentified is bdq:Empty; COMPLIANT if the value of dwc:dateIdentified contains a valid ISO 8601 date; otherwise NOT_COMPLIANT
+INTERNAL_PREREQUISITES_NOT_MET if dwc:dateIdentified is bdqval:Empty; COMPLIANT if the value of dwc:dateIdentified contains a valid ISO 8601 date; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -1903,7 +1903,7 @@ dwc:dateIdentified="1963-03-08X14:07-0600": Response.status=RUN_HAS_RESULT, Resp
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Taxon-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Taxon-Management
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -1916,11 +1916,11 @@ Acts upon  SingleRecord
 
 #### Description
 
-Does the value of dwc:degreeOfEstablishment occur in the bdq:sourceAuthority?
+Does the value of dwc:degreeOfEstablishment occur in the bdqval:sourceAuthority?
 
 #### Expected Response
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:degreeOfEstablishment is bdq:Empty; COMPLIANT if the value of dwc:degreeOfEstablishment is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:degreeOfEstablishment is bdqval:Empty; COMPLIANT if the value of dwc:degreeOfEstablishment is in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT.
 
 #### Information Elements
 
@@ -1929,22 +1929,22 @@ dwc:degreeOfEstablishment
 
 #### Parameters
 
-bdq:sourceAuthority
+bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdq:sourceAuthority default = "Degree of Establishment Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/doe/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/DegreeOfEstablishment/concepts]}
+bdqval:sourceAuthority default = "Degree of Establishment Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/doe/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/DegreeOfEstablishment/concepts]}
 
 #### Examples
 
-dwc:degreeOfEstablishment="cultivated": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:degreeOfEstablishment found in the bdq:sourceAuthority"
+dwc:degreeOfEstablishment="cultivated": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:degreeOfEstablishment found in the bdqval:sourceAuthority"
 
-dwc:degreeOfEstablishment="grown in garden": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:degreeOfEstablishment not found in the bdq:sourceAuthority"
+dwc:degreeOfEstablishment="grown in garden": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:degreeOfEstablishment not found in the bdqval:sourceAuthority"
 
 
 #### Use Cases
 
-bdq:Alien-Species
+bdqval:Alien-Species
 
 #### Notes
 
@@ -1961,11 +1961,11 @@ Acts upon  SingleRecord
 
 #### Description
 
-Does the value of dwc:establishmentMeans occur in the bdq:sourceAuthority?
+Does the value of dwc:establishmentMeans occur in the bdqval:sourceAuthority?
 
 #### Expected Response
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:establishmentMeans is bdq:Empty; COMPLIANT if the value of dwc:establishmentMeans is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:establishmentMeans is bdqval:Empty; COMPLIANT if the value of dwc:establishmentMeans is in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT.
 
 #### Information Elements
 
@@ -1974,22 +1974,22 @@ dwc:establishmentMeans
 
 #### Parameters
 
-bdq:sourceAuthority
+bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdq:sourceAuthority default = "Establishment Means Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/em/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/EstablishmentMeans/concepts]}
+bdqval:sourceAuthority default = "Establishment Means Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/em/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/EstablishmentMeans/concepts]}
 
 #### Examples
 
-dwc:establishmentMeans="native": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:establishmentMeans found in the bdq:sourceAuthority"
+dwc:establishmentMeans="native": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:establishmentMeans found in the bdqval:sourceAuthority"
 
-dwc:establishmentMeans="cultivated": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:establishmentMeans not found in the bdq:sourceAuthority"
+dwc:establishmentMeans="cultivated": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:establishmentMeans not found in the bdqval:sourceAuthority"
 
 
 #### Use Cases
 
-bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 
@@ -2010,7 +2010,7 @@ Is there a value in dwc:occurrenceID?
 
 #### Expected Response
 
-COMPLIANT if dwc:occurrenceID is bdq:NotEmpty; otherwise NOT_COMPLIANT
+COMPLIANT if dwc:occurrenceID is bdqval:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -2021,12 +2021,12 @@ dwc:occurrenceID
 
 dwc:occurrenceID="https://www.inaturalist.org/observations/43047701": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:occurrenceID conforms to GUID structure"
 
-dwc:occurrenceID="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:occurrenceID is bdq:Empty"
+dwc:occurrenceID="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:occurrenceID is bdqval:Empty"
 
 
 #### Use Cases
 
-bdq:Record-Management
+bdqval:Record-Management
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -2043,7 +2043,7 @@ Is there a value in dwc:occurrenceStatus?
 
 #### Expected Response
 
-COMPLIANT if dwc:occurrenceStatus is bdq:NotEmpty; otherwise NOT_COMPLIANT
+COMPLIANT if dwc:occurrenceStatus is bdqval:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -2052,14 +2052,14 @@ dwc:occurrenceStatus
 
 #### Examples
 
-dwc:occurrenceStatus="?": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:occurrenceStatus is bdq:NotEmpty"
+dwc:occurrenceStatus="?": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:occurrenceStatus is bdqval:NotEmpty"
 
-dwc:occurrenceStatus="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:occurrenceStatus is bdq:Empty"
+dwc:occurrenceStatus="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:occurrenceStatus is bdqval:Empty"
 
 
 #### Use Cases
 
-bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -2072,11 +2072,11 @@ Acts upon  SingleRecord
 
 #### Description
 
-Does the value of dwc:occurrenceStatus occur in the bdq:sourceAuthority?
+Does the value of dwc:occurrenceStatus occur in the bdqval:sourceAuthority?
 
 #### Expected Response
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdq:Empty; COMPLIANT if the value of dwc:occurrenceStatus is resolved in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdqval:Empty; COMPLIANT if the value of dwc:occurrenceStatus is resolved in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -2085,22 +2085,22 @@ dwc:occurrenceStatus
 
 #### Parameters
 
-bdq:sourceAuthority
+bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdq:sourceAuthority default = "Regex present/absent" {["^(present\
+bdqval:sourceAuthority default = "Regex present/absent" {["^(present\
 
 #### Examples
 
-dwc:occurrenceStatus="present": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:occurrenceStatus matches a term in the bdq:sourceAuthority"
+dwc:occurrenceStatus="present": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:occurrenceStatus matches a term in the bdqval:sourceAuthority"
 
-dwc:occurrenceStatus="presence": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:occurrenceStatus does not match a term in the bdq:sourceAuthority"
+dwc:occurrenceStatus="presence": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:occurrenceStatus does not match a term in the bdqval:sourceAuthority"
 
 
 #### Use Cases
 
-bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 
@@ -2117,11 +2117,11 @@ Acts upon  SingleRecord
 
 #### Description
 
-Does the value of dwc:pathway occur in the bdq:sourceAuthority?
+Does the value of dwc:pathway occur in the bdqval:sourceAuthority?
 
 #### Expected Response
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:pathway is bdq:Empty; COMPLIANT if the value of dwc:pathway is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:pathway is bdqval:Empty; COMPLIANT if the value of dwc:pathway is in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT.
 
 #### Information Elements
 
@@ -2130,22 +2130,22 @@ dwc:pathway
 
 #### Parameters
 
-bdq:sourceAuthority
+bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdq:sourceAuthority default = "Pathway Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/pw/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/Pathway/concepts]}
+bdqval:sourceAuthority default = "Pathway Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/pw/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/Pathway/concepts]}
 
 #### Examples
 
-dwc:pathway="transportStowaway": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:pathway found in the bdq:sourceAuthority"
+dwc:pathway="transportStowaway": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:pathway found in the bdqval:sourceAuthority"
 
-dwc:pathway="escapee": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:pathway not found in the bdq:sourceAuthority"
+dwc:pathway="escapee": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:pathway not found in the bdqval:sourceAuthority"
 
 
 #### Use Cases
 
-bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Alien-Species, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 
@@ -2162,11 +2162,11 @@ Acts upon  SingleRecord
 
 #### Description
 
-Does the value of dwc:sex occur in bdq:sourceAuthority?
+Does the value of dwc:sex occur in bdqval:sourceAuthority?
 
 #### Expected Response
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:sex is bdq:Empty; COMPLIANT if the value of dwc:sex is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:sex is bdqval:Empty; COMPLIANT if the value of dwc:sex is in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT.
 
 #### Information Elements
 
@@ -2175,22 +2175,22 @@ dwc:sex
 
 #### Parameters
 
-bdq:sourceAuthority
+bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdq:sourceAuthority default = "GBIF Sex Vocabulary" [https://api.gbif.org/v1/vocabularies/Sex]} {"dwc:sex vocabulary API" [https://api.gbif.org/v1/vocabularies/Sex/concepts]}
+bdqval:sourceAuthority default = "GBIF Sex Vocabulary" [https://api.gbif.org/v1/vocabularies/Sex]} {"dwc:sex vocabulary API" [https://api.gbif.org/v1/vocabularies/Sex/concepts]}
 
 #### Examples
 
-dwc:sex="Male": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:sex found in the bdq:sourceAuthority"
+dwc:sex="Male": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:sex found in the bdqval:sourceAuthority"
 
-dwc:sex="f": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:sex not found in the bdq:sourceAuthority"
+dwc:sex="f": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:sex not found in the bdqval:sourceAuthority"
 
 
 #### Use Cases
 
-bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management
+bdqval:Alien-Species, bdqval:Record-Management, bdqval:Taxon-Management
 
 #### Notes
 
@@ -2207,11 +2207,11 @@ Acts upon  SingleRecord
 
 #### Description
 
-Does the value of dwc:typeStatus occur in bdq:sourceAuthority?
+Does the value of dwc:typeStatus occur in bdqval:sourceAuthority?
 
 #### Expected Response
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; COMPLIANT if the value of the first word in each &#124; delimited portion of dwc:typeStatus is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:typeStatus is bdqval:Empty; COMPLIANT if the value of the first word in each &#124; delimited portion of dwc:typeStatus is in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT.
 
 #### Information Elements
 
@@ -2220,22 +2220,22 @@ dwc:typeStatus
 
 #### Parameters
 
-bdq:sourceAuthority
+bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdq:sourceAuthority default = "GBIF TypeStatus Vocabulary" {[https://api.gbif.org/v1/vocabularies/TypeStatus]} {dwc:typeStatus vocabulary API [https://api.gbif.org/v1/vocabularies/TypeStatus/concepts]}
+bdqval:sourceAuthority default = "GBIF TypeStatus Vocabulary" {[https://api.gbif.org/v1/vocabularies/TypeStatus]} {dwc:typeStatus vocabulary API [https://api.gbif.org/v1/vocabularies/TypeStatus/concepts]}
 
 #### Examples
 
-dwc:typeStatus="Holotype": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:typeStatus found in the bdq:sourceAuthority"
+dwc:typeStatus="Holotype": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:typeStatus found in the bdqval:sourceAuthority"
 
-dwc:typeStatus="cleptotype": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:typeStatus not found in the bdq:sourceAuthority"
+dwc:typeStatus="cleptotype": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:typeStatus not found in the bdqval:sourceAuthority"
 
 
 #### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 
@@ -2252,11 +2252,11 @@ Acts upon  SingleRecord
 
 #### Description
 
-Is the combination of higher classification taxonomic terms consistent using bdq:sourceAuthority?
+Is the combination of higher classification taxonomic terms consistent using bdqval:sourceAuthority?
 
 #### Expected Response
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if all of the fields dwc:kingdom dwc:phylum, dwc:class, dwc:order, dwc:superfamily, dwc:family, dwc:subfamily, dwc:tribe, dwc:subtribe, dwc:genus are bdq:Empty; COMPLIANT if the combination of values of higher classification taxonomic terms (dwc:kingdom, dwc:phylum, dwc:class, dwc:order, dwc:superfamily, dwc:family, dwc:subfamily, dwc:tribe, dwc:subtribe, dwc:genus) are consistent with the lowest ranking matched element in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if all of the fields dwc:kingdom dwc:phylum, dwc:class, dwc:order, dwc:superfamily, dwc:family, dwc:subfamily, dwc:tribe, dwc:subtribe, dwc:genus are bdqval:Empty; COMPLIANT if the combination of values of higher classification taxonomic terms (dwc:kingdom, dwc:phylum, dwc:class, dwc:order, dwc:superfamily, dwc:family, dwc:subfamily, dwc:tribe, dwc:subtribe, dwc:genus) are consistent with the lowest ranking matched element in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -2265,22 +2265,22 @@ dwc:kingdom,dwc:phylum,dwc:class,dwc:order,dwc:superfamily,dwc:family,dwc:subfam
 
 #### Parameters
 
-bdq:sourceAuthority
+bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
+bdqval:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
 
 #### Examples
 
-dwc:kingdom="", dwc:phylum="", dwc:class="", dwc:order="Myrtales", dwc:superfamily="", dwc:family="Myrtaceae", dwc:subfamily="", dwc:tribe="", dwc:subtribe="",dwc:genus="Punica": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="The combination of values of higher classification taxonomic terms can be unambiguously resolved in the bdq:sourceAuthority"
+dwc:kingdom="", dwc:phylum="", dwc:class="", dwc:order="Myrtales", dwc:superfamily="", dwc:family="Myrtaceae", dwc:subfamily="", dwc:tribe="", dwc:subtribe="",dwc:genus="Punica": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="The combination of values of higher classification taxonomic terms can be unambiguously resolved in the bdqval:sourceAuthority"
 
-dwc:kingdom="", dwc:phylum="Chordata", dwc:class="", dwc:order="Rhopalocera", dwc:superfamly="", dwc:family="Muricidae", dwc:subfamily="", dwc:tribe="", dwc:subtribe="", dwc:genus="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="The combination of values of higher classification taxonomic terms cannot be unambiguously resolved in the bdq:sourceAuthority"
+dwc:kingdom="", dwc:phylum="Chordata", dwc:class="", dwc:order="Rhopalocera", dwc:superfamly="", dwc:family="Muricidae", dwc:subfamily="", dwc:tribe="", dwc:subtribe="", dwc:genus="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="The combination of values of higher classification taxonomic terms cannot be unambiguously resolved in the bdqval:sourceAuthority"
 
 
 #### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 
@@ -2297,11 +2297,11 @@ Acts upon  SingleRecord
 
 #### Description
 
-Does the value of dwc:class occur at the rank of Class in bdq:sourceAuthority?
+Does the value of dwc:class occur at the rank of Class in bdqval:sourceAuthority?
 
 #### Expected Response
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:class is bdq:Empty; COMPLIANT if the value of dwc:class is found as a value at the rank of Class in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:class is bdqval:Empty; COMPLIANT if the value of dwc:class is found as a value at the rank of Class in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -2310,22 +2310,22 @@ dwc:class
 
 #### Parameters
 
-bdq:sourceAuthority
+bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
+bdqval:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
 
 #### Examples
 
-dwc:class="Insecta": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:class has an equivalent at the rank of Class in the bdq:sourceAuthority"
+dwc:class="Insecta": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:class has an equivalent at the rank of Class in the bdqval:sourceAuthority"
 
-dwc:class="Magnoleopsida": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT,Response.comment="dwc:class does not have an equivalent at the rank of Class in the bdq:sourceAuthority"
+dwc:class="Magnoleopsida": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT,Response.comment="dwc:class does not have an equivalent at the rank of Class in the bdqval:sourceAuthority"
 
 
 #### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 
@@ -2342,11 +2342,11 @@ Acts upon  SingleRecord
 
 #### Description
 
-Does the value of dwc:family occur at the rank of Family in the bdq:sourceAuthority?
+Does the value of dwc:family occur at the rank of Family in the bdqval:sourceAuthority?
 
 #### Expected Response
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:family is bdq:Empty; COMPLIANT if the value of dwc:family is found as a value at the rank of Family in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:family is bdqval:Empty; COMPLIANT if the value of dwc:family is found as a value at the rank of Family in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -2355,22 +2355,22 @@ dwc:family
 
 #### Parameters
 
-bdq:sourceAuthority
+bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
+bdqval:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
 
 #### Examples
 
-dwc:family="Agaricaceae": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="bdq:family has an equivalent at the rank of Family in the bdq:sourceAuthority"
+dwc:family="Agaricaceae": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="bdqval:family has an equivalent at the rank of Family in the bdqval:sourceAuthority"
 
-dwc:family="Agaricacae": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="bdq:family does not have an equivalent at the rank of Family in the Parameterized Source Authority"
+dwc:family="Agaricacae": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="bdqval:family does not have an equivalent at the rank of Family in the Parameterized Source Authority"
 
 
 #### Use Cases
 
-bdq:Record-Management, bdq:Taxon-Management
+bdqval:Record-Management, bdqval:Taxon-Management
 
 #### Notes
 
@@ -2387,11 +2387,11 @@ Acts upon  SingleRecord
 
 #### Description
 
-Does the value of dwc:genus occur at the rank of Genus in the bdq:sourceAuthority?
+Does the value of dwc:genus occur at the rank of Genus in the bdqval:sourceAuthority?
 
 #### Expected Response
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:genus is bdq:Empty; COMPLIANT if the value of dwc:genus is found as a value at the rank of genus in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:genus is bdqval:Empty; COMPLIANT if the value of dwc:genus is found as a value at the rank of genus in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -2400,22 +2400,22 @@ dwc:genus
 
 #### Parameters
 
-bdq:sourceAuthority
+bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
+bdqval:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
 
 #### Examples
 
 dwc:genus="Egernia": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:genus has an equivalent at the rank of Genus in the Parameterized Source Authority"
 
-dwc:genus="Egernea": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:genus does not have an equivalent at the rank of Genus in the bdq:sourceAuthority. This may be fixed using fuzzy matching at the AMENDMENT stage"
+dwc:genus="Egernea": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:genus does not have an equivalent at the rank of Genus in the bdqval:sourceAuthority. This may be fixed using fuzzy matching at the AMENDMENT stage"
 
 
 #### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 
@@ -2432,11 +2432,11 @@ Acts upon  SingleRecord
 
 #### Description
 
-Does the value of dwc:kingdom occur at the rank of Kingdom in the bdq:sourceAuthority?
+Does the value of dwc:kingdom occur at the rank of Kingdom in the bdqval:sourceAuthority?
 
 #### Expected Response
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:kingdom is bdq:Empty; COMPLIANT if the value of dwc:kingdom is found as a value at the rank of kingdom in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:kingdom is bdqval:Empty; COMPLIANT if the value of dwc:kingdom is found as a value at the rank of kingdom in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -2445,22 +2445,22 @@ dwc:kingdom
 
 #### Parameters
 
-bdq:sourceAuthority
+bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
+bdqval:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
 
 #### Examples
 
-dwc:kingdom="Animalia": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:kingdom has an equivalent at the rank of Kingdom in the bdq:sourceAuthority"
+dwc:kingdom="Animalia": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:kingdom has an equivalent at the rank of Kingdom in the bdqval:sourceAuthority"
 
 dwc:kingdom="Metazoa": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:kingdom does not strictly have an equivalent at the rank of Kingdom in the Parameterized Source Authority (Metazoa is synonym of Animalia)"
 
 
 #### Use Cases
 
-bdq:Record-Management, bdq:Taxon-Management
+bdqval:Record-Management, bdqval:Taxon-Management
 
 #### Notes
 
@@ -2481,7 +2481,7 @@ Is there a value in dwc:kingdom?
 
 #### Expected Response
 
-COMPLIANT if dwc:kingdom is bdq:NotEmpty; otherwise NOT_COMPLIANT
+COMPLIANT if dwc:kingdom is bdqval:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -2490,14 +2490,14 @@ dwc:kingdom
 
 #### Examples
 
-dwc:kingdom="Fungi": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:kingdom is bdq:NotEmpty"
+dwc:kingdom="Fungi": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:kingdom is bdqval:NotEmpty"
 
-dwc:kingdom="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:kingdom is bdq:Empty"
+dwc:kingdom="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:kingdom is bdqval:Empty"
 
 
 #### Use Cases
 
-bdq:Record-Management, bdq:Taxon-Management
+bdqval:Record-Management, bdqval:Taxon-Management
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -2514,7 +2514,7 @@ Is there a value in dwc:namePublishedInYear?
 
 #### Expected Response
 
-COMPLIANT if dwc:namePublishedInYear is bdq:NotEmpty; otherwise NOT_COMPLIANT
+COMPLIANT if dwc:namePublishedInYear is bdqval:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -2523,14 +2523,14 @@ dwc:namePublishedInYear
 
 #### Examples
 
-dwc:namePublishedInYear="2024": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:namePublishedInYear is bdq:NotEmpty"
+dwc:namePublishedInYear="2024": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:namePublishedInYear is bdqval:NotEmpty"
 
-dwc:namePublishedInYear="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:namePublishedInYear is bdq:Empty"
+dwc:namePublishedInYear="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:namePublishedInYear is bdqval:Empty"
 
 
 #### Use Cases
 
-bdq:Record-Management, bdq:Taxon-Management
+bdqval:Record-Management, bdqval:Taxon-Management
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -2543,11 +2543,11 @@ Acts upon  SingleRecord
 
 #### Description
 
-Does the value of dwc:order occur at the rank of Order in bdq:sourceAuthority?
+Does the value of dwc:order occur at the rank of Order in bdqval:sourceAuthority?
 
 #### Expected Response
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:order is bdq:Empty; COMPLIANT if the value of dwc:order is found as a value at the rank of Order in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:order is bdqval:Empty; COMPLIANT if the value of dwc:order is found as a value at the rank of Order in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -2556,22 +2556,22 @@ dwc:order
 
 #### Parameters
 
-bdq:sourceAuthority
+bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
+bdqval:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
 
 #### Examples
 
-dwc:order="Lepidoptera": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:order has an equivalent at the rank of Order in the bdq:sourceAuthority"
+dwc:order="Lepidoptera": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:order has an equivalent at the rank of Order in the bdqval:sourceAuthority"
 
-dwc:order="Nymphalidae": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:order does not have an equivalent at the rank of Order in the bdq:sourceAuthority. Nymphalidae is a family, not an order"
+dwc:order="Nymphalidae": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:order does not have an equivalent at the rank of Order in the bdqval:sourceAuthority. Nymphalidae is a family, not an order"
 
 
 #### Use Cases
 
-bdq:Record-Management, bdq:Taxon-Management
+bdqval:Record-Management, bdqval:Taxon-Management
 
 #### Notes
 
@@ -2588,11 +2588,11 @@ Acts upon  SingleRecord
 
 #### Description
 
-Does the value of dwc:phylum occur at the rank of Phylum in the bdq:sourceAuthority?
+Does the value of dwc:phylum occur at the rank of Phylum in the bdqval:sourceAuthority?
 
 #### Expected Response
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:phylum is bdq:Empty; COMPLIANT if the value of dwc:phylum is found as a value at the rank of Phylum in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:phylum is bdqval:Empty; COMPLIANT if the value of dwc:phylum is found as a value at the rank of Phylum in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -2601,22 +2601,22 @@ dwc:phylum
 
 #### Parameters
 
-bdq:sourceAuthority
+bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
+bdqval:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
 
 #### Examples
 
-dwc:phylum="Tracheophyta": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:phylum has an equivalent at the rank of Phylum in the bdq:sourceAuthority. GBIF.org uses Trachyophyta for the Phylum including ferns"
+dwc:phylum="Tracheophyta": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:phylum has an equivalent at the rank of Phylum in the bdqval:sourceAuthority. GBIF.org uses Trachyophyta for the Phylum including ferns"
 
-dwc:phylum="Trachyophyta": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:phylum does not have an equivalent at the rank of Phylum in the bdq:sourceAuthority."
+dwc:phylum="Trachyophyta": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:phylum does not have an equivalent at the rank of Phylum in the bdqval:sourceAuthority."
 
 
 #### Use Cases
 
-bdq:Record-Management, bdq:Taxon-Management
+bdqval:Record-Management, bdqval:Taxon-Management
 
 #### Notes
 
@@ -2637,7 +2637,7 @@ Is the polynomial represented in dwc:scientificName consistent with the equivale
 
 #### Expected Response
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificName is bdq:Empty, or all of dwc:genericName, dwc:specificEpithet and dwc:infraspecificEpithet are bdq:Empty; COMPLIANT if the polynomial, as represented in dwc:scientificName, is consistent with bdq:NotEmpty values of dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet; otherwise NOT_COMPLIANT.
+INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificName is bdqval:Empty, or all of dwc:genericName, dwc:specificEpithet and dwc:infraspecificEpithet are bdqval:Empty; COMPLIANT if the polynomial, as represented in dwc:scientificName, is consistent with bdqval:NotEmpty values of dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet; otherwise NOT_COMPLIANT.
 
 #### Information Elements
 
@@ -2653,7 +2653,7 @@ dwc:scientificName="Hakea decurrens", dwc:genericName="Hakea", dwc:specificEpith
 
 #### Use Cases
 
-bdq:Record-Management, bdq:Taxon-Management
+bdqval:Record-Management, bdqval:Taxon-Management
 
 #### Notes
 
@@ -2674,7 +2674,7 @@ Is there a value in dwc:scientificNameAuthorship?
 
 #### Expected Response
 
-COMPLIANT if dwc:scientificNameAuthorship is bdq:NotEmpty; otherwise NOT_COMPLIANT
+COMPLIANT if dwc:scientificNameAuthorship is bdqval:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -2683,14 +2683,14 @@ dwc:scientificNameAuthorship
 
 #### Examples
 
-dwc:scientificNameAuthorship="(Györfi, 1952)": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:scientificNameAuthorship is bdq:NotEmpty"
+dwc:scientificNameAuthorship="(Györfi, 1952)": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:scientificNameAuthorship is bdqval:NotEmpty"
 
-dwc:scientificNameAuthorship="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:scientificNameAuthorship is bdq:Empty"
+dwc:scientificNameAuthorship="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:scientificNameAuthorship is bdqval:Empty"
 
 
 #### Use Cases
 
-bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management
+bdqval:Alien-Species, bdqval:Record-Management, bdqval:Taxon-Management
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -2707,7 +2707,7 @@ Does the value of dwc:scientificNameID contain a complete identifier?
 
 #### Expected Response
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is bdq:Empty; COMPLIANT if (1) dwc:scientificNameID is a validly formed LSID, or (2) dwc:scientificNameID is a validly formed URN with at least NID and NSS present, or (3) dwc:scientificNameID is in the form scope:value, or (4) dwc:scientificNameID is a validly formed URI with host and path where path consists of more than just "/"; otherwise NOT_COMPLIANT
+INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is bdqval:Empty; COMPLIANT if (1) dwc:scientificNameID is a validly formed LSID, or (2) dwc:scientificNameID is a validly formed URN with at least NID and NSS present, or (3) dwc:scientificNameID is in the form scope:value, or (4) dwc:scientificNameID is a validly formed URI with host and path where path consists of more than just "/"; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -2723,11 +2723,11 @@ dwc:scientificNameID="Hakea decurrens ssp. physocarpa": Response.status=RUN_HAS_
 
 #### Use Cases
 
-bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management
+bdqval:Alien-Species, bdqval:Record-Management, bdqval:Taxon-Management
 
 #### Notes
 
-If any single bdq:sourceAuthority such as GBIF is used, a valid and complete dwc:scientificNameID based on an alternative source authority is unlikely to provide a valid match. A text or number string as a namespace indicator without a URI will be ambiguous. As an example, GBIF's backbone taxonomy dataset can be found at https://doi.org/10.15468/39omei. When referencing a GBIF taxon by GBIF's identifier for that taxon, use the the pseudo-namespace "gbif:" and the form "gbif:{integer}" as the value for dwc:scientificNameID. Note that GBIF currently uses "TaxonID" for this entity. The terms NID, NSS, and URN are all Uniform Resource Identifiers - see the Wikipedia (2024) reference.
+If any single bdqval:sourceAuthority such as GBIF is used, a valid and complete dwc:scientificNameID based on an alternative source authority is unlikely to provide a valid match. A text or number string as a namespace indicator without a URI will be ambiguous. As an example, GBIF's backbone taxonomy dataset can be found at https://doi.org/10.15468/39omei. When referencing a GBIF taxon by GBIF's identifier for that taxon, use the the pseudo-namespace "gbif:" and the form "gbif:{integer}" as the value for dwc:scientificNameID. Note that GBIF currently uses "TaxonID" for this entity. The terms NID, NSS, and URN are all Uniform Resource Identifiers - see the Wikipedia (2024) reference.
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -2744,7 +2744,7 @@ Is there a value in dwc:scientificNameID?
 
 #### Expected Response
 
-COMPLIANT if dwc:scientificNameID is bdq:NotEmpty; otherwise NOT_COMPLIANT
+COMPLIANT if dwc:scientificNameID is bdqval:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -2753,14 +2753,14 @@ dwc:scientificNameID
 
 #### Examples
 
-dwc:scientificNameID="8fa58e08-08de-4ac1-b69c-1235340b7001": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:scientificNameID is bdq:NotEmpty"
+dwc:scientificNameID="8fa58e08-08de-4ac1-b69c-1235340b7001": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:scientificNameID is bdqval:NotEmpty"
 
-dwc:scientificNameID=" ": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:scientificNameID is bdq:Empty"
+dwc:scientificNameID=" ": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:scientificNameID is bdqval:Empty"
 
 
 #### Use Cases
 
-bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management
+bdqval:Alien-Species, bdqval:Record-Management, bdqval:Taxon-Management
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -2773,11 +2773,11 @@ Acts upon  SingleRecord
 
 #### Description
 
-Is there a match of the contents of dwc:scientificName with the bdq:sourceAuthority?
+Is there a match of the contents of dwc:scientificName with the bdqval:sourceAuthority?
 
 #### Expected Response
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificName is bdq:Empty; COMPLIANT if there is a match of the contents of dwc:scientificName in the bdq:sourceAuthority; otherwise NOT_COMPLIANT
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificName is bdqval:Empty; COMPLIANT if there is a match of the contents of dwc:scientificName in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -2786,26 +2786,26 @@ dwc:scientificName
 
 #### Parameters
 
-bdq:sourceAuthority
+bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
+bdqval:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
 
 #### Examples
 
-dwc:scientificName="Eucalyptus camaldulensis": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:scientificName found in the bdq:sourceAuthority"
+dwc:scientificName="Eucalyptus camaldulensis": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:scientificName found in the bdqval:sourceAuthority"
 
-dwc:scientificName="Capulus intort": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:scientificName was not found in the bdq:sourceAuthority"
+dwc:scientificName="Capulus intort": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:scientificName was not found in the bdqval:sourceAuthority"
 
 
 #### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 
-The purpose of this Test is to detect errors in the scientific name but is dependent on the abilities of the parsing of the bdq:sourceAuthority. For research users of biodiversity data doing quality assurance, VALIDATION_TAXON_UNAMBIGUOUS (4c09f127-737b-4686-82a0-7c8e30841590) handles their needs, but for curators of datasets doing quality control, this Test provides a specific subset of targeted data cleaning, making it a valuable Test to include for the quality control case.
+The purpose of this Test is to detect errors in the scientific name but is dependent on the abilities of the parsing of the bdqval:sourceAuthority. For research users of biodiversity data doing quality assurance, VALIDATION_TAXON_UNAMBIGUOUS (4c09f127-737b-4686-82a0-7c8e30841590) handles their needs, but for curators of datasets doing quality control, this Test provides a specific subset of targeted data cleaning, making it a valuable Test to include for the quality control case.
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -2822,7 +2822,7 @@ Is there a value in dwc:scientificName?
 
 #### Expected Response
 
-COMPLIANT if dwc:scientificName is bdq:NotEmpty; otherwise NOT_COMPLIANT
+COMPLIANT if dwc:scientificName is bdqval:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -2831,14 +2831,14 @@ dwc:scientificName
 
 #### Examples
 
-dwc:scientificName="?": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:scientificName is bdq:NotEmpty"
+dwc:scientificName="?": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:scientificName is bdqval:NotEmpty"
 
-dwc:scientificName="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:scientificName is bdq:Empty"
+dwc:scientificName="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:scientificName is bdqval:Empty"
 
 
 #### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -2855,7 +2855,7 @@ Is there a value in dwc:taxonRank?
 
 #### Expected Response
 
-COMPLIANT if dwc:taxonRank is bdq:NotEmpty; otherwise NOT_COMPLIANT
+COMPLIANT if dwc:taxonRank is bdqval:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -2864,14 +2864,14 @@ dwc:taxonRank
 
 #### Examples
 
-dwc:taxonRank="genus": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:taxonRank is bdq:NotEmpty"
+dwc:taxonRank="genus": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:taxonRank is bdqval:NotEmpty"
 
-dwc:taxonRank=" ": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:taxonRank is bdq:Empty"
+dwc:taxonRank=" ": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:taxonRank is bdqval:Empty"
 
 
 #### Use Cases
 
-bdq:Record-Management, bdq:Taxon-Management
+bdqval:Record-Management, bdqval:Taxon-Management
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -2884,11 +2884,11 @@ Acts upon  SingleRecord
 
 #### Description
 
-Does the value of dwc:taxonRank occur in the bdq:sourceAuthority?
+Does the value of dwc:taxonRank occur in the bdqval:sourceAuthority?
 
 #### Expected Response
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:taxonRank is bdq:Empty; COMPLIANT if the value of dwc:taxonRank is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:taxonRank is bdqval:Empty; COMPLIANT if the value of dwc:taxonRank is in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT.
 
 #### Information Elements
 
@@ -2897,22 +2897,22 @@ dwc:taxonRank
 
 #### Parameters
 
-bdq:sourceAuthority
+bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdq:sourceAuthority default = "GBIF TaxonRank Vocabulary" [https://api.gbif.org/v1/vocabularies/TaxonRank]} {"dwc:taxonRank vocabulary API" [https://api.gbif.org/v1/vocabularies/TaxonRank/concepts]}
+bdqval:sourceAuthority default = "GBIF TaxonRank Vocabulary" [https://api.gbif.org/v1/vocabularies/TaxonRank]} {"dwc:taxonRank vocabulary API" [https://api.gbif.org/v1/vocabularies/TaxonRank/concepts]}
 
 #### Examples
 
-dwc:taxonRank="kingdom": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:taxonRank has an equivalent in the bdq:sourceAuthority"
+dwc:taxonRank="kingdom": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:taxonRank has an equivalent in the bdqval:sourceAuthority"
 
-dwc:taxonRank="sp.": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:taxonRank does not have an equivalent in the bdq:sourceAuthority"
+dwc:taxonRank="sp.": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:taxonRank does not have an equivalent in the bdqval:sourceAuthority"
 
 
 #### Use Cases
 
-bdq:Record-Management, bdq:Taxon-Management
+bdqval:Record-Management, bdqval:Taxon-Management
 
 #### Notes
 
@@ -2933,7 +2933,7 @@ Is there a value in any of the terms needed to determine that the taxon exists?
 
 #### Expected Response
 
-COMPLIANT if at least one term needed to determine the taxon of the entity exists and is bdq:NotEmpty; otherwise NOT_COMPLIANT
+COMPLIANT if at least one term needed to determine the taxon of the entity exists and is bdqval:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -2944,12 +2944,12 @@ dwc:taxonID,dwc:scientificNameID,dwc:acceptedNameUsageID,dwc:parentNameUsageID,d
 
 dwc:taxonID="", dwc:scientificNameID="", dwc:acceptedNameUsageID="", dwc:parentNameUsageID="", dwc:originalNameUsageID="", dwc:taxonConceptID="", dwc:scientificName="Eucalyptus gunnii", dwc:higherClassification="", dwc:kingdom="", dwc:phylum="", dwc:class="", dwc:order="", dwc:superfamily="", dwc:tribe="", dwc:subtribe="",dwc:family="", dwc:genus="", dwc:subgenus="", dwc:specificEpithet="", dwc:infraspecificEpithet="", dwc:vernacularName="" : Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="at least enough terms exist that identify that an entity exists"
 
-dwc:taxonID="", dwc:scientificNameID="", dwc:acceptedNameUsageID="", dwc:parentNameUsageID="", dwc:originalNameUsageID="", dwc:taxonConceptID="", dwc:scientificName="", dwc:higherClassification="", dwc:kingdom="", dwc:phylum="", dwc:class="", dwc:order="", dwc:superfamily="", dwc:tribe="", dwc:subtribe="",dwc:family="", dwc:genus="", dwc:subgenus="", dwc:specificEpithet="", dwc:infraspecificEpithet="", dwc:vernacularName="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="All input fields are bdq:Empty or missing"
+dwc:taxonID="", dwc:scientificNameID="", dwc:acceptedNameUsageID="", dwc:parentNameUsageID="", dwc:originalNameUsageID="", dwc:taxonConceptID="", dwc:scientificName="", dwc:higherClassification="", dwc:kingdom="", dwc:phylum="", dwc:class="", dwc:order="", dwc:superfamily="", dwc:tribe="", dwc:subtribe="",dwc:family="", dwc:genus="", dwc:subgenus="", dwc:specificEpithet="", dwc:infraspecificEpithet="", dwc:vernacularName="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="All input fields are bdqval:Empty or missing"
 
 
 #### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 
@@ -2966,11 +2966,11 @@ Acts upon  SingleRecord
 
 #### Description
 
-Can the taxon be unambiguously resolved from bdq:sourceAuthority using the available taxon terms?
+Can the taxon be unambiguously resolved from bdqval:sourceAuthority using the available taxon terms?
 
 #### Expected Response
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if all of dwc:scientificNameID, dwc:scientificName, dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship, dwc:cultivarEpithet are bdq:Empty; COMPLIANT if (1) dwc:scientificNameID references a single taxon record in the bdq:sourceAuthority, or (2) dwc:scientificNameID is bdq:Empty and dwc:scientificName references a single taxon record in the bdq:sourceAuthority, or (3) if dwc:scientificName and dwc:scientificNameID are bdq:Empty and if a combination of the values of the terms dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:cultivarEpithet, dwc:taxonRank, and dwc:scientificNameAuthorship can be unambiguously resolved to a unique taxon in the bdq:sourceAuthority, or (4) if ambiguity produced by multiple matches in (2) or (3) can be disambiguated to a unique Taxon using the values of dwc:tribe, dwc:subtribe, dwc:subgenus, dwc:genus, dwc:subfamily, dwc:family, dwc:superfamily, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:taxonID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID and dwc:vernacularName; otherwise NOT_COMPLIANT
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if all of dwc:scientificNameID, dwc:scientificName, dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship, dwc:cultivarEpithet are bdqval:Empty; COMPLIANT if (1) dwc:scientificNameID references a single taxon record in the bdqval:sourceAuthority, or (2) dwc:scientificNameID is bdqval:Empty and dwc:scientificName references a single taxon record in the bdqval:sourceAuthority, or (3) if dwc:scientificName and dwc:scientificNameID are bdqval:Empty and if a combination of the values of the terms dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:cultivarEpithet, dwc:taxonRank, and dwc:scientificNameAuthorship can be unambiguously resolved to a unique taxon in the bdqval:sourceAuthority, or (4) if ambiguity produced by multiple matches in (2) or (3) can be disambiguated to a unique Taxon using the values of dwc:tribe, dwc:subtribe, dwc:subgenus, dwc:genus, dwc:subfamily, dwc:family, dwc:superfamily, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:taxonID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID and dwc:vernacularName; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -2979,26 +2979,26 @@ dwc:taxonID,dwc:scientificName,dwc:scientificNameID,dwc:acceptedNameUsageID,dwc:
 
 #### Parameters
 
-bdq:sourceAuthority
+bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
+bdqval:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
 
 #### Examples
 
-dwc:taxonID="", dwc:scientificNameID="", dwc:acceptedNameUsageID="", dwc:originalNameUsageID="", dwc:taxonConceptID="", dwc:scientificName="Triplex rosaria Perry, 1811", dwc:higherClassification="", dwc:kingdom="Animalia", dwc:phylum="mollusca", dwc:class="Gastropoda", dwc:order="", dwc:family="Muricidae", dwc:subfamily="", dwc:genus="Chicoreus", dwc:genericName="Triplex", dwc:subgenus="", dwc:infragenericEpithet="", dwc:specificEpithet="rosarium", dwc:infraspecificEpithet="", dwc:cultivarEpithet="", dwc:vernacularName="", dwc:scientificNameAuthorship="Perry, 1811", dwc:taxonRank="",bdq:sourceAuthority=”marinespecies.org”: Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:scientificName matched to unique taxon record in WoRMS, unique fuzzy match on name and exact match on authorship. "
+dwc:taxonID="", dwc:scientificNameID="", dwc:acceptedNameUsageID="", dwc:originalNameUsageID="", dwc:taxonConceptID="", dwc:scientificName="Triplex rosaria Perry, 1811", dwc:higherClassification="", dwc:kingdom="Animalia", dwc:phylum="mollusca", dwc:class="Gastropoda", dwc:order="", dwc:family="Muricidae", dwc:subfamily="", dwc:genus="Chicoreus", dwc:genericName="Triplex", dwc:subgenus="", dwc:infragenericEpithet="", dwc:specificEpithet="rosarium", dwc:infraspecificEpithet="", dwc:cultivarEpithet="", dwc:vernacularName="", dwc:scientificNameAuthorship="Perry, 1811", dwc:taxonRank="",bdqval:sourceAuthority=”marinespecies.org”: Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:scientificName matched to unique taxon record in WoRMS, unique fuzzy match on name and exact match on authorship. "
 
 dwc:taxonID="", dwc:scientificNameID="", dwc:acceptedNameUsageID="", dwc:originalNameUsageID="", dwc:taxonConceptID="", dwc:scientificName="Graphis", dwc:higherClassification="", dwc:kingdom="", dwc:phylum="", dwc:class="", dwc:order="", dwc:family="", dwc:subfamily="", dwc:genus="", dwc:genericName="", dwc:subgenus="", dwc:infragenericEpithet="", dwc:specificEpithet="", dwc:infraspecificEpithet="", dwc:cultivarEpithet="", dwc:vernacularName="", dwc:scientificNameAuthorship="", dwc:taxonRank="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:scientificName="Graphis" is ambiguous as could be either a lichen or a gastropod."
 
 
 #### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 
-There are any number of potential controlled vocabularies that might be used for this Test, including local vocabularies and taxon specific vocabularies. If dwc:scientificNameID is bdq:Empty, use dwc:scientificName and dwc:CultivarEpithet to search for a unique taxon. If dwc:scientificName is bdq:Empty, check with the terms that form atomic parts of it (dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:taxonRank, dwc:scientificNameAuthorship), and if more than one match is found, use the remaining terms to try to disambiguate to a single Taxon record. The terms dwc:subgenus, dwc:genus, dwc:family, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:scientificNameID,, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID should not be used to make a match if dwc:scientificNameID and dwc:scientificName or dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:taxonRank, dwc:scientificNameAuthorship are bdq:Empty. Note that Test VALIDATION_SCIENTIFICNAME_FOUND (4c09f127-737b-4686-82a0-7c8e30841590) is a more specific Test for a subset of Information Elements from this Test.
+There are any number of potential controlled vocabularies that might be used for this Test, including local vocabularies and taxon specific vocabularies. If dwc:scientificNameID is bdqval:Empty, use dwc:scientificName and dwc:CultivarEpithet to search for a unique taxon. If dwc:scientificName is bdqval:Empty, check with the terms that form atomic parts of it (dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:taxonRank, dwc:scientificNameAuthorship), and if more than one match is found, use the remaining terms to try to disambiguate to a single Taxon record. The terms dwc:subgenus, dwc:genus, dwc:family, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:scientificNameID,, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID should not be used to make a match if dwc:scientificNameID and dwc:scientificName or dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:taxonRank, dwc:scientificNameAuthorship are bdqval:Empty. Note that Test VALIDATION_SCIENTIFICNAME_FOUND (4c09f127-737b-4686-82a0-7c8e30841590) is a more specific Test for a subset of Information Elements from this Test.
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -3019,7 +3019,7 @@ The number of Tests of output type AMENDMENT that have been run against the reco
 
 #### Information Elements
 Consulted: 
-bdq:AllAmendmentTestsRunOnSingleRecord
+bdqval:AllAmendmentTestsRunOnSingleRecord
 
 #### Examples
 
@@ -3028,7 +3028,7 @@ Response.status=RUN_HAS_RESULT, Response.result="17", Response.comment="17 Tests
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Taxon-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Taxon-Management
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -3049,7 +3049,7 @@ INTERNAL_PREREQUISITES_NOT_MET if no Tests of type VALIDATION were attempted to 
 
 #### Information Elements
 Consulted: 
-bdq:AllValidationTestsRunOnSingleRecord
+bdqval:AllValidationTestsRunOnSingleRecord
 
 #### Examples
 
@@ -3058,7 +3058,7 @@ Response.status=RUN_HAS_RESULT, Response.result="7", Response.comment="7 VALIDAT
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Taxon-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Taxon-Management
 
 #### Notes
 
@@ -3083,7 +3083,7 @@ INTERNAL_PREREQUISITES_NOT_MET if no Tests of type VALIDATION were attempted to 
 
 #### Information Elements
 Consulted: 
-bdq:AllValidationTestsRunOnSingleRecord
+bdqval:AllValidationTestsRunOnSingleRecord
 
 #### Examples
 
@@ -3092,7 +3092,7 @@ Response.status=RUN_HAS_RESULT, Response.result="37", Response.comment="37 VALID
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Taxon-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Taxon-Management
 
 #### Notes
 
@@ -3117,7 +3117,7 @@ INTERNAL_PREREQUISITES_NOT_MET if no Tests of type VALIDATION were run; Report t
 
 #### Information Elements
 Consulted: 
-bdq:AllValidationTestsRunOnSingleRecord
+bdqval:AllValidationTestsRunOnSingleRecord
 
 #### Examples
 
@@ -3126,7 +3126,7 @@ Response.status=RUN_HAS_RESULT, Response.result="27", Response.comment="27 VALID
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Taxon-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Taxon-Management
 
 #### Notes
 
@@ -3147,7 +3147,7 @@ What is the duration of dwc:eventDate in seconds?
 
 #### Expected Response
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty or if the value of dwc:eventDate is not a valid ISO 8601 date; otherwise RUN_HAS_RESULT with the result being the duration (sensu ISO 8601) expressed in the dwc:eventDate, in seconds.
+INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdqval:Empty or if the value of dwc:eventDate is not a valid ISO 8601 date; otherwise RUN_HAS_RESULT with the result being the duration (sensu ISO 8601) expressed in the dwc:eventDate, in seconds.
 
 #### Information Elements
 
@@ -3163,7 +3163,7 @@ dwc:eventDate="95": Response.status=INTERNAL_PREREQUISITES_NOT_MET, Response.res
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -3184,7 +3184,7 @@ Is there a value in dwc:dataGeneralizations?
 
 #### Expected Response
 
-POTENTIAL_ISSUE if dwc:dataGeneralizations is bdq:NotEmpty; otherwise NOT_ISSUE
+POTENTIAL_ISSUE if dwc:dataGeneralizations is bdqval:NotEmpty; otherwise NOT_ISSUE
 
 #### Information Elements
 
@@ -3193,14 +3193,14 @@ dwc:dataGeneralizations
 
 #### Examples
 
-dwc:dataGeneralizations="placed on quarter degree grid": Response.status=RUN_HAS_RESULT, Response.result=POTENTIAL_ISSUE, Response.comment="dwc:dataGeneralizations is bdq:NotEmpty"
+dwc:dataGeneralizations="placed on quarter degree grid": Response.status=RUN_HAS_RESULT, Response.result=POTENTIAL_ISSUE, Response.comment="dwc:dataGeneralizations is bdqval:NotEmpty"
 
-dwc:dataGeneralizations="": Response.status=RUN_HAS_RESULT, Response.result=NOT_ISSUE, Response.comment="dwc:dataGeneralizations is bdq:Empty"
+dwc:dataGeneralizations="": Response.status=RUN_HAS_RESULT, Response.result=NOT_ISSUE, Response.comment="dwc:dataGeneralizations is bdqval:Empty"
 
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -3221,7 +3221,7 @@ Are the supplied geographic coordinates within a defined buffer of the center of
 
 #### Expected Response
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if any of dwc:countryCode, dwc:decimalLatitude, dwc:decimalLongitude are bdq:Empty; POTENTIAL_ISSUE if (1) the geographic coordinates are within the distance given by bdq:spatialBufferInMeters from the center of the supplied dwc:countryCode as represented in the bdq:sourceAuthority (or one of the centers, if the bdq:sourceAuthority provides more than one per country code) and (2) the dwc:coordinateUncertaintyInMeters is bdq:Empty or less than half the square root of the area of the country; otherwise NOT_ISSUE.
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if any of dwc:countryCode, dwc:decimalLatitude, dwc:decimalLongitude are bdqval:Empty; POTENTIAL_ISSUE if (1) the geographic coordinates are within the distance given by bdqval:spatialBufferInMeters from the center of the supplied dwc:countryCode as represented in the bdqval:sourceAuthority (or one of the centers, if the bdqval:sourceAuthority provides more than one per country code) and (2) the dwc:coordinateUncertaintyInMeters is bdqval:Empty or less than half the square root of the area of the country; otherwise NOT_ISSUE.
 
 #### Information Elements
 
@@ -3233,22 +3233,22 @@ dwc:coordinateUncertaintyInMeters
 
 #### Parameters
 
-bdq:spatialBufferInMeters,bdq:sourceAuthority
+bdqval:spatialBufferInMeters,bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdq:spatialBufferInMeters default = "5000",bdq:sourceAuthority default = "GBIF Catalogue of Country Centroides" {[https://raw.githubusercontent.com/jhnwllr/catalogue-of-centroids/master/PCLI.tsv]}
+bdqval:spatialBufferInMeters default = "5000",bdqval:sourceAuthority default = "GBIF Catalogue of Country Centroides" {[https://raw.githubusercontent.com/jhnwllr/catalogue-of-centroids/master/PCLI.tsv]}
 
 #### Examples
 
-dwc:decimalLatitude="-35.38804", dwc:decimalLongitude="-65.154964", dwc:countryCode="AR": Response.status=RUN_HAS_RESULT, Response.result=POTENTIAL_ISSUE, Response.comment="coordinates fall within buffered distance in the bdq:sourceAuthority for dwc:countryCode which may mean that coordinates have been generalized"
+dwc:decimalLatitude="-35.38804", dwc:decimalLongitude="-65.154964", dwc:countryCode="AR": Response.status=RUN_HAS_RESULT, Response.result=POTENTIAL_ISSUE, Response.comment="coordinates fall within buffered distance in the bdqval:sourceAuthority for dwc:countryCode which may mean that coordinates have been generalized"
 
-dwc:decimalLatitude="-34.184199", dwc:decimalLongitude="-65.509403", dwc:countryCode="AR": Response.status=RUN_HAS_RESULT, Response.result=NOT_ISSUE, Response.comment="coordinates fall outside buffered distance in the bdq:sourceAuthority for dwc:countryCode"
+dwc:decimalLatitude="-34.184199", dwc:decimalLongitude="-65.509403", dwc:countryCode="AR": Response.status=RUN_HAS_RESULT, Response.result=NOT_ISSUE, Response.comment="coordinates fall outside buffered distance in the bdqval:sourceAuthority for dwc:countryCode"
 
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns
+bdqval:Spatial-Temporal_Patterns
 
 #### Notes
 
@@ -3269,7 +3269,7 @@ Is there a value in dwc:establishmentMeans?
 
 #### Expected Response
 
-POTENTIAL_ISSUE if dwc:establishmentMeans is bdq:NotEmpty; otherwise NOT_ISSUE
+POTENTIAL_ISSUE if dwc:establishmentMeans is bdqval:NotEmpty; otherwise NOT_ISSUE
 
 #### Information Elements
 
@@ -3278,14 +3278,14 @@ dwc:establishmentMeans
 
 #### Examples
 
-dwc:establishmentMeans="?": Response.status=RUN_HAS_RESULT, Response.result=POTENTIAL_ISSUE, Response.comment="dwc:establishmentMeans is bdq:NotEmpty"
+dwc:establishmentMeans="?": Response.status=RUN_HAS_RESULT, Response.result=POTENTIAL_ISSUE, Response.comment="dwc:establishmentMeans is bdqval:NotEmpty"
 
-dwc:establishmentMeans="": Response.status=RUN_HAS_RESULT, Response.result=NOT_ISSUE, Response.comment="dwc:establishmentMeans is bdq:Empty"
+dwc:establishmentMeans="": Response.status=RUN_HAS_RESULT, Response.result=NOT_ISSUE, Response.comment="dwc:establishmentMeans is bdqval:Empty"
 
 
 #### Use Cases
 
-bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Biotic-Relationships
+bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Biotic-Relationships
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -3302,7 +3302,7 @@ Are there any annotations associated with the record?
 
 #### Expected Response
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:annotationSystem is not available; POTENTIAL_ISSUE if an annotation in the bdq:annotationSystem exists with a matching bdq:annotationAlertIf; otherwise NOT_ISSUE.
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:annotationSystem is not available; POTENTIAL_ISSUE if an annotation in the bdqval:annotationSystem exists with a matching bdqval:annotationAlertIf; otherwise NOT_ISSUE.
 
 #### Information Elements
 Consulted: 
@@ -3310,22 +3310,22 @@ AllDarwinCoreTerms
 
 #### Parameters
 
-bdq:annotationSystem,bdq:annotationAlertIf
+bdqval:annotationSystem,bdqval:annotationAlertIf
 
 #### Default Parameter Values
 
-bdq:annotationSystem default = "W3C Web Annotation" {[https://www.w3.org/annotation/]} {"oa:Annotation vocabulary" [https://www.w3.org/TR/annotation-vocab/]},bdq:annotationAlertIf default = "oa:Annotation with oa:hasTarget having as object any dwciri:term instance that is part of the SingleRecord under Test." {[https://www.w3.org/TR/annotation-vocab/]}
+bdqval:annotationSystem default = "W3C Web Annotation" {[https://www.w3.org/annotation/]} {"oa:Annotation vocabulary" [https://www.w3.org/TR/annotation-vocab/]},bdqval:annotationAlertIf default = "oa:Annotation with oa:hasTarget having as object any dwciri:term instance that is part of the SingleRecord under Test." {[https://www.w3.org/TR/annotation-vocab/]}
 
 #### Examples
 
-bdq:annotationAlertIf="": Response.status=RUN_HAS_RESULT, Response.result=NOT_ISSUE, Response.comment="bdq:annotationAlertIf is bdq:Empty"
+bdqval:annotationAlertIf="": Response.status=RUN_HAS_RESULT, Response.result=NOT_ISSUE, Response.comment="bdqval:annotationAlertIf is bdqval:Empty"
 
-bdq:annotationAlertIf="?": Response.status=RUN_HAS_RESULT, Response.result=POTENTIAL_ISSUE, Response.comment="bdq:annotationAlertIf is bdq:NotEmpty"
+bdqval:annotationAlertIf="?": Response.status=RUN_HAS_RESULT, Response.result=POTENTIAL_ISSUE, Response.comment="bdqval:annotationAlertIf is bdqval:NotEmpty"
 
 
 #### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 
@@ -3342,11 +3342,11 @@ Acts upon  SingleRecord
 
 #### Description
 
-Proposes an amendment to the value of dwc:basisOfRecord using the bdq:sourceAuthority.
+Proposes an amendment to the value of dwc:basisOfRecord using the bdqval:sourceAuthority.
 
 #### Expected Response
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:basisOfRecord is bdq:Empty; AMENDED the value of dwc:basisOfRecord if it could be unambiguously interpreted as a value in the bdq:sourceAuthority; otherwise NOT_AMENDED
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:basisOfRecord is bdqval:Empty; AMENDED the value of dwc:basisOfRecord if it could be unambiguously interpreted as a value in the bdqval:sourceAuthority; otherwise NOT_AMENDED
 
 #### Information Elements
 
@@ -3355,22 +3355,22 @@ dwc:basisOfRecord
 
 #### Parameters
 
-bdq:sourceAuthority
+bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdq:sourceAuthority default = "Darwin Core basisOfRecord" {[https://dwc.tdwg.org/terms/#dwc:basisOfRecord]} {dwc:basisOfRecord vocabulary [https://rs.gbif.org/vocabulary/dwc/basis_of_record.xml]}
+bdqval:sourceAuthority default = "Darwin Core basisOfRecord" {[https://dwc.tdwg.org/terms/#dwc:basisOfRecord]} {dwc:basisOfRecord vocabulary [https://rs.gbif.org/vocabulary/dwc/basis_of_record.xml]}
 
 #### Examples
 
 dwc:basisOfRecord="Human obs": Response.status=AMENDED, Response.result=dwc:basisOfRecord="HumanObservation", Response.comment="dwc:basisOfRecord contains interpretable value"
 
-dwc:basisOfRecord="FossilSpecimen": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:basisOfRecord contains match in the bdq:sourceAuthority so NOT_AMENDED"
+dwc:basisOfRecord="FossilSpecimen": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:basisOfRecord contains match in the bdqval:sourceAuthority so NOT_AMENDED"
 
 
 #### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -3391,7 +3391,7 @@ Proposes an amendment to the value of dc:type using the DCMI type vocabulary.
 
 #### Expected Response
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the value of dc:type is bdq:Empty; AMENDED the value of dc:type if it can be unambiguously interpreted as a term name in the bdq:sourceAuthority; otherwise NOT_AMENDED
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the value of dc:type is bdqval:Empty; AMENDED the value of dc:type if it can be unambiguously interpreted as a term name in the bdqval:sourceAuthority; otherwise NOT_AMENDED
 
 #### Information Elements
 
@@ -3400,7 +3400,7 @@ dc:type
 
 #### Source Authority
 
-bdq:sourceAuthority = "DCMI Type Vocabulary" {[http://purl.org/dc/terms/DCMIType]} {"DCMI Type Vocabulary List of Terms" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}
+bdqval:sourceAuthority = "DCMI Type Vocabulary" {[http://purl.org/dc/terms/DCMIType]} {"DCMI Type Vocabulary List of Terms" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}
 
 #### Examples
 
@@ -3411,7 +3411,7 @@ dc:type="X": Response.status=NOT_AMENDED, Response.result="", Response.comment="
 
 #### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 
@@ -3428,11 +3428,11 @@ Acts upon  SingleRecord
 
 #### Description
 
-Proposes an amendment to the value of dcterms:license using the bdq:sourceAuthority.
+Proposes an amendment to the value of dcterms:license using the bdqval:sourceAuthority.
 
 #### Expected Response
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; AMENDED value of dcterms:license if it could be unambiguously interpreted as a value in the bdq:sourceAuthority; otherwise NOT_AMENDED.
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; AMENDED value of dcterms:license if it could be unambiguously interpreted as a value in the bdqval:sourceAuthority; otherwise NOT_AMENDED.
 
 #### Information Elements
 
@@ -3441,11 +3441,11 @@ dcterms:license
 
 #### Parameters
 
-bdq:sourceAuthority
+bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdq:sourceAuthority default = "Creative Commons" {[https://creativecommons.org/]} {Creative Commons licenses [https://creativecommons.org/about/cclicenses/]}
+bdqval:sourceAuthority default = "Creative Commons" {[https://creativecommons.org/]} {Creative Commons licenses [https://creativecommons.org/about/cclicenses/]}
 
 #### Examples
 
@@ -3456,7 +3456,7 @@ dcterms:license="X": Response.status=NOT_AMENDED, Response.result="", Response.c
 
 #### Use Cases
 
-bdq:Record-Management
+bdqval:Record-Management
 
 #### Notes
 
@@ -3477,7 +3477,7 @@ Proposes an amendment to the values of dwc:decimalLatitude, dwc:decimalLongitude
 
 #### Expected Response
 
-INTERNAL_PREREQUISITES_NOT_MET if 1) either dwc:decimalLatitude or dwc:decimalLongitude are bdq:NotEmpty, or 2) dwc:verbatimCoordinates and one of dwc:verbatimLatitude and dwc:verbatimLongitude are bdq:Empty; FILLED_IN the values of dwc:decimalLatitude, dwc:decimalLongitude and dwc:geodeticDatum (provided that the dwc:verbatimCoordinates can be unambiguously interpreted as geographic coordinates) from 1) dwc:verbatimLatitude, dwc:verbatimLongitude and dwc:verbatimSRS or 2) dwc:verbatimCoordinates and dwc:verbatimSRS; otherwise NOT_AMENDED.
+INTERNAL_PREREQUISITES_NOT_MET if 1) either dwc:decimalLatitude or dwc:decimalLongitude are bdqval:NotEmpty, or 2) dwc:verbatimCoordinates and one of dwc:verbatimLatitude and dwc:verbatimLongitude are bdqval:Empty; FILLED_IN the values of dwc:decimalLatitude, dwc:decimalLongitude and dwc:geodeticDatum (provided that the dwc:verbatimCoordinates can be unambiguously interpreted as geographic coordinates) from 1) dwc:verbatimLatitude, dwc:verbatimLongitude and dwc:verbatimSRS or 2) dwc:verbatimCoordinates and dwc:verbatimSRS; otherwise NOT_AMENDED.
 
 #### Information Elements
 
@@ -3496,7 +3496,7 @@ dwc:verbatimLatitude="", dwc:verbatimLongitude="", dwc:verbatimCoordinates="54K 
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -3517,7 +3517,7 @@ Proposes an amendment transposing or changing the signs of dwc:decimalLatitude a
 
 #### Expected Response
 
-INTERNAL_PREREQUISITES_NOT_MET if any of dwc:decimalLatitude or dwc:decimalLongitude or dwc:countryCode are bdq:Empty; AMENDED dwc:decimalLatitude and dwc:decimalLongitude if the coordinates were transposed or one or more of the signs of the coordinates were reversed to align the location with dwc:countryCode according to the bdq:sourceAuthority; otherwise NOT_AMENDED
+INTERNAL_PREREQUISITES_NOT_MET if any of dwc:decimalLatitude or dwc:decimalLongitude or dwc:countryCode are bdqval:Empty; AMENDED dwc:decimalLatitude and dwc:decimalLongitude if the coordinates were transposed or one or more of the signs of the coordinates were reversed to align the location with dwc:countryCode according to the bdqval:sourceAuthority; otherwise NOT_AMENDED
 
 #### Information Elements
 
@@ -3529,11 +3529,11 @@ dwc:countryCode
 
 #### Parameters
 
-bdq:sourceAuthority
+bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdq:sourceAuthority default = "10m-admin-1 boundaries UNION with Exclusive Economic Zones" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/] spatial UNION [https://www.marineregions.org/downloads.php#marbound]}
+bdqval:sourceAuthority default = "10m-admin-1 boundaries UNION with Exclusive Economic Zones" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/] spatial UNION [https://www.marineregions.org/downloads.php#marbound]}
 
 #### Examples
 
@@ -3544,7 +3544,7 @@ dwc:decimalLatitude="25.46", dwc:decimalLongitude="135.87", dwc:countryCode="AX"
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -3561,11 +3561,11 @@ Acts upon  SingleRecord
 
 #### Description
 
-Proposes an amendment to the value of dwc:countryCode if dwc:decimalLatitude and dwc:decimalLongitude fall within a boundary from the bdq:countryShapes that is attributable to a single valid ISO 3166-1-alpha-2 country code.
+Proposes an amendment to the value of dwc:countryCode if dwc:decimalLatitude and dwc:decimalLongitude fall within a boundary from the bdqval:countryShapes that is attributable to a single valid ISO 3166-1-alpha-2 country code.
 
 #### Expected Response
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if either dwc:decimalLatitude or dwc:decimalLongitude is bdq:Empty, or if dwc:countryCode is bdq:NotEmpty; FILLED_IN dwc:countryCode if dwc:decimalLatitude and dwc:decimalLongitude fall within a boundary in the bdq:sourceAuthority that is attributable to a single valid country code; otherwise NOT_AMENDED.
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if either dwc:decimalLatitude or dwc:decimalLongitude is bdqval:Empty, or if dwc:countryCode is bdqval:NotEmpty; FILLED_IN dwc:countryCode if dwc:decimalLatitude and dwc:decimalLongitude fall within a boundary in the bdqval:sourceAuthority that is attributable to a single valid country code; otherwise NOT_AMENDED.
 
 #### Information Elements
 
@@ -3577,11 +3577,11 @@ dwc:decimalLatitude,dwc:decimalLongitude
 
 #### Parameters
 
-bdq:sourceAuthority
+bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdq:sourceAuthority default = "10m-admin-1 boundaries UNION with Exclusive Economic Zones" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/] spatial UNION [https://www.marineregions.org/downloads.php#marbound]}
+bdqval:sourceAuthority default = "10m-admin-1 boundaries UNION with Exclusive Economic Zones" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/] spatial UNION [https://www.marineregions.org/downloads.php#marbound]}
 
 #### Examples
 
@@ -3592,7 +3592,7 @@ dwc:decimalLatitude="-38.280937", dwc:decimalLongitude="72.047790", dwc:countryC
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -3613,7 +3613,7 @@ Proposes an amendment to the value of dwc:countryCode if it can be interpreted a
 
 #### Expected Response
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the value of dwc:countryCode is bdq:Empty; AMENDED the value of dwc:countryCode if it can be unambiguously interpreted to a value in the bdq:sourceAuthority; otherwise NOT_AMENDED
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the value of dwc:countryCode is bdqval:Empty; AMENDED the value of dwc:countryCode if it can be unambiguously interpreted to a value in the bdqval:sourceAuthority; otherwise NOT_AMENDED
 
 #### Information Elements
 
@@ -3622,7 +3622,7 @@ dwc:countryCode
 
 #### Source Authority
 
-bdq:sourceAuthority default = "ISO 3166-1-alpha-2" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}
+bdqval:sourceAuthority default = "ISO 3166-1-alpha-2" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}
 
 #### Examples
 
@@ -3633,7 +3633,7 @@ dwc:countryCode="Aust.": Response.status=NOT_AMENDED, Response.result=, Response
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -3654,7 +3654,7 @@ Proposes an amendment to fill in dwc:geodeticDatum using a parameterized value i
 
 #### Expected Response
 
-If dwc:geodeticDatum is bdq:Empty, fill in dwc:geodeticDatum using the value of bdq:defaultGeodeticDatum, report FILLED_IN and, if dwc:coordinateUncertaintyInMeters, dwc:decimalLatitude and dwc:decimalLongitude are bdq:NotEmpty, amend the value of dwc:coordinateUncertaintyInMeters by adding the maximum datum shift between the specified bdq:defaultGeodeticDatum and any other datum at the provided dwc:decimalLatitude and dwc:decimalLongitude and instead report AMENDED; otherwise NOT_AMENDED.
+If dwc:geodeticDatum is bdqval:Empty, fill in dwc:geodeticDatum using the value of bdqval:defaultGeodeticDatum, report FILLED_IN and, if dwc:coordinateUncertaintyInMeters, dwc:decimalLatitude and dwc:decimalLongitude are bdqval:NotEmpty, amend the value of dwc:coordinateUncertaintyInMeters by adding the maximum datum shift between the specified bdqval:defaultGeodeticDatum and any other datum at the provided dwc:decimalLatitude and dwc:decimalLongitude and instead report AMENDED; otherwise NOT_AMENDED.
 
 #### Information Elements
 
@@ -3666,26 +3666,26 @@ dwc:decimalLatitude,dwc:decimalLongitude
 
 #### Parameters
 
-bdq:defaultGeodeticDatum
+bdqval:defaultGeodeticDatum
 
 #### Default Parameter Values
 
-bdq:defaultGeodeticDatum default = "EPSG:4326"
+bdqval:defaultGeodeticDatum default = "EPSG:4326"
 
 #### Examples
 
-dwc:geodeticDatum="[null]", dwc:decimalLatitude="-30.00", dwc:decimalLongitude="130.00", dwc:coordinateUncertaintyInMeters="50": Response.status=AMENDED, Response.result=dwc:geodeticDatum="EPSG:4326", dwc:coordinateUncertaintyInMeters="2836", Response.comment="dwc:godeticDatum is bdq:Empty so filled in with default and dwc:coordinateUncertaintyInMeters amended to maximum possible value"
+dwc:geodeticDatum="[null]", dwc:decimalLatitude="-30.00", dwc:decimalLongitude="130.00", dwc:coordinateUncertaintyInMeters="50": Response.status=AMENDED, Response.result=dwc:geodeticDatum="EPSG:4326", dwc:coordinateUncertaintyInMeters="2836", Response.comment="dwc:godeticDatum is bdqval:Empty so filled in with default and dwc:coordinateUncertaintyInMeters amended to maximum possible value"
 
 dwc:geodeticDatum="WGS84", dwc:decimalLatitude="", dwc:decimalLongitude="", dwc:coordinateUncertaintyInMeters="": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:geodeticDatum contains a value"
 
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
-The value of dwc:geodeticDatum applies to dwc:decimalLatitude and dwc:decimalLongitude, thus EPSG:4326 (https://epsg.org/crs_4326/WGS-84.html) is the appropriate EPSG code as it applies to the WGS84 datum used with a geographic coordinate system. If the dwc:coordinateUncertaintyInMeters is bdq:Empty, not interpretable, or not valid, this amendment should not provide a dwc:coordinateUncertaintyInMeters. If the dwc:coordinateUncertaintyInMeters is bdq:NotEmpty and is valid, this amendment should add to the dwc:coordinateUncertaintyInMeters the uncertainty contributed by the maximum datum shift at the given coordinates. Since different systems have differing requirements for what the default datum should be, it is left unspecified, but should match whatever the target datum is in AMENDMENT_COORDINATES_CONVERTED (620749b9-7d9c-4890-97d2-be3d1cde6da8). After the amendment is performed, the dwc:geodeticDatum field should be the assumed default datum as parameterized. An example implementation to determine the uncertainty added by asserting a default datum (datum shift) where a known datum is not declared can be found in [datumshiftproj.py](https://github.com/VertNet/georefcalculator/blob/master/source/python/datumshiftproj.py) in the source code for the [Georeferencing Calculator](https://georeferencing.org/calculator/) (Wieczorek & Wieczorek 2021). Included in the source code is a [5-degree grid](https://github.com/VertNet/georefcalculator/blob/master/datumerrordata.js) of datum shifts from an unknown datum to WGS84.
+The value of dwc:geodeticDatum applies to dwc:decimalLatitude and dwc:decimalLongitude, thus EPSG:4326 (https://epsg.org/crs_4326/WGS-84.html) is the appropriate EPSG code as it applies to the WGS84 datum used with a geographic coordinate system. If the dwc:coordinateUncertaintyInMeters is bdqval:Empty, not interpretable, or not valid, this amendment should not provide a dwc:coordinateUncertaintyInMeters. If the dwc:coordinateUncertaintyInMeters is bdqval:NotEmpty and is valid, this amendment should add to the dwc:coordinateUncertaintyInMeters the uncertainty contributed by the maximum datum shift at the given coordinates. Since different systems have differing requirements for what the default datum should be, it is left unspecified, but should match whatever the target datum is in AMENDMENT_COORDINATES_CONVERTED (620749b9-7d9c-4890-97d2-be3d1cde6da8). After the amendment is performed, the dwc:geodeticDatum field should be the assumed default datum as parameterized. An example implementation to determine the uncertainty added by asserting a default datum (datum shift) where a known datum is not declared can be found in [datumshiftproj.py](https://github.com/VertNet/georefcalculator/blob/master/source/python/datumshiftproj.py) in the source code for the [Georeferencing Calculator](https://georeferencing.org/calculator/) (Wieczorek & Wieczorek 2021). Included in the source code is a [5-degree grid](https://github.com/VertNet/georefcalculator/blob/master/datumerrordata.js) of datum shifts from an unknown datum to WGS84.
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -3698,11 +3698,11 @@ Acts upon  SingleRecord
 
 #### Description
 
-Proposes an amendment to the value of dwc:geodeticDatum using the bdq:sourceAuthority.
+Proposes an amendment to the value of dwc:geodeticDatum using the bdqval:sourceAuthority.
 
 #### Expected Response
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; AMENDED the value of dwc:geodeticDatum if it could be unambiguously interpreted as a valid code from the bdq:sourceAuthority (in the form Authority:Number) for a Datum, Ellipsoid or a CRS appropriate for a 2D geographic coordinate in degrees, or as the value "not recorded"; otherwise NOT_AMENDED
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdqval:Empty; AMENDED the value of dwc:geodeticDatum if it could be unambiguously interpreted as a valid code from the bdqval:sourceAuthority (in the form Authority:Number) for a Datum, Ellipsoid or a CRS appropriate for a 2D geographic coordinate in degrees, or as the value "not recorded"; otherwise NOT_AMENDED
 
 #### Information Elements
 
@@ -3711,22 +3711,22 @@ dwc:geodeticDatum
 
 #### Source Authority
 
-bdq:sourceAuthority = "EPSG" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index#/Datum]}
+bdqval:sourceAuthority = "EPSG" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index#/Datum]}
 
 #### Examples
 
-dwc:geodeticDatum="WGS84": Response.status=AMENDED, Response.result=dwc:geodeticDatum="EPSG:4326", Response.comment="dwc:geodeticDatum contains a valid code in the bdq:sourceAuthority"
+dwc:geodeticDatum="WGS84": Response.status=AMENDED, Response.result=dwc:geodeticDatum="EPSG:4326", Response.comment="dwc:geodeticDatum contains a valid code in the bdqval:sourceAuthority"
 
 dwc:geodeticDatum="WGS8": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:geodeticDatum contains an ambiguous value"
 
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
-Chapman and Wieczorek (2020) recommend best practice is to use EPSG codes (https://epsg.io/) as a controlled vocabulary. Ideally, amend to the EPSG code for the geographic coordinate reference system (CRS), if known. Otherwise use the EPSG code for the geodetic datum, if known. Otherwise use the EPSG code of the ellipsoid, if known. If none of these is known, use the explicit value "not recorded". The reference vocabularies of values for geodetic datums and ellipsoids needs to be made available and should map alternative representations of dwc:geodeticDatum strings to EPSG codes, such as "WGS84", "WGS_84", "WGS:84", "WGS 84", all with standard value "EPSG:4326". NB. Do NOT change one datum to any other datum no matter how close they are or may appear to be. The same treatment should be given to all datums, which is to use their transformation algorithms to get the equivalent in EPSG:4326. For reference, a vocabulary of synonyms for EPSG codes for values of dwc:geodeticDatum can be found at https://registry.gbif.org/vocabulary/GeodeticDatum/concepts and and for more information on obtaining the EPSG dataset, see https://docs.geotools.org/latest/userguide/library/referencing/epsg.html. For the purposes of this Test "not recorded" is not a value in the bdq:sourceAuthority and should result in NOT_AMENDED.
+Chapman and Wieczorek (2020) recommend best practice is to use EPSG codes (https://epsg.io/) as a controlled vocabulary. Ideally, amend to the EPSG code for the geographic coordinate reference system (CRS), if known. Otherwise use the EPSG code for the geodetic datum, if known. Otherwise use the EPSG code of the ellipsoid, if known. If none of these is known, use the explicit value "not recorded". The reference vocabularies of values for geodetic datums and ellipsoids needs to be made available and should map alternative representations of dwc:geodeticDatum strings to EPSG codes, such as "WGS84", "WGS_84", "WGS:84", "WGS 84", all with standard value "EPSG:4326". NB. Do NOT change one datum to any other datum no matter how close they are or may appear to be. The same treatment should be given to all datums, which is to use their transformation algorithms to get the equivalent in EPSG:4326. For reference, a vocabulary of synonyms for EPSG codes for values of dwc:geodeticDatum can be found at https://registry.gbif.org/vocabulary/GeodeticDatum/concepts and and for more information on obtaining the EPSG dataset, see https://docs.geotools.org/latest/userguide/library/referencing/epsg.html. For the purposes of this Test "not recorded" is not a value in the bdqval:sourceAuthority and should result in NOT_AMENDED.
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -3743,7 +3743,7 @@ Proposes amendments of the values of dwc:minimumDepthInMeters and dwc:maximumDep
 
 #### Expected Response
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters or dwc:maximumDepthInMeters are bdq:NotEmpty or dwc:verbatimDepth is bdq:Empty; FILLED_IN the value of dwc:minimumDepthInMeters and dwc:maximumDepthInMeters if they can be unambiguously interpreted from dwc:verbatimDepth; otherwise NOT_AMENDED.
+INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters or dwc:maximumDepthInMeters are bdqval:NotEmpty or dwc:verbatimDepth is bdqval:Empty; FILLED_IN the value of dwc:minimumDepthInMeters and dwc:maximumDepthInMeters if they can be unambiguously interpreted from dwc:verbatimDepth; otherwise NOT_AMENDED.
 
 #### Information Elements
 
@@ -3762,7 +3762,7 @@ dwc:minimumDepthInMeters="", dwc:maximumDepthInMeters="", dwc:verbatimDepth="x":
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -3783,7 +3783,7 @@ Proposes an amendment or amendments to the values of dwc:minimumElevationInMeter
 
 #### Expected Response
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumElevationInMeters or dwc:maximumElevationInMeters are bdq:NotEmpty or dwc:verbatimElevation is bdq:Empty; FILLED_IN the values of dwc:minimumElevationInMeters and dwc:maximumElevationInMeters if they can be unambiguously interpreted from dwc:verbatimElevation; otherwise NOT_AMENDED
+INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumElevationInMeters or dwc:maximumElevationInMeters are bdqval:NotEmpty or dwc:verbatimElevation is bdqval:Empty; FILLED_IN the values of dwc:minimumElevationInMeters and dwc:maximumElevationInMeters if they can be unambiguously interpreted from dwc:verbatimElevation; otherwise NOT_AMENDED
 
 #### Information Elements
 
@@ -3802,7 +3802,7 @@ dwc:verbatimElevation="x", dwc:minimumElevationInMeters="", dwc:maximumElevation
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -3823,7 +3823,7 @@ Proposes an amendment to the value of dwc:day as an integer between 1 and 31 inc
 
 #### Expected Response
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:day is bdq:Empty; AMENDED the value of dwc:day if the value is unambiguously interpreted as an integer between 1 and 31 inclusive; otherwise NOT_AMENDED
+INTERNAL_PREREQUISITES_NOT_MET if dwc:day is bdqval:Empty; AMENDED the value of dwc:day if the value is unambiguously interpreted as an integer between 1 and 31 inclusive; otherwise NOT_AMENDED
 
 #### Information Elements
 
@@ -3839,7 +3839,7 @@ dwc:day="X": Response.status=NOT_AMENDED, Response.result="", Response.comment="
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -3860,7 +3860,7 @@ Proposes an amendment to the value of dwc:eventDate from the content of dwc:verb
 
 #### Expected Response
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:NotEmpty or the value of dwc:verbatimEventDate is bdq:Empty; FILLED_IN the value of dwc:eventDate if an unambiguous ISO 8601 date is interpreted from dwc:verbatimEventDate; otherwise NOT_AMENDED
+INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdqval:NotEmpty or the value of dwc:verbatimEventDate is bdqval:Empty; FILLED_IN the value of dwc:eventDate if an unambiguous ISO 8601 date is interpreted from dwc:verbatimEventDate; otherwise NOT_AMENDED
 
 #### Information Elements
 
@@ -3879,7 +3879,7 @@ dwc:eventDate="", dwc:verbatimEventDate="03/04/2020": Response.status=NOT_AMENDE
 
 #### Use Cases
 
-bdq:Record-Management
+bdqval:Record-Management
 
 #### Notes
 
@@ -3919,7 +3919,7 @@ dwc:eventDate="", dwc:year="2024", dwc:month="2", dwc:day="30": Response.status=
 
 #### Use Cases
 
-bdq:Record-Management
+bdqval:Record-Management
 
 #### Notes
 
@@ -3940,7 +3940,7 @@ Proposes an amendment to the value of dwc:eventDate from values in dwc:year, dwc
 
 #### Expected Response
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:NotEmpty or any of dwc:year, dwc:startDayOfYear, or dwc:endDayOfYear are bdq:Empty; FILLED_IN the value of dwc:eventDate from values in dwc:year, dwc:startDayOfYear and dwc:endDayOfYear if the values in each are independently interpretable and if the value of dwc:startDayOfYear is less than the value of dwc:endDayOfYear; otherwise NOT_AMENDED
+INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdqval:NotEmpty or any of dwc:year, dwc:startDayOfYear, or dwc:endDayOfYear are bdqval:Empty; FILLED_IN the value of dwc:eventDate from values in dwc:year, dwc:startDayOfYear and dwc:endDayOfYear if the values in each are independently interpretable and if the value of dwc:startDayOfYear is less than the value of dwc:endDayOfYear; otherwise NOT_AMENDED
 
 #### Information Elements
 
@@ -3959,7 +3959,7 @@ dwc:year="1901", dwc:startDayOfYear="25", dwc:endDayOfYear="15", dwc:eventDate="
 
 #### Use Cases
 
-bdq:Record-Management
+bdqval:Record-Management
 
 #### Notes
 
@@ -3980,7 +3980,7 @@ Proposes an amendment of the value of dwc:eventDate to a valid ISO date.
 
 #### Expected Response
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty; AMENDED if the value of dwc:eventDate is not a properly formatted ISO 8601 date but is unambiguous, and altered to be a valid ISO 8601 date; otherwise NOT_AMENDED
+INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdqval:Empty; AMENDED if the value of dwc:eventDate is not a properly formatted ISO 8601 date but is unambiguous, and altered to be a valid ISO 8601 date; otherwise NOT_AMENDED
 
 #### Information Elements
 
@@ -3996,7 +3996,7 @@ dwc:eventDate="10-28": Response.status=NOT_AMENDED, Response.result=, Response.c
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -4017,7 +4017,7 @@ Proposes an amendment to values in any of dwc:year, dwc:month, dwc:day, dwc:star
 
 #### Expected Response
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty or contains an invalid value according to ISO 8601; FILLED_IN if any of (1) dwc:day from dwc:eventDate if dwc:day is bdq:Empty and dwc:eventDate has a precision of a day or finer and is within a single day, (2) dwc:month from dwc:eventDate if dwc:month is bdq:Empty and dwc:eventDate has a precision of a single month or finer and is within a single month, (3) dwc:year from dwc:eventDate if dwc:year is bdq:Empty and dwc:eventDate has a precision of a single year or finer and is within a single year, (4) dwc:startDayOfYear and dwc:endDayOfYear if they are bdq:Empty and dwc:eventDate has a precision of a day or better; otherwise NOT_AMENDED.
+INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdqval:Empty or contains an invalid value according to ISO 8601; FILLED_IN if any of (1) dwc:day from dwc:eventDate if dwc:day is bdqval:Empty and dwc:eventDate has a precision of a day or finer and is within a single day, (2) dwc:month from dwc:eventDate if dwc:month is bdqval:Empty and dwc:eventDate has a precision of a single month or finer and is within a single month, (3) dwc:year from dwc:eventDate if dwc:year is bdqval:Empty and dwc:eventDate has a precision of a single year or finer and is within a single year, (4) dwc:startDayOfYear and dwc:endDayOfYear if they are bdqval:Empty and dwc:eventDate has a precision of a day or better; otherwise NOT_AMENDED.
 
 #### Information Elements
 
@@ -4036,7 +4036,7 @@ dwc:eventDate="2023",dwc:year="2023", dwc:month="", dwc:day="", dwc:startDayOfYe
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -4057,7 +4057,7 @@ Proposes an amendment to the value of dwc:month as an integer between 1 and 12 i
 
 #### Expected Response
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:month is bdq:Empty; AMENDED the value of dwc:month if it can be unambiguously interpreted as an integer between 1 and 12 inclusive; otherwise NOT_AMENDED
+INTERNAL_PREREQUISITES_NOT_MET if dwc:month is bdqval:Empty; AMENDED the value of dwc:month if it can be unambiguously interpreted as an integer between 1 and 12 inclusive; otherwise NOT_AMENDED
 
 #### Information Elements
 
@@ -4073,7 +4073,7 @@ dwc:month="October": Response.status=NOT_AMENDED, Response.result=, Response.com
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -4094,7 +4094,7 @@ Proposes an amendment to the value of dwc:dateIdentified to a valid ISO date.
 
 #### Expected Response
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:dateIdentified is bdq:Empty; AMENDED if the value of dwc:dateIdentified is not a properly formatted ISO 8601 date but is unambiguous and altered to be a valid ISO 8601 date; otherwise NOT_AMENDED.
+INTERNAL_PREREQUISITES_NOT_MET if dwc:dateIdentified is bdqval:Empty; AMENDED if the value of dwc:dateIdentified is not a properly formatted ISO 8601 date but is unambiguous and altered to be a valid ISO 8601 date; otherwise NOT_AMENDED.
 
 #### Information Elements
 
@@ -4110,7 +4110,7 @@ dwc:dateIdentified="21-10-28": Response.status=NOT_AMENDED, Response.result=, Re
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Taxon-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Taxon-Management
 
 #### Notes
 
@@ -4127,11 +4127,11 @@ Acts upon  SingleRecord
 
 #### Description
 
-Proposes an amendment to the value of dwc:degreeOfEstablishment using the bdq:sourceAuthority.
+Proposes an amendment to the value of dwc:degreeOfEstablishment using the bdqval:sourceAuthority.
 
 #### Expected Response
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:degreeOfEstablishment is bdq:Empty; AMENDED the value of dwc:degreeOfEstablishment if it can be unambiguously matched to a term in the bdq:sourceAuthority; otherwise NOT_AMENDED
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:degreeOfEstablishment is bdqval:Empty; AMENDED the value of dwc:degreeOfEstablishment if it can be unambiguously matched to a term in the bdqval:sourceAuthority; otherwise NOT_AMENDED
 
 #### Information Elements
 
@@ -4140,22 +4140,22 @@ dwc:degreeOfEstablishment
 
 #### Parameters
 
-bdq:sourceAuthority
+bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdq:sourceAuthority default = "Degree of Establishment Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/doe/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/DegreeOfEstablishment/concepts]}
+bdqval:sourceAuthority default = "Degree of Establishment Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/doe/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/DegreeOfEstablishment/concepts]}
 
 #### Examples
 
-dwc:degreeOfEstablishment="capt.": Response.status=AMENDED, Response.result=dwc:degreeOfEstablishment="captive", Response.comment="dwc:degreeOfEstablishment contains an interpretable value in the bdq:sourceAuthority"
+dwc:degreeOfEstablishment="capt.": Response.status=AMENDED, Response.result=dwc:degreeOfEstablishment="captive", Response.comment="dwc:degreeOfEstablishment contains an interpretable value in the bdqval:sourceAuthority"
 
-dwc:degreeOfEstablishment="tree": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:degreeOfEstablishment does not contain an interpretable value in the bdq:sourceAuthority"
+dwc:degreeOfEstablishment="tree": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:degreeOfEstablishment does not contain an interpretable value in the bdqval:sourceAuthority"
 
 
 #### Use Cases
 
-bdq:Alien-Species
+bdqval:Alien-Species
 
 #### Notes
 
@@ -4172,11 +4172,11 @@ Acts upon  SingleRecord
 
 #### Description
 
-Proposes an amendment to the value of dwc:establishmentMeans using the bdq:sourceAuthority.
+Proposes an amendment to the value of dwc:establishmentMeans using the bdqval:sourceAuthority.
 
 #### Expected Response
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:establishmentMeans is bdq:Empty; AMENDED the value of dwc:establishmentMeans if it can be unambiguously matched to a term in the bdq:sourceAuthority; otherwise NOT_AMENDED
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:establishmentMeans is bdqval:Empty; AMENDED the value of dwc:establishmentMeans if it can be unambiguously matched to a term in the bdqval:sourceAuthority; otherwise NOT_AMENDED
 
 #### Information Elements
 
@@ -4185,22 +4185,22 @@ dwc:establishmentMeans
 
 #### Parameters
 
-bdq:sourceAuthority
+bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdq:sourceAuthority default = "Establishment Means Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/em/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/EstablishmentMeans/concepts]}
+bdqval:sourceAuthority default = "Establishment Means Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/em/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/EstablishmentMeans/concepts]}
 
 #### Examples
 
-dwc:establishmentMeans="vag.": Response.status=AMENDED, Response.result=dwc:establishmentMeans="vagrant", Response.comment="dwc:establishmentMeans contains an interpretable value in the bdq:sourceAuthority"
+dwc:establishmentMeans="vag.": Response.status=AMENDED, Response.result=dwc:establishmentMeans="vagrant", Response.comment="dwc:establishmentMeans contains an interpretable value in the bdqval:sourceAuthority"
 
-dwc:establishmentMeans="cultivated": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:establishmentMeans is not an interpretable value in the bdq:sourceAuthority"
+dwc:establishmentMeans="cultivated": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:establishmentMeans is not an interpretable value in the bdqval:sourceAuthority"
 
 
 #### Use Cases
 
-bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -4217,7 +4217,7 @@ Proposes an amendment of the value of dwc:occurrenceStatus to the default parame
 
 #### Expected Response
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdq:NotEmpty; FILLED_IN the value of dwc:occurrenceStatus using the bdq:defaultOccurrenceStatus Parameter value if dwc:occurrenceStatus,dwc:individualCount and dwc:organismQuantity are bdq:Empty; otherwise NOT_AMENDED
+INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdqval:NotEmpty; FILLED_IN the value of dwc:occurrenceStatus using the bdqval:defaultOccurrenceStatus Parameter value if dwc:occurrenceStatus,dwc:individualCount and dwc:organismQuantity are bdqval:Empty; otherwise NOT_AMENDED
 
 #### Information Elements
 
@@ -4229,22 +4229,22 @@ dwc:individualCount,dwc:organismQuantity
 
 #### Parameters
 
-bdq:defaultOccurrenceStatus
+bdqval:defaultOccurrenceStatus
 
 #### Default Parameter Values
 
-bdq:defaultOccurrenceStatus default = "present"
+bdqval:defaultOccurrenceStatus default = "present"
 
 #### Examples
 
-dwc:occurrenceStatus="", dwc:individualCount="", dwc:organismQuantity="": Response.status=FILLED_IN, Response.result=dwc:occurrenceStatus="present", Response.comment="dwc:occurrenceStatus is bdq:Empty; assumed "present""
+dwc:occurrenceStatus="", dwc:individualCount="", dwc:organismQuantity="": Response.status=FILLED_IN, Response.result=dwc:occurrenceStatus="present", Response.comment="dwc:occurrenceStatus is bdqval:Empty; assumed "present""
 
-dwc:occurrenceStatus="X", dwc:individualCount="10", dwc:organismQuantity="": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:occurrenceStatus is bdq:NotEmpty"
+dwc:occurrenceStatus="X", dwc:individualCount="10", dwc:organismQuantity="": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:occurrenceStatus is bdqval:NotEmpty"
 
 
 #### Use Cases
 
-bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 
@@ -4261,11 +4261,11 @@ Acts upon  SingleRecord
 
 #### Description
 
-Proposes an amendment to the value of dwc:occurrenceStatus using the bdq:sourceAuthority.
+Proposes an amendment to the value of dwc:occurrenceStatus using the bdqval:sourceAuthority.
 
 #### Expected Response
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:ocurrenceStatus is bdq:Empty; AMENDED the value of dwc:occurrenceStatus if it can be unambiguously interpreted as a value in the bdq:sourceAuthority; otherwise NOT_AMENDED
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:ocurrenceStatus is bdqval:Empty; AMENDED the value of dwc:occurrenceStatus if it can be unambiguously interpreted as a value in the bdqval:sourceAuthority; otherwise NOT_AMENDED
 
 #### Information Elements
 
@@ -4274,11 +4274,11 @@ dwc:occurrenceStatus
 
 #### Parameters
 
-bdq:sourceAuthority
+bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdq:sourceAuthority default = "Regex present/absent" {["^(present|absent)$]}
+bdqval:sourceAuthority default = "Regex present/absent" {["^(present|absent)$]}
 
 #### Examples
 
@@ -4289,11 +4289,11 @@ dwc:occurrenceStatus="X": Response.status=NOT_AMENDED, Response.result=, Respons
 
 #### Use Cases
 
-bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 
-The recommended controlled vocabulary for this term consists of "present" and "absent", which are the only two appropriate terms for a Darwin Core Occurrence. This is reflected in the suggested dwc:occurrenceStatus vocabulary for this Test. Other values for dwc:occurrenceStatus should only arise under circumstances that do not refer to an Occurrence. The GBIF API is listed in the sourceAuthority. However, there is currently a mismatch between the lower case recommended values at https://dwc.tdwg.org/terms/#dwc:occurrenceStatus and the GBIF vocabulary at bdq:sourceAuthority that uses an upper case first letter (https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts), thus implementations using the GBIF API should ensure that matches on alternate terms in that vocabulary are converted to the all lower case values in the present/absent vocabulary recommended in Darwin Core. Implementations should interpret the numeric value 1 as present, and the numeric value 0 as absent.
+The recommended controlled vocabulary for this term consists of "present" and "absent", which are the only two appropriate terms for a Darwin Core Occurrence. This is reflected in the suggested dwc:occurrenceStatus vocabulary for this Test. Other values for dwc:occurrenceStatus should only arise under circumstances that do not refer to an Occurrence. The GBIF API is listed in the sourceAuthority. However, there is currently a mismatch between the lower case recommended values at https://dwc.tdwg.org/terms/#dwc:occurrenceStatus and the GBIF vocabulary at bdqval:sourceAuthority that uses an upper case first letter (https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts), thus implementations using the GBIF API should ensure that matches on alternate terms in that vocabulary are converted to the all lower case values in the present/absent vocabulary recommended in Darwin Core. Implementations should interpret the numeric value 1 as present, and the numeric value 0 as absent.
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -4306,11 +4306,11 @@ Acts upon  SingleRecord
 
 #### Description
 
-Proposes an amendment to the value of dwc:pathway using the bdq:sourceAuthority.
+Proposes an amendment to the value of dwc:pathway using the bdqval:sourceAuthority.
 
 #### Expected Response
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:pathway is bdq:Empty; AMENDED the value of dwc:pathway if it can be unambiguously matched to a term in the bdq:sourceAuthority; otherwise NOT_AMENDED
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:pathway is bdqval:Empty; AMENDED the value of dwc:pathway if it can be unambiguously matched to a term in the bdqval:sourceAuthority; otherwise NOT_AMENDED
 
 #### Information Elements
 
@@ -4319,22 +4319,22 @@ dwc:pathway
 
 #### Parameters
 
-bdq:sourceAuthority
+bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdq:sourceAuthority default = "Pathway Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/pw/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/Pathway/concepts]}
+bdqval:sourceAuthority default = "Pathway Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/pw/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/Pathway/concepts]}
 
 #### Examples
 
-dwc:pathway="transportStowaway": Response.status=AMENDED, Response.result=dwc:pathway="transportStowaway", Response.comment="dwc:pathway found in the bdq:sourceAuthority"
+dwc:pathway="transportStowaway": Response.status=AMENDED, Response.result=dwc:pathway="transportStowaway", Response.comment="dwc:pathway found in the bdqval:sourceAuthority"
 
-dwc:pathway="escapeee": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:pathway not found in the bdq:sourceAuthority"
+dwc:pathway="escapeee": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:pathway not found in the bdqval:sourceAuthority"
 
 
 #### Use Cases
 
-bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Alien-Species, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 
@@ -4351,11 +4351,11 @@ Acts upon  SingleRecord
 
 #### Description
 
-Proposes an amendment to the value of dwc:sex using the bdq:sourceAuthority.
+Proposes an amendment to the value of dwc:sex using the bdqval:sourceAuthority.
 
 #### Expected Response
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:sex is bdq:Empty; AMENDED the value of dwc:sex if it can be unambiguously matched to a term in the bdq:sourceAuthority; otherwise NOT_AMENDED
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:sex is bdqval:Empty; AMENDED the value of dwc:sex if it can be unambiguously matched to a term in the bdqval:sourceAuthority; otherwise NOT_AMENDED
 
 #### Information Elements
 
@@ -4364,22 +4364,22 @@ dwc:sex
 
 #### Parameters
 
-bdq:sourceAuthority
+bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdq:sourceAuthority default = "GBIF Sex Vocabulary" [https://api.gbif.org/v1/vocabularies/Sex]} {"dwc:sex vocabulary API" [https://api.gbif.org/v1/vocabularies/Sex/concepts]}
+bdqval:sourceAuthority default = "GBIF Sex Vocabulary" [https://api.gbif.org/v1/vocabularies/Sex]} {"dwc:sex vocabulary API" [https://api.gbif.org/v1/vocabularies/Sex/concepts]}
 
 #### Examples
 
-dwc:sex="f": Response.status=AMENDED, Response.result=dwc:sex="Female", Response.comment="dwc:sex found in the bdq:sourceAuthority"
+dwc:sex="f": Response.status=AMENDED, Response.result=dwc:sex="Female", Response.comment="dwc:sex found in the bdqval:sourceAuthority"
 
-dwc:sex="x": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:sex not found in the bdq:sourceAuthority"
+dwc:sex="x": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:sex not found in the bdqval:sourceAuthority"
 
 
 #### Use Cases
 
-bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management
+bdqval:Alien-Species, bdqval:Record-Management, bdqval:Taxon-Management
 
 #### Notes
 
@@ -4396,11 +4396,11 @@ Acts upon  SingleRecord
 
 #### Description
 
-Proposes an amendment to the value of dwc:typeStatus using the bdq:sourceAuthority.
+Proposes an amendment to the value of dwc:typeStatus using the bdqval:sourceAuthority.
 
 #### Expected Response
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; AMENDED the value of the first word in each &#124; delimited portion of dwc:typeStatus if it can be unambiguously matched to a term in the bdq:sourceAuthority; otherwise NOT_AMENDED.
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:typeStatus is bdqval:Empty; AMENDED the value of the first word in each &#124; delimited portion of dwc:typeStatus if it can be unambiguously matched to a term in the bdqval:sourceAuthority; otherwise NOT_AMENDED.
 
 #### Information Elements
 
@@ -4409,22 +4409,22 @@ dwc:typeStatus
 
 #### Parameters
 
-bdq:sourceAuthority
+bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdq:sourceAuthority default = "GBIF TypeStatus Vocabulary" {[https://api.gbif.org/v1/vocabularies/TypeStatus]} {dwc:typeStatus vocabulary API [https://api.gbif.org/v1/vocabularies/TypeStatus/concepts]}
+bdqval:sourceAuthority default = "GBIF TypeStatus Vocabulary" {[https://api.gbif.org/v1/vocabularies/TypeStatus]} {dwc:typeStatus vocabulary API [https://api.gbif.org/v1/vocabularies/TypeStatus/concepts]}
 
 #### Examples
 
-dwc:typeStatus="Holo.": Response.status=AMENDED, Response.result=dwc:typeStatus="Holotype", Response.comment="dwc:typeStatus found in the bdq:sourceAuthority"
+dwc:typeStatus="Holo.": Response.status=AMENDED, Response.result=dwc:typeStatus="Holotype", Response.comment="dwc:typeStatus found in the bdqval:sourceAuthority"
 
-dwc:typeStatus="x": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:typeStatus not found in the bdq:sourceAuthority"
+dwc:typeStatus="x": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:typeStatus not found in the bdqval:sourceAuthority"
 
 
 #### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 
@@ -4441,11 +4441,11 @@ Acts upon  SingleRecord
 
 #### Description
 
-Proposes an amendment to the value of dwc:scientificNameID if it can be unambiguously resolved from bdq:sourceAuthority using the available taxon terms.
+Proposes an amendment to the value of dwc:scientificNameID if it can be unambiguously resolved from bdqval:sourceAuthority using the available taxon terms.
 
 #### Expected Response
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is bdq:NotEmpty, or if all of dwc:scientificName, dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship, and dwc:cultivarEpithet are bdq:Empty, FILLED_IN the value of dwc:scientificNameID for an unambiguously resolved single taxon record in the bdq:sourceAuthority through (1) the value of dwc:scientificName or (2) if dwc:scientificName is bdq:Empty through values of the terms dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship and dwc:cultivarEpithet, or (3) if ambiguity produced by multiple matches in (1) or (2) can be disambiguated to a single Taxon using the values of dwc:subtribe, dwc:tribe, dwc:subgenus, dwc:genus, dwc:subfamily, dwc:family, dwc:superfamily, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:taxonID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID, dwc:taxonomicRank, and dwc:vernacularName; otherwise NOT_AMENDED
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is bdqval:NotEmpty, or if all of dwc:scientificName, dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship, and dwc:cultivarEpithet are bdqval:Empty, FILLED_IN the value of dwc:scientificNameID for an unambiguously resolved single taxon record in the bdqval:sourceAuthority through (1) the value of dwc:scientificName or (2) if dwc:scientificName is bdqval:Empty through values of the terms dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship and dwc:cultivarEpithet, or (3) if ambiguity produced by multiple matches in (1) or (2) can be disambiguated to a single Taxon using the values of dwc:subtribe, dwc:tribe, dwc:subgenus, dwc:genus, dwc:subfamily, dwc:family, dwc:superfamily, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:taxonID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID, dwc:taxonomicRank, and dwc:vernacularName; otherwise NOT_AMENDED
 
 #### Information Elements
 
@@ -4457,22 +4457,22 @@ dwc:taxonID,dwc:acceptedNameUsageID,dwc:originalNameUsageID,dwc:taxonConceptID,d
 
 #### Parameters
 
-bdq:sourceAuthority
+bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
+bdqval:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
 
 #### Examples
 
-dwc:taxonID="", dwc:scientificNameID="", dwc:acceptedNameUsageID="", dwc:originalNameUsageID="", dwc:taxonConceptID="", dwc:scientificName="Chicoreus palmarosae (Lamarck, 1822)", dwc:higherClassification="", dwc:kingdom="Animalia", dwc:phylum="Mollusca", dwc:class="Gastropoda", dwc:order="", dwc:family="Muricidae", dwc:subfamily="", dwc:genus="Chicoreus", dwc:genericName="Chicoreus", dwc:subgenus="", dwc:infragenericEpithet="", dwc:specificEpithet="palmarosae", dwc:infraspecificEpithet="", dwc:cultivarEpithet="", dwc:vernacularName="", dwc:scientificNameAuthorship="(Lamarck, 1822)", dwc:taxonRank="", bdq:sourceAuthority=”marinespecies.org”: Response.status=FILLED_IN, Response.result=dwc:scientificNameID="urn:lsid:marinespecies.org:taxname:208134", Response.comment="dwc:scientificName matched to unique taxon record in WoRMS, exact match on name and authorship. Resolvable at https://marinespecies.org/aphia.php?p=taxdetails&id=208134"
+dwc:taxonID="", dwc:scientificNameID="", dwc:acceptedNameUsageID="", dwc:originalNameUsageID="", dwc:taxonConceptID="", dwc:scientificName="Chicoreus palmarosae (Lamarck, 1822)", dwc:higherClassification="", dwc:kingdom="Animalia", dwc:phylum="Mollusca", dwc:class="Gastropoda", dwc:order="", dwc:family="Muricidae", dwc:subfamily="", dwc:genus="Chicoreus", dwc:genericName="Chicoreus", dwc:subgenus="", dwc:infragenericEpithet="", dwc:specificEpithet="palmarosae", dwc:infraspecificEpithet="", dwc:cultivarEpithet="", dwc:vernacularName="", dwc:scientificNameAuthorship="(Lamarck, 1822)", dwc:taxonRank="", bdqval:sourceAuthority=”marinespecies.org”: Response.status=FILLED_IN, Response.result=dwc:scientificNameID="urn:lsid:marinespecies.org:taxname:208134", Response.comment="dwc:scientificName matched to unique taxon record in WoRMS, exact match on name and authorship. Resolvable at https://marinespecies.org/aphia.php?p=taxdetails&id=208134"
 
 dwc:scientificNameID="", dwc:taxonID="", dwc:acceptedNameUsageID="", dwc:originalNameUsageID="", dwc:taxonConceptID="", dwc:scientificName="Graphis", dwc:higherClassification="", dwc:kingdom="", dwc:phylum="", dwc:class="", dwc:order="", dwc:family="", dwc:subfamily="", dwc:genus="", dwc:genericName="", dwc:subgenus="", dwc:infragenericEpithet="", dwc:specificEpithet="", dwc:infraspecificEpithet="", dwc:cultivarEpithet="", dwc:vernacularName="", dwc:scientificNameAuthorship="", dwc:taxonRank="": Response.status=NOT_AMENDED, Response.result=, Response.comment="dwc:scientificName="Graphis" is ambiguous as could be either a lichen or a gastropod."
 
 
 #### Use Cases
 
-bdq:Record-Management, bdq:Taxon-Management
+bdqval:Record-Management, bdqval:Taxon-Management
 
 #### Notes
 
@@ -4489,11 +4489,11 @@ Acts upon  SingleRecord
 
 #### Description
 
-Proposes an amendment to the value of dwc:scientificName using the dwc:scientificNameID value from the bdq:sourceAuthority.
+Proposes an amendment to the value of dwc:scientificName using the dwc:scientificNameID value from the bdqval:sourceAuthority.
 
 #### Expected Response
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is bdq:Empty, or dwc:scientificName is bdq:NotEmpty; FILLED_IN the value of dwc:scientificName if the value of dwc: scientificNameID could be unambiguously interpreted as a value in the bdq:sourceAuthority; otherwise NOT_AMENDED
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is bdqval:Empty, or dwc:scientificName is bdqval:NotEmpty; FILLED_IN the value of dwc:scientificName if the value of dwc: scientificNameID could be unambiguously interpreted as a value in the bdqval:sourceAuthority; otherwise NOT_AMENDED
 
 #### Information Elements
 
@@ -4505,11 +4505,11 @@ dwc:scientificNameID
 
 #### Parameters
 
-bdq:sourceAuthority
+bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
+bdqval:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
 
 #### Examples
 
@@ -4520,11 +4520,11 @@ dwc:scientificNameID="gbif:8a", dwc:scientificName="": Response.status=NOT_AMEND
 
 #### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 
-The value of dwc:scientificNameID is unambiguous if dwc:scientificNameID references a single taxon record in the bdq:sourceAuthority. When referencing a GBIF taxon by GBIF's identifier for that taxon, use the the pseudo-namespace "gbif:" and the form "gbif:{integer}" as the value for dwc:scientificNameID. Implementers can be aware of the current GBIF api endpoint that can replace the pseduo-namespace gbif: when looking up the dwc:scientificNameID (taxonID in the gbif document), e.g. `s/gbif:/https:\/\/api.gbif.org\/v1\/species\// ` will transform the value taxonID=gbif:8102122 to the resolvable endpoint https://api.gbif.org/v1/species/8102122. The pseudo-namespace "gbif:" is recommended by GBIF to reference GBIF taxon records. Where resolvable persistent identifiers exist for dwc:scientificNameID values, they should be used in full, but implementers will need to support at least the "gbif:" pseudo-namespace.
+The value of dwc:scientificNameID is unambiguous if dwc:scientificNameID references a single taxon record in the bdqval:sourceAuthority. When referencing a GBIF taxon by GBIF's identifier for that taxon, use the the pseudo-namespace "gbif:" and the form "gbif:{integer}" as the value for dwc:scientificNameID. Implementers can be aware of the current GBIF api endpoint that can replace the pseduo-namespace gbif: when looking up the dwc:scientificNameID (taxonID in the gbif document), e.g. `s/gbif:/https:\/\/api.gbif.org\/v1\/species\// ` will transform the value taxonID=gbif:8102122 to the resolvable endpoint https://api.gbif.org/v1/species/8102122. The pseudo-namespace "gbif:" is recommended by GBIF to reference GBIF taxon records. Where resolvable persistent identifiers exist for dwc:scientificNameID values, they should be used in full, but implementers will need to support at least the "gbif:" pseudo-namespace.
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -4537,11 +4537,11 @@ Acts upon  SingleRecord
 
 #### Description
 
-Proposes an amendment to the value of dwc:taxonRank using the bdq:sourceAuthority.
+Proposes an amendment to the value of dwc:taxonRank using the bdqval:sourceAuthority.
 
 #### Expected Response
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:taxonRank is bdq:Empty; AMENDED the value of dwc:taxonRank if it can be unambiguously matched to a term in the bdq:sourceAuthority; otherwise NOT_AMENDED
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:taxonRank is bdqval:Empty; AMENDED the value of dwc:taxonRank if it can be unambiguously matched to a term in the bdqval:sourceAuthority; otherwise NOT_AMENDED
 
 #### Information Elements
 
@@ -4550,22 +4550,22 @@ dwc:taxonRank
 
 #### Parameters
 
-bdq:sourceAuthority
+bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdq:sourceAuthority default = "GBIF TaxonRank Vocabulary" [https://api.gbif.org/v1/vocabularies/TaxonRank]} {"dwc:taxonRank vocabulary API" [https://api.gbif.org/v1/vocabularies/TaxonRank/concepts]}}
+bdqval:sourceAuthority default = "GBIF TaxonRank Vocabulary" [https://api.gbif.org/v1/vocabularies/TaxonRank]} {"dwc:taxonRank vocabulary API" [https://api.gbif.org/v1/vocabularies/TaxonRank/concepts]}}
 
 #### Examples
 
-dwc:taxonRank="sp.": Response.status=AMENDED, Response.result=dwc:taxonRank="species", Response.comment="dwc:taxonRank contains an interpretable value in the bdq:sourceAuthority"
+dwc:taxonRank="sp.": Response.status=AMENDED, Response.result=dwc:taxonRank="species", Response.comment="dwc:taxonRank contains an interpretable value in the bdqval:sourceAuthority"
 
-dwc:taxonRank="sic.": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:taxonRank does not contain an interpretable value in the bdq:sourceAuthority"
+dwc:taxonRank="sic.": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:taxonRank does not contain an interpretable value in the bdqval:sourceAuthority"
 
 
 #### Use Cases
 
-bdq:Record-Management, bdq:Taxon-Management
+bdqval:Record-Management, bdqval:Taxon-Management
 
 #### Notes
 
@@ -4594,11 +4594,11 @@ Count the number of VALIDATION_BASISOFRECORD_NOTEMPTY in the MultiRecord that ha
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_BASISOFRECORD_NOTEMPTY.Response
+bdqval:VALIDATION_BASISOFRECORD_NOTEMPTY.Response
 
 #### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 
@@ -4624,11 +4624,11 @@ Count the number of VALIDATION_BASISOFRECORD_STANDARD in the MultiRecord that ha
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_BASISOFRECORD_STANDARD.Response
+bdqval:VALIDATION_BASISOFRECORD_STANDARD.Response
 
 #### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 
@@ -4654,11 +4654,11 @@ Count the number of VALIDATION_DCTYPE_NOTEMPTY in the MultiRecord that have Resp
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_DCTYPE_NOTEMPTY.Response
+bdqval:VALIDATION_DCTYPE_NOTEMPTY.Response
 
 #### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 
@@ -4684,11 +4684,11 @@ Count the number of VALIDATION_DCTYPE_STANDARD in the MultiRecord that have Resp
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_DCTYPE_STANDARD.Response
+bdqval:VALIDATION_DCTYPE_STANDARD.Response
 
 #### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 
@@ -4714,11 +4714,11 @@ Count the number of VALIDATION_LICENSE_NOTEMPTY in the MultiRecord that have Res
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_LICENSE_NOTEMPTY.Response
+bdqval:VALIDATION_LICENSE_NOTEMPTY.Response
 
 #### Use Cases
 
-bdq:Record-Management
+bdqval:Record-Management
 
 #### Notes
 
@@ -4744,11 +4744,11 @@ Count the number of VALIDATION_LICENSE_STANDARD in the MultiRecord that have Res
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_LICENSE_STANDARD.Response
+bdqval:VALIDATION_LICENSE_STANDARD.Response
 
 #### Use Cases
 
-bdq:Record-Management
+bdqval:Record-Management
 
 #### Notes
 
@@ -4774,11 +4774,11 @@ COMPLETE if every VALIDATION_BASISOFRECORD_NOTEMPTY in the MultiRecord has Respo
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_BASISOFRECORD_NOTEMPTY.Response
+bdqval:VALIDATION_BASISOFRECORD_NOTEMPTY.Response
 
 #### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 
@@ -4804,11 +4804,11 @@ COMPLETE if every VALIDATION_BASISOFRECORD_STANDARD in the MultiRecord has Respo
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_BASISOFRECORD_STANDARD.Response
+bdqval:VALIDATION_BASISOFRECORD_STANDARD.Response
 
 #### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 
@@ -4834,11 +4834,11 @@ COMPLETE if every VALIDATION_DCTYPE_NOTEMPTY in the MultiRecord has Response.res
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_DCTYPE_NOTEMPTY.Response
+bdqval:VALIDATION_DCTYPE_NOTEMPTY.Response
 
 #### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 
@@ -4864,11 +4864,11 @@ COMPLETE if every VALIDATION_DCTYPE_STANDARD in the MultiRecord has Response.res
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_DCTYPE_STANDARD.Response
+bdqval:VALIDATION_DCTYPE_STANDARD.Response
 
 #### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 
@@ -4894,11 +4894,11 @@ COMPLETE if every VALIDATION_LICENSE_NOTEMPTY in the MultiRecord has Response.re
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_LICENSE_NOTEMPTY.Response
+bdqval:VALIDATION_LICENSE_NOTEMPTY.Response
 
 #### Use Cases
 
-bdq:Record-Management
+bdqval:Record-Management
 
 #### Notes
 
@@ -4924,11 +4924,11 @@ COMPLETE if every VALIDATION_LICENSE_STANDARD in the MultiRecord has Response.re
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_LICENSE_STANDARD.Response
+bdqval:VALIDATION_LICENSE_STANDARD.Response
 
 #### Use Cases
 
-bdq:Record-Management
+bdqval:Record-Management
 
 #### Notes
 
@@ -4954,11 +4954,11 @@ Count the number of VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT in the MultiRec
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT.Response
+bdqval:VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT.Response
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns
+bdqval:Spatial-Temporal_Patterns
 
 #### Notes
 
@@ -4984,11 +4984,11 @@ Count the number of VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT in the MultiR
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT.Response
+bdqval:VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT.Response
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -5014,11 +5014,11 @@ Count the number of VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT in the Mu
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT.Response
+bdqval:VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT.Response
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -5044,11 +5044,11 @@ Count the number of VALIDATION_COORDINATES_NOTZERO in the MultiRecord that have 
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_COORDINATES_NOTZERO.Response
+bdqval:VALIDATION_COORDINATES_NOTZERO.Response
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns
+bdqval:Spatial-Temporal_Patterns
 
 #### Notes
 
@@ -5074,11 +5074,11 @@ Count the number of VALIDATION_COORDINATEUNCERTAINTY_INRANGE in the MultiRecord 
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_COORDINATEUNCERTAINTY_INRANGE.Response
+bdqval:VALIDATION_COORDINATEUNCERTAINTY_INRANGE.Response
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -5104,11 +5104,11 @@ Count the number of VALIDATION_COUNTRYCODE_NOTEMPTY in the MultiRecord that have
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_COUNTRYCODE_NOTEMPTY.Response
+bdqval:VALIDATION_COUNTRYCODE_NOTEMPTY.Response
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -5134,11 +5134,11 @@ Count the number of VALIDATION_COUNTRYCODE_STANDARD in the MultiRecord that have
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_COUNTRYCODE_STANDARD.Response
+bdqval:VALIDATION_COUNTRYCODE_STANDARD.Response
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -5164,11 +5164,11 @@ Count the number of VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT in the MultiRecord 
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT.Response
+bdqval:VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT.Response
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -5194,11 +5194,11 @@ Count the number of VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS in the MultiReco
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS.Response
+bdqval:VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS.Response
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -5224,11 +5224,11 @@ Count the number of VALIDATION_COUNTRY_FOUND in the MultiRecord that have Respon
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_COUNTRY_FOUND.Response
+bdqval:VALIDATION_COUNTRY_FOUND.Response
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -5254,11 +5254,11 @@ Count the number of VALIDATION_COUNTRY_NOTEMPTY in the MultiRecord that have Res
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_COUNTRY_NOTEMPTY.Response
+bdqval:VALIDATION_COUNTRY_NOTEMPTY.Response
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -5284,11 +5284,11 @@ Count the number of VALIDATION_DECIMALLATITUDE_INRANGE in the MultiRecord that h
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_DECIMALLATITUDE_INRANGE.Response
+bdqval:VALIDATION_DECIMALLATITUDE_INRANGE.Response
 
 #### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 
@@ -5314,11 +5314,11 @@ Count the number of VALIDATION_DECIMALLATITUDE_NOTEMPTY in the MultiRecord that 
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_DECIMALLATITUDE_NOTEMPTY.Response
+bdqval:VALIDATION_DECIMALLATITUDE_NOTEMPTY.Response
 
 #### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -5344,11 +5344,11 @@ Count the number of VALIDATION_DECIMALLONGITUDE_INRANGE in the MultiRecord that 
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_DECIMALLONGITUDE_INRANGE.Response
+bdqval:VALIDATION_DECIMALLONGITUDE_INRANGE.Response
 
 #### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 
@@ -5374,11 +5374,11 @@ Count the number of VALIDATION_DECIMALLONGITUDE_NOTEMPTY in the MultiRecord that
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_DECIMALLONGITUDE_NOTEMPTY.Response
+bdqval:VALIDATION_DECIMALLONGITUDE_NOTEMPTY.Response
 
 #### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 
@@ -5404,11 +5404,11 @@ Count the number of VALIDATION_GEODETICDATUM_NOTEMPTY in the MultiRecord that ha
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_GEODETICDATUM_NOTEMPTY.Response
+bdqval:VALIDATION_GEODETICDATUM_NOTEMPTY.Response
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -5434,11 +5434,11 @@ Count the number of VALIDATION_GEODETICDATUM_STANDARD in the MultiRecord that ha
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_GEODETICDATUM_STANDARD.Response
+bdqval:VALIDATION_GEODETICDATUM_STANDARD.Response
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -5464,11 +5464,11 @@ Count the number of VALIDATION_LOCATION_NOTEMPTY in the MultiRecord that have Re
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_LOCATION_NOTEMPTY.Response
+bdqval:VALIDATION_LOCATION_NOTEMPTY.Response
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -5494,11 +5494,11 @@ Count the number of VALIDATION_MAXDEPTH_INRANGE in the MultiRecord that have Res
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_MAXDEPTH_INRANGE.Response
+bdqval:VALIDATION_MAXDEPTH_INRANGE.Response
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -5524,11 +5524,11 @@ Count the number of VALIDATION_MAXELEVATION_INRANGE in the MultiRecord that have
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_MAXELEVATION_INRANGE.Response
+bdqval:VALIDATION_MAXELEVATION_INRANGE.Response
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -5554,11 +5554,11 @@ Count the number of VALIDATION_MINDEPTH_INRANGE in the MultiRecord that have Res
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_MINDEPTH_INRANGE.Response
+bdqval:VALIDATION_MINDEPTH_INRANGE.Response
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -5584,11 +5584,11 @@ Count the number of VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH in the MultiRecord tha
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH.Response
+bdqval:VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH.Response
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -5614,11 +5614,11 @@ Count the number of VALIDATION_MINELEVATION_INRANGE in the MultiRecord that have
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_MINELEVATION_INRANGE.Response
+bdqval:VALIDATION_MINELEVATION_INRANGE.Response
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -5644,11 +5644,11 @@ Count the number of VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION in the MultiRe
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION.Response
+bdqval:VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION.Response
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -5674,11 +5674,11 @@ Count the number of VALIDATION_STATEPROVINCE_FOUND in the MultiRecord that have 
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_STATEPROVINCE_FOUND.Response
+bdqval:VALIDATION_STATEPROVINCE_FOUND.Response
 
 #### Use Cases
 
-bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -5704,11 +5704,11 @@ COMPLETE if every VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT in the MultiRecor
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT.Response
+bdqval:VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT.Response
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns
+bdqval:Spatial-Temporal_Patterns
 
 #### Notes
 
@@ -5734,11 +5734,11 @@ COMPLETE if every VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT in the MultiRec
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT.Response
+bdqval:VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT.Response
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -5764,11 +5764,11 @@ COMPLETE if every VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT in the Mult
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT.Response
+bdqval:VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT.Response
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -5794,11 +5794,11 @@ COMPLETE if every VALIDATION_COORDINATES_NOTZERO in the MultiRecord has Response
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_COORDINATES_NOTZERO.Response
+bdqval:VALIDATION_COORDINATES_NOTZERO.Response
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns
+bdqval:Spatial-Temporal_Patterns
 
 #### Notes
 
@@ -5824,11 +5824,11 @@ COMPLETE if every VALIDATION_COORDINATEUNCERTAINTY_INRANGE in the MultiRecord ha
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_COORDINATEUNCERTAINTY_INRANGE.Response
+bdqval:VALIDATION_COORDINATEUNCERTAINTY_INRANGE.Response
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -5854,11 +5854,11 @@ COMPLETE if every VALIDATION_COUNTRYCODE_NOTEMPTY in the MultiRecord has Respons
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_COUNTRYCODE_NOTEMPTY.Response
+bdqval:VALIDATION_COUNTRYCODE_NOTEMPTY.Response
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -5884,11 +5884,11 @@ COMPLETE if every VALIDATION_COUNTRYCODE_STANDARD in the MultiRecord has Respons
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_COUNTRYCODE_STANDARD.Response
+bdqval:VALIDATION_COUNTRYCODE_STANDARD.Response
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -5914,11 +5914,11 @@ COMPLETE if every VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT in the MultiRecord ha
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT.Response
+bdqval:VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT.Response
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -5944,11 +5944,11 @@ COMPLETE if every VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS in the MultiRecord
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS.Response
+bdqval:VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS.Response
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -5974,11 +5974,11 @@ COMPLETE if every VALIDATION_COUNTRY_FOUND in the MultiRecord has Response.resul
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_COUNTRY_FOUND.Response
+bdqval:VALIDATION_COUNTRY_FOUND.Response
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -6004,11 +6004,11 @@ COMPLETE if every VALIDATION_COUNTRY_NOTEMPTY in the MultiRecord has Response.re
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_COUNTRY_NOTEMPTY.Response
+bdqval:VALIDATION_COUNTRY_NOTEMPTY.Response
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -6034,11 +6034,11 @@ COMPLETE if every VALIDATION_DECIMALLATITUDE_INRANGE in the MultiRecord has Resp
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_DECIMALLATITUDE_INRANGE.Response
+bdqval:VALIDATION_DECIMALLATITUDE_INRANGE.Response
 
 #### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 
@@ -6064,11 +6064,11 @@ COMPLETE if every VALIDATION_DECIMALLATITUDE_NOTEMPTY in the MultiRecord has Res
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_DECIMALLATITUDE_NOTEMPTY.Response
+bdqval:VALIDATION_DECIMALLATITUDE_NOTEMPTY.Response
 
 #### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -6094,11 +6094,11 @@ COMPLETE if every VALIDATION_DECIMALLONGITUDE_INRANGE in the MultiRecord has Res
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_DECIMALLONGITUDE_INRANGE.Response
+bdqval:VALIDATION_DECIMALLONGITUDE_INRANGE.Response
 
 #### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 
@@ -6124,11 +6124,11 @@ COMPLETE if every VALIDATION_DECIMALLONGITUDE_NOTEMPTY in the MultiRecord has Re
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_DECIMALLONGITUDE_NOTEMPTY.Response
+bdqval:VALIDATION_DECIMALLONGITUDE_NOTEMPTY.Response
 
 #### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 
@@ -6154,11 +6154,11 @@ COMPLETE if every VALIDATION_GEODETICDATUM_NOTEMPTY in the MultiRecord has Respo
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_GEODETICDATUM_NOTEMPTY.Response
+bdqval:VALIDATION_GEODETICDATUM_NOTEMPTY.Response
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -6184,11 +6184,11 @@ COMPLETE if every VALIDATION_GEODETICDATUM_STANDARD in the MultiRecord has Respo
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_GEODETICDATUM_STANDARD.Response
+bdqval:VALIDATION_GEODETICDATUM_STANDARD.Response
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -6214,11 +6214,11 @@ COMPLETE if every VALIDATION_LOCATION_NOTEMPTY in the MultiRecord has Response.r
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_LOCATION_NOTEMPTY.Response
+bdqval:VALIDATION_LOCATION_NOTEMPTY.Response
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -6244,11 +6244,11 @@ COMPLETE if every VALIDATION_MAXDEPTH_INRANGE in the MultiRecord has Response.re
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_MAXDEPTH_INRANGE.Response
+bdqval:VALIDATION_MAXDEPTH_INRANGE.Response
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -6274,11 +6274,11 @@ COMPLETE if every VALIDATION_MAXELEVATION_INRANGE in the MultiRecord has Respons
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_MAXELEVATION_INRANGE.Response
+bdqval:VALIDATION_MAXELEVATION_INRANGE.Response
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -6304,11 +6304,11 @@ COMPLETE if every VALIDATION_MINDEPTH_INRANGE in the MultiRecord has Response.re
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_MINDEPTH_INRANGE.Response
+bdqval:VALIDATION_MINDEPTH_INRANGE.Response
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -6334,11 +6334,11 @@ COMPLETE if every VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH in the MultiRecord has R
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH.Response
+bdqval:VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH.Response
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -6364,11 +6364,11 @@ COMPLETE if every VALIDATION_MINELEVATION_INRANGE in the MultiRecord has Respons
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_MINELEVATION_INRANGE.Response
+bdqval:VALIDATION_MINELEVATION_INRANGE.Response
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -6394,11 +6394,11 @@ COMPLETE if every VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION in the MultiReco
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION.Response
+bdqval:VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION.Response
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -6424,11 +6424,11 @@ COMPLETE if every VALIDATION_STATEPROVINCE_FOUND in the MultiRecord has Response
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_STATEPROVINCE_FOUND.Response
+bdqval:VALIDATION_STATEPROVINCE_FOUND.Response
 
 #### Use Cases
 
-bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -6454,11 +6454,11 @@ Count the number of VALIDATION_DAY_INRANGE in the MultiRecord that have Response
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_DAY_INRANGE.Response
+bdqval:VALIDATION_DAY_INRANGE.Response
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -6484,11 +6484,11 @@ Count the number of VALIDATION_DAY_STANDARD in the MultiRecord that have Respons
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_DAY_STANDARD.Response
+bdqval:VALIDATION_DAY_STANDARD.Response
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -6514,11 +6514,11 @@ Count the number of VALIDATION_ENDDAYOFYEAR_INRANGE in the MultiRecord that have
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_ENDDAYOFYEAR_INRANGE.Response
+bdqval:VALIDATION_ENDDAYOFYEAR_INRANGE.Response
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -6544,11 +6544,11 @@ Count the number of VALIDATION_EVENTDATE_INRANGE in the MultiRecord that have Re
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_EVENTDATE_INRANGE.Response
+bdqval:VALIDATION_EVENTDATE_INRANGE.Response
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -6574,11 +6574,11 @@ Count the number of VALIDATION_EVENTDATE_NOTEMPTY in the MultiRecord that have R
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_EVENTDATE_NOTEMPTY.Response
+bdqval:VALIDATION_EVENTDATE_NOTEMPTY.Response
 
 #### Use Cases
 
-bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 
@@ -6604,11 +6604,11 @@ Count the number of VALIDATION_EVENTDATE_STANDARD in the MultiRecord that have R
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_EVENTDATE_STANDARD.Response
+bdqval:VALIDATION_EVENTDATE_STANDARD.Response
 
 #### Use Cases
 
-bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 
@@ -6634,11 +6634,11 @@ Count the number of VALIDATION_EVENTTEMPORAL_NOTEMPTY in the MultiRecord that ha
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_EVENTTEMPORAL_NOTEMPTY.Response
+bdqval:VALIDATION_EVENTTEMPORAL_NOTEMPTY.Response
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -6664,11 +6664,11 @@ Count the number of VALIDATION_EVENT_CONSISTENT in the MultiRecord that have Res
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_EVENT_CONSISTENT.Response
+bdqval:VALIDATION_EVENT_CONSISTENT.Response
 
 #### Use Cases
 
-bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Alien-Species, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 
@@ -6694,11 +6694,11 @@ Count the number of VALIDATION_MONTH_STANDARD in the MultiRecord that have Respo
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_MONTH_STANDARD.Response
+bdqval:VALIDATION_MONTH_STANDARD.Response
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -6724,11 +6724,11 @@ Count the number of VALIDATION_STARTDAYOFYEAR_INRANGE in the MultiRecord that ha
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_STARTDAYOFYEAR_INRANGE.Response
+bdqval:VALIDATION_STARTDAYOFYEAR_INRANGE.Response
 
 #### Use Cases
 
-bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -6754,11 +6754,11 @@ Count the number of VALIDATION_YEAR_INRANGE in the MultiRecord that have Respons
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_YEAR_INRANGE.Response
+bdqval:VALIDATION_YEAR_INRANGE.Response
 
 #### Use Cases
 
-bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -6784,11 +6784,11 @@ Count the number of VALIDATION_YEAR_NOTEMPTY in the MultiRecord that have Respon
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_YEAR_NOTEMPTY.Response
+bdqval:VALIDATION_YEAR_NOTEMPTY.Response
 
 #### Use Cases
 
-bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -6814,11 +6814,11 @@ COMPLETE if every VALIDATION_DAY_INRANGE in the MultiRecord has Response.result=
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_DAY_INRANGE.Response
+bdqval:VALIDATION_DAY_INRANGE.Response
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -6844,11 +6844,11 @@ COMPLETE if every VALIDATION_DAY_STANDARD in the MultiRecord has Response.result
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_DAY_STANDARD.Response
+bdqval:VALIDATION_DAY_STANDARD.Response
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -6874,11 +6874,11 @@ COMPLETE if every VALIDATION_ENDDAYOFYEAR_INRANGE in the MultiRecord has Respons
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_ENDDAYOFYEAR_INRANGE.Response
+bdqval:VALIDATION_ENDDAYOFYEAR_INRANGE.Response
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -6904,11 +6904,11 @@ COMPLETE if every VALIDATION_EVENTDATE_INRANGE in the MultiRecord has Response.r
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_EVENTDATE_INRANGE.Response
+bdqval:VALIDATION_EVENTDATE_INRANGE.Response
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -6934,11 +6934,11 @@ COMPLETE if every VALIDATION_EVENTDATE_NOTEMPTY in the MultiRecord has Response.
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_EVENTDATE_NOTEMPTY.Response
+bdqval:VALIDATION_EVENTDATE_NOTEMPTY.Response
 
 #### Use Cases
 
-bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 
@@ -6964,11 +6964,11 @@ COMPLETE if every VALIDATION_EVENTDATE_STANDARD in the MultiRecord has Response.
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_EVENTDATE_STANDARD.Response
+bdqval:VALIDATION_EVENTDATE_STANDARD.Response
 
 #### Use Cases
 
-bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 
@@ -6994,11 +6994,11 @@ COMPLETE if every VALIDATION_EVENTTEMPORAL_NOTEMPTY in the MultiRecord has Respo
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_EVENTTEMPORAL_NOTEMPTY.Response
+bdqval:VALIDATION_EVENTTEMPORAL_NOTEMPTY.Response
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -7024,11 +7024,11 @@ COMPLETE if every VALIDATION_EVENT_CONSISTENT in the MultiRecord has Response.re
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_EVENT_CONSISTENT.Response
+bdqval:VALIDATION_EVENT_CONSISTENT.Response
 
 #### Use Cases
 
-bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Alien-Species, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 
@@ -7054,11 +7054,11 @@ COMPLETE if every VALIDATION_MONTH_STANDARD in the MultiRecord has Response.resu
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_MONTH_STANDARD.Response
+bdqval:VALIDATION_MONTH_STANDARD.Response
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -7084,11 +7084,11 @@ COMPLETE if every VALIDATION_STARTDAYOFYEAR_INRANGE in the MultiRecord has Respo
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_STARTDAYOFYEAR_INRANGE.Response
+bdqval:VALIDATION_STARTDAYOFYEAR_INRANGE.Response
 
 #### Use Cases
 
-bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -7114,11 +7114,11 @@ COMPLETE if every VALIDATION_YEAR_INRANGE in the MultiRecord has Response.result
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_YEAR_INRANGE.Response
+bdqval:VALIDATION_YEAR_INRANGE.Response
 
 #### Use Cases
 
-bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -7144,11 +7144,11 @@ COMPLETE if every VALIDATION_YEAR_NOTEMPTY in the MultiRecord has Response.resul
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_YEAR_NOTEMPTY.Response
+bdqval:VALIDATION_YEAR_NOTEMPTY.Response
 
 #### Use Cases
 
-bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management
+bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -7174,11 +7174,11 @@ Count the number of VALIDATION_DATEIDENTIFIED_INRANGE in the MultiRecord that ha
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_DATEIDENTIFIED_INRANGE.Response
+bdqval:VALIDATION_DATEIDENTIFIED_INRANGE.Response
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Taxon-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Taxon-Management
 
 #### Notes
 
@@ -7204,11 +7204,11 @@ Count the number of VALIDATION_DATEIDENTIFIED_STANDARD in the MultiRecord that h
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_DATEIDENTIFIED_STANDARD.Response
+bdqval:VALIDATION_DATEIDENTIFIED_STANDARD.Response
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Taxon-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Taxon-Management
 
 #### Notes
 
@@ -7234,11 +7234,11 @@ COMPLETE if every VALIDATION_DATEIDENTIFIED_INRANGE in the MultiRecord has Respo
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_DATEIDENTIFIED_INRANGE.Response
+bdqval:VALIDATION_DATEIDENTIFIED_INRANGE.Response
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Taxon-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Taxon-Management
 
 #### Notes
 
@@ -7264,11 +7264,11 @@ COMPLETE if every VALIDATION_DATEIDENTIFIED_STANDARD in the MultiRecord has Resp
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_DATEIDENTIFIED_STANDARD.Response
+bdqval:VALIDATION_DATEIDENTIFIED_STANDARD.Response
 
 #### Use Cases
 
-bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Taxon-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Taxon-Management
 
 #### Notes
 
@@ -7294,11 +7294,11 @@ Count the number of VALIDATION_DEGREEOFESTABLISHMENT_STANDARD in the MultiRecord
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_DEGREEOFESTABLISHMENT_STANDARD.Response
+bdqval:VALIDATION_DEGREEOFESTABLISHMENT_STANDARD.Response
 
 #### Use Cases
 
-bdq:Alien-Species
+bdqval:Alien-Species
 
 #### Notes
 
@@ -7324,11 +7324,11 @@ Count the number of VALIDATION_ESTABLISHMENTMEANS_STANDARD in the MultiRecord th
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_ESTABLISHMENTMEANS_STANDARD.Response
+bdqval:VALIDATION_ESTABLISHMENTMEANS_STANDARD.Response
 
 #### Use Cases
 
-bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 
@@ -7354,11 +7354,11 @@ Count the number of VALIDATION_OCCURRENCEID_NOTEMPTY in the MultiRecord that hav
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_OCCURRENCEID_NOTEMPTY.Response
+bdqval:VALIDATION_OCCURRENCEID_NOTEMPTY.Response
 
 #### Use Cases
 
-bdq:Record-Management
+bdqval:Record-Management
 
 #### Notes
 
@@ -7384,11 +7384,11 @@ Count the number of VALIDATION_OCCURRENCESTATUS_NOTEMPTY in the MultiRecord that
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_OCCURRENCESTATUS_NOTEMPTY.Response
+bdqval:VALIDATION_OCCURRENCESTATUS_NOTEMPTY.Response
 
 #### Use Cases
 
-bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 
@@ -7414,11 +7414,11 @@ Count the number of VALIDATION_OCCURRENCESTATUS_STANDARD in the MultiRecord that
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_OCCURRENCESTATUS_STANDARD.Response
+bdqval:VALIDATION_OCCURRENCESTATUS_STANDARD.Response
 
 #### Use Cases
 
-bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 
@@ -7444,11 +7444,11 @@ Count the number of VALIDATION_PATHWAY_STANDARD in the MultiRecord that have Res
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_PATHWAY_STANDARD.Response
+bdqval:VALIDATION_PATHWAY_STANDARD.Response
 
 #### Use Cases
 
-bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Alien-Species, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 
@@ -7474,11 +7474,11 @@ Count the number of VALIDATION_SEX_STANDARD in the MultiRecord that have Respons
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_SEX_STANDARD.Response
+bdqval:VALIDATION_SEX_STANDARD.Response
 
 #### Use Cases
 
-bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management
+bdqval:Alien-Species, bdqval:Record-Management, bdqval:Taxon-Management
 
 #### Notes
 
@@ -7504,11 +7504,11 @@ Count the number of VALIDATION_TYPESTATUS_STANDARD in the MultiRecord that have 
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_TYPESTATUS_STANDARD.Response
+bdqval:VALIDATION_TYPESTATUS_STANDARD.Response
 
 #### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 
@@ -7534,11 +7534,11 @@ COMPLETE if every VALIDATION_DEGREEOFESTABLISHMENT_STANDARD in the MultiRecord h
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_DEGREEOFESTABLISHMENT_STANDARD.Response
+bdqval:VALIDATION_DEGREEOFESTABLISHMENT_STANDARD.Response
 
 #### Use Cases
 
-bdq:Alien-Species
+bdqval:Alien-Species
 
 #### Notes
 
@@ -7564,11 +7564,11 @@ COMPLETE if every VALIDATION_ESTABLISHMENTMEANS_STANDARD in the MultiRecord has 
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_ESTABLISHMENTMEANS_STANDARD.Response
+bdqval:VALIDATION_ESTABLISHMENTMEANS_STANDARD.Response
 
 #### Use Cases
 
-bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 
@@ -7594,11 +7594,11 @@ COMPLETE if every VALIDATION_OCCURRENCEID_NOTEMPTY in the MultiRecord has Respon
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_OCCURRENCEID_NOTEMPTY.Response
+bdqval:VALIDATION_OCCURRENCEID_NOTEMPTY.Response
 
 #### Use Cases
 
-bdq:Record-Management
+bdqval:Record-Management
 
 #### Notes
 
@@ -7624,11 +7624,11 @@ COMPLETE if every VALIDATION_OCCURRENCESTATUS_NOTEMPTY in the MultiRecord has Re
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_OCCURRENCESTATUS_NOTEMPTY.Response
+bdqval:VALIDATION_OCCURRENCESTATUS_NOTEMPTY.Response
 
 #### Use Cases
 
-bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 
@@ -7654,11 +7654,11 @@ COMPLETE if every VALIDATION_OCCURRENCESTATUS_STANDARD in the MultiRecord has Re
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_OCCURRENCESTATUS_STANDARD.Response
+bdqval:VALIDATION_OCCURRENCESTATUS_STANDARD.Response
 
 #### Use Cases
 
-bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 
@@ -7684,11 +7684,11 @@ COMPLETE if every VALIDATION_PATHWAY_STANDARD in the MultiRecord has Response.re
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_PATHWAY_STANDARD.Response
+bdqval:VALIDATION_PATHWAY_STANDARD.Response
 
 #### Use Cases
 
-bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Alien-Species, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 
@@ -7714,11 +7714,11 @@ COMPLETE if every VALIDATION_SEX_STANDARD in the MultiRecord has Response.result
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_SEX_STANDARD.Response
+bdqval:VALIDATION_SEX_STANDARD.Response
 
 #### Use Cases
 
-bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management
+bdqval:Alien-Species, bdqval:Record-Management, bdqval:Taxon-Management
 
 #### Notes
 
@@ -7744,11 +7744,11 @@ COMPLETE if every VALIDATION_TYPESTATUS_STANDARD in the MultiRecord has Response
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_TYPESTATUS_STANDARD.Response
+bdqval:VALIDATION_TYPESTATUS_STANDARD.Response
 
 #### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 
@@ -7774,11 +7774,11 @@ Count the number of VALIDATION_CLASSIFICATION_CONSISTENT in the MultiRecord that
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_CLASSIFICATION_CONSISTENT.Response
+bdqval:VALIDATION_CLASSIFICATION_CONSISTENT.Response
 
 #### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 
@@ -7804,11 +7804,11 @@ Count the number of VALIDATION_CLASS_FOUND in the MultiRecord that have Response
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_CLASS_FOUND.Response
+bdqval:VALIDATION_CLASS_FOUND.Response
 
 #### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 
@@ -7834,11 +7834,11 @@ Count the number of VALIDATION_FAMILY_FOUND in the MultiRecord that have Respons
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_FAMILY_FOUND.Response
+bdqval:VALIDATION_FAMILY_FOUND.Response
 
 #### Use Cases
 
-bdq:Record-Management, bdq:Taxon-Management
+bdqval:Record-Management, bdqval:Taxon-Management
 
 #### Notes
 
@@ -7864,11 +7864,11 @@ Count the number of VALIDATION_GENUS_FOUND in the MultiRecord that have Response
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_GENUS_FOUND.Response
+bdqval:VALIDATION_GENUS_FOUND.Response
 
 #### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 
@@ -7894,11 +7894,11 @@ Count the number of VALIDATION_KINGDOM_FOUND in the MultiRecord that have Respon
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_KINGDOM_FOUND.Response
+bdqval:VALIDATION_KINGDOM_FOUND.Response
 
 #### Use Cases
 
-bdq:Record-Management, bdq:Taxon-Management
+bdqval:Record-Management, bdqval:Taxon-Management
 
 #### Notes
 
@@ -7924,11 +7924,11 @@ Count the number of VALIDATION_KINGDOM_NOTEMPTY in the MultiRecord that have Res
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_KINGDOM_NOTEMPTY.Response
+bdqval:VALIDATION_KINGDOM_NOTEMPTY.Response
 
 #### Use Cases
 
-bdq:Record-Management, bdq:Taxon-Management
+bdqval:Record-Management, bdqval:Taxon-Management
 
 #### Notes
 
@@ -7954,11 +7954,11 @@ Count the number of VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY in the MultiRecord t
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY.Response
+bdqval:VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY.Response
 
 #### Use Cases
 
-bdq:Record-Management, bdq:Taxon-Management
+bdqval:Record-Management, bdqval:Taxon-Management
 
 #### Notes
 
@@ -7984,11 +7984,11 @@ Count the number of VALIDATION_ORDER_FOUND in the MultiRecord that have Response
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_ORDER_FOUND.Response
+bdqval:VALIDATION_ORDER_FOUND.Response
 
 #### Use Cases
 
-bdq:Record-Management, bdq:Taxon-Management
+bdqval:Record-Management, bdqval:Taxon-Management
 
 #### Notes
 
@@ -8014,11 +8014,11 @@ Count the number of VALIDATION_PHYLUM_FOUND in the MultiRecord that have Respons
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_PHYLUM_FOUND.Response
+bdqval:VALIDATION_PHYLUM_FOUND.Response
 
 #### Use Cases
 
-bdq:Record-Management, bdq:Taxon-Management
+bdqval:Record-Management, bdqval:Taxon-Management
 
 #### Notes
 
@@ -8044,11 +8044,11 @@ Count the number of VALIDATION_POLYNOMIAL_CONSISTENT in the MultiRecord that hav
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_POLYNOMIAL_CONSISTENT.Response
+bdqval:VALIDATION_POLYNOMIAL_CONSISTENT.Response
 
 #### Use Cases
 
-bdq:Record-Management, bdq:Taxon-Management
+bdqval:Record-Management, bdqval:Taxon-Management
 
 #### Notes
 
@@ -8074,11 +8074,11 @@ Count the number of VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY in the MultiRec
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY.Response
+bdqval:VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY.Response
 
 #### Use Cases
 
-bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management
+bdqval:Alien-Species, bdqval:Record-Management, bdqval:Taxon-Management
 
 #### Notes
 
@@ -8104,11 +8104,11 @@ Count the number of VALIDATION_SCIENTIFICNAMEID_COMPLETE in the MultiRecord that
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_SCIENTIFICNAMEID_COMPLETE.Response
+bdqval:VALIDATION_SCIENTIFICNAMEID_COMPLETE.Response
 
 #### Use Cases
 
-bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management
+bdqval:Alien-Species, bdqval:Record-Management, bdqval:Taxon-Management
 
 #### Notes
 
@@ -8134,11 +8134,11 @@ Count the number of VALIDATION_SCIENTIFICNAMEID_NOTEMPTY in the MultiRecord that
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_SCIENTIFICNAMEID_NOTEMPTY.Response
+bdqval:VALIDATION_SCIENTIFICNAMEID_NOTEMPTY.Response
 
 #### Use Cases
 
-bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management
+bdqval:Alien-Species, bdqval:Record-Management, bdqval:Taxon-Management
 
 #### Notes
 
@@ -8164,11 +8164,11 @@ Count the number of VALIDATION_SCIENTIFICNAME_FOUND in the MultiRecord that have
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_SCIENTIFICNAME_FOUND.Response
+bdqval:VALIDATION_SCIENTIFICNAME_FOUND.Response
 
 #### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 
@@ -8194,11 +8194,11 @@ Count the number of VALIDATION_SCIENTIFICNAME_NOTEMPTY in the MultiRecord that h
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_SCIENTIFICNAME_NOTEMPTY.Response
+bdqval:VALIDATION_SCIENTIFICNAME_NOTEMPTY.Response
 
 #### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 
@@ -8224,11 +8224,11 @@ Count the number of VALIDATION_TAXONRANK_NOTEMPTY in the MultiRecord that have R
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_TAXONRANK_NOTEMPTY.Response
+bdqval:VALIDATION_TAXONRANK_NOTEMPTY.Response
 
 #### Use Cases
 
-bdq:Record-Management, bdq:Taxon-Management
+bdqval:Record-Management, bdqval:Taxon-Management
 
 #### Notes
 
@@ -8254,11 +8254,11 @@ Count the number of VALIDATION_TAXONRANK_STANDARD in the MultiRecord that have R
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_TAXONRANK_STANDARD.Response
+bdqval:VALIDATION_TAXONRANK_STANDARD.Response
 
 #### Use Cases
 
-bdq:Record-Management, bdq:Taxon-Management
+bdqval:Record-Management, bdqval:Taxon-Management
 
 #### Notes
 
@@ -8284,11 +8284,11 @@ Count the number of VALIDATION_TAXON_NOTEMPTY in the MultiRecord that have Respo
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_TAXON_NOTEMPTY.Response
+bdqval:VALIDATION_TAXON_NOTEMPTY.Response
 
 #### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 
@@ -8314,11 +8314,11 @@ Count the number of VALIDATION_TAXON_UNAMBIGUOUS in the MultiRecord that have Re
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_TAXON_UNAMBIGUOUS.Response
+bdqval:VALIDATION_TAXON_UNAMBIGUOUS.Response
 
 #### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 
@@ -8344,11 +8344,11 @@ COMPLETE if every VALIDATION_CLASSIFICATION_CONSISTENT in the MultiRecord has Re
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_CLASSIFICATION_CONSISTENT.Response
+bdqval:VALIDATION_CLASSIFICATION_CONSISTENT.Response
 
 #### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 
@@ -8374,11 +8374,11 @@ COMPLETE if every VALIDATION_CLASS_FOUND in the MultiRecord has Response.result=
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_CLASS_FOUND.Response
+bdqval:VALIDATION_CLASS_FOUND.Response
 
 #### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 
@@ -8404,11 +8404,11 @@ COMPLETE if every VALIDATION_FAMILY_FOUND in the MultiRecord has Response.result
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_FAMILY_FOUND.Response
+bdqval:VALIDATION_FAMILY_FOUND.Response
 
 #### Use Cases
 
-bdq:Record-Management, bdq:Taxon-Management
+bdqval:Record-Management, bdqval:Taxon-Management
 
 #### Notes
 
@@ -8434,11 +8434,11 @@ COMPLETE if every VALIDATION_GENUS_FOUND in the MultiRecord has Response.result=
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_GENUS_FOUND.Response
+bdqval:VALIDATION_GENUS_FOUND.Response
 
 #### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 
@@ -8464,11 +8464,11 @@ COMPLETE if every VALIDATION_KINGDOM_FOUND in the MultiRecord has Response.resul
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_KINGDOM_FOUND.Response
+bdqval:VALIDATION_KINGDOM_FOUND.Response
 
 #### Use Cases
 
-bdq:Record-Management, bdq:Taxon-Management
+bdqval:Record-Management, bdqval:Taxon-Management
 
 #### Notes
 
@@ -8494,11 +8494,11 @@ COMPLETE if every VALIDATION_KINGDOM_NOTEMPTY in the MultiRecord has Response.re
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_KINGDOM_NOTEMPTY.Response
+bdqval:VALIDATION_KINGDOM_NOTEMPTY.Response
 
 #### Use Cases
 
-bdq:Record-Management, bdq:Taxon-Management
+bdqval:Record-Management, bdqval:Taxon-Management
 
 #### Notes
 
@@ -8524,11 +8524,11 @@ COMPLETE if every VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY in the MultiRecord has
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY.Response
+bdqval:VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY.Response
 
 #### Use Cases
 
-bdq:Record-Management, bdq:Taxon-Management
+bdqval:Record-Management, bdqval:Taxon-Management
 
 #### Notes
 
@@ -8554,11 +8554,11 @@ COMPLETE if every VALIDATION_ORDER_FOUND in the MultiRecord has Response.result=
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_ORDER_FOUND.Response
+bdqval:VALIDATION_ORDER_FOUND.Response
 
 #### Use Cases
 
-bdq:Record-Management, bdq:Taxon-Management
+bdqval:Record-Management, bdqval:Taxon-Management
 
 #### Notes
 
@@ -8584,11 +8584,11 @@ COMPLETE if every VALIDATION_PHYLUM_FOUND in the MultiRecord has Response.result
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_PHYLUM_FOUND.Response
+bdqval:VALIDATION_PHYLUM_FOUND.Response
 
 #### Use Cases
 
-bdq:Record-Management, bdq:Taxon-Management
+bdqval:Record-Management, bdqval:Taxon-Management
 
 #### Notes
 
@@ -8614,11 +8614,11 @@ COMPLETE if every VALIDATION_POLYNOMIAL_CONSISTENT in the MultiRecord has Respon
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_POLYNOMIAL_CONSISTENT.Response
+bdqval:VALIDATION_POLYNOMIAL_CONSISTENT.Response
 
 #### Use Cases
 
-bdq:Record-Management, bdq:Taxon-Management
+bdqval:Record-Management, bdqval:Taxon-Management
 
 #### Notes
 
@@ -8644,11 +8644,11 @@ COMPLETE if every VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY in the MultiRecor
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY.Response
+bdqval:VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY.Response
 
 #### Use Cases
 
-bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management
+bdqval:Alien-Species, bdqval:Record-Management, bdqval:Taxon-Management
 
 #### Notes
 
@@ -8674,11 +8674,11 @@ COMPLETE if every VALIDATION_SCIENTIFICNAMEID_COMPLETE in the MultiRecord has Re
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_SCIENTIFICNAMEID_COMPLETE.Response
+bdqval:VALIDATION_SCIENTIFICNAMEID_COMPLETE.Response
 
 #### Use Cases
 
-bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management
+bdqval:Alien-Species, bdqval:Record-Management, bdqval:Taxon-Management
 
 #### Notes
 
@@ -8704,11 +8704,11 @@ COMPLETE if every VALIDATION_SCIENTIFICNAMEID_NOTEMPTY in the MultiRecord has Re
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_SCIENTIFICNAMEID_NOTEMPTY.Response
+bdqval:VALIDATION_SCIENTIFICNAMEID_NOTEMPTY.Response
 
 #### Use Cases
 
-bdq:Alien-Species, bdq:Record-Management, bdq:Taxon-Management
+bdqval:Alien-Species, bdqval:Record-Management, bdqval:Taxon-Management
 
 #### Notes
 
@@ -8734,11 +8734,11 @@ COMPLETE if every VALIDATION_SCIENTIFICNAME_FOUND in the MultiRecord has Respons
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_SCIENTIFICNAME_FOUND.Response
+bdqval:VALIDATION_SCIENTIFICNAME_FOUND.Response
 
 #### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 
@@ -8764,11 +8764,11 @@ COMPLETE if every VALIDATION_SCIENTIFICNAME_NOTEMPTY in the MultiRecord has Resp
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_SCIENTIFICNAME_NOTEMPTY.Response
+bdqval:VALIDATION_SCIENTIFICNAME_NOTEMPTY.Response
 
 #### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 
@@ -8794,11 +8794,11 @@ COMPLETE if every VALIDATION_TAXONRANK_NOTEMPTY in the MultiRecord has Response.
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_TAXONRANK_NOTEMPTY.Response
+bdqval:VALIDATION_TAXONRANK_NOTEMPTY.Response
 
 #### Use Cases
 
-bdq:Record-Management, bdq:Taxon-Management
+bdqval:Record-Management, bdqval:Taxon-Management
 
 #### Notes
 
@@ -8824,11 +8824,11 @@ COMPLETE if every VALIDATION_TAXONRANK_STANDARD in the MultiRecord has Response.
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_TAXONRANK_STANDARD.Response
+bdqval:VALIDATION_TAXONRANK_STANDARD.Response
 
 #### Use Cases
 
-bdq:Record-Management, bdq:Taxon-Management
+bdqval:Record-Management, bdqval:Taxon-Management
 
 #### Notes
 
@@ -8854,11 +8854,11 @@ COMPLETE if every VALIDATION_TAXON_NOTEMPTY in the MultiRecord has Response.resu
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_TAXON_NOTEMPTY.Response
+bdqval:VALIDATION_TAXON_NOTEMPTY.Response
 
 #### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 
@@ -8884,11 +8884,11 @@ COMPLETE if every VALIDATION_TAXON_UNAMBIGUOUS in the MultiRecord has Response.r
 #### Information Elements
 
 Acted upon: 
-bdq:VALIDATION_TAXON_UNAMBIGUOUS.Response
+bdqval:VALIDATION_TAXON_UNAMBIGUOUS.Response
 
 #### Use Cases
 
-bdq:Taxon-Management, bdq:Alien-Species, bdq:Spatial-Temporal_Patterns, bdq:Record-Management, bdq:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
 
 #### Notes
 

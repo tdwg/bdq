@@ -166,15 +166,15 @@ See section [2.4.1 Listing Identifiers for Tests (non-normative)](../../suppleme
 | Term IRI (dcterms:isVersionOf) | normative | A related resource of which the described resource is a version, edition, or adaptation. TDWG SDS: The HTTP IRI that uniquely identifies the current term. | [https://rs.tdwg.org/ bdqtest/terms/ 07c28ace-561a-476e-a9b9-3d5ad6e35933](https://rs.tdwg.org/bdqtest/terms/07c28ace-561a-476e-a9b9-3d5ad6e35933) |
 | Modified (dcterms:issued) |  | Date of formal issuance of the resource. TDWG SDS: The date in ISO 8601 Date format on which the most recent version of the term was issued. In present context: The most recent date for any change to any element of the Test. | 2025-03-07 |
 | Term Version IRI (rdf:about) | normative | The HTTP IRI that identifies the version of the term that is currently in force. | [https://rs.tdwg.org/ bdqtest/terms/version/ 07c28ace-561a-476e-a9b9-3d5ad6e35933-2024-07-24](https://rs.tdwg.org/bdqtest/terms/version/07c28ace-561a-476e-a9b9-3d5ad6e35933-2024-07-24) |
-| Description (dcterms:description) | non-normative | An account of the resource. In present context: A brief description of what the Test does. | Proposes an amendment to the value of dwc:basisOfRecord using the bdq:sourceAuthority. |
-| Expected Response (bdqffdq:hasExpectedResponse) | normative | Text describing the logic to be followed by a bdqffdq:Implementation of a bdqffdq:Specification specifying the values of bdqffdq:ResponseStatus and bdqffdq:ResponseResults that should be produced from the evaluation of input bdqffdq:InformationElements. In present context: The formal definition of how the Test must be implemented. | EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:basisOfRecord is bdq:Empty; AMENDED the value of dwc:basisOfRecord if it could be unambiguously interpreted as a value in the bdq:sourceAuthority; otherwise NOT_AMENDED |
+| Description (dcterms:description) | non-normative | An account of the resource. In present context: A brief description of what the Test does. | Proposes an amendment to the value of dwc:basisOfRecord using the bdqval:sourceAuthority. |
+| Expected Response (bdqffdq:hasExpectedResponse) | normative | Text describing the logic to be followed by a bdqffdq:Implementation of a bdqffdq:Specification specifying the values of bdqffdq:ResponseStatus and bdqffdq:ResponseResults that should be produced from the evaluation of input bdqffdq:InformationElements. In present context: The formal definition of how the Test must be implemented. | EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:basisOfRecord is bdqval:Empty; AMENDED the value of dwc:basisOfRecord if it could be unambiguously interpreted as a value in the bdqval:sourceAuthority; otherwise NOT_AMENDED |
 | Specification GUID (bdqffdq:Specification) | normative | A specific statement about how to evaluate a bdqffdq:DataQualityNeed. | urn:uuid:76ee10e7-7be9-432b-ad9c-655b127bff27 |
 | InformationElements ActedUpon (bdqffdq:composedOf) | normative | Specific vocabulary term that comprises a bdqffdq:InformationElement that is not a bdqffdq:AbstractInformationElement. | dwc:basisOfRecord |
 | InformationElements Consulted (bdqffdq:composedOf) | normative | Specific vocabulary term that comprises a bdqffdq:InformationElement that is not a bdqffdq:AbstractInformationElement. | dwc:verbatimCoordinates, dwc:verbatimLatitude, dwc:verbatimLongitude, dwc:verbatimCoordinateSystem, dwc:verbatimSRS |
-| Parameters (bdqffdq:Parameter) | normative | A placeholder for a value that, when provided to a Test bdqffdq:Specification changes the behavior of the Test in a defined manner. | bdq:sourceAuthority |
-| SourceAuthorities/Defaults (bdqffdq:hasAuthoritiesDefaults) | normative | Text describing bdq:sourceAuthorities and bdqffdq:Parameters with their default values to attach to a bdqffdq:Specification to further specify the behavior described in the bdqffdq:hasExpectedResponse. | bdq:sourceAuthority default = "Darwin Core basisOfRecord" {[https://dwc.tdwg.org/terms/#dwc:basisOfRecord]} {dwc:basisOfRecord vocabulary [https://rs.gbif.org/vocabulary/dwc/basis_of_record.xml]} |
+| Parameters (bdqffdq:Parameter) | normative | A placeholder for a value that, when provided to a Test bdqffdq:Specification changes the behavior of the Test in a defined manner. | bdqval:sourceAuthority |
+| SourceAuthorities/Defaults (bdqffdq:hasAuthoritiesDefaults) | normative | Text describing bdq:sourceAuthorities and bdqffdq:Parameters with their default values to attach to a bdqffdq:Specification to further specify the behavior described in the bdqffdq:hasExpectedResponse. | bdqval:sourceAuthority default = "Darwin Core basisOfRecord" {[https://dwc.tdwg.org/terms/#dwc:basisOfRecord]} {dwc:basisOfRecord vocabulary [https://rs.gbif.org/vocabulary/dwc/basis_of_record.xml]} |
 | Notes (skos:note) | non-normative | A general note, for any purpose. In present context: Additional information to supplement the Specification. | The term dwc:basisOfRecord has the comment "Recommended best practice is to use a controlled vocabulary such as the set of local names of the identifiers for classes in Darwin Core." The list of these values can be determined by searching https://github.com/tdwg/dwc/blob/master/vocabulary/term_versions.csv for rows with status="recommended" and rdf_type="http://www.w3.org/2000/01/rdf-schema#Class". For example, the term http://rs.tdwg.org/dwc/terms/PreservedSpecimen has a local name PreservedSpecimen. For Tests against a dwc:Occurrence record, the set of valid terms is more limited and embodied in the resource found at https://rs.gbif.org/vocabulary/dwc/basis_of_record.xml, which contains the local name for the identifier, as well as preferred and alternate labels from which to standardize values. |
-| Examples (skos:example) | non-normative | An example of the use of a concept. In present context: Examples of input and output data and Test responses for a pass case and a fail case. | [dwc:basisOfRecord="Human obs": Response.status=AMENDED, Response.result=dwc:basisOfRecord="HumanObservation", Response.comment="dwc:basisOfRecord contains interpretable value"],[dwc:basisOfRecord="FossilSpecimen": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:basisOfRecord contains match in the bdq:sourceAuthority so NOT_AMENDED"] |
+| Examples (skos:example) | non-normative | An example of the use of a concept. In present context: Examples of input and output data and Test responses for a pass case and a fail case. | [dwc:basisOfRecord="Human obs": Response.status=AMENDED, Response.result=dwc:basisOfRecord="HumanObservation", Response.comment="dwc:basisOfRecord contains interpretable value"],[dwc:basisOfRecord="FossilSpecimen": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:basisOfRecord contains match in the bdqval:sourceAuthority so NOT_AMENDED"] |
 | Type (rdf:type) | normative | The subject is an instance of a class. In present context: The type of the Test, one of the subtypes of DataQualityNeed. | Amendment |
 | Resource Type (bdqffdq:ResourceType) | normative | Category of things that are data objects about which data quality bdqffdq:Responses may be made. | SingleRecord |
 | Data Quality Dimension (bdqffdq:DataQualityDimension) | normative | An aspect of data quality. | Conformance |
@@ -508,11 +508,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Proposes an amendment to the value of dwc:basisOfRecord using the bdq:sourceAuthority.</td>
+			<td>Proposes an amendment to the value of dwc:basisOfRecord using the bdqval:sourceAuthority.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:basisOfRecord is bdq:Empty; AMENDED the value of dwc:basisOfRecord if it could be unambiguously interpreted as a value in the bdq:sourceAuthority; otherwise NOT_AMENDED</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:basisOfRecord is bdqval:Empty; AMENDED the value of dwc:basisOfRecord if it could be unambiguously interpreted as a value in the bdqval:sourceAuthority; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -524,11 +524,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Parameters</td>
-			<td>bdq:sourceAuthority</td>
+			<td>bdqval:sourceAuthority</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "Darwin Core basisOfRecord" {[https://dwc.tdwg.org/terms/#dwc:basisOfRecord]} {dwc:basisOfRecord vocabulary [https://rs.gbif.org/vocabulary/dwc/basis_of_record.xml]}</td>
+			<td>bdqval:sourceAuthority default = "Darwin Core basisOfRecord" {[https://dwc.tdwg.org/terms/#dwc:basisOfRecord]} {dwc:basisOfRecord vocabulary [https://rs.gbif.org/vocabulary/dwc/basis_of_record.xml]}</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -536,7 +536,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:basisOfRecord="Human obs": Response.status=AMENDED, Response.result=dwc:basisOfRecord="HumanObservation", Response.comment="dwc:basisOfRecord contains interpretable value"],[dwc:basisOfRecord="FossilSpecimen": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:basisOfRecord contains match in the bdq:sourceAuthority so NOT_AMENDED"]</td>
+			<td>[dwc:basisOfRecord="Human obs": Response.status=AMENDED, Response.result=dwc:basisOfRecord="HumanObservation", Response.comment="dwc:basisOfRecord contains interpretable value"],[dwc:basisOfRecord="FossilSpecimen": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:basisOfRecord contains match in the bdqval:sourceAuthority so NOT_AMENDED"]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -623,7 +623,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>INTERNAL_PREREQUISITES_NOT_MET if 1) either dwc:decimalLatitude or dwc:decimalLongitude are bdq:NotEmpty, or 2) dwc:verbatimCoordinates and one of dwc:verbatimLatitude and dwc:verbatimLongitude are bdq:Empty; FILLED_IN the values of dwc:decimalLatitude, dwc:decimalLongitude and dwc:geodeticDatum (provided that the dwc:verbatimCoordinates can be unambiguously interpreted as geographic coordinates) from 1) dwc:verbatimLatitude, dwc:verbatimLongitude and dwc:verbatimSRS or 2) dwc:verbatimCoordinates and dwc:verbatimSRS; otherwise NOT_AMENDED.</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if 1) either dwc:decimalLatitude or dwc:decimalLongitude are bdqval:NotEmpty, or 2) dwc:verbatimCoordinates and one of dwc:verbatimLatitude and dwc:verbatimLongitude are bdqval:Empty; FILLED_IN the values of dwc:decimalLatitude, dwc:decimalLongitude and dwc:geodeticDatum (provided that the dwc:verbatimCoordinates can be unambiguously interpreted as geographic coordinates) from 1) dwc:verbatimLatitude, dwc:verbatimLongitude and dwc:verbatimSRS or 2) dwc:verbatimCoordinates and dwc:verbatimSRS; otherwise NOT_AMENDED.</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -730,7 +730,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>INTERNAL_PREREQUISITES_NOT_MET if any of dwc:decimalLatitude or dwc:decimalLongitude or dwc:countryCode are bdq:Empty; AMENDED dwc:decimalLatitude and dwc:decimalLongitude if the coordinates were transposed or one or more of the signs of the coordinates were reversed to align the location with dwc:countryCode according to the bdq:sourceAuthority; otherwise NOT_AMENDED</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if any of dwc:decimalLatitude or dwc:decimalLongitude or dwc:countryCode are bdqval:Empty; AMENDED dwc:decimalLatitude and dwc:decimalLongitude if the coordinates were transposed or one or more of the signs of the coordinates were reversed to align the location with dwc:countryCode according to the bdqval:sourceAuthority; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -746,11 +746,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Parameters</td>
-			<td>bdq:sourceAuthority</td>
+			<td>bdqval:sourceAuthority</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "10m-admin-1 boundaries UNION with Exclusive Economic Zones" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/] spatial UNION [https://www.marineregions.org/downloads.php#marbound]}</td>
+			<td>bdqval:sourceAuthority default = "10m-admin-1 boundaries UNION with Exclusive Economic Zones" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/] spatial UNION [https://www.marineregions.org/downloads.php#marbound]}</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -845,11 +845,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Proposes an amendment to the value of dwc:countryCode if dwc:decimalLatitude and dwc:decimalLongitude fall within a boundary from the bdq:countryShapes that is attributable to a single valid ISO 3166-1-alpha-2 country code.</td>
+			<td>Proposes an amendment to the value of dwc:countryCode if dwc:decimalLatitude and dwc:decimalLongitude fall within a boundary from the bdqval:countryShapes that is attributable to a single valid ISO 3166-1-alpha-2 country code.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if either dwc:decimalLatitude or dwc:decimalLongitude is bdq:Empty, or if dwc:countryCode is bdq:NotEmpty; FILLED_IN dwc:countryCode if dwc:decimalLatitude and dwc:decimalLongitude fall within a boundary in the bdq:sourceAuthority that is attributable to a single valid country code; otherwise NOT_AMENDED.</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if either dwc:decimalLatitude or dwc:decimalLongitude is bdqval:Empty, or if dwc:countryCode is bdqval:NotEmpty; FILLED_IN dwc:countryCode if dwc:decimalLatitude and dwc:decimalLongitude fall within a boundary in the bdqval:sourceAuthority that is attributable to a single valid country code; otherwise NOT_AMENDED.</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -865,11 +865,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Parameters</td>
-			<td>bdq:sourceAuthority</td>
+			<td>bdqval:sourceAuthority</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "10m-admin-1 boundaries UNION with Exclusive Economic Zones" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/] spatial UNION [https://www.marineregions.org/downloads.php#marbound]}</td>
+			<td>bdqval:sourceAuthority default = "10m-admin-1 boundaries UNION with Exclusive Economic Zones" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/] spatial UNION [https://www.marineregions.org/downloads.php#marbound]}</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -968,7 +968,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the value of dwc:countryCode is bdq:Empty; AMENDED the value of dwc:countryCode if it can be unambiguously interpreted to a value in the bdq:sourceAuthority; otherwise NOT_AMENDED</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the value of dwc:countryCode is bdqval:Empty; AMENDED the value of dwc:countryCode if it can be unambiguously interpreted to a value in the bdqval:sourceAuthority; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -980,7 +980,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "ISO 3166-1-alpha-2" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}</td>
+			<td>bdqval:sourceAuthority default = "ISO 3166-1-alpha-2" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -1071,7 +1071,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:dateIdentified is bdq:Empty; AMENDED if the value of dwc:dateIdentified is not a properly formatted ISO 8601 date but is unambiguous and altered to be a valid ISO 8601 date; otherwise NOT_AMENDED.</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:dateIdentified is bdqval:Empty; AMENDED if the value of dwc:dateIdentified is not a properly formatted ISO 8601 date but is unambiguous and altered to be a valid ISO 8601 date; otherwise NOT_AMENDED.</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -1174,7 +1174,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:day is bdq:Empty; AMENDED the value of dwc:day if the value is unambiguously interpreted as an integer between 1 and 31 inclusive; otherwise NOT_AMENDED</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:day is bdqval:Empty; AMENDED the value of dwc:day if the value is unambiguously interpreted as an integer between 1 and 31 inclusive; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -1273,7 +1273,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the value of dc:type is bdq:Empty; AMENDED the value of dc:type if it can be unambiguously interpreted as a term name in the bdq:sourceAuthority; otherwise NOT_AMENDED</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the value of dc:type is bdqval:Empty; AMENDED the value of dc:type if it can be unambiguously interpreted as a term name in the bdqval:sourceAuthority; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -1285,7 +1285,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority = "DCMI Type Vocabulary" {[http://purl.org/dc/terms/DCMIType]} {"DCMI Type Vocabulary List of Terms" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}</td>
+			<td>bdqval:sourceAuthority = "DCMI Type Vocabulary" {[http://purl.org/dc/terms/DCMIType]} {"DCMI Type Vocabulary List of Terms" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -1376,11 +1376,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Proposes an amendment to the value of dwc:degreeOfEstablishment using the bdq:sourceAuthority.</td>
+			<td>Proposes an amendment to the value of dwc:degreeOfEstablishment using the bdqval:sourceAuthority.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:degreeOfEstablishment is bdq:Empty; AMENDED the value of dwc:degreeOfEstablishment if it can be unambiguously matched to a term in the bdq:sourceAuthority; otherwise NOT_AMENDED</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:degreeOfEstablishment is bdqval:Empty; AMENDED the value of dwc:degreeOfEstablishment if it can be unambiguously matched to a term in the bdqval:sourceAuthority; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -1392,11 +1392,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Parameters</td>
-			<td>bdq:sourceAuthority</td>
+			<td>bdqval:sourceAuthority</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "Degree of Establishment Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/doe/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/DegreeOfEstablishment/concepts]}</td>
+			<td>bdqval:sourceAuthority default = "Degree of Establishment Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/doe/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/DegreeOfEstablishment/concepts]}</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -1404,7 +1404,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:degreeOfEstablishment="capt.": Response.status=AMENDED, Response.result=dwc:degreeOfEstablishment="captive", Response.comment="dwc:degreeOfEstablishment contains an interpretable value in the bdq:sourceAuthority"],[dwc:degreeOfEstablishment="tree": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:degreeOfEstablishment does not contain an interpretable value in the bdq:sourceAuthority"]</td>
+			<td>[dwc:degreeOfEstablishment="capt.": Response.status=AMENDED, Response.result=dwc:degreeOfEstablishment="captive", Response.comment="dwc:degreeOfEstablishment contains an interpretable value in the bdqval:sourceAuthority"],[dwc:degreeOfEstablishment="tree": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:degreeOfEstablishment does not contain an interpretable value in the bdqval:sourceAuthority"]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -1491,11 +1491,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Proposes an amendment to the value of dwc:establishmentMeans using the bdq:sourceAuthority.</td>
+			<td>Proposes an amendment to the value of dwc:establishmentMeans using the bdqval:sourceAuthority.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:establishmentMeans is bdq:Empty; AMENDED the value of dwc:establishmentMeans if it can be unambiguously matched to a term in the bdq:sourceAuthority; otherwise NOT_AMENDED</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:establishmentMeans is bdqval:Empty; AMENDED the value of dwc:establishmentMeans if it can be unambiguously matched to a term in the bdqval:sourceAuthority; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -1507,15 +1507,15 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Parameters</td>
-			<td>bdq:sourceAuthority</td>
+			<td>bdqval:sourceAuthority</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "Establishment Means Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/em/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/EstablishmentMeans/concepts]}</td>
+			<td>bdqval:sourceAuthority default = "Establishment Means Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/em/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/EstablishmentMeans/concepts]}</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:establishmentMeans="vag.": Response.status=AMENDED, Response.result=dwc:establishmentMeans="vagrant", Response.comment="dwc:establishmentMeans contains an interpretable value in the bdq:sourceAuthority"],[dwc:establishmentMeans="cultivated": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:establishmentMeans is not an interpretable value in the bdq:sourceAuthority"]</td>
+			<td>[dwc:establishmentMeans="vag.": Response.status=AMENDED, Response.result=dwc:establishmentMeans="vagrant", Response.comment="dwc:establishmentMeans contains an interpretable value in the bdqval:sourceAuthority"],[dwc:establishmentMeans="cultivated": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:establishmentMeans is not an interpretable value in the bdqval:sourceAuthority"]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -1606,7 +1606,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:NotEmpty or the value of dwc:verbatimEventDate is bdq:Empty; FILLED_IN the value of dwc:eventDate if an unambiguous ISO 8601 date is interpreted from dwc:verbatimEventDate; otherwise NOT_AMENDED</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdqval:NotEmpty or the value of dwc:verbatimEventDate is bdqval:Empty; FILLED_IN the value of dwc:eventDate if an unambiguous ISO 8601 date is interpreted from dwc:verbatimEventDate; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -1820,7 +1820,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:NotEmpty or any of dwc:year, dwc:startDayOfYear, or dwc:endDayOfYear are bdq:Empty; FILLED_IN the value of dwc:eventDate from values in dwc:year, dwc:startDayOfYear and dwc:endDayOfYear if the values in each are independently interpretable and if the value of dwc:startDayOfYear is less than the value of dwc:endDayOfYear; otherwise NOT_AMENDED</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdqval:NotEmpty or any of dwc:year, dwc:startDayOfYear, or dwc:endDayOfYear are bdqval:Empty; FILLED_IN the value of dwc:eventDate from values in dwc:year, dwc:startDayOfYear and dwc:endDayOfYear if the values in each are independently interpretable and if the value of dwc:startDayOfYear is less than the value of dwc:endDayOfYear; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -1927,7 +1927,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty; AMENDED if the value of dwc:eventDate is not a properly formatted ISO 8601 date but is unambiguous, and altered to be a valid ISO 8601 date; otherwise NOT_AMENDED</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdqval:Empty; AMENDED if the value of dwc:eventDate is not a properly formatted ISO 8601 date but is unambiguous, and altered to be a valid ISO 8601 date; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -2030,7 +2030,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty or contains an invalid value according to ISO 8601; FILLED_IN if any of (1) dwc:day from dwc:eventDate if dwc:day is bdq:Empty and dwc:eventDate has a precision of a day or finer and is within a single day, (2) dwc:month from dwc:eventDate if dwc:month is bdq:Empty and dwc:eventDate has a precision of a single month or finer and is within a single month, (3) dwc:year from dwc:eventDate if dwc:year is bdq:Empty and dwc:eventDate has a precision of a single year or finer and is within a single year, (4) dwc:startDayOfYear and dwc:endDayOfYear if they are bdq:Empty and dwc:eventDate has a precision of a day or better; otherwise NOT_AMENDED.</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdqval:Empty or contains an invalid value according to ISO 8601; FILLED_IN if any of (1) dwc:day from dwc:eventDate if dwc:day is bdqval:Empty and dwc:eventDate has a precision of a day or finer and is within a single day, (2) dwc:month from dwc:eventDate if dwc:month is bdqval:Empty and dwc:eventDate has a precision of a single month or finer and is within a single month, (3) dwc:year from dwc:eventDate if dwc:year is bdqval:Empty and dwc:eventDate has a precision of a single year or finer and is within a single year, (4) dwc:startDayOfYear and dwc:endDayOfYear if they are bdqval:Empty and dwc:eventDate has a precision of a day or better; otherwise NOT_AMENDED.</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -2137,7 +2137,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>If dwc:geodeticDatum is bdq:Empty, fill in dwc:geodeticDatum using the value of bdq:defaultGeodeticDatum, report FILLED_IN and, if dwc:coordinateUncertaintyInMeters, dwc:decimalLatitude and dwc:decimalLongitude are bdq:NotEmpty, amend the value of dwc:coordinateUncertaintyInMeters by adding the maximum datum shift between the specified bdq:defaultGeodeticDatum and any other datum at the provided dwc:decimalLatitude and dwc:decimalLongitude and instead report AMENDED; otherwise NOT_AMENDED.</td>
+			<td>If dwc:geodeticDatum is bdqval:Empty, fill in dwc:geodeticDatum using the value of bdqval:defaultGeodeticDatum, report FILLED_IN and, if dwc:coordinateUncertaintyInMeters, dwc:decimalLatitude and dwc:decimalLongitude are bdqval:NotEmpty, amend the value of dwc:coordinateUncertaintyInMeters by adding the maximum datum shift between the specified bdqval:defaultGeodeticDatum and any other datum at the provided dwc:decimalLatitude and dwc:decimalLongitude and instead report AMENDED; otherwise NOT_AMENDED.</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -2153,19 +2153,19 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Parameters</td>
-			<td>bdq:defaultGeodeticDatum</td>
+			<td>bdqval:defaultGeodeticDatum</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:defaultGeodeticDatum default = "EPSG:4326"</td>
+			<td>bdqval:defaultGeodeticDatum default = "EPSG:4326"</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>The value of dwc:geodeticDatum applies to dwc:decimalLatitude and dwc:decimalLongitude, thus EPSG:4326 (https://epsg.org/crs_4326/WGS-84.html) is the appropriate EPSG code as it applies to the WGS84 datum used with a geographic coordinate system. If the dwc:coordinateUncertaintyInMeters is bdq:Empty, not interpretable, or not valid, this amendment should not provide a dwc:coordinateUncertaintyInMeters. If the dwc:coordinateUncertaintyInMeters is bdq:NotEmpty and is valid, this amendment should add to the dwc:coordinateUncertaintyInMeters the uncertainty contributed by the maximum datum shift at the given coordinates. Since different systems have differing requirements for what the default datum should be, it is left unspecified, but should match whatever the target datum is in AMENDMENT_COORDINATES_CONVERTED (620749b9-7d9c-4890-97d2-be3d1cde6da8). After the amendment is performed, the dwc:geodeticDatum field should be the assumed default datum as parameterized. An example implementation to determine the uncertainty added by asserting a default datum (datum shift) where a known datum is not declared can be found in [datumshiftproj.py](https://github.com/VertNet/georefcalculator/blob/master/source/python/datumshiftproj.py) in the source code for the [Georeferencing Calculator](https://georeferencing.org/calculator/) (Wieczorek & Wieczorek 2021). Included in the source code is a [5-degree grid](https://github.com/VertNet/georefcalculator/blob/master/datumerrordata.js) of datum shifts from an unknown datum to WGS84.</td>
+			<td>The value of dwc:geodeticDatum applies to dwc:decimalLatitude and dwc:decimalLongitude, thus EPSG:4326 (https://epsg.org/crs_4326/WGS-84.html) is the appropriate EPSG code as it applies to the WGS84 datum used with a geographic coordinate system. If the dwc:coordinateUncertaintyInMeters is bdqval:Empty, not interpretable, or not valid, this amendment should not provide a dwc:coordinateUncertaintyInMeters. If the dwc:coordinateUncertaintyInMeters is bdqval:NotEmpty and is valid, this amendment should add to the dwc:coordinateUncertaintyInMeters the uncertainty contributed by the maximum datum shift at the given coordinates. Since different systems have differing requirements for what the default datum should be, it is left unspecified, but should match whatever the target datum is in AMENDMENT_COORDINATES_CONVERTED (620749b9-7d9c-4890-97d2-be3d1cde6da8). After the amendment is performed, the dwc:geodeticDatum field should be the assumed default datum as parameterized. An example implementation to determine the uncertainty added by asserting a default datum (datum shift) where a known datum is not declared can be found in [datumshiftproj.py](https://github.com/VertNet/georefcalculator/blob/master/source/python/datumshiftproj.py) in the source code for the [Georeferencing Calculator](https://georeferencing.org/calculator/) (Wieczorek & Wieczorek 2021). Included in the source code is a [5-degree grid](https://github.com/VertNet/georefcalculator/blob/master/datumerrordata.js) of datum shifts from an unknown datum to WGS84.</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:geodeticDatum="[null]", dwc:decimalLatitude="-30.00", dwc:decimalLongitude="130.00", dwc:coordinateUncertaintyInMeters="50": Response.status=AMENDED, Response.result=dwc:geodeticDatum="EPSG:4326", dwc:coordinateUncertaintyInMeters="2836", Response.comment="dwc:godeticDatum is bdq:Empty so filled in with default and dwc:coordinateUncertaintyInMeters amended to maximum possible value"],[dwc:geodeticDatum="WGS84", dwc:decimalLatitude="", dwc:decimalLongitude="", dwc:coordinateUncertaintyInMeters="": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:geodeticDatum contains a value"]</td>
+			<td>[dwc:geodeticDatum="[null]", dwc:decimalLatitude="-30.00", dwc:decimalLongitude="130.00", dwc:coordinateUncertaintyInMeters="50": Response.status=AMENDED, Response.result=dwc:geodeticDatum="EPSG:4326", dwc:coordinateUncertaintyInMeters="2836", Response.comment="dwc:godeticDatum is bdqval:Empty so filled in with default and dwc:coordinateUncertaintyInMeters amended to maximum possible value"],[dwc:geodeticDatum="WGS84", dwc:decimalLatitude="", dwc:decimalLongitude="", dwc:coordinateUncertaintyInMeters="": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:geodeticDatum contains a value"]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -2252,11 +2252,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Proposes an amendment to the value of dwc:geodeticDatum using the bdq:sourceAuthority.</td>
+			<td>Proposes an amendment to the value of dwc:geodeticDatum using the bdqval:sourceAuthority.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; AMENDED the value of dwc:geodeticDatum if it could be unambiguously interpreted as a valid code from the bdq:sourceAuthority (in the form Authority:Number) for a Datum, Ellipsoid or a CRS appropriate for a 2D geographic coordinate in degrees, or as the value "not recorded"; otherwise NOT_AMENDED</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdqval:Empty; AMENDED the value of dwc:geodeticDatum if it could be unambiguously interpreted as a valid code from the bdqval:sourceAuthority (in the form Authority:Number) for a Datum, Ellipsoid or a CRS appropriate for a 2D geographic coordinate in degrees, or as the value "not recorded"; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -2268,15 +2268,15 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority = "EPSG" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index#/Datum]}</td>
+			<td>bdqval:sourceAuthority = "EPSG" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index#/Datum]}</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>Chapman and Wieczorek (2020) recommend best practice is to use EPSG codes (https://epsg.io/) as a controlled vocabulary. Ideally, amend to the EPSG code for the geographic coordinate reference system (CRS), if known. Otherwise use the EPSG code for the geodetic datum, if known. Otherwise use the EPSG code of the ellipsoid, if known. If none of these is known, use the explicit value "not recorded". The reference vocabularies of values for geodetic datums and ellipsoids needs to be made available and should map alternative representations of dwc:geodeticDatum strings to EPSG codes, such as "WGS84", "WGS_84", "WGS:84", "WGS 84", all with standard value "EPSG:4326". NB. Do NOT change one datum to any other datum no matter how close they are or may appear to be. The same treatment should be given to all datums, which is to use their transformation algorithms to get the equivalent in EPSG:4326. For reference, a vocabulary of synonyms for EPSG codes for values of dwc:geodeticDatum can be found at https://registry.gbif.org/vocabulary/GeodeticDatum/concepts and and for more information on obtaining the EPSG dataset, see https://docs.geotools.org/latest/userguide/library/referencing/epsg.html. For the purposes of this Test "not recorded" is not a value in the bdq:sourceAuthority and should result in NOT_AMENDED.</td>
+			<td>Chapman and Wieczorek (2020) recommend best practice is to use EPSG codes (https://epsg.io/) as a controlled vocabulary. Ideally, amend to the EPSG code for the geographic coordinate reference system (CRS), if known. Otherwise use the EPSG code for the geodetic datum, if known. Otherwise use the EPSG code of the ellipsoid, if known. If none of these is known, use the explicit value "not recorded". The reference vocabularies of values for geodetic datums and ellipsoids needs to be made available and should map alternative representations of dwc:geodeticDatum strings to EPSG codes, such as "WGS84", "WGS_84", "WGS:84", "WGS 84", all with standard value "EPSG:4326". NB. Do NOT change one datum to any other datum no matter how close they are or may appear to be. The same treatment should be given to all datums, which is to use their transformation algorithms to get the equivalent in EPSG:4326. For reference, a vocabulary of synonyms for EPSG codes for values of dwc:geodeticDatum can be found at https://registry.gbif.org/vocabulary/GeodeticDatum/concepts and and for more information on obtaining the EPSG dataset, see https://docs.geotools.org/latest/userguide/library/referencing/epsg.html. For the purposes of this Test "not recorded" is not a value in the bdqval:sourceAuthority and should result in NOT_AMENDED.</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:geodeticDatum="WGS84": Response.status=AMENDED, Response.result=dwc:geodeticDatum="EPSG:4326", Response.comment="dwc:geodeticDatum contains a valid code in the bdq:sourceAuthority"],[dwc:geodeticDatum="WGS8": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:geodeticDatum contains an ambiguous value"]</td>
+			<td>[dwc:geodeticDatum="WGS84": Response.status=AMENDED, Response.result=dwc:geodeticDatum="EPSG:4326", Response.comment="dwc:geodeticDatum contains a valid code in the bdqval:sourceAuthority"],[dwc:geodeticDatum="WGS8": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:geodeticDatum contains an ambiguous value"]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -2359,11 +2359,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Proposes an amendment to the value of dcterms:license using the bdq:sourceAuthority.</td>
+			<td>Proposes an amendment to the value of dcterms:license using the bdqval:sourceAuthority.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; AMENDED value of dcterms:license if it could be unambiguously interpreted as a value in the bdq:sourceAuthority; otherwise NOT_AMENDED.</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; AMENDED value of dcterms:license if it could be unambiguously interpreted as a value in the bdqval:sourceAuthority; otherwise NOT_AMENDED.</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -2375,11 +2375,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Parameters</td>
-			<td>bdq:sourceAuthority</td>
+			<td>bdqval:sourceAuthority</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "Creative Commons" {[https://creativecommons.org/]} {Creative Commons licenses [https://creativecommons.org/about/cclicenses/]}</td>
+			<td>bdqval:sourceAuthority default = "Creative Commons" {[https://creativecommons.org/]} {Creative Commons licenses [https://creativecommons.org/about/cclicenses/]}</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -2478,7 +2478,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters or dwc:maximumDepthInMeters are bdq:NotEmpty or dwc:verbatimDepth is bdq:Empty; FILLED_IN the value of dwc:minimumDepthInMeters and dwc:maximumDepthInMeters if they can be unambiguously interpreted from dwc:verbatimDepth; otherwise NOT_AMENDED.</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters or dwc:maximumDepthInMeters are bdqval:NotEmpty or dwc:verbatimDepth is bdqval:Empty; FILLED_IN the value of dwc:minimumDepthInMeters and dwc:maximumDepthInMeters if they can be unambiguously interpreted from dwc:verbatimDepth; otherwise NOT_AMENDED.</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -2581,7 +2581,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumElevationInMeters or dwc:maximumElevationInMeters are bdq:NotEmpty or dwc:verbatimElevation is bdq:Empty; FILLED_IN the values of dwc:minimumElevationInMeters and dwc:maximumElevationInMeters if they can be unambiguously interpreted from dwc:verbatimElevation; otherwise NOT_AMENDED</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumElevationInMeters or dwc:maximumElevationInMeters are bdqval:NotEmpty or dwc:verbatimElevation is bdqval:Empty; FILLED_IN the values of dwc:minimumElevationInMeters and dwc:maximumElevationInMeters if they can be unambiguously interpreted from dwc:verbatimElevation; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -2684,7 +2684,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:month is bdq:Empty; AMENDED the value of dwc:month if it can be unambiguously interpreted as an integer between 1 and 12 inclusive; otherwise NOT_AMENDED</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:month is bdqval:Empty; AMENDED the value of dwc:month if it can be unambiguously interpreted as an integer between 1 and 12 inclusive; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -2783,7 +2783,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdq:NotEmpty; FILLED_IN the value of dwc:occurrenceStatus using the bdq:defaultOccurrenceStatus Parameter value if dwc:occurrenceStatus,dwc:individualCount and dwc:organismQuantity are bdq:Empty; otherwise NOT_AMENDED</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdqval:NotEmpty; FILLED_IN the value of dwc:occurrenceStatus using the bdqval:defaultOccurrenceStatus Parameter value if dwc:occurrenceStatus,dwc:individualCount and dwc:organismQuantity are bdqval:Empty; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -2799,11 +2799,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Parameters</td>
-			<td>bdq:defaultOccurrenceStatus</td>
+			<td>bdqval:defaultOccurrenceStatus</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:defaultOccurrenceStatus default = "present"</td>
+			<td>bdqval:defaultOccurrenceStatus default = "present"</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -2811,7 +2811,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:occurrenceStatus="", dwc:individualCount="", dwc:organismQuantity="": Response.status=FILLED_IN, Response.result=dwc:occurrenceStatus="present", Response.comment="dwc:occurrenceStatus is bdq:Empty; assumed "present""],[dwc:occurrenceStatus="X", dwc:individualCount="10", dwc:organismQuantity="": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:occurrenceStatus is bdq:NotEmpty"]</td>
+			<td>[dwc:occurrenceStatus="", dwc:individualCount="", dwc:organismQuantity="": Response.status=FILLED_IN, Response.result=dwc:occurrenceStatus="present", Response.comment="dwc:occurrenceStatus is bdqval:Empty; assumed "present""],[dwc:occurrenceStatus="X", dwc:individualCount="10", dwc:organismQuantity="": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:occurrenceStatus is bdqval:NotEmpty"]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -2894,11 +2894,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Proposes an amendment to the value of dwc:occurrenceStatus using the bdq:sourceAuthority.</td>
+			<td>Proposes an amendment to the value of dwc:occurrenceStatus using the bdqval:sourceAuthority.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:ocurrenceStatus is bdq:Empty; AMENDED the value of dwc:occurrenceStatus if it can be unambiguously interpreted as a value in the bdq:sourceAuthority; otherwise NOT_AMENDED</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:ocurrenceStatus is bdqval:Empty; AMENDED the value of dwc:occurrenceStatus if it can be unambiguously interpreted as a value in the bdqval:sourceAuthority; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -2910,15 +2910,15 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Parameters</td>
-			<td>bdq:sourceAuthority</td>
+			<td>bdqval:sourceAuthority</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "Regex present/absent" {["^(present|absent)$]}</td>
+			<td>bdqval:sourceAuthority default = "Regex present/absent" {["^(present|absent)$]}</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>The recommended controlled vocabulary for this term consists of "present" and "absent", which are the only two appropriate terms for a Darwin Core Occurrence. This is reflected in the suggested dwc:occurrenceStatus vocabulary for this Test. Other values for dwc:occurrenceStatus should only arise under circumstances that do not refer to an Occurrence. The GBIF API is listed in the sourceAuthority. However, there is currently a mismatch between the lower case recommended values at https://dwc.tdwg.org/terms/#dwc:occurrenceStatus and the GBIF vocabulary at bdq:sourceAuthority that uses an upper case first letter (https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts), thus implementations using the GBIF API should ensure that matches on alternate terms in that vocabulary are converted to the all lower case values in the present/absent vocabulary recommended in Darwin Core. Implementations should interpret the numeric value 1 as present, and the numeric value 0 as absent.</td>
+			<td>The recommended controlled vocabulary for this term consists of "present" and "absent", which are the only two appropriate terms for a Darwin Core Occurrence. This is reflected in the suggested dwc:occurrenceStatus vocabulary for this Test. Other values for dwc:occurrenceStatus should only arise under circumstances that do not refer to an Occurrence. The GBIF API is listed in the sourceAuthority. However, there is currently a mismatch between the lower case recommended values at https://dwc.tdwg.org/terms/#dwc:occurrenceStatus and the GBIF vocabulary at bdqval:sourceAuthority that uses an upper case first letter (https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts), thus implementations using the GBIF API should ensure that matches on alternate terms in that vocabulary are converted to the all lower case values in the present/absent vocabulary recommended in Darwin Core. Implementations should interpret the numeric value 1 as present, and the numeric value 0 as absent.</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
@@ -3005,11 +3005,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Proposes an amendment to the value of dwc:pathway using the bdq:sourceAuthority.</td>
+			<td>Proposes an amendment to the value of dwc:pathway using the bdqval:sourceAuthority.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:pathway is bdq:Empty; AMENDED the value of dwc:pathway if it can be unambiguously matched to a term in the bdq:sourceAuthority; otherwise NOT_AMENDED</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:pathway is bdqval:Empty; AMENDED the value of dwc:pathway if it can be unambiguously matched to a term in the bdqval:sourceAuthority; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -3021,11 +3021,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Parameters</td>
-			<td>bdq:sourceAuthority</td>
+			<td>bdqval:sourceAuthority</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "Pathway Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/pw/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/Pathway/concepts]}</td>
+			<td>bdqval:sourceAuthority default = "Pathway Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/pw/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/Pathway/concepts]}</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -3033,7 +3033,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:pathway="transportStowaway": Response.status=AMENDED, Response.result=dwc:pathway="transportStowaway", Response.comment="dwc:pathway found in the bdq:sourceAuthority"],[dwc:pathway="escapeee": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:pathway not found in the bdq:sourceAuthority"]</td>
+			<td>[dwc:pathway="transportStowaway": Response.status=AMENDED, Response.result=dwc:pathway="transportStowaway", Response.comment="dwc:pathway found in the bdqval:sourceAuthority"],[dwc:pathway="escapeee": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:pathway not found in the bdqval:sourceAuthority"]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -3120,11 +3120,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Proposes an amendment to the value of dwc:scientificNameID if it can be unambiguously resolved from bdq:sourceAuthority using the available taxon terms.</td>
+			<td>Proposes an amendment to the value of dwc:scientificNameID if it can be unambiguously resolved from bdqval:sourceAuthority using the available taxon terms.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is bdq:NotEmpty, or if all of dwc:scientificName, dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship, and dwc:cultivarEpithet are bdq:Empty, FILLED_IN the value of dwc:scientificNameID for an unambiguously resolved single taxon record in the bdq:sourceAuthority through (1) the value of dwc:scientificName or (2) if dwc:scientificName is bdq:Empty through values of the terms dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship and dwc:cultivarEpithet, or (3) if ambiguity produced by multiple matches in (1) or (2) can be disambiguated to a single Taxon using the values of dwc:subtribe, dwc:tribe, dwc:subgenus, dwc:genus, dwc:subfamily, dwc:family, dwc:superfamily, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:taxonID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID, dwc:taxonomicRank, and dwc:vernacularName; otherwise NOT_AMENDED</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is bdqval:NotEmpty, or if all of dwc:scientificName, dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship, and dwc:cultivarEpithet are bdqval:Empty, FILLED_IN the value of dwc:scientificNameID for an unambiguously resolved single taxon record in the bdqval:sourceAuthority through (1) the value of dwc:scientificName or (2) if dwc:scientificName is bdqval:Empty through values of the terms dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship and dwc:cultivarEpithet, or (3) if ambiguity produced by multiple matches in (1) or (2) can be disambiguated to a single Taxon using the values of dwc:subtribe, dwc:tribe, dwc:subgenus, dwc:genus, dwc:subfamily, dwc:family, dwc:superfamily, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:taxonID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID, dwc:taxonomicRank, and dwc:vernacularName; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -3140,11 +3140,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Parameters</td>
-			<td>bdq:sourceAuthority</td>
+			<td>bdqval:sourceAuthority</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
+			<td>bdqval:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -3152,7 +3152,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:taxonID="", dwc:scientificNameID="", dwc:acceptedNameUsageID="", dwc:originalNameUsageID="", dwc:taxonConceptID="", dwc:scientificName="Chicoreus palmarosae (Lamarck, 1822)", dwc:higherClassification="", dwc:kingdom="Animalia", dwc:phylum="Mollusca", dwc:class="Gastropoda", dwc:order="", dwc:family="Muricidae", dwc:subfamily="", dwc:genus="Chicoreus", dwc:genericName="Chicoreus", dwc:subgenus="", dwc:infragenericEpithet="", dwc:specificEpithet="palmarosae", dwc:infraspecificEpithet="", dwc:cultivarEpithet="", dwc:vernacularName="", dwc:scientificNameAuthorship="(Lamarck, 1822)", dwc:taxonRank="", bdq:sourceAuthority=”marinespecies.org”: Response.status=FILLED_IN, Response.result=dwc:scientificNameID="urn:lsid:marinespecies.org:taxname:208134", Response.comment="dwc:scientificName matched to unique taxon record in WoRMS, exact match on name and authorship. Resolvable at https://marinespecies.org/aphia.php?p=taxdetails&id=208134"],[dwc:scientificNameID="", dwc:taxonID="", dwc:acceptedNameUsageID="", dwc:originalNameUsageID="", dwc:taxonConceptID="", dwc:scientificName="Graphis", dwc:higherClassification="", dwc:kingdom="", dwc:phylum="", dwc:class="", dwc:order="", dwc:family="", dwc:subfamily="", dwc:genus="", dwc:genericName="", dwc:subgenus="", dwc:infragenericEpithet="", dwc:specificEpithet="", dwc:infraspecificEpithet="", dwc:cultivarEpithet="", dwc:vernacularName="", dwc:scientificNameAuthorship="", dwc:taxonRank="": Response.status=NOT_AMENDED, Response.result=, Response.comment="dwc:scientificName="Graphis" is ambiguous as could be either a lichen or a gastropod."]</td>
+			<td>[dwc:taxonID="", dwc:scientificNameID="", dwc:acceptedNameUsageID="", dwc:originalNameUsageID="", dwc:taxonConceptID="", dwc:scientificName="Chicoreus palmarosae (Lamarck, 1822)", dwc:higherClassification="", dwc:kingdom="Animalia", dwc:phylum="Mollusca", dwc:class="Gastropoda", dwc:order="", dwc:family="Muricidae", dwc:subfamily="", dwc:genus="Chicoreus", dwc:genericName="Chicoreus", dwc:subgenus="", dwc:infragenericEpithet="", dwc:specificEpithet="palmarosae", dwc:infraspecificEpithet="", dwc:cultivarEpithet="", dwc:vernacularName="", dwc:scientificNameAuthorship="(Lamarck, 1822)", dwc:taxonRank="", bdqval:sourceAuthority=”marinespecies.org”: Response.status=FILLED_IN, Response.result=dwc:scientificNameID="urn:lsid:marinespecies.org:taxname:208134", Response.comment="dwc:scientificName matched to unique taxon record in WoRMS, exact match on name and authorship. Resolvable at https://marinespecies.org/aphia.php?p=taxdetails&id=208134"],[dwc:scientificNameID="", dwc:taxonID="", dwc:acceptedNameUsageID="", dwc:originalNameUsageID="", dwc:taxonConceptID="", dwc:scientificName="Graphis", dwc:higherClassification="", dwc:kingdom="", dwc:phylum="", dwc:class="", dwc:order="", dwc:family="", dwc:subfamily="", dwc:genus="", dwc:genericName="", dwc:subgenus="", dwc:infragenericEpithet="", dwc:specificEpithet="", dwc:infraspecificEpithet="", dwc:cultivarEpithet="", dwc:vernacularName="", dwc:scientificNameAuthorship="", dwc:taxonRank="": Response.status=NOT_AMENDED, Response.result=, Response.comment="dwc:scientificName="Graphis" is ambiguous as could be either a lichen or a gastropod."]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -3239,11 +3239,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Proposes an amendment to the value of dwc:scientificName using the dwc:scientificNameID value from the bdq:sourceAuthority.</td>
+			<td>Proposes an amendment to the value of dwc:scientificName using the dwc:scientificNameID value from the bdqval:sourceAuthority.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is bdq:Empty, or dwc:scientificName is bdq:NotEmpty; FILLED_IN the value of dwc:scientificName if the value of dwc: scientificNameID could be unambiguously interpreted as a value in the bdq:sourceAuthority; otherwise NOT_AMENDED</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is bdqval:Empty, or dwc:scientificName is bdqval:NotEmpty; FILLED_IN the value of dwc:scientificName if the value of dwc: scientificNameID could be unambiguously interpreted as a value in the bdqval:sourceAuthority; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -3259,15 +3259,15 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Parameters</td>
-			<td>bdq:sourceAuthority</td>
+			<td>bdqval:sourceAuthority</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
+			<td>bdqval:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>The value of dwc:scientificNameID is unambiguous if dwc:scientificNameID references a single taxon record in the bdq:sourceAuthority. When referencing a GBIF taxon by GBIF's identifier for that taxon, use the the pseudo-namespace "gbif:" and the form "gbif:{integer}" as the value for dwc:scientificNameID. Implementers can be aware of the current GBIF api endpoint that can replace the pseduo-namespace gbif: when looking up the dwc:scientificNameID (taxonID in the gbif document), e.g. `s/gbif:/https:\/\/api.gbif.org\/v1\/species\// ` will transform the value taxonID=gbif:8102122 to the resolvable endpoint https://api.gbif.org/v1/species/8102122. The pseudo-namespace "gbif:" is recommended by GBIF to reference GBIF taxon records. Where resolvable persistent identifiers exist for dwc:scientificNameID values, they should be used in full, but implementers will need to support at least the "gbif:" pseudo-namespace.</td>
+			<td>The value of dwc:scientificNameID is unambiguous if dwc:scientificNameID references a single taxon record in the bdqval:sourceAuthority. When referencing a GBIF taxon by GBIF's identifier for that taxon, use the the pseudo-namespace "gbif:" and the form "gbif:{integer}" as the value for dwc:scientificNameID. Implementers can be aware of the current GBIF api endpoint that can replace the pseduo-namespace gbif: when looking up the dwc:scientificNameID (taxonID in the gbif document), e.g. `s/gbif:/https:\/\/api.gbif.org\/v1\/species\// ` will transform the value taxonID=gbif:8102122 to the resolvable endpoint https://api.gbif.org/v1/species/8102122. The pseudo-namespace "gbif:" is recommended by GBIF to reference GBIF taxon records. Where resolvable persistent identifiers exist for dwc:scientificNameID values, they should be used in full, but implementers will need to support at least the "gbif:" pseudo-namespace.</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
@@ -3358,11 +3358,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Proposes an amendment to the value of dwc:sex using the bdq:sourceAuthority.</td>
+			<td>Proposes an amendment to the value of dwc:sex using the bdqval:sourceAuthority.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:sex is bdq:Empty; AMENDED the value of dwc:sex if it can be unambiguously matched to a term in the bdq:sourceAuthority; otherwise NOT_AMENDED</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:sex is bdqval:Empty; AMENDED the value of dwc:sex if it can be unambiguously matched to a term in the bdqval:sourceAuthority; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -3374,11 +3374,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Parameters</td>
-			<td>bdq:sourceAuthority</td>
+			<td>bdqval:sourceAuthority</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "GBIF Sex Vocabulary" [https://api.gbif.org/v1/vocabularies/Sex]} {"dwc:sex vocabulary API" [https://api.gbif.org/v1/vocabularies/Sex/concepts]}</td>
+			<td>bdqval:sourceAuthority default = "GBIF Sex Vocabulary" [https://api.gbif.org/v1/vocabularies/Sex]} {"dwc:sex vocabulary API" [https://api.gbif.org/v1/vocabularies/Sex/concepts]}</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -3386,7 +3386,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:sex="f": Response.status=AMENDED, Response.result=dwc:sex="Female", Response.comment="dwc:sex found in the bdq:sourceAuthority"],[dwc:sex="x": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:sex not found in the bdq:sourceAuthority"]</td>
+			<td>[dwc:sex="f": Response.status=AMENDED, Response.result=dwc:sex="Female", Response.comment="dwc:sex found in the bdqval:sourceAuthority"],[dwc:sex="x": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:sex not found in the bdqval:sourceAuthority"]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -3473,11 +3473,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Proposes an amendment to the value of dwc:taxonRank using the bdq:sourceAuthority.</td>
+			<td>Proposes an amendment to the value of dwc:taxonRank using the bdqval:sourceAuthority.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:taxonRank is bdq:Empty; AMENDED the value of dwc:taxonRank if it can be unambiguously matched to a term in the bdq:sourceAuthority; otherwise NOT_AMENDED</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:taxonRank is bdqval:Empty; AMENDED the value of dwc:taxonRank if it can be unambiguously matched to a term in the bdqval:sourceAuthority; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -3489,11 +3489,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Parameters</td>
-			<td>bdq:sourceAuthority</td>
+			<td>bdqval:sourceAuthority</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "GBIF TaxonRank Vocabulary" [https://api.gbif.org/v1/vocabularies/TaxonRank]} {"dwc:taxonRank vocabulary API" [https://api.gbif.org/v1/vocabularies/TaxonRank/concepts]}}</td>
+			<td>bdqval:sourceAuthority default = "GBIF TaxonRank Vocabulary" [https://api.gbif.org/v1/vocabularies/TaxonRank]} {"dwc:taxonRank vocabulary API" [https://api.gbif.org/v1/vocabularies/TaxonRank/concepts]}}</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -3501,7 +3501,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:taxonRank="sp.": Response.status=AMENDED, Response.result=dwc:taxonRank="species", Response.comment="dwc:taxonRank contains an interpretable value in the bdq:sourceAuthority"],[dwc:taxonRank="sic.": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:taxonRank does not contain an interpretable value in the bdq:sourceAuthority"]</td>
+			<td>[dwc:taxonRank="sp.": Response.status=AMENDED, Response.result=dwc:taxonRank="species", Response.comment="dwc:taxonRank contains an interpretable value in the bdqval:sourceAuthority"],[dwc:taxonRank="sic.": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:taxonRank does not contain an interpretable value in the bdqval:sourceAuthority"]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -3588,11 +3588,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Proposes an amendment to the value of dwc:typeStatus using the bdq:sourceAuthority.</td>
+			<td>Proposes an amendment to the value of dwc:typeStatus using the bdqval:sourceAuthority.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; AMENDED the value of the first word in each &#124; delimited portion of dwc:typeStatus if it can be unambiguously matched to a term in the bdq:sourceAuthority; otherwise NOT_AMENDED.</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:typeStatus is bdqval:Empty; AMENDED the value of the first word in each &#124; delimited portion of dwc:typeStatus if it can be unambiguously matched to a term in the bdqval:sourceAuthority; otherwise NOT_AMENDED.</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -3604,11 +3604,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Parameters</td>
-			<td>bdq:sourceAuthority</td>
+			<td>bdqval:sourceAuthority</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "GBIF TypeStatus Vocabulary" {[https://api.gbif.org/v1/vocabularies/TypeStatus]} {dwc:typeStatus vocabulary API [https://api.gbif.org/v1/vocabularies/TypeStatus/concepts]}</td>
+			<td>bdqval:sourceAuthority default = "GBIF TypeStatus Vocabulary" {[https://api.gbif.org/v1/vocabularies/TypeStatus]} {dwc:typeStatus vocabulary API [https://api.gbif.org/v1/vocabularies/TypeStatus/concepts]}</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -3616,7 +3616,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:typeStatus="Holo.": Response.status=AMENDED, Response.result=dwc:typeStatus="Holotype", Response.comment="dwc:typeStatus found in the bdq:sourceAuthority"],[dwc:typeStatus="x": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:typeStatus not found in the bdq:sourceAuthority"]</td>
+			<td>[dwc:typeStatus="Holo.": Response.status=AMENDED, Response.result=dwc:typeStatus="Holotype", Response.comment="dwc:typeStatus found in the bdqval:sourceAuthority"],[dwc:typeStatus="x": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:typeStatus not found in the bdqval:sourceAuthority"]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -3707,7 +3707,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:annotationSystem is not available; POTENTIAL_ISSUE if an annotation in the bdq:annotationSystem exists with a matching bdq:annotationAlertIf; otherwise NOT_ISSUE.</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:annotationSystem is not available; POTENTIAL_ISSUE if an annotation in the bdqval:annotationSystem exists with a matching bdqval:annotationAlertIf; otherwise NOT_ISSUE.</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -3719,11 +3719,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Parameters</td>
-			<td>bdq:annotationSystem,bdq:annotationAlertIf</td>
+			<td>bdqval:annotationSystem,bdqval:annotationAlertIf</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:annotationSystem default = "W3C Web Annotation" {[https://www.w3.org/annotation/]} {"oa:Annotation vocabulary" [https://www.w3.org/TR/annotation-vocab/]},bdq:annotationAlertIf default = "oa:Annotation with oa:hasTarget having as object any dwciri:term instance that is part of the SingleRecord under Test." {[https://www.w3.org/TR/annotation-vocab/]}</td>
+			<td>bdqval:annotationSystem default = "W3C Web Annotation" {[https://www.w3.org/annotation/]} {"oa:Annotation vocabulary" [https://www.w3.org/TR/annotation-vocab/]},bdqval:annotationAlertIf default = "oa:Annotation with oa:hasTarget having as object any dwciri:term instance that is part of the SingleRecord under Test." {[https://www.w3.org/TR/annotation-vocab/]}</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -3731,7 +3731,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[bdq:annotationAlertIf="": Response.status=RUN_HAS_RESULT, Response.result=NOT_ISSUE, Response.comment="bdq:annotationAlertIf is bdq:Empty"],[bdq:annotationAlertIf="?": Response.status=RUN_HAS_RESULT, Response.result=POTENTIAL_ISSUE, Response.comment="bdq:annotationAlertIf is bdq:NotEmpty"]</td>
+			<td>[bdqval:annotationAlertIf="": Response.status=RUN_HAS_RESULT, Response.result=NOT_ISSUE, Response.comment="bdqval:annotationAlertIf is bdqval:Empty"],[bdqval:annotationAlertIf="?": Response.status=RUN_HAS_RESULT, Response.result=POTENTIAL_ISSUE, Response.comment="bdqval:annotationAlertIf is bdqval:NotEmpty"]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -3802,7 +3802,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if any of dwc:countryCode, dwc:decimalLatitude, dwc:decimalLongitude are bdq:Empty; POTENTIAL_ISSUE if (1) the geographic coordinates are within the distance given by bdq:spatialBufferInMeters from the center of the supplied dwc:countryCode as represented in the bdq:sourceAuthority (or one of the centers, if the bdq:sourceAuthority provides more than one per country code) and (2) the dwc:coordinateUncertaintyInMeters is bdq:Empty or less than half the square root of the area of the country; otherwise NOT_ISSUE.</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if any of dwc:countryCode, dwc:decimalLatitude, dwc:decimalLongitude are bdqval:Empty; POTENTIAL_ISSUE if (1) the geographic coordinates are within the distance given by bdqval:spatialBufferInMeters from the center of the supplied dwc:countryCode as represented in the bdqval:sourceAuthority (or one of the centers, if the bdqval:sourceAuthority provides more than one per country code) and (2) the dwc:coordinateUncertaintyInMeters is bdqval:Empty or less than half the square root of the area of the country; otherwise NOT_ISSUE.</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -3818,11 +3818,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Parameters</td>
-			<td>bdq:spatialBufferInMeters,bdq:sourceAuthority</td>
+			<td>bdqval:spatialBufferInMeters,bdqval:sourceAuthority</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:spatialBufferInMeters default = "5000",bdq:sourceAuthority default = "GBIF Catalogue of Country Centroides" {[https://raw.githubusercontent.com/jhnwllr/catalogue-of-centroids/master/PCLI.tsv]}</td>
+			<td>bdqval:spatialBufferInMeters default = "5000",bdqval:sourceAuthority default = "GBIF Catalogue of Country Centroides" {[https://raw.githubusercontent.com/jhnwllr/catalogue-of-centroids/master/PCLI.tsv]}</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -3830,7 +3830,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:decimalLatitude="-35.38804", dwc:decimalLongitude="-65.154964", dwc:countryCode="AR": Response.status=RUN_HAS_RESULT, Response.result=POTENTIAL_ISSUE, Response.comment="coordinates fall within buffered distance in the bdq:sourceAuthority for dwc:countryCode which may mean that coordinates have been generalized"],[dwc:decimalLatitude="-34.184199", dwc:decimalLongitude="-65.509403", dwc:countryCode="AR": Response.status=RUN_HAS_RESULT, Response.result=NOT_ISSUE, Response.comment="coordinates fall outside buffered distance in the bdq:sourceAuthority for dwc:countryCode"]</td>
+			<td>[dwc:decimalLatitude="-35.38804", dwc:decimalLongitude="-65.154964", dwc:countryCode="AR": Response.status=RUN_HAS_RESULT, Response.result=POTENTIAL_ISSUE, Response.comment="coordinates fall within buffered distance in the bdqval:sourceAuthority for dwc:countryCode which may mean that coordinates have been generalized"],[dwc:decimalLatitude="-34.184199", dwc:decimalLongitude="-65.509403", dwc:countryCode="AR": Response.status=RUN_HAS_RESULT, Response.result=NOT_ISSUE, Response.comment="coordinates fall outside buffered distance in the bdqval:sourceAuthority for dwc:countryCode"]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -3921,7 +3921,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>POTENTIAL_ISSUE if dwc:dataGeneralizations is bdq:NotEmpty; otherwise NOT_ISSUE</td>
+			<td>POTENTIAL_ISSUE if dwc:dataGeneralizations is bdqval:NotEmpty; otherwise NOT_ISSUE</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -3937,7 +3937,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:dataGeneralizations="placed on quarter degree grid": Response.status=RUN_HAS_RESULT, Response.result=POTENTIAL_ISSUE, Response.comment="dwc:dataGeneralizations is bdq:NotEmpty"],[dwc:dataGeneralizations="": Response.status=RUN_HAS_RESULT, Response.result=NOT_ISSUE, Response.comment="dwc:dataGeneralizations is bdq:Empty"]</td>
+			<td>[dwc:dataGeneralizations="placed on quarter degree grid": Response.status=RUN_HAS_RESULT, Response.result=POTENTIAL_ISSUE, Response.comment="dwc:dataGeneralizations is bdqval:NotEmpty"],[dwc:dataGeneralizations="": Response.status=RUN_HAS_RESULT, Response.result=NOT_ISSUE, Response.comment="dwc:dataGeneralizations is bdqval:Empty"]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -4024,7 +4024,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>POTENTIAL_ISSUE if dwc:establishmentMeans is bdq:NotEmpty; otherwise NOT_ISSUE</td>
+			<td>POTENTIAL_ISSUE if dwc:establishmentMeans is bdqval:NotEmpty; otherwise NOT_ISSUE</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -4036,7 +4036,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:establishmentMeans="?": Response.status=RUN_HAS_RESULT, Response.result=POTENTIAL_ISSUE, Response.comment="dwc:establishmentMeans is bdq:NotEmpty"],[dwc:establishmentMeans="": Response.status=RUN_HAS_RESULT, Response.result=NOT_ISSUE, Response.comment="dwc:establishmentMeans is bdq:Empty"]</td>
+			<td>[dwc:establishmentMeans="?": Response.status=RUN_HAS_RESULT, Response.result=POTENTIAL_ISSUE, Response.comment="dwc:establishmentMeans is bdqval:NotEmpty"],[dwc:establishmentMeans="": Response.status=RUN_HAS_RESULT, Response.result=NOT_ISSUE, Response.comment="dwc:establishmentMeans is bdqval:Empty"]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -4127,7 +4127,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements Consulted</td>
-			<td>bdq:AllAmendmentTestsRunOnSingleRecord</td>
+			<td>bdqval:AllAmendmentTestsRunOnSingleRecord</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
@@ -4194,7 +4194,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty or if the value of dwc:eventDate is not a valid ISO 8601 date; otherwise RUN_HAS_RESULT with the result being the duration (sensu ISO 8601) expressed in the dwc:eventDate, in seconds.</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdqval:Empty or if the value of dwc:eventDate is not a valid ISO 8601 date; otherwise RUN_HAS_RESULT with the result being the duration (sensu ISO 8601) expressed in the dwc:eventDate, in seconds.</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -4293,7 +4293,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements Consulted</td>
-			<td>bdq:AllValidationTestsRunOnSingleRecord</td>
+			<td>bdqval:AllValidationTestsRunOnSingleRecord</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -4372,7 +4372,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements Consulted</td>
-			<td>bdq:AllValidationTestsRunOnSingleRecord</td>
+			<td>bdqval:AllValidationTestsRunOnSingleRecord</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -4451,7 +4451,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements Consulted</td>
-			<td>bdq:AllValidationTestsRunOnSingleRecord</td>
+			<td>bdqval:AllValidationTestsRunOnSingleRecord</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -4530,7 +4530,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_BASISOFRECORD_NOTEMPTY.Response</td>
+			<td>bdqval:VALIDATION_BASISOFRECORD_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -4609,7 +4609,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_BASISOFRECORD_STANDARD.Response</td>
+			<td>bdqval:VALIDATION_BASISOFRECORD_STANDARD.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -4688,7 +4688,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_CLASSIFICATION_CONSISTENT.Response</td>
+			<td>bdqval:VALIDATION_CLASSIFICATION_CONSISTENT.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -4767,7 +4767,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_CLASS_FOUND.Response</td>
+			<td>bdqval:VALIDATION_CLASS_FOUND.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -4846,7 +4846,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT.Response</td>
+			<td>bdqval:VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -4925,7 +4925,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT.Response</td>
+			<td>bdqval:VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -5004,7 +5004,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT.Response</td>
+			<td>bdqval:VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -5083,7 +5083,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_COORDINATES_NOTZERO.Response</td>
+			<td>bdqval:VALIDATION_COORDINATES_NOTZERO.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -5162,7 +5162,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_COORDINATEUNCERTAINTY_INRANGE.Response</td>
+			<td>bdqval:VALIDATION_COORDINATEUNCERTAINTY_INRANGE.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -5241,7 +5241,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_COUNTRYCODE_NOTEMPTY.Response</td>
+			<td>bdqval:VALIDATION_COUNTRYCODE_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -5320,7 +5320,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_COUNTRYCODE_STANDARD.Response</td>
+			<td>bdqval:VALIDATION_COUNTRYCODE_STANDARD.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -5399,7 +5399,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT.Response</td>
+			<td>bdqval:VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -5478,7 +5478,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS.Response</td>
+			<td>bdqval:VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -5557,7 +5557,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_COUNTRY_FOUND.Response</td>
+			<td>bdqval:VALIDATION_COUNTRY_FOUND.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -5636,7 +5636,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_COUNTRY_NOTEMPTY.Response</td>
+			<td>bdqval:VALIDATION_COUNTRY_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -5715,7 +5715,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_DATEIDENTIFIED_INRANGE.Response</td>
+			<td>bdqval:VALIDATION_DATEIDENTIFIED_INRANGE.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -5794,7 +5794,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_DATEIDENTIFIED_STANDARD.Response</td>
+			<td>bdqval:VALIDATION_DATEIDENTIFIED_STANDARD.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -5873,7 +5873,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_DAY_INRANGE.Response</td>
+			<td>bdqval:VALIDATION_DAY_INRANGE.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -5952,7 +5952,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_DAY_STANDARD.Response</td>
+			<td>bdqval:VALIDATION_DAY_STANDARD.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -6031,7 +6031,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_DCTYPE_NOTEMPTY.Response</td>
+			<td>bdqval:VALIDATION_DCTYPE_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -6110,7 +6110,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_DCTYPE_STANDARD.Response</td>
+			<td>bdqval:VALIDATION_DCTYPE_STANDARD.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -6189,7 +6189,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_DECIMALLATITUDE_INRANGE.Response</td>
+			<td>bdqval:VALIDATION_DECIMALLATITUDE_INRANGE.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -6268,7 +6268,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_DECIMALLATITUDE_NOTEMPTY.Response</td>
+			<td>bdqval:VALIDATION_DECIMALLATITUDE_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -6347,7 +6347,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_DECIMALLONGITUDE_INRANGE.Response</td>
+			<td>bdqval:VALIDATION_DECIMALLONGITUDE_INRANGE.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -6426,7 +6426,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_DECIMALLONGITUDE_NOTEMPTY.Response</td>
+			<td>bdqval:VALIDATION_DECIMALLONGITUDE_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -6505,7 +6505,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_DEGREEOFESTABLISHMENT_STANDARD.Response</td>
+			<td>bdqval:VALIDATION_DEGREEOFESTABLISHMENT_STANDARD.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -6584,7 +6584,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_ENDDAYOFYEAR_INRANGE.Response</td>
+			<td>bdqval:VALIDATION_ENDDAYOFYEAR_INRANGE.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -6663,7 +6663,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_ESTABLISHMENTMEANS_STANDARD.Response</td>
+			<td>bdqval:VALIDATION_ESTABLISHMENTMEANS_STANDARD.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -6742,7 +6742,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_EVENTDATE_INRANGE.Response</td>
+			<td>bdqval:VALIDATION_EVENTDATE_INRANGE.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -6821,7 +6821,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_EVENTDATE_NOTEMPTY.Response</td>
+			<td>bdqval:VALIDATION_EVENTDATE_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -6900,7 +6900,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_EVENTDATE_STANDARD.Response</td>
+			<td>bdqval:VALIDATION_EVENTDATE_STANDARD.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -6979,7 +6979,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_EVENTTEMPORAL_NOTEMPTY.Response</td>
+			<td>bdqval:VALIDATION_EVENTTEMPORAL_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -7058,7 +7058,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_EVENT_CONSISTENT.Response</td>
+			<td>bdqval:VALIDATION_EVENT_CONSISTENT.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -7137,7 +7137,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_FAMILY_FOUND.Response</td>
+			<td>bdqval:VALIDATION_FAMILY_FOUND.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -7216,7 +7216,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_GENUS_FOUND.Response</td>
+			<td>bdqval:VALIDATION_GENUS_FOUND.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -7295,7 +7295,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_GEODETICDATUM_NOTEMPTY.Response</td>
+			<td>bdqval:VALIDATION_GEODETICDATUM_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -7374,7 +7374,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_GEODETICDATUM_STANDARD.Response</td>
+			<td>bdqval:VALIDATION_GEODETICDATUM_STANDARD.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -7453,7 +7453,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_KINGDOM_FOUND.Response</td>
+			<td>bdqval:VALIDATION_KINGDOM_FOUND.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -7532,7 +7532,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_KINGDOM_NOTEMPTY.Response</td>
+			<td>bdqval:VALIDATION_KINGDOM_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -7611,7 +7611,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_LICENSE_NOTEMPTY.Response</td>
+			<td>bdqval:VALIDATION_LICENSE_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -7690,7 +7690,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_LICENSE_STANDARD.Response</td>
+			<td>bdqval:VALIDATION_LICENSE_STANDARD.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -7769,7 +7769,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_LOCATION_NOTEMPTY.Response</td>
+			<td>bdqval:VALIDATION_LOCATION_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -7848,7 +7848,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_MAXDEPTH_INRANGE.Response</td>
+			<td>bdqval:VALIDATION_MAXDEPTH_INRANGE.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -7927,7 +7927,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_MAXELEVATION_INRANGE.Response</td>
+			<td>bdqval:VALIDATION_MAXELEVATION_INRANGE.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -8006,7 +8006,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_MINDEPTH_INRANGE.Response</td>
+			<td>bdqval:VALIDATION_MINDEPTH_INRANGE.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -8085,7 +8085,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH.Response</td>
+			<td>bdqval:VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -8164,7 +8164,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_MINELEVATION_INRANGE.Response</td>
+			<td>bdqval:VALIDATION_MINELEVATION_INRANGE.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -8243,7 +8243,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION.Response</td>
+			<td>bdqval:VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -8322,7 +8322,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_MONTH_STANDARD.Response</td>
+			<td>bdqval:VALIDATION_MONTH_STANDARD.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -8401,7 +8401,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY.Response</td>
+			<td>bdqval:VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -8480,7 +8480,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_OCCURRENCEID_NOTEMPTY.Response</td>
+			<td>bdqval:VALIDATION_OCCURRENCEID_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -8559,7 +8559,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_OCCURRENCESTATUS_NOTEMPTY.Response</td>
+			<td>bdqval:VALIDATION_OCCURRENCESTATUS_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -8638,7 +8638,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_OCCURRENCESTATUS_STANDARD.Response</td>
+			<td>bdqval:VALIDATION_OCCURRENCESTATUS_STANDARD.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -8717,7 +8717,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_ORDER_FOUND.Response</td>
+			<td>bdqval:VALIDATION_ORDER_FOUND.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -8796,7 +8796,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_PATHWAY_STANDARD.Response</td>
+			<td>bdqval:VALIDATION_PATHWAY_STANDARD.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -8875,7 +8875,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_PHYLUM_FOUND.Response</td>
+			<td>bdqval:VALIDATION_PHYLUM_FOUND.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -8954,7 +8954,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_POLYNOMIAL_CONSISTENT.Response</td>
+			<td>bdqval:VALIDATION_POLYNOMIAL_CONSISTENT.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -9033,7 +9033,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY.Response</td>
+			<td>bdqval:VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -9112,7 +9112,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_SCIENTIFICNAMEID_COMPLETE.Response</td>
+			<td>bdqval:VALIDATION_SCIENTIFICNAMEID_COMPLETE.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -9191,7 +9191,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_SCIENTIFICNAMEID_NOTEMPTY.Response</td>
+			<td>bdqval:VALIDATION_SCIENTIFICNAMEID_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -9270,7 +9270,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_SCIENTIFICNAME_FOUND.Response</td>
+			<td>bdqval:VALIDATION_SCIENTIFICNAME_FOUND.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -9349,7 +9349,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_SCIENTIFICNAME_NOTEMPTY.Response</td>
+			<td>bdqval:VALIDATION_SCIENTIFICNAME_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -9428,7 +9428,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_SEX_STANDARD.Response</td>
+			<td>bdqval:VALIDATION_SEX_STANDARD.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -9507,7 +9507,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_STARTDAYOFYEAR_INRANGE.Response</td>
+			<td>bdqval:VALIDATION_STARTDAYOFYEAR_INRANGE.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -9586,7 +9586,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_STATEPROVINCE_FOUND.Response</td>
+			<td>bdqval:VALIDATION_STATEPROVINCE_FOUND.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -9665,7 +9665,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_TAXONRANK_NOTEMPTY.Response</td>
+			<td>bdqval:VALIDATION_TAXONRANK_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -9744,7 +9744,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_TAXONRANK_STANDARD.Response</td>
+			<td>bdqval:VALIDATION_TAXONRANK_STANDARD.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -9823,7 +9823,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_TAXON_NOTEMPTY.Response</td>
+			<td>bdqval:VALIDATION_TAXON_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -9902,7 +9902,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_TAXON_UNAMBIGUOUS.Response</td>
+			<td>bdqval:VALIDATION_TAXON_UNAMBIGUOUS.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -9981,7 +9981,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_TYPESTATUS_STANDARD.Response</td>
+			<td>bdqval:VALIDATION_TYPESTATUS_STANDARD.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -10060,7 +10060,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_YEAR_INRANGE.Response</td>
+			<td>bdqval:VALIDATION_YEAR_INRANGE.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -10139,7 +10139,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_YEAR_NOTEMPTY.Response</td>
+			<td>bdqval:VALIDATION_YEAR_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -10218,7 +10218,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_BASISOFRECORD_NOTEMPTY.Response</td>
+			<td>bdqval:VALIDATION_BASISOFRECORD_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -10297,7 +10297,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_BASISOFRECORD_STANDARD.Response</td>
+			<td>bdqval:VALIDATION_BASISOFRECORD_STANDARD.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -10376,7 +10376,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_CLASSIFICATION_CONSISTENT.Response</td>
+			<td>bdqval:VALIDATION_CLASSIFICATION_CONSISTENT.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -10455,7 +10455,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_CLASS_FOUND.Response</td>
+			<td>bdqval:VALIDATION_CLASS_FOUND.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -10534,7 +10534,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT.Response</td>
+			<td>bdqval:VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -10613,7 +10613,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT.Response</td>
+			<td>bdqval:VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -10692,7 +10692,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT.Response</td>
+			<td>bdqval:VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -10771,7 +10771,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_COORDINATES_NOTZERO.Response</td>
+			<td>bdqval:VALIDATION_COORDINATES_NOTZERO.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -10850,7 +10850,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_COORDINATEUNCERTAINTY_INRANGE.Response</td>
+			<td>bdqval:VALIDATION_COORDINATEUNCERTAINTY_INRANGE.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -10929,7 +10929,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_COUNTRYCODE_NOTEMPTY.Response</td>
+			<td>bdqval:VALIDATION_COUNTRYCODE_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -11008,7 +11008,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_COUNTRYCODE_STANDARD.Response</td>
+			<td>bdqval:VALIDATION_COUNTRYCODE_STANDARD.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -11087,7 +11087,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT.Response</td>
+			<td>bdqval:VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -11166,7 +11166,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS.Response</td>
+			<td>bdqval:VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -11245,7 +11245,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_COUNTRY_FOUND.Response</td>
+			<td>bdqval:VALIDATION_COUNTRY_FOUND.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -11324,7 +11324,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_COUNTRY_NOTEMPTY.Response</td>
+			<td>bdqval:VALIDATION_COUNTRY_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -11403,7 +11403,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_DATEIDENTIFIED_INRANGE.Response</td>
+			<td>bdqval:VALIDATION_DATEIDENTIFIED_INRANGE.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -11482,7 +11482,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_DATEIDENTIFIED_STANDARD.Response</td>
+			<td>bdqval:VALIDATION_DATEIDENTIFIED_STANDARD.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -11561,7 +11561,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_DAY_INRANGE.Response</td>
+			<td>bdqval:VALIDATION_DAY_INRANGE.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -11640,7 +11640,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_DAY_STANDARD.Response</td>
+			<td>bdqval:VALIDATION_DAY_STANDARD.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -11719,7 +11719,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_DCTYPE_NOTEMPTY.Response</td>
+			<td>bdqval:VALIDATION_DCTYPE_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -11798,7 +11798,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_DCTYPE_STANDARD.Response</td>
+			<td>bdqval:VALIDATION_DCTYPE_STANDARD.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -11877,7 +11877,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_DECIMALLATITUDE_INRANGE.Response</td>
+			<td>bdqval:VALIDATION_DECIMALLATITUDE_INRANGE.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -11956,7 +11956,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_DECIMALLATITUDE_NOTEMPTY.Response</td>
+			<td>bdqval:VALIDATION_DECIMALLATITUDE_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -12035,7 +12035,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_DECIMALLONGITUDE_INRANGE.Response</td>
+			<td>bdqval:VALIDATION_DECIMALLONGITUDE_INRANGE.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -12114,7 +12114,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_DECIMALLONGITUDE_NOTEMPTY.Response</td>
+			<td>bdqval:VALIDATION_DECIMALLONGITUDE_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -12193,7 +12193,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_DEGREEOFESTABLISHMENT_STANDARD.Response</td>
+			<td>bdqval:VALIDATION_DEGREEOFESTABLISHMENT_STANDARD.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -12272,7 +12272,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_ENDDAYOFYEAR_INRANGE.Response</td>
+			<td>bdqval:VALIDATION_ENDDAYOFYEAR_INRANGE.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -12351,7 +12351,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_ESTABLISHMENTMEANS_STANDARD.Response</td>
+			<td>bdqval:VALIDATION_ESTABLISHMENTMEANS_STANDARD.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -12430,7 +12430,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_EVENTDATE_INRANGE.Response</td>
+			<td>bdqval:VALIDATION_EVENTDATE_INRANGE.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -12509,7 +12509,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_EVENTDATE_NOTEMPTY.Response</td>
+			<td>bdqval:VALIDATION_EVENTDATE_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -12588,7 +12588,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_EVENTDATE_STANDARD.Response</td>
+			<td>bdqval:VALIDATION_EVENTDATE_STANDARD.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -12667,7 +12667,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_EVENTTEMPORAL_NOTEMPTY.Response</td>
+			<td>bdqval:VALIDATION_EVENTTEMPORAL_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -12746,7 +12746,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_EVENT_CONSISTENT.Response</td>
+			<td>bdqval:VALIDATION_EVENT_CONSISTENT.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -12825,7 +12825,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_FAMILY_FOUND.Response</td>
+			<td>bdqval:VALIDATION_FAMILY_FOUND.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -12904,7 +12904,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_GENUS_FOUND.Response</td>
+			<td>bdqval:VALIDATION_GENUS_FOUND.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -12983,7 +12983,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_GEODETICDATUM_NOTEMPTY.Response</td>
+			<td>bdqval:VALIDATION_GEODETICDATUM_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -13062,7 +13062,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_GEODETICDATUM_STANDARD.Response</td>
+			<td>bdqval:VALIDATION_GEODETICDATUM_STANDARD.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -13141,7 +13141,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_KINGDOM_FOUND.Response</td>
+			<td>bdqval:VALIDATION_KINGDOM_FOUND.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -13220,7 +13220,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_KINGDOM_NOTEMPTY.Response</td>
+			<td>bdqval:VALIDATION_KINGDOM_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -13299,7 +13299,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_LICENSE_NOTEMPTY.Response</td>
+			<td>bdqval:VALIDATION_LICENSE_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -13378,7 +13378,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_LICENSE_STANDARD.Response</td>
+			<td>bdqval:VALIDATION_LICENSE_STANDARD.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -13457,7 +13457,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_LOCATION_NOTEMPTY.Response</td>
+			<td>bdqval:VALIDATION_LOCATION_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -13536,7 +13536,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_MAXDEPTH_INRANGE.Response</td>
+			<td>bdqval:VALIDATION_MAXDEPTH_INRANGE.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -13615,7 +13615,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_MAXELEVATION_INRANGE.Response</td>
+			<td>bdqval:VALIDATION_MAXELEVATION_INRANGE.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -13694,7 +13694,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_MINDEPTH_INRANGE.Response</td>
+			<td>bdqval:VALIDATION_MINDEPTH_INRANGE.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -13773,7 +13773,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH.Response</td>
+			<td>bdqval:VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -13852,7 +13852,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_MINELEVATION_INRANGE.Response</td>
+			<td>bdqval:VALIDATION_MINELEVATION_INRANGE.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -13931,7 +13931,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION.Response</td>
+			<td>bdqval:VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -14010,7 +14010,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_MONTH_STANDARD.Response</td>
+			<td>bdqval:VALIDATION_MONTH_STANDARD.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -14089,7 +14089,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY.Response</td>
+			<td>bdqval:VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -14168,7 +14168,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_OCCURRENCEID_NOTEMPTY.Response</td>
+			<td>bdqval:VALIDATION_OCCURRENCEID_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -14247,7 +14247,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_OCCURRENCESTATUS_NOTEMPTY.Response</td>
+			<td>bdqval:VALIDATION_OCCURRENCESTATUS_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -14326,7 +14326,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_OCCURRENCESTATUS_STANDARD.Response</td>
+			<td>bdqval:VALIDATION_OCCURRENCESTATUS_STANDARD.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -14405,7 +14405,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_ORDER_FOUND.Response</td>
+			<td>bdqval:VALIDATION_ORDER_FOUND.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -14484,7 +14484,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_PATHWAY_STANDARD.Response</td>
+			<td>bdqval:VALIDATION_PATHWAY_STANDARD.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -14563,7 +14563,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_PHYLUM_FOUND.Response</td>
+			<td>bdqval:VALIDATION_PHYLUM_FOUND.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -14642,7 +14642,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_POLYNOMIAL_CONSISTENT.Response</td>
+			<td>bdqval:VALIDATION_POLYNOMIAL_CONSISTENT.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -14721,7 +14721,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY.Response</td>
+			<td>bdqval:VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -14800,7 +14800,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_SCIENTIFICNAMEID_COMPLETE.Response</td>
+			<td>bdqval:VALIDATION_SCIENTIFICNAMEID_COMPLETE.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -14879,7 +14879,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_SCIENTIFICNAMEID_NOTEMPTY.Response</td>
+			<td>bdqval:VALIDATION_SCIENTIFICNAMEID_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -14958,7 +14958,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_SCIENTIFICNAME_FOUND.Response</td>
+			<td>bdqval:VALIDATION_SCIENTIFICNAME_FOUND.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -15037,7 +15037,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_SCIENTIFICNAME_NOTEMPTY.Response</td>
+			<td>bdqval:VALIDATION_SCIENTIFICNAME_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -15116,7 +15116,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_SEX_STANDARD.Response</td>
+			<td>bdqval:VALIDATION_SEX_STANDARD.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -15195,7 +15195,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_STARTDAYOFYEAR_INRANGE.Response</td>
+			<td>bdqval:VALIDATION_STARTDAYOFYEAR_INRANGE.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -15274,7 +15274,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_STATEPROVINCE_FOUND.Response</td>
+			<td>bdqval:VALIDATION_STATEPROVINCE_FOUND.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -15353,7 +15353,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_TAXONRANK_NOTEMPTY.Response</td>
+			<td>bdqval:VALIDATION_TAXONRANK_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -15432,7 +15432,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_TAXONRANK_STANDARD.Response</td>
+			<td>bdqval:VALIDATION_TAXONRANK_STANDARD.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -15511,7 +15511,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_TAXON_NOTEMPTY.Response</td>
+			<td>bdqval:VALIDATION_TAXON_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -15590,7 +15590,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_TAXON_UNAMBIGUOUS.Response</td>
+			<td>bdqval:VALIDATION_TAXON_UNAMBIGUOUS.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -15669,7 +15669,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_TYPESTATUS_STANDARD.Response</td>
+			<td>bdqval:VALIDATION_TYPESTATUS_STANDARD.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -15748,7 +15748,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_YEAR_INRANGE.Response</td>
+			<td>bdqval:VALIDATION_YEAR_INRANGE.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -15827,7 +15827,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
-			<td>bdq:VALIDATION_YEAR_NOTEMPTY.Response</td>
+			<td>bdqval:VALIDATION_YEAR_NOTEMPTY.Response</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -15898,7 +15898,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>COMPLIANT if dwc:basisOfRecord is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+			<td>COMPLIANT if dwc:basisOfRecord is bdqval:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -15910,7 +15910,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:basisOfRecord="PreservedSpecimen": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:basisOfRecord is bdq:NotEmpty"],[dwc:basisOfRecord="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:basisOfRecord is bdq:Empty"]</td>
+			<td>[dwc:basisOfRecord="PreservedSpecimen": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:basisOfRecord is bdqval:NotEmpty"],[dwc:basisOfRecord="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:basisOfRecord is bdqval:Empty"]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -15989,11 +15989,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Does the value of dwc:basisOfRecord occur in the bdq:sourceAuthority?</td>
+			<td>Does the value of dwc:basisOfRecord occur in the bdqval:sourceAuthority?</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:basisOfRecord is bdq:Empty; COMPLIANT if the value of dwc:basisOfRecord is valid in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:basisOfRecord is bdqval:Empty; COMPLIANT if the value of dwc:basisOfRecord is valid in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -16005,11 +16005,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Parameters</td>
-			<td>bdq:sourceAuthority</td>
+			<td>bdqval:sourceAuthority</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "Darwin Core basisOfRecord" {[https://dwc.tdwg.org/terms/#dwc:basisOfRecord]}{dwc:basisOfRecord vocabulary [https://rs.gbif.org/vocabulary/dwc/basis_of_record.xml]}</td>
+			<td>bdqval:sourceAuthority default = "Darwin Core basisOfRecord" {[https://dwc.tdwg.org/terms/#dwc:basisOfRecord]}{dwc:basisOfRecord vocabulary [https://rs.gbif.org/vocabulary/dwc/basis_of_record.xml]}</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -16100,11 +16100,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Is the combination of higher classification taxonomic terms consistent using bdq:sourceAuthority?</td>
+			<td>Is the combination of higher classification taxonomic terms consistent using bdqval:sourceAuthority?</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if all of the fields dwc:kingdom dwc:phylum, dwc:class, dwc:order, dwc:superfamily, dwc:family, dwc:subfamily, dwc:tribe, dwc:subtribe, dwc:genus are bdq:Empty; COMPLIANT if the combination of values of higher classification taxonomic terms (dwc:kingdom, dwc:phylum, dwc:class, dwc:order, dwc:superfamily, dwc:family, dwc:subfamily, dwc:tribe, dwc:subtribe, dwc:genus) are consistent with the lowest ranking matched element in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if all of the fields dwc:kingdom dwc:phylum, dwc:class, dwc:order, dwc:superfamily, dwc:family, dwc:subfamily, dwc:tribe, dwc:subtribe, dwc:genus are bdqval:Empty; COMPLIANT if the combination of values of higher classification taxonomic terms (dwc:kingdom, dwc:phylum, dwc:class, dwc:order, dwc:superfamily, dwc:family, dwc:subfamily, dwc:tribe, dwc:subtribe, dwc:genus) are consistent with the lowest ranking matched element in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -16116,11 +16116,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Parameters</td>
-			<td>bdq:sourceAuthority</td>
+			<td>bdqval:sourceAuthority</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
+			<td>bdqval:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -16128,7 +16128,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:kingdom="", dwc:phylum="", dwc:class="", dwc:order="Myrtales", dwc:superfamily="", dwc:family="Myrtaceae", dwc:subfamily="", dwc:tribe="", dwc:subtribe="",dwc:genus="Punica": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="The combination of values of higher classification taxonomic terms can be unambiguously resolved in the bdq:sourceAuthority"],[dwc:kingdom="", dwc:phylum="Chordata", dwc:class="", dwc:order="Rhopalocera", dwc:superfamly="", dwc:family="Muricidae", dwc:subfamily="", dwc:tribe="", dwc:subtribe="", dwc:genus="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="The combination of values of higher classification taxonomic terms cannot be unambiguously resolved in the bdq:sourceAuthority"]</td>
+			<td>[dwc:kingdom="", dwc:phylum="", dwc:class="", dwc:order="Myrtales", dwc:superfamily="", dwc:family="Myrtaceae", dwc:subfamily="", dwc:tribe="", dwc:subtribe="",dwc:genus="Punica": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="The combination of values of higher classification taxonomic terms can be unambiguously resolved in the bdqval:sourceAuthority"],[dwc:kingdom="", dwc:phylum="Chordata", dwc:class="", dwc:order="Rhopalocera", dwc:superfamly="", dwc:family="Muricidae", dwc:subfamily="", dwc:tribe="", dwc:subtribe="", dwc:genus="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="The combination of values of higher classification taxonomic terms cannot be unambiguously resolved in the bdqval:sourceAuthority"]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -16215,11 +16215,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Does the value of dwc:class occur at the rank of Class in bdq:sourceAuthority?</td>
+			<td>Does the value of dwc:class occur at the rank of Class in bdqval:sourceAuthority?</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:class is bdq:Empty; COMPLIANT if the value of dwc:class is found as a value at the rank of Class in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:class is bdqval:Empty; COMPLIANT if the value of dwc:class is found as a value at the rank of Class in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -16231,11 +16231,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Parameters</td>
-			<td>bdq:sourceAuthority</td>
+			<td>bdqval:sourceAuthority</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
+			<td>bdqval:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -16243,7 +16243,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:class="Insecta": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:class has an equivalent at the rank of Class in the bdq:sourceAuthority"],[dwc:class="Magnoleopsida": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT,Response.comment="dwc:class does not have an equivalent at the rank of Class in the bdq:sourceAuthority"]</td>
+			<td>[dwc:class="Insecta": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:class has an equivalent at the rank of Class in the bdqval:sourceAuthority"],[dwc:class="Magnoleopsida": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT,Response.comment="dwc:class does not have an equivalent at the rank of Class in the bdqval:sourceAuthority"]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -16330,7 +16330,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if one or more of dwc:decimalLatitude, dwc:decimalLongitude, or dwc:countryCode are bdq:Empty or invalid; COMPLIANT if the geographic coordinates fall on or within the boundary defined by the union of the boundary of the country from dwc:countryCode plus it's Exclusive Economic Zone as found in the bdq:sourceAuthority, if any, plus an exterior buffer given by bdq:spatialBufferInMeters; otherwise NOT_COMPLIANT</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if one or more of dwc:decimalLatitude, dwc:decimalLongitude, or dwc:countryCode are bdqval:Empty or invalid; COMPLIANT if the geographic coordinates fall on or within the boundary defined by the union of the boundary of the country from dwc:countryCode plus it's Exclusive Economic Zone as found in the bdqval:sourceAuthority, if any, plus an exterior buffer given by bdqval:spatialBufferInMeters; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -16342,15 +16342,15 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Parameters</td>
-			<td>bdq:sourceAuthority,bdq:spatialBufferInMeters</td>
+			<td>bdqval:sourceAuthority,bdqval:spatialBufferInMeters</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "10m-admin-1 boundaries UNION with Exclusive Economic Zones" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/] spatial UNION [https://www.marineregions.org/downloads.php#marbound]},bdq:spatialBufferInMeters default = "3000"</td>
+			<td>bdqval:sourceAuthority default = "10m-admin-1 boundaries UNION with Exclusive Economic Zones" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/] spatial UNION [https://www.marineregions.org/downloads.php#marbound]},bdqval:spatialBufferInMeters default = "3000"</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>dwc:coordinatePrecision and dwc:coordinateUncertaintyInMeters (if present) imply a potential displacement of the provided coordinates. These two terms can be considered spatial buffers. Likewise, country polygons cannot be 100% accurate at all scales (Dooley 2005), so a spatial buffer of the country boundaries is justified. When dwc:countryCode=XZ (for High Seas), the coordinate should fall into a marine region out side of the EEZ of any country. Taking the spatial buffers into account does however greatly complicate both the logic and the implementation of such Tests. The same applies to potential conversion of the Spatial Reference System (SRS) of dwc:decimalLatitude and dwc:decimalLongitude to the SRS used in the bdq:sourceAuthority.</td>
+			<td>dwc:coordinatePrecision and dwc:coordinateUncertaintyInMeters (if present) imply a potential displacement of the provided coordinates. These two terms can be considered spatial buffers. Likewise, country polygons cannot be 100% accurate at all scales (Dooley 2005), so a spatial buffer of the country boundaries is justified. When dwc:countryCode=XZ (for High Seas), the coordinate should fall into a marine region out side of the EEZ of any country. Taking the spatial buffers into account does however greatly complicate both the logic and the implementation of such Tests. The same applies to potential conversion of the Spatial Reference System (SRS) of dwc:decimalLatitude and dwc:decimalLongitude to the SRS used in the bdqval:sourceAuthority.</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
@@ -16441,11 +16441,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Do the geographic coordinates fall on or within the boundary from the bdq:sourceAuthority for the given dwc:stateProvince or within the distance given by bdq:spatialBufferInMeters outside that boundary?</td>
+			<td>Do the geographic coordinates fall on or within the boundary from the bdqval:sourceAuthority for the given dwc:stateProvince or within the distance given by bdqval:spatialBufferInMeters outside that boundary?</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the values of dwc:decimalLatitude or dwc:decimalLongitude are bdq:Empty or invalid, or dwc:stateProvince is bdq:Empty or not found in the bdq:sourceAuthority; COMPLIANT if the geographic coordinates fall on or within the boundary in the bdq:sourceAuthority for the given dwc:stateProvince (after coordinate reference system transformations, if any, have been accounted for), or within the distance given by bdq:spatialBufferInMeters outside that boundary; otherwise NOT_COMPLIANT.</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the values of dwc:decimalLatitude or dwc:decimalLongitude are bdqval:Empty or invalid, or dwc:stateProvince is bdqval:Empty or not found in the bdqval:sourceAuthority; COMPLIANT if the geographic coordinates fall on or within the boundary in the bdqval:sourceAuthority for the given dwc:stateProvince (after coordinate reference system transformations, if any, have been accounted for), or within the distance given by bdqval:spatialBufferInMeters outside that boundary; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -16457,11 +16457,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Parameters</td>
-			<td>bdq:sourceAuthority,bdq:spatialBufferInMeters</td>
+			<td>bdqval:sourceAuthority,bdqval:spatialBufferInMeters</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "10m-admin-1 boundaries" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/]},bdq:spatialBufferInMeters default = "3000"</td>
+			<td>bdqval:sourceAuthority default = "10m-admin-1 boundaries" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/]},bdqval:spatialBufferInMeters default = "3000"</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -16556,11 +16556,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Does the marine/non-marine biome of a taxon from the bdq:sourceAuthority match the biome at the location given by the coordinates?</td>
+			<td>Does the marine/non-marine biome of a taxon from the bdqval:sourceAuthority match the biome at the location given by the coordinates?</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if either bdq:taxonIsMarine or bdq:geospatialLand are not available; INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:scientificName is bdq:Empty or (2) the values of dwc:decimalLatitude or dwc:decimalLongitude are bdq:Empty or (3) if bdq:assumptionOnUnknownBiome is noassumption and the marine/nonmarine status of the taxon is not interpretable from bdq:taxonIsMarine; COMPLIANT if (1) the taxon marine/nonmarine status from bdq:taxonIsMarine matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdq:geospatialLand plus an exterior buffer given by bdq:spatialBufferInMeters or (2) if the marine/nonmarine status of the taxon is not interpretable from bdq:taxonIsMarine and bdq:assumptionOnUnknownBiome matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdq:geospatialLand plus an exterior buffer given by bdq:spatialBufferInMeters; otherwise NOT_COMPLIANT</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if either bdqval:taxonIsMarine or bdqval:geospatialLand are not available; INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:scientificName is bdqval:Empty or (2) the values of dwc:decimalLatitude or dwc:decimalLongitude are bdqval:Empty or (3) if bdqval:assumptionOnUnknownBiome is noassumption and the marine/nonmarine status of the taxon is not interpretable from bdqval:taxonIsMarine; COMPLIANT if (1) the taxon marine/nonmarine status from bdqval:taxonIsMarine matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdqval:geospatialLand plus an exterior buffer given by bdqval:spatialBufferInMeters or (2) if the marine/nonmarine status of the taxon is not interpretable from bdqval:taxonIsMarine and bdqval:assumptionOnUnknownBiome matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdqval:geospatialLand plus an exterior buffer given by bdqval:spatialBufferInMeters; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -16576,15 +16576,15 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Parameters</td>
-			<td>bdq:taxonIsMarine,bdq:geospatialLand,bdq:spatialBufferInMeters,bdq:assumptionOnUnknownBiome</td>
+			<td>bdqval:taxonIsMarine,bdqval:geospatialLand,bdqval:spatialBufferInMeters,bdqval:assumptionOnUnknownBiome</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:taxonIsMarine default = "World Register of Marine Species (WoRMS)" {[https://www.marinespecies.org/]} {Web service [https://www.marinespecies.org/aphia.php?p=webservice]},bdq:geospatialLand default = "Union of NaturalEarth 10m-physical-vectors for Land and NaturalEarth Minor Islands" {[https://naciscdn.org/naturalearth/10m/physical/ne_10m_land.zip], [https://naciscdn.org/naturalearth/10m/physical/ne_10m_minor_islands.zip]},bdq:spatialBufferInMeters default = "3000",bdq:assumptionOnUnknownBiome default = "noassumption"</td>
+			<td>bdqval:taxonIsMarine default = "World Register of Marine Species (WoRMS)" {[https://www.marinespecies.org/]} {Web service [https://www.marinespecies.org/aphia.php?p=webservice]},bdqval:geospatialLand default = "Union of NaturalEarth 10m-physical-vectors for Land and NaturalEarth Minor Islands" {[https://naciscdn.org/naturalearth/10m/physical/ne_10m_land.zip], [https://naciscdn.org/naturalearth/10m/physical/ne_10m_minor_islands.zip]},bdqval:spatialBufferInMeters default = "3000",bdqval:assumptionOnUnknownBiome default = "noassumption"</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>dwc:coordinatePrecision and dwc:coordinateUncertaintyInMeters (if present) imply a potential displacement of the provided coordinates. These two terms can be considered spatial buffers. Likewise, country polygons cannot be 100% accurate at all scales (Dooley 2005), so a spatial buffer of the country boundaries is justified. Taking the spatial buffers into account does however greatly complicate both the logic and the implementation of such Tests. The same applies to potential conversion of the Spatial Reference System (SRS) of dwc:decimalLatitude and dwc:decimalLongitude to the SRS used in the bdq:sourceAuthority. Note that in the current implementation Tests treat "brackish" in WoRMS as both marine and terrestrial. Note that both bdq:taxonIsMarine and bdq:geospatialLand are bdq:sourceAuthorities, but as they form two parameters, distinct names are used for them.</td>
+			<td>dwc:coordinatePrecision and dwc:coordinateUncertaintyInMeters (if present) imply a potential displacement of the provided coordinates. These two terms can be considered spatial buffers. Likewise, country polygons cannot be 100% accurate at all scales (Dooley 2005), so a spatial buffer of the country boundaries is justified. Taking the spatial buffers into account does however greatly complicate both the logic and the implementation of such Tests. The same applies to potential conversion of the Spatial Reference System (SRS) of dwc:decimalLatitude and dwc:decimalLongitude to the SRS used in the bdqval:sourceAuthority. Note that in the current implementation Tests treat "brackish" in WoRMS as both marine and terrestrial. Note that both bdqval:taxonIsMarine and bdqval:geospatialLand are bdqval:sourceAuthorities, but as they form two parameters, distinct names are used for them.</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
@@ -16679,7 +16679,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLatitude is bdq:Empty or is not interpretable as a number, or dwc:decimalLongitude is bdq:Empty or is not interpretable as a number; COMPLIANT if either the value of dwc:decimalLatitude is not = 0 or the value of dwc:decimalLongitude is not = 0; otherwise NOT_COMPLIANT</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLatitude is bdqval:Empty or is not interpretable as a number, or dwc:decimalLongitude is bdqval:Empty or is not interpretable as a number; COMPLIANT if either the value of dwc:decimalLatitude is not = 0 or the value of dwc:decimalLongitude is not = 0; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -16782,7 +16782,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:coordinateUncertaintyInMeters is bdq:Empty; COMPLIANT if the value of dwc:coordinateUncertaintyInMeters is interpreted as a number between 1 and 20037509 inclusive; otherwise NOT_COMPLIANT</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:coordinateUncertaintyInMeters is bdqval:Empty; COMPLIANT if the value of dwc:coordinateUncertaintyInMeters is interpreted as a number between 1 and 20037509 inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -16885,7 +16885,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>COMPLIANT if dwc:countryCode is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+			<td>COMPLIANT if dwc:countryCode is bdqval:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -16901,7 +16901,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:countryCode="Australia": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:countryCode is bdq:NotEmpty"],[dwc:countryCode="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:countryCode is bdq:Empty"]</td>
+			<td>[dwc:countryCode="Australia": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:countryCode is bdqval:NotEmpty"],[dwc:countryCode="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:countryCode is bdqval:Empty"]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -16984,7 +16984,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode is bdq:Empty; COMPLIANT if dwc:countryCode can be unambiguously interpreted as a valid ISO 3166-1-alpha-2 country code in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode is bdqval:Empty; COMPLIANT if dwc:countryCode can be unambiguously interpreted as a valid ISO 3166-1-alpha-2 country code in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -16996,7 +16996,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}</td>
+			<td>bdqval:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -17091,7 +17091,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if either of the terms dwc:country or dwc:countryCode are bdq:Empty; COMPLIANT if the values of dwc:country and dwc:countryCode match national-level country name and matching country code respectively in the bdq:sourceAuthority</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if either of the terms dwc:country or dwc:countryCode are bdqval:Empty; COMPLIANT if the values of dwc:country and dwc:countryCode match national-level country name and matching country code respectively in the bdqval:sourceAuthority</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -17103,7 +17103,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}</td>
+			<td>bdqval:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -17194,11 +17194,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Is the combination of the values of the terms dwc:country, dwc:stateProvince unique in the bdq:sourceAuthority?</td>
+			<td>Is the combination of the values of the terms dwc:country, dwc:stateProvince unique in the bdqval:sourceAuthority?</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the terms dwc:country and dwc:stateProvince are bdq:Empty; COMPLIANT if the combination of values of dwc:country and dwc:stateProvince are unambiguously resolved to a single result with a child-parent relationship in the bdq:sourceAuthority and the entity matching the value of dwc:country in the bdq:sourceAuthority is an ISO 3166 country-like administrative entity in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the terms dwc:country and dwc:stateProvince are bdqval:Empty; COMPLIANT if the combination of values of dwc:country and dwc:stateProvince are unambiguously resolved to a single result with a child-parent relationship in the bdqval:sourceAuthority and the entity matching the value of dwc:country in the bdqval:sourceAuthority is an ISO 3166 country-like administrative entity in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -17210,11 +17210,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Parameters</td>
-			<td>bdq:sourceAuthority</td>
+			<td>bdqval:sourceAuthority</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}</td>
+			<td>bdqval:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -17309,11 +17309,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Does the value of dwc:country occur in the bdq:sourceAuthority?</td>
+			<td>Does the value of dwc:country occur in the bdqval:sourceAuthority?</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:country is bdq:Empty; COMPLIANT if value of dwc:country is a place type equivalent to administrative entity of "nation" in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:country is bdqval:Empty; COMPLIANT if value of dwc:country is a place type equivalent to administrative entity of "nation" in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -17325,11 +17325,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Parameters</td>
-			<td>bdq:sourceAuthority</td>
+			<td>bdqval:sourceAuthority</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}</td>
+			<td>bdqval:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -17337,7 +17337,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:country="Eswatini": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:country is a valid country name in the bdq:sourceAuthority"],[dwc:country="Tasmania": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="Tasmania is not found at the level of national in the bdq:sourceAuthority"]</td>
+			<td>[dwc:country="Eswatini": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:country is a valid country name in the bdqval:sourceAuthority"],[dwc:country="Tasmania": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="Tasmania is not found at the level of national in the bdqval:sourceAuthority"]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -17428,7 +17428,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>COMPLIANT if dwc:country is bdq:NotEmpty or dwc:countryCode has a value of "XZ" and either dwc:country is bdq:Empty or has a value of "High seas"; otherwise NOT_COMPLIANT</td>
+			<td>COMPLIANT if dwc:country is bdqval:NotEmpty or dwc:countryCode has a value of "XZ" and either dwc:country is bdqval:Empty or has a value of "High seas"; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -17444,11 +17444,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>Country is expected to be either bdq:Empty or, ideally, have a value of "High seas" or an agreed equivalent if material comes from the high seas, or from those portions of Antarctica outside of any sovereign nation.</td>
+			<td>Country is expected to be either bdqval:Empty or, ideally, have a value of "High seas" or an agreed equivalent if material comes from the high seas, or from those portions of Antarctica outside of any sovereign nation.</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:country="Eswatini": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:country is bdq:NotEmpty"],[dwc:country="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:country is bdq:Empty"]</td>
+			<td>[dwc:country="Eswatini": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:country is bdqval:NotEmpty"],[dwc:country="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:country is bdqval:Empty"]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -17531,7 +17531,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:dateIdentified is bdq:Empty, or (2) dwc:dateIdentified contains an invalid value according to ISO 8601, or (3) bdq:includeEventDate=true and dwc:eventDate is not a valid ISO 8601 date; COMPLIANT if the value of dwc:dateIdentified is between bdq:earliestValidDate and bdq:latestValidDate inclusive and either (1) dwc:eventDate is bdq:Empty or bdq:includeEventDate=false, or (2) if dwc:eventDate is a valid ISO 8601 date and dwc:dateIdentified overlaps or is later than the dwc:eventDate; otherwise NOT_COMPLIANT</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:dateIdentified is bdqval:Empty, or (2) dwc:dateIdentified contains an invalid value according to ISO 8601, or (3) bdqval:includeEventDate=true and dwc:eventDate is not a valid ISO 8601 date; COMPLIANT if the value of dwc:dateIdentified is between bdqval:earliestValidDate and bdqval:latestValidDate inclusive and either (1) dwc:eventDate is bdqval:Empty or bdqval:includeEventDate=false, or (2) if dwc:eventDate is a valid ISO 8601 date and dwc:dateIdentified overlaps or is later than the dwc:eventDate; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -17547,15 +17547,15 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Parameters</td>
-			<td>bdq:earliestValidDate,bdq:latestValidDate,bdq:includeEventDate</td>
+			<td>bdqval:earliestValidDate,bdqval:latestValidDate,bdqval:includeEventDate</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:earliestValidDate default = "1753-01-01",bdq:latestValidDate default = "{current day}",bdq:includeEventDate default = "true"</td>
+			<td>bdqval:earliestValidDate default = "1753-01-01",bdqval:latestValidDate default = "{current day}",bdqval:includeEventDate default = "true"</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>There may be valid identifications prior to Linnaeus, but this Test will flag these under the default value of bdq:earliestValidDate, as for most biodiversity data, pre-Linnaean identification dates are likely to be errors. If a parameter is not set, then the default is 1753-01-01. This Test will, by design, flag as problematic cases (such as LTER plots and marine mammal sightings) where a known individual organism is identified by a specialist and then subsequently observed without new taxonomic identifications being made.</td>
+			<td>There may be valid identifications prior to Linnaeus, but this Test will flag these under the default value of bdqval:earliestValidDate, as for most biodiversity data, pre-Linnaean identification dates are likely to be errors. If a parameter is not set, then the default is 1753-01-01. This Test will, by design, flag as problematic cases (such as LTER plots and marine mammal sightings) where a known individual organism is identified by a specialist and then subsequently observed without new taxonomic identifications being made.</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
@@ -17650,7 +17650,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:dateIdentified is bdq:Empty; COMPLIANT if the value of dwc:dateIdentified contains a valid ISO 8601 date; otherwise NOT_COMPLIANT</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:dateIdentified is bdqval:Empty; COMPLIANT if the value of dwc:dateIdentified contains a valid ISO 8601 date; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -17745,7 +17745,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:day is bdq:Empty, or (2) dwc:day is not interpretable as an integer, or (3) dwc:day is interpretable as an integer between 29 and 31 inclusive and dwc:month is not interpretable as an integer between 1 and 12, or (4) dwc:month is interpretable as the integer 2 and dwc:day is interpretable as the integer 29 and dwc:year is not interpretable as a valid ISO 8601 year; COMPLIANT if (1) the value of dwc:day is interpretable as an integer between 1 and 28 inclusive, or (2) dwc:day is interpretable as an integer between 29 and 30 and dwc:month is interpretable as an integer in the set (4,6,9,11), or (3) dwc:day is interpretable as an integer between 29 and 31 and dwc:month is interpretable as an integer in the set (1,3,5,7,8,10,12), or (4) dwc:day is interpretable as the integer 29 and dwc:month is interpretable as the integer 2 and dwc:year is interpretable as is a valid leap year (evenly divisible by 400 or (evenly divisible by 4 but not evenly divisible by 100)); otherwise NOT_COMPLIANT.</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:day is bdqval:Empty, or (2) dwc:day is not interpretable as an integer, or (3) dwc:day is interpretable as an integer between 29 and 31 inclusive and dwc:month is not interpretable as an integer between 1 and 12, or (4) dwc:month is interpretable as the integer 2 and dwc:day is interpretable as the integer 29 and dwc:year is not interpretable as a valid ISO 8601 year; COMPLIANT if (1) the value of dwc:day is interpretable as an integer between 1 and 28 inclusive, or (2) dwc:day is interpretable as an integer between 29 and 30 and dwc:month is interpretable as an integer in the set (4,6,9,11), or (3) dwc:day is interpretable as an integer between 29 and 31 and dwc:month is interpretable as an integer in the set (1,3,5,7,8,10,12), or (4) dwc:day is interpretable as the integer 29 and dwc:month is interpretable as the integer 2 and dwc:year is interpretable as is a valid leap year (evenly divisible by 400 or (evenly divisible by 4 but not evenly divisible by 100)); otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -17848,7 +17848,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:day is bdq:Empty; COMPLIANT if the value of the field dwc:day is an integer between 1 and 31 inclusive; otherwise NOT_COMPLIANT.</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:day is bdqval:Empty; COMPLIANT if the value of the field dwc:day is an integer between 1 and 31 inclusive; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -17947,7 +17947,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>COMPLIANT if dc:type is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+			<td>COMPLIANT if dc:type is bdqval:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -17959,7 +17959,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dc:type="?": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dc:type is bdq:NotEmpty"],[dc:type=" ": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dc:type is bdq:Empty"]</td>
+			<td>[dc:type="?": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dc:type is bdqval:NotEmpty"],[dc:type=" ": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dc:type is bdqval:Empty"]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -18046,7 +18046,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the value of dc:type is bdq:Empty; COMPLIANT if the value of dc:type is a term name in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the value of dc:type is bdqval:Empty; COMPLIANT if the value of dc:type is a term name in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -18153,7 +18153,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLatitude is bdq:Empty or the value is not interpretable as a number; COMPLIANT if the value of dwc:decimalLatitude is between -90 and 90, inclusive; otherwise NOT_COMPLIANT</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLatitude is bdqval:Empty or the value is not interpretable as a number; COMPLIANT if the value of dwc:decimalLatitude is between -90 and 90, inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -18252,7 +18252,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>COMPLIANT if dwc:decimalLatitude is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+			<td>COMPLIANT if dwc:decimalLatitude is bdqval:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -18264,7 +18264,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:decimalLatitude="0": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:decimalLatitude is bdq:NotEmpty"],[dwc:decimalLatitude="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:decimalLatitude is bdq:Empty"]</td>
+			<td>[dwc:decimalLatitude="0": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:decimalLatitude is bdqval:NotEmpty"],[dwc:decimalLatitude="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:decimalLatitude is bdqval:Empty"]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -18351,7 +18351,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLongitude is bdq:Empty or the value is not a number; COMPLIANT if the value of dwc:decimalLongitude is between -180 and 180 degrees, inclusive; otherwise NOT_COMPLIANT</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLongitude is bdqval:Empty or the value is not a number; COMPLIANT if the value of dwc:decimalLongitude is between -180 and 180 degrees, inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -18450,7 +18450,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>COMPLIANT if dwc:decimalLongitude is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+			<td>COMPLIANT if dwc:decimalLongitude is bdqval:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -18462,7 +18462,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:decimalLongitude="0": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:decimalLongitude is bdq:NotEmpty"],[dwc:decimalLongitude=" ": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:decimalLongitude is bdq:Empty"]</td>
+			<td>[dwc:decimalLongitude="0": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:decimalLongitude is bdqval:NotEmpty"],[dwc:decimalLongitude=" ": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:decimalLongitude is bdqval:Empty"]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -18541,11 +18541,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Does the value of dwc:degreeOfEstablishment occur in the bdq:sourceAuthority?</td>
+			<td>Does the value of dwc:degreeOfEstablishment occur in the bdqval:sourceAuthority?</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:degreeOfEstablishment is bdq:Empty; COMPLIANT if the value of dwc:degreeOfEstablishment is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:degreeOfEstablishment is bdqval:Empty; COMPLIANT if the value of dwc:degreeOfEstablishment is in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -18557,11 +18557,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Parameters</td>
-			<td>bdq:sourceAuthority</td>
+			<td>bdqval:sourceAuthority</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "Degree of Establishment Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/doe/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/DegreeOfEstablishment/concepts]}</td>
+			<td>bdqval:sourceAuthority default = "Degree of Establishment Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/doe/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/DegreeOfEstablishment/concepts]}</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -18569,7 +18569,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:degreeOfEstablishment="cultivated": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:degreeOfEstablishment found in the bdq:sourceAuthority"],[dwc:degreeOfEstablishment="grown in garden": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:degreeOfEstablishment not found in the bdq:sourceAuthority"]</td>
+			<td>[dwc:degreeOfEstablishment="cultivated": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:degreeOfEstablishment found in the bdqval:sourceAuthority"],[dwc:degreeOfEstablishment="grown in garden": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:degreeOfEstablishment not found in the bdqval:sourceAuthority"]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -18660,7 +18660,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:endDayOfYear is bdq:Empty or if the value of dwc:endDayOfYear is equal to 366 and (dwc:eventDate is bdq:Empty or the value of dwc:eventDate cannot be interpreted to find a single year or an end year in a range); COMPLIANT if the value of dwc:endDayOfYear is an integer between 1 and 365 inclusive, or if the value of dwc:endDayOfYear is 366 and the end year interpreted from dwc:eventDate is a leap year; otherwise NOT_COMPLIANT</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:endDayOfYear is bdqval:Empty or if the value of dwc:endDayOfYear is equal to 366 and (dwc:eventDate is bdqval:Empty or the value of dwc:eventDate cannot be interpreted to find a single year or an end year in a range); COMPLIANT if the value of dwc:endDayOfYear is an integer between 1 and 365 inclusive, or if the value of dwc:endDayOfYear is 366 and the end year interpreted from dwc:eventDate is a leap year; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -18759,11 +18759,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Does the value of dwc:establishmentMeans occur in the bdq:sourceAuthority?</td>
+			<td>Does the value of dwc:establishmentMeans occur in the bdqval:sourceAuthority?</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:establishmentMeans is bdq:Empty; COMPLIANT if the value of dwc:establishmentMeans is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:establishmentMeans is bdqval:Empty; COMPLIANT if the value of dwc:establishmentMeans is in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -18775,11 +18775,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Parameters</td>
-			<td>bdq:sourceAuthority</td>
+			<td>bdqval:sourceAuthority</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "Establishment Means Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/em/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/EstablishmentMeans/concepts]}</td>
+			<td>bdqval:sourceAuthority default = "Establishment Means Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/em/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/EstablishmentMeans/concepts]}</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -18787,7 +18787,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:establishmentMeans="native": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:establishmentMeans found in the bdq:sourceAuthority"],[dwc:establishmentMeans="cultivated": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:establishmentMeans not found in the bdq:sourceAuthority"]</td>
+			<td>[dwc:establishmentMeans="native": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:establishmentMeans found in the bdqval:sourceAuthority"],[dwc:establishmentMeans="cultivated": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:establishmentMeans not found in the bdqval:sourceAuthority"]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -18878,7 +18878,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty or if the value of dwc:eventDate is not a valid ISO 8601 date; COMPLIANT if the range of dwc:eventDate is entirely within the range bdq:earliestValidDate to bdq:latestValidDate, inclusive, otherwise NOT_COMPLIANT</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdqval:Empty or if the value of dwc:eventDate is not a valid ISO 8601 date; COMPLIANT if the range of dwc:eventDate is entirely within the range bdqval:earliestValidDate to bdqval:latestValidDate, inclusive, otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -18890,11 +18890,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Parameters</td>
-			<td>bdq:earliestValidDate,bdq:latestValidDate</td>
+			<td>bdqval:earliestValidDate,bdqval:latestValidDate</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:earliestValidDate default ="1582-11-15",bdq:latestValidDate default = "{current year}"</td>
+			<td>bdqval:earliestValidDate default ="1582-11-15",bdqval:latestValidDate default = "{current year}"</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -18993,7 +18993,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>COMPLIANT if dwc:eventDate is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+			<td>COMPLIANT if dwc:eventDate is bdqval:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -19005,7 +19005,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:eventDate="1964-11-01T10:00-0600": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:eventdate is bdq:NotEmpty"],[dwc:eventDate="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:eventDate is bdq:Empty"]</td>
+			<td>[dwc:eventDate="1964-11-01T10:00-0600": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:eventdate is bdqval:NotEmpty"],[dwc:eventDate="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:eventDate is bdqval:Empty"]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -19088,7 +19088,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty; COMPLIANT if the value of dwc:eventDate is a valid ISO 8601 date; otherwise NOT_COMPLIANT</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdqval:Empty; COMPLIANT if the value of dwc:eventDate is a valid ISO 8601 date; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -19191,7 +19191,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>COMPLIANT if any of dwc:eventDate, dwc:year, dwc:month, dwc:day, dwc:startDayOfYear, dwc:endDayOfYear, dwc:verbatimEventDate are bdq:NotEmpty; otherwise NOT_COMPLIANT.</td>
+			<td>COMPLIANT if any of dwc:eventDate, dwc:year, dwc:month, dwc:day, dwc:startDayOfYear, dwc:endDayOfYear, dwc:verbatimEventDate are bdqval:NotEmpty; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -19203,11 +19203,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>Only fails if all of the relevant fields of the Darwin Core Event class are bdq:Empty or do not exist. Relevant Darwin Core fields include dwc:eventDate, dwc:verbatimEventDate, dwc:year, dwc:month, dwc:day, dwc:startDayOfYear, dwc:endDayOfYear. The terms dwc:eventID (if populated may or may not point to temporal information accessible to the user of the data) and dwc:eventTime (which is rare) are not included.</td>
+			<td>Only fails if all of the relevant fields of the Darwin Core Event class are bdqval:Empty or do not exist. Relevant Darwin Core fields include dwc:eventDate, dwc:verbatimEventDate, dwc:year, dwc:month, dwc:day, dwc:startDayOfYear, dwc:endDayOfYear. The terms dwc:eventID (if populated may or may not point to temporal information accessible to the user of the data) and dwc:eventTime (which is rare) are not included.</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:day="", dwc:month="", dwc:year="", dwc:eventDate="1962-11-01T10:00-0600", dwc:verbatimEventDate="", dwc:startDayOfYear="", dwc:endDayOfYear="": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:eventDate is bdq:NotEmpty"],[dwc:dateIdentified="", dwc:day="", dwc:month="", dwc:year="", dwc:eventDate="", dwc:verbatimEventDate="", dwc:startDayOfYear="", dwc:endDayOfYear="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="All input fields bdq:Empty"]</td>
+			<td>[dwc:day="", dwc:month="", dwc:year="", dwc:eventDate="1962-11-01T10:00-0600", dwc:verbatimEventDate="", dwc:startDayOfYear="", dwc:endDayOfYear="": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:eventDate is bdqval:NotEmpty"],[dwc:dateIdentified="", dwc:day="", dwc:month="", dwc:year="", dwc:eventDate="", dwc:verbatimEventDate="", dwc:startDayOfYear="", dwc:endDayOfYear="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="All input fields bdqval:Empty"]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -19290,7 +19290,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdq:Empty, or all of dwc:year, dwc:month, dwc:day, dwc:startDayOfYear and dwc:endDayOfYear are bdq:Empty; COMPLIANT if all of the following conditions are met (1) dwc:year is bdq:Empty or dwc:eventDate has a precision of one year or finer and and is within a single year and the provided value of dwc:year matches the year expressed in dwc:eventDate, and (2) dwc:month is bdq:Empty or dwc:eventDate has a precision of one month or finer and is within a single month and the provided value in dwc:month matches the month represented by dwc:eventDate, and (3) dwc:day is bdq:Empty or dwc:eventDate has a precision of a day or less and is within a single day and the provided value in dwc:day matches the day represented by dwc:eventDate, and (4) dwc:startDayOfYear is empty or dwc:eventDate has a precision of one day or finer and the provided value in dwc:startDayOfYear matches the start day of the year of the range represented by dwc:eventDate, and (5) dwc:endDayOfYear is empty or dwc:eventDate has a precision of one day or finer and the provided value in dwc:endDayOfYear matches the end day of the year of the range represented by dwc:eventDate; otherwise NOT_COMPLIANT.</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdqval:Empty, or all of dwc:year, dwc:month, dwc:day, dwc:startDayOfYear and dwc:endDayOfYear are bdqval:Empty; COMPLIANT if all of the following conditions are met (1) dwc:year is bdqval:Empty or dwc:eventDate has a precision of one year or finer and and is within a single year and the provided value of dwc:year matches the year expressed in dwc:eventDate, and (2) dwc:month is bdqval:Empty or dwc:eventDate has a precision of one month or finer and is within a single month and the provided value in dwc:month matches the month represented by dwc:eventDate, and (3) dwc:day is bdqval:Empty or dwc:eventDate has a precision of a day or less and is within a single day and the provided value in dwc:day matches the day represented by dwc:eventDate, and (4) dwc:startDayOfYear is empty or dwc:eventDate has a precision of one day or finer and the provided value in dwc:startDayOfYear matches the start day of the year of the range represented by dwc:eventDate, and (5) dwc:endDayOfYear is empty or dwc:eventDate has a precision of one day or finer and the provided value in dwc:endDayOfYear matches the end day of the year of the range represented by dwc:eventDate; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -19385,11 +19385,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Does the value of dwc:family occur at the rank of Family in the bdq:sourceAuthority?</td>
+			<td>Does the value of dwc:family occur at the rank of Family in the bdqval:sourceAuthority?</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:family is bdq:Empty; COMPLIANT if the value of dwc:family is found as a value at the rank of Family in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:family is bdqval:Empty; COMPLIANT if the value of dwc:family is found as a value at the rank of Family in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -19401,11 +19401,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Parameters</td>
-			<td>bdq:sourceAuthority</td>
+			<td>bdqval:sourceAuthority</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
+			<td>bdqval:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -19413,7 +19413,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:family="Agaricaceae": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="bdq:family has an equivalent at the rank of Family in the bdq:sourceAuthority"],[dwc:family="Agaricacae": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="bdq:family does not have an equivalent at the rank of Family in the Parameterized Source Authority"]</td>
+			<td>[dwc:family="Agaricaceae": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="bdqval:family has an equivalent at the rank of Family in the bdqval:sourceAuthority"],[dwc:family="Agaricacae": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="bdqval:family does not have an equivalent at the rank of Family in the Parameterized Source Authority"]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -19500,11 +19500,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Does the value of dwc:genus occur at the rank of Genus in the bdq:sourceAuthority?</td>
+			<td>Does the value of dwc:genus occur at the rank of Genus in the bdqval:sourceAuthority?</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:genus is bdq:Empty; COMPLIANT if the value of dwc:genus is found as a value at the rank of genus in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:genus is bdqval:Empty; COMPLIANT if the value of dwc:genus is found as a value at the rank of genus in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -19516,11 +19516,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Parameters</td>
-			<td>bdq:sourceAuthority</td>
+			<td>bdqval:sourceAuthority</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
+			<td>bdqval:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -19528,7 +19528,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:genus="Egernia": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:genus has an equivalent at the rank of Genus in the Parameterized Source Authority"],[dwc:genus="Egernea": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:genus does not have an equivalent at the rank of Genus in the bdq:sourceAuthority. This may be fixed using fuzzy matching at the AMENDMENT stage"]</td>
+			<td>[dwc:genus="Egernia": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:genus has an equivalent at the rank of Genus in the Parameterized Source Authority"],[dwc:genus="Egernea": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:genus does not have an equivalent at the rank of Genus in the bdqval:sourceAuthority. This may be fixed using fuzzy matching at the AMENDMENT stage"]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -19619,7 +19619,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>COMPLIANT if dwc:geodeticDatum is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+			<td>COMPLIANT if dwc:geodeticDatum is bdqval:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -19631,7 +19631,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:geodeticDatum="UTM": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:geodeticDatum is bdq:NotEmpty"],[dwc:geodeticDatum="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:geodeticDatum is bdq:Empty."]</td>
+			<td>[dwc:geodeticDatum="UTM": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:geodeticDatum is bdqval:NotEmpty"],[dwc:geodeticDatum="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:geodeticDatum is bdqval:Empty."]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -19710,11 +19710,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Does the value of dwc:geodeticDatum occur as a valid geographic CRS, geodetic Datum or ellipsoid in bdq:sourceAuthority?</td>
+			<td>Does the value of dwc:geodeticDatum occur as a valid geographic CRS, geodetic Datum or ellipsoid in bdqval:sourceAuthority?</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available, INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdq:Empty; COMPLIANT if the value of dwc:geodeticDatum is a valid code from the bdq:sourceAuthority (in the form Authority:Number) for a Datum, or ellipsoid, or for a CRS appropriate for a 2D geographic coordinate in degrees, or is the value "not recorded"; otherwise NOT_COMPLIANT</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available, INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdqval:Empty; COMPLIANT if the value of dwc:geodeticDatum is a valid code from the bdqval:sourceAuthority (in the form Authority:Number) for a Datum, or ellipsoid, or for a CRS appropriate for a 2D geographic coordinate in degrees, or is the value "not recorded"; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -19726,7 +19726,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority = "EPSG" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index]}</td>
+			<td>bdqval:sourceAuthority = "EPSG" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index]}</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -19734,7 +19734,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:geodeticDatum="EPSG:4326": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:geodeticDatum matches an unambiguous alphanumeric CRS or datum code value in the bdq:sourceAuthority"],[dwc:geodeticDatum="7030": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:geodeticDatum doesn't match values in the bdq:sourceAuthority, 7030 is a bare number without an authority.]</td>
+			<td>[dwc:geodeticDatum="EPSG:4326": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:geodeticDatum matches an unambiguous alphanumeric CRS or datum code value in the bdqval:sourceAuthority"],[dwc:geodeticDatum="7030": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:geodeticDatum doesn't match values in the bdqval:sourceAuthority, 7030 is a bare number without an authority.]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -19817,11 +19817,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Does the value of dwc:kingdom occur at the rank of Kingdom in the bdq:sourceAuthority?</td>
+			<td>Does the value of dwc:kingdom occur at the rank of Kingdom in the bdqval:sourceAuthority?</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:kingdom is bdq:Empty; COMPLIANT if the value of dwc:kingdom is found as a value at the rank of kingdom in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:kingdom is bdqval:Empty; COMPLIANT if the value of dwc:kingdom is found as a value at the rank of kingdom in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -19833,11 +19833,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Parameters</td>
-			<td>bdq:sourceAuthority</td>
+			<td>bdqval:sourceAuthority</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
+			<td>bdqval:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -19845,7 +19845,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:kingdom="Animalia": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:kingdom has an equivalent at the rank of Kingdom in the bdq:sourceAuthority"],[dwc:kingdom="Metazoa": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:kingdom does not strictly have an equivalent at the rank of Kingdom in the Parameterized Source Authority (Metazoa is synonym of Animalia)"]</td>
+			<td>[dwc:kingdom="Animalia": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:kingdom has an equivalent at the rank of Kingdom in the bdqval:sourceAuthority"],[dwc:kingdom="Metazoa": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:kingdom does not strictly have an equivalent at the rank of Kingdom in the Parameterized Source Authority (Metazoa is synonym of Animalia)"]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -19936,7 +19936,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>COMPLIANT if dwc:kingdom is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+			<td>COMPLIANT if dwc:kingdom is bdqval:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -19948,7 +19948,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:kingdom="Fungi": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:kingdom is bdq:NotEmpty"],[dwc:kingdom="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:kingdom is bdq:Empty"]</td>
+			<td>[dwc:kingdom="Fungi": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:kingdom is bdqval:NotEmpty"],[dwc:kingdom="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:kingdom is bdqval:Empty"]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -20031,7 +20031,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>COMPLIANT if dcterms:license is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+			<td>COMPLIANT if dcterms:license is bdqval:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -20047,7 +20047,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dcterms:license="CC0 1.0": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dcterms:license is bdq:NotEmpty"],[dcterms:license=" ": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dcterms:license is bdq:Empty"]</td>
+			<td>[dcterms:license="CC0 1.0": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dcterms:license is bdqval:NotEmpty"],[dcterms:license=" ": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dcterms:license is bdqval:Empty"]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -20126,11 +20126,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Does the value of dcterms:license occur in bdq:sourceAuthority?</td>
+			<td>Does the value of dcterms:license occur in bdqval:sourceAuthority?</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dcterms:license is bdq:Empty; COMPLIANT if the value of the term dcterms:license is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dcterms:license is bdqval:Empty; COMPLIANT if the value of the term dcterms:license is in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -20142,11 +20142,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Parameters</td>
-			<td>bdq:sourceAuthority</td>
+			<td>bdqval:sourceAuthority</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "Creative Commons 4.0 Licenses or CC0" {[https://creativecommons.org/]} { Regular Expression ^(http(s){0,1}://creativecommons.org/licenses/(by&#124;by-sa&#124;by-nc&#124;by-nc-sa&#124;by-nd&#124;by-nc-nd)/4.0/((deed&#124;legalcode)(.(id&#124;eu&#124;da&#124;de&#124;en&#124;es&#124;fr&#124;fy&#124;hr&#124;it&#124;lv&#124;lt&#124;mi&#124;ni&#124;no&#124;pl&#124;pt&#124;ro&#124;si&#124;fi&#124;sv&#124;tr&#124;cs&#124;el&#124;ru&#124;uk&#124;ar&#124;jp&#124;zh-hans&#124;zh-hant&#124;ko)){0,1})&#124;(http(s){0,1}://creativecommons.org/publicdomain/zero/1.0/((deed&#124;legalcode)(.(id&#124;eu&#124;da&#124;de&#124;en&#124;es&#124;fr&#124;fy&#124;hr&#124;it&#124;lv&#124;lt&#124;ni&#124;no&#124;pl&#124;pt&#124;ro&#124;si&#124;fi&#124;sv&#124;tr&#124;cs&#124;el&#124;ru&#124;uk&#124;ar&#124;jp&#124;zh-hans&#124;zh-hant&#124;ko)){0,1})))$ }</td>
+			<td>bdqval:sourceAuthority default = "Creative Commons 4.0 Licenses or CC0" {[https://creativecommons.org/]} { Regular Expression ^(http(s){0,1}://creativecommons.org/licenses/(by&#124;by-sa&#124;by-nc&#124;by-nc-sa&#124;by-nd&#124;by-nc-nd)/4.0/((deed&#124;legalcode)(.(id&#124;eu&#124;da&#124;de&#124;en&#124;es&#124;fr&#124;fy&#124;hr&#124;it&#124;lv&#124;lt&#124;mi&#124;ni&#124;no&#124;pl&#124;pt&#124;ro&#124;si&#124;fi&#124;sv&#124;tr&#124;cs&#124;el&#124;ru&#124;uk&#124;ar&#124;jp&#124;zh-hans&#124;zh-hant&#124;ko)){0,1})&#124;(http(s){0,1}://creativecommons.org/publicdomain/zero/1.0/((deed&#124;legalcode)(.(id&#124;eu&#124;da&#124;de&#124;en&#124;es&#124;fr&#124;fy&#124;hr&#124;it&#124;lv&#124;lt&#124;ni&#124;no&#124;pl&#124;pt&#124;ro&#124;si&#124;fi&#124;sv&#124;tr&#124;cs&#124;el&#124;ru&#124;uk&#124;ar&#124;jp&#124;zh-hans&#124;zh-hant&#124;ko)){0,1})))$ }</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -20154,7 +20154,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dcterms:license="https://creativecommons.org/licenses/by/4.0/": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT,Response.comment="dcterms:license matches a term in the bdq:sourceAuthority"],[dcterms:license="GPL": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dcterms:license does not match a term in the bdq:sourceAuthority"]</td>
+			<td>[dcterms:license="https://creativecommons.org/licenses/by/4.0/": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT,Response.comment="dcterms:license matches a term in the bdqval:sourceAuthority"],[dcterms:license="GPL": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dcterms:license does not match a term in the bdqval:sourceAuthority"]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -20245,7 +20245,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>COMPLIANT if at least one term needed to determine the location of the entity exists and is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+			<td>COMPLIANT if at least one term needed to determine the location of the entity exists and is bdqval:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -20261,7 +20261,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:locationID="https://opencontext.org/subjects/e54377f7-4452-4315-b676-40679b10c4d9", dwc:higherGeographyID="", dwc:higherGeography="",dwc:continent="", dwc:waterBody="", dwc:islandGroup="", dwc:island="", dwc:country="", dwc:countryCode="", dwc:stateProvince="", dwc:county="", dwc:municipality="", dwc:locality="", dwc:verbatimLocality="", dwc:decimalLatitude="", dwc:decimalLongitude="", dwc:coordinateUncertaintyInMeters="", dwc:geodeticDatum="", dwc:verbatimCoordinates="", dwc:verbatimLatitude="", dwc:verbatimLongitude="", dwc:footprintWKT="": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:LocationID is bdq:NotEmpty"],[dwc:locationID="", dwc:higherGeographyID="", dwc:higherGeography="", dwc:continent="", dwc:waterBody="", dwc:islandGroup="", dwc:island="", dwc:country="", dwc:countryCode="", dwc:stateProvince="", dwc:county="", dwc:municipality="", dwc:locality="", dwc:verbatimLocality="", dwc:decimalLatitude="", dwc:decimalLongitude="", dwc:coordinateUncertaintyInMeters="", dwc:geodeticDatum="", dwc:verbatimCoordinates="", dwc:verbatimLatitude="", dwc:verbatimLongitude="", dwc:footprintWKT="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="All location fields are bdq:Empty"]</td>
+			<td>[dwc:locationID="https://opencontext.org/subjects/e54377f7-4452-4315-b676-40679b10c4d9", dwc:higherGeographyID="", dwc:higherGeography="",dwc:continent="", dwc:waterBody="", dwc:islandGroup="", dwc:island="", dwc:country="", dwc:countryCode="", dwc:stateProvince="", dwc:county="", dwc:municipality="", dwc:locality="", dwc:verbatimLocality="", dwc:decimalLatitude="", dwc:decimalLongitude="", dwc:coordinateUncertaintyInMeters="", dwc:geodeticDatum="", dwc:verbatimCoordinates="", dwc:verbatimLatitude="", dwc:verbatimLongitude="", dwc:footprintWKT="": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:LocationID is bdqval:NotEmpty"],[dwc:locationID="", dwc:higherGeographyID="", dwc:higherGeography="", dwc:continent="", dwc:waterBody="", dwc:islandGroup="", dwc:island="", dwc:country="", dwc:countryCode="", dwc:stateProvince="", dwc:county="", dwc:municipality="", dwc:locality="", dwc:verbatimLocality="", dwc:decimalLatitude="", dwc:decimalLongitude="", dwc:coordinateUncertaintyInMeters="", dwc:geodeticDatum="", dwc:verbatimCoordinates="", dwc:verbatimLatitude="", dwc:verbatimLongitude="", dwc:footprintWKT="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="All location fields are bdqval:Empty"]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -20348,7 +20348,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumDepthInMeters is bdq:Empty or is not interpretable as a number greater than or equal to zero; COMPLIANT if the value of dwc:maximumDepthInMeters is within the range of bdq:minimumValidDepthInMeters to bdq:maximumValidDepthInMeters inclusive; otherwise NOT_COMPLIANT</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumDepthInMeters is bdqval:Empty or is not interpretable as a number greater than or equal to zero; COMPLIANT if the value of dwc:maximumDepthInMeters is within the range of bdqval:minimumValidDepthInMeters to bdqval:maximumValidDepthInMeters inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -20360,15 +20360,15 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Parameters</td>
-			<td>bdq:minimumValidDepthInMeters,bdq:maximumValidDepthInMeters</td>
+			<td>bdqval:minimumValidDepthInMeters,bdqval:maximumValidDepthInMeters</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:minimumValidDepthInMeters default="0",bdq:maximumValidDepthInMeters default="11000"</td>
+			<td>bdqval:minimumValidDepthInMeters default="0",bdqval:maximumValidDepthInMeters default="11000"</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>The Challenger Deep in the Mariana Trench is the deepest known point in Earth's oceans at 10,994 meters below sea level. We have rounded up bdq:maximumValidDepthInMeters.</td>
+			<td>The Challenger Deep in the Mariana Trench is the deepest known point in Earth's oceans at 10,994 meters below sea level. We have rounded up bdqval:maximumValidDepthInMeters.</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
@@ -20463,7 +20463,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumElevationInMeters is bdq:Empty or the value cannot be interpreted as a number; COMPLIANT if the value of dwc:maximumElevationInMeters is within the range of bdq:minimumValidElevationInMeters to bdq:maximumValidElevationInMeters inclusive; otherwise NOT_COMPLIANT</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumElevationInMeters is bdqval:Empty or the value cannot be interpreted as a number; COMPLIANT if the value of dwc:maximumElevationInMeters is within the range of bdqval:minimumValidElevationInMeters to bdqval:maximumValidElevationInMeters inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -20475,11 +20475,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Parameters</td>
-			<td>bdq:minimumValidElevationInMeters,bdq:maximumValidElevationInMeters</td>
+			<td>bdqval:minimumValidElevationInMeters,bdqval:maximumValidElevationInMeters</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:minimumValidElevationInMeters default = "-430",bdq:maximumValidElevationInMeters default = "8850"</td>
+			<td>bdqval:minimumValidElevationInMeters default = "-430",bdqval:maximumValidElevationInMeters default = "8850"</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -20578,7 +20578,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters is bdq:Empty, or the value is not interpretable as number greater than or equal to zero; COMPLIANT if the value of dwc:minimumDepthInMeters is within the range of bdq:minimumValidDepthInMeters to bdq:maximumValidDepthInMeters inclusive; otherwise NOT_COMPLIANT</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters is bdqval:Empty, or the value is not interpretable as number greater than or equal to zero; COMPLIANT if the value of dwc:minimumDepthInMeters is within the range of bdqval:minimumValidDepthInMeters to bdqval:maximumValidDepthInMeters inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -20590,15 +20590,15 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Parameters</td>
-			<td>bdq:minimumValidDepthInMeters,bdq:maximumValidDepthInMeters</td>
+			<td>bdqval:minimumValidDepthInMeters,bdqval:maximumValidDepthInMeters</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:minimumValidDepthInMeters default="0",bdq:maximumValidDepthInMeters default="11000"</td>
+			<td>bdqval:minimumValidDepthInMeters default="0",bdqval:maximumValidDepthInMeters default="11000"</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>The Challenger Deep in the Mariana Trench is the deepest known point in Earth's oceans at 10,994 meters below sea level. We have rounded up bdq:maximumValidDepthInMeters.</td>
+			<td>The Challenger Deep in the Mariana Trench is the deepest known point in Earth's oceans at 10,994 meters below sea level. We have rounded up bdqval:maximumValidDepthInMeters.</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
@@ -20693,7 +20693,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters or dwc:maximumDepthInMeters is bdq:Empty, or if either are interpretable as not zero or a positive number; COMPLIANT if the value of dwc:minimumDepthInMeters is less than or equal to the value of dwc:maximumDepthInMeters; otherwise NOT_COMPLIANT</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters or dwc:maximumDepthInMeters is bdqval:Empty, or if either are interpretable as not zero or a positive number; COMPLIANT if the value of dwc:minimumDepthInMeters is less than or equal to the value of dwc:maximumDepthInMeters; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -20792,7 +20792,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumElevationInMeters is bdq:Empty or the value is not a number; COMPLIANT if the value of dwc:minimumElevationInMeters is within the range of bdq:minimumValidElevationInMeters to bdq:maximumValidElevationInMeters inclusive; otherwise NOT_COMPLIANT</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumElevationInMeters is bdqval:Empty or the value is not a number; COMPLIANT if the value of dwc:minimumElevationInMeters is within the range of bdqval:minimumValidElevationInMeters to bdqval:maximumValidElevationInMeters inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -20804,11 +20804,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Parameters</td>
-			<td>bdq:minimumValidElevationInMeters,bdq:maximumValidElevationInMeters</td>
+			<td>bdqval:minimumValidElevationInMeters,bdqval:maximumValidElevationInMeters</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:minimumValidElevationInMeters default = "-430",bdq:maximumValidElevationInMeters default = "8850"</td>
+			<td>bdqval:minimumValidElevationInMeters default = "-430",bdqval:maximumValidElevationInMeters default = "8850"</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -20907,7 +20907,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumlevationInMeters or dwc:minimumElevationInMeters is bdq:Empty, or if either is not a number; COMPLIANT if the value of dwc:minimumElevationInMeters is a number less than or equal to the value of the number dwc:maximumElevationInMeters, otherwise NOT_COMPLIANT</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumlevationInMeters or dwc:minimumElevationInMeters is bdqval:Empty, or if either is not a number; COMPLIANT if the value of dwc:minimumElevationInMeters is a number less than or equal to the value of the number dwc:maximumElevationInMeters, otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -21006,7 +21006,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:month is bdq:Empty; COMPLIANT if the value of dwc:month is interpretable as an integer between 1 and 12 inclusive; otherwise NOT_COMPLIANT</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:month is bdqval:Empty; COMPLIANT if the value of dwc:month is interpretable as an integer between 1 and 12 inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -21101,7 +21101,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>COMPLIANT if dwc:namePublishedInYear is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+			<td>COMPLIANT if dwc:namePublishedInYear is bdqval:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -21113,7 +21113,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:namePublishedInYear="2024": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:namePublishedInYear is bdq:NotEmpty"],[dwc:namePublishedInYear="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:namePublishedInYear is bdq:Empty"]</td>
+			<td>[dwc:namePublishedInYear="2024": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:namePublishedInYear is bdqval:NotEmpty"],[dwc:namePublishedInYear="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:namePublishedInYear is bdqval:Empty"]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -21196,7 +21196,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>COMPLIANT if dwc:occurrenceID is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+			<td>COMPLIANT if dwc:occurrenceID is bdqval:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -21208,7 +21208,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:occurrenceID="https://www.inaturalist.org/observations/43047701": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:occurrenceID conforms to GUID structure"],[dwc:occurrenceID="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:occurrenceID is bdq:Empty"]</td>
+			<td>[dwc:occurrenceID="https://www.inaturalist.org/observations/43047701": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:occurrenceID conforms to GUID structure"],[dwc:occurrenceID="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:occurrenceID is bdqval:Empty"]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -21291,7 +21291,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>COMPLIANT if dwc:occurrenceStatus is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+			<td>COMPLIANT if dwc:occurrenceStatus is bdqval:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -21303,7 +21303,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:occurrenceStatus="?": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:occurrenceStatus is bdq:NotEmpty"],[dwc:occurrenceStatus="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:occurrenceStatus is bdq:Empty"]</td>
+			<td>[dwc:occurrenceStatus="?": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:occurrenceStatus is bdqval:NotEmpty"],[dwc:occurrenceStatus="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:occurrenceStatus is bdqval:Empty"]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -21382,11 +21382,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Does the value of dwc:occurrenceStatus occur in the bdq:sourceAuthority?</td>
+			<td>Does the value of dwc:occurrenceStatus occur in the bdqval:sourceAuthority?</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdq:Empty; COMPLIANT if the value of dwc:occurrenceStatus is resolved in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdqval:Empty; COMPLIANT if the value of dwc:occurrenceStatus is resolved in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -21398,11 +21398,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Parameters</td>
-			<td>bdq:sourceAuthority</td>
+			<td>bdqval:sourceAuthority</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "Regex present/absent" {["^(present\</td>
+			<td>bdqval:sourceAuthority default = "Regex present/absent" {["^(present\</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -21410,7 +21410,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:occurrenceStatus="present": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:occurrenceStatus matches a term in the bdq:sourceAuthority"],[dwc:occurrenceStatus="presence": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:occurrenceStatus does not match a term in the bdq:sourceAuthority"]</td>
+			<td>[dwc:occurrenceStatus="present": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:occurrenceStatus matches a term in the bdqval:sourceAuthority"],[dwc:occurrenceStatus="presence": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:occurrenceStatus does not match a term in the bdqval:sourceAuthority"]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -21493,11 +21493,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Does the value of dwc:order occur at the rank of Order in bdq:sourceAuthority?</td>
+			<td>Does the value of dwc:order occur at the rank of Order in bdqval:sourceAuthority?</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:order is bdq:Empty; COMPLIANT if the value of dwc:order is found as a value at the rank of Order in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:order is bdqval:Empty; COMPLIANT if the value of dwc:order is found as a value at the rank of Order in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -21509,11 +21509,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Parameters</td>
-			<td>bdq:sourceAuthority</td>
+			<td>bdqval:sourceAuthority</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
+			<td>bdqval:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -21521,7 +21521,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:order="Lepidoptera": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:order has an equivalent at the rank of Order in the bdq:sourceAuthority"],[dwc:order="Nymphalidae": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:order does not have an equivalent at the rank of Order in the bdq:sourceAuthority. Nymphalidae is a family, not an order"]</td>
+			<td>[dwc:order="Lepidoptera": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:order has an equivalent at the rank of Order in the bdqval:sourceAuthority"],[dwc:order="Nymphalidae": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:order does not have an equivalent at the rank of Order in the bdqval:sourceAuthority. Nymphalidae is a family, not an order"]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -21608,11 +21608,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Does the value of dwc:pathway occur in the bdq:sourceAuthority?</td>
+			<td>Does the value of dwc:pathway occur in the bdqval:sourceAuthority?</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:pathway is bdq:Empty; COMPLIANT if the value of dwc:pathway is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:pathway is bdqval:Empty; COMPLIANT if the value of dwc:pathway is in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -21624,11 +21624,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Parameters</td>
-			<td>bdq:sourceAuthority</td>
+			<td>bdqval:sourceAuthority</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "Pathway Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/pw/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/Pathway/concepts]}</td>
+			<td>bdqval:sourceAuthority default = "Pathway Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/pw/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/Pathway/concepts]}</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -21636,7 +21636,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:pathway="transportStowaway": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:pathway found in the bdq:sourceAuthority"],[dwc:pathway="escapee": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:pathway not found in the bdq:sourceAuthority"]</td>
+			<td>[dwc:pathway="transportStowaway": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:pathway found in the bdqval:sourceAuthority"],[dwc:pathway="escapee": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:pathway not found in the bdqval:sourceAuthority"]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -21723,11 +21723,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Does the value of dwc:phylum occur at the rank of Phylum in the bdq:sourceAuthority?</td>
+			<td>Does the value of dwc:phylum occur at the rank of Phylum in the bdqval:sourceAuthority?</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:phylum is bdq:Empty; COMPLIANT if the value of dwc:phylum is found as a value at the rank of Phylum in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:phylum is bdqval:Empty; COMPLIANT if the value of dwc:phylum is found as a value at the rank of Phylum in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -21739,11 +21739,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Parameters</td>
-			<td>bdq:sourceAuthority</td>
+			<td>bdqval:sourceAuthority</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
+			<td>bdqval:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -21751,7 +21751,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:phylum="Tracheophyta": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:phylum has an equivalent at the rank of Phylum in the bdq:sourceAuthority. GBIF.org uses Trachyophyta for the Phylum including ferns"],[dwc:phylum="Trachyophyta": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:phylum does not have an equivalent at the rank of Phylum in the bdq:sourceAuthority."]</td>
+			<td>[dwc:phylum="Tracheophyta": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:phylum has an equivalent at the rank of Phylum in the bdqval:sourceAuthority. GBIF.org uses Trachyophyta for the Phylum including ferns"],[dwc:phylum="Trachyophyta": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:phylum does not have an equivalent at the rank of Phylum in the bdqval:sourceAuthority."]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -21842,7 +21842,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificName is bdq:Empty, or all of dwc:genericName, dwc:specificEpithet and dwc:infraspecificEpithet are bdq:Empty; COMPLIANT if the polynomial, as represented in dwc:scientificName, is consistent with bdq:NotEmpty values of dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet; otherwise NOT_COMPLIANT.</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificName is bdqval:Empty, or all of dwc:genericName, dwc:specificEpithet and dwc:infraspecificEpithet are bdqval:Empty; COMPLIANT if the polynomial, as represented in dwc:scientificName, is consistent with bdqval:NotEmpty values of dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -21945,7 +21945,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>COMPLIANT if dwc:scientificNameAuthorship is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+			<td>COMPLIANT if dwc:scientificNameAuthorship is bdqval:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -21957,7 +21957,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:scientificNameAuthorship="(Györfi, 1952)": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:scientificNameAuthorship is bdq:NotEmpty"],[dwc:scientificNameAuthorship="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:scientificNameAuthorship is bdq:Empty"]</td>
+			<td>[dwc:scientificNameAuthorship="(Györfi, 1952)": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:scientificNameAuthorship is bdqval:NotEmpty"],[dwc:scientificNameAuthorship="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:scientificNameAuthorship is bdqval:Empty"]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -22040,7 +22040,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is bdq:Empty; COMPLIANT if (1) dwc:scientificNameID is a validly formed LSID, or (2) dwc:scientificNameID is a validly formed URN with at least NID and NSS present, or (3) dwc:scientificNameID is in the form scope:value, or (4) dwc:scientificNameID is a validly formed URI with host and path where path consists of more than just "/"; otherwise NOT_COMPLIANT</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is bdqval:Empty; COMPLIANT if (1) dwc:scientificNameID is a validly formed LSID, or (2) dwc:scientificNameID is a validly formed URN with at least NID and NSS present, or (3) dwc:scientificNameID is in the form scope:value, or (4) dwc:scientificNameID is a validly formed URI with host and path where path consists of more than just "/"; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -22052,7 +22052,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>If any single bdq:sourceAuthority such as GBIF is used, a valid and complete dwc:scientificNameID based on an alternative source authority is unlikely to provide a valid match. A text or number string as a namespace indicator without a URI will be ambiguous. As an example, GBIF's backbone taxonomy dataset can be found at https://doi.org/10.15468/39omei. When referencing a GBIF taxon by GBIF's identifier for that taxon, use the the pseudo-namespace "gbif:" and the form "gbif:{integer}" as the value for dwc:scientificNameID. Note that GBIF currently uses "TaxonID" for this entity. The terms NID, NSS, and URN are all Uniform Resource Identifiers - see the Wikipedia (2024) reference.</td>
+			<td>If any single bdqval:sourceAuthority such as GBIF is used, a valid and complete dwc:scientificNameID based on an alternative source authority is unlikely to provide a valid match. A text or number string as a namespace indicator without a URI will be ambiguous. As an example, GBIF's backbone taxonomy dataset can be found at https://doi.org/10.15468/39omei. When referencing a GBIF taxon by GBIF's identifier for that taxon, use the the pseudo-namespace "gbif:" and the form "gbif:{integer}" as the value for dwc:scientificNameID. Note that GBIF currently uses "TaxonID" for this entity. The terms NID, NSS, and URN are all Uniform Resource Identifiers - see the Wikipedia (2024) reference.</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
@@ -22143,7 +22143,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>COMPLIANT if dwc:scientificNameID is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+			<td>COMPLIANT if dwc:scientificNameID is bdqval:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -22155,7 +22155,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:scientificNameID="8fa58e08-08de-4ac1-b69c-1235340b7001": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:scientificNameID is bdq:NotEmpty"],[dwc:scientificNameID=" ": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:scientificNameID is bdq:Empty"]</td>
+			<td>[dwc:scientificNameID="8fa58e08-08de-4ac1-b69c-1235340b7001": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:scientificNameID is bdqval:NotEmpty"],[dwc:scientificNameID=" ": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:scientificNameID is bdqval:Empty"]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -22238,11 +22238,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Is there a match of the contents of dwc:scientificName with the bdq:sourceAuthority?</td>
+			<td>Is there a match of the contents of dwc:scientificName with the bdqval:sourceAuthority?</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificName is bdq:Empty; COMPLIANT if there is a match of the contents of dwc:scientificName in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificName is bdqval:Empty; COMPLIANT if there is a match of the contents of dwc:scientificName in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -22254,19 +22254,19 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Parameters</td>
-			<td>bdq:sourceAuthority</td>
+			<td>bdqval:sourceAuthority</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
+			<td>bdqval:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>The purpose of this Test is to detect errors in the scientific name but is dependent on the abilities of the parsing of the bdq:sourceAuthority. For research users of biodiversity data doing quality assurance, VALIDATION_TAXON_UNAMBIGUOUS (4c09f127-737b-4686-82a0-7c8e30841590) handles their needs, but for curators of datasets doing quality control, this Test provides a specific subset of targeted data cleaning, making it a valuable Test to include for the quality control case.</td>
+			<td>The purpose of this Test is to detect errors in the scientific name but is dependent on the abilities of the parsing of the bdqval:sourceAuthority. For research users of biodiversity data doing quality assurance, VALIDATION_TAXON_UNAMBIGUOUS (4c09f127-737b-4686-82a0-7c8e30841590) handles their needs, but for curators of datasets doing quality control, this Test provides a specific subset of targeted data cleaning, making it a valuable Test to include for the quality control case.</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:scientificName="Eucalyptus camaldulensis": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:scientificName found in the bdq:sourceAuthority"],[dwc:scientificName="Capulus intort": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:scientificName was not found in the bdq:sourceAuthority"]</td>
+			<td>[dwc:scientificName="Eucalyptus camaldulensis": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:scientificName found in the bdqval:sourceAuthority"],[dwc:scientificName="Capulus intort": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:scientificName was not found in the bdqval:sourceAuthority"]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -22357,7 +22357,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>COMPLIANT if dwc:scientificName is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+			<td>COMPLIANT if dwc:scientificName is bdqval:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -22369,7 +22369,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:scientificName="?": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:scientificName is bdq:NotEmpty"],[dwc:scientificName="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:scientificName is bdq:Empty"]</td>
+			<td>[dwc:scientificName="?": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:scientificName is bdqval:NotEmpty"],[dwc:scientificName="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:scientificName is bdqval:Empty"]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -22452,11 +22452,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Does the value of dwc:sex occur in bdq:sourceAuthority?</td>
+			<td>Does the value of dwc:sex occur in bdqval:sourceAuthority?</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:sex is bdq:Empty; COMPLIANT if the value of dwc:sex is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:sex is bdqval:Empty; COMPLIANT if the value of dwc:sex is in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -22468,11 +22468,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Parameters</td>
-			<td>bdq:sourceAuthority</td>
+			<td>bdqval:sourceAuthority</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "GBIF Sex Vocabulary" [https://api.gbif.org/v1/vocabularies/Sex]} {"dwc:sex vocabulary API" [https://api.gbif.org/v1/vocabularies/Sex/concepts]}</td>
+			<td>bdqval:sourceAuthority default = "GBIF Sex Vocabulary" [https://api.gbif.org/v1/vocabularies/Sex]} {"dwc:sex vocabulary API" [https://api.gbif.org/v1/vocabularies/Sex/concepts]}</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -22480,7 +22480,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:sex="Male": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:sex found in the bdq:sourceAuthority"],[dwc:sex="f": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:sex not found in the bdq:sourceAuthority"]</td>
+			<td>[dwc:sex="Male": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:sex found in the bdqval:sourceAuthority"],[dwc:sex="f": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:sex not found in the bdqval:sourceAuthority"]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -22571,7 +22571,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:startDayOfYear is bdq:Empty or if the value of dwc:startDayOfYear is equal to 366 and (dwc:eventDate is bdq:Empty or the value of dwc:eventDate cannot be interpreted to find single year or a start year in a range); COMPLIANT if the value of dwc:startDayOfYear is an integer between 1 and 365, inclusive, or if the value of dwc:startDayOfYear is 366 and the start year interpreted from dwc:eventDate is a leap year; otherwise NOT_COMPLIANT</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:startDayOfYear is bdqval:Empty or if the value of dwc:startDayOfYear is equal to 366 and (dwc:eventDate is bdqval:Empty or the value of dwc:eventDate cannot be interpreted to find single year or a start year in a range); COMPLIANT if the value of dwc:startDayOfYear is an integer between 1 and 365, inclusive, or if the value of dwc:startDayOfYear is 366 and the start year interpreted from dwc:eventDate is a leap year; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -22670,11 +22670,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Does the value of dwc:stateProvince occur in the bdq:sourceAuthority?</td>
+			<td>Does the value of dwc:stateProvince occur in the bdqval:sourceAuthority?</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:stateProvince is bdq:Empty; COMPLIANT if the value of dwc:stateProvince occurs as an administrative entity that is a child to at least one entity representing an ISO 3166 country-like entity in the bdq:sourceAuthority; otherwise NOT_COMPLIANT</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:stateProvince is bdqval:Empty; COMPLIANT if the value of dwc:stateProvince occurs as an administrative entity that is a child to at least one entity representing an ISO 3166 country-like entity in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -22686,11 +22686,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Parameters</td>
-			<td>bdq:sourceAuthority</td>
+			<td>bdqval:sourceAuthority</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}</td>
+			<td>bdqval:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -22698,7 +22698,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:stateProvince="Florida": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:stateProvince found in bdq:sourceAuthority"],[dwc:stateProvince="Taswegian": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:stateProvince not found in bdq:sourceAuthority"]</td>
+			<td>[dwc:stateProvince="Florida": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:stateProvince found in bdqval:sourceAuthority"],[dwc:stateProvince="Taswegian": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:stateProvince not found in bdqval:sourceAuthority"]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -22789,7 +22789,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>COMPLIANT if dwc:taxonRank is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+			<td>COMPLIANT if dwc:taxonRank is bdqval:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -22801,7 +22801,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:taxonRank="genus": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:taxonRank is bdq:NotEmpty"],[dwc:taxonRank=" ": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:taxonRank is bdq:Empty"]</td>
+			<td>[dwc:taxonRank="genus": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:taxonRank is bdqval:NotEmpty"],[dwc:taxonRank=" ": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:taxonRank is bdqval:Empty"]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -22884,11 +22884,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Does the value of dwc:taxonRank occur in the bdq:sourceAuthority?</td>
+			<td>Does the value of dwc:taxonRank occur in the bdqval:sourceAuthority?</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:taxonRank is bdq:Empty; COMPLIANT if the value of dwc:taxonRank is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:taxonRank is bdqval:Empty; COMPLIANT if the value of dwc:taxonRank is in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -22900,11 +22900,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Parameters</td>
-			<td>bdq:sourceAuthority</td>
+			<td>bdqval:sourceAuthority</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "GBIF TaxonRank Vocabulary" [https://api.gbif.org/v1/vocabularies/TaxonRank]} {"dwc:taxonRank vocabulary API" [https://api.gbif.org/v1/vocabularies/TaxonRank/concepts]}</td>
+			<td>bdqval:sourceAuthority default = "GBIF TaxonRank Vocabulary" [https://api.gbif.org/v1/vocabularies/TaxonRank]} {"dwc:taxonRank vocabulary API" [https://api.gbif.org/v1/vocabularies/TaxonRank/concepts]}</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -22912,7 +22912,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:taxonRank="kingdom": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:taxonRank has an equivalent in the bdq:sourceAuthority"],[dwc:taxonRank="sp.": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:taxonRank does not have an equivalent in the bdq:sourceAuthority"]</td>
+			<td>[dwc:taxonRank="kingdom": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:taxonRank has an equivalent in the bdqval:sourceAuthority"],[dwc:taxonRank="sp.": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:taxonRank does not have an equivalent in the bdqval:sourceAuthority"]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -23003,7 +23003,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>COMPLIANT if at least one term needed to determine the taxon of the entity exists and is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+			<td>COMPLIANT if at least one term needed to determine the taxon of the entity exists and is bdqval:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -23019,7 +23019,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:taxonID="", dwc:scientificNameID="", dwc:acceptedNameUsageID="", dwc:parentNameUsageID="", dwc:originalNameUsageID="", dwc:taxonConceptID="", dwc:scientificName="Eucalyptus gunnii", dwc:higherClassification="", dwc:kingdom="", dwc:phylum="", dwc:class="", dwc:order="", dwc:superfamily="", dwc:tribe="", dwc:subtribe="",dwc:family="", dwc:genus="", dwc:subgenus="", dwc:specificEpithet="", dwc:infraspecificEpithet="", dwc:vernacularName="" : Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="at least enough terms exist that identify that an entity exists"],[dwc:taxonID="", dwc:scientificNameID="", dwc:acceptedNameUsageID="", dwc:parentNameUsageID="", dwc:originalNameUsageID="", dwc:taxonConceptID="", dwc:scientificName="", dwc:higherClassification="", dwc:kingdom="", dwc:phylum="", dwc:class="", dwc:order="", dwc:superfamily="", dwc:tribe="", dwc:subtribe="",dwc:family="", dwc:genus="", dwc:subgenus="", dwc:specificEpithet="", dwc:infraspecificEpithet="", dwc:vernacularName="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="All input fields are bdq:Empty or missing"]</td>
+			<td>[dwc:taxonID="", dwc:scientificNameID="", dwc:acceptedNameUsageID="", dwc:parentNameUsageID="", dwc:originalNameUsageID="", dwc:taxonConceptID="", dwc:scientificName="Eucalyptus gunnii", dwc:higherClassification="", dwc:kingdom="", dwc:phylum="", dwc:class="", dwc:order="", dwc:superfamily="", dwc:tribe="", dwc:subtribe="",dwc:family="", dwc:genus="", dwc:subgenus="", dwc:specificEpithet="", dwc:infraspecificEpithet="", dwc:vernacularName="" : Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="at least enough terms exist that identify that an entity exists"],[dwc:taxonID="", dwc:scientificNameID="", dwc:acceptedNameUsageID="", dwc:parentNameUsageID="", dwc:originalNameUsageID="", dwc:taxonConceptID="", dwc:scientificName="", dwc:higherClassification="", dwc:kingdom="", dwc:phylum="", dwc:class="", dwc:order="", dwc:superfamily="", dwc:tribe="", dwc:subtribe="",dwc:family="", dwc:genus="", dwc:subgenus="", dwc:specificEpithet="", dwc:infraspecificEpithet="", dwc:vernacularName="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="All input fields are bdqval:Empty or missing"]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -23098,11 +23098,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Can the taxon be unambiguously resolved from bdq:sourceAuthority using the available taxon terms?</td>
+			<td>Can the taxon be unambiguously resolved from bdqval:sourceAuthority using the available taxon terms?</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if all of dwc:scientificNameID, dwc:scientificName, dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship, dwc:cultivarEpithet are bdq:Empty; COMPLIANT if (1) dwc:scientificNameID references a single taxon record in the bdq:sourceAuthority, or (2) dwc:scientificNameID is bdq:Empty and dwc:scientificName references a single taxon record in the bdq:sourceAuthority, or (3) if dwc:scientificName and dwc:scientificNameID are bdq:Empty and if a combination of the values of the terms dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:cultivarEpithet, dwc:taxonRank, and dwc:scientificNameAuthorship can be unambiguously resolved to a unique taxon in the bdq:sourceAuthority, or (4) if ambiguity produced by multiple matches in (2) or (3) can be disambiguated to a unique Taxon using the values of dwc:tribe, dwc:subtribe, dwc:subgenus, dwc:genus, dwc:subfamily, dwc:family, dwc:superfamily, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:taxonID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID and dwc:vernacularName; otherwise NOT_COMPLIANT</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if all of dwc:scientificNameID, dwc:scientificName, dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship, dwc:cultivarEpithet are bdqval:Empty; COMPLIANT if (1) dwc:scientificNameID references a single taxon record in the bdqval:sourceAuthority, or (2) dwc:scientificNameID is bdqval:Empty and dwc:scientificName references a single taxon record in the bdqval:sourceAuthority, or (3) if dwc:scientificName and dwc:scientificNameID are bdqval:Empty and if a combination of the values of the terms dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:cultivarEpithet, dwc:taxonRank, and dwc:scientificNameAuthorship can be unambiguously resolved to a unique taxon in the bdqval:sourceAuthority, or (4) if ambiguity produced by multiple matches in (2) or (3) can be disambiguated to a unique Taxon using the values of dwc:tribe, dwc:subtribe, dwc:subgenus, dwc:genus, dwc:subfamily, dwc:family, dwc:superfamily, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:taxonID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID and dwc:vernacularName; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -23114,19 +23114,19 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Parameters</td>
-			<td>bdq:sourceAuthority</td>
+			<td>bdqval:sourceAuthority</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
+			<td>bdqval:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>There are any number of potential controlled vocabularies that might be used for this Test, including local vocabularies and taxon specific vocabularies. If dwc:scientificNameID is bdq:Empty, use dwc:scientificName and dwc:CultivarEpithet to search for a unique taxon. If dwc:scientificName is bdq:Empty, check with the terms that form atomic parts of it (dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:taxonRank, dwc:scientificNameAuthorship), and if more than one match is found, use the remaining terms to try to disambiguate to a single Taxon record. The terms dwc:subgenus, dwc:genus, dwc:family, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:scientificNameID,, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID should not be used to make a match if dwc:scientificNameID and dwc:scientificName or dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:taxonRank, dwc:scientificNameAuthorship are bdq:Empty. Note that Test VALIDATION_SCIENTIFICNAME_FOUND (4c09f127-737b-4686-82a0-7c8e30841590) is a more specific Test for a subset of Information Elements from this Test.</td>
+			<td>There are any number of potential controlled vocabularies that might be used for this Test, including local vocabularies and taxon specific vocabularies. If dwc:scientificNameID is bdqval:Empty, use dwc:scientificName and dwc:CultivarEpithet to search for a unique taxon. If dwc:scientificName is bdqval:Empty, check with the terms that form atomic parts of it (dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:taxonRank, dwc:scientificNameAuthorship), and if more than one match is found, use the remaining terms to try to disambiguate to a single Taxon record. The terms dwc:subgenus, dwc:genus, dwc:family, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:scientificNameID,, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID should not be used to make a match if dwc:scientificNameID and dwc:scientificName or dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:taxonRank, dwc:scientificNameAuthorship are bdqval:Empty. Note that Test VALIDATION_SCIENTIFICNAME_FOUND (4c09f127-737b-4686-82a0-7c8e30841590) is a more specific Test for a subset of Information Elements from this Test.</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:taxonID="", dwc:scientificNameID="", dwc:acceptedNameUsageID="", dwc:originalNameUsageID="", dwc:taxonConceptID="", dwc:scientificName="Triplex rosaria Perry, 1811", dwc:higherClassification="", dwc:kingdom="Animalia", dwc:phylum="mollusca", dwc:class="Gastropoda", dwc:order="", dwc:family="Muricidae", dwc:subfamily="", dwc:genus="Chicoreus", dwc:genericName="Triplex", dwc:subgenus="", dwc:infragenericEpithet="", dwc:specificEpithet="rosarium", dwc:infraspecificEpithet="", dwc:cultivarEpithet="", dwc:vernacularName="", dwc:scientificNameAuthorship="Perry, 1811", dwc:taxonRank="",bdq:sourceAuthority=”marinespecies.org”: Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:scientificName matched to unique taxon record in WoRMS, unique fuzzy match on name and exact match on authorship. "],[dwc:taxonID="", dwc:scientificNameID="", dwc:acceptedNameUsageID="", dwc:originalNameUsageID="", dwc:taxonConceptID="", dwc:scientificName="Graphis", dwc:higherClassification="", dwc:kingdom="", dwc:phylum="", dwc:class="", dwc:order="", dwc:family="", dwc:subfamily="", dwc:genus="", dwc:genericName="", dwc:subgenus="", dwc:infragenericEpithet="", dwc:specificEpithet="", dwc:infraspecificEpithet="", dwc:cultivarEpithet="", dwc:vernacularName="", dwc:scientificNameAuthorship="", dwc:taxonRank="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:scientificName="Graphis" is ambiguous as could be either a lichen or a gastropod."]</td>
+			<td>[dwc:taxonID="", dwc:scientificNameID="", dwc:acceptedNameUsageID="", dwc:originalNameUsageID="", dwc:taxonConceptID="", dwc:scientificName="Triplex rosaria Perry, 1811", dwc:higherClassification="", dwc:kingdom="Animalia", dwc:phylum="mollusca", dwc:class="Gastropoda", dwc:order="", dwc:family="Muricidae", dwc:subfamily="", dwc:genus="Chicoreus", dwc:genericName="Triplex", dwc:subgenus="", dwc:infragenericEpithet="", dwc:specificEpithet="rosarium", dwc:infraspecificEpithet="", dwc:cultivarEpithet="", dwc:vernacularName="", dwc:scientificNameAuthorship="Perry, 1811", dwc:taxonRank="",bdqval:sourceAuthority=”marinespecies.org”: Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:scientificName matched to unique taxon record in WoRMS, unique fuzzy match on name and exact match on authorship. "],[dwc:taxonID="", dwc:scientificNameID="", dwc:acceptedNameUsageID="", dwc:originalNameUsageID="", dwc:taxonConceptID="", dwc:scientificName="Graphis", dwc:higherClassification="", dwc:kingdom="", dwc:phylum="", dwc:class="", dwc:order="", dwc:family="", dwc:subfamily="", dwc:genus="", dwc:genericName="", dwc:subgenus="", dwc:infragenericEpithet="", dwc:specificEpithet="", dwc:infraspecificEpithet="", dwc:cultivarEpithet="", dwc:vernacularName="", dwc:scientificNameAuthorship="", dwc:taxonRank="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:scientificName="Graphis" is ambiguous as could be either a lichen or a gastropod."]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -23213,11 +23213,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Does the value of dwc:typeStatus occur in bdq:sourceAuthority?</td>
+			<td>Does the value of dwc:typeStatus occur in bdqval:sourceAuthority?</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdq:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:typeStatus is bdq:Empty; COMPLIANT if the value of the first word in each &#124; delimited portion of dwc:typeStatus is in the bdq:sourceAuthority; otherwise NOT_COMPLIANT.</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:typeStatus is bdqval:Empty; COMPLIANT if the value of the first word in each &#124; delimited portion of dwc:typeStatus is in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -23229,11 +23229,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Parameters</td>
-			<td>bdq:sourceAuthority</td>
+			<td>bdqval:sourceAuthority</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:sourceAuthority default = "GBIF TypeStatus Vocabulary" {[https://api.gbif.org/v1/vocabularies/TypeStatus]} {dwc:typeStatus vocabulary API [https://api.gbif.org/v1/vocabularies/TypeStatus/concepts]}</td>
+			<td>bdqval:sourceAuthority default = "GBIF TypeStatus Vocabulary" {[https://api.gbif.org/v1/vocabularies/TypeStatus]} {dwc:typeStatus vocabulary API [https://api.gbif.org/v1/vocabularies/TypeStatus/concepts]}</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -23241,7 +23241,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:typeStatus="Holotype": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:typeStatus found in the bdq:sourceAuthority"],[dwc:typeStatus="cleptotype": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:typeStatus not found in the bdq:sourceAuthority"]</td>
+			<td>[dwc:typeStatus="Holotype": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:typeStatus found in the bdqval:sourceAuthority"],[dwc:typeStatus="cleptotype": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:typeStatus not found in the bdqval:sourceAuthority"]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -23332,7 +23332,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:year is bdq:Empty or cannot be interpreted as an integer; COMPLIANT if the value of dwc:year is within the range bdq:earliestValidDate to bdq:latestValidDate inclusive; otherwise NOT_COMPLIANT</td>
+			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:year is bdqval:Empty or cannot be interpreted as an integer; COMPLIANT if the value of dwc:year is within the range bdqval:earliestValidDate to bdqval:latestValidDate inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -23344,11 +23344,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Parameters</td>
-			<td>bdq:earliestValidDate,bdq:latestValidDate</td>
+			<td>bdqval:earliestValidDate,bdqval:latestValidDate</td>
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td>bdq:earliestValidDate default = "1582",bdq:latestValidDate default = "{current year}"</td>
+			<td>bdqval:earliestValidDate default = "1582",bdqval:latestValidDate default = "{current year}"</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -23443,7 +23443,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>COMPLIANT if dwc:year is bdq:NotEmpty; otherwise NOT_COMPLIANT</td>
+			<td>COMPLIANT if dwc:year is bdqval:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -23455,7 +23455,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:year="1949": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:year is bdq:NotEmpty"],[dwc:year="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:year is bdq:Empty"]</td>
+			<td>[dwc:year="1949": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:year is bdqval:NotEmpty"],[dwc:year="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:year is bdqval:Empty"]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
