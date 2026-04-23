@@ -154,7 +154,7 @@ Is there a value in dwc:basisOfRecord?
 
 #### Expected Response
 
-` COMPLIANT if dwc:basisOfRecord is bdqval:NotEmpty; otherwise NOT_COMPLIANT `
+COMPLIANT if dwc:basisOfRecord is bdqval:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -187,7 +187,7 @@ Does the value of dwc:basisOfRecord occur in the bdqval:sourceAuthority?
 
 #### Expected Response
 
-` EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:basisOfRecord is bdqval:Empty; COMPLIANT if the value of dwc:basisOfRecord is valid in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT `
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:basisOfRecord is bdqval:Empty; COMPLIANT if the value of dwc:basisOfRecord is valid in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -200,7 +200,7 @@ bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdqval:sourceAuthority default = "Darwin Core basisOfRecord" {[https://dwc.tdwg.org/terms/#dwc:basisOfRecord]}{dwc:basisOfRecord vocabulary [https://rs.gbif.org/vocabulary/dwc/basis_of_record.xml]}
+`bdqval:sourceAuthority default = "Darwin Core basisOfRecord" {[https://dwc.tdwg.org/terms/#dwc:basisOfRecord]}{dwc:basisOfRecord vocabulary [https://rs.gbif.org/vocabulary/dwc/basis_of_record.xml]}`
 
 #### Examples
 
@@ -232,7 +232,7 @@ Is there a value in dc:type?
 
 #### Expected Response
 
-` COMPLIANT if dc:type is bdqval:NotEmpty; otherwise NOT_COMPLIANT `
+COMPLIANT if dc:type is bdqval:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -265,7 +265,7 @@ Does the value of dc:type occur as a value in the DCMI type vocabulary?
 
 #### Expected Response
 
-` EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the value of dc:type is bdqval:Empty; COMPLIANT if the value of dc:type is a term name in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT `
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the value of dc:type is bdqval:Empty; COMPLIANT if the value of dc:type is a term name in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -274,7 +274,7 @@ dc:type
 
 #### Source Authority
 
-DCMI Type Vocabulary" {[http://purl.org/dc/terms/DCMIType]} {"DCMI Type Vocabulary List of Terms" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}
+`DCMI Type Vocabulary" {[http://purl.org/dc/terms/DCMIType]} {"DCMI Type Vocabulary List of Terms" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}`
 
 #### Examples
 
@@ -306,7 +306,7 @@ Is there a value in dcterms:license?
 
 #### Expected Response
 
-` COMPLIANT if dcterms:license is bdqval:NotEmpty; otherwise NOT_COMPLIANT `
+COMPLIANT if dcterms:license is bdqval:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -343,7 +343,7 @@ Does the value of dcterms:license occur in bdqval:sourceAuthority?
 
 #### Expected Response
 
-` EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dcterms:license is bdqval:Empty; COMPLIANT if the value of the term dcterms:license is in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT `
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dcterms:license is bdqval:Empty; COMPLIANT if the value of the term dcterms:license is in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -356,7 +356,7 @@ bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdqval:sourceAuthority default = "Creative Commons 4.0 Licenses or CC0" {[https://creativecommons.org/]} { Regular Expression ^(http(s){0,1}://creativecommons.org/licenses/(by&#124;by-sa&#124;by-nc&#124;by-nc-sa&#124;by-nd&#124;by-nc-nd)/4.0/((deed&#124;legalcode)(.(id&#124;eu&#124;da&#124;de&#124;en&#124;es&#124;fr&#124;fy&#124;hr&#124;it&#124;lv&#124;lt&#124;mi&#124;ni&#124;no&#124;pl&#124;pt&#124;ro&#124;si&#124;fi&#124;sv&#124;tr&#124;cs&#124;el&#124;ru&#124;uk&#124;ar&#124;jp&#124;zh-hans&#124;zh-hant&#124;ko)){0,1})&#124;(http(s){0,1}://creativecommons.org/publicdomain/zero/1.0/((deed&#124;legalcode)(.(id&#124;eu&#124;da&#124;de&#124;en&#124;es&#124;fr&#124;fy&#124;hr&#124;it&#124;lv&#124;lt&#124;ni&#124;no&#124;pl&#124;pt&#124;ro&#124;si&#124;fi&#124;sv&#124;tr&#124;cs&#124;el&#124;ru&#124;uk&#124;ar&#124;jp&#124;zh-hans&#124;zh-hant&#124;ko)){0,1})))$ }
+`bdqval:sourceAuthority default = "Creative Commons 4.0 Licenses or CC0" {[https://creativecommons.org/]} { Regular Expression ^(http(s){0,1}://creativecommons.org/licenses/(by&#124;by-sa&#124;by-nc&#124;by-nc-sa&#124;by-nd&#124;by-nc-nd)/4.0/((deed&#124;legalcode)(.(id&#124;eu&#124;da&#124;de&#124;en&#124;es&#124;fr&#124;fy&#124;hr&#124;it&#124;lv&#124;lt&#124;mi&#124;ni&#124;no&#124;pl&#124;pt&#124;ro&#124;si&#124;fi&#124;sv&#124;tr&#124;cs&#124;el&#124;ru&#124;uk&#124;ar&#124;jp&#124;zh-hans&#124;zh-hant&#124;ko)){0,1})&#124;(http(s){0,1}://creativecommons.org/publicdomain/zero/1.0/((deed&#124;legalcode)(.(id&#124;eu&#124;da&#124;de&#124;en&#124;es&#124;fr&#124;fy&#124;hr&#124;it&#124;lv&#124;lt&#124;ni&#124;no&#124;pl&#124;pt&#124;ro&#124;si&#124;fi&#124;sv&#124;tr&#124;cs&#124;el&#124;ru&#124;uk&#124;ar&#124;jp&#124;zh-hans&#124;zh-hant&#124;ko)){0,1})))$ }`
 
 #### Examples
 
@@ -388,7 +388,7 @@ Do the geographic coordinates fall on or within the boundaries of the territory 
 
 #### Expected Response
 
-` EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if one or more of dwc:decimalLatitude, dwc:decimalLongitude, or dwc:countryCode are bdqval:Empty or invalid; COMPLIANT if the geographic coordinates fall on or within the boundary defined by the union of the boundary of the country from dwc:countryCode plus it's Exclusive Economic Zone as found in the bdqval:sourceAuthority, if any, plus an exterior buffer given by bdqval:spatialBufferInMeters; otherwise NOT_COMPLIANT `
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if one or more of dwc:decimalLatitude, dwc:decimalLongitude, or dwc:countryCode are bdqval:Empty or invalid; COMPLIANT if the geographic coordinates fall on or within the boundary defined by the union of the boundary of the country from dwc:countryCode plus it's Exclusive Economic Zone as found in the bdqval:sourceAuthority, if any, plus an exterior buffer given by bdqval:spatialBufferInMeters; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -401,7 +401,7 @@ bdqval:sourceAuthority,bdqval:spatialBufferInMeters
 
 #### Default Parameter Values
 
-bdqval:sourceAuthority default = "10m-admin-1 boundaries UNION with Exclusive Economic Zones" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/] spatial UNION [https://www.marineregions.org/downloads.php#marbound]},bdqval:spatialBufferInMeters default = "3000"
+`bdqval:sourceAuthority default = "10m-admin-1 boundaries UNION with Exclusive Economic Zones" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/] spatial UNION [https://www.marineregions.org/downloads.php#marbound]},bdqval:spatialBufferInMeters default = "3000"`
 
 #### Examples
 
@@ -435,7 +435,7 @@ Do the geographic coordinates fall on or within the boundary from the bdqval:sou
 
 #### Expected Response
 
-` EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the values of dwc:decimalLatitude or dwc:decimalLongitude are bdqval:Empty or invalid, or dwc:stateProvince is bdqval:Empty or not found in the bdqval:sourceAuthority; COMPLIANT if the geographic coordinates fall on or within the boundary in the bdqval:sourceAuthority for the given dwc:stateProvince (after coordinate reference system transformations, if any, have been accounted for), or within the distance given by bdqval:spatialBufferInMeters outside that boundary; otherwise NOT_COMPLIANT. `
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the values of dwc:decimalLatitude or dwc:decimalLongitude are bdqval:Empty or invalid, or dwc:stateProvince is bdqval:Empty or not found in the bdqval:sourceAuthority; COMPLIANT if the geographic coordinates fall on or within the boundary in the bdqval:sourceAuthority for the given dwc:stateProvince (after coordinate reference system transformations, if any, have been accounted for), or within the distance given by bdqval:spatialBufferInMeters outside that boundary; otherwise NOT_COMPLIANT.
 
 #### Information Elements
 
@@ -448,7 +448,7 @@ bdqval:sourceAuthority,bdqval:spatialBufferInMeters
 
 #### Default Parameter Values
 
-bdqval:sourceAuthority default = "10m-admin-1 boundaries" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/]},bdqval:spatialBufferInMeters default = "3000"
+`bdqval:sourceAuthority default = "10m-admin-1 boundaries" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/]},bdqval:spatialBufferInMeters default = "3000"`
 
 #### Examples
 
@@ -480,7 +480,7 @@ Does the marine/non-marine biome of a taxon from the bdqval:sourceAuthority matc
 
 #### Expected Response
 
-` EXTERNAL_PREREQUISITES_NOT_MET if either bdqval:taxonIsMarine or bdqval:geospatialLand are not available; INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:scientificName is bdqval:Empty or (2) the values of dwc:decimalLatitude or dwc:decimalLongitude are bdqval:Empty or (3) if bdqval:assumptionOnUnknownBiome is noassumption and the marine/nonmarine status of the taxon is not interpretable from bdqval:taxonIsMarine; COMPLIANT if (1) the taxon marine/nonmarine status from bdqval:taxonIsMarine matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdqval:geospatialLand plus an exterior buffer given by bdqval:spatialBufferInMeters or (2) if the marine/nonmarine status of the taxon is not interpretable from bdqval:taxonIsMarine and bdqval:assumptionOnUnknownBiome matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdqval:geospatialLand plus an exterior buffer given by bdqval:spatialBufferInMeters; otherwise NOT_COMPLIANT `
+EXTERNAL_PREREQUISITES_NOT_MET if either bdqval:taxonIsMarine or bdqval:geospatialLand are not available; INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:scientificName is bdqval:Empty or (2) the values of dwc:decimalLatitude or dwc:decimalLongitude are bdqval:Empty or (3) if bdqval:assumptionOnUnknownBiome is noassumption and the marine/nonmarine status of the taxon is not interpretable from bdqval:taxonIsMarine; COMPLIANT if (1) the taxon marine/nonmarine status from bdqval:taxonIsMarine matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdqval:geospatialLand plus an exterior buffer given by bdqval:spatialBufferInMeters or (2) if the marine/nonmarine status of the taxon is not interpretable from bdqval:taxonIsMarine and bdqval:assumptionOnUnknownBiome matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdqval:geospatialLand plus an exterior buffer given by bdqval:spatialBufferInMeters; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -496,7 +496,7 @@ bdqval:taxonIsMarine,bdqval:geospatialLand,bdqval:spatialBufferInMeters,bdqval:a
 
 #### Default Parameter Values
 
-bdqval:taxonIsMarine default = "World Register of Marine Species (WoRMS)" {[https://www.marinespecies.org/]} {Web service [https://www.marinespecies.org/aphia.php?p=webservice]},bdqval:geospatialLand default = "Union of NaturalEarth 10m-physical-vectors for Land and NaturalEarth Minor Islands" {[https://naciscdn.org/naturalearth/10m/physical/ne_10m_land.zip], [https://naciscdn.org/naturalearth/10m/physical/ne_10m_minor_islands.zip]},bdqval:spatialBufferInMeters default = "3000",bdqval:assumptionOnUnknownBiome default = "noassumption"
+`bdqval:taxonIsMarine default = "World Register of Marine Species (WoRMS)" {[https://www.marinespecies.org/]} {Web service [https://www.marinespecies.org/aphia.php?p=webservice]},bdqval:geospatialLand default = "Union of NaturalEarth 10m-physical-vectors for Land and NaturalEarth Minor Islands" {[https://naciscdn.org/naturalearth/10m/physical/ne_10m_land.zip], [https://naciscdn.org/naturalearth/10m/physical/ne_10m_minor_islands.zip]},bdqval:spatialBufferInMeters default = "3000",bdqval:assumptionOnUnknownBiome default = "noassumption"`
 
 #### Examples
 
@@ -528,7 +528,7 @@ Are the values of either dwc:decimalLatitude or dwc:decimalLongitude numbers tha
 
 #### Expected Response
 
-` INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLatitude is bdqval:Empty or is not interpretable as a number, or dwc:decimalLongitude is bdqval:Empty or is not interpretable as a number; COMPLIANT if either the value of dwc:decimalLatitude is not = 0 or the value of dwc:decimalLongitude is not = 0; otherwise NOT_COMPLIANT `
+INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLatitude is bdqval:Empty or is not interpretable as a number, or dwc:decimalLongitude is bdqval:Empty or is not interpretable as a number; COMPLIANT if either the value of dwc:decimalLatitude is not = 0 or the value of dwc:decimalLongitude is not = 0; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -565,7 +565,7 @@ Is the value of dwc:coordinateUncertaintyInMeters a number between 1 and 20,037,
 
 #### Expected Response
 
-` INTERNAL_PREREQUISITES_NOT_MET if dwc:coordinateUncertaintyInMeters is bdqval:Empty; COMPLIANT if the value of dwc:coordinateUncertaintyInMeters is interpreted as a number between 1 and 20037509 inclusive; otherwise NOT_COMPLIANT `
+INTERNAL_PREREQUISITES_NOT_MET if dwc:coordinateUncertaintyInMeters is bdqval:Empty; COMPLIANT if the value of dwc:coordinateUncertaintyInMeters is interpreted as a number between 1 and 20037509 inclusive; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -602,7 +602,7 @@ Is there a value in dwc:countryCode?
 
 #### Expected Response
 
-` COMPLIANT if dwc:countryCode is bdqval:NotEmpty; otherwise NOT_COMPLIANT `
+COMPLIANT if dwc:countryCode is bdqval:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -639,7 +639,7 @@ Is the value of dwc:countryCode a valid ISO 3166-1-alpha-2 country code?
 
 #### Expected Response
 
-` EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode is bdqval:Empty; COMPLIANT if dwc:countryCode can be unambiguously interpreted as a valid ISO 3166-1-alpha-2 country code in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT `
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode is bdqval:Empty; COMPLIANT if dwc:countryCode can be unambiguously interpreted as a valid ISO 3166-1-alpha-2 country code in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -648,7 +648,7 @@ dwc:countryCode
 
 #### Source Authority
 
-bdqval:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}
+`bdqval:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}`
 
 #### Examples
 
@@ -680,7 +680,7 @@ Does the ISO country code, determined from the value of dwc:country, equal the v
 
 #### Expected Response
 
-` EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if either of the terms dwc:country or dwc:countryCode are bdqval:Empty; COMPLIANT if the values of dwc:country and dwc:countryCode match national-level country name and matching country code respectively in the bdqval:sourceAuthority `
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if either of the terms dwc:country or dwc:countryCode are bdqval:Empty; COMPLIANT if the values of dwc:country and dwc:countryCode match national-level country name and matching country code respectively in the bdqval:sourceAuthority
 
 #### Information Elements
 
@@ -689,7 +689,7 @@ dwc:country,dwc:countryCode
 
 #### Source Authority
 
-bdqval:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}
+`bdqval:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}`
 
 #### Examples
 
@@ -721,7 +721,7 @@ Is the combination of the values of the terms dwc:country, dwc:stateProvince uni
 
 #### Expected Response
 
-` EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the terms dwc:country and dwc:stateProvince are bdqval:Empty; COMPLIANT if the combination of values of dwc:country and dwc:stateProvince are unambiguously resolved to a single result with a child-parent relationship in the bdqval:sourceAuthority and the entity matching the value of dwc:country in the bdqval:sourceAuthority is an ISO 3166 country-like administrative entity in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT `
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the terms dwc:country and dwc:stateProvince are bdqval:Empty; COMPLIANT if the combination of values of dwc:country and dwc:stateProvince are unambiguously resolved to a single result with a child-parent relationship in the bdqval:sourceAuthority and the entity matching the value of dwc:country in the bdqval:sourceAuthority is an ISO 3166 country-like administrative entity in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -734,7 +734,7 @@ bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdqval:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}
+`bdqval:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}`
 
 #### Examples
 
@@ -766,7 +766,7 @@ Does the value of dwc:country occur in the bdqval:sourceAuthority?
 
 #### Expected Response
 
-` EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:country is bdqval:Empty; COMPLIANT if value of dwc:country is a place type equivalent to administrative entity of "nation" in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT `
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:country is bdqval:Empty; COMPLIANT if value of dwc:country is a place type equivalent to administrative entity of "nation" in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -779,7 +779,7 @@ bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdqval:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}
+`bdqval:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}`
 
 #### Examples
 
@@ -811,7 +811,7 @@ Is there a value in dwc:country?
 
 #### Expected Response
 
-` COMPLIANT if dwc:country is bdqval:NotEmpty or dwc:countryCode has a value of "XZ" and either dwc:country is bdqval:Empty or has a value of "High seas"; otherwise NOT_COMPLIANT `
+COMPLIANT if dwc:country is bdqval:NotEmpty or dwc:countryCode has a value of "XZ" and either dwc:country is bdqval:Empty or has a value of "High seas"; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -851,7 +851,7 @@ Is the value of dwc:decimalLatitude a number between -90 and 90 inclusive?
 
 #### Expected Response
 
-` INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLatitude is bdqval:Empty or the value is not interpretable as a number; COMPLIANT if the value of dwc:decimalLatitude is between -90 and 90, inclusive; otherwise NOT_COMPLIANT `
+INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLatitude is bdqval:Empty or the value is not interpretable as a number; COMPLIANT if the value of dwc:decimalLatitude is between -90 and 90, inclusive; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -884,7 +884,7 @@ Is there a value in dwc:decimalLatitude?
 
 #### Expected Response
 
-` COMPLIANT if dwc:decimalLatitude is bdqval:NotEmpty; otherwise NOT_COMPLIANT `
+COMPLIANT if dwc:decimalLatitude is bdqval:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -917,7 +917,7 @@ Is the value of dwc:decimalLongitude a number between -180 and 180 inclusive?
 
 #### Expected Response
 
-` INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLongitude is bdqval:Empty or the value is not a number; COMPLIANT if the value of dwc:decimalLongitude is between -180 and 180 degrees, inclusive; otherwise NOT_COMPLIANT `
+INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLongitude is bdqval:Empty or the value is not a number; COMPLIANT if the value of dwc:decimalLongitude is between -180 and 180 degrees, inclusive; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -950,7 +950,7 @@ Is there a value in dwc:decimalLongitude?
 
 #### Expected Response
 
-` COMPLIANT if dwc:decimalLongitude is bdqval:NotEmpty; otherwise NOT_COMPLIANT `
+COMPLIANT if dwc:decimalLongitude is bdqval:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -983,7 +983,7 @@ Is there a value in dwc:geodeticDatum?
 
 #### Expected Response
 
-` COMPLIANT if dwc:geodeticDatum is bdqval:NotEmpty; otherwise NOT_COMPLIANT `
+COMPLIANT if dwc:geodeticDatum is bdqval:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -1016,7 +1016,7 @@ Does the value of dwc:geodeticDatum occur as a valid geographic CRS, geodetic Da
 
 #### Expected Response
 
-` EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available, INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdqval:Empty; COMPLIANT if the value of dwc:geodeticDatum is a valid code from the bdqval:sourceAuthority (in the form Authority:Number) for a Datum, or ellipsoid, or for a CRS appropriate for a 2D geographic coordinate in degrees, or is the value "not recorded"; otherwise NOT_COMPLIANT `
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available, INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdqval:Empty; COMPLIANT if the value of dwc:geodeticDatum is a valid code from the bdqval:sourceAuthority (in the form Authority:Number) for a Datum, or ellipsoid, or for a CRS appropriate for a 2D geographic coordinate in degrees, or is the value "not recorded"; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -1025,7 +1025,7 @@ dwc:geodeticDatum
 
 #### Source Authority
 
-bdqval:sourceAuthority = "EPSG" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index]}
+`bdqval:sourceAuthority = "EPSG" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index]}`
 
 #### Examples
 
@@ -1057,7 +1057,7 @@ Is there a value in any of the Darwin Core spatial terms that could specify a lo
 
 #### Expected Response
 
-` COMPLIANT if at least one term needed to determine the location of the entity exists and is bdqval:NotEmpty; otherwise NOT_COMPLIANT `
+COMPLIANT if at least one term needed to determine the location of the entity exists and is bdqval:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -1094,7 +1094,7 @@ Is the value of dwc:maximumDepthInMeters within the Parameter range?
 
 #### Expected Response
 
-` INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumDepthInMeters is bdqval:Empty or is not interpretable as a number greater than or equal to zero; COMPLIANT if the value of dwc:maximumDepthInMeters is within the range of bdqval:minimumValidDepthInMeters to bdqval:maximumValidDepthInMeters inclusive; otherwise NOT_COMPLIANT `
+INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumDepthInMeters is bdqval:Empty or is not interpretable as a number greater than or equal to zero; COMPLIANT if the value of dwc:maximumDepthInMeters is within the range of bdqval:minimumValidDepthInMeters to bdqval:maximumValidDepthInMeters inclusive; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -1107,7 +1107,7 @@ bdqval:minimumValidDepthInMeters,bdqval:maximumValidDepthInMeters
 
 #### Default Parameter Values
 
-bdqval:minimumValidDepthInMeters default="0",bdqval:maximumValidDepthInMeters default="11000"
+`bdqval:minimumValidDepthInMeters default="0",bdqval:maximumValidDepthInMeters default="11000"`
 
 #### Examples
 
@@ -1139,7 +1139,7 @@ Is the value of dwc:maximumElevationInMeters within the Parameter range?
 
 #### Expected Response
 
-` INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumElevationInMeters is bdqval:Empty or the value cannot be interpreted as a number; COMPLIANT if the value of dwc:maximumElevationInMeters is within the range of bdqval:minimumValidElevationInMeters to bdqval:maximumValidElevationInMeters inclusive; otherwise NOT_COMPLIANT `
+INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumElevationInMeters is bdqval:Empty or the value cannot be interpreted as a number; COMPLIANT if the value of dwc:maximumElevationInMeters is within the range of bdqval:minimumValidElevationInMeters to bdqval:maximumValidElevationInMeters inclusive; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -1152,7 +1152,7 @@ bdqval:minimumValidElevationInMeters,bdqval:maximumValidElevationInMeters
 
 #### Default Parameter Values
 
-bdqval:minimumValidElevationInMeters default = "-430",bdqval:maximumValidElevationInMeters default = "8850"
+`bdqval:minimumValidElevationInMeters default = "-430",bdqval:maximumValidElevationInMeters default = "8850"`
 
 #### Examples
 
@@ -1184,7 +1184,7 @@ Is the value of dwc:minimumDepthInMeters within the Parameter range?
 
 #### Expected Response
 
-` INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters is bdqval:Empty, or the value is not interpretable as number greater than or equal to zero; COMPLIANT if the value of dwc:minimumDepthInMeters is within the range of bdqval:minimumValidDepthInMeters to bdqval:maximumValidDepthInMeters inclusive; otherwise NOT_COMPLIANT `
+INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters is bdqval:Empty, or the value is not interpretable as number greater than or equal to zero; COMPLIANT if the value of dwc:minimumDepthInMeters is within the range of bdqval:minimumValidDepthInMeters to bdqval:maximumValidDepthInMeters inclusive; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -1197,7 +1197,7 @@ bdqval:minimumValidDepthInMeters,bdqval:maximumValidDepthInMeters
 
 #### Default Parameter Values
 
-bdqval:minimumValidDepthInMeters default="0",bdqval:maximumValidDepthInMeters default="11000"
+`bdqval:minimumValidDepthInMeters default="0",bdqval:maximumValidDepthInMeters default="11000"`
 
 #### Examples
 
@@ -1229,7 +1229,7 @@ Is the value of dwc:minimumDepthInMeters a number less than or equal to the valu
 
 #### Expected Response
 
-` INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters or dwc:maximumDepthInMeters is bdqval:Empty, or if either are interpretable as not zero or a positive number; COMPLIANT if the value of dwc:minimumDepthInMeters is less than or equal to the value of dwc:maximumDepthInMeters; otherwise NOT_COMPLIANT `
+INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters or dwc:maximumDepthInMeters is bdqval:Empty, or if either are interpretable as not zero or a positive number; COMPLIANT if the value of dwc:minimumDepthInMeters is less than or equal to the value of dwc:maximumDepthInMeters; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -1262,7 +1262,7 @@ Is the value of dwc:minimumElevationInMeters within the Parameter range?
 
 #### Expected Response
 
-` INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumElevationInMeters is bdqval:Empty or the value is not a number; COMPLIANT if the value of dwc:minimumElevationInMeters is within the range of bdqval:minimumValidElevationInMeters to bdqval:maximumValidElevationInMeters inclusive; otherwise NOT_COMPLIANT `
+INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumElevationInMeters is bdqval:Empty or the value is not a number; COMPLIANT if the value of dwc:minimumElevationInMeters is within the range of bdqval:minimumValidElevationInMeters to bdqval:maximumValidElevationInMeters inclusive; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -1275,7 +1275,7 @@ bdqval:minimumValidElevationInMeters,bdqval:maximumValidElevationInMeters
 
 #### Default Parameter Values
 
-bdqval:minimumValidElevationInMeters default = "-430",bdqval:maximumValidElevationInMeters default = "8850"
+`bdqval:minimumValidElevationInMeters default = "-430",bdqval:maximumValidElevationInMeters default = "8850"`
 
 #### Examples
 
@@ -1307,7 +1307,7 @@ Is the value of dwc:minimumElevationInMeters a number less than or equal to the 
 
 #### Expected Response
 
-` INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumlevationInMeters or dwc:minimumElevationInMeters is bdqval:Empty, or if either is not a number; COMPLIANT if the value of dwc:minimumElevationInMeters is a number less than or equal to the value of the number dwc:maximumElevationInMeters, otherwise NOT_COMPLIANT `
+INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumlevationInMeters or dwc:minimumElevationInMeters is bdqval:Empty, or if either is not a number; COMPLIANT if the value of dwc:minimumElevationInMeters is a number less than or equal to the value of the number dwc:maximumElevationInMeters, otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -1340,7 +1340,7 @@ Does the value of dwc:stateProvince occur in the bdqval:sourceAuthority?
 
 #### Expected Response
 
-` EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:stateProvince is bdqval:Empty; COMPLIANT if the value of dwc:stateProvince occurs as an administrative entity that is a child to at least one entity representing an ISO 3166 country-like entity in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT `
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:stateProvince is bdqval:Empty; COMPLIANT if the value of dwc:stateProvince occurs as an administrative entity that is a child to at least one entity representing an ISO 3166 country-like entity in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -1353,7 +1353,7 @@ bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdqval:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}
+`bdqval:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}`
 
 #### Examples
 
@@ -1385,7 +1385,7 @@ Is the value of dwc:day interpretable as a valid integer between 1 and 28 inclus
 
 #### Expected Response
 
-` INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:day is bdqval:Empty, or (2) dwc:day is not interpretable as an integer, or (3) dwc:day is interpretable as an integer between 29 and 31 inclusive and dwc:month is not interpretable as an integer between 1 and 12, or (4) dwc:month is interpretable as the integer 2 and dwc:day is interpretable as the integer 29 and dwc:year is not interpretable as a valid ISO 8601 year; COMPLIANT if (1) the value of dwc:day is interpretable as an integer between 1 and 28 inclusive, or (2) dwc:day is interpretable as an integer between 29 and 30 and dwc:month is interpretable as an integer in the set (4,6,9,11), or (3) dwc:day is interpretable as an integer between 29 and 31 and dwc:month is interpretable as an integer in the set (1,3,5,7,8,10,12), or (4) dwc:day is interpretable as the integer 29 and dwc:month is interpretable as the integer 2 and dwc:year is interpretable as is a valid leap year (evenly divisible by 400 or (evenly divisible by 4 but not evenly divisible by 100)); otherwise NOT_COMPLIANT. `
+INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:day is bdqval:Empty, or (2) dwc:day is not interpretable as an integer, or (3) dwc:day is interpretable as an integer between 29 and 31 inclusive and dwc:month is not interpretable as an integer between 1 and 12, or (4) dwc:month is interpretable as the integer 2 and dwc:day is interpretable as the integer 29 and dwc:year is not interpretable as a valid ISO 8601 year; COMPLIANT if (1) the value of dwc:day is interpretable as an integer between 1 and 28 inclusive, or (2) dwc:day is interpretable as an integer between 29 and 30 and dwc:month is interpretable as an integer in the set (4,6,9,11), or (3) dwc:day is interpretable as an integer between 29 and 31 and dwc:month is interpretable as an integer in the set (1,3,5,7,8,10,12), or (4) dwc:day is interpretable as the integer 29 and dwc:month is interpretable as the integer 2 and dwc:year is interpretable as is a valid leap year (evenly divisible by 400 or (evenly divisible by 4 but not evenly divisible by 100)); otherwise NOT_COMPLIANT.
 
 #### Information Elements
 
@@ -1422,7 +1422,7 @@ Is the value of dwc:day an integer between 1 and 31 inclusive?
 
 #### Expected Response
 
-` INTERNAL_PREREQUISITES_NOT_MET if dwc:day is bdqval:Empty; COMPLIANT if the value of the field dwc:day is an integer between 1 and 31 inclusive; otherwise NOT_COMPLIANT. `
+INTERNAL_PREREQUISITES_NOT_MET if dwc:day is bdqval:Empty; COMPLIANT if the value of the field dwc:day is an integer between 1 and 31 inclusive; otherwise NOT_COMPLIANT.
 
 #### Information Elements
 
@@ -1459,7 +1459,7 @@ Is the value of dwc:endDayOfYear an integer between 1 and 365 inclusive, or 366 
 
 #### Expected Response
 
-` INTERNAL_PREREQUISITES_NOT_MET if dwc:endDayOfYear is bdqval:Empty or if the value of dwc:endDayOfYear is equal to 366 and (dwc:eventDate is bdqval:Empty or the value of dwc:eventDate cannot be interpreted to find a single year or an end year in a range); COMPLIANT if the value of dwc:endDayOfYear is an integer between 1 and 365 inclusive, or if the value of dwc:endDayOfYear is 366 and the end year interpreted from dwc:eventDate is a leap year; otherwise NOT_COMPLIANT `
+INTERNAL_PREREQUISITES_NOT_MET if dwc:endDayOfYear is bdqval:Empty or if the value of dwc:endDayOfYear is equal to 366 and (dwc:eventDate is bdqval:Empty or the value of dwc:eventDate cannot be interpreted to find a single year or an end year in a range); COMPLIANT if the value of dwc:endDayOfYear is an integer between 1 and 365 inclusive, or if the value of dwc:endDayOfYear is 366 and the end year interpreted from dwc:eventDate is a leap year; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -1499,7 +1499,7 @@ Is the value of dwc:eventDate entirely with the Parameter range?
 
 #### Expected Response
 
-` INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdqval:Empty or if the value of dwc:eventDate is not a valid ISO 8601 date; COMPLIANT if the range of dwc:eventDate is entirely within the range bdqval:earliestValidDate to bdqval:latestValidDate, inclusive, otherwise NOT_COMPLIANT `
+INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdqval:Empty or if the value of dwc:eventDate is not a valid ISO 8601 date; COMPLIANT if the range of dwc:eventDate is entirely within the range bdqval:earliestValidDate to bdqval:latestValidDate, inclusive, otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -1512,7 +1512,7 @@ bdqval:earliestValidDate,bdqval:latestValidDate
 
 #### Default Parameter Values
 
-bdqval:earliestValidDate default ="1582-11-15",bdqval:latestValidDate default = "{current year}"
+`bdqval:earliestValidDate default ="1582-11-15",bdqval:latestValidDate default = "{current year}"`
 
 #### Examples
 
@@ -1544,7 +1544,7 @@ Is there a value in dwc:eventDate?
 
 #### Expected Response
 
-` COMPLIANT if dwc:eventDate is bdqval:NotEmpty; otherwise NOT_COMPLIANT `
+COMPLIANT if dwc:eventDate is bdqval:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -1577,7 +1577,7 @@ Is the value of dwc:eventDate a valid ISO date?
 
 #### Expected Response
 
-` INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdqval:Empty; COMPLIANT if the value of dwc:eventDate is a valid ISO 8601 date; otherwise NOT_COMPLIANT `
+INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdqval:Empty; COMPLIANT if the value of dwc:eventDate is a valid ISO 8601 date; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -1614,7 +1614,7 @@ Is there a value in any of the terms dwc:eventDate, dwc:year, dwc:month, dwc:day
 
 #### Expected Response
 
-` COMPLIANT if any of dwc:eventDate, dwc:year, dwc:month, dwc:day, dwc:startDayOfYear, dwc:endDayOfYear, dwc:verbatimEventDate are bdqval:NotEmpty; otherwise NOT_COMPLIANT. `
+COMPLIANT if any of dwc:eventDate, dwc:year, dwc:month, dwc:day, dwc:startDayOfYear, dwc:endDayOfYear, dwc:verbatimEventDate are bdqval:NotEmpty; otherwise NOT_COMPLIANT.
 
 #### Information Elements
 
@@ -1651,7 +1651,7 @@ Are the values in dwc:eventDate consistent with the values in dwc:year, dwc:mont
 
 #### Expected Response
 
-` INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdqval:Empty, or all of dwc:year, dwc:month, dwc:day, dwc:startDayOfYear and dwc:endDayOfYear are bdqval:Empty; COMPLIANT if all of the following conditions are met (1) dwc:year is bdqval:Empty or dwc:eventDate has a precision of one year or finer and and is within a single year and the provided value of dwc:year matches the year expressed in dwc:eventDate, and (2) dwc:month is bdqval:Empty or dwc:eventDate has a precision of one month or finer and is within a single month and the provided value in dwc:month matches the month represented by dwc:eventDate, and (3) dwc:day is bdqval:Empty or dwc:eventDate has a precision of a day or less and is within a single day and the provided value in dwc:day matches the day represented by dwc:eventDate, and (4) dwc:startDayOfYear is empty or dwc:eventDate has a precision of one day or finer and the provided value in dwc:startDayOfYear matches the start day of the year of the range represented by dwc:eventDate, and (5) dwc:endDayOfYear is empty or dwc:eventDate has a precision of one day or finer and the provided value in dwc:endDayOfYear matches the end day of the year of the range represented by dwc:eventDate; otherwise NOT_COMPLIANT. `
+INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdqval:Empty, or all of dwc:year, dwc:month, dwc:day, dwc:startDayOfYear and dwc:endDayOfYear are bdqval:Empty; COMPLIANT if all of the following conditions are met (1) dwc:year is bdqval:Empty or dwc:eventDate has a precision of one year or finer and and is within a single year and the provided value of dwc:year matches the year expressed in dwc:eventDate, and (2) dwc:month is bdqval:Empty or dwc:eventDate has a precision of one month or finer and is within a single month and the provided value in dwc:month matches the month represented by dwc:eventDate, and (3) dwc:day is bdqval:Empty or dwc:eventDate has a precision of a day or less and is within a single day and the provided value in dwc:day matches the day represented by dwc:eventDate, and (4) dwc:startDayOfYear is empty or dwc:eventDate has a precision of one day or finer and the provided value in dwc:startDayOfYear matches the start day of the year of the range represented by dwc:eventDate, and (5) dwc:endDayOfYear is empty or dwc:eventDate has a precision of one day or finer and the provided value in dwc:endDayOfYear matches the end day of the year of the range represented by dwc:eventDate; otherwise NOT_COMPLIANT.
 
 #### Information Elements
 
@@ -1688,7 +1688,7 @@ Is the value of dwc:month interpretable as an integer between 1 and 12 inclusive
 
 #### Expected Response
 
-` INTERNAL_PREREQUISITES_NOT_MET if dwc:month is bdqval:Empty; COMPLIANT if the value of dwc:month is interpretable as an integer between 1 and 12 inclusive; otherwise NOT_COMPLIANT `
+INTERNAL_PREREQUISITES_NOT_MET if dwc:month is bdqval:Empty; COMPLIANT if the value of dwc:month is interpretable as an integer between 1 and 12 inclusive; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -1721,7 +1721,7 @@ Is the value of dwc:startDayOfYear an integer between 1 and 365 inclusive, or 36
 
 #### Expected Response
 
-` INTERNAL_PREREQUISITES_NOT_MET if dwc:startDayOfYear is bdqval:Empty or if the value of dwc:startDayOfYear is equal to 366 and (dwc:eventDate is bdqval:Empty or the value of dwc:eventDate cannot be interpreted to find single year or a start year in a range); COMPLIANT if the value of dwc:startDayOfYear is an integer between 1 and 365, inclusive, or if the value of dwc:startDayOfYear is 366 and the start year interpreted from dwc:eventDate is a leap year; otherwise NOT_COMPLIANT `
+INTERNAL_PREREQUISITES_NOT_MET if dwc:startDayOfYear is bdqval:Empty or if the value of dwc:startDayOfYear is equal to 366 and (dwc:eventDate is bdqval:Empty or the value of dwc:eventDate cannot be interpreted to find single year or a start year in a range); COMPLIANT if the value of dwc:startDayOfYear is an integer between 1 and 365, inclusive, or if the value of dwc:startDayOfYear is 366 and the start year interpreted from dwc:eventDate is a leap year; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -1761,7 +1761,7 @@ Is the value of dwc:year within the Parameter range?
 
 #### Expected Response
 
-` INTERNAL_PREREQUISITES_NOT_MET if dwc:year is bdqval:Empty or cannot be interpreted as an integer; COMPLIANT if the value of dwc:year is within the range bdqval:earliestValidDate to bdqval:latestValidDate inclusive; otherwise NOT_COMPLIANT `
+INTERNAL_PREREQUISITES_NOT_MET if dwc:year is bdqval:Empty or cannot be interpreted as an integer; COMPLIANT if the value of dwc:year is within the range bdqval:earliestValidDate to bdqval:latestValidDate inclusive; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -1774,7 +1774,7 @@ bdqval:earliestValidDate,bdqval:latestValidDate
 
 #### Default Parameter Values
 
-bdqval:earliestValidDate default = "1582",bdqval:latestValidDate default = "{current year}"
+`bdqval:earliestValidDate default = "1582",bdqval:latestValidDate default = "{current year}"`
 
 #### Examples
 
@@ -1806,7 +1806,7 @@ Is there a value in dwc:year?
 
 #### Expected Response
 
-` COMPLIANT if dwc:year is bdqval:NotEmpty; otherwise NOT_COMPLIANT `
+COMPLIANT if dwc:year is bdqval:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -1839,7 +1839,7 @@ Is the value of dwc:dateIdentified within Parameters range and does it overlap w
 
 #### Expected Response
 
-` INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:dateIdentified is bdqval:Empty, or (2) dwc:dateIdentified contains an invalid value according to ISO 8601, or (3) bdqval:includeEventDate=true and dwc:eventDate is not a valid ISO 8601 date; COMPLIANT if the value of dwc:dateIdentified is between bdqval:earliestValidDate and bdqval:latestValidDate inclusive and either (1) dwc:eventDate is bdqval:Empty or bdqval:includeEventDate=false, or (2) if dwc:eventDate is a valid ISO 8601 date and dwc:dateIdentified overlaps or is later than the dwc:eventDate; otherwise NOT_COMPLIANT `
+INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:dateIdentified is bdqval:Empty, or (2) dwc:dateIdentified contains an invalid value according to ISO 8601, or (3) bdqval:includeEventDate=true and dwc:eventDate is not a valid ISO 8601 date; COMPLIANT if the value of dwc:dateIdentified is between bdqval:earliestValidDate and bdqval:latestValidDate inclusive and either (1) dwc:eventDate is bdqval:Empty or bdqval:includeEventDate=false, or (2) if dwc:eventDate is a valid ISO 8601 date and dwc:dateIdentified overlaps or is later than the dwc:eventDate; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -1855,7 +1855,7 @@ bdqval:earliestValidDate,bdqval:latestValidDate,bdqval:includeEventDate
 
 #### Default Parameter Values
 
-bdqval:earliestValidDate default = "1753-01-01",bdqval:latestValidDate default = "{current day}",bdqval:includeEventDate default = "true"
+`bdqval:earliestValidDate default = "1753-01-01",bdqval:latestValidDate default = "{current day}",bdqval:includeEventDate default = "true"`
 
 #### Examples
 
@@ -1887,7 +1887,7 @@ Is the value of dwc:dateIdentified a valid ISO date?
 
 #### Expected Response
 
-` INTERNAL_PREREQUISITES_NOT_MET if dwc:dateIdentified is bdqval:Empty; COMPLIANT if the value of dwc:dateIdentified contains a valid ISO 8601 date; otherwise NOT_COMPLIANT `
+INTERNAL_PREREQUISITES_NOT_MET if dwc:dateIdentified is bdqval:Empty; COMPLIANT if the value of dwc:dateIdentified contains a valid ISO 8601 date; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -1920,7 +1920,7 @@ Does the value of dwc:degreeOfEstablishment occur in the bdqval:sourceAuthority?
 
 #### Expected Response
 
-` EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:degreeOfEstablishment is bdqval:Empty; COMPLIANT if the value of dwc:degreeOfEstablishment is in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT. `
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:degreeOfEstablishment is bdqval:Empty; COMPLIANT if the value of dwc:degreeOfEstablishment is in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT.
 
 #### Information Elements
 
@@ -1933,7 +1933,7 @@ bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdqval:sourceAuthority default = "Degree of Establishment Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/doe/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/DegreeOfEstablishment/concepts]}
+`bdqval:sourceAuthority default = "Degree of Establishment Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/doe/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/DegreeOfEstablishment/concepts]}`
 
 #### Examples
 
@@ -1965,7 +1965,7 @@ Does the value of dwc:establishmentMeans occur in the bdqval:sourceAuthority?
 
 #### Expected Response
 
-` EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:establishmentMeans is bdqval:Empty; COMPLIANT if the value of dwc:establishmentMeans is in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT. `
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:establishmentMeans is bdqval:Empty; COMPLIANT if the value of dwc:establishmentMeans is in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT.
 
 #### Information Elements
 
@@ -1978,7 +1978,7 @@ bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdqval:sourceAuthority default = "Establishment Means Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/em/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/EstablishmentMeans/concepts]}
+`bdqval:sourceAuthority default = "Establishment Means Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/em/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/EstablishmentMeans/concepts]}`
 
 #### Examples
 
@@ -2010,7 +2010,7 @@ Is there a value in dwc:occurrenceID?
 
 #### Expected Response
 
-` COMPLIANT if dwc:occurrenceID is bdqval:NotEmpty; otherwise NOT_COMPLIANT `
+COMPLIANT if dwc:occurrenceID is bdqval:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -2043,7 +2043,7 @@ Is there a value in dwc:occurrenceStatus?
 
 #### Expected Response
 
-` COMPLIANT if dwc:occurrenceStatus is bdqval:NotEmpty; otherwise NOT_COMPLIANT `
+COMPLIANT if dwc:occurrenceStatus is bdqval:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -2076,7 +2076,7 @@ Does the value of dwc:occurrenceStatus occur in the bdqval:sourceAuthority?
 
 #### Expected Response
 
-` EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdqval:Empty; COMPLIANT if the value of dwc:occurrenceStatus is resolved in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT `
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdqval:Empty; COMPLIANT if the value of dwc:occurrenceStatus is resolved in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -2089,7 +2089,7 @@ bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdqval:sourceAuthority default = "Regex present/absent" {["^(present\
+`bdqval:sourceAuthority default = "Regex present/absent" {["^(present\`
 
 #### Examples
 
@@ -2121,7 +2121,7 @@ Does the value of dwc:pathway occur in the bdqval:sourceAuthority?
 
 #### Expected Response
 
-` EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:pathway is bdqval:Empty; COMPLIANT if the value of dwc:pathway is in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT. `
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:pathway is bdqval:Empty; COMPLIANT if the value of dwc:pathway is in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT.
 
 #### Information Elements
 
@@ -2134,7 +2134,7 @@ bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdqval:sourceAuthority default = "Pathway Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/pw/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/Pathway/concepts]}
+`bdqval:sourceAuthority default = "Pathway Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/pw/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/Pathway/concepts]}`
 
 #### Examples
 
@@ -2166,7 +2166,7 @@ Does the value of dwc:sex occur in bdqval:sourceAuthority?
 
 #### Expected Response
 
-` EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:sex is bdqval:Empty; COMPLIANT if the value of dwc:sex is in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT. `
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:sex is bdqval:Empty; COMPLIANT if the value of dwc:sex is in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT.
 
 #### Information Elements
 
@@ -2179,7 +2179,7 @@ bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdqval:sourceAuthority default = "GBIF Sex Vocabulary" [https://api.gbif.org/v1/vocabularies/Sex]} {"dwc:sex vocabulary API" [https://api.gbif.org/v1/vocabularies/Sex/concepts]}
+`bdqval:sourceAuthority default = "GBIF Sex Vocabulary" [https://api.gbif.org/v1/vocabularies/Sex]} {"dwc:sex vocabulary API" [https://api.gbif.org/v1/vocabularies/Sex/concepts]}`
 
 #### Examples
 
@@ -2211,7 +2211,7 @@ Does the value of dwc:typeStatus occur in bdqval:sourceAuthority?
 
 #### Expected Response
 
-` EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:typeStatus is bdqval:Empty; COMPLIANT if the value of the first word in each &#124; delimited portion of dwc:typeStatus is in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT. `
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:typeStatus is bdqval:Empty; COMPLIANT if the value of the first word in each &#124; delimited portion of dwc:typeStatus is in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT.
 
 #### Information Elements
 
@@ -2224,7 +2224,7 @@ bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdqval:sourceAuthority default = "GBIF TypeStatus Vocabulary" {[https://api.gbif.org/v1/vocabularies/TypeStatus]} {dwc:typeStatus vocabulary API [https://api.gbif.org/v1/vocabularies/TypeStatus/concepts]}
+`bdqval:sourceAuthority default = "GBIF TypeStatus Vocabulary" {[https://api.gbif.org/v1/vocabularies/TypeStatus]} {dwc:typeStatus vocabulary API [https://api.gbif.org/v1/vocabularies/TypeStatus/concepts]}`
 
 #### Examples
 
@@ -2256,7 +2256,7 @@ Is the combination of higher classification taxonomic terms consistent using bdq
 
 #### Expected Response
 
-` EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if all of the fields dwc:kingdom dwc:phylum, dwc:class, dwc:order, dwc:superfamily, dwc:family, dwc:subfamily, dwc:tribe, dwc:subtribe, dwc:genus are bdqval:Empty; COMPLIANT if the combination of values of higher classification taxonomic terms (dwc:kingdom, dwc:phylum, dwc:class, dwc:order, dwc:superfamily, dwc:family, dwc:subfamily, dwc:tribe, dwc:subtribe, dwc:genus) are consistent with the lowest ranking matched element in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT `
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if all of the fields dwc:kingdom dwc:phylum, dwc:class, dwc:order, dwc:superfamily, dwc:family, dwc:subfamily, dwc:tribe, dwc:subtribe, dwc:genus are bdqval:Empty; COMPLIANT if the combination of values of higher classification taxonomic terms (dwc:kingdom, dwc:phylum, dwc:class, dwc:order, dwc:superfamily, dwc:family, dwc:subfamily, dwc:tribe, dwc:subtribe, dwc:genus) are consistent with the lowest ranking matched element in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -2269,7 +2269,7 @@ bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdqval:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
+`bdqval:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}`
 
 #### Examples
 
@@ -2301,7 +2301,7 @@ Does the value of dwc:class occur at the rank of Class in bdqval:sourceAuthority
 
 #### Expected Response
 
-` EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:class is bdqval:Empty; COMPLIANT if the value of dwc:class is found as a value at the rank of Class in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT `
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:class is bdqval:Empty; COMPLIANT if the value of dwc:class is found as a value at the rank of Class in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -2314,7 +2314,7 @@ bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdqval:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
+`bdqval:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}`
 
 #### Examples
 
@@ -2346,7 +2346,7 @@ Does the value of dwc:family occur at the rank of Family in the bdqval:sourceAut
 
 #### Expected Response
 
-` EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:family is bdqval:Empty; COMPLIANT if the value of dwc:family is found as a value at the rank of Family in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT `
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:family is bdqval:Empty; COMPLIANT if the value of dwc:family is found as a value at the rank of Family in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -2359,7 +2359,7 @@ bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdqval:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
+`bdqval:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}`
 
 #### Examples
 
@@ -2391,7 +2391,7 @@ Does the value of dwc:genus occur at the rank of Genus in the bdqval:sourceAutho
 
 #### Expected Response
 
-` EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:genus is bdqval:Empty; COMPLIANT if the value of dwc:genus is found as a value at the rank of genus in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT `
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:genus is bdqval:Empty; COMPLIANT if the value of dwc:genus is found as a value at the rank of genus in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -2404,7 +2404,7 @@ bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdqval:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
+`bdqval:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}`
 
 #### Examples
 
@@ -2436,7 +2436,7 @@ Does the value of dwc:kingdom occur at the rank of Kingdom in the bdqval:sourceA
 
 #### Expected Response
 
-` EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:kingdom is bdqval:Empty; COMPLIANT if the value of dwc:kingdom is found as a value at the rank of kingdom in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT `
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:kingdom is bdqval:Empty; COMPLIANT if the value of dwc:kingdom is found as a value at the rank of kingdom in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -2449,7 +2449,7 @@ bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdqval:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
+`bdqval:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}`
 
 #### Examples
 
@@ -2481,7 +2481,7 @@ Is there a value in dwc:kingdom?
 
 #### Expected Response
 
-` COMPLIANT if dwc:kingdom is bdqval:NotEmpty; otherwise NOT_COMPLIANT `
+COMPLIANT if dwc:kingdom is bdqval:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -2514,7 +2514,7 @@ Is there a value in dwc:namePublishedInYear?
 
 #### Expected Response
 
-` COMPLIANT if dwc:namePublishedInYear is bdqval:NotEmpty; otherwise NOT_COMPLIANT `
+COMPLIANT if dwc:namePublishedInYear is bdqval:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -2547,7 +2547,7 @@ Does the value of dwc:order occur at the rank of Order in bdqval:sourceAuthority
 
 #### Expected Response
 
-` EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:order is bdqval:Empty; COMPLIANT if the value of dwc:order is found as a value at the rank of Order in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT `
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:order is bdqval:Empty; COMPLIANT if the value of dwc:order is found as a value at the rank of Order in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -2560,7 +2560,7 @@ bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdqval:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
+`bdqval:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}`
 
 #### Examples
 
@@ -2592,7 +2592,7 @@ Does the value of dwc:phylum occur at the rank of Phylum in the bdqval:sourceAut
 
 #### Expected Response
 
-` EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:phylum is bdqval:Empty; COMPLIANT if the value of dwc:phylum is found as a value at the rank of Phylum in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT `
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:phylum is bdqval:Empty; COMPLIANT if the value of dwc:phylum is found as a value at the rank of Phylum in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -2605,7 +2605,7 @@ bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdqval:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
+`bdqval:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}`
 
 #### Examples
 
@@ -2637,7 +2637,7 @@ Is the polynomial represented in dwc:scientificName consistent with the equivale
 
 #### Expected Response
 
-` INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificName is bdqval:Empty, or all of dwc:genericName, dwc:specificEpithet and dwc:infraspecificEpithet are bdqval:Empty; COMPLIANT if the polynomial, as represented in dwc:scientificName, is consistent with bdqval:NotEmpty values of dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet; otherwise NOT_COMPLIANT. `
+INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificName is bdqval:Empty, or all of dwc:genericName, dwc:specificEpithet and dwc:infraspecificEpithet are bdqval:Empty; COMPLIANT if the polynomial, as represented in dwc:scientificName, is consistent with bdqval:NotEmpty values of dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet; otherwise NOT_COMPLIANT.
 
 #### Information Elements
 
@@ -2674,7 +2674,7 @@ Is there a value in dwc:scientificNameAuthorship?
 
 #### Expected Response
 
-` COMPLIANT if dwc:scientificNameAuthorship is bdqval:NotEmpty; otherwise NOT_COMPLIANT `
+COMPLIANT if dwc:scientificNameAuthorship is bdqval:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -2707,7 +2707,7 @@ Does the value of dwc:scientificNameID contain a complete identifier?
 
 #### Expected Response
 
-` INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is bdqval:Empty; COMPLIANT if (1) dwc:scientificNameID is a validly formed LSID, or (2) dwc:scientificNameID is a validly formed URN with at least NID and NSS present, or (3) dwc:scientificNameID is in the form scope:value, or (4) dwc:scientificNameID is a validly formed URI with host and path where path consists of more than just "/"; otherwise NOT_COMPLIANT `
+INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is bdqval:Empty; COMPLIANT if (1) dwc:scientificNameID is a validly formed LSID, or (2) dwc:scientificNameID is a validly formed URN with at least NID and NSS present, or (3) dwc:scientificNameID is in the form scope:value, or (4) dwc:scientificNameID is a validly formed URI with host and path where path consists of more than just "/"; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -2744,7 +2744,7 @@ Is there a value in dwc:scientificNameID?
 
 #### Expected Response
 
-` COMPLIANT if dwc:scientificNameID is bdqval:NotEmpty; otherwise NOT_COMPLIANT `
+COMPLIANT if dwc:scientificNameID is bdqval:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -2777,7 +2777,7 @@ Is there a match of the contents of dwc:scientificName with the bdqval:sourceAut
 
 #### Expected Response
 
-` EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificName is bdqval:Empty; COMPLIANT if there is a match of the contents of dwc:scientificName in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT `
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificName is bdqval:Empty; COMPLIANT if there is a match of the contents of dwc:scientificName in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -2790,7 +2790,7 @@ bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdqval:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
+`bdqval:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}`
 
 #### Examples
 
@@ -2822,7 +2822,7 @@ Is there a value in dwc:scientificName?
 
 #### Expected Response
 
-` COMPLIANT if dwc:scientificName is bdqval:NotEmpty; otherwise NOT_COMPLIANT `
+COMPLIANT if dwc:scientificName is bdqval:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -2855,7 +2855,7 @@ Is there a value in dwc:taxonRank?
 
 #### Expected Response
 
-` COMPLIANT if dwc:taxonRank is bdqval:NotEmpty; otherwise NOT_COMPLIANT `
+COMPLIANT if dwc:taxonRank is bdqval:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -2888,7 +2888,7 @@ Does the value of dwc:taxonRank occur in the bdqval:sourceAuthority?
 
 #### Expected Response
 
-` EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:taxonRank is bdqval:Empty; COMPLIANT if the value of dwc:taxonRank is in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT. `
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:taxonRank is bdqval:Empty; COMPLIANT if the value of dwc:taxonRank is in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT.
 
 #### Information Elements
 
@@ -2901,7 +2901,7 @@ bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdqval:sourceAuthority default = "GBIF TaxonRank Vocabulary" [https://api.gbif.org/v1/vocabularies/TaxonRank]} {"dwc:taxonRank vocabulary API" [https://api.gbif.org/v1/vocabularies/TaxonRank/concepts]}
+`bdqval:sourceAuthority default = "GBIF TaxonRank Vocabulary" [https://api.gbif.org/v1/vocabularies/TaxonRank]} {"dwc:taxonRank vocabulary API" [https://api.gbif.org/v1/vocabularies/TaxonRank/concepts]}`
 
 #### Examples
 
@@ -2933,7 +2933,7 @@ Is there a value in any of the terms needed to determine that the taxon exists?
 
 #### Expected Response
 
-` COMPLIANT if at least one term needed to determine the taxon of the entity exists and is bdqval:NotEmpty; otherwise NOT_COMPLIANT `
+COMPLIANT if at least one term needed to determine the taxon of the entity exists and is bdqval:NotEmpty; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -2970,7 +2970,7 @@ Can the taxon be unambiguously resolved from bdqval:sourceAuthority using the av
 
 #### Expected Response
 
-` EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if all of dwc:scientificNameID, dwc:scientificName, dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship, dwc:cultivarEpithet are bdqval:Empty; COMPLIANT if (1) dwc:scientificNameID references a single taxon record in the bdqval:sourceAuthority, or (2) dwc:scientificNameID is bdqval:Empty and dwc:scientificName references a single taxon record in the bdqval:sourceAuthority, or (3) if dwc:scientificName and dwc:scientificNameID are bdqval:Empty and if a combination of the values of the terms dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:cultivarEpithet, dwc:taxonRank, and dwc:scientificNameAuthorship can be unambiguously resolved to a unique taxon in the bdqval:sourceAuthority, or (4) if ambiguity produced by multiple matches in (2) or (3) can be disambiguated to a unique Taxon using the values of dwc:tribe, dwc:subtribe, dwc:subgenus, dwc:genus, dwc:subfamily, dwc:family, dwc:superfamily, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:taxonID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID and dwc:vernacularName; otherwise NOT_COMPLIANT `
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if all of dwc:scientificNameID, dwc:scientificName, dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship, dwc:cultivarEpithet are bdqval:Empty; COMPLIANT if (1) dwc:scientificNameID references a single taxon record in the bdqval:sourceAuthority, or (2) dwc:scientificNameID is bdqval:Empty and dwc:scientificName references a single taxon record in the bdqval:sourceAuthority, or (3) if dwc:scientificName and dwc:scientificNameID are bdqval:Empty and if a combination of the values of the terms dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:cultivarEpithet, dwc:taxonRank, and dwc:scientificNameAuthorship can be unambiguously resolved to a unique taxon in the bdqval:sourceAuthority, or (4) if ambiguity produced by multiple matches in (2) or (3) can be disambiguated to a unique Taxon using the values of dwc:tribe, dwc:subtribe, dwc:subgenus, dwc:genus, dwc:subfamily, dwc:family, dwc:superfamily, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:taxonID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID and dwc:vernacularName; otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -2983,7 +2983,7 @@ bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdqval:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
+`bdqval:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}`
 
 #### Examples
 
@@ -3015,7 +3015,7 @@ A count of the number of distinct AMENDMENT Tests that have a Response.status="A
 
 #### Expected Response
 
-` The number of Tests of output type AMENDMENT that have been run against the record and have proposed changes to the record (Result.status="AMENDED") `
+The number of Tests of output type AMENDMENT that have been run against the record and have proposed changes to the record (Result.status="AMENDED")
 
 #### Information Elements
 Consulted: 
@@ -3045,7 +3045,7 @@ Measures the number of distinct VALIDATION Tests that have a Response.status="CO
 
 #### Expected Response
 
-` INTERNAL_PREREQUISITES_NOT_MET if no Tests of type VALIDATION were attempted to be run; Report the number of Tests of output type VALIDATION run against the record that were COMPLIANT (passed) `
+INTERNAL_PREREQUISITES_NOT_MET if no Tests of type VALIDATION were attempted to be run; Report the number of Tests of output type VALIDATION run against the record that were COMPLIANT (passed)
 
 #### Information Elements
 Consulted: 
@@ -3079,7 +3079,7 @@ A count of the number of distinct VALIDATION Tests that have a Response.status="
 
 #### Expected Response
 
-` INTERNAL_PREREQUISITES_NOT_MET if no Tests of type VALIDATION were attempted to be run; REPORT of the number of Tests of output type VALIDATION run against the record that have Response.result="NOT_COMPLIANT" `
+INTERNAL_PREREQUISITES_NOT_MET if no Tests of type VALIDATION were attempted to be run; REPORT of the number of Tests of output type VALIDATION run against the record that have Response.result="NOT_COMPLIANT"
 
 #### Information Elements
 Consulted: 
@@ -3113,7 +3113,7 @@ The number of distinct VALIDATION Tests that have a Response.status="EXTERNAL_PR
 
 #### Expected Response
 
-` INTERNAL_PREREQUISITES_NOT_MET if no Tests of type VALIDATION were run; Report the number of Tests of output type VALIDATION that did not run because prerequisites for those Tests were not met (Result.status="INTERNAL_PREREQUISITES_NOT_MET" or "EXTERNAL_PREREQUISITES_NOT_MET") `
+INTERNAL_PREREQUISITES_NOT_MET if no Tests of type VALIDATION were run; Report the number of Tests of output type VALIDATION that did not run because prerequisites for those Tests were not met (Result.status="INTERNAL_PREREQUISITES_NOT_MET" or "EXTERNAL_PREREQUISITES_NOT_MET")
 
 #### Information Elements
 Consulted: 
@@ -3147,7 +3147,7 @@ What is the duration of dwc:eventDate in seconds?
 
 #### Expected Response
 
-` INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdqval:Empty or if the value of dwc:eventDate is not a valid ISO 8601 date; otherwise RUN_HAS_RESULT with the result being the duration (sensu ISO 8601) expressed in the dwc:eventDate, in seconds. `
+INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdqval:Empty or if the value of dwc:eventDate is not a valid ISO 8601 date; otherwise RUN_HAS_RESULT with the result being the duration (sensu ISO 8601) expressed in the dwc:eventDate, in seconds.
 
 #### Information Elements
 
@@ -3184,7 +3184,7 @@ Is there a value in dwc:dataGeneralizations?
 
 #### Expected Response
 
-` POTENTIAL_ISSUE if dwc:dataGeneralizations is bdqval:NotEmpty; otherwise NOT_ISSUE `
+POTENTIAL_ISSUE if dwc:dataGeneralizations is bdqval:NotEmpty; otherwise NOT_ISSUE
 
 #### Information Elements
 
@@ -3221,7 +3221,7 @@ Are the supplied geographic coordinates within a defined buffer of the center of
 
 #### Expected Response
 
-` EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if any of dwc:countryCode, dwc:decimalLatitude, dwc:decimalLongitude are bdqval:Empty; POTENTIAL_ISSUE if (1) the geographic coordinates are within the distance given by bdqval:spatialBufferInMeters from the center of the supplied dwc:countryCode as represented in the bdqval:sourceAuthority (or one of the centers, if the bdqval:sourceAuthority provides more than one per country code) and (2) the dwc:coordinateUncertaintyInMeters is bdqval:Empty or less than half the square root of the area of the country; otherwise NOT_ISSUE. `
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if any of dwc:countryCode, dwc:decimalLatitude, dwc:decimalLongitude are bdqval:Empty; POTENTIAL_ISSUE if (1) the geographic coordinates are within the distance given by bdqval:spatialBufferInMeters from the center of the supplied dwc:countryCode as represented in the bdqval:sourceAuthority (or one of the centers, if the bdqval:sourceAuthority provides more than one per country code) and (2) the dwc:coordinateUncertaintyInMeters is bdqval:Empty or less than half the square root of the area of the country; otherwise NOT_ISSUE.
 
 #### Information Elements
 
@@ -3237,7 +3237,7 @@ bdqval:spatialBufferInMeters,bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdqval:spatialBufferInMeters default = "5000",bdqval:sourceAuthority default = "GBIF Catalogue of Country Centroides" {[https://raw.githubusercontent.com/jhnwllr/catalogue-of-centroids/master/PCLI.tsv]}
+`bdqval:spatialBufferInMeters default = "5000",bdqval:sourceAuthority default = "GBIF Catalogue of Country Centroides" {[https://raw.githubusercontent.com/jhnwllr/catalogue-of-centroids/master/PCLI.tsv]}`
 
 #### Examples
 
@@ -3269,7 +3269,7 @@ Is there a value in dwc:establishmentMeans?
 
 #### Expected Response
 
-` POTENTIAL_ISSUE if dwc:establishmentMeans is bdqval:NotEmpty; otherwise NOT_ISSUE `
+POTENTIAL_ISSUE if dwc:establishmentMeans is bdqval:NotEmpty; otherwise NOT_ISSUE
 
 #### Information Elements
 
@@ -3302,7 +3302,7 @@ Are there any annotations associated with the record?
 
 #### Expected Response
 
-` EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:annotationSystem is not available; POTENTIAL_ISSUE if an annotation in the bdqval:annotationSystem exists with a matching bdqval:annotationAlertIf; otherwise NOT_ISSUE. `
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:annotationSystem is not available; POTENTIAL_ISSUE if an annotation in the bdqval:annotationSystem exists with a matching bdqval:annotationAlertIf; otherwise NOT_ISSUE.
 
 #### Information Elements
 Consulted: 
@@ -3314,7 +3314,7 @@ bdqval:annotationSystem,bdqval:annotationAlertIf
 
 #### Default Parameter Values
 
-bdqval:annotationSystem default = "W3C Web Annotation" {[https://www.w3.org/annotation/]} {"oa:Annotation vocabulary" [https://www.w3.org/TR/annotation-vocab/]},bdqval:annotationAlertIf default = "oa:Annotation with oa:hasTarget having as object any dwciri:term instance that is part of the SingleRecord under Test." {[https://www.w3.org/TR/annotation-vocab/]}
+`bdqval:annotationSystem default = "W3C Web Annotation" {[https://www.w3.org/annotation/]} {"oa:Annotation vocabulary" [https://www.w3.org/TR/annotation-vocab/]},bdqval:annotationAlertIf default = "oa:Annotation with oa:hasTarget having as object any dwciri:term instance that is part of the SingleRecord under Test." {[https://www.w3.org/TR/annotation-vocab/]}`
 
 #### Examples
 
@@ -3346,7 +3346,7 @@ Proposes an amendment to the value of dwc:basisOfRecord using the bdqval:sourceA
 
 #### Expected Response
 
-` EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:basisOfRecord is bdqval:Empty; AMENDED the value of dwc:basisOfRecord if it could be unambiguously interpreted as a value in the bdqval:sourceAuthority; otherwise NOT_AMENDED `
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:basisOfRecord is bdqval:Empty; AMENDED the value of dwc:basisOfRecord if it could be unambiguously interpreted as a value in the bdqval:sourceAuthority; otherwise NOT_AMENDED
 
 #### Information Elements
 
@@ -3359,7 +3359,7 @@ bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdqval:sourceAuthority default = "Darwin Core basisOfRecord" {[https://dwc.tdwg.org/terms/#dwc:basisOfRecord]} {dwc:basisOfRecord vocabulary [https://rs.gbif.org/vocabulary/dwc/basis_of_record.xml]}
+`bdqval:sourceAuthority default = "Darwin Core basisOfRecord" {[https://dwc.tdwg.org/terms/#dwc:basisOfRecord]} {dwc:basisOfRecord vocabulary [https://rs.gbif.org/vocabulary/dwc/basis_of_record.xml]}`
 
 #### Examples
 
@@ -3391,7 +3391,7 @@ Proposes an amendment to the value of dc:type using the DCMI type vocabulary.
 
 #### Expected Response
 
-` EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the value of dc:type is bdqval:Empty; AMENDED the value of dc:type if it can be unambiguously interpreted as a term name in the bdqval:sourceAuthority; otherwise NOT_AMENDED `
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the value of dc:type is bdqval:Empty; AMENDED the value of dc:type if it can be unambiguously interpreted as a term name in the bdqval:sourceAuthority; otherwise NOT_AMENDED
 
 #### Information Elements
 
@@ -3400,7 +3400,7 @@ dc:type
 
 #### Source Authority
 
-bdqval:sourceAuthority = "DCMI Type Vocabulary" {[http://purl.org/dc/terms/DCMIType]} {"DCMI Type Vocabulary List of Terms" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}
+`bdqval:sourceAuthority = "DCMI Type Vocabulary" {[http://purl.org/dc/terms/DCMIType]} {"DCMI Type Vocabulary List of Terms" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}`
 
 #### Examples
 
@@ -3432,7 +3432,7 @@ Proposes an amendment to the value of dcterms:license using the bdqval:sourceAut
 
 #### Expected Response
 
-` EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; AMENDED value of dcterms:license if it could be unambiguously interpreted as a value in the bdqval:sourceAuthority; otherwise NOT_AMENDED. `
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; AMENDED value of dcterms:license if it could be unambiguously interpreted as a value in the bdqval:sourceAuthority; otherwise NOT_AMENDED.
 
 #### Information Elements
 
@@ -3445,7 +3445,7 @@ bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdqval:sourceAuthority default = "Creative Commons" {[https://creativecommons.org/]} {Creative Commons licenses [https://creativecommons.org/about/cclicenses/]}
+`bdqval:sourceAuthority default = "Creative Commons" {[https://creativecommons.org/]} {Creative Commons licenses [https://creativecommons.org/about/cclicenses/]}`
 
 #### Examples
 
@@ -3477,7 +3477,7 @@ Proposes an amendment to the values of dwc:decimalLatitude, dwc:decimalLongitude
 
 #### Expected Response
 
-` INTERNAL_PREREQUISITES_NOT_MET if 1) either dwc:decimalLatitude or dwc:decimalLongitude are bdqval:NotEmpty, or 2) dwc:verbatimCoordinates and one of dwc:verbatimLatitude and dwc:verbatimLongitude are bdqval:Empty; FILLED_IN the values of dwc:decimalLatitude, dwc:decimalLongitude and dwc:geodeticDatum (provided that the dwc:verbatimCoordinates can be unambiguously interpreted as geographic coordinates) from 1) dwc:verbatimLatitude, dwc:verbatimLongitude and dwc:verbatimSRS or 2) dwc:verbatimCoordinates and dwc:verbatimSRS; otherwise NOT_AMENDED. `
+INTERNAL_PREREQUISITES_NOT_MET if 1) either dwc:decimalLatitude or dwc:decimalLongitude are bdqval:NotEmpty, or 2) dwc:verbatimCoordinates and one of dwc:verbatimLatitude and dwc:verbatimLongitude are bdqval:Empty; FILLED_IN the values of dwc:decimalLatitude, dwc:decimalLongitude and dwc:geodeticDatum (provided that the dwc:verbatimCoordinates can be unambiguously interpreted as geographic coordinates) from 1) dwc:verbatimLatitude, dwc:verbatimLongitude and dwc:verbatimSRS or 2) dwc:verbatimCoordinates and dwc:verbatimSRS; otherwise NOT_AMENDED.
 
 #### Information Elements
 
@@ -3517,7 +3517,7 @@ Proposes an amendment transposing or changing the signs of dwc:decimalLatitude a
 
 #### Expected Response
 
-` INTERNAL_PREREQUISITES_NOT_MET if any of dwc:decimalLatitude or dwc:decimalLongitude or dwc:countryCode are bdqval:Empty; AMENDED dwc:decimalLatitude and dwc:decimalLongitude if the coordinates were transposed or one or more of the signs of the coordinates were reversed to align the location with dwc:countryCode according to the bdqval:sourceAuthority; otherwise NOT_AMENDED `
+INTERNAL_PREREQUISITES_NOT_MET if any of dwc:decimalLatitude or dwc:decimalLongitude or dwc:countryCode are bdqval:Empty; AMENDED dwc:decimalLatitude and dwc:decimalLongitude if the coordinates were transposed or one or more of the signs of the coordinates were reversed to align the location with dwc:countryCode according to the bdqval:sourceAuthority; otherwise NOT_AMENDED
 
 #### Information Elements
 
@@ -3533,7 +3533,7 @@ bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdqval:sourceAuthority default = "10m-admin-1 boundaries UNION with Exclusive Economic Zones" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/] spatial UNION [https://www.marineregions.org/downloads.php#marbound]}
+`bdqval:sourceAuthority default = "10m-admin-1 boundaries UNION with Exclusive Economic Zones" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/] spatial UNION [https://www.marineregions.org/downloads.php#marbound]}`
 
 #### Examples
 
@@ -3565,7 +3565,7 @@ Proposes an amendment to the value of dwc:countryCode if dwc:decimalLatitude and
 
 #### Expected Response
 
-` EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if either dwc:decimalLatitude or dwc:decimalLongitude is bdqval:Empty, or if dwc:countryCode is bdqval:NotEmpty; FILLED_IN dwc:countryCode if dwc:decimalLatitude and dwc:decimalLongitude fall within a boundary in the bdqval:sourceAuthority that is attributable to a single valid country code; otherwise NOT_AMENDED. `
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if either dwc:decimalLatitude or dwc:decimalLongitude is bdqval:Empty, or if dwc:countryCode is bdqval:NotEmpty; FILLED_IN dwc:countryCode if dwc:decimalLatitude and dwc:decimalLongitude fall within a boundary in the bdqval:sourceAuthority that is attributable to a single valid country code; otherwise NOT_AMENDED.
 
 #### Information Elements
 
@@ -3581,7 +3581,7 @@ bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdqval:sourceAuthority default = "10m-admin-1 boundaries UNION with Exclusive Economic Zones" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/] spatial UNION [https://www.marineregions.org/downloads.php#marbound]}
+`bdqval:sourceAuthority default = "10m-admin-1 boundaries UNION with Exclusive Economic Zones" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/] spatial UNION [https://www.marineregions.org/downloads.php#marbound]}`
 
 #### Examples
 
@@ -3613,7 +3613,7 @@ Proposes an amendment to the value of dwc:countryCode if it can be interpreted a
 
 #### Expected Response
 
-` EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the value of dwc:countryCode is bdqval:Empty; AMENDED the value of dwc:countryCode if it can be unambiguously interpreted to a value in the bdqval:sourceAuthority; otherwise NOT_AMENDED `
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the value of dwc:countryCode is bdqval:Empty; AMENDED the value of dwc:countryCode if it can be unambiguously interpreted to a value in the bdqval:sourceAuthority; otherwise NOT_AMENDED
 
 #### Information Elements
 
@@ -3622,7 +3622,7 @@ dwc:countryCode
 
 #### Source Authority
 
-bdqval:sourceAuthority default = "ISO 3166-1-alpha-2" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}
+`bdqval:sourceAuthority default = "ISO 3166-1-alpha-2" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}`
 
 #### Examples
 
@@ -3654,7 +3654,7 @@ Proposes an amendment to fill in dwc:geodeticDatum using a parameterized value i
 
 #### Expected Response
 
-` If dwc:geodeticDatum is bdqval:Empty, fill in dwc:geodeticDatum using the value of bdqval:defaultGeodeticDatum, report FILLED_IN and, if dwc:coordinateUncertaintyInMeters, dwc:decimalLatitude and dwc:decimalLongitude are bdqval:NotEmpty, amend the value of dwc:coordinateUncertaintyInMeters by adding the maximum datum shift between the specified bdqval:defaultGeodeticDatum and any other datum at the provided dwc:decimalLatitude and dwc:decimalLongitude and instead report AMENDED; otherwise NOT_AMENDED. `
+If dwc:geodeticDatum is bdqval:Empty, fill in dwc:geodeticDatum using the value of bdqval:defaultGeodeticDatum, report FILLED_IN and, if dwc:coordinateUncertaintyInMeters, dwc:decimalLatitude and dwc:decimalLongitude are bdqval:NotEmpty, amend the value of dwc:coordinateUncertaintyInMeters by adding the maximum datum shift between the specified bdqval:defaultGeodeticDatum and any other datum at the provided dwc:decimalLatitude and dwc:decimalLongitude and instead report AMENDED; otherwise NOT_AMENDED.
 
 #### Information Elements
 
@@ -3670,7 +3670,7 @@ bdqval:defaultGeodeticDatum
 
 #### Default Parameter Values
 
-bdqval:defaultGeodeticDatum default = "EPSG:4326"
+`bdqval:defaultGeodeticDatum default = "EPSG:4326"`
 
 #### Examples
 
@@ -3702,7 +3702,7 @@ Proposes an amendment to the value of dwc:geodeticDatum using the bdqval:sourceA
 
 #### Expected Response
 
-` EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdqval:Empty; AMENDED the value of dwc:geodeticDatum if it could be unambiguously interpreted as a valid code from the bdqval:sourceAuthority (in the form Authority:Number) for a Datum, Ellipsoid or a CRS appropriate for a 2D geographic coordinate in degrees, or as the value "not recorded"; otherwise NOT_AMENDED `
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdqval:Empty; AMENDED the value of dwc:geodeticDatum if it could be unambiguously interpreted as a valid code from the bdqval:sourceAuthority (in the form Authority:Number) for a Datum, Ellipsoid or a CRS appropriate for a 2D geographic coordinate in degrees, or as the value "not recorded"; otherwise NOT_AMENDED
 
 #### Information Elements
 
@@ -3711,7 +3711,7 @@ dwc:geodeticDatum
 
 #### Source Authority
 
-bdqval:sourceAuthority = "EPSG" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index#/Datum]}
+`bdqval:sourceAuthority = "EPSG" {[https://epsg.org]} {API for EPSG codes [https://apps.epsg.org/api/swagger/ui/index#/Datum]}`
 
 #### Examples
 
@@ -3743,7 +3743,7 @@ Proposes amendments of the values of dwc:minimumDepthInMeters and dwc:maximumDep
 
 #### Expected Response
 
-` INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters or dwc:maximumDepthInMeters are bdqval:NotEmpty or dwc:verbatimDepth is bdqval:Empty; FILLED_IN the value of dwc:minimumDepthInMeters and dwc:maximumDepthInMeters if they can be unambiguously interpreted from dwc:verbatimDepth; otherwise NOT_AMENDED. `
+INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters or dwc:maximumDepthInMeters are bdqval:NotEmpty or dwc:verbatimDepth is bdqval:Empty; FILLED_IN the value of dwc:minimumDepthInMeters and dwc:maximumDepthInMeters if they can be unambiguously interpreted from dwc:verbatimDepth; otherwise NOT_AMENDED.
 
 #### Information Elements
 
@@ -3783,7 +3783,7 @@ Proposes an amendment or amendments to the values of dwc:minimumElevationInMeter
 
 #### Expected Response
 
-` INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumElevationInMeters or dwc:maximumElevationInMeters are bdqval:NotEmpty or dwc:verbatimElevation is bdqval:Empty; FILLED_IN the values of dwc:minimumElevationInMeters and dwc:maximumElevationInMeters if they can be unambiguously interpreted from dwc:verbatimElevation; otherwise NOT_AMENDED `
+INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumElevationInMeters or dwc:maximumElevationInMeters are bdqval:NotEmpty or dwc:verbatimElevation is bdqval:Empty; FILLED_IN the values of dwc:minimumElevationInMeters and dwc:maximumElevationInMeters if they can be unambiguously interpreted from dwc:verbatimElevation; otherwise NOT_AMENDED
 
 #### Information Elements
 
@@ -3823,7 +3823,7 @@ Proposes an amendment to the value of dwc:day as an integer between 1 and 31 inc
 
 #### Expected Response
 
-` INTERNAL_PREREQUISITES_NOT_MET if dwc:day is bdqval:Empty; AMENDED the value of dwc:day if the value is unambiguously interpreted as an integer between 1 and 31 inclusive; otherwise NOT_AMENDED `
+INTERNAL_PREREQUISITES_NOT_MET if dwc:day is bdqval:Empty; AMENDED the value of dwc:day if the value is unambiguously interpreted as an integer between 1 and 31 inclusive; otherwise NOT_AMENDED
 
 #### Information Elements
 
@@ -3860,7 +3860,7 @@ Proposes an amendment to the value of dwc:eventDate from the content of dwc:verb
 
 #### Expected Response
 
-` INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdqval:NotEmpty or the value of dwc:verbatimEventDate is bdqval:Empty; FILLED_IN the value of dwc:eventDate if an unambiguous ISO 8601 date is interpreted from dwc:verbatimEventDate; otherwise NOT_AMENDED `
+INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdqval:NotEmpty or the value of dwc:verbatimEventDate is bdqval:Empty; FILLED_IN the value of dwc:eventDate if an unambiguous ISO 8601 date is interpreted from dwc:verbatimEventDate; otherwise NOT_AMENDED
 
 #### Information Elements
 
@@ -3900,7 +3900,7 @@ Proposes an amendment to the value of dwc:eventDate from values in dwc:year, dwc
 
 #### Expected Response
 
-` INTERNAL _PREREQUISITES_NOT_MET if dwc:eventDate is not EMPTY or dwc:year is EMPTY or is not interpretable as an integer; FILLED_IN the value of dwc:eventDate if an ISO 8601 date was interpreted from the values in dwc:year, dwc:month and dwc:day; otherwise NOT_AMENDED `
+INTERNAL _PREREQUISITES_NOT_MET if dwc:eventDate is not EMPTY or dwc:year is EMPTY or is not interpretable as an integer; FILLED_IN the value of dwc:eventDate if an ISO 8601 date was interpreted from the values in dwc:year, dwc:month and dwc:day; otherwise NOT_AMENDED
 
 #### Information Elements
 
@@ -3940,7 +3940,7 @@ Proposes an amendment to the value of dwc:eventDate from values in dwc:year, dwc
 
 #### Expected Response
 
-` INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdqval:NotEmpty or any of dwc:year, dwc:startDayOfYear, or dwc:endDayOfYear are bdqval:Empty; FILLED_IN the value of dwc:eventDate from values in dwc:year, dwc:startDayOfYear and dwc:endDayOfYear if the values in each are independently interpretable and if the value of dwc:startDayOfYear is less than the value of dwc:endDayOfYear; otherwise NOT_AMENDED `
+INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdqval:NotEmpty or any of dwc:year, dwc:startDayOfYear, or dwc:endDayOfYear are bdqval:Empty; FILLED_IN the value of dwc:eventDate from values in dwc:year, dwc:startDayOfYear and dwc:endDayOfYear if the values in each are independently interpretable and if the value of dwc:startDayOfYear is less than the value of dwc:endDayOfYear; otherwise NOT_AMENDED
 
 #### Information Elements
 
@@ -3980,7 +3980,7 @@ Proposes an amendment of the value of dwc:eventDate to a valid ISO date.
 
 #### Expected Response
 
-` INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdqval:Empty; AMENDED if the value of dwc:eventDate is not a properly formatted ISO 8601 date but is unambiguous, and altered to be a valid ISO 8601 date; otherwise NOT_AMENDED `
+INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdqval:Empty; AMENDED if the value of dwc:eventDate is not a properly formatted ISO 8601 date but is unambiguous, and altered to be a valid ISO 8601 date; otherwise NOT_AMENDED
 
 #### Information Elements
 
@@ -4017,7 +4017,7 @@ Proposes an amendment to values in any of dwc:year, dwc:month, dwc:day, dwc:star
 
 #### Expected Response
 
-` INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdqval:Empty or contains an invalid value according to ISO 8601; FILLED_IN if any of (1) dwc:day from dwc:eventDate if dwc:day is bdqval:Empty and dwc:eventDate has a precision of a day or finer and is within a single day, (2) dwc:month from dwc:eventDate if dwc:month is bdqval:Empty and dwc:eventDate has a precision of a single month or finer and is within a single month, (3) dwc:year from dwc:eventDate if dwc:year is bdqval:Empty and dwc:eventDate has a precision of a single year or finer and is within a single year, (4) dwc:startDayOfYear and dwc:endDayOfYear if they are bdqval:Empty and dwc:eventDate has a precision of a day or better; otherwise NOT_AMENDED. `
+INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdqval:Empty or contains an invalid value according to ISO 8601; FILLED_IN if any of (1) dwc:day from dwc:eventDate if dwc:day is bdqval:Empty and dwc:eventDate has a precision of a day or finer and is within a single day, (2) dwc:month from dwc:eventDate if dwc:month is bdqval:Empty and dwc:eventDate has a precision of a single month or finer and is within a single month, (3) dwc:year from dwc:eventDate if dwc:year is bdqval:Empty and dwc:eventDate has a precision of a single year or finer and is within a single year, (4) dwc:startDayOfYear and dwc:endDayOfYear if they are bdqval:Empty and dwc:eventDate has a precision of a day or better; otherwise NOT_AMENDED.
 
 #### Information Elements
 
@@ -4057,7 +4057,7 @@ Proposes an amendment to the value of dwc:month as an integer between 1 and 12 i
 
 #### Expected Response
 
-` INTERNAL_PREREQUISITES_NOT_MET if dwc:month is bdqval:Empty; AMENDED the value of dwc:month if it can be unambiguously interpreted as an integer between 1 and 12 inclusive; otherwise NOT_AMENDED `
+INTERNAL_PREREQUISITES_NOT_MET if dwc:month is bdqval:Empty; AMENDED the value of dwc:month if it can be unambiguously interpreted as an integer between 1 and 12 inclusive; otherwise NOT_AMENDED
 
 #### Information Elements
 
@@ -4094,7 +4094,7 @@ Proposes an amendment to the value of dwc:dateIdentified to a valid ISO date.
 
 #### Expected Response
 
-` INTERNAL_PREREQUISITES_NOT_MET if dwc:dateIdentified is bdqval:Empty; AMENDED if the value of dwc:dateIdentified is not a properly formatted ISO 8601 date but is unambiguous and altered to be a valid ISO 8601 date; otherwise NOT_AMENDED. `
+INTERNAL_PREREQUISITES_NOT_MET if dwc:dateIdentified is bdqval:Empty; AMENDED if the value of dwc:dateIdentified is not a properly formatted ISO 8601 date but is unambiguous and altered to be a valid ISO 8601 date; otherwise NOT_AMENDED.
 
 #### Information Elements
 
@@ -4131,7 +4131,7 @@ Proposes an amendment to the value of dwc:degreeOfEstablishment using the bdqval
 
 #### Expected Response
 
-` EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:degreeOfEstablishment is bdqval:Empty; AMENDED the value of dwc:degreeOfEstablishment if it can be unambiguously matched to a term in the bdqval:sourceAuthority; otherwise NOT_AMENDED `
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:degreeOfEstablishment is bdqval:Empty; AMENDED the value of dwc:degreeOfEstablishment if it can be unambiguously matched to a term in the bdqval:sourceAuthority; otherwise NOT_AMENDED
 
 #### Information Elements
 
@@ -4144,7 +4144,7 @@ bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdqval:sourceAuthority default = "Degree of Establishment Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/doe/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/DegreeOfEstablishment/concepts]}
+`bdqval:sourceAuthority default = "Degree of Establishment Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/doe/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/DegreeOfEstablishment/concepts]}`
 
 #### Examples
 
@@ -4176,7 +4176,7 @@ Proposes an amendment to the value of dwc:establishmentMeans using the bdqval:so
 
 #### Expected Response
 
-` EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:establishmentMeans is bdqval:Empty; AMENDED the value of dwc:establishmentMeans if it can be unambiguously matched to a term in the bdqval:sourceAuthority; otherwise NOT_AMENDED `
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:establishmentMeans is bdqval:Empty; AMENDED the value of dwc:establishmentMeans if it can be unambiguously matched to a term in the bdqval:sourceAuthority; otherwise NOT_AMENDED
 
 #### Information Elements
 
@@ -4189,7 +4189,7 @@ bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdqval:sourceAuthority default = "Establishment Means Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/em/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/EstablishmentMeans/concepts]}
+`bdqval:sourceAuthority default = "Establishment Means Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/em/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/EstablishmentMeans/concepts]}`
 
 #### Examples
 
@@ -4217,7 +4217,7 @@ Proposes an amendment of the value of dwc:occurrenceStatus to the default parame
 
 #### Expected Response
 
-` INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdqval:NotEmpty; FILLED_IN the value of dwc:occurrenceStatus using the bdqval:defaultOccurrenceStatus Parameter value if dwc:occurrenceStatus,dwc:individualCount and dwc:organismQuantity are bdqval:Empty; otherwise NOT_AMENDED `
+INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdqval:NotEmpty; FILLED_IN the value of dwc:occurrenceStatus using the bdqval:defaultOccurrenceStatus Parameter value if dwc:occurrenceStatus,dwc:individualCount and dwc:organismQuantity are bdqval:Empty; otherwise NOT_AMENDED
 
 #### Information Elements
 
@@ -4233,7 +4233,7 @@ bdqval:defaultOccurrenceStatus
 
 #### Default Parameter Values
 
-bdqval:defaultOccurrenceStatus default = "present"
+`bdqval:defaultOccurrenceStatus default = "present"`
 
 #### Examples
 
@@ -4265,7 +4265,7 @@ Proposes an amendment to the value of dwc:occurrenceStatus using the bdqval:sour
 
 #### Expected Response
 
-` EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:ocurrenceStatus is bdqval:Empty; AMENDED the value of dwc:occurrenceStatus if it can be unambiguously interpreted as a value in the bdqval:sourceAuthority; otherwise NOT_AMENDED `
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:ocurrenceStatus is bdqval:Empty; AMENDED the value of dwc:occurrenceStatus if it can be unambiguously interpreted as a value in the bdqval:sourceAuthority; otherwise NOT_AMENDED
 
 #### Information Elements
 
@@ -4278,7 +4278,7 @@ bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdqval:sourceAuthority default = "Regex present/absent" {["^(present|absent)$]}
+`bdqval:sourceAuthority default = "Regex present/absent" {["^(present|absent)$]}`
 
 #### Examples
 
@@ -4310,7 +4310,7 @@ Proposes an amendment to the value of dwc:pathway using the bdqval:sourceAuthori
 
 #### Expected Response
 
-` EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:pathway is bdqval:Empty; AMENDED the value of dwc:pathway if it can be unambiguously matched to a term in the bdqval:sourceAuthority; otherwise NOT_AMENDED `
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:pathway is bdqval:Empty; AMENDED the value of dwc:pathway if it can be unambiguously matched to a term in the bdqval:sourceAuthority; otherwise NOT_AMENDED
 
 #### Information Elements
 
@@ -4323,7 +4323,7 @@ bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdqval:sourceAuthority default = "Pathway Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/pw/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/Pathway/concepts]}
+`bdqval:sourceAuthority default = "Pathway Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/pw/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/Pathway/concepts]}`
 
 #### Examples
 
@@ -4355,7 +4355,7 @@ Proposes an amendment to the value of dwc:sex using the bdqval:sourceAuthority.
 
 #### Expected Response
 
-` EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:sex is bdqval:Empty; AMENDED the value of dwc:sex if it can be unambiguously matched to a term in the bdqval:sourceAuthority; otherwise NOT_AMENDED `
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:sex is bdqval:Empty; AMENDED the value of dwc:sex if it can be unambiguously matched to a term in the bdqval:sourceAuthority; otherwise NOT_AMENDED
 
 #### Information Elements
 
@@ -4368,7 +4368,7 @@ bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdqval:sourceAuthority default = "GBIF Sex Vocabulary" [https://api.gbif.org/v1/vocabularies/Sex]} {"dwc:sex vocabulary API" [https://api.gbif.org/v1/vocabularies/Sex/concepts]}
+`bdqval:sourceAuthority default = "GBIF Sex Vocabulary" [https://api.gbif.org/v1/vocabularies/Sex]} {"dwc:sex vocabulary API" [https://api.gbif.org/v1/vocabularies/Sex/concepts]}`
 
 #### Examples
 
@@ -4400,7 +4400,7 @@ Proposes an amendment to the value of dwc:typeStatus using the bdqval:sourceAuth
 
 #### Expected Response
 
-` EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:typeStatus is bdqval:Empty; AMENDED the value of the first word in each &#124; delimited portion of dwc:typeStatus if it can be unambiguously matched to a term in the bdqval:sourceAuthority; otherwise NOT_AMENDED. `
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:typeStatus is bdqval:Empty; AMENDED the value of the first word in each &#124; delimited portion of dwc:typeStatus if it can be unambiguously matched to a term in the bdqval:sourceAuthority; otherwise NOT_AMENDED.
 
 #### Information Elements
 
@@ -4413,7 +4413,7 @@ bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdqval:sourceAuthority default = "GBIF TypeStatus Vocabulary" {[https://api.gbif.org/v1/vocabularies/TypeStatus]} {dwc:typeStatus vocabulary API [https://api.gbif.org/v1/vocabularies/TypeStatus/concepts]}
+`bdqval:sourceAuthority default = "GBIF TypeStatus Vocabulary" {[https://api.gbif.org/v1/vocabularies/TypeStatus]} {dwc:typeStatus vocabulary API [https://api.gbif.org/v1/vocabularies/TypeStatus/concepts]}`
 
 #### Examples
 
@@ -4445,7 +4445,7 @@ Proposes an amendment to the value of dwc:scientificNameID if it can be unambigu
 
 #### Expected Response
 
-` EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is bdqval:NotEmpty, or if all of dwc:scientificName, dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship, and dwc:cultivarEpithet are bdqval:Empty, FILLED_IN the value of dwc:scientificNameID for an unambiguously resolved single taxon record in the bdqval:sourceAuthority through (1) the value of dwc:scientificName or (2) if dwc:scientificName is bdqval:Empty through values of the terms dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship and dwc:cultivarEpithet, or (3) if ambiguity produced by multiple matches in (1) or (2) can be disambiguated to a single Taxon using the values of dwc:subtribe, dwc:tribe, dwc:subgenus, dwc:genus, dwc:subfamily, dwc:family, dwc:superfamily, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:taxonID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID, dwc:taxonomicRank, and dwc:vernacularName; otherwise NOT_AMENDED `
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is bdqval:NotEmpty, or if all of dwc:scientificName, dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship, and dwc:cultivarEpithet are bdqval:Empty, FILLED_IN the value of dwc:scientificNameID for an unambiguously resolved single taxon record in the bdqval:sourceAuthority through (1) the value of dwc:scientificName or (2) if dwc:scientificName is bdqval:Empty through values of the terms dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship and dwc:cultivarEpithet, or (3) if ambiguity produced by multiple matches in (1) or (2) can be disambiguated to a single Taxon using the values of dwc:subtribe, dwc:tribe, dwc:subgenus, dwc:genus, dwc:subfamily, dwc:family, dwc:superfamily, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:taxonID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID, dwc:taxonomicRank, and dwc:vernacularName; otherwise NOT_AMENDED
 
 #### Information Elements
 
@@ -4461,7 +4461,7 @@ bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdqval:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
+`bdqval:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}`
 
 #### Examples
 
@@ -4493,7 +4493,7 @@ Proposes an amendment to the value of dwc:scientificName using the dwc:scientifi
 
 #### Expected Response
 
-` EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is bdqval:Empty, or dwc:scientificName is bdqval:NotEmpty; FILLED_IN the value of dwc:scientificName if the value of dwc: scientificNameID could be unambiguously interpreted as a value in the bdqval:sourceAuthority; otherwise NOT_AMENDED `
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is bdqval:Empty, or dwc:scientificName is bdqval:NotEmpty; FILLED_IN the value of dwc:scientificName if the value of dwc: scientificNameID could be unambiguously interpreted as a value in the bdqval:sourceAuthority; otherwise NOT_AMENDED
 
 #### Information Elements
 
@@ -4509,7 +4509,7 @@ bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdqval:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
+`bdqval:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}`
 
 #### Examples
 
@@ -4541,7 +4541,7 @@ Proposes an amendment to the value of dwc:taxonRank using the bdqval:sourceAutho
 
 #### Expected Response
 
-` EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:taxonRank is bdqval:Empty; AMENDED the value of dwc:taxonRank if it can be unambiguously matched to a term in the bdqval:sourceAuthority; otherwise NOT_AMENDED `
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:taxonRank is bdqval:Empty; AMENDED the value of dwc:taxonRank if it can be unambiguously matched to a term in the bdqval:sourceAuthority; otherwise NOT_AMENDED
 
 #### Information Elements
 
@@ -4554,7 +4554,7 @@ bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-bdqval:sourceAuthority default = "GBIF TaxonRank Vocabulary" [https://api.gbif.org/v1/vocabularies/TaxonRank]} {"dwc:taxonRank vocabulary API" [https://api.gbif.org/v1/vocabularies/TaxonRank/concepts]}}
+`bdqval:sourceAuthority default = "GBIF TaxonRank Vocabulary" [https://api.gbif.org/v1/vocabularies/TaxonRank]} {"dwc:taxonRank vocabulary API" [https://api.gbif.org/v1/vocabularies/TaxonRank/concepts]}}`
 
 #### Examples
 
@@ -4589,7 +4589,7 @@ Count the number of VALIDATION_BASISOFRECORD_NOTEMPTY in a record set that are C
 
 #### Specification
 
-` Count the number of VALIDATION_BASISOFRECORD_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_BASISOFRECORD_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -4619,7 +4619,7 @@ Count the number of VALIDATION_BASISOFRECORD_STANDARD in a record set that are C
 
 #### Specification
 
-` Count the number of VALIDATION_BASISOFRECORD_STANDARD in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_BASISOFRECORD_STANDARD in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -4649,7 +4649,7 @@ Count the number of VALIDATION_DCTYPE_NOTEMPTY in a record set that are COMPLIAN
 
 #### Specification
 
-` Count the number of VALIDATION_DCTYPE_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_DCTYPE_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -4679,7 +4679,7 @@ Count the number of VALIDATION_DCTYPE_STANDARD in a record set that are COMPLIAN
 
 #### Specification
 
-` Count the number of VALIDATION_DCTYPE_STANDARD in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_DCTYPE_STANDARD in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -4709,7 +4709,7 @@ Count the number of VALIDATION_LICENSE_NOTEMPTY in a record set that are COMPLIA
 
 #### Specification
 
-` Count the number of VALIDATION_LICENSE_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_LICENSE_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -4739,7 +4739,7 @@ Count the number of VALIDATION_LICENSE_STANDARD in a record set that are COMPLIA
 
 #### Specification
 
-` Count the number of VALIDATION_LICENSE_STANDARD in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_LICENSE_STANDARD in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -4769,7 +4769,7 @@ Measure if all VALIDATION_BASISOFRECORD_NOTEMPTY in a record set are COMPLIANT.
 
 #### Specification
 
-` COMPLETE if every VALIDATION_BASISOFRECORD_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_BASISOFRECORD_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -4799,7 +4799,7 @@ Measure if all VALIDATION_BASISOFRECORD_STANDARD in a record set are COMPLIANT.
 
 #### Specification
 
-` COMPLETE if every VALIDATION_BASISOFRECORD_STANDARD in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_BASISOFRECORD_STANDARD in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -4829,7 +4829,7 @@ Measure if all VALIDATION_DCTYPE_NOTEMPTY in a record set are COMPLIANT.
 
 #### Specification
 
-` COMPLETE if every VALIDATION_DCTYPE_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_DCTYPE_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -4859,7 +4859,7 @@ Measure if all VALIDATION_DCTYPE_STANDARD in a record set are COMPLIANT.
 
 #### Specification
 
-` COMPLETE if every VALIDATION_DCTYPE_STANDARD in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_DCTYPE_STANDARD in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -4889,7 +4889,7 @@ Measure if all VALIDATION_LICENSE_NOTEMPTY in a record set are COMPLIANT.
 
 #### Specification
 
-` COMPLETE if every VALIDATION_LICENSE_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_LICENSE_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -4919,7 +4919,7 @@ Measure if all VALIDATION_LICENSE_STANDARD in a record set are COMPLIANT.
 
 #### Specification
 
-` COMPLETE if every VALIDATION_LICENSE_STANDARD in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_LICENSE_STANDARD in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -4949,7 +4949,7 @@ Count the number of VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT in a record set
 
 #### Specification
 
-` Count the number of VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -4979,7 +4979,7 @@ Count the number of VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT in a record s
 
 #### Specification
 
-` Count the number of VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -5009,7 +5009,7 @@ Count the number of VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT in a reco
 
 #### Specification
 
-` Count the number of VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -5039,7 +5039,7 @@ Count the number of VALIDATION_COORDINATES_NOTZERO in a record set that are COMP
 
 #### Specification
 
-` Count the number of VALIDATION_COORDINATES_NOTZERO in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_COORDINATES_NOTZERO in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -5069,7 +5069,7 @@ Count the number of VALIDATION_COORDINATEUNCERTAINTY_INRANGE in a record set tha
 
 #### Specification
 
-` Count the number of VALIDATION_COORDINATEUNCERTAINTY_INRANGE in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_COORDINATEUNCERTAINTY_INRANGE in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -5099,7 +5099,7 @@ Count the number of VALIDATION_COUNTRYCODE_NOTEMPTY in a record set that are COM
 
 #### Specification
 
-` Count the number of VALIDATION_COUNTRYCODE_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_COUNTRYCODE_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -5129,7 +5129,7 @@ Count the number of VALIDATION_COUNTRYCODE_STANDARD in a record set that are COM
 
 #### Specification
 
-` Count the number of VALIDATION_COUNTRYCODE_STANDARD in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_COUNTRYCODE_STANDARD in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -5159,7 +5159,7 @@ Count the number of VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT in a record set tha
 
 #### Specification
 
-` Count the number of VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -5189,7 +5189,7 @@ Count the number of VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS in a record set 
 
 #### Specification
 
-` Count the number of VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -5219,7 +5219,7 @@ Count the number of VALIDATION_COUNTRY_FOUND in a record set that are COMPLIANT.
 
 #### Specification
 
-` Count the number of VALIDATION_COUNTRY_FOUND in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_COUNTRY_FOUND in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -5249,7 +5249,7 @@ Count the number of VALIDATION_COUNTRY_NOTEMPTY in a record set that are COMPLIA
 
 #### Specification
 
-` Count the number of VALIDATION_COUNTRY_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_COUNTRY_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -5279,7 +5279,7 @@ Count the number of VALIDATION_DECIMALLATITUDE_INRANGE in a record set that are 
 
 #### Specification
 
-` Count the number of VALIDATION_DECIMALLATITUDE_INRANGE in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_DECIMALLATITUDE_INRANGE in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -5309,7 +5309,7 @@ Count the number of VALIDATION_DECIMALLATITUDE_NOTEMPTY in a record set that are
 
 #### Specification
 
-` Count the number of VALIDATION_DECIMALLATITUDE_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_DECIMALLATITUDE_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -5339,7 +5339,7 @@ Count the number of VALIDATION_DECIMALLONGITUDE_INRANGE in a record set that are
 
 #### Specification
 
-` Count the number of VALIDATION_DECIMALLONGITUDE_INRANGE in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_DECIMALLONGITUDE_INRANGE in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -5369,7 +5369,7 @@ Count the number of VALIDATION_DECIMALLONGITUDE_NOTEMPTY in a record set that ar
 
 #### Specification
 
-` Count the number of VALIDATION_DECIMALLONGITUDE_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_DECIMALLONGITUDE_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -5399,7 +5399,7 @@ Count the number of VALIDATION_GEODETICDATUM_NOTEMPTY in a record set that are C
 
 #### Specification
 
-` Count the number of VALIDATION_GEODETICDATUM_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_GEODETICDATUM_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -5429,7 +5429,7 @@ Count the number of VALIDATION_GEODETICDATUM_STANDARD in a record set that are C
 
 #### Specification
 
-` Count the number of VALIDATION_GEODETICDATUM_STANDARD in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_GEODETICDATUM_STANDARD in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -5459,7 +5459,7 @@ Count the number of VALIDATION_LOCATION_NOTEMPTY in a record set that are COMPLI
 
 #### Specification
 
-` Count the number of VALIDATION_LOCATION_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_LOCATION_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -5489,7 +5489,7 @@ Count the number of VALIDATION_MAXDEPTH_INRANGE in a record set that are COMPLIA
 
 #### Specification
 
-` Count the number of VALIDATION_MAXDEPTH_INRANGE in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_MAXDEPTH_INRANGE in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -5519,7 +5519,7 @@ Count the number of VALIDATION_MAXELEVATION_INRANGE in a record set that are COM
 
 #### Specification
 
-` Count the number of VALIDATION_MAXELEVATION_INRANGE in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_MAXELEVATION_INRANGE in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -5549,7 +5549,7 @@ Count the number of VALIDATION_MINDEPTH_INRANGE in a record set that are COMPLIA
 
 #### Specification
 
-` Count the number of VALIDATION_MINDEPTH_INRANGE in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_MINDEPTH_INRANGE in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -5579,7 +5579,7 @@ Count the number of VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH in a record set that a
 
 #### Specification
 
-` Count the number of VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -5609,7 +5609,7 @@ Count the number of VALIDATION_MINELEVATION_INRANGE in a record set that are COM
 
 #### Specification
 
-` Count the number of VALIDATION_MINELEVATION_INRANGE in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_MINELEVATION_INRANGE in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -5639,7 +5639,7 @@ Count the number of VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION in a record se
 
 #### Specification
 
-` Count the number of VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -5669,7 +5669,7 @@ Count the number of VALIDATION_STATEPROVINCE_FOUND in a record set that are COMP
 
 #### Specification
 
-` Count the number of VALIDATION_STATEPROVINCE_FOUND in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_STATEPROVINCE_FOUND in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -5699,7 +5699,7 @@ Measure if all VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT in a record set are 
 
 #### Specification
 
-` COMPLETE if every VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -5729,7 +5729,7 @@ Measure if all VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT in a record set ar
 
 #### Specification
 
-` COMPLETE if every VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -5759,7 +5759,7 @@ Measure if all VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT in a record se
 
 #### Specification
 
-` COMPLETE if every VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -5789,7 +5789,7 @@ Measure if all VALIDATION_COORDINATES_NOTZERO in a record set are COMPLIANT.
 
 #### Specification
 
-` COMPLETE if every VALIDATION_COORDINATES_NOTZERO in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_COORDINATES_NOTZERO in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -5819,7 +5819,7 @@ Measure if all VALIDATION_COORDINATEUNCERTAINTY_INRANGE in a record set are COMP
 
 #### Specification
 
-` COMPLETE if every VALIDATION_COORDINATEUNCERTAINTY_INRANGE in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_COORDINATEUNCERTAINTY_INRANGE in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -5849,7 +5849,7 @@ Measure if all VALIDATION_COUNTRYCODE_NOTEMPTY in a record set are COMPLIANT.
 
 #### Specification
 
-` COMPLETE if every VALIDATION_COUNTRYCODE_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_COUNTRYCODE_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -5879,7 +5879,7 @@ Measure if all VALIDATION_COUNTRYCODE_STANDARD in a record set are COMPLIANT or 
 
 #### Specification
 
-` COMPLETE if every VALIDATION_COUNTRYCODE_STANDARD in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_COUNTRYCODE_STANDARD in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -5909,7 +5909,7 @@ Measure if all VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT in a record set are COMP
 
 #### Specification
 
-` COMPLETE if every VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -5939,7 +5939,7 @@ Measure if all VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS in a record set are C
 
 #### Specification
 
-` COMPLETE if every VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -5969,7 +5969,7 @@ Measure if all VALIDATION_COUNTRY_FOUND in a record set are COMPLIANT.
 
 #### Specification
 
-` COMPLETE if every VALIDATION_COUNTRY_FOUND in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_COUNTRY_FOUND in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -5999,7 +5999,7 @@ Measure if all VALIDATION_COUNTRY_NOTEMPTY in a record set are COMPLIANT.
 
 #### Specification
 
-` COMPLETE if every VALIDATION_COUNTRY_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_COUNTRY_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -6029,7 +6029,7 @@ Measure if all VALIDATION_DECIMALLATITUDE_INRANGE in a record set are COMPLIANT.
 
 #### Specification
 
-` COMPLETE if every VALIDATION_DECIMALLATITUDE_INRANGE in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_DECIMALLATITUDE_INRANGE in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -6059,7 +6059,7 @@ Measure if all VALIDATION_DECIMALLATITUDE_NOTEMPTY in a record set are COMPLIANT
 
 #### Specification
 
-` COMPLETE if every VALIDATION_DECIMALLATITUDE_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_DECIMALLATITUDE_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -6089,7 +6089,7 @@ Measure if all VALIDATION_DECIMALLONGITUDE_INRANGE in a record set are COMPLIANT
 
 #### Specification
 
-` COMPLETE if every VALIDATION_DECIMALLONGITUDE_INRANGE in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_DECIMALLONGITUDE_INRANGE in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -6119,7 +6119,7 @@ Measure if all VALIDATION_DECIMALLONGITUDE_NOTEMPTY in a record set are COMPLIAN
 
 #### Specification
 
-` COMPLETE if every VALIDATION_DECIMALLONGITUDE_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_DECIMALLONGITUDE_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -6149,7 +6149,7 @@ Measure if all VALIDATION_GEODETICDATUM_NOTEMPTY in a record set are COMPLIANT.
 
 #### Specification
 
-` COMPLETE if every VALIDATION_GEODETICDATUM_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_GEODETICDATUM_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -6179,7 +6179,7 @@ Measure if all VALIDATION_GEODETICDATUM_STANDARD in a record set are COMPLIANT.
 
 #### Specification
 
-` COMPLETE if every VALIDATION_GEODETICDATUM_STANDARD in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_GEODETICDATUM_STANDARD in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -6209,7 +6209,7 @@ Measure if all VALIDATION_LOCATION_NOTEMPTY in a record set are COMPLIANT.
 
 #### Specification
 
-` COMPLETE if every VALIDATION_LOCATION_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_LOCATION_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -6239,7 +6239,7 @@ Measure if all VALIDATION_MAXDEPTH_INRANGE in a record set are COMPLIANT or INTE
 
 #### Specification
 
-` COMPLETE if every VALIDATION_MAXDEPTH_INRANGE in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_MAXDEPTH_INRANGE in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -6269,7 +6269,7 @@ Measure if all VALIDATION_MAXELEVATION_INRANGE in a record set are COMPLIANT or 
 
 #### Specification
 
-` COMPLETE if every VALIDATION_MAXELEVATION_INRANGE in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_MAXELEVATION_INRANGE in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -6299,7 +6299,7 @@ Measure if all VALIDATION_MINDEPTH_INRANGE in a record set are COMPLIANT or INTE
 
 #### Specification
 
-` COMPLETE if every VALIDATION_MINDEPTH_INRANGE in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_MINDEPTH_INRANGE in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -6329,7 +6329,7 @@ Measure if all VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH in a record set are COMPLIA
 
 #### Specification
 
-` COMPLETE if every VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -6359,7 +6359,7 @@ Measure if all VALIDATION_MINELEVATION_INRANGE in a record set are COMPLIANT or 
 
 #### Specification
 
-` COMPLETE if every VALIDATION_MINELEVATION_INRANGE in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_MINELEVATION_INRANGE in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -6389,7 +6389,7 @@ Measure if all VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION in a record set are
 
 #### Specification
 
-` COMPLETE if every VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -6419,7 +6419,7 @@ Measure if all VALIDATION_STATEPROVINCE_FOUND in a record set are COMPLIANT or I
 
 #### Specification
 
-` COMPLETE if every VALIDATION_STATEPROVINCE_FOUND in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_STATEPROVINCE_FOUND in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -6449,7 +6449,7 @@ Count the number of VALIDATION_DAY_INRANGE in a record set that are COMPLIANT.
 
 #### Specification
 
-` Count the number of VALIDATION_DAY_INRANGE in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_DAY_INRANGE in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -6479,7 +6479,7 @@ Count the number of VALIDATION_DAY_STANDARD in a record set that are COMPLIANT.
 
 #### Specification
 
-` Count the number of VALIDATION_DAY_STANDARD in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_DAY_STANDARD in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -6509,7 +6509,7 @@ Count the number of VALIDATION_ENDDAYOFYEAR_INRANGE in a record set that are COM
 
 #### Specification
 
-` Count the number of VALIDATION_ENDDAYOFYEAR_INRANGE in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_ENDDAYOFYEAR_INRANGE in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -6539,7 +6539,7 @@ Count the number of VALIDATION_EVENTDATE_INRANGE in a record set that are COMPLI
 
 #### Specification
 
-` Count the number of VALIDATION_EVENTDATE_INRANGE in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_EVENTDATE_INRANGE in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -6569,7 +6569,7 @@ Count the number of VALIDATION_EVENTDATE_NOTEMPTY in a record set that are COMPL
 
 #### Specification
 
-` Count the number of VALIDATION_EVENTDATE_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_EVENTDATE_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -6599,7 +6599,7 @@ Count the number of VALIDATION_EVENTDATE_STANDARD in a record set that are COMPL
 
 #### Specification
 
-` Count the number of VALIDATION_EVENTDATE_STANDARD in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_EVENTDATE_STANDARD in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -6629,7 +6629,7 @@ Count the number of VALIDATION_EVENTTEMPORAL_NOTEMPTY in a record set that are C
 
 #### Specification
 
-` Count the number of VALIDATION_EVENTTEMPORAL_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_EVENTTEMPORAL_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -6659,7 +6659,7 @@ Count the number of VALIDATION_EVENT_CONSISTENT in a record set that are COMPLIA
 
 #### Specification
 
-` Count the number of VALIDATION_EVENT_CONSISTENT in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_EVENT_CONSISTENT in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -6689,7 +6689,7 @@ Count the number of VALIDATION_MONTH_STANDARD in a record set that are COMPLIANT
 
 #### Specification
 
-` Count the number of VALIDATION_MONTH_STANDARD in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_MONTH_STANDARD in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -6719,7 +6719,7 @@ Count the number of VALIDATION_STARTDAYOFYEAR_INRANGE in a record set that are C
 
 #### Specification
 
-` Count the number of VALIDATION_STARTDAYOFYEAR_INRANGE in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_STARTDAYOFYEAR_INRANGE in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -6749,7 +6749,7 @@ Count the number of VALIDATION_YEAR_INRANGE in a record set that are COMPLIANT.
 
 #### Specification
 
-` Count the number of VALIDATION_YEAR_INRANGE in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_YEAR_INRANGE in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -6779,7 +6779,7 @@ Count the number of VALIDATION_YEAR_NOTEMPTY in a record set that are COMPLIANT.
 
 #### Specification
 
-` Count the number of VALIDATION_YEAR_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_YEAR_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -6809,7 +6809,7 @@ Measure if all VALIDATION_DAY_INRANGE in a record set are COMPLIANT or INTERNAL_
 
 #### Specification
 
-` COMPLETE if every VALIDATION_DAY_INRANGE in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_DAY_INRANGE in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -6839,7 +6839,7 @@ Measure if all VALIDATION_DAY_STANDARD in a record set are COMPLIANT or INTERNAL
 
 #### Specification
 
-` COMPLETE if every VALIDATION_DAY_STANDARD in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_DAY_STANDARD in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -6869,7 +6869,7 @@ Measure if all VALIDATION_ENDDAYOFYEAR_INRANGE in a record set are COMPLIANT or 
 
 #### Specification
 
-` COMPLETE if every VALIDATION_ENDDAYOFYEAR_INRANGE in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_ENDDAYOFYEAR_INRANGE in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -6899,7 +6899,7 @@ Measure if all VALIDATION_EVENTDATE_INRANGE in a record set are COMPLIANT.
 
 #### Specification
 
-` COMPLETE if every VALIDATION_EVENTDATE_INRANGE in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_EVENTDATE_INRANGE in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -6929,7 +6929,7 @@ Measure if all VALIDATION_EVENTDATE_NOTEMPTY in a record set are COMPLIANT.
 
 #### Specification
 
-` COMPLETE if every VALIDATION_EVENTDATE_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_EVENTDATE_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -6959,7 +6959,7 @@ Measure if all VALIDATION_EVENTDATE_STANDARD in a record set are COMPLIANT.
 
 #### Specification
 
-` COMPLETE if every VALIDATION_EVENTDATE_STANDARD in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_EVENTDATE_STANDARD in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -6989,7 +6989,7 @@ Measure if all VALIDATION_EVENTTEMPORAL_NOTEMPTY in a record set are COMPLIANT.
 
 #### Specification
 
-` COMPLETE if every VALIDATION_EVENTTEMPORAL_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_EVENTTEMPORAL_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -7019,7 +7019,7 @@ Measure if all VALIDATION_EVENT_CONSISTENT in a record set are COMPLIANT.
 
 #### Specification
 
-` COMPLETE if every VALIDATION_EVENT_CONSISTENT in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_EVENT_CONSISTENT in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -7049,7 +7049,7 @@ Measure if all VALIDATION_MONTH_STANDARD in a record set are COMPLIANT or INTERN
 
 #### Specification
 
-` COMPLETE if every VALIDATION_MONTH_STANDARD in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_MONTH_STANDARD in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -7079,7 +7079,7 @@ Measure if all VALIDATION_STARTDAYOFYEAR_INRANGE in a record set are COMPLIANT o
 
 #### Specification
 
-` COMPLETE if every VALIDATION_STARTDAYOFYEAR_INRANGE in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_STARTDAYOFYEAR_INRANGE in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -7109,7 +7109,7 @@ Measure if all VALIDATION_YEAR_INRANGE in a record set are COMPLIANT.
 
 #### Specification
 
-` COMPLETE if every VALIDATION_YEAR_INRANGE in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_YEAR_INRANGE in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -7139,7 +7139,7 @@ Measure if all VALIDATION_YEAR_NOTEMPTY in a record set are COMPLIANT.
 
 #### Specification
 
-` COMPLETE if every VALIDATION_YEAR_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_YEAR_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -7169,7 +7169,7 @@ Count the number of VALIDATION_DATEIDENTIFIED_INRANGE in a record set that are C
 
 #### Specification
 
-` Count the number of VALIDATION_DATEIDENTIFIED_INRANGE in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_DATEIDENTIFIED_INRANGE in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -7199,7 +7199,7 @@ Count the number of VALIDATION_DATEIDENTIFIED_STANDARD in a record set that are 
 
 #### Specification
 
-` Count the number of VALIDATION_DATEIDENTIFIED_STANDARD in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_DATEIDENTIFIED_STANDARD in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -7229,7 +7229,7 @@ Measure if all VALIDATION_DATEIDENTIFIED_INRANGE in a record set are COMPLIANT.
 
 #### Specification
 
-` COMPLETE if every VALIDATION_DATEIDENTIFIED_INRANGE in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_DATEIDENTIFIED_INRANGE in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -7259,7 +7259,7 @@ Measure if all VALIDATION_DATEIDENTIFIED_STANDARD in a record set are COMPLIANT.
 
 #### Specification
 
-` COMPLETE if every VALIDATION_DATEIDENTIFIED_STANDARD in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_DATEIDENTIFIED_STANDARD in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -7289,7 +7289,7 @@ Count the number of VALIDATION_DEGREEOFESTABLISHMENT_STANDARD in a record set th
 
 #### Specification
 
-` Count the number of VALIDATION_DEGREEOFESTABLISHMENT_STANDARD in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_DEGREEOFESTABLISHMENT_STANDARD in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -7319,7 +7319,7 @@ Count the number of VALIDATION_ESTABLISHMENTMEANS_STANDARD in a record set that 
 
 #### Specification
 
-` Count the number of VALIDATION_ESTABLISHMENTMEANS_STANDARD in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_ESTABLISHMENTMEANS_STANDARD in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -7349,7 +7349,7 @@ Count the number of VALIDATION_OCCURRENCEID_NOTEMPTY in a record set that are CO
 
 #### Specification
 
-` Count the number of VALIDATION_OCCURRENCEID_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_OCCURRENCEID_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -7379,7 +7379,7 @@ Count the number of VALIDATION_OCCURRENCESTATUS_NOTEMPTY in a record set that ar
 
 #### Specification
 
-` Count the number of VALIDATION_OCCURRENCESTATUS_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_OCCURRENCESTATUS_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -7409,7 +7409,7 @@ Count the number of VALIDATION_OCCURRENCESTATUS_STANDARD in a record set that ar
 
 #### Specification
 
-` Count the number of VALIDATION_OCCURRENCESTATUS_STANDARD in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_OCCURRENCESTATUS_STANDARD in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -7439,7 +7439,7 @@ Count the number of VALIDATION_PATHWAY_STANDARD in a record set that are COMPLIA
 
 #### Specification
 
-` Count the number of VALIDATION_PATHWAY_STANDARD in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_PATHWAY_STANDARD in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -7469,7 +7469,7 @@ Count the number of VALIDATION_SEX_STANDARD in a record set that are COMPLIANT.
 
 #### Specification
 
-` Count the number of VALIDATION_SEX_STANDARD in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_SEX_STANDARD in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -7499,7 +7499,7 @@ Count the number of VALIDATION_TYPESTATUS_STANDARD in a record set that are COMP
 
 #### Specification
 
-` Count the number of VALIDATION_TYPESTATUS_STANDARD in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_TYPESTATUS_STANDARD in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -7529,7 +7529,7 @@ Measure if all VALIDATION_DEGREEOFESTABLISHMENT_STANDARD in a record set are COM
 
 #### Specification
 
-` COMPLETE if every VALIDATION_DEGREEOFESTABLISHMENT_STANDARD in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_DEGREEOFESTABLISHMENT_STANDARD in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -7559,7 +7559,7 @@ Measure if all VALIDATION_ESTABLISHMENTMEANS_STANDARD in a record set are COMPLI
 
 #### Specification
 
-` COMPLETE if every VALIDATION_ESTABLISHMENTMEANS_STANDARD in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_ESTABLISHMENTMEANS_STANDARD in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -7589,7 +7589,7 @@ Measure if all VALIDATION_OCCURRENCEID_NOTEMPTY in a record set are COMPLIANT.
 
 #### Specification
 
-` COMPLETE if every VALIDATION_OCCURRENCEID_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_OCCURRENCEID_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -7619,7 +7619,7 @@ Measure if all VALIDATION_OCCURRENCESTATUS_NOTEMPTY in a record set are COMPLIAN
 
 #### Specification
 
-` COMPLETE if every VALIDATION_OCCURRENCESTATUS_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_OCCURRENCESTATUS_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -7649,7 +7649,7 @@ Measure if all VALIDATION_OCCURRENCESTATUS_STANDARD in a record set are COMPLIAN
 
 #### Specification
 
-` COMPLETE if every VALIDATION_OCCURRENCESTATUS_STANDARD in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_OCCURRENCESTATUS_STANDARD in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -7679,7 +7679,7 @@ Measure if all VALIDATION_PATHWAY_STANDARD in a record set are COMPLIANT or INTE
 
 #### Specification
 
-` COMPLETE if every VALIDATION_PATHWAY_STANDARD in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_PATHWAY_STANDARD in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -7709,7 +7709,7 @@ Measure if all VALIDATION_SEX_STANDARD in a record set are COMPLIANT or INTERNAL
 
 #### Specification
 
-` COMPLETE if every VALIDATION_SEX_STANDARD in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_SEX_STANDARD in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -7739,7 +7739,7 @@ Measure if all VALIDATION_TYPESTATUS_STANDARD in a record set are COMPLIANT.
 
 #### Specification
 
-` COMPLETE if every VALIDATION_TYPESTATUS_STANDARD in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_TYPESTATUS_STANDARD in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -7769,7 +7769,7 @@ Count the number of VALIDATION_CLASSIFICATION_CONSISTENT in a record set that ar
 
 #### Specification
 
-` Count the number of VALIDATION_CLASSIFICATION_CONSISTENT in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_CLASSIFICATION_CONSISTENT in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -7799,7 +7799,7 @@ Count the number of VALIDATION_CLASS_FOUND in a record set that are COMPLIANT.
 
 #### Specification
 
-` Count the number of VALIDATION_CLASS_FOUND in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_CLASS_FOUND in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -7829,7 +7829,7 @@ Count the number of VALIDATION_FAMILY_FOUND in a record set that are COMPLIANT.
 
 #### Specification
 
-` Count the number of VALIDATION_FAMILY_FOUND in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_FAMILY_FOUND in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -7859,7 +7859,7 @@ Count the number of VALIDATION_GENUS_FOUND in a record set that are COMPLIANT.
 
 #### Specification
 
-` Count the number of VALIDATION_GENUS_FOUND in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_GENUS_FOUND in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -7889,7 +7889,7 @@ Count the number of VALIDATION_KINGDOM_FOUND in a record set that are COMPLIANT.
 
 #### Specification
 
-` Count the number of VALIDATION_KINGDOM_FOUND in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_KINGDOM_FOUND in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -7919,7 +7919,7 @@ Count the number of VALIDATION_KINGDOM_NOTEMPTY in a record set that are COMPLIA
 
 #### Specification
 
-` Count the number of VALIDATION_KINGDOM_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_KINGDOM_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -7949,7 +7949,7 @@ Count the number of VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY in a record set that
 
 #### Specification
 
-` Count the number of VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -7979,7 +7979,7 @@ Count the number of VALIDATION_ORDER_FOUND in a record set that are COMPLIANT.
 
 #### Specification
 
-` Count the number of VALIDATION_ORDER_FOUND in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_ORDER_FOUND in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -8009,7 +8009,7 @@ Count the number of VALIDATION_PHYLUM_FOUND in a record set that are COMPLIANT.
 
 #### Specification
 
-` Count the number of VALIDATION_PHYLUM_FOUND in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_PHYLUM_FOUND in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -8039,7 +8039,7 @@ Count the number of VALIDATION_POLYNOMIAL_CONSISTENT in a record set that are CO
 
 #### Specification
 
-` Count the number of VALIDATION_POLYNOMIAL_CONSISTENT in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_POLYNOMIAL_CONSISTENT in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -8069,7 +8069,7 @@ Count the number of VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY in a record set
 
 #### Specification
 
-` Count the number of VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -8099,7 +8099,7 @@ Count the number of VALIDATION_SCIENTIFICNAMEID_COMPLETE in a record set that ar
 
 #### Specification
 
-` Count the number of VALIDATION_SCIENTIFICNAMEID_COMPLETE in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_SCIENTIFICNAMEID_COMPLETE in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -8129,7 +8129,7 @@ Count the number of VALIDATION_SCIENTIFICNAMEID_NOTEMPTY in a record set that ar
 
 #### Specification
 
-` Count the number of VALIDATION_SCIENTIFICNAMEID_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_SCIENTIFICNAMEID_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -8159,7 +8159,7 @@ Count the number of VALIDATION_SCIENTIFICNAME_FOUND in a record set that are COM
 
 #### Specification
 
-` Count the number of VALIDATION_SCIENTIFICNAME_FOUND in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_SCIENTIFICNAME_FOUND in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -8189,7 +8189,7 @@ Count the number of VALIDATION_SCIENTIFICNAME_NOTEMPTY in a record set that are 
 
 #### Specification
 
-` Count the number of VALIDATION_SCIENTIFICNAME_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_SCIENTIFICNAME_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -8219,7 +8219,7 @@ Count the number of VALIDATION_TAXONRANK_NOTEMPTY in a record set that are COMPL
 
 #### Specification
 
-` Count the number of VALIDATION_TAXONRANK_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_TAXONRANK_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -8249,7 +8249,7 @@ Count the number of VALIDATION_TAXONRANK_STANDARD in a record set that are COMPL
 
 #### Specification
 
-` Count the number of VALIDATION_TAXONRANK_STANDARD in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_TAXONRANK_STANDARD in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -8279,7 +8279,7 @@ Count the number of VALIDATION_TAXON_NOTEMPTY in a record set that are COMPLIANT
 
 #### Specification
 
-` Count the number of VALIDATION_TAXON_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_TAXON_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -8309,7 +8309,7 @@ Count the number of VALIDATION_TAXON_UNAMBIGUOUS in a record set that are COMPLI
 
 #### Specification
 
-` Count the number of VALIDATION_TAXON_UNAMBIGUOUS in the MultiRecord that have Response.result=COMPLIANT. `
+Count the number of VALIDATION_TAXON_UNAMBIGUOUS in the MultiRecord that have Response.result=COMPLIANT.
 
 #### Information Elements
 
@@ -8339,7 +8339,7 @@ Measure if all VALIDATION_CLASSIFICATION_CONSISTENT in a record set are COMPLIAN
 
 #### Specification
 
-` COMPLETE if every VALIDATION_CLASSIFICATION_CONSISTENT in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_CLASSIFICATION_CONSISTENT in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -8369,7 +8369,7 @@ Measure if all VALIDATION_CLASS_FOUND in a record set are COMPLIANT or INTERNAL_
 
 #### Specification
 
-` COMPLETE if every VALIDATION_CLASS_FOUND in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_CLASS_FOUND in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -8399,7 +8399,7 @@ Measure if all VALIDATION_FAMILY_FOUND in a record set are COMPLIANT or INTERNAL
 
 #### Specification
 
-` COMPLETE if every VALIDATION_FAMILY_FOUND in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_FAMILY_FOUND in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -8429,7 +8429,7 @@ Measure if all VALIDATION_GENUS_FOUND in a record set are COMPLIANT or INTERNAL_
 
 #### Specification
 
-` COMPLETE if every VALIDATION_GENUS_FOUND in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_GENUS_FOUND in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -8459,7 +8459,7 @@ Measure if all VALIDATION_KINGDOM_FOUND in a record set are COMPLIANT.
 
 #### Specification
 
-` COMPLETE if every VALIDATION_KINGDOM_FOUND in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_KINGDOM_FOUND in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -8489,7 +8489,7 @@ Measure if all VALIDATION_KINGDOM_NOTEMPTY in a record set are COMPLIANT.
 
 #### Specification
 
-` COMPLETE if every VALIDATION_KINGDOM_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_KINGDOM_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -8519,7 +8519,7 @@ Measure if all VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY in a record set are COMPL
 
 #### Specification
 
-` COMPLETE if every VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -8549,7 +8549,7 @@ Measure if all VALIDATION_ORDER_FOUND in a record set are COMPLIANT or INTERNAL_
 
 #### Specification
 
-` COMPLETE if every VALIDATION_ORDER_FOUND in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_ORDER_FOUND in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -8579,7 +8579,7 @@ Measure if all VALIDATION_PHYLUM_FOUND in a record set are COMPLIANT or INTERNAL
 
 #### Specification
 
-` COMPLETE if every VALIDATION_PHYLUM_FOUND in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_PHYLUM_FOUND in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -8609,7 +8609,7 @@ Measure if all VALIDATION_POLYNOMIAL_CONSISTENT in a record set are COMPLIANT or
 
 #### Specification
 
-` COMPLETE if every VALIDATION_POLYNOMIAL_CONSISTENT in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_POLYNOMIAL_CONSISTENT in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -8639,7 +8639,7 @@ Measure if all VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY in a record set are 
 
 #### Specification
 
-` COMPLETE if every VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -8669,7 +8669,7 @@ Measure if all VALIDATION_SCIENTIFICNAMEID_COMPLETE in a record set are COMPLIAN
 
 #### Specification
 
-` COMPLETE if every VALIDATION_SCIENTIFICNAMEID_COMPLETE in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_SCIENTIFICNAMEID_COMPLETE in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -8699,7 +8699,7 @@ Measure if all VALIDATION_SCIENTIFICNAMEID_NOTEMPTY in a record set are COMPLIAN
 
 #### Specification
 
-` COMPLETE if every VALIDATION_SCIENTIFICNAMEID_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_SCIENTIFICNAMEID_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -8729,7 +8729,7 @@ Measure if all VALIDATION_SCIENTIFICNAME_FOUND in a record set are COMPLIANT.
 
 #### Specification
 
-` COMPLETE if every VALIDATION_SCIENTIFICNAME_FOUND in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_SCIENTIFICNAME_FOUND in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -8759,7 +8759,7 @@ Measure if all VALIDATION_SCIENTIFICNAME_NOTEMPTY in a record set are COMPLIANT.
 
 #### Specification
 
-` COMPLETE if every VALIDATION_SCIENTIFICNAME_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_SCIENTIFICNAME_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -8789,7 +8789,7 @@ Measure if all VALIDATION_TAXONRANK_NOTEMPTY in a record set are COMPLIANT.
 
 #### Specification
 
-` COMPLETE if every VALIDATION_TAXONRANK_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_TAXONRANK_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -8819,7 +8819,7 @@ Measure if all VALIDATION_TAXONRANK_STANDARD in a record set are COMPLIANT.
 
 #### Specification
 
-` COMPLETE if every VALIDATION_TAXONRANK_STANDARD in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_TAXONRANK_STANDARD in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -8849,7 +8849,7 @@ Measure if all VALIDATION_TAXON_NOTEMPTY in a record set are COMPLIANT.
 
 #### Specification
 
-` COMPLETE if every VALIDATION_TAXON_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_TAXON_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -8879,7 +8879,7 @@ Measure if all VALIDATION_TAXON_UNAMBIGUOUS in a record set are COMPLIANT.
 
 #### Specification
 
-` COMPLETE if every VALIDATION_TAXON_UNAMBIGUOUS in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE. `
+COMPLETE if every VALIDATION_TAXON_UNAMBIGUOUS in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
 
 #### Information Elements
 

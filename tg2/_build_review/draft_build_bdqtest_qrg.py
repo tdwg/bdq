@@ -363,7 +363,7 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 			print()
 			print("#### Expected Response")
 			print()
-			print("`",row['ExpectedResponse'],"`")
+			print(row['ExpectedResponse'])
 			print()
 			print("#### Information Elements")
 			if not pandas.isna(row['InformationElement:ActedUpon']) : 
@@ -386,7 +386,7 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 				else: 
 					print("#### Source Authority")
 				print()
-				print(row['AuthoritiesDefaults'])
+				print("`" + row['AuthoritiesDefaults'] + "`")
 				print()
 			print("#### Examples")
 			print()
@@ -426,7 +426,7 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 			print()
 			print("#### Specification")
 			print()
-			print("`",row['ExpectedResponse'],"`")
+			print(row['ExpectedResponse'])
 			print()
 			print("#### Information Elements")
 			if not pandas.isna(row['InformationElement:ActedUpon']) : 
