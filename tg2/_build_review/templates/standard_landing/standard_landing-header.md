@@ -243,7 +243,7 @@ Readers can approach the standard in different ways depending on their needs. Th
 		:blue_book:
         <strong>Supporting Vocabularies</strong><br>
         Controlled vocabularies for criteria, dimensions, enhancements, and other elements needed to specify new tests.</a>
-		<a href="./docs/list/bdq/index.md">bdqval: Vocabulary</a>, <a href="./docs/list/bdqcrit/index.md">bdqcrit: Vocabulary</a>, <a href="./docs/list/bdqdim/index.md">bdqdim: Vocabulary</a>, <a href="./docs/list/bdqenh/index.md">bdqenh: Vocabulary</a>.
+		<a href="./docs/list/bdqval/index.md">bdqval: Vocabulary</a>, <a href="./docs/list/bdqcrit/index.md">bdqcrit: Vocabulary</a>, <a href="./docs/list/bdqdim/index.md">bdqdim: Vocabulary</a>, <a href="./docs/list/bdqenh/index.md">bdqenh: Vocabulary</a>.
       </td>
     </tr>
     <tr>
@@ -339,7 +339,7 @@ The Foundational Vocabularies cover the two main parts of the standard - the pra
 
 The Supporting Vocabularies are controlled vocabularies used in the technical definitions of the Tests.   
 
-- [**BDQ Controlled Vocabulary List of Terms (bdqval:)**](docs/list/bdq/index.md)
+- [**BDQ Controlled Vocabulary List of Terms (bdqval:)**](docs/list/bdqval/index.md)
 - [**Data Quality Criterion Controlled Vocabulary List of Terms (bdqcrit:)**](docs/list/bdqcrit/index.md)
 - [**Data Quality Dimension Controlled Vocabulary List of Terms (bdqdim:)**](docs/list/bdqdim/index.md)
 - [**Data Quality Enhancement Controlled Vocabulary List of Terms (bdqenh:)**](docs/list/bdqenh/index.md)
@@ -364,10 +364,10 @@ Note: None of these links will work until deployment of the standard, but they a
   - [Term List RDF Metadata](https://rs.tdwg.org/bdqffdq/terms.ttl)
   - [HTML Vocabulary Extension](https://bdq.tdwg.org/bdqffdq/extension/)
   - [Vocabulary Extension RDF Metadata](https://bdq.tdwg.org/bdqffdq/extension.ttl)
-- [**BDQ Controlled Vocabulary  (bdqval:)**](https://bdq.tdwg.org/bdq/)
-  - [Vocabulary IRI](https://rs.tdwg.org/bdq/) redirects to [HTML Terms List](https://bdq.tdwg.org/bdq/terms)
-  - [RDF Metadata](https://rs.tdwg.org/bdqtest.ttl)
-  - [Term List RDF Metadata](https://rs.tdwg.org/bdq/terms.ttl)
+- [**BDQ Controlled Vocabulary  (bdqval:)**](https://bdq.tdwg.org/bdqval/)
+  - [Vocabulary IRI](https://rs.tdwg.org/bdq/) redirects to [HTML Terms List](https://bdq.tdwg.org/bdqval/terms)
+  - [RDF Metadata](https://rs.tdwg.org/bdqval.ttl)
+  - [Term List RDF Metadata](https://rs.tdwg.org/bdqval/terms.ttl)
 - [**Data Quality Criterion Controlled Vocabulary (bdqcrit:)**](https://bdq.tdwg.org/bdqcrit/) 
   - [Vocabulary IRI](https://rs.tdwg.org/bdqcrit/) redirects to [HTML Terms List](https://bdq.tdwg.org/bdqcrit/terms)
   - [RDF Metadata](https://bdq.tdwg.org/bdqcrit.ttl)
@@ -423,7 +423,7 @@ The Fitness for Use Framework is provided as an OWL ontology.
 
 #### 3.6.4 RDF Serializations of Controlled Vocabularies (non-normative)
 
-- [**RDF/XML serialization of the bdqval: terms**](dist/bdq.xml)
+- [**RDF/XML serialization of the bdqval: terms**](dist/bdqval.xml)
 - [**RDF/XML serialization of the bdqcrit: terms**](dist/bdqcrit.xml)
 - [**RDF/XML serialization of the bdqdim: terms**](dist/bdqdim.xml)
 - [**RDF/XML serialization of the bdqenh: terms**](dist/bdqenh.xml)

@@ -233,7 +233,7 @@ Test implementations SHOULD be independent of how data are stored and transporte
 | bdqval:Empty | An evaluation of a value, which in the context of the evaluation, returns true if the value does not contain any characters or values other than those in the range U+0000 to U+0020, otherwise returns false. |
 | bdqval:NotEmpty |An evaluation of a value, which in the context of the evaluation, returns false if the value contains any characters or values other than those in the range U+0000 to U+0020, otherwise returns true. |
 
-See the formal definitions and usage comments of [bdqval:Empty](../../list/bdq/index.md#bdq_Empty) and [bdqval:NotEmpty](../../list/bdq/index.md#bdq_NotEmpty) terms in the [BDQ Controlled Vocabulary List of Terms](../../list/bdq/index.md)
+See the formal definitions and usage comments of [bdqval:Empty](../../list/bdqval/index.md#bdqval_Empty) and [bdqval:NotEmpty](../../list/bdqval/index.md#bdqval_NotEmpty) terms in the [BDQ Controlled Vocabulary List of Terms](../../list/bdqval/index.md)
 
 Data that have passed through arbitrary serializations and transformations can contain anomalies. `bdqval:Empty` is defined to allow Tests to clearly separate concerns. A `bdqffdq:InformationElement` containing invalid characters, (e.g., letters in an `Information Element` that would be expected to contain integers) or values (including string serializations of the NULL value) are `bdqval:NotEmpty` and are the concern of Tests that evaluate `bdqdim:Conformance`. Presence or absence of data is a concern for Tests evaluating `bdqdim:Completeness`.
 
@@ -1308,7 +1308,7 @@ Results of the Biodiversity Data Quality (BDQ) Taxon Name-related Tests.
 
 ### 7.2 Annotations (normative)
 
-The `bdqffdq:` OWL representation of the [Fitness for Use Framework Ontology](../../guide/bdqffdq/index.md) and the framing of the [BDQ Tests as RDF](../../../dist/bdq.xml) using that ontology make Test results particularly amenable to being wrapped in `Annotations` following the [W3C Web Annotation Data Model](https://www.w3.org/TR/annotation-model/) (Sanderson et al. 2017). Test responses MAY be represented as `Annotations`.
+The `bdqffdq:` OWL representation of the [Fitness for Use Framework Ontology](../../guide/bdqffdq/index.md) and the framing of the [BDQ Tests as RDF](../../../dist/bdqtest.ttl) using that ontology make Test results particularly amenable to being wrapped in `Annotations` following the [W3C Web Annotation Data Model](https://www.w3.org/TR/annotation-model/) (Sanderson et al. 2017). Test responses MAY be represented as `Annotations`.
 
 The responses from Tests could be structured as elements that can be wrapped in the body `Annotation` document along with metadata from the Framework to describe which Test is being reported upon, and metadata within the target of the `Annotation` to describe which `DataResource` is being annotated, and the state it was in at the time of annotation.
 

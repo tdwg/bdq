@@ -517,7 +517,7 @@ Since this is a `Validation`, the Test will return either COMPLIANT or NOT_COMPL
 
 But, "contains some value" might be interpreted in different ways by different developers, so we will use an explicit concept from BDQ that allows developers to look in one place for the meaning of "contains some value", and know that this is a standard concept that gets reused.
 
-The [bdqval:](../list/bdq/index.md) vocabulary contains a term for just this purpose: [bdqval:NotEmpty](../list/bdq/index.md#bdq_NotEmpty), a standard definition of this common concept for reuse in many tests, preventing ambiguity in implementation. Thus, we can rephrase the expected response to link to this BDQ concept:
+The [bdqval:](../list/bdqval/index.md) vocabulary contains a term for just this purpose: [bdqval:NotEmpty](../list/bdqval/index.md#bdqval_NotEmpty), a standard definition of this common concept for reuse in many tests, preventing ambiguity in implementation. Thus, we can rephrase the expected response to link to this BDQ concept:
 
 **Expected Response** COMPLIANT if dwc:footprintWKT is bdqval:NotEmpty; otherwise NOT_COMPLIANT
 
@@ -531,7 +531,7 @@ Formally in the bdqffdq: ontology, `Specification` is a class, which has a `bdqf
 
 See also: 
 * [Reading a Specification](../guide/implementers/index.md#232-reading-a-specification-non-normative) in the Implementers Guide.
-* [The bdqval: vocabulary](../list/bdq/index.md) for standard concepts that can be used in Test specifications.
+* [The bdqval: vocabulary](../list/bdqval/index.md) for standard concepts that can be used in Test specifications.
 * The `Data Quality Solutions` portions of the diagrams in [Concepts in the Framework](../guide/bdqffdq/index.md#223-concepts-in-the-framework-test-types-validation-issue-measure-amendment-non-normative) in the bdqffdq: guide.
 
 #### 4.7.1 What Isn't Said in the Test Specification (non-normative)
