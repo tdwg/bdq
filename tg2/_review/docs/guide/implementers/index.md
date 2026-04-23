@@ -20,10 +20,10 @@ BDQ Implementer's Guide
 -->
 
 **This version**<br>
-<http://rs.tdwg.org/bdq/doc/implementers2025-05-10>
+<https://rs.tdwg.org/bdq/doc/implementers2025-05-10>
 
 **Latest version**<br>
-<http://rs.tdwg.org/bdq/doc/implementers>
+<https://rs.tdwg.org/bdq/doc/implementers>
 
 **Previous version**<br>
 
@@ -37,7 +37,7 @@ This document is a users guide for the BDQ standard, providing guidance for thos
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 **Bibliographic citation**<br>
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. BDQ Implementer's Guide. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/doc/implementers2025-05-10>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. BDQ Implementer's Guide. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdq/doc/implementers2025-05-10>
 
 **Status**<br>
 Draft Standard for Review
@@ -1544,7 +1544,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. BDQ Implementer's Guide. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/doc/implementers2025-05-10>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. BDQ Implementer's Guide. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdq/doc/implementers2025-05-10>
 
 **Biodiversity Information Standards (TDWG)**
 

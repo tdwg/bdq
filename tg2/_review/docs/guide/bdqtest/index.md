@@ -20,10 +20,10 @@ BDQ Tests: Concepts, Types, and Use
 -->
 
 **This version**<br>
-<http://rs.tdwg.org/bdq/docs/guide/bdqtest/2026-04-19>
+<https://rs.tdwg.org/bdq/docs/guide/bdqtest/2026-04-19>
 
 **Latest version**<br>
-<http://rs.tdwg.org/bdq/docs/guide/bdqtest/>
+<https://rs.tdwg.org/bdq/docs/guide/bdqtest/>
 
 **Previous version**<br>
 
@@ -37,7 +37,7 @@ This document is a reference for the BDQ standard, providing context for and nor
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 **Bibliographic citation**<br>
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Tests: Concepts, Types, and Use. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/docs/guide/bdqtest/2026-04-19>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Tests: Concepts, Types, and Use. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdq/docs/guide/bdqtest/2026-04-19>
 
 **Status**<br>
 Draft Standard for Review
@@ -610,7 +610,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Tests: Concepts, Types, and Use. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/docs/guide/bdqtest/2026-04-19>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Tests: Concepts, Types, and Use. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdq/docs/guide/bdqtest/2026-04-19>
 
 **Biodiversity Information Standards (TDWG)**
 

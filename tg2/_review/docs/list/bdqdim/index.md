@@ -18,10 +18,10 @@ Data Quality Dimension Controlled Vocabulary List of Terms
 bdqdim
 
 **This version**<br>
-<http://rs.tdwg.org/bdq/bdqdim/terms/2025-05-10>
+<https://rs.tdwg.org/bdqdim/terms/2025-05-10>
 
 **Latest version**<br>
-<http://rs.tdwg.org/bdq/bdqdim/terms/>
+<https://rs.tdwg.org/bdqdim/terms/>
 
 **Previous version**<br>
 **Abstract**<br>
@@ -34,7 +34,7 @@ This document is a reference for the BDQ standard. It covers the vocabulary term
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 **Bibliographic citation**<br>
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Data Quality Dimension Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/bdqdim/terms/2025-05-10>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Data Quality Dimension Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqdim/terms/2025-05-10>
 
 **Status**<br>
 Draft Standard for Review
@@ -103,7 +103,7 @@ For the list and links to all associated documents see [The Biodiversity Data Qu
 
 | Description | IRI | Download URL | Notes | 
 | ----------- | --- | -----------  | ----- | 
-| HTML file   | http://rs.tdwg.org/bdq/bdqdim/terms/ | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/docs/list/bdqdim/index.md | This file | 
+| HTML file   | https://rs.tdwg.org/bdqdim/terms/ | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/docs/list/bdqdim/index.md | This file | 
 | RDF/XML file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/dist/bdqdim.xml | Example for submission, to be generated | 
 
 ### 1.6 Status of the content of this document (normative)
@@ -306,7 +306,7 @@ Each instance of a Test, regardless of Test type, SHOULD have exactly one `bdqff
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>Agreement among related bdqffdq:InformationElements that are present in the data. Note that missing bdqffdq:InformationElements do not make a test bdq:Inconsistent.</td>
+			<td>Agreement among related bdqffdq:InformationElements that are present in the data. Note that missing bdqffdq:InformationElements do not make a test inconsistent.</td>
 		</tr>
 		<tr>
 			<td>Comments</td>
@@ -491,7 +491,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Data Quality Dimension Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/bdqdim/terms/2025-05-10>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Data Quality Dimension Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqdim/terms/2025-05-10>
 
 **Biodiversity Information Standards (TDWG)**
 

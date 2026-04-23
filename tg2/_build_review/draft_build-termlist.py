@@ -376,10 +376,10 @@ for term in termLists:
     #
     outputRdf = ""
     #
-    outputRdfFooter = '<rdf:Description rdf:about="http://rs.tdwg.org/{}/terms/">\n'.format(term)
+    outputRdfFooter = '<rdf:Description rdf:about="https://rs.tdwg.org/{}/terms/">\n'.format(term)
     outputRdfFooter += '     <dc:format>application/rdf+xml</dc:format>\n'
     outputRdfFooter += '     <dc:creator>Biodiversity Information Standards (TDWG)</dc:creator>\n'
-    outputRdfFooter += '     <dcterms:references rdf:resource="http://rs.tdwg.org/{}/terms/"/>\n'.format(term)
+    outputRdfFooter += '     <dcterms:references rdf:resource="https://rs.tdwg.org/{}/terms/"/>\n'.format(term)
     #outputRdfFooter += '     <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-01T22:18:44-05:00</dcterms:modified>\n'
     outputRdfFooter += '     <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/document"/>\n'
     outputRdfFooter += '</rdf:Description>\n'
@@ -429,8 +429,8 @@ for term in termLists:
         for row_index,row in filtered_table.iterrows():
             # row_list = [row['iri'], row['term_localName'], row['prefLabel'], row['label'], row['comments'], row['definition'], row['rdf_type'], row['organized_in'] ,row['issued'],row['status'],row['term_iri'],row['flags'] ]
             outputRdf += '<rdf:Description rdf:about="{}">\n'.format(row['iri'])
-            outputRdf += '     <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/{}/terms/"/>\n'.format(term)
-            outputRdf += '     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/{}/terms/"/>\n'.format(term)
+            outputRdf += '     <rdfs:isDefinedBy rdf:resource="https://rs.tdwg.org/{}/terms/"/>\n'.format(term)
+            outputRdf += '     <dcterms:isPartOf rdf:resource="https://rs.tdwg.org/{}/terms/"/>\n'.format(term)
             outputRdf += '     <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">{}</dcterms:issued>\n'.format(row['issued'])
             outputRdf += '     <tdwgutility:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recommended</tdwgutility:status>\n'
             outputRdf += '     <rdfs:label xml:lang="en">{}</rdfs:label>\n'.format(row['label'])
@@ -439,9 +439,9 @@ for term in termLists:
             outputRdf += '     <rdfs:comment xml:lang="en">{}</rdfs:comment>\n'.format(row['definition'])
             outputRdf += '     <skos:definition xml:lang="en">{}</skos:definition>\n'.format(row['definition'])
             outputRdf += '     <rdf:value>{}</rdf:value>\n'.format(row['term_localName'])
-            outputRdf += '     <skos:inScheme rdf:resource="http://rs.tdwg.org/{}/terms/"/>\n'.format(term)
+            outputRdf += '     <skos:inScheme rdf:resource="https://rs.tdwg.org/{}/terms/"/>\n'.format(term)
             outputRdf += '     <rdf:type rdf:resource="{}"/>\n'.format(row['rdf_type'])
-            outputRdf += '     <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/{}/terms/{}"/>\n'.format(term,row['term_localName'])
+            outputRdf += '     <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/{}/terms/{}"/>\n'.format(term,row['term_localName'])
             if term == "bdqval" :
                 if row['hasFitnessRequirements'] and row['hasFitnessRequirements'] != '' :
                     outputRdf += '     <bdqffdq:hasFitnessRequirements rdf:datatype="http://www.w3.org/2001/XMLSchema#string">{}</bdqffdq:hasFitnessRequirements>\n'.format(row['hasFitnessRequirements'])
@@ -458,7 +458,7 @@ for term in termLists:
             text += '\t\t<tr>\n'
             text += '\t\t\t<td>Term IRI</td>\n'
             uri = row['term_iri']
-            # uri = "http://rs.tdwg.org/bdq/bdqdim/terms/" + row['term_localName']
+            # uri = "https://rs.tdwg.org/bdqdim/terms/" + row['term_localName']
             text += '\t\t\t<td><a href="' + uri + '">' + uri + '</a></td>\n'
             text += '\t\t</tr>\n'
             text += '\t\t<tr>\n'

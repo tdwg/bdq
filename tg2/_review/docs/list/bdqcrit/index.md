@@ -18,10 +18,10 @@ Data Quality Criterion Controlled Vocabulary List of Terms
 bdqcrit
 
 **This version**<br>
-<http://rs.tdwg.org/bdq/bdqcrit/terms/2025-05-10>
+<https://rs.tdwg.org/bdqcrit/terms/2025-05-10>
 
 **Latest version**<br>
-<http://rs.tdwg.org/bdq/bdqcrit/terms/>
+<https://rs.tdwg.org/bdqcrit/terms/>
 
 **Previous version**<br>
 **Abstract**<br>
@@ -34,7 +34,7 @@ This document is a reference for the BDQ standard. It covers the vocabulary term
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 **Bibliographic citation**<br>
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Data Quality Criterion Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/bdqcrit/terms/2025-05-10>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Data Quality Criterion Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqcrit/terms/2025-05-10>
 
 **Status**<br>
 Draft Standard for Review
@@ -101,7 +101,7 @@ For the list and links to all associated documents see [The Biodiversity Data Qu
 
 | Description | IRI | Download URL | Notes | 
 | ----------- | --- | -----------  | ----- | 
-| HTML file   | http://rs.tdwg.org/bdq/bdqcrit/terms/ | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/docs/list/bdqcrit/index.md | This file | 
+| HTML file   | https://rs.tdwg.org/bdqcrit/terms/ | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/docs/list/bdqcrit/index.md | This file | 
 | RDF/XML file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/dist/bdqcrit.xml | Example for submission, to be generated | 
 
 ### 1.6 Status of the content of this document (normative)
@@ -267,7 +267,7 @@ An instance of `bdqffdq:Measure` or `bdqffdq:Amendment` SHOULD NOT have a `bdqff
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>A set of bdqffdq:InformationElements and bdq:sourceAuthorities are consistent.  Corresponding dimension is bdqdim:Consistency.</td>
+			<td>A set of bdqffdq:InformationElements and bdqval:sourceAuthorities are consistent.  Corresponding dimension is bdqdim:Consistency.</td>
 		</tr>
 		<tr>
 			<td>Status</td>
@@ -313,7 +313,7 @@ An instance of `bdqffdq:Measure` or `bdqffdq:Amendment` SHOULD NOT have a `bdqff
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>Data in a bdqffdq:InformationElement conform to a bdq:sourceAuthority. Corresponding dimension is bdqdim:Conformance.</td>
+			<td>Data in a bdqffdq:InformationElement conform to a bdqval:sourceAuthority. Corresponding dimension is bdqdim:Conformance.</td>
 		</tr>
 		<tr>
 			<td>Status</td>
@@ -451,7 +451,7 @@ An instance of `bdqffdq:Measure` or `bdqffdq:Amendment` SHOULD NOT have a `bdqff
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>Some value is present in a bdqffdq:InformationElement. Corresponding dimension is bdqdim:Completeness. See also bdq:Empty and bdq:NotEmpty.</td>
+			<td>Some value is present in a bdqffdq:InformationElement. Corresponding dimension is bdqdim:Completeness. See also bdqval:Empty and bdqval:NotEmpty.</td>
 		</tr>
 		<tr>
 			<td>Status</td>
@@ -586,7 +586,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Data Quality Criterion Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/bdqcrit/terms/2025-05-10>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Data Quality Criterion Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqcrit/terms/2025-05-10>
 
 **Biodiversity Information Standards (TDWG)**
 

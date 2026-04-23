@@ -131,7 +131,7 @@ _review/
 │           └── qrg_multirecord_index.md  Generated file. **Do not edit.**
 └── vocabulary  Master copies of vocabularies as term version files (and an OWL file).
     ├── README.md list, description, and editable state of the vocabulary files
-	├── bdq_term_versions.csv  Term version file for `bdq:` supplemental vocabulary. **Editable.**
+	├── bdqval_term_versions.csv  Term version file for `bdqval:` supplemental vocabulary. **Editable.**
 	├── bdqcrit_term_versions.csv  Term version file for `bdqcrit:` Criterion vocabulary. **Editable.**
 	├── bdqdim_term_versions.csv  Term version file for `bdqdim:` Dimension vocabulary. **Editable.**
 	├── bdqenh_term_versions.csv  Term version file for `bdqenh:` Enhancement vocabulary. **Editable.**

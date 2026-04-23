@@ -67,7 +67,7 @@ PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
 
 PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
-PREFIX bdqval:     <https://rs.tdwg.org/bdq/terms/>
+PREFIX bdqval:     <https://rs.tdwg.org/bdqval/terms/>
 """
 
 # NOTE: useCaseName is BOUND in WHERE so it can be FILTERed reliably.

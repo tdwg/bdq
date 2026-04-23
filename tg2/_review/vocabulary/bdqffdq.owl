@@ -179,7 +179,7 @@ bdqffdq:hasActedUponInformationElement rdf:type owl:ObjectProperty ;
 bdqffdq:hasArgument rdf:type owl:ObjectProperty ;
                     rdfs:range bdqffdq:Argument ;
                     dcterms:issued "2024-09-30"^^xsd:date ;
-                    skos:note "Expected to be a relationship between a bdqffdq:Specification and a bdqffdq:Argument, where the bdqffdq:Argument provides a value for a bdqffdq:Parameter (e.g., bdq:sourceAuthority), and a bdqffdq:hasAuthoritiesDefaults for the bdqffdq:Specification may provide a default value for the bdqffdq:Parameter under that bdqffdq:Specification."@en ;
+                    skos:note "Expected to be a relationship between a bdqffdq:Specification and a bdqffdq:Argument, where the bdqffdq:Argument provides a value for a bdqffdq:Parameter (e.g., bdqval:sourceAuthority), and a bdqffdq:hasAuthoritiesDefaults for the bdqffdq:Specification may provide a default value for the bdqffdq:Parameter under that bdqffdq:Specification."@en ;
                     rdfs:label "has Argument"@en ;
                     skos:definition "Relates a bdqffdq:Specification to a bdqffdq:Argument"@en ;
                     rdfs:comment "Relates a bdqffdq:Specification to a bdqffdq:Argument"@en ;
@@ -515,10 +515,10 @@ bdqffdq:hasArgumentValue rdf:type owl:DatatypeProperty ;
 bdqffdq:hasAuthoritiesDefaults rdf:type owl:DatatypeProperty ;
                                rdfs:range xsd:string ;
                                dcterms:issued "2024-09-30"^^xsd:date ;
-                               skos:note "Details of the bdq:sourceAuthority listed in a bdqffdq:Specification, with bdqffdq:Parameters that may affect the bdqffdq:hasExpectedResponse, and with their default values."@en ;
+                               skos:note "Details of the bdqval:sourceAuthority listed in a bdqffdq:Specification, with bdqffdq:Parameters that may affect the bdqffdq:hasExpectedResponse, and with their default values."@en ;
                                rdfs:label "has Authorities and Defaults"@en ;
-                               skos:definition "Text describing bdq:sourceAuthorities and bdqffdq:Parameters with their default values to attach to a bdqffdq:Specification to further specify the behavior described in the bdqffdq:hasExpectedResponse."@en ;
-                               rdfs:comment "Text describing bdq:sourceAuthorities and bdqffdq:Parameters with their default values to attach to a bdqffdq:Specification to further specify the behavior described in the bdqffdq:hasExpectedResponse."@en ;
+                               skos:definition "Text describing bdqval:sourceAuthorities and bdqffdq:Parameters with their default values to attach to a bdqffdq:Specification to further specify the behavior described in the bdqffdq:hasExpectedResponse."@en ;
+                               rdfs:comment "Text describing bdqval:sourceAuthorities and bdqffdq:Parameters with their default values to attach to a bdqffdq:Specification to further specify the behavior described in the bdqffdq:hasExpectedResponse."@en ;
                                skos:prefLabel "has Authorities and Defaults"@en .
 
 
@@ -1206,7 +1206,7 @@ bdqffdq:AMENDED rdf:type owl:NamedIndividual ,
                 owl:differentFrom bdqffdq:NOT_AMENDED ;
                 dcterms:issued "2024-09-30"^^xsd:date ;
                 rdf:value "AMENDED" ;
-                skos:note "The value bdqffdq:AMENDED implies that a change is being proposed to an existing bdq:NotEmpty value. bdqffdq:Amendments do not provide bdqffdq:hasResponseResult object properties. Proposed changes will be in a bdqffdq:hasResponseResultValue data property."@en ;
+                skos:note "The value bdqffdq:AMENDED implies that a change is being proposed to an existing bdqval:NotEmpty value. bdqffdq:Amendments do not provide bdqffdq:hasResponseResult object properties. Proposed changes will be in a bdqffdq:hasResponseResultValue data property."@en ;
                 rdfs:label "AMENDED"@en ;
                 skos:definition "A bdqffdq:ResponseStatus used to indicate that a bdqffdq:hasResponseResultValue from a bdqffdq:Amendment contains a proposed change."@en ;
                 rdfs:comment "A bdqffdq:ResponseStatus used to indicate that a bdqffdq:hasResponseResultValue from a bdqffdq:Amendment contains a proposed change."@en ;
@@ -1245,8 +1245,8 @@ bdqffdq:EXTERNAL_PREREQUISITES_NOT_MET rdf:type owl:NamedIndividual ,
                                        dcterms:issued "2024-09-30"^^xsd:date ;
                                        rdf:value "EXTERNAL_PREREQUISITES_NOT_MET" ;
                                        rdfs:label "EXTERNAL_PREREQUISITES_NOT_MET"@en ;
-                                       skos:definition "A bdqffdq:ResponseStatus used to indicate that a bdqffdq:ResponseResult was not generated because a bdq:sourceAuthority was not accessible. If the Test is run at a later time, it may produce a different bdqffdq:ResponseStatus."@en ;
-                                       rdfs:comment "A bdqffdq:ResponseStatus used to indicate that a bdqffdq:ResponseResult was not generated because a bdq:sourceAuthority was not accessible. If the Test is run at a later time, it may produce a different bdqffdq:ResponseStatus."@en ;
+                                       skos:definition "A bdqffdq:ResponseStatus used to indicate that a bdqffdq:ResponseResult was not generated because a bdqval:sourceAuthority was not accessible. If the Test is run at a later time, it may produce a different bdqffdq:ResponseStatus."@en ;
+                                       rdfs:comment "A bdqffdq:ResponseStatus used to indicate that a bdqffdq:ResponseResult was not generated because a bdqval:sourceAuthority was not accessible. If the Test is run at a later time, it may produce a different bdqffdq:ResponseStatus."@en ;
                                        skos:prefLabel "EXTERNAL_PREREQUISITES_NOT_MET"@en .
 
 
@@ -1257,8 +1257,8 @@ bdqffdq:FILLED_IN rdf:type owl:NamedIndividual ,
                   dcterms:issued "2024-09-30"^^xsd:date ;
                   rdf:value "FILLED_IN" ;
                   rdfs:label "FILLED_IN"@en ;
-                  skos:definition "A bdqffdq:ResponseStatus used to indicate that a bdqffdq:Amendment contains a proposed change to a record in a bdqffdq:hasResponseResultValue where the bdqffdq:InformationElement was bdq:Empty."@en ;
-                  rdfs:comment "A bdqffdq:ResponseStatus used to indicate that a bdqffdq:Amendment contains a proposed change to a record in a bdqffdq:hasResponseResultValue where the bdqffdq:InformationElement was bdq:Empty."@en ;
+                  skos:definition "A bdqffdq:ResponseStatus used to indicate that a bdqffdq:Amendment contains a proposed change to a record in a bdqffdq:hasResponseResultValue where the bdqffdq:InformationElement was bdqval:Empty."@en ;
+                  rdfs:comment "A bdqffdq:ResponseStatus used to indicate that a bdqffdq:Amendment contains a proposed change to a record in a bdqffdq:hasResponseResultValue where the bdqffdq:InformationElement was bdqval:Empty."@en ;
                   skos:prefLabel "FILLED_IN"@en .
 
 

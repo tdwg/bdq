@@ -48,9 +48,9 @@ Normative requirements for the structure of Responses/Assertions (status/result/
 - **BDQ User's Guide**: [guide/users/index.md](guide/users/index.md)
   - [3.2.3 Outputs: Responses from Tests](guide/users/index.md#323-outputs-responses-from-tests-normative)
 - **Fitness For Use Framework Ontology: Concepts and Use**: [guide/bdqffdq/index.md](guide/bdqffdq/index.md)
-  - [2 Use of Ontology Terms](guide/bdqffdq/index.md#2-use-of-ontology-terms-normative)
-  - [2.1 Properties of Responses](guide/bdqffdq/index.md#21-properties-of-responses-normative)
-  - [2.2.6 Properties relating `Data Quality Reports`](guide/bdqffdq/index.md#226-properties-relating-data-quality-reports-normative)
+  - [2.4.1 Properties of Responses](guide/bdqffdq/index.md#241-properties-of-responses-normative)
+  - [3 Use of Ontology Terms](guide/bdqffdq/index.md#3-use-of-ontology-terms-normative)
+  - [3.1.6 Properties relating Data Quality Reports](guide/bdqffdq/index.md#316-properties-relating-data-quality-reports-normative)
 
 ### Response.status and Response.result controlled values
 
@@ -64,8 +64,7 @@ Normative requirements for controlled vocabulary values used in Responses (RUN_H
 - **BDQ User's Guide**: [guide/users/index.md](guide/users/index.md)
   - [3.2.3 Outputs: Responses from Tests](guide/users/index.md#323-outputs-responses-from-tests-normative)
 - **Fitness For Use Framework Ontology: Concepts and Use**: [guide/bdqffdq/index.md](guide/bdqffdq/index.md)
-  - [2 Use of Ontology Terms](guide/bdqffdq/index.md#2-use-of-ontology-terms-normative)
-  - [2.1 Properties of Responses](guide/bdqffdq/index.md#21-properties-of-responses-normative)
+  - [2.4.1 Properties of Responses](guide/bdqffdq/index.md#241-properties-of-responses-normative)
 
 ### Data Quality Reports and Annotations (packaging and identification)
 
@@ -98,7 +97,7 @@ Normative statements about what must be present in Data Quality Reports, and how
   - [4 Use of Terms](guide/bdqtest/index.md#4-use-of-terms-normative)
   - [4.1 Structure of Response](guide/bdqtest/index.md#41-structure-of-response-normative)
   - [5 Design of the Tests](guide/bdqtest/index.md#5-design-of-the-tests-normative)
-  - [5.3 Results of Test Executions](guide/bdqtest/index.md#53-results-of-test-executions-normative)
+  - [5.4 Results of Test Executions](guide/bdqtest/index.md#54-results-of-test-executions-normative)
 - **BDQ User's Guide**: [guide/users/index.md](guide/users/index.md)
   - [3.2.3 Outputs: Responses from Tests](guide/users/index.md#323-outputs-responses-from-tests-normative)
   - [3.3 Amendments Propose Changes](guide/users/index.md#33-amendments-propose-changes-normative)
@@ -106,10 +105,10 @@ Normative statements about what must be present in Data Quality Reports, and how
 - **Fitness For Use Framework Ontology List of Terms**: [list/bdqffdq/index.md](list/bdqffdq/index.md)
   - [4 Vocabulary](list/bdqffdq/index.md#4-vocabulary-normative)
 - **Fitness For Use Framework Ontology: Concepts and Use**: [guide/bdqffdq/index.md](guide/bdqffdq/index.md)
-  - [2 Use of Ontology Terms](guide/bdqffdq/index.md#2-use-of-ontology-terms-normative)
-  - [2.2.2 Properties Relating to Data Quality Needs](guide/bdqffdq/index.md#222-properties-relating-to-data-quality-needs-normative)
-  - [2.2.5 Properties relating to data quality solutions provided by an implementation](guide/bdqffdq/index.md#225-properties-relating-to-data-quality-solutions-provided-by-an-implementation-normative)
-  - [2.2.6 Properties relating `Data Quality Reports`](guide/bdqffdq/index.md#226-properties-relating-data-quality-reports-normative)
+  - [3 Use of Ontology Terms](guide/bdqffdq/index.md#3-use-of-ontology-terms-normative)
+  - [3.1.2 Properties Relating to Data Quality Needs](guide/bdqffdq/index.md#312-properties-relating-to-data-quality-needs-normative)
+  - [3.1.5 Properties relating to data quality solutions provided by an implementation](guide/bdqffdq/index.md#315-properties-relating-to-data-quality-solutions-provided-by-an-implementation-normative)
+  - [3.1.6 Properties relating Data Quality Reports](guide/bdqffdq/index.md#316-properties-relating-data-quality-reports-normative)
   - [4.4.4 Data Quality Reports](guide/bdqffdq/index.md#444-data-quality-reports-normative)
 
 ### Validation Tests (normative behavior)
@@ -124,10 +123,10 @@ Normative requirements and semantics specific to Validation Tests and their expe
   - [3.1 Validation Tests](guide/bdqtest/index.md#31-validation-tests-normative)
   - [5 Design of the Tests](guide/bdqtest/index.md#5-design-of-the-tests-normative)
 - **Fitness For Use Framework Ontology: Concepts and Use**: [guide/bdqffdq/index.md](guide/bdqffdq/index.md)
-  - [2 Use of Ontology Terms](guide/bdqffdq/index.md#2-use-of-ontology-terms-normative)
-  - [2.2.3 Properties Relating Data Quality Needs to Data Quality Solutions](guide/bdqffdq/index.md#223-properties-relating-data-quality-needs-to-data-quality-solutions-normative)
-  - [2.2.7 Identifying the Test that produced a Response](guide/bdqffdq/index.md#227-identifying-the-test-that-produced-a-response-normative)
-  - [2.3 Properties that should be one-to-one](guide/bdqffdq/index.md#23-properties-that-should-be-one-to-one-normative)
+  - [3 Use of Ontology Terms](guide/bdqffdq/index.md#3-use-of-ontology-terms-normative)
+  - [3.1.3 Properties Relating Data Quality Needs to Data Quality Solutions](guide/bdqffdq/index.md#313-properties-relating-data-quality-needs-to-data-quality-solutions-normative)
+  - [3.2 Identifying the Test that produced a Response](guide/bdqffdq/index.md#32-identifying-the-test-that-produced-a-response-normative)
+  - [3.3 Properties that should be one-to-one](guide/bdqffdq/index.md#33-properties-that-should-be-one-to-one-normative)
 
 ### Issue Tests (normative behavior)
 
@@ -141,10 +140,10 @@ Normative requirements and semantics specific to Issue Tests and their expected 
   - [3.2 Issue Tests](guide/bdqtest/index.md#32-issue-tests-normative)
   - [5 Design of the Tests](guide/bdqtest/index.md#5-design-of-the-tests-normative)
 - **Fitness For Use Framework Ontology: Concepts and Use**: [guide/bdqffdq/index.md](guide/bdqffdq/index.md)
-  - [2 Use of Ontology Terms](guide/bdqffdq/index.md#2-use-of-ontology-terms-normative)
-  - [2.2.3 Properties Relating Data Quality Needs to Data Quality Solutions](guide/bdqffdq/index.md#223-properties-relating-data-quality-needs-to-data-quality-solutions-normative)
-  - [2.2.7 Identifying the Test that produced a Response](guide/bdqffdq/index.md#227-identifying-the-test-that-produced-a-response-normative)
-  - [2.3 Properties that should be one-to-one](guide/bdqffdq/index.md#23-properties-that-should-be-one-to-one-normative)
+  - [3 Use of Ontology Terms](guide/bdqffdq/index.md#3-use-of-ontology-terms-normative)
+  - [3.1.3 Properties Relating Data Quality Needs to Data Quality Solutions](guide/bdqffdq/index.md#313-properties-relating-data-quality-needs-to-data-quality-solutions-normative)
+  - [3.2 Identifying the Test that produced a Response](guide/bdqffdq/index.md#32-identifying-the-test-that-produced-a-response-normative)
+  - [3.3 Properties that should be one-to-one](guide/bdqffdq/index.md#33-properties-that-should-be-one-to-one-normative)
   - [4 Fitness For Use Framework Summary of Mathematical Formalization](guide/bdqffdq/index.md#4-fitness-for-use-framework-summary-of-mathematical-formalization-normative)
 
 ### Measure Tests (normative behavior)
@@ -164,9 +163,9 @@ Normative requirements and semantics specific to Measure Tests, including numeri
   - [3.3 Measure Tests](guide/bdqtest/index.md#33-measure-tests-normative)
   - [5 Design of the Tests](guide/bdqtest/index.md#5-design-of-the-tests-normative)
 - **Fitness For Use Framework Ontology: Concepts and Use**: [guide/bdqffdq/index.md](guide/bdqffdq/index.md)
-  - [2 Use of Ontology Terms](guide/bdqffdq/index.md#2-use-of-ontology-terms-normative)
-  - [2.2.7 Identifying the Test that produced a Response](guide/bdqffdq/index.md#227-identifying-the-test-that-produced-a-response-normative)
-  - [2.3 Properties that should be one-to-one](guide/bdqffdq/index.md#23-properties-that-should-be-one-to-one-normative)
+  - [3 Use of Ontology Terms](guide/bdqffdq/index.md#3-use-of-ontology-terms-normative)
+  - [3.2 Identifying the Test that produced a Response](guide/bdqffdq/index.md#32-identifying-the-test-that-produced-a-response-normative)
+  - [3.3 Properties that should be one-to-one](guide/bdqffdq/index.md#33-properties-that-should-be-one-to-one-normative)
   - [4 Fitness For Use Framework Summary of Mathematical Formalization](guide/bdqffdq/index.md#4-fitness-for-use-framework-summary-of-mathematical-formalization-normative)
   - [4.4 Derived Concepts](guide/bdqffdq/index.md#44-derived-concepts-normative)
   - [4.4.2 Data Quality Needs](guide/bdqffdq/index.md#442-data-quality-needs-normative)
@@ -196,11 +195,11 @@ Normative requirements and semantics specific to Amendment Tests, including AMEN
   - [3.2.3 Outputs: Responses from Tests](guide/users/index.md#323-outputs-responses-from-tests-normative)
   - [3.3 Amendments Propose Changes](guide/users/index.md#33-amendments-propose-changes-normative)
 - **Fitness For Use Framework Ontology: Concepts and Use**: [guide/bdqffdq/index.md](guide/bdqffdq/index.md)
-  - [2 Use of Ontology Terms](guide/bdqffdq/index.md#2-use-of-ontology-terms-normative)
-  - [2.1 Properties of Responses](guide/bdqffdq/index.md#21-properties-of-responses-normative)
-  - [2.2.3 Properties Relating Data Quality Needs to Data Quality Solutions](guide/bdqffdq/index.md#223-properties-relating-data-quality-needs-to-data-quality-solutions-normative)
-  - [2.2.7 Identifying the Test that produced a Response](guide/bdqffdq/index.md#227-identifying-the-test-that-produced-a-response-normative)
-  - [2.3 Properties that should be one-to-one](guide/bdqffdq/index.md#23-properties-that-should-be-one-to-one-normative)
+  - [2.4.1 Properties of Responses](guide/bdqffdq/index.md#241-properties-of-responses-normative)
+  - [3 Use of Ontology Terms](guide/bdqffdq/index.md#3-use-of-ontology-terms-normative)
+  - [3.1.3 Properties Relating Data Quality Needs to Data Quality Solutions](guide/bdqffdq/index.md#313-properties-relating-data-quality-needs-to-data-quality-solutions-normative)
+  - [3.2 Identifying the Test that produced a Response](guide/bdqffdq/index.md#32-identifying-the-test-that-produced-a-response-normative)
+  - [3.3 Properties that should be one-to-one](guide/bdqffdq/index.md#33-properties-that-should-be-one-to-one-normative)
 
 ### Resource Types (SingleRecord / MultiRecord)
 
@@ -223,8 +222,8 @@ Normative requirements about what Resource Type a Test operates on and constrain
   - [4 Vocabulary](list/bdqffdq/index.md#4-vocabulary-normative)
   - [4.4 NamedIndividual terms](list/bdqffdq/index.md#44-namedindividual-terms-normative)
 - **Fitness For Use Framework Ontology: Concepts and Use**: [guide/bdqffdq/index.md](guide/bdqffdq/index.md)
-  - [2 Use of Ontology Terms](guide/bdqffdq/index.md#2-use-of-ontology-terms-normative)
-  - [2.2.2 Properties Relating to Data Quality Needs](guide/bdqffdq/index.md#222-properties-relating-to-data-quality-needs-normative)
+  - [3 Use of Ontology Terms](guide/bdqffdq/index.md#3-use-of-ontology-terms-normative)
+  - [3.1.2 Properties Relating to Data Quality Needs](guide/bdqffdq/index.md#312-properties-relating-to-data-quality-needs-normative)
   - [4 Fitness For Use Framework Summary of Mathematical Formalization](guide/bdqffdq/index.md#4-fitness-for-use-framework-summary-of-mathematical-formalization-normative)
   - [4.2 Properties](guide/bdqffdq/index.md#42-properties-normative)
   - [4.4 Derived Concepts](guide/bdqffdq/index.md#44-derived-concepts-normative)
@@ -290,11 +289,11 @@ Normative guidance about Specifications and how Expected Responses are expressed
   - [4.1 Class terms](list/bdqffdq/index.md#41-class-terms-normative)
   - [4.3 DataProperty terms](list/bdqffdq/index.md#43-dataproperty-terms-normative)
 - **Fitness For Use Framework Ontology: Concepts and Use**: [guide/bdqffdq/index.md](guide/bdqffdq/index.md)
-  - [2 Use of Ontology Terms](guide/bdqffdq/index.md#2-use-of-ontology-terms-normative)
-  - [2.2.4 Properties Relating to Data Quality Solutions Provided in a Test Description](guide/bdqffdq/index.md#224-properties-relating-to-data-quality-solutions-provided-in-a-test-description-normative)
-  - [2.2.5 Properties relating to data quality solutions provided by an implementation](guide/bdqffdq/index.md#225-properties-relating-to-data-quality-solutions-provided-by-an-implementation-normative)
-  - [2.2.7 Identifying the Test that produced a Response](guide/bdqffdq/index.md#227-identifying-the-test-that-produced-a-response-normative)
-  - [2.3 Properties that should be one-to-one](guide/bdqffdq/index.md#23-properties-that-should-be-one-to-one-normative)
+  - [3 Use of Ontology Terms](guide/bdqffdq/index.md#3-use-of-ontology-terms-normative)
+  - [3.1.4 Properties Relating to Data Quality Solutions Provided in a Test Description](guide/bdqffdq/index.md#314-properties-relating-to-data-quality-solutions-provided-in-a-test-description-normative)
+  - [3.1.5 Properties relating to data quality solutions provided by an implementation](guide/bdqffdq/index.md#315-properties-relating-to-data-quality-solutions-provided-by-an-implementation-normative)
+  - [3.2 Identifying the Test that produced a Response](guide/bdqffdq/index.md#32-identifying-the-test-that-produced-a-response-normative)
+  - [3.3 Properties that should be one-to-one](guide/bdqffdq/index.md#33-properties-that-should-be-one-to-one-normative)
   - [4 Fitness For Use Framework Summary of Mathematical Formalization](guide/bdqffdq/index.md#4-fitness-for-use-framework-summary-of-mathematical-formalization-normative)
   - [4.1 Fundamental Concepts](guide/bdqffdq/index.md#41-fundamental-concepts-normative)
 
@@ -321,8 +320,8 @@ Normative statements about Parameterization (Parameters, Arguments, default valu
 - **BDQ User's Guide**: [guide/users/index.md](guide/users/index.md)
   - [3.4.1 Test Parameters in Reports](guide/users/index.md#341-test-parameters-in-reports-normative)
 - **Fitness For Use Framework Ontology: Concepts and Use**: [guide/bdqffdq/index.md](guide/bdqffdq/index.md)
-  - [2 Use of Ontology Terms](guide/bdqffdq/index.md#2-use-of-ontology-terms-normative)
-  - [2.2.4 Properties Relating to Data Quality Solutions Provided in a Test Description](guide/bdqffdq/index.md#224-properties-relating-to-data-quality-solutions-provided-in-a-test-description-normative)
+  - [3 Use of Ontology Terms](guide/bdqffdq/index.md#3-use-of-ontology-terms-normative)
+  - [3.1.4 Properties Relating to Data Quality Solutions Provided in a Test Description](guide/bdqffdq/index.md#314-properties-relating-to-data-quality-solutions-provided-in-a-test-description-normative)
 
 ### Identifying the Test that produced an Assertion (one-to-one chain)
 
@@ -332,11 +331,11 @@ Normative guidance about traversing from Assertions to Tests/Specifications/Impl
   - [7 Presentation of Results](guide/implementers/index.md#7-presentation-of-results-normative)
   - [7.2 Annotations](guide/implementers/index.md#72-annotations-normative)
 - **Fitness For Use Framework Ontology: Concepts and Use**: [guide/bdqffdq/index.md](guide/bdqffdq/index.md)
-  - [2 Use of Ontology Terms](guide/bdqffdq/index.md#2-use-of-ontology-terms-normative)
-  - [2.2.3 Properties Relating Data Quality Needs to Data Quality Solutions](guide/bdqffdq/index.md#223-properties-relating-data-quality-needs-to-data-quality-solutions-normative)
-  - [2.2.5 Properties relating to data quality solutions provided by an implementation](guide/bdqffdq/index.md#225-properties-relating-to-data-quality-solutions-provided-by-an-implementation-normative)
-  - [2.2.7 Identifying the Test that produced a Response](guide/bdqffdq/index.md#227-identifying-the-test-that-produced-a-response-normative)
-  - [2.3 Properties that should be one-to-one](guide/bdqffdq/index.md#23-properties-that-should-be-one-to-one-normative)
+  - [3 Use of Ontology Terms](guide/bdqffdq/index.md#3-use-of-ontology-terms-normative)
+  - [3.1.3 Properties Relating Data Quality Needs to Data Quality Solutions](guide/bdqffdq/index.md#313-properties-relating-data-quality-needs-to-data-quality-solutions-normative)
+  - [3.1.5 Properties relating to data quality solutions provided by an implementation](guide/bdqffdq/index.md#315-properties-relating-to-data-quality-solutions-provided-by-an-implementation-normative)
+  - [3.2 Identifying the Test that produced a Response](guide/bdqffdq/index.md#32-identifying-the-test-that-produced-a-response-normative)
+  - [3.3 Properties that should be one-to-one](guide/bdqffdq/index.md#33-properties-that-should-be-one-to-one-normative)
 
 ### Framework layers (Needs / Solutions / Reports) and core concepts
 
@@ -361,16 +360,16 @@ Normative material that formalizes the Fitness for Use Framework structure and d
 - **BDQ User's Guide**: [guide/users/index.md](guide/users/index.md)
   - [3.2.3 Outputs: Responses from Tests](guide/users/index.md#323-outputs-responses-from-tests-normative)
 - **Fitness For Use Framework Ontology: Concepts and Use**: [guide/bdqffdq/index.md](guide/bdqffdq/index.md)
-  - [2 Use of Ontology Terms](guide/bdqffdq/index.md#2-use-of-ontology-terms-normative)
-  - [2.2.2 Properties Relating to Data Quality Needs](guide/bdqffdq/index.md#222-properties-relating-to-data-quality-needs-normative)
-  - [2.2.4 Properties Relating to Data Quality Solutions Provided in a Test Description](guide/bdqffdq/index.md#224-properties-relating-to-data-quality-solutions-provided-in-a-test-description-normative)
-  - [2.2.5 Properties relating to data quality solutions provided by an implementation](guide/bdqffdq/index.md#225-properties-relating-to-data-quality-solutions-provided-by-an-implementation-normative)
-  - [2.2.6 Properties relating `Data Quality Reports`](guide/bdqffdq/index.md#226-properties-relating-data-quality-reports-normative)
-  - [2.2.7 Identifying the Test that produced a Response](guide/bdqffdq/index.md#227-identifying-the-test-that-produced-a-response-normative)
-  - [2.3 Properties that should be one-to-one](guide/bdqffdq/index.md#23-properties-that-should-be-one-to-one-normative)
+  - [3 Use of Ontology Terms](guide/bdqffdq/index.md#3-use-of-ontology-terms-normative)
+  - [3.1.2 Properties Relating to Data Quality Needs](guide/bdqffdq/index.md#312-properties-relating-to-data-quality-needs-normative)
+  - [3.1.4 Properties Relating to Data Quality Solutions Provided in a Test Description](guide/bdqffdq/index.md#314-properties-relating-to-data-quality-solutions-provided-in-a-test-description-normative)
+  - [3.1.5 Properties relating to data quality solutions provided by an implementation](guide/bdqffdq/index.md#315-properties-relating-to-data-quality-solutions-provided-by-an-implementation-normative)
+  - [3.1.6 Properties relating Data Quality Reports](guide/bdqffdq/index.md#316-properties-relating-data-quality-reports-normative)
+  - [3.2 Identifying the Test that produced a Response](guide/bdqffdq/index.md#32-identifying-the-test-that-produced-a-response-normative)
+  - [3.3 Properties that should be one-to-one](guide/bdqffdq/index.md#33-properties-that-should-be-one-to-one-normative)
   - [4 Fitness For Use Framework Summary of Mathematical Formalization](guide/bdqffdq/index.md#4-fitness-for-use-framework-summary-of-mathematical-formalization-normative)
 
-### Controlled vocabularies (bdq:, bdqcrit:, bdqdim:, bdqenh:, bdqtest:)
+### Controlled vocabularies (bdqval:, bdqcrit:, bdqdim:, bdqenh:, bdqtest:)
 
 Normative sections that define or enumerate controlled vocabulary terms and their use in the BDQ standard.
 
@@ -404,16 +403,16 @@ This section lists the normative sections in each BDQ Document.
 ## Fitness For Use Framework Ontology: Concepts and Use
 
 - Document: [guide/bdqffdq/index.md](guide/bdqffdq/index.md)
-  - [2 Use of Ontology Terms](guide/bdqffdq/index.md#2-use-of-ontology-terms-normative)
-    - [2.1 Properties of Responses](guide/bdqffdq/index.md#21-properties-of-responses-normative)
-    - [2.2 Use of Properties](guide/bdqffdq/index.md#22-use-of-properties-normative)
-      - [2.2.2 Properties Relating to Data Quality Needs](guide/bdqffdq/index.md#222-properties-relating-to-data-quality-needs-normative)
-      - [2.2.3 Properties Relating Data Quality Needs to Data Quality Solutions](guide/bdqffdq/index.md#223-properties-relating-data-quality-needs-to-data-quality-solutions-normative)
-      - [2.2.4 Properties Relating to Data Quality Solutions Provided in a Test Description](guide/bdqffdq/index.md#224-properties-relating-to-data-quality-solutions-provided-in-a-test-description-normative)
-      - [2.2.5 Properties relating to data quality solutions provided by an implementation](guide/bdqffdq/index.md#225-properties-relating-to-data-quality-solutions-provided-by-an-implementation-normative)
-      - [2.2.6 Properties relating `Data Quality Reports`](guide/bdqffdq/index.md#226-properties-relating-data-quality-reports-normative)
-      - [2.2.7 Identifying the Test that produced a Response](guide/bdqffdq/index.md#227-identifying-the-test-that-produced-a-response-normative)
-    - [2.3 Properties that should be one-to-one](guide/bdqffdq/index.md#23-properties-that-should-be-one-to-one-normative)
+  - [2.4.1 Properties of Responses](guide/bdqffdq/index.md#241-properties-of-responses-normative)
+  - [3 Use of Ontology Terms](guide/bdqffdq/index.md#3-use-of-ontology-terms-normative)
+    - [3.1 Use of Properties](guide/bdqffdq/index.md#31-use-of-properties-normative)
+      - [3.1.2 Properties Relating to Data Quality Needs](guide/bdqffdq/index.md#312-properties-relating-to-data-quality-needs-normative)
+      - [3.1.3 Properties Relating Data Quality Needs to Data Quality Solutions](guide/bdqffdq/index.md#313-properties-relating-data-quality-needs-to-data-quality-solutions-normative)
+      - [3.1.4 Properties Relating to Data Quality Solutions Provided in a Test Description](guide/bdqffdq/index.md#314-properties-relating-to-data-quality-solutions-provided-in-a-test-description-normative)
+      - [3.1.5 Properties relating to data quality solutions provided by an implementation](guide/bdqffdq/index.md#315-properties-relating-to-data-quality-solutions-provided-by-an-implementation-normative)
+      - [3.1.6 Properties relating Data Quality Reports](guide/bdqffdq/index.md#316-properties-relating-data-quality-reports-normative)
+    - [3.2 Identifying the Test that produced a Response](guide/bdqffdq/index.md#32-identifying-the-test-that-produced-a-response-normative)
+    - [3.3 Properties that should be one-to-one](guide/bdqffdq/index.md#33-properties-that-should-be-one-to-one-normative)
   - [4 Fitness For Use Framework Summary of Mathematical Formalization](guide/bdqffdq/index.md#4-fitness-for-use-framework-summary-of-mathematical-formalization-normative)
     - [4.1 Fundamental Concepts](guide/bdqffdq/index.md#41-fundamental-concepts-normative)
     - [4.2 Properties](guide/bdqffdq/index.md#42-properties-normative)
@@ -448,10 +447,10 @@ This section lists the normative sections in each BDQ Document.
         - [4.4.4.6 Quality Control](guide/bdqffdq/index.md#4446-quality-control-normative)
         - [4.4.4.7 Quality Assurance](guide/bdqffdq/index.md#4447-quality-assurance-normative)
   - [6 List of Terms with axioms in the Fitness For Use Framework ontology](guide/bdqffdq/index.md#6-list-of-terms-with-axioms-in-the-fitness-for-use-framework-ontology-normative)
-  - [5.1 Class terms](guide/bdqffdq/index.md#51-class-terms-normative)
-  - [5.2 ObjectProperty terms](guide/bdqffdq/index.md#52-objectproperty-terms-normative)
-  - [5.3 DataProperty terms](guide/bdqffdq/index.md#53-dataproperty-terms-normative)
-  - [5.4 NamedIndividual terms](guide/bdqffdq/index.md#54-namedindividual-terms-normative)
+    - [6.1 Class terms](guide/bdqffdq/index.md#61-class-terms-normative)
+    - [6.2 ObjectProperty terms](guide/bdqffdq/index.md#62-objectproperty-terms-normative)
+    - [6.3 DataProperty terms](guide/bdqffdq/index.md#63-dataproperty-terms-normative)
+    - [6.4 NamedIndividual terms](guide/bdqffdq/index.md#64-namedindividual-terms-normative)
 
 
 ## BDQ Tests: Concepts, Types, and Use
@@ -466,9 +465,9 @@ This section lists the normative sections in each BDQ Document.
     - [4.2 Resource Types](guide/bdqtest/index.md#42-resource-types-normative)
     - [4.3 Parameterizing the Tests](guide/bdqtest/index.md#43-parameterizing-the-tests-normative)
   - [5 Design of the Tests](guide/bdqtest/index.md#5-design-of-the-tests-normative)
-    - [5.1 Data Quality Control, Data Quality Assurance](guide/bdqtest/index.md#51-data-quality-control-data-quality-assurance-normative)
-    - [5.2 When to Run Tests](guide/bdqtest/index.md#52-when-to-run-tests-normative)
-    - [5.3 Results of Test Executions](guide/bdqtest/index.md#53-results-of-test-executions-normative)
+    - [5.2 Data Quality Control, Data Quality Assurance](guide/bdqtest/index.md#52-data-quality-control-data-quality-assurance-normative)
+    - [5.3 When to Run Tests](guide/bdqtest/index.md#53-when-to-run-tests-normative)
+    - [5.4 Results of Test Executions](guide/bdqtest/index.md#54-results-of-test-executions-normative)
 
 
 ## BDQ Implementer's Guide
@@ -541,13 +540,6 @@ This section lists the normative sections in each BDQ Document.
   - [3.4.1 Test Parameters in Reports](guide/users/index.md#341-test-parameters-in-reports-normative)
 
 
-## BDQ Controlled Vocabulary List of Terms
-
-- Document: [list/bdq/index.md](list/bdq/index.md)
-  - [2 Use of Terms](list/bdq/index.md#2-use-of-terms-normative)
-  - [4 Vocabulary](list/bdq/index.md#4-vocabulary-normative)
-
-
 ## Data Quality Criterion Controlled Vocabulary List of Terms
 
 - Document: [list/bdqcrit/index.md](list/bdqcrit/index.md)
@@ -585,3 +577,10 @@ This section lists the normative sections in each BDQ Document.
 - Document: [list/bdqtest/index.md](list/bdqtest/index.md)
   - [2 Use of Terms](list/bdqtest/index.md#2-use-of-terms-normative)
   - [4 Vocabulary](list/bdqtest/index.md#4-vocabulary-normative)
+
+
+## BDQ Controlled Vocabulary List of Terms
+
+- Document: [list/bdqval/index.md](list/bdqval/index.md)
+  - [2 Use of Terms](list/bdqval/index.md#2-use-of-terms-normative)
+  - [4 Vocabulary](list/bdqval/index.md#4-vocabulary-normative)

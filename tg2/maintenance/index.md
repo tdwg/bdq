@@ -118,8 +118,8 @@ For more information see the following README files:
 
 The Test Validation Data is a file of Darwin Core (Wieczorek et al. 2012) records where each record provides:
 
-- Input.data: The values of bdqffdq:InformationElements (bdq:InformationElementsConsulted and bdq:InformationElementsActedUpon) required as input to the Test
-- Output.data: For Amendment Type Tests, the output values of amended bdq:InformationElementsActedUpon
+- Input.data: The values of bdqffdq:InformationElements (bdqval:InformationElementsConsulted and bdqval:InformationElementsActedUpon) required as input to the Test
+- Output.data: For Amendment Type Tests, the output values of amended bdqval:InformationElementsActedUpon
 - A Response.status that informs the expected status of running the Test on the input data
 - A Response.result that informs the expected outcome of running the Test on the input data
 - A Response.comment that explains the reasoning for the Response of running the Test on the input data

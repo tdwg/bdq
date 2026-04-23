@@ -20,10 +20,10 @@ Fitness For Use Framework Ontology: Concepts and Use
 -->
 
 **This version**<br>
-<http://rs.tdwg.org/bdq/doc/bdqffdq2025-05-10>
+<https://rs.tdwg.org/bdq/doc/bdqffdq2025-05-10>
 
 **Latest version**<br>
-<http://rs.tdwg.org/bdq/doc/bdqffdq>
+<https://rs.tdwg.org/bdq/doc/bdqffdq>
 
 **Previous version**<br>
 
@@ -37,7 +37,7 @@ This document is a guide for the BDQ standard, describing the organization of th
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 **Bibliographic citation**<br>
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Fitness For Use Framework Ontology: Concepts and Use. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/doc/bdqffdq2025-05-10>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Fitness For Use Framework Ontology: Concepts and Use. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdq/doc/bdqffdq2025-05-10>
 
 **Status**<br>
 Draft Standard for Review
@@ -1859,7 +1859,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 #### hasAuthoritiesDefaults
 
 - Name: [bdqffdq:hasAuthoritiesDefaults](../../list/bdqffdq/index.md#hasAuthoritiesDefaults)
-- Definition: Text describing bdq:sourceAuthorities and bdqffdq:Parameters with their default values to attach to a bdqffdq:Specification to further specify the behavior described in the bdqffdq:hasExpectedResponse.
+- Definition: Text describing bdqval:sourceAuthorities and bdqffdq:Parameters with their default values to attach to a bdqffdq:Specification to further specify the behavior described in the bdqffdq:hasExpectedResponse.
 - [Range](../../extension/bdqffdq/index.md#hasAuthoritiesDefaults) xsd:string
 
 ********************
@@ -2002,7 +2002,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 - Name: [bdqffdq:EXTERNAL_PREREQUISITES_NOT_MET](../../list/bdqffdq/index.md#EXTERNAL_PREREQUISITES_NOT_MET)
 - Type: bdqffdq:ResponseStatus
 - [DifferentFrom](../../extension/bdqffdq/index.md#EXTERNAL_PREREQUISITES_NOT_MET): bdqffdq:INTERNAL_PREREQUISITES_NOT_MET
-- Definition: A bdqffdq:ResponseStatus used to indicate that a bdqffdq:ResponseResult was not generated because a bdq:sourceAuthority was not accessible. If the Test is run at a later time, it may produce a different bdqffdq:ResponseStatus.
+- Definition: A bdqffdq:ResponseStatus used to indicate that a bdqffdq:ResponseResult was not generated because a bdqval:sourceAuthority was not accessible. If the Test is run at a later time, it may produce a different bdqffdq:ResponseStatus.
 
 ********************
 
@@ -2011,7 +2011,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 - Name: [bdqffdq:FILLED_IN](../../list/bdqffdq/index.md#FILLED_IN)
 - Type: bdqffdq:ResponseStatus
 - [DifferentFrom](../../extension/bdqffdq/index.md#FILLED_IN): bdqffdq:NOT_AMENDED
-- Definition: A bdqffdq:ResponseStatus used to indicate that a bdqffdq:Amendment contains a proposed change to a record in a bdqffdq:hasResponseResultValue where the bdqffdq:InformationElement was bdq:Empty.
+- Definition: A bdqffdq:ResponseStatus used to indicate that a bdqffdq:Amendment contains a proposed change to a record in a bdqffdq:hasResponseResultValue where the bdqffdq:InformationElement was bdqval:Empty.
 
 ********************
 
@@ -2067,7 +2067,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Fitness For Use Framework Ontology: Concepts and Use. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdq/doc/bdqffdq2025-05-10>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Fitness For Use Framework Ontology: Concepts and Use. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdq/doc/bdqffdq2025-05-10>
 
 **Biodiversity Information Standards (TDWG)**
 

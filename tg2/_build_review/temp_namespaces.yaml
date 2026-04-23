@@ -68,16 +68,16 @@ namespaces:
   # If use_nameapace_in_fragment is false, this value is ignored.
   separator: '_'  
 
-- namespace_uri: https://rs.tdwg.org/bdq/terms/
+- namespace_uri: https://rs.tdwg.org/bdqval/terms/
 
   # Standard namespace abbreviation for the namespace IRI.
-  pref_namespace_prefix: bdq
+  pref_namespace_prefix: bdqval
 
   # Database name for associated directories and files in the rs.tdwg.org repository. 
   # MUST NOT contain spaces. SHOULD be descriptive and lowerCamelCase is RECOMMENDED. 
   # Borrowed term lists SHOULD use naming convention of Darwin and Audiovisual Cores.
   # Do not append -versions to this name, the versions directory will be created automatically.
-  database: bdq
+  database: bdqval
 
   # MUST be set to true if namespace not issued by TDWG in the rs.tdwg.org subdomain. 
   # MUST be set to false if namespace issued and controlled by TDWG.
@@ -123,7 +123,7 @@ namespaces:
 
   # IRI string from List of Terms document URL to be prepended to the term fragment identifier when 
   # dereferencing terms and an HTML representation is requested. 
-  prepend_url: https://bdq.tdwg.org/bdq/terms/
+  prepend_url: https://bdq.tdwg.org/terms/
 
   # Indicates whether the namespace abbreviation is included in the fragment identifier for the term.
   use_namespace_in_fragment: false

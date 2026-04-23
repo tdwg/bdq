@@ -1000,7 +1000,7 @@ DQV(dr) = {dqv | dqv = < va, s, m, r >, va ∈ VA, s ∈ S, m ∈ M , r ∈ R �
 - Name: bdqffdq:hasArgument
 - Preferred Label: has Argument
 - Definition: Relates a bdqffdq:Specification to a bdqffdq:Argument
-- Comments: Expected to be a relationship between a bdqffdq:Specification and a bdqffdq:Argument, where the bdqffdq:Argument provides a value for a bdqffdq:Parameter (e.g., bdq:sourceAuthority), and a bdqffdq:hasAuthoritiesDefaults for the bdqffdq:Specification may provide a default value for the bdqffdq:Parameter under that bdqffdq:Specification.
+- Comments: Expected to be a relationship between a bdqffdq:Specification and a bdqffdq:Argument, where the bdqffdq:Argument provides a value for a bdqffdq:Parameter (e.g., bdqval:sourceAuthority), and a bdqffdq:hasAuthoritiesDefaults for the bdqffdq:Specification may provide a default value for the bdqffdq:Parameter under that bdqffdq:Specification.
 
 ********************
 
@@ -1248,8 +1248,8 @@ Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:Impro
 
 - Name: bdqffdq:hasAuthoritiesDefaults
 - Preferred Label: has Authorities and Defaults
-- Definition: Text describing bdq:sourceAuthorities and bdqffdq:Parameters with their default values to attach to a bdqffdq:Specification to further specify the behavior described in the bdqffdq:hasExpectedResponse.
-- Comments: Details of the bdq:sourceAuthority listed in a bdqffdq:Specification, with bdqffdq:Parameters that may affect the bdqffdq:hasExpectedResponse, and with their default values.
+- Definition: Text describing bdqval:sourceAuthorities and bdqffdq:Parameters with their default values to attach to a bdqffdq:Specification to further specify the behavior described in the bdqffdq:hasExpectedResponse.
+- Comments: Details of the bdqval:sourceAuthority listed in a bdqffdq:Specification, with bdqffdq:Parameters that may affect the bdqffdq:hasExpectedResponse, and with their default values.
 
 ********************
 
@@ -1396,7 +1396,7 @@ A bdqffdq:SingleRecord, like a bdqffdq:MultiRecord, consists of data with a defi
 - Type: bdqffdq:ResponseStatus
 - Preferred Label: AMENDED
 - Definition: A bdqffdq:ResponseStatus used to indicate that a bdqffdq:hasResponseResultValue from a bdqffdq:Amendment contains a proposed change.
-- Comments: The value bdqffdq:AMENDED implies that a change is being proposed to an existing bdq:NotEmpty value. bdqffdq:Amendments do not provide bdqffdq:hasResponseResult object properties. Proposed changes will be in a bdqffdq:hasResponseResultValue data property.
+- Comments: The value bdqffdq:AMENDED implies that a change is being proposed to an existing bdqval:NotEmpty value. bdqffdq:Amendments do not provide bdqffdq:hasResponseResult object properties. Proposed changes will be in a bdqffdq:hasResponseResultValue data property.
 
 ********************
 
@@ -1405,7 +1405,7 @@ A bdqffdq:SingleRecord, like a bdqffdq:MultiRecord, consists of data with a defi
 - Name: bdqffdq:EXTERNAL_PREREQUISITES_NOT_MET
 - Type: bdqffdq:ResponseStatus
 - Preferred Label: EXTERNAL_PREREQUISITES_NOT_MET
-- Definition: A bdqffdq:ResponseStatus used to indicate that a bdqffdq:ResponseResult was not generated because a bdq:sourceAuthority was not accessible. If the Test is run at a later time, it may produce a different bdqffdq:ResponseStatus.
+- Definition: A bdqffdq:ResponseStatus used to indicate that a bdqffdq:ResponseResult was not generated because a bdqval:sourceAuthority was not accessible. If the Test is run at a later time, it may produce a different bdqffdq:ResponseStatus.
 - Comments:
 
 ********************
@@ -1415,7 +1415,7 @@ A bdqffdq:SingleRecord, like a bdqffdq:MultiRecord, consists of data with a defi
 - Name: bdqffdq:FILLED_IN
 - Type: bdqffdq:ResponseStatus
 - Preferred Label: FILLED_IN
-- Definition: A bdqffdq:ResponseStatus used to indicate that a bdqffdq:Amendment contains a proposed change to a record in a bdqffdq:hasResponseResultValue where the bdqffdq:InformationElement was bdq:Empty.
+- Definition: A bdqffdq:ResponseStatus used to indicate that a bdqffdq:Amendment contains a proposed change to a record in a bdqffdq:hasResponseResultValue where the bdqffdq:InformationElement was bdqval:Empty.
 - Comments:
 
 ********************
