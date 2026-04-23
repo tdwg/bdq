@@ -148,6 +148,33 @@ if debug :
     print()
 
 # ---------------
+# Lookup the tests that apply to each use case for use when building bdqval term list document.
+# ---------------
+
+bdqtest_graph = Graph()
+bdqtest_graph.parse("../_review/dist/bdqtest.ttl", format="turtle")
+
+sparql_prefixes = """
+PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
+PREFIX bdqval:  <https://rs.tdwg.org/bdqval/terms/>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos:    <http://www.w3.org/2004/02/skos/core#>
+"""
+
+def tests_for_use_case_curie(use_case_localname: str):
+    # use_case_localname like "Spatial-Temporal_Patterns"
+    query = sparql_prefixes + f"""
+SELECT DISTINCT ?label WHERE {{
+  ?policy bdqffdq:hasUseCase bdqval:{use_case_localname} .
+  ?policy bdqffdq:includesInPolicy ?test .
+  ?test rdfs:label ?label .
+  ?test bdqffdq:hasResourceType bdqffdq:SingleRecord .
+}}
+ORDER BY ?label
+"""
+    return [str(r.label) for r in bdqtest_graph.query(query)]
+
+# ---------------
 # Create metadata table and populate using data from namespace databases in GitHub
 # ---------------
 
@@ -567,8 +594,22 @@ for term in termLists:
             #        text += '\t\t<tr>\n'
             #        text += '\t\t\t<td>Executive Committee decision</td>\n'
             #        text += '\t\t\t<td><a href="http://rs.tdwg.org/decisions/' + drow['decision_localName'] + '">http://rs.tdwg.org/decisions/' + drow['decision_localName'] + '</a></td>\n'
-            #        text += '\t\t</tr>\n'                        
-    
+            #        text += '\t\t</tr>\n'
+
+            # If this is a use case look up the inculded tests and list them in the table
+            if term == "bdqval" and row.get("organized_in") == "bdqffdq:UseCase":
+                use_case_localname = row["term_localName"]
+                labels = tests_for_use_case_curie(use_case_localname)
+                if labels:
+                    text += '\t\t<tr>\n'
+                    text += '\t\t\t<td>Included SingleRecord Tests</td>\n'
+                    links = []
+                    for lab in labels:
+                        # link to the QRG by rdfs:label heading
+                        links.append(f'<a href="../../terms/bdqtest/index.md#{lab}">{lab}</a>')
+                    text += '\t\t\t<td>' + ", ".join(links) + '</td>\n'
+                    text += '\t\t</tr>\n'
+
             text += '\t</tbody>\n'
             text += '</table>\n'
             text += '\n'
