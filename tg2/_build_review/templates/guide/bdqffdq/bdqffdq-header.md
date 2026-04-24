@@ -130,7 +130,7 @@ The Framework can be conceptually divided into three horizontal layers: `Data Qu
 
 The Framework can also be conceptually divided into four vertical themes, four sets of related concepts that carry through the Needs, Solutions, and Reports layers. These concepts are `Validation`, `Issue`, `Measure`, and `Amendment`. 
 
-We use the informal term "Test" to describe these four vertical themes, a Test involves terms in both Needs and Solutions, and Tests produce particular reporting elements.  See the diagram in [BDQ Tests: An Operational Perspective](../bdqtest/index.md#51-bdq-tests-an-operational-perspective-non-normative).
+In BDQ, "Test" is used as an informal umbrella term to to describe these four vertical concept families (`Validation`,`Issue`,`Measure`,`Amendement`), as they connnect and involve terms in both the `Data Quality Needs` and `Data Quality Solutions` layers.  See the diagram in [BDQ Tests: An Operational Perspective](../bdqtest/index.md#51-bdq-tests-an-operational-perspective-non-normative).
 
 **Data Quality Needs** begin with a `Use Case`, a formal description of a purpose for which data may be used. Each `Use Case` includes a set of `Policies`, which in turn relate to `Data Quality Needs`.  The `Data Quality Needs` (i.e., `Validation`, `Measure`, `Amendment`, `Issue`) specify the data quality requirement (Need), the relevant `Information Elements` (such as specific Darwin Core terms), and the `Resource Type` the requirement applies to. A Need defines the properties data must have to be considered fit for use and may include ways to improve unfit data. The Tests described in this standard are formal specifications of such Needs for BDQ purposes.
 
