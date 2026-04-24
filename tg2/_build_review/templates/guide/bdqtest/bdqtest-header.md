@@ -80,7 +80,7 @@ For the list and links to all associated documents see [The Biodiversity Data Qu
 
 The set of information most relevant to the Biodiversity Data Quality (BDQ) Tests can be found in the following subset of resources:
 
-- **BDQ Tests and Assertions** - This document. Defines how each Test is modelled using standard vocabulary terms and how it should behave under various conditions.
+- **BDQ Tests: Concepts and Use** - Defines how each Test is modelled using standard vocabulary terms and how it should behave under various conditions *(this document)*.
 - [**BDQ Tests Quick Reference Guide**](../../terms/bdqtest/index.md) - Provides a concise, easy-to-read reference about the BDQ Tests.
   - [BDQ Test Index by Use Case](../../terms/bdqtest/qrg_index_by_usecase.md)
   - [BDQ Test Index by Information Element Acted Upon](../../terms/bdqtest/qrg_index_by_ie_actedupon.md)
@@ -90,6 +90,7 @@ The set of information most relevant to the Biodiversity Data Quality (BDQ) Test
 - [**BDQ Tests and Assertions List of Terms**](../../list/bdqtest/index.md) - Provides the complete normative definitions of the BDQ Tests.
 - [**BDQ User's Guide**](../users/index.md) - For anyone interested in how to use the BDQ Tests in practice.
 - [**BDQ Implementer's Guide**](../implementers/index.md) - For anyone interested in the technical implementation of the BDQ Tests.
+- [**Tutorial: From Use Case to Test**](../../tutorial/index.md) - Worked out examples of defining new `Use Cases` and new Tests.
 
 #### 1.3.1 Term List Distributions for the BDQ Standard (non-normative)
 
@@ -418,7 +419,7 @@ The BDQ Tests are designed to be run at any point in the life cycle of biodivers
 ### 5.4 Results of Test Executions (normative)
 
 The BDQ standard is agnostic about the format of presentation of results from BDQ Tests. BDQ does, however, specify that Test implementations and presentations MUST return structured data with at least Response.status, Response.result, and Response.comment. Responses MAY also contain more information in Response.qualifier.
-See the [Implementer's Guide](../implementers/index.md) section on [Presentation of Results](../implementers/index.md#7-presentation-of-results-normative) for further normative and non-normative guidance about result presentation. See [Structure of a Response](../bdqtest/index.md#41-structure-of-response-normative) in the [BDQ Tests and Assertions](../bdqtest/index.md) document for normative guidance on `Responses` as RDF or as data structures.
+See the [Implementer's Guide](../implementers/index.md) section on [Presentation of Results](../implementers/index.md#7-presentation-of-results-normative) for further normative and non-normative guidance about result presentation. See [Structure of a Response](../bdqtest/index.md#41-structure-of-response-normative) in the [BDQ Tests: Concepts and Use](../bdqtest/index.md) document for normative guidance on `Responses` as RDF or as data structures.
 
 The results of the execution of implementations of the BDQ Tests MAY be presented as Data Quality reports. The Framework Ontology provides vocabulary and structure that MAY be used for such data quality reports.
 

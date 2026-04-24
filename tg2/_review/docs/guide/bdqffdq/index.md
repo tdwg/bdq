@@ -270,7 +270,7 @@ For the list and links to all associated documents see [The Biodiversity Data Qu
 
 Information about the Fitness For Use Framework ontology, its usage, and its extensions can be found in the following subset of BDQ resources:
 
-- **Fitness For Use Framework Ontology: Concepts and Use** - Provides a visual and narrative introduction to the concepts and application of the ontology. This document.
+- **Fitness For Use Framework Ontology: Concepts and Use** - Provides a visual and narrative introduction to the concepts and application of the ontology along with normative guidance *(this document)*.
 - [**Fitness For Use Framework Ontology List of Terms**](../../list/bdqffdq/index.md) - The term list document, which enumerates and describes the vocabulary terms.
 - [**Fitness For Use Framework Ontology Vocabulary Extension**](../../extension/bdqffdq/index.md) - Defines additional axioms extending the core vocabulary.
 - [**Biodiversity Data Quality Fitness For Use Framework (Ontology)**](../../../vocabulary/bdqffdq.owl) - The ontology, which provides the formal RDF/OWL representation of the vocabulary.
@@ -423,7 +423,7 @@ It is expected that `Response` objects instances will involve, in RDF, a combina
 | Response.comment | bdqffdq:hasResponseComment | A human readable interpretation of the results of the Test.|
 | Response.qualifier | bdqffdq:ResponseQualifier, bdqffdq:hasResponseQualifier | Additional structured information that qualifies the `Response`, intended as an extension point for uncertainty.|
 
-See [4.1 Structure of a Response (normative)](../../guide/bdqtest/index.md#41-structure-of-response-normative) in [BDQ Tests and Assertions](../../guide/bdqtest/index.md) for further normative guidance on Responses as RDF or as data structures in non-RDF settings.
+See [4.1 Structure of a Response (normative)](../../guide/bdqtest/index.md#41-structure-of-response-normative) in [BDQ Tests: Concepts and Use](../../guide/bdqtest/index.md) for further normative guidance on Responses as RDF or as data structures in non-RDF settings.
 
 ### 2.4.1 Properties of Responses (normative) 
 

@@ -69,13 +69,14 @@ For the list and links to all associated documents see [The Biodiversity Data Qu
 
 The set of information most relevant to implementers of Biodiversity Data Quality (BDQ) Tests can be found in the following subset of resources:
 
-- **BDQ Implementer's Guide** - For anyone interested in the technical implementation of the BDQ Tests. This document.
-- [**BDQ Tests: Concepts, Types, and Use**](../../guide/bdqtest/index.md) - Defines how each Test is modeled using standard vocabulary terms and how it should behave under various conditions.
+- **BDQ Implementer's Guide** - For anyone interested in the technical implementation of the BDQ Tests *(this document)*.
+- [**BDQ Tests: Concepts and Use**](../../guide/bdqffdq/index.md) - Defines how each Test is modelled using standard vocabulary terms and how it should behave under various conditions.
 - [**BDQ Tests Quick Reference Guide**](../../terms/bdqtest/index.md) - Provides a concise, easy-to-read reference about the BDQ Tests.
 - [**BDQ User's Guide**](../users/index.md) - For anyone interested in how to use the BDQ Tests in practice.
 - [**BDQ Supplemental Information**](../../supplement/index.md) - This supplementary information may be relevant for curators, aggregators, data publishers, data analysts, programmers/developers and other practitioners who wish to understand, evaluate and/or improve the quality of biodiversity data within their domain. This document provides some key developmental issues in the building of the BDQ standard that are not covered in other documents within the standard. This document may also be useful to those seeking to evaluate their current Tests or generate additional Tests for their domain.
 - [**Current Single Record Tests**](../../../dist/bdqtest_singlerecord_tests_current.csv) - Convenient list of BDQ `Single Record` Tests.
 - [**Current Multi Record Tests**](../../../dist/bdqtest_multirecord_tests_current.csv) - Convenient list of BDQ `Multi Record` Tests.
+- [**Tutorial: From Use Case to Test**](../../tutorial/index.md) - Worked out examples of defining new `Use Cases` and new Tests.
 
 ### 1.4 Status of the Content of this document (normative)
 
@@ -321,7 +322,7 @@ Values of `bdqffdq:hasAuthoritiesDefaults` are text strings listing parameters i
 
 The `bdqffdq:hasAuthoritiesDefaults` property may be present in isolation (to make the expected response easier to read) as in the Test [VALIDATION_COUNTRYCODE_STANDARD](../../terms/bdqtest/index.md#VALIDATION_COUNTRYCODE_STANDARD) example above when a Test is not parameterized, or when a Test is parameterized, with corresponding `bdqffdq:Arguments` and `bdqffdq:Parameters`.
 
-See section [Parameterizing the Tests (normative)](../../guide/bdqtest/index.md#43-parameterizing-the-tests-normative) of the [BDQ Tests and Assertions](../../guide/bdqtest/index.md) page for further guidance on `bdqval:sourceAuthority` values, `Parameters`, and `Arguments`. 
+See section [Parameterizing the Tests (normative)](../../guide/bdqtest/index.md#43-parameterizing-the-tests-normative) of the [BDQ Tests: Concepts and Use](../../guide/bdqtest/index.md) document for further guidance on `bdqval:sourceAuthority` values, `Parameters`, and `Arguments`. 
 
 ##### 2.3.2.4 Default Value Strings in Parameters (normative)
 
@@ -425,7 +426,7 @@ The most important elements of the BDQ standard are the structure that holds exp
 
 ### 3.4 Required outputs for every Test execution (normative)
 
-Results from each Test MUST be produced in the form `Response.status`, `Response.result`, and `Response.comment`, with one Test producing one `Response`. Results MAY include `Response.qualifier` (see section [4 Extension Points](#4-extension-points-normative)). The values of `Response.status` and `Response.result` MUST be those specified. This standard is agnostic concerning data structures and serializations of a `Response`. The standard is agnostic concerning internationalization and languages of labels applied to human readable presentations of values within a `Response`. See  [4.1 Structure of Response (normative)](../../guide/bdqtest/index.md#41-structure-of-response-normative) in [BDQ Tests and Assertions](../../guide/bdqtest/index.md) for further normative guidance on `Responses` as RDF or as data structures. See section [5.1 The Response Object](#51-the-response-object-normative) for further normative guidance on `Responses`.
+Results from each Test MUST be produced in the form `Response.status`, `Response.result`, and `Response.comment`, with one Test producing one `Response`. Results MAY include `Response.qualifier` (see section [4 Extension Points](#4-extension-points-normative)). The values of `Response.status` and `Response.result` MUST be those specified. This standard is agnostic concerning data structures and serializations of a `Response`. The standard is agnostic concerning internationalization and languages of labels applied to human readable presentations of values within a `Response`. See  [4.1 Structure of Response (normative)](../../guide/bdqtest/index.md#41-structure-of-response-normative) in [BDQ Tests: Concepts and Use](../../guide/bdqtest/index.md) for further normative guidance on `Responses` as RDF or as data structures. See section [5.1 The Response Object](#51-the-response-object-normative) for further normative guidance on `Responses`.
 
 #### 3.4.1 Amendment Response.result ordering (normative)
 
@@ -483,7 +484,7 @@ Nothing in this document should be taken as a requirement for how `bdqffdq:Respo
 
 ### 5.1.3 Further Guidance on Responses (non-normative)
 
-See [4.1 Structure of a Response (normative)](../../guide/bdqtest/index.md#41-structure-of-response-normative) in [BDQ Tests and Assertions](../../guide/bdqtest/index.md) for further normative guidance on representing `Responses` as RDF or in data structures.
+See [4.1 Structure of a Response (normative)](../../guide/bdqtest/index.md#41-structure-of-response-normative) in [BDQ Tests: Concepts and Use](../../guide/bdqtest/index.md) for further normative guidance on representing `Responses` as RDF or in data structures.
 
 See [Definitions for Named Individuals](../../list/bdqffdq/index.md#complete) in the `bdqffdq:` ontology for formal definitions of the named individuals that are used as values (e.g. COMPLIANT, NOT_COMPLIANT, RUN_HAS_RESULT) for `Response.status` and `Response.result` in the expected responses of Test specifications.
 

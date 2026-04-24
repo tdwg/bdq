@@ -246,7 +246,7 @@ Readers can approach the standard in different ways depending on their needs. Th
 		:green_book:
         <strong><a href="./docs/terms/bdqtest/index.md">BDQ Tests Quick Reference Guide</a></strong><br>
         Overview of Test purposes and outcomes; index into detailed definitions.<br>
-		See also: <a href="./docs/guide/bdqtest/index.md#21-what-is-meant-by-test-non-normative">What is meant by "Test"</a> and <a href="./docs/guide/bdqtest/index.md#3-test-types-non-normative">Test Types</a> in BDQ Tests, Concepts, and Use.</a>
+		See also: <a href="./docs/guide/bdqtest/index.md#21-what-is-meant-by-test-non-normative">What is meant by "Test"</a> and <a href="./docs/guide/bdqtest/index.md#3-test-types-non-normative">Test Types</a> in BDQ Tests: Concepts and Use.</a>
       </td>
       <td valign="top">
         <strong>Start with:</strong><br>
@@ -289,7 +289,7 @@ Readers can approach the standard in different ways depending on their needs. Th
 		:blue_book:
         <strong>Test Vocabulary, Definitions &amp; Serializations</strong><br>
         Explanations and Normative Guidance on the Tests and their Uses.
-		<a href="./docs/guides/bdqtest/index.md">BDQ Tests: Concepts, Types, and Use</a>.<br>
+		<a href="./docs/guides/bdqtest/index.md">BDQ Tests: Concepts and Use</a>.<br>
         Normative machine‑readable definitions and versioned lists of Tests.
 		bdqtest: <a href="./docs/list/bdqtest/list/index.md">Term List</a><br>
 		and serialized versions: <a href="./dist/bdqtest.xml">RDF/XML</a>, <a href="./dist/bdqtest.ttl">Turtle</a>, <a href="./dist/bdqtest.json">JSON-LD</a>.
@@ -370,7 +370,7 @@ The Quick Reference Guide is a simple, informative reference and the first place
 
 These documents provide overviews and normative guidance of the subjects they cover. The details of the individual terms are provided in the corresponding term list documents. 
 
-- [**BDQ Tests: Concepts Types, and Uses**](docs/guide/bdqtest/index.md) - Normative guidance and overview of the Tests.
+- [**BDQ Tests: Concepts and Use**](docs/guide/bdqtest/index.md) - Normative guidance and overview of the Tests.
 - [**Fitness For Use Framework Ontology: Concepts and Use**](docs/guide/bdqffdq/index.md) - Normative guidance and overview of the Fitness For Use Framework.
 
 ### 3.3 Guides (non-normative)

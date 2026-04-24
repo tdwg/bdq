@@ -90,8 +90,8 @@ For the list and links to all associated documents see [The Biodiversity Data Qu
 
 The set of information most relevant to synthetic data for BDQ Tests can be found in the following subset of resources:
 
-- [BDQ Implementer's Guide](../implementers/index.md) - For anyone interested in the technical implementation of the BDQ Tests.
-- **Guide to Marking and Identifying Synthetic and Modified Data** - For anyone creating or using conformance testing data, to distinguish blatant fabrications from real data. This document.
+- [**BDQ Implementer's Guide**](../implementers/index.md) - For anyone interested in the technical implementation of the BDQ Tests.
+- **Guide to Marking and Identifying Synthetic and Modified Data** - For anyone creating or using conformance testing data, to distinguish blatant fabrications from real data *(this document)*.
 
 ### 1.4 Status of the content of this document (normative)
 

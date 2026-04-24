@@ -67,15 +67,16 @@ For the list and links to all associated documents see [The Biodiversity Data Qu
 
 The set of information most relevant to the BDQ Tests can be found in the following subset of resources:
 
-- **BDQ Tests and Assertions** - Defines how each Test is modeled using standard vocabulary terms and how it should behave under various conditions. This document.
+- [**BDQ Tests: Concepts and Use**](../../guide/bdqffdq/index.md) - Defines how each Test is modelled using standard vocabulary terms and how it should behave under various conditions.
 - [**BDQ Tests Quick Reference Guide**](../../terms/bdqtest/index.md) - Provides a concise, easy-to-read reference about the BDQ Tests.
-- **BDQ Tests and Assertions List of Terms** - Provides the complete normative definitions of the BDQ Tests. This document.
+- **BDQ Tests and Assertions List of Terms** - Provides the complete normative definitions of the BDQ Tests *(this document)*.
   - [**CSV list of BDQ Tests**](../../../dist/bdqtest_singlerecord_tests_current.csv) - A convenience CSV file listing single record Tests.
   - [**CSV term-version file of BDQ Tests**](../../../vocabulary/bdqtest_term_versions.csv) 
   - [**RDF/Turtle Serialization of BDQ Tests**](../../../dist/bdqtest.ttl) 
   - [**RDF/XML Serialization of BDQ Tests**](../../../dist/bdqtest.xml) 
 - [**BDQ User's Guide**](../../guide/users/index.md) - For anyone interested in how to use the BDQ Tests in practice.
 - [**BDQ Implementer's Guide**](../../guide/implementers/index.md) - For anyone interested in the technical implementation of the BDQ Tests.
+- [**Tutorial: From Use Case to Test**](../../tutorial/index.md) - Worked out examples of defining new `Use Cases` and new Tests.
 
 ### 1.4 Term List Distributions (non-normative)
 
