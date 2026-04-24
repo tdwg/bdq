@@ -2,7 +2,7 @@
 
 ## The BDQ Test descriptors
 
-These are the authoritative descriptors of the BDQ Tests, extracted from GitHub issue markdown tables using [bdq_issue_to_csv](https://github.com/kurator-org/bdq_issue_to_csv) one file contains the SingleRecord Tests, the other file the MultiRecord Measures.
+These are copies of the authoritative descriptors of the BDQ Tests, extracted from GitHub issue markdown tables using [bdq_issue_to_csv](https://github.com/kurator-org/bdq_issue_to_csv) one file contains the SingleRecord Tests, the other file the MultiRecord Measures.  The authoritative term version file for both is _review/vocabulary/bdqtest_term_versions.csv.
 
 - TG2_tests.csv
 - TG2_multirecord_measure_tests.csv

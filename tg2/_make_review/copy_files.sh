@@ -1,5 +1,5 @@
 #!/bin/bash
-# Shell Script to copy files from their authoritative locations in other parts of directory tree into the _review directory.
+# Shell Script to copy files from their authoritative locations in other parts of directory tree into the _review directory and to build RDF.
 #
 # Run from within the bdq/tg2/_make_review/ directory of a git checkout of the tdwg/bdq repository.
 
@@ -10,19 +10,28 @@
 
 # The file ../_review/vocabulary/bdqtest_term_versions.csv is now the canonical version
 # of all test descriptions.
-cp ../core/TG2_tests.csv ../_review/vocabulary/bdqtest_term_versions.csv
+
+# Previous authoritative file was ../core/TG2_tests.csv
+#cp ../core/TG2_tests.csv ../_review/vocabulary/bdqtest_term_versions.csv
 
 # create a convenience copy of the current single record tests
 # TODO: replace the next step with invocation of:
 # draft_build_bdqtest_singlerecord_tests_current.py  (will need to filter for just current versions of recommended tests)
-cp ../core/TG2_tests.csv ../_review/dist/bdqtest_singlerecord_tests_current.csv
+head -n 1 ../_review/vocabulary/bdqtest_term_versions.csv > ../_review/dist/bdqtest_singlerecord_tests_current.csv
+grep "SingleRecord" ../_review/vocabulary/bdqtest_term_versions.csv >> ../_review/dist/bdqtest_singlerecord_tests_current.csv
+#cp ../core/TG2_tests.csv ../_review/dist/bdqtest_singlerecord_tests_current.csv
 
-# TODO: The above term-versions file will become the master copy, and include the multi-record measures.
-# append multi-record measures to csv list of core tests
-grep -v prefLabel ../core/TG2_multirecord_measure_tests.csv >> ../_review/vocabulary/bdqtest_term_versions.csv
+# The above term-versions file is the master copy, and includes the multi-record measures.
+# Previous code did append of multi-record measures to csv list of core tests
+# grep -v prefLabel ../core/TG2_multirecord_measure_tests.csv >> ../_review/vocabulary/bdqtest_term_versions.csv
 
-# create a convinence csv file of just the multi-record measure tests (will need to filter for just current versions of recommended tests)
+# create a convinence csv file of just the multi-record measure tests 
+# TODO: will need to filter for just current versions of recommended tests
 grep -v SingleRecord ../_review/vocabulary/bdqtest_term_versions.csv > ../_review/dist/bdqtest_multirecord_tests_current.csv
+
+## Copy the convenience files back to the old ../core/ files.
+cp ../_review/dist/bdqtest_singlerecord_tests_current.csv ../core/TG2_tests.csv
+cp ../_review/dist/bdqtest_multirecord_tests_current.csv ../core/TG2_multirecord_measure_tests.csv
 
 # CSV files of test validation data
 

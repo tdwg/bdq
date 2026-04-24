@@ -74,6 +74,7 @@ _review/
 │   ├── bdqtest.xml  RDF/XML serialization of the RDF representation of test descriptions, built by kurator-ffdq from bdq/tg2/core/TG2_tests.csv as bdq/tg2/core/TG2_tests.xml.
 │   ├── bdqtest_singlerecord_tests_current.csv  CSV list of current bdqtest SingleRecord tests, for the convenience of implementers.  Produced by _make_review/copy_files.sh
 │   ├── bdqtest_multirecord_tests_current.csv  CSV list of current bdqtest MultiRecord tests, for the convenience of implementers.  Produced by _make_review/copy_files.sh
+│   │     Note: The two above files are also copied to: tg2/core/TG2_tests.csv and  tg2/core/TG2_multirecord_measure_tests.csv by _make_review/copy_files.sh
 │   ├── bdqtest_tests_vertical.csv  List of test label, prefLabel, and fully qualified name.
 │   ├── bdqcrit.xml  Generated RDF for bdqcrit vocabulary (built with draft_build-termlist.py).
 │   ├── bdqdim.xml  Generated RDF for bdqdim vocabulary (built with draft_build-termlist.py).
@@ -135,9 +136,8 @@ _review/
 	├── bdqcrit_term_versions.csv  Term version file for `bdqcrit:` Criterion vocabulary. **Editable.**
 	├── bdqdim_term_versions.csv  Term version file for `bdqdim:` Dimension vocabulary. **Editable.**
 	├── bdqenh_term_versions.csv  Term version file for `bdqenh:` Enhancement vocabulary. **Editable.**
-	├── bdqtest_term_versions.csv  Term version file for `bdqtest:`  Produced by _make_review/copy_files.sh ** Do Not Edit.**
+	├── bdqtest_term_versions.csv  Term version file for `bdqtest:`  Test vocabulary **Editable.**
 	└── bdqffdq.owl  OWL Ontology for `bdqffdq:` terms. **Edit with Protégé or VERY carefully with a text editor.**
-	Note: Current master files for the tests are: tg2/core/TG2_tests.csv and  tg2/core/TG2_multirecord_measure_tests.csv 
 </pre>
 
 # Build file for proof of concept html representation of the Quick Reference Guide
