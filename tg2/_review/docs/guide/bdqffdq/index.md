@@ -353,6 +353,8 @@ It is important to recognize that BDQ does not standardize complete `Quality Con
 
 #### 2.2.2 Information Elements (non-normative)
 
+`Information Elements` are the inputs to a Test, they identify the specific data elements that are evaluated in a Test. `Information Elements` are the properties of data that are examined to determine if the data meet the quality requirements for a given `Use Case`.
+
 The Framework has both an abstract and concrete concept of `Information Elements`. To frame Tests on Darwin Core terms in a usable way, we list specific Darwin Core terms as the concrete `Information Elements` in each Test.
 
 #### 2.2.3 Concepts in the Framework, Test Types: Validation, Issue, Measure, Amendment (non-normative)
