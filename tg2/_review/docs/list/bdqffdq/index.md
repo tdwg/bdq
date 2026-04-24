@@ -112,6 +112,7 @@ Draft Standard for Review
     - [ValidationPolicy](#validationpolicy)
     - [ValidationResponse](#validationresponse)
   - [4.2 ObjectProperty terms (normative)](#42-objectproperty-terms-normative)
+    - [aggregatesResponsesFrom](#aggregatesresponsesfrom)
     - [amendmentProperty](#amendmentproperty)
     - [appliesTo](#appliesto)
     - [composedOf](#composedof)
@@ -319,6 +320,7 @@ In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use th
 [ValidationResponse](#ValidationResponse)
 ### 3.2 Alphabetical Index of object properties (non-normative)
 
+[aggregatesResponsesFrom](#aggregatesResponsesFrom)
 [amendmentProperty](#amendmentProperty)
 [appliesTo](#appliesTo)
 [composedOf](#composedOf)
@@ -900,6 +902,15 @@ DQV(dr) = {dqv | dqv = < va, s, m, r >, va ∈ VA, s ∈ S, m ∈ M , r ∈ R �
 ********************
 
 ### 4.2 ObjectProperty terms (normative)
+#### aggregatesResponsesFrom
+
+- Name: bdqffdq:aggregatesResponsesFrom
+- Preferred Label: aggregates Responses From
+- Definition: Relates a  MultiRecord Measure to the DataQualityNeed (Validation, Issue, Measure, or Amendment) whose Responses are aggregated as input to that Measure.
+- Comments: This property provides an explicit machine-queryable link between a Measure and the upstream Test whose Response outcomes it consumes. It is intended to complement use of bdqffdq:hasActedUponInformationElement / bdqffdq:composedOf when the acted-upon data are Responses in a DataQualityReport.
+
+********************
+
 #### amendmentProperty
 
 - Name: bdqffdq:amendmentProperty

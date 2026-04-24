@@ -169,6 +169,7 @@ Draft Standard for Review
     - [ValidationPolicy](#validationpolicy)
     - [ValidationResponse](#validationresponse)
   - [6.2 ObjectProperty terms (normative)](#62-objectproperty-terms-normative)
+    - [aggregatesResponsesFrom](#aggregatesresponsesfrom)
     - [amendmentProperty](#amendmentproperty)
     - [appliesTo](#appliesto)
     - [composedOf](#composedof)
@@ -1107,6 +1108,7 @@ Note: This is a representation of the `Multi Record` `Measures` that return COMP
 
 ### 5.2 Alphabetical Index of object properties (non-normative)
 
+[aggregatesResponsesFrom](#aggregatesResponsesFrom)
 [amendmentProperty](#amendmentProperty)
 [appliesTo](#appliesTo)
 [composedOf](#composedOf)
@@ -1571,6 +1573,14 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 ********************
 
 ### 6.2 ObjectProperty terms (normative)
+#### aggregatesResponsesFrom
+
+- Name: [bdqffdq:aggregatesResponsesFrom](../../list/bdqffdq/index.md#aggregatesResponsesFrom)
+- Definition: Relates a  MultiRecord Measure to the DataQualityNeed (Validation, Issue, Measure, or Amendment) whose Responses are aggregated as input to that Measure.
+- [Range](../../extension/bdqffdq/index.mdaggregatesResponsesFrom) bdqffdq:DataQualityNeed
+
+********************
+
 #### amendmentProperty
 
 - Name: [bdqffdq:amendmentProperty](../../list/bdqffdq/index.md#amendmentProperty)

@@ -50,6 +50,15 @@ xsd:date rdf:type rdfs:Datatype .
 #    Object Properties
 #################################################################
 
+###  https://rs.tdwg.org/bdqffdq/terms/aggregatesResponsesFrom
+bdqffdq:aggregatesResponsesFrom rdf:type owl:ObjectProperty ;
+                                rdfs:range bdqffdq:DataQualityNeed ;
+                                rdfs:comment "Relates a  MultiRecord Measure to the DataQualityNeed (Validation, Issue, Measure, or Amendment) whose Responses are aggregated as input to that Measure."@en ;
+                                rdfs:label "aggregates Responses From"@en ;
+                                skos:definition "Relates a  MultiRecord Measure to the DataQualityNeed (Validation, Issue, Measure, or Amendment) whose Responses are aggregated as input to that Measure."@en ;
+                                skos:note "This property provides an explicit machine-queryable link between a Measure and the upstream Test whose Response outcomes it consumes. It is intended to complement use of bdqffdq:hasActedUponInformationElement / bdqffdq:composedOf when the acted-upon data are Responses in a DataQualityReport."@en ;
+                                skos:prefLabel "aggregates Responses From"@en .
+
 ###  https://rs.tdwg.org/bdqffdq/terms/amendmentProperty
 bdqffdq:amendmentProperty rdf:type owl:ObjectProperty ;
                           dcterms:issued "2024-09-30"^^xsd:date ;

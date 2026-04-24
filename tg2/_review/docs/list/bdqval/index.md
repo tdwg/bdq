@@ -145,16 +145,16 @@ The terminology used to describe the terms in this vocabulary follows the TDWG [
 
 | Label (Term) | Normative | Definition | Example |
 | ------------ | --------- | ---------- | ------- |
-| Term Name (rdf:value) | normative | Idiomatic property used for structured values. TDWG SDS: The term name is a controlled value that represents the class, property, or concept described by the term definition. | Alien-Species |
-| Term IRI (dcterms:isVersionOf) | normative | A related resource of which the described resource is a version, edition, or adaptation. TDWG SDS: The HTTP IRI that uniquely identifies the current term. | [https://rs.tdwg.org/ bdqval/terms/ Alien-Species](https://rs.tdwg.org/bdqval/terms/Alien-Species) |
-| Modified (dcterms:issued) | normative | Date of formal issuance of the resource. TDWG SDS: The date in ISO 8601 Date format on which the most recent version of the term was issued. | 2026-04-22 |
-| Term Version IRI (rdf:about) | normative | The HTTP IRI that identifies the version of the term that is currently in force. | [https://rs.tdwg.org/ bdqval/terms/version/ Alien-Species-2026-04-22](https://rs.tdwg.org/bdqval/terms/version/Alien-Species-2026-04-22) |
-| Label (rdfs:label) | normative | A human-readable name for the subject. TDWG SDS: A a word or short phrase that serves as a human-readable name for the term. | Alien-Species |
-| Definition (rdfs:comment) | normative | A description of the subject resource. TDWG SDS: The normative definition of the term, written in English. | Research uses forming a bdqffdq:UseCase for dwc:Occurrence data of alien species that 1) allows the understanding of the spatial and temporal distribution of an alien species or 2) identifies records that contain valid terms (i.e. name, space, time, other) associated with alien species; i.e.1) where the Information Elements concern what dwc:Organism occurred where and when and the means, degree, and pathways of establishment, and that may used for analysis of spatial and/or temporal patterns of biodiversity (see examples in Groom et al. (2019). Improving Darwin Core for research and management of alien species. Biodiversity Information Science and Standards, 3: e38084.  https://doi.org/10.3897/biss.3.38084). |
-| Comments (skos:note) | non-normative | A general note, for any purpose. | Used in Measure of Single Record Tests |
+| Term Name (rdf:value) | normative | Idiomatic property used for structured values. TDWG SDS: The term name is a controlled value that represents the class, property, or concept described by the term definition. | AggregatedTestResponseOutcomes |
+| Term IRI (dcterms:isVersionOf) | normative | A related resource of which the described resource is a version, edition, or adaptation. TDWG SDS: The HTTP IRI that uniquely identifies the current term. | [https://rs.tdwg.org/ bdqval/terms/version/ AggregatedTestResponseOutcomes](https://rs.tdwg.org/bdqval/terms/version/AggregatedTestResponseOutcomes) |
+| Modified (dcterms:issued) | normative | Date of formal issuance of the resource. TDWG SDS: The date in ISO 8601 Date format on which the most recent version of the term was issued. | 2026-04-23 |
+| Term Version IRI (rdf:about) | normative | The HTTP IRI that identifies the version of the term that is currently in force. | [https://rs.tdwg.org/ bdqval/terms/version/ AggregatedTestResponseOutcomes-2026-04-23](https://rs.tdwg.org/bdqval/terms/version/AggregatedTestResponseOutcomes-2026-04-23) |
+| Label (rdfs:label) | normative | A human-readable name for the subject. TDWG SDS: A a word or short phrase that serves as a human-readable name for the term. | AggregatedTestResponseOutcomes |
+| Definition (rdfs:comment) | normative | A description of the subject resource. TDWG SDS: The normative definition of the term, written in English. | An abstract InformationElement representing the set of outcomes (Response instances with their Response.status and Response.result values) produced by running a particular SingleRecord Test across the members of a MultiRecord. This Information Element is intended for use as a component of a bdqffdq:ActedUpon node for MultiRecord Measures that aggregate Response outcomes from other Tests. |
+| Comments (skos:note) | non-normative | A general note, for any purpose. | Used to indicate that a MultiRecord Measure is concerned with Response outcomes (report data) rather than raw source-data terms. Pair with bdqffdq:aggregatesResponsesFrom to identify which Test produced the aggregated Responses. |
 | Status (tdwgutility:status) |  | Used to indicate if the term is recommended for use or if it is only of historical significance. | recommended |
-| Controlled Value String () | normative |  | Alien-Species |
-| Type (rdf:type) | normative | The subject is an instance of a class. | bdqffdq:UseCase |
+| Controlled Value String () | normative |  | AggregatedTestResponseOutcomes |
+| Type (rdf:type) | normative | The subject is an instance of a class. | bdqffdq:AbstractInformationElement |
 | Fitness Requirements (bdqffdq:hasFitnessRequirements) | non-normative | The property of a bdqffdq:UseCase that provides text listing the qualities that data must have to be fit for a given use. | Data are fit for the Use Case bdqval:Alien-Species when occurrence records can be reliably interpreted for alien-species management: the organism identity is usable, occurrence semantics are usable and standardizable, and establishment context (e.g., establishment means, degree of establishment, pathway) is present and standardizable so that interpretation of alien-status is comparable across records and datasets.  <ul><li>Organism identity is usable: Taxon/scientific name terms (e.g., dwc:scientificName, related dwc:Taxon terms, and identifiers where provided) are present, sufficiently resolvable and consistent.  </li><li>Occurrence semantics are usable: dwc:occurrenceStatus is present, valid and  standardizable so records can be interpreted consistently for alien-species analyses and workflows.  </li><li>Alien-species context is usable: Alien-species related terms (e.g., dwc:establishmentMeans, dwc:degreeOfEstablishment, dwc:pathway) are present where expected, valid and standardizable against an appropriate authority so records are comparable.  </li><li>Core record typing supports interpretation: Values such as dwc:basisOfRecord and dc:type are present, valid and standardizable so record meaning is consistent in downstream use.  </li></ul>  |
 
 
@@ -216,6 +216,52 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 [AllValidationTestsRunOnSingleRecord](#bdqval_AllValidationTestsRunOnSingleRecord) 
 
 ## 4 Vocabulary (normative)
+<table>
+	<thead>
+		<tr>
+			<th colspan="2"><a id="bdqval_AggregatedTestResponseOutcomes"></a>Term Name  bdqval:AggregatedTestResponseOutcomes</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Term IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/AggregatedTestResponseOutcomes">https://rs.tdwg.org/bdqval/terms/version/AggregatedTestResponseOutcomes</a></td>
+		</tr>
+		<tr>
+			<td>Modified</td>
+			<td>2026-04-23</td>
+		</tr>
+		<tr>
+			<td>Term version IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/AggregatedTestResponseOutcomes-2026-04-23">https://rs.tdwg.org/bdqval/terms/version/AggregatedTestResponseOutcomes-2026-04-23</a></td>
+		</tr>
+		<tr>
+			<td>Label</td>
+			<td>AggregatedTestResponseOutcomes</td>
+		</tr>
+		<tr>
+			<td>Definition</td>
+			<td>An abstract InformationElement representing the set of outcomes (Response instances with their Response.status and Response.result values) produced by running a particular SingleRecord Test across the members of a MultiRecord. This Information Element is intended for use as a component of a bdqffdq:ActedUpon node for MultiRecord Measures that aggregate Response outcomes from other Tests.</td>
+		</tr>
+		<tr>
+			<td>Comments</td>
+			<td>Used to indicate that a MultiRecord Measure is concerned with Response outcomes (report data) rather than raw source-data terms. Pair with bdqffdq:aggregatesResponsesFrom to identify which Test produced the aggregated Responses.</td>
+		</tr>
+		<tr>
+			<td>Status</td>
+			<td>recommended</td>
+		</tr>
+		<tr>
+			<td>Controlled value</td>
+			<td>AggregatedTestResponseOutcomes</td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>bdqffdq:AbstractInformationElement</td>
+		</tr>
+	</tbody>
+</table>
+
 <table>
 	<thead>
 		<tr>

@@ -61,6 +61,7 @@ Draft Standard for Review
     - [hasDateLastUpdated](#hasdatelastupdated)
     - [hasExpectedResponse](#hasexpectedresponse)
     - [hasResponseComment](#hasresponsecomment)
+    - [aggregatesResponsesFrom](#aggregatesresponsesfrom)
     - [forAmendment](#foramendment)
     - [forIssue](#forissue)
     - [forMeasure](#formeasure)
@@ -219,6 +220,15 @@ The terminology used to describe the terms in this vocabulary follows the [TDWG 
 | Name | bdqffdq:hasResponseComment |
 | Type | owl:DatatypeProperty |
 | Range | xsd:string |
+
+
+#### aggregatesResponsesFrom
+
+| Property | Value |
+| -------- | ----- |
+| Name | bdqffdq:aggregatesResponsesFrom |
+| Type | owl:ObjectProperty |
+| Range | bdqffdq:DataQualityNeed |
 
 
 #### forAmendment

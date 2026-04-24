@@ -17,6 +17,21 @@ xmlns:tdwgutility="http://rs.tdwg.org/dwc/terms/attributes/"
 xmlns:foaf="http://xmlns.com/foaf/0.1/"
 xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
 >
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqval/terms/version/AggregatedTestResponseOutcomes-2026-04-23">
+     <rdfs:isDefinedBy rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
+     <dcterms:isPartOf rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
+     <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-04-23</dcterms:issued>
+     <tdwgutility:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recommended</tdwgutility:status>
+     <rdfs:label xml:lang="en">AggregatedTestResponseOutcomes</rdfs:label>
+     <skos:prefLabel xml:lang="en">AggregatedTestResponseOutcomes</skos:prefLabel>
+     <skos:note xml:lang="en">Used to indicate that a MultiRecord Measure is concerned with Response outcomes (report data) rather than raw source-data terms. Pair with bdqffdq:aggregatesResponsesFrom to identify which Test produced the aggregated Responses.</skos:note>
+     <rdfs:comment xml:lang="en">An abstract InformationElement representing the set of outcomes (Response instances with their Response.status and Response.result values) produced by running a particular SingleRecord Test across the members of a MultiRecord. This Information Element is intended for use as a component of a bdqffdq:ActedUpon node for MultiRecord Measures that aggregate Response outcomes from other Tests.</rdfs:comment>
+     <skos:definition xml:lang="en">An abstract InformationElement representing the set of outcomes (Response instances with their Response.status and Response.result values) produced by running a particular SingleRecord Test across the members of a MultiRecord. This Information Element is intended for use as a component of a bdqffdq:ActedUpon node for MultiRecord Measures that aggregate Response outcomes from other Tests.</skos:definition>
+     <rdf:value>AggregatedTestResponseOutcomes</rdf:value>
+     <skos:inScheme rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
+     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/AbstractInformationElement"/>
+     <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqval/terms/AggregatedTestResponseOutcomes"/>
+</rdf:Description>
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqval/terms/version/Alien-Species-2026-04-22">
      <rdfs:isDefinedBy rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
      <dcterms:isPartOf rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
