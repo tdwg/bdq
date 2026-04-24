@@ -78,7 +78,7 @@ The set of information most relevant to implementers of Biodiversity Data Qualit
 - [**Current Multi Record Tests**](../../../dist/bdqtest_multirecord_tests_current.csv) - Convenient list of BDQ `Multi Record` Tests.
 - [**Tutorial: From Use Case to Test**](../../tutorial/index.md) - Worked out examples of defining new `Use Cases` and new Tests.
 
-### 1.4 Status of the Content of this document (normative)
+### 1.4 Status of the Content of this Document (normative)
 
 Sections may be either normative (defines what is required to comply with the standard) or non-normative (supports understanding but is not binding) and are marked as such. 
 

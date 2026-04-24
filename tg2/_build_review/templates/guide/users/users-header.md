@@ -76,7 +76,7 @@ The set of information most relevant to users of Biodiversity Data Quality (BDQ)
 - [**Tutorial: From Use Case to Test**](../../tutorial/index.md) - Worked out examples of defining new `Use Cases` and new Tests.
 - [**BDQ Supplemental Information**](../../supplement/index.md) - Background and developmental notes for practitioners who evaluate and improve the quality of biodiversity data. Includes material not covered elsewhere in the BDQ standard.
 
-### 1.4 Status of the content of this document (normative)
+### 1.4 Status of the Content of this Document (normative)
 
 Sections may be either normative (defines what is required to comply with the standard) or non-normative (supports understanding but is not binding) and are marked as such. 
 
@@ -107,11 +107,11 @@ In any technical treatment of the BDQ standard, a precise reference to a class o
 
 Data do not have quality in the abstract; they only have quality with respect to a particular use. The Fitness For Use Framework (see [Fitness For Use Framework Ontology Guide](../bdqffdq/index.md)) in the BDQ standard describes uses for data as `Use Cases`.
 
-A set of Tests appropriate to a`Use Case` is run on a set of data and a `Data Quality Report` is produced. Both the Tests and the associated report should be interpreted in the context of that `Use Case`.
+A set of Tests appropriate to a `Use Case` is run on a set of data and a `Data Quality Report` is produced. Both the Tests and the associated report should be interpreted in the context of that `Use Case`.
 
 More formally, Tests are run in suites that form `Policy` for data quality with respect to `Use Cases`.   More importantly, sets of Tests are expected to be run together in order to assess the quality of data for some specified use, and both Tests and the reports of their results should be interpreted in the context of that specified use.  Just as data do not have quality in the abstract, the results of a Test on some data have meaning only in the context of a particular use.
 
-More broadly, the concept of fitness for purpose refers to whether data are adequate to support a given goal or objective beyond the immediate use — such as policy formulation, scientific modeling, or legal compliance. Achieving fitness for purpose may involve additional considerations such as provenance, trustworthiness, and completeness, and it is possible to frame additional Tests to assess these `Dimensions` of data quality.
+More broadly, the concept of fitness for purpose refers to whether data are adequate to support a given goal or objective beyond the immediate use — such as policy formulation, scientific modeling, or legal compliance. Achieving fitness for purpose may involve additional considerations such as provenance, trustworthiness, and completeness, and it is possible to frame additional Tests to assess these dimensions of data quality.
 
 ### 2.1 Quality Control and Quality Assurance (non-normative)
 

@@ -65,7 +65,7 @@ This document is intended for practitioners who wish to deepen their understandi
 
 For the list and links to all associated documents see [The Biodiversity Data Quality (BDQ) Standard](../../index.md).
 
-### 1.4 Status of the content of this document (normative)
+### 1.4 Status of the Content of this Document (normative)
 
 This document is non-normative.
 

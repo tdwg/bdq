@@ -70,7 +70,7 @@ The set of information most relevant to synthetic data for BDQ Tests can be foun
 - [**BDQ Implementer's Guide**](../implementers/index.md) - For anyone interested in the technical implementation of the BDQ Tests.
 - **Guide to Marking and Identifying Synthetic and Modified Data** - For anyone creating or using conformance testing data, to distinguish blatant fabrications from real data *(this document)*.
 
-### 1.4 Status of the content of this document (normative)
+### 1.4 Status of the Content of this Document (normative)
 
 Sections may be either normative (defines what is required to comply with the standard) or non-normative (supports understanding but is not binding) and are marked as such. 
 

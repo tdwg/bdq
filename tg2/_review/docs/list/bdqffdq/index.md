@@ -47,7 +47,7 @@ Draft Standard for Review
   - [1.2 Audience (non-normative)](#12-audience-non-normative)
   - [1.3 Associated Documents (non-normative)](#13-associated-documents-non-normative)
     - [1.3.1 Distributions for bdqffdq: (non-normative)](#131-distributions-for-bdqffdq-non-normative)
-  - [1.4 Status of the content of this document (normative)](#14-status-of-the-content-of-this-document-normative)
+  - [1.4 Status of the Content of this Document (normative)](#14-status-of-the-content-of-this-document-normative)
   - [1.5 RFC 2119 key words (normative)](#15-rfc-2119-key-words-normative)
   - [1.6 Namespace abbreviations (non-normative)](#16-namespace-abbreviations-non-normative)
   - [1.7 Key to Vocabulary Terms (normative)](#17-key-to-vocabulary-terms-normative)
@@ -209,7 +209,7 @@ Information about the bdqffdq: Fitness For Use Framework Ontology, its usage, an
 | OWL Ontology                        | TBD | [/vocabulary/bdqffdq.owl](../../../vocabulary/bdqffdq.owl) |
 
 
-### 1.4 Status of the content of this document (normative)
+### 1.4 Status of the Content of this Document (normative)
 
 Sections may be either normative (defines what is required to comply with the standard) or non-normative (supports understanding but is not binding) and are marked as such. 
 

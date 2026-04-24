@@ -47,7 +47,7 @@ Draft Standard for Review
   - [1.1 Purpose (non-normative)](#11-purpose-non-normative)
   - [1.2 Audience (non-normative)](#12-audience-non-normative)
   - [1.3 Associated Documents (non-normative)](#13-associated-documents-non-normative)
-  - [1.4 Status of the content of this document (normative)](#14-status-of-the-content-of-this-document-normative)
+  - [1.4 Status of the Content of this Document (normative)](#14-status-of-the-content-of-this-document-normative)
   - [1.5 Namespace abbreviations (non-normative)](#15-namespace-abbreviations-non-normative)
 
 [2 Historical Context (non-normative)](#2-historical-context-non-normative)
@@ -134,7 +134,7 @@ This document is intended for practitioners who wish to deepen their understandi
 
 For the list and links to all associated documents see [The Biodiversity Data Quality (BDQ) Standard](../../index.md).
 
-### 1.4 Status of the content of this document (normative)
+### 1.4 Status of the Content of this Document (normative)
 
 This document is non-normative.
 

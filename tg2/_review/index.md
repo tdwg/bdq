@@ -53,7 +53,7 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
   - [1.3 Contributing TDWG Interest and Task Groups (non-normative)](#13-contributing-tdwg-interest-and-task-groups-non-normative)
   - [1.4 Associated Documents (non-normative)](#14-associated-documents-non-normative)
     - [1.4.2 Background Documents (non-normative)](#142-background-documents-non-normative)
-  - [1.5 Status of the Content of This Document (normative)](#15-status-of-the-content-of-this-document-normative)
+  - [1.5 Status of the Content of this Document (normative)](#15-status-of-the-content-of-this-document-normative)
   - [1.6 RFC 2119 key words (normative)](#16-rfc-2119-key-words-normative)
   - [1.7 Namespace Abbreviations (non-normative)](#17-namespace-abbreviations-non-normative)
   - [1.8 Referring to Terms (normative)](#18-referring-to-terms-normative)
@@ -160,7 +160,7 @@ These documents are not part of the BDQ standard.
 * Veiga AK, et. al. (2017) [A conceptual framework for quality assessment and management of biodiversity data.](https://doi.org/10.1371/journal.pone.0178731).
 * Veiga AK (2016). [A conceptual framework on biodiversity data quality.](http://www.teses.usp.br/teses/disponiveis/3/3141/tde-17032017-085248/).
 
-### 1.5 Status of the Content of This Document (normative)
+### 1.5 Status of the Content of this Document (normative)
 
 Sections may be either normative (defines what is required to comply with the standard) or non-normative (supports understanding but is not binding) and are marked as such. 
 
