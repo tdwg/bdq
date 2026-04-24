@@ -58,11 +58,11 @@ Draft Standard for Review
     - [2.2.1 Data Quality Control and Data Quality Assurance (non-normative)](#221-data-quality-control-and-data-quality-assurance-non-normative)
     - [2.2.2 Information Elements (non-normative)](#222-information-elements-non-normative)
     - [2.2.3 Concepts in the Framework, Test Types: Validation, Issue, Measure, Amendment (non-normative)](#223-concepts-in-the-framework-test-types-validation-issue-measure-amendment-non-normative)
-  - [2.3 Data Quality Needs, Data Quality Mechanisms, Data Quality Reports (non-normative)](#23-data-quality-needs-data-quality-mechanisms-data-quality-reports-non-normative)
+  - [2.3 Extending to Data Quality Mechanisms and Data Quality Reports (non-normative)](#23-extending-to-data-quality-mechanisms-and-data-quality-reports-non-normative)
   - [2.4 Responses (non-normative)](#24-responses-non-normative)
   - [2.4.1 Properties of Responses (normative)](#241-properties-of-responses-normative)
     - [2.4.1.1 Table of Representations of Response Properties (non-normative)](#2411-table-of-representations-of-response-properties-non-normative)
-  - [2.5 Organization of the bdqtest: classes  (non-normative)](#25-organization-of-the-bdqtest-classes--non-normative)
+  - [2.5 Organization of the bdqffdq: classes  (non-normative)](#25-organization-of-the-bdqffdq-classes--non-normative)
   - [2.6 Example representation of a BDQ Test (non-normative)](#26-example-representation-of-a-bdq-test-non-normative)
 
 [3 Use of Ontology Terms (normative)](#3-use-of-ontology-terms-normative)
@@ -323,21 +323,37 @@ This document provides a concise description and normative information about the
 
 The Fitness For Use Framework defines data quality in relation to a specified use, emphasizing that data quality is not abstract but purpose-dependent. It provides a formal way to describe a `Use Case` (`bdqffdq:UseCase`) and the criteria for evaluating whether a dataset is fit for that purpose. By linking data quality explicitly to use, the Framework enables consistent assessment and assurance of fitness for a given purpose.
 
-The Framework can be conceptually divided into three horizontal layers: `Data Quality Needs`, `Data Quality Solutions`, and `Data Quality Reports`. Needs describe what it means for data to have quality for some use, Solutions describe tools to evaluate quality, and Reports are produced by Solutions to describe the evaluation of quality in particular datasets.
+The Framework can be conceptually divided into three horizontal layers: `Data Quality Needs`, `Data Quality Solutions`, and `Data Quality Reports`. Needs describe what it means for data to have quality for some use, Solutions describe tools to evaluate quality, and Reports are produced by Solutions to describe the evaluation of quality in particular datasets. `Data Qiality Solutions` (the Solutions layer) are realized by `Mechanisms` via `Implementations`.
 
 The Framework can also be conceptually divided into four vertical themes, four sets of related concepts that carry through the Needs, Solutions, and Reports layers. These concepts are `Validation`, `Issue`, `Measure`, and `Amendment`. 
 
 We use the informal term "Test" to describe these four vertical themes, a Test involves terms in both Needs and Solutions, and Tests produce particular reporting elements.  See the diagram in [BDQ Tests: An Operational Perspective](../bdqtest/index.md#51-bdq-tests-an-operational-perspective-non-normative).
 
+**Data Quality Needs** begin with a `Use Case`, a formal description of a purpose for which data may be used. Each `Use Case` includes a set of `Policies`, which in turn relate to `Data Quality Needs`.  The `Data Quality Needs` (i.e., `Validation`, `Measure`, `Amendment`, `Issue`) specify the data quality requirement (Need), the relevant `Information Elements` (such as specific Darwin Core terms), and the `Resource Type` the requirement applies to. A Need defines the properties data must have to be considered fit for use and may include ways to improve unfit data. The Tests described in this standard are formal specifications of such Needs for BDQ purposes.
+
+**Data Quality Mechanisms** are formal descriptions of software or other tools that implement the Tests. They execute the `Specifications` defined in the Needs layer.
+
+**Data Quality Reports** are the outputs generated when `Mechanisms` are applied to data. The Tests include formal specifications of `Responses` that are expected to appear in these Reports.
+
+We can visualize the Framework's Needs, Solutions, and Reports layers, and then follow the Test concepts vertically through each layer (see [Figure 3](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0178731#pone-0178731-g003) in Veiga et al., 2017). Below is a diagram that brings together the horizontal Needs, Solutions, and Reports layers with the vertical Test concepts (`Validations`, `Issues`, `Measures` and `Amendments`), with `Validation`-related concepts expanded to show all related entities in the Fitness For Use Framework.
+
+![Diagram Illustrating both the horizontal (Needs/Solutions/Reports) layers and the vertical Test concepts (Validations, Issues, Measures and Amendments)](bdqffdq_data_quality_layers.svg)
+
+*All four Tests concepts in the Needs Solutions, and Reports levels.*
+
 #### 2.2.1 Data Quality Control and Data Quality Assurance (non-normative)
 
 The Framework draws a distinction between **Quality Control** and **Quality Assurance**. Quality Control processes seek to assess the quality of data for some purpose, then identify changes to the data or to processes around the data to improve their quality. Quality Assurance processes seek to filter some set of data to a subset that is fit for some purpose, that is, to assure that data used for some purpose are fit for that purpose.
+
+For **Quality Assurance**, the Framework defines `Measures` that operate on `Multi Records` and return a `Response.result` of `COMPLETE` or `NOT_COMPLETE`. A `Multi Record` `Measure` may be `COMPLETE` if all aggregated instances of a related `Single Record` `Validation` are `COMPLIANT`.
+
+For **Quality Control**, `Multi Record` `Measures` can return numeric summaries of the results of other Tests (e.g. count of `COMPLIANT` results for a `Validation`), thereby indicating how fit a dataset is for its intended purpose and how many adjustments are needed to make it fully fit.
 
 It is important to recognize that BDQ does not standardize complete `Quality Control` or `Quality Assurance` workflows (e.g., user roles, review and remediation procedures, pipelines, thresholds, or reporting formats). Instead, BDQ standardizes the semantics of Tests and their `Responses` and provides `Measure` patterns that can be used to support `Quality Control` and `Quality Assurance` workflows in a consistent way.
 
 #### 2.2.2 Information Elements (non-normative)
 
-The Framework has an abstract concept of `Information Elements`. To frame Tests on Darwin Core terms in a usable way, we list specific Darwin Core terms as the `Information Elements` in each Test.
+The Framework has both an abstract and concrete concept of `Information Elements`. To frame Tests on Darwin Core terms in a usable way, we list specific Darwin Core terms as the concrete `Information Elements` in each Test.
 
 #### 2.2.3 Concepts in the Framework, Test Types: Validation, Issue, Measure, Amendment (non-normative)
 
@@ -347,10 +363,10 @@ The Framework defines four central concepts for describing and evaluating `Data 
 
 *The 4 central DataQualityNeed types in the Framework - Validation, Issue, Measure, and Amendment.*
 
-
 A `Validation` assesses compliance with a need. Data have quality if they are compliant with the requirements of the Validation Test. A `Validation` relates `Information Elements` and `Resource Types` with a `Specification` of exactly how to assess fitness of the data under some narrow `Criteria`, and themselves are assembled into `Validation Policies`, which are linked to other `Policies` to cover a description of the `Data Quality Needs` of a `Use Case`.  Data have quality only with respect to some use, so `Validations` must be composed with `Use Cases` to be able to assess fitness for use.
 
 ![Diagram of the classes involved in expressing Data Quality Needs with Validations.](bdqffdq_data_quality_needs_validation.svg)
+
 *Expressing `Data Quality Needs`: Validations.*
 
 `Issues` are the converse of `Validations`. Data lack quality if an `Issue` identifies a potential problem in the data that would require further human review to determine if the data have quality for some purpose.  Like `Validations`, `Issues` relate `Information Elements` and `Resource Types` with a `Specification` of exactly how to assess fitness of the data under some `Use Case`.  No illustration is provided here, as the `Issue` concept is very similar to the `Validation` concept, but with a different focus on identifying potential problems rather than confirming compliance.  
@@ -360,12 +376,14 @@ A `Validation` assesses compliance with a need. Data have quality if they are co
 `Measures` make an aggregate summary of some specific aspect of data quality.
 
 ![Diagram of the classes involved in expressing Data Quality Needs with Measures.](bdqffdq_data_quality_needs_measure.svg)
+
 *Expressing Data Quality Needs: Measures.*
 
 `Amendments` propose changes to data or processes that, if accepted, may improve the fitness of data for a specific use.
 
 ![Diagram of the classes involved in expressing Data Quality Needs with Amendments.](bdqffdq_data_quality_needs_amendment.svg)
-*Expressing Data Duality Needs: Amendments.*
+
+*Expressing Data Quality Needs: Amendments.*
 
 Formally, in the `Data Quality Needs` level, the Framework starts with a `Use Case`, a framing of some use to which data may be put. `Use Cases` are related to the formal description of `Data Quality Needs` through `Policies`. `Data Quality Needs`, such as a `Validation` are related to the `Information Elements` that need to be examined, and to the `Resource Type` that is operated on.  `Methods` such as `ValidationMethod` relate the `Data Quality Needs` to `Specifications` for the evaluation of those needs.  The `Data Quality Need` specifies in general terms what properties data must have to have quality, and the related `Specification` provides a formal description of how to evaluate that aspect of quality.
 
@@ -377,40 +395,35 @@ Each of the Tests described in the BDQ standard has a formal specification that 
 
 *Representation of Single Record and Multi Record as named individual instances of the Resource class.*
 
-### 2.3 Data Quality Needs, Data Quality Mechanisms, Data Quality Reports (non-normative)
+### 2.3 Extending to Data Quality Mechanisms and Data Quality Reports (non-normative)
 
-**TODO: Review from here** Has some duplication with the above.
+Software that implements one or more tests is a `Mechanism`. A `Mechanism` is a formal description of a software tool that implements one or more Tests.  Each of those Tests has an `Implementation` in that `Mechanism`, which is a formal description of how the `Mechanism` implements the Test.  An `Implementation` is linked via `bdqffdq:usesSpecification` to the specification of a Test.  An `Implementation` also produces `Responses` that are linked to the `Implementation` via `bdqffdq:producesResponse` and may be assembled into `Data Quality Reports`.
 
-The Fitness For Use Framework organizes data quality concepts into three core areas — Needs, Mechanisms, and Reports — which can be viewed as horizontal slices through the Framework (Veiga et al., 2017).
+The property `bdqffdq:usesSpecification` draws a separation between the specification of how a Test is defined and an actual concrete implementation of that Test in software. This separation allows for multiple implementations of the same Test, and for implementations to evolve independently of the Test specifications.
 
-**Data Quality Needs** begin with a `Use Case`, a formal description of a purpose for which data may be used. Each `Use Case` includes a set of `Policies`, which in turn relate to `Data Quality Needs`.  The `Data Quality Needs` (i.e., `Validation`, `Measure`, `Amendment`, `Issue`) specify the data quality requirement (Need), the relevant `Information Elements` (such as specific Darwin Core terms), and the `Resource Type` the requirement applies to. A Need defines the properties data must have to be considered fit for use and may include ways to improve unfit data. The Tests described in this standard are formal specifications of such Needs for BDQ purposes.
+A Test, conceptually, is a set of classes and properties that provide a formal description of what outputs a software implemntation should produce for given inputs.  The classes are a `Specification` linked through a 'Method` (`Validation Method`, `Issue Method`, `Measure Method`, and `hasAmendmentMethod`) to a `Data Quality Need` (`Validation`, `Issue`, `Measure`, or `Amendment`).  The properties associated with the `Data Quality Need` provide a general description of what aspect of data quality the Test assesses (and what its inputs are), while the athe properties associated with the `Specification` provide the specific details of the expected behavior of the Test needed for a developer to implement the Test.  The `bdqtest:` vocabulary provides these specific details for each Test, independent of any particular software implementation.
 
-**Data Quality Mechanisms** are formal descriptions of software or other tools that implement the Tests. They execute the `Specifications` defined in the Needs layer.
+On the other side of `bdqffdq:usesSpecification`, a sofware implementation of a Test produces `Responses`.  These are the outputs of Test execution, and provide an assessment of the fittness of some data for some use.  Thus The Fittness For Use Framwork divides responsibilities between the specification of what is needed for data to have quality (`Use Cases` and Tests)  and the software implementations of those Tests with the actual assertions about data quality in `Responses` produced by those implementations.
 
-**Data Quality Reports** are the outputs generated when `Mechanisms` are applied to data. The Tests include formal specifications of `Responses` that are expected to appear in these Reports.
-
-The Framework includes an abstract concept of `Information Elements`, which are concretely represented by specific Darwin Core terms within each Test to make evaluations practical.
-
-For **Quality Assurance**, the Framework defines `Measures` that operate on `Multi Records` and return a `Response.result` of `COMPLETE` or `NOT_COMPLETE`. A `Multi Record` `Measure` may be `COMPLETE` if all aggregated instances of a related `Single Record` `Validation` are `COMPLIANT`.
-
-For **Quality Control**, `Multi Record` `Measures` can return numeric summaries of the results of other Tests (e.g. count of `COMPLIANT` results for a `Validation`), thereby indicating how fit a dataset is for its intended purpose and what adjustments are needed to make it fully fit.
-
-![Diagram of ValidationResponse, IssueResponse, MeasureResponse and AmendmentResponse classes as subtypes of the Response class with ReportConcept as its parent.](assertions.png)
-*The 4 `Response` types in the Framework - `ValidationResponse`, `IssueResponse`, `MeasureResponse` and `AmendmentResponse`.*
-
-Diagram of the composition of `Validation`, `Validation Method`, and `Validation Response` illustrating the `Data Quality Needs`, `Solutions`, and `Reports` layers of the Fitness For Use Framework, with the responsibilities of `bdqtest:` (solid lines), and implementations (dashed lines).
+Diagram of the composition of `Validation`, `Validation Method`, and `Validation Response` illustrating the `Data Quality Needs`, `Solutions`, and `Reports` layers of the Fitness For Use Framework, identifying the responsibilities of `bdqtest:` (solid lines), and implementations (dashed lines).
 
 ![Diagram of Validation, ValidationMethod, and ValidationResponse with related classes](bdqffdq_data_quality_needs_solutions_report_validation.svg)
+
 *Validation concepts in the Needs, Solutions, and Reports levels.*
-
-A useful way to think of the Framework is to divide it horizontally into Needs, Solutions, and Reports layers, and then track the Test concepts vertically through each layer (see [Figure 3](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0178731#pone-0178731-g003) in Veiga et al., 2017). Below is a diagram that brings together the horizontal Needs, Solutions, and Reports layers with the vertical Test concepts (`Validations`, `Issues`, `Measures` and `Amendments`), with `Validation`-related concepts expanded to show all related entities in the Fitness For Use Framework.
-
-![Diagram Illustrating both the horizontal (Needs/Solutions/Reports) layers and the vertical Test concepts (Validations, Issues, Measures and Amendments)](bdqffdq_data_quality_layers.svg)
-*All four Tests concepts in the Needs Solutions, and Reports levels.*
 
 ### 2.4 Responses (non-normative)
 
 The content of this section is non-normative, related normative guidance is in section [5.1 The Response Object (normative)](../implementers/index.md#51-the-response-object-normative) of the [BDQ Implementer's Guide](../implementers/index.md).
+
+A `Response` is a formal description of the output of a Test, including the status of the Test execution, the result of the Test, and any comments or qualifiers that provide additional information about the result.  `Responses` can be assembled into `Data Quality Reports` that summarize the results of applying one or more Tests to a dataset.  
+
+`Responses` are typed as `Validation Response`, `Issue Response`, `Measure Response`, or `Amendment Response` depending on the type of Test that produced them.
+
+![Diagram of ValidationResponse, IssueResponse, MeasureResponse and AmendmentResponse classes as subtypes of the Response class with ReportConcept as its parent.](assertions.png)
+
+*The 4 `Response` types in the Framework - `ValidationResponse`, `IssueResponse`, `MeasureResponse` and `AmendmentResponse`.*
+
+`Response` objects may be represented in an RDF context as a combination of object properties and data properties on a `Response` resource.  In a non-RDF context, such as JSON or a tabular format, a `Response` might be represented as an object with properties or as a row with columns for each of the properties.  The key properties of a `Response` are `Response.status`, `Response.result`, `Response.comment`, and optionally, `Response.qualifier`.  In a non-RDF context, these may be simple fields in a structured data format, while in an RDF context, these would be represented using the appropriate properties from the `bdqffdq:` vocabulary (e.g., `bdqffdq:hasResponseStatus`, `bdqffdq:hasResponseResult`, `bdqffdq:hasResponseComment`, and `bdqffdq:hasResponseQualifier`) where the distinction between categorical values (e.g. using `bdqffdq:hasResponseResult`) and literal values (e.g. using `bdqffdq:hasResponseResultValue`) is important.
 
 It is expected that instances of `Response` objects will involve, in RDF, a combination of object properties and data properties on a `Response`.  In an object oriented language like Java, a `Response` might be an object with properties, and in a tabular format, a `Response` might be a row with columns for each of the properties. The following table gives an overview of the expected properties of a `Response` object, and the corresponding terms in the `bdqffdq:` vocabulary.
 
@@ -440,6 +453,8 @@ This section summarises representation choices. Full normative constraints on th
 
 #### 2.4.1.1 Table of Representations of Response Properties (non-normative)
 
+Summary of the expected properties of a `Response` object, and the corresponding terms in the `bdqffdq:` vocabulary, with examples of RDF and non-RDF representations.
+
 | Context | Informal Response property | RDF predicate / field | Required representation | Example |
 |---------|-----------------------------|-----------------------|-------------------------|---------|
 | RDF | `Response.status` (categorical) | `bdqffdq:hasResponseStatus` | IRI of a named individual | `bdqffdq:RUN_HAS_RESULT` |
@@ -451,10 +466,11 @@ This section summarises representation choices. Full normative constraints on th
 | Non-RDF structured data (literal) | `Response.result` | field corresponding to `bdqffdq:hasResponseResultValue` | literal | `17` |
 | Non-RDF structured data (literal) | `Response.comment` | field corresponding to `bdqffdq:hasResponseComment` | literal (string) | `Provided value 11 is a valid dwc:day.` |
 
-A bdqffdq:hasResponseStatus is always categorical, a bdqffdq:hasResponseComment is always literal, a Response.result may be either a categorical bdqffdq:hasResponseResult or a literal bdqffdq:hasResponseResultValue.  
+A `bdqffdq:hasResponseStatus` is always categorical, a bdqffdq:hasResponseComment is always literal, a Response.result may be either a categorical bdqffdq:hasResponseResult or a literal bdqffdq:hasResponseResultValue.  
 
+It is precicely because of this potential for results to be represented as RDF or as non-RDF structured data that the `Named Individuals` such as `bdqffdq:COMPLIANT` used in results are given labels in all upper case with underscores to facilitate their use and recognition as string constant values in non-RDF contexts.
 
-### 2.5 Organization of the bdqtest: classes  (non-normative)
+### 2.5 Organization of the bdqffdq: classes  (non-normative)
 
 Following is a knowledge graph showing the is-a relationships between the classes in the Fitness For Use Framework:
 
@@ -560,7 +576,7 @@ The (non-normative) diagram below illustrating `Validation` related concepts acr
 
 ![Diagram of Validation, ValidationMethod, and ValidationResponse with related classes](../guide/bdqffdq/bdqffdq_data_quality_needs_solutions_report_validation.svg "Validation concepts in the Needs, Solutions, and Reports levels.")
 
-The use of classes and properties in the bdqtest: vocabulary (see [BDQ Tests as RDF](../../../dist/bdqtest.ttl)) follow the guidance provided in this section.  The `Data Quality Needs` (blue here; `Need Concept`) and Data Quality Solutions (green here; `Solutions Concept`) concepts in this diagram illustrate how this guidance is used in `bdqtest:` to relate the set of terms used to define a `Validation`.  The `Data Quality Reports` (tan here; `Report Concept`) concepts in the diagram illustrate how a `Validation Response` in a `Data Quality Report` can be related to a `Validation` and its `Specification`.  The minimal use of rdfs:range and other global axioms in `bdqffdq:` aligns with best practices for ontologies intended for reuse, integration, and extension.  This approach trades strict, machine-enforceable validation and inference for flexibility, extensibility, and a low barrier to adoption.  The normative guidance in this document mitigates the risk of inconsistent usage that is allowed by the open world design of `bdqffdq:`.
+The use of classes and properties in the bdqtest: vocabulary (see [BDQ Tests as RDF](../../../dist/bdqtest.ttl)) follow the guidance provided in this section.  The `Data Quality Needs` (blue here; `Need Concept`) and Data Quality Solutions (green here; `Solutions Concept`) concepts in this diagram illustrate how this guidance is used in `bdqtest:` to relate the set of terms used to define a `Validation`.  The `Data Quality Reports` (tan here; `Report Concept`) concepts in the diagram illustrate how a `Validation Response` in a `Data Quality Report` can be related to a `Validation` and its `Specification`.  The minimal use of `rdfs:range` and other global axioms in `bdqffdq:` aligns with best practices for ontologies intended for reuse, integration, and extension.  This approach trades strict, machine-enforceable validation and inference for flexibility, extensibility, and a low barrier to adoption.  The normative guidance in this document mitigates the risk of inconsistent usage that is allowed by the open world design of `bdqffdq:`.
 
 
 This section describes normative expectations for the use of object and datatype properties to related instances of `bdqffdq:` classes in their intended ways given the open world limited use of domains, ranges, and other axioms in the [Biodiversity Data Quality Fitness For Use Framework (Ontology)](../../../vocabulary/bdqffdq.owl) ontology. This guidance builds on the normative definitions of `bdqffdq:` object properties and datatype properties to describe how `bdqffdq:` terms can be composed in a useful and consistent way.
