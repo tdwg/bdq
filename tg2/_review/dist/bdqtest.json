@@ -14474,7 +14474,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqtest/terms/2e371d57-1eb3-4fe3-8a61-dff43ced50cf-2025-03-06",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/2e371d57-1eb3-4fe3-8a61-dff43ced50cf-2026-04-24",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Amendment"
         ],
@@ -14490,7 +14490,7 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "Implementations should translate interpretable Roman numerals in the range I-XII in dwc:month as integer month values 1-12, as some natural science domains use roman numeral months to avoid language and day/month vs month/day order. In these cases, the result will be AMENDED numeric equivalents."
+                "@value": "Implementations should translate unambiguously interpretable names and abbreviations of months to their integer month values 1-12. Implementations should translate interpretable Roman numerals in the range I-XII in dwc:month as integer month values 1-12, as some natural science domains use roman numeral months to avoid language and day/month vs month/day order concerns. In these cases, the result will be AMENDED numeric equivalents."
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension": [
@@ -14510,7 +14510,7 @@
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2025-03-06",
+                "@value": "2026-04-24",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -14553,7 +14553,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forAmendment": [
             {
-                "@id": "https://rs.tdwg.org/bdqtest/terms/2e371d57-1eb3-4fe3-8a61-dff43ced50cf-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/2e371d57-1eb3-4fe3-8a61-dff43ced50cf-2026-04-24"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
@@ -14587,7 +14587,7 @@
                 "@value": "dwc:month=\"IV\": Response.status=AMENDED, Response.result=dwc:month=\"4\", Response.comment=\"dwc:month interpreted as roman numerals \""
             },
             {
-                "@value": "dwc:month=\"October\": Response.status=NOT_AMENDED, Response.result=, Response.comment=\"dwc:month contains an uninterpretable value\""
+                "@value": "dwc:month=\"Ma\": Response.status=NOT_AMENDED, Response.result=, Response.comment=\"dwc:month contains an ambiguous value\""
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults": [
@@ -14597,7 +14597,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse": [
             {
-                "@value": "INTERNAL_PREREQUISITES_NOT_MET if dwc:month is bdqval:Empty; AMENDED the value of dwc:month if it can be unambiguously interpreted as an integer between 1 and 12 inclusive; otherwise NOT_AMENDED"
+                "@value": "INTERNAL_PREREQUISITES_NOT_MET if dwc:month is bdqval:Empty; AMENDED the value of dwc:month if it can be unambiguously interpreted as a month represented as an integer between 1 and 12 inclusive; otherwise NOT_AMENDED"
             }
         ],
         "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -14607,7 +14607,7 @@
         ],
         "http://purl.org/dc/terms/description": [
             {
-                "@value": "INTERNAL_PREREQUISITES_NOT_MET if dwc:month is bdqval:Empty; AMENDED the value of dwc:month if it can be unambiguously interpreted as an integer between 1 and 12 inclusive; otherwise NOT_AMENDED"
+                "@value": "INTERNAL_PREREQUISITES_NOT_MET if dwc:month is bdqval:Empty; AMENDED the value of dwc:month if it can be unambiguously interpreted as a month represented as an integer between 1 and 12 inclusive; otherwise NOT_AMENDED"
             }
         ]
     },
@@ -42026,7 +42026,7 @@
                 "@id": "https://rs.tdwg.org/bdqtest/terms/b129fa4d-b25b-43f7-9645-5ed4d44b357b-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqtest/terms/2e371d57-1eb3-4fe3-8a61-dff43ced50cf-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/2e371d57-1eb3-4fe3-8a61-dff43ced50cf-2026-04-24"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqtest/terms/eb0a44fa-241c-4d64-98df-ad4aa837307b-2025-03-06"
@@ -42119,7 +42119,7 @@
                 "@id": "https://rs.tdwg.org/bdqtest/terms/b129fa4d-b25b-43f7-9645-5ed4d44b357b-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqtest/terms/2e371d57-1eb3-4fe3-8a61-dff43ced50cf-2025-03-06"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/2e371d57-1eb3-4fe3-8a61-dff43ced50cf-2026-04-24"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqtest/terms/15d15927-7a22-43f8-88d6-298f5eb45c4c-2025-03-07"

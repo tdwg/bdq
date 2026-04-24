@@ -4048,7 +4048,7 @@ Only fields that are empty will be have changes proposed, and only if dwc:eventD
 ###  AMENDMENT_MONTH_STANDARDIZED
 
 ####  Amendment dwc:month Standardized
-https://rs.tdwg.org/bdqtest/terms/2e371d57-1eb3-4fe3-8a61-dff43ced50cf/2023-09-18
+https://rs.tdwg.org/bdqtest/terms/2e371d57-1eb3-4fe3-8a61-dff43ced50cf/2026-04-24
 Acts upon  SingleRecord
 
 #### Description
@@ -4057,7 +4057,7 @@ Proposes an amendment to the value of dwc:month as an integer between 1 and 12 i
 
 #### Expected Response
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:month is bdqval:Empty; AMENDED the value of dwc:month if it can be unambiguously interpreted as an integer between 1 and 12 inclusive; otherwise NOT_AMENDED
+INTERNAL_PREREQUISITES_NOT_MET if dwc:month is bdqval:Empty; AMENDED the value of dwc:month if it can be unambiguously interpreted as a month represented as an integer between 1 and 12 inclusive; otherwise NOT_AMENDED
 
 #### Information Elements
 
@@ -4068,7 +4068,7 @@ dwc:month
 
 dwc:month="IV": Response.status=AMENDED, Response.result=dwc:month="4", Response.comment="dwc:month interpreted as roman numerals "
 
-dwc:month="October": Response.status=NOT_AMENDED, Response.result=, Response.comment="dwc:month contains an uninterpretable value"
+dwc:month="Ma": Response.status=NOT_AMENDED, Response.result=, Response.comment="dwc:month contains an ambiguous value"
 
 
 #### Use Cases
@@ -4077,7 +4077,7 @@ bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
-Implementations should translate interpretable Roman numerals in the range I-XII in dwc:month as integer month values 1-12, as some natural science domains use roman numeral months to avoid language and day/month vs month/day order. In these cases, the result will be AMENDED numeric equivalents.
+Implementations should translate unambiguously interpretable names and abbreviations of months to their integer month values 1-12. Implementations should translate interpretable Roman numerals in the range I-XII in dwc:month as integer month values 1-12, as some natural science domains use roman numeral months to avoid language and day/month vs month/day order concerns. In these cases, the result will be AMENDED numeric equivalents.
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************

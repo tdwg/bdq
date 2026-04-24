@@ -3234,14 +3234,14 @@ bdqtest:b129fa4d-b25b-43f7-9645-5ed4d44b357b-2025-03-06 a bdqffdq:Amendment;
   rdfs:label "Specification for: AMENDMENT_DAY_STANDARDIZED";
   dcterms:description "INTERNAL_PREREQUISITES_NOT_MET if dwc:day is bdqval:Empty; AMENDED the value of dwc:day if the value is unambiguously interpreted as an integer between 1 and 31 inclusive; otherwise NOT_AMENDED" .
 
-bdqtest:2e371d57-1eb3-4fe3-8a61-dff43ced50cf-2025-03-06 a bdqffdq:Amendment;
+bdqtest:2e371d57-1eb3-4fe3-8a61-dff43ced50cf-2026-04-24 a bdqffdq:Amendment;
   bdqffdq:hasResourceType bdqffdq:SingleRecord;
   bdqffdq:hasEnhancement bdqenh:Standardized;
-  skos:note "Implementations should translate interpretable Roman numerals in the range I-XII in dwc:month as integer month values 1-12, as some natural science domains use roman numeral months to avoid language and day/month vs month/day order. In these cases, the result will be AMENDED numeric equivalents.";
+  skos:note "Implementations should translate unambiguously interpretable names and abbreviations of months to their integer month values 1-12. Implementations should translate interpretable Roman numerals in the range I-XII in dwc:month as integer month values 1-12, as some natural science domains use roman numeral months to avoid language and day/month vs month/day order concerns. In these cases, the result will be AMENDED numeric equivalents.";
   bdqffdq:hasDataQualityDimension bdqdim:Conformance;
   dcterms:description "Proposes an amendment to the value of dwc:month as an integer between 1 and 12 inclusive.";
   bdqffdq:hasActedUponInformationElement <urn:uuid:a16e8cb6-dbf5-44a9-becc-8bef83a37456>;
-  dcterms:issued "2025-03-06"^^xsd:date;
+  dcterms:issued "2026-04-24"^^xsd:date;
   skos:historyNote "https://github.com/tdwg/bdq/issues/128";
   rdfs:label "AMENDMENT_MONTH_STANDARDIZED";
   dcterms:isVersionOf bdqtest:2e371d57-1eb3-4fe3-8a61-dff43ced50cf;
@@ -3251,15 +3251,15 @@ bdqtest:2e371d57-1eb3-4fe3-8a61-dff43ced50cf-2025-03-06 a bdqffdq:Amendment;
   skos:note "Example Implementations: Kurator/FilteredPush event_date_qc Library (Morris & Lowery 2025)",
     "Example Implementations Source Code: https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L1535 with unit test at https://github.com/FilteredPush/event_date_qc/blob/f224e5a1e6db81bc6ca725f520dd06a71fcfb54e/src/test/java/org/filteredpush/qc/date/DwcEventDQTest.java#L671 Internals of recognized string values (roman numerals, month names and abbreviations in multiple languages) use a combination of event_date_qc's DateUtils.cleanMonth() (see https://github.com/FilteredPush/event_date_qc/blob/23e4139d7f0ef71736f7fc7e984cfd2d0bfea093/src/main/java/org/filteredpush/qc/date/DateUtils.java#L2111 and Joda time's month recognition)",
     "TG2 Amendment TIME CODED Test Conformance CORE";
-  bdqffdq:forAmendment bdqtest:2e371d57-1eb3-4fe3-8a61-dff43ced50cf-2025-03-06 .
+  bdqffdq:forAmendment bdqtest:2e371d57-1eb3-4fe3-8a61-dff43ced50cf-2026-04-24 .
 
 <urn:uuid:4a514adf-766f-46a4-bf16-6febcb594f38> a bdqffdq:Specification;
   skos:example "dwc:month=\"IV\": Response.status=AMENDED, Response.result=dwc:month=\"4\", Response.comment=\"dwc:month interpreted as roman numerals \"",
-    "dwc:month=\"October\": Response.status=NOT_AMENDED, Response.result=, Response.comment=\"dwc:month contains an uninterpretable value\"";
+    "dwc:month=\"Ma\": Response.status=NOT_AMENDED, Response.result=, Response.comment=\"dwc:month contains an ambiguous value\"";
   bdqffdq:hasAuthoritiesDefaults "";
-  bdqffdq:hasExpectedResponse "INTERNAL_PREREQUISITES_NOT_MET if dwc:month is bdqval:Empty; AMENDED the value of dwc:month if it can be unambiguously interpreted as an integer between 1 and 12 inclusive; otherwise NOT_AMENDED";
+  bdqffdq:hasExpectedResponse "INTERNAL_PREREQUISITES_NOT_MET if dwc:month is bdqval:Empty; AMENDED the value of dwc:month if it can be unambiguously interpreted as a month represented as an integer between 1 and 12 inclusive; otherwise NOT_AMENDED";
   rdfs:label "Specification for: AMENDMENT_MONTH_STANDARDIZED";
-  dcterms:description "INTERNAL_PREREQUISITES_NOT_MET if dwc:month is bdqval:Empty; AMENDED the value of dwc:month if it can be unambiguously interpreted as an integer between 1 and 12 inclusive; otherwise NOT_AMENDED" .
+  dcterms:description "INTERNAL_PREREQUISITES_NOT_MET if dwc:month is bdqval:Empty; AMENDED the value of dwc:month if it can be unambiguously interpreted as a month represented as an integer between 1 and 12 inclusive; otherwise NOT_AMENDED" .
 
 <urn:uuid:c1af0cfd-311e-4982-922a-dc67e0c2c975> bdqffdq:hasSpecification <urn:uuid:4a514adf-766f-46a4-bf16-6febcb594f38>;
   skos:historyNote "Source: TG2-Gainesville";
@@ -9203,7 +9203,7 @@ bdqval:Taxon-Management a bdqffdq:UseCase;
     bdqtest:8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae-2025-03-07, bdqtest:96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2025-03-07,
     bdqtest:6d0a0c10-5e4a-4759-b448-88932f399812-2025-03-06, bdqtest:3892f432-ddd0-4a0a-b713-f2e2ecbd879d-2025-03-06,
     bdqtest:7498ca76-c4d4-42e2-8103-acacccbdffa7-2025-03-07, bdqtest:f8f3a093-042c-47a3-971a-a482aaaf3b75-2025-03-07,
-    bdqtest:b129fa4d-b25b-43f7-9645-5ed4d44b357b-2025-03-06, bdqtest:2e371d57-1eb3-4fe3-8a61-dff43ced50cf-2025-03-06,
+    bdqtest:b129fa4d-b25b-43f7-9645-5ed4d44b357b-2025-03-06, bdqtest:2e371d57-1eb3-4fe3-8a61-dff43ced50cf-2026-04-24,
     bdqtest:eb0a44fa-241c-4d64-98df-ad4aa837307b-2025-03-06, bdqtest:dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8-2025-03-07,
     bdqtest:e39098df-ef46-464c-9aef-bcdeee2a88cb-2025-03-06, bdqtest:15d15927-7a22-43f8-88d6-298f5eb45c4c-2025-03-07,
     bdqtest:f9205977-f145-44f5-8cb9-e3e2e35ce908-2025-03-07, bdqtest:33c45ae1-e2db-462a-a59e-7169bb01c5d6-2025-03-07,
@@ -9221,7 +9221,7 @@ bdqval:Taxon-Management a bdqffdq:UseCase;
     bdqtest:f01fb3f9-2f7e-418b-9f51-adf50f202aea-2025-03-06, bdqtest:8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae-2025-03-07,
     bdqtest:96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2025-03-07, bdqtest:7498ca76-c4d4-42e2-8103-acacccbdffa7-2025-03-07,
     bdqtest:f8f3a093-042c-47a3-971a-a482aaaf3b75-2025-03-07, bdqtest:b129fa4d-b25b-43f7-9645-5ed4d44b357b-2025-03-06,
-    bdqtest:2e371d57-1eb3-4fe3-8a61-dff43ced50cf-2025-03-06, bdqtest:15d15927-7a22-43f8-88d6-298f5eb45c4c-2025-03-07;
+    bdqtest:2e371d57-1eb3-4fe3-8a61-dff43ced50cf-2026-04-24, bdqtest:15d15927-7a22-43f8-88d6-298f5eb45c4c-2025-03-07;
   rdfs:label "AmendmentPolicy: (19) amendments  in UseCase bdqval:Spatial-Temporal_Patterns";
   bdqffdq:hasUseCase bdqval:Spatial-Temporal_Patterns .
 

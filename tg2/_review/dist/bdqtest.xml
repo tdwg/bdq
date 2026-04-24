@@ -1046,14 +1046,14 @@
 	<bdqffdq:hasResourceType rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MultiRecord"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/2e371d57-1eb3-4fe3-8a61-dff43ced50cf-2025-03-06">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/2e371d57-1eb3-4fe3-8a61-dff43ced50cf-2026-04-24">
 	<dcterms:description>Proposes an amendment to the value of dwc:month as an integer between 1 and 12 inclusive.</dcterms:description>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/2e371d57-1eb3-4fe3-8a61-dff43ced50cf"/>
-	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
+	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-04-24</dcterms:issued>
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Amendment"/>
 	<rdfs:label>AMENDMENT_MONTH_STANDARDIZED</rdfs:label>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/128</skos:historyNote>
-	<skos:note>Implementations should translate interpretable Roman numerals in the range I-XII in dwc:month as integer month values 1-12, as some natural science domains use roman numeral months to avoid language and day/month vs month/day order. In these cases, the result will be AMENDED numeric equivalents.</skos:note>
+	<skos:note>Implementations should translate unambiguously interpretable names and abbreviations of months to their integer month values 1-12. Implementations should translate interpretable Roman numerals in the range I-XII in dwc:month as integer month values 1-12, as some natural science domains use roman numeral months to avoid language and day/month vs month/day order concerns. In these cases, the result will be AMENDED numeric equivalents.</skos:note>
 	<skos:prefLabel>Amendment dwc:month Standardized for SingleRecord</skos:prefLabel>
 	<bdqffdq:hasActedUponInformationElement rdf:resource="urn:uuid:a16e8cb6-dbf5-44a9-becc-8bef83a37456"/>
 	<bdqffdq:hasDataQualityDimension rdf:resource="https://rs.tdwg.org/bdqdim/terms/Conformance"/>
@@ -4708,7 +4708,7 @@
 	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/07c28ace-561a-476e-a9b9-3d5ad6e35933-2025-03-07"/>
 	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/15d15927-7a22-43f8-88d6-298f5eb45c4c-2025-03-07"/>
 	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/2d638c8b-4c62-44a0-a14d-fa147bf9823d-2025-03-07"/>
-	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/2e371d57-1eb3-4fe3-8a61-dff43ced50cf-2025-03-06"/>
+	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/2e371d57-1eb3-4fe3-8a61-dff43ced50cf-2026-04-24"/>
 	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/39bb2280-1215-447b-9221-fd13bc990641-2025-03-07"/>
 	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e-2025-03-07"/>
 	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/710fe118-17e1-440f-b428-88ba3f547d6d-2025-03-06"/>
@@ -7003,13 +7003,13 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:4a514adf-766f-46a4-bf16-6febcb594f38">
-	<dcterms:description>INTERNAL_PREREQUISITES_NOT_MET if dwc:month is bdqval:Empty; AMENDED the value of dwc:month if it can be unambiguously interpreted as an integer between 1 and 12 inclusive; otherwise NOT_AMENDED</dcterms:description>
+	<dcterms:description>INTERNAL_PREREQUISITES_NOT_MET if dwc:month is bdqval:Empty; AMENDED the value of dwc:month if it can be unambiguously interpreted as a month represented as an integer between 1 and 12 inclusive; otherwise NOT_AMENDED</dcterms:description>
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Specification"/>
 	<rdfs:label>Specification for: AMENDMENT_MONTH_STANDARDIZED</rdfs:label>
 	<skos:example>dwc:month="IV": Response.status=AMENDED, Response.result=dwc:month="4", Response.comment="dwc:month interpreted as roman numerals "</skos:example>
-	<skos:example>dwc:month="October": Response.status=NOT_AMENDED, Response.result=, Response.comment="dwc:month contains an uninterpretable value"</skos:example>
+	<skos:example>dwc:month="Ma": Response.status=NOT_AMENDED, Response.result=, Response.comment="dwc:month contains an ambiguous value"</skos:example>
 	<bdqffdq:hasAuthoritiesDefaults></bdqffdq:hasAuthoritiesDefaults>
-	<bdqffdq:hasExpectedResponse>INTERNAL_PREREQUISITES_NOT_MET if dwc:month is bdqval:Empty; AMENDED the value of dwc:month if it can be unambiguously interpreted as an integer between 1 and 12 inclusive; otherwise NOT_AMENDED</bdqffdq:hasExpectedResponse>
+	<bdqffdq:hasExpectedResponse>INTERNAL_PREREQUISITES_NOT_MET if dwc:month is bdqval:Empty; AMENDED the value of dwc:month if it can be unambiguously interpreted as a month represented as an integer between 1 and 12 inclusive; otherwise NOT_AMENDED</bdqffdq:hasExpectedResponse>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:4b92124d-ee59-4183-b3da-77833996c053">
@@ -8280,7 +8280,7 @@
 	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/07c28ace-561a-476e-a9b9-3d5ad6e35933-2025-03-07"/>
 	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/15d15927-7a22-43f8-88d6-298f5eb45c4c-2025-03-07"/>
 	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/2d638c8b-4c62-44a0-a14d-fa147bf9823d-2025-03-07"/>
-	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/2e371d57-1eb3-4fe3-8a61-dff43ced50cf-2025-03-06"/>
+	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/2e371d57-1eb3-4fe3-8a61-dff43ced50cf-2026-04-24"/>
 	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/33c45ae1-e2db-462a-a59e-7169bb01c5d6-2025-03-07"/>
 	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/3892f432-ddd0-4a0a-b713-f2e2ecbd879d-2025-03-06"/>
 	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/39bb2280-1215-447b-9221-fd13bc990641-2025-03-07"/>
@@ -9988,7 +9988,7 @@
 	<skos:note>Example Implementations: Kurator/FilteredPush event_date_qc Library (Morris &amp; Lowery 2025)</skos:note>
 	<skos:note>TG2 Amendment TIME CODED Test Conformance CORE</skos:note>
 	<skos:prefLabel>AmendmentMethod: AMENDMENT_MONTH_STANDARDIZED with Specification Specification for: AMENDMENT_MONTH_STANDARDIZED</skos:prefLabel>
-	<bdqffdq:forAmendment rdf:resource="https://rs.tdwg.org/bdqtest/terms/2e371d57-1eb3-4fe3-8a61-dff43ced50cf-2025-03-06"/>
+	<bdqffdq:forAmendment rdf:resource="https://rs.tdwg.org/bdqtest/terms/2e371d57-1eb3-4fe3-8a61-dff43ced50cf-2026-04-24"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:4a514adf-766f-46a4-bf16-6febcb594f38"/>
 </rdf:Description>
 
