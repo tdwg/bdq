@@ -69,6 +69,7 @@ Draft Standard for Review
   - [3.1 Use of Properties (normative)](#31-use-of-properties-normative)
   - [3.1.1 Relating Classes and Properties (non-normative)](#311-relating-classes-and-properties-non-normative)
     - [3.1.2 Properties Relating to Data Quality Needs (normative)](#312-properties-relating-to-data-quality-needs-normative)
+    - [3.1.2.1 Properties For MultiRecord Measures (normative)](#3121-properties-for-multirecord-measures-normative)
     - [3.1.3 Properties Relating Data Quality Needs to Data Quality Solutions (normative)](#313-properties-relating-data-quality-needs-to-data-quality-solutions-normative)
     - [3.1.4 Properties Relating to Data Quality Solutions Provided in a Test Description (normative)](#314-properties-relating-to-data-quality-solutions-provided-in-a-test-description-normative)
     - [3.1.5 Properties relating to data quality solutions provided by an implementation (normative)](#315-properties-relating-to-data-quality-solutions-provided-by-an-implementation-normative)
@@ -633,6 +634,12 @@ Each instance of `bdqffdq:Consulted` SHOULD have one to many `bdqffdq:composedOf
 Each instance of a subclass of `bdqffdq:DataQualityNeed` MAY have a `bdqffdq:hasInformationElement` property linking it to a `bdqffdq:AbstractInformationElement`.
 
 Each instance of `bdqffdq:AbstractInformationElement` SHOULD have `rdfs:label` and `rdfs:comment` properties describing the scope of the `Information Element` with the `rdfs:label` corresponding to the INFORMATIONELEMENT portion of the `rdfs:label` for an instance of a subclass of `bdqffdq:DataQualityNeed` following the convention described above in this section. 
+
+#### 3.1.2.1 Properties For MultiRecord Measures (normative)
+
+Each instance of `bdqffdq:Measure` with a `bdqffdq:hasResourceType` of `bdqffdq:MultiRecord` that aggregates the `Responses` produced by one or more other Tests (e.g., to return `COMPLETE`/`NOT_COMPLETE` for `Quality Assurance`, or to return a numeric count or other metric for `Quality Control`) SHOULD include one to many `bdqffdq:aggregatesResponsesFrom` object properties linking it to the instance(s) of `bdqffdq:DataQualityNeed` whose `Responses` are aggregated as inputs to that `MultiRecord` `Measure`.
+
+When a `MultiRecord` `Measure` uses `bdqffdq:aggregatesResponsesFrom`, the `bdqffdq:hasActedUponInformationElement` for that `Measure` SHOULD include a `bdqffdq:ActedUpon` node with `bdqffdq:composedOf` including `bdqval:AggregatedTestResponseOutcomes` to indicate that the acted-upon data are aggregated `Response` outcomes in a `Data Quality Report`, rather than raw source-data terms.
 
 #### 3.1.3 Properties Relating Data Quality Needs to Data Quality Solutions (normative)
 
