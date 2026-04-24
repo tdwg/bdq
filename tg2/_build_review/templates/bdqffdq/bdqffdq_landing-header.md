@@ -55,11 +55,11 @@ This document is intended for technical users who need to interact directly with
 
 ### 1.3 Associated Documents (non-normative)
 
-For the list and links to all associated documents see [The Biodiversity Data Quality (BDQ) Standard](../../index.md) page.
+For the list and links to all associated documents see [The Biodiversity Data Quality (BDQ) Standard](../../index.md).
 
 Information about the Fitness for Use ontology, its usage, and its extensions can be found in the following subset of BDQ resources:
 
-- **Fitness For Use Framework Ontology** - Landing page for the bdqffdq: vocabulary. *(this document)*.
+- **Fitness For Use Framework Ontology** - Landing page for the bdqffdq: vocabulary *(this document)*.
 - [**Fitness For Use Framework Ontology: Concepts and Use**](../guide/bdqffdq/index.md) - Provides normative guidance along with visual and narrative introduction to the concepts and application of the ontology.
 - [**Fitness For Use Framework Ontology List of Terms**](../list/bdqffdq/index.md) - The term list document, which enumerates and describes the vocabulary terms.
 - [**Fitness For Use Framework Ontology Vocabulary Extension**](../extension/bdqffdq/index.md) - Defines additional axioms extending the core vocabulary.

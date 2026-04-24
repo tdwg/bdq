@@ -67,7 +67,7 @@ For the list and links to all associated documents see [The Biodiversity Data Qu
 
 The set of information most relevant to the BDQ Tests can be found in the following subset of resources:
 
-- [**BDQ Tests: Concepts and Use**](../../guide/bdqffdq/index.md) - Defines how each Test is modelled using standard vocabulary terms and how it should behave under various conditions.
+- [**BDQ Tests: Concepts and Use**](../../guide/bdqtest/index.md) - Defines how each Test is modelled using standard vocabulary terms and how it should behave under various conditions.
 - [**BDQ Tests Quick Reference Guide**](../../terms/bdqtest/index.md) - Provides a concise, easy-to-read reference about the BDQ Tests.
 - **BDQ Tests and Assertions List of Terms** - Provides the complete normative definitions of the BDQ Tests *(this document)*.
   - [**CSV list of BDQ Tests**](../../../dist/bdqtest_singlerecord_tests_current.csv) - A convenience CSV file listing single record Tests.

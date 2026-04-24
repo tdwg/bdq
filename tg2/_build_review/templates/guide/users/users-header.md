@@ -71,7 +71,7 @@ The set of information most relevant to users of Biodiversity Data Quality (BDQ)
 
 - **BDQ User's Guide** - For anyone interested in how to use the BDQ Tests in practice *(this document)*.
 - [**BDQ Tests Quick Reference Guide**](../../terms/bdqtest/index.md) - Provides a concise, easy-to-read reference about the BDQ Tests.
-- [**BDQ Tests: Concepts and Use**](../../guide/bdqffdq/index.md) - Defines how each Test is modelled using standard vocabulary terms and how it should behave under various conditions.
+- [**BDQ Tests: Concepts and Use**](../../guide/bdqtest/index.md) - Defines how each Test is modelled using standard vocabulary terms and how it should behave under various conditions.
 - [**BDQ Implementer's Guide**](../implementers/index.md) - For anyone interested in the technical implementation of the BDQ Tests.
 - [**Tutorial: From Use Case to Test**](../../tutorial/index.md) - Worked out examples of defining new `Use Cases` and new Tests.
 - [**BDQ Supplemental Information**](../../supplement/index.md) - This supplementary information may be relevant for curators, aggregators, data publishers, data analysts, programmers/developers and other practitioners who wish to understand, evaluate and/or improve the quality of biodiversity data within their domain. This document provides some key developmental issues in the building of the BDQ standard that are not covered in other documents within the standard. This document may also be useful to those seeking to evaluate their current Tests or generate additional Tests for their domain.
