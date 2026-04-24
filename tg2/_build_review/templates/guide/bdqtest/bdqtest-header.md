@@ -159,6 +159,12 @@ The scope of each BDQ Test is largely provided by the properties of a `bdqffdq:S
 
 Each BDQ Test is defined to operate on a `SingleRecord` or a `MultiRecord`. The Framework allows `MultiRecord` Tests to take data as input, for example to identify outliers within a dataset, or for `MultiRecord` Tests that take the output of `SingleRecord` Tests as their input to provide an assessment of quality across the dataset.  No BDQ `MultiRecord` Tests have been defined to take data as input (but such could be defined).  No BDQ `SingleRecord` Tests have been defined to use data in other records within a dataset to evaluate the quality of data in a `Single Record` (but such could be defined).  The only `Multi Record` Tests included in BDQ accumulate the outputs of other Tests.
 
+#### 2.1.1 Conceptual map: how BDQ uses the term “Test” (non-normative)
+
+In BDQ, a **Test** is described using the Fitness For Use Framework (`bdqffdq:`) and can be understood as a vertical concept family that connects three layers: `Data Quality Needs` (what “fit for use” means for a `Use Case`), `Data Quality Solutions` (how a Need is evaluated via a `Specification` implemented in a `Mechanism`), and `Data Quality Reports` (the resulting `Responses`). The BDQ Tests vocabulary (`bdqtest:`) provides standardized descriptors for each Test, while the Framework vocabulary (`bdqffdq:`) provides the conceptual model that relates `Use Case`, `Policy`, `Specification`, `Implementation`, and `Response`.
+
+![Diagram of the relationship between the concept Test and the bdqffdq: classes and properties that define it](../implementers/bdqffdq_overview_diagram.svg)
+
 ### 2.2 Use Cases (non normative)
 
 BDQ Tests are designed to be applied in the context of particular uses of data. The BDQ standard defines a set of `Use Cases` that represent common uses of biodiversity data. Each `Use Case` is associated with one or more Tests that can be used to evaluate whether data meet that need. By applying the appropriate Tests for a given `Use Case`, users can assess the fitness of their data for that particular use and identify areas for improvement.
@@ -395,8 +401,6 @@ BDQ Tests are designed with a clear boundary of responsibility: they take a defi
 ### 5.1 BDQ Tests: An Operational Perspective (non-normative)
 
 A Test is a defined evaluation that takes specific inputs and produces a structured output. A Test is defined using a set of `bdqffdq:` classes and properties that specify the inputs to the Test (the relevant `Information Elements` and any `Parameters`) and how those input values are to be evaluated under a `Specification` to produce a structured output (a `Response`) that can be interpreted consistently across implementations. The Test definitions are provided in the `bdqtest:` vocabulary, and the semantics of the terms used in those definitions are provided by the `bdqffdq:` vocabulary and supporting vocabularies.
-
-![Diagram of the relationship between the concept Test and the bdqffdq: classes and properties that define it](../implementers/bdqffdq_overview_diagram.svg)
 
 This section explains how Tests are expressed in BDQ vocabularies and how they behave when executed by an implementation. A Test is not a software implementation; it is a formal definition of an evaluation that *can* be implemented in software. In the Fitness For Use Framework, each Test is an instance of a subtype of `Data Quality Need` that identifies what is being evaluated (through its required `Information Elements` and its `Resource Type`) and why it matters (through its association with one or more `Use Cases` via `Policies`). The Test is linked to a `Method`, which in turn links to a `Specification` that describes expected behavior and expected outcomes (e.g., via `hasExpectedResponse`), and may reference `Parameters` and source authorities that further constrain or parameterize execution. When an `Implementation` runs a Test, it produces one or more `Responses` that can be assembled into `Data Quality Reports` for interpretation, filtering, and aggregation.
 
