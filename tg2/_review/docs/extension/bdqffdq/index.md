@@ -47,7 +47,7 @@ Draft Standard for Review
   - [1.2 Audience (non-normative)](#12-audience-non-normative)
   - [1.3 Associated Documents (non-normative)](#13-associated-documents-non-normative)
     - [1.3.1 Term List Distributions (non-normative)](#131-term-list-distributions-non-normative)
-  - [1.4 Status of the content of this document (normative)](#14-status-of-the-content-of-this-document-normative)
+  - [1.4 Status of the Content of this Document (normative)](#14-status-of-the-content-of-this-document-normative)
   - [1.5 RFC 2119 key words (normative)](#15-rfc-2119-key-words-normative)
   - [1.6 Namespace abbreviations (non-normative)](#16-namespace-abbreviations-non-normative)
   - [1.7 Referring to Terms (normative)](#17-referring-to-terms-normative)
@@ -133,7 +133,7 @@ Information about the bdqffdq: ontology, its usage, and its extensions can be fo
 | HTML file   | http://rs.tdwg.org/bdqffdq/extension/ | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/docs/extension/bdqffdq/index.md | This file | 
 | OWL Ontology | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/vocabulary/bdqffdq.owl | Turtle Serialization of the full ontology, including additional axioms | 
 
-### 1.4 Status of the content of this document (normative)
+### 1.4 Status of the Content of this Document (normative)
 
 Sections may be either normative (defines what is required to comply with the standard) or non-normative (supports understanding but is not binding) and are marked as such. 
 

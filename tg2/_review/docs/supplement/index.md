@@ -432,7 +432,7 @@ Given a `Specification` (as would be known when starting with a `bdqffdq:Respons
       }
     }
 
-Given an `Response`, which Test was run with which `has Argument values` for which `Parameters` by which `Mechanism` to produce it: 
+Given a `Response`, which Test was run with which `has Argument values` for which `Parameters` by which `Mechanism` to produce it: 
 
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     PREFIX owl: <http://www.w3.org/2002/07/owl#>

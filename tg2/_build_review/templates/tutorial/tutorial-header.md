@@ -55,7 +55,7 @@ This document is also intended for those interested in describing new Tests usin
 
 For the list and links to all associated documents see [The Biodiversity Data Quality (BDQ) Standard](../../index.md).
 
-### 1.4 Status of the content of this document (normative)
+### 1.4 Status of the Content of this Document (normative)
 
 This document is non-normative.
 
@@ -311,7 +311,7 @@ We choose VALIDATION for this Test because we are asserting whether data meets s
 * **Test Type** Validation
 
 See also: 
-* [Test Types](../guide/bdqtest/index.md#3-test-types-non-normative) in the BDQ Tests: Concepts, Types, and Use document.
+* [Test Types](../guide/bdqtest/index.md#3-test-types-non-normative) in the BDQ Tests: Concepts and Use document.
 * [Test Types](../guide/users/index.md#31-test-types-non-normative) in the User Guide.
 
 > **Alternative Pattern: metric + analytical threshold**
@@ -407,7 +407,7 @@ We will come back later and define another Test to measure how much of the datas
 
 * **Resource Type** SingleRecord
 
-See also: [Resource Types](../guide/bdqtest/index.md#42-resource-types-normative) in the BDQ Tests: Concepts, Types, and Use document.
+See also: [Resource Types](../guide/bdqtest/index.md#42-resource-types-normative) in the BDQ Tests: Concepts and Use document.
 
 ### 4.7 Define the Test Specification (non-normative)
 
@@ -510,7 +510,7 @@ This simple list of properties is sufficient for a human reader to understand th
 
 See also:
 * [Diagram of Test Concepts](../guide/implementers/index.md#3-compliant-implementation-normative) in the implementers guide.
-* [Example RDF for a Test](../guide/bdqtest/index.md#6-example-rdf-description-of-a-test-non-normative) in the BDQ Tests: Concepts, Types, and Use document (VALIDATION_COUNTRYCODE_STANDARD in an RDF/XML serialization).
+* [Example RDF for a Test](../guide/bdqtest/index.md#6-example-rdf-description-of-a-test-non-normative) in the BDQ Tests: Concepts and Use document (VALIDATION_COUNTRYCODE_STANDARD in an RDF/XML serialization).
 * [Example RDF for a Test](../guide/bdqffdq/index.md#26-example-representation-of-a-bdq-test-non-normative) in the Fitness For Use Framework Ontology: Concepts and Use (VALIDATION_COUNTRY_FOUND in a Turtle serialization). 
 
 #### 4.10.2 Summary of the Test Definition
@@ -1057,7 +1057,7 @@ For our **Validated Distribution Authority** `Use Case` we would likely wish to 
 
 See also:
 - [Quality Control and Quality Assurance](../guide/users/index.md#21-quality-control-and-quality-assurance-non-normative) in the User's Guide.
-- [Single Record and MultiRecord Tests](../guide/bdqtest/index.md#35-single-record-and-multi-record-tests-non-normative) in the BDQ Tests: Concepts, Types, and Use document.
+- [Single Record and MultiRecord Tests](../guide/bdqtest/index.md#35-single-record-and-multi-record-tests-non-normative) in the BDQ Tests: Concepts and Use document.
 - [Data Quality Control and Data Quality Assurance](../guide/bdqffdq/index.md#221-data-quality-control-and-data-quality-assurance-non-normative) in the Fitness For Use Framework Ontology: Concepts and Use document.
 
 ### 8.1 MultiRecord Measures for Quality Control (non-normative)

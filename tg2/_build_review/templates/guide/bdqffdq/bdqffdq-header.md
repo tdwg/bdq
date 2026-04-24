@@ -182,12 +182,11 @@ Each of the Tests described in the BDQ standard has a formal specification that 
 
 ### 2.3 Data Quality Needs, Data Quality Mechanisms, Data Quality Reports (non-normative)
 
-**TODO: Review from here** seems some duplication with the above, and has error "Contexts", now renamed as "Data Quality Needs".  Needs carefull review.
+**TODO: Review from here** Has some duplication with the above.
 
 The Fitness For Use Framework organizes data quality concepts into three core areas — Needs, Mechanisms, and Reports — which can be viewed as horizontal slices through the Framework (Veiga et al., 2017).
 
-**Data Quality Needs** begin with a `Use Case`, a formal description of a purpose for which data may be used. Each `Use Case` includes a set of `Policies`, which in turn relate to `Contexts`. `Contexts` (e.g., `ContextualizedCriterion`, `ContextualizedDimension`, `ContextualizedEnhancement`, `ContextualizedIssue`) specify the data quality requirement (Need), the relevant `Information Elements` (such as specific Darwin Core terms), and the `Resource Type` the requirement applies to. A 
-Need defines the properties data must have to be considered fit for use and may include ways to improve unfit data. The Tests described in this standard are formal specifications of such Needs for BDQ purposes.
+**Data Quality Needs** begin with a `Use Case`, a formal description of a purpose for which data may be used. Each `Use Case` includes a set of `Policies`, which in turn relate to `Data Quality Needs`.  The `Data Quality Needs` (i.e., `Validation`, `Measure`, `Amendment`, `Issue`) specify the data quality requirement (Need), the relevant `Information Elements` (such as specific Darwin Core terms), and the `Resource Type` the requirement applies to. A Need defines the properties data must have to be considered fit for use and may include ways to improve unfit data. The Tests described in this standard are formal specifications of such Needs for BDQ purposes.
 
 **Data Quality Mechanisms** are formal descriptions of software or other tools that implement the Tests. They execute the `Specifications` defined in the Needs layer.
 
@@ -216,7 +215,7 @@ A useful way to think of the Framework is to divide it horizontally into Needs, 
 
 The content of this section is non-normative, related normative guidance is in section [5.1 The Response Object (normative)](../implementers/index.md#51-the-response-object-normative) of the [BDQ Implementer's Guide](../implementers/index.md).
 
-It is expected that `Response` objects instances will involve, in RDF, a combination of object properties and data properties on an `Response`.  In an object oriented language like Java, a `Response` might be an object with properties, and in a tabular format, a `Response` might be a row with columns for each of the properties. The following table gives an overview of the expected properties of a `Response` object, and the corresponding terms in the `bdqffdq:` vocabulary.
+It is expected that `Response` objects instances will involve, in RDF, a combination of object properties and data properties on a `Response`.  In an object oriented language like Java, a `Response` might be an object with properties, and in a tabular format, a `Response` might be a row with columns for each of the properties. The following table gives an overview of the expected properties of a `Response` object, and the corresponding terms in the `bdqffdq:` vocabulary.
 
 | Shorthand Concept | bdqffdq: Term(s) | Description |
 | ----------------- | ---------------- | ----------- |
@@ -240,7 +239,7 @@ In a non-RDF structured-data context (JSON, database, CSV), where `bdqffdq:Respo
 
 Labels MAY be used purely for display.
 
-This section summarises representation choices. Full normative constraints on the response structure of `Responses` is found in [4.1 Structure of Response (normative)](../bdqtest/index.md#41-structure-of-response-normative) of the [BDQ Tests: Concepts, Types, and Use](../bdqtest/index.md).
+This section summarises representation choices. Full normative constraints on the response structure of `Responses` is found in [4.1 Structure of Response (normative)](../bdqtest/index.md#41-structure-of-response-normative) of the [BDQ Tests: Concepts and Use](../bdqtest/index.md) document.
 
 #### 2.4.1.1 Table of Representations of Response Properties (non-normative)
 
@@ -364,7 +363,7 @@ The (non-normative) diagram below illustrating `Validation` related concepts acr
 
 ![Diagram of Validation, ValidationMethod, and ValidationResponse with related classes](../guide/bdqffdq/bdqffdq_data_quality_needs_solutions_report_validation.svg "Validation concepts in the Needs, Solutions, and Reports levels.")
 
-The use of classes and properties in [bdqtest:](../../../dist/bdqtest.ttl) follow the guidance provided in this section.  The`Data Quality Needs` (blue here) and `DataQualitySolutions` (green here) concepts in this diagram illustrate how this guidance is used in `bdqtest:` to relate the set of terms used to define a `Validation`.  The `DataQualityReports` (tan here) concepts in the diagram illustrate how a `ValidationResponse` in a `DataQualityReport` can be related to a `Validation` and its `Specification`.  The minimal use of rdfs:range and other global axioms in `bdqffdq:` aligns with best practices for ontologies intended for reuse, integration, and extension.  This approach trades strict, machine-enforceable validation and inference for flexibility, extensibility, and a low barrier to adoption.  The normative guidance in this document mitigates the risk of inconsistent usage that is allowed by the open world design of `bdqffdq:`.
+The use of classes and properties in [bdqtest:](../../../dist/bdqtest.ttl) follow the guidance provided in this section.  The `Data Quality Needs` (blue here; `Need Concept`) and Data Quality Solutions (green here; `Solutions Concept`) concepts in this diagram illustrate how this guidance is used in `bdqtest:` to relate the set of terms used to define a `Validation`.  The `Data Quality Reports` (tan here; `Report Concept`) concepts in the diagram illustrate how a `Validation Response` in a `Data Quality Report` can be related to a `Validation` and its `Specification`.  The minimal use of rdfs:range and other global axioms in `bdqffdq:` aligns with best practices for ontologies intended for reuse, integration, and extension.  This approach trades strict, machine-enforceable validation and inference for flexibility, extensibility, and a low barrier to adoption.  The normative guidance in this document mitigates the risk of inconsistent usage that is allowed by the open world design of `bdqffdq:`.
 
 
 This section describes normative expectations for the use of object and datatype properties to related instances of `bdqffdq:` classes in their intended ways given the open world limited use of domains, ranges, and other axioms in the [Biodiversity Data Quality Fitness For Use Framework (Ontology)](../../../vocabulary/bdqffdq.owl) ontology. This guidance builds on the normative definitions of `bdqffdq:` object properties and datatype properties to describe how `bdqffdq:` terms can be composed in a useful and consistent way.

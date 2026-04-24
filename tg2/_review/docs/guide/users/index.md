@@ -123,7 +123,7 @@ The set of information most relevant to users of Biodiversity Data Quality (BDQ)
 - [**BDQ Tests: Concepts and Use**](../../guide/bdqtest/index.md) - Defines how each Test is modelled using standard vocabulary terms and how it should behave under various conditions.
 - [**BDQ Implementer's Guide**](../implementers/index.md) - For anyone interested in the technical implementation of the BDQ Tests.
 - [**Tutorial: From Use Case to Test**](../../tutorial/index.md) - Worked out examples of defining new `Use Cases` and new Tests.
-- [**BDQ Supplemental Information**](../../supplement/index.md) - This supplementary information may be relevant for curators, aggregators, data publishers, data analysts, programmers/developers and other practitioners who wish to understand, evaluate and/or improve the quality of biodiversity data within their domain. This document provides some key developmental issues in the building of the BDQ standard that are not covered in other documents within the standard. This document may also be useful to those seeking to evaluate their current Tests or generate additional Tests for their domain.
+- [**BDQ Supplemental Information**](../../supplement/index.md) - Background and developmental notes for practitioners who evaluate and improve the quality of biodiversity data. Includes material not covered elsewhere in the BDQ standard.
 
 ### 1.4 Status of the content of this document (normative)
 
@@ -235,11 +235,11 @@ Tests can also operate on a dataset (a `Multi Record`) and examine the values fo
 
 #### 3.2.2 Outputs: Data Quality Reports (non-normative) 
 
-Software that includes an implementation of one or more Tests may produce `Data Quality Reports`. The form that such `Data Quality Reports` may take is not specified by the BDQ standard, however, it does specify elements that should be present in such reports (see [7.1 Data Quality Reports (normative)](../implementers/index.md#71-data-quality-reports-normative) in the [Implementer's Guide](../implementers/index.md)).  A detailed discussion of how `Data Quality Reports` relate to the Tests can be found at [4.1 Structure of Response](../../guide/bdqtest/index.md#41-structure-of-response-normative) in the [BDQ Tests: Concepts, Types, and Use](../../guide/bdqtest/index.md) document.
+Software that includes an implementation of one or more Tests may produce `Data Quality Reports`. The form that such `Data Quality Reports` may take is not specified by the BDQ standard, however, it does specify elements that should be present in such reports (see [7.1 Data Quality Reports (normative)](../implementers/index.md#71-data-quality-reports-normative) in the [Implementer's Guide](../implementers/index.md)).  A detailed discussion of how `Data Quality Reports` relate to the Tests can be found at [4.1 Structure of Response](../../guide/bdqtest/index.md#41-structure-of-response-normative) in the [BDQ Tests: Concepts and Use](../../guide/bdqtest/index.md) document.
 
 #### 3.2.3 Outputs: Responses from Tests (normative) 
 
-The specifications for the structure of a response from running a Test can be found in [4.1 Structure of Response (normative)](../../guide/bdqtest/index.md#41-structure-of-response-normative) in the document [BDQ Tests: Concepts, Types, and Use](../../guide/bdqtest/index.md).
+The specifications for the structure of a response from running a Test can be found in [4.1 Structure of Response (normative)](../../guide/bdqtest/index.md#41-structure-of-response-normative) in the document [BDQ Tests: Concepts and Use](../../guide/bdqtest/index.md).
 
 ##### 3.2.3.1 Shorthand for Responses from Tests (non-normative) 
 
@@ -363,7 +363,7 @@ To maintain the integrity and reliability of the BDQ Framework, we have been car
 
 Some Tests are parameterized.  Parameters allow those running a Test to change the behavior of the Test at the time it is run.  This allows users to easily adapt the Tests to their specific needs and contexts, making them more flexible and applicable to a wider range of scenarios.  
 
-For example, a user working with data from just one country may wish to change a default `bdqval:sourceAuthority` for some Test to an authority that is more appropriate for that particular country – e.g. to change the default species names authority (which covers the whole world) to one specific for just that country, all while retaining the same decision making process within the Test. For more details see [Parameterizing the Tests](../../guide/bdqtest/index.md#43-parameterizing-the-tests-normative) in the [BDQ Tests: Concepts, Types, and Use](../../guide/bdqtest/index.md) document.
+For example, a user working with data from just one country may wish to change a default `bdqval:sourceAuthority` for some Test to an authority that is more appropriate for that particular country – e.g. to change the default species names authority (which covers the whole world) to one specific for just that country, all while retaining the same decision making process within the Test. For more details see [Parameterizing the Tests](../../guide/bdqtest/index.md#43-parameterizing-the-tests-normative) in the [BDQ Tests: Concepts and Use](../../guide/bdqtest/index.md) document.
 
 Similarly a parameterized Test may change default numerical values to values more appropriate to the local area – e.g. setting a maximum elevation that is more appropriate to the country, rather than using a default global maximum, such that for some parameterized `Validation` elevations higher than the local maximum, but still lower than the global maximum elevation would be `NOT_COMPLIANT`, fitting the local needs, while they would be `COMPLIANT` and not identified as problematic for local needs if the default global maximum elevation were used.
 

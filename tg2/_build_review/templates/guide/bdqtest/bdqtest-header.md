@@ -282,7 +282,7 @@ The technical definitions of the `bdqtest:` terms are supported by terms in seve
 
 ### 4.1 Structure of Response (normative)
 
-Output from each of the Tests MUST be structured data, and MUST NOT be simple pass/fail flags. The output from a Test is an `Response`, which can form part of a `Data Quality Report` or be wrapped in an `Annotation`, and MUST include the following three components: 
+Output from each of the Tests MUST be structured data, and MUST NOT be simple pass/fail flags. The output from a Test is a `Response`, which can form part of a `Data Quality Report` or be wrapped in an `Annotation`, and MUST include the following three components: 
 
 1. `Response.result` is the returned result for the Test, i.e., a strictly controlled vocabulary value (consisting of "COMPLIANT" or "NOT_COMPLIANT" only) for `Validation` Tests; a strictly controlled vocabulary value ("NOT_ISSUE" or "POTENTIAL_ISSUE" only) for `Issue` Tests; a numeric value or a strictly controlled vocabulary value (consisting of exactly "COMPLETE" or "NOT_COMPLETE" for `Measure` Tests; and a data structure (e.g., a list of key value pairs) for proposed changes for `Amendment` Tests.
 2. `Response.status` provides a controlled vocabulary, metadata concerning the success, failure, or problems with the Test. The Status also serves as a link to information about warning type values and where, with future development, probabilistic assertions about the likeliness of the value could be made.

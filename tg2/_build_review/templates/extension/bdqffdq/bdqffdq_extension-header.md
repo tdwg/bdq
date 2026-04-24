@@ -80,7 +80,7 @@ Information about the bdqffdq: ontology, its usage, and its extensions can be fo
 | HTML file   | {current_iri} | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/docs/extension/{pref_namespace_prefix}/index.md | This file | 
 | OWL Ontology | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/vocabulary/bdqffdq.owl | Turtle Serialization of the full ontology, including additional axioms | 
 
-### 1.4 Status of the content of this document (normative)
+### 1.4 Status of the Content of this Document (normative)
 
 Sections may be either normative (defines what is required to comply with the standard) or non-normative (supports understanding but is not binding) and are marked as such. 
 
