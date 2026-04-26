@@ -79,16 +79,21 @@ SpecificationGuid:
   normative: 'true'
   term: bdqffdq:composedOf
   sort_order: 10
+aggregatesResponsesFrom:
+  label: Test Aggregates Responses From
+  normative: 'true'
+  term: bdqffdq:aggregatesResponsesFrom
+  sort_order: 11
 "InformationElement:Consulted":
   label: InformationElements Consulted
   normative: 'true'
   term: bdqffdq:composedOf
-  sort_order: 11
+  sort_order: 12
 Parameters:
   label: Parameters
   normative: 'true'
   term: bdqffdq:Parameter
-  sort_order: 12
+  sort_order: 13
 #Default Parameter Values
 #  sort_order: 13
 AuthoritiesDefaults:

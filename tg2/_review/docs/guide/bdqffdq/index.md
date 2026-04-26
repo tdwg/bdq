@@ -655,15 +655,19 @@ Each instance of `bdqffdq:AbstractInformationElement` SHOULD have `rdfs:label` a
 
 ##### 3.1.2.1 Properties For MultiRecord Measures (normative)
 
-Each instance of `bdqffdq:Measure` with a `bdqffdq:hasResourceType` of `bdqffdq:MultiRecord` that aggregates the `Responses` produced by one or more other Tests (e.g., to return `COMPLETE`/`NOT_COMPLETE` for `Quality Assurance`, or to return a numeric count or other metric for `Quality Control`) SHOULD include one to many `bdqffdq:aggregatesResponsesFrom` object properties linking it to the instance(s) of `bdqffdq:DataQualityNeed` whose `Responses` are aggregated as inputs to that `MultiRecord` `Measure`.
+Each instance of `bdqffdq:Measure` with a `bdqffdq:hasResourceType` of `bdqffdq:MultiRecord` that aggregates the `Responses` produced by one or more other Tests (e.g., to return `COMPLETE`/`NOT_COMPLETE` for `Quality Assurance`, or to return a numeric count or other metric for `Quality Control`) SHOULD have a `bdqffdq:hasActedUponInformationElement` relationship to an instance of `bdqffdq:ActedUpon` that represents the aggregated report inputs to that `Measure`.
 
-When a `MultiRecord` `Measure` uses `bdqffdq:aggregatesResponsesFrom`, the `bdqffdq:hasActedUponInformationElement` for that `Measure` SHOULD include a `bdqffdq:ActedUpon` node with `bdqffdq:composedOf` including `bdqval:AggregatedTestResponseOutcomes` to indicate that the acted-upon data are aggregated `Response` outcomes in a `Data Quality Report`, rather than raw source-data terms.
+When a `MultiRecord` `Measure` acts on aggregated `Responses` from other Tests, the associated `bdqffdq:ActedUpon` instance SHOULD include `bdqffdq:composedOf` with `bdqval:AggregatedTestResponseOutcomes` to indicate that the acted-upon data are aggregated `Response` outcomes in a `Data Quality Report`, rather than raw source-data terms.
 
-For human readability, when a MultiRecord Measure uses bdqffdq:aggregatesResponsesFrom, the rdfs:label and skos:prefLabel of the associated bdqffdq:ActedUpon node MAY include the rdfs:label of the bdqffdq:DataQualityNeed instance identified by bdqffdq:aggregatesResponsesFrom (e.g., VALIDATION_COUNTRY_FOUND) to make explicit which Test’s aggregated Responses are being acted upon.
+In this usage pattern, the associated `bdqffdq:ActedUpon` instance SHOULD include one to many `bdqffdq:aggregatesResponsesFrom` object properties linking it to the instance(s) of `bdqffdq:DataQualityNeed` whose `Responses` are aggregated as inputs to that `MultiRecord` `Measure`.
+
+The `bdqffdq:aggregatesResponsesFrom` property is intended to be used in the context of `MultiRecord` `Measures` that aggregate `Responses`; however, consistent with the open world design of the `bdqffdq:` ontology and the limited use of global axioms, the ontology does not constrain the subject of `bdqffdq:aggregatesResponsesFrom` to be only a `bdqffdq:Measure` or only an `bdqffdq:ActedUpon`, and this document provides the normative pattern for its intended use.
+
+For human readability, when an `ActedUpon` instance uses `bdqffdq:aggregatesResponsesFrom`, the `rdfs:label` and `skos:prefLabel` of that `bdqffdq:ActedUpon` instance MAY include the `rdfs:label` of the `bdqffdq:DataQualityNeed` instance identified by `bdqffdq:aggregatesResponsesFrom` (e.g., `VALIDATION_COUNTRY_FOUND`) to make explicit which Test’s aggregated `Responses` are being acted upon.
 
 ##### 3.1.2.2 MultiRecord Measure Example (non-normative)
 
-The following is an example of a `bdqffdq:Measure` with `bdqffdq:hasResourceType` of `bdqffdq:MultiRecord` that aggregates the `Responses` produced by the `Validation` `bdqtest:69b2efdc-6269-45a4-aecb-4cb99c2ae134` (VALIDATION_COUNTRY_FOUND) to produce a `Quality Assurance` result for a record set.  The `hasActedUponInformationElement` for this Measure includes an `ActedUpon` node with `composedOf` including `bdqval:AggregatedTestResponseOutcomes` to indicate that the acted-upon data are aggregated `Response` outcomes in a `Data Quality Report`, rather than raw source-data terms.  The rdfs:label and skos:prefLabel of the associated bdqffdq:ActedUpon node include the rdfs:label of the bdqffdq:DataQualityNeed instance identified by bdqffdq:aggregatesResponsesFrom (VALIDATION_COUNTRY_FOUND) to make explicit which Test’s aggregated Responses are being acted upon.
+The following is an example of a `bdqffdq:Measure` with a `bdqffdq:hasResourceType` of `bdqffdq:MultiRecord` that aggregates the `Responses` produced by the `Validation` `bdqtest:69b2efdc-6269-45a4-aecb-4cb99c2ae134` (`VALIDATION_COUNTRY_FOUND`) to produce a `Quality Assurance` result for a record set. The `bdqffdq:hasActedUponInformationElement` for this `Measure` links to an `ActedUpon` instance with `bdqffdq:composedOf` including `bdqval:AggregatedTestResponseOutcomes`, indicating that the acted-upon data are aggregated `Response` outcomes in a `Data Quality Report` rather than raw source-data terms. The `ActedUpon` instance includes `bdqffdq:aggregatesResponsesFrom` linking it to the `Data Quality Need` whose `Responses` are aggregated, and the `rdfs:label` and `skos:prefLabel` of the `ActedUpon` instance include the label of that upstream `Data Quality Need` for human readability.
 
 ```
 bdqtest:388e74b3-2e18-4d78-8112-3142d1177e25-2025-03-07 a bdqffdq:Measure ;
@@ -672,7 +676,6 @@ bdqtest:388e74b3-2e18-4d78-8112-3142d1177e25-2025-03-07 a bdqffdq:Measure ;
   bdqffdq:hasDataQualityDimension bdqdim:Conformance ;
   dcterms:description "Measure if all VALIDATION_COUNTRY_FOUND in a record set are COMPLIANT." ;
   bdqffdq:hasActedUponInformationElement <urn:uuid:4d7d45ed-da78-44b0-8e93-e8c0423aa4a9> ;
-  bdqffdq:aggregatesResponsesFrom bdqtest:69b2efdc-6269-45a4-aecb-4cb99c2ae134 ;
   dcterms:issued "2025-03-07"^^xsd:date ;
   dcterms:references <https://doi.org/10.1371/journal.pone.0178731> ;
   skos:historyNote "https://github.com/tdwg/bdq/issues/295" ;
@@ -682,9 +685,10 @@ bdqtest:388e74b3-2e18-4d78-8112-3142d1177e25-2025-03-07 a bdqffdq:Measure ;
 
 <urn:uuid:4d7d45ed-da78-44b0-8e93-e8c0423aa4a9> a bdqffdq:ActedUpon ;
   bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes ;
+  bdqffdq:aggregatesResponsesFrom bdqtest:69b2efdc-6269-45a4-aecb-4cb99c2ae134 ;
   rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_COUNTRY_FOUND.Response" ;
   skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_COUNTRY_FOUND.Response" ;
-  skos:note "Aggregated `Response` outcomes produced by VALIDATION_COUNTRY_FOUND across a `MultiRecord` (see bdqffdq:aggregatesResponsesFrom)." .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_COUNTRY_FOUND across a MultiRecord." .
 ```
 
 #### 3.1.3 Properties Relating Data Quality Needs to Data Quality Solutions (normative)
@@ -1629,7 +1633,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 #### aggregatesResponsesFrom
 
 - Name: [bdqffdq:aggregatesResponsesFrom](../../list/bdqffdq/index.md#aggregatesResponsesFrom)
-- Definition: Relates a  MultiRecord Measure to the DataQualityNeed (Validation, Issue, Measure, or Amendment) whose Responses are aggregated as input to that Measure.
+- Definition: Relates an ActedUpon Information Element (typically used by a MultiRecord Measure) to the DataQualityNeed (Validation, Issue, Measure, or Amendment) whose Responses in a DataQualityReport are aggregated as inputs to that Measure.
 - [Range](../../extension/bdqffdq/index.mdaggregatesResponsesFrom) bdqffdq:DataQualityNeed
 
 ********************

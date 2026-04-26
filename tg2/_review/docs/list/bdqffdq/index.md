@@ -905,8 +905,8 @@ DQV(dr) = {dqv | dqv = < va, s, m, r >, va ∈ VA, s ∈ S, m ∈ M , r ∈ R �
 
 - Name: bdqffdq:aggregatesResponsesFrom
 - Preferred Label: aggregates Responses From
-- Definition: Relates a  MultiRecord Measure to the DataQualityNeed (Validation, Issue, Measure, or Amendment) whose Responses are aggregated as input to that Measure.
-- Comments: This property provides an explicit machine-queryable link between a Measure and the upstream Test whose Response outcomes it consumes. It is intended to complement use of bdqffdq:hasActedUponInformationElement / bdqffdq:composedOf when the acted-upon data are Responses in a DataQualityReport.
+- Definition: Relates an ActedUpon Information Element (typically used by a MultiRecord Measure) to the DataQualityNeed (Validation, Issue, Measure, or Amendment) whose Responses in a DataQualityReport are aggregated as inputs to that Measure.
+- Comments: This property provides an explicit machine-queryable link between an acted-upon set of aggregated Response outcomes and the upstream Test whose Responses it aggregates. It is intended to complement use of bdqffdq:hasActedUponInformationElement / bdqffdq:composedOf when the acted-upon data are Responses in a Data Quality Report, rather than raw source-data terms.
 
 ********************
 
