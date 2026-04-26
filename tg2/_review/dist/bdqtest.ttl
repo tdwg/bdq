@@ -4413,9 +4413,11 @@ bdqffdq:MultiRecord a bdqffdq:ResourceType;
   rdfs:label "MultiRecord" .
 
 <urn:uuid:fb80d5bf-7777-4d88-b09f-116a38ab7bfa> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_COUNTRYCODE_STANDARD.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_COUNTRYCODE_STANDARD.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_COUNTRYCODE_STANDARD.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_COUNTRYCODE_STANDARD across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:0493bcfb-652e-4d17-815b-b0cce0742fbe;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_COUNTRYCODE_STANDARD.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_COUNTRYCODE_STANDARD.Response" .
 
 <https://doi.org/10.1371/journal.pone.0178731> a dcterms:BibliographicResource;
   dcterms:bibliographicCitation "Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731" .
@@ -4477,9 +4479,11 @@ bdqtest:388e74b3-2e18-4d78-8112-3142d1177e25-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:country Found for MultiRecord" .
 
 <urn:uuid:4d7d45ed-da78-44b0-8e93-e8c0423aa4a9> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_COUNTRY_FOUND.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_COUNTRY_FOUND.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_COUNTRY_FOUND.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_COUNTRY_FOUND across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:69b2efdc-6269-45a4-aecb-4cb99c2ae134;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_COUNTRY_FOUND.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_COUNTRY_FOUND.Response" .
 
 <urn:uuid:e1acf301-4f03-424a-af72-94ad1ad3201b> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:388e74b3-2e18-4d78-8112-3142d1177e25-2025-03-07;
@@ -4538,9 +4542,11 @@ bdqtest:17364d16-37b7-4ccb-9614-bfb95ff1bca9-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:phylum Found for MultiRecord" .
 
 <urn:uuid:6fa9dcd8-4e43-4fc7-acb6-1aff70e87f51> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_PHYLUM_FOUND.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_PHYLUM_FOUND.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_PHYLUM_FOUND.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_PHYLUM_FOUND across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_PHYLUM_FOUND.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_PHYLUM_FOUND.Response" .
 
 <urn:uuid:f643ba35-9ddb-4e70-9959-01a6849331ed> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:17364d16-37b7-4ccb-9614-bfb95ff1bca9-2025-03-06;
@@ -4599,9 +4605,11 @@ bdqtest:fcabd2c9-392c-4841-a5d7-e2680c9587ab-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:minimumDepthInMeters less than dwc:maximumDepthInMeters for MultiRecord" .
 
 <urn:uuid:72ac3c31-cddf-4fcf-bb6d-2d10b6a1a18e> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:8f1e6e58-544b-4365-a569-fb781341644e;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH.Response" .
 
 <urn:uuid:51b11dac-0a61-4ebf-a0b7-69244821f481> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:fcabd2c9-392c-4841-a5d7-e2680c9587ab-2025-03-07;
@@ -4660,9 +4668,11 @@ bdqtest:a07d7147-2db8-48ce-81b8-e47595ad5f17-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:family Found for MultiRecord" .
 
 <urn:uuid:53ba0552-5eb5-4317-a5e7-dcaee30608b1> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_FAMILY_FOUND.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_FAMILY_FOUND.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_FAMILY_FOUND.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_FAMILY_FOUND across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:3667556d-d8f5-454c-922b-af8af38f613c;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_FAMILY_FOUND.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_FAMILY_FOUND.Response" .
 
 <urn:uuid:c39f0686-c40f-4652-8bf7-020b85d365d2> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:a07d7147-2db8-48ce-81b8-e47595ad5f17-2025-03-06;
@@ -4721,9 +4731,11 @@ bdqtest:6f7a9b82-7d34-4111-a2a6-9efe5221fa44-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:decimalLongitude In Range for MultiRecord" .
 
 <urn:uuid:4328982c-cc3a-422e-9ac6-45cd7bc54f2c> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_DECIMALLONGITUDE_INRANGE.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_DECIMALLONGITUDE_INRANGE.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_DECIMALLONGITUDE_INRANGE.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_DECIMALLONGITUDE_INRANGE across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:0949110d-c06b-450e-9649-7c1374d940d1;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_DECIMALLONGITUDE_INRANGE.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_DECIMALLONGITUDE_INRANGE.Response" .
 
 <urn:uuid:c08463be-2be5-4f41-a70d-3a231958b4bb> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:6f7a9b82-7d34-4111-a2a6-9efe5221fa44-2025-03-07;
@@ -4782,9 +4794,11 @@ bdqtest:c23cd67d-1b5c-4e9f-a1ce-8cc6b3e9b365-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:eventDate Not Empty for MultiRecord" .
 
 <urn:uuid:de36737d-3d44-4b90-b79e-754df1db1f8a> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_EVENTDATE_NOTEMPTY.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_EVENTDATE_NOTEMPTY.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_EVENTDATE_NOTEMPTY.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_EVENTDATE_NOTEMPTY across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:f51e15a6-a67d-4729-9c28-3766299d2985;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_EVENTDATE_NOTEMPTY.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_EVENTDATE_NOTEMPTY.Response" .
 
 <urn:uuid:e79ed5f7-8da5-4212-9476-e150a6c372b5> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:c23cd67d-1b5c-4e9f-a1ce-8cc6b3e9b365-2025-03-07;
@@ -4843,9 +4857,11 @@ bdqtest:d41a731b-2e2b-4442-9217-4c375ae92926-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:eventDate In Range for MultiRecord" .
 
 <urn:uuid:53b35bee-878a-4142-954b-92c03865a63c> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_EVENTDATE_INRANGE.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_EVENTDATE_INRANGE.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_EVENTDATE_INRANGE.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_EVENTDATE_INRANGE across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:3cff4dc4-72e9-4abe-9bf3-8a30f1618432;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_EVENTDATE_INRANGE.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_EVENTDATE_INRANGE.Response" .
 
 <urn:uuid:69a7c952-ecf0-4cb0-b005-b244926e8f03> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:d41a731b-2e2b-4442-9217-4c375ae92926-2025-03-06;
@@ -4904,9 +4920,11 @@ bdqtest:acd8d43e-7a2a-4372-b887-fb53a9972dc9-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dcterms:license Standard for MultiRecord" .
 
 <urn:uuid:cbb53f33-ddc6-444c-b2f1-c06bb6759225> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_LICENSE_STANDARD.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_LICENSE_STANDARD.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_LICENSE_STANDARD.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_LICENSE_STANDARD across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:3136236e-04b6-49ea-8b34-a65f25e3aba1;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_LICENSE_STANDARD.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_LICENSE_STANDARD.Response" .
 
 <urn:uuid:f7786d53-07c1-4253-add9-3bf24d8a97c4> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:acd8d43e-7a2a-4372-b887-fb53a9972dc9-2025-03-07;
@@ -4965,9 +4983,11 @@ bdqtest:1ba18c8b-66a6-47d9-a709-404439332dba-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:minimumElevationInMeters In Range for MultiRecord" .
 
 <urn:uuid:5cdd4160-7979-4e15-be8f-c8e3cc88e472> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_MINELEVATION_INRANGE.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_MINELEVATION_INRANGE.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_MINELEVATION_INRANGE.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_MINELEVATION_INRANGE across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:0bb8297d-8f8a-42d2-80c1-558f29efe798;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_MINELEVATION_INRANGE.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_MINELEVATION_INRANGE.Response" .
 
 <urn:uuid:3ec54cad-c181-4dd6-8bd6-6119eb6ad6c0> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:1ba18c8b-66a6-47d9-a709-404439332dba-2025-03-07;
@@ -5026,9 +5046,11 @@ bdqtest:3b2e4791-1a5a-4087-9e8d-09c67cf8c816-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dcterms:Location Not Empty for MultiRecord" .
 
 <urn:uuid:fd9bc73a-2b67-4940-ac2a-ad1dda03d0b7> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_LOCATION_NOTEMPTY.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_LOCATION_NOTEMPTY.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_LOCATION_NOTEMPTY.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_LOCATION_NOTEMPTY across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:58486cb6-1114-4a8a-ba1e-bd89cfe887e9;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_LOCATION_NOTEMPTY.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_LOCATION_NOTEMPTY.Response" .
 
 <urn:uuid:e0078022-251d-4c34-9b52-d63f94f601dd> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:3b2e4791-1a5a-4087-9e8d-09c67cf8c816-2025-03-07;
@@ -5087,9 +5109,11 @@ bdqtest:9c8df974-8fba-4537-8c67-31466787f732-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:country Not Empty for MultiRecord" .
 
 <urn:uuid:545ce7c8-64e1-463e-a578-be2580d7d3c5> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_COUNTRY_NOTEMPTY.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_COUNTRY_NOTEMPTY.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_COUNTRY_NOTEMPTY.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_COUNTRY_NOTEMPTY across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:6ce2b2b4-6afe-4d13-82a0-390d31ade01c;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_COUNTRY_NOTEMPTY.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_COUNTRY_NOTEMPTY.Response" .
 
 <urn:uuid:f9cd9d66-e4d2-42da-877a-90e4a7ac3cf3> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:9c8df974-8fba-4537-8c67-31466787f732-2025-03-07;
@@ -5148,9 +5172,11 @@ bdqtest:a8aee02c-cf7c-4104-a601-d8afc4f9cbe2-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:scientificName Found for MultiRecord" .
 
 <urn:uuid:9400633f-3e7a-4fbf-819e-8e2a0772494e> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_SCIENTIFICNAME_FOUND.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_SCIENTIFICNAME_FOUND.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_SCIENTIFICNAME_FOUND.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_SCIENTIFICNAME_FOUND across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:3f335517-f442-4b98-b149-1e87ff16de45;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_SCIENTIFICNAME_FOUND.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_SCIENTIFICNAME_FOUND.Response" .
 
 <urn:uuid:180a834f-d0e1-4abc-b31d-37558ef6352d> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:a8aee02c-cf7c-4104-a601-d8afc4f9cbe2-2025-03-06;
@@ -5209,9 +5235,11 @@ bdqtest:0028ef9a-6553-467b-a344-90327ed2babf-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:occurrenceID Not Empty for MultiRecord" .
 
 <urn:uuid:c1f3287b-beca-49d7-b2e6-3e6de75ae598> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_OCCURRENCEID_NOTEMPTY.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_OCCURRENCEID_NOTEMPTY.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_OCCURRENCEID_NOTEMPTY.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_OCCURRENCEID_NOTEMPTY across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:c486546c-e6e5-48a7-b286-eba7f5ca56c4;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_OCCURRENCEID_NOTEMPTY.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_OCCURRENCEID_NOTEMPTY.Response" .
 
 <urn:uuid:18cf676f-83ab-4c52-825c-2f3849bcae9d> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:0028ef9a-6553-467b-a344-90327ed2babf-2025-03-07;
@@ -5270,9 +5298,11 @@ bdqtest:a8fef8a8-e7c7-4a2d-adaf-7da99c896c93-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:year Not Empty for MultiRecord" .
 
 <urn:uuid:189a1e19-a50d-492d-87e1-27338d16883b> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_YEAR_NOTEMPTY.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_YEAR_NOTEMPTY.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_YEAR_NOTEMPTY.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_YEAR_NOTEMPTY across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:c09ecbf9-34e3-4f3e-b74a-8796af15e59f;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_YEAR_NOTEMPTY.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_YEAR_NOTEMPTY.Response" .
 
 <urn:uuid:b95086d3-3d4d-4c95-9ea8-8b5894d0aede> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:a8fef8a8-e7c7-4a2d-adaf-7da99c896c93-2025-03-06;
@@ -5331,9 +5361,11 @@ bdqtest:86c28d5e-f778-4230-88d8-64cc01478601-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation Coordinates dwc:countryCode Consistent for MultiRecord" .
 
 <urn:uuid:fb262b9b-a67b-45f9-92eb-fbcf58c72b0f> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:adb27d29-9f0d-4d52-b760-a77ba57a69c9;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT.Response" .
 
 <urn:uuid:e2857b1c-9c3d-4445-9f1e-32000e2243ce> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:86c28d5e-f778-4230-88d8-64cc01478601-2025-03-07;
@@ -5392,9 +5424,11 @@ bdqtest:478dee00-98d0-4154-b66c-eca64dbbf86d-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation Coordinates Terrestrial Marine for MultiRecord" .
 
 <urn:uuid:351049a9-bc84-42f6-af70-493e2e063153> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:b9c184ce-a859-410c-9d12-71a338200380;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT.Response" .
 
 <urn:uuid:2a044176-8820-4745-a797-9541c7e06ab2> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:478dee00-98d0-4154-b66c-eca64dbbf86d-2025-03-07;
@@ -5453,17 +5487,15 @@ bdqtest:7a8b0af3-fa7d-416a-921a-8992d56f8233-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation Coordinates dwc:stateProvince Consistent for MultiRecord" .
 
 <urn:uuid:463c35d2-41c0-4e68-af22-4bb4c200b376> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:f18a470b-3fe1-4aae-9c65-a6d3db6b550c;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT.Response" .
 
 <urn:uuid:d1b7295f-9a2a-4a52-a066-6e3eac61b0c2> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:7a8b0af3-fa7d-416a-921a-8992d56f8233-2025-03-07;
-  skos:note "TG2 Validation SPACE CODED Test VOCABULARY Consistency CORE";
-  bdqffdq:hasSpecification <urn:uuid:809d2925-781f-432e-b5d6-4a91f1afe56c>;
-  skos:historyNote "Source: TG2";
-  rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_COORDINATESSTATEPROVINCE_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_QA_COORDINATESSTATEPROVINCE_CONSISTENT";
-  skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_COORDINATESSTATEPROVINCE_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_QA_COORDINATESSTATEPROVINCE_CONSISTENT" .
+  skos:note "TG2 Validation SPACE CODED Test VOCABULARY Consistency CORE" .
 
 <urn:uuid:809d2925-781f-432e-b5d6-4a91f1afe56c> a bdqffdq:Specification;
   skos:example "";
@@ -5471,6 +5503,11 @@ bdqtest:7a8b0af3-fa7d-416a-921a-8992d56f8233-2025-03-07 a bdqffdq:Measure;
   bdqffdq:hasExpectedResponse "COMPLETE if every VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.";
   rdfs:label "Specification for: MULTIRECORD_MEASURE_QA_COORDINATESSTATEPROVINCE_CONSISTENT";
   dcterms:description "COMPLETE if every VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE." .
+
+<urn:uuid:d1b7295f-9a2a-4a52-a066-6e3eac61b0c2> bdqffdq:hasSpecification <urn:uuid:809d2925-781f-432e-b5d6-4a91f1afe56c>;
+  skos:historyNote "Source: TG2";
+  rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_COORDINATESSTATEPROVINCE_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_QA_COORDINATESSTATEPROVINCE_CONSISTENT";
+  skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_COORDINATESSTATEPROVINCE_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_QA_COORDINATESSTATEPROVINCE_CONSISTENT" .
 
 bdqtest:c6c998af-6145-4361-b1e6-52c5b790340a-2025-03-07 a bdqffdq:Measure;
   bdqffdq:hasResourceType bdqffdq:MultiRecord;
@@ -5514,9 +5551,11 @@ bdqtest:c8c61535-ab1a-4ec6-b4e9-f5f02541d7d8-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:basisOfRecord Not Empty for MultiRecord" .
 
 <urn:uuid:b90492ed-90da-4552-8ac0-e18e71db9d86> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_BASISOFRECORD_NOTEMPTY.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_BASISOFRECORD_NOTEMPTY.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_BASISOFRECORD_NOTEMPTY.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_BASISOFRECORD_NOTEMPTY across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:ac2b7648-d5f9-48ca-9b07-8ad5879a2536;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_BASISOFRECORD_NOTEMPTY.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_BASISOFRECORD_NOTEMPTY.Response" .
 
 <urn:uuid:8768b9a9-2054-401a-8d85-60791d94df91> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:c8c61535-ab1a-4ec6-b4e9-f5f02541d7d8-2025-03-07;
@@ -5575,9 +5614,11 @@ bdqtest:cb88b6d9-85b2-4cd5-9bfa-c0d96f79552e-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Vaildation dwc:geodeticDatum Standard for MultiRecord" .
 
 <urn:uuid:32f5c5c1-ec68-462a-8f73-f54c5236c0d1> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_GEODETICDATUM_STANDARD.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_GEODETICDATUM_STANDARD.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_GEODETICDATUM_STANDARD.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_GEODETICDATUM_STANDARD across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:7e0c0418-fe16-4a39-98bd-80e19d95b9d1;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_GEODETICDATUM_STANDARD.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_GEODETICDATUM_STANDARD.Response" .
 
 <urn:uuid:fd0d38cd-1a3d-46cd-83ac-aab2a367e21f> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:cb88b6d9-85b2-4cd5-9bfa-c0d96f79552e-2025-03-07;
@@ -5636,9 +5677,11 @@ bdqtest:57b40d9a-67d7-4916-9c27-dbb395c6c27e-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:country dwc:countryCode Consistent for MultiRecord" .
 
 <urn:uuid:f4cf2376-f816-4184-bc70-0df700bcc1eb> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:b23110e7-1be7-444a-a677-cdee0cf4330c;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT.Response" .
 
 <urn:uuid:cda169b0-4a95-447d-8654-bdab5e180947> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:57b40d9a-67d7-4916-9c27-dbb395c6c27e-2025-03-07;
@@ -5697,9 +5740,11 @@ bdqtest:14a1d51f-16ed-4148-9dc8-1e90157a9868-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:eventDate Standard for MultiRecord" .
 
 <urn:uuid:b9dd90bd-0f4d-403d-b24e-8aed6c157946> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_EVENTDATE_STANDARD.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_EVENTDATE_STANDARD.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_EVENTDATE_STANDARD.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_EVENTDATE_STANDARD across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:4f2bf8fd-fc5c-493f-a44c-e7b16153c803;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_EVENTDATE_STANDARD.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_EVENTDATE_STANDARD.Response" .
 
 <urn:uuid:28e09744-e189-487c-90f7-5dd4c88d7306> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:14a1d51f-16ed-4148-9dc8-1e90157a9868-2025-03-06;
@@ -5758,9 +5803,11 @@ bdqtest:f375a3fd-4cf5-4ef4-955e-d71762ede2d8-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:Event Consistent for MultiRecord" .
 
 <urn:uuid:c2949d73-f230-443b-a9c4-16af595f09a3> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_EVENT_CONSISTENT.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_EVENT_CONSISTENT.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_EVENT_CONSISTENT.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_EVENT_CONSISTENT across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:5618f083-d55a-4ac2-92b5-b9fb227b832f;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_EVENT_CONSISTENT.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_EVENT_CONSISTENT.Response" .
 
 <urn:uuid:4383a0b8-ae96-4fbd-9537-394ffe6ce310> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:f375a3fd-4cf5-4ef4-955e-d71762ede2d8-2025-03-06;
@@ -5819,9 +5866,11 @@ bdqtest:563872eb-f544-45a0-8f91-8098d62768d4-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:dateIdentified Standard for MultiRecord" .
 
 <urn:uuid:bbb2cdf1-1565-48b9-8d6c-f5cee70a6e56> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_DATEIDENTIFIED_STANDARD.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_DATEIDENTIFIED_STANDARD.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_DATEIDENTIFIED_STANDARD.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_DATEIDENTIFIED_STANDARD across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:66269bdd-9271-4e76-b25c-7ab81eebe1d8;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_DATEIDENTIFIED_STANDARD.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_DATEIDENTIFIED_STANDARD.Response" .
 
 <urn:uuid:4d16917f-0c46-4d05-a7da-0512e6a37627> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:563872eb-f544-45a0-8f91-8098d62768d4-2025-03-07;
@@ -5880,9 +5929,11 @@ bdqtest:0df03601-3768-4805-906a-bbd0a41b0fda-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:Taxon Unambiguous for MultiRecord" .
 
 <urn:uuid:993087b8-ab86-4f3a-b9aa-bde018b406b3> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_TAXON_UNAMBIGUOUS.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_TAXON_UNAMBIGUOUS.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_TAXON_UNAMBIGUOUS.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_TAXON_UNAMBIGUOUS across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:4c09f127-737b-4686-82a0-7c8e30841590;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_TAXON_UNAMBIGUOUS.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_TAXON_UNAMBIGUOUS.Response" .
 
 <urn:uuid:e780c2f1-4160-4ef2-b959-f3db56ceb62c> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:0df03601-3768-4805-906a-bbd0a41b0fda-2025-03-06;
@@ -5941,9 +5992,11 @@ bdqtest:6354376c-0cf2-435b-be40-850769c5a18a-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:dateIdentified In Range for MultiRecord" .
 
 <urn:uuid:ba87601b-dcc0-424d-973d-3869f35586d0> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_DATEIDENTIFIED_INRANGE.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_DATEIDENTIFIED_INRANGE.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_DATEIDENTIFIED_INRANGE.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_DATEIDENTIFIED_INRANGE across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:dc8aae4b-134f-4d75-8a71-c4186239178e;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_DATEIDENTIFIED_INRANGE.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_DATEIDENTIFIED_INRANGE.Response" .
 
 <urn:uuid:5f314145-e988-4684-b507-7429c796d996> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:6354376c-0cf2-435b-be40-850769c5a18a-2025-03-07;
@@ -6002,9 +6055,11 @@ bdqtest:21541436-641d-45a9-938c-537484d94eb7-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:class Found for MultiRecord" .
 
 <urn:uuid:75264e67-1247-494f-bbc2-4355e5ea8246> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_CLASS_FOUND.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_CLASS_FOUND.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_CLASS_FOUND.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_CLASS_FOUND across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:2cd6884e-3d14-4476-94f7-1191cfff309b;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_CLASS_FOUND.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_CLASS_FOUND.Response" .
 
 <urn:uuid:1ead6f88-824f-4d1f-a34b-11a1c3f8a871> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:21541436-641d-45a9-938c-537484d94eb7-2025-03-06;
@@ -6063,9 +6118,11 @@ bdqtest:488c1dff-21ec-4e68-a00a-7355505e180c-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:geodeticDatum Not Empty for MultiRecord" .
 
 <urn:uuid:01835b18-0e6a-4947-a3e7-a39daec2061f> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_GEODETICDATUM_NOTEMPTY.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_GEODETICDATUM_NOTEMPTY.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_GEODETICDATUM_NOTEMPTY.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_GEODETICDATUM_NOTEMPTY across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:239ec40e-a729-4a8e-ba69-e0bf03ac1c44;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_GEODETICDATUM_NOTEMPTY.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_GEODETICDATUM_NOTEMPTY.Response" .
 
 <urn:uuid:63ea1bbd-0184-4f59-83cb-302bb672fde0> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:488c1dff-21ec-4e68-a00a-7355505e180c-2025-03-07;
@@ -6124,9 +6181,11 @@ bdqtest:3c8bc478-f6b2-4533-b7ce-45bae5d186c2-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:decimalLatitude In Range for MultiRecord" .
 
 <urn:uuid:f3a092ed-b307-4aa7-a308-a6de8f29f91c> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_DECIMALLATITUDE_INRANGE.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_DECIMALLATITUDE_INRANGE.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_DECIMALLATITUDE_INRANGE.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_DECIMALLATITUDE_INRANGE across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:b6ecda2a-ce36-437a-b515-3ae94948fe83;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_DECIMALLATITUDE_INRANGE.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_DECIMALLATITUDE_INRANGE.Response" .
 
 <urn:uuid:e8e0076e-930c-45bd-bc49-85f341b7b729> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:3c8bc478-f6b2-4533-b7ce-45bae5d186c2-2025-03-07;
@@ -6185,9 +6244,11 @@ bdqtest:465d7ac1-d193-46c0-a302-56a9ef99215f-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:kingdom Found for MultiRecord" .
 
 <urn:uuid:52c61f29-f440-4a97-888c-89bf4f1f143c> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_KINGDOM_FOUND.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_KINGDOM_FOUND.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_KINGDOM_FOUND.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_KINGDOM_FOUND across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:125b5493-052d-4a0d-a3e1-ed5bf792689e;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_KINGDOM_FOUND.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_KINGDOM_FOUND.Response" .
 
 <urn:uuid:ab20eec9-6bc3-40e6-95ab-76c2c79a7e6c> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:465d7ac1-d193-46c0-a302-56a9ef99215f-2025-03-06;
@@ -6246,9 +6307,11 @@ bdqtest:b4d6a61c-64ff-4da0-974c-63a73fd20836-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:scientificName Not Empty for MultiRecord" .
 
 <urn:uuid:0938b920-e3f0-4b1b-8e82-3bb2bcb26ad9> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_SCIENTIFICNAME_NOTEMPTY.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_SCIENTIFICNAME_NOTEMPTY.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_SCIENTIFICNAME_NOTEMPTY.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_SCIENTIFICNAME_NOTEMPTY across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:7c4b9498-a8d9-4ebb-85f1-9f200c788595;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_SCIENTIFICNAME_NOTEMPTY.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_SCIENTIFICNAME_NOTEMPTY.Response" .
 
 <urn:uuid:63695de6-91f6-4f10-8bf7-59163c6e3ad9> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:b4d6a61c-64ff-4da0-974c-63a73fd20836-2025-03-06;
@@ -6307,9 +6370,11 @@ bdqtest:773bb288-fef3-4968-a65a-a69c74d6ecb5-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:order Found for MultiRecord" .
 
 <urn:uuid:9f20b037-e607-47ce-8b54-c46fc6c83407> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_ORDER_FOUND.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_ORDER_FOUND.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_ORDER_FOUND.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_ORDER_FOUND across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:81cc974d-43cc-4c0f-a5e0-afa23b455aa3;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_ORDER_FOUND.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_ORDER_FOUND.Response" .
 
 <urn:uuid:789f9110-5dca-411f-a742-1399175aa5be> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:773bb288-fef3-4968-a65a-a69c74d6ecb5-2025-03-06;
@@ -6368,9 +6433,11 @@ bdqtest:a0502c5f-608b-4e59-99da-d9490bb4d93b-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:year In Range for MultiRecord" .
 
 <urn:uuid:904e3e78-82d3-4d8a-90db-2be4bead51cc> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_YEAR_INRANGE.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_YEAR_INRANGE.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_YEAR_INRANGE.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_YEAR_INRANGE across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:ad0c8855-de69-4843-a80c-a5387d20fbc8;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_YEAR_INRANGE.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_YEAR_INRANGE.Response" .
 
 <urn:uuid:7647f9b5-28e4-4c31-948e-80b984422b0a> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:a0502c5f-608b-4e59-99da-d9490bb4d93b-2025-03-06;
@@ -6429,9 +6496,11 @@ bdqtest:151b2d29-3460-4ba5-a226-86971dc8ad03-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation Coordinates Not Zero for MultiRecord" .
 
 <urn:uuid:0dd0bc56-a3c4-4a11-bde2-8051b8944ead> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_COORDINATES_NOTZERO.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_COORDINATES_NOTZERO.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_COORDINATES_NOTZERO.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_COORDINATES_NOTZERO across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:1bf0e210-6792-4128-b8cc-ab6828aa4871;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_COORDINATES_NOTZERO.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_COORDINATES_NOTZERO.Response" .
 
 <urn:uuid:10cfdb9f-a8d4-42fa-81be-3811d3c9f03a> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:151b2d29-3460-4ba5-a226-86971dc8ad03-2025-03-07;
@@ -6490,9 +6559,11 @@ bdqtest:f22539ef-029b-4edb-ad17-add4363f7395-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:Event Temporal Not Empty for MultiRecord" .
 
 <urn:uuid:b6c0e87e-4b9a-4f6b-bbaf-9cf23b02ddee> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_EVENTTEMPORAL_NOTEMPTY.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_EVENTTEMPORAL_NOTEMPTY.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_EVENTTEMPORAL_NOTEMPTY.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_EVENTTEMPORAL_NOTEMPTY across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:41267642-60ff-4116-90eb-499fee2cd83f;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_EVENTTEMPORAL_NOTEMPTY.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_EVENTTEMPORAL_NOTEMPTY.Response" .
 
 <urn:uuid:36fcff08-e64e-4640-984f-5263b0407a97> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:f22539ef-029b-4edb-ad17-add4363f7395-2025-03-06;
@@ -6545,15 +6616,18 @@ bdqtest:d9493fa0-d90e-41db-95f6-d1c1d243540e-2025-03-07 a bdqffdq:Measure;
   bdqffdq:hasActedUponInformationElement <urn:uuid:3c6be17f-a7fc-4449-9d91-a528d012f415>;
   dcterms:issued "2025-03-07"^^xsd:date;
   dcterms:references <https://doi.org/10.1371/journal.pone.0178731>;
-  skos:historyNote "https://github.com/tdwg/bdq/issues/295";
-  rdfs:label "MULTIRECORD_MEASURE_QA_DCTYPE_STANDARD";
-  dcterms:isVersionOf bdqtest:d9493fa0-d90e-41db-95f6-d1c1d243540e;
-  skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dc:type Standard for MultiRecord" .
+  skos:historyNote "https://github.com/tdwg/bdq/issues/295" .
 
 <urn:uuid:3c6be17f-a7fc-4449-9d91-a528d012f415> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_DCTYPE_STANDARD.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_DCTYPE_STANDARD.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_DCTYPE_STANDARD.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_DCTYPE_STANDARD across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:cdaabb0d-a863-49d0-bc0f-738d771acba5;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_DCTYPE_STANDARD.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_DCTYPE_STANDARD.Response" .
+
+bdqtest:d9493fa0-d90e-41db-95f6-d1c1d243540e-2025-03-07 rdfs:label "MULTIRECORD_MEASURE_QA_DCTYPE_STANDARD";
+  dcterms:isVersionOf bdqtest:d9493fa0-d90e-41db-95f6-d1c1d243540e;
+  skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dc:type Standard for MultiRecord" .
 
 <urn:uuid:faa91223-c9f0-476d-a4d0-b42e13fc9022> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:d9493fa0-d90e-41db-95f6-d1c1d243540e-2025-03-07;
@@ -6612,9 +6686,11 @@ bdqtest:a94e986e-dbc8-4147-872d-5f2727945654-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:decimalLongitude Not Empty for MultiRecord" .
 
 <urn:uuid:72a0dee0-ad16-4a3c-8045-c79c54f6193e> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_DECIMALLONGITUDE_NOTEMPTY.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_DECIMALLONGITUDE_NOTEMPTY.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_DECIMALLONGITUDE_NOTEMPTY.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_DECIMALLONGITUDE_NOTEMPTY across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:9beb9442-d942-4f42-8b6a-fcea01ee086a;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_DECIMALLONGITUDE_NOTEMPTY.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_DECIMALLONGITUDE_NOTEMPTY.Response" .
 
 <urn:uuid:00d3e89b-b730-41f2-a5a2-8cf5e802a0c4> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:a94e986e-dbc8-4147-872d-5f2727945654-2025-03-07;
@@ -6673,9 +6749,11 @@ bdqtest:942f63bd-d19d-4214-bf8e-cec0055b8909-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:countryCode Not Empty for MultiRecord" .
 
 <urn:uuid:67e7259e-3421-4f5d-a31d-a92ce73d0baa> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_COUNTRYCODE_NOTEMPTY.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_COUNTRYCODE_NOTEMPTY.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_COUNTRYCODE_NOTEMPTY.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_COUNTRYCODE_NOTEMPTY across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:853b79a2-b314-44a2-ae46-34a1e7ed85e4;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_COUNTRYCODE_NOTEMPTY.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_COUNTRYCODE_NOTEMPTY.Response" .
 
 <urn:uuid:cde5acd3-b95d-444b-817c-8a20adadf279> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:942f63bd-d19d-4214-bf8e-cec0055b8909-2025-03-07;
@@ -6734,9 +6812,11 @@ bdqtest:4fccf163-9336-4f48-996c-57f5f66e72db-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dcterms:license Not Empty for MultiRecord" .
 
 <urn:uuid:893e5d1d-d9e1-49d6-8b17-337b87419ae6> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_LICENSE_NOTEMPTY.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_LICENSE_NOTEMPTY.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_LICENSE_NOTEMPTY.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_LICENSE_NOTEMPTY across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:15f78619-811a-4c6f-997a-a4c7888ad849;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_LICENSE_NOTEMPTY.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_LICENSE_NOTEMPTY.Response" .
 
 <urn:uuid:4de30040-b177-4b0d-a2f3-4c659f179494> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:4fccf163-9336-4f48-996c-57f5f66e72db-2025-03-07;
@@ -6795,9 +6875,11 @@ bdqtest:ef05b45b-13b8-4877-9e9d-fa44b332d83c-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation Polynomial Consistent for MultiRecord" .
 
 <urn:uuid:54ae4594-8bf0-47b5-9977-49c73ce10a74> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_POLYNOMIAL_CONSISTENT.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_POLYNOMIAL_CONSISTENT.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_POLYNOMIAL_CONSISTENT.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_POLYNOMIAL_CONSISTENT across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:17f03f1f-f74d-40c0-8071-2927cfc9487b;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_POLYNOMIAL_CONSISTENT.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_POLYNOMIAL_CONSISTENT.Response" .
 
 <urn:uuid:a0cfa157-3665-42dd-8dcc-3a5d53d4f217> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:ef05b45b-13b8-4877-9e9d-fa44b332d83c-2025-03-06;
@@ -6856,9 +6938,11 @@ bdqtest:4d999a65-a431-4a76-b591-e0d86dcf244b-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dc:type Not Empty for MultiRecord" .
 
 <urn:uuid:ed140634-27d9-474a-b107-279caf1b9e55> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_DCTYPE_NOTEMPTY.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_DCTYPE_NOTEMPTY.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_DCTYPE_NOTEMPTY.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_DCTYPE_NOTEMPTY across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:374b091a-fc90-4791-91e5-c1557c649169;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_DCTYPE_NOTEMPTY.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_DCTYPE_NOTEMPTY.Response" .
 
 <urn:uuid:5f76cfec-04ca-41a9-86bf-67824fd8e7e5> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:4d999a65-a431-4a76-b591-e0d86dcf244b-2025-03-07;
@@ -6917,9 +7001,11 @@ bdqtest:241a279c-76d5-499b-ab49-a47ad7f8df50-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:basisOfRecord Standard for MultiRecord" .
 
 <urn:uuid:fe9787e7-d5e8-4c40-a980-631686b3d16d> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_BASISOFRECORD_STANDARD.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_BASISOFRECORD_STANDARD.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_BASISOFRECORD_STANDARD.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_BASISOFRECORD_STANDARD across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:42408a00-bf71-4892-a399-4325e2bc1fb8;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_BASISOFRECORD_STANDARD.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_BASISOFRECORD_STANDARD.Response" .
 
 <urn:uuid:6fba2f6c-4d87-4be6-bb3a-b553551c1d47> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:241a279c-76d5-499b-ab49-a47ad7f8df50-2025-03-07;
@@ -6978,9 +7064,11 @@ bdqtest:2a9d4cfd-815a-46e0-bb51-60724582b762-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:Taxon Not Empty for MultiRecord" .
 
 <urn:uuid:2c68f3a2-539a-43bf-99b2-972c98a90b68> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_TAXON_NOTEMPTY.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_TAXON_NOTEMPTY.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_TAXON_NOTEMPTY.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_TAXON_NOTEMPTY across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:06851339-843f-4a43-8422-4e61b9a00e75;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_TAXON_NOTEMPTY.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_TAXON_NOTEMPTY.Response" .
 
 <urn:uuid:d354faf8-cf72-48bd-93d5-10cd931df17c> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:2a9d4cfd-815a-46e0-bb51-60724582b762-2025-03-06;
@@ -7039,9 +7127,11 @@ bdqtest:49d756a8-e654-4267-a290-d1def5d2c5f9-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:minimumDepthInMeters In Range for MultiRecord" .
 
 <urn:uuid:78d4bba2-ea16-42a4-a45d-c28cea71a2dc> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_MINDEPTH_INRANGE.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_MINDEPTH_INRANGE.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_MINDEPTH_INRANGE.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_MINDEPTH_INRANGE across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:04b2c8f3-c71b-4e95-8e43-f70374c5fb92;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_MINDEPTH_INRANGE.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_MINDEPTH_INRANGE.Response" .
 
 <urn:uuid:1a5a97a2-925f-449e-a475-4a5e5494184f> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:49d756a8-e654-4267-a290-d1def5d2c5f9-2025-03-07;
@@ -7100,9 +7190,11 @@ bdqtest:44f00697-ca66-43cf-8f16-646b40c0f514-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:minimumElevationInMeters less than dwcmaximumElevationInMeters for MultiRecord" .
 
 <urn:uuid:f379c9b1-f432-4a29-9e5f-8c8ad012aa38> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:d708526b-6561-438e-aa1a-82cd80b06396;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION.Response" .
 
 <urn:uuid:7de2e2b3-2734-4f0d-b4d1-25942d628a6f> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:44f00697-ca66-43cf-8f16-646b40c0f514-2025-03-07;
@@ -7161,9 +7253,11 @@ bdqtest:d94b0130-7a13-4fa8-955c-eff5c47bd9de-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:coordinateUncertaintyInMeters In Range for MultiRecord" .
 
 <urn:uuid:e96e00be-9b67-42df-a914-4873e05f9a34> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_COORDINATEUNCERTAINTY_INRANGE.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_COORDINATEUNCERTAINTY_INRANGE.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_COORDINATEUNCERTAINTY_INRANGE.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_COORDINATEUNCERTAINTY_INRANGE across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:c6adf2ea-3051-4498-97f4-4b2f8a105f57;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_COORDINATEUNCERTAINTY_INRANGE.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_COORDINATEUNCERTAINTY_INRANGE.Response" .
 
 <urn:uuid:7b36926a-b3b2-4a3e-828e-696fb28a1d6e> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:d94b0130-7a13-4fa8-955c-eff5c47bd9de-2025-03-07;
@@ -7222,9 +7316,11 @@ bdqtest:7c5a6ba0-399d-4570-878a-4a064e2406fe-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:maximumElevationInMeters In Range for MultiRecord" .
 
 <urn:uuid:5079eace-ec39-4d44-b4ce-7894854b9eed> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_MAXELEVATION_INRANGE.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_MAXELEVATION_INRANGE.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_MAXELEVATION_INRANGE.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_MAXELEVATION_INRANGE across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:c971fe3f-84c1-4636-9f44-b1ec31fd63c7;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_MAXELEVATION_INRANGE.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_MAXELEVATION_INRANGE.Response" .
 
 <urn:uuid:127afdaf-1d01-47c8-9999-3bff64432c88> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:7c5a6ba0-399d-4570-878a-4a064e2406fe-2025-03-07;
@@ -7283,9 +7379,11 @@ bdqtest:2fea4571-92d0-48a5-a5ba-6caecd647862-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:occurrenceStatus Standard for MultiRecord" .
 
 <urn:uuid:3f67a77a-85c0-495d-948a-5ea0dec89ec7> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_OCCURRENCESTATUS_STANDARD.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_OCCURRENCESTATUS_STANDARD.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_OCCURRENCESTATUS_STANDARD.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_OCCURRENCESTATUS_STANDARD across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_OCCURRENCESTATUS_STANDARD.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_OCCURRENCESTATUS_STANDARD.Response" .
 
 <urn:uuid:ba3bb2e3-b593-48ea-83b3-899e3a91ecd2> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:2fea4571-92d0-48a5-a5ba-6caecd647862-2025-03-07;
@@ -7344,9 +7442,11 @@ bdqtest:d2922585-2070-4851-a033-15e51977f9dc-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:occurrenceStatus Not Empty for MultiRecord" .
 
 <urn:uuid:47b2efa0-bf97-45be-b133-f14cfc73ace5> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_OCCURRENCESTATUS_NOTEMPTY.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_OCCURRENCESTATUS_NOTEMPTY.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_OCCURRENCESTATUS_NOTEMPTY.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_OCCURRENCESTATUS_NOTEMPTY across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_OCCURRENCESTATUS_NOTEMPTY.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_OCCURRENCESTATUS_NOTEMPTY.Response" .
 
 <urn:uuid:a1252d6a-3cb8-4fce-bdba-453c82325a6f> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:d2922585-2070-4851-a033-15e51977f9dc-2025-03-07;
@@ -7405,9 +7505,11 @@ bdqtest:a2535b23-4407-40bd-b23b-30c8185d72a2-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:decimalLatitude Not Empty for MultiRecord" .
 
 <urn:uuid:66a62ee2-d3be-4370-a42b-6d488b5c9b84> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_DECIMALLATITUDE_NOTEMPTY.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_DECIMALLATITUDE_NOTEMPTY.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_DECIMALLATITUDE_NOTEMPTY.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_DECIMALLATITUDE_NOTEMPTY across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:7d2485d5-1ba7-4f25-90cb-f4480ff1a275;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_DECIMALLATITUDE_NOTEMPTY.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_DECIMALLATITUDE_NOTEMPTY.Response" .
 
 <urn:uuid:63076250-647e-470e-9d0d-14a81681266f> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:a2535b23-4407-40bd-b23b-30c8185d72a2-2025-03-07;
@@ -7466,9 +7568,11 @@ bdqtest:4cf84216-c8a7-4865-a8e1-3ffd829d5a10-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:scientificNameID Not Empty for MultiRecord" .
 
 <urn:uuid:05d4f647-0387-4e37-883f-810840711e6d> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_SCIENTIFICNAMEID_NOTEMPTY.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_SCIENTIFICNAMEID_NOTEMPTY.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_SCIENTIFICNAMEID_NOTEMPTY.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_SCIENTIFICNAMEID_NOTEMPTY across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:401bf207-9a55-4dff-88a5-abcd58ad97fa;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_SCIENTIFICNAMEID_NOTEMPTY.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_SCIENTIFICNAMEID_NOTEMPTY.Response" .
 
 <urn:uuid:e3f80cb9-61c0-4fa4-9767-d7d4f415321d> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:4cf84216-c8a7-4865-a8e1-3ffd829d5a10-2025-03-06;
@@ -7527,9 +7631,11 @@ bdqtest:c5c8db83-3af0-4215-806f-e2f90574b138-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:genus Found for MultiRecord" .
 
 <urn:uuid:de43b1ab-4e58-4510-97cf-c4c84e04c9bd> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_GENUS_FOUND.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_GENUS_FOUND.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_GENUS_FOUND.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_GENUS_FOUND across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:f2ce7d55-5b1d-426a-b00e-6d4efe3058ec;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_GENUS_FOUND.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_GENUS_FOUND.Response" .
 
 <urn:uuid:5a90c547-205b-423f-9158-400652da905f> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:c5c8db83-3af0-4215-806f-e2f90574b138-2025-03-06;
@@ -7588,9 +7694,11 @@ bdqtest:a2be4734-0a93-46dc-af4a-e2125b47dbd4-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation Classification Consistent for MultiRecord" .
 
 <urn:uuid:264375b3-9ecd-4a3e-bad2-e74fbab0dcf4> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_CLASSIFICATION_CONSISTENT.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_CLASSIFICATION_CONSISTENT.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_CLASSIFICATION_CONSISTENT.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_CLASSIFICATION_CONSISTENT across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:2750c040-1d4a-4149-99fe-0512785f2d5f;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_CLASSIFICATION_CONSISTENT.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_CLASSIFICATION_CONSISTENT.Response" .
 
 <urn:uuid:c5ab8254-22df-4d08-86e1-6633707ab22b> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:a2be4734-0a93-46dc-af4a-e2125b47dbd4-2025-03-06;
@@ -7639,19 +7747,23 @@ bdqtest:85dc5d02-9847-420f-a026-6a0e70962d2a-2025-03-06 a bdqffdq:Measure;
   bdqffdq:hasResourceType bdqffdq:MultiRecord;
   skos:note "For Quality Assurance, filter record set until this measure is COMPLETE.";
   bdqffdq:hasDataQualityDimension bdqdim:Conformance;
-  dcterms:description "Measure if all VALIDATION_DAY_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).";
-  bdqffdq:hasActedUponInformationElement <urn:uuid:3acc77f6-1bbc-46b7-9aee-f75af5537d2a>;
+  dcterms:description "Measure if all VALIDATION_DAY_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)." .
+
+<urn:uuid:3acc77f6-1bbc-46b7-9aee-f75af5537d2a> a bdqffdq:ActedUpon;
+  skos:note "Aggregated Response outcomes produced by VALIDATION_DAY_INRANGE across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:8d787cb5-73e2-4c39-9cd1-67c7361dc02e;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_DAY_INRANGE.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_DAY_INRANGE.Response" .
+
+bdqtest:85dc5d02-9847-420f-a026-6a0e70962d2a-2025-03-06 bdqffdq:hasActedUponInformationElement
+    <urn:uuid:3acc77f6-1bbc-46b7-9aee-f75af5537d2a>;
   dcterms:issued "2025-03-06"^^xsd:date;
   dcterms:references <https://doi.org/10.1371/journal.pone.0178731>;
   skos:historyNote "https://github.com/tdwg/bdq/issues/297";
   rdfs:label "MULTIRECORD_MEASURE_QA_DAY_INRANGE";
   dcterms:isVersionOf bdqtest:85dc5d02-9847-420f-a026-6a0e70962d2a;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:day In Range for MultiRecord" .
-
-<urn:uuid:3acc77f6-1bbc-46b7-9aee-f75af5537d2a> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_DAY_INRANGE.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_DAY_INRANGE.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_DAY_INRANGE.Response" .
 
 <urn:uuid:5001024d-da6b-4499-a616-d76322e2043b> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:85dc5d02-9847-420f-a026-6a0e70962d2a-2025-03-06;
@@ -7710,9 +7822,11 @@ bdqtest:b3c2bb86-e239-4532-ae0c-b121ec1ee025-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:month Standard for MultiRecord" .
 
 <urn:uuid:5a033f48-4b60-4241-b5c3-4a7cb8de33f2> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_MONTH_STANDARD.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_MONTH_STANDARD.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_MONTH_STANDARD.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_MONTH_STANDARD across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:01c6dafa-0886-4b7e-9881-2c3018c98bdc;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_MONTH_STANDARD.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_MONTH_STANDARD.Response" .
 
 <urn:uuid:0f4b32e4-23c8-49ec-aa9f-3b7970d52b19> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:b3c2bb86-e239-4532-ae0c-b121ec1ee025-2025-03-06;
@@ -7761,21 +7875,21 @@ bdqtest:8c217eee-9cd0-48c3-aea0-90151c6c5bfd-2025-03-06 a bdqffdq:Measure;
   bdqffdq:hasResourceType bdqffdq:MultiRecord;
   skos:note "For Quality Assurance, filter record set until this measure is COMPLETE.";
   bdqffdq:hasDataQualityDimension bdqdim:Conformance;
-  dcterms:description "Measure if all VALIDATION_STARTDAYOFYEAR_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)." .
-
-<urn:uuid:528771e2-c865-45d4-8fcb-765e502be2b8> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_STARTDAYOFYEAR_INRANGE.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_STARTDAYOFYEAR_INRANGE.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_STARTDAYOFYEAR_INRANGE.Response" .
-
-bdqtest:8c217eee-9cd0-48c3-aea0-90151c6c5bfd-2025-03-06 bdqffdq:hasActedUponInformationElement
-    <urn:uuid:528771e2-c865-45d4-8fcb-765e502be2b8>;
+  dcterms:description "Measure if all VALIDATION_STARTDAYOFYEAR_INRANGE in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).";
+  bdqffdq:hasActedUponInformationElement <urn:uuid:528771e2-c865-45d4-8fcb-765e502be2b8>;
   dcterms:issued "2025-03-06"^^xsd:date;
   dcterms:references <https://doi.org/10.1371/journal.pone.0178731>;
   skos:historyNote "https://github.com/tdwg/bdq/issues/297";
   rdfs:label "MULTIRECORD_MEASURE_QA_STARTDAYOFYEAR_INRANGE";
   dcterms:isVersionOf bdqtest:8c217eee-9cd0-48c3-aea0-90151c6c5bfd;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:startDayOfYear In Range for MultiRecord" .
+
+<urn:uuid:528771e2-c865-45d4-8fcb-765e502be2b8> a bdqffdq:ActedUpon;
+  skos:note "Aggregated Response outcomes produced by VALIDATION_STARTDAYOFYEAR_INRANGE across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:85803c7e-2a5a-42e1-b8d3-299a44cafc46;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_STARTDAYOFYEAR_INRANGE.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_STARTDAYOFYEAR_INRANGE.Response" .
 
 <urn:uuid:8b66559e-bbe2-497f-ae9b-2c85863db5ad> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:8c217eee-9cd0-48c3-aea0-90151c6c5bfd-2025-03-06;
@@ -7834,9 +7948,11 @@ bdqtest:c04d428a-13d0-4766-9df7-4dfb2ef5d5d8-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:endDayOfYear In Range for MultiRecord" .
 
 <urn:uuid:dda8a095-0878-4b93-8a55-9b95f1700dae> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_ENDDAYOFYEAR_INRANGE.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_ENDDAYOFYEAR_INRANGE.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_ENDDAYOFYEAR_INRANGE.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_ENDDAYOFYEAR_INRANGE across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:9a39d88c-7eee-46df-b32a-c109f9f81fb8;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_ENDDAYOFYEAR_INRANGE.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_ENDDAYOFYEAR_INRANGE.Response" .
 
 <urn:uuid:893fd474-eab3-4265-865f-6cfe7635aa6b> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:c04d428a-13d0-4766-9df7-4dfb2ef5d5d8-2025-03-06;
@@ -7895,9 +8011,11 @@ bdqtest:371035f6-42b5-494f-86d9-de2f44a6cdc6-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:day Standard for MultiRecord" .
 
 <urn:uuid:9a0e0a79-fe93-4270-943f-30662eb60e72> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_DAY_STANDARD.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_DAY_STANDARD.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_DAY_STANDARD.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_DAY_STANDARD across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:47ff73ba-0028-4f79-9ce1-ee7008d66498;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_DAY_STANDARD.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_DAY_STANDARD.Response" .
 
 <urn:uuid:ebb501d7-405b-44fc-af0e-711d653f41e5> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:371035f6-42b5-494f-86d9-de2f44a6cdc6-2025-03-06;
@@ -7956,9 +8074,11 @@ bdqtest:e0b8cff1-3322-40d2-b8b2-b99fc9ae130a-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:taxonRank Not Empty for MultiRecord" .
 
 <urn:uuid:2e560d7e-864c-4d72-9cac-0bafbe1bbeea> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_TAXONRANK_NOTEMPTY.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_TAXONRANK_NOTEMPTY.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_TAXONRANK_NOTEMPTY.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_TAXONRANK_NOTEMPTY across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:14da5b87-8304-4b2b-911d-117e3c29e890;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_TAXONRANK_NOTEMPTY.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_TAXONRANK_NOTEMPTY.Response" .
 
 <urn:uuid:e4baa0f4-ee8c-4521-b9c0-89e6976d6c91> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:e0b8cff1-3322-40d2-b8b2-b99fc9ae130a-2025-03-06;
@@ -8017,9 +8137,11 @@ bdqtest:f320ca83-8487-4011-b1ff-f4b1b4dd86ec-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:taxonRank Standard for MultiRecord" .
 
 <urn:uuid:90508628-7333-4e71-b191-d1a0e0d431e6> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_TAXONRANK_STANDARD.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_TAXONRANK_STANDARD.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_TAXONRANK_STANDARD.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_TAXONRANK_STANDARD across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:7bdb13a4-8a51-4ee5-be7f-20693fdb183e;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_TAXONRANK_STANDARD.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_TAXONRANK_STANDARD.Response" .
 
 <urn:uuid:e9dd8019-0fbd-45a3-817e-f99bea3f8b19> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:f320ca83-8487-4011-b1ff-f4b1b4dd86ec-2025-03-06;
@@ -8078,9 +8200,11 @@ bdqtest:c73d49d1-06e4-4272-8249-6a26e7f8abca-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:maximumDepthInMeters In Range for MultiRecord" .
 
 <urn:uuid:3a4ce2f7-01a4-4a60-8dd3-2be0ac41cdf0> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_MAXDEPTH_INRANGE.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_MAXDEPTH_INRANGE.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_MAXDEPTH_INRANGE.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_MAXDEPTH_INRANGE across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:3f1db29a-bfa5-40db-9fd1-fde020d81939;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_MAXDEPTH_INRANGE.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_MAXDEPTH_INRANGE.Response" .
 
 <urn:uuid:66a9248a-4d93-443e-8f86-88b04e859d88> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:c73d49d1-06e4-4272-8249-6a26e7f8abca-2025-03-07;
@@ -8139,9 +8263,11 @@ bdqtest:9c1cdf6a-0dbf-4828-a2e3-fb368f74d194-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:stateProvince Found for MultiRecord" .
 
 <urn:uuid:03715043-0512-48a0-a1ac-45e6e2043a44> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_STATEPROVINCE_FOUND.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_STATEPROVINCE_FOUND.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_STATEPROVINCE_FOUND.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_STATEPROVINCE_FOUND across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:4daa7986-d9b0-4dd5-ad17-2d7a771ea71a;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_STATEPROVINCE_FOUND.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_STATEPROVINCE_FOUND.Response" .
 
 <urn:uuid:f61b4a56-28d2-45da-9f25-05a95890ab34> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:9c1cdf6a-0dbf-4828-a2e3-fb368f74d194-2025-03-07;
@@ -8200,9 +8326,11 @@ bdqtest:23aced89-d613-479c-bc4c-837d74b73be0-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:country dwc:stateProvince Unambiguous for MultiRecord" .
 
 <urn:uuid:fd67021a-c835-495c-a45c-832da0d37c2f> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:d257eb98-27cb-48e5-8d3c-ab9fca4edd11;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS.Response" .
 
 <urn:uuid:acff5571-4240-4308-817b-6c467060ae36> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:23aced89-d613-479c-bc4c-837d74b73be0-2025-03-07;
@@ -8261,9 +8389,11 @@ bdqtest:a9529e71-5470-4cb1-b04d-aa483926f532-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:scientificNameID Complete for MultiRecord" .
 
 <urn:uuid:951358d6-b8f5-42e0-a089-42bb2ecfa79b> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_SCIENTIFICNAMEID_COMPLETE.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_SCIENTIFICNAMEID_COMPLETE.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_SCIENTIFICNAMEID_COMPLETE.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_SCIENTIFICNAMEID_COMPLETE across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:6eeac3ed-f691-457f-a42e-eaa9c8a71ce8;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_SCIENTIFICNAMEID_COMPLETE.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_SCIENTIFICNAMEID_COMPLETE.Response" .
 
 <urn:uuid:8857d693-f25b-48aa-ba9b-29b692011bf2> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:a9529e71-5470-4cb1-b04d-aa483926f532-2025-03-06;
@@ -8322,9 +8452,11 @@ bdqtest:3bc9df8b-0f57-4157-9374-b56a99090b22-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:kingdom Not Empty for MultiRecord" .
 
 <urn:uuid:8a63ca58-36c5-45d8-9d4c-7f0fd476d87c> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_KINGDOM_NOTEMPTY.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_KINGDOM_NOTEMPTY.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_KINGDOM_NOTEMPTY.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_KINGDOM_NOTEMPTY across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:36ed36c9-b1a7-40b2-b5e2-0d012e772098;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_KINGDOM_NOTEMPTY.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_KINGDOM_NOTEMPTY.Response" .
 
 <urn:uuid:5c3ccce4-1a9d-4f04-b306-cb6c6f601f9e> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:3bc9df8b-0f57-4157-9374-b56a99090b22-2025-03-06;
@@ -8383,9 +8515,11 @@ bdqtest:6dd6fecf-6ba1-425c-afbe-6a9ed7b65ed7-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:scientificNameAuthorship Not Empty for MultiRecord" .
 
 <urn:uuid:2c7b6527-0918-401b-b679-cf3f0819ce9e> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:49f1d386-5bed-43ae-bd43-deabf7df64fc;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY.Response" .
 
 <urn:uuid:e3f91e30-4a96-4772-a941-3107a27c6229> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:6dd6fecf-6ba1-425c-afbe-6a9ed7b65ed7-2025-03-06;
@@ -8444,9 +8578,11 @@ bdqtest:16059801-6adb-4e65-82f4-61eaa70d8df0-2025-03-06 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:namePublishedInYear Not Empty for MultiRecord" .
 
 <urn:uuid:59de7103-5a68-4fa2-8d9a-fe89256b4cab> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:ff59f77d-71e9-4eb1-aac9-8bd05c50ff70;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY.Response" .
 
 <urn:uuid:11927fb0-e11d-4e20-8fde-a9910103df2a> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:16059801-6adb-4e65-82f4-61eaa70d8df0-2025-03-06;
@@ -8505,9 +8641,11 @@ bdqtest:8dfed701-01a9-415d-a9f8-539280b75975-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:establishmentMeans Standard for MultiRecord" .
 
 <urn:uuid:4d7d3e60-8242-48be-ab51-cfd40fe3b8e9> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_ESTABLISHMENTMEANS_STANDARD.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_ESTABLISHMENTMEANS_STANDARD.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_ESTABLISHMENTMEANS_STANDARD.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_ESTABLISHMENTMEANS_STANDARD across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:4eb48fdf-7299-4d63-9d08-246902e2857f;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_ESTABLISHMENTMEANS_STANDARD.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_ESTABLISHMENTMEANS_STANDARD.Response" .
 
 <urn:uuid:17c7a364-86bb-41ec-a7c1-07087bea1c92> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:8dfed701-01a9-415d-a9f8-539280b75975-2025-03-07;
@@ -8566,9 +8704,11 @@ bdqtest:ba953672-6526-4375-97e8-b4e9d1a7d3a0-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:degreeofEstablishment Standard for MultiRecord" .
 
 <urn:uuid:3ea77d56-e4b4-45b2-88d7-c6ab7c1d0f36> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_DEGREEOFESTABLISHMENT_STANDARD.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_DEGREEOFESTABLISHMENT_STANDARD.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_DEGREEOFESTABLISHMENT_STANDARD.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_DEGREEOFESTABLISHMENT_STANDARD across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:060e7734-607d-4737-8b2c-bfa17788bf1a;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_DEGREEOFESTABLISHMENT_STANDARD.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_DEGREEOFESTABLISHMENT_STANDARD.Response" .
 
 <urn:uuid:a5a657d0-7c16-4938-b542-057ffe4150cd> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:ba953672-6526-4375-97e8-b4e9d1a7d3a0-2025-03-07;
@@ -8627,9 +8767,11 @@ bdqtest:ef31ba02-cea7-4d76-990f-99ebbd201fb4-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:pathway Standard for MultiRecord" .
 
 <urn:uuid:79c96804-409c-44a5-bd7d-f149a7c0805e> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_PATHWAY_STANDARD.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_PATHWAY_STANDARD.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_PATHWAY_STANDARD.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_PATHWAY_STANDARD across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:5424e933-bee7-4125-839e-d8743ea69f93;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_PATHWAY_STANDARD.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_PATHWAY_STANDARD.Response" .
 
 <urn:uuid:06f4a965-9424-47fe-81f8-4264c30b6bf1> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:ef31ba02-cea7-4d76-990f-99ebbd201fb4-2025-03-07;
@@ -8688,9 +8830,11 @@ bdqtest:1b3bbac4-7c00-46d6-8179-1d57c92374ad-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:sex Standard for MultiRecord" .
 
 <urn:uuid:c449482f-64cd-4152-a434-3492ebdd4401> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_SEX_STANDARD.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_SEX_STANDARD.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_SEX_STANDARD.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_SEX_STANDARD across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:88d8598b-3318-483d-9475-a5acf9887404;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_SEX_STANDARD.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_SEX_STANDARD.Response" .
 
 <urn:uuid:92c8e64a-7279-4934-8071-5807d1796cbd> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:1b3bbac4-7c00-46d6-8179-1d57c92374ad-2025-03-07;
@@ -8725,8 +8869,7 @@ bdqtest:e4d35063-2366-4dda-8eaa-326340361da3-2025-03-07 a bdqffdq:Measure;
   skos:note "TG2 Validation OTHER CODED Test VOCABULARY Parameterized CORE";
   bdqffdq:hasSpecification <urn:uuid:9f00505f-133d-47b5-9c81-4dc266896ad6>;
   skos:historyNote "Source: TG2";
-  rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SEX_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SEX_STANDARD";
-  skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SEX_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SEX_STANDARD" .
+  rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SEX_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SEX_STANDARD" .
 
 <urn:uuid:9f00505f-133d-47b5-9c81-4dc266896ad6> a bdqffdq:Specification;
   skos:example "";
@@ -8734,6 +8877,8 @@ bdqtest:e4d35063-2366-4dda-8eaa-326340361da3-2025-03-07 a bdqffdq:Measure;
   bdqffdq:hasExpectedResponse "Count the number of VALIDATION_SEX_STANDARD in the MultiRecord that have Response.result=COMPLIANT.";
   rdfs:label "Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SEX_STANDARD";
   dcterms:description "Count the number of VALIDATION_SEX_STANDARD in the MultiRecord that have Response.result=COMPLIANT." .
+
+<urn:uuid:3cf9d546-bd23-4eb5-a866-4bafac20092f> skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SEX_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SEX_STANDARD" .
 
 bdqtest:1ca359ea-4df3-4dca-b92b-2bc8fa8e0c88-2025-03-07 a bdqffdq:Measure;
   bdqffdq:hasResourceType bdqffdq:MultiRecord;
@@ -8749,9 +8894,11 @@ bdqtest:1ca359ea-4df3-4dca-b92b-2bc8fa8e0c88-2025-03-07 a bdqffdq:Measure;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:typeStatus Standard for MultiRecord" .
 
 <urn:uuid:521ea0c6-8eb7-4d41-b1b6-40bbf1b2651e> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf bdqval:VALIDATION_TYPESTATUS_STANDARD.Response;
-  rdfs:label "Information Element ActedUpon bdqval:VALIDATION_TYPESTATUS_STANDARD.Response";
-  skos:prefLabel "Information Element ActedUpon bdqval:VALIDATION_TYPESTATUS_STANDARD.Response" .
+  skos:note "Aggregated Response outcomes produced by VALIDATION_TYPESTATUS_STANDARD across a MultiRecord.";
+  bdqffdq:aggregatesResponsesFrom bdqtest:4833a522-12eb-4fe0-b4cf-7f7a337a6048;
+  bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
+  rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_TYPESTATUS_STANDARD.Response";
+  skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_TYPESTATUS_STANDARD.Response" .
 
 <urn:uuid:e581e111-a7ef-4f16-9899-175b131b304e> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:1ca359ea-4df3-4dca-b92b-2bc8fa8e0c88-2025-03-07;
