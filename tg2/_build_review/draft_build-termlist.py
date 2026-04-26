@@ -188,8 +188,8 @@ for term in termLists:
     term_history_csv = "../_review/vocabulary/{}_term_versions.csv".format(term)
     if term == 'bdqval' : 
         organized_in_categories = True
-        display_order = ['Data','bdqval:Parameter','bdqffdq:UseCase','bdqffdq:InformationElement']
-        display_label = ['Data','bdqval:Parameter','bdqffdq:UseCase','bdqffdq:InformationElement']
+        display_order = ['Data','bdqval:Parameter','bdqffdq:UseCase','bdqffdq:AbstractInformationElement']
+        display_label = ['Data','bdqval:Parameter','bdqffdq:UseCase','bdqffdq:AbstractInformationElement']
     else : 
         organized_in_categories = False
         display_order = ['']

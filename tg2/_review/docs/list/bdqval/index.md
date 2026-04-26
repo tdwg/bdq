@@ -150,7 +150,7 @@ The terminology used to describe the terms in this vocabulary follows the TDWG [
 | Modified (dcterms:issued) | normative | Date of formal issuance of the resource. TDWG SDS: The date in ISO 8601 Date format on which the most recent version of the term was issued. | 2026-04-23 |
 | Term Version IRI (rdf:about) | normative | The HTTP IRI that identifies the version of the term that is currently in force. | [https://rs.tdwg.org/ bdqval/terms/version/ AggregatedTestResponseOutcomes-2026-04-23](https://rs.tdwg.org/bdqval/terms/version/AggregatedTestResponseOutcomes-2026-04-23) |
 | Label (rdfs:label) | normative | A human-readable name for the subject. TDWG SDS: A a word or short phrase that serves as a human-readable name for the term. | AggregatedTestResponseOutcomes |
-| Definition (rdfs:comment) | normative | A description of the subject resource. TDWG SDS: The normative definition of the term, written in English. | An abstract InformationElement representing the set of outcomes (Response instances with their Response.status and Response.result values) produced by running a particular SingleRecord Test across the members of a MultiRecord. This Information Element is intended for use as a component of a bdqffdq:ActedUpon node for MultiRecord Measures that aggregate Response outcomes from other Tests. |
+| Definition (rdfs:comment) | normative | A description of the subject resource. TDWG SDS: The normative definition of the term, written in English. | An abstract InformationElement representing the set of outcomes (Response instances with their Response.status and Response.result values) produced by running a particular SingleRecord Test across the members of a MultiRecord in a single DataQualityReport. This Information Element is intended for use as a component of a bdqffdq:ActedUpon node for MultiRecord Measures that aggregate Response outcomes from other Tests. |
 | Comments (skos:note) | non-normative | A general note, for any purpose. | Used to indicate that a MultiRecord Measure is concerned with Response outcomes (report data) rather than raw source-data terms. Pair with bdqffdq:aggregatesResponsesFrom to identify which Test produced the aggregated Responses. |
 | Status (tdwgutility:status) |  | Used to indicate if the term is recommended for use or if it is only of historical significance. | recommended |
 | Controlled Value String () | normative |  | AggregatedTestResponseOutcomes |
@@ -184,8 +184,9 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 [bdqval:Spatial-Temporal_Patterns](#bdqval_Spatial-Temporal_Patterns) |
 [bdqval:Taxon-Management](#bdqval_Taxon-Management) 
 
-**bdqffdq:InformationElement**
+**bdqffdq:AbstractInformationElement**
 
+[bdqval:AggregatedTestResponseOutcomes](#bdqval_AggregatedTestResponseOutcomes) |
 [bdqval:AllAmendmentTestsRunOnSingleRecord](#bdqval_AllAmendmentTestsRunOnSingleRecord) |
 [bdqval:AllValidationTestsRunOnSingleRecord](#bdqval_AllValidationTestsRunOnSingleRecord) 
 
@@ -210,8 +211,9 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 [Spatial-Temporal Patterns](#bdqval_Spatial-Temporal_Patterns) |
 [Taxon-Management](#bdqval_Taxon-Management) 
 
-**bdqffdq:InformationElement**
+**bdqffdq:AbstractInformationElement**
 
+[AggregatedTestResponseOutcomes](#bdqval_AggregatedTestResponseOutcomes) |
 [AllAmendmentTestsRunOnSingleRecord](#bdqval_AllAmendmentTestsRunOnSingleRecord) |
 [AllValidationTestsRunOnSingleRecord](#bdqval_AllValidationTestsRunOnSingleRecord) 
 
@@ -241,7 +243,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>An abstract InformationElement representing the set of outcomes (Response instances with their Response.status and Response.result values) produced by running a particular SingleRecord Test across the members of a MultiRecord. This Information Element is intended for use as a component of a bdqffdq:ActedUpon node for MultiRecord Measures that aggregate Response outcomes from other Tests.</td>
+			<td>An abstract InformationElement representing the set of outcomes (Response instances with their Response.status and Response.result values) produced by running a particular SingleRecord Test across the members of a MultiRecord in a single DataQualityReport. This Information Element is intended for use as a component of a bdqffdq:ActedUpon node for MultiRecord Measures that aggregate Response outcomes from other Tests.</td>
 		</tr>
 		<tr>
 			<td>Comments</td>
@@ -341,7 +343,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>A list of bdqffdq:Amendment Tests that have been run on a bdqffdq:SingleRecord forming the input to another Test.</td>
+			<td>An Abstract Information Element composed of the outcomes of a list of bdqffdq:Amendment Tests from a single run on a bdqffdq:SingleRecord in a bdqffdq:DataQualityReport forming the input to another Test.</td>
 		</tr>
 		<tr>
 			<td>Comments</td>
@@ -357,7 +359,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Type</td>
-			<td>bdqffdq:InformationElement</td>
+			<td>bdqffdq:AbstractInformationElement</td>
 		</tr>
 	</tbody>
 </table>
@@ -387,7 +389,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>A list of bdqffdq:Validation Tests that have been run on a bdqffdq:SingleRecord.</td>
+			<td>An Abstract Information Element composed of the outcomes of a list of bdqffdq:Validation Tests from a single run on a bdqffdq:SingleRecord in a bdwffdq:DataQualityReport.</td>
 		</tr>
 		<tr>
 			<td>Comments</td>
@@ -403,7 +405,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Type</td>
-			<td>bdqffdq:InformationElement</td>
+			<td>bdqffdq:AbstractInformationElement</td>
 		</tr>
 	</tbody>
 </table>
