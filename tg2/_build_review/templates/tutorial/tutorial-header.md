@@ -91,7 +91,7 @@ By following this workflow, you move from a human-centric research need to a mac
 
 See also:
 - [BDQ Tests: An Operational Perspective](../guide/bdqtest/index.md#51-bdq-tests-an-operational-perspective-non-normative) in the bdqtest: term-list document.
-- [Data Quality Needs, Data Quality Mechanisms, Data Quality Reports](../guide/bdqffdq/index.md#23-data-quality-needs-data-quality-mechanisms-data-quality-reports-non-normative) in the bdqffdq: ontology guide.
+- [Framework for describing data quality](../guide/bdqffdq/index.md#2-framework-for-describing-data-quality-non-normative) in the bdqffdq: ontology guide.
 
 ### 2.1 Best Practices
 
@@ -334,7 +334,7 @@ The label provides a concise summary of the Test's purpose and logic.  The compo
 * **Information Elements** Expressed as the "simple English term" for the `Information Element` being evaluated, or if multiple `Information Elements` are being evaluated together, a succinct more general concept (like LOCATION or EVENT) that encompasses those `Information Elements`
   * The use of "simple English terms" in the label (e.g., FOOTPRINTWKT) rather than the formal prefixed term (dwc:footprintWKT) to make it more accessible to human readers, and allows the label to be used as a string constant in many programming languages.
 * **Evaluation:** What is the Test testing? 
-  * Examples of evaluations include "NOTEMPTY" (a value is present), “FOUND” (the value can be found in a source authority), “INRANGE” (the value is within an expected range), etc.  See the [Evaluations](../../index.md#72-evaluations-in-test-labels-non-normative) list in the [landing page for the BDQ standard](../../index.md).
+  * Examples of evaluations include "NOTEMPTY" (a value is present), “FOUND” (the value can be found in a source authority), “INRANGE” (the value is within an expected range), etc.  See the [Evaluations](../../index.md#62-evaluations-in-test-labels-non-normative) list in the [landing page for the BDQ standard](../../index.md).
 
 This Test is a Validation, it is evaluating the Information Element `dwc:footprintWKT`, and it is evaluating whether there is a value in `dwc:footprintWKT`, so the label is VALIDATION_FOOTPRINTWKT_NOTEMPTY.  This label is expected to be a constant that does not change, even in translation.
 
@@ -346,7 +346,7 @@ This gives us the following names for the Test:
 * **Label** VALIDATION_FOOTPRINTWKT_NOTEMPTY
 * **Preferred Label** Validation dwc:footprintWKT Not Empty 
 
-See also: the [Evaluations](../../index.md#72-evaluations-in-test-labels-non-normative) list in the [landing page for the BDQ standard](../../index.md).
+See also: the [Evaluations](../../index.md#62-evaluations-in-test-labels-non-normative) list in the [landing page for the BDQ standard](../../index.md).
 
 #### 4.4.2 Identifiers supporting software and developers (non-normative)
 
@@ -575,7 +575,7 @@ We are asserting whether the value in `prov:wasAttributedTo` conforms to the str
 
 ### 6.4 Name the Test (non-normative)
 
-Now we can name the Test, following the naming conventions in BDQ.  The Test is a `Validation`, it is evaluating the `Information Element` `prov:wasAttributedTo`, and it is evaluating whether the value in `prov:wasAttributedTo` has the expected format of an ORCID ID.  So, the label for this Test could be VALIDATION_WASATTRIBUTEDTO_STANDARD.  (In contrast, we could frame another Test to check if the value in `prov:wasAttributedTo` can be found in an authoritative list of ORCID IDs, which could be labeled VALIDATION_WASATTRIBUTEDTO_FOUND.  There is some overlap in the words used for this [evaluation](../../index.md#72-evaluations-in-test-labels-non-normative) part of the names, typically, _FOUND is used for matches against large and changing authorities, like taxon names, and _STANDARD for correct formatting, as in dates, or matches to short stable controlled vocabularies like taxon rank.)  
+Now we can name the Test, following the naming conventions in BDQ.  The Test is a `Validation`, it is evaluating the `Information Element` `prov:wasAttributedTo`, and it is evaluating whether the value in `prov:wasAttributedTo` has the expected format of an ORCID ID.  So, the label for this Test could be VALIDATION_WASATTRIBUTEDTO_STANDARD.  (In contrast, we could frame another Test to check if the value in `prov:wasAttributedTo` can be found in an authoritative list of ORCID IDs, which could be labeled VALIDATION_WASATTRIBUTEDTO_FOUND.  There is some overlap in the words used for this [evaluation](../../index.md#62-evaluations-in-test-labels-non-normative) part of the names, typically, _FOUND is used for matches against large and changing authorities, like taxon names, and _STANDARD for correct formatting, as in dates, or matches to short stable controlled vocabularies like taxon rank.)  
 
 * **Label** VALIDATION_WASATTRIBUTEDTO_STANDARD
 

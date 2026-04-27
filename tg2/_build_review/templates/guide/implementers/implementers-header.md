@@ -390,7 +390,7 @@ When interpretations of strings containing Roman numerals as numbers is intended
 
 #### 2.3.4 Handling Leading and Trailing Whitespace (normative)
 
-Whitespace refers to characters such as spaces and tabs that affect rendering of printed or displayed output, but which themselves are not printed (see the [Glossary](../../../index.md#7-glossary-non-normative)). 
+Whitespace refers to characters such as spaces and tabs that affect rendering of printed or displayed output, but which themselves are not printed (see the [Glossary](../../../index.md#6-glossary-non-normative)). 
 
 A field that only includes whitespace MUST be treated as `bdqval:Empty`.
 
@@ -1304,7 +1304,7 @@ The header for the data in the Test Conformance Testing Data files includes a co
 | GUID | The machine readable identifier for the Test being evaluated (the Term Name (rdf:value) for the Test), e.g., 69b2efdc-6269-45a4-aecb-4cb99c2ae134. |
 | Test Type | The type of the Test (i.e., `Validation`, `Issue`, `Amendment` or `Measure`. |
 | Label | The second two components of the full English Test label, for example 'COUNTRYCODE_STANDARD' (`concat(upper(Test Type),"\_",Label)` to get the Test rdfs:label.) |
-| Data Dimension | Does the Test apply to data that is essentially [NAME](../../../index.md#7-glossary-non-normative), [SPACE](../../../index.md#7-glossary-non-normative), [TIME](../../../index.md#7-glossary-non-normative) or [OTHER](../../../index.md#7-glossary-non-normative)? |
+| Data Dimension | Does the Test apply to data that is essentially [NAME](../../../index.md#6-glossary-non-normative), [SPACE](../../../index.md#6-glossary-non-normative), [TIME](../../../index.md#6-glossary-non-normative) or [OTHER](../../../index.md#6-glossary-non-normative)? |
 | dataID | A local to the Test Conformance Testing Data unique integer to identify each Test Conformance Testing Data record. | 
 | LineForTest | An local identifier for Test records within one Test. This is present for maintaining the sort order within a Test, and with two special cases: "88" when Input.data contains a NULL character and "99" when Input.data contains non-printing characters (both managed in a separate file). | 
 | Input.data | Data for the Information Elements that are required by the Specification for unambiguous running of the Test, (e.g., for [VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT](../../terms/bdqtest/index.md#VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT), dwc:country="México", dwc:countryCode="MX"). |

@@ -890,7 +890,7 @@ Once the vocabulary terms and their definitions had become stable, they were ass
 
 These vocabularies all fed into a formal description of the Tests as terms in the `bdqtest:`, where the Tests with their descriptions were framed using the other vocabularies.
 
-A few terms in the vocabulary table were seen as glossary terms (e.g., "geodetic datum") as external formal definitions existed so a vocabulary entry was not required. These are presented in the [References (non-normative)](../../index.md#8-references-non-normative) section of [The Biodiversity Data Quality (BDQ) Standard](../../index.md).
+A few terms in the vocabulary table were seen as glossary terms (e.g., "geodetic datum") as external formal definitions existed so a vocabulary entry was not required. These are presented in the [Glossary (non-normative)](../../index.md#6-glossary-non-normative) section of [The Biodiversity Data Quality (BDQ) Standard](../../index.md).
 
 ### 3.11 Principles of Test Design (non-normative)
 
@@ -980,7 +980,7 @@ The general pattern for `SingleRecord` Test labels is {TESTTYPE}_{INFORMATIONELE
   * it targets the `Information Element` `dwc:day`,
   * and it evaluates whether the value of dwc:day is in standard form (that is an integer in the range 1 to 31 inclusive).  
   * That this is a `SingleRecord` Test is implicit.  
-The words used for Evaluations and their definitions are listed in [Evaluations in Test Labels](../../index.md#72-evaluations-in-test-labels-non-normative) in the landing page for the BDQ Standard, and these are guidance, not a formal normative vocabulary in BDQ.
+The words used for Evaluations and their definitions are listed in [Evaluations in Test Labels](../../index.md#62-evaluations-in-test-labels-non-normative) in the landing page for the BDQ Standard, and these are guidance, not a formal normative vocabulary in BDQ.
 
 The labels of `MultiRecord` tests follow a similar pattern, but prefixed by MULTIRECORD_.  
 
@@ -995,7 +995,7 @@ All of the `MultiRecord` Tests initially defined in the BDQ Standard are `MultiR
 
 ### 3.13 Test Label Components (non-normative)
 
-The convention for Test labels we have followed reflects the Test type (i.e. subclass of `Data Quality Need`), the `bdqffdq:InformationElements` that the Test acts upon and the Quirky nature of the [Evaluation](../../index.md#72-evaluations-in-test-labels-non-normative). 
+The convention for Test labels we have followed reflects the Test type (i.e. subclass of `Data Quality Need`), the `bdqffdq:InformationElements` that the Test acts upon and the Quirky nature of the [Evaluation](../../index.md#62-evaluations-in-test-labels-non-normative). 
 
 For example the Test with the label "VALIDATION_COUNTRYCODE_STANDARD" checks that the value of the country code is a valid ISO country code.
 
@@ -1233,15 +1233,15 @@ For more information see the following README files:
 - `rec_occur_qc/generation` [README](https://github.com/FilteredPush/rec_occur_qc/blob/master/generation/README.md)
 ## Acronyms (non-normative)
 
-A list of Acronyms can be found in the [Acronyms (non-normative)](../../index.md#71-acronyms-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.
+A list of Acronyms can be found in the [Acronyms (non-normative)](../../index.md#61-acronyms-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.
 
 ## Glossary (non-normative)
 
-A glossary of terms additional to those in the various namespaces can be found in the [General Glossary (non-normative)](../../index.md#73-general-glossary-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.
+A glossary of terms additional to those in the various namespaces can be found in the [General Glossary (non-normative)](../../index.md#63-general-glossary-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.
 
 ## References (non-normative)
 
-The references for the BDQ standard can be found in the [References (non-normative)](../../index.md#8-references-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.
+The references for the BDQ standard can be found in the [References (non-normative)](../../index.md#7-references-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.
 
 ## Cite BDQ (non-normative)
 
