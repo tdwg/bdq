@@ -50,13 +50,13 @@ Draft Standard for Review
     - [1.3.1 Term List Distributions for the BDQ Standard (non-normative)](#131-term-list-distributions-for-the-bdq-standard-non-normative)
   - [1.4 Status of the Content of this Document (normative)](#14-status-of-the-content-of-this-document-normative)
   - [1.5 RFC 2119 key words (normative)](#15-rfc-2119-key-words-normative)
-  - [1.6 Namespace Abbreviations (non-normative)](#16-namespace-abbreviations-non-normative)
+  - [1.6 Namespace abbreviations (non-normative)](#16-namespace-abbreviations-non-normative)
   - [1.7 Referring to Terms (normative)](#17-referring-to-terms-normative)
 
 [2 A Brief Context for the BDQ Tests (non-normative)](#2-a-brief-context-for-the-bdq-tests-non-normative)
   - [2.1 The BDQ Definition of “Test” (non-normative)](#21-the-bdq-definition-of-“test”-non-normative)
     - [2.1.1 Conceptual map: how BDQ uses the term “Test” (non-normative)](#211-conceptual-map-how-bdq-uses-the-term-“test”-non-normative)
-  - [2.2 Use Cases (non normative)](#22-use-cases-non-normative)
+  - [2.2 Use Cases (non-normative)](#22-use-cases-non-normative)
 
 [3 Test Types (non-normative)](#3-test-types-non-normative)
   - [3.1 Validation Tests (normative)](#31-validation-tests-normative)
@@ -78,7 +78,8 @@ Draft Standard for Review
   - [5.3 When to Run Tests (normative)](#53-when-to-run-tests-normative)
   - [5.4 Results of Test Executions (normative)](#54-results-of-test-executions-normative)
   - [5.5 Test Execution Environments and Workflows (non-normative)](#55-test-execution-environments-and-workflows-non-normative)
-  - [6 Example RDF description of a Test (non-normative)](#6-example-rdf-description-of-a-test-non-normative)
+
+[6 Example RDF description of a Test (non-normative)](#6-example-rdf-description-of-a-test-non-normative)
 
 [7 Creating New Tests (non-normative)](#7-creating-new-tests-non-normative)
   - [7.1 Elements of a New Test (non-normative)](#71-elements-of-a-new-test-non-normative)
@@ -167,7 +168,7 @@ Any sentence or phrase beginning with "For example" or "e.g.", whether in a norm
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119.
 
-### 1.6 Namespace Abbreviations (non-normative)
+### 1.6 Namespace abbreviations (non-normative)
 
 The following namespace abbreviations are used in this document:
 
@@ -217,7 +218,7 @@ In BDQ, a **Test** is described using the Fitness For Use Framework (`bdqffdq:`)
 
 ![Diagram of the relationship between the concept Test and the bdqffdq: classes and properties that define it](../implementers/bdqffdq_overview_diagram.svg)
 
-### 2.2 Use Cases (non normative)
+### 2.2 Use Cases (non-normative)
 
 BDQ Tests are designed to be applied in the context of particular uses of data. The BDQ standard defines a set of `Use Cases` that represent common uses of biodiversity data. Each `Use Case` is associated with one or more Tests that can be used to evaluate whether data meet that need. By applying the appropriate Tests for a given `Use Case`, users can assess the fitness of their data for that particular use and identify areas for improvement.
 
@@ -516,7 +517,7 @@ Expanding on this single validation step, amendments can be run and their result
 
 ![Diagram of workflow with pre-amendment validation+measure phase, followed by amendment phase, followed by post-amendment validation-measure phase](workflow_two_iterations.svg)
 
-### 6 Example RDF description of a Test (non-normative) 
+## 6 Example RDF description of a Test (non-normative) 
 
 A complete description of BDQ Tests can be found in the RDF representation of this vocabulary. Following the Fitness For Use Framework Ontology (`bdqffdq:`), a Test is composed of an instance of a subclass of a `bdqffdq:DataQualityNeed` (e.g., `bdqffdq:Validation`), an instance of a `bdqffdq:ActedUpon` `Information Element`, optionally an instance of a `bdqffdq:Consulted` `Information Element`, an instance of a subclass of `bdqffdq:Method` (e.g., `bdqffdq:ValidationMethod`), and an instance of a `bdqffdq:Specification`. Most of the information associated with a `bdqtest:` term is expressed in other vocabularies, in particular `bdqffdq:`. This structure and dependence on other vocabularies can be seen in the formal example description of [VALIDATION_COUNTRYCODE_STANDARD](../../terms/bdqtest/index.md#VALIDATION_COUNTRYCODE_STANDARD), below.
 

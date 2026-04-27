@@ -115,7 +115,7 @@ Any sentence or phrase beginning with "For example" or "e.g.", whether in a norm
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119.
 
-### 1.6 Namespace Abbreviations (non-normative)
+### 1.6 Namespace abbreviations (non-normative)
 
 The following namespace abbreviations are used in this document:
 
@@ -165,7 +165,7 @@ In BDQ, a **Test** is described using the Fitness For Use Framework (`bdqffdq:`)
 
 ![Diagram of the relationship between the concept Test and the bdqffdq: classes and properties that define it](../implementers/bdqffdq_overview_diagram.svg)
 
-### 2.2 Use Cases (non normative)
+### 2.2 Use Cases (non-normative)
 
 BDQ Tests are designed to be applied in the context of particular uses of data. The BDQ standard defines a set of `Use Cases` that represent common uses of biodiversity data. Each `Use Case` is associated with one or more Tests that can be used to evaluate whether data meet that need. By applying the appropriate Tests for a given `Use Case`, users can assess the fitness of their data for that particular use and identify areas for improvement.
 
@@ -464,7 +464,7 @@ Expanding on this single validation step, amendments can be run and their result
 
 ![Diagram of workflow with pre-amendment validation+measure phase, followed by amendment phase, followed by post-amendment validation-measure phase](workflow_two_iterations.svg)
 
-### 6 Example RDF description of a Test (non-normative) 
+## 6 Example RDF description of a Test (non-normative) 
 
 A complete description of BDQ Tests can be found in the RDF representation of this vocabulary. Following the Fitness For Use Framework Ontology (`bdqffdq:`), a Test is composed of an instance of a subclass of a `bdqffdq:DataQualityNeed` (e.g., `bdqffdq:Validation`), an instance of a `bdqffdq:ActedUpon` `Information Element`, optionally an instance of a `bdqffdq:Consulted` `Information Element`, an instance of a subclass of `bdqffdq:Method` (e.g., `bdqffdq:ValidationMethod`), and an instance of a `bdqffdq:Specification`. Most of the information associated with a `bdqtest:` term is expressed in other vocabularies, in particular `bdqffdq:`. This structure and dependence on other vocabularies can be seen in the formal example description of [VALIDATION_COUNTRYCODE_STANDARD](../../terms/bdqtest/index.md#VALIDATION_COUNTRYCODE_STANDARD), below.
 

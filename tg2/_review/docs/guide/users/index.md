@@ -324,7 +324,7 @@ For example, if 17 Tests proposed amendments on a particular `SingleRecord`; the
 
 * `Response.status`=RUN_HAS_RESULT 
 * `Response.result`="17"
-* `Response.comment`="17 Tests of TYPE AMENDMENT proposed changes to the record"
+* `Response.comment`="17 Tests of Type Amendment proposed changes to the record"
 
 Most `Measure` Tests defined in BDQ are `Multi Record` Tests that take as input the results of `Single Record` Test on some data set and provide metrics or filters on those data.  These Tests are central to formal application of `Quality Control` and `Quality Assurance` in the Fitness For Use Framework. See the discussion in [Quality Control and Quality Assurance](#21-quality-control-and-quality-assurance-non-normative) above.
 

@@ -49,12 +49,12 @@ Draft Standard for Review
   - [1.3 Associated Documents (non-normative)](#13-associated-documents-non-normative)
   - [1.4 Status of the Content of this Document (normative)](#14-status-of-the-content-of-this-document-normative)
   - [1.5 RFC 2119 key words (normative)](#15-rfc-2119-key-words-normative)
-  - [1.6 Namespace Abbreviations (non-normative)](#16-namespace-abbreviations-non-normative)
+  - [1.6 Namespace abbreviations (non-normative)](#16-namespace-abbreviations-non-normative)
   - [1.7 Referring to Terms (normative)](#17-referring-to-terms-normative)
 
 [2 About the Tests and their Implementation (normative)](#2-about-the-tests-and-their-implementation-normative)
   - [2.1 Independence (normative)](#21-independence-normative)
-  - [2.2 The Concept of "EMPTY" in the BDQ Standard (normative)](#22-the-concept-of-empty-in-the-bdq-standard-normative)
+  - [2.2 The Concept of "Empty" in the BDQ Standard (normative)](#22-the-concept-of-empty-in-the-bdq-standard-normative)
     - [2.2.1 The Concept of Empty (normative)](#221-the-concept-of-empty-normative)
     - [2.2.2 Example Implementation of a Function to Assess Empty (non-normative)](#222-example-implementation-of-a-function-to-assess-empty-non-normative)
   - [2.3 Reading Test Descriptors (non-normative)](#23-reading-test-descriptors-non-normative)
@@ -69,7 +69,7 @@ Draft Standard for Review
     - [2.3.4 Handling Leading and Trailing Whitespace (normative)](#234-handling-leading-and-trailing-whitespace-normative)
 
 [3 Compliant Implementation (normative)](#3-compliant-implementation-normative)
-  - [3.1 Compliance depends on `Use Case` (normative)](#31-compliance-depends-on-use-case-normative)
+  - [3.1 Compliance depends on Use Case (normative)](#31-compliance-depends-on-use-case-normative)
   - [3.2 Minimum Test Suite composition (normative)](#32-minimum-test-suite-composition-normative)
   - [3.3 Rationale and expectations for suite design (non-normative)](#33-rationale-and-expectations-for-suite-design-non-normative)
   - [3.4 Required outputs for every Test execution (normative)](#34-required-outputs-for-every-test-execution-normative)
@@ -94,7 +94,7 @@ Draft Standard for Review
     - [6.1.2 Identifying non-default Parameter values in Response.comment (normative)](#612-identifying-non-default-parameter-values-in-responsecomment-normative)
     - [6.1.3 Expectations for Tests with Parameters (normative)](#613-expectations-for-tests-with-parameters-normative)
     - [6.1.4 Test departures from specifications (normative)](#614-test-departures-from-specifications-normative)
-    - [6.1.3 Further guidance on Parameters and Arguments (non-normative)](#613-further-guidance-on-parameters-and-arguments-non-normative)
+    - [6.1.4 Further guidance on Parameters and Arguments (non-normative)](#614-further-guidance-on-parameters-and-arguments-non-normative)
   - [6.2 Execution Process Agnostic (non-normative)](#62-execution-process-agnostic-non-normative)
   - [6.3 Considerations for Test Execution (normative)](#63-considerations-for-test-execution-normative)
   - [6.4 Order of Test Execution (normative)](#64-order-of-test-execution-normative)
@@ -113,14 +113,12 @@ Draft Standard for Review
       - [6.4.5.2 Example in Java (non-normative)](#6452-example-in-java-non-normative)
     - [6.4.6 Implementing an Abstract Test (normative)](#646-implementing-an-abstract-test-normative)
     - [6.4.7 Implementing a Test in a Specific Environment (non-normative)](#647-implementing-a-test-in-a-specific-environment-non-normative)
-
-[6.5 Common Pattern for Implementing a Test (non-normative)](#65-common-pattern-for-implementing-a-test-non-normative)
-  - [6.5.1 Responsibilities of a Test (non-normative)](#651-responsibilities-of-a-test-non-normative)
-  - [6.5.2 Checklist for a Validation Test (non-normative)](#652-checklist-for-a-validation-test-non-normative)
-  - [6.5.3 Checklist for Implementing an Amendment Test (non-normative)](#653-checklist-for-implementing-an-amendment-test-non-normative)
-
-[6.6 Responsibilities of a Test Execution Framework (non-normative)](#66-responsibilities-of-a-test-execution-framework-non-normative)
-  - [6.6.1 Linking raw input terms, Tests, and outputs in a workflow (non-normative)](#661-linking-raw-input-terms-tests-and-outputs-in-a-workflow-non-normative)
+  - [6.5 Common Pattern for Implementing a Test (non-normative)](#65-common-pattern-for-implementing-a-test-non-normative)
+    - [6.5.1 Responsibilities of a Test (non-normative)](#651-responsibilities-of-a-test-non-normative)
+    - [6.5.2 Checklist for a Validation Test (non-normative)](#652-checklist-for-a-validation-test-non-normative)
+    - [6.5.3 Checklist for Implementing an Amendment Test (non-normative)](#653-checklist-for-implementing-an-amendment-test-non-normative)
+  - [6.6 Responsibilities of a Test Execution Framework (non-normative)](#66-responsibilities-of-a-test-execution-framework-non-normative)
+    - [6.6.1 Linking raw input terms, Tests, and outputs in a workflow (non-normative)](#661-linking-raw-input-terms-tests-and-outputs-in-a-workflow-non-normative)
 
 [7 Presentation of Results (normative)](#7-presentation-of-results-normative)
   - [7.1 Data Quality Reports (normative)](#71-data-quality-reports-normative)
@@ -196,7 +194,7 @@ Any sentence or phrase beginning with "For example" or "e.g.", whether in a norm
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [RFC 2119](https://tools.ietf.org/html/rfc2119).
 
-### 1.6 Namespace Abbreviations (non-normative)
+### 1.6 Namespace abbreviations (non-normative)
 
 The following namespace abbreviations are used in this document:
 
@@ -221,11 +219,11 @@ In any technical treatment of the BDQ standard, a precise reference to a class o
 
 ## 2 About the Tests and their Implementation (normative)
 
-### 2.1 Independence (normative) 
+### 2.1 Independence (normative)
 
 Test implementations SHOULD be independent of how data are stored and transported, data serializations, and the framework or environment in which the Tests are being executed. 
 
-### 2.2 The Concept of "EMPTY" in the BDQ Standard (normative)
+### 2.2 The Concept of "Empty" in the BDQ Standard (normative)
 
 `Empty` and `Not Empty` in the context of the BDQ standard are defined as follows: 
 
@@ -515,7 +513,7 @@ The BDQ Tests are part of a coherent framework for describing and reporting on d
 ![Non-normative diagram illustrating the relationships among Use Cases, Policies, Tests, Parameters, Implementations and Reports in bdqffdq, use cases are at the top of the diagram linked down to Tests (Validations, Measures, Amendments, Issues) via Policies, Tests are shown to be complex composed of many classes and properties, including Specifications which can take Parameters, below these sit Implementations, which can produce data quality reports containing assertions (Response objects):](bdqffdq_overview_diagram.svg)
 *Non-normative diagram illustrating the relationships among Use Cases, Policies, Tests, Parameters, Implementations and Reports in bdqffdq:*
 
-### 3.1 Compliance depends on `Use Case` (normative)
+### 3.1 Compliance depends on Use Case (normative)
 
 The BDQ standard defines a library of Tests that can produce `Data Quality Reports` and can be used in `Quality Control` and `Quality Assurance`.  See the discussion of `Quality Control` and `Quality Assurance` in the [Users Guide](../../guide/users/index.md#21-quality-control-and-quality-assurance-non-normative).  Compliance of Test implementations with the BDQ standard depend upon several conditions:
 - Tests can not assert or assure quality independently of a `Use Case`.  
@@ -659,7 +657,7 @@ An implementation of a Test that, by design, has a behavior that departs from th
 
 An implementation of a parameterized Test that only supports non-default `Parameter` values MUST be identified by different identifiers than the BDQ Test that supports the default `Parameter` values.  For example, an implementation of VALIDATION_LICENSE_STANDARD that does not support the default bdqval:sourceAuthority "Creative Commons 4.0 Licenses or CC0", but only supports a different source authority is not the same Test as VALIDATION_LICENSE_STANDARD, and must be identified by a different identifier.
 
-#### 6.1.3 Further guidance on Parameters and Arguments (non-normative)
+#### 6.1.4 Further guidance on Parameters and Arguments (non-normative)
 
 See also the [Test Parameters](../../guide/users/index.md#34-test-parameters-non-normative) section in the [User's Guide)](../../guide/users/index.md) for further guidance on `Parameters` and `Arguments`.
 
@@ -755,7 +753,7 @@ An implementation of a Test MAY be complete as described with `bdqffdq:` terms i
 
 One complexity introduced by the abstraction of Tests into APIs that take [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) as input and output is to make sure that `Response` objects are correctly mapping Darwin Core terms loaded in an execution framework onto the parameters of an implementation method. Consider an implementation of the Test [VALIDATION_ENDDAYOFYEAR_INRANGE](../../terms/bdqtest/index.md#VALIDATION_ENDDAYOFYEAR_INRANGE) that has the following method signature: 
 
-    public Response validationEnddayofyearInrange(String startDayOfYear, String eventDate) 
+    public Response validationEnddayofyearInrange(String startDayOfYear, String eventDate)
 
 If an implementation framework calls this method, reversing the binding of `dwc:startDayOfYear` and `dwc:eventDate`, for example: 
 
@@ -765,7 +763,7 @@ the Test will not return the desired result, even if the implementation is corre
 
 Multiple approaches are possible to correctly match input Darwin Core terms onto method signatures for methods that implement Tests. 
 
-##### 6.4.4.1 Binding Darwin Core Data (normative) 
+##### 6.4.4.1 Binding Darwin Core Data (normative)
 
 The BDQ standard is entirely agnostic as to how the binding between domain terms (i.e., input Darwin Core terms) and `Information Elements` considered inside Test implementations is done. Implementers MAY freely implement in any appropriate way for their environment. However, Test Implementations MUST provide structured `Responses` containing `Response.status`, `Response.result`, and `Response.comment`.
 
@@ -773,7 +771,7 @@ Implementations MAY define objects corresponding to the set of `Information Elem
 
 Implementers MAY use any approach appropriate for their language(s) and environment to pass data into Test implementations.
 
-##### 6.4.4.2 Examples of matching input Darwin Core to Method parameters (non-normative) 
+##### 6.4.4.2 Examples of matching input Darwin Core to Method parameters (non-normative)
 
 If a Test implementation is a function that takes Darwin Core terms as input parameters, the function (or method) call becomes the point of concern for correctly matching input Darwin Core terms to the `Parameters` of the Test (function or method).
 
@@ -1028,12 +1026,12 @@ This implementation does not generalize, as for example, day in a numeric data t
 
 Implementations should carefully consider the assumptions inherent in the environment on which Tests are being run. For example, the FilteredPush implementations in `event_date_qc` (Morris & Lowery 2025), `sci_name_qc` (Morris & Dou 2025), `rec_occur_qc` (Morris 2025), and `geo_ref_qc` (Morris & Lowery 2025b), expect that all data will be presented to the Test methods as strings. Therefore each Test implementation that deals with numeric values must convert the input strings to appropriate numeric types for evaluation, and can use the failure to convert the data type as a means to identify INTERNAL_PREREQUISITES_NOT_MET.
 
-## 6.5 Common Pattern for Implementing a Test (non-normative)
+### 6.5 Common Pattern for Implementing a Test (non-normative)
 
 This section provides language- and framework-agnostic checklists that implementers can use to write (or review) implementations of BDQ `Validation` and `Amendment` Tests. It summarizes common conventions used in existing implementations, while remaining independent of any particular execution environment.
 
 
-### 6.5.1 Responsibilities of a Test (non-normative)
+#### 6.5.1 Responsibilities of a Test (non-normative)
 
 BDQ keeps Tests portable by standardizing semantics (inputs, decision rules, outputs).  It deliberately leaves execution mechanics (binding to input data, orchestration of Test execution, presentation of Test output) to whatever framework fits the implementer's environment.  
 
@@ -1043,7 +1041,7 @@ The description of a Test, in essence, frames an API with `Information Element` 
 
 The checklists below are designed to help implementers ensure that their implementations of Tests follow this separation of concerns, are consistent with the semantics of the Test as defined in the BDQ standard, and that they produce the expected structured outputs.
 
-### 6.5.2 Checklist for a Validation Test (non-normative)
+#### 6.5.2 Checklist for a Validation Test (non-normative)
 
 1. **Setup for Consistency**
    - Implement utility functions or methods to evaluate `bdqval:Empty` and `bdqval:NotEmpty` consistently. See: [The Concept of EMPTY in the BDQ Standard (normative)”](#22-the-concept-of-empty-in-the-bdq-standard-normative).
@@ -1093,7 +1091,7 @@ The checklists below are designed to help implementers ensure that their impleme
        - `Response.comment` containing a `bdqval:NotEmpty` explanation
      - If a non-default `Parameter` value was used, `Response.comment` should include the `Parameter` name and the non-default value (see Section 6.1.2, “Identifying non-default `Parameter` values in `Response.comment` (normative)”).
 
-### 6.5.3 Checklist for Implementing an Amendment Test (non-normative)
+#### 6.5.3 Checklist for Implementing an Amendment Test (non-normative)
 
 1. **Setup for Consistency**
    - Implement utility functions or methods to evaluate `bdqval:Empty` and `bdqval:NotEmpty` consistently.  See: [2.2 The Concept of EMPTY in the BDQ Standard”](#22-the-concept-of-empty-in-the-bdq-standard-normative).
@@ -1157,7 +1155,7 @@ The checklists below are designed to help implementers ensure that their impleme
    - The application of a Response.result from an `Amendment` Test is a separate concern from the generation of that proposal, and external to the Test API. Implementations should keep these concerns separate.
    - Implementations may support pipelines that apply proposals downstream for Quality Assurance use cases, but must preserve the ability to retain the original (unamended) values and to report both pre- and post-amendment results. See: [6.4.1 Phases: Pre-Amendment, Amendment, Post-Amendment](#641-phases-pre-amendment-amendment-post-amendment-normative).
 
-## 6.6 Responsibilities of a Test Execution Framework (non-normative)
+### 6.6 Responsibilities of a Test Execution Framework (non-normative)
 
 BDQ Test descriptions are intentionally independent of any particular software framework, data storage system, serialization, or workflow environment. This separation of concerns supports portability:
 
@@ -1178,7 +1176,7 @@ BDQ Test descriptions are intentionally independent of any particular software f
     * **Package** `Responses` into `Data Quality Reports` or pass them on to other downstream processes.
     * Display or otherwise **present** the results to users.
 
-### 6.6.1 Linking raw input terms, Tests, and outputs in a workflow (non-normative)
+#### 6.6.1 Linking raw input terms, Tests, and outputs in a workflow (non-normative)
 
 A Test execution framework (or “runner”) typically needs to accomplish the following steps between raw input data, a Test implementation, and handling output from a Test:
 
@@ -1485,15 +1483,15 @@ Human readable `Data Quality Reports` for Quality Control MAY take any appropria
 
 For each Test in an implementation, that Test MUST produce the same results as are specified in a row of the conformance testing data for that Test, except when a `bdqval:sourceAuthority` parameter specifies a source other than the default `sourceAuthority` specified for that Test.
 
-### 8.6 Existing Software tools (non-normative) 
+### 8.6 Existing Software tools (non-normative)
 
-#### 8.6.1 Tools for Validating Test Implementations with the Conformance Testing Data (non-normative) 
+#### 8.6.1 Tools for Validating Test Implementations with the Conformance Testing Data (non-normative)
 
 The `bdqtestrunner` tool (Morris, 2024), written in Java, was written to validate the implementations of the BDQ Tests in various FilteredPush data quality libraries against the Test Conformance Testing Data. This tool uses Java annotations on methods that implement Tests in order to match inputs from the conformance testing data to methods under Test that implement individual Tests. The tool could be reused to validate implementations in other Java classes that follow the same use of `ffdq-api` (Lowery and Morris 2024).
 
 Java annotations can be used to match Test implementation methods to Tests and `Information Elements` to method parameters. The [ffdq-api](https://github.com/kurator-org/ffdq-api) (Lowery and Morris 2024) provides a set of annotations intended to enable code using Java reflection to detect methods that implement particular Tests, and then again through Java reflection, bind Darwin Core terms and other `Information Elements` in input data onto appropriate method parameters.
 
-#### 8.6.2 Tools to assist with Implementations and RDF presentation (non-normative) 
+#### 8.6.2 Tools to assist with Implementations and RDF presentation (non-normative)
 
 The Test implementations listed below use Java Annotations (as shown in the example in [2.3.2.5 Example Interpretation of a Parameter String Default Value (non-normative)](#2325-example-interpretation-of-a-parameter-string-default-value-non-normative) to carry metadata to identify Tests and to allow binding of Darwin Core terms to Java method parameters. The Java Annotations are themselves related to Fitness For Use Framework concepts, are available in a library ffdq-api (Lowery and Morris 2024), and are intended to be used with rdfbeans to serialize Java result objects produced by Test implementations into `bdqffdq:Response` objects in RDF. In addition, a Java library, `kurator-ffdq` (Lowery et al., 2025) is available for working with Test descriptions as RDF, being an implementation of the Framework Ontology in Java. The `kurator-ffdq` library also includes classes for generating stub methods for each Test in either Java or Python.
 
@@ -1510,7 +1508,7 @@ For more information on stub method generation used by the Kurator/FilteredPush 
 
 These libraries are available in Maven Central, source code is archived in Zenodo.
 
-## 9 Existing Test Implementations (non-normative) 
+## 9 Existing Test Implementations (non-normative)
 
 A set of open source Java libraries provide classes that implement each of the `bdqffdq:SingleRecord` Tests that operate directly on data. These libraries are not part of the BDQ standard, but have been implemented as part of the process of writing the standard.
 
