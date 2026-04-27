@@ -169,12 +169,32 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 
 **Classes**
 
+[bdqval:DefaultSourceAuthority](#bdqval_DefaultSourceAuthority) |
+[bdqval:DefaultValue](#bdqval_DefaultValue)
+
 **Data**
 
 [bdqval:Empty](#bdqval_Empty) |
 [bdqval:NotEmpty](#bdqval_NotEmpty) 
 
-**bdqval:Parameter**
+**bdqffdq:Parameter**
+
+[bdqval:annotationAlertIf](#bdqval_annotationAlertIf) |
+[bdqval:annotationSystem](#bdqval_annotationSystem) |
+[bdqval:assumptionOnUnknownBiome](#bdqval_assumptionOnUnknownBiome) |
+[bdqval:defaultGeodeticDatum](#bdqval_defaultGeodeticDatum) |
+[bdqval:defaultOccurrenceStatus](#bdqval_defaultOccurrenceStatus) |
+[bdqval:earliestValidDate](#bdqval_earliestValidDate) |
+[bdqval:geospatialLand](#bdqval_geospatialLand) |
+[bdqval:includeEventDate](#bdqval_includeEventDate) |
+[bdqval:latestValidDate](#bdqval_latestValidDate) |
+[bdqval:maximumValidDepthInMeters](#bdqval_maximumValidDepthInMeters) |
+[bdqval:maximumValidElevationInMeters](#bdqval_maximumValidElevationInMeters) |
+[bdqval:minimumValidDepthInMeters](#bdqval_minimumValidDepthInMeters) |
+[bdqval:minimumValidElevationInMeters](#bdqval_minimumValidElevationInMeters) |
+[bdqval:sourceAuthority](#bdqval_sourceAuthority) |
+[bdqval:spatialBufferInMeters](#bdqval_spatialBufferInMeters) |
+[bdqval:taxonIsMarine](#bdqval_taxonIsMarine) 
 
 **bdqffdq:UseCase**
 
@@ -197,12 +217,32 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 
 **Classes**
 
+[DefaultSourceAuthority](#bdqval_DefaultSourceAuthority) |
+[DefaultValue](#bdqval_DefaultValue)
+
 **Data**
 
 [Empty](#bdqval_Empty) |
 [NotEmpty](#bdqval_NotEmpty) 
 
-**bdqval:Parameter**
+**bdqffdq:Parameter**
+
+[annotationAlertIf](#bdqval_annotationAlertIf) |
+[annotationSystem](#bdqval_annotationSystem) |
+[assumptionOnUnknownBiome](#bdqval_assumptionOnUnknownBiome) |
+[defaultGeodeticDatum](#bdqval_defaultGeodeticDatum) |
+[defaultOccurrenceStatus](#bdqval_defaultOccurrenceStatus) |
+[earliestValidDate](#bdqval_earliestValidDate) |
+[geospatialLand](#bdqval_geospatialLand) |
+[includeEventDate](#bdqval_includeEventDate) |
+[latestValidDate](#bdqval_latestValidDate) |
+[maximumValidDepthInMeters](#bdqval_maximumValidDepthInMeters) |
+[maximumValidElevationInMeters](#bdqval_maximumValidElevationInMeters) |
+[minimumValidDepthInMeters](#bdqval_minimumValidDepthInMeters) |
+[minimumValidElevationInMeters](#bdqval_minimumValidElevationInMeters) |
+[sourceAuthority](#bdqval_sourceAuthority) |
+[spatialBufferInMeters](#bdqval_spatialBufferInMeters) |
+[taxonIsMarine](#bdqval_taxonIsMarine) 
 
 **bdqffdq:UseCase**
 

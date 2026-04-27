@@ -163,8 +163,6 @@ An instance of `bdqffdq:Measure` or `bdqffdq:Amendment` SHOULD NOT have a `bdqff
 
 (See also [3.2 Index By Label (non-normative)](#32-index-by-label-non-normative))
 
-**Classes**
-
 **Vocabulary**
 
 [bdqcrit:Complete](#bdqcrit_Complete) |
@@ -179,8 +177,6 @@ An instance of `bdqffdq:Measure` or `bdqffdq:Amendment` SHOULD NOT have a `bdqff
 ### 3.2 Index By Label (non-normative)
 
 (See also [3.1 Index By Term Name (non-normative)](#31-index-by-term-name-non-normative))
-
-**Classes**
 
 [Complete](#bdqcrit_Complete) |
 [Consistent](#bdqcrit_Consistent) |

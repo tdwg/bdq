@@ -164,8 +164,6 @@ Each instance of a Test, regardless of Test type, SHOULD have exactly one `bdqff
 
 (See also [3.2 Index By Label (non-normative)](#32-index-by-label-non-normative))
 
-**Classes**
-
 **Vocabulary**
 
 [bdqdim:Completeness](#bdqdim_Completeness) |
@@ -178,8 +176,6 @@ Each instance of a Test, regardless of Test type, SHOULD have exactly one `bdqff
 ### 3.2 Index By Label (non-normative)
 
 (See also [3.1 Index By Term Name (non-normative)](#31-index-by-term-name-non-normative))
-
-**Classes**
 
 [Completeness](#bdqdim_Completeness) |
 [Conformance](#bdqdim_Conformance) |

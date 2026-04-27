@@ -167,8 +167,6 @@ An instance of `bdqffdq:Validation`, `bdqffdq:Issue`, or `bdqffdq:Measure` SHOUL
 
 (See also [3.2 Index By Label (non-normative)](#32-index-by-label-non-normative))
 
-**Classes**
-
 **Vocabulary**
 
 [bdqenh:AssumedDefault](#bdqenh_AssumedDefault) |
@@ -180,8 +178,6 @@ An instance of `bdqffdq:Validation`, `bdqffdq:Issue`, or `bdqffdq:Measure` SHOUL
 ### 3.2 Index By Label (non-normative)
 
 (See also [3.1 Index By Term Name (non-normative)](#31-index-by-term-name-non-normative))
-
-**Classes**
 
 [Assumed Default](#bdqenh_AssumedDefault) |
 [Converted](#bdqenh_Converted) |

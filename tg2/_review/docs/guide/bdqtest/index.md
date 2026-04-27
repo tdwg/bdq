@@ -383,9 +383,6 @@ Nothing in this section should be taken as:
 
 Tests operate on data. Data may be understood as representing a single record or multiple records. Each BDQ Test is defined to apply to one or the other, not both.  
 
-**TODO: This statement goes in the bdqffdq guide not here**
-Each BDQ Test (each instance of a `bdqffdq:DataQualityNeed`) MUST have exactly one `bdqffdq:hasResourceType` object property that relates the Test to a `Resource Type` of `bdqffdq:SingleRecord` or `bdqffdq:MultiRecord`.
-
 A `Single Record` (`bdqffdq:SingleRecord`) BDQ Test:
 * MAY be applied to a single [Simple Darwin Core](https://dwc.tdwg.org/simple/) record,
 * MAY be applied to a single instance of a Darwin Core `dwc:Occurrence`, `dwc:Taxon`, `dwc:Event`, or other class, 
