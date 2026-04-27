@@ -105,6 +105,34 @@ with open(vocabulary_configuration_yaml_file) as vcfy:
    term_concept_dictionary = yaml.load(vcfy, Loader=yaml.FullLoader)
 
 # ---------------
+# Supporting functions
+# ---------------
+
+def split_rdf_types(raw: str) -> list[str]:
+    """
+    Split rdf_type field into a list, trimming whitespace.
+    Handles comma-separated multi-values like: "bdqffdq:Parameter, owl:NamedIndividual"
+    """
+    if raw is None:
+        return []
+    raw = str(raw).strip()
+    if not raw:
+        return []
+    return [t.strip() for t in raw.split(",") if t.strip()]
+
+def is_class_rdf_type(raw: str) -> bool:
+    """
+    True if rdf_type indicates a class, accommodating the observed representations.
+    """
+    types = split_rdf_types(raw)
+    return (
+        "owl:Class" in types
+        or "rdfs:Class" in types
+        or "http://www.w3.org/2002/07/owl#Class" in types
+        or "http://www.w3.org/2000/01/rdf-schema#Class" in types
+    )
+
+# ---------------
 # Load header data
 # ---------------
 
@@ -188,8 +216,8 @@ for term in termLists:
     term_history_csv = "../_review/vocabulary/{}_term_versions.csv".format(term)
     if term == 'bdqval' : 
         organized_in_categories = True
-        display_order = ['Data','bdqval:Parameter','bdqffdq:UseCase','bdqffdq:AbstractInformationElement']
-        display_label = ['Data','bdqval:Parameter','bdqffdq:UseCase','bdqffdq:AbstractInformationElement']
+        display_order = ['Data','bdqffdq:Parameter','bdqffdq:UseCase','bdqffdq:AbstractInformationElement']
+        display_label = ['Data','bdqffdq:Parameter','bdqffdq:UseCase','bdqffdq:AbstractInformationElement']
     else : 
         organized_in_categories = False
         display_order = ['']
@@ -301,16 +329,19 @@ for term in termLists:
     text = '### 3.1 Index By Term Name (non-normative)\n\n'
     text += '(See also [3.2 Index By Label (non-normative)](#32-index-by-label-non-normative))\n\n'
     
-    text += '**Classes**\n'
-    text += '\n'
-    for row_index,row in terms_sorted_by_localname.iterrows():
-        if row['rdf_type'] == 'http://www.w3.org/2000/01/rdf-schema#Class':
-            curie = row['pref_ns_prefix'] + ":" + row['term_localName']
-            curie_anchor = curie.replace(':','_')
-            text += '[' + curie + '](#' + curie_anchor + ') |\n'
-    text = text[:len(text)-2] # remove final trailing vertical bar and newline
-    text += '\n\n' # put back removed newline
+    ## Classes ## 
+    class_links = []
+    for row_index, row in terms_sorted_by_localname.iterrows():
+        if is_class_rdf_type(row["rdf_type"]):
+            curie = term + ":" + row["term_localName"]
+            curie_anchor = curie.replace(":", "_")
+            class_links.append(f'[{curie}](#{curie_anchor})')
+
+    if class_links:
+        text += "**Classes**\n\n"
+        text += " |\n".join(class_links) + "\n\n"
     
+    ## Not Classes, by category ##
     for category in range(0,len(display_order)):
         text += '**' + display_label[category] + '**\n'
         text += '\n'
@@ -321,14 +352,15 @@ for term in termLists:
             filtered_table = terms_sorted_by_localname
             
         for row_index,row in filtered_table.iterrows():
-            if row['rdf_type'] != 'http://www.w3.org/2000/01/rdf-schema#Class':
+            if not is_class_rdf_type(row['rdf_type']):
                 # curie = row['pref_ns_prefix'] + ":" + row['term_localName']
                 ## PJM: Assuming term is prefix for all terms in vocabulary file
                 curie = term + ":" + row['term_localName']
                 #curie = "bdqdim:" + row['term_localName']
                 curie_anchor = curie.replace(':','_')
                 text += '[' + curie + '](#' + curie_anchor + ') |\n'
-        text = text[:len(text)-2] # remove final trailing vertical bar and newline
+        if text.endswith(" |\n"):
+            text = text[:len(text)-2] # remove final trailing vertical bar and newline
         text += '\n\n' # put back removed newline
     
     index_by_name = text
@@ -344,17 +376,21 @@ for term in termLists:
     text = '### 3.2 Index By Label (non-normative)\n\n'
     text += '(See also [3.1 Index By Term Name (non-normative)](#31-index-by-term-name-non-normative))\n\n'
     
-    text += '**Classes**\n'
-    text += '\n'
-    for row_index,row in terms_sorted_by_label.iterrows():
-        if row['rdf_type'] == 'http://www.w3.org/2000/01/rdf-schema#Class':
+    ## Classes ##
+    class_links = []
+
+    for row_index, row in terms_sorted_by_label.iterrows():
+        if is_class_rdf_type(row["rdf_type"]):
             ## PJM: Assuming term is prefix for all terms in vocabulary file
-            curie = term + ":" + row['term_localName']
-            curie_anchor = curie.replace(':','_')
-            text += '[' + row['label'] + '](#' + curie_anchor + ') |\n'
-    text = text[:len(text)-2] # remove final trailing vertical bar and newline
-    text += '\n\n' # put back removed newline
-    
+            curie = term + ":" + row["term_localName"]
+            curie_anchor = curie.replace(":", "_")
+            class_links.append(f'[{row["label"]}](#{curie_anchor})')
+
+    if class_links:
+        text += "**Classes**\n\n"
+        text += " |\n".join(class_links) + "\n\n"
+
+    ## Not Classes, by category ##
     for category in range(0,len(display_order)):
         if organized_in_categories:
             text += '**' + display_label[category] + '**\n'
@@ -366,13 +402,14 @@ for term in termLists:
             
         for row_index,row in filtered_table.iterrows():
             if row_index == 0 or (row_index != 0 and row['label'] != filtered_table.iloc[row_index - 1].loc['label']): # this is a hack to prevent duplicate labels
-                if row['rdf_type'] != 'http://www.w3.org/2000/01/rdf-schema#Class':
+                if not is_class_rdf_type(row['rdf_type']):
                     # curie_anchor = row['pref_ns_prefix'] + "_" + row['term_localName']
                     ## PJM: Assuming term is prefix for all terms in vocabulary file
                     curie = term + ":" + row['term_localName']
                     curie_anchor = curie.replace(':','_')
                     text += '[' + row['label'] + '](#' + curie_anchor + ') |\n'
-        text = text[:len(text)-2] # remove final trailing vertical bar and newline
+        if text.endswith(" |\n"):
+            text = text[:len(text)-2] # remove final trailing vertical bar and newline
         text += '\n\n' # put back removed newline
     
     index_by_label = text
