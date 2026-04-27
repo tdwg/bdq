@@ -63,7 +63,7 @@
 "DCMI","dc:","Glossary"
 "defaultGeodeticDatum","bdqval:defaultGeodeticDatum","bdqval:"
 "DefaultSourceAuthority","bdqval:DefaultSourceAuthority","bdqval:"
-"defaultValue","bdqval:defaultValue","bdqval:"
+"DefaultValue","bdqval:DefaultValue","bdqval:"
 "Description","rdfs:comment","Key to Vocabulary Terms"
 "Developed As GitHub Issue","skos:historyNote","Key to Vocabulary Terms"
 "Dimension","bdqffdq:DataQualityDimension","Glossary"

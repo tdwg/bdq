@@ -653,6 +653,52 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 <table>
 	<thead>
 		<tr>
+			<th colspan="2"><a id="bdqval_defaultOccurrenceStatus"></a>Term Name  bdqval:defaultOccurrenceStatus</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Term IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/defaultOccurrenceStatus">https://rs.tdwg.org/bdqval/terms/defaultOccurrenceStatus</a></td>
+		</tr>
+		<tr>
+			<td>Modified</td>
+			<td>2026-04-27</td>
+		</tr>
+		<tr>
+			<td>Term version IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/defaultOccurrenceStatus-2026-04-27">https://rs.tdwg.org/bdqval/terms/version/defaultOccurrenceStatus-2026-04-27</a></td>
+		</tr>
+		<tr>
+			<td>Label</td>
+			<td>defaultOccurrenceStatus</td>
+		</tr>
+		<tr>
+			<td>Definition</td>
+			<td>A provided default value for dwc:occurrenceStatus that is used when a required dwc:occurrenceStatus is bdqval:Empty.</td>
+		</tr>
+		<tr>
+			<td>Comments</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Status</td>
+			<td>recommended</td>
+		</tr>
+		<tr>
+			<td>Controlled value</td>
+			<td>defaultOccurrenceStatus</td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>bdqffdq:Parameter, owl:NamedIndividual</td>
+		</tr>
+	</tbody>
+</table>
+
+<table>
+	<thead>
+		<tr>
 			<th colspan="2"><a id="bdqval_DefaultSourceAuthority"></a>Term Name  bdqval:DefaultSourceAuthority</th>
 		</tr>
 	</thead>
@@ -663,11 +709,11 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-04-22</td>
+			<td>2026-04-27</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/DefaultSourceAuthority-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/DefaultSourceAuthority-2026-04-22</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/DefaultSourceAuthority-2026-04-27">https://rs.tdwg.org/bdqval/terms/version/DefaultSourceAuthority-2026-04-27</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -691,7 +737,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Type</td>
-			<td>bdqffdq:Parameter, owl:NamedIndividual</td>
+			<td>owl:Class</td>
 		</tr>
 	</tbody>
 </table>
@@ -699,25 +745,25 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqval_defaultValue"></a>Term Name  bdqval:defaultValue</th>
+			<th colspan="2"><a id="bdqval_DefaultValue"></a>Term Name  bdqval:DefaultValue</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
 			<td>Term IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/defaultValue">https://rs.tdwg.org/bdqval/terms/defaultValue</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/DefaultValue">https://rs.tdwg.org/bdqval/terms/DefaultValue</a></td>
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-04-22</td>
+			<td>2026-04-27</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/defaultValue-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/defaultValue-2026-04-22</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/DefaultValue-2026-04-27">https://rs.tdwg.org/bdqval/terms/version/DefaultValue-2026-04-27</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
-			<td>defaultValue</td>
+			<td>DefaultValue</td>
 		</tr>
 		<tr>
 			<td>Definition</td>
@@ -733,11 +779,11 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Controlled value</td>
-			<td>defaultValue</td>
+			<td>DefaultValue</td>
 		</tr>
 		<tr>
 			<td>Type</td>
-			<td>bdqffdq:Parameter, owl:NamedIndividual</td>
+			<td>owl:Class</td>
 		</tr>
 	</tbody>
 </table>
@@ -1285,11 +1331,11 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>References: <ul><li>Gill, A.M., Belbin, L. and Chippendale, G.M. (1985). Phytogeography of EUCALYPTUS in Australia. Bureau of Flora and Fauna, Australian Flora and Fauna Series, 3. Canberra. 53p. ISBN:  0644040815. </li><li>Phillips, S. J., Anderson, R. P., & Schapire, R. E. (2006). Maximum entropy modeling of species geographic distributions. Ecological Modelling, 190(3-4), 231-259.  </li><li>Guisan, A. Edwards, T.C. and Hastie, T. (2002). Generalized linear and generalized additive models in studies of species distributions: setting the scene. Ecological Modelling 157, 89-100.</li></ul></td>
+			<td>References: <ul><li>Gill, A.M., Belbin, L. and Chippendale, G.M. (1985). Phytogeography of EUCALYPTUS in Australia. Bureau of Flora and Fauna, Australian Flora and Fauna Series, 3. Canberra. 53p. ISBN:  0644040815. </li><li>Phillips, S. J., Anderson, R. P., and Schapire, R. E. (2006). Maximum entropy modeling of species geographic distributions. Ecological Modelling, 190(3-4), 231-259.  </li><li>Guisan, A. Edwards, T.C. and Hastie, T. (2002). Generalized linear and generalized additive models in studies of species distributions: setting the scene. Ecological Modelling 157, 89-100.</li></ul></td>
 		</tr>
 		<tr>
 			<td>Fitness requirements</td>
-			<td>Data are fit for the use case bdqval:Species-Distribution-Modelling-Trees when records have valid:  <ul><li>dwc:scientificName identified to species level.  </li><li>dwc:basisOfRecord = "Occurrence".   </li><li>dwc:occurrenceStatus = "present".  </li><li>dwc:decimalLatitude and dwc:decimalLongitude.  </li><li>dwc:coordinateUncertaintyInMeters < 500.  </li><li>dwc:dataGeneralizations = bdqval:empty.  </li><li>dwc:year or dwc:eventDate within provided temporal limits. </li></ul></td>
+			<td>Data are fit for the use case bdqval:Species-Distribution-Modelling-Trees when records have valid:  <ul><li>dwc:scientificName identified to species level.  </li><li>dwc:basisOfRecord = "Occurrence".   </li><li>dwc:occurrenceStatus = "present".  </li><li>dwc:decimalLatitude and dwc:decimalLongitude.  </li><li>dwc:coordinateUncertaintyInMeters less than 500.  </li><li>dwc:dataGeneralizations = bdqval:empty.  </li><li>dwc:year or dwc:eventDate within provided temporal limits. </li></ul></td>
 		</tr>
 		<tr>
 			<td>Status</td>

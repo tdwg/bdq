@@ -158,10 +158,26 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
      <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqval/terms/defaultGeodeticDatum"/>
 </rdf:Description>
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqval/terms/version/DefaultSourceAuthority-2026-04-22">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqval/terms/version/defaultOccurrenceStatus-2026-04-27">
      <rdfs:isDefinedBy rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
      <dcterms:isPartOf rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
-     <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-04-22</dcterms:issued>
+     <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-04-27</dcterms:issued>
+     <tdwgutility:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recommended</tdwgutility:status>
+     <rdfs:label xml:lang="en">defaultOccurrenceStatus</rdfs:label>
+     <skos:prefLabel xml:lang="en">defaultOccurrenceStatus</skos:prefLabel>
+     <skos:note xml:lang="en"></skos:note>
+     <rdfs:comment xml:lang="en">A provided default value for dwc:occurrenceStatus that is used when a required dwc:occurrenceStatus is bdqval:Empty.</rdfs:comment>
+     <skos:definition xml:lang="en">A provided default value for dwc:occurrenceStatus that is used when a required dwc:occurrenceStatus is bdqval:Empty.</skos:definition>
+     <rdf:value>defaultOccurrenceStatus</rdf:value>
+     <skos:inScheme rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
+     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Parameter"/>
+     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+     <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqval/terms/defaultOccurrenceStatus"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqval/terms/version/DefaultSourceAuthority-2026-04-27">
+     <rdfs:isDefinedBy rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
+     <dcterms:isPartOf rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
+     <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-04-27</dcterms:issued>
      <tdwgutility:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recommended</tdwgutility:status>
      <rdfs:label xml:lang="en">DefaultSourceAuthority</rdfs:label>
      <skos:prefLabel xml:lang="en">DefaultSourceAuthority</skos:prefLabel>
@@ -170,25 +186,23 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <skos:definition xml:lang="en">A provided default bdqval:sourceAuthority that is used when a required bdqval:Parameter specifying a bdqval:sourceAuthority has not been provided at the time the Test is run.</skos:definition>
      <rdf:value>DefaultSourceAuthority</rdf:value>
      <skos:inScheme rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
-     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Parameter"/>
-     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
      <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqval/terms/DefaultSourceAuthority"/>
 </rdf:Description>
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqval/terms/version/defaultValue-2026-04-22">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqval/terms/version/DefaultValue-2026-04-27">
      <rdfs:isDefinedBy rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
      <dcterms:isPartOf rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
-     <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-04-22</dcterms:issued>
+     <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-04-27</dcterms:issued>
      <tdwgutility:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recommended</tdwgutility:status>
-     <rdfs:label xml:lang="en">defaultValue</rdfs:label>
-     <skos:prefLabel xml:lang="en">defaultValue</skos:prefLabel>
+     <rdfs:label xml:lang="en">DefaultValue</rdfs:label>
+     <skos:prefLabel xml:lang="en">DefaultValue</skos:prefLabel>
      <skos:note xml:lang="en"></skos:note>
      <rdfs:comment xml:lang="en">A preselected value (e.g., year, elevation) to be used where a required bdqval:Parameter value has not been provided at the time the Test is run.</rdfs:comment>
      <skos:definition xml:lang="en">A preselected value (e.g., year, elevation) to be used where a required bdqval:Parameter value has not been provided at the time the Test is run.</skos:definition>
-     <rdf:value>defaultValue</rdf:value>
+     <rdf:value>DefaultValue</rdf:value>
      <skos:inScheme rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
-     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Parameter"/>
-     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-     <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqval/terms/defaultValue"/>
+     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+     <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqval/terms/DefaultValue"/>
 </rdf:Description>
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqval/terms/version/earliestValidDate-2026-04-22">
      <rdfs:isDefinedBy rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
@@ -371,14 +385,14 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <tdwgutility:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recommended</tdwgutility:status>
      <rdfs:label xml:lang="en">Species-Distribution-Modelling-Trees</rdfs:label>
      <skos:prefLabel xml:lang="en">Species-Distribution-Modelling-Trees</skos:prefLabel>
-     <skos:note xml:lang="en">References: <ul><li>Gill, A.M., Belbin, L. and Chippendale, G.M. (1985). Phytogeography of EUCALYPTUS in Australia. Bureau of Flora and Fauna, Australian Flora and Fauna Series, 3. Canberra. 53p. ISBN:  0644040815. </li><li>Phillips, S. J., Anderson, R. P., & Schapire, R. E. (2006). Maximum entropy modeling of species geographic distributions. Ecological Modelling, 190(3-4), 231-259.  </li><li>Guisan, A. Edwards, T.C. and Hastie, T. (2002). Generalized linear and generalized additive models in studies of species distributions: setting the scene. Ecological Modelling 157, 89-100.</li></ul></skos:note>
+     <skos:note xml:lang="en">References: <ul><li>Gill, A.M., Belbin, L. and Chippendale, G.M. (1985). Phytogeography of EUCALYPTUS in Australia. Bureau of Flora and Fauna, Australian Flora and Fauna Series, 3. Canberra. 53p. ISBN:  0644040815. </li><li>Phillips, S. J., Anderson, R. P., and Schapire, R. E. (2006). Maximum entropy modeling of species geographic distributions. Ecological Modelling, 190(3-4), 231-259.  </li><li>Guisan, A. Edwards, T.C. and Hastie, T. (2002). Generalized linear and generalized additive models in studies of species distributions: setting the scene. Ecological Modelling 157, 89-100.</li></ul></skos:note>
      <rdfs:comment xml:lang="en">Research uses forming a bdqffdq:UseCase for selecting dwc:Occurrence data suitable for predicting the spatial distribution of a limited number of Eucalypt tree species (Gill et al. 1985). This use case focuses on filtering occurrence records that meet criteria for a known species at a known location and date. Filtered records will be combined with environmental data derived from occurrence locations to evaluate the performance of robust spatial distribution models: Maxent (Phillips et al. 2006), Generalized Linear and Additive Models (Guisan et al. 2002). Methods will be evaluated through subsequent systematic surveys of selected tree species in areas with high predicted occurrence and low record density. The products of this project will be 1) recommendations of robust methods for species distribution modelling of tree species, 2) a suite of appropriate environmental variables for the selected species, and 3) a set of improved ‘expert distribution’ envelopes from the modeling</rdfs:comment>
      <skos:definition xml:lang="en">Research uses forming a bdqffdq:UseCase for selecting dwc:Occurrence data suitable for predicting the spatial distribution of a limited number of Eucalypt tree species (Gill et al. 1985). This use case focuses on filtering occurrence records that meet criteria for a known species at a known location and date. Filtered records will be combined with environmental data derived from occurrence locations to evaluate the performance of robust spatial distribution models: Maxent (Phillips et al. 2006), Generalized Linear and Additive Models (Guisan et al. 2002). Methods will be evaluated through subsequent systematic surveys of selected tree species in areas with high predicted occurrence and low record density. The products of this project will be 1) recommendations of robust methods for species distribution modelling of tree species, 2) a suite of appropriate environmental variables for the selected species, and 3) a set of improved ‘expert distribution’ envelopes from the modeling</skos:definition>
      <rdf:value>SDM-Trees</rdf:value>
      <skos:inScheme rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
      <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/UseCase"/>
      <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqval/terms/SDM-Trees"/>
-     <bdqffdq:hasFitnessRequirements rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data are fit for the use case bdqval:Species-Distribution-Modelling-Trees when records have valid:  <ul><li>dwc:scientificName identified to species level.  </li><li>dwc:basisOfRecord = "Occurrence".   </li><li>dwc:occurrenceStatus = "present".  </li><li>dwc:decimalLatitude and dwc:decimalLongitude.  </li><li>dwc:coordinateUncertaintyInMeters < 500.  </li><li>dwc:dataGeneralizations = bdqval:empty.  </li><li>dwc:year or dwc:eventDate within provided temporal limits. </li></ul></bdqffdq:hasFitnessRequirements>
+     <bdqffdq:hasFitnessRequirements rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data are fit for the use case bdqval:Species-Distribution-Modelling-Trees when records have valid:  <ul><li>dwc:scientificName identified to species level.  </li><li>dwc:basisOfRecord = "Occurrence".   </li><li>dwc:occurrenceStatus = "present".  </li><li>dwc:decimalLatitude and dwc:decimalLongitude.  </li><li>dwc:coordinateUncertaintyInMeters less than 500.  </li><li>dwc:dataGeneralizations = bdqval:empty.  </li><li>dwc:year or dwc:eventDate within provided temporal limits. </li></ul></bdqffdq:hasFitnessRequirements>
 </rdf:Description>
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqval/terms/version/sourceAuthority-2026-04-22">
      <rdfs:isDefinedBy rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
