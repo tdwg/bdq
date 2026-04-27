@@ -70,7 +70,9 @@ Draft Standard for Review
   - [4.2 Resource Types (normative)](#42-resource-types-normative)
     - [4.2.1 SingleRecord in Darwin Core Data Package (non-normative)](#421-singlerecord-in-darwin-core-data-package-non-normative)
   - [4.3 Parameterizing the Tests (normative)](#43-parameterizing-the-tests-normative)
-    - [4.3.1 Parameter Examples (non-normative)](#431-parameter-examples-non-normative)
+    - [4.3.1 There can be a Source Authority without a Parameter (normative)](#431-there-can-be-a-source-authority-without-a-parameter-normative)
+    - [4.3.2 Explaining Source Authorities without a Parameter (non-normative)](#432-explaining-source-authorities-without-a-parameter-non-normative)
+    - [4.3.2 Parameter Examples (non-normative)](#432-parameter-examples-non-normative)
 
 [5 Design of the Tests (normative)](#5-design-of-the-tests-normative)
   - [5.1 BDQ Tests: An Operational Perspective (non-normative)](#51-bdq-tests-an-operational-perspective-non-normative)
@@ -427,11 +429,24 @@ Values of `bdqffdq:hasAuthoritiesDefaults` SHOULD be a text string listing `Para
 - parameter default = "default value" {[resource]}
 - parameter default = "default value" {[resource]} {API endpoint [resource]}
 
+#### 4.3.1 There can be a Source Authority without a Parameter (normative)
+
 The `bdqffdq:hasAuthoritiesDefaults` data property MAY be used without corresponding `bdqffdq:Arguments` and `bdqffdq:Parameters` when a Test is not parameterized, but a `bdqval:sourceAuthority` is mentioned within a `bdqffdq:hasExpectedResponse` for the `bdqffdq:Specification` and the `bdqffdq:hasAuthoritiesDefaults` provides details on this `sourceAuthority`. This usage allows for simpler and easier-to-read expected responses.
+
+#### 4.3.2 Explaining Source Authorities without a Parameter (non-normative)
+
+If there is only one source authority, it does not make sense to make the Test parameterized, but it is still important for clarity to be explicit about what that source authority is, and to provide details about it. In this case, the `bdqffdq:hasAuthoritiesDefaults` data property can be used to provide this information without the need for a parameter and argument.
+
+For example: AMENDMENT_DCTYPE_STANDARDIZED  has the following values for Expected Response (`hasExpectedResponse`) and Source Authorities/Defaults (`hasAuthoritiesDefaults`):
+* `EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the value of dc:type is bdqval:Empty; AMENDED the value of dc:type if it can be unambiguously interpreted as a term name in the bdqval:sourceAuthority; otherwise NOT_AMENDED`
+* `bdqval:sourceAuthority = "DCMI Type Vocabulary" {[http://purl.org/dc/terms/DCMIType]} {"DCMI Type Vocabulary List of Terms" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}`
+
+AMENDMENT_DCTYPE_STANDARDIZED does not take a `Parameter` for the source authority, because there is only one source authority for the DCMI Type Vocabulary.  However, it is still important to be explicit about what that source authority is, and to provide details about it.  Placing this information in (by convention) structured form in `bdqffdq:hasAuthoritiesDefaults` rather than in the `hasExpectedResponse` allows for clearer and more readable expected responses, and allows for the information about the source authority to be more easily extracted and used by implementations.
+
 
 Section [2.3.2 Reading a Specification (non-normative)](../implementers/index.md#232-reading-a-specification-non-normative) of the [BDQ Implementer's Guide](../implementers/index.md) contains additional guidance for handling parameters in BDQ Test implementations.
 
-#### 4.3.1 Parameter Examples (non-normative)
+#### 4.3.2 Parameter Examples (non-normative)
 
 Example values for `bdqffdq:hasAuthoritiesDefaults`: 
 
@@ -507,15 +522,30 @@ The `bdqffdq:` vocabulary enables the wrapping of the results of BDQ Tests withi
 
 ### 5.5 Test Execution Environments and Workflows (non-normative)
 
-Neither the Test descriptions nor the framework impose constraints on environments or workflows for execution. One possible workflow is to run all validations, then all amendments, then all validations again on a modified copy of the input data to which all proposed amendments have been applied.
+Neither the Test descriptions nor the framework impose constraints on environments or workflows for execution. 
 
-A single validation step, with measures evaluating the results of the amendments could look like the diagram below.
+One possible workflow is to run:
+1. A pre-amendment phase where all `Validations` plus all `MultiRecord` `Measures` are executed
+1. then an amendment phase where all `Amendments` are executed
+1. then a post-amendment phase where all `Validations` plus all `MultiRecord` `Measures` are executed again, this time on a modified copy of the input data to which all proposed changes to the data from `Amendments` have been applied.
+
+A single validation step, with `Measures` evaluating the results of `Validations` performed on the raw input data could look like the diagram below.
 
 ![Diagram of workflow through single validation step](workflow_single_iteration.svg)
 
-Expanding on this single validation step, amendments can be run and their results fed back into a second phase of post-amendment validation, with measures again evaluating the results of validation of the input data if all changes proposed by amendments are accepted. Presentation of a data quality report would be an expected result from this workflow for Quality Control purposes, while using the Measures in the second step to filter data in a processing pipeline to just those that are fit for purpose for a particular use would be expected for Quality Assurance purposes.
+_A workflow with a single validation step, with `Measures` evaluating the results of `Validations` performed on the raw input data.  Colors highlight cells that are populated in the input data, and `Response` values in a `Data Quality Report`._
+
+Subsequent to this initial validation step, in an amendment phase, `Amendments` can be executed on the raw input data and their `Response.results` applied to modify the data (modified only locally in the test execution environment).  
+
+Then, in a post-amendment step and these amended data can undergo a second phase of validation, with `Measures` again evaluating the results of the `Validations`, but this time not on the raw input data, but on the data as if all changes proposed by `Amendments` were accepted (i.e., a hypothetical ‘all-amendments-applied’ view).
+
+A comparison of the results of the `Measures` in the first validation phase with those in the second validation phase can be used to evaluate the impact of the proposed changes from the `Amendments`, that is, how much could the quality of the data be improved for the specific `Use Case` by accepting the proposed changes from the `Amendments`.
+
+One expected outcome of such a three phase (pre-amendment, amendment, post-amendment) workflow is a `Data Quality Report`, which supports both `Quality Control` and `Quality Assurance` purposes. The `Data Quality Report` can be used for `Quality Control` purposes by evaluating the number and distribution of quality issues in the data, as well the potential impact of proposed changes.  For `Quality Assurance` purposes, the `Measures` from the second validation phase can be used to filter the data for downstream use, retaining only those records that are fit for a particular purpose (the purpose specified by the `Use Case`).  
 
 ![Diagram of workflow with pre-amendment validation+measure phase, followed by amendment phase, followed by post-amendment validation-measure phase](workflow_two_iterations.svg)
+
+_A workflow with a pre-amendment validation+measure phase, followed by an amendment phase, followed by a post-amendment validation+measure phase._
 
 ## 6 Example RDF description of a Test (non-normative) 
 
