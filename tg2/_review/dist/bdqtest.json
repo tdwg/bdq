@@ -42375,6 +42375,9 @@
                 "@id": "https://rs.tdwg.org/bdqtest/terms/3f335517-f442-4b98-b149-1e87ff16de45-2025-03-06"
             },
             {
+                "@id": "https://rs.tdwg.org/bdqtest/terms/c09ecbf9-34e3-4f3e-b74a-8796af15e59f-2025-03-06"
+            },
+            {
                 "@id": "https://rs.tdwg.org/bdqtest/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2025-03-07"
             },
             {
@@ -42385,6 +42388,9 @@
             },
             {
                 "@id": "https://rs.tdwg.org/bdqtest/terms/ad0c8855-de69-4843-a80c-a5387d20fbc8-2025-03-06"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqtest/terms/9beb9442-d942-4f42-8b6a-fcea01ee086a-2025-03-07"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqtest/terms/42408a00-bf71-4892-a399-4325e2bc1fb8-2025-03-07"
@@ -42401,7 +42407,7 @@
         ],
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
-                "@value": "ValidationPolicy: (10) validations  in UseCase bdqval:SDM-Trees"
+                "@value": "ValidationPolicy: (12) validations  in UseCase bdqval:SDM-Trees"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
@@ -42411,7 +42417,7 @@
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
             {
-                "@value": "ValidationPolicy: (10) validations  in UseCase bdqval:SDM-Trees"
+                "@value": "ValidationPolicy: (12) validations  in UseCase bdqval:SDM-Trees"
             }
         ]
     },

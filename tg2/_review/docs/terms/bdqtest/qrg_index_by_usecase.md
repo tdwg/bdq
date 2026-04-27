@@ -652,9 +652,13 @@ VALIDATION_DECIMALLATITUDE_NOTEMPTY [Quick Reference Guide](index.md#VALIDATION_
 
 VALIDATION_DECIMALLONGITUDE_INRANGE [Quick Reference Guide](index.md#VALIDATION_DECIMALLONGITUDE_INRANGE) [Term List](../../list/bdqtest/index.md#bdqtest_0949110d-c06b-450e-9649-7c1374d940d1)
 
+VALIDATION_DECIMALLONGITUDE_NOTEMPTY [Quick Reference Guide](index.md#VALIDATION_DECIMALLONGITUDE_NOTEMPTY) [Term List](../../list/bdqtest/index.md#bdqtest_9beb9442-d942-4f42-8b6a-fcea01ee086a)
+
 VALIDATION_EVENTDATE_STANDARD [Quick Reference Guide](index.md#VALIDATION_EVENTDATE_STANDARD) [Term List](../../list/bdqtest/index.md#bdqtest_4f2bf8fd-fc5c-493f-a44c-e7b16153c803)
 
 VALIDATION_YEAR_INRANGE [Quick Reference Guide](index.md#VALIDATION_YEAR_INRANGE) [Term List](../../list/bdqtest/index.md#bdqtest_ad0c8855-de69-4843-a80c-a5387d20fbc8)
+
+VALIDATION_YEAR_NOTEMPTY [Quick Reference Guide](index.md#VALIDATION_YEAR_NOTEMPTY) [Term List](../../list/bdqtest/index.md#bdqtest_c09ecbf9-34e3-4f3e-b74a-8796af15e59f)
 
 VALIDATION_OCCURRENCESTATUS_STANDARD [Quick Reference Guide](index.md#VALIDATION_OCCURRENCESTATUS_STANDARD) [Term List](../../list/bdqtest/index.md#bdqtest_7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47)
 
