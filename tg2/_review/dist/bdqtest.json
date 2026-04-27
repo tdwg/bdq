@@ -41307,6 +41307,62 @@
         ]
     },
     {
+        "@id": "urn:uuid:8d7e13ee-cd98-432e-b94a-6b86bc89141b",
+        "@type": [
+            "https://rs.tdwg.org/bdqffdq/terms/MeasurementPolicy"
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/includedInPolicy": [
+            {
+                "@id": "https://rs.tdwg.org/bdqtest/terms/6f7a9b82-7d34-4111-a2a6-9efe5221fa44-2025-03-07"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqtest/terms/a8aee02c-cf7c-4104-a601-d8afc4f9cbe2-2025-03-06"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqtest/terms/c8c61535-ab1a-4ec6-b4e9-f5f02541d7d8-2025-03-07"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqtest/terms/14a1d51f-16ed-4148-9dc8-1e90157a9868-2025-03-06"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqtest/terms/3c8bc478-f6b2-4533-b7ce-45bae5d186c2-2025-03-07"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqtest/terms/a0502c5f-608b-4e59-99da-d9490bb4d93b-2025-03-06"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqtest/terms/241a279c-76d5-499b-ab49-a47ad7f8df50-2025-03-07"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqtest/terms/2d90d94b-d384-4bac-aa68-c6800d765882-2025-03-07"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqtest/terms/2fea4571-92d0-48a5-a5ba-6caecd647862-2025-03-07"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "MeasurementPolicy: (9) measures  in UseCase bdqval:SDM-Trees"
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
+            {
+                "@id": "https://rs.tdwg.org/bdqval/terms/SDM-Trees"
+            }
+        ]
+    },
+    {
+        "@id": "https://rs.tdwg.org/bdqval/terms/SDM-Trees",
+        "@type": [
+            "https://rs.tdwg.org/bdqffdq/terms/UseCase"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "bdqval:SDM-Trees"
+            }
+        ]
+    },
+    {
         "@id": "urn:uuid:08c7162d-11af-481b-bee1-738c9ac2fc68",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/MeasurementPolicy"
@@ -42307,6 +42363,59 @@
         ]
     },
     {
+        "@id": "urn:uuid:3e97fe1a-e797-4ee5-ad12-bfa42a6071e2",
+        "@type": [
+            "https://rs.tdwg.org/bdqffdq/terms/ValidationPolicy"
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/includedInPolicy": [
+            {
+                "@id": "https://rs.tdwg.org/bdqtest/terms/0949110d-c06b-450e-9649-7c1374d940d1-2025-03-07"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqtest/terms/3f335517-f442-4b98-b149-1e87ff16de45-2025-03-06"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqtest/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2025-03-07"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqtest/terms/4f2bf8fd-fc5c-493f-a44c-e7b16153c803-2025-03-06"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqtest/terms/b6ecda2a-ce36-437a-b515-3ae94948fe83-2025-03-07"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqtest/terms/ad0c8855-de69-4843-a80c-a5387d20fbc8-2025-03-06"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqtest/terms/42408a00-bf71-4892-a399-4325e2bc1fb8-2025-03-07"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqtest/terms/c6adf2ea-3051-4498-97f4-4b2f8a105f57-2025-03-07"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqtest/terms/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2025-03-07"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqtest/terms/7d2485d5-1ba7-4f25-90cb-f4480ff1a275-2025-03-07"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ValidationPolicy: (10) validations  in UseCase bdqval:SDM-Trees"
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
+            {
+                "@id": "https://rs.tdwg.org/bdqval/terms/SDM-Trees"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "ValidationPolicy: (10) validations  in UseCase bdqval:SDM-Trees"
+            }
+        ]
+    },
+    {
         "@id": "urn:uuid:0053ca4f-7d45-41ea-912e-c8847bb70142",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ValidationPolicy"
@@ -42782,6 +42891,33 @@
         ]
     },
     {
+        "@id": "urn:uuid:9b881942-1a8d-42a9-8973-006b5772d72b",
+        "@type": [
+            "https://rs.tdwg.org/bdqffdq/terms/AmendmentPolicy"
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/includedInPolicy": [
+            {
+                "@id": "https://rs.tdwg.org/bdqtest/terms/710fe118-17e1-440f-b428-88ba3f547d6d-2025-03-06"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqtest/terms/07c28ace-561a-476e-a9b9-3d5ad6e35933-2025-03-07"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqtest/terms/f01fb3f9-2f7e-418b-9f51-adf50f202aea-2025-03-06"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "AmendmentPolicy: (3) amendments  in UseCase bdqval:SDM-Trees"
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
+            {
+                "@id": "https://rs.tdwg.org/bdqval/terms/SDM-Trees"
+            }
+        ]
+    },
+    {
         "@id": "urn:uuid:05b21497-a98f-4024-af0e-36d8de5cc317",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/AmendmentPolicy"
@@ -42958,6 +43094,27 @@
         "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
             {
                 "@id": "https://rs.tdwg.org/bdqval/terms/Record-Management"
+            }
+        ]
+    },
+    {
+        "@id": "urn:uuid:af48deb9-ed5e-4f57-afc1-5a7fc7faf108",
+        "@type": [
+            "https://rs.tdwg.org/bdqffdq/terms/IssuePolicy"
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/includedInPolicy": [
+            {
+                "@id": "https://rs.tdwg.org/bdqtest/terms/13d5a10e-188e-40fd-a22c-dbaa87b91df2-2025-03-06"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "IssuePolicy: (1) issues  in UseCase bdqval:SDM-Trees"
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
+            {
+                "@id": "https://rs.tdwg.org/bdqval/terms/SDM-Trees"
             }
         ]
     },

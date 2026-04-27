@@ -9092,6 +9092,18 @@ bdqval:Biotic-Relationships a bdqffdq:UseCase;
 bdqval:Record-Management a bdqffdq:UseCase;
   rdfs:label "bdqval:Record-Management" .
 
+<urn:uuid:8d7e13ee-cd98-432e-b94a-6b86bc89141b> a bdqffdq:MeasurementPolicy;
+  bdqffdq:includedInPolicy bdqtest:6f7a9b82-7d34-4111-a2a6-9efe5221fa44-2025-03-07,
+    bdqtest:a8aee02c-cf7c-4104-a601-d8afc4f9cbe2-2025-03-06, bdqtest:c8c61535-ab1a-4ec6-b4e9-f5f02541d7d8-2025-03-07,
+    bdqtest:14a1d51f-16ed-4148-9dc8-1e90157a9868-2025-03-06, bdqtest:3c8bc478-f6b2-4533-b7ce-45bae5d186c2-2025-03-07,
+    bdqtest:a0502c5f-608b-4e59-99da-d9490bb4d93b-2025-03-06, bdqtest:241a279c-76d5-499b-ab49-a47ad7f8df50-2025-03-07,
+    bdqtest:2d90d94b-d384-4bac-aa68-c6800d765882-2025-03-07, bdqtest:2fea4571-92d0-48a5-a5ba-6caecd647862-2025-03-07;
+  rdfs:label "MeasurementPolicy: (9) measures  in UseCase bdqval:SDM-Trees";
+  bdqffdq:hasUseCase bdqval:SDM-Trees .
+
+bdqval:SDM-Trees a bdqffdq:UseCase;
+  rdfs:label "bdqval:SDM-Trees" .
+
 <urn:uuid:08c7162d-11af-481b-bee1-738c9ac2fc68> a bdqffdq:MeasurementPolicy;
   bdqffdq:includedInPolicy bdqtest:453844ae-9df4-439f-8e24-c52498eca84a-2024-09-24,
     bdqtest:49a94636-a562-4e6b-803c-665c80628a3d-2024-09-25, bdqtest:45fb49eb-4a1b-4b49-876f-15d5034dfc73-2024-09-25,
@@ -9270,6 +9282,17 @@ bdqval:Taxon-Management a bdqffdq:UseCase;
   bdqffdq:hasUseCase bdqval:Record-Management;
   skos:prefLabel "ValidationPolicy: (69) validations  in UseCase bdqval:Record-Management" .
 
+<urn:uuid:3e97fe1a-e797-4ee5-ad12-bfa42a6071e2> a bdqffdq:ValidationPolicy;
+  bdqffdq:includedInPolicy bdqtest:0949110d-c06b-450e-9649-7c1374d940d1-2025-03-07,
+    bdqtest:3f335517-f442-4b98-b149-1e87ff16de45-2025-03-06, bdqtest:ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2025-03-07,
+    bdqtest:4f2bf8fd-fc5c-493f-a44c-e7b16153c803-2025-03-06, bdqtest:b6ecda2a-ce36-437a-b515-3ae94948fe83-2025-03-07,
+    bdqtest:ad0c8855-de69-4843-a80c-a5387d20fbc8-2025-03-06, bdqtest:42408a00-bf71-4892-a399-4325e2bc1fb8-2025-03-07,
+    bdqtest:c6adf2ea-3051-4498-97f4-4b2f8a105f57-2025-03-07, bdqtest:7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2025-03-07,
+    bdqtest:7d2485d5-1ba7-4f25-90cb-f4480ff1a275-2025-03-07;
+  rdfs:label "ValidationPolicy: (10) validations  in UseCase bdqval:SDM-Trees";
+  bdqffdq:hasUseCase bdqval:SDM-Trees;
+  skos:prefLabel "ValidationPolicy: (10) validations  in UseCase bdqval:SDM-Trees" .
+
 <urn:uuid:0053ca4f-7d45-41ea-912e-c8847bb70142> a bdqffdq:ValidationPolicy;
   bdqffdq:includedInPolicy bdqtest:0493bcfb-652e-4d17-815b-b0cce0742fbe-2025-03-07,
     bdqtest:69b2efdc-6269-45a4-aecb-4cb99c2ae134-2025-03-07, bdqtest:8f1e6e58-544b-4365-a569-fb781341644e-2025-03-07,
@@ -9358,6 +9381,12 @@ bdqval:Taxon-Management a bdqffdq:UseCase;
   rdfs:label "AmendmentPolicy: (28) amendments  in UseCase bdqval:Record-Management";
   bdqffdq:hasUseCase bdqval:Record-Management .
 
+<urn:uuid:9b881942-1a8d-42a9-8973-006b5772d72b> a bdqffdq:AmendmentPolicy;
+  bdqffdq:includedInPolicy bdqtest:710fe118-17e1-440f-b428-88ba3f547d6d-2025-03-06,
+    bdqtest:07c28ace-561a-476e-a9b9-3d5ad6e35933-2025-03-07, bdqtest:f01fb3f9-2f7e-418b-9f51-adf50f202aea-2025-03-06;
+  rdfs:label "AmendmentPolicy: (3) amendments  in UseCase bdqval:SDM-Trees";
+  bdqffdq:hasUseCase bdqval:SDM-Trees .
+
 <urn:uuid:05b21497-a98f-4024-af0e-36d8de5cc317> a bdqffdq:AmendmentPolicy;
   bdqffdq:includedInPolicy bdqtest:39bb2280-1215-447b-9221-fd13bc990641-2025-03-07,
     bdqtest:3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e-2025-03-07, bdqtest:bd385eeb-44a2-464b-a503-7abe407ef904-2025-03-07,
@@ -9395,6 +9424,11 @@ bdqval:Taxon-Management a bdqffdq:UseCase;
   bdqffdq:includedInPolicy bdqtest:13d5a10e-188e-40fd-a22c-dbaa87b91df2-2025-03-06;
   rdfs:label "IssuePolicy: (1) issues  in UseCase bdqval:Record-Management";
   bdqffdq:hasUseCase bdqval:Record-Management .
+
+<urn:uuid:af48deb9-ed5e-4f57-afc1-5a7fc7faf108> a bdqffdq:IssuePolicy;
+  bdqffdq:includedInPolicy bdqtest:13d5a10e-188e-40fd-a22c-dbaa87b91df2-2025-03-06;
+  rdfs:label "IssuePolicy: (1) issues  in UseCase bdqval:SDM-Trees";
+  bdqffdq:hasUseCase bdqval:SDM-Trees .
 
 <urn:uuid:26fdef6a-c268-40f2-aaaf-a8ac930bcf86> a bdqffdq:IssuePolicy;
   bdqffdq:includedInPolicy bdqtest:13d5a10e-188e-40fd-a22c-dbaa87b91df2-2025-03-06,

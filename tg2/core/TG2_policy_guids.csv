@@ -18,3 +18,7 @@
 "bdqval:Record-Management","IssuePolicy","urn:uuid:68924076-d5d3-4716-8bb4-dfc4d3272e09"
 "bdqval:Record-Management","MeasurementPolicy","urn:uuid:10fbc0cb-81e3-4913-9c47-25dbbc9ae407"
 "bdqval:Record-Management","ValidationPolicy","urn:uuid:12719a4b-7a64-4b5a-aa1b-d3f37001b8d6"
+"bdqval:SDM-Trees","ValidationPolicy","urn:uuid:3e97fe1a-e797-4ee5-ad12-bfa42a6071e2"
+"bdqval:SDM-Trees","AmendmentPolicy","urn:uuid:9b881942-1a8d-42a9-8973-006b5772d72b"
+"bdqval:SDM-Trees","IssuePolicy","urn:uuid:af48deb9-ed5e-4f57-afc1-5a7fc7faf108"
+"bdqval:SDM-Trees","MeasurementPolicy","urn:uuid:8d7e13ee-cd98-432e-b94a-6b86bc89141b"

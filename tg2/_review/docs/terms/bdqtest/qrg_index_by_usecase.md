@@ -635,3 +635,38 @@ AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID [Quick Reference Guide](index.md#
 
 
 
+## bdqval:SDM-Trees
+Research uses forming a bdqffdq:UseCase for selecting dwc:Occurrence data suitable for predicting the spatial distribution of a limited number of Eucalypt tree species (Gill et al. 1985). This use case focuses on filtering occurrence records that meet criteria for a known species at a known location and date. Filtered records will be combined with environmental data derived from occurrence locations to evaluate the performance of robust spatial distribution models: Maxent (Phillips et al. 2006), Generalized Linear and Additive Models (Guisan et al. 2002). Methods will be evaluated through subsequent systematic surveys of selected tree species in areas with high predicted occurrence and low record density. The products of this project will be 1) recommendations of robust methods for species distribution modelling of tree species, 2) a suite of appropriate environmental variables for the selected species, and 3) a set of improved ‘expert distribution’ envelopes from the modeling
+
+Fitness Requirements: Data are fit for the use case bdqval:Species-Distribution-Modelling-Trees when records have valid:  <ul><li>dwc:scientificName identified to species level.  </li><li>dwc:basisOfRecord = "Occurrence".   </li><li>dwc:occurrenceStatus = "present".  </li><li>dwc:decimalLatitude and dwc:decimalLongitude.  </li><li>dwc:coordinateUncertaintyInMeters < 500.  </li><li>dwc:dataGeneralizations = bdqval:empty.  </li><li>dwc:year or dwc:eventDate within provided temporal limits. </li></ul>
+
+VALIDATION_BASISOFRECORD_NOTEMPTY [Quick Reference Guide](index.md#VALIDATION_BASISOFRECORD_NOTEMPTY) [Term List](../../list/bdqtest/index.md#bdqtest_ac2b7648-d5f9-48ca-9b07-8ad5879a2536)
+
+VALIDATION_BASISOFRECORD_STANDARD [Quick Reference Guide](index.md#VALIDATION_BASISOFRECORD_STANDARD) [Term List](../../list/bdqtest/index.md#bdqtest_42408a00-bf71-4892-a399-4325e2bc1fb8)
+
+VALIDATION_COORDINATEUNCERTAINTY_INRANGE [Quick Reference Guide](index.md#VALIDATION_COORDINATEUNCERTAINTY_INRANGE) [Term List](../../list/bdqtest/index.md#bdqtest_c6adf2ea-3051-4498-97f4-4b2f8a105f57)
+
+VALIDATION_DECIMALLATITUDE_INRANGE [Quick Reference Guide](index.md#VALIDATION_DECIMALLATITUDE_INRANGE) [Term List](../../list/bdqtest/index.md#bdqtest_b6ecda2a-ce36-437a-b515-3ae94948fe83)
+
+VALIDATION_DECIMALLATITUDE_NOTEMPTY [Quick Reference Guide](index.md#VALIDATION_DECIMALLATITUDE_NOTEMPTY) [Term List](../../list/bdqtest/index.md#bdqtest_7d2485d5-1ba7-4f25-90cb-f4480ff1a275)
+
+VALIDATION_DECIMALLONGITUDE_INRANGE [Quick Reference Guide](index.md#VALIDATION_DECIMALLONGITUDE_INRANGE) [Term List](../../list/bdqtest/index.md#bdqtest_0949110d-c06b-450e-9649-7c1374d940d1)
+
+VALIDATION_EVENTDATE_STANDARD [Quick Reference Guide](index.md#VALIDATION_EVENTDATE_STANDARD) [Term List](../../list/bdqtest/index.md#bdqtest_4f2bf8fd-fc5c-493f-a44c-e7b16153c803)
+
+VALIDATION_YEAR_INRANGE [Quick Reference Guide](index.md#VALIDATION_YEAR_INRANGE) [Term List](../../list/bdqtest/index.md#bdqtest_ad0c8855-de69-4843-a80c-a5387d20fbc8)
+
+VALIDATION_OCCURRENCESTATUS_STANDARD [Quick Reference Guide](index.md#VALIDATION_OCCURRENCESTATUS_STANDARD) [Term List](../../list/bdqtest/index.md#bdqtest_7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47)
+
+VALIDATION_SCIENTIFICNAME_FOUND [Quick Reference Guide](index.md#VALIDATION_SCIENTIFICNAME_FOUND) [Term List](../../list/bdqtest/index.md#bdqtest_3f335517-f442-4b98-b149-1e87ff16de45)
+
+ISSUE_DATAGENERALIZATIONS_NOTEMPTY [Quick Reference Guide](index.md#ISSUE_DATAGENERALIZATIONS_NOTEMPTY) [Term List](../../list/bdqtest/index.md#bdqtest_13d5a10e-188e-40fd-a22c-dbaa87b91df2)
+
+AMENDMENT_BASISOFRECORD_STANDARDIZED [Quick Reference Guide](index.md#AMENDMENT_BASISOFRECORD_STANDARDIZED) [Term List](../../list/bdqtest/index.md#bdqtest_07c28ace-561a-476e-a9b9-3d5ad6e35933)
+
+AMENDMENT_EVENT_FROM_EVENTDATE [Quick Reference Guide](index.md#AMENDMENT_EVENT_FROM_EVENTDATE) [Term List](../../list/bdqtest/index.md#bdqtest_710fe118-17e1-440f-b428-88ba3f547d6d)
+
+AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID [Quick Reference Guide](index.md#AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID) [Term List](../../list/bdqtest/index.md#bdqtest_f01fb3f9-2f7e-418b-9f51-adf50f202aea)
+
+
+
