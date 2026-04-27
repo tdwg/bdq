@@ -10,7 +10,7 @@ Outputs pairs of:
 
 Optional enhancements:
 - Filter to a single `Use Case` by its computed useCaseName (e.g., "bdqval:Taxon-Management").
-- Include the `rdfs:comment` from the `Specification` related to the Test via the appropriate `Method`.
+- Include the `dcterms:description` from the `Specification` related to the Test via the appropriate `Method`.
 
 Important modeling assumption
 -----------------------------
@@ -36,7 +36,7 @@ Tests are related to Specifications via Methods (type-specific):
 
 And then:
   ?method bdqffdq:hasSpecification ?spec .
-  ?spec rdfs:comment ?specComment .
+  ?spec dcterms:description ?specComment .
 
 Exclusion
 ---------
@@ -65,6 +65,7 @@ from rdflib import Graph
 PREFIXES = """
 PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
 
 PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
 PREFIX bdqval:     <https://rs.tdwg.org/bdqval/terms/>
@@ -149,7 +150,7 @@ WHERE {
     }
 
     ?method bdqffdq:hasSpecification ?spec .
-    ?spec rdfs:comment ?specComment .
+    ?spec dcterms:description ?specComment .
   }
 """
 )
@@ -222,7 +223,7 @@ def main() -> None:
     ap.add_argument(
         "--include-spec-comment",
         action="store_true",
-        help="Include the rdfs:comment from the Specification related to the Test via its Method.",
+        help="Include the dcterms:description from the Specification related to the Test via its Method.",
     )
     args = ap.parse_args()
 
@@ -244,7 +245,7 @@ def main() -> None:
     if args.use_case_name:
         extra += f", filtered to useCaseName={args.use_case_name!r}"
     if args.include_spec_comment:
-        extra += ", including Specification rdfs:comment"
+        extra += ", including Specification dcterms:description"
     print(f"Wrote {len(rows)} rows to {out_path} ({args.format.upper()}){extra}")
 
 
