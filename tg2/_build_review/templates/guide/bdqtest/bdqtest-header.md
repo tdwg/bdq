@@ -338,14 +338,30 @@ A `Single Record` (`bdqffdq:SingleRecord`) BDQ Test:
 * MAY be applied to a single [Simple Darwin Core](https://dwc.tdwg.org/simple/) record,
 * MAY be applied to a single instance of a Darwin Core `dwc:Occurrence`, `dwc:Taxon`, `dwc:Event`, or other class, 
 * MAY extend across one to many relations from that class instance to instances of classes of other types in a structured representation of Darwin Core data (Wieczorek et al. 2012).
-  * For example, **TODO: Darwin Core Data Package**.
   * For example, input Darwin Core data in RDF should be presented to a BDQ `Single Record` Test one `dwc:Occurrence` at a time, although the `dwc:Occurrence` could be linked to multiple other instances of other classes such as `dwc:Identifications`.
+  * Handling of multiplicity of related rows in a `SingleRecord` is a responsibility of Test execution frameworks.
+  * See the disscussion of `Single Record` in relation to the Darwin Core Data Package (Dawin Core Maintinance Group, 2026) format below.
 * SHOULD NOT take multiple rows from a flat file (e.g. Simple Darwin Core) as input. 
 * SHOULD NOT take multiple objects of the same core type in structured Darwin Core as input 
 
 The BDQ Test [ISSUE_ANNOTATION_NOTEMPTY](../../terms/bdqtest/index.md#ISSUE_ANNOTATION_NOTEMPTY) similarly operates on a single Simple Darwin Core record, or a single core Darwin Core class instance, and asks whether `Annotations` exist related to that class, here this standard encourages the implementation of a standard for annotating `dwc:Occurrence` records beyond the [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021).
 
 BDQ `Multi Record` (`bdqffdq:MultiRecord`) Tests operate on a dataset as a whole. The initial BDQ `Multi Record` Tests in `bdqtest:` sum up results across all records for each `bdqffdq:SingleRecord` Test.
+
+#### 4.2.1 SingleRecord in Darwin Core Data Package (non-normative)
+
+Data in a Darwin Core Data Package (DwC-DP) can be treated as `Single Record` input to BDQ Tests by selecting **one logical record** (one row from an entity, but not necessaraly the package’s *core* entity, e.g., an Occurrence) and then presenting the values in that row, joining out to related tables for other fields to obtain the set of input `Information Elements` for the Test.
+
+Concretely:
+
+- A DwC-DP consists of one or more related tables (entities) plus metadata describing identifiers and relationships among rows.
+- For BDQ `Single Record` Tests, you choose a target record (e.g., one Occurrence row) and interpret its column values as the values of Darwin Core terms such as `dwc:country`, `dwc:eventDate`, `dwc:decimalLatitude`, etc. Those term values are the `Information Elements` acted upon/consulted by the Test.
+- If the Test requires terms that are not in the core table (e.g., a related Identification, Taxon, Location, or MeasurementOrFact entity), the implementation can *join* or *resolve* the related row(s) using the DwC-DP relationships, and treat those retrieved values as additional consulted `Information Elements` for that same `Single Record`.
+- The BDQ `Single Record` concept is therefore a **record-shaped view** over the package: a mapping from one focal entity row (plus any required linked rows) onto the input `Information Elements` of tests.
+
+In other words, DwC-DP provides the normalized, relational representation; a BDQ `Single Record` Test can consume a denormalized “record view” extracted from it for one focal identifier.
+
+When multiplicity exists (e.g. one Occurrence with multiple Identifications), the implementation can choose to either limit the input to one of the related rows (e.g., the most recent Identification), or to handle the multiplicity by repeating relevant tests on each related row (e.g., running VALIDATION_SCIENTIFICNAME_FOUND on each identification), making for a more coplex `DataQualityReport` with care needed in identifying the `DataResource` of each `Response`.  How to handle multiplicity of such related rows in a `SingleRecord` is a responsibility of Test execution frameworks.
 
 ### 4.3 Parameterizing the Tests (normative)
 
