@@ -1,5 +1,5 @@
 
-## Cite BDQ (non-normative)
+## 8 Cite BDQ (non-normative)
 
 **To cite BDQ in general, use the peer-reviewed article:**
 

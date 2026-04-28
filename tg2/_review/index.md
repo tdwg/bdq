@@ -95,8 +95,6 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
 
 [8 Cite BDQ (non-normative)](#8-cite-bdq-non-normative)
 
-[Cite BDQ (non-normative)](#cite-bdq-non-normative)
-
 ## 1 Introduction (non-normative)
 
 <!-- Brief high level overview of the standard --->
@@ -694,26 +692,8 @@ We have used the formatting recommended by Pensoft, see https://checklist.pensof
 <li>WoRMS (2019) WoRMS - World Register of Marine Species. https://www.marinespecies.org</li> 
 </ul>
 
+
 ## 8 Cite BDQ (non-normative)
-
-**To cite BDQ in general, use the peer-reviewed article:**
-
-Chapman AD, Belbin L, Zermoglio PF, Wieczorek J, Morris PJ, Nicholls
-M, Rees ER, Veiga AK, Thompson A, Saraiva AM, James SA, Gendreau C,
-Benson A, Schigel D (2020). Developing Standards for Improved Data
-Quality and for Selecting Fit for Use Biodiversity Data.
-Biodiversity Information Science and Standards 4: e50889.
-https://doi.org/10.3897/biss.4.50889
-
-**To cite this document specifically, use the following:**
-
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. The Biodiversity Data Quality (BDQ) Standard. Biodiversity Information Standards (TDWG). <https://bdq.tdwg/org/vocabularies/2025-05-10>
-
-**Biodiversity Information Standards (TDWG)**
-
-This content made open by Biodiversity Information Standards (TDWG) is licensed under a [Licensed under a Creative Commons Attribution 4.0 International (CC BY) License.](http://creativecommons.org/licenses/by/4.0/)
-
-## Cite BDQ (non-normative)
 
 **To cite BDQ in general, use the peer-reviewed article:**
 
