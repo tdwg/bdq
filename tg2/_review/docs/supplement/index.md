@@ -137,7 +137,7 @@ For the list and links to all associated documents see [The Biodiversity Data Qu
 
 ### 1.4 Status of the Content of this Document (normative)
 
-This document is non-normative.
+All sections of this document except this one are non-normative.
 
 ### 1.5 Namespace abbreviations (non-normative)
 
