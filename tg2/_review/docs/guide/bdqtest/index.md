@@ -54,7 +54,7 @@ Draft Standard for Review
   - [1.7 Referring to Terms (normative)](#17-referring-to-terms-normative)
 
 [2 A Brief Context for the BDQ Tests (non-normative)](#2-a-brief-context-for-the-bdq-tests-non-normative)
-  - [2.1 The BDQ Definition o:f "Test" (non-normative)](#21-the-bdq-definition-of-test-non-normative)
+  - [2.1 The BDQ Definition of "Test" (non-normative)](#21-the-bdq-definition-of-test-non-normative)
     - [2.1.1 Conceptual map: how BDQ uses the term "Test" (non-normative)](#211-conceptual-map-how-bdq-uses-the-term-test-non-normative)
   - [2.2 Use Cases (non-normative)](#22-use-cases-non-normative)
 
@@ -204,7 +204,7 @@ Some BDQ Tests also require reference to external data such as standard vocabula
 
 The emphasis in BDQ is on Tests that evaluate values from a `Single Record` (`bdqffdq:SingleRecord`). Test results may also be accumulated across multiple records (`bdqffdq:MultiRecord`). Tests that accumulate information about results across multiple records are necessary for formal application of Quality Assurance and Quality Control principles.
 
-### 2.1 The BDQ Definition o:f "Test" (non-normative)
+### 2.1 The BDQ Definition of "Test" (non-normative)
 
 This section defines the capitalized term "Test" as used in the BDQ standard and how it is constructed within the Fitness-for-Use framework. We use the capitalized term "Test" to mean something specific in the BDQ Standard. A Test is any instance of a subclass of `bdqffdq:DataQualityNeed` (e.g., `bdqffdq:Validation`) composed with an instance of a subclass of `bdqffdq:Method` (e.g., `bdqffdq:ValidationMethod`) composed with an instance of `bdqffdq:Specification`. When run by a `bdqffdq:Implementation`, each BDQ Test can produce a `bdqffdq:DataQualityReport` consisting of `bdqffdq:Responses`. See the diagram in [BDQ Tests: An Operational Perspective](#51-bdq-tests-an-operational-perspective-non-normative) below.
 
