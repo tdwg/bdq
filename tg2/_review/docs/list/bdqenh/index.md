@@ -59,8 +59,6 @@ Draft Standard for Review
 
 [4 Vocabulary (normative)](#4-vocabulary-normative)
 
-[Acronyms (non-normative)](#acronyms-non-normative)
-
 [Glossary (non-normative)](#glossary-non-normative)
 
 [References (non-normative)](#references-non-normative)
@@ -417,13 +415,9 @@ An instance of `bdqffdq:Validation`, `bdqffdq:Issue`, or `bdqffdq:Measure` SHOUL
 </table>
 
 
-## Acronyms (non-normative)
-
-A list of Acronyms can be found in the [Acronyms (non-normative)](../../../index.md#61-acronyms-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.
-
 ## Glossary (non-normative)
 
-A glossary of terms additional to those in the various namespaces can be found in the [General Glossary (non-normative)](../../../index.md#63-general-glossary-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.
+A glossary of acronyms and terms additional to those in the various namespaces can be found in the [Glossary (non-normative)](../../../index.md#6-glossary-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.
 
 ## References (non-normative)
 

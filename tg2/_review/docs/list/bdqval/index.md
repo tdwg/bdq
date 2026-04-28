@@ -59,8 +59,6 @@ Draft Standard for Review
 
 [4 Vocabulary (normative)](#4-vocabulary-normative)
 
-[Acronyms (non-normative)](#acronyms-non-normative)
-
 [Glossary (non-normative)](#glossary-non-normative)
 
 [References (non-normative)](#references-non-normative)
@@ -167,11 +165,6 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 
 (See also [3.2 Index By Label (non-normative)](#32-index-by-label-non-normative))
 
-**Classes**
-
-[bdqval:DefaultSourceAuthority](#bdqval_DefaultSourceAuthority) |
-[bdqval:DefaultValue](#bdqval_DefaultValue)
-
 **Data**
 
 [bdqval:Empty](#bdqval_Empty) |
@@ -214,11 +207,6 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 ### 3.2 Index By Label (non-normative)
 
 (See also [3.1 Index By Term Name (non-normative)](#31-index-by-term-name-non-normative))
-
-**Classes**
-
-[DefaultSourceAuthority](#bdqval_DefaultSourceAuthority) |
-[DefaultValue](#bdqval_DefaultValue)
 
 **Data**
 
@@ -732,98 +720,6 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		<tr>
 			<td>Type</td>
 			<td>bdqffdq:Parameter, owl:NamedIndividual</td>
-		</tr>
-	</tbody>
-</table>
-
-<table>
-	<thead>
-		<tr>
-			<th colspan="2"><a id="bdqval_DefaultSourceAuthority"></a>Term Name  bdqval:DefaultSourceAuthority</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Term IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/DefaultSourceAuthority">https://rs.tdwg.org/bdqval/terms/DefaultSourceAuthority</a></td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2026-04-27</td>
-		</tr>
-		<tr>
-			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/DefaultSourceAuthority-2026-04-27">https://rs.tdwg.org/bdqval/terms/version/DefaultSourceAuthority-2026-04-27</a></td>
-		</tr>
-		<tr>
-			<td>Label</td>
-			<td>DefaultSourceAuthority</td>
-		</tr>
-		<tr>
-			<td>Definition</td>
-			<td>A provided default bdqval:sourceAuthority that is used when a required bdqval:Parameter specifying a bdqval:sourceAuthority has not been provided at the time the Test is run.</td>
-		</tr>
-		<tr>
-			<td>Comments</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>Status</td>
-			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>Controlled value</td>
-			<td>DefaultSourceAuthority</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>owl:Class</td>
-		</tr>
-	</tbody>
-</table>
-
-<table>
-	<thead>
-		<tr>
-			<th colspan="2"><a id="bdqval_DefaultValue"></a>Term Name  bdqval:DefaultValue</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Term IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/DefaultValue">https://rs.tdwg.org/bdqval/terms/DefaultValue</a></td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2026-04-27</td>
-		</tr>
-		<tr>
-			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/DefaultValue-2026-04-27">https://rs.tdwg.org/bdqval/terms/version/DefaultValue-2026-04-27</a></td>
-		</tr>
-		<tr>
-			<td>Label</td>
-			<td>DefaultValue</td>
-		</tr>
-		<tr>
-			<td>Definition</td>
-			<td>A preselected value (e.g., year, elevation) to be used where a required bdqval:Parameter value has not been provided at the time the Test is run.</td>
-		</tr>
-		<tr>
-			<td>Comments</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>Status</td>
-			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>Controlled value</td>
-			<td>DefaultValue</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>owl:Class</td>
 		</tr>
 	</tbody>
 </table>
@@ -1643,13 +1539,9 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 </table>
 
 
-## Acronyms (non-normative)
-
-A list of Acronyms can be found in the [Acronyms (non-normative)](../../../index.md#61-acronyms-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.
-
 ## Glossary (non-normative)
 
-A glossary of terms additional to those in the various namespaces can be found in the [General Glossary (non-normative)](../../../index.md#63-general-glossary-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.
+A glossary of acronyms and terms additional to those in the various namespaces can be found in the [Glossary (non-normative)](../../../index.md#6-glossary-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.
 
 ## References (non-normative)
 

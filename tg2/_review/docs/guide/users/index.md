@@ -85,8 +85,6 @@ Draft Standard for Review
 
 [7 Dates and Calendars (non-normative)](#7-dates-and-calendars-non-normative)
 
-[Acronyms (non-normative)](#acronyms-non-normative)
-
 [Glossary (non-normative)](#glossary-non-normative)
 
 [References (non-normative)](#references-non-normative)
@@ -433,13 +431,9 @@ Time of day (as opposed to dates) is not considered in any of the BDQ Tests. The
 
 Different calendars have been used at different times in different places, and the transcription of an original date in one calendar into dwc:eventDate, where a Gregorian Calendar is assumed, may or may not have been done with the correct translation of the date. Metadata may or not be present to even identify such records. For more details of how the differences in Calendar dates should be treated see Section [4.1 Dates and Calendars (non-normative)](../../supplement/index.md#41-dates-and-calendars-non-normative) in [BDQ Supplemental Information](../../supplement/index.md).
 
-## Acronyms (non-normative)
-
-A list of Acronyms can be found in the [Acronyms (non-normative)](../../../index.md#61-acronyms-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.
-
 ## Glossary (non-normative)
 
-A glossary of terms additional to those in the various namespaces can be found in the [General Glossary (non-normative)](../../../index.md#63-general-glossary-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.
+A glossary of acronyms and terms additional to those in the various namespaces can be found in the [Glossary (non-normative)](../../../index.md#6-glossary-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.
 
 ## References (non-normative)
 

@@ -142,8 +142,6 @@ Draft Standard for Review
 
 [9 Existing Test Implementations (non-normative)](#9-existing-test-implementations-non-normative)
 
-[Acronyms (non-normative)](#acronyms-non-normative)
-
 [Glossary (non-normative)](#glossary-non-normative)
 
 [References (non-normative)](#references-non-normative)
@@ -1518,13 +1516,9 @@ A set of open source Java libraries provide classes that implement each of the `
 - [rec_occur_qc](https://github.com/FilteredPush/rec_occur_qc) (Morris 2025) Tests related to metadata terms.
 
 These libraries are available in Maven Central.
-## Acronyms (non-normative)
-
-A list of Acronyms can be found in the [Acronyms (non-normative)](../../../index.md#61-acronyms-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.
-
 ## Glossary (non-normative)
 
-A glossary of terms additional to those in the various namespaces can be found in the [General Glossary (non-normative)](../../../index.md#63-general-glossary-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.
+A glossary of acronyms and terms additional to those in the various namespaces can be found in the [Glossary (non-normative)](../../../index.md#6-glossary-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.
 
 ## References (non-normative)
 

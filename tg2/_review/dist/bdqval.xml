@@ -174,36 +174,6 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
      <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqval/terms/defaultOccurrenceStatus"/>
 </rdf:Description>
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqval/terms/version/DefaultSourceAuthority-2026-04-27">
-     <rdfs:isDefinedBy rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
-     <dcterms:isPartOf rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
-     <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-04-27</dcterms:issued>
-     <tdwgutility:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recommended</tdwgutility:status>
-     <rdfs:label xml:lang="en">DefaultSourceAuthority</rdfs:label>
-     <skos:prefLabel xml:lang="en">DefaultSourceAuthority</skos:prefLabel>
-     <skos:note xml:lang="en"></skos:note>
-     <rdfs:comment xml:lang="en">A provided default bdqval:sourceAuthority that is used when a required bdqval:Parameter specifying a bdqval:sourceAuthority has not been provided at the time the Test is run.</rdfs:comment>
-     <skos:definition xml:lang="en">A provided default bdqval:sourceAuthority that is used when a required bdqval:Parameter specifying a bdqval:sourceAuthority has not been provided at the time the Test is run.</skos:definition>
-     <rdf:value>DefaultSourceAuthority</rdf:value>
-     <skos:inScheme rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
-     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-     <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqval/terms/DefaultSourceAuthority"/>
-</rdf:Description>
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqval/terms/version/DefaultValue-2026-04-27">
-     <rdfs:isDefinedBy rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
-     <dcterms:isPartOf rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
-     <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-04-27</dcterms:issued>
-     <tdwgutility:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recommended</tdwgutility:status>
-     <rdfs:label xml:lang="en">DefaultValue</rdfs:label>
-     <skos:prefLabel xml:lang="en">DefaultValue</skos:prefLabel>
-     <skos:note xml:lang="en"></skos:note>
-     <rdfs:comment xml:lang="en">A preselected value (e.g., year, elevation) to be used where a required bdqval:Parameter value has not been provided at the time the Test is run.</rdfs:comment>
-     <skos:definition xml:lang="en">A preselected value (e.g., year, elevation) to be used where a required bdqval:Parameter value has not been provided at the time the Test is run.</skos:definition>
-     <rdf:value>DefaultValue</rdf:value>
-     <skos:inScheme rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
-     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-     <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqval/terms/DefaultValue"/>
-</rdf:Description>
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqval/terms/version/earliestValidDate-2026-04-22">
      <rdfs:isDefinedBy rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
      <dcterms:isPartOf rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>

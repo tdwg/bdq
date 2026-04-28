@@ -87,7 +87,10 @@ Draft Standard for Review
     - [3.11.3 Consistent behaviors (non-normative)](#3113-consistent-behaviors-non-normative)
     - [3.11.4 Avoid Test interdependencies (non-normative)](#3114-avoid-test-interdependencies-non-normative)
   - [3.12 Naming Conventions (non-normative)](#312-naming-conventions-non-normative)
-  - [3.13 Test Label Components (non-normative)](#313-test-label-components-non-normative)
+  - [3.13 Parts of Test Labels (non-normative)](#313-parts-of-test-labels-non-normative)
+    - [Test Types](#test-types)
+    - [Evaluations](#evaluations)
+    - [Abstract Information Elements Labels](#abstract-information-elements-labels)
 
 [4 Date and Time Issues (non-normative)](#4-date-and-time-issues-non-normative)
   - [4.1 Dates and Calendars (non-normative)](#41-dates-and-calendars-non-normative)
@@ -104,8 +107,6 @@ Draft Standard for Review
   - [5.3 Using Markdown Tables in GitHub Issues to Develop Test descriptors (non-normative)](#53-using-markdown-tables-in-github-issues-to-develop-test-descriptors-non-normative)
 
 [6 Code for BDQ Components (non-normative)](#6-code-for-bdq-components-non-normative)
-
-[Acronyms (non-normative)](#acronyms-non-normative)
 
 [Glossary (non-normative)](#glossary-non-normative)
 
@@ -980,7 +981,9 @@ The general pattern for `SingleRecord` Test labels is {TESTTYPE}_{INFORMATIONELE
   * it targets the `Information Element` `dwc:day`,
   * and it evaluates whether the value of dwc:day is in standard form (that is an integer in the range 1 to 31 inclusive).  
   * That this is a `SingleRecord` Test is implicit.  
-The words used for Evaluations and their definitions are listed in [Evaluations in Test Labels](../../index.md#62-evaluations-in-test-labels-non-normative) in the landing page for the BDQ Standard, and these are guidance, not a formal normative vocabulary in BDQ.
+The words used for Evaluations and their definitions are listed in [Evaluations](#evaluations) below.  
+
+These strings are guidance for labels, not a formal normative vocabulary in BDQ.
 
 The labels of `MultiRecord` tests follow a similar pattern, but prefixed by MULTIRECORD_.  
 
@@ -993,49 +996,75 @@ The `MultiRecord` `Measures` follow a naming convention of:
 
 All of the `MultiRecord` Tests initially defined in the BDQ Standard are `MultiRecord` `Measures`, though `MultiRecord` tests are not limited to `Measures` in the Framework.
 
-### 3.13 Test Label Components (non-normative)
+### 3.13 Parts of Test Labels (non-normative)
 
-The convention for Test labels we have followed reflects the Test type (i.e. subclass of `Data Quality Need`), the `bdqffdq:InformationElements` that the Test acts upon and the Quirky nature of the [Evaluation](../../index.md#62-evaluations-in-test-labels-non-normative). 
+We have followed a convention for forming the human readable Test labels. This convention reflects the Test type (i.e. subclass of `Data Quality Need`), the `bdqffdq:InformationElements` that the Test acts upon and the nature of the Evaluation that is being carried out.  By covention, these elements are placed in upper case and separated by underscores in the Test label.  
 
-For example the Test with the label "VALIDATION_COUNTRYCODE_STANDARD" checks that the value of the country code is a valid ISO country code.
+For example the Test with the label "VALIDATION_COUNTRYCODE_STANDARD" checks that the value of the country code is a valid ISO country code has a Test label composed from:
 
-* Test Type: `Validation`,
-* The `bdqffdq:InformationElement`: `dwc:countryCode`
-* The evaluation: "STANDARD".
+* Test Type: `Validation` -> VALIDATION
+* The `Information Element`: `dwc:countryCode` -> COUNTRYCODE
+* The Evaluation: "STANDARD".
 
-The table below lists the terms used for the Test `Types` and the evaluation terms, with an example for each, along with a few `Abstract Information Elements`.
+For `Single Record` Tests, the `Single Record` is implied and type is one of `Validation`, `Issue`, `Measure` or `Amendment` (the Test types in bdqffdq:),  For `MultiRecord` Tests, MULTIRECORD is stated in the label, along with a marker for whether a `MultiRecord` `Measure` returns a numerical count (COUNT) or a COMPLETE/NOT_COMPLETE `Response.result` for `Quality Assurance` use (QA).
+
+The combination of `Information Element` and Evaluation was called the Term-Action in the GitHub issues used to develop the tests.
+
+If the `Information Element` is a single term (e.g. dwc:countryCode), the information element is just the term local name placed in all upper case (e.g. COUNTRYCODE).
+If the `bdqffdq:InformationElement` is composed of several terms, these are labeled with a word that describes this combination of `Information Elements`, an Abstract Information Element Label, e.g. "YEARMONTHDAY"
+
+In some cases we have departed from this simple convention in labels for more complex Tests:
+* The evaluation LESSTHAN is framed in a different order as {informationelement}_LESSTHAN_{informationelement}. e.g. [VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH](../terms/bdqtest/index.md#VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH) 
+* Amendments that fill in a value may be framed as e.g. AMENDMENT_{inputinformationelement}_{evaluation}_{outputinformationelement} e.g. [AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID](../terms/bdqtest/index.md#AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID)
+
+These conventions for forming Test labels are simply a convention, and neither the Evaluations nor the Abstract Information Element Labels are a formal controlled vocabulary with a namespace (unlike the terms in bdqval: and the other supporting vocablularies in BDQ).
+
+The tables below list the terms used for the Test `Types` and the Evaluation terms, with an example for each, along with the few `Abstract 
+Information Element Labels`.
+
+#### Test Types
 
 | Label  | Definition  | Example  |
-|--------------------------------|-------------|----------|
-| AMENDMENT      | A Test Type that proposes changes to `Information Elements` based on some data quality enhancement. See `bdqffdq:Amendment`.    | [AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT](https://d.docs.live.net/27c145341444492c/Documents/DATA%20QUALITY%20IG/BDQ%20Core%20Standard/Review/Introduction/docs/terms/bdqtest/index.md#AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT) |
-| ASSUMEDDEFAULT | A `bdqffdq:Amendment` that replaces a `bdqval:EMPTY` term with a predefined default `bdqval:Parameter` value.         | [AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT](https://d.docs.live.net/27c145341444492c/Documents/DATA%20QUALITY%20IG/BDQ%20Core%20Standard/Review/Introduction/docs/terms/bdqtest/index.md#AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT) |
-| CENTREOFCOUNTRY        | Testing if `bdqffdq:EnformationElements` COORDINATES identify the center of the `dwc:country`, allowing for a spatial buffer.     | [ISSUE_COORDINATES_CENTEROFCOUNTRY](https://d.docs.live.net/27c145341444492c/Documents/DATA%20QUALITY%20IG/BDQ%20Core%20Standard/Review/Introduction/docs/terms/bdqtest/index.md#ISSUE_COORDINATES_CENTEROFCOUNTRY)   |
-| COMPLETE       | Testing if the `bdqffdq:InformationElement` `dwc:scientificNameId` forms a valid and complete identifier.         | [VALIDATION_SCIENTIFICNAMEID_COMPLETE](https://d.docs.live.net/27c145341444492c/Documents/DATA%20QUALITY%20IG/BDQ%20Core%20Standard/Review/Introduction/docs/terms/bdqtest/index.md#VALIDATION_SCIENTIFICNAMEID_COMPLETE)     |
-| CONSISTENT     | Identifies consistency among values between `bdqffdq:InformationElements`.          | [VALIDATION_CLASSIFICATION_CONSISTENT](https://d.docs.live.net/27c145341444492c/Documents/DATA%20QUALITY%20IG/BDQ%20Core%20Standard/Review/Introduction/docs/terms/bdqtest/index.md#VALIDATION_CLASSIFICATION_CONSISTENT)     |
-| COORDINATES    | A general category of specific `bdqval:InformationElements` that represents the combination of the Darwin Core terms `dwc:decimalLatitude` and `dwc:decimalLongitude` and may include metadata terms including `dwc:geodeticDatum`.      | [VALIDATION_COORDINATES_NOTZERO](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/list/bdqtest/index.md#bdqtest:1bf0e210-6792-4128-b8cc-ab6828aa4871)         |
-| COORDINATESTERRESTRIALMARINE   | A terrestrial taxon that has geographic coordinates that fall within terrestrial boundaries, or a marine taxon that has geographic coordinates that fall within marine boundaries.    | [VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT](https://d.docs.live.net/27c145341444492c/Documents/DATA%20QUALITY%20IG/BDQ%20Core%20Standard/Review/Introduction/docs/terms/bdqtest/index.md#VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT) |
-| DURATIONINSECONDS      | The duration in seconds of the `bdqval:InformationElement dwc:eventDate`.      | [MEASURE_EVENTDATE_DURATIONINSECONDS](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/list/bdqtest/index.md#bdqtest:56b6c695-adf1-418e-95d2-da04cad7be53)    |
-| FOUND  | The value in a `bdqffdq:InformationElement` that matched a value in a `bdqval:sourceAuthority`.      | [VALIDATION_STATEPROVINCE_FOUND](https://d.docs.live.net/27c145341444492c/Documents/DATA%20QUALITY%20IG/BDQ%20Core%20Standard/Review/Introduction/docs/terms/bdqtest/index.md#VALIDATION_STATEPROVINCE_FOUND) |
-| FROM   | An Output `bdqffdq:InformationElement` is being populated from a more primary Input `bdqffdq:InformationElement`.         | [AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID](https://d.docs.live.net/27c145341444492c/Documents/DATA%20QUALITY%20IG/BDQ%20Core%20Standard/Review/Introduction/docs/terms/bdqtest/index.md#AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID) |
-| INRANGE        | The value of `bdqffdq:InformationElements` that are within an acceptable range.     | [VALIDATION_MAXDEPTH_INRANGE](https://d.docs.live.net/27c145341444492c/Documents/DATA%20QUALITY%20IG/BDQ%20Core%20Standard/Review/Introduction/docs/terms/bdqtest/index.md#VALIDATION_MAXDEPTH_INRANGE)       |
-| ISSUE  | A `Test Type` that flags a possible issue or problem with the data that may need examination by the user to determine if data have quality for their use. See `bdqffdq:Issue`.    | [ISSUE_COORDINATES_CENTEROFCOUNTRY](https://d.docs.live.net/27c145341444492c/Documents/DATA%20QUALITY%20IG/BDQ%20Core%20Standard/Review/Introduction/docs/terms/bdqtest/index.md#ISSUE_COORDINATES_CENTEROFCOUNTRY)   |
-| LESSTHAN       | An evaluation part of the Test labelChanged to ‘evaluation part of test label’We don’t have this defined anywhere - should be added to Glossary or to the Ley to Vocabulary Terms indicating that the value in one `bdqval:InformationElement` is less than the value in another `bdqval:InformationElement`.   | [VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH](https://d.docs.live.net/27c145341444492c/Documents/DATA%20QUALITY%20IG/BDQ%20Core%20Standard/Review/Introduction/docs/terms/bdqtest/index.md#VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH)   |
-| MEASURE        | A `Test Type` that expresses how the fitness of data for some use may be measured. See `bdqffdq:Measure`          | [MEASUREMENT_AMENDMENTS_PROPOSED](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/list/bdqtest/index.md#bdqtest_03049fe5-a575-404f-b564-ae63f5a1cf8b)        |
-| MULTIRECORD_MEASURE_COUNT      | Count across MultiRecords of a VALIDATION Test that return a Response of COMPLIANT            | [MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_NOTEMPTY](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/list/bdqtest/index.md#bdqtest_b60c8c58-0137-4b6a-97e9-57d8ca5cf248)     |
-| MULTIRECORD_MEASURE_QA | Measurement over MultiRecords of a VALIDATION Test where every record complies with Quality Assurance requirements by being COMPLIANT         | [MULTIRECORD_MEASURE_QA_BASISOFRECORD_NOTEMPTY](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/list/bdqtest/index.md#bdqtest_c8c61535-ab1a-4ec6-b4e9-f5f02541d7d8)  |
-| NOTEMPTY       | A `bdqffdq:InformationElement` contains a value that is `bdqval:NotEmpty`.           | [ISSUE_DATAGENERALIZATIONS_NOTEMPTY](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/list/bdqtest/index.md#bdqtest:13d5a10e-188e-40fd-a22c-dbaa87b91df2)     |
-| POLYNOMIAL     | A general category of specific `bdqval:InformationElements` that represents a combination of the Darwin Core terms `dwc:genericName`, `dwc:specificEpithet`, `dwc:infraspecificEpithet`. See the Test [VALIDATION_POLYNOMIAL_CONSISTENT](https://d.docs.live.net/27c145341444492c/Documents/DATA%20QUALITY%20IG/BDQ%20Core%20Standard/Review/Introduction/docs/terms/bdqtest/index.md#VALIDATION_POLYNOMIAL_CONSISTENT). | [VALIDATION_POLYNOMIAL_CONSISTENT](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/list/bdqtest/index.md#bdqtest:17f03f1f-f74d-40c0-8071-2927cfc9487b)       |
-| PREREQUISITESNOTMET    | A `bdqffdq:Measure` that counts the number of Tests of `Type` `bdqffdq:Validation` that did not run due to one or more prerequisites not being met (`bdqval:INTERNAL_PREREQUISITES_NOT_MET` or `bdqval:EXTERNAL_PREREQUISITES_NOT_MET`).          | [MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/list/bdqtest/index.md#bdqtest:49a94636-a562-4e6b-803c-665c80628a3d)    |
-| PROPOSED       | A `bdqffdq:Measure` that counts the number of `bdqffdq:Amendments` where an action to modify a value in some way through a change or addition is proposed.        | [MEASURE_AMENDMENTS_PROPOSED](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/list/bdqtest/index.md#bdqtest:03049fe5-a575-404f-b564-ae63f5a1cf8b)    |
-| STANDARD       | A `bdqffdq:Validation` Test where a value in a `bdqffdq:InformationElement` matches a `bdqval:STANDARD` value in a `bdqval:sourceAuthority`.        | [VALIDATION_TAXONRANK_STANDARD](https://d.docs.live.net/27c145341444492c/Documents/DATA%20QUALITY%20IG/BDQ%20Core%20Standard/Review/Introduction/docs/terms/bdqtest/index.md#VALIDATION_TAXONRANK_STANDARD)   |
-| STANDARDIZED   | A `bdqffdq:Amendment` where a `bdqval:STANDARD` value for a `bdqffdq:InformationElement` is proposed.      | [AMENDMENT_TAXONRANK_STANDARDIZED](https://d.docs.live.net/27c145341444492c/Documents/DATA%20QUALITY%20IG/BDQ%20Core%20Standard/Review/Introduction/docs/terms/bdqtest/index.md#AMENDMENT_TAXONRANK_STANDARDIZED)     |
-| TRANSPOSED     | A `bdqffdq:Amendment` where the sign and/or value of one or more `bdqffdq:InformationElements` were proposed to be swapped.       | [AMENDMENT_COORDINATES_TRANSPOSED](https://d.docs.live.net/27c145341444492c/Documents/DATA%20QUALITY%20IG/BDQ%20Core%20Standard/Review/Introduction/docs/terms/bdqtest/index.md#AMENDMENT_COORDINATES_TRANSPOSED)     |
-| UNAMBIGUOUS    | A combination of `bdqffdq:InformationElements` is unambiguous in that they align to a unique result given a reference or a Source Authority (`bdqval:sourceAuthority`).      | [VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/list/bdqtest/index.md#bdqtest:d257eb98-27cb-48e5-8d3c-ab9fca4edd11)    |
-| VALIDATION     | A Test type that expresses how the fitness of data for some use may be measured. See `bdqffdq:Measure`      | [VALIDATION_BASISOFRECORD_NOTEMPTY](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/list/bdqtest/index.md#bdqtest_ac2b7648-d5f9-48ca-9b07-8ad5879a2536)      |
-| VERBATIM       | Refers to `bdqffdq:Amendment` Tests that attempt to extract explicit Darwin Core `bdqval:InformationElements` values from Darwin Core verbatim term `bdqval:InformationElements`.     | [AMENDMENT_EVENTDATE_FROM_VERBATIM](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/list/bdqtest/index.md#bdqtest:6d0a0c10-5e4a-4759-b448-88932f399812)      |
-| YEARMONTHDAY   | A general category of specific `bdqval:InformationElements` that represents a combination of the Darwin Core terms `dwc:year`, `dwc:month`, `dwc:day`.           | [AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/list/bdqtest/index.md#bdqtest:3892f432-ddd0-4a0a-b713-f2e2ecbd879d)  |
-| YEARSTARTDAYOFYEARENDDAYOFYEAR | A general category of specific `bdqval:InformationElements` that represents a combination of the Darwin Core terms `dwc:year`, `dwc:startDayOfYear`, `dwc:endDayofYear`.         | [AMENDMENT_EVENTDATE_FROM_YEARSTARTDAYOFYEARENDDAYOFYEAR](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/list/bdqtest/index.md#bdqtest:eb0a44fa-241c-4d64-98df-ad4aa837307b)        |
+|--------|-------------|----------|
+| AMENDMENT      | A Test Type that proposes changes to `Information Elements` based on some data quality enhancement. See `bdqffdq:Amendment`. | [AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT](../terms/bdqtest/index.md#AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT) |
+| ISSUE  | A Test Type that flags a possible issue or problem with the data that may need examination by the user to determine if data have quality for their use. See `bdqffdq:Issue`.    | [ISSUE_COORDINATES_CENTEROFCOUNTRY](../terms/bdqtest/index.md#ISSUE_COORDINATES_CENTEROFCOUNTRY)   |
+| MEASURE        | A Test Type that expresses how the fitness of data for some use may be measured. See `bdqffdq:Measure`          | [MEASUREMENT_AMENDMENTS_PROPOSED](../list/bdqtest/index.md#bdqtest_03049fe5-a575-404f-b564-ae63f5a1cf8b)        |
+| MULTIRECORD_MEASURE_COUNT      | A Test Type of `Measure` that takes as input the outputs of other Tests (usually `Validations`) across a `MultiRecord`.  For example, count across MultiRecords of a VALIDATION Test that return a Response of COMPLIANT.  Provides metrics for `Quality Control`. | [MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_NOTEMPTY](../list/bdqtest/index.md#bdqtest_b60c8c58-0137-4b6a-97e9-57d8ca5cf248)     |
+| MULTIRECORD_MEASURE_QA | Measurement over MultiRecords of a VALIDATION Test where every record complies with Quality Assurance requirements by being COMPLIANT         | [MULTIRECORD_MEASURE_QA_BASISOFRECORD_NOTEMPTY](../list/bdqtest/index.md#bdqtest_c8c61535-ab1a-4ec6-b4e9-f5f02541d7d8)  |
+| VALIDATION     | A Test type that expresses how the fitness of data for some use may be measured. See `bdqffdq:Measure`      | [VALIDATION_BASISOFRECORD_NOTEMPTY](../list/bdqtest/index.md#bdqtest_ac2b7648-d5f9-48ca-9b07-8ad5879a2536)      |
 
+#### Evaluations
+
+| Label  | Definition  | Example  |
+|--------|-------------|----------|
+| ASSUMEDDEFAULT | A `bdqffdq:Amendment` that replaces a `bdqval:EMPTY` term with a predefined default `bdqval:Parameter` value. | [AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT](../terms/bdqtest/index.md#AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT) |
+| CENTREOFCOUNTRY | Testing if `bdqffdq:EnformationElements` COORDINATES identify the center of the `dwc:country`, allowing for a spatial buffer.     | [ISSUE_COORDINATES_CENTEROFCOUNTRY](../terms/bdqtest/index.md#ISSUE_COORDINATES_CENTEROFCOUNTRY)   |
+| COMPLETE       | Testing if the `bdqffdq:InformationElement` `dwc:scientificNameId` forms a valid and complete identifier. | [VALIDATION_SCIENTIFICNAMEID_COMPLETE](../terms/bdqtest/index.md#VALIDATION_SCIENTIFICNAMEID_COMPLETE)     |
+| CONSISTENT     | Identifies consistency among values between `bdqffdq:InformationElements`.  | [VALIDATION_CLASSIFICATION_CONSISTENT](../terms/bdqtest/index.md#VALIDATION_CLASSIFICATION_CONSISTENT)     |
+| DURATIONINSECONDS | The duration in seconds of the `bdqval:InformationElement dwc:eventDate`.      | [MEASURE_EVENTDATE_DURATIONINSECONDS](../list/bdqtest/index.md#bdqtest_56b6c695-adf1-418e-95d2-da04cad7be53)    |
+| FOUND  | The value in a `bdqffdq:InformationElement` that matched a value in a `bdqval:sourceAuthority`.      | [VALIDATION_STATEPROVINCE_FOUND](../terms/bdqtest/index.md#VALIDATION_STATEPROVINCE_FOUND) |
+| FROM   | An Output `bdqffdq:InformationElement` is being populated from a more primary Input `bdqffdq:InformationElement`. | [AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID](../terms/bdqtest/index.md#AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID) |
+| INRANGE        | The value of `bdqffdq:InformationElements` that are within an acceptable range.     | [VALIDATION_MAXDEPTH_INRANGE](../terms/bdqtest/index.md#VALIDATION_MAXDEPTH_INRANGE)       |
+| LESSTHAN | An Evaluation part of a Test label indicating that the value in one bdqval:InformationElement is less than the value in another bdqval:InformationElement.  Framed in a different order as {informationelement}_LESSTHAN_{informationelement}. | [VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH](../terms/bdqtest/index.md#VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH) |
+| NOTEMPTY       | A `bdqffdq:InformationElement` contains a value that is `bdqval:NotEmpty`.   | [ISSUE_DATAGENERALIZATIONS_NOTEMPTY](../list/bdqtest/index.md#bdqtest_13d5a10e-188e-40fd-a22c-dbaa87b91df2)     |
+| PREREQUISITESNOTMET    | A `bdqffdq:Measure` that counts the number of Tests of `Type` `bdqffdq:Validation` that did not run due to one or more prerequisites not being met (`bdqval:INTERNAL_PREREQUISITES_NOT_MET` or `bdqval:EXTERNAL_PREREQUISITES_NOT_MET`).  | [MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET](../list/bdqtest/index.md#bdqtest_49a94636-a562-4e6b-803c-665c80628a3d)    |
+| PROPOSED       | A `bdqffdq:Measure` that counts the number of `bdqffdq:Amendments` where an action to modify a value in some way through a change or addition is proposed.        | [MEASURE_AMENDMENTS_PROPOSED](../list/bdqtest/index.md#bdqtest_03049fe5-a575-404f-b564-ae63f5a1cf8b)    |
+| STANDARD       | A `bdqffdq:Validation` Test where a value in a `bdqffdq:InformationElement` matches a `bdqval:STANDARD` value in a `bdqval:sourceAuthority`.        | [VALIDATION_TAXONRANK_STANDARD](../terms/bdqtest/index.md#VALIDATION_TAXONRANK_STANDARD)   |
+| STANDARDIZED   | A `bdqffdq:Amendment` where a `bdqval:STANDARD` value for a target `bdqffdq:InformationElement` is proposed.      | [AMENDMENT_TAXONRANK_STANDARDIZED](../terms/bdqtest/index.md#AMENDMENT_TAXONRANK_STANDARDIZED)     |
+| TRANSPOSED     | A `bdqffdq:Amendment` where the sign and/or value of one or more `bdqffdq:InformationElements` were proposed to be swapped.       | [AMENDMENT_COORDINATES_TRANSPOSED](../terms/bdqtest/index.md#AMENDMENT_COORDINATES_TRANSPOSED)     |
+| UNAMBIGUOUS    | A combination of `bdqffdq:InformationElements` is unambiguous in that they align to a unique result given a reference or a Source Authority (`bdqval:sourceAuthority`).      | [VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS](../list/bdqtest/index.md#bdqtest_d257eb98-27cb-48e5-8d3c-ab9fca4edd11)    |
+| VERBATIM       | Refers to `bdqffdq:Amendment` Tests that attempt to extract explicit Darwin Core `bdqval:InformationElements` values from Darwin Core verbatim term `Information Elements`.     | [AMENDMENT_EVENTDATE_FROM_VERBATIM](../list/bdqtest/index.md#bdqtest_6d0a0c10-5e4a-4759-b448-88932f399812)      |
+
+#### Abstract Information Elements Labels
+
+| Label  | Definition  | Example  |
+|--------|-------------|----------|
+| COORDINATES    | A general category of specific `bdqval:InformationElements` that represents the combination of the Darwin Core terms `dwc:decimalLatitude` and `dwc:decimalLongitude` and may include metadata terms including `dwc:geodeticDatum`.      | [VALIDATION_COORDINATES_NOTZERO](../list/bdqtest/index.md#bdqtest_1bf0e210-6792-4128-b8cc-ab6828aa4871)         |
+| COORDINATESTERRESTRIALMARINE   | A terrestrial taxon that has geographic coordinates that fall within terrestrial boundaries, or a marine taxon that has geographic coordinates that fall within marine boundaries.    | [VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT](../terms/bdqtest/index.md#VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT) |
+| POLYNOMIAL     | A general category of specific `bdqval:InformationElements` that represents a combination of the Darwin Core terms `dwc:genericName`, `dwc:specificEpithet`, `dwc:infraspecificEpithet`. See the Test [VALIDATION_POLYNOMIAL_CONSISTENT](../terms/bdqtest/index.md#VALIDATION_POLYNOMIAL_CONSISTENT). | [VALIDATION_POLYNOMIAL_CONSISTENT](../list/bdqtest/index.md#bdqtest_17f03f1f-f74d-40c0-8071-2927cfc9487b)       |
+| TAXON          | A general category of specific `Information Elements` that represent a combination of Darwin Core terms from the dwc:Taxon class. | [VALIDATION_TAXON_NOTEMPTY](../terms/bdqtest/index.md#VALIDATION_TAXON_NOTEMPTY) |
+| YEARMONTHDAY   | A general category of specific `bdqval:InformationElements` that represents a combination of the Darwin Core terms `dwc:year`, `dwc:month`, `dwc:day`.   | [AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY](../list/bdqtest/index.md#bdqtest_3892f432-ddd0-4a0a-b713-f2e2ecbd879d)  |
+| YEARSTARTDAYOFYEARENDDAYOFYEAR | A general category of specific `bdqval:InformationElements` that represents a combination of the Darwin Core terms `dwc:year`, `dwc:startDayOfYear`, `dwc:endDayofYear`. | [AMENDMENT_EVENTDATE_FROM_YEARSTARTDAYOFYEARENDDAYOFYEAR](../list/bdqtest/index.md#bdqtest_eb0a44fa-241c-4d64-98df-ad4aa837307b)       |
 
 ## 4 Date and Time Issues (non-normative)
 
@@ -1231,13 +1260,9 @@ For more information see the following README files:
 - `sci_name_qc/generation` [README](https://github.com/FilteredPush/sci_name_qc/blob/master/generation/README.md)
 - `geo_ref_qc/generation` [README](https://github.com/FilteredPush/geo_ref_qc/blob/master/generation/README.md)
 - `rec_occur_qc/generation` [README](https://github.com/FilteredPush/rec_occur_qc/blob/master/generation/README.md)
-## Acronyms (non-normative)
-
-A list of Acronyms can be found in the [Acronyms (non-normative)](../../index.md#61-acronyms-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.
-
 ## Glossary (non-normative)
 
-A glossary of terms additional to those in the various namespaces can be found in the [General Glossary (non-normative)](../../index.md#63-general-glossary-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.
+A glossary of acronyms and terms additional to those in the various namespaces can be found in the [Glossary (non-normative)](../../index.md#6-glossary-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.
 
 ## References (non-normative)
 

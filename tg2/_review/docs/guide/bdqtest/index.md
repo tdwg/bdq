@@ -91,8 +91,6 @@ Draft Standard for Review
   - [8.1 Elements of a New Use Case (non-normative)](#81-elements-of-a-new-use-case-non-normative)
   - [8.2 Proposing to add a Use Case to the BDQ Standard (non-normative)](#82-proposing-to-add-a-use-case-to-the-bdq-standard-non-normative)
 
-[Acronyms (non-normative)](#acronyms-non-normative)
-
 [Glossary (non-normative)](#glossary-non-normative)
 
 [References (non-normative)](#references-non-normative)
@@ -645,13 +643,9 @@ The definition for a new `Use Case` should include a clear statement of the purp
 
 To propose to add a new `Use Case` to the BDQ Standard, follow the instructions provided by the BDQ Maintenance Group.
 
-## Acronyms (non-normative)
-
-A list of Acronyms can be found in the [Acronyms (non-normative)](../../../index.md#61-acronyms-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.
-
 ## Glossary (non-normative)
 
-A glossary of terms additional to those in the various namespaces can be found in the [General Glossary (non-normative)](../../../index.md#63-general-glossary-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.
+A glossary of acronyms and terms additional to those in the various namespaces can be found in the [Glossary (non-normative)](../../../index.md#6-glossary-non-normative) section of the Biodiversity Data Quality (BDQ) landing page.
 
 ## References (non-normative)
 

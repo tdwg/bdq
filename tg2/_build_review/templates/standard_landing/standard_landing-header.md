@@ -489,7 +489,7 @@ There were many people who have made notable contributions at various times duri
 
 The glossary of terms used in the BDQ standard include acronyms and these terms are additional to the terms used in the BDQ and other referenced vocabularies. Note: ‘Darwin Core terms’ refer to [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021).
 
-### 6.1 Acronyms (non-normative)
+TODO: @arthurchapman to combine into one table.
 
 | Acronym | Explanation |
 |---------|-------------|
@@ -511,12 +511,6 @@ The glossary of terms used in the BDQ standard include acronyms and these terms 
 | TG3         | [Biodiversity Data Quality Interest Group - Task Group 3: Data Quality Use Cases](https://github.com/tdwg/bdq/tree/master/tg3) |
 | TG4         | [Biodiversity Data Quality Interest Group - Task Group 4: Best Practices for Development of Vocabularies of Values](https://github.com/tdwg/bdq/tree/master/tg4) |
 
-### 6.2 Evaluations in Test Labels (non-normative)
-
-
-### 6.3 General Glossary (non-normative)
-
-Glossary of terms used in the BDQ standard that are in addition to those included in the various Namespace: vocabularies and Term-Actions. Note: Usage of 'Darwin Core term(s)' below refer to [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021).
 
 | Label | Definition | Context |
 | ---- | ---- | ---- |
