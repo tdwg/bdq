@@ -186,6 +186,7 @@ See section [2.4.1 Listing Identifiers for Tests (non-normative)](../../suppleme
 | Developed As GitHub Issue (skos:historyNote) | non-normative | A note about the past state/use/meaning of a concept. In present context: A link to the GitHub issue that provided rationale management, recording a history (changes and comments) of the development of the Test. | [https://github.com/tdwg/bdq/issues/ 63](https://github.com/tdwg/bdq/issues/63) |
 | GitHub Issue Labels (skos:note) | non-normative | A general note, for any purpose. In present context: Labels applied to GitHub Issue noted in the skos:historyNote. | TG2 Amendment OTHER CODED Test VOCABULARY Conformance Parameterized CORE |
 | Argument GUID (bdqffdq:Argument) | normative | A value that, when provided to a Test bdqffdq:Specification to replace a bdqffdq:Parameter changes the behavior of the Test in a defined manner. | 1b66a16a-5e76-4eca-a400-d097ac136ac1 |
+| has Use Cases (bdqffdq:hasUseCase) | non-normative | Relates a bdqffdq:Policy to a bdqffdq:UseCase. In present context: One or more Use Cases which this Test is linked to through a Policy. | bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:SDM-Trees |
 | References (dcterms:references) | non-normative | A related resource that is referenced, cited, or otherwise pointed to by the described resource. In present context: The minimum set of references that are required for an understanding of the nature of the Test. | <ul><li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li> </ul> |
 
 
@@ -579,6 +580,10 @@ Including MultiRecord Measures
 			<td>1b66a16a-5e76-4eca-a400-d097ac136ac1</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:SDM-Trees</td>
+		</tr>
+		<tr>
 			<td>AmendmentMethod label</td>
 			<td>AmendmentMethod: AMENDMENT_BASISOFRECORD_STANDARDIZED with Specification Specification for: AMENDMENT_BASISOFRECORD_STANDARDIZED</td>
 		</tr>
@@ -680,6 +685,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Amendment SPACE CODED Test Completeness CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -801,6 +810,10 @@ Including MultiRecord Measures
 			<td>95e1332e-eeca-4b41-8698-88ffc33cef3f</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td><ul><li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li> </ul></td>
 		</tr>
@@ -920,6 +933,10 @@ Including MultiRecord Measures
 			<td>82350b56-1855-4b5a-8b44-9040efb0bf05</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td><ul><li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li> <li>VLIZ (2023) Marineregions.org. https://www.marineregions.org/downloads.php#marbound</li> <li>Dooley, JF Jnr. (2005) An inventory and comparison of globally consistent geospatial databases and libraries. Rome: FAO. http://www.fao.org/3/a0118e/a0118e00.htm#Contents</li> <li>Wikipedia (2020) ISO 3166-1 alpha-2. https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2</li> <li>DataHub (2018) List of all countries with their two digit codes (ISO 3166-1). https://datahub.io/core/country-list</li> <li>Kelso NV and Patterson T (2010) Introducing Natural Earth data—Naturalearthdata.com. Geographica Technica. Special issue, 2010 pp 82–89. https://technicalgeography.org/pdf/sp_i_2010/12_introducing_natural_earth_data__naturaleart.pdf</li> <li>Natural Earth (2022) Admin 1 – States, provinces. v5.1.1 2022-05-12. https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/</li> <li>Natural Earth (2022) Natural Earth Free vector and raster map data at 1:10m, 1:50m, and 1:110m scales. v5.1.2. https://www.naturalearthdata.com/,https://github.com/nvkelso/natural-earth-vector/releases/tag/v5.1.2</li> </ul></td>
 		</tr>
@@ -1021,6 +1038,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Amendment SPACE CODED Test VOCABULARY Conformance ISO/DCMI STANDARD CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -1126,6 +1147,10 @@ Including MultiRecord Measures
 			<td>TG2 Amendment TIME CODED Test Conformance ISO/DCMI STANDARD CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Taxon-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td><ul><li>ISO (2019) ISO 8601-1:2019(en) Date and time — Representations for information interchange — Part 1: Basic rules. https://www.iso.org/obp/ui/</li> <li>Wikipedia (2020) ISO 8601. https://en.wikipedia.org/wiki/ISO_8601</li> <li>Library of Congress (2019) Extended Date/Time Format (EDTF). https://www.loc.gov/standards/datetime/</li> </ul></td>
 		</tr>
@@ -1229,6 +1254,10 @@ Including MultiRecord Measures
 			<td>TG2 Amendment TIME CODED Test Conformance CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+		</tr>
+		<tr>
 			<td>AmendmentMethod label</td>
 			<td>AmendmentMethod: AMENDMENT_DAY_STANDARDIZED with Specification Specification for: AMENDMENT_DAY_STANDARDIZED</td>
 		</tr>
@@ -1330,6 +1359,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Amendment OTHER CODED Test Conformance ISO/DCMI STANDARD CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -1447,6 +1480,10 @@ Including MultiRecord Measures
 			<td>ff9e9459-d1a5-43a6-ada9-8be41772b711</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Alien-Species</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td><ul><li>Darwin Core Maintenance Group (2021) Degree of Establishment Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). http://dwc.tdwg.org/doe/</li> <li>Groom et al. (2019) Improving Darwin Core for research and management of alien species. Biodiversity Information Science and Standards 3: e38084. https://doi.org/10.3897/biss.3.38084</li> </ul></td>
 		</tr>
@@ -1558,6 +1595,10 @@ Including MultiRecord Measures
 			<td>17d785ee-6ac9-4ab4-9806-f4a2b0d8bbf1</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td><ul><li>Darwin Core Maintenance Group (2021) Establishment Means Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). http://rs.tdwg.org/dwc/doc/em/</li> <li>Groom et al. (2019) Improving Darwin Core for research and management of alien species. Biodiversity Information Science and Standards 3: e38084. https://doi.org/10.3897/biss.3.38084</li> </ul></td>
 		</tr>
@@ -1663,6 +1704,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Amendment TIME CODED Test Completeness CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Record-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -1772,6 +1817,10 @@ Including MultiRecord Measures
 			<td>TG2 Amendment TIME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Record-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td><ul><li>ISO (2019) ISO 8601-1:2019(en) Date and time — Representations for information interchange — Part 1: Basic rules. https://www.iso.org/obp/ui/</li> <li>Wikipedia (2020) ISO 8601. https://en.wikipedia.org/wiki/ISO_8601</li> <li>Library of Congress (2019) Extended Date/Time Format (EDTF). https://www.loc.gov/standards/datetime/</li> </ul></td>
 		</tr>
@@ -1879,6 +1928,10 @@ Including MultiRecord Measures
 			<td>TG2 Amendment TIME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Record-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td><ul><li>ISO (2019) ISO 8601-1:2019(en) Date and time — Representations for information interchange — Part 1: Basic rules. https://www.iso.org/obp/ui/</li> <li>Wikipedia (2020) ISO 8601. https://en.wikipedia.org/wiki/ISO_8601</li> </ul></td>
 		</tr>
@@ -1980,6 +2033,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Amendment TIME CODED Test Conformance ISO/DCMI STANDARD CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -2087,6 +2144,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Amendment TIME CODED Test Completeness ISO/DCMI STANDARD CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:SDM-Trees</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -2208,6 +2269,10 @@ Including MultiRecord Measures
 			<td>7fd3889a-0d1d-4054-8e68-807cfa5410f2</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td><ul><li>Maptiler (2019) EPSG.io. https://epsg.io/</li> <li>EPSG (2024) About the EPSG Dataset. https://epsg.org/</li> <li>Spatial Reference (2024) What is SpatialReference.org. https://spatialreference.org/</li> <li>Geomatic Solutions (2026) GeoRepository. https://epsg.org/about.html</li> <li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li> <li>Wieczorek C and Wieczorek J (2021) Georeferencing Calculator. https://georeferencing.org/calculator/</li> </ul></td>
 		</tr>
@@ -2313,6 +2378,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Amendment SPACE CODED Test VOCABULARY Conformance CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -2430,6 +2499,10 @@ Including MultiRecord Measures
 			<td>7ecc692d-e65f-4ea5-9d54-04421ec96ab4</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Record-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td><ul><li>Dublin Core (2020) Dublin Core Metadata Initiative. License Document. https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/LicenseDocument/</li> <li>Creative Commons (n.dat.) About the Licenses. https://creativecommons.org/licenses/</li> </ul></td>
 		</tr>
@@ -2531,6 +2604,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Amendment SPACE CODED Test Completeness CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -2636,6 +2713,10 @@ Including MultiRecord Measures
 			<td>TG2 Amendment SPACE CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td><ul><li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li> </ul></td>
 		</tr>
@@ -2737,6 +2818,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Amendment TIME CODED Test Conformance CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
@@ -2854,6 +2939,10 @@ Including MultiRecord Measures
 			<td>a558165b-7014-4029-839f-33badcb0842f</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships</td>
+		</tr>
+		<tr>
 			<td>AmendmentMethod label</td>
 			<td>AmendmentMethod: AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT with Specification Specification for: AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT</td>
 		</tr>
@@ -2965,6 +3054,10 @@ Including MultiRecord Measures
 			<td>59635d6c-f265-45dd-8814-b80a1dc41540</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships</td>
+		</tr>
+		<tr>
 			<td>AmendmentMethod label</td>
 			<td>AmendmentMethod: AMENDMENT_OCCURRENCESTATUS_STANDARDIZED with Specification Specification for: AMENDMENT_OCCURRENCESTATUS_STANDARDIZED</td>
 		</tr>
@@ -3074,6 +3167,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Argument GUID</td>
 			<td>0a7b3629-ecd9-47d2-b672-44ef47e03f7b</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Alien-Species, bdqval:Record-Management, bdqval:Biotic-Relationships</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -3195,6 +3292,10 @@ Including MultiRecord Measures
 			<td>b1f2699b-3b7e-41a1-9e5c-f670559664ba</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Record-Management, bdqval:Taxon-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td><ul><li>GBIF Secretariat (2023) GBIF Backbone Taxonomy. Checklist dataset. https://doi.org/10.15468/39omei</li> </ul></td>
 		</tr>
@@ -3314,6 +3415,10 @@ Including MultiRecord Measures
 			<td>0127389b-a68d-4393-a84c-aa9c690bd0e7</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships, bdqval:SDM-Trees</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td><ul><li>GBIF Secretariat (2023) GBIF Backbone Taxonomy. Checklist dataset. https://doi.org/10.15468/39omei</li> </ul></td>
 		</tr>
@@ -3427,6 +3532,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Argument GUID</td>
 			<td>e35dd18a-9c69-4aef-9b70-3d36d7eb6bd4</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Alien-Species, bdqval:Record-Management, bdqval:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -3544,6 +3653,10 @@ Including MultiRecord Measures
 			<td>ef83a8c4-62f3-4e18-b589-07bc6f178cd7</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Record-Management, bdqval:Taxon-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td><ul><li>GBIF Registry (2023) GBIF Vocabulary: Taxonomic Rank. https://registry.gbif.org/vocabulary/TaxonRank/concepts</li> </ul></td>
 		</tr>
@@ -3659,6 +3772,10 @@ Including MultiRecord Measures
 			<td>a10eb348-7fc5-4b96-88e3-619300cb0079</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management, bdqval:Biotic-Relationships</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td><ul> <li> GBIF (2021) Darwin Core Vocabulary: Nomenclatural Type Status Vocabulary. http://rs.gbif.org/vocabulary/gbif/type_status </li> </ul></td>
 		</tr>
@@ -3760,6 +3877,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Issue OTHER Test CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management, bdqval:Biotic-Relationships</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -3873,6 +3994,10 @@ Including MultiRecord Measures
 			<td>9c0a82d5-4b24-4160-a000-ee9429bef8f7,2c441806-b56b-4252-9944-e331f9f3fee6</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td><ul> <li> Waller JT (2023) Processing Country Centroids at the Global Biodiversity Information Facility. Biodiversity Information Science and Standards 7: e110728. https://doi.org/10.3897/biss.7.110728</li> </ul></td>
 		</tr>
@@ -3976,6 +4101,10 @@ Including MultiRecord Measures
 			<td>TG2 Issue NAME SPACE TIME CODED Test Resolution CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:SDM-Trees</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td><ul><li>Chapman AD (2020) Current Best Practices for Generalizing Sensitive Species Occurrence Data. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-5jp4-5g10</li> <li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li> </ul></td>
 		</tr>
@@ -4075,6 +4204,10 @@ Including MultiRecord Measures
 			<td>TG2 Issue OTHER CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Biotic-Relationships</td>
+		</tr>
+		<tr>
 			<td>IssueMethod label</td>
 			<td>IssueMethod: ISSUE_ESTABLISHMENTMEANS_NOTEMPTY with Specification Specification for: ISSUE_ESTABLISHMENTMEANS_NOTEMPTY</td>
 		</tr>
@@ -4156,6 +4289,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Measure NAME SPACE TIME OTHER Test CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Taxon-Management</td>
 		</tr>
 	</tbody>
 </table>
@@ -4243,6 +4380,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Measure TIME CODED Test CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -4336,6 +4477,10 @@ Including MultiRecord Measures
 			<td>TG2 Measure NAME SPACE OTHER Test CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Taxon-Management</td>
+		</tr>
+		<tr>
 			<td>MeasureMethod label</td>
 			<td>MeasurementMethod: MEASURE_VALIDATIONTESTS_COMPLIANT with Specification Specification for: MEASURE_VALIDATIONTESTS_COMPLIANT</td>
 		</tr>
@@ -4421,6 +4566,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Measure NAME SPACE TIME OTHER Test CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
@@ -4510,6 +4659,10 @@ Including MultiRecord Measures
 			<td>TG2 Measure NAME SPACE TIME OTHER Test CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Taxon-Management</td>
+		</tr>
+		<tr>
 			<td>MeasureMethod label</td>
 			<td>MeasurementMethod: MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET with Specification Specification for: MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET</td>
 		</tr>
@@ -4595,6 +4748,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test Completeness CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -4688,6 +4845,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -4777,6 +4938,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test VOCABULARY Consistency Parameterized CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management, bdqval:Biotic-Relationships</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -4870,6 +5035,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management, bdqval:Biotic-Relationships</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -4959,6 +5128,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Consistency ISO/DCMI STANDARD Parameterized CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -5052,6 +5225,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Consistency CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -5141,6 +5318,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Consistency Parameterized CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -5234,6 +5415,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation SPACE CODED Test Likeliness CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -5323,6 +5508,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Conformance CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:SDM-Trees</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -5416,6 +5605,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Completeness CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -5505,6 +5698,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Conformance ISO/DCMI STANDARD CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -5598,6 +5795,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Consistency ISO/DCMI STANDARD CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -5687,6 +5888,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -5780,6 +5985,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -5869,6 +6078,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Completeness CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -5962,6 +6175,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation TIME CODED Test Likeliness ISO/DCMI STANDARD Parameterized CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Taxon-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -6051,6 +6268,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Conformance ISO/DCMI STANDARD CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -6144,6 +6365,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation TIME CODED Test Conformance CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -6233,6 +6458,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Conformance CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -6326,6 +6555,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation OTHER CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -6415,6 +6648,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance ISO/DCMI STANDARD CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -6508,6 +6745,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation SPACE CODED Test Conformance CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -6597,6 +6838,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Completeness CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -6690,6 +6935,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation SPACE CODED Test Conformance CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -6779,6 +7028,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Completeness CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -6872,6 +7125,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Alien-Species</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -6961,6 +7218,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Conformance CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -7054,6 +7315,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -7143,6 +7408,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -7236,6 +7505,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation TIME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -7325,6 +7598,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Conformance ISO/DCMI STANDARD CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -7418,6 +7695,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation TIME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -7507,6 +7788,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Consistency CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Alien-Species, bdqval:Record-Management, bdqval:Biotic-Relationships</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -7600,6 +7885,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Record-Management, bdqval:Taxon-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -7689,6 +7978,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management, bdqval:Biotic-Relationships</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -7782,6 +8075,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation SPACE CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -7871,6 +8168,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Conformance CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -7964,6 +8265,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Record-Management, bdqval:Taxon-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -8053,6 +8358,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Record-Management, bdqval:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -8146,6 +8455,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation OTHER CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Record-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -8235,6 +8548,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Record-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -8328,6 +8645,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation SPACE CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -8417,6 +8738,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -8510,6 +8835,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation SPACE CODED Test Likeliness Parameterized CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -8599,6 +8928,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -8692,6 +9025,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation SPACE CODED Test Conformance CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -8781,6 +9118,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -8874,6 +9215,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation SPACE CODED Test Conformance CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -8963,6 +9308,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Conformance CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -9056,6 +9405,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Record-Management, bdqval:Taxon-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -9145,6 +9498,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test Completeness CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Record-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -9238,6 +9595,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation OTHER CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -9327,6 +9688,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -9420,6 +9785,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Record-Management, bdqval:Taxon-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -9509,6 +9878,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Alien-Species, bdqval:Record-Management, bdqval:Biotic-Relationships</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -9602,6 +9975,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Record-Management, bdqval:Taxon-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -9691,6 +10068,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test Consistency CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Record-Management, bdqval:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -9784,6 +10165,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Alien-Species, bdqval:Record-Management, bdqval:Taxon-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -9873,6 +10258,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Alien-Species, bdqval:Record-Management, bdqval:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -9966,6 +10355,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Alien-Species, bdqval:Record-Management, bdqval:Taxon-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -10055,6 +10448,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -10148,6 +10545,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -10237,6 +10638,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test VOCABULARY Parameterized CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Alien-Species, bdqval:Record-Management, bdqval:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -10330,6 +10735,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation TIME CODED Test Conformance CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -10419,6 +10828,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -10512,6 +10925,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Record-Management, bdqval:Taxon-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -10601,6 +11018,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Record-Management, bdqval:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -10694,6 +11115,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -10783,6 +11208,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -10876,6 +11305,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management, bdqval:Biotic-Relationships</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -10965,6 +11398,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -11058,6 +11495,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation TIME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -11147,6 +11588,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test Completeness CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships, bdqval:SDM-Trees</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -11240,6 +11685,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships, bdqval:SDM-Trees</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -11329,6 +11778,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test VOCABULARY Consistency Parameterized CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management, bdqval:Biotic-Relationships</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -11422,6 +11875,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management, bdqval:Biotic-Relationships</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -11511,6 +11968,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Consistency ISO/DCMI STANDARD Parameterized CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -11604,6 +12065,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Consistency CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -11693,6 +12158,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Consistency Parameterized CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -11786,6 +12255,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation SPACE CODED Test Likeliness CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -11875,6 +12348,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Conformance CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -11968,6 +12445,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Completeness CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -12057,6 +12538,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Conformance ISO/DCMI STANDARD CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -12150,6 +12635,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Consistency ISO/DCMI STANDARD CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -12239,6 +12728,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -12332,6 +12825,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -12421,6 +12918,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Completeness CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -12514,6 +13015,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation TIME CODED Test Likeliness ISO/DCMI STANDARD Parameterized CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Taxon-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -12603,6 +13108,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Conformance ISO/DCMI STANDARD CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -12696,6 +13205,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation TIME CODED Test Conformance CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -12785,6 +13298,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Conformance CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -12878,6 +13395,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation OTHER CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -12967,6 +13488,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance ISO/DCMI STANDARD CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -13060,6 +13585,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation SPACE CODED Test Conformance CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships, bdqval:SDM-Trees</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -13149,6 +13678,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Completeness CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -13242,6 +13775,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation SPACE CODED Test Conformance CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships, bdqval:SDM-Trees</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -13331,6 +13868,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Completeness CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -13424,6 +13965,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Alien-Species</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -13513,6 +14058,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Conformance CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -13606,6 +14155,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -13695,6 +14248,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -13788,6 +14345,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation TIME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -13877,6 +14438,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Conformance ISO/DCMI STANDARD CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships, bdqval:SDM-Trees</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -13970,6 +14535,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation TIME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -14059,6 +14628,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Consistency CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Alien-Species, bdqval:Record-Management, bdqval:Biotic-Relationships</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -14152,6 +14725,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Record-Management, bdqval:Taxon-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -14241,6 +14818,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management, bdqval:Biotic-Relationships</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -14334,6 +14915,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation SPACE CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -14423,6 +15008,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Conformance CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -14516,6 +15105,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Record-Management, bdqval:Taxon-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -14605,6 +15198,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Record-Management, bdqval:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -14698,6 +15295,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation OTHER CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Record-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -14787,6 +15388,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Record-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -14880,6 +15485,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation SPACE CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -14969,6 +15578,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -15062,6 +15675,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation SPACE CODED Test Likeliness Parameterized CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -15151,6 +15768,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -15244,6 +15865,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation SPACE CODED Test Conformance CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -15333,6 +15958,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -15426,6 +16055,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation SPACE CODED Test Conformance CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -15515,6 +16148,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Conformance CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -15608,6 +16245,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Record-Management, bdqval:Taxon-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -15697,6 +16338,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test Completeness CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Record-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -15790,6 +16435,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation OTHER CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -15879,6 +16528,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships, bdqval:SDM-Trees</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -15972,6 +16625,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Record-Management, bdqval:Taxon-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -16061,6 +16718,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Alien-Species, bdqval:Record-Management, bdqval:Biotic-Relationships</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -16154,6 +16815,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Record-Management, bdqval:Taxon-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -16243,6 +16908,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test Consistency CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Record-Management, bdqval:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -16336,6 +17005,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Alien-Species, bdqval:Record-Management, bdqval:Taxon-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -16425,6 +17098,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Alien-Species, bdqval:Record-Management, bdqval:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -16518,6 +17195,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Alien-Species, bdqval:Record-Management, bdqval:Taxon-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -16607,6 +17288,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships, bdqval:SDM-Trees</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -16700,6 +17385,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -16789,6 +17478,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test VOCABULARY Parameterized CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Alien-Species, bdqval:Record-Management, bdqval:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -16882,6 +17575,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation TIME CODED Test Conformance CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -16971,6 +17668,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -17064,6 +17765,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Record-Management, bdqval:Taxon-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -17153,6 +17858,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Record-Management, bdqval:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -17246,6 +17955,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -17335,6 +18048,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -17428,6 +18145,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management, bdqval:Biotic-Relationships</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -17519,6 +18240,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation TIME CODED Test Conformance Parameterized CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:SDM-Trees</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</td>
 		</tr>
@@ -17608,6 +18333,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Completeness CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -17707,6 +18436,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test Completeness CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships, bdqval:SDM-Trees</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
@@ -17820,6 +18553,10 @@ Including MultiRecord Measures
 			<td>a723528a-ee73-44a7-818d-5315323ec4e9</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships, bdqval:SDM-Trees</td>
+		</tr>
+		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_BASISOFRECORD_STANDARD with Specification for: VALIDATION_BASISOFRECORD_STANDARD</td>
 		</tr>
@@ -17931,6 +18668,10 @@ Including MultiRecord Measures
 			<td>d6bc8db2-014b-47dc-9737-b0ecd98bf5bb</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management, bdqval:Biotic-Relationships</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td><ul><li>GBIF Secretariat (2023) GBIF Backbone Taxonomy. Checklist dataset. https://doi.org/10.15468/39omei</li> </ul></td>
 		</tr>
@@ -18040,6 +18781,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Argument GUID</td>
 			<td>cd12d17c-8404-40fa-bc15-5583564ddd14</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management, bdqval:Biotic-Relationships</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -18157,6 +18902,10 @@ Including MultiRecord Measures
 			<td>8a3f5702-a4e5-4b21-acb6-a4eae9a1ae09,972320cd-3ba3-4076-a8eb-f797095509cd</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td><ul><li>ISO (n.dat.) ISO 3166 Country Codes. https://www.iso.org/iso-3166-country-codes.html</li> <li>Wikipedia (2020) ISO 3166-1 alpha-2. https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2</li> <li>Flanders Marine Institute (2023) Maritime Boundaries Geodatabase, version 12. Available online at https://www.marineregions.org/. https://doi.org/10.14284/628</li> <li>Kelso NV and Patterson T (2010) Introducing Natural Earth data—Naturalearthdata.com. Geographica Technica. Special issue, 2010 pp 82–89. https://technicalgeography.org/pdf/sp_i_2010/12_introducing_natural_earth_data__naturaleart.pdf</li> <li>Natural Earth (2022) Natural Earth Free vector and raster map data at 1:10m, 1:50m, and 1:110m scales. v5.1.2. https://www.naturalearthdata.com/,https://github.com/nvkelso/natural-earth-vector/releases/tag/v5.1.2</li> <li>Natural Earth (2022) Admin 1 – States, provinces. v5.1.1 2022-05-12. https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/</li> <li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li> <li>Dooley, JF Jnr. (2005) An inventory and comparison of globally consistent geospatial databases and libraries. Rome: FAO. http://www.fao.org/3/a0118e/a0118e00.htm#Contents</li> </ul></td>
 		</tr>
@@ -18270,6 +19019,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Argument GUID</td>
 			<td>b7c56646-56f1-4094-b2be-8546c7e18102,cceaf335-6cd3-44a0-9562-6fe8e7743854</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -18391,6 +19144,10 @@ Including MultiRecord Measures
 			<td>3968f8d0-7364-4f3d-9993-96b8678f1653,cbb3483c-2bf7-4b42-9d74-71ddc0e41c5e,b3bf69d3-061c-4e2a-ac53-a73cb51ecbe2,e7012224-eb6d-4bb9-a4ef-2d40fd3b3471</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td><ul><li>WoRMS (2019) WoRMS - World Register of Marine Species. https://www.marinespecies.org/</li> <li>Rees T (compiler) (2024) Interim Register of Marine and Nonmarine Genera (IRMNG) VLIZ, Belgium. https://www.irmng.org/</li> <li>Kelso NV and Patterson T (2010) Introducing Natural Earth data—Naturalearthdata.com. Geographica Technica. Special issue, 2010 pp 82–89. https://technicalgeography.org/pdf/sp_i_2010/12_introducing_natural_earth_data__naturaleart.pdf</li> <li>OBIS (2024) Ocean Biodiversity Information System (OBIS). https://obis.org/ </li> <li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li> <li>Dooley, JF Jnr. (2005) An inventory and comparison of globally consistent geospatial databases and libraries. Rome: FAO. http://www.fao.org/3/a0118e/a0118e00.htm#Contents</li> <li>Natural Earth (2022) Admin 1 – States, provinces. v5.1.1 2022-05-12. https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/</li> <li>Natural Earth (2022) Natural Earth Free vector and raster map data at 1:10m, 1:50m, and 1:110m scales. v5.1.2. https://github.com/nvkelso/natural-earth-vector/releases/tag/v5.1.2</li> <li>Natural Earth (2009) Minor Islands. https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-minor-islands/</li> <li>Google Maps Platform (2020) Reverse Geocoding API. https://developers.google.com/maps/documentation/javascript/examples/geocoding-reverse</li> </ul></td>
 		</tr>
@@ -18492,6 +19249,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Likeliness CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -18597,6 +19358,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation SPACE CODED Test Conformance CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:SDM-Trees</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td><ul><li>Wikipedia (2020) Great-circle distance. https://en.wikipedia.org/wiki/Great-circle_distance</li> <li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li> </ul></td>
 		</tr>
@@ -18694,6 +19459,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Completeness CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -18803,6 +19572,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Conformance ISO/DCMI STANDARD CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td><ul><li>ISO (n.dat.) ISO 3166 Country Codes. https://www.iso.org/iso-3166-country-codes.html</li> <li>ISO (n.dat) 3166-1 alpha-2. https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2</li> <li>DataHub (2018) List of all countries with their two digit codes (ISO 3166-1). https://datahub.io/core/country-list</li> <li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li> </ul></td>
 		</tr>
@@ -18908,6 +19681,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Consistency ISO/DCMI STANDARD CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -19025,6 +19802,10 @@ Including MultiRecord Measures
 			<td>aabaaac7-b26c-478e-9f04-3e2fbdba4a96</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td><ul><li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li> <li>Vertnet (2022) DwC Vocabs. https://github.com/VertNet/DwCVocabs/tree/master/vocabs</li> <li>Getty Research Institute (2017) Getty Thesaurus of Geographic Names Online. https://www.getty.edu/research/tools/vocabularies/tgn/index.html</li> <li>ISO (n.dat.) ISO 3166 Country Codes. https://www.iso.org/iso-3166-country-codes.html</li> <li>ISO (n.dat) 3166-1 alpha-2. https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2</li> </ul></td>
 		</tr>
@@ -19140,6 +19921,10 @@ Including MultiRecord Measures
 			<td>3e00109a-13d3-416d-9a91-127c99b47473</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td><ul><li>Getty Research Institute (2017) Getty Thesaurus of Geographic Names Online. https://www.getty.edu/research/tools/vocabularies/tgn/index.html</li> <li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li> </ul></td>
 		</tr>
@@ -19241,6 +20026,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Completeness CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -19362,6 +20151,10 @@ Including MultiRecord Measures
 			<td>13c17157-1714-4f67-848b-9dc031917fee,030797c0-0b00-4272-9219-16d701e9da7c,739faad3-eb8a-4593-af8f-35b22630a920</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Taxon-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td><ul><li>ISO (2019) ISO 8601-1:2019(en) Date and time — Representations for information interchange — Part 1: Basic rules. https://www.iso.org/obp/ui/</li> <li>Wikipedia (2020) ISO 8601. https://en.wikipedia.org/wiki/ISO_8601</li> <li>Library of Congress (2019) Extended Date/Time Format (EDTF). https://www.loc.gov/standards/datetime/</li> </ul></td>
 		</tr>
@@ -19455,6 +20248,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Conformance ISO/DCMI STANDARD CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -19560,6 +20357,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation TIME CODED Test Conformance CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td><ul><li>ISO (2019) ISO 8601-1:2019(en) Date and time — Representations for information interchange — Part 1: Basic rules. https://www.iso.org/obp/ui/</li> <li>Wikipedia (2020) ISO 8601. https://en.wikipedia.org/wiki/ISO_8601</li> <li>Library of Congress (2019) Extended Date/Time Format (EDTF). https://www.loc.gov/standards/datetime/</li> </ul></td>
 		</tr>
@@ -19663,6 +20464,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation TIME CODED Test Conformance CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+		</tr>
+		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_DAY_STANDARD with Specification for: VALIDATION_DAY_STANDARD</td>
 		</tr>
@@ -19756,6 +20561,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test Completeness CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -19865,6 +20674,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation OTHER CODED Test VOCABULARY Conformance ISO/DCMI STANDARD CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td><ul><li>Dublin Core (2012) DCMI Type Vocabulary. https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/</li> </ul></td>
 		</tr>
@@ -19962,6 +20775,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Conformance CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships, bdqval:SDM-Trees</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -20063,6 +20880,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation SPACE CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships, bdqval:SDM-Trees</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td><ul><li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li> </ul></td>
 		</tr>
@@ -20162,6 +20983,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation SPACE CODED Test Conformance CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships, bdqval:SDM-Trees</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td><ul><li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li> </ul></td>
 		</tr>
@@ -20255,6 +21080,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Completeness CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships, bdqval:SDM-Trees</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -20372,6 +21201,10 @@ Including MultiRecord Measures
 			<td>8aac7359-311a-405f-8117-79bb4873011d</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Alien-Species</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td><ul><li>Darwin Core Maintenance Group (2021) Degree of Establishment Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). http://dwc.tdwg.org/doe/</li> <li>Groom et al. (2019) Improving Darwin Core for research and management of alien species. Biodiversity Information Science and Standards 3: e38084. https://doi.org/10.3897/biss.3.38084</li> </ul></td>
 		</tr>
@@ -20477,6 +21310,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Conformance CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
@@ -20588,6 +21425,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Argument GUID</td>
 			<td>0c051c38-621f-4a52-ae92-5077afd46446</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -20705,6 +21546,10 @@ Including MultiRecord Measures
 			<td>8b223050-f314-4601-9e20-d5f3d59d8e79,2e5c3e37-b6a9-4928-8436-0d83bdb3f0fc</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td><ul><li>ISO (2019) ISO 8601-1:2019(en) Date and time — Representations for information interchange — Part 1: Basic rules. https://www.iso.org/obp/ui/</li> <li>Wikipedia (2020) ISO 8601. https://en.wikipedia.org/wiki/ISO_8601</li> <li>Library of Congress (2019) Extended Date/Time Format (EDTF). https://www.loc.gov/standards/datetime/</li> </ul></td>
 		</tr>
@@ -20804,6 +21649,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation TIME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships</td>
+		</tr>
+		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_EVENTDATE_NOTEMPTY with Specification for: VALIDATION_EVENTDATE_NOTEMPTY</td>
 		</tr>
@@ -20901,6 +21750,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Conformance ISO/DCMI STANDARD CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships, bdqval:SDM-Trees</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -21006,6 +21859,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation TIME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+		</tr>
+		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_EVENTTEMPORAL_NOTEMPTY with Specification for: VALIDATION_EVENTTEMPORAL_NOTEMPTY</td>
 		</tr>
@@ -21103,6 +21960,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Consistency CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Alien-Species, bdqval:Record-Management, bdqval:Biotic-Relationships</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
@@ -21214,6 +22075,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Argument GUID</td>
 			<td>146784a4-b53c-4245-a813-c41896761279</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Record-Management, bdqval:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -21331,6 +22196,10 @@ Including MultiRecord Measures
 			<td>6304e753-423d-4188-bba4-0301c1a01769</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management, bdqval:Biotic-Relationships</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td><ul><li>GBIF Secretariat (2023) GBIF Backbone Taxonomy. Checklist dataset. https://doi.org/10.15468/39omei</li> </ul></td>
 		</tr>
@@ -21424,6 +22293,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Completeness CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -21531,6 +22404,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test VOCABULARY Conformance CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -21648,6 +22525,10 @@ Including MultiRecord Measures
 			<td>a5055cb3-b1e5-4070-90df-f875b0d9ae8a</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Record-Management, bdqval:Taxon-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td><ul><li>GBIF Secretariat (2023) GBIF Backbone Taxonomy. Checklist dataset. https://doi.org/10.15468/39omei</li> </ul></td>
 		</tr>
@@ -21747,6 +22628,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Record-Management, bdqval:Taxon-Management</td>
+		</tr>
+		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_KINGDOM_NOTEMPTY with Specification for: VALIDATION_KINGDOM_NOTEMPTY</td>
 		</tr>
@@ -21840,6 +22725,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test Completeness CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Record-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -21957,6 +22846,10 @@ Including MultiRecord Measures
 			<td>7308bf21-2648-40d8-bb2c-3f36d2789552</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Record-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td><ul><li>Dublin Core (2020) Dublin Core Metadata Initiative. License Document. https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/LicenseDocument/</li> <li>Creative Commons (n.dat.) About the Licenses. https://creativecommons.org/licenses/</li> </ul></td>
 		</tr>
@@ -22058,6 +22951,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Completeness CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -22175,6 +23072,10 @@ Including MultiRecord Measures
 			<td>edf69c59-056d-4c8a-b1fb-647ea684eb18,f41be58e-2e1e-409e-a322-1de95df2ce0b</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td><ul><li>Wikipedia (2024) Extreme points on Earth. https://en.wikipedia.org/wiki/Extreme_points_of_Earth</li> <li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li> </ul></td>
 		</tr>
@@ -22288,6 +23189,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Argument GUID</td>
 			<td>3ab181c2-a3d8-4317-af4d-f88181e2773a,1766715d-e588-4361-8b27-1c9cc43662ab</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -22405,6 +23310,10 @@ Including MultiRecord Measures
 			<td>d23e61b3-07b6-4326-bac2-1457b030efef,9f12e2c3-17ac-42c0-91f4-c40a02d3f133</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td><ul><li>Wikipedia (2024) Extreme points on Earth. https://en.wikipedia.org/wiki/Extreme_points_of_Earth</li> <li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li> </ul></td>
 		</tr>
@@ -22502,6 +23411,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Conformance CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -22619,6 +23532,10 @@ Including MultiRecord Measures
 			<td>6e07e4fe-ce7a-4e5f-9fa3-c26877b273a7,307b78fe-e168-422b-977f-cdb4e1c5e636</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td><ul><li>Wikipedia (2020) List of elevations extremes by country. https://en.wikipedia.org/wiki/List_of_elevation_extremes_by_country_</li> <li>Wikipedia (2020) Extreme points of Antarctica. https://en.wikipedia.org/wiki/Extreme_points_of_Antarctica</li> <li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li> </ul></td>
 		</tr>
@@ -22716,6 +23633,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation SPACE CODED Test Conformance CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -22817,6 +23738,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation TIME CODED Test Conformance CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+		</tr>
+		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_MONTH_STANDARD with Specification for: VALIDATION_MONTH_STANDARD</td>
 		</tr>
@@ -22910,6 +23835,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Record-Management, bdqval:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
@@ -23007,6 +23936,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation OTHER CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Record-Management</td>
+		</tr>
+		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_OCCURRENCEID_NOTEMPTY with Specification for: VALIDATION_OCCURRENCEID_NOTEMPTY</td>
 		</tr>
@@ -23100,6 +24033,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation OTHER CODED Test Completeness CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
@@ -23213,6 +24150,10 @@ Including MultiRecord Measures
 			<td>74716bc2-c82e-49f3-938b-2298094554b4</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships, bdqval:SDM-Trees</td>
+		</tr>
+		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_OCCURRENCESTATUS_STANDARD with Specification for: VALIDATION_OCCURRENCESTATUS_STANDARD</td>
 		</tr>
@@ -23322,6 +24263,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Argument GUID</td>
 			<td>c169404f-d797-40a1-9c84-3edb2383b759</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Record-Management, bdqval:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -23439,6 +24384,10 @@ Including MultiRecord Measures
 			<td>136039c5-6ceb-41ec-90b3-eb1cd37d6eed</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Alien-Species, bdqval:Record-Management, bdqval:Biotic-Relationships</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td><ul><li>Darwin Core Maintenance Group (2021) Pathway Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). https://dwc.tdwg.org/pw/</li> <li>Groom et al. (2019) Improving Darwin Core for research and management of alien species. Biodiversity Information Science and Standards 3: e38084. https://doi.org/10.3897/biss.3.38084</li> </ul></td>
 		</tr>
@@ -23554,6 +24503,10 @@ Including MultiRecord Measures
 			<td>bd91e45d-691a-4d7e-9917-7b6231c05c43</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Record-Management, bdqval:Taxon-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td><ul><li>GBIF Secretariat (2023) GBIF Backbone Taxonomy. Checklist dataset. https://doi.org/10.15468/39omei</li> </ul></td>
 		</tr>
@@ -23657,6 +24610,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation NAME CODED Test Consistency CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Record-Management, bdqval:Taxon-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td><ul><li>GBIF Secretariat (2023) GBIF Backbone Taxonomy. Checklist dataset. https://doi.org/10.15468/39omei</li> </ul></td>
 		</tr>
@@ -23754,6 +24711,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Alien-Species, bdqval:Record-Management, bdqval:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
@@ -23855,6 +24816,10 @@ Including MultiRecord Measures
 			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Alien-Species, bdqval:Record-Management, bdqval:Taxon-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td><ul><li>GBIF Secretariat (2023) GBIF Backbone Taxonomy. Checklist dataset. https://doi.org/10.15468/39omei</li> <li>Wikipedia (2024) LSID (Life Science Identifier). https://en.wikipedia.org/wiki/LSID</li> <li>Wikipedia (2024) Uniform Resource Name (URN). https://en.wikipedia.org/wiki/Uniform_Resource_Name</ul></td>
 		</tr>
@@ -23952,6 +24917,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Alien-Species, bdqval:Record-Management, bdqval:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -24069,6 +25038,10 @@ Including MultiRecord Measures
 			<td>d9dc26f7-6c4e-4647-addc-20197ce50d2b</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships, bdqval:SDM-Trees</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td><ul><li>GBIF Secretariat (2023) GBIF Backbone Taxonomy. Checklist dataset. https://doi.org/10.15468/39omei</li> </ul></td>
 		</tr>
@@ -24166,6 +25139,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -24283,6 +25260,10 @@ Including MultiRecord Measures
 			<td>2964d61f-eab0-4a21-9ac6-3f6a7c4fbf86</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Alien-Species, bdqval:Record-Management, bdqval:Taxon-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td><ul> <li>GBIF (2015) Darwin Core Vocabulary: Sex GBIF Vocabulary. https://rs.gbif.org/vocabulary/gbif/sex.xml</li> </ul></td>
 		</tr>
@@ -24388,6 +25369,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Conformance CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
@@ -24501,6 +25486,10 @@ Including MultiRecord Measures
 			<td>41461142-2c1e-4fc1-bc97-f83a7b2a893d</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td><ul><li>Getty Research Institute (2017) Getty Thesaurus of Geographic Names Online. https://www.getty.edu/research/tools/vocabularies/tgn/index.html</li> <li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li> <li>ISO (n.dat.) ISO 3166 Country Codes. https://www.iso.org/iso-3166-country-codes.html</li> <li>ISO (n.dat) 3166-1 alpha-2. https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2</li> </ul></td>
 		</tr>
@@ -24598,6 +25587,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Record-Management, bdqval:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -24715,6 +25708,10 @@ Including MultiRecord Measures
 			<td>da536dda-d467-450e-8b0a-6b6903fd1a1b</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Record-Management, bdqval:Taxon-Management</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td><ul><li>GBIF Registry (2023) GBIF Vocabulary: Taxonomic Rank. https://registry.gbif.org/vocabulary/TaxonRank/concepts</li> </ul></td>
 		</tr>
@@ -24816,6 +25813,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation NAME CODED Test Completeness CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
@@ -24927,6 +25928,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>Argument GUID</td>
 			<td>1f9a778a-7949-4574-8826-55de1e4c1e32</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -25044,6 +26049,10 @@ Including MultiRecord Measures
 			<td>63b0193f-a8df-4345-8d60-caf667cd62b0</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management, bdqval:Biotic-Relationships</td>
+		</tr>
+		<tr>
 			<td>References</td>
 			<td><ul> <li> GBIF (2021) Darwin Core Vocabulary: Nomenclatural Type Status Vocabulary. http://rs.gbif.org/vocabulary/gbif/type_status </li> </ul></td>
 		</tr>
@@ -25159,6 +26168,10 @@ Including MultiRecord Measures
 			<td>9167035f-14a8-4a0f-81eb-86a5a93bf6d9,fa6e83af-40c3-4330-aca0-937fc22b3a27</td>
 		</tr>
 		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:SDM-Trees</td>
+		</tr>
+		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_YEAR_INRANGE with Specification for: VALIDATION_YEAR_INRANGE</td>
 		</tr>
@@ -25252,6 +26265,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>GitHub Issue Labels</td>
 			<td>TG2 Validation TIME CODED Test Completeness CORE</td>
+		</tr>
+		<tr>
+			<td>has Use Cases</td>
+			<td>bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:SDM-Trees</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>

@@ -12,7 +12,6 @@
 #  force: If true, show this entry in the key even if the CSV header is not present in the term-version file, optional
 
 # These terms are in the CSV but not represented in the RDF
-#"issueNumber"
 #"Criterion Label"
 #"IssueState"
 # TODO: These terms are in the CSV but not represented in the RDF
@@ -94,11 +93,8 @@ Parameters:
   normative: 'true'
   term: bdqffdq:Parameter
   sort_order: 13
-#Default Parameter Values
-#  sort_order: 13
 AuthoritiesDefaults:
   label: SourceAuthorities/Defaults
-#  label: has Authorities and Defaults
   normative: 'true'
   term: bdqffdq:hasAuthoritiesDefaults
   sort_order: 14
@@ -222,13 +218,13 @@ ArgumentGuids:
 #  normative: 'false'  
 #  term: bdqffdq:hasDateLastUpdated
 #  sort_order: 35
-#UseCases:
-#  append: One or more Use Cases where this Test would apply.
-##  label: Use Cases
-#  label: has Use Cases
-#  normative: 'false'
-#  term: bdqffdq:hasUseCase
-#  sort_order: 36
+UseCases:
+  append: One or more Use Cases which this Test is linked to through a Policy.
+  ##  label: Use Cases
+  label: has Use Cases
+  normative: 'false'
+  term: bdqffdq:hasUseCase
+  sort_order: 36
 References:
   append: The minimum set of references that are required for an understanding of the nature of the Test.
   label: References

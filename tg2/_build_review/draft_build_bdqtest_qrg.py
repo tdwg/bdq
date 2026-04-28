@@ -147,6 +147,7 @@ terms_sorted_by_label = terms_df.sort_values(by='Label')
 # This makes sort case insensitive
 terms_sorted_by_localname = terms_df.iloc[terms_df.prefLabel.str.lower().argsort()]
 
+# Build the key to the terms included in the Quick Reference Guide.
 definitionTable = build_term_key(term_concept_dictionary,terms_sorted_by_localname)
 
 # Load the vocabulary and produce the Quick Reference Guide
