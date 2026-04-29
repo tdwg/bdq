@@ -1079,9 +1079,9 @@ All of the `MultiRecord` Tests initially defined in the BDQ Standard are `MultiR
 
 ### 3.13 Parts of Test Labels (non-normative)
 
-We have followed a convention for forming the human readable Test labels. This convention reflects the Test type (i.e. subclass of `Data Quality Need`), the `bdqffdq:InformationElements` that the Test acts upon and the nature of the Evaluation that is being carried out.  By covention, these elements are placed in upper case and separated by underscores in the Test label.  
+We have followed a convention for forming the human readable Test labels. This convention reflects the Test type (i.e. subclass of `Data Quality Need`), the `Information Elements` that the Test acts upon and the nature of the Evaluation that is being carried out.  By covention, these elements are placed in upper case and separated by underscores in the Test label.  
 
-For example the Test with the label "VALIDATION_COUNTRYCODE_STANDARD" checks that the value of the country code is a valid ISO country code has a Test label composed from:
+For example the Test with the label "VALIDATION_COUNTRYCODE_STANDARD" validates the value of the `dwc:countryCode` against ISO country codes.  This Test label is composed from:
 
 * Test Type: `Validation` -> VALIDATION
 * The `Information Element`: `dwc:countryCode` -> COUNTRYCODE
@@ -1089,16 +1089,15 @@ For example the Test with the label "VALIDATION_COUNTRYCODE_STANDARD" checks tha
 
 For `Single Record` Tests, the `Single Record` is implied and type is one of `Validation`, `Issue`, `Measure` or `Amendment` (the Test types in bdqffdq:),  For `MultiRecord` Tests, MULTIRECORD is stated in the label, along with a marker for whether a `MultiRecord` `Measure` returns a numerical count (COUNT) or a COMPLETE/NOT_COMPLETE `Response.result` for `Quality Assurance` use (QA).
 
-The combination of `Information Element` and Evaluation was called the Term-Action in the GitHub issues used to develop the tests.
+The combination of `Information Element` and Evaluation was called the Term-Action in the GitHub issues used to develop the tests.  This combination was found useful for sorting and classifying Tests.
 
-If the `Information Element` is a single term (e.g. dwc:countryCode), the information element is just the term local name placed in all upper case (e.g. COUNTRYCODE).
-If the `bdqffdq:InformationElement` is composed of several terms, these are labeled with a word that describes this combination of `Information Elements`, an Abstract Information Element Label, e.g. "YEARMONTHDAY"
+If the `Information Element` is a single term (e.g. `dwc:countryCode`), the information element component of the label is just the term local name placed in all upper case (e.g. COUNTRYCODE).  If the `Information Element` is composed of several terms, these are labeled with a description of the combined `Information Elements`, an Abstract Information Element Label, e.g. "YEARMONTHDAY"
 
-In some cases we have departed from this simple convention in labels for more complex Tests:
+In some cases we have departed from this simple convention in labels for more complex Tests to permit easy identification of the nature of the Test:
 * The evaluation LESSTHAN is framed in a different order as {informationelement}_LESSTHAN_{informationelement}. e.g. [VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH](../terms/bdqtest/index.md#VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH) 
 * Amendments that fill in a value may be framed as e.g. AMENDMENT_{inputinformationelement}_{evaluation}_{outputinformationelement} e.g. [AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID](../terms/bdqtest/index.md#AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID)
 
-These conventions for forming Test labels are simply a convention, and neither the Evaluations nor the Abstract Information Element Labels are a formal controlled vocabulary with a namespace (unlike the terms in bdqval: and the other supporting vocablularies in BDQ).
+These conventions for forming Test labels are simply a convention, and neither the Evaluations nor the Abstract Information Element Labels are a formal controlled vocabulary with a namespace (unlike the terms in `bdqval:` and the other supporting vocablularies in BDQ).
 
 The tables below list the terms used for the Test `Types` and the Evaluation terms, with an example for each, along with the few `Abstract 
 Information Element Labels`.
