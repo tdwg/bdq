@@ -1148,7 +1148,7 @@ All of the `MultiRecord` Tests initially defined in the BDQ Standard are `MultiR
 
 ### 3.13 Parts of Test Labels (non-normative)
 
-We have followed a convention for forming the human readable Test labels. This convention reflects the Test type (i.e. subclass of `Data Quality Need`), the `Information Elements` that the Test acts upon and the nature of the Evaluation that is being carried out.  By covention, these elements are placed in upper case and separated by underscores in the Test label.  
+We have followed a convention for forming the human readable Test labels. This convention reflects the Test type (i.e. subclass of `Data Quality Need`), the `Information Elements` that the Test acts upon (in most cases, the `Acted Upon` terms) and the nature of the Evaluation that is being carried out.  By covention, these elements are placed in upper case and separated by underscores in the Test label.  
 
 For example the Test with the label "VALIDATION_COUNTRYCODE_STANDARD" validates the value of the `dwc:countryCode` against ISO country codes.  This Test label is composed from:
 
@@ -1160,7 +1160,7 @@ For `Single Record` Tests, the `Single Record` is implied and type is one of `Va
 
 The combination of `Information Element` and Evaluation was called the Term-Action in the GitHub issues used to develop the tests.  This combination was found useful for sorting and classifying Tests.
 
-If the `Information Element` is a single term (e.g. `dwc:countryCode`), the information element component of the label is just the term local name placed in all upper case (e.g. COUNTRYCODE).  If the `Information Element` is composed of several terms, these are labeled with a description of the combined `Information Elements`, an Abstract Information Element Label, e.g. "YEARMONTHDAY"
+If the `Information Element` is a single term (e.g. `dwc:countryCode`), the information element component of the label is just the term local name placed in all upper case (e.g. COUNTRYCODE).  If the `Information Element` is composed of several terms, these may simply be concatenated for example "YEARMONTHDAY" or "COUNTRYCOUNTRYCODE".  Alternately, several terms may be labeled with a abstract description of the combined specific `Information Elements`, an `Abstract Information Element` label, for example "POLYNOMIAL" or "CLASSIFICATION".
 
 In some cases we have departed from this simple convention in labels for more complex Tests to permit easy identification of the nature of the Test:
 * The evaluation LESSTHAN is framed in a different order as {informationelement}_LESSTHAN_{informationelement}. e.g. [VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH](../terms/bdqtest/index.md#VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH) 
@@ -1168,9 +1168,7 @@ In some cases we have departed from this simple convention in labels for more co
 
 These conventions for forming Test labels are simply a convention, and neither the Evaluations nor the Abstract Information Element Labels are a formal controlled vocabulary with a namespace (unlike the terms in `bdqval:` and the other supporting vocablularies in BDQ).
 
-The tables below list the terms used for the Test `Types` and the Evaluation terms, with an example for each, along with the few `Abstract 
-Information Element Labels`.
-
+The tables below list the terms used for the Test `Types`, the `Abstract Information Element` Labels, and the Evaluation terms, with an example for each.
 
 | Label  | Definition  | Example  |
 |--------|-------------|----------|
@@ -1181,11 +1179,21 @@ Information Element Labels`.
 | MULTIRECORD_MEASURE_COUNT      | A Test Type of `Measure` that takes as input the outputs of other Tests (usually `Validations`) across a `MultiRecord`.  For example, count across MultiRecords of a VALIDATION Test that return a Response of COMPLIANT.  Provides metrics for `Quality Control`. | [MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_NOTEMPTY](../list/bdqtest/index.md#bdqtest_b60c8c58-0137-4b6a-97e9-57d8ca5cf248)     |
 | MULTIRECORD_MEASURE_QA | Measurement over MultiRecords of a VALIDATION Test where every record complies with Quality Assurance requirements by being COMPLIANT         | [MULTIRECORD_MEASURE_QA_BASISOFRECORD_NOTEMPTY](../list/bdqtest/index.md#bdqtest_c8c61535-ab1a-4ec6-b4e9-f5f02541d7d8)  |
 | VALIDATION     | A Test type that expresses how the fitness of data for some use may be measured. See `bdqffdq:Measure`      | [VALIDATION_BASISOFRECORD_NOTEMPTY](../list/bdqtest/index.md#bdqtest_ac2b7648-d5f9-48ca-9b07-8ad5879a2536)      |
-| <strong><a name="abstract-information-element-labels">Abstract Information Element Labels</a></strong> ||| <!-- *************************************************************** -->
+| <strong><a name="abstract-information-element-labels">Labels for multiple Information Elements</a></strong> ||| <!-- *************************************************************** -->
+| CLASSIFICATION | A general category of specific `bdqval:InformationElements` that represents a combination of Darwin Core terms from the `dwc:Taxon` class that are used to express taxonomic classification. | [VALIDATION_CLASSIFICATION_CONSISTENT](../terms/bdqtest/index.md#VALIDATION_CLASSIFICATION_CONSISTENT) |
 | COORDINATES    | A general category of specific `bdqval:InformationElements` that represents the combination of the Darwin Core terms `dwc:decimalLatitude` and `dwc:decimalLongitude` and may include metadata terms including `dwc:geodeticDatum`.      | [VALIDATION_COORDINATES_NOTZERO](../list/bdqtest/index.md#bdqtest_1bf0e210-6792-4128-b8cc-ab6828aa4871)         |
+| COORDINATESCOUNTRYCODE | The combination of the Darwin Core terms `dwc:decimalLatitude`, `dwc:decimalLongitude`, and `dwc:countryCode`. | [VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT](../terms/bdqtest/index.md#VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT) |
+| COORDINATESSTATEPROVINCE | The combination of the Darwin Core terms `dwc:decimalLatitude`, `dwc:decimalLongitude`, and `dwc:stateProvince`. | [VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT](../terms/bdqtest/index.md#VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT) |
 | COORDINATESTERRESTRIALMARINE   | A terrestrial taxon that has geographic coordinates that fall within terrestrial boundaries, or a marine taxon that has geographic coordinates that fall within marine boundaries.    | [VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT](../terms/bdqtest/index.md#VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT) |
+| COUNTRYCOUNTRYCODE | The combination of the Darwin Core terms `dwc:country` and `dwc:countryCode`. | [VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT](../terms/bdqtest/index.md#VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT) |
+| COUNTRYSTATEPROVINCE | The combination of the Darwin Core terms `dwc:country` and `dwc:stateProvince`. | [VALIDATION_COUNTRYSTATEPROVINCE_CONSISTENT](../terms/bdqtest/index.md#VALIDATION_COUNTRYSTATEPROVINCE_CONSISTENT) |
+| EVENTTEMPORAL | A general category of specific `bdqval:InformationElements` that represents a combination of more than one of the time and date related Darwin Core terms from the `dwc:Event` class (dwc:eventDate, dwc:year, dwc:month, dwc:day, dwc:startDayOfYear, dwc:endDayOfYear, dwc:eventTime, dwc:verbatimEventDate). | [VALIDATION_EVENTTEMPORAL_NOTEMPTY](../terms/bdqtest/index.md#VALIDATION_EVENTTEMPORAL_NOTEMPTY) |
+| LOCATION | A general category of specific `bdqval:InformationElements` that represents a combination of the Darwin Core terms from the `dwc:Location` class. | [VALIDATION_LOCATION_NOTEMPTU](../list/bdqtest/index.md#bdqtest_58486cb6-1114-4a8a-ba1e-bd89cfe887e9)       |
+| MINELEVATIONMAXELEVATION | The combination of the Darwin Core terms `dwc:minimumElevationInMeters` and `dwc:maximumElevationInMeters`. | [AMENDMENT_MINELEVATIONMAXELEVATION_FROM_VERBATIM](../terms/bdqtest/index.md#AMENDMENT_MINELEVATIONMAXELEVATION_FROM_VERBATIM) |
 | POLYNOMIAL     | A general category of specific `bdqval:InformationElements` that represents a combination of the Darwin Core terms `dwc:genericName`, `dwc:specificEpithet`, `dwc:infraspecificEpithet`. See the Test [VALIDATION_POLYNOMIAL_CONSISTENT](../terms/bdqtest/index.md#VALIDATION_POLYNOMIAL_CONSISTENT). | [VALIDATION_POLYNOMIAL_CONSISTENT](../list/bdqtest/index.md#bdqtest_17f03f1f-f74d-40c0-8071-2927cfc9487b)       |
 | TAXON          | A general category of specific `Information Elements` that represent a combination of Darwin Core terms from the dwc:Taxon class. | [VALIDATION_TAXON_NOTEMPTY](../terms/bdqtest/index.md#VALIDATION_TAXON_NOTEMPTY) |
+| VALIDATIONTESTS | The `Information Elements` for a Test are the output `Responses` from one or more `Validation` Tests. | [MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET](../list/bdqtest/index.md#bdqtest_49a94636-a562-4e6b-803c-665c80628a3d)    |
+| VERBATIM | A general category of specific `bdqval:InformationElements` that represents one or more of the Darwin Core terms `dwc:verbatimLatitude`, `dwc:verbatimLongitude`, `dwc:verbatimElevation`, `dwc:verbatimDepth`, `dwc:verbatimEventDate`. | [AMENDMENT_COORDINATES_FROM_VERBATIM](../terms/bdqtest/index.md#AMENDMENT_COORDINATES_FROM_VERBATIM) |
 | YEARMONTHDAY   | A general category of specific `bdqval:InformationElements` that represents a combination of the Darwin Core terms `dwc:year`, `dwc:month`, `dwc:day`.   | [AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY](../list/bdqtest/index.md#bdqtest_3892f432-ddd0-4a0a-b713-f2e2ecbd879d)  |
 | YEARSTARTDAYOFYEARENDDAYOFYEAR | A general category of specific `bdqval:InformationElements` that represents a combination of the Darwin Core terms `dwc:year`, `dwc:startDayOfYear`, `dwc:endDayofYear`. | [AMENDMENT_EVENTDATE_FROM_YEARSTARTDAYOFYEARENDDAYOFYEAR](../list/bdqtest/index.md#bdqtest_eb0a44fa-241c-4d64-98df-ad4aa837307b)       |
 | <strong><a name="evaluations">Evaluations</a></strong> ||| <!-- *************************************************************** -->
