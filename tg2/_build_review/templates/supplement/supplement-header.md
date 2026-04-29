@@ -819,8 +819,9 @@ A "Warning Type" for each BDQ Test was envisioned to provide insight into the na
 
 **Table 1**: `Data Quality Dimension` vs Warning Type (as of 2023) with the number of Tests as cell values.
 
-The following SPARQL query to counts Tests by Type and `Data Quality Dimension`: 
-<pre>
+The following SPARQL query counts Tests by Type and `Data Quality Dimension`: 
+
+```sparql
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
@@ -834,7 +835,7 @@ WHERE {
 }
 GROUP BY ?dimension ?testType ?resourceType
 ORDER BY ?dimension ?testType ?resourceType
-</pre>
+```
 
 gives the following distribution of Test Types by `Dimension`, with `MultiRecord` `Measures` split out:
 
