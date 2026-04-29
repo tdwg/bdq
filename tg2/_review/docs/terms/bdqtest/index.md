@@ -322,7 +322,7 @@ dcterms:license=" ": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIA
 
 #### Use Cases
 
-bdqval:Record-Management
+bdqval:Record-Management, bdqval:SDM-Trees
 
 #### Notes
 
@@ -367,7 +367,7 @@ dcterms:license="GPL": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPL
 
 #### Use Cases
 
-bdqval:Record-Management
+bdqval:Record-Management, bdqval:SDM-Trees
 
 #### Notes
 
@@ -1560,7 +1560,7 @@ dwc:eventDate="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT,
 
 #### Use Cases
 
-bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
+bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships, bdqval:SDM-Trees
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -2059,7 +2059,7 @@ dwc:occurrenceStatus="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COM
 
 #### Use Cases
 
-bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
+bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships, bdqval:SDM-Trees
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -2838,7 +2838,7 @@ dwc:scientificName="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPL
 
 #### Use Cases
 
-bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships, bdqval:SDM-Trees
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -3456,7 +3456,7 @@ dcterms:license="X": Response.status=NOT_AMENDED, Response.result="", Response.c
 
 #### Use Cases
 
-bdqval:Record-Management
+bdqval:Record-Management, bdqval:SDM-Trees
 
 #### Notes
 
@@ -3996,7 +3996,7 @@ dwc:eventDate="10-28": Response.status=NOT_AMENDED, Response.result=, Response.c
 
 #### Use Cases
 
-bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
+bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:SDM-Trees
 
 #### Notes
 

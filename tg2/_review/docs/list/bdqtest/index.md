@@ -2036,7 +2036,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:SDM-Trees</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -2500,7 +2500,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Record-Management</td>
+			<td>bdqval:Record-Management, bdqval:SDM-Trees</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -21650,7 +21650,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships</td>
+			<td>bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships, bdqval:SDM-Trees</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
@@ -22728,7 +22728,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Record-Management</td>
+			<td>bdqval:Record-Management, bdqval:SDM-Trees</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -22847,7 +22847,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Record-Management</td>
+			<td>bdqval:Record-Management, bdqval:SDM-Trees</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -24036,7 +24036,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships</td>
+			<td>bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships, bdqval:SDM-Trees</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
@@ -25142,7 +25142,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships</td>
+			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships, bdqval:SDM-Trees</td>
 		</tr>
 		<tr>
 			<td>References</td>

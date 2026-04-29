@@ -644,6 +644,10 @@ VALIDATION_BASISOFRECORD_NOTEMPTY [Quick Reference Guide](index.md#VALIDATION_BA
 
 VALIDATION_BASISOFRECORD_STANDARD [Quick Reference Guide](index.md#VALIDATION_BASISOFRECORD_STANDARD) [Term List](../../list/bdqtest/index.md#bdqtest_42408a00-bf71-4892-a399-4325e2bc1fb8)
 
+VALIDATION_LICENSE_NOTEMPTY [Quick Reference Guide](index.md#VALIDATION_LICENSE_NOTEMPTY) [Term List](../../list/bdqtest/index.md#bdqtest_15f78619-811a-4c6f-997a-a4c7888ad849)
+
+VALIDATION_LICENSE_STANDARD [Quick Reference Guide](index.md#VALIDATION_LICENSE_STANDARD) [Term List](../../list/bdqtest/index.md#bdqtest_3136236e-04b6-49ea-8b34-a65f25e3aba1)
+
 VALIDATION_COORDINATEUNCERTAINTY_INRANGE [Quick Reference Guide](index.md#VALIDATION_COORDINATEUNCERTAINTY_INRANGE) [Term List](../../list/bdqtest/index.md#bdqtest_c6adf2ea-3051-4498-97f4-4b2f8a105f57)
 
 VALIDATION_DECIMALLATITUDE_INRANGE [Quick Reference Guide](index.md#VALIDATION_DECIMALLATITUDE_INRANGE) [Term List](../../list/bdqtest/index.md#bdqtest_b6ecda2a-ce36-437a-b515-3ae94948fe83)
@@ -654,19 +658,29 @@ VALIDATION_DECIMALLONGITUDE_INRANGE [Quick Reference Guide](index.md#VALIDATION_
 
 VALIDATION_DECIMALLONGITUDE_NOTEMPTY [Quick Reference Guide](index.md#VALIDATION_DECIMALLONGITUDE_NOTEMPTY) [Term List](../../list/bdqtest/index.md#bdqtest_9beb9442-d942-4f42-8b6a-fcea01ee086a)
 
+VALIDATION_EVENTDATE_NOTEMPTY [Quick Reference Guide](index.md#VALIDATION_EVENTDATE_NOTEMPTY) [Term List](../../list/bdqtest/index.md#bdqtest_f51e15a6-a67d-4729-9c28-3766299d2985)
+
 VALIDATION_EVENTDATE_STANDARD [Quick Reference Guide](index.md#VALIDATION_EVENTDATE_STANDARD) [Term List](../../list/bdqtest/index.md#bdqtest_4f2bf8fd-fc5c-493f-a44c-e7b16153c803)
 
 VALIDATION_YEAR_INRANGE [Quick Reference Guide](index.md#VALIDATION_YEAR_INRANGE) [Term List](../../list/bdqtest/index.md#bdqtest_ad0c8855-de69-4843-a80c-a5387d20fbc8)
 
 VALIDATION_YEAR_NOTEMPTY [Quick Reference Guide](index.md#VALIDATION_YEAR_NOTEMPTY) [Term List](../../list/bdqtest/index.md#bdqtest_c09ecbf9-34e3-4f3e-b74a-8796af15e59f)
 
+VALIDATION_OCCURRENCESTATUS_NOTEMPTY [Quick Reference Guide](index.md#VALIDATION_OCCURRENCESTATUS_NOTEMPTY) [Term List](../../list/bdqtest/index.md#bdqtest_eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf)
+
 VALIDATION_OCCURRENCESTATUS_STANDARD [Quick Reference Guide](index.md#VALIDATION_OCCURRENCESTATUS_STANDARD) [Term List](../../list/bdqtest/index.md#bdqtest_7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47)
 
 VALIDATION_SCIENTIFICNAME_FOUND [Quick Reference Guide](index.md#VALIDATION_SCIENTIFICNAME_FOUND) [Term List](../../list/bdqtest/index.md#bdqtest_3f335517-f442-4b98-b149-1e87ff16de45)
 
+VALIDATION_SCIENTIFICNAME_NOTEMPTY [Quick Reference Guide](index.md#VALIDATION_SCIENTIFICNAME_NOTEMPTY) [Term List](../../list/bdqtest/index.md#bdqtest_7c4b9498-a8d9-4ebb-85f1-9f200c788595)
+
 ISSUE_DATAGENERALIZATIONS_NOTEMPTY [Quick Reference Guide](index.md#ISSUE_DATAGENERALIZATIONS_NOTEMPTY) [Term List](../../list/bdqtest/index.md#bdqtest_13d5a10e-188e-40fd-a22c-dbaa87b91df2)
 
 AMENDMENT_BASISOFRECORD_STANDARDIZED [Quick Reference Guide](index.md#AMENDMENT_BASISOFRECORD_STANDARDIZED) [Term List](../../list/bdqtest/index.md#bdqtest_07c28ace-561a-476e-a9b9-3d5ad6e35933)
+
+AMENDMENT_LICENSE_STANDARDIZED [Quick Reference Guide](index.md#AMENDMENT_LICENSE_STANDARDIZED) [Term List](../../list/bdqtest/index.md#bdqtest_dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8)
+
+AMENDMENT_EVENTDATE_STANDARDIZED [Quick Reference Guide](index.md#AMENDMENT_EVENTDATE_STANDARDIZED) [Term List](../../list/bdqtest/index.md#bdqtest_718dfc3c-cb52-4fca-b8e2-0e722f375da7)
 
 AMENDMENT_EVENT_FROM_EVENTDATE [Quick Reference Guide](index.md#AMENDMENT_EVENT_FROM_EVENTDATE) [Term List](../../list/bdqtest/index.md#bdqtest_710fe118-17e1-440f-b428-88ba3f547d6d)
 

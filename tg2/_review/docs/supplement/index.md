@@ -54,6 +54,8 @@ Draft Standard for Review
   - [2.1 Definition of CORE (non-normative)](#21-definition-of-core-non-normative)
     - [2.1.1 Tests tagged as DO NOT IMPLEMENT (non-normative)](#211-tests-tagged-as-do-not-implement-non-normative)
   - [2.2 Use Case Development (non-normative)](#22-use-case-development-non-normative)
+
+[2.2.1 Making Use Cases and BDQ Tests match by iterative refinement (non-normative)](#221-making-use-cases-and-bdq-tests-match-by-iterative-refinement-non-normative)
   - [2.3 Data Quality Control and Data Quality Assurance (non-normative)](#23-data-quality-control-and-data-quality-assurance-non-normative)
   - [2.4 Framework Competency Questions (non-normative)](#24-framework-competency-questions-non-normative)
     - [2.4.1 Listing Identifiers for Tests (non-normative)](#241-listing-identifiers-for-tests-non-normative)
@@ -216,11 +218,134 @@ The following issues describing potential Tests were tagged as [DO NOT IMPLEMENT
 
 ### 2.2 Use Case Development (non-normative)
 
-Biodiversity Data Quality Task Group 3: Data Quality Use Cases (Rees & Nicholls 2020) was established to review what `Use Cases` were prevalent within the community of those dealing with biodiversity data. This task group identified several fundamental `Use Cases`, including `bdqval:Spatial-Temporal_Patterns`, `bdqval:Record-Management`, and `bdqval:Taxon-Management`. We later added `bdqval:Alien-Species` and `bdqval:Biotic-Relationships`.
+Biodiversity Data Quality Task Group 3: Data Quality Use Cases (Rees & Nicholls 2020) was established to review what `Use Cases` were prevalent within the community of those dealing with biodiversity data. This task group identified several fundamental `Use Cases`, including `bdqval:Spatial-Temporal_Patterns`, `bdqval:Record-Management`, and `bdqval:Taxon-Management`. We later added `bdqval:Alien-Species`, `bdqval:Biotic-Relationships` and `bdqval:SDM=Trees`.
 
 These are only a sample of the many possible `Use Cases` for the biological sciences, but they provide an initial set to which all the BDQ Tests have been linked. Note that the relationship between `Use Cases` and Tests is a many-to-many relationship - with most Tests being relatable to many `Use Cases` and vice versa.
 
 Note that the evaluation of a Test can only take place within the context of a specific `Use Case`, even if that use is particularly broad or particularly narrow. For example, the Test [VALIDATION_COUNTRY_FOUND](../terms/bdqtest/index.md#VALIDATION_COUNTRY_FOUND) could assess the value of `dwc:country` against a `sourceAuthority` for the `Use Case` `bdqval:Record-Management`, but this Test may not be applicable to a `Use Case` related to marine ecology.
+
+
+See also [Creating a New Use Case]() in [BDQ Tests: Concepts and Use](../guide/bdqtest/index.md) and a more detailed example of the development of a new `Use Case` with  new Tests in the Tutorial. 
+
+## 2.2.1 Making Use Cases and BDQ Tests match by iterative refinement (non-normative)
+
+Most of the BDQ Use Cases are broad, with many BDQ Tests linked to each one. When we drafted a more specific Use Case (bdqval:SDM-Trees), it became much easier to see when a stated fitness requirement has no corresponding BDQ Test, or when the available Tests only check a more general condition than the Use Case requires.
+
+The list below shows the key components of the initial phrasing of the SDM-Trees Use Case: Definition; Fitness Requirements, and the set of BDQ SingleRecord Tests we initially linked to those requirements.
+
+Name: **SDM-Trees** 
+
+Definition: 
+* A bdqffdq:UseCase for selecting dwc:Occurrence records suitable for predicting the spatial distribution of a limited number of Eucalypt tree species (Gill et al. 1985). This use case filters for occurrence records that meet criteria for a known species at a known location and date. Filtered records are combined with environmental data derived from occurrence locations to evaluate robust spatial distribution models, including Maxent (Phillips et al. 2006) and generalized linear and additive models (Guisan et al. 2002). Models will be further assessed via systematic surveys in areas with high predicted occurrence and low record density. Project outputs are: (1) recommendations for robust species distribution modelling methods for tree species, (2) a suite of environmental variables for the selected species, and (3) improved “expert distribution” envelopes derived from modelling.
+
+Fitness requirements: 
+* Records are fit for the use case bdqval:Species-Distribution-Modelling-Trees when they have valid:
+    • dwc:scientificName identified to species level.
+    • dwc:basisOfRecord = bdqval:notEmpty.
+    • dwc:occurrenceStatus = "present".
+    • dwc:decimalLatitude and dwc:decimalLongitude in range.
+    • dwc:coordinateUncertaintyInMeters < 500.
+    • dwc:dataGeneralizations = bdqval:empty
+    • dwc:year or dwc:eventDate within provided temporal limits.
+
+Included Tests: 
+* VALIDATION_SCIENTIFICNAME_FOUND, AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID, 
+* VALIDATION_BASISOFRECORD_STANDARD; AMENDMENT_BASISOFRECORD_STANDARDIZED, 
+* VALIDATION_OCCURRENCESTATUS_STANDARD
+* VALIDATION_DECIMALLATITUDE_INRANGE
+* VALIDATION_DECIMALLONGITUDE_INRANGE
+* VALIDATION_COORDINATEUNCERTAINTY_INRANGE, 
+* ISSUE_DATAGENERALIZATIONS_NOTEMPTY
+* VALIDATION_EVENTDATE_STANDARD
+* VALIDATION_YEAR_INRANGE
+
+Upon framing this `Use Case` we made the following key observation:
+
+(1) In these initial fitness requirements, some conditions are expressed as domain-specific thresholds or values, but we do not currently have BDQ Tests defined that evaluate those exact statements (as written): 
+   * dwc:scientificName identified to species level,
+   * dwc:coordinateUncertaintyInMeters < 500,
+   * dwc:occurrenceStatus = "present",
+   * dwc:year or dwc:eventDate within provided temporal limits.
+
+Most of the included Tests evaluate for more general conditions than the specific requirements stated in the Use Case. For example, VALIDATION_OCCURRENCESTATUS_STANDARD checks that the value of `dwc:occurrenceStatus` is valid according to a configured source authority, but it does not check that the value is "present". Similarly, VALIDATION_COORDINATEUNCERTAINTY_INRANGE checks that the value of `dwc:coordinateUncertaintyInMeters` is within a configured numeric range, but it does not check that it is less than 500 m.
+
+This highlights the key issue: a `Use Case` can state fitness requirements that are more specific than the currently agreed BDQ Tests can check. When that happens, we have two options: (1) define additional BDQ Tests (only when broadly useful), or (2) refine the Use Case fitness requirements so they are expressed in terms that existing BDQ Tests can evaluate (often by relying on configurable source authorities and configurable thresholds). The updated bdqval:SDM-Trees example below illustrates option (2).  The [Tutorial](../tutorial/index.md) illustrates option (1) adding new tests to meet the requirements.
+
+We also observed that:
+
+(2) Most of the included `SingleRecord` Tests check for validity of a value, when corresponding Tests exist to check for the presence of a value in the same term. 
+
+We included, for example, VALIDATION_DECIMALLATITUDE_INRANGE and VALIDATION_DECIMALLONGITUDE_INRANGE, but not the corresponding NOTEMPTY tests VALIDATION_DECIMALLATITUDE_NOTEMPTY and VALIDATION_DECIMALLONGITUDE_NOTEMPTY.  This is entirely appropriate for `Quality Assurance` where we can set `MultiRecord` `Measures` that return COMPLETE if the STANDARD and INRANGE `Validations` have a Response.result of COMPLIANT.   If, however, we wish to perform `Quality Control` and improve the fitness of a candiate data set, it will be very helpful to isolate and count which records have empty values for these critical terms, and which have out of range values (and we would include `MultiRecord` `Measures` that count outcomes).  The kind and scope of data cleanup work that may be needed will differ depending on the distribution of these distinct kinds of problem in the data set.
+
+(3) Selection of a threshold value for dwc:coordinateUncertaintyInMeters in relation to an analysis grid is fraught with complexities for the unwary.  See: Zermoglio et al, 2022, sections on [Coordinates and Grid Systems)[https://docs.gbif.org/georeferencing-quick-reference-guide/1.0/en/#coordinates-grid-systems) and [Table of feature types and default geographic radials](https://docs.gbif.org/georeferencing-quick-reference-guide/1.0/en/#table-default-geographic-radial) and [geographic radial](https://docs.gbif.org/georeferencing-quick-reference-guide/1.0/en/#geographic-radial).
+
+This will be moot for this `Use Case` if we refine the `Use Case` to not include a specific threshold value for dwc:coordinateUncertaintyInMeters.
+
+(4) We have not included any `MultiRecord` `Measures` in this `Use Case`, so we don't have any formal support for either `Quality Control` or `Quality Assurance`. 
+
+The initial focus is on `Quality Assurance`, so we would expect to add 	Multi Record` `Measures` such as MULTIRECORD_MEASURE_QA_DECIMALLATITUDE_INRANGE.  For this filtering, we only need to check that the value of `dwc:decimalLatitude` is in range, that is that the VALIDATION_DECIMALLATITUDE_INRANGE Test returns COMPLIANT.
+
+If we want to support `Quality Control` as well, we would add `Measures` such as MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLATITUDE_NOTEMPTY and MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLATITUDE_INRANGE, and we would want to also include counts that assess NOTEMPTY as well as INRANGE, so that we can determine how many records have empty values for `dwc:decimalLatitude` and how many have out of range values.  This would allow us to determine the kind and scope of data cleanup work that may be needed to improve the fitness of the data for this `Use Case`.
+
+Iteration 2
+
+Definition: 
+* A bdqffdq:UseCase for improving the quality of and selecting dwc:Occurrence records suitable for predicting the spatial distribution of a limited number of Eucalypt tree species (Gill et al. 1985). This use case filters for occurrence records that meet criteria for a known species at a known location and date.  Records can be further filtered to meet the requirements of a particular distribution modeling analysis.  Filtered records can then be combined with environmental data derived from occurrence locations to evaluate robust spatial distribution models, including Maxent (Phillips et al. 2006) and generalized linear and additive models (Guisan et al. 2002). Models will be further assessed via systematic surveys in areas with high predicted occurrence and low record density. Project outputs are: (1) recommendations for robust species distribution modelling methods for tree species, (2) a suite of environmental variables for the selected species, and (3) improved “expert distribution” envelopes derived from modelling.
+
+Revised fitness requirements:
+ * Data are fit for the use case bdqval:SDM-Trees when records have:
+   * A scientific name (dwc:scientificName) that can be resolved in the configured taxonomic source authority (default: GBIF Backbone Taxonomy).
+   * A non-empty dwc:basisOfRecord whose value is valid in the configured basisOfRecord source authority.
+   * A non-empty dwc:occurrenceStatus whose value is valid in the configured occurrenceStatus source authority.
+   * Non-empty decimal coordinates (dwc:decimalLatitude and dwc:decimalLongitude) with values that are interpretable as numbers and within valid geographic ranges.
+   * Coordinate uncertainty in meters (dwc:coordinateUncertaintyInMeters), when present, that is interpretable as a number and within a valid numeric range.
+   * A non-empty year (dwc:year) that is interpretable as an integer and is within configured temporal bounds (bdqval:earliestValidDate to bdqval:latestValidDate).
+   * An ISO 8601–valid event date (dwc:eventDate) when present, and (where applicable) event-date components MAY be used to fill missing dwc:year/month/day from dwc:eventDate.
+   * There is a valid value in dwc:licence.
+
+Included SingleRecord Tests: 
+* VALIDATION_SCIENTIFICNAME_NOTEMPTY, VALIDATION_SCIENTIFICNAME_FOUND, AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID, 
+* VALIDATION_BASISOFRECORD_NOTEMPTY, VALIDATION_BASISOFRECORD_STANDARD; AMENDMENT_BASISOFRECORD_STANDARDIZED, 
+* VALIDATION_OCCURRENCESTATUS_NOTEMPTY, VALIDATION_OCCURRENCESTATUS_STANDARD
+* VALIDATION_DECIMALLATITUDE_NOTEMPTY, VALIDATION_DECIMALLATITUDE_INRANGE
+* VALIDATION_DECIMALLONGITUDE_NOTEMPTY, VALIDATION_DECIMALLONGITUDE_INRANGE
+* VALIDATION_COORDINATEUNCERTAINTY_INRANGE, 
+* ISSUE_DATAGENERALIZATIONS_NOTEMPTY
+* VALIDATION_EVENTDATE_NOTEMPTY, VALIDATION_EVENTDATE_STANDARD, AMENDMENT_EVENTDATE_STANDARDIZED
+* VALIDATION_YEAR_NOTEMPTY, VALIDATION_YEAR_INRANGE, AMENDMENT_EVENT_FROM_EVENTDATE
+* VALIDATION_LICENSE_NOTEMPTY, VALIDATION_LICENSE_STANDARD, AMENDMENT_LICENSE_STANDARDIZED
+
+Included `MultiRecord` `Measure` Tests for `Quality Control`:
+
+* MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_NOTEMPTY, MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_FOUND
+* MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_NOTEMPTY, MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_STANDARD 
+* MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCESTATUS_NOTEMPTY, MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCESTATUS_STANDARD
+* MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLATITUDE_NOTEMPTY, MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLATITUDE_INRANGE
+* MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLONGITUDE_NOTEMPTY, MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLONGITUDE_INRANGE
+* MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATEUNCERTAINTY_INRANGE
+* MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_NOTEMPTY, MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_STANDARD
+* MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_NOTEMPTY, MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_INRANGE
+* MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_NOTEMPTY, MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_STANDARD
+
+Included `MultiRecord` `Measure` Tests for `Quality Assurance`:
+
+* MULTIRECORD_MEASURE_QA_SCIENTIFICNAME_FOUND
+* MULTIRECORD_MEASURE_QA_BASISOFRECORD_STANDARD
+* MULTIRECORD_MEASURE_QA_OCCURRENCESTATUS_STANDARD
+* MULTIRECORD_MEASURE_QA_DECIMALLATITUDE_INRANGE
+* MULTIRECORD_MEASURE_QA_DECIMALLONGITUDE_INRANGE
+* MULTIRECORD_MEASURE_QA_COORDINATEUNCERTAINTY_INRANGE
+* MULTIRECORD_MEASURE_QA_EVENTDATE_STANDARD
+* MULTIRECORD_MEASURE_QA_YEAR_INRANGE
+* MULTIRECORD_MEASURE_QA_LICENSE_STANDARD
+
+In other words, instead of requiring specific fixed values (e.g., `dwc:occurrenceStatus` must be “present” or coordinate uncertainty must be < 500 m) for which we don't have defined tests, this `Use Case` iteration expresses requirements in a way that can be evaluated using the existing BDQ Tests and configuration (authoritative vocabularies, numeric ranges, and temporal bounds), leaving more specific filtering to downstream processes.
+
+The BDQ Tests linked to this `Use Case` therefore provide a first-pass filter to create a dataset with defined, testable quality characteristics. That dataset can then be filtered further for more specific project needs (for example, a particular `dwc:occurrenceStatus` value, a tighter uncertainty threshold, or narrower dates), but those additional constraints are outside the scope of the current agreed BDQ Tests unless and until new broadly reusable Tests are defined.
+
+As part of refining a Use Case, we have found it helpful to: (1) draft a `Use Case` definition, (2) list the Tests to be included, (3) query an RDF (Turtle) serialization of the bdqtest vocabulary to extract the `Specification` text for those Tests, and then (4) use a generative AI tool to draft fitness requirements that are consistent with the included Test specifications.  Then go back and assess whether the desired set of tests for the `Use Case` are included, particularly examining which `MultiRecord` `Measures` are included, and then revising the `Use Case` definition and fitness requirements.  Obviously (sometimes in retrospect), this is an iterative process.
+
+Code for querying the Turtle serialization [bdqtest.ttl](../dist/bdqtest.ttl) of the bdqtest vocabulary for the `Specification` descriptions of each Test included in a Use Case is at: https://github.com/tdwg/bdq/blob/master/tg2/_build_review/tools/bdq_usecase_test_labels_Version4.py.
 
 ### 2.3 Data Quality Control and Data Quality Assurance (non-normative)
 

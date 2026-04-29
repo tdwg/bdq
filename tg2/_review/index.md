@@ -107,12 +107,9 @@ Beyond data availability, data quality is probably the most significant issue fo
 
 The Biodiversity Data Quality (BDQ) standard establishes a community-defined, modular, and extensible environment for biodiversity data quality.  It integrates a comprehensive set of Tests (`bdqtest:`) initially focused on Darwin Core (Wieczorek et al., 2012), but not restricted to it, with a formal Framework (`bdqffdq:`) and supporting vocabularies (`bdqval:`, `bdqdim:`, `bdqcrit:`, and `bdqenh:`) to define Tests, their inputs (`Information Elements`), and their structured output (`Responses`). 
 
-At its core, BDQ focuses on the semantics of data quality.  It defines what a Test means and precisely what information a `Response` must contain. BDQ intentionally avoids prescribing both execution concerns, such as data loading or parallelization of Test execution, and human centric concerns like presentation or remediation processes.  By providing a consistent semantic layer focused on Test inputs and outputs, the standard allows for flexible application within diverse operational settings supporting both `Quality Assurance` (QA) and `Quality Control` (QC). 
+At its core, BDQ focuses on the semantics of data quality.  It defines what a Test means and precisely what information a `Response` must contain. BDQ intentionally avoids prescribing both execution concerns, such as data loading or parallelization of Test execution, and human centric concerns like presentation or remediation processes.  By providing a consistent semantic layer focused on Test inputs and outputs, the standard allows for flexible application within diverse operational settings supporting both `Quality Assurance` (QA) and `Quality Control` (QC). The presentation and serialization of `Data Quality Reports` is intentionally flexible, so long as the required `Response` elements are available to consumers.
 
-The primary objective of the BDQ standard is to enhance interoperability.  By making Test results comparable and reusable across different organizations, software tools, and data pipelines, it reduces duplicated effort and ambiguity regarding "what was tested" and "what the outcome means."  Ultimately, this enables data providers, aggregators, and researchers to consistently assess *fitness for use*, prioritize quality improvements, and support transparent, repeatable scientific decisions about the use of biodiversity data.
-
-TODO: Integrate this thought into the above: 
-_The presentation and serialization of `Data Quality Reports` is intentionally flexible, so long as the required `Response` elements are available to consumers._
+The primary objective of the BDQ standard is to enhance interoperability.  By formalizing Test descriptions and making Test outputs comparable and reusable across different organizations, software tools, and data pipelines, it reduces duplicated effort and ambiguity regarding "what was tested" and "what the outcome means."  Ultimately, this enables data providers, aggregators, and researchers to consistently assess *fitness for use*, prioritize quality improvements, and support transparent, repeatable scientific decisions about the use of biodiversity data.
 
 #### 1.1.1 Purpose of this document (non-normative)
 
@@ -535,64 +532,83 @@ There were many people who have made notable contributions at various times duri
 
 ## 6 Glossary (non-normative)
 
-The glossary of terms used in the BDQ standard include acronyms and these terms are additional to the terms used in the BDQ and other referenced vocabularies. Note: ‘Darwin Core terms’ refer to [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021).
+The glossary of terms used in the BDQ standard includes acronyms and these terms that are additional to the terms used in the `bdqffdq`, `bdqval:`, `bdqcrit:`, `bdqdim:`, and `bdqenh:` vocabularies or in one of the two tables that reference the [Test Vocabulary Terms](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/list/bdqtest/index.md#18-key-to-vocabulary-terms-normative) or the [Test Label Components](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/supplement/index.md#313-parts-of-test-labels-non-normative). Note: ‘Darwin Core terms’ refer to [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021).
 
-TODO: @arthurchapman to combine into one table.
-
-| Acronym | Explanation |
-|---------|-------------|
-| ALA         | [Atlas of Living Australia](https://ala.org.au) | 
-| BDQ         | [TDWG Biodiversity Data Quality](https://github.com/tdwg/bdq) |
-| BISON       | Biodiversity Information Serving Our Nation |
-| CRIA        | [Centro de Referência em Informação Ambiental](https://www.cria.org.br/) |
-| EPSG        | [European Petroleum Survey Group](https://epsg.org/home.html) |
-| GBIF        | [Global Biodiversity Information Facility](https://gbif.org) |
-| iDigBio     | [Integrated Digitized BioCollections](https://www.idigbio.org/) |
-| IRI         | [Internationalized Resource Identifier](https://en.wikipedia.org/wiki/Internationalized_Resource_Identifier) |
-| ISO         | [International Standards Organization](https://www.iso.org/home.html) |
-| QA          | [Quality Assurance](docs/guide/bdqffdq/index.md#4447-quality-assurance-normative) See [Users Guide](docs/guide/users/index.md#2-context-for-quality-uses-and-purposes-non-normative). |
-| QC          | [Quality Control](docs/guide/bdqffdq/index.md#4446-quality-control-normative) See [Users Guide](docs/guide/users/index.md#2-context-for-quality-uses-and-purposes-non-normative). |
-| SDS         | [TDWG Standards Documentation Standard](https://www.tdwg.org/standards/sds/) |
-| TDWG        | [Biodiversity Information Standards](https://tdwg.org) |
-| TG1         | [Biodiversity Data Quality Interest Group - Task Group 1: Framework on Data Quality](https://github.com/tdwg/bdq/tree/master/tg1) |
-| TG2         | [Biodiversity Data Quality Interest Group - Task Group 2: Data Quality Tests and Assertions](https://github.com/tdwg/bdq/tree/master/tg2) |
-| TG3         | [Biodiversity Data Quality Interest Group - Task Group 3: Data Quality Use Cases](https://github.com/tdwg/bdq/tree/master/tg3) |
-| TG4         | [Biodiversity Data Quality Interest Group - Task Group 4: Best Practices for Development of Vocabularies of Values](https://github.com/tdwg/bdq/tree/master/tg4) |
-
-
-| Label | Definition | Context |
+| **Label** | **Definition** | **Context** |
 | ---- | ---- | ---- |
 | Actual Parameter | The value that is provided when a function or method is called. Actual parameters are the real data that are passed to a function to replace the formal parameters. In the function f(x) = x^2, x is a formal parameter that can be replaced by the actual parameter value 4, and thus be evaluated as f(4) = 4^2 = 16. In VALIDATION_GENUS_FOUND, the formal parameter bdqval:sourceAuthority may take the actual parameter "GBIF Backbone Taxonomy". | bdqffdq: |
-| COORDINATES | A general category of specific bdqval:InformationElements that represents the combination of the Darwin Core terms dwc:decimalLatitude and dwc:decimalLongitude and may include metadata terms including dwc:geodeticDatum. | bdqffdq:InformationElement |
-| CRS | Coordinate Reference System - (also referred to as 'spatial reference system'). A coordinate system defined in relation to a standard reference or datum (Chapman & Wieczorek 2020). | Test |
-| Dimension | Former term for what is now bdqffdq:DataQualityDimension. A particular aspect of data quality that can be measured or evaluated. Examples include accuracy, completeness, consistency, etc. | bdqdim: |
+| ALA | The [Atlas of Living Australia (ALA)](https://www.ala.org.au/) is a collaborative, digital, open infrastructure that pulls together Australian biodiversity data from multiple sources, making it accessible and reusable. | Biodiversity Data Aggregator |
+| Ambiguous | Used to report where `bdqdim:Conformance` is not satisfied due to `Information Elements` not being unambiguously resolvable by a `Source Authority`. | Data Quality |
+| Atlas of Living Australia | See ALA | Biodiversity Data Aggregator |
+| BDQ | Biodiversity Data Quality Standard. This document. | TDWG Standard |
+| BDQIG | Biodiversity Data Quality Interest Group | TDWG Interest Group |
+| BISON | USGS Biodiversity Information Serving Our Nation (BISON) is a unique, Web-based Federal mapping resource for species occurrence data in the United States and its Territories. | Biodiversity Data Aggregator |
+| CORE | Tests for evaluating biodiversity data quality as represented by the values of `Darwin Core` terms. CORE tests address identified user needs, are widely applicable, informative, unambiguous, well defined, and straight forward to implement. | Tests |
+| CRIA | [Centro de Referência em Informação Ambiental](https://cria.org.br/) (Reference Center for Environmental Information) is a network to make information about Brazil’s biodiversity accessible to all. | Biodiversity Data Aggregator |
+| CRS | Coordinate Reference System - (also referred to as 'spatial reference system'). A coordinate system defined in relation to a standard reference or datum (Chapman & Wieczorek 2020). | Tests |
+| Darwin Core | [Darwin Core](https://dwc.tdwg.org/). A Standard intended to facilitate the sharing of information about biological diversity. Host of the dwc:namespace [dwc:](http://rs.tdwg.org/dwc/terms/) | TDWG standard |
 | Database of record | An information system which holds an authoritative or master record of some data. Records in a database of record are held to be correct over different values for the same records that might be found in other datasets. This is in distinction from aggregated datasets, derived research dataset, datasets for portals and other holders of non-authoritative copies of the data. | BDQ standard |
-| DefaultSourceAuthority | A provided default bdqval:sourceAuthority that is used when a required bdqval:Parameter specifying a bdqval:sourceAuthority has not been provided at the time the Test is run. | bdqffdq:hasAuthoritiesDefaults |
-| DefaultValue | A preselected value (e.g., year, elevation) to be used where a required bdqval:Parameter value has not been provided at the time the Test is run. | bdqffdq:hasAuthoritiesDefaults |
-| geodetic coordinate reference system | A coordinate reference system based on a geodetic datum, used to describe positions on the surface of the earth (Chapman and Wieczorek 2020). | Test |
-| geodetic datum | A mathematical model that uses a reference ellipsoid to describe the size and shape of the surface of the earth and adds to it the information needed for the origin and orientation of coordinate systems on that surface (Chapman and Wieczorek 2000). | Test |
-| Formal Parameter | A placeholder defined in the function or method signature. It represents the input that the function expects. In the function f(x) = x^2, x is a formal parameter of the function f. In VALIDATION_GENUS_FOUND, bdqval:sourceAuthority is a formal parameter. | bdqffdq: |
-| Framework | The Fitness For Use Framework, the body of work that provides a fundamental structure for the BDQ Tests. The Fitness For Use Framework is derived from (Veiga 2016) and is the outcome of the TDWG Data Quality Task Group 1: Framework on Data Quality (Veiga et al. 2017). | bdqffdq: |
-| Framework Ontology | A model of the Framework (Veiga 2016, Veiga et al. 2017) as an OWL ontology, present as the bdqffdq: vocabulary in the BDQ standard. | bdqffdq: |
-| GEOGRAPHY | A general category of specific bdqval:InformationElements that represents a combination of Darwin Core administrative geography terms dwc:continent, dwc:country, dwc:countryCode, dwc:stateProvince, dwc:county, dwc:municipality. | bdqffdq:InformationElement |
+| DCMI | [DCMI Metadata Terms](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/). (Dublin Core). Hosts dc:Namespace [dc:](https://purl.org/dc/elements/1.1/)| Standard |
+| DefaultSourceAuthority | A provided default `bdqval:sourceAuthority` that is used when a required `bdqval:Parameter` specifying a `bdqval:sourceAuthorit`y has not been provided at the time the Test is run. | bdqffdq:hasAuthoritiesDefaults |
+| Dimension | See [bdqffdq:DataQualityDimension.](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/list/bdqffdq/index.md#dataqualitydimension) | bdqffdq: |
+| DefaultValue | A preselected value (e.g., year, elevation) to be used where a required `bdqval:Parameter` value has not been provided at the time the Test is run. | bdqffdq:hasAuthoritiesDefaults |
+| DO NOT IMPLEMENT | Tests that are not CORE and not recommended to be implemented with the current level of understanding for one or more reasons: Available vocabularies are ambiguous; the test is too complex to implement concisely; implementation is expected to lead to ambiguous or inaccurate results. | Tests |
+| Dublin Core | [International Metadata Standard (DCMI).](https://www.dublincore.org/) | Standard | 
+|DwC | [Darwin Core](https://dwc.tdwg.org/). A Standard intended to facilitate the sharing of information about biological diversity. Host of the dwc:namespace [dwc:](http://rs.tdwg.org/dwc/terms/) | TDWG standard |
+|EPSG | European Petroleum Survey Group database contains many definitions of coordinate reference systems and coordinate transformations which may be global, regional, national, or local in application. | Geodetic Parameter Dataset |
+| Formal Parameter | A placeholder defined in the function or method signature. It represents the input that the function expects. In the function f(x) = x^2, x is a formal parameter of the function f. In "VALIDATION_GENUS_FOUND", `bdq:sourceAuthority` is a formal parameter. | bdqffdq |
+| Framework | The Fitness for Use Framework, the body of work that provides a fundamental structure for the BDQ Tests. The Fitness for Use Framework is derived from (Veiga 2016) and is the outcome of the TDWG Data Quality Task Group 1: Framework on Data Quality (Veiga et al. 2017). | bdqffdq |
+| Framework Ontology | A model of the Framework (Veiga 2016, Veiga et al. 2017) as an OWL ontology, present as the `bdqffdq:` vocabulary in the BDQ standard. | bdqffdq |
+| GBIF | [Global Biodiversity Information Facility](https://www.gbif.org/) is an international network and data infrastructure funded by the world’s governments and aimed at providing anyone, anywhere, open access to data about all types of life on Earth. | Biodiversity Data Aggregator |
+| geodetic coordinate reference system | A coordinate reference system based on a geodetic datum, used to describe positions on the surface of the earth (Chapman and Wieczorek 2020). | Tests |
+| geodetic datum | A mathematical model that uses a reference ellipsoid to describe the size and shape of the surface of the earth and adds to it the information needed for the origin and orientation of coordinate systems on that surface (Chapman and Wieczorek 2000). | Tests |
+| Global Biodiversity Information Facility | see GBIF. | Biodiversity Data Aggregator |
+| GUID | Globally Unique Identifier. In this document, the GUID for a Test is a UUID (128-bit universally unique identifier) which identifies the Test. | Tests |
+| iDigBio | [Integrated Digitized BioCollections](https://www.idigbio.org/) is the United States of America National Resource for Advancing Digitization of Biodiversity Collections (ADBC) funded by the National Science Foundation. | Biodiversity Data Aggregator |
+| Immature / Incomplete | Tests where substantial work is needed to develop the specification to the point where the test can be reliably and usefully implemented. This may indicate work that is wholly internal to the test specification such as developing a consistent `Expected Response` or may indicate that external work is needed to develop an agreed vocabulary for values of the tested term. An Immature/Incomplete test may be made CORE, Supplementary, or DO NOT IMPLEMENT when relevant criteria are satisfied. | Tests |
+| IRI | Internationalized Resource Identifier is an internet protocol standard which builds on the Uniform Resource Identifier (URI) protocol by greatly expanding the set of permitted characters. | Standard |
+| ISO | [International Organization for Standarization.](https://www.iso.org/home.html) | Standard |
+| ISO / DCMI Standard | Tag used in the GitHub version of the Tests to indicate that a test references either an ISO or a DCMI Standard | GitHub Tag |
 | Java | Java is a registered trademark of Oracle and/or its affiliates. | BDQ standard |
-| NAME | A bdq GitHub label to indicate that the Test is related to Darwin Core terms in the dwc:Taxon Class. | bdqffdq:InformationElement |
-| non-printing characters | ASCII 0-32 and 127 decimal. Non-printing characters or formatting marks that are not displayed when printing. These may include pilcrow, space, non-breaking space, tab character, etc. For the purposes of the Tests they are treated as bdqval:Empty. | Data |
-| null | A value that is used in some databases to signify that a value is unknown or missing. It may be represented in serializations of data outside of database environments by strings such as "NULL", "Null", "null". "/n", "9999", "NA", etc. These serializations should be treated as bdqval:NotEmpty. | Data |
-| OTHER | A bdq GitHub label to indicate that the Test is related to Darwin Core terms other than Classes dwc:Taxon, dwc:Location or dwc:Event. | bdqffdq:InformationElement |
-| POLYNOMIAL | A general category of specific bdqval:InformationElements that represents a combination of the Darwin Core terms dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet. See the Test [VALIDATION_POLYNOMIAL_CONSISTENT](docs/terms/bdqtest/index.md#VALIDATION_POLYNOMIAL_CONSISTENT). | bdqffdq:InformationElement |
-| Roman numerals | Numbers written with the characters I, V, X, L, C, D, and M in the latin alphabet, each letter representing an integer and combined to form arbitrary integers. Roman numerals are interpreted as the equivalent integer for months (e.g., "X" as "10") in certain Tests. Roman numerals may not be unambiguously interpreted for other Darwin Core terms such as dwc:day or in text fields as they may mean unknown or something else entirely. | Data | 
-| SPACE | A bdq GitHub label to indicate that the Test is related to Darwin Core terms in the dwc:Location Class. | bdqffdq:InformationElement |
-| SRS | spatial reference system - see CRS (Chapman and Wieczorek 2020). | Test |
-| Test | An individual consideration of a DataQualityNeed with a Method that links it to an instance of a Specification, these instances being composed of InformationElements, Arguments, and Parameters. | BDQ standard | 
-| Test (technical) | A composition of an instance of a subclass of bdqffdq:DataQualityNeed (which expresses a data quality need in the abstract) with an instance of a subclass of bdqffdq:DataQualityMethod, which links it to an instance of a bdqffdq:Specification (which spells out how to concretely evaluate the need). These class instances are composed with bdqffdq:InformationElements, bdqffdq:Arguments, and bdqffdq:Parameters. For example, the Test [VALIDATION_COUNTRY_FOUND](docs/terms/bdqtest/index.md#VALIDATION_COUNTRY_FOUND).| BDQ standard | 
-| TestField | Column heading in the Markdown of the Tests in the [tdwg/bdq GitHub](https://github.com/tdwg/bdq/issues) that list all the normative and informative metadata elements that describe a Data Quality Test. | Test |
-| Test Type | There are four types of Tests: Validation (bdqffdq:Validation), Amendment (bdqffdq:Amendment), Issue (bdqffdq:Issue), and Measure (bdqffdq:Measure). | Test |
-| TIME | A bdq GitHub label to indicate that the Test is related to Darwin Core terms in the dwc:Event Class. | bdqffdq:InformationElement |
-| VERBATIM | A general category of specific bdqval:InformationElements that represents a term containing an original value. | bdqffdq:InformationElement |
-| whitespace | Characters such as spaces and tabs that affect rendering of printed or displayed output, but which themselves are not printed. 1) A field that only includes whitespace is treated as bdqval:Empty. 2) In bdqffdq:Validation Tests that require the look up of a bdqval:sourceAuthority, leading and/or trailing whitespace will cause the Test to fail as no pre-processing is carried out on the data. These leading and trailing whitespaces may be stripped out in a subsequent bdqffdq:Amendment and thus pass when the bdqffdq:Validation Test is run again. | Data |
-| YEARMONTHDAY | A general category of specific bdqval:InformationElements that represents a combination of the Darwin Core terms dwc:year, dwc:month, dwc:day. | bdqffdq:InformationElement |
-| YEARSTARTDAYOFYEARENDDAYOFYEAR | A general category of specific bdqval:InformationElements that represents a combination of the Darwin Core terms dwc:year, dwc:startDayOfYear, dwc:endDayofYear. | bdqffdq:InformationElement |
+| NAME | A BDQ GitHub label to indicate that the Test is related to Darwin Core terms in the `dwc:Taxon Class`. | bdqffdq:InformationElement |
+| NEEDS WORK | Tag used in the GitHub version of the Tests to indicate that a test description needs further work before conclusion. | GitHub Tag |
+| non-printing characters | ASCII 0-32 and 127 decimal. Non-printing characters or formatting marks that are not displayed when printing. These may include pilcrow, space, non-breaking space, tab character, etc. For the purposes of the Tests they are treated as `bdqval:Empty`. | Data |
+| null | A value that is used in some databases to signify that a value is unknown or missing. It may be represented in serializations of data outside of database environments by strings such as "NULL", "Null", "null". "/n", "9999", "NA", etc. These serializations should be treated as `bdqval:NotEmpty`. | Data |
+| OA | [Web Annotation Vocabulary](https://www.w3.org/TR/annotation-vocab/) specifies the set of RDF classes, predicates and named entities that are used by the Web Annotation Data Mode. Hosts the namespace [oa:](https://www.w3.org/TR/annotation-vocab/) | W3C Standard |
+| OTHER | A bdq GitHub label to indicate that the Test is related to Darwin Core terms other than Classes `dwc:Taxon`, `dwc:Location` or `dwc:Event`. | bdqffdq:InformationElement |
+| OWL | [Web Ontology Language](https://www.w3.org/OWL/). A Semantic Web language designed to represent rich and complex knowledge about things. Hosts the namespace [owl:](http://www.w3.org/2002/07/owl#) | Ontology |
+| Paramaterized | Pertains to a Test that allows a `bdq:Parameter` to be set prior to the test being run. Where a `bdq:Parameter` value has not been provided, a default is specified within the test. | Tests |
+| Python | A high-level, general-purpose programming language known for its readability and versatility. Python Software Foundation. | Programming language |
+| QA | Quality Assurance. See [User's Guide #2.1](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/guide/users/index.md#21-quality-control-and-quality-assurance-non-normative).  Data are evaluated for fitness for use and are filtered down to just those data that are fit for that use. | Data Quality |
+| QC | Quality Control. See [User's Guide #2.1](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/guide/users/index.md#21-quality-control-and-quality-assurance-non-normative). Tests are used to identify data that are not fit for particular uses, with the goal of improving the data quality, and the tests may propose changes to improve the quality of the data. | Data Quality |
+| RDF | Resource Description Framework - a W3C standard for modeling, interchanging, and linking structured data on the web. Hosts the namespace  [rdf:](http://www.w3.org/1999/02/22-rdf-syntax-ns#) | W3C Standard |
+| RDFS | A semantic extension of RDF using the namespace [rdfs:](http://www.w3.org/2000/01/rdf-schema#) | W3C Standard |
+| Response | The report from a single execution of a single Test, consisting of a `bdq:Response.status`, a `bdq:Response.result`, a `bdq:Response.comment`, and optionally, a `bdq:Response.qualifier`. A shortcut for `bdqffdq:Assertion` | Data Quality Report |
+| Response.comment | A human readable interpretation of the results of a Test. A shortcut for `bdqffdq:hasResponseComment | Data Quality Report |
+| Response.qualifier | Additional structured information that qualifies the Response, intended as an extension point for uncertainty. A shortcut for `bdqffdq:ResponseQualifier`, `bdqffdq:hasResponseQualifier` | Data Quality Report |
+| Response.result | The element in a Response containing the value returned by a Test. A shortcut for `bdqffdq:ResponseResult`, `bdqffdq:hasResponseResult`, `bdqffdq:hasResponseResultValue` | Data Quality Report |
+| Response.status | A metadata element in a Response indicating whether a particular Test was able to be performed or not. A shortcut for `bdqffdq:ResponseStatus`, `bdqffdq:hasResponseStatus` | Data Quality Report |
+| Roman numerals | Numbers written with the characters I, V, X, L, C, D, and M in the latin alphabet, each letter representing an integer and combined to form arbitrary integers. Roman numerals are interpreted as the equivalent integer for months (e.g., "X" as "10") in certain Tests. Roman numerals may not be unambiguously interpreted for other Darwin Core terms such as `dwc:day` or in text fields as they may mean unknown or something else entirely. | Data | 
+| SDS | [TDWG Standards Documentation Standard](https://www.tdwg.org/standards/sds/) | TDWG Standard |
+| SKOS | [Simple Knowledge Organization System](https://www.w3.org/TR/skos-reference/). Hosts the namespace [skos:](http://www.w3.org/2004/02/skos/core#) | W3C Standard |
+| SPACE | A BDQ GitHub label to indicate that the Test is related to Darwin Core terms in the `dwc:Location Class`. | bdqffdq:InformationElement |
+| SRS | spatial reference system - see CRS (Chapman and Wieczorek 2020). | Tests |
+| Supplementary | Tests regarded as not CORE because of one or more reasons: Not widely applicable; not clearly matched to an identified data quality need; not informative concerning the "quality" or lack of quality of the data; likely to return a high percentage of either `NOT_COMPLIANT` or `POTENTIAL_ISSUE` records. A Supplementary test MAY be implemented in a local implementation if a suitable use case exists. | Tests |
+| TDWG | [Biodiversity Information Standards](https://www.tdwg.org/standards/sds/) | Standards |
+| Term-Actions | The last two components of the Label in the [BDQ GitHub](https://github.com/tdwg/bdq/issues). Test descriptors, useful in filtering Tests in CSV files. Example: "COUNTRYCODE_STANDARD" | GitHub |
+| Test | An individual consideration of a `DataQualityNeed` with a `Method` that links it to an instance of a `Specification`, these instances being composed of `InformationElements`, `Arguments`, and `Parameters`. | BDQ standard | 
+| Test (technical) | A composition of an instance of a subclass of `bdqffdq:DataQualityNeed` (which expresses a data quality need in the abstract) with an instance of a subclass of `bdqffdq:DataQualityMethod`, which links it to an instance of a `bdqffdq:Specification` (which spells out how to concretely evaluate the need). These class instances are composed with `bdqffdq:InformationElements`, `bdqffdq:Arguments`, and `bdqffdq:Parameters`. For example, the Test [VALIDATION_COUNTRY_FOUND](docs/terms/bdqtest/index.md#VALIDATION_COUNTRY_FOUND). | BDQ standard | 
+| TestField | Column heading in the Markdown of the Tests in the [tdwg/bdq GitHub](https://github.com/tdwg/bdq/issues) that list all the normative and informative metadata elements that describe a Data Quality Test. | Tests |
+| Test Type | There are four types of Tests: Validation (`bdqffdq:Validation`), Amendment (`bdqffdq:Amendment`), Issue (`bdqffdq:Issue`), and Measure (`bdqffdq:Measure`). | Tests |
+| TG1 | [Biodiversity Data Quality Interest Group - Task Group 1: Framework on Data Quality] (https://www.tdwg.org/community/bdq/tg-1/) | TDWG Task Group |
+| TG2 | [Biodiversity Data Quality Interest Group - Task Group 2: Data Quality Tests and Assertions](https://www.tdwg.org/community/bdq/tg-2/) | TDWG Task Group |
+| TG3 | [Biodiversity Data Quality Interest Group - Task Group 3: Data Quality Use Cases](https://www.tdwg.org/community/bdq/tg-3/) | TDWG Task Group |
+| TG4 | [Biodiversity Data Quality Interest Group - Task Group 4: Best Practices for Development of Vocabularies of Values](https://www.tdwg.org/community/bdq/tg-4/) | TDWG Task Group |
+| TIME | A BDQ GitHub label to indicate that the Test is related to Darwin Core terms in the `dwc:Event Class`. | bdqffdq:InformationElement |
+| VertNet | [VertNet](https://www.vertnet.org/) is a network of individuals, organizations and institutions that explore, study and care about and share vertebrate species data globally. | Biodiversity Data Aggregator |
+| VOCABULARY | Tag used in the GitHub version of the Tests to indicate that a Test requires a controlled Vocabulary. | GitHub Tag |
+| whitespace | Characters such as spaces and tabs that affect rendering of printed or displayed output, but which themselves are not printed. 1) A field that only includes whitespace is treated as `bdqval:Empty`. 2) In `bdqffdq:Validation`, Tests that require the look up of a `bdqval:sourceAuthority`, leading and/or trailing whitespace will cause the Test to fail as no pre-processing is carried out on the data. These leading and trailing whitespaces may be stripped out in a subsequent `bdqffdq:Amendment` and thus pass when the `bdqffdq:Validation` Test is run again. | Data |
+| XSD | [W3C XML Schema Definition Language](https://www.w3.org/TR/xmlschema11-1/) facilities describing the structure and constraining the contents of XML documents. Hosts the namespace [xsd:](http://www.w3.org/2001/XMLSchema#)
 
 ## 7 References (non-normative)
 
