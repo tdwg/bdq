@@ -1163,10 +1163,10 @@ The combination of `Information Element` and Evaluation was called the Term-Acti
 If the `Information Element` is a single term (e.g. `dwc:countryCode`), the information element component of the label is just the term local name placed in all upper case (e.g. COUNTRYCODE).  If the `Information Element` is composed of several terms, these may simply be concatenated for example "YEARMONTHDAY" or "COUNTRYCOUNTRYCODE".  Alternately, several terms may be labeled with a abstract description of the combined specific `Information Elements`, an `Abstract Information Element` label, for example "POLYNOMIAL" or "CLASSIFICATION".
 
 In some cases we have departed from this simple convention in labels for more complex Tests to permit easy identification of the nature of the Test:
-* The evaluation LESSTHAN is framed in a different order as {informationelement}_LESSTHAN_{informationelement}. e.g. [VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH](../terms/bdqtest/index.md#VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH) 
-* Amendments that fill in a value may be framed as e.g. AMENDMENT_{inputinformationelement}_{evaluation}_{outputinformationelement} e.g. [AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID](../terms/bdqtest/index.md#AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID)
+* The evaluation LESSTHAN is framed in a different order as `{informationelement}_LESSTHAN_{informationelement}`. e.g. [VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH](../terms/bdqtest/index.md#VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH) 
+* Amendments that fill in a value may be framed as e.g. `AMENDMENT_{inputinformationelement}_{evaluation}_{outputinformationelement}` e.g. [AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID](../terms/bdqtest/index.md#AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID)
 
-These conventions for forming Test labels are simply a convention, and neither the Evaluations nor the Abstract Information Element Labels are a formal controlled vocabulary with a namespace (unlike the terms in `bdqval:` and the other supporting vocablularies in BDQ).
+These conventions for forming Test labels are **simply conventions**, and neither the Evaluations nor the Abstract Information Element Labels are a formal controlled vocabulary with a namespace (unlike the terms in `bdqval:` and the other supporting vocablularies in BDQ).
 
 The tables below list the terms used for the Test `Types`, the `Abstract Information Element` Labels, and the Evaluation terms, with an example for each.
 
