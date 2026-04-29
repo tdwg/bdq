@@ -1296,12 +1296,20 @@ The Test Conformance Testing Data are organized as two flat CSV files. Each row 
 
 The Test Conformance Testing Data records are all fragmentary [Simple Darwin Core](https://dwc.tdwg.org/simple/) (Wieczorek et al. 2012) `dwc:Occurrence` records. Each row contains values for only those Darwin Core terms that are relevant input to the particular cate and consists of a mixture of real and artificial data. The conformance testing data consist of over 1100 records, with an average of about 10 cases for each Test (designed to exercise all of the decision pathways in the specification of the Test (that is, all paths within each `ExpectedResponse`)). The set of rows for a given Test are intended to be sufficient to validate that an implementation of that particular Test performs as expected against the specification.
 
+Additional conformance testing records can be readily generated or adapted from real data using the specifications in Section [8.2](#82-structure-of-the-test-conformance-testing-data-non-normative) and the template in Section [8.3](#83-examples-of-the-data-for-conformance-testing-non-normative) below, along with the existing Test Conformance Testing Data records as examples.  Such additional records can be added to the conformance testing dataset.
+
 #### 8.1.1 DataID as a conformance testing data record identifier (normative)
 
-Test Conformance Testing Data rows SHOULD be uniquely identified within the conformance testing dataset with a dataID.
+Within a Test conformance testing data set, `dataID` values uniquely identify a conformance test case.
 
-Additional Test records can be readily generated or adapted from real data using the following template based on the specifications below. In consideration of the community, the `dataID` values MUST uniquely identify a conformance test case for each additional Test data record and the resulting data SHOULD be added to the appropriate [TG2_test_validation_data.csv](./TG2_test_validation_data.csv) or [TG2_test_validation_data_nonprintingchars.csv](TG2_test_validation_data_nonprintingchars.csv) file. 
-Frameworks that validate Test implementations against the Test Conformance Testing Data SHOULD report failure cases including the `dataID` of the conformance testing data for rows that did not validate.
+For additional conformance testing data record in a Test conformance testing dataset:
+* Each Test conformance testing data row MUST be uniquely identified within a conformance testing dataset with a dataID.
+* The resulting data SHOULD be added to the appropriate [TG2_test_validation_data.csv](./TG2_test_validation_data.csv) or [TG2_test_validation_data_nonprintingchars.csv](TG2_test_validation_data_nonprintingchars.csv) file for Tests that are part of the BDQ standard. 
+* Conformance testing data added to these files MUST follow the specifications in Section [8.2](#82-structure-of-the-test-conformance-testing-data-non-normative) and the template in Section [8.3](#83-examples-of-the-data-for-conformance-testing-non-normative).
+
+Frameworks that validate Test implementations against the Test conformance testing Data SHOULD report failure cases and SHOULD include the `dataID` of the conformance testing data for rows that did not validate.
+
+Tests in development for inclusion in the BDQ standard SHOULD also be validated against conformance testing data using separate files, and such conformance testing data records SHOULD follow the structure described in Sections and individual test case rows SHOULD be identified with a `dataID` value unique within that data set.
 
 ### 8.2 Structure of the Test Conformance Testing Data (non-normative)
 
