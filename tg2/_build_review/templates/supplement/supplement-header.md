@@ -161,6 +161,7 @@ Most of the BDQ Use Cases are broad, with many BDQ Tests linked to each one. Whe
 
 The list below shows the key components of the initial phrasing of the SDM-Trees Use Case: Definition; Fitness Requirements, and the set of BDQ SingleRecord Tests we initially linked to those requirements.
 
+
 Name: **SDM-Trees** 
 
 Definition: 
@@ -273,7 +274,7 @@ The BDQ Tests linked to this `Use Case` therefore provide a first-pass filter to
 
 As part of refining a Use Case, we have found it helpful to: (1) draft a `Use Case` definition, (2) list the Tests to be included, (3) query an RDF (Turtle) serialization of the bdqtest vocabulary to extract the `Specification` text for those Tests, and then (4) use a generative AI tool to draft fitness requirements that are consistent with the included Test specifications.  Then go back and assess whether the desired set of tests for the `Use Case` are included, particularly examining which `MultiRecord` `Measures` are included, and then revising the `Use Case` definition and fitness requirements.  Obviously (sometimes in retrospect), this is an iterative process.
 
-Code for querying the Turtle serialization [bdqtest.ttl](../dist/bdqtest.ttl) of the bdqtest vocabulary for the `Specification` descriptions of each Test included in a Use Case is at: https://github.com/tdwg/bdq/blob/master/tg2/_build_review/tools/bdq_usecase_test_labels_Version4.py.
+Code for querying the Turtle serialization [bdqtest.ttl](../dist/bdqtest.ttl) of the bdqtest vocabulary for the `Specification` descriptions of each Test included in a Use Case is at: https://github.com/tdwg/bdq/blob/master/tg2/_build_review/tools/bdq_usecase_test_labels_Version4.py, and the SPARQL query for asking this question is in Section [2.4.2 Describing all the Tests in a Use Case](#242-describing-all-the-tests-in-a-use-case-non-normative) below.
 
 ### 2.3 Data Quality Control and Data Quality Assurance (non-normative)
 
@@ -289,6 +290,7 @@ Following are example competency questions that can be asked of the RDF represen
 
 Given a `Use Case`, can one find `Validation` Tests and their `Specifications`?
 
+```sparql
     PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
@@ -319,9 +321,11 @@ Given a `Use Case`, can one find `Validation` Tests and their `Specifications`?
     
          FILTER( ?uc = <https://rs.tdwg.org/bdqval/terms/Taxon-Management> )
     }
+```
 
 Given a `Use Case`, can one find the `Single Record` `Validations` related to that `Use Case`?  This is a question that an implementation of Tests might ask of an RDF representation of the bdqtest: vocabulary (list of Tests) in order to determine which Tests to run against each record in a dataset, given a target `Use Case` as a user selection in that implementation.
 
+```sparql
     PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
     PREFIX skos:    <http://www.w3.org/2004/02/skos/core#>
@@ -368,9 +372,11 @@ Given a `Use Case`, can one find the `Single Record` `Validations` related to th
       OPTIONAL { ?validation dcterms:issued ?issued }
     }
     ORDER BY LCASE(STR(?validationLabel)) STR(?issued)
+```
 
 Or, to just get the UUID of these tests (for example to lookup relevant methods using Java annotations), asking: Given a `Use Case`, can one find the UUIDs of the `Single Record` `Validations` related to that `Use Case`?
 
+```sparql
     PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
     PREFIX dcterms: <http://purl.org/dc/terms/>
@@ -394,9 +400,11 @@ Or, to just get the UUID of these tests (for example to lookup relevant methods 
                   bdqffdq:hasResourceType bdqffdq:SingleRecord ;
                   dcterms:isVersionOf ?isVersionOf .
     }
+```
 
 Given a `Use Case`, can one find the `Information Elements` that were `Acted Upon`?
 
+```sparql
     PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
     PREFIX dwc: <http://rs.tdwg.org/dwc/terms/>
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -425,9 +433,11 @@ Given a `Use Case`, can one find the `Information Elements` that were `Acted Upo
        FILTER( ?uc = <https://rs.tdwg.org/bdqval/terms/Taxon-Management> )
     
     }
+```
 
 Can one find a summary of Tests by `Data Quality Dimension` with specific Darwin Core Terms in `Information Elements` `Acted Upon`? 
 
+```sparql
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     PREFIX owl: <http://www.w3.org/2002/07/owl#>
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -444,9 +454,11 @@ Can one find a summary of Tests by `Data Quality Dimension` with specific Darwin
     }
     GROUP BY ?sie ?dimension
     ORDER BY ?sie ?dimension
+```
 
 Can one find a summary of Tests by Test Type with specific Darwin Core Terms in `Information Elements` `Acted Upon`?
 
+```sparql
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     PREFIX owl: <http://www.w3.org/2002/07/owl#>
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -462,9 +474,11 @@ Can one find a summary of Tests by Test Type with specific Darwin Core Terms in 
     }
     GROUP BY ?sie ?testType
     ORDER BY ?sie ?testType
+```
 
 Given a `Specification` (as would be known when starting with a `bdqffdq:Response` and following `bdqffdq:producesResponse` to a `bdqffdq:Implementation` then `bdqffdq:usesSpecification`), which Test was run with which argument values for which `Parameters`?
 
+```sparql
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
@@ -485,9 +499,11 @@ Given a `Specification` (as would be known when starting with a `bdqffdq:Respons
         ?argument bdqffdq:hasArgumentValue ?argumentValue .
       }
     }
+```
 
 Given a `Response`, which Test was run with which `has Argument values` for which `Parameters` by which `Mechanism` to produce it: 
 
+```sparql
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     PREFIX owl: <http://www.w3.org/2002/07/owl#>
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -506,9 +522,11 @@ Given a `Response`, which Test was run with which `has Argument values` for whic
       FILTER (STR(?assertion) = "{id of assertion to look up}")
     }
     GROUP BY ?test ?label ?description ?mechanism
+```
 
 What `Validations` and `Amendments` share `Information Elements` `Acted Upon`?
 
+```sparql
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     PREFIX owl: <http://www.w3.org/2002/07/owl#>
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -521,9 +539,11 @@ What `Validations` and `Amendments` share `Information Elements` `Acted Upon`?
         ?amendment a bdqffdq:Amendment . ?amendment rdfs:label ?alabel .
     }
     ORDER BY ?term
+```
 
 What `Information Elements` are `Acted Upon` by more that one `Amendment`?
 
+```sparql
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     PREFIX owl: <http://www.w3.org/2002/07/owl#>
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -538,9 +558,11 @@ What `Information Elements` are `Acted Upon` by more that one `Amendment`?
     GROUP BY ?term 
     HAVING ( ?ct > 1 )
     ORDER BY ?ct ?term
+```
 
 What `Amendments` have `Information Elements` `Acted Upon` that are `Acted Upon` by more than one `Amendment`:
 
+```sparql
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     PREFIX owl: <http://www.w3.org/2002/07/owl#>
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -559,9 +581,42 @@ What `Amendments` have `Information Elements` `Acted Upon` that are `Acted Upon`
            HAVING ( ?ct > 1 )
        } 
     } 
+```
+
+
+#### 2.4.1 Listing Identifiers for Tests (non-normative)
+
+The Fitness For Use Framework organizes data quality Tests as ontology individuals, each with associated human-readable labels and persistent identifiers. To support automated processing and reference, it is often necessary to retrieve a list of these `Validation` Tests with their identifiers and version-specific IRIs. The following competency question demonstrates how to query the ontology to obtain this information using SPARQL.
+
+```sparql
+    PREFIX owl: <http://www.w3.org/2002/07/owl#>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
+    PREFIX dcterms: <http://purl.org/dc/terms/>
+    SELECT ?label ?term_localName ?iri ?term_iri
+    WHERE { 
+      ?iri a bdqffdq:Validation .
+      ?iri rdfs:label ?label .
+      ?iri dcterms:isVersionOf ?term_iri .
+      BIND (REPLACE(STR(?term_iri),"https://rs.tdwg.org/bdqtest/terms/","") as ?term_localName )
+    }
+```
+
+Example results: 
+
+| Label | Term Name | Term Version IRI | Term IRI |
+| ----  | --------- | ---------------- | -------- | 
+| VALIDATION_MINELEVATION_INRANGE | 0bb8297d-8f8a-42d2-80c1-558f29efe798 | <https://rs.tdwg.org/bdqtest/terms/0bb8297d-8f8a-42d2-80c1-558f29efe798-2024-09-04> | <https://rs.tdwg.org/bdqtest/terms/0bb8297d-8f8a-42d2-80c1-558f29efe798> |
+| VALIDATION_MONTH_STANDARD | 01c6dafa-0886-4b7e-9881-2c3018c98bdc | <https://rs.tdwg.org/bdqtest/terms/01c6dafa-0886-4b7e-9881-2c3018c98bdc-2024-09-05> | <https://rs.tdwg.org/bdqtest/terms/01c6dafa-0886-4b7e-9881-2c3018c98bdc> |
+
+The label is intended as the identifier of a Test for humans, the Term Name as a machine readable identifier.
+
+#### 2.4.2 Describing all the Tests in a Use Case (non-normative)
 
 List all `Use Cases`, and the Tests associated with the comments on each `Data Quality Need` and its related `Specification`, formulated to run directly on triples found in bdqtest.ttl without inference.
 
+```sparql
     PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
     PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
@@ -606,38 +661,13 @@ List all `Use Cases`, and the Tests associated with the comments on each `Data Q
       LCASE(STR(?useCaseLabel))
       LCASE(STR(?needLabel))
       STR(?need)
+```
 
-
-#### 2.4.1 Listing Identifiers for Tests (non-normative)
-
-The Fitness For Use Framework organizes data quality Tests as ontology individuals, each with associated human-readable labels and persistent identifiers. To support automated processing and reference, it is often necessary to retrieve a list of these `Validation` Tests with their identifiers and version-specific IRIs. The following competency question demonstrates how to query the ontology to obtain this information using SPARQL.
-
-    PREFIX owl: <http://www.w3.org/2002/07/owl#>
-    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-    PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
-    PREFIX dcterms: <http://purl.org/dc/terms/>
-    SELECT ?label ?term_localName ?iri ?term_iri
-    WHERE { 
-      ?iri a bdqffdq:Validation .
-      ?iri rdfs:label ?label .
-      ?iri dcterms:isVersionOf ?term_iri .
-      BIND (REPLACE(STR(?term_iri),"https://rs.tdwg.org/bdqtest/terms/","") as ?term_localName )
-    }
-
-Example results: 
-
-| Label | Term Name | Term Version IRI | Term IRI |
-| ----  | --------- | ---------------- | -------- | 
-| VALIDATION_MINELEVATION_INRANGE | 0bb8297d-8f8a-42d2-80c1-558f29efe798 | <https://rs.tdwg.org/bdqtest/terms/0bb8297d-8f8a-42d2-80c1-558f29efe798-2024-09-04> | <https://rs.tdwg.org/bdqtest/terms/0bb8297d-8f8a-42d2-80c1-558f29efe798> |
-| VALIDATION_MONTH_STANDARD | 01c6dafa-0886-4b7e-9881-2c3018c98bdc | <https://rs.tdwg.org/bdqtest/terms/01c6dafa-0886-4b7e-9881-2c3018c98bdc-2024-09-05> | <https://rs.tdwg.org/bdqtest/terms/01c6dafa-0886-4b7e-9881-2c3018c98bdc> |
-
-The label is intended as the identifier of a Test for humans, the Term Name as a machine readable identifier.
-
-#### 2.4.2 Framework Competency Question including an oa:annotation (non-normative)
+#### 2.4.3 Framework Competency Question including an oa:annotation (non-normative)
 
 The Fitness For Use Framework represents the results of `Validation` Tests as `Responses`, which can be linked to biodiversity data records through `Annotations` following the W3C Web Annotation model. This structure allows detailed provenance and context to be recorded alongside each `Response`. The following competency question demonstrates how to retrieve all `Responses` generated for a specific `dwc:Occurrence` record, including metadata such as the associated `Validation` Test, `Annotation` motivation, date of generation, and relevant `Parameters`.
 
+```sparql
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     PREFIX owl: <http://www.w3.org/2002/07/owl#>
     PREFIX oa: <http://www.w3.org/ns/oa#>
@@ -672,9 +702,7 @@ Note that a `Validation` will produce a hasResponseResult only if the hasRespons
 
       OPTIONAL { ?assertion bdqffdq:hasResponseResult ?responseresult . }
       OPTIONAL { ?assertion bdqffdq:hasResponseResultValue ?responseresultvalue . }
-
-
-
+```
 
 ## 3 Developing the Tests (non-normative)
 
