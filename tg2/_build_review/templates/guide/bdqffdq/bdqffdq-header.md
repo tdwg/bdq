@@ -286,6 +286,7 @@ Following is a knowledge graph showing the is-a relationships between the classe
 
 Below is a fragment in Turtle describing VALIDATION_COUNTRY_FOUND, composed of a `Validation`, linking an `Acted Upon` `Information Element`, a `Criterion`, and the `Resource Type` `Single Record`, with the `Validation` linked to a `Validation Method`, and from there a `Specification`. Also shown is a `Validation Policy` linking this `Validation` to a `Use Case`.
 
+```turtle
     bdqtest:69b2efdc-6269-45a4-aecb-4cb99c2ae134-2025-03-07 a bdqffdq:Validation;
       bdqffdq:hasResourceType bdqffdq:SingleRecord;
       skos:note "Non-country information such as \"high seas\" will fail this Test (high seas should use dwc:countryCode = \"XZ\" and have dwc:country empty). Getty Place Types for administrative level \"nation\" are 81010 nation, 81011 independent sovereign nation, and 81012 independent nation. Multiple values in the dwc:country field (whether to signify on a border or in a list of possibilities) will fail this Test. Locations outside of a jurisdiction covered by a country code should not have a value in the field dwc:countryCode. This Test should find any matches at the Getty \"nation\" level including internationalized names and historical representations of that nation (where boundaries are same). This Test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.";
@@ -366,6 +367,7 @@ Below is a fragment in Turtle describing VALIDATION_COUNTRY_FOUND, composed of a
         bdqtest:3f1db29a-bfa5-40db-9fd1-fde020d81939-2025-03-07, bdqtest:4daa7986-d9b0-4dd5-ad17-2d7a771ea71a-2025-03-07,
         bdqtest:d257eb98-27cb-48e5-8d3c-ab9fca4edd11-2025-03-07, bdqtest:4eb48fdf-7299-4d63-9d08-246902e2857f-2025-03-07;
       skos:prefLabel "ValidationPolicy: (49) validations  in UseCase bdqval:Spatial-Temporal_Patterns" .
+```
 
 ## 3 Use of Ontology Terms (normative) 
 
@@ -592,6 +594,7 @@ Each instance of a `bdqffdq:AmendmentResponse` SHOULD be the object of one and o
 
 Given a `Response`, the following query returns which Test was run with which argument values for which parameters by which mechanism to produce it. This query SHOULD only return a single row. 
  
+```sparql
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     PREFIX owl: <http://www.w3.org/2002/07/owl#>
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -610,6 +613,7 @@ Given a `Response`, the following query returns which Test was run with which ar
       FILTER (STR(?assertion) = "{id of assertion to look up}")
     }
     GROUP BY ?test ?label ?description ?mechanism
+```
 
 Where, in this query, the text {id of assertion to look up} is a placeholder to replace with the id of the instance of the `bdqffdq:Response` to look up.
 

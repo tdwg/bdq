@@ -164,6 +164,7 @@ For CSV data, a column is either there or not in a dataset, but in an RDF repres
 
 Here is a Java function to evaluate Empty, using trim() to exclude U+0020 (space), U+000A (LF), U+000D (CR) and the other non-printing characters in the unicode range U+0000 to U+0020, and also evaluating null as Empty. Test implementations can reuse a function like this for any Test that evaluates `bdqval:Empty` in its specification (`hasExpectedResponse`).
 
+```java
     public boolean isEmpty(String aString)  {
         boolean result = true;
         if (aString != null && aString.trim().length()>0) { 
@@ -171,9 +172,11 @@ Here is a Java function to evaluate Empty, using trim() to exclude U+0020 (space
         }
         return result;
     }
+```
 
 Here is a MariaDB implementation of a lightweight version of [VALIDATION_KINGDOM_NOTEMPTY](../../terms/bdqtest/index.md#VALIDATION_KINGDOM_NOTEMPTY), which provides a list of NOT_COMPLIANT records for some flat taxonomy table in a database, again handing off the responsibility for evaluation of non-printing characters to the trim function available in the language.
 
+```sql
     SELECT taxonomy_id, kingdom,
          'VALIDATION_KINGDOM_NOTEMPTY' as test, 'NOT_COMPLIANT' as response_result, 'RUN_HAS_RESULT' as response_status,
          'The value of kingdom is Empty.' as response_comment
@@ -183,6 +186,7 @@ Here is a MariaDB implementation of a lightweight version of [VALIDATION_KINGDOM
          OR
          length(trim(kingdom)) == 0
     ;
+```
 
 ### 2.3 Reading Test Descriptors (non-normative)
 
@@ -339,7 +343,7 @@ When the parameter has a default value and a resource, and an implementation inc
 ##### 2.3.2.5 Example Interpretation of a Parameter String Default Value (non-normative)
 
 The following code snippet in Java from the FilteredPush `rec_occur_qc` library (Morris 2025) illustrates interpretation of the default value "Creative Commons" when provided as a parameter to an implementation of [AMENDMENT_LICENSE_STANDARDIZED](../../terms/bdqtest/index.md#AMENDMENT_LICENSE_STANDARDIZED). The literal "Creative Commons" is accepted as a parameter value.
-
+```java
     @Amendment(label="AMENDMENT_LICENSE_STANDARDIZED", description="Propose amendment to the value of dwc:license using bdqval:sourceAuthority.")
     @Provides("dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8")
     @ProvidesVersion("https://rs.tdwg.org/bdqtest/terms/dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8-2023-09-18")
@@ -377,6 +381,7 @@ This library also includes a method whose signature does not include the paramet
     ) {
         return amendmentLicenseStandardized(license, null);
     }
+```
 
 #### 2.3.3 The Concept of "interpreted as" (normative)
 
@@ -647,11 +652,15 @@ An implementation of a Test MAY be complete as described with `bdqffdq:` terms i
 
 One complexity introduced by the abstraction of Tests into APIs that take [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) as input and output is to make sure that `Response` objects are correctly mapping Darwin Core terms loaded in an execution framework onto the parameters of an implementation method. Consider an implementation of the Test [VALIDATION_ENDDAYOFYEAR_INRANGE](../../terms/bdqtest/index.md#VALIDATION_ENDDAYOFYEAR_INRANGE) that has the following method signature: 
 
+```java
     public Response validationEnddayofyearInrange(String startDayOfYear, String eventDate)
+```
 
 If an implementation framework calls this method, reversing the binding of `dwc:startDayOfYear` and `dwc:eventDate`, for example: 
 
+```java
     Response endDayTestResponse = validationEnddayofyearInrange(eventDate, startDayOfYear);
+```
 
 the Test will not return the desired result, even if the implementation is correct. Thus correct matching of input terms to the implementation of each Test is critical. 
 
@@ -671,14 +680,17 @@ If a Test implementation is a function that takes Darwin Core terms as input par
 
 In Java, annotating method parameters and using reflection to bind between the execution framework and Test implementations works well. Following is a simplified code snippet from the FilteredPush `event_date_qc` library (Morris & Lowery 2025) that uses Java annotations, (e.g., @ActedUpon(value="dwc:endDayOfYear") to provide metadata about which parameter goes with which `Information Element`.
 
+```java
     public Response validationEnddayofyearInrange(
             @ActedUpon(value="dwc:endDayOfYear") String endDay,
             @Consulted(value="dwc:eventDate") String eventDate) {
+```
 
 An execution framework can use reflection to determine, from the annotations on the parameter, which Darwin Core term to bind to which parameter.
 
 Additional metadata can be added in Java annotations. In the following, again from the FilteredPush `event_date_qc` (Morris & Lowery 2025) library, annotations enable an implementation framework to look up a Test implementation by the Test GUID, and can provide metadata about the Test to users. For maintenance, annotations can be used to determine if an implementation is up to date with the latest version of a Test specification.
 
+```java
     @Validation(label="_ENDDAYOFYEAR_INRANGE", description="Is the value of dwc:endDayOfYear an integer between 1 and 365 inclusive, or 366 if a leap year?")
     @Provides("9a39d88c-7eee-46df-b32a-c109f9f81fb8")
     @ProvidesVersion("https://rs.tdwg.org/bdqtest/terms/9a39d88c-7eee-46df-b32a-c109f9f81fb8-2023-09-18")
@@ -688,19 +700,23 @@ Additional metadata can be added in Java annotations. In the following, again fr
             @Consulted(value="dwc:eventDate") String eventDate) {
         ....
     } 
+```
 
 This approach will only work with a subset of programming languages.
 
 In many languages, a domain object can be passed as a method parameter.
 
+```java
     public Response validationEnddayofyearInrange(Event event) { 
         
     }
+```
 
 Here, both the execution framework and the internals of the validationEnddayofyearInrange method must be able to work with the `Event` (object or structure) and work with its `Event.enddayofyear` and `Event.eventdate` properties.
 
 It is also possible to implement this in an object-oriented manner as methods on a class: 
 
+```java
     public class Event() { 
 
         private eventDate;
@@ -709,6 +725,7 @@ It is also possible to implement this in an object-oriented manner as methods on
         public Response validationEnddayofyearInRange()...
 
     } 
+```
 
 Other approaches are also possible.
 
@@ -810,7 +827,7 @@ hasExpectedResponse: INTERNAL_PREREQUISITES_NOT_MET if dwc:day is bdqval:Empty; 
 
 Below is an example implementation from the FilteredPush `event_date_qc` library (Morris & Lowery 2024). In this implementation, Java annotations are used to provide metadata that can be used by an implementation framework to pick out a Test to run by its Term Version IRI (`rdf:about`) or Term Name (`rdf:value`) and match an input Darwin Core term to a (Java) parameter in the method signature. The implementation walks through the elements of the `hasExpectedResponse` in sequence, and return the first matching response in a `Response` object, which has `Response.state`, `Response.result` (here called value), and `Response.comment` properties.
 
-```
+```java
     @Validation(label="VALIDATION_DAY_STANDARD", description="Is the value of dwc:day an integer between 1 and 31 inclusive?")
     @Provides("47ff73ba-0028-4f79-9ce1-ee7008d66498")
     @ProvidesVersion("https://rs.tdwg.org/bdqtest/terms/47ff73ba-0028-4f79-9ce1-ee7008d66498-2023-09-18")
@@ -851,7 +868,7 @@ Consider the `Validation` Test [VALIDATION_ENDDAYOFYEAR_INRANGE](../../terms/bdq
 
 An SQL query that implements the abstract concept of the `dwc:enddayofyear` being in range could take the following form, using available database fields that contain data related to the abstract `Information Element`, but are not precisely mapped to the concrete `Acted Upon` and `Consulted` [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) in the specification. This query produces a `Data Quality Report` with: 
 
-```
+```sql
     SELECT collecting_event_id, enddayofyear,
          'VALIDATION_ENDDAYOFYEAR_INRANGE' as test, 'NOT_COMPLIANT' as response_result, 'RUN_HAS_RESULT' as response_status, 
          'The value of enddayofyear [' || enddayofyear ||'] is not an integer between 1 and 365 inclusive, or 366 if ended_date falls in a leap year.' as response_comment
@@ -886,6 +903,7 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:day is EMPTY; COMPLIANT if the value of th
 
 Given a hypothetical Event table with fields including a primary key `event_id` and an integer field `day`, an implementation of VALIDATION_DAY_STANDARD in SQL that operates on data in the aggregate might look like:
 
+```sql
     SELECT
         ‘VALIDATION_DAY_STANDARD’ as test name, 
         event_id,
@@ -912,7 +930,7 @@ Given a hypothetical Event table with fields including a primary key `event_id` 
         ‘Value of dwc:day [‘|| day ||’] is outside the range 1-31’ as Result_comment 
     FROM event
         WHERE day < 1 or day > 31
-
+```
 
 This implementation is dependent on the schema the data are stored in, in particular, the definition of `event.day` as a field holding integers.
 
@@ -1224,7 +1242,7 @@ This example is written to be consistent with the following expectations:
 
 In a complete dataset the `Specification` is linked (via a `Method` instance) to the corresponding Test in bdqtest, that is, we could look up that the Test is VALIDATION_DAY_STANDARD given the `Specification` IRI. 
 
-```
+```turtle
 @prefix bdqval:     <https://rs.tdwg.org/bdqval/terms/> .
 @prefix bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/> .
 @prefix bdqtest: <https://rs.tdwg.org/bdqtest/terms/> .
