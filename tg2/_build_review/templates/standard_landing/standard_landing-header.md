@@ -528,7 +528,7 @@ The glossary of terms used in the BDQ standard includes acronyms and these terms
 | null | A value that is used in some databases to signify that a value is unknown or missing. It may be represented in serializations of data outside of database environments by strings such as "NULL", "Null", "null". "/n", "9999", "NA", etc. These serializations should be treated as `bdqval:NotEmpty`. | Data |
 | OA | [Web Annotation Vocabulary](https://www.w3.org/TR/annotation-vocab/) specifies the set of RDF classes, predicates and named entities that are used by the Web Annotation Data Mode. Hosts the namespace [oa:](https://www.w3.org/TR/annotation-vocab/) | W3C Standard |
 | OTHER | A bdq GitHub label to indicate that the Test is related to Darwin Core terms other than Classes `dwc:Taxon`, `dwc:Location` or `dwc:Event`. | bdqffdq:InformationElement |
-| OWL | [Web Ontology Language](https://www.w3.org/OWL/). A Semantic Web language designed to represent rich and complex knowledge about things. Hosts the namespace [owl:](http://www.w3.org/2002/07/owl#) | Ontology |
+| OWL | [Web Ontology Language](https://www.w3.org/OWL/). A Semantic Web language designed to represent rich and complex knowledge about things. Hosts the namespace [owl:](http://www.w3.org/2002/07/owl#) | W3C Standard |
 | Paramaterized | Pertains to a Test that allows a `bdq:Parameter` to be set prior to the test being run. Where a `bdq:Parameter` value has not been provided, a default is specified within the test. | Tests |
 | Python | A high-level, general-purpose programming language known for its readability and versatility. Python Software Foundation. | Programming language |
 | QA | Quality Assurance. See [User's Guide #2.1](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/guide/users/index.md#21-quality-control-and-quality-assurance-non-normative).  Data are evaluated for fitness for use and are filtered down to just those data that are fit for that use. | Data Quality |
@@ -560,7 +560,7 @@ The glossary of terms used in the BDQ standard includes acronyms and these terms
 | VertNet | [VertNet](https://www.vertnet.org/) is a network of individuals, organizations and institutions that explore, study and care about and share vertebrate species data globally. | Biodiversity Data Aggregator |
 | VOCABULARY | Tag used in the GitHub version of the Tests to indicate that a Test requires a controlled Vocabulary. | GitHub Tag |
 | whitespace | Characters such as spaces and tabs that affect rendering of printed or displayed output, but which themselves are not printed. 1) A field that only includes whitespace is treated as `bdqval:Empty`. 2) In `bdqffdq:Validation`, Tests that require the look up of a `bdqval:sourceAuthority`, leading and/or trailing whitespace will cause the Test to fail as no pre-processing is carried out on the data. These leading and trailing whitespaces may be stripped out in a subsequent `bdqffdq:Amendment` and thus pass when the `bdqffdq:Validation` Test is run again. | Data |
-| XSD | [W3C XML Schema Definition Language](https://www.w3.org/TR/xmlschema11-1/) facilities describing the structure and constraining the contents of XML documents. Hosts the namespace [xsd:](http://www.w3.org/2001/XMLSchema#)
+| XSD | [W3C XML Schema Definition Language](https://www.w3.org/TR/xmlschema11-1/) facilities describing the structure and constraining the contents of XML documents. Hosts the namespace [xsd:](http://www.w3.org/2001/XMLSchema#) | W3C Standard |
 
 ## 7 References (non-normative)
 
