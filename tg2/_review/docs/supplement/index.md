@@ -90,9 +90,6 @@ Draft Standard for Review
     - [3.11.4 Avoid Test interdependencies (non-normative)](#3114-avoid-test-interdependencies-non-normative)
   - [3.12 Naming Conventions (non-normative)](#312-naming-conventions-non-normative)
   - [3.13 Parts of Test Labels (non-normative)](#313-parts-of-test-labels-non-normative)
-    - [Test Types](#test-types)
-    - [Evaluations](#evaluations)
-    - [Abstract Information Elements Labels](#abstract-information-elements-labels)
 
 [4 Date and Time Issues (non-normative)](#4-date-and-time-issues-non-normative)
   - [4.1 Dates and Calendars (non-normative)](#41-dates-and-calendars-non-normative)
@@ -1151,44 +1148,40 @@ All of the `MultiRecord` Tests initially defined in the BDQ Standard are `MultiR
 
 ### 3.13 Parts of Test Labels (non-normative)
 
-We have followed a convention for forming the human readable Test labels. This convention reflects the Test type (i.e. subclass of `Data Quality Need`), the Information Elements (`bdqffdq:InformationElements`) that the Test acts upon and the nature of the Evaluation that is being carried out.  By convention, these elements are placed in upper case and separated by underscores in the Test label.  
+We have followed a convention for forming the human readable Test labels. This convention reflects the Test type (i.e. subclass of `Data Quality Need`), the `Information Elements` that the Test acts upon and the nature of the Evaluation that is being carried out.  By covention, these elements are placed in upper case and separated by underscores in the Test label.  
 
-For example the Test with the label "VALIDATION_COUNTRYCODE_STANDARD" validates the `dwc:countryCode` against ISO country codes with a Test label composed from:
+For example the Test with the label "VALIDATION_COUNTRYCODE_STANDARD" validates the value of the `dwc:countryCode` against ISO country codes.  This Test label is composed from:
 
 * Test Type: `Validation` -> VALIDATION
 * The `Information Element`: `dwc:countryCode` -> COUNTRYCODE
 * The Evaluation: "STANDARD".
 
-For `Single Record` Tests, the `Single Record` is implied and type is one of `Validation`, `Issue`, `Measure` or `Amendment` (the Test types in `bdqffdq:`),  for `MultiRecord` Tests, MULTIRECORD is stated in the label, along with a marker for whether a `MultiRecord` `Measure` returns a numerical count (COUNT) or a COMPLETE/NOT_COMPLETE `Response.result` for `Quality Assurance` use (QA).
+For `Single Record` Tests, the `Single Record` is implied and type is one of `Validation`, `Issue`, `Measure` or `Amendment` (the Test types in bdqffdq:),  For `MultiRecord` Tests, MULTIRECORD is stated in the label, along with a marker for whether a `MultiRecord` `Measure` returns a numerical count (COUNT) or a COMPLETE/NOT_COMPLETE `Response.result` for `Quality Assurance` use (QA).
 
-The combination of `Information Element` and Evaluation was called the Term-Action in the GitHub issues used to develop the tests. This combo was found useful for sorting Tests by Information Elements.
+The combination of `Information Element` and Evaluation was called the Term-Action in the GitHub issues used to develop the tests.  This combination was found useful for sorting and classifying Tests.
 
-If the `Information Element` is a single term (e.g. `dwc:countryCode`), the `Information Element` is the term local name placed in all upper case (e.g. COUNTRYCODE). If the `InformationElement` is composed of several terms, these are rendered as a description of the combined  `Information Elements`, for example "YEARMONTHDAY"
+If the `Information Element` is a single term (e.g. `dwc:countryCode`), the information element component of the label is just the term local name placed in all upper case (e.g. COUNTRYCODE).  If the `Information Element` is composed of several terms, these are labeled with a description of the combined `Information Elements`, an Abstract Information Element Label, e.g. "YEARMONTHDAY"
 
-Where Test labels were not easily rendered to this template, we aligned these labels as closely as we can to permit easy identification of the nature of the Test:
-* The evaluation LESSTHAN is framed in a different order as {`Information Element`}_LESSTHAN_{`Information Element`}. e.g. [VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH](../terms/bdqtest/index.md#VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH) 
+In some cases we have departed from this simple convention in labels for more complex Tests to permit easy identification of the nature of the Test:
+* The evaluation LESSTHAN is framed in a different order as {informationelement}_LESSTHAN_{informationelement}. e.g. [VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH](../terms/bdqtest/index.md#VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH) 
 * Amendments that fill in a value may be framed as e.g. AMENDMENT_{inputinformationelement}_{evaluation}_{outputinformationelement} e.g. [AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID](../terms/bdqtest/index.md#AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID)
 
-These are simple conventions, and neither the Evaluations nor the Abstract Information Element Labels are a formal controlled vocabulary with a namespace (unlike the terms in `bdqval:` and the other supporting vocablularies in BDQ).
+These conventions for forming Test labels are simply a convention, and neither the Evaluations nor the Abstract Information Element Labels are a formal controlled vocabulary with a namespace (unlike the terms in `bdqval:` and the other supporting vocablularies in BDQ).
 
 The tables below list the terms used for the Test `Types` and the Evaluation terms, with an example for each, along with the few `Abstract 
 Information Element Labels`.
 
-#### Test Types
 
 | Label  | Definition  | Example  |
 |--------|-------------|----------|
+| #### Test Types |||
 | AMENDMENT      | A Test Type that proposes changes to `Information Elements` based on some data quality enhancement. See `bdqffdq:Amendment`. | [AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT](../terms/bdqtest/index.md#AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT) |
 | ISSUE  | A Test Type that flags a possible issue or problem with the data that may need examination by the user to determine if data have quality for their use. See `bdqffdq:Issue`.    | [ISSUE_COORDINATES_CENTEROFCOUNTRY](../terms/bdqtest/index.md#ISSUE_COORDINATES_CENTEROFCOUNTRY)   |
 | MEASURE        | A Test Type that expresses how the fitness of data for some use may be measured. See `bdqffdq:Measure`          | [MEASUREMENT_AMENDMENTS_PROPOSED](../list/bdqtest/index.md#bdqtest_03049fe5-a575-404f-b564-ae63f5a1cf8b)        |
 | MULTIRECORD_MEASURE_COUNT      | A Test Type of `Measure` that takes as input the outputs of other Tests (usually `Validations`) across a `MultiRecord`.  For example, count across MultiRecords of a VALIDATION Test that return a Response of COMPLIANT.  Provides metrics for `Quality Control`. | [MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_NOTEMPTY](../list/bdqtest/index.md#bdqtest_b60c8c58-0137-4b6a-97e9-57d8ca5cf248)     |
 | MULTIRECORD_MEASURE_QA | Measurement over MultiRecords of a VALIDATION Test where every record complies with Quality Assurance requirements by being COMPLIANT         | [MULTIRECORD_MEASURE_QA_BASISOFRECORD_NOTEMPTY](../list/bdqtest/index.md#bdqtest_c8c61535-ab1a-4ec6-b4e9-f5f02541d7d8)  |
 | VALIDATION     | A Test type that expresses how the fitness of data for some use may be measured. See `bdqffdq:Measure`      | [VALIDATION_BASISOFRECORD_NOTEMPTY](../list/bdqtest/index.md#bdqtest_ac2b7648-d5f9-48ca-9b07-8ad5879a2536)      |
-
-#### Evaluations
-
-| Label  | Definition  | Example  |
-|--------|-------------|----------|
+| #### Evaluations |||
 | ASSUMEDDEFAULT | A `bdqffdq:Amendment` that replaces a `bdqval:EMPTY` term with a predefined default `bdqval:Parameter` value. | [AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT](../terms/bdqtest/index.md#AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT) |
 | CENTREOFCOUNTRY | Testing if `bdqffdq:EnformationElements` COORDINATES identify the center of the `dwc:country`, allowing for a spatial buffer.     | [ISSUE_COORDINATES_CENTEROFCOUNTRY](../terms/bdqtest/index.md#ISSUE_COORDINATES_CENTEROFCOUNTRY)   |
 | COMPLETE       | Testing if the `bdqffdq:InformationElement` `dwc:scientificNameId` forms a valid and complete identifier. | [VALIDATION_SCIENTIFICNAMEID_COMPLETE](../terms/bdqtest/index.md#VALIDATION_SCIENTIFICNAMEID_COMPLETE)     |
@@ -1206,11 +1199,7 @@ Information Element Labels`.
 | TRANSPOSED     | A `bdqffdq:Amendment` where the sign and/or value of one or more `bdqffdq:InformationElements` were proposed to be swapped.       | [AMENDMENT_COORDINATES_TRANSPOSED](../terms/bdqtest/index.md#AMENDMENT_COORDINATES_TRANSPOSED)     |
 | UNAMBIGUOUS    | A combination of `bdqffdq:InformationElements` is unambiguous in that they align to a unique result given a reference or a Source Authority (`bdqval:sourceAuthority`).      | [VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS](../list/bdqtest/index.md#bdqtest_d257eb98-27cb-48e5-8d3c-ab9fca4edd11)    |
 | VERBATIM       | Refers to `bdqffdq:Amendment` Tests that attempt to extract explicit Darwin Core `bdqval:InformationElements` values from Darwin Core verbatim term `Information Elements`.     | [AMENDMENT_EVENTDATE_FROM_VERBATIM](../list/bdqtest/index.md#bdqtest_6d0a0c10-5e4a-4759-b448-88932f399812)      |
-
-#### Abstract Information Elements Labels
-
-| Label  | Definition  | Example  |
-|--------|-------------|----------|
+| #### Abstract Information Elements Labels |||
 | COORDINATES    | A general category of specific `bdqval:InformationElements` that represents the combination of the Darwin Core terms `dwc:decimalLatitude` and `dwc:decimalLongitude` and may include metadata terms including `dwc:geodeticDatum`.      | [VALIDATION_COORDINATES_NOTZERO](../list/bdqtest/index.md#bdqtest_1bf0e210-6792-4128-b8cc-ab6828aa4871)         |
 | COORDINATESTERRESTRIALMARINE   | A terrestrial taxon that has geographic coordinates that fall within terrestrial boundaries, or a marine taxon that has geographic coordinates that fall within marine boundaries.    | [VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT](../terms/bdqtest/index.md#VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT) |
 | POLYNOMIAL     | A general category of specific `bdqval:InformationElements` that represents a combination of the Darwin Core terms `dwc:genericName`, `dwc:specificEpithet`, `dwc:infraspecificEpithet`. See the Test [VALIDATION_POLYNOMIAL_CONSISTENT](../terms/bdqtest/index.md#VALIDATION_POLYNOMIAL_CONSISTENT). | [VALIDATION_POLYNOMIAL_CONSISTENT](../list/bdqtest/index.md#bdqtest_17f03f1f-f74d-40c0-8071-2927cfc9487b)       |
