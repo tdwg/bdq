@@ -54,8 +54,7 @@ Draft Standard for Review
   - [2.1 Definition of CORE (non-normative)](#21-definition-of-core-non-normative)
     - [2.1.1 Tests tagged as DO NOT IMPLEMENT (non-normative)](#211-tests-tagged-as-do-not-implement-non-normative)
   - [2.2 Use Case Development (non-normative)](#22-use-case-development-non-normative)
-
-[2.2.1 Making Use Cases and BDQ Tests match by iterative refinement (non-normative)](#221-making-use-cases-and-bdq-tests-match-by-iterative-refinement-non-normative)
+    - [2.2.1 Making Use Cases and BDQ Tests match by iterative refinement (non-normative)](#221-making-use-cases-and-bdq-tests-match-by-iterative-refinement-non-normative)
   - [2.3 Data Quality Control and Data Quality Assurance (non-normative)](#23-data-quality-control-and-data-quality-assurance-non-normative)
   - [2.4 Framework Competency Questions (non-normative)](#24-framework-competency-questions-non-normative)
     - [2.4.1 Listing Identifiers for Tests (non-normative)](#241-listing-identifiers-for-tests-non-normative)
@@ -227,7 +226,7 @@ Note that the evaluation of a Test can only take place within the context of a s
 
 See also [Creating a New Use Case]() in [BDQ Tests: Concepts and Use](../guide/bdqtest/index.md) and a more detailed example of the development of a new `Use Case` with  new Tests in the Tutorial. 
 
-## 2.2.1 Making Use Cases and BDQ Tests match by iterative refinement (non-normative)
+#### 2.2.1 Making Use Cases and BDQ Tests match by iterative refinement (non-normative)
 
 Most of the BDQ Use Cases are broad, with many BDQ Tests linked to each one. When we drafted a more specific Use Case (bdqval:SDM-Trees), it became much easier to see when a stated fitness requirement has no corresponding BDQ Test, or when the available Tests only check a more general condition than the Use Case requires.
 

@@ -155,7 +155,7 @@ Note that the evaluation of a Test can only take place within the context of a s
 
 See also [Creating a New Use Case]() in [BDQ Tests: Concepts and Use](../guide/bdqtest/index.md) and a more detailed example of the development of a new `Use Case` with  new Tests in the Tutorial. 
 
-## 2.2.1 Making Use Cases and BDQ Tests match by iterative refinement (non-normative)
+#### 2.2.1 Making Use Cases and BDQ Tests match by iterative refinement (non-normative)
 
 Most of the BDQ Use Cases are broad, with many BDQ Tests linked to each one. When we drafted a more specific Use Case (bdqval:SDM-Trees), it became much easier to see when a stated fitness requirement has no corresponding BDQ Test, or when the available Tests only check a more general condition than the Use Case requires.
 
