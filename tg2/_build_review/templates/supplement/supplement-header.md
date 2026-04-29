@@ -157,9 +157,9 @@ See also [Creating a New Use Case]() in [BDQ Tests: Concepts and Use](../guide/b
 
 #### 2.2.1 Making Use Cases and BDQ Tests match by iterative refinement (non-normative)
 
-Most of the BDQ Use Cases are broad, with many BDQ Tests linked to each one. When we drafted a more specific Use Case (bdqval:SDM-Trees), it became much easier to see when a stated fitness requirement has no corresponding BDQ Test, or when the available Tests only check a more general condition than the Use Case requires.
+Most of the BDQ `Use Cases` are broad, with many BDQ Tests linked to each one. When we drafted a more specific `Use Case` (`bdqval:SDM-Trees`), it became much easier to see when a stated fitness requirement has no corresponding BDQ Test, or when the available Tests only check a more general condition than the `Use Case` requires.
 
-The list below shows the key components of the initial phrasing of the SDM-Trees Use Case: Definition; Fitness Requirements, and the set of BDQ SingleRecord Tests we initially linked to those requirements.
+The list below shows the key components of the initial phrasing of the SDM-Trees Use Case: Definition; Fitness Requirements, and the set of BDQ `Single Record` Tests we initially linked to those requirements.
 
 
 Name: **SDM-Trees** 
@@ -212,7 +212,7 @@ This will be moot for this `Use Case` if we refine the `Use Case` to not include
 
 (4) We have not included any `MultiRecord` `Measures` in this `Use Case`, so we don't have any formal support for either `Quality Control` or `Quality Assurance`. 
 
-The initial focus is on `Quality Assurance`, so we would expect to add 	Multi Record` `Measures` such as MULTIRECORD_MEASURE_QA_DECIMALLATITUDE_INRANGE.  For this filtering, we only need to check that the value of `dwc:decimalLatitude` is in range, that is that the VALIDATION_DECIMALLATITUDE_INRANGE Test returns COMPLIANT.
+The initial focus is on `Quality Assurance`, so we would expect to add `Multi Record` `Measures` such as MULTIRECORD_MEASURE_QA_DECIMALLATITUDE_INRANGE.  For this filtering, we only need to check that the value of `dwc:decimalLatitude` is in range, that is that the VALIDATION_DECIMALLATITUDE_INRANGE Test returns COMPLIANT.
 
 If we want to support `Quality Control` as well, we would add `Measures` such as MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLATITUDE_NOTEMPTY and MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLATITUDE_INRANGE, and we would want to also include counts that assess NOTEMPTY as well as INRANGE, so that we can determine how many records have empty values for `dwc:decimalLatitude` and how many have out of range values.  This would allow us to determine the kind and scope of data cleanup work that may be needed to improve the fitness of the data for this `Use Case`.
 
@@ -274,7 +274,7 @@ The BDQ Tests linked to this `Use Case` therefore provide a first-pass filter to
 
 As part of refining a Use Case, we have found it helpful to: (1) draft a `Use Case` definition, (2) list the Tests to be included, (3) query an RDF (Turtle) serialization of the bdqtest vocabulary to extract the `Specification` text for those Tests, and then (4) use a generative AI tool to draft fitness requirements that are consistent with the included Test specifications.  Then go back and assess whether the desired set of tests for the `Use Case` are included, particularly examining which `MultiRecord` `Measures` are included, and then revising the `Use Case` definition and fitness requirements.  Obviously (sometimes in retrospect), this is an iterative process.
 
-Code for querying the Turtle serialization [bdqtest.ttl](../dist/bdqtest.ttl) of the bdqtest vocabulary for the `Specification` descriptions of each Test included in a Use Case is at: https://github.com/tdwg/bdq/blob/master/tg2/_build_review/tools/bdq_usecase_test_labels_Version4.py, and the SPARQL query for asking this question is in Section [2.4.2 Describing all the Tests in a Use Case](#242-describing-all-the-tests-in-a-use-case-non-normative) below.
+Code for querying the Turtle serialization [bdqtest.ttl](../../dist/bdqtest.ttl) of the bdqtest vocabulary for the `Specification` descriptions of each Test included in a Use Case is at: https://github.com/tdwg/bdq/blob/master/tg2/_build_review/tools/bdq_usecase_test_labels_Version4.py, and the SPARQL query for asking this question is in Section [2.4.2 Describing all the Tests in a Use Case](#242-describing-all-the-tests-in-a-use-case-non-normative) below.
 
 ### 2.3 Data Quality Control and Data Quality Assurance (non-normative)
 
@@ -919,7 +919,7 @@ Below is an example of a `bdqffdq:Response` forming the body of an `oa:Annotatio
         bdqffdq:producesResponse <https://example.org/bdq/assertion/51967574-7be9-4e38-938c-5dfec2d4d61d> ;
         bdqffdq:usesSpecification <urn:uuid:3c2fe7e9-186f-4ceb-8274-8bbcb4a62de4> .
 
-Combined with `bdqtest:` these triples will return a result from the competency question in [2.4.2](#242-framework-competency-question-including-an-oaannotation-non-normative).
+Combined with `bdqtest:` these triples will return a result from the competency question in [2.4.3](#243-framework-competency-question-including-an-oaannotation-non-normative).
 
 | Field | Value |
 | ----- | ----- |
