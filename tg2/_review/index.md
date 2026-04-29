@@ -705,6 +705,7 @@ We have used the formatting recommended by Pensoft, see https://checklist.pensof
 <li>Wikipedia (2024) LSID (Life Science Identifier). https://en.wikipedia.org/wiki/LSID</li>
 <li>Wikipedia (2024) Uniform Resource Name (URN). https://en.wikipedia.org/wiki/Uniform_Resource_Name</li>
 <li>WoRMS (2019) WoRMS - World Register of Marine Species. https://www.marinespecies.org</li> 
+<li>Zermoglio PF, Chapman AD, Wieczorek JR, Luna MC & Bloom DA (2020) Georeferencing Quick Reference Guide. Copenhagen: GBIF Secretariat. https://doi.org/10.35035/e09p-h128</li>
 </ul>
 
 
