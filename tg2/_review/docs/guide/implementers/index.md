@@ -67,6 +67,8 @@ Draft Standard for Review
       - [2.3.2.5 Example Interpretation of a Parameter String Default Value (non-normative)](#2325-example-interpretation-of-a-parameter-string-default-value-non-normative)
     - [2.3.3 The Concept of "interpreted as" (normative)](#233-the-concept-of-interpreted-as-normative)
     - [2.3.4 Handling Leading and Trailing Whitespace (normative)](#234-handling-leading-and-trailing-whitespace-normative)
+  - [2.4 Matching to controlled vocabularies (normative)](#24-matching-to-controlled-vocabularies-normative)
+  - [2.4.1 Matching to controlled vocabularies rationale (non-normative)](#241-matching-to-controlled-vocabularies-rationale-non-normative)
 
 [3 Compliant Implementation (normative)](#3-compliant-implementation-normative)
   - [3.1 Compliance depends on Use Case (normative)](#31-compliance-depends-on-use-case-normative)
@@ -508,6 +510,16 @@ In `bdqffdq:Validation` Tests that require the lookup of a `bdqval:sourceAuthori
 `Validations` that match input values against a `sourceAuthority` SHOULD perform an exact match against that `sourceAuthority` (unless the Test specifies otherwise).
 
 `Amendments` SHOULD propose changes with leading or trailing whitespace removed unless the Test specifies otherwise.
+
+### 2.4 Matching to controlled vocabularies (normative)
+
+When a Test specification requires matching to a controlled vocabulary, the expectation is that the implementation will perform an exact match against the controlled vocabulary (unless the Test specifies otherwise). This means that the value being evaluated must match exactly a value in the controlled vocabulary, including any leading or trailing whitespace, and any differences in case (e.g., "WGS84" would match neither "wgs84" nor " WGS84" (with a leading space)).  This is denoted in the `skos:note` for VALIDATION_...STANDARD Tests with the phrase "This Test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters."
+
+Implementations MUST respect the behavior specified in this note, for the data as it is presented to the Test API for a Test implementation.
+
+### 2.4.1 Matching to controlled vocabularies rationale (non-normative)
+
+It is possible that implementations and transport frameworks may, outside of Tests, and outside of the control of Test implementations, remove leading and trailing whitespace from data elements.  Because such behavior is outside of the control of the Test implementation, this exact matching behavior including whitespace is only included in the notes and not as part of the `hasExpectedResponse` for the Tests.
 
 ## 3 Compliant Implementation (normative)
 

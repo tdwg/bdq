@@ -405,6 +405,16 @@ In `bdqffdq:Validation` Tests that require the lookup of a `bdqval:sourceAuthori
 
 `Amendments` SHOULD propose changes with leading or trailing whitespace removed unless the Test specifies otherwise.
 
+### 2.4 Matching to controlled vocabularies (normative)
+
+When a Test specification requires matching to a controlled vocabulary, the expectation is that the implementation will perform an exact match against the controlled vocabulary (unless the Test specifies otherwise). This means that the value being evaluated must match exactly a value in the controlled vocabulary, including any leading or trailing whitespace, and any differences in case (e.g., "WGS84" would match neither "wgs84" nor " WGS84" (with a leading space)).  This is denoted in the `skos:note` for VALIDATION_...STANDARD Tests with the phrase "This Test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters."
+
+Implementations MUST respect the behavior specified in this note, for the data as it is presented to the Test API for a Test implementation.
+
+### 2.4.1 Matching to controlled vocabularies rationale (non-normative)
+
+It is possible that implementations and transport frameworks may, outside of Tests, and outside of the control of Test implementations, remove leading and trailing whitespace from data elements.  Because such behavior is outside of the control of the Test implementation, this exact matching behavior including whitespace is only included in the notes and not as part of the `hasExpectedResponse` for the Tests.
+
 ## 3 Compliant Implementation (normative)
 
 The BDQ Tests are part of a coherent framework for describing and reporting on data quality, and the Tests are intended to be implemented as suites of Tests that fit particular `Use Cases` (see [BDQ Fitness For Use Framework](../../guide/bdqffdq/index.md)). The following sections provide normative guidance on what is required for an implementation of a Test Suite to be compliant with the BDQ standard, and non-normative guidance on the rationale for these requirements and expectations for how implementers will design their Test Suites.
