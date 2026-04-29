@@ -766,9 +766,11 @@ The Fitness For Use Framework represents the results of `Validation` Tests as `R
       FILTER (?target = <https://mczbase.mcz.harvard.edu/guid/MCZ:Mala:280832>)
     }
     GROUP BY ?responsestatus ?responseresult ?responsecomment ?test ?label ?description ?mechanism ?motivation ?annotationdate
+```
 
 Note that a `Validation` will produce a hasResponseResult only if the hasResponseStatus is bdqffdq:RUN_HAS_RESULT, so in this query, this clause is optional to include results where the status indicated a failure case.   For other test types, the result may be returned either as an object (bdqffdq:hasResponseResult) or a literal (bdqffdq:hasResponseResultValue), so to generalize this query to generalize to other test types add an additional of optional clause, remembering that also for prerequisite-not-met statuses, neither will be present.  
 
+```sparql
       OPTIONAL { ?assertion bdqffdq:hasResponseResult ?responseresult . }
       OPTIONAL { ?assertion bdqffdq:hasResponseResultValue ?responseresultvalue . }
 ```
@@ -960,6 +962,7 @@ A `bdqffdq:Response`, with its `Response.status`, `Response.result`, and a `Resp
 
 Below is an example of a `bdqffdq:Response` forming the body of an `oa:Annotation`, with triples indicating the implementation that produced the `Response` and relating it back to a `bdqtest:Specification` (from which the metadata about the Test that was run can be identified).
 
+```turtle
     @prefix bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/> .
     @prefix oa:      <http://www.w3.org/ns/oa#> .
     @prefix dcterms: <http://purl.org/dc/terms/> .
@@ -987,6 +990,7 @@ Below is an example of a `bdqffdq:Response` forming the body of an `oa:Annotatio
         bdqffdq:implementedBy <urn:uuid:90516df7-838c-4d53-81d9-8131be6ac713> ;
         bdqffdq:producesResponse <https://example.org/bdq/assertion/51967574-7be9-4e38-938c-5dfec2d4d61d> ;
         bdqffdq:usesSpecification <urn:uuid:3c2fe7e9-186f-4ceb-8274-8bbcb4a62de4> .
+---
 
 Combined with `bdqtest:` these triples will return a result from the competency question in [2.4.3](#243-framework-competency-question-including-an-oaannotation-non-normative).
 
@@ -1235,6 +1239,7 @@ If a time zone is not included as a component of date and time, the date and tim
 
 Time of day is treated as out of scope for BDQ `Use Cases`. In cases where time zone data are important, dates within a `Multi Record` from multiple sources may have multiple plus or minus one day errors introduced. For example, the `event_date_qc` (Morris & Lowery 2025) implementation of [AMENDMENT_EVENT_FROM_EVENTDATE](../terms/bdqtest/index.md#AMENDMENT_EVENT_FROM_EVENTDATE) contains the commented out block of code below that is pertinent to time zone issues. It would populate `dwc:eventTime` from `dwc:eventDate`, converting a local time in `dwc:eventDate` to UTC, where other blocks in the `Amendment` should, but may not have, taken account of a local time zone in populating `dwc:day`, `dwc:month`, `dwc:year`, `dwc:startDayOfYear` and `dwc:endDayOfYear`. The terms `dwc:day`, `dwc:month`, `dwc:year`, `dwc:startDayOfYear`, `dwc:endDayOfYear` and `dwc:eventTime` should all be consistent, but there aren't unit tests in place to confirm this.
 
+```java
     // Time could also be populated, but it isn't in scope for this issue.
     // Here is a minimal implementation,
     // which illustrates some issues in implementation (using Zulu Time or not, dealing with time in ranges...)
@@ -1246,6 +1251,7 @@ Time of day is treated as out of scope for BDQ `Use Cases`. In cases where time 
             result.addComment("Added eventTime ["+ newTime +"] from eventDate ["+eventDate+"].");
         }
     }
+```
 
 ![DateTime](https://imgs.xkcd.com/comics/datetime.png "DateTime")
 
