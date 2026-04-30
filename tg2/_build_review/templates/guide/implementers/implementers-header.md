@@ -967,7 +967,7 @@ The checklists below are designed to help implementers ensure that their impleme
 
 1. **Setup for Consistency**
    - Implement utility functions or methods to evaluate `bdqval:Empty` and `bdqval:NotEmpty` consistently. See: [The Concept of EMPTY in the BDQ Standard (normative)”](#22-the-concept-of-empty-in-the-bdq-standard-normative).
-   - Define a standard `Response` object or structure with `Response.status`, `Response.result`, and `Response.comment` properties, and use that object or structure for the output from Test implementations. See: [Structure of Response](../../guide/bdqtest/index.md#41-structure-of-response-normative) in the [BDQ Tests Guide](../../guide/bdqtest/index.md).
+   - Define a standard `Response` object or structure with `Response.status`, `Response.result`, and `Response.comment` properties, and use that object or structure for the output from Test implementations. See: [Structure of Response](../../guide/bdqtest/index.md#41-structure-of-response-normative) in the [BDQ Tests: Concepts and Use](../../guide/bdqtest/index.md) document.
 
 1. **Confirm the required inputs**
    - Identify the `Information Elements` `Acted Upon` and `Consulted` named in the `has Expected Response` of the `Specification`.
@@ -1017,7 +1017,7 @@ The checklists below are designed to help implementers ensure that their impleme
 
 1. **Setup for Consistency**
    - Implement utility functions or methods to evaluate `bdqval:Empty` and `bdqval:NotEmpty` consistently.  See: [2.2 The Concept of EMPTY in the BDQ Standard](#22-the-concept-of-empty-in-the-bdq-standard-normative).
-   - Define a standard `Response` object or structure with `Response.status`, `Response.result`, and `Response.comment` properties, and use that object or structure for the output from Test implementations. See: [Section 4.1 Structure of Response (normative)](../../guide/bdqtest/index.md#41-structure-of-response-normative) in the [BDQ Tests Guide](../../guide/bdqtest/index.md).
+   - Define a standard `Response` object or structure with `Response.status`, `Response.result`, and `Response.comment` properties, and use that object or structure for the output from Test implementations. See: [Section 4.1 Structure of Response (normative)](../../guide/bdqtest/index.md#41-structure-of-response-normative) in the [BDQ Tests: Concepts and Use](../../guide/bdqtest/index.md) document.
 
 1. **Confirm the required inputs and intended outputs**
    - Identify the `Information Elements` `Acted Upon` and `Consulted` named in the `Specification` (the value of `bdqffdq:hasExpectedResponse`).
