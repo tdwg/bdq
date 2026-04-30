@@ -351,7 +351,7 @@ In a Darwin Core Data Package (DwC-DP), data are represented as a set of normali
 
 ##### 4.2.1.1 Definition of Single Record View (normative)
 
-A **Single Record view** is defined by four elements:
+A **`Single Record`** view is defined by four elements:
 
 1. **A focal entity instance**  
    A single row identified by its primary key in a specified table (e.g., occurrence, event, material).
@@ -375,7 +375,7 @@ For a BDQ Single Record Test:
 
 ##### 4.2.1.3 Handling of Multiplicity (normative)
 
-Multiplicity arises when a focal entity is related to more than one row in a linked table (e.g., an `dwc:Occurrence` with multiple `dwc:Identifications`).
+Multiplicity arises when a focal entity is related to more than one row in a linked table (e.g., a `dwc:Occurrence` with multiple `dwc:Identifications`).
 
 Implementations MUST define a deterministic strategy for handling such cases. 
 
