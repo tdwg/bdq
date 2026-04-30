@@ -345,57 +345,54 @@ The BDQ Test [ISSUE_ANNOTATION_NOTEMPTY](../../terms/bdqtest/index.md#ISSUE_ANNO
 
 BDQ `Multi Record` (`bdqffdq:MultiRecord`) Tests operate on a dataset as a whole. The initial BDQ `Multi Record` Tests in `bdqtest:` sum up results across all records for each `bdqffdq:SingleRecord` Test.
 
-#### 4.2.1 Single Record in Darwin Core Data Package (non-normative)
+#### 4.2.1 Single Record in Darwin Core Data Package (normative)
 
-In a Darwin Core Data Package (DwC-DP), data are represented as a set of normalized, interrelated tables rather than as discrete, self-contained records. As a consequence, the concept of a “Single Record” for the purposes of Biodiversity Data Quality (BDQ) Tests does not correspond directly to a single row in any table. Instead, a **Single Record** in a DwC-DP context SHOULD be understood as a **derived record view**, constructed as a projection (view) over the relational structure of the data package.
+In a Darwin Core Data Package (DwC-DP), data are represented as a set of normalized, interrelated tables rather than as discrete, self-contained records. As a consequence, the concept of a “Single Record” for the purposes of Biodiversity Data Quality (BDQ) Tests does not correspond directly to a single row in any table. Instead, a **`Single Record`** in a DwC-DP context SHOULD be understood as a **derived record view**, constructed as a projection (view) over the relational structure of the data package.
 
-##### Definition
+##### 4.2.1.1 Definition of Single Record View (normative)
 
-A **Single Record view** is defined by:
+A **Single Record view** is defined by four elements:
 
 1. **A focal entity instance**  
    A single row identified by its primary key in a specified table (e.g., occurrence, event, material).
-
 2. **A traversal specification**  
    A defined set of relationships (foreign keys) that determine which related tables may be consulted to obtain additional values.
-
 3. **A term mapping**  
    A mapping from Darwin Core terms (e.g., `dwc:country`, `dwc:eventDate`, `dwc:scientificName`) to fields in the focal table or in related tables reachable through the traversal.
-
 4. **A multiplicity resolution strategy**  
    A deterministic rule for handling cases in which traversal yields multiple related rows for a given term.
 
-The result of applying these elements is a **denormalized, record-shaped set of Information Elements** that serves as input to a BDQ Test.
+The result of applying these elements is a **denormalized, record-shaped set of `Information Elements`** that serves as input to a BDQ Test.
 
-##### Interpretation for BDQ Tests
+##### 4.2.1.2 Interpretation for BDQ Tests (non-normative)
 
 For a BDQ Single Record Test:
 
 - The **unit of evaluation** is the Single Record view, not an individual row.
 - The **Information Elements** are the values obtained through the term mapping applied to the focal entity and any traversed relationships.
 - The DwC-DP serves as the **source graph**, while the Single Record view is a **derived representation** used solely for test execution.
+- The derived Single Record view is the object of a `bdqffdq:appliesTo` property of a `bdqffdq:Response` resulting from a `Single Record` Test.
 
-##### Handling of Multiplicity
+##### 4.2.1.3 Handling of Multiplicity (normative)
 
-Multiplicity arises when a focal entity is related to more than one row in a linked table (e.g., an Occurrence with multiple Identifications).
+Multiplicity arises when a focal entity is related to more than one row in a linked table (e.g., an `dwc:Occurrence` with multiple `dwc:Identifications`).
 
-Implementations MUST define a deterministic strategy for handling such cases. Example strategies include:
+Implementations MUST define a deterministic strategy for handling such cases. 
+
+Example strategies include:
 
 1. **Selection (cardinality reduction)**  
    Selecting a single related row based on a defined criterion (e.g., most recent, preferred flag, most specific, etc.).
-
 2. **Expansion (record multiplication)**  
    Generating multiple Single Record instances, each incorporating one of the related rows, and executing the Test independently on each view.
 
 The chosen strategy MUST be explicitly documented and consistently applied, as it directly affects Test outcomes and reproducibility.
 
-##### Implications
+##### 4.2.1.4 Implications and Summary (non-normative)
 
-- A DwC-DP does not inherently define “records” suitable for BDQ Single Record Tests; such records are **constructed**.
-- Different traversal or multiplicity strategies may yield different Single Record instances from the same underlying data; therefore, **test results are only comparable when these strategies are aligned**.
+- A DwC-DP does not inherently define “records” suitable for BDQ `Single Record` Tests; such records are **constructed**.
+- Different traversal or multiplicity strategies may yield different `Single Record` view instances from the same underlying data; therefore, **test results are only comparable when these strategies are aligned**.
 - Test execution frameworks are responsible for defining and enforcing the rules that produce Single Record views.
-
-##### Summary
 
 A BDQ Single Record Test over a DwC-DP operates on a **deterministically defined, denormalized projection** of the relational data model. The correctness, reproducibility, and interpretability of test results depend on explicit definitions of focal entities, relationship traversal, term mapping, and multiplicity handling.
 
