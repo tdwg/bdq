@@ -52,6 +52,7 @@ Draft Standard for Review
   - [1.9 Key to Vocabulary Terms (normative)](#19-key-to-vocabulary-terms-normative)
 
 [2 Use of Terms (normative)](#2-use-of-terms-normative)
+  - [2,1 Mapping to DQV Dimension (non-normative)](#21-mapping-to-dqv-dimension-non-normative)
 
 [3 Term index (non-normative)](#3-term-index-non-normative)
   - [3.1 Index By Term Name (non-normative)](#31-index-by-term-name-non-normative)
@@ -122,7 +123,7 @@ The following namespace abbreviations are used in this document:
 
 | **Abbreviation** | **Namespace** |
 | ------------ | -------------                               |
-| bdqval:         | https://rs.tdwg.org/bdqval/terms/           |
+| bdqval:      | https://rs.tdwg.org/bdqval/terms/           |
 | bdqtest:     | https://rs.tdwg.org/bdqtest/terms/          |
 | bdqdim:      | https://rs.tdwg.org/bdqdim/terms/           |
 | bdqffdq:     | https://rs.tdwg.org/bdqffdq/terms/          |
@@ -131,6 +132,8 @@ The following namespace abbreviations are used in this document:
 | rdf:         | http://www.w3.org/1999/02/22-rdf-syntax-ns# |
 | rdfs:        | http://www.w3.org/2000/01/rdf-schema#       |
 | skos:        | http://www.w3.org/2004/02/skos/core#        |
+| dqv:         | http://www.w3.org/ns/dqv#                   |
+| ldqd:        | http://www.w3.org/2016/05/ldqd#             |
 | tdwgutility: | http://rs.tdwg.org/dwc/terms/attributes/    |
 
 ### 1.9 Key to Vocabulary Terms (normative)
@@ -156,6 +159,21 @@ The terminology used to describe the terms in this vocabulary follows the TDWG [
 In an RDF context, a reference to a term in the `bdqdim:` namespace MUST use the Term IRI (e.g., `https://rs.tdwg.org/bdqdim/terms/Completeness`) or Term Qualified name (e.g., `bdqdim:Completeness`). In a non-RDF context in which resources may be used by software (e.g., a value in a spreadsheet or database table) the Controlled Value String (local name, e.g., `Completeness`) SHOULD be used. In a purely human context a label (e.g., `Completeness`) MAY be used.
 
 Each instance of a Test, regardless of Test type, SHOULD have exactly one `bdqffdq:hasdataQualityDimension` property relating it to a term in this `bdqdim:` vocabulary.
+
+### 2,1 Mapping to DQV Dimension (non-normative)
+
+The W3C [Data Quality Vocabulary](https://www.w3.org/TR/vocab-dq/) (DQV) (Albertoni and Isaac, 2016; Albertoni and Isacc 2020) provides a metadata model for describing data quality information in RDF.  The W3C Data Quality Vocabulary defines (mostly by reuse) a set of data quality dimensions.  The `dqv:Dimension` class is [defined](https://www.w3.org/TR/vocab-dqv/#dqv:Dimension), in part, as "Represents criteria relevant for assessing quality".  This concept is similar to (skos:broader than) `bdqffdq:DataQualityDimension`.  
+
+A potential mapping of the `bdqdim:` terms to DQV dimensions is as follows:
+
+| DQV Concept | Related bdqdim: concept |
+| ----------- | ----------------------- |
+| ldqd:completeness| bdqdim:Completeness |
+| ldqd:itneroperability | bdqdim:Conformance | 
+| ldqd:consistency | bdqdim:Consistency |
+| ldqd:semanticAccuracy | bdqdim:Likeliness | 
+| ldqd:semanticAccuracy |bdqdim:Reliability |
+| dqv:precision | bdqdim:Resolution |
 
 ## 3 Term index (non-normative)
 ### 3.1 Index By Term Name (non-normative)

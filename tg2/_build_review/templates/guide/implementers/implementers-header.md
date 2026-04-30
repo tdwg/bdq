@@ -105,6 +105,7 @@ The following namespace abbreviations are used in this document:
 | rdfs:        | http://www.w3.org/2000/01/rdf-schema#       |
 | skos:        | http://www.w3.org/2004/02/skos/core#        |
 | prov:        | http://www.w3.org/ns/prov#                  |
+| dqv:         | http://www.w3.org/ns/dqv#                  |
 | tdwgutility: | http://rs.tdwg.org/dwc/terms/attributes/    |
 
 ### 1.7 Referring to Terms (normative)
@@ -471,7 +472,7 @@ A response MAY include a `Response.qualifier` (in RDF, a `bdqffdq:hasResponseQua
 
 ### 5.1 The Response Object (normative)
 
-The four Test Types (`Validation`, `Issue`, `Amendment`, and `Measure`) all provide a `Response` from the execution of the Test. The `Response` from a Test is an assertion which MAY form part of a `Data Quality Report` or MAY be wrapped in an `Annotation`.   
+The four Test Types (`Validation`, `Issue`, `Amendment`, and `Measure`) all provide a `Response` from the execution of the Test. The `Response` from a Test is an assertion which MAY form part of a `Data Quality Report` or MAY be wrapped in an `oa:Annotation`.   
 
 Responses from each of the Tests MUST consist of structured data, and MUST NOT be simple pass fail flags. 
 
@@ -1261,6 +1262,7 @@ In a complete dataset the `Specification` is linked (via a `Method` instance) to
 @prefix bdqtest: <https://rs.tdwg.org/bdqtest/terms/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix oa:      <http://www.w3.org/ns/oa#> .
+@prefix dqv:     <http://www.w3.org/ns/dqv#> .
 @prefix prov:    <http://www.w3.org/ns/prov#> .
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
@@ -1290,10 +1292,12 @@ In a complete dataset the `Specification` is linked (via a `Method` instance) to
   oa:target <http://example.org/dataset/record/12345> ;
   dcterms:created "2015-01-28T12:00:00Z"^^xsd:dateTime ;
   oa:creator <https://example.org/bdq/mechanism/kurator-dwcsciNameDQ-v1.0.1> ;
-  oa:motivatedBy oa:assessing .
+  oa:motivatedBy dqv:qualityAssessment .
 ```
 
 See also (Framework Competency Question including an oa:annotation](../../supplementary/index.md#242-framework-competency-question-including-an-oaannotation-non-normative) and the [discussion](../../supplement/index.md#38-amendments-and-annotations-non-normative) in the [Supplementary Material](../../supplement/index.md). 
+
+See also [Some Other Related Standards](../bdqffdq/#27-some-other-related-standards-non-normative) in the [Fitness For Use Framework Ontology: Concepts and Use](../../guide/bdqffdq/index.md) document for a discussion of other standards that can provide metadata for BDQ Test results.
 
 ## 8 Conformance Testing Implementations (normative)
 

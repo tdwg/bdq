@@ -616,6 +616,8 @@ We have used the formatting recommended by Pensoft, see https://checklist.pensof
 <ul>
 <li>ALA (2013) Data Processing. https://www.ala.org.au/blogs-news/data-processing/</li>
 <li>ALA (2020) Locations - Species distributions as areas. https://support.ala.org.au/support/solutions/articles/6000234834-locations-species-distributions-as-areas</li>
+<li>Albertoni R and Isaac A (2016) Data on the Web Best Practices: Data Quality Vocabulary, W3C Working Group Note, W3C, https://www.w3.org/TR/vocab-dqv/<li>
+<li>Albertoni R and Isaac A (2020) Introducing the Data Quality Vocabulary (DQV). Semantic Web, 12(1), 81-97, doi: 10.3233/SW-20038<li>
 <li>Belbin L, Daly J, Hirsch T, Hobern D, Salle JL (2013) A specialist’s audit of aggregated occurrence records: An ‘aggregator’s’ perspective. ZooKeys 305: 67–76. doi: 10.3897/zookeys.305.5438</li>
 <li>Biodiversity Information Standards (TDWG) (2010) TDWG GUID Applicability Statement. https://github.com/tdwg/guid-as/blob/master/guid/tdwg_guid_applicability_statement.pdf</li>
 <li>Biodiversity Information Standards (TDWG) (n.dat) Annotations Interest Group. https://www.tdwg.org/community/annotations/</li>
@@ -691,6 +693,7 @@ We have used the formatting recommended by Pensoft, see https://checklist.pensof
 <li>VLIZ (2023). Marineregions.org. https://www.marineregions.org/downloads.php#marbound</li>
 <li>Vocabulary Maintenance Specification Task Group (2017). Standards Documentation Standard. Biodiversity Information Standards (TDWG) http://www.tdwg.org/standards/147</li>
 <li>Vocabulary Maintenance Specification Task Group (2017). Vocabulary Maintenance Standard. Biodiversity Information Standards (TDWG) http://www.tdwg.org/standards/642</li>
+<li>W3C (2013) PROV-O: The PROV Ontology. https://www.w3.org/TR/prov-o/</li>
 <li>W3C (2017) Web Annotation Data Model. https://www.w3.org/TR/annotation-model/</li>
 <li>W3C (2017) Web Annotation Data Model: Annotation. https://www.w3.org/TR/annotation-vocab/#annotation</li>
 <li>Waller JT (2023) Processing Country Centroids at the Global Biodiversity Information Facility. Biodiversity Information Science and Standards 7: e110728. https://doi.org/10.3897/biss.7.110728</li> 
