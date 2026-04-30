@@ -482,6 +482,7 @@ Given a `Specification` (as would be known when starting with a `bdqffdq:Respons
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
+    PREFIX dcterms: <http://purl.org/dc/terms/>
     
     SELECT ?test ?label ?description ?parameter ?argumentValue
     WHERE {
@@ -491,7 +492,7 @@ Given a `Specification` (as would be known when starting with a `bdqffdq:Respons
       ?test rdf:type bdqffdq:Validation .
       ?test rdfs:label ?label .
     
-      <urn:uuid:f3e03531-7ee5-4721-aae2-f554389e0544> rdfs:comment ?description .
+      <urn:uuid:f3e03531-7ee5-4721-aae2-f554389e0544> dcterms:description ?description .
     
       OPTIONAL {
         <urn:uuid:f3e03531-7ee5-4721-aae2-f554389e0544> bdqffdq:hasArgument ?argument .
@@ -503,6 +504,7 @@ Given a `Specification` (as would be known when starting with a `bdqffdq:Respons
 
 Given a `Response`, which Test was run with which `has Argument values` for which `Parameters` by which `Mechanism` to produce it: 
 
+<!-- skip when testing -->
 ```sparql
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     PREFIX owl: <http://www.w3.org/2002/07/owl#>
@@ -549,39 +551,91 @@ What `Information Elements` are `Acted Upon` by more that one `Amendment`?
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
-    SELECT ?term (STR(count(distinct ?alabel)) as ?ctstr)  ( count( distinct ?alabel) as ?ct )
+    
+    SELECT
+      ?term
+      (STR(COUNT(DISTINCT ?alabel)) AS ?ctstr)
+      (COUNT(DISTINCT ?alabel) AS ?ct)
     WHERE {
-       ?validation a bdqffdq:Validation . ?validation rdfs:label ?vlabel . ?validation bdqffdq:hasActedUponInformationElement ?ie .
-       ?ie bdqffdq:composedOf ?term . ?iea bdqffdq:composedOf ?term . ?amendment bdqffdq:hasActedUponInformationElement ?iea .
-        ?amendment a bdqffdq:Amendment . ?amendment rdfs:label ?alabel .
+      ?validation a bdqffdq:Validation ;
+                  rdfs:label ?vlabel ;
+                  bdqffdq:hasActedUponInformationElement ?ie .
+      ?ie bdqffdq:composedOf ?term .
+    
+      ?iea bdqffdq:composedOf ?term .
+      ?amendment a bdqffdq:Amendment ;
+                 rdfs:label ?alabel ;
+                 bdqffdq:hasActedUponInformationElement ?iea .
     }
-    GROUP BY ?term 
-    HAVING ( ?ct > 1 )
+    GROUP BY ?term
+    HAVING (COUNT(DISTINCT ?alabel) > 1)
     ORDER BY ?ct ?term
 ```
 
 What `Amendments` have `Information Elements` `Acted Upon` that are `Acted Upon` by more than one `Amendment`:
 
 ```sparql
-    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-    PREFIX owl: <http://www.w3.org/2002/07/owl#>
-    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+    PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX owl:     <http://www.w3.org/2002/07/owl#>
+    PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
     PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
-    SELECT distinct ?amend ?amendName
-    WHERE { 
-       ?amend bdqffdq:hasActedUponInformationElement ?iec . ?iec bdqffdq:composedOf ?term . ?amend a bdqffdq:Amendment . ?amend rdfs:label ?amendName .
-       { SELECT ?term (COUNT (distinct ?amendment) as ?ct ) 
-            WHERE { 
-             ?validation a bdqffdq:Validation . ?validation rdfs:label ?vlabel . ?validation bdqffdq:hasActedUponInformationElement ?ie .
-             ?ie bdqffdq:composedOf ?term . ?iea bdqffdq:composedOf ?term . ?amendment bdqffdq:hasActedUponInformationElement ?iea .
-             ?amendment a bdqffdq:Amendment . ?amendment rdfs:label ?alabel .
-           }
-           GROUP BY ?term 
-           HAVING ( ?ct > 1 )
-       } 
-    } 
+    
+    SELECT DISTINCT ?amend ?amendName
+    WHERE {
+      # Identify Amendments and the terms they act upon
+      ?amend a bdqffdq:Amendment ;
+             rdfs:label ?amendName ;
+             bdqffdq:hasActedUponInformationElement ?iec .
+      ?iec bdqffdq:composedOf ?term .
+    
+      # Restrict to terms that are acted upon by more than one Amendment
+      {
+        SELECT ?term (COUNT(DISTINCT ?amendment) AS ?ct)
+        WHERE {
+          ?amendment a bdqffdq:Amendment ;
+                     bdqffdq:hasActedUponInformationElement ?iea .
+          ?iea bdqffdq:composedOf ?term .
+        }
+        GROUP BY ?term
+        HAVING (COUNT(DISTINCT ?amendment) > 1)
+      }
+    }
+    ORDER BY LCASE(STR(?amendName)) STR(?amend)
 ```
+
+Which information elements are these: 
+ 
+```sparql
+    PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX owl:     <http://www.w3.org/2002/07/owl#>
+    PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
+    PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
+ 
+    SELECT DISTINCT ?term (STR(?ct) as ?ctstr)
+    WHERE {
+      # Identify Amendments and the terms they act upon
+      ?amend a bdqffdq:Amendment ;
+             rdfs:label ?amendName ;
+             bdqffdq:hasActedUponInformationElement ?iec .
+      ?iec bdqffdq:composedOf ?term .
+ 
+      # Restrict to terms that are acted upon by more than one Amendment
+      {
+        SELECT ?term (COUNT(DISTINCT ?amendment) AS ?ct)
+        WHERE {
+          ?amendment a bdqffdq:Amendment ;
+                     bdqffdq:hasActedUponInformationElement ?iea .
+          ?iea bdqffdq:composedOf ?term .
+        }
+        GROUP BY ?term
+        HAVING (COUNT(DISTINCT ?amendment) > 1)
+      }
+    }
+    ORDER BY LCASE(STR(?amendName)) STR(?amend)
+```
+
 
 
 #### 2.4.1 Listing Identifiers for Tests (non-normative)
@@ -616,6 +670,7 @@ The label is intended as the identifier of a Test for humans, the Term Name as a
 
 List all `Use Cases`, and the Tests associated with the comments on each `Data Quality Need` and its related `Specification`, formulated to run directly on triples found in bdqtest.ttl without inference.
 
+<!-- skip when testing -->
 ```sparql
     PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
@@ -663,10 +718,59 @@ List all `Use Cases`, and the Tests associated with the comments on each `Data Q
       STR(?need)
 ```
 
+Or for faster execution (but won't run in protege):
+
+```sparql
+PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
+
+SELECT DISTINCT
+  ?useCase
+  ?needType
+  (STR(?needCommentRaw) AS ?needComment)
+  ?specComment
+WHERE {
+  # Use Cases
+  ?useCase rdf:type bdqffdq:UseCase .
+  OPTIONAL { ?useCase rdfs:label ?useCaseLabel . }
+
+  # Policies tie UseCases to included Needs
+  ?policy bdqffdq:hasUseCase ?useCase ;
+          bdqffdq:includedInPolicy ?need .
+
+  # Need type (explicit, no inference required)
+  VALUES ?needType { bdqffdq:Validation bdqffdq:Issue bdqffdq:Measure bdqffdq:Amendment }
+  ?need rdf:type ?needType .
+
+  OPTIONAL { ?need rdfs:label ?needLabel . }
+  OPTIONAL { ?need rdfs:comment ?needCommentRaw . }
+
+  # Method -> Need link (no UNION; fewer intermediate results)
+  ?method (bdqffdq:forValidation|bdqffdq:forIssue|bdqffdq:forMeasure|bdqffdq:forAmendment) ?need .
+
+  # Now bind the spec (after method is known)
+  ?method bdqffdq:hasSpecification ?spec .
+  OPTIONAL { ?spec rdfs:comment ?specComment . }
+
+  # Optional, not projected; keep only if you really need it for side-effects/debugging
+  # OPTIONAL { ?spec bdqffdq:hasExpectedResponse ?expectedResponse . }
+
+  # Stable ordering keys
+  BIND(LCASE(STR(COALESCE(?useCaseLabel, ?useCase))) AS ?useCaseSort)
+  BIND(LCASE(STR(COALESCE(?needLabel, ?need))) AS ?needSort)
+}
+ORDER BY
+  ?useCaseSort
+  ?needSort
+  STR(?need)
+```
+
 #### 2.4.3 Framework Competency Question including an oa:annotation (non-normative)
 
 The Fitness For Use Framework represents the results of `Validation` Tests as `Responses`, which can be linked to biodiversity data records through `Annotations` following the W3C Web Annotation model. This structure allows detailed provenance and context to be recorded alongside each `Response`. The following competency question demonstrates how to retrieve all `Responses` generated for a specific `dwc:Occurrence` record, including metadata such as the associated `Validation` Test, `Annotation` motivation, date of generation, and relevant `Parameters`.
 
+<!-- skip when testing -->
 ```sparql
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     PREFIX owl: <http://www.w3.org/2002/07/owl#>
@@ -701,6 +805,7 @@ The Fitness For Use Framework represents the results of `Validation` Tests as `R
 
 Note that a `Validation` will produce a hasResponseResult only if the hasResponseStatus is bdqffdq:RUN_HAS_RESULT, so in this query, this clause is optional to include results where the status indicated a failure case.   For other test types, the result may be returned either as an object (bdqffdq:hasResponseResult) or a literal (bdqffdq:hasResponseResultValue), so to generalize this query to generalize to other test types add an additional of optional clause, remembering that also for prerequisite-not-met statuses, neither will be present.  
 
+<!-- skip when testing -->
 ```sparql
       OPTIONAL { ?assertion bdqffdq:hasResponseResult ?responseresult . }
       OPTIONAL { ?assertion bdqffdq:hasResponseResultValue ?responseresultvalue . }

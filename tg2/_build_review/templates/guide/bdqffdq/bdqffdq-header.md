@@ -593,7 +593,8 @@ Each instance of a `bdqffdq:MeasurementResponse` SHOULD be the object of one and
 Each instance of a `bdqffdq:AmendmentResponse` SHOULD be the object of one and only one `bdqffdq:producesResponse` property linking it to an instance of a `bdqffdq:Implementation`, which in turn SHOULD be the subject of one and only one `bdqffdq:usesSpecification` property linking it to an instance of a `bdqffdq:Specification`, which in turn SHOULD be the object of one and only one `bdqffdq:hasSpecification` property linking it to an instance of a `bdqffdq:AmendmentMethod`, which in turn SHOULD be the subject for one and only one `bdqffdq:forAmendment` property linking it to an instance of a `bdqffdq:Amendment`.
 
 Given a `Response`, the following query returns which Test was run with which argument values for which parameters by which mechanism to produce it. This query SHOULD only return a single row. 
- 
+
+<!-- skip when testing -->
 ```sparql
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     PREFIX owl: <http://www.w3.org/2002/07/owl#>

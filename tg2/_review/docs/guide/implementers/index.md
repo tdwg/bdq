@@ -1082,7 +1082,7 @@ The checklists below are designed to help implementers ensure that their impleme
 1. **Expose a stable callable API**
    - Implement the Test as a callable unit (function/method) whose inputs correspond to the `Information Elements` and any supported `Parameters`.
    - If your API exposes a `Parameter`:
-     - it must accept the **string literal** default value exactly as it appears in the Test descriptor. See: [Default Value Strings in Parameters”](#2324-default-value-strings-in-parameters-normative).
+     - it must accept the **string literal** default value exactly as it appears in the Test descriptor. See: [Default Value Strings in Parameters](#2324-default-value-strings-in-parameters-normative).
      - it may also support other **string literal** values of that `Parameter` to produce different behavior.
    - Return a structured `Response` object (consuming exceptions).
 
@@ -1122,13 +1122,13 @@ The checklists below are designed to help implementers ensure that their impleme
 #### 6.5.3 Checklist for Implementing an Amendment Test (non-normative)
 
 1. **Setup for Consistency**
-   - Implement utility functions or methods to evaluate `bdqval:Empty` and `bdqval:NotEmpty` consistently.  See: [2.2 The Concept of EMPTY in the BDQ Standard”](#22-the-concept-of-empty-in-the-bdq-standard-normative).
+   - Implement utility functions or methods to evaluate `bdqval:Empty` and `bdqval:NotEmpty` consistently.  See: [2.2 The Concept of EMPTY in the BDQ Standard](#22-the-concept-of-empty-in-the-bdq-standard-normative).
    - Define a standard `Response` object or structure with `Response.status`, `Response.result`, and `Response.comment` properties, and use that object or structure for the output from Test implementations. See: [Section 4.1 Structure of Response (normative)](../../guide/bdqtest/index.md#41-structure-of-response-normative) in the [BDQ Tests Guide](../../guide/bdqtest/index.md).
 
 1. **Confirm the required inputs and intended outputs**
    - Identify the `Information Elements` `Acted Upon` and `Consulted` named in the `Specification` (the value of `bdqffdq:hasExpectedResponse`).
    - Identify any `Parameters` and their default values (from `bdqffdq:hasAuthoritiesDefaults` and/or `bdqffdq:hasArgument` / `bdqffdq:Argument`).
-   - Identify which `Information Elements` may appear as keys in the `Response.result` payload when the result is an amendment proposal (some `Amendment` Tests propose changes to more than one `Information Element`).
+   - Identify which `Information Elements` may appear as keys in the `Response.result` payload when the result is an amendment proposal. Some `Amendment` Tests propose changes to more than one `Information Element`.
 
 1. **Expose a stable callable API**
    - Implement the Test as a callable unit (function/method) whose inputs correspond to the `Information Elements` and any supported `Parameters`.
@@ -1163,8 +1163,8 @@ The checklists below are designed to help implementers ensure that their impleme
 
    - **Generate a proposal (or decide no proposal is warranted)**
      - Apply the Test’s criterion exactly as described in the `Specification`, including any "interpreted as" rules. See: [2.3.3 The Concept of Interpreted As”](#233-the-concept-of-interpreted-as-normative).
-     - Do not propose changes that are not explicitly allowed by the `Specification`. In particular, avoid “helpful” normalizations that would alter meaning or introduce false precision unless specified.
-     - If a proposal is made, represent the proposed changes as structured data (typically a list/map of key:value pairs where keys are `Information Element` identifiers and values are proposed new values).
+     - Do not propose changes that are not explicitly allowed by the `Specification`. In particular, avoid “helpful” normalizations that would alter the meaning or introduce false precision unless specified.
+     - If a proposal is made, represent the proposed changes as structured data. Typically as a list/map of key:value pairs where keys are `Information Element` identifiers and values are proposed new values.
 
    - **Return a conforming Response for an Amendment**
      - When evaluation succeeds, use `Response.status` values appropriate to `Amendment` Tests:
@@ -1172,11 +1172,11 @@ The checklists below are designed to help implementers ensure that their impleme
        - `AMENDED` when proposing changes to existing `bdqval:NotEmpty` value(s).
        - `NOT_AMENDED` when prerequisites are met but no proposal is made.
      - For `FILLED_IN` and `AMENDED`:
-       - `Response.result` MUST be present and MUST contain the structured proposal payload (e.g., JSON key:value pairs).
-       - `Response.comment` MUST be `bdqval:NotEmpty` and SHOULD explain how the proposal was derived (including any non-default `Parameter` values used).
+       - `Response.result` MUST be present and MUST contain the structured proposal payload, e.g., JSON key:value pairs.
+       - `Response.comment` MUST be `bdqval:NotEmpty` and SHOULD explain how the proposal was derived, including any non-default `Parameter` values used.
      - For `NOT_AMENDED`:
        - `Response.result` must be omitted / null.
-       - `Response.comment` must be `bdqval:NotEmpty` and should explain why no proposal was made (e.g., ambiguous input, not interpretable, no unambiguous match in authority).
+       - `Response.comment` must be `bdqval:NotEmpty` and should explain why no proposal was made, e.g., ambiguous input, not interpretable, no unambiguous match in authority.
 
 1. **Keep Amendment semantics clearly distinct from applying changes**
    - An `Amendment` `Response.result` is a proposal. Implementations should not automatically apply the proposed changes to authoritative data.
@@ -1192,17 +1192,17 @@ BDQ Test descriptions are intentionally independent of any particular software f
   * The behavior of the Test, that is the **logic** of the Test on a given input (via the `Specification`).
     * The logic or decision rules of the Test are internal to the Test.
     * Tests should handle exceptions and always return a structured `Response` and should not raise exceptions to be handled by an execution framework.
-  * The outputs of a Test, that is **what** must be reported (via `Response.status`, `Response.result`, and `Response.comment`).  
+  * The outputs of a Test, that is **what** must be reported via `Response.status`, `Response.result`, and `Response.comment`.  
 
 * An execution framework has the responsibility to determine everything outside that API, including:
     * How and from where to **load** the raw data.
-    * How to **bind** elements of the raw data onto the correct Test inputs (e.g., mapping a column in a CSV file to a particular `Information Element`),
-    * What execution mechanics and **workflow** (including paralellization) to follow.
-    * **Which** Tests to execute (e.g. by `Use Case` and `Policy`), 
+    * How to **bind** elements of the raw data onto the correct Test inputs, e.g., mapping a column in a CSV file to a particular `Information Element`,
+    * What execution mechanics and **workflow**, including paralellization, to follow.
+    * **Which** Tests to execute, e.g. by `Use Case` and `Policy`, 
       * Determine the **order** of Test excution.
     * **Invoke** the correct implementation for a given Test (e.g., by Label, GUID/Term Name, or versioned IRI) with the correct bound inputs.
     * **Package** `Responses` into `Data Quality Reports` or pass them on to other downstream processes.
-    * Display or otherwise **present** the results to users.
+    * **Present** the results to users.
 
 #### 6.6.1 Linking raw input terms, Tests, and outputs in a workflow (non-normative)
 
@@ -1214,21 +1214,21 @@ A Test execution framework (or “runner”) typically needs to accomplish the f
 
 1. **Choose the unit of evaluation**
    - Determine whether input is being treated as a `Single Record` (`bdqffdq:SingleRecord`) or a `Multi Record` (`bdqffdq:MultiRecord`) resource.
-   - Iterate records (for `Single Record` execution) or assemble appropriate aggregates (for `Multi Record` execution).
+   - Iterate records for `Single Record` execution or assemble appropriate aggregates for `Multi Record` execution.
 
 1. **Determine the workflow for Test execution**
-   - If the `Policies` for a `Use Case` include both `Validation` and `Amendment` Tests, determine the order of execution (e.g., run all `Validation` Tests first, then run `Amendment` Tests on the records that passed validation; or run each `Validation` Test followed immediately by its corresponding `Amendment` Test).
+   - If the `Policies` for a `Use Case` include both `Validation` and `Amendment` Tests, determine the order of execution. For example, run all `Validation` Tests first, then run `Amendment` Tests on the records that passed validation; or run each `Validation` Test followed immediately by its corresponding `Amendment` Test.
    - A workflow that may be expected, and is the responsibility of the execution framework, is to run:
      - All `Validation` Tests, all `Issue` Tests and all `Measure` Tests in a pre-amendent phase.
      - Run all `Amendment` Tests in an amendment phase.
      - Apply all proposed changes from the `Amendment` Tests to a copy of the input data.
      - Apply all `Validation` Tests, all `Issue` Tests and all `Measure` Tests in a post-amendment phase using the amended copy of the data as input.
-     - Compare the results of `MultiRecord` `Measures` from the pre-and post-amendment phases (giving a measure of how much accepting the proposed changes from `Amendments` would improve the quality of the data for the `Use Case` at hand..
+     - Compare the results of `MultiRecord` `Measures` from the pre-and post-amendment phases giving a measure of how much accepting the proposed changes from `Amendments` would improve the quality of the data for the `Use Case` at hand.
      - Produce a `Data Quality Report` that includes both pre- and post-amendment results, and that retains the original (unamended) values for reference. 
 
 1. **Consider Aggregation of unique values for Single Record Tests**
-   - For `SingleRecord` Tests, it may be appropriate to aggregate distinct input values and run the same Test implementation once per distinct value, rather than once per record (e.g., for a `Validation` Test that checks if a particular value is found in an authority, it may be more efficient to run the Test once per distinct value rather than once per record).
-   - Aggregation should normally be by distinct values of the set of `Information Elements` for each Test, and not by distinct values of a single `Information Elements`, to ensure that the correct `Response` is associated with the correct combination of input values.
+   - For `SingleRecord` Tests, it may be appropriate to aggregate distinct input values and run the same Test implementation once per distinct value, rather than once per record. For example, for a `Validation` Test that checks if a particular value is found in an authority, it may be more efficient to run the Test once per distinct value rather than once per record.
+   - Aggregation should normally be by distinct values of the set of `Information Elements` for each Test, and not by distinct values of a single `Information Elements` to ensure that the correct `Response` is associated with the correct combination of input values.
    - If aggregation is used, ensure that the `Response` for each distinct value is correctly associated with all records that contain that value to pass down a processing pipeline or to return in the final `Data Quality Report`.
 
 1. **Bind raw data to the Test API**
@@ -1238,7 +1238,7 @@ A Test execution framework (or “runner”) typically needs to accomplish the f
 
 1. **Locate and invoke the correct Tests**
    - The `Policies` from the `Use Case` identify which Tests are required, but an execution framework must still determine how to locate the corresponding implementation for each Test.
-   - Resolve which callable unit implements which Test (preferably by Term Name (UUID), or Versioned IRI).
+   - Resolve which callable unit implements which Test, preferably by Term Name (UUID), or Versioned IRI.
    - Invoke the implementation with the bound inputs in a way that is consistent and repeatable.
 
 1. **Execute a Test and Capture results as a structured Response**
@@ -1246,19 +1246,19 @@ A Test execution framework (or “runner”) typically needs to accomplish the f
      - `Response.status`
      - `Response.result` (present only when appropriate for the status and `Test Type`)
      - `Response.comment` (a human-readable `bdqval:NotEmpty` explanation)
-   - Ensure returned values use the controlled vocabulary strings defined by the BDQ standard (e.g., `RUN_HAS_RESULT`, `COMPLIANT`, `NOT_COMPLIANT`).
-   - Exceptions raised from within a Test must be be captured and handled according to the expected response criteria in the `Specification` (e.g., returning `EXTERNAL_PREREQUISITES_NOT_MET` when an external resource is unavailable, with an appropriate comment).  An exception within a Test should not be raised into the execution framework.
+   - Ensure returned values use the controlled vocabulary strings defined by the BDQ standard, e.g., `RUN_HAS_RESULT`, `COMPLIANT`, `NOT_COMPLIANT`.
+   - Exceptions raised from within a Test must be be captured and handled according to the expected response criteria in the `Specification`, e.g., returning `EXTERNAL_PREREQUISITES_NOT_MET` when an external resource is unavailable, with an appropriate comment.  An exception within a Test should not be raised into the execution framework.
 
 1. **Consider Handling of EXTERNAL_PREREQUISITES_NOT_MET**
    - If a Test implementation raises an exception or error due to an unavailable external resource, the Test is expected to capture that and return a `Response` with `Response.status` = `EXTERNAL_PREREQUISITES_NOT_MET`, and a `Response.comment` containing a `bdqval:NotEmpty` explanation.
-   - A framework for Test execution may choose to simply pass these failure conditions on, or to handle such exceptions at a higher level (e.g., by skipping all Tests that depend on that resource for the remainder of a run, or by retrying after a delay), but must ultimately ensure that the appropriate `Response` is returned for each individual Test execution that encounters an unavailable external resource.
+   - A framework for Test execution may choose to simply pass these failure conditions on, or to handle such exceptions at a higher level, e.g., by skipping all Tests that depend on that resource for the remainder of a run, or by retrying after a delay, but must ultimately ensure that the appropriate `Response` is returned for each individual Test execution that encounters an unavailable external resource.
 
 1. **If unique values were aggregated, deaggregate and associate results with all relevant records**
    - If the framework uses aggregation of distinct values for `Single Record` Tests, ensure that the `Response` for each distinct value is correctly associated with all records that contain that value to pass down a processing pipeline or to return in the final `Data Quality Report`.
 
 1. **Serialize and report results**
    - Record or transmit results as part of a `Data Quality Report` (or as `bdqffdq:Response` instances in RDF), in any serialization that fits the implementation environment.
-   - When non-default `Parameters` are used, ensure the report can communicate which `Argument` value(s) were applied (for both human and machine consumers), consistent with the guidance in this standard.
+   - When non-default `Parameters` are used, ensure the report can communicate which `Argument` value(s) were applied (for human and machine consumers), consistent with the guidance in this standard.
 
 ## 7 Presentation of Results (normative)
 
