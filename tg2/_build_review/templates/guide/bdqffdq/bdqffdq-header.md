@@ -374,43 +374,57 @@ Below is a fragment in Turtle describing VALIDATION_COUNTRY_FOUND, composed of a
 
 ### 2.7 Some Other Related Standards (non-normative)
 
-#### 2.7.1  The W3C Web Annotation Data Model (non-normative)
+This section is non-normative and is intended only to highlight standards that can be used alongside the Fitness For Use Framework ontology and the other BDQ vocabularies to support interoperable representation, publication, and validation of BDQ Tests and their results in RDF.
 
-The `bdqffdq:` OWL representation of the [Fitness For Use Framework Ontology](../../guide/bdqffdq/index.md) and the framing of the [BDQ Tests as RDF](../../../dist/bdqtest.ttl) using that ontology make Test results particularly amenable to being wrapped in `Annotations` following the [W3C Web Annotation Data Model](https://www.w3.org/TR/annotation-model/) (Sanderson et al. 2017).
+#### 2.7.1 The W3C Web Annotation Data Model (non-normative)
 
-See [7.2 Annotations](../implementers/index.md#72-annotations)) in the [Implementers guide](../implementers/index.md) for an example and normative guidance on how to represent Test results as Web Annotations.
+The `bdqffdq:` OWL representation of the Fitness For Use Framework and the framing of the BDQ Tests in RDF using that ontology make Test results particularly amenable to being wrapped in `oa:Annotation` instances following the [W3C Web Annotation Data Model](https://www.w3.org/TR/annotation-model/) (Sanderson et al. 2017).
 
-#### 2.7.1 Relating BDQ Test Results with the PROV Ontology (non-normative)
+See [7.2 Annotations](../implementers/index.md#72-annotations) in the [Implementers Guide](../implementers/index.md) for an example and normative guidance on how to represent Test results as Web Annotations.
 
-[PROV-O: The PROV Ontology](https://www.w3.org/TR/prov-o/) (W3C 2013) is a W3C recommendation that provides a framework for representing provenance information in RDF.  The PROV Ontology defines a set of classes and properties for representing the entities, activities, and agents involved in the production of data and other resources, as well as the relationships between them.
+#### 2.7.2 Relating BDQ Test Results with the PROV Ontology (non-normative)
+
+[PROV-O: The PROV Ontology](https://www.w3.org/TR/prov-o/) (W3C 2013) is a W3C recommendation that provides a framework for representing provenance information in RDF. PROV-O defines a set of classes and properties for representing the entities, activities, and agents involved in the production of data and other resources, as well as the relationships between them.
 
 A `bdqffdq:DataQualityReport` is a formal description of the results produced by a `bdqffdq:Implementation` implemented by a `bdqffdq:Mechanism` applying one or more Tests to a `bdqffdq:DataResource`.
 
-In Prov-O, a `bdqffdq:dataQualityReport' and `bdqffdq:DataResource` may be represented as `prov:Entity` instances, a `bdqffdq:Implementation` may be represented as a `prov:Activity`, and a `bdqffdq:Mechanism` may be represented as a `prov:Agent`.  The relationships between these entities can be represented using the appropriate PROV properties (e.g., `prov:wasGeneratedBy`, `prov:used`, `prov:wasAssociatedWith`).
+In PROV-O, a `bdqffdq:DataQualityReport` and a `bdqffdq:DataResource` may be represented as `prov:Entity` instances. An execution of a Test implementation may be represented as a `prov:Activity`, and a `bdqffdq:Mechanism` (or an agent operating a mechanism) may be represented as a `prov:Agent`. The relationships between these entities can be represented using PROV properties such as `prov:wasGeneratedBy`, `prov:used`, and `prov:wasAssociatedWith`.
 
-A 'Response' produced by a Test can be related to the PROV Ontology (https://www.w3.org/TR/prov-o/) through the use of `prov:wasGeneratedBy` to relate a `Response` to the `Implementation` that produced it, and through the use of `prov:used` to relate an `Implementation` to the `Specification` that it uses.  This allows for the provenance of a `Response` to be traced back to the particular Test specification that was executed, and to the software implementation that executed it.
+A `bdqffdq:Response` produced by a Test can be related to PROV-O through the use of `prov:wasGeneratedBy` to relate a `bdqffdq:Response` to the `prov:Activity` that produced it, and through the use of `prov:used` to relate that `prov:Activity` to the `bdqffdq:Specification` that it used. This allows the provenance of a `bdqffdq:Response` to be traced back to the particular Test specification that was executed and the software mechanism that executed it, with the ability to add additional metadata about the provenance beyond the scope of the Fittness For Use Framework ontology.
 
-Prov-O provides much richer representations of provenance than the simple relationships described here, and there are many other ways in which the concepts of the Fitness For Use Framework could be related to PROV-O.  For example, a `prov:Agent` can have a `prov:actedOnBehalfOf` relationship with another `prov:Agent`, which could be used to represent the relationship between a `bdqffdq:Implementation` and the person who requested the execution of that implementation to produce a particular `bdqffdq:DataQualityReport`.  Similarly a `prov:Activity` can have a `prov:startedAtTime` and `prov:endedAtTime`, which could be used to represent the time period during which a Test was executed.  Prov-O has the ability to richly represent metadata outside the scope of bdqffdq:.
+The above is intended only as a simple exploration of how some of the core concepts of the Fitness For Use Framework could be related to PROV-O.
 
-The above is intended only as a simple exploration of how some of the core concepts of the Fittness For Use Framework could be related to PROV-O.
+#### 2.7.3 The W3C Data Quality Vocabulary (non-normative)
 
-#### 2.7.2 The W3C Data Quality Vocabulary (non-normative)
+The W3C [Data Quality Vocabulary](https://www.w3.org/TR/vocab-dq/) (DQV) (Albertoni and Isaac, 2016; Albertoni and Isaac 2020) provides a metadata model for describing data quality information in RDF. DQV defines (and reuses) a set of classes and properties for representing the quality of datasets and their distributions. DQV is deliberately designed as a high-level, cross-domain interoperable vocabulary. DQV representations of metrics and dimensions can be used to report on data quality, where quality is understood to depend on the needs of the data consumer.
 
-The W3C [Data Quality Vocabulary](https://www.w3.org/TR/vocab-dq/) (DQV) (Albertoni and Isaac, 2016; Albertoni and Isacc 2020) provides a metadata model for describing data quality information in RDF.  DQV defines (and reuses) a set of classes and properties for representing the quality of datasets and their distributions.  DQV is deliberately designed as a high-level, cross-domain interoperable vocabulary.   The DQV representations of metrics and dimensions can be used to report on data quality of data, where quality is seen as being in the eye of the consumer of the data, and consumers can interpret these reports to make their own judgement about the quality of the data for their needs.
+The W3C Data Quality Vocabulary can be used in conjunction with the `bdqffdq:` and `bdqtest:` vocabularies to provide metadata describing the quality of some `bdqffdq:DataResource` as asserted in a `bdqffdq:DataQualityReport`.
 
-The W3C Data Quality Vocabulary can be used in conjunction with the `bdqffdq:` and `bdqttest:` vocabularies to provide metadata describing the quality of some `bdqffdq:DataResource` as asserted in a `bdqffdq:DataQualityReport`.
-
-The W3C Data Quality Vocabulary defines (mostly by reuse of `ldqd:` terms) a set of data quality dimensions.  The `dqv:Dimension` class is [defined](https://www.w3.org/TR/vocab-dqv/#dqv:Dimension), in part, as "Represents criteria relevant for assessing quality".  This concept is similar to (skos:broader than) `bdqffdq:DataQualityDimension`.  See Section [### 2,1 Mapping to DQV Dimension (non-normative)](../../list/bdqdim/index.md#21-mapping-to-dqv-dimension-non-normative) in the [bdqdim: term list](../../list/bdqdim/index.md) document for potential mappings of these representations of data quality dimensions. 
+The W3C Data Quality Vocabulary defines (mostly by reuse of `ldqd:` terms) a set of data quality dimensions. The `dqv:Dimension` class is [defined](https://www.w3.org/TR/vocab-dqv/#dqv:Dimension), in part, as "Represents criteria relevant for assessing quality". This concept is similar to (skos:broader than) `bdqffdq:DataQualityDimension`. See Section [2.1 Mapping to DQV Dimension (non-normative)](../../list/bdqdim/index.md#21-mapping-to-dqv-dimension-non-normative) in the [bdqdim:` term list](../../list/bdqdim/index.md) document for potential mappings.
 
 There are at least three ways in which `bdqffdq:Responses` could be related to DQV data quality metadata representations.
 
-Suported by the generality and flexibility of DQV and its extension of the Web Annotation Data Model, any `bdqffdq:Response` could be wrapped in an `oa:Annotation` and that annotation subclassed as a `dqv:QualityAnnotation`.
+Supported by the generality and flexibility of DQV and its extension of the Web Annotation Data Model, any `bdqffdq:Response` could be wrapped in an `oa:Annotation`, and that annotation subclassed as a `dqv:QualityAnnotation`.
 
-At a high level, a `bdqffdq:DataQualityReport` containing `bdqffdq:Responses` from (specific, bdqtest:) `bdqffdq:Multi Record` `bdqffdq:Measures` that reported COMPLIANT results could produce a DQV `dqv:QualityCertificate` related to a `bdqffdq:DataResource` modeled as a `dcat:Dataset` through a dqv:QualityAnnotation that also asserts that the `dcat:Dataset` `dcterms:conformsTo` a `dcterms:Standard` modeling a `bdqffdq:UseCase`.
+At a high level, a `bdqffdq:DataQualityReport` containing `bdqffdq:Responses` from (specific, `bdqtest:`) `bdqffdq:MultiRecord` `bdqffdq:Measures` that reported COMPLIANT results could produce a DQV `dqv:QualityCertificate` related to a `bdqffdq:DataResource` modeled as a `dcat:Dataset` through a `dqv:QualityAnnotation` that also asserts that the `dcat:Dataset` `dcterms:conformsTo` a `dcterms:Standard` modeling a `bdqffdq:UseCase`.
 
-At a lower level, `bdqffdq:MultiRecord` `Measures` that produce numeric results could be modeled as a DQV Quality Metric `dqv:Metric`.  A `bdqffdq:MeasureResponse` resulting from such a `bdqffdq:MultiRecordMeasure` could be modeled as a `dqv:QualityMeasurement`
+At a lower level, `bdqffdq:MultiRecord` `bdqffdq:Measures` that produce numeric results could be modeled as a DQV quality metric (`dqv:Metric`). A `bdqffdq:MeasureResponse` resulting from such a `bdqffdq:MultiRecord` `bdqffdq:Measure` could be modeled as a `dqv:QualityMeasurement`.
 
-As the definition of `dqv:Metric` includes the phrase "a value in a given unit" it is not clear if `bdqffdq:Validation` and `bdqffdq:Issue` Tests that produce categorical results or `bdqffdq:Amendment` tests that produce proposed changes to data could be modeled as DQV `dqv:Metric`.  
+As the definition of `dqv:Metric` includes the phrase "a value in a given unit", it is not clear whether `bdqffdq:Validation` and `bdqffdq:Issue` Tests that produce categorical results, or `bdqffdq:Amendment` Tests that propose changes to data, can be modeled as DQV `dqv:Metric`.
+
+#### 2.7.4 Publishing dataset metadata with DCAT (non-normative)
+
+The [Data Catalog Vocabulary (DCAT)](https://www.w3.org/TR/vocab-dcat-3/) (W3C 2024) is a W3C recommendation for describing datasets and distributions. Where `bdqffdq:DataQualityReports` are published as resources associated with datasets, DCAT can be used to describe the dataset being assessed (e.g., `dcat:Dataset`) and to relate the dataset to related distributions, documentation, and quality metadata. In combination with DQV, this can support discovery and reuse of published data quality information.
+
+#### 2.7.5 Validating RDF graphs with SHACL (non-normative)
+
+The [Shapes Constraint Language (SHACL)](https://www.w3.org/TR/shacl/) (W3C 2017) is a W3C recommendation for expressing constraints and validation rules over RDF graphs. SHACL can be used alongside the open-world design of the `bdqffdq:` ontology to validate that RDF data representing BDQ Tests, `bdqffdq:Responses`, and `bdqffdq:DataQualityReports` follows expected structural patterns (e.g., expected cardinalities and required relationships).
+
+This could be useful for validating RDF data produced by `bdqffdq:Mechanisms`, and for testing conformance of RDF representations to the normative guidance in this standard.  We have not yet developed SHACL shapes for validating RDF representations of BDQ concepts, but this is a potential area for future work.
+
+#### 2.7.6 Other TDWG vocabularies as sources of Information Elements (non-normative)
+
+Future BDQ Tests are expected to apply to `bdqffdq:Information Elements` drawn from additional TDWG vocabularies beyond Darwin Core. In particular, terms from Latimer Core and Audiovisual Core are likely to provide `bdqffdq:Information Elements` for future Tests as the BDQ standard expands to cover additional kinds of biodiversity data and collection objects.
 
 ## 3 Use of Ontology Terms (normative) 
 
