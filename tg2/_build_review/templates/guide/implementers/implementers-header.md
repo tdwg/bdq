@@ -1120,10 +1120,10 @@ A Test execution framework (or “runner”) typically needs to accomplish the f
      - Compare the results of `MultiRecord` `Measures` from the pre-and post-amendment phases giving a measure of how much accepting the proposed changes from `Amendments` would improve the quality of the data for the `Use Case` at hand.
      - Produce a `Data Quality Report` that includes both pre- and post-amendment results, and that retains the original (unamended) values for reference. 
 
-1. **Consider Aggregation of unique values for Single Record Tests**
-   - For `SingleRecord` Tests, it may be appropriate to aggregate distinct input values and run the same Test implementation once per distinct value, rather than once per record. For example, for a `Validation` Test that checks if a particular value is found in an authority, it may be more efficient to run the Test once per distinct value rather than once per record.
-   - Aggregation should normally be by distinct values of the set of `Information Elements` for each Test, and not by distinct values of a single `Information Elements` to ensure that the correct `Response` is associated with the correct combination of input values.
-   - If aggregation is used, ensure that the `Response` for each distinct value is correctly associated with all records that contain that value to pass down a processing pipeline or to return in the final `Data Quality Report`.
+1. **Consider aggregating distinct input tuples for `Single Record` Tests**
+   - For some `Single Record` Tests, implementations may improve efficiency by grouping records by the distinct combination of input values for the Test’s `Information Elements` (i.e., an input tuple) and running the Test once per distinct tuple (e.g., caching or batching authority lookups for repeated values).
+   - To preserve correctness, aggregation should be based on the full set of `Information Elements` acted upon and consulted by the Test, not on a single `Information Element` in isolation.
+   - When using aggregated execution, results still need to be associated back to the original record-level context (e.g., “explode” the tuple-level result back to all records in the group) before passing them downstream or producing a `Data Quality Report`.  Ensure that the `Response` for each distinct tuple is correctly associated with all records that contain that tuple.
 
 1. **Bind raw data to the Test API**
    - Map the framework’s internal representation of data (rows, objects, RDF graphs, etc.) onto the specific `Information Elements` required by the Test.
@@ -1150,7 +1150,7 @@ A Test execution framework (or “runner”) typically needs to accomplish the f
    - A framework for Test execution may also maintain a list of external resources and check their availability at startup or on starting a job and take actions such as advising the user that such resources are currently unavailable and that certain tests will not currently complete (e.g. check your network connection).
 
 1. **If unique values were aggregated, disaggregate and associate results with all relevant records**
-   - If unique values were aggregated follow tests with disaggregation, that is explode the distinct-values list into one row per value.
+   - If unique values were aggregated follow Test execution with reassociation to records, that is explode the distinct-values list into one row per value.
    - If the framework uses aggregation of distinct values for `Single Record` Tests, ensure that the `Response` for each distinct value is correctly associated with all records that contain that value to pass down a processing pipeline or to return in the final `Data Quality Report`.
 
 1. **Serialize and report results**
