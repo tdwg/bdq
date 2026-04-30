@@ -1058,7 +1058,7 @@ The checklists below are designed to help implementers ensure that their impleme
    - **Generate a proposal (or decide no proposal is warranted)**
      - Apply the Test’s criterion exactly as described in the `Specification`, including any "interpreted as" rules. See: [2.3.3 The Concept of Interpreted As”](#233-the-concept-of-interpreted-as-normative).
      - Do not propose changes that are not explicitly allowed by the `Specification`. In particular, avoid “helpful” normalizations that would alter the meaning or introduce false precision unless specified.
-     - If a proposal is made, represent the proposed changes as structured data. Typically a list/map of key:value pairs where keys are `Information Element` identifiers and values are proposed new values.
+     - If a proposal is made, represent the proposed changes as structured data. Typically as a list/map of key:value pairs where keys are `Information Element` identifiers and values are proposed new values.
 
    - **Return a conforming Response for an Amendment**
      - When evaluation succeeds, use `Response.status` values appropriate to `Amendment` Tests:
@@ -1091,7 +1091,7 @@ BDQ Test descriptions are intentionally independent of any particular software f
 * An execution framework has the responsibility to determine everything outside that API, including:
     * How and from where to **load** the raw data.
     * How to **bind** elements of the raw data onto the correct Test inputs, e.g., mapping a column in a CSV file to a particular `Information Element`,
-    * What execution mechanics and **workflow**, including paralellization to follow.
+    * What execution mechanics and **workflow**, including paralellization, to follow.
     * **Which** Tests to execute, e.g. by `Use Case` and `Policy`, 
       * Determine the **order** of Test excution.
     * **Invoke** the correct implementation for a given Test (e.g., by Label, GUID/Term Name, or versioned IRI) with the correct bound inputs.
