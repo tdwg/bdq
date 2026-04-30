@@ -1076,7 +1076,7 @@ The checklists below are designed to help implementers ensure that their impleme
    - Define a standard `Response` object or structure with `Response.status`, `Response.result`, and `Response.comment` properties, and use that object or structure for the output from Test implementations. See: [Structure of Response](../../guide/bdqtest/index.md#41-structure-of-response-normative) in the [BDQ Tests Guide](../../guide/bdqtest/index.md).
 
 1. **Confirm the required inputs**
-   - Identify the `Information Elements` `Acted Upon` and `Consulted` named in the `Specification` (the value of `bdqffdq:hasExpectedResponse`).
+   - Identify the `Information Elements` `Acted Upon` and `Consulted` named in the `has Expected Response` of the `Specification`.
    - Identify any `Parameters` and their default value (from `bdqffdq:hasAuthoritiesDefaults` and/or `bdqffdq:hasArgument` / `bdqffdq:Argument`).
 
 1. **Expose a stable callable API**
@@ -1217,7 +1217,7 @@ A Test execution framework (or “runner”) typically needs to accomplish the f
    - Iterate records for `Single Record` execution or assemble appropriate aggregates for `Multi Record` execution.
 
 1. **Determine the workflow for Test execution**
-   - If the `Policies` for a `Use Case` include both `Validation` and `Amendment` Tests, determine the order of execution. For example, run all `Validation` Tests first, then run `Amendment` Tests on the records that passed validation; or run each `Validation` Test followed immediately by its corresponding `Amendment` Test.
+   - If the `Policies` for a `Use Case` include both `Validation` and `Amendment` Tests, determine the order of execution. For example, in a data pipeline, run all `Validation` Tests first, then down the pipeline, run all `Amendment` Tests; or compose a actors in a pipeline such that each `Validation` Test is followed immediately by its corresponding `Amendment` Test.
    - A workflow that may be expected, and is the responsibility of the execution framework, is to run:
      - All `Validation` Tests, all `Issue` Tests and all `Measure` Tests in a pre-amendent phase.
      - Run all `Amendment` Tests in an amendment phase.
@@ -1249,11 +1249,14 @@ A Test execution framework (or “runner”) typically needs to accomplish the f
    - Ensure returned values use the controlled vocabulary strings defined by the BDQ standard, e.g., `RUN_HAS_RESULT`, `COMPLIANT`, `NOT_COMPLIANT`.
    - Exceptions raised from within a Test must be be captured and handled according to the expected response criteria in the `Specification`, e.g., returning `EXTERNAL_PREREQUISITES_NOT_MET` when an external resource is unavailable, with an appropriate comment.  An exception within a Test should not be raised into the execution framework.
 
-1. **Consider Handling of EXTERNAL_PREREQUISITES_NOT_MET**
+1. **Consider how to Handle EXTERNAL_PREREQUISITES_NOT_MET**
    - If a Test implementation raises an exception or error due to an unavailable external resource, the Test is expected to capture that and return a `Response` with `Response.status` = `EXTERNAL_PREREQUISITES_NOT_MET`, and a `Response.comment` containing a `bdqval:NotEmpty` explanation.
+   - Restating that point: The API contract for a Test expects that exceptions resulting from failures to connect to an external service are handled within the Test and returned as a structured `Response` with `Response.status` = `EXTERNAL_PREREQUISITES_NOT_MET`, and not raised into the execution framework.
    - A framework for Test execution may choose to simply pass these failure conditions on, or to handle such exceptions at a higher level, e.g., by skipping all Tests that depend on that resource for the remainder of a run, or by retrying after a delay, but must ultimately ensure that the appropriate `Response` is returned for each individual Test execution that encounters an unavailable external resource.
+   - A framework for Test execution may also maintain a list of external resources and check their availability at startup or on starting a job and take actions such as advising the user that such resources are currently unavailable and that certain tests will not currently complete (e.g. check your network connection).
 
-1. **If unique values were aggregated, deaggregate and associate results with all relevant records**
+1. **If unique values were aggregated, disaggregate and associate results with all relevant records**
+   - If unique values were aggregated follow tests with disaggregation, that is explode the distinct-values list into one row per value.
    - If the framework uses aggregation of distinct values for `Single Record` Tests, ensure that the `Response` for each distinct value is correctly associated with all records that contain that value to pass down a processing pipeline or to return in the final `Data Quality Report`.
 
 1. **Serialize and report results**
