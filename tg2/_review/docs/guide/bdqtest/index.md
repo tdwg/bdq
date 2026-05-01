@@ -214,7 +214,7 @@ This section defines the capitalized term "Test" as used in the BDQ standard and
 
 The scope of each BDQ Test is largely provided by the properties of a `bdqffdq:Specification`. The [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) used in the specification are included in the `Information Elements` (`bdqffdq:InformationElement`). The specification also includes references to external authorities (external to the Test specification, and usually also external to the Darwin Core standard, Wieczorek et al. 2012) that are required to implement the Test, for example, references to an ISO standard or a GBIF maintained controlled vocabulary. Such authoritative references are listed under `sourceAuthority` (`bdqval:sourceAuthority`) with a link to the authority and optionally, a link to a specific online resource required for the implementation of the Test.
 
-Each BDQ Test is defined to operate on a `SingleRecord` or a `MultiRecord`. The Framework allows `MultiRecord` Tests to take data as input, for example to identify outliers within a dataset, or for `MultiRecord` Tests that take the output of `SingleRecord` Tests as their input to provide an assessment of quality across the dataset.  No BDQ `MultiRecord` Tests have been defined to take data as input (but such could be defined).  No BDQ `SingleRecord` Tests have been defined to use data in other records within a dataset to evaluate the quality of data in a `Single Record` (but such could be defined).  The only `Multi Record` Tests included in BDQ accumulate the outputs of other Tests.
+Each BDQ Test is defined to operate on a `Single Record` or a `Multi Record`. The Framework allows `Multi Record` Tests to take data as input, for example to identify outliers within a dataset, or for `Multi Record` Tests that take the output of `Single Record` Tests as their input to provide an assessment of quality across the dataset.  No BDQ `Multi Record` Tests have been defined to take data as input (but such could be defined).  No BDQ `Single Record` Tests have been defined to use data in other records within a dataset to evaluate the quality of data in a `Single Record` (but such could be defined).  The only `Multi Record` Tests included in BDQ accumulate the outputs of other Tests.
 
 #### 2.1.1 Conceptual map: how BDQ uses the term "Test" (non-normative)
 
@@ -393,7 +393,7 @@ A `Single Record` (`bdqffdq:SingleRecord`) BDQ Test:
 * MAY be applied to a single instance of a Darwin Core `dwc:Occurrence`, `dwc:Taxon`, `dwc:Event`, or other class, 
 * MAY extend across one to many relations from that class instance to instances of classes of other types in a structured representation of Darwin Core data (Wieczorek et al. 2012).
   * For example, input Darwin Core data in RDF should be presented to a BDQ `Single Record` Test one `dwc:Occurrence` at a time, although the `dwc:Occurrence` could be linked to multiple other instances of other classes such as `dwc:Identifications`.
-  * Handling of multiplicity of related rows in a `SingleRecord` is a responsibility of Test execution frameworks.
+  * Handling of multiplicity of related rows in a `Single Record` is a responsibility of Test execution frameworks.
   * See the disscussion of `Single Record` in relation to the Darwin Core Data Package (Dawin Core Maintinance Group, 2026) format below.
 * SHOULD NOT take multiple rows from a flat file (e.g. Simple Darwin Core) as input. 
 * SHOULD NOT take multiple objects of the same core type in structured Darwin Core as input 
@@ -563,9 +563,9 @@ The `bdqffdq:` vocabulary enables the wrapping of the results of BDQ Tests withi
 Neither the Test descriptions nor the framework impose constraints on environments or workflows for execution. 
 
 One possible workflow is to run:
-1. A pre-amendment phase where all `Validations` plus all `MultiRecord` `Measures` are executed
+1. A pre-amendment phase where all `Validations` plus all `Multi Record` `Measures` are executed
 1. then an amendment phase where all `Amendments` are executed
-1. then a post-amendment phase where all `Validations` plus all `MultiRecord` `Measures` are executed again, this time on a modified copy of the input data to which all proposed changes to the data from `Amendments` have been applied.
+1. then a post-amendment phase where all `Validations` plus all `Multi Record` `Measures` are executed again, this time on a modified copy of the input data to which all proposed changes to the data from `Amendments` have been applied.
 
 A single validation step, with `Measures` evaluating the results of `Validations` performed on the raw input data could look like the diagram below.
 
@@ -654,9 +654,9 @@ Formally, the description of a Test is complex.  Informally, there are a few cen
 * Second, a Test operates on specific inputs, specific elements of data, these are the `Information Elements`.  
 * Third, a Test has some specific purpose, described in simple language.  This is the Test Description.
 * Fourth, this plain language description of the Test must be expanded into specific language that allows an implementer to understand exactly what code implementing a Test should do, and what outputs it should provide for different possible input values, this is the `Expected Response`.   
-* Fifth, it is important to be clear whether a Test evaluates a `SingleRecord` or operates over multiple records in a data set (a `MultiRecord` Test).
+* Fifth, it is important to be clear whether a Test evaluates a `Single Record` or operates over multiple records in a data set (a `Multi Record` Test).
 
-Tests may be expected to form related clusters, for example, a `Validation` that assesses whether the value of `ac:variantLiteral` in a `SingleRecord` is found in as a controlled value string in the Audiovisual Core variant: List of Terms, combined with an `Amendment` that proposes changes to values of `ac:variantLiteral` to conform them to that controlled vocabulary, combined with a `MultiRecord` `Measure` that counts the number of `COMPLIANT` values for the `Validation` evaluated for each record in a data set.  Under `QualityControl`, this `Measure` can evaluate how much the data set could be improved for some purpose if all the proposed changes from the `Amendment` were accepted (by running the Tests in pre-amendment, amendment, and post-amendment phases) 
+Tests may be expected to form related clusters, for example, a `Validation` that assesses whether the value of `ac:variantLiteral` in a `Single Record` is found in as a controlled value string in the Audiovisual Core variant: List of Terms, combined with an `Amendment` that proposes changes to values of `ac:variantLiteral` to conform them to that controlled vocabulary, combined with a `Multi Record` `Measure` that counts the number of `COMPLIANT` values for the `Validation` evaluated for each record in a data set.  Under `QualityControl`, this `Measure` can evaluate how much the data set could be improved for some purpose if all the proposed changes from the `Amendment` were accepted (by running the Tests in pre-amendment, amendment, and post-amendment phases) 
 
 See the [Tutorial](../../tutorial/index.md) for a worked out example of the definition of a new Test.
 

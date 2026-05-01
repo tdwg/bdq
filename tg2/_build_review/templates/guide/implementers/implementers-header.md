@@ -466,7 +466,7 @@ Implementers are encouraged to produce the means to test data quality in bulk in
 
 A response MAY include a `Response.qualifier` (in RDF, a `bdqffdq:hasResponseQualifier` object property on an instance of a `bdqffdq:Response`). This is intended as a place to include structured `Responses` concerning uncertainty in a response. This is also intended as a place to include structured `Responses` about the details of `Amendment` Tests (e.g., TRANSPOSED MAY be attached to a `Response.qualifier` for some `Amendment` Tests).
 
-`MultiRecord` (`bdqffdq:MultiRecord`) `Measures` that count results from `SingleRecord` Tests (that is, that return counts where the input `Information Element` consists of `Response` values from Tests on `Single Records` (`bdqffdq:SingleRecord`)) MUST report only a single count as the `Response.result`.  Such `MultiRecord` `Measures` MAY provide a `Response.qualifier` containing structured data describing additional information such as the total number of `Single Records` evaluated (to calculate percentages), the number of each value of `Response.status` encountered, and the number of each `Response.result` encountered. `Measures` under the Framework are only allowed to return "COMPLETE", "NOT_COMPLETE", or a single number. If it is desirable for any `Measure` to return more than a single number, `Response.qualifier` is the extension point to use. 
+`Multi Record` (`bdqffdq:MultiRecord`) `Measures` that count results from `Single Record` Tests (that is, that return counts where the input `Information Element` consists of `Response` values from Tests on `Single Records` (`bdqffdq:SingleRecord`)) MUST report only a single count as the `Response.result`.  Such `Multi Record` `Measures` MAY provide a `Response.qualifier` containing structured data describing additional information such as the total number of `Single Records` evaluated (to calculate percentages), the number of each value of `Response.status` encountered, and the number of each `Response.result` encountered. `Measures` under the Framework are only allowed to return "COMPLETE", "NOT_COMPLETE", or a single number. If it is desirable for any `Measure` to return more than a single number, `Response.qualifier` is the extension point to use. 
 
 ## 5 Responses from Tests (normative)
 
@@ -612,13 +612,13 @@ A good practice for executing the BDQ Tests is to follow a sequence that begins 
 
 ##### 6.4.1.2 Phases and Quality Assurance (normative)
 
-It is RECOMMENDED, for Quality Assurance with the current suite of BDQ Tests, to run all pertinent (to a `Use Case`) `bdqffdq:SingleRecord` `Validation` and `Measure` Tests, then run all pertinent `MultiRecord` `Measures` that return "COMPLETE" or "NOT_COMPLETE"". These `Measures` MAY be used as filters. Exclude records from the dataset until all `MultiRecord` `Measure` Tests return "COMPLETE". This, under the mathematical formulation of the Framework, is the assertion that the data are fit for the purpose of the selected `Use Case`. This process MAY be performed in a single `Validation` and `Measure` phase without `Amendments`. This process MAY be performed on a post-amendment phase with all or selected proposed changes from `Amendments` accepted into the data stream. Acceptance of proposals for changes to the data in a processing stream SHOULD NOT be done blindly, and SHOULD involve thoughtful consideration of the proposed changes.
+It is RECOMMENDED, for Quality Assurance with the current suite of BDQ Tests, to run all pertinent (to a `Use Case`) `bdqffdq:SingleRecord` `Validation` and `Measure` Tests, then run all pertinent `Multi Record` `Measures` that return "COMPLETE" or "NOT_COMPLETE"". These `Measures` MAY be used as filters. Exclude records from the dataset until all `Multi Record` `Measure` Tests return "COMPLETE". This, under the mathematical formulation of the Framework, is the assertion that the data are fit for the purpose of the selected `Use Case`. This process MAY be performed in a single `Validation` and `Measure` phase without `Amendments`. This process MAY be performed on a post-amendment phase with all or selected proposed changes from `Amendments` accepted into the data stream. Acceptance of proposals for changes to the data in a processing stream SHOULD NOT be done blindly, and SHOULD involve thoughtful consideration of the proposed changes.
 
 ##### 6.4.1.3 Phases and Quality Control (normative)
 
 Under Quality Control, `bdqffdq:MultiRecord` `Measure` Tests that return numeric values MAY be used to assess the prevalence of quality issues in the data with respect to the selected `bdqffdq:UseCase`. This MAY be done in a pre-amendment phase and again in a post-amendment phase with all proposed changes applied to the data stream to evaluate how much accepting proposed `Amendments` would improve the data. Acceptance of proposals for changes to the data in a processing stream SHOULD NOT be done blindly, and SHOULD involve thoughtful consideration of the proposed changes.  See: [5.1.1 Amendment Test Responses (normative)](#511-amendment-test-responses-normative) for further normative guidance on the use of `Amendment` Test `Responses`.
 
-Numeric values from `MultiRecord` `Measure` Tests under Quality Control MAY be used to identify areas to target effort to improve data quality in a database of record for one or more `Use Cases`.
+Numeric values from `Multi Record` `Measure` Tests under Quality Control MAY be used to identify areas to target effort to improve data quality in a database of record for one or more `Use Cases`.
 
 #### 6.4.2 Test Dependencies (normative)
 
@@ -1118,7 +1118,7 @@ A Test execution framework (or “runner”) typically needs to accomplish the f
      - Run all `Amendment` Tests in an amendment phase.
      - Apply all proposed changes from the `Amendment` Tests to a copy of the input data.
      - Apply all `Validation` Tests, all `Issue` Tests and all `Measure` Tests in a post-amendment phase using the amended copy of the data as input.
-     - Compare the results of `MultiRecord` `Measures` from the pre-and post-amendment phases giving a measure of how much accepting the proposed changes from `Amendments` would improve the quality of the data for the `Use Case` at hand.
+     - Compare the results of `Multi Record` `Measures` from the pre-and post-amendment phases giving a measure of how much accepting the proposed changes from `Amendments` would improve the quality of the data for the `Use Case` at hand.
      - Produce a `Data Quality Report` that includes both pre- and post-amendment results, and that retains the original (unamended) values for reference. 
 
 1. **Consider aggregating distinct input tuples for `Single Record` Tests**

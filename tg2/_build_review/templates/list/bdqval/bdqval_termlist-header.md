@@ -67,7 +67,7 @@ The `bdqval:` vocabulary includes four groups of concepts used across the BDQ st
 
 - **Use Cases** (`bdqffdq:UseCase`) – formal representations of the purposes for which data might be evaluated using BDQ Tests.
 - **Test Parameters** (`bdqffdq:Parameter`) – concepts used to configure the behavior of Tests, including named parameters like `bdqval:sourceAuthority`.
-- **Information Elements** – used by `MultiRecord` `Measure` Tests to refer to aggregated or referenced values.
+- **Information Elements** – used by `Multi Record` `Measure` Tests to refer to aggregated or referenced values.
 - **Empty/NotEmpty Concepts** – `bdqval:Empty` and `bdqval:NotEmpty`, which provide shared semantics for Tests dealing with missing or present values.
 
 These terms ensure consistent representation and enable structured interpretation of Test configurations and outcomes.

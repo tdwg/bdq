@@ -372,8 +372,8 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdfs:label xml:lang="en">sourceAuthority</rdfs:label>
      <skos:prefLabel xml:lang="en">sourceAuthority</skos:prefLabel>
      <skos:note xml:lang="en"></skos:note>
-     <rdfs:comment xml:lang="en">An authority using the "bdq" namespace that provides a reference for values required for a Test evaluation. Where the Test is a bdqval:ParameterizedTest a bdqval:defaultSourceAuthority ("bdqval:sourceAuthority default = xxx") is specified.</rdfs:comment>
-     <skos:definition xml:lang="en">An authority using the "bdq" namespace that provides a reference for values required for a Test evaluation. Where the Test is a bdqval:ParameterizedTest a bdqval:defaultSourceAuthority ("bdqval:sourceAuthority default = xxx") is specified.</skos:definition>
+     <rdfs:comment xml:lang="en">An authority using the "bdqval" namespace that provides a reference for values required for a Test evaluation. Where the Test is a bdqval:ParameterizedTest a bdqval:defaultSourceAuthority ("bdqval:sourceAuthority default = xxx") is specified.</rdfs:comment>
+     <skos:definition xml:lang="en">An authority using the "bdqval" namespace that provides a reference for values required for a Test evaluation. Where the Test is a bdqval:ParameterizedTest a bdqval:defaultSourceAuthority ("bdqval:sourceAuthority default = xxx") is specified.</skos:definition>
      <rdf:value>sourceAuthority</rdf:value>
      <skos:inScheme rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
      <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Parameter"/>

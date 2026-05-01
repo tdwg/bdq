@@ -257,7 +257,7 @@ In a non-RDF structured-data context (JSON, database, CSV), where `bdqffdq:Respo
 
 Labels MAY be used purely for display.
 
-This section summarises representation choices. Full normative constraints on the response structure of `Responses` is found in [4.1 Structure of Response (normative)](../bdqtest/index.md#41-structure-of-response-normative) of the [BDQ Tests: Concepts and Use](../bdqtest/index.md) document.
+This section summarizes representation choices. Full normative constraints on the response structure of `Responses` is found in [4.1 Structure of Response (normative)](../bdqtest/index.md#41-structure-of-response-normative) of the [BDQ Tests: Concepts and Use](../bdqtest/index.md) document.
 
 #### 2.4.1.1 Table of Representations of Response Properties (non-normative)
 
@@ -276,7 +276,7 @@ Summary of the expected properties of a `Response` object, and the corresponding
 
 A `bdqffdq:hasResponseStatus` is always categorical, a `bdqffdq:hasResponseComment` is always literal, a `Response.result` may be either a categorical `bdqffdq:hasResponseResult` or a literal `bdqffdq:hasResponseResultValue`.  
 
-It is precicely because of this potential for results to be represented as RDF or as non-RDF structured data that the `Named Individuals` such as `bdqffdq:COMPLIANT` used in results are given labels in all upper case with underscores to facilitate their use and recognition as string constant values in non-RDF contexts.
+It is precisely because of this potential for results to be represented as RDF or as non-RDF structured data that the `Named Individuals` such as `bdqffdq:COMPLIANT` used in results are given labels in all upper case with underscores to facilitate their use and recognition as string constant values in non-RDF contexts.
 
 ### 2.5 Organization of the bdqffdq: classes  (non-normative)
 
@@ -526,11 +526,11 @@ Each instance of `bdqffdq:AbstractInformationElement` SHOULD have `rdfs:label` a
 
 Each instance of `bdqffdq:Measure` with a `bdqffdq:hasResourceType` of `bdqffdq:MultiRecord` that aggregates the `Responses` produced by one or more other Tests (e.g., to return `COMPLETE`/`NOT_COMPLETE` for `Quality Assurance`, or to return a numeric count or other metric for `Quality Control`) SHOULD have a `bdqffdq:hasActedUponInformationElement` relationship to an instance of `bdqffdq:ActedUpon` that represents the aggregated report inputs to that `Measure`.
 
-When a `MultiRecord` `Measure` acts on aggregated `Responses` from other Tests, the associated `bdqffdq:ActedUpon` instance SHOULD include `bdqffdq:composedOf` with `bdqval:AggregatedTestResponseOutcomes` to indicate that the acted-upon data are aggregated `Response` outcomes in a `Data Quality Report`, rather than raw source-data terms.
+When a `Multi Record` `Measure` acts on aggregated `Responses` from other Tests, the associated `bdqffdq:ActedUpon` instance SHOULD include `bdqffdq:composedOf` with `bdqval:AggregatedTestResponseOutcomes` to indicate that the acted-upon data are aggregated `Response` outcomes in a `Data Quality Report`, rather than raw source-data terms.
 
-In this usage pattern, the associated `bdqffdq:ActedUpon` instance SHOULD include one to many `bdqffdq:aggregatesResponsesFrom` object properties linking it to the instance(s) of `bdqffdq:DataQualityNeed` whose `Responses` are aggregated as inputs to that `MultiRecord` `Measure`.
+In this usage pattern, the associated `bdqffdq:ActedUpon` instance SHOULD include one to many `bdqffdq:aggregatesResponsesFrom` object properties linking it to the instance(s) of `bdqffdq:DataQualityNeed` whose `Responses` are aggregated as inputs to that `Multi Record` `Measure`.
 
-The `bdqffdq:aggregatesResponsesFrom` property is intended to be used in the context of `MultiRecord` `Measures` that aggregate `Responses`; however, consistent with the open world design of the `bdqffdq:` ontology and the limited use of global axioms, the ontology does not constrain the subject of `bdqffdq:aggregatesResponsesFrom` to be only a `bdqffdq:Measure` or only an `bdqffdq:ActedUpon`, and this document provides the normative pattern for its intended use.
+The `bdqffdq:aggregatesResponsesFrom` property is intended to be used in the context of `Multi Record` `Measures` that aggregate `Responses`; however, consistent with the open world design of the `bdqffdq:` ontology and the limited use of global axioms, the ontology does not constrain the subject of `bdqffdq:aggregatesResponsesFrom` to be only a `bdqffdq:Measure` or only an `bdqffdq:ActedUpon`, and this document provides the normative pattern for its intended use.
 
 For human readability, when an `ActedUpon` instance uses `bdqffdq:aggregatesResponsesFrom`, the `rdfs:label` and `skos:prefLabel` of that `bdqffdq:ActedUpon` instance MAY include the `rdfs:label` of the `bdqffdq:DataQualityNeed` instance identified by `bdqffdq:aggregatesResponsesFrom` (e.g., `VALIDATION_COUNTRY_FOUND`) to make explicit which Test’s aggregated `Responses` are being acted upon.
 

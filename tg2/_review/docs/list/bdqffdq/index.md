@@ -177,7 +177,7 @@ Draft Standard for Review
 
 ### 1.1 Purpose (non-normative)
 
-The purpose of this document is to provide the full term list for the `bdqqffdq:` vocabulary, which defines the elements used in the Biodiversity Data Quality Fitness For Use Framework (Ontology). The vocabulary includes classes, object properties, data properties, and named individuals that collectively support the semantic description of BDQ Tests and related quality constructs.
+The purpose of this document is to provide the full term list for the `bdqffdq:` vocabulary, which defines the elements used in the Biodiversity Data Quality Fitness For Use Framework (Ontology). The vocabulary includes classes, object properties, data properties, and named individuals that collectively support the semantic description of BDQ Tests and related quality constructs.
 
 ### 1.2 Audience (non-normative)
 

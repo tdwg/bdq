@@ -273,15 +273,15 @@ This highlights the key issue: a `Use Case` can state fitness requirements that 
 
 We also observed that:
 
-(2) Most of the included `SingleRecord` Tests check for validity of a value, when corresponding Tests exist to check for the presence of a value in the same term. 
+(2) Most of the included `Single Record` Tests check for validity of a value, when corresponding Tests exist to check for the presence of a value in the same term. 
 
-We included, for example, VALIDATION_DECIMALLATITUDE_INRANGE and VALIDATION_DECIMALLONGITUDE_INRANGE, but not the corresponding NOTEMPTY tests VALIDATION_DECIMALLATITUDE_NOTEMPTY and VALIDATION_DECIMALLONGITUDE_NOTEMPTY.  This is entirely appropriate for `Quality Assurance` where we can set `MultiRecord` `Measures` that return COMPLETE if the STANDARD and INRANGE `Validations` have a Response.result of COMPLIANT.   If, however, we wish to perform `Quality Control` and improve the fitness of a candiate data set, it will be very helpful to isolate and count which records have empty values for these critical terms, and which have out of range values (and we would include `MultiRecord` `Measures` that count outcomes).  The kind and scope of data cleanup work that may be needed will differ depending on the distribution of these distinct kinds of problem in the data set.
+We included, for example, VALIDATION_DECIMALLATITUDE_INRANGE and VALIDATION_DECIMALLONGITUDE_INRANGE, but not the corresponding NOTEMPTY tests VALIDATION_DECIMALLATITUDE_NOTEMPTY and VALIDATION_DECIMALLONGITUDE_NOTEMPTY.  This is entirely appropriate for `Quality Assurance` where we can set `Multi Record` `Measures` that return COMPLETE if the STANDARD and INRANGE `Validations` have a Response.result of COMPLIANT.   If, however, we wish to perform `Quality Control` and improve the fitness of a candiate data set, it will be very helpful to isolate and count which records have empty values for these critical terms, and which have out of range values (and we would include `Multi Record` `Measures` that count outcomes).  The kind and scope of data cleanup work that may be needed will differ depending on the distribution of these distinct kinds of problem in the data set.
 
 (3) Selection of a threshold value for `dwc:coordinateUncertaintyInMeters` in relation to an analysis grid is fraught with complexities for the unwary.  See: Zermoglio et al. (2022) sections on [Coordinates and Grid Systems)[https://docs.gbif.org/georeferencing-quick-reference-guide/1.0/en/#coordinates-grid-systems) and [Table of feature types and default geographic radials](https://docs.gbif.org/georeferencing-quick-reference-guide/1.0/en/#table-default-geographic-radial) and [geographic radial](https://docs.gbif.org/georeferencing-quick-reference-guide/1.0/en/#geographic-radial).
 
 This will be moot for this `Use Case` if we refine the `Use Case` to not include a specific threshold value for `dwc:coordinateUncertaintyInMeters`.
 
-(4) We have not included any `MultiRecord` `Measures` in this `Use Case`, so we don't have any formal support for either `Quality Control` or `Quality Assurance`. 
+(4) We have not included any `Multi Record` `Measures` in this `Use Case`, so we don't have any formal support for either `Quality Control` or `Quality Assurance`. 
 
 The initial focus is on `Quality Assurance`, so we would expect to add `Multi Record` `Measures` such as MULTIRECORD_MEASURE_QA_DECIMALLATITUDE_INRANGE.  For this filtering, we only need to check that the value of `dwc:decimalLatitude` is in range, i.e., that the VALIDATION_DECIMALLATITUDE_INRANGE Test returns COMPLIANT.
 
@@ -317,7 +317,7 @@ Included SingleRecord Tests:
 * VALIDATION_YEAR_NOTEMPTY, VALIDATION_YEAR_INRANGE, AMENDMENT_EVENT_FROM_EVENTDATE
 * VALIDATION_LICENSE_NOTEMPTY, VALIDATION_LICENSE_STANDARD, AMENDMENT_LICENSE_STANDARDIZED
 
-Included `MultiRecord` `Measure` Tests for `Quality Control`:
+Included `Multi Record` `Measure` Tests for `Quality Control`:
 
 * MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_NOTEMPTY, MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_FOUND
 * MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_NOTEMPTY, MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_STANDARD 
@@ -329,7 +329,7 @@ Included `MultiRecord` `Measure` Tests for `Quality Control`:
 * MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_NOTEMPTY, MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_INRANGE
 * MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_NOTEMPTY, MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_STANDARD
 
-Included `MultiRecord` `Measure` Tests for `Quality Assurance`:
+Included `Multi Record` `Measure` Tests for `Quality Assurance`:
 
 * MULTIRECORD_MEASURE_QA_SCIENTIFICNAME_FOUND
 * MULTIRECORD_MEASURE_QA_BASISOFRECORD_STANDARD
@@ -349,7 +349,7 @@ The differences between the initial and revised versions of the `Use Case` defin
 
 > A bdqffdq:UseCase for **improving the quality of, and** selecting dwc:Occurrence records suitable for predicting the spatial distribution of a limited number of Eucalypt tree species (Gill et al. 1985). This Use Case filters for occurrence records that meet criteria for a known species at a known location and date.  **Records can be further filtered to meet the requirements of a particular distribution modeling analysis.**  Filtered records ~~are~~ **can then be** combined with environmental data derived from occurrence locations to evaluate robust spatial distribution models, including Maxent (Phillips et al. 2006) and generalized linear and additive models (Guisan et al. 2002).  Models will be further assessed via systematic surveys in areas with high predicted occurrence and low record density. Project outputs are: (1) recommendations for robust species distribution modelling methods for tree species, (2) a suite of environmental variables for the selected species, and (3) improved “expert distribution” envelopes derived from modelling.
 
-As part of refining a `Use Case`, we have found it helpful to: (1) draft a `Use Case` definition, (2) list the Tests to be included, (3) query an RDF (Turtle) serialization of the `bdqtest"` vocabulary to extract the `Specification` text for those Tests, and then (4) use a generative AI tool to draft fitness requirements that are consistent with the included Test specifications.  Then go back and assess whether the desired set of tests for the `Use Case` are included, particularly examining which `MultiRecord` `Measures` are included, and then revising the `Use Case` definition and fitness requirements.  Obviously (sometimes in retrospect), this is an iterative process.
+As part of refining a `Use Case`, we have found it helpful to: (1) draft a `Use Case` definition, (2) list the Tests to be included, (3) query an RDF (Turtle) serialization of the `bdqtest"` vocabulary to extract the `Specification` text for those Tests, and then (4) use a generative AI tool to draft fitness requirements that are consistent with the included Test specifications.  Then go back and assess whether the desired set of tests for the `Use Case` are included, particularly examining which `Multi Record` `Measures` are included, and then revising the `Use Case` definition and fitness requirements.  Obviously (sometimes in retrospect), this is an iterative process.
 
 Code for querying the Turtle serialization [bdqtest.ttl](../../dist/bdqtest.ttl) of the bdqtest vocabulary for the `Specification` descriptions of each Test included in a `Use Case` is at: https://github.com/tdwg/bdq/blob/master/tg2/_build_review/tools/bdq_usecase_test_labels_Version4.py, and the SPARQL query for asking this question is in Section [2.4.2 Describing all the Tests in a Use Case](#242-describing-all-the-tests-in-a-use-case-non-normative) below.
 
@@ -1019,7 +1019,7 @@ GROUP BY ?dimension ?testType ?resourceType
 ORDER BY ?dimension ?testType ?resourceType
 ```
 
-gives the following distribution of Test Types by `Dimension`, with `MultiRecord` `Measures` split out:
+gives the following distribution of Test Types by `Dimension`, with `Multi Record` `Measures` split out:
 
 | Data Quality Dimension | Validation | Amendment | Issue | Measure | MultiRecord Measure |
 |:----------------------:|:----------:|:---------:|:-----:|:-------:|:-------------------:|
@@ -1229,7 +1229,7 @@ BDQ generally follows the conventions used in Darwin Core, viz-
   * In the text of the standard we may use `bdqffdq:composedOf` or `composedOf` to refer to a property term.
 * Some named individuals in `bdqffdq:` are nouns in UpperCamelCase and have a label that separates the words.
   * Example: `bdqffdq:MultiRecord` with `rdfs:label` "Multi Record".
-  * In the text of the standard we may use `bdqffdq:MultiRecord` or `MultiRecord` to refer to this named individual.
+  * In the text of the standard we may use `bdqffdq:MultiRecord` or `Multi Record` to refer to this named individual.
 * Values in the `bdqval:`, `bdqdim:`, `bdqcrit:`, and `bdqenh:` controlled vocabularies are in UpperCamelCase and have matching labels and controlled values.
   * Example: `bdqval:NotEmpty` with `rdfs:label` "NotEmpty".
   * Exception, `bdqval:` terms that are `bdqffdq:Parameters` are in lowerCamelCase and have matching labels.
@@ -1244,26 +1244,26 @@ However, all UPPER CASE is used for the names of Tests and for the identifiers a
 
 The labels of Tests follow a small number of patterns.
 
-The general pattern for `SingleRecord` Test labels is {TESTTYPE}_{INFORMATIONELEMENT}_{EVALUATION} where the first part indicates the type of Test, the second part indicates the term or terms that is the target of the Test, and the third part is a concise description of the action or evaluation performed by the Test. 
+The general pattern for `Single Record` Test labels is {TESTTYPE}_{INFORMATIONELEMENT}_{EVALUATION} where the first part indicates the type of Test, the second part indicates the term or terms that is the target of the Test, and the third part is a concise description of the action or evaluation performed by the Test. 
 * Example: [VALIDATION_DAY_STANDARD](../terms/bdqtest/index.md#VALIDATION_DAY_STANDARD) 
   * This is a `Validation` Test,
   * it targets the `Information Element` `dwc:day`,
   * and it evaluates whether the value of `dwc:day` is in standard form (that is an integer in the range 1 to 31 inclusive).  
-  * That this is a `SingleRecord` Test is implicit.  
+  * That this is a `Single Record` Test is implicit.  
 The words used for Evaluations and their definitions are listed in [Evaluations](#evaluations) below.  
 
 These strings are guidance for labels, not a formal normative vocabulary in BDQ.
 
-The labels of `MultiRecord` tests follow a similar pattern, but prefixed by MULTIRECORD_.  
+The labels of `Multi Record` tests follow a similar pattern, but prefixed by MULTIRECORD_.  
 
-The `MultiRecord` `Measures` follow a naming convention of:
+The `Multi Record` `Measures` follow a naming convention of:
 * MULTIRECORD_MEASURE_COUNT_COMPLIANT_{INFORMATIONELEMENT_ACTON} for those that take the outputs of validations as their input and return a count, that it is a validation is implicit.
   * Example: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_STANDARD, which counts the number of records that are COMPLIANT for the Test VALIDATION_DAY_STANDARD.
   * This would generalize as MULTIRECORD_MEASURE_COUNT_{THINGCOUNTED}_{TEST_LABEL}.
 * MULTIRECORD_MEASURE_QA_{CONDITION} for `Measures` that return COMPLETE/NOT_COMPLETE (and have a primary purpose for Quality Assurance.  
   * Example: MULTIRECORD_MEASURE_QA_BASISOFRECORD_STANDARD which returns COMPLETE if all records are COMPLIANT for the Test VALIDATION_BASISOFRECORD_STANDARD, and NOT_COMPLETE otherwise.
 
-All of the `MultiRecord` Tests initially defined in the BDQ Standard are `MultiRecord` `Measures`, though `MultiRecord` tests are not limited to `Measures` in the Framework.
+All of the `Multi Record` Tests initially defined in the BDQ Standard are `Multi Record` `Measures`, though `Multi Record` tests are not limited to `Measures` in the Framework.
 
 ### 3.13 Parts of Test Labels (non-normative)
 
@@ -1275,7 +1275,7 @@ For example the Test with the label "VALIDATION_COUNTRYCODE_STANDARD" validates 
 * The `Information Element`: `dwc:countryCode` -> COUNTRYCODE
 * The Evaluation: "STANDARD".
 
-For `Single Record` Tests, the `Single Record` is implied and type is one of `Validation`, `Issue`, `Measure` or `Amendment` (the Test types in `bdqffdq:`),  For `MultiRecord` Tests, MULTIRECORD is stated in the label, along with a marker for whether a `MultiRecord` `Measure` returns a numerical count (COUNT) or a COMPLETE/NOT_COMPLETE `Response.result` for Quality Assurance (QA) use.
+For `Single Record` Tests, the `Single Record` is implied and type is one of `Validation`, `Issue`, `Measure` or `Amendment` (the Test types in `bdqffdq:`),  For `Multi Record` Tests, MULTIRECORD is stated in the label, along with a marker for whether a `Multi Record` `Measure` returns a numerical count (COUNT) or a COMPLETE/NOT_COMPLETE `Response.result` for Quality Assurance (QA) use.
 
 The combination of `Information Element` and Evaluation was called the Term-Action in the GitHub issues used to develop the tests.  This combination was found useful for sorting and classifying Tests.
 
@@ -1295,7 +1295,7 @@ The tables below list the terms used for the Test `Types`, the Labels for multip
 | AMENDMENT      | A Test Type that proposes changes to `Information Elements` based on some data quality enhancement. See `bdqffdq:Amendment`. | [AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT](../terms/bdqtest/index.md#AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT) |
 | ISSUE  | A Test Type that flags a possible issue or problem with the data that may need examination by the user to determine if data have quality for their use. See `bdqffdq:Issue`.    | [ISSUE_COORDINATES_CENTEROFCOUNTRY](../terms/bdqtest/index.md#ISSUE_COORDINATES_CENTEROFCOUNTRY)   |
 | MEASURE        | A Test Type that expresses how the fitness of data for some use may be measured. See `bdqffdq:Measure`          | [MEASUREMENT_AMENDMENTS_PROPOSED](../list/bdqtest/index.md#bdqtest_03049fe5-a575-404f-b564-ae63f5a1cf8b)        |
-| MULTIRECORD_MEASURE_COUNT      | A Test Type of `Measure` that takes as input the outputs of other Tests (usually `Validations`) across a `MultiRecord`.  For example, count across MultiRecords of a VALIDATION Test that return a Response of COMPLIANT.  Provides metrics for `Quality Control`. | [MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_NOTEMPTY](../list/bdqtest/index.md#bdqtest_b60c8c58-0137-4b6a-97e9-57d8ca5cf248)     |
+| MULTIRECORD_MEASURE_COUNT      | A Test Type of `Measure` that takes as input the outputs of other Tests (usually `Validations`) across a `Multi Record`.  For example, count across MultiRecords of a VALIDATION Test that return a Response of COMPLIANT.  Provides metrics for `Quality Control`. | [MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_NOTEMPTY](../list/bdqtest/index.md#bdqtest_b60c8c58-0137-4b6a-97e9-57d8ca5cf248)     |
 | MULTIRECORD_MEASURE_QA | Measurement over MultiRecords of a VALIDATION Test where every record complies with Quality Assurance requirements by being COMPLIANT         | [MULTIRECORD_MEASURE_QA_BASISOFRECORD_NOTEMPTY](../list/bdqtest/index.md#bdqtest_c8c61535-ab1a-4ec6-b4e9-f5f02541d7d8)  |
 | VALIDATION     | A Test type that expresses how the fitness of data for some use may be measured. See `bdqffdq:Measure`      | [VALIDATION_BASISOFRECORD_NOTEMPTY](../list/bdqtest/index.md#bdqtest_ac2b7648-d5f9-48ca-9b07-8ad5879a2536)      |
 | <strong><a name="abstract-information-element-labels">Labels for multiple Information Elements</a></strong> ||| <!-- *************************************************************** -->
