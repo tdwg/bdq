@@ -46,7 +46,7 @@ Draft Standard for Review
   - [1.5 Namespace abbreviations (non-normative)](#15-namespace-abbreviations-non-normative)
 
 [2 Overview (non-normative)](#2-overview-non-normative)
-  - [2.1 Best Practices](#21-best-practices)
+  - [2.1 Best Practices (non-normative)](#21-best-practices-non-normative)
 
 [3 Defining a Use Case (non-normative)](#3-defining-a-use-case-non-normative)
   - [3.1 Define the Use Case and Fitness-for-Use Requirements (non-normative)](#31-define-the-use-case-and-fitness-for-use-requirements-non-normative)
@@ -69,7 +69,7 @@ Draft Standard for Review
   - [4.9 Generalize the Test? (non-normative)](#49-generalize-the-test-non-normative)
   - [4.10 List the properties of the Test (non-normative)](#410-list-the-properties-of-the-test-non-normative)
     - [4.10.1 Formal RDF Representation of the Test (non-normative)](#4101-formal-rdf-representation-of-the-test-non-normative)
-    - [4.10.2 Summary of the Test Definition](#4102-summary-of-the-test-definition)
+    - [4.10.2 Summary of the Test Definition (non-normative)](#4102-summary-of-the-test-definition-non-normative)
 
 [5 A Test to Fill another Gap (non-normative)](#5-a-test-to-fill-another-gap-non-normative)
 
@@ -86,12 +86,12 @@ Draft Standard for Review
     - [6.7.3  Revisiting the Test Specification (non-normative)](#673--revisiting-the-test-specification-non-normative)
     - [6.7.4 Clarifying Related Concepts (non-normative)](#674-clarifying-related-concepts-non-normative)
   - [6.8 Notes (non-normative)](#68-notes-non-normative)
-    - [6.8.1 Example Complex Implementation Notes](#681-example-complex-implementation-notes)
+    - [6.8.1 Example Complex Implementation Notes (non-normative)](#681-example-complex-implementation-notes-non-normative)
   - [6.9 List the properties of the Test (non-normative)](#69-list-the-properties-of-the-test-non-normative)
-    - [6.9.1 Summary of the Test Definition](#691-summary-of-the-test-definition)
-    - [6.9.2 Iterate](#692-iterate)
+    - [6.9.1 Summary of the Test Definition (non-normative)](#691-summary-of-the-test-definition-non-normative)
+    - [6.9.2 Iterate (non-normative)](#692-iterate-non-normative)
 
-[7 Implementation, Conformance Testing, and Community Feedback (The "real-world")](#7-implementation-conformance-testing-and-community-feedback-the-real-world)
+[7 Implementation, Conformance Testing, and Community Feedback (The "real-world") (non-normative)](#7-implementation-conformance-testing-and-community-feedback-the-real-world-non-normative)
   - [7.1 Implementation (non-normative)](#71-implementation-non-normative)
   - [7.2 Conformance Testing Data and exposing Assumptions (non-normative)](#72-conformance-testing-data-and-exposing-assumptions-non-normative)
     - [7.2.1 Unit Tests (non-normative)](#721-unit-tests-non-normative)
@@ -105,23 +105,23 @@ Draft Standard for Review
 [8 Use an implementation for Quality Control (non-normative)](#8-use-an-implementation-for-quality-control-non-normative)
   - [8.1 MultiRecord Measures for Quality Control (non-normative)](#81-multirecord-measures-for-quality-control-non-normative)
     - [8.1.1 What a MultiRecord Measure takes as input (non-normative)](#811-what-a-multirecord-measure-takes-as-input-non-normative)
-    - [8.1.2 Two common patterns of MultiRecord Measures](#812-two-common-patterns-of-multirecord-measures)
-    - [8.1.3 Interpreting MultiRecord measures under Quality Control](#813-interpreting-multirecord-measures-under-quality-control)
-    - [8.1.3.1 Contrast with Quality Assurance.](#8131-contrast-with-quality-assurance)
-    - [8.1.4 A worked example (building on VALIDATION_FOOTPRINTWKT_NOTEMPTY)](#814-a-worked-example-building-on-validation_footprintwkt_notempty)
-    - [8.1.5 Practical note: summary values vs. details](#815-practical-note-summary-values-vs-details)
-    - [8.1.6 Example Quality Control Measures for the Validated Distribution Authority Use Case](#816-example-quality-control-measures-for-the-validated-distribution-authority-use-case)
+    - [8.1.2 Two common patterns of MultiRecord Measures (non-normative)](#812-two-common-patterns-of-multirecord-measures-non-normative)
+    - [8.1.3 Interpreting MultiRecord measures under Quality Control (non-normative)](#813-interpreting-multirecord-measures-under-quality-control-non-normative)
+    - [8.1.3.1 Contrast with Quality Assurance (non-normative)](#8131-contrast-with-quality-assurance-non-normative)
+    - [8.1.4 A worked example (building on VALIDATION_FOOTPRINTWKT_NOTEMPTY) (non-normative)](#814-a-worked-example-building-on-validation_footprintwkt_notempty-non-normative)
+    - [8.1.5 Practical note: summary values vs. details (non-normative)](#815-practical-note-summary-values-vs-details-non-normative)
+    - [8.1.6 Example Quality Control Measures for the Validated Distribution Authority Use Case (non-normative)](#816-example-quality-control-measures-for-the-validated-distribution-authority-use-case-non-normative)
   - [8.2 Quality Control Workflow (non-normative)](#82-quality-control-workflow-non-normative)
-    - [8.2.1 Start with Patterns, Not Individual Records](#821-start-with-patterns-not-individual-records)
-    - [8.2.2 Look for Point Causes and Systemic Errors](#822-look-for-point-causes-and-systemic-errors)
-    - [8.2.3 Focus on Results](#823-focus-on-results)
-    - [8.2.4 Prioritize Work for Greatest Impact](#824-prioritize-work-for-greatest-impact)
-    - [8.2.5 Close the loop: re-run Tests to confirm improvements](#825-close-the-loop-re-run-tests-to-confirm-improvements)
-    - [8.2.6 Example Quality Control Workflow Validated Distribution Authority Use Case](#826-example-quality-control-workflow-validated-distribution-authority-use-case)
+    - [8.2.1 Start with Patterns, Not Individual Records (non-normative)](#821-start-with-patterns-not-individual-records-non-normative)
+    - [8.2.2 Look for Point Causes and Systemic Errors (non-normative)](#822-look-for-point-causes-and-systemic-errors-non-normative)
+    - [8.2.3 Focus on Results (non-normative)](#823-focus-on-results-non-normative)
+    - [8.2.4 Prioritize Work for Greatest Impact (non-normative)](#824-prioritize-work-for-greatest-impact-non-normative)
+    - [8.2.5 Close the loop: re-run Tests to confirm improvements (non-normative)](#825-close-the-loop-re-run-tests-to-confirm-improvements-non-normative)
+    - [8.2.6 Example Quality Control Workflow Validated Distribution Authority Use Case (non-normative)](#826-example-quality-control-workflow-validated-distribution-authority-use-case-non-normative)
   - [8.3 Quality Assurance Workflow (non-normative)](#83-quality-assurance-workflow-non-normative)
 
-[9 Round-Up](#9-round-up)
-  - [9.1 Summary of the BDQ Philosophy](#91-summary-of-the-bdq-philosophy)
+[9 Round-Up (non-normative)](#9-round-up-non-normative)
+  - [9.1 Summary of the BDQ Philosophy (non-normative)](#91-summary-of-the-bdq-philosophy-non-normative)
 
 [Glossary (non-normative)](#glossary-non-normative)
 
@@ -183,7 +183,7 @@ See also:
 - [BDQ Tests: An Operational Perspective](../guide/bdqtest/index.md#51-bdq-tests-an-operational-perspective-non-normative) in the bdqtest: term-list document.
 - [Framework for describing data quality](../guide/bdqffdq/index.md#2-framework-for-describing-data-quality-non-normative) in the bdqffdq: ontology guide.
 
-### 2.1 Best Practices
+### 2.1 Best Practices (non-normative)
 
 1. **Atomic Tests**: Make each Test evaluate one single simple aspect of data quality.
 1. **Start Simple**: Begin defining basic `Validation` Tests before considering more complex Tests and `Amendments`.
@@ -603,7 +603,7 @@ See also:
 * [Example RDF for a Test](../guide/bdqtest/index.md#6-example-rdf-description-of-a-test-non-normative) in the BDQ Tests: Concepts and Use document (VALIDATION_COUNTRYCODE_STANDARD in an RDF/XML serialization).
 * [Example RDF for a Test](../guide/bdqffdq/index.md#26-example-representation-of-a-bdq-test-non-normative) in the Fitness For Use Framework Ontology: Concepts and Use (VALIDATION_COUNTRY_FOUND in a Turtle serialization). 
 
-#### 4.10.2 Summary of the Test Definition
+#### 4.10.2 Summary of the Test Definition (non-normative)
 
 VALIDATION_FOOTPRINTWKT_NOTEMPTY is a `Validation` Test that takes `dwc:footprintWKT` as input, and asks a very simple question, "Is there a value in dwc:footprintWKT?", This question is spelled out very clearly for an implementer in the `Expected Response`.  The expected response is COMPLIANT if there is a value in `dwc:footprintWKT`, and NOT_COMPLIANT if there is not.  This is exactly the simple presence check we need for our `Use Case`.
 
@@ -843,7 +843,7 @@ But we might or might not want to allow for http:// as well as https:// and allo
 
 * **Notes** The expected format of an ORCID ID is ^https://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$, but we allow for protocol variants of http:// as well as https:// in the identifier and relax to the regex ^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$.  We expect the ORCID ID to be in resolvable form, not the bare identifier.  ORCID IDs are a subset of ISNI in the range 0000-0001-5000-0007 to 0000-0003-5000-0001, but this Test only evaluates the format, not the range.  The form ORCID:0000-0001-5000-0007 should be treated as NOT_COMPLIANT by this Test.
 
-#### 6.8.1 Example Complex Implementation Notes
+#### 6.8.1 Example Complex Implementation Notes (non-normative)
 
 Notes are present when some aspects of a Test may not be obvious to the casual user or implementer. In some cases, Notes are not required, but Notes can be very helpful as in the example of the BDQ Test [VALIDATION_COUNTRYCODE_STANDARD](../list/bdqtest/index.md#bdqtest_0493bcfb-652e-4d17-815b-b0cce0742fbe):
 
@@ -872,17 +872,17 @@ So, our set of Test descriptors (the values of various bdqffdq: properties attac
 * **Parameter** bdqval:sourceAuthority
 * **Notes** The expected format of an ORCID ID is ^https://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$, but we allow for protocol variants of http:// as well as https:// in the identifier and relax to the regex ^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$.  We expect the ORCID ID to be in resolvable form, not the bare identifier.  ORCID IDs are a subset of ISNI in the range 0000-0001-5000-0007 to 0000-0003-5000-0001, but this test only evaluates the format, not the range.  The form ORCID:0000-0001-5000-0007 should be treated as NOT_COMPLIANT by this test.
 
-#### 6.9.1 Summary of the Test Definition
+#### 6.9.1 Summary of the Test Definition (non-normative)
 
 VALIDATION_WASATTRIBUTEDTO_STANDARD is a `Validation` Test, that takes prov:wasAttributedTo as input, and asks the question "Does the value in prov:wasAttributedTo conform to the format of [a specified authority]?"  The expected response is COMPLIANT if there is a value in prov:wasAttributedTo and that value conforms to the expected format for an ORCID ID as defined by the default source authority; otherwise NOT_COMPLIANT.  If there is no value in prov:wasAttributedTo, then this Test cannot return a Response.result, and thus returns the Response.status INTERNAL_PREREQUISITES_NOT_MET.  This Test has a parameter for the source authority, allowing for different implementations to use different authorities for evaluating whether the value in prov:wasAttributedTo conforms to the expected format for different identifiers, while still retaining the same overall logic and purpose of the Test.
 
-#### 6.9.2 Iterate
+#### 6.9.2 Iterate (non-normative)
 
 Earlier we said _"Treat this `Use Case` definition (and everything else that follows from it) as a first draft."_
 
 This is a critical point in the process. We have now defined Tests that fill gaps in our `Use Case`, and we have defined these Tests in a way that is consistent with the principles of BDQ, and we have provided detailed specifications for these Tests.  However, we have not yet implemented these Tests, or thrown any real data at these Tests to see how they respond.  Thus, we should treat this as a first draft of the `Use Case` and Test definitions, and be prepared to iterate on these definitions based on implementation feedback and real-world data.
 
-## 7 Implementation, Conformance Testing, and Community Feedback (The "real-world")
+## 7 Implementation, Conformance Testing, and Community Feedback (The "real-world") (non-normative)
 
 *No Test is final until it is implemented and thrown at actual data to confirm it responds correctly.*
 
@@ -1184,7 +1184,7 @@ This separation on `Resource Type` (`SingleRecord` or `MultiRecord`) is importan
 
 See also [Framework Competency Questions](../supplement/index.md#24-framework-competency-questions-non-normative) in the Supplement for examples of sparql queries that select the set of `SingleRecord` `Validations` associated by `Policy` with a `Use Case`.
 
-#### 8.1.2 Two common patterns of MultiRecord Measures
+#### 8.1.2 Two common patterns of MultiRecord Measures (non-normative)
 
 BDQ includes (and encourages) two practical patterns of `MultiRecord` `Measures`:
 
@@ -1202,7 +1202,7 @@ These return `COMPLETE` if the dataset meets a dataset-level requirement derived
 
 While these measures are central to formal `Quality Assurance` filtering, they can also support `Quality Control` by providing a clear “done/not done” indicator for a dataset with respect to a selected `Use Case` and its included Tests.
 
-#### 8.1.3 Interpreting MultiRecord measures under Quality Control
+#### 8.1.3 Interpreting MultiRecord measures under Quality Control (non-normative)
 
 A key idea in `Quality Control` is that dataset-level metrics should be interpreted in the context of the `Use Case`:
 
@@ -1214,13 +1214,13 @@ Because `MultiRecord` `Measures` return only a single value, they are often pair
 
 See also: [Phases: Pre-Amendment, Amendment, Post-Amendment](../guide/implementers/index.md#641-phases-pre-amendment-amendment-post-amendment-normative) in the implementers guide for a discussion of "pre-amendment" and "post-amendment" phases in a `Quality Control` workflow.
 
-#### 8.1.3.1 Contrast with Quality Assurance.
+#### 8.1.3.1 Contrast with Quality Assurance (non-normative)
 
 In contrast, in `Quality Assurance`, the focus is on filtering records based on `SingleRecord` Test outcomes.  The mechanism for this in the Fitness For Use Framework is to define a `MultiRecord` `Measure` that returns `COMPLETE` if the dataset meets a dataset-level requirement derived from `SingleRecord` Test outcomes, and `NOT_COMPLETE` otherwise, and if `NOT_COMPLETE`.  This `MultiRecord` `Measure` can be used as a completeness condition.  A `Quality Assurance` workflow may filter records until the remaining dataset satisfies that condition (the `Measure` returns `COMPLETE`).  When all the `MultiRecord` `Measures` of this sort for a `Use Case` (as specified by `Policy`) are `COMPLETE`, the (filtered) dataset is fit for use with respect to the selected `Use Case`.  Alternately, remediation could be applied (as in applying `Amendments` to fix problems identified by `Validations`) and filtering such that the `MultiRecord` `Measures` return `COMPLETE`, at which point the dataset is fit for use with respect to the selected `Use Case`.  BDQ does not specify a workflow, it fundamentally supports the representation of completeness conditions via `MultiRecord` `Measures`, and it is up to implementers to decide how to use those `Measures` in a workflow, whether for `Quality Control` or `Quality Assurance`.  BDQ defines how to represent `Quality Assurance` conditions and outcomes. A filtering or remediation strategy is outside the scope of BDQ and would be up to an implementation.
 
 A related pattern occurs at the `SingleRecord` level: when fitness depends on a user-defined analytical threshold rather than a single universal rule, a `SingleRecord` `Measure` may return a numeric metric that consumers interpret relative to their `Use Case`. For example, [MEASURE_EVENTDATE_DURATIONINSECONDS](../terms/bdqtest/index.md#MEASURE_EVENTDATE_DURATIONINSECONDS) returns the duration (in seconds) of the time interval represented by `dwc:eventDate`; consumers can then apply a threshold (e.g., “duration ≤ 86401 seconds” for day-level precision) to decide whether an individual `SingleRecord` has sufficient temporal precision for their `Use Case`.
 
-#### 8.1.4 A worked example (building on VALIDATION_FOOTPRINTWKT_NOTEMPTY)
+#### 8.1.4 A worked example (building on VALIDATION_FOOTPRINTWKT_NOTEMPTY) (non-normative)
 
 Suppose we run the `Validation` Test `VALIDATION_FOOTPRINTWKT_NOTEMPTY` on a dataset (`MultiRecord`) of 10,000 records.
 
@@ -1237,7 +1237,7 @@ A `MultiRecord` `Measure` that counts records where `Response.status=EXTERNAL_PR
 
 **`Use Case` and `Policy` design note**: In practice, the utility of counting  INTERNAL_PREREQUISITES_NOT_MET outcomes depends on how your specification (`Expected Response`) clauses are written across a suite of Tests.  Suites that include explicit prerequisite checks (e.g., “INTERNAL_PREREQUISITES_NOT_MET if dwc:month is bdqval:Empty”) will surface more of these statuses, while suites that instead express missingness and non-interpretability as direct NOT_COMPLIANT outcomes in focused Validation Tests (e.g., separate ...\_NOTEMPTY and ...\_STANDARD Tests) will enable clearly identifying those cases in more actionable compliance/non-compliance counts.  Again, iterate in `Use Case` and Test design.
 
-#### 8.1.5 Practical note: summary values vs. details
+#### 8.1.5 Practical note: summary values vs. details (non-normative)
 
 `MultiRecord` `Measures` are intentionally constrained to produce a single value in `Response.result`. If you need more detail than one number (for example, mean and standard deviation), implementations may place additional structured detail in `Response.qualifier` (as an extension point), while keeping `Response.result` to a single number as required for the BDQ `Measure` outputs, but your preference should be to define additional `MultiRecord` `Measures` if you need multiple summary values, rather than overloading a single `Measure`, such as one `Measure` that counts Response.status `INTERNAL_PREREQUISITES_NOT_MET` and another that counts Response.result `NOT_COMPLIANT` outcomes.  Separating these into separate `Measures` keeps each `Measure` focused and easier to interpret and allows for more flexible reporting and visualization of the results to answer particular `Quality Control` questions.
 
@@ -1249,7 +1249,7 @@ In other words for a `Measure`:
 
 This pattern supports interoperability while still enabling rich `Quality Control` reporting in practical systems.
 
-#### 8.1.6 Example Quality Control Measures for the Validated Distribution Authority Use Case
+#### 8.1.6 Example Quality Control Measures for the Validated Distribution Authority Use Case (non-normative)
 
 For our **Validated Distribution Authority** `Use Case`, we might define the following `MultiRecord` `Measures` to summarize the results of the `SingleRecord` `Validations` in the `ValidationPolicy` for that `Use Case`, framing a separate `Measure` to count COMPLIANT results for each `Validation` Test (and one `Measure` to summarize overall compliance across all `Validations` (that is, a policy-level completeness measure)):
 
@@ -1283,7 +1283,7 @@ These Tests follow a naming convention of MULTIRECORD_MEASURE_COUNT_COMPLIANT_{v
 
 In contrast to `Quality Assurance`, which focuses on filtering a dataset down to records that are fit for a stated purpose, `Quality Control` focuses on *understanding* why data are not fit, and on identifying tractable actions that can improve quality over time. In practice, `Quality Control` is often iterative: run a suite of Tests, interpret the resulting `Data Quality Reports`, make targeted changes (to data, mappings, or workflows), and then re-run the Tests to confirm improvement.
 
-#### 8.2.1 Start with Patterns, Not Individual Records
+#### 8.2.1 Start with Patterns, Not Individual Records (non-normative)
 
 For real-world datasets, the number of `NOT_COMPLIANT` results can be large. A productive first step in a practical workflow is to summarize results in ways that reveal patterns:
 
@@ -1296,7 +1296,7 @@ These summaries help distinguish “many unique problems” from “one recurrin
 
 In addition to dataset-level summaries, some `SingleRecord` `Measures` (e.g., `MEASURE_AMENDMENTS_PROPOSED`) can be useful for triage by identifying individual records that have many proposed changes and therefore may benefit from focused review.
 
-#### 8.2.2 Look for Point Causes and Systemic Errors
+#### 8.2.2 Look for Point Causes and Systemic Errors (non-normative)
 
 Many record-level problems that appear as widespread in a dataset have *point causes*: a single upstream issue that propagates broadly when data are transformed, denormalized, or aggregated. Examples include:
 
@@ -1309,7 +1309,7 @@ Many record-level problems that appear as widespread in a dataset have *point ca
 
 A key Quality Control technique is therefore to ask: “Could these many failures be explained by a small number of causes?” Investigating this can have high leverage: fixing a single cause can remediate thousands of records (or prevent future errors at ingestion).
 
-#### 8.2.3 Focus on Results
+#### 8.2.3 Focus on Results (non-normative)
 
 `Response.status` values are useful for triage.  Look first to `RUN_HAS_RESULT` with `Response.result` = `NOT_COMPLIANT` for specific non-conformances that can be fixed.  In contrast, `INTERNAL_PREREQUISITES_NOT_MET` may be harder to interpret, they may come from a mixture of missing and uninterpretable values, and very likely (if you have designed the test suite well) are covered by `Validations` that test for empty and incorrectly formatted values.  
 
@@ -1327,7 +1327,7 @@ A key Quality Control technique is therefore to ask: “Could these many failure
 
 Treating these categories differently and focusing on `RUN_HAS_RESULT` helps focus effort to specific known problem types, e.g. “fill in missing values” and “standardize or correct values” are distinct work types with different feasibility and risk profiles, and they are often easier to interpret and act upon from Tests targeted to identify them than the more ambiguous `INTERNAL_PREREQUISITES_NOT_MET` category.
 
-#### 8.2.4 Prioritize Work for Greatest Impact
+#### 8.2.4 Prioritize Work for Greatest Impact (non-normative)
 
 `Quality Control` can require substantial human effort, so prioritization matters. A practical prioritization approach is to consider:
 
@@ -1340,7 +1340,7 @@ These may be coupled.  For example, in some institution, an uncontrolled databas
 
 Summaries from `MultiRecord` `Measures` (particularly count outcomes) are particularly helpful for setting priorities for institutional data cleanup projects: they provide quick indicators of where quality improvement will most increase fitness for purpose, and they support tracking progress over time.
 
-#### 8.2.5 Close the loop: re-run Tests to confirm improvements
+#### 8.2.5 Close the loop: re-run Tests to confirm improvements (non-normative)
 
 Quality Control actions should be followed by re-running the same Test suite (and regenerating `Data Quality Reports`) to verify that:
 
@@ -1350,7 +1350,7 @@ Quality Control actions should be followed by re-running the same Test suite (an
 
 This “run → analyze patterns → fix causes → re-run” loop is a Quality Control workflow pattern supported by the BDQ Tests and the Fitness For Use Framework.
 
-#### 8.2.6 Example Quality Control Workflow Validated Distribution Authority Use Case
+#### 8.2.6 Example Quality Control Workflow Validated Distribution Authority Use Case (non-normative)
 
 Let's assume that we've got a set of distribution data, and that we can map that data onto the `Information Elements` required by the `SingleRecord` `Validations` in our `ValidationPolicy` for the **Validated Distribution Authority** `Use Case`, and that we have implemented those `Validations` in some execution framework.
 
@@ -1395,13 +1395,13 @@ When all the problems have been fixed and the entire dataset is fit for this `Us
 
 BDQ does not constrain how workflows may perform `Quality Assurance`, but it does provide a standard means for defining dataset-level requirements where `SingleRecord` Test outcomes, potentially modified by adopting proposals for improving the fitness of data from `Amendments` can be aggregated and measured for formal filtering of the data (using the `MultiRecord` `Measures`) to provide formal  `Quality Assurance` of a dataset for a `Use Case`.
 
-## 9 Round-Up
+## 9 Round-Up (non-normative)
 
 Our eleven year journey with the development of BDQ illustrates that there are many pitfalls in defining Tests.  Make sure that the `Expected Response` doesn’t hide any edge cases, and that is often easier said than done.  The development of the BDQ standard often surprised us with "emergent properties" and differing assumptions.  There are pitfalls in defining Tests for both the experienced and the inexperienced.  
 
 Critical to the process of defining a new Test is to iterate.  Start with a draft definition, create one or more independent implementations, have someone who isn't writing the implementation produce conformance testing data (including looking at values found in the wild), validate the implementation(s) against this data, and discuss any discrepancies between the expected and actual results.  It will usually be necessary to iterate and refine the Test specifications, Test implementations, and the Test conformance testing data.  This process of iteration is critical for producing a robust Test specification that is clear, unambiguous, and has logic that handles real world data and edge cases. 
 
-### 9.1 Summary of the BDQ Philosophy
+### 9.1 Summary of the BDQ Philosophy (non-normative)
 
 Through these steps, the BDQ standard aims to be "comprehensive but not exhaustive". By providing clear rationale, identifying abstract `Information Elements`, and anchoring Tests in community-vetted `Use Cases`, the standard creates a stable framework for evaluating data quality. The emphasis on iteration, conformance testing, and real-world edge cases helps ensure that Tests are not only theoretically sound but also practically effective in improving data fitness for biodiversity data science.
 
