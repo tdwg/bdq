@@ -41316,33 +41316,84 @@
                 "@id": "https://rs.tdwg.org/bdqtest/terms/6f7a9b82-7d34-4111-a2a6-9efe5221fa44-2025-03-07"
             },
             {
+                "@id": "https://rs.tdwg.org/bdqtest/terms/c70c4950-2246-4acc-a59d-81eaa47edf2b-2025-03-07"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqtest/terms/3f62eaa2-747f-456b-85e6-1a6e74086a18-2025-03-07"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqtest/terms/acd8d43e-7a2a-4372-b887-fb53a9972dc9-2025-03-07"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqtest/terms/9d5be694-f5da-465d-8c7e-27e6dac69f9f-2025-03-07"
+            },
+            {
                 "@id": "https://rs.tdwg.org/bdqtest/terms/a8aee02c-cf7c-4104-a601-d8afc4f9cbe2-2025-03-06"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqtest/terms/c8c61535-ab1a-4ec6-b4e9-f5f02541d7d8-2025-03-07"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/4e70b0e4-3fd2-4899-802c-439671374eeb-2025-03-06"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqtest/terms/687d3ad1-93a3-4a1f-b69f-da5a1eb761a5-2025-03-06"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqtest/terms/b60c8c58-0137-4b6a-97e9-57d8ca5cf248-2025-03-07"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqtest/terms/14a1d51f-16ed-4148-9dc8-1e90157a9868-2025-03-06"
             },
             {
+                "@id": "https://rs.tdwg.org/bdqtest/terms/bffd7499-aca3-423f-bb43-f7bdc9260f4f-2025-03-06"
+            },
+            {
                 "@id": "https://rs.tdwg.org/bdqtest/terms/3c8bc478-f6b2-4533-b7ce-45bae5d186c2-2025-03-07"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqtest/terms/f0fb1c79-9e3d-4d6c-a5a9-087cf57ebd26-2025-03-07"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqtest/terms/0f8b30e2-59dc-46ba-8b91-62049cd1a4e2-2025-03-06"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqtest/terms/a0502c5f-608b-4e59-99da-d9490bb4d93b-2025-03-06"
             },
             {
+                "@id": "https://rs.tdwg.org/bdqtest/terms/aee65eb8-8d1e-4b8f-bd37-5822e29f5734-2025-03-06"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqtest/terms/f948a30e-8084-48d5-b1ca-d77c476f181f-2025-03-07"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqtest/terms/47ee20d9-5087-4f76-a494-6fea05e50b8b-2025-03-07"
+            },
+            {
                 "@id": "https://rs.tdwg.org/bdqtest/terms/241a279c-76d5-499b-ab49-a47ad7f8df50-2025-03-07"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqtest/terms/f5dd74bd-6a22-4792-b675-c7ccf2a2c103-2025-03-07"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqtest/terms/d94b0130-7a13-4fa8-955c-eff5c47bd9de-2025-03-07"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqtest/terms/2d90d94b-d384-4bac-aa68-c6800d765882-2025-03-07"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqtest/terms/2fea4571-92d0-48a5-a5ba-6caecd647862-2025-03-07"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqtest/terms/faca6558-dbff-4d26-a5cb-e11cdf632fe7-2025-03-07"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqtest/terms/298db0c9-a85a-41ee-b111-d622fd969d71-2025-03-07"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqtest/terms/bceae35a-52ab-4968-846f-069ace766513-2025-03-07"
             }
         ],
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
-                "@value": "MeasurementPolicy: (9) measures  in UseCase bdqval:SDM-Trees"
+                "@value": "MeasurementPolicy: (26) measures  in UseCase bdqval:SDM-Trees"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
