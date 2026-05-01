@@ -671,7 +671,14 @@ Each individual that is a subclass of `bdqffdq:DataQualityNeed` SHOULD have at l
 
 User communities MAY provide new Use Cases and MAY compose instances that are subtypes of `bdqffdq:DataQualityNeed` with instances of `bdqffdq:Policy` subclasses and instances of `bdqffdq:UseCase` with the object properties `bdqffdq:includedInPolicy` and `bdqffdq:hasUseCase` in new ways. 
 
-Each instance of a subclass of a `bdqffdq:DataQualityNeed` SHOULD have an `rdfs:label` in all upper case, with underscores separating components. Tests that have a `bdqffdq:hasResourceType` of `bdqffdq:SingleRecord` SHOULD follow the convention of the subclass of `bdqffdq:DataQualityNeed` in all upper case as the first word, and a representation of the `bdqffdq:AbstractInformationElement` as a single word in all upper case as the second word, in the form TESTTYPE_INFORMATIONELEMENT_CRITERIA or TESTTYPE_INFORMATIONELEMENT_ACTION_INFORMATIONELEMENT. Tests that have a `bdqffdq:hasResourceType` of `bdqffdq:MultiRecord` SHOULD have "MULTIRECORD_" as the first element in their `rdfs:label`, and MAY follow the pattern MULTIRECORD_TESTTYPE_COUNT_RESULT_INFORMATIONELEMENT_CRITERIA, or MULTIRECORD_TESTTYPE_QA_INFORMATIONELEMENT_CRITERIA. The `rdfs:label` of the instance of the subclass of `bdqffdq:DataQualityNeed` SHOULD be used by humans to identify Tests.
+Each instance of a subclass of a `bdqffdq:DataQualityNeed` SHOULD have an `rdfs:label` in all upper case, with underscores separating components. 
+
+The `rdfs:label` of the instance of the subclass of `bdqffdq:DataQualityNeed` SHOULD be used by humans to identify Tests.
+
+Labels of instances of subclasses of `bdqffdq:DataQualityNeed` SHOULD follow the following naming conventions:
+* Tests that have a `bdqffdq:hasResourceType` of `bdqffdq:SingleRecord` SHOULD have an `rdfs:label` in all upper case as the first word, and a representation of the `bdqffdq:AbstractInformationElement` as a single word in all upper case as the second word, in the form TESTTYPE_INFORMATIONELEMENT_CRITERIA or TESTTYPE_INFORMATIONELEMENT_ACTION_INFORMATIONELEMENT. 
+* Tests that have a `bdqffdq:hasResourceType` of `bdqffdq:MultiRecord` SHOULD have "MULTIRECORD_" as the first element in their `rdfs:label`, and MAY follow the pattern MULTIRECORD_TESTTYPE_COUNT_RESULT_INFORMATIONELEMENT_CRITERIA, or MULTIRECORD_TESTTYPE_QA_INFORMATIONELEMENT_CRITERIA. 
+
 
 Each instance of a subclass of `bdqffdq:DataQualityNeed` MUST have exactly one `bdqffdq:hasResourceType` object property linking it to a `bdqffdq:SingleRecord` or a `bdqffdq:MultiRecord`.
 
@@ -797,7 +804,11 @@ The `bdqffdq:hasArgument` object property SHOULD have a `bdqffdq:Specification` 
 
 An axiom types the object of the `bdqffdq:hasArgument` object as a `bdqffdq:Argument`.
 
-An instance of `bdqffdq:Argument` SHOULD have exactly one `bdqffdq:hasArgumentValue` data property holding the value of the argument that replaces the `bdqffdq:Parameter` in the `bdqffdq:hasExpectedResponse` of the `bdqffdq:Specification`. An instance of `bdqffdq:Argument` SHOULD have exactly one `bdqffdq:hasParameter` object property that denotes the parameter within the `bdqffdq:hasExpectedResponse` that is to be replaced by the value of the `bdqffdq:hasArgumentValue`. An instance of `bdqffdq:Argument` SHOULD be related to exactly one instance of a `bdqffdq:Specification` with the `bdqffdq:hasArgument` object property.
+Each instance of `bdqffdq:Argument` SHOULD have exactly one `bdqffdq:hasArgumentValue` literal providing the value of the argument that replaces the `bdqffdq:Parameter` in the `bdqffdq:hasExpectedResponse` of the `bdqffdq:Specification`. 
+
+Each instance of `bdqffdq:Argument` SHOULD have exactly one `bdqffdq:hasParameter` object property that denotes the parameter within the `bdqffdq:hasExpectedResponse` that is to be replaced by the value of the `bdqffdq:hasArgumentValue`. 
+
+Each instance of `bdqffdq:Argument` SHOULD be related to exactly one instance of a `bdqffdq:Specification` with the `bdqffdq:hasArgument` object property.
 
 Each instance of a `bdqffdq:Specification` MAY have zero to many `bdqffdq:hasArgument` object properties relating it to zero to many `bdqffdq:Argument` instances.
 
@@ -843,13 +854,45 @@ Each instance of a `bdqffdq:Response` SHOULD be the object of exactly one `bdqff
 
 Following the object properties from an instance of a `bdqffdq:Response` to an instance of a subclass of a `bdqffdq:DataQualityNeed` SHOULD identify one and only one instance of a subclass of a `bdqffdq:DataQualityNeed` for a single instance of a `bdqffdq:Response`. If this condition is not met, it is not possible to tell which Test with which `Parameter` argument values produced the `Response`.
 
-Each instance of a `bdqffdq:ValidationResponse` SHOULD be the object of one and only one `bdqffdq:producesResponse` property linking it to an instance of a `bdqffdq:Implementation`, which in turn SHOULD be the subject of one and only one `bdqffdq:usesSpecification` property linking it to an instance of a `bdqffdq:Specification`, which in turn SHOULD be the object of one and only one `bdqffdq:hasSpecification` property linking it to an instance of a `bdqffdq:ValidationMethod`, which in turn SHOULD be the subject for one and only one `bdqffdq:forValidation` property linking it to an instance of a `bdqffdq:Validation`.
+For a `bdqffdq:ValidationResponse`, it SHOULD be possible to trace a single path to the `bdqffdq:Validation` that produced it, via one-to-one links:
+- Each `bdqffdq:ValidationResponse`
+  - SHOULD be the object of exactly one `bdqffdq:producesResponse` triple from an `bdqffdq:Implementation`.
+- That `bdqffdq:Implementation`
+  - SHOULD have exactly one `bdqffdq:usesSpecification` triple to a `bdqffdq:Specification`.
+- That `bdqffdq:Specification`
+  - SHOULD be the object of exactly one `bdqffdq:hasSpecification` triple from a `bdqffdq:ValidationMethod`.
+- That `bdqffdq:ValidationMethod`
+  - SHOULD have exactly one `bdqffdq:forValidation` triple to a `bdqffdq:Validation`.
 
-Each instance of a `bdqffdq:IssueResponse` SHOULD be the object of one and only one `bdqffdq:producesResponse` property linking it to an instance of a `bdqffdq:Implementation`, which in turn SHOULD be the subject of one and only one `bdqffdq:usesSpecification` property linking it to an instance of a `bdqffdq:Specification`, which in turn SHOULD be the object of one and only one `bdqffdq:hasSpecification` property linking it to an instance of a `bdqffdq:IssueMethod`, which in turn SHOULD be the subject for one and only one `bdqffdq:forIssue` property linking it to an instance of a `bdqffdq:Issue`.
+For a `bdqffdq:IssueResponse`, it SHOULD be possible to trace a single path to the `bdqffdq:Issue` that produced it, via one-to-one links:
+- Each `bdqffdq:IssueResponse`
+  - SHOULD be the object of exactly one `bdqffdq:producesResponse` triple from an `bdqffdq:Implementation`.
+- That `bdqffdq:Implementation`
+  - SHOULD have exactly one `bdqffdq:usesSpecification` triple to a `bdqffdq:Specification`.
+- That `bdqffdq:Specification`
+  - SHOULD be the object of exactly one `bdqffdq:hasSpecification` triple from a `bdqffdq:IssueMethod`.
+- That `bdqffdq:IssueMethod`
+  - SHOULD have exactly one `bdqffdq:forIssue` triple to a `bdqffdq:Issue`.
 
-Each instance of a `bdqffdq:MeasurementResponse` SHOULD be the object of one and only one `bdqffdq:producesResponse` property linking it to an instance of a `bdqffdq:Implementation`, which in turn SHOULD be the subject of one and only one `bdqffdq:usesSpecification` property linking it to an instance of a `bdqffdq:Specification`, which in turn SHOULD be the object of one and only one `bdqffdq:hasSpecification` property linking it to an instance of a `bdqffdq:MeasurementMethod`, which in turn SHOULD be the subject for one and only one `bdqffdq:forMeasure` property linking it to an instance of a `bdqffdq:Measure`.
+For a `bdqffdq:MeasurementResponse`, it SHOULD be possible to trace a single path to the `bdqffdq:Measurement` that produced it, via one-to-one links:
+- Each `bdqffdq:MeasurementResponse`
+  - SHOULD be the object of exactly one `bdqffdq:producesResponse` triple from an `bdqffdq:Implementation`.
+- That `bdqffdq:Implementation`
+  - SHOULD have exactly one `bdqffdq:usesSpecification` triple to a `bdqffdq:Specification`.
+- That `bdqffdq:Specification`
+  - SHOULD be the object of exactly one `bdqffdq:hasSpecification` triple from a `bdqffdq:MeasurementMethod`.
+- That `bdqffdq:MeasurementMethod`
+  - SHOULD have exactly one `bdqffdq:forMeasure` triple to a `bdqffdq:Measurement`.
 
-Each instance of a `bdqffdq:AmendmentResponse` SHOULD be the object of one and only one `bdqffdq:producesResponse` property linking it to an instance of a `bdqffdq:Implementation`, which in turn SHOULD be the subject of one and only one `bdqffdq:usesSpecification` property linking it to an instance of a `bdqffdq:Specification`, which in turn SHOULD be the object of one and only one `bdqffdq:hasSpecification` property linking it to an instance of a `bdqffdq:AmendmentMethod`, which in turn SHOULD be the subject for one and only one `bdqffdq:forAmendment` property linking it to an instance of a `bdqffdq:Amendment`.
+For a `bdqffdq:AmendmentResponse`, it SHOULD be possible to trace a single path to the `bdqffdq:Amendment` that produced it, via one-to-one links:
+- Each `bdqffdq:AmendmentResponse`
+  - SHOULD be the object of exactly one `bdqffdq:producesResponse` triple from an `bdqffdq:Implementation`.
+- That `bdqffdq:Implementation`
+  - SHOULD have exactly one `bdqffdq:usesSpecification` triple to a `bdqffdq:Specification`.
+- That `bdqffdq:Specification`
+  - SHOULD be the object of exactly one `bdqffdq:hasSpecification` triple from a `bdqffdq:AmendmentMethod`.
+- That `bdqffdq:AmendmentMethod`
+  - SHOULD have exactly one `bdqffdq:forAmendment` triple to a `bdqffdq:Amendment`.
 
 Given a `Response`, the following query returns which Test was run with which argument values for which parameters by which mechanism to produce it. This query SHOULD only return a single row. 
 

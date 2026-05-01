@@ -304,7 +304,11 @@ Alternatively, for a record where the day is given as "X" which is ambiguous, th
 
 ### 3.3 Amendments Propose Changes (normative)
 
-Amendment Tests **propose changes** to data. It is up to the consumers of `Data Quality Reports` to choose whether or not to accept those changes, particularly into an authoritative database of record. Consumers of `Data Quality Reports` MAY choose to change data based on `Responses` made by `Amendment` Tests, or consumers of `Data Quality Reports` MAY choose to **not** change their data based on `Responses` made by `Amendment` Tests. Databases of record SHOULD NOT **automatically** alter data based on `Responses` made by `Amendment` Tests without human evaluation of the proposed changes.
+Amendment Tests **propose changes** to data. It is up to the consumers of `Data Quality Reports` to choose whether or not to accept those changes, particularly into an authoritative database of record. 
+
+* Consumers of `Data Quality Reports` MAY choose to change data based on `Responses` made by `Amendment` Tests.
+* Consumers of `Data Quality Reports` MAY choose to **not** change their data based on `Responses` made by `Amendment` Tests. 
+* Databases of record SHOULD NOT **automatically** alter data based on `Responses` made by `Amendment` Tests without human evaluation of the proposed changes.
 
 #### 3.3.1 Caution in Proposing Changes (non-normative)
 
@@ -320,9 +324,12 @@ Similarly a parameterized Test may change default numerical values to values mor
 
 #### 3.4.1 Test Parameters in Reports (normative) 
 
-When a Test is parameterized, and a value other than the default value is used for some `Parameter`, reports SHOULD identify the Tests using at least the Label (`rdfs:label`) for the Test class, in combination with the `Parameter` and the value of the `Argument` that replaced the `Parameter` in this specific case.
-
-Values of `Parameters`, other than the defaults, SHOULD also be present in the `Response.comment`.
+When a Test is parameterized, and a value other than the default value is used for some `Parameter`, reports:
+* SHOULD identify the Tests using at least the Label (`rdfs:label`) for the Test class
+* SHOULD indicate the non-default parameterization by including: 
+  * the `Parameter`, and
+  * the value of the `Argument` used for that `Parameter` in this specific execution.
+* In addition, non-default `Parameters`, values, SHOULD also be included in the `Response.comment`.
 
 More normative guidance on Test `Parameters` can be found in the section [6.1 Parameters and Changing the Behavior of a Test (normative)](../implementers/index.md#61-parameters-and-changing-the-behavior-of-a-test-normative) of the [BDQ Implementer's Guide](../implementers/index.md).
 
