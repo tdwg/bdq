@@ -119,7 +119,7 @@ In any technical treatment of the BDQ standard, a precise reference to a class o
 
 ### 2.1 Introduction and Context (non-normative)
 
-The `bdqffdq:` portion of the BDQ standard is a specification for a framework for describing data quality. This Fitness For Use Framework (often referred to simply as "The Framework") is based on a mathematical formulation, using set theory (Veiga, 2016), and is represented as an OWL ontology. This document describes the organization and use of the OWL ontology.
+The `bdqffdq:` portion of the BDQ standard is a specification for a framework for describing data quality. This Fitness For Use Framework (often referred to simply as "The Framework") is based on a mathematical formulation, using set theory (Veiga, 2016), and is represented as an OWL ontology. This document describes the organization and use of the OWL ontology.  While the Fitness For Use Framework is described within a Biodiversity Data Quality context, the concepts and structure of the Framework are applicable to data quality in any domain. 
 
 This document provides a background for understanding the `bdqtest:` Test descriptions. Each of the Tests in the `bdqtest:` namespace have been designed and described within this Framework and are framed using the terms and concepts from the Framework. The Fitness For Use Framework provides the context for each Test, and has shaped decisions made about each Test.
 
