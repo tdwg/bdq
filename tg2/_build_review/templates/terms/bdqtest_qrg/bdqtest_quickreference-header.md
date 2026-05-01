@@ -9,9 +9,16 @@
 
 This document is intended to be an easy-to-read reference for the Tests maintained as part of the TDWG standard [BDQ]({standard_iri}) produced by the {creator} and is maintained by the {maintainer}. This document lists the BDQ Tests, described by the [Terms Used in the BDQ Tests Quick Reference Guide](bdqtest_qrg_term_descriptions.md). Definitions, comments, and examples may include namespace abbreviations (e.g., `bdqval:`, `dwc:`). These are required as the meaning for the word is defined specifically in that namespace. Thus, `dwc:Event` means Event as defined by Darwin Core at https://dwc.tdwg.org/terms/#event.
 
-This page is a non-normative descriptive document, not the [full vocabulary definition document](../../list/bdqtest/index.md) for `bdqtest:` terms. It combines the normative Test names and terms with non-normative comments and examples that are meant to help people to use the Tests consistently. Further details can be found in [The Biodiversity Data Quality (BDQ) Standard](../../../index.md), the [Fitness For Use Framework Ontology Guide](../../guide/bdqffdq/index.md), the [BDQ Implementer's Guide](../../guide/implementers/index.md). 
+* Learn More:
+  * [The Biodiversity Data Quality (BDQ) Standard](../../../index.md), the entry point for the BDQ standard, with a Roadmap.
+  * [BDQ Tests: Concepts and Use](../../guide/quickreference/index.md).
+  * [BDQ User's Guide](../../guide/users/index.md) (for non-programmers).
+  * [BDQ Implementer's Guide](../../guide/implementers/index.md) (for programmers). 
+  * [Full vocabulary definition document](../../list/bdqtest/index.md) full details of the `bdqtest:` vocabulary (the Tests). 
+  * [Fitness For Use Framework Ontology: Concepts and Use](../../guide/bdqffdq/index.md) describing the concepts used to define the Tests.
 
-If you have questions or suggestions, submit these to the [BDQ Issues](https://github.com/tdwg/bdq/issues) page in GitHub. See the bottom of this document for how to cite the BDQ standard and this document in particular.
+* Questions or suggestions? Submit and issue in GitHub [BDQ Issues](https://github.com/tdwg/bdq/issues). 
+* [How To Cite BDQ](#cite-bdq-non-normative)
 
 # Indexes to the Tests (non-normative)
 
