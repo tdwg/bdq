@@ -234,7 +234,7 @@ The list below shows the key components of the initial phrasing of the `SDM-Tree
 Name: **SDM-Trees** 
 
 Definition: 
-* `A bdqffdq:UseCase for selecting dwc:Occurrence records suitable for predicting the spatial distribution of a limited number of Eucalypt tree species (Gill et al. 1985). This use case filters for occurrence records that meet criteria for a known species at a known location and date. Filtered records are combined with environmental data derived from occurrence locations to evaluate robust spatial distribution models, including Maxent (Phillips et al. 2006) and generalized linear and additive models (Guisan et al. 2002). Models will be further assessed via systematic surveys in areas with high predicted occurrence and low record density. Project outputs are: (1) recommendations for robust species distribution modelling methods for tree species, (2) a suite of environmental variables for the selected species, and (3) improved “expert distribution” envelopes derived from modelling.`
+* `A bdqffdq:UseCase for selecting dwc:Occurrence records suitable for predicting the spatial distribution of a limited number of Eucalypt tree species (Gill et al. 1985). This Use Case filters for occurrence records that meet criteria for a known species at a known location and date. Filtered records are combined with environmental data derived from occurrence locations to evaluate robust spatial distribution models, including Maxent (Phillips et al. 2006) and generalized linear and additive models (Guisan et al. 2002). Models will be further assessed via systematic surveys in areas with high predicted occurrence and low record density. Project outputs are: (1) recommendations for robust species distribution modelling methods for tree species, (2) a suite of environmental variables for the selected species, and (3) improved “expert distribution” envelopes derived from modelling.`
 
 Fitness requirements: 
 ```
@@ -345,22 +345,9 @@ In other words, instead of requiring specific fixed values (e.g., `dwc:occurrenc
 
 The BDQ Tests linked to this `Use Case` therefore provide a first-pass filter to create a dataset with defined, testable quality characteristics. That dataset can then be filtered further for more specific project needs (for example, a particular `dwc:occurrenceStatus` value, a tighter uncertainty threshold, or narrower dates), but those additional constraints are outside the scope of the current agreed BDQ Tests unless and until new broadly reusable Tests are defined.
 
-The differences between the initial and revised versions of the `Use Case` definition are subtle, reflecting the inclusion of Quality Control, and are highlighted in the diff below, which shows the changes made to the `Use Case` definition. 
+The differences between the initial and revised versions of the `Use Case` definition are subtle, reflecting the inclusion of Quality Control, and are highlighted below:
 
-```diff
-A bdqffdq:UseCase for {+improving the quality of, and+} selecting dwc:Occurrence records 
-suitable for predicting the spatial distribution of a limited number of Eucalypt tree 
-species (Gill et al. 1985). This [-use case-] {+Use Case+} filters for occurrence records
-that meet criteria for a known species at a known location and date.  {+Records can be 
-further filtered to meet the requirements of a particular distribution modeling analysis.+}  
-Filtered records [-are-] {+can then be+} combined with environmental data derived from 
-occurrence locations to evaluate robust spatial distribution models, including Maxent 
-(Phillips et al. 2006) and generalized linear and additive models (Guisan et al. 2002). 
-Models will be further assessed via systematic surveys in areas with high predicted 
-occurrence and low record density. Project outputs are: (1) recommendations for robust 
-species distribution modelling methods for tree species, (2) a suite of environmental 
-variables for the selected species, and (3) improved “expert distribution” envelopes 
-derived from modelling.
+> A bdqffdq:UseCase for **improving the quality of, and** selecting dwc:Occurrence records suitable for predicting the spatial distribution of a limited number of Eucalypt tree species (Gill et al. 1985). This Use Case filters for occurrence records that meet criteria for a known species at a known location and date.  **Records can be further filtered to meet the requirements of a particular distribution modeling analysis.**  Filtered records ~~are~~ **can then be** combined with environmental data derived from occurrence locations to evaluate robust spatial distribution models, including Maxent (Phillips et al. 2006) and generalized linear and additive models (Guisan et al. 2002).  Models will be further assessed via systematic surveys in areas with high predicted occurrence and low record density. Project outputs are: (1) recommendations for robust species distribution modelling methods for tree species, (2) a suite of environmental variables for the selected species, and (3) improved “expert distribution” envelopes derived from modelling.
 ```
 
 As part of refining a `Use Case`, we have found it helpful to: (1) draft a `Use Case` definition, (2) list the Tests to be included, (3) query an RDF (Turtle) serialization of the `bdqtest"` vocabulary to extract the `Specification` text for those Tests, and then (4) use a generative AI tool to draft fitness requirements that are consistent with the included Test specifications.  Then go back and assess whether the desired set of tests for the `Use Case` are included, particularly examining which `MultiRecord` `Measures` are included, and then revising the `Use Case` definition and fitness requirements.  Obviously (sometimes in retrospect), this is an iterative process.
@@ -1230,7 +1217,7 @@ Each Test should be able to run without dependencies on other Tests. Sequence of
 
 `Validations` are typically paired with `Amendments`. The `Validation` assesses the quality of a term’s value, and the `Amendment` proposes a way to improve it. A common workflow runs the `Validation` first, then applies the related `Amendment`, and finally re-runs the `Validation` to assess the impact. Repeating the `Validation` afterward allows a comparison of results before and after the `Amendment`, providing a measure of the `Amendment`’s effectiveness. This VALIDATE–AMEND–VALIDATE sequence is considered best practice, and Test specifications may assume Tests will be composed in this way.
 
-Because Darwin Core is intentionally permissive, multiple terms can share in the expression of the same concept (e.g., `dwc:eventDate`, `dwc:day`, `dwc:month`, `dwc:year`, `dwc:startDayOfYear`, `dwc:endDayOfYear`). To manage this, canonical terms (e.g., `dwc:eventDate`) need to be designated and Tests should be structured to improve those terms. For example, `dwc:eventDate` should be populated by an `Amendment` using `dwc:day`, `dwc:month`, and `dwc:year` ONLY IF `dwc:eventDate` is `Empty`.  The order of operations matters, and related `Amendments` must avoid overwriting existing values in canonical terms with those from other terms. `Amendments` are defined to improve canonical terms using supporting terms, assuming consumers will rely on the canonical term for the highest-quality data.
+Because Darwin Core is intentionally permissive, multiple terms can share in the expression of the same concept (e.g., `dwc:eventDate`, `dwc:day`, `dwc:month`, `dwc:year`, `dwc:startDayOfYear`, `dwc:endDayOfYear`). To manage this, canonical terms (e.g., `dwc:eventDate`) need to be designated and Tests should be structured to improve those terms. For example, `dwc:eventDate` should be populated by an `Amendment` using `dwc:day`, `dwc:month`, and `dwc:year` **only if** `dwc:eventDate` is `Empty`.  The order of operations matters, and related `Amendments` must avoid overwriting existing values in canonical terms with those from other terms. `Amendments` are defined to improve canonical terms using supporting terms, assuming consumers will rely on the canonical term for the highest-quality data.
 
 ### 3.12 Naming Conventions (non-normative)
 
