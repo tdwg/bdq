@@ -373,7 +373,7 @@ The Framework defines four central concepts for describing and evaluating `Data 
 
 *The 4 central DataQualityNeed types in the Framework - Validation, Issue, Measure, and Amendment.*
 
-A `Validation` assesses compliance with a need. Data have quality if they are compliant with the requirements of the Validation Test. A `Validation` relates `Information Elements` and `Resource Types` with a `Specification` of exactly how to assess fitness of the data under some narrow `Criteria`, and themselves are assembled into `Validation Policies`, which are linked to other `Policies` to cover a description of the `Data Quality Needs` of a `Use Case`.  Data have quality only with respect to some use, so `Validations` must be composed with `Use Cases` to be able to assess fitness for use.
+A `Validation` assesses compliance with a need. Data have quality if they are compliant with the requirements of the `Validation` Test. A `Validation` relates `Information Elements` and `Resource Types` with a `Specification` of exactly how to assess fitness of the data under some narrow `Criteria`, and themselves are assembled into `Validation Policies`, which are linked to other `Policies` to cover a description of the `Data Quality Needs` of a `Use Case`.  Data have quality only with respect to some use, so `Validations` must be composed with `Use Cases` to be able to assess fitness for use.
 
 ![Diagram of the classes involved in expressing Data Quality Needs with Validations.](bdqffdq_data_quality_needs_validation.svg)
 
@@ -411,9 +411,9 @@ Software that implements one or more tests is a `Mechanism`. A `Mechanism` is a 
 
 The property `bdqffdq:usesSpecification` draws a separation between the specification of how a Test is defined and an actual concrete implementation of that Test in software. This separation allows for multiple implementations of the same Test, and for implementations to evolve independently of the Test specifications.
 
-A Test, conceptually, is a set of classes and properties that provide a formal description of what outputs a software implementation should produce for given inputs.  The classes are a `Specification` linked through a 'Method` (`Validation Method`, `Issue Method`, `Measure Method`, and `hasAmendmentMethod`) to a `Data Quality Need` (`Validation`, `Issue`, `Measure`, or `Amendment`).  The properties associated with the `Data Quality Need` provide a general description of what aspect of data quality the Test assesses (and what its inputs are), while the properties associated with the `Specification` provide the specific details of the expected behavior of the Test needed for a developer to implement the Test.  The `bdqtest:` vocabulary provides these specific details for each Test, independent of any particular software implementation.
+A Test, conceptually, is a set of classes and properties that provide a formal description of what outputs a software implementation should produce for given inputs.  The classes are a `Specification` linked through a `Data Quality Method` (`Validation Method`, `Issue Method`, `Measure Method`, and `Amendment Method`) to a `Data Quality Need` (`Validation`, `Issue`, `Measure`, or `Amendment`).  The properties associated with the `Data Quality Need` provide a general description of what aspect of data quality the Test assesses (and what its inputs are), while the properties associated with the `Specification` provide the specific details of the expected behavior of the Test needed for a developer to implement the Test.  The `bdqtest:` vocabulary provides these specific details for each Test, independent of any particular software implementation.
 
-On the other side of `bdqffdq:usesSpecification`, a software implementation of a Test produces `Responses`.  These are the outputs of Test execution, and provide an assessment of the fitness of some data for some use.  Thus The Fittness For Use Framework divides responsibilities between the specification of what is needed for data to have quality (`Use Cases` and Tests)  and the software implementations of those Tests with the actual assertions about data quality in `Responses` produced by those implementations.
+On the other side of `bdqffdq:usesSpecification`, a software implementation of a Test produces `Responses`.  These are the outputs of Test execution, and provide an assessment of the fitness of some data for some use.  Thus The Fitness For Use Framework divides responsibilities between the specification of what is needed for data to have quality (`Use Cases` and Tests)  and the software implementations of those Tests with the actual assertions about data quality in `Responses` produced by those implementations.
 
 Below is a diagram of the composition of `Validation`, `Validation Method`, and `Validation Response` illustrating the `Data Quality Needs`, `Solutions`, and `Reports` layers of the Fitness For Use Framework, identifying the responsibilities of `bdqtest:` (shown with solid lines), and implementations (shown with dashed lines).
 
@@ -476,7 +476,7 @@ Summary of the expected properties of a `Response` object, and the corresponding
 | Non-RDF structured data (literal) | `Response.result` | field corresponding to `bdqffdq:hasResponseResultValue` | literal | `17` |
 | Non-RDF structured data (literal) | `Response.comment` | field corresponding to `bdqffdq:hasResponseComment` | literal (string) | `Provided value 11 is a valid dwc:day.` |
 
-A `bdqffdq:hasResponseStatus` is always categorical, a bdqffdq:hasResponseComment is always literal, a Response.result may be either a categorical bdqffdq:hasResponseResult or a literal bdqffdq:hasResponseResultValue.  
+A `bdqffdq:hasResponseStatus` is always categorical, a `bdqffdq:hasResponseComment` is always literal, a `Response.result` may be either a categorical `bdqffdq:hasResponseResult` or a literal `bdqffdq:hasResponseResultValue`.  
 
 It is precicely because of this potential for results to be represented as RDF or as non-RDF structured data that the `Named Individuals` such as `bdqffdq:COMPLIANT` used in results are given labels in all upper case with underscores to facilitate their use and recognition as string constant values in non-RDF contexts.
 
@@ -582,7 +582,7 @@ This section is non-normative and is intended only to highlight standards that c
 
 The `bdqffdq:` OWL representation of the Fitness For Use Framework and the framing of the BDQ Tests in RDF using that ontology make Test results particularly amenable to being wrapped in `oa:Annotation` instances following the [W3C Web Annotation Data Model](https://www.w3.org/TR/annotation-model/) (Sanderson et al. 2017).
 
-See [7.2 Annotations](../implementers/index.md#72-annotations) in the [Implementers Guide](../implementers/index.md) for an example and normative guidance on how to represent Test results as Web Annotations.
+See [7.2 Annotations](../implementers/index.md#72-annotations-normative) in the [Implementers Guide](../implementers/index.md) for an example and normative guidance on how to represent Test results as Web Annotations.
 
 #### 2.7.2 Relating BDQ Test Results with the PROV Ontology (non-normative)
 
@@ -592,7 +592,7 @@ A `bdqffdq:DataQualityReport` is a formal description of the results produced by
 
 In PROV-O, a `bdqffdq:DataQualityReport` and a `bdqffdq:DataResource` may be represented as `prov:Entity` instances. An execution of a Test implementation may be represented as a `prov:Activity`, and a `bdqffdq:Mechanism` (or an agent operating a mechanism) may be represented as a `prov:Agent`. The relationships between these entities can be represented using PROV properties such as `prov:wasGeneratedBy`, `prov:used`, and `prov:wasAssociatedWith`.
 
-A `bdqffdq:Response` produced by a Test can be related to PROV-O through the use of `prov:wasGeneratedBy` to relate a `bdqffdq:Response` to the `prov:Activity` that produced it, and through the use of `prov:used` to relate that `prov:Activity` to the `bdqffdq:Specification` that it used. This allows the provenance of a `bdqffdq:Response` to be traced back to the particular Test specification that was executed and the software mechanism that executed it, with the ability to add additional metadata about the provenance beyond the scope of the Fittness For Use Framework ontology.
+A `bdqffdq:Response` produced by a Test can be related to PROV-O through the use of `prov:wasGeneratedBy` to relate a `bdqffdq:Response` to the `prov:Activity` that produced it, and through the use of `prov:used` to relate that `prov:Activity` to the `bdqffdq:Specification` that it used. This allows the provenance of a `bdqffdq:Response` to be traced back to the particular Test specification that was executed and the software mechanism that executed it, with the ability to add additional metadata about the provenance beyond the scope of the Fitness For Use Framework ontology.
 
 The above is intended only as a simple exploration of how some of the core concepts of the Fitness For Use Framework could be related to PROV-O.
 
@@ -602,7 +602,7 @@ The W3C [Data Quality Vocabulary](https://www.w3.org/TR/vocab-dq/) (DQV) (Albert
 
 The W3C Data Quality Vocabulary can be used in conjunction with the `bdqffdq:` and `bdqtest:` vocabularies to provide metadata describing the quality of some `bdqffdq:DataResource` as asserted in a `bdqffdq:DataQualityReport`.
 
-The W3C Data Quality Vocabulary defines (mostly by reuse of `ldqd:` terms) a set of data quality dimensions. The `dqv:Dimension` class is [defined](https://www.w3.org/TR/vocab-dqv/#dqv:Dimension), in part, as "Represents criteria relevant for assessing quality". This concept is similar to (skos:broader than) `bdqffdq:DataQualityDimension`. See Section [2.1 Mapping to DQV Dimension (non-normative)](../../list/bdqdim/index.md#21-mapping-to-dqv-dimension-non-normative) in the [bdqdim:` term list](../../list/bdqdim/index.md) document for potential mappings.
+The W3C Data Quality Vocabulary defines (mostly by reuse of `ldqd:` terms) a set of data quality dimensions. The `dqv:Dimension` class is [defined](https://www.w3.org/TR/vocab-dqv/#dqv:Dimension), in part, as "Represents criteria relevant for assessing quality". This concept is similar to (skos:broader than) `bdqffdq:DataQualityDimension`. See Section [2.1 Mapping to DQV Dimension (non-normative)](../../list/bdqdim/index.md#21-mapping-to-dqv-dimension-non-normative) in the [bdqdim: term list](../../list/bdqdim/index.md) document for potential mappings.
 
 There are at least three ways in which `bdqffdq:Responses` could be related to DQV data quality metadata representations.
 
@@ -939,7 +939,7 @@ Each `Validation` has zero or one `Consulted` `Information Elements`.
 Each `Consulted` `Information Element` is `composedOf` one-to-many concrete `Information Element` terms.
 Each `Validation` has one and only one `Resource Type`.
 
-A `Method` looks like, but is not, an associative entity relating a `Data Quality Need` to a `Specification`.
+A `Data Quality Method` looks like, but is not, an associative entity relating a `Data Quality Need` to a `Specification`.
 
 Each `Validation` has one and only one `ValidationMethod`.
 Each `ValidationMethod` is for one and only one `Validation`.

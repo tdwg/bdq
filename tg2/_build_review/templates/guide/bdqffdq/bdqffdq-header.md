@@ -209,7 +209,7 @@ Software that implements one or more tests is a `Mechanism`. A `Mechanism` is a 
 
 The property `bdqffdq:usesSpecification` draws a separation between the specification of how a Test is defined and an actual concrete implementation of that Test in software. This separation allows for multiple implementations of the same Test, and for implementations to evolve independently of the Test specifications.
 
-A Test, conceptually, is a set of classes and properties that provide a formal description of what outputs a software implementation should produce for given inputs.  The classes are a `Specification` linked through a `Method` (`Validation Method`, `Issue Method`, `Measure Method`, and `hasAmendmentMethod`) to a `Data Quality Need` (`Validation`, `Issue`, `Measure`, or `Amendment`).  The properties associated with the `Data Quality Need` provide a general description of what aspect of data quality the Test assesses (and what its inputs are), while the properties associated with the `Specification` provide the specific details of the expected behavior of the Test needed for a developer to implement the Test.  The `bdqtest:` vocabulary provides these specific details for each Test, independent of any particular software implementation.
+A Test, conceptually, is a set of classes and properties that provide a formal description of what outputs a software implementation should produce for given inputs.  The classes are a `Specification` linked through a `Data Quality Method` (`Validation Method`, `Issue Method`, `Measure Method`, and `Amendment Method`) to a `Data Quality Need` (`Validation`, `Issue`, `Measure`, or `Amendment`).  The properties associated with the `Data Quality Need` provide a general description of what aspect of data quality the Test assesses (and what its inputs are), while the properties associated with the `Specification` provide the specific details of the expected behavior of the Test needed for a developer to implement the Test.  The `bdqtest:` vocabulary provides these specific details for each Test, independent of any particular software implementation.
 
 On the other side of `bdqffdq:usesSpecification`, a software implementation of a Test produces `Responses`.  These are the outputs of Test execution, and provide an assessment of the fitness of some data for some use.  Thus The Fitness For Use Framework divides responsibilities between the specification of what is needed for data to have quality (`Use Cases` and Tests)  and the software implementations of those Tests with the actual assertions about data quality in `Responses` produced by those implementations.
 
@@ -380,7 +380,7 @@ This section is non-normative and is intended only to highlight standards that c
 
 The `bdqffdq:` OWL representation of the Fitness For Use Framework and the framing of the BDQ Tests in RDF using that ontology make Test results particularly amenable to being wrapped in `oa:Annotation` instances following the [W3C Web Annotation Data Model](https://www.w3.org/TR/annotation-model/) (Sanderson et al. 2017).
 
-See [7.2 Annotations](../implementers/index.md#72-annotations) in the [Implementers Guide](../implementers/index.md) for an example and normative guidance on how to represent Test results as Web Annotations.
+See [7.2 Annotations](../implementers/index.md#72-annotations-normative) in the [Implementers Guide](../implementers/index.md) for an example and normative guidance on how to represent Test results as Web Annotations.
 
 #### 2.7.2 Relating BDQ Test Results with the PROV Ontology (non-normative)
 
@@ -390,7 +390,7 @@ A `bdqffdq:DataQualityReport` is a formal description of the results produced by
 
 In PROV-O, a `bdqffdq:DataQualityReport` and a `bdqffdq:DataResource` may be represented as `prov:Entity` instances. An execution of a Test implementation may be represented as a `prov:Activity`, and a `bdqffdq:Mechanism` (or an agent operating a mechanism) may be represented as a `prov:Agent`. The relationships between these entities can be represented using PROV properties such as `prov:wasGeneratedBy`, `prov:used`, and `prov:wasAssociatedWith`.
 
-A `bdqffdq:Response` produced by a Test can be related to PROV-O through the use of `prov:wasGeneratedBy` to relate a `bdqffdq:Response` to the `prov:Activity` that produced it, and through the use of `prov:used` to relate that `prov:Activity` to the `bdqffdq:Specification` that it used. This allows the provenance of a `bdqffdq:Response` to be traced back to the particular Test specification that was executed and the software mechanism that executed it, with the ability to add additional metadata about the provenance beyond the scope of the Fittness For Use Framework ontology.
+A `bdqffdq:Response` produced by a Test can be related to PROV-O through the use of `prov:wasGeneratedBy` to relate a `bdqffdq:Response` to the `prov:Activity` that produced it, and through the use of `prov:used` to relate that `prov:Activity` to the `bdqffdq:Specification` that it used. This allows the provenance of a `bdqffdq:Response` to be traced back to the particular Test specification that was executed and the software mechanism that executed it, with the ability to add additional metadata about the provenance beyond the scope of the Fitness For Use Framework ontology.
 
 The above is intended only as a simple exploration of how some of the core concepts of the Fitness For Use Framework could be related to PROV-O.
 
@@ -737,7 +737,7 @@ Each `Validation` has zero or one `Consulted` `Information Elements`.
 Each `Consulted` `Information Element` is `composedOf` one-to-many concrete `Information Element` terms.
 Each `Validation` has one and only one `Resource Type`.
 
-A `Method` looks like, but is not, an associative entity relating a `Data Quality Need` to a `Specification`.
+A `Data Quality Method` looks like, but is not, an associative entity relating a `Data Quality Need` to a `Specification`.
 
 Each `Validation` has one and only one `ValidationMethod`.
 Each `ValidationMethod` is for one and only one `Validation`.

@@ -165,17 +165,19 @@ The list below shows the key components of the initial phrasing of the `SDM-Tree
 Name: **SDM-Trees** 
 
 Definition: 
-* A `bdqffdq:UseCase` for selecting `dwc:Occurrence` records suitable for predicting the spatial distribution of a limited number of Eucalypt tree species (Gill et al. 1985). This use case filters for occurrence records that meet criteria for a known species at a known location and date. Filtered records are combined with environmental data derived from occurrence locations to evaluate robust spatial distribution models, including Maxent (Phillips et al. 2006) and generalized linear and additive models (Guisan et al. 2002). Models will be further assessed via systematic surveys in areas with high predicted occurrence and low record density. Project outputs are: (1) recommendations for robust species distribution modelling methods for tree species, (2) a suite of environmental variables for the selected species, and (3) improved “expert distribution” envelopes derived from modelling.
+* `A bdqffdq:UseCase for selecting dwc:Occurrence records suitable for predicting the spatial distribution of a limited number of Eucalypt tree species (Gill et al. 1985). This use case filters for occurrence records that meet criteria for a known species at a known location and date. Filtered records are combined with environmental data derived from occurrence locations to evaluate robust spatial distribution models, including Maxent (Phillips et al. 2006) and generalized linear and additive models (Guisan et al. 2002). Models will be further assessed via systematic surveys in areas with high predicted occurrence and low record density. Project outputs are: (1) recommendations for robust species distribution modelling methods for tree species, (2) a suite of environmental variables for the selected species, and (3) improved “expert distribution” envelopes derived from modelling.`
 
 Fitness requirements: 
-Records are fit for the use case `bbdqval:SDM-Trees` when they have valid:
-* `dwc:scientificName` identified to species level.
-* `dwc:basisOfRecord` = bdqval:notEmpty.
-* `dwc:occurrenceStatus` = "present".
-* `dwc:decimalLatitude` and `dwc:decimalLongitude` in range.
-* `dwc:coordinateUncertaintyInMeters` < 500.
-* `dwc:dataGeneralizations` = bdqval:empty
-* `dwc:year` or `dwc:eventDate` within provided temporal limits.
+```
+Records are fit for the use case bbdqval:SDM-Trees when they have valid:
+* dwc:scientificName identified to species level.
+* dwc:basisOfRecord = bdqval:notEmpty.
+* dwc:occurrenceStatus = "present".
+* dwc:decimalLatitude and dwc:decimalLongitude in range.
+* dwc:coordinateUncertaintyInMeters < 500.
+* dwc:dataGeneralizations = bdqval:empty
+* dwc:year or dwc:eventDate within provided temporal limits.
+```
 
 Included Tests: 
 * VALIDATION_SCIENTIFICNAME_FOUND, AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID, 
@@ -219,18 +221,20 @@ If we want to support `Quality Control` as well, we would add `Measures` such as
 Iteration 2
 
 Definition: 
-* A `bdqffdq:UseCase` for improving the quality of, and selecting `dwc:Occurrence` records suitable for predicting the spatial distribution of a limited number of Eucalypt tree species (Gill et al. 1985). This `Use Case` filters for occurrence records that meet criteria for a known species at a known location and date.  Records can be further filtered to meet the requirements of a particular distribution modeling analysis.  Filtered records can then be combined with environmental data derived from occurrence locations to evaluate robust spatial distribution models, including Maxent (Phillips et al. 2006) and generalized linear and additive models (Guisan et al. 2002). Models will be further assessed via systematic surveys in areas with high predicted occurrence and low record density. Project outputs are: (1) recommendations for robust species distribution modelling methods for tree species, (2) a suite of environmental variables for the selected species, and (3) improved “expert distribution” envelopes derived from modelling.
+* `A bdqffdq:UseCase for improving the quality of, and selecting dwc:Occurrence records suitable for predicting the spatial distribution of a limited number of Eucalypt tree species (Gill et al. 1985). This Use Case filters for occurrence records that meet criteria for a known species at a known location and date.  Records can be further filtered to meet the requirements of a particular distribution modeling analysis.  Filtered records can then be combined with environmental data derived from occurrence locations to evaluate robust spatial distribution models, including Maxent (Phillips et al. 2006) and generalized linear and additive models (Guisan et al. 2002). Models will be further assessed via systematic surveys in areas with high predicted occurrence and low record density. Project outputs are: (1) recommendations for robust species distribution modelling methods for tree species, (2) a suite of environmental variables for the selected species, and (3) improved “expert distribution” envelopes derived from modelling.`
 
 Revised fitness requirements:
- * Data are fit for the use case `bdqval:SDM-Trees` when records have:
-   * A scientific name `(dwc:scientificName`) that can be resolved in the configured taxonomic source authority (default: GBIF Backbone Taxonomy).
-   * A non-empty `dwc:basisOfRecord` whose value is valid in the configured basisOfRecord source authority.
-   * A non-empty `dwc:occurrenceStatus` whose value is valid in the configured occurrenceStatus source authority.
-   * Non-empty decimal coordinates (`dwc:decimalLatitude` and `dwc:decimalLongitude`) with values that are interpretable as numbers and within valid geographic ranges.
-   * Coordinate uncertainty in meters (`dwc:coordinateUncertaintyInMeters`), when present, that is interpretable as a number and within a valid numeric range.
-   * A non-empty year (`dwc:year`) that is interpretable as an integer and is within configured temporal bounds (`bdqval:earliestValidDate` to `bdqval:latestValidDate`).
-   * An ISO 8601–valid event date (`dwc:eventDate`) when present, and (where applicable) event-date components MAY be used to fill missing `dwc:year`/`dwc:month`/`dwc:day` from `dwc:eventDate`.
-   * There is a valid value in `dcterms:license`.
+```
+Data are fit for the use case bdqval:SDM-Trees when records have:
+* A scientific name (dwc:scientificName) that can be resolved in the configured taxonomic source authority (default: GBIF Backbone Taxonomy).
+* A non-empty dwc:basisOfRecord whose value is valid in the configured basisOfRecord source authority.
+* A non-empty dwc:occurrenceStatus whose value is valid in the configured occurrenceStatus source authority.
+* Non-empty decimal coordinates (dwc:decimalLatitude and dwc:decimalLongitude) with values that are interpretable as numbers and within valid geographic ranges.
+* Coordinate uncertainty in meters (dwc:coordinateUncertaintyInMeters), when present, that is interpretable as a number and within a valid numeric range.
+* A non-empty year (dwc:year) that is interpretable as an integer and is within configured temporal bounds (bdqval:earliestValidDate to bdqval:latestValidDate).
+* An ISO 8601–valid event date (dwc:eventDate) when present, and (where applicable) event-date components MAY be used to fill missing dwc:year/dwc:month/dwc:day from dwc:eventDate.
+* There is a valid value in dcterms:license.
+```
 
 Included SingleRecord Tests: 
 * VALIDATION_SCIENTIFICNAME_NOTEMPTY, VALIDATION_SCIENTIFICNAME_FOUND, AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID, 
@@ -271,6 +275,12 @@ Included `MultiRecord` `Measure` Tests for `Quality Assurance`:
 In other words, instead of requiring specific fixed values (e.g., `dwc:occurrenceStatus` must be “present” or `dwc:coordinateUncertaintyInMeters` must be < 500 m) for which we don't have defined tests, this `Use Case` iteration expresses requirements in a way that can be evaluated using the existing BDQ Tests and configuration (authoritative vocabularies, numeric ranges, and temporal bounds), leaving more specific filtering to downstream processes.
 
 The BDQ Tests linked to this `Use Case` therefore provide a first-pass filter to create a dataset with defined, testable quality characteristics. That dataset can then be filtered further for more specific project needs (for example, a particular `dwc:occurrenceStatus` value, a tighter uncertainty threshold, or narrower dates), but those additional constraints are outside the scope of the current agreed BDQ Tests unless and until new broadly reusable Tests are defined.
+
+The differences between the initial and revised versions of the `Use Case` definition are subtle, reflecting the inclusion of Quality Control, and are highlighted in the diff below, which shows the changes made to the `Use Case` definition. 
+
+```diff
+A bdqffdq:UseCase for {+improving the quality of, and+} selecting dwc:Occurrence records suitable for predicting the spatial distribution of a limited number of Eucalypt tree species (Gill et al. 1985). This [-use case-] {+Use Case+} filters for occurrence records that meet criteria for a known species at a known location and date.  {+Records can be further filtered to meet the requirements of a particular distribution modeling analysis.+}  Filtered records [-are-] {+can then be+} combined with environmental data derived from occurrence locations to evaluate robust spatial distribution models, including Maxent (Phillips et al. 2006) and generalized linear and additive models (Guisan et al. 2002). Models will be further assessed via systematic surveys in areas with high predicted occurrence and low record density. Project outputs are: (1) recommendations for robust species distribution modelling methods for tree species, (2) a suite of environmental variables for the selected species, and (3) improved “expert distribution” envelopes derived from modelling.
+```
 
 As part of refining a `Use Case`, we have found it helpful to: (1) draft a `Use Case` definition, (2) list the Tests to be included, (3) query an RDF (Turtle) serialization of the `bdqtest"` vocabulary to extract the `Specification` text for those Tests, and then (4) use a generative AI tool to draft fitness requirements that are consistent with the included Test specifications.  Then go back and assess whether the desired set of tests for the `Use Case` are included, particularly examining which `MultiRecord` `Measures` are included, and then revising the `Use Case` definition and fitness requirements.  Obviously (sometimes in retrospect), this is an iterative process.
 
@@ -976,15 +986,16 @@ Since a value supplied for a `Parameter` for the Test is an attribute of the `Me
 
 ### 3.6 Independence and Paired Tests (non-normative)
 
-BDQ Tests are designed to be independant and modular, allowing them to be combined to meet specific `Data Quality Needs`. The specification of any interdependencies among Tests would immediately impose constraints upon Test execution frameworks. To maintain implementation neutrality, the standard avoids specifying interdependencies that would constrain how an Implementation or framework executes them—whether in parallel, in sequence, or as dataset queries. For a subset of `Amendments`, we do, however, provide guidance on execution order to ennsure deterministic results.
+BDQ Tests are designed to be independant and modular, allowing them to be combined in arbitrary orders and combinations to meet specific `Data Quality Needs`. We do not impose any particular model of Test execution on implementation frameworks.  The specification of any interdependencies among Tests would immediately impose constraints upon Test execution frameworks. 
+Implementations of Test execution frameworks may execute Tests on data records in parallel, in sequence, as queries on datasets, or operating on on distinct values.  For a subset of `Amendments`, we do, however, provide guidance on execution order to ennsure deterministic results.
 
-BDQ `Amendment` Tests are paired with a corresponding `Validation` Test that assesses the same aspect of data quality. Not all `Validation` Tests, however, have a corresponding `Amendment` Test. An `Amendment` Test may be able to improve the quality of data with respect to that `Validation`. The Framework contains terms for expressing such formal relationships among Tests.  We have chosen not to specify these to allow users to address their data quality needs more flexibly. What we would recommend, however, is that the data evaluation process generally runs all the relevant `Validation`-type Tests, then any relevant `Amendment`-type Tests, then re-run the `Validation` Tests a second time on the records with amendments applied.
+BDQ `Amendment` Tests are paired with a corresponding `Validation` Test that assesses the same aspect of data quality. Not all `Validation` Tests, however, have a corresponding `Amendment` Test. An `Amendment` Test may be able to improve the quality of data with respect to that `Validation`. The Framework contains terms for expressing such formal relationships among Tests.  We have chosen not to specify these to allow users to address their data quality needs more flexibly. What we would recommend, however, is that the data evaluation process generally runs all the relevant `Validation` Tests, then any relevant `Amendment` Tests, then re-run the `Validation` Tests a second time on the records with amendments applied.
 
 ### 3.7 Vocabularies and Synonyms (non-normative)
 
-As noted above, one conclusion early in this project was the need for controlled vocabularies which led to an early spin-off of the [Data Quality Task Group 4: Best Practice for Development of Vocabularies of Values](https://github.com/tdwg/bdq/tree/master/tg4). Testing the 'quality' or 'fitness for use' of Darwin Core-encoded data are made more difficult due to the lack of a comprehensive suite of controlled vocabularies.
+As noted above, one conclusion early in this project was the need for controlled vocabularies, which led to an early spin-off of the [Data Quality Task Group 4: Best Practice for Development of Vocabularies of Values](https://github.com/tdwg/bdq/tree/master/tg4). Testing the 'quality' or 'fitness for use' of Darwin Core-encoded data are made more difficult due to the lack of a comprehensive suite of controlled vocabularies.
 
-Testing Darwin Core values against a known `sourceAuthority` using a `Validation`-type Test is straightforward: A Test is either COMPLIANT or NOT COMPLIANT. The BDQ standard also includes Tests of type `Amendment`, and the mapping of input Darwin Core values to known Vocabulary values is poorly developed. If a `Validation` Test returns COMPLIANT, no `Amendment` is necessary. For example, if the input value to a Test evaluating sex is `dwc:sex`="Female", then no `Amendment` is required. If however, the input value is `dwc:sex`="f.", this can likely be interpreted as "Female"? The same is not true for `dwc:sex`="M" This value could be interpreted as "Male" or "Mixed" according to https://api.gbif.org/v1/vocabularies/Sex/concepts. GBIF currently treats this as "Male", but without a comprehensive synonymy within the vocabularies, one cannot be certain that this is the case. A key phrase within the BDQ standard that particularly relates to many of the Expected Responses of Tests is "{dwc:term} can be unambiguously interpreted as ...". In the case of `dwc:sex`="M", the determination is that the value is ambiguous and no amendment should be made.
+Testing Darwin Core values against a known `sourceAuthority` using a `Validation`-type Test is straightforward: A Test is either COMPLIANT or NOT COMPLIANT. The BDQ standard also includes Tests of type `Amendment`, and the mapping of input Darwin Core values to known Vocabulary values is poorly developed. If a `Validation` Test returns COMPLIANT, no `Amendment` is necessary. For example, if the input value to a Test evaluating sex is `dwc:sex`="Female", then no `Amendment` is required. If however, the input value is `dwc:sex`="f.", this can likely be interpreted as "Female"? The same is not true for `dwc:sex`="M" This value could be interpreted as "Male" or "Mixed" according to https://api.gbif.org/v1/vocabularies/Sex/concepts. GBIF currently treats this as "Male", but without a comprehensive synonymy within the vocabularies, one cannot be certain that this is the case. A key phrase within the BDQ standard that particularly relates to many of the Expected Responses of Tests is "dwc:{term} can be unambiguously interpreted as ...". In the case of `dwc:sex`="M", the determination is that the value is ambiguous and no amendment should be made.
 
 We see an urgent need for comprehensive, internationally vetted vocabularies of values for [Darwin Core Terms](http://rs.tdwg.org/dwc/doc/list/) (Darwin Core Maintenance Group 2021) that are mapped to standard controlled values. GBIF has implemented some of the distinct values for some Darwin Core terms, for example https://api.gbif.org/v1/vocabularies/Sex/concepts/Female/hiddenLabels, but such lists are not currently comprehensive, and we see this is a severe limitation to the evaluation of 'data quality'/'fitness for use'. While there has been a survey of Darwin Core 'distinct values' for GBIF, ALA, iDigBio and VertNet, these are dated, and have not been mapped to standard values, if they exist.
 
@@ -1201,7 +1212,7 @@ For `Single Record` Tests, the `Single Record` is implied and type is one of `Va
 
 The combination of `Information Element` and Evaluation was called the Term-Action in the GitHub issues used to develop the tests.  This combination was found useful for sorting and classifying Tests.
 
-If the `Information Element` is a single term (e.g. `dwc:countryCode`), the information element component of the label is just the term local name placed in all upper case (e.g. COUNTRYCODE).  If the `Information Element` is composed of several terms, these may simply be concatenated for example "YEARMONTHDAY" or "COUNTRYCOUNTRYCODE".  Alternately, several terms may be labeled with an abstract description of the combined specific `Information Elements`, as `Labels for multiple Information Elements`, for example "POLYNOMIAL" or "CLASSIFICATION".
+If the `Information Element` is a single term (e.g. `dwc:countryCode`), the information element component of the label is just the term local name placed in all upper case (e.g. COUNTRYCODE).  If the `Information Element` is composed of several terms, these may simply be concatenated for example "YEARMONTHDAY" or "COUNTRYCOUNTRYCODE".  Alternately, several terms may be labeled with an abstract description of the combined specific `Information Elements`, as an `Abstract Information Element` label, for example "POLYNOMIAL" or "CLASSIFICATION".  Labels formed from concatenated terms, and `Abstract Information Element` labels are listed below as "Labels for multiple Information Elements".
 
 In some cases we have departed from this simple convention in labels for more complex Tests to permit easy identification of the nature of the Test:
 * The evaluation LESSTHAN is framed in a different order as `{informationelement}_LESSTHAN_{informationelement}`. e.g. [VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH](../terms/bdqtest/index.md#VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH) 
@@ -1220,7 +1231,7 @@ The tables below list the terms used for the Test `Types`, the Labels for multip
 | MULTIRECORD_MEASURE_COUNT      | A Test Type of `Measure` that takes as input the outputs of other Tests (usually `Validations`) across a `MultiRecord`.  For example, count across MultiRecords of a VALIDATION Test that return a Response of COMPLIANT.  Provides metrics for `Quality Control`. | [MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_NOTEMPTY](../list/bdqtest/index.md#bdqtest_b60c8c58-0137-4b6a-97e9-57d8ca5cf248)     |
 | MULTIRECORD_MEASURE_QA | Measurement over MultiRecords of a VALIDATION Test where every record complies with Quality Assurance requirements by being COMPLIANT         | [MULTIRECORD_MEASURE_QA_BASISOFRECORD_NOTEMPTY](../list/bdqtest/index.md#bdqtest_c8c61535-ab1a-4ec6-b4e9-f5f02541d7d8)  |
 | VALIDATION     | A Test type that expresses how the fitness of data for some use may be measured. See `bdqffdq:Measure`      | [VALIDATION_BASISOFRECORD_NOTEMPTY](../list/bdqtest/index.md#bdqtest_ac2b7648-d5f9-48ca-9b07-8ad5879a2536)      |
-| <strong><a name="labels-for-multiple-information-elements">Labels for multiple Information Elements</a></strong> ||| <!-- *************************************************************** -->
+| <strong><a name="abstract-information-element-labels">Labels for multiple Information Elements</a></strong> ||| <!-- *************************************************************** -->
 | CLASSIFICATION | A general category of specific `bdqval:InformationElements` that represents a combination of Darwin Core terms from the `dwc:Taxon` class that are used to express taxonomic classification. | [VALIDATION_CLASSIFICATION_CONSISTENT](../terms/bdqtest/index.md#VALIDATION_CLASSIFICATION_CONSISTENT) |
 | COORDINATES    | A general category of specific `bdqval:InformationElements` that represents the combination of the Darwin Core terms `dwc:decimalLatitude` and `dwc:decimalLongitude` and may include metadata terms including `dwc:geodeticDatum`.      | [VALIDATION_COORDINATES_NOTZERO](../list/bdqtest/index.md#bdqtest_1bf0e210-6792-4128-b8cc-ab6828aa4871)         |
 | COORDINATESCOUNTRYCODE | The combination of the Darwin Core terms `dwc:decimalLatitude`, `dwc:decimalLongitude`, and `dwc:countryCode`. | [VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT](../terms/bdqtest/index.md#VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT) |
@@ -1308,7 +1319,7 @@ The [kurator-ffdq](https://github.com/kurator-org/kurator-ffdq) library (Lowery 
 
 The development of each Test, with documentation of why particular decisions were made with regard to that Test, has been documented in issues in the [tdwg/bdq](https://github.com/tdwg/bdq) GitHub repository. Each Test issue was tagged with the following GitHub issue labels to assist in finding, evaluating, and asserting conclusions about each Test.
 
-These tags are retained as the "GitHub Issue Labels" (a `skos:note` on each `Method` instance) in the BDQ standard.
+These tags are retained as the "GitHub Issue Labels" (a `skos:note` on each `Data Quality Method` instance) in the BDQ standard.
 
 | **Tag** | **Definition** | **Comment** |
 | --- | ---------- | ------- |

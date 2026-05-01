@@ -768,7 +768,7 @@ Notes are present when some aspects of a Test may not be obvious to the casual u
 
 ### 6.9 List the properties of the Test (non-normative)
 
-So, our set of Test descriptors (the values of various bdqffdq: properties attached to instances of `Data Quality Need` subclasses, `Method` subclasses, and `Specifications`) for this Test would be as follows:
+So, our set of Test descriptors (the values of various bdqffdq: properties attached to instances of `Data Quality Need` subclasses, `Data Quality Method` subclasses, and `Specifications`) for this Test would be as follows:
 
 * **Label** VALIDATION_WASATTRIBUTEDTO_STANDARD
 * **Description** Does value in prov:wasAttributedTo conform to the format of the bdqval:sourceAuthority?

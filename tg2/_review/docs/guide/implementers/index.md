@@ -1360,7 +1360,7 @@ This example is written to be consistent with the following expectations:
 * The `Implementation` is related to the `Response` it generated using `bdqffdq:producesResponse`, is related to the `Specification` it ran using `bdqffdq:usesSpecification`, and is related to the `Mechanism` that executed it using `bdqffdq:implementedBy`.
 * The `bdqffdq:usesSpecification` property points to the specific instance of `bdqffdq:Specification` that the `Implementation` used for the Test execution.
 
-In a complete dataset the `Specification` is linked (via a `Method` instance) to the corresponding Test in bdqtest, that is, we could look up that the Test is VALIDATION_DAY_STANDARD given the `Specification` IRI. 
+In a complete dataset the `Specification` is linked (via a `Data Quality Method` instance) to the corresponding Test in bdqtest, that is, we could look up that the Test is VALIDATION_DAY_STANDARD given the `Specification` IRI. 
 
 ```turtle
 @prefix bdqval:     <https://rs.tdwg.org/bdqval/terms/> .
