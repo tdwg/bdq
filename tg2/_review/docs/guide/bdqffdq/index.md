@@ -321,15 +321,15 @@ In any technical treatment of the BDQ standard, a precise reference to a class o
 
 ### 2.1 Introduction and Context (non-normative)
 
-The `bdqffdq:` portion of the [BDQ](</home/mole/git/bdq/tg2/_review/index.md#bdq> "Biodiversity Data Quality Standard. This document.") standard is a specification for a framework for describing data quality. This Fitness For Use [Framework](</home/mole/git/bdq/tg2/_review/index.md#framework> "The Fitness for Use Framework, the body of work that provides a fundamental structure for the BDQ Tests. The Fitness for Use Framework is derived from (Veiga 2016) and is the outcome of the [TDWG](</home/mole/git/bdq/tg2/_review/index.md#tdwg> "[Biodiversity Information Standards](https://www.tdwg.org/standards/sds/)") Data Quality Task Group…") (often referred to simply as "The Framework") is based on a mathematical formulation, using set theory (Veiga, 2016), and is represented as an [OWL](</home/mole/git/bdq/tg2/_review/index.md#owl> "[Web Ontology Language](https://www.w3.org/OWL/). A Semantic Web language designed to represent rich and complex knowledge about things. Hosts the namespace [owl:](http://www.w3.org/2002/07/owl#)") ontology. This document describes the organization and use of the OWL ontology.  While the Fitness For Use Framework is described within a Biodiversity Data Quality context, the concepts and structure of the Framework are applicable to data quality in any domain. 
+The `bdqffdq:` portion of the BDQ standard is a specification for a framework for describing data quality. This Fitness For Use Framework (often referred to simply as "The Framework") is based on a mathematical formulation, using set theory (Veiga, 2016), and is represented as an OWL ontology. This document describes the organization and use of the OWL ontology.  While the Fitness For Use Framework is described within a Biodiversity Data Quality context, the concepts and structure of the Framework are applicable to data quality in any domain. 
 
-This document provides a background for understanding the `bdqtest:` [Test](</home/mole/git/bdq/tg2/_review/index.md#test> "An individual consideration of a `bdqffdq:DataQualityNeed` with a `bdqffdq:DataQualityMethod` that links it to an instance of a `bdqffdq:Specification`, these instances being composed of `InformationElements`, `Argument…") descriptions. Each of the Tests in the `bdqtest:` namespace have been designed and described within this Framework and are framed using the terms and concepts from the Framework. The Fitness For Use Framework provides the context for each Test, and has shaped decisions made about each Test.
+This document provides a background for understanding the `bdqtest:` Test descriptions. Each of the Tests in the `bdqtest:` namespace have been designed and described within this Framework and are framed using the terms and concepts from the Framework. The Fitness For Use Framework provides the context for each Test, and has shaped decisions made about each Test.
 
 This document provides a concise description and normative information about the `bdqffdq:` ontology and a summary of the mathematical formalization. See the [Fitness For Use Framework Ontology List of Terms](../../list/bdqffdq/index.md) document for the list of terms in the `bdqffdq:` vocabulary. See the [Fitness For Use Framework Ontology Vocabulary Extension](../../extension/bdqffdq/index.md) for documentation on additional axioms. See the [Biodiversity Data Quality Fitness For Use Framework (Ontology)](../../../vocabulary/bdqffdq.owl) for the formal representation of the vocabulary as an OWL ontology. The mathematical formalization provides a description of inferences and reasoning that may be made with the terms in the vocabulary.
 
 ### 2.2 Description of the Fitness For Use Framework ontology (non-normative)
 
-The Fitness For Use Framework defines data quality in relation to a specified use, emphasizing that data quality is not abstract but purpose-dependent. It provides a formal way to describe a `Use Case` (`bdqffdq:UseCase` [bdqffdq:UseCase](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#usecase> "A bdqffdq:NeedConcept expressing a purpose to which data are put for which the data must have quality for the result to have meaning and reliability.")) and the criteria for evaluating whether a dataset is fit for that purpose. By linking data quality explicitly to use, the Framework enables consistent assessment and assurance of fitness for a given purpose.
+The Fitness For Use Framework defines data quality in relation to a specified use, emphasizing that data quality is not abstract but purpose-dependent. It provides a formal way to describe a `Use Case` (`bdqffdq:UseCase`) and the criteria for evaluating whether a dataset is fit for that purpose. By linking data quality explicitly to use, the Framework enables consistent assessment and assurance of fitness for a given purpose.
 
 The Framework can be conceptually divided into three horizontal layers: `Data Quality Needs`, `Data Quality Solutions`, and `Data Quality Reports`. Needs describe what it means for data to have quality for some use, Solutions describe tools to evaluate quality, and Reports are produced by Solutions to describe the evaluation of quality in particular datasets. `Data Quality Solutions` (the Solutions layer) are realized by `Mechanisms` via `Implementations`.
 
@@ -337,7 +337,7 @@ The Framework can also be conceptually divided into four vertical themes, four s
 
 In BDQ, "Test" is used as an informal umbrella term to describe these four vertical concept families (`Validation`, `Issue`, `Measure`, `Amendment`), as they connect and involve terms in both the `Data Quality Needs` and `Data Quality Solutions` layers.  See the diagram in [BDQ Tests: An Operational Perspective](../bdqtest/index.md#51-bdq-tests-an-operational-perspective-non-normative).
 
-**Data Quality Needs** begin with a `Use Case`, a formal description of a purpose for which data may be used. Each `Use Case` includes a set of `Policies`, which in turn relate to `Data Quality Needs`.  The `Data Quality Needs` (i.e., `Validation`, `Measure`, `Amendment`, `Issue`) specify the data quality requirement (Need), the relevant `Information Elements` (such as specific [Darwin Core](</home/mole/git/bdq/tg2/_review/index.md#darwin-core> "[Darwin Core](https://dwc.tdwg.org/). A Standard intended to facilitate the sharing of information about biological diversity. Host of the dwc:namespace [dwc:](http://rs.tdwg.org/dwc/terms/)") terms), and the `Resource Type` the requirement applies to. A Need defines the properties data must have to be considered fit for use and may include ways to improve unfit data. The Tests described in this standard are formal specifications of such Needs for BDQ purposes.
+**Data Quality Needs** begin with a `Use Case`, a formal description of a purpose for which data may be used. Each `Use Case` includes a set of `Policies`, which in turn relate to `Data Quality Needs`.  The `Data Quality Needs` (i.e., `Validation`, `Measure`, `Amendment`, `Issue`) specify the data quality requirement (Need), the relevant `Information Elements` (such as specific Darwin Core terms), and the `Resource Type` the requirement applies to. A Need defines the properties data must have to be considered fit for use and may include ways to improve unfit data. The Tests described in this standard are formal specifications of such Needs for BDQ purposes.
 
 **Data Quality Mechanisms** are formal descriptions of software or other tools that implement the Tests. They execute the `Specifications` defined in the Needs layer.
 
@@ -399,7 +399,7 @@ Formally, in the `Data Quality Needs` level, the Framework starts with a `Use Ca
 
 Each of the Tests described in the BDQ standard has a formal specification that includes each of these elements. 
 
-`Data Quality Needs` can relate to the data quality of single records (`bdqffdq:SingleRecord` [bdqffdq:SingleRecord](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#singlerecord> "A single entity comprised of encoded data with a defined structure that contains one instance of a core concept from the perspective of bdqffdq:InformationElements assessed for a bdqffdq:DataQualityNeed.")) or of datasets (`bdqffdq:MultiRecord` [bdqffdq:MultiRecord](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#multirecord> "A set of one or more bdqffdq:SingleRecords.")).
+`Data Quality Needs` can relate to the data quality of single records (`bdqffdq:SingleRecord`) or of datasets (`bdqffdq:MultiRecord`).
 
 ![Diagram of Single Record and Multi Record as named individual instances of the Resource class, showing Resource as a rectangular node above rectangular nodes for Multi Record and Amendment. ](resource_types.png)
 
@@ -407,7 +407,7 @@ Each of the Tests described in the BDQ standard has a formal specification that 
 
 ### 2.3 Extending to Data Quality Mechanisms and Data Quality Reports (non-normative)
 
-Software that implements one or more tests is a `Mechanism`. A `Mechanism` is a formal description of a software tool that implements one or more Tests.  Each of those Tests has an `Implementation` in that `Mechanism`, which is a formal description of how the `Mechanism` implements the Test.  An `Implementation` is linked via `bdqffdq:usesSpecification` [bdqffdq:usesSpecification](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#usesspecification> "The bdqffdq:Specification that a bdqffdq:Implementation implements.") to the specification of a Test.  An `Implementation` also produces `Responses` that are linked to the `Implementation` via `bdqffdq:producesResponse` [bdqffdq:producesResponse](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#producesresponse> "Connects an entity with a bdqffdq:Response that the entity created.") and may be assembled into `Data Quality Reports`.
+Software that implements one or more tests is a `Mechanism`. A `Mechanism` is a formal description of a software tool that implements one or more Tests.  Each of those Tests has an `Implementation` in that `Mechanism`, which is a formal description of how the `Mechanism` implements the Test.  An `Implementation` is linked via `bdqffdq:usesSpecification` to the specification of a Test.  An `Implementation` also produces `Responses` that are linked to the `Implementation` via `bdqffdq:producesResponse` and may be assembled into `Data Quality Reports`.
 
 The property `bdqffdq:usesSpecification` draws a separation between the specification of how a Test is defined and an actual concrete implementation of that Test in software. This separation allows for multiple implementations of the same Test, and for implementations to evolve independently of the Test specifications.
 
@@ -433,9 +433,9 @@ A `Response` is a formal description of the output of a Test, including the stat
 
 *The 4 `Response` types in the Framework - `ValidationResponse`, `IssueResponse`, `MeasureResponse` and `AmendmentResponse`.*
 
-`Response` objects may be represented in an [RDF](</home/mole/git/bdq/tg2/_review/index.md#rdf> "Resource Description Framework - a W3C standard for modeling, interchanging, and linking structured data on the web. Hosts the namespace [rdf:](http://www.w3.org/1999/02/22-rdf-syntax-ns#)") context as a combination of object properties and data properties on a `Response` resource.  In a non-RDF context, such as JSON or a tabular format, a `Response` might be represented as an object with properties or as a row with columns for each of the properties.  The key properties of a `Response` are `Response.status`, `Response.result`, `Response.comment`, and optionally, `Response.qualifier`.  In a non-RDF context, these may be simple fields in a structured data format, while in an RDF context, these would be represented using the appropriate properties from the `bdqffdq:` vocabulary (e.g., `bdqffdq:hasResponseStatus` [bdqffdq:hasResponseStatus](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#hasresponsestatus> "The bdqffdq:ResponseStatus object asserted by a bdqffdq:Response."), `bdqffdq:hasResponseResult` [bdqffdq:hasResponseResult](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#hasresponseresult> "The bdqffdq:ResponseResult object asserted by a bdqffdq:Response."), `bdqffdq:hasResponseComment` [bdqffdq:hasResponseComment](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#hasresponsecomment> "Free text describing the bdqffdq:Response made in the response and why that conclusion was reached."), and `bdqffdq:hasResponseQualifier` [bdqffdq:hasResponseQualifier](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#hasresponsequalifier> "ResponseQualifier object asserted by an Response.")) where the distinction between categorical values (e.g. using `bdqffdq:hasResponseResult`) and literal values (e.g. using `bdqffdq:hasResponseResultValue` [bdqffdq:hasResponseResultValue](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#hasresponseresultvalue> "Data property carrying the value of a bdqffdq:Response when the value is not an object.")) is important.
+`Response` objects may be represented in an RDF context as a combination of object properties and data properties on a `Response` resource.  In a non-RDF context, such as JSON or a tabular format, a `Response` might be represented as an object with properties or as a row with columns for each of the properties.  The key properties of a `Response` are `Response.status`, `Response.result`, `Response.comment`, and optionally, `Response.qualifier`.  In a non-RDF context, these may be simple fields in a structured data format, while in an RDF context, these would be represented using the appropriate properties from the `bdqffdq:` vocabulary (e.g., `bdqffdq:hasResponseStatus`, `bdqffdq:hasResponseResult`, `bdqffdq:hasResponseComment`, and `bdqffdq:hasResponseQualifier`) where the distinction between categorical values (e.g. using `bdqffdq:hasResponseResult`) and literal values (e.g. using `bdqffdq:hasResponseResultValue`) is important.
 
-It is expected that instances of `Response` objects will involve, in RDF, a combination of object properties and data properties on a `Response`.  In an object oriented language like [Java](</home/mole/git/bdq/tg2/_review/index.md#java> "Java is a registered trademark of Oracle and/or its affiliates."), a `Response` might be an object with properties, and in a tabular format, a `Response` might be a row with columns for each of the properties. The following table gives an overview of the expected properties of a `Response` object, and the corresponding terms in the `bdqffdq:` vocabulary.
+It is expected that instances of `Response` objects will involve, in RDF, a combination of object properties and data properties on a `Response`.  In an object oriented language like Java, a `Response` might be an object with properties, and in a tabular format, a `Response` might be a row with columns for each of the properties. The following table gives an overview of the expected properties of a `Response` object, and the corresponding terms in the `bdqffdq:` vocabulary.
 
 | Shorthand Concept | bdqffdq: Term(s) | Description |
 | ----------------- | ---------------- | ----------- |
@@ -449,13 +449,13 @@ See [4.1 Structure of a Response (normative)](../../guide/bdqtest/index.md#41-st
 
 ### 2.4.1 Properties of Responses (normative) 
 
-In an RDF context, the status property of a `Response` MUST be represented using an [IRI](</home/mole/git/bdq/tg2/_review/index.md#iri> "Internationalized Resource Identifier is an internet protocol standard which builds on the Uniform Resource Identifier (URI) protocol by greatly expanding the set of permitted characters.") (e.g., `bdqffdq:RUN_HAS_RESULT` [bdqffdq:RUN_HAS_RESULT](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#run_has_result> "A bdqffdq:ResponseStatus used to indicate that that a result was correctly generated.")) as the object of `bdqffdq:hasResponseStatus`.
+In an RDF context, the status property of a `Response` MUST be represented using an IRI (e.g., `bdqffdq:RUN_HAS_RESULT`) as the object of `bdqffdq:hasResponseStatus`.
 
 In an RDF context, the result property of a `Response` MUST be represented using:
-- `bdqffdq:hasResponseResult` when the result is categorical and comes from the controlled set of `bdqffdq:ResponseResult` [bdqffdq:ResponseResult](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#responseresult> "A bdqffdq:ReportConcept to which controlled vocabulary bdqffdq:Responses about the result of the execution of the bdqffdq:Specification of a bdqffdq:DataQualityNeed are attached.") named individuals (e.g., `bdqffdq:COMPLIANT` [bdqffdq:COMPLIANT](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#compliant> "A bdqffdq:ResponseResult of a bdqffdq:Validation where the data conforms to the bdqffdq:Criteria for quality in the Test bdqffdq:Specification."), `bdqffdq:NOT_COMPLIANT` [bdqffdq:NOT_COMPLIANT](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#not_compliant> "A bdqffdq:ResponseResult of a bdqffdq:Validation where the data do not conform to the bdqffdq:Criteria for quality in the Test bdqffdq:Specification."), `bdqffdq:COMPLETE` [bdqffdq:COMPLETE](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#complete> "A bdqffdq:ResponseResult of a bdqffdq:Measure that asserts that data are present and sufficiently comprehensive for use."), `bdqffdq:NOT_COMPLETE` [bdqffdq:NOT_COMPLETE](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#not_complete> "A bdqffdq:ResponseResult of a bdqffdq:Measure which asserts that data are not present or are not sufficiently comprehensive for a use."), `bdqffdq:POTENTIAL_ISSUE` [bdqffdq:POTENTIAL_ISSUE](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#potential_issue> "A bdqffdq:ResponseResult of a bdqffdq:Issue that indicates that the data may not have sufficient quality for a use. The user will need to evaluate if the data are fit for their particular use or not."), `bdqffdq:NOT_ISSUE` [bdqffdq:NOT_ISSUE](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#not_issue> "A bdqffdq:ResponseResult of a bdqffdq:Issue where no potential problems were detected.")); or
+- `bdqffdq:hasResponseResult` when the result is categorical and comes from the controlled set of `bdqffdq:ResponseResult` named individuals (e.g., `bdqffdq:COMPLIANT`, `bdqffdq:NOT_COMPLIANT`, `bdqffdq:COMPLETE`, `bdqffdq:NOT_COMPLETE`, `bdqffdq:POTENTIAL_ISSUE`, `bdqffdq:NOT_ISSUE`); or
 - `bdqffdq:hasResponseResultValue` when the result is a literal payload (e.g., a numeric measurement, a string, or structured text such as JSON for an `Amendment` proposal). The value of `bdqffdq:hasResponseResultValue` MUST be a literal and SHOULD use an appropriate datatype (e.g., `xsd:integer`, `rdf:JSON`).
 
-In a non-RDF structured-data context (JSON, database, CSV), where `bdqffdq:ResponseStatus` [bdqffdq:ResponseStatus](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#responsestatus> "A bdqffdq:ReportConcept expressing controlled vocabulary values about the exit state of an execution process of a data quality bdqffdq:Specification by a bdqffdq:Implementation.") and `bdqffdq:ResponseResult` are represented as strings, controlled values MUST be used and the values MUST be the local names (e.g., `RUN_HAS_RESULT`, `COMPLIANT`), unless the result is a literal value (corresponding to use of `bdqffdq:hasResponseResultValue` in RDF), in which case the value MUST be that literal.
+In a non-RDF structured-data context (JSON, database, CSV), where `bdqffdq:ResponseStatus` and `bdqffdq:ResponseResult` are represented as strings, controlled values MUST be used and the values MUST be the local names (e.g., `RUN_HAS_RESULT`, `COMPLIANT`), unless the result is a literal value (corresponding to use of `bdqffdq:hasResponseResultValue` in RDF), in which case the value MUST be that literal.
 
 Labels MAY be used purely for display.
 
@@ -588,11 +588,11 @@ See [7.2 Annotations](../implementers/index.md#72-annotations-normative) in the 
 
 [PROV-O: The PROV Ontology](https://www.w3.org/TR/prov-o/) (W3C 2013) is a W3C recommendation that provides a framework for representing provenance information in RDF. PROV-O defines a set of classes and properties for representing the entities, activities, and agents involved in the production of data and other resources, as well as the relationships between them.
 
-A `bdqffdq:DataQualityReport` [bdqffdq:DataQualityReport](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#dataqualityreport> "A bdqffdq:ReportConcept comprising a set of data quality bdqffdq:Responses.") is a formal description of the results produced by a `bdqffdq:Implementation` [bdqffdq:Implementation](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#implementation> "A bdqffdq:SolutionsConcept that describes the portion of a bdqffdq:Mechanism that carries out the proccess described in a particular bdqffdq:Specification.") implemented by a `bdqffdq:Mechanism` [bdqffdq:Mechanism](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#mechanism> "An entity that can execute bdqffdq:DataQualityMethods.") applying one or more Tests to a `bdqffdq:DataResource` [bdqffdq:DataResource](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#dataresource> "An owl:Thing to which a data quality bdqffdq:Response applies.").
+A `bdqffdq:DataQualityReport` is a formal description of the results produced by a `bdqffdq:Implementation` implemented by a `bdqffdq:Mechanism` applying one or more Tests to a `bdqffdq:DataResource`.
 
 In PROV-O, a `bdqffdq:DataQualityReport` and a `bdqffdq:DataResource` may be represented as `prov:Entity` instances. An execution of a Test implementation may be represented as a `prov:Activity`, and a `bdqffdq:Mechanism` (or an agent operating a mechanism) may be represented as a `prov:Agent`. The relationships between these entities can be represented using PROV properties such as `prov:wasGeneratedBy`, `prov:used`, and `prov:wasAssociatedWith`.
 
-A `bdqffdq:Response` [bdqffdq:Response](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#response> "A bdqffdq:ReportConcept produced by a bdqffdq:Implementation expressing a statement about data quality resulting from the application of the logic of a bdqffdq:Specification to a bdqffdq:DataResource.") produced by a Test can be related to PROV-O through the use of `prov:wasGeneratedBy` to relate a `bdqffdq:Response` to the `prov:Activity` that produced it, and through the use of `prov:used` to relate that `prov:Activity` to the `bdqffdq:Specification` [bdqffdq:Specification](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#specification> "A specific statement about how to evaluate a bdqffdq:DataQualityNeed.") that it used. This allows the provenance of a `bdqffdq:Response` to be traced back to the particular Test specification that was executed and the software mechanism that executed it, with the ability to add additional metadata about the provenance beyond the scope of the Fitness For Use Framework ontology.
+A `bdqffdq:Response` produced by a Test can be related to PROV-O through the use of `prov:wasGeneratedBy` to relate a `bdqffdq:Response` to the `prov:Activity` that produced it, and through the use of `prov:used` to relate that `prov:Activity` to the `bdqffdq:Specification` that it used. This allows the provenance of a `bdqffdq:Response` to be traced back to the particular Test specification that was executed and the software mechanism that executed it, with the ability to add additional metadata about the provenance beyond the scope of the Fitness For Use Framework ontology.
 
 The above is intended only as a simple exploration of how some of the core concepts of the Fitness For Use Framework could be related to PROV-O.
 
@@ -602,7 +602,7 @@ The W3C [Data Quality Vocabulary](https://www.w3.org/TR/vocab-dq/) (DQV) (Albert
 
 The W3C Data Quality Vocabulary can be used in conjunction with the `bdqffdq:` and `bdqtest:` vocabularies to provide metadata describing the quality of some `bdqffdq:DataResource` as asserted in a `bdqffdq:DataQualityReport`.
 
-The W3C Data Quality Vocabulary defines (mostly by reuse of `ldqd:` terms) a set of data quality dimensions. The `dqv:Dimension` class is [defined](https://www.w3.org/TR/vocab-dqv/#dqv:Dimension), in part, as "Represents criteria relevant for assessing quality". This concept is similar to (skos:broader than) `bdqffdq:DataQualityDimension` [bdqffdq:DataQualityDimension](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#dataqualitydimension> "An aspect of data quality."). See Section [2.1 Mapping to DQV Dimension (non-normative)](../../list/bdqdim/index.md#21-mapping-to-dqv-dimension-non-normative) in the [bdqdim: term list](../../list/bdqdim/index.md) document for potential mappings.
+The W3C Data Quality Vocabulary defines (mostly by reuse of `ldqd:` terms) a set of data quality dimensions. The `dqv:Dimension` class is [defined](https://www.w3.org/TR/vocab-dqv/#dqv:Dimension), in part, as "Represents criteria relevant for assessing quality". This concept is similar to (skos:broader than) `bdqffdq:DataQualityDimension`. See Section [2.1 Mapping to DQV Dimension (non-normative)](../../list/bdqdim/index.md#21-mapping-to-dqv-dimension-non-normative) in the [bdqdim: term list](../../list/bdqdim/index.md) document for potential mappings.
 
 There are at least three ways in which `bdqffdq:Responses` could be related to DQV data quality metadata representations.
 
@@ -610,9 +610,9 @@ Supported by the generality and flexibility of DQV and its extension of the Web 
 
 At a high level, a `bdqffdq:DataQualityReport` containing `bdqffdq:Responses` from (specific, `bdqtest:`) `bdqffdq:MultiRecord` `bdqffdq:Measures` that reported COMPLIANT results could produce a DQV `dqv:QualityCertificate` related to a `bdqffdq:DataResource` modeled as a `dcat:Dataset` through a `dqv:QualityAnnotation` that also asserts that the `dcat:Dataset` `dcterms:conformsTo` a `dcterms:Standard` modeling a `bdqffdq:UseCase`.
 
-At a lower level, `bdqffdq:MultiRecord` `bdqffdq:Measures` that produce numeric results could be modeled as a DQV quality metric (`dqv:Metric`). A `bdqffdq:MeasureResponse` resulting from such a `bdqffdq:MultiRecord` `bdqffdq:Measure` [bdqffdq:Measure](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#measure> "A bdqffdq:DataQualityNeed that expresses how the fitness of data for some use may be measured.") could be modeled as a `dqv:QualityMeasurement`.
+At a lower level, `bdqffdq:MultiRecord` `bdqffdq:Measures` that produce numeric results could be modeled as a DQV quality metric (`dqv:Metric`). A `bdqffdq:MeasureResponse` resulting from such a `bdqffdq:MultiRecord` `bdqffdq:Measure` could be modeled as a `dqv:QualityMeasurement`.
 
-As the definition of `dqv:Metric` includes the phrase "a value in a given unit", it is not clear whether `bdqffdq:Validation` [bdqffdq:Validation](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#validation> "A bdqffdq:DataQualityNeed that expresses how data may be evaluated for fitness for use.") and `bdqffdq:Issue` [bdqffdq:Issue](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#issue> "A bdqffdq:DataQualityNeed that expresses how quality problems may be identified in data.") Tests that produce categorical results, or `bdqffdq:Amendment` [bdqffdq:Amendment](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#amendment> "A bdqffdq:DataQualityNeed that expresses how proposals may be made to improve the fitness for use of data.") Tests that propose changes to data, can be modeled as DQV `dqv:Metric`.
+As the definition of `dqv:Metric` includes the phrase "a value in a given unit", it is not clear whether `bdqffdq:Validation` and `bdqffdq:Issue` Tests that produce categorical results, or `bdqffdq:Amendment` Tests that propose changes to data, can be modeled as DQV `dqv:Metric`.
 
 #### 2.7.4 Publishing dataset metadata with DCAT (non-normative)
 
@@ -630,7 +630,7 @@ Future BDQ Tests are expected to apply to `bdqffdq:Information Elements` drawn f
 
 ## 3 Use of Ontology Terms (normative) 
 
-This guidance describes the use of the [Framework Ontology](</home/mole/git/bdq/tg2/_review/index.md#framework-ontology> "A model of the Framework (Veiga 2016, Veiga et al. 2017) as an OWL ontology, present as the `bdqffdq:` vocabulary in the BDQ standard.") (the Fitness for Use `bdqffdq:` vocabulary terms) in an RDF context. This guidance MAY be used to develop models of the Fitness For Use Framework in more constrained forms, including UML object models, information models, classes in a programming language, or database schemas.
+This guidance describes the use of the Framework Ontology (the Fitness for Use `bdqffdq:` vocabulary terms) in an RDF context. This guidance MAY be used to develop models of the Fitness For Use Framework in more constrained forms, including UML object models, information models, classes in a programming language, or database schemas.
 
 See also the [Use of Terms (normative)](../../list/bdqffdq/index.md#2-use-of-terms-normative) in the `bdqffdq:` term-list document.
 
@@ -653,17 +653,17 @@ Section [3.2 Identifying the Test that produced a Response (normative)](#32-iden
 
 Each description of a data quality Test SHOULD include the properties and related instances described in the following paragraphs.
 
-Each instance of `bdqffdq:UseCase` SHOULD have one `bdqffdq:hasFitnessRequirements` [bdqffdq:hasFitnessRequirements](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#hasfitnessrequirements> "The property of a bdqffdq:UseCase that provides text listing the qualities that data must have to be fit for a given use.") datatype property enumerating the general fitness requirements of data for that use.
+Each instance of `bdqffdq:UseCase` SHOULD have one `bdqffdq:hasFitnessRequirements` datatype property enumerating the general fitness requirements of data for that use.
 
-The `bdqffdq:hasUseCase` [bdqffdq:hasUseCase](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#hasusecase> "Relates a bdqffdq:Policy to a bdqffdq:UseCase.") object property SHOULD have an individual with a type that is a subclass of `bdqffdq:Policy` [bdqffdq:Policy](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#policy> "The set of bdqffdq:DataQualityNeeds for a bdqffdq:UseCase.") as its subject. 
+The `bdqffdq:hasUseCase` object property SHOULD have an individual with a type that is a subclass of `bdqffdq:Policy` as its subject. 
 
 The `bdqffdq:hasUseCase` object property MAY have an individual from the `bdqval:` vocabulary that represents a `bdqffdq:UseCase` as its object. 
 
 An axiom types the range of `bdqffdq:hasUseCase` as a `bdqffdq:UseCase`. 
 
-The `bdqffdq:includedInPolicy` [bdqffdq:includedInPolicy](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#includedinpolicy> "Assserts that a bdqffdq:DataQualityNeed is part of a bdqffdq:Policy.") object property SHOULD have an individual that is a subclass of `bdqffdq:Policy` as its subject.
+The `bdqffdq:includedInPolicy` object property SHOULD have an individual that is a subclass of `bdqffdq:Policy` as its subject.
 
-The `bdqffdq:includedInPolicy` object property SHOULD have an individual that is a subclass of `bdqffdq:DataQualityNeed` [bdqffdq:DataQualityNeed](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#dataqualityneed> "A bdqffdq:NeedConcept that expresses what bdqffdq:Responses may be made about data with respect to fitness for use.") as its object.
+The `bdqffdq:includedInPolicy` object property SHOULD have an individual that is a subclass of `bdqffdq:DataQualityNeed` as its object.
 
 The four subclasses of `bdqffdq:DataQualityNeed` are `bdqffdq:Validation`, `bdqffdq:Issue`, `bdqffdq:Measure` and `bdqffdq:Amendment`.
 
@@ -676,25 +676,25 @@ Each instance of a subclass of a `bdqffdq:DataQualityNeed` SHOULD have an `rdfs:
 The `rdfs:label` of the instance of the subclass of `bdqffdq:DataQualityNeed` SHOULD be used by humans to identify Tests.
 
 Labels of instances of subclasses of `bdqffdq:DataQualityNeed` SHOULD follow the following naming conventions:
-* Tests that have a `bdqffdq:hasResourceType` [bdqffdq:hasResourceType](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#hasresourcetype> "The bdqffdq:ResourceType to which a bdqffdq:DataQualityNeed applies.") of `bdqffdq:SingleRecord` SHOULD have an `rdfs:label` in all upper case as the first word, and a representation of the `bdqffdq:AbstractInformationElement` [bdqffdq:AbstractInformationElement](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#abstractinformationelement> "A bdqffdq:InformationElement described in abstract terms and not linked with any concrete terms.") as a single word in all upper case as the second word, in the form TESTTYPE_INFORMATIONELEMENT_EVALUATION or TESTTYPE_INFORMATIONELEMENT_ACTION_INFORMATIONELEMENT. 
+* Tests that have a `bdqffdq:hasResourceType` of `bdqffdq:SingleRecord` SHOULD have an `rdfs:label` in all upper case as the first word, and a representation of the `bdqffdq:AbstractInformationElement` as a single word in all upper case as the second word, in the form TESTTYPE_INFORMATIONELEMENT_EVALUATION or TESTTYPE_INFORMATIONELEMENT_ACTION_INFORMATIONELEMENT. 
 * Tests that have a `bdqffdq:hasResourceType` of `bdqffdq:MultiRecord` SHOULD have "MULTIRECORD_" as the first element in their `rdfs:label`, and MAY follow the pattern MULTIRECORD_TESTTYPE_COUNT_RESULT_INFORMATIONELEMENT_EVALUATION, or MULTIRECORD_TESTTYPE_QA_INFORMATIONELEMENT_EVALUATION. 
 
 
 Each instance of a subclass of `bdqffdq:DataQualityNeed` MUST have exactly one `bdqffdq:hasResourceType` object property linking it to a `bdqffdq:SingleRecord` or a `bdqffdq:MultiRecord`.
 
-The `bdqffdq:hasCriterion` [bdqffdq:hasCriterion](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#hascriterion> "The bdqffdq:Criterion under which a bdqffdq:Validation or bdqffdq:Issue assesses for data quality.") object property SHOULD have an individual with a type that is a `bdqffdq:Validation` or a `bdqffdq:Issue` as its subject.
+The `bdqffdq:hasCriterion` object property SHOULD have an individual with a type that is a `bdqffdq:Validation` or a `bdqffdq:Issue` as its subject.
 
 The `bdqffdq:hasCriterion` object property MAY have an individual from the `bdqcrit:` vocabulary as its object.
 
-An axiom types the range of `bdqffdq:hasCriterion` as a `bdqffdq:Criterion` [bdqffdq:Criterion](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#criterion> "Rule against which data are evaluated for conformance to quality bdqffdq:Criteria.").
+An axiom types the range of `bdqffdq:hasCriterion` as a `bdqffdq:Criterion`.
 
-The `bdqffdq:hasEnhancement` [bdqffdq:hasEnhancement](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#hasenhancement> "The bdqffdq:Enhancement that describes how a bdqffdq:Amendment may propose changes to improve data quality.") object property SHOULD have an individual with a type that is a `bdqffdq:Amendment` as its subject.
+The `bdqffdq:hasEnhancement` object property SHOULD have an individual with a type that is a `bdqffdq:Amendment` as its subject.
 
 The `bdqffdq:hasEnhancement` object property MAY have an individual from the `bdqenh:` vocabulary as its object.
 
-An axiom types the range of `bdqffdq:hasEnhancement` as a `bdqffdq:Enhancement` [bdqffdq:Enhancement](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#enhancement> "Description of a means by which data could be improved.").
+An axiom types the range of `bdqffdq:hasEnhancement` as a `bdqffdq:Enhancement`.
 
-The `bdqffdq:hasDataQualityDimension` [bdqffdq:hasDataQualityDimension](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#hasdataqualitydimension> "The bdqffdq:DataQualityDimension to which a bdqffdq:DataQualityNeed applies.") object property SHOULD have an individual with a type that is a subclass of `bdqffdq:DataQualityNeed` as its subject.
+The `bdqffdq:hasDataQualityDimension` object property SHOULD have an individual with a type that is a subclass of `bdqffdq:DataQualityNeed` as its subject.
 
 The `bdqffdq:hasDataQualityDimension` object property MAY have an individual in the `bdqdim:` vocabulary is its object. 
 
@@ -708,15 +708,15 @@ Each individual instance of a `bdqffdq:Measure` SHOULD have exactly one `bdqffdq
 
 Each individual instance of a `bdqffdq:Amendment` SHOULD have exactly one `bdqffdq:hasDataQualityDimension` property and exactly one `bdqffdq:Enhancement` property.
 
-A subproperty of the `bdqffdq:hasInformationElement` [bdqffdq:hasInformationElement](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#hasinformationelement> "Describes the bdqffdq:InformationElements assessed by a bdqffdq:DataQualityNeed.") object property SHOULD have an individual that is a subclass of `bdqffdq:InformationElement` [bdqffdq:InformationElement](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#informationelement> "A portion of data with which a bdqffdq:DataQualityNeed is concerned.") as its object.
+A subproperty of the `bdqffdq:hasInformationElement` object property SHOULD have an individual that is a subclass of `bdqffdq:InformationElement` as its object.
 
 A subproperty of the `bdqffdq:hasInformationElement` object property SHOULD have an individual that is a subclass of `bdqffdq:DataQualityNeed` as its subject.
 
-Each instance of a subclass of `bdqffdq:DataQualityNeed` SHOULD have exactly one `bdqffdq:hasActedUponInformationElement` [bdqffdq:hasActedUponInformationElement](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#hasacteduponinformationelement> "Describes the bdqffdq:ActedUpon bdqffdq:InformationElements assessed by a bdqffdq:DataQualityNeed about which bdqffdq:Responses arising from the bdqffdq:DataQualityNeed would apply.") property linking it to a `bdqffdq:ActedUpon` [bdqffdq:ActedUpon](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#actedupon> "A bdqffdq:InformationElement, expressed in concrete terms, about which a bdqffdq:DataQualityNeed expresses bdqffdq:Responses about the data quality in that bdqffdq:InformationElement."). 
+Each instance of a subclass of `bdqffdq:DataQualityNeed` SHOULD have exactly one `bdqffdq:hasActedUponInformationElement` property linking it to a `bdqffdq:ActedUpon`. 
 
-Each instance of `bdqffdq:ActedUpon` SHOULD have one to many `bdqffdq:composedOf` [bdqffdq:composedOf](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#composedof> "Specific vocabulary term that comprises a bdqffdq:InformationElement that is not a bdqffdq:AbstractInformationElement.") object properties linking it to specific `Information Elements`.
+Each instance of `bdqffdq:ActedUpon` SHOULD have one to many `bdqffdq:composedOf` object properties linking it to specific `Information Elements`.
 
-Each instance of a subclass of `bdqffdq:DataQualityNeed` MAY have exactly one `bdqffdq:hasConsultedInformationElement` [bdqffdq:hasConsultedInformationElement](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#hasconsultedinformationelement> "Describes the bdqffdq:InformationElements assessed by a bdqffdq:DataQualityNeed in order to make bdqffdq:Responses concerning bdqffdq:ActedUpon bdqffdq:InformationElements.") property linking it to a `bdqffdq:Consulted` [bdqffdq:Consulted](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#consulted> "A bdqffdq:InformationElement, expressed in concrete terms, about which a bdqffdq:DataQualityNeed examines in order to expresses bdqffdq:Responses about the data quality in another bdqffdq:InformationElement.").
+Each instance of a subclass of `bdqffdq:DataQualityNeed` MAY have exactly one `bdqffdq:hasConsultedInformationElement` property linking it to a `bdqffdq:Consulted`.
 
 Each instance of `bdqffdq:Consulted` SHOULD have one to many `bdqffdq:composedOf` object properties linking it to specific `Information Elements`.
 
@@ -728,9 +728,9 @@ Each instance of `bdqffdq:AbstractInformationElement` SHOULD have `rdfs:label` a
 
 Each instance of `bdqffdq:Measure` with a `bdqffdq:hasResourceType` of `bdqffdq:MultiRecord` that aggregates the `Responses` produced by one or more other Tests (e.g., to return `COMPLETE`/`NOT_COMPLETE` for `Quality Assurance`, or to return a numeric count or other metric for `Quality Control`) SHOULD have a `bdqffdq:hasActedUponInformationElement` relationship to an instance of `bdqffdq:ActedUpon` that represents the aggregated report inputs to that `Measure`.
 
-When a `Multi Record` `Measure` acts on aggregated `Responses` from other Tests, the associated `bdqffdq:ActedUpon` instance SHOULD include `bdqffdq:composedOf` with `bdqval:AggregatedTestResponseOutcomes` [bdqval:AggregatedTestResponseOutcomes](</home/mole/git/bdq/tg2/_review/docs/list/bdqval/index.md#aggregatedtestresponseoutcomes> "An abstract InformationElement representing the set of outcomes (Response instances with their Response.status and Response.result values) produced by running a particular SingleRecord Test across the members of a Multi…") to indicate that the acted-upon data are aggregated `Response` outcomes in a `Data Quality Report`, rather than raw source-data terms.
+When a `Multi Record` `Measure` acts on aggregated `Responses` from other Tests, the associated `bdqffdq:ActedUpon` instance SHOULD include `bdqffdq:composedOf` with `bdqval:AggregatedTestResponseOutcomes` to indicate that the acted-upon data are aggregated `Response` outcomes in a `Data Quality Report`, rather than raw source-data terms.
 
-In this usage pattern, the associated `bdqffdq:ActedUpon` instance SHOULD include one to many `bdqffdq:aggregatesResponsesFrom` [bdqffdq:aggregatesResponsesFrom](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#aggregatesresponsesfrom> "Relates an ActedUpon Information Element (typically used by a MultiRecord Measure) to the DataQualityNeed (Validation, Issue, Measure, or Amendment) whose Responses in a DataQualityReport are aggregated as inputs to tha…") object properties linking it to the instance(s) of `bdqffdq:DataQualityNeed` whose `Responses` are aggregated as inputs to that `Multi Record` `Measure`.
+In this usage pattern, the associated `bdqffdq:ActedUpon` instance SHOULD include one to many `bdqffdq:aggregatesResponsesFrom` object properties linking it to the instance(s) of `bdqffdq:DataQualityNeed` whose `Responses` are aggregated as inputs to that `Multi Record` `Measure`.
 
 The `bdqffdq:aggregatesResponsesFrom` property is intended to be used in the context of `Multi Record` `Measures` that aggregate `Responses`; however, consistent with the open world design of the `bdqffdq:` ontology and the limited use of global axioms, the ontology does not constrain the subject of `bdqffdq:aggregatesResponsesFrom` to be only a `bdqffdq:Measure` or only an `bdqffdq:ActedUpon`, and this document provides the normative pattern for its intended use.
 
@@ -766,25 +766,25 @@ bdqtest:388e74b3-2e18-4d78-8112-3142d1177e25-2025-03-07 a bdqffdq:Measure ;
 
 Each description of a data quality Test SHOULD include the properties and related instances given below.
 
-The `bdqffdq:forValidation` [bdqffdq:forValidation](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#forvalidation> "Relates a bdqffdq:ValidationMethod to a bdqffdq:Validation.") object property SHOULD have an individual with a type that is a subclass of `bdqffdq:ValidationMethod` [bdqffdq:ValidationMethod](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#validationmethod> "A data quality bdqffdq:SolutionsConcept that relates a bdqffdq:Validation to its bdqffdq:Specifications.") as its subject.
+The `bdqffdq:forValidation` object property SHOULD have an individual with a type that is a subclass of `bdqffdq:ValidationMethod` as its subject.
 
 An axiom places an `owl:restriction` on the object of the `bdqffdq:forValidation` object property as a `bdqffdq:Validation`.
 
 Each `bdqffdq:Validation` method SHOULD have exactly one `bdqffdq:forValidation` object property.
 
-The `bdqffdq:forAmendment` [bdqffdq:forAmendment](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#foramendment> "Relates a bdqffdq:AmendmentMethod to a bdqffdq:Amendment.") object property SHOULD have an individual with a type that is a subclass of `bdqffdq:AmendmentMethod` [bdqffdq:AmendmentMethod](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#amendmentmethod> "A data quality bdqffdq:SolutionsConcept that relates a bdqffdq:Amendment to its bdqffdq:Specifications.") as its subject.
+The `bdqffdq:forAmendment` object property SHOULD have an individual with a type that is a subclass of `bdqffdq:AmendmentMethod` as its subject.
 
 An axiom places an `owl:restriction` on the object of the `bdqffdq:forAmendment` object property as a `bdqffdq:Amendment`.
 
 Each `bdqffdq:Amendment` method SHOULD have exactly one `bdqffdq:forAmendment` object property.
 
-The `bdqffdq:forMeasure` [bdqffdq:forMeasure](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#formeasure> "Relates a bdqffdq:MeasurementMethod to a bdqffdq:Measure.") object property SHOULD have an individual with a type that is a subclass of `bdqffdq:MeasureMethod` as its subject.
+The `bdqffdq:forMeasure` object property SHOULD have an individual with a type that is a subclass of `bdqffdq:MeasureMethod` as its subject.
 
 An axiom places an `owl:restriction` on the object of the `bdqffdq:forMeasure` object property as a `bdqffdq:Measure`.
 
 Each `bdqffdq:Measure` method SHOULD have exactly one `bdqffdq:forMeasure` object property.
 
-The `bdqffdq:forIssue` [bdqffdq:forIssue](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#forissue> "Relates a bdqffdq:IssueMethod to a bdqffdq:Issue.") object property SHOULD have an individual with a type that is a subclass of `bdqffdq:IssueMethod` [bdqffdq:IssueMethod](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#issuemethod> "A data quality bdqffdq:SolutionsConcept that relates a bdqffdq:Issue to its bdqffdq:Specifications.") as its subject.
+The `bdqffdq:forIssue` object property SHOULD have an individual with a type that is a subclass of `bdqffdq:IssueMethod` as its subject.
 
 An axiom places an `owl:restriction` on the object of the `bdqffdq:forIssue` object property as a `bdqffdq:Issue`.
 
@@ -794,25 +794,25 @@ Each `bdqffdq:Issue` method SHOULD have exactly one `bdqffdq:forIssue` object pr
 
 Each description of a data quality Test SHOULD include the following properties and related instances.
 
-The `bdqffdq:hasSpecification` [bdqffdq:hasSpecification](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#hasspecification> "Relates a bdqffdq:Method to a bdqffdq:Specification.") object property SHOULD have an instance of a subclass of `bdqffdq:DataQualityMethod` [bdqffdq:DataQualityMethod](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#dataqualitymethod> "A bdqffdq:SolutionsConcept that relates a bdqffdq:DataQualityNeed to a bdqffdq:Specification.") as its subject.
+The `bdqffdq:hasSpecification` object property SHOULD have an instance of a subclass of `bdqffdq:DataQualityMethod` as its subject.
 
 An axiom places an `owl:restriction` on the object of the `bdqffdq:hasSpecification` object property as a `bdqffdq:Specification`.
 
-An instance of `bdqffdq:Specification` SHOULD be the object of exactly one `bdqffdq:hasSpecification` property linking it to an instance of a subclass of `bdqffdq:DataQualityMethod`, which SHOULD be the subject of exactly one subproperty of a `bdqffdq:forDataQualityNeed` [bdqffdq:forDataQualityNeed](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#fordataqualityneed> "Category of properties that relates a bdqffdq:DataQualityNeed to specific bdqffdq:Methods.") property linking it to a subclass of `bdqffdq:DataQualityNeed`.
+An instance of `bdqffdq:Specification` SHOULD be the object of exactly one `bdqffdq:hasSpecification` property linking it to an instance of a subclass of `bdqffdq:DataQualityMethod`, which SHOULD be the subject of exactly one subproperty of a `bdqffdq:forDataQualityNeed` property linking it to a subclass of `bdqffdq:DataQualityNeed`.
 
-The `bdqffdq:hasArgument` [bdqffdq:hasArgument](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#hasargument> "Relates a bdqffdq:Specification to a bdqffdq:Argument") object property SHOULD have a `bdqffdq:Specification` as its subject.
+The `bdqffdq:hasArgument` object property SHOULD have a `bdqffdq:Specification` as its subject.
 
-An axiom types the object of the `bdqffdq:hasArgument` object as a `bdqffdq:Argument` [bdqffdq:Argument](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#argument> "A value that, when provided to a Test bdqffdq:Specification to replace a bdqffdq:Parameter changes the behavior of the Test in a defined manner.").
+An axiom types the object of the `bdqffdq:hasArgument` object as a `bdqffdq:Argument`.
 
-Each instance of `bdqffdq:Argument` SHOULD have exactly one `bdqffdq:hasArgumentValue` [bdqffdq:hasArgumentValue](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#hasargumentvalue> "The value of a bdqffdq:Argument that is used in a bdqffdq:Specification to replace a Formal Parameter to determine the behavior of the bdqffdq:Specification.") literal providing the value of the argument that replaces the `bdqffdq:Parameter` [bdqffdq:Parameter](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#parameter> "A placeholder for a value that, when provided to a Test bdqffdq:Specification changes the behavior of the Test in a defined manner.") in the `bdqffdq:hasExpectedResponse` [bdqffdq:hasExpectedResponse](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#hasexpectedresponse> "Text describing the logic to be followed by a bdqffdq:Implementation of a bdqffdq:Specification specifying the values of bdqffdq:ResponseStatus and bdqffdq:ResponseResults that should be produced from the evaluation of…") of the `bdqffdq:Specification`. 
+Each instance of `bdqffdq:Argument` SHOULD have exactly one `bdqffdq:hasArgumentValue` literal providing the value of the argument that replaces the `bdqffdq:Parameter` in the `bdqffdq:hasExpectedResponse` of the `bdqffdq:Specification`. 
 
-Each instance of `bdqffdq:Argument` SHOULD have exactly one `bdqffdq:hasParameter` [bdqffdq:hasParameter](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#hasparameter> "Relates a bdqffdq:Argument to a bdqffdq:Parameter.") object property that denotes the parameter within the `bdqffdq:hasExpectedResponse` that is to be replaced by the value of the `bdqffdq:hasArgumentValue`. 
+Each instance of `bdqffdq:Argument` SHOULD have exactly one `bdqffdq:hasParameter` object property that denotes the parameter within the `bdqffdq:hasExpectedResponse` that is to be replaced by the value of the `bdqffdq:hasArgumentValue`. 
 
 Each instance of `bdqffdq:Argument` SHOULD be related to exactly one instance of a `bdqffdq:Specification` with the `bdqffdq:hasArgument` object property.
 
 Each instance of a `bdqffdq:Specification` MAY have zero to many `bdqffdq:hasArgument` object properties relating it to zero to many `bdqffdq:Argument` instances.
 
-Each instance of a `bdqffdq:Specification` with a `bdqffdq:hasAuthoritiesDefaults` [bdqffdq:hasAuthoritiesDefaults](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#hasauthoritiesdefaults> "Text describing bdqval:sourceAuthorities and bdqffdq:Parameters with their default values to attach to a bdqffdq:Specification to further specify the behavior described in the bdqffdq:hasExpectedResponse.") value that references at least one parameter MUST have a corresponding `bdqffdq:hasArgument` object property. The instances of `bdqffdq:Argument` related through these `bdqffdq:hasArgument` object properties SHOULD have appropriate `bdqffdq:hasArgumentValue` and `bdqffdq:hasParameter` triples to express the actual and formal parameters for the `bdqffdq:Specification` instance.
+Each instance of a `bdqffdq:Specification` with a `bdqffdq:hasAuthoritiesDefaults` value that references at least one parameter MUST have a corresponding `bdqffdq:hasArgument` object property. The instances of `bdqffdq:Argument` related through these `bdqffdq:hasArgument` object properties SHOULD have appropriate `bdqffdq:hasArgumentValue` and `bdqffdq:hasParameter` triples to express the actual and formal parameters for the `bdqffdq:Specification` instance.
 
 The `bdqffdq:hasParameter` object property SHOULD have a `bdqffdq:Argument` as its subject.
 
@@ -828,7 +828,7 @@ An axiom places an `owl:restriction` on the object of the `bdqffdq:usesSpecifica
 
 Each `bdqffdq:Implementation` SHOULD have one and only one `bdqffdq:usesSpecification` object property.
 
-The `bdqffdq:implementedBy` [bdqffdq:implementedBy](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#implementedby> "The bdqffdq:Mechanism that provides a bdqffdq:Implementation") object property SHOULD have a `bdqffdq:Implementation` as its subject.
+The `bdqffdq:implementedBy` object property SHOULD have a `bdqffdq:Implementation` as its subject.
 
 An axiom places an `owl:restriction` on the object of the `bdqffdq:implementedBy` object property as a `bdqffdq:Mechanism`.
 
@@ -854,7 +854,7 @@ Each instance of a `bdqffdq:Response` SHOULD be the object of exactly one `bdqff
 
 Following the object properties from an instance of a `bdqffdq:Response` to an instance of a subclass of a `bdqffdq:DataQualityNeed` SHOULD identify one and only one instance of a subclass of a `bdqffdq:DataQualityNeed` for a single instance of a `bdqffdq:Response`. If this condition is not met, it is not possible to tell which Test with which `Parameter` argument values produced the `Response`.
 
-For a `bdqffdq:ValidationResponse` [bdqffdq:ValidationResponse](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#validationresponse> "A bdqffdq:Response expressing the result of a bdqffdq:Implementation validating compliance with a particular bdqffdq:DataQualityNeed in a particular bdqffdq:DataResource."), it SHOULD be possible to trace a single path to the `bdqffdq:Validation` that produced it, via one-to-one links:
+For a `bdqffdq:ValidationResponse`, it SHOULD be possible to trace a single path to the `bdqffdq:Validation` that produced it, via one-to-one links:
 - Each `bdqffdq:ValidationResponse`
   - SHOULD be the object of exactly one `bdqffdq:producesResponse` triple from an `bdqffdq:Implementation`.
 - That `bdqffdq:Implementation`
@@ -864,7 +864,7 @@ For a `bdqffdq:ValidationResponse` [bdqffdq:ValidationResponse](</home/mole/git/
 - That `bdqffdq:ValidationMethod`
   - SHOULD have exactly one `bdqffdq:forValidation` triple to a `bdqffdq:Validation`.
 
-For a `bdqffdq:IssueResponse` [bdqffdq:IssueResponse](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#issueresponse> "A bdqffdq:Response expressing the result of a bdqffdq:Implementation evaluating a bdqffdq:Issue for a particular bdqffdq:DataQualityNeed in a particular bdqffdq:DataResource."), it SHOULD be possible to trace a single path to the `bdqffdq:Issue` that produced it, via one-to-one links:
+For a `bdqffdq:IssueResponse`, it SHOULD be possible to trace a single path to the `bdqffdq:Issue` that produced it, via one-to-one links:
 - Each `bdqffdq:IssueResponse`
   - SHOULD be the object of exactly one `bdqffdq:producesResponse` triple from an `bdqffdq:Implementation`.
 - That `bdqffdq:Implementation`
@@ -874,17 +874,17 @@ For a `bdqffdq:IssueResponse` [bdqffdq:IssueResponse](</home/mole/git/bdq/tg2/_r
 - That `bdqffdq:IssueMethod`
   - SHOULD have exactly one `bdqffdq:forIssue` triple to a `bdqffdq:Issue`.
 
-For a `bdqffdq:MeasurementResponse` [bdqffdq:MeasurementResponse](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#measurementresponse> "A bdqffdq:Response expressing the result of a bdqffdq:Implementation measuring a particular bdqffdq:DataQualityNeed in a particular bdqffdq:DataResource."), it SHOULD be possible to trace a single path to the `bdqffdq:Measurement` that produced it, via one-to-one links:
+For a `bdqffdq:MeasurementResponse`, it SHOULD be possible to trace a single path to the `bdqffdq:Measurement` that produced it, via one-to-one links:
 - Each `bdqffdq:MeasurementResponse`
   - SHOULD be the object of exactly one `bdqffdq:producesResponse` triple from an `bdqffdq:Implementation`.
 - That `bdqffdq:Implementation`
   - SHOULD have exactly one `bdqffdq:usesSpecification` triple to a `bdqffdq:Specification`.
 - That `bdqffdq:Specification`
-  - SHOULD be the object of exactly one `bdqffdq:hasSpecification` triple from a `bdqffdq:MeasurementMethod` [bdqffdq:MeasurementMethod](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#measurementmethod> "A data quality bdqffdq:SolutionsConcept that relates a bdqffdq:Measure to its bdqffdq:Specifications.").
+  - SHOULD be the object of exactly one `bdqffdq:hasSpecification` triple from a `bdqffdq:MeasurementMethod`.
 - That `bdqffdq:MeasurementMethod`
   - SHOULD have exactly one `bdqffdq:forMeasure` triple to a `bdqffdq:Measurement`.
 
-For a `bdqffdq:AmendmentResponse` [bdqffdq:AmendmentResponse](</home/mole/git/bdq/tg2/_review/docs/list/bdqffdq/index.md#amendmentresponse> "A bdqffdq:Response expressing the result of a bdqffdq:Implementation evaluating a bdqffdq:Amendment supporting a particular bdqffdq:DataQualityNeed to improve a particular bdqffdq:DataResource."), it SHOULD be possible to trace a single path to the `bdqffdq:Amendment` that produced it, via one-to-one links:
+For a `bdqffdq:AmendmentResponse`, it SHOULD be possible to trace a single path to the `bdqffdq:Amendment` that produced it, via one-to-one links:
 - Each `bdqffdq:AmendmentResponse`
   - SHOULD be the object of exactly one `bdqffdq:producesResponse` triple from an `bdqffdq:Implementation`.
 - That `bdqffdq:Implementation`
@@ -2029,7 +2029,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 #### hasArgumentValue
 
 - Name: [bdqffdq:hasArgumentValue](../../list/bdqffdq/index.md#hasArgumentValue)
-- Definition: The value of a bdqffdq:Argument that is used in a bdqffdq:Specification to replace a [Formal Parameter](</home/mole/git/bdq/tg2/_review/index.md#formal-parameter> "A placeholder defined in the function or method signature. It represents the input that the function expects. In the function f(x) = x^2, x is a formal parameter of the function f. In 'VALIDATION_GENUS_FOUND', `bdqval:s…") to determine the behavior of the bdqffdq:Specification.
+- Definition: The value of a bdqffdq:Argument that is used in a bdqffdq:Specification to replace a Formal Parameter to determine the behavior of the bdqffdq:Specification.
 
 ********************
 
