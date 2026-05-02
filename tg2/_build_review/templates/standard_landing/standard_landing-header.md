@@ -508,7 +508,7 @@ The glossary of terms used in the BDQ standard includes acronyms and these terms
 | Dublin Core | [International Metadata Standard (DCMI).](https://www.dublincore.org/) | Standard | 
 |DwC | [Darwin Core](https://dwc.tdwg.org/). A Standard intended to facilitate the sharing of information about biological diversity. Host of the dwc:namespace [dwc:](http://rs.tdwg.org/dwc/terms/) | TDWG standard |
 |EPSG | European Petroleum Survey Group database contains many definitions of coordinate reference systems and coordinate transformations which may be global, regional, national, or local in application. | Geodetic Parameter Dataset |
-| EVALUATION | The third part of a standard Test name as in TESTTYPE_INFORMATIONELEMENT_EVALUATION, e.g. VALIDATION_COUNTRYCODE_STANDARD | Tests |
+| EVALUATION | The third part of a standard Test name, describing what a Test is testing, as in TESTTYPE_INFORMATIONELEMENT_EVALUATION, e.g. STANDARD in VALIDATION_COUNTRYCODE_STANDARD | Tests |
 | Formal Parameter | A placeholder defined in the function or method signature. It represents the input that the function expects. In the function f(x) = x^2, x is a formal parameter of the function f. In "VALIDATION_GENUS_FOUND", `bdqval:sourceAuthority` is a formal parameter. | bdqffdq |
 | Framework | The Fitness for Use Framework, the body of work that provides a fundamental structure for the BDQ Tests. The Fitness for Use Framework is derived from (Veiga 2016) and is the outcome of the TDWG Data Quality Task Group 1: Framework on Data Quality (Veiga et al. 2017). | bdqffdq |
 | Framework Ontology | A model of the Framework (Veiga 2016, Veiga et al. 2017) as an OWL ontology, present as the `bdqffdq:` vocabulary in the BDQ standard. | bdqffdq |
