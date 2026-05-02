@@ -29,6 +29,16 @@ When this script rewrites a file, it prepends a sentinel comment line:
 
 If the sentinel is already present in a file, that file is NOT processed again.
 
+NOTE ON ANCHORS
+===============
+Most BDQ term-list documents use anchors of the form:
+  #<prefix>_<localName>  e.g. #bdqdim_Conformance
+
+However, the bdqffdq term-list document uses anchors of the form:
+  #<localName>  e.g. #DataQualityNeed
+
+This script implements that difference.
+
 ONLY THESE FILES ARE PROCESSED
 ==============================
 - ../_review/docs/tutorial/index.md
@@ -88,10 +98,16 @@ def safe_title(s: str) -> str:
 
 def termlist_anchor(prefix: str, local_name: str) -> str:
     """
-    Anchor convention used in generated term-list docs (per draft_build-termlist.py style):
+    Return the fragment identifier used in generated term-list docs.
+
+    Most term lists use:
       bdqdim:Conformance -> #bdqdim_Conformance
-    i.e. replace ':' with '_', preserving case.
+
+    But bdqffdq uses:
+      bdqffdq:DataQualityNeed -> #DataQualityNeed
     """
+    if prefix == "bdqffdq":
+        return local_name
     return f"{prefix}_{local_name}"
 
 
@@ -514,9 +530,8 @@ def process_markdown_file(
 
             msec = SECTION_START_RE.match(line.rstrip("\n"))
             if msec:
-                heading_marks = msec.group(1)
                 heading_text = msec.group(2).strip()
-                level = len(heading_marks)
+                level = len(msec.group(1))
 
                 if SECTION2_START_RE.match(line):
                     allow_rewrites = True
@@ -551,12 +566,10 @@ def process_markdown_file(
 
     new_text = "".join(out_chunks)
 
-    # If we made no changes, don't add the sentinel.
     changed = new_text != original
     if not changed:
         return False
 
-    # Prepend sentinel comment, keeping a blank line after it for readability.
     if not new_text.startswith(AUTOGEN_SENTINEL):
         new_text = AUTOGEN_SENTINEL + "\n\n" + new_text
 
