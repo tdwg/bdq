@@ -29,16 +29,19 @@ def generate_markdown_toc(markdown_lines):
 
     for line in markdown_lines:
         if line.strip().startswith("#"):
-            level = len(line) - len(line.lstrip('##'))
-            link = markdown_heading_to_link(line)
-            if level == 2:
-                if first_top_level_seen:
-                    toc_lines.append("")  # blank line before top-level headings (except the first)
-                toc_lines.append(f"{link}")
-                first_top_level_seen = True
-            elif level > 2:
-                indent = "  " * (level-2)
-                toc_lines.append(f"{indent}- {link}")
+            # only generate a link if a space and a number follows the # characters
+            # or if the characters after the space are glossary, references, or cite
+            if re.match(r"^#+\s+(glossary|references|cite)", line.strip(), re.IGNORECASE) or re.match(r"^#+\s+\d", line.strip()):
+                level = len(line) - len(line.lstrip('##'))
+                link = markdown_heading_to_link(line)
+                if level == 2:
+                    if first_top_level_seen:
+                        toc_lines.append("")  # blank line before top-level headings (except the first)
+                    toc_lines.append(f"{link}")
+                    first_top_level_seen = True
+                elif level > 2:
+                    indent = "  " * (level-2)
+                    toc_lines.append(f"{indent}- {link}")
     return "\n".join(toc_lines)
 
 # Given a string containing a markdown heading, construct markdown for a link to that heading
