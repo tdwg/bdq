@@ -15,11 +15,11 @@ PROTECTED / DO-NOT-REWRITE AREAS
 - Fenced code blocks ```...```.
 - Markdown tables (pipe tables): contiguous runs of table lines.
 - HTML <li>...</li> blocks: contiguous region from a line containing "<li" up to a line containing "</li>".
-  (Conservative: if list items are nested/multiline, we protect the whole block.)
 
 Also:
 - Never modify existing markdown links [...](...).
 - Only first eligible occurrence per (file, term) is linked.
+- Do not rewrite inside tables or <li> blocks.
 
 ONLY THESE FILES ARE PROCESSED
 ==============================
@@ -30,13 +30,6 @@ ONLY THESE FILES ARE PROCESSED
 - ../_review/docs/guide/implementers/index.md
 - ../_review/docs/guide/bdqffdq/index.md
 - ../_review/docs/supplement/index.md
-
-Run from tg2/_build_review/:
-  python3 postprocess_autolink_terms.py --dry-run
-  python3 postprocess_autolink_terms.py
-
-Dependencies:
-  pip install rdflib
 """
 
 from __future__ import annotations
@@ -44,6 +37,7 @@ from __future__ import annotations
 import argparse
 import csv
 import html
+import os
 import re
 from dataclasses import dataclass
 from pathlib import Path
@@ -52,7 +46,6 @@ from typing import Dict, List, Optional, Tuple
 import rdflib
 from rdflib import Graph, Namespace
 from rdflib.namespace import SKOS
-
 
 # -----------------------------
 # Configuration / assumptions
@@ -63,11 +56,6 @@ BDQFFDQ = Namespace(BDQFFDQ_NS)
 
 TITLE_MAX_CHARS = 220
 TERMLIST_DOC_DIR = "list"  # under ../_review/docs/
-
-
-def ANCHOR_FN(local_name: str) -> str:
-    """Anchor convention assumption: lowercased term_localName."""
-    return local_name.lower()
 
 
 def normalize_ws(s: str) -> str:
@@ -85,6 +73,15 @@ def glossary_anchor(label: str) -> str:
     a = re.sub(r"[^a-z0-9]+", "-", label.lower())
     a = re.sub(r"-{2,}", "-", a).strip("-")
     return a
+
+
+def termlist_anchor(prefix: str, local_name: str) -> str:
+    """
+    Anchor convention used in generated term-list docs (per draft_build-termlist.py style):
+      bdqdim:Conformance -> #bdqdim_Conformance
+    i.e. replace ':' with '_', preserving case.
+    """
+    return f"{prefix}_{local_name}"
 
 
 @dataclass(frozen=True)
@@ -117,13 +114,15 @@ def load_bdqffdq_qualified_terms(owl_path: Path) -> Dict[str, QualifiedTerm]:
         if not s.startswith(BDQFFDQ_NS):
             continue
         local = s.replace(BDQFFDQ_NS, "")
-        qname = f"bdqffdq:{local}"
+        prefix = "bdqffdq"
+        qname = f"{prefix}:{local}"
+        anchor = termlist_anchor(prefix, local)
         out[qname] = QualifiedTerm(
-            prefix="bdqffdq",
+            prefix=prefix,
             local_name=local,
             qname=qname,
             definition=safe_title(str(defn)),
-            href_from_docs_root=f"{TERMLIST_DOC_DIR}/bdqffdq/index.md#{ANCHOR_FN(local)}",
+            href_from_docs_root=f"{TERMLIST_DOC_DIR}/{prefix}/index.md#{anchor}",
         )
     return out
 
@@ -146,12 +145,13 @@ def load_term_versions_csv(csv_path: Path, prefix: str) -> Dict[str, QualifiedTe
             if not local:
                 continue
             qname = f"{prefix}:{local}"
+            anchor = termlist_anchor(prefix, local)
             out[qname] = QualifiedTerm(
                 prefix=prefix,
                 local_name=local,
                 qname=qname,
                 definition=safe_title(row.get("definition") or ""),
-                href_from_docs_root=f"{TERMLIST_DOC_DIR}/{prefix}/index.md#{ANCHOR_FN(local)}",
+                href_from_docs_root=f"{TERMLIST_DOC_DIR}/{prefix}/index.md#{anchor}",
             )
         return out
 
@@ -200,14 +200,13 @@ def load_glossary_terms_from_landing(landing_md_path: Path) -> Dict[str, Glossar
 
 FENCE_START_RE = re.compile(r"^\s*```")
 INLINE_CODE_RE = re.compile(r"`([^`\n]+)`")
-LINK_SPAN_RE = re.compile(r"\[[^\]]+\]\([^)]+\)")  # coarse "existing link" detector
+LINK_SPAN_RE = re.compile(r"\[[^\]]+\]\([^)]+\)")
 HEADING_LINE_RE = re.compile(r"^\s*#")
 SECTION2_START_RE = re.compile(r"^\s*##\s*2(?:\s|[.\-])")
 SECTION_START_RE = re.compile(r"^\s*(#+)\s+(.+?)\s*$")
 
 
 def split_fenced_blocks(md: str) -> List[Tuple[bool, str]]:
-    """Return list of (is_fenced, chunk)."""
     out: List[Tuple[bool, str]] = []
     lines = md.splitlines(keepends=True)
     in_fence = False
@@ -232,22 +231,21 @@ def split_fenced_blocks(md: str) -> List[Tuple[bool, str]]:
 
 
 def rel_href(from_file: Path, target_path: Path) -> str:
+    """
+    Return a POSIX-style relative path from the directory of from_file to target_path.
+    Critically, this must never fall back to absolute filesystem paths, because that
+    breaks links on GitHub Pages / GitHub rendering.
+    """
     from_dir = from_file.parent.resolve()
-    target_path = target_path.resolve()
-    try:
-        return str(target_path.relative_to(from_dir)).replace("\\", "/")
-    except Exception:
-        return str(target_path).replace("\\", "/")
+    target = target_path.resolve()
+    rel = os.path.relpath(str(target), start=str(from_dir))
+    return rel.replace("\\", "/")
 
-
-# -----------------------------
-# Table detection (protect tables like fenced code blocks)
-# -----------------------------
 
 def is_table_line(line: str) -> bool:
     """
-    True if line looks like part of a Markdown pipe table.
-    We protect contiguous runs of such lines.
+    Treat Markdown pipe tables as protected blocks.
+    Conservative heuristic: line contains '|' and begins or ends with '|'.
     """
     s = line.strip()
     if not s:
@@ -265,12 +263,6 @@ LI_OPEN_RE = re.compile(r"<li\b", re.IGNORECASE)
 LI_CLOSE_RE = re.compile(r"</li\s*>", re.IGNORECASE)
 
 def li_state_transition(in_li: bool, line: str) -> bool:
-    """
-    Update in_li state for current line. Conservative:
-    - if we see <li ...> we enter li-protected mode
-    - we exit after a line containing </li>
-    Nested <li> is not tracked; we protect until we see a close tag line.
-    """
     if not in_li and LI_OPEN_RE.search(line):
         return True
     if in_li and LI_CLOSE_RE.search(line):
@@ -291,9 +283,10 @@ DEFAULT_BLACKLIST: Dict[str, List[SectionSpec]] = {
     "docs/guide/bdqffdq/index.md": [
         SectionSpec(heading_text="4 Fitness For Use Framework Summary of Mathematical Formalization (normative)")
     ],
+    # keep your locally added example:
     "docs/guide/implementers/index.md": [
         SectionSpec(heading_text="8.3 Examples of the Data for Conformance Testing (non-normative)")
-    ]
+    ],
 }
 
 
@@ -303,7 +296,7 @@ def is_blacklisted_section_start(rel_path: str, heading_text: str, blacklist: Di
 
 
 # -----------------------------
-# Replacement logic
+# Rewriting
 # -----------------------------
 
 def link_vocab_first_inline_qname_per_file(
@@ -399,7 +392,6 @@ def process_markdown_file(
     in_blacklisted_section = False
     current_blacklisted_level: Optional[int] = None
 
-    # file relative path under review_root for blacklist lookup
     try:
         rel_path = str(md_file.resolve().relative_to(review_root.resolve())).replace("\\", "/")
     except Exception:
@@ -419,16 +411,14 @@ def process_markdown_file(
         in_li = False
 
         for line in lines:
-            # Update LI state first; if we're in <li> protection, do nothing.
-            # Note: if <li> and </li> on same line, li_state_transition enters then exits on same line,
-            # but we still protect this line by checking LI_OPEN_RE/LI_CLOSE_RE presence below.
+            # <li> protection
             entering_li = (not in_li) and bool(LI_OPEN_RE.search(line))
             in_li = li_state_transition(in_li, line)
             if entering_li or in_li or LI_CLOSE_RE.search(line):
                 new_lines.append(line)
                 continue
 
-            # Table protection: protect contiguous table lines
+            # table protection
             if is_table_line(line):
                 in_table = True
                 new_lines.append(line)
@@ -437,7 +427,7 @@ def process_markdown_file(
                 if in_table:
                     in_table = False
 
-            # Section/heading tracking (headings are not rewritten and they control state)
+            # heading tracking
             msec = SECTION_START_RE.match(line.rstrip("\n"))
             if msec:
                 heading_marks = msec.group(1)
@@ -457,22 +447,18 @@ def process_markdown_file(
                 new_lines.append(line)
                 continue
 
-            # Never rewrite any heading line (extra safety)
             if HEADING_LINE_RE.match(line):
                 new_lines.append(line)
                 continue
 
-            # Rule: before section 2 => no rewrites
             if not allow_rewrites:
                 new_lines.append(line)
                 continue
 
-            # Rule: blacklisted section => no rewrites
             if in_blacklisted_section:
                 new_lines.append(line)
                 continue
 
-            # Rewrite
             line2 = link_vocab_first_inline_qname_per_file(line, md_file, review_docs_root, vocab_index, seen)
             line3 = link_glossary_first_plain_text_per_file(line2, md_file, review_root, glossary_index, seen)
             new_lines.append(line3)
@@ -485,10 +471,6 @@ def process_markdown_file(
         md_file.write_text(new_text, encoding="utf-8")
     return changed
 
-
-# -----------------------------
-# Main
-# -----------------------------
 
 def main() -> int:
     ap = argparse.ArgumentParser()
@@ -518,9 +500,7 @@ def main() -> int:
     if missing:
         raise SystemExit("One or more target files do not exist:\n- " + "\n- ".join(str(p) for p in missing))
 
-    # Load vocab indices
     vocab_index: Dict[str, QualifiedTerm] = {}
-
     bdqffdq_owl = review_root / "vocabulary/bdqffdq.owl"
     if not bdqffdq_owl.exists():
         raise SystemExit(f"bdqffdq owl not found: {bdqffdq_owl}")
@@ -561,10 +541,6 @@ def main() -> int:
             print("\nDry run: no files were written.")
     else:
         print("No changes made.")
-
-    if not glossary_index:
-        print("WARNING: No glossary table parsed from ../_review/index.md.")
-        print("         Expected header: | **Label** | **Definition** | **Context** |")
 
     return 0
 
