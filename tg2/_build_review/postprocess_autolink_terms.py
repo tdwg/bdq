@@ -419,7 +419,10 @@ def link_vocab_first_inline_qname_per_file(
         href_target = review_docs_root / qt.href_from_docs_root
         href_rel = rel_href(from_file, href_target)
         seen.add(key)
-        return f"`{token}` [{qt.qname}](<{href_rel}> \"{qt.definition}\")"
+        if token.startswith(qt.qname):
+            return f"[{qt.qname}](<{href_rel}> \"{qt.definition}\")"
+        else:	
+            return f"`{token}` ([{qt.qname}](<{href_rel}> \"{qt.definition}\"))"
 
     return INLINE_CODE_RE.sub(repl, text)
 
