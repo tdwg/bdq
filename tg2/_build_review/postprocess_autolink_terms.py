@@ -128,22 +128,91 @@ def load_bdqffdq_qualified_terms(owl_path: Path) -> Dict[str, QualifiedTerm]:
 
 
 def load_term_versions_csv(csv_path: Path, prefix: str) -> Dict[str, QualifiedTerm]:
+    """
+    Load a {prefix}_term_versions.csv file and return mapping:
+      qname (e.g., bdqdim:Conformance) -> QualifiedTerm
+
+    Rules:
+    - Include only rows with status == "recommended" (case-insensitive).
+    - For any given term_localName that appears multiple times (multiple versions),
+      select ONLY the most recently issued version.
+        - Primary sort key: parsed issued date (YYYY-MM-DD).
+        - Fallback if 'issued' missing/unparseable: take the last occurrence encountered.
+
+    Required columns:
+      - term_localName
+      - definition
+      - status
+
+    Optional columns:
+      - issued
+    """
     if not csv_path.exists():
         return {}
+
+    def parse_issued(raw: str) -> Optional[Tuple[int, int, int]]:
+        raw = (raw or "").strip()
+        # expected: YYYY-MM-DD (as used across TDWG term-version files)
+        m = re.match(r"^(\d{4})-(\d{2})-(\d{2})$", raw)
+        if not m:
+            return None
+        try:
+            return int(m.group(1)), int(m.group(2)), int(m.group(3))
+        except Exception:
+            return None
 
     with csv_path.open("r", encoding="utf-8", newline="") as f:
         reader = csv.DictReader(f)
         fieldnames = reader.fieldnames or []
-        if "term_localName" not in fieldnames:
-            raise SystemExit(f"ERROR: {csv_path} missing required column 'term_localName'. Found: {fieldnames}")
-        if "definition" not in fieldnames:
-            raise SystemExit(f"ERROR: {csv_path} missing required column 'definition'. Found: {fieldnames}")
 
-        out: Dict[str, QualifiedTerm] = {}
-        for row in reader:
+        for required in ("term_localName", "definition", "status"):
+            if required not in fieldnames:
+                raise SystemExit(
+                    f"ERROR: {csv_path} missing required column '{required}'. Found: {fieldnames}"
+                )
+
+        has_issued = "issued" in fieldnames
+
+        # Track best (latest) row per local name
+        best: Dict[str, Tuple[Optional[Tuple[int, int, int]], int, Dict[str, str]]] = {}
+        # value: (issued_tuple_or_None, row_index, row_dict)
+
+        for idx, row in enumerate(reader):
+            status = (row.get("status") or "").strip().lower()
+            if status != "recommended":
+                continue
+
             local = (row.get("term_localName") or "").strip()
             if not local:
                 continue
+
+            issued_tuple = parse_issued(row.get("issued", "")) if has_issued else None
+
+            if local not in best:
+                best[local] = (issued_tuple, idx, row)
+                continue
+
+            prev_issued, prev_idx, _prev_row = best[local]
+
+            # Prefer rows with a parseable issued date over those without
+            if prev_issued is None and issued_tuple is not None:
+                best[local] = (issued_tuple, idx, row)
+                continue
+            if prev_issued is not None and issued_tuple is None:
+                continue
+
+            # If both have dates, pick the later
+            if prev_issued is not None and issued_tuple is not None:
+                if issued_tuple > prev_issued:
+                    best[local] = (issued_tuple, idx, row)
+                continue
+
+            # If neither has a date, fall back to "last occurrence wins"
+            if idx > prev_idx:
+                best[local] = (issued_tuple, idx, row)
+
+        out: Dict[str, QualifiedTerm] = {}
+        for local, (_issued, _idx, row) in best.items():
             qname = f"{prefix}:{local}"
             anchor = termlist_anchor(prefix, local)
             out[qname] = QualifiedTerm(
@@ -153,8 +222,8 @@ def load_term_versions_csv(csv_path: Path, prefix: str) -> Dict[str, QualifiedTe
                 definition=safe_title(row.get("definition") or ""),
                 href_from_docs_root=f"{TERMLIST_DOC_DIR}/{prefix}/index.md#{anchor}",
             )
-        return out
 
+        return out
 
 # -----------------------------
 # Load glossary terms from landing page table (_review/index.md)
