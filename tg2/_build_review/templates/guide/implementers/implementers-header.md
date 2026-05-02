@@ -127,7 +127,7 @@ Test implementations SHOULD be independent of how data are stored and transporte
 | bdqval:Empty | An evaluation of a value, which in the context of the evaluation, returns true if the value does not contain any characters or values other than those in the range U+0000 to U+0020, otherwise returns false. |
 | bdqval:NotEmpty |An evaluation of a value, which in the context of the evaluation, returns false if the value contains any characters or values other than those in the range U+0000 to U+0020, otherwise returns true. |
 
-See the formal definitions and usage comments of [bdqval:Empty](../../list/bdqval/index.md#bdqval_Empty) and [bdqval:NotEmpty](../../list/bdqval/index.md#bdqval_NotEmpty) terms in the [BDQ Controlled Vocabulary List of Terms](../../list/bdqval/index.md)
+See the formal definitions and usage comments of `bdqval:Empty` and `bdqval:NotEmpty` terms in the [BDQ Controlled Vocabulary List of Terms](../../list/bdqval/index.md)
 
 Data that have passed through arbitrary serializations and transformations can contain anomalies. `bdqval:Empty` is defined to allow Tests to clearly separate concerns. A `bdqffdq:InformationElement` containing invalid characters, (e.g., letters in an `Information Element` that would be expected to contain integers) or values (including string serializations of the NULL value) are `bdqval:NotEmpty` and are the concern of Tests that evaluate `bdqdim:Conformance`. Presence or absence of data is a concern for Tests evaluating `bdqdim:Completeness`.
 
