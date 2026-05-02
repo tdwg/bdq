@@ -30,6 +30,13 @@ ONLY THESE FILES ARE PROCESSED
 - ../_review/docs/guide/implementers/index.md
 - ../_review/docs/guide/bdqffdq/index.md
 - ../_review/docs/supplement/index.md
+
+Run from tg2/_build_review/:
+  python3 postprocess_autolink_terms.py --dry-run
+  python3 postprocess_autolink_terms.py
+
+Dependencies:
+  pip install rdflib
 """
 
 from __future__ import annotations
@@ -69,12 +76,6 @@ def safe_title(s: str) -> str:
     return s.replace('"', "'")
 
 
-def glossary_anchor(label: str) -> str:
-    a = re.sub(r"[^a-z0-9]+", "-", label.lower())
-    a = re.sub(r"-{2,}", "-", a).strip("-")
-    return a
-
-
 def termlist_anchor(prefix: str, local_name: str) -> str:
     """
     Anchor convention used in generated term-list docs (per draft_build-termlist.py style):
@@ -97,7 +98,7 @@ class QualifiedTerm:
 class GlossaryTerm:
     term: str
     definition: str
-    anchor: str
+    anchor: str  # anchor name as used by <a name="glossary_TERM"/>
 
 
 # -----------------------------
@@ -152,7 +153,6 @@ def load_term_versions_csv(csv_path: Path, prefix: str) -> Dict[str, QualifiedTe
 
     def parse_issued(raw: str) -> Optional[Tuple[int, int, int]]:
         raw = (raw or "").strip()
-        # expected: YYYY-MM-DD (as used across TDWG term-version files)
         m = re.match(r"^(\d{4})-(\d{2})-(\d{2})$", raw)
         if not m:
             return None
@@ -225,6 +225,7 @@ def load_term_versions_csv(csv_path: Path, prefix: str) -> Dict[str, QualifiedTe
 
         return out
 
+
 # -----------------------------
 # Load glossary terms from landing page table (_review/index.md)
 # -----------------------------
@@ -233,7 +234,18 @@ _GLOSSARY_ROW_RE = re.compile(
     r"^\|\s*(?P<label>[^|]+?)\s*\|\s*(?P<definition>[^|]+?)\s*\|\s*(?P<context>[^|]+?)\s*\|\s*$"
 )
 
+# Match glossary table "Label" cell pattern like:  | <a name="glossary_OWL"/>OWL |
+_GLOSSARY_ANCHORED_LABEL_RE = re.compile(
+    r'^\s*<a\s+name="(?P<anchor>glossary_[A-Za-z0-9_]+)"\s*/>\s*(?P<label>.+?)\s*$'
+)
+
 def load_glossary_terms_from_landing(landing_md_path: Path) -> Dict[str, GlossaryTerm]:
+    """
+    Only include glossary terms that have an explicit anchor in the *Label* cell of the glossary table:
+      | <a name="glossary_OWL"/>OWL | ...
+
+    This avoids generating links for glossary terms that do not have stable anchors.
+    """
     if not landing_md_path.exists():
         return {}
 
@@ -254,11 +266,21 @@ def load_glossary_terms_from_landing(landing_md_path: Path) -> Dict[str, Glossar
         m = _GLOSSARY_ROW_RE.match(line.strip())
         if not m:
             continue
-        label = normalize_ws(m.group("label"))
-        definition = safe_title(m.group("definition"))
-        if not label or label == "**Label**":
+
+        raw_label_cell = normalize_ws(m.group("label"))
+        raw_def_cell = safe_title(m.group("definition"))
+
+        # Only include if label cell has an explicit <a name="glossary_..."/> anchor
+        am = _GLOSSARY_ANCHORED_LABEL_RE.match(raw_label_cell)
+        if not am:
             continue
-        terms[label] = GlossaryTerm(term=label, definition=definition, anchor=glossary_anchor(label))
+
+        anchor = am.group("anchor").strip()
+        label = normalize_ws(am.group("label"))
+        if not label:
+            continue
+
+        terms[label] = GlossaryTerm(term=label, definition=raw_def_cell, anchor=anchor)
 
     return terms
 
@@ -352,9 +374,11 @@ DEFAULT_BLACKLIST: Dict[str, List[SectionSpec]] = {
     "docs/guide/bdqffdq/index.md": [
         SectionSpec(heading_text="4 Fitness For Use Framework Summary of Mathematical Formalization (normative)")
     ],
-    # keep your locally added example:
     "docs/guide/implementers/index.md": [
         SectionSpec(heading_text="8.3 Examples of the Data for Conformance Testing (non-normative)")
+    ],
+    "index.md": [
+        SectionSpec(heading_text="7 References (non-normative)")
     ],
 }
 
@@ -461,6 +485,7 @@ def process_markdown_file(
     in_blacklisted_section = False
     current_blacklisted_level: Optional[int] = None
 
+    # file relative path under review_root for blacklist lookup
     try:
         rel_path = str(md_file.resolve().relative_to(review_root.resolve())).replace("\\", "/")
     except Exception:
@@ -569,7 +594,9 @@ def main() -> int:
     if missing:
         raise SystemExit("One or more target files do not exist:\n- " + "\n- ".join(str(p) for p in missing))
 
+    # Load vocab indices
     vocab_index: Dict[str, QualifiedTerm] = {}
+
     bdqffdq_owl = review_root / "vocabulary/bdqffdq.owl"
     if not bdqffdq_owl.exists():
         raise SystemExit(f"bdqffdq owl not found: {bdqffdq_owl}")
@@ -610,6 +637,10 @@ def main() -> int:
             print("\nDry run: no files were written.")
     else:
         print("No changes made.")
+
+    if not glossary_index:
+        print("WARNING: No anchored glossary terms parsed from ../_review/index.md.")
+        print('         Expected label cell like: | <a name="glossary_OWL"/>OWL | ...')
 
     return 0
 
