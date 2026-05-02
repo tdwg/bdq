@@ -15,10 +15,15 @@ cd tools/
 python3 validate_sparql_in_templates.py --strict
 cd ../
 
+echo "Creating generated documents..."
 python3 draft_build_bdqtest_qrg.py
 python3 draft_build_bdqffdq.py
 python3 draft_build-docs.py
 python3 draft_build-termlist_bdqtest.py
 python3 draft_build-termlist.py
 python3 make_bdq_tests_vertical.py
+
+echo "Postprocessing generated documents to create links to glossary and vocabulary terms..."
+python3 postprocess_autolink_terms.py
+
 cd ../_make_review/
