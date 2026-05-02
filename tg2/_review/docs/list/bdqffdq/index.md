@@ -539,7 +539,7 @@ DQP (u) = {dqp | dqp = mp(u) ⋃ vp(u) ⋃ ep(u), mp ∈ MP , vp ∈ VP , ep ∈
 - Preferred Label: Data Quality Report
 - Definition: A bdqffdq:ReportConcept comprising a set of data quality bdqffdq:Responses.
 - SubClass Of: ReportConcept
-- Comments: A bdqffdq:DataQualityReport consists of a set of bdqffdq:Responses (bdqffdq:ValidationResponses, bdqffdq:IssueResponses, bdqffdq:MeasureResponses, and bdqffdq:AmendmentResponses) that represent the output of a workflow/actor run. These bdqffdq:Responses form an account of the fitness for use of a tested data set for a specified bdqffdq:UseCase, as produced by a bdqffdq:Mechanism.
+- Comments: A bdqffdq:DataQualityReport consists of a set of bdqffdq:Responses (bdqffdq:ValidationResponses, bdqffdq:IssueResponses, bdqffdq:MeasureResponses, and bdqffdq:AmendmentResponses) pertaining to a bdqffdq:DataResource that represent the output of a workflow/actor run. These bdqffdq:Responses form an account of the fitness for use of a tested data set for a specified bdqffdq:UseCase, as produced by a bdqffdq:Mechanism.
 
 ********************
 

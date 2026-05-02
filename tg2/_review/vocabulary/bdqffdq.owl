@@ -769,7 +769,7 @@ DQP (u) = {dqp | dqp = mp(u) ⋃ vp(u) ⋃ ep(u), mp ∈ MP , vp ∈ VP , ep ∈
 bdqffdq:DataQualityReport rdf:type owl:Class ;
                           rdfs:subClassOf bdqffdq:ReportConcept ;
                           dcterms:issued "2024-09-30"^^xsd:date ;
-                          skos:note "A bdqffdq:DataQualityReport consists of a set of bdqffdq:Responses (bdqffdq:ValidationResponses, bdqffdq:IssueResponses, bdqffdq:MeasureResponses, and bdqffdq:AmendmentResponses) that represent the output of a workflow/actor run. These bdqffdq:Responses form an account of the fitness for use of a tested data set for a specified bdqffdq:UseCase, as produced by a bdqffdq:Mechanism."@en ;
+                          skos:note "A bdqffdq:DataQualityReport consists of a set of bdqffdq:Responses (bdqffdq:ValidationResponses, bdqffdq:IssueResponses, bdqffdq:MeasureResponses, and bdqffdq:AmendmentResponses) pertaining to a bdqffdq:DataResource that represent the output of a workflow/actor run. These bdqffdq:Responses form an account of the fitness for use of a tested data set for a specified bdqffdq:UseCase, as produced by a bdqffdq:Mechanism."@en ;
                           rdfs:label "Data Quality Report"@en ;
                           skos:definition "A bdqffdq:ReportConcept comprising a set of data quality bdqffdq:Responses."@en ;
                           rdfs:comment "A bdqffdq:ReportConcept comprising a set of data quality bdqffdq:Responses."@en ;
