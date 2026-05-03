@@ -11,7 +11,7 @@ This document is intended to be an easy-to-read reference for the Tests maintain
 
 * Learn More:
   * [The Biodiversity Data Quality (BDQ) Standard](../../../index.md), the entry point for the BDQ standard, with a Roadmap.
-  * [BDQ Tests: Concepts and Use](../../guide/quickreference/index.md).
+  * [BDQ Tests: Concepts and Use](../../guide/bdqtest/index.md).
   * [BDQ User's Guide](../../guide/users/index.md) (for non-programmers).
   * [BDQ Implementer's Guide](../../guide/implementers/index.md) (for programmers). 
   * [Full vocabulary definition document](../../list/bdqtest/index.md) full details of the `bdqtest:` vocabulary (the Tests). 
