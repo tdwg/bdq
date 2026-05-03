@@ -241,7 +241,7 @@ Under the principle that data has quality only with respect to use, each of the 
 
 ## 3 Test Types (non-normative)
 
-The concept of "Tests" in the context of BDQ include four distinct types: `Validation` (`bdqffdq:Validation`); `Issue` ([bdqffdq:Issue](<../../list/bdqffdq/index.md#Issue> "A bdqffdq:DataQualityNeed that expresses how quality problems may be identified in data.")); `Amendment` ([bdqffdq:Amendment](<../../list/bdqffdq/index.md#Amendment> "A bdqffdq:DataQualityNeed that expresses how proposals may be made to improve the fitness for use of data.")) and `Measure` ([bdqffdq:Measure](<../../list/bdqffdq/index.md#Measure> "A bdqffdq:DataQualityNeed that expresses how the fitness of data for some use may be measured.")).
+The concept of "Tests" in the context of BDQ include four distinct types: `Validation` ([bdqffdq:Validation](../../list/bdqffdq/index.md#Validation)); `Issue` ([bdqffdq:Issue](<../../list/bdqffdq/index.md#Issue> "A bdqffdq:DataQualityNeed that expresses how quality problems may be identified in data.")); `Amendment` ([bdqffdq:Amendment](<../../list/bdqffdq/index.md#Amendment> "A bdqffdq:DataQualityNeed that expresses how proposals may be made to improve the fitness for use of data.")) and `Measure` ([bdqffdq:Measure](<../../list/bdqffdq/index.md#Measure> "A bdqffdq:DataQualityNeed that expresses how the fitness of data for some use may be measured.")).
 
 A Response serves as the formal output of a Test and consists of three primary components: `Response.status`, `Response.result` and `Response.comment` See [Structure of Response (normative)](#41-structure-of-response-normative).
 

@@ -174,6 +174,11 @@ There are four types of Tests: `Validation`, `Issue`, `Measure`, and `Amendment`
 
 **`Amendment` Tests** can be thought of as suggestions for improvement. `Amendment` Tests examine the values of [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) and may propose changes or additions to improve the quality. An example is [AMENDMENT_COUNTRYCODE_STANDARDIZED](../../terms/bdqtest/index.md#AMENDMENT_COUNTRYCODE_STANDARDIZED), where a valid ISO country code could be inferred.
 
+See also: 
+* The [BDQ Tests Quick Reference Guide](../../terms/bdqtest/index.md) for the full list of Tests and their details.
+* [Test Types](../../guide/bdqtest/index.md#3-test-types-non-normative) in the [BDQ Tests: Concepts and Use](../../guide/bdqtest/index.md) document for more details on Test types and their expected behavior.
+
+
 ### 3.2 Test Inputs and Outputs (non-normative)
 
 #### 3.2.1 Inputs to Tests (non-normative)
