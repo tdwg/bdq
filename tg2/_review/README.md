@@ -8,7 +8,7 @@ Placeholder: [Notes for the Review Manager](https://github.com/tdwg/bdq/issues/3
 
 The BDQ standard is complex. There are requirements about which documents must exist and even what they should look like. Because of this the body of documentation can be complex to navigate. It will help to think of the standard as having two major, interconnected parts:
 
-- **BDQ Tests and Assertions:**  
+- **BDQ Tests:**  
   Practical Tests and associated guidance for assessing biodiversity data quality.
 - **Fitness For Use Framework:**  
   The theoretical foundation that defines key concepts of data quality "Fitness For Use".
@@ -19,7 +19,7 @@ The BDQ standard is complex. There are requirements about which documents must e
 First, read [**The Biodiversity Data Quality (BDQ) Standard**](./index.md) page. This is the introduction and landing page for the standard (see section '2.2.1 Standards landing page' in the [TDWG Standards Documentation Specification](https://github.com/tdwg/vocab/blob/master/sds/documentation-specification.md)). Then, you can approach the remainder of the review either from the practical perspective (the Tests) or from the theoretical one (the Framework). The landing pages provide overviews of the subjects they cover and refer to more detailed information in associated documents. The details of the individual terms are provided in the corresponding term list documents. The controlled vocabulary term list documents also act as the landing pages for those vocabularies.
 
 ### B. Documents emphasizing BDQ in Practice (the Tests)
-Within the practical perspective there are two basic audiences, Users and Implementers, with fundamental interests in common. For either of these audiences, the [**BDQ Tests Quick Reference Guide**](docs/terms/bdqtest/index.md) is good continuation following the introductory [**The Biodiversity Data Quality (BDQ) Standard**](./index.md). The Quick Reference Guide is an informative go-to reference with only the essential information about the BDQ Tests. Also of common interest to Users and Implementers is the in-depth introduction and required landing page for the Tests vocabulary - [**BDQ Tests and Assertions**](docs/bdqtest/index.md). After all of this orientational material, there are guides specifically targeting Users and Implementers:
+Within the practical perspective there are two basic audiences, Users and Implementers, with fundamental interests in common. For either of these audiences, the [**BDQ Tests Quick Reference Guide**](docs/terms/bdqtest/index.md) is good continuation following the introductory [**The Biodiversity Data Quality (BDQ) Standard**](./index.md). The Quick Reference Guide is an informative go-to reference with only the essential information about the BDQ Tests. Also of common interest to Users and Implementers is the in-depth introduction to the Tests vocabulary - [**BDQ Tests: Concepts and Use **](docs/bdqtest/index.md). After all of this orientational material, there are guides specifically targeting Users and Implementers:
 
 #### 1. Users
 - [**The Biodiversity Data Quality (BDQ) Standard**](./index.md)
@@ -35,10 +35,10 @@ Within the practical perspective there are two basic audiences, Users and Implem
 ### C. Documents emphasizing **BDQ in Theory (the Framework)**:
 The theoretical perspective is formally based on the [**Biodiversity Data Quality Fitness For Use Framework (Ontology)**](vocabulary/bdqffdq.owl). The following documents explain the ontology and how it is extended for use with the BDQ Tests and Assertions (the Tests):
 
-- [**Fitness For Use Ontology**](docs/bdqffdq/index.md)
+- [**Fitness For Use Framework: Concepts and Use**](docs/guide/bdqffdq/index.md)
 - [**Fitness For Use Framework Vocabulary Extension**](docs/extension/bdqffdq/index.md)
-- [**Fitness For Use Framework Ontology Guide**](docs/guide/bdqffdq/index.md)
 - [**Biodiversity Data Quality Fitness For Use Framework (Ontology)**](vocabulary/bdqffdq.owl)
+- [**Fitness For Use Ontology**](docs/bdqffdq/index.md) (minimal landing page)
 
 ### D. Vocabularies
 The Tests and the Framework are linked with each other via **foundational vocabularies** and **controlled vocabularies of values**. The terms in these vocabularies are formally defined in the **List of terms** documents, one for each vocabulary defined by the BDQ standard.  IRIs in these documents follow the patterns in [TDWG Standards Metadata](https://tdwg.github.io/rs.tdwg.org/#2-iri-patterns). Following the guidance of the [TDWG Standards Documentation Specification](https://github.com/tdwg/vocab/blob/master/sds/documentation-specification.md), the Fitness For Use Ontology has term definitions in a List of Terms document (below), and axioms providing additional ontology logic in a Vocabulary Extension document (above). We recommend reviewing these vocabularies carefully as well:

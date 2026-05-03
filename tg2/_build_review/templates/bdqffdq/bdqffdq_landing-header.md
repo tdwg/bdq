@@ -50,7 +50,7 @@ The purpose of this document is to serve as the landing page for the `bdqffdq:` 
 
 ### 1.2 Audience (non-normative)
 
-This document is intended for technical users who need to understand or reference the BDQ Fittnes For Use Framework Ontology. 
+This document is intended for technical users who need to understand or reference the BDQ Fitness For Use Framework Ontology. 
 
 ### 1.3 Associated Documents (non-normative)
 

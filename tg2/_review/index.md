@@ -241,13 +241,13 @@ Readers can approach the standard in different ways depending on their needs. Th
         <strong>Start with:</strong><br>
 		:green_book:
         <strong><a href="./docs/terms/bdqtest/index.md">BDQ Tests Quick Reference Guide</a></strong><br>
-        Concise descriptions of BDQ Tests and assertions. First stop for understanding Test names and outcomes.</a><br>
+        Concise descriptions of BDQ Tests. First stop for understanding Tests and their outcomes.</a><br>
       </td>
       <td valign="top">
         <strong>Start with:</strong><br>
 		:green_book:
         <strong><a href="./docs/terms/bdqtest/index.md">BDQ Tests Quick Reference Guide</a></strong><br>
-        Overview of Test purposes and outcomes; index into detailed definitions.<br>
+        Overview of Test purposes and outcomes; index into detailed Test definitions.<br>
       </td>
       <td valign="top">
         <strong>Start with:</strong><br>
@@ -389,7 +389,7 @@ These Guides are explanatory documents including some normative guidance targeti
 
 The Foundational Vocabularies cover the two main parts of the standard - the practical (the Tests) and the theoretical (the Framework).
 
-* The Fittnes For Use Framework Ontology (bdqffdq:)
+* The Fitness For Use Framework Ontology (bdqffdq:)
   - [**Fitness For Use Framework Ontology List of Terms (bdqffdq:)**](docs/list/bdqffdq/index.md) - The definitions of terms in the bdqffdq: vocabulary.
   - [**Fitness For Use Framework Ontology Vocabulary Extension**](docs/extension/bdqffdq/index.md) - The axioms that extend the logic of the basic the bdqffdq: vocabulary.
 * The Tests (bdqtest:)

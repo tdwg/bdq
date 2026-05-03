@@ -238,7 +238,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 [Biotic-Relationships](#bdqval_Biotic-Relationships) |
 [Record-Management](#bdqval_Record-Management) |
 [Spatial-Temporal Patterns](#bdqval_Spatial-Temporal_Patterns) |
-[Species-Distribution-Modelling-Trees](#bdqval_SDM-Trees) |
+[Species-Distribution-Modeling-Trees](#bdqval_SDM-Trees) |
 [Taxon-Management](#bdqval_Taxon-Management) 
 
 **bdqffdq:AbstractInformationElement**
@@ -1259,19 +1259,19 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Label</td>
-			<td>Species-Distribution-Modelling-Trees</td>
+			<td>Species-Distribution-Modeling-Trees</td>
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>Research uses forming a bdqffdq:UseCase for improving the quality of, and selecting dwc:Occurrence records suitable for predicting the spatial distribution of a limited number of Eucalypt tree species (Gill et al. 1985). This Use Case filters for occurrence records that meet criteria for a known species at a known location and date.  Records can be further filtered to meet the requirements of a particular distribution modeling analysis.  Filtered records can then be combined with environmental data derived from occurrence locations to evaluate robust spatial distribution models, including Maxent (Phillips et al. 2006) and generalized linear and additive models (Guisan et al. 2002). Models will be further assessed via systematic surveys in areas with high predicted occurrence and low record density. Project outputs are: (1) recommendations for robust species distribution modelling methods for tree species, (2) a suite of environmental variables for the selected species, and (3) improved “expert distribution” envelopes derived from modelling.</td>
+			<td>Research uses forming a bdqffdq:UseCase for improving the quality of, and selecting dwc:Occurrence records suitable for predicting the spatial distribution of a limited number of Eucalypt tree species (Gill et al. 1985). This Use Case filters for occurrence records that meet criteria for a known species at a known location and date.  Records can be further filtered to meet the requirements of a particular distribution modeling analysis.  Filtered records can then be combined with environmental data derived from occurrence locations to evaluate robust spatial distribution models, including Maxent (Phillips et al. 2006) and generalized linear and additive models (Guisan et al. 2002). Models will be further assessed via systematic surveys in areas with high predicted occurrence and low record density. Project outputs are: (1) recommendations for robust species distribution modeling methods for tree species, (2) a suite of environmental variables for the selected species, and (3) improved “expert distribution” envelopes derived from modeling.</td>
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>References: <ul><li>Gill, A.M., Belbin, L. and Chippendale, G.M. (1985). Phytogeography of EUCALYPTUS in Australia. Bureau of Flora and Fauna, Australian Flora and Fauna Series, 3. Canberra. 53p. ISBN:  0644040815. </li><li>Phillips, S. J., Anderson, R. P., and Schapire, R. E. (2006). Maximum entropy modeling of species geographic distributions. Ecological Modelling, 190(3-4), 231-259.  </li><li>Guisan, A. Edwards, T.C. and Hastie, T. (2002). Generalized linear and generalized additive models in studies of species distributions: setting the scene. Ecological Modelling 157, 89-100.</li></ul></td>
+			<td>References: <ul><li>Gill, A.M., Belbin, L. and Chippendale, G.M. (1985). Phytogeography of EUCALYPTUS in Australia. Bureau of Flora and Fauna, Australian Flora and Fauna Series, 3. Canberra. 53p. ISBN:  0644040815. </li><li>Phillips, S. J., Anderson, R. P., and Schapire, R. E. (2006). Maximum entropy modeling of species geographic distributions. Ecological Modeling, 190(3-4), 231-259.  </li><li>Guisan, A. Edwards, T.C. and Hastie, T. (2002). Generalized linear and generalized additive models in studies of species distributions: setting the scene. Ecological Modeling 157, 89-100.</li></ul></td>
 		</tr>
 		<tr>
 			<td>Fitness requirements</td>
-			<td>Data are fit for the use case bdqval:Species-Distribution-Modelling-Trees when records have valid:  <ul><li>dwc:scientificName identified to species level.  </li><li>dwc:basisOfRecord = "Occurrence".   </li><li>dwc:occurrenceStatus = "present".  </li><li>dwc:decimalLatitude and dwc:decimalLongitude.  </li><li>dwc:coordinateUncertaintyInMeters less than 500.  </li><li>dwc:dataGeneralizations = bdqval:empty.  </li><li>dwc:year or dwc:eventDate within provided temporal limits. </li></ul></td>
+			<td>Data are fit for the use case bdqval:Species-Distribution-Modeling-Trees when records have valid:  <ul><li>dwc:scientificName identified to species level.  </li><li>dwc:basisOfRecord = "Occurrence".   </li><li>dwc:occurrenceStatus = "present".  </li><li>dwc:decimalLatitude and dwc:decimalLongitude.  </li><li>dwc:coordinateUncertaintyInMeters less than 500.  </li><li>dwc:dataGeneralizations = bdqval:empty.  </li><li>dwc:year or dwc:eventDate within provided temporal limits. </li></ul></td>
 		</tr>
 		<tr>
 			<td>Status</td>
@@ -1279,7 +1279,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Controlled value</td>
-			<td>Species-Distribution-Modelling-Trees</td>
+			<td>Species-Distribution-Modeling-Trees</td>
 		</tr>
 		<tr>
 			<td>Type</td>
