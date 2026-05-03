@@ -222,6 +222,7 @@ Readers can approach the standard in different ways depending on their needs. Th
     <tr>
       <th style="width: 100%;" colspan="3">Some Key Concepts: 
           <a href="./docs/guide/users/index.md#31-test-types-non-normative">Test Types</a> and <a href="./docs/guide/users/index.md#32-test-inputs-and-outputs-non-normative">Test Inputs and Outputs</a> in the Users Guide.
+          <br>
           <a href="./docs/guide/bdqtest/index.md#21-the-bdq-definition-of-test-non-normative">The BDQ Definition of "Test"</a> in BDQ Tests: Concepts and Use.</a>
       </th>
     </tr>
@@ -392,7 +393,7 @@ The Foundational Vocabularies cover the two main parts of the standard - the pra
   - [**Fitness For Use Framework Ontology List of Terms (bdqffdq:)**](docs/list/bdqffdq/index.md) - The definitions of terms in the bdqffdq: vocabulary.
   - [**Fitness For Use Framework Ontology Vocabulary Extension**](docs/extension/bdqffdq/index.md) - The axioms that extend the logic of the basic the bdqffdq: vocabulary.
 * The Tests (bdqtest:)
-- [**BDQ Tests and Assertions List of Terms (bdqtest:)**](docs/list/bdqtest/index.md) - The complete list of terms that define the BDQ Tests.
+  - [**BDQ Tests and Assertions List of Terms (bdqtest:)**](docs/list/bdqtest/index.md) - The complete list of terms that define the BDQ Tests.
 
 #### 3.3.2 Supporting Vocabularies (non-normative)
 
