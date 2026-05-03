@@ -220,10 +220,10 @@ Readers can approach the standard in different ways depending on their needs. Th
       <th style="width: 100%;" colspan="3">The Biodiversity Data Quality (BDQ) Standard</th>
     </tr>
     <tr>
-      <th style="width: 100%;" colspan="3">Some Key Concepts: 
+      <td style="width: 100%;" colspan="3">Some Key Concepts: 
           <a href="./docs/guide/users/index.md#31-test-types-non-normative">Test Types</a> and <a href="./docs/guide/users/index.md#32-test-inputs-and-outputs-non-normative">Test Inputs and Outputs</a> in the Users Guide.
           <a href="./docs/guide/bdqtest/index.md#21-what-is-meant-by-test-non-normative">What is meant by "Test"</a> and <a href="./docs/guide/bdqtest/index.md#3-test-types-non-normative">Test Types</a> in BDQ Tests: Concepts and Use.</a>
-      </th>
+      </td>
     </tr>
     <tr>
       <th style="width: 33%;"><strong>Readers &amp; Interpreters of Test Results</strong></th>
