@@ -308,7 +308,7 @@ namespaces:
   termlist_uri: ''
 
   # Label used for the term list in machine-readable metadata.
-  label: BDQ Tests and Assertions
+  label: BDQ Tests List of Terms
 
   # Description of the term list used in machine-readable metadata.
   description: This list includes the BDQ Test definitions.

@@ -87,7 +87,7 @@ The set of information most relevant to the Biodiversity Data Quality (BDQ) Test
   - [BDQ Test Index by Information Element Class](../../terms/bdqtest/qrg_index_by_ie_class.md)
   - [BDQ Test Index by Data Quality Dimension](../../terms/bdqtest/qrg_index_by_dimension.md)
   - [BDQ Multi Record Measure Test Index](../../terms/bdqtest/qrg_multirecord_index.md)
-- [**BDQ Tests and Assertions List of Terms**](../../list/bdqtest/index.md) - Provides the complete normative definitions of the BDQ Tests.
+- [**BDQ Tests List of Terms**](../../list/bdqtest/index.md) - Provides the complete normative definitions of the BDQ Tests.
 - [**BDQ User's Guide**](../users/index.md) - For anyone interested in how to use the BDQ Tests in practice.
 - [**BDQ Implementer's Guide**](../implementers/index.md) - For anyone interested in the technical implementation of the BDQ Tests.
 - [**Tutorial: From Use Case to Test**](../../tutorial/index.md) - Worked out examples of defining new `Use Cases` and new Tests.
@@ -97,7 +97,7 @@ The set of information most relevant to the Biodiversity Data Quality (BDQ) Test
 <!--- This same table appears in bdqtest_termlist_header. Edit here, edit there. --->
 | Description | IRI | Download URL | Notes | 
 | ----------- | --- | -----------  | ----- | 
-| HTML file   | TBD | [BDQ Tests and Assertions List of Terms](../../list/bdqtest/index.md) | Complete term list for the bdqtest: vocabulary as a web page. | 
+| HTML file   | TBD | [BDQ Tests List of Terms](../../list/bdqtest/index.md) | Complete term list for the bdqtest: vocabulary as a web page. | 
 | RDF/XML file | TBD | [Tests in RDF/XML](../../../dist/bdqtest.xml) | An RDF representation of the Tests in an RDF/XML serialization. | 
 | Turtle file | TBD | [Tests in Turtle](../../../dist/bdqtest.ttl) | An RDF representation of the Tests in a Turtle serialization. | 
 | JSON-LD file | TBD | [Tests in JSON/LD](../../../dist/bdqtest.json) | An RDF representation of the Tests in a JSON-LD serialization. | 
@@ -274,14 +274,14 @@ See the [Fitness For Use Framework Summary of Mathematical Formalization (normat
 
 ## 4 Use of Terms (normative)
 
-The technical (normative) details of the BDQ Test terms (those in the `bdqtest:` namespace) are found in the [BDQ Tests and Assertions List of Terms](../../list/bdqtest/index.md).
+The technical (normative) details of the BDQ Test terms (those in the `bdqtest:` namespace) are found in the [BDQ Tests List of Terms](../../list/bdqtest/index.md).
 
 The technical definitions of the `bdqtest:` terms are supported by terms in several additional namespaces in the BDQ standard, namely `bdqval:`, `bdqffdq:`, `bdqdim:`, `bdqenh:`, and `bdqcrit:`. For the details and rationale, see Chapman et al. (2017).
 
 | **Abbreviation**  | **Technical List of Terms** |
 | -------- | ----------------------- |
 | bdqval:     | [BDQ Controlled Vocabulary List of Terms](../../list/bdqval/index.md) |
-| bdqtest: | [BDQ Tests and Assertions List of Terms](../../list/bdqtest/index.md) |
+| bdqtest: | [BDQ Tests List of Terms](../../list/bdqtest/index.md) |
 | bdqcrit: | [Data Quality Criterion Controlled Vocabulary List of Terms](../../list/bdqcrit/index.md) |
 | bdqdim:  | [Data Quality Dimension Controlled Vocabulary List of Terms](../../list/bdqdim/index.md) |
 | bdqenh:  | [Data Quality Enhancement Controlled Vocabulary List of Terms](../../list/bdqenh/index.md) |

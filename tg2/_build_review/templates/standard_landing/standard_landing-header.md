@@ -344,7 +344,7 @@ The Foundational Vocabularies cover the two main parts of the standard - the pra
   - [**Fitness For Use Framework Ontology List of Terms (bdqffdq:)**](docs/list/bdqffdq/index.md) - The definitions of terms in the bdqffdq: vocabulary.
   - [**Fitness For Use Framework Ontology Vocabulary Extension**](docs/extension/bdqffdq/index.md) - The axioms that extend the logic of the basic the bdqffdq: vocabulary.
 * The Tests (bdqtest:)
-  - [**BDQ Tests and Assertions List of Terms (bdqtest:)**](docs/list/bdqtest/index.md) - The complete list of terms that define the BDQ Tests.
+  - [**BDQ Tests List of Terms (bdqtest:)**](docs/list/bdqtest/index.md) - The complete list of terms that define the BDQ Tests.
 
 #### 3.3.2 Supporting Vocabularies (non-normative)
 
@@ -364,7 +364,7 @@ Note: **None of these links will work until deployment of the standard**, but th
 - **The Biodiversity Data Quality (BDQ) Standard** - Overview of the BDQ standard. This page. 
   - [Standard IRI](https://www.tdwg.org/standards/nnnn/) redirects to [HTML](https://bdq.tdwg.org/)
   - [RDF Metadata](https://rs.tdwg.org/bdq.ttl)
-- [**BDQ Tests and Assertions Vocabulary (bdqtest:)**](https://bdq.tdwg.org/bdqtest/)  
+- [**BDQ Tests Vocabulary (bdqtest:)**](https://bdq.tdwg.org/bdqtest/)  
   - [Vocabulary IRI](https://rs.tdwg.org/bdqtest/) redirects to [HTML Terms List](https://bdq.tdwg.org/bdqtest/terms/)
   - [RDF Metadata](https://rs.tdwg.org/bdqtest.ttl)
   - [Term List RDF Metadata](https://rs.tdwg.org/bdqtest/terms.ttl)
