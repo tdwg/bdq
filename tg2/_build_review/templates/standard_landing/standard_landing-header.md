@@ -168,7 +168,13 @@ Readers can approach the standard in different ways depending on their needs. Th
 <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
   <thead>
     <tr>
-      <th style="width: 100%;" colspan="3">The Biodiversity Data Quality (BDQ) Standard [Landing Page]</th>
+      <th style="width: 100%;" colspan="3">The Biodiversity Data Quality (BDQ) Standard</th>
+    </tr>
+    <tr>
+      <th style="width: 100%;" colspan="3">Some Key Concepts: 
+          <a href="./docs/guide/users/index.md#31-test-types-non-normative">Test Types</a> and <a href="./docs/guide/users/index.md#32-test-inputs-and-outputs-non-normative">Test Inputs and Outputs</a> in the Users Guide.
+          <a href="./docs/guide/bdqtest/index.md#21-what-is-meant-by-test-non-normative">What is meant by "Test"</a> and <a href="./docs/guide/bdqtest/index.md#3-test-types-non-normative">Test Types</a> in BDQ Tests: Concepts and Use.</a>
+      </th>
     </tr>
     <tr>
       <th style="width: 33%;"><strong>Readers &amp; Interpreters of Test Results</strong></th>
@@ -182,22 +188,19 @@ Readers can approach the standard in different ways depending on their needs. Th
         <strong>Start with:</strong><br>
 		:green_book:
         <strong><a href="./docs/terms/bdqtest/index.md">BDQ Tests Quick Reference Guide</a></strong><br>
-        Concise descriptions of BDQ Tests and assertions. First stop after the landing page for understanding Test names and outcomes.</a><br>
-		See also: <a href="./docs/guide/users/index.md#31-test-types-non-normative">Test Types</a> and <a href="./docs/guide/users/index.md#32-test-inputs-and-outputs-non-normative">Test Inputs and Outputs</a> in the Users Guide.
+        Concise descriptions of BDQ Tests and assertions. First stop for understanding Test names and outcomes.</a><br>
       </td>
       <td valign="top">
         <strong>Start with:</strong><br>
 		:green_book:
         <strong><a href="./docs/terms/bdqtest/index.md">BDQ Tests Quick Reference Guide</a></strong><br>
         Overview of Test purposes and outcomes; index into detailed definitions.<br>
-		See also: <a href="./docs/guide/bdqtest/index.md#21-what-is-meant-by-test-non-normative">What is meant by "Test"</a> and <a href="./docs/guide/bdqtest/index.md#3-test-types-non-normative">Test Types</a> in BDQ Tests: Concepts and Use.</a>
       </td>
       <td valign="top">
         <strong>Start with:</strong><br>
 		:orange_book:
         <strong><a href="./docs/tutorial/index.md">Tutorial: From Use Case to Test</a></strong><br>
         Recommended starting point for designing a new BDQ Test.<br>
-		See also: <a href="./docs/guide/users/index.md#31-test-types-non-normative">Test Types</a> and <a href="./docs/guide/users/index.md#32-test-inputs-and-outputs-non-normative">Test Inputs and Outputs</a> in the Users Guide.
       </td>
     </tr>
     <tr>
