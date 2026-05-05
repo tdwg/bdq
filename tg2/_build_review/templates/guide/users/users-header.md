@@ -388,6 +388,8 @@ To propose to add a Test to the BDQ Standard, follow the instructions provided b
 
 To propose to add a new `Use Case` to the BDQ Standard, follow the instructions provided by the BDQ Maintenance Group. Details on how this would be done can be seen in [Creating New Use Cases](https://github.com/tdwg/bdq/blob/master/tg2/_build_review/templates/guide/bdqtest/bdqtest-header.md#8-creating-new-use-cases-non-normative)
 
+A `Use Case` can be defined outside of the BDQ standard, and users are encouraged to define `Use Cases` for their own purposes. See the [Tutorial](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/tutorial/index.md) for a worked out example of the definition of a new Use Case.
+
 ## 6 Time of Day and Time Zones (non-normative)
 
 Time of day (as opposed to dates) is not considered in any of the BDQ Tests. There are `Use Cases` where the time zone is important. Dates within a dataset (`bdqffdq:MultiRecord`) aggregated from multiple sources may have plus or minus one day errors introduced. New Tests are required if ignorance of time would make such data unfit for a purpose. For further information, see Section [4.2 Time (non-normative)](../../supplement/index.md#42-time-non-normative) in [BDQ Supplemental Information](../../supplement/index.md).
