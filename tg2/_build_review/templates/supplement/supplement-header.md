@@ -146,14 +146,15 @@ The following issues describing potential Tests were tagged as [DO NOT IMPLEMENT
 
 ### 2.2 Use Case Development (non-normative)
 
-Biodiversity Data Quality Task Group 3: Data Quality Use Cases (Rees & Nicholls 2020) was established to review what `Use Cases` were prevalent within the community of those dealing with biodiversity data. This task group identified several fundamental `Use Cases`, including `bdqval:Spatial-Temporal_Patterns`, `bdqval:Record-Management`, and `bdqval:Taxon-Management`. We later added `bdqval:Alien-Species`, `bdqval:Biotic-Relationships` and `bdqval:SDM=Trees`.
+Biodiversity Data Quality Task Group 3: Data Quality Use Cases (Rees & Nicholls 2020) was established to review what `Use Cases` were prevalent within the community of those dealing with biodiversity data. This task group identified several fundamental `Use Cases`, including `bdqval:Spatial-Temporal_Patterns`, `bdqval:Record-Management`, and `bdqval:Taxon-Management`. We later added `bdqval:Alien-Species`, `bdqval:Biotic-Relationships` and `bdqval:SDM-Trees`.
 
 These are only a sample of the many possible `Use Cases` for the biological sciences, but they provide an initial set to which all the BDQ Tests have been linked. Note that the relationship between `Use Cases` and Tests is a many-to-many relationship - with most Tests being relatable to many `Use Cases` and vice versa.
 
 Note that the evaluation of a Test can only take place within the context of a specific `Use Case`, even if that use is particularly broad or particularly narrow. For example, the Test [VALIDATION_COUNTRY_FOUND](../terms/bdqtest/index.md#VALIDATION_COUNTRY_FOUND) could assess the value of `dwc:country` against a `sourceAuthority` for the `Use Case` `bdqval:Record-Management`, but this Test may not be applicable to a `Use Case` related to marine ecology.
 
+See also [Creating a New Use Case](../guide/bdqtest/index.md#8-creating-new-use-cases-non-normative) in [BDQ Tests: Concepts and Use](../guide/bdqtest/index.md) and a more detailed example of the development of a new `Use Case` with  new Tests in the [Tutorial](../_review/docs/tutorial/index.md). 
 
-See also [Creating a New Use Case]() in [BDQ Tests: Concepts and Use](../guide/bdqtest/index.md) and a more detailed example of the development of a new `Use Case` with  new Tests in the Tutorial. 
+A `Use Case` can be defined outside of the BDQ standard, and users are encouraged to define `Use Cases` for their own purposes.
 
 #### 2.2.1 Making Use Cases and BDQ Tests match by iterative refinement (non-normative)
 
