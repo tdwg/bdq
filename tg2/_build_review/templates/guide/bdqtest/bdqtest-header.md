@@ -623,7 +623,14 @@ See the [Tutorial](../../tutorial/index.md) for a worked out example of the defi
 
 The definition for a new `Use Case` should include a clear statement of the purpose and nature of the use of the data in the `Use Case`, and the fitness requirements should provide a high level overview of what is needed for data to be fit for that specified use.   Once Tests have been identified (or newly described) `Policies` should be established to assert which Tests are relevant to the `Use Case`.   
 
-### 8.2 Proposing to add a Use Case to the BDQ Standard (non-normative)
+### 8.2 Defining a New Use Case (non-normative)
+
+A `Use Case` can be defined outside of the BDQ standard, and users are encouraged to define `Use Cases` for their own purposes.  
+
+See the [Tutorial](../../tutorial/index.md) for a worked out example of the definition of a new `Use Case`.
+
+### 8.3 Proposing to add a Use Case to the BDQ Standard (non-normative)
 
 To propose to add a new `Use Case` to the BDQ Standard, follow the instructions provided by the BDQ Maintenance Group.
+
 
