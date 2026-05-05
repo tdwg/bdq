@@ -270,7 +270,7 @@ For example, if the `dwc:eventDate` is "2020", the `Response` would be:
 
 A calendar year is usually 31,536,000 seconds (365 days), but it is not always that simple: some years have 366 days (leap years), and in some time scales additional leap seconds may be inserted.  (Because of these complexities, it is not straightforward to make precise assertions such as "this `dwc:eventDate` represents a duration of less than a year".  Such complexities contributed to us not defining specific `Validation` Tests that would ask such questions; this measure allows users to determine what duration of event dates provides sufficient quality for their specific purposes.)
 
-MEASURE_EVENTDATE_DURATIONINSECONDS is an exemplar of a `Single Record` `Measure` Test that **directly measures an `Information Element` value** (here `dwc:eventDate`) and returns a numeric metric (here the duration in seconds of the time interval represented by that value), which can be used to assess fitness relative to a given analytical threshold.  Consumers of `Data Quality Reports` can apply use-specific thresholds to such metrics (e.g., “duration ≤ 86401 seconds” for day-level precision) to decide whether an individual `Single Record` has sufficient temporal precision to be fit for a particular `Use Case`.  Some terms (e.g. dwc:coordinateUncertaintyInMeters) have a more straightforward relationship between the value of the term and fitness for use, and thus `Validation` Tests that directly assert whether or not the value of the term is fit for some use are appropriate.  For other terms (e.g. dwc:eventDate), the relationship between the value of the term and fitness for use is more complex, and `Single Record` `Measure` Tests that convert values to a metric can be more appropriate to assess fitness relative to a given analytical threshold.
+MEASURE_EVENTDATE_DURATIONINSECONDS is an exemplar of a `Single Record` `Measure` Test that **directly measures an `Information Element` value** (here `dwc:eventDate`) and returns a numeric metric (here the duration in seconds of the time interval represented by that value), which can be used to assess fitness relative to a given analytical threshold.  Consumers of `Data Quality Reports` can apply use-specific thresholds to such metrics (e.g., “duration ≤ 86401 seconds” for day-level precision) to decide whether an individual `Single Record` has sufficient temporal precision to be fit for a particular `Use Case`.  Some terms (e.g. `dwc:coordinateUncertaintyInMeters`) have a more straightforward relationship between the value of the term and fitness for use, and thus `Validation` Tests that directly assert whether or not the value of the term is fit for some use are appropriate.  For other terms (e.g. `dwc:eventDate`), the relationship between the value of the term and fitness for use is more complex, and `Single Record` `Measure` Tests that convert values to a metric can be more appropriate to assess fitness relative to a given analytical threshold.
 
 ###### 3.2.3.4.1 Measures Counting Results on Other Tests (non-normative)
 
@@ -305,7 +305,7 @@ Alternatively, for a record where the day is given as "X" which is ambiguous, th
 
 * `Response.status`=NOT_AMENDED
 * `Response.result`=
-* `Response.comment`="The provided value of dwc:day [X] is ambiguous."
+* `Response.comment`="The provided value of `dwc:day` [X] is ambiguous."
 
 ### 3.3 Amendments Propose Changes (normative)
 
@@ -340,19 +340,19 @@ More normative guidance on Test `Parameters` can be found in the section [6.1 Pa
 
 #### 3.4.2 Test Parameters Example (non-normative) 
 
-Consider the Test `VALIDATION_MAXELEVATION_INRANGE`.  If you are evaluating data that could come from anywhere in the world, you would want to use the default value for the 'Parameter' that sets the maximum elevation to that of the highest point on Earth.  However, if you are working on a dataset consisting entirely of data pertaining to locations in New Zealand, you may wish to set the `Parameter` bdqval:maximumValidElevationInMeters value to the maximum elevation in New Zealand (i.e., 3724 meters).  
+Consider the Test `VALIDATION_MAXELEVATION_INRANGE`.  If you are evaluating data that could come from anywhere in the world, you would want to use the default value for the 'Parameter' that sets the maximum elevation to that of the highest point on Earth.  However, if you are working on a dataset consisting entirely of data pertaining to locations in New Zealand, you may wish to set the `Parameter` `bdqval:maximumValidElevationInMeters` value to the maximum elevation in New Zealand (i.e., 3724 meters).  
 
-So, for a record where dwc:maximumElevationinMeters is given as "4500" which is out of range for New Zealand, the `Response` for the Test with the default value for the parameter would be:
+So, for a record where `dwc:maximumElevationinMeters` is given as "4500" which is out of range for New Zealand, the `Response` for the Test with the default value for the parameter would be:
 
 * `Response.status`=RUN_HAS_RESULT
 * `Response.result`=COMPLIANT
-* `Response.comment`="The provided value of dwc:maximumElevationInMeters [4500] is in range".
+* `Response.comment`="The provided value of `dwc:maximumElevationInMeters` [4500] is in range".
 
-But if the Test is run on the same data, but with the parameter bqd:maximumValidElevationInMeters set to 3724, appropriate for New Zealand, the `Response` would be:
+But if the Test is run on the same data, but with the parameter `bqd:maximumValidElevationInMeters` set to 3724, appropriate for New Zealand, the `Response` would be:
 
 * `Response.status`=RUN_HAS_RESULT
 * `Response.result`=NOT_COMPLIANT
-* `Response.comment`="The provided value of dwc:maximumElevationInMeters [4500] is out of range using the non-default bdqval:maximumValidElevationInMeters=3724".
+* `Response.comment`="The provided value of dwc:maximumElevationInMeters [4500] is out of range using the non-default `bdqval:maximumValidElevationInMeters`=3724".
 
 Thus the parameter changes the behavior of the Test to fit local needs.
 
