@@ -735,7 +735,7 @@ BDQ details a convention for the structure and format of source authorities (in 
 * **Convention Two**: An authority with a URI providing information about the authority, and an API endpoint for checking values against the authority.
   * `“Fixed String Identifier” {\[URL\]}{API name\[URL of the API\]}`
 
-* Example: bdqval:sourceAuthority default = "[ISO](<../../index.md#glossary_ISO> "[International Organization for Standarization.](https://www.iso.org/home.html)") 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}
+* Example: bdqval:sourceAuthority default = "[ISO](<../../index.md#glossary_ISO> "[International Organization for Standardization.](https://www.iso.org/home.html)") 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}
   * Fixed string Identifier: "ISO 3166 Country Codes" (the name of the authority)
   * URI: {[https://www.iso.org/iso-3166-country-codes.html]}
   * API: {ISO 3166-1-alpha-2 Country Code search \[https://www.iso.org/obp/ui/#search\]}

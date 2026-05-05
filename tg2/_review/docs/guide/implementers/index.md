@@ -408,7 +408,7 @@ bdqval:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/
 
 The `Specification` is thus intended to be read as: 
 
-1. Return EXTERNAL_PREREQUISITES_NOT_MET if the [ISO](<../../../index.md#glossary_ISO> "[International Organization for Standarization.](https://www.iso.org/home.html)") Country codes list (https://www.iso.org/iso-3166-country-codes.html, searchable at https://www.iso.org/obp/ui/#search) is not available; 
+1. Return EXTERNAL_PREREQUISITES_NOT_MET if the [ISO](<../../../index.md#glossary_ISO> "[International Organization for Standardization.](https://www.iso.org/home.html)") Country codes list (https://www.iso.org/iso-3166-country-codes.html, searchable at https://www.iso.org/obp/ui/#search) is not available; 
 2. else Return INTERNAL_PREREQUISITES_NOT_MET if the `dwc:countryCode` is `bdqval:Empty`; 
 3. else Return COMPLIANT if `dwc:countryCode` can be unambiguously interpreted as a valid ISO 3166-1-alpha-2 country code in the ISO Country Codes list; 
 4. otherwise NOT_COMPLIANT
