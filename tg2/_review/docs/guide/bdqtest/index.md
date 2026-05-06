@@ -232,11 +232,11 @@ BDQ Tests are designed to be applied in the context of particular uses of data. 
 BDQ initially defines five `Use Cases`.  These use cases were based on the work of Data Quality Task Group 3 ([Data Quality Use Cases](https://www.tdwg.org/community/bdq/tg-3/)). The BDQ Tests can only relate to the concept of ‘quality’ as a consequence of their application to a specific use case.  The five use cases included in the BDQ standard were intended to cover a range of applications that were considered in common use, but they are far from being comprehensive. The use cases were intended as a template or guide for those who may want to generate other use cases for their environments.  See [Section 8 Creating New Use Cases](#8-creating-new-use-cases-non-normative) and see the [Tutorial](../../tutorial/index.md) for a step-by-step example of how to define a `Use Case` and select appropriate Tests for that `Use Case`.
 
 The initial BDQ `Use Cases` are:
-* [bdqval:Alien-Species](../../list/bdqval/index.md#bdqval_Alien-Species) [Included Tests](../../terms/bdqtest/qrg_index_by_usecase.md#bdqvalalien-species)
-* [bdqval:Biotic-Relationships](../../list/bdqval/index.md#bdqval_Biotic-Relationships) [Included Tests](../../terms/bdqtest/qrg_index_by_usecase.md#bdqvalbiotic-relationships)
-* [bdqval:Record-Management](../../list/bdqval/index.md#bdqval_Record-Management) [Included Tests](../../terms/bdqtest/qrg_index_by_usecase.md#bdqvalrecord-management)
-* [bdqval:Spatial-Temporal_Patterns](../../list/bdqval/index.md#bdqval_Spatial-Temporal_Patterns) [Included Tests](../../terms/bdqtest/qrg_index_by_usecase.md#bdqvalspatial-temporal_patterns)
-* [bdqval:Taxon-Management](../../list/bdqval/index.md#bdqval_Taxon-Management) [Included Tests](../../terms/bdqtest/qrg_index_by_usecase.md#bdqvaltaxon-management)
+* [bdqval:Alien-Species](../../list/bdqval/index.md#bdqval_Alien-Species) [(Included Tests)](../../terms/bdqtest/qrg_index_by_usecase.md#bdqvalalien-species)
+* [bdqval:Record-Management](../../list/bdqval/index.md#bdqval_Record-Management) [(Included Tests)](../../terms/bdqtest/qrg_index_by_usecase.md#bdqvalrecord-management)
+* [bdqval:Species-Distribution-Modeling-Trees](../../list/bdqval/index.md#bdqval_SDM-Trees) [(Included Tests)](../../terms/bdqtest/qrg_index_by_usecase.md#bdqvalsdm-trees)
+* [bdqval:Spatial-Temporal_Patterns](../../list/bdqval/index.md#bdqval_Spatial-Temporal_Patterns) [(Included Tests)](../../terms/bdqtest/qrg_index_by_usecase.md#bdqvalspatial-temporal_patterns)
+* [bdqval:Taxon-Management](../../list/bdqval/index.md#bdqval_Taxon-Management) [(Included Tests)](../../terms/bdqtest/qrg_index_by_usecase.md#bdqvaltaxon-management)
 
 Under the principle that data has quality only with respect to use, each of the BDQ Tests is allocated to at least one `Use Case`.  Note that there is a many-to-many relationship here: One BDQ Test can be in multiple `Use Cases` and one `Use Case` may have many associated BDQ Tests, with `Policies` relating Tests to `Use Cases`.  See [Compliance depends on Use Case](../implementers/index.md#31-compliance-depends-on-use-case-normative) in the Implementer's Guide for further explanation.
 
@@ -670,22 +670,19 @@ To propose to add a Test to the BDQ Standard, follow the instructions provided b
 
 ## 8 Creating New Use Cases (non-normative)
 
-BDQ is based on `Use Cases`: An evaluation of data quality must be within the context of a `Use Case`.  In the Fitness For Use Framework, `Use Cases` are needs-layer concepts.
-A `Use Case` is linked to sets of relevant Tests through `Policies` (e.g., `ValidationPolicy`, `IssuePolicy`, `MeasurementPolicy`, and `AmendmentPolicy`). Together, these `Policies` identify which Tests should be run for a given `Use Case` and, therefore, which `Responses` about data quality are expected from running that set of Tests.
-
-Five over-arching `Use Cases` have been used in the BDQ Standard. These were developed through the TDWG Biodiversity Data Quality Interest Group Task Group 3: Data Quality Use Cases (Rees and Nicholls, 2020). These, of course, are only a small subset of all possible `Use Cases` and users may wish to develop `Use Cases` for their own purposes.
-
-See the [Tutorial](../../tutorial/index.md) for a worked out example of the definition of a new `Use Case`.
+BDQ is based on `Use Cases`: An evaluation of data quality must be within the context of a `Use Case`. In the Fitness For Use Framework, `Use Cases` are needs-layer concepts. A Use Case is linked to sets of relevant Tests through `Policies` (e.g., `ValidationPolicy`, `IssuePolicy`, `MeasurementPolicy`, and `AmendmentPolicy`). Together, these `Policies` identify which Tests should be run for a given `Use Case` and, therefore, which `Responses` about data quality are expected from running that set of Tests. See the Tutorial for a worked out example of the definition of a new Use Case. See the [Tutorial](../../tutorial/index.md) for a worked out example of the definition of a new `Use Case`.
 
 ### 8.1 Elements of a New Use Case (non-normative)
 
-`Use Cases` are straightforward to describe.  A `Use Case` has a name, a definition, a statement of fitness requirements ([bdqffdq:hasFitnessRequirements](<../../list/bdqffdq/index.md#hasFitnessRequirements> "The property of a bdqffdq:UseCase that provides text listing the qualities that data must have to be fit for a given use.")) and a list of Tests.  The list of Tests is expressed as four `Policies`, a `ValidationPolicy` comprised of the `Validations` related to the `Use Case`, an `AmendmentPolicy` listing related `Amendments`, a `MeasurementPolicy` listing related `Measures`, and an `IssuePolicy` listing any related `Issues`.   
+A 'Use Case' has a name, a definition, a statement of fitness requirements ([bdqffdq:hasFitnessRequirements](<../../list/bdqffdq/index.md#hasFitnessRequirements> "The property of a bdqffdq:UseCase that provides text listing the qualities that data must have to be fit for a given use.")) and a list of associated Tests. The list of Tests is expressed as four `Policies`, a `ValidationPolicy` comprised of the `Validations` related to the Use Case, an `AmendmentPolicy` listing related `Amendments`, a `MeasurementPolicy` listing related `Measures`, and an `IssuePolicy` listing any related `Issues`.
 
-The definition for a new `Use Case` should include a clear statement of the purpose and nature of the use of the data in the `Use Case`, and the fitness requirements should provide a high level overview of what is needed for data to be fit for that specified use.   Once Tests have been identified (or newly described) `Policies` should be established to assert which Tests are relevant to the `Use Case`.   
+The Definition for a new Use Case should include a clear and explicit statement of the application. The fitness requirements should provide a succinct summary of the significant Information Elements needed for that application. It may be helpful to identify what are the primary information elements (InformationElements ActedUpon) and what informationElements may support the application (Information Elements Consulted). For example, dwc:eventDate may be required for the Use Case, but dwc:year, dwc:month and dwc:day may be required to populate an empty dwc:eventDate. It may help to focus on the VALIDATION Test Types and then on AMENDMENT Type Tests required to support that application.
+
+The selection of relevant Information Elements and the selection of Tests will very likely be an iterative process.
 
 ### 8.2 Defining a New Use Case (non-normative)
 
-A `Use Case` can be defined outside of the BDQ standard, and users are encouraged to define `Use Cases` for their own purposes.  
+A `Use Case` can be defined outside of the BDQ standard. Users are encouraged to define `Use Cases` for their own purposes.  
 
 See the [Tutorial](../../tutorial/index.md) for a worked out example of the definition of a new `Use Case`.
 
