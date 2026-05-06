@@ -565,9 +565,9 @@ AMENDMENT_TAXONRANK_STANDARDIZED [Quick Reference Guide](index.md#AMENDMENT_TAXO
 
 
 ## bdqval:Biotic-Relationships
-Research uses forming a bdqffdq:UseCase for relationships between dwc:Organisms 1) where the bdqffdq:InformationElements concern what dwc:Organisms have a relationship and 2) that are used for analysis of the relationship of one dwc:Organism to another (see examples in: Poelen JH, Simons JD, Mungall CJ. (2014). Global Biotic Interactions: An open infrastructure to share and analyze species-interaction datasets. Ecological Informatics, 24, 148–159. https://doi.org/10.1016/j.ecoinf.2014.08.005). 
+error extracting definition
 
-Fitness Requirements: Data are fit for the Use Case bdqval:Biotic-Relationships when occurrence records support consistent interpretation of biotic relationship evidenced by providing a resolvable taxonomic identification, minimally usable spatial and temporal context, and key controlled descriptors that are present and standardizable (e.g., record type, occurrence status, establishment context, pathway, type status).  <ul><li>Organism identity is usable: Taxon and scientific name terms are present and sufficiently resolvable, are internally consistent, and where possible are consistent with an appropriate source authority to support relationship interpretation and grouping.  </li><li>Occurrence semantics are usable: Key status/occurrence terms (e.g., dwc:occurrenceStatus) are present, and valid and standardizable so records are comparable.  </li><li>Location and time are usable: Spatial terms (coordinates and supporting metadata) and temporal terms (e.g., dwc:eventDate and related date terms) are present, valid, and internally consistent so records are comparable, and support consistent interpretation, and downstream use.  </li><li> </li><li>Supporting descriptors are usable: Core typing/descriptor terms (e.g., dwc:basisOfRecord, dc:type) are present, valid/ and standardizable so as to support consistent interpretation across sources.  </li></ul> 
+error extracting fitness requirements
 
 VALIDATION_BASISOFRECORD_NOTEMPTY [Quick Reference Guide](index.md#VALIDATION_BASISOFRECORD_NOTEMPTY) [Term List](../../list/bdqtest/index.md#bdqtest_ac2b7648-d5f9-48ca-9b07-8ad5879a2536)
 

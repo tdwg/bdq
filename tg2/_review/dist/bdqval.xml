@@ -126,22 +126,6 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
      <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqval/terms/assumptionOnUnknownBiome"/>
 </rdf:Description>
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqval/terms/version/Biotic-Relationships-2026-04-22">
-     <rdfs:isDefinedBy rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
-     <dcterms:isPartOf rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
-     <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-04-22</dcterms:issued>
-     <tdwgutility:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recommended</tdwgutility:status>
-     <rdfs:label xml:lang="en">Biotic-Relationships</rdfs:label>
-     <skos:prefLabel xml:lang="en">Biotic-Relationships</skos:prefLabel>
-     <skos:note xml:lang="en"></skos:note>
-     <rdfs:comment xml:lang="en">Research uses forming a bdqffdq:UseCase for relationships between dwc:Organisms 1) where the bdqffdq:InformationElements concern what dwc:Organisms have a relationship and 2) that are used for analysis of the relationship of one dwc:Organism to another (see examples in: Poelen JH, Simons JD, Mungall CJ. (2014). Global Biotic Interactions: An open infrastructure to share and analyze species-interaction datasets. Ecological Informatics, 24, 148–159. https://doi.org/10.1016/j.ecoinf.2014.08.005). </rdfs:comment>
-     <skos:definition xml:lang="en">Research uses forming a bdqffdq:UseCase for relationships between dwc:Organisms 1) where the bdqffdq:InformationElements concern what dwc:Organisms have a relationship and 2) that are used for analysis of the relationship of one dwc:Organism to another (see examples in: Poelen JH, Simons JD, Mungall CJ. (2014). Global Biotic Interactions: An open infrastructure to share and analyze species-interaction datasets. Ecological Informatics, 24, 148–159. https://doi.org/10.1016/j.ecoinf.2014.08.005). </skos:definition>
-     <rdf:value>Biotic-Relationships</rdf:value>
-     <skos:inScheme rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
-     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/UseCase"/>
-     <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqval/terms/Biotic-Relationships"/>
-     <bdqffdq:hasFitnessRequirements rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data are fit for the Use Case bdqval:Biotic-Relationships when occurrence records support consistent interpretation of biotic relationship evidenced by providing a resolvable taxonomic identification, minimally usable spatial and temporal context, and key controlled descriptors that are present and standardizable (e.g., record type, occurrence status, establishment context, pathway, type status).  <ul><li>Organism identity is usable: Taxon and scientific name terms are present and sufficiently resolvable, are internally consistent, and where possible are consistent with an appropriate source authority to support relationship interpretation and grouping.  </li><li>Occurrence semantics are usable: Key status/occurrence terms (e.g., dwc:occurrenceStatus) are present, and valid and standardizable so records are comparable.  </li><li>Location and time are usable: Spatial terms (coordinates and supporting metadata) and temporal terms (e.g., dwc:eventDate and related date terms) are present, valid, and internally consistent so records are comparable, and support consistent interpretation, and downstream use.  </li><li> </li><li>Supporting descriptors are usable: Core typing/descriptor terms (e.g., dwc:basisOfRecord, dc:type) are present, valid/ and standardizable so as to support consistent interpretation across sources.  </li></ul> </bdqffdq:hasFitnessRequirements>
-</rdf:Description>
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqval/terms/version/defaultGeodeticDatum-2026-04-22">
      <rdfs:isDefinedBy rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
      <dcterms:isPartOf rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>

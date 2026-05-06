@@ -192,7 +192,6 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 **bdqffdq:UseCase**
 
 [bdqval:Alien-Species](#bdqval_Alien-Species) |
-[bdqval:Biotic-Relationships](#bdqval_Biotic-Relationships) |
 [bdqval:Record-Management](#bdqval_Record-Management) |
 [bdqval:SDM-Trees](#bdqval_SDM-Trees) |
 [bdqval:Spatial-Temporal_Patterns](#bdqval_Spatial-Temporal_Patterns) |
@@ -235,7 +234,6 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 **bdqffdq:UseCase**
 
 [Alien-Species](#bdqval_Alien-Species) |
-[Biotic-Relationships](#bdqval_Biotic-Relationships) |
 [Record-Management](#bdqval_Record-Management) |
 [Spatial-Temporal Patterns](#bdqval_Spatial-Temporal_Patterns) |
 [Species-Distribution-Modeling-Trees](#bdqval_SDM-Trees) |
@@ -574,60 +572,6 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		<tr>
 			<td>Type</td>
 			<td>bdqffdq:Parameter, owl:NamedIndividual</td>
-		</tr>
-	</tbody>
-</table>
-
-<table>
-	<thead>
-		<tr>
-			<th colspan="2"><a id="bdqval_Biotic-Relationships"></a>Term Name  bdqval:Biotic-Relationships</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Term IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/Biotic-Relationships">https://rs.tdwg.org/bdqval/terms/Biotic-Relationships</a></td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2026-04-22</td>
-		</tr>
-		<tr>
-			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/Biotic-Relationships-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/Biotic-Relationships-2026-04-22</a></td>
-		</tr>
-		<tr>
-			<td>Label</td>
-			<td>Biotic-Relationships</td>
-		</tr>
-		<tr>
-			<td>Definition</td>
-			<td>Research uses forming a bdqffdq:UseCase for relationships between dwc:Organisms 1) where the bdqffdq:InformationElements concern what dwc:Organisms have a relationship and 2) that are used for analysis of the relationship of one dwc:Organism to another (see examples in: Poelen JH, Simons JD, Mungall CJ. (2014). Global Biotic Interactions: An open infrastructure to share and analyze species-interaction datasets. Ecological Informatics, 24, 148–159. https://doi.org/10.1016/j.ecoinf.2014.08.005). </td>
-		</tr>
-		<tr>
-			<td>Comments</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>Fitness requirements</td>
-			<td>Data are fit for the Use Case bdqval:Biotic-Relationships when occurrence records support consistent interpretation of biotic relationship evidenced by providing a resolvable taxonomic identification, minimally usable spatial and temporal context, and key controlled descriptors that are present and standardizable (e.g., record type, occurrence status, establishment context, pathway, type status).  <ul><li>Organism identity is usable: Taxon and scientific name terms are present and sufficiently resolvable, are internally consistent, and where possible are consistent with an appropriate source authority to support relationship interpretation and grouping.  </li><li>Occurrence semantics are usable: Key status/occurrence terms (e.g., dwc:occurrenceStatus) are present, and valid and standardizable so records are comparable.  </li><li>Location and time are usable: Spatial terms (coordinates and supporting metadata) and temporal terms (e.g., dwc:eventDate and related date terms) are present, valid, and internally consistent so records are comparable, and support consistent interpretation, and downstream use.  </li><li> </li><li>Supporting descriptors are usable: Core typing/descriptor terms (e.g., dwc:basisOfRecord, dc:type) are present, valid/ and standardizable so as to support consistent interpretation across sources.  </li></ul> </td>
-		</tr>
-		<tr>
-			<td>Status</td>
-			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>Controlled value</td>
-			<td>Biotic-Relationships</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>bdqffdq:UseCase</td>
-		</tr>
-		<tr>
-			<td>Included SingleRecord Tests</td>
-			<td><a href="../../terms/bdqtest/index.md#AMENDMENT_DCTYPE_STANDARDIZED">AMENDMENT_DCTYPE_STANDARDIZED</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_ESTABLISHMENTMEANS_STANDARDIZED">AMENDMENT_ESTABLISHMENTMEANS_STANDARDIZED</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT">AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_OCCURRENCESTATUS_STANDARDIZED">AMENDMENT_OCCURRENCESTATUS_STANDARDIZED</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_PATHWAY_STANDARDIZED">AMENDMENT_PATHWAY_STANDARDIZED</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID">AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_TYPESTATUS_STANDARDIZED">AMENDMENT_TYPESTATUS_STANDARDIZED</a>, <a href="../../terms/bdqtest/index.md#ISSUE_ESTABLISHMENTMEANS_NOTEMPTY">ISSUE_ESTABLISHMENTMEANS_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_BASISOFRECORD_NOTEMPTY">VALIDATION_BASISOFRECORD_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_BASISOFRECORD_STANDARD">VALIDATION_BASISOFRECORD_STANDARD</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_CLASSIFICATION_CONSISTENT">VALIDATION_CLASSIFICATION_CONSISTENT</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_CLASS_FOUND">VALIDATION_CLASS_FOUND</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_DCTYPE_NOTEMPTY">VALIDATION_DCTYPE_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_DCTYPE_STANDARD">VALIDATION_DCTYPE_STANDARD</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_DECIMALLATITUDE_INRANGE">VALIDATION_DECIMALLATITUDE_INRANGE</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_DECIMALLATITUDE_NOTEMPTY">VALIDATION_DECIMALLATITUDE_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_DECIMALLONGITUDE_INRANGE">VALIDATION_DECIMALLONGITUDE_INRANGE</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_DECIMALLONGITUDE_NOTEMPTY">VALIDATION_DECIMALLONGITUDE_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_ESTABLISHMENTMEANS_STANDARD">VALIDATION_ESTABLISHMENTMEANS_STANDARD</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_EVENTDATE_NOTEMPTY">VALIDATION_EVENTDATE_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_EVENTDATE_STANDARD">VALIDATION_EVENTDATE_STANDARD</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_EVENT_CONSISTENT">VALIDATION_EVENT_CONSISTENT</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_GENUS_FOUND">VALIDATION_GENUS_FOUND</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_OCCURRENCESTATUS_NOTEMPTY">VALIDATION_OCCURRENCESTATUS_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_OCCURRENCESTATUS_STANDARD">VALIDATION_OCCURRENCESTATUS_STANDARD</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_PATHWAY_STANDARD">VALIDATION_PATHWAY_STANDARD</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_SCIENTIFICNAME_FOUND">VALIDATION_SCIENTIFICNAME_FOUND</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_SCIENTIFICNAME_NOTEMPTY">VALIDATION_SCIENTIFICNAME_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_TAXON_NOTEMPTY">VALIDATION_TAXON_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_TAXON_UNAMBIGUOUS">VALIDATION_TAXON_UNAMBIGUOUS</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_TYPESTATUS_STANDARD">VALIDATION_TYPESTATUS_STANDARD</a></td>
 		</tr>
 	</tbody>
 </table>
