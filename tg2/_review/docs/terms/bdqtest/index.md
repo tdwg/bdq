@@ -177,7 +177,7 @@ dwc:basisOfRecord="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLI
 
 #### Use Cases
 
-bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships, bdqval:SDM-Trees
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:SDM-Trees
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -218,7 +218,7 @@ dwc:basisOfRecord="Specimen": Response.status=RUN_HAS_RESULT, Response.result=NO
 
 #### Use Cases
 
-bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships, bdqval:SDM-Trees
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:SDM-Trees
 
 #### Notes
 
@@ -255,7 +255,7 @@ dc:type=" ": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Resp
 
 #### Use Cases
 
-bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -292,7 +292,7 @@ dc:type="StillerImage": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMP
 
 #### Use Cases
 
-bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -874,7 +874,7 @@ dwc:decimalLatitude="121.0534": Response.status=RUN_HAS_RESULT, Response.result=
 
 #### Use Cases
 
-bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships, bdqval:SDM-Trees
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:SDM-Trees
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -907,7 +907,7 @@ dwc:decimalLatitude="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMP
 
 #### Use Cases
 
-bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships, bdqval:SDM-Trees
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:SDM-Trees
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -940,7 +940,7 @@ dwc:decimalLongitude="181.0554": Response.status=RUN_HAS_RESULT, Response.result
 
 #### Use Cases
 
-bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships, bdqval:SDM-Trees
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:SDM-Trees
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -973,7 +973,7 @@ dwc:decimalLongitude=" ": Response.status=RUN_HAS_RESULT, Response.result=NOT_CO
 
 #### Use Cases
 
-bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships, bdqval:SDM-Trees
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:SDM-Trees
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -1567,7 +1567,7 @@ dwc:eventDate="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT,
 
 #### Use Cases
 
-bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships, bdqval:SDM-Trees
+bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:SDM-Trees
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -1600,7 +1600,7 @@ dwc:eventDate="1963-03-08T14:67-0600": Response.status=RUN_HAS_RESULT, Response.
 
 #### Use Cases
 
-bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships, bdqval:SDM-Trees
+bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:SDM-Trees
 
 #### Notes
 
@@ -1674,7 +1674,7 @@ dwc:day="15", dwc:month="9", dwc:year="1949", dwc:eventDate="1949-09-16T12:34", 
 
 #### Use Cases
 
-bdqval:Alien-Species, bdqval:Record-Management, bdqval:Biotic-Relationships
+bdqval:Alien-Species, bdqval:Record-Management
 
 #### Notes
 
@@ -1996,7 +1996,7 @@ dwc:establishmentMeans="cultivated": Response.status=RUN_HAS_RESULT, Response.re
 
 #### Use Cases
 
-bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
+bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -2066,7 +2066,7 @@ dwc:occurrenceStatus="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COM
 
 #### Use Cases
 
-bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships, bdqval:SDM-Trees
+bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:SDM-Trees
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -2107,7 +2107,7 @@ dwc:occurrenceStatus="presence": Response.status=RUN_HAS_RESULT, Response.result
 
 #### Use Cases
 
-bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships, bdqval:SDM-Trees
+bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:SDM-Trees
 
 #### Notes
 
@@ -2152,7 +2152,7 @@ dwc:pathway="escapee": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPL
 
 #### Use Cases
 
-bdqval:Alien-Species, bdqval:Record-Management, bdqval:Biotic-Relationships
+bdqval:Alien-Species, bdqval:Record-Management
 
 #### Notes
 
@@ -2242,7 +2242,7 @@ dwc:typeStatus="cleptotype": Response.status=RUN_HAS_RESULT, Response.result=NOT
 
 #### Use Cases
 
-bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management, bdqval:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management
 
 #### Notes
 
@@ -2287,7 +2287,7 @@ dwc:kingdom="", dwc:phylum="Chordata", dwc:class="", dwc:order="Rhopalocera", dw
 
 #### Use Cases
 
-bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management, bdqval:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management
 
 #### Notes
 
@@ -2332,7 +2332,7 @@ dwc:class="Magnoleopsida": Response.status=RUN_HAS_RESULT, Response.result=NOT_C
 
 #### Use Cases
 
-bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management, bdqval:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management
 
 #### Notes
 
@@ -2422,7 +2422,7 @@ dwc:genus="Egernea": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIA
 
 #### Use Cases
 
-bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management, bdqval:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management
 
 #### Notes
 
@@ -2808,7 +2808,7 @@ dwc:scientificName="Capulus intort": Response.status=RUN_HAS_RESULT, Response.re
 
 #### Use Cases
 
-bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships, bdqval:SDM-Trees
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:SDM-Trees
 
 #### Notes
 
@@ -2845,7 +2845,7 @@ dwc:scientificName="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPL
 
 #### Use Cases
 
-bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships, bdqval:SDM-Trees
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:SDM-Trees
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -2956,7 +2956,7 @@ dwc:taxonID="", dwc:scientificNameID="", dwc:acceptedNameUsageID="", dwc:parentN
 
 #### Use Cases
 
-bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -3001,7 +3001,7 @@ dwc:taxonID="", dwc:scientificNameID="", dwc:acceptedNameUsageID="", dwc:origina
 
 #### Use Cases
 
-bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -3292,7 +3292,7 @@ dwc:establishmentMeans="": Response.status=RUN_HAS_RESULT, Response.result=NOT_I
 
 #### Use Cases
 
-bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Biotic-Relationships
+bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -3332,7 +3332,7 @@ bdqval:annotationAlertIf="?": Response.status=RUN_HAS_RESULT, Response.result=PO
 
 #### Use Cases
 
-bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management, bdqval:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management
 
 #### Notes
 
@@ -3418,7 +3418,7 @@ dc:type="X": Response.status=NOT_AMENDED, Response.result="", Response.comment="
 
 #### Use Cases
 
-bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -4207,7 +4207,7 @@ dwc:establishmentMeans="cultivated": Response.status=NOT_AMENDED, Response.resul
 
 #### Use Cases
 
-bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
+bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -4251,7 +4251,7 @@ dwc:occurrenceStatus="X", dwc:individualCount="10", dwc:organismQuantity="": Res
 
 #### Use Cases
 
-bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
+bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -4296,7 +4296,7 @@ dwc:occurrenceStatus="X": Response.status=NOT_AMENDED, Response.result=, Respons
 
 #### Use Cases
 
-bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
+bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -4341,7 +4341,7 @@ dwc:pathway="escapeee": Response.status=NOT_AMENDED, Response.result="", Respons
 
 #### Use Cases
 
-bdqval:Alien-Species, bdqval:Record-Management, bdqval:Biotic-Relationships
+bdqval:Alien-Species, bdqval:Record-Management
 
 #### Notes
 
@@ -4431,7 +4431,7 @@ dwc:typeStatus="x": Response.status=NOT_AMENDED, Response.result="", Response.co
 
 #### Use Cases
 
-bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management, bdqval:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management
 
 #### Notes
 
@@ -4527,7 +4527,7 @@ dwc:scientificNameID="gbif:8a", dwc:scientificName="": Response.status=NOT_AMEND
 
 #### Use Cases
 
-bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships, bdqval:SDM-Trees
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:SDM-Trees
 
 #### Notes
 
@@ -4605,7 +4605,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdqval:Alien-Species, bdqval:Biotic-Relationships, bdqval:Record-Management, bdqval:SDM-Trees, bdqval:Spatial-Temporal_Patterns, bdqval:Taxon-Management
+bdqval:Alien-Species, bdqval:Record-Management, bdqval:SDM-Trees, bdqval:Spatial-Temporal_Patterns, bdqval:Taxon-Management
 
 #### Notes
 
@@ -4635,7 +4635,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdqval:Alien-Species, bdqval:Biotic-Relationships, bdqval:Record-Management, bdqval:SDM-Trees, bdqval:Spatial-Temporal_Patterns, bdqval:Taxon-Management
+bdqval:Alien-Species, bdqval:Record-Management, bdqval:SDM-Trees, bdqval:Spatial-Temporal_Patterns, bdqval:Taxon-Management
 
 #### Notes
 
@@ -4665,7 +4665,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -4695,7 +4695,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -4785,7 +4785,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdqval:Alien-Species, bdqval:Biotic-Relationships, bdqval:Record-Management, bdqval:Spatial-Temporal_Patterns, bdqval:Taxon-Management
+bdqval:Alien-Species, bdqval:Record-Management, bdqval:Spatial-Temporal_Patterns, bdqval:Taxon-Management
 
 #### Notes
 
@@ -4815,7 +4815,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships, bdqval:SDM-Trees
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:SDM-Trees
 
 #### Notes
 
@@ -4845,7 +4845,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -4875,7 +4875,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -5295,7 +5295,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdqval:Alien-Species, bdqval:Biotic-Relationships, bdqval:Record-Management, bdqval:SDM-Trees, bdqval:Spatial-Temporal_Patterns, bdqval:Taxon-Management
+bdqval:Alien-Species, bdqval:Record-Management, bdqval:SDM-Trees, bdqval:Spatial-Temporal_Patterns, bdqval:Taxon-Management
 
 #### Notes
 
@@ -5355,7 +5355,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdqval:Alien-Species, bdqval:Biotic-Relationships, bdqval:Record-Management, bdqval:SDM-Trees, bdqval:Spatial-Temporal_Patterns, bdqval:Taxon-Management
+bdqval:Alien-Species, bdqval:Record-Management, bdqval:SDM-Trees, bdqval:Spatial-Temporal_Patterns, bdqval:Taxon-Management
 
 #### Notes
 
@@ -5385,7 +5385,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdqval:Alien-Species, bdqval:Biotic-Relationships, bdqval:Record-Management, bdqval:SDM-Trees, bdqval:Spatial-Temporal_Patterns, bdqval:Taxon-Management
+bdqval:Alien-Species, bdqval:Record-Management, bdqval:SDM-Trees, bdqval:Spatial-Temporal_Patterns, bdqval:Taxon-Management
 
 #### Notes
 
@@ -6045,7 +6045,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships, bdqval:SDM-Trees
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:SDM-Trees
 
 #### Notes
 
@@ -6105,7 +6105,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships, bdqval:SDM-Trees
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:SDM-Trees
 
 #### Notes
 
@@ -6135,7 +6135,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -6585,7 +6585,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdqval:Alien-Species, bdqval:Biotic-Relationships, bdqval:Record-Management, bdqval:SDM-Trees, bdqval:Spatial-Temporal_Patterns
+bdqval:Alien-Species, bdqval:Record-Management, bdqval:SDM-Trees, bdqval:Spatial-Temporal_Patterns
 
 #### Notes
 
@@ -6615,7 +6615,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdqval:Alien-Species, bdqval:Biotic-Relationships, bdqval:Record-Management, bdqval:SDM-Trees, bdqval:Spatial-Temporal_Patterns
+bdqval:Alien-Species, bdqval:Record-Management, bdqval:SDM-Trees, bdqval:Spatial-Temporal_Patterns
 
 #### Notes
 
@@ -6675,7 +6675,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdqval:Alien-Species, bdqval:Record-Management, bdqval:Biotic-Relationships
+bdqval:Alien-Species, bdqval:Record-Management
 
 #### Notes
 
@@ -6945,7 +6945,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
+bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -6975,7 +6975,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships, bdqval:SDM-Trees
+bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:SDM-Trees
 
 #### Notes
 
@@ -7035,7 +7035,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdqval:Alien-Species, bdqval:Record-Management, bdqval:Biotic-Relationships
+bdqval:Alien-Species, bdqval:Record-Management
 
 #### Notes
 
@@ -7335,7 +7335,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
+bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -7395,7 +7395,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdqval:Alien-Species, bdqval:Biotic-Relationships, bdqval:Record-Management, bdqval:SDM-Trees, bdqval:Spatial-Temporal_Patterns
+bdqval:Alien-Species, bdqval:Record-Management, bdqval:SDM-Trees, bdqval:Spatial-Temporal_Patterns
 
 #### Notes
 
@@ -7425,7 +7425,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdqval:Alien-Species, bdqval:Biotic-Relationships, bdqval:Record-Management, bdqval:SDM-Trees, bdqval:Spatial-Temporal_Patterns
+bdqval:Alien-Species, bdqval:Record-Management, bdqval:SDM-Trees, bdqval:Spatial-Temporal_Patterns
 
 #### Notes
 
@@ -7455,7 +7455,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdqval:Alien-Species, bdqval:Record-Management, bdqval:Biotic-Relationships
+bdqval:Alien-Species, bdqval:Record-Management
 
 #### Notes
 
@@ -7515,7 +7515,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management, bdqval:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management
 
 #### Notes
 
@@ -7575,7 +7575,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
+bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -7635,7 +7635,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
+bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -7665,7 +7665,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships, bdqval:SDM-Trees
+bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:SDM-Trees
 
 #### Notes
 
@@ -7695,7 +7695,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdqval:Alien-Species, bdqval:Record-Management, bdqval:Biotic-Relationships
+bdqval:Alien-Species, bdqval:Record-Management
 
 #### Notes
 
@@ -7755,7 +7755,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management, bdqval:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management
 
 #### Notes
 
@@ -7785,7 +7785,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management, bdqval:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management
 
 #### Notes
 
@@ -7815,7 +7815,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management, bdqval:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management
 
 #### Notes
 
@@ -7875,7 +7875,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management, bdqval:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management
 
 #### Notes
 
@@ -8175,7 +8175,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdqval:Alien-Species, bdqval:Biotic-Relationships, bdqval:Record-Management, bdqval:SDM-Trees, bdqval:Spatial-Temporal_Patterns, bdqval:Taxon-Management
+bdqval:Alien-Species, bdqval:Record-Management, bdqval:SDM-Trees, bdqval:Spatial-Temporal_Patterns, bdqval:Taxon-Management
 
 #### Notes
 
@@ -8205,7 +8205,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdqval:Alien-Species, bdqval:Biotic-Relationships, bdqval:Record-Management, bdqval:SDM-Trees, bdqval:Spatial-Temporal_Patterns, bdqval:Taxon-Management
+bdqval:Alien-Species, bdqval:Record-Management, bdqval:SDM-Trees, bdqval:Spatial-Temporal_Patterns, bdqval:Taxon-Management
 
 #### Notes
 
@@ -8295,7 +8295,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -8325,7 +8325,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -8355,7 +8355,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management, bdqval:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management
 
 #### Notes
 
@@ -8385,7 +8385,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management, bdqval:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management
 
 #### Notes
 
@@ -8445,7 +8445,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management, bdqval:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management
 
 #### Notes
 
@@ -8745,7 +8745,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships, bdqval:SDM-Trees
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:SDM-Trees
 
 #### Notes
 
@@ -8775,7 +8775,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -8865,7 +8865,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
@@ -8895,7 +8895,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Biotic-Relationships
+bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management
 
 #### Notes
 
