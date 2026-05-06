@@ -146,7 +146,7 @@ The following issues describing potential Tests were tagged as [DO NOT IMPLEMENT
 
 ### 2.2 Use Case Development (non-normative)
 
-Biodiversity Data Quality Task Group 3: Data Quality Use Cases (Rees & Nicholls 2020) was established to review what `Use Cases` were prevalent within the community of those dealing with biodiversity data. This task group identified several fundamental `Use Cases`, including `bdqval:Spatial-Temporal_Patterns`, `bdqval:Record-Management`, and `bdqval:Taxon-Management`. We later added `bdqval:Alien-Species`, `bdqval:Biotic-Relationships` and `bdqval:SDM-Trees`.
+Biodiversity Data Quality Task Group 3: Data Quality Use Cases (Rees & Nicholls 2020) was established to review what `Use Cases` were prevalent within the community of those dealing with biodiversity data. This task group identified several fundamental `Use Cases`, including `bdqval:Spatial-Temporal_Patterns`, `bdqval:Record-Management`, and `bdqval:Taxon-Management`. We later added `bdqval:Alien-Species` and `bdqval:SDM-Trees`.
 
 These are only a sample of the many possible `Use Cases` for the biological sciences, but they provide an initial set to which all the BDQ Tests have been linked. Note that the relationship between `Use Cases` and Tests is a many-to-many relationship - with most Tests being relatable to many `Use Cases` and vice versa.
 
