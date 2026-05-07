@@ -317,11 +317,11 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>Research uses forming a bdqffdq:UseCase for dwc:Occurrence data of alien species that 1) allows the understanding of the spatial and temporal distribution of an alien species or 2) identifies records that contain valid terms (i.e. name, space, time, other) associated with alien species; i.e.1) where the Information Elements concern what dwc:Organism occurred where and when and the means, degree, and pathways of establishment, and that may used for analysis of spatial and/or temporal patterns of biodiversity (see examples in Groom et al. (2019). Improving Darwin Core for research and management of alien species. Biodiversity Information Science and Standards, 3: e38084.  https://doi.org/10.3897/biss.3.38084).</td>
+			<td>A bdqffdq:UseCase that involves the identification and analysis of whether the occurrence of a taxon is native to a location or not, how it got there and to what extent the taxon has become a permanent feature of the location in order to improve the management and reduce the spread of alien species.</td>
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td></td>
+			<td>See Groom et al. (2019). Improving Darwin Core for research and management of alien species. Biodiversity Information Science and Standards, 3: e38084. https://doi.org/10.3897/biss.3.38084.</td>
 		</tr>
 		<tr>
 			<td>Fitness requirements</td>
@@ -1153,11 +1153,11 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>A bdqffdq:UseCase that documents the management of the quality of biodiversity data records, for example, where an agency wishes to do broad data quality checks across the whole of their database for checking for data errors, and for data cleaning (see examples in Rees ER and Nicholls M (2020) Data Quality Use Case Study Results. Biodiversity Information Science and Standards 4: e50889, suppl. 2. https://doi.org/10.3897/biss.4.50889.suppl2). </td>
+			<td>A bdqffdq:UseCase that involves the comprehensive audit, maintenance, and systematic improvement of biodiversity data records to ensure technical integrity, standardized semantics, and repository-wide readiness for curation and broad-scale reporting.</td>
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td></td>
+			<td>See Rees ER and Nicholls M (2020) Data Quality Use Case Study Results. Biodiversity Information Science and Standards 4: e50889, suppl. 2. https://doi.org/10.3897/biss.4.50889.suppl2.</td>
 		</tr>
 		<tr>
 			<td>Fitness requirements</td>
@@ -1207,7 +1207,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>Research uses forming a bdqffdq:UseCase for improving the quality of, and selecting dwc:Occurrence records suitable for predicting the spatial distribution of a limited number of Eucalypt tree species (Gill et al. 1985). This Use Case filters for occurrence records that meet criteria for a known species at a known location and date.  Records can be further filtered to meet the requirements of a particular distribution modeling analysis.  Filtered records can then be combined with environmental data derived from occurrence locations to evaluate robust spatial distribution models, including Maxent (Phillips et al. 2006) and generalized linear and additive models (Guisan et al. 2002). Models will be further assessed via systematic surveys in areas with high predicted occurrence and low record density. Project outputs are: (1) recommendations for robust species distribution modeling methods for tree species, (2) a suite of environmental variables for the selected species, and (3) improved “expert distribution” envelopes derived from modeling.</td>
+			<td>A bdqffdq:UseCase for improving the quality of, and selecting dwc:Occurrence records suitable for predicting the spatial distribution of tree species. This Use Case filters for occurrence records that meet criteria for a known species at a known location and date.  Records can be further filtered to meet the requirements of the predictive modeling of specific tree species distributions (e.g., Eucalypts) using high-precision occurrence data and environmental variables to evaluate modeling methodologies and refine expert distribution envelopes. </td>
 		</tr>
 		<tr>
 			<td>Comments</td>
@@ -1307,11 +1307,11 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>Research uses forming a bdqffdq:UseCase for dwc:Occurrence data 1) where the Information Elements concern what dwc:Organism occurred where and when and 2) that are used for analysis of spatial and/or temporal patterns of biodiversity or for use in species distribution / niche modeling, etc. (see examples in Rees ER and Nicholls M (2020) Data Quality Use Case Study Results. Biodiversity Information Science and Standards 4: e50889, suppl. 2. https://doi.org/10.3897/biss.4.50889.suppl2). </td>
+			<td>A bdqffdq:UseCase that pertains to dwc:Occurrence data where the Information Elements concerning what dwc:Organism occurred when at what location are used for analysies such as of taxon distributions across space and time to quantify biodiversity patterns, identify range shifts, or modeling of ecological niches. </td>
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td></td>
+			<td>See Rees ER and Nicholls M (2020) Data Quality Use Case Study Results. Biodiversity Information Science and Standards 4: e50889, suppl. 2. https://doi.org/10.3897/biss.4.50889.suppl2.</td>
 		</tr>
 		<tr>
 			<td>Fitness requirements</td>
@@ -1407,11 +1407,11 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>A bdqffdq:UseCase that documents the management of the quality of taxonomic names and associated information such as rank, authority, Type status, etc. (see examples in Rees ER and Nicholls M (2020) Data Quality Use Case Study Results Biodiversity Information Science and Standards 4: e50889, suppl. 2. https://doi.org/10.3897/biss.4.50889.suppl2).</td>
+			<td>A bdqffdq:UseCase that involves nomenclatural audit, taxonomic verification, and systematic organization of taxonomic names and associated metadata to ensure identification stability and compliance with global taxonomic standards. </td>
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td></td>
+			<td>See Rees ER and Nicholls M (2020) Data Quality Use Case Study Results. Biodiversity Information Science and Standards 4: e50889, suppl. 2. https://doi.org/10.3897/biss.4.50889.suppl2.</td>
 		</tr>
 		<tr>
 			<td>Fitness requirements</td>
