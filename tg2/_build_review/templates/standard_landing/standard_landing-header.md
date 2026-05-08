@@ -498,7 +498,7 @@ There were many people who have made notable contributions at various times duri
 
 The glossary of terms used in the BDQ standard includes acronyms and these terms that are additional to the terms used in the `bdqffdq`, `bdqval:`, `bdqcrit:`, `bdqdim:`, and `bdqenh:` vocabularies or in one of the two tables that reference the [Test Vocabulary Terms](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/list/bdqtest/index.md#18-key-to-vocabulary-terms-normative) or the [Test Label Components](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/supplement/index.md#313-parts-of-test-labels-non-normative). Note: ‘Darwin Core terms’ refer to [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021).
 
-Note, that a number of terms are definied differently in specific contexts in various documents. For example in the [BDQ Supplemental Information](../_review/docs/supplement/index.md) Document, a Table in #5.2 describes the GitHub Tags that were used when preparing the Tests. The Tags and their definitions sometimes differ from the definitions used for the Standard itself. In the text throughout the BDQ Standard the definitions in the Glossary take precidence.  
+Note: Some terms are definied differently within different documents to align with the context of those documents.  For example, in the [BDQ Supplemental Information](../_review/docs/supplement/index.md) Document, the Table in #5.2 describes the GitHub Tags that were used when preparing the Tests. These Tags and their definitions sometimes differ from the definitions used with the BDQ Standard. The definitions in the Glossary here do however take precedence for the Standard.
 
 | **Label** | **Definition** | **Context** |
 | ---- | ---- | ---- |
