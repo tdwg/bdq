@@ -1318,7 +1318,7 @@ The [kurator-ffdq](https://github.com/kurator-org/kurator-ffdq) library (Lowery 
 
 The development of each Test, with documentation of why particular decisions were made with regard to that Test, has been documented in issues in the [tdwg/bdq](https://github.com/tdwg/bdq) GitHub repository. Each Test issue was tagged with the following GitHub issue labels to assist in finding, evaluating, and asserting conclusions about each Test.
 
-These tags are retained as the "GitHub Issue Labels" (a `skos:note` on each `Data Quality Method` instance) in the BDQ standard. Note that the definitions provided here are specific to their use for the GitHub Tags. Most are the same as are used throughout the Standard, but some may differ. The definitions in the [Glossary in the Biodiversity Data Quality (BDQ) Standard](../../index.md#6-glossary-non-normative)) take precedence for the Standard if there is any conflict between definitions. 
+These tags are retained as the "GitHub Issue Labels" (a `skos:note` on each `Data Quality Method` instance) in the BDQ standard. Note that the definitions provided here are specific to their use for the GitHub Tags. Some terms defined here differ in their definition to those in the [Glossary in the Biodiversity Data Quality (BDQ) Standard](../_review/index.md#6-glossary-non-normative). The definitions in the Glossary take precedence within the Standard if there is any conflict between definitions. 
 
 | **Tag** | **Definition** | **Comment** |
 | --- | ---------- | ------- |
