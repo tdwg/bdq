@@ -223,7 +223,7 @@ These are only a sample of the many possible `Use Cases` for the biological scie
 
 Note that the evaluation of a Test can only take place within the context of a specific `Use Case`, even if that use is particularly broad or particularly narrow. For example, the Test [VALIDATION_COUNTRY_FOUND](../terms/bdqtest/index.md#VALIDATION_COUNTRY_FOUND) could assess the value of `dwc:country` against a `sourceAuthority` for the `Use Case` `bdqval:Record-Management`, but this Test may not be applicable to a `Use Case` related to marine ecology.
 
-See also [Creating a New Use Case](../guide/bdqtest/index.md#8-creating-new-use-cases-non-normative) in [BDQ Tests: Concepts and Use](../guide/bdqtest/index.md) and a more detailed example of the development of a new `Use Case` with  new Tests in the [Tutorial](../_review/docs/tutorial/index.md). 
+See also [Creating a New Use Case](../guide/bdqtest/index.md#8-creating-new-use-cases-non-normative) in [BDQ Tests: Concepts and Use](../guide/bdqtest/index.md) and a more detailed example of the development of a new `Use Case` with  new Tests in the [Tutorial](../tutorial/index.md). 
 
 A `Use Case` can be defined outside of the BDQ standard, and users are encouraged to define `Use Cases` for their own purposes.
 
