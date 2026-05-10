@@ -83,7 +83,7 @@ The following namespace abbreviations are used in this document:
 
 This tutorial works through the development of a `Use Case`, then walks through two examples of the development of Tests.  One of the examples of a Test is simple, the other is more complex.  This tutorial then comes back to the `Use Case` and describes how Measure Tests can be developed to evaluate the results of the Validation Tests for the purpose of `Quality Control`.  
 
-The simpler of the two Tests examined is VALIDATION_FOOTPRINTWKT_NOTEMPTY, which was considered a [Supplementary Test](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/supplement/index.md) rather than a BDQ "Core" Test as we considered it of marginal use for the BDQ `Use Cases`. As noted in the [BDQ Supplement Information](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/supplement/index.md), the Test could be useful in certain `Use Cases`, as noted below.
+The simpler of the two Tests examined is VALIDATION_FOOTPRINTWKT_NOTEMPTY, which was considered a "Supplementary" Test (see: [Developing the Tests](../supplement/index.md#3-developing-the-tests-non-normative))) rather than a BDQ "Core" Test as we considered it of marginal use for the BDQ `Use Cases`.  As described in the [BDQ Supplement Information](../supplement/index.md), the Test could be useful in certain `Use Cases`, as noted below.
 
 **Note** that a proposed **BDQ Maintenance Group** will be established to maintain the BDQ Standard. This group will take responsibility for advising on processes for editing the BDQ standard and evaluating new BDQ Tests, `Use Cases` and other components of the BDQ Standard.
 
@@ -184,7 +184,7 @@ We are looking for existing `Validation` Tests, as we are trying to assert wheth
 
 For example, [VALIDATION_SCIENTIFICNAME_NOTEMPTY](../terms/bdqtest/index.md#VALIDATION_SCIENTIFICNAME_NOTEMPTY) is a BDQ Test that checks if there is a value in dwc:scientificName.
 
-There are several places we could look for existing Tests within BDQ, including the [Quick Reference Guide](../terms/bdqtest/index.md), and the [index](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/list/bdqtest/index.md#31-index-to-validation-tests-non-normative) of the bdqtest: term-list document.  An easy place to look for Tests that operate on particular `Information Elements` is the Quick Reference Guide's [BDQ Test Index by Information Element Acted Upon](../terms/bdqtest/qrg_index_by_ie_actedupon.md).  
+There are several places we could look for existing Tests within BDQ, including the [Quick Reference Guide](../terms/bdqtest/index.md), and the [index](../list/bdqtest/index.md#31-index-to-validation-tests-non-normative) of the bdqtest: term-list document.  An easy place to look for Tests that operate on particular `Information Elements` is the Quick Reference Guide's [BDQ Test Index by Information Element Acted Upon](../terms/bdqtest/qrg_index_by_ie_actedupon.md).  
 
 Looking here for simple presence checks for the `Information Elements` we can identify the following existing BDQ Tests (and gaps):
 

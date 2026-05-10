@@ -175,7 +175,7 @@ The following namespace abbreviations are used in this document:
 
 This tutorial works through the development of a `Use Case`, then walks through two examples of the development of Tests.  One of the examples of a [Test](<../../index.md#glossary_Test> "A composition of a `bdqffdq:DataQualityNeed` with a `bdqffdq:DataQualityMethod` that links it to an instance of a `bdqffdq:Specification`, these instances being composed of `InformationElements`, `Arguments`, and `Param…") is simple, the other is more complex.  This tutorial then comes back to the `Use Case` and describes how Measure Tests can be developed to evaluate the results of the Validation Tests for the purpose of `Quality Control`.  
 
-The simpler of the two Tests examined is VALIDATION_FOOTPRINTWKT_NOTEMPTY, which was considered a [Supplementary Test](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/supplement/index.md) rather than a BDQ "Core" Test as we considered it of marginal use for the BDQ `Use Cases`. As noted in the [BDQ Supplement Information](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/supplement/index.md), the Test could be useful in certain `Use Cases`, as noted below.
+The simpler of the two Tests examined is VALIDATION_FOOTPRINTWKT_NOTEMPTY, which was considered a "[Supplementary](<../../index.md#glossary_Supplementary> "Tests regarded as not [CORE](<../../index.md#glossary_CORE> "Tests that are useful for evaluating biodiversity data quality as represented by the values of `Darwin Core` terms. CORE tests address identified user needs, are widely applicable, informative, unambiguous, well defined…") because of one or more reasons: Not widely applicable; not clearly matched to an identified data quality need; not informative concerning the 'quality' or lack of quality of the data; likely t…")" Test (see: [Developing the Tests](../supplement/index.md#3-developing-the-tests-non-normative))) rather than a BDQ "Core" Test as we considered it of marginal use for the BDQ `Use Cases`.  As described in the [BDQ Supplement Information](../supplement/index.md), the Test could be useful in certain `Use Cases`, as noted below.
 
 **Note** that a proposed **BDQ Maintenance Group** will be established to maintain the BDQ Standard. This group will take responsibility for advising on processes for editing the BDQ standard and evaluating new BDQ Tests, `Use Cases` and other components of the BDQ Standard.
 
@@ -276,7 +276,7 @@ We are looking for existing `Validation` Tests, as we are trying to assert wheth
 
 For example, [VALIDATION_SCIENTIFICNAME_NOTEMPTY](../terms/bdqtest/index.md#VALIDATION_SCIENTIFICNAME_NOTEMPTY) is a BDQ Test that checks if there is a value in dwc:scientificName.
 
-There are several places we could look for existing Tests within BDQ, including the [Quick Reference Guide](../terms/bdqtest/index.md), and the [index](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/list/bdqtest/index.md#31-index-to-validation-tests-non-normative) of the bdqtest: term-list document.  An easy place to look for Tests that operate on particular `Information Elements` is the Quick Reference Guide's [BDQ Test Index by Information Element Acted Upon](../terms/bdqtest/qrg_index_by_ie_actedupon.md).  
+There are several places we could look for existing Tests within BDQ, including the [Quick Reference Guide](../terms/bdqtest/index.md), and the [index](../list/bdqtest/index.md#31-index-to-validation-tests-non-normative) of the bdqtest: term-list document.  An easy place to look for Tests that operate on particular `Information Elements` is the Quick Reference Guide's [BDQ Test Index by Information Element Acted Upon](../terms/bdqtest/qrg_index_by_ie_actedupon.md).  
 
 Looking here for simple presence checks for the `Information Elements` we can identify the following existing BDQ Tests (and gaps):
 
@@ -333,7 +333,7 @@ For dwc:footprintWKT, we could guess the name of the Test, following the naming 
 * Existing proposals tagged as [DO NOT IMPLEMENT](https://github.com/tdwg/bdq/issues?q=label%3A%22DO%20NOT%20IMPLEMENT%22) that would fill the desired gap, but have been rejected for implementation.  These Tests should be reconsidered only with great caution.
 * **Note that all of these issues in GitHub are Closed, the default issue search which includes is:open will not find them.**
 
-There is an existing definition for a Test, [VALIDATION_FOOTPRINTWKT_NOTEMPTY](https://github.com/tdwg/bdq/issues/226), in the documented [Supplementary](<../../index.md#glossary_Supplementary> "Tests regarded as not [CORE](<../../index.md#glossary_CORE> "Tests that are useful for evaluating biodiversity data quality as represented by the values of `Darwin Core` terms. CORE tests address identified user needs, are widely applicable, informative, unambiguous, well defined…") because of one or more reasons: Not widely applicable; not clearly matched to an identified data quality need; not informative concerning the 'quality' or lack of quality of the data; likely t…") Tests.
+There is an existing definition for a Test, [VALIDATION_FOOTPRINTWKT_NOTEMPTY](https://github.com/tdwg/bdq/issues/226), in the documented Supplementary Tests.
 
 Looking at the description of that Test we see:
 
@@ -476,7 +476,7 @@ If some data are absent and other data are incorrectly formatted, a more complic
 BDQ `Validations` also have a `Criterion` property.  Each `Criterion` represents an abstract way of evaluating whether a data value meets expectations for a particular `Use Case`.  These criteria are formally defined in the [bdqcrit:](../list/bdqcrit/index.md) vocabulary.  For example, the Criterion `NotEmpty` is defined as "The data value is not empty (i.e., it contains some data)".  This is exactly the criterion we are applying in this Test, so we will use the `NotEmpty` criterion for this Test.  
 
 This gives us the following additional properties for the Test:
-* **Data Quality [Dimension](<../../index.md#glossary_Dimension> "See [bdqffdq:DataQualityDimension.](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/list/bdqffdq/index.md#dataqualitydimension)")** Completeness
+* **Data Quality [Dimension](<../../index.md#glossary_Dimension> "See [bdqffdq:DataQualityDimension.](docs/list/bdqffdq/index.md#dataqualitydimension)")** Completeness
 * **Criterion** NotEmpty
 
 All BDQ Test types have a `Data Quality Dimension` (taking values from the [bdqdim:](../list/bdqdim/index.md) vocabulary).  Only `Validations` and `Issues` have a `Criterion` (taking values from the [bdqcrit:](../list/bdqcrit/index.md) vocabulary), while `Amendments` have an `Enhancement` (taking values from the [bdqenh:](../list/bdqenh/index.md) vocabulary).  `Measures` have only the `Data Quality Dimension`.

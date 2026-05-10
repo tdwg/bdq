@@ -166,9 +166,9 @@ More broadly, the concept of fitness for purpose refers to whether data are adeq
 
 Tests for data quality may serve two purposes: Quality Control and Quality Assurance. 
 
-- In Quality Assurance ([QA](<../../../index.md#glossary_QA> "Quality Assurance. See [User's Guide #2.1](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/guide/users/index.md#21-quality-control-and-quality-assurance-non-normative). Data are evaluated for fitness for use an…")), data are evaluated for fitness for use and are filtered down to just those data that are fit for that use.
+- In Quality Assurance ([QA](<../../../index.md#glossary_QA> "Quality Assurance. See [User's Guide #2.1](docs/guide/users/index.md#21-quality-control-and-quality-assurance-non-normative). Data are evaluated for fitness for use and are filtered down to just those data that are fit…")), data are evaluated for fitness for use and are filtered down to just those data that are fit for that use.
 
-- In Quality Control ([QC](<../../../index.md#glossary_QC> "Quality Control. See [User's Guide #2.1](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/guide/users/index.md#21-quality-control-and-quality-assurance-non-normative). Tests are used to identify data that are no…")), Tests are used to identify data that are not fit for particular uses, with the goal of improving the data quality, and the Tests may propose changes to improve the quality of the data.
+- In Quality Control ([QC](<../../../index.md#glossary_QC> "Quality Control. See [User's Guide #2.1](docs/guide/users/index.md#21-quality-control-and-quality-assurance-non-normative). Tests are used to identify data that are not fit for particular uses, with the goal of improvin…")), Tests are used to identify data that are not fit for particular uses, with the goal of improving the data quality, and the Tests may propose changes to improve the quality of the data.
 
 The success of `Quality Assurance` and `Quality Control` depends on organizational context and resources. These include establishing clear validation, monitoring, and feedback procedures to maintain high quality data, and encouraging collaboration among data custodians, analysts, and end-users to ensure data quality aligns with practical needs and supports reliable decisions. It also requires developing formal methodologies to understand and process the Test outputs in the `Data Quality Reports`.
 
@@ -433,12 +433,12 @@ The definitions of the terms used for the Tests can be found in [Terms Used in t
 
 ## 5 Creating New Tests and Use Cases (non-normative)
 
-New `Use Cases` and Tests can be defined outside of the BDQ standard, and users are particularly encouraged to define `Use Cases` for their own purposes. See the [Tutorial](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/tutorial/index.md) for a worked out example of the definition of a new `Use Case` and Tests.
+New `Use Cases` and Tests can be defined outside of the BDQ standard, and users are particularly encouraged to define `Use Cases` for their own purposes. See the [Tutorial](../../tutorial/index.md) for a worked out example of the definition of a new `Use Case` and Tests.
 
 
-To propose to add a Test to the BDQ Standard, follow the instructions provided by the BDQ Maintenance Group. Details on how this would be done can be seen in [Creating New Tests](https://github.com/tdwg/bdq/blob/master/tg2/_build_review/templates/guide/bdqtest/bdqtest-header.md#7-creating-new-tests-non-normative)
+To propose to add a Test to the BDQ Standard, follow the instructions provided by the BDQ Maintenance Group. Details on how this would be done can be seen in [Creating New Tests](../bdqtest/index.md#7-creating-new-tests-non-normative)
 
-To propose to add a new `Use Case` to the BDQ Standard, follow the instructions provided by the BDQ Maintenance Group. Details on how this would be done can be seen in [Creating New Use Cases](https://github.com/tdwg/bdq/blob/master/tg2/_build_review/templates/guide/bdqtest/bdqtest-header.md#8-creating-new-use-cases-non-normative)
+To propose to add a new `Use Case` to the BDQ Standard, follow the instructions provided by the BDQ Maintenance Group. Details on how this would be done can be seen in [Creating New Use Cases](../bdqtest/index.md#8-creating-new-use-cases-non-normative)
 
 ## 6 Time of Day and Time Zones (non-normative)
 

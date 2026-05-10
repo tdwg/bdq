@@ -384,12 +384,12 @@ The definitions of the terms used for the Tests can be found in [Terms Used in t
 
 ## 5 Creating New Tests and Use Cases (non-normative)
 
-New `Use Cases` and Tests can be defined outside of the BDQ standard, and users are particularly encouraged to define `Use Cases` for their own purposes. See the [Tutorial](https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/tutorial/index.md) for a worked out example of the definition of a new `Use Case` and Tests.
+New `Use Cases` and Tests can be defined outside of the BDQ standard, and users are particularly encouraged to define `Use Cases` for their own purposes. See the [Tutorial](../../tutorial/index.md) for a worked out example of the definition of a new `Use Case` and Tests.
 
 
-To propose to add a Test to the BDQ Standard, follow the instructions provided by the BDQ Maintenance Group. Details on how this would be done can be seen in [Creating New Tests](https://github.com/tdwg/bdq/blob/master/tg2/_build_review/templates/guide/bdqtest/bdqtest-header.md#7-creating-new-tests-non-normative)
+To propose to add a Test to the BDQ Standard, follow the instructions provided by the BDQ Maintenance Group. Details on how this would be done can be seen in [Creating New Tests](../bdqtest/index.md#7-creating-new-tests-non-normative)
 
-To propose to add a new `Use Case` to the BDQ Standard, follow the instructions provided by the BDQ Maintenance Group. Details on how this would be done can be seen in [Creating New Use Cases](https://github.com/tdwg/bdq/blob/master/tg2/_build_review/templates/guide/bdqtest/bdqtest-header.md#8-creating-new-use-cases-non-normative)
+To propose to add a new `Use Case` to the BDQ Standard, follow the instructions provided by the BDQ Maintenance Group. Details on how this would be done can be seen in [Creating New Use Cases](../bdqtest/index.md#8-creating-new-use-cases-non-normative)
 
 ## 6 Time of Day and Time Zones (non-normative)
 
