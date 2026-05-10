@@ -51,7 +51,7 @@
 The purpose of this document is to define and explain the BDQ Tests — the primary mechanism for evaluating the quality of biodiversity data in the BDQ standard — providing a clear and consistent specification that can be used by implementers, analysts, and quality assessors.
 
 This document:
-- Describes the structure, types, and formal characteristicss of the BDQ Tests.
+- Describes the structure, types, and formal characteristics of the BDQ Tests.
   - Provides normative specifications and non-normative guidance for BDQ Tests, describing how each Test is modeled using standard vocabulary terms and how conforming implementations are expected to behave.
   - Defines the Test types (`Validation`, `Issue`, `Measure`, `Amendment`), the semantics of single- versus multi-record evaluation, and how `Parameters` influence Test behavior.
   - Provides the basis for interpreting BDQ Test descriptions and guidance for producing BDQ-conformant implementations and reports.
@@ -182,7 +182,7 @@ Under the principle that data has quality only with respect to use, each of the 
 
 ## 3 Test Types (non-normative)
 
-<!-- validation directly linked below for consistent post-build rendering as it is autolinked above, while issue and other types have their first apperance and autolinking here. -->
+<!-- validation directly linked below for consistent post-build rendering as it is autolinked above, while issue and other types have their first appeerance and autolinking here. -->
 The concept of "Tests" in the context of BDQ include four distinct types: `Validation` ([bdqffdq:Validation](../../list/bdqffdq/index.md#Validation)); `Issue` (`bdqffdq:Issue`); `Amendment` (`bdqffdq:Amendment`) and `Measure` (`bdqffdq:Measure`).
 
 A Response serves as the formal output of a Test and consists of three primary components: `Response.status`, `Response.result` and `Response.comment` See [Structure of Response (normative)](#41-structure-of-response-normative).
