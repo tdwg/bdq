@@ -235,6 +235,7 @@ for term in termLists:
         column_list += ['controlled_value_string']
     if term == "bdquc" :
         column_list += ['hasFitnessRequirements']
+        column_list += ['scopeNote']
     #elif vocab_type == 3:
     #    column_list += ['controlled_value_string', 'skos_broader']
     #if organized_in_categories:
@@ -275,6 +276,7 @@ for term in termLists:
                     row_list += [row['controlled_value_string']]
                 if term == "bdquc" :
                     row_list += [row['hasFitnessRequirements']]
+                    row_list += [row['scopeNote']]
         #        elif vocab_type == 3:
         #            if row['skos_broader'] =='':
         #                row_list += [row['controlled_value_string'], '']
@@ -553,6 +555,8 @@ for term in termLists:
             if term == "bdquc" :
                 if row['hasFitnessRequirements'] and row['hasFitnessRequirements'] != '' :
                     outputRdf += '     <bdqffdq:hasFitnessRequirements rdf:datatype="http://www.w3.org/2001/XMLSchema#string">{}</bdqffdq:hasFitnessRequirements>\n'.format(row['hasFitnessRequirements'])
+                if row['scopeNote'] and row['scopeNote'] != '' :
+                    outputRdf += '     <skos:scopeNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">{}</skos:scopeNote>\n'.format(row['scopeNote'])
             outputRdf += '</rdf:Description>\n'
             text += '<table>\n'
             curie = term + ":" + row['term_localName']
@@ -619,6 +623,11 @@ for term in termLists:
                text += '\t\t<tr>\n'
                text += '\t\t\t<td>Fitness requirements</td>\n'
                text += '\t\t\t<td>' + row['hasFitnessRequirements'] + '</td>\n'
+               text += '\t\t</tr>\n'
+            if term == 'bdquc' and row['scopeNote'] and row['scopeNote'] != '' :
+               text += '\t\t<tr>\n'
+               text += '\t\t\t<td>Scope note</td>\n'
+               text += '\t\t\t<td>' + row['scopeNote'] + '</td>\n'
                text += '\t\t</tr>\n'
     
     #        if row['dcterms_description'] != '':

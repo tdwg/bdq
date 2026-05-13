@@ -60,3 +60,7 @@ hasFitnessRequirements:
   label: Fitness Requirements
   normative: 'false'
   term: bdqffdq:hasFitnessRequirements
+scopeNote:
+  label: Scope Note
+  normative: 'false'
+  term: skos:scopeNote
