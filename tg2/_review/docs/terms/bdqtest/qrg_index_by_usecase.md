@@ -1,9 +1,9 @@
 # BDQ Test Index by Use Case (non-normative)
 This document is non-normative and part of the [BDQ Tests Quick Reference Guide](index.md).
 ## bdquc:Taxon-Management
-error extracting definition
+A bdqffdq:UseCase that involves the nomenclatural audit, taxonomic verification, and systematic organization of taxon names and associated metadata to ensure identification stability and compliance with global taxonomic standards.
 
-error extracting fitness requirements
+Fitness Requirements: Data are fit for this use when when taxonomic information is sufficient to unambiguously resolve organism identity and position within a nomenclatural hierarchy. Taxon terms are sufficient to resolve the organism (or flag ambiguity), core name and rank terms (e.g., dwc:scientificName, dwc:taxonRank) are present and align with an appropriate bdqval:sourceAuthority, name strings are consistent with atomized name fields and identifiers or authorship, identification dates are valid and plausible, and key contextual metadata (e.g., dwc:basisOfRecord, and controlled fields such as dwc:typeStatus and dwc:sex where relevant) are usable.  <ul><li>Taxon can be resolved: Taxon terms are present and sufficient to support unambiguous resolution (dwc:scientificName, dwc:scientificNameAuthorship, dwc:scientificNameID).  </li><li>Names and ranks are authoritative: dwc:scientificName and required rank and classification terms are present, standardizable, and consistent with the bdqval:sourceAuthority.  </li><li>Name fields are consistent: dwc:scientificName agrees with atomized name fields; authorship is provided where needed.  </li><li>Identifiers are usable: Identifiers (e.g., dwc:scientificNameID) are present when available and correctly formed; dwc:taxonRank is present and valid.  </li><li>Identification timing is usable: dwc:dateIdentified is present when needed, ISO-valid, and temporally plausible (and consistent with dwc:eventDate when provided).  </li><li>Supporting context is usable: dwc:basisOfRecord and other relevant controlled and context fields are present and valid; basic space/time fields are in standard form where used to support curation decisions. </li></ul>
 
 VALIDATION_BASISOFRECORD_NOTEMPTY [Quick Reference Guide](index.md#VALIDATION_BASISOFRECORD_NOTEMPTY) [Term List](../../list/bdqtest/index.md#bdqtest_ac2b7648-d5f9-48ca-9b07-8ad5879a2536)
 
@@ -96,9 +96,9 @@ AMENDMENT_TAXONRANK_STANDARDIZED [Quick Reference Guide](index.md#AMENDMENT_TAXO
 
 
 ## bdquc:Alien-Species
-error extracting definition
+A bdqffdq:UseCase that involves the identification and analysis of whether the occurrence of a taxon is native to a location or not, how it got there and to what extent the taxon has become a permanent feature of the location in order to improve the management and reduce the spread of alien species.
 
-error extracting fitness requirements
+Fitness Requirements: Data are fit for this use when occurrence records can be reliably interpreted for alien-species management: the organism identity, observation status, and establishment context are present and standard.  <ul><li>Organism identity is usable: Taxon/scientific name terms (e.g., dwc:scientificName, related dwc:Taxon terms, and identifiers where provided) are present, resolvable to a taxonomic authority, and consistent.  </li><li>Establishment context is usable: Terms defining the invasion status (dwc:establishmentMeans, dwc:degreeOfEstablishment, dwc:pathway) are present when relevant, valid and standard.  </li><li>Observation Status is present in valid form to reliably distinguish between presence and absence records; dwc:occurrenceStatus is present, valid and  standardizable.  </li><li>Metadata context (dwc:basisOfRecord and dc:type) is present, valid, and standard so record meaning is consistent in downstream use.  </li></ul> 
 
 VALIDATION_BASISOFRECORD_NOTEMPTY [Quick Reference Guide](index.md#VALIDATION_BASISOFRECORD_NOTEMPTY) [Term List](../../list/bdqtest/index.md#bdqtest_ac2b7648-d5f9-48ca-9b07-8ad5879a2536)
 
@@ -191,9 +191,9 @@ AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID [Quick Reference Guide](index.md#
 
 
 ## bdquc:Spatial-Temporal_Patterns
-error extracting definition
+A bdqffdq:UseCase that pertains to dwc:Occurrence data where the Information Elements concerning what dwc:Organism occurred when at what location are used for analysies such as of taxon distributions across space and time to quantify biodiversity patterns, identify range shifts, or modeling of ecological niches. 
 
-error extracting fitness requirements
+Fitness Requirements: Data are fit for the Use Case bdquc:Spatial-Temporal_Patterns when occurrence records can be reliably interpreted as organism occurrences in space and time: the organism identity is usable, the location is usable (with adequate precision and metadata), textual geography data is consistent with the coordinates, the event date is usable and internally consistent, and any generalization (spatial or temporal) is detectable so users can decide whether the record is fit at the intended analysis scale. <ul><li>Organism identity is usable: Taxon and scientific name terms (e.g., dwc:scientificName and related taxon terms) are present and sufficiently resolvable and consistent to support analyses of spatio-temporal patterns of organisms.  </li><li>Location is usable and interpretable (including precision and metadata): Coordinates are present, are in-range, and are accompanied by adequate spatial metadata (e.g., uncertainty and spatial reference such as datum); obvious artifact coordinates (e.g., zeros) are detectable.  </li><li>Textual geography is coherent with coordinates: Textual geography fields (e.g., dwc:countryCode, dwc:country, dwc:stateProvince) are valid and standardizable and consistent with the coordinates.  </li><li>Date is usable and internally consistent: dwc:eventDate is present, valid, in standard form and consistent with other temporal terms (e.g. dwc:year) terms when those are provided. Generalization and low precision are detectable: Any indication that the record has been generalized (via dwc:dataGeneralizations) is available along with coordinate uncertainty, broad and interval event dates, and taxonomic rank so that users can judge whether records are fit for the intended spatial and temporal resolution.  </li></ul>
 
 VALIDATION_BASISOFRECORD_NOTEMPTY [Quick Reference Guide](index.md#VALIDATION_BASISOFRECORD_NOTEMPTY) [Term List](../../list/bdqtest/index.md#bdqtest_ac2b7648-d5f9-48ca-9b07-8ad5879a2536)
 
@@ -358,9 +358,9 @@ AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID [Quick Reference Guide](index.md#
 
 
 ## bdquc:SDM-Trees
-error extracting definition
+A bdqffdq:UseCase for improving the quality of, and selecting dwc:Occurrence records suitable for predicting the spatial distribution of tree species. This Use Case filters for occurrence records that meet criteria for a known species at a known location and date.  Records can be further filtered to meet the requirements of the predictive modeling of specific tree species distributions (e.g., Eucalypts) using high-precision occurrence data and environmental variables to evaluate modeling methodologies and refine expert distribution envelopes. 
 
-error extracting fitness requirements
+Fitness Requirements: Data are fit for the use case bdquc:Species-Distribution-Modeling-Trees when records have valid:  <ul><li>dwc:scientificName identified to species level.  </li><li>dwc:basisOfRecord = "Occurrence".   </li><li>dwc:occurrenceStatus = "present".  </li><li>dwc:decimalLatitude and dwc:decimalLongitude.  </li><li>dwc:coordinateUncertaintyInMeters less than 500.  </li><li>dwc:dataGeneralizations = bdqval:empty.  </li><li>dwc:year or dwc:eventDate within provided temporal limits. </li></ul>
 
 VALIDATION_BASISOFRECORD_NOTEMPTY [Quick Reference Guide](index.md#VALIDATION_BASISOFRECORD_NOTEMPTY) [Term List](../../list/bdqtest/index.md#bdqtest_ac2b7648-d5f9-48ca-9b07-8ad5879a2536)
 
