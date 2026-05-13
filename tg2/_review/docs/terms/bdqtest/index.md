@@ -4905,7 +4905,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdquc:Spatial-Temporal_patterns
+bdquc:Spatial-Temporal_Patterns
 
 #### Notes
 
@@ -7365,7 +7365,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdquc:Spatial-Temporal_patterns
+bdquc:Spatial-Temporal_Patterns
 
 #### Notes
 
@@ -7605,7 +7605,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdquc:Spatial-Temporal_patterns
+bdquc:Spatial-Temporal_Patterns
 
 #### Notes
 

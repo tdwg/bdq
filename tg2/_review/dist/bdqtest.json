@@ -40675,12 +40675,12 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
             {
-                "@id": "bdquc:Alien-Species"
+                "@id": "https://rs.tdwg.org/bdquc/terms/Alien-Species"
             }
         ]
     },
     {
-        "@id": "bdquc:Alien-Species",
+        "@id": "https://rs.tdwg.org/bdquc/terms/Alien-Species",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/UseCase"
         ],
@@ -40782,12 +40782,12 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
             {
-                "@id": "bdquc:SDM-Trees"
+                "@id": "https://rs.tdwg.org/bdquc/terms/SDM-Trees"
             }
         ]
     },
     {
-        "@id": "bdquc:SDM-Trees",
+        "@id": "https://rs.tdwg.org/bdquc/terms/SDM-Trees",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/UseCase"
         ],
@@ -40874,6 +40874,12 @@
             },
             {
                 "@id": "https://rs.tdwg.org/bdqtest/terms/4e70b0e4-3fd2-4899-802c-439671374eeb-2025-03-06"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqtest/terms/0028ef9a-6553-467b-a344-90327ed2babf-2025-03-07"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqtest/terms/0c9a139e-5d23-44de-a495-14ec08c61a1c-2025-03-07"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqtest/terms/a8fef8a8-e7c7-4a2d-adaf-7da99c896c93-2025-03-06"
@@ -40996,6 +41002,9 @@
                 "@id": "https://rs.tdwg.org/bdqtest/terms/d71be8d4-1a04-4816-90c5-49808c823651-2025-03-07"
             },
             {
+                "@id": "https://rs.tdwg.org/bdqtest/terms/4fccf163-9336-4f48-996c-57f5f66e72db-2025-03-07"
+            },
+            {
                 "@id": "https://rs.tdwg.org/bdqtest/terms/4d999a65-a431-4a76-b591-e0d86dcf244b-2025-03-07"
             },
             {
@@ -41112,61 +41121,23 @@
         ],
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
-                "@value": "MeasurementPolicy: (102) measures  in UseCase bdquc:Spatial-Temporal_Patterns"
+                "@value": "MeasurementPolicy: (105) measures  in UseCase bdquc:Spatial-Temporal_Patterns"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
             {
-                "@id": "bdquc:Spatial-Temporal_Patterns"
+                "@id": "https://rs.tdwg.org/bdquc/terms/Spatial-Temporal_Patterns"
             }
         ]
     },
     {
-        "@id": "bdquc:Spatial-Temporal_Patterns",
+        "@id": "https://rs.tdwg.org/bdquc/terms/Spatial-Temporal_Patterns",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/UseCase"
         ],
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
                 "@value": "bdquc:Spatial-Temporal_Patterns"
-            }
-        ]
-    },
-    {
-        "@id": "urn:uuid:b40bd8e6-5b40-420c-85af-3e6ece2b5142",
-        "@type": [
-            "https://rs.tdwg.org/bdqffdq/terms/MeasurementPolicy"
-        ],
-        "https://rs.tdwg.org/bdqffdq/terms/includedInPolicy": [
-            {
-                "@id": "https://rs.tdwg.org/bdqtest/terms/0028ef9a-6553-467b-a344-90327ed2babf-2025-03-07"
-            },
-            {
-                "@id": "https://rs.tdwg.org/bdqtest/terms/0c9a139e-5d23-44de-a495-14ec08c61a1c-2025-03-07"
-            },
-            {
-                "@id": "https://rs.tdwg.org/bdqtest/terms/4fccf163-9336-4f48-996c-57f5f66e72db-2025-03-07"
-            }
-        ],
-        "http://www.w3.org/2000/01/rdf-schema#label": [
-            {
-                "@value": "MeasurementPolicy: (3) measures  in UseCase bdquc:Spatial-Temporal_patterns"
-            }
-        ],
-        "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
-            {
-                "@id": "bdquc:Spatial-Temporal_patterns"
-            }
-        ]
-    },
-    {
-        "@id": "bdquc:Spatial-Temporal_patterns",
-        "@type": [
-            "https://rs.tdwg.org/bdqffdq/terms/UseCase"
-        ],
-        "http://www.w3.org/2000/01/rdf-schema#label": [
-            {
-                "@value": "bdquc:Spatial-Temporal_patterns"
             }
         ]
     },
@@ -41379,12 +41350,12 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
             {
-                "@id": "bdquc:Taxon-Management"
+                "@id": "https://rs.tdwg.org/bdquc/terms/Taxon-Management"
             }
         ]
     },
     {
-        "@id": "bdquc:Taxon-Management",
+        "@id": "https://rs.tdwg.org/bdquc/terms/Taxon-Management",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/UseCase"
         ],
@@ -41504,7 +41475,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
             {
-                "@id": "bdquc:Alien-Species"
+                "@id": "https://rs.tdwg.org/bdquc/terms/Alien-Species"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -41578,7 +41549,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
             {
-                "@id": "bdquc:SDM-Trees"
+                "@id": "https://rs.tdwg.org/bdquc/terms/SDM-Trees"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -41751,7 +41722,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
             {
-                "@id": "bdquc:Spatial-Temporal_Patterns"
+                "@id": "https://rs.tdwg.org/bdquc/terms/Spatial-Temporal_Patterns"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -41867,7 +41838,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
             {
-                "@id": "bdquc:Taxon-Management"
+                "@id": "https://rs.tdwg.org/bdquc/terms/Taxon-Management"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -41920,7 +41891,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
             {
-                "@id": "bdquc:Alien-Species"
+                "@id": "https://rs.tdwg.org/bdquc/terms/Alien-Species"
             }
         ]
     },
@@ -41953,7 +41924,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
             {
-                "@id": "bdquc:SDM-Trees"
+                "@id": "https://rs.tdwg.org/bdquc/terms/SDM-Trees"
             }
         ]
     },
@@ -42037,7 +42008,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
             {
-                "@id": "bdquc:Spatial-Temporal_Patterns"
+                "@id": "https://rs.tdwg.org/bdquc/terms/Spatial-Temporal_Patterns"
             }
         ]
     },
@@ -42079,7 +42050,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
             {
-                "@id": "bdquc:Taxon-Management"
+                "@id": "https://rs.tdwg.org/bdquc/terms/Taxon-Management"
             }
         ]
     },
@@ -42100,7 +42071,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
             {
-                "@id": "bdquc:Alien-Species"
+                "@id": "https://rs.tdwg.org/bdquc/terms/Alien-Species"
             }
         ]
     },
@@ -42121,7 +42092,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
             {
-                "@id": "bdquc:SDM-Trees"
+                "@id": "https://rs.tdwg.org/bdquc/terms/SDM-Trees"
             }
         ]
     },
@@ -42148,7 +42119,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
             {
-                "@id": "bdquc:Spatial-Temporal_Patterns"
+                "@id": "https://rs.tdwg.org/bdquc/terms/Spatial-Temporal_Patterns"
             }
         ]
     }

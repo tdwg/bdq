@@ -510,7 +510,7 @@ Given a `Use Case`, can one find the `Information Elements` that were `Acted Upo
     
        # Filter by a specific Use Case
 
-       FILTER( ?uc = <https://rs.tdwg.org/bdqval/terms/Taxon-Management> )
+       FILTER( ?uc = <https://rs.tdwg.org/bdquc/terms/Spatial-Temporal_Patterns> )
     
     }
 ```
