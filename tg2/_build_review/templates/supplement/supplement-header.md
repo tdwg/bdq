@@ -328,7 +328,7 @@ Given a `Use Case`, can one find `Validation` Tests and their `Specifications`?
 
         # Filter by a specific Use Case
     
-         FILTER( ?uc = <https://rs.tdwg.org/bdqval/terms/Taxon-Management> )
+         FILTER( ?uc = <https://rs.tdwg.org/bdquc/terms/Taxon-Management> )
     }
 ```
 
@@ -341,7 +341,7 @@ Given a `Use Case`, can one find the `Single Record` `Validations` related to th
     PREFIX dcterms: <http://purl.org/dc/terms/>
     
     PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
-    PREFIX bdqval:     <https://rs.tdwg.org/bdqval/terms/>
+    PREFIX bdquc:     <https://rs.tdwg.org/bdquc/terms/>
     PREFIX bdqtest: <https://rs.tdwg.org/bdqtest/terms/>
     
     # 1) Choose a Use Case (edit the VALUES line below).
@@ -357,7 +357,7 @@ Given a `Use Case`, can one find the `Single Record` `Validations` related to th
     WHERE {
       # ---- Choose the Use Case ----
       # Option A: by URI (recommended)
-      VALUES ?useCase { bdqval:Spatial-Temporal_Patterns }
+      VALUES ?useCase { bdquc:Spatial-Temporal_Patterns }
     
       # Option B: by label (uncomment if you prefer label-based selection)
       # VALUES ?useCaseLabel { "Spatial-Temporal Patterns" }
@@ -391,13 +391,13 @@ Or, to just get the UUID of these tests (for example to lookup relevant methods 
     PREFIX dcterms: <http://purl.org/dc/terms/>
     
     PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
-    PREFIX bdqval:     <https://rs.tdwg.org/bdqval/terms/>
+    PREFIX bdquc:     <https://rs.tdwg.org/bdquc/terms/>
     
     SELECT DISTINCT
         ?isVersionOf 
     WHERE {
       # ---- Choose the Use Case ----
-      VALUES ?useCase { bdqval:Spatial-Temporal_Patterns }
+      VALUES ?useCase { bdquc:Spatial-Temporal_Patterns }
     
       # ---- Follow ValidationPolicy -> Validations ----
       ?policy a bdqffdq:ValidationPolicy ;

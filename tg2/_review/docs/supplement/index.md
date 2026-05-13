@@ -217,7 +217,7 @@ The following issues describing potential Tests were tagged as [DO NOT IMPLEMENT
 
 ### 2.2 Use Case Development (non-normative)
 
-Biodiversity Data Quality Task Group 3: Data Quality Use Cases (Rees & Nicholls 2020) was established to review what `Use Cases` were prevalent within the community of those dealing with biodiversity data. This task group identified several fundamental `Use Cases`, including [bdqval:Spatial-Temporal_Patterns](<../list/bdqval/index.md#bdqval_Spatial-Temporal_Patterns> "A bdqffdq:UseCase that pertains to dwc:Occurrence data where the Information Elements concerning what dwc:Organism occurred when at what location are used for analysies such as of taxon distributions across space and ti…"), [bdqval:Record-Management](<../list/bdqval/index.md#bdqval_Record-Management> "A bdqffdq:UseCase that involves the comprehensive audit, maintenance, and systematic improvement of biodiversity data records to ensure technical integrity, standardized semantics, and repository-wide readiness for cura…"), and [bdqval:Taxon-Management](<../list/bdqval/index.md#bdqval_Taxon-Management> "A bdqffdq:UseCase that involves the nomenclatural audit, taxonomic verification, and systematic organization of taxon names and associated metadata to ensure identification stability and compliance with global taxonomic…"). We later added [bdqval:Alien-Species](<../list/bdqval/index.md#bdqval_Alien-Species> "A bdqffdq:UseCase that involves the identification and analysis of whether the occurrence of a taxon is native to a location or not, how it got there and to what extent the taxon has become a permanent feature of the lo…") and [bdqval:SDM-Trees](<../list/bdqval/index.md#bdqval_SDM-Trees> "A bdqffdq:UseCase for improving the quality of, and selecting dwc:Occurrence records suitable for predicting the spatial distribution of tree species. This Use Case filters for occurrence records that meet criteria for…").
+Biodiversity Data Quality Task Group 3: Data Quality Use Cases (Rees & Nicholls 2020) was established to review what `Use Cases` were prevalent within the community of those dealing with biodiversity data. This task group identified several fundamental `Use Cases`, including `bdqval:Spatial-Temporal_Patterns`, `bdqval:Record-Management`, and `bdqval:Taxon-Management`. We later added `bdqval:Alien-Species` and `bdqval:SDM-Trees`.
 
 These are only a sample of the many possible `Use Cases` for the biological sciences, but they provide an initial set to which all the BDQ Tests have been linked. Note that the relationship between `Use Cases` and Tests is a many-to-many relationship - with most Tests being relatable to many `Use Cases` and vice versa.
 
@@ -399,7 +399,7 @@ Given a `Use Case`, can one find `Validation` Tests and their `Specifications`?
 
         # Filter by a specific Use Case
     
-         FILTER( ?uc = <https://rs.tdwg.org/bdqval/terms/Taxon-Management> )
+         FILTER( ?uc = <https://rs.tdwg.org/bdquc/terms/Taxon-Management> )
     }
 ```
 
@@ -412,7 +412,7 @@ Given a `Use Case`, can one find the `Single Record` `Validations` related to th
     PREFIX dcterms: <http://purl.org/dc/terms/>
     
     PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
-    PREFIX bdqval:     <https://rs.tdwg.org/bdqval/terms/>
+    PREFIX bdquc:     <https://rs.tdwg.org/bdquc/terms/>
     PREFIX bdqtest: <https://rs.tdwg.org/bdqtest/terms/>
     
     # 1) Choose a Use Case (edit the VALUES line below).
@@ -428,7 +428,7 @@ Given a `Use Case`, can one find the `Single Record` `Validations` related to th
     WHERE {
       # ---- Choose the Use Case ----
       # Option A: by URI (recommended)
-      VALUES ?useCase { bdqval:Spatial-Temporal_Patterns }
+      VALUES ?useCase { bdquc:Spatial-Temporal_Patterns }
     
       # Option B: by label (uncomment if you prefer label-based selection)
       # VALUES ?useCaseLabel { "Spatial-Temporal Patterns" }
@@ -462,13 +462,13 @@ Or, to just get the UUID of these tests (for example to lookup relevant methods 
     PREFIX dcterms: <http://purl.org/dc/terms/>
     
     PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
-    PREFIX bdqval:     <https://rs.tdwg.org/bdqval/terms/>
+    PREFIX bdquc:     <https://rs.tdwg.org/bdquc/terms/>
     
     SELECT DISTINCT
         ?isVersionOf 
     WHERE {
       # ---- Choose the Use Case ----
-      VALUES ?useCase { bdqval:Spatial-Temporal_Patterns }
+      VALUES ?useCase { bdquc:Spatial-Temporal_Patterns }
     
       # ---- Follow ValidationPolicy -> Validations ----
       ?policy a bdqffdq:ValidationPolicy ;

@@ -186,7 +186,7 @@ See section [2.4.1 Listing Identifiers for Tests (non-normative)](../../suppleme
 | Developed As GitHub Issue (skos:historyNote) | non-normative | A note about the past state/use/meaning of a concept. In present context: A link to the GitHub issue that provided rationale management, recording a history (changes and comments) of the development of the Test. | [https://github.com/tdwg/bdq/issues/ 63](https://github.com/tdwg/bdq/issues/63) |
 | GitHub Issue Labels (skos:note) | non-normative | A general note, for any purpose. In present context: Labels applied to GitHub Issue noted in the skos:historyNote. | TG2 Amendment OTHER CODED Test VOCABULARY Conformance Parameterized CORE |
 | Argument GUID (bdqffdq:Argument) | normative | A value that, when provided to a Test bdqffdq:Specification to replace a bdqffdq:Parameter changes the behavior of the Test in a defined manner. | 1b66a16a-5e76-4eca-a400-d097ac136ac1 |
-| has Use Cases (bdqffdq:hasUseCase) | non-normative | Relates a bdqffdq:Policy to a bdqffdq:UseCase. In present context: One or more Use Cases which this Test is linked to through a Policy. | bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:SDM-Trees |
+| has Use Cases (bdqffdq:hasUseCase) | non-normative | Relates a bdqffdq:Policy to a bdqffdq:UseCase. In present context: One or more Use Cases which this Test is linked to through a Policy. | bdquc:Taxon-Management, bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees |
 | References (dcterms:references) | non-normative | A related resource that is referenced, cited, or otherwise pointed to by the described resource. In present context: The minimum set of references that are required for an understanding of the nature of the Test. | <ul><li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li> </ul> |
 
 
@@ -581,7 +581,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:SDM-Trees</td>
+			<td>bdquc:Taxon-Management, bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees</td>
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
@@ -688,7 +688,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -811,7 +811,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -934,7 +934,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -1041,7 +1041,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -1148,7 +1148,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Taxon-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns, bdquc:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -1255,7 +1255,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
@@ -1362,7 +1362,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Taxon-Management, bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -1481,7 +1481,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species</td>
+			<td>bdquc:Alien-Species</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -1596,7 +1596,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -1707,7 +1707,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -1818,7 +1818,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -1929,7 +1929,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -2036,7 +2036,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:SDM-Trees</td>
+			<td>bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -2147,7 +2147,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:SDM-Trees</td>
+			<td>bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -2270,7 +2270,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -2381,7 +2381,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -2500,7 +2500,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Record-Management, bdqval:SDM-Trees</td>
+			<td>bdquc:SDM-Trees</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -2607,7 +2607,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -2714,7 +2714,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -2821,7 +2821,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
@@ -2940,7 +2940,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
@@ -3055,7 +3055,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
@@ -3170,7 +3170,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species, bdqval:Record-Management</td>
+			<td>bdquc:Alien-Species</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -3293,7 +3293,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Record-Management, bdqval:Taxon-Management</td>
+			<td>bdquc:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -3416,7 +3416,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:SDM-Trees</td>
+			<td>bdquc:Taxon-Management, bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -3535,7 +3535,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species, bdqval:Record-Management, bdqval:Taxon-Management</td>
+			<td>bdquc:Alien-Species, bdquc:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -3654,7 +3654,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Record-Management, bdqval:Taxon-Management</td>
+			<td>bdquc:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -3773,7 +3773,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management</td>
+			<td>bdquc:Taxon-Management, bdquc:Alien-Species</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -3880,7 +3880,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management</td>
+			<td>bdquc:Taxon-Management, bdquc:Alien-Species</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -3995,7 +3995,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -4102,7 +4102,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:SDM-Trees</td>
+			<td>bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -4205,7 +4205,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns</td>
+			<td>bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>IssueMethod label</td>
@@ -4292,7 +4292,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Taxon-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns, bdquc:Taxon-Management</td>
 		</tr>
 	</tbody>
 </table>
@@ -4383,7 +4383,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -4478,7 +4478,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Taxon-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns, bdquc:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
@@ -4569,7 +4569,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Taxon-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns, bdquc:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
@@ -4660,7 +4660,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Taxon-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns, bdquc:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
@@ -4751,7 +4751,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species, bdqval:Record-Management, bdqval:SDM-Trees, bdqval:Spatial-Temporal_Patterns, bdqval:Taxon-Management</td>
+			<td>bdquc:Alien-Species, bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns, bdquc:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -4846,7 +4846,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species, bdqval:Record-Management, bdqval:SDM-Trees, bdqval:Spatial-Temporal_Patterns, bdqval:Taxon-Management</td>
+			<td>bdquc:Alien-Species, bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns, bdquc:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -4941,7 +4941,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management</td>
+			<td>bdquc:Taxon-Management, bdquc:Alien-Species</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -5036,7 +5036,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management</td>
+			<td>bdquc:Taxon-Management, bdquc:Alien-Species</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -5131,7 +5131,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -5226,7 +5226,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -5321,7 +5321,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -5416,7 +5416,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -5511,7 +5511,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:SDM-Trees</td>
+			<td>bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -5606,7 +5606,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -5701,7 +5701,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -5796,7 +5796,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -5891,7 +5891,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -5986,7 +5986,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -6081,7 +6081,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -6176,7 +6176,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Taxon-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns, bdquc:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -6271,7 +6271,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Taxon-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns, bdquc:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -6366,7 +6366,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -6461,7 +6461,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -6556,7 +6556,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Taxon-Management, bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -6651,7 +6651,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Taxon-Management, bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -6746,7 +6746,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species, bdqval:Record-Management, bdqval:SDM-Trees, bdqval:Spatial-Temporal_Patterns, bdqval:Taxon-Management</td>
+			<td>bdquc:Alien-Species, bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns, bdquc:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -6841,7 +6841,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species, bdqval:Record-Management, bdqval:SDM-Trees, bdqval:Spatial-Temporal_Patterns, bdqval:Taxon-Management</td>
+			<td>bdquc:Alien-Species, bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns, bdquc:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -6936,7 +6936,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species, bdqval:Record-Management, bdqval:SDM-Trees, bdqval:Spatial-Temporal_Patterns, bdqval:Taxon-Management</td>
+			<td>bdquc:Alien-Species, bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns, bdquc:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -7031,7 +7031,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species, bdqval:Record-Management, bdqval:SDM-Trees, bdqval:Spatial-Temporal_Patterns, bdqval:Taxon-Management</td>
+			<td>bdquc:Alien-Species, bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns, bdquc:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -7126,7 +7126,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species</td>
+			<td>bdquc:Alien-Species</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -7221,7 +7221,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -7316,7 +7316,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -7411,7 +7411,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -7506,7 +7506,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species, bdqval:Record-Management, bdqval:SDM-Trees, bdqval:Spatial-Temporal_Patterns</td>
+			<td>bdquc:Alien-Species, bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -7601,7 +7601,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species, bdqval:Record-Management, bdqval:SDM-Trees, bdqval:Spatial-Temporal_Patterns</td>
+			<td>bdquc:Alien-Species, bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -7696,7 +7696,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -7791,7 +7791,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species, bdqval:Record-Management</td>
+			<td>bdquc:Alien-Species</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -7886,7 +7886,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Record-Management, bdqval:Taxon-Management</td>
+			<td>bdquc:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -7981,7 +7981,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management</td>
+			<td>bdquc:Taxon-Management, bdquc:Alien-Species</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -8076,7 +8076,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -8171,7 +8171,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -8266,7 +8266,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Record-Management, bdqval:Taxon-Management</td>
+			<td>bdquc:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -8361,7 +8361,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Record-Management, bdqval:Taxon-Management</td>
+			<td>bdquc:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -8456,7 +8456,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Record-Management, bdqval:SDM-Trees</td>
+			<td>bdquc:SDM-Trees</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -8551,7 +8551,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Record-Management, bdqval:SDM-Trees</td>
+			<td>bdquc:SDM-Trees</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -8646,7 +8646,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -8741,7 +8741,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -8836,7 +8836,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -8931,7 +8931,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -9026,7 +9026,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -9121,7 +9121,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -9216,7 +9216,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -9311,7 +9311,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -9406,7 +9406,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Record-Management, bdqval:Taxon-Management</td>
+			<td>bdquc:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -9501,7 +9501,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -9596,7 +9596,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species, bdqval:Record-Management, bdqval:SDM-Trees, bdqval:Spatial-Temporal_Patterns</td>
+			<td>bdquc:Alien-Species, bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -9691,7 +9691,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species, bdqval:Record-Management, bdqval:SDM-Trees, bdqval:Spatial-Temporal_Patterns</td>
+			<td>bdquc:Alien-Species, bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -9786,7 +9786,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Record-Management, bdqval:Taxon-Management</td>
+			<td>bdquc:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -9881,7 +9881,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species, bdqval:Record-Management</td>
+			<td>bdquc:Alien-Species</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -9976,7 +9976,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Record-Management, bdqval:Taxon-Management</td>
+			<td>bdquc:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -10071,7 +10071,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Record-Management, bdqval:Taxon-Management</td>
+			<td>bdquc:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -10166,7 +10166,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species, bdqval:Record-Management, bdqval:Taxon-Management</td>
+			<td>bdquc:Alien-Species, bdquc:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -10261,7 +10261,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species, bdqval:Record-Management, bdqval:Taxon-Management</td>
+			<td>bdquc:Alien-Species, bdquc:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -10356,7 +10356,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species, bdqval:Record-Management, bdqval:Taxon-Management</td>
+			<td>bdquc:Alien-Species, bdquc:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -10451,7 +10451,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species, bdqval:Record-Management, bdqval:SDM-Trees, bdqval:Spatial-Temporal_Patterns, bdqval:Taxon-Management</td>
+			<td>bdquc:Alien-Species, bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns, bdquc:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -10546,7 +10546,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species, bdqval:Record-Management, bdqval:SDM-Trees, bdqval:Spatial-Temporal_Patterns, bdqval:Taxon-Management</td>
+			<td>bdquc:Alien-Species, bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns, bdquc:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -10641,7 +10641,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species, bdqval:Record-Management, bdqval:Taxon-Management</td>
+			<td>bdquc:Alien-Species, bdquc:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -10736,7 +10736,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -10831,7 +10831,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -10926,7 +10926,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Record-Management, bdqval:Taxon-Management</td>
+			<td>bdquc:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -11021,7 +11021,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Record-Management, bdqval:Taxon-Management</td>
+			<td>bdquc:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -11116,7 +11116,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Taxon-Management, bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -11211,7 +11211,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Taxon-Management, bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -11306,7 +11306,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management</td>
+			<td>bdquc:Taxon-Management, bdquc:Alien-Species</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -11401,7 +11401,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species, bdqval:Record-Management, bdqval:SDM-Trees, bdqval:Spatial-Temporal_Patterns</td>
+			<td>bdquc:Alien-Species, bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -11496,7 +11496,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species, bdqval:Record-Management, bdqval:SDM-Trees, bdqval:Spatial-Temporal_Patterns</td>
+			<td>bdquc:Alien-Species, bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -11591,7 +11591,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species, bdqval:Record-Management, bdqval:Spatial-Temporal_Patterns, bdqval:Taxon-Management</td>
+			<td>bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -11686,7 +11686,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:SDM-Trees</td>
+			<td>bdquc:Taxon-Management, bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -11781,7 +11781,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management</td>
+			<td>bdquc:Taxon-Management, bdquc:Alien-Species</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -11876,7 +11876,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management</td>
+			<td>bdquc:Taxon-Management, bdquc:Alien-Species</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -11971,7 +11971,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -12066,7 +12066,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -12161,7 +12161,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -12256,7 +12256,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -12351,7 +12351,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Record-Management, bdqval:SDM-Trees, bdqval:Spatial-Temporal_Patterns</td>
+			<td>bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -12446,7 +12446,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -12541,7 +12541,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -12636,7 +12636,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -12731,7 +12731,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -12826,7 +12826,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -12921,7 +12921,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -13016,7 +13016,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Taxon-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns, bdquc:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -13111,7 +13111,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Taxon-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns, bdquc:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -13206,7 +13206,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -13301,7 +13301,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -13396,7 +13396,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Taxon-Management, bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -13491,7 +13491,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Taxon-Management, bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -13586,7 +13586,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:SDM-Trees</td>
+			<td>bdquc:Taxon-Management, bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -13681,7 +13681,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Taxon-Management, bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -13776,7 +13776,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:SDM-Trees</td>
+			<td>bdquc:Taxon-Management, bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -13871,7 +13871,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Taxon-Management, bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -13966,7 +13966,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species</td>
+			<td>bdquc:Alien-Species</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -14061,7 +14061,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -14156,7 +14156,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -14251,7 +14251,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -14346,7 +14346,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -14441,7 +14441,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:SDM-Trees</td>
+			<td>bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -14536,7 +14536,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -14631,7 +14631,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species, bdqval:Record-Management</td>
+			<td>bdquc:Alien-Species</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -14726,7 +14726,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Record-Management, bdqval:Taxon-Management</td>
+			<td>bdquc:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -14821,7 +14821,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management</td>
+			<td>bdquc:Taxon-Management, bdquc:Alien-Species</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -14916,7 +14916,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -15011,7 +15011,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -15106,7 +15106,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Record-Management, bdqval:Taxon-Management</td>
+			<td>bdquc:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -15201,7 +15201,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Record-Management, bdqval:Taxon-Management</td>
+			<td>bdquc:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -15296,7 +15296,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -15391,7 +15391,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Record-Management, bdqval:SDM-Trees</td>
+			<td>bdquc:SDM-Trees</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -15486,7 +15486,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -15581,7 +15581,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -15676,7 +15676,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -15771,7 +15771,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -15866,7 +15866,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -15961,7 +15961,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -16056,7 +16056,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -16151,7 +16151,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -16246,7 +16246,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Record-Management, bdqval:Taxon-Management</td>
+			<td>bdquc:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -16341,7 +16341,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -16436,7 +16436,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -16531,7 +16531,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:SDM-Trees</td>
+			<td>bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -16626,7 +16626,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Record-Management, bdqval:Taxon-Management</td>
+			<td>bdquc:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -16721,7 +16721,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species, bdqval:Record-Management</td>
+			<td>bdquc:Alien-Species</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -16816,7 +16816,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Record-Management, bdqval:Taxon-Management</td>
+			<td>bdquc:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -16911,7 +16911,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Record-Management, bdqval:Taxon-Management</td>
+			<td>bdquc:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -17006,7 +17006,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species, bdqval:Record-Management, bdqval:Taxon-Management</td>
+			<td>bdquc:Alien-Species, bdquc:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -17101,7 +17101,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species, bdqval:Record-Management, bdqval:Taxon-Management</td>
+			<td>bdquc:Alien-Species, bdquc:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -17196,7 +17196,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species, bdqval:Record-Management, bdqval:Taxon-Management</td>
+			<td>bdquc:Alien-Species, bdquc:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -17291,7 +17291,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:SDM-Trees</td>
+			<td>bdquc:Taxon-Management, bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -17386,7 +17386,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Taxon-Management, bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -17481,7 +17481,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species, bdqval:Record-Management, bdqval:Taxon-Management</td>
+			<td>bdquc:Alien-Species, bdquc:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -17576,7 +17576,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -17671,7 +17671,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -17766,7 +17766,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Record-Management, bdqval:Taxon-Management</td>
+			<td>bdquc:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -17861,7 +17861,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Record-Management, bdqval:Taxon-Management</td>
+			<td>bdquc:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -17956,7 +17956,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Taxon-Management, bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -18051,7 +18051,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Taxon-Management, bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -18146,7 +18146,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management</td>
+			<td>bdquc:Taxon-Management, bdquc:Alien-Species</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -18241,7 +18241,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:SDM-Trees</td>
+			<td>bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -18336,7 +18336,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -18439,7 +18439,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:SDM-Trees</td>
+			<td>bdquc:Taxon-Management, bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
@@ -18554,7 +18554,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:SDM-Trees</td>
+			<td>bdquc:Taxon-Management, bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
@@ -18669,7 +18669,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management</td>
+			<td>bdquc:Taxon-Management, bdquc:Alien-Species</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -18784,7 +18784,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management</td>
+			<td>bdquc:Taxon-Management, bdquc:Alien-Species</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -18903,7 +18903,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -19022,7 +19022,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -19145,7 +19145,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -19252,7 +19252,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -19359,7 +19359,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:SDM-Trees</td>
+			<td>bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -19462,7 +19462,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -19573,7 +19573,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -19684,7 +19684,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -19803,7 +19803,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -19922,7 +19922,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -20029,7 +20029,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -20152,7 +20152,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Taxon-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns, bdquc:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -20251,7 +20251,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:Taxon-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns, bdquc:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -20358,7 +20358,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -20465,7 +20465,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
@@ -20564,7 +20564,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Taxon-Management, bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -20675,7 +20675,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Taxon-Management, bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -20778,7 +20778,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:SDM-Trees</td>
+			<td>bdquc:Taxon-Management, bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -20881,7 +20881,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:SDM-Trees</td>
+			<td>bdquc:Taxon-Management, bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -20984,7 +20984,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:SDM-Trees</td>
+			<td>bdquc:Taxon-Management, bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -21083,7 +21083,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:SDM-Trees</td>
+			<td>bdquc:Taxon-Management, bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -21202,7 +21202,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species</td>
+			<td>bdquc:Alien-Species</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -21313,7 +21313,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
@@ -21428,7 +21428,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -21547,7 +21547,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -21650,7 +21650,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:SDM-Trees</td>
+			<td>bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
@@ -21753,7 +21753,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:SDM-Trees</td>
+			<td>bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -21860,7 +21860,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
@@ -21963,7 +21963,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species, bdqval:Record-Management</td>
+			<td>bdquc:Alien-Species</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
@@ -22078,7 +22078,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Record-Management, bdqval:Taxon-Management</td>
+			<td>bdquc:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -22197,7 +22197,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management</td>
+			<td>bdquc:Taxon-Management, bdquc:Alien-Species</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -22296,7 +22296,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -22407,7 +22407,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -22526,7 +22526,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Record-Management, bdqval:Taxon-Management</td>
+			<td>bdquc:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -22629,7 +22629,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Record-Management, bdqval:Taxon-Management</td>
+			<td>bdquc:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
@@ -22728,7 +22728,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Record-Management, bdqval:SDM-Trees</td>
+			<td>bdquc:SDM-Trees</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -22847,7 +22847,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Record-Management, bdqval:SDM-Trees</td>
+			<td>bdquc:SDM-Trees</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -22954,7 +22954,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -23073,7 +23073,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -23192,7 +23192,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -23311,7 +23311,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -23414,7 +23414,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -23533,7 +23533,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -23636,7 +23636,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -23739,7 +23739,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
@@ -23838,7 +23838,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Record-Management, bdqval:Taxon-Management</td>
+			<td>bdquc:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
@@ -23937,7 +23937,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Record-Management</td>
+			<td>bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
@@ -24036,7 +24036,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:SDM-Trees</td>
+			<td>bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
@@ -24151,7 +24151,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:SDM-Trees</td>
+			<td>bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
@@ -24266,7 +24266,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Record-Management, bdqval:Taxon-Management</td>
+			<td>bdquc:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -24385,7 +24385,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species, bdqval:Record-Management</td>
+			<td>bdquc:Alien-Species</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -24504,7 +24504,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Record-Management, bdqval:Taxon-Management</td>
+			<td>bdquc:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -24611,7 +24611,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Record-Management, bdqval:Taxon-Management</td>
+			<td>bdquc:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -24714,7 +24714,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species, bdqval:Record-Management, bdqval:Taxon-Management</td>
+			<td>bdquc:Alien-Species, bdquc:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
@@ -24817,7 +24817,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species, bdqval:Record-Management, bdqval:Taxon-Management</td>
+			<td>bdquc:Alien-Species, bdquc:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -24920,7 +24920,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species, bdqval:Record-Management, bdqval:Taxon-Management</td>
+			<td>bdquc:Alien-Species, bdquc:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -25039,7 +25039,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:SDM-Trees</td>
+			<td>bdquc:Taxon-Management, bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -25142,7 +25142,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:SDM-Trees</td>
+			<td>bdquc:Taxon-Management, bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -25261,7 +25261,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species, bdqval:Record-Management, bdqval:Taxon-Management</td>
+			<td>bdquc:Alien-Species, bdquc:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -25372,7 +25372,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
@@ -25487,7 +25487,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -25590,7 +25590,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Record-Management, bdqval:Taxon-Management</td>
+			<td>bdquc:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -25709,7 +25709,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Record-Management, bdqval:Taxon-Management</td>
+			<td>bdquc:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -25816,7 +25816,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Taxon-Management, bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
@@ -25931,7 +25931,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management</td>
+			<td>bdquc:Taxon-Management, bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -26050,7 +26050,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Taxon-Management, bdqval:Alien-Species, bdqval:Record-Management</td>
+			<td>bdquc:Taxon-Management, bdquc:Alien-Species</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -26169,7 +26169,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:SDM-Trees</td>
+			<td>bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
@@ -26268,7 +26268,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdqval:Alien-Species, bdqval:Spatial-Temporal_Patterns, bdqval:Record-Management, bdqval:SDM-Trees</td>
+			<td>bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>

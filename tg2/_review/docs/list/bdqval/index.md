@@ -153,7 +153,7 @@ The terminology used to describe the terms in this vocabulary follows the TDWG [
 | Status (tdwgutility:status) |  | Used to indicate if the term is recommended for use or if it is only of historical significance. | recommended |
 | Controlled Value String () | normative |  | AggregatedTestResponseOutcomes |
 | Type (rdf:type) | normative | The subject is an instance of a class. | bdqffdq:AbstractInformationElement |
-| Fitness Requirements (bdqffdq:hasFitnessRequirements) | non-normative | The property of a bdqffdq:UseCase that provides text listing the qualities that data must have to be fit for a given use. | Data are fit for this use when occurrence records can be reliably interpreted for alien-species management: the organism identity, observation status, and establishment context are present and standard.  <ul><li>Organism identity is usable: Taxon/scientific name terms (e.g., dwc:scientificName, related dwc:Taxon terms, and identifiers where provided) are present, resolvable to a taxonomic authority, and consistent.  </li><li>Establishment context is usable: Terms defining the invasion status (dwc:establishmentMeans, dwc:degreeOfEstablishment, dwc:pathway) are present when relevant, valid and standard.  </li><li>Observation Status is present in valid form to reliably distinguish between presence and absence records; dwc:occurrenceStatus is present, valid and  standardizable.  </li><li>Metadata context (dwc:basisOfRecord and dc:type) is present, valid, and standard so record meaning is consistent in downstream use.  </li></ul>  |
+| Fitness Requirements (bdqffdq:hasFitnessRequirements) | non-normative | The property of a bdqffdq:UseCase that provides text listing the qualities that data must have to be fit for a given use. |  |
 
 
 ## 2 Use of Terms (normative)
@@ -191,11 +191,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 
 **bdqffdq:UseCase**
 
-[bdqval:Alien-Species](#bdqval_Alien-Species) |
-[bdqval:Record-Management](#bdqval_Record-Management) |
-[bdqval:SDM-Trees](#bdqval_SDM-Trees) |
-[bdqval:Spatial-Temporal_Patterns](#bdqval_Spatial-Temporal_Patterns) |
-[bdqval:Taxon-Management](#bdqval_Taxon-Management) 
+
 
 **bdqffdq:AbstractInformationElement**
 
@@ -233,11 +229,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 
 **bdqffdq:UseCase**
 
-[Alien-Species](#bdqval_Alien-Species) |
-[Record-Management](#bdqval_Record-Management) |
-[Spatial-Temporal Patterns](#bdqval_Spatial-Temporal_Patterns) |
-[Species-Distribution-Modeling-Trees](#bdqval_SDM-Trees) |
-[Taxon-Management](#bdqval_Taxon-Management) 
+
 
 **bdqffdq:AbstractInformationElement**
 
@@ -288,60 +280,6 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		<tr>
 			<td>Type</td>
 			<td>bdqffdq:AbstractInformationElement</td>
-		</tr>
-	</tbody>
-</table>
-
-<table>
-	<thead>
-		<tr>
-			<th colspan="2"><a id="bdqval_Alien-Species"></a>Term Name  bdqval:Alien-Species</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Term IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/Alien-Species">https://rs.tdwg.org/bdqval/terms/Alien-Species</a></td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2026-04-22</td>
-		</tr>
-		<tr>
-			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/Alien-Species-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/Alien-Species-2026-04-22</a></td>
-		</tr>
-		<tr>
-			<td>Label</td>
-			<td>Alien-Species</td>
-		</tr>
-		<tr>
-			<td>Definition</td>
-			<td>A bdqffdq:UseCase that involves the identification and analysis of whether the occurrence of a taxon is native to a location or not, how it got there and to what extent the taxon has become a permanent feature of the location in order to improve the management and reduce the spread of alien species.</td>
-		</tr>
-		<tr>
-			<td>Comments</td>
-			<td>See Groom et al. (2019). Improving Darwin Core for research and management of alien species. Biodiversity Information Science and Standards, 3: e38084. https://doi.org/10.3897/biss.3.38084.</td>
-		</tr>
-		<tr>
-			<td>Fitness requirements</td>
-			<td>Data are fit for this use when occurrence records can be reliably interpreted for alien-species management: the organism identity, observation status, and establishment context are present and standard.  <ul><li>Organism identity is usable: Taxon/scientific name terms (e.g., dwc:scientificName, related dwc:Taxon terms, and identifiers where provided) are present, resolvable to a taxonomic authority, and consistent.  </li><li>Establishment context is usable: Terms defining the invasion status (dwc:establishmentMeans, dwc:degreeOfEstablishment, dwc:pathway) are present when relevant, valid and standard.  </li><li>Observation Status is present in valid form to reliably distinguish between presence and absence records; dwc:occurrenceStatus is present, valid and  standardizable.  </li><li>Metadata context (dwc:basisOfRecord and dc:type) is present, valid, and standard so record meaning is consistent in downstream use.  </li></ul> </td>
-		</tr>
-		<tr>
-			<td>Status</td>
-			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>Controlled value</td>
-			<td>Alien-Species</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>bdqffdq:UseCase</td>
-		</tr>
-		<tr>
-			<td>Included SingleRecord Tests</td>
-			<td><a href="../../terms/bdqtest/index.md#AMENDMENT_BASISOFRECORD_STANDARDIZED">AMENDMENT_BASISOFRECORD_STANDARDIZED</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_DCTYPE_STANDARDIZED">AMENDMENT_DCTYPE_STANDARDIZED</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_DEGREEOFESTABLISHMENT_STANDARDIZED">AMENDMENT_DEGREEOFESTABLISHMENT_STANDARDIZED</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_ESTABLISHMENTMEANS_STANDARDIZED">AMENDMENT_ESTABLISHMENTMEANS_STANDARDIZED</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT">AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_OCCURRENCESTATUS_STANDARDIZED">AMENDMENT_OCCURRENCESTATUS_STANDARDIZED</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_PATHWAY_STANDARDIZED">AMENDMENT_PATHWAY_STANDARDIZED</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID">AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_SEX_STANDARDIZED">AMENDMENT_SEX_STANDARDIZED</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_TYPESTATUS_STANDARDIZED">AMENDMENT_TYPESTATUS_STANDARDIZED</a>, <a href="../../terms/bdqtest/index.md#ISSUE_ESTABLISHMENTMEANS_NOTEMPTY">ISSUE_ESTABLISHMENTMEANS_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_BASISOFRECORD_NOTEMPTY">VALIDATION_BASISOFRECORD_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_BASISOFRECORD_STANDARD">VALIDATION_BASISOFRECORD_STANDARD</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_CLASSIFICATION_CONSISTENT">VALIDATION_CLASSIFICATION_CONSISTENT</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_CLASS_FOUND">VALIDATION_CLASS_FOUND</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_DCTYPE_NOTEMPTY">VALIDATION_DCTYPE_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_DCTYPE_STANDARD">VALIDATION_DCTYPE_STANDARD</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_DECIMALLATITUDE_INRANGE">VALIDATION_DECIMALLATITUDE_INRANGE</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_DECIMALLATITUDE_NOTEMPTY">VALIDATION_DECIMALLATITUDE_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_DECIMALLONGITUDE_INRANGE">VALIDATION_DECIMALLONGITUDE_INRANGE</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_DECIMALLONGITUDE_NOTEMPTY">VALIDATION_DECIMALLONGITUDE_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_DEGREEOFESTABLISHMENT_STANDARD">VALIDATION_DEGREEOFESTABLISHMENT_STANDARD</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_ESTABLISHMENTMEANS_STANDARD">VALIDATION_ESTABLISHMENTMEANS_STANDARD</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_EVENTDATE_NOTEMPTY">VALIDATION_EVENTDATE_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_EVENTDATE_STANDARD">VALIDATION_EVENTDATE_STANDARD</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_EVENT_CONSISTENT">VALIDATION_EVENT_CONSISTENT</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_GENUS_FOUND">VALIDATION_GENUS_FOUND</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_OCCURRENCESTATUS_NOTEMPTY">VALIDATION_OCCURRENCESTATUS_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_OCCURRENCESTATUS_STANDARD">VALIDATION_OCCURRENCESTATUS_STANDARD</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_PATHWAY_STANDARD">VALIDATION_PATHWAY_STANDARD</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY">VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_SCIENTIFICNAMEID_COMPLETE">VALIDATION_SCIENTIFICNAMEID_COMPLETE</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_SCIENTIFICNAMEID_NOTEMPTY">VALIDATION_SCIENTIFICNAMEID_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_SCIENTIFICNAME_FOUND">VALIDATION_SCIENTIFICNAME_FOUND</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_SCIENTIFICNAME_NOTEMPTY">VALIDATION_SCIENTIFICNAME_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_SEX_STANDARD">VALIDATION_SEX_STANDARD</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_STARTDAYOFYEAR_INRANGE">VALIDATION_STARTDAYOFYEAR_INRANGE</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_STATEPROVINCE_FOUND">VALIDATION_STATEPROVINCE_FOUND</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_TAXON_NOTEMPTY">VALIDATION_TAXON_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_TAXON_UNAMBIGUOUS">VALIDATION_TAXON_UNAMBIGUOUS</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_TYPESTATUS_STANDARD">VALIDATION_TYPESTATUS_STANDARD</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_YEAR_INRANGE">VALIDATION_YEAR_INRANGE</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_YEAR_NOTEMPTY">VALIDATION_YEAR_NOTEMPTY</a></td>
 		</tr>
 	</tbody>
 </table>
@@ -1131,114 +1069,6 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqval_Record-Management"></a>Term Name  bdqval:Record-Management</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Term IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/Record-Management">https://rs.tdwg.org/bdqval/terms/Record-Management</a></td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2026-04-22</td>
-		</tr>
-		<tr>
-			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/Record-Management-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/Record-Management-2026-04-22</a></td>
-		</tr>
-		<tr>
-			<td>Label</td>
-			<td>Record-Management</td>
-		</tr>
-		<tr>
-			<td>Definition</td>
-			<td>A bdqffdq:UseCase that involves the comprehensive audit, maintenance, and systematic improvement of biodiversity data records to ensure technical integrity, standardized semantics, and repository-wide readiness for curation and broad-scale reporting.</td>
-		</tr>
-		<tr>
-			<td>Comments</td>
-			<td>See Rees ER and Nicholls M (2020) Data Quality Use Case Study Results. Biodiversity Information Science and Standards 4: e50889, suppl. 2. https://doi.org/10.3897/biss.4.50889.suppl2.</td>
-		</tr>
-		<tr>
-			<td>Fitness requirements</td>
-			<td>Data are fit for the Use Case bdqval:Record-Management when occurrence records can be reliably managed and curated: Core taxon identifiers and descriptors are present, values are valid and standardizable, spatial and temporal fields are usable and internally consistent, and potential data transformations or special conditions are detectable so records can be prioritized for remediation and maintained with clear semantics.  <ul><li>Core record content is usable: Key fields (e.g., identifiers, dwc:basisOfRecord, dc:type, and other essential descriptors) are present, valid and standardizable for consistent management workflows.  </li><li>Location and time are usable: Spatial terms (coordinates and supporting metadata) and temporal terms (e.g., dwc:eventDate and related date parts) are present, valid, and internally consistent enough to support curation, reporting, and downstream use.  </li><li>Taxon content is manageable: Taxon terms are sufficiently resolvable and consistent to support curation and management tasks (including standardization where applicable).  </li><li>Review triggers are detectable: Reports of generalization and transformations or other potential issues (e.g., generalizations and other warning-type fields) are available so curators can decide how to handle records for management purposes.  </li></ul> </td>
-		</tr>
-		<tr>
-			<td>Status</td>
-			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>Controlled value</td>
-			<td>Record-Management</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>bdqffdq:UseCase</td>
-		</tr>
-		<tr>
-			<td>Included SingleRecord Tests</td>
-			<td><a href="../../terms/bdqtest/index.md#AMENDMENT_BASISOFRECORD_STANDARDIZED">AMENDMENT_BASISOFRECORD_STANDARDIZED</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_COORDINATES_FROM_VERBATIM">AMENDMENT_COORDINATES_FROM_VERBATIM</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_COORDINATES_TRANSPOSED">AMENDMENT_COORDINATES_TRANSPOSED</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_COUNTRYCODE_FROM_COORDINATES">AMENDMENT_COUNTRYCODE_FROM_COORDINATES</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_COUNTRYCODE_STANDARDIZED">AMENDMENT_COUNTRYCODE_STANDARDIZED</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_DATEIDENTIFIED_STANDARDIZED">AMENDMENT_DATEIDENTIFIED_STANDARDIZED</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_DAY_STANDARDIZED">AMENDMENT_DAY_STANDARDIZED</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_DCTYPE_STANDARDIZED">AMENDMENT_DCTYPE_STANDARDIZED</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_ESTABLISHMENTMEANS_STANDARDIZED">AMENDMENT_ESTABLISHMENTMEANS_STANDARDIZED</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_EVENTDATE_FROM_VERBATIM">AMENDMENT_EVENTDATE_FROM_VERBATIM</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY">AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_EVENTDATE_FROM_YEARSTARTDAYOFYEARENDDAYOFYEAR">AMENDMENT_EVENTDATE_FROM_YEARSTARTDAYOFYEARENDDAYOFYEAR</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_EVENTDATE_STANDARDIZED">AMENDMENT_EVENTDATE_STANDARDIZED</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_EVENT_FROM_EVENTDATE">AMENDMENT_EVENT_FROM_EVENTDATE</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT">AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_GEODETICDATUM_STANDARDIZED">AMENDMENT_GEODETICDATUM_STANDARDIZED</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_LICENSE_STANDARDIZED">AMENDMENT_LICENSE_STANDARDIZED</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_MINDEPTHMAXDEPTH_FROM_VERBATIM">AMENDMENT_MINDEPTHMAXDEPTH_FROM_VERBATIM</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_MINELEVATIONMAXELEVATION_FROM_VERBATIM">AMENDMENT_MINELEVATIONMAXELEVATION_FROM_VERBATIM</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_MONTH_STANDARDIZED">AMENDMENT_MONTH_STANDARDIZED</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT">AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_OCCURRENCESTATUS_STANDARDIZED">AMENDMENT_OCCURRENCESTATUS_STANDARDIZED</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_PATHWAY_STANDARDIZED">AMENDMENT_PATHWAY_STANDARDIZED</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_SCIENTIFICNAMEID_FROM_TAXON">AMENDMENT_SCIENTIFICNAMEID_FROM_TAXON</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID">AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_SEX_STANDARDIZED">AMENDMENT_SEX_STANDARDIZED</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_TAXONRANK_STANDARDIZED">AMENDMENT_TAXONRANK_STANDARDIZED</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_TYPESTATUS_STANDARDIZED">AMENDMENT_TYPESTATUS_STANDARDIZED</a>, <a href="../../terms/bdqtest/index.md#ISSUE_DATAGENERALIZATIONS_NOTEMPTY">ISSUE_DATAGENERALIZATIONS_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#MEASURE_EVENTDATE_DURATIONINSECONDS">MEASURE_EVENTDATE_DURATIONINSECONDS</a>, <a href="../../terms/bdqtest/index.md#MEASURE_VALIDATIONTESTS_COMPLIANT">MEASURE_VALIDATIONTESTS_COMPLIANT</a>, <a href="../../terms/bdqtest/index.md#MEASURE_VALIDATIONTESTS_NOTCOMPLIANT">MEASURE_VALIDATIONTESTS_NOTCOMPLIANT</a>, <a href="../../terms/bdqtest/index.md#MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET">MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_BASISOFRECORD_NOTEMPTY">VALIDATION_BASISOFRECORD_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_BASISOFRECORD_STANDARD">VALIDATION_BASISOFRECORD_STANDARD</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_CLASSIFICATION_CONSISTENT">VALIDATION_CLASSIFICATION_CONSISTENT</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_CLASS_FOUND">VALIDATION_CLASS_FOUND</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT">VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT">VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_COORDINATEUNCERTAINTY_INRANGE">VALIDATION_COORDINATEUNCERTAINTY_INRANGE</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_COUNTRYCODE_NOTEMPTY">VALIDATION_COUNTRYCODE_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_COUNTRYCODE_STANDARD">VALIDATION_COUNTRYCODE_STANDARD</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT">VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS">VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_COUNTRY_FOUND">VALIDATION_COUNTRY_FOUND</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_COUNTRY_NOTEMPTY">VALIDATION_COUNTRY_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_DATEIDENTIFIED_INRANGE">VALIDATION_DATEIDENTIFIED_INRANGE</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_DATEIDENTIFIED_STANDARD">VALIDATION_DATEIDENTIFIED_STANDARD</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_DAY_INRANGE">VALIDATION_DAY_INRANGE</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_DAY_STANDARD">VALIDATION_DAY_STANDARD</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_DCTYPE_NOTEMPTY">VALIDATION_DCTYPE_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_DCTYPE_STANDARD">VALIDATION_DCTYPE_STANDARD</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_DECIMALLATITUDE_INRANGE">VALIDATION_DECIMALLATITUDE_INRANGE</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_DECIMALLATITUDE_NOTEMPTY">VALIDATION_DECIMALLATITUDE_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_DECIMALLONGITUDE_INRANGE">VALIDATION_DECIMALLONGITUDE_INRANGE</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_DECIMALLONGITUDE_NOTEMPTY">VALIDATION_DECIMALLONGITUDE_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_ENDDAYOFYEAR_INRANGE">VALIDATION_ENDDAYOFYEAR_INRANGE</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_ESTABLISHMENTMEANS_STANDARD">VALIDATION_ESTABLISHMENTMEANS_STANDARD</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_EVENTDATE_INRANGE">VALIDATION_EVENTDATE_INRANGE</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_EVENTDATE_NOTEMPTY">VALIDATION_EVENTDATE_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_EVENTDATE_STANDARD">VALIDATION_EVENTDATE_STANDARD</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_EVENTTEMPORAL_NOTEMPTY">VALIDATION_EVENTTEMPORAL_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_EVENT_CONSISTENT">VALIDATION_EVENT_CONSISTENT</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_FAMILY_FOUND">VALIDATION_FAMILY_FOUND</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_GENUS_FOUND">VALIDATION_GENUS_FOUND</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_GEODETICDATUM_NOTEMPTY">VALIDATION_GEODETICDATUM_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_GEODETICDATUM_STANDARD">VALIDATION_GEODETICDATUM_STANDARD</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_KINGDOM_FOUND">VALIDATION_KINGDOM_FOUND</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_KINGDOM_NOTEMPTY">VALIDATION_KINGDOM_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_LICENSE_NOTEMPTY">VALIDATION_LICENSE_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_LICENSE_STANDARD">VALIDATION_LICENSE_STANDARD</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_LOCATION_NOTEMPTY">VALIDATION_LOCATION_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_MAXDEPTH_INRANGE">VALIDATION_MAXDEPTH_INRANGE</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_MAXELEVATION_INRANGE">VALIDATION_MAXELEVATION_INRANGE</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_MINDEPTH_INRANGE">VALIDATION_MINDEPTH_INRANGE</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH">VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_MINELEVATION_INRANGE">VALIDATION_MINELEVATION_INRANGE</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION">VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_MONTH_STANDARD">VALIDATION_MONTH_STANDARD</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY">VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_OCCURRENCEID_NOTEMPTY">VALIDATION_OCCURRENCEID_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_OCCURRENCESTATUS_NOTEMPTY">VALIDATION_OCCURRENCESTATUS_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_OCCURRENCESTATUS_STANDARD">VALIDATION_OCCURRENCESTATUS_STANDARD</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_ORDER_FOUND">VALIDATION_ORDER_FOUND</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_PATHWAY_STANDARD">VALIDATION_PATHWAY_STANDARD</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_PHYLUM_FOUND">VALIDATION_PHYLUM_FOUND</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_POLYNOMIAL_CONSISTENT">VALIDATION_POLYNOMIAL_CONSISTENT</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY">VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_SCIENTIFICNAMEID_COMPLETE">VALIDATION_SCIENTIFICNAMEID_COMPLETE</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_SCIENTIFICNAMEID_NOTEMPTY">VALIDATION_SCIENTIFICNAMEID_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_SCIENTIFICNAME_FOUND">VALIDATION_SCIENTIFICNAME_FOUND</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_SCIENTIFICNAME_NOTEMPTY">VALIDATION_SCIENTIFICNAME_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_SEX_STANDARD">VALIDATION_SEX_STANDARD</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_STARTDAYOFYEAR_INRANGE">VALIDATION_STARTDAYOFYEAR_INRANGE</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_STATEPROVINCE_FOUND">VALIDATION_STATEPROVINCE_FOUND</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_TAXONRANK_NOTEMPTY">VALIDATION_TAXONRANK_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_TAXONRANK_STANDARD">VALIDATION_TAXONRANK_STANDARD</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_TAXON_NOTEMPTY">VALIDATION_TAXON_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_TAXON_UNAMBIGUOUS">VALIDATION_TAXON_UNAMBIGUOUS</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_TYPESTATUS_STANDARD">VALIDATION_TYPESTATUS_STANDARD</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_YEAR_INRANGE">VALIDATION_YEAR_INRANGE</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_YEAR_NOTEMPTY">VALIDATION_YEAR_NOTEMPTY</a></td>
-		</tr>
-	</tbody>
-</table>
-
-<table>
-	<thead>
-		<tr>
-			<th colspan="2"><a id="bdqval_SDM-Trees"></a>Term Name  bdqval:SDM-Trees</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Term IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/SDM-Trees">https://rs.tdwg.org/bdqval/terms/version/SDM-Trees</a></td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2026-04-26</td>
-		</tr>
-		<tr>
-			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/SDM-Trees-2026-04-26">https://rs.tdwg.org/bdqval/terms/version/SDM-Trees-2026-04-26</a></td>
-		</tr>
-		<tr>
-			<td>Label</td>
-			<td>Species-Distribution-Modeling-Trees</td>
-		</tr>
-		<tr>
-			<td>Definition</td>
-			<td>A bdqffdq:UseCase for improving the quality of, and selecting dwc:Occurrence records suitable for predicting the spatial distribution of tree species. This Use Case filters for occurrence records that meet criteria for a known species at a known location and date.  Records can be further filtered to meet the requirements of the predictive modeling of specific tree species distributions (e.g., Eucalypts) using high-precision occurrence data and environmental variables to evaluate modeling methodologies and refine expert distribution envelopes. </td>
-		</tr>
-		<tr>
-			<td>Comments</td>
-			<td>References: <ul><li>Gill, A.M., Belbin, L. and Chippendale, G.M. (1985). Phytogeography of EUCALYPTUS in Australia. Bureau of Flora and Fauna, Australian Flora and Fauna Series, 3. Canberra. 53p. ISBN:  0644040815. </li><li>Phillips, S. J., Anderson, R. P., and Schapire, R. E. (2006). Maximum entropy modeling of species geographic distributions. Ecological Modeling, 190(3-4), 231-259.  </li><li>Guisan, A. Edwards, T.C. and Hastie, T. (2002). Generalized linear and generalized additive models in studies of species distributions: setting the scene. Ecological Modeling 157, 89-100.</li></ul></td>
-		</tr>
-		<tr>
-			<td>Fitness requirements</td>
-			<td>Data are fit for the use case bdqval:Species-Distribution-Modeling-Trees when records have valid:  <ul><li>dwc:scientificName identified to species level.  </li><li>dwc:basisOfRecord = "Occurrence".   </li><li>dwc:occurrenceStatus = "present".  </li><li>dwc:decimalLatitude and dwc:decimalLongitude.  </li><li>dwc:coordinateUncertaintyInMeters less than 500.  </li><li>dwc:dataGeneralizations = bdqval:empty.  </li><li>dwc:year or dwc:eventDate within provided temporal limits. </li></ul></td>
-		</tr>
-		<tr>
-			<td>Status</td>
-			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>Controlled value</td>
-			<td>Species-Distribution-Modeling-Trees</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>bdqffdq:UseCase</td>
-		</tr>
-		<tr>
-			<td>Included SingleRecord Tests</td>
-			<td><a href="../../terms/bdqtest/index.md#AMENDMENT_BASISOFRECORD_STANDARDIZED">AMENDMENT_BASISOFRECORD_STANDARDIZED</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_EVENTDATE_STANDARDIZED">AMENDMENT_EVENTDATE_STANDARDIZED</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_EVENT_FROM_EVENTDATE">AMENDMENT_EVENT_FROM_EVENTDATE</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_LICENSE_STANDARDIZED">AMENDMENT_LICENSE_STANDARDIZED</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID">AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID</a>, <a href="../../terms/bdqtest/index.md#ISSUE_DATAGENERALIZATIONS_NOTEMPTY">ISSUE_DATAGENERALIZATIONS_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_BASISOFRECORD_NOTEMPTY">VALIDATION_BASISOFRECORD_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_BASISOFRECORD_STANDARD">VALIDATION_BASISOFRECORD_STANDARD</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_COORDINATEUNCERTAINTY_INRANGE">VALIDATION_COORDINATEUNCERTAINTY_INRANGE</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_DECIMALLATITUDE_INRANGE">VALIDATION_DECIMALLATITUDE_INRANGE</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_DECIMALLATITUDE_NOTEMPTY">VALIDATION_DECIMALLATITUDE_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_DECIMALLONGITUDE_INRANGE">VALIDATION_DECIMALLONGITUDE_INRANGE</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_DECIMALLONGITUDE_NOTEMPTY">VALIDATION_DECIMALLONGITUDE_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_EVENTDATE_NOTEMPTY">VALIDATION_EVENTDATE_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_EVENTDATE_STANDARD">VALIDATION_EVENTDATE_STANDARD</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_LICENSE_NOTEMPTY">VALIDATION_LICENSE_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_LICENSE_STANDARD">VALIDATION_LICENSE_STANDARD</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_OCCURRENCESTATUS_NOTEMPTY">VALIDATION_OCCURRENCESTATUS_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_OCCURRENCESTATUS_STANDARD">VALIDATION_OCCURRENCESTATUS_STANDARD</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_SCIENTIFICNAME_FOUND">VALIDATION_SCIENTIFICNAME_FOUND</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_SCIENTIFICNAME_NOTEMPTY">VALIDATION_SCIENTIFICNAME_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_YEAR_INRANGE">VALIDATION_YEAR_INRANGE</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_YEAR_NOTEMPTY">VALIDATION_YEAR_NOTEMPTY</a></td>
-		</tr>
-	</tbody>
-</table>
-
-<table>
-	<thead>
-		<tr>
 			<th colspan="2"><a id="bdqval_sourceAuthority"></a>Term Name  bdqval:sourceAuthority</th>
 		</tr>
 	</thead>
@@ -1285,60 +1115,6 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdqval_Spatial-Temporal_Patterns"></a>Term Name  bdqval:Spatial-Temporal_Patterns</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Term IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/Spatial-Temporal_Patterns">https://rs.tdwg.org/bdqval/terms/Spatial-Temporal_Patterns</a></td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2026-04-22</td>
-		</tr>
-		<tr>
-			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/Spatial-Temporal_Patterns-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/Spatial-Temporal_Patterns-2026-04-22</a></td>
-		</tr>
-		<tr>
-			<td>Label</td>
-			<td>Spatial-Temporal Patterns</td>
-		</tr>
-		<tr>
-			<td>Definition</td>
-			<td>A bdqffdq:UseCase that pertains to dwc:Occurrence data where the Information Elements concerning what dwc:Organism occurred when at what location are used for analysies such as of taxon distributions across space and time to quantify biodiversity patterns, identify range shifts, or modeling of ecological niches. </td>
-		</tr>
-		<tr>
-			<td>Comments</td>
-			<td>See Rees ER and Nicholls M (2020) Data Quality Use Case Study Results. Biodiversity Information Science and Standards 4: e50889, suppl. 2. https://doi.org/10.3897/biss.4.50889.suppl2.</td>
-		</tr>
-		<tr>
-			<td>Fitness requirements</td>
-			<td>Data are fit for the Use Case bdqval:Spatial-Temporal_Patterns when occurrence records can be reliably interpreted as organism occurrences in space and time: the organism identity is usable, the location is usable (with adequate precision and metadata), textual geography data is consistent with the coordinates, the event date is usable and internally consistent, and any generalization (spatial or temporal) is detectable so users can decide whether the record is fit at the intended analysis scale. <ul><li>Organism identity is usable: Taxon and scientific name terms (e.g., dwc:scientificName and related taxon terms) are present and sufficiently resolvable and consistent to support analyses of spatio-temporal patterns of organisms.  </li><li>Location is usable and interpretable (including precision and metadata): Coordinates are present, are in-range, and are accompanied by adequate spatial metadata (e.g., uncertainty and spatial reference such as datum); obvious artifact coordinates (e.g., zeros) are detectable.  </li><li>Textual geography is coherent with coordinates: Textual geography fields (e.g., dwc:countryCode, dwc:country, dwc:stateProvince) are valid and standardizable and consistent with the coordinates.  </li><li>Date is usable and internally consistent: dwc:eventDate is present, valid, in standard form and consistent with other temporal terms (e.g. dwc:year) terms when those are provided. Generalization and low precision are detectable: Any indication that the record has been generalized (via dwc:dataGeneralizations) is available along with coordinate uncertainty, broad and interval event dates, and taxonomic rank so that users can judge whether records are fit for the intended spatial and temporal resolution.  </li></ul></td>
-		</tr>
-		<tr>
-			<td>Status</td>
-			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>Controlled value</td>
-			<td>Spatial-Temporal Patterns</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>bdqffdq:UseCase</td>
-		</tr>
-		<tr>
-			<td>Included SingleRecord Tests</td>
-			<td><a href="../../terms/bdqtest/index.md#AMENDMENT_BASISOFRECORD_STANDARDIZED">AMENDMENT_BASISOFRECORD_STANDARDIZED</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_COORDINATES_FROM_VERBATIM">AMENDMENT_COORDINATES_FROM_VERBATIM</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_COORDINATES_TRANSPOSED">AMENDMENT_COORDINATES_TRANSPOSED</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_COUNTRYCODE_FROM_COORDINATES">AMENDMENT_COUNTRYCODE_FROM_COORDINATES</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_COUNTRYCODE_STANDARDIZED">AMENDMENT_COUNTRYCODE_STANDARDIZED</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_DATEIDENTIFIED_STANDARDIZED">AMENDMENT_DATEIDENTIFIED_STANDARDIZED</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_DAY_STANDARDIZED">AMENDMENT_DAY_STANDARDIZED</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_DCTYPE_STANDARDIZED">AMENDMENT_DCTYPE_STANDARDIZED</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_ESTABLISHMENTMEANS_STANDARDIZED">AMENDMENT_ESTABLISHMENTMEANS_STANDARDIZED</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_EVENTDATE_STANDARDIZED">AMENDMENT_EVENTDATE_STANDARDIZED</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_EVENT_FROM_EVENTDATE">AMENDMENT_EVENT_FROM_EVENTDATE</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT">AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_GEODETICDATUM_STANDARDIZED">AMENDMENT_GEODETICDATUM_STANDARDIZED</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_MINDEPTHMAXDEPTH_FROM_VERBATIM">AMENDMENT_MINDEPTHMAXDEPTH_FROM_VERBATIM</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_MINELEVATIONMAXELEVATION_FROM_VERBATIM">AMENDMENT_MINELEVATIONMAXELEVATION_FROM_VERBATIM</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_MONTH_STANDARDIZED">AMENDMENT_MONTH_STANDARDIZED</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT">AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_OCCURRENCESTATUS_STANDARDIZED">AMENDMENT_OCCURRENCESTATUS_STANDARDIZED</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID">AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID</a>, <a href="../../terms/bdqtest/index.md#ISSUE_COORDINATES_CENTEROFCOUNTRY">ISSUE_COORDINATES_CENTEROFCOUNTRY</a>, <a href="../../terms/bdqtest/index.md#ISSUE_DATAGENERALIZATIONS_NOTEMPTY">ISSUE_DATAGENERALIZATIONS_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#ISSUE_ESTABLISHMENTMEANS_NOTEMPTY">ISSUE_ESTABLISHMENTMEANS_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#MEASURE_EVENTDATE_DURATIONINSECONDS">MEASURE_EVENTDATE_DURATIONINSECONDS</a>, <a href="../../terms/bdqtest/index.md#MEASURE_VALIDATIONTESTS_COMPLIANT">MEASURE_VALIDATIONTESTS_COMPLIANT</a>, <a href="../../terms/bdqtest/index.md#MEASURE_VALIDATIONTESTS_NOTCOMPLIANT">MEASURE_VALIDATIONTESTS_NOTCOMPLIANT</a>, <a href="../../terms/bdqtest/index.md#MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET">MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_BASISOFRECORD_NOTEMPTY">VALIDATION_BASISOFRECORD_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_BASISOFRECORD_STANDARD">VALIDATION_BASISOFRECORD_STANDARD</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT">VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT">VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT">VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_COORDINATES_NOTZERO">VALIDATION_COORDINATES_NOTZERO</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_COORDINATEUNCERTAINTY_INRANGE">VALIDATION_COORDINATEUNCERTAINTY_INRANGE</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_COUNTRYCODE_NOTEMPTY">VALIDATION_COUNTRYCODE_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_COUNTRYCODE_STANDARD">VALIDATION_COUNTRYCODE_STANDARD</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT">VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS">VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_COUNTRY_FOUND">VALIDATION_COUNTRY_FOUND</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_COUNTRY_NOTEMPTY">VALIDATION_COUNTRY_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_DATEIDENTIFIED_INRANGE">VALIDATION_DATEIDENTIFIED_INRANGE</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_DATEIDENTIFIED_STANDARD">VALIDATION_DATEIDENTIFIED_STANDARD</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_DAY_INRANGE">VALIDATION_DAY_INRANGE</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_DAY_STANDARD">VALIDATION_DAY_STANDARD</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_DCTYPE_NOTEMPTY">VALIDATION_DCTYPE_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_DCTYPE_STANDARD">VALIDATION_DCTYPE_STANDARD</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_DECIMALLATITUDE_INRANGE">VALIDATION_DECIMALLATITUDE_INRANGE</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_DECIMALLATITUDE_NOTEMPTY">VALIDATION_DECIMALLATITUDE_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_DECIMALLONGITUDE_INRANGE">VALIDATION_DECIMALLONGITUDE_INRANGE</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_DECIMALLONGITUDE_NOTEMPTY">VALIDATION_DECIMALLONGITUDE_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_ENDDAYOFYEAR_INRANGE">VALIDATION_ENDDAYOFYEAR_INRANGE</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_ESTABLISHMENTMEANS_STANDARD">VALIDATION_ESTABLISHMENTMEANS_STANDARD</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_EVENTDATE_INRANGE">VALIDATION_EVENTDATE_INRANGE</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_EVENTDATE_NOTEMPTY">VALIDATION_EVENTDATE_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_EVENTDATE_STANDARD">VALIDATION_EVENTDATE_STANDARD</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_EVENTTEMPORAL_NOTEMPTY">VALIDATION_EVENTTEMPORAL_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_GEODETICDATUM_NOTEMPTY">VALIDATION_GEODETICDATUM_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_GEODETICDATUM_STANDARD">VALIDATION_GEODETICDATUM_STANDARD</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_LOCATION_NOTEMPTY">VALIDATION_LOCATION_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_MAXDEPTH_INRANGE">VALIDATION_MAXDEPTH_INRANGE</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_MAXELEVATION_INRANGE">VALIDATION_MAXELEVATION_INRANGE</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_MINDEPTH_INRANGE">VALIDATION_MINDEPTH_INRANGE</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH">VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_MINELEVATION_INRANGE">VALIDATION_MINELEVATION_INRANGE</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION">VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_MONTH_STANDARD">VALIDATION_MONTH_STANDARD</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_OCCURRENCESTATUS_NOTEMPTY">VALIDATION_OCCURRENCESTATUS_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_OCCURRENCESTATUS_STANDARD">VALIDATION_OCCURRENCESTATUS_STANDARD</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_SCIENTIFICNAME_FOUND">VALIDATION_SCIENTIFICNAME_FOUND</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_SCIENTIFICNAME_NOTEMPTY">VALIDATION_SCIENTIFICNAME_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_STARTDAYOFYEAR_INRANGE">VALIDATION_STARTDAYOFYEAR_INRANGE</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_STATEPROVINCE_FOUND">VALIDATION_STATEPROVINCE_FOUND</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_TAXON_NOTEMPTY">VALIDATION_TAXON_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_TAXON_UNAMBIGUOUS">VALIDATION_TAXON_UNAMBIGUOUS</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_YEAR_INRANGE">VALIDATION_YEAR_INRANGE</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_YEAR_NOTEMPTY">VALIDATION_YEAR_NOTEMPTY</a></td>
-		</tr>
-	</tbody>
-</table>
-
-<table>
-	<thead>
-		<tr>
 			<th colspan="2"><a id="bdqval_spatialBufferInMeters"></a>Term Name  bdqval:spatialBufferInMeters</th>
 		</tr>
 	</thead>
@@ -1378,60 +1154,6 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		<tr>
 			<td>Type</td>
 			<td>bdqffdq:Parameter, owl:NamedIndividual</td>
-		</tr>
-	</tbody>
-</table>
-
-<table>
-	<thead>
-		<tr>
-			<th colspan="2"><a id="bdqval_Taxon-Management"></a>Term Name  bdqval:Taxon-Management</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Term IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/Taxon-Management">https://rs.tdwg.org/bdqval/terms/Taxon-Management</a></td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2026-04-22</td>
-		</tr>
-		<tr>
-			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/Taxon-Management-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/Taxon-Management-2026-04-22</a></td>
-		</tr>
-		<tr>
-			<td>Label</td>
-			<td>Taxon-Management</td>
-		</tr>
-		<tr>
-			<td>Definition</td>
-			<td>A bdqffdq:UseCase that involves the nomenclatural audit, taxonomic verification, and systematic organization of taxon names and associated metadata to ensure identification stability and compliance with global taxonomic standards.</td>
-		</tr>
-		<tr>
-			<td>Comments</td>
-			<td>See Rees ER and Nicholls M (2020) Data Quality Use Case Study Results. Biodiversity Information Science and Standards 4: e50889, suppl. 2. https://doi.org/10.3897/biss.4.50889.suppl2.</td>
-		</tr>
-		<tr>
-			<td>Fitness requirements</td>
-			<td>Data are fit for this use when when taxonomic information is sufficient to unambiguously resolve organism identity and position within a nomenclatural hierarchy. Taxon terms are sufficient to resolve the organism (or flag ambiguity), core name and rank terms (e.g., dwc:scientificName, dwc:taxonRank) are present and align with an appropriate bdqval:sourceAuthority, name strings are consistent with atomized name fields and identifiers or authorship, identification dates are valid and plausible, and key contextual metadata (e.g., dwc:basisOfRecord, and controlled fields such as dwc:typeStatus and dwc:sex where relevant) are usable.  <ul><li>Taxon can be resolved: Taxon terms are present and sufficient to support unambiguous resolution (dwc:scientificName, dwc:scientificNameAuthorship, dwc:scientificNameID).  </li><li>Names and ranks are authoritative: dwc:scientificName and required rank and classification terms are present, standardizable, and consistent with the bdqval:sourceAuthority.  </li><li>Name fields are consistent: dwc:scientificName agrees with atomized name fields; authorship is provided where needed.  </li><li>Identifiers are usable: Identifiers (e.g., dwc:scientificNameID) are present when available and correctly formed; dwc:taxonRank is present and valid.  </li><li>Identification timing is usable: dwc:dateIdentified is present when needed, ISO-valid, and temporally plausible (and consistent with dwc:eventDate when provided).  </li><li>Supporting context is usable: dwc:basisOfRecord and other relevant controlled and context fields are present and valid; basic space/time fields are in standard form where used to support curation decisions. </li></ul></td>
-		</tr>
-		<tr>
-			<td>Status</td>
-			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>Controlled value</td>
-			<td>Taxon-Management</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>bdqffdq:UseCase</td>
-		</tr>
-		<tr>
-			<td>Included SingleRecord Tests</td>
-			<td><a href="../../terms/bdqtest/index.md#AMENDMENT_BASISOFRECORD_STANDARDIZED">AMENDMENT_BASISOFRECORD_STANDARDIZED</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_DATEIDENTIFIED_STANDARDIZED">AMENDMENT_DATEIDENTIFIED_STANDARDIZED</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_DCTYPE_STANDARDIZED">AMENDMENT_DCTYPE_STANDARDIZED</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_SCIENTIFICNAMEID_FROM_TAXON">AMENDMENT_SCIENTIFICNAMEID_FROM_TAXON</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID">AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_SEX_STANDARDIZED">AMENDMENT_SEX_STANDARDIZED</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_TAXONRANK_STANDARDIZED">AMENDMENT_TAXONRANK_STANDARDIZED</a>, <a href="../../terms/bdqtest/index.md#AMENDMENT_TYPESTATUS_STANDARDIZED">AMENDMENT_TYPESTATUS_STANDARDIZED</a>, <a href="../../terms/bdqtest/index.md#MEASURE_VALIDATIONTESTS_COMPLIANT">MEASURE_VALIDATIONTESTS_COMPLIANT</a>, <a href="../../terms/bdqtest/index.md#MEASURE_VALIDATIONTESTS_NOTCOMPLIANT">MEASURE_VALIDATIONTESTS_NOTCOMPLIANT</a>, <a href="../../terms/bdqtest/index.md#MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET">MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_BASISOFRECORD_NOTEMPTY">VALIDATION_BASISOFRECORD_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_BASISOFRECORD_STANDARD">VALIDATION_BASISOFRECORD_STANDARD</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_CLASSIFICATION_CONSISTENT">VALIDATION_CLASSIFICATION_CONSISTENT</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_CLASS_FOUND">VALIDATION_CLASS_FOUND</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_DATEIDENTIFIED_INRANGE">VALIDATION_DATEIDENTIFIED_INRANGE</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_DATEIDENTIFIED_STANDARD">VALIDATION_DATEIDENTIFIED_STANDARD</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_DCTYPE_NOTEMPTY">VALIDATION_DCTYPE_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_DCTYPE_STANDARD">VALIDATION_DCTYPE_STANDARD</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_DECIMALLATITUDE_INRANGE">VALIDATION_DECIMALLATITUDE_INRANGE</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_DECIMALLATITUDE_NOTEMPTY">VALIDATION_DECIMALLATITUDE_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_DECIMALLONGITUDE_INRANGE">VALIDATION_DECIMALLONGITUDE_INRANGE</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_DECIMALLONGITUDE_NOTEMPTY">VALIDATION_DECIMALLONGITUDE_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_FAMILY_FOUND">VALIDATION_FAMILY_FOUND</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_GENUS_FOUND">VALIDATION_GENUS_FOUND</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_KINGDOM_FOUND">VALIDATION_KINGDOM_FOUND</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_KINGDOM_NOTEMPTY">VALIDATION_KINGDOM_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY">VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_ORDER_FOUND">VALIDATION_ORDER_FOUND</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_PHYLUM_FOUND">VALIDATION_PHYLUM_FOUND</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_POLYNOMIAL_CONSISTENT">VALIDATION_POLYNOMIAL_CONSISTENT</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY">VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_SCIENTIFICNAMEID_COMPLETE">VALIDATION_SCIENTIFICNAMEID_COMPLETE</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_SCIENTIFICNAMEID_NOTEMPTY">VALIDATION_SCIENTIFICNAMEID_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_SCIENTIFICNAME_FOUND">VALIDATION_SCIENTIFICNAME_FOUND</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_SCIENTIFICNAME_NOTEMPTY">VALIDATION_SCIENTIFICNAME_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_SEX_STANDARD">VALIDATION_SEX_STANDARD</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_TAXONRANK_NOTEMPTY">VALIDATION_TAXONRANK_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_TAXONRANK_STANDARD">VALIDATION_TAXONRANK_STANDARD</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_TAXON_NOTEMPTY">VALIDATION_TAXON_NOTEMPTY</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_TAXON_UNAMBIGUOUS">VALIDATION_TAXON_UNAMBIGUOUS</a>, <a href="../../terms/bdqtest/index.md#VALIDATION_TYPESTATUS_STANDARD">VALIDATION_TYPESTATUS_STANDARD</a></td>
 		</tr>
 	</tbody>
 </table>
