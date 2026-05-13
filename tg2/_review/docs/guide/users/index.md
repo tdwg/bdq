@@ -141,7 +141,8 @@ The following namespace abbreviations are used in this document:
 
 | **Abbreviation** | **Namespace** |
 | ------------ | -------------                               |
-| bdqval:         | https://rs.tdwg.org/bdqval/terms/           |
+| bdqval       | https://rs.tdwg.org/bdqval/terms/           |
+| bdquc:       | https://rs.tdwg.org/bdquc/terms/           |
 | bdqffdq:     | https://rs.tdwg.org/bdqffdq/terms/          |
 | dwc:         | http://rs.tdwg.org/dwc/terms/               |
 | rdfs:        | http://www.w3.org/2000/01/rdf-schema#       |

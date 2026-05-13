@@ -86,9 +86,8 @@ Familiarity with RDF vocabularies and the Fitness For Use Framework is recommend
 
 ### 1.3 Data Quality Vocabulary Terms (non-normative)
 
-The `bdqval:` vocabulary includes four groups of concepts used across the BDQ standard:
+The `bdqval:` vocabulary includes three groups of concepts used across the BDQ standard:
 
-- **Use Cases** (`bdqffdq:UseCase`) – formal representations of the purposes for which data might be evaluated using BDQ Tests.
 - **Test Parameters** (`bdqffdq:Parameter`) – concepts used to configure the behavior of Tests, including named parameters like `bdqval:sourceAuthority`.
 - **Information Elements** – used by `Multi Record` `Measure` Tests to refer to aggregated or referenced values.
 - **Empty/NotEmpty Concepts** – `bdqval:Empty` and `bdqval:NotEmpty`, which provide shared semantics for Tests dealing with missing or present values.
@@ -124,7 +123,8 @@ The following namespace abbreviations are used in this document:
 
 | **Abbreviation** | **Namespace** |
 | ------------ | -------------                               |
-| bdqval:         | https://rs.tdwg.org/bdqval/terms/           |
+| bdqval:      | https://rs.tdwg.org/bdqval/terms/           |
+| bdquc:       | https://rs.tdwg.org/bdquc/terms/            |
 | bdqtest:     | https://rs.tdwg.org/bdqtest/terms/          |
 | bdqdim:      | https://rs.tdwg.org/bdqdim/terms/           |
 | bdqffdq:     | https://rs.tdwg.org/bdqffdq/terms/          |
@@ -153,7 +153,6 @@ The terminology used to describe the terms in this vocabulary follows the TDWG [
 | Status (tdwgutility:status) |  | Used to indicate if the term is recommended for use or if it is only of historical significance. | recommended |
 | Controlled Value String () | normative |  | AggregatedTestResponseOutcomes |
 | Type (rdf:type) | normative | The subject is an instance of a class. | bdqffdq:AbstractInformationElement |
-| Fitness Requirements (bdqffdq:hasFitnessRequirements) | non-normative | The property of a bdqffdq:UseCase that provides text listing the qualities that data must have to be fit for a given use. |  |
 
 
 ## 2 Use of Terms (normative)
@@ -189,10 +188,6 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 [bdqval:spatialBufferInMeters](#bdqval_spatialBufferInMeters) |
 [bdqval:taxonIsMarine](#bdqval_taxonIsMarine) 
 
-**bdqffdq:UseCase**
-
-
-
 **bdqffdq:AbstractInformationElement**
 
 [bdqval:AggregatedTestResponseOutcomes](#bdqval_AggregatedTestResponseOutcomes) |
@@ -226,10 +221,6 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 [sourceAuthority](#bdqval_sourceAuthority) |
 [spatialBufferInMeters](#bdqval_spatialBufferInMeters) |
 [taxonIsMarine](#bdqval_taxonIsMarine) 
-
-**bdqffdq:UseCase**
-
-
 
 **bdqffdq:AbstractInformationElement**
 

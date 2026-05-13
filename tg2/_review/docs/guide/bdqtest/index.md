@@ -181,7 +181,8 @@ The following namespace abbreviations are used in this document:
 
 | **Abbreviation** | **Namespace** |
 | ------------ | -------------                               |
-| bdqval:         | https://rs.tdwg.org/bdqval/terms/           |
+| bdqval:      | https://rs.tdwg.org/bdqval/terms/           |
+| bdquc:       | https://rs.tdwg.org/bdquc/terms/            |
 | bdqtest:     | https://rs.tdwg.org/bdqtest/terms/          |
 | bdqcrit:     | https://rs.tdwg.org/bdqcrit/terms/          |
 | bdqdim:      | https://rs.tdwg.org/bdqdim/terms/           |
@@ -232,11 +233,10 @@ BDQ Tests are designed to be applied in the context of particular uses of data. 
 BDQ initially defines five `Use Cases`.  These use cases were based on the work of Data Quality Task Group 3 ([Data Quality Use Cases](https://www.tdwg.org/community/bdq/tg-3/)). The BDQ Tests can only relate to the concept of ‘quality’ as a consequence of their application to a specific use case.  The five use cases included in the BDQ standard were intended to cover a range of applications that were considered in common use, but they are far from being comprehensive. The use cases were intended as a template or guide for those who may want to generate other use cases for their environments.  See [Section 8 Creating New Use Cases](#8-creating-new-use-cases-non-normative) and see the [Tutorial](../../tutorial/index.md) for a step-by-step example of how to define a `Use Case` and select appropriate Tests for that `Use Case`.
 
 The initial BDQ `Use Cases` are:
-* [bdqval:Alien-Species](../../list/bdqval/index.md#bdqval_Alien-Species) [(Included Tests)](../../terms/bdqtest/qrg_index_by_usecase.md#bdqvalalien-species)
-* [bdqval:Record-Management](../../list/bdqval/index.md#bdqval_Record-Management) [(Included Tests)](../../terms/bdqtest/qrg_index_by_usecase.md#bdqvalrecord-management)
-* [bdqval:Species-Distribution-Modeling-Trees](../../list/bdqval/index.md#bdqval_SDM-Trees) [(Included Tests)](../../terms/bdqtest/qrg_index_by_usecase.md#bdqvalsdm-trees)
-* [bdqval:Spatial-Temporal_Patterns](../../list/bdqval/index.md#bdqval_Spatial-Temporal_Patterns) [(Included Tests)](../../terms/bdqtest/qrg_index_by_usecase.md#bdqvalspatial-temporal_patterns)
-* [bdqval:Taxon-Management](../../list/bdqval/index.md#bdqval_Taxon-Management) [(Included Tests)](../../terms/bdqtest/qrg_index_by_usecase.md#bdqvaltaxon-management)
+* [bdquc:Alien-Species](../../list/bdquc/index.md#bdquc_Alien-Species) [(Included Tests)](../../terms/bdqtest/qrg_index_by_usecase.md#bdqucalien-species)
+* [bdquc:Species-Distribution-Modeling-Trees](../../list/bdquc/index.md#bdquc_SDM-Trees) [(Included Tests)](../../terms/bdqtest/qrg_index_by_usecase.md#bdqucsdm-trees)
+* [bdquc:Spatial-Temporal_Patterns](../../list/bdquc/index.md#bdquc_Spatial-Temporal_Patterns) [(Included Tests)](../../terms/bdqtest/qrg_index_by_usecase.md#bdqucspatial-temporal_patterns)
+* [bdquc:Taxon-Management](../../list/bdquc/index.md#bdquc_Taxon-Management) [(Included Tests)](../../terms/bdqtest/qrg_index_by_usecase.md#bdquctaxon-management)
 
 Under the principle that data has quality only with respect to use, each of the BDQ Tests is allocated to at least one `Use Case`.  Note that there is a many-to-many relationship here: One BDQ Test can be in multiple `Use Cases` and one `Use Case` may have many associated BDQ Tests, with `Policies` relating Tests to `Use Cases`.  See [Compliance depends on Use Case](../implementers/index.md#31-compliance-depends-on-use-case-normative) in the Implementer's Guide for further explanation.
 
@@ -336,11 +336,12 @@ See the [Fitness For Use Framework Summary of Mathematical Formalization (normat
 
 The technical (normative) details of the BDQ Test terms (those in the `bdqtest:` namespace) are found in the [BDQ Tests List of Terms](../../list/bdqtest/index.md).
 
-The technical definitions of the `bdqtest:` terms are supported by terms in several additional namespaces in the BDQ standard, namely `bdqval:`, `bdqffdq:`, `bdqdim:`, `bdqenh:`, and `bdqcrit:`. For the details and rationale, see Chapman et al. (2017).
+The technical definitions of the `bdqtest:` terms are supported by terms in several additional namespaces in the BDQ standard, namely `bdqval:`, `bdquc`, `bdqffdq:`, `bdqdim:`, `bdqenh:`, and `bdqcrit:`. For the details and rationale, see Chapman et al. (2017).
 
 | **Abbreviation**  | **Technical List of Terms** |
 | -------- | ----------------------- |
 | bdqval:     | [BDQ Controlled Vocabulary List of Terms](../../list/bdqval/index.md) |
+| bdquc:     | [BDQ Use Case Controlled Vocabulary](../../list/bdquc/index.md) |
 | bdqtest: | [BDQ Tests List of Terms](../../list/bdqtest/index.md) |
 | bdqcrit: | [Data Quality Criterion Controlled Vocabulary List of Terms](../../list/bdqcrit/index.md) |
 | bdqdim:  | [Data Quality Dimension Controlled Vocabulary List of Terms](../../list/bdqdim/index.md) |

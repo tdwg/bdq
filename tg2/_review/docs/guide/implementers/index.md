@@ -202,7 +202,8 @@ The following namespace abbreviations are used in this document:
 
 | **Abbreviation** | **Namespace** |
 | ------------ | -------------                               |
-| bdqval:         | https://rs.tdwg.org/bdqval/terms/           |
+| bdqval:      | https://rs.tdwg.org/bdqval/terms/           |
+| bdquc:       | https://rs.tdwg.org/bdquc/terms/            |
 | bdqtest:     | https://rs.tdwg.org/bdqtest/terms/          |
 | bdqdim:      | https://rs.tdwg.org/bdqdim/terms/           |
 | bdqffdq:     | https://rs.tdwg.org/bdqffdq/terms/          |
@@ -213,7 +214,7 @@ The following namespace abbreviations are used in this document:
 | rdfs:        | http://www.w3.org/2000/01/rdf-schema#       |
 | skos:        | http://www.w3.org/2004/02/skos/core#        |
 | prov:        | http://www.w3.org/ns/prov#                  |
-| dqv:         | http://www.w3.org/ns/dqv#                  |
+| dqv:         | http://www.w3.org/ns/dqv#                   |
 | tdwgutility: | http://rs.tdwg.org/dwc/terms/attributes/    |
 
 ### 1.7 Referring to Terms (normative)

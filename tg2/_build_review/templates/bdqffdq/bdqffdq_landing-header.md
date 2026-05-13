@@ -76,6 +76,7 @@ The following namespace abbreviations are used in this and related documents:
 | **Abbreviation** | **Namespace** |
 | ------------ | -------------                               |
 | bdqval:      | https://rs.tdwg.org/bdqval/terms/           |
+| bdquc:       | https://rs.tdwg.org/bdquc/terms/            |
 | bdqtest:     | https://rs.tdwg.org/bdqtest/terms/          |
 | bdqcrit:     | https://rs.tdwg.org/bdqcrit/terms/          |
 | bdqdim:      | https://rs.tdwg.org/bdqdim/terms/           |

@@ -167,14 +167,15 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 
 | Abbreviation | Namespace |
 |--------------|-----------|
-| bdqval:         | https://rs.tdwg.org/bdqval/terms/|
+| bdqval:      | https://rs.tdwg.org/bdqval/terms/  |
+| bdquc:       | https://rs.tdwg.org/bdquc/terms/   |
 | bdqtest:     | https://rs.tdwg.org/bdqtest/terms/ |
 | bdqcrit:     | https://rs.tdwg.org/bdqcrit/terms/ |
-| bdqdim:      | https://rs.tdwg.org/bdqdim/terms/ |
-| bdqenh:      | https://rs.tdwg.org/bdqenh/terms/ |
+| bdqdim:      | https://rs.tdwg.org/bdqdim/terms/  |
+| bdqenh:      | https://rs.tdwg.org/bdqenh/terms/  |
 | bdqffdq:     | https://rs.tdwg.org/bdqffdq/terms/ |
 | oa:          | https://www.w3.org/TR/annotation-vocab/ |
-| dwc:         | http://rs.tdwg.org/dwc/terms/ |
+| dwc:         | http://rs.tdwg.org/dwc/terms/      |
 
 ### 1.8 Referring to Terms (normative)
 

@@ -19,6 +19,10 @@ Namespace abbreviations used in the table above are as follows:
 | rdfs:        | http://www.w3.org/2000/01/rdf-schema#       |
 | skos:        | http://www.w3.org/2004/02/skos/core#        |
 | bdqffdq:     | https://rs.tdwg.org/bdqffdq/terms/          |
-| bdqval:         | https://rs.tdwg.org/bdqval/terms/           |
+| bdqval:      | https://rs.tdwg.org/bdqval/terms/           |
+| bdquc:       | https://rs.tdwg.org/bdquc/terms/            |
+| bdqdim:      | https://rs.tdwg.org/bdqdim/terms/           |
+| bdqcrit:     | https://rs.tdwg.org/bdqcrit/terms/          |
+| bdqenh:      | https://rs.tdwg.org/bdqenh/terms/           |
 | dwc:         | http://rs.tdwg.org/dwc/terms/               |
 

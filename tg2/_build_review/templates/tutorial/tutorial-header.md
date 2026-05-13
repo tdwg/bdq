@@ -65,7 +65,8 @@ The following namespace abbreviations are used in this document:
 
 | **Abbreviation** | **Namespace** |
 | ------------ | -------------                               |
-| bdqval:         | https://rs.tdwg.org/bdqval/terms/           |
+| bdqval       | https://rs.tdwg.org/bdqval/terms/           |
+| bdquc:       | https://rs.tdwg.org/bdquc/terms/            |
 | bdqtest:     | https://rs.tdwg.org/bdqtest/terms/          |
 | bdqcrit:     | https://rs.tdwg.org/bdqcrit/terms/          |
 | bdqdim:      | https://rs.tdwg.org/bdqdim/terms/           |
@@ -76,7 +77,7 @@ The following namespace abbreviations are used in this document:
 | rdfs:        | http://www.w3.org/2000/01/rdf-schema#       |
 | skos:        | http://www.w3.org/2004/02/skos/core#        |
 | prov:        | http://www.w3.org/ns/prov#                  |
-| foaf:        | http://xmlns.com/foaf/0.1/                 |
+| foaf:        | http://xmlns.com/foaf/0.1/                  |
 | xsd:         | http://www.w3.org/2001/XMLSchema#           |
 
 ## 2 Overview (non-normative)

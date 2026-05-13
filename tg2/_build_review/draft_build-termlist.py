@@ -44,7 +44,7 @@ PREFIX bdqdim: <https://rs.tdwg.org/bdqdim/terms/>
 
 # This is a Python list of the names of the term lists for which documents are to be produced.
 # One set of documents is produced for each term.  See assumptions below.
-termLists = ['bdqdim','bdqval','bdqenh','bdqcrit']
+termLists = ['bdqdim','bdqval','bdqenh','bdqcrit','bdquc']
 
 # This is the base URL for raw files from the branch of the repo that has been pushed to GitHub
 github_branch = 'master' # "master" for production, something else for development
@@ -176,7 +176,7 @@ if debug :
     print()
 
 # ---------------
-# Lookup the tests that apply to each use case for use when building bdqval term list document.
+# Lookup the tests that apply to each use case for use when building bdquc term list document.
 # ---------------
 
 bdqtest_graph = Graph()
@@ -184,7 +184,7 @@ bdqtest_graph.parse("../_review/dist/bdqtest.ttl", format="turtle")
 
 sparql_prefixes = """
 PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
-PREFIX bdqval:  <https://rs.tdwg.org/bdqval/terms/>
+PREFIX bdquc:  <https://rs.tdwg.org/bdquc/terms/>
 PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos:    <http://www.w3.org/2004/02/skos/core#>
 """
@@ -193,7 +193,7 @@ def tests_for_use_case_curie(use_case_localname: str):
     # use_case_localname like "Spatial-Temporal_Patterns"
     query = sparql_prefixes + f"""
 SELECT DISTINCT ?label WHERE {{
-  ?policy bdqffdq:hasUseCase bdqval:{use_case_localname} .
+  ?policy bdqffdq:hasUseCase bdquc:{use_case_localname} .
   ?policy bdqffdq:includedInPolicy ?test .
   ?test rdfs:label ?label .
   ?test bdqffdq:hasResourceType bdqffdq:SingleRecord .
@@ -216,8 +216,8 @@ for term in termLists:
     term_history_csv = "../_review/vocabulary/{}_term_versions.csv".format(term)
     if term == 'bdqval' : 
         organized_in_categories = True
-        display_order = ['Data','bdqffdq:Parameter','bdqffdq:UseCase','bdqffdq:AbstractInformationElement']
-        display_label = ['Data','bdqffdq:Parameter','bdqffdq:UseCase','bdqffdq:AbstractInformationElement']
+        display_order = ['Data','bdqffdq:Parameter','bdqffdq:AbstractInformationElement']
+        display_label = ['Data','bdqffdq:Parameter','bdqffdq:AbstractInformationElement']
     else : 
         organized_in_categories = False
         display_order = ['']
@@ -233,7 +233,7 @@ for term in termLists:
     #column_list = ['pref_ns_prefix', 'pref_ns_uri', 'term_localName', 'label', 'definition', 'usage', 'notes', 'term_modified', 'term_deprecated', 'type']
     if vocab_type == 2:
         column_list += ['controlled_value_string']
-    if term == "bdqval" :
+    if term == "bdquc" :
         column_list += ['hasFitnessRequirements']
     #elif vocab_type == 3:
     #    column_list += ['controlled_value_string', 'skos_broader']
@@ -273,7 +273,7 @@ for term in termLists:
                 #row_list = [term_list['pref_ns_prefix'], term_list['pref_ns_uri'], row['term_localName'], row['label'], row['definition'], row['usage'], row['notes'], row['term_modified'], row['term_deprecated'], row['type']]
                 if vocab_type == 2:
                     row_list += [row['controlled_value_string']]
-                if term == "bdqval" :
+                if term == "bdquc" :
                     row_list += [row['hasFitnessRequirements']]
         #        elif vocab_type == 3:
         #            if row['skos_broader'] =='':
@@ -428,6 +428,7 @@ for term in termLists:
         ("owl", "http://www.w3.org/2002/07/owl#"),
         ("dc", "http://purl.org/dc/elements/1.1/"),
         ("bdqval", "https://rs.tdwg.org/bdqval/terms/"),
+        ("bdquc", "https://rs.tdwg.org/bdquc/terms/"),
         ("bdqdim", "https://rs.tdwg.org/bdqdim/terms/"),
         ("bdqenh", "https://rs.tdwg.org/bdqenh/terms/"),
         ("bdqcrit", "https://rs.tdwg.org/bdqcrit/terms/"),
@@ -549,7 +550,7 @@ for term in termLists:
                     rdf_type_expanded = expand_curie(rdf_type)
                     outputRdf += '     <rdf:type rdf:resource="{}"/>\n'.format(rdf_type_expanded)
             outputRdf += '     <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/{}/terms/{}"/>\n'.format(term,row['term_localName'])
-            if term == "bdqval" :
+            if term == "bdquc" :
                 if row['hasFitnessRequirements'] and row['hasFitnessRequirements'] != '' :
                     outputRdf += '     <bdqffdq:hasFitnessRequirements rdf:datatype="http://www.w3.org/2001/XMLSchema#string">{}</bdqffdq:hasFitnessRequirements>\n'.format(row['hasFitnessRequirements'])
             outputRdf += '</rdf:Description>\n'
@@ -614,7 +615,7 @@ for term in termLists:
             #text += '\t\t\t<td>' + row['definition'] + '</td>\n'
             text += '\t\t</tr>\n'
 
-            if term == 'bdqval' and row['hasFitnessRequirements'] and row['hasFitnessRequirements'] != '' :
+            if term == 'bdquc' and row['hasFitnessRequirements'] and row['hasFitnessRequirements'] != '' :
                text += '\t\t<tr>\n'
                text += '\t\t\t<td>Fitness requirements</td>\n'
                text += '\t\t\t<td>' + row['hasFitnessRequirements'] + '</td>\n'
@@ -677,7 +678,7 @@ for term in termLists:
             #        text += '\t\t</tr>\n'
 
             # If this is a use case look up the inculded tests and list them in the table
-            if term == "bdqval" and row.get("organized_in") == "bdqffdq:UseCase":
+            if term == "bdq":
                 use_case_localname = row["term_localName"]
                 labels = tests_for_use_case_curie(use_case_localname)
                 if labels:
@@ -689,6 +690,7 @@ for term in termLists:
                         links.append(f'<a href="../../terms/bdqtest/index.md#{lab}">{lab}</a>')
                     text += '\t\t\t<td>' + ", ".join(links) + '</td>\n'
                     text += '\t\t</tr>\n'
+                    #TODO: MultiRecord Tests
 
             text += '\t</tbody>\n'
             text += '</table>\n'
