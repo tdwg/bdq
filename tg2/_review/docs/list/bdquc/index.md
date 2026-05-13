@@ -69,7 +69,7 @@ Draft Standard for Review
 
 ### 1.1 Purpose (non-normative)
 
-The purpose of this document is to provide the full term list for the `bdquc:` controlled vocabulary, which supports the specification and use of BDQ Tests. The `bdquc:` vocabulary provides the 'Use Cases` defined as part of the BDQ Standard.
+The purpose of this document is to provide the full term list for the `bdquc:` controlled vocabulary for BDQ Use Cases within the BDQ standard, which support the specification and use of BDQ Tests.
 
 This term list defines the formal structure and meanings of these concepts and provides reference material for implementation and documentation purposes.
 
@@ -77,19 +77,17 @@ This term list defines the formal structure and meanings of these concepts and p
 
 TODO: Rework for just Use Cases
 
+This document is intended for users who need a precise understanding of the vocabulary elements used in the description of BDQ Use Cases. It will be useful for:
 
-This document is intended for technical users who need a precise understanding of the vocabulary elements used in BDQ Test `Specifications` and reports. It will be particularly useful for:
-
-- Implementers interpreting or extending BDQ Test logic
+- Implementers interpreting or extending BDQ Use Cases
 - Standards developers and data quality modelers working with BDQ vocabularies
-- Analysts and system designers configuring parameterized data quality assessments
-- Curators needing to understand the conceptual basis for different Test evaluations
+- Users who need to understand an potentially extend BDQ Use Cases, either inside or outside the BDQ standard
 
 Familiarity with RDF vocabularies and the Fitness For Use Framework is recommended for full comprehension, but the document is organized to be accessible for any reader needing detailed term definitions.
 
 ### 1.3 Data Quality Vocabulary Terms (non-normative)
 
-The `bdqval:` vocabulary covers one set of concepts used across the BDQ standard:
+The `bdquc:` vocabulary covers one set of concepts used across the BDQ standard:
 
 - **Use Cases** (`bdqffdq:UseCase`) – formal representations of the purposes for which data might be evaluated using BDQ Tests.
 
