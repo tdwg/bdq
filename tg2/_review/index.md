@@ -674,8 +674,10 @@ We have used the formatting recommended by Pensoft, see https://checklist.pensof
 <li>GBIF Secretariat (2023) GBIF Backbone Taxonomy. Checklist dataset. https://doi.org/10.15468/39omei</li>
 <li>Geomatic Solutions (2026) GeoRepository. https://epsg.org/about.html</li>
 <li>Getty Research Institute (2017) Getty Thesaurus of Geographic Names Online. https://www.getty.edu/research/tools/vocabularies/tgn/index.html</li>
+<li>Gill AM, Belbin L and Chippendale GM (1985). Phytogeography of EUCALYPTUS in Australia. Bureau of Flora and Fauna, Australian Flora and Fauna Series, 3. Canberra. 53p. ISBN: 0644040815.</li>
 <li>Google Maps Platform (2020) Reverse Geocoding API. https://developers.google.com/maps/documentation/javascript/examples/geocoding-reverse</li>
 <li>Groom Q, Desmet P, Reyserhove L, Adriaens T, Oldoni D, Vanderhoeven S, Baskauf SJ, Chapman A, McGeoch M, Walls R, Wieczorek J, Wilson JR.U, Zermoglio PFF, Simpson A (2019) Improving Darwin Core for research and management of alien species. Biodiversity Information Science and Standards 3: e38084. https://doi.org/10.3897/biss.3.38084</li>
+<li>Guisan A, Edwards TC and Hastie T (2002) Generalized linear and generalized additive models in studies of species distributions: setting the scene. Ecological Modelling 157, 89-100. https://doi.org/10.1016/S0304-3800(02)00204-9</li>
 <li>ISO (2019) ISO 8601-1:2019(en) Date and time — Representations for information interchange — Part 1: Basic rules. https://www.iso.org/obp/ui/</li>
 <li>ISO (n.dat) 3166 code search. https://www.iso.org/obp/ui/#search</li>
 <li>ISO (n.dat) 3166-1 alpha-2. https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2</li>
@@ -699,6 +701,7 @@ We have used the formatting recommended by Pensoft, see https://checklist.pensof
 <li>Natural Earth (2022) Admin 1 – States, provinces. v5.1.1 2022-05-12. https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/</li>
 <li>Natural Earth (2022) Natural Earth Free vector and raster map data at 1:10m, 1:50m, and 1:110m scales. v5.1.2. https://www.naturalearthdata.com/,  https://github.com/nvkelso/natural-earth-vector/releases/tag/v5.1.2.</li>
 <li>OBIS (2024) Ocean Biodiversity Information System (OBIS). https://obis.org</li>
+<li>Phillips, SJ, Anderson RP and Schapire RE (2006) Maximum entropy modeling of species geographic distributions. Ecological Modelling, 190(3-4), 231-259. https://doi.org/10.1016/j.ecolmodel.2005.03.026.</li>
 <li>ProgrammableWeb (2006) GeoNames API. https://www.programmableweb.com/api/geonames</li>
 <li>Rees ER, Nicholls M (2020) Suppl. material 2: Data Quality Use Case Study Result. https://biss.pensoft.net/article/download/suppl/5255738/</li>
 <li>Rees T (compiler) (2024) Interim Register of Marine and Nonmarine Genera (IRMNG) VLIZ, Belgium. https://www.irmng.org</li>
