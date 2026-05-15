@@ -69,7 +69,7 @@ Draft Standard for Review
 
 ### 1.1 Purpose (non-normative)
 
-The purpose of this document is to provide the full term list for the `bdqval:` controlled vocabulary, which supports the specification and use of BDQ Tests. The `bdqval:` vocabulary includes concepts used throughout the BDQ standard to describe parameters, data structures, source authorities, and special value cases relevant to the execution and behavior of Tests.
+The purpose of this document is to provide the full term list for the `bdqval:` controlled vocabulary, which supports the specification and use of BDQ Tests. The `bdqval:` vocabulary includes concepts used throughout the BDQ standard to describe Test parameters, data structures, Information Elements, source authorities, and special value cases such as Empty and NotEmpty relevant to the execution and behavior of Tests.
 
 This term list defines the formal structure and meanings of these concepts and provides reference material for implementation and documentation purposes.
 
