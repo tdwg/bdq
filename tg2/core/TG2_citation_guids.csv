@@ -48,3 +48,6 @@
 "http://rs.gbif.org/vocabulary/gbif/type_status","GBIF (2021) Darwin Core Vocabulary: Nomenclatural Type Status Vocabulary. http://rs.gbif.org/vocabulary/gbif/type_status"
 "https://doi.org/10.3897/biss.7.110728","Waller JT (2023) Processing Country Centroids at the Global Biodiversity Information Facility. Biodiversity Information Science and Standards 7: e110728. https://doi.org/10.3897/biss.7.110728"
 "https://doi.org/10.1371/journal.pone.0178731","Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017). A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731"
+"urn:uuid:e9d0f3c8-848c-409e-9af3-70425650a575","W3C (2017) Web Annotation Data Model. https://www.w3.org/TR/annotation-model/"
+"urn:uuid:71c9c3d1-fb9d-4774-8f31-63bc7a4ef49b","W3C (2017) Web Annotation Data Model: Annotation. https://www.w3.org/TR/annotation-vocab/#annotation"
+"urn:uuid:3c0146df-5ce2-4f35-a066-5cf14de8c79a","Biodiversity Information Standards (TDWG) (n.dat) Annotations Interest Group. https://www.tdwg.org/community/annotations/"

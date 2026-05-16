@@ -3887,6 +3887,14 @@ Including MultiRecord Measures
 			<td>References</td>
 			<td><ul><li>W3C (2017) Web Annotation Data Model. https://www.w3.org/TR/annotation-model/</li> <li>W3C (2017) Web Annotation Data Model: Annotation. https://www.w3.org/TR/annotation-vocab/#annotation</li> <li>Biodiversity Information Standards (TDWG) (n.dat) Annotations Interest Group. https://www.tdwg.org/community/annotations/</li> </ul></td>
 		</tr>
+		<tr>
+			<td>IssueMethod label</td>
+			<td>IssueMethod: ISSUE_ANNOTATION_NOTEMPTY with Specification Specification for: ISSUE_ANNOTATION_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: ISSUE_ANNOTATION_NOTEMPTY</td>
+		</tr>
 	</tbody>
 </table>
 <br>

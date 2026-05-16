@@ -18,6 +18,7 @@ import json       # library to convert JSON to Python data structures
 import pandas as pd  # library to handle data loaded from csv as data frames
 import yaml       # Library to parse yaml files
 import rdflib     # run sparql queries on rdf 
+from xml.sax.saxutils import escape # for escaping special characters in RDF literals
 from rdflib import Graph
 import function_lib # library of reusable functions for TDWG build scripts
 from function_lib import build_term_key, build_authors_contributors_markdown
@@ -536,8 +537,9 @@ for term in termLists:
             outputRdf += '     <rdfs:label xml:lang="en">{}</rdfs:label>\n'.format(row['label'])
             outputRdf += '     <skos:prefLabel xml:lang="en">{}</skos:prefLabel>\n'.format(row['prefLabel'])
             outputRdf += '     <skos:note xml:lang="en">{}</skos:note>\n'.format(row['comments'])
-            outputRdf += '     <rdfs:comment xml:lang="en">{}</rdfs:comment>\n'.format(row['definition'])
-            outputRdf += '     <skos:definition xml:lang="en">{}</skos:definition>\n'.format(row['definition'])
+            escaped_definition = escape(row['definition'])
+            outputRdf += '     <rdfs:comment xml:lang="en">{}</rdfs:comment>\n'.format(escaped_definition)
+            outputRdf += '     <skos:definition xml:lang="en">{}</skos:definition>\n'.format(escaped_definition)
             outputRdf += '     <rdf:value>{}</rdf:value>\n'.format(row['term_localName'])
             outputRdf += '     <skos:inScheme rdf:resource="https://rs.tdwg.org/{}/terms/"/>\n'.format(term)
             # row['rdf_type'] may be a single value like:

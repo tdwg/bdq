@@ -38,3 +38,4 @@
 "bdquc:Alien-Species","MeasurementPolicy","urn:uuid:89332ae7-a4d0-437a-9c15-b3cba92fb36d"
 "bdquc:SDM-Trees","MeasurementPolicy","urn:uuid:9949edb2-4376-40af-8e7b-41547bd6bbe9"
 "bdquc:Spatial-Temporal_patterns","MeasurementPolicy","urn:uuid:b40bd8e6-5b40-420c-85af-3e6ece2b5142"
+"bdquc:Taxon-Management","IssuePolicy","urn:uuid:966d36a1-f90b-4c0b-a7f7-ff3e8b547b7b"

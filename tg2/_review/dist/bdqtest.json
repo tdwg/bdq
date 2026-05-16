@@ -1294,6 +1294,281 @@
         ]
     },
     {
+        "@id": "https://rs.tdwg.org/bdqtest/terms/fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1-2024-09-17",
+        "@type": [
+            "https://rs.tdwg.org/bdqffdq/terms/Issue"
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasResourceType": [
+            {
+                "@id": "https://rs.tdwg.org/bdqffdq/terms/SingleRecord"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "While there is a W3C standard on 'web annotation', there is no TDWG recommendation on how this standard could be applied to annotating Darwin Core records. While implementation of this Test is currently problematic, TG2 considers annotations attached to any aspect of a Darwin Core record justifies this Test as a placeholder in the hope of future developments."
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension": [
+            {
+                "@id": "https://rs.tdwg.org/bdqdim/terms/Reliability"
+            }
+        ],
+        "http://purl.org/dc/terms/description": [
+            {
+                "@value": "Are there any annotations associated with the record?"
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasCriterion": [
+            {
+                "@id": "https://rs.tdwg.org/bdqcrit/terms/NotEmpty"
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasConsultedInformationElement": [
+            {
+                "@id": "urn:uuid:438e01ef-4b3d-4cf6-91a0-80c9e314ad73"
+            }
+        ],
+        "http://purl.org/dc/terms/issued": [
+            {
+                "@value": "2024-09-17",
+                "@type": "http://www.w3.org/2001/XMLSchema#date"
+            }
+        ],
+        "http://purl.org/dc/terms/references": [
+            {
+                "@id": "urn:uuid:e9d0f3c8-848c-409e-9af3-70425650a575"
+            },
+            {
+                "@id": "urn:uuid:71c9c3d1-fb9d-4774-8f31-63bc7a4ef49b"
+            },
+            {
+                "@id": "urn:uuid:3c0146df-5ce2-4f35-a066-5cf14de8c79a"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#historyNote": [
+            {
+                "@value": "https://github.com/tdwg/bdq/issues/29"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "ISSUE_ANNOTATION_NOTEMPTY"
+            }
+        ],
+        "http://purl.org/dc/terms/isVersionOf": [
+            {
+                "@id": "https://rs.tdwg.org/bdqtest/terms/fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Issue Annotation Not Empty for SingleRecord"
+            }
+        ]
+    },
+    {
+        "@id": "https://rs.tdwg.org/bdqffdq/terms/Issue",
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "https://rs.tdwg.org/bdqffdq/terms/DataQualityNeed"
+            }
+        ]
+    },
+    {
+        "@id": "https://rs.tdwg.org/bdqdim/terms/Reliability",
+        "@type": [
+            "https://rs.tdwg.org/bdqffdq/terms/DataQualityDimension"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "Reliability"
+            }
+        ]
+    },
+    {
+        "@id": "https://rs.tdwg.org/bdqcrit/terms/NotEmpty",
+        "@type": [
+            "https://rs.tdwg.org/bdqffdq/terms/Criterion"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "NotEmpty"
+            }
+        ]
+    },
+    {
+        "@id": "urn:uuid:438e01ef-4b3d-4cf6-91a0-80c9e314ad73",
+        "@type": [
+            "https://rs.tdwg.org/bdqffdq/terms/Consulted"
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/composedOf": [
+            {
+                "@id": "http://www.w3.org/ns/hasTarget"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "Information Element Consulted oa:hasTarget"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Information Element Consulted oa:hasTarget"
+            }
+        ]
+    },
+    {
+        "@id": "https://rs.tdwg.org/bdqffdq/terms/Consulted",
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "https://rs.tdwg.org/bdqffdq/terms/InformationElement"
+            }
+        ]
+    },
+    {
+        "@id": "urn:uuid:e9d0f3c8-848c-409e-9af3-70425650a575",
+        "@type": [
+            "http://purl.org/dc/terms/BibliographicResource"
+        ],
+        "http://purl.org/dc/terms/bibliographicCitation": [
+            {
+                "@value": "W3C (2017) Web Annotation Data Model. https://www.w3.org/TR/annotation-model/"
+            }
+        ]
+    },
+    {
+        "@id": "urn:uuid:71c9c3d1-fb9d-4774-8f31-63bc7a4ef49b",
+        "@type": [
+            "http://purl.org/dc/terms/BibliographicResource"
+        ],
+        "http://purl.org/dc/terms/bibliographicCitation": [
+            {
+                "@value": "W3C (2017) Web Annotation Data Model: Annotation. https://www.w3.org/TR/annotation-vocab/#annotation"
+            }
+        ]
+    },
+    {
+        "@id": "urn:uuid:3c0146df-5ce2-4f35-a066-5cf14de8c79a",
+        "@type": [
+            "http://purl.org/dc/terms/BibliographicResource"
+        ],
+        "http://purl.org/dc/terms/bibliographicCitation": [
+            {
+                "@value": "Biodiversity Information Standards (TDWG) (n.dat) Annotations Interest Group. https://www.tdwg.org/community/annotations/"
+            }
+        ]
+    },
+    {
+        "@id": "urn:uuid:0dacd2f5-591c-47c1-9d05-2de81675b6cc",
+        "@type": [
+            "https://rs.tdwg.org/bdqffdq/terms/IssueMethod"
+        ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Issue OTHER Test CORE"
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
+            {
+                "@id": "urn:uuid:1999e4e0-ce3a-46e3-b131-24412bd94bd1"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#historyNote": [
+            {
+                "@value": "Source: ALA, Lee Belbin"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "IssueMethod: ISSUE_ANNOTATION_NOTEMPTY with Specification Specification for: ISSUE_ANNOTATION_NOTEMPTY"
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/forIssue": [
+            {
+                "@id": "https://rs.tdwg.org/bdqtest/terms/fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1-2024-09-17"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "IssueMethod: ISSUE_ANNOTATION_NOTEMPTY with Specification Specification for: ISSUE_ANNOTATION_NOTEMPTY"
+            }
+        ]
+    },
+    {
+        "@id": "https://rs.tdwg.org/bdqffdq/terms/IssueMethod",
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+            {
+                "@id": "https://rs.tdwg.org/bdqffdq/terms/DataQualityMethod"
+            }
+        ]
+    },
+    {
+        "@id": "urn:uuid:1999e4e0-ce3a-46e3-b131-24412bd94bd1",
+        "@type": [
+            "https://rs.tdwg.org/bdqffdq/terms/Specification"
+        ],
+        "http://www.w3.org/2004/02/skos/core#example": [
+            {
+                "@value": "bdqval:annotationAlertIf=\"\": Response.status=RUN_HAS_RESULT, Response.result=NOT_ISSUE, Response.comment=\"bdqval:annotationAlertIf is bdqval:Empty\""
+            },
+            {
+                "@value": "bdqval:annotationAlertIf=\"?\": Response.status=RUN_HAS_RESULT, Response.result=POTENTIAL_ISSUE, Response.comment=\"bdqval:annotationAlertIf is bdqval:NotEmpty\""
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults": [
+            {
+                "@value": "bdqval:annotationSystem default = \"W3C Web Annotation\" {[https://www.w3.org/annotation/]} {\"oa:Annotation vocabulary\" [https://www.w3.org/TR/annotation-vocab/]},bdqval:annotationAlertIf default = \"oa:Annotation with oa:hasTarget having as object any dwciri:term instance that is part of the SingleRecord under Test.\" {[https://www.w3.org/TR/annotation-vocab/]}"
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse": [
+            {
+                "@value": "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:annotationSystem is not available; POTENTIAL_ISSUE if an annotation in the bdqval:annotationSystem exists and has an oa:hasTarget referencing the bdqffdq:SingleRecord under evaluation with matching bdqval:annotationAlertIf criteria; otherwise NOT_ISSUE."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "Specification for: ISSUE_ANNOTATION_NOTEMPTY"
+            }
+        ],
+        "http://purl.org/dc/terms/description": [
+            {
+                "@value": "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:annotationSystem is not available; POTENTIAL_ISSUE if an annotation in the bdqval:annotationSystem exists and has an oa:hasTarget referencing the bdqffdq:SingleRecord under evaluation with matching bdqval:annotationAlertIf criteria; otherwise NOT_ISSUE. bdqval:annotationSystem default = \"W3C Web Annotation\" {[https://www.w3.org/annotation/]} {\"oa:Annotation vocabulary\" [https://www.w3.org/TR/annotation-vocab/]},bdqval:annotationAlertIf default = \"oa:Annotation with oa:hasTarget having as object any dwciri:term instance that is part of the SingleRecord under Test.\" {[https://www.w3.org/TR/annotation-vocab/]}"
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasArgument": [
+            {
+                "@id": "urn:uuid:e58585e7-4935-424b-bccc-509a18c02b3b"
+            }
+        ]
+    },
+    {
+        "@id": "urn:uuid:e58585e7-4935-424b-bccc-509a18c02b3b",
+        "@type": [
+            "https://rs.tdwg.org/bdqffdq/terms/Argument"
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue": [
+            {
+                "@value": "W3C Web Annotation"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "Default value for bdqval:annotationSystem:\"W3C Web Annotation\""
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
+            {
+                "@id": "https://rs.tdwg.org/bdqval/terms/annotationSystem"
+            }
+        ]
+    },
+    {
+        "@id": "https://rs.tdwg.org/bdqval/terms/annotationSystem",
+        "@type": [
+            "https://rs.tdwg.org/bdqffdq/terms/Parameter"
+        ]
+    },
+    {
         "@id": "https://rs.tdwg.org/bdqtest/terms/0949110d-c06b-450e-9649-7c1374d940d1-2025-03-07",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Validation"
@@ -1534,17 +1809,6 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqdim/terms/Reliability",
-        "@type": [
-            "https://rs.tdwg.org/bdqffdq/terms/DataQualityDimension"
-        ],
-        "http://www.w3.org/2000/01/rdf-schema#label": [
-            {
-                "@value": "Reliability"
-            }
-        ]
-    },
-    {
         "@id": "urn:uuid:cccfdbf6-f3b5-4c1e-a7fa-e059a9c416cd",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Consulted"
@@ -1562,14 +1826,6 @@
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
             {
                 "@value": "Information Element Consulted bdqval:AllValidationTestsRunOnSingleRecord"
-            }
-        ]
-    },
-    {
-        "@id": "https://rs.tdwg.org/bdqffdq/terms/Consulted",
-        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-            {
-                "@id": "https://rs.tdwg.org/bdqffdq/terms/InformationElement"
             }
         ]
     },
@@ -1937,17 +2193,6 @@
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
             {
                 "@value": "Validation dwc:eventDate Not Empty for SingleRecord"
-            }
-        ]
-    },
-    {
-        "@id": "https://rs.tdwg.org/bdqcrit/terms/NotEmpty",
-        "@type": [
-            "https://rs.tdwg.org/bdqffdq/terms/Criterion"
-        ],
-        "http://www.w3.org/2000/01/rdf-schema#label": [
-            {
-                "@value": "NotEmpty"
             }
         ]
     },
@@ -7791,14 +8036,6 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqffdq/terms/Issue",
-        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-            {
-                "@id": "https://rs.tdwg.org/bdqffdq/terms/DataQualityNeed"
-            }
-        ]
-    },
-    {
         "@id": "https://rs.tdwg.org/bdqdim/terms/Resolution",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/DataQualityDimension"
@@ -7880,14 +8117,6 @@
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
             {
                 "@value": "IssueMethod: ISSUE_DATAGENERALIZATIONS_NOTEMPTY with Specification Specification for: ISSUE_DATAGENERALIZATIONS_NOTEMPTY"
-            }
-        ]
-    },
-    {
-        "@id": "https://rs.tdwg.org/bdqffdq/terms/IssueMethod",
-        "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-            {
-                "@id": "https://rs.tdwg.org/bdqffdq/terms/DataQualityMethod"
             }
         ]
     },
@@ -41938,12 +42167,15 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/includedInPolicy": [
             {
+                "@id": "https://rs.tdwg.org/bdqtest/terms/fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1-2024-09-17"
+            },
+            {
                 "@id": "https://rs.tdwg.org/bdqtest/terms/acc8dff2-d8d1-483a-946d-65a02a452700-2025-03-07"
             }
         ],
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
-                "@value": "IssuePolicy: (1) issues  in UseCase bdquc:Alien-Species"
+                "@value": "IssuePolicy: (2) issues  in UseCase bdquc:Alien-Species"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
@@ -41997,6 +42229,27 @@
         "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
             {
                 "@id": "https://rs.tdwg.org/bdquc/terms/Spatial-Temporal_Patterns"
+            }
+        ]
+    },
+    {
+        "@id": "urn:uuid:966d36a1-f90b-4c0b-a7f7-ff3e8b547b7b",
+        "@type": [
+            "https://rs.tdwg.org/bdqffdq/terms/IssuePolicy"
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/includedInPolicy": [
+            {
+                "@id": "https://rs.tdwg.org/bdqtest/terms/fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1-2024-09-17"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "IssuePolicy: (1) issues  in UseCase bdquc:Taxon-Management"
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
+            {
+                "@id": "https://rs.tdwg.org/bdquc/terms/Taxon-Management"
             }
         ]
     }
