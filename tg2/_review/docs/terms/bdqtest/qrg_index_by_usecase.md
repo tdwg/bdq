@@ -1,100 +1,5 @@
 # BDQ Test Index by Use Case (non-normative)
 This document is non-normative and part of the [BDQ Tests Quick Reference Guide](index.md).
-## bdquc:Taxon-Management
-A bdqffdq:UseCase that involves the nomenclatural audit, taxonomic verification, and systematic organization of taxon names and associated metadata to ensure identification stability and compliance with global taxonomic standards.
-
-Fitness Requirements: Data are fit for this use when when taxonomic information is sufficient to unambiguously resolve organism identity and position within a nomenclatural hierarchy. Taxon terms are sufficient to resolve the organism (or flag ambiguity), core name and rank terms (e.g., dwc:scientificName, dwc:taxonRank) are present and align with an appropriate bdqval:sourceAuthority, name strings are consistent with atomized name fields and identifiers or authorship, identification dates are valid and plausible, and key contextual metadata (e.g., dwc:basisOfRecord, and controlled fields such as dwc:typeStatus and dwc:sex where relevant) are usable.  <ul><li>Taxon can be resolved: Taxon terms are present and sufficient to support unambiguous resolution (dwc:scientificName, dwc:scientificNameAuthorship, dwc:scientificNameID).  </li><li>Names and ranks are authoritative: dwc:scientificName and required rank and classification terms are present, standardizable, and consistent with the bdqval:sourceAuthority.  </li><li>Name fields are consistent: dwc:scientificName agrees with atomized name fields; authorship is provided where needed.  </li><li>Identifiers are usable: Identifiers (e.g., dwc:scientificNameID) are present when available and correctly formed; dwc:taxonRank is present and valid.  </li><li>Identification timing is usable: dwc:dateIdentified is present when needed, ISO-valid, and temporally plausible (and consistent with dwc:eventDate when provided).  </li><li>Supporting context is usable: dwc:basisOfRecord and other relevant controlled and context fields are present and valid; basic space/time fields are in standard form where used to support curation decisions. </li></ul>
-
-VALIDATION_BASISOFRECORD_NOTEMPTY [Quick Reference Guide](index.md#VALIDATION_BASISOFRECORD_NOTEMPTY) [Term List](../../list/bdqtest/index.md#bdqtest_ac2b7648-d5f9-48ca-9b07-8ad5879a2536)
-
-VALIDATION_BASISOFRECORD_STANDARD [Quick Reference Guide](index.md#VALIDATION_BASISOFRECORD_STANDARD) [Term List](../../list/bdqtest/index.md#bdqtest_42408a00-bf71-4892-a399-4325e2bc1fb8)
-
-VALIDATION_DCTYPE_NOTEMPTY [Quick Reference Guide](index.md#VALIDATION_DCTYPE_NOTEMPTY) [Term List](../../list/bdqtest/index.md#bdqtest_374b091a-fc90-4791-91e5-c1557c649169)
-
-VALIDATION_DCTYPE_STANDARD [Quick Reference Guide](index.md#VALIDATION_DCTYPE_STANDARD) [Term List](../../list/bdqtest/index.md#bdqtest_cdaabb0d-a863-49d0-bc0f-738d771acba5)
-
-VALIDATION_DECIMALLATITUDE_INRANGE [Quick Reference Guide](index.md#VALIDATION_DECIMALLATITUDE_INRANGE) [Term List](../../list/bdqtest/index.md#bdqtest_b6ecda2a-ce36-437a-b515-3ae94948fe83)
-
-VALIDATION_DECIMALLATITUDE_NOTEMPTY [Quick Reference Guide](index.md#VALIDATION_DECIMALLATITUDE_NOTEMPTY) [Term List](../../list/bdqtest/index.md#bdqtest_7d2485d5-1ba7-4f25-90cb-f4480ff1a275)
-
-VALIDATION_DECIMALLONGITUDE_INRANGE [Quick Reference Guide](index.md#VALIDATION_DECIMALLONGITUDE_INRANGE) [Term List](../../list/bdqtest/index.md#bdqtest_0949110d-c06b-450e-9649-7c1374d940d1)
-
-VALIDATION_DECIMALLONGITUDE_NOTEMPTY [Quick Reference Guide](index.md#VALIDATION_DECIMALLONGITUDE_NOTEMPTY) [Term List](../../list/bdqtest/index.md#bdqtest_9beb9442-d942-4f42-8b6a-fcea01ee086a)
-
-VALIDATION_DATEIDENTIFIED_INRANGE [Quick Reference Guide](index.md#VALIDATION_DATEIDENTIFIED_INRANGE) [Term List](../../list/bdqtest/index.md#bdqtest_dc8aae4b-134f-4d75-8a71-c4186239178e)
-
-VALIDATION_DATEIDENTIFIED_STANDARD [Quick Reference Guide](index.md#VALIDATION_DATEIDENTIFIED_STANDARD) [Term List](../../list/bdqtest/index.md#bdqtest_66269bdd-9271-4e76-b25c-7ab81eebe1d8)
-
-VALIDATION_SEX_STANDARD [Quick Reference Guide](index.md#VALIDATION_SEX_STANDARD) [Term List](../../list/bdqtest/index.md#bdqtest_88d8598b-3318-483d-9475-a5acf9887404)
-
-VALIDATION_TYPESTATUS_STANDARD [Quick Reference Guide](index.md#VALIDATION_TYPESTATUS_STANDARD) [Term List](../../list/bdqtest/index.md#bdqtest_4833a522-12eb-4fe0-b4cf-7f7a337a6048)
-
-VALIDATION_CLASSIFICATION_CONSISTENT [Quick Reference Guide](index.md#VALIDATION_CLASSIFICATION_CONSISTENT) [Term List](../../list/bdqtest/index.md#bdqtest_2750c040-1d4a-4149-99fe-0512785f2d5f)
-
-VALIDATION_CLASS_FOUND [Quick Reference Guide](index.md#VALIDATION_CLASS_FOUND) [Term List](../../list/bdqtest/index.md#bdqtest_2cd6884e-3d14-4476-94f7-1191cfff309b)
-
-VALIDATION_FAMILY_FOUND [Quick Reference Guide](index.md#VALIDATION_FAMILY_FOUND) [Term List](../../list/bdqtest/index.md#bdqtest_3667556d-d8f5-454c-922b-af8af38f613c)
-
-VALIDATION_GENUS_FOUND [Quick Reference Guide](index.md#VALIDATION_GENUS_FOUND) [Term List](../../list/bdqtest/index.md#bdqtest_f2ce7d55-5b1d-426a-b00e-6d4efe3058ec)
-
-VALIDATION_KINGDOM_FOUND [Quick Reference Guide](index.md#VALIDATION_KINGDOM_FOUND) [Term List](../../list/bdqtest/index.md#bdqtest_125b5493-052d-4a0d-a3e1-ed5bf792689e)
-
-VALIDATION_KINGDOM_NOTEMPTY [Quick Reference Guide](index.md#VALIDATION_KINGDOM_NOTEMPTY) [Term List](../../list/bdqtest/index.md#bdqtest_36ed36c9-b1a7-40b2-b5e2-0d012e772098)
-
-VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY [Quick Reference Guide](index.md#VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY) [Term List](../../list/bdqtest/index.md#bdqtest_ff59f77d-71e9-4eb1-aac9-8bd05c50ff70)
-
-VALIDATION_ORDER_FOUND [Quick Reference Guide](index.md#VALIDATION_ORDER_FOUND) [Term List](../../list/bdqtest/index.md#bdqtest_81cc974d-43cc-4c0f-a5e0-afa23b455aa3)
-
-VALIDATION_PHYLUM_FOUND [Quick Reference Guide](index.md#VALIDATION_PHYLUM_FOUND) [Term List](../../list/bdqtest/index.md#bdqtest_eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f)
-
-VALIDATION_POLYNOMIAL_CONSISTENT [Quick Reference Guide](index.md#VALIDATION_POLYNOMIAL_CONSISTENT) [Term List](../../list/bdqtest/index.md#bdqtest_17f03f1f-f74d-40c0-8071-2927cfc9487b)
-
-VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY [Quick Reference Guide](index.md#VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY) [Term List](../../list/bdqtest/index.md#bdqtest_49f1d386-5bed-43ae-bd43-deabf7df64fc)
-
-VALIDATION_SCIENTIFICNAMEID_COMPLETE [Quick Reference Guide](index.md#VALIDATION_SCIENTIFICNAMEID_COMPLETE) [Term List](../../list/bdqtest/index.md#bdqtest_6eeac3ed-f691-457f-a42e-eaa9c8a71ce8)
-
-VALIDATION_SCIENTIFICNAMEID_NOTEMPTY [Quick Reference Guide](index.md#VALIDATION_SCIENTIFICNAMEID_NOTEMPTY) [Term List](../../list/bdqtest/index.md#bdqtest_401bf207-9a55-4dff-88a5-abcd58ad97fa)
-
-VALIDATION_SCIENTIFICNAME_FOUND [Quick Reference Guide](index.md#VALIDATION_SCIENTIFICNAME_FOUND) [Term List](../../list/bdqtest/index.md#bdqtest_3f335517-f442-4b98-b149-1e87ff16de45)
-
-VALIDATION_SCIENTIFICNAME_NOTEMPTY [Quick Reference Guide](index.md#VALIDATION_SCIENTIFICNAME_NOTEMPTY) [Term List](../../list/bdqtest/index.md#bdqtest_7c4b9498-a8d9-4ebb-85f1-9f200c788595)
-
-VALIDATION_TAXONRANK_NOTEMPTY [Quick Reference Guide](index.md#VALIDATION_TAXONRANK_NOTEMPTY) [Term List](../../list/bdqtest/index.md#bdqtest_14da5b87-8304-4b2b-911d-117e3c29e890)
-
-VALIDATION_TAXONRANK_STANDARD [Quick Reference Guide](index.md#VALIDATION_TAXONRANK_STANDARD) [Term List](../../list/bdqtest/index.md#bdqtest_7bdb13a4-8a51-4ee5-be7f-20693fdb183e)
-
-VALIDATION_TAXON_NOTEMPTY [Quick Reference Guide](index.md#VALIDATION_TAXON_NOTEMPTY) [Term List](../../list/bdqtest/index.md#bdqtest_06851339-843f-4a43-8422-4e61b9a00e75)
-
-VALIDATION_TAXON_UNAMBIGUOUS [Quick Reference Guide](index.md#VALIDATION_TAXON_UNAMBIGUOUS) [Term List](../../list/bdqtest/index.md#bdqtest_4c09f127-737b-4686-82a0-7c8e30841590)
-
-MEASURE_AMENDMENTS_PROPOSED [Quick Reference Guide](index.md#MEASURE_AMENDMENTS_PROPOSED) [Term List](../../list/bdqtest/index.md#bdqtest_03049fe5-a575-404f-b564-ae63f5a1cf8b)
-
-MEASURE_VALIDATIONTESTS_COMPLIANT [Quick Reference Guide](index.md#MEASURE_VALIDATIONTESTS_COMPLIANT) [Term List](../../list/bdqtest/index.md#bdqtest_45fb49eb-4a1b-4b49-876f-15d5034dfc73)
-
-MEASURE_VALIDATIONTESTS_NOTCOMPLIANT [Quick Reference Guide](index.md#MEASURE_VALIDATIONTESTS_NOTCOMPLIANT) [Term List](../../list/bdqtest/index.md#bdqtest_453844ae-9df4-439f-8e24-c52498eca84a)
-
-MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET [Quick Reference Guide](index.md#MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET) [Term List](../../list/bdqtest/index.md#bdqtest_49a94636-a562-4e6b-803c-665c80628a3d)
-
-ISSUE_ANNOTATION_NOTEMPTY [Quick Reference Guide](index.md#ISSUE_ANNOTATION_NOTEMPTY) [Term List](../../list/bdqtest/index.md#bdqtest_fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1)
-
-AMENDMENT_BASISOFRECORD_STANDARDIZED [Quick Reference Guide](index.md#AMENDMENT_BASISOFRECORD_STANDARDIZED) [Term List](../../list/bdqtest/index.md#bdqtest_07c28ace-561a-476e-a9b9-3d5ad6e35933)
-
-AMENDMENT_DCTYPE_STANDARDIZED [Quick Reference Guide](index.md#AMENDMENT_DCTYPE_STANDARDIZED) [Term List](../../list/bdqtest/index.md#bdqtest_bd385eeb-44a2-464b-a503-7abe407ef904)
-
-AMENDMENT_DATEIDENTIFIED_STANDARDIZED [Quick Reference Guide](index.md#AMENDMENT_DATEIDENTIFIED_STANDARDIZED) [Term List](../../list/bdqtest/index.md#bdqtest_39bb2280-1215-447b-9221-fd13bc990641)
-
-AMENDMENT_SEX_STANDARDIZED [Quick Reference Guide](index.md#AMENDMENT_SEX_STANDARDIZED) [Term List](../../list/bdqtest/index.md#bdqtest_33c45ae1-e2db-462a-a59e-7169bb01c5d6)
-
-AMENDMENT_TYPESTATUS_STANDARDIZED [Quick Reference Guide](index.md#AMENDMENT_TYPESTATUS_STANDARDIZED) [Term List](../../list/bdqtest/index.md#bdqtest_b3471c65-b53e-453b-8282-abfa27bf1805)
-
-AMENDMENT_SCIENTIFICNAMEID_FROM_TAXON [Quick Reference Guide](index.md#AMENDMENT_SCIENTIFICNAMEID_FROM_TAXON) [Term List](../../list/bdqtest/index.md#bdqtest_431467d6-9b4b-48fa-a197-cd5379f5e889)
-
-AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID [Quick Reference Guide](index.md#AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID) [Term List](../../list/bdqtest/index.md#bdqtest_f01fb3f9-2f7e-418b-9f51-adf50f202aea)
-
-AMENDMENT_TAXONRANK_STANDARDIZED [Quick Reference Guide](index.md#AMENDMENT_TAXONRANK_STANDARDIZED) [Term List](../../list/bdqtest/index.md#bdqtest_e39098df-ef46-464c-9aef-bcdeee2a88cb)
-
-
-
 ## bdquc:Alien-Species
 A bdqffdq:UseCase that involves the identification and analysis of whether the occurrence of a taxon is native to a location or not, how it got there and to what extent the taxon has become a permanent feature of the location in order to improve the management and reduce the spread of alien species.
 
@@ -185,6 +90,59 @@ AMENDMENT_PATHWAY_STANDARDIZED [Quick Reference Guide](index.md#AMENDMENT_PATHWA
 AMENDMENT_SEX_STANDARDIZED [Quick Reference Guide](index.md#AMENDMENT_SEX_STANDARDIZED) [Term List](../../list/bdqtest/index.md#bdqtest_33c45ae1-e2db-462a-a59e-7169bb01c5d6)
 
 AMENDMENT_TYPESTATUS_STANDARDIZED [Quick Reference Guide](index.md#AMENDMENT_TYPESTATUS_STANDARDIZED) [Term List](../../list/bdqtest/index.md#bdqtest_b3471c65-b53e-453b-8282-abfa27bf1805)
+
+AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID [Quick Reference Guide](index.md#AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID) [Term List](../../list/bdqtest/index.md#bdqtest_f01fb3f9-2f7e-418b-9f51-adf50f202aea)
+
+
+
+## bdquc:SDM-Trees
+A bdqffdq:UseCase for improving the quality of, and selecting dwc:Occurrence records suitable for predicting the spatial distribution of tree species. This Use Case filters for occurrence records that meet criteria for a known species at a known location and date.  Records can be further filtered to meet the requirements of the predictive modeling of specific tree species distributions (e.g., Eucalypts) using high-precision occurrence data and environmental variables to evaluate modeling methodologies and refine expert distribution envelopes. 
+
+Fitness Requirements: Data are fit for the use case bdquc:Species-Distribution-Modeling-Trees when records have valid:  <ul><li>dwc:scientificName identified to species level.  </li><li>dwc:basisOfRecord = "Occurrence".   </li><li>dwc:occurrenceStatus = "present".  </li><li>dwc:decimalLatitude and dwc:decimalLongitude.  </li><li>dwc:coordinateUncertaintyInMeters less than 500.  </li><li>dwc:dataGeneralizations = bdqval:empty.  </li><li>dwc:year or dwc:eventDate within provided temporal limits. </li></ul>
+
+VALIDATION_BASISOFRECORD_NOTEMPTY [Quick Reference Guide](index.md#VALIDATION_BASISOFRECORD_NOTEMPTY) [Term List](../../list/bdqtest/index.md#bdqtest_ac2b7648-d5f9-48ca-9b07-8ad5879a2536)
+
+VALIDATION_BASISOFRECORD_STANDARD [Quick Reference Guide](index.md#VALIDATION_BASISOFRECORD_STANDARD) [Term List](../../list/bdqtest/index.md#bdqtest_42408a00-bf71-4892-a399-4325e2bc1fb8)
+
+VALIDATION_LICENSE_NOTEMPTY [Quick Reference Guide](index.md#VALIDATION_LICENSE_NOTEMPTY) [Term List](../../list/bdqtest/index.md#bdqtest_15f78619-811a-4c6f-997a-a4c7888ad849)
+
+VALIDATION_LICENSE_STANDARD [Quick Reference Guide](index.md#VALIDATION_LICENSE_STANDARD) [Term List](../../list/bdqtest/index.md#bdqtest_3136236e-04b6-49ea-8b34-a65f25e3aba1)
+
+VALIDATION_COORDINATEUNCERTAINTY_INRANGE [Quick Reference Guide](index.md#VALIDATION_COORDINATEUNCERTAINTY_INRANGE) [Term List](../../list/bdqtest/index.md#bdqtest_c6adf2ea-3051-4498-97f4-4b2f8a105f57)
+
+VALIDATION_DECIMALLATITUDE_INRANGE [Quick Reference Guide](index.md#VALIDATION_DECIMALLATITUDE_INRANGE) [Term List](../../list/bdqtest/index.md#bdqtest_b6ecda2a-ce36-437a-b515-3ae94948fe83)
+
+VALIDATION_DECIMALLATITUDE_NOTEMPTY [Quick Reference Guide](index.md#VALIDATION_DECIMALLATITUDE_NOTEMPTY) [Term List](../../list/bdqtest/index.md#bdqtest_7d2485d5-1ba7-4f25-90cb-f4480ff1a275)
+
+VALIDATION_DECIMALLONGITUDE_INRANGE [Quick Reference Guide](index.md#VALIDATION_DECIMALLONGITUDE_INRANGE) [Term List](../../list/bdqtest/index.md#bdqtest_0949110d-c06b-450e-9649-7c1374d940d1)
+
+VALIDATION_DECIMALLONGITUDE_NOTEMPTY [Quick Reference Guide](index.md#VALIDATION_DECIMALLONGITUDE_NOTEMPTY) [Term List](../../list/bdqtest/index.md#bdqtest_9beb9442-d942-4f42-8b6a-fcea01ee086a)
+
+VALIDATION_EVENTDATE_NOTEMPTY [Quick Reference Guide](index.md#VALIDATION_EVENTDATE_NOTEMPTY) [Term List](../../list/bdqtest/index.md#bdqtest_f51e15a6-a67d-4729-9c28-3766299d2985)
+
+VALIDATION_EVENTDATE_STANDARD [Quick Reference Guide](index.md#VALIDATION_EVENTDATE_STANDARD) [Term List](../../list/bdqtest/index.md#bdqtest_4f2bf8fd-fc5c-493f-a44c-e7b16153c803)
+
+VALIDATION_YEAR_INRANGE [Quick Reference Guide](index.md#VALIDATION_YEAR_INRANGE) [Term List](../../list/bdqtest/index.md#bdqtest_ad0c8855-de69-4843-a80c-a5387d20fbc8)
+
+VALIDATION_YEAR_NOTEMPTY [Quick Reference Guide](index.md#VALIDATION_YEAR_NOTEMPTY) [Term List](../../list/bdqtest/index.md#bdqtest_c09ecbf9-34e3-4f3e-b74a-8796af15e59f)
+
+VALIDATION_OCCURRENCESTATUS_NOTEMPTY [Quick Reference Guide](index.md#VALIDATION_OCCURRENCESTATUS_NOTEMPTY) [Term List](../../list/bdqtest/index.md#bdqtest_eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf)
+
+VALIDATION_OCCURRENCESTATUS_STANDARD [Quick Reference Guide](index.md#VALIDATION_OCCURRENCESTATUS_STANDARD) [Term List](../../list/bdqtest/index.md#bdqtest_7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47)
+
+VALIDATION_SCIENTIFICNAME_FOUND [Quick Reference Guide](index.md#VALIDATION_SCIENTIFICNAME_FOUND) [Term List](../../list/bdqtest/index.md#bdqtest_3f335517-f442-4b98-b149-1e87ff16de45)
+
+VALIDATION_SCIENTIFICNAME_NOTEMPTY [Quick Reference Guide](index.md#VALIDATION_SCIENTIFICNAME_NOTEMPTY) [Term List](../../list/bdqtest/index.md#bdqtest_7c4b9498-a8d9-4ebb-85f1-9f200c788595)
+
+ISSUE_DATAGENERALIZATIONS_NOTEMPTY [Quick Reference Guide](index.md#ISSUE_DATAGENERALIZATIONS_NOTEMPTY) [Term List](../../list/bdqtest/index.md#bdqtest_13d5a10e-188e-40fd-a22c-dbaa87b91df2)
+
+AMENDMENT_BASISOFRECORD_STANDARDIZED [Quick Reference Guide](index.md#AMENDMENT_BASISOFRECORD_STANDARDIZED) [Term List](../../list/bdqtest/index.md#bdqtest_07c28ace-561a-476e-a9b9-3d5ad6e35933)
+
+AMENDMENT_LICENSE_STANDARDIZED [Quick Reference Guide](index.md#AMENDMENT_LICENSE_STANDARDIZED) [Term List](../../list/bdqtest/index.md#bdqtest_dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8)
+
+AMENDMENT_EVENTDATE_STANDARDIZED [Quick Reference Guide](index.md#AMENDMENT_EVENTDATE_STANDARDIZED) [Term List](../../list/bdqtest/index.md#bdqtest_718dfc3c-cb52-4fca-b8e2-0e722f375da7)
+
+AMENDMENT_EVENT_FROM_EVENTDATE [Quick Reference Guide](index.md#AMENDMENT_EVENT_FROM_EVENTDATE) [Term List](../../list/bdqtest/index.md#bdqtest_710fe118-17e1-440f-b428-88ba3f547d6d)
 
 AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID [Quick Reference Guide](index.md#AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID) [Term List](../../list/bdqtest/index.md#bdqtest_f01fb3f9-2f7e-418b-9f51-adf50f202aea)
 
@@ -357,56 +315,64 @@ AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID [Quick Reference Guide](index.md#
 
 
 
-## bdquc:SDM-Trees
-A bdqffdq:UseCase for improving the quality of, and selecting dwc:Occurrence records suitable for predicting the spatial distribution of tree species. This Use Case filters for occurrence records that meet criteria for a known species at a known location and date.  Records can be further filtered to meet the requirements of the predictive modeling of specific tree species distributions (e.g., Eucalypts) using high-precision occurrence data and environmental variables to evaluate modeling methodologies and refine expert distribution envelopes. 
+## bdquc:Taxon-Management
+A bdqffdq:UseCase that involves the nomenclatural audit, taxonomic verification, and systematic organization of taxon names and associated metadata to ensure identification stability and compliance with global taxonomic standards.
 
-Fitness Requirements: Data are fit for the use case bdquc:Species-Distribution-Modeling-Trees when records have valid:  <ul><li>dwc:scientificName identified to species level.  </li><li>dwc:basisOfRecord = "Occurrence".   </li><li>dwc:occurrenceStatus = "present".  </li><li>dwc:decimalLatitude and dwc:decimalLongitude.  </li><li>dwc:coordinateUncertaintyInMeters less than 500.  </li><li>dwc:dataGeneralizations = bdqval:empty.  </li><li>dwc:year or dwc:eventDate within provided temporal limits. </li></ul>
+Fitness Requirements: Data are fit for this use when when taxonomic information is sufficient to unambiguously determine which taxon is being referenced and to position it within a nomenclatural hierarchy. Taxon terms are sufficient to resolve an organism they may be applied to (or flag ambiguity), core name and rank terms (e.g., dwc:scientificName, dwc:taxonRank) are present and align with an appropriate bdqval:sourceAuthority, name strings are consistent with atomized name fields and identifiers or authorship. <ul><li>Taxon can be resolved: Taxon terms are present and sufficient to support unambiguous resolution (dwc:scientificName, dwc:scientificNameAuthorship, dwc:scientificNameID).  </li><li>Names and ranks are authoritative: dwc:scientificName and required rank and classification terms are present, standardizable, and consistent with the bdqval:sourceAuthority.  </li><li>Name fields are consistent: dwc:scientificName agrees with atomized name fields; authorship is provided where needed.  </li><li>Identifiers are usable: Identifiers (e.g., dwc:scientificNameID) are present when available and correctly formed; dwc:taxonRank is present and valid.  </li></ul>
 
-VALIDATION_BASISOFRECORD_NOTEMPTY [Quick Reference Guide](index.md#VALIDATION_BASISOFRECORD_NOTEMPTY) [Term List](../../list/bdqtest/index.md#bdqtest_ac2b7648-d5f9-48ca-9b07-8ad5879a2536)
+VALIDATION_CLASSIFICATION_CONSISTENT [Quick Reference Guide](index.md#VALIDATION_CLASSIFICATION_CONSISTENT) [Term List](../../list/bdqtest/index.md#bdqtest_2750c040-1d4a-4149-99fe-0512785f2d5f)
 
-VALIDATION_BASISOFRECORD_STANDARD [Quick Reference Guide](index.md#VALIDATION_BASISOFRECORD_STANDARD) [Term List](../../list/bdqtest/index.md#bdqtest_42408a00-bf71-4892-a399-4325e2bc1fb8)
+VALIDATION_CLASS_FOUND [Quick Reference Guide](index.md#VALIDATION_CLASS_FOUND) [Term List](../../list/bdqtest/index.md#bdqtest_2cd6884e-3d14-4476-94f7-1191cfff309b)
 
-VALIDATION_LICENSE_NOTEMPTY [Quick Reference Guide](index.md#VALIDATION_LICENSE_NOTEMPTY) [Term List](../../list/bdqtest/index.md#bdqtest_15f78619-811a-4c6f-997a-a4c7888ad849)
+VALIDATION_FAMILY_FOUND [Quick Reference Guide](index.md#VALIDATION_FAMILY_FOUND) [Term List](../../list/bdqtest/index.md#bdqtest_3667556d-d8f5-454c-922b-af8af38f613c)
 
-VALIDATION_LICENSE_STANDARD [Quick Reference Guide](index.md#VALIDATION_LICENSE_STANDARD) [Term List](../../list/bdqtest/index.md#bdqtest_3136236e-04b6-49ea-8b34-a65f25e3aba1)
+VALIDATION_GENUS_FOUND [Quick Reference Guide](index.md#VALIDATION_GENUS_FOUND) [Term List](../../list/bdqtest/index.md#bdqtest_f2ce7d55-5b1d-426a-b00e-6d4efe3058ec)
 
-VALIDATION_COORDINATEUNCERTAINTY_INRANGE [Quick Reference Guide](index.md#VALIDATION_COORDINATEUNCERTAINTY_INRANGE) [Term List](../../list/bdqtest/index.md#bdqtest_c6adf2ea-3051-4498-97f4-4b2f8a105f57)
+VALIDATION_KINGDOM_FOUND [Quick Reference Guide](index.md#VALIDATION_KINGDOM_FOUND) [Term List](../../list/bdqtest/index.md#bdqtest_125b5493-052d-4a0d-a3e1-ed5bf792689e)
 
-VALIDATION_DECIMALLATITUDE_INRANGE [Quick Reference Guide](index.md#VALIDATION_DECIMALLATITUDE_INRANGE) [Term List](../../list/bdqtest/index.md#bdqtest_b6ecda2a-ce36-437a-b515-3ae94948fe83)
+VALIDATION_KINGDOM_NOTEMPTY [Quick Reference Guide](index.md#VALIDATION_KINGDOM_NOTEMPTY) [Term List](../../list/bdqtest/index.md#bdqtest_36ed36c9-b1a7-40b2-b5e2-0d012e772098)
 
-VALIDATION_DECIMALLATITUDE_NOTEMPTY [Quick Reference Guide](index.md#VALIDATION_DECIMALLATITUDE_NOTEMPTY) [Term List](../../list/bdqtest/index.md#bdqtest_7d2485d5-1ba7-4f25-90cb-f4480ff1a275)
+VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY [Quick Reference Guide](index.md#VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY) [Term List](../../list/bdqtest/index.md#bdqtest_ff59f77d-71e9-4eb1-aac9-8bd05c50ff70)
 
-VALIDATION_DECIMALLONGITUDE_INRANGE [Quick Reference Guide](index.md#VALIDATION_DECIMALLONGITUDE_INRANGE) [Term List](../../list/bdqtest/index.md#bdqtest_0949110d-c06b-450e-9649-7c1374d940d1)
+VALIDATION_ORDER_FOUND [Quick Reference Guide](index.md#VALIDATION_ORDER_FOUND) [Term List](../../list/bdqtest/index.md#bdqtest_81cc974d-43cc-4c0f-a5e0-afa23b455aa3)
 
-VALIDATION_DECIMALLONGITUDE_NOTEMPTY [Quick Reference Guide](index.md#VALIDATION_DECIMALLONGITUDE_NOTEMPTY) [Term List](../../list/bdqtest/index.md#bdqtest_9beb9442-d942-4f42-8b6a-fcea01ee086a)
+VALIDATION_PHYLUM_FOUND [Quick Reference Guide](index.md#VALIDATION_PHYLUM_FOUND) [Term List](../../list/bdqtest/index.md#bdqtest_eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f)
 
-VALIDATION_EVENTDATE_NOTEMPTY [Quick Reference Guide](index.md#VALIDATION_EVENTDATE_NOTEMPTY) [Term List](../../list/bdqtest/index.md#bdqtest_f51e15a6-a67d-4729-9c28-3766299d2985)
+VALIDATION_POLYNOMIAL_CONSISTENT [Quick Reference Guide](index.md#VALIDATION_POLYNOMIAL_CONSISTENT) [Term List](../../list/bdqtest/index.md#bdqtest_17f03f1f-f74d-40c0-8071-2927cfc9487b)
 
-VALIDATION_EVENTDATE_STANDARD [Quick Reference Guide](index.md#VALIDATION_EVENTDATE_STANDARD) [Term List](../../list/bdqtest/index.md#bdqtest_4f2bf8fd-fc5c-493f-a44c-e7b16153c803)
+VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY [Quick Reference Guide](index.md#VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY) [Term List](../../list/bdqtest/index.md#bdqtest_49f1d386-5bed-43ae-bd43-deabf7df64fc)
 
-VALIDATION_YEAR_INRANGE [Quick Reference Guide](index.md#VALIDATION_YEAR_INRANGE) [Term List](../../list/bdqtest/index.md#bdqtest_ad0c8855-de69-4843-a80c-a5387d20fbc8)
+VALIDATION_SCIENTIFICNAMEID_COMPLETE [Quick Reference Guide](index.md#VALIDATION_SCIENTIFICNAMEID_COMPLETE) [Term List](../../list/bdqtest/index.md#bdqtest_6eeac3ed-f691-457f-a42e-eaa9c8a71ce8)
 
-VALIDATION_YEAR_NOTEMPTY [Quick Reference Guide](index.md#VALIDATION_YEAR_NOTEMPTY) [Term List](../../list/bdqtest/index.md#bdqtest_c09ecbf9-34e3-4f3e-b74a-8796af15e59f)
-
-VALIDATION_OCCURRENCESTATUS_NOTEMPTY [Quick Reference Guide](index.md#VALIDATION_OCCURRENCESTATUS_NOTEMPTY) [Term List](../../list/bdqtest/index.md#bdqtest_eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf)
-
-VALIDATION_OCCURRENCESTATUS_STANDARD [Quick Reference Guide](index.md#VALIDATION_OCCURRENCESTATUS_STANDARD) [Term List](../../list/bdqtest/index.md#bdqtest_7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47)
+VALIDATION_SCIENTIFICNAMEID_NOTEMPTY [Quick Reference Guide](index.md#VALIDATION_SCIENTIFICNAMEID_NOTEMPTY) [Term List](../../list/bdqtest/index.md#bdqtest_401bf207-9a55-4dff-88a5-abcd58ad97fa)
 
 VALIDATION_SCIENTIFICNAME_FOUND [Quick Reference Guide](index.md#VALIDATION_SCIENTIFICNAME_FOUND) [Term List](../../list/bdqtest/index.md#bdqtest_3f335517-f442-4b98-b149-1e87ff16de45)
 
 VALIDATION_SCIENTIFICNAME_NOTEMPTY [Quick Reference Guide](index.md#VALIDATION_SCIENTIFICNAME_NOTEMPTY) [Term List](../../list/bdqtest/index.md#bdqtest_7c4b9498-a8d9-4ebb-85f1-9f200c788595)
 
-ISSUE_DATAGENERALIZATIONS_NOTEMPTY [Quick Reference Guide](index.md#ISSUE_DATAGENERALIZATIONS_NOTEMPTY) [Term List](../../list/bdqtest/index.md#bdqtest_13d5a10e-188e-40fd-a22c-dbaa87b91df2)
+VALIDATION_TAXONRANK_NOTEMPTY [Quick Reference Guide](index.md#VALIDATION_TAXONRANK_NOTEMPTY) [Term List](../../list/bdqtest/index.md#bdqtest_14da5b87-8304-4b2b-911d-117e3c29e890)
 
-AMENDMENT_BASISOFRECORD_STANDARDIZED [Quick Reference Guide](index.md#AMENDMENT_BASISOFRECORD_STANDARDIZED) [Term List](../../list/bdqtest/index.md#bdqtest_07c28ace-561a-476e-a9b9-3d5ad6e35933)
+VALIDATION_TAXONRANK_STANDARD [Quick Reference Guide](index.md#VALIDATION_TAXONRANK_STANDARD) [Term List](../../list/bdqtest/index.md#bdqtest_7bdb13a4-8a51-4ee5-be7f-20693fdb183e)
 
-AMENDMENT_LICENSE_STANDARDIZED [Quick Reference Guide](index.md#AMENDMENT_LICENSE_STANDARDIZED) [Term List](../../list/bdqtest/index.md#bdqtest_dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8)
+VALIDATION_TAXON_NOTEMPTY [Quick Reference Guide](index.md#VALIDATION_TAXON_NOTEMPTY) [Term List](../../list/bdqtest/index.md#bdqtest_06851339-843f-4a43-8422-4e61b9a00e75)
 
-AMENDMENT_EVENTDATE_STANDARDIZED [Quick Reference Guide](index.md#AMENDMENT_EVENTDATE_STANDARDIZED) [Term List](../../list/bdqtest/index.md#bdqtest_718dfc3c-cb52-4fca-b8e2-0e722f375da7)
+VALIDATION_TAXON_UNAMBIGUOUS [Quick Reference Guide](index.md#VALIDATION_TAXON_UNAMBIGUOUS) [Term List](../../list/bdqtest/index.md#bdqtest_4c09f127-737b-4686-82a0-7c8e30841590)
 
-AMENDMENT_EVENT_FROM_EVENTDATE [Quick Reference Guide](index.md#AMENDMENT_EVENT_FROM_EVENTDATE) [Term List](../../list/bdqtest/index.md#bdqtest_710fe118-17e1-440f-b428-88ba3f547d6d)
+MEASURE_AMENDMENTS_PROPOSED [Quick Reference Guide](index.md#MEASURE_AMENDMENTS_PROPOSED) [Term List](../../list/bdqtest/index.md#bdqtest_03049fe5-a575-404f-b564-ae63f5a1cf8b)
+
+MEASURE_VALIDATIONTESTS_COMPLIANT [Quick Reference Guide](index.md#MEASURE_VALIDATIONTESTS_COMPLIANT) [Term List](../../list/bdqtest/index.md#bdqtest_45fb49eb-4a1b-4b49-876f-15d5034dfc73)
+
+MEASURE_VALIDATIONTESTS_NOTCOMPLIANT [Quick Reference Guide](index.md#MEASURE_VALIDATIONTESTS_NOTCOMPLIANT) [Term List](../../list/bdqtest/index.md#bdqtest_453844ae-9df4-439f-8e24-c52498eca84a)
+
+MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET [Quick Reference Guide](index.md#MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET) [Term List](../../list/bdqtest/index.md#bdqtest_49a94636-a562-4e6b-803c-665c80628a3d)
+
+ISSUE_ANNOTATION_NOTEMPTY [Quick Reference Guide](index.md#ISSUE_ANNOTATION_NOTEMPTY) [Term List](../../list/bdqtest/index.md#bdqtest_fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1)
+
+AMENDMENT_SCIENTIFICNAMEID_FROM_TAXON [Quick Reference Guide](index.md#AMENDMENT_SCIENTIFICNAMEID_FROM_TAXON) [Term List](../../list/bdqtest/index.md#bdqtest_431467d6-9b4b-48fa-a197-cd5379f5e889)
 
 AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID [Quick Reference Guide](index.md#AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID) [Term List](../../list/bdqtest/index.md#bdqtest_f01fb3f9-2f7e-418b-9f51-adf50f202aea)
+
+AMENDMENT_TAXONRANK_STANDARDIZED [Quick Reference Guide](index.md#AMENDMENT_TAXONRANK_STANDARDIZED) [Term List](../../list/bdqtest/index.md#bdqtest_e39098df-ef46-464c-9aef-bcdeee2a88cb)
 
 
 
