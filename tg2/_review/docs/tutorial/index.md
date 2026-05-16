@@ -87,6 +87,7 @@ Draft Standard for Review
     - [6.7.2 Generalize, add a parameter (non-normative)](#672-generalize-add-a-parameter-non-normative)
     - [6.7.3  Revisiting the Test Specification (non-normative)](#673--revisiting-the-test-specification-non-normative)
     - [6.7.4 Clarifying Related Concepts (non-normative)](#674-clarifying-related-concepts-non-normative)
+    - [6.7.5 A caution about evaluating bdqval:NotEmpty (non-normative)](#675-a-caution-about-evaluating-bdqvalnotempty-non-normative)
   - [6.8 Notes (non-normative)](#68-notes-non-normative)
     - [6.8.1 Example Complex Implementation Notes (non-normative)](#681-example-complex-implementation-notes-non-normative)
   - [6.9 List the properties of the Test (non-normative)](#69-list-the-properties-of-the-test-non-normative)
@@ -836,6 +837,44 @@ For example [VALIDATION_PHYLUM_FOUND](../terms/bdqtest/index.md#VALIDATION_PHYLU
 * Default checking mechanism: API endpoint: [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]
 * Parameterization: allowing alternative acceptable forms
   * Alternative checking mechanism: API endpoint for another taxonomic authority
+
+#### 6.7.5 A caution about evaluating bdqval:NotEmpty (non-normative)
+
+There is a potential trap for the unwary in the how `bdqval:Empty` is handled in Tests which evaluate other properties of a term when there is a value present.   This trap emerges when data are:
+1. Filtered under `Quality Assurance`, wherby only records which are COMPLIANT for all `Validations` in the `Use Case` are fit for use, and
+1. Some term under test is optional, and is expected to not contain values in all records (i.e. correctly be `bdqval:Empty` in some records), and
+1. When a Test has an Expected Response that includes a clause of INTERNAL_PREREQUISITES_NOT_MET if the term under test is `bdqval:Empty`.  
+
+We phrased our `Expected Response` as follows:
+
+* **Expected Response**  INTERNAL_PREREQUISITES_NOT_MET if prov:wasAttributedTo is bdqval:Empty; COMPLIANT if the value in prov:wasAttributedTo conforms to the expected format of bdqval:sourceAuthority; otherwise NOT_COMPLIANT.
+
+Which, combining the Expected Response with the default sourceAuthority, could be read by an implementer as: 
+* INTERNAL_PREREQUISITES_NOT_MET if prov:wasAttributedTo is bdqval:Empty; 
+* COMPLIANT if the value in prov:wasAttributedTo conforms to the expected format of "^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$"
+* otherwise NOT_COMPLIANT.
+
+This is clear, but it is important to note that the COMPLIANT vs. NOT_COMPLIANT evaluation only applies if there is some value in `prov:wasAttributedTo`, and that if there is no value (i.e. if it is `bdqval:Empty`), then this Test cannot return a COMPLIANT or NOT_COMPLIANT result, but rather must return INTERNAL_PREREQUISITES_NOT_MET.  This raises a significant concern for the use of this test in `Quality Assurance`.  If we expect prov:wasAttributedTo to always contain a value, and, for Quality Assuarance, we are composing this Test in a `Use Case` with a test that checks for the presence of a value in prov:wasAttributedTo, then a bdqval:NotEmpty value will be flagged as NOT_COMPLIANT by the test for presence of a value, and the INTERNAL_PREREQUISITES_NOT_MET result from this Test will be irrelevant for filtering under `Quality Assurance`.  Similarly data will be fit for use and not filtered out if both tests return COMPLIANT.   However, and here is the trap for the unwary, if we expect the term under test, `prov:wasAttributedTo`, to be optional and sometimes not contain a value, and the absence of a value does not make the data unfit for our use.
+
+If a Test is to be used for `Quality Assurance'.
+* If a term under test is required to be present and have some other property (e.g. conform to a standard):
+  * Include a Test in the `Use Case` for the presence of a value in the term under test (VALIDATION_{TARGETTERM}_NOTEMPTY)
+  * Include a Test in the `Use Case` for the other property (e.g. VALIDATION_{TARGETTERM}_STANDARD) which has a clause: 
+    * INTERNAL_PREREQUISITES_NOT_MET if the term under test is bdqval:Empty;
+	* For example: INTERNAL_PREREQUISITES_NOT_MET if prov:wasAttributedTo is bdqval:Empty; COMPLIANT if the value in prov:wasAttributedTo conforms to the expected format of bdqval:sourceAuthority; otherwise NOT_COMPLIANT.
+* If a term under test is optional, and the absence of a value does not make the data unfit for use, but if it has a value that needs to have some property (e.g. conform to a standard):
+  * Do not include in the `Use Case` a Test for the presence of a value in the term under test.
+  * Include in the `Use Case` only the Test for the other property (e.g. VALIDATION_{TARGETTERM}_STANDARD) which has a clause: 
+  	* **COMPLIANT** if the term under test is bdqval:Empty;
+  	* For example: COMPLIANT if prov:wasAttributedTo is bdqval:Empty; COMPLIANT if the value in prov:wasAttributedTo conforms to the expected format of bdqval:sourceAuthority; otherwise NOT_COMPLIANT.
+
+Under `Quality Assurance`, only records which are COMPLIANT for all `Validations` in the `Use Case` will be fit for use.
+* If we include a Test in the `Use Case` for some property of some term (e.g. VALIDATION_{TARGETTERM}_STANDARD) which has a clause: 
+  * INTERNAL_PREREQUISITES_NOT_MET if {targetterm} is bdqval:Empty;
+  * This will automatically cause all records which contain no value in that term to be filtered out under `Quality Assurance`, as they will not be COMPLIANT for that Test, but rather will be INTERNAL_PREREQUISITES_NOT_MET, and thus not fit for use.
+  * **If this target term is optional for the `Use Case`, then all empty values in that term will be filtered out under `Quality Assurance`, which will not be the intended outcome if this term is optional.**
+
+Thus, if a term may be optional for a `Use Case`, and the absence of a value in that term does not make the data unfit for use, then we should not include in the `Use Case` any `Validation` which has a clause that returns INTERNAL_PREREQUISITES_NOT_MET if the term under test is bdqval:Empty. 
 
 ### 6.8 Notes (non-normative)
 
