@@ -747,6 +747,10 @@ For example [VALIDATION_PHYLUM_FOUND](../terms/bdqtest/index.md#VALIDATION_PHYLU
 
 #### 6.7.5 A caution about evaluating bdqval:NotEmpty (non-normative)
 
+**TODO: Move into discussion of multi record measures and quality assurance and rewrite for there.**  
+
+**This discussion assumes filtering only on COMPLIANT per the mathematical formalization we need to formalize use of measures to be able to do otherwise**
+
 There is a potential trap for the unwary in the how `bdqval:Empty` is handled in Tests which evaluate other properties of a term when there is a value present.   This trap emerges when data are:
 1. Filtered under `Quality Assurance`, wherby only records which are COMPLIANT for all `Validations` in the `Use Case` are fit for use, and
 1. Some term under test is optional, and is expected to not contain values in all records (i.e. correctly be `bdqval:Empty` in some records), and
