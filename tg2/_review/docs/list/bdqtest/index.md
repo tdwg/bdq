@@ -3825,7 +3825,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:annotationSystem is not available; POTENTIAL_ISSUE if an annotation in the bdqval:annotationSystem exists with a matching bdqval:annotationAlertIf; otherwise NOT_ISSUE.</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:annotationSystem is not available; POTENTIAL_ISSUE if an annotation in the bdqval:annotationSystem exists and has an oa:hasTarget referencing the bdqffdq:SingleRecord under evaluation with matching bdqval:annotationAlertIf criteria; otherwise NOT_ISSUE.</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
@@ -3833,7 +3833,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>InformationElements Consulted</td>
-			<td>AllDarwinCoreTerms</td>
+			<td>oa:hasTarget</td>
 		</tr>
 		<tr>
 			<td>Parameters</td>

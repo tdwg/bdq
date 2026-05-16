@@ -3309,11 +3309,11 @@ Are there any annotations associated with the record?
 
 #### Expected Response
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:annotationSystem is not available; POTENTIAL_ISSUE if an annotation in the bdqval:annotationSystem exists with a matching bdqval:annotationAlertIf; otherwise NOT_ISSUE.
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:annotationSystem is not available; POTENTIAL_ISSUE if an annotation in the bdqval:annotationSystem exists and has an oa:hasTarget referencing the bdqffdq:SingleRecord under evaluation with matching bdqval:annotationAlertIf criteria; otherwise NOT_ISSUE.
 
 #### Information Elements
 Consulted: 
-AllDarwinCoreTerms
+oa:hasTarget
 
 #### Parameters
 

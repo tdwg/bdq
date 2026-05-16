@@ -392,7 +392,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>Optionally establishes if an annotation exists in a bdqval:ParameterizedTest within a bdqval:annotationSystem by describing the criteria for relating annotations in the system to records within the bdqval:ParameterizedTest.</td>
+			<td>Optionally establishes if an annotation exists in a bdqval:ParameterizedTest within a bdqval:annotationSystem by describing the criteria for relating annotations in the system to records within the bdqval:ParameterizedTest, by default the presence of an oa:hasTarget with the bdqffdq:SingleRecord under evaluation as its object.  'PREFIX oa: <http://www.w3.org/ns/oa#> SELECT ?annotation WHERE { ?annotation a oa:Annotation ; oa:hasTarget <evaluated_instance_iri> .  }'</td>
 		</tr>
 		<tr>
 			<td>Comments</td>
