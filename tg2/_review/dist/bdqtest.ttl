@@ -327,7 +327,7 @@ bdqtest:fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1-2024-09-17 a bdqffdq:Issue;
   bdqffdq:hasDataQualityDimension bdqdim:Reliability;
   dcterms:description "Are there any annotations associated with the record?";
   bdqffdq:hasCriterion bdqcrit:NotEmpty;
-  bdqffdq:hasConsultedInformationElement <urn:uuid:7f9e3727-a0ba-4f45-bdc2-29251612188a>;
+  bdqffdq:hasConsultedInformationElement <urn:uuid:b7a02234-c4d0-40fd-a437-af8330cc700f>;
   dcterms:issued "2024-09-17"^^xsd:date;
   dcterms:references <urn:uuid:e9d0f3c8-848c-409e-9af3-70425650a575>, <urn:uuid:71c9c3d1-fb9d-4774-8f31-63bc7a4ef49b>,
     <urn:uuid:3c0146df-5ce2-4f35-a066-5cf14de8c79a>;
@@ -344,7 +344,7 @@ bdqdim:Reliability a bdqffdq:DataQualityDimension;
 bdqcrit:NotEmpty a bdqffdq:Criterion;
   rdfs:label "NotEmpty" .
 
-<urn:uuid:7f9e3727-a0ba-4f45-bdc2-29251612188a> a bdqffdq:Consulted;
+<urn:uuid:b7a02234-c4d0-40fd-a437-af8330cc700f> a bdqffdq:Consulted;
   bdqffdq:composedOf <http://www.w3.org/ns/hasTarget>;
   rdfs:label "Information Element Consulted oa:hasTarget";
   skos:prefLabel "Information Element Consulted oa:hasTarget" .
@@ -377,9 +377,9 @@ bdqffdq:IssueMethod rdfs:subClassOf bdqffdq:DataQualityMethod .
   bdqffdq:hasExpectedResponse "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:annotationSystem is not available; POTENTIAL_ISSUE if an annotation in the bdqval:annotationSystem exists and has an oa:hasTarget referencing the bdqffdq:SingleRecord under evaluation with matching bdqval:annotationAlertIf criteria; otherwise NOT_ISSUE.";
   rdfs:label "Specification for: ISSUE_ANNOTATION_NOTEMPTY";
   dcterms:description "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:annotationSystem is not available; POTENTIAL_ISSUE if an annotation in the bdqval:annotationSystem exists and has an oa:hasTarget referencing the bdqffdq:SingleRecord under evaluation with matching bdqval:annotationAlertIf criteria; otherwise NOT_ISSUE. bdqval:annotationSystem default = \"W3C Web Annotation\" {[https://www.w3.org/annotation/]} {\"oa:Annotation vocabulary\" [https://www.w3.org/TR/annotation-vocab/]},bdqval:annotationAlertIf default = \"oa:Annotation with oa:hasTarget having as object any dwciri:term instance that is part of the SingleRecord under Test.\" {[https://www.w3.org/TR/annotation-vocab/]}";
-  bdqffdq:hasArgument <urn:uuid:5dca91bb-23b5-4968-b447-f865ef90612e> .
+  bdqffdq:hasArgument <urn:uuid:8c52d108-f9fe-4835-9939-6acc4430c9ee> .
 
-<urn:uuid:5dca91bb-23b5-4968-b447-f865ef90612e> a bdqffdq:Argument;
+<urn:uuid:8c52d108-f9fe-4835-9939-6acc4430c9ee> a bdqffdq:Argument;
   bdqffdq:hasArgumentValue "W3C Web Annotation";
   rdfs:label "Default value for bdqval:annotationSystem:\"W3C Web Annotation\"";
   bdqffdq:hasParameter bdqval:annotationSystem .

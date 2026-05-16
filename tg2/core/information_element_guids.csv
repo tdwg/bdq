@@ -200,3 +200,4 @@
 "urn:uuid:1784fb92-afb5-4c97-b3eb-9533dec5d6a8","Information Element Consulted dwc:decimalLatitude, dwc:decimalLongitude"
 "urn:uuid:6172815e-4f10-47d4-bd55-16b691f3f527","Information Element ActedUpon dwc:geodeticDatum, dwc:coordinateUncertaintyInMeters"
 "urn:uuid:74bf2f5b-f98b-42bb-be29-0cef831fd556","Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes"
+"urn:uuid:b7a02234-c4d0-40fd-a437-af8330cc700f","Information Element Consulted oa:hasTarget"
