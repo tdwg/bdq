@@ -5315,7 +5315,7 @@
 	<rdfs:label>Specification for: ISSUE_ANNOTATION_NOTEMPTY</rdfs:label>
 	<skos:example>bdqval:annotationAlertIf="": Response.status=RUN_HAS_RESULT, Response.result=NOT_ISSUE, Response.comment="bdqval:annotationAlertIf is bdqval:Empty"</skos:example>
 	<skos:example>bdqval:annotationAlertIf="?": Response.status=RUN_HAS_RESULT, Response.result=POTENTIAL_ISSUE, Response.comment="bdqval:annotationAlertIf is bdqval:NotEmpty"</skos:example>
-	<bdqffdq:hasArgument rdf:resource="urn:uuid:e7d850e9-32cb-46fe-adf9-c6a4deab689e"/>
+	<bdqffdq:hasArgument rdf:resource="urn:uuid:8c52d108-f9fe-4835-9939-6acc4430c9ee"/>
 	<bdqffdq:hasAuthoritiesDefaults>bdqval:annotationSystem default = "W3C Web Annotation" {[https://www.w3.org/annotation/]} {"oa:Annotation vocabulary" [https://www.w3.org/TR/annotation-vocab/]},bdqval:annotationAlertIf default = "oa:Annotation with oa:hasTarget having as object any dwciri:term instance that is part of the SingleRecord under Test." {[https://www.w3.org/TR/annotation-vocab/]}</bdqffdq:hasAuthoritiesDefaults>
 	<bdqffdq:hasExpectedResponse>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:annotationSystem is not available; POTENTIAL_ISSUE if an annotation in the bdqval:annotationSystem exists and has an oa:hasTarget referencing the bdqffdq:SingleRecord under evaluation with matching bdqval:annotationAlertIf criteria; otherwise NOT_ISSUE.</bdqffdq:hasExpectedResponse>
 </rdf:Description>
@@ -8402,6 +8402,13 @@
 	<bdqffdq:composedOf rdf:resource="http://rs.tdwg.org/dwc/terms/dataGeneralizations"/>
 </rdf:Description>
 
+<rdf:Description rdf:about="urn:uuid:8c52d108-f9fe-4835-9939-6acc4430c9ee">
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Argument"/>
+	<rdfs:label>Default value for bdqval:annotationSystem:"W3C Web Annotation"</rdfs:label>
+	<bdqffdq:hasArgumentValue>W3C Web Annotation</bdqffdq:hasArgumentValue>
+	<bdqffdq:hasParameter rdf:resource="https://rs.tdwg.org/bdqval/terms/annotationSystem"/>
+</rdf:Description>
+
 <rdf:Description rdf:about="urn:uuid:8c7b24de-6e84-4c07-9d61-f07fee762281">
 	<dcterms:description>COMPLETE if every VALIDATION_STATEPROVINCE_FOUND in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.</dcterms:description>
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Specification"/>
@@ -10895,13 +10902,6 @@
 	<skos:example></skos:example>
 	<bdqffdq:hasAuthoritiesDefaults></bdqffdq:hasAuthoritiesDefaults>
 	<bdqffdq:hasExpectedResponse>COMPLETE if every VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.</bdqffdq:hasExpectedResponse>
-</rdf:Description>
-
-<rdf:Description rdf:about="urn:uuid:e7d850e9-32cb-46fe-adf9-c6a4deab689e">
-	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Argument"/>
-	<rdfs:label>Default value for bdqval:annotationSystem:"W3C Web Annotation"</rdfs:label>
-	<bdqffdq:hasArgumentValue>W3C Web Annotation</bdqffdq:hasArgumentValue>
-	<bdqffdq:hasParameter rdf:resource="https://rs.tdwg.org/bdqval/terms/annotationSystem"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:e7f2383d-9406-497e-86b1-163b65955533">

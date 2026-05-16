@@ -3880,6 +3880,10 @@ Including MultiRecord Measures
 			<td>TG2 Issue OTHER Test CORE</td>
 		</tr>
 		<tr>
+			<td>Argument GUID</td>
+			<td>8c52d108-f9fe-4835-9939-6acc4430c9ee</td>
+		</tr>
+		<tr>
 			<td>has Use Cases</td>
 			<td>bdquc:Taxon-Management, bdquc:Alien-Species</td>
 		</tr>
