@@ -543,7 +543,7 @@ AMENDMENT_TAXONRANK_STANDARDIZED
 - [Term List](../../list/bdqtest/index.md#bdqtest_e39098df-ef46-464c-9aef-bcdeee2a88cb)
 
 
-## bdqval:Amendment
+## bdqffdq:Amendment
 
 MEASURE_AMENDMENTS_PROPOSED
 - Term IRI: https://rs.tdwg.org/bdqtest/terms/03049fe5-a575-404f-b564-ae63f5a1cf8b
@@ -551,7 +551,7 @@ MEASURE_AMENDMENTS_PROPOSED
 - [Term List](../../list/bdqtest/index.md#bdqtest_03049fe5-a575-404f-b564-ae63f5a1cf8b)
 
 
-## bdqval:Validation
+## bdqffdq:Validation
 
 MEASURE_VALIDATIONTESTS_COMPLIANT
 - Term IRI: https://rs.tdwg.org/bdqtest/terms/45fb49eb-4a1b-4b49-876f-15d5034dfc73
