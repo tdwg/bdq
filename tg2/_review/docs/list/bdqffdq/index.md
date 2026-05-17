@@ -197,6 +197,8 @@ In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use th
 [NeedConcept](#NeedConcept)
 [Parameter](#Parameter)
 [Policy](#Policy)
+[QualityAssurance](#QualityAssurance)
+[QualityControl](#QualityControl)
 [ReportConcept](#ReportConcept)
 [ResourceType](#ResourceType)
 [Response](#Response)
@@ -646,6 +648,26 @@ A bdqffdq:Mechanism describes the entity that performs a bdqffdq:Response Test (
 - Definition: The set of bdqffdq:DataQualityNeeds for a bdqffdq:UseCase.
 - SubClass Of: NeedConcept
 - Comments: Composition of bdqffdq:DataQualityNeeds into a bdqffdq:UseCase.
+
+********************
+
+#### QualityAssurance
+
+- Name: bdqffdq:QualityAssurance
+- Preferred Label: Quality Assurance
+- Definition: The operation of filtering a bdqffdq:MultiRecord bdqffdq:DataResource for a specified bdqffdq:Use Case to retain only the data subset where every associated bdqffdq:MultiRecord bdqffdq:Measure that evaluates as COMPLETE/NOT_COMPLETE has a Response.result of COMPLETE, signifying that all contained records are fit for use for the specified bdqffdq:UseCase.
+- SubClass Of: FundamentalConcept
+- Comments: The output of a Quality Assurance operation is a set of records (a MultiRecord).  The records contained in a data set filtered for Quality Assurance will comply with the fitness criteria for the given Use Case.
+
+********************
+
+#### QualityControl
+
+- Name: bdqffdq:QualityControl
+- Preferred Label: Quality Control
+- Definition: The operation on a bdqffdq:DataQualityReport for a specified bdqffdq:UseCase that yields the filtered subset Responses in that report required to diagnose, prioritize, and remediate detected data quality defects for that Use Case.
+- SubClass Of: FundamentalConcept
+- Comments: The output of a Quality Control operation is a set of assertions about a data set (a MultiRecord) under test. 
 
 ********************
 
@@ -1230,7 +1252,7 @@ A bdqffdq:SingleRecord, like a bdqffdq:MultiRecord, consists of data with a defi
 - Type: bdqffdq:ResponseResult
 - Preferred Label: COMPLETE
 - Definition: A bdqffdq:ResponseResult of a bdqffdq:Measure that asserts that data are present and sufficiently comprehensive for use.
-- Comments: This value can be used to filter data for Quality Assurance. This value can be asserted, for example, by bdqffdq:Measures of bdqffdq:MultiRecords where all the bdqffdq:Validation bdqffdq:ResponseResults from all included records in the dataset are bdqffdq:COMPLIANT.
+- Comments: This value can be used to filter data for bdqffdq:QualityAssurance. This value can be asserted, for example, by bdqffdq:Measures of bdqffdq:MultiRecords where all the bdqffdq:Validation bdqffdq:ResponseResults from all included records in the dataset are bdqffdq:COMPLIANT.
 
 ********************
 
@@ -1260,7 +1282,7 @@ A bdqffdq:SingleRecord, like a bdqffdq:MultiRecord, consists of data with a defi
 - Type: bdqffdq:ResponseResult
 - Preferred Label: NOT_COMPLETE
 - Definition: A bdqffdq:ResponseResult of a bdqffdq:Measure which asserts that data are not present or are not sufficiently comprehensive for a use.
-- Comments: This value can be used to exclude data for Quality Assurance. This value can be asserted, for example, by bdqffdq:Measures of bdqffdq:MultiRecords where not all the bdqffdq:Validation bdqffdq:ResponseResult from all included records in the dataset have a bdqffdq:ResponseResult of bdqffdq:COMPLIANT.
+- Comments: This value can be used to exclude data for bdqffdq:QualityAssurance. This value can be asserted, for example, by bdqffdq:Measures of bdqffdq:MultiRecords where not all the bdqffdq:Validation bdqffdq:ResponseResult from all included records in the dataset have a bdqffdq:ResponseResult of bdqffdq:COMPLIANT.
 
 ********************
 

@@ -1200,6 +1200,8 @@ In the original formulation, `Quality Assurance` was expressed as a set of `Vali
 [NeedConcept](#NeedConcept)
 [Parameter](#Parameter)
 [Policy](#Policy)
+[QualityAssurance](#QualityAssurance)
+[QualityControl](#QualityControl)
 [ReportConcept](#ReportConcept)
 [ResourceType](#ResourceType)
 [Response](#Response)
@@ -1568,6 +1570,22 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 - Name: [bdqffdq:Policy](../../list/bdqffdq/index.md#Policy)
 - Definition: The set of bdqffdq:DataQualityNeeds for a bdqffdq:UseCase.
 - SubClass Of: [NeedConcept](../../list/bdqffdq/index.md#NeedConcept)
+
+********************
+
+#### QualityAssurance
+
+- Name: [bdqffdq:QualityAssurance](../../list/bdqffdq/index.md#QualityAssurance)
+- Definition: The operation of filtering a bdqffdq:MultiRecord bdqffdq:DataResource for a specified bdqffdq:Use Case to retain only the data subset where every associated bdqffdq:MultiRecord bdqffdq:Measure that evaluates as COMPLETE/NOT_COMPLETE has a Response.result of COMPLETE, signifying that all contained records are fit for use for the specified bdqffdq:UseCase.
+- SubClass Of: [FundamentalConcept](../../list/bdqffdq/index.md#FundamentalConcept)
+
+********************
+
+#### QualityControl
+
+- Name: [bdqffdq:QualityControl](../../list/bdqffdq/index.md#QualityControl)
+- Definition: The operation on a bdqffdq:DataQualityReport for a specified bdqffdq:UseCase that yields the filtered subset Responses in that report required to diagnose, prioritize, and remediate detected data quality defects for that Use Case.
+- SubClass Of: [FundamentalConcept](../../list/bdqffdq/index.md#FundamentalConcept)
 
 ********************
 

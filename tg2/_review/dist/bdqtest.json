@@ -7526,12 +7526,12 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement": [
             {
-                "@id": "urn:uuid:9dc0bd31-dac6-41c8-8349-9023da428ebd"
+                "@id": "urn:uuid:79512d45-d326-446f-81db-cd15b069dd15"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasConsultedInformationElement": [
             {
-                "@id": "urn:uuid:37035746-0191-4609-9a68-2549f30a03d8"
+                "@id": "urn:uuid:4df7d172-7749-49c4-be62-3f808f3ecb6e"
             }
         ],
         "http://purl.org/dc/terms/issued": [
@@ -7578,7 +7578,7 @@
         ]
     },
     {
-        "@id": "urn:uuid:9dc0bd31-dac6-41c8-8349-9023da428ebd",
+        "@id": "urn:uuid:79512d45-d326-446f-81db-cd15b069dd15",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ActedUpon"
         ],
@@ -7602,7 +7602,7 @@
         ]
     },
     {
-        "@id": "urn:uuid:37035746-0191-4609-9a68-2549f30a03d8",
+        "@id": "urn:uuid:4df7d172-7749-49c4-be62-3f808f3ecb6e",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Consulted"
         ],

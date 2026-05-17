@@ -1706,8 +1706,8 @@ bdqtest:4c09f127-737b-4686-82a0-7c8e30841590-2025-03-06 a bdqffdq:Validation;
   bdqffdq:hasDataQualityDimension bdqdim:Conformance;
   dcterms:description "Can the taxon be unambiguously resolved from bdqval:sourceAuthority using the available taxon terms?";
   bdqffdq:hasCriterion bdqcrit:Unambiguous;
-  bdqffdq:hasActedUponInformationElement <urn:uuid:792ba89e-98b1-411d-abd9-a87b1350847e>;
-  bdqffdq:hasConsultedInformationElement <urn:uuid:c9f8f537-099e-41b0-8e31-74a6fa6248d2>;
+  bdqffdq:hasActedUponInformationElement <urn:uuid:73513e1d-a255-4bb1-bb98-42f0a2d8d5dd>;
+  bdqffdq:hasConsultedInformationElement <urn:uuid:8386ad6b-5882-402d-afdc-6d1cda26cf96>;
   dcterms:issued "2025-03-06"^^xsd:date;
   dcterms:references <https://doi.org/10.15468/39omei>;
   skos:historyNote "https://github.com/tdwg/bdq/issues/70";
@@ -1718,12 +1718,12 @@ bdqtest:4c09f127-737b-4686-82a0-7c8e30841590-2025-03-06 a bdqffdq:Validation;
 bdqcrit:Unambiguous a bdqffdq:Criterion;
   rdfs:label "Unambiguous" .
 
-<urn:uuid:792ba89e-98b1-411d-abd9-a87b1350847e> a bdqffdq:ActedUpon;
+<urn:uuid:73513e1d-a255-4bb1-bb98-42f0a2d8d5dd> a bdqffdq:ActedUpon;
   bdqffdq:composedOf dwc:scientificName, dwc:scientificNameID;
   rdfs:label "Information Element ActedUpon dwc:scientificName, dwc:scientificNameID";
   skos:prefLabel "Information Element ActedUpon dwc:scientificName, dwc:scientificNameID" .
 
-<urn:uuid:c9f8f537-099e-41b0-8e31-74a6fa6248d2> a bdqffdq:Consulted;
+<urn:uuid:8386ad6b-5882-402d-afdc-6d1cda26cf96> a bdqffdq:Consulted;
   bdqffdq:composedOf dwc:taxonID, dwc:acceptedNameUsageID, dwc:originalNameUsageID,
     dwc:taxonConceptID, dwc:higherClassification, dwc:kingdom, dwc:phylum, dwc:class,
     dwc:order, dwc:superfamily, dwc:family, dwc:subfamily, dwc:tribe, dwc:subtribe, dwc:genus,
