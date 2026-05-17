@@ -927,7 +927,7 @@ Note: `Issue` concepts would parallel `Validation` concepts, but are not fully s
 
 ##### 4.4.2.6 Valuable Information Elements (normative)
 
-     VIE(u) = {ie | ie ⊂ I E ⋀ u ∈ U }
+     VIE(u) = {ie | ie ⊂ IE ⋀ u ∈ U }
 
 * For a `Use Case`, what `Information Elements` are valuable.
 
@@ -1002,6 +1002,7 @@ and IssueResponse:
 * A DQ `Issue` asserts that there is a POTENTIAL_ISSUE with the `Issue` "Data Generalizations should be empty" for a specific species `dwc:Occurrence` because the field `dwc:dataGeneralizations` of the record was not empty.
 
 ##### 4.4.4.3 MeasurementResponse (normative)
+
      DQM(dr) = {dqm | dqm =< me, s, m, r >, me ∈ ME, s ∈ S, m ∈ M , r ∈ R ⋀ dr ∈ DR}
      
      dqm(dr1) = {< me1, s1, m1, r1 >}
@@ -1009,6 +1010,7 @@ and IssueResponse:
 * Coordinate numerical precision of the dataset 3cc6171e-8c52-4f65-ad7a-32c74e395f29 is 6.16 and this value was assigned by the software DwC-A Validator 2.0 which calculated the value by the average of significant digits of each record of the dataset.
 
 ##### 4.4.4.4 AmendmentResponse (normative)
+
      DQA(dr) = {dqa | dqa = < am, s, m, r >, am ∈ AM, s ∈ S, m ∈ M , r ∈ R ⋀ dr ∈ DR}
 
      dqa(dr1) = {< am1, s1, m1, r1 >}
@@ -1048,7 +1050,7 @@ where `a` is a `Data Quality Assessment`, `a'` is a filtered subset of that asse
 
 Let `MEaq(u)` be the set of `Multi Record` `Measures` used for `QualityAssurance` for `Use Case` `u`, as defined above. Let `dr'` be a filtered `DataResource`, that is, a `Multi Record` subset of `dr`.
 
-    QA(dr, u) = { dr' | dr' ⊆ dr ⋀ dr ∈ DR ⋀ u ∈ U ⋀ ∀ me ∈ MEaq(u), ∃ dqm ∈ DQM(dr') ( dqm = < me, s, m, r > ⋀ r = COMPLETE )
+    QA(dr, u) = { dr' | dr' ⊆ dr ⋀ dr ∈ DR ⋀ u ∈ U ⋀ ∀ me ∈ MEaq(u), ∃ dqm ∈ DQM(dr') ( dqm = < me, s, m, r > ⋀ r = COMPLETE ) }
 
     qa(dr1, u1) = { dr1' | dr1' ⊆ dr1 ⋀ ∀ me ∈ MEaq(u1), dqm(dr1') = < me, s, m, r > ⋀ r = COMPLETE }
 
