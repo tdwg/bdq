@@ -1081,16 +1081,19 @@ Let `result(x)` denote the value of `Response.result` for a report element `x`:
 - `result(x)` is the outcome asserted by the `Response`, which may be categorical (for example `COMPLIANT`, `NOT_COMPLIANT`, `POTENTIAL_ISSUE`, `COMPLETE`, `NOT_COMPLETE`) or literal (for example a numeric value or a structured amendment payload).
 Let `status(x)` denote the value of `Response.status` for a report element `x`, where `x` is an element of a `Data Quality Report`.
 - `status(x)` is the execution status asserted by the `Response`, indicating whether the Test run produced a result or why it did not, or, for `AmendmentResponse`, whether the Test resulted in a change state such as `FILLED_IN` or `AMENDED`.
+
 Also, resultType(x) is the type of `Response.result` for a report element `x`, as defined above in Section[4.4.2.7](#4427-acceptable-data-quality-measure-normative).
 
-    QC(a, u) = { a' | a' ⊆ a ⋀ a ∈ A(dr) ⋀ u ∈ U ⋀ ∀ x ∈ a',
-       (x ∈ DQV(dr) ⋀ result(x) = NOT_COMPLIANT)
-     ⋁ (x ∈ DQA(dr) ⋀ status(x) ∈ {FILLED_IN, AMENDED})
-     ⋁ (x ∈ DQI(dr) ⋀ result(x) = POTENTIAL_ISSUE)
-     ⋁ (x ∈ DQM(dr) ⋀ resultType(x) = numeric)
-    }
+```
+QC(a, u) = { a' | a' ⊆ a ⋀ a ∈ A(dr) ⋀ u ∈ U ⋀ ∀ x ∈ a',
+   (x ∈ DQV(dr) ⋀ result(x) = NOT_COMPLIANT)
+ ⋁ (x ∈ DQA(dr) ⋀ status(x) ∈ {FILLED_IN, AMENDED})
+ ⋁ (x ∈ DQI(dr) ⋀ result(x) = POTENTIAL_ISSUE)
+ ⋁ (x ∈ DQM(dr) ⋀ resultType(x) = numeric)
+}
 
-    qc(a1, u1) = {a1', a2'}
+qc(a1, u1) = {a1', a2'}
+```
 
 where `a` is a `Data Quality Report`, `a'` is a filtered subset of that assessment, and `x` is an element of that assessment, such as a `MeasurementResponse`, `ValidationResponse`, `IssueResponse`, or `AmendmentResponse`, selected because it supports `QualityControl` for the specified `Use Case`.
 
