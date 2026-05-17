@@ -745,47 +745,21 @@ For example [VALIDATION_PHYLUM_FOUND](../terms/bdqtest/index.md#VALIDATION_PHYLU
 * Parameterization: allowing alternative acceptable forms
   * Alternative checking mechanism: API endpoint for another taxonomic authority
 
-#### 6.7.5 A caution about evaluating bdqval:NotEmpty (non-normative)
+#### 6.7.5 On evaluating bdqval:NotEmpty (non-normative)
 
-**TODO: Move into discussion of multi record measures and quality assurance and rewrite for there.**  
+When a value in a term is optional (as in dwc:minimiumDepthInMeters or dwc:minimumElevationInMeters, only one of which is sensibly populated for most data), then a `Use Case` should not include a `Validation` that tests whether the term is `bdqval:NotEmpty`, as such a test would assert that data are unfit for use if there is no value in that term, even if the absence of a value in that term does not make the data unfit for use.  
 
-**This discussion assumes filtering only on COMPLIANT per the mathematical formalization we need to formalize use of measures to be able to do otherwise**
+There is, however, a choice in how to evaluate emptyness in a Test that evaluates some other property of such a term (e.g. a `Validation` that tests if depth is a numeric value, or a `Validation` that tests if depth is in range).
 
-There is a potential trap for the unwary in the how `bdqval:Empty` is handled in Tests which evaluate other properties of a term when there is a value present.   This trap emerges when data are:
-1. Filtered under `Quality Assurance`, whereby only records which are COMPLIANT for all `Validations` in the `Use Case` are fit for use, and
-1. Some term under test is optional, and is expected to not contain values in all records (i.e. correctly be `bdqval:Empty` in some records), and
-1. When a Test has an Expected Response that includes a clause of INTERNAL_PREREQUISITES_NOT_MET if the term under test is `bdqval:Empty`.  
+A Test that evaluates some property other than emptyness of a term in which a value could validly be `bdqval:Empty` could phrase the `Expected Response` in one of two ways:
+* COMPLIANT if the term is `bdqval:Empty`; COMPLIANT if the value in the term conforms to the expected property; otherwise NOT_COMPLIANT.
+* INTERNAL_PREREQUISITES_NOT_MET if the term is `bdqval:Empty`; COMPLIANT if the value in the term conforms to the expected property; otherwise NOT_COMPLIANT.
 
-We phrased our `Expected Response` as follows:
+This phrasing affects decision making for filtering critera for `Quality Assurance`.  See the discussion in Section [8.1.3.2 Framing MultiRecord Measures for Quality Assurance](#8132-framing-multirecord-measures-for-quality-assurance-non-normative) for details.
 
-* **Expected Response**  INTERNAL_PREREQUISITES_NOT_MET if prov:wasAttributedTo is bdqval:Empty; COMPLIANT if the value in prov:wasAttributedTo conforms to the expected format of bdqval:sourceAuthority; otherwise NOT_COMPLIANT.
+The initial BDQ Tests adopt a practice of evaluating emptyness as a prerequisite for evaluating other properties in all `Validations`, and thus use the second phrasing above for terms that may be optional.  This choice makes for clearer and more granular assertions concerning NON_COMPLIANT data for `Quality Control`, but passes the responsibility for filtering optional terms under `Quality Assurance` to the framing of `MultiRecord` `Measures`, and in consequence allows each `Validation` to be composed in a `Use Case` where a term is optional, or in a `Use Case` where that term is not.  This is a design choice, not a normative requirement.
 
-Which, combining the Expected Response with the default sourceAuthority, could be read by an implementer as: 
-* INTERNAL_PREREQUISITES_NOT_MET if prov:wasAttributedTo is bdqval:Empty; 
-* COMPLIANT if the value in prov:wasAttributedTo conforms to the expected format of "^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$"
-* otherwise NOT_COMPLIANT.
-
-This is clear, but it is important to note that the COMPLIANT vs. NOT_COMPLIANT evaluation only applies if there is some value in `prov:wasAttributedTo`, and that if there is no value (i.e. if it is `bdqval:Empty`), then this Test cannot return a COMPLIANT or NOT_COMPLIANT result, but rather must return INTERNAL_PREREQUISITES_NOT_MET.  This raises a significant concern for the use of this test in `Quality Assurance`.  If we expect prov:wasAttributedTo to always contain a value, and, for Quality Assurance, we are composing this Test in a `Use Case` with a test that checks for the presence of a value in prov:wasAttributedTo, then a bdqval:NotEmpty value will be flagged as NOT_COMPLIANT by the test for presence of a value, and the INTERNAL_PREREQUISITES_NOT_MET result from this Test will be irrelevant for filtering under `Quality Assurance`.  Similarly data will be fit for use and not filtered out if both tests return COMPLIANT. However, and here is the trap for the unwary, if we expect the term under test, `prov:wasAttributedTo`, to be optional and sometimes not contain a value, and the absence of a value does not make the data unfit for our use.
-
-If a Test is to be used for `Quality Assurance'.
-* If a term under test is required to be present and have some other property (e.g. conform to a standard):
-  * Include a Test in the `Use Case` for the presence of a value in the term under test (VALIDATION_{TARGETTERM}_NOTEMPTY)
-  * Include a Test in the `Use Case` for the other property (e.g. VALIDATION_{TARGETTERM}_STANDARD) which has a clause: 
-    * INTERNAL_PREREQUISITES_NOT_MET if the term under test is bdqval:Empty;
-	* For example: INTERNAL_PREREQUISITES_NOT_MET if prov:wasAttributedTo is bdqval:Empty; COMPLIANT if the value in prov:wasAttributedTo conforms to the expected format of bdqval:sourceAuthority; otherwise NOT_COMPLIANT.
-* If a term under test is optional, and the absence of a value does not make the data unfit for use, but if it has a value that needs to have some property (e.g. conform to a standard):
-  * Do not include in the `Use Case` a Test for the presence of a value in the term under test.
-  * Include in the `Use Case` only the Test for the other property (e.g. VALIDATION_{TARGETTERM}_STANDARD) which has a clause: 
-  	* **COMPLIANT** if the term under test is bdqval:Empty;
-  	* For example: COMPLIANT if prov:wasAttributedTo is bdqval:Empty; COMPLIANT if the value in prov:wasAttributedTo conforms to the expected format of bdqval:sourceAuthority; otherwise NOT_COMPLIANT.
-
-Under `Quality Assurance`, only records which are COMPLIANT for all `Validations` in the `Use Case` will be fit for use.
-* If we include a Test in the `Use Case` for some property of some term (e.g. VALIDATION_{TARGETTERM}_STANDARD) which has a clause: 
-  * INTERNAL_PREREQUISITES_NOT_MET if {targetterm} is bdqval:Empty;
-  * This will automatically cause all records which contain no value in that term to be filtered out under `Quality Assurance`, as they will not be COMPLIANT for that Test, but rather will be INTERNAL_PREREQUISITES_NOT_MET, and thus not fit for use.
-  * **If this target term is optional for the `Use Case`, then all empty values in that term will be filtered out under `Quality Assurance`, which will not be the intended outcome if this term is optional.**
-
-Thus, if a term may be optional for a `Use Case`, and the absence of a value in that term does not make the data unfit for use, then we should not include in the `Use Case` any `Validation` which has a clause that returns INTERNAL_PREREQUISITES_NOT_MET if the term under test is bdqval:Empty. 
+In short, when a term may be optional for a particular `Use Case`, generality of a Test is improved when it evaluates emptyness as a prerequisite for evaluating other properties of that term, and thus to use the second phrasing above for the `Expected Response` in Tests that evaluate some property other than emptyness of a (potentally) optional term.
 
 ### 6.8 Notes (non-normative)
 
@@ -1167,11 +1141,62 @@ Because `Multi Record` `Measures` return only a single value, they are often pai
 
 See also: [Phases: Pre-Amendment, Amendment, Post-Amendment](../guide/implementers/index.md#641-phases-pre-amendment-amendment-post-amendment-normative) in the implementers guide for a discussion of "pre-amendment" and "post-amendment" phases in a `Quality Control` workflow.
 
-#### 8.1.3.1 Contrast with Quality Assurance (non-normative)
+##### 8.1.3.1 Contrast with Quality Assurance (non-normative)
 
 In contrast, in `Quality Assurance`, the focus is on filtering records based on `Single Record` Test outcomes.  The mechanism for this in the Fitness For Use Framework is to define a `Multi Record` `Measure` that returns `COMPLETE` if the dataset meets a dataset-level requirement derived from `Single Record` Test outcomes, and `NOT_COMPLETE` otherwise, and if `NOT_COMPLETE`.  This `Multi Record` `Measure` can be used as a completeness condition.  A `Quality Assurance` workflow may filter records until the remaining dataset satisfies that condition (the `Measure` returns `COMPLETE`).  When all the `Multi Record` `Measures` of this sort for a `Use Case` (as specified by `Policy`) are `COMPLETE`, the (filtered) dataset is fit for use with respect to the selected `Use Case`.  Alternately, remediation could be applied (as in applying `Amendments` to fix problems identified by `Validations`) and filtering such that the `Multi Record` `Measures` return `COMPLETE`, at which point the dataset is fit for use with respect to the selected `Use Case`.  BDQ does not specify a workflow, it fundamentally supports the representation of completeness conditions via `Multi Record` `Measures`, and it is up to implementers to decide how to use those `Measures` in a workflow, whether for `Quality Control` or `Quality Assurance`.  BDQ defines how to represent `Quality Assurance` conditions and outcomes. A filtering or remediation strategy is outside the scope of BDQ and would be up to an implementation.
 
 A related pattern occurs at the `Single Record` level: when fitness depends on a user-defined analytical threshold rather than a single universal rule, a `Single Record` `Measure` may return a numeric metric that consumers interpret relative to their `Use Case`. For example, [MEASURE_EVENTDATE_DURATIONINSECONDS](../terms/bdqtest/index.md#MEASURE_EVENTDATE_DURATIONINSECONDS) returns the duration (in seconds) of the time interval represented by `dwc:eventDate`; consumers can then apply a threshold (e.g., “duration ≤ 86401 seconds” for day-level precision) to decide whether an individual `Single Record` has sufficient temporal precision for their `Use Case`.
+
+##### 8.1.3.2 Framing MultiRecord Measures for Quality Assurance (non-normative)
+
+There is a potential trap for the unwary in framing `MultiRecord` `Measures` for `Quality Assurance` in evaluating the output of `Validations` that test properties of terms where a value is optional for fitness for some use (e.g. dwc:minimumDepthInMeters and dwc:minimumElevationInMeters, only one of which is sensibly poplulated for most data).
+
+
+
+COMPLETE if every VALIDATION_BASISOFRECORD_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
+
+COMPLETE if every VALIDATION_MAXDEPTH_INRANGE in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.
+
+
+**TODO: Rewrite for multi record measures and quality assurance.**  
+
+**This discussion assumes filtering only on COMPLIANT per the mathematical formalization we need to formalize use of measures to be able to do otherwise**
+
+There is a potential trap for the unwary in the how `bdqval:Empty` is handled in Tests which evaluate other properties of a term when there is a value present.   This trap emerges when data are:
+1. Filtered under `Quality Assurance`, whereby only records which are COMPLIANT for all `Validations` in the `Use Case` are fit for use, and
+1. Some term under test is optional, and is expected to not contain values in all records (i.e. correctly be `bdqval:Empty` in some records), and
+1. When a Test has an Expected Response that includes a clause of INTERNAL_PREREQUISITES_NOT_MET if the term under test is `bdqval:Empty`.  
+
+We phrased our `Expected Response` as follows:
+
+* **Expected Response**  INTERNAL_PREREQUISITES_NOT_MET if prov:wasAttributedTo is bdqval:Empty; COMPLIANT if the value in prov:wasAttributedTo conforms to the expected format of bdqval:sourceAuthority; otherwise NOT_COMPLIANT.
+
+Which, combining the Expected Response with the default sourceAuthority, could be read by an implementer as: 
+* INTERNAL_PREREQUISITES_NOT_MET if prov:wasAttributedTo is bdqval:Empty; 
+* COMPLIANT if the value in prov:wasAttributedTo conforms to the expected format of "^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$"
+* otherwise NOT_COMPLIANT.
+
+This is clear, but it is important to note that the COMPLIANT vs. NOT_COMPLIANT evaluation only applies if there is some value in `prov:wasAttributedTo`, and that if there is no value (i.e. if it is `bdqval:Empty`), then this Test cannot return a COMPLIANT or NOT_COMPLIANT result, but rather must return INTERNAL_PREREQUISITES_NOT_MET.  This raises a significant concern for the use of this test in `Quality Assurance`.  If we expect prov:wasAttributedTo to always contain a value, and, for Quality Assurance, we are composing this Test in a `Use Case` with a test that checks for the presence of a value in prov:wasAttributedTo, then a bdqval:NotEmpty value will be flagged as NOT_COMPLIANT by the test for presence of a value, and the INTERNAL_PREREQUISITES_NOT_MET result from this Test will be irrelevant for filtering under `Quality Assurance`.  Similarly data will be fit for use and not filtered out if both tests return COMPLIANT. However, and here is the trap for the unwary, if we expect the term under test, `prov:wasAttributedTo`, to be optional and sometimes not contain a value, and the absence of a value does not make the data unfit for our use.
+
+If a Test is to be used for `Quality Assurance'.
+* If a term under test is required to be present and have some other property (e.g. conform to a standard):
+  * Include a Test in the `Use Case` for the presence of a value in the term under test (VALIDATION_{TARGETTERM}_NOTEMPTY)
+  * Include a Test in the `Use Case` for the other property (e.g. VALIDATION_{TARGETTERM}_STANDARD) which has a clause: 
+    * INTERNAL_PREREQUISITES_NOT_MET if the term under test is bdqval:Empty;
+	* For example: INTERNAL_PREREQUISITES_NOT_MET if prov:wasAttributedTo is bdqval:Empty; COMPLIANT if the value in prov:wasAttributedTo conforms to the expected format of bdqval:sourceAuthority; otherwise NOT_COMPLIANT.
+* If a term under test is optional, and the absence of a value does not make the data unfit for use, but if it has a value that needs to have some property (e.g. conform to a standard):
+  * Do not include in the `Use Case` a Test for the presence of a value in the term under test.
+  * Include in the `Use Case` only the Test for the other property (e.g. VALIDATION_{TARGETTERM}_STANDARD) which has a clause: 
+  	* **COMPLIANT** if the term under test is bdqval:Empty;
+  	* For example: COMPLIANT if prov:wasAttributedTo is bdqval:Empty; COMPLIANT if the value in prov:wasAttributedTo conforms to the expected format of bdqval:sourceAuthority; otherwise NOT_COMPLIANT.
+
+Under `Quality Assurance`, only records which are COMPLIANT for all `Validations` in the `Use Case` will be fit for use.
+* If we include a Test in the `Use Case` for some property of some term (e.g. VALIDATION_{TARGETTERM}_STANDARD) which has a clause: 
+  * INTERNAL_PREREQUISITES_NOT_MET if {targetterm} is bdqval:Empty;
+  * This will automatically cause all records which contain no value in that term to be filtered out under `Quality Assurance`, as they will not be COMPLIANT for that Test, but rather will be INTERNAL_PREREQUISITES_NOT_MET, and thus not fit for use.
+  * **If this target term is optional for the `Use Case`, then all empty values in that term will be filtered out under `Quality Assurance`, which will not be the intended outcome if this term is optional.**
+
+Thus, if a term may be optional for a `Use Case`, and the absence of a value in that term does not make the data unfit for use, then we should not include in the `Use Case` any `Validation` which has a clause that returns INTERNAL_PREREQUISITES_NOT_MET if the term under test is bdqval:Empty. 
 
 #### 8.1.4 A worked example (building on VALIDATION_FOOTPRINTWKT_NOTEMPTY) (non-normative)
 

@@ -7239,12 +7239,12 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:6232150a-9abc-469f-b533-44d61aa85054">
-	<dcterms:description>COMPLETE if every VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</dcterms:description>
+	<dcterms:description>COMPLETE if every VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET; otherwise NOT_COMPLETE.</dcterms:description>
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Specification"/>
 	<rdfs:label>Specification for: MULTIRECORD_MEASURE_QA_COUNTRYSTATEPROVINCE_UNAMBIGUOUS</rdfs:label>
 	<skos:example></skos:example>
 	<bdqffdq:hasAuthoritiesDefaults></bdqffdq:hasAuthoritiesDefaults>
-	<bdqffdq:hasExpectedResponse>COMPLETE if every VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</bdqffdq:hasExpectedResponse>
+	<bdqffdq:hasExpectedResponse>COMPLETE if every VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET; otherwise NOT_COMPLETE.</bdqffdq:hasExpectedResponse>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:624278a4-eebe-4d0d-89ea-416b697cdb9a">
@@ -8074,12 +8074,12 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:809d2925-781f-432e-b5d6-4a91f1afe56c">
-	<dcterms:description>COMPLETE if every VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</dcterms:description>
+	<dcterms:description>COMPLETE if every VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET; otherwise NOT_COMPLETE.</dcterms:description>
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Specification"/>
 	<rdfs:label>Specification for: MULTIRECORD_MEASURE_QA_COORDINATESSTATEPROVINCE_CONSISTENT</rdfs:label>
 	<skos:example></skos:example>
 	<bdqffdq:hasAuthoritiesDefaults></bdqffdq:hasAuthoritiesDefaults>
-	<bdqffdq:hasExpectedResponse>COMPLETE if every VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</bdqffdq:hasExpectedResponse>
+	<bdqffdq:hasExpectedResponse>COMPLETE if every VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET; otherwise NOT_COMPLETE.</bdqffdq:hasExpectedResponse>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:809e0413-0fb4-4e44-bfa7-b3b728372fb8">

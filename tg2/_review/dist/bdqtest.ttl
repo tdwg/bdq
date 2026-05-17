@@ -5558,9 +5558,9 @@ bdqtest:7a8b0af3-fa7d-416a-921a-8992d56f8233-2025-03-07 a bdqffdq:Measure;
 <urn:uuid:809d2925-781f-432e-b5d6-4a91f1afe56c> a bdqffdq:Specification;
   skos:example "";
   bdqffdq:hasAuthoritiesDefaults "";
-  bdqffdq:hasExpectedResponse "COMPLETE if every VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.";
+  bdqffdq:hasExpectedResponse "COMPLETE if every VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET; otherwise NOT_COMPLETE.";
   rdfs:label "Specification for: MULTIRECORD_MEASURE_QA_COORDINATESSTATEPROVINCE_CONSISTENT";
-  dcterms:description "COMPLETE if every VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE." .
+  dcterms:description "COMPLETE if every VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET; otherwise NOT_COMPLETE." .
 
 bdqtest:c6c998af-6145-4361-b1e6-52c5b790340a-2025-03-07 a bdqffdq:Measure;
   bdqffdq:hasResourceType bdqffdq:MultiRecord;
@@ -8394,9 +8394,9 @@ bdqtest:23aced89-d613-479c-bc4c-837d74b73be0-2025-03-07 a bdqffdq:Measure;
 <urn:uuid:6232150a-9abc-469f-b533-44d61aa85054> a bdqffdq:Specification;
   skos:example "";
   bdqffdq:hasAuthoritiesDefaults "";
-  bdqffdq:hasExpectedResponse "COMPLETE if every VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.";
+  bdqffdq:hasExpectedResponse "COMPLETE if every VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET; otherwise NOT_COMPLETE.";
   rdfs:label "Specification for: MULTIRECORD_MEASURE_QA_COUNTRYSTATEPROVINCE_UNAMBIGUOUS";
-  dcterms:description "COMPLETE if every VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE." .
+  dcterms:description "COMPLETE if every VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET; otherwise NOT_COMPLETE." .
 
 bdqtest:8b73f37d-89ed-479a-8389-9e71ad2ac84d-2025-03-07 a bdqffdq:Measure;
   bdqffdq:hasResourceType bdqffdq:MultiRecord;
