@@ -817,6 +817,7 @@ The following changes have been made to the original formulation:
 - `Improvement Method` changed to `Enhancement Method`.
 - `Improvement Policy` changed to `Enhancement Policy`.
 - `Data Quality Improvement` changed to `Data Quality Amendment`.
+- `Data Quality Assessment` changed to `Data Quality Report`.
 - `Issue`, `IssuePolicy`, `IssueMethod`, and `IssueResponse` added as converse of `Validation`.
 - `Dimension in Context` renamed `Measure`.
 - `Criterion in Context` renamed `Validation`.
@@ -903,7 +904,14 @@ The following brief explanations are intended to help readers interpret the nota
 
 * "Potential issue if geographic coordinate is at 0,0"
 
+An `Issue` with a `Response.result` of IS_ISSUE is an exact converse of a `Validation`. 
+
+An `Issue` with a `Response.result` of POTENTIAL_ISSUE is distinct and has no analog in `Validation`, such is intended to express that there is a potential issue with the data, and that human review of the issue is needed to determine if the data are fit for a particular use, that is, as a caution.
+
+`Issue` is modeled in the ontology using the same structural pattern as `Validation`, composed with `Criterion`, but is interpreted in the negative or cautionary sense.
+
 ##### 4.4.1.3 Measure (normative)
+
     ME = { me | me =< ie, d, rt >, ie ∈ IE, d ∈ D ⋀ rt ∈ RT }
 
     me1 = < ie1, d1, rt1 >
@@ -981,15 +989,15 @@ In the initial BDQ Tests, for a `Use Case`, `MEaq(u)` is the set of `Multi Recor
 
 ##### 4.4.2.8 Improvement Target (normative)
 
-    IT(am) = {me ⋃ va | me ∈ ME, va ∈ VA ⋀ am ∈ AM}
+    IT(am) = {me ⋃ va ⋃ is | me ∈ ME, va ∈ VA, is ∈ IS ⋀ am ∈ AM}
 
-    it(am1) = {me1, va2}
+    it(am1) = {me1, va2, is1}
 
 * Recommending coordinates based on textual locality improves the coordinate completeness of `Single Records` and may result in compliance with the `Criterion` dataset must have all records with coordinates.
 
 The `ImprovementTarget` concept is intended to express that an `Amendment` may support improvement in more than one way. In particular, an `Amendment` may improve one or more `Measures` of data quality and may also help satisfy one or more `Validations`. The expression for `IT(am)` should therefore be read as identifying the set of `Data Quality Needs` that may be improved, satisfied, or brought closer to compliance through acceptance of the proposals made by a given `Amendment`.
 
-In this notation, the use of union indicates that the `ImprovementTarget` for an `Amendment` may include elements drawn from both the domain of `Measure` and the domain of `Validation`. Thus, `IT(am)` identifies those `Measures` and `Validations` for which acceptance of the `Amendment` may improve the fitness for use of the data.
+In this notation, the use of union indicates that the `ImprovementTarget` for an `Amendment` may include elements drawn from the domains of `Measure`, `Issue`, and `Validation`. Thus, `IT(am)` identifies those `Measures`, `Issues` and `Validations` for which acceptance of the `Amendment` may improve the fitness for use of the data.
 
 This formalization SHOULD NOT block the framing of `Amendments` that propose changes to processes or other things outside the scope of a data set.
 
@@ -1055,23 +1063,23 @@ and IssueResponse:
 
 * An `Amendment` is proposed to replace the current value of the `dwc:scientificName` by the value "Apis" because Apis is the most similar valid name based on the Levenshtein distance in the Catalog of Life database using the software DwC-A Validator 2.0.
 
-##### 4.4.4.5 Data Quality Assessment (normative)
+##### 4.4.4.5 Data Quality Report (normative)
 
      A(dr) = {dqm(dr) ⋃ dqv(dr) ⋃ dqi(dr) ⋃ dqa(dr) | dqm ∈ DQM, dqv ∈ DQV, dqi ∈ DQI, dqa ∈ DQA ⋀ dr ∈ DR}
 
      a(dr1) = {dqm1, dqm2, dqm3, dqv1, dqi1, dqa1}
 
-A `Data Quality Assessment` is the set of `MeasurementResponse`, `ValidationResponse`, `IssueResponse`, and `AmendmentResponse` elements associated with a `DataResource`, and is the report-level basis for assessing fitness for use and for performing `QualityControl`.
+A `Data Quality Report` is the set of `MeasurementResponse`, `ValidationResponse`, `IssueResponse`, and `AmendmentResponse` elements associated with a `DataResource`, and is the report-level basis for assessing fitness for use and for performing `QualityControl`.
 
 ##### 4.4.4.6 Quality Control (normative)
 
-`QualityControl` is an operation on a `Data Quality Assessment` and a `Use Case` that yields the set of filtered subsets of that assessment that are relevant to identifying, summarizing, prioritizing, or proposing remediation of data quality problems for that `Use Case`.
+`QualityControl` is an operation on a `Data Quality Report` and a `Use Case` that yields the set of filtered subsets of that assessment that are relevant to identifying, summarizing, prioritizing, or proposing remediation of data quality problems for that `Use Case`.
 
-Let `a ∈ A(dr)` be a `Data Quality Assessment` for a `DataResource` `dr`, and let `a'` be a filtered subset of that assessment, that is, a subset of the `MeasureResponse`, `ValidationResponse`, `IssueResponse` and `AmendmentResponse` elements in `a` selected for their relevance to `QualityControl` for a specified `Use Case` `u`.
+Let `a ∈ A(dr)` be a `Data Quality Reqport` for a `DataResource` `dr`, and let `a'` be a filtered subset of that assessment, that is, a subset of the `MeasureResponse`, `ValidationResponse`, `IssueResponse` and `AmendmentResponse` elements in `a` selected for their relevance to `QualityControl` for a specified `Use Case` `u`.
 
 Let `result(x)` denote the value of `Response.result` for a report element `x`: 
 - `result(x)` is the outcome asserted by the `Response`, which may be categorical (for example `COMPLIANT`, `NOT_COMPLIANT`, `POTENTIAL_ISSUE`, `COMPLETE`, `NOT_COMPLETE`) or literal (for example a numeric value or a structured amendment payload).
-Let `status(x)` denote the value of `Response.status` for a report element `x`, where `x` is an element of a `Data Quality Assessment`.
+Let `status(x)` denote the value of `Response.status` for a report element `x`, where `x` is an element of a `Data Quality Report`.
 - `status(x)` is the execution status asserted by the `Response`, indicating whether the Test run produced a result or why it did not, or, for `AmendmentResponse`, whether the Test resulted in a change state such as `FILLED_IN` or `AMENDED`.
 Also, resultType(x) is the type of `Response.result` for a report element `x`, as defined above in Section[4.4.2.7](#4427-acceptable-data-quality-measure-normative).
 
@@ -1084,11 +1092,11 @@ Also, resultType(x) is the type of `Response.result` for a report element `x`, a
 
     qc(a1, u1) = {a1', a2'}
 
-where `a` is a `Data Quality Assessment`, `a'` is a filtered subset of that assessment, and `x` is an element of that assessment, such as a `MeasurementResponse`, `ValidationResponse`, `IssueResponse`, or `AmendmentResponse`, selected because it supports `QualityControl` for the specified `Use Case`.
+where `a` is a `Data Quality Report`, `a'` is a filtered subset of that assessment, and `x` is an element of that assessment, such as a `MeasurementResponse`, `ValidationResponse`, `IssueResponse`, or `AmendmentResponse`, selected because it supports `QualityControl` for the specified `Use Case`.
 
-* `QualityControl` yields filtered subsets of a `Data Quality Assessment` that can be used to identify and prioritize data cleanup, evaluate potential amendments, and guide improvements to data management processes and systems.
+* `QualityControl` yields filtered subsets of a `Data Quality Report` that can be used to identify and prioritize data cleanup, evaluate potential amendments, and guide improvements to data management processes and systems.
 
-`Quality Control` was originally expressed as `QC(dr) = {dqv(dr) ⋃ dqa(dr) | dqv ∈ DQV , dqa ∈ DQA ⋀ dr ∈ DR}` and `qc(dr1) = {dqv1, dqa1}` but we have redefined it as an operation in parallel to `Quality Assurance`, but which yields filtered subsets of a `Data Quality Assessment` rather than filtered subsets of a `DataResource`.
+`Quality Control` was originally expressed as `QC(dr) = {dqv(dr) ⋃ dqa(dr) | dqv ∈ DQV , dqa ∈ DQA ⋀ dr ∈ DR}` and `qc(dr1) = {dqv1, dqa1}` but we have redefined it as an operation in parallel to `Quality Assurance`, but which yields filtered subsets of a `Data Quality Report` rather than filtered subsets of a `DataResource`.
 
 ##### 4.4.4.7 Quality Assurance (normative)
 
