@@ -1706,7 +1706,8 @@ bdqtest:4c09f127-737b-4686-82a0-7c8e30841590-2025-03-06 a bdqffdq:Validation;
   bdqffdq:hasDataQualityDimension bdqdim:Conformance;
   dcterms:description "Can the taxon be unambiguously resolved from bdqval:sourceAuthority using the available taxon terms?";
   bdqffdq:hasCriterion bdqcrit:Unambiguous;
-  bdqffdq:hasActedUponInformationElement <urn:uuid:14496496-1aef-4fae-9468-9b9b158b8827>;
+  bdqffdq:hasActedUponInformationElement <urn:uuid:792ba89e-98b1-411d-abd9-a87b1350847e>;
+  bdqffdq:hasConsultedInformationElement <urn:uuid:c9f8f537-099e-41b0-8e31-74a6fa6248d2>;
   dcterms:issued "2025-03-06"^^xsd:date;
   dcterms:references <https://doi.org/10.15468/39omei>;
   skos:historyNote "https://github.com/tdwg/bdq/issues/70";
@@ -1717,15 +1718,19 @@ bdqtest:4c09f127-737b-4686-82a0-7c8e30841590-2025-03-06 a bdqffdq:Validation;
 bdqcrit:Unambiguous a bdqffdq:Criterion;
   rdfs:label "Unambiguous" .
 
-<urn:uuid:14496496-1aef-4fae-9468-9b9b158b8827> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf dwc:taxonID, dwc:scientificName, dwc:scientificNameID, dwc:acceptedNameUsageID,
-    dwc:originalNameUsageID, dwc:taxonConceptID, dwc:higherClassification, dwc:kingdom,
-    dwc:phylum, dwc:class, dwc:order, dwc:superfamily, dwc:family, dwc:subfamily, dwc:tribe,
-    dwc:subtribe, dwc:genus, dwc:genericName, dwc:subgenus, dwc:infragenericEpithet, dwc:specificEpithet,
-    dwc:infraspecificEpithet, dwc:cultivarEpithet, dwc:vernacularName, dwc:scientificNameAuthorship,
-    dwc:taxonRank;
-  rdfs:label "Information Element ActedUpon dwc:taxonID, dwc:scientificName, dwc:scientificNameID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID, dwc:higherClassification, dwc:kingdom, dwc:phylum, dwc:class, dwc:order, dwc:superfamily, dwc:family, dwc:subfamily, dwc:tribe, dwc:subtribe, dwc:genus, dwc:genericName, dwc:subgenus, dwc:infragenericEpithet, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:cultivarEpithet, dwc:vernacularName, dwc:scientificNameAuthorship, dwc:taxonRank";
-  skos:prefLabel "Information Element ActedUpon dwc:taxonID, dwc:scientificName, dwc:scientificNameID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID, dwc:higherClassification, dwc:kingdom, dwc:phylum, dwc:class, dwc:order, dwc:superfamily, dwc:family, dwc:subfamily, dwc:tribe, dwc:subtribe, dwc:genus, dwc:genericName, dwc:subgenus, dwc:infragenericEpithet, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:cultivarEpithet, dwc:vernacularName, dwc:scientificNameAuthorship, dwc:taxonRank" .
+<urn:uuid:792ba89e-98b1-411d-abd9-a87b1350847e> a bdqffdq:ActedUpon;
+  bdqffdq:composedOf dwc:scientificName, dwc:scientificNameID;
+  rdfs:label "Information Element ActedUpon dwc:scientificName, dwc:scientificNameID";
+  skos:prefLabel "Information Element ActedUpon dwc:scientificName, dwc:scientificNameID" .
+
+<urn:uuid:c9f8f537-099e-41b0-8e31-74a6fa6248d2> a bdqffdq:Consulted;
+  bdqffdq:composedOf dwc:taxonID, dwc:acceptedNameUsageID, dwc:originalNameUsageID,
+    dwc:taxonConceptID, dwc:higherClassification, dwc:kingdom, dwc:phylum, dwc:class,
+    dwc:order, dwc:superfamily, dwc:family, dwc:subfamily, dwc:tribe, dwc:subtribe, dwc:genus,
+    dwc:genericName, dwc:subgenus, dwc:infragenericEpithet, dwc:specificEpithet, dwc:infraspecificEpithet,
+    dwc:cultivarEpithet, dwc:vernacularName, dwc:scientificNameAuthorship, dwc:taxonRank;
+  rdfs:label "Information Element Consulted dwc:taxonID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID, dwc:higherClassification, dwc:kingdom, dwc:phylum, dwc:class, dwc:order, dwc:superfamily, dwc:family, dwc:subfamily, dwc:tribe, dwc:subtribe, dwc:genus, dwc:genericName, dwc:subgenus, dwc:infragenericEpithet, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:cultivarEpithet, dwc:vernacularName, dwc:scientificNameAuthorship, dwc:taxonRank";
+  skos:prefLabel "Information Element Consulted dwc:taxonID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID, dwc:higherClassification, dwc:kingdom, dwc:phylum, dwc:class, dwc:order, dwc:superfamily, dwc:family, dwc:subfamily, dwc:tribe, dwc:subtribe, dwc:genus, dwc:genericName, dwc:subgenus, dwc:infragenericEpithet, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:cultivarEpithet, dwc:vernacularName, dwc:scientificNameAuthorship, dwc:taxonRank" .
 
 <urn:uuid:55b60dd8-7054-4736-b9ac-88bef8967fb2> a bdqffdq:ValidationMethod;
   skos:note "Example Implementations: Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2025)",
@@ -2192,7 +2197,12 @@ bdqtest:81cc974d-43cc-4c0f-a5e0-afa23b455aa3-2025-03-06 a bdqffdq:Validation;
 <urn:uuid:79096434-5b55-40e1-9afb-e138a11f82ba> a bdqffdq:ValidationMethod;
   skos:note "Example Implementations: Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2025)",
     "Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L1459",
-    "TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE" .
+    "TG2 Validation NAME CODED Test VOCABULARY Conformance Parameterized CORE";
+  bdqffdq:hasSpecification <urn:uuid:ae08b4b4-89ba-4972-b51f-912b132bd006>;
+  skos:historyNote "Source: iDigBio";
+  rdfs:label "ValidationMethod: VALIDATION_ORDER_FOUND with Specification for: VALIDATION_ORDER_FOUND";
+  skos:prefLabel "ValidationMethod: VALIDATION_ORDER_FOUND with Specification for: VALIDATION_ORDER_FOUND";
+  bdqffdq:forValidation bdqtest:81cc974d-43cc-4c0f-a5e0-afa23b455aa3-2025-03-06 .
 
 <urn:uuid:ae08b4b4-89ba-4972-b51f-912b132bd006> a bdqffdq:Specification;
   skos:example "dwc:order=\"Lepidoptera\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:order has an equivalent at the rank of Order in the bdqval:sourceAuthority\"",
@@ -2207,12 +2217,6 @@ bdqtest:81cc974d-43cc-4c0f-a5e0-afa23b455aa3-2025-03-06 a bdqffdq:Validation;
   bdqffdq:hasArgumentValue "GBIF Backbone Taxonomy";
   rdfs:label "Default value for bdqval:sourceAuthority:\"GBIF Backbone Taxonomy\"";
   bdqffdq:hasParameter bdqval:sourceAuthority .
-
-<urn:uuid:79096434-5b55-40e1-9afb-e138a11f82ba> bdqffdq:hasSpecification <urn:uuid:ae08b4b4-89ba-4972-b51f-912b132bd006>;
-  skos:historyNote "Source: iDigBio";
-  rdfs:label "ValidationMethod: VALIDATION_ORDER_FOUND with Specification for: VALIDATION_ORDER_FOUND";
-  skos:prefLabel "ValidationMethod: VALIDATION_ORDER_FOUND with Specification for: VALIDATION_ORDER_FOUND";
-  bdqffdq:forValidation bdqtest:81cc974d-43cc-4c0f-a5e0-afa23b455aa3-2025-03-06 .
 
 bdqtest:ad0c8855-de69-4843-a80c-a5387d20fbc8-2025-03-06 a bdqffdq:Validation;
   bdqffdq:hasResourceType bdqffdq:SingleRecord;
@@ -3256,20 +3260,18 @@ bdqtest:b129fa4d-b25b-43f7-9645-5ed4d44b357b-2025-03-06 a bdqffdq:Amendment;
   bdqffdq:hasEnhancement bdqenh:Standardized;
   skos:note "If dwc:day contains text that may be interpreted as Roman numerals, the result will be NOT_AMENDED as this is not standard. Values such as \"3rd\" or \"12th\" can be interpreted as the integers \"3\" and \"12\". Text such as \"5th Friday\" is ambiguous.";
   bdqffdq:hasDataQualityDimension bdqdim:Conformance;
-  dcterms:description "Proposes an amendment to the value of dwc:day as an integer between 1 and 31 inclusive." .
-
-<urn:uuid:d7853c0b-2e3a-4bbf-89c6-89123ca626bf> a bdqffdq:ActedUpon;
-  bdqffdq:composedOf dwc:day;
-  rdfs:label "Information Element ActedUpon dwc:day";
-  skos:prefLabel "Information Element ActedUpon dwc:day" .
-
-bdqtest:b129fa4d-b25b-43f7-9645-5ed4d44b357b-2025-03-06 bdqffdq:hasActedUponInformationElement
-    <urn:uuid:d7853c0b-2e3a-4bbf-89c6-89123ca626bf>;
+  dcterms:description "Proposes an amendment to the value of dwc:day as an integer between 1 and 31 inclusive.";
+  bdqffdq:hasActedUponInformationElement <urn:uuid:d7853c0b-2e3a-4bbf-89c6-89123ca626bf>;
   dcterms:issued "2025-03-06"^^xsd:date;
   skos:historyNote "https://github.com/tdwg/bdq/issues/127";
   rdfs:label "AMENDMENT_DAY_STANDARDIZED";
   dcterms:isVersionOf bdqtest:b129fa4d-b25b-43f7-9645-5ed4d44b357b;
   skos:prefLabel "Amendment dwc:day Standardized for SingleRecord" .
+
+<urn:uuid:d7853c0b-2e3a-4bbf-89c6-89123ca626bf> a bdqffdq:ActedUpon;
+  bdqffdq:composedOf dwc:day;
+  rdfs:label "Information Element ActedUpon dwc:day";
+  skos:prefLabel "Information Element ActedUpon dwc:day" .
 
 <urn:uuid:c15d57ce-301c-4db0-8146-399cd59382ad> a bdqffdq:AmendmentMethod;
   skos:note "Example Implementations: Kurator/FilteredPush event_date_qc Library (Morris & Lowery 2025)",
@@ -5489,8 +5491,7 @@ bdqtest:478dee00-98d0-4154-b66c-eca64dbbf86d-2025-03-07 a bdqffdq:Measure;
   skos:note "TG2 Validation SPACE CODED Test VOCABULARY Consistency Parameterized CORE";
   bdqffdq:hasSpecification <urn:uuid:fcff1ad2-4469-4f4b-80b9-cbe82667682f>;
   skos:historyNote "Source: TG2";
-  rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_COORDINATESTERRESTRIALMARINE_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_QA_COORDINATESTERRESTRIALMARINE_CONSISTENT";
-  skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_COORDINATESTERRESTRIALMARINE_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_QA_COORDINATESTERRESTRIALMARINE_CONSISTENT" .
+  rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_COORDINATESTERRESTRIALMARINE_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_QA_COORDINATESTERRESTRIALMARINE_CONSISTENT" .
 
 <urn:uuid:fcff1ad2-4469-4f4b-80b9-cbe82667682f> a bdqffdq:Specification;
   skos:example "";
@@ -5498,6 +5499,8 @@ bdqtest:478dee00-98d0-4154-b66c-eca64dbbf86d-2025-03-07 a bdqffdq:Measure;
   bdqffdq:hasExpectedResponse "COMPLETE if every VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.";
   rdfs:label "Specification for: MULTIRECORD_MEASURE_QA_COORDINATESTERRESTRIALMARINE_CONSISTENT";
   dcterms:description "COMPLETE if every VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE." .
+
+<urn:uuid:2a044176-8820-4745-a797-9541c7e06ab2> skos:prefLabel "MeasurementMethod: MULTIRECORD_MEASURE_QA_COORDINATESTERRESTRIALMARINE_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_QA_COORDINATESTERRESTRIALMARINE_CONSISTENT" .
 
 bdqtest:b67f41f4-198c-41e9-9419-ba3919c1be8b-2025-03-07 a bdqffdq:Measure;
   bdqffdq:hasResourceType bdqffdq:MultiRecord;
@@ -7740,11 +7743,7 @@ bdqtest:a2be4734-0a93-46dc-af4a-e2125b47dbd4-2025-03-06 a bdqffdq:Measure;
   dcterms:description "Measure if all VALIDATION_CLASSIFICATION_CONSISTENT in a record set are COMPLIANT.";
   bdqffdq:hasActedUponInformationElement <urn:uuid:264375b3-9ecd-4a3e-bad2-e74fbab0dcf4>;
   dcterms:issued "2025-03-06"^^xsd:date;
-  dcterms:references <https://doi.org/10.1371/journal.pone.0178731>;
-  skos:historyNote "https://github.com/tdwg/bdq/issues/295";
-  rdfs:label "MULTIRECORD_MEASURE_QA_CLASSIFICATION_CONSISTENT";
-  dcterms:isVersionOf bdqtest:a2be4734-0a93-46dc-af4a-e2125b47dbd4;
-  skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation Classification Consistent for MultiRecord" .
+  dcterms:references <https://doi.org/10.1371/journal.pone.0178731> .
 
 <urn:uuid:264375b3-9ecd-4a3e-bad2-e74fbab0dcf4> a bdqffdq:ActedUpon;
   skos:note "Aggregated Response outcomes produced by VALIDATION_CLASSIFICATION_CONSISTENT across a MultiRecord.";
@@ -7752,6 +7751,11 @@ bdqtest:a2be4734-0a93-46dc-af4a-e2125b47dbd4-2025-03-06 a bdqffdq:Measure;
   bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes;
   rdfs:label "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_CLASSIFICATION_CONSISTENT.Response";
   skos:prefLabel "Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_CLASSIFICATION_CONSISTENT.Response" .
+
+bdqtest:a2be4734-0a93-46dc-af4a-e2125b47dbd4-2025-03-06 skos:historyNote "https://github.com/tdwg/bdq/issues/295";
+  rdfs:label "MULTIRECORD_MEASURE_QA_CLASSIFICATION_CONSISTENT";
+  dcterms:isVersionOf bdqtest:a2be4734-0a93-46dc-af4a-e2125b47dbd4;
+  skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation Classification Consistent for MultiRecord" .
 
 <urn:uuid:c5ab8254-22df-4d08-86e1-6633707ab22b> a bdqffdq:MeasurementMethod;
   bdqffdq:forMeasure bdqtest:a2be4734-0a93-46dc-af4a-e2125b47dbd4-2025-03-06;

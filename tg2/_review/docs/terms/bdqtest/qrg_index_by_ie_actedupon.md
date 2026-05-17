@@ -834,11 +834,6 @@ VALIDATION_TAXON_NOTEMPTY
 - [Quick Reference Guide](index.md#VALIDATION_TAXON_NOTEMPTY)
 - [Term List](../../list/bdqtest/index.md#bdqtest_06851339-843f-4a43-8422-4e61b9a00e75)
 
-VALIDATION_TAXON_UNAMBIGUOUS
-- Term IRI: https://rs.tdwg.org/bdqtest/terms/4c09f127-737b-4686-82a0-7c8e30841590
-- [Quick Reference Guide](index.md#VALIDATION_TAXON_UNAMBIGUOUS)
-- [Term List](../../list/bdqtest/index.md#bdqtest_4c09f127-737b-4686-82a0-7c8e30841590)
-
 
 ## dwc:phylum
 
@@ -856,11 +851,6 @@ VALIDATION_TAXON_NOTEMPTY
 - Term IRI: https://rs.tdwg.org/bdqtest/terms/06851339-843f-4a43-8422-4e61b9a00e75
 - [Quick Reference Guide](index.md#VALIDATION_TAXON_NOTEMPTY)
 - [Term List](../../list/bdqtest/index.md#bdqtest_06851339-843f-4a43-8422-4e61b9a00e75)
-
-VALIDATION_TAXON_UNAMBIGUOUS
-- Term IRI: https://rs.tdwg.org/bdqtest/terms/4c09f127-737b-4686-82a0-7c8e30841590
-- [Quick Reference Guide](index.md#VALIDATION_TAXON_UNAMBIGUOUS)
-- [Term List](../../list/bdqtest/index.md#bdqtest_4c09f127-737b-4686-82a0-7c8e30841590)
 
 
 ## dwc:class
@@ -880,11 +870,6 @@ VALIDATION_TAXON_NOTEMPTY
 - [Quick Reference Guide](index.md#VALIDATION_TAXON_NOTEMPTY)
 - [Term List](../../list/bdqtest/index.md#bdqtest_06851339-843f-4a43-8422-4e61b9a00e75)
 
-VALIDATION_TAXON_UNAMBIGUOUS
-- Term IRI: https://rs.tdwg.org/bdqtest/terms/4c09f127-737b-4686-82a0-7c8e30841590
-- [Quick Reference Guide](index.md#VALIDATION_TAXON_UNAMBIGUOUS)
-- [Term List](../../list/bdqtest/index.md#bdqtest_4c09f127-737b-4686-82a0-7c8e30841590)
-
 
 ## dwc:order
 
@@ -903,11 +888,6 @@ VALIDATION_TAXON_NOTEMPTY
 - [Quick Reference Guide](index.md#VALIDATION_TAXON_NOTEMPTY)
 - [Term List](../../list/bdqtest/index.md#bdqtest_06851339-843f-4a43-8422-4e61b9a00e75)
 
-VALIDATION_TAXON_UNAMBIGUOUS
-- Term IRI: https://rs.tdwg.org/bdqtest/terms/4c09f127-737b-4686-82a0-7c8e30841590
-- [Quick Reference Guide](index.md#VALIDATION_TAXON_UNAMBIGUOUS)
-- [Term List](../../list/bdqtest/index.md#bdqtest_4c09f127-737b-4686-82a0-7c8e30841590)
-
 
 ## dwc:superfamily
 
@@ -920,11 +900,6 @@ VALIDATION_TAXON_NOTEMPTY
 - Term IRI: https://rs.tdwg.org/bdqtest/terms/06851339-843f-4a43-8422-4e61b9a00e75
 - [Quick Reference Guide](index.md#VALIDATION_TAXON_NOTEMPTY)
 - [Term List](../../list/bdqtest/index.md#bdqtest_06851339-843f-4a43-8422-4e61b9a00e75)
-
-VALIDATION_TAXON_UNAMBIGUOUS
-- Term IRI: https://rs.tdwg.org/bdqtest/terms/4c09f127-737b-4686-82a0-7c8e30841590
-- [Quick Reference Guide](index.md#VALIDATION_TAXON_UNAMBIGUOUS)
-- [Term List](../../list/bdqtest/index.md#bdqtest_4c09f127-737b-4686-82a0-7c8e30841590)
 
 
 ## dwc:family
@@ -944,11 +919,6 @@ VALIDATION_TAXON_NOTEMPTY
 - [Quick Reference Guide](index.md#VALIDATION_TAXON_NOTEMPTY)
 - [Term List](../../list/bdqtest/index.md#bdqtest_06851339-843f-4a43-8422-4e61b9a00e75)
 
-VALIDATION_TAXON_UNAMBIGUOUS
-- Term IRI: https://rs.tdwg.org/bdqtest/terms/4c09f127-737b-4686-82a0-7c8e30841590
-- [Quick Reference Guide](index.md#VALIDATION_TAXON_UNAMBIGUOUS)
-- [Term List](../../list/bdqtest/index.md#bdqtest_4c09f127-737b-4686-82a0-7c8e30841590)
-
 
 ## dwc:subfamily
 
@@ -961,11 +931,6 @@ VALIDATION_TAXON_NOTEMPTY
 - Term IRI: https://rs.tdwg.org/bdqtest/terms/06851339-843f-4a43-8422-4e61b9a00e75
 - [Quick Reference Guide](index.md#VALIDATION_TAXON_NOTEMPTY)
 - [Term List](../../list/bdqtest/index.md#bdqtest_06851339-843f-4a43-8422-4e61b9a00e75)
-
-VALIDATION_TAXON_UNAMBIGUOUS
-- Term IRI: https://rs.tdwg.org/bdqtest/terms/4c09f127-737b-4686-82a0-7c8e30841590
-- [Quick Reference Guide](index.md#VALIDATION_TAXON_UNAMBIGUOUS)
-- [Term List](../../list/bdqtest/index.md#bdqtest_4c09f127-737b-4686-82a0-7c8e30841590)
 
 
 ## dwc:tribe
@@ -980,11 +945,6 @@ VALIDATION_TAXON_NOTEMPTY
 - [Quick Reference Guide](index.md#VALIDATION_TAXON_NOTEMPTY)
 - [Term List](../../list/bdqtest/index.md#bdqtest_06851339-843f-4a43-8422-4e61b9a00e75)
 
-VALIDATION_TAXON_UNAMBIGUOUS
-- Term IRI: https://rs.tdwg.org/bdqtest/terms/4c09f127-737b-4686-82a0-7c8e30841590
-- [Quick Reference Guide](index.md#VALIDATION_TAXON_UNAMBIGUOUS)
-- [Term List](../../list/bdqtest/index.md#bdqtest_4c09f127-737b-4686-82a0-7c8e30841590)
-
 
 ## dwc:subtribe
 
@@ -997,11 +957,6 @@ VALIDATION_TAXON_NOTEMPTY
 - Term IRI: https://rs.tdwg.org/bdqtest/terms/06851339-843f-4a43-8422-4e61b9a00e75
 - [Quick Reference Guide](index.md#VALIDATION_TAXON_NOTEMPTY)
 - [Term List](../../list/bdqtest/index.md#bdqtest_06851339-843f-4a43-8422-4e61b9a00e75)
-
-VALIDATION_TAXON_UNAMBIGUOUS
-- Term IRI: https://rs.tdwg.org/bdqtest/terms/4c09f127-737b-4686-82a0-7c8e30841590
-- [Quick Reference Guide](index.md#VALIDATION_TAXON_UNAMBIGUOUS)
-- [Term List](../../list/bdqtest/index.md#bdqtest_4c09f127-737b-4686-82a0-7c8e30841590)
 
 
 ## dwc:genus
@@ -1020,11 +975,6 @@ VALIDATION_TAXON_NOTEMPTY
 - Term IRI: https://rs.tdwg.org/bdqtest/terms/06851339-843f-4a43-8422-4e61b9a00e75
 - [Quick Reference Guide](index.md#VALIDATION_TAXON_NOTEMPTY)
 - [Term List](../../list/bdqtest/index.md#bdqtest_06851339-843f-4a43-8422-4e61b9a00e75)
-
-VALIDATION_TAXON_UNAMBIGUOUS
-- Term IRI: https://rs.tdwg.org/bdqtest/terms/4c09f127-737b-4686-82a0-7c8e30841590
-- [Quick Reference Guide](index.md#VALIDATION_TAXON_UNAMBIGUOUS)
-- [Term List](../../list/bdqtest/index.md#bdqtest_4c09f127-737b-4686-82a0-7c8e30841590)
 
 
 ## dwc:namePublishedInYear
@@ -1080,11 +1030,6 @@ VALIDATION_TAXON_NOTEMPTY
 - [Quick Reference Guide](index.md#VALIDATION_TAXON_NOTEMPTY)
 - [Term List](../../list/bdqtest/index.md#bdqtest_06851339-843f-4a43-8422-4e61b9a00e75)
 
-VALIDATION_TAXON_UNAMBIGUOUS
-- Term IRI: https://rs.tdwg.org/bdqtest/terms/4c09f127-737b-4686-82a0-7c8e30841590
-- [Quick Reference Guide](index.md#VALIDATION_TAXON_UNAMBIGUOUS)
-- [Term List](../../list/bdqtest/index.md#bdqtest_4c09f127-737b-4686-82a0-7c8e30841590)
-
 
 ## dwc:specificEpithet
 
@@ -1097,11 +1042,6 @@ VALIDATION_TAXON_NOTEMPTY
 - Term IRI: https://rs.tdwg.org/bdqtest/terms/06851339-843f-4a43-8422-4e61b9a00e75
 - [Quick Reference Guide](index.md#VALIDATION_TAXON_NOTEMPTY)
 - [Term List](../../list/bdqtest/index.md#bdqtest_06851339-843f-4a43-8422-4e61b9a00e75)
-
-VALIDATION_TAXON_UNAMBIGUOUS
-- Term IRI: https://rs.tdwg.org/bdqtest/terms/4c09f127-737b-4686-82a0-7c8e30841590
-- [Quick Reference Guide](index.md#VALIDATION_TAXON_UNAMBIGUOUS)
-- [Term List](../../list/bdqtest/index.md#bdqtest_4c09f127-737b-4686-82a0-7c8e30841590)
 
 
 ## dwc:infraspecificEpithet
@@ -1116,11 +1056,6 @@ VALIDATION_TAXON_NOTEMPTY
 - [Quick Reference Guide](index.md#VALIDATION_TAXON_NOTEMPTY)
 - [Term List](../../list/bdqtest/index.md#bdqtest_06851339-843f-4a43-8422-4e61b9a00e75)
 
-VALIDATION_TAXON_UNAMBIGUOUS
-- Term IRI: https://rs.tdwg.org/bdqtest/terms/4c09f127-737b-4686-82a0-7c8e30841590
-- [Quick Reference Guide](index.md#VALIDATION_TAXON_UNAMBIGUOUS)
-- [Term List](../../list/bdqtest/index.md#bdqtest_4c09f127-737b-4686-82a0-7c8e30841590)
-
 
 ## dwc:scientificNameAuthorship
 
@@ -1128,11 +1063,6 @@ VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY
 - Term IRI: https://rs.tdwg.org/bdqtest/terms/49f1d386-5bed-43ae-bd43-deabf7df64fc
 - [Quick Reference Guide](index.md#VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY)
 - [Term List](../../list/bdqtest/index.md#bdqtest_49f1d386-5bed-43ae-bd43-deabf7df64fc)
-
-VALIDATION_TAXON_UNAMBIGUOUS
-- Term IRI: https://rs.tdwg.org/bdqtest/terms/4c09f127-737b-4686-82a0-7c8e30841590
-- [Quick Reference Guide](index.md#VALIDATION_TAXON_UNAMBIGUOUS)
-- [Term List](../../list/bdqtest/index.md#bdqtest_4c09f127-737b-4686-82a0-7c8e30841590)
 
 
 ## dwc:scientificNameID
@@ -1175,11 +1105,6 @@ VALIDATION_TAXONRANK_STANDARD
 - [Quick Reference Guide](index.md#VALIDATION_TAXONRANK_STANDARD)
 - [Term List](../../list/bdqtest/index.md#bdqtest_7bdb13a4-8a51-4ee5-be7f-20693fdb183e)
 
-VALIDATION_TAXON_UNAMBIGUOUS
-- Term IRI: https://rs.tdwg.org/bdqtest/terms/4c09f127-737b-4686-82a0-7c8e30841590
-- [Quick Reference Guide](index.md#VALIDATION_TAXON_UNAMBIGUOUS)
-- [Term List](../../list/bdqtest/index.md#bdqtest_4c09f127-737b-4686-82a0-7c8e30841590)
-
 AMENDMENT_TAXONRANK_STANDARDIZED
 - Term IRI: https://rs.tdwg.org/bdqtest/terms/e39098df-ef46-464c-9aef-bcdeee2a88cb
 - [Quick Reference Guide](index.md#AMENDMENT_TAXONRANK_STANDARDIZED)
@@ -1193,11 +1118,6 @@ VALIDATION_TAXON_NOTEMPTY
 - [Quick Reference Guide](index.md#VALIDATION_TAXON_NOTEMPTY)
 - [Term List](../../list/bdqtest/index.md#bdqtest_06851339-843f-4a43-8422-4e61b9a00e75)
 
-VALIDATION_TAXON_UNAMBIGUOUS
-- Term IRI: https://rs.tdwg.org/bdqtest/terms/4c09f127-737b-4686-82a0-7c8e30841590
-- [Quick Reference Guide](index.md#VALIDATION_TAXON_UNAMBIGUOUS)
-- [Term List](../../list/bdqtest/index.md#bdqtest_4c09f127-737b-4686-82a0-7c8e30841590)
-
 
 ## dwc:acceptedNameUsageID
 
@@ -1205,11 +1125,6 @@ VALIDATION_TAXON_NOTEMPTY
 - Term IRI: https://rs.tdwg.org/bdqtest/terms/06851339-843f-4a43-8422-4e61b9a00e75
 - [Quick Reference Guide](index.md#VALIDATION_TAXON_NOTEMPTY)
 - [Term List](../../list/bdqtest/index.md#bdqtest_06851339-843f-4a43-8422-4e61b9a00e75)
-
-VALIDATION_TAXON_UNAMBIGUOUS
-- Term IRI: https://rs.tdwg.org/bdqtest/terms/4c09f127-737b-4686-82a0-7c8e30841590
-- [Quick Reference Guide](index.md#VALIDATION_TAXON_UNAMBIGUOUS)
-- [Term List](../../list/bdqtest/index.md#bdqtest_4c09f127-737b-4686-82a0-7c8e30841590)
 
 
 ## dwc:parentNameUsageID
@@ -1227,11 +1142,6 @@ VALIDATION_TAXON_NOTEMPTY
 - [Quick Reference Guide](index.md#VALIDATION_TAXON_NOTEMPTY)
 - [Term List](../../list/bdqtest/index.md#bdqtest_06851339-843f-4a43-8422-4e61b9a00e75)
 
-VALIDATION_TAXON_UNAMBIGUOUS
-- Term IRI: https://rs.tdwg.org/bdqtest/terms/4c09f127-737b-4686-82a0-7c8e30841590
-- [Quick Reference Guide](index.md#VALIDATION_TAXON_UNAMBIGUOUS)
-- [Term List](../../list/bdqtest/index.md#bdqtest_4c09f127-737b-4686-82a0-7c8e30841590)
-
 
 ## dwc:taxonConceptID
 
@@ -1239,11 +1149,6 @@ VALIDATION_TAXON_NOTEMPTY
 - Term IRI: https://rs.tdwg.org/bdqtest/terms/06851339-843f-4a43-8422-4e61b9a00e75
 - [Quick Reference Guide](index.md#VALIDATION_TAXON_NOTEMPTY)
 - [Term List](../../list/bdqtest/index.md#bdqtest_06851339-843f-4a43-8422-4e61b9a00e75)
-
-VALIDATION_TAXON_UNAMBIGUOUS
-- Term IRI: https://rs.tdwg.org/bdqtest/terms/4c09f127-737b-4686-82a0-7c8e30841590
-- [Quick Reference Guide](index.md#VALIDATION_TAXON_UNAMBIGUOUS)
-- [Term List](../../list/bdqtest/index.md#bdqtest_4c09f127-737b-4686-82a0-7c8e30841590)
 
 
 ## dwc:higherClassification
@@ -1253,11 +1158,6 @@ VALIDATION_TAXON_NOTEMPTY
 - [Quick Reference Guide](index.md#VALIDATION_TAXON_NOTEMPTY)
 - [Term List](../../list/bdqtest/index.md#bdqtest_06851339-843f-4a43-8422-4e61b9a00e75)
 
-VALIDATION_TAXON_UNAMBIGUOUS
-- Term IRI: https://rs.tdwg.org/bdqtest/terms/4c09f127-737b-4686-82a0-7c8e30841590
-- [Quick Reference Guide](index.md#VALIDATION_TAXON_UNAMBIGUOUS)
-- [Term List](../../list/bdqtest/index.md#bdqtest_4c09f127-737b-4686-82a0-7c8e30841590)
-
 
 ## dwc:subgenus
 
@@ -1265,11 +1165,6 @@ VALIDATION_TAXON_NOTEMPTY
 - Term IRI: https://rs.tdwg.org/bdqtest/terms/06851339-843f-4a43-8422-4e61b9a00e75
 - [Quick Reference Guide](index.md#VALIDATION_TAXON_NOTEMPTY)
 - [Term List](../../list/bdqtest/index.md#bdqtest_06851339-843f-4a43-8422-4e61b9a00e75)
-
-VALIDATION_TAXON_UNAMBIGUOUS
-- Term IRI: https://rs.tdwg.org/bdqtest/terms/4c09f127-737b-4686-82a0-7c8e30841590
-- [Quick Reference Guide](index.md#VALIDATION_TAXON_UNAMBIGUOUS)
-- [Term List](../../list/bdqtest/index.md#bdqtest_4c09f127-737b-4686-82a0-7c8e30841590)
 
 
 ## dwc:infragenericEpithet
@@ -1279,11 +1174,6 @@ VALIDATION_TAXON_NOTEMPTY
 - [Quick Reference Guide](index.md#VALIDATION_TAXON_NOTEMPTY)
 - [Term List](../../list/bdqtest/index.md#bdqtest_06851339-843f-4a43-8422-4e61b9a00e75)
 
-VALIDATION_TAXON_UNAMBIGUOUS
-- Term IRI: https://rs.tdwg.org/bdqtest/terms/4c09f127-737b-4686-82a0-7c8e30841590
-- [Quick Reference Guide](index.md#VALIDATION_TAXON_UNAMBIGUOUS)
-- [Term List](../../list/bdqtest/index.md#bdqtest_4c09f127-737b-4686-82a0-7c8e30841590)
-
 
 ## dwc:vernacularName
 
@@ -1292,11 +1182,6 @@ VALIDATION_TAXON_NOTEMPTY
 - [Quick Reference Guide](index.md#VALIDATION_TAXON_NOTEMPTY)
 - [Term List](../../list/bdqtest/index.md#bdqtest_06851339-843f-4a43-8422-4e61b9a00e75)
 
-VALIDATION_TAXON_UNAMBIGUOUS
-- Term IRI: https://rs.tdwg.org/bdqtest/terms/4c09f127-737b-4686-82a0-7c8e30841590
-- [Quick Reference Guide](index.md#VALIDATION_TAXON_UNAMBIGUOUS)
-- [Term List](../../list/bdqtest/index.md#bdqtest_4c09f127-737b-4686-82a0-7c8e30841590)
-
 
 ## dwc:cultivarEpithet
 
@@ -1304,11 +1189,6 @@ VALIDATION_TAXON_NOTEMPTY
 - Term IRI: https://rs.tdwg.org/bdqtest/terms/06851339-843f-4a43-8422-4e61b9a00e75
 - [Quick Reference Guide](index.md#VALIDATION_TAXON_NOTEMPTY)
 - [Term List](../../list/bdqtest/index.md#bdqtest_06851339-843f-4a43-8422-4e61b9a00e75)
-
-VALIDATION_TAXON_UNAMBIGUOUS
-- Term IRI: https://rs.tdwg.org/bdqtest/terms/4c09f127-737b-4686-82a0-7c8e30841590
-- [Quick Reference Guide](index.md#VALIDATION_TAXON_UNAMBIGUOUS)
-- [Term List](../../list/bdqtest/index.md#bdqtest_4c09f127-737b-4686-82a0-7c8e30841590)
 
 
 ## nan

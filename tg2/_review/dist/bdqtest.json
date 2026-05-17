@@ -7526,7 +7526,12 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement": [
             {
-                "@id": "urn:uuid:14496496-1aef-4fae-9468-9b9b158b8827"
+                "@id": "urn:uuid:9dc0bd31-dac6-41c8-8349-9023da428ebd"
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasConsultedInformationElement": [
+            {
+                "@id": "urn:uuid:37035746-0191-4609-9a68-2549f30a03d8"
             }
         ],
         "http://purl.org/dc/terms/issued": [
@@ -7573,19 +7578,37 @@
         ]
     },
     {
-        "@id": "urn:uuid:14496496-1aef-4fae-9468-9b9b158b8827",
+        "@id": "urn:uuid:9dc0bd31-dac6-41c8-8349-9023da428ebd",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/ActedUpon"
         ],
         "https://rs.tdwg.org/bdqffdq/terms/composedOf": [
             {
-                "@id": "http://rs.tdwg.org/dwc/terms/taxonID"
-            },
-            {
                 "@id": "http://rs.tdwg.org/dwc/terms/scientificName"
             },
             {
                 "@id": "http://rs.tdwg.org/dwc/terms/scientificNameID"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "Information Element ActedUpon dwc:scientificName, dwc:scientificNameID"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Information Element ActedUpon dwc:scientificName, dwc:scientificNameID"
+            }
+        ]
+    },
+    {
+        "@id": "urn:uuid:37035746-0191-4609-9a68-2549f30a03d8",
+        "@type": [
+            "https://rs.tdwg.org/bdqffdq/terms/Consulted"
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/composedOf": [
+            {
+                "@id": "http://rs.tdwg.org/dwc/terms/taxonID"
             },
             {
                 "@id": "http://rs.tdwg.org/dwc/terms/acceptedNameUsageID"
@@ -7659,12 +7682,12 @@
         ],
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
-                "@value": "Information Element ActedUpon dwc:taxonID, dwc:scientificName, dwc:scientificNameID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID, dwc:higherClassification, dwc:kingdom, dwc:phylum, dwc:class, dwc:order, dwc:superfamily, dwc:family, dwc:subfamily, dwc:tribe, dwc:subtribe, dwc:genus, dwc:genericName, dwc:subgenus, dwc:infragenericEpithet, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:cultivarEpithet, dwc:vernacularName, dwc:scientificNameAuthorship, dwc:taxonRank"
+                "@value": "Information Element Consulted dwc:taxonID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID, dwc:higherClassification, dwc:kingdom, dwc:phylum, dwc:class, dwc:order, dwc:superfamily, dwc:family, dwc:subfamily, dwc:tribe, dwc:subtribe, dwc:genus, dwc:genericName, dwc:subgenus, dwc:infragenericEpithet, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:cultivarEpithet, dwc:vernacularName, dwc:scientificNameAuthorship, dwc:taxonRank"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
             {
-                "@value": "Information Element ActedUpon dwc:taxonID, dwc:scientificName, dwc:scientificNameID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID, dwc:higherClassification, dwc:kingdom, dwc:phylum, dwc:class, dwc:order, dwc:superfamily, dwc:family, dwc:subfamily, dwc:tribe, dwc:subtribe, dwc:genus, dwc:genericName, dwc:subgenus, dwc:infragenericEpithet, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:cultivarEpithet, dwc:vernacularName, dwc:scientificNameAuthorship, dwc:taxonRank"
+                "@value": "Information Element Consulted dwc:taxonID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID, dwc:higherClassification, dwc:kingdom, dwc:phylum, dwc:class, dwc:order, dwc:superfamily, dwc:family, dwc:subfamily, dwc:tribe, dwc:subtribe, dwc:genus, dwc:genericName, dwc:subgenus, dwc:infragenericEpithet, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:cultivarEpithet, dwc:vernacularName, dwc:scientificNameAuthorship, dwc:taxonRank"
             }
         ]
     },
