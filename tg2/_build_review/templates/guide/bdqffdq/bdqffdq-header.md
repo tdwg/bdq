@@ -822,6 +822,9 @@ The following changes have been made to the original formulation:
 - `Criterion in Context` renamed `Validation`.
 - `Enhancement in Context` renamed `Amendment`.
 - `Assertion` renamed `Response`.
+- A new definition for 'Quality Assurance' as an operation reflecting current practice rather than as a set of tests.
+- A new definition for 'Quality Control' as an operation reflecting current practice rather than as a set of tests.
+- A 
 
 The Fitness For Use Framework ontology is framed with limited constraints and no `rdfs:range` axioms. Under open world principles, it could be used in ways other than the constraints framed by this mathematical formulation, but this formulation SHOULD be treated as a guide for how to phrase `Responses` using `bdqffdq:` terms, and how a set of `Responses` made with those terms SHOULD be queried.
 
@@ -930,13 +933,19 @@ Note: `Issue` concepts would parallel `Validation` concepts, but are not shown f
 
 ##### 4.4.2.7 Acceptable Data Quality Measure (normative)
 
-     MEaq(me) = {va | me ∈ VA ⋀ va ⊂ ME}
+The original formulation of this was `MEaq(me) = {va | me ∈ VA ⋀ va ⊂ ME}` ` meaq(me1) = {va1, va2}` and was intended to express the idea that a `Validation` can be expressed as a `Measure` that returns `COMPLETE` or `NOT_COMPLETE`, with an example _For the `Measure` coordinate completeness in a dataset, acceptable quality is met by all records having coordinates COMPLETE._
 
-     meaq(me1) = {va1, va2}
+We have redefined this concept to more clearly express how `Measures` can be used as a filter in `QualityAssurance`: 
 
-* For the `Measure` coordinate completeness in a dataset, acceptable quality is met by all records having coordinates COMPLETE.
+Let `MEaq(u)` be the set of `Multi Record` `Measures` in the `Measurement Policy` for a `Use Case` `u` that are intended for `QualityAssurance`, that is, `Measures` whose `Response.result` is interpreted categorically as either `COMPLETE` or `NOT_COMPLETE`.
 
-Note: This is a representation of the `Multi Record` `Measures` that return COMPLETE/NOT_COMPLETE.
+    MEaq(u) = { me | me ⊂ ME ⋀ me ∈ mp(u) ⋀ u ∈ U ⋀ resultType(me) = categorical }
+
+    meaq(u1) = {me1, me2}
+
+* For a Use Case, acceptable quality is met by all records having all categorical (COMPLETE/NOT_COMPLETE) `Measures` reporting COMPLETE.
+
+In the initial BDQ Tests, for a `Use Case`, `MEaq(u)` is the set of `Multi Record` `Measures` that define whether a filtered record set is acceptable for `QualityAssurance`, named with the convention `MULTIRECORD_MEASURE_QA_`.
 
 ##### 4.4.2.8 Improvement Target (normative)
 
@@ -997,19 +1006,48 @@ Note: This is a representation of the `Multi Record` `Measures` that return COMP
 * An `Amendment` is proposed to replace the current value of the `dwc:scientificName` by the value "Apis" because Apis is the most similar valid name based on the Levenshtein distance in the Catalog of Life database using the software DwC-A Validator 2.0.
 
 ##### 4.4.4.5 Data Quality Assessment (normative)
+
      A(dr) = {dqm(dr) ⋃ dqv(dr) ⋃ dqa(dr) | dqm ∈ DQM, dqv ∈ DQV , dqa ∈ DQA ⋀ dr ∈ DR}
 
      a(dr1) = {dqm1, dqm2, dqm3, dqv1, dqa1}
 
 ##### 4.4.4.6 Quality Control (normative)
-     QC(dr) = {dqv(dr) ⋃ dqa(dr) | dqv ∈ DQV , dqa ∈ DQA ⋀ dr ∈ DR}
 
-     qc(dr1) = {dqv1, dqa1}
+`QualityControl` is an operation on a `Data Quality Assessment` and a `Use Case` that yields the set of filtered subsets of that assessment that are relevant to identifying, summarizing, prioritizing, or proposing remediation of data quality problems for that `Use Case`.
+
+Let `a ∈ A(dr)` be a `Data Quality Assessment` for a `DataResource` `dr`, and let `a'` be a filtered subset of that assessment, that is, a subset of the `MeasureResponse`, `ValidationResponse`, and `AmendmentResponse` elements in `a` selected for their relevance to `QualityControl` for a specified `Use Case` `u`.
+
+    QC(a, u) = { a' | a' ⊆ a ⋀ a ∈ A(dr) ⋀ u ∈ U ⋀ ∀ x ∈ a', x is 
+    QC(a, u) = { a' | a' ⊆ a ⋀ a ∈ A(dr) ⋀ u ∈ U ⋀ ∀ x ∈ a',
+       (x is a `ValidationResponse` with `Response.result` = `NOT_COMPLIANT`)
+     ⋁ (x is an `AmendmentResponse` with `Response.status` = `FILLED_IN` or `AMENDED`)
+     ⋁ (x is an `IssueResponse` with `Response.result` = `POTENTIAL_ISSUE`)
+     ⋁ (x is a `MeasurementResponse` with a numeric `Response.result`)
+    }
+
+    qc(a1, u1) = {a1', a2'}
+
+where `a` is a `Data Quality Assessment`, `a'` is a filtered subset of that assessment, and `x` is an element of that assessment, such as a `MeasurementResponse`, `ValidationResponse`, or `AmendmentResponse`, selected because it supports `QualityControl` for the specified `Use Case`.
+
+* `QualityControl` yields filtered subsets of a `Data Quality Assessment` that can be used to identify and prioritize data cleanup, evaluate potential amendments, and guide improvements to data management processes and systems.
+
+Quality Control was originally expressed as `QC(dr) = {dqv(dr) ⋃ dqa(dr) | dqv ∈ DQV , dqa ∈ DQA ⋀ dr ∈ DR}` and `qc(dr1) = {dqv1, dqa1}' but we have redefined it as an operation in paralell to Quality Assurance, but which yields filtered subsets of a `Data Quality Assessment` rather than filtered subsets of a `DataResource`.
 
 ##### 4.4.4.7 Quality Assurance (normative)
-     QA(dr) = {dqv(dr) | dqv ∈ DQV ⋀ dr ∈ DR}
 
-     qa(dr1) = {dqv1, dqv2}
+`QualityAssurance` is an operation on a `DataResource` and a `Use Case` that yields the set of filtered `DataResource` subsets that satisfy all `Multi Record` `Measures` used for `QualityAssurance` for that `Use Case`.
+
+Let `MEaq(u)` be the set of `Multi Record` `Measures` used for `QualityAssurance` for `Use Case` `u`, as defined above. Let `dr'` be a filtered `DataResource`, that is, a `Multi Record` subset of `dr`.
+
+    QA(dr, u) = { dr' | dr' ⊆ dr ⋀ dr ∈ DR ⋀ u ∈ U ⋀ ∀ me ∈ MEaq(u), dqm(dr') = < me, s, m, r > ⋀ r = COMPLETE }
+
+    qa(dr1, u1) = { dr1' | dr1' ⊆ dr1 ⋀ ∀ me ∈ MEaq(u1), dqm(dr1') = < me, s, m, r > ⋀ r = COMPLETE }
+
+where `dr'` is a filtered `DataResource`, `me` is a `Multi Record` `Measure` used for `QualityAssurance`, `dqm(dr')` is a `MeasurementResponse` on `dr'`, and `r = COMPLETE` means that the `Response.result` for that `Measure` on that filtered `DataResource` is `COMPLETE`.
+
+* `QualityAssurance` yields those filtered subsets of a `Multi Record` `DataResource` for which all relevant `Multi Record` `Measures` report `COMPLETE`.
+
+In the original formulation, Quality Assurance was expressed as a set of `Validations`: `QA(dr) = {dqv(dr) | dqv ∈ DQV ⋀ dr ∈ DR}` and `qa(dr1) = {dqv1, dqv2}` but we have redefined it as an operation in which `Measures` can be used as a filter.
 
 ## 5 Term index (non-normative)
 
