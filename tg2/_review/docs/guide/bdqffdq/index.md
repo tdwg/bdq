@@ -92,6 +92,8 @@ Draft Standard for Review
   - [4.1 Fundamental Concepts (normative)](#41-fundamental-concepts-normative)
   - [4.2 Properties (normative)](#42-properties-normative)
   - [4.3 Notation (normative)](#43-notation-normative)
+    - [4.3.1 Use of upper and lower case symbols (normative)](#431-use-of-upper-and-lower-case-symbols-normative)
+    - [4.3.2 Explanation of some set theoretic concepts (non-normative)](#432-explanation-of-some-set-theoretic-concepts-non-normative)
   - [4.4 Derived Concepts (normative)](#44-derived-concepts-normative)
     - [4.4.1 General (normative)](#441-general-normative)
       - [4.4.1.1 Validation (normative)](#4411-validation-normative)
@@ -920,7 +922,8 @@ The following changes have been made to the original formulation:
 - `Assertion` renamed `Response`.
 - A new definition for 'Quality Assurance' as an operation reflecting current practice rather than as a set of tests.
 - A new definition for 'Quality Control' as an operation reflecting current practice rather than as a set of tests.
-- A 
+- A new definition is provided for `Acceptable Data Quality Measure` to support the use of `bdqffdq:Measure` for both `Quality Assurance` and `Quality Control` purposes.
+
 
 The Fitness For Use Framework ontology is framed with limited constraints and no `rdfs:range` axioms. Under open world principles, it could be used in ways other than the constraints framed by this mathematical formulation, but this formulation SHOULD be treated as a guide for how to phrase `Responses` using `bdqffdq:` terms, and how a set of `Responses` made with those terms SHOULD be queried.
 
@@ -940,17 +943,46 @@ The Fitness For Use Framework ontology is framed with limited constraints and no
 * sr = instance of `Single Record` 
 * ds = instance of `Multi Record` (dataset)
 * V = Data Resource Value
-* R = `Response` (result from a `Mechanism`, of `Validation`, `Measurement`, `Improvement` on a Resource).
+* R = `Response` (result from a `Mechanism`, of `Validation`, `Issue`, `Measurement`, or `Amendment` on a Resource).
 
 ### 4.3 Notation (normative)
 * X: Domain (Uppercase symbols) 
 * x: instance (lowercase symbols)
-* { } set
-* < > tuple	
+* = equal to
+* { } set (unordered collection of one or more elements)
+* < > tuple	 (ordered grouping of elements taken together as a single instance)
 * ⋃ union
+* ⊂ subset of
+* ⊆ subset of or equal to
 * ∁ complement
 * ⋀ and (logical conjunction)
+* ⋁ or (logical disjunction)
+* ∀ for all
+* ∃ there exists
 * ∈ is a member of
+
+#### 4.3.1 Use of upper and lower case symbols (normative)
+
+Section 4 follows the notation style used in Appendix A of Veiga (2016), which uses set-theoretic symbols in a way that differs from some common mathematical practice. In particular, uppercase symbols denote domains (sets of instances of a concept), while lowercase symbols may denote either a single instance of that domain or, in some expressions, a subset of instances of that domain.
+
+In this notation:
+- `x ∈ X` means that `x` is a single instance (member) of the domain `X`.
+- `x ⊂ X` means that `x` is a subset of instances drawn from the domain `X`.
+
+Thus, expressions such as `VP(u) = {va | va ⊂ VA ⋀ u ∈ U }` and `VM(va) = {s | s ⊂ S ⋀ va ∈ VA}` should be read as defining sets of subsets or selections of instances from the relevant domain, following the convention of the source formalization, rather than as using `⊂` in the narrower sense of only a proper subset relation between named sets.
+
+This notation is retained here in order to preserve consistency with the original mathematical formalization while adapting it to the BDQ framework and ontology.
+
+#### 4.3.2 Explanation of some set theoretic concepts (non-normative)
+
+The following brief explanations are intended to help readers interpret the notation used in this discussion of the mathematical formalization of the Fitness For Use Framework.
+
+* Braces `{ }` denote a **set**, that is, an unordered collection of one or more elements, while angle brackets `< >` denote a **tuple**, that is, an ordered grouping of elements taken together as a single instance. Thus `{a, b}` and `{b, a}` denote the same set, but `<a, b>` and `<b, a>` denote different tuples because the order of the elements is significant in a tuple.
+* Uppercase symbols such as `U`, `ME`, or `DR` denote a **domain**, that is, the set of all instances of some concept, while lowercase symbols such as `u`, `me`, or `dr` denote a particular **instance**, or in some expressions a subset of instances, drawn from that domain.
+* The symbol `∈` means “is a member of”, so `x ∈ X` means that `x` is a single instance in the domain `X`. The symbol `⊂` means “is a subset of”, so `x ⊂ X` means that `x` is a subset drawn from the domain `X` rather than a single instance.
+* An expression of the form `{ x | condition }` is **set-builder notation**, meaning “the set of all `x` such that the stated condition holds”.
+* Expressions such as `VIE(u)`, `QA(dr, u)`, or `QC(a, u)` should be read as named constructions that depend on the values in parentheses. For example, `VIE(u)` means the Valuable `Information Elements` for a particular `Use Case` `u`, and `QA(dr, u)` means `QualityAssurance` for a particular `DataResource` `dr` and `Use Case` `u`.
+* The symbol `∀` means “for all”, and the symbol `∃` means “there exists”. For example, `∀ me ∈ MEaq(u)` means “for every `Measure` in `MEaq(u)`”, while `∃ dqm ∈ DQM(dr')` means “there exists a `MeasurementResponse` in `DQM(dr')`”.
 
 ### 4.4 Derived Concepts (normative)
 #### 4.4.1 General (normative)
@@ -965,11 +997,9 @@ The Fitness For Use Framework ontology is framed with limited constraints and no
 
     IS = { is | is = < ie, c, rt >, ie ∈ IE, c ∈ ∁C ⋀ rt ∈ RT }
 
-    is1 = { < ie1, c1, rt1 >}
+    is1 = < ie1, c1, rt1 >
 
 * "Potential issue if geographic coordinate is at 0,0"
-
-Note: `Issue` concepts would parallel `Validation` concepts, but are not fully shown further here.
 
 ##### 4.4.1.3 Measure (normative)
     ME = { me | me =< ie, d, rt >, ie ∈ IE, d ∈ D ⋀ rt ∈ RT }
@@ -982,7 +1012,7 @@ Note: `Issue` concepts would parallel `Validation` concepts, but are not fully s
 
     AM = { am | am = < ie, e, rt >, ie ∈ IE, e ∈ E ⋀ rt ∈ RT }
 
-    am1 = { < ie1, e1, rt1 >}
+    am1 = < ie1, e1, rt1 >
 
 * "Recommend valid value for taxon name in single record"
 
@@ -1023,7 +1053,7 @@ Note: `Issue` concepts would parallel `Validation` concepts, but are not fully s
 
 ##### 4.4.2.6 Valuable Information Elements (normative)
 
-     VIE(u) = {ie | ie ⊂ I E ⋀ u ∈ U }
+     VIE(u) = {ie | ie ⊂ IE ⋀ u ∈ U }
 
 * For a `Use Case`, what `Information Elements` are valuable.
 
@@ -1032,6 +1062,10 @@ Note: `Issue` concepts would parallel `Validation` concepts, but are not fully s
 The original formulation of this was `MEaq(me) = {va | me ∈ VA ⋀ va ⊂ ME}` ` meaq(me1) = {va1, va2}` and was intended to express the idea that a `Validation` can be expressed as a `Measure` that returns `COMPLETE` or `NOT_COMPLETE`, with an example _For the `Measure` coordinate completeness in a dataset, acceptable quality is met by all records having coordinates COMPLETE._
 
 We have redefined this concept to more clearly express how `Measures` can be used as a filter in `QualityAssurance`: 
+
+Let `resultType(x)` denote the type of `Response.result` expected from execution of a Test or `Measure` `x`.
+- `resultType(x) = categorical` means that the `Response.result` is drawn from a controlled set of named values, such as `COMPLETE` or `NOT_COMPLETE`.
+- `resultType(x) = numeric` means that the `Response.result` is a literal numeric value.
 
 Let `MEaq(u)` be the set of `Multi Record` `Measures` in the `Measurement Policy` for a `Use Case` `u` that are intended for `QualityAssurance`, that is, `Measures` whose `Response.result` is interpreted categorically as either `COMPLETE` or `NOT_COMPLETE`.
 
@@ -1050,6 +1084,12 @@ In the initial BDQ Tests, for a `Use Case`, `MEaq(u)` is the set of `Multi Recor
     it(am1) = {me1, va2}
 
 * Recommending coordinates based on textual locality improves the coordinate completeness of `Single Records` and may result in compliance with the `Criterion` dataset must have all records with coordinates.
+
+The `ImprovementTarget` concept is intended to express that an `Amendment` may support improvement in more than one way. In particular, an `Amendment` may improve one or more `Measures` of data quality and may also help satisfy one or more `Validations`. The expression for `IT(am)` should therefore be read as identifying the set of `Data Quality Needs` that may be improved, satisfied, or brought closer to compliance through acceptance of the proposals made by a given `Amendment`.
+
+In this notation, the use of union indicates that the `ImprovementTarget` for an `Amendment` may include elements drawn from both the domain of `Measure` and the domain of `Validation`. Thus, `IT(am)` identifies those `Measures` and `Validations` for which acceptance of the `Amendment` may improve the fitness for use of the data.
+
+This formalization SHOULD NOT block the framing of `Amendments` that propose changes to processes or other things outside the scope of a data set.
 
 #### 4.4.3 Data Quality Solutions (normative)
 ##### 4.4.3.1 Validation Method (normative)
@@ -1098,6 +1138,7 @@ and IssueResponse:
 * A DQ `Issue` asserts that there is a POTENTIAL_ISSUE with the `Issue` "Data Generalizations should be empty" for a specific species `dwc:Occurrence` because the field `dwc:dataGeneralizations` of the record was not empty.
 
 ##### 4.4.4.3 MeasurementResponse (normative)
+
      DQM(dr) = {dqm | dqm =< me, s, m, r >, me ∈ ME, s ∈ S, m ∈ M , r ∈ R ⋀ dr ∈ DR}
      
      dqm(dr1) = {< me1, s1, m1, r1 >}
@@ -1105,6 +1146,7 @@ and IssueResponse:
 * Coordinate numerical precision of the dataset 3cc6171e-8c52-4f65-ad7a-32c74e395f29 is 6.16 and this value was assigned by the software DwC-A Validator 2.0 which calculated the value by the average of significant digits of each record of the dataset.
 
 ##### 4.4.4.4 AmendmentResponse (normative)
+
      DQA(dr) = {dqa | dqa = < am, s, m, r >, am ∈ AM, s ∈ S, m ∈ M , r ∈ R ⋀ dr ∈ DR}
 
      dqa(dr1) = {< am1, s1, m1, r1 >}
@@ -1117,22 +1159,30 @@ and IssueResponse:
 
      a(dr1) = {dqm1, dqm2, dqm3, dqv1, dqi1, dqa1}
 
+A `Data Quality Assessment` is the set of `MeasurementResponse`, `ValidationResponse`, `IssueResponse`, and `AmendmentResponse` elements associated with a `DataResource`, and is the report-level basis for assessing fitness for use and for performing `QualityControl`.
+
 ##### 4.4.4.6 Quality Control (normative)
 
 `QualityControl` is an operation on a `Data Quality Assessment` and a `Use Case` that yields the set of filtered subsets of that assessment that are relevant to identifying, summarizing, prioritizing, or proposing remediation of data quality problems for that `Use Case`.
 
 Let `a ∈ A(dr)` be a `Data Quality Assessment` for a `DataResource` `dr`, and let `a'` be a filtered subset of that assessment, that is, a subset of the `MeasureResponse`, `ValidationResponse`, `IssueResponse` and `AmendmentResponse` elements in `a` selected for their relevance to `QualityControl` for a specified `Use Case` `u`.
 
+Let `result(x)` denote the value of `Response.result` for a report element `x`: 
+- `result(x)` is the outcome asserted by the `Response`, which may be categorical (for example `COMPLIANT`, `NOT_COMPLIANT`, `POTENTIAL_ISSUE`, `COMPLETE`, `NOT_COMPLETE`) or literal (for example a numeric value or a structured amendment payload).
+Let `status(x)` denote the value of `Response.status` for a report element `x`, where `x` is an element of a `Data Quality Assessment`.
+- `status(x)` is the execution status asserted by the `Response`, indicating whether the Test run produced a result or why it did not, or, for `AmendmentResponse`, whether the Test resulted in a change state such as `FILLED_IN` or `AMENDED`.
+Also, resultType(x) is the type of `Response.result` for a report element `x`, as defined above in Section[4.4.2.7](#4427-acceptable-data-quality-measure-normative).
+
     QC(a, u) = { a' | a' ⊆ a ⋀ a ∈ A(dr) ⋀ u ∈ U ⋀ ∀ x ∈ a',
-       (x is a `ValidationResponse` with `Response.result` = `NOT_COMPLIANT`)
-     ⋁ (x is an `AmendmentResponse` with `Response.status` = `FILLED_IN` or `AMENDED`)
-     ⋁ (x is an `IssueResponse` with `Response.result` = `POTENTIAL_ISSUE`)
-     ⋁ (x is a `MeasurementResponse` with a numeric `Response.result`)
+       (x ∈ DQV(dr) ⋀ result(x) = NOT_COMPLIANT)
+     ⋁ (x ∈ DQA(dr) ⋀ status(x) ∈ {FILLED_IN, AMENDED})
+     ⋁ (x ∈ DQI(dr) ⋀ result(x) = POTENTIAL_ISSUE)
+     ⋁ (x ∈ DQM(dr) ⋀ resultType(x) = numeric)
     }
 
     qc(a1, u1) = {a1', a2'}
 
-where `a` is a `Data Quality Assessment`, `a'` is a filtered subset of that assessment, and `x` is an element of that assessment, such as a `MeasurementResponse`, `ValidationResponse`, or `AmendmentResponse`, selected because it supports `QualityControl` for the specified `Use Case`.
+where `a` is a `Data Quality Assessment`, `a'` is a filtered subset of that assessment, and `x` is an element of that assessment, such as a `MeasurementResponse`, `ValidationResponse`, `IssueResponse`, or `AmendmentResponse`, selected because it supports `QualityControl` for the specified `Use Case`.
 
 * `QualityControl` yields filtered subsets of a `Data Quality Assessment` that can be used to identify and prioritize data cleanup, evaluate potential amendments, and guide improvements to data management processes and systems.
 
@@ -1144,9 +1194,9 @@ where `a` is a `Data Quality Assessment`, `a'` is a filtered subset of that asse
 
 Let `MEaq(u)` be the set of `Multi Record` `Measures` used for `QualityAssurance` for `Use Case` `u`, as defined above. Let `dr'` be a filtered `DataResource`, that is, a `Multi Record` subset of `dr`.
 
-    QA(dr, u) = { dr' | dr' ⊆ dr ⋀ dr ∈ DR ⋀ u ∈ U ⋀ ∀ me ∈ MEaq(u), ∃ dqm ∈ DQM(dr') ( dqm = < me, s, m, r > ⋀ r = COMPLETE )
+    QA(dr, u) = { dr' | dr' ⊆ dr ⋀ dr ∈ DR ⋀ u ∈ U ⋀ ∀ me ∈ MEaq(u), ∃ dqm ∈ DQM(dr') ( dqm = < me, s, m, r > ⋀ r = COMPLETE ) }
 
-    qa(dr1, u1) = { dr1' | dr1' ⊆ dr1 ⋀ ∀ me ∈ MEaq(u1), dqm(dr1') = < me, s, m, r > ⋀ r = COMPLETE }
+    qa(dr1, u1) = { dr1' | dr1' ⊆ dr1 ⋀ dr1 ∈ DR ⋀ u1 ∈ U ⋀ ∀ me ∈ MEaq(u1), ∃ dqm ∈ DQM(dr1') ( dqm = < me, s, m, r > ⋀ r = COMPLETE ) }
 
 where `dr'` is a filtered `DataResource`, `me` is a `Multi Record` `Measure` used for `QualityAssurance`, `dqm(dr')` is a `MeasurementResponse` on `dr'`, and `r = COMPLETE` means that the `Response.result` for that `Measure` on that filtered `DataResource` is `COMPLETE`.
 
