@@ -150,7 +150,7 @@ We can visualize the Framework's Needs, Solutions, and Reports layers, and then 
 
 #### 2.2.1 Data Quality Control and Data Quality Assurance (non-normative)
 
-The Framework draws a distinction between **Quality Control** and **Quality Assurance**. Quality Control processes seek to assess the quality of data for some purpose, then identify changes to the data or to processes around the data to improve their quality. Quality Assurance processes seek to filter some set of data to a subset that is fit for some purpose, that is, to assure that data used for some purpose are fit for that purpose.
+The Framework draws a distinction between **Quality Control** and **Quality Assurance**. `Quality Control` processes seek to assess the quality of data for some purpose, then identify changes to the data or to processes around the data to improve their quality. Quality Assurance processes seek to filter some set of data to a subset that is fit for some purpose, that is, to assure that data used for some purpose are fit for that purpose.
 
 For **Quality Assurance**, the Framework defines `Measures` that operate on `Multi Records` and return a `Response.result` of `COMPLETE` or `NOT_COMPLETE`. A `Multi Record` `Measure` may be `COMPLETE` if all aggregated instances of a related `Single Record` `Validation` are `COMPLIANT`.
 
@@ -873,7 +873,7 @@ The Fitness For Use Framework ontology is framed with limited constraints and no
 
 * "Potential issue if geographic coordinate is at 0,0"
 
-Note: `Issue` concepts would parallel `Validation` concepts, but are not shown further here.
+Note: `Issue` concepts would parallel `Validation` concepts, but are not fully shown further here.
 
 ##### 4.4.1.3 Measure (normative)
     ME = { me | me =< ie, d, rt >, ie ∈ IE, d ∈ D ⋀ rt ∈ RT }
@@ -983,13 +983,23 @@ In the initial BDQ Tests, for a `Use Case`, `MEaq(u)` is the set of `Multi Recor
 
 * "dr1 is a Data Resource which represents the Dataset "3cc6171e-8c52-4f65-ad7a-32c74e395f29" which contains 251,744 records"
 
-##### 4.4.4.2 ValidationResponse (normative)
+##### 4.4.4.2 ValidationResponse and IssueResponse (normative)
+
+A ValidationResponse 
 
      DQV(dr) = {dqv | dqv = < va, s, m, r >, va ∈ VA, s ∈ S, m ∈ M , r ∈ R ⋀ dr ∈ DR}
 
      dqv(dr1) = {< va1, s1, m1, r1 >}
 
 * A DQ `Validation` asserts that the `Validation` "Geodetic Datum must be supplied" is COMPLIANT for a specific species `dwc:Occurrence` and this `Validation` was performed by the software Darwin Test by checking if the field `dwc:geodeticDatum` of the record was `bdqval:NotEmpty`.
+
+and IssueResponse: 
+
+     DQI(dr) = {dqi | dqi = < is, s, m, r >, is ∈ IS, s ∈ S, m ∈ M , r ∈ R ⋀ dr ∈ DR}
+
+     dqi(dr1) = {< is1, s1, m1, r1 >}
+
+* A DQ `Issue` asserts that there is a POTENTIAL_ISSUE with the `Issue` "Data Generalizations should be empty" for a specific species `dwc:Occurrence` because the field `dwc:dataGeneralizations` of the record was not empty.
 
 ##### 4.4.4.3 MeasurementResponse (normative)
      DQM(dr) = {dqm | dqm =< me, s, m, r >, me ∈ ME, s ∈ S, m ∈ M , r ∈ R ⋀ dr ∈ DR}
@@ -1007,17 +1017,16 @@ In the initial BDQ Tests, for a `Use Case`, `MEaq(u)` is the set of `Multi Recor
 
 ##### 4.4.4.5 Data Quality Assessment (normative)
 
-     A(dr) = {dqm(dr) ⋃ dqv(dr) ⋃ dqa(dr) | dqm ∈ DQM, dqv ∈ DQV , dqa ∈ DQA ⋀ dr ∈ DR}
+     A(dr) = {dqm(dr) ⋃ dqv(dr) ⋃ dqi(dr) ⋃ dqa(dr) | dqm ∈ DQM, dqv ∈ DQV, dqi ∈ DQI, dqa ∈ DQA ⋀ dr ∈ DR}
 
-     a(dr1) = {dqm1, dqm2, dqm3, dqv1, dqa1}
+     a(dr1) = {dqm1, dqm2, dqm3, dqv1, dqi1, dqa1}
 
 ##### 4.4.4.6 Quality Control (normative)
 
 `QualityControl` is an operation on a `Data Quality Assessment` and a `Use Case` that yields the set of filtered subsets of that assessment that are relevant to identifying, summarizing, prioritizing, or proposing remediation of data quality problems for that `Use Case`.
 
-Let `a ∈ A(dr)` be a `Data Quality Assessment` for a `DataResource` `dr`, and let `a'` be a filtered subset of that assessment, that is, a subset of the `MeasureResponse`, `ValidationResponse`, and `AmendmentResponse` elements in `a` selected for their relevance to `QualityControl` for a specified `Use Case` `u`.
+Let `a ∈ A(dr)` be a `Data Quality Assessment` for a `DataResource` `dr`, and let `a'` be a filtered subset of that assessment, that is, a subset of the `MeasureResponse`, `ValidationResponse`, `IssueResponse` and `AmendmentResponse` elements in `a` selected for their relevance to `QualityControl` for a specified `Use Case` `u`.
 
-    QC(a, u) = { a' | a' ⊆ a ⋀ a ∈ A(dr) ⋀ u ∈ U ⋀ ∀ x ∈ a', x is 
     QC(a, u) = { a' | a' ⊆ a ⋀ a ∈ A(dr) ⋀ u ∈ U ⋀ ∀ x ∈ a',
        (x is a `ValidationResponse` with `Response.result` = `NOT_COMPLIANT`)
      ⋁ (x is an `AmendmentResponse` with `Response.status` = `FILLED_IN` or `AMENDED`)
@@ -1031,7 +1040,7 @@ where `a` is a `Data Quality Assessment`, `a'` is a filtered subset of that asse
 
 * `QualityControl` yields filtered subsets of a `Data Quality Assessment` that can be used to identify and prioritize data cleanup, evaluate potential amendments, and guide improvements to data management processes and systems.
 
-Quality Control was originally expressed as `QC(dr) = {dqv(dr) ⋃ dqa(dr) | dqv ∈ DQV , dqa ∈ DQA ⋀ dr ∈ DR}` and `qc(dr1) = {dqv1, dqa1}' but we have redefined it as an operation in paralell to Quality Assurance, but which yields filtered subsets of a `Data Quality Assessment` rather than filtered subsets of a `DataResource`.
+`Quality Control` was originally expressed as `QC(dr) = {dqv(dr) ⋃ dqa(dr) | dqv ∈ DQV , dqa ∈ DQA ⋀ dr ∈ DR}` and `qc(dr1) = {dqv1, dqa1}' but we have redefined it as an operation in parallel to `Quality Assurance`, but which yields filtered subsets of a `Data Quality Assessment` rather than filtered subsets of a `DataResource`.
 
 ##### 4.4.4.7 Quality Assurance (normative)
 
@@ -1039,7 +1048,7 @@ Quality Control was originally expressed as `QC(dr) = {dqv(dr) ⋃ dqa(dr) | dqv
 
 Let `MEaq(u)` be the set of `Multi Record` `Measures` used for `QualityAssurance` for `Use Case` `u`, as defined above. Let `dr'` be a filtered `DataResource`, that is, a `Multi Record` subset of `dr`.
 
-    QA(dr, u) = { dr' | dr' ⊆ dr ⋀ dr ∈ DR ⋀ u ∈ U ⋀ ∀ me ∈ MEaq(u), dqm(dr') = < me, s, m, r > ⋀ r = COMPLETE }
+    QA(dr, u) = { dr' | dr' ⊆ dr ⋀ dr ∈ DR ⋀ u ∈ U ⋀ ∀ me ∈ MEaq(u), ∃ dqm ∈ DQM(dr') ( dqm = < me, s, m, r > ⋀ r = COMPLETE )
 
     qa(dr1, u1) = { dr1' | dr1' ⊆ dr1 ⋀ ∀ me ∈ MEaq(u1), dqm(dr1') = < me, s, m, r > ⋀ r = COMPLETE }
 
@@ -1047,7 +1056,7 @@ where `dr'` is a filtered `DataResource`, `me` is a `Multi Record` `Measure` use
 
 * `QualityAssurance` yields those filtered subsets of a `Multi Record` `DataResource` for which all relevant `Multi Record` `Measures` report `COMPLETE`.
 
-In the original formulation, Quality Assurance was expressed as a set of `Validations`: `QA(dr) = {dqv(dr) | dqv ∈ DQV ⋀ dr ∈ DR}` and `qa(dr1) = {dqv1, dqv2}` but we have redefined it as an operation in which `Measures` can be used as a filter.
+In the original formulation, `Quality Assurance` was expressed as a set of `Validations`: `QA(dr) = {dqv(dr) | dqv ∈ DQV ⋀ dr ∈ DR}` and `qa(dr1) = {dqv1, dqv2}` but we have redefined it as an operation in which `Measures` can be used as a filter.
 
 ## 5 Term index (non-normative)
 
