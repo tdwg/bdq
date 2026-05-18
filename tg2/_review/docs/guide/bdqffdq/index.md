@@ -1197,6 +1197,8 @@ where `a` is a `Data Quality Report`, `a'` is a filtered subset of that assessme
 
 * `QualityControl` yields filtered subsets of a `Data Quality Report` that can be used to identify and prioritize data cleanup, evaluate potential amendments, and guide improvements to data management processes and systems.
 
+Implicit in `Quality Control`, but not formally expressed mathematically here, is that the consumer of a `Data Quality Report` then acts upon it to improve the quality of the data.
+
 `Quality Control` was originally expressed as `QC(dr) = {dqv(dr) ⋃ dqa(dr) | dqv ∈ DQV , dqa ∈ DQA ⋀ dr ∈ DR}` and `qc(dr1) = {dqv1, dqa1}` but we have redefined it as an operation in parallel to `Quality Assurance`, but which yields filtered subsets of a `Data Quality Report` rather than filtered subsets of a `DataResource`.
 
 ##### 4.4.4.7 Quality Assurance (normative)
