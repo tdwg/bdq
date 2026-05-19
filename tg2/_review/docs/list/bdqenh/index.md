@@ -149,7 +149,7 @@ The terminology used to describe the terms in this vocabulary follows the TDWG [
 | Definition (rdfs:comment) | normative | A description of the subject resource. TDWG SDS: The normative definition of the term, written in English. | Data could be improved by setting an empty value to a default value. |
 | Comments (skos:note) | non-normative | A general note, for any purpose. | Data in a bdqffdq:InformationElement are absent and may be proposed to be filled in with a default value. Corresponding dimension is bdqdim:Completeness. |
 | Status (tdwgutility:status) |  | Used to indicate if the term is recommended for use or if it is only of historical significance. | recommended |
-| Controlled Value String () | normative |  | AssumedDefault |
+| Controlled Value String () | normative |  In present context: A string that is unique within a controlled vocabulary that identifies the concept in the context of a text-based metadata transfer system. The value MUST consist of Unicode characters. | AssumedDefault |
 | Type (rdf:type) | normative | The subject is an instance of a class. | bdqffdq:Enhancement |
 
 
