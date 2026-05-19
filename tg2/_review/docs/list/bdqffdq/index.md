@@ -655,9 +655,9 @@ A bdqffdq:Mechanism describes the entity that performs a bdqffdq:Response Test (
 
 - Name: bdqffdq:QualityAssurance
 - Preferred Label: Quality Assurance
-- Definition: The operation of filtering a bdqffdq:MultiRecord bdqffdq:DataResource for a specified bdqffdq:Use Case to retain only the data subset where every associated bdqffdq:MultiRecord bdqffdq:Measure that evaluates as COMPLETE/NOT_COMPLETE has a Response.result of COMPLETE, signifying that all contained records are fit for use for the specified bdqffdq:UseCase.
+- Definition: The process of evaluating data for fitness for some use and selecting just those data that are fit for that use. This includes, in BDQ, the operation of filtering a bdqffdq:MultiRecord bdqffdq:DataResource for a specified bdqffdq:Use Case to retain only the data subset where every associated bdqffdq:MultiRecord bdqffdq:Measure that evaluates as COMPLETE/NOT_COMPLETE has a Response.result of COMPLETE, signifying that all contained records are fit for use for the specified bdqffdq:UseCase.
 - SubClass Of: FundamentalConcept
-- Comments: The output of a Quality Assurance operation is a set of records (a MultiRecord).  The records contained in a data set filtered for Quality Assurance will comply with the fitness criteria for the given Use Case.
+- Comments: The output of a BDQ Quality Assurance operation is a set of records (a MultiRecord).  The records contained in a data set filtered for Quality Assurance will comply with the fitness criteria for the given Use Case, this may include accepting changes proposed by Amendments to the data.
 
 ********************
 
@@ -665,9 +665,9 @@ A bdqffdq:Mechanism describes the entity that performs a bdqffdq:Response Test (
 
 - Name: bdqffdq:QualityControl
 - Preferred Label: Quality Control
-- Definition: The operation on a bdqffdq:DataQualityReport for a specified bdqffdq:UseCase that yields the filtered subset Responses in that report required to diagnose, prioritize, and remediate detected data quality defects for that Use Case.
+- Definition: The process identify data that are not fit for particular uses, with the goal of improving the data quality.  This includes in BDQ the operation on a bdqffdq:DataQualityReport for a specified bdqffdq:UseCase that yields the filtered subset Responses in that report required to diagnose, prioritize, and remediate detected data quality defects for that Use Case.
 - SubClass Of: FundamentalConcept
-- Comments: The output of a Quality Control operation is a set of assertions about a data set (a MultiRecord) under test. 
+- Comments: The output of a BDQ Quality Control operation is a set of assertions about a data set (a MultiRecord) under test.  BDQ does not specify how or whether consumers of Data Quality Reports act to improve their data, conceptually the actions of actually improving the data are included in Quality Control. 
 
 ********************
 

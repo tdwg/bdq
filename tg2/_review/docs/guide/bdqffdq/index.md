@@ -1639,7 +1639,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 #### QualityAssurance
 
 - Name: [bdqffdq:QualityAssurance](../../list/bdqffdq/index.md#QualityAssurance)
-- Definition: The operation of filtering a bdqffdq:MultiRecord bdqffdq:DataResource for a specified bdqffdq:Use Case to retain only the data subset where every associated bdqffdq:MultiRecord bdqffdq:Measure that evaluates as COMPLETE/NOT_COMPLETE has a Response.result of COMPLETE, signifying that all contained records are fit for use for the specified bdqffdq:UseCase.
+- Definition: The process of evaluating data for fitness for some use and selecting just those data that are fit for that use. This includes, in BDQ, the operation of filtering a bdqffdq:MultiRecord bdqffdq:DataResource for a specified bdqffdq:Use Case to retain only the data subset where every associated bdqffdq:MultiRecord bdqffdq:Measure that evaluates as COMPLETE/NOT_COMPLETE has a Response.result of COMPLETE, signifying that all contained records are fit for use for the specified bdqffdq:UseCase.
 - SubClass Of: [FundamentalConcept](../../list/bdqffdq/index.md#FundamentalConcept)
 
 ********************
@@ -1647,7 +1647,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 #### QualityControl
 
 - Name: [bdqffdq:QualityControl](../../list/bdqffdq/index.md#QualityControl)
-- Definition: The operation on a bdqffdq:DataQualityReport for a specified bdqffdq:UseCase that yields the filtered subset Responses in that report required to diagnose, prioritize, and remediate detected data quality defects for that Use Case.
+- Definition: The process of identifying data that are not fit for particular uses, with the goal of improving the data quality.  This includes in BDQ the operation on a bdqffdq:DataQualityReport for a specified bdqffdq:UseCase that yields the filtered subset Responses in that report required to diagnose, prioritize, and remediate detected data quality defects for that Use Case.
 - SubClass Of: [FundamentalConcept](../../list/bdqffdq/index.md#FundamentalConcept)
 
 ********************
