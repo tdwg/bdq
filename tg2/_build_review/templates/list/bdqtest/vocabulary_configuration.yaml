@@ -231,11 +231,11 @@ References:
   normative: 'false'
   term: dcterms:references
   sort_order: 37
-#controlled_value_string:
-#  label: Controlled Value
-#  normative: 'true'
-#  term: ''
-#  sort_order: 38
+controlled_value_string:
+  label: Controlled Value
+  normative: 'true'
+  term: ''
+  sort_order: 38
 #flags:
 #  # not used yet, but expect this to be needed for long term support.
 #  label: ''
