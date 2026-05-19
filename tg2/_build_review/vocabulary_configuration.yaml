@@ -49,10 +49,9 @@ status:
   normative: ''
   term: tdwgutility:status
 controlled_value_string:
-  label: Controlled Value String
+  label: Controlled Value
   normative: 'true'
   term: ''
-  append: A string that is unique within a controlled vocabulary that identifies the concept in the context of a text-based metadata transfer system. The value MUST consist of Unicode characters.
 rdf_type:
   label: Type
   normative: 'true'
