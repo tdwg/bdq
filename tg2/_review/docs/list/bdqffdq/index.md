@@ -147,6 +147,7 @@ The terminology used to describe the terms in this vocabulary follows the TDWG [
 | Definition (rdfs:comment) | normative | A description of the subject resource. TDWG SDS: The normative definition of the term, written in English. | A bdqffdq:InformationElement described in abstract terms and not linked with any concrete terms. |
 | Comments (skos:note) | non-normative | A general note, for any purpose. | Such bdqffdq:InformationElements as DATE and DAY are abstract, they could reference any representation of those concepts. In contrast, dwc:eventDate and dwc:day can be linked to concrete bdqffdq:ActedUponInformationElements or bdqffdq:ConsultedInformationElements.   A MIDS Information Element such as mids:Chronostratigraphy corresponds to a bdqffdq:AbstractInformationElement. |
 | Type (rdf:type) | normative | The subject is an instance of a class. | [http://www.w3.org/2002/07/ owl#Class](http://www.w3.org/2002/07/owl#Class) |
+| Scope Note (skos:scopeNote) | non-normative | A note that helps to clarify the meaning and/or the use of a concept. | This concept of Quality Assurance encompasses Check and Act phases of Plan, Do, Check, Act of Shewhart (1939). |
 
 
 ## 2 Use of Terms (normative)
@@ -658,6 +659,7 @@ A bdqffdq:Mechanism describes the entity that performs a bdqffdq:Response Test (
 - Definition: The process of evaluating data for fitness for some use and selecting just those data that are fit for that use. This includes, in BDQ, the operation of filtering a bdqffdq:MultiRecord bdqffdq:DataResource for a specified bdqffdq:Use Case to retain only the data subset where every associated bdqffdq:MultiRecord bdqffdq:Measure that evaluates as COMPLETE/NOT_COMPLETE has a Response.result of COMPLETE, signifying that all contained records are fit for use for the specified bdqffdq:UseCase.
 - SubClass Of: FundamentalConcept
 - Comments: The output of a BDQ Quality Assurance operation is a set of records (a MultiRecord).  The records contained in a data set filtered for Quality Assurance will comply with the fitness criteria for the given Use Case, this may include accepting changes proposed by Amendments to the data.
+- Scope Note: This concept of Quality Assurance encompasses Check and Act phases of Plan, Do, Check, Act of Shewhart (1939).
 
 ********************
 
@@ -668,6 +670,7 @@ A bdqffdq:Mechanism describes the entity that performs a bdqffdq:Response Test (
 - Definition: The process of identifying data that are not fit for particular uses, with the goal of improving the data quality.  This includes in BDQ the operation on a bdqffdq:DataQualityReport for a specified bdqffdq:UseCase that yields the filtered subset Responses in that report required to diagnose, prioritize, and remediate detected data quality defects for that Use Case.
 - SubClass Of: FundamentalConcept
 - Comments: The output of a BDQ Quality Control operation is a set of assertions about a data set (a MultiRecord) under test.  BDQ does not specify how or whether consumers of Data Quality Reports act to improve their data, conceptually the actions of actually improving the data are included in Quality Control. 
+- Scope Note: This concept of Quality Control encompasses Check and Act phases of Plan, Do, Check Act of Shewhart (1939).
 
 ********************
 

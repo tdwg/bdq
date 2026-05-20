@@ -114,8 +114,8 @@ graph = rdflib.Graph()
 graph.parse(inputTermsOwlFilename, format="ttl")
 # TODO: range, differentFrom 
 # column_list = ['term_iri', 'iri', 'term_localName', 'prefLabel', 'label', 'comments', 'definition', 'rdf_type', 'superclass', 'range', 'differentFrom']
-column_list = ['term_iri', 'iri', 'term_localName', 'prefLabel', 'label', 'comments', 'definition', 'rdf_type', 'superclass']
-sparql = prefixes + "SELECT DISTINCT (str(?subject) as ?term_iri) (str(?subject) as ?iri) (?subject as ?term_localName)  ?prefLabel ?label ?comment ?definition ?rdf_type (GROUP_CONCAT(?parent; SEPARATOR='; ') AS ?parents)  WHERE {  ?subject a owl:Class . ?subject rdfs:comment ?definition . ?subject skos:prefLabel ?prefLabel . ?subject rdf:type ?rdf_type . ?subject rdfs:label ?label . OPTIONAL { ?subject rdfs:subClassOf ?parent } . OPTIONAL { ?subject skos:note ?comment } } GROUP BY ?subject ?prefLabel ?label ?comment ?definition ?rdf_type ORDER BY ?subject"
+column_list = ['term_iri', 'iri', 'term_localName', 'prefLabel', 'label', 'comments', 'definition', 'rdf_type', 'superclass','scopeNote']
+sparql = prefixes + "SELECT DISTINCT (str(?subject) as ?term_iri) (str(?subject) as ?iri) (?subject as ?term_localName)  ?prefLabel ?label ?comment ?definition ?rdf_type (GROUP_CONCAT(?parent; SEPARATOR='; ') AS ?parents) ?scopeNote WHERE {  ?subject a owl:Class . ?subject rdfs:comment ?definition . ?subject skos:prefLabel ?prefLabel . ?subject rdf:type ?rdf_type . ?subject rdfs:label ?label . OPTIONAL { ?subject rdfs:subClassOf ?parent } . OPTIONAL { ?subject skos:note ?comment } . OPTIONAL { ?subject skos:scopeNote ?scopeNote }  } GROUP BY ?subject ?prefLabel ?label ?comment ?definition ?rdf_type ?scopeNote ORDER BY ?subject"
 queryResult = graph.query(sparql)
 
 terms_df = pd.DataFrame(queryResult, columns = column_list)
@@ -363,8 +363,8 @@ with open(document_configuration_yaml_file) as dcfy:
 graph = rdflib.Graph()
 graph.parse(inputTermsOwlFilename, format="ttl")
 #column_list = ['iri', 'term_localName', 'prefLabel', 'label', 'comments', 'definition', 'rdf_type', 'organized_in','issued','status','term_iri','flags']
-column_list = ['term_iri', 'iri', 'term_localName', 'prefLabel', 'label', 'comments', 'definition', 'rdf_type', 'superclass']
-sparql = prefixes + "SELECT DISTINCT (str(?subject) as ?term_iri) (str(?subject) as ?iri) (?subject as ?term_localName)  ?prefLabel ?label ?comment ?definition ?rdf_type (GROUP_CONCAT(?parent; SEPARATOR='; ') AS ?parents)  WHERE {  ?subject a owl:Class . ?subject rdfs:comment ?definition . ?subject skos:prefLabel ?prefLabel . ?subject rdf:type ?rdf_type . ?subject rdfs:label ?label . OPTIONAL { ?subject rdfs:subClassOf ?parent } . OPTIONAL { ?subject skos:note ?comment } } GROUP BY ?subject ?prefLabel ?label ?comment ?definition ?rdf_type ORDER BY ?subject"
+column_list = ['term_iri', 'iri', 'term_localName', 'prefLabel', 'label', 'comments', 'definition', 'rdf_type', 'superclass', 'scopeNote']
+sparql = prefixes + "SELECT DISTINCT (str(?subject) as ?term_iri) (str(?subject) as ?iri) (?subject as ?term_localName)  ?prefLabel ?label ?comment ?definition ?rdf_type (GROUP_CONCAT(?parent; SEPARATOR='; ') AS ?parents) ?scopeNote WHERE {  ?subject a owl:Class . ?subject rdfs:comment ?definition . ?subject skos:prefLabel ?prefLabel . ?subject rdf:type ?rdf_type . ?subject rdfs:label ?label . OPTIONAL { ?subject rdfs:subClassOf ?parent } . OPTIONAL { ?subject skos:note ?comment }  OPTIONAL { ?subject skos:scopeNote ?scopeNote }  } GROUP BY ?subject ?prefLabel ?label ?comment ?definition ?rdf_type ?scopeNote ORDER BY ?subject"
 queryResult = graph.query(sparql)
 
 terms_df = pd.DataFrame(queryResult, columns = column_list)
@@ -452,7 +452,7 @@ for r in queryResult :
 
 text = text + "\n## 4 Vocabulary (normative)\n"
 text = text + "\n### 4.1 Class terms (normative)\n"
-sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment (GROUP_CONCAT(?parent; SEPARATOR='; ') AS ?parents)  WHERE {  ?subject a owl:Class . ?subject rdfs:comment ?definition . ?subject skos:prefLabel ?prefLabel . OPTIONAL { ?subject rdfs:subClassOf ?parent } . OPTIONAL { ?subject skos:note ?comment } } GROUP BY ?subject ?prefLabel ?definition ?comment ORDER BY ?subject"
+sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment (GROUP_CONCAT(?parent; SEPARATOR='; ') AS ?parents)  ?scopeNote WHERE {  ?subject a owl:Class . ?subject rdfs:comment ?definition . ?subject skos:prefLabel ?prefLabel . OPTIONAL { ?subject rdfs:subClassOf ?parent } . OPTIONAL { ?subject skos:note ?comment } . OPTIONAL { ?subject skos:scopeNote ?scopeNote }  } GROUP BY ?subject ?prefLabel ?definition ?comment ORDER BY ?subject ?scopeNote"
 queryResult = graph.query(sparql)
 for r in queryResult : 
 	entity = r.subject
@@ -465,6 +465,9 @@ for r in queryResult :
 	if (r.parents) :
 		text = text + "- SubClass Of: {}\n".format(r.parents.replace("https://rs.tdwg.org/bdqffdq/terms/",""))
 	text = text + "- Comments: {}\n".format(optional_replace(r.comment,"\n\n","\n").replace("\n","  \n"))
+	# if a scopeNote exists, include it
+	if (r.scopeNote) :
+		text = text + "- Scope Note: {}\n".format(optional_replace(r.scopeNote,"\n\n","\n").replace("\n","  \n"))
 	text = text + "\n********************\n\n"
 
 text = text + "### 4.2 ObjectProperty terms (normative)\n"
