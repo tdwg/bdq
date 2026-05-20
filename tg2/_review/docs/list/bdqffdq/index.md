@@ -665,7 +665,7 @@ A bdqffdq:Mechanism describes the entity that performs a bdqffdq:Response Test (
 
 - Name: bdqffdq:QualityControl
 - Preferred Label: Quality Control
-- Definition: The process identify data that are not fit for particular uses, with the goal of improving the data quality.  This includes in BDQ the operation on a bdqffdq:DataQualityReport for a specified bdqffdq:UseCase that yields the filtered subset Responses in that report required to diagnose, prioritize, and remediate detected data quality defects for that Use Case.
+- Definition: The process of identifying data that are not fit for particular uses, with the goal of improving the data quality.  This includes in BDQ the operation on a bdqffdq:DataQualityReport for a specified bdqffdq:UseCase that yields the filtered subset Responses in that report required to diagnose, prioritize, and remediate detected data quality defects for that Use Case.
 - SubClass Of: FundamentalConcept
 - Comments: The output of a BDQ Quality Control operation is a set of assertions about a data set (a MultiRecord) under test.  BDQ does not specify how or whether consumers of Data Quality Reports act to improve their data, conceptually the actions of actually improving the data are included in Quality Control. 
 

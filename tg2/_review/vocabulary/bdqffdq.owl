@@ -1052,7 +1052,7 @@ bdqffdq:QualityControl rdf:type owl:Class ;
                        skos:scopeNote "This concept of Quality Control encompasses Check and Act phases of Plan, Do, Check Act of Shewhart (1939)." ;
                        rdfs:label "Quality Control"@en ;
                        skos:definition "The process of identifying data that are not fit for particular uses, with the goal of improving the data quality.  This includes in BDQ the operation on a bdqffdq:DataQualityReport for a specified bdqffdq:UseCase that yields the filtered subset Responses in that report required to diagnose, prioritize, and remediate detected data quality defects for that Use Case."@en ;
-                       rdfs:comment "The process identify data that are not fit for particular uses, with the goal of improving the data quality.  This includes in BDQ the operation on a bdqffdq:DataQualityReport for a specified bdqffdq:UseCase that yields the filtered subset Responses in that report required to diagnose, prioritize, and remediate detected data quality defects for that Use Case."@en ;
+                       rdfs:comment"The process of identifying data that are not fit for particular uses, with the goal of improving the data quality.  This includes in BDQ the operation on a bdqffdq:DataQualityReport for a specified bdqffdq:UseCase that yields the filtered subset Responses in that report required to diagnose, prioritize, and remediate detected data quality defects for that Use Case."@en ;
                        skos:prefLabel "Quality Control"@en .
 
 
