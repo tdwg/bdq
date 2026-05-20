@@ -857,7 +857,6 @@ The Fitness For Use Framework ontology is framed with limited constraints and no
 * ⋃ union
 * ⊂ subset of
 * ⊆ subset of or equal to
-* ∁ complement
 * ⋀ and (logical conjunction)
 * ⋁ or (logical disjunction)
 * ∀ for all
@@ -887,6 +886,18 @@ The following brief explanations are intended to help readers interpret the nota
 * Expressions such as `VIE(u)`, `QA(dr, u)`, or `QC(a, u)` should be read as named constructions that depend on the values in parentheses. For example, `VIE(u)` means the Valuable `Information Elements` for a particular `Use Case` `u`, and `QA(dr, u)` means `QualityAssurance` for a particular `DataResource` `dr` and `Use Case` `u`.
 * The symbol `∀` means “for all”, and the symbol `∃` means “there exists”. For example, `∀ me ∈ MEaq(u)` means “for every `Measure` in `MEaq(u)`”, while `∃ dqm ∈ DQM(dr')` means “there exists a `MeasurementResponse` in `DQM(dr')`”.
 
+#### 4.3.3 Use of examples in this section (normative)
+
+The sections which follow pair a formal set theoretic expression with an example to illustrate how the formalization relates to concrete cases. The examples are not intended to be normative, but rather to help readers understand the formalization.  This may be followed by additional text examples explicitly identified as such.
+
+```
+VA = { va | va = < ie, c, d, rt >, ie ∈ IE, c ∈ C, d ∈ D ⋀ rt ∈ RT }  # Normative set theoretic expression
+
+va1 = < ie1, c1, d1, rt1 >  # Set theoretic example, non-normative
+```
+* Example: "va1 is a tuple such as < dwc:countryCode, "in controlled vocabulary", Completeness, Single Record >"
+* Example: "The value of dwc:basisOfRecord of single records must be in the controlled vocabulary"
+
 ### 4.4 Derived Concepts (normative)
 #### 4.4.1 General (normative)
 
@@ -899,6 +910,9 @@ VA = { va | va = < ie, c, d, rt >, ie ∈ IE, c ∈ C, d ∈ D ⋀ rt ∈ RT }
 
 va1 = < ie1, c1, d1, rt1 >
 ```
+
+* Example: va1 is a `Validation` that assesses whether the `Information Element` `ie1` (e.g., `dwc:countryCode`) complies with the `Criterion` `c1` (e.g., "in controlled vocabulary") for the `Data Quality Dimension` `d1` (e.g., `Completeness`) on a resource of type `rt1` (e.g., `Single Record`).
+
 
 * Example: "The value of dwc:basisOfRecord of single records must be in the controlled vocabulary"
 
@@ -928,7 +942,7 @@ RV_va ∩ RV_is = ∅
 
 A `ValidationResponse` MUST NOT carry a result drawn from `RV_is`, and an `IssueResponse` MUST NOT carry a result drawn from `RV_va`.
 
-**Polarity map.** A partial map φ relates `Validation` results to `Issue` results by polarity:
+**Polarity map.** A map φ relates Validation results to Issue results by polarity, covering all Validation result values but not all Issue result values. More formally: Let φ be a total but non-surjective function from the Validation result vocabulary to the Issue result vocabulary, relating result values by their shared orientation toward the same underlying quality condition (The non-surjectivity is the formally important property — it is what makes POTENTIAL_ISSUE unique to Issue):
 
 ```
 φ : RV_va → RV_is
@@ -969,6 +983,21 @@ me1 = < ie1, d1, rt1 >
 
 A `Measure` may be interpreted either descriptively or judgmentally: it may report either *how much* of some property is present, or whether the data are fit. The `Response.result` of a `Measure` may be either categorical, drawn from `RV_me_cat = { COMPLETE, NOT_COMPLETE }` or as a numeric value.
 
+Let `resultType(x)` denote the type of `Response.result` expected from execution of a Test or `Measure` `x`.
+
+```
+resultType : ME → { categorical, numeric }
+```
+
+* resultType(me) = categorical means the Response.result for that Measure is drawn from the value set {COMPLETE, NOT_COMPLETE}
+* resultType(me) = numeric means the Response.result is a literal numeric value
+
+When resultType is applied to a DQM element (defined in [4.4.4.3 MeasurementResponse](#4443-measurementresponse-normative),  it refers to the resultType of the ME component of that element.
+```
+resultType : ME ⋃ DQM → { categorical, numeric }
+where for dqm = < me, s, m, r >, resultType(dqm) = resultType(me)
+```
+
 ##### 4.4.1.4 Amendment (normative)
 
 An `Amendment` proposes a change to data that, if accepted, may improve fitness for use. It is composed of an `Information Element`, an `Enhancement`, a `Data Quality Dimension`, and a `Resource Type`.
@@ -984,12 +1013,27 @@ am1 = < ie1, e1, d1, rt1 >
 An `Amendment` is interpreted as a *proposal*, not an assertion of compliance.  
 
 #### 4.4.2 Data Quality Needs (normative)
-##### 4.4.2.1 Validation Policy (normative)
+##### 4.4.2.1 Validation Policy and Issue Policy (normative)
 
-    VP (u) = {va | va ⊂ VA ⋀ u ∈ U }
+Policies are associative entities relating a `Use Case` to a `Data Quality Need`. A `Validation Policy` relates a `Use Case` to one or more `Validations`, and an `Issue Policy` relates a `Use Case` to one or more `Issues`.
 
-    vp(u1) = {va1, va2}
-    vp(u1) = {< ie1, c1, rt1>, < ie2, c2, rt2> }
+`Validation Policy` and `Issue Policy` are defined as follows:
+
+```
+VP (u) = {va | va ⊂ VA ⋀ u ∈ U }
+
+vp(u1) = {va1, va2}
+vp(u1) = {< ie1, c1, d1, rt1>, < ie2, c2, d2, rt2> }
+```
+
+And for `IssuePolicy`:
+
+```
+ISP(u) = {is | is ⊂ IS ⋀ u ∈ U}
+
+isp(u1) = {is1, is2}
+isp(u1) = {< ie1, c1, d1, rt1>, < ie2, c2, d2, rt2> }
+```
 
 ##### 4.4.2.2 Measurement Policy (normative)
 
@@ -998,7 +1042,7 @@ An `Amendment` is interpreted as a *proposal*, not an assertion of compliance.
     mp(u1) = {me1, me2, me3, me4}
     mp(u1) = {< ie1, d1, rt2 >, < ie1, d1, rt1 >, < ie2, d1, rt1 >, < ie2, d2, rt2 >}
 
-##### 4.4.2.3 Amendment Policy (normative)
+##### 4.4.2.3 Enhancement Policy (normative)
 
      EP(u) = {am | am ⊂ AM ⋀ u ∈ U }
 
@@ -1006,39 +1050,53 @@ An `Amendment` is interpreted as a *proposal*, not an assertion of compliance.
 
 ##### 4.4.2.4 Data Quality Profile (normative)
 
-      DQP (u) = {dqp | dqp = mp(u) ⋃ vp(u) ⋃ ep(u), mp ∈ MP , vp ∈ VP , ep ∈ EP ⋀ u ∈ U }
+The `Data Quality Profile` for a `Use Case` `u` is the set of all `Data Quality Profiles` such that each `Data Quality Profile` is the union of a `Measurement Policy`, a `Validation Policy`, an `Issue Policy`, and an `Amendment Policy` for that `Use Case`.
 
-      dqp(u1) = {mp(u1), vp(u1), ep(u1)}
+```
+DQP(u) = {dqp | dqp = mp(u) ⋃ vp(u) ⋃ isp(u) ⋃ ep(u), mp ∈ MP, vp ∈ VP, isp ∈ ISP, ep ∈ EP ⋀ u ∈ U}
+
+dqp(u1) = {mp(u1), vp(u1), isp(u1), ep(u1)}
+dqp(u1) = {me1, me2, me3, me4, va1, va2, is1, is2, am1, am2}
+```
 
 ##### 4.4.2.5 Use Case Coverage (normative)
-   
-     UC(u) = { us | u ∈ U ⋀ us ⊂ US}
+ 
+The Use Case Coverage for a `Use Case` `u` is the set of all `Usages` such that each `Usage` is a subset of the set of all `Usages` and is associated with `u`.
 
-     uc(u1) = {us1, us2}
+```  
+UC(u) = { us | u ∈ U ⋀ us ⊂ US}
+
+uc(u1) = {us1, us2}
+```
 
 * Example: "A Use Case for Niche Modeling covers MAXENT and GARP modeling"
 
+The property `bdqffdq:hasFitnessRequirements` is intended to allow this concept to be expressed in plain text for a `Use Case`.
+
 ##### 4.4.2.6 Valuable Information Elements (normative)
 
-     VIE(u) = {ie | ie ⊂ IE ⋀ u ∈ U }
+```
+VIE(u) = {ie | ie ⊂ IE ⋀ u ∈ U }
+
+vie(u1) = {ie1, ie2}
+```
 
 * Example: "For a `Use Case`, what `Information Elements` are valuable."
+* Example: vie(u1) = {dwc:countryCode, dwc:decimalLatitude}, for `Use Case` u1, the `Information Elements` `dwc:countryCode` and `dwc:decimalLatitude` are valuable for that `Use Case`.  See the SPARQL query in the supplementary materials that asks this question of bdqtest.
 
 ##### 4.4.2.7 Acceptable Data Quality Measure (normative)
 
 The original formulation of this was `MEaq(me) = {va | me ∈ VA ⋀ va ⊂ ME}` ` meaq(me1) = {va1, va2}` and was intended to express the idea that a `Validation` can be expressed as a `Measure` that returns `COMPLETE` or `NOT_COMPLETE`, with an example _For the `Measure` coordinate completeness in a dataset, acceptable quality is met by all records having coordinates COMPLETE._
 
-We have redefined this concept to more clearly express how `Measures` can be used as a filter in `QualityAssurance`: 
-
-Let `resultType(x)` denote the type of `Response.result` expected from execution of a Test or `Measure` `x`.
-- `resultType(x) = categorical` means that the `Response.result` is drawn from a controlled set of named values, such as `COMPLETE` or `NOT_COMPLETE`.
-- `resultType(x) = numeric` means that the `Response.result` is a literal numeric value.
+We have redefined this concept to more clearly express how `Measures` can be used as a filter in `QualityAssurance` (using resultType(x) defined in [4.4.1.3 Measure](#44113-measure-normative)):
 
 Let `MEaq(u)` be the set of `Multi Record` `Measures` in the `Measurement Policy` for a `Use Case` `u` that are intended for `QualityAssurance`, that is, `Measures` whose `Response.result` is interpreted categorically as either `COMPLETE` or `NOT_COMPLETE`.
 
-    MEaq(u) = { me | me ⊂ ME ⋀ me ∈ mp(u) ⋀ u ∈ U ⋀ resultType(me) = categorical }
+```
+MEaq(u) = { me | me ⊂ ME ⋀ me ∈ mp(u) ⋀ u ∈ U ⋀ resultType(me) = categorical }
 
-    meaq(u1) = {me1, me2}
+meaq(u1) = {me1, me2}
+```
 
 * Example: For a Use Case, acceptable quality is met by all records having all categorical (COMPLETE/NOT_COMPLETE) `Measures` reporting COMPLETE.
 
@@ -1046,11 +1104,16 @@ In the initial BDQ Tests, for a `Use Case`, `MEaq(u)` is the set of `Multi Recor
 
 ##### 4.4.2.8 Improvement Target (normative)
 
-    IT(am) = {me ⋃ va ⋃ is | me ∈ ME, va ∈ VA, is ∈ IS ⋀ am ∈ AM}
+Let IT be the set of Improvement Targets for an `Amendment`, such that each `Improvement Target` is the union of a `Measure`, a `Validation`, and an `Issue` for which acceptance of the `Amendment` may improve fitness for use.
 
-    it(am1) = {me1, va2, is1}
+```
+IT(am) = {x | (x ⊂ ME ⋁ x ⊂ VA ⋁ x ⊂ IS) ⋀ am ∈ AM}
+
+it(am1) = {me1, va2, is1}
+```
 
 * Example: "Recommending coordinates based on textual locality improves the coordinate completeness of `Single Records` and may result in compliance with the `Criterion` dataset must have all records with coordinates."
+* Example: it(am1) = {me1, va2, is1} means that acceptance of the `Amendment` am1 may improve the `Measure` me1, the `Validation` va2, and the `Issue` is1.
 
 The `ImprovementTarget` concept is intended to express that an `Amendment` may support improvement in more than one way. In particular, an `Amendment` may improve one or more `Measures` of data quality and may also help satisfy one or more `Validations`. The expression for `IT(am)` should therefore be read as identifying the set of `Data Quality Needs` that may be improved, satisfied, or brought closer to compliance through acceptance of the proposals made by a given `Amendment`.
 
@@ -1059,48 +1122,100 @@ In this notation, the use of union indicates that the `ImprovementTarget` for an
 This formalization SHOULD NOT block the framing of `Amendments` that propose changes to processes or other things outside the scope of a data set.
 
 #### 4.4.3 Data Quality Solutions (normative)
-##### 4.4.3.1 Validation Method (normative)
-    VM(va) = {s | s ⊂ S ⋀ va ∈ VA}
+##### 4.4.3.1 Validation Method and Issue Method (normative)
+
+`Validation Method`:  Let `VM(va)` be the set of `Specifications` for a `Validation` `va`.
+
+```
+VM(va) = {s | s ⊂ S ⋀ va ∈ VA}
+   
+vm(va1) = {s1, s2}
+```
+
+And `Issue Method`: Let `ISM(is)` be the set of `Specifications` for an `Issue` `is`.
+
+```
+ISM(is) = {s | s ⊂ S ⋀ is ∈ IS}
+ism(is1) = {s1, s2}
+```
 
 ##### 4.4.3.2 Measurement Method (normative)
-    MM(me) = {s | s ⊂ S ⋀ me ∈ ME}
 
-##### 4.4.3.3 Amendment Method (normative)
-    EM(am) = {s | s ⊂ S ⋀ am ∈ AM}
+A `Measurement Method` is the set of `Specifications` for a `Measure` `me`.
+
+```
+MM(me) = {s | s ⊂ S ⋀ me ∈ ME}
+
+mm(me1) = {s1, s2}
+mm(me1) = {< ie1, d1, rt1>, < ie2, d2, rt2> }
+```
+
+##### 4.4.3.3 Enhancement Method (normative)
+
+An `Enhancement Method` is the set of `Specifications` for an `Amendment` `am`.
+
+```
+EM(am) = {s | s ⊂ S ⋀ am ∈ AM}
+
+em(am1) = {s1, s2}
+em(am1) = {< ie1, e1, d1, rt1>, < ie2, e2, d2, rt2> }
+```
 
 ##### 4.4.3.4 Implementation  (normative)
-     I (s) = {m | m ⊂ M ⋀ s ∈ S}
 
-     i(s1) = {m1, m2}
+An `Implementation` of a `Specification` `s` is the set of `Mechanisms` that implement `s`."
+
+```
+I (s) = {m | m ⊂ M ⋀ s ∈ S}
+
+i(s1) = {m1, m2}
+i(s1) = {< ie1, c1, d1, rt1>, < ie2, c2, d2, rt2> }
+```
+* Example: "The software tool DwC-A Validator 2.0 implements the `Validation` va1 by implementing the `Specification` s1 and the `Validation` va2 by implementing the `Specification` s2."
 
 ##### 4.4.3.5 Mechanism Coverage (normative)
-    MC(m) = {s | s ⊂ S ⋀ m ∈ M }
 
-    mc(m1) = {s1, s2}
+A `Mechanism` may implement one or more `Specifications`, and a `Specification` may be implemented by one or more `Mechanisms`. The `Mechanism Coverage` for a `Mechanism` `m` is the set of all `Specifications` such that each `Specification` is a subset of the set of all `Specifications` and is implemented by `m`.
+
+```
+MC(m) = {s | s ⊂ S ⋀ m ∈ M }
+
+mc(m1) = {s1, s2}
+mc(m1) = {< ie1, c1, d1, rt1>, < ie2, c2, d2, rt2> }
+```
 
 #### 4.4.4 Data Quality Reports (normative)
 ##### 4.4.4.1 Data Resource (normative)
+
+A `Data Resource` is a tuple of an identifier, a resource type, and a value. It is the subject of `Responses` in a `Data Quality Report`.
+
+```
     DR = { dr | dr = < id, rt, v >, id ∈ I D, rt ∈ RT , (rt = sr ⋁ rt = ds) ⋀ v ∈ V }
 
     dr1 =< id1, rt1, v1 >
-
-* Example: "dr1 is a Data Resource which represents the Dataset "3cc6171e-8c52-4f65-ad7a-32c74e395f29" which contains 251,744 records"
+```
+* Example: "dr1 is a Data Resource which represents the MultiRecord "3cc6171e-8c52-4f65-ad7a-32c74e395f29" which contains 251,744 records"
+* Example: "dr1 is a Data Resource which represents the SingleRecord with identifier "urn:catalog:MCZ:Ent:1"."
 
 ##### 4.4.4.2 ValidationResponse and IssueResponse (normative)
 
 A ValidationResponse 
 
-     DQV(dr) = {dqv | dqv = < va, s, m, r >, va ∈ VA, s ∈ S, m ∈ M , r ∈ R ⋀ dr ∈ DR}
+```
+DQV(dr) = {dqv | dqv = < va, s, m, r >, va ∈ VA, s ∈ S, m ∈ M , r ∈ R ⋀ dr ∈ DR}
 
-     dqv(dr1) = {< va1, s1, m1, r1 >}
+dqv(dr1) = {< va1, s1, m1, r1 >}
+```
 
 * Example: A DQ `Validation` asserts that the `Validation` "Geodetic Datum must be supplied" is COMPLIANT for a specific species `dwc:Occurrence` and this `Validation` was performed by the software Darwin Test by checking if the field `dwc:geodeticDatum` of the record was `bdqval:NotEmpty`.
 
 and IssueResponse: 
 
-     DQI(dr) = {dqi | dqi = < is, s, m, r >, is ∈ IS, s ∈ S, m ∈ M , r ∈ R ⋀ dr ∈ DR}
+```
+DQI(dr) = {dqi | dqi = < is, s, m, r >, is ∈ IS, s ∈ S, m ∈ M , r ∈ R ⋀ dr ∈ DR}
 
-     dqi(dr1) = {< is1, s1, m1, r1 >}
+dqi(dr1) = {< is1, s1, m1, r1 >}
+```
 
 * Example: "A DQ `Issue` asserts that there is a POTENTIAL_ISSUE with the `Issue` "Data Generalizations should be empty" for a specific species `dwc:Occurrence` because the field `dwc:dataGeneralizations` of the record was not empty."
 
@@ -1122,30 +1237,34 @@ and IssueResponse:
 
 ##### 4.4.4.5 Data Quality Report (normative)
 
-     A(dr) = {dqm(dr) ⋃ dqv(dr) ⋃ dqi(dr) ⋃ dqa(dr) | dqm ∈ DQM, dqv ∈ DQV, dqi ∈ DQI, dqa ∈ DQA ⋀ dr ∈ DR}
-
-     a(dr1) = {dqm1, dqm2, dqm3, dqv1, dqi1, dqa1}
-
 A `Data Quality Report` is the set of `MeasurementResponse`, `ValidationResponse`, `IssueResponse`, and `AmendmentResponse` elements associated with a `DataResource`, and is the report-level basis for assessing fitness for use and for performing `QualityControl`.
+
+```
+A(dr) = {dqm(dr) ⋃ dqv(dr) ⋃ dqi(dr) ⋃ dqa(dr) | dqm ∈ DQM, dqv ∈ DQV, dqi ∈ DQI, dqa ∈ DQA ⋀ dr ∈ DR}
+
+a(dr1) = {dqm1, dqm2, dqm3, dqv1, dqi1, dqa1}
+a(dr1) = {< me1, s1, m1, r1 >, < me2, s2, m2, r2 >, < me3, s3, m3, r3 >, < va1, s4, m4, r4 >, < is1, s5, m5, r5 >, < am1, s6, m6, r6 >}
+```
+* Example: "The Data Quality Report for the dataset 3cc6171e-8c52-4f65-ad7a-32c74e395f29 includes the `MeasurementResponse` that reports coordinate numerical precision of 6.16, the `ValidationResponse` that reports that the `Validation` "Geodetic Datum must be supplied" is COMPLIANT for a specific species `dwc:Occurrence`, the `IssueResponse` that reports that there is a POTENTIAL_ISSUE with the `Issue` "Data Generalizations should be empty" for a specific species `dwc:Occurrence`, and the `AmendmentResponse` that proposes to replace the current value of the `dwc:scientificName` by the value "Apis"."
 
 ##### 4.4.4.6 Quality Control (normative)
 
 `QualityControl` is an operation on a `Data Quality Report` and a `Use Case` that yields the set of filtered subsets of that assessment that are relevant to identifying, summarizing, prioritizing, or proposing remediation of data quality problems for that `Use Case`.
 
-Let `a ∈ A(dr)` be a `Data Quality Reqport` for a `DataResource` `dr`, and let `a'` be a filtered subset of that assessment, that is, a subset of the `MeasureResponse`, `ValidationResponse`, `IssueResponse` and `AmendmentResponse` elements in `a` selected for their relevance to `QualityControl` for a specified `Use Case` `u`.
+Let `a ∈ A(dr)` be a `Data Quality Report` for a `DataResource` `dr`, and let `a'` be a filtered subset of that assessment, that is, a subset of the `MeasureResponse`, `ValidationResponse`, `IssueResponse` and `AmendmentResponse` elements in `a` selected for their relevance to `QualityControl` for a specified `Use Case` `u`.
 
 Let `result(x)` denote the value of `Response.result` for a report element `x`: 
 - `result(x)` is the outcome asserted by the `Response`, which may be categorical (for example `COMPLIANT`, `NOT_COMPLIANT`, `POTENTIAL_ISSUE`, `COMPLETE`, `NOT_COMPLETE`) or literal (for example a numeric value or a structured amendment payload).
 Let `status(x)` denote the value of `Response.status` for a report element `x`, where `x` is an element of a `Data Quality Report`.
 - `status(x)` is the execution status asserted by the `Response`, indicating whether the Test run produced a result or why it did not, or, for `AmendmentResponse`, whether the Test resulted in a change state such as `FILLED_IN` or `AMENDED`.
 
-Also, resultType(x) is the type of `Response.result` for a report element `x`, as defined above in Section[4.4.2.7](#4427-acceptable-data-quality-measure-normative).
+Also, resultType(x) is the type of `Response.result` for a report element `x`, as defined above in Section[4.4.1.3](#44113-measure-normative).
 
 ```
 QC(a, u) = { a' | a' ⊆ a ⋀ a ∈ A(dr) ⋀ u ∈ U ⋀ ∀ x ∈ a',
    (x ∈ DQV(dr) ⋀ result(x) = NOT_COMPLIANT)
  ⋁ (x ∈ DQA(dr) ⋀ status(x) ∈ {FILLED_IN, AMENDED})
- ⋁ (x ∈ DQI(dr) ⋀ result(x) = POTENTIAL_ISSUE)
+ ⋁ (x ∈ DQI(dr) ⋀ result(x) ∈ {IS_ISSUE, POTENTIAL_ISSUE})
  ⋁ (x ∈ DQM(dr) ⋀ resultType(x) = numeric)
 }
 
@@ -1166,11 +1285,13 @@ Implicit in `Quality Control`, but not formally expressed mathematically here, i
 
 Let `MEaq(u)` be the set of `Multi Record` `Measures` used for `QualityAssurance` for `Use Case` `u`, as defined above. Let `dr'` be a filtered `DataResource`, that is, a `Multi Record` subset of `dr`.
 
-    QA(dr, u) = { dr' | dr' ⊆ dr ⋀ dr ∈ DR ⋀ u ∈ U ⋀ ∀ me ∈ MEaq(u), ∃ dqm ∈ DQM(dr') ( dqm = < me, s, m, r > ⋀ r = COMPLETE ) }
+```
+QA(dr, u) = { dr' | dr' ⊆ dr ⋀ dr ∈ DR ⋀ u ∈ U ⋀ ∀ me ∈ MEaq(u), ∃ dqm ∈ DQM(dr') ( dqm = < me, s, m, r > ⋀ result(dqm) = COMPLETE ) }
 
-    qa(dr1, u1) = { dr1' | dr1' ⊆ dr1 ⋀ dr1 ∈ DR ⋀ u1 ∈ U ⋀ ∀ me ∈ MEaq(u1), ∃ dqm ∈ DQM(dr1') ( dqm = < me, s, m, r > ⋀ r = COMPLETE ) }
+qa(dr1, u1) = { dr1' | dr1' ⊆ dr1 ⋀ dr1 ∈ DR ⋀ u1 ∈ U ⋀ ∀ me ∈ MEaq(u1), ∃ dqm ∈ DQM(dr1') ( dqm = < me, s, m, r > ⋀  result(dqm)= COMPLETE ) }
+```
 
-where `dr'` is a filtered `DataResource`, `me` is a `Multi Record` `Measure` used for `QualityAssurance`, `dqm(dr')` is a `MeasurementResponse` on `dr'`, and `r = COMPLETE` means that the `Response.result` for that `Measure` on that filtered `DataResource` is `COMPLETE`.
+where `dr'` is a filtered `DataResource`, `me` is a `Multi Record` `Measure` used for `QualityAssurance`, `dqm(dr')` is a `MeasurementResponse` on `dr'`, and `result(dqm) = COMPLETE` means that the `Response.result` for that `Measure` on that filtered `DataResource` is `COMPLETE`.
 
 * `QualityAssurance` yields those filtered subsets of a `Multi Record` `DataResource` for which all relevant `Multi Record` `Measures` report `COMPLETE`.
 
