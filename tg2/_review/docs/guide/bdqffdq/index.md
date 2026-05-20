@@ -103,7 +103,7 @@ Draft Standard for Review
     - [4.4.2 Data Quality Needs (normative)](#442-data-quality-needs-normative)
       - [4.4.2.1 Validation Policy (normative)](#4421-validation-policy-normative)
       - [4.4.2.2 Measurement Policy (normative)](#4422-measurement-policy-normative)
-      - [4.4.2.3 Enhancement Policy (normative)](#4423-enhancement-policy-normative)
+      - [4.4.2.3 Amendment Policy (normative)](#4423-amendment-policy-normative)
       - [4.4.2.4 Data Quality Profile (normative)](#4424-data-quality-profile-normative)
       - [4.4.2.5 Use Case Coverage (normative)](#4425-use-case-coverage-normative)
       - [4.4.2.6 Valuable Information Elements (normative)](#4426-valuable-information-elements-normative)
@@ -112,7 +112,7 @@ Draft Standard for Review
     - [4.4.3 Data Quality Solutions (normative)](#443-data-quality-solutions-normative)
       - [4.4.3.1 Validation Method (normative)](#4431-validation-method-normative)
       - [4.4.3.2 Measurement Method (normative)](#4432-measurement-method-normative)
-      - [4.4.3.3 Enhancement Method (normative)](#4433-enhancement-method-normative)
+      - [4.4.3.3 Amendment Method (normative)](#4433-amendment-method-normative)
       - [4.4.3.4 Implementation  (normative)](#4434-implementation--normative)
       - [4.4.3.5 Mechanism Coverage (normative)](#4435-mechanism-coverage-normative)
     - [4.4.4 Data Quality Reports (normative)](#444-data-quality-reports-normative)
@@ -771,7 +771,7 @@ For a [bdqffdq:IssueResponse](<../../list/bdqffdq/index.md#IssueResponse> "A bdq
 - That `bdqffdq:IssueMethod`
   - SHOULD have exactly one `bdqffdq:forIssue` triple to a `bdqffdq:Issue`.
 
-For a [bdqffdq:MeasurementResponse](<../../list/bdqffdq/index.md#MeasurementResponse> "A bdqffdq:Response expressing the result of a bdqffdq:Implementation measuring a particular bdqffdq:DataQualityNeed in a particular bdqffdq:DataResource."), it SHOULD be possible to trace a single path to the `bdqffdq:Measurement` that produced it, via one-to-one links:
+For a [bdqffdq:MeasurementResponse](<../../list/bdqffdq/index.md#MeasurementResponse> "A bdqffdq:Response expressing the result of a bdqffdq:Implementation measuring a particular bdqffdq:DataQualityNeed in a particular bdqffdq:DataResource."), it SHOULD be possible to trace a single path to the `bdqffdq:Measure` that produced it, via one-to-one links:
 - Each `bdqffdq:MeasurementResponse`
   - SHOULD be the object of exactly one `bdqffdq:producesResponse` triple from an `bdqffdq:Implementation`.
 - That `bdqffdq:Implementation`
@@ -779,7 +779,7 @@ For a [bdqffdq:MeasurementResponse](<../../list/bdqffdq/index.md#MeasurementResp
 - That `bdqffdq:Specification`
   - SHOULD be the object of exactly one `bdqffdq:hasSpecification` triple from a [bdqffdq:MeasurementMethod](<../../list/bdqffdq/index.md#MeasurementMethod> "A data quality bdqffdq:SolutionsConcept that relates a bdqffdq:Measure to its bdqffdq:Specifications.").
 - That `bdqffdq:MeasurementMethod`
-  - SHOULD have exactly one `bdqffdq:forMeasure` triple to a `bdqffdq:Measurement`.
+  - SHOULD have exactly one `bdqffdq:forMeasure` triple to a `bdqffdq:Measure`.
 
 For a [bdqffdq:AmendmentResponse](<../../list/bdqffdq/index.md#AmendmentResponse> "A bdqffdq:Response expressing the result of a bdqffdq:Implementation evaluating a bdqffdq:Amendment supporting a particular bdqffdq:DataQualityNeed to improve a particular bdqffdq:DataResource."), it SHOULD be possible to trace a single path to the `bdqffdq:Amendment` that produced it, via one-to-one links:
 - Each `bdqffdq:AmendmentResponse`
@@ -912,8 +912,8 @@ The following changes have been made to the original formulation:
 - `dcmitype:Dataset` replaced with `Multi Record`.
 - `Dimension` replaced with `Data Quality Dimension`.
 - `Data Quality Dimension` can apply to classes other than `Measure`, that is `Validation`, `Issue`, and `Amendment` can have `Data Quality Dimensions`.
-- `Improvement Method` changed to `Enhancement Method`.
-- `Improvement Policy` changed to `Enhancement Policy`.
+- `Improvement Method` changed to `Amendment Method`.
+- `Improvement Policy` changed to `Amendment Policy`.
 - `Data Quality Improvement` changed to `Data Quality Amendment`.
 - `Data Quality Assessment` changed to `Data Quality Report`.
 - `Issue`, `IssuePolicy`, `IssueMethod`, and `IssueResponse` added as converse of `Validation`.
@@ -987,42 +987,99 @@ The following brief explanations are intended to help readers interpret the nota
 
 ### 4.4 Derived Concepts (normative)
 #### 4.4.1 General (normative)
+
 ##### 4.4.1.1 Validation (normative)
-     VA = { va | va = < ie, c, rt >, ie ∈ IE, c ∈ C ⋀ rt ∈ RT }   
 
-     va1 = < ie1, c1, rt1 >
+A `Validation` assesses whether data comply with a `Criterion`. It is composed of an `Information Element`, a `Criterion`, a `Data Quality Dimension`, and a `Resource Type`, and yields a `Response.result` drawn from the disjoint result vocabulary `RV_va = { COMPLIANT, NOT_COMPLIANT }`
 
-* "The value of dwc:basisOfRecord of single records must be in the controlled vocabulary"
+```
+VA = { va | va = < ie, c, d, rt >, ie ∈ IE, c ∈ C, d ∈ D ⋀ rt ∈ RT }
+
+va1 = < ie1, c1, d1, rt1 >
+```
+
+* Example: "The value of dwc:basisOfRecord of single records must be in the controlled vocabulary"
+
+A `Validation` is interpreted in the positive sense: it asserts the presence or absence of compliance with the `Criterion` `c` for the data identified by the `Information Element` `ie` on a resource of type `rt`, evaluated within the `Data Quality Dimension` `d`.
 
 ##### 4.4.1.2 Issue (normative)
 
-    IS = { is | is = < ie, c, rt >, ie ∈ IE, c ∈ ∁C ⋀ rt ∈ RT }
+An `Issue` has the same structural shape as a `Validation` (an `Information Element`, a `Criterion`, a `Data Quality Dimension`, and a `Resource Type`), but a distinct result vocabulary and a distinct interpretive stance.
 
-    is1 = < ie1, c1, rt1 >
+```
+IS = { is | is = < ie, c, d, rt >, ie ∈ IE, c ∈ C, d ∈ D ⋀ rt ∈ RT }
 
-* "Potential issue if geographic coordinate is at 0,0"
+is1 = < ie1, c1, d1, rt1 >
+```
 
-An `Issue` with a `Response.result` of IS_ISSUE is an exact converse of a `Validation`. 
+* Example: "Potential issue if geographic coordinate is at 0,0"
 
-An `Issue` with a `Response.result` of POTENTIAL_ISSUE is distinct and has no analog in `Validation`, such is intended to express that there is a potential issue with the data, and that human review of the issue is needed to determine if the data are fit for a particular use, that is, as a caution.
+`Issue` is modeled in the ontology using the same structural pattern as `Validation`, composed with a `Criterion`, but is interpreted in the negative or cautionary sense: an `Issue` reports the *presence* of a problem (or the possible presence of one), rather than the presence or absence of compliance.
 
-`Issue` is modeled in the ontology using the same structural pattern as `Validation`, composed with `Criterion`, but is interpreted in the negative or cautionary sense.
+**Disjoint result vocabularies.** A `Validation` and an `Issue` draw `Response.result` values from disjoint sets:
+
+```
+RV_va = { COMPLIANT, NOT_COMPLIANT }
+RV_is = { NOT_ISSUE, IS_ISSUE, POTENTIAL_ISSUE }
+RV_va ∩ RV_is = ∅
+```
+
+A `ValidationResponse` MUST NOT carry a result drawn from `RV_is`, and an `IssueResponse` MUST NOT carry a result drawn from `RV_va`.
+
+**Polarity map.** A partial map φ relates `Validation` results to `Issue` results by polarity:
+
+```
+φ : RV_va → RV_is
+φ(COMPLIANT)     = NOT_ISSUE
+φ(NOT_COMPLIANT) = IS_ISSUE
+```
+
+φ is total on `RV_va` but is not surjective onto `RV_is`: `POTENTIAL_ISSUE ∉ range(φ)`. `POTENTIAL_ISSUE` is formally unique to `Issue` and has no analog in `Validation`. It is intended to express that there is a potential issue with the data that requires human judgement to resolve.
+
+**Independence of paired Tests.** Under the polarity map, `IS_ISSUE` and `NOT_COMPLIANT` are oriented as converses: a `Validation` reporting `NOT_COMPLIANT` and an `Issue` reporting `IS_ISSUE`, when evaluated against the same `Criterion` on the same data, assert the same quality problem in opposite orientations — one asserts that quality is absent, the other asserts that a problem is present. However, an `Issue` and a `Validation` that share a `Criterion` are nonetheless independent Tests, each with its own `Specification`. The Framework does not require that, for every record `q` and `Criterion` `c`:
+
+```
+result( IS on c, q ) = φ( result( VA on c, q ) )
+```
+
+In particular:
+
+```
+∃ q, ( VA on c detects q as NOT_COMPLIANT )
+   ⋀ ( IS on c does not detect q as IS_ISSUE )
+```
+
+This case is expected, because an `Issue` is typically scoped to a specific named problem pattern rather than to the full `Criterion` evaluated by the paired `Validation`. The natural witness is `Response.result = POTENTIAL_ISSUE`, where the `Issue` declines to assert a definite problem and defers to human review; disagreement via `NOT_ISSUE` is also permitted by the formalization, although it is expected to be uncommon in practice.
+
+Consumers of `Data Quality Reports` MUST NOT mechanically derive `IssueResponses` from `ValidationResponses` (or vice versa) by applying φ. Producers of `IssueResponses` SHOULD produce them only from the `Specification` of an `Issue`.
 
 ##### 4.4.1.3 Measure (normative)
 
-    ME = { me | me =< ie, d, rt >, ie ∈ IE, d ∈ D ⋀ rt ∈ RT }
+A `Measure` produces an aggregate or descriptive metric for a `Data Quality Dimension`. It is composed of an `Information Element`, a `Data Quality Dimension`, and a `Resource Type` (it has no `Criterion` and no `Enhancement`).
 
-    me1 = < ie1, d1, rt1 >
+```
+ME = { me | me = < ie, d, rt >, ie ∈ IE, d ∈ D ⋀ rt ∈ RT }
 
-* "coordinate precision of single records"
+me1 = < ie1, d1, rt1 >
+```
+
+* Example: "coordinate precision of single records"
+
+A `Measure` may be interpreted either descriptively or judgmentally: it may report either *how much* of some property is present, or whether the data are fit. The `Response.result` of a `Measure` may be either categorical, drawn from `RV_me_cat = { COMPLETE, NOT_COMPLETE }` or as a numeric value.
 
 ##### 4.4.1.4 Amendment (normative)
 
-    AM = { am | am = < ie, e, rt >, ie ∈ IE, e ∈ E ⋀ rt ∈ RT }
+An `Amendment` proposes a change to data that, if accepted, may improve fitness for use. It is composed of an `Information Element`, an `Enhancement`, a `Data Quality Dimension`, and a `Resource Type`.
 
-    am1 = < ie1, e1, rt1 >
+```
+AM = { am | am = < ie, e, d, rt >, ie ∈ IE, e ∈ E, d ∈ D ⋀ rt ∈ RT }
 
-* "Recommend valid value for taxon name in single record"
+am1 = < ie1, e1, d1, rt1 >
+```
+
+* Example: "Recommend valid value for taxon name in single record"
+
+An `Amendment` is interpreted as a *proposal*, not an assertion of compliance.  
 
 #### 4.4.2 Data Quality Needs (normative)
 ##### 4.4.2.1 Validation Policy (normative)
@@ -1039,7 +1096,7 @@ An `Issue` with a `Response.result` of POTENTIAL_ISSUE is distinct and has no an
     mp(u1) = {me1, me2, me3, me4}
     mp(u1) = {< ie1, d1, rt2 >, < ie1, d1, rt1 >, < ie2, d1, rt1 >, < ie2, d2, rt2 >}
 
-##### 4.4.2.3 Enhancement Policy (normative)
+##### 4.4.2.3 Amendment Policy (normative)
 
      EP(u) = {am | am ⊂ AM ⋀ u ∈ U }
 
@@ -1057,13 +1114,13 @@ An `Issue` with a `Response.result` of POTENTIAL_ISSUE is distinct and has no an
 
      uc(u1) = {us1, us2}
 
-* "A Use Case for Niche Modeling covers MAXENT and GARP modeling"
+* Example: "A Use Case for Niche Modeling covers MAXENT and GARP modeling"
 
 ##### 4.4.2.6 Valuable Information Elements (normative)
 
      VIE(u) = {ie | ie ⊂ IE ⋀ u ∈ U }
 
-* For a `Use Case`, what `Information Elements` are valuable.
+* Example: "For a `Use Case`, what `Information Elements` are valuable."
 
 ##### 4.4.2.7 Acceptable Data Quality Measure (normative)
 
@@ -1081,7 +1138,7 @@ Let `MEaq(u)` be the set of `Multi Record` `Measures` in the `Measurement Policy
 
     meaq(u1) = {me1, me2}
 
-* For a Use Case, acceptable quality is met by all records having all categorical (COMPLETE/NOT_COMPLETE) `Measures` reporting COMPLETE.
+* Example: For a Use Case, acceptable quality is met by all records having all categorical (COMPLETE/NOT_COMPLETE) `Measures` reporting COMPLETE.
 
 In the initial BDQ Tests, for a `Use Case`, `MEaq(u)` is the set of `Multi Record` `Measures` that define whether a filtered record set is acceptable for `QualityAssurance`, named with the convention `MULTIRECORD_MEASURE_QA_`.
 
@@ -1091,7 +1148,7 @@ In the initial BDQ Tests, for a `Use Case`, `MEaq(u)` is the set of `Multi Recor
 
     it(am1) = {me1, va2, is1}
 
-* Recommending coordinates based on textual locality improves the coordinate completeness of `Single Records` and may result in compliance with the `Criterion` dataset must have all records with coordinates.
+* Example: "Recommending coordinates based on textual locality improves the coordinate completeness of `Single Records` and may result in compliance with the `Criterion` dataset must have all records with coordinates."
 
 The `ImprovementTarget` concept is intended to express that an `Amendment` may support improvement in more than one way. In particular, an `Amendment` may improve one or more `Measures` of data quality and may also help satisfy one or more `Validations`. The expression for `IT(am)` should therefore be read as identifying the set of `Data Quality Needs` that may be improved, satisfied, or brought closer to compliance through acceptance of the proposals made by a given `Amendment`.
 
@@ -1106,7 +1163,7 @@ This formalization SHOULD NOT block the framing of `Amendments` that propose cha
 ##### 4.4.3.2 Measurement Method (normative)
     MM(me) = {s | s ⊂ S ⋀ me ∈ ME}
 
-##### 4.4.3.3 Enhancement Method (normative)
+##### 4.4.3.3 Amendment Method (normative)
     EM(am) = {s | s ⊂ S ⋀ am ∈ AM}
 
 ##### 4.4.3.4 Implementation  (normative)
@@ -1125,7 +1182,7 @@ This formalization SHOULD NOT block the framing of `Amendments` that propose cha
 
     dr1 =< id1, rt1, v1 >
 
-* "dr1 is a Data Resource which represents the Dataset "3cc6171e-8c52-4f65-ad7a-32c74e395f29" which contains 251,744 records"
+* Example: "dr1 is a Data Resource which represents the Dataset "3cc6171e-8c52-4f65-ad7a-32c74e395f29" which contains 251,744 records"
 
 ##### 4.4.4.2 ValidationResponse and IssueResponse (normative)
 
@@ -1135,7 +1192,7 @@ A ValidationResponse
 
      dqv(dr1) = {< va1, s1, m1, r1 >}
 
-* A DQ `Validation` asserts that the `Validation` "Geodetic Datum must be supplied" is COMPLIANT for a specific species `dwc:Occurrence` and this `Validation` was performed by the software Darwin Test by checking if the field `dwc:geodeticDatum` of the record was `bdqval:NotEmpty`.
+* Example: A DQ `Validation` asserts that the `Validation` "Geodetic Datum must be supplied" is COMPLIANT for a specific species `dwc:Occurrence` and this `Validation` was performed by the software Darwin Test by checking if the field `dwc:geodeticDatum` of the record was `bdqval:NotEmpty`.
 
 and IssueResponse: 
 
@@ -1143,7 +1200,7 @@ and IssueResponse:
 
      dqi(dr1) = {< is1, s1, m1, r1 >}
 
-* A DQ `Issue` asserts that there is a POTENTIAL_ISSUE with the `Issue` "Data Generalizations should be empty" for a specific species `dwc:Occurrence` because the field `dwc:dataGeneralizations` of the record was not empty.
+* Example: "A DQ `Issue` asserts that there is a POTENTIAL_ISSUE with the `Issue` "Data Generalizations should be empty" for a specific species `dwc:Occurrence` because the field `dwc:dataGeneralizations` of the record was not empty."
 
 ##### 4.4.4.3 MeasurementResponse (normative)
 
@@ -1151,7 +1208,7 @@ and IssueResponse:
      
      dqm(dr1) = {< me1, s1, m1, r1 >}
 
-* Coordinate numerical precision of the dataset 3cc6171e-8c52-4f65-ad7a-32c74e395f29 is 6.16 and this value was assigned by the software DwC-A Validator 2.0 which calculated the value by the average of significant digits of each record of the dataset.
+* Example: Coordinate numerical precision of the dataset 3cc6171e-8c52-4f65-ad7a-32c74e395f29 is 6.16 and this value was assigned by the software DwC-A Validator 2.0 which calculated the value by the average of significant digits of each record of the dataset.
 
 ##### 4.4.4.4 AmendmentResponse (normative)
 
@@ -1159,7 +1216,7 @@ and IssueResponse:
 
      dqa(dr1) = {< am1, s1, m1, r1 >}
 
-* An `Amendment` is proposed to replace the current value of the `dwc:scientificName` by the value "Apis" because Apis is the most similar valid name based on the Levenshtein distance in the Catalog of Life database using the software DwC-A Validator 2.0.
+* Example: An `Amendment` is proposed to replace the current value of the `dwc:scientificName` by the value "Apis" because Apis is the most similar valid name based on the Levenshtein distance in the Catalog of Life database using the software DwC-A Validator 2.0.
 
 ##### 4.4.4.5 Data Quality Report (normative)
 
