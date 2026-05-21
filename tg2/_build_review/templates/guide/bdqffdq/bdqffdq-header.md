@@ -821,7 +821,7 @@ The following changes have been made to the original formulation:
 - `Issue`, `IssuePolicy`, `IssueMethod`, and `IssueResponse` added as converse of `Validation`.
 - `Dimension in Context` renamed `Measure`.
 - `Criterion in Context` renamed `Validation`.
-- `Enhancement in Context` renamed `Amendment`.
+- `Enhancement in Context` renamed `Amendment` (The fundamental concept remains `Enhancement`, but the derived contextualized concept is now called `Amendment`.
 - `Assertion` renamed `Response`.
 - A new definition for 'Quality Assurance' as an operation reflecting current practice rather than as a set of tests.
 - A new definition for 'Quality Control' as an operation reflecting current practice rather than as a set of tests.
@@ -889,7 +889,7 @@ The following brief explanations are intended to help readers interpret the nota
 
 * Braces `{ }` denote a **set**, that is, an unordered collection of one or more elements, while angle brackets `< >` denote a **tuple**, that is, an ordered grouping of elements taken together as a single instance. Thus `{a, b}` and `{b, a}` denote the same set, but `<a, b>` and `<b, a>` denote different tuples because the order of the elements is significant in a tuple.
 * Uppercase symbols such as `U`, `ME`, or `DR` denote a **domain**, that is, the set of all instances of some concept, while lowercase symbols such as `u`, `me`, or `dr` denote a particular **instance**, or in some expressions a subset of instances, drawn from that domain.
-* The symbol `∈` means “is a member of”, so `x ∈ X` means that `x` is a single instance in the domain `X`. The symbol `⊂` means “is a subset of”, so `x ⊂ X` means that `x` is a subset drawn from the domain `X` rather than a single instance.
+* The symbol `∈` means “is a member of”. Thus, `x ∈ X` means that `x` is a single instance in the domain `X`, while `x ∈ 𝒫(X)` means that `x` is a subset drawn from the domain `X` rather than a single instance. The symbol `⊂` means “is a subset of”, and is used for ordinary subset relations between sets.
 * An expression of the form `{ x | condition }` is **set-builder notation**, meaning “the set of all `x` such that the stated condition holds”.
 * Expressions such as `VIE(u)`, `QA(dr, u)`, or `QC(a, u)` should be read as named constructions that depend on the values in parentheses. For example, `VIE(u)` means the Valuable `Information Elements` for a particular `Use Case` `u`, and `QA(dr, u)` means `QualityAssurance` for a particular `DataResource` `dr` and `Use Case` `u`.
 * The symbol `∀` means “for all”, and the symbol `∃` means “there exists”. For example, `∀ me ∈ MEaq(u)` means “for every `Measure` in `MEaq(u)`”, while `∃ dqm ∈ DQM(dr')` means “there exists a `MeasurementResponse` in `DQM(dr')`”.
@@ -1170,9 +1170,9 @@ mm(me1) = {s1, s2}
 mm(me1) = {< ie1, d1, rt1>, < ie2, d2, rt2> }
 ```
 
-##### 4.4.3.3 Enhancement Method (normative)
+##### 4.4.3.3 Amendment Method (normative)
 
-An `Enhancement Method` is the set of `Specifications` for an `Amendment` `am`.
+An `Amendment Method` is the set of `Specifications` for an `Amendment` `am`.
 
 ```
 EM(am) = {s | s ∈ 𝒫(S) ⋀ am ∈ AM}
@@ -1183,7 +1183,7 @@ em(am1) = {< ie1, e1, d1, rt1>, < ie2, e2, d2, rt2> }
 
 ##### 4.4.3.4 Implementation  (normative)
 
-An `Implementation` of a `Specification` `s` is the set of `Mechanisms` that implement `s`."
+An `Implementation` of a `Specification` `s` is the set of `Mechanisms` that implement `s`.
 
 ```
 I(s) = {m | m ∈ 𝒫(M) ⋀ s ∈ S}
@@ -1198,7 +1198,7 @@ i(s1) = {< ie1, c1, d1, rt1>, < ie2, c2, d2, rt2> }
 A `Mechanism` may implement one or more `Specifications`, and a `Specification` may be implemented by one or more `Mechanisms`. The `Mechanism Coverage` for a `Mechanism` `m` is the set of all `Specifications` such that each `Specification` is a subset of the set of all `Specifications` and is implemented by `m`.
 
 ```
-I(s) = {m | m ∈ 𝒫(M) ⋀ s ∈ S}
+MC(m) = {s | s ∈ 𝒫(S) ⋀ m ∈ M }
 
 mc(m1) = {s1, s2}
 mc(m1) = {< ie1, c1, d1, rt1>, < ie2, c2, d2, rt2> }
