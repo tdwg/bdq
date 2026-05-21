@@ -826,6 +826,7 @@ The following changes have been made to the original formulation:
 - A new definition for 'Quality Assurance' as an operation reflecting current practice rather than as a set of tests.
 - A new definition for 'Quality Control' as an operation reflecting current practice rather than as a set of tests.
 - A new definition is provided for `Acceptable Data Quality Measure` to support the use of `bdqffdq:Measure` for both `Quality Assurance` and `Quality Control` purposes.
+- The set-builder expressions for parameterized derived concepts (e.g., `VP(u)`, `MM(me)`, `I(s)`, `DQV(dr)`) are stated in terms of primitive associational relations (e.g., `rel_VP`, `rel_MM`, `rel_I`, `rel_DQV`) introduced in §4.2.1, rather than with trivially-true parameter-typing conjuncts as in Appendix A of Veiga (2016). This makes the associations the expressions name (e.g., "the `Validations` included in the `Validation Policy` for `u`") definitionally explicit; The worked examples of Appendix B of Veiga (2016) remain admissible extensional interpretations of these relations.
 
 
 The Fitness For Use Framework ontology is framed with limited constraints and no `rdfs:range` axioms. Under open world principles, it could be used in ways other than the constraints framed by this mathematical formulation, but this formulation SHOULD be treated as a guide for how to phrase `Responses` using `bdqffdq:` terms, and how a set of `Responses` made with those terms SHOULD be queried.
@@ -847,6 +848,45 @@ The Fitness For Use Framework ontology is framed with limited constraints and no
 * ds = instance of `Multi Record` (dataset)
 * V = Data Resource Value
 * R = `Response` (result from a `Mechanism`, of `Validation`, `Issue`, `Measurement`, or `Amendment` on a Resource).
+
+#### 4.2.1 Primitive Associational Relations (normative)
+
+The set-builder expressions in §4.4 are parameterized by domain elements such as a `Use Case` `u`, a `Validation` `va`, or a `Data Resource` `dr`. The intended associations between such parameters and the elements they select (for example, "the `Validations` included in the `Validation Policy` for `u`") are not derivable from the type signatures of those parameters alone. They are realized in the `bdqffdq:` ontology by specific chains of object properties (for example, `UseCase ← bdqffdq:hasUseCase – Policy – bdqffdq:includedInPolicy → Validation` for `rel_VP`). The formalization therefore introduces the following primitive binary relations, each of which is realized extensionally either by Appendix B-style example stipulations or, in deployed `bdqffdq:` data, by the corresponding object-property chains in the ontology.
+
+For policy relations `rel_VP`, `rel_ISP`, `rel_MP`, and `rel_AP`, the relation is the projection of the ontology chain through `Policy`; a single `Policy` individual mediates the association, while the relation here records its `(UseCase, DataQualityNeed)` projection.
+
+Needs-layer associational relations:
+
+* `rel_VP ⊆ U × VA` (`Validation Policy` association)
+* `rel_ISP ⊆ U × IS` (`Issue Policy` association)
+* `rel_MP ⊆ U × ME` (`Measurement Policy` association)
+* `rel_AP ⊆ U × AM` (`Amendment Policy` association)
+* `rel_UC ⊆ U × US` (`Use Case Coverage` association)
+* `rel_VIE ⊆ U × IE` (Valuable `Information Element` association)
+* `rel_IT ⊆ AM × (VA ∪ IS ∪ ME)` (`Improvement Target` association)
+
+Solutions-layer associational relations:
+
+* `rel_VM ⊆ VA × S` (`Validation Method` association)
+* `rel_ISM ⊆ IS × S` (`Issue Method` association)
+* `rel_MM ⊆ ME × S` (`Measurement Method` association)
+* `rel_AMM ⊆ AM × S` (`Amendment Method` association)
+* `rel_I ⊆ S × M` (`Implementation` association)
+* `rel_MC ⊆ M × S` (`Mechanism Coverage` association)
+
+Reports-layer tuple types:
+
+* `RespV = VA × S × M × R` (`ValidationResponse` tuple type)
+* `RespI = IS × S × M × R` (`IssueResponse` tuple type)
+* `RespM = ME × S × M × R` (`MeasurementResponse` tuple type)
+* `RespA = AM × S × M × R` (`AmendmentResponse` tuple type)
+
+Reports-layer associational relations:
+
+* `rel_DQV ⊆ DR × RespV`
+* `rel_DQI ⊆ DR × RespI`
+* `rel_DQM ⊆ DR × RespM`
+* `rel_DQA ⊆ DR × RespA`
 
 ### 4.3 Notation (normative)
 * X: Domain (Uppercase symbols) 
@@ -1046,7 +1086,7 @@ Policies are associative entities relating a `Use Case` to a `Data Quality Need`
 `Validation Policy` and `Issue Policy` are defined as follows:
 
 ```
-VP(u) = {va | va ∈ VA ⋀ u ∈ U }
+VP(u) = { va | va ∈ VA ⋀ (u, va) ∈ rel_VP }
 
 vp(u1) = {va1, va2}
 vp(u1) = {< ie1, c1, d1, rt1>, < ie2, c2, d2, rt2> }
@@ -1055,7 +1095,7 @@ vp(u1) = {< ie1, c1, d1, rt1>, < ie2, c2, d2, rt2> }
 And for `IssuePolicy`:
 
 ```
-ISP(u) = {is | is ∈ IS ⋀ u ∈ U}
+ISP(u) = { is | is ∈ IS ⋀ (u, is) ∈ rel_ISP }
 
 isp(u1) = {is1, is2}
 isp(u1) = {< ie1, c1, d1, rt1>, < ie2, c2, d2, rt2> }
@@ -1068,7 +1108,7 @@ isp(u1) = {< ie1, c1, d1, rt1>, < ie2, c2, d2, rt2> }
 A `Measurement Policy` relates a `Use Case` to one or more `Measures`.
 
 ```
-MP(u) = {me | me ∈ ME ⋀ u ∈ U }
+MP(u) = { me | me ∈ ME ⋀ (u, me) ∈ rel_MP }
 
 mp(u1) = {me1, me2, me3, me4}
 mp(u1) = {< ie1, d1, rt2 >, < ie1, d1, rt1 >, < ie2, d1, rt1 >, < ie2, d2, rt2 >}
@@ -1078,7 +1118,7 @@ mp(u1) = {< ie1, d1, rt2 >, < ie1, d1, rt1 >, < ie2, d1, rt1 >, < ie2, d2, rt2 >
 
 An `Amendment Policy` relates a `Use Case` to one or more `Amendments`.
 ```
-AP(u) = {am | am ∈ AM ⋀ u ∈ U }
+AP(u) = { am | am ∈ AM ⋀ (u, am) ∈ rel_AP }
 
 ap(u1) = {am1, am2}
 ap(u1) = {< ie1, e1, d1, rt1 >, < ie2, e2, d2, rt2 >}
@@ -1100,7 +1140,7 @@ dqp(u1) = {me1, me2, me3, me4, va1, va2, is1, is2, am1, am2}
 The Use Case Coverage for a `Use Case` `u` is the set of all Usages associated with `u`. 
 
 ``` 
-UC(u) = { us | u ∈ U ⋀ us ∈ US}
+UC(u) = { us | us ∈ US ⋀ (u, us) ∈ rel_UC }
 
 uc(u1) = {us1, us2} 
 ```
@@ -1115,7 +1155,7 @@ The property `bdqffdq:hasFitnessRequirements` is intended to allow this concept 
 The Valuable `Information Elements` for a `Use Case` `u` are the `Information Elements` that are associated with `u`.
 
 ```
-VIE(u) = {ie | ie ∈ IE ⋀ u ∈ U }
+VIE(u) = { ie | ie ∈ IE ⋀ (u, ie) ∈ rel_VIE }
 
 vie(u1) = {ie1, ie2}
 vie(u1) = {dwc:countryCode, dwc:decimalLatitude}
@@ -1174,7 +1214,7 @@ In the initial BDQ Tests, for a `Use Case`, `MEaq(u)` is the set of `Multi Recor
 Let IT be the set of Improvement Targets for an `Amendment`, such that each `Improvement Target` is the union of a `Measure`, a `Validation`, and an `Issue` for which acceptance of the `Amendment` may improve fitness for use.
 
 ```
-IT(am) = {x | (x ∈ ME ⋁ x ∈ VA ⋁ x ∈ IS) ⋀ am ∈ AM}
+IT(am) = { x | (x ∈ ME ⋁ x ∈ VA ⋁ x ∈ IS) ⋀ (am, x) ∈ rel_IT }
 
 it(am1) = {me1, va2, is1}
 ```
@@ -1194,7 +1234,7 @@ This formalization SHOULD NOT block the framing of `Amendments` that propose cha
 `Validation Method`:  Let `VM(va)` be the set of `Specifications` for a `Validation` `va`.
 
 ```
-VM(va) = {s | s ∈ S ⋀ va ∈ VA}
+VM(va) = { s | s ∈ S ⋀ (va, s) ∈ rel_VM }
 
 vm(va1) = {s1, s2}
 ```
@@ -1202,7 +1242,7 @@ vm(va1) = {s1, s2}
 And `Issue Method`: Let `ISM(is)` be the set of `Specifications` for an `Issue` `is`.
 
 ```
-ISM(is) = {s | s ∈ S ⋀ is ∈ IS}
+ISM(is) = { s | s ∈ S ⋀ (is, s) ∈ rel_ISM }
 
 ism(is1) = {s1, s2}
 ```
@@ -1212,7 +1252,7 @@ ism(is1) = {s1, s2}
 A `Measurement Method` is the set of `Specifications` for a `Measure` `me`.
 
 ```
-MM(me) = {s | s ∈ S ⋀ me ∈ ME}
+MM(me) = { s | s ∈ S ⋀ (me, s) ∈ rel_MM }
 
 mm(me1) = {s1, s2}
 ```
@@ -1222,7 +1262,7 @@ mm(me1) = {s1, s2}
 An `Amendment Method` is the set of `Specifications` for an `Amendment` `am`.
 
 ```
-AMM(am) = {s | s ∈ S ⋀ am ∈ AM}
+AMM(am) = { s | s ∈ S ⋀ (am, s) ∈ rel_AMM }
 
 amm(am1) = {s1, s2}
 ```
@@ -1232,7 +1272,7 @@ amm(am1) = {s1, s2}
 An `Implementation` of a `Specification` `s` is the set of `Mechanisms` that implement `s`.
 
 ```
-I(s) = {m | m ∈ M ⋀ s ∈ S}
+I(s) = { m | m ∈ M ⋀ (s, m) ∈ rel_I }
 
 i(s1) = {m1, m2}
 ```
@@ -1243,7 +1283,7 @@ i(s1) = {m1, m2}
 A `Mechanism` may implement one or more `Specifications`, and a `Specification` may be implemented by one or more `Mechanisms`. The `Mechanism Coverage` for a `Mechanism` `m` is the set of all `Specifications` implemented by `m`.
 
 ```
-MC(m) = {s | s ∈ S ⋀ m ∈ M }
+MC(m) = { s | s ∈ S ⋀ (m, s) ∈ rel_MC }
 
 mc(m1) = {s1, s2}
 ```
@@ -1266,7 +1306,7 @@ A `Data Resource` is a tuple of an identifier, a resource type, and a value. It 
 A ValidationResponse 
 
 ```
-DQV(dr) = {dqv | dqv = < va, s, m, r >, va ∈ VA, s ∈ S, m ∈ M , r ∈ R ⋀ dr ∈ DR}
+DQV(dr) = { dqv | dqv ∈ RespV ⋀ (dr, dqv) ∈ rel_DQV }
 
 dqv(dr1) = {< va1, s1, m1, r1 >}
 ```
@@ -1276,7 +1316,7 @@ dqv(dr1) = {< va1, s1, m1, r1 >}
 and IssueResponse: 
 
 ```
-DQI(dr) = {dqi | dqi = < is, s, m, r >, is ∈ IS, s ∈ S, m ∈ M , r ∈ R ⋀ dr ∈ DR}
+DQI(dr) = { dqi | dqi ∈ RespI ⋀ (dr, dqi) ∈ rel_DQI }
 
 dqi(dr1) = {< is1, s1, m1, r1 >}
 ```
@@ -1285,7 +1325,7 @@ dqi(dr1) = {< is1, s1, m1, r1 >}
 
 ##### 4.4.4.3 MeasurementResponse (normative)
 
-     DQM(dr) = {dqm | dqm =< me, s, m, r >, me ∈ ME, s ∈ S, m ∈ M , r ∈ R ⋀ dr ∈ DR}
+     DQM(dr) = { dqm | dqm ∈ RespM ⋀ (dr, dqm) ∈ rel_DQM }
      
      dqm(dr1) = {< me1, s1, m1, r1 >}
 
@@ -1293,7 +1333,7 @@ dqi(dr1) = {< is1, s1, m1, r1 >}
 
 ##### 4.4.4.4 AmendmentResponse (normative)
 
-     DQA(dr) = {dqa | dqa = < am, s, m, r >, am ∈ AM, s ∈ S, m ∈ M , r ∈ R ⋀ dr ∈ DR}
+     DQA(dr) = { dqa | dqa ∈ RespA ⋀ (dr, dqa) ∈ rel_DQA }
 
      dqa(dr1) = {< am1, s1, m1, r1 >}
 
@@ -1304,7 +1344,7 @@ dqi(dr1) = {< is1, s1, m1, r1 >}
 A `Data Quality Report` is the set of `MeasurementResponse`, `ValidationResponse`, `IssueResponse`, and `AmendmentResponse` elements associated with a `DataResource`, and is the report-level basis for assessing fitness for use and for performing `QualityControl`.
 
 ```
-A(dr) = {dqm(dr) ⋃ dqv(dr) ⋃ dqi(dr) ⋃ dqa(dr) | dqm ∈ DQM, dqv ∈ DQV, dqi ∈ DQI, dqa ∈ DQA ⋀ dr ∈ DR}
+A(dr) = DQM(dr) ⋃ DQV(dr) ⋃ DQI(dr) ⋃ DQA(dr),  where dr ∈ DR
 
 a(dr1) = {dqm1, dqm2, dqm3, dqv1, dqi1, dqa1}
 a(dr1) = {< me1, s1, m1, r1 >, < me2, s2, m2, r2 >, < me3, s3, m3, r3 >, < va1, s4, m4, r4 >, < is1, s5, m5, r5 >, < am1, s6, m6, r6 >}
@@ -1386,4 +1426,3 @@ If this condition is met, at least one Test on `dr` could not be completed becau
 This list brings together definitions of terms in the Fitness For Use Framework vocabulary, listed in more detail in [Fitness For Use Framework Ontology List of Terms](../../list/bdqffdq/index.md). with the additional axioms in the [Fitness For Use Framework Ontology Vocabulary Extension](../../extension/bdqffdq/index.md). 
 
 {term_list}
-
