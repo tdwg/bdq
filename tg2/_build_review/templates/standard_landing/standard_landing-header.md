@@ -51,17 +51,17 @@ Technical Specification
 
 <!-- Brief high level overview of the standard --->
 
-Beyond data availability, data quality is probably the most significant issue for users of biodiversity data. The Biodiversity Data Quality Standard (BDQ) establishes a comprehensive, common, interoperable framework for evaluating the *quality* of biodiversity data as *fitness for a particular use*, rather than as an inherent characteristic of data. 
+Beyond data availability, data quality is the most significant challenge for users of biodiversity data. The Biodiversity Data Quality Standard (BDQ) establishes a comprehensive, common, and interoperable framework for evaluating the *quality* of biodiversity data as *fitness for a particular use*, rather than as an inherent characteristic of the data itself.
 
 ### 1.1 Purpose of the BDQ Standard (non-normative)
 
 <!-- Brief purpose and value proposition statement: what is the standard, why use it --->
 
-The Biodiversity Data Quality (BDQ) standard establishes a community-defined, modular, and extensible environment for biodiversity data quality.  It integrates a comprehensive set of Tests (`bdqtest:`) initially focused on Darwin Core (Wieczorek et al., 2012), but not restricted to it, with a formal Framework (`bdqffdq:`) and supporting vocabularies (`bdqval:`, `bdqdim:`, `bdqcrit:`, and `bdqenh:`) to define Tests, their inputs (`Information Elements`), and their structured output (`Responses`). 
+The BDQ standard establishes a community-defined, modular, and extensible environment for biodiversity data quality. BDQ defines a comprehensive set of Tests (`bdqtest:`), their inputs (`InformationElements`) and their structured output (`Responses`). BDQ initially focused on Darwin Core but structurally independent of it. BDQ is a formal Fitness for Use Framework (`bdqffdq:`) with supporting vocabularies `bdqval:`, `bdqdim:`, `bdqcrit:`, `bdqenh:` and `bdquc:`.
 
-At its core, BDQ focuses on the semantics of data quality.  It defines what a Test means and precisely what information a `Response` must contain. BDQ intentionally avoids prescribing both execution concerns, such as data loading or parallelization of Test execution, and human centric concerns like presentation or remediation processes.  By providing a consistent semantic layer focused on Test inputs and outputs, the standard allows for flexible application within diverse operational settings supporting both `Quality Assurance` (QA) and `Quality Control` (QC). The presentation and serialization of `Data Quality Reports` is intentionally flexible, so long as the required `Response` elements are available to consumers.
+BDQ defines what Tests mean and what information a `Response` must contain. To maintain operational flexibility, the standard intentionally avoids prescribing execution concerns (such as data loading or parallelization) as well as human-centric concerns such as report presentation or specific remediation workflows. The presentation and serialization of Data Quality Reports is intentionally flexible, if the required Response elements are available to consumers.
 
-The primary objective of the BDQ standard is to enhance interoperability.  By formalizing Test descriptions and making Test outputs comparable and reusable across different organizations, software tools, and data pipelines, it reduces duplicated effort and ambiguity regarding "what was tested" and "what the outcome means."  Ultimately, this enables data providers, aggregators, and researchers to consistently assess *fitness for use*, prioritize quality improvements, and support transparent, repeatable scientific decisions about the use of biodiversity data.
+By providing a consistent semantic layer focused Test inputs and outputs, BDQ can be applied within diverse operational settings to support both `Quality Assurance` (QA) filtering and `Quality Control` (QC) diagnostics. This formalization enhances global interoperability: It reduces duplicated effort and removes ambiguity regarding "what was tested" and "what the results mean" across different organizations, software tools, and data pipelines.
 
 #### 1.1.1 Purpose of this document (non-normative)
 
