@@ -903,6 +903,7 @@ Reports-layer associational relations:
 * ∃ there exists
 * ∈ is a member of
 * 𝒫(X) powerset of X (the set of all subsets of X)
+* Parameterized operators: symbols such as `VP()`, `MP()`, `VM()`, `MM()`, etc.,  are parameterized operators (functions returning sets over the indicated domains), not domains themselves. They are written in uppercase by convention but are always applied to one or more arguments (e.g., `VP(u)`, `QC(dr, u)`); the corresponding lowercase forms (e.g., `vp(u1)`, `qc(dr1, u1)`) denote the value of the operator at a particular argument.
 
 #### 4.3.1 Use of upper and lower case symbols (normative)
 
@@ -990,9 +991,9 @@ is1 = < ie1, c1, d1, rt1 >
 
 `Issue` is modeled in the ontology using the same structural pattern as `Validation`, composed with a `Criterion`, but is interpreted in the negative or cautionary sense: an `Issue` reports the *presence* of a problem (or the possible presence of one), rather than the presence or absence of compliance.
 
-**Issue and Validation are disjont** 
+**Issue and Validation are disjoint** 
 
-VA and IS have structurally identical definitions as sets of 4-tuples < ie, c, d, rt >, but they are disjoint, because they are intended to represent different interpretive stances toward the same underlying quality condition. Formally:
+VA and IS have structurally identical definitions as sets of 4-tuples < ie, c, d, rt >, but they are disjoint, because they are intended to represent different interpretive stances toward the same underlying quality condition. Formally: `VA` and `IS` are defined as disjoint typed domains over a common tuple shape; their disjointness is by stipulation:
 
 ```
 VA ∩ IS = ∅
@@ -1058,7 +1059,7 @@ resultType : ME → { categorical, numeric }
 * resultType(me) = categorical means the Response.result for that Measure is drawn from the value set {COMPLETE, NOT_COMPLETE}
 * resultType(me) = numeric means the Response.result is a literal numeric value
 
-When resultType is applied to a DQM element (defined in [4.4.4.3 MeasurementResponse](#4443-measurementresponse-normative),  it refers to the resultType of the ME component of that element.
+When resultType is applied to a DQM element (defined in [4.4.4.3 MeasurementResponse](#4443-measurementresponse-normative)),  it refers to the resultType of the ME component of that element.
 ```
 resultType : ME ⋃ DQM → { categorical, numeric }
 where for dqm = < me, s, m, r >, resultType(dqm) = resultType(me)
@@ -1129,9 +1130,9 @@ ap(u1) = {< ie1, e1, d1, rt1 >, < ie2, e2, d2, rt2 >}
 The `Data Quality Profile` for a `Use Case` `u` is the set of all `Data Quality Profiles` such that each `Data Quality Profile` is the union of a `Measurement Policy`, a `Validation Policy`, an `Issue Policy`, and an `Amendment Policy` for that `Use Case`.
 
 ```
-DQP(u) = {dqp | dqp = mp(u) ⋃ vp(u) ⋃ isp(u) ⋃ ap(u), mp ∈ MP, vp ∈ VP, isp ∈ ISP, ap ∈ AP ⋀ u ∈ U}
+DQP(u) = MP(u) ⋃ VP(u) ⋃ ISP(u) ⋃ AP(u),  where u ∈ U
 
-dqp(u1) = {mp(u1), vp(u1), isp(u1), ap(u1)}
+dqp(u1) = mp(u1) ⋃ vp(u1) ⋃ isp(u1) ⋃ ap(u1)
 dqp(u1) = {me1, me2, me3, me4, va1, va2, is1, is2, am1, am2}
 ```
 
@@ -1294,9 +1295,9 @@ mc(m1) = {s1, s2}
 A `Data Resource` is a tuple of an identifier, a resource type, and a value. It is the subject of `Responses` in a `Data Quality Report`.
 
 ```
-    DR = { dr | dr = < id, rt, v >, id ∈ ID, rt ∈ RT , (rt = sr ⋁ rt = ds) ⋀ v ∈ V }
+DR = { dr | dr = < id, rt, v >, id ∈ ID, rt ∈ RT ⋀ v ∈ V }
 
-    dr1 =< id1, rt1, v1 >
+dr1 =< id1, rt1, v1 >
 ```
 * Example: "dr1 is a Data Resource which represents the MultiRecord "3cc6171e-8c52-4f65-ad7a-32c74e395f29" which contains 251,744 records"
 * Example: "dr1 is a Data Resource which represents the SingleRecord with identifier "urn:catalog:MCZ:Ent:1"."
@@ -1353,9 +1354,11 @@ a(dr1) = {< me1, s1, m1, r1 >, < me2, s2, m2, r2 >, < me3, s3, m3, r3 >, < va1, 
 
 ##### 4.4.4.6 Quality Control (normative)
 
-`QualityControl` is an operation on a `Data Quality Report` and a `Use Case` that yields the set of filtered subsets of that assessment that are relevant to identifying, summarizing, prioritizing, or proposing remediation of data quality problems for that `Use Case`.
+`QualityControl` is an operation on a `Data Quality Report` and a `Use Case` that yields the (maximal Quality Control relevant) set of filtered subsets of that assessment that are relevant to identifying, summarizing, prioritizing, or proposing remediation of data quality problems for that `Use Case`.
 
 Let `a ∈ A(dr)` be a `Data Quality Report` for a `DataResource` `dr`, and let `a'` be a filtered subset of that assessment, that is, a subset of the `MeasureResponse`, `ValidationResponse`, `IssueResponse` and `AmendmentResponse` elements in `a` selected for their relevance to `QualityControl` for a specified `Use Case` `u`.
+
+**Supporting accessors:**
 
 For `x ∈ A(dr)`, let `result(x)` denote the value of `Response.result` for the report element `x`.
 
@@ -1365,20 +1368,38 @@ For `x ∈ A(dr)`, let `status(x)` denote the value of `Response.status` for the
 
 - `status(x)` is the execution status asserted by the `Response`, indicating whether the Test run produced a result or why it did not, or, for an `AmendmentResponse`, whether the Test resulted in a change state such as `FILLED_IN` or `AMENDED`.
 
+For x ∈ A(dr), let need(x) denote the first component of the response tuple x — the Data Quality Need element (VA, IS, ME, or AM) of the tuple, depending on which response type x belongs to:
+
+```
+need(x) ∈ VA when x ∈ DQV(dr)
+need(x) ∈ IS when x ∈ DQI(dr)
+need(x) ∈ ME when x ∈ DQM(dr)
+need(x) ∈ AM when x ∈ DQA(dr)
+```
+
+- need(x) is the `Data Quality Need` element of the report element `x`, which is a tuple of the form `< need(x), s, m, r >` where `need(x)` is a `Validation`, `Issue`, `Measure`, or `Amendment` depending on the type of Response `x`.
+
+For `dr ∈ DR` with `dr.rt = Multi Record`, let `records(dr)` denote the set of `Single Record` `Data Resource` elements whose values constitute the content of `dr`
+
+```
+records : DR → 𝒫(DR)
+```
+- `records(dr)` is the set of `Single Record` `Data Resource` elements whose values constitute the content of a `Multi Record` `Data Resource` `dr`.
+
 Also, `resultType(x)` is the type of `Response.result` for a report element `x` when `x ∈ DQM(dr)`, as defined above in Section [4.4.1.3](#44113-measure-normative).
 
 ```
-QC(a, u) = { a' | a' ⊆ a ⋀ a ∈ A(dr) ⋀ u ∈ U ⋀ ∀ x ∈ a',
-   (x ∈ DQV(dr) ⋀ result(x) = NOT_COMPLIANT)
- ⋁ (x ∈ DQA(dr) ⋀ status(x) ∈ {FILLED_IN, AMENDED})
- ⋁ (x ∈ DQI(dr) ⋀ result(x) ∈ {IS_ISSUE, POTENTIAL_ISSUE})
- ⋁ (x ∈ DQM(dr) ⋀ resultType(x) = numeric)
+QC(dr, u) = { x ∈ A(dr) |
+    (x ∈ DQV(dr) ⋀ need(x) ∈ VP(u)  ⋀ result(x) = NOT_COMPLIANT)
+  ⋁ (x ∈ DQA(dr) ⋀ need(x) ∈ AP(u)  ⋀ status(x) ∈ {FILLED_IN, AMENDED})
+  ⋁ (x ∈ DQI(dr) ⋀ need(x) ∈ ISP(u) ⋀ result(x) ∈ {IS_ISSUE, POTENTIAL_ISSUE})
+  ⋁ (x ∈ DQM(dr) ⋀ need(x) ∈ MP(u)  ⋀ resultType(x) = numeric)
 }
 
-qc(a1, u1) = {a1', a2'}
+qc(dr1, u1) = {dqv2, dqa1, dqi1, dqm2}
 ```
 
-where `a` is a `Data Quality Report`, `a'` is a filtered subset of that assessment, and `x` is an element of that assessment, such as a `MeasurementResponse`, `ValidationResponse`, `IssueResponse`, or `AmendmentResponse`, selected because it supports `QualityControl` for the specified `Use Case`.
+where `dqv2` is a `ValidationResponse` with Response.result = NOT_COMPLIANT, `dqa1` is an `AmendmentResponse` with Response.status ∈ {FILLED_IN, AMENDED}, `dqi1` is an `IssueResponse` with Response.result ∈ {IS_ISSUE, POTENTIAL_ISSUE}, and `dqm2` is a numeric `MeasurementResponse`, each of which responses is associated (via `need(x)`) with the corresponding `Policy` for the `Use Case` `u1`.
 
 * `QualityControl` yields filtered subsets of a `Data Quality Report` that can be used to identify and prioritize data cleanup, evaluate potential amendments, and guide improvements to data management processes and systems.
 
@@ -1393,9 +1414,17 @@ Implicit in `Quality Control`, but not formally expressed mathematically here, i
 Let `MEaq(u)` be the set of `Multi Record` `Measures` used for `QualityAssurance` for `Use Case` `u`, as defined above. Let `dr'` be a filtered `DataResource`, that is, a `Multi Record` subset of `dr`.
 
 ```
-QA(dr, u) = { dr' | dr' ⊆ dr ⋀ dr ∈ DR ⋀ u ∈ U ⋀ ∀ me ∈ MEaq(u), ∃ dqm ∈ DQM(dr') ( dqm = < me, s, m, r > ⋀ result(dqm) = COMPLETE ) }
+QA(dr, u) = { dr' | dr' ∈ DR ⋀ dr'.rt = ds
+                   ⋀ records(dr') ⊆ records(dr)
+                   ⋀ dr ∈ DR ⋀ dr.rt = ds
+                   ⋀ u ∈ U
+                   ⋀ ∀ me ∈ MEaq(u),
+                       ∃ dqm ∈ DQM(dr') ( need(dqm) = me ⋀ result(dqm) = COMPLETE ) }
 
-qa(dr1, u1) = { dr1' | dr1' ⊆ dr1 ⋀ dr1 ∈ DR ⋀ u1 ∈ U ⋀ ∀ me ∈ MEaq(u1), ∃ dqm ∈ DQM(dr1') ( dqm = < me, s, m, r > ⋀  result(dqm)= COMPLETE ) }
+qa(dr1, u1) = { dr1' | dr1' ∈ DR ⋀ dr1'.rt = ds
+                      ⋀ records(dr1') ⊆ records(dr1)
+                      ⋀ ∀ me ∈ MEaq(u1),
+                          ∃ dqm ∈ DQM(dr1') ( need(dqm) = me ⋀ result(dqm) = COMPLETE ) }
 ```
 
 where `dr'` is a filtered `DataResource`, `me` is a `Multi Record` `Measure` used for `QualityAssurance`, `dqm(dr')` is a `MeasurementResponse` on `dr'`, and `result(dqm) = COMPLETE` means that the `Response.result` for that `Measure` on that filtered `DataResource` is `COMPLETE`.
@@ -1416,6 +1445,15 @@ In the `Data Quality Report` for a `DataResource` `dr`, there exists at least on
 
 If this condition is met, at least one Test on `dr` could not be completed because some external prerequisite was not met, such as an unavailable external authority or service. Therefore, the process of generating the `Data Quality Report` for `dr` may need to be run again at a future time when the external resource is available.
 
+
+### 4.5 Relationship between the mathematical formalization and the ontology (non-normative)
+
+The mathematical formalization is a coarser model than the OWL ontology. 
+* The mathematical formalization does not model the mediating individuals `bdqffdq:DataQualityMethod` (and its subclasses `ValidationMethod`, `IssueMethod`, `MeasurementMethod`, `AmendmentMethod`), `bdqffdq:Implementation`, or `bdqffdq:Argument`. 
+* The primitive associational relations introduced in Section 4.2.1 (e.g., `rel_VM`, `rel_ISM`, `rel_MM`, `rel_AMM`, `rel_I`, `rel_MC`) are projections of the ontology's object-property chains onto pairs of endpoint domains.
+  * e.g., `rel_VM ⊆ VA × S` projects the chain `Validation ← bdqffdq:forValidation – ValidationMethod – bdqffdq:hasSpecification → Specification`, 
+  * and `rel_I ⊆ S × M` projects `Specification ← bdqffdq:usesSpecification – Implementation – bdqffdq:implementedBy → Mechanism`). 
+* These projections preserve the associations needed for the set-builder expressions in Section 4.4 but discard the identity of the mediating `Method`, `Implementation`, and `Argument` individuals, as well as parameter-binding information carried by `Argument` (`bdqffdq:hasParameter`, `bdqffdq:hasArgumentValue`). Consumers requiring those identities (for example, to distinguish two `Implementations` of the same `Specification`, or to recover the actual argument values bound to a `Specification` in a particular run) should query the ontology directly rather than relying on the projected relations.
 
 ## 5 Term index (non-normative)
 
