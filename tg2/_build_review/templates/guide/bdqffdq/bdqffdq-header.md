@@ -1147,7 +1147,7 @@ The original formulation of this was `MEaq(me) = {va | me ∈ VA ⋀ va ⊂ ME}`
 
 We have redefined this concept to more clearly express how `Measures` can be used as a filter in `QualityAssurance` (using resultType(x) defined in [4.4.1.3 Measure](#44113-measure-normative)):
 
-Let `MEaq(u)` be the set of `Multi Record` `Measures` in the `Measurement Policy` for a `Use Case` `u` that are intended for `QualityAssurance`, that is, `Measures` whose `Response.result` is interpreted categorically as either `COMPLETE` or `NOT_COMPLETE`.
+Let `MEaq(u)` be the set of `Measures` in the `Measurement Policy` for a `Use Case` `u` that are intended for `QualityAssurance`, that is, `Measures` whose `Response.result` is interpreted categorically as either `COMPLETE` or `NOT_COMPLETE`.  These would typically be `MultiRecord` `Measures`, but a `Resource Type` of `MultiRecord` is not a formal requirement of the concept.
 
 ```
 MEaq(u) = { me | me ∈ ME ⋀ me ∈ mp(u) ⋀ u ∈ U ⋀ resultType(me) = categorical }
@@ -1358,13 +1358,15 @@ In the original formulation, `Quality Assurance` was expressed as a set of `Vali
 
 ##### 4.4.4.8 Identifying External Prerequisite Failures in Data Quality Reports (normative)
 
+It is possible to express a conditional statement that identifies when a `Data Quality Report` includes at least one `Response` whose `Response.status` is `EXTERNAL_PREREQUISITES_NOT_MET`. This condition indicates that at least one Test on the `DataResource` could not be completed because some external prerequisite was not met, such as an unavailable external authority or service.
+
 In the `Data Quality Report` for a `DataResource` `dr`, there exists at least one `Response` whose Response.status is EXTERNAL_PREREQUISITES_NOT_MET.
 
 ```
 ∃ x ∈ A(dr), status(x) = EXTERNAL_PREREQUISITES_NOT_MET
 ```
 
-At least one Test on dr could not be completed because some external prerequisite was not met, such as an unavailable external authority or service. Therefore, the process of generating the Data Quality Report for dr may need to be run again at a future time when the external resource is available.
+If this condition is met, at least one Test on `dr` could not be completed because some external prerequisite was not met, such as an unavailable external authority or service. Therefore, the process of generating the `Data Quality Report` for `dr` may need to be run again at a future time when the external resource is available.
 
 
 ## 5 Term index (non-normative)
