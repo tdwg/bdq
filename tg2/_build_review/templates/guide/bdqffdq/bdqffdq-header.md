@@ -862,18 +862,26 @@ The Fitness For Use Framework ontology is framed with limited constraints and no
 * ∀ for all
 * ∃ there exists
 * ∈ is a member of
+* 𝒫(X) powerset of X (the set of all subsets of X)
 
 #### 4.3.1 Use of upper and lower case symbols (normative)
 
-Section 4 follows the notation style used in Appendix A of Veiga (2016), which uses set-theoretic symbols in a way that differs from some common mathematical practice. In particular, uppercase symbols denote domains (sets of instances of a concept), while lowercase symbols may denote either a single instance of that domain or, in some expressions, a subset of instances of that domain.
+The notation style used in Appendix A of Veiga (2016) uses set-theoretic symbols in a way that differs from some common mathematical practice, and can introduce confusion. In particular, uppercase symbols denote domains (sets of instances of a concept), while lowercase symbols may denote either a single instance of that domain or, in some expressions, a subset of instances of that domain.
 
-In this notation:
+In that notation:
 - `x ∈ X` means that `x` is a single instance (member) of the domain `X`.
 - `x ⊂ X` means that `x` is a subset of instances drawn from the domain `X`.
 
-Thus, expressions such as `VP(u) = {va | va ⊂ VA ⋀ u ∈ U }` and `VM(va) = {s | s ⊂ S ⋀ va ∈ VA}` should be read as defining sets of subsets or selections of instances from the relevant domain, following the convention of the source formalization, rather than as using `⊂` in the narrower sense of only a proper subset relation between named sets.
+Thus, expressions such as `VP(u) = {va | va ⊂ VA ⋀ u ∈ U }` and `VM(va) = {s | s ⊂ S ⋀ va ∈ VA}` were read in the original as defining sets of subsets or selections of instances from the relevant domain, rather than as using `⊂` in the narrower sense of only a proper subset relation between named sets.
 
-This notation is retained here in order to preserve consistency with the original mathematical formalization while adapting it to the BDQ framework and ontology.
+This use of `x ⊂ X` can be confusing, so here, we have switched to using the following notation to distinguish between a single instance and a subset of instances:
+
+- `x ∈ X` means that `x` is a single instance (member) of the domain `X`.
+- `x ∈ 𝒫(X)` means that `x` is a subset of instances drawn from the domain `X`.
+
+Thus, expressions such as `VP(u) = {va | va ∈ 𝒫(VA) ⋀ u ∈ U }` and `VM(va) = {s | s ∈ 𝒫(S) ⋀ va ∈ VA}` should be read as defining sets of subsets or selections of instances from the relevant domain, following the convention of the source formalization.   
+
+The use of powerset notation makes the distinction between a single instance and a subset explicit in the notation itself: `x ∈ X` denotes an instance in the domain `X`, while `x ∈ 𝒫(X)` denotes a subset of `X`. As a result, the convention that uppercase symbols denote domains and lowercase symbols denote instances remains a helpful guide to reading the formalization, but it no longer carries the full burden of distinguishing instances from subsets.
 
 #### 4.3.2 Explanation of some set theoretic concepts (non-normative)
 
@@ -983,7 +991,7 @@ me1 = < ie1, d1, rt1 >
 
 A `Measure` may be interpreted either descriptively or judgmentally: it may report either *how much* of some property is present, or whether the data are fit. The `Response.result` of a `Measure` may be either categorical, drawn from `RV_me_cat = { COMPLETE, NOT_COMPLETE }` or as a numeric value.
 
-Let `resultType(x)` denote the type of `Response.result` expected from execution of a Test or `Measure` `x`.
+For `x ∈ ME`, let `resultType(x)` denote the type of `Response.result` expected from execution of a `Measure` `x`.
 
 ```
 resultType : ME → { categorical, numeric }
@@ -1020,7 +1028,7 @@ Policies are associative entities relating a `Use Case` to a `Data Quality Need`
 `Validation Policy` and `Issue Policy` are defined as follows:
 
 ```
-VP (u) = {va | va ⊂ VA ⋀ u ∈ U }
+VP (u) = {va | va ∈ 𝒫(VA) ⋀ u ∈ U }
 
 vp(u1) = {va1, va2}
 vp(u1) = {< ie1, c1, d1, rt1>, < ie2, c2, d2, rt2> }
@@ -1029,7 +1037,7 @@ vp(u1) = {< ie1, c1, d1, rt1>, < ie2, c2, d2, rt2> }
 And for `IssuePolicy`:
 
 ```
-ISP(u) = {is | is ⊂ IS ⋀ u ∈ U}
+ISP(u) = {is | is ∈ 𝒫(IS) ⋀ u ∈ U}
 
 isp(u1) = {is1, is2}
 isp(u1) = {< ie1, c1, d1, rt1>, < ie2, c2, d2, rt2> }
@@ -1037,16 +1045,23 @@ isp(u1) = {< ie1, c1, d1, rt1>, < ie2, c2, d2, rt2> }
 
 ##### 4.4.2.2 Measurement Policy (normative)
 
-    MP(u) = {me | me ⊂ ME ⋀ u ∈ U }
+A `Measurement Policy` relates a `Use Case` to one or more `Measures`.
 
-    mp(u1) = {me1, me2, me3, me4}
-    mp(u1) = {< ie1, d1, rt2 >, < ie1, d1, rt1 >, < ie2, d1, rt1 >, < ie2, d2, rt2 >}
+```
+MP(u) = {me | me ∈ 𝒫(ME) ⋀ u ∈ U }
 
-##### 4.4.2.3 Enhancement Policy (normative)
+mp(u1) = {me1, me2, me3, me4}
+mp(u1) = {< ie1, d1, rt2 >, < ie1, d1, rt1 >, < ie2, d1, rt1 >, < ie2, d2, rt2 >}
+```
 
-     EP(u) = {am | am ⊂ AM ⋀ u ∈ U }
+##### 4.4.2.3 Amendment Policy (normative)
 
-     ep(u1) = {am1, am2}
+An `Amendment Policy` relates a `Use Case` to one or more `Amendments`.
+```
+EP(u) = {am | am ∈ 𝒫(AM) ⋀ u ∈ U }
+
+ep(u1) = {am1, am2}
+```
 
 ##### 4.4.2.4 Data Quality Profile (normative)
 
@@ -1064,7 +1079,7 @@ dqp(u1) = {me1, me2, me3, me4, va1, va2, is1, is2, am1, am2}
 The Use Case Coverage for a `Use Case` `u` is the set of all `Usages` such that each `Usage` is a subset of the set of all `Usages` and is associated with `u`.
 
 ```  
-UC(u) = { us | u ∈ U ⋀ us ⊂ US}
+UC(u) = { us | u ∈ U ⋀ us ∈ 𝒫(US)}
 
 uc(u1) = {us1, us2}
 ```
@@ -1075,8 +1090,12 @@ The property `bdqffdq:hasFitnessRequirements` is intended to allow this concept 
 
 ##### 4.4.2.6 Valuable Information Elements (normative)
 
+The Valuable `Information Elements` for a `Use Case` `u` is the set of all `Information Elements` such that each `Information Element` is a subset of the set of all `Information Elements` that are associated with `u`.
+
+TODO: Formula for information elements acted upon.
+
 ```
-VIE(u) = {ie | ie ⊂ IE ⋀ u ∈ U }
+VIE(u) = {ie | ie ∈ 𝒫(IE) ⋀ u ∈ U }
 
 vie(u1) = {ie1, ie2}
 ```
@@ -1093,7 +1112,7 @@ We have redefined this concept to more clearly express how `Measures` can be use
 Let `MEaq(u)` be the set of `Multi Record` `Measures` in the `Measurement Policy` for a `Use Case` `u` that are intended for `QualityAssurance`, that is, `Measures` whose `Response.result` is interpreted categorically as either `COMPLETE` or `NOT_COMPLETE`.
 
 ```
-MEaq(u) = { me | me ⊂ ME ⋀ me ∈ mp(u) ⋀ u ∈ U ⋀ resultType(me) = categorical }
+MEaq(u) = { me | me ∈ 𝒫(ME) ⋀ me ∈ mp(u) ⋀ u ∈ U ⋀ resultType(me) = categorical }
 
 meaq(u1) = {me1, me2}
 ```
@@ -1107,7 +1126,7 @@ In the initial BDQ Tests, for a `Use Case`, `MEaq(u)` is the set of `Multi Recor
 Let IT be the set of Improvement Targets for an `Amendment`, such that each `Improvement Target` is the union of a `Measure`, a `Validation`, and an `Issue` for which acceptance of the `Amendment` may improve fitness for use.
 
 ```
-IT(am) = {x | (x ⊂ ME ⋁ x ⊂ VA ⋁ x ⊂ IS) ⋀ am ∈ AM}
+IT(am) = {x | (x ∈ 𝒫(ME) ⋁ x ∈ 𝒫(VA) ⋁ x ∈ 𝒫(IS)) ⋀ am ∈ AM}
 
 it(am1) = {me1, va2, is1}
 ```
@@ -1127,15 +1146,16 @@ This formalization SHOULD NOT block the framing of `Amendments` that propose cha
 `Validation Method`:  Let `VM(va)` be the set of `Specifications` for a `Validation` `va`.
 
 ```
-VM(va) = {s | s ⊂ S ⋀ va ∈ VA}
-   
+VM(va) = {s | s ∈ 𝒫(S) ⋀ va ∈ VA}   
+
 vm(va1) = {s1, s2}
 ```
 
 And `Issue Method`: Let `ISM(is)` be the set of `Specifications` for an `Issue` `is`.
 
 ```
-ISM(is) = {s | s ⊂ S ⋀ is ∈ IS}
+ISM(is) = {s | s ∈ 𝒫(S) ⋀ is ∈ IS}
+
 ism(is1) = {s1, s2}
 ```
 
@@ -1144,7 +1164,7 @@ ism(is1) = {s1, s2}
 A `Measurement Method` is the set of `Specifications` for a `Measure` `me`.
 
 ```
-MM(me) = {s | s ⊂ S ⋀ me ∈ ME}
+MM(me) = {s | s ∈ 𝒫(S) ⋀ me ∈ ME}
 
 mm(me1) = {s1, s2}
 mm(me1) = {< ie1, d1, rt1>, < ie2, d2, rt2> }
@@ -1155,7 +1175,7 @@ mm(me1) = {< ie1, d1, rt1>, < ie2, d2, rt2> }
 An `Enhancement Method` is the set of `Specifications` for an `Amendment` `am`.
 
 ```
-EM(am) = {s | s ⊂ S ⋀ am ∈ AM}
+EM(am) = {s | s ∈ 𝒫(S) ⋀ am ∈ AM}
 
 em(am1) = {s1, s2}
 em(am1) = {< ie1, e1, d1, rt1>, < ie2, e2, d2, rt2> }
@@ -1166,7 +1186,7 @@ em(am1) = {< ie1, e1, d1, rt1>, < ie2, e2, d2, rt2> }
 An `Implementation` of a `Specification` `s` is the set of `Mechanisms` that implement `s`."
 
 ```
-I (s) = {m | m ⊂ M ⋀ s ∈ S}
+I(s) = {m | m ∈ 𝒫(M) ⋀ s ∈ S}
 
 i(s1) = {m1, m2}
 i(s1) = {< ie1, c1, d1, rt1>, < ie2, c2, d2, rt2> }
@@ -1178,7 +1198,7 @@ i(s1) = {< ie1, c1, d1, rt1>, < ie2, c2, d2, rt2> }
 A `Mechanism` may implement one or more `Specifications`, and a `Specification` may be implemented by one or more `Mechanisms`. The `Mechanism Coverage` for a `Mechanism` `m` is the set of all `Specifications` such that each `Specification` is a subset of the set of all `Specifications` and is implemented by `m`.
 
 ```
-MC(m) = {s | s ⊂ S ⋀ m ∈ M }
+I(s) = {m | m ∈ 𝒫(M) ⋀ s ∈ S}
 
 mc(m1) = {s1, s2}
 mc(m1) = {< ie1, c1, d1, rt1>, < ie2, c2, d2, rt2> }
@@ -1253,12 +1273,15 @@ a(dr1) = {< me1, s1, m1, r1 >, < me2, s2, m2, r2 >, < me3, s3, m3, r3 >, < va1, 
 
 Let `a ∈ A(dr)` be a `Data Quality Report` for a `DataResource` `dr`, and let `a'` be a filtered subset of that assessment, that is, a subset of the `MeasureResponse`, `ValidationResponse`, `IssueResponse` and `AmendmentResponse` elements in `a` selected for their relevance to `QualityControl` for a specified `Use Case` `u`.
 
-Let `result(x)` denote the value of `Response.result` for a report element `x`: 
-- `result(x)` is the outcome asserted by the `Response`, which may be categorical (for example `COMPLIANT`, `NOT_COMPLIANT`, `POTENTIAL_ISSUE`, `COMPLETE`, `NOT_COMPLETE`) or literal (for example a numeric value or a structured amendment payload).
-Let `status(x)` denote the value of `Response.status` for a report element `x`, where `x` is an element of a `Data Quality Report`.
-- `status(x)` is the execution status asserted by the `Response`, indicating whether the Test run produced a result or why it did not, or, for `AmendmentResponse`, whether the Test resulted in a change state such as `FILLED_IN` or `AMENDED`.
+For `x ∈ A(dr)`, let `result(x)` denote the value of `Response.result` for the report element `x`.
 
-Also, resultType(x) is the type of `Response.result` for a report element `x`, as defined above in Section[4.4.1.3](#44113-measure-normative).
+- `result(x)` is the outcome asserted by the `Response`. It may be categorical (for example `COMPLIANT`, `NOT_COMPLIANT`, `POTENTIAL_ISSUE`, `COMPLETE`, `NOT_COMPLETE`) or literal (for example a numeric value or a structured amendment payload).
+
+For `x ∈ A(dr)`, let `status(x)` denote the value of `Response.status` for the report element `x`.
+
+- `status(x)` is the execution status asserted by the `Response`, indicating whether the Test run produced a result or why it did not, or, for an `AmendmentResponse`, whether the Test resulted in a change state such as `FILLED_IN` or `AMENDED`.
+
+Also, resultType(x) is the type of `Response.result` for a report element `x` (`x ∈ A(dr)`), as defined above in Section[4.4.1.3](#44113-measure-normative).
 
 ```
 QC(a, u) = { a' | a' ⊆ a ⋀ a ∈ A(dr) ⋀ u ∈ U ⋀ ∀ x ∈ a',
@@ -1296,6 +1319,17 @@ where `dr'` is a filtered `DataResource`, `me` is a `Multi Record` `Measure` use
 * `QualityAssurance` yields those filtered subsets of a `Multi Record` `DataResource` for which all relevant `Multi Record` `Measures` report `COMPLETE`.
 
 In the original formulation, `Quality Assurance` was expressed as a set of `Validations`: `QA(dr) = {dqv(dr) | dqv ∈ DQV ⋀ dr ∈ DR}` and `qa(dr1) = {dqv1, dqv2}` but we have redefined it as an operation in which `Measures` can be used as a filter.
+
+##### 4.4.4.8 Identifying External Prerequisite Failures in Data Quality Reports (normative)
+
+In the `Data Quality Report` for a `DataResource` `dr`, there exists at least one `Response` whose Response.status is EXTERNAL_PREREQUISITES_NOT_MET.
+
+```
+∃ x ∈ A(dr), status(x) = EXTERNAL_PREREQUISITES_NOT_MET
+```
+
+At least one Test on dr could not be completed because some external prerequisite was not met, such as an unavailable external authority or service. Therefore, the process of generating the Data Quality Report for dr may need to be run again at a future time when the external resource is available.
+
 
 ## 5 Term index (non-normative)
 
