@@ -950,6 +950,14 @@ is1 = < ie1, c1, d1, rt1 >
 
 `Issue` is modeled in the ontology using the same structural pattern as `Validation`, composed with a `Criterion`, but is interpreted in the negative or cautionary sense: an `Issue` reports the *presence* of a problem (or the possible presence of one), rather than the presence or absence of compliance.
 
+**Issue and Validation are disjont** 
+
+VA and IS have structurally identical definitions as sets of 4-tuples < ie, c, d, rt >, but they are disjoint, because they are intended to represent different interpretive stances toward the same underlying quality condition. Formally:
+
+```
+VA ∩ IS = ∅
+```
+
 **Disjoint result vocabularies.** A `Validation` and an `Issue` draw `Response.result` values from disjoint sets:
 
 ```
