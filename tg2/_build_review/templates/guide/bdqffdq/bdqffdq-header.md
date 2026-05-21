@@ -1073,7 +1073,7 @@ An `Amendment Policy` relates a `Use Case` to one or more `Amendments`.
 AP(u) = {am | am ∈ AM ⋀ u ∈ U }
 
 ap(u1) = {am1, am2}
-ap(u1) = {{< ie1, e1, d1, rt1 >, < ie2, e2, d2, rt2 >}}
+ap(u1) = {< ie1, e1, d1, rt1 >, < ie2, e2, d2, rt2 >}
 ```
 
 ##### 4.4.2.4 Data Quality Profile (normative)
@@ -1088,8 +1088,8 @@ dqp(u1) = {me1, me2, me3, me4, va1, va2, is1, is2, am1, am2}
 ```
 
 ##### 4.4.2.5 Use Case Coverage (normative)
- 
-The Use Case Coverage for a `Use Case` `u` is the set of subsets of `Usages` associated with `u`.
+
+The Use Case Coverage for a `Use Case` `u` is the set of all Usages associated with `u`. 
 
 ``` 
 UC(u) = { us | u ∈ U ⋀ us ∈ US}
@@ -1100,17 +1100,6 @@ uc(u1) = {us1, us2}
 * Example: "A Use Case for Niche Modeling covers MAXENT and GARP modeling"
 
 The property `bdqffdq:hasFitnessRequirements` is intended to allow this concept to be expressed in plain text for a `Use Case`.
-
-##### 4.4.2.6 Valuable Information Elements (normative)
-
-The Valuable `Information Elements` for a `Use Case` `u` is the set of all `Information Elements` such that each `Information Element` is a subset of the set of all `Information Elements` that are associated with `u`.
-
-```
-VIE(u) = {ie | ie ∈ IE ⋀ u ∈ U }
-
-vie(u1) = {ie1, ie2}
-vie(u1) = {dwc:countryCode, dwc:decimalLatitude}
-```
 
 
 ##### 4.4.2.6 Valuable Information Elements (normative)
@@ -1168,7 +1157,7 @@ meaq(u1) = {me1, me2}
 
 * Example: For a Use Case, acceptable quality is met by all records having all categorical (COMPLETE/NOT_COMPLETE) `Measures` reporting COMPLETE.
 
-Because `mp(u)` is expressed here as a set of subsets of `ME`, membership of an individual `Measure` in the `Measurement Policy` is represented by requiring that the singleton subset `{me}` be a member of `mp(u)`.
+In this formulation, `MEaq(u)` is the set of those `Measure` instances in the `Measurement Policy` for `u` whose `Response.result` is interpreted categorically as either `COMPLETE` or `NOT_COMPLETE`.
 
 In the initial BDQ Tests, for a `Use Case`, `MEaq(u)` is the set of `Multi Record` `Measures` that define whether a filtered record set is acceptable for `QualityAssurance`, named with the convention `MULTIRECORD_MEASURE_QA_`.
 
@@ -1183,7 +1172,7 @@ it(am1) = {me1, va2, is1}
 ```
 
 * Example: "Recommending coordinates based on textual locality improves the coordinate completeness of `Single Records` and may result in compliance with the `Criterion` dataset must have all records with coordinates."
-* Example: `it(am1) = {{me1}, {va2}, {is1}}` means that acceptance of the `Amendment` `am1` may improve the `Measure` `me1`, the `Validation` `va2`, and the `Issue` `is1`.
+* Example: `it(am1) = {me1, va2, is1}` means that acceptance of the `Amendment` `am1` may improve the `Measure` `me1`, the `Validation` `va2`, and the `Issue` `is1`.
 
 The `ImprovementTarget` concept is intended to express that an `Amendment` may support improvement in more than one way. In particular, an `Amendment` may improve one or more `Measures` of data quality and may also help satisfy one or more `Validations`. The expression for `IT(am)` should therefore be read as identifying the set of `Data Quality Needs` that may be improved, satisfied, or brought closer to compliance through acceptance of the proposals made by a given `Amendment`.
 
@@ -1243,7 +1232,7 @@ i(s1) = {m1, m2}
 
 ##### 4.4.3.5 Mechanism Coverage (normative)
 
-A `Mechanism` may implement one or more `Specifications`, and a `Specification` may be implemented by one or more `Mechanisms`. The `Mechanism Coverage` for a `Mechanism` `m` is the set of all `Specifications` such that each `Specification` is a subset of the set of all `Specifications` and is implemented by `m`.
+A `Mechanism` may implement one or more `Specifications`, and a `Specification` may be implemented by one or more `Mechanisms`. The `Mechanism Coverage` for a `Mechanism` `m` is the set of all `Specifications` implemented by `m`.
 
 ```
 MC(m) = {s | s ∈ S ⋀ m ∈ M }
@@ -1257,7 +1246,7 @@ mc(m1) = {s1, s2}
 A `Data Resource` is a tuple of an identifier, a resource type, and a value. It is the subject of `Responses` in a `Data Quality Report`.
 
 ```
-    DR = { dr | dr = < id, rt, v >, id ∈ I D, rt ∈ RT , (rt = sr ⋁ rt = ds) ⋀ v ∈ V }
+    DR = { dr | dr = < id, rt, v >, id ∈ ID, rt ∈ RT , (rt = sr ⋁ rt = ds) ⋀ v ∈ V }
 
     dr1 =< id1, rt1, v1 >
 ```
@@ -1328,7 +1317,7 @@ For `x ∈ A(dr)`, let `status(x)` denote the value of `Response.status` for the
 
 - `status(x)` is the execution status asserted by the `Response`, indicating whether the Test run produced a result or why it did not, or, for an `AmendmentResponse`, whether the Test resulted in a change state such as `FILLED_IN` or `AMENDED`.
 
-Also, resultType(x) is the type of `Response.result` for a report element `x` (`x ∈ A(dr)`), as defined above in Section[4.4.1.3](#44113-measure-normative).
+Also, `resultType(x)` is the type of `Response.result` for a report element `x` when `x ∈ DQM(dr)`, as defined above in Section [4.4.1.3](#44113-measure-normative).
 
 ```
 QC(a, u) = { a' | a' ⊆ a ⋀ a ∈ A(dr) ⋀ u ∈ U ⋀ ∀ x ∈ a',
