@@ -866,22 +866,30 @@ The Fitness For Use Framework ontology is framed with limited constraints and no
 
 #### 4.3.1 Use of upper and lower case symbols (normative)
 
-The notation style used in Appendix A of Veiga (2016) uses set-theoretic symbols in a way that differs from some common mathematical practice, and can introduce confusion. In particular, uppercase symbols denote domains (sets of instances of a concept), while lowercase symbols may denote either a single instance of that domain or, in some expressions, a subset of instances of that domain.
+Section 4 follows the notation style used in Appendix A of Veiga (2016), but Appendix A uses set-theoretic symbols in a way that differs from some common mathematical practice and can be ambiguous if read literally without reference to the examples. In particular, uppercase symbols denote domains (sets of instances of a concept), while lowercase symbols denote either a single instance of that domain or, in some expressions, a selection drawn from that domain.
 
-In that notation:
-- `x ∈ X` means that `x` is a single instance (member) of the domain `X`.
-- `x ⊂ X` means that `x` is a subset of instances drawn from the domain `X`.
-
-Thus, expressions such as `VP(u) = {va | va ⊂ VA ⋀ u ∈ U }` and `VM(va) = {s | s ⊂ S ⋀ va ∈ VA}` were read in the original as defining sets of subsets or selections of instances from the relevant domain, rather than as using `⊂` in the narrower sense of only a proper subset relation between named sets.
-
-This use of `x ⊂ X` can be confusing, so here, we have switched to using the following notation to distinguish between a single instance and a subset of instances:
+In the notation of Appendix A:
 
 - `x ∈ X` means that `x` is a single instance (member) of the domain `X`.
-- `x ∈ 𝒫(X)` means that `x` is a subset of instances drawn from the domain `X`.
+- `x ⊂ X` was used in the source text where `x` was intended to range over multiple instances drawn from the domain `X`.
 
-Thus, expressions such as `VP(u) = {va | va ∈ 𝒫(VA) ⋀ u ∈ U }` and `VM(va) = {s | s ∈ 𝒫(S) ⋀ va ∈ VA}` should be read as defining sets of subsets or selections of instances from the relevant domain, following the convention of the source formalization.   
+Read literally in standard set theory, `x ⊂ X` means that `x` is a subset of `X`. However, in Appendix A, some expressions written with `x ⊂ X` are clarified by the worked examples in Appendix B, which frequently treat the members of such sets as ordinary named instances rather than as subsets. For example, Appendix B gives expressions such as `vp(u1) = {cc1, ..., cc19}`, `mp(u1) = {cd1, ..., cd18}`, `mm(cd1) = {s3}`, and `i(s1) = {m2}`, which are naturally read as sets of instances, not as sets of subsets.
 
-The use of powerset notation makes the distinction between a single instance and a subset explicit in the notation itself: `x ∈ X` denotes an instance in the domain `X`, while `x ∈ 𝒫(X)` denotes a subset of `X`. As a result, the convention that uppercase symbols denote domains and lowercase symbols denote instances remains a helpful guide to reading the formalization, but it no longer carries the full burden of distinguishing instances from subsets.
+Accordingly, in the current formulation, Appendix B is used to interpret the intended semantics of the corresponding expressions from Appendix A.
+
+- Where the examples and usage show that a construction is intended to be a set of instances drawn from a domain, the current formulation uses `x ∈ X`.
+- Where a construction is genuinely intended to range over subsets, the current formulation uses `x ∈ 𝒫(X)`.
+- The symbol `x ⊂ X` is retained only with its ordinary set-theoretic meaning, to state that one set is a subset of another.
+
+Thus, the current formulation does **not** mechanically replace every original use of `x ⊂ X` with `x ∈ 𝒫(X)`. Instead, it distinguishes between two cases:
+
+1. **Instance-valued selections from a domain.**  
+   Where Appendix B shows that the members are intended to be instances, expressions are written with `x ∈ X`. For example, policy and method constructions such as `VP(u)`, `MP(u)`, `VM(va)`, `MM(me)`, and `I(s)` are treated as sets of instances of `VA`, `ME`, `S`, or `M`, respectively.
+
+2. **Subset-valued constructions.**  
+   Where the construction is genuinely about subsets, the current formulation uses `x ∈ 𝒫(X)`. For example, in expressions such as `QC(a, u)` and `QA(dr, u)`, the variables `a'` and `dr'` are intended to denote filtered subsets of a `Data Quality Report` or a `DataResource`.
+
+This approach preserves the intent of the source formalization while making the distinction between instances and subsets explicit where that distinction matters. The use of powerset notation therefore supplements the original upper/lower case convention rather than replacing it: `x ∈ X` denotes an instance in the domain `X`, while `x ∈ 𝒫(X)` denotes a subset of `X`.
 
 #### 4.3.2 Explanation of some set theoretic concepts (non-normative)
 
@@ -889,7 +897,9 @@ The following brief explanations are intended to help readers interpret the nota
 
 * Braces `{ }` denote a **set**, that is, an unordered collection of one or more elements, while angle brackets `< >` denote a **tuple**, that is, an ordered grouping of elements taken together as a single instance. Thus `{a, b}` and `{b, a}` denote the same set, but `<a, b>` and `<b, a>` denote different tuples because the order of the elements is significant in a tuple.
 * Uppercase symbols such as `U`, `ME`, or `DR` denote a **domain**, that is, the set of all instances of some concept, while lowercase symbols such as `u`, `me`, or `dr` denote a particular **instance**, or in some expressions a subset of instances, drawn from that domain.
-* The symbol `∈` means “is a member of”. Thus, `x ∈ X` means that `x` is a single instance in the domain `X`, while `x ∈ 𝒫(X)` means that `x` is a subset drawn from the domain `X` rather than a single instance. The symbol `⊂` means “is a subset of”, and is used for ordinary subset relations between sets.
+* The symbol `∈` means “is a member of”. Thus, `x ∈ X` means that `x` is a single instance in the domain `X`, while `x ∈ 𝒫(X)` means that `x` is a subset drawn from the domain `X` rather than a single instance. 
+* The symbol `⊂` means “is a subset of”, and is used for ordinary subset relations between sets. 
+* The symbol `⊆` means “is a subset of or equal to” for example, `x ⊆ X` means that `x` is a subset of `X` or is equal to `X`.
 * An expression of the form `{ x | condition }` is **set-builder notation**, meaning “the set of all `x` such that the stated condition holds”.
 * Expressions such as `VIE(u)`, `QA(dr, u)`, or `QC(a, u)` should be read as named constructions that depend on the values in parentheses. For example, `VIE(u)` means the Valuable `Information Elements` for a particular `Use Case` `u`, and `QA(dr, u)` means `QualityAssurance` for a particular `DataResource` `dr` and `Use Case` `u`.
 * The symbol `∀` means “for all”, and the symbol `∃` means “there exists”. For example, `∀ me ∈ MEaq(u)` means “for every `Measure` in `MEaq(u)`”, while `∃ dqm ∈ DQM(dr')` means “there exists a `MeasurementResponse` in `DQM(dr')`”.
@@ -1028,7 +1038,7 @@ Policies are associative entities relating a `Use Case` to a `Data Quality Need`
 `Validation Policy` and `Issue Policy` are defined as follows:
 
 ```
-VP (u) = {va | va ∈ 𝒫(VA) ⋀ u ∈ U }
+VP(u) = {va | va ∈ VA ⋀ u ∈ U }
 
 vp(u1) = {va1, va2}
 vp(u1) = {< ie1, c1, d1, rt1>, < ie2, c2, d2, rt2> }
@@ -1037,18 +1047,20 @@ vp(u1) = {< ie1, c1, d1, rt1>, < ie2, c2, d2, rt2> }
 And for `IssuePolicy`:
 
 ```
-ISP(u) = {is | is ∈ 𝒫(IS) ⋀ u ∈ U}
+ISP(u) = {is | is ∈ IS ⋀ u ∈ U}
 
 isp(u1) = {is1, is2}
 isp(u1) = {< ie1, c1, d1, rt1>, < ie2, c2, d2, rt2> }
 ```
+
+
 
 ##### 4.4.2.2 Measurement Policy (normative)
 
 A `Measurement Policy` relates a `Use Case` to one or more `Measures`.
 
 ```
-MP(u) = {me | me ∈ 𝒫(ME) ⋀ u ∈ U }
+MP(u) = {me | me ∈ ME ⋀ u ∈ U }
 
 mp(u1) = {me1, me2, me3, me4}
 mp(u1) = {< ie1, d1, rt2 >, < ie1, d1, rt1 >, < ie2, d1, rt1 >, < ie2, d2, rt2 >}
@@ -1058,9 +1070,10 @@ mp(u1) = {< ie1, d1, rt2 >, < ie1, d1, rt1 >, < ie2, d1, rt1 >, < ie2, d2, rt2 >
 
 An `Amendment Policy` relates a `Use Case` to one or more `Amendments`.
 ```
-EP(u) = {am | am ∈ 𝒫(AM) ⋀ u ∈ U }
+AP(u) = {am | am ∈ AM ⋀ u ∈ U }
 
-ep(u1) = {am1, am2}
+ap(u1) = {am1, am2}
+ap(u1) = {{< ie1, e1, d1, rt1 >, < ie2, e2, d2, rt2 >}}
 ```
 
 ##### 4.4.2.4 Data Quality Profile (normative)
@@ -1068,20 +1081,20 @@ ep(u1) = {am1, am2}
 The `Data Quality Profile` for a `Use Case` `u` is the set of all `Data Quality Profiles` such that each `Data Quality Profile` is the union of a `Measurement Policy`, a `Validation Policy`, an `Issue Policy`, and an `Amendment Policy` for that `Use Case`.
 
 ```
-DQP(u) = {dqp | dqp = mp(u) ⋃ vp(u) ⋃ isp(u) ⋃ ep(u), mp ∈ MP, vp ∈ VP, isp ∈ ISP, ep ∈ EP ⋀ u ∈ U}
+DQP(u) = {dqp | dqp = mp(u) ⋃ vp(u) ⋃ isp(u) ⋃ ap(u), mp ∈ MP, vp ∈ VP, isp ∈ ISP, ap ∈ AP ⋀ u ∈ U}
 
-dqp(u1) = {mp(u1), vp(u1), isp(u1), ep(u1)}
+dqp(u1) = {mp(u1), vp(u1), isp(u1), ap(u1)}
 dqp(u1) = {me1, me2, me3, me4, va1, va2, is1, is2, am1, am2}
 ```
 
 ##### 4.4.2.5 Use Case Coverage (normative)
  
-The Use Case Coverage for a `Use Case` `u` is the set of all `Usages` such that each `Usage` is a subset of the set of all `Usages` and is associated with `u`.
+The Use Case Coverage for a `Use Case` `u` is the set of subsets of `Usages` associated with `u`.
 
-```  
-UC(u) = { us | u ∈ U ⋀ us ∈ 𝒫(US)}
+``` 
+UC(u) = { us | u ∈ U ⋀ us ∈ US}
 
-uc(u1) = {us1, us2}
+uc(u1) = {us1, us2} 
 ```
 
 * Example: "A Use Case for Niche Modeling covers MAXENT and GARP modeling"
@@ -1092,16 +1105,52 @@ The property `bdqffdq:hasFitnessRequirements` is intended to allow this concept 
 
 The Valuable `Information Elements` for a `Use Case` `u` is the set of all `Information Elements` such that each `Information Element` is a subset of the set of all `Information Elements` that are associated with `u`.
 
-TODO: Formula for information elements acted upon.
-
 ```
-VIE(u) = {ie | ie ∈ 𝒫(IE) ⋀ u ∈ U }
+VIE(u) = {ie | ie ∈ IE ⋀ u ∈ U }
 
 vie(u1) = {ie1, ie2}
+vie(u1) = {dwc:countryCode, dwc:decimalLatitude}
+```
+
+
+##### 4.4.2.6 Valuable Information Elements (normative)
+
+The Valuable `Information Elements` for a `Use Case` `u` are the `Information Elements` that are associated with `u`.
+
+```
+VIE(u) = {ie | ie ∈ IE ⋀ u ∈ U }
+
+vie(u1) = {ie1, ie2}
+vie(u1) = {dwc:countryCode, dwc:decimalLatitude}
 ```
 
 * Example: "For a `Use Case`, what `Information Elements` are valuable."
-* Example: vie(u1) = {dwc:countryCode, dwc:decimalLatitude}, for `Use Case` u1, the `Information Elements` `dwc:countryCode` and `dwc:decimalLatitude` are valuable for that `Use Case`.  See the SPARQL query in the supplementary materials that asks this question of bdqtest.
+* Example: vie(u1) = {dwc:countryCode, dwc:decimalLatitude}, for `Use Case` u1, the `Information Elements` `dwc:countryCode` and `dwc:decimalLatitude` are valuable for that `Use Case`.
+
+However, `Information Element` has several subtypes.  An `Information Element` may be an `Abstract Information Element` (such as "location"), or may be a concrete `ActedUpon` or `Consulted` `Information Element` that can be mapped to a particular term (e.g. dwc:country).  This provides for a narrower meaning of Valuable `Information Elements` as just those which are `Acted Upon`.
+
+For `ie ∈ IE`, let `ieType(ie)` denote whether the `Information Element` `ie` is typed as `actedUpon` or `consulted` in the context of a Test.
+
+```
+ieType : IE → { ActedUpon, Consulted }
+```
+
+- `ieType(ie) = actedUpon` means that the `Information Element` `ie` is among the `Information Elements` directly evaluated or operated on by the Test.
+- `ieType(ie) = consulted` means that the `Information Element` `ie` is among the `Information Elements` used as supporting context by the Test but not directly evaluated or operated on.
+
+The Valuable `Information Elements` that are `Acted Upon` for a `Use Case` `u` are the subset of `VIE(u)` consisting only of those `Information Elements` typed as `actedUpon`.
+
+```
+VIEact(u) = {ie | ie ∈ VIE(u) ⋀ ieType(ie) = ActedUpon }
+
+vieact(u1) = {ie1}
+vieact(u1) = {dwc:countryCode}
+```
+
+* Example: `vie(u1) = {dwc:countryCode, dwc:decimalLatitude}`, for `Use Case` `u1`, the `Information Elements` `dwc:countryCode` and `dwc:decimalLatitude` are valuable for that `Use Case`.
+* Example: `vieact(u1) = {dwc:countryCode}`, for `Use Case` `u1`, the `Information Element` `dwc:countryCode` is valuable and is typed as `ActedUpon`.
+
+See the SPARQL query competency question in the supplementary materials in Section [2.4.4 Finding Information Elements Acted Upon](#244-finding-information-elements-acted-upon-non-normative) for an example of how to query for this sense of Valuable `Information Elements` that are `Acted Upon` in a `Use Case`.
 
 ##### 4.4.2.7 Acceptable Data Quality Measure (normative)
 
@@ -1112,12 +1161,14 @@ We have redefined this concept to more clearly express how `Measures` can be use
 Let `MEaq(u)` be the set of `Multi Record` `Measures` in the `Measurement Policy` for a `Use Case` `u` that are intended for `QualityAssurance`, that is, `Measures` whose `Response.result` is interpreted categorically as either `COMPLETE` or `NOT_COMPLETE`.
 
 ```
-MEaq(u) = { me | me ∈ 𝒫(ME) ⋀ me ∈ mp(u) ⋀ u ∈ U ⋀ resultType(me) = categorical }
+MEaq(u) = { me | me ∈ ME ⋀ me ∈ mp(u) ⋀ u ∈ U ⋀ resultType(me) = categorical }
 
 meaq(u1) = {me1, me2}
 ```
 
 * Example: For a Use Case, acceptable quality is met by all records having all categorical (COMPLETE/NOT_COMPLETE) `Measures` reporting COMPLETE.
+
+Because `mp(u)` is expressed here as a set of subsets of `ME`, membership of an individual `Measure` in the `Measurement Policy` is represented by requiring that the singleton subset `{me}` be a member of `mp(u)`.
 
 In the initial BDQ Tests, for a `Use Case`, `MEaq(u)` is the set of `Multi Record` `Measures` that define whether a filtered record set is acceptable for `QualityAssurance`, named with the convention `MULTIRECORD_MEASURE_QA_`.
 
@@ -1126,13 +1177,13 @@ In the initial BDQ Tests, for a `Use Case`, `MEaq(u)` is the set of `Multi Recor
 Let IT be the set of Improvement Targets for an `Amendment`, such that each `Improvement Target` is the union of a `Measure`, a `Validation`, and an `Issue` for which acceptance of the `Amendment` may improve fitness for use.
 
 ```
-IT(am) = {x | (x ∈ 𝒫(ME) ⋁ x ∈ 𝒫(VA) ⋁ x ∈ 𝒫(IS)) ⋀ am ∈ AM}
+IT(am) = {x | (x ∈ ME ⋁ x ∈ VA ⋁ x ∈ IS) ⋀ am ∈ AM}
 
 it(am1) = {me1, va2, is1}
 ```
 
 * Example: "Recommending coordinates based on textual locality improves the coordinate completeness of `Single Records` and may result in compliance with the `Criterion` dataset must have all records with coordinates."
-* Example: it(am1) = {me1, va2, is1} means that acceptance of the `Amendment` am1 may improve the `Measure` me1, the `Validation` va2, and the `Issue` is1.
+* Example: `it(am1) = {{me1}, {va2}, {is1}}` means that acceptance of the `Amendment` `am1` may improve the `Measure` `me1`, the `Validation` `va2`, and the `Issue` `is1`.
 
 The `ImprovementTarget` concept is intended to express that an `Amendment` may support improvement in more than one way. In particular, an `Amendment` may improve one or more `Measures` of data quality and may also help satisfy one or more `Validations`. The expression for `IT(am)` should therefore be read as identifying the set of `Data Quality Needs` that may be improved, satisfied, or brought closer to compliance through acceptance of the proposals made by a given `Amendment`.
 
@@ -1146,7 +1197,7 @@ This formalization SHOULD NOT block the framing of `Amendments` that propose cha
 `Validation Method`:  Let `VM(va)` be the set of `Specifications` for a `Validation` `va`.
 
 ```
-VM(va) = {s | s ∈ 𝒫(S) ⋀ va ∈ VA}   
+VM(va) = {s | s ∈ S ⋀ va ∈ VA}
 
 vm(va1) = {s1, s2}
 ```
@@ -1154,7 +1205,7 @@ vm(va1) = {s1, s2}
 And `Issue Method`: Let `ISM(is)` be the set of `Specifications` for an `Issue` `is`.
 
 ```
-ISM(is) = {s | s ∈ 𝒫(S) ⋀ is ∈ IS}
+ISM(is) = {s | s ∈ S ⋀ is ∈ IS}
 
 ism(is1) = {s1, s2}
 ```
@@ -1164,10 +1215,9 @@ ism(is1) = {s1, s2}
 A `Measurement Method` is the set of `Specifications` for a `Measure` `me`.
 
 ```
-MM(me) = {s | s ∈ 𝒫(S) ⋀ me ∈ ME}
+MM(me) = {s | s ∈ S ⋀ me ∈ ME}
 
 mm(me1) = {s1, s2}
-mm(me1) = {< ie1, d1, rt1>, < ie2, d2, rt2> }
 ```
 
 ##### 4.4.3.3 Amendment Method (normative)
@@ -1175,10 +1225,9 @@ mm(me1) = {< ie1, d1, rt1>, < ie2, d2, rt2> }
 An `Amendment Method` is the set of `Specifications` for an `Amendment` `am`.
 
 ```
-EM(am) = {s | s ∈ 𝒫(S) ⋀ am ∈ AM}
+AMM(am) = {s | s ∈ S ⋀ am ∈ AM}
 
-em(am1) = {s1, s2}
-em(am1) = {< ie1, e1, d1, rt1>, < ie2, e2, d2, rt2> }
+amm(am1) = {s1, s2}
 ```
 
 ##### 4.4.3.4 Implementation  (normative)
@@ -1186,10 +1235,9 @@ em(am1) = {< ie1, e1, d1, rt1>, < ie2, e2, d2, rt2> }
 An `Implementation` of a `Specification` `s` is the set of `Mechanisms` that implement `s`.
 
 ```
-I(s) = {m | m ∈ 𝒫(M) ⋀ s ∈ S}
+I(s) = {m | m ∈ M ⋀ s ∈ S}
 
 i(s1) = {m1, m2}
-i(s1) = {< ie1, c1, d1, rt1>, < ie2, c2, d2, rt2> }
 ```
 * Example: "The software tool DwC-A Validator 2.0 implements the `Validation` va1 by implementing the `Specification` s1 and the `Validation` va2 by implementing the `Specification` s2."
 
@@ -1198,10 +1246,9 @@ i(s1) = {< ie1, c1, d1, rt1>, < ie2, c2, d2, rt2> }
 A `Mechanism` may implement one or more `Specifications`, and a `Specification` may be implemented by one or more `Mechanisms`. The `Mechanism Coverage` for a `Mechanism` `m` is the set of all `Specifications` such that each `Specification` is a subset of the set of all `Specifications` and is implemented by `m`.
 
 ```
-MC(m) = {s | s ∈ 𝒫(S) ⋀ m ∈ M }
+MC(m) = {s | s ∈ S ⋀ m ∈ M }
 
 mc(m1) = {s1, s2}
-mc(m1) = {< ie1, c1, d1, rt1>, < ie2, c2, d2, rt2> }
 ```
 
 #### 4.4.4 Data Quality Reports (normative)

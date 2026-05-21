@@ -412,38 +412,6 @@ Or, to just get the UUID of these tests (for example to lookup relevant methods 
     }
 ```
 
-Given a `Use Case`, can one find the `Information Elements` that were `Acted Upon`?
-
-```sparql
-    PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
-    PREFIX dwc: <http://rs.tdwg.org/dwc/terms/>
-    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-    PREFIX dcterms: <http://purl.org/dc/terms/>
-    
-    SELECT DISTINCT ?useCase ?ie
-    
-    WHERE {
-    
-       # Find Validations from the ValidationPolicy
-       # for a given Use Case
-    
-       ?policy a bdqffdq:ValidationPolicy .
-       ?policy bdqffdq:hasUseCase ?uc .
-       ?policy bdqffdq:includedInPolicy ?cc .
-       ?uc rdfs:label ?useCase .
-    
-       # Find ActedUpon InformationElements 
-       # for the Validations
-     
-       ?cc bdqffdq:hasActedUponInformationElement ?ieClass .
-       ?ieClass bdqffdq:composedOf ?ie
-    
-       # Filter by a specific Use Case
-
-       FILTER( ?uc = <https://rs.tdwg.org/bdquc/terms/Spatial-Temporal_Patterns> )
-    
-    }
-```
 
 Can one find a summary of Tests by `Data Quality Dimension` with specific Darwin Core Terms in `Information Elements` `Acted Upon`? 
 
@@ -819,6 +787,47 @@ Note that a `Validation` will produce a hasResponseResult only if the hasRespons
 ```sparql
       OPTIONAL { ?assertion bdqffdq:hasResponseResult ?responseresult . }
       OPTIONAL { ?assertion bdqffdq:hasResponseResultValue ?responseresultvalue . }
+```
+
+#### 2.4.4 Finding Information Elements Acted Upon (non-normative) 
+
+Given a `Use Case`, can one find the `Information Elements` that were `Acted Upon` (that is, the Valuable `Information Elements` in a narrow sense)?
+
+```sparql
+    PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
+    PREFIX dwc: <http://rs.tdwg.org/dwc/terms/>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX dcterms: <http://purl.org/dc/terms/>
+    
+    SELECT DISTINCT ?useCase ?ie
+    
+    WHERE {
+    
+       # Find Validations from the ValidationPolicy
+       # for a given Use Case
+    
+       ?policy a bdqffdq:ValidationPolicy .
+       ?policy bdqffdq:hasUseCase ?uc .
+       ?policy bdqffdq:includedInPolicy ?cc .
+       ?uc rdfs:label ?useCase .
+    
+       # Find ActedUpon InformationElements 
+       # for the Validations
+     
+       ?cc bdqffdq:hasActedUponInformationElement ?ieClass .
+       ?ieClass bdqffdq:composedOf ?ie
+    
+       # Filter by a specific Use Case
+
+       FILTER( ?uc = <https://rs.tdwg.org/bdquc/terms/Spatial-Temporal_Patterns> )
+    
+    }
+```
+
+This competency question aligns with the mathematical formulation of a narrow sense of Valuable Information Elements (VIEact) in Section [4.4.2.6 Valuable Information Elements (normative)](../guide/bdqffdq/index.md#4426-valuable-information-elements-normative) of the mathematical forumulation in the Fitness For Use Framework Ontology: Concepts and Use guide.
+
+```
+VIEact(u) = {ie | ie ∈ VIE(u) ⋀ ieType(ie) = ActedUpon }
 ```
 
 ## 3 Developing the Tests (non-normative)
