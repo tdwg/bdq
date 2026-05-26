@@ -150,7 +150,7 @@ BDQ Tests initially focus on values of a subset of [Darwin Core Terms](https://d
 
 Some BDQ Tests also require reference to external data such as standard vocabularies of terms or names (bdqval:sourceAuthority), see [Parameterizing the Tests](#43-parameterizing-the-tests-normative).
 
-The emphasis in BDQ is on Tests that evaluate values from a `Single Record` (`bdqffdq:SingleRecord`). Test results may also be accumulated across multiple records (`bdqffdq:MultiRecord`). Tests that accumulate information about results across multiple records are necessary for formal application of Quality Assurance and Quality Control principles.
+The emphasis in BDQ is on Tests that evaluate values from a `Single Record` (`bdqffdq:SingleRecord`). Test results may also be accumulated across multiple records (`bdqffdq:MultiRecord`). Tests that accumulate information about results across multiple records are necessary for formal application of `Quality Assurance` and `Quality Control` principles.
 
 ### 2.1 The BDQ Definition of "Test" (non-normative)
 
@@ -482,7 +482,7 @@ Conceptually, Tests can be viewed in two complementary ways: vertically, they co
 
 ### 5.2 Data Quality Control, Data Quality Assurance (normative)
 
-The BDQ standard draws a distinction between Quality Control and Quality Assurance. Quality Control processes seek to assess the quality of data for some purpose, then identify changes to the data or to processes around the data for improving the quality of the data. Quality Assurance processes seek to filter some set of data to a subset that is fit for some purpose, that is to assure that data used for some purpose are fit for that purpose. Implementations of the BDQ Tests MAY be used to perform Quality Control, Quality Assurance, or both. The [mathematical formalization](../bdqffdq/index.md#4-fitness-for-use-framework-summary-of-mathematical-formalization-normative) of the [Fitness for Use Ontology](../bdqffdq/index.md) provides a formal definition of Quality Control and Quality Assurance, and how Test `Responses` SHOULD be used for each.
+The BDQ standard draws a distinction between `Quality Control` and `Quality Assurance`. Quality Control (`bdqffdq:QualityControl`) processes seek to assess the quality of data for some purpose, then identify changes to the data or to processes around the data for improving the quality of the data. Quality Assurance (`bdqffdq:QualityAssurance`) processes seek to filter some set of data to a subset that is fit for some purpose, that is to assure that data used for some purpose are fit for that purpose. Implementations of the BDQ Tests MAY be used to perform `Quality Control`, `Quality Assurance`, or both. The [mathematical formalization](../bdqffdq/index.md#4-fitness-for-use-framework-summary-of-mathematical-formalization-normative) of the [Fitness for Use Ontology](../bdqffdq/index.md) provides a formal definition of Quality Control and Quality Assurance, and how Test `Responses` SHOULD be used for each.
 
 ### 5.3 When to Run Tests (normative)
 
