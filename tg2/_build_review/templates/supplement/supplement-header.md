@@ -288,7 +288,7 @@ Code for querying the Turtle serialization [bdqtest.ttl](../../dist/bdqtest.ttl)
 
 ### 2.3 Data Quality Control and Data Quality Assurance (non-normative)
 
-The Fitness For Use Framework (Veiga 2016, Veiga et al. 2017) draws a distinction between Quality Control and Quality Assurance. Quality Control processes seek to assess the quality of data for some purpose, then identify changes to the data or to processes around the data to improve the quality of the data. Quality Assurance processes seek to filter some set of data to a subset that is fit for some purpose (`Use Case`).
+The Fitness For Use Framework (Veiga 2016, Veiga et al. 2017) draws a distinction between `Quality Control` and `Quality Assurance`. Quality Control processes seek to assess the quality of data for some purpose, then identify changes to the data or to processes around the data to improve the quality of the data. Quality Assurance processes seek to filter some set of data to a subset that is fit for some purpose (`Use Case`).
 
 The specification of the BDQ Tests within the Framework allows the same set of Tests to apply to both Data `Quality Control` and Data `Quality Assurance`. The design of the Test Types `Validations` and `Measures` are intended to be agnostic as to whether their use is for finding problematic data (Data `Quality Control`), or for filtering out NOT_COMPLIANT records (Data `Quality Assurance`). See the [BDQ User’s Guide Section 2](../guide/users/index.md#21-quality-control-and-quality-assurance-non-normative) for further details on QA/QC. 
 
