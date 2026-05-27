@@ -1188,13 +1188,13 @@ vieact(u1) = {dwc:countryCode}
 * Example: `vie(u1) = {dwc:countryCode, dwc:decimalLatitude}`, for `Use Case` `u1`, the `Information Elements` `dwc:countryCode` and `dwc:decimalLatitude` are valuable for that `Use Case`.
 * Example: `vieact(u1) = {dwc:countryCode}`, for `Use Case` `u1`, the `Information Element` `dwc:countryCode` is valuable and is typed as `ActedUpon`.
 
-See the SPARQL query competency question in the supplementary materials in Section [2.4.4 Finding Information Elements Acted Upon](#244-finding-information-elements-acted-upon-non-normative) for an example of how to query for this sense of Valuable `Information Elements` that are `Acted Upon` in a `Use Case`.
+See the SPARQL query competency question in the supplementary materials in Section [2.4.4 Finding Information Elements Acted Upon](../../supplement/index.md#244-finding-information-elements-acted-upon-non-normative) for an example of how to query for this sense of Valuable `Information Elements` that are `Acted Upon` in a `Use Case`.
 
 ##### 4.4.2.7 Acceptable Data Quality Measure (normative)
 
 The original formulation of this was `MEaq(me) = {va | me ∈ VA ⋀ va ⊂ ME}` ` meaq(me1) = {va1, va2}` and was intended to express the idea that a `Validation` can be expressed as a `Measure` that returns `COMPLETE` or `NOT_COMPLETE`, with an example _For the `Measure` coordinate completeness in a dataset, acceptable quality is met by all records having coordinates COMPLETE._
 
-We have redefined this concept to more clearly express how `Measures` can be used as a filter in `QualityAssurance` (using resultType(x) defined in [4.4.1.3 Measure](#44113-measure-normative)):
+We have redefined this concept to more clearly express how `Measures` can be used as a filter in `QualityAssurance` (using resultType(x) defined in [4.4.1.3 Measure](#4413-measure-normative)):
 
 Let `MEaq(u)` be the set of `Measures` in the `Measurement Policy` for a `Use Case` `u` that are intended for `QualityAssurance`, that is, `Measures` whose `Response.result` is interpreted categorically as either `COMPLETE` or `NOT_COMPLETE`.  These would typically be `MultiRecord` `Measures`, but a `Resource Type` of `MultiRecord` is not a formal requirement of the concept.
 
@@ -1386,7 +1386,7 @@ records : DR → 𝒫(DR)
 ```
 - `records(dr)` is the set of `Single Record` `Data Resource` elements whose values constitute the content of a `Multi Record` `Data Resource` `dr`.
 
-Also, `resultType(x)` is the type of `Response.result` for a report element `x` when `x ∈ DQM(dr)`, as defined above in Section [4.4.1.3](#44113-measure-normative).
+Also, `resultType(x)` is the type of `Response.result` for a report element `x` when `x ∈ DQM(dr)`, as defined above in Section [4.4.1.3](#4413-measure-normative).
 
 ```
 QC(dr, u) = { x ∈ A(dr) |
