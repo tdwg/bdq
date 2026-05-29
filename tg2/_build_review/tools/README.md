@@ -12,6 +12,16 @@
 
 `python3 bdq_usecase_test_labels_Version4.py -h` for usage instructions
 
+* validate_sparql_in_templates.py - check whether SPARQL queries in templates are valid and return results when executed against the bdqtest RDF data.
+
+`python3 validate_sparql_in_templates.py -h` for usage instructions
+
+* audit_bdqffdq_vs_bdqtest.py - compare the BDQ FFDQ and BDQ Test RDF files to identify differences in use cases, tests, and information elements.
+
+* audit_bdqtest_vocab_usage.py - analyze the usage of vocabulary terms in the BDQ Test RDF file to identify any inconsistencies or missing terms.
+
+* find_current_tests_in_csv_missing_from_rdf.py - compare the list of tests in the current CSV file with the tests represented in the RDF data to identify any missing tests.
+
 ## Scripts to check templates and assembled documents
 
 * check_template_relative_links_Version13.py - check whether relative links in templates correctly produce links to anchors in generated documents.
@@ -19,3 +29,16 @@
 
 * scan_bdq_templates_term_reference_sections_v15_Version3.sh - scan the templates for consistency in sections 1.7 Referring to Terms and 2 Use of Terms.
 `bash scan_bdq_templates_term_reference_sections_v15_Version3.sh` to execute, expects to run from this directory.
+
+* grep_for_spelling.sh - scan the templates for common misspellings and typos.
+
+## Other scripts
+
+* list_multirecord_measures_for_usecase_tests.py
+* list_unique_acted_upon_information_elements.py
+* list_use_cases_and_tests_to_csv.py
+* sync_usecase_in_bdqtest_term_versions.py
+* use_case_information_elements_value_requirement.py
+
+* temporary/ - a directory for working file that carry out some cleanup step not for long term use
+
