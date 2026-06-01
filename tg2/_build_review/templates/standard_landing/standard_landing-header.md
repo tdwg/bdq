@@ -355,6 +355,7 @@ The Supporting Vocabularies are controlled vocabularies used in the technical de
 - [**Data Quality Criterion Controlled Vocabulary List of Terms (bdqcrit:)**](docs/list/bdqcrit/index.md)
 - [**Data Quality Dimension Controlled Vocabulary List of Terms (bdqdim:)**](docs/list/bdqdim/index.md)
 - [**Data Quality Enhancement Controlled Vocabulary List of Terms (bdqenh:)**](docs/list/bdqenh/index.md)
+- [**BDQ Use Case Controlled Vocabulary (bdquc:)**](docs/list/bdquc/index.md)
 
 #### 3.3.3 Landing Page IRIs (non-normative)
 
@@ -390,8 +391,12 @@ Note: **None of these links will work until deployment of the standard**, but th
   - [Term List RDF Metadata](https://rs.tdwg.org/bdqdim/terms.ttl)
 - [**Data Quality Enhancement Controlled Vocabulary (bdqenh:)**](https://bdq.tdwg.org/bdqenh/) 
   - [Vocabulary IRI](https://rs.tdwg.org/bdqenh/) redirects to [HTML Terms List](https://bdq.tdwg.org/bdqenh/terms)
-  - [RDF Metadata](https://bdq.tdwg.org/bdqdim.ttl)
+  - [RDF Metadata](https://bdq.tdwg.org/bdqenh.ttl)
   - [Term List RDF Metadata](https://rs.tdwg.org/bdqenh/terms.ttl)
+ [**BDQ Use Case Controlled Vocabulary (bdquc:)**](https://bdq.tdwg.org/bdquc/) 
+  - [Vocabulary IRI](https://rs.tdwg.org/bdquc/) redirects to [HTML Terms List](https://bdq.tdwg.org/bdquc/terms)
+  - [RDF Metadata](https://bdq.tdwg.org/bdquc.ttl)
+  - [Term List RDF Metadata](https://rs.tdwg.org/bdquc/terms.ttl)
 
 ### 3.4 Additional Documents (non-normative)
 
