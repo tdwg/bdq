@@ -355,7 +355,7 @@ The Supporting Vocabularies are controlled vocabularies used in the technical de
 - [**Data Quality Criterion Controlled Vocabulary List of Terms (bdqcrit:)**](docs/list/bdqcrit/index.md)
 - [**Data Quality Dimension Controlled Vocabulary List of Terms (bdqdim:)**](docs/list/bdqdim/index.md)
 - [**Data Quality Enhancement Controlled Vocabulary List of Terms (bdqenh:)**](docs/list/bdqenh/index.md)
-- [**BDQ Use Case Controlled Vocabulary (bdquc:)**](docs/list/bdquc/index.md)
+- [**BDQ Use Case Controlled Vocabulary List of Terms (bdquc:)**](docs/list/bdquc/index.md)
 
 #### 3.3.3 Landing Page IRIs (non-normative)
 
