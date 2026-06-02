@@ -402,15 +402,22 @@ for term in termLists:
             filtered_table.reset_index(drop=True, inplace=True)
         else:
             filtered_table = terms_sorted_by_label
-            
+ 
+        if debug :
+            print('Processing category {} with display label {}'.format(display_order[category], display_label[category]))
+            print(filtered_table)
+        encountered_labels = set() # to track duplicate labels
         for row_index,row in filtered_table.iterrows():
-            if row_index == 0 or (row_index != 0 and row['label'] != filtered_table.iloc[row_index - 1].loc['label']): # this is a hack to prevent duplicate labels
+            if encountered_labels.__contains__(row['label']):
+                print('Skipping duplicate label: {}'.format(row['label']))
+            else:
                 if not is_class_rdf_type(row['rdf_type']):
                     # curie_anchor = row['pref_ns_prefix'] + "_" + row['term_localName']
                     ## PJM: Assuming term is prefix for all terms in vocabulary file
                     curie = term + ":" + row['term_localName']
                     curie_anchor = curie.replace(':','_')
                     text += '[' + row['label'] + '](#' + curie_anchor + ') |\n'
+                    encountered_labels.add(row['label'])
         if text.endswith(" |\n"):
             text = text[:len(text)-2] # remove final trailing vertical bar and newline
         text += '\n\n' # put back removed newline

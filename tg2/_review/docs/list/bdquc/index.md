@@ -176,6 +176,7 @@ In an RDF context, a reference to a term in the `bdquc:` namespace MUST use the 
 
 [Alien-Species](#bdquc_Alien-Species) |
 [Spatial-Temporal Patterns](#bdquc_Spatial-Temporal_Patterns) |
+[Species-Distribution-Modeling-Trees](#bdquc_SDM-Trees) |
 [Taxon-Management](#bdquc_Taxon-Management) 
 
 ## 4 Vocabulary (normative)
