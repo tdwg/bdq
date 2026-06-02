@@ -312,7 +312,7 @@ In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use th
 Describes a proposal for a bdqffdq:Enhancement of original data, which if accepted, would improve the quality of the data for a use. For example: 'Recommends valid value for taxon name in a Single Record.'  
 bdqffdq:Amendments may describe proposed changes to data values, or proposed changes to processes for the production and manipulation of data, for example, a bdqffdq:Amendment on a bdqffdq:SingleRecord may provide bdqffdq:Criteria for proposing that dwc:decimalLatitude and dwc:decimalLongitude are transposed in that record. Similarly, a bdqffdq:Amendment on a bdqffdq:MultiRecord may provide bdqffdq:Critera for proposing that all dwc:decimalLatitudes and dwc:decimalLongitudes from a data source have been transposed, and the mapping of data values to transport terms should be changed.  
 A bdqffdq:Amendment is the bdqffdq:DataQualityNeed that parallels a bdqffdq:AmendmentMethod in the Solutions layer (see Figure 3 in Veiga et al., 2017), and a bdqffdq:AmendmentResponse in the Report layer (see Figure 3 in Veiga et al., 2017).  
-AM = { am | am = < ie, e, rt >, ie ∈ IE, e ∈ E ⋀ rt ∈ RT }
+AM = { am | am = < ie, e, d, rt >, ie ∈ IE, e ∈ E, d ∈ D ⋀ rt ∈ RT }
 
 ********************
 
@@ -332,7 +332,7 @@ AM = { am | am = < ie, e, rt >, ie ∈ IE, e ∈ E ⋀ rt ∈ RT }
 - Definition: A data quality bdqffdq:SolutionsConcept that relates a bdqffdq:Amendment to its bdqffdq:Specifications.
 - SubClass Of: AmendmentConcept; DataQualityMethod
 - Comments: The bdqffdq:AmendmentMethod is a bdqffdq:DataQualityMethod describing the relationship between a bdqffdq:Specification (technical description of a Test) and a bdqffdq:Amendment (a bdqffdq:Enhancement in the context of bdqffdq:ResourceType (bdqffdq:SingleRecord or bdqffdq:MultiRecord) and associated bdqffdq:InformationElements).  
-EM(am) = {s | s ⊂ S ⋀ am ∈ AM}
+AMM(am) = { s | s ∈ S ⋀ (am, s) ∈ rel_AMM }
 
 ********************
 
@@ -343,7 +343,7 @@ EM(am) = {s | s ⊂ S ⋀ am ∈ AM}
 - Definition: A bdqffdq:NeedConcept that relates a bdqffdq:UseCase to a set of supporting bdqffdq:Amendments.
 - SubClass Of: AmendmentConcept; Policy
 - Comments: A data quality Need layer concept (see Figure 3 in Veiga et al., 2017) that describes how a bdqffdq:Amendment relates to a bdqffdq:UseCase. This relationship defines which bdqffdq:Amendments are supported by a given bdqffdq:UseCase.  
-EP(u) = {am | am ⊂ AM ⋀ u ∈ U }
+AP(u) = { am | am ∈ AM ⋀ (u, am) ∈ rel_AP }
 
 ********************
 
@@ -355,7 +355,7 @@ EP(u) = {am | am ⊂ AM ⋀ u ∈ U }
 - SubClass Of: AmendmentConcept; Response
 - Comments: The bdqffdq:AmendmentResponse type is a Report layer concept (see Figure 3 in Veiga et al., 2017) that describes the results of the execution of a Test that performs a bdqffdq:AmendmentMethod following a bdqffdq:Specification to propose changes based on a bdqffdq:Amendment.   
 A bdqffdq:AmendmentResponse is expected to carry, through bdqffdq:hasResponseStatus, a bdqffdq:ResponseStatus result that includes a status bdqffdq:FILLED_IN or bdqffdq:AMENDED, as well as a bdqffdq:hasResponseResultValue that asserts proposed changes to values from the original data.  
-DQA(dr) = {dqa | dqa = < am, s, m, r >, am ∈ AM, s ∈ S, m ∈ M , r ∈ R ⋀ dr ∈ DR}
+DQA(dr) = { dqa | dqa ∈ RespA ⋀ (dr, dqa) ∈ rel_DQA }
 
 ********************
 
@@ -426,7 +426,7 @@ DQA(dr) = {dqa | dqa = < am, s, m, r >, am ∈ AM, s ∈ S, m ∈ M , r ∈ R �
 - Definition: A bdqffdq:NeedConcept expressing the composition of bdqffdq:Policies to satisfy a bdqffdq:UseCase.
 - SubClass Of: NeedConcept
 - Comments: The bdqffdq:DataQualityProfile is a data quality Need layer concept (see Figure 3 in Veiga et al., 2017) describing the bdqffdq:UseCases that make up a data quality operation such as the behavior of a single actor or workflow producing the relevant bdqffdq:Responses.  
-DQP (u) = {dqp | dqp = mp(u) ⋃ vp(u) ⋃ ep(u), mp ∈ MP , vp ∈ VP , ep ∈ EP ⋀ u ∈ U }
+DQP(u) = MP(u) ⋃ VP(u) ⋃ ISP(u) ⋃ AP(u),  where u ∈ U
 
 ********************
 
@@ -448,7 +448,7 @@ DQP (u) = {dqp | dqp = mp(u) ⋃ vp(u) ⋃ ep(u), mp ∈ MP , vp ∈ VP , ep ∈
 - SubClass Of: ReportConcept
 - Comments: Describes a bdqffdq:DataResource containing terms from a vocabulary such as Darwin Core that can be related to bdqffdq:InformationElements, and represents the original values of the data operated on by a bdqffdq:Response Test (e.g., an instance of dwc:Occurrence). Ideally, bdqffdq:DataResources have persistent GUIDs.  
 A bdqffdq:DataResource could be the oa:target of a oa:Annotation of which a bdqffdq:Response is the oa:body.  
-DR = { dr | dr = < id, rt, v >, id ∈ I D, rt ∈ RT , (rt = sr ⋁ rt = ds) ⋀ v ∈ V }
+DR = { dr | dr = < id, rt, v >, id ∈ ID, rt ∈ RT ⋀ v ∈ V }
 
 ********************
 
@@ -478,7 +478,7 @@ DR = { dr | dr = < id, rt, v >, id ∈ I D, rt ∈ RT , (rt = sr ⋁ rt = ds) �
 - Definition: A bdqffdq:SolutionsConcept that describes the portion of a bdqffdq:Mechanism that carries out the proccess described in a particular bdqffdq:Specification.
 - SubClass Of: SolutionsConcept
 - Comments: A bdqffdq:Implementation describes the relationship between a bdqffdq:Specification (technical description of a Test) and the bdqffdq:Mechanism that implements it.  
-I (s) = {m | m ⊂ M ⋀ s ∈ S}
+I(s) = { m | m ∈ M ⋀ (s, m) ∈ rel_I }
 
 ********************
 
@@ -489,7 +489,7 @@ I (s) = {m | m ⊂ M ⋀ s ∈ S}
 - Definition: A specific bdqffdq:DataQualityNeed that a specific bdqffdq:Amendment is intended to improve.
 - SubClass Of: NeedConcept
 - Comments: A bdqffdq:ImprovementTarget describes which bdqffdq:Validations, bdqffdq:Issues, and bdqffdq:Measures are improved by a bdqffdq:Amendment. The bdqffdq:ImprovementTarget includes relationships between a bdqffdq:Amendment and one or more bdqffdq:Validations or bdqffdq:Measures.  
-IT(am) = {me ⋃ va | me ∈ ME, va ∈ VA ⋀ am ∈ AM}
+IT(am) = { x | (x ∈ ME ⋁ x ∈ VA ⋁ x ∈ IS) ⋀ (am, x) ∈ rel_IT }
 
 ********************
 
@@ -510,7 +510,7 @@ IT(am) = {me ⋃ va | me ∈ ME, va ∈ VA ⋀ am ∈ AM}
 - Definition: A bdqffdq:DataQualityNeed that expresses how quality problems may be identified in data.
 - SubClass Of: DataQualityNeed; IssueConcept
 - Comments: Added to the original framework. Inverse of ContextualizedCriterion in the original framework. Describes an instance of the bdqffdq:IssueConcept in terms of the associated bdqffdq:InformationElements from a controlled vocabulary (fields bdqffdq:ActedUpon or bdqffdq:Consulted), and a bdqffdq:ResourceType of bdqffdq:SingleRecord or bdqffdq:MultiRecord. Describes bdqffdq:Criteria by which data that lack quality for some purpose may be identified. A bdqffdq:Issue is phrased in a negative sense, and approximates an inverse of a bdqffdq:Validation. A bdqffdq:Issue identifies data that lack or may lack quality. A bdqffdq:Issue may flag a bdqffdq:POTENTIAL_ISSUE that would need further review to determine if the data have quality for some purpose. If the conditions described by a bdqffdq:Issue are identified by a Test, the bdqffdq:ResponseResult will be either bdqffdq:IS_ISSUE or bdqffdq:POTENTIAL_ISSUE, if no bdqffdq:Issue is found with the data, the bdqffdq:ResponseResult will be bdqffdq:NOT_ISSUE. The term bdqffdq:NOT_ISSUE, unlike bdqffdq:COMPLIANT for a bdqffdq:Validation, does not assert that data are fit for some purpose. A bdqffdq:Issue is the bdqffdq:DataQualityNeed concept that parallels a bdqffdq:IssueMethod in the Solutions layer (see Figure 3 in Veiga et al., 2017), and a bdqffdq:IssueResponse in the Report layer (see Figure 3 in Veiga et al., 2017).  
-IS = { is | is = < ie, c, rt >, ie ∈ IE, c ∈ ∁C ⋀ rt ∈ RT }
+IS = { is | is = < ie, c, d, rt >, ie ∈ IE, c ∈ C, d ∈ D ⋀ rt ∈ RT }
 
 ********************
 
@@ -529,7 +529,7 @@ IS = { is | is = < ie, c, rt >, ie ∈ IE, c ∈ ∁C ⋀ rt ∈ RT }
 - Preferred Label: Issue Method
 - Definition: A data quality bdqffdq:SolutionsConcept that relates a bdqffdq:Issue to its bdqffdq:Specifications.
 - SubClass Of: DataQualityMethod; IssueConcept
-- Comments: A bdqffdq:IssueMethod is a data quality Solutions layer concept (see Figure 3 in Veiga et al., 2017) describing the relationship between a bdqffdq:Specification (technical description of a Test) and a bdqffdq:Issue (a bdqffdq:Criterion in the context of bdqffdq:ResourceType (bdqffdq:SingleRecord or bdqffdq:MultiRecord) and associated bdqffdq:InformationElements).
+- Comments: A bdqffdq:IssueMethod is a data quality Solutions layer concept (see Figure 3 in Veiga et al., 2017) describing the relationship between a bdqffdq:Specification (technical description of a Test) and a bdqffdq:Issue (a bdqffdq:Criterion in the context of bdqffdq:ResourceType (bdqffdq:SingleRecord or bdqffdq:MultiRecord) and associated bdqffdq:InformationElements).  ISM(is) = { s | s ∈ S ⋀ (is, s) ∈ rel_ISM }
 
 ********************
 
@@ -539,7 +539,7 @@ IS = { is | is = < ie, c, rt >, ie ∈ IE, c ∈ ∁C ⋀ rt ∈ RT }
 - Preferred Label: Issue Policy
 - Definition: A bdqffdq:NeedConcept that relates a bdqffdq:UseCase to a set of supporting bdqffdq:Issues.
 - SubClass Of: IssueConcept; Policy
-- Comments: A bdqffdq:IssuePolicy is a data quality Need layer concept (see Figure 3 in Veiga et al., 2017) that describes how a bdqffdq:Issue relates to a bdqffdq:UseCase. This relationship defines which bdqffdq:Issues are supported by a given bdqffdq:UseCase.
+- Comments: A bdqffdq:IssuePolicy is a data quality Need layer concept (see Figure 3 in Veiga et al., 2017) that describes how a bdqffdq:Issue relates to a bdqffdq:UseCase. This relationship defines which bdqffdq:Issues are supported by a given bdqffdq:UseCase.  ISP(u) = { is | is ∈ IS ⋀ (u, is) ∈ rel_ISP }
 
 ********************
 
@@ -550,7 +550,8 @@ IS = { is | is = < ie, c, rt >, ie ∈ IE, c ∈ ∁C ⋀ rt ∈ RT }
 - Definition: A bdqffdq:Response expressing the result of a bdqffdq:Implementation evaluating a bdqffdq:Issue for a particular bdqffdq:DataQualityNeed in a particular bdqffdq:DataResource.
 - SubClass Of: IssueConcept; Response
 - Comments: The bdqffdq:DataQualityReport concept describing the output of a Test in the negative (i.e., identifying the potential absence of data quality).   
-If a problem was found, the bdqffdq:IssueResponse is expected to carry, through bdqffdq:hasResponseResult, a bdqffdq:ResponseResult value of bdqffdq:IS_ISSUE, if a potential problem was found that requires human review, the bdqffdq:ResponseResult is expected to be bdqffdq:POTENTIAL_ISSUE, otherwise if the bdqffdq:ResponseStatus is bdqffdq:RUN_HAS_RESULT, the bdqffdq:ResponseResult is expected to be bdqffdq:NOT_ISSUE.
+If a problem was found, the bdqffdq:IssueResponse is expected to carry, through bdqffdq:hasResponseResult, a bdqffdq:ResponseResult value of bdqffdq:IS_ISSUE, if a potential problem was found that requires human review, the bdqffdq:ResponseResult is expected to be bdqffdq:POTENTIAL_ISSUE, otherwise if the bdqffdq:ResponseStatus is bdqffdq:RUN_HAS_RESULT, the bdqffdq:ResponseResult is expected to be bdqffdq:NOT_ISSUE.  
+DQI(dr) = { dqi | dqi ∈ RespI ⋀ (dr, dqi) ∈ rel_DQI }
 
 ********************
 
@@ -563,9 +564,9 @@ If a problem was found, the bdqffdq:IssueResponse is expected to carry, through 
 - Comments: ContextualizedDimension in the original framework. Describes an instance of the bdqffdq:MeasurementConcept in terms of the associated bdqffdq:InformationElements from a controlled vocabulary (fields bdqffdq:ActedUpon or bdqffdq:Consulted), and a bdqffdq:ResourceType of bdqffdq:SingleRecord or bdqffdq:MultiRecord.   
 Describes the bdqffdq:Criteria for measuring an aspect of data quality related to a bdqffdq:DataQualityNeed. May be bdqffdq:Criteria for determining that data are bdqffdq:COMPLETE or bdqffdq:NOT_COMPLETE, or may be bdqffdq:Criteria for asserting a numeric bdqffdq:Measure. The bdqffdq:COMPLETE and bdqffdq:NOT_COMPLETE bdqffdq:Measures are fundamental to data quality control, as a set of data is filtered to the subset of data that have quality for some need if all records are bdqffdq:COMPLETE for all pertinent bdqffdq:Measures.  
 A bdqffdq:Measure is the bdqffdq:DataQualityNeed concept that parallels a bdqffdq:MeasurementMethod in the Solutions layer (see Figure 3 in Veiga et al., 2017), and a bdqffdq:MeasurementResponse in the Report layer (see Figure 3 in Veiga et al., 2017).  
-ME = { me | me =< ie, d, rt >, ie ∈ IE, d ∈ D ⋀ rt ∈ RT }  
+ME = { me | me = < ie, d, rt >, ie ∈ IE, d ∈ D ⋀ rt ∈ RT }  
 also acceptable bdqffdq:Measure  
-AM(me) = {va | me ∈ C D ⋀ va ⊂ C C}
+MEaq(u) = { me | me ∈ ME ⋀ me ∈ MP(u) ⋀ u ∈ U ⋀ resultType(me) = categorical }
 
 ********************
 
@@ -585,7 +586,7 @@ AM(me) = {va | me ∈ C D ⋀ va ⊂ C C}
 - Definition: A data quality bdqffdq:SolutionsConcept that relates a bdqffdq:Measure to its bdqffdq:Specifications.
 - SubClass Of: DataQualityMethod; MeasurementConcept
 - Comments: A bdqffdq:MeasurementMethod is a data quality Solutions layer concept (see Figure 3 in Veiga et al., 2017) describing the relationship between a bdqffdq:Specification (technical description of a Test) and a bdqffdq:Measurement (a bdqffdq:DataQualityDimension in the context of bdqffdq:ResourceType (bdqffdq:SingleRecord or bdqffdq:MultiRecord) and associated bdqffdq:InformationElements).  
-MM(me) = {s | s ⊂ S ⋀ me ∈ ME}
+MM(me) = { s | s ∈ S ⋀ (me, s) ∈ rel_MM }
 
 ********************
 
@@ -596,7 +597,7 @@ MM(me) = {s | s ⊂ S ⋀ me ∈ ME}
 - Definition: A bdqffdq:NeedConcept that relates a bdqffdq:UseCase to a set of supporting bdqffdq:Measures.
 - SubClass Of: MeasurementConcept; Policy
 - Comments: A bdqffdq:MeasurementPolicy is a data quality Need layer concept (see Figure 3 in Veiga et al., 2017) that describes how a bdqffdq:Measurement relates to a bdqffdq:UseCase. This relationship defines which bdqffdq:Measures are supported by a given bdqffdq:UseCase.  
-MP(u) = {me | me ⊂ ME ⋀ u ∈ U }
+MP(u) = { me | me ∈ ME ⋀ (u, me) ∈ rel_MP }
 
 ********************
 
@@ -608,7 +609,7 @@ MP(u) = {me | me ⊂ ME ⋀ u ∈ U }
 - SubClass Of: MeasurementConcept; Response
 - Comments: A bdqffdq:MeasurementResponse is a Report layer concept (see Figure 3 in Veiga et al., 2017) that describes the output of the execution of a Test that performs a bdqffdq:MeasurementMethod following a bdqffdq:Specification to assess a data quality bdqffdq:Measure.   
 A MeasuremenResponse is expected to carry a bdqffdq:ResponseResult, through bdqffdq:hasResponseResult of bdqffdq:COMPLETE or bdqffdq:NOT_COMPLETE or a numeric measured value (e.g., a bdqffdq:Measure of a dwc:eventDate duration in seconds).  
-DQM(dr) = {dqm | dqm =< me, s, m, r >, me ∈ ME, s ∈ S, m ∈ M , r ∈ R ⋀ dr ∈ DR}
+DQM(dr) = { dqm | dqm ∈ RespM ⋀ (dr, dqm) ∈ rel_DQM }
 
 ********************
 
@@ -658,7 +659,7 @@ A bdqffdq:Mechanism describes the entity that performs a bdqffdq:Response Test (
 - Preferred Label: Quality Assurance
 - Definition: The process of evaluating data for fitness for some use and selecting just those data that are fit for that use. This includes, in BDQ, the operation of filtering a bdqffdq:MultiRecord bdqffdq:DataResource for a specified bdqffdq:Use Case to retain only the data subset where every associated bdqffdq:MultiRecord bdqffdq:Measure that evaluates as COMPLETE/NOT_COMPLETE has a Response.result of COMPLETE, signifying that all contained records are fit for use for the specified bdqffdq:UseCase.
 - SubClass Of: FundamentalConcept
-- Comments: The output of a BDQ Quality Assurance operation is a set of records (a MultiRecord).  The records contained in a data set filtered for Quality Assurance will comply with the fitness criteria for the given Use Case, this may include accepting changes proposed by Amendments to the data.
+- Comments: The output of a BDQ Quality Assurance operation is a set of records (a MultiRecord).  The records contained in a data set filtered for Quality Assurance will comply with the fitness criteria for the given Use Case, this may include accepting changes proposed by Amendments to the data.  QA(dr, u) = { dr' | dr' ∈ DR ⋀ dr'.rt = ds ⋀ records(dr') ⊆ records(dr) ⋀ dr ∈ DR ⋀ dr.rt = ds ⋀ u ∈ U ⋀ ∀ me ∈ MEaq(u), ∃ dqm ∈ DQM(dr') ( need(dqm) = me ⋀ result(dqm) = COMPLETE ) }
 - Scope Note: This concept of Quality Assurance encompasses Check and Act phases of Plan, Do, Check, Act of Shewhart (1939).
 
 ********************
@@ -669,7 +670,7 @@ A bdqffdq:Mechanism describes the entity that performs a bdqffdq:Response Test (
 - Preferred Label: Quality Control
 - Definition: The process of identifying data that are not fit for particular uses, with the goal of improving the data quality.  This includes in BDQ the operation on a bdqffdq:DataQualityReport for a specified bdqffdq:UseCase that yields the filtered subset Responses in that report required to diagnose, prioritize, and remediate detected data quality defects for that Use Case.
 - SubClass Of: FundamentalConcept
-- Comments: The output of a BDQ Quality Control operation is a set of assertions about a data set (a MultiRecord) under test.  BDQ does not specify how or whether consumers of Data Quality Reports act to improve their data, conceptually the actions of actually improving the data are included in Quality Control. 
+- Comments: The output of a BDQ Quality Control operation is a set of assertions about a data set (a MultiRecord) under test.  BDQ does not specify how or whether consumers of Data Quality Reports act to improve their data, conceptually the actions of actually improving the data are included in Quality Control.  QC(dr, u) = { x ∈ A(dr) | (x ∈ DQV(dr) ⋀ need(x) ∈ VP(u)  ⋀ result(x) = NOT_COMPLIANT) ⋁ (x ∈ DQA(dr) ⋀ need(x) ∈ AP(u)  ⋀ status(x) ∈ {FILLED_IN, AMENDED}) ⋁ (x ∈ DQI(dr) ⋀ need(x) ∈ ISP(u) ⋀ result(x) ∈ {IS_ISSUE, POTENTIAL_ISSUE}) ⋁ (x ∈ DQM(dr) ⋀ need(x) ∈ MP(u)  ⋀ resultType(x) = numeric) }
 - Scope Note: This concept of Quality Control encompasses Check and Act phases of Plan, Do, Check Act of Shewhart (1939).
 
 ********************
@@ -772,7 +773,7 @@ The bdqffdq:ResponseResult is represented as a value or a result object for bdqf
 - Comments: ContextualizedCriterion in the original framework. Describes the bdqffdq:Criteria for determining compliance of data to fill a bdqffdq:DataQualityNeed. A description of a bdqffdq:Criterion applied to a bdqffdq:InformationElement for a bdqffdq:ResourceType. Describes an instance of a bdqffdq:Criterion in terms of the associated bdqffdq:InformationElements from a controlled vocabulary (fields bdqffdq:ActedUpon or bdqffdq:Consulted), and a bdqffdq:ResourceType of bdqffdq:SingleRecord or bdqffdq:MultiRecord.  
 A bdqffdq:Validation is phrased in a positive sense. It identifies data which have quality for some need. For example, the value of dwc:basisOfRecord of bdqffdq:SingleRecords must be in the controlled vocabulary for dwc:basisOfRecord.  
 A bdqffdq:Validation is the bdqffdq:DataQualityNeed that parallels a bdqffdq:ValidationMethod in the Solutions layer (see Figure 3 in Veiga et al., 2017), and a bdqffdq:ValidationResponse in the Report layer (see Figure 3 in Veiga et al., 2017). A bdqffdq:ValidationResponse may specify a result that is bdqffdq:COMPLIANT, where the data have quality, or bdqffdq:NOT_COMPLIANT, where the data lack quality for a bdqffdq:UseCase.  
-VA = { va | va = < ie, c, rt >, ie ∈ IE, c ∈ C ⋀ rt ∈ RT }
+VA = { va | va = < ie, c, d, rt >, ie ∈ IE, c ∈ C, d ∈ D ⋀ rt ∈ RT }
 
 ********************
 
@@ -792,7 +793,7 @@ VA = { va | va = < ie, c, rt >, ie ∈ IE, c ∈ C ⋀ rt ∈ RT }
 - Definition: A data quality bdqffdq:SolutionsConcept that relates a bdqffdq:Validation to its bdqffdq:Specifications.
 - SubClass Of: DataQualityMethod; ValidationConcept
 - Comments: A bdqffdq:ValidationMethod is a data quality Solutions layer concept (see Figure 3 in Veiga et al., 2017) describing the relationship between a bdqffdq:Specification (technical description of a Test) and a bdqffdq:Validation (a bdqffdq:Criterion in the context of bdqffdq:ResourceType (bdqffdq:SingleRecord or bdqffdq:MultiRecord) and associated bdqffdq:InformationElements).  
-VM(va) = {s | s ⊂ S ⋀ va ∈ VA}
+VM(va) = { s | s ∈ S ⋀ (va, s) ∈ rel_VM }
 
 ********************
 
@@ -803,7 +804,7 @@ VM(va) = {s | s ⊂ S ⋀ va ∈ VA}
 - Definition: A bdqffdq:NeedConcept that relates a bdqffdq:UseCase to a set of supporting bdqffdq:Validations.
 - SubClass Of: Policy; ValidationConcept
 - Comments: A bdqffdq:ValidationPolicy is a data quality Need layer concept (see Figure 3 in Veiga et al., 2017) that describes how a bdqffdq:Validation relates to a bdqffdq:UseCase. This relationship defines which bdqffdq:Validations are needed to identify quality in a given bdqffdq:UseCase.  
-VP (u) = {va | va ⊂ VA ⋀ u ∈ U }
+VP(u) = { va | va ∈ VA ⋀ (u, va) ∈ rel_VP }
 
 ********************
 
@@ -815,7 +816,7 @@ VP (u) = {va | va ⊂ VA ⋀ u ∈ U }
 - SubClass Of: Response; ValidationConcept
 - Comments: The bdqffdq:ValidationResponse is a Report layer concept (see Figure 3 in Veiga et al., 2017) that describes the output of the execution of a Test that performs a bdqffdq:ValidationMethod following a bdqffdq:Specification to assess the validity of some data with respect to the bdqffdq:Criteria of a bdqffdq:Validation.   
 The bdqffdq:ValidationResponse concept is expected to carry through bdqffdq:hasResponseResult a bdqffdq:ResponseResult of bdqffdq:COMPLIANT or bdqffdq:NON_COMPLIANT.  
-DQV(dr) = {dqv | dqv = < va, s, m, r >, va ∈ VA, s ∈ S, m ∈ M , r ∈ R ⋀ dr ∈ DR}
+DQV(dr) = { dqv | dqv ∈ RespV ⋀ (dr, dqv) ∈ rel_DQV }
 
 ********************
 

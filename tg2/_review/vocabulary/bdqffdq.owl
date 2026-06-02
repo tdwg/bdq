@@ -624,7 +624,7 @@ bdqffdq:Amendments may describe proposed changes to data values, or proposed cha
 
 A bdqffdq:Amendment is the bdqffdq:DataQualityNeed that parallels a bdqffdq:AmendmentMethod in the Solutions layer (see Figure 3 in Veiga et al., 2017), and a bdqffdq:AmendmentResponse in the Report layer (see Figure 3 in Veiga et al., 2017).
 
-AM = { am | am = < ie, e, rt >, ie ∈ IE, e ∈ E ⋀ rt ∈ RT }"""@en ;
+AM = { am | am = < ie, e, d, rt >, ie ∈ IE, e ∈ E, d ∈ D ⋀ rt ∈ RT }"""@en ;
                   rdfs:label "Amendment"@en ;
                   skos:definition "A bdqffdq:DataQualityNeed that expresses how proposals may be made to improve the fitness for use of data."@en ;
                   rdfs:comment "A bdqffdq:DataQualityNeed that expresses how proposals may be made to improve the fitness for use of data."@en ;
@@ -647,7 +647,7 @@ bdqffdq:AmendmentMethod rdf:type owl:Class ;
                         dcterms:issued "2024-09-30"^^xsd:date ;
                         skos:note """The bdqffdq:AmendmentMethod is a bdqffdq:DataQualityMethod describing the relationship between a bdqffdq:Specification (technical description of a Test) and a bdqffdq:Amendment (a bdqffdq:Enhancement in the context of bdqffdq:ResourceType (bdqffdq:SingleRecord or bdqffdq:MultiRecord) and associated bdqffdq:InformationElements).
 
-EM(am) = {s | s ⊂ S ⋀ am ∈ AM}"""@en ;
+AMM(am) = { s | s ∈ S ⋀ (am, s) ∈ rel_AMM }"""@en ;
                         rdfs:label "Amendment Method"@en ;
                         skos:definition "A data quality bdqffdq:SolutionsConcept that relates a bdqffdq:Amendment to its bdqffdq:Specifications."@en ;
                         rdfs:comment "A data quality bdqffdq:SolutionsConcept that relates a bdqffdq:Amendment to its bdqffdq:Specifications."@en ;
@@ -661,7 +661,7 @@ bdqffdq:AmendmentPolicy rdf:type owl:Class ;
                         dcterms:issued "2024-09-30"^^xsd:date ;
                         skos:note """A data quality Need layer concept (see Figure 3 in Veiga et al., 2017) that describes how a bdqffdq:Amendment relates to a bdqffdq:UseCase. This relationship defines which bdqffdq:Amendments are supported by a given bdqffdq:UseCase.
 
-EP(u) = {am | am ⊂ AM ⋀ u ∈ U }"""@en ;
+AP(u) = { am | am ∈ AM ⋀ (u, am) ∈ rel_AP }"""@en ;
                         rdfs:label "Amendment Policy"@en ;
                         skos:definition "A bdqffdq:NeedConcept that relates a bdqffdq:UseCase to a set of supporting bdqffdq:Amendments."@en ;
                         rdfs:comment "A bdqffdq:NeedConcept that relates a bdqffdq:UseCase to a set of supporting bdqffdq:Amendments."@en ;
@@ -677,7 +677,7 @@ bdqffdq:AmendmentResponse rdf:type owl:Class ;
 
 A bdqffdq:AmendmentResponse is expected to carry, through bdqffdq:hasResponseStatus, a bdqffdq:ResponseStatus result that includes a status bdqffdq:FILLED_IN or bdqffdq:AMENDED, as well as a bdqffdq:hasResponseResultValue that asserts proposed changes to values from the original data.
 
-DQA(dr) = {dqa | dqa = < am, s, m, r >, am ∈ AM, s ∈ S, m ∈ M , r ∈ R ⋀ dr ∈ DR}"""@en ;
+DQA(dr) = { dqa | dqa ∈ RespA ⋀ (dr, dqa) ∈ rel_DQA }"""@en ;
                           rdfs:label "Amendment Response"@en ;
                           skos:definition "A bdqffdq:Response expressing the result of a bdqffdq:Implementation evaluating a bdqffdq:Amendment supporting a particular bdqffdq:DataQualityNeed to improve a particular bdqffdq:DataResource."@en ;
                           rdfs:comment "A bdqffdq:Response expressing the result of a bdqffdq:Implementation evaluating a bdqffdq:Amendment supporting a particular bdqffdq:DataQualityNeed to improve a particular bdqffdq:DataResource."@en ;
@@ -758,7 +758,7 @@ bdqffdq:DataQualityProfile rdf:type owl:Class ;
                            dcterms:issued "2024-09-30"^^xsd:date ;
                            skos:note """The bdqffdq:DataQualityProfile is a data quality Need layer concept (see Figure 3 in Veiga et al., 2017) describing the bdqffdq:UseCases that make up a data quality operation such as the behavior of a single actor or workflow producing the relevant bdqffdq:Responses.
 
-DQP (u) = {dqp | dqp = mp(u) ⋃ vp(u) ⋃ ep(u), mp ∈ MP , vp ∈ VP , ep ∈ EP ⋀ u ∈ U }"""@en ;
+DQP(u) = MP(u) ⋃ VP(u) ⋃ ISP(u) ⋃ AP(u),  where u ∈ U"""@en ;
                            rdfs:label "Data Quality Profile"@en ;
                            skos:definition "A bdqffdq:NeedConcept expressing the composition of bdqffdq:Policies to satisfy a bdqffdq:UseCase."@en ;
                            rdfs:comment "A bdqffdq:NeedConcept expressing the composition of bdqffdq:Policies to satisfy a bdqffdq:UseCase."@en ;
@@ -784,7 +784,7 @@ bdqffdq:DataResource rdf:type owl:Class ;
 
 A bdqffdq:DataResource could be the oa:target of a oa:Annotation of which a bdqffdq:Response is the oa:body.
 
-DR = { dr | dr = < id, rt, v >, id ∈ I D, rt ∈ RT , (rt = sr ⋁ rt = ds) ⋀ v ∈ V }"""@en ;
+DR = { dr | dr = < id, rt, v >, id ∈ ID, rt ∈ RT ⋀ v ∈ V }"""@en ;
                      rdfs:label "Data Resource"@en ;
                      skos:definition "An owl:Thing to which a data quality bdqffdq:Response applies."@en ;
                      rdfs:comment "An owl:Thing to which a data quality bdqffdq:Response applies."@en ;
@@ -820,7 +820,7 @@ bdqffdq:Implementation rdf:type owl:Class ;
                        dcterms:issued "2024-09-30"^^xsd:date ;
                        skos:note """A bdqffdq:Implementation describes the relationship between a bdqffdq:Specification (technical description of a Test) and the bdqffdq:Mechanism that implements it.
 
-I (s) = {m | m ⊂ M ⋀ s ∈ S}"""@en ;
+I(s) = { m | m ∈ M ⋀ (s, m) ∈ rel_I }"""@en ;
                        rdfs:label "Implementation"@en ;
                        skos:definition "A bdqffdq:SolutionsConcept that describes the portion of a bdqffdq:Mechanism that carries out the proccess described in a particular bdqffdq:Specification."@en ;
                        rdfs:comment "A bdqffdq:SolutionsConcept that describes the portion of a bdqffdq:Mechanism that carries out the proccess described in a particular bdqffdq:Specification."@en ;
@@ -833,7 +833,7 @@ bdqffdq:ImprovementTarget rdf:type owl:Class ;
                           dcterms:issued "2024-09-30"^^xsd:date ;
                           skos:note """A bdqffdq:ImprovementTarget describes which bdqffdq:Validations, bdqffdq:Issues, and bdqffdq:Measures are improved by a bdqffdq:Amendment. The bdqffdq:ImprovementTarget includes relationships between a bdqffdq:Amendment and one or more bdqffdq:Validations or bdqffdq:Measures.
 
-IT(am) = {me ⋃ va | me ∈ ME, va ∈ VA ⋀ am ∈ AM}"""@en ;
+IT(am) = { x | (x ∈ ME ⋁ x ∈ VA ⋁ x ∈ IS) ⋀ (am, x) ∈ rel_IT }"""@en ;
                           rdfs:label "Improvement Target"@en ;
                           skos:definition "A specific bdqffdq:DataQualityNeed that a specific bdqffdq:Amendment is intended to improve."@en ;
                           rdfs:comment "A specific bdqffdq:DataQualityNeed that a specific bdqffdq:Amendment is intended to improve."@en ;
@@ -858,7 +858,7 @@ bdqffdq:Issue rdf:type owl:Class ;
               dcterms:issued "2024-09-30"^^xsd:date ;
               skos:note """Added to the original framework. Inverse of ContextualizedCriterion in the original framework. Describes an instance of the bdqffdq:IssueConcept in terms of the associated bdqffdq:InformationElements from a controlled vocabulary (fields bdqffdq:ActedUpon or bdqffdq:Consulted), and a bdqffdq:ResourceType of bdqffdq:SingleRecord or bdqffdq:MultiRecord. Describes bdqffdq:Criteria by which data that lack quality for some purpose may be identified. A bdqffdq:Issue is phrased in a negative sense, and approximates an inverse of a bdqffdq:Validation. A bdqffdq:Issue identifies data that lack or may lack quality. A bdqffdq:Issue may flag a bdqffdq:POTENTIAL_ISSUE that would need further review to determine if the data have quality for some purpose. If the conditions described by a bdqffdq:Issue are identified by a Test, the bdqffdq:ResponseResult will be either bdqffdq:IS_ISSUE or bdqffdq:POTENTIAL_ISSUE, if no bdqffdq:Issue is found with the data, the bdqffdq:ResponseResult will be bdqffdq:NOT_ISSUE. The term bdqffdq:NOT_ISSUE, unlike bdqffdq:COMPLIANT for a bdqffdq:Validation, does not assert that data are fit for some purpose. A bdqffdq:Issue is the bdqffdq:DataQualityNeed concept that parallels a bdqffdq:IssueMethod in the Solutions layer (see Figure 3 in Veiga et al., 2017), and a bdqffdq:IssueResponse in the Report layer (see Figure 3 in Veiga et al., 2017).
 
-IS = { is | is = < ie, c, rt >, ie ∈ IE, c ∈ ∁C ⋀ rt ∈ RT }"""@en ;
+IS = { is | is = < ie, c, d, rt >, ie ∈ IE, c ∈ C, d ∈ D ⋀ rt ∈ RT }"""@en ;
               rdfs:label "Issue"@en ;
               skos:definition "A bdqffdq:DataQualityNeed that expresses how quality problems may be identified in data."@en ;
               rdfs:comment "A bdqffdq:DataQualityNeed that expresses how quality problems may be identified in data."@en ;
@@ -880,7 +880,7 @@ bdqffdq:IssueMethod rdf:type owl:Class ;
                     rdfs:subClassOf bdqffdq:DataQualityMethod ,
                                     bdqffdq:IssueConcept ;
                     dcterms:issued "2024-09-30"^^xsd:date ;
-                    skos:note "A bdqffdq:IssueMethod is a data quality Solutions layer concept (see Figure 3 in Veiga et al., 2017) describing the relationship between a bdqffdq:Specification (technical description of a Test) and a bdqffdq:Issue (a bdqffdq:Criterion in the context of bdqffdq:ResourceType (bdqffdq:SingleRecord or bdqffdq:MultiRecord) and associated bdqffdq:InformationElements)."@en ;
+                    skos:note "A bdqffdq:IssueMethod is a data quality Solutions layer concept (see Figure 3 in Veiga et al., 2017) describing the relationship between a bdqffdq:Specification (technical description of a Test) and a bdqffdq:Issue (a bdqffdq:Criterion in the context of bdqffdq:ResourceType (bdqffdq:SingleRecord or bdqffdq:MultiRecord) and associated bdqffdq:InformationElements).  ISM(is) = { s | s ∈ S ⋀ (is, s) ∈ rel_ISM }"@en ;
                     rdfs:label "Issue Method"@en ;
                     skos:definition "A data quality bdqffdq:SolutionsConcept that relates a bdqffdq:Issue to its bdqffdq:Specifications."@en ;
                     rdfs:comment "A data quality bdqffdq:SolutionsConcept that relates a bdqffdq:Issue to its bdqffdq:Specifications."@en ;
@@ -892,7 +892,7 @@ bdqffdq:IssuePolicy rdf:type owl:Class ;
                     rdfs:subClassOf bdqffdq:IssueConcept ,
                                     bdqffdq:Policy ;
                     dcterms:issued "2024-09-30"^^xsd:date ;
-                    skos:note "A bdqffdq:IssuePolicy is a data quality Need layer concept (see Figure 3 in Veiga et al., 2017) that describes how a bdqffdq:Issue relates to a bdqffdq:UseCase. This relationship defines which bdqffdq:Issues are supported by a given bdqffdq:UseCase."@en ;
+                    skos:note "A bdqffdq:IssuePolicy is a data quality Need layer concept (see Figure 3 in Veiga et al., 2017) that describes how a bdqffdq:Issue relates to a bdqffdq:UseCase. This relationship defines which bdqffdq:Issues are supported by a given bdqffdq:UseCase.  ISP(u) = { is | is ∈ IS ⋀ (u, is) ∈ rel_ISP }"@en ;
                     rdfs:label "Issue Policy"@en ;
                     skos:definition "A bdqffdq:NeedConcept that relates a bdqffdq:UseCase to a set of supporting bdqffdq:Issues."@en ;
                     rdfs:comment "A bdqffdq:NeedConcept that relates a bdqffdq:UseCase to a set of supporting bdqffdq:Issues."@en ;
@@ -906,7 +906,9 @@ bdqffdq:IssueResponse rdf:type owl:Class ;
                       dcterms:issued "2026-04-13" ;
                       skos:note """The bdqffdq:DataQualityReport concept describing the output of a Test in the negative (i.e., identifying the potential absence of data quality). 
 
-If a problem was found, the bdqffdq:IssueResponse is expected to carry, through bdqffdq:hasResponseResult, a bdqffdq:ResponseResult value of bdqffdq:IS_ISSUE, if a potential problem was found that requires human review, the bdqffdq:ResponseResult is expected to be bdqffdq:POTENTIAL_ISSUE, otherwise if the bdqffdq:ResponseStatus is bdqffdq:RUN_HAS_RESULT, the bdqffdq:ResponseResult is expected to be bdqffdq:NOT_ISSUE."""@en ;
+If a problem was found, the bdqffdq:IssueResponse is expected to carry, through bdqffdq:hasResponseResult, a bdqffdq:ResponseResult value of bdqffdq:IS_ISSUE, if a potential problem was found that requires human review, the bdqffdq:ResponseResult is expected to be bdqffdq:POTENTIAL_ISSUE, otherwise if the bdqffdq:ResponseStatus is bdqffdq:RUN_HAS_RESULT, the bdqffdq:ResponseResult is expected to be bdqffdq:NOT_ISSUE.
+
+DQI(dr) = { dqi | dqi ∈ RespI ⋀ (dr, dqi) ∈ rel_DQI }"""@en ;
                       rdfs:label "Issue Response"@en ;
                       skos:definition "A bdqffdq:Response expressing the result of a bdqffdq:Implementation evaluating a bdqffdq:Issue for a particular bdqffdq:DataQualityNeed in a particular bdqffdq:DataResource."@en ;
                       rdfs:comment "A bdqffdq:Response expressing the result of a bdqffdq:Implementation evaluating a bdqffdq:Issue for a particular bdqffdq:DataQualityNeed in a particular bdqffdq:DataResource."@en ;
@@ -924,9 +926,9 @@ Describes the bdqffdq:Criteria for measuring an aspect of data quality related t
 
 A bdqffdq:Measure is the bdqffdq:DataQualityNeed concept that parallels a bdqffdq:MeasurementMethod in the Solutions layer (see Figure 3 in Veiga et al., 2017), and a bdqffdq:MeasurementResponse in the Report layer (see Figure 3 in Veiga et al., 2017).
 
-ME = { me | me =< ie, d, rt >, ie ∈ IE, d ∈ D ⋀ rt ∈ RT }
+ME = { me | me = < ie, d, rt >, ie ∈ IE, d ∈ D ⋀ rt ∈ RT }
 also acceptable bdqffdq:Measure
-AM(me) = {va | me ∈ C D ⋀ va ⊂ C C}"""@en ;
+MEaq(u) = { me | me ∈ ME ⋀ me ∈ MP(u) ⋀ u ∈ U ⋀ resultType(me) = categorical }"""@en ;
                 rdfs:label "Measure"@en ;
                 skos:definition "A bdqffdq:DataQualityNeed that expresses how the fitness of data for some use may be measured."@en ;
                 rdfs:comment "A bdqffdq:DataQualityNeed that expresses how the fitness of data for some use may be measured."@en ;
@@ -949,7 +951,7 @@ bdqffdq:MeasurementMethod rdf:type owl:Class ;
                           dcterms:issued "2024-09-30"^^xsd:date ;
                           skos:note """A bdqffdq:MeasurementMethod is a data quality Solutions layer concept (see Figure 3 in Veiga et al., 2017) describing the relationship between a bdqffdq:Specification (technical description of a Test) and a bdqffdq:Measurement (a bdqffdq:DataQualityDimension in the context of bdqffdq:ResourceType (bdqffdq:SingleRecord or bdqffdq:MultiRecord) and associated bdqffdq:InformationElements).
 
-MM(me) = {s | s ⊂ S ⋀ me ∈ ME}"""@en ;
+MM(me) = { s | s ∈ S ⋀ (me, s) ∈ rel_MM }"""@en ;
                           rdfs:label "Measurement Method"@en ;
                           skos:definition "A data quality bdqffdq:SolutionsConcept that relates a bdqffdq:Measure to its bdqffdq:Specifications."@en ;
                           rdfs:comment "A data quality bdqffdq:SolutionsConcept that relates a bdqffdq:Measure to its bdqffdq:Specifications."@en ;
@@ -963,7 +965,7 @@ bdqffdq:MeasurementPolicy rdf:type owl:Class ;
                           dcterms:issued "2024-09-30"^^xsd:date ;
                           skos:note """A bdqffdq:MeasurementPolicy is a data quality Need layer concept (see Figure 3 in Veiga et al., 2017) that describes how a bdqffdq:Measurement relates to a bdqffdq:UseCase. This relationship defines which bdqffdq:Measures are supported by a given bdqffdq:UseCase.
 
-MP(u) = {me | me ⊂ ME ⋀ u ∈ U }"""@en ;
+MP(u) = { me | me ∈ ME ⋀ (u, me) ∈ rel_MP }"""@en ;
                           rdfs:label "Measurement Policy"@en ;
                           skos:definition "A bdqffdq:NeedConcept that relates a bdqffdq:UseCase to a set of supporting bdqffdq:Measures."@en ;
                           rdfs:comment "A bdqffdq:NeedConcept that relates a bdqffdq:UseCase to a set of supporting bdqffdq:Measures."@en ;
@@ -979,7 +981,7 @@ bdqffdq:MeasurementResponse rdf:type owl:Class ;
 
 A MeasuremenResponse is expected to carry a bdqffdq:ResponseResult, through bdqffdq:hasResponseResult of bdqffdq:COMPLETE or bdqffdq:NOT_COMPLETE or a numeric measured value (e.g., a bdqffdq:Measure of a dwc:eventDate duration in seconds).
 
-DQM(dr) = {dqm | dqm =< me, s, m, r >, me ∈ ME, s ∈ S, m ∈ M , r ∈ R ⋀ dr ∈ DR}"""@en ;
+DQM(dr) = { dqm | dqm ∈ RespM ⋀ (dr, dqm) ∈ rel_DQM }"""@en ;
                             rdfs:label "Measurement Response"@en ;
                             skos:definition "A bdqffdq:Response expressing the result of a bdqffdq:Implementation measuring a particular bdqffdq:DataQualityNeed in a particular bdqffdq:DataResource."@en ;
                             rdfs:comment "A bdqffdq:Response expressing the result of a bdqffdq:Implementation measuring a particular bdqffdq:DataQualityNeed in a particular bdqffdq:DataResource."@en ;
@@ -1036,7 +1038,7 @@ bdqffdq:Policy rdf:type owl:Class ;
 bdqffdq:QualityAssurance rdf:type owl:Class ;
                          rdfs:subClassOf bdqffdq:FundamentalConcept ;
                          dcterms:issued "2026-05-16"^^xsd:date ;
-                         skos:note "The output of a BDQ Quality Assurance operation is a set of records (a MultiRecord).  The records contained in a data set filtered for Quality Assurance will comply with the fitness criteria for the given Use Case, this may include accepting changes proposed by Amendments to the data."@en ;
+                         skos:note "The output of a BDQ Quality Assurance operation is a set of records (a MultiRecord).  The records contained in a data set filtered for Quality Assurance will comply with the fitness criteria for the given Use Case, this may include accepting changes proposed by Amendments to the data.  QA(dr, u) = { dr' | dr' ∈ DR ⋀ dr'.rt = ds ⋀ records(dr') ⊆ records(dr) ⋀ dr ∈ DR ⋀ dr.rt = ds ⋀ u ∈ U ⋀ ∀ me ∈ MEaq(u), ∃ dqm ∈ DQM(dr') ( need(dqm) = me ⋀ result(dqm) = COMPLETE ) }"@en ;
                          skos:scopeNote "This concept of Quality Assurance encompasses Check and Act phases of Plan, Do, Check, Act of Shewhart (1939)." ;
                          rdfs:label "Quality Assurance"@en ;
                          skos:definition "The process of evaluating data for fitness for some use and selecting just those data that are fit for that use. This includes, in BDQ, the operation of filtering a bdqffdq:MultiRecord bdqffdq:DataResource for a specified bdqffdq:Use Case to retain only the data subset where every associated bdqffdq:MultiRecord bdqffdq:Measure that evaluates as COMPLETE/NOT_COMPLETE has a Response.result of COMPLETE, signifying that all contained records are fit for use for the specified bdqffdq:UseCase."@en ;
@@ -1048,7 +1050,7 @@ bdqffdq:QualityAssurance rdf:type owl:Class ;
 bdqffdq:QualityControl rdf:type owl:Class ;
                        rdfs:subClassOf bdqffdq:FundamentalConcept ;
                        dcterms:issued "2026-05-16"^^xsd:date ;
-                       skos:note "The output of a BDQ Quality Control operation is a set of assertions about a data set (a MultiRecord) under test.  BDQ does not specify how or whether consumers of Data Quality Reports act to improve their data, conceptually the actions of actually improving the data are included in Quality Control. "@en ;
+                       skos:note "The output of a BDQ Quality Control operation is a set of assertions about a data set (a MultiRecord) under test.  BDQ does not specify how or whether consumers of Data Quality Reports act to improve their data, conceptually the actions of actually improving the data are included in Quality Control.  QC(dr, u) = { x ∈ A(dr) | (x ∈ DQV(dr) ⋀ need(x) ∈ VP(u)  ⋀ result(x) = NOT_COMPLIANT) ⋁ (x ∈ DQA(dr) ⋀ need(x) ∈ AP(u)  ⋀ status(x) ∈ {FILLED_IN, AMENDED}) ⋁ (x ∈ DQI(dr) ⋀ need(x) ∈ ISP(u) ⋀ result(x) ∈ {IS_ISSUE, POTENTIAL_ISSUE}) ⋁ (x ∈ DQM(dr) ⋀ need(x) ∈ MP(u)  ⋀ resultType(x) = numeric) }"@en ;
                        skos:scopeNote "This concept of Quality Control encompasses Check and Act phases of Plan, Do, Check Act of Shewhart (1939)." ;
                        rdfs:label "Quality Control"@en ;
                        skos:definition "The process of identifying data that are not fit for particular uses, with the goal of improving the data quality.  This includes in BDQ the operation on a bdqffdq:DataQualityReport for a specified bdqffdq:UseCase that yields the filtered subset Responses in that report required to diagnose, prioritize, and remediate detected data quality defects for that Use Case."@en ;
@@ -1168,7 +1170,7 @@ A bdqffdq:Validation is phrased in a positive sense. It identifies data which ha
 
 A bdqffdq:Validation is the bdqffdq:DataQualityNeed that parallels a bdqffdq:ValidationMethod in the Solutions layer (see Figure 3 in Veiga et al., 2017), and a bdqffdq:ValidationResponse in the Report layer (see Figure 3 in Veiga et al., 2017). A bdqffdq:ValidationResponse may specify a result that is bdqffdq:COMPLIANT, where the data have quality, or bdqffdq:NOT_COMPLIANT, where the data lack quality for a bdqffdq:UseCase.
 
-VA = { va | va = < ie, c, rt >, ie ∈ IE, c ∈ C ⋀ rt ∈ RT }"""@en ;
+VA = { va | va = < ie, c, d, rt >, ie ∈ IE, c ∈ C, d ∈ D ⋀ rt ∈ RT }"""@en ;
                    rdfs:label "Validation"@en ;
                    skos:definition "A bdqffdq:DataQualityNeed that expresses how data may be evaluated for fitness for use."@en ;
                    rdfs:comment "A bdqffdq:DataQualityNeed that expresses how data may be evaluated for fitness for use."@en ;
@@ -1192,7 +1194,7 @@ bdqffdq:ValidationMethod rdf:type owl:Class ;
                          dcterms:issued "2024-09-30"^^xsd:date ;
                          skos:note """A bdqffdq:ValidationMethod is a data quality Solutions layer concept (see Figure 3 in Veiga et al., 2017) describing the relationship between a bdqffdq:Specification (technical description of a Test) and a bdqffdq:Validation (a bdqffdq:Criterion in the context of bdqffdq:ResourceType (bdqffdq:SingleRecord or bdqffdq:MultiRecord) and associated bdqffdq:InformationElements).
 
-VM(va) = {s | s ⊂ S ⋀ va ∈ VA}"""@en ;
+VM(va) = { s | s ∈ S ⋀ (va, s) ∈ rel_VM }"""@en ;
                          rdfs:label "Validation Method"@en ;
                          skos:definition "A data quality bdqffdq:SolutionsConcept that relates a bdqffdq:Validation to its bdqffdq:Specifications."@en ;
                          rdfs:comment "A data quality bdqffdq:SolutionsConcept that relates a bdqffdq:Validation to its bdqffdq:Specifications."@en ;
@@ -1206,7 +1208,7 @@ bdqffdq:ValidationPolicy rdf:type owl:Class ;
                          dcterms:issued "2024-09-30"^^xsd:date ;
                          skos:note """A bdqffdq:ValidationPolicy is a data quality Need layer concept (see Figure 3 in Veiga et al., 2017) that describes how a bdqffdq:Validation relates to a bdqffdq:UseCase. This relationship defines which bdqffdq:Validations are needed to identify quality in a given bdqffdq:UseCase.
 
-VP (u) = {va | va ⊂ VA ⋀ u ∈ U }"""@en ;
+VP(u) = { va | va ∈ VA ⋀ (u, va) ∈ rel_VP }"""@en ;
                          rdfs:label "Validation Policy"@en ;
                          skos:definition "A bdqffdq:NeedConcept that relates a bdqffdq:UseCase to a set of supporting bdqffdq:Validations."@en ;
                          rdfs:comment "A bdqffdq:NeedConcept that relates a bdqffdq:UseCase to a set of supporting bdqffdq:Validations."@en ;
@@ -1222,7 +1224,7 @@ bdqffdq:ValidationResponse rdf:type owl:Class ;
 
 The bdqffdq:ValidationResponse concept is expected to carry through bdqffdq:hasResponseResult a bdqffdq:ResponseResult of bdqffdq:COMPLIANT or bdqffdq:NON_COMPLIANT.
 
-DQV(dr) = {dqv | dqv = < va, s, m, r >, va ∈ VA, s ∈ S, m ∈ M , r ∈ R ⋀ dr ∈ DR}"""@en ;
+DQV(dr) = { dqv | dqv ∈ RespV ⋀ (dr, dqv) ∈ rel_DQV }"""@en ;
                            rdfs:label "Validation Response"@en ;
                            skos:definition "A bdqffdq:Response expressing the result of a bdqffdq:Implementation validating compliance with a particular bdqffdq:DataQualityNeed in a particular bdqffdq:DataResource."@en ;
                            rdfs:comment "A bdqffdq:Response expressing the result of a bdqffdq:Implementation validating compliance with a particular bdqffdq:DataQualityNeed in a particular bdqffdq:DataResource."@en ;
