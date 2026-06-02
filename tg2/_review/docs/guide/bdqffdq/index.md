@@ -1399,6 +1399,27 @@ In this formulation, `MEaq(u)` is the set of those `Measure` instances in the `M
 
 In the initial BDQ Tests, for a `Use Case`, `MEaq(u)` is the set of `Multi Record` `Measures` that define whether a filtered record set is acceptable for `QualityAssurance`, named with the convention `MULTIRECORD_MEASURE_QA_`.
 
+Example comptency question: "Which `Measure` instances in a given `Measurement Policy` appear to be categorical `QualityAssurance` measures?" expressed as sparql (note that `Measures` in the bdqffdq: ontology are not subtyped as categorical or numeric, so this query heuristically evaluates this by examining the `hasExpectedResponse`):
+
+```sparql
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
+
+SELECT ?useCase ?measure ?specification ?expectedResponse
+WHERE {
+  ?policy rdf:type bdqffdq:MeasurementPolicy ;
+          bdqffdq:hasUseCase ?useCase ;
+          bdqffdq:includedInPolicy ?measure .
+  ?measure rdf:type bdqffdq:Measure .
+  ?method rdf:type bdqffdq:MeasurementMethod ;
+          bdqffdq:forMeasure ?measure ;
+          bdqffdq:hasSpecification ?specification .
+  ?specification bdqffdq:hasExpectedResponse ?expectedResponse .
+  FILTER(CONTAINS(STR(?expectedResponse), "COMPLETE") || CONTAINS(STR(?expectedResponse), "NOT_COMPLETE"))
+}
+ORDER BY ?useCase ?measure
+```
+
 ##### 4.4.2.8 Improvement Target (normative)
 
 Let IT be the set of Improvement Targets for an `Amendment`, such that each `Improvement Target` is the union of a `Measure`, a `Validation`, and an `Issue` for which acceptance of the `Amendment` may improve fitness for use.
@@ -1418,6 +1439,44 @@ In this notation, the use of union indicates that the `ImprovementTarget` for an
 
 This formalization SHOULD NOT block the framing of `Amendments` that propose changes to processes or other things outside the scope of a data set.
 
+Example competency question: "For a given Amendment, which Measures, Validations, or Issues does it target for improvement?" represented as sparql:
+<!-- skip when testing -->
+```sparql
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
+
+SELECT ?amendment ?target
+WHERE {
+  ?amendment rdf:type bdqffdq:Amendment .
+  {
+    ?amendment bdqffdq:improvedBy ?it .
+    ?it (bdqffdq:targetedMeasure|bdqffdq:targetedValidation|bdqffdq:targetedIssue) ?target .
+  }
+}
+ORDER BY ?amendment ?target
+```
+
+Example competency question: "For a given `Amendment`, which `Measures`, `Validations`, and `Issues` are identified as `Improvement Targets` for that `Amendment`?" expressed as sparql, using the `Acted Upon` `Information Elements` as a rough proxy for a `Improvement Target` relationship (note that this query could be used to build a list of candidates, but will cast too wide a net to directly infer `bdqffdq:improvedBy` relationships (e.g. an `Amendment` which conforms a value in some term to a format will not improved a `Validation` that tests the same term for `bdq:NotEmpty`)):
+```sparql
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
+
+SELECT DISTINCT ?amendment ?term ?target ?targetType
+WHERE {
+  ?amendment rdf:type bdqffdq:Amendment ;
+             bdqffdq:hasActedUponInformationElement ?amIE .
+  ?amIE bdqffdq:composedOf ?term .
+
+  ?target bdqffdq:hasActedUponInformationElement ?targetIE ;
+          rdf:type ?targetType .
+  ?targetIE bdqffdq:composedOf ?term .
+
+  FILTER(?targetType IN (bdqffdq:Measure, bdqffdq:Validation, bdqffdq:Issue))
+  FILTER(?target != ?amendment)
+}
+ORDER BY ?amendment ?term ?targetType ?target
+```
+
 #### 4.4.3 Data Quality Solutions (normative)
 ##### 4.4.3.1 Validation Method and Issue Method (normative)
 
@@ -1435,7 +1494,21 @@ And `Issue Method`: Let `ISM(is)` be the set of `Specifications` for an `Issue` 
 ISM(is) = { s | s ∈ S ⋀ (is, s) ∈ rel_ISM }
 
 ism(is1) = {s1, s2}
+
+Example competency question for a `Validation Method`: "Which Specifications are the methods for a given Validation?" expressed as sparql:
+```sparql
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
+
+SELECT ?validation ?method ?specification
+WHERE {
+  ?method rdf:type bdqffdq:ValidationMethod ;
+          bdqffdq:forValidation ?validation ;
+          bdqffdq:hasSpecification ?specification .
+}
+ORDER BY ?validation ?specification
 ```
+
 
 ##### 4.4.3.2 Measurement Method (normative)
 
@@ -2481,7 +2554,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 #### hasArgumentValue
 
 - Name: [bdqffdq:hasArgumentValue](../../list/bdqffdq/index.md#hasArgumentValue)
-- Definition: The value of a bdqffdq:Argument that is used in a bdqffdq:Specification to replace a [Formal Parameter](<../../../index.md#glossary_Formal_Parameter> "A placeholder defined in the function or method signature. It represents the input that the function expects. In the function f(x) = x^2, x is a formal parameter of the function f. In 'VALIDATION_GENUS_FOUND', `bdqval:s…") to determine the behavior of the bdqffdq:Specification.
+- Definition: The value of a bdqffdq:Argument that is used in a bdqffdq:Specification to replace a Formal Parameter to determine the behavior of the bdqffdq:Specification.
 
 ********************
 
