@@ -926,9 +926,13 @@ The following changes have been made to the original formulation:
 - `Enhancement in Context` renamed `Amendment` (The fundamental concept remains `Enhancement`, but the derived contextualized concept is now called `Amendment`.
 - `Assertion` renamed `Response`.
 - A new definition for 'Quality Assurance' as an operation reflecting current practice rather than as a set of tests.
+  - In Veiga (2016) `QA(dr) = {dqv(dr)}` is defined as a set of assertions. We redefine `QA(dr,u)` as a filter producing Data Resource subsets.  This is a real change of meaning.
 - A new definition for 'Quality Control' as an operation reflecting current practice rather than as a set of tests.
+  - In Veiga (2016) `QC(dr) = {dqv ⋃ dqi}` is defined as a set of assertions. We redefine `QC(dr,u)` as a filter producing report subsets. This is a real change of meaning,
 - A new definition is provided for `Acceptable Data Quality Measure` to support the use of `bdqffdq:Measure` for both `Quality Assurance` and `Quality Control` purposes.
+  - Veiga (2016) Acceptable Measure `AM(cd) = {cc | cd ∈ CD ⋀ cc ⊂ CC}` (criteria that bound a dimension) is replaced by `MEaq(u)` (categorical measures within a policy). This is conceptually related but not the same object.
 - The set-builder expressions for parameterized derived concepts (e.g., `VP(u)`, `MM(me)`, `I(s)`, `DQV(dr)`) are stated in terms of primitive associational relations (e.g., `rel_VP`, `rel_MM`, `rel_I`, `rel_DQV`) introduced in §4.2.1, rather than with trivially-true parameter-typing conjuncts as in Appendix A of Veiga (2016). This makes the associations the expressions name (e.g., "the `Validations` included in the `Validation Policy` for `u`") definitionally explicit; The worked examples of Appendix B of Veiga (2016) remain admissible extensional interpretations of these relations.
+
 
 
 The Fitness For Use Framework ontology is framed with limited constraints and no `rdfs:range` axioms. Under open world principles, it could be used in ways other than the constraints framed by this mathematical formulation, but this formulation SHOULD be treated as a guide for how to phrase `Responses` using `bdqffdq:` terms, and how a set of `Responses` made with those terms SHOULD be queried.
@@ -1009,22 +1013,22 @@ Reports-layer associational relations:
 
 #### 4.3.1 Use of upper and lower case symbols (normative)
 
-Section 4 follows the notation style used in Appendix A of Veiga (2016), but Appendix A uses set-theoretic symbols in a way that differs from some common mathematical practice and can be ambiguous if read literally without reference to the examples. In particular, uppercase symbols denote domains (sets of instances of a concept), while lowercase symbols denote either a single instance of that domain or, in some expressions, a selection drawn from that domain.
+Section 4 follows the notation style used in Appendix A of Veiga (2016), but Appendix A uses set-theoretic symbols in a way that differs from some common mathematical practice and can be ambiguous if read literally without reference to the examples. In particular, uppercase symbols denote domains (sets of instances of a concept), while lowercase symbols denote either a single instance of that domain or, in some expressions, a selection drawn from that domain.  In concert, Veiga (2016) ambiguously overloads ⊂, which Appendix B's examples show was often meant as "set of instances," not "subset".
 
-In the notation of Appendix A:
+In the notation of Appendix A (of Veiga 2016):
 
 - `x ∈ X` means that `x` is a single instance (member) of the domain `X`.
 - `x ⊂ X` was used in the source text where `x` was intended to range over multiple instances drawn from the domain `X`.
 
 Read literally in standard set theory, `x ⊂ X` means that `x` is a subset of `X`. However, in Appendix A, some expressions written with `x ⊂ X` are clarified by the worked examples in Appendix B, which frequently treat the members of such sets as ordinary named instances rather than as subsets. For example, Appendix B gives expressions such as `vp(u1) = {cc1, ..., cc19}`, `mp(u1) = {cd1, ..., cd18}`, `mm(cd1) = {s3}`, and `i(s1) = {m2}`, which are naturally read as sets of instances, not as sets of subsets.
 
-Accordingly, in the current formulation, Appendix B is used to interpret the intended semantics of the corresponding expressions from Appendix A.
+Accordingly, in the current formulation, Appendix B (of Veiga 2016) is used to interpret the intended semantics of the corresponding expressions from Appendix A (of Veiga 2016).
 
 - Where the examples and usage show that a construction is intended to be a set of instances drawn from a domain, the current formulation uses `x ∈ X`.
 - Where a construction is genuinely intended to range over subsets, the current formulation uses `x ∈ 𝒫(X)`.
 - The symbol `x ⊂ X` is retained only with its ordinary set-theoretic meaning, to state that one set is a subset of another.
 
-Thus, the current formulation does **not** mechanically replace every original use of `x ⊂ X` with `x ∈ 𝒫(X)`. Instead, it distinguishes between two cases:
+Thus, the current formulation does **not** mechanically replace every original (Veiga 2016) use of `x ⊂ X` with `x ∈ 𝒫(X)`. Instead, it distinguishes between two cases:
 
 1. **Instance-valued selections from a domain.**  
    Where Appendix B shows that the members are intended to be instances, expressions are written with `x ∈ X`. For example, policy and method constructions such as `VP(u)`, `MP(u)`, `VM(va)`, `MM(me)`, and `I(s)` are treated as sets of instances of `VA`, `ME`, `S`, or `M`, respectively.
@@ -1294,14 +1298,14 @@ See the SPARQL query competency question in the supplementary materials in Secti
 
 ##### 4.4.2.7 Acceptable Data Quality Measure (normative)
 
-The original formulation of this was `MEaq(me) = {va | me ∈ VA ⋀ va ⊂ ME}` ` meaq(me1) = {va1, va2}` and was intended to express the idea that a `Validation` can be expressed as a `Measure` that returns `COMPLETE` or `NOT_COMPLETE`, with an example _For the `Measure` coordinate completeness in a dataset, acceptable quality is met by all records having coordinates COMPLETE._
+The original formulation of this was `MEaq(me) = {va | me ∈ ME ⋀ va ⊂ VA}` ` meaq(me1) = {va1, va2}` and was intended to express the idea that a `Validation` can be expressed as a `Measure` that returns `COMPLETE` or `NOT_COMPLETE`, with an example _For the `Measure` coordinate completeness in a dataset, acceptable quality is met by all records having coordinates COMPLETE._
 
 We have redefined this concept to more clearly express how `Measures` can be used as a filter in `QualityAssurance` (using resultType(x) defined in [4.4.1.3 Measure](#4413-measure-normative)):
 
 Let `MEaq(u)` be the set of `Measures` in the `Measurement Policy` for a `Use Case` `u` that are intended for `QualityAssurance`, that is, `Measures` whose `Response.result` is interpreted categorically as either `COMPLETE` or `NOT_COMPLETE`.  These would typically be `MultiRecord` `Measures`, but a `Resource Type` of `MultiRecord` is not a formal requirement of the concept.
 
 ```
-MEaq(u) = { me | me ∈ ME ⋀ me ∈ mp(u) ⋀ u ∈ U ⋀ resultType(me) = categorical }
+MEaq(u) = { me | me ∈ ME ⋀ me ∈ MP(u) ⋀ u ∈ U ⋀ resultType(me) = categorical }
 
 meaq(u1) = {me1, me2}
 ```
@@ -1550,12 +1554,14 @@ If this condition is met, at least one Test on `dr` could not be completed becau
 
 ### 4.5 Relationship between the mathematical formalization and the ontology (non-normative)
 
-The mathematical formalization is a coarser model than the OWL ontology. 
-* The mathematical formalization does not model the mediating individuals `bdqffdq:DataQualityMethod` (and its subclasses `ValidationMethod`, `IssueMethod`, `MeasurementMethod`, `AmendmentMethod`), `bdqffdq:Implementation`, or `bdqffdq:Argument`. 
-* The primitive associational relations introduced in Section 4.2.1 (e.g., `rel_VM`, `rel_ISM`, `rel_MM`, `rel_AMM`, `rel_I`, `rel_MC`) are projections of the ontology's object-property chains onto pairs of endpoint domains.
-  * e.g., `rel_VM ⊆ VA × S` projects the chain `Validation ← bdqffdq:forValidation – ValidationMethod – bdqffdq:hasSpecification → Specification`, 
-  * and `rel_I ⊆ S × M` projects `Specification ← bdqffdq:usesSpecification – Implementation – bdqffdq:implementedBy → Mechanism`). 
-* These projections preserve the associations needed for the set-builder expressions in Section 4.4 but discard the identity of the mediating `Method`, `Implementation`, and `Argument` individuals, as well as parameter-binding information carried by `Argument` (`bdqffdq:hasParameter`, `bdqffdq:hasArgumentValue`). Consumers requiring those identities (for example, to distinguish two `Implementations` of the same `Specification`, or to recover the actual argument values bound to a `Specification` in a particular run) should query the ontology directly rather than relying on the projected relations.
+The mathematical formalization is a coarser model than the OWL ontology.
+* The mathematical formalization does not model the mediating individuals `bdqffdq:Policy` (and its subclasses `ValidationPolicy`, `IssuePolicy`, `MeasurementPolicy`, `AmendmentPolicy`), `bdqffdq:DataQualityMethod` (and its subclasses `ValidationMethod`, `IssueMethod`, `MeasurementMethod`, `AmendmentMethod`), `bdqffdq:Implementation`, `bdqffdq:Argument`, or `bdqffdq:ImprovementTarget`.
+* The primitive associational relations introduced in Section [4.2.1 Primitive Associational Relations (normative)](#421-primitive-associational-relations-normative) (e.g., `rel_VP`, `rel_ISP`, `rel_MP`, `rel_AP`, `rel_VM`, `rel_ISM`, `rel_MM`, `rel_AMM`, `rel_I`, `rel_MC`, `rel_IT`) are projections of the ontology's object-property chains onto pairs of endpoint domains.
+  * e.g., `rel_VP ⊆ U × VA` projects the chain `UseCase ← bdqffdq:hasUseCase – ValidationPolicy – bdqffdq:includedInPolicy → Validation` through the mediating `bdqffdq:ValidationPolicy` individual,
+  * `rel_VM ⊆ VA × S` projects the chain `Validation ← bdqffdq:forValidation – ValidationMethod – bdqffdq:hasSpecification → Specification`,
+  * `rel_I ⊆ S × M` projects `Specification ← bdqffdq:usesSpecification – Implementation – bdqffdq:implementedBy → Mechanism`,
+  * and `rel_IT ⊆ AM × (VA ∪ IS ∪ ME)` projects the chains relating a `bdqffdq:Amendment` to the `Validations`, `Issues`, and `Measures` it may improve through a mediating `bdqffdq:ImprovementTarget` individual (using `bdqffdq:improvedBy`, `bdqffdq:targetedValidation`, `bdqffdq:targetedIssue`, and `bdqffdq:targetedMeasure`).
+* These projections preserve the associations needed for the set-builder expressions in Section [4.4 Derived Concepts (normative)](#44-derived-concepts-normative) but discard the identity of the mediating `Policy`, `Method`, `Implementation`, `Argument`, and `ImprovementTarget` individuals, as well as parameter-binding information carried by `Argument` (`bdqffdq:hasParameter`, `bdqffdq:hasArgumentValue`). Consumers requiring those identities (for example, to distinguish two `Implementations` of the same `Specification`, to recover the actual argument values bound to a `Specification` in a particular run, to identify the specific `Policy` individual that associates a `UseCase` with a `Data Quality Need`, or to recover the `ImprovementTarget` individual that groups the `Data Quality Needs` a given `Amendment` may improve) should query the ontology directly rather than relying on the projected relations.
 
 ## 5 Term index (non-normative)
 
