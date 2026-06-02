@@ -1297,6 +1297,27 @@ In this formulation, `MEaq(u)` is the set of those `Measure` instances in the `M
 
 In the initial BDQ Tests, for a `Use Case`, `MEaq(u)` is the set of `Multi Record` `Measures` that define whether a filtered record set is acceptable for `QualityAssurance`, named with the convention `MULTIRECORD_MEASURE_QA_`.
 
+Example comptency question: "Which `Measure` instances in a given `Measurement Policy` appear to be categorical `QualityAssurance` measures?" expressed as sparql (note that `Measures` in the bdqffdq: ontology are not subtyped as categorical or numeric, so this query heuristically evaluates this by examining the `hasExpectedResponse`):
+
+```sparql
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
+
+SELECT ?useCase ?measure ?specification ?expectedResponse
+WHERE {
+  ?policy rdf:type bdqffdq:MeasurementPolicy ;
+          bdqffdq:hasUseCase ?useCase ;
+          bdqffdq:includedInPolicy ?measure .
+  ?measure rdf:type bdqffdq:Measure .
+  ?method rdf:type bdqffdq:MeasurementMethod ;
+          bdqffdq:forMeasure ?measure ;
+          bdqffdq:hasSpecification ?specification .
+  ?specification bdqffdq:hasExpectedResponse ?expectedResponse .
+  FILTER(CONTAINS(STR(?expectedResponse), "COMPLETE") || CONTAINS(STR(?expectedResponse), "NOT_COMPLETE"))
+}
+ORDER BY ?useCase ?measure
+```
+
 ##### 4.4.2.8 Improvement Target (normative)
 
 Let IT be the set of Improvement Targets for an `Amendment`, such that each `Improvement Target` is the union of a `Measure`, a `Validation`, and an `Issue` for which acceptance of the `Amendment` may improve fitness for use.
