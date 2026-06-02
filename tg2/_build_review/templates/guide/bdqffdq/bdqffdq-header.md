@@ -981,6 +981,22 @@ va1 = < ie1, c1, d1, rt1 >
 
 A `Validation` is interpreted in the positive sense: it asserts the presence or absence of compliance with the `Criterion` `c` for the data identified by the `Information Element` `ie` on a resource of type `rt`, evaluated within the `Data Quality Dimension` `d`.
 
+* Example competency question: "Which `Validation` instances exist, and for each one, what are its `ActedUpon` `Information Elements`, `Criterion`, `Data Quality Dimension`, and `Resource Type`?" expressed as sparql:
+```sparql
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
+
+SELECT ?va ?ie ?criterion ?dimension ?resourceType
+WHERE {
+  ?va rdf:type bdqffdq:Validation ;
+      bdqffdq:hasActedUponInformationElement ?ie ;
+      bdqffdq:hasCriterion ?criterion ;
+      bdqffdq:hasDataQualityDimension ?dimension ;
+      bdqffdq:hasResourceType ?resourceType .
+}
+ORDER BY ?va
+```
+
 ##### 4.4.1.2 Issue (normative)
 
 An `Issue` has the same structural shape as a `Validation` (an `Information Element`, a `Criterion`, a `Data Quality Dimension`, and a `Resource Type`), but a distinct result vocabulary and a distinct interpretive stance.
@@ -1106,6 +1122,20 @@ isp(u1) = {is1, is2}
 isp(u1) = {< ie1, c1, d1, rt1>, < ie2, c2, d2, rt2> }
 ```
 
+Example competency question for `Validation Policy`: "For a given `Use Case`, which `Validation` instances are included in its `Validation Policy`?" expressed as sparql:
+```sparql
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
+
+SELECT ?useCase ?policy ?validation
+WHERE {
+  ?policy rdf:type bdqffdq:ValidationPolicy ;
+          bdqffdq:hasUseCase ?useCase ;
+          bdqffdq:includedInPolicy ?validation .
+  ?validation rdf:type bdqffdq:Validation .
+}
+ORDER BY ?useCase ?validation
+```
 
 
 ##### 4.4.2.2 Measurement Policy (normative)
@@ -1140,6 +1170,44 @@ dqp(u1) = mp(u1) ⋃ vp(u1) ⋃ isp(u1) ⋃ ap(u1)
 dqp(u1) = {me1, me2, me3, me4, va1, va2, is1, is2, am1, am2}
 ```
 
+Example competency question: "For a given `Use Case`, what is the full `Data Quality Profile`, i.e. the union of its `Measures`, `Validations`, `Issues`, and `Amendments`?" expressed as sparql:
+```sparql
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
+
+SELECT ?useCase ?need ?type
+WHERE {
+  {
+    ?policy rdf:type bdqffdq:MeasurementPolicy ;
+            bdqffdq:hasUseCase ?useCase ;
+            bdqffdq:includedInPolicy ?need .
+    BIND("Measure" AS ?type)
+  }
+  UNION
+  {
+    ?policy rdf:type bdqffdq:ValidationPolicy ;
+            bdqffdq:hasUseCase ?useCase ;
+            bdqffdq:includedInPolicy ?need .
+    BIND("Validation" AS ?type)
+  }
+  UNION
+  {
+    ?policy rdf:type bdqffdq:IssuePolicy ;
+            bdqffdq:hasUseCase ?useCase ;
+            bdqffdq:includedInPolicy ?need .
+    BIND("Issue" AS ?type)
+  }
+  UNION
+  {
+    ?policy rdf:type bdqffdq:AmendmentPolicy ;
+            bdqffdq:hasUseCase ?useCase ;
+            bdqffdq:includedInPolicy ?need .
+    BIND("Amendment" AS ?type)
+  }
+}
+ORDER BY ?useCase ?type ?need
+```
+
 ##### 4.4.2.5 Use Case Coverage (normative)
 
 The Use Case Coverage for a `Use Case` `u` is the set of all Usages associated with `u`. 
@@ -1152,8 +1220,7 @@ uc(u1) = {us1, us2}
 
 * Example: "A Use Case for Niche Modeling covers MAXENT and GARP modeling"
 
-The property `bdqffdq:hasFitnessRequirements` is intended to allow this concept to be expressed in plain text for a `Use Case`.
-
+The property `bdqffdq:hasFitnessRequirements` is intended to allow this concept to be expressed in plain text for a `Use Case`, but the concept of Usages is not formally defined in the bdqffdq: ontology.
 
 ##### 4.4.2.6 Valuable Information Elements (normative)
 
@@ -1193,6 +1260,22 @@ vieact(u1) = {dwc:countryCode}
 * Example: `vieact(u1) = {dwc:countryCode}`, for `Use Case` `u1`, the `Information Element` `dwc:countryCode` is valuable and is typed as `ActedUpon`.
 
 See the SPARQL query competency question in the supplementary materials in Section [2.4.4 Finding Information Elements Acted Upon](../../supplement/index.md#244-finding-information-elements-acted-upon-non-normative) for an example of how to query for this sense of Valuable `Information Elements` that are `Acted Upon` in a `Use Case`.
+
+Example competency question: "For a given `Use Case`, which `Information Elements` are valuable as `ActedUpon`?" expressed as sparql:
+```sparql
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
+
+SELECT DISTINCT ?useCase ?ie
+WHERE {
+  ?policy bdqffdq:hasUseCase ?useCase ;
+          bdqffdq:includedInPolicy ?need .
+  ?need bdqffdq:hasActedUponInformationElement ?ie .
+  ?ie rdf:type bdqffdq:ActedUpon .
+}
+ORDER BY ?useCase ?ie
+```
+
 
 ##### 4.4.2.7 Acceptable Data Quality Measure (normative)
 
