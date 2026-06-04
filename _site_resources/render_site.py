@@ -21,6 +21,7 @@ EMOJI_MAP = {
     ":closed_book:": "📕",
     ":book:": "📖",
     ":books:": "📚",
+    ":notebook:": "📓",
     ":warning:": "⚠️",
     ":information_source:": "ℹ️",
     ":white_check_mark:": "✅",
