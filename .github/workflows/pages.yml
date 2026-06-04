@@ -1,4 +1,4 @@
-name: Build and deploy mapped Pages site
+name: Build and deploy mapped Pages site with Jekyll
 
 on:
   push:
@@ -27,12 +27,24 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.2"
+          bundler-cache: false
+
       - name: Install Python dependencies
         shell: bash
         run: |
           set -euo pipefail
           python -m pip install --upgrade pip
-          pip install pandas pyyaml rdflib markdown
+          pip install pandas pyyaml rdflib
+
+      - name: Install Jekyll and Cayman theme
+        shell: bash
+        run: |
+          set -euo pipefail
+          gem install jekyll bundler jekyll-theme-cayman
 
       - name: Build tg2 review documents
         working-directory: tg2/_make_review
@@ -42,7 +54,7 @@ jobs:
           chmod +x do_build.sh
           ./do_build.sh
 
-      - name: Assemble Pages site
+      - name: Assemble Jekyll source tree
         shell: bash
         run: |
           set -euo pipefail
@@ -55,26 +67,29 @@ jobs:
           mkdir -p site/tg2
           mkdir -p site/tg3
           mkdir -p site/tg4
+          mkdir -p site/_layouts
+          mkdir -p site/_includes
+          mkdir -p site/assets/css
 
           # Preserve custom domain
           cp CNAME site/CNAME
 
-          # Preserve source markdown at root
+          # Root page
           cp README.md site/README.md
+          cp README.md site/index.md
 
-          # Draft publication: /tg2/_review -> /draft/
+          # /tg2/_review -> /draft/
           rsync -a tg2/_review/ site/draft/
 
-          # Alternate HTML location:
           # /terms/bdqtest/ -> /draft/docs/terms/bdqtest-html/
           rsync -a terms/bdqtest/ site/draft/docs/terms/bdqtest-html/
 
-          # Publish tg1, tg3, tg4 unchanged
+          # /tg1, /tg3, /tg4 unchanged
           rsync -a tg1/ site/tg1/
           rsync -a tg3/ site/tg3/
           rsync -a tg4/ site/tg4/
 
-          # Publish tg2 excluding specific working/build/review directories
+          # /tg2 excluding working/build/review directories
           rsync -a \
             --exclude '_build_qrg/' \
             --exclude '_build_review/' \
@@ -82,228 +97,298 @@ jobs:
             --exclude '_review/' \
             tg2/ site/tg2/
 
-      - name: Render Markdown files to HTML and rewrite internal links
+          # Generated Jekyll config used for this deployment build
+          cat > site/_config.yml <<'EOF'
+          theme: jekyll-theme-cayman
+          title: Biodiversity Data Quality (BDQ)
+          description: Draft and working materials for the TDWG Biodiversity Data Quality standard
+          markdown: kramdown
+          kramdown:
+            input: GFM
+          plugins: []
+          exclude:
+            - README.md
+
+          defaults:
+            - scope:
+                path: ""
+                type: "pages"
+              values:
+                layout: default
+
+            - scope:
+                path: "draft"
+                type: "pages"
+              values:
+                layout: docs
+                review_status: under-review
+                show_toc: true
+                section: draft
+
+            - scope:
+                path: "tg1"
+                type: "pages"
+              values:
+                layout: docs
+                show_toc: true
+                section: tg1
+
+            - scope:
+                path: "tg2"
+                type: "pages"
+              values:
+                layout: docs
+                show_toc: true
+                section: tg2
+
+            - scope:
+                path: "tg3"
+                type: "pages"
+              values:
+                layout: docs
+                show_toc: true
+                section: tg3
+
+            - scope:
+                path: "tg4"
+                type: "pages"
+              values:
+                layout: docs
+                show_toc: true
+                section: tg4
+          EOF
+
+          # Custom docs layout: banner + optional description only, no duplicate title
+          cat > site/_layouts/docs.html <<'EOF'
+          ---
+          layout: default
+          ---
+          <header class="doc-header">
+            {% include review_banner.html %}
+
+            {% if page.description %}
+            <p class="page-description">{{ page.description }}</p>
+            {% endif %}
+          </header>
+
+          <div class="doc-shell">
+            {% if page.show_toc %}
+            <aside class="doc-sidebar">
+              {% include toc.html %}
+            </aside>
+            {% endif %}
+
+            <main class="doc-content">
+              {{ content }}
+            </main>
+          </div>
+          EOF
+
+          # Under Review banner for draft pages
+          cat > site/_includes/review_banner.html <<'EOF'
+          {% if page.review_status == "under-review" %}
+          <div class="review-banner" role="note" aria-label="Under review">
+            Under Review
+          </div>
+          {% endif %}
+          EOF
+
+          # TOC include populated client-side from rendered headings
+          cat > site/_includes/toc.html <<'EOF'
+          <nav class="page-toc" aria-label="On this page">
+            <h2>On this page</h2>
+            <ul id="toc-list"></ul>
+            <p id="toc-empty" class="toc-empty" hidden>No headings available.</p>
+          </nav>
+          <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            var toc = document.getElementById("toc-list");
+            var empty = document.getElementById("toc-empty");
+            if (!toc || !empty) return;
+
+            var content = document.querySelector(".doc-content");
+            if (!content) return;
+
+            var headings = content.querySelectorAll("h2[id], h3[id]");
+            headings.forEach(function(h) {
+              var li = document.createElement("li");
+              if (h.tagName.toLowerCase() === "h3") li.className = "toc-h3";
+
+              var a = document.createElement("a");
+              a.href = "#" + h.id;
+              a.textContent = h.textContent;
+
+              li.appendChild(a);
+              toc.appendChild(li);
+            });
+
+            if (!toc.children.length) {
+              empty.hidden = false;
+            }
+          });
+          </script>
+          EOF
+
+          # Stylesheet extending Cayman
+          cat > site/assets/css/style.scss <<'EOF'
+          ---
+          ---
+
+          @import "{{ site.theme }}";
+
+          .review-banner {
+            display: inline-block;
+            margin: 0 0 1rem 0;
+            padding: 0.5rem 0.85rem;
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: #fff;
+            background: #c0392b;
+            border-radius: 0.35rem;
+          }
+
+          .doc-header {
+            margin-bottom: 1.5rem;
+          }
+
+          .page-description {
+            margin-top: 0;
+            margin-bottom: 0;
+            color: #586069;
+            font-size: 1.1rem;
+          }
+
+          .doc-shell {
+            display: grid;
+            grid-template-columns: 280px minmax(0, 1fr);
+            gap: 2rem;
+            align-items: start;
+          }
+
+          .doc-sidebar {
+            position: sticky;
+            top: 1rem;
+          }
+
+          .page-toc {
+            padding: 1rem;
+            border: 1px solid #d0d7de;
+            border-radius: 0.5rem;
+            background: #f6f8fa;
+          }
+
+          .page-toc h2 {
+            margin-top: 0;
+            font-size: 1rem;
+          }
+
+          .page-toc ul {
+            margin: 0;
+            padding-left: 1.1rem;
+          }
+
+          .page-toc li {
+            margin: 0.35rem 0;
+          }
+
+          .page-toc li.toc-h3 {
+            margin-left: 0.75rem;
+            font-size: 0.95rem;
+          }
+
+          .toc-empty {
+            color: #6a737d;
+            font-size: 0.95rem;
+            margin: 0;
+          }
+
+          .doc-content {
+            min-width: 0;
+          }
+
+          @media (max-width: 960px) {
+            .doc-shell {
+              grid-template-columns: 1fr;
+            }
+
+            .doc-sidebar {
+              position: static;
+              order: -1;
+            }
+          }
+          EOF
+
+      - name: Rewrite internal markdown links to html
         shell: bash
         run: |
           set -euo pipefail
 
           python <<'PY'
           from pathlib import Path
-          import markdown
-          import html
           import re
-          import posixpath
           from urllib.parse import urlsplit, urlunsplit
 
           site = Path("site").resolve()
 
-          def first_heading_title(text: str) -> str:
-              for line in text.splitlines():
-                  if line.startswith("# "):
-                      return line[2:].strip()
-              return "Biodiversity Data Quality (BDQ)"
-
-          def md_source_to_html_rel(md_path: Path) -> str:
-              """
-              Return site-relative HTML URL path for a markdown source file.
-              Examples:
-                README.md -> /index.html
-                draft/index.md -> /draft/index.html
-                draft/foo.md -> /draft/foo/index.html
-              """
-              rel = md_path.resolve().relative_to(site).as_posix()
-
-              if rel == "README.md":
-                  return "/index.html"
-              if md_path.name.lower() == "index.md":
-                  return "/" + rel[:-3] + ".html"
-              return "/" + rel[:-3] + "/index.html"
-
-          def rendered_html_output_path(md_path: Path) -> Path:
-              rel = md_path.resolve().relative_to(site)
-              if rel.as_posix() == "README.md":
-                  return site / "index.html"
-              if md_path.name.lower() == "index.md":
-                  return md_path.with_suffix(".html")
-              return md_path.with_suffix("") / "index.html"
-
-          def site_rel_url_to_output_rel(target_site_url: str, out_path: Path) -> str:
-              """
-              Convert a site-relative URL like /draft/foo/index.html to a relative URL from out_path parent.
-              """
-              target_rel = target_site_url.lstrip("/")
-              from_dir = out_path.parent.resolve().relative_to(site).as_posix()
-              rel = posixpath.relpath(target_rel, from_dir if from_dir != "." else "")
-              return rel
-
-          def rewrite_md_target(url: str, md_path: Path, out_path: Path) -> str:
-              """
-              Rewrite internal .md links to corresponding deployed HTML URLs.
-              Preserve external URLs, mailto, fragments, etc.
-              """
+          def rewrite_target(url: str) -> str:
               parts = urlsplit(url)
 
-              # Leave absolute external URLs and non-http schemes unchanged
+              # leave external URLs and special schemes untouched
               if parts.scheme or parts.netloc:
                   return url
-
-              # Pure fragment stays as-is
-              if not parts.path and parts.fragment:
+              if not parts.path:
                   return url
 
-              raw_path = parts.path
+              path = parts.path
 
-              # Absolute path inside site
-              if raw_path.startswith("/"):
-                  candidate = site / raw_path.lstrip("/")
+              if path.endswith("README.md"):
+                  new_path = path[:-9] + "index.html"
+              elif path.endswith("index.md"):
+                  new_path = path[:-3] + "html"
+              elif path.endswith(".md"):
+                  new_path = path[:-3] + "html"
               else:
-                  candidate = (md_path.parent / raw_path).resolve()
+                  new_path = path
 
-              # If target points to markdown inside site, rewrite to html target
-              if candidate.suffix.lower() == ".md":
-                  try:
-                      candidate.relative_to(site)
-                  except ValueError:
-                      return url
+              return urlunsplit(("", "", new_path, parts.query, parts.fragment))
 
-                  html_site_url = md_source_to_html_rel(candidate)
-                  rel_url = site_rel_url_to_output_rel(html_site_url, out_path)
-                  return urlunsplit(("", "", rel_url, parts.query, parts.fragment))
+          pattern = re.compile(r'(!?\[[^\]]*\]\()([^)]+)(\))')
 
-              # For relative assets or non-md local links, adjust relative path from rendered html location
-              try:
-                  candidate.relative_to(site)
-                  target_rel = candidate.relative_to(site).as_posix()
-                  rel_url = posixpath.relpath(target_rel, out_path.parent.resolve().relative_to(site).as_posix() if out_path.parent != site else "")
-                  return urlunsplit(("", "", rel_url, parts.query, parts.fragment))
-              except ValueError:
-                  return url
-
-          def rewrite_markdown_links(text: str, md_path: Path, out_path: Path) -> str:
-              """
-              Rewrite inline markdown links/images:
-                [text](target)
-                ![alt](target)
-              This intentionally does not try to fully parse all markdown edge cases,
-              but should work for normal BDQ docs links.
-              """
-              pattern = re.compile(r'(!?\[[^\]]*\]\()([^)]+)(\))')
+          for md_path in site.rglob("*.md"):
+              text = md_path.read_text(encoding="utf-8")
 
               def repl(match):
                   prefix, target, suffix = match.groups()
                   target = target.strip()
 
-                  # Skip angle-bracketed links inside markdown target syntax if present
                   if target.startswith("<") and target.endswith(">"):
                       inner = target[1:-1].strip()
-                      new_inner = rewrite_md_target(inner, md_path, out_path)
-                      return f"{prefix}<{new_inner}>{suffix}"
+                      return f"{prefix}<{rewrite_target(inner)}>{suffix}"
 
-                  new_target = rewrite_md_target(target, md_path, out_path)
-                  return f"{prefix}{new_target}{suffix}"
+                  return f"{prefix}{rewrite_target(target)}{suffix}"
 
-              return pattern.sub(repl, text)
-
-          def make_html_page(title: str, body: str) -> str:
-              return f"""<!DOCTYPE html>
-          <html lang="en">
-          <head>
-            <meta charset="utf-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            <title>{html.escape(title)}</title>
-            <style>
-              body {{
-                font-family: Arial, sans-serif;
-                line-height: 1.6;
-                margin: 0;
-                padding: 0;
-                background: #fff;
-                color: #222;
-              }}
-              .container {{
-                max-width: 1100px;
-                margin: 2rem auto;
-                padding: 0 1rem 4rem 1rem;
-              }}
-              img {{
-                max-width: 100%;
-                height: auto;
-              }}
-              table {{
-                border-collapse: collapse;
-                width: 100%;
-              }}
-              th, td {{
-                border: 1px solid #ccc;
-                padding: 0.4rem 0.6rem;
-                text-align: left;
-                vertical-align: top;
-              }}
-              pre {{
-                overflow-x: auto;
-                background: #f6f8fa;
-                padding: 1rem;
-              }}
-              code {{
-                background: #f6f8fa;
-                padding: 0.1rem 0.3rem;
-              }}
-              pre code {{
-                background: transparent;
-                padding: 0;
-              }}
-              a {{
-                color: #0969da;
-                text-decoration: none;
-              }}
-              a:hover {{
-                text-decoration: underline;
-              }}
-            </style>
-          </head>
-          <body>
-            <main class="container">
-          {body}
-            </main>
-          </body>
-          </html>
-          """
-
-          md_engine = markdown.Markdown(extensions=[
-              "extra",
-              "tables",
-              "fenced_code",
-              "toc",
-              "sane_lists",
-          ])
-
-          markdown_files = sorted(site.rglob("*.md"))
-
-          for md_path in markdown_files:
-              out_path = rendered_html_output_path(md_path)
-              out_path.parent.mkdir(parents=True, exist_ok=True)
-
-              text = md_path.read_text(encoding="utf-8")
-              rewritten_text = rewrite_markdown_links(text, md_path, out_path)
-              title = first_heading_title(rewritten_text)
-
-              md_engine.reset()
-              body = md_engine.convert(rewritten_text)
-              page = make_html_page(title, body)
-              out_path.write_text(page, encoding="utf-8")
-
+              updated = pattern.sub(repl, text)
+              md_path.write_text(updated, encoding="utf-8")
           PY
 
-      - name: Show assembled site tree
+      - name: Build site with Jekyll
         shell: bash
         run: |
           set -euo pipefail
-          find site -maxdepth 6 | sort
+          jekyll build --source site --destination site/_site
+
+      - name: Show built site tree
+        shell: bash
+        run: |
+          set -euo pipefail
+          find site/_site -maxdepth 6 | sort
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: site
+          path: site/_site
 
   deploy:
     needs: build
