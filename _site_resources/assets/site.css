@@ -27,23 +27,55 @@ body {
 
 .page-header {
   color: #fff;
-  text-align: center;
   background-color: var(--bdq-brand);
   background-image: linear-gradient(120deg, var(--bdq-brand), var(--bdq-brand-2));
-  padding: 2rem 1rem;
+  padding: 1.5rem 1rem;
+}
+
+.page-header-inner {
+  max-width: 72rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.site-logo-link {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+}
+
+.site-logo {
+  width: 56px;
+  height: auto;
+  display: block;
+}
+
+.page-header-text {
+  min-width: 0;
 }
 
 .project-name {
   margin: 0;
-  font-size: 2.25rem;
+  font-size: 2rem;
   font-weight: 700;
 }
 
+.project-name-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.project-name-link:hover {
+  text-decoration: underline;
+}
+
 .project-tagline {
-  margin: 0.75rem auto 0 auto;
+  margin: 0.5rem 0 0 0;
   max-width: 60rem;
   opacity: 0.95;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
 }
 
 .main-content {
@@ -79,6 +111,7 @@ body {
 .doc-sidebar {
   position: sticky;
   top: 1rem;
+  align-self: start;
 }
 
 .page-toc {
@@ -86,6 +119,9 @@ body {
   border: 1px solid var(--bdq-border);
   border-radius: 0.5rem;
   background: var(--bdq-bg-soft);
+  max-height: calc(100vh - 2rem);
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .page-toc h2 {
@@ -100,11 +136,25 @@ body {
 
 .page-toc li {
   margin: 0.35rem 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .page-toc li.toc-h3 {
   margin-left: 0.75rem;
   font-size: 0.95rem;
+}
+
+.page-toc a {
+  color: var(--bdq-link);
+  text-decoration: none;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.page-toc a:hover {
+  text-decoration: underline;
 }
 
 .toc-empty {
@@ -149,9 +199,11 @@ body {
   border-radius: 0.25rem;
 }
 
-.doc-content pre code {
+.doc-content pre code,
+.doc-content .highlight code {
   padding: 0;
   background: transparent;
+  border-radius: 0;
 }
 
 .doc-content a {
@@ -159,8 +211,7 @@ body {
   text-decoration: none;
 }
 
-.doc-content a:hover,
-.page-toc a:hover {
+.doc-content a:hover {
   text-decoration: underline;
 }
 
@@ -182,7 +233,19 @@ body {
     order: -1;
   }
 
+  .page-toc {
+    max-height: none;
+  }
+
   .project-name {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+  }
+
+  .page-header-inner {
+    align-items: flex-start;
+  }
+
+  .site-logo {
+    width: 48px;
   }
 }

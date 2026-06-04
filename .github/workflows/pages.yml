@@ -32,7 +32,7 @@ jobs:
         run: |
           set -euo pipefail
           python -m pip install --upgrade pip
-          pip install pandas pyyaml rdflib markdown
+          pip install pandas pyyaml rdflib markdown pygments
 
       - name: Build tg2 review documents
         working-directory: tg2/_make_review
@@ -48,7 +48,7 @@ jobs:
           set -euo pipefail
 
           rm -rf site
-          mkdir -p site/assets/css site/assets/js
+          mkdir -p site/assets/css site/assets/js site/assets/img
           cp CNAME site/CNAME
 
           # Root README becomes site root
@@ -73,6 +73,7 @@ jobs:
           # Static site resources
           cp _site_resources/assets/site.css site/assets/css/site.css
           cp _site_resources/assets/toc.js site/assets/js/toc.js
+          cp _site_resources/assets/tdwg-logo-short.svg site/assets/img/tdwg-logo-short.svg
 
       - name: Render static site
         shell: bash
@@ -92,6 +93,7 @@ jobs:
           test -f site/tg3/index.html
           test -f site/tg4/index.html
           test -f site/draft/index.html
+          test -f site/assets/img/tdwg-logo-short.svg
           test -f site/CNAME
           find site -maxdepth 5 | sort
 
