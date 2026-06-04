@@ -79,7 +79,7 @@ body {
 }
 
 .main-content {
-  max-width: 72rem;
+  max-width: 96rem;
   margin: 0 auto;
   padding: 2rem 1rem 4rem 1rem;
 }
@@ -104,7 +104,7 @@ body {
 .doc-shell {
   display: grid;
   grid-template-columns: 280px minmax(0, 1fr);
-  gap: 2rem;
+  gap: 1.5rem;
   align-items: start;
 }
 
