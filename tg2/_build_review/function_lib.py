@@ -191,14 +191,27 @@ def build_term_key(term_concept_dictionary, terms_sorted_by_localname) :
                         if key in row.keys() and row[key] :
                             example = row[key]
                             break
-                if example and example.find(' ')==-1 and len(example) > 20 : 
+
+                # Normalize non-string values before string operations
+                if example is None:
+                    example = ""
+                elif isinstance(example, float):
+                    # pandas often uses float for missing values or numeric cells
+                    if example != example:  # NaN check
+                        example = ""
+                    else:
+                        example = str(example)
+                elif not isinstance(example, str):
+                    example = str(example)
+
+                if example and example.find(' ') == -1 and len(example) > 20 : 
                    # long string without spaces
                    if example.startswith('https://') or example.startswith('http://') : 
                        spacedExample = example[:example.rfind("/")] + "/ " + example[example.rfind("/")+1:]
                        spacedExample = spacedExample.replace("/master/","/master/ ")
                        spacedExample = spacedExample.replace("/rs.tdwg.org/","/rs.tdwg.org/ ")
                        example = "[{}]({})".format(spacedExample,example)
-                   if example.find('.') : 
+                   if '.' in example: 
                        example = example.replace(",",", ")
             else : 
                 example = ""
