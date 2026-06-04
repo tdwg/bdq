@@ -1,0 +1,125 @@
+name: Build and deploy mapped Pages site
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Python dependencies
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install --upgrade pip
+          pip install pandas pyyaml rdflib
+
+      - name: Build tg2 review documents
+        working-directory: tg2/_make_review
+        shell: bash
+        run: |
+          set -euo pipefail
+          chmod +x do_build.sh
+          ./do_build.sh
+
+      - name: Assemble Pages site
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          rm -rf site
+          mkdir -p site
+          mkdir -p site/draft
+          mkdir -p site/draft/docs/terms
+          mkdir -p site/tg1
+          mkdir -p site/tg2
+          mkdir -p site/tg3
+          mkdir -p site/tg4
+
+          # Custom domain
+          cp CNAME site/CNAME
+
+          # Generate Jekyll config for the published artifact
+          cat > site/_config.yml <<'EOF'
+          theme: jekyll-theme-cayman
+          title: Biodiversity Data Quality (BDQ)
+          description: Draft and working materials for the TDWG Biodiversity Data Quality standard
+          markdown: kramdown
+          EOF
+
+          # Root page: README.md -> /
+          cp README.md site/README.md
+          {
+            echo "---"
+            echo "layout: default"
+            echo "title: Biodiversity Data Quality (BDQ)"
+            echo "---"
+            echo
+            cat README.md
+          } > site/index.md
+
+          # Draft publication: /tg2/_review -> /draft/
+          rsync -a tg2/_review/ site/draft/
+
+          # Alternate HTML location:
+          # /terms/bdqtest/ -> /draft/docs/terms/bdqtest-html/
+          rsync -a terms/bdqtest/ site/draft/docs/terms/bdqtest-html/
+
+          # Publish tg1, tg3, tg4 unchanged
+          rsync -a tg1/ site/tg1/
+          rsync -a tg3/ site/tg3/
+          rsync -a tg4/ site/tg4/
+
+          # Publish tg2 excluding specific working/build/review directories
+          rsync -a \
+            --exclude '_build_qrg/' \
+            --exclude '_build_review/' \
+            --exclude '_make_review/' \
+            --exclude '_review/' \
+            tg2/ site/tg2/
+
+      - name: Show assembled site tree
+        shell: bash
+        run: |
+          set -euo pipefail
+          find site -maxdepth 5 | sort
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
