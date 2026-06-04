@@ -72,13 +72,16 @@ def add_heading_ids(html_text: str) -> str:
         level = match.group(1)
         attrs = match.group(2) or ""
         inner = match.group(3)
+
         if "id=" in attrs:
             return match.group(0)
+
         plain = re.sub(r"<[^>]+>", "", inner)
         hid = slugify(plain)
+
         return f'<h{level}{attrs} id="{hid}">{inner}</h{level}>'
 
-    return re.sub(r"<h([1-6])([^>]*)>(.*?)</h\\1>", repl, html_text, flags=re.S)
+    return re.sub(r"<h([1-6])([^>]*)>(.*?)</h\1>", repl, html_text, flags=re.S)
 
 
 def load_template(path: Path) -> str:
