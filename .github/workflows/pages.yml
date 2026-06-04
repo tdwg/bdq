@@ -32,7 +32,7 @@ jobs:
         run: |
           set -euo pipefail
           python -m pip install --upgrade pip
-          pip install pandas pyyaml rdflib
+          pip install pandas pyyaml rdflib markdown
 
       - name: Build tg2 review documents
         working-directory: tg2/_make_review
@@ -56,27 +56,11 @@ jobs:
           mkdir -p site/tg3
           mkdir -p site/tg4
 
-          # Custom domain
+          # Preserve custom domain
           cp CNAME site/CNAME
 
-          # Generate Jekyll config for the published artifact
-          cat > site/_config.yml <<'EOF'
-          theme: jekyll-theme-cayman
-          title: Biodiversity Data Quality (BDQ)
-          description: Draft and working materials for the TDWG Biodiversity Data Quality standard
-          markdown: kramdown
-          EOF
-
-          # Root page: README.md -> /
+          # Preserve source markdown at root
           cp README.md site/README.md
-          {
-            echo "---"
-            echo "layout: default"
-            echo "title: Biodiversity Data Quality (BDQ)"
-            echo "---"
-            echo
-            cat README.md
-          } > site/index.md
 
           # Draft publication: /tg2/_review -> /draft/
           rsync -a tg2/_review/ site/draft/
@@ -98,14 +82,223 @@ jobs:
             --exclude '_review/' \
             tg2/ site/tg2/
 
+      - name: Render Markdown files to HTML and rewrite internal links
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          python <<'PY'
+          from pathlib import Path
+          import markdown
+          import html
+          import re
+          import posixpath
+          from urllib.parse import urlsplit, urlunsplit
+
+          site = Path("site").resolve()
+
+          def first_heading_title(text: str) -> str:
+              for line in text.splitlines():
+                  if line.startswith("# "):
+                      return line[2:].strip()
+              return "Biodiversity Data Quality (BDQ)"
+
+          def md_source_to_html_rel(md_path: Path) -> str:
+              """
+              Return site-relative HTML URL path for a markdown source file.
+              Examples:
+                README.md -> /index.html
+                draft/index.md -> /draft/index.html
+                draft/foo.md -> /draft/foo/index.html
+              """
+              rel = md_path.resolve().relative_to(site).as_posix()
+
+              if rel == "README.md":
+                  return "/index.html"
+              if md_path.name.lower() == "index.md":
+                  return "/" + rel[:-3] + ".html"
+              return "/" + rel[:-3] + "/index.html"
+
+          def rendered_html_output_path(md_path: Path) -> Path:
+              rel = md_path.resolve().relative_to(site)
+              if rel.as_posix() == "README.md":
+                  return site / "index.html"
+              if md_path.name.lower() == "index.md":
+                  return md_path.with_suffix(".html")
+              return md_path.with_suffix("") / "index.html"
+
+          def site_rel_url_to_output_rel(target_site_url: str, out_path: Path) -> str:
+              """
+              Convert a site-relative URL like /draft/foo/index.html to a relative URL from out_path parent.
+              """
+              target_rel = target_site_url.lstrip("/")
+              from_dir = out_path.parent.resolve().relative_to(site).as_posix()
+              rel = posixpath.relpath(target_rel, from_dir if from_dir != "." else "")
+              return rel
+
+          def rewrite_md_target(url: str, md_path: Path, out_path: Path) -> str:
+              """
+              Rewrite internal .md links to corresponding deployed HTML URLs.
+              Preserve external URLs, mailto, fragments, etc.
+              """
+              parts = urlsplit(url)
+
+              # Leave absolute external URLs and non-http schemes unchanged
+              if parts.scheme or parts.netloc:
+                  return url
+
+              # Pure fragment stays as-is
+              if not parts.path and parts.fragment:
+                  return url
+
+              raw_path = parts.path
+
+              # Absolute path inside site
+              if raw_path.startswith("/"):
+                  candidate = site / raw_path.lstrip("/")
+              else:
+                  candidate = (md_path.parent / raw_path).resolve()
+
+              # If target points to markdown inside site, rewrite to html target
+              if candidate.suffix.lower() == ".md":
+                  try:
+                      candidate.relative_to(site)
+                  except ValueError:
+                      return url
+
+                  html_site_url = md_source_to_html_rel(candidate)
+                  rel_url = site_rel_url_to_output_rel(html_site_url, out_path)
+                  return urlunsplit(("", "", rel_url, parts.query, parts.fragment))
+
+              # For relative assets or non-md local links, adjust relative path from rendered html location
+              try:
+                  candidate.relative_to(site)
+                  target_rel = candidate.relative_to(site).as_posix()
+                  rel_url = posixpath.relpath(target_rel, out_path.parent.resolve().relative_to(site).as_posix() if out_path.parent != site else "")
+                  return urlunsplit(("", "", rel_url, parts.query, parts.fragment))
+              except ValueError:
+                  return url
+
+          def rewrite_markdown_links(text: str, md_path: Path, out_path: Path) -> str:
+              """
+              Rewrite inline markdown links/images:
+                [text](target)
+                ![alt](target)
+              This intentionally does not try to fully parse all markdown edge cases,
+              but should work for normal BDQ docs links.
+              """
+              pattern = re.compile(r'(!?\[[^\]]*\]\()([^)]+)(\))')
+
+              def repl(match):
+                  prefix, target, suffix = match.groups()
+                  target = target.strip()
+
+                  # Skip angle-bracketed links inside markdown target syntax if present
+                  if target.startswith("<") and target.endswith(">"):
+                      inner = target[1:-1].strip()
+                      new_inner = rewrite_md_target(inner, md_path, out_path)
+                      return f"{prefix}<{new_inner}>{suffix}"
+
+                  new_target = rewrite_md_target(target, md_path, out_path)
+                  return f"{prefix}{new_target}{suffix}"
+
+              return pattern.sub(repl, text)
+
+          def make_html_page(title: str, body: str) -> str:
+              return f"""<!DOCTYPE html>
+          <html lang="en">
+          <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>{html.escape(title)}</title>
+            <style>
+              body {{
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                margin: 0;
+                padding: 0;
+                background: #fff;
+                color: #222;
+              }}
+              .container {{
+                max-width: 1100px;
+                margin: 2rem auto;
+                padding: 0 1rem 4rem 1rem;
+              }}
+              img {{
+                max-width: 100%;
+                height: auto;
+              }}
+              table {{
+                border-collapse: collapse;
+                width: 100%;
+              }}
+              th, td {{
+                border: 1px solid #ccc;
+                padding: 0.4rem 0.6rem;
+                text-align: left;
+                vertical-align: top;
+              }}
+              pre {{
+                overflow-x: auto;
+                background: #f6f8fa;
+                padding: 1rem;
+              }}
+              code {{
+                background: #f6f8fa;
+                padding: 0.1rem 0.3rem;
+              }}
+              pre code {{
+                background: transparent;
+                padding: 0;
+              }}
+              a {{
+                color: #0969da;
+                text-decoration: none;
+              }}
+              a:hover {{
+                text-decoration: underline;
+              }}
+            </style>
+          </head>
+          <body>
+            <main class="container">
+          {body}
+            </main>
+          </body>
+          </html>
+          """
+
+          md_engine = markdown.Markdown(extensions=[
+              "extra",
+              "tables",
+              "fenced_code",
+              "toc",
+              "sane_lists",
+          ])
+
+          markdown_files = sorted(site.rglob("*.md"))
+
+          for md_path in markdown_files:
+              out_path = rendered_html_output_path(md_path)
+              out_path.parent.mkdir(parents=True, exist_ok=True)
+
+              text = md_path.read_text(encoding="utf-8")
+              rewritten_text = rewrite_markdown_links(text, md_path, out_path)
+              title = first_heading_title(rewritten_text)
+
+              md_engine.reset()
+              body = md_engine.convert(rewritten_text)
+              page = make_html_page(title, body)
+              out_path.write_text(page, encoding="utf-8")
+
+          PY
+
       - name: Show assembled site tree
         shell: bash
         run: |
           set -euo pipefail
-          find site -maxdepth 5 | sort
-
-      - name: Configure GitHub Pages
-        uses: actions/configure-pages@v5
+          find site -maxdepth 6 | sort
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
