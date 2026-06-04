@@ -50,7 +50,10 @@ def rewrite_target(url: str) -> str:
 
     path = parts.path
 
-    if path.endswith("README.md"):
+    # Rewrite specific known paths and extensions to their new locations or formats
+    if path.endswith("bdqffdq.owl"):
+        new_path = path[:-3] + "ttl"
+    elif path.endswith("README.md"):
         new_path = path[:-9] + "index.html"
     elif path.endswith(".md"):
         new_path = path[:-3] + ".html"
