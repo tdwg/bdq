@@ -36,9 +36,17 @@ EMOJI_MAP = {
 
 
 def first_heading_title(text: str) -> str:
+    def strip_markdown_links(s: str) -> str:
+        # Convert [text](url) -> text
+        s = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", s)
+        # Convert [text][ref] -> text
+        s = re.sub(r"\[([^\]]+)\]\[[^\]]*\]", r"\1", s)
+        return s.strip()
+
     for line in text.splitlines():
         if line.startswith("# "):
-            return line[2:].strip()
+            return strip_markdown_links(line[2:].strip())
+
     return "Biodiversity Data Quality (BDQ)"
 
 
