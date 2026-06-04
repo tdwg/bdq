@@ -1,4 +1,4 @@
-name: Build and deploy mapped static Pages site
+name: Build and deploy bdq site
 
 on:
   push:
@@ -48,424 +48,52 @@ jobs:
           set -euo pipefail
 
           rm -rf site
-          mkdir -p site
-          mkdir -p site/draft
-          mkdir -p site/draft/docs/terms
-          mkdir -p site/tg1
-          mkdir -p site/tg2
-          mkdir -p site/tg3
-          mkdir -p site/tg4
-          mkdir -p site/assets/css
-          mkdir -p site/assets/js
-
+          mkdir -p site/assets/css site/assets/js
           cp CNAME site/CNAME
 
-          # Root source files
+          # Root README becomes site root
           cp README.md site/README.md
 
-          # /tg2/_review -> /draft/
-          rsync -a tg2/_review/ site/draft/
-
-          # /terms/bdqtest/ -> /draft/docs/terms/bdqtest-html/
-          rsync -a terms/bdqtest/ site/draft/docs/terms/bdqtest-html/
-
-          # /tg1, /tg3, /tg4 unchanged
+          # Top-level tg directories, including their README.md files
           rsync -a tg1/ site/tg1/
-          rsync -a tg3/ site/tg3/
-          rsync -a tg4/ site/tg4/
-
-          # /tg2 excluding build/review working directories
-          rsync -a \
+          rsync -a tg2/ site/tg2/ \
             --exclude '_build_qrg/' \
             --exclude '_build_review/' \
             --exclude '_make_review/' \
-            --exclude '_review/' \
-            tg2/ site/tg2/
+            --exclude '_review/'
+          rsync -a tg3/ site/tg3/
+          rsync -a tg4/ site/tg4/
 
-          # Theme CSS
-          cat > site/assets/css/site.css <<'EOF'
-          :root {
-            --bdq-brand: #155799;
-            --bdq-brand-2: #159957;
-            --bdq-link: #0969da;
-            --bdq-border: #d0d7de;
-            --bdq-muted: #586069;
-            --bdq-bg-soft: #f6f8fa;
-            --bdq-review: #c0392b;
-            --bdq-text: #24292f;
-          }
+          # Draft publication area from generated tg2 review docs
+          rsync -a tg2/_review/ site/draft/
 
-          * {
-            box-sizing: border-box;
-          }
+          # Alternate HTML publication path
+          rsync -a terms/bdqtest/ site/draft/docs/terms/bdqtest-html/
 
-          html {
-            scroll-behavior: smooth;
-          }
+          # Static site resources
+          cp _site_resources/assets/site.css site/assets/css/site.css
+          cp _site_resources/assets/toc.js site/assets/js/toc.js
 
-          body {
-            margin: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--bdq-text);
-            background: #fff;
-          }
-
-          .page-header {
-            color: #fff;
-            text-align: center;
-            background-color: var(--bdq-brand);
-            background-image: linear-gradient(120deg, var(--bdq-brand), var(--bdq-brand-2));
-            padding: 2rem 1rem;
-          }
-
-          .project-name {
-            margin: 0;
-            font-size: 2.25rem;
-            font-weight: 700;
-          }
-
-          .project-tagline {
-            margin: 0.75rem auto 0 auto;
-            max-width: 60rem;
-            opacity: 0.95;
-            font-size: 1.1rem;
-          }
-
-          .main-content {
-            max-width: 72rem;
-            margin: 0 auto;
-            padding: 2rem 1rem 4rem 1rem;
-          }
-
-          .doc-header {
-            margin-bottom: 1.5rem;
-          }
-
-          .review-banner {
-            display: inline-block;
-            margin: 0 0 1rem 0;
-            padding: 0.5rem 0.85rem;
-            font-weight: 700;
-            font-size: 0.95rem;
-            text-transform: uppercase;
-            letter-spacing: 0.04em;
-            color: #fff;
-            background: var(--bdq-review);
-            border-radius: 0.35rem;
-          }
-
-          .doc-shell {
-            display: grid;
-            grid-template-columns: 280px minmax(0, 1fr);
-            gap: 2rem;
-            align-items: start;
-          }
-
-          .doc-sidebar {
-            position: sticky;
-            top: 1rem;
-          }
-
-          .page-toc {
-            padding: 1rem;
-            border: 1px solid var(--bdq-border);
-            border-radius: 0.5rem;
-            background: var(--bdq-bg-soft);
-          }
-
-          .page-toc h2 {
-            margin-top: 0;
-            font-size: 1rem;
-          }
-
-          .page-toc ul {
-            margin: 0;
-            padding-left: 1.1rem;
-          }
-
-          .page-toc li {
-            margin: 0.35rem 0;
-          }
-
-          .page-toc li.toc-h3 {
-            margin-left: 0.75rem;
-            font-size: 0.95rem;
-          }
-
-          .toc-empty {
-            color: var(--bdq-muted);
-            font-size: 0.95rem;
-            margin: 0;
-          }
-
-          .doc-content {
-            min-width: 0;
-          }
-
-          .doc-content img {
-            max-width: 100%;
-            height: auto;
-          }
-
-          .doc-content table {
-            display: block;
-            width: 100%;
-            overflow: auto;
-            border-collapse: collapse;
-          }
-
-          .doc-content th,
-          .doc-content td {
-            border: 1px solid var(--bdq-border);
-            padding: 0.4rem 0.6rem;
-            vertical-align: top;
-          }
-
-          .doc-content pre {
-            padding: 1rem;
-            overflow: auto;
-            background: var(--bdq-bg-soft);
-            border-radius: 0.4rem;
-          }
-
-          .doc-content code {
-            padding: 0.1rem 0.3rem;
-            background: var(--bdq-bg-soft);
-            border-radius: 0.25rem;
-          }
-
-          .doc-content pre code {
-            padding: 0;
-            background: transparent;
-          }
-
-          .doc-content a {
-            color: var(--bdq-link);
-            text-decoration: none;
-          }
-
-          .doc-content a:hover,
-          .page-toc a:hover {
-            text-decoration: underline;
-          }
-
-          .site-footer {
-            max-width: 72rem;
-            margin: 0 auto;
-            padding: 2rem 1rem 3rem 1rem;
-            color: var(--bdq-muted);
-            border-top: 1px solid var(--bdq-border);
-          }
-
-          @media (max-width: 960px) {
-            .doc-shell {
-              grid-template-columns: 1fr;
-            }
-
-            .doc-sidebar {
-              position: static;
-              order: -1;
-            }
-
-            .project-name {
-              font-size: 1.8rem;
-            }
-          }
-          EOF
-
-          # TOC JS
-          cat > site/assets/js/toc.js <<'EOF'
-          document.addEventListener("DOMContentLoaded", function () {
-            const toc = document.getElementById("toc-list");
-            const empty = document.getElementById("toc-empty");
-            const content = document.querySelector(".doc-content");
-            if (!toc || !empty || !content) return;
-
-            const headings = content.querySelectorAll("h2[id], h3[id]");
-            headings.forEach(function (h) {
-              const li = document.createElement("li");
-              if (h.tagName.toLowerCase() === "h3") li.className = "toc-h3";
-              const a = document.createElement("a");
-              a.href = "#" + h.id;
-              a.textContent = h.textContent;
-              li.appendChild(a);
-              toc.appendChild(li);
-            });
-
-            if (!toc.children.length) {
-              empty.hidden = false;
-            }
-          });
-          EOF
-
-      - name: Rewrite internal links and render markdown
+      - name: Render static site
         shell: bash
         run: |
           set -euo pipefail
-
-          python <<'PY'
-          from pathlib import Path
-          from urllib.parse import urlsplit, urlunsplit
-          import markdown
-          import re
-          import html
-
-          site = Path("site").resolve()
-
-          INLINE_LINK_RE = re.compile(r'(!?\[[^\]]*\]\()([^)]+)(\))')
-          HTML_HREF_RE = re.compile(r'(\b(?:href|src)=["\'])([^"\']+)(["\'])', re.IGNORECASE)
-
-          def first_heading_title(text: str) -> str:
-              for line in text.splitlines():
-                  if line.startswith("# "):
-                      return line[2:].strip()
-              return "Biodiversity Data Quality (BDQ)"
-
-          def rewrite_target(url: str) -> str:
-              parts = urlsplit(url)
-              # Leave external URLs and special schemes unchanged
-              if parts.scheme or parts.netloc:
-                  return url
-              if not parts.path:
-                  return url
-              path = parts.path
-              if path.endswith("README.md"):
-                  new_path = path[:-9] + "index.html"
-              elif path.endswith(".md"):
-                  new_path = path[:-3] + ".html"
-              else:
-                  new_path = path
-              return urlunsplit(("", "", new_path, parts.query, parts.fragment))
-
-          def rewrite_markdown_links(text: str) -> str:
-              def repl(match):
-                  prefix, target, suffix = match.groups()
-                  target = target.strip()
-                  if target.startswith("<") and target.endswith(">"):
-                      inner = target[1:-1].strip()
-                      return f"{prefix}<{rewrite_target(inner)}>{suffix}"
-                  return f"{prefix}{rewrite_target(target)}{suffix}"
-              return INLINE_LINK_RE.sub(repl, text)
-
-          def rewrite_html_links(text: str) -> str:
-              def repl(match):
-                  prefix, target, suffix = match.groups()
-                  return f"{prefix}{rewrite_target(target.strip())}{suffix}"
-              return HTML_HREF_RE.sub(repl, text)
-
-          def slugify(text: str) -> str:
-              text = text.strip().lower()
-              text = re.sub(r'[^\w\s-]', '', text)
-              text = re.sub(r'\s+', '-', text)
-              return text
-
-          def add_heading_ids(html_text: str) -> str:
-              def repl(match):
-                  level = match.group(1)
-                  attrs = match.group(2) or ""
-                  inner = match.group(3)
-                  if 'id=' in attrs:
-                      return match.group(0)
-                  plain = re.sub(r'<[^>]+>', '', inner)
-                  hid = slugify(plain)
-                  return f'<h{level}{attrs} id="{hid}">{inner}</h{level}>'
-              return re.sub(r'<h([1-6])([^>]*)>(.*?)</h\1>', repl, html_text, flags=re.S)
-
-          def render_page(title: str, body_html: str, *, under_review: bool, show_toc: bool) -> str:
-              review_html = '<div class="review-banner" role="note" aria-label="Under review">Under Review</div>' if under_review else ''
-              toc_html = '''
-              <aside class="doc-sidebar">
-                <nav class="page-toc" aria-label="On this page">
-                  <h2>On this page</h2>
-                  <ul id="toc-list"></ul>
-                  <p id="toc-empty" class="toc-empty" hidden>No headings available.</p>
-                </nav>
-              </aside>
-              ''' if show_toc else ''
-
-              return f'''<!DOCTYPE html>
-          <html lang="en">
-          <head>
-            <meta charset="utf-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            <title>{html.escape(title)}</title>
-            <link rel="stylesheet" href="/assets/css/site.css">
-          </head>
-          <body>
-            <header class="page-header" role="banner">
-              <h1 class="project-name">Biodiversity Data Quality (BDQ)</h1>
-              <p class="project-tagline">Draft and working materials for the TDWG Biodiversity Data Quality standard</p>
-            </header>
-
-            <main class="main-content" role="main">
-              <header class="doc-header">
-                {review_html}
-              </header>
-
-              <div class="doc-shell">
-                {toc_html}
-                <article class="doc-content">
-                  {body_html}
-                </article>
-              </div>
-            </main>
-
-            <footer class="site-footer">
-              Published from tdwg/bdq GitHub Pages workflow.
-            </footer>
-
-            <script src="/assets/js/toc.js"></script>
-          </body>
-          </html>
-          '''
-
-          md = markdown.Markdown(extensions=["extra", "tables", "fenced_code", "sane_lists"])
-
-          # First rewrite links in markdown and existing html files
-          for path in list(site.rglob("*.md")) + list(site.rglob("*.html")):
-              text = path.read_text(encoding="utf-8")
-              text = rewrite_markdown_links(text)
-              text = rewrite_html_links(text)
-              path.write_text(text, encoding="utf-8")
-
-          markdown_files = sorted(site.rglob("*.md"))
-
-          for md_path in markdown_files:
-              text = md_path.read_text(encoding="utf-8")
-
-              md.reset()
-              body = md.convert(text)
-              body = add_heading_ids(body)
-
-              title = first_heading_title(text)
-              rel = md_path.relative_to(site).as_posix()
-
-              if rel == "README.md":
-                  out_path = site / "index.html"
-                  under_review = False
-              elif md_path.name.lower() == "index.md":
-                  out_path = md_path.with_suffix(".html")
-                  under_review = rel.startswith("draft/")
-              else:
-                  out_path = md_path.with_suffix(".html")
-                  under_review = rel.startswith("draft/")
-
-              out_path.parent.mkdir(parents=True, exist_ok=True)
-              out_path.write_text(
-                  render_page(title, body, under_review=under_review, show_toc=True),
-                  encoding="utf-8"
-              )
-
-          PY
+          python _site_resources/render_site.py \
+            --site-root site \
+            --template _site_resources/templates/page.html
 
       - name: Verify built output
         shell: bash
         run: |
           set -euo pipefail
           test -f site/index.html
+          test -f site/tg1/index.html
+          test -f site/tg2/index.html
+          test -f site/tg3/index.html
+          test -f site/tg4/index.html
+          test -f site/draft/index.html
           test -f site/CNAME
-          find site -maxdepth 6 | sort
+          find site -maxdepth 5 | sort
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
