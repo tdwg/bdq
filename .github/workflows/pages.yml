@@ -324,25 +324,18 @@ jobs:
 
           def rewrite_target(url: str) -> str:
               parts = urlsplit(url)
-
-              # External / special schemes unchanged
+              # Leave external URLs and special schemes unchanged
               if parts.scheme or parts.netloc:
                   return url
-
               if not parts.path:
                   return url
-
               path = parts.path
-
               if path.endswith("README.md"):
                   new_path = path[:-9] + "index.html"
-              elif path.endswith("index.md"):
-                  new_path = path[:-3] + "html"
               elif path.endswith(".md"):
-                  new_path = path[:-3] + "html"
+                  new_path = path[:-3] + ".html"
               else:
                   new_path = path
-
               return urlunsplit(("", "", new_path, parts.query, parts.fragment))
 
           def rewrite_markdown_links(text: str) -> str:
