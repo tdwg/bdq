@@ -299,7 +299,7 @@ jobs:
           });
           EOF
 
-      - name: Render markdown and rewrite internal links
+      - name: Rewrite internal links and render markdown
         shell: bash
         run: |
           set -euo pipefail
@@ -314,6 +314,7 @@ jobs:
           site = Path("site").resolve()
 
           INLINE_LINK_RE = re.compile(r'(!?\[[^\]]*\]\()([^)]+)(\))')
+          HTML_HREF_RE = re.compile(r'(\b(?:href|src)=["\'])([^"\']+)(["\'])', re.IGNORECASE)
 
           def first_heading_title(text: str) -> str:
               for line in text.splitlines():
@@ -324,9 +325,10 @@ jobs:
           def rewrite_target(url: str) -> str:
               parts = urlsplit(url)
 
-              # leave external URLs and special schemes untouched
+              # External / special schemes unchanged
               if parts.scheme or parts.netloc:
                   return url
+
               if not parts.path:
                   return url
 
@@ -352,6 +354,12 @@ jobs:
                       return f"{prefix}<{rewrite_target(inner)}>{suffix}"
                   return f"{prefix}{rewrite_target(target)}{suffix}"
               return INLINE_LINK_RE.sub(repl, text)
+
+          def rewrite_html_links(text: str) -> str:
+              def repl(match):
+                  prefix, target, suffix = match.groups()
+                  return f"{prefix}{rewrite_target(target.strip())}{suffix}"
+              return HTML_HREF_RE.sub(repl, text)
 
           def slugify(text: str) -> str:
               text = text.strip().lower()
@@ -421,36 +429,38 @@ jobs:
 
           md = markdown.Markdown(extensions=["extra", "tables", "fenced_code", "sane_lists"])
 
+          # First rewrite links in markdown and existing html files
+          for path in list(site.rglob("*.md")) + list(site.rglob("*.html")):
+              text = path.read_text(encoding="utf-8")
+              text = rewrite_markdown_links(text)
+              text = rewrite_html_links(text)
+              path.write_text(text, encoding="utf-8")
+
           markdown_files = sorted(site.rglob("*.md"))
 
           for md_path in markdown_files:
               text = md_path.read_text(encoding="utf-8")
-              text = rewrite_markdown_links(text)
 
               md.reset()
               body = md.convert(text)
               body = add_heading_ids(body)
 
               title = first_heading_title(text)
-
               rel = md_path.relative_to(site).as_posix()
 
               if rel == "README.md":
                   out_path = site / "index.html"
                   under_review = False
-                  show_toc = True
               elif md_path.name.lower() == "index.md":
                   out_path = md_path.with_suffix(".html")
                   under_review = rel.startswith("draft/")
-                  show_toc = True
               else:
                   out_path = md_path.with_suffix(".html")
                   under_review = rel.startswith("draft/")
-                  show_toc = True
 
               out_path.parent.mkdir(parents=True, exist_ok=True)
               out_path.write_text(
-                  render_page(title, body, under_review=under_review, show_toc=show_toc),
+                  render_page(title, body, under_review=under_review, show_toc=True),
                   encoding="utf-8"
               )
 
