@@ -54,6 +54,24 @@ jobs:
           # Root README becomes site root
           cp README.md site/README.md
 
+          # Redirect /bdq/ to /draft/ while in draft.
+          mkdir -p site/bdq
+          cat > site/bdq/index.html <<'EOF'
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+            <meta charset="utf-8">
+            <meta http-equiv="refresh" content="0; url=/draft/">
+            <link rel="canonical" href="/draft/">
+            <script>window.location.replace("/draft/");</script>
+            <title>Redirecting…</title>
+          </head>
+          <body>
+            <p>Redirecting to <a href="/draft/">/draft/</a>.</p>
+          </body>
+          </html>
+          EOF
+
           # Top-level tg directories, including their README.md files
           rsync -a tg1/ site/tg1/
           rsync -a tg2/ site/tg2/ \
@@ -93,6 +111,7 @@ jobs:
           test -f site/tg3/index.html
           test -f site/tg4/index.html
           test -f site/draft/index.html
+          test -f site/bdq/index.html
           test -f site/assets/img/tdwg-logo-short.svg
           test -f site/CNAME
           find site -maxdepth 5 | sort
