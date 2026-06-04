@@ -71,25 +71,25 @@ jobs:
           mkdir -p site/_includes
           mkdir -p site/assets/css
 
-          # Preserve custom domain
           cp CNAME site/CNAME
 
-          # Root page
+          # Keep README available as a source artifact
           cp README.md site/README.md
-          cp README.md site/index.md
 
-          # /tg2/_review -> /draft/
+          # Explicit homepage so root definitely exists
+          cat > site/index.html <<'EOF'
+          ---
+          layout: default
+          title: Biodiversity Data Quality (BDQ)
+          ---
+          EOF
+          cat README.md >> site/index.html
+
           rsync -a tg2/_review/ site/draft/
-
-          # /terms/bdqtest/ -> /draft/docs/terms/bdqtest-html/
           rsync -a terms/bdqtest/ site/draft/docs/terms/bdqtest-html/
-
-          # /tg1, /tg3, /tg4 unchanged
           rsync -a tg1/ site/tg1/
           rsync -a tg3/ site/tg3/
           rsync -a tg4/ site/tg4/
-
-          # /tg2 excluding working/build/review directories
           rsync -a \
             --exclude '_build_qrg/' \
             --exclude '_build_review/' \
@@ -97,75 +97,66 @@ jobs:
             --exclude '_review/' \
             tg2/ site/tg2/
 
-          # Generated Jekyll config used for this deployment build
-          cat > site/_config.yml <<'EOF'
-          theme: jekyll-theme-cayman
-          title: Biodiversity Data Quality (BDQ)
-          description: Draft and working materials for the TDWG Biodiversity Data Quality standard
-          markdown: kramdown
-          kramdown:
-            input: GFM
-          plugins: []
-          exclude:
-            - README.md
+          printf '%s\n' \
+            'theme: jekyll-theme-cayman' \
+            'title: Biodiversity Data Quality (BDQ)' \
+            'description: Draft and working materials for the TDWG Biodiversity Data Quality standard' \
+            'markdown: kramdown' \
+            'kramdown:' \
+            '  input: GFM' \
+            'plugins: []' \
+            'exclude:' \
+            '  - README.md' \
+            'defaults:' \
+            '  - scope:' \
+            '      path: ""' \
+            '      type: "pages"' \
+            '    values:' \
+            '      layout: default' \
+            '  - scope:' \
+            '      path: "draft"' \
+            '      type: "pages"' \
+            '    values:' \
+            '      layout: docs' \
+            '      review_status: under-review' \
+            '      show_toc: true' \
+            '      section: draft' \
+            '  - scope:' \
+            '      path: "tg1"' \
+            '      type: "pages"' \
+            '    values:' \
+            '      layout: docs' \
+            '      show_toc: true' \
+            '      section: tg1' \
+            '  - scope:' \
+            '      path: "tg2"' \
+            '      type: "pages"' \
+            '    values:' \
+            '      layout: docs' \
+            '      show_toc: true' \
+            '      section: tg2' \
+            '  - scope:' \
+            '      path: "tg3"' \
+            '      type: "pages"' \
+            '    values:' \
+            '      layout: docs' \
+            '      show_toc: true' \
+            '      section: tg3' \
+            '  - scope:' \
+            '      path: "tg4"' \
+            '      type: "pages"' \
+            '    values:' \
+            '      layout: docs' \
+            '      show_toc: true' \
+            '      section: tg4' \
+            > site/_config.yml
 
-          defaults:
-            - scope:
-                path: ""
-                type: "pages"
-              values:
-                layout: default
-
-            - scope:
-                path: "draft"
-                type: "pages"
-              values:
-                layout: docs
-                review_status: under-review
-                show_toc: true
-                section: draft
-
-            - scope:
-                path: "tg1"
-                type: "pages"
-              values:
-                layout: docs
-                show_toc: true
-                section: tg1
-
-            - scope:
-                path: "tg2"
-                type: "pages"
-              values:
-                layout: docs
-                show_toc: true
-                section: tg2
-
-            - scope:
-                path: "tg3"
-                type: "pages"
-              values:
-                layout: docs
-                show_toc: true
-                section: tg3
-
-            - scope:
-                path: "tg4"
-                type: "pages"
-              values:
-                layout: docs
-                show_toc: true
-                section: tg4
-          EOF
-
-          # Custom docs layout: banner + optional description only, no duplicate title
           cat > site/_layouts/docs.html <<'EOF'
           ---
           layout: default
           ---
           <header class="doc-header">
             {% include review_banner.html %}
-
             {% if page.description %}
             <p class="page-description">{{ page.description }}</p>
             {% endif %}
@@ -184,7 +175,6 @@ jobs:
           </div>
           EOF
 
-          # Under Review banner for draft pages
           cat > site/_includes/review_banner.html <<'EOF'
           {% if page.review_status == "under-review" %}
           <div class="review-banner" role="note" aria-label="Under review">
@@ -193,7 +183,6 @@ jobs:
           {% endif %}
           EOF
 
-          # TOC include populated client-side from rendered headings
           cat > site/_includes/toc.html <<'EOF'
           <nav class="page-toc" aria-label="On this page">
             <h2>On this page</h2>
@@ -213,11 +202,9 @@ jobs:
             headings.forEach(function(h) {
               var li = document.createElement("li");
               if (h.tagName.toLowerCase() === "h3") li.className = "toc-h3";
-
               var a = document.createElement("a");
               a.href = "#" + h.id;
               a.textContent = h.textContent;
-
               li.appendChild(a);
               toc.appendChild(li);
             });
@@ -229,7 +216,6 @@ jobs:
           </script>
           EOF
 
-          # Stylesheet extending Cayman
           cat > site/assets/css/style.scss <<'EOF'
           ---
           ---
@@ -334,8 +320,6 @@ jobs:
 
           def rewrite_target(url: str) -> str:
               parts = urlsplit(url)
-
-              # leave external URLs and special schemes untouched
               if parts.scheme or parts.netloc:
                   return url
               if not parts.path:
@@ -362,15 +346,12 @@ jobs:
               def repl(match):
                   prefix, target, suffix = match.groups()
                   target = target.strip()
-
                   if target.startswith("<") and target.endswith(">"):
                       inner = target[1:-1].strip()
                       return f"{prefix}<{rewrite_target(inner)}>{suffix}"
-
                   return f"{prefix}{rewrite_target(target)}{suffix}"
 
-              updated = pattern.sub(repl, text)
-              md_path.write_text(updated, encoding="utf-8")
+              md_path.write_text(pattern.sub(repl, text), encoding="utf-8")
           PY
 
       - name: Build site with Jekyll
@@ -379,11 +360,13 @@ jobs:
           set -euo pipefail
           jekyll build --source site --destination site/_site
 
-      - name: Show built site tree
+      - name: Verify built output
         shell: bash
         run: |
           set -euo pipefail
-          find site/_site -maxdepth 6 | sort
+          test -f site/_site/index.html
+          test -f site/_site/CNAME
+          find site/_site -maxdepth 4 | sort
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
