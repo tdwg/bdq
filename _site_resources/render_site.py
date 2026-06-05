@@ -137,46 +137,40 @@ def rewrite_target(url: str) -> str:
     return urlunsplit(("", "", new_path, parts.query, parts.fragment))
 
 
-# This function parses the inside of a markdown inline link destination and separates the destination from an optional title.
-# It handles:
+# This function parses the inside of a markdown inline link destination/title block and separates
+# the destination from an optional title. It handles:
 #   dest
 #   <dest>
 #   dest "title"
 #   <dest> "title"
 #   dest 'title'
-# It intentionally favors simple, forgiving parsing over strict CommonMark completeness so existing BDQ content is preserved.
+#   dest (title)
+# It is scanner-based so titles containing markdown links, brackets, or parentheses do not get
+# folded into the destination.
 def parse_markdown_link_target(raw_target: str) -> tuple[str, str | None]:
     s = raw_target.strip()
     if not s:
         return s, None
 
+    # Angle-bracketed destination: consume only through the first matching '>'
     if s.startswith("<"):
-        close = s.find(">")
-        if close != -1:
-            dest = s[: close + 1]
-            rest = s[close + 1 :].strip()
-            return dest, rest or None
+        i = 1
+        while i < len(s):
+            if s[i] == ">" and s[i - 1] != "\\":
+                dest = s[: i + 1]
+                rest = s[i + 1 :].strip()
+                return dest, rest or None
+            i += 1
         return s, None
 
-    # Walk from the end looking for a plausible quoted title.
-    if len(s) >= 2 and s[-1] in {'"', "'"}:
-        quote = s[-1]
-        i = len(s) - 2
-        while i >= 0:
-            if s[i] == quote and (i == 0 or s[i - 1] != "\\"):
-                maybe_dest = s[:i].rstrip()
-                maybe_title = s[i:].strip()
-                if maybe_dest:
-                    return maybe_dest, maybe_title
-            i -= 1
+    # Bare destination: consume until first whitespace.
+    i = 0
+    while i < len(s) and not s[i].isspace():
+        i += 1
 
-    m = re.match(r'^(\S+)(?:\s+(.+))?$', s)
-    if not m:
-        return s, None
-
-    dest = m.group(1)
-    title = m.group(2).strip() if m.group(2) else None
-    return dest, title
+    dest = s[:i]
+    rest = s[i:].strip()
+    return dest, rest or None
 
 
 # This function rebuilds a markdown link target from a rewritten destination and an optional title,
