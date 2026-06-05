@@ -1308,7 +1308,7 @@ Below is an example, adapted from MCZbase (Kennedy et al. 2024), of a portion of
 
 This example shows the results of the Test Suite (the full set of BDQ Taxon Name-related Tests) that was run, with the Description (`rdfs:comment`) to identify the action taken by the Test to the collection management staff reading the report. The results (`Response.status` or `Response.result`) for the pre-amendment phase are given along with the `Response.comment` explaining why the Test returned the given results. The post-amendment phase `Responses` show what the results would be if all proposed `Amendments`, listed below the table, had been accepted. `Amendments` are not applied automatically. Users must explicitly change the data if they want to accept the proposals from the `Amendments`. A subset of the real results are shown here, so the percentages of COMPLIANT results does not agree with the subset of results in the table.
 
-**[QC](<../../../index.md#glossary_QC> "[bdqffdq:QualityControl](../_review/docs/list/bdqffdq/index.md#qualitycontrol). The process of identifying data that are not fit for particular uses, with the goal of improving the data quality. The tests may propose ch…") Taxon Name for MCZ:Herp:R-1440**
+**[QC](<../../../index.md#glossary_QC> "[bdqffdq:QualityControl](./docs/list/bdqffdq/index.md#qualitycontrol). The process of identifying data that are not fit for particular uses, with the goal of improving the data quality. The tests may propose changes to…") Taxon Name for MCZ:Herp:R-1440**
 
 Results of the Biodiversity Data Quality (BDQ) Taxon Name-related Tests.
 

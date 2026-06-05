@@ -396,6 +396,8 @@ def main() -> None:
     # pymdownx.tilde is used to support strikethrough with ~~text~~ syntax.
     # sane_lists is included to make list parsing more consistent, but we 
     #   also apply custom normalization to handle edge cases with GitHub's markdown rendering.
+    # pymdownx.magiclink is used to automatically link URLs and email addresses, but we disable 
+    #   some of the shortening features to preserve the full text in the rendered HTML.
     md = markdown.Markdown(
         extensions=[
             "extra",
@@ -403,7 +405,9 @@ def main() -> None:
             "fenced_code",
             "sane_lists",
             "codehilite",
+            "md_in_html",
             "pymdownx.tilde",
+            "pymdownx.magiclink",
         ],
         extension_configs={
             "codehilite": {
@@ -414,6 +418,11 @@ def main() -> None:
             },
             "pymdownx.tilde": {
                 "subscript": False,
+            },
+            "pymdownx.magiclink": {
+                "repo_url_shortener": False,
+                "repo_url_shorthand": False,
+                "social_url_shortener": False,
             },
         },
     )
