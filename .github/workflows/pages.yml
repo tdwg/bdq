@@ -97,6 +97,7 @@ jobs:
           cp _site_resources/assets/site.css site/assets/css/site.css
           cp _site_resources/assets/toc.js site/assets/js/toc.js
           cp _site_resources/assets/tdwg-logo-short.svg site/assets/img/tdwg-logo-short.svg
+          cp _site_resources/assets/TDWG-Logo_horizontal-white.svg site/assets/img/TDWG-Logo_horizontal-white.svg
 
       - name: Render static site
         shell: bash
