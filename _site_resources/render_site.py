@@ -308,6 +308,7 @@ def main() -> None:
             header_title=str(ctx["site_header_title"]),
             header_tagline=str(ctx["site_header_tagline"]),
             header_link=str(ctx["site_header_link"]),
+            sidebar_context_html=str(ctx["sidebar_context_html"]),
         )
 
         out_path.parent.mkdir(parents=True, exist_ok=True)
