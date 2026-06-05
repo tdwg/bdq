@@ -225,7 +225,7 @@ In any technical treatment of the BDQ standard, a precise reference to a class o
 
 ### 2.1 Independence (normative)
 
-[Test](<../../../index.md#glossary_Test> "A composition of a 'bdqffdq:DataQualityNeed' with a 'bdqffdq:DataQualityMethod' that links it to an instance of a 'bdqffdq:Specification', these instances being composed of 'InformationElements', 'Arguments', and 'Param…") implementations SHOULD be independent of how data are stored and transported, data serializations, and the framework or environment in which the Tests are being executed. 
+[Test](<../../../index.md#glossary_Test> "A composition of a bdqffdq:DataQualityNeed with a bdqffdq:DataQualityMethod that links it to an instance of a bdqffdq:Specification, these instances being composed of InformationElements, Arguments, and Parameters.") implementations SHOULD be independent of how data are stored and transported, data serializations, and the framework or environment in which the Tests are being executed. 
 
 ### 2.2 The Concept of "Empty" in the BDQ Standard (normative)
 
@@ -268,7 +268,7 @@ The evaluation of `bdqval:Empty` MUST be at the point of evaluation of the Test.
 
 In the BDQ standard, `bdqval:Empty` is used to evaluate `bdqffdq:InformationElements` within a Test specification, it therefore means empty if the dataset being evaluated does not contain the term matching the `Information Element`, or if the dataset contains that term but the value for that term is empty. This is to allow the application programming interface expressed by the Test [bdqffdq:DataQualityNeed](<../../list/bdqffdq/index.md#DataQualityNeed> "A bdqffdq:NeedConcept that expresses what bdqffdq:Responses may be made about data with respect to fitness for use.") to be agnostic about the structure presented to a framework for executing the Tests. 
 
-For CSV data, a column is either there or not in a dataset, but in an [RDF](<../../../index.md#glossary_RDF> "Resource Description Framework - a W3C standard for modeling, interchanging, and linking structured data on the web. Hosts the namespace [rdf:](http://www.w3.org/1999/02/22-rdf-syntax-ns#)") representation, some data objects could have relevant properties and others not - and the Tests are independent of that.
+For CSV data, a column is either there or not in a dataset, but in an [RDF](<../../../index.md#glossary_RDF> "Resource Description Framework - a W3C standard for modeling, interchanging, and linking structured data on the web. Hosts the namespace rdf:") representation, some data objects could have relevant properties and others not - and the Tests are independent of that.
 
 #### 2.2.2 Example Implementation of a Function to Assess Empty (non-normative)
 
@@ -307,7 +307,7 @@ The Tests defined in BDQ are described in the [BDQ Tests Quick Reference Guide](
 The descriptions of the Tests are complex. The following (abstracted from [the Key to bdqtest: vocabulary terms](../../list/bdqtest/index.md#18-key-to-vocabulary-terms-normative) and the `bdqffdq:` [ontology](../../list/bdqffdq/index.md)) are the most important terms to understand for implementation:
 
 - Term Name (`rdf:value`) - a UUID that identifies the Test (e.g., 3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e).
-- Term [IRI](<../../../index.md#glossary_IRI> "Internationalized Resource Identifier is an internet protocol standard which builds on the Uniform Resource Identifier (URI) protocol by greatly expanding the set of permitted characters.") (`dcterms:isVersionOf`) - the machine readable identifier for the Test, in the form of an IRI terminating in the Term Name UUID (https://rs.tdwg.org/bdqtest/terms/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e).
+- Term [IRI](<../../../index.md#glossary_IRI> "Internationalized Resource Identifier is an internet protocol standard which builds on the Uniform Resource Identifier URI protocol by greatly expanding the set of permitted characters.") (`dcterms:isVersionOf`) - the machine readable identifier for the Test, in the form of an IRI terminating in the Term Name UUID (https://rs.tdwg.org/bdqtest/terms/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e).
 - Versioned IRI - the machine readable identifier for a specific version of the Test, in the form of an IRI terminating in the Term Name UUID and a date (https://rs.tdwg.org/bdqtest/terms/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e-2025-03-07)  Term IRI and Versioned IRI follow the guidance of the [TDWG Metadata Standards](https://tdwg.github.io/rs.tdwg.org/README-2020-02-03.html#4th-level-terms) document for IRIs for Terms.
 - Label (`rdfs:label`) - a human readable identifier for the Test (e.g., VALIDATION_COUNTRYCODE_STANDARD).
 - ExpectedResponse ([bdqffdq:hasExpectedResponse](../../list/bdqffdq/index.md#hasexpectedresponse)) - the description of the expected behavior of a Test implementation.
@@ -356,7 +356,7 @@ We regularly (particularly in examples) use `Response`, `Response.status`, `Resp
 
 A [bdqffdq:hasExpectedResponse](<../../list/bdqffdq/index.md#hasExpectedResponse> "Text describing the logic to be followed by a bdqffdq:Implementation of a bdqffdq:Specification specifying the values of bdqffdq:ResponseStatus and bdqffdq:ResponseResults that should be produced from the evaluation of…") property of a [bdqffdq:Specification](<../../list/bdqffdq/index.md#Specification> "A specific statement about how to evaluate a bdqffdq:DataQualityNeed.") provides expectations for the behavior of an implementation of a Test. A `bdqffdq:hasExpectedResponse` consists of a sequence of blocks of "RESPONSE, criteria;".  The "criteria" are a sequence of options for that "RESPONSE". When reading a specification (`hasExpectedResponse`), implementers SHOULD read each block in sequence, evaluating each of the "criteria" in sequence, and return the first response for which the specified "criteria" are met. An exception to this is the placement of EXTERNAL_PREREQUISITES_NOT_MET as the first "RESPONSE" in the specification. This does not imply that the responsiveness of an external resource should be assessed first. Implementers MAY handle failure of an external resource in any appropriate manner, for example, with exception handling.
 
-Some `Amendment` Tests can propose values for a single [Darwin Core Term](https://dwc.tdwg.org/list/) ([Darwin Core](<../../../index.md#glossary_Darwin_Core> "[Darwin Core](https://dwc.tdwg.org/). A Standard intended to facilitate the sharing of information about biological diversity. Host of the dwc:namespace [dwc:](http://rs.tdwg.org/dwc/terms/)") Maintenance Group 2021). A few `Amendment` Tests can propose values for multiple [Darwin Core Terms](https://dwc.tdwg.org/list/). 
+Some `Amendment` Tests can propose values for a single [Darwin Core Term](https://dwc.tdwg.org/list/) ([Darwin Core](<../../../index.md#glossary_Darwin_Core> "Darwin Core. A Standard intended to facilitate the sharing of information about biological diversity. Host of the dwc:namespace dwc:") Maintenance Group 2021). A few `Amendment` Tests can propose values for multiple [Darwin Core Terms](https://dwc.tdwg.org/list/). 
 
 ##### 2.3.2.3 Further Guidance for Reading a Specification (non-normative)
 
@@ -401,7 +401,7 @@ For example, the `bdqffdq:hasExpectedResponse` for the `Specification` for [VALI
 EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode is bdqval:Empty; COMPLIANT if dwc:countryCode can be unambiguously interpreted as a valid ISO 3166-1-alpha-2 country code in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT
 ```
 
-To understand the meaning of [bdqval:sourceAuthority](<../../list/bdqval/index.md#bdqval_sourceAuthority> "An authority using the 'bdqval' namespace that provides a reference for values required for a Test evaluation. Where the Test is a bdqval:ParameterizedTest a bdqval:defaultSourceAuthority ('bdqval:sourceAuthority defaul…") in the expected response, see the [bdqffdq:hasAuthoritiesDefaults](<../../list/bdqffdq/index.md#hasAuthoritiesDefaults> "Text describing bdqval:sourceAuthorities and bdqffdq:Parameters with their default values to attach to a bdqffdq:Specification to further specify the behavior described in the bdqffdq:hasExpectedResponse.") for the `Specification`:
+To understand the meaning of [bdqval:sourceAuthority](<../../list/bdqval/index.md#bdqval_sourceAuthority> "An authority using the 'bdqval' namespace that provides a reference for values required for a Test evaluation. Where the Test is a bdqval:ParameterizedTest a bdqval:defaultSourceAuthority 'bdqval:sourceAuthority default…") in the expected response, see the [bdqffdq:hasAuthoritiesDefaults](<../../list/bdqffdq/index.md#hasAuthoritiesDefaults> "Text describing bdqval:sourceAuthorities and bdqffdq:Parameters with their default values to attach to a bdqffdq:Specification to further specify the behavior described in the bdqffdq:hasExpectedResponse.") for the `Specification`:
 
 ```
 bdqval:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}
@@ -409,7 +409,7 @@ bdqval:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/
 
 The `Specification` is thus intended to be read as: 
 
-1. Return EXTERNAL_PREREQUISITES_NOT_MET if the [ISO](<../../../index.md#glossary_ISO> "[International Organization for Standardization.](https://www.iso.org/home.html)") Country codes list (https://www.iso.org/iso-3166-country-codes.html, searchable at https://www.iso.org/obp/ui/#search) is not available; 
+1. Return EXTERNAL_PREREQUISITES_NOT_MET if the [ISO](<../../../index.md#glossary_ISO> "International Organization for Standardization.") Country codes list (https://www.iso.org/iso-3166-country-codes.html, searchable at https://www.iso.org/obp/ui/#search) is not available; 
 2. else Return INTERNAL_PREREQUISITES_NOT_MET if the `dwc:countryCode` is `bdqval:Empty`; 
 3. else Return COMPLIANT if `dwc:countryCode` can be unambiguously interpreted as a valid ISO 3166-1-alpha-2 country code in the ISO Country Codes list; 
 4. otherwise NOT_COMPLIANT
@@ -507,7 +507,7 @@ When interpretations of strings containing [Roman numerals](<../../../index.md#g
 
 Whitespace refers to characters such as spaces and tabs that affect rendering of printed or displayed output, but which themselves are not printed (see the [Glossary](../../../index.md#6-glossary-non-normative)). 
 
-A field that only includes [whitespace](<../../../index.md#glossary_whitespace> "Characters such as spaces and tabs that affect rendering of printed or displayed output, but which themselves are not printed. 1) A field that only includes whitespace is treated as 'bdqval:Empty'. 2) In 'bdqffdq:Valida…") MUST be treated as `bdqval:Empty`.
+A field that only includes [whitespace](<../../../index.md#glossary_whitespace> "Characters such as spaces and tabs that affect rendering of printed or displayed output, but which themselves are not printed. 1 A field that only includes whitespace is treated as bdqval:Empty. 2 In bdqffdq:Validation,…") MUST be treated as `bdqval:Empty`.
 
 In [bdqffdq:Validation](<../../list/bdqffdq/index.md#Validation> "A bdqffdq:DataQualityNeed that expresses how data may be evaluated for fitness for use.") Tests that require the lookup of a `bdqval:sourceAuthority`, leading and/or trailing whitespace may cause the Test to return a NOT_COMPLIANT result as no preprocessing is performed on the data, and the literal value, with leading or trailing whitespace is not exactly matched in the `sourceAuthority`. This behavior MAY be subject to the internals and behavior of external source authorities, and may not be under the control of Test implementers. Leading and trailing whitespaces SHOULD be stripped out in a subsequent [bdqffdq:Amendment](<../../list/bdqffdq/index.md#Amendment> "A bdqffdq:DataQualityNeed that expresses how proposals may be made to improve the fitness for use of data.") Tests. When the same `bdqffdq:Validation` Test is re-run in a post-amendment phase with the proposed changes applied to its inputs, COMPLIANT results would be expected (if the value matches a value in the `sourceAuthority`).
 
@@ -808,7 +808,7 @@ In Java, annotating method parameters and using reflection to bind between the e
 
 An execution framework can use reflection to determine, from the annotations on the parameter, which Darwin Core term to bind to which parameter.
 
-Additional metadata can be added in Java annotations. In the following, again from the FilteredPush `event_date_qc` (Morris & Lowery 2025) library, annotations enable an implementation framework to look up a Test implementation by the Test [GUID](<../../../index.md#glossary_GUID> "Globally Unique Identifier. In this document, the GUID for a Test is a UUID (128-bit universally unique identifier) which identifies the Test."), and can provide metadata about the Test to users. For maintenance, annotations can be used to determine if an implementation is up to date with the latest version of a Test specification.
+Additional metadata can be added in Java annotations. In the following, again from the FilteredPush `event_date_qc` (Morris & Lowery 2025) library, annotations enable an implementation framework to look up a Test implementation by the Test [GUID](<../../../index.md#glossary_GUID> "Globally Unique Identifier. In this document, the GUID for a Test is a UUID 128-bit universally unique identifier which identifies the Test."), and can provide metadata about the Test to users. For maintenance, annotations can be used to determine if an implementation is up to date with the latest version of a Test specification.
 
 ```java
     @Validation(label="_ENDDAYOFYEAR_INRANGE", description="Is the value of dwc:endDayOfYear an integer between 1 and 365 inclusive, or 366 if a leap year?")
@@ -1308,7 +1308,7 @@ Below is an example, adapted from MCZbase (Kennedy et al. 2024), of a portion of
 
 This example shows the results of the Test Suite (the full set of BDQ Taxon Name-related Tests) that was run, with the Description (`rdfs:comment`) to identify the action taken by the Test to the collection management staff reading the report. The results (`Response.status` or `Response.result`) for the pre-amendment phase are given along with the `Response.comment` explaining why the Test returned the given results. The post-amendment phase `Responses` show what the results would be if all proposed `Amendments`, listed below the table, had been accepted. `Amendments` are not applied automatically. Users must explicitly change the data if they want to accept the proposals from the `Amendments`. A subset of the real results are shown here, so the percentages of COMPLIANT results does not agree with the subset of results in the table.
 
-**[QC](<../../../index.md#glossary_QC> "[bdqffdq:QualityControl](./docs/list/bdqffdq/index.md#qualitycontrol). The process of identifying data that are not fit for particular uses, with the goal of improving the data quality. The tests may propose changes to…") Taxon Name for MCZ:Herp:R-1440**
+**[QC](<../../../index.md#glossary_QC> "bdqffdq:QualityControl. The process of identifying data that are not fit for particular uses, with the goal of improving the data quality. The tests may propose changes to improve the quality of the data. See also User'…") Taxon Name for MCZ:Herp:R-1440**
 
 Results of the Biodiversity Data Quality (BDQ) Taxon Name-related Tests.
 
@@ -1342,7 +1342,7 @@ Results of the Biodiversity Data Quality (BDQ) Taxon Name-related Tests.
 
 ### 7.2 Annotations (normative)
 
-The `bdqffdq:` [OWL](<../../../index.md#glossary_OWL> "[Web Ontology Language](https://www.w3.org/OWL/). A Semantic Web language designed to represent rich and complex knowledge about things. Hosts the namespace [owl:](http://www.w3.org/2002/07/owl#)") representation of the [Fitness For Use Framework Ontology](../../guide/bdqffdq/index.md) and the framing of the [BDQ Tests as RDF](../../../dist/bdqtest.ttl) using that ontology make Test results particularly amenable to being wrapped in `Annotations` following the [W3C Web Annotation Data Model](https://www.w3.org/TR/annotation-model/) (Sanderson et al. 2017). Test responses MAY be represented as `Annotations`.
+The `bdqffdq:` [OWL](<../../../index.md#glossary_OWL> "Web Ontology Language. A Semantic Web language designed to represent rich and complex knowledge about things. Hosts the namespace owl:") representation of the [Fitness For Use Framework Ontology](../../guide/bdqffdq/index.md) and the framing of the [BDQ Tests as RDF](../../../dist/bdqtest.ttl) using that ontology make Test results particularly amenable to being wrapped in `Annotations` following the [W3C Web Annotation Data Model](https://www.w3.org/TR/annotation-model/) (Sanderson et al. 2017). Test responses MAY be represented as `Annotations`.
 
 The responses from Tests could be structured as elements that can be wrapped in the body `Annotation` document along with metadata from the Framework to describe which Test is being reported upon, and metadata within the target of the `Annotation` to describe which `DataResource` is being annotated, and the state it was in at the time of annotation.
 
@@ -1511,7 +1511,7 @@ The `Response` when executed against a row as input is expected to contain "Resp
 
 Parameter values are specified in a `bdqval:sourceAuthority` column, when more than one `sourceAuthority` is involved, then these are given separate names.
 
-[Dublin Core](<../../../index.md#glossary_Dublin_Core> "[International Metadata Standard ([DCMI](<../../../index.md#glossary_DCMI> "[DCMI Metadata Terms](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/). (Dublin Core). Hosts dc:Namespace [dc:](https://purl.org/dc/elements/1.1/)")).](https://www.dublincore.org/)") and Darwin Core term input columns are specified with the appropriate namespace abbreviation prepended (e.g., `dc:type`, `dcterms:license`, `dwc:acceptedNameUsageID`).
+[Dublin Core](<../../../index.md#glossary_Dublin_Core> "International Metadata Standard [DCMI](<../../../index.md#glossary_DCMI> "DCMI Metadata Terms. Dublin Core. Hosts dc:Namespace dc:").") and Darwin Core term input columns are specified with the appropriate namespace abbreviation prepended (e.g., `dc:type`, `dcterms:license`, `dwc:acceptedNameUsageID`).
 
 ### 8.5 Implementation and the Conformance Testing Data (normative)
 
@@ -1585,7 +1585,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-[TDWG](<../../../index.md#glossary_TDWG> "[Biodiversity Information Standards](https://www.tdwg.org/standards/sds/)") Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Implementer's Guide. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdq/doc/implementers2026-06-03>
+[TDWG](<../../../index.md#glossary_TDWG> "Biodiversity Information Standards") Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Implementer's Guide. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdq/doc/implementers2026-06-03>
 
 **Biodiversity Information Standards (TDWG)**
 

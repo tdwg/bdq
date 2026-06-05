@@ -176,9 +176,9 @@ The following namespace abbreviations are used in this document:
 
 ## 2 Overview (non-normative)
 
-This tutorial works through the development of a `Use Case`, then walks through two examples of the development of Tests.  One of the examples of a [Test](<../../index.md#glossary_Test> "A composition of a 'bdqffdq:DataQualityNeed' with a 'bdqffdq:DataQualityMethod' that links it to an instance of a 'bdqffdq:Specification', these instances being composed of 'InformationElements', 'Arguments', and 'Param…") is simple, the other is more complex.  This tutorial then comes back to the `Use Case` and describes how Measure Tests can be developed to evaluate the results of the Validation Tests for the purpose of `Quality Control`.  
+This tutorial works through the development of a `Use Case`, then walks through two examples of the development of Tests.  One of the examples of a [Test](<../../index.md#glossary_Test> "A composition of a bdqffdq:DataQualityNeed with a bdqffdq:DataQualityMethod that links it to an instance of a bdqffdq:Specification, these instances being composed of InformationElements, Arguments, and Parameters.") is simple, the other is more complex.  This tutorial then comes back to the `Use Case` and describes how Measure Tests can be developed to evaluate the results of the Validation Tests for the purpose of `Quality Control`.  
 
-The simpler of the two Tests examined is VALIDATION_FOOTPRINTWKT_NOTEMPTY, which was considered a "[Supplementary](<../../index.md#glossary_Supplementary> "Tests regarded as not [CORE](<../../index.md#glossary_CORE> "Tests that are useful for evaluating biodiversity data quality as represented by the values of 'Darwin Core' terms. CORE tests address identified user needs, are widely applicable, informative, unambiguous, well defined…") because of one or more reasons: Not widely applicable; not clearly matched to an identified data quality need; not informative concerning the 'quality' or lack of quality of the data; likely t…")" Test (see: [Developing the Tests](../supplement/index.md#3-developing-the-tests-non-normative))) rather than a BDQ "Core" Test as we considered it of marginal use for the BDQ `Use Cases`.  As described in the [BDQ Supplemental Information](../supplement/index.md), the Test could be useful in certain `Use Cases`, as noted below.
+The simpler of the two Tests examined is VALIDATION_FOOTPRINTWKT_NOTEMPTY, which was considered a "[Supplementary](<../../index.md#glossary_Supplementary> "Tests regarded as not [CORE](<../../index.md#glossary_CORE> "Tests that are useful for evaluating biodiversity data quality as represented by the values of Darwin Core terms. CORE tests address identified user needs, are widely applicable, informative, unambiguous, well defined,…") because of one or more reasons: Not widely applicable; not clearly matched to an identified data quality need; not informative concerning the 'quality' or lack of quality of the data; likely t…")" Test (see: [Developing the Tests](../supplement/index.md#3-developing-the-tests-non-normative))) rather than a BDQ "Core" Test as we considered it of marginal use for the BDQ `Use Cases`.  As described in the [BDQ Supplemental Information](../supplement/index.md), the Test could be useful in certain `Use Cases`, as noted below.
 
 **Note** that a proposed **BDQ Maintenance Group** will be established to maintain the BDQ Standard. This group will take responsibility for advising on processes for editing the BDQ standard and evaluating new BDQ Tests, `Use Cases` and other components of the BDQ Standard.
 
@@ -192,7 +192,7 @@ See also:
 
 1. **Atomic Tests**: Make each Test evaluate one single simple aspect of data quality.
 1. **Start Simple**: Begin defining basic `Validation` Tests before considering more complex Tests and `Amendments`.
-1. **Consider Edge Cases**: Define Tests for empty values, nulls, [whitespace](<../../index.md#glossary_whitespace> "Characters such as spaces and tabs that affect rendering of printed or displayed output, but which themselves are not printed. 1) A field that only includes whitespace is treated as 'bdqval:Empty'. 2) In 'bdqffdq:Valida…"), and out of range values.
+1. **Consider Edge Cases**: Define Tests for empty values, nulls, [whitespace](<../../index.md#glossary_whitespace> "Characters such as spaces and tabs that affect rendering of printed or displayed output, but which themselves are not printed. 1 A field that only includes whitespace is treated as bdqval:Empty. 2 In bdqffdq:Validation,…"), and out of range values.
 1. **Use Established Authorities**: Reference widely accepted standards when possible.
 1. **Generalize Appropriately**: Consider how different parts of the community might want to use a Test in slightly different ways.
 1. **Document Assumptions**: Be explicit about why particular choices were made in the development of a Test including choices of default values.
@@ -224,7 +224,7 @@ Now we can define our `Use Case`.  We need to specify three elements, a name for
 * **Name** Validated Distribution Authority
 * **Description** Validating that Taxon oriented data can provide an authoritative resource for mapping known distributions of taxa, for identifying occurrence records in other datasets that have coordinates within the known ranges of taxa, are outliers, or for similar purposes.
 * **hasFitnessRequirements** Data are fit for the `Use Case` "Validated Distribution Authority" and can provide a resource for validating that occurrence records are in range if they are taxon-oriented data with fields that identify the taxon, that provide expert validated distributions as geospatial data, and provide metadata about the sources of the distributions.  To be fit for this purpose each record in the dataset must have the following properties:
-  * A taxonomic name is present and can be found in [GBIF](<../../index.md#glossary_GBIF> "[Global Biodiversity Information Facility](https://www.gbif.org/) is an international network and data infrastructure funded by the world’s governments and aimed at providing anyone, anywhere, open access to data about…")'s backbone taxonomy.
+  * A taxonomic name is present and can be found in [GBIF](<../../index.md#glossary_GBIF> "Global Biodiversity Information Facility is an international network and data infrastructure funded by the world’s governments and aimed at providing anyone, anywhere, open access to data about all types of life on Eart…")'s backbone taxonomy.
   * A well-formed machine-readable taxonomic name identifier for that taxon is present.
   * A polygon providing the spatial footprint of the expert distribution for that taxon is present and valid.
   * Metadata providing the source for each taxon distribution is present.
@@ -241,7 +241,7 @@ See also:
 
 ### 3.2 Identify the Information Elements (non-normative)
 
-**Purpose:** Determine which fields (mapped to vocabulary terms such as [Darwin Core](<../../index.md#glossary_Darwin_Core> "[Darwin Core](https://dwc.tdwg.org/). A Standard intended to facilitate the sharing of information about biological diversity. Host of the dwc:namespace [dwc:](http://rs.tdwg.org/dwc/terms/)") terms) are in the data and are relevant to your use case.
+**Purpose:** Determine which fields (mapped to vocabulary terms such as [Darwin Core](<../../index.md#glossary_Darwin_Core> "Darwin Core. A Standard intended to facilitate the sharing of information about biological diversity. Host of the dwc:namespace dwc:") terms) are in the data and are relevant to your use case.
 
 In the Fitness For Use Framework, input fields or terms for a Test are generalized as `Information Elements`.  
 
@@ -453,7 +453,7 @@ This gives us the following additional properties for the Test:
 * **Term Name** c6b705fc-7cf8-4af1-88ab-7a38d85f7109 
 * **Modified** 2024-01-29
 
-(Once accepted into BDQ, these properties would be combined to form the fully qualified Term [IRI](<../../index.md#glossary_IRI> "Internationalized Resource Identifier is an internet protocol standard which builds on the Uniform Resource Identifier (URI) protocol by greatly expanding the set of permitted characters.") for the Test (e.g. https://rs.tdwg.org/ bdqtest/terms/version/07c28ace-561a-476e-a9b9-3d5ad6e35933) and the Term Version IRI for a particular version of the Test (e.g. https://rs.tdwg.org/ bdqtest/terms/version/07c28ace-561a-476e-a9b9-3d5ad6e35933-2024-07-24))
+(Once accepted into BDQ, these properties would be combined to form the fully qualified Term [IRI](<../../index.md#glossary_IRI> "Internationalized Resource Identifier is an internet protocol standard which builds on the Uniform Resource Identifier URI protocol by greatly expanding the set of permitted characters.") for the Test (e.g. https://rs.tdwg.org/ bdqtest/terms/version/07c28ace-561a-476e-a9b9-3d5ad6e35933) and the Term Version IRI for a particular version of the Test (e.g. https://rs.tdwg.org/ bdqtest/terms/version/07c28ace-561a-476e-a9b9-3d5ad6e35933-2024-07-24))
 
 See also: [Key to bdqtest: Vocabulary Terms](../list/bdqtest/index.md#18-key-to-vocabulary-terms-normative) in the bdqtest: term-list document.
 
@@ -479,7 +479,7 @@ If some data are absent and other data are incorrectly formatted, a more complic
 BDQ `Validations` also have a `Criterion` property.  Each `Criterion` represents an abstract way of evaluating whether a data value meets expectations for a particular `Use Case`.  These criteria are formally defined in the [bdqcrit:](../list/bdqcrit/index.md) vocabulary.  For example, the Criterion `NotEmpty` is defined as "The data value is not empty (i.e., it contains some data)".  This is exactly the criterion we are applying in this Test, so we will use the `NotEmpty` criterion for this Test.  
 
 This gives us the following additional properties for the Test:
-* **Data Quality [Dimension](<../../index.md#glossary_Dimension> "See [bdqffdq:DataQualityDimension.](docs/list/bdqffdq/index.md#dataqualitydimension)")** Completeness
+* **Data Quality [Dimension](<../../index.md#glossary_Dimension> "See bdqffdq:DataQualityDimension.")** Completeness
 * **Criterion** NotEmpty
 
 All BDQ Test types have a `Data Quality Dimension` (taking values from the [bdqdim:](../list/bdqdim/index.md) vocabulary).  Only `Validations` and `Issues` have a `Criterion` (taking values from the [bdqcrit:](../list/bdqcrit/index.md) vocabulary), while `Amendments` have an `Enhancement` (taking values from the [bdqenh:](../list/bdqenh/index.md) vocabulary).  `Measures` have only the `Data Quality Dimension`.
@@ -592,7 +592,7 @@ For our Test, we have:
 * **Information Elements Acted Upon** dwc:footprintWKT
 * **Expected Response** COMPLIANT if dwc:footprintWKT is bdqval:NotEmpty; otherwise NOT_COMPLIANT
 
-To formally express this Test in [RDF](<../../index.md#glossary_RDF> "Resource Description Framework - a W3C standard for modeling, interchanging, and linking structured data on the web. Hosts the namespace [rdf:](http://www.w3.org/1999/02/22-rdf-syntax-ns#)") we would need to add some more identifiers and structures, but the above are the key properties that define the Test and provide the information needed for an implementer to understand and implement the Test.  See the [Fitness For Use Framework Ontology: Concepts and Use](../guide/bdqffdq/index.md) document for details about the full formal structure.
+To formally express this Test in [RDF](<../../index.md#glossary_RDF> "Resource Description Framework - a W3C standard for modeling, interchanging, and linking structured data on the web. Hosts the namespace rdf:") we would need to add some more identifiers and structures, but the above are the key properties that define the Test and provide the information needed for an implementer to understand and implement the Test.  See the [Fitness For Use Framework Ontology: Concepts and Use](../guide/bdqffdq/index.md) document for details about the full formal structure.
 
 See also: 
 * [Test Types](../guide/users/index.md#31-test-types-non-normative) in the User’s Guide.
@@ -738,7 +738,7 @@ BDQ details a convention for the structure and format of source authorities (in 
 * **Convention Two**: An authority with a URI providing information about the authority, and an API endpoint for checking values against the authority.
   * `“Fixed String Identifier” {\[URL\]}{API name\[URL of the API\]}`
 
-* Example: bdqval:sourceAuthority default = "[ISO](<../../index.md#glossary_ISO> "[International Organization for Standardization.](https://www.iso.org/home.html)") 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}
+* Example: bdqval:sourceAuthority default = "[ISO](<../../index.md#glossary_ISO> "International Organization for Standardization.") 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}
   * Fixed string Identifier: "ISO 3166 Country Codes" (the name of the authority)
   * URI: {[https://www.iso.org/iso-3166-country-codes.html]}
   * API: {ISO 3166-1-alpha-2 Country Code search \[https://www.iso.org/obp/ui/#search\]}
@@ -807,7 +807,7 @@ See also:
 
 #### 6.7.3  Revisiting the Test Specification (non-normative)
 
-Having asserted that a [bdqval:sourceAuthority](<../list/bdqval/index.md#bdqval_sourceAuthority> "An authority using the 'bdqval' namespace that provides a reference for values required for a Test evaluation. Where the Test is a bdqval:ParameterizedTest a bdqval:defaultSourceAuthority ('bdqval:sourceAuthority defaul…") is needed in the Test definition (and that the Test can take this as a parameter to allow for different implementations to use different authorities), we now need to revisit the `Description` and `Expected Response` to make sure that we have included this generalization.
+Having asserted that a [bdqval:sourceAuthority](<../list/bdqval/index.md#bdqval_sourceAuthority> "An authority using the 'bdqval' namespace that provides a reference for values required for a Test evaluation. Where the Test is a bdqval:ParameterizedTest a bdqval:defaultSourceAuthority 'bdqval:sourceAuthority default…") is needed in the Test definition (and that the Test can take this as a parameter to allow for different implementations to use different authorities), we now need to revisit the `Description` and `Expected Response` to make sure that we have included this generalization.
 
 * **Description** Does value in prov:wasAttributedTo conform to the format of the bdqval:sourceAuthority?
 * **Expected Response**  INTERNAL_PREREQUISITES_NOT_MET if prov:wasAttributedTo is bdqval:Empty; COMPLIANT if the value in prov:wasAttributedTo conforms to the expected format of bdqval:sourceAuthority; otherwise NOT_COMPLIANT.
@@ -1122,7 +1122,7 @@ A framework’s job is to act as the “adapter layer” that turns heterogeneou
 	* The FilteredPush implementations use Java Annotations for this purpose, but other frameworks are free to use different approaches.
 
 * Invoke the correct implementation
-  * Locate the right Implementation for a given Test (e.g., by Label, [GUID](<../../index.md#glossary_GUID> "Globally Unique Identifier. In this document, the GUID for a Test is a UUID (128-bit universally unique identifier) which identifies the Test.")/Term Name, or versioned IRI), then call it with the bound inputs.
+  * Locate the right Implementation for a given Test (e.g., by Label, [GUID](<../../index.md#glossary_GUID> "Globally Unique Identifier. In this document, the GUID for a Test is a UUID 128-bit universally unique identifier which identifies the Test.")/Term Name, or versioned IRI), then call it with the bound inputs.
 
 * Capture and normalize outputs into a `Response`
   * Ensure every execution yields exactly one structured `Response` with:
@@ -1485,7 +1485,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-[TDWG](<../../index.md#glossary_TDWG> "[Biodiversity Information Standards](https://www.tdwg.org/standards/sds/)") Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. Tutorial: Creating a New Test using the BDQ Standard. Biodiversity Information Standards (TDWG). <https://bdq.tdwg.org/to_be_determined2026-06-03>
+[TDWG](<../../index.md#glossary_TDWG> "Biodiversity Information Standards") Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. Tutorial: Creating a New Test using the BDQ Standard. Biodiversity Information Standards (TDWG). <https://bdq.tdwg.org/to_be_determined2026-06-03>
 
 **Biodiversity Information Standards (TDWG)**
 
