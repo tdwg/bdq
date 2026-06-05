@@ -390,6 +390,12 @@ def main() -> None:
     site = Path(args.site_root).resolve()
     template = load_template(Path(args.template).resolve())
 
+    # Configure the Markdown parser with the desired extensions and settings.
+    # extra and tables are used for GitHub-style markdown features like tables and definition lists.
+    # fenced_code and codehilite is used for syntax highlighting of fenced code blocks, with Pygments as the highlighter.
+    # pymdownx.tilde is used to support strikethrough with ~~text~~ syntax.
+    # sane_lists is included to make list parsing more consistent, but we 
+    #   also apply custom normalization to handle edge cases with GitHub's markdown rendering.
     md = markdown.Markdown(
         extensions=[
             "extra",
@@ -397,6 +403,7 @@ def main() -> None:
             "fenced_code",
             "sane_lists",
             "codehilite",
+            "pymdownx.tilde",
         ],
         extension_configs={
             "codehilite": {
@@ -404,7 +411,10 @@ def main() -> None:
                 "use_pygments": True,
                 "css_class": "highlight",
                 "noclasses": False,
-            }
+            },
+            "pymdownx.tilde": {
+                "subscript": False,
+            },
         },
     )
 
