@@ -34,7 +34,8 @@ EMOJI_MAP = {
     ":link:": "🔗",
 }
 
-
+# This function extracts the title for the page from the first level-1 heading in the markdown text, 
+# stripping out any markdown link syntax. If no such heading is found, it returns a default title.
 def first_heading_title(text: str) -> str:
     def strip_markdown_links(s: str) -> str:
         s = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", s)
@@ -47,7 +48,7 @@ def first_heading_title(text: str) -> str:
 
     return "Biodiversity Data Quality (BDQ)"
 
-
+# This function rewrites a URL target according to the specified rules, handling markdown links and special cases for certain filenames.
 def rewrite_target(url: str) -> str:
     parts = urlsplit(url)
     if parts.scheme or parts.netloc:
@@ -58,6 +59,7 @@ def rewrite_target(url: str) -> str:
     path = parts.path
 
     if path.endswith("bdqffdq.owl"):
+        # the OWL file is renamed to .ttl so that the content type is correctly recognized when delivered from the site.
         new_path = path[:-3] + "ttl"
     elif path.endswith("README.md"):
         new_path = path[:-9] + "index.html"
@@ -68,7 +70,8 @@ def rewrite_target(url: str) -> str:
 
     return urlunsplit(("", "", new_path, parts.query, parts.fragment))
 
-
+# This function rewrites markdown links in the text, converting .md links to .html and handling angle-bracketed links as well.
+# It does not cover [][] reference-style links, but those are not used in the BDQ content and can be added later if needed.
 def rewrite_markdown_links(text: str) -> str:
     def repl(match):
         prefix, target, suffix = match.groups()
@@ -80,7 +83,7 @@ def rewrite_markdown_links(text: str) -> str:
 
     return INLINE_LINK_RE.sub(repl, text)
 
-
+# Similar logic to rewrite_markdown_links, but for HTML attributes like href and src.
 def rewrite_html_links(text: str) -> str:
     def repl(match):
         prefix, target, suffix = match.groups()
@@ -88,13 +91,14 @@ def rewrite_html_links(text: str) -> str:
 
     return HTML_HREF_RE.sub(repl, text)
 
-
+# A simple function to replace emoji shortcodes with their corresponding Unicode characters.
 def replace_emoji_shortcodes(text: str) -> str:
     for shortcode, glyph in EMOJI_MAP.items():
         text = text.replace(shortcode, glyph)
     return text
 
 
+# Slugify function inspired by GitHub's algorithm, with an option to preserve case for better readability of anchors.
 def slugify(text: str, *, preserve_case: bool = True) -> str:
     text = text.strip()
     if not preserve_case:
@@ -103,7 +107,30 @@ def slugify(text: str, *, preserve_case: bool = True) -> str:
     text = re.sub(r"\s+", "-", text)
     return text
 
+# python markdown with sane_lists extension is stricter than GitHub's renderer, and bullet point lists
+# may not be recognized as such if they directly follow paragraph text. 
+# This function ensures there is a blank line before lists.
+def ensure_blank_line_before_lists(text: str) -> str:
+    lines = text.splitlines()
+    result = []
 
+    bullet_re = re.compile(r"^\s*[*-]\s+")
+    numbered_re = re.compile(r"^\s*\d+\.\s+")
+    block_re = re.compile(r"^\s*(?:[*-]\s+|\d+\.\s+|$|<!--|```|~~~|#|>|[ \t]{4,})")
+
+    for i, line in enumerate(lines):
+        if (bullet_re.match(line) or numbered_re.match(line)) and result:
+            prev = result[-1]
+            prev_stripped = prev.strip()
+
+            if prev_stripped and not block_re.match(prev):
+                result.append("")
+
+        result.append(line)
+
+    return "\n".join(result)
+
+# This function adds id attributes to heading tags in the HTML, generating anchors based on the text content of the headings.
 def add_heading_ids(html_text: str) -> str:
     def repl(match):
         level = match.group(1)
@@ -131,7 +158,8 @@ def add_heading_ids(html_text: str) -> str:
 
     return re.sub(r"<h([1-6])([^>]*)>(.*?)</h\1>", repl, html_text, flags=re.S)
 
-
+# This function builds the HTML for the table of contents by extracting headings from 
+# the body HTML and creating a list of links to those headings.
 def build_toc_html(body_html: str) -> str:
     headings = re.findall(r"<h([1-6])[^>]*id=[\"']([^\"']+)[\"'][^>]*>(.*?)</h\1>", body_html, flags=re.S)
 
@@ -155,8 +183,12 @@ def build_toc_html(body_html: str) -> str:
 def load_template(path: Path) -> str:
     return path.read_text(encoding="utf-8")
 
-
+# This function determines the context for rendering a page based on its relative path. 
+# If the path indicates that it's part of the draft section, it sets the context accordingly, 
+# including different header titles and sidebar content. Otherwise, it returns the context for regular pages.
+# TODO: On ratification, /draft/ will move to /bdq/ and the logic here will need to be updated.
 def page_context(rel: str) -> dict[str, str | bool]:
+    # TODO: On ratification, this will change to rel.startswith("bdq/").
     is_draft = rel.startswith("draft/")
 
     if is_draft:
@@ -191,7 +223,9 @@ def page_context(rel: str) -> dict[str, str | bool]:
 """,
     }
 
-
+# This function takes the template and various pieces of content and context, and renders the 
+# final HTML page by replacing placeholders in the template with the provided content. 
+# It also conditionally includes a review banner and a table of contents sidebar based on the context.
 def render_page(
     template: str,
     *,
@@ -269,6 +303,10 @@ def main() -> None:
         text = rewrite_markdown_links(text)
         text = rewrite_html_links(text)
         text = replace_emoji_shortcodes(text)
+
+        if path.suffix == ".md":
+            text = ensure_blank_line_before_lists(text)
+
         path.write_text(text, encoding="utf-8")
 
     pygments_css = HtmlFormatter(style="friendly").get_style_defs(".highlight")
