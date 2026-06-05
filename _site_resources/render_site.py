@@ -416,6 +416,8 @@ def linkify_bare_urls_in_markdown_line(line: str) -> str:
 # It splits the line into HTML tags and text fragments, preserving the tags unchanged while only
 # linkifying URLs in the text content between tags. This avoids inserting Markdown link syntax
 # into raw HTML blocks such as <li>...</li>, where Python-Markdown would otherwise leave it literal.
+# It also masks existing Markdown inline links inside text fragments so their destinations are not
+# rewritten a second time.
 # It also suppresses linking for BDQ rs.tdwg.org IRIs in plain mode, leaving them visible as plain text.
 def linkify_bare_urls_in_html_line(line: str) -> str:
     pieces = HTML_TAG_RE.split(line)
@@ -424,20 +426,26 @@ def linkify_bare_urls_in_html_line(line: str) -> str:
     for piece in pieces:
         if not piece:
             continue
+
         if piece.startswith("<") and piece.endswith(">"):
             result.append(piece)
-        else:
-            def repl(match):
-                url = match.group("url")
-                if is_bdq_rs_uri(url) and BDQ_RS_MODE == "plain":
-                    return url
-                rewritten_url = rewrite_target(url)
-                return f'<a href="{rewritten_url}">{rewritten_url}</a>'
+            continue
 
-            result.append(BARE_URL_RE.sub(repl, piece))
+        # Protect existing markdown links in HTML text fragments.
+        masked, originals = mask_markdown_inline_spans(piece)
+
+        def repl(match):
+            url = match.group("url")
+            if is_bdq_rs_uri(url) and BDQ_RS_MODE == "plain":
+                return url
+            rewritten_url = rewrite_target(url)
+            return f'<a href="{rewritten_url}">{rewritten_url}</a>'
+
+        masked = BARE_URL_RE.sub(repl, masked)
+        masked = unmask_markdown_inline_spans(masked, originals)
+        result.append(masked)
 
     return "".join(result)
-
 
 # This function applies bare-URL linkification to a whole Markdown document before Markdown conversion.
 # It skips fenced code blocks entirely. For ordinary Markdown lines it produces Markdown links, while for
