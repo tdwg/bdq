@@ -26,10 +26,16 @@ from pygments.formatters import HtmlFormatter
 INLINE_LINK_RE = re.compile(r'(!?\[[^\]]*\]\()([^)]+)(\))')
 
 # This regex matches HTML attributes for href and src, capturing the prefix (up to the opening quote),
+# the target value, and the closing quote.
 HTML_HREF_RE = re.compile(r'(\b(?:href|src)=["\'])([^"\']+)(["\'])', re.IGNORECASE)
 
-# This regex matches bare URLs in the text, capturing the URL itself. It looks for http:// or https:// followed by non-whitespace characters,
+# This regex matches bare URLs in the text, capturing the URL itself.
+# It matches http:// or https:// followed by non-whitespace characters, while avoiding common trailing punctuation.
 BARE_URL_RE = re.compile(r'(?P<url>https?://[^\s<>()]+[^\s<>().,;:!?])')
+
+# This regex splits a line into HTML tags and non-tag text fragments, so that text content in raw HTML lines
+# can be processed without modifying the tags themselves.
+HTML_TAG_RE = re.compile(r'(<[^>]+>)')
 
 EMOJI_MAP = {
     ":green_book:": "📗",
@@ -108,7 +114,10 @@ def rewrite_html_links(text: str) -> str:
 
     return HTML_HREF_RE.sub(repl, text)
 
-def linkify_bare_urls_in_line(line: str) -> str:
+# This function converts bare URLs in a plain Markdown text line into explicit Markdown links.
+# It skips inline code spans delimited by backticks so that URLs inside code are not changed.
+# This is useful because some bare URLs are not autolinked consistently by the Markdown parser in all contexts.
+def linkify_bare_urls_in_markdown_line(line: str) -> str:
     if "http://" not in line and "https://" not in line:
         return line
 
@@ -122,17 +131,37 @@ def linkify_bare_urls_in_line(line: str) -> str:
 
         def repl(match):
             url = match.group("url")
-            prefix = part[:match.start()]
-            if prefix.endswith("](") or prefix.endswith('href="') or prefix.endswith("href='"):
-                return url
             return f'[{url}]({url})'
 
-        new_part = BARE_URL_RE.sub(repl, part)
-        linked_parts.append(new_part)
+        linked_parts.append(BARE_URL_RE.sub(repl, part))
 
     return "".join(linked_parts)
 
+# This function converts bare URLs in a line containing raw HTML into explicit HTML anchor tags.
+# It splits the line into HTML tags and text fragments, preserving the tags unchanged while only
+# linkifying URLs in the text content between tags. This avoids inserting Markdown link syntax
+# into raw HTML blocks such as <li>...</li>, where Python-Markdown would otherwise leave it literal.
+def linkify_bare_urls_in_html_line(line: str) -> str:
+    pieces = HTML_TAG_RE.split(line)
+    result = []
 
+    for piece in pieces:
+        if not piece:
+            continue
+        if piece.startswith("<") and piece.endswith(">"):
+            result.append(piece)
+        else:
+            def repl(match):
+                url = match.group("url")
+                return f'<a href="{url}">{url}</a>'
+
+            result.append(BARE_URL_RE.sub(repl, piece))
+
+    return "".join(result)
+
+# This function applies bare-URL linkification to a whole Markdown document before Markdown conversion.
+# It skips fenced code blocks entirely. For ordinary Markdown lines it produces Markdown links, while for
+# lines containing raw HTML it produces HTML anchor tags in the text nodes between tags.
 def linkify_bare_urls(text: str) -> str:
     lines = text.splitlines()
     result = []
@@ -158,7 +187,10 @@ def linkify_bare_urls(text: str) -> str:
             result.append(line)
             continue
 
-        result.append(linkify_bare_urls_in_line(line))
+        if "<" in line and ">" in line:
+            result.append(linkify_bare_urls_in_html_line(line))
+        else:
+            result.append(linkify_bare_urls_in_markdown_line(line))
 
     return "\n".join(result)
 
@@ -453,9 +485,9 @@ def main() -> None:
     # extra and tables are used for GitHub-style markdown features like tables and definition lists.
     # fenced_code and codehilite is used for syntax highlighting of fenced code blocks, with Pygments as the highlighter.
     # pymdownx.tilde is used to support strikethrough with ~~text~~ syntax.
-    # sane_lists is included to make list parsing more consistent, but we 
+    # sane_lists is included to make list parsing more consistent, but we
     #   also apply custom normalization to handle edge cases with GitHub's markdown rendering.
-    # pymdownx.magiclink is used to automatically link URLs and email addresses, but we disable 
+    # pymdownx.magiclink is used to automatically link URLs and email addresses, but we disable
     #   some of the shortening features to preserve the full text in the rendered HTML.
     md = markdown.Markdown(
         extensions=[
