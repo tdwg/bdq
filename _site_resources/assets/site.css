@@ -50,7 +50,6 @@ body {
   width: 200px;
   height: 84px;
   display: block;
-  margin-top: 1rem;
 }
 
 .page-header-text {
@@ -282,6 +281,5 @@ body {
   .site-logo {
     width: 100px;
     height: 42px;
-    margin-top: 0.5rem;
   }
 }
