@@ -21,8 +21,8 @@ from pygments.formatters import HtmlFormatter
 #
 
 # This regex matches markdown links and images, capturing the prefix (up to the opening parenthesis),
-# the target URL, and the suffix (the closing parenthesis).
-# It allows for optional whitespace around the URL and supports angle-bracketed URLs as well.
+# the content inside the parentheses, and the suffix (the closing parenthesis).
+# The parenthesized content is parsed separately so that link destinations with optional titles are handled correctly.
 INLINE_LINK_RE = re.compile(r'(!?\[[^\]]*\]\()([^)]+)(\))')
 
 # This regex matches HTML attributes for href and src, capturing the prefix (up to the opening quote),
@@ -36,6 +36,27 @@ BARE_URL_RE = re.compile(r'(?P<url>https?://[^\s<>()]+[^\s<>().,;:!?])')
 # This regex splits a line into HTML tags and non-tag text fragments, so that text content in raw HTML lines
 # can be processed without modifying the tags themselves.
 HTML_TAG_RE = re.compile(r'(<[^>]+>)')
+
+# This regex extracts the label text from a markdown link prefix like [label]( or ![alt](.
+MARKDOWN_LINK_LABEL_RE = re.compile(r'!?\[([^\]]*)\]\($')
+
+# This regex parses the inside of a markdown inline link destination:
+#   destination
+#   <destination>
+#   destination "title"
+#   <destination> "title"
+#   destination 'title'
+# It rewrites only the destination while preserving the optional title.
+MARKDOWN_LINK_TARGET_RE = re.compile(
+    r'^\s*(?P<dest><[^>]*>|[^\s]+?)(?:\s+(?P<title>"[^"]*"|\'[^\']*\'|\([^\)]*\)))?\s*$'
+)
+
+# Links to rs.tdwg.org/bdq* should be handled specially until those resources are live.
+# For now, use "plain" so that such IRIs are shown as text and not rendered as clickable links.
+# Later this can be changed to "rewrite" for a test-rs base, or "keep" when rs.tdwg.org is ready.
+BDQ_RS_PREFIX = "https://rs.tdwg.org/bdq"
+BDQ_RS_MODE = "plain"  # one of: "plain", "rewrite", "keep"
+BDQ_RS_BASE = "https://test-rs.tdwg.org"
 
 EMOJI_MAP = {
     ":green_book:": "📗",
@@ -71,8 +92,26 @@ def first_heading_title(text: str) -> str:
 
     return "Biodiversity Data Quality (BDQ)"
 
+# This function returns True if a URL is in the BDQ rs.tdwg.org namespace that needs temporary special handling.
+def is_bdq_rs_uri(url: str) -> bool:
+    return url.startswith(BDQ_RS_PREFIX)
+
+# This function applies the configured policy for BDQ rs.tdwg.org IRIs.
+# - "keep": leave the URI unchanged
+# - "rewrite": rewrite the rs.tdwg.org base to a configured test-rs base
+# - "plain": return the original URI string; link suppression is handled by the caller
+def rewrite_bdq_rs_uri(url: str) -> str:
+    if BDQ_RS_MODE == "keep":
+        return url
+    if BDQ_RS_MODE == "rewrite":
+        return url.replace("https://rs.tdwg.org", BDQ_RS_BASE, 1)
+    return url
+
 # This function rewrites a URL target according to the specified rules, handling markdown links and special cases for certain filenames.
 def rewrite_target(url: str) -> str:
+    if is_bdq_rs_uri(url):
+        return rewrite_bdq_rs_uri(url)
+
     parts = urlsplit(url)
     if parts.scheme or parts.netloc:
         return url
@@ -93,29 +132,64 @@ def rewrite_target(url: str) -> str:
 
     return urlunsplit(("", "", new_path, parts.query, parts.fragment))
 
+# This function parses the contents of the parentheses of a markdown inline link and separates the
+# destination from an optional title. It preserves angle-bracketed destinations and any valid title syntax.
+def parse_markdown_link_target(raw_target: str) -> tuple[str, str | None]:
+    match = MARKDOWN_LINK_TARGET_RE.match(raw_target)
+    if not match:
+        return raw_target.strip(), None
+    return match.group("dest"), match.group("title")
+
+# This function rebuilds a markdown link target from a rewritten destination and an optional title,
+# preserving the title text exactly as it appeared in the source.
+def format_markdown_link_target(dest: str, title: str | None) -> str:
+    if title:
+        return f"{dest} {title}"
+    return dest
+
 # This function rewrites markdown links in the text, converting .md links to .html and handling angle-bracketed links as well.
+# It also suppresses links to BDQ rs.tdwg.org IRIs when BDQ_RS_MODE is "plain", leaving only their visible text.
+# It preserves optional markdown link titles.
 # It does not cover [][] reference-style links, but those are not used in the BDQ content and can be added later if needed.
 def rewrite_markdown_links(text: str) -> str:
     def repl(match):
-        prefix, target, suffix = match.groups()
-        target = target.strip()
-        if target.startswith("<") and target.endswith(">"):
-            inner = target[1:-1].strip()
-            return f"{prefix}<{rewrite_target(inner)}>{suffix}"
-        return f"{prefix}{rewrite_target(target)}{suffix}"
+        prefix, raw_target, suffix = match.groups()
+        label_match = MARKDOWN_LINK_LABEL_RE.match(prefix)
+        label = label_match.group(1) if label_match else ""
+
+        dest, title = parse_markdown_link_target(raw_target)
+
+        if dest.startswith("<") and dest.endswith(">"):
+            inner = dest[1:-1].strip()
+            if is_bdq_rs_uri(inner) and BDQ_RS_MODE == "plain":
+                return label if label else inner
+            rewritten_inner = rewrite_target(inner)
+            return f"{prefix}{format_markdown_link_target(f'<{rewritten_inner}>', title)}{suffix}"
+
+        if is_bdq_rs_uri(dest) and BDQ_RS_MODE == "plain":
+            return label if label else dest
+
+        rewritten_dest = rewrite_target(dest)
+        return f"{prefix}{format_markdown_link_target(rewritten_dest, title)}{suffix}"
 
     return INLINE_LINK_RE.sub(repl, text)
 
 # Similar logic to rewrite_markdown_links, but for HTML attributes like href and src.
+# In plain mode for BDQ rs.tdwg.org IRIs, the href/src is left unchanged here; suppression of whole HTML anchors
+# requires structural HTML rewriting and is intentionally not attempted in this attribute-only pass.
 def rewrite_html_links(text: str) -> str:
     def repl(match):
         prefix, target, suffix = match.groups()
-        return f"{prefix}{rewrite_target(target.strip())}{suffix}"
+        stripped_target = target.strip()
+        if is_bdq_rs_uri(stripped_target) and BDQ_RS_MODE == "plain":
+            return f"{prefix}{stripped_target}{suffix}"
+        return f"{prefix}{rewrite_target(stripped_target)}{suffix}"
 
     return HTML_HREF_RE.sub(repl, text)
 
 # This function converts bare URLs in a plain Markdown text line into explicit Markdown links.
 # It skips inline code spans delimited by backticks so that URLs inside code are not changed.
+# It also suppresses linking for BDQ rs.tdwg.org IRIs in plain mode, leaving them visible as plain text.
 # This is useful because some bare URLs are not autolinked consistently by the Markdown parser in all contexts.
 def linkify_bare_urls_in_markdown_line(line: str) -> str:
     if "http://" not in line and "https://" not in line:
@@ -131,7 +205,10 @@ def linkify_bare_urls_in_markdown_line(line: str) -> str:
 
         def repl(match):
             url = match.group("url")
-            return f'[{url}]({url})'
+            if is_bdq_rs_uri(url) and BDQ_RS_MODE == "plain":
+                return url
+            rewritten_url = rewrite_target(url)
+            return f'[{rewritten_url}]({rewritten_url})'
 
         linked_parts.append(BARE_URL_RE.sub(repl, part))
 
@@ -141,6 +218,7 @@ def linkify_bare_urls_in_markdown_line(line: str) -> str:
 # It splits the line into HTML tags and text fragments, preserving the tags unchanged while only
 # linkifying URLs in the text content between tags. This avoids inserting Markdown link syntax
 # into raw HTML blocks such as <li>...</li>, where Python-Markdown would otherwise leave it literal.
+# It also suppresses linking for BDQ rs.tdwg.org IRIs in plain mode, leaving them visible as plain text.
 def linkify_bare_urls_in_html_line(line: str) -> str:
     pieces = HTML_TAG_RE.split(line)
     result = []
@@ -153,7 +231,10 @@ def linkify_bare_urls_in_html_line(line: str) -> str:
         else:
             def repl(match):
                 url = match.group("url")
-                return f'<a href="{url}">{url}</a>'
+                if is_bdq_rs_uri(url) and BDQ_RS_MODE == "plain":
+                    return url
+                rewritten_url = rewrite_target(url)
+                return f'<a href="{rewritten_url}">{rewritten_url}</a>'
 
             result.append(BARE_URL_RE.sub(repl, piece))
 
