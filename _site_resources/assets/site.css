@@ -224,6 +224,39 @@ body {
   border-top: 1px solid var(--bdq-border);
 }
 
+.sidebar-context {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--bdq-border);
+  border-radius: 0.5rem;
+  background: var(--bdq-bg-soft);
+}
+
+.sidebar-context h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+}
+
+.sidebar-context-links {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.sidebar-context-links li {
+  margin: 0.35rem 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.sidebar-context-links a {
+  color: var(--bdq-link);
+  text-decoration: none;
+}
+
+.sidebar-context-links a:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 960px) {
   .doc-shell {
     grid-template-columns: 1fr;

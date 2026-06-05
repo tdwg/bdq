@@ -165,6 +165,15 @@ def page_context(rel: str) -> dict[str, str | bool]:
             "site_header_title": "The Biodiversity Data Quality (BDQ) Standard",
             "site_header_tagline": "Draft of the TDWG Biodiversity Data Quality Standard",
             "site_header_link": "https://bdq.tdwg.org/bdq/",
+            "sidebar_context_html": """
+<div class="sidebar-context">
+  <h2>BDQ Standard</h2>
+  <ul class="sidebar-context-links">
+    <li><a href="https://bdq.tdwg.org/draft/">Landing page</a></li>
+    <li><a href="https://bdq.tdwg.org/draft/#2-A-Roadmap-to-the-BDQ-Standard-non-normative">Roadmap to the Standard</a></li>
+  </ul>
+</div>
+""",
         }
 
     return {
@@ -172,6 +181,13 @@ def page_context(rel: str) -> dict[str, str | bool]:
         "site_header_title": "Biodiversity Data Quality (BDQ)",
         "site_header_tagline": "The TDWG Biodiversity Data Quality Interest Group and Task Groups",
         "site_header_link": "https://bdq.tdwg.org/",
+        "sidebar_context_html": """
+<div class="sidebar-context">
+  <ul class="sidebar-context-links">
+    <li><a href="https://bdq.tdwg.org/">BDQ Interest Group</a></li>
+  </ul>
+</div>
+""",
     }
 
 
@@ -186,6 +202,7 @@ def render_page(
     header_title: str,
     header_tagline: str,
     header_link: str,
+    sidebar_context_html: str,
 ) -> str:
     review_html = (
         '<div class="review-banner" role="note" aria-label="Under review">Under Review</div>'
@@ -193,6 +210,7 @@ def render_page(
     )
     toc_html = """
 <aside class="doc-sidebar">
+  {{SIDEBAR_CONTEXT}}
   <nav class="page-toc" aria-label="On this page">
     <h2>On this page</h2>
     <ul id="toc-list">
@@ -205,6 +223,7 @@ def render_page(
 
     if show_toc:
         toc_html = toc_html.replace("{{TOC_ITEMS}}", toc_items_html)
+        toc_html = toc_html.replace("{{SIDEBAR_CONTEXT}}", sidebar_context_html)
 
     page = template
     page = page.replace("{{PAGE_TITLE}}", html.escape(title))
