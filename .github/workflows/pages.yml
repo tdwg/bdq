@@ -32,7 +32,7 @@ jobs:
         run: |
           set -euo pipefail
           python -m pip install --upgrade pip
-          pip install pandas pyyaml rdflib markdown pygments
+          pip install pandas pyyaml rdflib markdown pygments pymdown-extensions
 
       - name: Build tg2 review documents
         working-directory: tg2/_make_review
