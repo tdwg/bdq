@@ -171,6 +171,7 @@ def page_context(rel: str) -> dict[str, str | bool]:
   <ul class="sidebar-context-links">
     <li><a href="https://bdq.tdwg.org/draft/">Landing page</a></li>
     <li><a href="https://bdq.tdwg.org/draft/#2-A-Roadmap-to-the-BDQ-Standard-non-normative">Roadmap to the Standard</a></li>
+    <li><a href="https://bdq.tdwg.org/draft/README.html">Public Review</a></li>
   </ul>
 </div>
 """,

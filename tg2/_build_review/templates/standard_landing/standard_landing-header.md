@@ -226,7 +226,7 @@ Readers can approach the standard in different ways depending on their needs. Th
         <strong>Fitness For Use Framework (bdqffdq:) &amp; Concepts and Use</strong><br>
         Normative concepts and logic describing data quality needs and layers, with an explanatory guide.
 		<a href="./docs/guide/bdqffdq/index.md">Fitness For Use Framework Ontology: Concepts and Use</a><br>
-		bdqffdq: <a href="./docs/list/bdqffdq/list/index.md">Term List</a><br>
+		bdqffdq: <a href="./docs/list/bdqffdq/index.md">Term List</a><br>
 		and serialized version: <a href="./vocabulary/bdqffdq.owl">OWL Ontology</a>.
       </td>
     </tr>
@@ -235,7 +235,7 @@ Readers can approach the standard in different ways depending on their needs. Th
 		:blue_book:
         <strong>Test Vocabulary &amp; Definitions</strong><br>
         Normative definitions of the Tests themselves, for readers who need exact meanings or wish to trace provenance.<br>
-		bdqtest: <a href="./docs/list/bdqtest/list/index.md">Term List</a>.
+		bdqtest: <a href="./docs/list/bdqtest/index.md">Term List</a>.
       </td>
       <td valign="top">
 		:blue_book:
@@ -243,7 +243,7 @@ Readers can approach the standard in different ways depending on their needs. Th
         Explanations and Normative Guidance on the Tests and their Uses.
 		<a href="./docs/guide/bdqtest/index.md">BDQ Tests: Concepts and Use</a>.<br>
         Normative machine‑readable definitions and versioned lists of Tests.
-		bdqtest: <a href="./docs/list/bdqtest/list/index.md">Term List</a><br>
+		bdqtest: <a href="./docs/list/bdqtest/index.md">Term List</a><br>
 		and serialized versions: <a href="./dist/bdqtest.xml">RDF/XML</a>, <a href="./dist/bdqtest.ttl">Turtle</a>, <a href="./dist/bdqtest.json">JSON-LD</a>.
       </td>
       <td valign="top">
@@ -269,7 +269,7 @@ Readers can approach the standard in different ways depending on their needs. Th
 		:blue_book:
         <strong>BDQ Tests Vocabulary &amp; Canonical Definitions</strong><br>
         Examples of how existing Tests are formally defined and versioned; useful patterns for new Test design.<br>
-		bdqtest: <a href="./docs/list/bdqtest/list/index.md">Term List</a>
+		bdqtest: <a href="./docs/list/bdqtest/index.md">Term List</a>
       </td>
     </tr>
     <tr>
