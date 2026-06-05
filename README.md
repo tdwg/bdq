@@ -15,10 +15,25 @@ You can join the group's mailing list at http://lists.tdwg.org/mailman/listinfo/
 
 All Interest Group and Task Group documents are linked on the [**Interest Group's Wiki**.](https://github.com/tdwg/bdq/wiki)
 
-### Draft Standard Documents
+### Draft Standard 
 
+The Draft Biodiversity Data Quality (BDQ) Standard is currently a [draft under review](https://bdq.tdwg.org/draft/),
 
+* Entry point for (pending) public review of the draft standard [Pubic Review](https://bdq.tdwg.org/draft/README.html)
+* [Notes to the BDQ Review Manager](https://github.com/tdwg/bdq/issues/306)
+* Draft Standard in [markdown on github](https://github.com/tdwg/bdq/tree/master/tg2/_review)
 
+## Task Groups
+
+- ### [CLOSED: Task Group 1 (Framework on Data Quality)](https://bdq.tdwg.org/tg1/site) [github](https://github.com/tdwg/bdq/tree/master/tg1)
+
+- ### [Task Group 2 ( Data Quality Tests and Assertions)](https://bdq.tdwg.org/tg2/) [github](https://github.com/tdwg/bdq/tree/master/tg2)
+
+- ### [CLOSED: Task Group 3 (Data Quality Use Cases)](https://bdq.tdwg.org/tg3/) [github](https://github.com/tdwg/bdq/tree/master/tg3)
+
+- ### [Task Group 4 (Best Practices for Development of Vocabularies of Value)](https://bdq.tdwg.org/tg4/) [github](https://github.com/tdwg/bdq/tree/master/tg4)
+
+## Documents related to the draft standard
 
 The standard will incorporate (placeholders in the above document) the following:
 
@@ -26,7 +41,7 @@ The standard will incorporate (placeholders in the above document) the following
 
 [Data for validating implementations of the tests](https://raw.githubusercontent.com/tdwg/bdq/master/tg2/core/TG2_test_validation_data.csv) and [Data including non-printing characters for validating tests that assess EMPTY](https://raw.githubusercontent.com/tdwg/bdq/master/tg2/core/TG2_test_validation_data_nonprintingchars.csv)
 
-[Rationale management for CORE tests in comments on GitHub issues, one per test](https://github.com/tdwg/bdq/labels/CORE)
+[Rationale management for CORE tests in comments on (closed) GitHub issues, one per test](https://github.com/tdwg/bdq/issues?q=label%3ACORE)
 
 [Combined Framework and Biodiversity Data Quality vocabularies, development of definitions in github issue 152](https://github.com/tdwg/bdq/issues/152)
 
@@ -34,12 +49,3 @@ The standard will incorporate (placeholders in the above document) the following
 
 [OLD BDQ CORE Standards Document ‐ NO LONGER IN USE](https://github.com/tdwg/bdq/wiki/OLD-BDQ-CORE-Standards-Document-%E2%80%90-NO-LONGER-IN-USE)
 
-## Task Groups
-
-- ### [CLOSED: Task Group 1 (Framework on Data Quality)](https://tdwg.github.io/bdq/tg1/site)
-
-- ### [Task Group 2 ( Data Quality Tests and Assertions)](https://github.com/tdwg/bdq/blob/master/tg2/README.md)
-
-- ### [CLOSED: Task Group 3 (Data Quality Use Cases)](https://github.com/tdwg/bdq/blob/master/tg3/README.md)
-
-- ### [Task Group 4 (Best Practices for Development of Vocabularies of Value)](https://github.com/tdwg/bdq/blob/master/tg4/README.md)

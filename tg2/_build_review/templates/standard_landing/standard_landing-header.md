@@ -241,7 +241,7 @@ Readers can approach the standard in different ways depending on their needs. Th
 		:blue_book:
         <strong>Test Vocabulary, Definitions &amp; Serializations</strong><br>
         Explanations and Normative Guidance on the Tests and their Uses.
-		<a href="./docs/guides/bdqtest/index.md">BDQ Tests: Concepts and Use</a>.<br>
+		<a href="./docs/guide/bdqtest/index.md">BDQ Tests: Concepts and Use</a>.<br>
         Normative machine‑readable definitions and versioned lists of Tests.
 		bdqtest: <a href="./docs/list/bdqtest/list/index.md">Term List</a><br>
 		and serialized versions: <a href="./dist/bdqtest.xml">RDF/XML</a>, <a href="./dist/bdqtest.ttl">Turtle</a>, <a href="./dist/bdqtest.json">JSON-LD</a>.
