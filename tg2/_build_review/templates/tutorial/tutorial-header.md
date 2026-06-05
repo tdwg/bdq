@@ -84,7 +84,7 @@ The following namespace abbreviations are used in this document:
 
 This tutorial works through the development of a `Use Case`, then walks through two examples of the development of Tests.  One of the examples of a Test is simple, the other is more complex.  This tutorial then comes back to the `Use Case` and describes how Measure Tests can be developed to evaluate the results of the Validation Tests for the purpose of `Quality Control`.  
 
-The simpler of the two Tests examined is VALIDATION_FOOTPRINTWKT_NOTEMPTY, which was considered a "Supplementary" Test (see: [Developing the Tests](../supplement/index.md#3-developing-the-tests-non-normative))) rather than a BDQ "Core" Test as we considered it of marginal use for the BDQ `Use Cases`.  As described in the [BDQ Supplement Information](../supplement/index.md), the Test could be useful in certain `Use Cases`, as noted below.
+The simpler of the two Tests examined is VALIDATION_FOOTPRINTWKT_NOTEMPTY, which was considered a "Supplementary" Test (see: [Developing the Tests](../supplement/index.md#3-developing-the-tests-non-normative))) rather than a BDQ "Core" Test as we considered it of marginal use for the BDQ `Use Cases`.  As described in the [BDQ Supplemental Information](../supplement/index.md), the Test could be useful in certain `Use Cases`, as noted below.
 
 **Note** that a proposed **BDQ Maintenance Group** will be established to maintain the BDQ Standard. This group will take responsibility for advising on processes for editing the BDQ standard and evaluating new BDQ Tests, `Use Cases` and other components of the BDQ Standard.
 

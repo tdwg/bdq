@@ -592,7 +592,7 @@ We have used the formatting recommended by Pensoft, see https://checklist.pensof
 <li>Albertoni R and Isaac A (2016) Data on the Web Best Practices: Data Quality Vocabulary, W3C Working Group Note, W3C, https://www.w3.org/TR/vocab-dqv/</li>
 <li>Albertoni R and Isaac A (2020) Introducing the Data Quality Vocabulary (DQV). Semantic Web, 12(1), 81-97, doi: 10.3233/SW-20038</li>
 <li>Belbin L, Daly J, Hirsch T, Hobern D, Salle JL (2013) A specialist’s audit of aggregated occurrence records: An ‘aggregator’s’ perspective. ZooKeys 305: 67–76. doi: 10.3897/zookeys.305.5438</li>
-<li>Biodiversity Information Standards (TDWG) (2010) TDWG GUID Applicability Statement. https://github.com/tdwg/guid-as/blob/master/guid/tdwg_guid_applicability_statement.pdf</li>
+<li>Biodiversity Information Standards (TDWG) (2010) TDWG GUID Applicability Statement. https://raw.githubusercontent.com/tdwg/guid-as/master/guid/tdwg_guid_applicability_statement.pdf</li>
 <li>Biodiversity Information Standards (TDWG) (n.dat) Annotations Interest Group. https://www.tdwg.org/community/annotations/</li>
 <li>Biodiversity Information Standards (TDWG) (2021) Biodiversity Information Standards (TDWG) Standards Metadata http://rs.tdwg.org/index</li>
 <li>Bradner, S (1997) IETF Key words for use in RFCs to Indicate Requirement Levels (RFC 2119). https://datatracker.ietf.org/doc/html/rfc2119</li>

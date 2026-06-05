@@ -493,12 +493,15 @@ Section [2.3.2 Reading a Specification (non-normative)](../implementers/index.md
 
 Example values for `bdqffdq:hasAuthoritiesDefaults`: 
 
+```
      bdqval:earliestValidDate default ="1582-11-15"
 
      bdqval:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&amp;name=]}
+```
 
 Example RDF fragment showing use of `Arguments` and `bdqffdq:hasAuthoritiesDefaults`: 
 
+```xml
     <rdf:Description rdf:about="urn:uuid:9f12e2c3-17ac-42c0-91f4-c40a02d3f133">
         <rdf:type rdf:resource="bdqffdq:Argument"/>
         <rdfs:label rdf:datatype="xsd:string">Default value for bdqval:maximumValidDepthInMeters:"11000"</rdfs:label>
@@ -522,11 +525,14 @@ Example RDF fragment showing use of `Arguments` and `bdqffdq:hasAuthoritiesDefau
         <hasExpectedResponse xmlns="bdqffdq:" rdf:datatype="xsd:string">INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters is bdqval:Empty, or the value is not interpretable as number greater than or equal to zero; COMPLIANT if the value of dwc:minimumDepthInMeters is within the range of bdqval:minimumValidDepthInMeters to bdqval:maximumValidDepthInMeters inclusive; otherwise NOT_COMPLIANT</hasExpectedResponse>
         ...
     </rdf:Description>
+```
 
 Example RDF Fragment from the `Specification` for [VALIDATION_COUNTRYCODE_STANDARD](../../terms/bdqtest/index.md#VALIDATION_COUNTRYCODE_STANDARD), where `bdqffdq:hasAuthoritiesDefaults` is present to provide a `bdqval:sourceAuthority` for the `Specification`, but the Test is not parameterized, so no `bdqffdq:hasArgument` properties are present: 
 
+```xml
     <hasAuthoritiesDefaults xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bdqval:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}</hasAuthoritiesDefaults>
-    <hasExpectedResponse xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode is bdqval:Empty; COMPLIANT if dwc:countryCode can be unambiguously interpreted as a valid ISO 3166-1-alpha-2 country code in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT</hasExpectedResponse
+    <hasExpectedResponse xmlns="https://rs.tdwg.org/bdqffdq/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode is bdqval:Empty; COMPLIANT if dwc:countryCode can be unambiguously interpreted as a valid ISO 3166-1-alpha-2 country code in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT</hasExpectedResponse>
+```
 
 ## 5 Design of the Tests (normative)
 
@@ -594,6 +600,7 @@ _A workflow with a pre-amendment validation+measure phase, followed by an amendm
 
 A complete description of BDQ Tests can be found in the RDF representation of this vocabulary. Following the Fitness For Use Framework Ontology (`bdqffdq:`), a Test is composed of an instance of a subclass of a `bdqffdq:DataQualityNeed` (e.g., `bdqffdq:Validation`), an instance of a [bdqffdq:ActedUpon](<../../list/bdqffdq/index.md#ActedUpon> "A bdqffdq:InformationElement, expressed in concrete terms, about which a bdqffdq:DataQualityNeed expresses bdqffdq:Responses about the data quality in that bdqffdq:InformationElement.") `Information Element`, optionally an instance of a [bdqffdq:Consulted](<../../list/bdqffdq/index.md#Consulted> "A bdqffdq:InformationElement, expressed in concrete terms, about which a bdqffdq:DataQualityNeed examines in order to expresses bdqffdq:Responses about the data quality in another bdqffdq:InformationElement.") `Information Element`, an instance of a subclass of `bdqffdq:Method` (e.g., `bdqffdq:ValidationMethod`), and an instance of a `bdqffdq:Specification`. Most of the information associated with a `bdqtest:` term is expressed in other vocabularies, in particular `bdqffdq:`. This structure and dependence on other vocabularies can be seen in the formal example description of [VALIDATION_COUNTRYCODE_STANDARD](../../terms/bdqtest/index.md#VALIDATION_COUNTRYCODE_STANDARD), below.
 
+```xml
     <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe-2025-03-07">
         <dcterms:bibliographicCitation>ISO (n.dat.) ISO 3166 Country Codes. https://www.iso.org/iso-3166-country-codes.html; ISO (n.dat) 3166-1 alpha-2. https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2; DataHub (2018) List of all countries with their two digit codes (ISO 3166-1). https://datahub.io/core/country-list; Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</dcterms:bibliographicCitation>
         <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe"/>
@@ -602,7 +609,7 @@ A complete description of BDQ Tests can be found in the RDF representation of th
         <comment xmlns="http://www.w3.org/2000/01/rdf-schema#">Is the value of dwc:countryCode a valid ISO 3166-1-alpha-2 country code?</comment>
         <label xmlns="http://www.w3.org/2000/01/rdf-schema#">VALIDATION_COUNTRYCODE_STANDARD</label>
         <skos:historyNote>https://github.com/tdwg/bdq/issues/20</skos:historyNote>
-        <skos:note>Locations outside of a jurisdiction covered by a country code may have a value in the field dwc:countryCode, the ISO user defined codes include XZ used by the UN for installations on the high seas and recommended in Darwin Core to designate the high seas. Also available in the ISO user defined codes is ZZ, used by Darwin Core and GBIF to mark unknown countries. This Test should accept both XZ and ZZ as COMPLIANT country codes. This Test must return NOT_COMPLIANT if there is leading or trailing [whitespace](<../../../index.md#glossary_whitespace> "Characters such as spaces and tabs that affect rendering of printed or displayed output, but which themselves are not printed. 1) A field that only includes whitespace is treated as `bdqval:Empty`. 2) In `bdqffdq:Valida…") or there are leading or trailing [non-printing characters](<../../../index.md#glossary_nonprinting_characters> "ASCII 0-32 and 127 decimal. Non-printing characters or formatting marks that are not displayed when printing. These may include pilcrow, space, non-breaking space, tab character, etc. For the purposes of the Tests they…").</skos:note>
+        <skos:note>Locations outside of a jurisdiction covered by a country code may have a value in the field dwc:countryCode, the ISO user defined codes include XZ used by the UN for installations on the high seas and recommended in Darwin Core to designate the high seas. Also available in the ISO user defined codes is ZZ, used by Darwin Core and GBIF to mark unknown countries. This Test should accept both XZ and ZZ as COMPLIANT country codes. This Test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.</skos:note>
         <skos:prefLabel>Validation dwc:countryCode Standard for SingleRecord</skos:prefLabel>
         <bdqffdq:hasActedUponInformationElement rdf:resource="urn:uuid:c3620a97-65d6-4f9c-8a03-32e0d240a423"/>
         <bdqffdq:hasCriterion rdf:resource="https://rs.tdwg.org/bdqcrit/terms/Standard"/>
@@ -620,10 +627,10 @@ A complete description of BDQ Tests can be found in the RDF representation of th
     <rdf:Description rdf:about="urn:uuid:02f5a440-a473-42cf-a3f1-6c10334d5eb8">
         <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
         <label xmlns="http://www.w3.org/2000/01/rdf-schema#">ValidationMethod: VALIDATION_COUNTRYCODE_STANDARD with Specification for: VALIDATION_COUNTRYCODE_STANDARD</label>
-        <skos:historyNote>Source: [TG2](<../../../index.md#glossary_TG2> "[Biodiversity Data Quality Interest Group - Task Group 2: Data Quality Tests and Assertions](https://www.tdwg.org/community/bdq/tg-2/)")</skos:historyNote>
+        <skos:historyNote>Source: TG2</skos:historyNote>
         <skos:note>Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L99</skos:note>
         <skos:note>Example Implementations: Kurator/FilteredPush geo_ref_qc Library (Morris &amp; Lowery 2025b)</skos:note>
-        <skos:note>TG2 Validation [SPACE](<../../../index.md#glossary_SPACE> "A BDQ GitHub label to indicate that the Test is related to Darwin Core terms in the `dwc:Location Class`.") CODED Test [VOCABULARY](<../../../index.md#glossary_VOCABULARY> "Tag used in the GitHub version of the Tests to indicate that a Test requires a controlled Vocabulary.") Conformance ISO/DCMI STANDARD [CORE](<../../../index.md#glossary_CORE> "Tests that are useful for evaluating biodiversity data quality as represented by the values of `Darwin Core` terms. CORE tests address identified user needs, are widely applicable, informative, unambiguous, well defined…")</skos:note>
+        <skos:note>TG2 Validation SPACE CODED Test VOCABULARY Conformance ISO/DCMI STANDARD CORE</skos:note>
         <skos:prefLabel>ValidationMethod: VALIDATION_COUNTRYCODE_STANDARD with Specification for: VALIDATION_COUNTRYCODE_STANDARD</skos:prefLabel>
         <bdqffdq:forValidation rdf:resource="https://rs.tdwg.org/bdqtest/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe-2025-03-07"/>
         <bdqffdq:hasSpecification rdf:resource="urn:uuid:01b96157-e4a1-4884-95d7-3bcfc5f3c047"/>
@@ -638,6 +645,7 @@ A complete description of BDQ Tests can be found in the RDF representation of th
         <bdqffdq:hasAuthoritiesDefaults>bdqval:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}</bdqffdq:hasAuthoritiesDefaults>
         <bdqffdq:hasExpectedResponse>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode is bdqval:Empty; COMPLIANT if dwc:countryCode can be unambiguously interpreted as a valid ISO 3166-1-alpha-2 country code in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT</bdqffdq:hasExpectedResponse>
     </rdf:Description>
+```
 
 ## 7 Creating New Tests (non-normative)
 
