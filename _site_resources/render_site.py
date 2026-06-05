@@ -4,6 +4,7 @@ from __future__ import annotations
 import argparse
 import html
 import re
+import sys
 from pathlib import Path
 from urllib.parse import urlsplit, urlunsplit
 
@@ -40,24 +41,6 @@ HTML_TAG_RE = re.compile(r'(<[^>]+>)')
 # This regex extracts the label text from a markdown link prefix like [label]( or ![alt](.
 MARKDOWN_LINK_LABEL_RE = re.compile(r'!?\[([^\]]*)\]\($')
 
-# This regex parses the inside of a markdown inline link destination:
-#   destination
-#   <destination>
-#   destination "title"
-#   <destination> "title"
-#   destination 'title'
-# It rewrites only the destination while preserving the optional title.
-MARKDOWN_LINK_TARGET_RE = re.compile(
-    r'^\s*(?P<dest><[^>]*>|[^\s]+?)(?:\s+(?P<title>"[^"]*"|\'[^\']*\'|\([^\)]*\)))?\s*$'
-)
-
-# Links to rs.tdwg.org/bdq* should be handled specially until those resources are live.
-# For now, use "plain" so that such IRIs are shown as text and not rendered as clickable links.
-# Later this can be changed to "rewrite" for a test-rs base, or "keep" when rs.tdwg.org is ready.
-BDQ_RS_PREFIX = "https://rs.tdwg.org/bdq"
-BDQ_RS_MODE = "plain"  # one of: "plain", "rewrite", "keep"
-BDQ_RS_BASE = "https://test-rs.tdwg.org"
-
 EMOJI_MAP = {
     ":green_book:": "📗",
     ":blue_book:": "📘",
@@ -78,6 +61,14 @@ EMOJI_MAP = {
     ":link:": "🔗",
 }
 
+# Links to rs.tdwg.org/bdq* should be handled specially until those resources are live.
+# For now, use "plain" so that such IRIs are shown as text and not rendered as clickable links.
+# Later this can be changed to "rewrite" for a test-rs base, or "keep" when rs.tdwg.org is ready.
+BDQ_RS_PREFIX = "https://rs.tdwg.org/bdq"
+BDQ_RS_MODE = "plain"  # one of: "plain", "rewrite", "keep"
+BDQ_RS_BASE = "https://test-rs.tdwg.org"
+
+
 # This function extracts the title for the page from the first level-1 heading in the markdown text,
 # stripping out any markdown link syntax. If no such heading is found, it returns a default title.
 def first_heading_title(text: str) -> str:
@@ -92,9 +83,11 @@ def first_heading_title(text: str) -> str:
 
     return "Biodiversity Data Quality (BDQ)"
 
+
 # This function returns True if a URL is in the BDQ rs.tdwg.org namespace that needs temporary special handling.
 def is_bdq_rs_uri(url: str) -> bool:
     return url.startswith(BDQ_RS_PREFIX)
+
 
 # This function applies the configured policy for BDQ rs.tdwg.org IRIs.
 # - "keep": leave the URI unchanged
@@ -107,12 +100,28 @@ def rewrite_bdq_rs_uri(url: str) -> str:
         return url.replace("https://rs.tdwg.org", BDQ_RS_BASE, 1)
     return url
 
+
+# This function safely parses a URL value. If urllib cannot parse it because of malformed
+# bracket usage or other invalid URL structure, return None so the caller can preserve the
+# original text instead of crashing the site build.
+def safe_urlsplit(url: str):
+    try:
+        return urlsplit(url)
+    except ValueError:
+        print(f"Warning: invalid URL skipped during rewrite: {url}", file=sys.stderr)
+        return None
+
+
 # This function rewrites a URL target according to the specified rules, handling markdown links and special cases for certain filenames.
+# If the URL cannot be parsed, it is returned unchanged so malformed content does not abort the build.
 def rewrite_target(url: str) -> str:
     if is_bdq_rs_uri(url):
         return rewrite_bdq_rs_uri(url)
 
-    parts = urlsplit(url)
+    parts = safe_urlsplit(url)
+    if parts is None:
+        return url
+
     if parts.scheme or parts.netloc:
         return url
     if not parts.path:
@@ -132,13 +141,36 @@ def rewrite_target(url: str) -> str:
 
     return urlunsplit(("", "", new_path, parts.query, parts.fragment))
 
-# This function parses the contents of the parentheses of a markdown inline link and separates the
-# destination from an optional title. It preserves angle-bracketed destinations and any valid title syntax.
+
+# This function parses the inside of a markdown inline link destination and separates the destination from an optional title.
+# It handles:
+#   dest
+#   <dest>
+#   dest "title"
+#   <dest> "title"
+#   dest 'title'
+# It intentionally favors simple, forgiving parsing over strict CommonMark completeness so existing BDQ content is preserved.
 def parse_markdown_link_target(raw_target: str) -> tuple[str, str | None]:
-    match = MARKDOWN_LINK_TARGET_RE.match(raw_target)
-    if not match:
-        return raw_target.strip(), None
-    return match.group("dest"), match.group("title")
+    s = raw_target.strip()
+    if not s:
+        return s, None
+
+    if s.startswith("<"):
+        close = s.find(">")
+        if close != -1:
+            dest = s[: close + 1]
+            rest = s[close + 1 :].strip()
+            return dest, rest or None
+        return s, None
+
+    m = re.match(r'^(\S+)(?:\s+(.+))?$', s)
+    if not m:
+        return s, None
+
+    dest = m.group(1)
+    title = m.group(2).strip() if m.group(2) else None
+    return dest, title
+
 
 # This function rebuilds a markdown link target from a rewritten destination and an optional title,
 # preserving the title text exactly as it appeared in the source.
@@ -146,6 +178,7 @@ def format_markdown_link_target(dest: str, title: str | None) -> str:
     if title:
         return f"{dest} {title}"
     return dest
+
 
 # This function rewrites markdown links in the text, converting .md links to .html and handling angle-bracketed links as well.
 # It also suppresses links to BDQ rs.tdwg.org IRIs when BDQ_RS_MODE is "plain", leaving only their visible text.
@@ -174,6 +207,7 @@ def rewrite_markdown_links(text: str) -> str:
 
     return INLINE_LINK_RE.sub(repl, text)
 
+
 # Similar logic to rewrite_markdown_links, but for HTML attributes like href and src.
 # In plain mode for BDQ rs.tdwg.org IRIs, the href/src is left unchanged here; suppression of whole HTML anchors
 # requires structural HTML rewriting and is intentionally not attempted in this attribute-only pass.
@@ -186,6 +220,7 @@ def rewrite_html_links(text: str) -> str:
         return f"{prefix}{rewrite_target(stripped_target)}{suffix}"
 
     return HTML_HREF_RE.sub(repl, text)
+
 
 # This function converts bare URLs in a plain Markdown text line into explicit Markdown links.
 # It skips inline code spans delimited by backticks so that URLs inside code are not changed.
@@ -214,6 +249,7 @@ def linkify_bare_urls_in_markdown_line(line: str) -> str:
 
     return "".join(linked_parts)
 
+
 # This function converts bare URLs in a line containing raw HTML into explicit HTML anchor tags.
 # It splits the line into HTML tags and text fragments, preserving the tags unchanged while only
 # linkifying URLs in the text content between tags. This avoids inserting Markdown link syntax
@@ -239,6 +275,7 @@ def linkify_bare_urls_in_html_line(line: str) -> str:
             result.append(BARE_URL_RE.sub(repl, piece))
 
     return "".join(result)
+
 
 # This function applies bare-URL linkification to a whole Markdown document before Markdown conversion.
 # It skips fenced code blocks entirely. For ordinary Markdown lines it produces Markdown links, while for
@@ -275,6 +312,7 @@ def linkify_bare_urls(text: str) -> str:
 
     return "\n".join(result)
 
+
 # A simple function to replace emoji shortcodes with their corresponding Unicode characters.
 def replace_emoji_shortcodes(text: str) -> str:
     for shortcode, glyph in EMOJI_MAP.items():
@@ -290,6 +328,7 @@ def slugify(text: str, *, preserve_case: bool = True) -> str:
     text = re.sub(r"[^\w\s-]", "", text)
     text = re.sub(r"\s+", "-", text)
     return text
+
 
 # Python-Markdown with sane_lists is stricter than GitHub's renderer. A top-level list that directly
 # follows paragraph text may not be recognized as a list. This function inserts a blank line only
@@ -354,6 +393,7 @@ def ensure_blank_line_before_top_level_lists(text: str) -> str:
 
     return "\n".join(result)
 
+
 # Python-Markdown is stricter than GitHub about nested list indentation.
 # Normalize nested list indentation to multiples of 4 spaces while preserving top-level items.
 def normalize_nested_list_indentation(text: str) -> str:
@@ -406,11 +446,13 @@ def normalize_nested_list_indentation(text: str) -> str:
 
     return "\n".join(result)
 
+
 # Apply Markdown list normalization steps in sequence.
 def normalize_markdown_lists(text: str) -> str:
     text = ensure_blank_line_before_top_level_lists(text)
     text = normalize_nested_list_indentation(text)
     return text
+
 
 # This function adds id attributes to heading tags in the HTML, generating anchors based on the text content of the headings.
 def add_heading_ids(html_text: str) -> str:
@@ -440,6 +482,7 @@ def add_heading_ids(html_text: str) -> str:
 
     return re.sub(r"<h([1-6])([^>]*)>(.*?)</h\1>", repl, html_text, flags=re.S)
 
+
 # This function builds the HTML for the table of contents by extracting headings from
 # the body HTML and creating a list of links to those headings.
 def build_toc_html(body_html: str) -> str:
@@ -464,6 +507,7 @@ def build_toc_html(body_html: str) -> str:
 
 def load_template(path: Path) -> str:
     return path.read_text(encoding="utf-8")
+
 
 # This function determines the context for rendering a page based on its relative path.
 # If the path indicates that it's part of the draft section, it sets the context accordingly,
@@ -504,6 +548,7 @@ def page_context(rel: str) -> dict[str, str | bool]:
 </div>
 """,
     }
+
 
 # This function takes the template and various pieces of content and context, and renders the
 # final HTML page by replacing placeholders in the template with the provided content.

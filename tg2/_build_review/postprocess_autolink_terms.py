@@ -90,10 +90,21 @@ def normalize_ws(s: str) -> str:
 
 
 def safe_title(s: str) -> str:
+    # Make generated markdown link titles conservative and parser-safe:
+    # - collapse whitespace
+    # - decode entities
+    # - remove control characters
+    # - replace double quotes since titles are emitted in double quotes
+    # - soften angle brackets/backticks which can make later markdown post-processing brittle
     s = normalize_ws(html.unescape(s))
+    s = re.sub(r"[\x00-\x1F\x7F]", " ", s)
+    s = s.replace('"', "'")
+    s = s.replace("`", "'")
+    s = s.replace("<", "(").replace(">", ")")
+    s = normalize_ws(s)
     if len(s) > TITLE_MAX_CHARS:
         s = s[: TITLE_MAX_CHARS - 1].rstrip() + "…"
-    return s.replace('"', "'")
+    return s
 
 
 def termlist_anchor(prefix: str, local_name: str) -> str:
@@ -421,7 +432,7 @@ def link_vocab_first_inline_qname_per_file(
         seen.add(key)
         if token.startswith(qt.qname):
             return f"[{qt.qname}](<{href_rel}> \"{qt.definition}\")"
-        else:	
+        else:
             return f"`{token}` ([{qt.qname}](<{href_rel}> \"{qt.definition}\"))"
 
     return INLINE_CODE_RE.sub(repl, text)

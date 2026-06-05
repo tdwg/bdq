@@ -225,7 +225,7 @@ In any technical treatment of the BDQ standard, a precise reference to a class o
 
 ### 2.1 Independence (normative)
 
-[Test](<../../../index.md#glossary_Test> "A composition of a `bdqffdq:DataQualityNeed` with a `bdqffdq:DataQualityMethod` that links it to an instance of a `bdqffdq:Specification`, these instances being composed of `InformationElements`, `Arguments`, and `Param…") implementations SHOULD be independent of how data are stored and transported, data serializations, and the framework or environment in which the Tests are being executed. 
+[Test](<../../../index.md#glossary_Test> "A composition of a 'bdqffdq:DataQualityNeed' with a 'bdqffdq:DataQualityMethod' that links it to an instance of a 'bdqffdq:Specification', these instances being composed of 'InformationElements', 'Arguments', and 'Param…") implementations SHOULD be independent of how data are stored and transported, data serializations, and the framework or environment in which the Tests are being executed. 
 
 ### 2.2 The Concept of "Empty" in the BDQ Standard (normative)
 
@@ -507,7 +507,7 @@ When interpretations of strings containing [Roman numerals](<../../../index.md#g
 
 Whitespace refers to characters such as spaces and tabs that affect rendering of printed or displayed output, but which themselves are not printed (see the [Glossary](../../../index.md#6-glossary-non-normative)). 
 
-A field that only includes [whitespace](<../../../index.md#glossary_whitespace> "Characters such as spaces and tabs that affect rendering of printed or displayed output, but which themselves are not printed. 1) A field that only includes whitespace is treated as `bdqval:Empty`. 2) In `bdqffdq:Valida…") MUST be treated as `bdqval:Empty`.
+A field that only includes [whitespace](<../../../index.md#glossary_whitespace> "Characters such as spaces and tabs that affect rendering of printed or displayed output, but which themselves are not printed. 1) A field that only includes whitespace is treated as 'bdqval:Empty'. 2) In 'bdqffdq:Valida…") MUST be treated as `bdqval:Empty`.
 
 In [bdqffdq:Validation](<../../list/bdqffdq/index.md#Validation> "A bdqffdq:DataQualityNeed that expresses how data may be evaluated for fitness for use.") Tests that require the lookup of a `bdqval:sourceAuthority`, leading and/or trailing whitespace may cause the Test to return a NOT_COMPLIANT result as no preprocessing is performed on the data, and the literal value, with leading or trailing whitespace is not exactly matched in the `sourceAuthority`. This behavior MAY be subject to the internals and behavior of external source authorities, and may not be under the control of Test implementers. Leading and trailing whitespaces SHOULD be stripped out in a subsequent [bdqffdq:Amendment](<../../list/bdqffdq/index.md#Amendment> "A bdqffdq:DataQualityNeed that expresses how proposals may be made to improve the fitness for use of data.") Tests. When the same `bdqffdq:Validation` Test is re-run in a post-amendment phase with the proposed changes applied to its inputs, COMPLIANT results would be expected (if the value matches a value in the `sourceAuthority`).
 
