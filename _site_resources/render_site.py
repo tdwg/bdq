@@ -24,7 +24,12 @@ from pygments.formatters import HtmlFormatter
 # the target URL, and the suffix (the closing parenthesis).
 # It allows for optional whitespace around the URL and supports angle-bracketed URLs as well.
 INLINE_LINK_RE = re.compile(r'(!?\[[^\]]*\]\()([^)]+)(\))')
+
+# This regex matches HTML attributes for href and src, capturing the prefix (up to the opening quote),
 HTML_HREF_RE = re.compile(r'(\b(?:href|src)=["\'])([^"\']+)(["\'])', re.IGNORECASE)
+
+# This regex matches bare URLs in the text, capturing the URL itself. It looks for http:// or https:// followed by non-whitespace characters,
+BARE_URL_RE = re.compile(r'(?P<url>https?://[^\s<>()]+[^\s<>().,;:!?])')
 
 EMOJI_MAP = {
     ":green_book:": "📗",
@@ -102,6 +107,60 @@ def rewrite_html_links(text: str) -> str:
         return f"{prefix}{rewrite_target(target.strip())}{suffix}"
 
     return HTML_HREF_RE.sub(repl, text)
+
+def linkify_bare_urls_in_line(line: str) -> str:
+    if "http://" not in line and "https://" not in line:
+        return line
+
+    parts = re.split(r'(`[^`]*`)', line)
+    linked_parts = []
+
+    for part in parts:
+        if part.startswith("`") and part.endswith("`"):
+            linked_parts.append(part)
+            continue
+
+        def repl(match):
+            url = match.group("url")
+            prefix = part[:match.start()]
+            if prefix.endswith("](") or prefix.endswith('href="') or prefix.endswith("href='"):
+                return url
+            return f'[{url}]({url})'
+
+        new_part = BARE_URL_RE.sub(repl, part)
+        linked_parts.append(new_part)
+
+    return "".join(linked_parts)
+
+
+def linkify_bare_urls(text: str) -> str:
+    lines = text.splitlines()
+    result = []
+
+    fenced_re = re.compile(r"^([ \t]*)(```|~~~)")
+    in_fence = False
+    fence_marker = None
+
+    for line in lines:
+        fence_match = fenced_re.match(line)
+        if fence_match:
+            marker = fence_match.group(2)
+            if not in_fence:
+                in_fence = True
+                fence_marker = marker
+            elif marker == fence_marker:
+                in_fence = False
+                fence_marker = None
+            result.append(line)
+            continue
+
+        if in_fence:
+            result.append(line)
+            continue
+
+        result.append(linkify_bare_urls_in_line(line))
+
+    return "\n".join(result)
 
 # A simple function to replace emoji shortcodes with their corresponding Unicode characters.
 def replace_emoji_shortcodes(text: str) -> str:
@@ -435,6 +494,7 @@ def main() -> None:
 
         if path.suffix == ".md":
             text = normalize_markdown_lists(text)
+            text = linkify_bare_urls(text)
 
         path.write_text(text, encoding="utf-8")
 
