@@ -41,15 +41,16 @@ body {
 }
 
 .site-logo-link {
-  display: inline-flex;
+ display: inline-flex;
   flex: 0 0 auto;
   align-items: center;
 }
 
 .site-logo {
-  width: 100px;
-  height: auto;
+  width: 200px;
+  height: 84px;
   display: block;
+  margin-top: 1rem;
 }
 
 .page-header-text {
@@ -246,6 +247,8 @@ body {
   }
 
   .site-logo {
-    width: 84px;
+    width: 100px;
+    height: 42px;
+    margin-top: 0.5rem;
   }
 }
