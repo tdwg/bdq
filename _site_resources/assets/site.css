@@ -4,7 +4,8 @@
   --bdq-link: #0969da;
   --bdq-border: #d0d7de;
   --bdq-muted: #586069;
-  --bdq-bg-soft: rgba(129, 139, 152, 0.12);
+  --bdq-bg-soft: #f6f8fa;
+  --bdq-bg-soft-2: rgba(129, 139, 152, 0.12);
   --bdq-review: #c0392b;
   --bdq-text: #24292f;
 }
@@ -41,7 +42,7 @@ body {
 }
 
 .site-logo-link {
- display: inline-flex;
+  display: inline-flex;
   flex: 0 0 auto;
   align-items: center;
 }
@@ -195,7 +196,7 @@ body {
 
 .doc-content code {
   padding: 0.1rem 0.3rem;
-  background: var(--bdq-bg-soft);
+  background: var(--bdq-bg-soft-2);
   border-radius: 0.25rem;
 }
 
