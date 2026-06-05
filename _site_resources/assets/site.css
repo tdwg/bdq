@@ -281,5 +281,6 @@ body {
   .site-logo {
     width: 100px;
     height: 42px;
+    margin-top: 0.5rem;
   }
 }
