@@ -6,7 +6,7 @@
 Data Quality Dimension Controlled Vocabulary List of Terms
 
 **Date version issued**<br>
-2025-05-10
+2026-06-03
 
 **Date created**<br>
 2025-05-10
@@ -18,12 +18,13 @@ Data Quality Dimension Controlled Vocabulary List of Terms
 bdqdim
 
 **This version**<br>
-<https://rs.tdwg.org/bdqdim/terms/2025-05-10>
+<https://rs.tdwg.org/bdqdim/terms/2026-06-03>
 
 **Latest version**<br>
 <https://rs.tdwg.org/bdqdim/terms/>
 
 **Previous version**<br>
+
 **Abstract**<br>
 This document is a reference for the BDQ standard. It covers the vocabulary terms that are types of bdqffdq:DataQualityDimension (originally defined in Veiga 2016 and Veiga et al. 2017) and form the controlled vocabulary for bdqffdq:hasDataQualityDimension.
 
@@ -34,7 +35,7 @@ This document is a reference for the BDQ standard. It covers the vocabulary term
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 **Bibliographic citation**<br>
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Data Quality Dimension Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqdim/terms/2025-05-10>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. Data Quality Dimension Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqdim/terms/2026-06-03>
 
 **Status**<br>
 Draft Standard for Review
@@ -500,7 +501,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Data Quality Dimension Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqdim/terms/2025-05-10>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. Data Quality Dimension Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqdim/terms/2026-06-03>
 
 **Biodiversity Information Standards (TDWG)**
 

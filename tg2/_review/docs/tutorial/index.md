@@ -8,7 +8,7 @@
 Tutorial: Creating a New Test using the BDQ Standard
 
 **Date version issued**<br>
-2026-03-20
+2026-06-03
 
 **Date created**<br>
 2026-03-20
@@ -17,7 +17,7 @@ Tutorial: Creating a New Test using the BDQ Standard
 <http://example.org/to_be_determined>
 
 **This version**<br>
-<https://bdq.tdwg.org/to_be_determined2026-03-20>
+<https://bdq.tdwg.org/to_be_determined2026-06-03>
 
 **Latest version**<br>
 <https://bdq.tdwg.org/to_be_determined>
@@ -34,7 +34,7 @@ This document provides information supplementary to the BDQ standard, describing
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 **Bibliographic citation**<br>
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. Tutorial: Creating a New Test using the BDQ Standard. Biodiversity Information Standards (TDWG). <https://bdq.tdwg.org/to_be_determined2026-03-20>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. Tutorial: Creating a New Test using the BDQ Standard. Biodiversity Information Standards (TDWG). <https://bdq.tdwg.org/to_be_determined2026-06-03>
 
 **Status**<br>
 Draft Standard for Review
@@ -1485,7 +1485,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-[TDWG](<../../index.md#glossary_TDWG> "[Biodiversity Information Standards](https://www.tdwg.org/standards/sds/)") Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. Tutorial: Creating a New Test using the BDQ Standard. Biodiversity Information Standards (TDWG). <https://bdq.tdwg.org/to_be_determined2026-03-20>
+[TDWG](<../../index.md#glossary_TDWG> "[Biodiversity Information Standards](https://www.tdwg.org/standards/sds/)") Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. Tutorial: Creating a New Test using the BDQ Standard. Biodiversity Information Standards (TDWG). <https://bdq.tdwg.org/to_be_determined2026-06-03>
 
 **Biodiversity Information Standards (TDWG)**
 

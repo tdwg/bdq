@@ -69,4 +69,4 @@ comment: 'Draft Standard for Review'
 # This value will automatically get updated from the date_issued value in config.yaml if the document
 # is a list of terms document. For other types of documents, it is set from the general_configuration.yaml
 # file.
-doc_modified: '2026-04-19'
+doc_modified: '2026-06-03'

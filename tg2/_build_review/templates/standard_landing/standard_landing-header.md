@@ -478,8 +478,8 @@ The São Paulo Research Foundation (FAPESP), the Universidade de São Paulo (USP
 We recognize four people as authors of the standard, having contributed consistently over the last decade and having been heavily engaged in writing the BDQ Test Descriptions and the documentation for the BDQ standard.
 
 - **Lee Belbin (Blatant Fabrications Pty Ltd)**: Convener of TDWG Data Quality Task Group 2 (Data Quality Tests and Assertions); Test descriptions; author of the BDQ standard documents; Test Conformance Testing Data.
-- **Arthur D Chapman (Australian Biodiversity Information Services)**: Co-convener of the TDWG Data Quality Interest Group; Test descriptions; author of the BDQ standard documents; vocabularies. 
-- **Paul J Morris (Museum of Comparative Zoology, Harvard University)**: Test descriptions; Fitness For Use Framework ontology; Java Test implementations in filteredpush packages; author of the BDQ standard documents; Test Conformance Testing Data. 
+- **Arthur D. Chapman (Australian Biodiversity Information Services)**: Co-convener of the TDWG Data Quality Interest Group; Test descriptions; author of the BDQ standard documents; vocabularies. 
+- **Paul J. Morris (Museum of Comparative Zoology, Harvard University)**: Test descriptions; Fitness For Use Framework ontology; Java Test implementations in filteredpush packages; author of the BDQ standard documents; Test Conformance Testing Data. 
 - **John Wieczorek (Rauthiflor LLC)**: Test descriptions; Test implementations; author of the BDQ standard documents; Darwin Core liaison.
 
 #### 5.2.2 Contributors (non-normative)

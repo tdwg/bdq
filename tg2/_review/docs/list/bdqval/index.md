@@ -6,7 +6,7 @@
 BDQ Controlled Vocabulary List of Terms
 
 **Date version issued**<br>
-2025-05-10
+2026-06-03
 
 **Date created**<br>
 2025-05-10
@@ -18,12 +18,13 @@ BDQ Controlled Vocabulary List of Terms
 bdqval
 
 **This version**<br>
-<http://rs.tdwg.org/bdqval/terms/2025-05-10>
+<http://rs.tdwg.org/bdqval/terms/2026-06-03>
 
 **Latest version**<br>
 <http://rs.tdwg.org/bdqval/terms/>
 
 **Previous version**<br>
+
 **Abstract**<br>
 This document is a reference for the BDQ standard. It covers some terms used in Test Specifications, and especially values used as bdqffdq:Parameters.
 
@@ -34,7 +35,7 @@ This document is a reference for the BDQ standard. It covers some terms used in 
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 **Bibliographic citation**<br>
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. BDQ Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqval/terms/2025-05-10>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqval/terms/2026-06-03>
 
 **Status**<br>
 Draft Standard for Review
@@ -1217,7 +1218,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. BDQ Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqval/terms/2025-05-10>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqval/terms/2026-06-03>
 
 **Biodiversity Information Standards (TDWG)**
 

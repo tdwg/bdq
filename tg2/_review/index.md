@@ -22,13 +22,13 @@ Draft Standard for Review
 <http://example.org/to_be_determined>
 
 **Date version issued**<br>
-2025-05-10
+2026-06-03
 
 **Date created**<br>
 2025-05-10
 
 **This version**<br>
-<http://rs.tdwg.org/bdqffdq/2025-05-10>
+<http://rs.tdwg.org/bdqffdq/2026-06-03>
 
 **Latest version**<br>
 <http://rs.tdwg.org/bdqffdq/>
@@ -36,7 +36,7 @@ Draft Standard for Review
 **Previous version**<br>
 
 **Bibliographic citation**<br>
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. The Biodiversity Data Quality (BDQ) Standard. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqffdq/2025-05-10>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. The Biodiversity Data Quality (BDQ) Standard. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqffdq/2026-06-03>
 
 **Abstract**<br>
 This is the landing and overview page for the **Biodiversity Data Quality (BDQ)** standard.<br>  BDQ is a standard maintained by the Biodiversity Data Quality Maintenance Interest Group (to be constituted) and designed to facilitate the consistent development and use of a set of biodiversity data quality tests and assertions. The standard consists of vocabularies needed to define the tests, a guide to support the implementation of tests, a guide to support the interpretation of outputs of implemented tests, test data and expected responses from tests against this data to validate implemented tests.
@@ -527,8 +527,8 @@ The São Paulo Research Foundation (FAPESP), the Universidade de São Paulo (USP
 We recognize four people as authors of the standard, having contributed consistently over the last decade and having been heavily engaged in writing the BDQ Test Descriptions and the documentation for the BDQ standard.
 
 - **Lee Belbin (Blatant Fabrications Pty Ltd)**: Convener of TDWG Data Quality Task Group 2 (Data Quality Tests and Assertions); Test descriptions; author of the BDQ standard documents; Test Conformance Testing Data.
-- **Arthur D Chapman (Australian Biodiversity Information Services)**: Co-convener of the TDWG Data Quality Interest Group; Test descriptions; author of the BDQ standard documents; vocabularies. 
-- **Paul J Morris (Museum of Comparative Zoology, Harvard University)**: Test descriptions; Fitness For Use Framework ontology; Java Test implementations in filteredpush packages; author of the BDQ standard documents; Test Conformance Testing Data. 
+- **Arthur D. Chapman (Australian Biodiversity Information Services)**: Co-convener of the TDWG Data Quality Interest Group; Test descriptions; author of the BDQ standard documents; vocabularies. 
+- **Paul J. Morris (Museum of Comparative Zoology, Harvard University)**: Test descriptions; Fitness For Use Framework ontology; Java Test implementations in filteredpush packages; author of the BDQ standard documents; Test Conformance Testing Data. 
 - **John Wieczorek (Rauthiflor LLC)**: Test descriptions; Test implementations; author of the BDQ standard documents; Darwin Core liaison.
 
 #### 5.2.2 Contributors (non-normative)
@@ -753,7 +753,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. The Biodiversity Data Quality (BDQ) Standard. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqffdq/2025-05-10>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. The Biodiversity Data Quality (BDQ) Standard. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqffdq/2026-06-03>
 
 **Biodiversity Information Standards (TDWG)**
 

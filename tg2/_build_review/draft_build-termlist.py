@@ -770,23 +770,28 @@ for term in termLists:
         ## current_iri,version_iri
         ## http://rs.tdwg.org/abcd/doc/primer/,http://rs.tdwg.org/abcd/doc/primer/2006-07-27
         versions_data_url = githubBaseUri + 'docs/docs-versions.csv'
-        versions_list_df = pd.read_csv(versions_data_url, na_filter=False)
-        # Slice all rows for versions of this document.
-        matching_versions = versions_list_df[versions_list_df['current_iri']==document_configuration_yaml['current_iri']]
-        # Sort the matching versions by version IRI in descending order so that the most recent version is first.
-        matching_versions = matching_versions.sort_values(by=['version_iri'], ascending=[False])
-        # The previous version is the second row in the dataframe (row 1).
-        # The version IRI is in the second column (column 1).
-        most_recent_version_iri = matching_versions.iat[1, 1]
-        #print(most_recent_version_iri)
-    
-        # Insert the previous version information into the header
-        previous_version_metadata_string = '''Previous version
-    : <''' + most_recent_version_iri + '''>
-    
-    '''
-        # Insert the previous version information into the designated slot.
-        header = header.replace('{previous_version_slot}\n\n', previous_version_metadata_string)
+        try: 
+            versions_list_df = pd.read_csv(versions_data_url, na_filter=False)
+            # Slice all rows for versions of this document.
+            matching_versions = versions_list_df[versions_list_df['current_iri']==document_configuration_yaml['current_iri']]
+            # Sort the matching versions by version IRI in descending order so that the most recent version is first.
+            matching_versions = matching_versions.sort_values(by=['version_iri'], ascending=[False])
+            # The previous version is the second row in the dataframe (row 1).
+            # The version IRI is in the second column (column 1).
+            most_recent_version_iri = matching_versions.iat[1, 1]
+            #print(most_recent_version_iri)
+        
+            # Insert the previous version information into the header
+            previous_version_metadata_string = '''Previous version
+        : <''' + most_recent_version_iri + '''>
+        
+        '''
+            # Insert the previous version information into the designated slot.
+            header = header.replace('{previous_version_slot}\n\n', previous_version_metadata_string)
+        except:	
+            # Draft standard not approved, so no docs-versions.csv file
+            # Treat as if there was no previous version, remove the slot from the header.
+            header = header.replace('{previous_version_slot}\n\n', '\n')
     else:
         # If there was no previous version, remove the slot from the header.
         header = header.replace('{previous_version_slot}\n\n', '')

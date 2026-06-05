@@ -8,7 +8,7 @@
 Fitness For Use Framework Ontology: Concepts and Use
 
 **Date version issued**<br>
-2025-05-10
+2026-06-03
 
 **Date created**<br>
 2025-05-10
@@ -22,7 +22,7 @@ Fitness For Use Framework Ontology: Concepts and Use
 -->
 
 **This version**<br>
-<https://rs.tdwg.org/bdq/doc/bdqffdq2025-05-10>
+<https://rs.tdwg.org/bdq/doc/bdqffdq2026-06-03>
 
 **Latest version**<br>
 <https://rs.tdwg.org/bdq/doc/bdqffdq>
@@ -39,7 +39,7 @@ This document is a guide for the BDQ standard, describing the organization of th
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 **Bibliographic citation**<br>
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Fitness For Use Framework Ontology: Concepts and Use. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdq/doc/bdqffdq2025-05-10>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. Fitness For Use Framework Ontology: Concepts and Use. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdq/doc/bdqffdq2026-06-03>
 
 **Status**<br>
 Draft Standard for Review
@@ -2764,7 +2764,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2025. Fitness For Use Framework Ontology: Concepts and Use. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdq/doc/bdqffdq2025-05-10>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. Fitness For Use Framework Ontology: Concepts and Use. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdq/doc/bdqffdq2026-06-03>
 
 **Biodiversity Information Standards (TDWG)**
 
