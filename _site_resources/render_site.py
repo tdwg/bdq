@@ -21,11 +21,6 @@ from pygments.formatters import HtmlFormatter
 # @author GitHub Copilot (GPT-5.4), with guidance and manual adjustments by @chicoreus Paul J. Morris.
 #
 
-# This regex matches markdown links and images, capturing the prefix (up to the opening parenthesis),
-# the content inside the parentheses, and the suffix (the closing parenthesis).
-# The parenthesized content is parsed separately so that link destinations with optional titles are handled correctly.
-INLINE_LINK_RE = re.compile(r'(!?\[[^\]]*\]\()([^)]+)(\))')
-
 # This regex matches HTML attributes for href and src, capturing the prefix (up to the opening quote),
 # the target value, and the closing quote.
 HTML_HREF_RE = re.compile(r'(\b(?:href|src)=["\'])([^"\']+)(["\'])', re.IGNORECASE)
@@ -163,6 +158,18 @@ def parse_markdown_link_target(raw_target: str) -> tuple[str, str | None]:
             return dest, rest or None
         return s, None
 
+    # Walk from the end looking for a plausible quoted title.
+    if len(s) >= 2 and s[-1] in {'"', "'"}:
+        quote = s[-1]
+        i = len(s) - 2
+        while i >= 0:
+            if s[i] == quote and (i == 0 or s[i - 1] != "\\"):
+                maybe_dest = s[:i].rstrip()
+                maybe_title = s[i:].strip()
+                if maybe_dest:
+                    return maybe_dest, maybe_title
+            i -= 1
+
     m = re.match(r'^(\S+)(?:\s+(.+))?$', s)
     if not m:
         return s, None
@@ -180,13 +187,158 @@ def format_markdown_link_target(dest: str, title: str | None) -> str:
     return dest
 
 
-# This function rewrites markdown links in the text, converting .md links to .html and handling angle-bracketed links as well.
-# It also suppresses links to BDQ rs.tdwg.org IRIs when BDQ_RS_MODE is "plain", leaving only their visible text.
-# It preserves optional markdown link titles.
-# It does not cover [][] reference-style links, but those are not used in the BDQ content and can be added later if needed.
+# This helper finds the index of the matching closing ] for a markdown link/image label starting at start_idx.
+# It supports nested square brackets in the label text.
+def find_matching_square_bracket(text: str, start_idx: int) -> int:
+    depth = 0
+    i = start_idx
+    while i < len(text):
+        ch = text[i]
+        if ch == "[":
+            depth += 1
+        elif ch == "]":
+            depth -= 1
+            if depth == 0:
+                return i
+        i += 1
+    return -1
+
+
+# This helper finds the index of the matching closing ) for a markdown inline link destination/title block.
+# It supports:
+# - nested parentheses in bare destinations
+# - angle-bracket destinations <...>
+# - quoted titles after the destination
+# It is a lightweight scanner, not a full CommonMark parser, but is much more robust than a simple regex.
+def find_matching_paren(text: str, start_idx: int) -> int:
+    depth = 0
+    in_angle = False
+    in_quote: str | None = None
+    i = start_idx
+
+    while i < len(text):
+        ch = text[i]
+
+        if in_quote is not None:
+            if ch == in_quote and (i == 0 or text[i - 1] != "\\"):
+                in_quote = None
+            i += 1
+            continue
+
+        if in_angle:
+            if ch == ">":
+                in_angle = False
+            i += 1
+            continue
+
+        if ch == "<":
+            in_angle = True
+        elif ch in {'"', "'"}:
+            in_quote = ch
+        elif ch == "(":
+            depth += 1
+        elif ch == ")":
+            depth -= 1
+            if depth == 0:
+                return i
+
+        i += 1
+
+    return -1
+
+
+# This function scans a line of markdown and returns spans for inline links and images of the form
+# [label](target) and ![alt](target). It is used both for rewriting links and for masking existing
+# links before bare-URL processing, so the same notion of "existing link" is used consistently.
+def find_markdown_inline_spans(text: str) -> list[tuple[int, int]]:
+    spans: list[tuple[int, int]] = []
+    i = 0
+
+    while i < len(text):
+        start = i
+
+        if text[i] == "!" and i + 1 < len(text) and text[i + 1] == "[":
+            label_start = i + 1
+        elif text[i] == "[":
+            label_start = i
+        else:
+            i += 1
+            continue
+
+        label_end = find_matching_square_bracket(text, label_start)
+        if label_end == -1:
+            i += 1
+            continue
+
+        if label_end + 1 >= len(text) or text[label_end + 1] != "(":
+            i = label_end + 1
+            continue
+
+        paren_start = label_end + 1
+        paren_end = find_matching_paren(text, paren_start)
+        if paren_end == -1:
+            i = label_end + 1
+            continue
+
+        spans.append((start, paren_end + 1))
+        i = paren_end + 1
+
+    return spans
+
+
+# This function masks existing markdown inline links/images in a text fragment so subsequent regex-based
+# processing does not rewrite their destinations or visible text a second time.
+def mask_markdown_inline_spans(text: str) -> tuple[str, list[str]]:
+    spans = find_markdown_inline_spans(text)
+    if not spans:
+        return text, []
+
+    masked_parts: list[str] = []
+    originals: list[str] = []
+    cursor = 0
+
+    for idx, (start, end) in enumerate(spans):
+        masked_parts.append(text[cursor:start])
+        originals.append(text[start:end])
+        masked_parts.append(f"@@LINK{idx}@@")
+        cursor = end
+
+    masked_parts.append(text[cursor:])
+    return "".join(masked_parts), originals
+
+
+# This function restores previously masked markdown inline links/images.
+def unmask_markdown_inline_spans(text: str, originals: list[str]) -> str:
+    if not originals:
+        return text
+    return re.sub(r"@@LINK(\d+)@@", lambda m: originals[int(m.group(1))], text)
+
+
+# This function rewrites markdown inline links/images in a line using the inline scanner, converting .md links to .html
+# and handling angle-bracketed links as well. It also suppresses links to BDQ rs.tdwg.org IRIs when BDQ_RS_MODE is "plain",
+# leaving only their visible text. It preserves optional markdown link titles.
 def rewrite_markdown_links(text: str) -> str:
-    def repl(match):
-        prefix, raw_target, suffix = match.groups()
+    spans = find_markdown_inline_spans(text)
+    if not spans:
+        return text
+
+    out: list[str] = []
+    cursor = 0
+
+    for start, end in spans:
+        out.append(text[cursor:start])
+        token = text[start:end]
+
+        m = re.match(r'(?P<prefix>!?\[.*\]\()(?P<raw_target>.*)(?P<suffix>\))$', token, flags=re.S)
+        if not m:
+            out.append(token)
+            cursor = end
+            continue
+
+        prefix = m.group("prefix")
+        raw_target = m.group("raw_target")
+        suffix = m.group("suffix")
+
         label_match = MARKDOWN_LINK_LABEL_RE.match(prefix)
         label = label_match.group(1) if label_match else ""
 
@@ -195,17 +347,21 @@ def rewrite_markdown_links(text: str) -> str:
         if dest.startswith("<") and dest.endswith(">"):
             inner = dest[1:-1].strip()
             if is_bdq_rs_uri(inner) and BDQ_RS_MODE == "plain":
-                return label if label else inner
-            rewritten_inner = rewrite_target(inner)
-            return f"{prefix}{format_markdown_link_target(f'<{rewritten_inner}>', title)}{suffix}"
+                out.append(label if label else inner)
+            else:
+                rewritten_inner = rewrite_target(inner)
+                out.append(f"{prefix}{format_markdown_link_target(f'<{rewritten_inner}>', title)}{suffix}")
+        else:
+            if is_bdq_rs_uri(dest) and BDQ_RS_MODE == "plain":
+                out.append(label if label else dest)
+            else:
+                rewritten_dest = rewrite_target(dest)
+                out.append(f"{prefix}{format_markdown_link_target(rewritten_dest, title)}{suffix}")
 
-        if is_bdq_rs_uri(dest) and BDQ_RS_MODE == "plain":
-            return label if label else dest
+        cursor = end
 
-        rewritten_dest = rewrite_target(dest)
-        return f"{prefix}{format_markdown_link_target(rewritten_dest, title)}{suffix}"
-
-    return INLINE_LINK_RE.sub(repl, text)
+    out.append(text[cursor:])
+    return "".join(out)
 
 
 # Similar logic to rewrite_markdown_links, but for HTML attributes like href and src.
@@ -224,6 +380,8 @@ def rewrite_html_links(text: str) -> str:
 
 # This function converts bare URLs in a plain Markdown text line into explicit Markdown links.
 # It skips inline code spans delimited by backticks so that URLs inside code are not changed.
+# It masks existing Markdown links before processing so URLs already present as link destinations
+# are not rewritten a second time.
 # It also suppresses linking for BDQ rs.tdwg.org IRIs in plain mode, leaving them visible as plain text.
 # This is useful because some bare URLs are not autolinked consistently by the Markdown parser in all contexts.
 def linkify_bare_urls_in_markdown_line(line: str) -> str:
@@ -238,6 +396,8 @@ def linkify_bare_urls_in_markdown_line(line: str) -> str:
             linked_parts.append(part)
             continue
 
+        masked, originals = mask_markdown_inline_spans(part)
+
         def repl(match):
             url = match.group("url")
             if is_bdq_rs_uri(url) and BDQ_RS_MODE == "plain":
@@ -245,7 +405,9 @@ def linkify_bare_urls_in_markdown_line(line: str) -> str:
             rewritten_url = rewrite_target(url)
             return f'[{rewritten_url}]({rewritten_url})'
 
-        linked_parts.append(BARE_URL_RE.sub(repl, part))
+        masked = BARE_URL_RE.sub(repl, masked)
+        masked = unmask_markdown_inline_spans(masked, originals)
+        linked_parts.append(masked)
 
     return "".join(linked_parts)
 
