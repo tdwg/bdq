@@ -10,18 +10,18 @@ from urllib.parse import urlsplit, urlunsplit
 import markdown
 from pygments.formatters import HtmlFormatter
 
-# This script processes markdown and HTML files in the specified site root, rewriting links, replacing emoji shortcodes, for 
-# deployment of the Biodiversity Data Quality (BDQ) Interest Group and Standard documentation to bdq.tdwg.org. 
+# This script processes markdown and HTML files in the specified site root, rewriting links, replacing emoji shortcodes, for
+# deployment of the Biodiversity Data Quality (BDQ) Interest Group and Standard documentation to bdq.tdwg.org.
 # It converts markdown files to HTML, adds heading anchors, builds a table of contents, and renders the final pages using a provided HTML template.
 # It uses a provided HTML template to render the final pages, adding features like a table of contents and review banners for draft content.
-# 
+#
 # @see the workflow in .github/workflows/pages.yml for how this script is used in the GitHub Actions workflow to render the site on push.
 #
 # @author GitHub Copilot (GPT-5.4), with guidance and manual adjustments by @chicoreus Paul J. Morris.
 #
 
-# This regex matches markdown links and images, capturing the prefix (up to the opening parenthesis), 
-# the target URL, and the suffix (the closing parenthesis). 
+# This regex matches markdown links and images, capturing the prefix (up to the opening parenthesis),
+# the target URL, and the suffix (the closing parenthesis).
 # It allows for optional whitespace around the URL and supports angle-bracketed URLs as well.
 INLINE_LINK_RE = re.compile(r'(!?\[[^\]]*\]\()([^)]+)(\))')
 HTML_HREF_RE = re.compile(r'(\b(?:href|src)=["\'])([^"\']+)(["\'])', re.IGNORECASE)
@@ -181,6 +181,64 @@ def ensure_blank_line_before_top_level_lists(text: str) -> str:
         result.append(line)
 
     return "\n".join(result)
+
+# Python-Markdown is stricter than GitHub about nested list indentation.
+# Normalize nested list indentation to multiples of 4 spaces while preserving top-level items.
+def normalize_nested_list_indentation(text: str) -> str:
+    lines = text.splitlines()
+    result = []
+
+    unordered_re = re.compile(r"^([ \t]*)([*+-])(\s+.+)$")
+    ordered_re = re.compile(r"^([ \t]*)(\d+\.)(\s+.+)$")
+    fenced_re = re.compile(r"^([ \t]*)(```|~~~)")
+
+    in_fence = False
+    fence_marker = None
+
+    for line in lines:
+        fence_match = fenced_re.match(line)
+        if fence_match:
+            marker = fence_match.group(2)
+            if not in_fence:
+                in_fence = True
+                fence_marker = marker
+            elif marker == fence_marker:
+                in_fence = False
+                fence_marker = None
+            result.append(line)
+            continue
+
+        if in_fence:
+            result.append(line)
+            continue
+
+        m_unordered = unordered_re.match(line)
+        m_ordered = ordered_re.match(line)
+
+        if m_unordered:
+            indent, bullet, rest = m_unordered.groups()
+            indent_len = len(indent.replace("\t", "    "))
+            if indent_len > 0:
+                level = max(1, indent_len // 2)
+                indent = " " * (level * 4)
+            result.append(f"{indent}{bullet}{rest}")
+        elif m_ordered:
+            indent, marker, rest = m_ordered.groups()
+            indent_len = len(indent.replace("\t", "    "))
+            if indent_len > 0:
+                level = max(1, indent_len // 2)
+                indent = " " * (level * 4)
+            result.append(f"{indent}{marker}{rest}")
+        else:
+            result.append(line)
+
+    return "\n".join(result)
+
+# Apply Markdown list normalization steps in sequence.
+def normalize_markdown_lists(text: str) -> str:
+    text = ensure_blank_line_before_top_level_lists(text)
+    text = normalize_nested_list_indentation(text)
+    return text
 
 # This function adds id attributes to heading tags in the HTML, generating anchors based on the text content of the headings.
 def add_heading_ids(html_text: str) -> str:
@@ -357,7 +415,7 @@ def main() -> None:
         text = replace_emoji_shortcodes(text)
 
         if path.suffix == ".md":
-            text = ensure_blank_line_before_top_level_lists(text)
+            text = normalize_markdown_lists(text)
 
         path.write_text(text, encoding="utf-8")
 
