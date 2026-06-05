@@ -10,7 +10,19 @@ from urllib.parse import urlsplit, urlunsplit
 import markdown
 from pygments.formatters import HtmlFormatter
 
+# This script processes markdown and HTML files in the specified site root, rewriting links, replacing emoji shortcodes, for 
+# deployment of the Biodiversity Data Quality (BDQ) Interest Group and Standard documentation to bdq.tdwg.org. 
+# It converts markdown files to HTML, adds heading anchors, builds a table of contents, and renders the final pages using a provided HTML template.
+# It uses a provided HTML template to render the final pages, adding features like a table of contents and review banners for draft content.
+# 
+# @see the workflow in .github/workflows/pages.yml for how this script is used in the GitHub Actions workflow to render the site on push.
+#
+# @author GitHub Copilot (GPT-5.4), with guidance and manual adjustments by @chicoreus Paul J. Morris.
+#
 
+# This regex matches markdown links and images, capturing the prefix (up to the opening parenthesis), 
+# the target URL, and the suffix (the closing parenthesis). 
+# It allows for optional whitespace around the URL and supports angle-bracketed URLs as well.
 INLINE_LINK_RE = re.compile(r'(!?\[[^\]]*\]\()([^)]+)(\))')
 HTML_HREF_RE = re.compile(r'(\b(?:href|src)=["\'])([^"\']+)(["\'])', re.IGNORECASE)
 
@@ -34,7 +46,7 @@ EMOJI_MAP = {
     ":link:": "🔗",
 }
 
-# This function extracts the title for the page from the first level-1 heading in the markdown text, 
+# This function extracts the title for the page from the first level-1 heading in the markdown text,
 # stripping out any markdown link syntax. If no such heading is found, it returns a default title.
 def first_heading_title(text: str) -> str:
     def strip_markdown_links(s: str) -> str:
@@ -107,24 +119,64 @@ def slugify(text: str, *, preserve_case: bool = True) -> str:
     text = re.sub(r"\s+", "-", text)
     return text
 
-# python markdown with sane_lists extension is stricter than GitHub's renderer, and bullet point lists
-# may not be recognized as such if they directly follow paragraph text. 
-# This function ensures there is a blank line before lists.
-def ensure_blank_line_before_lists(text: str) -> str:
+# Python-Markdown with sane_lists is stricter than GitHub's renderer. A top-level list that directly
+# follows paragraph text may not be recognized as a list. This function inserts a blank line only
+# before top-level lists, preserving nested list structure.
+def ensure_blank_line_before_top_level_lists(text: str) -> str:
     lines = text.splitlines()
     result = []
 
-    bullet_re = re.compile(r"^\s*[*-]\s+")
-    numbered_re = re.compile(r"^\s*\d+\.\s+")
-    block_re = re.compile(r"^\s*(?:[*-]\s+|\d+\.\s+|$|<!--|```|~~~|#|>|[ \t]{4,})")
+    unordered_re = re.compile(r"^([ \t]*)([*+-])\s+.+$")
+    ordered_re = re.compile(r"^([ \t]*)\d+\.\s+.+$")
+    fenced_re = re.compile(r"^([ \t]*)(```|~~~)")
+    atx_heading_re = re.compile(r"^[ \t]{0,3}#{1,6}\s+")
+    blockquote_re = re.compile(r"^[ \t]{0,3}>\s?")
+    html_block_re = re.compile(r"^[ \t]*<[^>]+>")
+    blank_re = re.compile(r"^[ \t]*$")
 
-    for i, line in enumerate(lines):
-        if (bullet_re.match(line) or numbered_re.match(line)) and result:
-            prev = result[-1]
-            prev_stripped = prev.strip()
+    in_fence = False
+    fence_marker = None
 
-            if prev_stripped and not block_re.match(prev):
-                result.append("")
+    for line in lines:
+        fence_match = fenced_re.match(line)
+        if fence_match:
+            marker = fence_match.group(2)
+            if not in_fence:
+                in_fence = True
+                fence_marker = marker
+            elif marker == fence_marker:
+                in_fence = False
+                fence_marker = None
+            result.append(line)
+            continue
+
+        if in_fence:
+            result.append(line)
+            continue
+
+        unordered_match = unordered_re.match(line)
+        ordered_match = ordered_re.match(line)
+        is_list = unordered_match or ordered_match
+
+        if is_list:
+            indent = len((unordered_match or ordered_match).group(1))
+            is_top_level = indent == 0
+
+            if is_top_level and result:
+                prev = result[-1]
+                prev_stripped = prev.strip()
+
+                prev_is_block = (
+                    blank_re.match(prev)
+                    or atx_heading_re.match(prev)
+                    or blockquote_re.match(prev)
+                    or html_block_re.match(prev)
+                    or unordered_re.match(prev)
+                    or ordered_re.match(prev)
+                )
+
+                if prev_stripped and not prev_is_block:
+                    result.append("")
 
         result.append(line)
 
@@ -158,7 +210,7 @@ def add_heading_ids(html_text: str) -> str:
 
     return re.sub(r"<h([1-6])([^>]*)>(.*?)</h\1>", repl, html_text, flags=re.S)
 
-# This function builds the HTML for the table of contents by extracting headings from 
+# This function builds the HTML for the table of contents by extracting headings from
 # the body HTML and creating a list of links to those headings.
 def build_toc_html(body_html: str) -> str:
     headings = re.findall(r"<h([1-6])[^>]*id=[\"']([^\"']+)[\"'][^>]*>(.*?)</h\1>", body_html, flags=re.S)
@@ -183,8 +235,8 @@ def build_toc_html(body_html: str) -> str:
 def load_template(path: Path) -> str:
     return path.read_text(encoding="utf-8")
 
-# This function determines the context for rendering a page based on its relative path. 
-# If the path indicates that it's part of the draft section, it sets the context accordingly, 
+# This function determines the context for rendering a page based on its relative path.
+# If the path indicates that it's part of the draft section, it sets the context accordingly,
 # including different header titles and sidebar content. Otherwise, it returns the context for regular pages.
 # TODO: On ratification, /draft/ will move to /bdq/ and the logic here will need to be updated.
 def page_context(rel: str) -> dict[str, str | bool]:
@@ -223,8 +275,8 @@ def page_context(rel: str) -> dict[str, str | bool]:
 """,
     }
 
-# This function takes the template and various pieces of content and context, and renders the 
-# final HTML page by replacing placeholders in the template with the provided content. 
+# This function takes the template and various pieces of content and context, and renders the
+# final HTML page by replacing placeholders in the template with the provided content.
 # It also conditionally includes a review banner and a table of contents sidebar based on the context.
 def render_page(
     template: str,
@@ -305,7 +357,7 @@ def main() -> None:
         text = replace_emoji_shortcodes(text)
 
         if path.suffix == ".md":
-            text = ensure_blank_line_before_lists(text)
+            text = ensure_blank_line_before_top_level_lists(text)
 
         path.write_text(text, encoding="utf-8")
 
