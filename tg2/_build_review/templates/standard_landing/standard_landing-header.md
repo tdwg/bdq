@@ -364,7 +364,7 @@ Note: For each of the following documents the landing page IRI will resolve to t
 Note: **None of these links will work until deployment of the standard**, but they are included here to show the intended structure of the IRIs and to provide a complete list of the landing page, term list IRIs, and related RDF metadata documents for the standard.
 
 - **The Biodiversity Data Quality (BDQ) Standard** - Overview of the BDQ standard. This page. 
-  - [Standard IRI](https://www.tdwg.org/standards/nnnn/) redirects to [HTML](https://bdq.tdwg.org/)
+  - [Standard IRI](https://www.tdwg.org/standards/nnnn/) redirects to [HTML](https://bdq.tdwg.org/bdq/)
   - [RDF Metadata](https://rs.tdwg.org/bdq.ttl)
 - [**BDQ Tests Vocabulary (bdqtest:)**](https://bdq.tdwg.org/bdqtest/)  
   - [Vocabulary IRI](https://rs.tdwg.org/bdqtest/) redirects to [HTML Terms List](https://bdq.tdwg.org/bdqtest/terms/)

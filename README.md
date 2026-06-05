@@ -15,7 +15,7 @@ You can join the group's mailing list at http://lists.tdwg.org/mailman/listinfo/
 
 All Interest Group and Task Group documents are linked on the [**Interest Group's Wiki**.](https://github.com/tdwg/bdq/wiki)
 
-### Draft Standard 
+## Draft BDQ Standard 
 
 The Draft Biodiversity Data Quality (BDQ) Standard is currently a [draft under review](https://bdq.tdwg.org/draft/),
 
