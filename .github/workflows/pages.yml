@@ -89,8 +89,11 @@ jobs:
           rsync -a tg4/ site/tg4/
 
           # Draft publication area from generated tg2 review docs
-          rsync -a tg2/_review/ site/draft/
+          # Exclude the bdqtest QRG index.md — the pre-built QRG index.html is used instead.
+          rsync -a tg2/_review/ site/draft/ \
+            --exclude 'docs/terms/bdqtest/index.md'
 
+          ## TODO: Remove this once links have been removed
           # Alternate HTML publication path
           rsync -a terms/bdqtest/ site/draft/docs/terms/bdqtest-html/
 
@@ -113,6 +116,17 @@ jobs:
             --site-root site \
             --template _site_resources/templates/page.html
 
+      - name: Restore pre-built QRG index.html
+        shell: bash
+        run: |
+          set -euo pipefail
+          # render_site.py must not overwrite the hand-built QRG page.
+          # Copy the authoritative pre-built file back into both deployment paths.
+          cp tg2/_review/docs/terms/bdqtest/index.html \
+             site/draft/docs/terms/bdqtest/index.html
+          cp tg2/_review/docs/terms/bdqtest/index.html \
+             site/draft/docs/terms/bdqtest-html/index.html
+
       - name: Verify built output
         shell: bash
         run: |
@@ -127,6 +141,11 @@ jobs:
           test -f site/assets/img/tdwg-logo-short.svg
           test -f site/draft/vocabulary/bdqffdq.ttl
           test -f site/CNAME
+          # Confirm the pre-built QRG HTML is present at both publication paths
+          test -f site/draft/docs/terms/bdqtest/index.html
+          test -f site/draft/docs/terms/bdqtest-html/index.html
+          # Confirm the source index.md was NOT copied into the site tree
+          test ! -f site/draft/docs/terms/bdqtest/index.md
           find site -maxdepth 5 | sort
 
       - name: Upload Pages artifact
