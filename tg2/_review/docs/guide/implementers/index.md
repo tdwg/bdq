@@ -225,7 +225,7 @@ In any technical treatment of the BDQ standard, a precise reference to a class o
 
 ### 2.1 Independence (normative)
 
-[Test](<../../../index.md#glossary_Test> "A composition of a bdqffdq:DataQualityNeed with a bdqffdq:DataQualityMethod that links it to an instance of a bdqffdq:Specification, these instances being composed of InformationElements, Arguments, and Parameters.") implementations SHOULD be independent of how data are stored and transported, data serializations, and the framework or environment in which the Tests are being executed. 
+[Test](<../../../index.md#glossary_Test> "A composition of a bdqffdq:DataQualityNeed with a bdqffdq:DataQualityMethod that links it to an instance of a bdqffdq:Specification, these instances being composed of InformationElements, Arguments, and Parameters. See…") implementations SHOULD be independent of how data are stored and transported, data serializations, and the framework or environment in which the Tests are being executed. 
 
 ### 2.2 The Concept of "Empty" in the BDQ Standard (normative)
 
