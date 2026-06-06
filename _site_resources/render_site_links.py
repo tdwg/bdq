@@ -19,6 +19,22 @@ HTML_TAG_RE = re.compile(r'(<[^>]+>)')
 # This regex extracts the label text from a markdown link prefix like [label]( or ![alt](.
 MARKDOWN_LINK_LABEL_RE = re.compile(r'!?\[([^\]]*)\]\($')
 
+# Ordinary inline markdown links/images without nested ] in the label.
+# This covers the majority of BDQ content, including bold/emphasis and parentheses inside labels.
+SIMPLE_MARKDOWN_LINK_RE = re.compile(
+    r'(?P<prefix>!?\[[^\]]*\]\()(?P<target>[^)\s]+(?:\#[^) \t]+)?)(?P<suffix>\))'
+)
+
+# Angle-bracket destination form without title.
+SIMPLE_MARKDOWN_ANGLE_LINK_RE = re.compile(
+    r'(?P<prefix>!?\[[^\]]*\]\()<(?P<target>[^>]+)>(?P<suffix>\))'
+)
+
+# Inline markdown link with optional title after destination.
+SIMPLE_MARKDOWN_LINK_WITH_TITLE_RE = re.compile(
+    r'(?P<prefix>!?\[[^\]]*\]\()(?P<target><[^>]+>|[^)\s]+)(?P<ws>\s+)(?P<title>"[^"]*"|\'[^\']*\'|\([^\)]*\))(?P<suffix>\))'
+)
+
 # Links to rs.tdwg.org/bdq* should be handled specially until those resources are live.
 # For now, use "plain" so that such IRIs are shown as text and not rendered as clickable links.
 # Later this can be changed to "rewrite" for a test-rs base, or "keep" when rs.tdwg.org is ready.
@@ -85,11 +101,15 @@ def rewrite_target(url: str) -> str:
     return urlunsplit(("", "", new_path, parts.query, parts.fragment))
 
 
-# This helper finds the index of the matching closing ] for a markdown link/image label starting at start_idx.
-# It supports nested square brackets in the label text.
+# This helper finds the index of the closing ] corresponding to the opening [ at start_idx.
+# It supports nested square brackets in link labels.
 def find_matching_square_bracket(text: str, start_idx: int) -> int:
-    depth = 0
-    i = start_idx
+    if start_idx >= len(text) or text[start_idx] != "[":
+        return -1
+
+    depth = 1
+    i = start_idx + 1
+
     while i < len(text):
         ch = text[i]
         if ch == "[":
@@ -99,26 +119,29 @@ def find_matching_square_bracket(text: str, start_idx: int) -> int:
             if depth == 0:
                 return i
         i += 1
+
     return -1
 
 
-# This helper finds the index of the matching closing ) for a markdown inline link destination/title block.
-# It supports:
-# - nested parentheses in bare destinations
+# This helper finds the matching closing ) for the opening ( at start_idx.
+# It scans only the destination/title block, not the label, and supports:
+# - nested parentheses in bare destinations/titles
 # - angle-bracket destinations <...>
 # - quoted titles after the destination
-# It is a lightweight scanner, not a full CommonMark parser, but is much more robust than a simple regex.
 def find_matching_paren(text: str, start_idx: int) -> int:
-    depth = 0
+    if start_idx >= len(text) or text[start_idx] != "(":
+        return -1
+
+    depth = 1
     in_angle = False
     in_quote: str | None = None
-    i = start_idx
+    i = start_idx + 1
 
     while i < len(text):
         ch = text[i]
 
         if in_quote is not None:
-            if ch == in_quote and (i == 0 or text[i - 1] != "\\"):
+            if ch == in_quote and text[i - 1] != "\\":
                 in_quote = None
             i += 1
             continue
@@ -145,19 +168,20 @@ def find_matching_paren(text: str, start_idx: int) -> int:
     return -1
 
 
-# This function scans a line of markdown and returns spans for inline links and images of the form
-# [label](target) and ![alt](target). It is used both for rewriting links and for masking existing
-# links before bare-URL processing, so the same notion of "existing link" is used consistently.
+# This function scans a string for inline Markdown links/images of the form
+# [label](target) and ![alt](target), returning spans that cover the entire link token.
+# It is intentionally limited to inline links/images and is used for masking existing links
+# before bare-URL rewriting.
 def find_markdown_inline_spans(text: str) -> list[tuple[int, int]]:
     spans: list[tuple[int, int]] = []
     i = 0
 
     while i < len(text):
-        start = i
-
         if text[i] == "!" and i + 1 < len(text) and text[i + 1] == "[":
+            start = i
             label_start = i + 1
         elif text[i] == "[":
+            start = i
             label_start = i
         else:
             i += 1
@@ -254,54 +278,69 @@ def format_markdown_link_target(dest: str, title: str | None) -> str:
     return dest
 
 
-# This function rewrites markdown inline links/images in a line using the inline scanner, converting .md links to .html
-# and handling angle-bracketed links as well. It also suppresses links to BDQ rs.tdwg.org IRIs when BDQ_RS_MODE is "plain",
-# leaving only their visible text. It preserves optional markdown link titles.
+# This function rewrites markdown links in the text, converting .md links to .html and handling angle-bracketed links as well.
+# It also suppresses links to BDQ rs.tdwg.org IRIs when BDQ_RS_MODE is "plain", leaving only their visible text.
+# It preserves optional markdown link titles.
 def rewrite_markdown_links(text: str) -> str:
-    spans = find_markdown_inline_spans(text)
-    if not spans:
-        return text
-
-    out: list[str] = []
-    cursor = 0
-
-    for start, end in spans:
-        out.append(text[cursor:start])
-        token = text[start:end]
-
-        open_paren = token.find("(")
-        if open_paren == -1 or not token.endswith(")"):
-            out.append(token)
-            cursor = end
-            continue
-
-        prefix = token[: open_paren + 1]
-        raw_target = token[open_paren + 1 : -1]
-        suffix = ")"
+    # First handle links with destination + title.
+    def repl_with_title(match):
+        prefix = match.group("prefix")
+        target = match.group("target")
+        ws = match.group("ws")
+        title = match.group("title")
+        suffix = match.group("suffix")
 
         label_match = MARKDOWN_LINK_LABEL_RE.match(prefix)
         label = label_match.group(1) if label_match else ""
 
-        dest, title = parse_markdown_link_target(raw_target)
-
-        if dest.startswith("<") and dest.endswith(">"):
-            inner = dest[1:-1].strip()
+        if target.startswith("<") and target.endswith(">"):
+            inner = target[1:-1].strip()
             if is_bdq_rs_uri(inner) and BDQ_RS_MODE == "plain":
-                out.append(label if label else inner)
-            else:
-                rewritten_inner = rewrite_target(inner)
-                out.append(f"{prefix}{format_markdown_link_target(f'<{rewritten_inner}>', title)}{suffix}")
-        else:
-            if is_bdq_rs_uri(dest) and BDQ_RS_MODE == "plain":
-                out.append(label if label else dest)
-            else:
-                rewritten_dest = rewrite_target(dest)
-                out.append(f"{prefix}{format_markdown_link_target(rewritten_dest, title)}{suffix}")
+                return label if label else inner
+            rewritten = rewrite_target(inner)
+            return f"{prefix}<{rewritten}>{ws}{title}{suffix}"
 
-        cursor = end
+        if is_bdq_rs_uri(target) and BDQ_RS_MODE == "plain":
+            return label if label else target
 
-    out.append(text[cursor:])
-    return "".join(out)
+        rewritten = rewrite_target(target)
+        return f"{prefix}{rewritten}{ws}{title}{suffix}"
+
+    text = SIMPLE_MARKDOWN_LINK_WITH_TITLE_RE.sub(repl_with_title, text)
+
+    # Then handle angle-bracket destinations without titles.
+    def repl_angle(match):
+        prefix = match.group("prefix")
+        target = match.group("target")
+        suffix = match.group("suffix")
+
+        label_match = MARKDOWN_LINK_LABEL_RE.match(prefix)
+        label = label_match.group(1) if label_match else ""
+
+        if is_bdq_rs_uri(target) and BDQ_RS_MODE == "plain":
+            return label if label else target
+
+        rewritten = rewrite_target(target.strip())
+        return f"{prefix}<{rewritten}>{suffix}"
+
+    text = SIMPLE_MARKDOWN_ANGLE_LINK_RE.sub(repl_angle, text)
+
+    # Finally handle ordinary destinations without titles.
+    def repl_simple(match):
+        prefix = match.group("prefix")
+        target = match.group("target")
+        suffix = match.group("suffix")
+
+        label_match = MARKDOWN_LINK_LABEL_RE.match(prefix)
+        label = label_match.group(1) if label_match else ""
+
+        if is_bdq_rs_uri(target) and BDQ_RS_MODE == "plain":
+            return label if label else target
+
+        rewritten = rewrite_target(target)
+        return f"{prefix}{rewritten}{suffix}"
+
+    return SIMPLE_MARKDOWN_LINK_RE.sub(repl_simple, text)
 
 
 # Similar logic to rewrite_markdown_links, but for HTML attributes like href and src.

@@ -311,3 +311,52 @@ def test_mini_document_mixed_cases():
     assert "See [https://example.org/info](https://example.org/info)." in out
     assert '<td>[DCMI Metadata Terms](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/). More info at <a href="https://example.org/more">https://example.org/more</a></td>' in out
     assert "SELECT * WHERE { ?s ?p <https://example.org/object> }" in out
+
+def test_find_markdown_inline_spans_bold_label_with_parentheses():
+    s = "[**Fitness For Use Framework Ontology List of Terms (bdqffdq:)**](docs/list/bdqffdq/index.md)"
+    spans = rs.find_markdown_inline_spans(s)
+    assert spans == [(0, len(s))]
+
+def test_rewrite_markdown_links_bold_label_with_parentheses():
+    src = "- [**Fitness For Use Framework Ontology List of Terms (bdqffdq:)**](docs/list/bdqffdq/index.md) - The definitions of terms in the bdqffdq: vocabulary."
+    out = rs.rewrite_markdown_links(src)
+    assert out == "- [**Fitness For Use Framework Ontology List of Terms (bdqffdq:)**](docs/list/bdqffdq/index.html) - The definitions of terms in the bdqffdq: vocabulary."
+
+def test_linkify_markdown_line_does_not_damage_bold_label_link_with_parentheses():
+    src = "- [**Fitness For Use Framework Ontology List of Terms (bdqffdq:)**](docs/list/bdqffdq/index.html) - The definitions of terms in the bdqffdq: vocabulary."
+    out = rs.linkify_bare_urls_in_markdown_line(src)
+    assert out == src
+
+def test_rewrite_markdown_links_bold_label_with_parentheses_and_fragment():
+    src = "- [**Data Quality Dimension Controlled Vocabulary List of Terms (bdqdim:)**](docs/list/bdqdim/index.md#bdqdim_Conformance)"
+    out = rs.rewrite_markdown_links(src)
+    assert out == "- [**Data Quality Dimension Controlled Vocabulary List of Terms (bdqdim:)**](docs/list/bdqdim/index.html#bdqdim_Conformance)"
+
+def test_rewrite_markdown_links_complex_label_formatting():
+    src = "[**BDQ Controlled Vocabulary List of Terms (bdqval:)**](docs/list/bdqval/index.md)"
+    out = rs.rewrite_markdown_links(src)
+    assert out == "[**BDQ Controlled Vocabulary List of Terms (bdqval:)**](docs/list/bdqval/index.html)"
+
+def test_mini_list_document_with_bold_link_labels():
+    src = (
+        "- [**Fitness For Use Framework Ontology List of Terms (bdqffdq:)**](docs/list/bdqffdq/index.md) - Terms.\n"
+        "- [**Data Quality Dimension Controlled Vocabulary List of Terms (bdqdim:)**](docs/list/bdqdim/index.md) - Terms.\n"
+    )
+    rewritten = rs.rewrite_markdown_links(src)
+    out = rs.linkify_bare_urls_in_markdown_line(rewritten)
+    assert "[**Fitness For Use Framework Ontology List of Terms (bdqffdq:)**](docs/list/bdqffdq/index.html)" in out
+    assert "[**Data Quality Dimension Controlled Vocabulary List of Terms (bdqdim:)**](docs/list/bdqdim/index.html)" in out
+
+def test_rewrite_markdown_links_plain_bold_label_with_parentheses():
+    src = "[**Fitness For Use Framework Ontology List of Terms (bdqffdq:)**](docs/list/bdqffdq/index.md)"
+    out = rs.rewrite_markdown_links(src)
+    assert out == "[**Fitness For Use Framework Ontology List of Terms (bdqffdq:)**](docs/list/bdqffdq/index.html)"
+
+
+def test_rewrite_markdown_links_plain_bold_label_with_parentheses_fragment():
+    src = "[**Data Quality Dimension Controlled Vocabulary List of Terms (bdqdim:)**](docs/list/bdqdim/index.md#bdqdim_Conformance)"
+    out = rs.rewrite_markdown_links(src)
+    assert out == "[**Data Quality Dimension Controlled Vocabulary List of Terms (bdqdim:)**](docs/list/bdqdim/index.html#bdqdim_Conformance)"
+
+
+
