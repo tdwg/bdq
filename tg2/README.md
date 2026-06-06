@@ -6,13 +6,16 @@
 
 ## Draft of the BDQ standard
 
-- [Draft BDQ Standard](https://bdq.tdwg.org/draft/) or [on GitHub](https://github.com/tdwg/bdq/blob/master/tg2/_review/index.md)
+- [Draft BDQ Standard](https://bdq.tdwg.org/draft/) (or view [on GitHub](https://github.com/tdwg/bdq/blob/master/tg2/_review/index.md))
 - [Draft standard Quick Reference Guide to the tests](https://bdq.tdwg.org/draft/docs/terms/bdqtest/)
 - [Alternative rendering of the Quick Reference Guide to the tests](https://bdq.tdwg.org/draft/docs/terms/bdqtest-html/)
 
 ## Link to github issues used to develop the tests: 
 
--    [Closed Issues Labeled CORE](https://github.com/tdwg/bdq/issues/?q=is%3Aissue%20state%3Aclosed%20label%3ACORE)
+- [Closed Issues labeled CORE](https://github.com/tdwg/bdq/issues/?q=is%3Aissue%20state%3Aclosed%20label%3ACORE) adopted into the BDQ Standard [Test Term List](https://bdq.tdwg.org/draft/docs/list/bdqtest/index.html#4-term-indices-non-normative)
+- [Closed Issues labeled DO NOT IMPLEMENT](https://github.com/tdwg/bdq/issues/?q=is%3Aissue%20label%3A%22DO%20NOT%20IMPLEMENT%22)
+- [Issues labeled IMMATURE/INCOMPLETE](https://github.com/tdwg/bdq/issues/?q=is%3Aissue%20label%3AImmature%2FIncomplete)
+- [Issues labeled SUPPLEMENTARY](https://github.com/tdwg/bdq/issues/?q=is%3Aissue%20label%3ASupplementary) also [Supplementary Tests](https://github.com/tdwg/bdq/tree/master/tg2/supplementary)
 
 ## Outcomes
 
