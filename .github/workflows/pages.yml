@@ -89,12 +89,10 @@ jobs:
           rsync -a tg4/ site/tg4/
 
           # Draft publication area from generated tg2 review docs
-          rsync -a tg2/_review/ site/draft/ \
-            --exclude '_review/docs/terms/bdqtest/index.md' \
-            --exclude '_review/docs/terms/bdqtest/index.html' 
+          rsync -a tg2/_review/ site/draft/
 
-          # Alternate HTML publication path as quick reference guide is built separately
-          rsync -a terms/bdqtest/ site/draft/docs/terms/bdqtest/
+          # Alternate HTML publication path
+          rsync -a terms/bdqtest/ site/draft/docs/terms/bdqtest-html/
 
           # Provide the Turtle serialization of the owl ontology with a .ttl extension for better content-type handling
           if [ -f site/draft/vocabulary/bdqffdq.owl ]; then
