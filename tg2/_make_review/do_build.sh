@@ -26,4 +26,9 @@ python3 make_bdq_tests_vertical.py
 echo "Postprocessing generated documents to create links to glossary and vocabulary terms..."
 python3 postprocess_autolink_terms.py
 
+cd ../_build_qrg/
+
+echo "Geherating the html/javascript filtering build of the BDQ QRG..."
+python3 generate_bdq_qrg_filtering.py
+
 cd ../_make_review/

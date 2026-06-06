@@ -8,6 +8,10 @@
 #
 # Rewritten from generate_bdq_qrg.py to add interactive filtering and category sections by Claude 4.6 Sonnet
 
+# Python script to generate the Quick Reference Guide HTML
+# (interactive sidebar: external navigation + on-the-fly filters)
+# Usage: python generate_bdq_qrg.py
+
 import pandas as pd
 import os
 import re
@@ -23,62 +27,137 @@ TEMPLATE = '''<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <title>BDQ Tests and Assertions - Quick Reference Guide</title>
+    <!-- Site-wide stylesheets (provide .page-header, .review-banner, variables, etc.) -->
+    <link rel="stylesheet" href="/assets/css/pygments.css">
+    <link rel="stylesheet" href="/assets/css/site.css">
     <style>
-        html, body {
-            margin: 0; padding: 0;
-            font-family: Arial, sans-serif; line-height: 1.5; overflow-x: hidden;
-        }
-        body { display: flex; }
-        main {
-            flex: 1; padding: 20px;
-            max-width: calc(100% - 260px); margin-left: 240px;
+        /* ── CSS custom-property fallbacks ──────────────────────────────────
+           These mirror the values in site.css so the page renders correctly
+           even if the external stylesheet fails to load.                    */
+        :root {
+            --bdq-brand:      #155799;
+            --bdq-brand-2:    #159957;
+            --bdq-link:       #0969da;
+            --bdq-border:     #d0d7de;
+            --bdq-muted:      #586069;
+            --bdq-bg-soft:    #f6f8fa;
+            --bdq-bg-soft-2:  rgba(129, 139, 152, 0.12);
+            --bdq-review:     #c0392b;
+            --bdq-text:       #24292f;
         }
 
-        /* ── Sidebar (left) ──────────────────────────────────── */
+        /* ── Base overrides / page-specific layout ───────────────────────── */
+        html { scroll-behavior: smooth; }
+
+        body {
+            margin: 0; padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                         Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--bdq-text);
+            background: #fff;
+            /* NOT display:flex — flex lives on .content-wrapper's children */
+            overflow-x: hidden;
+        }
+
+        /* Global link colour (site.css only scopes it to .doc-content a etc.) */
+        a { color: var(--bdq-link); }
+
+        /* ── Page-header fallback styles (site.css is the canonical source) ─ */
+        .page-header {
+            color: #fff;
+            background-color: var(--bdq-brand);
+            background-image: linear-gradient(120deg, var(--bdq-brand),
+                                                      var(--bdq-brand-2));
+            padding: 1.5rem 1rem;
+        }
+        .page-header-inner {
+            max-width: 72rem; margin: 0 auto;
+            display: flex; align-items: flex-start; gap: 1rem;
+        }
+        .site-logo-link { display: inline-flex; flex: 0 0 auto; align-items: center; }
+        .site-logo      { width: 200px; height: 84px; display: block; }
+        .page-header-text { min-width: 0; }
+        .project-name   { margin: 0; font-size: 2rem; font-weight: 700;
+                          border: none; }   /* suppress main h1 rule below */
+        .project-name-link { color: #fff; text-decoration: none; }
+        .project-name-link:hover { text-decoration: underline; }
+        .project-tagline { margin: 0.5rem 0 0 0; opacity: 0.95; font-size: 1.05rem; }
+
+        /* ── Review banner fallback (site.css is the canonical source) ────── */
+        .review-banner {
+            display: inline-block;
+            margin: 0 0 1rem 0; padding: 0.5rem 0.85rem;
+            font-weight: 700; font-size: 0.95rem;
+            text-transform: uppercase; letter-spacing: 0.04em;
+            color: #fff;
+            background: var(--bdq-review);
+            border-radius: 0.35rem;
+        }
+
+        /* ── Two-column layout ───────────────────────────────────────────── */
+        /*
+         * The fixed sidebar (240 px) sits outside normal flow.
+         * .content-wrapper carries margin-left: 240px so page-header and
+         * main content clear the sidebar without using flex on <body>.
+         */
+        .content-wrapper { margin-left: 240px; }
+
+        main { padding: 20px; }
+
+        /* ── Headings ────────────────────────────────────────────────────── */
+        /* Scoped to main so the page-header h1 (.project-name) is unaffected */
+        main h1 {
+            border-bottom: 1px solid var(--bdq-border);
+            padding-bottom: 0.3rem;
+        }
+
+        /* ── Sidebar (fixed, left) ───────────────────────────────────────── */
         aside.nav-menu {
-            position: fixed; top: 0; left: 0;
+            position: fixed; top: 0; left: 0; z-index: 200;
             height: 100vh; overflow-y: auto;
-            background: #fafafa;
-            border-right: 1px solid #ccc;
+            background: var(--bdq-bg-soft);
+            border-right: 1px solid var(--bdq-border);
             width: 240px; padding: 14px; box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                         Helvetica, Arial, sans-serif;
         }
         aside.nav-menu h2 {
             font-size: 0.95em; margin: 14px 0 6px 0;
-            padding-bottom: 4px; border-bottom: 1px solid #ccc;
-            color: #003c71;
+            padding-bottom: 4px;
+            border-bottom: 1px solid var(--bdq-border);
+            color: var(--bdq-brand);
         }
         aside.nav-menu h2:first-child { margin-top: 0; }
 
-        /* External navigation links */
+        /* Back to top */
+        .back-to-top { margin: 0 0 8px 0; font-size: 0.82em; }
+        .back-to-top a { color: var(--bdq-link); text-decoration: none; }
+        .back-to-top a:hover { text-decoration: underline; }
+
+        /* External nav links */
         .sidebar-context-links { list-style: none; padding: 0; margin: 0 0 4px 0; }
         .sidebar-context-links li { margin: 5px 0; }
         .sidebar-context-links a {
-            color: #003c71; text-decoration: none; font-size: 0.82em;
+            color: var(--bdq-link); text-decoration: none; font-size: 0.82em;
         }
         .sidebar-context-links a:hover { text-decoration: underline; }
 
-        /* Back to top link — lives under "On this Page" */
-        .back-to-top {
-            margin: 0 0 8px 0; font-size: 0.82em;
-        }
-        .back-to-top a { color: #003c71; text-decoration: none; }
-        .back-to-top a:hover { text-decoration: underline; }
-
-        .menu-separator { border-top: 1px solid #ccc; margin: 10px 0; }
+        .menu-separator { border-top: 1px solid var(--bdq-border); margin: 10px 0; }
 
         /* Jump links */
         .jump-links { margin: 0 0 10px 0; }
         .jump-section-label {
             display: block; font-size: 0.75em; font-weight: bold;
-            color: #555; margin: 6px 0 2px 0;
+            color: var(--bdq-muted); margin: 6px 0 2px 0;
         }
         .jump-link {
-            display: inline-block; font-size: 0.8em; color: #003c71;
+            display: inline-block; font-size: 0.8em; color: var(--bdq-brand);
             text-decoration: none; margin: 2px 2px 2px 0;
-            padding: 2px 6px; border: 1px solid #8da7b5;
-            border-radius: 3px; background: #f1f6f9;
+            padding: 2px 6px; border: 1px solid var(--bdq-border);
+            border-radius: 3px; background: #fff;
         }
-        .jump-link:hover { background: #e1ecf4; }
+        .jump-link:hover { background: var(--bdq-bg-soft-2); }
 
         /* Filter panel */
         .filters-active-msg {
@@ -90,7 +169,7 @@ TEMPLATE = '''<!DOCTYPE html>
         .filter-group { margin-bottom: 10px; }
         .filter-label {
             display: block; font-weight: bold;
-            font-size: 0.8em; color: #333; margin-bottom: 3px;
+            font-size: 0.8em; color: var(--bdq-text); margin-bottom: 3px;
         }
         #type-filters label, #category-filters label {
             display: block; font-size: 0.8em; margin: 3px 0; cursor: pointer;
@@ -100,83 +179,102 @@ TEMPLATE = '''<!DOCTYPE html>
         }
         .filter-select {
             width: 100%; font-size: 0.79em; padding: 3px 4px;
-            border: 1px solid #bbb; border-radius: 3px; box-sizing: border-box;
+            border: 1px solid var(--bdq-border); border-radius: 3px;
+            box-sizing: border-box;
         }
-        /* Multi-select gets a fixed height so several options are visible */
-        .filter-select-multi {
-            height: 130px;
-            padding: 2px;
-        }
+        .filter-select-multi { height: 130px; padding: 2px; }
         .filter-hint {
-            display: block; font-size: 0.72em;
-            color: #666; font-style: italic; margin-top: 2px;
+            display: block; font-size: 0.72em; color: var(--bdq-muted);
+            font-style: italic; margin-top: 2px;
         }
         #clear-filters {
             font-size: 0.8em; padding: 4px 10px;
-            background: #003c71; color: white;
+            background: var(--bdq-brand); color: #fff;
             border: none; border-radius: 3px; cursor: pointer; margin-top: 6px;
         }
-        #clear-filters:hover:not(:disabled) { background: #005a9e; }
-        #clear-filters:disabled { background: #aaa; cursor: default; }
+        #clear-filters:hover:not(:disabled) { filter: brightness(1.2); }
+        #clear-filters:disabled { background: var(--bdq-muted); cursor: default; }
         #filter-count {
-            font-size: 0.76em; color: #555;
+            font-size: 0.76em; color: var(--bdq-muted);
             display: block; margin-top: 5px; font-style: italic;
         }
 
-        /* ── Main content ─────────────────────────────────────── */
-        h1, h2 { border-bottom: 1px solid #ccc; }
+        /* ── Main content elements ───────────────────────────────────────── */
         .intro { margin: 20px 0; }
-
         .category-section { margin-bottom: 8px; }
-        .class-wrapper {}
 
         /*
-         * Sidebar is on the LEFT (240 px wide).  The wrapper strips must not
-         * overflow the right edge, so subtract the sidebar width from 100vw.
+         * Full-bleed header strips.
+         * main has padding: 20px; left: -20px cancels that so the strip
+         * starts flush with the content-wrapper edge.
+         * Width = viewport − sidebar (240 px).
          */
         .field-header-wrapper {
             width: calc(100vw - 240px);
             position: relative; left: -20px;
             background: #cdd8de; padding: 4px 20px; box-sizing: border-box;
         }
-        .field-header-wrapper h3 { margin: 0; font-size: 1em; color: #003c71; }
+        .field-header-wrapper h3 { margin: 0; font-size: 1em; color: var(--bdq-brand); }
 
         .class-header-wrapper {
             width: calc(100vw - 240px);
             position: relative; left: -20px;
             background: #dfe5d8; padding: 8px 20px; box-sizing: border-box;
             margin-bottom: 8px;
-            border-bottom: 1px solid #ccc; border-top: 1px solid #ccc;
+            border-top:    1px solid var(--bdq-border);
+            border-bottom: 1px solid var(--bdq-border);
         }
         .class-header-wrapper h2 {
-            margin: 0; font-size: 1.1em; color: #003c71; border-bottom: none;
+            margin: 0; font-size: 1.1em;
+            color: var(--bdq-brand); border: none;
         }
 
         nav.field-index a.field-box {
             display: inline-block; margin: 5px; padding: 5px 10px;
-            border: 1px solid #8da7b5; border-radius: 4px;
-            background: #f1f6f9; color: #003c71;
+            border: 1px solid var(--bdq-border); border-radius: 4px;
+            background: var(--bdq-bg-soft); color: var(--bdq-brand);
             text-decoration: none; font-size: 0.75em;
         }
-        nav.field-index a.field-box:hover { background: #e1ecf4; }
+        nav.field-index a.field-box:hover { background: var(--bdq-bg-soft-2); }
 
-        .term-section { border-top: 1px solid #ddd; padding-top: 12px; margin-top: 12px; }
+        .term-section {
+            border-top: 1px solid var(--bdq-border);
+            padding-top: 12px; margin-top: 12px;
+        }
 
         table.term-table { width: 100%; border-collapse: collapse; margin-top: 10px; }
         table.term-table td {
-            vertical-align: top; padding: 4px; border-top: 1px solid #ccc;
+            vertical-align: top; padding: 4px;
+            border-top: 1px solid var(--bdq-border);
         }
-        table.term-table td.label { width: 25%; font-weight: bold; color: #003c71; }
+        table.term-table td.label {
+            width: 25%; font-weight: bold; color: var(--bdq-brand);
+        }
 
         .no-results-msg {
-            display: none; padding: 16px 20px; color: #666; font-style: italic;
-            border: 1px dashed #ccc; border-radius: 4px; margin: 20px 0;
+            display: none; padding: 16px 20px;
+            color: var(--bdq-muted); font-style: italic;
+            border: 1px dashed var(--bdq-border); border-radius: 4px; margin: 20px 0;
+        }
+
+        /* ── Responsive: collapse sidebar on narrow screens ─────────────── */
+        @media (max-width: 768px) {
+            aside.nav-menu {
+                position: static; width: 100%; height: auto;
+                border-right: none; border-bottom: 1px solid var(--bdq-border);
+                overflow-y: visible; z-index: auto;
+            }
+            .content-wrapper { margin-left: 0; }
+            .field-header-wrapper,
+            .class-header-wrapper { width: 100vw; }
+            .site-logo { width: 120px; height: 50px; }
+            .project-name { font-size: 1.5rem; }
         }
     </style>
 </head>
 <body>
 
-<!-- Sidebar is first in DOM order to match its left-side visual position -->
+<!-- ── Fixed left sidebar ───────────────────────────────────────────────── -->
 <aside class="nav-menu">
 
     <h2>BDQ Standard</h2>
@@ -190,10 +288,10 @@ TEMPLATE = '''<!DOCTYPE html>
 
     <h2>On this Page</h2>
 
-    <!-- Change 1: Back to top moved here, under "On this Page" -->
+    <!-- Change 1: back-to-top is now under "On this Page" -->
     <p class="back-to-top">&uarr; <a href="#top"><strong>Back to top</strong></a></p>
 
-    <!-- Hidden when any filter is active -->
+    <!-- Hidden by JS when any filter is active -->
     <div class="jump-links" id="jump-links">
         <span class="jump-section-label">By Category:</span>
         ###CATEGORY_LINKS###
@@ -206,7 +304,6 @@ TEMPLATE = '''<!DOCTYPE html>
 
     <div class="filters-active-msg" id="filters-active-msg">&#9888; Filters active</div>
 
-    <!-- Change 3: Category filter -->
     <div class="filter-group">
         <span class="filter-label">Filter by Category</span>
         <div id="category-filters">
@@ -235,7 +332,6 @@ TEMPLATE = '''<!DOCTYPE html>
         </select>
     </div>
 
-    <!-- Change 2: IE filter is now a multi-select -->
     <div class="filter-group">
         <label class="filter-label" for="ie-filter">Filter by Information Element Acted Upon</label>
         <select id="ie-filter" class="filter-select filter-select-multi"
@@ -251,43 +347,75 @@ TEMPLATE = '''<!DOCTYPE html>
 
 </aside>
 
-<main>
-    <h1 id="top">BDQ Tests Quick Reference Guide</h1>
-    <div class="intro">
-      <p><strong>Draft Standard for Review</strong></p>
-      <p>This document is intended to be an easy-to-read reference for the Tests maintained as part
-      of the TDWG standard <a href="http://example.org/to_be_determined">BDQ</a> produced by the
-      TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
-      and is maintained by the BDQ Maintenance Interest Group. This document lists the BDQ Tests,
-      described by the <a href="https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/terms/bdqtest/bdqtest_qrg_term_descriptions.md">Terms
-      Used in the BDQ Tests Quick Reference Guide</a>. Definitions, comments, and examples may
-      include namespace abbreviations (e.g., <code>bdqval:</code>, <code>dwc:</code>). These are
-      required as the meaning for the word is defined specifically in that namespace. Thus,
-      <code>dwc:Event</code> means Event as defined by Darwin Core at
-      <a href="https://dwc.tdwg.org/terms/#event">https://dwc.tdwg.org/terms/#event</a>.</p>
-      <p>This page is a non-normative descriptive document, not the
-      <a href="https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/list/bdqtest/index.md">full
-      vocabulary definition document</a> for <code>bdqtest:</code> terms. It combines the normative
-      Test names and terms with non-normative comments and examples that are meant to help people to
-      use the Tests consistently. Further details can be found in
-      <a href="https://github.com/tdwg/bdq/blob/master/tg2/_review/index.md">The Biodiversity Data
-      Quality (BDQ) Standard</a>, the
-      <a href="https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/guide/bdqffdq/index.md">Fitness
-      For Use Framework Ontology Guide</a>, and the
-      <a href="https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/guide/implementers/index.md">BDQ
-      Implementer&#8217;s Guide</a>.</p>
-      <p>If you have questions or suggestions, submit these to the
-      <a href="https://github.com/tdwg/bdq/issues">BDQ Issues</a> page in GitHub. See the bottom
-      of this document for how to cite the BDQ standard and this document in particular.</p>
+<!-- ── Content wrapper: offset right to clear the fixed sidebar ─────────── -->
+<div class="content-wrapper">
+
+    <!-- Site-consistent page header (matches other BDQ Standard pages) -->
+    <div class="page-header">
+        <div class="page-header-inner">
+            <a class="site-logo-link" href="https://bdq.tdwg.org/bdq/"
+               aria-label="TDWG home for this section">
+                <img class="site-logo"
+                     src="/assets/img/TDWG-Logo_horizontal-white.svg"
+                     alt="TDWG logo">
+            </a>
+            <div class="page-header-text">
+                <h1 class="project-name">
+                    <a class="project-name-link" href="https://bdq.tdwg.org/bdq/">The
+                    Biodiversity Data Quality (BDQ) Standard</a>
+                </h1>
+                <p class="project-tagline">Draft of the TDWG Biodiversity Data Quality
+                Standard</p>
+            </div>
+        </div>
     </div>
 
-    <div id="no-results-msg" class="no-results-msg">
-        No tests match the current filters.
-        <a href="#" onclick="clearFilters(); return false;">Clear filters</a> to see all tests.
-    </div>
+    <!-- Main page content -->
+    <main>
+        <!-- Prominent "Under Review" banner -->
+        <div class="review-banner" role="note" aria-label="Under review">Under Review</div>
 
-    ###CONTENT###
-</main>
+        <h1 id="top">BDQ Tests Quick Reference Guide</h1>
+
+        <div class="intro">
+          <p>This document is intended to be an easy-to-read reference for the Tests maintained
+          as part of the TDWG standard <a href="http://example.org/to_be_determined">BDQ</a>
+          produced by the TDWG Biodiversity Data Quality Interest Group Task Group 2: Data
+          Quality Tests and Assertions and is maintained by the BDQ Maintenance Interest Group.
+          This document lists the BDQ Tests, described by the <a
+          href="https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/terms/bdqtest/bdqtest_qrg_term_descriptions.md">Terms
+          Used in the BDQ Tests Quick Reference Guide</a>. Definitions, comments, and examples
+          may include namespace abbreviations (e.g., <code>bdqval:</code>, <code>dwc:</code>).
+          These are required as the meaning for the word is defined specifically in that
+          namespace. Thus, <code>dwc:Event</code> means Event as defined by Darwin Core at
+          <a href="https://dwc.tdwg.org/terms/#event">https://dwc.tdwg.org/terms/#event</a>.</p>
+          <p>This page is a non-normative descriptive document, not the <a
+          href="https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/list/bdqtest/index.md">full
+          vocabulary definition document</a> for <code>bdqtest:</code> terms. It combines the
+          normative Test names and terms with non-normative comments and examples that are meant
+          to help people to use the Tests consistently. Further details can be found in <a
+          href="https://github.com/tdwg/bdq/blob/master/tg2/_review/index.md">The Biodiversity
+          Data Quality (BDQ) Standard</a>, the <a
+          href="https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/guide/bdqffdq/index.md">Fitness
+          For Use Framework Ontology Guide</a>, and the <a
+          href="https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/guide/implementers/index.md">BDQ
+          Implementer&#8217;s Guide</a>.</p>
+          <p>If you have questions or suggestions, submit these to the <a
+          href="https://github.com/tdwg/bdq/issues">BDQ Issues</a> page in GitHub. See the
+          bottom of this document for how to cite the BDQ standard and this document in
+          particular.</p>
+        </div>
+
+        <div id="no-results-msg" class="no-results-msg">
+            No tests match the current filters.
+            <a href="#" onclick="clearFilters(); return false;">Clear filters</a> to see all
+            tests.
+        </div>
+
+        ###CONTENT###
+    </main>
+
+</div><!-- .content-wrapper -->
 
 <script>
 (function () {
@@ -314,36 +442,32 @@ TEMPLATE = '''<!DOCTYPE html>
 
         /* ── Collect active filter values ── */
 
-        // Test-type checkboxes
         var selectedTypes = Array.from(
             document.querySelectorAll('#type-filters input:checked')
         ).map(function (cb) { return cb.value; });
 
-        // Category checkboxes (TIME / SPACE / NAME / OTHER)
         var selectedCats = Array.from(
             document.querySelectorAll('#category-filters input:checked')
         ).map(function (cb) { return cb.value; });
 
-        // Use-case single-select
         var selectedUC = document.getElementById('usecase-filter').value;
 
-        // IE multi-select — all highlighted options (empty array = no filter)
         var selectedIEs = Array.from(
             document.getElementById('ie-filter').selectedOptions
         ).map(function (o) { return o.value; });
 
         var anyActive = selectedTypes.length > 0 || selectedCats.length > 0 ||
-                        !!selectedUC            || selectedIEs.length > 0;
+                        !!selectedUC            || selectedIEs.length  > 0;
 
         /* ── Update sidebar chrome ── */
         document.getElementById('clear-filters').disabled = !anyActive;
         document.getElementById('filters-active-msg').style.display =
             anyActive ? 'block' : 'none';
 
-        // Hide the jump-link navigation buttons while filters are active
+        /* Hide jump-link navigation while filters are active */
         document.getElementById('jump-links').style.display = anyActive ? 'none' : '';
 
-        /* ── Hide topic-category content sections when any filter is active ── */
+        /* Hide topic-category index sections when any filter is active */
         document.querySelectorAll('.category-section').forEach(function (el) {
             el.style.display = anyActive ? 'none' : '';
         });
@@ -353,14 +477,11 @@ TEMPLATE = '''<!DOCTYPE html>
         document.querySelectorAll('.term-section').forEach(function (sec) {
             var show = true;
 
-            // Test-type filter: OR logic — term must match one of the checked types
             if (selectedTypes.length > 0 &&
                     selectedTypes.indexOf(sec.dataset.type) === -1) {
                 show = false;
             }
 
-            // Category filter: OR logic — term must belong to at least one
-            // of the checked categories (TIME / SPACE / NAME / OTHER)
             if (show && selectedCats.length > 0) {
                 var catMatch = selectedCats.some(function (cat) {
                     return matchesList(sec.dataset.categories, cat);
@@ -368,11 +489,8 @@ TEMPLATE = '''<!DOCTYPE html>
                 if (!catMatch) show = false;
             }
 
-            // Use-case filter: single value
             if (show && !matchesList(sec.dataset.usecases, selectedUC)) show = false;
 
-            // IE filter: OR logic — term must involve at least one of the
-            // selected information elements
             if (show && selectedIEs.length > 0) {
                 var ieMatch = selectedIEs.some(function (ie) {
                     return matchesList(sec.dataset.ie, ie);
@@ -387,7 +505,9 @@ TEMPLATE = '''<!DOCTYPE html>
         /* ── Show / hide class wrappers; sync quick-nav links ── */
         document.querySelectorAll('.class-wrapper').forEach(function (wrapper) {
             var terms      = Array.from(wrapper.querySelectorAll('.term-section'));
-            var anyVisible = terms.some(function (s) { return s.style.display !== 'none'; });
+            var anyVisible = terms.some(function (s) {
+                return s.style.display !== 'none';
+            });
             wrapper.style.display = anyVisible ? '' : 'none';
 
             wrapper.querySelectorAll('a.field-box[data-target]').forEach(function (link) {
@@ -415,7 +535,6 @@ TEMPLATE = '''<!DOCTYPE html>
             cb.checked = false;
         });
         document.getElementById('usecase-filter').value = '';
-        // Multi-select: deselect every option individually
         Array.from(document.getElementById('ie-filter').options).forEach(function (o) {
             o.selected = false;
         });
@@ -448,10 +567,9 @@ def normalize_list_attr(value):
 
 def extract_categories(issue_labels_value):
     """
-    Scan IssueLabels for TIME / SPACE / NAME / OTHER keywords and return
-    a pipe-separated string of every category found.
-    A single test may belong to more than one category
-    (e.g. MEASURE_VALIDATIONTESTS_NOTCOMPLIANT carries all four).
+    Scan IssueLabels for TIME / SPACE / NAME / OTHER keywords and return a
+    pipe-separated string of every category found.  A single test may belong
+    to more than one category.
     """
     s = str(issue_labels_value or '').upper()
     found = [cat for cat in ('TIME', 'SPACE', 'NAME', 'OTHER') if cat in s]
@@ -488,8 +606,8 @@ def build_select_options(values):
 def build_usecase_options(values):
     """
     Build <option> tags for use-case values.
-    value= retains the full 'bdquc:'-prefixed name (matches data-usecases);
-    visible label strips any 'xyz:' namespace prefix for readability.
+    value= keeps the full 'bdquc:'-prefixed name (matches data-usecases);
+    visible label strips the namespace prefix for readability.
     """
     lines = []
     for v in values:
@@ -512,7 +630,7 @@ def linkify_urls(text):
 def build_term_section(term, columns, term_type='', usecases='',
                         ie_acted='', categories=''):
     """
-    Build a <section class="term-section"> element for one BDQ test.
+    Build a <section class="term-section"> for one BDQ test.
 
     Data attributes for JS filtering:
       data-type       – organized_in value (Amendment / Issue / Measure / Validation)
@@ -585,8 +703,7 @@ def build_field_index(terms):
 def build_category_sections(df):
     """
     Build a navigation-index section for each topic category.
-    Uses independent per-category masks so a test can appear in multiple
-    category sections (e.g. a Measure covering all four categories).
+    Independent per-category masks allow a test to appear in multiple sections.
     """
     categories = ['TIME', 'SPACE', 'NAME', 'OTHER']
     col = 'IssueLabels'
