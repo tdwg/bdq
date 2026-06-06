@@ -8,45 +8,56 @@
 #
 # Rewritten from generate_bdq_qrg.py to add interactive filtering and category sections by Claude 4.6 Sonnet
 
-# Python script to generate the Quick Reference Guide HTML
-# (interactive sidebar: external navigation + on-the-fly filters)
-# Usage: python generate_bdq_qrg.py
-
-import pandas as pd
 import os
 import re
 import html as html_lib
+import pandas as pd
+import yaml
 
-CSV_PATH = '../_review/vocabulary/bdqtest_term_versions.csv'
-OUTPUT_PATH = '../_review/docs/terms/bdqtest/index.html'
-DEPLOY_PATH = '../../terms/bdqtest/index.html'
+try:
+    import markdown
+except ImportError:
+    raise ImportError(
+        "The 'markdown' package is required.  "
+        "Install with:  pip install markdown"
+    )
 
-# Template uses ###NAME### markers so CSS/JS curly-braces need no escaping.
+
+# ── File paths ────────────────────────────────────────────────────────────────
+CSV_PATH        = '../_review/vocabulary/bdqtest_term_versions.csv'
+OUTPUT_PATH     = '../_review/docs/terms/bdqtest/index.html'
+DEPLOY_PATH     = '../../terms/bdqtest/index.html'
+TEMPLATE_DIR    = '../_build_review/templates/terms/bdqtest_qrg'
+HEADER_MD_PATH  = os.path.join(TEMPLATE_DIR, 'bdqtest_quickreference-header.md')
+FOOTER_MD_PATH  = os.path.join(TEMPLATE_DIR, 'bdqtest_quickreference-footer.md')
+DOC_CONFIG_PATH = os.path.join(TEMPLATE_DIR, 'document_configuration.yaml')
+
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# HTML template  (###PLACEHOLDER### avoids brace-doubling in CSS/JS blocks)
+# ═══════════════════════════════════════════════════════════════════════════════
 TEMPLATE = '''<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>BDQ Tests and Assertions - Quick Reference Guide</title>
-    <!-- Site-wide stylesheets (provide .page-header, .review-banner, variables, etc.) -->
+    <title>###PAGE_TITLE###</title>
+    <!-- Site-wide stylesheets supply .page-header, .review-banner, CSS vars -->
     <link rel="stylesheet" href="/assets/css/pygments.css">
     <link rel="stylesheet" href="/assets/css/site.css">
     <style>
-        /* ── CSS custom-property fallbacks ──────────────────────────────────
-           These mirror the values in site.css so the page renders correctly
-           even if the external stylesheet fails to load.                    */
+        /* ── CSS custom-property fallbacks (mirrors site.css) ────────────── */
         :root {
-            --bdq-brand:      #155799;
-            --bdq-brand-2:    #159957;
-            --bdq-link:       #0969da;
-            --bdq-border:     #d0d7de;
-            --bdq-muted:      #586069;
-            --bdq-bg-soft:    #f6f8fa;
-            --bdq-bg-soft-2:  rgba(129, 139, 152, 0.12);
-            --bdq-review:     #c0392b;
-            --bdq-text:       #24292f;
+            --bdq-brand:     #155799;
+            --bdq-brand-2:   #159957;
+            --bdq-link:      #0969da;
+            --bdq-border:    #d0d7de;
+            --bdq-muted:     #586069;
+            --bdq-bg-soft:   #f6f8fa;
+            --bdq-bg-soft-2: rgba(129, 139, 152, 0.12);
+            --bdq-review:    #c0392b;
+            --bdq-text:      #24292f;
         }
 
-        /* ── Base overrides / page-specific layout ───────────────────────── */
         html { scroll-behavior: smooth; }
 
         body {
@@ -56,19 +67,17 @@ TEMPLATE = '''<!DOCTYPE html>
             line-height: 1.6;
             color: var(--bdq-text);
             background: #fff;
-            /* NOT display:flex — flex lives on .content-wrapper's children */
             overflow-x: hidden;
         }
 
-        /* Global link colour (site.css only scopes it to .doc-content a etc.) */
         a { color: var(--bdq-link); }
 
-        /* ── Page-header fallback styles (site.css is the canonical source) ─ */
+        /* ── Page-header fallback (canonical source: site.css) ───────────── */
         .page-header {
             color: #fff;
             background-color: var(--bdq-brand);
-            background-image: linear-gradient(120deg, var(--bdq-brand),
-                                                      var(--bdq-brand-2));
+            background-image: linear-gradient(120deg,
+                                var(--bdq-brand), var(--bdq-brand-2));
             padding: 1.5rem 1rem;
         }
         .page-header-inner {
@@ -78,41 +87,41 @@ TEMPLATE = '''<!DOCTYPE html>
         .site-logo-link { display: inline-flex; flex: 0 0 auto; align-items: center; }
         .site-logo      { width: 200px; height: 84px; display: block; }
         .page-header-text { min-width: 0; }
-        .project-name   { margin: 0; font-size: 2rem; font-weight: 700;
-                          border: none; }   /* suppress main h1 rule below */
-        .project-name-link { color: #fff; text-decoration: none; }
+        .project-name   { margin: 0; font-size: 2rem; font-weight: 700; border: none; }
+        .project-name-link  { color: #fff; text-decoration: none; }
         .project-name-link:hover { text-decoration: underline; }
         .project-tagline { margin: 0.5rem 0 0 0; opacity: 0.95; font-size: 1.05rem; }
 
-        /* ── Review banner fallback (site.css is the canonical source) ────── */
+        /* ── Review banner fallback (canonical source: site.css) ─────────── */
         .review-banner {
             display: inline-block;
-            margin: 0 0 1rem 0; padding: 0.5rem 0.85rem;
+            margin: 1rem 0; padding: 0.5rem 0.85rem;
             font-weight: 700; font-size: 0.95rem;
             text-transform: uppercase; letter-spacing: 0.04em;
-            color: #fff;
-            background: var(--bdq-review);
-            border-radius: 0.35rem;
+            color: #fff; background: var(--bdq-review); border-radius: 0.35rem;
         }
 
         /* ── Two-column layout ───────────────────────────────────────────── */
-        /*
-         * The fixed sidebar (240 px) sits outside normal flow.
-         * .content-wrapper carries margin-left: 240px so page-header and
-         * main content clear the sidebar without using flex on <body>.
-         */
         .content-wrapper { margin-left: 240px; }
-
         main { padding: 20px; }
 
-        /* ── Headings ────────────────────────────────────────────────────── */
-        /* Scoped to main so the page-header h1 (.project-name) is unaffected */
+        /* ── Headings (scoped to main so page-header h1 is unaffected) ───── */
         main h1 {
             border-bottom: 1px solid var(--bdq-border);
             padding-bottom: 0.3rem;
+            margin-top: 1.5rem;
         }
+        main h1:first-of-type { margin-top: 0.5rem; }
 
-        /* ── Sidebar (fixed, left) ───────────────────────────────────────── */
+        main h2 {
+            border-bottom: 1px solid var(--bdq-border);
+            padding-bottom: 0.2rem;
+            margin-top: 1.5rem;
+        }
+        /* Suppress border on the coloured-background wrapper headings */
+        .class-header-wrapper h2 { border: none; padding-bottom: 0; margin-top: 0; }
+
+        /* ── Fixed left sidebar ──────────────────────────────────────────── */
         aside.nav-menu {
             position: fixed; top: 0; left: 0; z-index: 200;
             height: 100vh; overflow-y: auto;
@@ -130,7 +139,7 @@ TEMPLATE = '''<!DOCTYPE html>
         }
         aside.nav-menu h2:first-child { margin-top: 0; }
 
-        /* Back to top */
+        /* Back-to-top sits under "On this Page" */
         .back-to-top { margin: 0 0 8px 0; font-size: 0.82em; }
         .back-to-top a { color: var(--bdq-link); text-decoration: none; }
         .back-to-top a:hover { text-decoration: underline; }
@@ -145,11 +154,11 @@ TEMPLATE = '''<!DOCTYPE html>
 
         .menu-separator { border-top: 1px solid var(--bdq-border); margin: 10px 0; }
 
-        /* Jump links */
+        /* Jump / index links — single "Index" label, all buttons together */
         .jump-links { margin: 0 0 10px 0; }
         .jump-section-label {
             display: block; font-size: 0.75em; font-weight: bold;
-            color: var(--bdq-muted); margin: 6px 0 2px 0;
+            color: var(--bdq-muted); margin: 0 0 4px 0;
         }
         .jump-link {
             display: inline-block; font-size: 0.8em; color: var(--bdq-brand);
@@ -199,34 +208,31 @@ TEMPLATE = '''<!DOCTYPE html>
             display: block; margin-top: 5px; font-style: italic;
         }
 
-        /* ── Main content elements ───────────────────────────────────────── */
-        .intro { margin: 20px 0; }
+        /* ── Main content ─────────────────────────────────────────────────── */
         .category-section { margin-bottom: 8px; }
 
         /*
-         * Full-bleed header strips.
-         * main has padding: 20px; left: -20px cancels that so the strip
-         * starts flush with the content-wrapper edge.
+         * Full-bleed coloured header strips.
+         * main has padding-left 20px → left: -20px cancels it.
          * Width = viewport − sidebar (240 px).
          */
         .field-header-wrapper {
-            width: calc(100vw - 240px);
-            position: relative; left: -20px;
+            width: calc(100vw - 240px); position: relative; left: -20px;
             background: #cdd8de; padding: 4px 20px; box-sizing: border-box;
         }
-        .field-header-wrapper h3 { margin: 0; font-size: 1em; color: var(--bdq-brand); }
+        .field-header-wrapper h3 {
+            margin: 0; font-size: 1em; color: var(--bdq-brand);
+        }
 
         .class-header-wrapper {
-            width: calc(100vw - 240px);
-            position: relative; left: -20px;
+            width: calc(100vw - 240px); position: relative; left: -20px;
             background: #dfe5d8; padding: 8px 20px; box-sizing: border-box;
             margin-bottom: 8px;
-            border-top:    1px solid var(--bdq-border);
+            border-top: 1px solid var(--bdq-border);
             border-bottom: 1px solid var(--bdq-border);
         }
         .class-header-wrapper h2 {
-            margin: 0; font-size: 1.1em;
-            color: var(--bdq-brand); border: none;
+            margin: 0; font-size: 1.1em; color: var(--bdq-brand);
         }
 
         nav.field-index a.field-box {
@@ -242,7 +248,9 @@ TEMPLATE = '''<!DOCTYPE html>
             padding-top: 12px; margin-top: 12px;
         }
 
-        table.term-table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        table.term-table {
+            width: 100%; border-collapse: collapse; margin-top: 10px;
+        }
         table.term-table td {
             vertical-align: top; padding: 4px;
             border-top: 1px solid var(--bdq-border);
@@ -257,24 +265,36 @@ TEMPLATE = '''<!DOCTYPE html>
             border: 1px dashed var(--bdq-border); border-radius: 4px; margin: 20px 0;
         }
 
-        /* ── Responsive: collapse sidebar on narrow screens ─────────────── */
+        /* ── Lists and links inside markdown-generated header/footer ─────── */
+        main ul   { margin: 0.5rem 0; padding-left: 1.5rem; }
+        main ul li { margin: 0.3rem 0; }
+        main ul ul { margin: 0.2rem 0; }
+
+        /* ── Footer from markdown template ───────────────────────────────── */
+        .page-footer {
+            margin-top: 3rem; padding-top: 1.5rem;
+            border-top: 2px solid var(--bdq-border);
+        }
+
+        /* ── Responsive ──────────────────────────────────────────────────── */
         @media (max-width: 768px) {
             aside.nav-menu {
                 position: static; width: 100%; height: auto;
-                border-right: none; border-bottom: 1px solid var(--bdq-border);
+                border-right: none;
+                border-bottom: 1px solid var(--bdq-border);
                 overflow-y: visible; z-index: auto;
             }
             .content-wrapper { margin-left: 0; }
             .field-header-wrapper,
             .class-header-wrapper { width: 100vw; }
-            .site-logo { width: 120px; height: 50px; }
+            .site-logo  { width: 120px; height: 50px; }
             .project-name { font-size: 1.5rem; }
         }
     </style>
 </head>
 <body>
 
-<!-- ── Fixed left sidebar ───────────────────────────────────────────────── -->
+<!-- ── Fixed left sidebar ──────────────────────────────────────────────────── -->
 <aside class="nav-menu">
 
     <h2>BDQ Standard</h2>
@@ -288,15 +308,17 @@ TEMPLATE = '''<!DOCTYPE html>
 
     <h2>On this Page</h2>
 
-    <!-- Change 1: back-to-top is now under "On this Page" -->
     <p class="back-to-top">&uarr; <a href="#top"><strong>Back to top</strong></a></p>
 
-    <!-- Hidden by JS when any filter is active -->
+    <!--
+      Single "Index" label; category buttons and test-type buttons run together
+      with no sub-heading between them.  The whole block is hidden by JS
+      whenever any filter is active.
+    -->
     <div class="jump-links" id="jump-links">
-        <span class="jump-section-label">By Category:</span>
-        ###CATEGORY_LINKS###
-        <span class="jump-section-label">By Test Type:</span>
-        <a class="jump-link" href="#Amendment">Amendment</a><a
+        <span class="jump-section-label">Index</span>
+        ###CATEGORY_LINKS###<a
+        class="jump-link" href="#Amendment">Amendment</a><a
         class="jump-link" href="#Issue">Issue</a><a
         class="jump-link" href="#Measure">Measure</a><a
         class="jump-link" href="#Validation">Validation</a>
@@ -347,10 +369,9 @@ TEMPLATE = '''<!DOCTYPE html>
 
 </aside>
 
-<!-- ── Content wrapper: offset right to clear the fixed sidebar ─────────── -->
+<!-- ── Everything else: cleared right of the sidebar ───────────────────────── -->
 <div class="content-wrapper">
 
-    <!-- Site-consistent page header (matches other BDQ Standard pages) -->
     <div class="page-header">
         <div class="page-header-inner">
             <a class="site-logo-link" href="https://bdq.tdwg.org/bdq/"
@@ -364,55 +385,34 @@ TEMPLATE = '''<!DOCTYPE html>
                     <a class="project-name-link" href="https://bdq.tdwg.org/bdq/">The
                     Biodiversity Data Quality (BDQ) Standard</a>
                 </h1>
-                <p class="project-tagline">Draft of the TDWG Biodiversity Data Quality
-                Standard</p>
+                <p class="project-tagline">Draft of the TDWG Biodiversity Data
+                Quality Standard</p>
             </div>
         </div>
     </div>
 
-    <!-- Main page content -->
     <main>
-        <!-- Prominent "Under Review" banner -->
+        <!-- Anchor for sidebar "Back to top" link -->
+        <span id="top"></span>
+
         <div class="review-banner" role="note" aria-label="Under review">Under Review</div>
 
-        <h1 id="top">BDQ Tests Quick Reference Guide</h1>
-
-        <div class="intro">
-          <p>This document is intended to be an easy-to-read reference for the Tests maintained
-          as part of the TDWG standard <a href="http://example.org/to_be_determined">BDQ</a>
-          produced by the TDWG Biodiversity Data Quality Interest Group Task Group 2: Data
-          Quality Tests and Assertions and is maintained by the BDQ Maintenance Interest Group.
-          This document lists the BDQ Tests, described by the <a
-          href="https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/terms/bdqtest/bdqtest_qrg_term_descriptions.md">Terms
-          Used in the BDQ Tests Quick Reference Guide</a>. Definitions, comments, and examples
-          may include namespace abbreviations (e.g., <code>bdqval:</code>, <code>dwc:</code>).
-          These are required as the meaning for the word is defined specifically in that
-          namespace. Thus, <code>dwc:Event</code> means Event as defined by Darwin Core at
-          <a href="https://dwc.tdwg.org/terms/#event">https://dwc.tdwg.org/terms/#event</a>.</p>
-          <p>This page is a non-normative descriptive document, not the <a
-          href="https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/list/bdqtest/index.md">full
-          vocabulary definition document</a> for <code>bdqtest:</code> terms. It combines the
-          normative Test names and terms with non-normative comments and examples that are meant
-          to help people to use the Tests consistently. Further details can be found in <a
-          href="https://github.com/tdwg/bdq/blob/master/tg2/_review/index.md">The Biodiversity
-          Data Quality (BDQ) Standard</a>, the <a
-          href="https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/guide/bdqffdq/index.md">Fitness
-          For Use Framework Ontology Guide</a>, and the <a
-          href="https://github.com/tdwg/bdq/blob/master/tg2/_review/docs/guide/implementers/index.md">BDQ
-          Implementer&#8217;s Guide</a>.</p>
-          <p>If you have questions or suggestions, submit these to the <a
-          href="https://github.com/tdwg/bdq/issues">BDQ Issues</a> page in GitHub. See the
-          bottom of this document for how to cite the BDQ standard and this document in
-          particular.</p>
-        </div>
+        <!-- ── Page header: generated from bdqtest_quickreference-header.md ── -->
+        ###HEADER_HTML###
 
         <div id="no-results-msg" class="no-results-msg">
             No tests match the current filters.
-            <a href="#" onclick="clearFilters(); return false;">Clear filters</a> to see all
-            tests.
+            <a href="#" onclick="clearFilters(); return false;">Clear filters</a>
+            to see all tests.
         </div>
 
+        <!-- ── Test content: category indexes then alphabetical sections ───── -->
         ###CONTENT###
+
+        <!-- ── Page footer: generated from bdqtest_quickreference-footer.md ── -->
+        <footer class="page-footer" aria-label="Document footer">
+            ###FOOTER_HTML###
+        </footer>
     </main>
 
 </div><!-- .content-wrapper -->
@@ -424,10 +424,6 @@ TEMPLATE = '''<!DOCTYPE html>
     var totalCount = document.querySelectorAll('.term-section').length;
     document.getElementById('filter-count').textContent = totalCount + ' tests total';
 
-    /**
-     * Returns true when filterValue is empty OR when it exactly matches one
-     * of the pipe-separated tokens stored in dataValue.
-     */
     function matchesList(dataValue, filterValue) {
         if (!filterValue) return true;
         if (!dataValue)   return false;
@@ -439,8 +435,6 @@ TEMPLATE = '''<!DOCTYPE html>
     }
 
     window.applyFilters = function () {
-
-        /* ── Collect active filter values ── */
 
         var selectedTypes = Array.from(
             document.querySelectorAll('#type-filters input:checked')
@@ -459,28 +453,26 @@ TEMPLATE = '''<!DOCTYPE html>
         var anyActive = selectedTypes.length > 0 || selectedCats.length > 0 ||
                         !!selectedUC            || selectedIEs.length  > 0;
 
-        /* ── Update sidebar chrome ── */
         document.getElementById('clear-filters').disabled = !anyActive;
         document.getElementById('filters-active-msg').style.display =
             anyActive ? 'block' : 'none';
 
-        /* Hide jump-link navigation while filters are active */
-        document.getElementById('jump-links').style.display = anyActive ? 'none' : '';
+        /* Hide the index jump-links while any filter is active */
+        document.getElementById('jump-links').style.display =
+            anyActive ? 'none' : '';
 
-        /* Hide topic-category index sections when any filter is active */
+        /* Hide topic-category index sections when filters are active */
         document.querySelectorAll('.category-section').forEach(function (el) {
             el.style.display = anyActive ? 'none' : '';
         });
 
-        /* ── Show / hide individual term sections ── */
+        /* Show / hide individual term sections */
         var visibleCount = 0;
         document.querySelectorAll('.term-section').forEach(function (sec) {
             var show = true;
 
             if (selectedTypes.length > 0 &&
-                    selectedTypes.indexOf(sec.dataset.type) === -1) {
-                show = false;
-            }
+                    selectedTypes.indexOf(sec.dataset.type) === -1) show = false;
 
             if (show && selectedCats.length > 0) {
                 var catMatch = selectedCats.some(function (cat) {
@@ -502,7 +494,7 @@ TEMPLATE = '''<!DOCTYPE html>
             if (show) visibleCount++;
         });
 
-        /* ── Show / hide class wrappers; sync quick-nav links ── */
+        /* Show / hide class wrappers; sync quick-nav links */
         document.querySelectorAll('.class-wrapper').forEach(function (wrapper) {
             var terms      = Array.from(wrapper.querySelectorAll('.term-section'));
             var anyVisible = terms.some(function (s) {
@@ -510,18 +502,18 @@ TEMPLATE = '''<!DOCTYPE html>
             });
             wrapper.style.display = anyVisible ? '' : 'none';
 
-            wrapper.querySelectorAll('a.field-box[data-target]').forEach(function (link) {
-                var target = document.getElementById(link.dataset.target);
-                link.style.display =
-                    (target && target.style.display !== 'none') ? '' : 'none';
-            });
+            wrapper.querySelectorAll('a.field-box[data-target]').forEach(
+                function (link) {
+                    var target = document.getElementById(link.dataset.target);
+                    link.style.display =
+                        (target && target.style.display !== 'none') ? '' : 'none';
+                }
+            );
         });
 
-        /* ── No-results message ── */
         document.getElementById('no-results-msg').style.display =
             (anyActive && visibleCount === 0) ? 'block' : 'none';
 
-        /* ── Count line ── */
         document.getElementById('filter-count').textContent = anyActive
             ? 'Showing ' + visibleCount + ' of ' + totalCount + ' tests'
             : totalCount + ' tests total';
@@ -535,9 +527,9 @@ TEMPLATE = '''<!DOCTYPE html>
             cb.checked = false;
         });
         document.getElementById('usecase-filter').value = '';
-        Array.from(document.getElementById('ie-filter').options).forEach(function (o) {
-            o.selected = false;
-        });
+        Array.from(document.getElementById('ie-filter').options).forEach(
+            function (o) { o.selected = false; }
+        );
         applyFilters();
     };
 
@@ -548,39 +540,198 @@ TEMPLATE = '''<!DOCTYPE html>
 </html>'''
 
 
-# ---------------------------------------------------------------------------
-# Helper utilities
-# ---------------------------------------------------------------------------
+# ═══════════════════════════════════════════════════════════════════════════════
+# YAML loading
+# ═══════════════════════════════════════════════════════════════════════════════
+
+def _load_yaml(path):
+    """Load a YAML file and return the parsed dict, or {} on failure."""
+    with open(path, 'r', encoding='utf-8') as fh:
+        return yaml.safe_load(fh) or {}
+
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# Template-variable helpers
+# ═══════════════════════════════════════════════════════════════════════════════
+
+def _camel_to_snake(name):
+    """
+    Convert camelCase/PascalCase to snake_case.
+      documentTitle  → document_title
+      accessUrl      → access_url
+    Keys that are already snake_case are returned unchanged.
+    """
+    s = re.sub(r'([A-Z][a-z]+)', r'_\1', name)
+    s = re.sub(r'([a-z0-9])([A-Z])', r'\1_\2', s)
+    return s.lower().lstrip('_')
+
+
+# Explicit template-placeholder → YAML key mappings that cannot be derived
+# automatically from camelCase conversion alone.
+_YAML_ALIASES = {
+    # The header template uses {standard_iri} for the standard's IRI
+    'standard_iri':   'dcterms_isPartOf',
+    # Ensure the snake_case alias is always available
+    'document_title': 'documentTitle',
+}
+
+
+def _build_template_vars(yaml_cfg):
+    """
+    Build a flat {placeholder: value} dict from the YAML configuration.
+
+    Rules applied in order:
+    1.  Every YAML key is stored as-is with its string value.
+    2.  A snake_case alias is added for every camelCase key.
+    3.  Explicit aliases in _YAML_ALIASES fill in any remaining gaps.
+    4.  'year' and 'ratification_date' are derived from 'doc_created'.
+    5.  'comment' defaults to '' when absent — it is NOT populated from
+        'abstract'.  If the YAML supplies a non-empty 'comment', that value
+        is used; if it is absent or blank, the {comment} placeholder simply
+        becomes an empty string (producing no visible paragraph).
+    """
+    v = {}
+    for k, val in yaml_cfg.items():
+        str_val = str(val) if val is not None else ''
+        v[k] = str_val
+        snake = _camel_to_snake(k)
+        if snake != k:
+            v[snake] = str_val
+
+    # Explicit aliases
+    for alias, source_key in _YAML_ALIASES.items():
+        if alias not in v:
+            v[alias] = v.get(source_key, v.get(_camel_to_snake(source_key), ''))
+
+    # Derived values
+    doc_created = v.get('doc_created', '')
+    if doc_created and len(doc_created) >= 4:
+        v.setdefault('year',             doc_created[:4])
+        v.setdefault('ratification_date', doc_created)
+
+    # comment: use the YAML 'comment' value only — no abstract fallback
+    v.setdefault('comment', '')
+
+    return v
+
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# Markdown → HTML conversion
+# (delegates fully to the 'markdown' library; only post-processing is custom)
+# ═══════════════════════════════════════════════════════════════════════════════
+
+def _rewrite_md_links(html_text):
+    """
+    Post-process HTML produced by the markdown library:
+    rewrite every  href="…path.md"  or  href="…path.md#fragment"
+    to             href="…path.html"  or  href="…path.html#fragment".
+    External http(s) URLs and anchors-only (#fragment) are left untouched.
+    """
+    def _fix(m):
+        path = m.group(1)   # everything before '.md'
+        frag = m.group(2) or ''  # '#fragment' or ''
+        return f'href="{path}.html{frag}"'
+
+    return re.sub(
+        r'href="([^"#][^"]*?)\.md(#[^"]*?)?"',
+        _fix,
+        html_text
+    )
+
+
+def convert_md_template(md_path, variables, strip_trailing_h2=False):
+    """
+    Load a BDQ markdown template, substitute variables, and return HTML.
+
+    Steps:
+    1.  Read file.
+    2.  Strip  <!--- … --->  comment blocks (BDQ template convention).
+    3.  Substitute {variable} placeholders from *variables* dict.
+    4.  Warn about any {placeholder} tokens that remain unresolved.
+    5.  Normalise line endings.
+    6.  If strip_trailing_h2=True, drop the last non-blank line when it
+        starts with '## ' (handles the header template's trailing index
+        heading that belongs to the generated content, not the intro).
+    7.  Convert markdown → HTML via python-markdown
+        (extensions: 'extra' for tables/nested-lists/fenced-code,
+                      'toc' to attach id= anchors to every heading).
+    8.  Rewrite .md hrefs → .html via _rewrite_md_links().
+    """
+    if not os.path.exists(md_path):
+        print(f"Warning: template not found: {md_path}")
+        return ''
+
+    with open(md_path, 'r', encoding='utf-8') as fh:
+        text = fh.read()
+
+    # 2. Strip <!--- ... ---> comment blocks (BDQ template convention)
+    text = re.sub(r'<!---.*?--->', '', text, flags=re.DOTALL)
+
+    # 3. Variable substitution
+    for key, val in variables.items():
+        text = text.replace('{' + key + '}', val)
+
+    # 4. Warn about any remaining unresolved {placeholder} tokens
+    remaining = sorted(set(re.findall(r'\{([a-zA-Z_]\w*)\}', text)))
+    if remaining:
+        print(f"Warning [{os.path.basename(md_path)}]: "
+              f"unresolved template variables: {remaining}")
+
+    # 5. Normalise line endings
+    text = text.replace('\r\n', '\n')
+
+    # 6. Optionally drop trailing '## ...' heading from the markdown source
+    if strip_trailing_h2:
+        lines = text.rstrip('\n').split('\n')
+        while lines and not lines[-1].strip():
+            lines.pop()
+        if lines and lines[-1].lstrip().startswith('## '):
+            lines.pop()
+        text = '\n'.join(lines)
+
+    # 7. Convert markdown → HTML
+    #    'extra'  →  tables, fenced code, footnotes, nested lists, etc.
+    #    'toc'    →  adds id= attributes to headings (needed for
+    #                the #cite-bdq-non-normative cross-reference)
+    md_proc = markdown.Markdown(
+        extensions=['extra', 'toc'],
+        extension_configs={
+            'toc': {
+                'permalink': False,   # no ¶ symbols
+            }
+        }
+    )
+    html_text = md_proc.convert(text)
+
+    # 8. Rewrite .md links → .html
+    html_text = _rewrite_md_links(html_text)
+
+    return html_text
+
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# BDQ-specific HTML-section builders (unchanged from previous version)
+# ═══════════════════════════════════════════════════════════════════════════════
 
 def normalize_list_attr(value):
-    """
-    Convert a comma / semicolon / pipe-separated string into a pipe-separated
-    string for use in HTML data-* attributes.
-    Returns '' for empty or 'nan' inputs.
-    """
+    """Pipe-separated string for HTML data-* attributes from a delimited value."""
     v = str(value).strip()
     if not v or v.lower() == 'nan':
         return ''
-    parts = re.split(r'\s*[,;|]\s*', v)
-    return '|'.join(p.strip() for p in parts if p.strip())
+    return '|'.join(p.strip() for p in re.split(r'\s*[,;|]\s*', v) if p.strip())
 
 
 def extract_categories(issue_labels_value):
     """
-    Scan IssueLabels for TIME / SPACE / NAME / OTHER keywords and return a
-    pipe-separated string of every category found.  A single test may belong
-    to more than one category.
+    Return pipe-separated TIME/SPACE/NAME/OTHER categories present in IssueLabels.
+    A single test may belong to more than one category.
     """
     s = str(issue_labels_value or '').upper()
-    found = [cat for cat in ('TIME', 'SPACE', 'NAME', 'OTHER') if cat in s]
-    return '|'.join(found)
+    return '|'.join(c for c in ('TIME', 'SPACE', 'NAME', 'OTHER') if c in s)
 
 
 def get_unique_values_from_column(df, col):
-    """
-    Return a sorted list of unique individual values from a delimited column.
-    Handles comma / semicolon / pipe separators; ignores 'nan' cells.
-    """
+    """Sorted list of unique individual values from a delimited column."""
     if col not in df.columns:
         return []
     all_vals = set()
@@ -595,19 +746,19 @@ def get_unique_values_from_column(df, col):
 
 
 def build_select_options(values):
-    """Return <option> tags for a plain single-select dropdown."""
-    lines = []
-    for v in values:
-        esc = html_lib.escape(v, quote=True)
-        lines.append(f'<option value="{esc}">{esc}</option>')
-    return '\n            '.join(lines)
+    """<option> tags for a plain single-select dropdown."""
+    return '\n            '.join(
+        f'<option value="{html_lib.escape(v, quote=True)}">'
+        f'{html_lib.escape(v, quote=True)}</option>'
+        for v in values
+    )
 
 
 def build_usecase_options(values):
     """
-    Build <option> tags for use-case values.
+    <option> tags for use-case values.
     value= keeps the full 'bdquc:'-prefixed name (matches data-usecases);
-    visible label strips the namespace prefix for readability.
+    visible label strips any 'xyz:' namespace prefix for readability.
     """
     lines = []
     for v in values:
@@ -623,22 +774,18 @@ def linkify_urls(text):
     return re.sub(r'(https?://\S+)', r'<a href="\1">\1</a>', text)
 
 
-# ---------------------------------------------------------------------------
-# HTML-section builders
-# ---------------------------------------------------------------------------
-
 def build_term_section(term, columns, term_type='', usecases='',
                         ie_acted='', categories=''):
     """
     Build a <section class="term-section"> for one BDQ test.
 
-    Data attributes for JS filtering:
-      data-type       – organized_in value (Amendment / Issue / Measure / Validation)
-      data-usecases   – pipe-separated use-case identifiers (full bdquc: names)
-      data-ie         – pipe-separated Information Elements Acted Upon
-      data-categories – pipe-separated TIME/SPACE/NAME/OTHER from IssueLabels
+    data-type       – Amendment / Issue / Measure / Validation
+    data-usecases   – pipe-separated bdquc: use-case identifiers
+    data-ie         – pipe-separated Information Elements Acted Upon
+    data-categories – pipe-separated TIME/SPACE/NAME/OTHER
     """
-    term_id = term.get('term_localName', term.get('Label', 'term')).strip().replace(' ', '_')
+    term_id = (term.get('term_localName', term.get('Label', 'term'))
+               .strip().replace(' ', '_'))
     label   = term.get('Label', 'Unnamed Term')
 
     type_attr       = html_lib.escape(str(term_type).strip(),         quote=True)
@@ -664,12 +811,9 @@ def build_term_section(term, columns, term_type='', usecases='',
             continue
         if col not in ['term_iri', 'iri', 'AuthoritiesDefaults']:
             value = linkify_urls(value)
-
         term_label = label_map.get(col, col)
-
         if col == 'Examples':
             value = value.replace('],[', '],<br>[')
-
         rows += f'<tr><td class="label">{term_label}</td><td>{value}</td></tr>'
 
     return (
@@ -686,37 +830,37 @@ def build_term_section(term, columns, term_type='', usecases='',
 
 def build_field_index(terms):
     """
-    Build a <nav class="field-index"> quick-jump block.
-    Each link carries data-target so the JS filter can sync its visibility
-    with its target term section.
+    <nav class="field-index"> quick-jump block.
+    data-target lets the JS filter keep each link in sync with its term section.
     """
     links = []
     for term in terms:
-        term_id = term.get('term_localName', term.get('Label', 'term')).strip().replace(' ', '_')
-        label   = term.get('Label', 'Unnamed Term')
+        term_id = (term.get('term_localName', term.get('Label', 'term'))
+                   .strip().replace(' ', '_'))
+        label = term.get('Label', 'Unnamed Term')
         links.append(
-            f'<a class="field-box" href="#{term_id}" data-target="{term_id}">{label}</a>'
+            f'<a class="field-box" href="#{term_id}"'
+            f' data-target="{term_id}">{label}</a>'
         )
     return '<nav class="field-index">' + ''.join(links) + '</nav>'
 
 
 def build_category_sections(df):
     """
-    Build a navigation-index section for each topic category.
+    Navigation-index section for each topic category (TIME/SPACE/NAME/OTHER).
     Independent per-category masks allow a test to appear in multiple sections.
     """
-    categories = ['TIME', 'SPACE', 'NAME', 'OTHER']
     col = 'IssueLabels'
     if col not in df.columns:
         return ''
-
     out = []
-    for cat in categories:
+    for cat in ('TIME', 'SPACE', 'NAME', 'OTHER'):
         mask   = df[col].apply(lambda v: cat in str(v or '').upper())
         subset = df[mask]
         if subset.empty:
             continue
-        terms = sorted(subset.to_dict('records'), key=lambda r: r.get('Label', '').lower())
+        terms = sorted(subset.to_dict('records'),
+                        key=lambda r: r.get('Label', '').lower())
         out.append(
             f'<section class="category-section" id="cat-{cat}">\n'
             f'  <div class="class-header-wrapper"><h2>{cat}</h2></div>\n'
@@ -727,23 +871,21 @@ def build_category_sections(df):
 
 
 def build_category_links(df):
-    """Build sidebar jump-link <a> tags for each present category."""
-    categories = ['TIME', 'SPACE', 'NAME', 'OTHER']
+    """Sidebar jump-link <a> tags for each present category."""
     col = 'IssueLabels'
     if col not in df.columns:
         return ''
-
     links = []
-    for cat in categories:
-        mask = df[col].apply(lambda v: cat in str(v or '').upper())
-        if mask.any():
-            links.append(f'<a class="jump-link" href="#cat-{cat}">{cat}</a>\n')
+    for cat in ('TIME', 'SPACE', 'NAME', 'OTHER'):
+        if df[col].apply(lambda v: cat in str(v or '').upper()).any():
+            links.append(f'<a class="jump-link" href="#cat-{cat}">{cat}</a>')
+    # Return inline (no trailing newline) so they flow with the test-type buttons
     return ''.join(links)
 
 
-# ---------------------------------------------------------------------------
+# ═══════════════════════════════════════════════════════════════════════════════
 # Main entry point
-# ---------------------------------------------------------------------------
+# ═══════════════════════════════════════════════════════════════════════════════
 
 def generate_qrg():
     print(f"Loading CSV from {CSV_PATH}...")
@@ -753,13 +895,32 @@ def generate_qrg():
     if 'organized_in' not in df.columns:
         raise ValueError("Missing 'organized_in' column in source CSV.")
 
+    # ── Load YAML and build template variables ──────────────────────────────
+    if os.path.exists(DOC_CONFIG_PATH):
+        yaml_cfg = _load_yaml(DOC_CONFIG_PATH)
+    else:
+        print(f"Warning: document configuration not found: {DOC_CONFIG_PATH}")
+        yaml_cfg = {}
+
+    tpl_vars = _build_template_vars(yaml_cfg)
+
+    # ── Convert markdown templates to HTML ──────────────────────────────────
+    # Header: drop the trailing '## Alphabetical Index…' heading — it
+    # belongs to the generated alphabetical content below, not the intro.
+    header_html = convert_md_template(
+        HEADER_MD_PATH, tpl_vars, strip_trailing_h2=True
+    )
+    footer_html = convert_md_template(
+        FOOTER_MD_PATH, tpl_vars, strip_trailing_h2=False
+    )
+
+    # ── Display columns (CSV order preserved) ───────────────────────────────
     display_cols = {
         'Label', 'prefLabel', 'iri', 'Description', 'ExpectedResponse',
         'InformationElement:ActedUpon', 'aggregatesResponsesFrom',
         'InformationElement:Consulted', 'Parameters', 'AuthoritiesDefaults',
         'Notes', 'Examples', 'Type', 'UseCases', 'Resource Type',
     }
-    # Preserve column order as it appears in the CSV
     columns = [c for c in df.columns if c.strip() and c in display_cols]
 
     ordered_classes = ['Amendment', 'Issue', 'Measure', 'Validation']
@@ -773,7 +934,7 @@ def generate_qrg():
     content = build_category_sections(df)
 
     for group, terms in grouped.items():
-        anchor  = group.strip().replace(' ', '_')
+        anchor = group.strip().replace(' ', '_')
         content += '<div class="class-wrapper">\n'
         content += (
             f'<div class="class-header-wrapper">'
@@ -793,21 +954,33 @@ def generate_qrg():
 
         content += '</div>\n'   # .class-wrapper
 
-    # ── Substitute placeholders ─────────────────────────────────────────────
-    html_output = TEMPLATE
-    html_output = html_output.replace('###CONTENT###',         content)
-    html_output = html_output.replace('###CATEGORY_LINKS###',  build_category_links(df))
-    html_output = html_output.replace('###USECASE_OPTIONS###', build_usecase_options(unique_usecases))
-    html_output = html_output.replace('###IE_OPTIONS###',      build_select_options(unique_ies))
+    # ── Page title for <title> element ─────────────────────────────────────
+    page_title = html_lib.escape(
+        tpl_vars.get('document_title',
+                      tpl_vars.get('documentTitle',
+                                    'BDQ Tests Quick Reference Guide'))
+    )
+
+    # ── Substitute all ###PLACEHOLDER### markers ────────────────────────────
+    html_out = TEMPLATE
+    html_out = html_out.replace('###PAGE_TITLE###',     page_title)
+    html_out = html_out.replace('###HEADER_HTML###',    header_html)
+    html_out = html_out.replace('###FOOTER_HTML###',    footer_html)
+    html_out = html_out.replace('###CONTENT###',        content)
+    html_out = html_out.replace('###CATEGORY_LINKS###', build_category_links(df))
+    html_out = html_out.replace('###USECASE_OPTIONS###',
+                                  build_usecase_options(unique_usecases))
+    html_out = html_out.replace('###IE_OPTIONS###',
+                                  build_select_options(unique_ies))
 
     # ── Write output ────────────────────────────────────────────────────────
     os.makedirs(os.path.dirname(OUTPUT_PATH), exist_ok=True)
     with open(OUTPUT_PATH, 'w', encoding='utf-8') as f:
-        f.write(html_output)
+        f.write(html_out)
     print(f"QRG successfully written to {OUTPUT_PATH}")
 
-    with open(DEPLOY_PATH, 'w', encoding='utf-8') as f1:
-        f1.write(html_output)
+    with open(DEPLOY_PATH, 'w', encoding='utf-8') as f:
+        f.write(html_out)
     print(f"QRG successfully written to {DEPLOY_PATH}")
 
 
