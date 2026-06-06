@@ -31,14 +31,15 @@ TEMPLATE = '''<!DOCTYPE html>
         body { display: flex; }
         main {
             flex: 1; padding: 20px;
-            max-width: calc(100% - 260px); margin-right: 240px;
+            max-width: calc(100% - 260px); margin-left: 240px;
         }
 
-        /* ── Sidebar ─────────────────────────────────────────── */
+        /* ── Sidebar (left) ──────────────────────────────────── */
         aside.nav-menu {
-            position: fixed; top: 0; right: 0;
+            position: fixed; top: 0; left: 0;
             height: 100vh; overflow-y: auto;
-            background: #fafafa; border-left: 1px solid #ccc;
+            background: #fafafa;
+            border-right: 1px solid #ccc;
             width: 240px; padding: 14px; box-sizing: border-box;
         }
         aside.nav-menu h2 {
@@ -48,12 +49,20 @@ TEMPLATE = '''<!DOCTYPE html>
         }
         aside.nav-menu h2:first-child { margin-top: 0; }
 
+        /* External navigation links */
         .sidebar-context-links { list-style: none; padding: 0; margin: 0 0 4px 0; }
         .sidebar-context-links li { margin: 5px 0; }
         .sidebar-context-links a {
             color: #003c71; text-decoration: none; font-size: 0.82em;
         }
         .sidebar-context-links a:hover { text-decoration: underline; }
+
+        /* Back to top link — lives under "On this Page" */
+        .back-to-top {
+            margin: 0 0 8px 0; font-size: 0.82em;
+        }
+        .back-to-top a { color: #003c71; text-decoration: none; }
+        .back-to-top a:hover { text-decoration: underline; }
 
         .menu-separator { border-top: 1px solid #ccc; margin: 10px 0; }
 
@@ -83,13 +92,24 @@ TEMPLATE = '''<!DOCTYPE html>
             display: block; font-weight: bold;
             font-size: 0.8em; color: #333; margin-bottom: 3px;
         }
-        #type-filters label {
+        #type-filters label, #category-filters label {
             display: block; font-size: 0.8em; margin: 3px 0; cursor: pointer;
         }
-        #type-filters input { margin-right: 4px; cursor: pointer; }
+        #type-filters input, #category-filters input {
+            margin-right: 4px; cursor: pointer;
+        }
         .filter-select {
             width: 100%; font-size: 0.79em; padding: 3px 4px;
             border: 1px solid #bbb; border-radius: 3px; box-sizing: border-box;
+        }
+        /* Multi-select gets a fixed height so several options are visible */
+        .filter-select-multi {
+            height: 130px;
+            padding: 2px;
+        }
+        .filter-hint {
+            display: block; font-size: 0.72em;
+            color: #666; font-style: italic; margin-top: 2px;
         }
         #clear-filters {
             font-size: 0.8em; padding: 4px 10px;
@@ -110,14 +130,20 @@ TEMPLATE = '''<!DOCTYPE html>
         .category-section { margin-bottom: 8px; }
         .class-wrapper {}
 
+        /*
+         * Sidebar is on the LEFT (240 px wide).  The wrapper strips must not
+         * overflow the right edge, so subtract the sidebar width from 100vw.
+         */
         .field-header-wrapper {
-            width: 100vw; position: relative; left: -20px;
+            width: calc(100vw - 240px);
+            position: relative; left: -20px;
             background: #cdd8de; padding: 4px 20px; box-sizing: border-box;
         }
         .field-header-wrapper h3 { margin: 0; font-size: 1em; color: #003c71; }
 
         .class-header-wrapper {
-            width: 100vw; position: relative; left: -20px;
+            width: calc(100vw - 240px);
+            position: relative; left: -20px;
             background: #dfe5d8; padding: 8px 20px; box-sizing: border-box;
             margin-bottom: 8px;
             border-bottom: 1px solid #ccc; border-top: 1px solid #ccc;
@@ -149,6 +175,81 @@ TEMPLATE = '''<!DOCTYPE html>
     </style>
 </head>
 <body>
+
+<!-- Sidebar is first in DOM order to match its left-side visual position -->
+<aside class="nav-menu">
+
+    <h2>BDQ Standard</h2>
+    <ul class="sidebar-context-links">
+        <li><a href="https://bdq.tdwg.org/draft/">&#127968; Landing page</a></li>
+        <li><a href="https://bdq.tdwg.org/draft/#2-A-Roadmap-to-the-BDQ-Standard-non-normative">&#129517; Roadmap to the Standard</a></li>
+        <li><a href="https://bdq.tdwg.org/draft/README.html">&#128203; Public Review</a></li>
+    </ul>
+
+    <div class="menu-separator"></div>
+
+    <h2>On this Page</h2>
+
+    <!-- Change 1: Back to top moved here, under "On this Page" -->
+    <p class="back-to-top">&uarr; <a href="#top"><strong>Back to top</strong></a></p>
+
+    <!-- Hidden when any filter is active -->
+    <div class="jump-links" id="jump-links">
+        <span class="jump-section-label">By Category:</span>
+        ###CATEGORY_LINKS###
+        <span class="jump-section-label">By Test Type:</span>
+        <a class="jump-link" href="#Amendment">Amendment</a><a
+        class="jump-link" href="#Issue">Issue</a><a
+        class="jump-link" href="#Measure">Measure</a><a
+        class="jump-link" href="#Validation">Validation</a>
+    </div>
+
+    <div class="filters-active-msg" id="filters-active-msg">&#9888; Filters active</div>
+
+    <!-- Change 3: Category filter -->
+    <div class="filter-group">
+        <span class="filter-label">Filter by Category</span>
+        <div id="category-filters">
+            <label><input type="checkbox" name="category" value="TIME"  onchange="applyFilters()"> TIME</label>
+            <label><input type="checkbox" name="category" value="SPACE" onchange="applyFilters()"> SPACE</label>
+            <label><input type="checkbox" name="category" value="NAME"  onchange="applyFilters()"> NAME</label>
+            <label><input type="checkbox" name="category" value="OTHER" onchange="applyFilters()"> OTHER</label>
+        </div>
+    </div>
+
+    <div class="filter-group">
+        <span class="filter-label">Filter by Test Type</span>
+        <div id="type-filters">
+            <label><input type="checkbox" name="type" value="Amendment"  onchange="applyFilters()"> Amendment</label>
+            <label><input type="checkbox" name="type" value="Issue"      onchange="applyFilters()"> Issue</label>
+            <label><input type="checkbox" name="type" value="Measure"    onchange="applyFilters()"> Measure</label>
+            <label><input type="checkbox" name="type" value="Validation" onchange="applyFilters()"> Validation</label>
+        </div>
+    </div>
+
+    <div class="filter-group">
+        <label class="filter-label" for="usecase-filter">Filter by Use Case</label>
+        <select id="usecase-filter" class="filter-select" onchange="applyFilters()">
+            <option value="">All Use Cases</option>
+            ###USECASE_OPTIONS###
+        </select>
+    </div>
+
+    <!-- Change 2: IE filter is now a multi-select -->
+    <div class="filter-group">
+        <label class="filter-label" for="ie-filter">Filter by Information Element Acted Upon</label>
+        <select id="ie-filter" class="filter-select filter-select-multi"
+                multiple onchange="applyFilters()">
+            ###IE_OPTIONS###
+        </select>
+        <small class="filter-hint">Ctrl+click / &#8984;+click to select multiple.<br>
+            No selection = no filter applied.</small>
+    </div>
+
+    <button id="clear-filters" onclick="clearFilters()" disabled>Clear Filters</button>
+    <span id="filter-count"></span>
+
+</aside>
 
 <main>
     <h1 id="top">BDQ Tests Quick Reference Guide</h1>
@@ -188,63 +289,6 @@ TEMPLATE = '''<!DOCTYPE html>
     ###CONTENT###
 </main>
 
-<aside class="nav-menu">
-
-    <h2>BDQ Standard</h2>
-    <ul class="sidebar-context-links">
-        <li>&uarr; <a href="#top"><strong>Back to top</strong></a></li>
-        <li><a href="https://bdq.tdwg.org/draft/">&#127968; Landing page</a></li>
-        <li><a href="https://bdq.tdwg.org/draft/#2-A-Roadmap-to-the-BDQ-Standard-non-normative">&#129517; Roadmap to the Standard</a></li>
-        <li><a href="https://bdq.tdwg.org/draft/README.html">&#128203; Public Review</a></li>
-    </ul>
-
-    <div class="menu-separator"></div>
-
-    <h2>On this Page</h2>
-
-    <div class="jump-links">
-        <span class="jump-section-label">By Category:</span>
-        ###CATEGORY_LINKS###
-        <span class="jump-section-label">By Test Type:</span>
-        <a class="jump-link" href="#Amendment">Amendment</a><a
-        class="jump-link" href="#Issue">Issue</a><a
-        class="jump-link" href="#Measure">Measure</a><a
-        class="jump-link" href="#Validation">Validation</a>
-    </div>
-
-    <div class="filters-active-msg" id="filters-active-msg">&#9888; Filters active</div>
-
-    <div class="filter-group">
-        <span class="filter-label">Filter by Test Type</span>
-        <div id="type-filters">
-            <label><input type="checkbox" name="type" value="Amendment"  onchange="applyFilters()"> Amendment</label>
-            <label><input type="checkbox" name="type" value="Issue"      onchange="applyFilters()"> Issue</label>
-            <label><input type="checkbox" name="type" value="Measure"    onchange="applyFilters()"> Measure</label>
-            <label><input type="checkbox" name="type" value="Validation" onchange="applyFilters()"> Validation</label>
-        </div>
-    </div>
-
-    <div class="filter-group">
-        <label class="filter-label" for="usecase-filter">Filter by Use Case</label>
-        <select id="usecase-filter" class="filter-select" onchange="applyFilters()">
-            <option value="">All Use Cases</option>
-            ###USECASE_OPTIONS###
-        </select>
-    </div>
-
-    <div class="filter-group">
-        <label class="filter-label" for="ie-filter">Filter by Information Element Acted Upon</label>
-        <select id="ie-filter" class="filter-select" onchange="applyFilters()">
-            <option value="">All Information Elements</option>
-            ###IE_OPTIONS###
-        </select>
-    </div>
-
-    <button id="clear-filters" onclick="clearFilters()" disabled>Clear Filters</button>
-    <span id="filter-count"></span>
-
-</aside>
-
 <script>
 (function () {
     'use strict';
@@ -253,8 +297,8 @@ TEMPLATE = '''<!DOCTYPE html>
     document.getElementById('filter-count').textContent = totalCount + ' tests total';
 
     /**
-     * Returns true when filterValue is empty (no filter active) OR when it
-     * matches one of the pipe-separated tokens in dataValue exactly.
+     * Returns true when filterValue is empty OR when it exactly matches one
+     * of the pipe-separated tokens stored in dataValue.
      */
     function matchesList(dataValue, filterValue) {
         if (!filterValue) return true;
@@ -269,17 +313,37 @@ TEMPLATE = '''<!DOCTYPE html>
     window.applyFilters = function () {
 
         /* ── Collect active filter values ── */
-        var checkedBoxes  = document.querySelectorAll('#type-filters input:checked');
-        var selectedTypes = Array.from(checkedBoxes).map(function (cb) { return cb.value; });
-        var selectedUC    = document.getElementById('usecase-filter').value;
-        var selectedIE    = document.getElementById('ie-filter').value;
-        var anyActive     = selectedTypes.length > 0 || !!selectedUC || !!selectedIE;
 
-        /* ── Update sidebar indicators ── */
+        // Test-type checkboxes
+        var selectedTypes = Array.from(
+            document.querySelectorAll('#type-filters input:checked')
+        ).map(function (cb) { return cb.value; });
+
+        // Category checkboxes (TIME / SPACE / NAME / OTHER)
+        var selectedCats = Array.from(
+            document.querySelectorAll('#category-filters input:checked')
+        ).map(function (cb) { return cb.value; });
+
+        // Use-case single-select
+        var selectedUC = document.getElementById('usecase-filter').value;
+
+        // IE multi-select — all highlighted options (empty array = no filter)
+        var selectedIEs = Array.from(
+            document.getElementById('ie-filter').selectedOptions
+        ).map(function (o) { return o.value; });
+
+        var anyActive = selectedTypes.length > 0 || selectedCats.length > 0 ||
+                        !!selectedUC            || selectedIEs.length > 0;
+
+        /* ── Update sidebar chrome ── */
         document.getElementById('clear-filters').disabled = !anyActive;
-        document.getElementById('filters-active-msg').style.display = anyActive ? 'block' : 'none';
+        document.getElementById('filters-active-msg').style.display =
+            anyActive ? 'block' : 'none';
 
-        /* ── Hide topic-category nav sections while a filter is active ── */
+        // Hide the jump-link navigation buttons while filters are active
+        document.getElementById('jump-links').style.display = anyActive ? 'none' : '';
+
+        /* ── Hide topic-category content sections when any filter is active ── */
         document.querySelectorAll('.category-section').forEach(function (el) {
             el.style.display = anyActive ? 'none' : '';
         });
@@ -289,27 +353,47 @@ TEMPLATE = '''<!DOCTYPE html>
         document.querySelectorAll('.term-section').forEach(function (sec) {
             var show = true;
 
+            // Test-type filter: OR logic — term must match one of the checked types
             if (selectedTypes.length > 0 &&
                     selectedTypes.indexOf(sec.dataset.type) === -1) {
                 show = false;
             }
+
+            // Category filter: OR logic — term must belong to at least one
+            // of the checked categories (TIME / SPACE / NAME / OTHER)
+            if (show && selectedCats.length > 0) {
+                var catMatch = selectedCats.some(function (cat) {
+                    return matchesList(sec.dataset.categories, cat);
+                });
+                if (!catMatch) show = false;
+            }
+
+            // Use-case filter: single value
             if (show && !matchesList(sec.dataset.usecases, selectedUC)) show = false;
-            if (show && !matchesList(sec.dataset.ie,       selectedIE)) show = false;
+
+            // IE filter: OR logic — term must involve at least one of the
+            // selected information elements
+            if (show && selectedIEs.length > 0) {
+                var ieMatch = selectedIEs.some(function (ie) {
+                    return matchesList(sec.dataset.ie, ie);
+                });
+                if (!ieMatch) show = false;
+            }
 
             sec.style.display = show ? '' : 'none';
             if (show) visibleCount++;
         });
 
-        /* ── Show / hide class wrappers; sync their quick-nav links ── */
+        /* ── Show / hide class wrappers; sync quick-nav links ── */
         document.querySelectorAll('.class-wrapper').forEach(function (wrapper) {
             var terms      = Array.from(wrapper.querySelectorAll('.term-section'));
             var anyVisible = terms.some(function (s) { return s.style.display !== 'none'; });
             wrapper.style.display = anyVisible ? '' : 'none';
 
-            /* Hide field-box links whose target term is now hidden */
             wrapper.querySelectorAll('a.field-box[data-target]').forEach(function (link) {
                 var target = document.getElementById(link.dataset.target);
-                link.style.display = (target && target.style.display !== 'none') ? '' : 'none';
+                link.style.display =
+                    (target && target.style.display !== 'none') ? '' : 'none';
             });
         });
 
@@ -327,8 +411,14 @@ TEMPLATE = '''<!DOCTYPE html>
         document.querySelectorAll('#type-filters input').forEach(function (cb) {
             cb.checked = false;
         });
+        document.querySelectorAll('#category-filters input').forEach(function (cb) {
+            cb.checked = false;
+        });
         document.getElementById('usecase-filter').value = '';
-        document.getElementById('ie-filter').value      = '';
+        // Multi-select: deselect every option individually
+        Array.from(document.getElementById('ie-filter').options).forEach(function (o) {
+            o.selected = false;
+        });
         applyFilters();
     };
 
@@ -345,8 +435,8 @@ TEMPLATE = '''<!DOCTYPE html>
 
 def normalize_list_attr(value):
     """
-    Convert a comma / semicolon / pipe-separated string to a pipe-separated
-    string suitable for use in HTML data-* attributes.
+    Convert a comma / semicolon / pipe-separated string into a pipe-separated
+    string for use in HTML data-* attributes.
     Returns '' for empty or 'nan' inputs.
     """
     v = str(value).strip()
@@ -356,10 +446,22 @@ def normalize_list_attr(value):
     return '|'.join(p.strip() for p in parts if p.strip())
 
 
+def extract_categories(issue_labels_value):
+    """
+    Scan IssueLabels for TIME / SPACE / NAME / OTHER keywords and return
+    a pipe-separated string of every category found.
+    A single test may belong to more than one category
+    (e.g. MEASURE_VALIDATIONTESTS_NOTCOMPLIANT carries all four).
+    """
+    s = str(issue_labels_value or '').upper()
+    found = [cat for cat in ('TIME', 'SPACE', 'NAME', 'OTHER') if cat in s]
+    return '|'.join(found)
+
+
 def get_unique_values_from_column(df, col):
     """
     Return a sorted list of unique individual values from a delimited column.
-    Handles comma / semicolon / pipe separators and ignores 'nan' cells.
+    Handles comma / semicolon / pipe separators; ignores 'nan' cells.
     """
     if col not in df.columns:
         return []
@@ -375,7 +477,7 @@ def get_unique_values_from_column(df, col):
 
 
 def build_select_options(values):
-    """Return a newline-joined string of <option> tags for the given values."""
+    """Return <option> tags for a plain single-select dropdown."""
     lines = []
     for v in values:
         esc = html_lib.escape(v, quote=True)
@@ -383,21 +485,16 @@ def build_select_options(values):
     return '\n            '.join(lines)
 
 
-# CHANGE 3: Use case dropdown strips the 'bdquc:' namespace prefix from the
-# human-readable display text while keeping the full prefixed value in the
-# value= attribute so it still matches data-usecases attributes exactly.
 def build_usecase_options(values):
     """
     Build <option> tags for use-case values.
-    The value= attribute retains the full 'bdquc:'-prefixed name so the JS
-    filter matches correctly against data-usecases; the visible label strips
-    any namespace prefix for readability.
-      e.g.  bdquc:Spatial-Temporal_Patterns  →  display: Spatial-Temporal_Patterns
+    value= retains the full 'bdquc:'-prefixed name (matches data-usecases);
+    visible label strips any 'xyz:' namespace prefix for readability.
     """
     lines = []
     for v in values:
         val_esc     = html_lib.escape(v, quote=True)
-        display     = re.sub(r'^[a-z]+:', '', v)          # strip leading 'xyz:' prefix
+        display     = re.sub(r'^[a-z]+:', '', v)
         display_esc = html_lib.escape(display, quote=True)
         lines.append(f'<option value="{val_esc}">{display_esc}</option>')
     return '\n            '.join(lines)
@@ -412,23 +509,25 @@ def linkify_urls(text):
 # HTML-section builders
 # ---------------------------------------------------------------------------
 
-def build_term_section(term, columns, term_type='', usecases='', ie_acted=''):
+def build_term_section(term, columns, term_type='', usecases='',
+                        ie_acted='', categories=''):
     """
     Build a <section class="term-section"> element for one BDQ test.
 
     Data attributes for JS filtering:
-      data-type      – organized_in value (Amendment / Issue / Measure / Validation)
-      data-usecases  – pipe-separated use-case identifiers (full bdquc: names)
-      data-ie        – pipe-separated Information Elements Acted Upon
+      data-type       – organized_in value (Amendment / Issue / Measure / Validation)
+      data-usecases   – pipe-separated use-case identifiers (full bdquc: names)
+      data-ie         – pipe-separated Information Elements Acted Upon
+      data-categories – pipe-separated TIME/SPACE/NAME/OTHER from IssueLabels
     """
     term_id = term.get('term_localName', term.get('Label', 'term')).strip().replace(' ', '_')
     label   = term.get('Label', 'Unnamed Term')
 
-    type_attr     = html_lib.escape(str(term_type).strip(),        quote=True)
-    usecases_attr = html_lib.escape(normalize_list_attr(usecases), quote=True)
-    ie_attr       = html_lib.escape(normalize_list_attr(ie_acted), quote=True)
+    type_attr       = html_lib.escape(str(term_type).strip(),         quote=True)
+    usecases_attr   = html_lib.escape(normalize_list_attr(usecases),  quote=True)
+    ie_attr         = html_lib.escape(normalize_list_attr(ie_acted),  quote=True)
+    categories_attr = html_lib.escape(str(categories).strip(),        quote=True)
 
-    # CHANGE 4 (partial): added 'UseCases' and 'aggregatesResponsesFrom' mappings
     label_map = {
         'iri':                          'Term Version IRI',
         'prefLabel':                    'Preferred Label',
@@ -459,7 +558,8 @@ def build_term_section(term, columns, term_type='', usecases='', ie_acted=''):
         f'<section class="term-section" id="{term_id}"'
         f' data-type="{type_attr}"'
         f' data-usecases="{usecases_attr}"'
-        f' data-ie="{ie_attr}">\n'
+        f' data-ie="{ie_attr}"'
+        f' data-categories="{categories_attr}">\n'
         f'<div class="field-header-wrapper"><h3>{label}</h3></div>\n'
         f'<table class="term-table">{rows}</table>\n'
         f'</section>'
@@ -469,8 +569,8 @@ def build_term_section(term, columns, term_type='', usecases='', ie_acted=''):
 def build_field_index(terms):
     """
     Build a <nav class="field-index"> quick-jump block.
-    Each link carries data-target so the JS filter can show/hide it
-    in sync with its target term section.
+    Each link carries data-target so the JS filter can sync its visibility
+    with its target term section.
     """
     links = []
     for term in terms:
@@ -482,19 +582,11 @@ def build_field_index(terms):
     return '<nav class="field-index">' + ''.join(links) + '</nav>'
 
 
-# CHANGE 1: Replaced _row_category_from_issuelabels (single-return helper)
-# with a direct per-category substring mask in both functions below.
-# The old helper matched only the FIRST category found, so a test whose
-# IssueLabels contained "NAME SPACE TIME OTHER" (e.g.,
-# MEASURE_VALIDATIONTESTS_NOTCOMPLIANT) appeared only under TIME.
-# The new approach checks each category independently, so a test can
-# correctly appear in multiple category navigation sections.
-
 def build_category_sections(df):
     """
-    Build a navigation-index section for each topic category
-    (TIME / SPACE / NAME / OTHER).  A single test may appear in more than
-    one category section because IssueLabels can contain multiple keywords.
+    Build a navigation-index section for each topic category.
+    Uses independent per-category masks so a test can appear in multiple
+    category sections (e.g. a Measure covering all four categories).
     """
     categories = ['TIME', 'SPACE', 'NAME', 'OTHER']
     col = 'IssueLabels'
@@ -503,7 +595,6 @@ def build_category_sections(df):
 
     out = []
     for cat in categories:
-        # Independent substring test per category — no first-match-only problem.
         mask   = df[col].apply(lambda v: cat in str(v or '').upper())
         subset = df[mask]
         if subset.empty:
@@ -519,11 +610,7 @@ def build_category_sections(df):
 
 
 def build_category_links(df):
-    """
-    Build sidebar jump-link anchors to the category sections.
-    Uses the same independent per-category mask as build_category_sections.
-    Returns jump-link-classed <a> tags to match the sidebar styling.
-    """
+    """Build sidebar jump-link <a> tags for each present category."""
     categories = ['TIME', 'SPACE', 'NAME', 'OTHER']
     col = 'IssueLabels'
     if col not in df.columns:
@@ -549,32 +636,25 @@ def generate_qrg():
     if 'organized_in' not in df.columns:
         raise ValueError("Missing 'organized_in' column in source CSV.")
 
-    # CHANGE 2: added 'aggregatesResponsesFrom' to the display column set.
-    # This column sits between InformationElement:ActedUpon and
-    # InformationElement:Consulted in the CSV and is meaningful for Measure
-    # tests that aggregate results from other tests.
     display_cols = {
         'Label', 'prefLabel', 'iri', 'Description', 'ExpectedResponse',
         'InformationElement:ActedUpon', 'aggregatesResponsesFrom',
         'InformationElement:Consulted', 'Parameters', 'AuthoritiesDefaults',
         'Notes', 'Examples', 'Type', 'UseCases', 'Resource Type',
     }
-    # Preserve the column order as it appears in the CSV
+    # Preserve column order as it appears in the CSV
     columns = [c for c in df.columns if c.strip() and c in display_cols]
 
     ordered_classes = ['Amendment', 'Issue', 'Measure', 'Validation']
     grouped = dict(tuple(df.groupby('organized_in')))
     grouped = {cls: grouped[cls] for cls in ordered_classes if cls in grouped}
 
-    # Collect unique values for the filter dropdowns
     unique_usecases = get_unique_values_from_column(df, 'UseCases')
     unique_ies      = get_unique_values_from_column(df, 'InformationElement:ActedUpon')
 
     # ── Build main content ──────────────────────────────────────────────────
-    # Category navigation sections come first (hidden by JS when filters active)
     content = build_category_sections(df)
 
-    # One .class-wrapper per test type
     for group, terms in grouped.items():
         anchor  = group.strip().replace(' ', '_')
         content += '<div class="class-wrapper">\n'
@@ -588,9 +668,10 @@ def generate_qrg():
         for _, row in terms.iterrows():
             content += build_term_section(
                 row, columns,
-                term_type=group,
-                usecases=str(row.get('UseCases', '')),
-                ie_acted=str(row.get('InformationElement:ActedUpon', '')),
+                term_type  = group,
+                usecases   = str(row.get('UseCases', '')),
+                ie_acted   = str(row.get('InformationElement:ActedUpon', '')),
+                categories = extract_categories(row.get('IssueLabels', '')),
             )
 
         content += '</div>\n'   # .class-wrapper
