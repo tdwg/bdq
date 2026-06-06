@@ -22,7 +22,6 @@ except ImportError:
         "Install with:  pip install markdown"
     )
 
-
 # ── File paths ────────────────────────────────────────────────────────────────
 CSV_PATH        = '../_review/vocabulary/bdqtest_term_versions.csv'
 OUTPUT_PATH     = '../_review/docs/terms/bdqtest/index.html'
@@ -108,17 +107,14 @@ TEMPLATE = '''<!DOCTYPE html>
         /* ── Headings (scoped to main so page-header h1 is unaffected) ───── */
         main h1 {
             border-bottom: 1px solid var(--bdq-border);
-            padding-bottom: 0.3rem;
-            margin-top: 1.5rem;
+            padding-bottom: 0.3rem; margin-top: 1.5rem;
         }
         main h1:first-of-type { margin-top: 0.5rem; }
-
         main h2 {
             border-bottom: 1px solid var(--bdq-border);
-            padding-bottom: 0.2rem;
-            margin-top: 1.5rem;
+            padding-bottom: 0.2rem; margin-top: 1.5rem;
         }
-        /* Suppress border on the coloured-background wrapper headings */
+        /* Suppress border on coloured-background wrapper headings */
         .class-header-wrapper h2 { border: none; padding-bottom: 0; margin-top: 0; }
 
         /* ── Fixed left sidebar ──────────────────────────────────────────── */
@@ -133,18 +129,15 @@ TEMPLATE = '''<!DOCTYPE html>
         }
         aside.nav-menu h2 {
             font-size: 0.95em; margin: 14px 0 6px 0;
-            padding-bottom: 4px;
-            border-bottom: 1px solid var(--bdq-border);
+            padding-bottom: 4px; border-bottom: 1px solid var(--bdq-border);
             color: var(--bdq-brand);
         }
         aside.nav-menu h2:first-child { margin-top: 0; }
 
-        /* Back-to-top sits under "On this Page" */
         .back-to-top { margin: 0 0 8px 0; font-size: 0.82em; }
         .back-to-top a { color: var(--bdq-link); text-decoration: none; }
         .back-to-top a:hover { text-decoration: underline; }
 
-        /* External nav links */
         .sidebar-context-links { list-style: none; padding: 0; margin: 0 0 4px 0; }
         .sidebar-context-links li { margin: 5px 0; }
         .sidebar-context-links a {
@@ -154,7 +147,7 @@ TEMPLATE = '''<!DOCTYPE html>
 
         .menu-separator { border-top: 1px solid var(--bdq-border); margin: 10px 0; }
 
-        /* Jump / index links — single "Index" label, all buttons together */
+        /* Jump / index links */
         .jump-links { margin: 0 0 10px 0; }
         .jump-section-label {
             display: block; font-size: 0.75em; font-weight: bold;
@@ -168,12 +161,12 @@ TEMPLATE = '''<!DOCTYPE html>
         }
         .jump-link:hover { background: var(--bdq-bg-soft-2); }
 
-        /* Filter panel */
+        /* ── Filter panel ────────────────────────────────────────────────── */
         .filters-active-msg {
             display: none; font-size: 0.75em;
             background: #fff3cd; border: 1px solid #ffc107;
-            border-radius: 3px; padding: 2px 6px; color: #856404;
-            margin-bottom: 8px;
+            border-radius: 3px; padding: 4px 8px; color: #856404;
+            margin-bottom: 8px; font-weight: bold;
         }
         .filter-group { margin-bottom: 10px; }
         .filter-label {
@@ -196,13 +189,31 @@ TEMPLATE = '''<!DOCTYPE html>
             display: block; font-size: 0.72em; color: var(--bdq-muted);
             font-style: italic; margin-top: 2px;
         }
+
+        /*
+         * CHANGE 2 — Clear Filters button.
+         * Disabled (no active filters): subtle grey, not distracting.
+         * Enabled  (filters active):    prominent red — same hue as the
+         *   "Under Review" banner, full sidebar width, bold label.
+         * This makes it immediately obvious that filters are on and how
+         * to reset them, which was the key piece of user feedback.
+         */
         #clear-filters {
-            font-size: 0.8em; padding: 4px 10px;
-            background: var(--bdq-brand); color: #fff;
-            border: none; border-radius: 3px; cursor: pointer; margin-top: 6px;
+            font-size: 0.85em; padding: 6px 10px;
+            color: #fff;
+            border: none; border-radius: 3px;
+            margin-top: 6px; width: 100%; font-weight: bold;
+            cursor: default;
+            background: #ccc;
+            transition: background-color 0.15s;
         }
-        #clear-filters:hover:not(:disabled) { filter: brightness(1.2); }
-        #clear-filters:disabled { background: var(--bdq-muted); cursor: default; }
+        #clear-filters:not(:disabled) {
+            background: var(--bdq-review);   /* prominent red when active */
+            cursor: pointer;
+        }
+        #clear-filters:not(:disabled):hover { filter: brightness(1.15); }
+        #clear-filters:disabled { background: #ccc; color: #888; }
+
         #filter-count {
             font-size: 0.76em; color: var(--bdq-muted);
             display: block; margin-top: 5px; font-style: italic;
@@ -211,18 +222,11 @@ TEMPLATE = '''<!DOCTYPE html>
         /* ── Main content ─────────────────────────────────────────────────── */
         .category-section { margin-bottom: 8px; }
 
-        /*
-         * Full-bleed coloured header strips.
-         * main has padding-left 20px → left: -20px cancels it.
-         * Width = viewport − sidebar (240 px).
-         */
         .field-header-wrapper {
             width: calc(100vw - 240px); position: relative; left: -20px;
             background: #cdd8de; padding: 4px 20px; box-sizing: border-box;
         }
-        .field-header-wrapper h3 {
-            margin: 0; font-size: 1em; color: var(--bdq-brand);
-        }
+        .field-header-wrapper h3 { margin: 0; font-size: 1em; color: var(--bdq-brand); }
 
         .class-header-wrapper {
             width: calc(100vw - 240px); position: relative; left: -20px;
@@ -231,9 +235,7 @@ TEMPLATE = '''<!DOCTYPE html>
             border-top: 1px solid var(--bdq-border);
             border-bottom: 1px solid var(--bdq-border);
         }
-        .class-header-wrapper h2 {
-            margin: 0; font-size: 1.1em; color: var(--bdq-brand);
-        }
+        .class-header-wrapper h2 { margin: 0; font-size: 1.1em; color: var(--bdq-brand); }
 
         nav.field-index a.field-box {
             display: inline-block; margin: 5px; padding: 5px 10px;
@@ -248,9 +250,7 @@ TEMPLATE = '''<!DOCTYPE html>
             padding-top: 12px; margin-top: 12px;
         }
 
-        table.term-table {
-            width: 100%; border-collapse: collapse; margin-top: 10px;
-        }
+        table.term-table { width: 100%; border-collapse: collapse; margin-top: 10px; }
         table.term-table td {
             vertical-align: top; padding: 4px;
             border-top: 1px solid var(--bdq-border);
@@ -265,12 +265,10 @@ TEMPLATE = '''<!DOCTYPE html>
             border: 1px dashed var(--bdq-border); border-radius: 4px; margin: 20px 0;
         }
 
-        /* ── Lists and links inside markdown-generated header/footer ─────── */
         main ul   { margin: 0.5rem 0; padding-left: 1.5rem; }
         main ul li { margin: 0.3rem 0; }
         main ul ul { margin: 0.2rem 0; }
 
-        /* ── Footer from markdown template ───────────────────────────────── */
         .page-footer {
             margin-top: 3rem; padding-top: 1.5rem;
             border-top: 2px solid var(--bdq-border);
@@ -280,8 +278,7 @@ TEMPLATE = '''<!DOCTYPE html>
         @media (max-width: 768px) {
             aside.nav-menu {
                 position: static; width: 100%; height: auto;
-                border-right: none;
-                border-bottom: 1px solid var(--bdq-border);
+                border-right: none; border-bottom: 1px solid var(--bdq-border);
                 overflow-y: visible; z-index: auto;
             }
             .content-wrapper { margin-left: 0; }
@@ -311,9 +308,8 @@ TEMPLATE = '''<!DOCTYPE html>
     <p class="back-to-top">&uarr; <a href="#top"><strong>Back to top</strong></a></p>
 
     <!--
-      Single "Index" label; category buttons and test-type buttons run together
-      with no sub-heading between them.  The whole block is hidden by JS
-      whenever any filter is active.
+      Single "Index" label; all category + test-type buttons together.
+      Hidden by JS whenever any filter is active.
     -->
     <div class="jump-links" id="jump-links">
         <span class="jump-section-label">Index</span>
@@ -364,7 +360,10 @@ TEMPLATE = '''<!DOCTYPE html>
             No selection = no filter applied.</small>
     </div>
 
-    <button id="clear-filters" onclick="clearFilters()" disabled>Clear Filters</button>
+    <!-- CHANGE 2: button is full-width, prominent red when active -->
+    <button id="clear-filters" onclick="clearFilters()" disabled>
+        &#10005; Clear All Filters
+    </button>
     <span id="filter-count"></span>
 
 </aside>
@@ -392,12 +391,10 @@ TEMPLATE = '''<!DOCTYPE html>
     </div>
 
     <main>
-        <!-- Anchor for sidebar "Back to top" link -->
         <span id="top"></span>
 
         <div class="review-banner" role="note" aria-label="Under review">Under Review</div>
 
-        <!-- ── Page header: generated from bdqtest_quickreference-header.md ── -->
         ###HEADER_HTML###
 
         <div id="no-results-msg" class="no-results-msg">
@@ -406,10 +403,8 @@ TEMPLATE = '''<!DOCTYPE html>
             to see all tests.
         </div>
 
-        <!-- ── Test content: category indexes then alphabetical sections ───── -->
         ###CONTENT###
 
-        <!-- ── Page footer: generated from bdqtest_quickreference-footer.md ── -->
         <footer class="page-footer" aria-label="Document footer">
             ###FOOTER_HTML###
         </footer>
@@ -436,6 +431,31 @@ TEMPLATE = '''<!DOCTYPE html>
 
     window.applyFilters = function () {
 
+        /*
+         * CHANGE 2 — Scroll to the very top of the page and clear any URL
+         * hash before doing any DOM work.
+         *
+         * Why this matters:
+         *   - When filters hide/show elements the total page height changes.
+         *     Without this reset, the browser keeps the old scroll offset,
+         *     which can land anywhere — including the footer (Glossary).
+         *   - A stale #hash in the URL can cause the browser to jump to a
+         *     term that is now hidden, producing erratic scroll behaviour
+         *     when the user then changes the filter again.
+         *
+         * Using behavior:'instant' avoids a distracting animation;
+         * the user asked the filter to change, so a clean-cut reset is
+         * the right UX.
+         */
+        window.scrollTo({ top: 0, behavior: 'instant' });
+        if (window.location.hash) {
+            history.replaceState(
+                null, '',
+                window.location.pathname + window.location.search
+            );
+        }
+
+        /* ── Collect active filter values ── */
         var selectedTypes = Array.from(
             document.querySelectorAll('#type-filters input:checked')
         ).map(function (cb) { return cb.value; });
@@ -453,20 +473,19 @@ TEMPLATE = '''<!DOCTYPE html>
         var anyActive = selectedTypes.length > 0 || selectedCats.length > 0 ||
                         !!selectedUC            || selectedIEs.length  > 0;
 
+        /* ── Update sidebar chrome ── */
         document.getElementById('clear-filters').disabled = !anyActive;
         document.getElementById('filters-active-msg').style.display =
             anyActive ? 'block' : 'none';
-
-        /* Hide the index jump-links while any filter is active */
         document.getElementById('jump-links').style.display =
             anyActive ? 'none' : '';
 
-        /* Hide topic-category index sections when filters are active */
+        /* ── Hide topic-category index sections while any filter is active ── */
         document.querySelectorAll('.category-section').forEach(function (el) {
             el.style.display = anyActive ? 'none' : '';
         });
 
-        /* Show / hide individual term sections */
+        /* ── Show / hide individual term sections ── */
         var visibleCount = 0;
         document.querySelectorAll('.term-section').forEach(function (sec) {
             var show = true;
@@ -494,7 +513,7 @@ TEMPLATE = '''<!DOCTYPE html>
             if (show) visibleCount++;
         });
 
-        /* Show / hide class wrappers; sync quick-nav links */
+        /* ── Show / hide class wrappers; sync quick-nav links ── */
         document.querySelectorAll('.class-wrapper').forEach(function (wrapper) {
             var terms      = Array.from(wrapper.querySelectorAll('.term-section'));
             var anyVisible = terms.some(function (s) {
@@ -530,7 +549,7 @@ TEMPLATE = '''<!DOCTYPE html>
         Array.from(document.getElementById('ie-filter').options).forEach(
             function (o) { o.selected = false; }
         );
-        applyFilters();
+        applyFilters();   /* applyFilters() also scrolls to top */
     };
 
 }());
@@ -545,7 +564,6 @@ TEMPLATE = '''<!DOCTYPE html>
 # ═══════════════════════════════════════════════════════════════════════════════
 
 def _load_yaml(path):
-    """Load a YAML file and return the parsed dict, or {} on failure."""
     with open(path, 'r', encoding='utf-8') as fh:
         return yaml.safe_load(fh) or {}
 
@@ -555,23 +573,13 @@ def _load_yaml(path):
 # ═══════════════════════════════════════════════════════════════════════════════
 
 def _camel_to_snake(name):
-    """
-    Convert camelCase/PascalCase to snake_case.
-      documentTitle  → document_title
-      accessUrl      → access_url
-    Keys that are already snake_case are returned unchanged.
-    """
     s = re.sub(r'([A-Z][a-z]+)', r'_\1', name)
     s = re.sub(r'([a-z0-9])([A-Z])', r'\1_\2', s)
     return s.lower().lstrip('_')
 
 
-# Explicit template-placeholder → YAML key mappings that cannot be derived
-# automatically from camelCase conversion alone.
 _YAML_ALIASES = {
-    # The header template uses {standard_iri} for the standard's IRI
     'standard_iri':   'dcterms_isPartOf',
-    # Ensure the snake_case alias is always available
     'document_title': 'documentTitle',
 }
 
@@ -580,15 +588,12 @@ def _build_template_vars(yaml_cfg):
     """
     Build a flat {placeholder: value} dict from the YAML configuration.
 
-    Rules applied in order:
-    1.  Every YAML key is stored as-is with its string value.
+    Rules:
+    1.  Every YAML key is stored as-is.
     2.  A snake_case alias is added for every camelCase key.
-    3.  Explicit aliases in _YAML_ALIASES fill in any remaining gaps.
+    3.  Explicit aliases in _YAML_ALIASES fill any remaining gaps.
     4.  'year' and 'ratification_date' are derived from 'doc_created'.
-    5.  'comment' defaults to '' when absent — it is NOT populated from
-        'abstract'.  If the YAML supplies a non-empty 'comment', that value
-        is used; if it is absent or blank, the {comment} placeholder simply
-        becomes an empty string (producing no visible paragraph).
+    5.  'comment' defaults to '' — it is NOT populated from 'abstract'.
     """
     v = {}
     for k, val in yaml_cfg.items():
@@ -598,64 +603,83 @@ def _build_template_vars(yaml_cfg):
         if snake != k:
             v[snake] = str_val
 
-    # Explicit aliases
     for alias, source_key in _YAML_ALIASES.items():
         if alias not in v:
             v[alias] = v.get(source_key, v.get(_camel_to_snake(source_key), ''))
 
-    # Derived values
     doc_created = v.get('doc_created', '')
     if doc_created and len(doc_created) >= 4:
         v.setdefault('year',             doc_created[:4])
         v.setdefault('ratification_date', doc_created)
 
-    # comment: use the YAML 'comment' value only — no abstract fallback
+    # comment: use only what YAML supplies; never fall back to abstract
     v.setdefault('comment', '')
 
     return v
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
+# CHANGE 1 — Markdown hide-block removal
+# ═══════════════════════════════════════════════════════════════════════════════
+
+def _remove_hide_blocks(text):
+    """
+    Remove blocks enclosed by the BDQ hide-block markers:
+
+        <!--- START HIDE IN HTML --->
+        ...any content...
+        <!--- END HIDE IN HTML --->
+
+    Both the markers themselves AND the content between them are deleted.
+    Whitespace padding around the marker text is tolerated.
+    Multiple non-overlapping blocks in one file are all removed.
+
+    This runs BEFORE the general <!--- ... ---> comment strip so that the
+    END marker is never consumed prematurely by the general strip.
+    """
+    return re.sub(
+        r'<!---\s*START HIDE IN HTML\s*--->.*?<!---\s*END HIDE IN HTML\s*--->',
+        '',
+        text,
+        flags=re.DOTALL
+    )
+
+
+# ═══════════════════════════════════════════════════════════════════════════════
 # Markdown → HTML conversion
-# (delegates fully to the 'markdown' library; only post-processing is custom)
 # ═══════════════════════════════════════════════════════════════════════════════
 
 def _rewrite_md_links(html_text):
     """
-    Post-process HTML produced by the markdown library:
-    rewrite every  href="…path.md"  or  href="…path.md#fragment"
-    to             href="…path.html"  or  href="…path.html#fragment".
-    External http(s) URLs and anchors-only (#fragment) are left untouched.
+    Rewrite href="…path.md" → href="…path.html" (preserving #fragment).
+    External http(s) URLs and fragment-only anchors are left untouched.
     """
     def _fix(m):
-        path = m.group(1)   # everything before '.md'
-        frag = m.group(2) or ''  # '#fragment' or ''
+        path = m.group(1)
+        frag = m.group(2) or ''
         return f'href="{path}.html{frag}"'
 
-    return re.sub(
-        r'href="([^"#][^"]*?)\.md(#[^"]*?)?"',
-        _fix,
-        html_text
-    )
+    return re.sub(r'href="([^"#][^"]*?)\.md(#[^"]*?)?"', _fix, html_text)
 
 
-def convert_md_template(md_path, variables, strip_trailing_h2=False):
+def convert_md_template(md_path, variables):
     """
     Load a BDQ markdown template, substitute variables, and return HTML.
 
     Steps:
     1.  Read file.
-    2.  Strip  <!--- … --->  comment blocks (BDQ template convention).
-    3.  Substitute {variable} placeholders from *variables* dict.
-    4.  Warn about any {placeholder} tokens that remain unresolved.
-    5.  Normalise line endings.
-    6.  If strip_trailing_h2=True, drop the last non-blank line when it
-        starts with '## ' (handles the header template's trailing index
-        heading that belongs to the generated content, not the intro).
+    2.  Remove <!--- START HIDE IN HTML ---> … <!--- END HIDE IN HTML --->
+        blocks (markers + content both deleted).   [CHANGE 1]
+    3.  Strip remaining <!--- … ---> comment blocks.
+    4.  Substitute {variable} placeholders.
+    5.  Warn about unresolved {placeholder} tokens.
+    6.  Normalise line endings.
     7.  Convert markdown → HTML via python-markdown
-        (extensions: 'extra' for tables/nested-lists/fenced-code,
-                      'toc' to attach id= anchors to every heading).
-    8.  Rewrite .md hrefs → .html via _rewrite_md_links().
+        (extensions: 'extra' for tables/nested-lists, 'toc' for heading ids).
+    8.  Rewrite .md hrefs → .html.
+
+    Note: strip_trailing_h2 parameter removed — use the
+    <!--- START HIDE IN HTML ---> marker in the template instead.
     """
     if not os.path.exists(md_path):
         print(f"Warning: template not found: {md_path}")
@@ -664,41 +688,30 @@ def convert_md_template(md_path, variables, strip_trailing_h2=False):
     with open(md_path, 'r', encoding='utf-8') as fh:
         text = fh.read()
 
-    # 2. Strip <!--- ... ---> comment blocks (BDQ template convention)
+    # 2. Remove HIDE blocks before any other processing
+    text = _remove_hide_blocks(text)
+
+    # 3. Strip remaining <!--- ... ---> comment blocks
     text = re.sub(r'<!---.*?--->', '', text, flags=re.DOTALL)
 
-    # 3. Variable substitution
+    # 4. Variable substitution
     for key, val in variables.items():
         text = text.replace('{' + key + '}', val)
 
-    # 4. Warn about any remaining unresolved {placeholder} tokens
+    # 5. Warn about remaining unresolved tokens
     remaining = sorted(set(re.findall(r'\{([a-zA-Z_]\w*)\}', text)))
     if remaining:
         print(f"Warning [{os.path.basename(md_path)}]: "
               f"unresolved template variables: {remaining}")
 
-    # 5. Normalise line endings
+    # 6. Normalise line endings
     text = text.replace('\r\n', '\n')
 
-    # 6. Optionally drop trailing '## ...' heading from the markdown source
-    if strip_trailing_h2:
-        lines = text.rstrip('\n').split('\n')
-        while lines and not lines[-1].strip():
-            lines.pop()
-        if lines and lines[-1].lstrip().startswith('## '):
-            lines.pop()
-        text = '\n'.join(lines)
-
     # 7. Convert markdown → HTML
-    #    'extra'  →  tables, fenced code, footnotes, nested lists, etc.
-    #    'toc'    →  adds id= attributes to headings (needed for
-    #                the #cite-bdq-non-normative cross-reference)
     md_proc = markdown.Markdown(
         extensions=['extra', 'toc'],
         extension_configs={
-            'toc': {
-                'permalink': False,   # no ¶ symbols
-            }
+            'toc': {'permalink': False}
         }
     )
     html_text = md_proc.convert(text)
@@ -710,7 +723,7 @@ def convert_md_template(md_path, variables, strip_trailing_h2=False):
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
-# BDQ-specific HTML-section builders (unchanged from previous version)
+# BDQ-specific HTML-section builders
 # ═══════════════════════════════════════════════════════════════════════════════
 
 def normalize_list_attr(value):
@@ -746,7 +759,6 @@ def get_unique_values_from_column(df, col):
 
 
 def build_select_options(values):
-    """<option> tags for a plain single-select dropdown."""
     return '\n            '.join(
         f'<option value="{html_lib.escape(v, quote=True)}">'
         f'{html_lib.escape(v, quote=True)}</option>'
@@ -756,7 +768,6 @@ def build_select_options(values):
 
 def build_usecase_options(values):
     """
-    <option> tags for use-case values.
     value= keeps the full 'bdquc:'-prefixed name (matches data-usecases);
     visible label strips any 'xyz:' namespace prefix for readability.
     """
@@ -770,7 +781,6 @@ def build_usecase_options(values):
 
 
 def linkify_urls(text):
-    """Wrap bare http(s) URLs in <a> tags."""
     return re.sub(r'(https?://\S+)', r'<a href="\1">\1</a>', text)
 
 
@@ -779,19 +789,35 @@ def build_term_section(term, columns, term_type='', usecases='',
     """
     Build a <section class="term-section"> for one BDQ test.
 
-    data-type       – Amendment / Issue / Measure / Validation
-    data-usecases   – pipe-separated bdquc: use-case identifiers
-    data-ie         – pipe-separated Information Elements Acted Upon
-    data-categories – pipe-separated TIME/SPACE/NAME/OTHER
+    CHANGE 3 — Dual anchors:
+      Primary   id  on the <section>: term_localName (the GUID)
+        → supports  https://…/bdqtest/#b129fa4d-b25b-43f7-9645-5ed4d44b357b
+      Secondary id  on a <span>      : Label (the uppercase test name)
+        → supports  https://…/bdqtest/#AMENDMENT_DAY_STANDARDIZED
+
+    The <span> is placed as the first child of the <section>, immediately
+    before the coloured field-header strip, so both anchors scroll the
+    user to the same visual position.
+
+    Other data attributes for JS filtering:
+      data-type       – Amendment / Issue / Measure / Validation
+      data-usecases   – pipe-separated bdquc: use-case identifiers
+      data-ie         – pipe-separated Information Elements Acted Upon
+      data-categories – pipe-separated TIME/SPACE/NAME/OTHER
     """
-    term_id = (term.get('term_localName', term.get('Label', 'term'))
-               .strip().replace(' ', '_'))
-    label   = term.get('Label', 'Unnamed Term')
+    # Primary anchor: GUID (term_localName)
+    term_id  = (term.get('term_localName', term.get('Label', 'term'))
+                .strip().replace(' ', '_'))
+    label    = term.get('Label', 'Unnamed Term')
+    # Secondary anchor: Label (e.g. AMENDMENT_DAY_STANDARDIZED)
+    label_id = label.strip().replace(' ', '_')
 
     type_attr       = html_lib.escape(str(term_type).strip(),         quote=True)
     usecases_attr   = html_lib.escape(normalize_list_attr(usecases),  quote=True)
     ie_attr         = html_lib.escape(normalize_list_attr(ie_acted),  quote=True)
     categories_attr = html_lib.escape(str(categories).strip(),        quote=True)
+    term_id_esc     = html_lib.escape(term_id,                        quote=True)
+    label_id_esc    = html_lib.escape(label_id,                       quote=True)
 
     label_map = {
         'iri':                          'Term Version IRI',
@@ -816,12 +842,23 @@ def build_term_section(term, columns, term_type='', usecases='',
             value = value.replace('],[', '],<br>[')
         rows += f'<tr><td class="label">{term_label}</td><td>{value}</td></tr>'
 
+    # Build the secondary label anchor span.
+    # Only emitted when label_id is non-empty and actually differs from the
+    # GUID (they always differ in practice, but guard anyway to avoid
+    # duplicate id= attributes).
+    secondary_anchor = ''
+    if label_id and label_id != term_id:
+        secondary_anchor = (
+            f'<span id="{label_id_esc}" aria-hidden="true"></span>\n'
+        )
+
     return (
-        f'<section class="term-section" id="{term_id}"'
+        f'<section class="term-section" id="{term_id_esc}"'
         f' data-type="{type_attr}"'
         f' data-usecases="{usecases_attr}"'
         f' data-ie="{ie_attr}"'
         f' data-categories="{categories_attr}">\n'
+        f'{secondary_anchor}'                      # label anchor (CHANGE 3)
         f'<div class="field-header-wrapper"><h3>{label}</h3></div>\n'
         f'<table class="term-table">{rows}</table>\n'
         f'</section>'
@@ -831,7 +868,8 @@ def build_term_section(term, columns, term_type='', usecases='',
 def build_field_index(terms):
     """
     <nav class="field-index"> quick-jump block.
-    data-target lets the JS filter keep each link in sync with its term section.
+    Links use the GUID (term_localName) as href and data-target so the JS
+    filter can sync link visibility with the section.
     """
     links = []
     for term in terms:
@@ -846,10 +884,7 @@ def build_field_index(terms):
 
 
 def build_category_sections(df):
-    """
-    Navigation-index section for each topic category (TIME/SPACE/NAME/OTHER).
-    Independent per-category masks allow a test to appear in multiple sections.
-    """
+    """Navigation-index section per topic category (TIME/SPACE/NAME/OTHER)."""
     col = 'IssueLabels'
     if col not in df.columns:
         return ''
@@ -879,7 +914,6 @@ def build_category_links(df):
     for cat in ('TIME', 'SPACE', 'NAME', 'OTHER'):
         if df[col].apply(lambda v: cat in str(v or '').upper()).any():
             links.append(f'<a class="jump-link" href="#cat-{cat}">{cat}</a>')
-    # Return inline (no trailing newline) so they flow with the test-type buttons
     return ''.join(links)
 
 
@@ -905,14 +939,10 @@ def generate_qrg():
     tpl_vars = _build_template_vars(yaml_cfg)
 
     # ── Convert markdown templates to HTML ──────────────────────────────────
-    # Header: drop the trailing '## Alphabetical Index…' heading — it
-    # belongs to the generated alphabetical content below, not the intro.
-    header_html = convert_md_template(
-        HEADER_MD_PATH, tpl_vars, strip_trailing_h2=True
-    )
-    footer_html = convert_md_template(
-        FOOTER_MD_PATH, tpl_vars, strip_trailing_h2=False
-    )
+    # CHANGE 1: strip_trailing_h2 removed; the template now uses
+    # <!--- START HIDE IN HTML ---> markers instead.
+    header_html = convert_md_template(HEADER_MD_PATH, tpl_vars)
+    footer_html = convert_md_template(FOOTER_MD_PATH, tpl_vars)
 
     # ── Display columns (CSV order preserved) ───────────────────────────────
     display_cols = {
@@ -986,3 +1016,4 @@ def generate_qrg():
 
 if __name__ == '__main__':
     generate_qrg()
+
