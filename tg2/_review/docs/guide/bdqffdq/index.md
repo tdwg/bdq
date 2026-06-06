@@ -1440,6 +1440,7 @@ In this notation, the use of union indicates that the `ImprovementTarget` for an
 This formalization SHOULD NOT block the framing of `Amendments` that propose changes to processes or other things outside the scope of a data set.
 
 Example competency question: "For a given Amendment, which Measures, Validations, or Issues does it target for improvement?" represented as sparql:
+
 <!-- skip when testing -->
 ```sparql
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -1456,7 +1457,8 @@ WHERE {
 ORDER BY ?amendment ?target
 ```
 
-Example competency question: "For a given `Amendment`, which `Measures`, `Validations`, and `Issues` are identified as `Improvement Targets` for that `Amendment`?" expressed as sparql, using the `Acted Upon` `Information Elements` as a rough proxy for a `Improvement Target` relationship (note that this query could be used to build a list of candidates, but will cast too wide a net to directly infer `bdqffdq:improvedBy` relationships (e.g. an `Amendment` which conforms a value in some term to a format will not improved a `Validation` that tests the same term for `bdq:NotEmpty`)):
+Example competency question: "For a given `Amendment`, which `Measures`, `Validations`, and `Issues` are identified as `Improvement Targets` for that `Amendment`?" expressed as sparql, using the `Acted Upon` `Information Elements` as a rough proxy for a `Improvement Target` relationship (note that this query could be used to build a list of candidates, but will cast too wide a net to directly infer `bdqffdq:improvedBy` relationships (e.g. an `Amendment` which conforms a value in some term to a format will not improved a `Validation` that tests the same term for `bdqval:NotEmpty`)):
+
 ```sparql
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
