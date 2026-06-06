@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>BDQ Tests Quick Reference Guide</title>
-    <!-- Site-wide stylesheets supply .page-header, .review-banner, CSS vars -->
     <link rel="stylesheet" href="/assets/css/pygments.css">
     <link rel="stylesheet" href="/assets/css/site.css">
     <style>
@@ -54,7 +53,7 @@
         .project-name-link:hover { text-decoration: underline; }
         .project-tagline { margin: 0.5rem 0 0 0; opacity: 0.95; font-size: 1.05rem; }
 
-        /* ── Review banner fallback (canonical source: site.css) ─────────── */
+        /* ── Review banner ───────────────────────────────────────────────── */
         .review-banner {
             display: inline-block;
             margin: 1rem 0; padding: 0.5rem 0.85rem;
@@ -67,7 +66,7 @@
         .content-wrapper { margin-left: 240px; }
         main { padding: 20px; }
 
-        /* ── Headings (scoped to main so page-header h1 is unaffected) ───── */
+        /* ── Headings in main (scoped away from page-header h1) ──────────── */
         main h1 {
             border-bottom: 1px solid var(--bdq-border);
             padding-bottom: 0.3rem; margin-top: 1.5rem;
@@ -77,8 +76,70 @@
             border-bottom: 1px solid var(--bdq-border);
             padding-bottom: 0.2rem; margin-top: 1.5rem;
         }
-        /* Suppress border on coloured-background wrapper headings */
         .class-header-wrapper h2 { border: none; padding-bottom: 0; margin-top: 0; }
+
+        /* ── CHANGE 3: Compact header content ───────────────────────────────
+           All rules scoped to .qrg-header-content so they only affect the
+           intro block generated from the markdown template.  Goals: smaller
+           type, tighter vertical rhythm, so the intro feels like a
+           "fold-away" summary rather than a full-length document section.  */
+        .qrg-header-content {
+            margin-bottom: 0.5rem;
+            border-bottom: 1px solid var(--bdq-border);
+            padding-bottom: 0.5rem;
+        }
+        .qrg-header-content h1 {
+            font-size: 1.35rem;
+            margin-top: 0.5rem;
+            margin-bottom: 0.2rem;
+            padding-bottom: 0.15rem;
+        }
+        .qrg-header-content h2 {
+            font-size: 1.05rem;
+            margin-top: 0.6rem;
+            margin-bottom: 0.15rem;
+            padding-bottom: 0.1rem;
+        }
+        .qrg-header-content h3 {
+            font-size: 0.95rem;
+            margin-top: 0.5rem;
+            margin-bottom: 0.1rem;
+            border-bottom: none;
+        }
+        .qrg-header-content p {
+            margin: 0.2rem 0;
+            font-size: 0.9em;
+            line-height: 1.45;
+        }
+        .qrg-header-content ul {
+            margin: 0.15rem 0;
+            padding-left: 1.2rem;
+        }
+        .qrg-header-content li {
+            margin: 0.08rem 0;
+            font-size: 0.9em;
+            line-height: 1.4;
+        }
+        .qrg-header-content ul ul {
+            margin: 0.05rem 0;
+        }
+
+        /* ── CHANGE 1+3: "The Tests" heading ────────────────────────────────
+           Visually marks the start of the test content.
+           Font size is slightly smaller than a full main h2 to match the
+           compact header style above it.
+           scroll-margin-top gives a small gap above the heading when
+           applyFilters() scrolls to it, preventing the heading from
+           sitting flush against the top of the viewport.             */
+        h2.the-tests-heading {
+            font-size: 1.2rem;
+            margin-top: 0.8rem;
+            margin-bottom: 0.5rem;
+            padding-bottom: 0.2rem;
+            scroll-margin-top: 0.75rem;
+            color: var(--bdq-brand);
+            border-bottom: 1px solid var(--bdq-border);
+        }
 
         /* ── Fixed left sidebar ──────────────────────────────────────────── */
         aside.nav-menu {
@@ -124,7 +185,7 @@
         }
         .jump-link:hover { background: var(--bdq-bg-soft-2); }
 
-        /* ── Filter panel ────────────────────────────────────────────────── */
+        /* Filter panel */
         .filters-active-msg {
             display: none; font-size: 0.75em;
             background: #fff3cd; border: 1px solid #ffc107;
@@ -153,25 +214,16 @@
             font-style: italic; margin-top: 2px;
         }
 
-        /*
-         * CHANGE 2 — Clear Filters button.
-         * Disabled (no active filters): subtle grey, not distracting.
-         * Enabled  (filters active):    prominent red — same hue as the
-         *   "Under Review" banner, full sidebar width, bold label.
-         * This makes it immediately obvious that filters are on and how
-         * to reset them, which was the key piece of user feedback.
-         */
+        /* Clear Filters button: grey when disabled, prominent red when active */
         #clear-filters {
             font-size: 0.85em; padding: 6px 10px;
-            color: #fff;
-            border: none; border-radius: 3px;
+            color: #fff; border: none; border-radius: 3px;
             margin-top: 6px; width: 100%; font-weight: bold;
-            cursor: default;
-            background: #ccc;
+            cursor: default; background: #ccc;
             transition: background-color 0.15s;
         }
         #clear-filters:not(:disabled) {
-            background: var(--bdq-review);   /* prominent red when active */
+            background: var(--bdq-review);
             cursor: pointer;
         }
         #clear-filters:not(:disabled):hover { filter: brightness(1.15); }
@@ -228,6 +280,7 @@
             border: 1px dashed var(--bdq-border); border-radius: 4px; margin: 20px 0;
         }
 
+        /* Lists outside .qrg-header-content (footer etc.) */
         main ul   { margin: 0.5rem 0; padding-left: 1.5rem; }
         main ul li { margin: 0.3rem 0; }
         main ul ul { margin: 0.2rem 0; }
@@ -270,10 +323,6 @@
 
     <p class="back-to-top">&uarr; <a href="#top"><strong>Back to top</strong></a></p>
 
-    <!--
-      Single "Index" label; all category + test-type buttons together.
-      Hidden by JS whenever any filter is active.
-    -->
     <div class="jump-links" id="jump-links">
         <span class="jump-section-label">Index</span>
         <a class="jump-link" href="#cat-TIME">TIME</a><a class="jump-link" href="#cat-SPACE">SPACE</a><a class="jump-link" href="#cat-NAME">NAME</a><a class="jump-link" href="#cat-OTHER">OTHER</a><a
@@ -399,7 +448,6 @@
             No selection = no filter applied.</small>
     </div>
 
-    <!-- CHANGE 2: button is full-width, prominent red when active -->
     <button id="clear-filters" onclick="clearFilters()" disabled>
         &#10005; Clear All Filters
     </button>
@@ -434,7 +482,11 @@
 
         <div class="review-banner" role="note" aria-label="Under review">Under Review</div>
 
-        <h1 id="bdq-tests-quick-reference-guide">BDQ Tests Quick Reference Guide</h1>
+        <!-- CHANGE 1+3: header wrapped in compact-style div; "The Tests"
+             heading follows immediately after, serving as both a visual
+             section marker and the scroll target for applyFilters().      -->
+        <div class="qrg-header-content">
+            <h1 id="bdq-tests-quick-reference-guide">BDQ Tests Quick Reference Guide</h1>
 <p>Draft Standard for Review</p>
 <p>This document is intended to be an easy-to-read reference for the Tests maintained as part of the TDWG standard <a href="http://example.org/to_be_determined">BDQ</a> produced by the TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions and is maintained by the BDQ Maintenance Interest Group. This document lists the BDQ Tests, described by the <a href="bdqtest_qrg_term_descriptions.html">Terms Used in the BDQ Tests Quick Reference Guide</a>. Definitions, comments, and examples may include namespace abbreviations (e.g., <code>bdqval:</code>, <code>dwc:</code>). These are required as the meaning for the word is defined specifically in that namespace. Thus, <code>dwc:Event</code> means Event as defined by Darwin Core at <a href="https://dwc.tdwg.org/terms/#event">https://dwc.tdwg.org/terms/#event</a>.</p>
 <ul>
@@ -452,6 +504,9 @@
 <h2 id="linked-indexes-non-normative">Linked Indexes (non-normative)</h2>
 <p>Index by: <a href="qrg_index_by_usecase.html">Use Case</a>, <a href="qrg_index_by_ie_actedupon.html">Information Element Acted Upon</a>, <a href="qrg_index_by_ie_class.html">Information Element Class</a>, <a href="qrg_index_by_dimension.html">Data Quality Dimension</a>, </p>
 <p>This document also includes <code>Measures</code> operating on Test <code>Responses</code> for <code>Multi Records</code> (datasets) indexed in <a href="qrg_multirecord_index.html">Multi Record Measures</a></p>
+        </div>
+
+        <h2 id="the-tests" class="the-tests-heading">The Tests</h2>
 
         <div id="no-results-msg" class="no-results-msg">
             No tests match the current filters.
@@ -1547,22 +1602,27 @@ https://doi.org/10.3897/biss.4.50889</p>
     window.applyFilters = function () {
 
         /*
-         * CHANGE 2 — Scroll to the very top of the page and clear any URL
-         * hash before doing any DOM work.
+         * CHANGE 2 — Scroll to the "The Tests" heading before changing
+         * the DOM, so the user always lands at the top of the result set
+         * regardless of where they were on the page.
          *
-         * Why this matters:
-         *   - When filters hide/show elements the total page height changes.
-         *     Without this reset, the browser keeps the old scroll offset,
-         *     which can land anywhere — including the footer (Glossary).
-         *   - A stale #hash in the URL can cause the browser to jump to a
-         *     term that is now hidden, producing erratic scroll behaviour
-         *     when the user then changes the filter again.
+         * Why scrollIntoView rather than window.scrollTo(0,0):
+         *   • scrollTo(0,0) goes to the very top of the page, past the
+         *     compact intro section, which is disorienting.
+         *   • scrollIntoView on #the-tests puts the user exactly at the
+         *     point where the (possibly filtered) test list begins.
+         *   • behavior:'instant' avoids a distracting animation mid-filter.
+         *   • block:'start' combined with scroll-margin-top: 0.75rem (set
+         *     in CSS) gives a small breathing gap above the heading.
          *
-         * Using behavior:'instant' avoids a distracting animation;
-         * the user asked the filter to change, so a clean-cut reset is
-         * the right UX.
+         * Clearing the URL hash prevents the browser from jumping to a
+         * previously-visited anchor that may now be hidden or far down the
+         * page (the "goes to Glossary" bug reported by users).
          */
-        window.scrollTo({ top: 0, behavior: 'instant' });
+        var testsHeading = document.getElementById('the-tests');
+        if (testsHeading) {
+            testsHeading.scrollIntoView({ behavior: 'instant', block: 'start' });
+        }
         if (window.location.hash) {
             history.replaceState(
                 null, '',
@@ -1664,7 +1724,7 @@ https://doi.org/10.3897/biss.4.50889</p>
         Array.from(document.getElementById('ie-filter').options).forEach(
             function (o) { o.selected = false; }
         );
-        applyFilters();   /* applyFilters() also scrolls to top */
+        applyFilters();   /* applyFilters() also scrolls to #the-tests */
     };
 
 }());

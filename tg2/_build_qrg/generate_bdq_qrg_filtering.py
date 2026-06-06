@@ -40,7 +40,6 @@ TEMPLATE = '''<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <title>###PAGE_TITLE###</title>
-    <!-- Site-wide stylesheets supply .page-header, .review-banner, CSS vars -->
     <link rel="stylesheet" href="/assets/css/pygments.css">
     <link rel="stylesheet" href="/assets/css/site.css">
     <style>
@@ -91,7 +90,7 @@ TEMPLATE = '''<!DOCTYPE html>
         .project-name-link:hover { text-decoration: underline; }
         .project-tagline { margin: 0.5rem 0 0 0; opacity: 0.95; font-size: 1.05rem; }
 
-        /* ── Review banner fallback (canonical source: site.css) ─────────── */
+        /* ── Review banner ───────────────────────────────────────────────── */
         .review-banner {
             display: inline-block;
             margin: 1rem 0; padding: 0.5rem 0.85rem;
@@ -104,7 +103,7 @@ TEMPLATE = '''<!DOCTYPE html>
         .content-wrapper { margin-left: 240px; }
         main { padding: 20px; }
 
-        /* ── Headings (scoped to main so page-header h1 is unaffected) ───── */
+        /* ── Headings in main (scoped away from page-header h1) ──────────── */
         main h1 {
             border-bottom: 1px solid var(--bdq-border);
             padding-bottom: 0.3rem; margin-top: 1.5rem;
@@ -114,8 +113,70 @@ TEMPLATE = '''<!DOCTYPE html>
             border-bottom: 1px solid var(--bdq-border);
             padding-bottom: 0.2rem; margin-top: 1.5rem;
         }
-        /* Suppress border on coloured-background wrapper headings */
         .class-header-wrapper h2 { border: none; padding-bottom: 0; margin-top: 0; }
+
+        /* ── CHANGE 3: Compact header content ───────────────────────────────
+           All rules scoped to .qrg-header-content so they only affect the
+           intro block generated from the markdown template.  Goals: smaller
+           type, tighter vertical rhythm, so the intro feels like a
+           "fold-away" summary rather than a full-length document section.  */
+        .qrg-header-content {
+            margin-bottom: 0.5rem;
+            border-bottom: 1px solid var(--bdq-border);
+            padding-bottom: 0.5rem;
+        }
+        .qrg-header-content h1 {
+            font-size: 1.35rem;
+            margin-top: 0.5rem;
+            margin-bottom: 0.2rem;
+            padding-bottom: 0.15rem;
+        }
+        .qrg-header-content h2 {
+            font-size: 1.05rem;
+            margin-top: 0.6rem;
+            margin-bottom: 0.15rem;
+            padding-bottom: 0.1rem;
+        }
+        .qrg-header-content h3 {
+            font-size: 0.95rem;
+            margin-top: 0.5rem;
+            margin-bottom: 0.1rem;
+            border-bottom: none;
+        }
+        .qrg-header-content p {
+            margin: 0.2rem 0;
+            font-size: 0.9em;
+            line-height: 1.45;
+        }
+        .qrg-header-content ul {
+            margin: 0.15rem 0;
+            padding-left: 1.2rem;
+        }
+        .qrg-header-content li {
+            margin: 0.08rem 0;
+            font-size: 0.9em;
+            line-height: 1.4;
+        }
+        .qrg-header-content ul ul {
+            margin: 0.05rem 0;
+        }
+
+        /* ── CHANGE 1+3: "The Tests" heading ────────────────────────────────
+           Visually marks the start of the test content.
+           Font size is slightly smaller than a full main h2 to match the
+           compact header style above it.
+           scroll-margin-top gives a small gap above the heading when
+           applyFilters() scrolls to it, preventing the heading from
+           sitting flush against the top of the viewport.             */
+        h2.the-tests-heading {
+            font-size: 1.2rem;
+            margin-top: 0.8rem;
+            margin-bottom: 0.5rem;
+            padding-bottom: 0.2rem;
+            scroll-margin-top: 0.75rem;
+            color: var(--bdq-brand);
+            border-bottom: 1px solid var(--bdq-border);
+        }
 
         /* ── Fixed left sidebar ──────────────────────────────────────────── */
         aside.nav-menu {
@@ -161,7 +222,7 @@ TEMPLATE = '''<!DOCTYPE html>
         }
         .jump-link:hover { background: var(--bdq-bg-soft-2); }
 
-        /* ── Filter panel ────────────────────────────────────────────────── */
+        /* Filter panel */
         .filters-active-msg {
             display: none; font-size: 0.75em;
             background: #fff3cd; border: 1px solid #ffc107;
@@ -190,25 +251,16 @@ TEMPLATE = '''<!DOCTYPE html>
             font-style: italic; margin-top: 2px;
         }
 
-        /*
-         * CHANGE 2 — Clear Filters button.
-         * Disabled (no active filters): subtle grey, not distracting.
-         * Enabled  (filters active):    prominent red — same hue as the
-         *   "Under Review" banner, full sidebar width, bold label.
-         * This makes it immediately obvious that filters are on and how
-         * to reset them, which was the key piece of user feedback.
-         */
+        /* Clear Filters button: grey when disabled, prominent red when active */
         #clear-filters {
             font-size: 0.85em; padding: 6px 10px;
-            color: #fff;
-            border: none; border-radius: 3px;
+            color: #fff; border: none; border-radius: 3px;
             margin-top: 6px; width: 100%; font-weight: bold;
-            cursor: default;
-            background: #ccc;
+            cursor: default; background: #ccc;
             transition: background-color 0.15s;
         }
         #clear-filters:not(:disabled) {
-            background: var(--bdq-review);   /* prominent red when active */
+            background: var(--bdq-review);
             cursor: pointer;
         }
         #clear-filters:not(:disabled):hover { filter: brightness(1.15); }
@@ -265,6 +317,7 @@ TEMPLATE = '''<!DOCTYPE html>
             border: 1px dashed var(--bdq-border); border-radius: 4px; margin: 20px 0;
         }
 
+        /* Lists outside .qrg-header-content (footer etc.) */
         main ul   { margin: 0.5rem 0; padding-left: 1.5rem; }
         main ul li { margin: 0.3rem 0; }
         main ul ul { margin: 0.2rem 0; }
@@ -307,10 +360,6 @@ TEMPLATE = '''<!DOCTYPE html>
 
     <p class="back-to-top">&uarr; <a href="#top"><strong>Back to top</strong></a></p>
 
-    <!--
-      Single "Index" label; all category + test-type buttons together.
-      Hidden by JS whenever any filter is active.
-    -->
     <div class="jump-links" id="jump-links">
         <span class="jump-section-label">Index</span>
         ###CATEGORY_LINKS###<a
@@ -360,7 +409,6 @@ TEMPLATE = '''<!DOCTYPE html>
             No selection = no filter applied.</small>
     </div>
 
-    <!-- CHANGE 2: button is full-width, prominent red when active -->
     <button id="clear-filters" onclick="clearFilters()" disabled>
         &#10005; Clear All Filters
     </button>
@@ -395,7 +443,14 @@ TEMPLATE = '''<!DOCTYPE html>
 
         <div class="review-banner" role="note" aria-label="Under review">Under Review</div>
 
-        ###HEADER_HTML###
+        <!-- CHANGE 1+3: header wrapped in compact-style div; "The Tests"
+             heading follows immediately after, serving as both a visual
+             section marker and the scroll target for applyFilters().      -->
+        <div class="qrg-header-content">
+            ###HEADER_HTML###
+        </div>
+
+        <h2 id="the-tests" class="the-tests-heading">The Tests</h2>
 
         <div id="no-results-msg" class="no-results-msg">
             No tests match the current filters.
@@ -432,22 +487,27 @@ TEMPLATE = '''<!DOCTYPE html>
     window.applyFilters = function () {
 
         /*
-         * CHANGE 2 — Scroll to the very top of the page and clear any URL
-         * hash before doing any DOM work.
+         * CHANGE 2 — Scroll to the "The Tests" heading before changing
+         * the DOM, so the user always lands at the top of the result set
+         * regardless of where they were on the page.
          *
-         * Why this matters:
-         *   - When filters hide/show elements the total page height changes.
-         *     Without this reset, the browser keeps the old scroll offset,
-         *     which can land anywhere — including the footer (Glossary).
-         *   - A stale #hash in the URL can cause the browser to jump to a
-         *     term that is now hidden, producing erratic scroll behaviour
-         *     when the user then changes the filter again.
+         * Why scrollIntoView rather than window.scrollTo(0,0):
+         *   • scrollTo(0,0) goes to the very top of the page, past the
+         *     compact intro section, which is disorienting.
+         *   • scrollIntoView on #the-tests puts the user exactly at the
+         *     point where the (possibly filtered) test list begins.
+         *   • behavior:'instant' avoids a distracting animation mid-filter.
+         *   • block:'start' combined with scroll-margin-top: 0.75rem (set
+         *     in CSS) gives a small breathing gap above the heading.
          *
-         * Using behavior:'instant' avoids a distracting animation;
-         * the user asked the filter to change, so a clean-cut reset is
-         * the right UX.
+         * Clearing the URL hash prevents the browser from jumping to a
+         * previously-visited anchor that may now be hidden or far down the
+         * page (the "goes to Glossary" bug reported by users).
          */
-        window.scrollTo({ top: 0, behavior: 'instant' });
+        var testsHeading = document.getElementById('the-tests');
+        if (testsHeading) {
+            testsHeading.scrollIntoView({ behavior: 'instant', block: 'start' });
+        }
         if (window.location.hash) {
             history.replaceState(
                 null, '',
@@ -549,7 +609,7 @@ TEMPLATE = '''<!DOCTYPE html>
         Array.from(document.getElementById('ie-filter').options).forEach(
             function (o) { o.selected = false; }
         );
-        applyFilters();   /* applyFilters() also scrolls to top */
+        applyFilters();   /* applyFilters() also scrolls to #the-tests */
     };
 
 }());
@@ -587,13 +647,7 @@ _YAML_ALIASES = {
 def _build_template_vars(yaml_cfg):
     """
     Build a flat {placeholder: value} dict from the YAML configuration.
-
-    Rules:
-    1.  Every YAML key is stored as-is.
-    2.  A snake_case alias is added for every camelCase key.
-    3.  Explicit aliases in _YAML_ALIASES fill any remaining gaps.
-    4.  'year' and 'ratification_date' are derived from 'doc_created'.
-    5.  'comment' defaults to '' — it is NOT populated from 'abstract'.
+    'comment' defaults to '' — never populated from 'abstract'.
     """
     v = {}
     for k, val in yaml_cfg.items():
@@ -612,30 +666,21 @@ def _build_template_vars(yaml_cfg):
         v.setdefault('year',             doc_created[:4])
         v.setdefault('ratification_date', doc_created)
 
-    # comment: use only what YAML supplies; never fall back to abstract
     v.setdefault('comment', '')
-
     return v
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
-# CHANGE 1 — Markdown hide-block removal
+# Markdown hide-block removal  (CHANGE 1 from previous iteration)
 # ═══════════════════════════════════════════════════════════════════════════════
 
 def _remove_hide_blocks(text):
     """
-    Remove blocks enclosed by the BDQ hide-block markers:
-
+    Remove blocks delimited by:
         <!--- START HIDE IN HTML --->
-        ...any content...
+        ...content...
         <!--- END HIDE IN HTML --->
-
-    Both the markers themselves AND the content between them are deleted.
-    Whitespace padding around the marker text is tolerated.
-    Multiple non-overlapping blocks in one file are all removed.
-
-    This runs BEFORE the general <!--- ... ---> comment strip so that the
-    END marker is never consumed prematurely by the general strip.
+    Both markers and all content between them are deleted.
     """
     return re.sub(
         r'<!---\s*START HIDE IN HTML\s*--->.*?<!---\s*END HIDE IN HTML\s*--->',
@@ -650,36 +695,16 @@ def _remove_hide_blocks(text):
 # ═══════════════════════════════════════════════════════════════════════════════
 
 def _rewrite_md_links(html_text):
-    """
-    Rewrite href="…path.md" → href="…path.html" (preserving #fragment).
-    External http(s) URLs and fragment-only anchors are left untouched.
-    """
+    """Rewrite href="…path.md[#fragment]" → href="…path.html[#fragment]"."""
     def _fix(m):
-        path = m.group(1)
-        frag = m.group(2) or ''
-        return f'href="{path}.html{frag}"'
-
+        return f'href="{m.group(1)}.html{m.group(2) or ""}"'
     return re.sub(r'href="([^"#][^"]*?)\.md(#[^"]*?)?"', _fix, html_text)
 
 
 def convert_md_template(md_path, variables):
     """
     Load a BDQ markdown template, substitute variables, and return HTML.
-
-    Steps:
-    1.  Read file.
-    2.  Remove <!--- START HIDE IN HTML ---> … <!--- END HIDE IN HTML --->
-        blocks (markers + content both deleted).   [CHANGE 1]
-    3.  Strip remaining <!--- … ---> comment blocks.
-    4.  Substitute {variable} placeholders.
-    5.  Warn about unresolved {placeholder} tokens.
-    6.  Normalise line endings.
-    7.  Convert markdown → HTML via python-markdown
-        (extensions: 'extra' for tables/nested-lists, 'toc' for heading ids).
-    8.  Rewrite .md hrefs → .html.
-
-    Note: strip_trailing_h2 parameter removed — use the
-    <!--- START HIDE IN HTML ---> marker in the template instead.
+    Uses python-markdown with 'extra' + 'toc' extensions.
     """
     if not os.path.exists(md_path):
         print(f"Warning: template not found: {md_path}")
@@ -688,37 +713,25 @@ def convert_md_template(md_path, variables):
     with open(md_path, 'r', encoding='utf-8') as fh:
         text = fh.read()
 
-    # 2. Remove HIDE blocks before any other processing
     text = _remove_hide_blocks(text)
-
-    # 3. Strip remaining <!--- ... ---> comment blocks
     text = re.sub(r'<!---.*?--->', '', text, flags=re.DOTALL)
 
-    # 4. Variable substitution
     for key, val in variables.items():
         text = text.replace('{' + key + '}', val)
 
-    # 5. Warn about remaining unresolved tokens
     remaining = sorted(set(re.findall(r'\{([a-zA-Z_]\w*)\}', text)))
     if remaining:
         print(f"Warning [{os.path.basename(md_path)}]: "
               f"unresolved template variables: {remaining}")
 
-    # 6. Normalise line endings
     text = text.replace('\r\n', '\n')
 
-    # 7. Convert markdown → HTML
     md_proc = markdown.Markdown(
         extensions=['extra', 'toc'],
-        extension_configs={
-            'toc': {'permalink': False}
-        }
+        extension_configs={'toc': {'permalink': False}}
     )
     html_text = md_proc.convert(text)
-
-    # 8. Rewrite .md links → .html
     html_text = _rewrite_md_links(html_text)
-
     return html_text
 
 
@@ -727,7 +740,6 @@ def convert_md_template(md_path, variables):
 # ═══════════════════════════════════════════════════════════════════════════════
 
 def normalize_list_attr(value):
-    """Pipe-separated string for HTML data-* attributes from a delimited value."""
     v = str(value).strip()
     if not v or v.lower() == 'nan':
         return ''
@@ -735,16 +747,11 @@ def normalize_list_attr(value):
 
 
 def extract_categories(issue_labels_value):
-    """
-    Return pipe-separated TIME/SPACE/NAME/OTHER categories present in IssueLabels.
-    A single test may belong to more than one category.
-    """
     s = str(issue_labels_value or '').upper()
     return '|'.join(c for c in ('TIME', 'SPACE', 'NAME', 'OTHER') if c in s)
 
 
 def get_unique_values_from_column(df, col):
-    """Sorted list of unique individual values from a delimited column."""
     if col not in df.columns:
         return []
     all_vals = set()
@@ -767,10 +774,6 @@ def build_select_options(values):
 
 
 def build_usecase_options(values):
-    """
-    value= keeps the full 'bdquc:'-prefixed name (matches data-usecases);
-    visible label strips any 'xyz:' namespace prefix for readability.
-    """
     lines = []
     for v in values:
         val_esc     = html_lib.escape(v, quote=True)
@@ -788,28 +791,11 @@ def build_term_section(term, columns, term_type='', usecases='',
                         ie_acted='', categories=''):
     """
     Build a <section class="term-section"> for one BDQ test.
-
-    CHANGE 3 — Dual anchors:
-      Primary   id  on the <section>: term_localName (the GUID)
-        → supports  https://…/bdqtest/#b129fa4d-b25b-43f7-9645-5ed4d44b357b
-      Secondary id  on a <span>      : Label (the uppercase test name)
-        → supports  https://…/bdqtest/#AMENDMENT_DAY_STANDARDIZED
-
-    The <span> is placed as the first child of the <section>, immediately
-    before the coloured field-header strip, so both anchors scroll the
-    user to the same visual position.
-
-    Other data attributes for JS filtering:
-      data-type       – Amendment / Issue / Measure / Validation
-      data-usecases   – pipe-separated bdquc: use-case identifiers
-      data-ie         – pipe-separated Information Elements Acted Upon
-      data-categories – pipe-separated TIME/SPACE/NAME/OTHER
+    Dual anchors: section id = GUID, inner span id = Label.
     """
-    # Primary anchor: GUID (term_localName)
     term_id  = (term.get('term_localName', term.get('Label', 'term'))
                 .strip().replace(' ', '_'))
     label    = term.get('Label', 'Unnamed Term')
-    # Secondary anchor: Label (e.g. AMENDMENT_DAY_STANDARDIZED)
     label_id = label.strip().replace(' ', '_')
 
     type_attr       = html_lib.escape(str(term_type).strip(),         quote=True)
@@ -842,15 +828,9 @@ def build_term_section(term, columns, term_type='', usecases='',
             value = value.replace('],[', '],<br>[')
         rows += f'<tr><td class="label">{term_label}</td><td>{value}</td></tr>'
 
-    # Build the secondary label anchor span.
-    # Only emitted when label_id is non-empty and actually differs from the
-    # GUID (they always differ in practice, but guard anyway to avoid
-    # duplicate id= attributes).
     secondary_anchor = ''
     if label_id and label_id != term_id:
-        secondary_anchor = (
-            f'<span id="{label_id_esc}" aria-hidden="true"></span>\n'
-        )
+        secondary_anchor = f'<span id="{label_id_esc}" aria-hidden="true"></span>\n'
 
     return (
         f'<section class="term-section" id="{term_id_esc}"'
@@ -858,7 +838,7 @@ def build_term_section(term, columns, term_type='', usecases='',
         f' data-usecases="{usecases_attr}"'
         f' data-ie="{ie_attr}"'
         f' data-categories="{categories_attr}">\n'
-        f'{secondary_anchor}'                      # label anchor (CHANGE 3)
+        f'{secondary_anchor}'
         f'<div class="field-header-wrapper"><h3>{label}</h3></div>\n'
         f'<table class="term-table">{rows}</table>\n'
         f'</section>'
@@ -866,11 +846,6 @@ def build_term_section(term, columns, term_type='', usecases='',
 
 
 def build_field_index(terms):
-    """
-    <nav class="field-index"> quick-jump block.
-    Links use the GUID (term_localName) as href and data-target so the JS
-    filter can sync link visibility with the section.
-    """
     links = []
     for term in terms:
         term_id = (term.get('term_localName', term.get('Label', 'term'))
@@ -884,7 +859,6 @@ def build_field_index(terms):
 
 
 def build_category_sections(df):
-    """Navigation-index section per topic category (TIME/SPACE/NAME/OTHER)."""
     col = 'IssueLabels'
     if col not in df.columns:
         return ''
@@ -906,7 +880,6 @@ def build_category_sections(df):
 
 
 def build_category_links(df):
-    """Sidebar jump-link <a> tags for each present category."""
     col = 'IssueLabels'
     if col not in df.columns:
         return ''
@@ -929,7 +902,6 @@ def generate_qrg():
     if 'organized_in' not in df.columns:
         raise ValueError("Missing 'organized_in' column in source CSV.")
 
-    # ── Load YAML and build template variables ──────────────────────────────
     if os.path.exists(DOC_CONFIG_PATH):
         yaml_cfg = _load_yaml(DOC_CONFIG_PATH)
     else:
@@ -938,13 +910,9 @@ def generate_qrg():
 
     tpl_vars = _build_template_vars(yaml_cfg)
 
-    # ── Convert markdown templates to HTML ──────────────────────────────────
-    # CHANGE 1: strip_trailing_h2 removed; the template now uses
-    # <!--- START HIDE IN HTML ---> markers instead.
     header_html = convert_md_template(HEADER_MD_PATH, tpl_vars)
     footer_html = convert_md_template(FOOTER_MD_PATH, tpl_vars)
 
-    # ── Display columns (CSV order preserved) ───────────────────────────────
     display_cols = {
         'Label', 'prefLabel', 'iri', 'Description', 'ExpectedResponse',
         'InformationElement:ActedUpon', 'aggregatesResponsesFrom',
@@ -960,7 +928,6 @@ def generate_qrg():
     unique_usecases = get_unique_values_from_column(df, 'UseCases')
     unique_ies      = get_unique_values_from_column(df, 'InformationElement:ActedUpon')
 
-    # ── Build main content ──────────────────────────────────────────────────
     content = build_category_sections(df)
 
     for group, terms in grouped.items():
@@ -982,16 +949,14 @@ def generate_qrg():
                 categories = extract_categories(row.get('IssueLabels', '')),
             )
 
-        content += '</div>\n'   # .class-wrapper
+        content += '</div>\n'
 
-    # ── Page title for <title> element ─────────────────────────────────────
     page_title = html_lib.escape(
         tpl_vars.get('document_title',
                       tpl_vars.get('documentTitle',
                                     'BDQ Tests Quick Reference Guide'))
     )
 
-    # ── Substitute all ###PLACEHOLDER### markers ────────────────────────────
     html_out = TEMPLATE
     html_out = html_out.replace('###PAGE_TITLE###',     page_title)
     html_out = html_out.replace('###HEADER_HTML###',    header_html)
@@ -1003,7 +968,6 @@ def generate_qrg():
     html_out = html_out.replace('###IE_OPTIONS###',
                                   build_select_options(unique_ies))
 
-    # ── Write output ────────────────────────────────────────────────────────
     os.makedirs(os.path.dirname(OUTPUT_PATH), exist_ok=True)
     with open(OUTPUT_PATH, 'w', encoding='utf-8') as f:
         f.write(html_out)
@@ -1016,4 +980,3 @@ def generate_qrg():
 
 if __name__ == '__main__':
     generate_qrg()
-
