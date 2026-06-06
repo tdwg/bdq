@@ -12,9 +12,9 @@ from pygments.formatters import HtmlFormatter
 from render_site_links import (
     linkify_bare_urls_in_html_line,
     linkify_bare_urls_in_markdown_line,
-    replace if False else None,
+    rewrite_html_links,
+    rewrite_markdown_links,
 )
-from render_site_links import rewrite_markdown_links, rewrite_html_links
 
 # This script processes markdown and HTML files in the specified site root, rewriting links, replacing emoji shortcodes, for
 # deployment of the Biodiversity Data Quality (BDQ) Interest Group and Standard documentation to bdq.tdwg.org.
