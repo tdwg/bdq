@@ -32,7 +32,13 @@ jobs:
         run: |
           set -euo pipefail
           python -m pip install --upgrade pip
-          pip install pandas pyyaml rdflib markdown pygments pymdown-extensions
+          pip install pandas pyyaml rdflib markdown pygments pymdown-extensions pytest
+
+      - name: Run unit tests
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pytest _site_resources/tests
 
       - name: Build tg2 review documents
         working-directory: tg2/_make_review
