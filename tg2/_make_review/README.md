@@ -6,6 +6,8 @@ WARNING: All files listed in the copy_files.sh script MUST NOT be edited in thei
 
 **do_build.sh** Executes the python scripts in `_build_review/` to build artifacts from the templates, configuration files, and vocabulary documents in the `_build_review/` tree.
 
+The do_build.sh script which runs the python scripts to populate /tg2/_review/ is itself invoked in the workflow defined in .github/workflow/pages.yml which uses the script and assets in /_site_resources/ to build the website and deploy to GitHub Pages, which the /CNAME file identifies as bdq.tdwg.org.  **Note that the copy_files.sh script is not invoked in the workflow, so the files copied by copy_files.sh must be updated manually before running the build scripts and before submission for review.**
+
 Third party Python libraries required by the python scripts:
 ```
 pandas

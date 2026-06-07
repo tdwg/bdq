@@ -2,6 +2,8 @@
  
 This directory contains build files to generate files that constitute the proposed BDQ standard.
 
+These templates and build scripts generate markdown files in /tg2/_review/ which are then deployed to the bdq.tdwg.org website with a workflow defined in .github/workflow/pages.yml which uses the script and assets in /_site_resources/ to build the website and deploy to GitHub Pages, which the /CNAME file identifies as bdq.tdwg.org.
+
 Editable master copies of templates for human readable vocabulary lists and human readable documentation live here.
 
 README.md  This file.
