@@ -423,7 +423,10 @@ def main() -> None:
 
         path.write_text(text, encoding="utf-8")
 
-    pygments_css = HtmlFormatter(style="friendly").get_style_defs(".highlight")
+    class FriendlyNoErrorStyle(FriendlyStyle):
+        styles = {**FriendlyStyle.styles, Token.Error: ""}
+
+    pygments_css = HtmlFormatter(style=FriendlyNoErrorStyle).get_style_defs(".highlight")
     pygments_css_path = site / "assets" / "css" / "pygments.css"
     pygments_css_path.write_text(pygments_css, encoding="utf-8")
 
