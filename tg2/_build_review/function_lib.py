@@ -37,7 +37,7 @@ def generate_markdown_toc(markdown_lines):
                 if level == 2:
                     if first_top_level_seen:
                         toc_lines.append("")  # blank line before top-level headings (except the first)
-                    toc_lines.append(f"{link}")
+                    toc_lines.append(f"- {link}")
                     first_top_level_seen = True
                 elif level > 2:
                     indent = "  " * (level-2)
