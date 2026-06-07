@@ -54,7 +54,7 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
   - [1.2 Audience for the BDQ Standard (non-normative)](#12-audience-for-the-bdq-standard-non-normative)
   - [1.3 Contributing TDWG Interest and Task Groups (non-normative)](#13-contributing-tdwg-interest-and-task-groups-non-normative)
   - [1.4 Associated Documents (non-normative)](#14-associated-documents-non-normative)
-    - [1.4.2 Background Documents (non-normative)](#142-background-documents-non-normative)
+    - [1.4.1 Background Documents (non-normative)](#141-background-documents-non-normative)
   - [1.5 Status of the Content of this Document (normative)](#15-status-of-the-content-of-this-document-normative)
   - [1.6 RFC 2119 key words (normative)](#16-rfc-2119-key-words-normative)
   - [1.7 Namespace abbreviations (non-normative)](#17-namespace-abbreviations-non-normative)
@@ -145,7 +145,7 @@ The Authors acknowledge the fundamental importance of the work of:
 
 See the list of the documents that comprise the standard in [3. Parts of the Standard (non-normative)](#3-parts-of-the-standard-non-normative).
 
-#### 1.4.2 Background Documents (non-normative)
+#### 1.4.1 Background Documents (non-normative)
 
 These documents are not part of the BDQ standard.
 

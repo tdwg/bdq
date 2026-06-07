@@ -96,7 +96,7 @@ The Authors acknowledge the fundamental importance of the work of:
 
 See the list of the documents that comprise the standard in [3. Parts of the Standard (non-normative)](#3-parts-of-the-standard-non-normative).
 
-#### 1.4.2 Background Documents (non-normative)
+#### 1.4.1 Background Documents (non-normative)
 
 These documents are not part of the BDQ standard.
 
