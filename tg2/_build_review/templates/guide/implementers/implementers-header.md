@@ -186,7 +186,7 @@ Here is a MariaDB implementation of a lightweight version of [VALIDATION_KINGDOM
     WHERE 
          kingdom is null
          OR
-         length(trim(kingdom)) == 0
+         length(trim(kingdom)) = 0
     ;
 ```
 
@@ -880,7 +880,7 @@ Consider the `Validation` Test [VALIDATION_ENDDAYOFYEAR_INRANGE](../../terms/bdq
 
 An SQL query that implements the abstract concept of the `dwc:enddayofyear` being in range could take the following form, using available database fields that contain data related to the abstract `Information Element`, but are not precisely mapped to the concrete `Acted Upon` and `Consulted` [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) in the specification. This query produces a `Data Quality Report` with: 
 
-```sql
+```postgresql
     SELECT collecting_event_id, enddayofyear,
          'VALIDATION_ENDDAYOFYEAR_INRANGE' as test, 'NOT_COMPLIANT' as response_result, 'RUN_HAS_RESULT' as response_status, 
          'The value of enddayofyear [' || enddayofyear ||'] is not an integer between 1 and 365 inclusive, or 366 if ended_date falls in a leap year.' as response_comment
@@ -894,7 +894,7 @@ An SQL query that implements the abstract concept of the `dwc:enddayofyear` bein
                  ( 
                    MOD(EXTRACT (year from TO_DATE(ended_date, 'yyyy-mm-dd')),4) = 0
                    AND
-                   MOD(EXTRACT (year from TO_DATE(ended_date, 'yyyy-mm-dd')),100) != 0
+                   MOD(EXTRACT (year from TO_DATE(ended_date, 'yyyy-mm-dd')),100) <> 0
                  )
                  OR
                  MOD(EXTRACT (year from TO_DATE(ended_date, 'yyyy-mm-dd')),400) = 0
@@ -915,9 +915,9 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:day is EMPTY; COMPLIANT if the value of th
 
 Given a hypothetical Event table with fields including a primary key `event_id` and an integer field `day`, an implementation of VALIDATION_DAY_STANDARD in SQL that operates on data in the aggregate might look like:
 
-```sql
+```postgresql
     SELECT
-        ‘VALIDATION_DAY_STANDARD’ as test name, 
+        ‘VALIDATION_DAY_STANDARD’ as test_name, 
         event_id,
         ‘INTERNAL_PREREQUISITES_NOT_MET’ as Result_status, 
         null as Result_value,
@@ -926,7 +926,7 @@ Given a hypothetical Event table with fields including a primary key `event_id` 
         WHERE day is null
     UNION 
     SELECT
-        ‘VALIDATION_DAY_STANDARD’ as test name, 
+        ‘VALIDATION_DAY_STANDARD’ as test_name, 
         event_id,
         ‘RUN_HAS_RESULT’ as Result_status, 
         ‘COMPLIANT’ as Result_value,
@@ -935,7 +935,7 @@ Given a hypothetical Event table with fields including a primary key `event_id` 
         WHERE day >=1 and day <=31
     UNION 
     SELECT
-        ‘VALIDATION_DAY_STANDARD’ as test name, 
+        ‘VALIDATION_DAY_STANDARD’ as test_name, 
         event_id,
         ‘RUN_HAS_RESULT’ as Result_status, 
         ‘NOT COMPLIANT’ as Result_value,
