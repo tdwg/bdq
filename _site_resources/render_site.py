@@ -9,7 +9,7 @@ from pathlib import Path
 import markdown
 from pygments.formatters import HtmlFormatter
 from pygments.styles.friendly import FriendlyStyle 
-from pigments.token import Token
+from pygments.token import Token
 
 from render_site_links import (
     linkify_bare_urls_in_html_line,
