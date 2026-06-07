@@ -43,27 +43,27 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
 Draft Standard for Review
 
 ## Table of Contents ##
-[1 Introduction (non-normative)](#1-introduction-non-normative)
+- [1 Introduction (non-normative)](#1-introduction-non-normative)
   - [1.1 Purpose (non-normative)](#11-purpose-non-normative)
   - [1.2 Audience (non-normative)](#12-audience-non-normative)
   - [1.3 Associated Documents (non-normative)](#13-associated-documents-non-normative)
   - [1.4 Status of the Content of this Document (normative)](#14-status-of-the-content-of-this-document-normative)
   - [1.5 RFC 2119 key words (normative)](#15-rfc-2119-key-words-normative)
 
-[2 Synthetic and Example Data (normative)](#2-synthetic-and-example-data-normative)
+- [2 Synthetic and Example Data (normative)](#2-synthetic-and-example-data-normative)
   - [2.1 Identifying Example Data (normative)](#21-identifying-example-data-normative)
   - [2.2 Data Fragments and dwc:Occurrence Datasets (normative)](#22-data-fragments-and-dwcoccurrence-datasets-normative)
   - [2.3 Real Data Used as Examples (normative)](#23-real-data-used-as-examples-normative)
   - [2.4 Real Data with Synthetic Modifications Used as Examples (normative)](#24-real-data-with-synthetic-modifications-used-as-examples-normative)
   - [2.5 Wholly Synthetic Data (normative)](#25-wholly-synthetic-data-normative)
 
-[3 BDQ Conformance Testing Data (non-normative)](#3-bdq-conformance-testing-data-non-normative)
+- [3 BDQ Conformance Testing Data (non-normative)](#3-bdq-conformance-testing-data-non-normative)
 
-[Glossary (non-normative)](#glossary-non-normative)
+- [Glossary (non-normative)](#glossary-non-normative)
 
-[References (non-normative)](#references-non-normative)
+- [References (non-normative)](#references-non-normative)
 
-[Cite BDQ (non-normative)](#cite-bdq-non-normative)
+- [Cite BDQ (non-normative)](#cite-bdq-non-normative)
 
 ## 1 Introduction (non-normative)
 

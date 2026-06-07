@@ -42,7 +42,7 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
 Draft Standard for Review
 
 ## Table of Contents ##
-[1 Introduction (non-normative)](#1-introduction-non-normative)
+- [1 Introduction (non-normative)](#1-introduction-non-normative)
   - [1.1 Purpose (non-normative)](#11-purpose-non-normative)
   - [1.2 Audience (non-normative)](#12-audience-non-normative)
   - [1.3 Associated Documents (non-normative)](#13-associated-documents-non-normative)
@@ -52,15 +52,15 @@ Draft Standard for Review
   - [1.6 Namespace abbreviations (non-normative)](#16-namespace-abbreviations-non-normative)
   - [1.7 Key to Vocabulary Terms (normative)](#17-key-to-vocabulary-terms-normative)
 
-[2 Use of Terms (normative)](#2-use-of-terms-normative)
+- [2 Use of Terms (normative)](#2-use-of-terms-normative)
 
-[3 Term index (non-normative)](#3-term-index-non-normative)
+- [3 Term index (non-normative)](#3-term-index-non-normative)
   - [3.1 Alphabetical Index of classes (non-normative)](#31-alphabetical-index-of-classes-non-normative)
   - [3.2 Alphabetical Index of object properties (non-normative)](#32-alphabetical-index-of-object-properties-non-normative)
   - [3.3 Alphabetical Index of data properties (non-normative)](#33-alphabetical-index-of-data-properties-non-normative)
   - [3.4 Alphabetical Index of named individuals (non-normative)](#34-alphabetical-index-of-named-individuals-non-normative)
 
-[4 Vocabulary (normative)](#4-vocabulary-normative)
+- [4 Vocabulary (normative)](#4-vocabulary-normative)
   - [4.1 Class terms (normative)](#41-class-terms-normative)
   - [4.2 ObjectProperty terms (normative)](#42-objectproperty-terms-normative)
   - [4.3 DataProperty terms (normative)](#43-dataproperty-terms-normative)

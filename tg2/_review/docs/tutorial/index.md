@@ -40,23 +40,23 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
 Draft Standard for Review
 
 ## Table of Contents ##
-[1 Introduction (non-normative)](#1-introduction-non-normative)
+- [1 Introduction (non-normative)](#1-introduction-non-normative)
   - [1.1 Purpose (non-normative)](#11-purpose-non-normative)
   - [1.2 Audience (non-normative)](#12-audience-non-normative)
   - [1.3 Associated Documents (non-normative)](#13-associated-documents-non-normative)
   - [1.4 Status of the Content of this Document (normative)](#14-status-of-the-content-of-this-document-normative)
   - [1.5 Namespace abbreviations (non-normative)](#15-namespace-abbreviations-non-normative)
 
-[2 Overview (non-normative)](#2-overview-non-normative)
+- [2 Overview (non-normative)](#2-overview-non-normative)
   - [2.1 Best Practices (non-normative)](#21-best-practices-non-normative)
 
-[3 Defining a Use Case (non-normative)](#3-defining-a-use-case-non-normative)
+- [3 Defining a Use Case (non-normative)](#3-defining-a-use-case-non-normative)
   - [3.1 Define the Use Case and Fitness-for-Use Requirements (non-normative)](#31-define-the-use-case-and-fitness-for-use-requirements-non-normative)
     - [3.1.1 Refine and Formalize the Use Case (non-normative)](#311-refine-and-formalize-the-use-case-non-normative)
   - [3.2 Identify the Information Elements (non-normative)](#32-identify-the-information-elements-non-normative)
   - [3.3 Reuse of Existing Tests and Gap Analysis (non-normative)](#33-reuse-of-existing-tests-and-gap-analysis-non-normative)
 
-[4 Defining a New Test (non-normative)](#4-defining-a-new-test-non-normative)
+- [4 Defining a New Test (non-normative)](#4-defining-a-new-test-non-normative)
   - [4.1 A Simple Description of the Test (non-normative)](#41-a-simple-description-of-the-test-non-normative)
   - [4.2 Identify the Information Elements (non-normative)](#42-identify-the-information-elements-non-normative)
   - [4.3 Select the Test Type (non-normative)](#43-select-the-test-type-non-normative)
@@ -73,9 +73,9 @@ Draft Standard for Review
     - [4.10.1 Formal RDF Representation of the Test (non-normative)](#4101-formal-rdf-representation-of-the-test-non-normative)
     - [4.10.2 Summary of the Test Definition (non-normative)](#4102-summary-of-the-test-definition-non-normative)
 
-[5 A Test to Fill another Gap (non-normative)](#5-a-test-to-fill-another-gap-non-normative)
+- [5 A Test to Fill another Gap (non-normative)](#5-a-test-to-fill-another-gap-non-normative)
 
-[6 Defining a more complicated Test with a Source Authority (non-normative)](#6-defining-a-more-complicated-test-with-a-source-authority-non-normative)
+- [6 Defining a more complicated Test with a Source Authority (non-normative)](#6-defining-a-more-complicated-test-with-a-source-authority-non-normative)
   - [6.1 A Simple Description of the Test (non-normative)](#61-a-simple-description-of-the-test-non-normative)
   - [6.2 Identify the Information Elements (non-normative)](#62-identify-the-information-elements-non-normative)
   - [6.3 Select the Test Type (non-normative)](#63-select-the-test-type-non-normative)
@@ -94,7 +94,7 @@ Draft Standard for Review
     - [6.9.1 Summary of the Test Definition (non-normative)](#691-summary-of-the-test-definition-non-normative)
     - [6.9.2 Iterate (non-normative)](#692-iterate-non-normative)
 
-[7 Implementation, Conformance Testing, and Community Feedback (The "real-world") (non-normative)](#7-implementation-conformance-testing-and-community-feedback-the-real-world-non-normative)
+- [7 Implementation, Conformance Testing, and Community Feedback (The "real-world") (non-normative)](#7-implementation-conformance-testing-and-community-feedback-the-real-world-non-normative)
   - [7.1 Implementation (non-normative)](#71-implementation-non-normative)
   - [7.2 Conformance Testing Data and exposing Assumptions (non-normative)](#72-conformance-testing-data-and-exposing-assumptions-non-normative)
     - [7.2.1 Unit Tests (non-normative)](#721-unit-tests-non-normative)
@@ -105,7 +105,7 @@ Draft Standard for Review
   - [7.4 Execution Frameworks (non-normative)](#74-execution-frameworks-non-normative)
     - [7.4.1 What an execution framework must do between raw data and a Test implementation (non-normative)](#741-what-an-execution-framework-must-do-between-raw-data-and-a-test-implementation-non-normative)
 
-[8 Use an implementation for Quality Control (non-normative)](#8-use-an-implementation-for-quality-control-non-normative)
+- [8 Use an implementation for Quality Control (non-normative)](#8-use-an-implementation-for-quality-control-non-normative)
   - [8.1 MultiRecord Measures for Quality Control (non-normative)](#81-multirecord-measures-for-quality-control-non-normative)
     - [8.1.1 What a MultiRecord Measure takes as input (non-normative)](#811-what-a-multirecord-measure-takes-as-input-non-normative)
     - [8.1.2 Two common patterns of MultiRecord Measures (non-normative)](#812-two-common-patterns-of-multirecord-measures-non-normative)
@@ -124,14 +124,14 @@ Draft Standard for Review
     - [8.2.6 Example Quality Control Workflow Validated Distribution Authority Use Case (non-normative)](#826-example-quality-control-workflow-validated-distribution-authority-use-case-non-normative)
   - [8.3 Quality Assurance Workflow (non-normative)](#83-quality-assurance-workflow-non-normative)
 
-[9 Round-Up (non-normative)](#9-round-up-non-normative)
+- [9 Round-Up (non-normative)](#9-round-up-non-normative)
   - [9.1 Summary of the BDQ Philosophy (non-normative)](#91-summary-of-the-bdq-philosophy-non-normative)
 
-[Glossary (non-normative)](#glossary-non-normative)
+- [Glossary (non-normative)](#glossary-non-normative)
 
-[References (non-normative)](#references-non-normative)
+- [References (non-normative)](#references-non-normative)
 
-[Cite BDQ (non-normative)](#cite-bdq-non-normative)
+- [Cite BDQ (non-normative)](#cite-bdq-non-normative)
 
 ## 1 Introduction (non-normative)
 

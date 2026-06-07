@@ -45,7 +45,7 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
 Draft Standard for Review
 
 ## Table of Contents ##
-[1 Introduction (non-normative)](#1-introduction-non-normative)
+- [1 Introduction (non-normative)](#1-introduction-non-normative)
   - [1.1 Purpose (non-normative)](#11-purpose-non-normative)
   - [1.2 Audience (non-normative)](#12-audience-non-normative)
   - [1.3 Associated Documents (non-normative)](#13-associated-documents-non-normative)
@@ -55,19 +55,19 @@ Draft Standard for Review
   - [1.6 Namespace abbreviations (non-normative)](#16-namespace-abbreviations-non-normative)
   - [1.7 Referring to Terms (normative)](#17-referring-to-terms-normative)
 
-[2 A Brief Context for the BDQ Tests (non-normative)](#2-a-brief-context-for-the-bdq-tests-non-normative)
+- [2 A Brief Context for the BDQ Tests (non-normative)](#2-a-brief-context-for-the-bdq-tests-non-normative)
   - [2.1 The BDQ Definition of "Test" (non-normative)](#21-the-bdq-definition-of-test-non-normative)
     - [2.1.1 Conceptual map: how BDQ uses the term "Test" (non-normative)](#211-conceptual-map-how-bdq-uses-the-term-test-non-normative)
   - [2.2 Use Cases (non-normative)](#22-use-cases-non-normative)
 
-[3 Test Types (non-normative)](#3-test-types-non-normative)
+- [3 Test Types (non-normative)](#3-test-types-non-normative)
   - [3.1 Validation Tests (normative)](#31-validation-tests-normative)
   - [3.2 Issue Tests (normative)](#32-issue-tests-normative)
   - [3.3 Measure Tests (normative)](#33-measure-tests-normative)
   - [3.4 Amendment Tests (normative)](#34-amendment-tests-normative)
   - [3.5 Single Record and Multi Record Tests (non-normative)](#35-single-record-and-multi-record-tests-non-normative)
 
-[4 Use of Terms (normative)](#4-use-of-terms-normative)
+- [4 Use of Terms (normative)](#4-use-of-terms-normative)
   - [4.1 Structure of Response (normative)](#41-structure-of-response-normative)
   - [4.2 Resource Types (normative)](#42-resource-types-normative)
     - [4.2.1 Single Record in Darwin Core Data Package (normative)](#421-single-record-in-darwin-core-data-package-normative)
@@ -80,29 +80,29 @@ Draft Standard for Review
     - [4.3.2 Explaining Source Authorities without a Parameter (non-normative)](#432-explaining-source-authorities-without-a-parameter-non-normative)
     - [4.3.2 Parameter Examples (non-normative)](#432-parameter-examples-non-normative)
 
-[5 Design of the Tests (normative)](#5-design-of-the-tests-normative)
+- [5 Design of the Tests (normative)](#5-design-of-the-tests-normative)
   - [5.1 BDQ Tests: An Operational Perspective (non-normative)](#51-bdq-tests-an-operational-perspective-non-normative)
   - [5.2 Data Quality Control, Data Quality Assurance (normative)](#52-data-quality-control-data-quality-assurance-normative)
   - [5.3 When to Run Tests (normative)](#53-when-to-run-tests-normative)
   - [5.4 Results of Test Executions (normative)](#54-results-of-test-executions-normative)
   - [5.5 Test Execution Environments and Workflows (non-normative)](#55-test-execution-environments-and-workflows-non-normative)
 
-[6 Example RDF description of a Test (non-normative)](#6-example-rdf-description-of-a-test-non-normative)
+- [6 Example RDF description of a Test (non-normative)](#6-example-rdf-description-of-a-test-non-normative)
 
-[7 Creating New Tests (non-normative)](#7-creating-new-tests-non-normative)
+- [7 Creating New Tests (non-normative)](#7-creating-new-tests-non-normative)
   - [7.1 Elements of a New Test (non-normative)](#71-elements-of-a-new-test-non-normative)
   - [7.2 Proposing to add a Test to the BDQ Standard (non-normative)](#72-proposing-to-add-a-test-to-the-bdq-standard-non-normative)
 
-[8 Creating New Use Cases (non-normative)](#8-creating-new-use-cases-non-normative)
+- [8 Creating New Use Cases (non-normative)](#8-creating-new-use-cases-non-normative)
   - [8.1 Elements of a New Use Case (non-normative)](#81-elements-of-a-new-use-case-non-normative)
   - [8.2 Defining a New Use Case (non-normative)](#82-defining-a-new-use-case-non-normative)
   - [8.3 Proposing to add a Use Case to the BDQ Standard (non-normative)](#83-proposing-to-add-a-use-case-to-the-bdq-standard-non-normative)
 
-[Glossary (non-normative)](#glossary-non-normative)
+- [Glossary (non-normative)](#glossary-non-normative)
 
-[References (non-normative)](#references-non-normative)
+- [References (non-normative)](#references-non-normative)
 
-[Cite BDQ (non-normative)](#cite-bdq-non-normative)
+- [Cite BDQ (non-normative)](#cite-bdq-non-normative)
 
 ## 1 Introduction (non-normative)
 

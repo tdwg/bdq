@@ -42,7 +42,7 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
 Draft Standard for Review
 
 ## Table of Contents ##
-[1 Introduction (non-normative)](#1-introduction-non-normative)
+- [1 Introduction (non-normative)](#1-introduction-non-normative)
   - [1.1 Purpose (non-normative)](#11-purpose-non-normative)
   - [1.2 Audience (non-normative)](#12-audience-non-normative)
   - [1.3 Associated Documents (non-normative)](#13-associated-documents-non-normative)
@@ -52,11 +52,11 @@ Draft Standard for Review
   - [1.6 RFC 2119 key words (normative)](#16-rfc-2119-key-words-normative)
   - [1.7 Referring to Terms (normative)](#17-referring-to-terms-normative)
 
-[Glossary (non-normative)](#glossary-non-normative)
+- [Glossary (non-normative)](#glossary-non-normative)
 
-[References (non-normative)](#references-non-normative)
+- [References (non-normative)](#references-non-normative)
 
-[Cite BDQ (non-normative)](#cite-bdq-non-normative)
+- [Cite BDQ (non-normative)](#cite-bdq-non-normative)
 
 ## 1 Introduction (non-normative)
 

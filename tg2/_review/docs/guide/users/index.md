@@ -45,7 +45,7 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
 Draft Standard for Review
 
 ## Table of Contents ##
-[1 Introduction (non-normative)](#1-introduction-non-normative)
+- [1 Introduction (non-normative)](#1-introduction-non-normative)
   - [1.1 Purpose (non-normative)](#11-purpose-non-normative)
   - [1.2 Audience (non-normative)](#12-audience-non-normative)
   - [1.3 Associated Documents (non-normative)](#13-associated-documents-non-normative)
@@ -54,14 +54,14 @@ Draft Standard for Review
   - [1.6 Namespace abbreviations (non-normative)](#16-namespace-abbreviations-non-normative)
   - [1.7 Referring to Terms (normative)](#17-referring-to-terms-normative)
 
-[2 Context for Quality, Uses and Purposes (non-normative)](#2-context-for-quality-uses-and-purposes-non-normative)
+- [2 Context for Quality, Uses and Purposes (non-normative)](#2-context-for-quality-uses-and-purposes-non-normative)
   - [2.1 Quality Control and Quality Assurance (non-normative)](#21-quality-control-and-quality-assurance-non-normative)
     - [2.1.1 Quality Assurance (non-normative)](#211-quality-assurance-non-normative)
     - [2.1.2 Quality Control (non-normative)](#212-quality-control-non-normative)
     - [2.1.3 Quality Control in Data Aggregation (non-normative)](#213-quality-control-in-data-aggregation-non-normative)
     - [2.1.4 Measures for Quality Control and Quality Assurance (non-normative)](#214-measures-for-quality-control-and-quality-assurance-non-normative)
 
-[3 A Guide to the Tests (non-normative)](#3-a-guide-to-the-tests-non-normative)
+- [3 A Guide to the Tests (non-normative)](#3-a-guide-to-the-tests-non-normative)
   - [3.1 Test Types (non-normative)](#31-test-types-non-normative)
   - [3.2 Test Inputs and Outputs (non-normative)](#32-test-inputs-and-outputs-non-normative)
     - [3.2.1 Inputs to Tests (non-normative)](#321-inputs-to-tests-non-normative)
@@ -79,19 +79,19 @@ Draft Standard for Review
     - [3.4.1 Test Parameters in Reports (normative)](#341-test-parameters-in-reports-normative)
     - [3.4.2 Test Parameters Example (non-normative)](#342-test-parameters-example-non-normative)
 
-[4 Using the BDQ Tests Quick Reference Guide (non-normative)](#4-using-the-bdq-tests-quick-reference-guide-non-normative)
+- [4 Using the BDQ Tests Quick Reference Guide (non-normative)](#4-using-the-bdq-tests-quick-reference-guide-non-normative)
 
-[5 Creating New Tests and Use Cases (non-normative)](#5-creating-new-tests-and-use-cases-non-normative)
+- [5 Creating New Tests and Use Cases (non-normative)](#5-creating-new-tests-and-use-cases-non-normative)
 
-[6 Time of Day and Time Zones (non-normative)](#6-time-of-day-and-time-zones-non-normative)
+- [6 Time of Day and Time Zones (non-normative)](#6-time-of-day-and-time-zones-non-normative)
 
-[7 Dates and Calendars (non-normative)](#7-dates-and-calendars-non-normative)
+- [7 Dates and Calendars (non-normative)](#7-dates-and-calendars-non-normative)
 
-[Glossary (non-normative)](#glossary-non-normative)
+- [Glossary (non-normative)](#glossary-non-normative)
 
-[References (non-normative)](#references-non-normative)
+- [References (non-normative)](#references-non-normative)
 
-[Cite BDQ (non-normative)](#cite-bdq-non-normative)
+- [Cite BDQ (non-normative)](#cite-bdq-non-normative)
 
 ## 1 Introduction (non-normative)
 

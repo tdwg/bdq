@@ -45,7 +45,7 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
 Draft Standard for Review
 
 ## Table of Contents ##
-[1 Introduction (non-normative)](#1-introduction-non-normative)
+- [1 Introduction (non-normative)](#1-introduction-non-normative)
   - [1.1 Purpose (non-normative)](#11-purpose-non-normative)
   - [1.2 Audience (non-normative)](#12-audience-non-normative)
   - [1.3 Associated Documents (non-normative)](#13-associated-documents-non-normative)
@@ -54,7 +54,7 @@ Draft Standard for Review
   - [1.6 Namespace abbreviations (non-normative)](#16-namespace-abbreviations-non-normative)
   - [1.7 Referring to Terms (normative)](#17-referring-to-terms-normative)
 
-[2 About the Tests and their Implementation (normative)](#2-about-the-tests-and-their-implementation-normative)
+- [2 About the Tests and their Implementation (normative)](#2-about-the-tests-and-their-implementation-normative)
   - [2.1 Independence (normative)](#21-independence-normative)
   - [2.2 The Concept of "Empty" in the BDQ Standard (normative)](#22-the-concept-of-empty-in-the-bdq-standard-normative)
     - [2.2.1 The Concept of Empty (normative)](#221-the-concept-of-empty-normative)
@@ -72,7 +72,7 @@ Draft Standard for Review
   - [2.4 Matching to controlled vocabularies (normative)](#24-matching-to-controlled-vocabularies-normative)
   - [2.4.1 Matching to controlled vocabularies rationale (non-normative)](#241-matching-to-controlled-vocabularies-rationale-non-normative)
 
-[3 Compliant Implementation (normative)](#3-compliant-implementation-normative)
+- [3 Compliant Implementation (normative)](#3-compliant-implementation-normative)
   - [3.1 Compliance depends on Use Case (normative)](#31-compliance-depends-on-use-case-normative)
   - [3.2 Minimum Test Suite composition (normative)](#32-minimum-test-suite-composition-normative)
   - [3.3 Rationale and expectations for suite design (non-normative)](#33-rationale-and-expectations-for-suite-design-non-normative)
@@ -82,9 +82,9 @@ Draft Standard for Review
   - [3.6 Parameterized Tests: default behavior and unsupported values (normative)](#36-parameterized-tests-default-behavior-and-unsupported-values-normative)
   - [3.7 Bulk / non-Framework execution (normative)](#37-bulk-/-non-framework-execution-normative)
 
-[4 Extension Points (normative)](#4-extension-points-normative)
+- [4 Extension Points (normative)](#4-extension-points-normative)
 
-[5 Responses from Tests (normative)](#5-responses-from-tests-normative)
+- [5 Responses from Tests (normative)](#5-responses-from-tests-normative)
   - [5.1 The Response Object (normative)](#51-the-response-object-normative)
   - [5.1.1 Amendment Test Responses (normative)](#511-amendment-test-responses-normative)
   - [5.1.2 Response Serialization and Presentation (normative)](#512-response-serialization-and-presentation-normative)
@@ -92,7 +92,7 @@ Draft Standard for Review
   - [5.1.4 Results from Measures (normative)](#514-results-from-measures-normative)
   - [5.2 Framework Elements Not Included in BDQ Test Descriptions (normative)](#52-framework-elements-not-included-in-bdq-test-descriptions-normative)
 
-[6 Guidelines for Implementers (normative)](#6-guidelines-for-implementers-normative)
+- [6 Guidelines for Implementers (normative)](#6-guidelines-for-implementers-normative)
   - [6.1 Parameters and Changing the Behavior of a Test (normative)](#61-parameters-and-changing-the-behavior-of-a-test-normative)
     - [6.1.1 Identifying non-default Parameter values in reports (normative)](#611-identifying-non-default-parameter-values-in-reports-normative)
     - [6.1.2 Identifying non-default Parameter values in Response.comment (normative)](#612-identifying-non-default-parameter-values-in-responsecomment-normative)
@@ -124,7 +124,7 @@ Draft Standard for Review
   - [6.6 Responsibilities of a Test Execution Framework (non-normative)](#66-responsibilities-of-a-test-execution-framework-non-normative)
     - [6.6.1 Linking raw input terms, Tests, and outputs in a workflow (non-normative)](#661-linking-raw-input-terms-tests-and-outputs-in-a-workflow-non-normative)
 
-[7 Presentation of Results (normative)](#7-presentation-of-results-normative)
+- [7 Presentation of Results (normative)](#7-presentation-of-results-normative)
   - [7.1 Data Quality Reports (normative)](#71-data-quality-reports-normative)
     - [7.1.1 Identifying Tests (normative)](#711-identifying-tests-normative)
     - [7.1.2 Information Elements Acted Upon and Consulted in Results (normative)](#712-information-elements-acted-upon-and-consulted-in-results-normative)
@@ -133,7 +133,7 @@ Draft Standard for Review
   - [7.2 Annotations (normative)](#72-annotations-normative)
     - [7.2.1 Example of Test Responses as Annotations (non-normative)](#721-example-of-test-responses-as-annotations-non-normative)
 
-[8 Conformance Testing Implementations (normative)](#8-conformance-testing-implementations-normative)
+- [8 Conformance Testing Implementations (normative)](#8-conformance-testing-implementations-normative)
   - [8.1 Introduction to Test Conformance Testing (non-normative)](#81-introduction-to-test-conformance-testing-non-normative)
     - [8.1.1 DataID as a conformance testing data record identifier (normative)](#811-dataid-as-a-conformance-testing-data-record-identifier-normative)
   - [8.2 Structure of the Test Conformance Testing Data (non-normative)](#82-structure-of-the-test-conformance-testing-data-non-normative)
@@ -144,13 +144,13 @@ Draft Standard for Review
     - [8.6.1 Tools for Validating Test Implementations with the Conformance Testing Data (non-normative)](#861-tools-for-validating-test-implementations-with-the-conformance-testing-data-non-normative)
     - [8.6.2 Tools to assist with Implementations and RDF presentation (non-normative)](#862-tools-to-assist-with-implementations-and-rdf-presentation-non-normative)
 
-[9 Existing Test Implementations (non-normative)](#9-existing-test-implementations-non-normative)
+- [9 Existing Test Implementations (non-normative)](#9-existing-test-implementations-non-normative)
 
-[Glossary (non-normative)](#glossary-non-normative)
+- [Glossary (non-normative)](#glossary-non-normative)
 
-[References (non-normative)](#references-non-normative)
+- [References (non-normative)](#references-non-normative)
 
-[Cite BDQ (non-normative)](#cite-bdq-non-normative)
+- [Cite BDQ (non-normative)](#cite-bdq-non-normative)
 
 ## 1 Introduction (non-normative)
 

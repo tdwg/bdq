@@ -48,7 +48,7 @@ This is the landing and overview page for the **Biodiversity Data Quality (BDQ)*
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 ## Table of Contents ##
-[1 Introduction (non-normative)](#1-introduction-non-normative)
+- [1 Introduction (non-normative)](#1-introduction-non-normative)
   - [1.1 Purpose of the BDQ Standard (non-normative)](#11-purpose-of-the-bdq-standard-non-normative)
     - [1.1.1 Purpose of this document (non-normative)](#111-purpose-of-this-document-non-normative)
   - [1.2 Audience for the BDQ Standard (non-normative)](#12-audience-for-the-bdq-standard-non-normative)
@@ -61,9 +61,9 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
   - [1.8 Referring to Terms (normative)](#18-referring-to-terms-normative)
   - [1.9 Notation Conventions (non-normative)](#19-notation-conventions-non-normative)
 
-[2 A Roadmap to the BDQ Standard (non-normative)](#2-a-roadmap-to-the-bdq-standard-non-normative)
+- [2 A Roadmap to the BDQ Standard (non-normative)](#2-a-roadmap-to-the-bdq-standard-non-normative)
 
-[3 Parts of the Standard (non-normative)](#3-parts-of-the-standard-non-normative)
+- [3 Parts of the Standard (non-normative)](#3-parts-of-the-standard-non-normative)
   - [3.1 BDQ Tests Quick Reference Guide (non-normative)](#31-bdq-tests-quick-reference-guide-non-normative)
   - [3.2 Guides (non-normative)](#32-guides-non-normative)
   - [3.3 Vocabularies (non-normative)](#33-vocabularies-non-normative)
@@ -79,22 +79,22 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
     - [3.5.3 Fitness For Use Framework (non-normative)](#353-fitness-for-use-framework-non-normative)
     - [3.5.4 RDF Serializations of Supporting Controlled Vocabularies (non-normative)](#354-rdf-serializations-of-supporting-controlled-vocabularies-non-normative)
 
-[4 Implementations (non-normative)](#4-implementations-non-normative)
+- [4 Implementations (non-normative)](#4-implementations-non-normative)
   - [4.1 Java Implementation (non-normative)](#41-java-implementation-non-normative)
   - [4.2 BDQEmail (non-normative)](#42-bdqemail-non-normative)
 
-[5 Contributions and Acknowledgments (non-normative)](#5-contributions-and-acknowledgments-non-normative)
+- [5 Contributions and Acknowledgments (non-normative)](#5-contributions-and-acknowledgments-non-normative)
   - [5.1 Acknowledgments (non-normative)](#51-acknowledgments-non-normative)
     - [5.1.1 Funding and Support for Meetings (non-normative)](#511-funding-and-support-for-meetings-non-normative)
   - [5.2 Contributions (non-normative)](#52-contributions-non-normative)
     - [5.2.1 Authors (non-normative)](#521-authors-non-normative)
     - [5.2.2 Contributors (non-normative)](#522-contributors-non-normative)
 
-[6 Glossary (non-normative)](#6-glossary-non-normative)
+- [6 Glossary (non-normative)](#6-glossary-non-normative)
 
-[7 References (non-normative)](#7-references-non-normative)
+- [7 References (non-normative)](#7-references-non-normative)
 
-[8 Cite BDQ (non-normative)](#8-cite-bdq-non-normative)
+- [8 Cite BDQ (non-normative)](#8-cite-bdq-non-normative)
 
 ## 1 Introduction (non-normative)
 

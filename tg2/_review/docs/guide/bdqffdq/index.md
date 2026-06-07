@@ -45,7 +45,7 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
 Draft Standard for Review
 
 ## Table of Contents ##
-[1 Introduction (non-normative)](#1-introduction-non-normative)
+- [1 Introduction (non-normative)](#1-introduction-non-normative)
   - [1.1 Purpose (non-normative)](#11-purpose-non-normative)
   - [1.2 Audience (non-normative)](#12-audience-non-normative)
   - [1.3 Associated Documents (non-normative)](#13-associated-documents-non-normative)
@@ -54,7 +54,7 @@ Draft Standard for Review
   - [1.6 Namespace abbreviations (non-normative)](#16-namespace-abbreviations-non-normative)
   - [1.7 Referring to Terms (normative)](#17-referring-to-terms-normative)
 
-[2 Framework for describing data quality (non-normative)](#2-framework-for-describing-data-quality-non-normative)
+- [2 Framework for describing data quality (non-normative)](#2-framework-for-describing-data-quality-non-normative)
   - [2.1 Introduction and Context (non-normative)](#21-introduction-and-context-non-normative)
   - [2.2 Description of the Fitness For Use Framework ontology (non-normative)](#22-description-of-the-fitness-for-use-framework-ontology-non-normative)
     - [2.2.1 Data Quality Control and Data Quality Assurance (non-normative)](#221-data-quality-control-and-data-quality-assurance-non-normative)
@@ -74,7 +74,7 @@ Draft Standard for Review
     - [2.7.5 Validating RDF graphs with SHACL (non-normative)](#275-validating-rdf-graphs-with-shacl-non-normative)
     - [2.7.6 Other TDWG vocabularies as sources of Information Elements (non-normative)](#276-other-tdwg-vocabularies-as-sources-of-information-elements-non-normative)
 
-[3 Use of Ontology Terms (normative)](#3-use-of-ontology-terms-normative)
+- [3 Use of Ontology Terms (normative)](#3-use-of-ontology-terms-normative)
   - [3.1 Use of Properties (normative)](#31-use-of-properties-normative)
     - [3.1.1 Relating Classes and Properties (non-normative)](#311-relating-classes-and-properties-non-normative)
     - [3.1.2 Properties Relating to Data Quality Needs (normative)](#312-properties-relating-to-data-quality-needs-normative)
@@ -88,7 +88,7 @@ Draft Standard for Review
   - [3.3 Properties that should be one-to-one (normative)](#33-properties-that-should-be-one-to-one-normative)
   - [3.3.1 Cardinality of bdqffdq: terms (non-normative)](#331-cardinality-of-bdqffdq-terms-non-normative)
 
-[4 Fitness For Use Framework Summary of Mathematical Formalization (normative)](#4-fitness-for-use-framework-summary-of-mathematical-formalization-normative)
+- [4 Fitness For Use Framework Summary of Mathematical Formalization (normative)](#4-fitness-for-use-framework-summary-of-mathematical-formalization-normative)
   - [4.1 Fundamental Concepts (normative)](#41-fundamental-concepts-normative)
   - [4.2 Properties (normative)](#42-properties-normative)
     - [4.2.1 Primitive Associational Relations (normative)](#421-primitive-associational-relations-normative)
@@ -128,23 +128,23 @@ Draft Standard for Review
       - [4.4.4.8 Identifying External Prerequisite Failures in Data Quality Reports (normative)](#4448-identifying-external-prerequisite-failures-in-data-quality-reports-normative)
   - [4.5 Relationship between the mathematical formalization and the ontology (non-normative)](#45-relationship-between-the-mathematical-formalization-and-the-ontology-non-normative)
 
-[5 Term index (non-normative)](#5-term-index-non-normative)
+- [5 Term index (non-normative)](#5-term-index-non-normative)
   - [5.1 Alphabetical Index of classes (non-normative)](#51-alphabetical-index-of-classes-non-normative)
   - [5.2 Alphabetical Index of object properties (non-normative)](#52-alphabetical-index-of-object-properties-non-normative)
   - [5.3 Alphabetical Index of data properties (non-normative)](#53-alphabetical-index-of-data-properties-non-normative)
   - [5.4 Alphabetical Index of named individuals (non-normative)](#54-alphabetical-index-of-named-individuals-non-normative)
 
-[6 List of Terms with axioms in the Fitness For Use Framework ontology (normative)](#6-list-of-terms-with-axioms-in-the-fitness-for-use-framework-ontology-normative)
+- [6 List of Terms with axioms in the Fitness For Use Framework ontology (normative)](#6-list-of-terms-with-axioms-in-the-fitness-for-use-framework-ontology-normative)
   - [6.1 Class terms (normative)](#61-class-terms-normative)
   - [6.2 ObjectProperty terms (normative)](#62-objectproperty-terms-normative)
   - [6.3 DataProperty terms (normative)](#63-dataproperty-terms-normative)
   - [6.4 NamedIndividual terms (normative)](#64-namedindividual-terms-normative)
 
-[Glossary (non-normative)](#glossary-non-normative)
+- [Glossary (non-normative)](#glossary-non-normative)
 
-[References (non-normative)](#references-non-normative)
+- [References (non-normative)](#references-non-normative)
 
-[Cite BDQ (non-normative)](#cite-bdq-non-normative)
+- [Cite BDQ (non-normative)](#cite-bdq-non-normative)
 
 ## 1 Introduction (non-normative)
 

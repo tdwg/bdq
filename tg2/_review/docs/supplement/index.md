@@ -45,14 +45,14 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
 Draft Standard for Review
 
 ## Table of Contents ##
-[1 Introduction (non-normative)](#1-introduction-non-normative)
+- [1 Introduction (non-normative)](#1-introduction-non-normative)
   - [1.1 Purpose (non-normative)](#11-purpose-non-normative)
   - [1.2 Audience (non-normative)](#12-audience-non-normative)
   - [1.3 Associated Documents (non-normative)](#13-associated-documents-non-normative)
   - [1.4 Status of the Content of this Document (normative)](#14-status-of-the-content-of-this-document-normative)
   - [1.5 Namespace abbreviations (non-normative)](#15-namespace-abbreviations-non-normative)
 
-[2 Historical Context (non-normative)](#2-historical-context-non-normative)
+- [2 Historical Context (non-normative)](#2-historical-context-non-normative)
   - [2.1 Definition of CORE (non-normative)](#21-definition-of-core-non-normative)
     - [2.1.1 Tests tagged as DO NOT IMPLEMENT (non-normative)](#211-tests-tagged-as-do-not-implement-non-normative)
   - [2.2 Use Case Development (non-normative)](#22-use-case-development-non-normative)
@@ -64,7 +64,7 @@ Draft Standard for Review
     - [2.4.3 Framework Competency Question including an oa:annotation (non-normative)](#243-framework-competency-question-including-an-oaannotation-non-normative)
     - [2.4.4 Finding Information Elements Acted Upon (non-normative)](#244-finding-information-elements-acted-upon-non-normative)
 
-[3 Developing the Tests (non-normative)](#3-developing-the-tests-non-normative)
+- [3 Developing the Tests (non-normative)](#3-developing-the-tests-non-normative)
   - [3.1 Test Types (non-normative)](#31-test-types-non-normative)
     - [3.1.1 Validation (non-normative)](#311-validation-non-normative)
     - [3.1.2 Issues (non-normative)](#312-issues-non-normative)
@@ -94,11 +94,11 @@ Draft Standard for Review
   - [3.12 Naming Conventions (non-normative)](#312-naming-conventions-non-normative)
   - [3.13 Parts of Test Labels (non-normative)](#313-parts-of-test-labels-non-normative)
 
-[4 Date and Time Issues (non-normative)](#4-date-and-time-issues-non-normative)
+- [4 Date and Time Issues (non-normative)](#4-date-and-time-issues-non-normative)
   - [4.1 Dates and Calendars (non-normative)](#41-dates-and-calendars-non-normative)
   - [4.2 Time (non-normative)](#42-time-non-normative)
 
-[5 Rationale Management Documentation (non-normative)](#5-rationale-management-documentation-non-normative)
+- [5 Rationale Management Documentation (non-normative)](#5-rationale-management-documentation-non-normative)
   - [5.1 Developing BDQ Tests Using GitHub Issues (non-normative)](#51-developing-bdq-tests-using-github-issues-non-normative)
   - [5.2 GitHub Tags and Categorizing Issues (non-normative)](#52-github-tags-and-categorizing-issues-non-normative)
   - [5.2.1 Exploring relationships among tests (non-normative)](#521-exploring-relationships-among-tests-non-normative)
@@ -108,13 +108,13 @@ Draft Standard for Review
     - [5.2.1.4 Diagram of the OTHER-oriented Tests and Information Elements Acted Upon (non-normative)](#5214-diagram-of-the-other-oriented-tests-and-information-elements-acted-upon-non-normative)
   - [5.3 Using Markdown Tables in GitHub Issues to Develop Test descriptors (non-normative)](#53-using-markdown-tables-in-github-issues-to-develop-test-descriptors-non-normative)
 
-[6 Code for BDQ Components (non-normative)](#6-code-for-bdq-components-non-normative)
+- [6 Code for BDQ Components (non-normative)](#6-code-for-bdq-components-non-normative)
 
-[Glossary (non-normative)](#glossary-non-normative)
+- [Glossary (non-normative)](#glossary-non-normative)
 
-[References (non-normative)](#references-non-normative)
+- [References (non-normative)](#references-non-normative)
 
-[Cite BDQ (non-normative)](#cite-bdq-non-normative)
+- [Cite BDQ (non-normative)](#cite-bdq-non-normative)
 
 ## 1 Introduction (non-normative)
 

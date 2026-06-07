@@ -41,7 +41,7 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
 Draft Standard for Review
 
 ## Table of Contents ##
-[1 Introduction (non-normative)](#1-introduction-non-normative)
+- [1 Introduction (non-normative)](#1-introduction-non-normative)
   - [1.1 Purpose (non-normative)](#11-purpose-non-normative)
   - [1.2 Audience (non-normative)](#12-audience-non-normative)
   - [1.3 Associated Documents (non-normative)](#13-associated-documents-non-normative)
@@ -51,23 +51,23 @@ Draft Standard for Review
   - [1.7 Namespace abbreviations (non-normative)](#17-namespace-abbreviations-non-normative)
   - [1.8 Key to Vocabulary Terms (normative)](#18-key-to-vocabulary-terms-normative)
 
-[2 Use of Terms (normative)](#2-use-of-terms-normative)
+- [2 Use of Terms (normative)](#2-use-of-terms-normative)
 
-[3 Test Types (non-normative)](#3-test-types-non-normative)
+- [3 Test Types (non-normative)](#3-test-types-non-normative)
 
-[4 Term Indices (non-normative)](#4-term-indices-non-normative)
+- [4 Term Indices (non-normative)](#4-term-indices-non-normative)
   - [3.1 Index to Validation Tests (non-normative)](#31-index-to-validation-tests-non-normative)
   - [3.2 Index to Issue Tests (non-normative)](#32-index-to-issue-tests-non-normative)
   - [3.3 Index to Measure Tests (non-normative)](#33-index-to-measure-tests-non-normative)
   - [3.4 Index to Amendment Tests (non-normative)](#34-index-to-amendment-tests-non-normative)
 
-[4 Vocabulary (normative)](#4-vocabulary-normative)
+- [4 Vocabulary (normative)](#4-vocabulary-normative)
 
-[Glossary (non-normative)](#glossary-non-normative)
+- [Glossary (non-normative)](#glossary-non-normative)
 
-[References (non-normative)](#references-non-normative)
+- [References (non-normative)](#references-non-normative)
 
-[Cite BDQ (non-normative)](#cite-bdq-non-normative)
+- [Cite BDQ (non-normative)](#cite-bdq-non-normative)
 
 ## 1 Introduction (non-normative)
 

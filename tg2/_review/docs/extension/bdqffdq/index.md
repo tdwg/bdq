@@ -42,7 +42,7 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
 Draft Standard for Review
 
 ## Table of Contents ##
-[1 Introduction (non-normative)](#1-introduction-non-normative)
+- [1 Introduction (non-normative)](#1-introduction-non-normative)
   - [1.1 Purpose (non-normative)](#11-purpose-non-normative)
   - [1.2 Audience (non-normative)](#12-audience-non-normative)
   - [1.3 Associated Documents (non-normative)](#13-associated-documents-non-normative)
@@ -53,9 +53,9 @@ Draft Standard for Review
   - [1.7 Referring to Terms (normative)](#17-referring-to-terms-normative)
   - [1.8 Key to Vocabulary Terms (normative)](#18-key-to-vocabulary-terms-normative)
 
-[2 Axiom Index (non-normative)](#2-axiom-index-non-normative)
+- [2 Axiom Index (non-normative)](#2-axiom-index-non-normative)
 
-[4 Vocabulary Extension (normative)](#4-vocabulary-extension-normative)
+- [4 Vocabulary Extension (normative)](#4-vocabulary-extension-normative)
   - [4.1 Range Axioms (normative)](#41-range-axioms-normative)
   - [4.2 Different From Axioms (normative)](#42-different-from-axioms-normative)
   - [4.3 General Axioms (normative)](#43-general-axioms-normative)

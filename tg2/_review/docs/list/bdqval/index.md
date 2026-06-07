@@ -41,7 +41,7 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
 Draft Standard for Review
 
 ## Table of Contents ##
-[1 Introduction (non-normative)](#1-introduction-non-normative)
+- [1 Introduction (non-normative)](#1-introduction-non-normative)
   - [1.1 Purpose (non-normative)](#11-purpose-non-normative)
   - [1.2 Audience (non-normative)](#12-audience-non-normative)
   - [1.3 Data Quality Vocabulary Terms (non-normative)](#13-data-quality-vocabulary-terms-non-normative)
@@ -52,19 +52,19 @@ Draft Standard for Review
   - [1.8 Namespace abbreviations (non-normative)](#18-namespace-abbreviations-non-normative)
   - [1.9 Key to Vocabulary Terms (normative)](#19-key-to-vocabulary-terms-normative)
 
-[2 Use of Terms (normative)](#2-use-of-terms-normative)
+- [2 Use of Terms (normative)](#2-use-of-terms-normative)
 
-[3 Term index (non-normative)](#3-term-index-non-normative)
+- [3 Term index (non-normative)](#3-term-index-non-normative)
   - [3.1 Index By Term Name (non-normative)](#31-index-by-term-name-non-normative)
   - [3.2 Index By Label (non-normative)](#32-index-by-label-non-normative)
 
-[4 Vocabulary (normative)](#4-vocabulary-normative)
+- [4 Vocabulary (normative)](#4-vocabulary-normative)
 
-[Glossary (non-normative)](#glossary-non-normative)
+- [Glossary (non-normative)](#glossary-non-normative)
 
-[References (non-normative)](#references-non-normative)
+- [References (non-normative)](#references-non-normative)
 
-[Cite BDQ (non-normative)](#cite-bdq-non-normative)
+- [Cite BDQ (non-normative)](#cite-bdq-non-normative)
 
 ## 1 Introduction (non-normative)
 
