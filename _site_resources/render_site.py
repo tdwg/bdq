@@ -358,6 +358,7 @@ def render_page(
   {{SIDEBAR_CONTEXT}}
   <nav class="page-toc" aria-label="On this page">
     <h2>On this page</h2>
+    <p class="back-to-top">↑ <a href="#top"><strong>Back to top</strong></a></p>
     <ul id="toc-list">
 {{TOC_ITEMS}}
     </ul>
