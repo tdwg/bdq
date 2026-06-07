@@ -1091,14 +1091,14 @@ BDQ Test descriptions are intentionally independent of any particular software f
   * The outputs of a Test, that is **what** must be reported via `Response.status`, `Response.result`, and `Response.comment`.  
 
 * An execution framework has the responsibility to determine everything outside that API, including:
-    * How and from where to **load** the raw data.
-    * How to **bind** elements of the raw data onto the correct Test inputs, e.g., mapping a column in a CSV file to a particular `Information Element`,
-    * What execution mechanics and **workflow**, including paralellization, to follow.
-    * **Which** Tests to execute, e.g. by `Use Case` and `Policy`, 
-      * Determine the **order** of Test excution.
-    * **Invoke** the correct implementation for a given Test (e.g., by Label, GUID/Term Name, or versioned IRI) with the correct bound inputs.
-    * **Package** `Responses` into `Data Quality Reports` or pass them on to other downstream processes.
-    * **Present** the results to users.
+  * How and from where to **load** the raw data.
+  * How to **bind** elements of the raw data onto the correct Test inputs, e.g., mapping a column in a CSV file to a particular `Information Element`,
+  * What execution mechanics and **workflow**, including paralellization, to follow.
+  * **Which** Tests to execute, e.g. by `Use Case` and `Policy`, 
+    * Determine the **order** of Test excution.
+  * **Invoke** the correct implementation for a given Test (e.g., by Label, GUID/Term Name, or versioned IRI) with the correct bound inputs.
+  * **Package** `Responses` into `Data Quality Reports` or pass them on to other downstream processes.
+  * **Present** the results to users.
 
 #### 6.6.1 Linking raw input terms, Tests, and outputs in a workflow (non-normative)
 
