@@ -98,7 +98,7 @@ Draft Standard for Review
     - [6.1.2 Identifying non-default Parameter values in Response.comment (normative)](#612-identifying-non-default-parameter-values-in-responsecomment-normative)
     - [6.1.3 Expectations for Tests with Parameters (normative)](#613-expectations-for-tests-with-parameters-normative)
     - [6.1.4 Test departures from specifications (normative)](#614-test-departures-from-specifications-normative)
-    - [6.1.4 Further guidance on Parameters and Arguments (non-normative)](#614-further-guidance-on-parameters-and-arguments-non-normative)
+    - [6.1.5 Further guidance on Parameters and Arguments (non-normative)](#615-further-guidance-on-parameters-and-arguments-non-normative)
   - [6.2 Execution Process Agnostic (non-normative)](#62-execution-process-agnostic-non-normative)
   - [6.3 Considerations for Test Execution (normative)](#63-considerations-for-test-execution-normative)
   - [6.4 Order of Test Execution (normative)](#64-order-of-test-execution-normative)
@@ -294,7 +294,7 @@ Here is a MariaDB implementation of a lightweight version of [VALIDATION_KINGDOM
     WHERE 
          kingdom is null
          OR
-         length(trim(kingdom)) == 0
+         length(trim(kingdom)) = 0
     ;
 ```
 
@@ -676,9 +676,9 @@ An implementation of a Test that, by design, has a behavior that departs from th
 
 An implementation of a parameterized Test that only supports non-default `Parameter` values MUST be identified by different identifiers than the BDQ Test that supports the default `Parameter` values.  For example, an implementation of VALIDATION_LICENSE_STANDARD that does not support the default bdqval:sourceAuthority "Creative Commons 4.0 Licenses or CC0", but only supports a different source authority is not the same Test as VALIDATION_LICENSE_STANDARD, and must be identified by a different identifier.
 
-#### 6.1.4 Further guidance on Parameters and Arguments (non-normative)
+#### 6.1.5 Further guidance on Parameters and Arguments (non-normative)
 
-See also the [Test Parameters](../../guide/users/index.md#34-test-parameters-non-normative) section in the [User's Guide)](../../guide/users/index.md) for further guidance on `Parameters` and `Arguments`.
+See also the [Test Parameters](../../guide/users/index.md#34-test-parameters-non-normative) section in the [User's Guide](../../guide/users/index.md) for further guidance on `Parameters` and `Arguments`.
 
 ### 6.2 Execution Process Agnostic (non-normative)
 
@@ -988,7 +988,7 @@ Consider the `Validation` Test [VALIDATION_ENDDAYOFYEAR_INRANGE](../../terms/bdq
 
 An SQL query that implements the abstract concept of the `dwc:enddayofyear` being in range could take the following form, using available database fields that contain data related to the abstract `Information Element`, but are not precisely mapped to the concrete `Acted Upon` and `Consulted` [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) in the specification. This query produces a `Data Quality Report` with: 
 
-```sql
+```postgresql
     SELECT collecting_event_id, enddayofyear,
          'VALIDATION_ENDDAYOFYEAR_INRANGE' as test, 'NOT_COMPLIANT' as response_result, 'RUN_HAS_RESULT' as response_status, 
          'The value of enddayofyear [' || enddayofyear ||'] is not an integer between 1 and 365 inclusive, or 366 if ended_date falls in a leap year.' as response_comment
@@ -1002,7 +1002,7 @@ An SQL query that implements the abstract concept of the `dwc:enddayofyear` bein
                  ( 
                    MOD(EXTRACT (year from TO_DATE(ended_date, 'yyyy-mm-dd')),4) = 0
                    AND
-                   MOD(EXTRACT (year from TO_DATE(ended_date, 'yyyy-mm-dd')),100) != 0
+                   MOD(EXTRACT (year from TO_DATE(ended_date, 'yyyy-mm-dd')),100) <> 0
                  )
                  OR
                  MOD(EXTRACT (year from TO_DATE(ended_date, 'yyyy-mm-dd')),400) = 0
@@ -1023,9 +1023,9 @@ INTERNAL_PREREQUISITES_NOT_MET if dwc:day is EMPTY; COMPLIANT if the value of th
 
 Given a hypothetical Event table with fields including a primary key `event_id` and an integer field `day`, an implementation of VALIDATION_DAY_STANDARD in SQL that operates on data in the aggregate might look like:
 
-```sql
+```postgresql
     SELECT
-        ‘VALIDATION_DAY_STANDARD’ as test name, 
+        ‘VALIDATION_DAY_STANDARD’ as test_name, 
         event_id,
         ‘INTERNAL_PREREQUISITES_NOT_MET’ as Result_status, 
         null as Result_value,
@@ -1034,7 +1034,7 @@ Given a hypothetical Event table with fields including a primary key `event_id` 
         WHERE day is null
     UNION 
     SELECT
-        ‘VALIDATION_DAY_STANDARD’ as test name, 
+        ‘VALIDATION_DAY_STANDARD’ as test_name, 
         event_id,
         ‘RUN_HAS_RESULT’ as Result_status, 
         ‘COMPLIANT’ as Result_value,
@@ -1043,7 +1043,7 @@ Given a hypothetical Event table with fields including a primary key `event_id` 
         WHERE day >=1 and day <=31
     UNION 
     SELECT
-        ‘VALIDATION_DAY_STANDARD’ as test name, 
+        ‘VALIDATION_DAY_STANDARD’ as test_name, 
         event_id,
         ‘RUN_HAS_RESULT’ as Result_status, 
         ‘NOT COMPLIANT’ as Result_value,
@@ -1199,14 +1199,14 @@ BDQ Test descriptions are intentionally independent of any particular software f
   * The outputs of a Test, that is **what** must be reported via `Response.status`, `Response.result`, and `Response.comment`.  
 
 * An execution framework has the responsibility to determine everything outside that API, including:
-    * How and from where to **load** the raw data.
-    * How to **bind** elements of the raw data onto the correct Test inputs, e.g., mapping a column in a CSV file to a particular `Information Element`,
-    * What execution mechanics and **workflow**, including paralellization, to follow.
-    * **Which** Tests to execute, e.g. by `Use Case` and `Policy`, 
-      * Determine the **order** of Test excution.
-    * **Invoke** the correct implementation for a given Test (e.g., by Label, GUID/Term Name, or versioned IRI) with the correct bound inputs.
-    * **Package** `Responses` into `Data Quality Reports` or pass them on to other downstream processes.
-    * **Present** the results to users.
+  * How and from where to **load** the raw data.
+  * How to **bind** elements of the raw data onto the correct Test inputs, e.g., mapping a column in a CSV file to a particular `Information Element`,
+  * What execution mechanics and **workflow**, including paralellization, to follow.
+  * **Which** Tests to execute, e.g. by `Use Case` and `Policy`, 
+    * Determine the **order** of Test excution.
+  * **Invoke** the correct implementation for a given Test (e.g., by Label, GUID/Term Name, or versioned IRI) with the correct bound inputs.
+  * **Package** `Responses` into `Data Quality Reports` or pass them on to other downstream processes.
+  * **Present** the results to users.
 
 #### 6.6.1 Linking raw input terms, Tests, and outputs in a workflow (non-normative)
 
@@ -1456,7 +1456,7 @@ The header for the data in the Test Conformance Testing Data files includes a co
 | GUID | The machine readable identifier for the Test being evaluated (the Term Name (rdf:value) for the Test), e.g., 69b2efdc-6269-45a4-aecb-4cb99c2ae134. |
 | Test Type | The type of the Test (i.e., `Validation`, `Issue`, `Amendment` or `Measure`. |
 | Label | The second two components of the full English Test label, for example 'COUNTRYCODE_STANDARD' (`concat(upper(Test Type),"\_",Label)` to get the Test rdfs:label.) |
-| Data Dimension | Does the Test apply to data that is essentially [NAME](../../../index.md#6-glossary-non-normative), [SPACE](../../../index.md#6-glossary-non-normative), [TIME](../../../index.md#6-glossary-non-normative) or [OTHER](../../../index.md#6-glossary-non-normative)? |
+| Data Dimension | Does the Test apply to data that is essentially [NAME](../../../index.md#glossary_NAME), [SPACE](../../../index.md#glossary_SPACE), [TIME](../../../index.md#glossary_TIME) or [OTHER](../../../index.md#glossary_OTHER)? |
 | dataID | A local to the Test Conformance Testing Data unique integer to identify each Test Conformance Testing Data record. | 
 | LineForTest | An local identifier for Test records within one Test. This is present for maintaining the sort order within a Test, and with two special cases: "88" when Input.data contains a NULL character and "99" when Input.data contains non-printing characters (both managed in a separate file). | 
 | Input.data | Data for the Information Elements that are required by the Specification for unambiguous running of the Test, (e.g., for [VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT](../../terms/bdqtest/index.md#VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT), dwc:country="México", dwc:countryCode="MX"). |
