@@ -70,7 +70,7 @@ Draft Standard for Review
     - [2.3.3 The Concept of "interpreted as" (normative)](#233-the-concept-of-interpreted-as-normative)
     - [2.3.4 Handling Leading and Trailing Whitespace (normative)](#234-handling-leading-and-trailing-whitespace-normative)
   - [2.4 Matching to controlled vocabularies (normative)](#24-matching-to-controlled-vocabularies-normative)
-  - [2.4.1 Matching to controlled vocabularies rationale (non-normative)](#241-matching-to-controlled-vocabularies-rationale-non-normative)
+    - [2.4.1 Matching to controlled vocabularies rationale (non-normative)](#241-matching-to-controlled-vocabularies-rationale-non-normative)
 
 - [3 Compliant Implementation (normative)](#3-compliant-implementation-normative)
   - [3.1 Compliance depends on Use Case (normative)](#31-compliance-depends-on-use-case-normative)
@@ -86,10 +86,10 @@ Draft Standard for Review
 
 - [5 Responses from Tests (normative)](#5-responses-from-tests-normative)
   - [5.1 The Response Object (normative)](#51-the-response-object-normative)
-  - [5.1.1 Amendment Test Responses (normative)](#511-amendment-test-responses-normative)
-  - [5.1.2 Response Serialization and Presentation (normative)](#512-response-serialization-and-presentation-normative)
-  - [5.1.3 Further Guidance on Responses (non-normative)](#513-further-guidance-on-responses-non-normative)
-  - [5.1.4 Results from Measures (normative)](#514-results-from-measures-normative)
+    - [5.1.1 Amendment Test Responses (normative)](#511-amendment-test-responses-normative)
+    - [5.1.2 Response Serialization and Presentation (normative)](#512-response-serialization-and-presentation-normative)
+    - [5.1.3 Further Guidance on Responses (non-normative)](#513-further-guidance-on-responses-non-normative)
+    - [5.1.4 Results from Measures (normative)](#514-results-from-measures-normative)
   - [5.2 Framework Elements Not Included in BDQ Test Descriptions (normative)](#52-framework-elements-not-included-in-bdq-test-descriptions-normative)
 
 - [6 Guidelines for Implementers (normative)](#6-guidelines-for-implementers-normative)
@@ -182,8 +182,8 @@ The set of information most relevant to implementers of Biodiversity Data Qualit
 - [**BDQ Tests Quick Reference Guide**](../../terms/bdqtest/index.md) - Provides a concise, easy-to-read reference about the BDQ Tests.
 - [**BDQ User's Guide**](../users/index.md) - For anyone interested in how to use the BDQ Tests in practice.
 - [**BDQ Supplemental Information**](../../supplement/index.md) - Background and developmental notes for practitioners who evaluate and improve the quality of biodiversity data. Includes material not covered elsewhere in the BDQ standard.
-- [**Current Single Record Tests**](../../../dist/bdqtest_singlerecord_tests_current.csv) - Convenient list of BDQ `Single Record` Tests.
-- [**Current Multi Record Tests**](../../../dist/bdqtest_multirecord_tests_current.csv) - Convenient list of BDQ `Multi Record` Tests.
+- [**Current Single Record Tests as csv**](../../../dist/bdqtest_singlerecord_tests_current.csv) - Convenient list of BDQ `Single Record` Tests in a csv file.
+- [**Current Multi Record Tests as csv**](../../../dist/bdqtest_multirecord_tests_current.csv) - Convenient list of BDQ `Multi Record` Tests in a csv file.
 - [**Tutorial: From Use Case to Test**](../../tutorial/index.md) - Worked out examples of defining new `Use Cases` and new Tests.
 
 ### 1.4 Status of the Content of this Document (normative)
@@ -521,7 +521,7 @@ When a Test specification requires matching to a controlled vocabulary, the expe
 
 Implementations MUST respect the behavior specified in this note, for the data as it is presented to the Test API for a Test implementation.
 
-### 2.4.1 Matching to controlled vocabularies rationale (non-normative)
+#### 2.4.1 Matching to controlled vocabularies rationale (non-normative)
 
 It is possible that implementations and transport frameworks may, outside of Tests, and outside of the control of Test implementations, remove leading and trailing whitespace from data elements.  Because such behavior is outside of the control of the Test implementation, this exact matching behavior including whitespace is only included in the notes and not as part of the `hasExpectedResponse` for the Tests.
 
@@ -593,7 +593,7 @@ The `Response` MUST include the following three components:
 
 3. The `Response.comment` supplies human-readable text describing reasons for the Test result.
 
-### 5.1.1 Amendment Test Responses (normative)
+#### 5.1.1 Amendment Test Responses (normative)
 
 An `Amendment` Test may propose a change to a value found in an existing Darwin Core (Wieczorek et al. 2012), or a set of [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021), including potentially filling in a missing value. `Amendment` Tests are intended to improve one or more components of the quality of the record. The `Response.result` from an `Amendment` Test MUST always be treated as a proposal for a change, and MUST NOT be blindly applied to a database of record when a `Data Quality Report` is used for Quality Control of an existing record. Consumers of Data Quality Reports under Quality Assurance uses MAY choose to accept all proposed `Amendments` as part of a pipeline in preparing data for an analysis. The Framework also supports changes to procedures but we have not framed any such Tests in this form.
 
@@ -601,19 +601,19 @@ An `Amendment` Test `Response.result` SHOULD consist of a set of key:value pairs
 
 Under the Fitness For Use Framework, `Amendment` Tests may propose changes to processes as well as data.  BDQ prescribes no structure for the `Response.result` of an `Amendment` Test that proposes changes to processes.  Implementers MAY develop their own structures and serializations for the `Response.result` of `Amendment` Tests that propose changes to processes.
 
-### 5.1.2 Response Serialization and Presentation (normative)
+#### 5.1.2 Response Serialization and Presentation (normative)
 
 Nothing in this section should be taken as a requirement for a particular format or serialization of `bdqffdq:Responses`. Implementations MAY serialize `Responses` in any appropriate form for their needs.
 
 Nothing in this document should be taken as a requirement for how `bdqffdq:Responses` are to be presented to consumers of `Data Quality Reports`. Implementations MAY present the results of Tests in any form appropriate for their consumers.
 
-### 5.1.3 Further Guidance on Responses (non-normative)
+#### 5.1.3 Further Guidance on Responses (non-normative)
 
 See [4.1 Structure of a Response (normative)](../../guide/bdqtest/index.md#41-structure-of-response-normative) in [BDQ Tests: Concepts and Use](../../guide/bdqtest/index.md) for further normative guidance on representing `Responses` as RDF or in data structures.
 
 See [Definitions for Named Individuals](../../list/bdqffdq/index.md#complete) in the `bdqffdq:` ontology for formal definitions of the named individuals that are used as values (e.g. COMPLIANT, NOT_COMPLIANT, RUN_HAS_RESULT) for `Response.status` and `Response.result` in the expected responses of Test specifications.
 
-### 5.1.4 Results from Measures (normative)
+#### 5.1.4 Results from Measures (normative)
 
 Measure Tests that return numeric values MUST return a single numeric value in `Response.result`. The value MAY be zero, a positive or negative integer, or a real number. Implementers SHOULD be mindful of interoperability issues when numbers are serialized or exchanged across programming languages, runtimes, or storage systems (for example, loss of integer precision, floating-point rounding differences, and handling of non-finite values such as NaN or ±Infinity).
 

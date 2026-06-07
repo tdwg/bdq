@@ -400,7 +400,7 @@ TEMPLATE = '''<!DOCTYPE html>
     </div>
 
     <div class="filter-group">
-        <label class="filter-label" for="ie-filter">Filter by Information Element Acted Upon</label>
+        <label class="filter-label" for="ie-filter">Filter by Information Elements Acted Upon</label>
         <select id="ie-filter" class="filter-select filter-select-multi"
                 multiple onchange="applyFilters()">
             ###IE_OPTIONS###

@@ -316,7 +316,7 @@ This standard is comprised of the following documents and artifacts:
 
 The Quick Reference Guide is a simple, informative reference and the first place to look for the most commonly used information about the Tests.
 
-[**BDQ Tests Quick Reference Guide**](docs/terms/bdqtest/index.md)
+- [**BDQ Tests Quick Reference Guide**](docs/terms/bdqtest/index.md)
 
 ### 3.2 Guides (non-normative)
 
