@@ -421,34 +421,42 @@ text = text + "\n"
 text = text + "### 3.1 Alphabetical Index of classes (non-normative)\n\n"
 sparql = prefixes + "SELECT ?subject WHERE {  ?subject a owl:Class . } "
 queryResult = graph.query(sparql)
+separator = ""
 for r in queryResult : 
 	term = r.subject
 	term = term.replace("https://rs.tdwg.org/bdqffdq/terms/","")
-	text = text + "[{}](#{})\n".format(term,term)
+	text = text + separator + "[{}](#{})\n".format(term,term)
+	separator = " | "
 
 text = text + "### 3.2 Alphabetical Index of object properties (non-normative)\n\n"
 sparql = prefixes + "SELECT ?subject WHERE {  ?subject a owl:ObjectProperty . } "
 queryResult = graph.query(sparql)
+separator = ""
 for r in queryResult : 
 	term = r.subject
 	term = term.replace("https://rs.tdwg.org/bdqffdq/terms/","")
-	text = text + "[{}](#{})\n".format(term,term)
+	text = text + separator + "[{}](#{})\n".format(term,term)
+	separator = " | "
 
 text = text + "### 3.3 Alphabetical Index of data properties (non-normative)\n\n"
 sparql = prefixes + "SELECT ?subject WHERE {  ?subject a owl:DatatypeProperty . } "
 queryResult = graph.query(sparql)
+separator = ""
 for r in queryResult : 
 	term = r.subject
 	term = term.replace("https://rs.tdwg.org/bdqffdq/terms/","")
-	text = text + "[{}](#{})\n".format(term,term)
+	text = text + separator + "[{}](#{})\n".format(term,term)
+	separator = " | "
 
 text = text + "### 3.4 Alphabetical Index of named individuals (non-normative)\n\n"
 sparql = prefixes + "SELECT ?subject WHERE {  ?subject a owl:NamedIndividual . } "
 queryResult = graph.query(sparql)
+separator = ""
 for r in queryResult : 
 	term = r.subject
 	term = term.replace("https://rs.tdwg.org/bdqffdq/terms/","")
-	text = text + "[{}](#{})\n".format(term,term)
+	text = text + separator + "[{}](#{})\n".format(term,term)
+	separator = " | "
 
 text = text + "\n## 4 Vocabulary (normative)\n"
 text = text + "\n### 4.1 Class terms (normative)\n"

@@ -294,46 +294,54 @@ for templatePath, document in directories.items() :
 		disjoint_map = build_disjoint_map(graph, prefixes)
 
 		indextext = "\n"
-		indextext = indextext + "- [Classes](#51-class-terms-normative)\n"
-		indextext = indextext + "- [Object Properties](#52-objectproperty-terms-normative)\n"
-		indextext = indextext + "- [Data Properties](#53-dataproperty-terms-normative)\n"
-		indextext = indextext + "- [Named Individuals](#54-namedindividual-terms-normative)\n"
+		indextext = indextext + "- [Classes](#51-alphabetical-index-of-classes-non-normative)\n"
+		indextext = indextext + "- [Object Properties](#52-alphabetical-index-of-object-properties-non-normative)\n"
+		indextext = indextext + "- [Data Properties](#53-alphabetical-index-of-data-properties-non-normative)\n"
+		indextext = indextext + "- [Named Individuals](#54-alphabetical-index-of-named-individuals-non-normative)\n"
 		indextext = indextext + "\n"
 		
 		indextext = indextext + "### 5.1 Alphabetical Index of classes (non-normative)\n\n"
 		sparql = prefixes + "SELECT ?subject WHERE {  ?subject a owl:Class . } "
 		queryResult = graph.query(sparql)
+		separator = ""
 		for r in queryResult : 
 			term = r.subject
 			term = term.replace("https://rs.tdwg.org/bdqffdq/terms/","")
-			indextext = indextext + "[{}](#{})\n".format(term,term)
+			indextext = indextext + separator + "[{}](#{})\n".format(term,term)
+			separator = " | "
 		
 		indextext = indextext + "\n"
 		indextext = indextext + "### 5.2 Alphabetical Index of object properties (non-normative)\n\n"
 		sparql = prefixes + "SELECT ?subject WHERE {  ?subject a owl:ObjectProperty . } "
 		queryResult = graph.query(sparql)
+		separator = ""
 		for r in queryResult : 
 			term = r.subject
 			term = term.replace("https://rs.tdwg.org/bdqffdq/terms/","")
-			indextext = indextext + "[{}](#{})\n".format(term,term)
+			indextext = indextext + separator + "[{}](#{})\n".format(term,term)
+			separator = " | "
 		
 		indextext = indextext + "\n"
 		indextext = indextext + "### 5.3 Alphabetical Index of data properties (non-normative)\n\n"
 		sparql = prefixes + "SELECT ?subject WHERE {  ?subject a owl:DatatypeProperty . } "
 		queryResult = graph.query(sparql)
+		separator = ""
 		for r in queryResult : 
 			term = r.subject
 			term = term.replace("https://rs.tdwg.org/bdqffdq/terms/","")
-			indextext = indextext + "[{}](#{})\n".format(term,term)
+			indextext = indextext + separator + "[{}](#{})\n".format(term,term)
+			separator = " | "
 		
 		indextext = indextext + "\n"
 		indextext = indextext + "### 5.4 Alphabetical Index of named individuals (non-normative)\n\n"
 		sparql = prefixes + "SELECT ?subject WHERE {  ?subject a owl:NamedIndividual . } "
 		queryResult = graph.query(sparql)
+		separator = ""
 		for r in queryResult : 
 			term = r.subject
 			term = term.replace("https://rs.tdwg.org/bdqffdq/terms/","")
-			indextext = indextext + "[{}](#{})\n".format(term,term)
+			indextext = indextext + separator + "[{}](#{})\n".format(term,term)
+			separator = " | "
 		
 		# put index text into header.
 		header = header.replace('{term_index}','\n{}\n'.format(indextext))
