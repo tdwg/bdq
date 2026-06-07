@@ -637,7 +637,7 @@ For `dwc:eventDate`:
 | 4 | [AMENDMENT_EVENTDATE_STANDARDIZED](../../terms/bdqtest/index.md#AMENDMENT_EVENTDATE_STANDARDIZED) |
 | 5 | [AMENDMENT_EVENT_FROM_EVENTDATE](../../terms/bdqtest/index.md#AMENDMENT_EVENT_FROM_EVENTDATE)
 
-See [Diagram of the TIME-oriented Tests and Information Elements Acted Upon (non-normative)](../../supplement/index.md#5213-diagram-of-the-time-oriented-tests-and-information-elements-acted-upon-non-normative) in [BDQ Supplemental Information](../../supplement/index.md)for the relationships between the Tests and associated `Information Elements` `Acted Upon` that operate on aspects of date and time (Darwin Core class `dwc:Event`). 
+See [Diagram of the TIME-oriented Tests and Information Elements Acted Upon (non-normative)](../../supplement/index.md#5213-diagram-of-the-time-oriented-tests-and-information-elements-acted-upon-non-normative) in [BDQ Supplemental Information](../../supplement/index.md) for the relationships between the Tests and associated `Information Elements` `Acted Upon` that operate on aspects of date and time (Darwin Core class `dwc:Event`). 
 
 Similarly, for `dwc:taxonID`:
 
