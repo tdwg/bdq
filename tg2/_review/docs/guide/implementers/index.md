@@ -1031,25 +1031,25 @@ Given a hypothetical Event table with fields including a primary key `event_id` 
         null as Result_value,
         ‘No value for dwc:day to evaluate’ as Result_comment 
     FROM event
-        WHERE "day" is null
+        WHERE day is null
     UNION 
     SELECT
         ‘VALIDATION_DAY_STANDARD’ as test_name, 
         event_id,
         ‘RUN_HAS_RESULT’ as Result_status, 
         ‘COMPLIANT’ as Result_value,
-        ‘Value of dwc:day [‘|| "day" ||’] is in the range 1-31’ as Result_comment 
+        ‘Value of dwc:day [‘|| day ||’] is in the range 1-31’ as Result_comment 
     FROM event
-        WHERE "day" >=1 and "day" <=31
+        WHERE day >=1 and day <=31
     UNION 
     SELECT
         ‘VALIDATION_DAY_STANDARD’ as test_name, 
         event_id,
         ‘RUN_HAS_RESULT’ as Result_status, 
         ‘NOT COMPLIANT’ as Result_value,
-        ‘Value of dwc:day [‘|| "day" ||’] is outside the range 1-31’ as Result_comment 
+        ‘Value of dwc:day [‘|| day ||’] is outside the range 1-31’ as Result_comment 
     FROM event
-        WHERE "day" < 1 or "day" > 31
+        WHERE day < 1 or day > 31
 ```
 
 This implementation is dependent on the schema the data are stored in, in particular, the definition of `event.day` as a field holding integers.
