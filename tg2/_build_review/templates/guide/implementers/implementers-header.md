@@ -568,9 +568,9 @@ An implementation of a Test that, by design, has a behavior that departs from th
 
 An implementation of a parameterized Test that only supports non-default `Parameter` values MUST be identified by different identifiers than the BDQ Test that supports the default `Parameter` values.  For example, an implementation of VALIDATION_LICENSE_STANDARD that does not support the default bdqval:sourceAuthority "Creative Commons 4.0 Licenses or CC0", but only supports a different source authority is not the same Test as VALIDATION_LICENSE_STANDARD, and must be identified by a different identifier.
 
-#### 6.1.4 Further guidance on Parameters and Arguments (non-normative)
+#### 6.1.5 Further guidance on Parameters and Arguments (non-normative)
 
-See also the [Test Parameters](../../guide/users/index.md#34-test-parameters-non-normative) section in the [User's Guide)](../../guide/users/index.md) for further guidance on `Parameters` and `Arguments`.
+See also the [Test Parameters](../../guide/users/index.md#34-test-parameters-non-normative) section in the [User's Guide](../../guide/users/index.md) for further guidance on `Parameters` and `Arguments`.
 
 ### 6.2 Execution Process Agnostic (non-normative)
 
