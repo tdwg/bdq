@@ -397,7 +397,7 @@ The above is intended only as a simple exploration of how some of the core conce
 
 #### 2.7.3 The W3C Data Quality Vocabulary (non-normative)
 
-The W3C [Data Quality Vocabulary](https://www.w3.org/TR/vocab-dq/) (DQV) (Albertoni and Isaac, 2016; Albertoni and Isaac 2020) provides a metadata model for describing data quality information in RDF. DQV defines (and reuses) a set of classes and properties for representing the quality of datasets and their distributions. DQV is deliberately designed as a high-level, cross-domain interoperable vocabulary. DQV representations of metrics and dimensions can be used to report on data quality, where quality is understood to depend on the needs of the data consumer.
+The W3C [Data Quality Vocabulary](https://www.w3.org/TR/vocab-dqv/) (DQV) (Albertoni and Isaac, 2016; Albertoni and Isaac 2020) provides a metadata model for describing data quality information in RDF. DQV defines (and reuses) a set of classes and properties for representing the quality of datasets and their distributions. DQV is deliberately designed as a high-level, cross-domain interoperable vocabulary. DQV representations of metrics and dimensions can be used to report on data quality, where quality is understood to depend on the needs of the data consumer.
 
 The W3C Data Quality Vocabulary can be used in conjunction with the `bdqffdq:` and `bdqtest:` vocabularies to provide metadata describing the quality of some `bdqffdq:DataResource` as asserted in a `bdqffdq:DataQualityReport`.
 
