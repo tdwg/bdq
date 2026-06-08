@@ -508,7 +508,11 @@ def link_glossary_first_plain_text_per_file(
 
         href_rel = rel_href(from_file, landing_md) + f"#{gt.anchor}"
         replacement = f'[{gt.term}](<{href_rel}> "{gt.definition}")'
-        masked = masked[: m.start(1)] + replacement + masked[m.end(1) :]
+        # Mask the newly-added link so subsequent iterations cannot match
+        # terms inside its title/tooltip text, which would create nested links.
+        link_spans.append(replacement)
+        placeholder = f"@@LINK{len(link_spans)-1}@@"
+        masked = masked[: m.start(1)] + placeholder + masked[m.end(1) :]
 
         seen.add(key)
 

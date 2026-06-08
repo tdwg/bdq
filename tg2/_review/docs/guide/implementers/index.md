@@ -1512,7 +1512,7 @@ The `Response` when executed against a row as input is expected to contain "Resp
 
 Parameter values are specified in a `bdqval:sourceAuthority` column, when more than one `sourceAuthority` is involved, then these are given separate names.
 
-[Dublin Core](<../../../index.md#glossary_Dublin_Core> "International Metadata Standard [DCMI](<../../../index.md#glossary_DCMI> "DCMI Metadata Terms. Dublin Core. Hosts dc:Namespace dc:").") and Darwin Core term input columns are specified with the appropriate namespace abbreviation prepended (e.g., `dc:type`, `dcterms:license`, `dwc:acceptedNameUsageID`).
+[Dublin Core](<../../../index.md#glossary_Dublin_Core> "International Metadata Standard DCMI.") and Darwin Core term input columns are specified with the appropriate namespace abbreviation prepended (e.g., `dc:type`, `dcterms:license`, `dwc:acceptedNameUsageID`).
 
 ### 8.5 Implementation and the Conformance Testing Data (normative)
 
