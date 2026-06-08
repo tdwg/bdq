@@ -40,6 +40,7 @@ TEMPLATE = '''<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>###PAGE_TITLE###</title>
     <link rel="stylesheet" href="/assets/css/pygments.css">
     <link rel="stylesheet" href="/assets/css/site.css">
@@ -57,6 +58,16 @@ TEMPLATE = '''<!DOCTYPE html>
             --bdq-text:      #24292f;
         }
 
+        /* ── Skip navigation link (visually hidden until focused) ────────── */
+        .skip-link {
+            position: absolute; top: -100%; left: 0;
+            background: var(--bdq-brand); color: #fff;
+            padding: 8px 16px; z-index: 9999;
+            text-decoration: none; font-weight: bold;
+            border-radius: 0 0 4px 0;
+        }
+        .skip-link:focus { top: 0; }
+
         html { scroll-behavior: smooth; }
 
         body {
@@ -70,6 +81,14 @@ TEMPLATE = '''<!DOCTYPE html>
         }
 
         a { color: var(--bdq-link); }
+
+        /* ── Inline link-styled button (used in no-results message) ──────── */
+        .link-button {
+            background: none; border: none; padding: 0;
+            color: var(--bdq-link); cursor: pointer;
+            font: inherit; text-decoration: underline;
+        }
+        .link-button:hover { text-decoration: none; }
 
         /* ── Page-header fallback (canonical source: site.css) ───────────── */
         .page-header {
@@ -116,7 +135,7 @@ TEMPLATE = '''<!DOCTYPE html>
         }
         .class-header-wrapper h2 { border: none; padding-bottom: 0; margin-top: 0; }
 
-        /* ── CHANGE 3: Compact header content ───────────────────────────────
+        /* ── Compact header content ──────────────────────────────────────────
            All rules scoped to .qrg-header-content so they only affect the
            intro block generated from the markdown template.  Goals: smaller
            type, tighter vertical rhythm, so the intro feels like a
@@ -162,13 +181,16 @@ TEMPLATE = '''<!DOCTYPE html>
             margin: 0.05rem 0;
         }
 
-        /* ── CHANGE 1+3: "The Tests" heading ────────────────────────────────
+        /* ── "The Tests" heading ─────────────────────────────────────────────
            Visually marks the start of the test content.
            Font size is slightly smaller than a full main h2 to match the
            compact header style above it.
            scroll-margin-top gives a small gap above the heading when
            applyFilters() scrolls to it, preventing the heading from
-           sitting flush against the top of the viewport.             */
+           sitting flush against the top of the viewport.
+           tabindex="-1" (on the element in HTML) allows applyFilters() to
+           move keyboard focus here programmatically without placing the
+           heading in the natural tab order.                             */
         h2.the-tests-heading {
             font-size: 1.2rem;
             margin-top: 0.8rem;
@@ -241,12 +263,31 @@ TEMPLATE = '''<!DOCTYPE html>
         #type-filters input, #category-filters input {
             margin-right: 4px; cursor: pointer;
         }
+        /* Two-column layout for the four short category values
+           (TIME, SPACE, NAME, OTHER); test-type labels are longer
+           and remain single-column.                               */
+        #category-filters {
+            columns: 2;
+        }
         .filter-select {
             width: 100%; font-size: 0.79em; padding: 3px 4px;
             border: 1px solid var(--bdq-border); border-radius: 3px;
             box-sizing: border-box;
         }
-        .filter-select-multi { height: 130px; padding: 2px; }
+        /* IE checkbox list replaces the native multi-select for better
+           accessibility and touch-device usability; max-height matches the
+           visual footprint of the former multi-select control.            */
+        .ie-checkbox-list {
+            max-height: 130px; overflow-y: auto;
+            border: 1px solid var(--bdq-border);
+            border-radius: 3px; padding: 4px; background: #fff;
+        }
+        .ie-checkbox-list label {
+            display: block; font-size: 0.8em; margin: 3px 0; cursor: pointer;
+            white-space: nowrap;   /* keep checkbox and text on one line */
+            overflow-x: hidden;   /* clip text that exceeds container width */
+        }
+        .ie-checkbox-list input { margin-right: 4px; cursor: pointer; }
         .filter-hint {
             display: block; font-size: 0.72em; color: var(--bdq-muted);
             font-style: italic; margin-top: 2px;
@@ -272,7 +313,7 @@ TEMPLATE = '''<!DOCTYPE html>
             display: block; margin-top: 5px; font-style: italic;
         }
 
-        /* CHANGE 1: noscript fallback message — hidden by default (JS present).
+        /* Noscript fallback message — hidden by default (JS present).
            The <noscript><style> block below reveals it when JS is off.      */
         .noscript-filter-msg {
             display: none;
@@ -285,6 +326,29 @@ TEMPLATE = '''<!DOCTYPE html>
         }
         .noscript-filter-msg p { margin: 0 0 5px 0; }
         .noscript-filter-msg p:last-child { margin-bottom: 0; }
+
+        /* ── Explicit focus-visible styles for keyboard navigation ───────── */
+        .jump-link:focus-visible,
+        nav.field-index a.field-box:focus-visible {
+            outline: 2px solid var(--bdq-brand); outline-offset: 2px;
+        }
+        .sidebar-context-links a:focus-visible,
+        .back-to-top a:focus-visible,
+        .link-button:focus-visible {
+            outline: 2px solid var(--bdq-brand);
+            outline-offset: 2px; border-radius: 2px;
+        }
+        #clear-filters:focus-visible {
+            outline: 3px solid #fff; outline-offset: 2px;
+        }
+        .filter-select:focus-visible {
+            outline: 2px solid var(--bdq-brand); outline-offset: 2px;
+        }
+        #ie-filters input:focus-visible,
+        #category-filters input:focus-visible,
+        #type-filters input:focus-visible {
+            outline: 2px solid var(--bdq-brand); outline-offset: 2px;
+        }
 
         /* ── Main content ─────────────────────────────────────────────────── */
         .category-section { margin-bottom: 8px; }
@@ -318,11 +382,16 @@ TEMPLATE = '''<!DOCTYPE html>
         }
 
         table.term-table { width: 100%; border-collapse: collapse; margin-top: 10px; }
-        table.term-table td {
+        /* th and td share base cell styles; text-align: left overrides the
+           browser default centre-alignment for th elements.               */
+        table.term-table td,
+        table.term-table th {
             vertical-align: top; padding: 4px;
             border-top: 1px solid var(--bdq-border);
+            text-align: left;
         }
-        table.term-table td.label {
+        table.term-table td.label,
+        table.term-table th.label {
             width: 25%; font-weight: bold; color: var(--bdq-brand);
         }
 
@@ -342,6 +411,12 @@ TEMPLATE = '''<!DOCTYPE html>
             border-top: 2px solid var(--bdq-border);
         }
 
+        /* ── Reduced motion preference ───────────────────────────────────── */
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            #clear-filters { transition: none; }
+        }
+
         /* ── Responsive ──────────────────────────────────────────────────── */
         @media (max-width: 768px) {
             aside.nav-menu {
@@ -350,14 +425,16 @@ TEMPLATE = '''<!DOCTYPE html>
                 overflow-y: visible; z-index: auto;
             }
             .content-wrapper { margin-left: 0; }
+            /* Reset left offset as well as width so the full-bleed strips
+               do not overflow the right edge on mobile viewports.        */
             .field-header-wrapper,
-            .class-header-wrapper { width: 100vw; }
+            .class-header-wrapper { width: 100vw; left: 0; }
             .site-logo  { width: 120px; height: 50px; }
             .project-name { font-size: 1.5rem; }
         }
     </style>
 
-    <!-- CHANGE 2: when JS is disabled, hide the filter panel and reveal the
+    <!-- When JS is disabled, hide the filter panel and reveal the
          noscript message.  Placed after </style> so it wins the cascade.   -->
     <noscript>
         <style>
@@ -368,8 +445,12 @@ TEMPLATE = '''<!DOCTYPE html>
 </head>
 <body>
 
+<!-- Skip navigation link: first focusable element on the page, revealed
+     on keyboard focus so sighted keyboard users can bypass the sidebar.  -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
 <!-- ── Fixed left sidebar ──────────────────────────────────────────────────── -->
-<aside class="nav-menu">
+<aside class="nav-menu" aria-label="Page navigation and filters">
 
     <h2>BDQ Standard</h2>
     <ul class="sidebar-context-links">
@@ -393,15 +474,20 @@ TEMPLATE = '''<!DOCTYPE html>
         class="jump-link" href="#Validation">Validation</a>
     </div>
 
-    <!-- CHANGE 3: filter controls wrapped in .js-filter-panel so the
+    <!-- Filter controls wrapped in .js-filter-panel so the
          <noscript><style> above can hide them all in one rule.            -->
     <div class="js-filter-panel">
 
-    <div class="filters-active-msg" id="filters-active-msg">&#9888; Filters active</div>
+    <!-- role="status" aria-live="polite" announces filter-active state
+         changes to screen readers.                                        -->
+    <div class="filters-active-msg" id="filters-active-msg"
+         role="status" aria-live="polite">&#9888; Filters active</div>
 
+    <!-- role="group" aria-labelledby associates the visible label with the
+         checkbox group for screen readers, equivalent to fieldset/legend. -->
     <div class="filter-group">
-        <span class="filter-label">Filter by Category</span>
-        <div id="category-filters">
+        <span class="filter-label" id="category-filter-label">Filter by Category</span>
+        <div id="category-filters" role="group" aria-labelledby="category-filter-label">
             <label><input type="checkbox" name="category" value="TIME"  onchange="applyFilters()"> TIME</label>
             <label><input type="checkbox" name="category" value="SPACE" onchange="applyFilters()"> SPACE</label>
             <label><input type="checkbox" name="category" value="NAME"  onchange="applyFilters()"> NAME</label>
@@ -410,8 +496,8 @@ TEMPLATE = '''<!DOCTYPE html>
     </div>
 
     <div class="filter-group">
-        <span class="filter-label">Filter by Test Type</span>
-        <div id="type-filters">
+        <span class="filter-label" id="type-filter-label">Filter by Test Type</span>
+        <div id="type-filters" role="group" aria-labelledby="type-filter-label">
             <label><input type="checkbox" name="type" value="Amendment"  onchange="applyFilters()"> Amendment</label>
             <label><input type="checkbox" name="type" value="Issue"      onchange="applyFilters()"> Issue</label>
             <label><input type="checkbox" name="type" value="Measure"    onchange="applyFilters()"> Measure</label>
@@ -428,23 +514,27 @@ TEMPLATE = '''<!DOCTYPE html>
     </div>
 
     <div class="filter-group">
-        <label class="filter-label" for="ie-filter">Filter by Information Elements Acted Upon</label>
-        <select id="ie-filter" class="filter-select filter-select-multi"
-                multiple onchange="applyFilters()">
+        <!-- Scrollable checkbox list replaces the native multi-select for
+             better accessibility and touch-device usability; role="group"
+             with aria-labelledby provides the same semantic grouping that
+             a <fieldset>/<legend> would supply.                          -->
+        <span class="filter-label" id="ie-filter-label">Filter by Information Elements Acted Upon</span>
+        <div id="ie-filters" class="ie-checkbox-list"
+             role="group" aria-labelledby="ie-filter-label">
             ###IE_OPTIONS###
-        </select>
-        <small class="filter-hint">Ctrl+click / &#8984;+click to select multiple.<br>
-            No selection = no filter applied.</small>
+        </div>
+        <small class="filter-hint">No selection = no filter applied.</small>
     </div>
 
-    <button id="clear-filters" onclick="clearFilters()" disabled>
+    <button id="clear-filters" type="button" onclick="clearFilters()" disabled>
         &#10005; Clear All Filters
     </button>
-    <span id="filter-count"></span>
+    <!-- aria-live="polite" announces count changes to screen readers      -->
+    <span id="filter-count" aria-live="polite"></span>
 
     </div><!-- .js-filter-panel -->
 
-    <!-- CHANGE 3 (continued): plain-text fallback shown only when JS is off.
+    <!-- Plain-text fallback shown only when JS is off.
          display:none by default; revealed by the <noscript><style> above.  -->
     <div class="noscript-filter-msg" aria-label="JavaScript required for filters">
         <p><strong>&#9888; Filtering requires JavaScript</strong></p>
@@ -478,23 +568,28 @@ TEMPLATE = '''<!DOCTYPE html>
         </div>
     </div>
 
-    <main>
+    <!-- id="main-content" is the target of the skip navigation link      -->
+    <main id="main-content">
         <span id="top"></span>
 
         <div class="review-banner" role="note" aria-label="Under review">Under Review</div>
 
-        <!-- CHANGE 1+3: header wrapped in compact-style div; "The Tests"
-             heading follows immediately after, serving as both a visual
-             section marker and the scroll target for applyFilters().      -->
+        <!-- Header wrapped in compact-style div; "The Tests" heading follows
+             immediately after, serving as both a visual section marker and
+             the scroll and focus target for applyFilters().               -->
         <div class="qrg-header-content">
             ###HEADER_HTML###
         </div>
 
-        <h2 id="the-tests" class="the-tests-heading">The Tests</h2>
+        <!-- tabindex="-1" allows applyFilters() to move keyboard focus here
+             programmatically without placing the heading in the tab order. -->
+        <h2 id="the-tests" class="the-tests-heading" tabindex="-1">The Tests</h2>
 
-        <div id="no-results-msg" class="no-results-msg">
+        <!-- role="status" aria-live="polite" announces the no-results state
+             to screen readers when it becomes visible.                    -->
+        <div id="no-results-msg" class="no-results-msg" role="status" aria-live="polite">
             No tests match the current filters.
-            <a href="#" onclick="clearFilters(); return false;">Clear filters</a>
+            <button type="button" class="link-button" onclick="clearFilters()">Clear filters</button>
             to see all tests.
         </div>
 
@@ -527,9 +622,9 @@ TEMPLATE = '''<!DOCTYPE html>
     window.applyFilters = function () {
 
         /*
-         * CHANGE 2 — Scroll to the "The Tests" heading before changing
-         * the DOM, so the user always lands at the top of the result set
-         * regardless of where they were on the page.
+         * Scroll to the "The Tests" heading before changing the DOM, so the
+         * user always lands at the top of the result set regardless of where
+         * they were on the page.
          *
          * Why scrollIntoView rather than window.scrollTo(0,0):
          *   • scrollTo(0,0) goes to the very top of the page, past the
@@ -540,6 +635,11 @@ TEMPLATE = '''<!DOCTYPE html>
          *   • block:'start' combined with scroll-margin-top: 0.75rem (set
          *     in CSS) gives a small breathing gap above the heading.
          *
+         * focus() moves keyboard focus to the heading so screen reader and
+         * keyboard users land in the right place after a filter change;
+         * tabindex="-1" on the heading element makes this possible without
+         * adding it to the natural tab order.
+         *
          * Clearing the URL hash prevents the browser from jumping to a
          * previously-visited anchor that may now be hidden or far down the
          * page (the "goes to Glossary" bug reported by users).
@@ -547,6 +647,7 @@ TEMPLATE = '''<!DOCTYPE html>
         var testsHeading = document.getElementById('the-tests');
         if (testsHeading) {
             testsHeading.scrollIntoView({ behavior: 'instant', block: 'start' });
+            testsHeading.focus();
         }
         if (window.location.hash) {
             history.replaceState(
@@ -566,8 +667,9 @@ TEMPLATE = '''<!DOCTYPE html>
 
         var selectedUC = document.getElementById('usecase-filter').value;
 
+        /* IE filter uses checkboxes; read all checked inputs in #ie-filters */
         var selectedIEs = Array.from(
-            document.getElementById('ie-filter').selectedOptions
+            document.querySelectorAll('#ie-filters input:checked')
         ).map(function (o) { return o.value; });
 
         var anyActive = selectedTypes.length > 0 || selectedCats.length > 0 ||
@@ -646,8 +748,9 @@ TEMPLATE = '''<!DOCTYPE html>
             cb.checked = false;
         });
         document.getElementById('usecase-filter').value = '';
-        Array.from(document.getElementById('ie-filter').options).forEach(
-            function (o) { o.selected = false; }
+        /* IE filter uses checkboxes; uncheck all */
+        document.querySelectorAll('#ie-filters input').forEach(
+            function (cb) { cb.checked = false; }
         );
         applyFilters();   /* applyFilters() also scrolls to #the-tests */
     };
@@ -711,7 +814,7 @@ def _build_template_vars(yaml_cfg):
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
-# Markdown hide-block removal  (CHANGE 1 from previous iteration)
+# Markdown hide-block removal
 # ═══════════════════════════════════════════════════════════════════════════════
 
 def _remove_hide_blocks(text):
@@ -806,6 +909,7 @@ def get_unique_values_from_column(df, col):
 
 
 def build_select_options(values):
+    """Build <option> elements for a single-select dropdown (use cases)."""
     return '\n            '.join(
         f'<option value="{html_lib.escape(v, quote=True)}">'
         f'{html_lib.escape(v, quote=True)}</option>'
@@ -814,12 +918,36 @@ def build_select_options(values):
 
 
 def build_usecase_options(values):
+    """
+    Build <option> elements for the use-case single-select dropdown.
+    value= keeps the full 'bdquc:'-prefixed name (matches data-usecases);
+    visible label strips any 'xyz:' namespace prefix for readability.
+    """
     lines = []
     for v in values:
         val_esc     = html_lib.escape(v, quote=True)
         display     = re.sub(r'^[a-z]+:', '', v)
         display_esc = html_lib.escape(display, quote=True)
         lines.append(f'<option value="{val_esc}">{display_esc}</option>')
+    return '\n            '.join(lines)
+
+
+def build_ie_checkbox_options(values):
+    """
+    Build checkbox <label> items for the Information Elements Acted Upon
+    scrollable filter list.  Replaces the former multi-select for better
+    accessibility and touch-device usability.
+    Each checkbox triggers applyFilters() on change; the enclosing div
+    (#ie-filters) is queried with querySelectorAll in the JS filter logic.
+    """
+    lines = []
+    for v in values:
+        val_esc     = html_lib.escape(v, quote=True)
+        display_esc = html_lib.escape(v, quote=True)
+        lines.append(
+            f'<label><input type="checkbox" name="ie" value="{val_esc}"'
+            f' onchange="applyFilters()"> {display_esc}</label>'
+        )
     return '\n            '.join(lines)
 
 
@@ -832,6 +960,9 @@ def build_term_section(term, columns, term_type='', usecases='',
     """
     Build a <section class="term-section"> for one BDQ test.
     Dual anchors: section id = GUID, inner span id = Label.
+    Row header cells use <th scope="row"> so screen readers can announce
+    the field name when reading each data cell; rows are wrapped in <tbody>
+    per HTML best practice for data tables.
     """
     term_id  = (term.get('term_localName', term.get('Label', 'term'))
                 .strip().replace(' ', '_'))
@@ -866,7 +997,7 @@ def build_term_section(term, columns, term_type='', usecases='',
         term_label = label_map.get(col, col)
         if col == 'Examples':
             value = value.replace('],[', '],<br>[')
-        rows += f'<tr><td class="label">{term_label}</td><td>{value}</td></tr>'
+        rows += f'<tr><th scope="row" class="label">{term_label}</th><td>{value}</td></tr>'
 
     secondary_anchor = ''
     if label_id and label_id != term_id:
@@ -880,12 +1011,18 @@ def build_term_section(term, columns, term_type='', usecases='',
         f' data-categories="{categories_attr}">\n'
         f'{secondary_anchor}'
         f'<div class="field-header-wrapper"><h3>{label}</h3></div>\n'
-        f'<table class="term-table">{rows}</table>\n'
+        f'<table class="term-table"><tbody>{rows}</tbody></table>\n'
         f'</section>'
     )
 
 
-def build_field_index(terms):
+def build_field_index(terms, aria_label=''):
+    """
+    <nav class="field-index"> quick-jump block.
+    data-target lets the JS filter keep each link in sync with its term section.
+    aria_label is emitted as aria-label so that the multiple nav landmarks
+    on the page are distinguishable for screen reader users.
+    """
     links = []
     for term in terms:
         term_id = (term.get('term_localName', term.get('Label', 'term'))
@@ -895,7 +1032,9 @@ def build_field_index(terms):
             f'<a class="field-box" href="#{term_id}"'
             f' data-target="{term_id}">{label}</a>'
         )
-    return '<nav class="field-index">' + ''.join(links) + '</nav>'
+    label_attr = (f' aria-label="{html_lib.escape(aria_label, quote=True)}"'
+                  if aria_label else '')
+    return f'<nav class="field-index"{label_attr}>' + ''.join(links) + '</nav>'
 
 
 def build_category_sections(df):
@@ -913,7 +1052,7 @@ def build_category_sections(df):
         out.append(
             f'<section class="category-section" id="cat-{cat}">\n'
             f'  <div class="class-header-wrapper"><h2>{cat}</h2></div>\n'
-            f'  {build_field_index(terms)}\n'
+            f'  {build_field_index(terms, aria_label=f"Index of {cat} tests")}\n'
             f'</section>\n'
         )
     return ''.join(out)
@@ -978,7 +1117,8 @@ def generate_qrg():
             f'<h2 id="{anchor}" class="class-header">{group}</h2>'
             f'</div>\n'
         )
-        content += build_field_index(terms.to_dict(orient='records'))
+        content += build_field_index(terms.to_dict(orient='records'),
+                                      aria_label=f"Index of {group} tests")
 
         for _, row in terms.iterrows():
             content += build_term_section(
@@ -1006,14 +1146,14 @@ def generate_qrg():
     html_out = html_out.replace('###USECASE_OPTIONS###',
                                   build_usecase_options(unique_usecases))
     html_out = html_out.replace('###IE_OPTIONS###',
-                                  build_select_options(unique_ies))
+                                  build_ie_checkbox_options(unique_ies))
 
     os.makedirs(os.path.dirname(OUTPUT_PATH), exist_ok=True)
     with open(OUTPUT_PATH, 'w', encoding='utf-8') as f:
         f.write(html_out)
     print(f"QRG successfully written to {OUTPUT_PATH}")
 
-    # CHANGE 4: only write a second copy if DEPLOY_PATH differs from OUTPUT_PATH
+    # Only write a second copy if DEPLOY_PATH differs from OUTPUT_PATH
     if DEPLOY_PATH != OUTPUT_PATH:
         with open(DEPLOY_PATH, 'w', encoding='utf-8') as f:
             f.write(html_out)
