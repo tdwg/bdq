@@ -744,12 +744,12 @@ BDQ details a convention for the structure and format of source authorities (in 
   * URI: {[https://www.iso.org/iso-3166-country-codes.html]}<!--- NO LINK LINE --->
   * API: {ISO 3166-1-alpha-2 Country Code search \[https://www.iso.org/obp/ui/#search\]}<!--- NO LINK LINE --->
     * A label for the API: "ISO 3166-1-alpha-2 Country Code search" 
-    * An API endpoint: [https://www.iso.org/obp/ui/#search]`<!--- NO LINK LINE --->
+    * An API endpoint: [https://www.iso.org/obp/ui/#search]<!--- NO LINK LINE --->
 
 * **Convention Three**: An authority that is defined using a regular expression pattern.
   * `“Fixed String Identifier” {\[Regular Expression Pattern\]}`
 
-* Example: `bdqval:sourceAuthority default = "Regex present/absent" {["^(present|absent)$"]}`
+* Example: bdqval:sourceAuthority default = "Regex present/absent" {["^(present|absent)$"]}
   * Fixed string identifier: "Regex present/absent" 
   * Regular Expression Pattern: `"^(present|absent)$"` (matches only the strings "present" or "absent" (the leading and trailing [{ enclose the pattern, but aren't part of it))
 
@@ -759,7 +759,7 @@ The source authority allows implementers to know where to look for the authorita
 
 For this Test, we can use the regular expression pattern for a resolvable ORCID ID as the source authority.
 
-An ORCID ID is a unique identifier for researchers, and it has a specific format that can be expressed as a regular expression.  The expected format for an ORCID ID is a resolvable URL that starts with "http://orcid.org/" or "https://orcid.org/", followed by four groups of four digits, separated by hyphens, and ending with a single digit or the letter 'X'.  This can be expressed as the following regular expression: "^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$".  This regular expression matches strings that start with "http://" or "https://", followed by "orcid.org/", then four groups of four digits separated by hyphens, and ending with a single digit or 'X'.
+An ORCID ID is a unique identifier for researchers, and it has a specific format that can be expressed as a regular expression.  The expected format for an ORCID ID is a resolvable URL that starts with "http://orcid.org/" or "https://orcid.org/", followed by four groups of four digits, separated by hyphens, and ending with a single digit or the letter 'X'.  This can be expressed as the following regular expression: "^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$".  This regular expression matches strings that start with "http://" or "https://", followed by "orcid.org/", then four groups of four digits separated by hyphens, and ending with a single digit or 'X'.<!--- NO LINK LINE --->
 
 Thus we could specify the source authority as follows:
 
@@ -793,7 +793,7 @@ Some users may wish to store ORCID ID values with an ORCID: prefix, instead of t
 
 * "Bare ORCID ID regex" `{[^ORCID:\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$]}`
 
-Other users might wish to allow for VIAF or other identifiers in wasAttributedTo, thus they could use the same Test, but with an implementation that supports a parameter value that encompasses their needs (e.g. "VIAF ID regex" `{[^https?://viaf\.org/viaf/\d+$]}`, or "VIAF or ORCID ID regex" `{[^https?://viaf\.org/viaf/\d+$|^https://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$]}`), and thus they could use the same Test for their needs without any change to the specification of the Test itself.
+Other users might wish to allow for VIAF or other identifiers in wasAttributedTo, thus they could use the same Test, but with an implementation that supports a parameter value that encompasses their needs (e.g. "VIAF ID regex" `{[^https?://viaf\.org/viaf/\d+$]}`, or "VIAF or ORCID ID regex" `{[^https?://viaf\.org/viaf/\d+$|^https://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$]}`), and thus they could use the same Test for their needs without any change to the specification of the Test itself.<!--- NO LINK LINE --->
 
 Now the purpose of the “Fixed String Identifier” in the  source authority becomes clear.  These values are expected to to be embedded in code that implements parameterized Test, and that the presentation of these "Fixed String Identifier" values will allow different implementations of the same Test to recognize which parameter  to use.  For example, if an implementation of this Test is designed to allow for both the default regex for resolvable ORCID IDs and an alternative regex for ORCID IDs with the ORCID: prefix, then the implementation would look for the "Fixed String Identifier" in the source authority to determine which regex pattern to use for evaluating the format of the value in `prov:wasAttributedTo`.  If the "Fixed String Identifier" is "Resolvable ORCID ID regex", then the implementation would use the default regex pattern for resolvable ORCID IDs.  If the "Fixed String Identifier" is "Bare ORCID ID regex", then the implementation would use the alternative regex pattern for ORCID IDs with the ORCID: prefix.
 
@@ -890,9 +890,9 @@ So, our set of Test descriptors (the values of various bdqffdq: properties attac
 * **Test Type** Validation
 * **Information Elements Acted Upon** prov:wasAttributedTo
 * **Expected Response**  INTERNAL_PREREQUISITES_NOT_MET if prov:wasAttributedTo is bdqval:Empty; COMPLIANT if the value in prov:wasAttributedTo conforms to the expected format of the bdqval:sourceAuthority; otherwise NOT_COMPLIANT.
-* **hasAuthoritiesDefaults** bdqval:sourceAuthority default = "Resolvable ORCID ID regex" `{[^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$]}`
+* **hasAuthoritiesDefaults** bdqval:sourceAuthority default = "Resolvable ORCID ID regex" {[^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$]}
 * **Parameter** bdqval:sourceAuthority
-* **Notes** The expected format of an ORCID ID is `^https://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$`, but we allow for protocol variants of http:// as well as https:// in the identifier and relax to the regex ^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$.  We expect the ORCID ID to be in resolvable form, not the bare identifier.  ORCID IDs are a subset of ISNI in the range 0000-0001-5000-0007 to 0000-0003-5000-0001, but this test only evaluates the format, not the range.  The form ORCID:0000-0001-5000-0007 should be treated as NOT_COMPLIANT by this test.<!--- NO LINK LINE --->
+* **Notes** The expected format of an ORCID ID is `^https://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$`, but we allow for protocol variants of http:// as well as https:// in the identifier and relax to the regex `^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$`.  We expect the ORCID ID to be in resolvable form, not the bare identifier.  ORCID IDs are a subset of ISNI in the range 0000-0001-5000-0007 to 0000-0003-5000-0001, but this test only evaluates the format, not the range.  The form ORCID:0000-0001-5000-0007 should be treated as NOT_COMPLIANT by this test.<!--- NO LINK LINE --->
 
 #### 6.9.1 Summary of the Test Definition (non-normative)
 
@@ -957,7 +957,7 @@ See also: [Guide to Marking and Identifying Synthetic and Modified Data](../guid
 Consider the Test [VALIDATION_COUNTRYCODE_STANDARD](../terms/bdqtest/index.md#VALIDATION_COUNTRYCODE_STANDARD), which evaluates whether the value in dwc:countryCode is a valid ISO 3166-1-alpha-2 country code.  
 
 * **Expected Response**  EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode is bdqval:Empty; COMPLIANT if dwc:countryCode can be unambiguously interpreted as a valid ISO 3166-1-alpha-2 country code in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT
-* **Source Authority** `bdqval:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}`
+* **Source Authority** bdqval:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}<!--- NO LINK LINE --->
 * **Notes** Locations outside of a jurisdiction covered by a country code may have a value in the field dwc:countryCode, the ISO user defined codes include XZ used by the UN for installations on the high seas and recommended in Darwin Core to designate the high seas. Also available in the ISO user defined codes is ZZ, used by Darwin Core and GBIF to mark unknown countries. This Test should accept both XZ and ZZ as COMPLIANT country codes. This Test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.
 
 The conformance testing dataset that accompanies the BDQ implementer's guide includes these following (and other) rows for this Test:
