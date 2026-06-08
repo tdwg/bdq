@@ -1074,7 +1074,7 @@ The Darwin Core Standard (Wieczorek et al. 2012) is deliberately permissive. The
 
 #### 3.9.2 Georeferencing (non-normative)
 
-Some BDQ Tests are aspirational, promoting community best practices for expressing data in ways that support high quality. For example, several Tests reflect guidance from Georeferencing Best Practices (Chapman & Wieczorek 2020), emphasizing the importance of populating specific metadata elements required for high-quality georeferences (e.g., [VALIDATION_GEODETICDATUM_NOTEMPTY](../terms/bdqtest/index.md#VALIDATION_GEODETICDATUM_NOTEMPTY)). Similarly, the Fitness For Use Framework encourages the use of controlled vocabularies that the community is encouraged to adopt, such as EPSG codes for geodetic datums ([https://epsg.org](https://epsg.org/)).
+Some BDQ Tests are aspirational, promoting community best practices for expressing data in ways that support high quality. For example, several Tests reflect guidance from Georeferencing Best Practices (Chapman & Wieczorek 2020), emphasizing the importance of populating specific metadata elements required for high-quality georeferences (e.g., [VALIDATION_GEODETICDATUM_NOTEMPTY](../terms/bdqtest/index.md#VALIDATION_GEODETICDATUM_NOTEMPTY)). Similarly, the Fitness For Use Framework encourages the use of controlled vocabularies that the community is encouraged to adopt, such as EPSG codes for geodetic datums ( [https://epsg.org/](https://epsg.org/) ).
 
 #### 3.9.3 Annotations (non-normative)
 
