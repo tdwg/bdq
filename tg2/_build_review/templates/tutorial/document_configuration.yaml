@@ -3,10 +3,10 @@
 # ----------------
 
 # Official title of the document assigned by authors.
-documentTitle: 'Tutorial: Creating a New Test using the BDQ Standard'
+documentTitle: 'Tutorial: From Use Case to Test'
 
 # Abstract of document written by authors.
-abstract: 'This document provides information supplementary to the BDQ standard, describing the thought process and procedure for describing a new Test.'
+abstract: 'This document provides information supplementary to the BDQ standard, describing the thought process and procedure for describing a new Use Case and Tests.'
 
 # This value is generally the name of the task group that created the document.
 creator: 'TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions'

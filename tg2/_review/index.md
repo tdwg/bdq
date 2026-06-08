@@ -106,7 +106,7 @@ Beyond data availability, data quality is the most significant challenge for use
 
 <!-- Brief purpose and value proposition statement: what is the standard, why use it --->
 
-The BDQ standard establishes a community-defined, modular, and extensible environment for biodiversity data quality. BDQ defines a comprehensive set of Tests (`bdqtest:`), their inputs (`InformationElements`) and their structured output (`Responses`). BDQ initially focused on Darwin Core but structurally independent of it. BDQ is a formal Fitness for Use Framework (`bdqffdq:`) with supporting vocabularies `bdqval:`, `bdqdim:`, `bdqcrit:`, `bdqenh:` and `bdquc:`.
+The BDQ standard establishes a community-defined, modular, and extensible environment for biodiversity data quality. BDQ defines a comprehensive set of Tests (`bdqtest:`), their inputs (`InformationElements`) and their structured output (`Responses`). BDQ initially focused on Darwin Core but structurally independent of it. BDQ is a formal Fitness for Use Framework (`bdqffdq:`) with five supporting vocabularies `bdqval:`, `bdqdim:`, `bdqcrit:`, `bdqenh:` and `bdquc:`.
 
 At its core, BDQ focuses on the semantics of data quality.  It defines what a Test means and precisely what information a `Response` must contain. BDQ intentionally avoids prescribing execution concerns (such as data loading or parallelization of Test execution) as well as human centric concerns (such as report presentation or remediation processes).  By providing a consistent semantic layer focused on Test inputs and outputs, the standard allows for flexible application within diverse operational settings supporting both `Quality Assurance` filtering and `Quality Control` diagnostics.  The presentation and serialization of `Data Quality Reports` is intentionally flexible, so long as the required `Response` elements are available to consumers.
 
@@ -130,7 +130,7 @@ The BDQ standard is intended for:
 
 For practitioners, researchers, collection managers, and data managers, the BDQ Tests (`bdqtest:`) provide a shared, community-defined set of Test definitions that can be selected and run as suites to evaluate fitness for use for particular specified uses of biodiversity data.
 
-For developers, standards developers, and knowledge engineers, the Fitness For Use Framework (`bdqffdq:`) and supporting vocabularies (e.g., `bdqval:`, `bdqdim:`, `bdqcrit:`, and `bdqenh:`) provide the common semantic model used to define Tests, identify their inputs (`Information Elements`), and represent their outputs (`Responses`) in a consistent and interoperable way.  No background in ontologies is required to understand or apply the Tests, though familiarity with RDF/OWL will be helpful for those working directly with the ontologies or exchanging `Data Quality Reports` as RDF.
+For developers, standards developers, and knowledge engineers, the Fitness For Use Framework (`bdqffdq:`) and supporting vocabularies (`bdqval:`, `bdqdim:`, `bdqcrit:`, `bdqenh:`, and `bdquc') contribute to the common semantic model used to define Tests, identify their inputs (`Information Elements`), and represent their outputs (`Responses`) in a consistent and interoperable way (in the `bdqtest:` vocabulary).  No background in ontologies is required to understand or apply the Tests, though familiarity with RDF/OWL will be helpful for those working directly with the ontologies or exchanging `Data Quality Reports` as RDF.
 
 ### 1.3 Contributing TDWG Interest and Task Groups (non-normative)
 
@@ -167,15 +167,15 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 
 | Abbreviation | Namespace |
 |--------------|-----------|
-| bdqval:      | https://rs.tdwg.org/bdqval/terms/  |
-| bdquc:       | https://rs.tdwg.org/bdquc/terms/   |
-| bdqtest:     | https://rs.tdwg.org/bdqtest/terms/ |
+| dwc:         | http://rs.tdwg.org/dwc/terms/      |
+| oa:          | https://www.w3.org/TR/annotation-vocab/ |
 | bdqcrit:     | https://rs.tdwg.org/bdqcrit/terms/ |
 | bdqdim:      | https://rs.tdwg.org/bdqdim/terms/  |
 | bdqenh:      | https://rs.tdwg.org/bdqenh/terms/  |
 | bdqffdq:     | https://rs.tdwg.org/bdqffdq/terms/ |
-| oa:          | https://www.w3.org/TR/annotation-vocab/ |
-| dwc:         | http://rs.tdwg.org/dwc/terms/      |
+| bdqtest:     | https://rs.tdwg.org/bdqtest/terms/ |
+| bdquc:       | https://rs.tdwg.org/bdquc/terms/   |
+| bdqval:      | https://rs.tdwg.org/bdqval/terms/  |
 
 ### 1.8 Referring to Terms (normative)
 
@@ -197,24 +197,6 @@ The Biodiversity Data Quality (BDQ) Standard is documented as a set of complemen
 
 This section provides a reader‑focused roadmap to that document set. Its purpose is to help readers quickly identify the most appropriate entry point based on their immediate needs, without restating the purpose, principles, or detailed content of the BDQ Standard, which are described elsewhere in this document and in the normative specifications.  The table below maps common reader intentions to the primary BDQ resources that address them. It is intended solely as a navigational aid; each linked document remains the authoritative source for its respective content.
 
-<!--
- 
-BDQ defines a set of vocabularies (and an ontology) that are used to define structured **Tests**. The BDQ Tests evaluate biodiversity data in the context of defined `Use Cases`, and each [Test](<index.md#glossary_Test> "A composition of a bdqffdq:DataQualityNeed with a bdqffdq:DataQualityMethod that links it to an instance of a bdqffdq:Specification, these instances being composed of InformationElements, Arguments, and Parameters. See…") is designed to assess and report on a specific aspect of data quality (e.g., `Accuracy`, `Completeness`, `Consistency`, `Conformance`, `Likeliness`, or `Reliability`; see the `bdqdim:` vocabulary). Because BDQ specifies Tests in an implementation-agnostic way, the same Test definitions can be implemented in different programming languages and environments and applied in contexts ranging from small-scale data curation to large-scale biodiversity aggregation.
-
-BDQ is organized as a set of complementary documents that together define *what* to test, *how* to describe Tests and their results consistently, and *how* to apply those Tests in practice. At the core are the BDQ Tests (`bdqtest:`), which specify reusable, implementable evaluations over clearly identified inputs (`Information Elements` plus optional `Parameters`) and produce structured outputs (`Responses`) that can be reported and exchanged across systems.  
-
-The semantics and shared terminology used by the Tests are provided by the Fitness For Use Framework (`bdqffdq:`) and supporting vocabularies (`bdqval:`, `bdqdim:`, `bdqcrit:`, and `bdqenh:`). Together, these vocabularies make it possible to define each Test and interpret its Responses in a consistent way, so that results from different implementations can be treated as comparable statements about fitness for use.
-
-BDQ supports both `Quality Assurance` ([QA](<index.md#glossary_QA> "bdqffdq:QualityAssurance. The process of evaluating data for fitness for some use and selecting just those data that are fit for that use. See also User's Guide #2.1.")) and `Quality Control` ([QC](<index.md#glossary_QC> "bdqffdq:QualityControl. The process of identifying data that are not fit for particular uses, with the goal of improving the data quality. The tests may propose changes to improve the quality of the data. See also User'…")) by providing standardized Tests, structured Responses, and `Measure` patterns that can be composed into Test suites for particular `Use Cases` (see [2. Context for Quality, Uses and Purposes](docs/guide/users/index.md#2-context-for-quality-uses-and-purposes-non-normative) in the [BDQ User's Guide](docs/guide/users/index.md)). Running the set of Tests associated with a `Use Case` on a dataset produces an evaluation of the fitness of that dataset for that specified use, and yields results that can be compared and shared across organizations. By using a common framework and shared vocabularies to define and report Tests, BDQ makes it easier for the community to collaborate on data quality assessment, implementation, and interpretation in a consistent manner.
-
-BDQ currently focuses on commonly used biodiversity data expressed with [Darwin Core](<index.md#glossary_Darwin_Core> "Darwin Core. A Standard intended to facilitate the sharing of information about biological diversity. Host of the dwc:namespace dwc:") terms (Wieczorek et al. 2012), but the standard is modular and extensible: communities may define additional `Use Cases`, propose new Tests, and align other vocabularies to the BDQ model while retaining interoperable Test semantics and Responses.
-
-Readers can approach the standard in different ways depending on their needs. The **BDQ Test Quick Reference Guide** provides a reference for the most comonly used information about the Tests. If you want to *run* BDQ and understand outputs, start with the **BDQ User’s Guide**, which explains how Tests relate to `Use Cases`, how `Quality Control` and `Quality Assurance` can be supported using suites of Tests, and how to interpret `Data Quality Reports` in real-world data curation and aggregation settings. If you want to *implement* BDQ in software, start with the **BDQ Implementer’s Guide**, which provides normative requirements for conforming implementations, including `Response` structure, handling of `Empty`, parameter behavior, and report requirements. If you want to understand the formal model behind BDQ and how Tests are defined in [RDF](<index.md#glossary_RDF> "Resource Description Framework - a W3C standard for modeling, interchanging, and linking structured data on the web. Hosts the namespace rdf:")/[OWL](<index.md#glossary_OWL> "Web Ontology Language. A Semantic Web language designed to represent rich and complex knowledge about things. Hosts the namespace owl:"), see the **Fitness For Use Framework Ontology** landing page and the **Fitness For Use Framework Ontology Guide**; for complete normative term definitions, consult the relevant **List of Terms** documents.  If you wish to define new `Use Cases` or Tests, the **BDQ Tutorial** provides worked examples.
-
-![Diagram of approaches to the BDQ documentation](overview_diagram_use_organized.svg)
-
--->
-
 <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
   <thead>
     <tr>
@@ -222,7 +204,7 @@ Readers can approach the standard in different ways depending on their needs. Th
     </tr>
     <tr>
       <th style="width: 100%;" colspan="3">Some Key Concepts: 
-          <a href="./docs/guide/users/index.md#31-test-types-non-normative">Test Types</a> and <a href="./docs/guide/users/index.md#32-test-inputs-and-outputs-non-normative">Test Inputs and Outputs</a> in the Users Guide.
+          <a href="./docs/guide/users/index.md#31-test-types-non-normative">[Test](<index.md#glossary_Test> "A composition of a bdqffdq:DataQualityNeed with a bdqffdq:DataQualityMethod that links it to an instance of a bdqffdq:Specification, these instances being composed of InformationElements, Arguments, and Parameters. See…") Types</a> and <a href="./docs/guide/users/index.md#32-test-inputs-and-outputs-non-normative">Test Inputs and Outputs</a> in the Users Guide.
           <br>
           <a href="./docs/guide/bdqtest/index.md#21-the-bdq-definition-of-test-non-normative">The BDQ Definition of "Test"</a> in BDQ Tests: Concepts and Use.</a>
       </th>
@@ -276,7 +258,7 @@ Readers can approach the standard in different ways depending on their needs. Th
         Normative concepts and logic describing data quality needs and layers, with an explanatory guide.
 		<a href="./docs/guide/bdqffdq/index.md">Fitness For Use Framework Ontology: Concepts and Use</a><br>
 		bdqffdq: <a href="./docs/list/bdqffdq/index.md">Term List</a><br>
-		and serialized version: <a href="./vocabulary/bdqffdq.owl">OWL Ontology</a>.
+		and serialized version: <a href="./vocabulary/bdqffdq.owl">[OWL](<index.md#glossary_OWL> "Web Ontology Language. A Semantic Web language designed to represent rich and complex knowledge about things. Hosts the namespace owl:") Ontology</a>.
       </td>
     </tr>
     <tr>
@@ -293,13 +275,13 @@ Readers can approach the standard in different ways depending on their needs. Th
 		<a href="./docs/guide/bdqtest/index.md">BDQ Tests: Concepts and Use</a>.<br>
         Normative machine‑readable definitions and versioned lists of Tests.
 		bdqtest: <a href="./docs/list/bdqtest/index.md">Term List</a><br>
-		and serialized versions: <a href="./dist/bdqtest.xml">RDF/XML</a>, <a href="./dist/bdqtest.ttl">Turtle</a>, <a href="./dist/bdqtest.json">JSON-LD</a>.
+		and serialized versions: <a href="./dist/bdqtest.xml">[RDF](<index.md#glossary_RDF> "Resource Description Framework - a W3C standard for modeling, interchanging, and linking structured data on the web. Hosts the namespace rdf:")/XML</a>, <a href="./dist/bdqtest.ttl">Turtle</a>, <a href="./dist/bdqtest.json">JSON-LD</a>.
       </td>
       <td valign="top">
 		:blue_book:
         <strong>Supporting Vocabularies</strong><br>
         Controlled vocabularies for criteria, dimensions, enhancements, and other elements needed to specify new Tests.</a>
-		<a href="./docs/list/bdqval/index.md">bdqval: Vocabulary</a>, <a href="./docs/list/bdqcrit/index.md">bdqcrit: Vocabulary</a>, <a href="./docs/list/bdqdim/index.md">bdqdim: Vocabulary</a>, <a href="./docs/list/bdqenh/index.md">bdqenh: Vocabulary</a>.
+		<a href="./docs/list/bdqval/index.md">bdqval: Vocabulary</a>, <a href="./docs/list/bdqcrit/index.md">bdqcrit: Vocabulary</a>, <a href="./docs/list/bdqdim/index.md">bdqdim: Vocabulary</a>, <a href="./docs/list/bdqenh/index.md">bdqenh: Vocabulary</a>, <a href="./docs/list/bdquc/index.md">bdquc: Vocabulary</a>.
       </td>
     </tr>
     <tr>
@@ -459,7 +441,7 @@ The non-normative Supplemental Information includes the rationale for, the histo
 
 The non-normative Tutorial provides a worked through example of the thought process in defining a 'Use Case' and a Test that supports the `Use Case`.
 
-- [**BDQ Tutorial**](docs/tutorial/index.md)
+- [**BDQ Tutorial From Use Case to Test**](docs/tutorial/index.md)
 
 ### 3.5 Distribution Files (non-normative)
 
@@ -529,7 +511,7 @@ We recognize four people as authors of the standard, having contributed consiste
 - **Lee Belbin (Blatant Fabrications Pty Ltd)**: Convener of TDWG Data Quality Task Group 2 (Data Quality Tests and Assertions); Test descriptions; author of the BDQ standard documents; Test Conformance Testing Data.
 - **Arthur D. Chapman (Australian Biodiversity Information Services)**: Co-convener of the TDWG Data Quality Interest Group; Test descriptions; author of the BDQ standard documents; vocabularies. 
 - **Paul J. Morris (Museum of Comparative Zoology, Harvard University)**: Test descriptions; Fitness For Use Framework ontology; Java Test implementations in filteredpush packages; author of the BDQ standard documents; Test Conformance Testing Data. 
-- **John Wieczorek (Rauthiflor LLC)**: Test descriptions; Test implementations; author of the BDQ standard documents; Darwin Core liaison.
+- **John Wieczorek (Rauthiflor LLC)**: Test descriptions; Test implementations; author of the BDQ standard documents; [Darwin Core](<index.md#glossary_Darwin_Core> "Darwin Core. A Standard intended to facilitate the sharing of information about biological diversity. Host of the dwc:namespace dwc:") liaison.
 
 #### 5.2.2 Contributors (non-normative)
 
@@ -553,7 +535,7 @@ There were many people who have made notable contributions at various times duri
 
 The glossary of terms used in the BDQ standard includes acronyms and these terms that are additional to the terms used in the `bdqffdq`, `bdqval:`, `bdqcrit:`, `bdqdim:`, and `bdqenh:` vocabularies or in one of the two tables that reference the [Test Vocabulary Terms](docs/list/bdqtest/index.md#18-key-to-vocabulary-terms-normative) or the [Test Label Components](docs/supplement/index.md#313-parts-of-test-labels-non-normative). Note: ‘Darwin Core terms’ refer to [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021).
 
-Note: Some terms are definied differently within different documents to align with the context of those documents.  For example, in the [BDQ Supplemental Information](../_review/docs/supplement/index.md) Document, the Table in #5.2 describes the GitHub Tags that were used when preparing the Tests. These Tags and their definitions sometimes differ from the definitions used with the BDQ Standard. The definitions in the Glossary here do however take precedence for the Standard.
+Note: Some terms are definied differently within different documents to align with the context of those documents.  For example, in the [BDQ Supplemental Information](./docs/supplement/index.md) Document, the [Table in #5.2](.//docs/supplement/index.html#52-github-tags-and-categorizing-issues-non-normative) describes the GitHub Tags that were used when preparing the Tests. These Tags and their definitions sometimes differ from the definitions used with the BDQ Standard. The definitions in the Glossary here do however take precedence for the Standard.
 
 | **Label** | **Definition** | **Context** |
 | ---- | ---- | ---- |
