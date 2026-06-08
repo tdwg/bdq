@@ -348,7 +348,7 @@ for term in termLists:
                         else : 
                            text += '\t\t\t<td>{}</td>\n'.format(column)
                         if (column == 'AuthoritiesDefaults') and row[column] :
-                           text += '\t\t\t<td><code>{}</code></td>\n'.format(row[column])
+                           text += '\t\t\t<td><code>{}</code></td><!--- NO LINK LINE --->\n'.format(row[column])
                         else :
                            text += '\t\t\t<td>{}</td>\n'.format(row[column])
                         text += '\t\t</tr>\n'
