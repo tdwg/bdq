@@ -8,7 +8,6 @@
 
 - [Draft BDQ Standard](https://bdq.tdwg.org/draft/) (or view [on GitHub](https://github.com/tdwg/bdq/blob/master/tg2/_review/index.md))
 - [Draft standard Quick Reference Guide to the tests](https://bdq.tdwg.org/draft/docs/terms/bdqtest/)
-- [Alternative rendering of the Quick Reference Guide to the tests](https://bdq.tdwg.org/draft/docs/terms/bdqtest-html/)
 
 ## Link to github issues used to develop the tests: 
 

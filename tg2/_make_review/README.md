@@ -27,8 +27,6 @@ copy_files.sh
 do_build.sh
 ```
 
-Also in bdq/tg2/_build_qrg is **generate_bdq_qrg.py**, which generates a proof of concept html representation of the Quick Reference Guide for the bdqtest vocabulary.  
-
 # Structure of source and target directories for the build.
 
 ## Source files for the bdqtest vocabulary
@@ -141,10 +139,6 @@ _review/
 	├── bdqtest_term_versions.csv  Term version file for `bdqtest:`  Test vocabulary **Editable.**
 	└── bdqffdq.owl  OWL Ontology for `bdqffdq:` terms. **Edit with Protégé or VERY carefully with a text editor.**
 </pre>
-
-# Build file for proof of concept html representation of the Quick Reference Guide
-
-tg2/\_build_html/generate_bdq_qrg.py
 
 # Suggestions for a maintenance group tg2/maintenance
 

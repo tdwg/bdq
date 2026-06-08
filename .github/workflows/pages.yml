@@ -93,10 +93,6 @@ jobs:
           rsync -a tg2/_review/ site/draft/ \
             --exclude 'docs/terms/bdqtest/index.md'
 
-          ## TODO: Remove this once links have been removed
-          # Alternate HTML publication path
-          rsync -a terms/bdqtest/ site/draft/docs/terms/bdqtest-html/
-
           # Provide the Turtle serialization of the owl ontology with a .ttl extension for better content-type handling
           if [ -f site/draft/vocabulary/bdqffdq.owl ]; then
               cp site/draft/vocabulary/bdqffdq.owl site/draft/vocabulary/bdqffdq.ttl
@@ -112,6 +108,9 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          # Render the static site using the provided Python script and template.
+          # this is for all documents except /draft/docs/terms/bdqtest/index.html, which is 
+          # pre-built by _make_review/do_build.sh and is then copied in the next step.
           python _site_resources/render_site.py \
             --site-root site \
             --template _site_resources/templates/page.html
@@ -121,11 +120,9 @@ jobs:
         run: |
           set -euo pipefail
           # render_site.py must not overwrite the hand-built QRG page.
-          # Copy the authoritative pre-built file back into both deployment paths.
+          # Copy the authoritative pre-built file back into the deployment path.
           cp tg2/_review/docs/terms/bdqtest/index.html \
              site/draft/docs/terms/bdqtest/index.html
-          cp tg2/_review/docs/terms/bdqtest/index.html \
-             site/draft/docs/terms/bdqtest-html/index.html
 
       - name: Verify built output
         shell: bash
@@ -141,9 +138,8 @@ jobs:
           test -f site/assets/img/tdwg-logo-short.svg
           test -f site/draft/vocabulary/bdqffdq.ttl
           test -f site/CNAME
-          # Confirm the pre-built QRG HTML is present at both publication paths
+          # Confirm the pre-built QRG HTML is present at its publication path
           test -f site/draft/docs/terms/bdqtest/index.html
-          test -f site/draft/docs/terms/bdqtest-html/index.html
           # Confirm the source index.md was NOT copied into the site tree
           test ! -f site/draft/docs/terms/bdqtest/index.md
           find site -maxdepth 5 | sort

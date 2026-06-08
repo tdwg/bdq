@@ -7,6 +7,7 @@
 # @author Claude 4.6 Sonnet
 #
 # Rewritten from generate_bdq_qrg.py to add interactive filtering and category sections by Claude 4.6 Sonnet
+# original source https://github.com/tdwg/bdq/blob/71a4045e8733ac96a335008dd9684bb1b45e1a5e/tg2/_build_qrg/generate_bdq_qrg.py
 
 import os
 import re
@@ -25,7 +26,7 @@ except ImportError:
 # ── File paths ────────────────────────────────────────────────────────────────
 CSV_PATH        = '../_review/vocabulary/bdqtest_term_versions.csv'
 OUTPUT_PATH     = '../_review/docs/terms/bdqtest/index.html'
-DEPLOY_PATH     = '../../terms/bdqtest/index.html'
+DEPLOY_PATH     = '../_review/docs/terms/bdqtest/index.html'  # same as OUTPUT_PATH in this case
 TEMPLATE_DIR    = '../_build_review/templates/terms/bdqtest_qrg'
 HEADER_MD_PATH  = os.path.join(TEMPLATE_DIR, 'bdqtest_quickreference-header.md')
 FOOTER_MD_PATH  = os.path.join(TEMPLATE_DIR, 'bdqtest_quickreference-footer.md')
