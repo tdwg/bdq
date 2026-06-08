@@ -328,6 +328,11 @@ TEMPLATE = '''<!DOCTYPE html>
         .noscript-filter-msg p { margin: 0 0 5px 0; }
         .noscript-filter-msg p:last-child { margin-bottom: 0; }
 
+        /* Sidebar collapsible toggle: hidden on desktop where the sidebar is
+           fixed and always visible; revealed on mobile by the responsive block
+           below so the user can collapse the sidebar after use.            */
+        .sidebar-toggle-summary { display: none; }
+
         /* ── Explicit focus-visible styles for keyboard navigation ───────── */
         .jump-link:focus-visible,
         nav.field-index a.field-box:focus-visible {
@@ -382,6 +387,10 @@ TEMPLATE = '''<!DOCTYPE html>
             padding-top: 12px; margin-top: 12px;
         }
 
+        /* Table overflow wrapper prevents long unbreakable content (UUIDs,
+           URLs) from causing full-page horizontal scroll on narrow viewports. */
+        .term-table-wrapper { overflow-x: auto; }
+
         table.term-table { width: 100%; border-collapse: collapse; margin-top: 10px; }
         /* th and td share base cell styles; text-align: left overrides the
            browser default centre-alignment for th elements.               */
@@ -418,6 +427,14 @@ TEMPLATE = '''<!DOCTYPE html>
             #clear-filters { transition: none; }
         }
 
+        /* ── Intermediate viewport (tablet: 769px–960px) ─────────────────── */
+        @media (max-width: 960px) and (min-width: 769px) {
+            aside.nav-menu { width: 200px; }
+            .content-wrapper { margin-left: 200px; }
+            .field-header-wrapper,
+            .class-header-wrapper { width: calc(100vw - 200px); }
+        }
+
         /* ── Responsive ──────────────────────────────────────────────────── */
         @media (max-width: 768px) {
             aside.nav-menu {
@@ -432,6 +449,34 @@ TEMPLATE = '''<!DOCTYPE html>
             .class-header-wrapper { width: 100vw; left: 0; }
             .site-logo  { width: 120px; height: 50px; }
             .project-name { font-size: 1.5rem; }
+            /* Reveal and style the collapsible sidebar toggle on mobile      */
+            .sidebar-toggle-summary {
+                display: block; cursor: pointer; list-style: none;
+                padding: 6px 0; font-weight: bold; font-size: 0.9em;
+                color: var(--bdq-brand);
+            }
+            .sidebar-toggle-summary::-webkit-details-marker { display: none; }
+        }
+
+        /* ── Print styles ────────────────────────────────────────────────── */
+        @media print {
+            /* Hide navigation, decoration, and interactive elements          */
+            aside.nav-menu,
+            .page-header,
+            .review-banner,
+            nav.field-index,
+            .category-section     { display: none !important; }
+            /* Expand content to full page width                              */
+            .content-wrapper      { margin-left: 0; }
+            /* Full-bleed strips: reset left offset and width to normal flow  */
+            .field-header-wrapper,
+            .class-header-wrapper { width: 100%; left: 0; }
+            /* Show all tests regardless of any active JS filters             */
+            .term-section,
+            .class-wrapper        { display: block !important; }
+            .no-results-msg       { display: none !important; }
+            /* Avoid splitting a single test entry across two printed pages   */
+            .term-section         { break-inside: avoid; }
         }
     </style>
 
@@ -452,6 +497,12 @@ TEMPLATE = '''<!DOCTYPE html>
 
 <!-- ── Fixed left sidebar ──────────────────────────────────────────────────── -->
 <aside class="nav-menu" aria-label="Page navigation and filters">
+    <!-- details/summary gives mobile users a one-tap way to collapse the
+         sidebar after use.  open attribute means it starts expanded.
+         On desktop the summary is hidden by CSS so the sidebar is always
+         fully visible.                                                    -->
+    <details class="sidebar-collapsible" open>
+    <summary class="sidebar-toggle-summary">&#9776; Navigation &amp; Filters</summary>
 
     <h2>BDQ Standard</h2>
     <ul class="sidebar-context-links">
@@ -545,6 +596,7 @@ TEMPLATE = '''<!DOCTYPE html>
         tests by category or type.</p>
     </div>
 
+    </details>
 </aside>
 
 <!-- ── Everything else: cleared right of the sidebar ───────────────────────── -->
@@ -1011,7 +1063,9 @@ def build_term_section(term, columns, term_type='', usecases='',
         f' data-categories="{categories_attr}">\n'
         f'{secondary_anchor}'
         f'<div class="field-header-wrapper"><h3>{label}</h3></div>\n'
-        f'<table class="term-table"><tbody>{rows}</tbody></table>\n'
+        f'<div class="term-table-wrapper">'
+        f'<table class="term-table"><tbody>{rows}</tbody></table>'
+        f'</div>\n'
         f'</section>'
     )
 
