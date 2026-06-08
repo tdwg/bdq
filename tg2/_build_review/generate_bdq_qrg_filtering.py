@@ -272,6 +272,20 @@ TEMPLATE = '''<!DOCTYPE html>
             display: block; margin-top: 5px; font-style: italic;
         }
 
+        /* CHANGE 1: noscript fallback message — hidden by default (JS present).
+           The <noscript><style> block below reveals it when JS is off.      */
+        .noscript-filter-msg {
+            display: none;
+            margin-top: 8px; padding: 8px 10px;
+            font-size: 0.82em; line-height: 1.45;
+            color: var(--bdq-muted);
+            background: var(--bdq-bg-soft);
+            border: 1px solid var(--bdq-border);
+            border-radius: 3px;
+        }
+        .noscript-filter-msg p { margin: 0 0 5px 0; }
+        .noscript-filter-msg p:last-child { margin-bottom: 0; }
+
         /* ── Main content ─────────────────────────────────────────────────── */
         .category-section { margin-bottom: 8px; }
 
@@ -342,6 +356,15 @@ TEMPLATE = '''<!DOCTYPE html>
             .project-name { font-size: 1.5rem; }
         }
     </style>
+
+    <!-- CHANGE 2: when JS is disabled, hide the filter panel and reveal the
+         noscript message.  Placed after </style> so it wins the cascade.   -->
+    <noscript>
+        <style>
+            .js-filter-panel     { display: none   !important; }
+            .noscript-filter-msg { display: block  !important; }
+        </style>
+    </noscript>
 </head>
 <body>
 
@@ -369,6 +392,10 @@ TEMPLATE = '''<!DOCTYPE html>
         class="jump-link" href="#Measure">Measure</a><a
         class="jump-link" href="#Validation">Validation</a>
     </div>
+
+    <!-- CHANGE 3: filter controls wrapped in .js-filter-panel so the
+         <noscript><style> above can hide them all in one rule.            -->
+    <div class="js-filter-panel">
 
     <div class="filters-active-msg" id="filters-active-msg">&#9888; Filters active</div>
 
@@ -414,6 +441,18 @@ TEMPLATE = '''<!DOCTYPE html>
         &#10005; Clear All Filters
     </button>
     <span id="filter-count"></span>
+
+    </div><!-- .js-filter-panel -->
+
+    <!-- CHANGE 3 (continued): plain-text fallback shown only when JS is off.
+         display:none by default; revealed by the <noscript><style> above.  -->
+    <div class="noscript-filter-msg" aria-label="JavaScript required for filters">
+        <p><strong>&#9888; Filtering requires JavaScript</strong></p>
+        <p>The filter controls are not available because JavaScript is
+        disabled in your browser.</p>
+        <p>Use the <strong>Index</strong> links above to navigate to
+        tests by category or type.</p>
+    </div>
 
 </aside>
 
@@ -974,9 +1013,11 @@ def generate_qrg():
         f.write(html_out)
     print(f"QRG successfully written to {OUTPUT_PATH}")
 
-    with open(DEPLOY_PATH, 'w', encoding='utf-8') as f:
-        f.write(html_out)
-    print(f"QRG successfully written to {DEPLOY_PATH}")
+    # CHANGE 4: only write a second copy if DEPLOY_PATH differs from OUTPUT_PATH
+    if DEPLOY_PATH != OUTPUT_PATH:
+        with open(DEPLOY_PATH, 'w', encoding='utf-8') as f:
+            f.write(html_out)
+        print(f"QRG successfully written to {DEPLOY_PATH}")
 
 
 if __name__ == '__main__':
