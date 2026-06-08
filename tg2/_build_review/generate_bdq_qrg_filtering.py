@@ -569,9 +569,8 @@ TEMPLATE = '''<!DOCTYPE html>
         </div>
     </div>
 
-    <!-- id="main-content" is the target of the skip navigation link      -->
+    <!-- id="main-content" is the target of the skip navigation link, while #top goes by convention to top of page and needs no anchor -->
     <main id="main-content">
-        <span id="top"></span>
 
         <div class="review-banner" role="note" aria-label="Under review">Under Review</div>
 
