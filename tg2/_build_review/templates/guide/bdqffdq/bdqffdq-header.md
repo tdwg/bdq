@@ -96,20 +96,21 @@ The following namespace abbreviations are used in this document:
 
 | **Abbreviation** | **Namespace** |
 | ------------ | -------------                               |
-| bdqval:      | https://rs.tdwg.org/bdqval/terms/           |
-| bdquc:       | https://rs.tdwg.org/bdquc/terms/            |
-| bdqtest:     | https://rs.tdwg.org/bdqtest/terms/          |
 | bdqcrit:     | https://rs.tdwg.org/bdqcrit/terms/          |
 | bdqdim:      | https://rs.tdwg.org/bdqdim/terms/           |
+| bdqenh:      | https://rs.tdwg.org/bdqenh/terms/           |
 | bdqffdq:     | https://rs.tdwg.org/bdqffdq/terms/          |
+| bdqtest:     | https://rs.tdwg.org/bdqtest/terms/          |
+| bdquc:       | https://rs.tdwg.org/bdquc/terms/            |
+| bdqval:      | https://rs.tdwg.org/bdqval/terms/           |
 | dcterms:     | http://purl.org/dc/terms/                   |
+| dqv:         | http://www.w3.org/ns/dqv#                   |
 | dwc:         | http://rs.tdwg.org/dwc/terms/               |
+| ldqd:        | http://www.w3.org/2016/05/ldqd#             |
 | owl:         | http://www.w3.org/2002/07/owl#              |
+| prov:        | http://www.w3.org/ns/prov#                  |
 | rdfs:        | http://www.w3.org/2000/01/rdf-schema#       |
 | skos:        | http://www.w3.org/2004/02/skos/core#        |
-| prov:        | http://www.w3.org/ns/prov#                  |
-| dqv:         | http://www.w3.org/ns/dqv#                   |
-| ldqd:        | http://www.w3.org/2016/05/ldqd#             |
 | xsd:         | http://www.w3.org/2001/XMLSchema#           |
 
 ### 1.7 Referring to Terms (normative)

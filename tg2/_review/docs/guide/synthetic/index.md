@@ -49,6 +49,7 @@ Draft Standard for Review
   - [1.3 Associated Documents (non-normative)](#13-associated-documents-non-normative)
   - [1.4 Status of the Content of this Document (normative)](#14-status-of-the-content-of-this-document-normative)
   - [1.5 RFC 2119 key words (normative)](#15-rfc-2119-key-words-normative)
+  - [1.6 Namespace abbreviations (non-normative)](#16-namespace-abbreviations-non-normative)
 
 - [2 Synthetic and Example Data (normative)](#2-synthetic-and-example-data-normative)
   - [2.1 Identifying Example Data (normative)](#21-identifying-example-data-normative)
@@ -100,6 +101,14 @@ Any sentence or phrase beginning with "For example" or "e.g.", whether in a norm
 ### 1.5 RFC 2119 key words (normative)
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [RFC 2119](https://tools.ietf.org/html/rfc2119).
+
+### 1.6 Namespace abbreviations (non-normative)
+
+The following namespace abbreviations are used in this document:
+
+| **Abbreviation** | **Namespace** |
+| ------------ | -------------                               |
+| dwc:         | http://rs.tdwg.org/dwc/terms/               |
 
 ## 2 Synthetic and Example Data (normative)
 

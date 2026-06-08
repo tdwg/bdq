@@ -80,6 +80,14 @@ Any sentence or phrase beginning with "For example" or "e.g.", whether in a norm
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [RFC 2119](https://tools.ietf.org/html/rfc2119).
 
+### 1.6 Namespace abbreviations (non-normative)
+
+The following namespace abbreviations are used in this document:
+
+| **Abbreviation** | **Namespace** |
+| ------------ | -------------                               |
+| dwc:         | http://rs.tdwg.org/dwc/terms/               |
+
 ## 2 Synthetic and Example Data (normative)
 
 Implementers of BDQ Tests, and other tests of biodiversity data quality may wish to use datasets containing known errors and issues for the purposes of testing the behavior of their Test implementations and to validate that they perform as expected. To do so, they may wish to create modified example data or synthetic data into which known errors have been introduced (and then see if Test implementations correctly identify those errors). To reduce the risk of such modified or synthetic data being mingled with actual biodiversity data in analyses, such data SHOULD BE marked in a consistent manner known to consumers of such data.

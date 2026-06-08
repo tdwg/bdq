@@ -181,15 +181,13 @@ The following namespace abbreviations are used in this document:
 
 | **Abbreviation** | **Namespace** |
 | ------------ | -------------                               |
-| bdqffdq:     | https://rs.tdwg.org/bdqffdq/terms/          |
-| bdqtest:     | https://rs.tdwg.org/bdqtest/terms/          |
-|              |                                             |
 | bdqcrit:     | https://rs.tdwg.org/bdqcrit/terms/          |
 | bdqdim:      | https://rs.tdwg.org/bdqdim/terms/           |
 | bdqenh:      | https://rs.tdwg.org/bdqenh/terms/           |
+| bdqffdq:     | https://rs.tdwg.org/bdqffdq/terms/          |
+| bdqtest:     | https://rs.tdwg.org/bdqtest/terms/          |
 | bdquc:       | https://rs.tdwg.org/bdquc/terms/            |
 | bdqval:      | https://rs.tdwg.org/bdqval/terms/           |
-|              |                                             |
 | dc:          | https://purl.org/dc/elements/1.1/           |
 | dcterms:     | http://purl.org/dc/terms/                   |
 | dwc:         | http://rs.tdwg.org/dwc/terms/               |
@@ -198,7 +196,6 @@ The following namespace abbreviations are used in this document:
 | rdfs:        | http://www.w3.org/2000/01/rdf-schema#       |
 | skos:        | http://www.w3.org/2004/02/skos/core#        |
 | xsd:         | http://www.w3.org/2001/XMLSchema#           |
-
 
 ### 1.7 Referring to Terms (normative)
 

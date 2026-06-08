@@ -204,7 +204,7 @@ This section provides a reader‑focused roadmap to that document set. Its purpo
     </tr>
     <tr>
       <th style="width: 100%;" colspan="3">Some Key Concepts: 
-          <a href="./docs/guide/users/index.md#31-test-types-non-normative">[Test](<index.md#glossary_Test> "A composition of a bdqffdq:DataQualityNeed with a bdqffdq:DataQualityMethod that links it to an instance of a bdqffdq:Specification, these instances being composed of InformationElements, Arguments, and Parameters. See…") Types</a> and <a href="./docs/guide/users/index.md#32-test-inputs-and-outputs-non-normative">Test Inputs and Outputs</a> in the Users Guide.
+          <a href="./docs/guide/users/index.md#31-test-types-non-normative">Test Types</a> and <a href="./docs/guide/users/index.md#32-test-inputs-and-outputs-non-normative">Test Inputs and Outputs</a> in the Users Guide.
           <br>
           <a href="./docs/guide/bdqtest/index.md#21-the-bdq-definition-of-test-non-normative">The BDQ Definition of "Test"</a> in BDQ Tests: Concepts and Use.</a>
       </th>
@@ -258,7 +258,7 @@ This section provides a reader‑focused roadmap to that document set. Its purpo
         Normative concepts and logic describing data quality needs and layers, with an explanatory guide.
 		<a href="./docs/guide/bdqffdq/index.md">Fitness For Use Framework Ontology: Concepts and Use</a><br>
 		bdqffdq: <a href="./docs/list/bdqffdq/index.md">Term List</a><br>
-		and serialized version: <a href="./vocabulary/bdqffdq.owl">[OWL](<index.md#glossary_OWL> "Web Ontology Language. A Semantic Web language designed to represent rich and complex knowledge about things. Hosts the namespace owl:") Ontology</a>.
+		and serialized version: <a href="./vocabulary/bdqffdq.owl">OWL Ontology</a>.
       </td>
     </tr>
     <tr>
@@ -275,7 +275,7 @@ This section provides a reader‑focused roadmap to that document set. Its purpo
 		<a href="./docs/guide/bdqtest/index.md">BDQ Tests: Concepts and Use</a>.<br>
         Normative machine‑readable definitions and versioned lists of Tests.
 		bdqtest: <a href="./docs/list/bdqtest/index.md">Term List</a><br>
-		and serialized versions: <a href="./dist/bdqtest.xml">[RDF](<index.md#glossary_RDF> "Resource Description Framework - a W3C standard for modeling, interchanging, and linking structured data on the web. Hosts the namespace rdf:")/XML</a>, <a href="./dist/bdqtest.ttl">Turtle</a>, <a href="./dist/bdqtest.json">JSON-LD</a>.
+		and serialized versions: <a href="./dist/bdqtest.xml">RDF/XML</a>, <a href="./dist/bdqtest.ttl">Turtle</a>, <a href="./dist/bdqtest.json">JSON-LD</a>.
       </td>
       <td valign="top">
 		:blue_book:
@@ -360,7 +360,7 @@ These two documents provide overviews and normative guidance of the subjects the
 
 These Guides are explanatory documents including some normative guidance targeting particular perspectives on the standard for particular audiences.
 
-- [**BDQ User's Guide**](docs/guide/users/index.md) - The User's Guide provides guidance for interpreting Test results.
+- [**BDQ User's Guide**](docs/guide/users/index.md) - The User's Guide provides guidance for interpreting [Test](<index.md#glossary_Test> "A composition of a bdqffdq:DataQualityNeed with a bdqffdq:DataQualityMethod that links it to an instance of a bdqffdq:Specification, these instances being composed of InformationElements, Arguments, and Parameters. See…") results.
 - [**BDQ Implementer's Guide**](docs/guide/implementers/index.md) - The Implementer's Guide provides normative and explanatory guidance for implementing the Tests in software.
 - [**Guide to Marking and Identifying Synthetic and Modified Data**](docs/guide/synthetic/index.md) - The Guide to Marking and Identifying Synthetic and Modified Data provides normative and explanatory guidance for marking Test evaluation data as synthetic or modified.
 
@@ -392,7 +392,7 @@ The Supporting Vocabularies are controlled vocabularies used in the technical de
 
 Note: For each of the following documents the landing page [IRI](<index.md#glossary_IRI> "Internationalized Resource Identifier is an internet protocol standard which builds on the Uniform Resource Identifier URI protocol by greatly expanding the set of permitted characters.") will resolve to the term list document when HTML is requested.
 
-Note: **None of these links will work until deployment of the standard**, but they are included here to show the intended structure of the IRIs and to provide a complete list of the landing page, term list IRIs, and related RDF metadata documents for the standard.
+Note: **None of these links will work until deployment of the standard**, but they are included here to show the intended structure of the IRIs and to provide a complete list of the landing page, term list IRIs, and related [RDF](<index.md#glossary_RDF> "Resource Description Framework - a W3C standard for modeling, interchanging, and linking structured data on the web. Hosts the namespace rdf:") metadata documents for the standard.
 
 - **The Biodiversity Data Quality (BDQ) Standard** - Overview of the BDQ standard. This page. 
   - [Standard IRI](https://www.tdwg.org/standards/nnnn/) redirects to [HTML](https://bdq.tdwg.org/bdq/)
@@ -465,7 +465,7 @@ Test Confomance Testing Data are intended for implementers to use to evaluate wh
 
 #### 3.5.3 Fitness For Use Framework (non-normative)
 
-The Fitness For Use Framework is provided as an OWL ontology.
+The Fitness For Use Framework is provided as an [OWL](<index.md#glossary_OWL> "Web Ontology Language. A Semantic Web language designed to represent rich and complex knowledge about things. Hosts the namespace owl:") ontology.
 
 - [**Biodiversity Data Quality Fitness For Use Framework (Ontology)**](vocabulary/bdqffdq.owl)
 

@@ -99,12 +99,9 @@ The following namespace abbreviations are used in this document:
 
 | **Abbreviation** | **Namespace** |
 | ------------ | -------------                               |
-| bdqval:      | https://rs.tdwg.org/bdqval/terms/           |
-| bdquc:       | https://rs.tdwg.org/bdquc/terms/           |
-| bdqtest:     | https://rs.tdwg.org/bdqtest/terms/          |
-| bdqdim:      | https://rs.tdwg.org/bdqdim/terms/           |
-| bdqenh:      | https://rs.tdwg.org/bdqenh/terms/           |
+| **bdqenh:**  | https://rs.tdwg.org/bdqenh/terms/           |
 | bdqffdq:     | https://rs.tdwg.org/bdqffdq/terms/          |
+| bdqtest:     | https://rs.tdwg.org/bdqtest/terms/          |
 | dcterms:     | http://purl.org/dc/terms/                   |
 | dwc:         | http://rs.tdwg.org/dwc/terms/               |
 | rdf:         | http://www.w3.org/1999/02/22-rdf-syntax-ns# |
