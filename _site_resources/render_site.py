@@ -28,6 +28,14 @@ from render_site_links import (
 # @author GitHub Copilot (GPT-5.4), with guidance and manual adjustments by @chicoreus Paul J. Morris.
 #
 
+# Markers that suppress bare-URL linkification.
+# <!--- NO LINK LINE ---> suppresses linkification for a single line.
+# <!--- NO LINK START ---> / <!--- NO LINK END ---> suppress linkification for a block.
+# Both <!-- and <!--- forms are accepted; matching is case-insensitive.
+NO_LINK_LINE_RE  = re.compile(r"<!-{2,3}\s*NO\s+LINK\s+LINE\s*-{2,3}>",  re.IGNORECASE)
+NO_LINK_START_RE = re.compile(r"<!-{2,3}\s*NO\s+LINK\s+START\s*-{2,3}>", re.IGNORECASE)
+NO_LINK_END_RE   = re.compile(r"<!-{2,3}\s*NO\s+LINK\s+END\s*-{2,3}>",   re.IGNORECASE)
+
 EMOJI_MAP = {
     ":green_book:": "📗",
     ":blue_book:": "📘",
@@ -66,7 +74,8 @@ def first_heading_title(text: str) -> str:
 
 # This function applies bare-URL linkification to a whole Markdown document before Markdown conversion.
 # It skips fenced code blocks entirely. For ordinary Markdown lines it produces Markdown links, while for
-# lines containing raw HTML it produces HTML anchor tags in the text nodes between tags.
+# lines containing raw HTML it produces HTML anchor tags in the text nodes between tags.  It also respects 
+# NO LINK markers to allow authors to suppress linkification where it would cause problems.
 def linkify_bare_urls(text: str) -> str:
     lines = text.splitlines()
     result = []
@@ -74,8 +83,23 @@ def linkify_bare_urls(text: str) -> str:
     fenced_re = re.compile(r"^([ \t]*)(```|~~~)")
     in_fence = False
     fence_marker = None
+    no_link_block = False          # ← tracks whether we are inside a NO LINK block
 
     for line in lines:
+        # --- block suppression markers -----------------------------------
+        # These are recognised outside fenced code so authors can wrap
+        # arbitrary prose sections.  The marker lines themselves are passed
+        # through unchanged (they remain as invisible HTML comments).
+        if NO_LINK_START_RE.search(line):
+            no_link_block = True
+            result.append(line)
+            continue
+        if NO_LINK_END_RE.search(line):
+            no_link_block = False
+            result.append(line)
+            continue
+
+        # --- fenced code blocks (never linkified) ------------------------
         fence_match = fenced_re.match(line)
         if fence_match:
             marker = fence_match.group(2)
@@ -92,13 +116,18 @@ def linkify_bare_urls(text: str) -> str:
             result.append(line)
             continue
 
+        # --- per-line suppression or active block suppression ------------
+        if no_link_block or NO_LINK_LINE_RE.search(line):
+            result.append(line)
+            continue
+
+        # --- normal linkification ----------------------------------------
         if "<" in line and ">" in line:
             result.append(linkify_bare_urls_in_html_line(line))
         else:
             result.append(linkify_bare_urls_in_markdown_line(line))
 
     return "\n".join(result)
-
 
 # A simple function to replace emoji shortcodes with their corresponding Unicode characters.
 def replace_emoji_shortcodes(text: str) -> str:

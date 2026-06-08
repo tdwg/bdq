@@ -638,19 +638,19 @@ BDQ details a convention for the structure and format of source authorities (in 
 * **Convention One**: An authority with a URI providing information about the authority.
   * `“Fixed String Identifier” {\[URL\]}`
 
-* Example: `bdqval:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}`
+* Example: bdqval:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}<!--- NO LINK LINE --->
   * Fixed string identifier:  "The Getty Thesaurus of Geographic Names (TGN)" 
-  * URI: `{[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}`
+  * URI: {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}<!--- NO LINK LINE --->
 
 * **Convention Two**: An authority with a URI providing information about the authority, and an API endpoint for checking values against the authority.
   * `“Fixed String Identifier” {\[URL\]}{API name\[URL of the API\]}`
 
-* Example: `bdqval:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}`
+* Example: bdqval:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}<!--- NO LINK LINE --->
   * Fixed string Identifier: "ISO 3166 Country Codes" (the name of the authority)
-  * URI: `{[https://www.iso.org/iso-3166-country-codes.html]}`
-  * API: `{ISO 3166-1-alpha-2 Country Code search \[https://www.iso.org/obp/ui/#search\]}`
+  * URI: {[https://www.iso.org/iso-3166-country-codes.html]}<!--- NO LINK LINE --->
+  * API: {ISO 3166-1-alpha-2 Country Code search \[https://www.iso.org/obp/ui/#search\]}<!--- NO LINK LINE --->
     * A label for the API: "ISO 3166-1-alpha-2 Country Code search" 
-    * An API endpoint: `[https://www.iso.org/obp/ui/#search]`
+    * An API endpoint: [https://www.iso.org/obp/ui/#search]`<!--- NO LINK LINE --->
 
 * **Convention Three**: An authority that is defined using a regular expression pattern.
   * `“Fixed String Identifier” {\[Regular Expression Pattern\]}`
@@ -674,7 +674,7 @@ Thus we could specify the source authority as follows:
 
 Which, combining the Expected Response with the default sourceAuthority, could be read by an implementer as: 
 * INTERNAL_PREREQUISITES_NOT_MET if prov:wasAttributedTo is bdqval:Empty; 
-* COMPLIANT if the value in prov:wasAttributedTo conforms to the expected format of "^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$"
+* COMPLIANT if the value in prov:wasAttributedTo conforms to the expected format of "^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$"<!--- NO LINK LINE --->
 * otherwise NOT_COMPLIANT.
 
 #### 6.7.2 Generalize, add a parameter (non-normative)
@@ -723,7 +723,7 @@ Having asserted that a `bdqval:sourceAuthority` is needed in the Test definition
 
 The concept of `Source Authority` can blur several related ideas including the authority itself (e.g. ORCID documentation/registry) an implementation strategy (e.g. regex validation of a resolvable ORCID URL) and a fixed string identifier (e.g. "Resolvable ORCID ID regex") that is used to identify the authority and implementation strategy in code.  It is important to be clear about these related concepts when defining a Test with a `Source Authority`.  The values in `Source Authority` should distinguish between "what is authoritative" from "how you check it." from "what you call it in code".  For example, for this Test, we have:  
 
-* **hasAuthoritiesDefaults** bdqval:sourceAuthority default = "Resolvable ORCID ID regex" `{["^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$"]}`
+* **hasAuthoritiesDefaults** bdqval:sourceAuthority default = "Resolvable ORCID ID regex" {["^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$"]}<!--- NO LINK LINE --->
 * **Parameter** bdqval:sourceAuthority
 
 * Authority: ORCID documentation 
@@ -737,7 +737,7 @@ Some Tests specify a `Source Authority` that is a controlled vocabulary which ha
 For example [VALIDATION_PHYLUM_FOUND](../terms/bdqtest/index.md#VALIDATION_PHYLUM_FOUND):
 
 * **Expected Response** EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:phylum is bdqval:Empty; COMPLIANT if the value of dwc:phylum is found as a value at the rank of Phylum in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT
-* **hasAuthoritiesDefaults** `bdqval:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}`
+* **hasAuthoritiesDefaults** bdqval:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}<!--- NO LINK LINE --->
 * **Parameters** bdqval:sourceAuthority
 
 * Authority: GBIF Backbone Taxonomy
@@ -798,7 +798,7 @@ So, our set of Test descriptors (the values of various bdqffdq: properties attac
 * **Expected Response**  INTERNAL_PREREQUISITES_NOT_MET if prov:wasAttributedTo is bdqval:Empty; COMPLIANT if the value in prov:wasAttributedTo conforms to the expected format of the bdqval:sourceAuthority; otherwise NOT_COMPLIANT.
 * **hasAuthoritiesDefaults** bdqval:sourceAuthority default = "Resolvable ORCID ID regex" `{[^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$]}`
 * **Parameter** bdqval:sourceAuthority
-* **Notes** The expected format of an ORCID ID is `^https://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$`, but we allow for protocol variants of http:// as well as https:// in the identifier and relax to the regex ^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$.  We expect the ORCID ID to be in resolvable form, not the bare identifier.  ORCID IDs are a subset of ISNI in the range 0000-0001-5000-0007 to 0000-0003-5000-0001, but this test only evaluates the format, not the range.  The form ORCID:0000-0001-5000-0007 should be treated as NOT_COMPLIANT by this test.
+* **Notes** The expected format of an ORCID ID is `^https://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$`, but we allow for protocol variants of http:// as well as https:// in the identifier and relax to the regex ^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$.  We expect the ORCID ID to be in resolvable form, not the bare identifier.  ORCID IDs are a subset of ISNI in the range 0000-0001-5000-0007 to 0000-0003-5000-0001, but this test only evaluates the format, not the range.  The form ORCID:0000-0001-5000-0007 should be treated as NOT_COMPLIANT by this test.<!--- NO LINK LINE --->
 
 #### 6.9.1 Summary of the Test Definition (non-normative)
 
@@ -869,7 +869,7 @@ Consider the Test [VALIDATION_COUNTRYCODE_STANDARD](../terms/bdqtest/index.md#VA
 The conformance testing dataset that accompanies the BDQ implementer's guide includes these following (and other) rows for this Test:
 
 | Label | dwc:countryCode | Response.status | Response.result | Response.comment |
-| --- | --- | --- | --- | --- | --- |
+| ----- | --------------- | --------------- | --------------- | ---------------- | 
 | VALIDATION_COUNTRYCODE_STANDARD |  | INTERNAL_PREREQUISITES_NOT_MET |  | dwc:countryCode is bdqval:Empty | 
 | VALIDATION_COUNTRYCODE_STANDARD | GL | RUN_HAS_RESULT | COMPLIANT | dwc:countryCode is a valid ISO (ISO 3166-1-alpha-2 country codes) value | 
 | VALIDATION_COUNTRYCODE_STANDARD | GRL | RUN_HAS_RESULT | NOT_COMPLIANT | dwc:countryCode is not a valid ISO (ISO 3166-1-alpha-2 country codes) value | 
@@ -892,6 +892,7 @@ A possible set of conformance testing data for our proposed `VALIDATION_WASATTRI
 * **Expected Response**  INTERNAL_PREREQUISITES_NOT_MET if prov:wasAttributedTo is bdqval:Empty; COMPLIANT if the value in prov:wasAttributedTo conforms to the expected format of the bdqval:sourceAuthority; otherwise NOT_COMPLIANT.
 * **hasAuthoritiesDefaults** bdqval:sourceAuthority default = "Resolvable ORCID ID regex" `{[^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$]}`
 
+<!--- NO LINK START --->
 | Label | prov:wasAttributedTo | Response.status | Response.result | Response.comment |
 | --- | --- | --- | --- | --- |
 | VALIDATION_WASATTRIBUTEDTO_STANDARD |  | INTERNAL_PREREQUISITES_NOT_MET |  | prov:wasAttributedTo is bdqval:Empty |
@@ -913,6 +914,7 @@ A possible set of conformance testing data for our proposed `VALIDATION_WASATTRI
 | VALIDATION_WASATTRIBUTEDTO_STANDARD | https://orcid.org/0000-0001-5000-0007#fragment | RUN_HAS_RESULT | NOT_COMPLIANT | prov:wasAttributedTo does not match expected format (fragment not allowed by regex) |
 | VALIDATION_WASATTRIBUTEDTO_STANDARD | https://orcid.org/0000-0001-5000-000 | RUN_HAS_RESULT | NOT_COMPLIANT | prov:wasAttributedTo does not match expected format (too short) |
 | VALIDATION_WASATTRIBUTEDTO_STANDARD | https://example.org/0000-0001-5000-0007 | RUN_HAS_RESULT | NOT_COMPLIANT | prov:wasAttributedTo does not match expected format (wrong domain; expected orcid.org) |
+<!--- NO LINK END --->
 
 Some of these test cases are "edge cases" that might not be immediately obvious to an implementer or the person who defined a test, such as:
 * The value in prov:wasAttributedTo is whitespace only.
