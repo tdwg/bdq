@@ -92,10 +92,9 @@ The following namespace abbreviations are used in this document:
 
 | **Abbreviation** | **Namespace** |
 | ------------ | -------------                               |
-| ac:          | https://rs.tdwg.org/ac/terms/               |
 | bdqffdq:     | https://rs.tdwg.org/bdqffdq/terms/          |
 | bdqval:      | https://rs.tdwg.org/bdqval/terms/           |
-| bdquc:       | https://rs.tdwg.org/bdquc/terms/            |
+| dcterms:     | http://purl.org/dc/terms/                   |
 | dwc:         | http://rs.tdwg.org/dwc/terms/               |
 | rdfs:        | http://www.w3.org/2000/01/rdf-schema#       |
 | skos:        | http://www.w3.org/2004/02/skos/core#        |

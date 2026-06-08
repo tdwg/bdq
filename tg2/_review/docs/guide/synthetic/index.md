@@ -108,6 +108,7 @@ The following namespace abbreviations are used in this document:
 
 | **Abbreviation** | **Namespace** |
 | ------------ | -------------                               |
+| bdqval:      | https://rs.tdwg.org/bdqval/terms/           |
 | dwc:         | http://rs.tdwg.org/dwc/terms/               |
 
 ## 2 Synthetic and Example Data (normative)

@@ -120,12 +120,11 @@ The following namespace abbreviations are used in this document:
 
 | **Abbreviation** | **Namespace** |
 | ------------ | -------------                               |
-| bdqdim:      | https://rs.tdwg.org/bdqdim/terms/           |
 | **bdqffdq:** | https://rs.tdwg.org/bdqffdq/terms/          |
 | bdqtest:     | https://rs.tdwg.org/bdqtest/terms/          |
 | bdqval:      | https://rs.tdwg.org/bdqval/terms/           |
-| bdquc:       | https://rs.tdwg.org/bdquc/terms/            |
 | dcterms:     | http://purl.org/dc/terms/                   |
+| dcmitype:    | http://purl.org/dc/dcmitype/                |
 | dwc:         | http://rs.tdwg.org/dwc/terms/               |
 | mids:		   | http://rs.tdwg.org/mids/elements/ _(draft)_ |
 | oa:          | http://www.w3.org/ns/oa#                    |
@@ -134,7 +133,6 @@ The following namespace abbreviations are used in this document:
 | rdfs:        | http://www.w3.org/2000/01/rdf-schema#       |
 | skos:        | http://www.w3.org/2004/02/skos/core#        |
 | tdwgutility: | http://rs.tdwg.org/dwc/terms/attributes/    |
-| xsd:         | http://www.w3.org/2001/XMLSchema#           |
 
 ### 1.7 Key to Vocabulary Terms (normative)
 

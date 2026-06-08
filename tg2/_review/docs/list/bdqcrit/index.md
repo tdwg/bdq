@@ -122,10 +122,10 @@ The following namespace abbreviations are used in this document:
 | **Abbreviation** | **Namespace** |
 | ------------ | -------------                               |
 | **bdqcrit:** | https://rs.tdwg.org/bdqcrit/terms/          |
+| bdqdim:	   | https://rs.tdwg.org/bdqdim/terms/            |
 | bdqffdq:     | https://rs.tdwg.org/bdqffdq/terms/          |
 | bdqtest:     | https://rs.tdwg.org/bdqtest/terms/          |
 | bdqval:      | https://rs.tdwg.org/bdqval/terms/           |
-| bdquc:       | https://rs.tdwg.org/bdquc/terms/            |
 | dcterms:     | http://purl.org/dc/terms/                   |
 | dwc:         | http://rs.tdwg.org/dwc/terms/               |
 | rdf:         | http://www.w3.org/1999/02/22-rdf-syntax-ns# |

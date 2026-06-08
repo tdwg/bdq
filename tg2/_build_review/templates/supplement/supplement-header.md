@@ -75,6 +75,9 @@ The following namespace abbreviations are used in this document:
 
 | **Abbreviation** | **Namespace** |
 | ------------ | -------------                               |
+| bdqcrit:     | https://rs.tdwg.org/bdqcrit/terms/          |
+| bdqdim:      | https://rs.tdwg.org/bdqdim/terms/            |
+| bdqenh:      | https://rs.tdwg.org/bdqenh/terms/           |
 | bdqffdq:     | https://rs.tdwg.org/bdqffdq/terms/          |
 | bdqtest:     | https://rs.tdwg.org/bdqtest/terms/          |
 | bdqval:      | https://rs.tdwg.org/bdqval/terms/           |
@@ -88,7 +91,6 @@ The following namespace abbreviations are used in this document:
 | rdf:         | http://www.w3.org/1999/02/22-rdf-syntax-ns# |
 | rdfs:        | http://www.w3.org/2000/01/rdf-schema#       |
 | skos:        | http://www.w3.org/2004/02/skos/core#        |
-| tdwgutility: | http://rs.tdwg.org/dwc/terms/attributes/    |
 | xsd:         | http://www.w3.org/2001/XMLSchema#           |
 
 ## 2 Historical Context (non-normative)

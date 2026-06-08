@@ -65,20 +65,18 @@ The following namespace abbreviations are used in this document:
 
 | **Abbreviation** | **Namespace** |
 | ------------ | -------------                               |
-| bdqval       | https://rs.tdwg.org/bdqval/terms/           |
-| bdquc:       | https://rs.tdwg.org/bdquc/terms/            |
-| bdqtest:     | https://rs.tdwg.org/bdqtest/terms/          |
 | bdqcrit:     | https://rs.tdwg.org/bdqcrit/terms/          |
 | bdqdim:      | https://rs.tdwg.org/bdqdim/terms/           |
+| bdqenh:      | https://rs.tdwg.org/bdqenh/terms/           |
 | bdqffdq:     | https://rs.tdwg.org/bdqffdq/terms/          |
+| bdqtest:     | https://rs.tdwg.org/bdqtest/terms/          |
+| bdqval:      | https://rs.tdwg.org/bdqval/terms/           |
+| bdquc:       | https://rs.tdwg.org/bdquc/terms/            |
 | dcterms:     | http://purl.org/dc/terms/                   |
 | dwc:         | http://rs.tdwg.org/dwc/terms/               |
-| owl:         | http://www.w3.org/2002/07/owl#              |
-| rdfs:        | http://www.w3.org/2000/01/rdf-schema#       |
-| skos:        | http://www.w3.org/2004/02/skos/core#        |
+| rdf:         | http://www.w3.org/1999/02/22-rdf-syntax-ns# |
 | prov:        | http://www.w3.org/ns/prov#                  |
 | foaf:        | http://xmlns.com/foaf/0.1/                  |
-| xsd:         | http://www.w3.org/2001/XMLSchema#           |
 
 ## 2 Overview (non-normative)
 
@@ -144,6 +142,7 @@ Treat this `Use Case` definition (and everything else that follows from it) as a
 See also: 
 * [Context for Quality, Uses and Purposes](../guide/users/index.md#2-context-for-quality-uses-and-purposes-non-normative) in the User's Guide.
 * [Concepts in the Framework (Use Cases, Policies, Contexts)](../guide/bdqffdq/index.md#223-concepts-in-the-framework-test-types-validation-issue-measure-amendment-non-normative) in the bdqffdq: ontology guide.
+* [List of BDQ Use Cases](../list/bdquc/index.md) in the bdquc: term-list document.
 
 ### 3.2 Identify the Information Elements (non-normative)
 

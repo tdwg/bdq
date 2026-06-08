@@ -121,6 +121,7 @@ The following namespace abbreviations are used in this document:
 
 | **Abbreviation** | **Namespace** |
 | ------------ | -------------                               |
+| ac:          | https://rs.tdwg.org/ac/terms/               |
 | bdqcrit:     | https://rs.tdwg.org/bdqcrit/terms/          |
 | bdqdim:      | https://rs.tdwg.org/bdqdim/terms/           |
 | bdqenh:      | https://rs.tdwg.org/bdqenh/terms/           |

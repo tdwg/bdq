@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """
-find_unknown_prefixes.py – Detect unknown / possibly-mistyped namespace
+check_potential_namespace_errors.py – Detect unknown / possibly-mistyped namespace
 prefixes in a directory tree of Markdown documents.
+
+@author Claude 4.6 Sonnet, with guidance from @chicoreus Paul J. Morris
 
 For each .md file the script:
 
@@ -29,9 +31,14 @@ Fenced code blocks (``` / ~~~) are masked out by default because
 host-language syntax (Python type annotations, JSON keys, etc.) can look
 like CURIEs.  Use ``--include-code-blocks`` to override.
 
+NOTE: For BDQ, this should be run on the _review directory, not 
+the _build_review/templates directory, as _review contains generated 
+files with additional namespaces in the generated  portions than occur 
+in the templates in the _build_review/templates directory.
+
 Usage
 -----
-    python find_unknown_prefixes.py <directory> [options]
+    python check_potential_namespace_errors.py <directory> [options]
 
 Options
 -------

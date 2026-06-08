@@ -98,16 +98,17 @@ The following namespace abbreviations are used in this document:
 | bdqffdq:     | https://rs.tdwg.org/bdqffdq/terms/          |
 | bdqtest:     | https://rs.tdwg.org/bdqtest/terms/          |
 | bdqval:      | https://rs.tdwg.org/bdqval/terms/           |
-| bdquc:       | https://rs.tdwg.org/bdquc/terms/            |
 | dc:          | https://purl.org/dc/elements/1.1/           |
 | dcterms:     | http://purl.org/dc/terms/                   |
 | dqv:         | http://www.w3.org/ns/dqv#                   |
 | dwc:         | http://rs.tdwg.org/dwc/terms/               |
+| oa:		   | http://www.w3.org/ns/oa#                    |
+| owl:		   | http://www.w3.org/2002/07/owl#              |
 | prov:        | http://www.w3.org/ns/prov#                  |
 | rdf:         | http://www.w3.org/1999/02/22-rdf-syntax-ns# |
 | rdfs:        | http://www.w3.org/2000/01/rdf-schema#       |
 | skos:        | http://www.w3.org/2004/02/skos/core#        |
-| tdwgutility: | http://rs.tdwg.org/dwc/terms/attributes/    |
+| xsd:         | http://www.w3.org/2001/XMLSchema#           |
 
 ### 1.7 Referring to Terms (normative)
 

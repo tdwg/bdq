@@ -32,16 +32,14 @@ Namespace abbreviations used in the table above are as follows:
 
 | **Abbreviation** | **Namespace** |
 | ------------ | -------------                               |
-| rdf:         | http://www.w3.org/1999/02/22-rdf-syntax-ns# |
-| rdfs:        | http://www.w3.org/2000/01/rdf-schema#       |
-| skos:        | http://www.w3.org/2004/02/skos/core#        |
 | bdqffdq:     | https://rs.tdwg.org/bdqffdq/terms/          |
 | bdqval:      | https://rs.tdwg.org/bdqval/terms/           |
 | bdquc:       | https://rs.tdwg.org/bdquc/terms/            |
-| bdqdim:      | https://rs.tdwg.org/bdqdim/terms/           |
-| bdqcrit:     | https://rs.tdwg.org/bdqcrit/terms/          |
-| bdqenh:      | https://rs.tdwg.org/bdqenh/terms/           |
+| dcterms:     | http://purl.org/dc/terms/                   |
 | dwc:         | http://rs.tdwg.org/dwc/terms/               |
+| rdf:         | http://www.w3.org/1999/02/22-rdf-syntax-ns# |
+| rdfs:        | http://www.w3.org/2000/01/rdf-schema#       |
+| skos:        | http://www.w3.org/2004/02/skos/core#        |
 
 
 ## Glossary (non-normative)

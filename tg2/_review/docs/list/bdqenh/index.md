@@ -123,6 +123,7 @@ The following namespace abbreviations are used in this document:
 
 | **Abbreviation** | **Namespace** |
 | ------------ | -------------                               |
+| bdqdim:	   | https://rs.tdwg.org/bdqdim/terms/          |
 | **bdqenh:**  | https://rs.tdwg.org/bdqenh/terms/           |
 | bdqffdq:     | https://rs.tdwg.org/bdqffdq/terms/          |
 | bdqtest:     | https://rs.tdwg.org/bdqtest/terms/          |

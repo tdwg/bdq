@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """
-check_namespaces.py – Validate namespace abbreviation tables in Markdown files.
+check_namespace_abbreviations.py – Validate namespace abbreviation tables in Markdown files.
+
+@author Claude 4.6 Sonnet, with guidance from @chicoreus Paul J. Morris
 
 Recursively scans a directory for .md files that contain a namespace-
 abbreviation table (a Markdown table whose header row contains the words
@@ -15,7 +17,8 @@ Per file:
 Globally (after all files):
   (3) A markdown table of every unique Abbreviation | Namespace pair found
       across all scanned documents, sorted alphabetically by abbreviation.
-  (4) Any prefix in KNOWN_PREFIXES not found in any document's table.
+  (4) Any prefix in KNOWN_PREFIXES (the list expected in BDQ) not found 
+      in any document's table.
   (5) Any prefix that resolves to more than one namespace URI (conflict).
 
 Prefix detection
@@ -28,9 +31,14 @@ so it is never matched inside a URI or a longer identifier.
 
 Edit KNOWN_PREFIXES below as the collection grows.
 
+NOTE: This should be run on the _review directory, not the _build_review/templates
+ directory, as _review contains generated files with additional namespaces 
+in the generated  portions than occur in the templates in the 
+_build_review/templates directory.
+
 Usage
 -----
-    python check_namespaces.py <directory> [-v] [-q] [--summary-md FILE]
+    python check_namespace_abbreviations.py <_review directory> [-v] [-q] [--summary-md FILE]
 
 Options
 -------
@@ -495,7 +503,7 @@ def main() -> None:
     )
     parser.add_argument(
         "directory",
-        help="Root directory to scan recursively for .md files.",
+        help="Root directory to scan recursively for .md files (should be _review directory).",
     )
     parser.add_argument(
         "-v", "--verbose",
