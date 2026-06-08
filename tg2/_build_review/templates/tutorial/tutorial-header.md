@@ -312,8 +312,8 @@ We choose VALIDATION for this Test because we are asserting whether data meets s
 * **Test Type** Validation
 
 See also: 
-* [Test Types](../guide/bdqtest/index.md#3-test-types-non-normative) in the BDQ Tests: Concepts and Use document.
-* [Test Types](../guide/users/index.md#31-test-types-non-normative) in the User Guide.
+* [Test Types](../guide/bdqtest/index.md#3-test-types-non-normative) in the [BDQ Tests: Concepts and Use](../guide/bdqtest/index.md) document.
+* [Test Types](../guide/users/index.md#31-test-types-non-normative) in the [BDQ User's Guide](../guide/users/index.md).
 
 > **Alternative Pattern: metric + analytical threshold**
 >
@@ -335,7 +335,7 @@ The label provides a concise summary of the Test's purpose and logic.  The compo
 * **Information Elements** Expressed as the "simple English term" for the `Information Element` being evaluated, or if multiple `Information Elements` are being evaluated together, a succinct more general concept (like LOCATION or EVENT) that encompasses those `Information Elements`
   * The use of "simple English terms" in the label (e.g., FOOTPRINTWKT) rather than the formal prefixed term (dwc:footprintWKT) to make it more accessible to human readers, and allows the label to be used as a string constant in many programming languages.
 * **Evaluation:** What is the Test testing? 
-  * Examples of evaluations include "NOTEMPTY" (a value is present), “FOUND” (the value can be found in a source authority), “INRANGE” (the value is within an expected range), etc.  See the [Evaluations](../supplement/index.md#evaluations) table in the [Supplement](../supplement/index.md).
+  * Examples of evaluations include "NOTEMPTY" (a value is present), “FOUND” (the value can be found in a source authority), “INRANGE” (the value is within an expected range), etc.  See the [Evaluations](../supplement/index.md#evaluations) table in the [BDQ Supplemental Information](../supplement/index.md).
 
 This Test is a Validation, it is evaluating the Information Element `dwc:footprintWKT`, and it is evaluating whether there is a value in `dwc:footprintWKT`, so the label is VALIDATION_FOOTPRINTWKT_NOTEMPTY.  This label is expected to be a constant that does not change, even in translation.
 
@@ -347,7 +347,7 @@ This gives us the following names for the Test:
 * **Label** VALIDATION_FOOTPRINTWKT_NOTEMPTY
 * **Preferred Label** Validation dwc:footprintWKT Not Empty 
 
-See also: [Naming Conventions (non-normative)](../supplement/index.md#312-naming-conventions-non-normative) in the [Supplement](../supplement/index.md) document.
+See also: [Naming Conventions (non-normative)](../supplement/index.md#312-naming-conventions-non-normative) in the [BDQ Supplemental Information](../supplement/index.md) document.
 
 #### 4.4.2 Identifiers supporting software and developers (non-normative)
 
@@ -439,9 +439,9 @@ In this simple case, if `dwc:footprintWKT` is `bdqval:NotEmpty`, the Test should
 Formally in the bdqffdq: ontology, `Specification` is a class, which has a `bdqffdq:hasExpectedResponse` property (the `Expected Response` text). The Specification can have other properties for source authorities, parameters and default values.  The specification for a simple Test is found in the text of the `hasExpectedResponse`, in a more complex Test, the specification is found split across all these properties of the `Specification` class instance.  When we talk about the specification of a Test, we mean the `Expected Response`, sometimes combined with other properties of a `Specification`.
 
 See also: 
-* [Reading a Specification](../guide/implementers/index.md#232-reading-a-specification-non-normative) in the Implementers Guide.
+* [Reading a Specification](../guide/implementers/index.md#232-reading-a-specification-non-normative) in the [BDQ Implementer's Guide](../guide/implementers/index.md).
 * [The bdqval: vocabulary](../list/bdqval/index.md) for standard concepts that can be used in Test specifications.
-* The `Data Quality Solutions` portions of the diagrams in [Concepts in the Framework](../guide/bdqffdq/index.md#223-concepts-in-the-framework-test-types-validation-issue-measure-amendment-non-normative) in the bdqffdq: guide.
+* The `Data Quality Solutions` portions of the diagrams in [Concepts in the Framework](../guide/bdqffdq/index.md#223-concepts-in-the-framework-test-types-validation-issue-measure-amendment-non-normative) in the [Fitness For Use Framework Ontology: Concepts and Use](../guide/bdqffdq/index.md).
 
 #### 4.7.1 What Isn't Said in the Test Specification (non-normative)
 
@@ -458,9 +458,9 @@ This is shorthand for the explicit, but much harder to read:
 The conventions of evaluating clauses in sequence, returning a result from the first clause that evaluates to true, and highlighting only the key differences in each clause are very important in making complex Expected Responses readable and understandable to implementers.  (see, for example, the Expected Response for [VALIDATION_DATEIDENTIFIED_INRANGE](../terms/bdqtest/index.md#validation_dateidentified_inrange)).
 
 See also:
-* [Responses from Tests](../guide/users/index.md#323-outputs-responses-from-tests-normative) in the Users Guide.
-* [Reading a Specification](../guide/implementers/index.md#232-reading-a-specification-non-normative) in the Implementers Guide.
-* [Responses as a Shorthand](../guide/implementers/index.md#2321-response-as-shorthand-for-a-set-of-bdqffdq-concepts-non-normative) in the Implementers Guide.
+* [Responses from Tests](../guide/users/index.md#323-outputs-responses-from-tests-normative) in the [BDQ User's Guide](../guide/users/index.md).
+* [Reading a Specification](../guide/implementers/index.md#232-reading-a-specification-non-normative) in the [BDQ Implementer's Guide](../guide/implementers/index.md).
+* [Responses as a Shorthand](../guide/implementers/index.md#2321-response-as-shorthand-for-a-set-of-bdqffdq-concepts-non-normative) in the [BDQ Implementer's Guide](../guide/implementers/index.md).
 
 ### 4.8 Source Authority? (non-normative)
 
@@ -483,7 +483,7 @@ In this Test, we are simply checking for the presence of a value in `dwc:footpri
 **Purpose**: Create a human-readable label for the Test and list its properties in a structured format.
 
 Now let's put all of the information about the Test together.  See the [bdqtest: term-list](../list/bdqtest/index.md) document for examples (like the very similar [VALIDATION_COUNTRYCODE_NOTEMPTY](../list/bdqtest/index.md#bdqtest_853b79a2-b314-44a2-ae46-34a1e7ed85e4).  
-
+ 
 For our Test, we have:
 
 * **Description** Is there a value in dwc:footprintWKT?
@@ -501,18 +501,18 @@ For our Test, we have:
 To formally express this Test in RDF we would need to add some more identifiers and structures, but the above are the key properties that define the Test and provide the information needed for an implementer to understand and implement the Test.  See the [Fitness For Use Framework Ontology: Concepts and Use](../guide/bdqffdq/index.md) document for details about the full formal structure.
 
 See also: 
-* [Test Types](../guide/users/index.md#31-test-types-non-normative) in the User’s Guide.
-* [Reading Test Descriptors](../guide/implementers/index.md#23-reading-test-descriptors-non-normative) in the Implementer’s Guide.
-* [Relating Classes and Properties](../guide/bdqffdq/index.md#311-relating-classes-and-properties-non-normative) in the Fitness For Use Framework Ontology: Concepts and Use document.
+* [Test Types](../guide/users/index.md#31-test-types-non-normative) in the [BDQ User’s Guide](../guide/users/index.md).
+* [Reading Test Descriptors](../guide/implementers/index.md#23-reading-test-descriptors-non-normative) in the [BDQ Implementer’s Guide](../guide/implementers/index.md).
+* [Relating Classes and Properties](../guide/bdqffdq/index.md#311-relating-classes-and-properties-non-normative) in the [Fitness For Use Framework Ontology: Concepts and Use](../guide/bdqffdq/index.md) document.
 
 #### 4.10.1 Formal RDF Representation of the Test (non-normative)
 
 This simple list of properties is sufficient for a human reader to understand the Test and for a developer to implement the Test.  However, to formally express this Test in RDF we would need to add some more identifiers and structures, but the above are the key properties that define the Test and provide the information needed for an implementer to understand and implement the Test.  The [bdqffdq: ontology guide](../guide/bdqffdq/index.md) gives the details about the full formal structure.  We won't go into the details of the RDF representation here.
 
 See also:
-* [Diagram of Test Concepts](../guide/implementers/index.md#3-compliant-implementation-normative) in the implementers guide.
-* [Example RDF for a Test](../guide/bdqtest/index.md#6-example-rdf-description-of-a-test-non-normative) in the BDQ Tests: Concepts and Use document (VALIDATION_COUNTRYCODE_STANDARD in an RDF/XML serialization).
-* [Example RDF for a Test](../guide/bdqffdq/index.md#26-example-representation-of-a-bdq-test-non-normative) in the Fitness For Use Framework Ontology: Concepts and Use (VALIDATION_COUNTRY_FOUND in a Turtle serialization). 
+* [Diagram of Test Concepts](../guide/implementers/index.md#3-compliant-implementation-normative) in the [BDQ Implementer's Guide](../guide/implementers/index.md).
+* [Example RDF for a Test](../guide/bdqtest/index.md#6-example-rdf-description-of-a-test-non-normative) in the [BDQ Tests: Concepts and Use](../guide/bdqtest/index.md) document (VALIDATION_COUNTRYCODE_STANDARD in an RDF/XML serialization).
+* [Example RDF for a Test](../guide/bdqffdq/index.md#26-example-representation-of-a-bdq-test-non-normative) in the [Fitness For Use Framework Ontology: Concepts and Use](../guide/bdqffdq/index.md) (VALIDATION_COUNTRY_FOUND in a Turtle serialization). 
 
 #### 4.10.2 Summary of the Test Definition (non-normative)
 
@@ -707,9 +707,9 @@ We can make the bdqval:sourceAuthority as a parameter for this Test, meaning tha
 * **Parameter** bdqval:sourceAuthority
 
 See also:
-- [Parameterizing the Tests](../guide/bdqtest/index.md#43-parameterizing-the-tests-normative) in the bdqtest: landing page.
-- [Test Parameters](../guide/users/index.md#34-test-parameters-non-normative) in the Users Guide.
-- [Test Parameters in Reports](../guide/users/index.md#341-test-parameters-in-reports-normative) in the Users Guide.
+- [Parameterizing the Tests](../guide/bdqtest/index.md#43-parameterizing-the-tests-normative) in the [BDQ Tests: Concepts and Use](../guide/bdqtest/index.md).
+- [Test Parameters](../guide/users/index.md#34-test-parameters-non-normative) in the [BDQ User's Guide](../guide/users/index.md).
+- [Test Parameters in Reports](../guide/users/index.md#341-test-parameters-in-reports-normative) in the [BDQ User's Guide](../guide/users/index.md).
 
 #### 6.7.3  Revisiting the Test Specification (non-normative)
 
@@ -772,7 +772,7 @@ But we might or might not want to allow for http:// as well as https:// and allo
 
 #### 6.8.1 Example Complex Implementation Notes (non-normative)
 
-Notes are present when some aspects of a Test may not be obvious to the casual user or implementer. In some cases, Notes are not required, but Notes can be very helpful as in the example of the BDQ Test [VALIDATION_COUNTRYCODE_STANDARD](../list/bdqtest/index.md#bdqtest_0493bcfb-652e-4d17-815b-b0cce0742fbe):
+Notes are present when some aspects of a Test may not be obvious to the casual user or implementer. In some cases, Notes are not required, but Notes can be very helpful as in the example of the BDQ Test [VALIDATION_COUNTRYCODE_STANDARD](../terms/bdqtest/index.md#bdqtest_0493bcfb-652e-4d17-815b-b0cce0742fbe):
 
 > “Locations outside of a jurisdiction covered by a country code may
 > have a value in the field dwc:countryCode, the ISO user defined codes
@@ -830,8 +830,8 @@ We use a shorthand for the set of properties associated with a `Response` that a
 BDQ keeps Tests portable by standardizing semantics (inputs, decision rules, outputs), but it leaves binding of raw data inputs to `Information Elements` and execution mechanics (orchestration of test execution) to whatever framework fits the implementer's environment.  This means that the behavior of the implementation of an individual Test should be tested in isolation, presenting the Test with known inputs, and confirming that the Test produces the expected outputs based on the logic of the decision rules in the specification.  This means that Test conformance testing is expected to be performed on the level of individual Test implementations.
 
 See also: 
-* [Responsibilities of a Test](../guide/implementers/index.md#651-responsibilities-of-a-test-non-normative) in the implementers guide.
-* [Responsibilities of a Test Execution Framework](../guide/implementers/index.md#66-responsibilities-of-a-test-execution-framework-non-normative) in the implementers guide.
+* [Responsibilities of a Test](../guide/implementers/index.md#651-responsibilities-of-a-test-non-normative) in the [BDQ Implementer's Guide](../guide/implementers/index.md).
+* [Responsibilities of a Test Execution Framework](../guide/implementers/index.md#66-responsibilities-of-a-test-execution-framework-non-normative) in the [BDQ Implementer's Guide](../guide/implementers/index.md).
 
 ### 7.2 Conformance Testing Data and exposing Assumptions (non-normative)
 
@@ -840,8 +840,8 @@ Conformance testing data that provides the expected outputs from a Test for a va
 The description and specification of a Test may involve hidden assumptions by those who defined the Test.  Conformance testing data provided by more than one person, especially if those people have different perspectives and examples of the data being evaluated by the Test can help to expose these assumptions.  For example, if the Test specification includes a clause that says "COMPLIANT if the value in prov:wasAttributedTo conforms to the expected format for an ORCID ID", there may be a hidden assumption that the expected format for an ORCID ID is only the canonical resolvable form of ORCID IDs (e.g. https://orcid.org/0000-0002-1825-0097), but some users may have data with ORCID IDs in a different format (e.g. ORCID:0000-0002-1825-0097), and they may have an assumption that this the expected format for an ORCID ID.  If multiple people provide conformance testing data, it is likely to includes examples of both formats.  Testing can thus expose these assumptions and feedback to clarification of the Test specification to make it clear which formats are expected to be COMPLIANT and which are expected to be NOT_COMPLIANT.  Expect that the Test specification will need revision based on questions raised in implementation and on testing the behavior of the implementation against real world data, and that this process will be iterative until the Test specification is clear and unambiguous, and Test implementations behave as expected when presented with a variety of test cases, including edge cases.
 
 See also: 
-* [Conformance Testing Implementations](../guide/implementers/index.md#8-conformance-testing-implementations-normative) in the implementers guide.
-* [Structure of Response](../guide/bdqtest/index.md#41-structure-of-response-normative) in the bdqtest: landing page.
+* [Conformance Testing Implementations](../guide/implementers/index.md#8-conformance-testing-implementations-normative) in the [BDQ Implementer's Guide](../guide/implementers/index.md).
+* [Structure of Response](../guide/bdqtest/index.md#41-structure-of-response-normative) in the [BDQ Tests: Concepts and Use](.../guide/bdqtest/index.md).
 
 #### 7.2.1 Unit Tests (non-normative)
 
@@ -881,7 +881,7 @@ The columns shown here are the human readable identifier (Label) for the Test, t
 This conformance testing data includes edge cases such as an empty value for dwc:countryCode, a valid ISO 3166-1-alpha-2 country code, some cases that are not 2 letter country codes, and edge cases taken from the notes: a valid code for high seas taken from UN/Locode, and the user-defined ISO 2-letter country code ZZ.  
 
 See also: 
-[VALIDATION_COUNTRYCODE_STANDARD](../list/bdqtest/index.md#bdqtest_0493bcfb-652e-4d17-815b-b0cce0742fbe) in the bdqtest: term-list document.
+[VALIDATION_COUNTRYCODE_STANDARD](../terms/bdqtest/index.md#bdqtest_0493bcfb-652e-4d17-815b-b0cce0742fbe) in the bdqtest: term-list document.
 [High Seas](../supplement/index.md#394-high-seas-non-normative) in the Supplement.
 
 ##### 7.2.2.2 Conformance testing data for our proposed VALIDATION_WASATTRIBUTEDTO_STANDARD Test (non-normative)
@@ -992,7 +992,7 @@ Consideration of all of these will help ensure comprehensive coverage of the Tes
 **Critical Thinking:** Both those defining a Test and those implementing it must consider "pitfalls for the naive".  The domain experts defining a Test are likely to perceive a different set of pitfalls from developers implementing a Test.  Multiple iterations and a conversation mediated by Test conformance Testing data is necessary for developing a robust Test description and specification (`Description`, `Information Elements`, `hasAuthoritiesDefaults`, `hasSourceAuthority`, and `Parameters`) 
 
 See also: 
-* [Conformance Testing Implementations](../guide/implementers/index.md#8-conformance-testing-implementations-normative) in the BDQ Implementer's Guide.
+* [Conformance Testing Implementations](../guide/implementers/index.md#8-conformance-testing-implementations-normative) in the [BDQ Implementer's Guide](../guide/implementers/index.md).
 
 ### 7.4 Execution Frameworks (non-normative)
 
@@ -1049,8 +1049,8 @@ A framework’s job is to act as the “adapter layer” that turns heterogeneou
 In short: BDQ keeps Tests portable by standardizing semantics (inputs, decision rules, outputs), while leaving execution mechanics (binding, orchestration, serialization) to whatever framework fits the implementer’s environment.
 
 See also: 
-* [Responsibilities of a Test](../guide/implementers/index.md#651-responsibilities-of-a-test-non-normative) in the implementers guide.
-* [Responsibilities of a Test Execution Framework](../guide/implementers/index.md#66-responsibilities-of-a-test-execution-framework-non-normative) in the implementers guide.
+* [Responsibilities of a Test](../guide/implementers/index.md#651-responsibilities-of-a-test-non-normative) in the [BDQ Implementer's Guide](../guide/implementers/index.md).
+* [Responsibilities of a Test Execution Framework](../guide/implementers/index.md#66-responsibilities-of-a-test-execution-framework-non-normative) in the [BDQ Implementer's Guide](../guide/implementers/index.md).
 
 ## 8 Use an implementation for Quality Control (non-normative)
 
@@ -1073,9 +1073,9 @@ Informally, to perform `Quality Control` we could run the set of `Validation` Te
 For our **Validated Distribution Authority** `Use Case` we would likely wish to define one or more `Amendment` Tests to propose changes to fix problems identified by the `Validations` that are relevant to that `Use Case`, but we won't explore these here.  Instead, we will focus on the `Multi Record` `Measures` that we would want to use to evaluate the quality of a dataset for this `Use Case`, and to track improvements in that quality as we find and fix errors in the dataset.
 
 See also:
-- [Quality Control and Quality Assurance](../guide/users/index.md#21-quality-control-and-quality-assurance-non-normative) in the User's Guide.
-- [Single Record and MultiRecord Tests](../guide/bdqtest/index.md#35-single-record-and-multi-record-tests-non-normative) in the BDQ Tests: Concepts and Use document.
-- [Data Quality Control and Data Quality Assurance](../guide/bdqffdq/index.md#221-data-quality-control-and-data-quality-assurance-non-normative) in the Fitness For Use Framework Ontology: Concepts and Use document.
+- [Quality Control and Quality Assurance](../guide/users/index.md#21-quality-control-and-quality-assurance-non-normative) in the [BDQ User's Guide](../guide/users/index.md).
+- [Single Record and MultiRecord Tests](../guide/bdqtest/index.md#35-single-record-and-multi-record-tests-non-normative) in the [BDQ Tests: Concepts and Use](../guide/bdqtest/index.md) document.
+- [Data Quality Control and Data Quality Assurance](../guide/bdqffdq/index.md#221-data-quality-control-and-data-quality-assurance-non-normative) in the [Fitness For Use Framework Ontology: Concepts and Use](../guide/bdqffdq/index.md) document.
 
 ### 8.1 MultiRecord Measures for Quality Control (non-normative)
 
@@ -1109,7 +1109,7 @@ Conceptually what we want to do with `Multi Record` `Measures` is:
 
 This separation on `Resource Type` (`Single Record` or `Multi Record`) is important: it keeps each `Single Record` Test atomic and easy to implement, while providing a consistent, standards-aligned way to summarize results for dataset-level decision making.
 
-See also [Framework Competency Questions](../supplement/index.md#24-framework-competency-questions-non-normative) in the Supplement for examples of sparql queries that select the set of `Single Record` `Validations` associated by `Policy` with a `Use Case`.
+See also [Framework Competency Questions](../supplement/index.md#24-framework-competency-questions-non-normative) in the [BDQ Supplemental Information](../supplement/index.md) for examples of sparql queries that select the set of `Single Record` `Validations` associated by `Policy` with a `Use Case`.
 
 #### 8.1.2 Two common patterns of MultiRecord Measures (non-normative)
 
@@ -1139,7 +1139,7 @@ A key idea in `Quality Control` is that dataset-level metrics should be interpre
 
 Because `Multi Record` `Measures` return only a single value, they are often paired with reporting or visualization outside of the Framework (e.g., spreadsheets, dashboards, or issue lists) that link summary counts back to the specific records needing attention.
 
-See also: [Phases: Pre-Amendment, Amendment, Post-Amendment](../guide/implementers/index.md#641-phases-pre-amendment-amendment-post-amendment-normative) in the implementers guide for a discussion of "pre-amendment" and "post-amendment" phases in a `Quality Control` workflow.
+See also: [Phases: Pre-Amendment, Amendment, Post-Amendment](../guide/implementers/index.md#641-phases-pre-amendment-amendment-post-amendment-normative) in the [BDQ Implementer's Guide}(../guide/implementers/index.md) for a discussion of "pre-amendment" and "post-amendment" phases in a `Quality Control` workflow.
 
 ##### 8.1.3.1 Contrast with Quality Assurance (non-normative)
 
