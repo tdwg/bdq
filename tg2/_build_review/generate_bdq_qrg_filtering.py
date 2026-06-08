@@ -263,10 +263,11 @@ TEMPLATE = '''<!DOCTYPE html>
         #type-filters input, #category-filters input {
             margin-right: 4px; cursor: pointer;
         }
-        /* Two-column layout for the four short category values
-           (TIME, SPACE, NAME, OTHER); test-type labels are longer
-           and remain single-column.                               */
+        /* Two-column layout for the category and test type values */
         #category-filters {
+            columns: 2;
+        }
+        #type-filters {
             columns: 2;
         }
         .filter-select {
