@@ -426,6 +426,7 @@ DEFAULT_BLACKLIST: Dict[str, List[SectionSpec]] = {
         SectionSpec(heading_text="8.3 Examples of the Data for Conformance Testing (non-normative)")
     ],
     "index.md": [
+		SectionSpec(heading_text="2 A Roadmap to the BDQ Standard (non-normative)"),
         SectionSpec(heading_text="7 References (non-normative)")
     ],
 }
