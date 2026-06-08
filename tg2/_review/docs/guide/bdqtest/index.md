@@ -78,7 +78,7 @@ Draft Standard for Review
   - [4.3 Parameterizing the Tests (normative)](#43-parameterizing-the-tests-normative)
     - [4.3.1 There can be a Source Authority without a Parameter (normative)](#431-there-can-be-a-source-authority-without-a-parameter-normative)
     - [4.3.2 Explaining Source Authorities without a Parameter (non-normative)](#432-explaining-source-authorities-without-a-parameter-non-normative)
-    - [4.3.2 Parameter Examples (non-normative)](#432-parameter-examples-non-normative)
+    - [4.3.3 Parameter Examples (non-normative)](#433-parameter-examples-non-normative)
 
 - [5 Design of the Tests (normative)](#5-design-of-the-tests-normative)
   - [5.1 BDQ Tests: An Operational Perspective (non-normative)](#51-bdq-tests-an-operational-perspective-non-normative)
@@ -181,13 +181,15 @@ The following namespace abbreviations are used in this document:
 
 | **Abbreviation** | **Namespace** |
 | ------------ | -------------                               |
-| bdqval:      | https://rs.tdwg.org/bdqval/terms/           |
-| bdquc:       | https://rs.tdwg.org/bdquc/terms/            |
+| bdqffdq:     | https://rs.tdwg.org/bdqffdq/terms/          |
 | bdqtest:     | https://rs.tdwg.org/bdqtest/terms/          |
+|              |                                             |
 | bdqcrit:     | https://rs.tdwg.org/bdqcrit/terms/          |
 | bdqdim:      | https://rs.tdwg.org/bdqdim/terms/           |
 | bdqenh:      | https://rs.tdwg.org/bdqenh/terms/           |
-| bdqffdq:     | https://rs.tdwg.org/bdqffdq/terms/          |
+| bdquc:       | https://rs.tdwg.org/bdquc/terms/            |
+| bdqval:      | https://rs.tdwg.org/bdqval/terms/           |
+|              |                                             |
 | dc:          | https://purl.org/dc/elements/1.1/           |
 | dcterms:     | http://purl.org/dc/terms/                   |
 | dwc:         | http://rs.tdwg.org/dwc/terms/               |
@@ -230,12 +232,12 @@ In BDQ, a **Test** is described using the Fitness For Use Framework (`bdqffdq:`)
 
 BDQ Tests are designed to be applied in the context of particular uses of data. The BDQ standard defines a set of `Use Cases` that represent common uses of biodiversity data. Each `Use Case` is associated with one or more Tests that can be used to evaluate whether data meet that need. By applying the appropriate Tests for a given `Use Case`, users can assess the fitness of their data for that particular use and identify areas for improvement.
 
-BDQ initially defines five `Use Cases`.  These use cases were based on the work of Data Quality Task Group 3 ([Data Quality Use Cases](https://www.tdwg.org/community/bdq/tg-3/)). The BDQ Tests can only relate to the concept of ‘quality’ as a consequence of their application to a specific use case.  The five use cases included in the BDQ standard were intended to cover a range of applications that were considered in common use, but they are far from being comprehensive. The use cases were intended as a template or guide for those who may want to generate other use cases for their environments.  See [Section 8 Creating New Use Cases](#8-creating-new-use-cases-non-normative) and see the [Tutorial](../../tutorial/index.md) for a step-by-step example of how to define a `Use Case` and select appropriate Tests for that `Use Case`.
+BDQ initially defines four `Use Cases`.  Some of these use cases were based on the work of Data Quality Task Group 3 ([Data Quality Use Cases](https://www.tdwg.org/community/bdq/tg-3/)). The BDQ Tests can only relate to the concept of ‘quality’ as a consequence of their application to a specific use case.  The four use cases included in the BDQ standard were intended to cover a range of applications that were considered in common use, but they are far from comprehensive. The use cases were intended as a template or guide for those who may want to generate other use cases for their environments.  See [Section 8 Creating New Use Cases](#8-creating-new-use-cases-non-normative) and see the [Tutorial](../../tutorial/index.md) for a step-by-step example of how to define a `Use Case` and select appropriate Tests for that `Use Case`.
 
 The initial BDQ `Use Cases` are:
 * [bdquc:Alien-Species](../../list/bdquc/index.md#bdquc_Alien-Species) [(Included Tests)](../../terms/bdqtest/qrg_index_by_usecase.md#bdqucalien-species)
-* [bdquc:Species-Distribution-Modeling-Trees](../../list/bdquc/index.md#bdquc_SDM-Trees) [(Included Tests)](../../terms/bdqtest/qrg_index_by_usecase.md#bdqucsdm-trees)
 * [bdquc:Spatial-Temporal_Patterns](../../list/bdquc/index.md#bdquc_Spatial-Temporal_Patterns) [(Included Tests)](../../terms/bdqtest/qrg_index_by_usecase.md#bdqucspatial-temporal_patterns)
+* [bdquc:Species-Distribution-Modeling-Trees](../../list/bdquc/index.md#bdquc_SDM-Trees) [(Included Tests)](../../terms/bdqtest/qrg_index_by_usecase.md#bdqucsdm-trees)
 * [bdquc:Taxon-Management](../../list/bdquc/index.md#bdquc_Taxon-Management) [(Included Tests)](../../terms/bdqtest/qrg_index_by_usecase.md#bdquctaxon-management)
 
 Under the principle that data has quality only with respect to use, each of the BDQ Tests is allocated to at least one `Use Case`.  Note that there is a many-to-many relationship here: One BDQ Test can be in multiple `Use Cases` and one `Use Case` may have many associated BDQ Tests, with `Policies` relating Tests to `Use Cases`.  See [Compliance depends on Use Case](../implementers/index.md#31-compliance-depends-on-use-case-normative) in the Implementer's Guide for further explanation.
@@ -267,7 +269,8 @@ Each Issue Test is composed of an instance of `bdqffdq:Issue` (which expresses a
 
 `Issue` Tests are a form of warning flag where the Test is drawing attention to potential problem with the value of an `Information Element` for at least one use of the data.
 
-We have used `Issue` Tests for a small number of cases where we wished to flag a value that might indicate a record is not fit for some purpose, but the evaluation of these cases would take human review. For example, the Test [ISSUE_ANNOTATION_NOTEMPTY](../../terms/bdqtest/index.md#ISSUE_ANNOTATION_NOTEMPTY) is informing the tester than there is at least one annotation associated with a record and this should be evaluated before using the record. Similarly for the other two `Issue` Tests: [ISSUE_DATAGENERALIZATIONS_NOTEMPTY](../../terms/bdqtest/index.md#ISSUE_DATAGENERALIZATIONS_NOTEMPTY) where some form of transformation has occurred, and the Test [ISSUE_ESTABLISHMENTMEANS_NOTEMPTY](../../terms/bdqtest/index.md#ISSUE_ESTABLISHMENTMEANS_NOTEMPTY) where the value needs to be assessed for utility.
+We have used `Issue` Tests for a small number of cases where we wished to flag a value that might indicate a record is not fit for some purpose, but the evaluation of these cases would take human review. For example, the Test [ISSUE_ANNOTATION_NOTEMPTY](../../terms/bdqtest/index.md#ISSUE_ANNOTATION_NOTEMPTY) is informing the tester than there is at least one annotation associated with a record and this should be evaluated before using the record. Similarly for the two `Issue` Tests
+where some form of transformation has occurred: [ISSUE_DATAGENERALIZATIONS_NOTEMPTY](../../terms/bdqtest/index.md#ISSUE_DATAGENERALIZATIONS_NOTEMPTY), and for the Test [ISSUE_ESTABLISHMENTMEANS_NOTEMPTY](../../terms/bdqtest/index.md#ISSUE_ESTABLISHMENTMEANS_NOTEMPTY) where the value needs to be assessed for utility and the Test [ISSUE_COORDINATES_CENTEROFCOUNTRY](../../terms/bdqtest/index.md#ISSUE_COORDINATES_CENTEROFCOUNTRY) which signals a likely high uncertainty for a georeference.
 
 The response of an `Issue` Test (an instance of a [bdqffdq:IssueResponse](<../../list/bdqffdq/index.md#IssueResponse> "A bdqffdq:Response expressing the result of a bdqffdq:Implementation evaluating a bdqffdq:Issue for a particular bdqffdq:DataQualityNeed in a particular bdqffdq:DataResource.")) MUST take one of three forms.
 
@@ -409,7 +412,7 @@ BDQ `Multi Record` (`bdqffdq:MultiRecord`) Tests operate on a dataset as a whole
 
 #### 4.2.1 Single Record in Darwin Core Data Package (normative)
 
-In a Darwin Core Data Package (DwC-DP), data are represented as a set of normalized, interrelated tables rather than as discrete, self-contained records. As a consequence, the concept of a “Single Record” for the purposes of Biodiversity Data Quality (BDQ) Tests does not correspond directly to a single row in any table. Instead, a **`Single Record`** in a DwC-DP context SHOULD be understood as a **derived record view**, constructed as a projection (view) over the relational structure of the data package.
+While BDQ is independent of data encodings such as Darwin Core, we illustrate a basic principle here using the Darwin Core Data Package (DwC-DP) as an example. DwC-DP data are represented as a set of normalized, interrelated tables rather than as discrete, self-contained records. As a consequence, the concept of a “Single Record” for the purposes of Biodiversity Data Quality (BDQ) Tests does not correspond directly to a single row in any table. Instead, a **`Single Record`** in a DwC-DP context SHOULD be understood as a **derived record view**, constructed as a projection (view) over the relational structure of the data package.
 
 ##### 4.2.1.1 Definition of Single Record View (normative)
 
@@ -489,7 +492,7 @@ AMENDMENT_DCTYPE_STANDARDIZED does not take a `Parameter` for the source authori
 
 Section [2.3.2 Reading a Specification (non-normative)](../implementers/index.md#232-reading-a-specification-non-normative) of the [BDQ Implementer's Guide](../implementers/index.md) contains additional guidance for handling parameters in BDQ Test implementations.
 
-#### 4.3.2 Parameter Examples (non-normative)
+#### 4.3.3 Parameter Examples (non-normative)
 
 Example values for `bdqffdq:hasAuthoritiesDefaults`: 
 
@@ -649,7 +652,7 @@ A complete description of BDQ Tests can be found in the RDF representation of th
 
 ## 7 Creating New Tests (non-normative)
 
-The Tests in the BDQ Standard are a subset of all the possible tests that could be developed for testing biodiversity data quality, even within the `Darwin Core` environment. [2.1 Definition of Core](../../supplement/index.md#21-definition-of-core-non-normative) in the [BDQ Supplemental Information](../../supplement/index.md) provides the background context as to why the current suite of Tests were chosen.
+The Tests in the BDQ Standard are a subset of all the possible tests that could be developed for testing biodiversity data quality, even within the `Darwin Core` environment. [2.1 Definition of Core](../../supplement/index.md#21-definition-of-core-non-normative) in the [BDQ Supplemental Information](../../supplement/index.md) provides the context as to why the current suite of Tests were chosen. Note that we used the concept of [CORE](<../../../index.md#glossary_CORE> "Tests that are useful for evaluating biodiversity data quality as represented by the values of Darwin Core terms. CORE tests address identified user needs, are widely applicable, informative, unambiguous, well defined,…") as a GitHub tag to identify the subset of all tests we created that form the BDQ standard.
 
 Users and communities are free to define, implement, and use their own Tests for their own purposes, and may propose Tests for inclusion within the BDQ Standard.
 
