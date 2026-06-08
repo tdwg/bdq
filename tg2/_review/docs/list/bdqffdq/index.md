@@ -127,6 +127,7 @@ The following namespace abbreviations are used in this document:
 | bdquc:       | https://rs.tdwg.org/bdquc/terms/            |
 | dcterms:     | http://purl.org/dc/terms/                   |
 | dwc:         | http://rs.tdwg.org/dwc/terms/               |
+| mids:		   | http://rs.tdwg.org/mids/elements/ _(draft)_ |
 | oa:          | http://www.w3.org/ns/oa#                    |
 | owl:         | http://www.w3.org/2002/07/owl#              |
 | rdf:         | http://www.w3.org/1999/02/22-rdf-syntax-ns# |
@@ -1367,7 +1368,7 @@ A bdqffdq:SingleRecord, like a bdqffdq:MultiRecord, consists of data with a defi
 - Type: bdqffdq:ResponseStatus
 - Preferred Label: NOT_AMENDED
 - Definition: A bdqffdq:ResponseStatus used to indicate that a bdqffdq:Amendment proposed no change.
-- Comments: No value will be provided in a bdqfdq:hasResponseResultValue. bdqffdq:Amendments do not provide bdqffdq:hasResponseResult object properties.
+- Comments: No value will be provided in a bdqffdq:hasResponseResultValue. bdqffdq:Amendments do not provide bdqffdq:hasResponseResult object properties.
 
 ********************
 
@@ -1377,7 +1378,7 @@ A bdqffdq:SingleRecord, like a bdqffdq:MultiRecord, consists of data with a defi
 - Type: bdqffdq:ResponseStatus
 - Preferred Label: RUN_HAS_RESULT
 - Definition: A bdqffdq:ResponseStatus used to indicate that that a result was correctly generated.
-- Comments: Applies to bdqffdq:Validations, bdqffdq:Issues and bdqfdfq:Measures, but not bdqffdq:Amendments. For a bdqffdq:Validation or a bdqffdq:Issue, the value will be found as a bdqffdq:ResponseResult object by following bdqffdq:hasResponseResult. For a bdqffdq:Measure, the value could be either in the data property bdqffdq:hasResponseResultValue or could be a ResponseResult object.
+- Comments: Applies to bdqffdq:Validations, bdqffdq:Issues and bdqffdq:Measures, but not bdqffdq:Amendments. For a bdqffdq:Validation or a bdqffdq:Issue, the value will be found as a bdqffdq:ResponseResult object by following bdqffdq:hasResponseResult. For a bdqffdq:Measure, the value could be either in the data property bdqffdq:hasResponseResultValue or could be a ResponseResult object.
 
 ********************
 

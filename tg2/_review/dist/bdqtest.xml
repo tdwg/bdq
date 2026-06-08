@@ -1679,8 +1679,8 @@
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/70</skos:historyNote>
 	<skos:note>There are any number of potential controlled vocabularies that might be used for this Test, including local vocabularies and taxon specific vocabularies. If dwc:scientificNameID is bdqval:Empty, use dwc:scientificName and dwc:CultivarEpithet to search for a unique taxon. If dwc:scientificName is bdqval:Empty, check with the terms that form atomic parts of it (dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:taxonRank, dwc:scientificNameAuthorship), and if more than one match is found, use the remaining terms to try to disambiguate to a single Taxon record. The terms dwc:subgenus, dwc:genus, dwc:family, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:scientificNameID,, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID should not be used to make a match if dwc:scientificNameID and dwc:scientificName or dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:taxonRank, dwc:scientificNameAuthorship are bdqval:Empty. Note that Test VALIDATION_SCIENTIFICNAME_FOUND (4c09f127-737b-4686-82a0-7c8e30841590) is a more specific Test for a subset of Information Elements from this Test.</skos:note>
 	<skos:prefLabel>Validation dwc:Taxon Unambiguous for SingleRecord</skos:prefLabel>
-	<bdqffdq:hasActedUponInformationElement rdf:resource="urn:uuid:307daada-d30a-4905-8ea3-ebff92f84181"/>
-	<bdqffdq:hasConsultedInformationElement rdf:resource="urn:uuid:4de2c993-3932-48a9-b130-48c25d19ed2a"/>
+	<bdqffdq:hasActedUponInformationElement rdf:resource="urn:uuid:7dbf3aca-f028-4eba-a132-db6abbd4ff16"/>
+	<bdqffdq:hasConsultedInformationElement rdf:resource="urn:uuid:1a70260f-f70c-4c36-a325-e7bdcaecc170"/>
 	<bdqffdq:hasCriterion rdf:resource="https://rs.tdwg.org/bdqcrit/terms/Unambiguous"/>
 	<bdqffdq:hasDataQualityDimension rdf:resource="https://rs.tdwg.org/bdqdim/terms/Conformance"/>
 	<bdqffdq:hasResourceType rdf:resource="https://rs.tdwg.org/bdqffdq/terms/SingleRecord"/>
@@ -5309,6 +5309,36 @@
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:e7f2383d-9406-497e-86b1-163b65955533"/>
 </rdf:Description>
 
+<rdf:Description rdf:about="urn:uuid:1a70260f-f70c-4c36-a325-e7bdcaecc170">
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Consulted"/>
+	<rdfs:label>Information Element Consulted dwc:taxonID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID, dwc:higherClassification, dwc:kingdom, dwc:phylum, dwc:class, dwc:order, dwc:superfamily, dwc:family, dwc:subfamily, dwc:tribe, dwc:subtribe, dwc:genus, dwc:genericName, dwc:subgenus, dwc:infragenericEpithet, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:cultivarEpithet, dwc:vernacularName, dwc:scientificNameAuthorship, dwc:taxonRank</rdfs:label>
+	<skos:prefLabel>Information Element Consulted dwc:taxonID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID, dwc:higherClassification, dwc:kingdom, dwc:phylum, dwc:class, dwc:order, dwc:superfamily, dwc:family, dwc:subfamily, dwc:tribe, dwc:subtribe, dwc:genus, dwc:genericName, dwc:subgenus, dwc:infragenericEpithet, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:cultivarEpithet, dwc:vernacularName, dwc:scientificNameAuthorship, dwc:taxonRank</skos:prefLabel>
+	<bdqffdq:composedOf rdf:resource="http://rs.tdwg.org/dwc/terms/acceptedNameUsageID"/>
+	<bdqffdq:composedOf rdf:resource="http://rs.tdwg.org/dwc/terms/class"/>
+	<bdqffdq:composedOf rdf:resource="http://rs.tdwg.org/dwc/terms/cultivarEpithet"/>
+	<bdqffdq:composedOf rdf:resource="http://rs.tdwg.org/dwc/terms/family"/>
+	<bdqffdq:composedOf rdf:resource="http://rs.tdwg.org/dwc/terms/genericName"/>
+	<bdqffdq:composedOf rdf:resource="http://rs.tdwg.org/dwc/terms/genus"/>
+	<bdqffdq:composedOf rdf:resource="http://rs.tdwg.org/dwc/terms/higherClassification"/>
+	<bdqffdq:composedOf rdf:resource="http://rs.tdwg.org/dwc/terms/infragenericEpithet"/>
+	<bdqffdq:composedOf rdf:resource="http://rs.tdwg.org/dwc/terms/infraspecificEpithet"/>
+	<bdqffdq:composedOf rdf:resource="http://rs.tdwg.org/dwc/terms/kingdom"/>
+	<bdqffdq:composedOf rdf:resource="http://rs.tdwg.org/dwc/terms/order"/>
+	<bdqffdq:composedOf rdf:resource="http://rs.tdwg.org/dwc/terms/originalNameUsageID"/>
+	<bdqffdq:composedOf rdf:resource="http://rs.tdwg.org/dwc/terms/phylum"/>
+	<bdqffdq:composedOf rdf:resource="http://rs.tdwg.org/dwc/terms/scientificNameAuthorship"/>
+	<bdqffdq:composedOf rdf:resource="http://rs.tdwg.org/dwc/terms/specificEpithet"/>
+	<bdqffdq:composedOf rdf:resource="http://rs.tdwg.org/dwc/terms/subfamily"/>
+	<bdqffdq:composedOf rdf:resource="http://rs.tdwg.org/dwc/terms/subgenus"/>
+	<bdqffdq:composedOf rdf:resource="http://rs.tdwg.org/dwc/terms/subtribe"/>
+	<bdqffdq:composedOf rdf:resource="http://rs.tdwg.org/dwc/terms/superfamily"/>
+	<bdqffdq:composedOf rdf:resource="http://rs.tdwg.org/dwc/terms/taxonConceptID"/>
+	<bdqffdq:composedOf rdf:resource="http://rs.tdwg.org/dwc/terms/taxonID"/>
+	<bdqffdq:composedOf rdf:resource="http://rs.tdwg.org/dwc/terms/taxonRank"/>
+	<bdqffdq:composedOf rdf:resource="http://rs.tdwg.org/dwc/terms/tribe"/>
+	<bdqffdq:composedOf rdf:resource="http://rs.tdwg.org/dwc/terms/vernacularName"/>
+</rdf:Description>
+
 <rdf:Description rdf:about="urn:uuid:1a7adc4a-58ee-480c-9765-3834ea433bf0">
 	<dcterms:description>INTERNAL_PREREQUISITES_NOT_MET if no Tests of type VALIDATION were attempted to be run; REPORT of the number of Tests of output type VALIDATION run against the record that have Response.result="NOT_COMPLIANT"</dcterms:description>
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Specification"/>
@@ -5808,14 +5838,6 @@
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_NOTEMPTY</skos:prefLabel>
 	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/b60c8c58-0137-4b6a-97e9-57d8ca5cf248-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:221a02d3-c01e-48c8-9726-8ce423cc6434"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="urn:uuid:307daada-d30a-4905-8ea3-ebff92f84181">
-	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
-	<rdfs:label>Information Element ActedUpon dwc:scientificName, dwc:scientificNameID</rdfs:label>
-	<skos:prefLabel>Information Element ActedUpon dwc:scientificName, dwc:scientificNameID</skos:prefLabel>
-	<bdqffdq:composedOf rdf:resource="http://rs.tdwg.org/dwc/terms/scientificName"/>
-	<bdqffdq:composedOf rdf:resource="http://rs.tdwg.org/dwc/terms/scientificNameID"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:30db5994-81fa-4684-ac54-cfc226209d27">
@@ -6708,36 +6730,6 @@
 	<bdqffdq:hasArgument rdf:resource="urn:uuid:b7c56646-56f1-4094-b2be-8546c7e18102"/>
 	<bdqffdq:hasAuthoritiesDefaults>bdqval:sourceAuthority default = "10m-admin-1 boundaries" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/]},bdqval:spatialBufferInMeters default = "3000"</bdqffdq:hasAuthoritiesDefaults>
 	<bdqffdq:hasExpectedResponse>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the values of dwc:decimalLatitude or dwc:decimalLongitude are bdqval:Empty or invalid, or dwc:stateProvince is bdqval:Empty or not found in the bdqval:sourceAuthority; COMPLIANT if the geographic coordinates fall on or within the boundary in the bdqval:sourceAuthority for the given dwc:stateProvince (after coordinate reference system transformations, if any, have been accounted for), or within the distance given by bdqval:spatialBufferInMeters outside that boundary; otherwise NOT_COMPLIANT.</bdqffdq:hasExpectedResponse>
-</rdf:Description>
-
-<rdf:Description rdf:about="urn:uuid:4de2c993-3932-48a9-b130-48c25d19ed2a">
-	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Consulted"/>
-	<rdfs:label>Information Element Consulted dwc:taxonID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID, dwc:higherClassification, dwc:kingdom, dwc:phylum, dwc:class, dwc:order, dwc:superfamily, dwc:family, dwc:subfamily, dwc:tribe, dwc:subtribe, dwc:genus, dwc:genericName, dwc:subgenus, dwc:infragenericEpithet, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:cultivarEpithet, dwc:vernacularName, dwc:scientificNameAuthorship, dwc:taxonRank</rdfs:label>
-	<skos:prefLabel>Information Element Consulted dwc:taxonID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID, dwc:higherClassification, dwc:kingdom, dwc:phylum, dwc:class, dwc:order, dwc:superfamily, dwc:family, dwc:subfamily, dwc:tribe, dwc:subtribe, dwc:genus, dwc:genericName, dwc:subgenus, dwc:infragenericEpithet, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:cultivarEpithet, dwc:vernacularName, dwc:scientificNameAuthorship, dwc:taxonRank</skos:prefLabel>
-	<bdqffdq:composedOf rdf:resource="http://rs.tdwg.org/dwc/terms/acceptedNameUsageID"/>
-	<bdqffdq:composedOf rdf:resource="http://rs.tdwg.org/dwc/terms/class"/>
-	<bdqffdq:composedOf rdf:resource="http://rs.tdwg.org/dwc/terms/cultivarEpithet"/>
-	<bdqffdq:composedOf rdf:resource="http://rs.tdwg.org/dwc/terms/family"/>
-	<bdqffdq:composedOf rdf:resource="http://rs.tdwg.org/dwc/terms/genericName"/>
-	<bdqffdq:composedOf rdf:resource="http://rs.tdwg.org/dwc/terms/genus"/>
-	<bdqffdq:composedOf rdf:resource="http://rs.tdwg.org/dwc/terms/higherClassification"/>
-	<bdqffdq:composedOf rdf:resource="http://rs.tdwg.org/dwc/terms/infragenericEpithet"/>
-	<bdqffdq:composedOf rdf:resource="http://rs.tdwg.org/dwc/terms/infraspecificEpithet"/>
-	<bdqffdq:composedOf rdf:resource="http://rs.tdwg.org/dwc/terms/kingdom"/>
-	<bdqffdq:composedOf rdf:resource="http://rs.tdwg.org/dwc/terms/order"/>
-	<bdqffdq:composedOf rdf:resource="http://rs.tdwg.org/dwc/terms/originalNameUsageID"/>
-	<bdqffdq:composedOf rdf:resource="http://rs.tdwg.org/dwc/terms/phylum"/>
-	<bdqffdq:composedOf rdf:resource="http://rs.tdwg.org/dwc/terms/scientificNameAuthorship"/>
-	<bdqffdq:composedOf rdf:resource="http://rs.tdwg.org/dwc/terms/specificEpithet"/>
-	<bdqffdq:composedOf rdf:resource="http://rs.tdwg.org/dwc/terms/subfamily"/>
-	<bdqffdq:composedOf rdf:resource="http://rs.tdwg.org/dwc/terms/subgenus"/>
-	<bdqffdq:composedOf rdf:resource="http://rs.tdwg.org/dwc/terms/subtribe"/>
-	<bdqffdq:composedOf rdf:resource="http://rs.tdwg.org/dwc/terms/superfamily"/>
-	<bdqffdq:composedOf rdf:resource="http://rs.tdwg.org/dwc/terms/taxonConceptID"/>
-	<bdqffdq:composedOf rdf:resource="http://rs.tdwg.org/dwc/terms/taxonID"/>
-	<bdqffdq:composedOf rdf:resource="http://rs.tdwg.org/dwc/terms/taxonRank"/>
-	<bdqffdq:composedOf rdf:resource="http://rs.tdwg.org/dwc/terms/tribe"/>
-	<bdqffdq:composedOf rdf:resource="http://rs.tdwg.org/dwc/terms/vernacularName"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:4de30040-b177-4b0d-a2f3-4c659f179494">
@@ -8045,6 +8037,14 @@
 	<skos:prefLabel>AmendmentMethod: AMENDMENT_EVENTDATE_FROM_VERBATIM with Specification Specification for: AMENDMENT_EVENTDATE_FROM_VERBATIM</skos:prefLabel>
 	<bdqffdq:forAmendment rdf:resource="https://rs.tdwg.org/bdqtest/terms/6d0a0c10-5e4a-4759-b448-88932f399812-2025-03-06"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:b417d971-8b0f-49ab-9431-3364ba8694e2"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:7dbf3aca-f028-4eba-a132-db6abbd4ff16">
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
+	<rdfs:label>Information Element ActedUpon dwc:scientificName, dwc:scientificNameID</rdfs:label>
+	<skos:prefLabel>Information Element ActedUpon dwc:scientificName, dwc:scientificNameID</skos:prefLabel>
+	<bdqffdq:composedOf rdf:resource="http://rs.tdwg.org/dwc/terms/scientificName"/>
+	<bdqffdq:composedOf rdf:resource="http://rs.tdwg.org/dwc/terms/scientificNameID"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:7dc4a4bd-8c04-45c5-9d1a-46080473e3d6">

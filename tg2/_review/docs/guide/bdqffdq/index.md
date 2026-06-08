@@ -205,6 +205,8 @@ The following namespace abbreviations are used in this document:
 | bdqtest:     | https://rs.tdwg.org/bdqtest/terms/          |
 | bdquc:       | https://rs.tdwg.org/bdquc/terms/            |
 | bdqval:      | https://rs.tdwg.org/bdqval/terms/           |
+| dcat:        | http://www.w3.org/ns/dcat#                  |
+| dcmitype:	   | http://purl.org/dc/dcmitype/                |
 | dcterms:     | http://purl.org/dc/terms/                   |
 | dqv:         | http://www.w3.org/ns/dqv#                   |
 | dwc:         | http://rs.tdwg.org/dwc/terms/               |

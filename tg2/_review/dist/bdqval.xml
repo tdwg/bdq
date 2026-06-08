@@ -56,8 +56,8 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdfs:label xml:lang="en">AllValidationTestsRunOnSingleRecord</rdfs:label>
      <skos:prefLabel xml:lang="en">AllValidationTestsRunOnSingleRecord</skos:prefLabel>
      <skos:note xml:lang="en">Used in Measure of Single Record Tests</skos:note>
-     <rdfs:comment xml:lang="en">An Abstract Information Element composed of the outcomes of a list of bdqffdq:Validation Tests from a single run on a bdqffdq:SingleRecord in a bdwffdq:DataQualityReport.</rdfs:comment>
-     <skos:definition xml:lang="en">An Abstract Information Element composed of the outcomes of a list of bdqffdq:Validation Tests from a single run on a bdqffdq:SingleRecord in a bdwffdq:DataQualityReport.</skos:definition>
+     <rdfs:comment xml:lang="en">An Abstract Information Element composed of the outcomes of a list of bdqffdq:Validation Tests from a single run on a bdqffdq:SingleRecord in a bdqffdq:DataQualityReport.</rdfs:comment>
+     <skos:definition xml:lang="en">An Abstract Information Element composed of the outcomes of a list of bdqffdq:Validation Tests from a single run on a bdqffdq:SingleRecord in a bdqffdq:DataQualityReport.</skos:definition>
      <rdf:value>AllValidationTestsRunOnSingleRecord</rdf:value>
      <skos:inScheme rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
      <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/AbstractInformationElement"/>

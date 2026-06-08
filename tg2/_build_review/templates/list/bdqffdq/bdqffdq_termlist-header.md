@@ -103,6 +103,7 @@ The following namespace abbreviations are used in this document:
 | bdquc:       | https://rs.tdwg.org/bdquc/terms/            |
 | dcterms:     | http://purl.org/dc/terms/                   |
 | dwc:         | http://rs.tdwg.org/dwc/terms/               |
+| mids:		   | http://rs.tdwg.org/mids/elements/ _(draft)_ |
 | oa:          | http://www.w3.org/ns/oa#                    |
 | owl:         | http://www.w3.org/2002/07/owl#              |
 | rdf:         | http://www.w3.org/1999/02/22-rdf-syntax-ns# |

@@ -349,7 +349,7 @@ So, for a record where `dwc:maximumElevationinMeters` is given as "4500" which i
 * `Response.result`=COMPLIANT
 * `Response.comment`="The provided value of `dwc:maximumElevationInMeters` [4500] is in range".
 
-But if the Test is run on the same data, but with the parameter `bqd:maximumValidElevationInMeters` set to 3724, appropriate for New Zealand, the `Response` would be:
+But if the Test is run on the same data, but with the parameter `bdqval:maximumValidElevationInMeters` set to 3724, appropriate for New Zealand, the `Response` would be:
 
 * `Response.status`=RUN_HAS_RESULT
 * `Response.result`=NOT_COMPLIANT

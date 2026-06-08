@@ -171,7 +171,7 @@ Definition:
 
 Fitness requirements: 
 ```
-Records are fit for the use case bbdquc:SDM-Trees when they have valid:
+Records are fit for the use case bdquc:SDM-Trees when they have valid:
 * dwc:scientificName identified to species level.
 * dwc:basisOfRecord = bdqval:notEmpty.
 * dwc:occurrenceStatus = "present".

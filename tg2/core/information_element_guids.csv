@@ -201,3 +201,5 @@
 "urn:uuid:6172815e-4f10-47d4-bd55-16b691f3f527","Information Element ActedUpon dwc:geodeticDatum, dwc:coordinateUncertaintyInMeters"
 "urn:uuid:74bf2f5b-f98b-42bb-be29-0cef831fd556","Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes"
 "urn:uuid:b7a02234-c4d0-40fd-a437-af8330cc700f","Information Element Consulted oa:hasTarget"
+"urn:uuid:7dbf3aca-f028-4eba-a132-db6abbd4ff16","Information Element ActedUpon dwc:scientificName, dwc:scientificNameID"
+"urn:uuid:1a70260f-f70c-4c36-a325-e7bdcaecc170","Information Element Consulted dwc:taxonID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID, dwc:higherClassification, dwc:kingdom, dwc:phylum, dwc:class, dwc:order, dwc:superfamily, dwc:family, dwc:subfamily, dwc:tribe, dwc:subtribe, dwc:genus, dwc:genericName, dwc:subgenus, dwc:infragenericEpithet, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:cultivarEpithet, dwc:vernacularName, dwc:scientificNameAuthorship, dwc:taxonRank"

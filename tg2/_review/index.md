@@ -166,16 +166,33 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 ### 1.7 Namespace abbreviations (non-normative)
 
 | Abbreviation | Namespace |
-|--------------|-----------|
-| dwc:         | http://rs.tdwg.org/dwc/terms/      |
-| oa:          | https://www.w3.org/TR/annotation-vocab/ |
+| ------------ | --------- |
+| ac:          | https://rs.tdwg.org/ac/terms/ |
 | bdqcrit:     | https://rs.tdwg.org/bdqcrit/terms/ |
-| bdqdim:      | https://rs.tdwg.org/bdqdim/terms/  |
-| bdqenh:      | https://rs.tdwg.org/bdqenh/terms/  |
+| bdqdim:      | https://rs.tdwg.org/bdqdim/terms/ |
+| bdqenh:      | https://rs.tdwg.org/bdqenh/terms/ |
 | bdqffdq:     | https://rs.tdwg.org/bdqffdq/terms/ |
 | bdqtest:     | https://rs.tdwg.org/bdqtest/terms/ |
-| bdquc:       | https://rs.tdwg.org/bdquc/terms/   |
-| bdqval:      | https://rs.tdwg.org/bdqval/terms/  |
+| bdquc:       | https://rs.tdwg.org/bdquc/terms/ |
+| bdqval:      | https://rs.tdwg.org/bdqval/terms/ |
+| dc:          | https://purl.org/dc/elements/1.1/ |
+| dcat:        | http://www.w3.org/ns/dcat# |
+| dcmitype:    | http://purl.org/dc/dcmitype/ |
+| dcterms:     | http://purl.org/dc/terms/ |
+| dqv:         | http://www.w3.org/ns/dqv# |
+| dwc:         | http://rs.tdwg.org/dwc/terms/ |
+| dwciri:      | http://rs.tdwg.org/dwc/iri/ |
+| foaf:        | http://xmlns.com/foaf/0.1/ |
+| ldqd:        | http://www.w3.org/2016/05/ldqd# |
+| mids:        | http://rs.tdwg.org/mids/elements/ _(draft)_ |
+| oa:          | http://www.w3.org/ns/oa# |
+| owl:         | http://www.w3.org/2002/07/owl# |
+| prov:        | http://www.w3.org/ns/prov# |
+| rdf:         | http://www.w3.org/1999/02/22-rdf-syntax-ns# |
+| rdfs:        | http://www.w3.org/2000/01/rdf-schema# |
+| skos:        | http://www.w3.org/2004/02/skos/core# |
+| tdwgutility: | http://rs.tdwg.org/dwc/terms/attributes/ |
+| xsd:         | http://www.w3.org/2001/XMLSchema# |
 
 ### 1.8 Referring to Terms (normative)
 
