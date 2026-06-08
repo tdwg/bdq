@@ -165,6 +165,8 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 
 ### 1.7 Namespace abbreviations (non-normative)
 
+In the BDQ Standard documents, IRIs are frequently abbreviated using namespace abbreviations. The abbreviations used anywhere in the BDQ Standard documents are listed in the following table.
+
 | Abbreviation | Namespace |
 | ------------ | --------- |
 | ac:          | https://rs.tdwg.org/ac/terms/ |
