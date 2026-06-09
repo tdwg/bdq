@@ -1464,7 +1464,7 @@ The preparation for public review of the BDQ standard was built with the followi
 For details on the Test Conformance Testing Data (which we historically called the Test Validation Data) see: 
 
 - `bdqtestrunner` [README](https://github.com/FilteredPush/bdqtestrunner/blob/master/README.md)
-- [bdq/tg2/core/squish_validation_data.py](../../../core/squish_validation_data.py)
+- [bdq/tg2/core/squish_validation_data.py](https://bdq.tdwg.org/tg2/core/squish_validation_data.py) [github](https://github.com/tdwg/bdq/blob/e2baf5825feadc42f6e0385b1498b44410b6e065/tg2/core/squish_validation_data.py)
 
 For more information see the following README files: 
 
