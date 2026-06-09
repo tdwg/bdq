@@ -511,7 +511,7 @@ While **not part of the BDQ standard**, [GBIF](<index.md#glossary_GBIF> "Global 
 
 ### 5.1 Acknowledgments (non-normative)
 
-The Authors gratefully acknowledge all those who have commented on the GitHub issues during the development of the BDQ standard, and all those who have contributed to discussions at various workshops in São Paulo, Brazil; Canberra, Australia; Monash, Australia; Leiden, The Netherlands; Gainesville, USA; and Seattle, USA, and at Biodiversity Information Standards (TDWG) annual meetings (in Jönköping, Sweden; Santa Clara de San Carlos, Costa Rica; Ottawa, Canada; Dunedin, New Zealand; Leiden, The Netherlands; Sofia, Bulgaria; Hobart, Australia; and Ginowa, Japan; and the various virtual meetings). The Authors are also grateful for all those who responded to our email questions.
+The Authors gratefully acknowledge all those who have commented on the GitHub issues during the development of the BDQ standard, and all those who have contributed to discussions at various workshops in São Paulo, Brazil; Canberra, Australia; Monash, Australia; Leiden, The Netherlands; Gainesville, USA; and Seattle, USA, and at Biodiversity Information Standards ([TDWG](<index.md#glossary_TDWG> "Biodiversity Information Standards")) annual meetings (in Jönköping, Sweden; Santa Clara de San Carlos, Costa Rica; Ottawa, Canada; Dunedin, New Zealand; Leiden, The Netherlands; Sofia, Bulgaria; Hobart, Australia; and Ginowa, Japan; and the various virtual meetings). The Authors are also grateful for all those who responded to our email questions.
 
 We'd also gratefully acknowledge the continued support of the Biodiversity Information Standards (TDWG) Executive over the 10 years of this project.
 
@@ -525,11 +525,11 @@ The São Paulo Research Foundation (FAPESP), the Universidade de São Paulo (USP
 
 #### 5.2.1 Authors (non-normative)
 
-We recognize four people as authors of the standard, having contributed consistently over the last decade and having been heavily engaged in writing the BDQ Test Descriptions and the documentation for the BDQ standard.
+We recognize four people as authors of the standard, having contributed consistently over the last decade and having been heavily engaged in writing the BDQ [Test](<index.md#glossary_Test> "A composition of a bdqffdq:DataQualityNeed with a bdqffdq:DataQualityMethod that links it to an instance of a bdqffdq:Specification, these instances being composed of InformationElements, Arguments, and Parameters. See…") Descriptions and the documentation for the BDQ standard.
 
 - **Lee Belbin (Blatant Fabrications Pty Ltd)**: Convener of TDWG Data Quality Task Group 2 (Data Quality Tests and Assertions); Test descriptions; author of the BDQ standard documents; Test Conformance Testing Data.
 - **Arthur D. Chapman (Australian Biodiversity Information Services)**: Co-convener of the TDWG Data Quality Interest Group; Test descriptions; author of the BDQ standard documents; vocabularies. 
-- **Paul J. Morris (Museum of Comparative Zoology, Harvard University)**: Test descriptions; Fitness For Use Framework ontology; Java Test implementations in filteredpush packages; author of the BDQ standard documents; Test Conformance Testing Data. 
+- **Paul J. Morris (Museum of Comparative Zoology, Harvard University)**: Test descriptions; Fitness For Use Framework ontology; [Java](<index.md#glossary_Java> "Java is a registered trademark of Oracle and/or its affiliates.") Test implementations in filteredpush packages; author of the BDQ standard documents; Test Conformance Testing Data. 
 - **John Wieczorek (Rauthiflor LLC)**: Test descriptions; Test implementations; author of the BDQ standard documents; [Darwin Core](<index.md#glossary_Darwin_Core> "Darwin Core. A Standard intended to facilitate the sharing of information about biological diversity. Host of the dwc:namespace dwc:") liaison.
 
 #### 5.2.2 Contributors (non-normative)
@@ -543,7 +543,7 @@ There were many people who have made notable contributions at various times duri
 - **Allan Koch Veiga (Universidade de São Paulo)**: Developed the Framework on Data Quality as his doctoral dissertation (Veiga 2016), Convener of the TDWG Data Quality Task Group 1 (Framework for Data Quality).
 - **David Lowery (Museum of Comparative Zoology, Harvard University)**: Initial development of ontology representation of Framework on Data Quality; developer of kurator-ffdq Java class representation of the Framework.
 - **Christian Gendreau (Agriculture and Agri-Food Canada)**: Initial contributions to data quality discussions; vocabulary definitions and early Test development.
-- **Tim Robertson (Global Biodiversity Information Facility)**: Contributions to Test descriptions; clarification of GBIF vocabulary and API resources for the BDQ Tests.
+- **Tim Robertson (Global Biodiversity Information Facility)**: Contributions to Test descriptions; clarification of [GBIF](<index.md#glossary_GBIF> "Global Biodiversity Information Facility is an international network and data infrastructure funded by the world’s governments and aimed at providing anyone, anywhere, open access to data about all types of life on Eart…") vocabulary and API resources for the BDQ Tests.
 - **Dmitry Schigel (Global Biodiversity Information Facility)**: Initial contributions to data quality discussions and vocabulary definitions; GBIF Representative to the Data Quality Interest Group in early years.
 - **Robert A. Morris (late, of UMass Boston)**: Competency questions for the ontology of the Data Quality Framework; guided initial development of the ontology representation of the Framework.
 - **Miles Nicholls (Atlas of Living Australia)**: Convener of TDWG Data Quality Task Group 3 (Data Quality Use Cases); Use Case analysis.
@@ -552,7 +552,7 @@ There were many people who have made notable contributions at various times duri
 
 ## 6 Glossary (non-normative)
 
-The glossary of terms used in the BDQ standard includes acronyms and these terms that are additional to the terms used in the `bdqffdq`, `bdqval:`, `bdqcrit:`, `bdqdim:`, and `bdqenh:` vocabularies or in one of the two tables that reference the [Test Vocabulary Terms](docs/list/bdqtest/index.md#18-key-to-vocabulary-terms-normative) or the [Test Label Components](docs/supplement/index.md#313-parts-of-test-labels-non-normative). Note: ‘Darwin Core terms’ refer to [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021).
+The glossary of terms used in the BDQ standard includes acronyms and these terms that are additional to the terms used in the `bdqffdq`, `bdqval:`, `bdqcrit:`, `bdqdim:`, and `bdqenh:` vocabularies or in one of the two tables that reference the [Test Vocabulary Terms](docs/list/bdqtest/index.md#18-key-to-vocabulary-terms-normative) or the [Test Label Components](docs/supplement/index.md#313-parts-of-test-labels-non-normative). Note: ‘[Darwin Core](<index.md#glossary_Darwin_Core> "Darwin Core. A Standard intended to facilitate the sharing of information about biological diversity. Host of the dwc:namespace dwc:") terms’ refer to [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021).
 
 Note: Some terms are definied differently within different documents to align with the context of those documents.  For example, in the [BDQ Supplemental Information](./docs/supplement/index.md) Document, the [Table in #5.2](.//docs/supplement/index.html#52-github-tags-and-categorizing-issues-non-normative) describes the GitHub Tags that were used when preparing the Tests. These Tags and their definitions sometimes differ from the definitions used with the BDQ Standard. The definitions in the Glossary here do however take precedence for the Standard.
 

@@ -201,7 +201,7 @@ See also:
 
 ## 3 Defining a Use Case (non-normative)
 
-*Before defining a Test, we must justify why it exists and how it fits into the broader ecosystem of the standard.*
+*Before defining a [Test](<../../index.md#glossary_Test> "A composition of a bdqffdq:DataQualityNeed with a bdqffdq:DataQualityMethod that links it to an instance of a bdqffdq:Specification, these instances being composed of InformationElements, Arguments, and Parameters. See…"), we must justify why it exists and how it fits into the broader ecosystem of the standard.*
 
 ### 3.1 Define the Use Case and Fitness-for-Use Requirements (non-normative)
 
@@ -335,7 +335,7 @@ For dwc:footprintWKT, we could guess the name of the Test, following the naming 
 * Existing proposals tagged as [DO NOT IMPLEMENT](https://github.com/tdwg/bdq/issues?q=label%3A%22DO%20NOT%20IMPLEMENT%22) that would fill the desired gap, but have been rejected for implementation.  These Tests should be reconsidered only with great caution.
 * **Note that all of these issues in GitHub are Closed, the default issue search which includes is:open will not find them.**
 
-There is an existing definition for a Test, [VALIDATION_FOOTPRINTWKT_NOTEMPTY](https://github.com/tdwg/bdq/issues/226), in the documented Supplementary Tests.
+There is an existing definition for a Test, [VALIDATION_FOOTPRINTWKT_NOTEMPTY](https://github.com/tdwg/bdq/issues/226), in the documented [Supplementary](<../../index.md#glossary_Supplementary> "Tests regarded as not CORE because of one or more reasons: Not widely applicable; not clearly matched to an identified data quality need; not informative concerning the 'quality' or lack of quality of the data; likely t…") Tests.
 
 Looking at the description of that Test we see:
 
@@ -354,7 +354,7 @@ See also:
 
 ## 4 Defining a New Test (non-normative)
 
-Let's walk through the steps and decisions involved in defining a Test, using VALIDATION_FOOTPRINTWKT_NOTEMPTY as an example, and see how the components of the Test are justified and how they fit together.
+Let's walk through the steps and decisions involved in defining a [Test](<../../index.md#glossary_Test> "A composition of a bdqffdq:DataQualityNeed with a bdqffdq:DataQualityMethod that links it to an instance of a bdqffdq:Specification, these instances being composed of InformationElements, Arguments, and Parameters. See…"), using VALIDATION_FOOTPRINTWKT_NOTEMPTY as an example, and see how the components of the Test are justified and how they fit together.
 
 ### 4.1 A Simple Description of the Test (non-normative)
 
@@ -374,7 +374,7 @@ See also [Principles for Defining Tests](../supplement/index.md#3112-principles-
 
 **Purpose** Identify the specific fields in the input data (`Information Elements`) that the Test will evaluate.
 
-For this new Test we want to evaluate one `Information Element`, `dwc:footprintWKT`, which is a term in Darwin Core that provides spatial data, in this context, a polygon of the taxon footprint.  The WKT (Well Known Text serialization of spatial data) could be of a point, vector, polygon, or set of polygons, but in this case we are expecting a polygon.  
+For this new Test we want to evaluate one `Information Element`, `dwc:footprintWKT`, which is a term in [Darwin Core](<../../index.md#glossary_Darwin_Core> "Darwin Core. A Standard intended to facilitate the sharing of information about biological diversity. Host of the dwc:namespace dwc:") that provides spatial data, in this context, a polygon of the taxon footprint.  The WKT (Well Known Text serialization of spatial data) could be of a point, vector, polygon, or set of polygons, but in this case we are expecting a polygon.  
 
 An `Information Element` is classified as either `ActedUpon` or `Consulted`.  An `Information Element` is `ActedUpon` if it is the primary focus of the Test, and it is `Consulted` if it is supporting information used to run the Test.  In this case, `dwc:footprintWKT` is the primary focus of the Test, so it is an `Information Element` that is `ActedUpon`.  
 
@@ -621,7 +621,7 @@ Another gap we identified in the `Use Case` was evaluating whether `prov:wasAttr
 * prov:wasAttributedTo (Conforms to the structure of an ORCID ID) **Gap**
 * prov:wasAttributedTo (Is found in an ORCID ID registry) **Gap**
 
-The first of these is a simple presence check for `prov:wasAttributedTo`, which is a term in the PROV ontology that provides metadata, in this case, about the source of each taxon distribution.  We could define a Test for this gap in a similar way to the Test we just defined for dwc:footprintWKT.  The Test would be a `Validation` Test, it would take `prov:wasAttributedTo` as input, and it would ask the question "Is there a value in prov:wasAttributedTo?"  The expected response would be COMPLIANT if there is a value in `prov:wasAttributedTo`, and NOT_COMPLIANT if there is not a value.
+The first of these is a simple presence check for `prov:wasAttributedTo`, which is a term in the PROV ontology that provides metadata, in this case, about the source of each taxon distribution.  We could define a [Test](<../../index.md#glossary_Test> "A composition of a bdqffdq:DataQualityNeed with a bdqffdq:DataQualityMethod that links it to an instance of a bdqffdq:Specification, these instances being composed of InformationElements, Arguments, and Parameters. See…") for this gap in a similar way to the Test we just defined for dwc:footprintWKT.  The Test would be a `Validation` Test, it would take `prov:wasAttributedTo` as input, and it would ask the question "Is there a value in prov:wasAttributedTo?"  The expected response would be COMPLIANT if there is a value in `prov:wasAttributedTo`, and NOT_COMPLIANT if there is not a value.
 
 * **Description** Is there a value in prov:wasAttributedTo?
 * **Label** VALIDATION_WASATTRIBUTEDTO_NOTEMPTY 
@@ -629,7 +629,7 @@ The first of these is a simple presence check for `prov:wasAttributedTo`, which 
 * **Term Name** {some UUID}
 * **Modified** 2026-03-25
 * **Test Type** Validation
-* **Data Quality Dimension** Completeness
+* **Data Quality [Dimension](<../../index.md#glossary_Dimension> "See bdqffdq:DataQualityDimension.")** Completeness
 * **Resource Type** SingleRecord
 * **Criterion** NotEmpty
 * **Information Elements Acted Upon** prov:wasAttributedTo
@@ -641,7 +641,7 @@ The next gap we identified in the `Use Case` was:
 
 ** prov:wasAttributedTo (Conforms to the structure of an ORCID ID) **Gap**
 
-This is a more complex Test, as it requires not simply checking for the presence of a value, but rather checking that a value conforms with the expected structure of an ORCID ID.  
+This is a more complex [Test](<../../index.md#glossary_Test> "A composition of a bdqffdq:DataQualityNeed with a bdqffdq:DataQualityMethod that links it to an instance of a bdqffdq:Specification, these instances being composed of InformationElements, Arguments, and Parameters. See…"), as it requires not simply checking for the presence of a value, but rather checking that a value conforms with the expected structure of an ORCID ID.  
 
 Note than on the principle of one Test evaluates one simple thing, we are asking whether the value has the correct structure for an ORCID ID, but we are not asking whether the value is actually a valid ORCID ID (e.g. by checking if it can be found in an authority like the ORCID ID registry).  We would define a separate Test for that second question, and thus keep each Test focused on a single aspect of data quality.
 
@@ -687,7 +687,7 @@ The `Data Quality Dimension` is the aspect of data quality that this Test is add
 
 Similarly, in the [bdqcrit: vocabulary](../list/bdqcrit/index.md) we find `Standard` defined as "Data in a bdqffdq:InformationElement conform to a format, syntax, data type, or standard. Corresponding dimension is bdqdim:Conformance."  Again, this sounds like a good fit.
 
-* **Data Quality Dimension** Conformance
+* **Data Quality [Dimension](<../../index.md#glossary_Dimension> "See bdqffdq:DataQualityDimension.")** Conformance
 * **Criterion** Standard
 
 In contrast, in another Test that evaluates whether the ORCID ID is valid by checking if it can be found in an authority like the ORCID ID registry, we would use a `Data Quality Dimension` of `Conformance`, but a `Criterion` of **`Found`**.
@@ -702,7 +702,7 @@ This Test would evaluate the value of `prov:wasAttributedTo` for each record, so
 
 We could make a very simple specification for this Test, such as "COMPLIANT if the value in prov:wasAttributedTo is a valid ORCID ID; otherwise NOT_COMPLIANT".  However, this is not very clear or specific for an implementer.  What does it mean for a value to be a valid ORCID ID?  How would an implementer determine that?  We need to provide more specific guidance in the specification to ensure that different implementers will implement the Test in a consistent way and thus get comparable results.
 
-We are asking not if the value in `prov:wasAttributedTo` is found in some authority, but if it conforms to the expected format for an ORCID ID.  Thus we could phrase the specification as "COMPLIANT if the value in prov:wasAttributedTo conforms to the expected format for an ORCID ID; otherwise NOT_COMPLIANT".  This is better, but what happens if there is no value in `prov:wasAttributedTo`, if it is `bdqval:Empty`?  That would be NOT_COMPLIANT, but it would not be because the value does not conform to the expected format for an ORCID ID, it would be because there is no value at all, and this Test would overlap in what it is testing with VALIDATION_WASATTRIBUTEDTO_NOTEMPTY, which is our separate Test above that checks for the presence of a value in `prov:wasAttributedTo`.  We want to keep these two Tests separate and focused on different aspects of data quality, so we need to make sure the specification for this Test is clear that it is only evaluating whether a value that is present conforms to the expected format for an ORCID ID, and it is not evaluating whether a value is present at all. We accomplish this by asserting that the presence of some value in `prov:wasAttributedTo` is a prerequisite for this Test, and if that prerequisite is not met, then this Test cannot return a result.
+We are asking not if the value in `prov:wasAttributedTo` is found in some authority, but if it conforms to the expected format for an ORCID ID.  Thus we could phrase the specification as "COMPLIANT if the value in prov:wasAttributedTo conforms to the expected format for an ORCID ID; otherwise NOT_COMPLIANT".  This is better, but what happens if there is no value in `prov:wasAttributedTo`, if it is [bdqval:Empty](<../list/bdqval/index.md#bdqval_Empty> "An evaluation of a value, which in the context of the evaluation, returns false if the value contains any characters or values other than those in the range U+0000 to U+0020, otherwise returns true.")?  That would be NOT_COMPLIANT, but it would not be because the value does not conform to the expected format for an ORCID ID, it would be because there is no value at all, and this Test would overlap in what it is testing with VALIDATION_WASATTRIBUTEDTO_NOTEMPTY, which is our separate Test above that checks for the presence of a value in `prov:wasAttributedTo`.  We want to keep these two Tests separate and focused on different aspects of data quality, so we need to make sure the specification for this Test is clear that it is only evaluating whether a value that is present conforms to the expected format for an ORCID ID, and it is not evaluating whether a value is present at all. We accomplish this by asserting that the presence of some value in `prov:wasAttributedTo` is a prerequisite for this Test, and if that prerequisite is not met, then this Test cannot return a result.
 
 So, we could phrase our Test specification (our `Expected Response`) as a sequence of:
 * INTERNAL_PREREQUISITES_NOT_MET if prov:wasAttributedTo is bdqval:Empty;
@@ -831,7 +831,7 @@ Some Tests specify a `Source Authority` that is a controlled vocabulary which ha
 For example [VALIDATION_PHYLUM_FOUND](../terms/bdqtest/index.md#VALIDATION_PHYLUM_FOUND):
 
 * **Expected Response** EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:phylum is bdqval:Empty; COMPLIANT if the value of dwc:phylum is found as a value at the rank of Phylum in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT
-* **hasAuthoritiesDefaults** bdqval:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}<!--- NO LINK LINE --->
+* **hasAuthoritiesDefaults** bdqval:sourceAuthority default = "[GBIF](<../../index.md#glossary_GBIF> "Global Biodiversity Information Facility is an international network and data infrastructure funded by the world’s governments and aimed at providing anyone, anywhere, open access to data about all types of life on Eart…") Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}<!--- NO LINK LINE --->
 * **Parameters** bdqval:sourceAuthority
 
 * Authority: GBIF Backbone Taxonomy
@@ -842,7 +842,7 @@ For example [VALIDATION_PHYLUM_FOUND](../terms/bdqtest/index.md#VALIDATION_PHYLU
 
 #### 6.7.5 On evaluating bdqval:NotEmpty (non-normative)
 
-When a value in a term is optional (as in dwc:minimiumDepthInMeters or dwc:minimumElevationInMeters, only one of which is sensibly populated for most data), then a `Use Case` should not include a `Validation` that tests whether the term is `bdqval:NotEmpty`, as such a test would assert that data are unfit for use if there is no value in that term, even if the absence of a value in that term does not make the data unfit for use.  
+When a value in a term is optional (as in dwc:minimiumDepthInMeters or dwc:minimumElevationInMeters, only one of which is sensibly populated for most data), then a `Use Case` should not include a `Validation` that tests whether the term is [bdqval:NotEmpty](<../list/bdqval/index.md#bdqval_NotEmpty> "An evaluation of a value, which in the context of the evaluation, returns true if the value contains any characters or values other than those in the range U+0000 to U+0020, otherwise returns false."), as such a test would assert that data are unfit for use if there is no value in that term, even if the absence of a value in that term does not make the data unfit for use.  
 
 There is, however, a choice in how to evaluate emptyness in a Test that evaluates some other property of such a term (e.g. a `Validation` that tests if depth is a numeric value, or a `Validation` that tests if depth is in range).
 
@@ -876,7 +876,7 @@ Notes are present when some aspects of a Test may not be obvious to the casual u
 > user defined codes is ZZ, used by GBIF to mark unknown countries. This
 > test should accept both XZ and ZZ as COMPLIANT country codes. This
 > test must return NOT_COMPLIANT if there is leading or trailing
-> whitespace or there are leading or trailing [non-printing characters](<../../index.md#glossary_nonprinting_characters> "ASCII 0-32 and 127 decimal. Non-printing characters or formatting marks that are not displayed when printing. These may include pilcrow, space, non-breaking space, tab character, etc. For the purposes of the Tests they…").”
+> [whitespace](<../../index.md#glossary_whitespace> "Characters such as spaces and tabs that affect rendering of printed or displayed output, but which themselves are not printed. 1 A field that only includes whitespace is treated as bdqval:Empty. 2 In bdqffdq:Validation,…") or there are leading or trailing [non-printing characters](<../../index.md#glossary_nonprinting_characters> "ASCII 0-32 and 127 decimal. Non-printing characters or formatting marks that are not displayed when printing. These may include pilcrow, space, non-breaking space, tab character, etc. For the purposes of the Tests they…").”
 
 ### 6.9 List the properties of the Test (non-normative)
 
@@ -906,7 +906,7 @@ This is a critical point in the process. We have now defined Tests that fill gap
 
 ## 7 Implementation, Conformance Testing, and Community Feedback (The "real-world") (non-normative)
 
-*No Test is final until it is implemented and thrown at actual data to confirm it responds correctly.*
+*No [Test](<../../index.md#glossary_Test> "A composition of a bdqffdq:DataQualityNeed with a bdqffdq:DataQualityMethod that links it to an instance of a bdqffdq:Specification, these instances being composed of InformationElements, Arguments, and Parameters. See…") is final until it is implemented and thrown at actual data to confirm it responds correctly.*
 
 ### 7.1 Implementation (non-normative)
 
@@ -916,7 +916,7 @@ BDQ is deliberately agnostic about programming languages and execution framework
 
 A BDQ Test implementation is expected to have a consistent scope and API shape across languages:
 
-* Inputs: the `Information Element(s)` `Acted Upon` (and any `Consulted` values if needed), plus optional `Parameter(s)` (e.g., `bdqval:sourceAuthority`).
+* Inputs: the `Information Element(s)` `Acted Upon` (and any `Consulted` values if needed), plus optional `Parameter(s)` (e.g., [bdqval:sourceAuthority](<../list/bdqval/index.md#bdqval_sourceAuthority> "An authority using the 'bdqval' namespace that provides a reference for values required for a Test evaluation. Where the Test is a bdqval:ParameterizedTest a bdqval:defaultSourceAuthority 'bdqval:sourceAuthority default…")).
 * Logic (decision rules): evaluate the clauses in the specification (`hasExpectedResponse`) in order, returning the first matching outcome (handling EXTERNAL_PREREQUISITES_NOT_MET via exception/error handling where appropriate).  
 * Output: exactly one structured Response per run, always providing a `Response.status` and a `Response.comment`, and providing a `Response.result` only when `Response.status` indicates a result (typically RUN_HAS_RESULT).
 
@@ -954,11 +954,11 @@ See also: [Guide to Marking and Identifying Synthetic and Modified Data](../guid
 
 ##### 7.2.2.1 Example Conformance Testing Data (non-normative)
 
-Consider the Test [VALIDATION_COUNTRYCODE_STANDARD](../terms/bdqtest/index.md#VALIDATION_COUNTRYCODE_STANDARD), which evaluates whether the value in dwc:countryCode is a valid ISO 3166-1-alpha-2 country code.  
+Consider the Test [VALIDATION_COUNTRYCODE_STANDARD](../terms/bdqtest/index.md#VALIDATION_COUNTRYCODE_STANDARD), which evaluates whether the value in dwc:countryCode is a valid [ISO](<../../index.md#glossary_ISO> "International Organization for Standardization.") 3166-1-alpha-2 country code.  
 
 * **Expected Response**  EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode is bdqval:Empty; COMPLIANT if dwc:countryCode can be unambiguously interpreted as a valid ISO 3166-1-alpha-2 country code in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT
 * **Source Authority** bdqval:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}<!--- NO LINK LINE --->
-* **Notes** Locations outside of a jurisdiction covered by a country code may have a value in the field dwc:countryCode, the ISO user defined codes include XZ used by the UN for installations on the high seas and recommended in Darwin Core to designate the high seas. Also available in the ISO user defined codes is ZZ, used by Darwin Core and GBIF to mark unknown countries. This Test should accept both XZ and ZZ as COMPLIANT country codes. This Test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.
+* **Notes** Locations outside of a jurisdiction covered by a country code may have a value in the field dwc:countryCode, the ISO user defined codes include XZ used by the UN for installations on the high seas and recommended in [Darwin Core](<../../index.md#glossary_Darwin_Core> "Darwin Core. A Standard intended to facilitate the sharing of information about biological diversity. Host of the dwc:namespace dwc:") to designate the high seas. Also available in the ISO user defined codes is ZZ, used by Darwin Core and [GBIF](<../../index.md#glossary_GBIF> "Global Biodiversity Information Facility is an international network and data infrastructure funded by the world’s governments and aimed at providing anyone, anywhere, open access to data about all types of life on Eart…") to mark unknown countries. This Test should accept both XZ and ZZ as COMPLIANT country codes. This Test must return NOT_COMPLIANT if there is leading or trailing [whitespace](<../../index.md#glossary_whitespace> "Characters such as spaces and tabs that affect rendering of printed or displayed output, but which themselves are not printed. 1 A field that only includes whitespace is treated as bdqval:Empty. 2 In bdqffdq:Validation,…") or there are leading or trailing [non-printing characters](<../../index.md#glossary_nonprinting_characters> "ASCII 0-32 and 127 decimal. Non-printing characters or formatting marks that are not displayed when printing. These may include pilcrow, space, non-breaking space, tab character, etc. For the purposes of the Tests they…").
 
 The conformance testing dataset that accompanies the BDQ implementer's guide includes these following (and other) rows for this Test:
 
@@ -1101,7 +1101,7 @@ The BDQ Test specifications (the Specification text in bdqffdq:hasExpectedRespon
 
 …but they do not constrain:
 
-* How data are stored (RDBMS, CSV, JSON, RDF, objects) or accessed.
+* How data are stored (RDBMS, CSV, JSON, [RDF](<../../index.md#glossary_RDF> "Resource Description Framework - a W3C standard for modeling, interchanging, and linking structured data on the web. Hosts the namespace rdf:"), objects) or accessed.
 * How records are streamed/batched/parallelized in a workflow.
 * What programming language(s) are used.
 * How methods are discovered/invoked (reflection, registry, function pointers, workflow nodes).
@@ -1122,16 +1122,16 @@ A framework’s job is to act as the “adapter layer” that turns heterogeneou
     * supply `Parameter` argument values (or omit them and let defaults apply).
   * This is the core “plumbing” step: e.g. ensure `dwc:countryCode` actually lands in the method parameter that represents `dwc:countryCode`, etc. 
 	* This mapping could be via annotations, configuration, naming conventions, or explicit mapping code.
-	* The FilteredPush implementations use Java Annotations for this purpose, but other frameworks are free to use different approaches.
+	* The FilteredPush implementations use [Java](<../../index.md#glossary_Java> "Java is a registered trademark of Oracle and/or its affiliates.") Annotations for this purpose, but other frameworks are free to use different approaches.
 
 * Invoke the correct implementation
-  * Locate the right Implementation for a given Test (e.g., by Label, [GUID](<../../index.md#glossary_GUID> "Globally Unique Identifier. In this document, the GUID for a Test is a UUID 128-bit universally unique identifier which identifies the Test.")/Term Name, or versioned IRI), then call it with the bound inputs.
+  * Locate the right Implementation for a given Test (e.g., by Label, [GUID](<../../index.md#glossary_GUID> "Globally Unique Identifier. In this document, the GUID for a Test is a UUID 128-bit universally unique identifier which identifies the Test.")/Term Name, or versioned [IRI](<../../index.md#glossary_IRI> "Internationalized Resource Identifier is an internet protocol standard which builds on the Uniform Resource Identifier URI protocol by greatly expanding the set of permitted characters.")), then call it with the bound inputs.
 
 * Capture and normalize outputs into a `Response`
   * Ensure every execution yields exactly one structured `Response` with:
     * `Response.status` from the controlled vocabulary (e.g. RUN_HAS_RESULT, EXTERNAL_PREREQUISITES_NOT_MET),
     * `Response.result` as required by status and `Test Type`, and
-    * a `Response.comment` that is `bdqval:NotEmpty`.
+    * a `Response.comment` that is [bdqval:NotEmpty](<../list/bdqval/index.md#bdqval_NotEmpty> "An evaluation of a value, which in the context of the evaluation, returns true if the value contains any characters or values other than those in the range U+0000 to U+0020, otherwise returns false.").
   * Optionally wrap/serialize as RDF assertions (`bdqffdq:Response`) or as W3C Annotations, as that representation choice is outside the Test itself.
 
 * Present results to users and/or downstream processes
@@ -1157,7 +1157,7 @@ The Fitness For Use Framework is designed to support two different but related p
 
 Implicit in our `Use Case`, and we will want to spell this out explicitly (again, iterate), is that, in this **Validated Distribution Authority** `Use Case`, we want to use the results of Tests to find and fix errors in a dataset, thus improving the quality of the dataset for this purpose, that is, our `Use Case` is focused on `Quality Control`. 
 
-The formal mechanism that the Fitness For Use Framework provides to support both `Quality Control` and `Quality Assurance` is the use of `Multi Record` `Measures`.  These `Multi Record` `Measures`  take as input the output results from `Single Record` Tests over multiple records, and combine those results in some way to produce a measure of the quality of the dataset as a whole for some purpose.  For example, we could have a `Multi Record` `Measure` that takes the results of the VALIDATION_FOOTPRINTWKT_NOTEMPTY Test for all records in a dataset, and counts the number of records that are NOT_COMPLIANT with that Test, combining this count with the number of records in the dataset gives us a measure of how many records are missing values in the `dwc:footprintWKT` field in that dataset.  
+The formal mechanism that the Fitness For Use Framework provides to support both `Quality Control` and `Quality Assurance` is the use of `Multi Record` `Measures`.  These `Multi Record` `Measures`  take as input the output results from `Single Record` Tests over multiple records, and combine those results in some way to produce a measure of the quality of the dataset as a whole for some purpose.  For example, we could have a `Multi Record` `Measure` that takes the results of the VALIDATION_FOOTPRINTWKT_NOTEMPTY [Test](<../../index.md#glossary_Test> "A composition of a bdqffdq:DataQualityNeed with a bdqffdq:DataQualityMethod that links it to an instance of a bdqffdq:Specification, these instances being composed of InformationElements, Arguments, and Parameters. See…") for all records in a dataset, and counts the number of records that are NOT_COMPLIANT with that Test, combining this count with the number of records in the dataset gives us a measure of how many records are missing values in the `dwc:footprintWKT` field in that dataset.  
 
 Both `Quality Control` and `Quality Assurance` rely on an examination of the results of `Single Record` Tests, but they use those results in different ways.
 
@@ -1192,7 +1192,7 @@ The remainder of this section focuses on `Multi Record` `Measures` that take the
 
 #### 8.1.1 What a MultiRecord Measure takes as input (non-normative)
 
-A `Multi Record` `Measure` does not typically examine raw input (e.g. Darwin Core) values directly. Instead, it uses as input the outputs of `Single Record` Tests — the set of Responses with their `Response.status`, `Response.result`, and `Response.comment`.   `Multi Record` `Measures` can also be defined to take raw data as input, for example, a `Multi Record` `Measure` could be defined to calculate the average dwc:individualCount across all records in a dataset, but we won't consider that use of `Multi Record` `Measures` here.
+A `Multi Record` `Measure` does not typically examine raw input (e.g. [Darwin Core](<../../index.md#glossary_Darwin_Core> "Darwin Core. A Standard intended to facilitate the sharing of information about biological diversity. Host of the dwc:namespace dwc:")) values directly. Instead, it uses as input the outputs of `Single Record` Tests — the set of Responses with their `Response.status`, `Response.result`, and `Response.comment`.   `Multi Record` `Measures` can also be defined to take raw data as input, for example, a `Multi Record` `Measure` could be defined to calculate the average dwc:individualCount across all records in a dataset, but we won't consider that use of `Multi Record` `Measures` here.
 
 Conceptually what we want to do with `Multi Record` `Measures` is:
 
@@ -1250,7 +1250,7 @@ There is a potential trap for the unwary in framing `MultiRecord` `Measures` for
 
 This is a concern for both a Test and test suite design when data are:
 1. Filtered under `Quality Assurance` based on the results of `Single Record` `Validations` that evaluate some property of some term, and
-1. Some term under test is optional, and is expected to not contain values in all records (i.e. correctly be `bdqval:Empty` in some records), and
+1. Some term under test is optional, and is expected to not contain values in all records (i.e. correctly be [bdqval:Empty](<../list/bdqval/index.md#bdqval_Empty> "An evaluation of a value, which in the context of the evaluation, returns false if the value contains any characters or values other than those in the range U+0000 to U+0020, otherwise returns true.") in some records), and
 1. When a `Validation` for that term has an Expected Response that includes a clause of INTERNAL_PREREQUISITES_NOT_MET if the term under test is `bdqval:Empty` and
 1. When the accompaning `MultiRecord` `Measure` for `Quality Assurance` is phrased such that only COMPLIANT results are considered COMPLETE, and INTERNAL_PREREQUISITES_NOT_MET results are not considered COMPLETE.
 
@@ -1264,7 +1264,7 @@ This second approach is used in the framing of the initial BDQ Tests.  Thus:
 
 When framing Tests for a field is expected to contain a value for the data to have quality for some use, then: 
 
-* Include a `Validation` that is compliant if the term under test is `bdqval:NotEmpty`
+* Include a `Validation` that is compliant if the term under test is [bdqval:NotEmpty](<../list/bdqval/index.md#bdqval_NotEmpty> "An evaluation of a value, which in the context of the evaluation, returns true if the value contains any characters or values other than those in the range U+0000 to U+0020, otherwise returns false.")
   * Include a `MultiRecord` `Measure` which returns COMPLETE if this `Validation` is COMPLIANT for all rows of data.
 * Have each `Validation` that assesses some other property of the term return INTERNAL_REREQUISITES_NOT_MET if the term is `bdqval:Empty`
   * Include a `MultiRecord` `Measure` which returns COMPLETE if this `Validation` is COMPLIANT for all rows of data.
@@ -1363,7 +1363,7 @@ Many record-level problems that appear as widespread in a dataset have *point ca
 
 - a mapping error that swaps fields or applies the wrong delimiter,
 - characters set transformations that corrupted values (e.g., UTF-8 vs Latin-1 issues),
-- an export rule that adds leading/trailing whitespace,
+- an export rule that adds leading/trailing [whitespace](<../../index.md#glossary_whitespace> "Characters such as spaces and tabs that affect rendering of printed or displayed output, but which themselves are not printed. 1 A field that only includes whitespace is treated as bdqval:Empty. 2 In bdqffdq:Validation,…"),
 - an error in an authority table (such as a taxon name table) that propagates to many related records in denormalized exports (e.g. identifications),
 - a controlled vocabulary change that was not reflected in a pick-list,
 - a missing join key that causes large-scale loss of related values.
@@ -1460,7 +1460,7 @@ BDQ does not constrain how workflows may perform `Quality Assurance`, but it doe
 
 Our eleven year journey with the development of BDQ illustrates that there are many pitfalls in defining Tests.  Make sure that the `Expected Response` doesn’t hide any edge cases, and that is often easier said than done.  The development of the BDQ standard often surprised us with "emergent properties" and differing assumptions.  There are pitfalls in defining Tests for both the experienced and the inexperienced.  
 
-Critical to the process of defining a new Test is to iterate.  Start with a draft definition, create one or more independent implementations, have someone who isn't writing the implementation produce conformance testing data (including looking at values found in the wild), validate the implementation(s) against this data, and discuss any discrepancies between the expected and actual results.  It will usually be necessary to iterate and refine the Test specifications, Test implementations, and the Test conformance testing data.  This process of iteration is critical for producing a robust Test specification that is clear, unambiguous, and has logic that handles real world data and edge cases. 
+Critical to the process of defining a new [Test](<../../index.md#glossary_Test> "A composition of a bdqffdq:DataQualityNeed with a bdqffdq:DataQualityMethod that links it to an instance of a bdqffdq:Specification, these instances being composed of InformationElements, Arguments, and Parameters. See…") is to iterate.  Start with a draft definition, create one or more independent implementations, have someone who isn't writing the implementation produce conformance testing data (including looking at values found in the wild), validate the implementation(s) against this data, and discuss any discrepancies between the expected and actual results.  It will usually be necessary to iterate and refine the Test specifications, Test implementations, and the Test conformance testing data.  This process of iteration is critical for producing a robust Test specification that is clear, unambiguous, and has logic that handles real world data and edge cases. 
 
 ### 9.1 Summary of the BDQ Philosophy (non-normative)
 

@@ -352,6 +352,9 @@ LINK_SPAN_RE = re.compile(r"\[[^\]]+\]\([^)]+\)")
 HEADING_LINE_RE = re.compile(r"^\s*#")
 SECTION2_START_RE = re.compile(r"^\s*##\s*2(?:\s|[.\-])")
 SECTION_START_RE = re.compile(r"^\s*(#+)\s+(.+?)\s*$")
+# Matches ## followed by a bare integer (not followed by .)
+# e.g. ## 2, ## 3, ## 10 — but NOT ## 2.1, ## 2.1.1, or ### 3
+TOP_LEVEL_NUMBERED_SECTION_RE = re.compile(r"^\s*##\s+\d+(?!\.)(\s|$)")
 
 
 def split_fenced_blocks(md: str) -> List[Tuple[bool, str]]:
@@ -426,7 +429,7 @@ DEFAULT_BLACKLIST: Dict[str, List[SectionSpec]] = {
         SectionSpec(heading_text="8.3 Examples of the Data for Conformance Testing (non-normative)")
     ],
     "index.md": [
-		SectionSpec(heading_text="2 A Roadmap to the BDQ Standard (non-normative)"),
+        SectionSpec(heading_text="2 A Roadmap to the BDQ Standard (non-normative)"),
         SectionSpec(heading_text="7 References (non-normative)")
     ],
 }
@@ -585,10 +588,21 @@ def process_markdown_file(
                 if SECTION2_START_RE.match(line):
                     allow_rewrites = True
 
+                # At each top-level numbered section (## N, not ## N.M
+                # or ### N), forget all terms seen so far in this file so
+                # that the first occurrence within the new section is linked.
+                if TOP_LEVEL_NUMBERED_SECTION_RE.match(line):
+                    file_key = str(md_file)
+                    seen -= {entry for entry in seen if entry[0] == file_key}
+
                 if is_blacklisted_section_start(rel_path, heading_text, blacklist):
                     in_blacklisted_section = True
                     current_blacklisted_level = level
-                elif in_blacklisted_section and current_blacklisted_level is not None and level <= current_blacklisted_level:
+                elif (
+                    in_blacklisted_section
+                    and current_blacklisted_level is not None
+                    and level <= current_blacklisted_level
+                ):
                     in_blacklisted_section = False
                     current_blacklisted_level = None
 

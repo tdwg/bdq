@@ -536,7 +536,7 @@ Future BDQ Tests are expected to apply to `bdqffdq:Information Elements` drawn f
 
 ## 3 Use of Ontology Terms (normative) 
 
-This guidance describes the use of the Framework Ontology (the Fitness for Use `bdqffdq:` vocabulary terms) in an RDF context. This guidance MAY be used to develop models of the Fitness For Use Framework in more constrained forms, including UML object models, information models, classes in a programming language, or database schemas.
+This guidance describes the use of the Framework Ontology (the Fitness for Use `bdqffdq:` vocabulary terms) in an [RDF](<../../../index.md#glossary_RDF> "Resource Description Framework - a W3C standard for modeling, interchanging, and linking structured data on the web. Hosts the namespace rdf:") context. This guidance MAY be used to develop models of the Fitness For Use Framework in more constrained forms, including UML object models, information models, classes in a programming language, or database schemas.
 
 See also the [Use of Terms (normative)](../../list/bdqffdq/index.md#2-use-of-terms-normative) in the `bdqffdq:` term-list document.
 
@@ -544,7 +544,7 @@ See also the [Use of Terms (normative)](../../list/bdqffdq/index.md#2-use-of-ter
 
 #### 3.1.1 Relating Classes and Properties (non-normative)
 
-The (non-normative) diagram below illustrating `Validation` related concepts across needs, solutions, and reports areas of the framework is intended to help understand the normative statements in [3 Use of Ontology Terms (normative)](#3-use-of-ontology-terms-normative).  The diagram shows the expected relationships among `Validation`, `ValidationMethod`, and `Specification` classes, as well as their expected connections to other subclasses of `Data Quality Need`, `Data Quality Solution`, and `Data Quality Report`.  Section [3 Use of Ontology Terms (normative)](#3-use-of-ontology-terms-normative) provides normative guidance on how properties are expected to be used to relate instances of these classes in a consistent way, as expectations limiting the open world assumptions of the RDF/OWL modeling of the `bdqffdq:` vocabulary.
+The (non-normative) diagram below illustrating `Validation` related concepts across needs, solutions, and reports areas of the framework is intended to help understand the normative statements in [3 Use of Ontology Terms (normative)](#3-use-of-ontology-terms-normative).  The diagram shows the expected relationships among `Validation`, `ValidationMethod`, and `Specification` classes, as well as their expected connections to other subclasses of `Data Quality Need`, `Data Quality Solution`, and `Data Quality Report`.  Section [3 Use of Ontology Terms (normative)](#3-use-of-ontology-terms-normative) provides normative guidance on how properties are expected to be used to relate instances of these classes in a consistent way, as expectations limiting the open world assumptions of the RDF/[OWL](<../../../index.md#glossary_OWL> "Web Ontology Language. A Semantic Web language designed to represent rich and complex knowledge about things. Hosts the namespace owl:") modeling of the `bdqffdq:` vocabulary.
 
 ![Diagram of Validation, ValidationMethod, and ValidationResponse with related classes](../guide/bdqffdq/bdqffdq_data_quality_needs_solutions_report_validation.svg "Validation concepts in the Needs, Solutions, and Reports levels.")
 
@@ -553,13 +553,13 @@ The use of classes and properties in the `bdqtest:` vocabulary (see [BDQ Tests a
 
 This section describes normative expectations for the use of object and datatype properties to related instances of `bdqffdq:` classes in their intended ways given the open world limited use of domains, ranges, and other axioms in the [Biodiversity Data Quality Fitness For Use Framework (Ontology)](../../../vocabulary/bdqffdq.owl) ontology. This guidance builds on the normative definitions of `bdqffdq:` object properties and datatype properties to describe how `bdqffdq:` terms can be composed in a useful and consistent way.
 
-Section [3.2 Identifying the Test that produced a Response (normative)](#32-identifying-the-test-that-produced-a-response-normative) highlights the importance of using the object properties with the correct cardinality to preserve the relationship between a `Response` produced by a Test and the particular Test that produced it.
+Section [3.2 Identifying the Test that produced a Response (normative)](#32-identifying-the-test-that-produced-a-response-normative) highlights the importance of using the object properties with the correct cardinality to preserve the relationship between a `Response` produced by a [Test](<../../../index.md#glossary_Test> "A composition of a bdqffdq:DataQualityNeed with a bdqffdq:DataQualityMethod that links it to an instance of a bdqffdq:Specification, these instances being composed of InformationElements, Arguments, and Parameters. See…") and the particular Test that produced it.
 
 #### 3.1.2 Properties Relating to Data Quality Needs (normative)
 
 Each description of a data quality Test SHOULD include the properties and related instances described in the following paragraphs.
 
-Each instance of `bdqffdq:UseCase` SHOULD have one [bdqffdq:hasFitnessRequirements](<../../list/bdqffdq/index.md#hasFitnessRequirements> "The property of a bdqffdq:UseCase that provides text listing the qualities that data must have to be fit for a given use.") datatype property enumerating the general fitness requirements of data for that use.
+Each instance of [bdqffdq:UseCase](<../../list/bdqffdq/index.md#UseCase> "A bdqffdq:NeedConcept expressing a purpose to which data are put for which the data must have quality for the result to have meaning and reliability.") SHOULD have one [bdqffdq:hasFitnessRequirements](<../../list/bdqffdq/index.md#hasFitnessRequirements> "The property of a bdqffdq:UseCase that provides text listing the qualities that data must have to be fit for a given use.") datatype property enumerating the general fitness requirements of data for that use.
 
 The [bdqffdq:hasUseCase](<../../list/bdqffdq/index.md#hasUseCase> "Relates a bdqffdq:Policy to a bdqffdq:UseCase.") object property SHOULD have an individual with a type that is a subclass of [bdqffdq:Policy](<../../list/bdqffdq/index.md#Policy> "The set of bdqffdq:DataQualityNeeds for a bdqffdq:UseCase.") as its subject. 
 
@@ -571,7 +571,7 @@ The [bdqffdq:includedInPolicy](<../../list/bdqffdq/index.md#includedInPolicy> "A
 
 The `bdqffdq:includedInPolicy` object property SHOULD have an individual that is a subclass of [bdqffdq:DataQualityNeed](<../../list/bdqffdq/index.md#DataQualityNeed> "A bdqffdq:NeedConcept that expresses what bdqffdq:Responses may be made about data with respect to fitness for use.") as its object.
 
-The four subclasses of `bdqffdq:DataQualityNeed` are `bdqffdq:Validation`, `bdqffdq:Issue`, `bdqffdq:Measure` and `bdqffdq:Amendment`.
+The four subclasses of `bdqffdq:DataQualityNeed` are [bdqffdq:Validation](<../../list/bdqffdq/index.md#Validation> "A bdqffdq:DataQualityNeed that expresses how data may be evaluated for fitness for use."), [bdqffdq:Issue](<../../list/bdqffdq/index.md#Issue> "A bdqffdq:DataQualityNeed that expresses how quality problems may be identified in data."), [bdqffdq:Measure](<../../list/bdqffdq/index.md#Measure> "A bdqffdq:DataQualityNeed that expresses how the fitness of data for some use may be measured.") and [bdqffdq:Amendment](<../../list/bdqffdq/index.md#Amendment> "A bdqffdq:DataQualityNeed that expresses how proposals may be made to improve the fitness for use of data.").
 
 Each individual that is a subclass of `bdqffdq:DataQualityNeed` SHOULD have at least one `bdqffdq:includedInPolicy` relationship to an instance of a subclass of `bdqffdq:Policy`, which is in turn related to an instance of a `bdqffdq:UseCase`. 
 
@@ -582,8 +582,8 @@ Each instance of a subclass of a `bdqffdq:DataQualityNeed` SHOULD have an `rdfs:
 The `rdfs:label` of the instance of the subclass of `bdqffdq:DataQualityNeed` SHOULD be used by humans to identify Tests.
 
 Labels of instances of subclasses of `bdqffdq:DataQualityNeed` SHOULD follow the following naming conventions:
-* Tests that have a [bdqffdq:hasResourceType](<../../list/bdqffdq/index.md#hasResourceType> "The bdqffdq:ResourceType to which a bdqffdq:DataQualityNeed applies.") of `bdqffdq:SingleRecord` SHOULD have an `rdfs:label` in all upper case as the first word, and a representation of the [bdqffdq:AbstractInformationElement](<../../list/bdqffdq/index.md#AbstractInformationElement> "A bdqffdq:InformationElement described in abstract terms and not linked with any concrete terms.") as a single word in all upper case as the second word, in the form TESTTYPE_INFORMATIONELEMENT_EVALUATION or TESTTYPE_INFORMATIONELEMENT_ACTION_INFORMATIONELEMENT. 
-* Tests that have a `bdqffdq:hasResourceType` of `bdqffdq:MultiRecord` SHOULD have "MULTIRECORD_" as the first element in their `rdfs:label`, and MAY follow the pattern MULTIRECORD_TESTTYPE_COUNT_RESULT_INFORMATIONELEMENT_EVALUATION, or MULTIRECORD_TESTTYPE_QA_INFORMATIONELEMENT_EVALUATION. 
+* Tests that have a [bdqffdq:hasResourceType](<../../list/bdqffdq/index.md#hasResourceType> "The bdqffdq:ResourceType to which a bdqffdq:DataQualityNeed applies.") of [bdqffdq:SingleRecord](<../../list/bdqffdq/index.md#SingleRecord> "A single entity comprised of encoded data with a defined structure that contains one instance of a core concept from the perspective of bdqffdq:InformationElements assessed for a bdqffdq:DataQualityNeed.") SHOULD have an `rdfs:label` in all upper case as the first word, and a representation of the [bdqffdq:AbstractInformationElement](<../../list/bdqffdq/index.md#AbstractInformationElement> "A bdqffdq:InformationElement described in abstract terms and not linked with any concrete terms.") as a single word in all upper case as the second word, in the form TESTTYPE_INFORMATIONELEMENT_EVALUATION or TESTTYPE_INFORMATIONELEMENT_ACTION_INFORMATIONELEMENT. 
+* Tests that have a `bdqffdq:hasResourceType` of [bdqffdq:MultiRecord](<../../list/bdqffdq/index.md#MultiRecord> "A set of one or more bdqffdq:SingleRecords.") SHOULD have "MULTIRECORD_" as the first element in their `rdfs:label`, and MAY follow the pattern MULTIRECORD_TESTTYPE_COUNT_RESULT_INFORMATIONELEMENT_EVALUATION, or MULTIRECORD_TESTTYPE_QA_INFORMATIONELEMENT_EVALUATION. 
 
 
 Each instance of a subclass of `bdqffdq:DataQualityNeed` MUST have exactly one `bdqffdq:hasResourceType` object property linking it to a `bdqffdq:SingleRecord` or a `bdqffdq:MultiRecord`.
@@ -604,7 +604,7 @@ The [bdqffdq:hasDataQualityDimension](<../../list/bdqffdq/index.md#hasDataQualit
 
 The `bdqffdq:hasDataQualityDimension` object property MAY have an individual in the `bdqdim:` vocabulary is its object. 
 
-An axiom types the range of `bdqffdq:hasDataQualityDimension` as a `bdqffdq:DataQualityDimension`.
+An axiom types the range of `bdqffdq:hasDataQualityDimension` as a [bdqffdq:DataQualityDimension](<../../list/bdqffdq/index.md#DataQualityDimension> "An aspect of data quality.").
 
 Each individual instance of a `bdqffdq:Validation` SHOULD have exactly one `bdqffdq:hasDataQualityDimension` property and exactly one `bdqffdq:Criterion` property.
 
@@ -702,7 +702,7 @@ Each description of a data quality Test SHOULD include the following properties 
 
 The [bdqffdq:hasSpecification](<../../list/bdqffdq/index.md#hasSpecification> "Relates a bdqffdq:Method to a bdqffdq:Specification.") object property SHOULD have an instance of a subclass of [bdqffdq:DataQualityMethod](<../../list/bdqffdq/index.md#DataQualityMethod> "A bdqffdq:SolutionsConcept that relates a bdqffdq:DataQualityNeed to a bdqffdq:Specification.") as its subject.
 
-An axiom places an `owl:restriction` on the object of the `bdqffdq:hasSpecification` object property as a `bdqffdq:Specification`.
+An axiom places an `owl:restriction` on the object of the `bdqffdq:hasSpecification` object property as a [bdqffdq:Specification](<../../list/bdqffdq/index.md#Specification> "A specific statement about how to evaluate a bdqffdq:DataQualityNeed.").
 
 An instance of `bdqffdq:Specification` SHOULD be the object of exactly one `bdqffdq:hasSpecification` property linking it to an instance of a subclass of `bdqffdq:DataQualityMethod`, which SHOULD be the subject of exactly one subproperty of a [bdqffdq:forDataQualityNeed](<../../list/bdqffdq/index.md#forDataQualityNeed> "Category of properties that relates a bdqffdq:DataQualityNeed to specific bdqffdq:Methods.") property linking it to a subclass of `bdqffdq:DataQualityNeed`.
 
@@ -728,7 +728,7 @@ An axiom types the object of the `bdqffdq:hasParameter` object property as a `bd
 
 Each data quality `Mechanism` that produces `Data Quality Reports` using the `bdqffdq:` vocabulary SHOULD include the following properties and related instances.
 
-The `bdqffdq:usesSpecification` object property SHOULD have a `bdqffdq:Implementation` as its subject.
+The [bdqffdq:usesSpecification](<../../list/bdqffdq/index.md#usesSpecification> "The bdqffdq:Specification that a bdqffdq:Implementation implements.") object property SHOULD have a [bdqffdq:Implementation](<../../list/bdqffdq/index.md#Implementation> "A bdqffdq:SolutionsConcept that describes the portion of a bdqffdq:Mechanism that carries out the proccess described in a particular bdqffdq:Specification.") as its subject.
 
 An axiom places an `owl:restriction` on the object of the `bdqffdq:usesSpecification` object property as a `bdqffdq:Specification`.
 
@@ -736,7 +736,7 @@ Each `bdqffdq:Implementation` SHOULD have one and only one `bdqffdq:usesSpecific
 
 The [bdqffdq:implementedBy](<../../list/bdqffdq/index.md#implementedBy> "The bdqffdq:Mechanism that provides a bdqffdq:Implementation") object property SHOULD have a `bdqffdq:Implementation` as its subject.
 
-An axiom places an `owl:restriction` on the object of the `bdqffdq:implementedBy` object property as a `bdqffdq:Mechanism`.
+An axiom places an `owl:restriction` on the object of the `bdqffdq:implementedBy` object property as a [bdqffdq:Mechanism](<../../list/bdqffdq/index.md#Mechanism> "An entity that can execute bdqffdq:DataQualityMethods.").
 
 Each `bdqffdq:Implementation` SHOULD have a `bdqffdq:implementedBy` object property.
 
@@ -746,11 +746,11 @@ A `bdqffdq:Implementation` SHOULD have one and only one `bdqffdq:implementedBy` 
 
 Each data quality `Mechanism` that produces `Data Quality Reports` using the `bdqffdq:` vocabulary SHOULD include the following properties and related instances.
 
-Nothing in this section is to be construed as relaxing the normative statements in the [User's Guide](../users/index.md) and [Implementer's Guide](../implementers/index.md) concerning the expression of data quality responses in forms other than RDF. Each data quality `Mechanism` MUST produce results corresponding to `bdqffdq:Responses` with `bdqffdq:hasResponseStatus`, `bdqffdq:hasResponseResult`, and `bdqffdq:hasResponseComment` as specified in those guides. 
+Nothing in this section is to be construed as relaxing the normative statements in the [User's Guide](../users/index.md) and [Implementer's Guide](../implementers/index.md) concerning the expression of data quality responses in forms other than RDF. Each data quality `Mechanism` MUST produce results corresponding to `bdqffdq:Responses` with [bdqffdq:hasResponseStatus](<../../list/bdqffdq/index.md#hasResponseStatus> "The bdqffdq:ResponseStatus object asserted by a bdqffdq:Response."), [bdqffdq:hasResponseResult](<../../list/bdqffdq/index.md#hasResponseResult> "The bdqffdq:ResponseResult object asserted by a bdqffdq:Response."), and [bdqffdq:hasResponseComment](<../../list/bdqffdq/index.md#hasResponseComment> "Free text describing the bdqffdq:Response made in the response and why that conclusion was reached.") as specified in those guides. 
 
-The `bdqffdq:producesResponse` object property SHOULD have an instance of `bdqffdq:Implementation` as its subject.
+The [bdqffdq:producesResponse](<../../list/bdqffdq/index.md#producesResponse> "Connects an entity with a bdqffdq:Response that the entity created.") object property SHOULD have an instance of `bdqffdq:Implementation` as its subject.
 
-The `bdqffdq:producesResponse` object property SHOULD have an instance of a subclass of `bdqffdq:Response` as its object.
+The `bdqffdq:producesResponse` object property SHOULD have an instance of a subclass of [bdqffdq:Response](<../../list/bdqffdq/index.md#Response> "A bdqffdq:ReportConcept produced by a bdqffdq:Implementation expressing a statement about data quality resulting from the application of the logic of a bdqffdq:Specification to a bdqffdq:DataResource.") as its object.
 
 Each instance of a `bdqffdq:Implementation` MAY have zero to many `bdqffdq:producesResponse` object properties.
 
