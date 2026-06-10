@@ -142,6 +142,8 @@ The following namespace abbreviations are used in this document:
 | **Abbreviation** | **Namespace** |
 | ------------ | -------------                               |
 | bdqffdq:     | https://rs.tdwg.org/bdqffdq/terms/          |
+| bdqtest:     | https://rs.tdwg.org/bdqtest/terms/           |
+| bdquc:      | https://rs.tdwg.org/bdquc/terms/           |
 | bdqval:      | https://rs.tdwg.org/bdqval/terms/           |
 | dcterms:     | http://purl.org/dc/terms/                   |
 | dwc:         | http://rs.tdwg.org/dwc/terms/               |
@@ -254,7 +256,7 @@ We use a shorthand to describe a collection of formal Fitness For Use Framework 
 
 In this shorthand, each `Response` consists of the following elements:
 
-* __`Response.status`__ - Metadata describing the status of the Test run, including whether the Test was executed successfully.  Values include `RUN_HAS_RESULT`, `INTERNAL_PREREQUISITES_NOT_MET` and `EXTERNAL_PREREQUISITES_NOT_MET`.
+* __`Response.status`__ - Metadata describing the status of the Test run, including whether the Test was executed successfully.  Values include `RUN_HAS_RESULT`, `INTERNAL_PREREQUISITES_NOT_MET` `EXTERNAL_PREREQUISITES_NOT_MET`, `AMENDED`, `FILLED_IN`, and  `NOT_AMENDED``.
 * __`Response.result`__ - The result of the evaluation of the Test against the input data.  Values include "COMPLIANT", "NOT_COMPLIANT", "COMPLETE", "NOT_COMPLETE", or data values (such as numeric measurement values), depending on the type of Test.
 * __`Response.comment`__ - A human-readable comment providing additional context or information to assist users in the interpretation of the Test result.
 
@@ -436,9 +438,9 @@ The definitions of the terms used for the Tests can be found in [Terms Used in t
 New `Use Cases` and Tests can be defined outside of the BDQ standard, and users are particularly encouraged to define `Use Cases` for their own purposes. See the [Tutorial](../../tutorial/index.md) for a worked out example of the definition of a new `Use Case` and Tests.
 
 
-To propose to add a [Test](<../../../index.md#glossary_Test> "A composition of a bdqffdq:DataQualityNeed with a bdqffdq:DataQualityMethod that links it to an instance of a bdqffdq:Specification, these instances being composed of InformationElements, Arguments, and Parameters. See…") to the BDQ Standard, follow the instructions provided by the BDQ Maintenance Group. Details on how this would be done can be seen in [Creating New Tests](../bdqtest/index.md#7-creating-new-tests-non-normative)
+To propose to add a [Test](<../../../index.md#glossary_Test> "A composition of a bdqffdq:DataQualityNeed with a bdqffdq:DataQualityMethod that links it to an instance of a bdqffdq:Specification, these instances being composed of InformationElements, Arguments, and Parameters. See…") to the BDQ Standard (and to the bdqtest: vocabulary), follow the instructions provided by the BDQ Maintenance Group. Details on how this would be done can be seen in [Creating New Tests](../bdqtest/index.md#7-creating-new-tests-non-normative)
 
-To propose to add a new `Use Case` to the BDQ Standard, follow the instructions provided by the BDQ Maintenance Group. Details on how this would be done can be seen in [Creating New Use Cases](../bdqtest/index.md#8-creating-new-use-cases-non-normative)
+To propose to add a new `Use Case` to the BDQ Standard (and to the bdquc: vocabulary), follow the instructions provided by the BDQ Maintenance Group. Details on how this would be done can be seen in [Creating New Use Cases](../bdqtest/index.md#8-creating-new-use-cases-non-normative)
 
 ## 6 Time of Day and Time Zones (non-normative)
 
