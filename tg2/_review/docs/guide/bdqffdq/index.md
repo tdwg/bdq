@@ -914,7 +914,7 @@ It is important that the chain of relationships from an instance of a `Response`
 
 ## 4 Fitness For Use Framework Summary of Mathematical Formalization (normative) 
 
-This is a Summary of pp.89-108 in: Veiga, A.K. 2016. A conceptual framework on biodiversity data quality. Tese (Doutorado) [Doctoral Thesis] Escola Politécnica da Universidade de São Paulo. Departamento de Engenharia de Computação e Sistemas Digitais.156p. 
+This formalization is derived from the original pp.89-108 in: Veiga, A.K. 2016. A conceptual framework on biodiversity data quality. Tese (Doutorado) [Doctoral Thesis] Escola Politécnica da Universidade de São Paulo. Departamento de Engenharia de Computação e Sistemas Digitais.156p. 
 
 The following changes have been made to the original formulation: 
 
@@ -938,11 +938,10 @@ The following changes have been made to the original formulation:
   - Veiga (2016) Acceptable Measure `AM(cd) = {cc | cd ∈ CD ⋀ cc ⊂ CC}` (criteria that bound a dimension) is replaced by `MEaq(u)` (categorical measures within a policy). This is conceptually related but not the same object.
 - The set-builder expressions for parameterized derived concepts (e.g., `VP(u)`, `MM(me)`, `I(s)`, `DQV(dr)`) are stated in terms of primitive associational relations (e.g., `rel_VP`, `rel_MM`, `rel_I`, `rel_DQV`) introduced in §4.2.1, rather than with trivially-true parameter-typing conjuncts as in Appendix A of Veiga (2016). This makes the associations the expressions name (e.g., "the `Validations` included in the `Validation Policy` for `u`") definitionally explicit; The worked examples of Appendix B of Veiga (2016) remain admissible extensional interpretations of these relations.
 
-
-
-The Fitness For Use Framework ontology is framed with limited constraints and no `rdfs:range` axioms. Under open world principles, it could be used in ways other than the constraints framed by this mathematical formulation, but this formulation SHOULD be treated as a guide for how to phrase `Responses` using `bdqffdq:` terms, and how a set of `Responses` made with those terms SHOULD be queried.
+The Fitness For Use Framework ontology is framed with limited constraints and no `rdfs:range` axioms. Under open world principles, it could be used in ways other than the constraints framed by this mathematical formulation, but this formulation SHOULD be treated as a guide for how express concepts with that ontology, in particulary how to phrase `Responses` using `bdqffdq:` terms, and how a set of `Responses` made with those terms SHOULD be queried.
 
 ### 4.1 Fundamental Concepts (normative)
+
 * U = `Use Case`
 * D = `Dimension` (e.g., `Completeness`)  
 * IE = `Information Element` (e.g., `dwc:countryCode`)
@@ -952,6 +951,7 @@ The Fitness For Use Framework ontology is framed with limited constraints and no
 * S = `Specification` (specification of how a `Criterion` is to be evaluated, e.g., "Iterate records and calculate the proportion of records with scientific name different from null").
 
 ### 4.2 Properties (normative)
+
 * US = Usages 
 * ID = Identifier for a resource
 * RT = `Resource Type` {`Single Record`, `Multi Record`}
