@@ -828,44 +828,49 @@ Where, in this query, the text {id of assertion to look up} is a placeholder to 
 
 ### 3.3 Properties that should be one-to-one (normative)
 
+Rules that are intended to apply in the same way across each `Data Entry Need` are repeated and are marked _repeated_.
+
 **Validation**
 
 - Each instance of a `bdqffdq:Validation` SHOULD be the object of one and only one `bdqffdq:forValidation` property.
 - Each instance of a `bdqffdq:ValidationMethod` SHOULD be the subject of one and only one `bdqffdq:forValidation` property.
-- Each instance of a `bdqffdq:Specification` SHOULD be the object of one and only one `bdqffdq:hasSpecification` property.
-- Each instance of a `bdqffdq:Implementation` SHOULD be the subject of one and only one `bdqffdq:usesSpecification` property.
-- Each instance of a `bdqffdq:Implementation` MAY be the subject of zero to many `bdqffdq:producesResponse` properties.
+- Each instance of a `bdqffdq:Specification` SHOULD be the object of one and only one `bdqffdq:hasSpecification` property. _repeated_
+- Each instance of a `bdqffdq:Implementation` SHOULD be the subject of one and only one `bdqffdq:usesSpecification` property. _repeated_
+- Each instance of a `bdqffdq:Specification` MAY be the object of zero to many `bdqffdq:usesSpecification` properties (normally one or more, when implementations are described). _repeated_
+- Each instance of a `bdqffdq:Implementation` MAY be the subject of zero to many `bdqffdq:producesResponse` properties. _repeated_
 - Each instance of a `bdqffdq:ValidationResponse` SHOULD be the object of one and only one `bdqffdq:producesResponse` property.
 
 **Issue**
 
-- Each instance of a `bdqffdq:Issue` SHOULD be the object of one and only one `bdqffdq:forIssue` property.
+- Each instance of a `bdqffdq:Issue` SHOULD be the object of one and only one `bdqffdq:forIssue` property. 
 - Each instance of a `bdqffdq:IssueMethod` SHOULD be the subject of one and only one `bdqffdq:forIssue` property.
-- Each instance of a `bdqffdq:Specification` SHOULD be the object of one and only one `bdqffdq:hasSpecification` property.
-- Each instance of a `bdqffdq:Implementation` SHOULD be the subject of one and only one bdqffdq:usesSpecification property.
-- Each instance of a bdqffdq:Specification SHOULD be the object of one and only one bdqffdq:usesSpecification property.
-- Each instance of a `bdqffdq:Implementation` MAY be the subject of zero to many `bdqffdq:producesResponse` properties.
+- Each instance of a `bdqffdq:Specification` SHOULD be the object of one and only one `bdqffdq:hasSpecification` property. _repeated_
+- Each instance of a `bdqffdq:Implementation` SHOULD be the subject of one and only one `bdqffdq:usesSpecification` property. _repeated_
+- Each instance of a `bdqffdq:Specification` MAY be the object of zero to many `bdqffdq:usesSpecification` properties (normally one or more, when implementations are described). _repeated_
+- Each instance of a `bdqffdq:Implementation` MAY be the subject of zero to many `bdqffdq:producesResponse` properties. _repeated_
 - Each instance of a `bdqffdq:IssueResponse` SHOULD be the object of one and only one `bdqffdq:producesResponse` property.
 
 **Measure**
 
 - Each instance of a `bdqffdq:Measure` SHOULD be the object of one and only one `bdqffdq:forMeasure` property.
 - Each instance of a `bdqffdq:MeasurementMethod` SHOULD be the subject of one and only one `bdqffdq:forMeasure` property.
-- Each instance of a `bdqffdq:Specification` SHOULD be the object of one and only one `bdqffdq:hasSpecification` property.
-- Each instance of a `bdqffdq:Implementation` SHOULD be the subject of one and only one `bdqffdq:usesSpecification` property.
-- Each instance of a `bdqffdq:Specification` SHOULD be the object of one and only one `bdqffdq:usesSpecification` property.
-- Each instance of a `bdqffdq:Implementation` MAY be the subject of zero to many `bdqffdq:producesResponse` properties.
+- Each instance of a `bdqffdq:Specification` SHOULD be the object of one and only one `bdqffdq:hasSpecification` property. _repeated_
+- Each instance of a `bdqffdq:Implementation` SHOULD be the subject of one and only one `bdqffdq:usesSpecification` property. _repeated_
+- Each instance of a `bdqffdq:Specification` MAY be the object of zero to many `bdqffdq:usesSpecification` properties (normally one or more, when implementations are described). _repeated_
+- Each instance of a `bdqffdq:Implementation` MAY be the subject of zero to many `bdqffdq:producesResponse` properties. _repeated_
 - Each instance of a `bdqffdq:MeasurementResponse` SHOULD be the object of one and only one `bdqffdq:producesResponse` property.
 
 **Amendment**
 
 - Each instance of a `bdqffdq:Amendment` SHOULD be the object of one and only one `bdqffdq:forAmendment` property.
 - Each instance of a `bdqffdq:AmendmentMethod` SHOULD be the subject of one and only one `bdqffdq:forAmendment` property.
-- Each instance of a `bdqffdq:Specification` SHOULD be the object of one and only one `bdqffdq:hasSpecification` property.
-- Each instance of a `bdqffdq:Implementation` SHOULD be the subject of one and only one `bdqffdq:usesSpecification` property.
-- Each instance of a `bdqffdq:Specification` SHOULD be the object of one and only one `bdqffdq:usesSpecification` property.
-- Each instance of a `bdqffdq:Implementation` MAY be the subject of zero to many `bdqffdq:producesResponse` properties.
+- Each instance of a `bdqffdq:Specification` SHOULD be the object of one and only one `bdqffdq:hasSpecification` property. _repeated_
+- Each instance of a `bdqffdq:Implementation` SHOULD be the subject of one and only one `bdqffdq:usesSpecification` property. _repeated_
+- Each instance of a `bdqffdq:Specification` MAY be the object of zero to many `bdqffdq:usesSpecification` properties (normally one or more, when implementations are described). _repeated_
+- Each instance of a `bdqffdq:Implementation` MAY be the subject of zero to many `bdqffdq:producesResponse` properties. _repeated_
 - Each instance of a `bdqffdq:AmendmentResponse` SHOULD be the object of one and only one `bdqffdq:producesResponse` property.
+
+The definition of the `bdqffdq:Method` and its subclasses allows methods to serve as an associative entity between `Data Quality Needs` and `Specifications`, but thes constraints limit this so that a method SHOULD be associated with only one `Data Quality Need` and one `Specification`. If a method is associated with multiple `Data Quality Needs` or multiple `Specifications`, it may be difficult to determine which `Data Quality Need` or which `Specification` is relevant to a given `Response`, and this may result in an inability to use the Framework effectively.
 
 ### 3.3.1 Cardinality of bdqffdq: terms (non-normative)
 
@@ -908,7 +913,7 @@ Each `Mechanism` implements one-to-many `Implementations`.
 Each `Response` is produced by one and only one `Implementation`.
 Each `Implementation` uses one and only one `Specification`.
 Each `Implementation` is implemented by one and only one `Mechanism`.
-Each `Implementation` produces one-to-many `Responses`.
+Each `Implementation` produces zero-to-many `Responses` (normally one or more, when an `Implementation` produces a `Data Quality Report`).
 
 It is important that the chain of relationships from an instance of a `Response` to a `Data Quality Need` (e.g., an instance of a `bdqffdq:Validation`) be a chain of one-to-one relationships. To identify what Test with what `Parameters` made a `Response`, it must be possible to follow the chain of relationships from a `Response` to a single `Implementation` to a single `Specification` (with zero-to-many `Parameters`) to a single method to a single `Data Quality Need` (e.g., a `Validation`, with one-to-many `Information Elements`). Multiplicity should only be possible following on through `Policy` to `Use Cases` (a `Response` may pertain to multiple `Use Cases`), or when going from a `Data Quality Need` to `Responses`. It is expected that an instance of a `Validation` would produce many instances of `Validation Responses`, each of those `Validation Responses` must be able to be related to the sole `Validation` that produced it.
 
