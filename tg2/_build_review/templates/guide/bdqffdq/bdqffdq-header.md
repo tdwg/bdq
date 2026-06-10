@@ -523,7 +523,7 @@ Each instance of a subclass of `bdqffdq:DataQualityNeed` SHOULD have exactly one
 
 Each instance of `bdqffdq:ActedUpon` SHOULD have one to many `bdqffdq:composedOf` object properties linking it to specific `Information Elements`.
 
-Each instance of a subclass of `bdqffdq:DataQualityNeed` MAY have exactly one `bdqffdq:hasConsultedInformationElement` property linking it to a `bdqffdq:Consulted`.
+Each instance of a subclass of `bdqffdq:DataQualityNeed` SHOULD have zero or exactly one `bdqffdq:hasConsultedInformationElement` property linking it to a `bdqffdq:Consulted`.
 
 Each instance of `bdqffdq:Consulted` SHOULD have one to many `bdqffdq:composedOf` object properties linking it to specific `Information Elements`.
 
