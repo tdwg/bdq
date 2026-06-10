@@ -1,7 +1,9 @@
 tg2/vocabularies/glossary_terms.ods
-tg2/_build_review/__pycache__/
 tg2/hold/
+# Python local files/virtual environment files
+tg2/_build_review/__pycache__/
 *.pyc
+.venv/
 # Mac OS X
 .DS_Store
 # LibreOffice Lock files
