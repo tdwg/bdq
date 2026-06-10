@@ -481,8 +481,11 @@ The `rdfs:label` of the instance of the subclass of `bdqffdq:DataQualityNeed` SH
 
 Labels of instances of subclasses of `bdqffdq:DataQualityNeed` SHOULD follow the following naming conventions:
 * Tests that have a `bdqffdq:hasResourceType` of `bdqffdq:SingleRecord` SHOULD have an `rdfs:label` in all upper case as the first word, and a representation of the `bdqffdq:AbstractInformationElement` as a single word in all upper case as the second word, in the form TESTTYPE_INFORMATIONELEMENT_EVALUATION or TESTTYPE_INFORMATIONELEMENT_ACTION_INFORMATIONELEMENT. 
+    * For example: [VALIDATION_COUNTRYCODE_STANDARD](../../terms/bdqtest/index.md#VALIDATION_COUNTRYCODE_STANDARD).
 * Tests that have a `bdqffdq:hasResourceType` of `bdqffdq:MultiRecord` SHOULD have "MULTIRECORD_" as the first element in their `rdfs:label`, and MAY follow the pattern MULTIRECORD_TESTTYPE_COUNT_RESULT_INFORMATIONELEMENT_EVALUATION, or MULTIRECORD_TESTTYPE_QA_INFORMATIONELEMENT_EVALUATION. 
-
+    * For example: [MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_NOTEMPTY](../../terms/bdqtest/index.md#MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_NOTEMPTY) and
+[MULTIRECORD_MEASURE_QA_COUNTRY_NOTEMPTY](../../terms/bdqtest/index.md#MULTIRECORD_MEASURE_QA_COUNTRY_NOTEMPTY).
+* See [Naming Conventions](../../supplement/index.md#21-naming-conventions-normative) in the `bdqffdq:` term list for more details on naming conventions.
 
 Each instance of a subclass of `bdqffdq:DataQualityNeed` MUST have exactly one `bdqffdq:hasResourceType` object property linking it to a `bdqffdq:SingleRecord` or a `bdqffdq:MultiRecord`.
 
