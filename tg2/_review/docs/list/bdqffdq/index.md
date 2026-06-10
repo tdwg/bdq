@@ -436,7 +436,7 @@ DQP(u) = MP(u) ⋃ VP(u) ⋃ ISP(u) ⋃ AP(u),  where u ∈ U
 - Preferred Label: Data Quality Report
 - Definition: A bdqffdq:ReportConcept comprising a set of data quality bdqffdq:Responses.
 - SubClass Of: ReportConcept
-- Comments: A bdqffdq:DataQualityReport consists of a set of bdqffdq:Responses (bdqffdq:ValidationResponses, bdqffdq:IssueResponses, bdqffdq:MeasureResponses, and bdqffdq:AmendmentResponses) pertaining to a bdqffdq:DataResource that represent the output of a workflow/actor run. These bdqffdq:Responses form an account of the fitness for use of a tested data set for a specified bdqffdq:UseCase, as produced by a bdqffdq:Mechanism.
+- Comments: A bdqffdq:DataQualityReport consists of a set of bdqffdq:Responses (bdqffdq:ValidationResponses, bdqffdq:IssueResponses, bdqffdq:MeasurementResponses, and bdqffdq:AmendmentResponses) pertaining to a bdqffdq:DataResource that represent the output of a workflow/actor run. These bdqffdq:Responses form an account of the fitness for use of a tested data set for a specified bdqffdq:UseCase, as produced by a bdqffdq:Mechanism.
 
 ********************
 
@@ -700,7 +700,7 @@ A bdqffdq:Mechanism describes the entity that performs a bdqffdq:Response Test (
 - Preferred Label: Response
 - Definition: A bdqffdq:ReportConcept produced by a bdqffdq:Implementation expressing a statement about data quality resulting from the application of the logic of a bdqffdq:Specification to a bdqffdq:DataResource.
 - SubClass Of: ReportConcept
-- Comments: The bdqffdq:Response type is the bdqffdq:FundamentalConcept that makes up a bdqffdq:DataQualityReport. A bdqffdq:Response can be any one of four types (represented as subclasses), bdqffdq:ValidationResponse, bdqffdq:IssueResponse, bdqffdq:MeasureResponse, and bdqffdq:AmendmentResponse. The bdqffdq:Response concept relates a bdqffdq:Specification (the technical description of a performed Test), a bdqffdq:DataResource (initial values of input data expressed in terms of a controlled vocabulary), the bdqffdq:Mechanism (external service, actor, or code that performs the Test), and represents the output of the performed Test.  Response was called Response in the original formulation of the Framework.
+- Comments: The bdqffdq:Response type is the bdqffdq:FundamentalConcept that makes up a bdqffdq:DataQualityReport. A bdqffdq:Response can be any one of four types (represented as subclasses), bdqffdq:ValidationResponse, bdqffdq:IssueResponse, bdqffdq:MeasurementResponse, and bdqffdq:AmendmentResponse. The bdqffdq:Response concept relates a bdqffdq:Specification (the technical description of a performed Test), a bdqffdq:DataResource (initial values of input data expressed in terms of a controlled vocabulary), the bdqffdq:Mechanism (external service, actor, or code that performs the Test), and represents the output of the performed Test.  Response was called Response in the original formulation of the Framework.
 
 ********************
 
@@ -1224,7 +1224,7 @@ Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:Impro
 - Name: bdqffdq:hasResponseResultValue
 - Preferred Label: has response result value
 - Definition: Data property carrying the value of a bdqffdq:Response when the value is not an object.
-- Comments: Applies to bdqffdq:AmendmentResponses. To support bdqtest: Tests, bdqffdq:hasResponseResultValue is expected to carry a key:value list where the keys are the names of bdqffdq:ActedUpon bdqffdq:InformationElements, and the values are the proposed new values (filling in or replacing the values of those terms in the input). Applies to bdqffdq:MeasureResponses that assert a numeric value.
+- Comments: Applies to bdqffdq:AmendmentResponses. To support bdqtest: Tests, bdqffdq:hasResponseResultValue is expected to carry a key:value list where the keys are the names of bdqffdq:ActedUpon bdqffdq:InformationElements, and the values are the proposed new values (filling in or replacing the values of those terms in the input). Applies to bdqffdq:MeasurementResponses that assert a numeric value.
 
 ********************
 

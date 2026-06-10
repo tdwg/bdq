@@ -233,9 +233,9 @@ A `Response` is a formal description of the output of a Test, including the stat
 
 `Responses` are typed as `Validation Response`, `Issue Response`, `Measure Response`, or `Amendment Response` depending on the type of Test that produced them.
 
-![Diagram of ValidationResponse, IssueResponse, MeasureResponse and AmendmentResponse classes as subtypes of the Response class with ReportConcept as its parent.](assertions.png)
+![Diagram of ValidationResponse, IssueResponse, MeasurementResponse and AmendmentResponse classes as subtypes of the Response class with ReportConcept as its parent.](assertions.png)
 
-*The 4 `Response` types in the Framework - `ValidationResponse`, `IssueResponse`, `MeasureResponse` and `AmendmentResponse`.*
+*The 4 `Response` types in the Framework - `ValidationResponse`, `IssueResponse`, `MeasurementResponse` and `AmendmentResponse`.*
 
 `Response` objects may be represented in an RDF context as a combination of object properties and data properties on a `Response` resource.  In a non-RDF context, such as JSON or a tabular format, a `Response` might be represented as an object with properties or as a row with columns for each of the properties.  The key properties of a `Response` are `Response.status`, `Response.result`, `Response.comment`, and optionally, `Response.qualifier`.  In a non-RDF context, these may be simple fields in a structured data format, while in an RDF context, these would be represented using the appropriate properties from the `bdqffdq:` vocabulary (e.g., `bdqffdq:hasResponseStatus`, `bdqffdq:hasResponseResult`, `bdqffdq:hasResponseComment`, and `bdqffdq:hasResponseQualifier`) where the distinction between categorical values (e.g. using `bdqffdq:hasResponseResult`) and literal values (e.g. using `bdqffdq:hasResponseResultValue`) is important.
 
@@ -414,7 +414,7 @@ Supported by the generality and flexibility of DQV and its extension of the Web 
 
 At a high level, a `bdqffdq:DataQualityReport` containing `bdqffdq:Responses` from (specific, `bdqtest:`) `bdqffdq:MultiRecord` `bdqffdq:Measures` that reported COMPLIANT results could produce a DQV `dqv:QualityCertificate` related to a `bdqffdq:DataResource` modeled as a `dcat:Dataset` through a `dqv:QualityAnnotation` that also asserts that the `dcat:Dataset` `dcterms:conformsTo` a `dcterms:Standard` modeling a `bdqffdq:UseCase`.
 
-At a lower level, `bdqffdq:MultiRecord` `bdqffdq:Measures` that produce numeric results could be modeled as a DQV quality metric (`dqv:Metric`). A `bdqffdq:MeasureResponse` resulting from such a `bdqffdq:MultiRecord` `bdqffdq:Measure` could be modeled as a `dqv:QualityMeasurement`.
+At a lower level, `bdqffdq:MultiRecord` `bdqffdq:Measures` that produce numeric results could be modeled as a DQV quality metric (`dqv:Metric`). A `bdqffdq:MeasurementResponse` resulting from such a `bdqffdq:MultiRecord` `bdqffdq:Measure` could be modeled as a `dqv:QualityMeasurement`.
 
 As the definition of `dqv:Metric` includes the phrase "a value in a given unit", it is not clear whether `bdqffdq:Validation` and `bdqffdq:Issue` Tests that produce categorical results, or `bdqffdq:Amendment` Tests that propose changes to data, can be modeled as DQV `dqv:Metric`.
 
@@ -1528,7 +1528,7 @@ a(dr1) = {< me1, s1, m1, r1 >, < me2, s2, m2, r2 >, < me3, s3, m3, r3 >, < va1, 
 
 `QualityControl` is an operation on a `Data Quality Report` and a `Use Case` that yields the (maximal Quality Control relevant) set of filtered subsets of that assessment that are relevant to identifying, summarizing, prioritizing, or proposing remediation of data quality problems for that `Use Case`.
 
-Let `a ∈ A(dr)` be a `Data Quality Report` for a `DataResource` `dr`, and let `a'` be a filtered subset of that assessment, that is, a subset of the `MeasureResponse`, `ValidationResponse`, `IssueResponse` and `AmendmentResponse` elements in `a` selected for their relevance to `QualityControl` for a specified `Use Case` `u`.
+Let `a ∈ A(dr)` be a `Data Quality Report` for a `DataResource` `dr`, and let `a'` be a filtered subset of that assessment, that is, a subset of the `MeasurementResponse`, `ValidationResponse`, `IssueResponse` and `AmendmentResponse` elements in `a` selected for their relevance to `QualityControl` for a specified `Use Case` `u`.
 
 **Supporting accessors:**
 
