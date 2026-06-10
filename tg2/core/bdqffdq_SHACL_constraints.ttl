@@ -1,0 +1,1319 @@
+@prefix sh:       <http://www.w3.org/ns/shacl#> .
+@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:      <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:      <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms:  <http://purl.org/dc/terms/> .
+@prefix bdqffdq:  <https://rs.tdwg.org/bdqffdq/terms/> .
+@prefix bdqval:   <https://rs.tdwg.org/bdqval/terms/> .
+@prefix bdqs:     <https://rs.tdwg.org/bdqffdq/shacl/> .
+@base             <https://rs.tdwg.org/bdqffdq/shacl/> .
+
+########################################################################
+# SHACL Shapes for the Biodiversity Data Quality Fitness for Use
+# Framework Ontology (bdqffdq:)
+#
+# Derived from normative guidance in:
+#   Section 3 "Use of Ontology Terms (normative)"
+#   Section 4 "Fitness For Use Framework — Mathematical Formalization
+#               (normative)"
+#
+# Severity mapping:
+#   sh:Violation  ↔  MUST / MUST NOT
+#   sh:Warning    ↔  SHOULD / SHOULD NOT
+#   sh:Info       ↔  MAY
+#
+# NOTE on versioned URIs: bdqtest.ttl uses a versioned-URI pattern in
+# which every test exists as two typed individuals:
+#   bdqtest:{uuid}           (canonical/abstract, minimal properties)
+#   bdqtest:{uuid}-{date}    (versioned, carries full property set)
+# Both are typed e.g. bdqffdq:Validation.  Shapes that check for the
+# presence of required/recommended properties (sections 3-10) therefore
+# use sh:SPARQLTarget restricted to individuals that carry
+# dcterms:issued, which identifies the versioned form.  Shapes in
+# section 20 use their own SPARQL SELECT logic and are unaffected.
+########################################################################
+
+bdqs:
+    a owl:Ontology ;
+    dcterms:issued "2026-03-23" ;
+    rdfs:label "SHACL Shapes for the bdqffdq: Fitness For Use Framework Ontology"@en ;
+    rdfs:comment """SHACL constraints derived from the normative guidance in
+Sections 3 and 4 of the bdqffdq: ontology terms document.
+sh:Violation = MUST/MUST NOT  |  sh:Warning = SHOULD/SHOULD NOT  |  sh:Info = MAY"""@en ;
+    owl:imports <https://rs.tdwg.org/bdqffdq/terms> .
+
+
+########################################################################
+# 1.  UseCase
+########################################################################
+
+bdqs:UseCaseShape
+    a sh:NodeShape ;
+    sh:target [
+        a sh:SPARQLTarget ;
+        sh:select """
+            PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+            PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
+            PREFIX dcterms: <http://purl.org/dc/terms/>
+            SELECT ?this WHERE {
+                ?this rdf:type  bdqffdq:UseCase ;
+                      dcterms:issued ?issued .
+            }
+        """ ;
+    ] ;
+    sh:name "Use Case"@en ;
+    sh:description "Constraints for bdqffdq:UseCase; see §3.1.2."@en ;
+
+    sh:property [
+        sh:path     bdqffdq:hasFitnessRequirements ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message  "UseCase SHOULD have exactly one bdqffdq:hasFitnessRequirements."@en ;
+    ] ;
+
+    sh:property [
+        sh:path     rdfs:label ;
+        sh:minCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message  "UseCase SHOULD have at least one rdfs:label."@en ;
+    ] .
+
+########################################################################
+# 2.  Policy Shapes
+########################################################################
+
+bdqs:ValidationPolicyShape
+    a sh:NodeShape ;
+    sh:targetClass bdqffdq:ValidationPolicy ;
+    sh:name "Validation Policy"@en ;
+    sh:description "Constraints for bdqffdq:ValidationPolicy; see §3.1.2."@en ;
+
+    sh:property [
+        sh:path     bdqffdq:hasUseCase ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class    bdqffdq:UseCase ;
+        sh:severity sh:Warning ;
+        sh:message  "ValidationPolicy SHOULD have exactly one bdqffdq:hasUseCase pointing to a UseCase."@en ;
+    ] ;
+
+    sh:property [
+        sh:path     bdqffdq:includedInPolicy ;
+        sh:minCount 1 ;
+        sh:class    bdqffdq:Validation ;
+        sh:severity sh:Warning ;
+        sh:message  "ValidationPolicy SHOULD include at least one Validation via bdqffdq:includedInPolicy."@en ;
+    ] .
+
+
+bdqs:MeasurementPolicyShape
+    a sh:NodeShape ;
+    sh:targetClass bdqffdq:MeasurementPolicy ;
+    sh:name "Measurement Policy"@en ;
+    sh:description "Constraints for bdqffdq:MeasurementPolicy; see §3.1.2."@en ;
+
+    sh:property [
+        sh:path     bdqffdq:hasUseCase ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class    bdqffdq:UseCase ;
+        sh:severity sh:Warning ;
+        sh:message  "MeasurementPolicy SHOULD have exactly one bdqffdq:hasUseCase pointing to a UseCase."@en ;
+    ] ;
+
+    sh:property [
+        sh:path     bdqffdq:includedInPolicy ;
+        sh:minCount 1 ;
+        sh:class    bdqffdq:Measure ;
+        sh:severity sh:Warning ;
+        sh:message  "MeasurementPolicy SHOULD include at least one Measure via bdqffdq:includedInPolicy."@en ;
+    ] .
+
+
+bdqs:AmendmentPolicyShape
+    a sh:NodeShape ;
+    sh:targetClass bdqffdq:AmendmentPolicy ;
+    sh:name "Amendment Policy"@en ;
+    sh:description "Constraints for bdqffdq:AmendmentPolicy; see §3.1.2."@en ;
+
+    sh:property [
+        sh:path     bdqffdq:hasUseCase ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class    bdqffdq:UseCase ;
+        sh:severity sh:Warning ;
+        sh:message  "AmendmentPolicy SHOULD have exactly one bdqffdq:hasUseCase pointing to a UseCase."@en ;
+    ] ;
+
+    sh:property [
+        sh:path     bdqffdq:includedInPolicy ;
+        sh:minCount 1 ;
+        sh:class    bdqffdq:Amendment ;
+        sh:severity sh:Warning ;
+        sh:message  "AmendmentPolicy SHOULD include at least one Amendment via bdqffdq:includedInPolicy."@en ;
+    ] .
+
+
+bdqs:IssuePolicyShape
+    a sh:NodeShape ;
+    sh:targetClass bdqffdq:IssuePolicy ;
+    sh:name "Issue Policy"@en ;
+    sh:description "Constraints for bdqffdq:IssuePolicy; see §3.1.2."@en ;
+
+    sh:property [
+        sh:path     bdqffdq:hasUseCase ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class    bdqffdq:UseCase ;
+        sh:severity sh:Warning ;
+        sh:message  "IssuePolicy SHOULD have exactly one bdqffdq:hasUseCase pointing to a UseCase."@en ;
+    ] ;
+
+    sh:property [
+        sh:path     bdqffdq:includedInPolicy ;
+        sh:minCount 1 ;
+        sh:class    bdqffdq:Issue ;
+        sh:severity sh:Warning ;
+        sh:message  "IssuePolicy SHOULD include at least one Issue via bdqffdq:includedInPolicy."@en ;
+    ] .
+
+
+########################################################################
+# 3.  DataQualityNeed — general constraints (apply to all four subtypes)
+#
+# Uses sh:SPARQLTarget restricted to instances carrying dcterms:issued
+# (i.e. versioned instances only) to avoid false positives against the
+# canonical/abstract URI companions in bdqtest.ttl.
+########################################################################
+
+bdqs:DataQualityNeedShape
+    a sh:NodeShape ;
+    sh:target [
+        a sh:SPARQLTarget ;
+        sh:select """
+            PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+            PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
+            PREFIX dcterms: <http://purl.org/dc/terms/>
+            SELECT ?this WHERE {
+                {   { ?this rdf:type bdqffdq:Validation  }
+                    UNION { ?this rdf:type bdqffdq:Issue     }
+                    UNION { ?this rdf:type bdqffdq:Measure   }
+                    UNION { ?this rdf:type bdqffdq:Amendment }
+                }
+                ?this dcterms:issued ?issued .
+            }
+        """ ;
+    ] ;
+    sh:name "Data Quality Need"@en ;
+    sh:description "General constraints for all bdqffdq:DataQualityNeed subclass instances; see §§3.1.2, 3.3."@en ;
+
+    # MUST have exactly one hasResourceType = SingleRecord | MultiRecord (§3.1.2)
+    sh:property [
+        sh:path     bdqffdq:hasResourceType ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:in       ( bdqffdq:SingleRecord bdqffdq:MultiRecord ) ;
+        sh:severity sh:Violation ;
+        sh:message  "DataQualityNeed MUST have exactly one bdqffdq:hasResourceType of bdqffdq:SingleRecord or bdqffdq:MultiRecord."@en ;
+    ] ;
+
+    # SHOULD have at least one rdfs:label (§3.1.2)
+    sh:property [
+        sh:path     rdfs:label ;
+        sh:minCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message  "DataQualityNeed SHOULD have at least one rdfs:label."@en ;
+    ] ;
+
+    # SHOULD be the object of at least one bdqffdq:includedInPolicy (§3.1.2)
+    sh:property [
+        sh:path     [ sh:inversePath bdqffdq:includedInPolicy ] ;
+        sh:minCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message  "DataQualityNeed SHOULD be included in at least one Policy via bdqffdq:includedInPolicy."@en ;
+    ] ;
+
+    # SHOULD have exactly one hasActedUponInformationElement → ActedUpon (§3.1.2)
+    sh:property [
+        sh:path     bdqffdq:hasActedUponInformationElement ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class    bdqffdq:ActedUpon ;
+        sh:severity sh:Warning ;
+        sh:message  "DataQualityNeed SHOULD have exactly one bdqffdq:hasActedUponInformationElement pointing to a bdqffdq:ActedUpon."@en ;
+    ] ;
+
+    # SHOULD have zero or exactly one hasConsultedInformationElement → Consulted (§3.1.2)
+    sh:property [
+        sh:path     bdqffdq:hasConsultedInformationElement ;
+        sh:maxCount 1 ;
+        sh:class    bdqffdq:Consulted ;
+        sh:severity sh:Warning ;
+        sh:message  "DataQualityNeed SHOULD have zero or exactly one bdqffdq:hasConsultedInformationElement pointing to a bdqffdq:Consulted."@en ;
+    ] .
+
+
+########################################################################
+# 4.  Validation
+########################################################################
+
+bdqs:ValidationShape
+    a sh:NodeShape ;
+    sh:target [
+        a sh:SPARQLTarget ;
+        sh:select """
+            PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+            PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
+            PREFIX dcterms: <http://purl.org/dc/terms/>
+            SELECT ?this WHERE {
+                ?this rdf:type  bdqffdq:Validation ;
+                      dcterms:issued ?issued .
+            }
+        """ ;
+    ] ;
+    sh:name "Validation"@en ;
+    sh:description "Constraints specific to bdqffdq:Validation; see §§3.1.2, 3.3."@en ;
+
+    sh:property [
+        sh:path     bdqffdq:hasDataQualityDimension ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class    bdqffdq:DataQualityDimension ;
+        sh:severity sh:Warning ;
+        sh:message  "Validation SHOULD have exactly one bdqffdq:hasDataQualityDimension."@en ;
+    ] ;
+
+    sh:property [
+        sh:path     bdqffdq:hasCriterion ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class    bdqffdq:Criterion ;
+        sh:severity sh:Warning ;
+        sh:message  "Validation SHOULD have exactly one bdqffdq:hasCriterion."@en ;
+    ] ;
+
+    sh:property [
+        sh:path     [ sh:inversePath bdqffdq:forValidation ] ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class    bdqffdq:ValidationMethod ;
+        sh:severity sh:Warning ;
+        sh:message  "Validation SHOULD be the object of exactly one bdqffdq:forValidation from a bdqffdq:ValidationMethod."@en ;
+    ] .
+
+
+########################################################################
+# 5.  Issue
+########################################################################
+
+bdqs:IssueShape
+    a sh:NodeShape ;
+    sh:target [
+        a sh:SPARQLTarget ;
+        sh:select """
+            PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+            PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
+            PREFIX dcterms: <http://purl.org/dc/terms/>
+            SELECT ?this WHERE {
+                ?this rdf:type  bdqffdq:Issue ;
+                      dcterms:issued ?issued .
+            }
+        """ ;
+    ] ;
+    sh:name "Issue"@en ;
+    sh:description "Constraints specific to bdqffdq:Issue; see §§3.1.2, 3.3."@en ;
+
+    sh:property [
+        sh:path     bdqffdq:hasDataQualityDimension ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class    bdqffdq:DataQualityDimension ;
+        sh:severity sh:Warning ;
+        sh:message  "Issue SHOULD have exactly one bdqffdq:hasDataQualityDimension."@en ;
+    ] ;
+
+    sh:property [
+        sh:path     bdqffdq:hasCriterion ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class    bdqffdq:Criterion ;
+        sh:severity sh:Warning ;
+        sh:message  "Issue SHOULD have exactly one bdqffdq:hasCriterion."@en ;
+    ] ;
+
+    sh:property [
+        sh:path     [ sh:inversePath bdqffdq:forIssue ] ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class    bdqffdq:IssueMethod ;
+        sh:severity sh:Warning ;
+        sh:message  "Issue SHOULD be the object of exactly one bdqffdq:forIssue from a bdqffdq:IssueMethod."@en ;
+    ] .
+
+
+########################################################################
+# 6.  Measure
+########################################################################
+
+bdqs:MeasureShape
+    a sh:NodeShape ;
+    sh:target [
+        a sh:SPARQLTarget ;
+        sh:select """
+            PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+            PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
+            PREFIX dcterms: <http://purl.org/dc/terms/>
+            SELECT ?this WHERE {
+                ?this rdf:type  bdqffdq:Measure ;
+                      dcterms:issued ?issued .
+            }
+        """ ;
+    ] ;
+    sh:name "Measure"@en ;
+    sh:description "Constraints specific to bdqffdq:Measure; see §§3.1.2, 3.3."@en ;
+
+    sh:property [
+        sh:path     bdqffdq:hasDataQualityDimension ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class    bdqffdq:DataQualityDimension ;
+        sh:severity sh:Warning ;
+        sh:message  "Measure SHOULD have exactly one bdqffdq:hasDataQualityDimension."@en ;
+    ] ;
+
+    sh:property [
+        sh:path     [ sh:inversePath bdqffdq:forMeasure ] ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class    bdqffdq:MeasurementMethod ;
+        sh:severity sh:Warning ;
+        sh:message  "Measure SHOULD be the object of exactly one bdqffdq:forMeasure from a bdqffdq:MeasurementMethod."@en ;
+    ] .
+
+
+########################################################################
+# 7.  Amendment
+########################################################################
+
+bdqs:AmendmentShape
+    a sh:NodeShape ;
+    sh:target [
+        a sh:SPARQLTarget ;
+        sh:select """
+            PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+            PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
+            PREFIX dcterms: <http://purl.org/dc/terms/>
+            SELECT ?this WHERE {
+                ?this rdf:type  bdqffdq:Amendment ;
+                      dcterms:issued ?issued .
+            }
+        """ ;
+    ] ;
+    sh:name "Amendment"@en ;
+    sh:description "Constraints specific to bdqffdq:Amendment; see §§3.1.2, 3.3."@en ;
+
+    sh:property [
+        sh:path     bdqffdq:hasDataQualityDimension ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class    bdqffdq:DataQualityDimension ;
+        sh:severity sh:Warning ;
+        sh:message  "Amendment SHOULD have exactly one bdqffdq:hasDataQualityDimension."@en ;
+    ] ;
+
+    sh:property [
+        sh:path     bdqffdq:hasEnhancement ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class    bdqffdq:Enhancement ;
+        sh:severity sh:Warning ;
+        sh:message  "Amendment SHOULD have exactly one bdqffdq:hasEnhancement."@en ;
+    ] ;
+
+    sh:property [
+        sh:path     [ sh:inversePath bdqffdq:forAmendment ] ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class    bdqffdq:AmendmentMethod ;
+        sh:severity sh:Warning ;
+        sh:message  "Amendment SHOULD be the object of exactly one bdqffdq:forAmendment from a bdqffdq:AmendmentMethod."@en ;
+    ] .
+
+
+########################################################################
+# 8.  InformationElement Shapes
+########################################################################
+
+bdqs:ActedUponShape
+    a sh:NodeShape ;
+    sh:targetClass bdqffdq:ActedUpon ;
+    sh:name "Acted Upon"@en ;
+    sh:description "Constraints for bdqffdq:ActedUpon; see §3.1.2."@en ;
+
+    sh:property [
+        sh:path     bdqffdq:composedOf ;
+        sh:minCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message  "ActedUpon SHOULD have at least one bdqffdq:composedOf property."@en ;
+    ] .
+
+
+bdqs:ConsultedShape
+    a sh:NodeShape ;
+    sh:targetClass bdqffdq:Consulted ;
+    sh:name "Consulted"@en ;
+    sh:description "Constraints for bdqffdq:Consulted; see §3.1.2."@en ;
+
+    sh:property [
+        sh:path     bdqffdq:composedOf ;
+        sh:minCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message  "Consulted SHOULD have at least one bdqffdq:composedOf property."@en ;
+    ] .
+
+
+bdqs:AbstractInformationElementShape
+    a sh:NodeShape ;
+    sh:targetClass bdqffdq:AbstractInformationElement ;
+    sh:name "Abstract Information Element"@en ;
+    sh:description "Constraints for bdqffdq:AbstractInformationElement; see §3.1.2."@en ;
+
+    sh:property [
+        sh:path     rdfs:label ;
+        sh:minCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message  "AbstractInformationElement SHOULD have at least one rdfs:label."@en ;
+    ] ;
+
+    sh:property [
+        sh:path     rdfs:comment ;
+        sh:minCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message  "AbstractInformationElement SHOULD have at least one rdfs:comment."@en ;
+    ] .
+
+
+########################################################################
+# 9.  DataQualityMethod Shapes
+########################################################################
+
+bdqs:ValidationMethodShape
+    a sh:NodeShape ;
+    sh:target [
+        a sh:SPARQLTarget ;
+        sh:select """
+            PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+            PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
+            PREFIX dcterms: <http://purl.org/dc/terms/>
+            SELECT ?this WHERE {
+                ?this rdf:type  bdqffdq:ValidationMethod ;
+                      dcterms:issued ?issued .
+            }
+        """ ;
+    ] ;
+    sh:name "Validation Method"@en ;
+    sh:description "Constraints for bdqffdq:ValidationMethod; see §§3.1.3, 3.1.4, 3.3."@en ;
+
+    sh:property [
+        sh:path     bdqffdq:forValidation ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class    bdqffdq:Validation ;
+        sh:severity sh:Warning ;
+        sh:message  "ValidationMethod SHOULD have exactly one bdqffdq:forValidation."@en ;
+    ] ;
+
+    sh:property [
+        sh:path     bdqffdq:hasSpecification ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class    bdqffdq:Specification ;
+        sh:severity sh:Warning ;
+        sh:message  "ValidationMethod SHOULD have exactly one bdqffdq:hasSpecification."@en ;
+    ] .
+
+
+bdqs:IssueMethodShape
+    a sh:NodeShape ;
+    sh:target [
+        a sh:SPARQLTarget ;
+        sh:select """
+            PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+            PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
+            PREFIX dcterms: <http://purl.org/dc/terms/>
+            SELECT ?this WHERE {
+                ?this rdf:type  bdqffdq:IssueMethod ;
+                      dcterms:issued ?issued .
+            }
+        """ ;
+    ] ;
+    sh:name "Issue Method"@en ;
+    sh:description "Constraints for bdqffdq:IssueMethod; see §§3.1.3, 3.1.4, 3.3."@en ;
+
+    sh:property [
+        sh:path     bdqffdq:forIssue ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class    bdqffdq:Issue ;
+        sh:severity sh:Warning ;
+        sh:message  "IssueMethod SHOULD have exactly one bdqffdq:forIssue."@en ;
+    ] ;
+
+    sh:property [
+        sh:path     bdqffdq:hasSpecification ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class    bdqffdq:Specification ;
+        sh:severity sh:Warning ;
+        sh:message  "IssueMethod SHOULD have exactly one bdqffdq:hasSpecification."@en ;
+    ] .
+
+
+bdqs:MeasurementMethodShape
+    a sh:NodeShape ;
+    sh:target [
+        a sh:SPARQLTarget ;
+        sh:select """
+            PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+            PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
+            PREFIX dcterms: <http://purl.org/dc/terms/>
+            SELECT ?this WHERE {
+                ?this rdf:type  bdqffdq:MeasurementMethod ;
+                      dcterms:issued ?issued .
+            }
+        """ ;
+    ] ;
+    sh:name "Measurement Method"@en ;
+    sh:description "Constraints for bdqffdq:MeasurementMethod; see §§3.1.3, 3.1.4, 3.3."@en ;
+
+    sh:property [
+        sh:path     bdqffdq:forMeasure ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class    bdqffdq:Measure ;
+        sh:severity sh:Warning ;
+        sh:message  "MeasurementMethod SHOULD have exactly one bdqffdq:forMeasure."@en ;
+    ] ;
+
+    sh:property [
+        sh:path     bdqffdq:hasSpecification ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class    bdqffdq:Specification ;
+        sh:severity sh:Warning ;
+        sh:message  "MeasurementMethod SHOULD have exactly one bdqffdq:hasSpecification."@en ;
+    ] .
+
+
+bdqs:AmendmentMethodShape
+    a sh:NodeShape ;
+    sh:target [
+        a sh:SPARQLTarget ;
+        sh:select """
+            PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+            PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
+            PREFIX dcterms: <http://purl.org/dc/terms/>
+            SELECT ?this WHERE {
+                ?this rdf:type  bdqffdq:AmendmentMethod ;
+                      dcterms:issued ?issued .
+            }
+        """ ;
+    ] ;
+    sh:name "Amendment Method"@en ;
+    sh:description "Constraints for bdqffdq:AmendmentMethod; see §§3.1.3, 3.1.4, 3.3."@en ;
+
+    sh:property [
+        sh:path     bdqffdq:forAmendment ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class    bdqffdq:Amendment ;
+        sh:severity sh:Warning ;
+        sh:message  "AmendmentMethod SHOULD have exactly one bdqffdq:forAmendment."@en ;
+    ] ;
+
+    sh:property [
+        sh:path     bdqffdq:hasSpecification ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class    bdqffdq:Specification ;
+        sh:severity sh:Warning ;
+        sh:message  "AmendmentMethod SHOULD have exactly one bdqffdq:hasSpecification."@en ;
+    ] .
+
+
+########################################################################
+# 10.  Specification
+########################################################################
+
+bdqs:SpecificationShape
+    a sh:NodeShape ;
+    sh:target [
+        a sh:SPARQLTarget ;
+        sh:select """
+            PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+            PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
+            PREFIX dcterms: <http://purl.org/dc/terms/>
+            SELECT ?this WHERE {
+                ?this rdf:type  bdqffdq:Specification ;
+                      dcterms:issued ?issued .
+            }
+        """ ;
+    ] ;
+    sh:name "Specification"@en ;
+    sh:description "Constraints for bdqffdq:Specification; see §§3.1.4, 3.3."@en ;
+
+    sh:property [
+        sh:path     bdqffdq:hasExpectedResponse ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message  "Specification SHOULD have exactly one bdqffdq:hasExpectedResponse (xsd:string)."@en ;
+    ] ;
+
+    sh:property [
+        sh:path     bdqffdq:hasAuthoritiesDefaults ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message  "Specification SHOULD have at most one bdqffdq:hasAuthoritiesDefaults (xsd:string)."@en ;
+    ] ;
+
+    sh:property [
+        sh:path     [ sh:inversePath bdqffdq:hasSpecification ] ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class    bdqffdq:DataQualityMethod ;
+        sh:severity sh:Warning ;
+        sh:message  "Specification SHOULD be the object of exactly one bdqffdq:hasSpecification from a bdqffdq:DataQualityMethod."@en ;
+    ] .
+
+
+########################################################################
+# 11.  Argument
+########################################################################
+
+bdqs:ArgumentShape
+    a sh:NodeShape ;
+    sh:targetClass bdqffdq:Argument ;
+    sh:name "Argument"@en ;
+    sh:description "Constraints for bdqffdq:Argument; see §3.1.4."@en ;
+
+    sh:property [
+        sh:path     bdqffdq:hasArgumentValue ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message  "Argument SHOULD have exactly one bdqffdq:hasArgumentValue."@en ;
+    ] ;
+
+    sh:property [
+        sh:path     bdqffdq:hasParameter ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class    bdqffdq:Parameter ;
+        sh:severity sh:Warning ;
+        sh:message  "Argument SHOULD have exactly one bdqffdq:hasParameter."@en ;
+    ] ;
+
+    sh:property [
+        sh:path     [ sh:inversePath bdqffdq:hasArgument ] ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class    bdqffdq:Specification ;
+        sh:severity sh:Warning ;
+        sh:message  "Argument SHOULD be the object of exactly one bdqffdq:hasArgument from a bdqffdq:Specification."@en ;
+    ] .
+
+
+########################################################################
+# 12.  Implementation
+########################################################################
+
+bdqs:ImplementationShape
+    a sh:NodeShape ;
+    sh:targetClass bdqffdq:Implementation ;
+    sh:name "Implementation"@en ;
+    sh:description "Constraints for bdqffdq:Implementation; see §§3.1.5, 3.3."@en ;
+
+    sh:property [
+        sh:path     bdqffdq:usesSpecification ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class    bdqffdq:Specification ;
+        sh:severity sh:Warning ;
+        sh:message  "Implementation SHOULD have exactly one bdqffdq:usesSpecification."@en ;
+    ] ;
+
+    sh:property [
+        sh:path     bdqffdq:implementedBy ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class    bdqffdq:Mechanism ;
+        sh:severity sh:Warning ;
+        sh:message  "Implementation SHOULD have exactly one bdqffdq:implementedBy."@en ;
+    ] .
+
+
+########################################################################
+# 13.  Response (general)
+########################################################################
+
+bdqs:ResponseShape
+    a sh:NodeShape ;
+    sh:targetClass bdqffdq:Response ;
+    sh:name "Response"@en ;
+    sh:description "General constraints for all bdqffdq:Response subclass instances; see §§3.1.6, 3.3."@en ;
+
+    sh:property [
+        sh:path     [ sh:inversePath bdqffdq:producesResponse ] ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class    bdqffdq:Implementation ;
+        sh:severity sh:Warning ;
+        sh:message  "Response SHOULD be the object of exactly one bdqffdq:producesResponse from a bdqffdq:Implementation."@en ;
+    ] ;
+
+    sh:property [
+        sh:path     bdqffdq:hasResponseStatus ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class    bdqffdq:ResponseStatus ;
+        sh:severity sh:Warning ;
+        sh:message  "Response SHOULD have exactly one bdqffdq:hasResponseStatus."@en ;
+    ] ;
+
+    sh:property [
+        sh:path     bdqffdq:hasResponseComment ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:severity sh:Warning ;
+        sh:message  "Response SHOULD have exactly one bdqffdq:hasResponseComment."@en ;
+    ] .
+
+
+########################################################################
+# 14.  ValidationResponse
+########################################################################
+
+bdqs:ValidationResponseShape
+    a sh:NodeShape ;
+    sh:targetClass bdqffdq:ValidationResponse ;
+    sh:name "Validation Response"@en ;
+    sh:description "Constraints for bdqffdq:ValidationResponse; see §§3.2, 3.3, 4.4.1.2."@en ;
+
+    sh:property [
+        sh:path     bdqffdq:hasResponseStatus ;
+        sh:in       ( bdqffdq:RUN_HAS_RESULT
+                      bdqffdq:INTERNAL_PREREQUISITES_NOT_MET
+                      bdqffdq:EXTERNAL_PREREQUISITES_NOT_MET ) ;
+        sh:severity sh:Violation ;
+        sh:message  "ValidationResponse.hasResponseStatus MUST be RUN_HAS_RESULT, INTERNAL_PREREQUISITES_NOT_MET, or EXTERNAL_PREREQUISITES_NOT_MET."@en ;
+    ] ;
+
+    sh:property [
+        sh:path     bdqffdq:hasResponseResult ;
+        sh:in       ( bdqffdq:COMPLIANT bdqffdq:NOT_COMPLIANT ) ;
+        sh:severity sh:Violation ;
+        sh:message  "ValidationResponse.hasResponseResult MUST be bdqffdq:COMPLIANT or bdqffdq:NOT_COMPLIANT when present."@en ;
+    ] .
+
+
+########################################################################
+# 15.  IssueResponse
+########################################################################
+
+bdqs:IssueResponseShape
+    a sh:NodeShape ;
+    sh:targetClass bdqffdq:IssueResponse ;
+    sh:name "Issue Response"@en ;
+    sh:description "Constraints for bdqffdq:IssueResponse; see §§3.2, 3.3, 4.4.1.2."@en ;
+
+    sh:property [
+        sh:path     bdqffdq:hasResponseStatus ;
+        sh:in       ( bdqffdq:RUN_HAS_RESULT
+                      bdqffdq:INTERNAL_PREREQUISITES_NOT_MET
+                      bdqffdq:EXTERNAL_PREREQUISITES_NOT_MET ) ;
+        sh:severity sh:Violation ;
+        sh:message  "IssueResponse.hasResponseStatus MUST be RUN_HAS_RESULT, INTERNAL_PREREQUISITES_NOT_MET, or EXTERNAL_PREREQUISITES_NOT_MET."@en ;
+    ] ;
+
+    sh:property [
+        sh:path     bdqffdq:hasResponseResult ;
+        sh:in       ( bdqffdq:IS_ISSUE bdqffdq:NOT_ISSUE bdqffdq:POTENTIAL_ISSUE ) ;
+        sh:severity sh:Violation ;
+        sh:message  "IssueResponse.hasResponseResult MUST be bdqffdq:IS_ISSUE, bdqffdq:NOT_ISSUE, or bdqffdq:POTENTIAL_ISSUE when present."@en ;
+    ] .
+
+
+########################################################################
+# 16.  MeasurementResponse
+########################################################################
+
+bdqs:MeasurementResponseShape
+    a sh:NodeShape ;
+    sh:targetClass bdqffdq:MeasurementResponse ;
+    sh:name "Measurement Response"@en ;
+    sh:description "Constraints for bdqffdq:MeasurementResponse; see §§3.2, 3.3."@en ;
+
+    sh:property [
+        sh:path     bdqffdq:hasResponseStatus ;
+        sh:in       ( bdqffdq:RUN_HAS_RESULT
+                      bdqffdq:INTERNAL_PREREQUISITES_NOT_MET
+                      bdqffdq:EXTERNAL_PREREQUISITES_NOT_MET ) ;
+        sh:severity sh:Violation ;
+        sh:message  "MeasurementResponse.hasResponseStatus MUST be RUN_HAS_RESULT, INTERNAL_PREREQUISITES_NOT_MET, or EXTERNAL_PREREQUISITES_NOT_MET."@en ;
+    ] ;
+
+    sh:property [
+        sh:path     bdqffdq:hasResponseResult ;
+        sh:in       ( bdqffdq:COMPLETE bdqffdq:NOT_COMPLETE ) ;
+        sh:severity sh:Violation ;
+        sh:message  "MeasurementResponse.hasResponseResult MUST be bdqffdq:COMPLETE or bdqffdq:NOT_COMPLETE when present (numeric results use bdqffdq:hasResponseResultValue)."@en ;
+    ] .
+
+
+########################################################################
+# 17.  AmendmentResponse
+########################################################################
+
+bdqs:AmendmentResponseShape
+    a sh:NodeShape ;
+    sh:targetClass bdqffdq:AmendmentResponse ;
+    sh:name "Amendment Response"@en ;
+    sh:description "Constraints for bdqffdq:AmendmentResponse; see §§3.2, 3.3."@en ;
+
+    sh:property [
+        sh:path     bdqffdq:hasResponseStatus ;
+        sh:in       ( bdqffdq:AMENDED
+                      bdqffdq:FILLED_IN
+                      bdqffdq:NOT_AMENDED
+                      bdqffdq:INTERNAL_PREREQUISITES_NOT_MET
+                      bdqffdq:EXTERNAL_PREREQUISITES_NOT_MET ) ;
+        sh:severity sh:Violation ;
+        sh:message  "AmendmentResponse.hasResponseStatus MUST be AMENDED, FILLED_IN, NOT_AMENDED, INTERNAL_PREREQUISITES_NOT_MET, or EXTERNAL_PREREQUISITES_NOT_MET."@en ;
+    ] ;
+
+    sh:property [
+        sh:path     bdqffdq:hasResponseResult ;
+        sh:maxCount 0 ;
+        sh:severity sh:Violation ;
+        sh:message  "AmendmentResponse MUST NOT use bdqffdq:hasResponseResult; proposed changes MUST be expressed via bdqffdq:hasResponseResultValue."@en ;
+    ] .
+
+
+########################################################################
+# 18.  ImprovementTarget
+########################################################################
+
+bdqs:ImprovementTargetShape
+    a sh:NodeShape ;
+    sh:targetClass bdqffdq:ImprovementTarget ;
+    sh:name "Improvement Target"@en ;
+    sh:description "Constraints for bdqffdq:ImprovementTarget; see §4.4.2.8."@en ;
+
+    sh:property [
+        sh:path     [ sh:inversePath bdqffdq:improvedBy ] ;
+        sh:minCount 1 ;
+        sh:class    bdqffdq:Amendment ;
+        sh:severity sh:Warning ;
+        sh:message  "ImprovementTarget SHOULD be the object of at least one bdqffdq:improvedBy from a bdqffdq:Amendment."@en ;
+    ] .
+
+
+########################################################################
+# 19.  DataQualityReport
+########################################################################
+
+bdqs:DataQualityReportShape
+    a sh:NodeShape ;
+    sh:targetClass bdqffdq:DataQualityReport ;
+    sh:name "Data Quality Report"@en ;
+    sh:description "Constraints for bdqffdq:DataQualityReport."@en ;
+
+    sh:property [
+        sh:path     bdqffdq:containsResponse ;
+        sh:minCount 1 ;
+        sh:class    bdqffdq:Response ;
+        sh:severity sh:Warning ;
+        sh:message  "DataQualityReport SHOULD contain at least one bdqffdq:Response via bdqffdq:containsResponse."@en ;
+    ] .
+
+
+########################################################################
+# 20.  SPARQL-based Constraints
+########################################################################
+
+# ── 20.1  DataQualityNeed rdfs:label SHOULD be ALL_UPPER_CASE (§3.1.2) ────────
+# The inner SELECT already filters to nodes that have rdfs:label, so
+# canonical URIs without labels are naturally excluded.
+
+bdqs:DataQualityNeedLabelCaseShape
+    a sh:NodeShape ;
+    sh:targetClass bdqffdq:DataQualityNeed ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:severity sh:Warning ;
+        sh:message  "DataQualityNeed rdfs:label SHOULD be ALL_UPPER_CASE with underscores separating components, e.g. VALIDATION_COUNTRYCODE_STANDARD (§3.1.2)."@en ;
+        sh:select   """
+            PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+            PREFIX dcterms: <http://purl.org/dc/terms/>
+            SELECT $this ?label
+            WHERE {
+                $this rdfs:label  ?label ;
+                      dcterms:issued ?issued .
+                FILTER (LANG(?label) = "" || LANG(?label) = "en")
+                FILTER (STR(?label) != UCASE(STR(?label)))
+            }
+        """ ;
+    ] .
+
+
+# ── 20.2  ValidationResponse with RUN_HAS_RESULT SHOULD have hasResponseResult ─
+
+bdqs:ValidationResponseRunHasResultShape
+    a sh:NodeShape ;
+    sh:targetClass bdqffdq:ValidationResponse ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:severity sh:Warning ;
+        sh:message  "ValidationResponse with status RUN_HAS_RESULT SHOULD carry bdqffdq:hasResponseResult (§4.4.4.2)."@en ;
+        sh:select   """
+            PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
+            SELECT $this
+            WHERE {
+                $this bdqffdq:hasResponseStatus bdqffdq:RUN_HAS_RESULT .
+                FILTER NOT EXISTS { $this bdqffdq:hasResponseResult ?r }
+            }
+        """ ;
+    ] .
+
+
+# ── 20.3  IssueResponse with RUN_HAS_RESULT SHOULD have hasResponseResult ──────
+
+bdqs:IssueResponseRunHasResultShape
+    a sh:NodeShape ;
+    sh:targetClass bdqffdq:IssueResponse ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:severity sh:Warning ;
+        sh:message  "IssueResponse with status RUN_HAS_RESULT SHOULD carry bdqffdq:hasResponseResult."@en ;
+        sh:select   """
+            PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
+            SELECT $this
+            WHERE {
+                $this bdqffdq:hasResponseStatus bdqffdq:RUN_HAS_RESULT .
+                FILTER NOT EXISTS { $this bdqffdq:hasResponseResult ?r }
+            }
+        """ ;
+    ] .
+
+
+# ── 20.4  MeasurementResponse with RUN_HAS_RESULT SHOULD have result or value ──
+
+bdqs:MeasurementResponseRunHasResultShape
+    a sh:NodeShape ;
+    sh:targetClass bdqffdq:MeasurementResponse ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:severity sh:Warning ;
+        sh:message  "MeasurementResponse with status RUN_HAS_RESULT SHOULD carry bdqffdq:hasResponseResult (categorical) or bdqffdq:hasResponseResultValue (numeric) (§4.4.4.3)."@en ;
+        sh:select   """
+            PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
+            SELECT $this
+            WHERE {
+                $this bdqffdq:hasResponseStatus bdqffdq:RUN_HAS_RESULT .
+                FILTER NOT EXISTS { $this bdqffdq:hasResponseResult      ?r }
+                FILTER NOT EXISTS { $this bdqffdq:hasResponseResultValue ?v }
+            }
+        """ ;
+    ] .
+
+
+# ── 20.5  AmendmentResponse AMENDED/FILLED_IN SHOULD have hasResponseResultValue
+
+bdqs:AmendmentResponseHasResultValueShape
+    a sh:NodeShape ;
+    sh:targetClass bdqffdq:AmendmentResponse ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:severity sh:Warning ;
+        sh:message  "AmendmentResponse with status AMENDED or FILLED_IN SHOULD carry bdqffdq:hasResponseResultValue."@en ;
+        sh:select   """
+            PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
+            SELECT $this
+            WHERE {
+                $this bdqffdq:hasResponseStatus ?s .
+                FILTER (?s IN (bdqffdq:AMENDED, bdqffdq:FILLED_IN))
+                FILTER NOT EXISTS { $this bdqffdq:hasResponseResultValue ?v }
+            }
+        """ ;
+    ] .
+
+
+# ── 20.6  AmendmentResponse NOT_AMENDED SHOULD NOT have hasResponseResultValue ─
+
+bdqs:AmendmentResponseNotAmendedNoValueShape
+    a sh:NodeShape ;
+    sh:targetClass bdqffdq:AmendmentResponse ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:severity sh:Warning ;
+        sh:message  "AmendmentResponse with status NOT_AMENDED SHOULD NOT carry bdqffdq:hasResponseResultValue."@en ;
+        sh:select   """
+            PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
+            SELECT $this
+            WHERE {
+                $this bdqffdq:hasResponseStatus      bdqffdq:NOT_AMENDED .
+                $this bdqffdq:hasResponseResultValue ?v .
+            }
+        """ ;
+    ] .
+
+
+# ── 20.7  Response with prerequisites not met SHOULD NOT have hasResponseResult ─
+
+bdqs:ResponsePrerequisiteNotMetShape
+    a sh:NodeShape ;
+    sh:targetClass bdqffdq:Response ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:severity sh:Warning ;
+        sh:message  "Response with status INTERNAL_PREREQUISITES_NOT_MET or EXTERNAL_PREREQUISITES_NOT_MET SHOULD NOT carry bdqffdq:hasResponseResult."@en ;
+        sh:select   """
+            PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
+            SELECT $this
+            WHERE {
+                $this bdqffdq:hasResponseStatus ?s .
+                FILTER (?s IN (bdqffdq:INTERNAL_PREREQUISITES_NOT_MET,
+                               bdqffdq:EXTERNAL_PREREQUISITES_NOT_MET))
+                $this bdqffdq:hasResponseResult ?r .
+            }
+        """ ;
+    ] .
+
+
+# ── 20.8  Specification with hasAuthoritiesDefaults MUST have hasArgument ───────
+
+bdqs:SpecificationWithDefaultsMustHaveArgumentShape
+    a sh:NodeShape ;
+    sh:targetClass bdqffdq:Specification ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:severity sh:Violation ;
+        sh:message  "Specification with bdqffdq:hasAuthoritiesDefaults MUST have at least one bdqffdq:hasArgument when a Parameter is referenced (§3.1.4)."@en ;
+        sh:select   """
+            PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
+            PREFIX dcterms: <http://purl.org/dc/terms/>
+            SELECT $this
+            WHERE {
+                $this bdqffdq:hasAuthoritiesDefaults ?d ;
+                      dcterms:issued                 ?issued .
+                FILTER (STRLEN(STR(?d)) > 0)
+                FILTER NOT EXISTS { $this bdqffdq:hasArgument ?arg }
+            }
+        """ ;
+    ] .
+
+
+# ── 20.9  ImprovementTarget SHOULD have at least one targeted need ───────────
+
+bdqs:ImprovementTargetHasTargetShape
+    a sh:NodeShape ;
+    sh:targetClass bdqffdq:ImprovementTarget ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:severity sh:Warning ;
+        sh:message  "ImprovementTarget SHOULD have at least one of bdqffdq:targetedValidation, bdqffdq:targetedMeasure, or bdqffdq:targetedIssue (§4.4.2.8)."@en ;
+        sh:select   """
+            PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
+            SELECT $this
+            WHERE {
+                $this a bdqffdq:ImprovementTarget .
+                FILTER NOT EXISTS {
+                    { $this bdqffdq:targetedValidation ?v }
+                    UNION { $this bdqffdq:targetedMeasure ?m }
+                    UNION { $this bdqffdq:targetedIssue   ?i }
+                }
+            }
+        """ ;
+    ] .
+
+
+# ── 20.10  ActedUpon with aggregatesResponsesFrom SHOULD carry
+#           composedOf bdqval:AggregatedTestResponseOutcomes (§3.1.2.1) ─────────
+
+bdqs:ActedUponAggregatesResponsesShape
+    a sh:NodeShape ;
+    sh:targetClass bdqffdq:ActedUpon ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:severity sh:Warning ;
+        sh:message  "bdqffdq:ActedUpon that carries bdqffdq:aggregatesResponsesFrom SHOULD also carry bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes (§3.1.2.1)."@en ;
+        sh:select   """
+            PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
+            PREFIX bdqval:  <https://rs.tdwg.org/bdqval/terms/>
+            SELECT $this
+            WHERE {
+                $this bdqffdq:aggregatesResponsesFrom ?need .
+                FILTER NOT EXISTS {
+                    $this bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes
+                }
+            }
+        """ ;
+    ] .
+
+
+# ── 20.11  ValidationResponse → Validation chain SHOULD be unambiguous (§3.2) ──
+
+bdqs:ValidationResponseChainShape
+    a sh:NodeShape ;
+    sh:targetClass bdqffdq:ValidationResponse ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:severity sh:Warning ;
+        sh:message  "The chain ValidationResponse ← producesResponse – Implementation – usesSpecification → Specification ← hasSpecification – ValidationMethod – forValidation → Validation SHOULD resolve to exactly one Validation (§3.2)."@en ;
+        sh:select   """
+            PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
+            SELECT $this
+            WHERE {
+                {
+                    FILTER NOT EXISTS {
+                        ?impl  bdqffdq:producesResponse  $this .
+                        ?impl  bdqffdq:usesSpecification ?spec .
+                        ?meth  bdqffdq:hasSpecification  ?spec .
+                        ?meth  bdqffdq:forValidation     ?va .
+                    }
+                }
+                UNION
+                {
+                    ?impl1 bdqffdq:producesResponse  $this .
+                    ?impl1 bdqffdq:usesSpecification ?spec1 .
+                    ?meth1 bdqffdq:hasSpecification  ?spec1 .
+                    ?meth1 bdqffdq:forValidation     ?va1 .
+                    ?impl2 bdqffdq:producesResponse  $this .
+                    ?impl2 bdqffdq:usesSpecification ?spec2 .
+                    ?meth2 bdqffdq:hasSpecification  ?spec2 .
+                    ?meth2 bdqffdq:forValidation     ?va2 .
+                    FILTER (?va1 != ?va2)
+                }
+            }
+        """ ;
+    ] .
+
+
+# ── 20.12  IssueResponse → Issue chain SHOULD be unambiguous (§3.2) ────────────
+
+bdqs:IssueResponseChainShape
+    a sh:NodeShape ;
+    sh:targetClass bdqffdq:IssueResponse ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:severity sh:Warning ;
+        sh:message  "The chain IssueResponse ← producesResponse – Implementation – usesSpecification → Specification ← hasSpecification – IssueMethod – forIssue → Issue SHOULD resolve to exactly one Issue (§3.2)."@en ;
+        sh:select   """
+            PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
+            SELECT $this
+            WHERE {
+                {
+                    FILTER NOT EXISTS {
+                        ?impl  bdqffdq:producesResponse  $this .
+                        ?impl  bdqffdq:usesSpecification ?spec .
+                        ?meth  bdqffdq:hasSpecification  ?spec .
+                        ?meth  bdqffdq:forIssue          ?is .
+                    }
+                }
+                UNION
+                {
+                    ?impl1 bdqffdq:producesResponse  $this .
+                    ?impl1 bdqffdq:usesSpecification ?spec1 .
+                    ?meth1 bdqffdq:hasSpecification  ?spec1 .
+                    ?meth1 bdqffdq:forIssue          ?is1 .
+                    ?impl2 bdqffdq:producesResponse  $this .
+                    ?impl2 bdqffdq:usesSpecification ?spec2 .
+                    ?meth2 bdqffdq:hasSpecification  ?spec2 .
+                    ?meth2 bdqffdq:forIssue          ?is2 .
+                    FILTER (?is1 != ?is2)
+                }
+            }
+        """ ;
+    ] .
+
+
+# ── 20.13  MeasurementResponse → Measure chain SHOULD be unambiguous (§3.2) ────
+
+bdqs:MeasurementResponseChainShape
+    a sh:NodeShape ;
+    sh:targetClass bdqffdq:MeasurementResponse ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:severity sh:Warning ;
+        sh:message  "The chain MeasurementResponse ← producesResponse – Implementation – usesSpecification → Specification ← hasSpecification – MeasurementMethod – forMeasure → Measure SHOULD resolve to exactly one Measure (§3.2)."@en ;
+        sh:select   """
+            PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
+            SELECT $this
+            WHERE {
+                {
+                    FILTER NOT EXISTS {
+                        ?impl  bdqffdq:producesResponse  $this .
+                        ?impl  bdqffdq:usesSpecification ?spec .
+                        ?meth  bdqffdq:hasSpecification  ?spec .
+                        ?meth  bdqffdq:forMeasure        ?me .
+                    }
+                }
+                UNION
+                {
+                    ?impl1 bdqffdq:producesResponse  $this .
+                    ?impl1 bdqffdq:usesSpecification ?spec1 .
+                    ?meth1 bdqffdq:hasSpecification  ?spec1 .
+                    ?meth1 bdqffdq:forMeasure        ?me1 .
+                    ?impl2 bdqffdq:producesResponse  $this .
+                    ?impl2 bdqffdq:usesSpecification ?spec2 .
+                    ?meth2 bdqffdq:hasSpecification  ?spec2 .
+                    ?meth2 bdqffdq:forMeasure        ?me2 .
+                    FILTER (?me1 != ?me2)
+                }
+            }
+        """ ;
+    ] .
+
+
+# ── 20.14  AmendmentResponse → Amendment chain SHOULD be unambiguous (§3.2) ────
+
+bdqs:AmendmentResponseChainShape
+    a sh:NodeShape ;
+    sh:targetClass bdqffdq:AmendmentResponse ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:severity sh:Warning ;
+        sh:message  "The chain AmendmentResponse ← producesResponse – Implementation – usesSpecification → Specification ← hasSpecification – AmendmentMethod – forAmendment → Amendment SHOULD resolve to exactly one Amendment (§3.2)."@en ;
+        sh:select   """
+            PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
+            SELECT $this
+            WHERE {
+                {
+                    FILTER NOT EXISTS {
+                        ?impl  bdqffdq:producesResponse  $this .
+                        ?impl  bdqffdq:usesSpecification ?spec .
+                        ?meth  bdqffdq:hasSpecification  ?spec .
+                        ?meth  bdqffdq:forAmendment      ?am .
+                    }
+                }
+                UNION
+                {
+                    ?impl1 bdqffdq:producesResponse  $this .
+                    ?impl1 bdqffdq:usesSpecification ?spec1 .
+                    ?meth1 bdqffdq:hasSpecification  ?spec1 .
+                    ?meth1 bdqffdq:forAmendment      ?am1 .
+                    ?impl2 bdqffdq:producesResponse  $this .
+                    ?impl2 bdqffdq:usesSpecification ?spec2 .
+                    ?meth2 bdqffdq:hasSpecification  ?spec2 .
+                    ?meth2 bdqffdq:forAmendment      ?am2 .
+                    FILTER (?am1 != ?am2)
+                }
+            }
+        """ ;
+    ] .
