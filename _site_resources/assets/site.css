@@ -83,6 +83,7 @@ body {
   margin: 0;
   padding: 2rem 1rem 4rem 1rem;
 }
+.site-logo-print { display: none; }
 
 .doc-header {
   margin-bottom: 1.5rem;
@@ -456,6 +457,10 @@ h1, h2, h3, h4, h5, h6 {
     border-bottom: 1pt solid #000;
     padding: 0.5rem 0;
   }
+
+  /* switch out the all white logo that works on the gradient background for one that shows up on print with the gradient removed */
+  .site-logo-screen { display: none; }
+  .site-logo-print  { display: block; }
 
   .project-name-link,
   .project-tagline  { color: #000 !important; }
