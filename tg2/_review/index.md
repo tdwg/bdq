@@ -262,21 +262,20 @@ This section provides a reader‑focused roadmap to that document set. Its purpo
       <td valign="top">
 		:green_book:
         <strong><a href="./docs/guide/users/index.md">BDQ User’s Guide</a></strong><br>
-        Explains how to interpret BDQ Test results and what they imply for data quality and use decisions.
+        Explains how to interpret BDQ Test results and what they imply for data quality and use decisions.<br>
         See also <a href="./docs/guide/bdqtest/index.md#22-use-cases-non-normative">Use Cases</a> 
       </td>
       <td valign="top">
 		:green_book:
         <strong><a href="./docs/guide/implementers/index.md">BDQ Implementer’s Guide</a></strong><br>
-        Explains how to implement BDQ Tests: inputs, outputs, edge cases, and how to use the Test descriptions and vocabularies in software.
+        Explains how to implement BDQ Tests: inputs, outputs, edge cases, and how to use the Test descriptions and vocabularies in software.<br>
         See also <a href="./docs/guide/bdqtest/index.md#22-use-cases-non-normative">Use Cases</a> 
       </td>
       <td valign="top">
 		:green_book:
         <strong><a href="./docs/guide/bdqffdq/index.md">Fitness For Use Framework Ontology: Concepts and Use</a></strong><br>
-		Explains the normative concepts and logic for describing data quality needs and reports.
-		<br>
-		See also the Fitness For Use Framework (bdqffdq:) <a href="./docs/list/bdqffdq/index.md">Term List</a>
+		Explains the normative concepts and logic for describing data quality needs and reports.<br>
+		See also the Fitness For Use Framework <a href="./docs/list/bdqffdq/index.md">bdqffdq: Term List</a>
 		and <a href="./vocabulary/bdqffdq.owl">OWL Ontology</a>.
       </td>
     </tr>
@@ -285,23 +284,24 @@ This section provides a reader‑focused roadmap to that document set. Its purpo
 		:blue_book:
         <strong><a href=".docs/list/bdqtest/index.md">Test Vocabulary &amp; Definitions</a></strong><br>
         The bdqtest: Term-List, complete normative definitions of the Tests themselves, for readers who need exact meanings or wish to trace provenance.<br>
-		See also <a href="./docs/list/bdquc/index.md">bdquc: Use Case Vocabulary</a>
+		See also the <a href="./docs/list/bdquc/index.md">bdquc: Use Case Vocabulary</a>
       </td>
       <td valign="top">
 		:blue_book:
         <strong>
 		<a href="./docs/guide/bdqtest/index.md">BDQ Tests: Concepts and Use</a>
 		</strong><br>
-        Explanations and Normative Guidance on the Tests and their Uses.<br>
-		See also <a href="./docs/list/bdquc/index.md">bdquc: Use Case Vocabulary</a>,
-		the bdqtest: <a href="./docs/list/bdqtest/index.md">Term List</a><br>
-		and serialized versions: <a href="./dist/bdqtest.xml">RDF/XML</a>, <a href="./dist/bdqtest.ttl">Turtle</a>, <a href="./dist/bdqtest.json">JSON-LD</a>.
+        Explanations and Normative Guidance on the Tests and their Uses. <br>
+		See also the <a href="./docs/list/bdqtest/index.md">bdqtest: Term List</a><br>
+		and serialized versions: <a href="./dist/bdqtest.xml">RDF/XML</a>, <a href="./dist/bdqtest.ttl">Turtle</a>, <a href="./dist/bdqtest.json">JSON-LD</a>,
+		and the <a href="./docs/list/bdquc/index.md">bdquc: Use Case Vocabulary</a>,
       </td>
       <td valign="top">
 		:blue_book:
-        <strong>Supporting Vocabularies</strong><br>
-        Controlled vocabularies for criteria, dimensions, enhancements, and other elements needed to specify new Tests.</a>
-		<a href="./docs/list/bdqval/index.md">bdqval: Vocabulary</a>, <a href="./docs/list/bdqcrit/index.md">bdqcrit: Vocabulary</a>, <a href="./docs/list/bdqdim/index.md">bdqdim: Vocabulary</a>, <a href="./docs/list/bdqenh/index.md">bdqenh: Vocabulary</a>, <a href="./docs/list/bdquc/index.md">bdquc: Vocabulary</a>.
+        <strong><a href="./docs/list/bdquc/index.md">The bdquc: Use Case Vocabulary</a></strong><br>
+		Describes each of the uses of data that the bdqtest: Tests are designed to support.<br>
+		See also the supporting controlled vocabularies for criteria, dimensions, enhancements, and other elements needed to specify new Tests.</a>
+		<a href="./docs/list/bdqval/index.md">bdqval: Vocabulary</a>, <a href="./docs/list/bdqcrit/index.md">bdqcrit: Vocabulary</a>, <a href="./docs/list/bdqdim/index.md">bdqdim: Vocabulary</a>, <a href="./docs/list/bdqenh/index.md">bdqenh: Vocabulary</a>.
       </td>
     </tr>
     <tr>
@@ -312,15 +312,16 @@ This section provides a reader‑focused roadmap to that document set. Its purpo
       </td>
       <td valign="top">
 		:blue_book:
-        <strong>Test Conformance Validation Data</strong><br>
-        Example datasets and expected results for checking implementations.
-		<a href="./docs/guide/implementers/TG2_test_validation_data.csv">Conformance Testing Data</a>
+        <strong><a href="./docs/guide/implementers/index.md#8-Conformance-Testing-Implementations-normative">Conformance Testing Implementations</a></strong><br>
+        Guidance on how to use the provided Test Conformance Testing Data to evaluate whether your Test implementation produces the expected results.<br>
+		See also the <a href="./docs/guide/implementers/TG2_test_validation_data.csv">Conformance Testing Data</a> and
+		the <a href="./docs/guide/synthetic/index.md">Guide to Marking Synthetic Data</a>.
       </td>
       <td valign="top">
 		:blue_book:
-        <strong>BDQ Tests Vocabulary &amp; Canonical Definitions</strong><br>
-        Examples of how existing Tests are formally defined and versioned; useful patterns for new Test design.<br>
-		bdqtest: <a href="./docs/list/bdqtest/index.md">Term List</a>
+        <strong>
+		<a href="./docs/list/bdqtest/index.md">BDQ Tests Vocabulary &amp; Canonical Definitions</a></strong><br>
+        The bdqtest: Term List, providing examples of how existing Tests are formally defined and versioned; useful patterns for new Test design.<br>
       </td>
     </tr>
     <tr>
