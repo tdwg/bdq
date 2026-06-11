@@ -235,7 +235,7 @@ This section provides a reader‑focused roadmap to that document set. Its purpo
 		:blue_book:
         <strong><a href=".docs/list/bdqtest/index.md">Test Vocabulary &amp; Definitions</a></strong><br>
         The bdqtest: Term-List, complete normative definitions of the Tests themselves, for readers who need exact meanings or wish to trace provenance.<br>
-		See also the <a href="./docs/list/bdquc/index.md">bdquc: Use Case Vocabulary</a>
+		See also the <a href="./docs/terms/bdqtest/qrg_index_by_usecase.html"Index to Tests by Use Case</a>
       </td>
       <td valign="top">
 		:blue_book:
