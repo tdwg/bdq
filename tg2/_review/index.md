@@ -273,27 +273,28 @@ This section provides a reader‑focused roadmap to that document set. Its purpo
       </td>
       <td valign="top">
 		:green_book:
-        <strong>Fitness For Use Framework (bdqffdq:) &amp; Concepts and Use</strong><br>
-        Normative concepts and logic describing data quality needs and layers, with an explanatory guide.
-		<a href="./docs/guide/bdqffdq/index.md">Fitness For Use Framework Ontology: Concepts and Use</a><br>
-		bdqffdq: <a href="./docs/list/bdqffdq/index.md">Term List</a><br>
-		and serialized version: <a href="./vocabulary/bdqffdq.owl">OWL Ontology</a>.
+        <strong><a href="./docs/guide/bdqffdq/index.md">Fitness For Use Framework Ontology: Concepts and Use</a></strong><br>
+		Explains the normative concepts and logic for describing data quality needs and reports.
+		<br>
+		See also the Fitness For Use Framework (bdqffdq:) <a href="./docs/list/bdqffdq/index.md">Term List</a>
+		and <a href="./vocabulary/bdqffdq.owl">OWL Ontology</a>.
       </td>
     </tr>
     <tr>
       <td valign="top">
 		:blue_book:
-        <strong>Test Vocabulary &amp; Definitions</strong><br>
-        Normative definitions of the Tests themselves, for readers who need exact meanings or wish to trace provenance.<br>
-		bdqtest: <a href="./docs/list/bdqtest/index.md">Term List</a>.
+        <strong><a href=".docs/list/bdqtest/index.md">Test Vocabulary &amp; Definitions</a></strong><br>
+        The bdqtest: Term-List, complete normative definitions of the Tests themselves, for readers who need exact meanings or wish to trace provenance.<br>
+		See also <a href="./docs/list/bdquc/index.md">bdquc: Use Case Vocabulary</a>
       </td>
       <td valign="top">
 		:blue_book:
-        <strong>Test Vocabulary, Definitions &amp; Serializations</strong><br>
-        Explanations and Normative Guidance on the Tests and their Uses.
-		<a href="./docs/guide/bdqtest/index.md">BDQ Tests: Concepts and Use</a>.<br>
-        Normative machine‑readable definitions and versioned lists of Tests.
-		bdqtest: <a href="./docs/list/bdqtest/index.md">Term List</a><br>
+        <strong>
+		<a href="./docs/guide/bdqtest/index.md">BDQ Tests: Concepts and Use</a>
+		</strong><br>
+        Explanations and Normative Guidance on the Tests and their Uses.<br>
+		See also <a href="./docs/list/bdquc/index.md">bdquc: Use Case Vocabulary</a>,
+		the bdqtest: <a href="./docs/list/bdqtest/index.md">Term List</a><br>
 		and serialized versions: <a href="./dist/bdqtest.xml">RDF/XML</a>, <a href="./dist/bdqtest.ttl">Turtle</a>, <a href="./dist/bdqtest.json">JSON-LD</a>.
       </td>
       <td valign="top">
