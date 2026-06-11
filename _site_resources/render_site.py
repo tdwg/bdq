@@ -402,7 +402,7 @@ def render_page(
     review_html = (
         '<header class="doc-header">'
         '<div class="review-banner" role="note">'
-        "&#9888;&#65039; Under Review &#8212; Draft document"
+        "&#9888;&#65039; Under Review"
         "</div>"
         "</header>"
         if under_review
