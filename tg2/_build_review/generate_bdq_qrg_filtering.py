@@ -624,7 +624,10 @@ TEMPLATE = '''<!DOCTYPE html>
     <!-- id="main-content" is the target of the skip navigation link, while #top goes by convention to top of page and needs no anchor -->
     <main id="main-content">
 
-        <div class="review-banner" role="note" aria-label="Under review">Under Review</div>
+        <!-- Warning character conveys draft status by shape as well as colour
+             (WCAG 1.4.1); aria-label removed so visible text serves as the
+             accessible name without capitalisation mismatch.               -->
+        <div class="review-banner" arial-label="Under Review" role="note">&#9888;&#65039; Under Review</div>
 
         <!-- Header wrapped in compact-style div; "The Tests" heading follows
              immediately after, serving as both a visual section marker and
