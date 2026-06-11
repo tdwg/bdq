@@ -8,6 +8,13 @@
   <link rel="stylesheet" href="/assets/css/pygments.css">
 </head>
 <body>
+  <!--
+    Skip link: visually hidden until focused by keyboard.
+    Must be the first focusable element in <body>.
+    tabindex="-1" on <main> lets browsers move focus there on activation.
+  -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
   <header class="page-header" role="banner">
     <div class="page-header-inner">
       <a class="site-logo-link" href="{{SITE_HEADER_LINK}}" aria-label="TDWG home for this section">
@@ -22,11 +29,14 @@
     </div>
   </header>
 
-  <main class="main-content" role="main">
-    <header class="doc-header">
-      {{REVIEW_BANNER}}
-    </header>
-
+  <!--
+    {{REVIEW_BANNER}} is either a complete <header class="doc-header">...</header>
+    for draft pages, or an empty string for other pages, so no empty landmark
+    element is left behind on non-draft pages.
+    tabindex="-1" makes <main> focusable by the skip link without entering tab order.
+  -->
+  <main class="main-content" id="main-content" tabindex="-1" role="main">
+    {{REVIEW_BANNER}}
     <div class="doc-shell">
       {{TOC_SIDEBAR}}
       <article class="doc-content">
@@ -41,7 +51,17 @@
 
   <noscript>
     <style>
-      #toc-empty { display: none !important; }
+      /*
+        Without JS:
+        — the sidebar toggle button does nothing; hide it so it is not
+          a confusing dead control.
+        — toc.js cannot open #sidebar-inner on mobile; force it visible
+          so the TOC is always reachable on narrow viewports.
+        — toc.js cannot manage #toc-empty; always hide it.
+      */
+      .sidebar-toggle { display: none  !important; }
+      #sidebar-inner  { display: block !important; }
+      #toc-empty      { display: none  !important; }
     </style>
   </noscript>
 

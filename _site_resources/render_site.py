@@ -8,7 +8,7 @@ from pathlib import Path
 
 import markdown
 from pygments.formatters import HtmlFormatter
-from pygments.styles.friendly import FriendlyStyle 
+from pygments.styles.friendly import FriendlyStyle
 from pygments.token import Token
 
 from render_site_links import (
@@ -74,7 +74,7 @@ def first_heading_title(text: str) -> str:
 
 # This function applies bare-URL linkification to a whole Markdown document before Markdown conversion.
 # It skips fenced code blocks entirely. For ordinary Markdown lines it produces Markdown links, while for
-# lines containing raw HTML it produces HTML anchor tags in the text nodes between tags.  It also respects 
+# lines containing raw HTML it produces HTML anchor tags in the text nodes between tags.  It also respects
 # NO LINK markers to allow authors to suppress linkification where it would cause problems.
 def linkify_bare_urls(text: str) -> str:
     lines = text.splitlines()
@@ -128,6 +128,7 @@ def linkify_bare_urls(text: str) -> str:
             result.append(linkify_bare_urls_in_markdown_line(line))
 
     return "\n".join(result)
+
 
 # A simple function to replace emoji shortcodes with their corresponding Unicode characters.
 def replace_emoji_shortcodes(text: str) -> str:
@@ -271,6 +272,9 @@ def normalize_markdown_lists(text: str) -> str:
 
 
 # This function adds id attributes to heading tags in the HTML, generating anchors based on the text content of the headings.
+# The heading itself receives the canonical (case-preserving) id.  A lowercase-alias <a> element is emitted
+# only when the two slugs differ, preventing the duplicate-id violation present in the original implementation
+# where both the alias <a> and the heading carried the same primary_anchor id value.
 def add_heading_ids(html_text: str) -> str:
     def repl(match):
         level = match.group(1)
@@ -281,20 +285,25 @@ def add_heading_ids(html_text: str) -> str:
         primary_anchor = slugify(plain, preserve_case=True)
         lower_anchor = slugify(plain, preserve_case=False)
 
-        anchors = [
-            f'<a id="{primary_anchor}" class="anchor-target" aria-hidden="true"></a>'
-        ]
-        if lower_anchor != primary_anchor:
-            anchors.append(
-                f'<a id="{lower_anchor}" class="anchor-target" aria-hidden="true"></a>'
-            )
-
+        # Heading already has an id (e.g. from Python-Markdown's toc
+        # extension) — leave the element entirely unchanged.
         if "id=" in attrs:
-            heading_html = f'<h{level}{attrs}>{inner}</h{level}>'
-        else:
-            heading_html = f'<h{level}{attrs} id="{primary_anchor}">{inner}</h{level}>'
+            return f"<h{level}{attrs}>{inner}</h{level}>"
 
-        return "".join(anchors) + heading_html
+        # The heading itself gets the canonical (case-preserving) id.
+        heading_html = f'<h{level}{attrs} id="{primary_anchor}">{inner}</h{level}>'
+
+        # Emit a lowercase-alias anchor only when the slugs actually differ,
+        # preventing duplicate-id violations.  The alias carries only the
+        # lowercase id so no id is shared with the heading element.
+        if lower_anchor != primary_anchor:
+            alias = (
+                f'<a id="{lower_anchor}" class="anchor-target"'
+                f' aria-hidden="true"></a>\n'
+            )
+            return alias + heading_html
+
+        return heading_html
 
     return re.sub(r"<h([1-6])([^>]*)>(.*?)</h\1>", repl, html_text, flags=re.S)
 
@@ -308,12 +317,20 @@ def build_toc_html(body_html: str) -> str:
 
     for level, hid, inner in headings:
         level_num = int(level)
+
+        # Currently limited to h2 entries.  To enable h3 entries, change the
+        # condition below to:  if level_num not in (2, 3): continue
+        # and assign css_class = f"toc-h{level_num}" instead of the fixed value.
+        # Make the matching change in the toc.js dynamic-build fallback at the
+        # same time so static and dynamic paths stay in sync.
+        if level_num != 2:
+            continue
+
         text = re.sub(r"<[^>]+>", "", inner).strip()
         escaped_text = html.escape(text)
         escaped_hid = html.escape(hid)
 
-        if level_num == 2:
-            items.append(f'<li><a href="#{escaped_hid}">{escaped_text}</a></li>')
+        items.append(f'<li class="toc-h2"><a href="#{escaped_hid}">{escaped_text}</a></li>')
 
     return "\n".join(items)
 
@@ -378,27 +395,50 @@ def render_page(
     header_link: str,
     sidebar_context_html: str,
 ) -> str:
+    # Emit the wrapping <header class="doc-header"> only for draft pages,
+    # leaving no empty landmark element on non-draft pages.
+    # The warning character (&#9888;) conveys draft status by shape as well
+    # as colour, satisfying WCAG 1.4.1 (Use of Color).
     review_html = (
-        '<div class="review-banner" role="note" aria-label="Under review">Under Review</div>'
-        if under_review else ""
+        '<header class="doc-header">'
+        '<div class="review-banner" role="note">'
+        "&#9888;&#65039; Under Review &#8212; Draft document"
+        "</div>"
+        "</header>"
+        if under_review
+        else ""
     )
-    toc_html = """
-<aside class="doc-sidebar">
-  {{SIDEBAR_CONTEXT}}
-  <nav class="page-toc" aria-label="On this page">
-    <h2>On this page</h2>
-    <p class="back-to-top">↑ <a href="#top"><strong>Back to top</strong></a></p>
-    <ul id="toc-list">
-{{TOC_ITEMS}}
-    </ul>
-    <p id="toc-empty" class="toc-empty" hidden>No headings available.</p>
-  </nav>
-</aside>
-""" if show_toc else ""
 
+    toc_html = ""
     if show_toc:
-        toc_html = toc_html.replace("{{TOC_ITEMS}}", toc_items_html)
-        toc_html = toc_html.replace("{{SIDEBAR_CONTEXT}}", sidebar_context_html)
+        toc_html = (
+            '<aside class="doc-sidebar" id="doc-sidebar"'
+            ' aria-label="Page navigation">\n'
+            # Toggle button: hidden on desktop (CSS display:none),
+            # visible on narrow screens.  aria-expanded reflects JS state.
+            '  <button class="sidebar-toggle" id="sidebar-toggle-btn"\n'
+            '          type="button" aria-expanded="false"\n'
+            '          aria-controls="sidebar-inner">\n'
+            '    <span aria-hidden="true">&#9776;</span>\n'
+            '    <span class="sr-only">Table of contents</span>\n'
+            '  </button>\n'
+            # sidebar-inner: JS adds/removes .is-open; noscript forces display:block
+            '  <div id="sidebar-inner">\n'
+            f'    {sidebar_context_html}\n'
+            '    <nav class="page-toc" aria-label="On this page">\n'
+            '      <h2>On this page</h2>\n'
+            '      <p class="back-to-top">'
+            '&#8593; <a href="#top"><strong>Back to top</strong></a>'
+            "</p>\n"
+            '      <ul id="toc-list">\n'
+            f"        {toc_items_html}\n"
+            "      </ul>\n"
+            '      <p id="toc-empty" class="toc-empty" hidden>'
+            "No headings available.</p>\n"
+            "    </nav>\n"
+            "  </div>\n"
+            "</aside>\n"
+        )
 
     page = template
     page = page.replace("{{PAGE_TITLE}}", html.escape(title))

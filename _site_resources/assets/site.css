@@ -100,6 +100,9 @@ body {
   color: #fff;
   background: var(--bdq-review);
   border-radius: 0.35rem;
+  /* Left border adds a shape indicator so draft status is not
+     conveyed by colour alone (WCAG 1.4.1).                   */
+  border-left: 4px solid rgba(0, 0, 0, 0.30);
 }
 
 .doc-shell {
@@ -115,14 +118,14 @@ body {
   align-self: start;
 }
 
-.back-to-top { 
-  margin: 0 0 8px 0; font-size: 0.82em; 
+.back-to-top {
+  margin: 0 0 8px 0; font-size: 0.82em;
 }
 .back-to-top a {
-  color: var(--bdq-link); text-decoration: none; 
+  color: var(--bdq-link); text-decoration: none;
 }
-.back-to-top a:hover { 
-  text-decoration: underline; 
+.back-to-top a:hover {
+  text-decoration: underline;
 }
 
 
@@ -151,6 +154,13 @@ body {
   overflow-wrap: anywhere;
   word-break: break-word;
 }
+
+/* .toc-h2 — class present on all h2-level TOC entries for forward
+   compatibility with the toc-h3 path.  No visual override is needed
+   since the base .page-toc li style applies.
+   To enable h3 entries: uncomment the .page-toc li.toc-h3 rule below
+   and make the matching changes in build_toc_html() in render_site.py
+   and in the toc.js dynamic-build fallback simultaneously.           */
 
 .page-toc li.toc-h3 {
   margin-left: 0.75rem;
@@ -196,6 +206,12 @@ body {
   border: 1px solid var(--bdq-border);
   padding: 0.4rem 0.6rem;
   vertical-align: top;
+}
+
+.doc-content th {
+  background: var(--bdq-bg-soft);
+  font-weight: 700;
+  text-align: center;
 }
 
 .doc-content pre {
@@ -268,6 +284,12 @@ body {
   text-decoration: underline;
 }
 
+/* Sidebar toggle button — hidden on desktop; the max-width:960px
+   media query below overrides this to display:flex on narrow screens. */
+.sidebar-toggle {
+  display: none;
+}
+
 @media (max-width: 960px) {
   .doc-shell {
     grid-template-columns: 1fr;
@@ -282,6 +304,41 @@ body {
     max-height: none;
   }
 
+  /* Show the toggle button on narrow screens */
+  .sidebar-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    background: var(--bdq-bg-soft);
+    border: 1px solid var(--bdq-border);
+    border-radius: 0.4rem;
+    font-size: 0.95rem;
+    font-family: inherit;
+    color: var(--bdq-text);
+    cursor: pointer;
+    text-align: left;
+    margin-bottom: 0.5rem;
+  }
+
+  .sidebar-toggle:hover {
+    background: var(--bdq-bg-soft-2);
+  }
+
+  /*
+    Sidebar content collapsed by default on mobile.
+    JS adds .is-open on toggle; the <noscript> rule in page.html
+    forces display:block so content is always reachable without JS.
+  */
+  #sidebar-inner {
+    display: none;
+  }
+
+  #sidebar-inner.is-open {
+    display: block;
+  }
+
   .project-name {
     font-size: 1.6rem;
   }
@@ -294,5 +351,217 @@ body {
     width: 100px;
     height: 42px;
     margin-top: 0.5rem;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   Accessibility utilities
+   ═══════════════════════════════════════════════════════════════ */
+
+/*
+  Skip link: visually off-screen until keyboard-focused, then
+  slides to the top-left corner of the viewport.
+  No underline by default; underline on hover consistent with
+  the site-wide link convention.
+*/
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 1rem;
+  z-index: 9999;
+  padding: 0.5rem 1rem;
+  background: #000;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 0 0 0.3rem 0.3rem;
+  white-space: nowrap;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
+.skip-link:hover {
+  text-decoration: underline;
+}
+
+/*
+  The skip link moves programmatic focus to <main id="main-content"
+  tabindex="-1">.  Suppress the focus ring on that container — a
+  :focus-visible outline on <main> would draw a large rectangle
+  around the entire content area, which is visually jarring.
+*/
+#main-content:focus,
+#main-content:focus-visible {
+  outline: none;
+}
+
+/*
+  Screen-reader-only utility — hides content visually while keeping
+  it in the accessibility tree.  Used for the sidebar toggle button label.
+*/
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/*
+  Keyboard focus indicator.
+  :focus-visible targets keyboard navigation only, leaving mouse
+  clicks unaffected (WCAG 2.4.7, 2.4.11).
+  Because body links are not underlined, this ring is the primary
+  non-colour cue for keyboard users.
+*/
+:focus-visible {
+  outline: 3px solid var(--bdq-brand);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/*
+  Scroll margin — small breathing room above anchor targets
+  when the browser jumps to a heading.
+*/
+h1, h2, h3, h4, h5, h6 {
+  scroll-margin-top: 0.5rem;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   Print
+   ═══════════════════════════════════════════════════════════════ */
+
+@media print {
+
+  /* ── Hide navigation and interactive chrome ── */
+  .doc-sidebar,
+  .sidebar-toggle,
+  .back-to-top    { display: none !important; }
+
+  /* ── Strip the decorative gradient from the site header ── */
+  .page-header {
+    background-image: none;
+    background-color: #fff;
+    color: #000;
+    border-bottom: 1pt solid #000;
+    padding: 0.5rem 0;
+  }
+
+  .project-name-link,
+  .project-tagline  { color: #000 !important; }
+
+  /* ── Expand content to full page width ── */
+  .main-content {
+    max-width: 100% !important;
+    margin:    0    !important;
+    padding:   0    !important;
+  }
+
+  .doc-shell,
+  .doc-content {
+    display:   block !important;
+    max-width: 100%  !important;
+    padding:   0     !important;
+    margin:    0     !important;
+  }
+
+  /* ── Restore native table layout so content is not clipped by the
+     overflow:auto rule that enables horizontal scrolling on screen ── */
+  .doc-content table {
+    display:  table   !important;
+    overflow: visible !important;
+    width:    100%    !important;
+  }
+
+  /* ── Print-friendly typography ── */
+  body {
+    font-size:   11pt;
+    line-height: 1.5;
+    color:       #000;
+    background:  #fff;
+  }
+
+  /*
+    Review banner: strip colour so it prints legibly on monochrome
+    printers; border-left preserves the shape indicator.
+    No display override — the QRG page has its own
+    display:none !important in its inline <style> which continues
+    to win that cascade battle without interference from this rule.
+  */
+  .review-banner {
+    background:  none           !important;
+    color:       #000           !important;
+    border:      1pt solid #000 !important;
+    border-left: 4pt solid #000 !important;
+    padding:     4pt 6pt;
+    margin-bottom: 12pt;
+  }
+
+  /*
+    Show destination URLs after external links.
+    href^="http" matches both http:// and https:// URLs — a
+    separate https selector would be redundant since https starts
+    with http.
+    Because links are not underlined in screen style, printing the
+    URL is especially important for usability of printed copies.
+  */
+  .doc-content a[href^="http"]::after {
+    content:       " <" attr(href) ">";
+    font-size:     0.8em;
+    overflow-wrap: break-word;
+    color:         #444;
+    font-weight:   normal;
+  }
+
+  /* Suppress URL annotation for same-page anchor links */
+  .doc-content a[href^="#"]::after { content: none; }
+
+  /* ── Prevent page breaks inside block content ── */
+  pre,
+  .highlight,
+  table,
+  figure,
+  blockquote {
+    break-inside:      avoid;   /* modern */
+    page-break-inside: avoid;   /* legacy */
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    break-after:       avoid;   /* modern */
+    page-break-after:  avoid;   /* legacy */
+    break-inside:      avoid;   /* modern */
+    page-break-inside: avoid;   /* legacy */
+  }
+
+  /* ── Wrap code rather than overflowing the paper margin.
+     overflow-wrap:break-word breaks only when a token genuinely
+     exceeds the line width, preserving readability better than
+     word-break:break-all which breaks at any character boundary. ── */
+  pre,
+  code {
+    white-space:   pre-wrap;
+    overflow-wrap: break-word;
+  }
+
+  /* ── Alias anchors serve no purpose in print ── */
+  .anchor-target { display: none; }
+
+  /* ── Footer: keep attribution visible but compact ── */
+  .site-footer {
+    border-top: 1pt solid #000;
+    padding:    6pt 0 0 0;
+    color:      #000;
+    font-size:  9pt;
   }
 }
