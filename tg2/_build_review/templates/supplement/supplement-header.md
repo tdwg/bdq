@@ -111,6 +111,8 @@ Other than data availability, ‘Data Quality’ is probably the most significan
 
 These basic principles in the development of the Tests are elaborated in [3.11 Principles of Test Design (non-normative)](#311-principles-of-test-design-non-normative).
 
+Note that "CORE" is also used as a GitHub tag for the tests. 
+
 The scope of CORE was also developed from the user needs analysis of BDQ Task Group 3, (Data Quality Use Cases: Rees & Nicholls 2020). The CORE Tests largely cover data quality with regards to what organisms have occurred (`dwc:Occurrences`) where and when, and test a subset of [Darwin Core Terms](http://rs.tdwg.org/dwc/doc/list/) (Darwin Core Maintenance Group 2021) that we considered to be critical metadata about `dwc:Occurrence` records.
 
 Additional Tests were framed, but considered out of scope for CORE data quality needs and were tagged as "Supplementary" in GitHub. These Tests may have a role in specific `Use Cases`. Implementers are free to implement a subset of the CORE Tests or Supplementary or new Tests when there is a particular data quality need within their domain - e.g., testing for a value of sub-genus against a taxonomic name authority or testing for a valid depth against maximum depth around the location of an observation. Be aware, however, that the Supplementary Tests have not gone through rigorous implementation testing. Note, also, that an implementation of BDQ will be compliant with the standard only if all Tests for at least one `Use Case` are implemented.  
@@ -1100,6 +1102,7 @@ Once the vocabulary terms and their definitions had become stable, they were ass
 - bdqdim: `https://rs.tdwg.org/bdqdim/terms/` for the `Data Quality Dimension` of the Tests
 - bdqcrit: `https://rs.tdwg.org/bdqcrit/terms/` for the `Criteria` of the `Validation` and `Issue` Tests
 - bdqenh: `https://rs.tdwg.org/bdqenh/terms/` for the `Enhancements` of the `Amendment` Tests
+- bdquc: `https://rs.tdwg.org/bdquc/terms/` for the BDQ Use Cases 
 - bdqval: `https://rs.tdwg.org/bdqval/terms/` for terms used to construct specifications: `sourceAuthorities`, `Parameters`, `Information Elements`, and the concepts `bdqval:Empty` and `bdqval:NotEmpty`.
 
 These vocabularies all fed into a formal description of the Tests as terms in the `bdqtest:`, where the Tests with their descriptions were framed using the other vocabularies.
@@ -1221,7 +1224,7 @@ For example the Test with the label "VALIDATION_COUNTRYCODE_STANDARD" validates 
 
 For `Single Record` Tests, the `Single Record` is implied and type is one of `Validation`, `Issue`, `Measure` or `Amendment` (the Test types in `bdqffdq:`),  For `Multi Record` Tests, MULTIRECORD is stated in the label, along with a marker for whether a `Multi Record` `Measure` returns a numerical count (COUNT) or a COMPLETE/NOT_COMPLETE `Response.result` for Quality Assurance (QA) use.
 
-The combination of `Information Element` and Evaluation was called the Term-Action in the GitHub issues used to develop the tests.  This combination was found useful for sorting and classifying Tests.
+The combination of `Information Element` and Evaluation was called the Term-Actions in the GitHub issues used to develop the tests.  This combination was found useful for sorting and classifying Tests.
 
 If the `Information Element` is a single term (e.g. `dwc:countryCode`), the information element component of the label is just the term local name placed in all upper case (e.g. COUNTRYCODE).  If the `Information Element` is composed of several terms, these may simply be concatenated for example "YEARMONTHDAY" or "COUNTRYCOUNTRYCODE".  Alternately, several terms may be labeled with an abstract description of the combined specific `Information Elements`, as an `Abstract Information Element` label, for example "POLYNOMIAL" or "CLASSIFICATION".  Labels formed from concatenated terms, and `Abstract Information Element` labels are listed below as "Labels for multiple Information Elements".
 
@@ -1238,7 +1241,7 @@ The tables below list the terms used for the Test `Types`, the Labels for multip
 | <strong><a name="test-types">Test Types</a></strong> |||  <!-- *************************************************************** -->
 | AMENDMENT      | A Test Type that proposes changes to `Information Elements` based on some data quality enhancement. See `bdqffdq:Amendment`. | [AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT](../terms/bdqtest/index.md#AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT) |
 | ISSUE  | A Test Type that flags a possible issue or problem with the data that may need examination by the user to determine if data have quality for their use. See `bdqffdq:Issue`.    | [ISSUE_COORDINATES_CENTEROFCOUNTRY](../terms/bdqtest/index.md#ISSUE_COORDINATES_CENTEROFCOUNTRY)   |
-| MEASURE        | A Test Type that expresses how the fitness of data for some use may be measured. See `bdqffdq:Measure`          | [MEASUREMENT_AMENDMENTS_PROPOSED](../terms/bdqtest/index.md#MEASUREMENT_AMENDMENTS_PROPOSED)        |
+| MEASURE        | A Test Type that expresses how the fitness of data for some use may be measured. See `bdqffdq:Measure`          | [MEASURE_AMENDMENTS_PROPOSED](../terms/bdqtest/index.md#MEASURE_AMENDMENTS_PROPOSED)        |
 | MULTIRECORD_MEASURE_COUNT      | A Test Type of `Measure` that takes as input the outputs of other Tests (usually `Validations`) across a `Multi Record`.  For example, count across MultiRecords of a VALIDATION Test that return a Response of COMPLIANT.  Provides metrics for `Quality Control`. | [MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_NOTEMPTY](../terms/bdqtest/index.md#MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_NOTEMPTY)     |
 | MULTIRECORD_MEASURE_QA | Measurement over MultiRecords of a VALIDATION Test where every record complies with Quality Assurance requirements by being COMPLIANT         | [MULTIRECORD_MEASURE_QA_BASISOFRECORD_NOTEMPTY](../terms/bdqtest/index.md#MULTIRECORD_MEASURE_QA_BASISOFRECORD_NOTEMPTY)  |
 | VALIDATION     | A Test type that expresses how the fitness of data for some use may be measured. See `bdqffdq:Measure`      | [VALIDATION_BASISOFRECORD_NOTEMPTY](../terms/bdqtest/index.md#VALIDATION_BASISOFRECORD_NOTEMPTY)      |
@@ -1400,7 +1403,7 @@ This diagram illustrates the relationships among the Tests that are oriented tow
 
 Each Test issue in GitHub begins with a table in Markdown format describing the Test. The terminology of the Test descriptors in this Markdown table documented below differs slightly from the terms used in the Framework, but represent all key aspects of each Test. Some descriptors such as the GUID are intended for machine consumption. Others, such as the "Description" are designed to be human-readable for consumers of biodiversity `Data Quality Reports` while descriptors such as the "Specification" ensure that implementers have no ambiguity about how the Test should behave.
 
-**Title** [non-normative]: A standardized, human readable name of the Test based roughly on the template TG2-TESTTYPE_INFORMATIONELEMENT_EVALUATION, for example `TG2-VALIDATION_BASISOFRECORD_STANDARD`. These names were considered helpful for human-human communication and assisted with code implementation, maintenance and searches. A number of the Tests did however, only loosely conform to this template due to the difficulty of rendering them otherwise, for example `TG2-VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION`, but the titles remained obvious and therefore useful.
+**Title** [non-normative]: A standardized, human readable name of the Test based roughly on the template TG2-TESTTYPE_INFORMATIONELEMENT_EVALUATION, for example `TG2-VALIDATION_BASISOFRECORD_STANDARD`. These names were considered helpful for human-human communication and assisted with code implementation, maintenance and searches. A number of the Tests did however, only loosely conform to this template due to the difficulty of rendering them otherwise, for example `TG2-VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION`, but the titles remained obvious and therefore useful. Note that the prefix "TG2-" is unique to the GitHub Issue labels. This prefix helped identify Task Group 2's test Issues.
 
 **GUID** [normative]: A globally unique identifier (e.g., 8f1e6e58-544b-4365-a569-fb781341644e) that allows software to uniquely identify each Test. The GUID in the Markdown table becomes the local part of the IRI for the Test (e.g., `https://rs.tdwg.org/bdqtest/terms/8f1e6e58-544b-4365-a569-fb781341644e`) when translated to RDF.
 
