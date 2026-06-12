@@ -102,8 +102,8 @@ Draft Standard for Review
       - [7.2.2.1 Example Conformance Testing Data (non-normative)](#7221-example-conformance-testing-data-non-normative)
       - [7.2.2.2 Conformance testing data for our proposed VALIDATION_WASATTRIBUTEDTO_STANDARD Test (non-normative)](#7222-conformance-testing-data-for-our-proposed-validation_wasattributedto_standard-test-non-normative)
       - [7.2.2.3 Enumerating Test Conformance Data (non-normative)](#7223-enumerating-test-conformance-data-non-normative)
-  - [7.4 Execution Frameworks (non-normative)](#74-execution-frameworks-non-normative)
-    - [7.4.1 What an execution framework must do between raw data and a Test implementation (non-normative)](#741-what-an-execution-framework-must-do-between-raw-data-and-a-test-implementation-non-normative)
+  - [7.3 Execution Frameworks (non-normative)](#73-execution-frameworks-non-normative)
+    - [7.3.1 What an execution framework must do between raw data and a Test implementation (non-normative)](#731-what-an-execution-framework-must-do-between-raw-data-and-a-test-implementation-non-normative)
 
 - [8 Use an implementation for Quality Control (non-normative)](#8-use-an-implementation-for-quality-control-non-normative)
   - [8.1 MultiRecord Measures for Quality Control (non-normative)](#81-multirecord-measures-for-quality-control-non-normative)
@@ -1091,7 +1091,7 @@ Consideration of all of these will help ensure comprehensive coverage of the Tes
 See also: 
 * [Conformance Testing Implementations](../guide/implementers/index.md#8-conformance-testing-implementations-normative) in the [BDQ Implementer's Guide](../guide/implementers/index.md).
 
-### 7.4 Execution Frameworks (non-normative)
+### 7.3 Execution Frameworks (non-normative)
 
 The BDQ Test specifications (the Specification text in bdqffdq:hasExpectedResponse, plus any Parameters/defaults) are execution framework agnostic because they define only:
 
@@ -1108,7 +1108,7 @@ The BDQ Test specifications (the Specification text in bdqffdq:hasExpectedRespon
 * How Responses are serialized/persisted (objects, rows, RDF [bdqffdq:Response](<../list/bdqffdq/index.md#Response> "A bdqffdq:ReportConcept produced by a bdqffdq:Implementation expressing a statement about data quality resulting from the application of the logic of a bdqffdq:Specification to a bdqffdq:DataResource."), annotations).
 * How Responses are presented to users or downstream processes (logs, dashboards, annotations).
 
-#### 7.4.1 What an execution framework must do between raw data and a Test implementation (non-normative)
+#### 7.3.1 What an execution framework must do between raw data and a Test implementation (non-normative)
 
 A framework’s job is to act as the “adapter layer” that turns heterogeneous input into the canonical inputs/outputs implied by the ontology and the Test descriptors:
 
