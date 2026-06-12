@@ -1419,7 +1419,7 @@ Each Test issue in GitHub begins with a table in Markdown format describing the 
 
 **Information Elements Acted Upon** [normative]: The [Darwin Core Terms](http://rs.tdwg.org/dwc/doc/list/) (Darwin Core Maintenance Group 2021) that are the focus of the Test (e.g., `dwc:verbatimCoordinates`, `dwc:verbatimLatitude`, `dwc:verbatimLongitude`, `dwc:verbatimCoordinateSystem`, and `dwc:verbatimSRS` for the Test [AMENDMENT_COORDINATES_FROM_VERBATIM](../terms/bdqtest/index.md#AMENDMENT_COORDINATES_FROM_VERBATIM)).
 
-**Expected Response (Specification)** [normative]: A concise description of the logic of the Test to clarify the expectations for its implementation. The Expected Response takes the form (for a `Validation`) of: EXTERNAL_PREREQUISITES_NOT_MET if \<condition\>; INTERNAL_PREREQUESITES_NOT_MET if \<condition\>; COMPLIANT if \<condition\>; otherwise NOT_COMPLIANT. 
+**Expected Response (Specification)** [normative]: A concise description of the logic of the Test to clarify the expectations for its implementation. The Expected Response takes the form (for a `Validation`) of: EXTERNAL_PREREQUISITES_NOT_MET if _{condition}_; INTERNAL_PREREQUESITES_NOT_MET if _{condition}_; COMPLIANT if _{condition}_; otherwise NOT_COMPLIANT. 
 
 Example: <br>
 ```
