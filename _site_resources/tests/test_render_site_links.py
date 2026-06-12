@@ -221,6 +221,79 @@ def test_linkify_html_line_mixed_markdown_links_and_bare_url():
     out = rs.linkify_bare_urls_in_html_line(src)
     assert out == '<td>[DCMI Metadata Terms](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/). More info at <a href="https://example.org/info">https://example.org/info</a></td>'
 
+# ---  handling of inline backtick spans inside HTML text nodes ---
+
+def test_linkify_html_line_backtick_span_url_not_linked():
+    """URL inside a backtick span must not be linkified."""
+    src = '<td>`https://example.org/code`</td>'
+    out = rs.linkify_bare_urls_in_html_line(src)
+    assert out == src
+
+
+def test_linkify_html_line_bare_url_outside_backtick_still_linked():
+    """A bare URL that is *outside* a backtick span must still be linkified."""
+    src = '<td>See https://example.org/docs for details.</td>'
+    out = rs.linkify_bare_urls_in_html_line(src)
+    assert out == '<td>See <a href="https://example.org/docs">https://example.org/docs</a> for details.</td>'
+
+
+def test_linkify_html_line_backtick_url_not_linked_bare_url_outside_is():
+    """URL inside backtick is protected; bare URL outside backtick is still linked."""
+    src = '<td>`https://example.org/code` is documented at https://example.org/docs</td>'
+    out = rs.linkify_bare_urls_in_html_line(src)
+    assert out == (
+        '<td>`https://example.org/code` is documented at '
+        '<a href="https://example.org/docs">https://example.org/docs</a></td>'
+    )
+
+
+def test_linkify_html_line_multiple_backtick_spans_none_linked():
+    """URLs inside multiple backtick spans on the same line are all protected."""
+    src = '<td>`https://example.org/a` and `https://example.org/b`</td>'
+    out = rs.linkify_bare_urls_in_html_line(src)
+    assert out == src
+
+
+def test_linkify_html_line_multiple_urls_in_single_backtick_span():
+    """Multiple URLs inside a single backtick span are all protected."""
+    src = '<td>`https://example.org/a and https://example.org/b`</td>'
+    out = rs.linkify_bare_urls_in_html_line(src)
+    assert out == src
+
+
+def test_linkify_html_line_sourceauthority_backtick_unchanged():
+    """Real-world sourceAuthority value with two embedded URLs inside a backtick span."""
+    src = (
+        '<td>`bdqval:sourceAuthority default = "GBIF Backbone Taxonomy" '
+        '{[https://doi.org/10.15468/39omei]} '
+        '{API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}`'
+        '</td>'
+    )
+    out = rs.linkify_bare_urls_in_html_line(src)
+    assert out == src
+
+
+def test_linkify_html_line_backtick_span_between_two_tags():
+    """Backtick span appearing in a text node between two HTML tags is protected."""
+    src = '<p><strong>Example:</strong> `https://example.org/ref`</p>'
+    out = rs.linkify_bare_urls_in_html_line(src)
+    assert out == src
+
+
+def test_linkify_html_line_backtick_span_and_markdown_link_with_bare_url():
+    """Backtick-protected URL and an existing markdown link both survive;
+    a separate bare URL outside both is linked."""
+    src = (
+        '<td>`https://example.org/code` '
+        '[label](https://example.org/linked) '
+        'also https://example.org/bare</td>'
+    )
+    out = rs.linkify_bare_urls_in_html_line(src)
+    assert out == (
+        '<td>`https://example.org/code` '
+        '[label](https://example.org/linked) '
+        'also <a href="https://example.org/bare">https://example.org/bare</a></td>'
+    )
 
 def test_bdq_rs_plain_mode_not_linkified_in_markdown():
     src = "https://rs.tdwg.org/bdqtest/terms/example"

@@ -396,7 +396,7 @@ def linkify_bare_urls_in_markdown_line(line: str) -> str:
 # linkifying URLs in the text content between tags. This avoids inserting Markdown link syntax
 # into raw HTML blocks such as <li>...</li>, where Python-Markdown would otherwise leave it literal.
 # It also masks existing Markdown inline links inside text fragments so their destinations are not
-# rewritten a second time.
+# rewritten a second time.  It suppresses linking within backtick code spans. 
 # It also suppresses linking for BDQ rs.tdwg.org IRIs in plain mode, leaving them visible as plain text.
 def linkify_bare_urls_in_html_line(line: str) -> str:
     pieces = HTML_TAG_RE.split(line)
@@ -410,17 +410,28 @@ def linkify_bare_urls_in_html_line(line: str) -> str:
             result.append(piece)
             continue
 
-        masked, originals = mask_markdown_inline_spans(piece)
+        # Split on inline backtick code spans and leave them untouched,
+        # matching the approach used in linkify_bare_urls_in_markdown_line.
+        sub_pieces = re.split(r'(`[^`]*`)', piece)
+        sub_result = []
+        for sub in sub_pieces:
+            if sub.startswith("`") and sub.endswith("`"):
+                sub_result.append(sub)
+                continue
 
-        def repl(match):
-            url = match.group("url")
-            if is_bdq_rs_uri(url) and BDQ_RS_MODE == "plain":
-                return url
-            rewritten_url = rewrite_target(url)
-            return f'<a href="{rewritten_url}">{rewritten_url}</a>'
+            masked, originals = mask_markdown_inline_spans(sub)
 
-        masked = BARE_URL_RE.sub(repl, masked)
-        masked = unmask_markdown_inline_spans(masked, originals)
-        result.append(masked)
+            def repl(match):
+                url = match.group("url")
+                if is_bdq_rs_uri(url) and BDQ_RS_MODE == "plain":
+                    return url
+                rewritten_url = rewrite_target(url)
+                return f'<a href="{rewritten_url}">{rewritten_url}</a>'
+
+            masked = BARE_URL_RE.sub(repl, masked)
+            masked = unmask_markdown_inline_spans(masked, originals)
+            sub_result.append(masked)
+
+        result.append("".join(sub_result))
 
     return "".join(result)
