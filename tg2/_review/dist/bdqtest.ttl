@@ -2951,10 +2951,10 @@ bdqtest:f8f3a093-042c-47a3-971a-a482aaaf3b75-2025-03-07 a bdqffdq:Amendment;
 <urn:uuid:fae50773-a832-4e44-87fe-d66a1332c3e7> a bdqffdq:Specification;
   skos:example "dwc:occurrenceStatus=\"1\": Response.status=AMENDED, Response.result=dwc:occurrenceStatus=\"present\", Response.comment=\"Input field contains an interpretable value. \"",
     "dwc:occurrenceStatus=\"X\": Response.status=NOT_AMENDED, Response.result=, Response.comment=\"Input field contains uninterpretable value \"X\"";
-  bdqffdq:hasAuthoritiesDefaults "bdqval:sourceAuthority default = \"Regex present/absent\" {[\"^(present|absent)$]}";
+  bdqffdq:hasAuthoritiesDefaults "bdqval:sourceAuthority default = \"Regex present/absent\" {[\"^(present|absent)$\"]}";
   bdqffdq:hasExpectedResponse "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:ocurrenceStatus is bdqval:Empty; AMENDED the value of dwc:occurrenceStatus if it can be unambiguously interpreted as a value in the bdqval:sourceAuthority; otherwise NOT_AMENDED";
   rdfs:label "Specification for: AMENDMENT_OCCURRENCESTATUS_STANDARDIZED";
-  dcterms:description "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:ocurrenceStatus is bdqval:Empty; AMENDED the value of dwc:occurrenceStatus if it can be unambiguously interpreted as a value in the bdqval:sourceAuthority; otherwise NOT_AMENDED bdqval:sourceAuthority default = \"Regex present/absent\" {[\"^(present|absent)$]}";
+  dcterms:description "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:ocurrenceStatus is bdqval:Empty; AMENDED the value of dwc:occurrenceStatus if it can be unambiguously interpreted as a value in the bdqval:sourceAuthority; otherwise NOT_AMENDED bdqval:sourceAuthority default = \"Regex present/absent\" {[\"^(present|absent)$\"]}";
   bdqffdq:hasArgument <urn:uuid:59635d6c-f265-45dd-8814-b80a1dc41540> .
 
 <urn:uuid:59635d6c-f265-45dd-8814-b80a1dc41540> a bdqffdq:Argument;
@@ -2988,10 +2988,10 @@ bdqtest:7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2025-03-07 a bdqffdq:Validation;
 <urn:uuid:fbe854d4-acf3-4c79-a654-81441fed644f> a bdqffdq:Specification;
   skos:example "dwc:occurrenceStatus=\"present\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:occurrenceStatus matches a term in the bdqval:sourceAuthority\"",
     "dwc:occurrenceStatus=\"presence\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"dwc:occurrenceStatus does not match a term in the bdqval:sourceAuthority\"";
-  bdqffdq:hasAuthoritiesDefaults "bdqval:sourceAuthority default = \"Regex present/absent\" {[\"^(present\\";
+  bdqffdq:hasAuthoritiesDefaults "bdqval:sourceAuthority default = \"Regex present/absent\" {[\"^(present|absent)$\"]}";
   bdqffdq:hasExpectedResponse "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdqval:Empty; COMPLIANT if the value of dwc:occurrenceStatus is resolved in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT";
   rdfs:label "Specification for: VALIDATION_OCCURRENCESTATUS_STANDARD";
-  dcterms:description "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdqval:Empty; COMPLIANT if the value of dwc:occurrenceStatus is resolved in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT bdqval:sourceAuthority default = \"Regex present/absent\" {[\"^(present\\";
+  dcterms:description "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdqval:Empty; COMPLIANT if the value of dwc:occurrenceStatus is resolved in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT bdqval:sourceAuthority default = \"Regex present/absent\" {[\"^(present|absent)$\"]}";
   bdqffdq:hasArgument <urn:uuid:74716bc2-c82e-49f3-938b-2298094554b4> .
 
 <urn:uuid:74716bc2-c82e-49f3-938b-2298094554b4> a bdqffdq:Argument;

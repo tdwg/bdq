@@ -11506,13 +11506,13 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:fae50773-a832-4e44-87fe-d66a1332c3e7">
-	<dcterms:description>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:ocurrenceStatus is bdqval:Empty; AMENDED the value of dwc:occurrenceStatus if it can be unambiguously interpreted as a value in the bdqval:sourceAuthority; otherwise NOT_AMENDED bdqval:sourceAuthority default = "Regex present/absent" {["^(present|absent)$]}</dcterms:description>
+	<dcterms:description>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:ocurrenceStatus is bdqval:Empty; AMENDED the value of dwc:occurrenceStatus if it can be unambiguously interpreted as a value in the bdqval:sourceAuthority; otherwise NOT_AMENDED bdqval:sourceAuthority default = "Regex present/absent" {["^(present|absent)$"]}</dcterms:description>
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Specification"/>
 	<rdfs:label>Specification for: AMENDMENT_OCCURRENCESTATUS_STANDARDIZED</rdfs:label>
 	<skos:example>dwc:occurrenceStatus="1": Response.status=AMENDED, Response.result=dwc:occurrenceStatus="present", Response.comment="Input field contains an interpretable value. "</skos:example>
 	<skos:example>dwc:occurrenceStatus="X": Response.status=NOT_AMENDED, Response.result=, Response.comment="Input field contains uninterpretable value "X"</skos:example>
 	<bdqffdq:hasArgument rdf:resource="urn:uuid:59635d6c-f265-45dd-8814-b80a1dc41540"/>
-	<bdqffdq:hasAuthoritiesDefaults>bdqval:sourceAuthority default = "Regex present/absent" {["^(present|absent)$]}</bdqffdq:hasAuthoritiesDefaults>
+	<bdqffdq:hasAuthoritiesDefaults>bdqval:sourceAuthority default = "Regex present/absent" {["^(present|absent)$"]}</bdqffdq:hasAuthoritiesDefaults>
 	<bdqffdq:hasExpectedResponse>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:ocurrenceStatus is bdqval:Empty; AMENDED the value of dwc:occurrenceStatus if it can be unambiguously interpreted as a value in the bdqval:sourceAuthority; otherwise NOT_AMENDED</bdqffdq:hasExpectedResponse>
 </rdf:Description>
 
@@ -11601,13 +11601,13 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:fbe854d4-acf3-4c79-a654-81441fed644f">
-	<dcterms:description>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdqval:Empty; COMPLIANT if the value of dwc:occurrenceStatus is resolved in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT bdqval:sourceAuthority default = "Regex present/absent" {["^(present\</dcterms:description>
+	<dcterms:description>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdqval:Empty; COMPLIANT if the value of dwc:occurrenceStatus is resolved in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT bdqval:sourceAuthority default = "Regex present/absent" {["^(present|absent)$"]}</dcterms:description>
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Specification"/>
 	<rdfs:label>Specification for: VALIDATION_OCCURRENCESTATUS_STANDARD</rdfs:label>
 	<skos:example>dwc:occurrenceStatus="presence": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:occurrenceStatus does not match a term in the bdqval:sourceAuthority"</skos:example>
 	<skos:example>dwc:occurrenceStatus="present": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:occurrenceStatus matches a term in the bdqval:sourceAuthority"</skos:example>
 	<bdqffdq:hasArgument rdf:resource="urn:uuid:74716bc2-c82e-49f3-938b-2298094554b4"/>
-	<bdqffdq:hasAuthoritiesDefaults>bdqval:sourceAuthority default = "Regex present/absent" {["^(present\</bdqffdq:hasAuthoritiesDefaults>
+	<bdqffdq:hasAuthoritiesDefaults>bdqval:sourceAuthority default = "Regex present/absent" {["^(present|absent)$"]}</bdqffdq:hasAuthoritiesDefaults>
 	<bdqffdq:hasExpectedResponse>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdqval:Empty; COMPLIANT if the value of dwc:occurrenceStatus is resolved in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT</bdqffdq:hasExpectedResponse>
 </rdf:Description>
 

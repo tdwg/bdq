@@ -665,7 +665,7 @@ The source authority allows implementers to know where to look for the authorita
 
 For this Test, we can use the regular expression pattern for a resolvable ORCID ID as the source authority.
 
-An ORCID ID is a unique identifier for researchers, and it has a specific format that can be expressed as a regular expression.  The expected format for an ORCID ID is a resolvable URL that starts with "http://orcid.org/" or "https://orcid.org/", followed by four groups of four digits, separated by hyphens, and ending with a single digit or the letter 'X'.  This can be expressed as the following regular expression: "^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$".  This regular expression matches strings that start with "http://" or "https://", followed by "orcid.org/", then four groups of four digits separated by hyphens, and ending with a single digit or 'X'.<!--- NO LINK LINE --->
+An ORCID ID is a unique identifier for researchers, and it has a specific format that can be expressed as a regular expression.  The expected format for an ORCID ID is a resolvable URL that starts with "http://orcid.org/" or "https://orcid.org/", followed by four groups of four digits, separated by hyphens, and ending with a single digit or the letter 'X'.  This can be expressed as the following regular expression: `"^http(s){0,1}://orcid\.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]$"`.  This regular expression matches strings that start with "http://" or "https://", followed by "orcid.org/", then four groups of four digits separated by hyphens, and ending with a single digit or 'X'.<!--- NO LINK LINE --->
 
 Thus we could specify the source authority as follows:
 
