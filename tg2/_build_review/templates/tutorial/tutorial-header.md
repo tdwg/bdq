@@ -997,7 +997,7 @@ Consideration of all of these will help ensure comprehensive coverage of the Tes
 See also: 
 * [Conformance Testing Implementations](../guide/implementers/index.md#8-conformance-testing-implementations-normative) in the [BDQ Implementer's Guide](../guide/implementers/index.md).
 
-### 7.4 Execution Frameworks (non-normative)
+### 7.3 Execution Frameworks (non-normative)
 
 The BDQ Test specifications (the Specification text in bdqffdq:hasExpectedResponse, plus any Parameters/defaults) are execution framework agnostic because they define only:
 
@@ -1014,7 +1014,7 @@ The BDQ Test specifications (the Specification text in bdqffdq:hasExpectedRespon
 * How Responses are serialized/persisted (objects, rows, RDF `bdqffdq:Response`, annotations).
 * How Responses are presented to users or downstream processes (logs, dashboards, annotations).
 
-#### 7.4.1 What an execution framework must do between raw data and a Test implementation (non-normative)
+#### 7.3.1 What an execution framework must do between raw data and a Test implementation (non-normative)
 
 A framework’s job is to act as the “adapter layer” that turns heterogeneous input into the canonical inputs/outputs implied by the ontology and the Test descriptors:
 
