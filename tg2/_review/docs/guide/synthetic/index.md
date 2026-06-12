@@ -20,10 +20,10 @@ Guide to Marking and Identifying Synthetic and Modified Data
 -->
 
 **This version**<br>
-<https://bdq.tdwg.org/vocabularies/2026-06-03>
+<https://rs.tdwg.org/bdq/doc/synthetic/2026-06-03>
 
 **Latest version**<br>
-<https://bdq.tdwg.org/vocabularies/>
+<https://rs.tdwg.org/bdq/doc/synthetic/>
 
 **Previous version**<br>
 
@@ -37,7 +37,7 @@ This document is a standard for the marking of synthetic and modified biodiversi
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 **Bibliographic citation**<br>
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. Guide to Marking and Identifying Synthetic and Modified Data. Biodiversity Information Standards (TDWG). <https://bdq.tdwg.org/vocabularies/2026-06-03>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. Guide to Marking and Identifying Synthetic and Modified Data. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdq/doc/synthetic/2026-06-03>
 
 **Status**<br>
 Draft Standard for Review
@@ -194,7 +194,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. Guide to Marking and Identifying Synthetic and Modified Data. Biodiversity Information Standards (TDWG). <https://bdq.tdwg.org/vocabularies/2026-06-03>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. Guide to Marking and Identifying Synthetic and Modified Data. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdq/doc/synthetic/2026-06-03>
 
 **Biodiversity Information Standards (TDWG)**
 

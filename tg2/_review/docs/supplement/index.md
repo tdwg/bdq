@@ -22,10 +22,10 @@ BDQ Supplemental Information
 -->
 
 **This version**<br>
-<https://bdq.tdwg.org/vocabularies/2026-06-03>
+<https://rs.tdwg.org/bdq/doc/supplement/2026-06-03>
 
 **Latest version**<br>
-<https://bdq.tdwg.org/vocabularies/>
+<https://rs.tdwg.org/bdq/doc/supplement/>
 
 **Previous version**<br>
 
@@ -39,7 +39,7 @@ This document provides information supplementary to the BDQ standard, describing
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 **Bibliographic citation**<br>
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Supplemental Information. Biodiversity Information Standards (TDWG). <https://bdq.tdwg.org/vocabularies/2026-06-03>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Supplemental Information. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdq/doc/supplement/2026-06-03>
 
 **Status**<br>
 Draft Standard for Review
@@ -1495,20 +1495,27 @@ Each Test issue in GitHub begins with a table in Markdown format describing the 
 
 Example: <br>
 ```
-EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:basisOfRecord is EMPTY; AMENDED the value of dwc:basisOfRecord if it could be unambiguously interpreted as a value in bdqval:sourceAuthority; otherwise NOT_AMENDED
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; 
+INTERNAL_PREREQUISITES_NOT_MET if dwc:basisOfRecord is EMPTY; 
+AMENDED the value of dwc:basisOfRecord if it could be unambiguously interpreted as a value in bdqval:sourceAuthority; 
+otherwise NOT_AMENDED
 ```
 
 **Data Quality [Dimension](<../../index.md#glossary_Dimension> "See bdqffdq:DataQualityDimension.")** [normative]: A Test will focus on one of the following scenarios based on the Data Quality Framework: "Completeness" (the extent to which data elements are present and sufficient); "Conformance" (conforms to a format, syntax, type, range, standard or to the own nature of the `Information Element`); "Consistency" (agreement among related `Information Elements` in the data); "Likeliness" (probability that values are real); "Resolution" (is sufficient detail present in the value/s - a measure the granularity of the data). The [Data Quality Dimension](../list/bdqdim/index.md) for this Test. Example: `Conformance`
 
 **Term_Actions** [non-normative]: The last two components of the Label, useful in filtering Tests in CSV files. Example: `COUNTRYCODE_STANDARD`
 
+<!--- NO LINK START --->
 **Parameter(s)** [normative]: `Parameters` that modify the behavior of the Test, along with default values or links to `sourceAuthorities` (see [3.5 Parameterizing the Tests (non-normative)](#35-parameterizing-the-tests-non-normative)). A `Parameter` value exists only where there are a number of alternate options for a `sourceAuthority`. For example, `bdqval:sourceAuthority default = "GBIF Backbone Taxonomy"` is parameterized as it allows for regional taxonomic authorities; whereas `bdqval:sourceAuthority is "EPSG:" [https://epsg.io]"` is not parameterized as there is a single `sourceAuthority`. Example: [bdqval:defaultGeodeticDatum](<../list/bdqval/index.md#bdqval_defaultGeodeticDatum> "Optionally establishes the default dwc:geodeticDatum in a bdqval:ParameterizedTest. A default dwc:geodeticDatum is supplied in cases where a bdqval:Parameter is not set at the time the Test is run.")
+<!--- NO LINK END --->
 
 **Source Authority** [normative]: A reference to an authority required by the Test along with a default value such as standard vocabularies of terms or names. The structure of the information in `bdqval:sourceAuthority` ideally has two components. The first component refers to the standard itself, which may include a vocabulary of accepted values. The second component will, wherever possible (and if available), refer to an API that will assist implementers of Tests. For example, `bdqval:sourceAuthority`="Normative String Identifier" {"normative resource"} {informative list of API endpoints or other resources}. The "Normative String Identifier" is critical when the `bdqval:sourceAuthority` is a `Parameter`, this would be the string that would be the `Parameter` value. In some cases, the API component will refer to a 'third party' site, which will hopefully remain in sync with the standard. For example, a [GBIF](<../../index.md#glossary_GBIF> "Global Biodiversity Information Facility is an international network and data infrastructure funded by the world’s governments and aimed at providing anyone, anywhere, open access to data about all types of life on Eart…") vocabulary API site would ideally be synced with a Darwin Core site. When a Test uses more than one `sourceAuthority` at the same time, these are given separate names, for example, [bdqval:taxonIsMarine](<../list/bdqval/index.md#bdqval_taxonIsMarine> "A bdqval:sourceAuthority that uses dwc:scientificName to determine the 'marine' or 'non-marine' status of a dwc:Taxon using the 'Environment' term obtained from the World Register of Marine Species WORMS database.") and [bdqval:geospatialLand](<../list/bdqval/index.md#bdqval_geospatialLand> "A bdqval:sourceAuthority consisting of polygons that have been derived from a union of Natural Earth vectors for Land and for Minor Islands at 1:10,000,000 resolution.") are the two `bdqval:sourceAuthority` `Parameters` for [VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT](../terms/bdqtest/index.md#VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT).
 
 While applying to a `Single Record`), the Test results may be accumulated across multiple records ([bdqffdq:MultiRecord](<../list/bdqffdq/index.md#MultiRecord> "A set of one or more bdqffdq:SingleRecords.")), for example reporting that 75% of the records do not have a valid value for `dwc:basisOfRecord`.
 
-Only a subset of all [Darwin Core Terms](http://rs.tdwg.org/dwc/doc/list/) (Darwin Core Maintenance Group 2021) are referenced in the [CORE](<../../index.md#glossary_CORE> "Tests that are useful for evaluating biodiversity data quality as represented by the values of Darwin Core terms. CORE tests address identified user needs, are widely applicable, informative, unambiguous, well defined,…") (or Supplementary) Tests. Each Test focuses on a single aspect of data quality, usually a single `Dimension` of a single Darwin Core term or small set of related Darwin Core terms; the `Information Elements` that form the input data to the Tests. Example: `bdqval:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}`.
+<!--- NO LINK START --->
+Only a subset of all [Darwin Core Terms](http://rs.tdwg.org/dwc/doc/list/) (Darwin Core Maintenance Group 2021) are referenced in the [CORE](<../../index.md#glossary_CORE> "Tests that are useful for evaluating biodiversity data quality as represented by the values of Darwin Core terms. CORE tests address identified user needs, are widely applicable, informative, unambiguous, well defined,…") (or Supplementary) Tests. Each Test focuses on a single aspect of data quality, usually a single `Dimension` of a single Darwin Core term or small set of related Darwin Core terms; the `Information Elements` that form the input data to the Tests. Example: `bdqval:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}`.  See [Source Authority](../tutorial/index.md#671-source-authority-non-normative) in the [Tutorial](../tutorial/index.md) for an explanation of the conventions used in the Source Authority.
+<!--- NO LINK END --->
 
 **Specification Last Updated**: The date of the most recent change to a normative part of the Test, such as to the wording of an Expected Response/Specification (e.g.,"2023-06-23").
 
@@ -1516,11 +1523,15 @@ Only a subset of all [Darwin Core Terms](http://rs.tdwg.org/dwc/doc/list/) (Darw
 
 **Source** [non-normative]: The origin of the concept of the Test (e.g., "The Atlas of Living Australia").
 
+<!--- NO LINK START --->
 **References** [non-normative]: A list of references that will assist in a thorough understanding of the Test (e.g., `GBIF Secretariat (2019). GBIF Backbone Taxonomy. Checklist dataset (https://doi.org/10.15468/39omei)`).
+<!--- NO LINK END --->
 
 **Example Implementations (Mechanisms)** [non-normative]: One or more entities that have an implementation of the Test (e.g., "Kurator/Filtered Push event_date_qc library").
 
+<!--- NO LINK START --->
 **Link to Specification Source Code** [non-normative]: A link to code that implements the Test (e.g., `https://github.com/FilteredPush/ event_date_qc/blob/5f2e7b30f8a8076977b2a609e0318068db80599a/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L169`).
+<!--- NO LINK END --->
 
 **Notes** [non-normative]: Additional comments that the Authors believed necessary for an accurate understanding of the Test or issues that implementers needed to be aware of. 
 
@@ -1570,7 +1581,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-[TDWG](<../../index.md#glossary_TDWG> "Biodiversity Information Standards") Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Supplemental Information. Biodiversity Information Standards (TDWG). <https://bdq.tdwg.org/vocabularies/2026-06-03>
+[TDWG](<../../index.md#glossary_TDWG> "Biodiversity Information Standards") Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Supplemental Information. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdq/doc/supplement/2026-06-03>
 
 **Biodiversity Information Standards (TDWG)**
 

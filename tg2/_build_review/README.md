@@ -9,7 +9,7 @@ Some markers that affect how the build scripts process the template files are av
 - {toc} is replaced with a table of contents generated from the content of the term list.
 - {authors} is replaced with a list of authors from the authors_configuration.yaml file.
 - {version} and various other {key}s are replaced with values from an appropriate document_configuration.yaml file.
-- <!--- NO LINK LINE ---> and <!-- NO LINK START --> and <!-- NO LINK END --> are used to mark sections of text where the _site_resources/ script invoked to deploy to html GitHub pages does not attempt to autolink bare http://example.org/ or https://example.org/ IRIs in the text.  This applies to all templates except for the Quick Reference Guide.
+- <!--- NO LINK LINE ---> and <!--- NO LINK START ---> and <!--- NO LINK END ---> are used to mark sections of text where the _site_resources/ script invoked to deploy to html GitHub pages does not attempt to autolink bare http://example.org/ or https://example.org/ IRIs in the text.  This applies to all templates except for the Quick Reference Guide.
 - <!--- START HIDE IN HTML ---> and <!--- END HIDE IN HTML ---> are used to mark sections of text of the template of the Quick Reference guide only that that are hidden in the html version of the documentation but visible in the markdown version.
 
 Editable master copies of templates for human readable vocabulary lists and human readable documentation live here.
