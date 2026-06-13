@@ -731,6 +731,8 @@ Where, in this query, the text {id of assertion to look up} is a placeholder to 
 
 Rules that are intended to apply in the same way across each `Data Entry Need` are repeated and are marked _repeated_.
 
+These rules allow a `Response` to be traced back to a single `Data Quality Need` and a single `Specification`.  These rules also allow the formulation of a definition of a Test as the combination of a `Data Quality Need` and a `Specification`, which is useful for human understanding and communication about Tests, even if the open world design of the ontology allows for more complex relationships between these entities.
+
 **Validation**
 
 - Each instance of a `bdqffdq:Validation` SHOULD be the object of one and only one `bdqffdq:forValidation` property.
