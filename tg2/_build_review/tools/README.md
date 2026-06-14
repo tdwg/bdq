@@ -30,6 +30,18 @@ python3 tools/audit_bdqtest_vocab_usage.py --bdqtest _review/dist/bdqtest.ttl --
 
 * find_current_tests_in_csv_missing_from_rdf.py - compare the list of tests in the current CSV file with the tests represented in the RDF data to identify any missing tests.
 
+* validate_bdqtest_against_shacl.py - Validates a bdqtest.ttl RDF file against bdqffdq: SHACL constraints.
+
+Loads the primary data graph, an optional ontology for RDFS inference, an optional Use Case vocabulary file, and any number of additional supplementary vocabulary files, then runs pyshacl and reports results.
+
+Default paths are set relative to the expected location of this script inside the tg2/_build_review/tools/ directory of the BDQ repository:
+```
+    --data    ../../_review/dist/bdqtest.ttl
+    --shapes  ../../core/bdqffdq_SHACL_constraints.ttl
+    --ont     ../../_review/vocabulary/bdqffdq.owl
+    --usecase ../../_review/dist/bdquc.xml
+```
+
 ## Scripts to check templates and assembled documents
 
 * check_template_relative_links_Version13.py - check whether relative links in templates correctly produce links to anchors in generated documents.
@@ -42,6 +54,11 @@ python3 tools/audit_bdqtest_vocab_usage.py --bdqtest _review/dist/bdqtest.ttl --
 
 * grep_for_spelling.sh - scan the templates for common misspellings and typos.
 
+* check_namespace_abbreviations.py  Validate namespace abbreviation tables in Markdown files.
+
+* check_potential_namespace_errors.py - Check for potential namespace errors in Markdown files, such as missing or incorrect namespace prefixes.
+
+
 ## Query the RDF data to generate lists of use cases, tests, and information elements
 
 * list_multirecord_measures_for_usecase_tests.py - list the `MultiRecord` `Measures` that are associated with each use case and test in the RDF data.
@@ -50,8 +67,11 @@ python3 tools/audit_bdqtest_vocab_usage.py --bdqtest _review/dist/bdqtest.ttl --
 
 ## Other scripts
 
-* sync_usecase_in_bdqtest_term_versions.py 
-* use_case_information_elements_value_requirement.py 
+* use_case_information_elements_value_requirement.py - Query bdqtest.ttl and determine, for each Use Case, which acted-upon Information Elements occur in Validation Tests, how many Tests in that Use Case involve each Information Element, and whether those Information Elements require a value.
 
 * temporary/ - a directory for working file that carry out some cleanup step not for long term use
+  * add_aggregatesResponsesFrom_to_bdqtest_term_versions.py - adds `bdqtest:aggregatesResponsesFrom` property to bdqtest for multirecord measures that aggregate responses from other tests, with the value being a list of the test versions that are aggregated. 
+  * add_bdqtest_definitions.py - adds a constructed definition column to bdqtest term versions 
+  * rewrite_ie_guid_labels_for_aggregated_responses.py - Rewrite legacy information_element_guids.csv labels for MultiRecord aggregated-response ActedUpon IEs from the pseudo-term form.
+  * sync_usecase_in_bdqtest_term_versions.py - Sync a single Use Case value across BDQ test rows in bdqtest_term_versions.csv.
 
