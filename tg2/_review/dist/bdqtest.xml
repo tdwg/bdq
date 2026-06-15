@@ -4340,7 +4340,15 @@
 	<rdfs:label>bdquc:Taxon-Management</rdfs:label>
 </rdf:Description>
 
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqval/terms/annotationAlertIf">
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Parameter"/>
+</rdf:Description>
+
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqval/terms/annotationSystem">
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Parameter"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqval/terms/assumptionOnUnknownBiome">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Parameter"/>
 </rdf:Description>
 
@@ -4353,6 +4361,26 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqval/terms/earliestValidDate">
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Parameter"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqval/terms/geospatialLand">
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Parameter"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqval/terms/includeEventDate">
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Parameter"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqval/terms/latestValidDate">
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Parameter"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqval/terms/maximumValidDepthInMeters">
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Parameter"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqval/terms/maximumValidElevationInMeters">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Parameter"/>
 </rdf:Description>
 
@@ -4539,6 +4567,13 @@
 	<skos:prefLabel>ValidationMethod: VALIDATION_COUNTRYCODE_STANDARD with Specification for: VALIDATION_COUNTRYCODE_STANDARD</skos:prefLabel>
 	<bdqffdq:forValidation rdf:resource="https://rs.tdwg.org/bdqtest/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:01b96157-e4a1-4884-95d7-3bcfc5f3c047"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:030797c0-0b00-4272-9219-16d701e9da7c">
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Argument"/>
+	<rdfs:label>Default value for bdqval:latestValidDate:"{current day}"</rdfs:label>
+	<bdqffdq:hasArgumentValue>{current day}</bdqffdq:hasArgumentValue>
+	<bdqffdq:hasParameter rdf:resource="https://rs.tdwg.org/bdqval/terms/latestValidDate"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:033157e4-b8c3-466b-ba9a-38bc9b3ad86d">
@@ -5190,6 +5225,13 @@
 	<bdqffdq:hasExpectedResponse>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:family is bdqval:Empty; COMPLIANT if the value of dwc:family is found as a value at the rank of Family in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT</bdqffdq:hasExpectedResponse>
 </rdf:Description>
 
+<rdf:Description rdf:about="urn:uuid:1766715d-e588-4361-8b27-1c9cc43662ab">
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Argument"/>
+	<rdfs:label>Default value for bdqval:maximumValidElevationInMeters:"8850"</rdfs:label>
+	<bdqffdq:hasArgumentValue>8850</bdqffdq:hasArgumentValue>
+	<bdqffdq:hasParameter rdf:resource="https://rs.tdwg.org/bdqval/terms/maximumValidElevationInMeters"/>
+</rdf:Description>
+
 <rdf:Description rdf:about="urn:uuid:17bebf9d-e049-497b-bcca-dd08939398ea">
 	<dcterms:description>COMPLETE if every VALIDATION_COUNTRYCODE_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</dcterms:description>
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Specification"/>
@@ -5285,6 +5327,7 @@
 	<skos:example>bdqval:annotationAlertIf="": Response.status=RUN_HAS_RESULT, Response.result=NOT_ISSUE, Response.comment="bdqval:annotationAlertIf is bdqval:Empty"</skos:example>
 	<skos:example>bdqval:annotationAlertIf="?": Response.status=RUN_HAS_RESULT, Response.result=POTENTIAL_ISSUE, Response.comment="bdqval:annotationAlertIf is bdqval:NotEmpty"</skos:example>
 	<bdqffdq:hasArgument rdf:resource="urn:uuid:8c52d108-f9fe-4835-9939-6acc4430c9ee"/>
+	<bdqffdq:hasArgument rdf:resource="urn:uuid:f7ec249a-b201-4ce7-8341-9ee2b135bbe1"/>
 	<bdqffdq:hasAuthoritiesDefaults>bdqval:annotationSystem default = "W3C Web Annotation" {[https://www.w3.org/annotation/]} {"oa:Annotation vocabulary" [https://www.w3.org/TR/annotation-vocab/]},bdqval:annotationAlertIf default = "oa:Annotation with oa:hasTarget having as object any dwciri:term instance that is part of the SingleRecord under Test." {[https://www.w3.org/TR/annotation-vocab/]}</bdqffdq:hasAuthoritiesDefaults>
 	<bdqffdq:hasExpectedResponse>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:annotationSystem is not available; POTENTIAL_ISSUE if an annotation in the bdqval:annotationSystem exists and has an oa:hasTarget referencing the bdqffdq:SingleRecord under evaluation with matching bdqval:annotationAlertIf criteria; otherwise NOT_ISSUE.</bdqffdq:hasExpectedResponse>
 </rdf:Description>
@@ -5597,6 +5640,7 @@
 	<rdfs:label>Specification for: VALIDATION_EVENTDATE_INRANGE</rdfs:label>
 	<skos:example>dwc:eventDate="1962-11-01T10:00-0600": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:eventDate is IN_RANGE"</skos:example>
 	<skos:example>dwc:eventDate="2300-11-01T10:00": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:eventDate is NOT_IN_RANGE"</skos:example>
+	<bdqffdq:hasArgument rdf:resource="urn:uuid:2e5c3e37-b6a9-4928-8436-0d83bdb3f0fc"/>
 	<bdqffdq:hasArgument rdf:resource="urn:uuid:8b223050-f314-4601-9e20-d5f3d59d8e79"/>
 	<bdqffdq:hasAuthoritiesDefaults>bdqval:earliestValidDate default ="1582-11-15",bdqval:latestValidDate default = "{current year}"</bdqffdq:hasAuthoritiesDefaults>
 	<bdqffdq:hasExpectedResponse>INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdqval:Empty or if the value of dwc:eventDate is not a valid ISO 8601 date; COMPLIANT if the range of dwc:eventDate is entirely within the range bdqval:earliestValidDate to bdqval:latestValidDate, inclusive, otherwise NOT_COMPLIANT</bdqffdq:hasExpectedResponse>
@@ -5712,6 +5756,7 @@
 	<rdfs:label>Specification for: VALIDATION_MINELEVATION_INRANGE</rdfs:label>
 	<skos:example>dwc:minimumElevationInMeters="-500": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:minimumElevationInMeters is NOT_IN_RANGE (&lt;-430)"</skos:example>
 	<skos:example>dwc:minimumElevationInMeters="0": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:minimumElevationInMeters is IN_RANGE"</skos:example>
+	<bdqffdq:hasArgument rdf:resource="urn:uuid:307b78fe-e168-422b-977f-cdb4e1c5e636"/>
 	<bdqffdq:hasArgument rdf:resource="urn:uuid:6e07e4fe-ce7a-4e5f-9fa3-c26877b273a7"/>
 	<bdqffdq:hasAuthoritiesDefaults>bdqval:minimumValidElevationInMeters default = "-430",bdqval:maximumValidElevationInMeters default = "8850"</bdqffdq:hasAuthoritiesDefaults>
 	<bdqffdq:hasExpectedResponse>INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumElevationInMeters is bdqval:Empty or the value is not a number; COMPLIANT if the value of dwc:minimumElevationInMeters is within the range of bdqval:minimumValidElevationInMeters to bdqval:maximumValidElevationInMeters inclusive; otherwise NOT_COMPLIANT</bdqffdq:hasExpectedResponse>
@@ -5742,6 +5787,13 @@
 	<skos:prefLabel>Information Element Consulted dwc:individualCount, dwc:organismQuantity</skos:prefLabel>
 	<bdqffdq:composedOf rdf:resource="http://rs.tdwg.org/dwc/terms/individualCount"/>
 	<bdqffdq:composedOf rdf:resource="http://rs.tdwg.org/dwc/terms/organismQuantity"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:2c441806-b56b-4252-9944-e331f9f3fee6">
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Argument"/>
+	<rdfs:label>Default value for bdqval:sourceAuthority:"GBIF Catalogue of Country Centroides"</rdfs:label>
+	<bdqffdq:hasArgumentValue>GBIF Catalogue of Country Centroides</bdqffdq:hasArgumentValue>
+	<bdqffdq:hasParameter rdf:resource="https://rs.tdwg.org/bdqval/terms/sourceAuthority"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:2c5dbdbb-feab-474c-bcca-bf6d1b90ae66">
@@ -5797,6 +5849,13 @@
 	<bdqffdq:composedOf rdf:resource="https://rs.tdwg.org/bdqval/terms/AggregatedTestResponseOutcomes"/>
 </rdf:Description>
 
+<rdf:Description rdf:about="urn:uuid:2e5c3e37-b6a9-4928-8436-0d83bdb3f0fc">
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Argument"/>
+	<rdfs:label>Default value for bdqval:latestValidDate:"{current year}"</rdfs:label>
+	<bdqffdq:hasArgumentValue>{current year}</bdqffdq:hasArgumentValue>
+	<bdqffdq:hasParameter rdf:resource="https://rs.tdwg.org/bdqval/terms/latestValidDate"/>
+</rdf:Description>
+
 <rdf:Description rdf:about="urn:uuid:2f59ef74-5439-44db-8d5a-85c9773c0cef">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"/>
 	<rdfs:label>AmendmentMethod: AMENDMENT_COORDINATES_TRANSPOSED with Specification Specification for: AMENDMENT_COORDINATES_TRANSPOSED</rdfs:label>
@@ -5838,6 +5897,13 @@
 	<skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_NOTEMPTY</skos:prefLabel>
 	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/b60c8c58-0137-4b6a-97e9-57d8ca5cf248-2025-03-07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:221a02d3-c01e-48c8-9726-8ce423cc6434"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:307b78fe-e168-422b-977f-cdb4e1c5e636">
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Argument"/>
+	<rdfs:label>Default value for bdqval:maximumValidElevationInMeters:"8850"</rdfs:label>
+	<bdqffdq:hasArgumentValue>8850</bdqffdq:hasArgumentValue>
+	<bdqffdq:hasParameter rdf:resource="https://rs.tdwg.org/bdqval/terms/maximumValidElevationInMeters"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:30db5994-81fa-4684-ac54-cfc226209d27">
@@ -6502,6 +6568,7 @@
 	<skos:example>dwc:countryCode="CL", dwc:decimalLatitude="-41.0525925872862", dwc:decimalLongitude="-71.5310546742521": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="Coordinates are in Argentina, not Chile"</skos:example>
 	<skos:example>dwc:countryCode="ZX", dwc:decimalLatitude="-41.0525925872862", dwc:decimalLongitude="-71.5310546742521": Response.status=INTERNAL_PREREQUISITES_NOT_MET, Response.comment="Input field contains invalid values - ZX is not a valid ISO 3166-1-alpha-2 country code"</skos:example>
 	<bdqffdq:hasArgument rdf:resource="urn:uuid:8a3f5702-a4e5-4b21-acb6-a4eae9a1ae09"/>
+	<bdqffdq:hasArgument rdf:resource="urn:uuid:972320cd-3ba3-4076-a8eb-f797095509cd"/>
 	<bdqffdq:hasAuthoritiesDefaults>bdqval:sourceAuthority default = "10m-admin-1 boundaries UNION with Exclusive Economic Zones" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/] spatial UNION [https://www.marineregions.org/downloads.php#marbound]},bdqval:spatialBufferInMeters default = "3000"</bdqffdq:hasAuthoritiesDefaults>
 	<bdqffdq:hasExpectedResponse>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if one or more of dwc:decimalLatitude, dwc:decimalLongitude, or dwc:countryCode are bdqval:Empty or invalid; COMPLIANT if the geographic coordinates fall on or within the boundary defined by the union of the boundary of the country from dwc:countryCode plus it's Exclusive Economic Zone as found in the bdqval:sourceAuthority, if any, plus an exterior buffer given by bdqval:spatialBufferInMeters; otherwise NOT_COMPLIANT</bdqffdq:hasExpectedResponse>
 </rdf:Description>
@@ -6562,6 +6629,9 @@
 	<skos:example>dwc:decimalLatitude="-41.0525925872862", dwc:decimalLongitude="-71.5310546742521", dwc:scientificName="Aegla neuquensis": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="The species is freshwater aquatic and the coordinates fall in a lake and thus COMPLIANT"</skos:example>
 	<skos:example>dwc:decimalLatitude="20.0", dwc:decimalLongitude="-30.0", dwc:scientificName="Viviparus contectus (Millet, 1813)": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:scientificName is non-marine according to dwc:taxonIsMarine but coordinates are marine"</skos:example>
 	<bdqffdq:hasArgument rdf:resource="urn:uuid:3968f8d0-7364-4f3d-9993-96b8678f1653"/>
+	<bdqffdq:hasArgument rdf:resource="urn:uuid:b3bf69d3-061c-4e2a-ac53-a73cb51ecbe2"/>
+	<bdqffdq:hasArgument rdf:resource="urn:uuid:cbb3483c-2bf7-4b42-9d74-71ddc0e41c5e"/>
+	<bdqffdq:hasArgument rdf:resource="urn:uuid:e7012224-eb6d-4bb9-a4ef-2d40fd3b3471"/>
 	<bdqffdq:hasAuthoritiesDefaults>bdqval:taxonIsMarine default = "World Register of Marine Species (WoRMS)" {[https://www.marinespecies.org/]} {Web service [https://www.marinespecies.org/aphia.php?p=webservice]},bdqval:geospatialLand default = "Union of NaturalEarth 10m-physical-vectors for Land and NaturalEarth Minor Islands" {[https://naciscdn.org/naturalearth/10m/physical/ne_10m_land.zip], [https://naciscdn.org/naturalearth/10m/physical/ne_10m_minor_islands.zip]},bdqval:spatialBufferInMeters default = "3000",bdqval:assumptionOnUnknownBiome default = "noassumption"</bdqffdq:hasAuthoritiesDefaults>
 	<bdqffdq:hasExpectedResponse>EXTERNAL_PREREQUISITES_NOT_MET if either bdqval:taxonIsMarine or bdqval:geospatialLand are not available; INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:scientificName is bdqval:Empty or (2) the values of dwc:decimalLatitude or dwc:decimalLongitude are bdqval:Empty or (3) if bdqval:assumptionOnUnknownBiome is noassumption and the marine/nonmarine status of the taxon is not interpretable from bdqval:taxonIsMarine; COMPLIANT if (1) the taxon marine/nonmarine status from bdqval:taxonIsMarine matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdqval:geospatialLand plus an exterior buffer given by bdqval:spatialBufferInMeters or (2) if the marine/nonmarine status of the taxon is not interpretable from bdqval:taxonIsMarine and bdqval:assumptionOnUnknownBiome matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdqval:geospatialLand plus an exterior buffer given by bdqval:spatialBufferInMeters; otherwise NOT_COMPLIANT</bdqffdq:hasExpectedResponse>
 </rdf:Description>
@@ -6728,6 +6798,7 @@
 	<skos:example>dwc:stateProvince="Córdoba", dwc:decimalLatitude="-41.0525925872862", dwc:decimalLongitude="-71.5310546742521": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="Input fields contain interpretable values but coordinates don't match dwc:stateProvince with buffer"</skos:example>
 	<skos:example>dwc:stateProvince="Tasmania", dwc:decimalLatitude="-42.85", dwc:decimalLongitude="146.75": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="Input fields contain interpretable values"</skos:example>
 	<bdqffdq:hasArgument rdf:resource="urn:uuid:b7c56646-56f1-4094-b2be-8546c7e18102"/>
+	<bdqffdq:hasArgument rdf:resource="urn:uuid:cceaf335-6cd3-44a0-9562-6fe8e7743854"/>
 	<bdqffdq:hasAuthoritiesDefaults>bdqval:sourceAuthority default = "10m-admin-1 boundaries" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/]},bdqval:spatialBufferInMeters default = "3000"</bdqffdq:hasAuthoritiesDefaults>
 	<bdqffdq:hasExpectedResponse>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the values of dwc:decimalLatitude or dwc:decimalLongitude are bdqval:Empty or invalid, or dwc:stateProvince is bdqval:Empty or not found in the bdqval:sourceAuthority; COMPLIANT if the geographic coordinates fall on or within the boundary in the bdqval:sourceAuthority for the given dwc:stateProvince (after coordinate reference system transformations, if any, have been accounted for), or within the distance given by bdqval:spatialBufferInMeters outside that boundary; otherwise NOT_COMPLIANT.</bdqffdq:hasExpectedResponse>
 </rdf:Description>
@@ -7566,6 +7637,7 @@
 	<rdfs:label>Specification for: ISSUE_COORDINATES_CENTEROFCOUNTRY</rdfs:label>
 	<skos:example>dwc:decimalLatitude="-34.184199", dwc:decimalLongitude="-65.509403", dwc:countryCode="AR": Response.status=RUN_HAS_RESULT, Response.result=NOT_ISSUE, Response.comment="coordinates fall outside buffered distance in the bdqval:sourceAuthority for dwc:countryCode"</skos:example>
 	<skos:example>dwc:decimalLatitude="-35.38804", dwc:decimalLongitude="-65.154964", dwc:countryCode="AR": Response.status=RUN_HAS_RESULT, Response.result=POTENTIAL_ISSUE, Response.comment="coordinates fall within buffered distance in the bdqval:sourceAuthority for dwc:countryCode which may mean that coordinates have been generalized"</skos:example>
+	<bdqffdq:hasArgument rdf:resource="urn:uuid:2c441806-b56b-4252-9944-e331f9f3fee6"/>
 	<bdqffdq:hasArgument rdf:resource="urn:uuid:9c0a82d5-4b24-4160-a000-ee9429bef8f7"/>
 	<bdqffdq:hasAuthoritiesDefaults>bdqval:spatialBufferInMeters default = "5000",bdqval:sourceAuthority default = "GBIF Catalogue of Country Centroides" {[https://raw.githubusercontent.com/jhnwllr/catalogue-of-centroids/master/PCLI.tsv]}</bdqffdq:hasAuthoritiesDefaults>
 	<bdqffdq:hasExpectedResponse>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if any of dwc:countryCode, dwc:decimalLatitude, dwc:decimalLongitude are bdqval:Empty; POTENTIAL_ISSUE if (1) the geographic coordinates are within the distance given by bdqval:spatialBufferInMeters from the center of the supplied dwc:countryCode as represented in the bdqval:sourceAuthority (or one of the centers, if the bdqval:sourceAuthority provides more than one per country code) and (2) the dwc:coordinateUncertaintyInMeters is bdqval:Empty or less than half the square root of the area of the country; otherwise NOT_ISSUE.</bdqffdq:hasExpectedResponse>
@@ -7822,6 +7894,13 @@
 	<rdfs:label>Information Element Consulted dwc:eventDate</rdfs:label>
 	<skos:prefLabel>Information Element Consulted dwc:eventDate</skos:prefLabel>
 	<bdqffdq:composedOf rdf:resource="http://rs.tdwg.org/dwc/terms/eventDate"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:739faad3-eb8a-4593-af8f-35b22630a920">
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Argument"/>
+	<rdfs:label>Default value for bdqval:includeEventDate:"true"</rdfs:label>
+	<bdqffdq:hasArgumentValue>true</bdqffdq:hasArgumentValue>
+	<bdqffdq:hasParameter rdf:resource="https://rs.tdwg.org/bdqval/terms/includeEventDate"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:73a96a86-9ef2-4bb1-a8a0-f903c6744d75">
@@ -8840,6 +8919,13 @@
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:7dc4a4bd-8c04-45c5-9d1a-46080473e3d6"/>
 </rdf:Description>
 
+<rdf:Description rdf:about="urn:uuid:972320cd-3ba3-4076-a8eb-f797095509cd">
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Argument"/>
+	<rdfs:label>Default value for bdqval:spatialBufferInMeters:"3000"</rdfs:label>
+	<bdqffdq:hasArgumentValue>3000</bdqffdq:hasArgumentValue>
+	<bdqffdq:hasParameter rdf:resource="https://rs.tdwg.org/bdqval/terms/spatialBufferInMeters"/>
+</rdf:Description>
+
 <rdf:Description rdf:about="urn:uuid:977ed65e-416f-46e8-85a3-079c6b735fa8">
 	<dcterms:description>COMPLETE if every VALIDATION_LOCATION_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</dcterms:description>
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Specification"/>
@@ -9044,6 +9130,13 @@
 	<bdqffdq:hasExpectedResponse>Count the number of VALIDATION_SEX_STANDARD in the MultiRecord that have Response.result=COMPLIANT.</bdqffdq:hasExpectedResponse>
 </rdf:Description>
 
+<rdf:Description rdf:about="urn:uuid:9f12e2c3-17ac-42c0-91f4-c40a02d3f133">
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Argument"/>
+	<rdfs:label>Default value for bdqval:maximumValidDepthInMeters:"11000"</rdfs:label>
+	<bdqffdq:hasArgumentValue>11000</bdqffdq:hasArgumentValue>
+	<bdqffdq:hasParameter rdf:resource="https://rs.tdwg.org/bdqval/terms/maximumValidDepthInMeters"/>
+</rdf:Description>
+
 <rdf:Description rdf:about="urn:uuid:9f20b037-e607-47ce-8b54-c46fc6c83407">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<rdfs:label>Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_ORDER_FOUND.Response</rdfs:label>
@@ -9127,7 +9220,9 @@
 	<rdfs:label>Specification for: VALIDATION_DATEIDENTIFIED_INRANGE</rdfs:label>
 	<skos:example>dwc:dateIdentified="1963-03-08T14:07-0600", dwc:eventDate="1962-11-01T10:00-0600": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:dateIdentified is in range"</skos:example>
 	<skos:example>dwc:dateIdentified="1963-03-08T14:07-0600", dwc:eventDate="1964-11-01T10:00-0600": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:dateIdentified before dwc:eventDate"</skos:example>
+	<bdqffdq:hasArgument rdf:resource="urn:uuid:030797c0-0b00-4272-9219-16d701e9da7c"/>
 	<bdqffdq:hasArgument rdf:resource="urn:uuid:13c17157-1714-4f67-848b-9dc031917fee"/>
+	<bdqffdq:hasArgument rdf:resource="urn:uuid:739faad3-eb8a-4593-af8f-35b22630a920"/>
 	<bdqffdq:hasAuthoritiesDefaults>bdqval:earliestValidDate default = "1753-01-01",bdqval:latestValidDate default = "{current day}",bdqval:includeEventDate default = "true"</bdqffdq:hasAuthoritiesDefaults>
 	<bdqffdq:hasExpectedResponse>INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:dateIdentified is bdqval:Empty, or (2) dwc:dateIdentified contains an invalid value according to ISO 8601, or (3) bdqval:includeEventDate=true and dwc:eventDate is not a valid ISO 8601 date; COMPLIANT if the value of dwc:dateIdentified is between bdqval:earliestValidDate and bdqval:latestValidDate inclusive and either (1) dwc:eventDate is bdqval:Empty or bdqval:includeEventDate=false, or (2) if dwc:eventDate is a valid ISO 8601 date and dwc:dateIdentified overlaps or is later than the dwc:eventDate; otherwise NOT_COMPLIANT</bdqffdq:hasExpectedResponse>
 </rdf:Description>
@@ -9411,6 +9506,7 @@
 	<skos:example>dwc:year="1952": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:year is in RANGE"</skos:example>
 	<skos:example>dwc:year="9999": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:year is not in RANGE. The value in year has not yet come to pass."</skos:example>
 	<bdqffdq:hasArgument rdf:resource="urn:uuid:9167035f-14a8-4a0f-81eb-86a5a93bf6d9"/>
+	<bdqffdq:hasArgument rdf:resource="urn:uuid:fa6e83af-40c3-4330-aca0-937fc22b3a27"/>
 	<bdqffdq:hasAuthoritiesDefaults>bdqval:earliestValidDate default = "1582",bdqval:latestValidDate default = "{current year}"</bdqffdq:hasAuthoritiesDefaults>
 	<bdqffdq:hasExpectedResponse>INTERNAL_PREREQUISITES_NOT_MET if dwc:year is bdqval:Empty or cannot be interpreted as an integer; COMPLIANT if the value of dwc:year is within the range bdqval:earliestValidDate to bdqval:latestValidDate inclusive; otherwise NOT_COMPLIANT</bdqffdq:hasExpectedResponse>
 </rdf:Description>
@@ -9517,6 +9613,13 @@
 	<skos:example></skos:example>
 	<bdqffdq:hasAuthoritiesDefaults></bdqffdq:hasAuthoritiesDefaults>
 	<bdqffdq:hasExpectedResponse>Count the number of VALIDATION_TAXON_UNAMBIGUOUS in the MultiRecord that have Response.result=COMPLIANT.</bdqffdq:hasExpectedResponse>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:b3bf69d3-061c-4e2a-ac53-a73cb51ecbe2">
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Argument"/>
+	<rdfs:label>Default value for bdqval:spatialBufferInMeters:"3000"</rdfs:label>
+	<bdqffdq:hasArgumentValue>3000</bdqffdq:hasArgumentValue>
+	<bdqffdq:hasParameter rdf:resource="https://rs.tdwg.org/bdqval/terms/spatialBufferInMeters"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:b417d971-8b0f-49ab-9431-3364ba8694e2">
@@ -10156,6 +10259,13 @@
 	<bdqffdq:hasExpectedResponse>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:taxonRank is bdqval:Empty; AMENDED the value of dwc:taxonRank if it can be unambiguously matched to a term in the bdqval:sourceAuthority; otherwise NOT_AMENDED</bdqffdq:hasExpectedResponse>
 </rdf:Description>
 
+<rdf:Description rdf:about="urn:uuid:cbb3483c-2bf7-4b42-9d74-71ddc0e41c5e">
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Argument"/>
+	<rdfs:label>Default value for bdqval:geospatialLand:"Union of NaturalEarth 10m-physical-vectors for Land and NaturalEarth Minor Islands"</rdfs:label>
+	<bdqffdq:hasArgumentValue>Union of NaturalEarth 10m-physical-vectors for Land and NaturalEarth Minor Islands</bdqffdq:hasArgumentValue>
+	<bdqffdq:hasParameter rdf:resource="https://rs.tdwg.org/bdqval/terms/geospatialLand"/>
+</rdf:Description>
+
 <rdf:Description rdf:about="urn:uuid:cbb53f33-ddc6-444c-b2f1-c06bb6759225">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<rdfs:label>Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_LICENSE_STANDARD.Response</rdfs:label>
@@ -10182,6 +10292,13 @@
 	<rdfs:label>Information Element Consulted bdqval:AllValidationTestsRunOnSingleRecord</rdfs:label>
 	<skos:prefLabel>Information Element Consulted bdqval:AllValidationTestsRunOnSingleRecord</skos:prefLabel>
 	<bdqffdq:composedOf rdf:resource="https://rs.tdwg.org/bdqval/terms/AllValidationTestsRunOnSingleRecord"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:cceaf335-6cd3-44a0-9562-6fe8e7743854">
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Argument"/>
+	<rdfs:label>Default value for bdqval:spatialBufferInMeters:"3000"</rdfs:label>
+	<bdqffdq:hasArgumentValue>3000</bdqffdq:hasArgumentValue>
+	<bdqffdq:hasParameter rdf:resource="https://rs.tdwg.org/bdqval/terms/spatialBufferInMeters"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:cd12d17c-8404-40fa-bc15-5583564ddd14">
@@ -10237,6 +10354,7 @@
 	<skos:example>dwc:maximumDepthInMeters="1200": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:maximumDepthInMeters is in range (&lt;11,000)"</skos:example>
 	<skos:example>dwc:maximumDepthInMeters="99999": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:maximumDepthInMeters is not in range (&gt;11,000)"</skos:example>
 	<bdqffdq:hasArgument rdf:resource="urn:uuid:edf69c59-056d-4c8a-b1fb-647ea684eb18"/>
+	<bdqffdq:hasArgument rdf:resource="urn:uuid:f41be58e-2e1e-409e-a322-1de95df2ce0b"/>
 	<bdqffdq:hasAuthoritiesDefaults>bdqval:minimumValidDepthInMeters default="0",bdqval:maximumValidDepthInMeters default="11000"</bdqffdq:hasAuthoritiesDefaults>
 	<bdqffdq:hasExpectedResponse>INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumDepthInMeters is bdqval:Empty or is not interpretable as a number greater than or equal to zero; COMPLIANT if the value of dwc:maximumDepthInMeters is within the range of bdqval:minimumValidDepthInMeters to bdqval:maximumValidDepthInMeters inclusive; otherwise NOT_COMPLIANT</bdqffdq:hasExpectedResponse>
 </rdf:Description>
@@ -10866,6 +10984,13 @@
 	<bdqffdq:hasExpectedResponse>COMPLIANT if dwc:kingdom is bdqval:NotEmpty; otherwise NOT_COMPLIANT</bdqffdq:hasExpectedResponse>
 </rdf:Description>
 
+<rdf:Description rdf:about="urn:uuid:e7012224-eb6d-4bb9-a4ef-2d40fd3b3471">
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Argument"/>
+	<rdfs:label>Default value for bdqval:assumptionOnUnknownBiome:"noassumption"</rdfs:label>
+	<bdqffdq:hasArgumentValue>noassumption</bdqffdq:hasArgumentValue>
+	<bdqffdq:hasParameter rdf:resource="https://rs.tdwg.org/bdqval/terms/assumptionOnUnknownBiome"/>
+</rdf:Description>
+
 <rdf:Description rdf:about="urn:uuid:e7528e9b-e4d8-42bf-b6e1-169587ca69b8">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<rdfs:label>Information Element ActedUpon dwc:decimalLatitude</rdfs:label>
@@ -11264,6 +11389,7 @@
 	<rdfs:label>Specification for: VALIDATION_MINDEPTH_INRANGE</rdfs:label>
 	<skos:example>dwc:minimumDepthInMeters="1": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:minimumDepthInMeters is in range"</skos:example>
 	<skos:example>dwc:minimumDepthInMeters="12000": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:minimumDepthInMeters is not in range"</skos:example>
+	<bdqffdq:hasArgument rdf:resource="urn:uuid:9f12e2c3-17ac-42c0-91f4-c40a02d3f133"/>
 	<bdqffdq:hasArgument rdf:resource="urn:uuid:d23e61b3-07b6-4326-bac2-1457b030efef"/>
 	<bdqffdq:hasAuthoritiesDefaults>bdqval:minimumValidDepthInMeters default="0",bdqval:maximumValidDepthInMeters default="11000"</bdqffdq:hasAuthoritiesDefaults>
 	<bdqffdq:hasExpectedResponse>INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters is bdqval:Empty, or the value is not interpretable as number greater than or equal to zero; COMPLIANT if the value of dwc:minimumDepthInMeters is within the range of bdqval:minimumValidDepthInMeters to bdqval:maximumValidDepthInMeters inclusive; otherwise NOT_COMPLIANT</bdqffdq:hasExpectedResponse>
@@ -11276,6 +11402,13 @@
 	<skos:example></skos:example>
 	<bdqffdq:hasAuthoritiesDefaults></bdqffdq:hasAuthoritiesDefaults>
 	<bdqffdq:hasExpectedResponse>Count the number of VALIDATION_DATEIDENTIFIED_INRANGE in the MultiRecord that have Response.result=COMPLIANT.</bdqffdq:hasExpectedResponse>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:f41be58e-2e1e-409e-a322-1de95df2ce0b">
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Argument"/>
+	<rdfs:label>Default value for bdqval:maximumValidDepthInMeters:"11000"</rdfs:label>
+	<bdqffdq:hasArgumentValue>11000</bdqffdq:hasArgumentValue>
+	<bdqffdq:hasParameter rdf:resource="https://rs.tdwg.org/bdqval/terms/maximumValidDepthInMeters"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:f43da890-5389-4465-a2ac-628ffbc79207">
@@ -11407,6 +11540,13 @@
 	<bdqffdq:hasExpectedResponse>INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumlevationInMeters or dwc:minimumElevationInMeters is bdqval:Empty, or if either is not a number; COMPLIANT if the value of dwc:minimumElevationInMeters is a number less than or equal to the value of the number dwc:maximumElevationInMeters, otherwise NOT_COMPLIANT</bdqffdq:hasExpectedResponse>
 </rdf:Description>
 
+<rdf:Description rdf:about="urn:uuid:f7ec249a-b201-4ce7-8341-9ee2b135bbe1">
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Argument"/>
+	<rdfs:label>Default value for bdqval:annotationAlertIf:"oa:Annotation with oa:hasTarget having as object any dwciri:term instance that is part of the SingleRecord under Test."</rdfs:label>
+	<bdqffdq:hasArgumentValue>oa:Annotation with oa:hasTarget having as object any dwciri:term instance that is part of the SingleRecord under Test.</bdqffdq:hasArgumentValue>
+	<bdqffdq:hasParameter rdf:resource="https://rs.tdwg.org/bdqval/terms/annotationAlertIf"/>
+</rdf:Description>
+
 <rdf:Description rdf:about="urn:uuid:f8024a02-76c0-482a-b805-097d0cdc82e2">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
 	<rdfs:label>ValidationMethod: VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY with Specification for: VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY</rdfs:label>
@@ -11459,6 +11599,7 @@
 	<rdfs:label>Specification for: VALIDATION_MAXELEVATION_INRANGE</rdfs:label>
 	<skos:example>dwc:maximumElevationInMeters="-500": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:maximumElevation is not in range, i.e. is &lt;-430"</skos:example>
 	<skos:example>dwc:maximumElevationInMeters="0": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:maximumElevation is in is range"</skos:example>
+	<bdqffdq:hasArgument rdf:resource="urn:uuid:1766715d-e588-4361-8b27-1c9cc43662ab"/>
 	<bdqffdq:hasArgument rdf:resource="urn:uuid:3ab181c2-a3d8-4317-af4d-f88181e2773a"/>
 	<bdqffdq:hasAuthoritiesDefaults>bdqval:minimumValidElevationInMeters default = "-430",bdqval:maximumValidElevationInMeters default = "8850"</bdqffdq:hasAuthoritiesDefaults>
 	<bdqffdq:hasExpectedResponse>INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumElevationInMeters is bdqval:Empty or the value cannot be interpreted as a number; COMPLIANT if the value of dwc:maximumElevationInMeters is within the range of bdqval:minimumValidElevationInMeters to bdqval:maximumValidElevationInMeters inclusive; otherwise NOT_COMPLIANT</bdqffdq:hasExpectedResponse>
@@ -11493,6 +11634,13 @@
 	<bdqffdq:hasArgument rdf:resource="urn:uuid:17d785ee-6ac9-4ab4-9806-f4a2b0d8bbf1"/>
 	<bdqffdq:hasAuthoritiesDefaults>bdqval:sourceAuthority default = "Establishment Means Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/em/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/EstablishmentMeans/concepts]}</bdqffdq:hasAuthoritiesDefaults>
 	<bdqffdq:hasExpectedResponse>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:establishmentMeans is bdqval:Empty; AMENDED the value of dwc:establishmentMeans if it can be unambiguously matched to a term in the bdqval:sourceAuthority; otherwise NOT_AMENDED</bdqffdq:hasExpectedResponse>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:fa6e83af-40c3-4330-aca0-937fc22b3a27">
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Argument"/>
+	<rdfs:label>Default value for bdqval:latestValidDate:"{current year}"</rdfs:label>
+	<bdqffdq:hasArgumentValue>{current year}</bdqffdq:hasArgumentValue>
+	<bdqffdq:hasParameter rdf:resource="https://rs.tdwg.org/bdqval/terms/latestValidDate"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:faa91223-c9f0-476d-a4d0-b42e13fc9022">

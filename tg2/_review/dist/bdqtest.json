@@ -1538,6 +1538,9 @@
         "https://rs.tdwg.org/bdqffdq/terms/hasArgument": [
             {
                 "@id": "urn:uuid:8c52d108-f9fe-4835-9939-6acc4430c9ee"
+            },
+            {
+                "@id": "urn:uuid:56eff659-2dc2-45bd-9360-0a11d57b37ec"
             }
         ]
     },
@@ -1564,6 +1567,33 @@
     },
     {
         "@id": "https://rs.tdwg.org/bdqval/terms/annotationSystem",
+        "@type": [
+            "https://rs.tdwg.org/bdqffdq/terms/Parameter"
+        ]
+    },
+    {
+        "@id": "urn:uuid:56eff659-2dc2-45bd-9360-0a11d57b37ec",
+        "@type": [
+            "https://rs.tdwg.org/bdqffdq/terms/Argument"
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue": [
+            {
+                "@value": "oa:Annotation with oa:hasTarget having as object any dwciri:term instance that is part of the SingleRecord under Test."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "Default value for bdqval:annotationAlertIf:\"oa:Annotation with oa:hasTarget having as object any dwciri:term instance that is part of the SingleRecord under Test.\""
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
+            {
+                "@id": "https://rs.tdwg.org/bdqval/terms/annotationAlertIf"
+            }
+        ]
+    },
+    {
+        "@id": "https://rs.tdwg.org/bdqval/terms/annotationAlertIf",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Parameter"
         ]
@@ -2444,6 +2474,9 @@
         "https://rs.tdwg.org/bdqffdq/terms/hasArgument": [
             {
                 "@id": "urn:uuid:8b223050-f314-4601-9e20-d5f3d59d8e79"
+            },
+            {
+                "@id": "urn:uuid:2e5c3e37-b6a9-4928-8436-0d83bdb3f0fc"
             }
         ]
     },
@@ -2470,6 +2503,33 @@
     },
     {
         "@id": "https://rs.tdwg.org/bdqval/terms/earliestValidDate",
+        "@type": [
+            "https://rs.tdwg.org/bdqffdq/terms/Parameter"
+        ]
+    },
+    {
+        "@id": "urn:uuid:2e5c3e37-b6a9-4928-8436-0d83bdb3f0fc",
+        "@type": [
+            "https://rs.tdwg.org/bdqffdq/terms/Argument"
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue": [
+            {
+                "@value": "{current year}"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "Default value for bdqval:latestValidDate:\"{current year}\""
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
+            {
+                "@id": "https://rs.tdwg.org/bdqval/terms/latestValidDate"
+            }
+        ]
+    },
+    {
+        "@id": "https://rs.tdwg.org/bdqval/terms/latestValidDate",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Parameter"
         ]
@@ -2883,6 +2943,9 @@
         "https://rs.tdwg.org/bdqffdq/terms/hasArgument": [
             {
                 "@id": "urn:uuid:6e07e4fe-ce7a-4e5f-9fa3-c26877b273a7"
+            },
+            {
+                "@id": "urn:uuid:307b78fe-e168-422b-977f-cdb4e1c5e636"
             }
         ]
     },
@@ -2909,6 +2972,33 @@
     },
     {
         "@id": "https://rs.tdwg.org/bdqval/terms/minimumValidElevationInMeters",
+        "@type": [
+            "https://rs.tdwg.org/bdqffdq/terms/Parameter"
+        ]
+    },
+    {
+        "@id": "urn:uuid:307b78fe-e168-422b-977f-cdb4e1c5e636",
+        "@type": [
+            "https://rs.tdwg.org/bdqffdq/terms/Argument"
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue": [
+            {
+                "@value": "8850"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "Default value for bdqval:maximumValidElevationInMeters:\"8850\""
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
+            {
+                "@id": "https://rs.tdwg.org/bdqval/terms/maximumValidElevationInMeters"
+            }
+        ]
+    },
+    {
+        "@id": "https://rs.tdwg.org/bdqval/terms/maximumValidElevationInMeters",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Parameter"
         ]
@@ -4390,6 +4480,9 @@
         "https://rs.tdwg.org/bdqffdq/terms/hasArgument": [
             {
                 "@id": "urn:uuid:8a3f5702-a4e5-4b21-acb6-a4eae9a1ae09"
+            },
+            {
+                "@id": "urn:uuid:972320cd-3ba3-4076-a8eb-f797095509cd"
             }
         ]
     },
@@ -4412,6 +4505,33 @@
             {
                 "@id": "https://rs.tdwg.org/bdqval/terms/sourceAuthority"
             }
+        ]
+    },
+    {
+        "@id": "urn:uuid:972320cd-3ba3-4076-a8eb-f797095509cd",
+        "@type": [
+            "https://rs.tdwg.org/bdqffdq/terms/Argument"
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue": [
+            {
+                "@value": "3000"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "Default value for bdqval:spatialBufferInMeters:\"3000\""
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
+            {
+                "@id": "https://rs.tdwg.org/bdqval/terms/spatialBufferInMeters"
+            }
+        ]
+    },
+    {
+        "@id": "https://rs.tdwg.org/bdqval/terms/spatialBufferInMeters",
+        "@type": [
+            "https://rs.tdwg.org/bdqffdq/terms/Parameter"
         ]
     },
     {
@@ -4691,6 +4811,15 @@
         "https://rs.tdwg.org/bdqffdq/terms/hasArgument": [
             {
                 "@id": "urn:uuid:3968f8d0-7364-4f3d-9993-96b8678f1653"
+            },
+            {
+                "@id": "urn:uuid:cbb3483c-2bf7-4b42-9d74-71ddc0e41c5e"
+            },
+            {
+                "@id": "urn:uuid:b3bf69d3-061c-4e2a-ac53-a73cb51ecbe2"
+            },
+            {
+                "@id": "urn:uuid:e7012224-eb6d-4bb9-a4ef-2d40fd3b3471"
             }
         ]
     },
@@ -4717,6 +4846,81 @@
     },
     {
         "@id": "https://rs.tdwg.org/bdqval/terms/taxonIsMarine",
+        "@type": [
+            "https://rs.tdwg.org/bdqffdq/terms/Parameter"
+        ]
+    },
+    {
+        "@id": "urn:uuid:cbb3483c-2bf7-4b42-9d74-71ddc0e41c5e",
+        "@type": [
+            "https://rs.tdwg.org/bdqffdq/terms/Argument"
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue": [
+            {
+                "@value": "Union of NaturalEarth 10m-physical-vectors for Land and NaturalEarth Minor Islands"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "Default value for bdqval:geospatialLand:\"Union of NaturalEarth 10m-physical-vectors for Land and NaturalEarth Minor Islands\""
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
+            {
+                "@id": "https://rs.tdwg.org/bdqval/terms/geospatialLand"
+            }
+        ]
+    },
+    {
+        "@id": "https://rs.tdwg.org/bdqval/terms/geospatialLand",
+        "@type": [
+            "https://rs.tdwg.org/bdqffdq/terms/Parameter"
+        ]
+    },
+    {
+        "@id": "urn:uuid:b3bf69d3-061c-4e2a-ac53-a73cb51ecbe2",
+        "@type": [
+            "https://rs.tdwg.org/bdqffdq/terms/Argument"
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue": [
+            {
+                "@value": "3000"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "Default value for bdqval:spatialBufferInMeters:\"3000\""
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
+            {
+                "@id": "https://rs.tdwg.org/bdqval/terms/spatialBufferInMeters"
+            }
+        ]
+    },
+    {
+        "@id": "urn:uuid:e7012224-eb6d-4bb9-a4ef-2d40fd3b3471",
+        "@type": [
+            "https://rs.tdwg.org/bdqffdq/terms/Argument"
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue": [
+            {
+                "@value": "noassumption"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "Default value for bdqval:assumptionOnUnknownBiome:\"noassumption\""
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
+            {
+                "@id": "https://rs.tdwg.org/bdqval/terms/assumptionOnUnknownBiome"
+            }
+        ]
+    },
+    {
+        "@id": "https://rs.tdwg.org/bdqval/terms/assumptionOnUnknownBiome",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Parameter"
         ]
@@ -5493,6 +5697,9 @@
         "https://rs.tdwg.org/bdqffdq/terms/hasArgument": [
             {
                 "@id": "urn:uuid:b7c56646-56f1-4094-b2be-8546c7e18102"
+            },
+            {
+                "@id": "urn:uuid:cceaf335-6cd3-44a0-9562-6fe8e7743854"
             }
         ]
     },
@@ -5514,6 +5721,27 @@
         "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
             {
                 "@id": "https://rs.tdwg.org/bdqval/terms/sourceAuthority"
+            }
+        ]
+    },
+    {
+        "@id": "urn:uuid:cceaf335-6cd3-44a0-9562-6fe8e7743854",
+        "@type": [
+            "https://rs.tdwg.org/bdqffdq/terms/Argument"
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue": [
+            {
+                "@value": "3000"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "Default value for bdqval:spatialBufferInMeters:\"3000\""
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
+            {
+                "@id": "https://rs.tdwg.org/bdqval/terms/spatialBufferInMeters"
             }
         ]
     },
@@ -8805,6 +9033,12 @@
         "https://rs.tdwg.org/bdqffdq/terms/hasArgument": [
             {
                 "@id": "urn:uuid:13c17157-1714-4f67-848b-9dc031917fee"
+            },
+            {
+                "@id": "urn:uuid:030797c0-0b00-4272-9219-16d701e9da7c"
+            },
+            {
+                "@id": "urn:uuid:739faad3-eb8a-4593-af8f-35b22630a920"
             }
         ]
     },
@@ -8827,6 +9061,54 @@
             {
                 "@id": "https://rs.tdwg.org/bdqval/terms/earliestValidDate"
             }
+        ]
+    },
+    {
+        "@id": "urn:uuid:030797c0-0b00-4272-9219-16d701e9da7c",
+        "@type": [
+            "https://rs.tdwg.org/bdqffdq/terms/Argument"
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue": [
+            {
+                "@value": "{current day}"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "Default value for bdqval:latestValidDate:\"{current day}\""
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
+            {
+                "@id": "https://rs.tdwg.org/bdqval/terms/latestValidDate"
+            }
+        ]
+    },
+    {
+        "@id": "urn:uuid:739faad3-eb8a-4593-af8f-35b22630a920",
+        "@type": [
+            "https://rs.tdwg.org/bdqffdq/terms/Argument"
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue": [
+            {
+                "@value": "true"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "Default value for bdqval:includeEventDate:\"true\""
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
+            {
+                "@id": "https://rs.tdwg.org/bdqval/terms/includeEventDate"
+            }
+        ]
+    },
+    {
+        "@id": "https://rs.tdwg.org/bdqval/terms/includeEventDate",
+        "@type": [
+            "https://rs.tdwg.org/bdqffdq/terms/Parameter"
         ]
     },
     {
@@ -9979,6 +10261,9 @@
         "https://rs.tdwg.org/bdqffdq/terms/hasArgument": [
             {
                 "@id": "urn:uuid:9167035f-14a8-4a0f-81eb-86a5a93bf6d9"
+            },
+            {
+                "@id": "urn:uuid:fa6e83af-40c3-4330-aca0-937fc22b3a27"
             }
         ]
     },
@@ -10000,6 +10285,27 @@
         "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
             {
                 "@id": "https://rs.tdwg.org/bdqval/terms/earliestValidDate"
+            }
+        ]
+    },
+    {
+        "@id": "urn:uuid:fa6e83af-40c3-4330-aca0-937fc22b3a27",
+        "@type": [
+            "https://rs.tdwg.org/bdqffdq/terms/Argument"
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue": [
+            {
+                "@value": "{current year}"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "Default value for bdqval:latestValidDate:\"{current year}\""
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
+            {
+                "@id": "https://rs.tdwg.org/bdqval/terms/latestValidDate"
             }
         ]
     },
@@ -12525,6 +12831,9 @@
         "https://rs.tdwg.org/bdqffdq/terms/hasArgument": [
             {
                 "@id": "urn:uuid:d23e61b3-07b6-4326-bac2-1457b030efef"
+            },
+            {
+                "@id": "urn:uuid:9f12e2c3-17ac-42c0-91f4-c40a02d3f133"
             }
         ]
     },
@@ -12551,6 +12860,33 @@
     },
     {
         "@id": "https://rs.tdwg.org/bdqval/terms/minimumValidDepthInMeters",
+        "@type": [
+            "https://rs.tdwg.org/bdqffdq/terms/Parameter"
+        ]
+    },
+    {
+        "@id": "urn:uuid:9f12e2c3-17ac-42c0-91f4-c40a02d3f133",
+        "@type": [
+            "https://rs.tdwg.org/bdqffdq/terms/Argument"
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue": [
+            {
+                "@value": "11000"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "Default value for bdqval:maximumValidDepthInMeters:\"11000\""
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
+            {
+                "@id": "https://rs.tdwg.org/bdqval/terms/maximumValidDepthInMeters"
+            }
+        ]
+    },
+    {
+        "@id": "https://rs.tdwg.org/bdqval/terms/maximumValidDepthInMeters",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Parameter"
         ]
@@ -13048,6 +13384,9 @@
         "https://rs.tdwg.org/bdqffdq/terms/hasArgument": [
             {
                 "@id": "urn:uuid:3ab181c2-a3d8-4317-af4d-f88181e2773a"
+            },
+            {
+                "@id": "urn:uuid:1766715d-e588-4361-8b27-1c9cc43662ab"
             }
         ]
     },
@@ -13069,6 +13408,27 @@
         "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
             {
                 "@id": "https://rs.tdwg.org/bdqval/terms/minimumValidElevationInMeters"
+            }
+        ]
+    },
+    {
+        "@id": "urn:uuid:1766715d-e588-4361-8b27-1c9cc43662ab",
+        "@type": [
+            "https://rs.tdwg.org/bdqffdq/terms/Argument"
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue": [
+            {
+                "@value": "8850"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "Default value for bdqval:maximumValidElevationInMeters:\"8850\""
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
+            {
+                "@id": "https://rs.tdwg.org/bdqval/terms/maximumValidElevationInMeters"
             }
         ]
     },
@@ -16761,6 +17121,9 @@
         "https://rs.tdwg.org/bdqffdq/terms/hasArgument": [
             {
                 "@id": "urn:uuid:edf69c59-056d-4c8a-b1fb-647ea684eb18"
+            },
+            {
+                "@id": "urn:uuid:f41be58e-2e1e-409e-a322-1de95df2ce0b"
             }
         ]
     },
@@ -16782,6 +17145,27 @@
         "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
             {
                 "@id": "https://rs.tdwg.org/bdqval/terms/minimumValidDepthInMeters"
+            }
+        ]
+    },
+    {
+        "@id": "urn:uuid:f41be58e-2e1e-409e-a322-1de95df2ce0b",
+        "@type": [
+            "https://rs.tdwg.org/bdqffdq/terms/Argument"
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue": [
+            {
+                "@value": "11000"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "Default value for bdqval:maximumValidDepthInMeters:\"11000\""
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
+            {
+                "@id": "https://rs.tdwg.org/bdqval/terms/maximumValidDepthInMeters"
             }
         ]
     },
@@ -19861,6 +20245,9 @@
         "https://rs.tdwg.org/bdqffdq/terms/hasArgument": [
             {
                 "@id": "urn:uuid:9c0a82d5-4b24-4160-a000-ee9429bef8f7"
+            },
+            {
+                "@id": "urn:uuid:2c441806-b56b-4252-9944-e331f9f3fee6"
             }
         ]
     },
@@ -19886,9 +20273,24 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqval/terms/spatialBufferInMeters",
+        "@id": "urn:uuid:2c441806-b56b-4252-9944-e331f9f3fee6",
         "@type": [
-            "https://rs.tdwg.org/bdqffdq/terms/Parameter"
+            "https://rs.tdwg.org/bdqffdq/terms/Argument"
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue": [
+            {
+                "@value": "GBIF Catalogue of Country Centroides"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "Default value for bdqval:sourceAuthority:\"GBIF Catalogue of Country Centroides\""
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
+            {
+                "@id": "https://rs.tdwg.org/bdqval/terms/sourceAuthority"
+            }
         ]
     },
     {
