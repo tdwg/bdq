@@ -3880,7 +3880,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Argument GUID</td>
-			<td>8c52d108-f9fe-4835-9939-6acc4430c9ee</td>
+			<td>8c52d108-f9fe-4835-9939-6acc4430c9ee,de022674-06c8-48cf-86b6-2cd362e24667</td>
 		</tr>
 		<tr>
 			<td>has Use Cases</td>

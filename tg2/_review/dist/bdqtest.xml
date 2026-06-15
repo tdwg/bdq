@@ -5327,7 +5327,7 @@
 	<skos:example>bdqval:annotationAlertIf="": Response.status=RUN_HAS_RESULT, Response.result=NOT_ISSUE, Response.comment="bdqval:annotationAlertIf is bdqval:Empty"</skos:example>
 	<skos:example>bdqval:annotationAlertIf="?": Response.status=RUN_HAS_RESULT, Response.result=POTENTIAL_ISSUE, Response.comment="bdqval:annotationAlertIf is bdqval:NotEmpty"</skos:example>
 	<bdqffdq:hasArgument rdf:resource="urn:uuid:8c52d108-f9fe-4835-9939-6acc4430c9ee"/>
-	<bdqffdq:hasArgument rdf:resource="urn:uuid:f7ec249a-b201-4ce7-8341-9ee2b135bbe1"/>
+	<bdqffdq:hasArgument rdf:resource="urn:uuid:de022674-06c8-48cf-86b6-2cd362e24667"/>
 	<bdqffdq:hasAuthoritiesDefaults>bdqval:annotationSystem default = "W3C Web Annotation" {[https://www.w3.org/annotation/]} {"oa:Annotation vocabulary" [https://www.w3.org/TR/annotation-vocab/]},bdqval:annotationAlertIf default = "oa:Annotation with oa:hasTarget having as object any dwciri:term instance that is part of the SingleRecord under Test." {[https://www.w3.org/TR/annotation-vocab/]}</bdqffdq:hasAuthoritiesDefaults>
 	<bdqffdq:hasExpectedResponse>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:annotationSystem is not available; POTENTIAL_ISSUE if an annotation in the bdqval:annotationSystem exists and has an oa:hasTarget referencing the bdqffdq:SingleRecord under evaluation with matching bdqval:annotationAlertIf criteria; otherwise NOT_ISSUE.</bdqffdq:hasExpectedResponse>
 </rdf:Description>
@@ -10749,6 +10749,13 @@
 	<bdqffdq:composedOf rdf:resource="https://rs.tdwg.org/bdqval/terms/AggregatedTestResponseOutcomes"/>
 </rdf:Description>
 
+<rdf:Description rdf:about="urn:uuid:de022674-06c8-48cf-86b6-2cd362e24667">
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Argument"/>
+	<rdfs:label>Default value for bdqval:annotationAlertIf:"oa:Annotation with oa:hasTarget having as object any dwciri:term instance that is part of the SingleRecord under Test."</rdfs:label>
+	<bdqffdq:hasArgumentValue>oa:Annotation with oa:hasTarget having as object any dwciri:term instance that is part of the SingleRecord under Test.</bdqffdq:hasArgumentValue>
+	<bdqffdq:hasParameter rdf:resource="https://rs.tdwg.org/bdqval/terms/annotationAlertIf"/>
+</rdf:Description>
+
 <rdf:Description rdf:about="urn:uuid:de36737d-3d44-4b90-b79e-754df1db1f8a">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
 	<rdfs:label>Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_EVENTDATE_NOTEMPTY.Response</rdfs:label>
@@ -11538,13 +11545,6 @@
 	<skos:example>dwc:minimumElevationInMeters="1", dwc:maximumElevationInMeters="0": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:minimumElevationInMeters is greater than dwc:maximumElevationInMeters"</skos:example>
 	<bdqffdq:hasAuthoritiesDefaults></bdqffdq:hasAuthoritiesDefaults>
 	<bdqffdq:hasExpectedResponse>INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumlevationInMeters or dwc:minimumElevationInMeters is bdqval:Empty, or if either is not a number; COMPLIANT if the value of dwc:minimumElevationInMeters is a number less than or equal to the value of the number dwc:maximumElevationInMeters, otherwise NOT_COMPLIANT</bdqffdq:hasExpectedResponse>
-</rdf:Description>
-
-<rdf:Description rdf:about="urn:uuid:f7ec249a-b201-4ce7-8341-9ee2b135bbe1">
-	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Argument"/>
-	<rdfs:label>Default value for bdqval:annotationAlertIf:"oa:Annotation with oa:hasTarget having as object any dwciri:term instance that is part of the SingleRecord under Test."</rdfs:label>
-	<bdqffdq:hasArgumentValue>oa:Annotation with oa:hasTarget having as object any dwciri:term instance that is part of the SingleRecord under Test.</bdqffdq:hasArgumentValue>
-	<bdqffdq:hasParameter rdf:resource="https://rs.tdwg.org/bdqval/terms/annotationAlertIf"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:f8024a02-76c0-482a-b805-097d0cdc82e2">
