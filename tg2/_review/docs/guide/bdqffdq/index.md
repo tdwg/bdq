@@ -395,7 +395,7 @@ Following is a knowledge graph showing the is-a relationships between the classe
 
 ### 2.6 Example representation of a BDQ Test (non-normative)
 
-Below is a fragment in Turtle describing VALIDATION_COUNTRY_FOUND, composed of a `Validation`, linking an `Acted Upon` `Information Element`, a `Criterion`, and the `Resource Type` `Single Record`, with the `Validation` linked to a `Validation Method`, and from there a `Specification`. Also shown is a `Validation Policy` linking this `Validation` to a `Use Case`.
+Below is a fragment in Turtle describing VALIDATION_COUNTRY_FOUND, composed of a `Validation`, linking an `Acted Upon` `Information Element`, a `Criterion`, and the `Resource Type` `Single Record`, with the `Validation` linked to a `Validation Method`, and from there a `Specification`. Also shown is a `Validation Policy` linking this `Validation` to a `Use Case`, but not all of the [bdqffdq:includedInPolicy](<../../list/bdqffdq/index.md#includedInPolicy> "Assserts that a bdqffdq:DataQualityNeed is part of a bdqffdq:Policy.") properties of that `Validation Policy`.
 
 ```turtle
 bdqtest:69b2efdc-6269-45a4-aecb-4cb99c2ae134-2025-03-07 a bdqffdq:Validation ;
@@ -423,6 +423,15 @@ bdqdim:Conformance a bdqffdq:DataQualityDimension ;
     rdfs:label "Information Element ActedUpon dwc:country" ;
     skos:prefLabel "Information Element ActedUpon dwc:country" ;
     bdqffdq:composedOf dwc:country .
+
+bdqffdq:SingleRecord a bdqffdq:ResourceType ;
+    rdfs:label "SingleRecord" .
+
+<https://doi.org/10.15468/doc-gg7h-s853> a dcterms:BibliographicResource ;
+    dcterms:bibliographicCitation "Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853" .
+
+<https://www.getty.edu/research/tools/vocabularies/tgn/index.html> a dcterms:BibliographicResource ;
+    dcterms:bibliographicCitation "Getty Research Institute (2017) Getty Thesaurus of Geographic Names Online. https://www.getty.edu/research/tools/vocabularies/tgn/index.html" .
 
 <urn:uuid:04cee4e0-0c83-40cc-8de2-e7391f0a97a9> a bdqffdq:ValidationMethod ;
     rdfs:label "ValidationMethod: VALIDATION_COUNTRY_FOUND with Specification for: VALIDATION_COUNTRY_FOUND" ;
@@ -454,32 +463,7 @@ bdqval:sourceAuthority a bdqffdq:Parameter .
     rdfs:label "ValidationPolicy: (50) validations  in UseCase bdquc:Spatial-Temporal_Patterns" ;
     skos:prefLabel "ValidationPolicy: (50) validations  in UseCase bdquc:Spatial-Temporal_Patterns" ;
     bdqffdq:hasUseCase <https://rs.tdwg.org/bdquc/terms/Spatial-Temporal_Patterns> ;
-    bdqffdq:includedInPolicy bdqtest:01c6dafa-0886-4b7e-9881-2c3018c98bdc-2025-03-06,
-        bdqtest:0493bcfb-652e-4d17-815b-b0cce0742fbe-2025-03-07, bdqtest:04b2c8f3-c71b-4e95-8e43-f70374c5fb92-2025-03-07,
-        bdqtest:06851339-843f-4a43-8422-4e61b9a00e75-2025-03-06, bdqtest:0949110d-c06b-450e-9649-7c1374d940d1-2025-03-07,
-        bdqtest:0bb8297d-8f8a-42d2-80c1-558f29efe798-2025-03-07, bdqtest:1bf0e210-6792-4128-b8cc-ab6828aa4871-2025-03-07,
-        bdqtest:239ec40e-a729-4a8e-ba69-e0bf03ac1c44-2025-03-07, bdqtest:374b091a-fc90-4791-91e5-c1557c649169-2025-03-07,
-        bdqtest:3cff4dc4-72e9-4abe-9bf3-8a30f1618432-2025-03-06, bdqtest:3f1db29a-bfa5-40db-9fd1-fde020d81939-2025-03-07,
-        bdqtest:3f335517-f442-4b98-b149-1e87ff16de45-2025-03-06, bdqtest:41267642-60ff-4116-90eb-499fee2cd83f-2025-03-06,
-        bdqtest:42408a00-bf71-4892-a399-4325e2bc1fb8-2025-03-07, bdqtest:47ff73ba-0028-4f79-9ce1-ee7008d66498-2025-03-06,
-        bdqtest:4c09f127-737b-4686-82a0-7c8e30841590-2025-03-06, bdqtest:4daa7986-d9b0-4dd5-ad17-2d7a771ea71a-2025-03-07,
-        bdqtest:4eb48fdf-7299-4d63-9d08-246902e2857f-2025-03-07, bdqtest:4f2bf8fd-fc5c-493f-a44c-e7b16153c803-2025-03-06,
-        bdqtest:58486cb6-1114-4a8a-ba1e-bd89cfe887e9-2025-03-07, bdqtest:66269bdd-9271-4e76-b25c-7ab81eebe1d8-2025-03-07,
-        bdqtest:69b2efdc-6269-45a4-aecb-4cb99c2ae134-2025-03-07, bdqtest:6ce2b2b4-6afe-4d13-82a0-390d31ade01c-2025-03-07,
-        bdqtest:7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2025-03-07, bdqtest:7c4b9498-a8d9-4ebb-85f1-9f200c788595-2025-03-06,
-        bdqtest:7d2485d5-1ba7-4f25-90cb-f4480ff1a275-2025-03-07, bdqtest:7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2025-03-07,
-        bdqtest:853b79a2-b314-44a2-ae46-34a1e7ed85e4-2025-03-07, bdqtest:85803c7e-2a5a-42e1-b8d3-299a44cafc46-2025-03-06,
-        bdqtest:8d787cb5-73e2-4c39-9cd1-67c7361dc02e-2025-03-06, bdqtest:8f1e6e58-544b-4365-a569-fb781341644e-2025-03-07,
-        bdqtest:9a39d88c-7eee-46df-b32a-c109f9f81fb8-2025-03-06, bdqtest:9beb9442-d942-4f42-8b6a-fcea01ee086a-2025-03-07,
-        bdqtest:ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2025-03-07, bdqtest:ad0c8855-de69-4843-a80c-a5387d20fbc8-2025-03-06,
-        bdqtest:adb27d29-9f0d-4d52-b760-a77ba57a69c9-2025-03-07, bdqtest:b23110e7-1be7-444a-a677-cdee0cf4330c-2025-03-07,
-        bdqtest:b6ecda2a-ce36-437a-b515-3ae94948fe83-2025-03-07, bdqtest:b9c184ce-a859-410c-9d12-71a338200380-2025-03-07,
-        bdqtest:c09ecbf9-34e3-4f3e-b74a-8796af15e59f-2025-03-06, bdqtest:c486546c-e6e5-48a7-b286-eba7f5ca56c4-2025-03-07,
-        bdqtest:c6adf2ea-3051-4498-97f4-4b2f8a105f57-2025-03-07, bdqtest:c971fe3f-84c1-4636-9f44-b1ec31fd63c7-2025-03-07,
-        bdqtest:cdaabb0d-a863-49d0-bc0f-738d771acba5-2025-03-07, bdqtest:d257eb98-27cb-48e5-8d3c-ab9fca4edd11-2025-03-07,
-        bdqtest:d708526b-6561-438e-aa1a-82cd80b06396-2025-03-07, bdqtest:dc8aae4b-134f-4d75-8a71-c4186239178e-2025-03-07,
-        bdqtest:eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf-2025-03-07, bdqtest:f18a470b-3fe1-4aae-9c65-a6d3db6b550c-2025-03-07,
-        bdqtest:f51e15a6-a67d-4729-9c28-3766299d2985-2025-03-07 .
+    bdqffdq:includedInPolicy bdqtest:69b2efdc-6269-45a4-aecb-4cb99c2ae134-2025-03-07 .
 
 <https://rs.tdwg.org/bdquc/terms/Spatial-Temporal_Patterns> a bdqffdq:UseCase ;
     rdfs:label "bdquc:Spatial-Temporal_Patterns" .
