@@ -4,7 +4,7 @@ This directory contains the master canonical term-version CSV files from which t
 
 **README.md**  This file.<br>
 [**bdqval_term_versions.csv**](bdqval_term_versions.csv) Term version file for `bdqval:` supplemental vocabulary. **Editable.**<br>
-[**bdqtest_term_versions.csv**](bdqcore_term_versions.csv) Term version file for `bdqtest:` Test descriptions vocabulary. **Editable.**<br>
+[**bdqtest_term_versions.csv**](bdqtest_term_versions.csv) Term version file for `bdqtest:` Test descriptions vocabulary. **Editable.**<br>
 [**bdqcrit_term_versions.csv**](bdqcrit_term_versions.csv) Term version file for `bdqcrit:` Criterion vocabulary. **Editable.**<br>
 [**bdqdim_term_versions.csv**](bdqdim_term_versions.csv) Term version file for `bdqdim:` Dimension vocabulary. **Editable.**<br>
 [**bdqenh_term_versions.csv**](bdqenh_term_versions.csv) Term version file for `bdqenh:` Enhancement vocabulary. **Editable.**<br>
