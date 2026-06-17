@@ -1222,7 +1222,7 @@ Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:Impro
 #### hasResponseResultValue
 
 - Name: bdqffdq:hasResponseResultValue
-- Preferred Label: has response result value
+- Preferred Label: has Response Result Value
 - Definition: Data property carrying the value of a bdqffdq:Response when the value is not an object.
 - Comments: Applies to bdqffdq:AmendmentResponses. To support bdqtest: Tests, bdqffdq:hasResponseResultValue is expected to carry a key:value list where the keys are the names of bdqffdq:ActedUpon bdqffdq:InformationElements, and the values are the proposed new values (filling in or replacing the values of those terms in the input). Applies to bdqffdq:MeasurementResponses that assert a numeric value.
 

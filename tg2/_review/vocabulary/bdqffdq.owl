@@ -579,10 +579,10 @@ bdqffdq:hasResponseComment rdf:type owl:DatatypeProperty ;
 bdqffdq:hasResponseResultValue rdf:type owl:DatatypeProperty ;
                                dcterms:issued "2024-09-30"^^xsd:date ;
                                skos:note "Applies to bdqffdq:AmendmentResponses. To support bdqtest: Tests, bdqffdq:hasResponseResultValue is expected to carry a key:value list where the keys are the names of bdqffdq:ActedUpon bdqffdq:InformationElements, and the values are the proposed new values (filling in or replacing the values of those terms in the input). Applies to bdqffdq:MeasurementResponses that assert a numeric value."@en ;
-                               rdfs:label "has response result value"@en ;
+                               rdfs:label "has Response Result Value"@en ;
                                skos:definition "Data property carrying the value of a bdqffdq:Response when the value is not an object."@en ;
                                rdfs:comment "Data property carrying the value of a bdqffdq:Response when the value is not an object."@en ;
-                               skos:prefLabel "has response result value"@en .
+                               skos:prefLabel "has Response Result Value"@en .
 
 
 #################################################################
