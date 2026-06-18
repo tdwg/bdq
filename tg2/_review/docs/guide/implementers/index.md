@@ -564,7 +564,7 @@ Additional Tests that conform to the BDQ standard MUST describe those Tests usin
 
 ### 3.6 Parameterized Tests: default behavior and unsupported values (normative)
 
-Implementations MUST provide Parameterized Tests that support the default `Parameter` values. Implementations SHOULD provide for Parameterized Tests to take parameters, but MAY produce an implementation of a Parameterized Test that takes no parameters but only uses a default parameter value applicable within their domain.
+Implementations MUST provide [Parameterized](<../../../index.md#glossary_Parameterized> "Pertains to a Test that allows a bdqffdq:Parameter to be set prior to the test being run. Where a bdqffdq:Parameter value has not been provided, a default is specified within the test.") Tests that support the default `Parameter` values. Implementations SHOULD provide for Parameterized Tests to take parameters, but MAY produce an implementation of a Parameterized Test that takes no parameters but only uses a default parameter value applicable within their domain.
 
 BDQ does not specify how a Test implementation is to respond when given a `Parameter` value that is not supported by the implementation. Implementers SHOULD handle this in a manner appropriate for their implementation framework. Unless otherwise noted in properties of the `Specification`, implementations MUST NOT use `Response.status`="EXTERNAL_PREREQUISITES_NOT_MET" to indicate a non-supported parameter value.
 
@@ -638,7 +638,7 @@ Implementations MAY perform data `Quality Control`, data `Quality Assurance`, or
 
 Many Tests specify `bdqffdq:Parameters` that are intended to change the behavior of a [Test](<../../../index.md#glossary_Test> "A composition of a bdqffdq:DataQualityNeed with a bdqffdq:DataQualityMethod that links it to an instance of a bdqffdq:Specification, these instances being composed of InformationElements, Arguments, and Parameters. See…") to fit local `Data Quality Needs` without changing the `Specification` of the Test.
 
-A Parameterized Test will behave differently on the same data when using different `Parameter` values. 
+A [Parameterized](<../../../index.md#glossary_Parameterized> "Pertains to a Test that allows a bdqffdq:Parameter to be set prior to the test being run. Where a bdqffdq:Parameter value has not been provided, a default is specified within the test.") Test will behave differently on the same data when using different `Parameter` values. 
 
 Implementers SHOULD only present non-default `Parameter` values to a Test implementation if needed for local `Data Quality Needs`. 
 
