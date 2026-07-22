@@ -114,7 +114,7 @@ The primary objective of the BDQ standard is to enhance interoperability.  By fo
 
 #### 1.1.1 Purpose of this document (non-normative)
 
-This document serves as the central gateway and index for the Biodiversity Data Quality (BDQ) standard.  It provides a high level overview of the standard and contains links to the normative documents that formally define its specifications.  Aditionally, it directs diverse audiences to supporting resources designed to facilitate the understanding and effective implementation of BDQ within their specific communities and operational environments.
+This document serves as the central gateway and index for the Biodiversity Data Quality (BDQ) standard.  It provides a high level overview of the standard and contains links to the normative documents that formally define its specifications.  Additionally, it directs diverse audiences to supporting resources designed to facilitate the understanding and effective implementation of BDQ within their specific communities and operational environments.
 
 ### 1.2 Audience for the BDQ Standard (non-normative)
 
