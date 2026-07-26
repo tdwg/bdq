@@ -35,6 +35,8 @@ README.md  This file.
    - image and graphics files linked to in the generated document (and copied by the build script to a target directory).
  - templates/guide/implementers also contains the master copy of the test validation data files:
    - TG2_test_validation_data.csv and TG2_test_validation_data_nonprintingchars.csv 
+- [**build_bdqtest_rdf.py**](build_bdqtest_rdf.py) - Script to generate the three canonical bdqtest RDF serializations (Turtle, RDF/XML, JSON-LD) from the bdqtest_term_versions.csv term-version file and associated GUID mapping files. Python replacement for the kurator-ffdq / test-util.sh Java-based workflow.
+- [**compare_bdqtest_rdf.py**](compare_bdqtest_rdf.py) - Validation harness that compares generated bdqtest RDF outputs against baseline files in `tg2/_review/dist/`, reporting byte equality (informational) and graph isomorphism (authoritative pass/fail).
 - [**tools/**](tools/) - Directory for tools used for quality control of the BDQ documentation.
 
 The directory structure of the templates is as follows, with the files listed in each directory:
