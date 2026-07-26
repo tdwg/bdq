@@ -99,7 +99,9 @@ _PREFIX_MAP = {
     "dwciri":  "http://rs.tdwg.org/dwc/iri/",
     "dc":      "http://purl.org/dc/elements/1.1/",
     "dcterms": "http://purl.org/dc/terms/",
-    "oa":      "http://www.w3.org/ns/oa#",
+    # Java/kurator-ffdq resolves "oa:" to http://www.w3.org/ns/ (not oa#),
+    # replicating this so that oa:hasTarget → http://www.w3.org/ns/hasTarget.
+    "oa":      "http://www.w3.org/ns/",
     "bdqval":  "https://rs.tdwg.org/bdqval/terms/",
     "bdquc":   "https://rs.tdwg.org/bdquc/terms/",
     "bdqffdq": "https://rs.tdwg.org/bdqffdq/terms/",
@@ -129,25 +131,45 @@ def resolve_curie(curie: str) -> URIRef:
 
 # ── URL extraction from HTML references ─────────────────────────────────────
 
-_URL_RE = re.compile(r'https?://[^\s<>"\]]+')
+_URL_RE = re.compile(r'https?://[^\s<>"\],]+')
 
 
 def extract_reference_urls(html: str) -> list:
     """
-    Extract ordered, deduplicated URLs from an HTML <ul><li>…</li></ul> block.
+    Extract ordered, deduplicated URLs from a References field.
 
-    Only the last URL found in each <li> item is used (matching Java behaviour).
+    The field may be an HTML ``<ul><li>…</li></ul>`` block, a plain-text
+    paragraph, or a mix.
+
+    When the text contains proper ``<li>…</li>`` items, only those items are
+    processed (malformed items ending with ``</i>`` instead of ``</li>`` are
+    intentionally skipped, mirroring Java/kurator-ffdq behaviour).
+
+    When a list item contains multiple comma-separated URLs (e.g.
+    ``https://a.example/,https://b.example/``), each URL is extracted
+    individually.
+
+    If the text has no ``<li>`` items (plain text), all URLs in the raw text
+    are extracted.
     """
-    items = re.split(r'</li>', html, flags=re.IGNORECASE)
     urls = []
     seen = set()
-    for item in items:
-        text = re.sub(r'<[^>]+>', '', item).strip()
-        if not text:
-            continue
-        found = _URL_RE.findall(text)
-        if found:
-            url = found[-1].rstrip('.,;)')
+    li_items = re.findall(r'<li>(.*?)</li>', html, flags=re.IGNORECASE | re.DOTALL)
+    if li_items:
+        for item in li_items:
+            text = re.sub(r'<[^>]+>', '', item).strip()
+            if not text:
+                continue
+            for url in _URL_RE.findall(text):
+                url = url.rstrip('.,;)')
+                if url not in seen:
+                    seen.add(url)
+                    urls.append(url)
+    else:
+        # Plain-text references (common for MultiRecord rows)
+        text = re.sub(r'<[^>]+>', '', html).strip()
+        for url in _URL_RE.findall(text):
+            url = url.rstrip('.,;)')
             if url not in seen:
                 seen.add(url)
                 urls.append(url)
@@ -161,21 +183,24 @@ def parse_examples(raw: str) -> list:
     Parse the Examples CSV column into a list of example strings.
 
     Format: [example1],[example2],…
+
+    Java/kurator-ffdq behaviour:
+      - If there is only ONE example (no '],['  separator), the raw string is
+        returned as-is, including any outer brackets.
+      - If there are MULTIPLE examples, split on '],[', strip the leading '['
+        from the first part and the trailing ']' from the last part.
     Returns [''] for an empty / missing field (Java emits skos:example "").
     """
     raw = raw.strip()
     if not raw:
         return ['']
-    parts = re.split(r'\],\s*\[', raw)
-    result = []
-    for part in parts:
-        part = part.strip()
-        if part.startswith('['):
-            part = part[1:]
-        if part.endswith(']'):
-            part = part[:-1]
-        result.append(part)
-    return result if result else ['']
+    if '],[' in raw:
+        parts = raw.split('],[')
+        parts[0] = parts[0].lstrip('[')
+        parts[-1] = parts[-1].rstrip(']')
+        return parts if parts else ['']
+    # Single example: return the full string, brackets and all
+    return [raw]
 
 
 # ── Argument default-value extraction ────────────────────────────────────────
@@ -246,20 +271,38 @@ def load_policy_guids(path: str) -> dict:
     return result
 
 
-def load_citation_guids(path: str) -> dict:
+def load_citation_guids(path: str) -> tuple:
     """
-    Load TG2_citation_guids.csv → {url: bibliographic_citation}.
+    Load TG2_citation_guids.csv.
 
-    Duplicate URLs keep the FIRST occurrence.
+    Returns a (guid_map, url_to_guid) pair:
+      - guid_map: {guid_iri → bibliographic_citation}
+        The guid_iri is the IRI used for the dcterms:BibliographicResource node.
+        It may be an HTTP/HTTPS URL or a urn:uuid: URI.
+      - url_to_guid: {url → guid_iri}
+        Reverse index for entries where the guid is a urn:uuid: — the URL is
+        extracted from the citation text and maps back to the urn:uuid key.
+
+    In both maps the FIRST occurrence of each key wins (no overwriting of
+    earlier entries), matching the Java behaviour.
     """
-    result = {}
+    guid_map: dict  = {}
+    url_to_guid: dict = {}
     with open(path, newline='', encoding='utf-8') as f:
         for row in csv.DictReader(f):
-            url  = row['guid'].strip()
+            guid = row['guid'].strip()
             cite = row['citation'].strip()
-            if url and cite and url not in result:
-                result[url] = cite
-    return result
+            if not guid or not cite:
+                continue
+            if guid not in guid_map:
+                guid_map[guid] = cite
+            # For urn:uuid-keyed entries build a URL→guid reverse index.
+            if guid.startswith('urn:uuid:'):
+                for url in re.findall(r'https?://[^\s,]+', cite):
+                    url = url.rstrip('.,;)')
+                    if url not in url_to_guid and url not in guid_map:
+                        url_to_guid[url] = guid
+    return guid_map, url_to_guid
 
 
 def load_test_rows(path: str) -> list:
@@ -500,23 +543,36 @@ def _add_multirecord_ie_node(g: Graph, row: dict, term_iri_to_label: dict,
 
 # ── BibliographicResource helper ─────────────────────────────────────────────
 
-def _add_bib_resource(g: Graph, url: str, citation_guids: dict,
-                      seen_refs: set):
+def _add_bib_resource(g: Graph, url: str, guid_map: dict,
+                      url_to_guid: dict, seen_refs: set):
     """
-    Add a dcterms:BibliographicResource node for `url` if, and only if,
-    the URL exists in the citation_guids lookup (matching Java behaviour).
+    Add a dcterms:BibliographicResource node for `url` if, and only if, the
+    URL is resolvable via the citation lookup (matching Java behaviour).
 
-    Returns the URIRef if emitted, else None.
+    Resolution order:
+      1. `url` is a direct key in guid_map  →  node IRI = url.
+      2. `url` appears in the citation text of a urn:uuid entry (via
+         url_to_guid reverse index)  →  node IRI = urn:uuid:…
+
+    Returns the URIRef of the emitted BibliographicResource, or None if the
+    URL has no known citation entry.
     """
-    citation = citation_guids.get(url)
-    if citation is None:
+    if url in guid_map:
+        node_uri  = URIRef(url)
+        citation  = guid_map[url]
+    elif url in url_to_guid:
+        guid      = url_to_guid[url]
+        node_uri  = URIRef(guid)
+        citation  = guid_map[guid]
+    else:
         return None
-    ref_uri = URIRef(url)
-    if url not in seen_refs:
-        seen_refs.add(url)
-        g.add((ref_uri, RDF.type, DCTERMS.BibliographicResource))
-        g.add((ref_uri, DCTERMS.bibliographicCitation, Literal(citation)))
-    return ref_uri
+
+    key = str(node_uri)
+    if key not in seen_refs:
+        seen_refs.add(key)
+        g.add((node_uri, RDF.type, DCTERMS.BibliographicResource))
+        g.add((node_uri, DCTERMS.bibliographicCitation, Literal(citation)))
+    return node_uri
 
 
 # ── Argument-node helper ──────────────────────────────────────────────────────
@@ -565,12 +621,17 @@ def _add_argument_nodes(g: Graph, row: dict, spec_uri: URIRef,
 # ── Main graph builder ────────────────────────────────────────────────────────
 
 def build_graph(rows: list, additional_guids: dict, ie_guids: dict,
-                policy_guids: dict, citation_guids: dict) -> Graph:
+                policy_guids: dict, citation_guids: tuple) -> Graph:
     """
     Build a complete RDF graph for all included bdqtest terms.
+
+    `citation_guids` is the (guid_map, url_to_guid) tuple returned by
+    load_citation_guids().
     """
     g = Graph()
     _bind_namespaces(g)
+
+    guid_map, url_to_guid = citation_guids
 
     seen_ies      = {}   # guid_iri (str) -> URIRef
     seen_refs     = set()
@@ -678,7 +739,7 @@ def build_graph(rows: list, additional_guids: dict, ie_guids: dict,
         # References → BibliographicResource (only URLs in citation_guids)
         if references:
             for url in extract_reference_urls(references):
-                ref_uri = _add_bib_resource(g, url, citation_guids, seen_refs)
+                ref_uri = _add_bib_resource(g, url, guid_map, url_to_guid, seen_refs)
                 if ref_uri is not None:
                     g.add((version_iri, DCTERMS.references, ref_uri))
 
