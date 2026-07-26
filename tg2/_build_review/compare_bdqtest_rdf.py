@@ -10,14 +10,14 @@ and reports:
 
 Usage (from repo root):
   # Compare generated files against the dist/ baselines
-  python3 tg2/_build_review/tools/compare_bdqtest_rdf.py \\
+  python3 tg2/_build_review/compare_bdqtest_rdf.py \\
       --new-ttl    /path/to/new_bdqtest.ttl \\
       --new-rdfxml /path/to/new_bdqtest.xml \\
       --new-jsonld /path/to/new_bdqtest.json \\
       --baseline-dir tg2/_review/dist
 
   # Generate and compare in a single step (builds to /tmp then compares)
-  python3 tg2/_build_review/tools/compare_bdqtest_rdf.py --auto-build
+  python3 tg2/_build_review/compare_bdqtest_rdf.py --auto-build
 
 All three serializations are parsed independently and checked for graph
 isomorphism against the corresponding baseline file.  Byte equality is
@@ -47,7 +47,7 @@ _FORMATS = [
 ]
 
 _THIS_DIR   = os.path.dirname(os.path.abspath(__file__))
-_REPO_ROOT  = os.path.dirname(os.path.dirname(os.path.dirname(_THIS_DIR)))
+_REPO_ROOT  = os.path.dirname(os.path.dirname(_THIS_DIR))
 _BUILDER    = os.path.join(_THIS_DIR, "build_bdqtest_rdf.py")
 _DIST_DIR   = os.path.join(_REPO_ROOT, "tg2", "_review", "dist")
 

@@ -8,7 +8,7 @@ canonical bdqtest_term_versions.csv term-version file, mirroring the semantics
 of the Java test-util.sh / kurator-ffdq workflow.
 
 Usage (from repo root):
-  python3 tg2/_build_review/tools/build_bdqtest_rdf.py \\
+  python3 tg2/_build_review/build_bdqtest_rdf.py \\
       --in-term-versions  tg2/_review/vocabulary/bdqtest_term_versions.csv \\
       --guid-file          tg2/core/TG2_tests_additional_guids.csv \\
       --ie-guid-file       tg2/core/information_element_guids.csv \\

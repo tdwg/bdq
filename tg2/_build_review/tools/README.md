@@ -59,66 +59,6 @@ Default paths are set relative to the expected location of this script inside th
 * check_potential_namespace_errors.py - Check for potential namespace errors in Markdown files, such as missing or incorrect namespace prefixes.
 
 
-## Scripts to generate bdqtest RDF serializations (Python replacement for kurator-ffdq)
-
-### build_bdqtest_rdf.py
-
-Python generator that produces the three canonical bdqtest RDF serializations
-(Turtle, RDF/XML, JSON-LD) from the bdqtest_term_versions.csv term-version
-file and associated GUID mapping files.  This is a semantic replacement for
-the kurator-ffdq / test-util.sh Java-based workflow.
-
-**Dependencies:** Python 3, [rdflib](https://rdflib.readthedocs.io/) (`pip install rdflib`)
-
-**Usage (from repo root):**
-
-```bash
-python3 tg2/_build_review/tools/build_bdqtest_rdf.py \
-    --in-term-versions  tg2/_review/vocabulary/bdqtest_term_versions.csv \
-    --guid-file          tg2/core/TG2_tests_additional_guids.csv \
-    --ie-guid-file       tg2/core/information_element_guids.csv \
-    --policy-guid-file   tg2/core/TG2_policy_guids.csv \
-    --citation-guid-file tg2/core/TG2_citation_guids.csv \
-    --out-ttl    tg2/_review/dist/bdqtest.ttl \
-    --out-rdfxml tg2/_review/dist/bdqtest.xml \
-    --out-jsonld tg2/_review/dist/bdqtest.json
-```
-
-Key behavioural invariants (mirroring the Java implementation):
-- Only rows with `status=="recommended"` are emitted.
-- Rows whose CSV text contains `AllAmendmentTestsRunOnSingleRecord` or
-  `AllDarwin` in any column are excluded.
-- Method/Specification GUIDs are taken from `TG2_tests_additional_guids.csv`
-  (authoritative), overriding the CSV columns.
-- Only reference URLs present in `TG2_citation_guids.csv` are emitted as
-  `dcterms:BibliographicResource` nodes; others are silently skipped.
-- Policy and UseCase triples are included using `TG2_policy_guids.csv`.
-
-### compare_bdqtest_rdf.py
-
-Validation harness that compares generated RDF outputs against the baseline
-files in `tg2/_review/dist/`, reporting byte equality (informational) and
-graph isomorphism (authoritative pass/fail).
-
-**Usage — compare pre-generated files:**
-
-```bash
-python3 tg2/_build_review/tools/compare_bdqtest_rdf.py \
-    --new-ttl    /path/to/new_bdqtest.ttl \
-    --new-rdfxml /path/to/new_bdqtest.xml \
-    --new-jsonld /path/to/new_bdqtest.json
-```
-
-**Usage — generate and compare in one step:**
-
-```bash
-python3 tg2/_build_review/tools/compare_bdqtest_rdf.py --auto-build
-```
-
-Exit code 0 = all formats graph-isomorphic; exit code 1 = at least one format
-differs (with diff summary printed to stdout).
-
-
 
 * list_multirecord_measures_for_usecase_tests.py - list the `MultiRecord` `Measures` that are associated with each use case and test in the RDF data.
 * list_unique_acted_upon_information_elements.py - list the unique `InformationElements` that are acted upon by `Tests` in the RDF data by use case.
