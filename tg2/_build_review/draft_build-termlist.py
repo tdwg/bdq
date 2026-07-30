@@ -543,8 +543,8 @@ for term in termLists:
             outputRdf += '     <tdwgutility:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recommended</tdwgutility:status>\n'
             outputRdf += '     <rdfs:label xml:lang="en">{}</rdfs:label>\n'.format(row['label'])
             outputRdf += '     <skos:prefLabel xml:lang="en">{}</skos:prefLabel>\n'.format(row['prefLabel'])
-			note_htmltext = row['comments']
-			outputRdf += '     <skos:note rdf:parseType="Literal"><div xmlns="http://www.w3.org/1999/xhtml">{}</div></skos:note>\n'.format(note_htmltext)
+            note_htmltext = row['comments']
+            outputRdf += '     <skos:note rdf:parseType="Literal"><div xmlns="http://www.w3.org/1999/xhtml">{}</div></skos:note>\n'.format(note_htmltext)
             # outputRdf += '     <skos:note xml:lang="en">{}</skos:note>\n'.format(row['comments'])
             escaped_definition = escape(row['definition'])
             outputRdf += '     <rdfs:comment xml:lang="en">{}</rdfs:comment>\n'.format(escaped_definition)
