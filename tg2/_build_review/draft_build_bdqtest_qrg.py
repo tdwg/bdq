@@ -408,7 +408,7 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 			# display as two lines without the enclosing square brackets.
 			examples = [val.strip() for val in examplesRaw.split('],[')]
 			for example in examples: 
-				print(re.sub("\]$","",re.sub("^\[","",example)))
+				print(re.sub(r"\]$","",re.sub(r"^\[","",example)))
 				print()
 			print()
 			print("#### Use Cases")
