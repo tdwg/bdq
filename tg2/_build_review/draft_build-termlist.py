@@ -563,7 +563,10 @@ for term in termLists:
             outputRdf += '     <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/{}/terms/{}"/>\n'.format(term,row['term_localName'])
             if term == "bdquc" :
                 if row['hasFitnessRequirements'] and row['hasFitnessRequirements'] != '' :
-                    outputRdf += '     <bdqffdq:hasFitnessRequirements rdf:datatype="http://www.w3.org/2001/XMLSchema#string">{}</bdqffdq:hasFitnessRequirements>\n'.format(row['hasFitnessRequirements'])
+                    # escaped = saxutils.escape(row['hasFitnessRequirements'],{'"':'&quot;',"'":"&apos;"})
+                    # outputRdf += '     <bdqffdq:hasFitnessRequirements rdf:datatype="http://www.w3.org/2001/XMLSchema#string">{}</bdqffdq:hasFitnessRequirements>\n'.format(escaped)
+                    htmltext = row['hasFitnessRequirements']
+                    outputRdf += '     <bdqffdq:hasFitnessRequirements rdf:parseType="Literal"><div xmlns="http://www.w3.org/1999/xhtml">{}</div></bdqffdq:hasFitnessRequirements>\n'.format(htmltext)
                 if row['scopeNote'] and row['scopeNote'] != '' :
                     outputRdf += '     <skos:scopeNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">{}</skos:scopeNote>\n'.format(row['scopeNote'])
             outputRdf += '</rdf:Description>\n'
