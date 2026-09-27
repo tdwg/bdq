@@ -397,7 +397,7 @@ The chosen strategy MUST be explicitly documented and consistently applied, as i
 - Different traversal or multiplicity strategies may yield different `Single Record` view instances from the same underlying data; therefore, **test results are only comparable when these strategies are aligned**.
 - Test execution frameworks are responsible for defining and enforcing the rules that produce Single Record views.
 
-A BDQ Single Record Test over a DwC-DP operates on a **deterministically defined, denormalized projection** of the relational data model. The correctness, reproducibility, and interpretability of test results depend on explicit definitions of focal entities, relationship traversal, term mapping, and multiplicity handling.
+A BDQ Single Record Test over a DwC-DP operates on a **deterministically defined, denormalized projection** of the relational data model (that is, a view). The correctness, reproducibility, and interpretability of test results depend on explicit definitions of focal entities, relationship traversal, term mapping, and multiplicity handling.
 
 ### 4.3 Parameterizing the Tests (normative)
 
