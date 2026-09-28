@@ -140,7 +140,7 @@ bdqval:sourceAuthority a bdqffdq:Parameter .
 
 bdqtest:eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f-2025-03-06 a bdqffdq:Validation;
   bdqffdq:hasResourceType bdqffdq:SingleRecord;
-  skos:note "The purpose of this Test is to check whether the value is a name that is a result of a nomenclatural act at this rank. This excludes unpublished names, misspellings and vernacular names. It is expected that the Test will designate the source authority against which to check. The same Test might return distinct results when using distinct source authorities.";
+  skos:note "The purpose of this Test is to check whether the value is a name that is a result of a nomenclatural act at this rank. This excludes unpublished names, misspellings and vernacular names. It is expected that the Test will designate the source authority against which to check. The same Test might return distinct results when using distinct source authorities.  **Review Note: GBIF has indicated that we should switch to the Catalog of Life for the default source authority for this test. That change is planned prior to ratification.**";
   bdqffdq:hasDataQualityDimension bdqdim:Conformance;
   dcterms:description "Does the value of dwc:phylum occur at the rank of Phylum in the bdqval:sourceAuthority?";
   bdqffdq:hasCriterion bdqcrit:Found;
@@ -280,7 +280,7 @@ bdqffdq:AmendmentMethod rdfs:subClassOf bdqffdq:DataQualityMethod .
 
 bdqtest:3667556d-d8f5-454c-922b-af8af38f613c-2025-03-06 a bdqffdq:Validation;
   bdqffdq:hasResourceType bdqffdq:SingleRecord;
-  skos:note "The purpose of this Test is to check whether the value is a name that is a result of a nomenclatural act at this rank. This excludes unpublished names, misspellings and vernacular names. It is expected that the Test will designate the source authority against which to check. The same Test might return distinct results when using distinct source authorities.";
+  skos:note "The purpose of this Test is to check whether the value is a name that is a result of a nomenclatural act at this rank. This excludes unpublished names, misspellings and vernacular names. It is expected that the Test will designate the source authority against which to check. The same Test might return distinct results when using distinct source authorities. **Review Note: GBIF has indicated that we should switch to the Catalog of Life for the default source authority for this test. That change is planned prior to ratification.**";
   bdqffdq:hasDataQualityDimension bdqdim:Conformance;
   dcterms:description "Does the value of dwc:family occur at the rank of Family in the bdqval:sourceAuthority?";
   bdqffdq:hasCriterion bdqcrit:Found;
@@ -833,7 +833,7 @@ bdqtest:6ce2b2b4-6afe-4d13-82a0-390d31ade01c-2025-03-07 a bdqffdq:Validation;
 
 bdqtest:3f335517-f442-4b98-b149-1e87ff16de45-2025-03-06 a bdqffdq:Validation;
   bdqffdq:hasResourceType bdqffdq:SingleRecord;
-  skos:note "The purpose of this Test is to detect errors in the scientific name but is dependent on the abilities of the parsing of the bdqval:sourceAuthority. For research users of biodiversity data doing quality assurance, VALIDATION_TAXON_UNAMBIGUOUS (4c09f127-737b-4686-82a0-7c8e30841590) handles their needs, but for curators of datasets doing quality control, this Test provides a specific subset of targeted data cleaning, making it a valuable Test to include for the quality control case.";
+  skos:note "The purpose of this Test is to detect errors in the scientific name but is dependent on the abilities of the parsing of the bdqval:sourceAuthority. For research users of biodiversity data doing quality assurance, VALIDATION_TAXON_UNAMBIGUOUS (4c09f127-737b-4686-82a0-7c8e30841590) handles their needs, but for curators of datasets doing quality control, this Test provides a specific subset of targeted data cleaning, making it a valuable Test to include for the quality control case. **Review Note: GBIF has indicated that we should switch to the Catalog of Life for the default source authority for this test. That change is planned prior to ratification.**";
   bdqffdq:hasDataQualityDimension bdqdim:Conformance;
   dcterms:description "Is there a match of the contents of dwc:scientificName with the bdqval:sourceAuthority?";
   bdqffdq:hasCriterion bdqcrit:Found;
@@ -1329,7 +1329,7 @@ bdqtest:f18a470b-3fe1-4aae-9c65-a6d3db6b550c-2025-03-07 a bdqffdq:Validation;
 bdqtest:431467d6-9b4b-48fa-a197-cd5379f5e889-2025-03-06 a bdqffdq:Amendment;
   bdqffdq:hasResourceType bdqffdq:SingleRecord;
   bdqffdq:hasEnhancement bdqenh:FilledInFrom;
-  skos:note "Return a result with no value and a Result.status of NOT_AMENDED with a Response.comment of ambiguous if the information provided does not resolve to a unique result (e.g. if homonyms exist and there is insufficient information in the provided data, for example using the lowest ranking taxa in conjunction with dwc:dwc:scientificNameAuthorship, to resolve them). When referencing a GBIF taxon by GBIF's identifier for that taxon, use the the pseudo-namespace \"gbif:\" and the form \"gbif:{integer}\" as the value for dwc:scientificNameID.";
+  skos:note "Return a result with no value and a Result.status of NOT_AMENDED with a Response.comment of ambiguous if the information provided does not resolve to a unique result (e.g. if homonyms exist and there is insufficient information in the provided data, for example using the lowest ranking taxa in conjunction with dwc:dwc:scientificNameAuthorship, to resolve them). When referencing a GBIF taxon by GBIF's identifier for that taxon, use the the pseudo-namespace \"gbif:\" and the form \"gbif:{integer}\" as the value for dwc:scientificNameID. **Review Note: GBIF has indicated that we should switch to the Catalog of Life for the default source authority for this test. That change is planned prior to ratification.**";
   bdqffdq:hasDataQualityDimension bdqdim:Conformance;
   dcterms:description "Proposes an amendment to the value of dwc:scientificNameID if it can be unambiguously resolved from bdqval:sourceAuthority using the available taxon terms.";
   bdqffdq:hasActedUponInformationElement <urn:uuid:92a6c199-f1d7-493e-b643-57d09c5131dd>;
@@ -1755,7 +1755,7 @@ bdqtest:66269bdd-9271-4e76-b25c-7ab81eebe1d8-2025-03-07 a bdqffdq:Validation;
 
 bdqtest:4c09f127-737b-4686-82a0-7c8e30841590-2025-03-06 a bdqffdq:Validation;
   bdqffdq:hasResourceType bdqffdq:SingleRecord;
-  skos:note "There are any number of potential controlled vocabularies that might be used for this Test, including local vocabularies and taxon specific vocabularies. If dwc:scientificNameID is bdqval:Empty, use dwc:scientificName and dwc:CultivarEpithet to search for a unique taxon. If dwc:scientificName is bdqval:Empty, check with the terms that form atomic parts of it (dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:taxonRank, dwc:scientificNameAuthorship), and if more than one match is found, use the remaining terms to try to disambiguate to a single Taxon record. The terms dwc:subgenus, dwc:genus, dwc:family, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:scientificNameID,, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID should not be used to make a match if dwc:scientificNameID and dwc:scientificName or dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:taxonRank, dwc:scientificNameAuthorship are bdqval:Empty. Note that Test VALIDATION_SCIENTIFICNAME_FOUND (4c09f127-737b-4686-82a0-7c8e30841590) is a more specific Test for a subset of Information Elements from this Test.";
+  skos:note "There are any number of potential controlled vocabularies that might be used for this Test, including local vocabularies and taxon specific vocabularies. If dwc:scientificNameID is bdqval:Empty, use dwc:scientificName and dwc:CultivarEpithet to search for a unique taxon. If dwc:scientificName is bdqval:Empty, check with the terms that form atomic parts of it (dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:taxonRank, dwc:scientificNameAuthorship), and if more than one match is found, use the remaining terms to try to disambiguate to a single Taxon record. The terms dwc:subgenus, dwc:genus, dwc:family, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:scientificNameID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID should not be used to make a match if dwc:scientificNameID and dwc:scientificName or dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:taxonRank, dwc:scientificNameAuthorship are bdqval:Empty. Note that Test VALIDATION_SCIENTIFICNAME_FOUND (4c09f127-737b-4686-82a0-7c8e30841590) is a more specific Test for a subset of Information Elements from this Test. **Review Note: GBIF has indicated that we should switch to the Catalog of Life for the default source authority for this test. That change is planned prior to ratification.**";
   bdqffdq:hasDataQualityDimension bdqdim:Conformance;
   dcterms:description "Can the taxon be unambiguously resolved from bdqval:sourceAuthority using the available taxon terms?";
   bdqffdq:hasCriterion bdqcrit:Unambiguous;
@@ -1812,7 +1812,7 @@ bdqcrit:Unambiguous a bdqffdq:Criterion;
 bdqtest:f01fb3f9-2f7e-418b-9f51-adf50f202aea-2025-03-06 a bdqffdq:Amendment;
   bdqffdq:hasResourceType bdqffdq:SingleRecord;
   bdqffdq:hasEnhancement bdqenh:FilledInFrom;
-  skos:note "The value of dwc:scientificNameID is unambiguous if dwc:scientificNameID references a single taxon record in the bdqval:sourceAuthority. When referencing a GBIF taxon by GBIF's identifier for that taxon, use the the pseudo-namespace \"gbif:\" and the form \"gbif:{integer}\" as the value for dwc:scientificNameID. Implementers can be aware of the current GBIF api endpoint that can replace the pseduo-namespace gbif: when looking up the dwc:scientificNameID (taxonID in the gbif document), e.g. `s/gbif:/https:\\/\\/api.gbif.org\\/v1\\/species\\// ` will transform the value taxonID=gbif:8102122 to the resolvable endpoint https://api.gbif.org/v1/species/8102122. The pseudo-namespace \"gbif:\" is recommended by GBIF to reference GBIF taxon records. Where resolvable persistent identifiers exist for dwc:scientificNameID values, they should be used in full, but implementers will need to support at least the \"gbif:\" pseudo-namespace.";
+  skos:note "The value of dwc:scientificNameID is unambiguous if dwc:scientificNameID references a single taxon record in the bdqval:sourceAuthority. When referencing a GBIF taxon by GBIF's identifier for that taxon, use the the pseudo-namespace \"gbif:\" and the form \"gbif:{integer}\" as the value for dwc:scientificNameID. Implementers can be aware of the current GBIF api endpoint that can replace the pseduo-namespace gbif: when looking up the dwc:scientificNameID (taxonID in the gbif document), e.g. `s/gbif:/https:\\/\\/api.gbif.org\\/v1\\/species\\// ` will transform the value taxonID=gbif:8102122 to the resolvable endpoint https://api.gbif.org/v1/species/8102122. The pseudo-namespace \"gbif:\" is recommended by GBIF to reference GBIF taxon records. Where resolvable persistent identifiers exist for dwc:scientificNameID values, they should be used in full, but implementers will need to support at least the \"gbif:\" pseudo-namespace. **Review Note: GBIF has indicated that we should switch to the Catalog of Life for the default source authority for this test. That change is planned prior to ratification.**";
   bdqffdq:hasDataQualityDimension bdqdim:Completeness;
   dcterms:description "Proposes an amendment to the value of dwc:scientificName using the dwc:scientificNameID value from the bdqval:sourceAuthority.";
   bdqffdq:hasActedUponInformationElement <urn:uuid:627a0c7f-9c5d-49ba-a3d1-1c8250cf1d0a>;
@@ -2058,7 +2058,7 @@ bdqval:includeEventDate a bdqffdq:Parameter .
 
 bdqtest:2cd6884e-3d14-4476-94f7-1191cfff309b-2025-03-06 a bdqffdq:Validation;
   bdqffdq:hasResourceType bdqffdq:SingleRecord;
-  skos:note "The purpose of this Test is to check whether the value is a name that is a result of a nomenclatural act at this rank. This excludes unpublished names, misspellings and vernacular names. It is expected that the Test will designate the source authority against which to check. The same Test might return distinct results when using distinct source authorities.";
+  skos:note "The purpose of this Test is to check whether the value is a name that is a result of a nomenclatural act at this rank. This excludes unpublished names, misspellings and vernacular names. It is expected that the Test will designate the source authority against which to check. The same Test might return distinct results when using distinct source authorities.  **Review Note: GBIF has indicated that we should switch to the Catalog of Life for the default source authority for this test. That change is planned prior to ratification.**";
   bdqffdq:hasDataQualityDimension bdqdim:Conformance;
   dcterms:description "Does the value of dwc:class occur at the rank of Class in bdqval:sourceAuthority?";
   bdqffdq:hasCriterion bdqcrit:Found;
@@ -2168,7 +2168,7 @@ bdqtest:b6ecda2a-ce36-437a-b515-3ae94948fe83-2025-03-07 a bdqffdq:Validation;
 
 bdqtest:125b5493-052d-4a0d-a3e1-ed5bf792689e-2025-03-06 a bdqffdq:Validation;
   bdqffdq:hasResourceType bdqffdq:SingleRecord;
-  skos:note "The purpose of this Test is to check whether the value is a name that is a result of a nomenclatural act at this rank. This excludes unpublished names, misspellings and vernacular names. It is expected that the Test will designate the source authority against which to check. The same Test might return distinct results when using distinct source authorities.";
+  skos:note "The purpose of this Test is to check whether the value is a name that is a result of a nomenclatural act at this rank. This excludes unpublished names, misspellings and vernacular names. It is expected that the Test will designate the source authority against which to check. The same Test might return distinct results when using distinct source authorities. **Review Note: GBIF has indicated that we should switch to the Catalog of Life for the default source authority for this test. That change is planned prior to ratification.**";
   bdqffdq:hasDataQualityDimension bdqdim:Conformance;
   dcterms:description "Does the value of dwc:kingdom occur at the rank of Kingdom in the bdqval:sourceAuthority?";
   bdqffdq:hasCriterion bdqcrit:Found;
@@ -2245,7 +2245,7 @@ bdqtest:7c4b9498-a8d9-4ebb-85f1-9f200c788595-2025-03-06 a bdqffdq:Validation;
 
 bdqtest:81cc974d-43cc-4c0f-a5e0-afa23b455aa3-2025-03-06 a bdqffdq:Validation;
   bdqffdq:hasResourceType bdqffdq:SingleRecord;
-  skos:note "The purpose of this Test is to check whether the value is a name that is a result of a nomenclatural act at this rank. This excludes unpublished names, misspellings and vernacular names. It is expected that the Test will designate the source authority against which to check. The same Test might return distinct results when using distinct source authorities.";
+  skos:note "The purpose of this Test is to check whether the value is a name that is a result of a nomenclatural act at this rank. This excludes unpublished names, misspellings and vernacular names. It is expected that the Test will designate the source authority against which to check. The same Test might return distinct results when using distinct source authorities.  **Review Note: GBIF has indicated that we should switch to the Catalog of Life for the default source authority for this test. That change is planned prior to ratification.**";
   bdqffdq:hasDataQualityDimension bdqdim:Conformance;
   dcterms:description "Does the value of dwc:order occur at the rank of Order in bdqval:sourceAuthority?";
   bdqffdq:hasCriterion bdqcrit:Found;
@@ -3181,7 +3181,7 @@ bdqtest:401bf207-9a55-4dff-88a5-abcd58ad97fa-2025-03-06 a bdqffdq:Validation;
 
 bdqtest:f2ce7d55-5b1d-426a-b00e-6d4efe3058ec-2025-03-06 a bdqffdq:Validation;
   bdqffdq:hasResourceType bdqffdq:SingleRecord;
-  skos:note "The purpose of this Test is to check whether the value is a name that is a result of a nomenclatural act at this rank. This excludes unpublished names, misspellings and vernacular names. It is expected that the Test will designate the source authority against which to check. The same Test might return distinct results when using distinct source authorities.";
+  skos:note "The purpose of this Test is to check whether the value is a name that is a result of a nomenclatural act at this rank. This excludes unpublished names, misspellings and vernacular names. It is expected that the Test will designate the source authority against which to check. The same Test might return distinct results when using distinct source authorities.  **Review Note: GBIF has indicated that we should switch to the Catalog of Life for the default source authority for this test. That change is planned prior to ratification.**";
   bdqffdq:hasDataQualityDimension bdqdim:Conformance;
   dcterms:description "Does the value of dwc:genus occur at the rank of Genus in the bdqval:sourceAuthority?";
   bdqffdq:hasCriterion bdqcrit:Found;
@@ -3224,7 +3224,7 @@ bdqtest:f2ce7d55-5b1d-426a-b00e-6d4efe3058ec-2025-03-06 a bdqffdq:Validation;
 
 bdqtest:2750c040-1d4a-4149-99fe-0512785f2d5f-2025-03-06 a bdqffdq:Validation;
   bdqffdq:hasResourceType bdqffdq:SingleRecord;
-  skos:note "A fail condition may arise either from the taxon terms being internally inconsistent (not all of the information can be true at the same time), or from the vocabulary being incapable of resolving the combination of classification values. Additional Tests could be devised against a taxonomic authority to report the distinct failure conditions. This Test specifically does not consider the content of dwc:higherClassification.";
+  skos:note "A fail condition may arise either from the taxon terms being internally inconsistent (not all of the information can be true at the same time), or from the vocabulary being incapable of resolving the combination of classification values. Additional Tests could be devised against a taxonomic authority to report the distinct failure conditions. This Test specifically does not consider the content of dwc:higherClassification. **Review Note: GBIF has indicated that we should switch to the Catalog of Life for the default source authority for this test. That change is planned prior to ratification.**";
   bdqffdq:hasDataQualityDimension bdqdim:Consistency;
   dcterms:description "Is the combination of higher classification taxonomic terms consistent using bdqval:sourceAuthority?";
   bdqffdq:hasCriterion bdqcrit:Consistent;
@@ -3936,7 +3936,7 @@ bdqtest:d257eb98-27cb-48e5-8d3c-ab9fca4edd11-2025-03-07 a bdqffdq:Validation;
 
 bdqtest:6eeac3ed-f691-457f-a42e-eaa9c8a71ce8-2025-03-06 a bdqffdq:Validation;
   bdqffdq:hasResourceType bdqffdq:SingleRecord;
-  skos:note "If any single bdqval:sourceAuthority such as GBIF is used, a valid and complete dwc:scientificNameID based on an alternative source authority is unlikely to provide a valid match. A text or number string as a namespace indicator without a URI will be ambiguous. As an example, GBIF's backbone taxonomy dataset can be found at https://doi.org/10.15468/39omei. When referencing a GBIF taxon by GBIF's identifier for that taxon, use the the pseudo-namespace \"gbif:\" and the form \"gbif:{integer}\" as the value for dwc:scientificNameID. Note that GBIF currently uses \"TaxonID\" for this entity. The terms NID, NSS, and URN are all Uniform Resource Identifiers - see the Wikipedia (2024) reference.";
+  skos:note "If any single bdqval:sourceAuthority such as GBIF is used, a valid and complete dwc:scientificNameID based on an alternative source authority is unlikely to provide a valid match. A text or number string as a namespace indicator without a URI will be ambiguous. As an example, GBIF's backbone taxonomy dataset can be found at https://doi.org/10.15468/39omei. When referencing a GBIF taxon by GBIF's identifier for that taxon, use the the pseudo-namespace \"gbif:\" and the form \"gbif:{integer}\" as the value for dwc:scientificNameID. Note that GBIF currently uses \"TaxonID\" for this entity. The terms NID, NSS, and URN are all Uniform Resource Identifiers - see the Wikipedia (2024) reference.  **Review Note: GBIF has indicated that we should switch to the Catalog of Life for the default source authority for this test. That change is planned prior to ratification.**";
   bdqffdq:hasDataQualityDimension bdqdim:Completeness;
   dcterms:description "Does the value of dwc:scientificNameID contain a complete identifier?";
   bdqffdq:hasCriterion bdqcrit:Complete;
