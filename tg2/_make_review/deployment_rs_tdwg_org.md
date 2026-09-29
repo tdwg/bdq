@@ -6,7 +6,7 @@ This document describes work within the scope of [tdwg/bdq issue #340](https://g
 
 This is an analysis originally produced by GitHub Copilot of the friction produced by the bdqffdq.owl ontology and the multiplicity of terms in the bdqtest vocabulary for deployment on rs.tdwg.org and how this friction might be approached.
 
-**Revision note (2026-09-28):** Revised in place with Claude Code (Claude Opus 5.5) after checking each citation against the `rs.tdwg.org` repository (branch `bdq`, at that time identical to `master`) and this repository. Changes: corrected inaccurate citations and claims (ABCD handling, BDQ information element model, build pipeline, loader behavior); added deployment, routing, and `https` analysis; reframed the source of truth from "BDQ repository authoritative, rs.tdwg.org derived" to "rs.tdwg.org files authoritative for all BDQ vocabularies"; added sections on deploying the simple vocabularies (`bdqdim`, `bdqenh`, `bdqcrit`, `bdquc`, `bdqval`), options for `bdqffdq` (including a hybrid CSV + axioms approach), options for `bdqtest`, and the changes needed in this repository. Line numbers cited below are as of this revision.
+**Revision note (2026-09-28):** Revised in place with Claude Code (Claude Opus 5.5) after checking each citation against the `rs.tdwg.org` repository (branch `bdq`, at that time identical to `master`) and this repository. Changes: corrected inaccurate citations and claims (ABCD handling, BDQ information element model, build pipeline, loader behavior); added deployment, routing, and `https` analysis; reframed the source of truth from "BDQ repository authoritative, rs.tdwg.org derived" to "rs.tdwg.org files authoritative for all BDQ vocabularies"; added sections on deploying the simple vocabularies (`bdqdim`, `bdqenh`, `bdqcrit`, `bdquc`, `bdqval`), options for `bdqffdq` (including a hybrid CSV + axioms approach), options for `bdqtest`, and the changes needed in this repository. A further revision the same day added the summary for the TDWG Technical Architecture Group and rs.tdwg.org maintainers, and Section 7.4 on making the protocol a per-vocabulary choice. Line numbers cited below are as of this revision.
 
 ## Scope and source context
 
@@ -31,21 +31,33 @@ The BDQ build system includes generation, audit, and validation scripts under `t
 
 ---
 
-## Executive summary
+## Summary for the TDWG Technical Architecture Group and rs.tdwg.org maintainers
 
-`rs.tdwg.org` is fundamentally a **CSV/YAML-driven metadata publishing system**, not a general RDF graph host. Its normal workflow is:
+`rs.tdwg.org` is fundamentally a **CSV/YAML-driven metadata publishing system**, not a general RDF graph host. Hand-edited CSV/YAML inputs are processed by `process/process.py` into current-term, version, hierarchy, redirect, and index CSV tables; these are loaded into BaseX as XML when the Docker image is built, and XQuery generates RDF and HTML through content negotiation (Section 1). BDQ raises five issues for this system. Each needs a decision or agreement from the TAG and/or the rs.tdwg.org maintainers.
 
-1. maintain hand-edited CSV/YAML input files;
-2. run Python processing (`process/process.py`) to generate current-term, version, hierarchy, redirect, and index CSV tables;
-3. load those CSV files into BaseX as XML when the Docker image is built;
-4. generate RDF/HTML dynamically through XQuery and content negotiation.
+**1. `https` as the canonical protocol.** BDQ uses `https://rs.tdwg.org/` for all of its IRIs; every existing TDWG vocabulary uses `http://rs.tdwg.org/`. Term IRIs already work with `https`, but `process.py` hard-codes `http` for vocabulary IRIs, and `html/restxq.xqm` and `html/html.xqm` hard-code `http` when looking up and displaying vocabularies, term lists, their versions, and documents.
+*Proposal:* make the protocol a per-vocabulary property determined by the IRIs recorded in the rs.tdwg.org tables. `process.py` takes the scheme from the `namespace_uri` in each vocabulary's `config.yaml`, and `restxq.xqm` looks a requested path up under both schemes and uses whichever IRI is recorded. Existing standards keep `http` with no change to their data or behavior; new standards can choose `https`. About a dozen lines change, with no new configuration (Section 7.4).
+*Decision needed:* does the TAG accept `https` as a canonical protocol for new TDWG vocabularies, and do the rs.tdwg.org maintainers accept the patches?
 
-For BDQ this means:
+**2. Where the source of truth lives.** BDQ wants the rs.tdwg.org files to be the source of truth for all seven BDQ vocabularies, with the BDQ repository consuming them, as for Darwin Core and Audiovisual Core. Term-version files become outputs of rs.tdwg.org processing (Section 6).
+*No rs.tdwg.org change is needed for the principle*, but items 3 and 4 depend on it.
 
-- **The five simple vocabularies** (`bdqdim`, `bdqenh`, `bdqcrit`, `bdquc`, `bdqval`) fit the normal pipeline. Each becomes its own vocabulary with one term list, processed by `process.py`, once small patches for `https` are made and a few data problems are fixed (Section 8).
-- **`https` as the canonical protocol** is supported for term IRIs as things stand, but `process.py` and `html/restxq.xqm` hard-code `http://rs.tdwg.org/` for vocabulary, term list, and document IRIs. BDQ would be the first `https` vocabulary on rs.tdwg.org. The patches can be made on the `bdq` branch, but need agreement from the rs.tdwg.org maintainers and the TDWG Technical Architecture Group before merging to `master` (Section 7).
-- **`bdqffdq`** cannot be represented as CSV rows without loss, because of 15 blank-node `owl:Restriction` ranges and 2 `owl:AllDisjointClasses` axioms. However, nearly everything else in the ontology is simple IRI- or literal-valued, so a hybrid, with term metadata in an rs.tdwg.org term list and the remaining axioms in a small Turtle file in rs.tdwg.org, is feasible (Section 9).
-- **`bdqtest`** can have its source of truth in rs.tdwg.org, but the generic rs.tdwg.org serializer cannot produce the full per-test graph: `linked-classes.csv` links only one level deep, and many BDQ nodes have `urn:uuid` IRIs. Full-fidelity per-test RDF from rs.tdwg.org requires either generated per-test files served by a new route, or an extension of the serializer (Section 10).
+**3. An OWL ontology (`bdqffdq`).** The ontology contains 15 blank-node `owl:Restriction` ranges and 2 `owl:AllDisjointClasses` axioms, which no rs.tdwg.org table can represent. All its other triples are simple, per-term, bounded-multiplicity statements. Options (Section 9):
+- *A.* rs.tdwg.org only redirects to an ontology file published from the BDQ repository (the ABCD pattern). Small effort, but the source stays outside rs.tdwg.org.
+- *B.* The ontology file itself is kept in the rs.tdwg.org repository and served from there (a new pattern: returning file content) or redirected to.
+- *C (proposed).* Hybrid: term metadata is an ordinary rs.tdwg.org term list processed by `process.py`, the roughly 80 triples of restrictions and axioms are kept in a Turtle file beside it, and a merge step produces the whole ontology. `bdqffdq` terms then get normal TDWG versions and dereferencing.
+*Decision needed:* which option, and whether rs.tdwg.org will serve (or redirect to) a whole-ontology file.
+
+**4. A graph-rich vocabulary (`bdqtest`).** Each Test is described by a nested graph (Test → Specification → Argument → Parameter; information elements composed of several terms; policies), with many nodes identified by `urn:uuid`. The rs.tdwg.org serializer emits one value per cell and links child tables only one level deep, so it cannot produce the full graph for a Test (Sections 2, 4, 5). Options (Section 10):
+- *T1 (proposed for the public review).* A flat, versioned `bdqtest` term list and its GUID tables in rs.tdwg.org. rs.tdwg.org serves a partial description of each Test, and the full vocabulary RDF is built from the rs.tdwg.org files.
+- *T2.* Normalized linked-class tables. More complete per Test, still not the full graph.
+- *T3 (proposed target).* A BDQ-specific processing step in rs.tdwg.org generates full per-Test and whole-vocabulary RDF files, served by a new route.
+- *T4.* Extend the rs.tdwg.org loader and serializer to support nested linked tables. The most general option, and a large change.
+*Decision needed:* whether rs.tdwg.org will accept a vocabulary-specific processing step and a file-serving route (T3), or prefers a general extension (T4).
+
+**5. Serving files, and CI.** Options B, C, and T3 all involve rs.tdwg.org returning pre-generated RDF files, which it has not done before (the ABCD handlers only redirect). Separately, BDQ has SHACL and SPARQL validation that could run in rs.tdwg.org CI or remain in the BDQ repository (Section 14).
+
+The five simple BDQ vocabularies (`bdqdim`, `bdqenh`, `bdqcrit`, `bdquc`, `bdqval`) raise no issue beyond item 1: they fit the standard `process.py` pipeline as five small vocabularies (Section 8). The `bdq` branch of rs.tdwg.org is already deployed at `bdq-public-review.rs.tdwg.org` (Section 1.4), so all of this can be demonstrated there before anything is merged to `master`.
 
 ---
 
@@ -299,14 +311,78 @@ Consequently, the term-version files are outputs of rs.tdwg.org processing (`<da
 
 ### 7.2 What needs changing
 
-1. **`process/process.py:747`, `750`** hard-code `http://rs.tdwg.org/` for the vocabulary IRI and vocabulary version IRI. Patch: take the scheme from `termlist_uri` (e.g. `termlist_uri.split('//')[0] + '//rs.tdwg.org/' + vocab_subpath + '/'`).
-2. **`html/restxq.xqm`** hard-codes `http://rs.tdwg.org/` in lookups for documents (`111-137`), vocabularies (`246-256`), vocabulary versions (`280-284`), term lists (`302-306`), and term list versions (`324-328`). Patch: when the `http` lookup finds nothing, retry with `https` (or the reverse). Without this, `https://rs.tdwg.org/bdqdim/terms/`, `https://rs.tdwg.org/bdqdim/`, and BDQ document IRIs return 404.
-3. **`index/dereferencing-test.py:94`** skips URLs not beginning with `http://rs.tdwg.org/`. Patch: accept `https://rs.tdwg.org/` too.
-4. **Consistency in this repository.** BDQ documents and data currently mix `https://rs.tdwg.org/bdq…` (the large majority) with some `http://rs.tdwg.org/bdq…` IRIs; the `http` occurrences should be changed.
+1. **`process/process.py:747`, `750`** hard-code `http://rs.tdwg.org/` for the vocabulary IRI and vocabulary version IRI.
+2. **`html/restxq.xqm`** hard-codes `http://rs.tdwg.org/` in lookups for documents (`111-137`), vocabularies (`246-256`), vocabulary versions (`280-284`), term lists (`302-306`), and term list versions (`324-328`). Without a change, `https://rs.tdwg.org/bdqdim/terms/`, `https://rs.tdwg.org/bdqdim/`, and BDQ document IRIs return 404.
+3. **`html/html.xqm`** assumes `http` when generating HTML pages: a term's version IRI is only shown if `term_isDefinedBy` contains `http://rs.tdwg.org/` (`265`), and a vocabulary page builds its "this version" IRI from `http://rs.tdwg.org/version/` (`509`).
+4. **`index/dereferencing-test.py:94`** skips URLs not beginning with `http://rs.tdwg.org/`.
+5. **Consistency in this repository.** BDQ documents and data currently mix `https://rs.tdwg.org/bdq…` (the large majority) with some `http://rs.tdwg.org/bdq…` IRIs; the `http` occurrences should be changed.
+
+Section 7.4 describes how to make items 1-4 per-vocabulary.
 
 ### 7.3 Governance
 
-BDQ would be the only `https` vocabulary on rs.tdwg.org; every existing `domainRoot` and hierarchy IRI is `http`. The patches can be made on the `bdq` branch for the public review, but merging them to rs.tdwg.org `master` needs agreement from the rs.tdwg.org maintainers and the TDWG Technical Architecture Group. That agreement should be sought early, as the IRIs cannot change after ratification.
+BDQ would be the first `https` vocabulary on rs.tdwg.org; every existing `domainRoot` and hierarchy IRI is `http`. The patches can be made on the `bdq` branch for the public review, but merging them to rs.tdwg.org `master` needs agreement from the rs.tdwg.org maintainers and the TDWG Technical Architecture Group. That agreement should be sought early, as the IRIs cannot change after ratification.
+
+### 7.4 Making the protocol a per-vocabulary choice
+
+**This is possible, and it needs no new configuration.** Existing standards can keep `http` with no change to their data or to how their IRIs behave, while a new standard (or a new vocabulary) can use `https`. The protocol becomes a property of each vocabulary, determined by the IRIs recorded for it in the rs.tdwg.org tables.
+
+#### Why the data already carries the choice
+
+- **Terms and term versions:** RDF subjects are built from the `domainRoot` in each dataset's own `constants.csv` (Section 7.1), so the scheme is already per term list.
+- **Hierarchy and documents:** the `term-lists`, `term-lists-versions`, `vocabularies`, `vocabularies-versions`, and `docs` datasets have an empty `domainRoot` and use the full IRI as their `baseIriColumn` (`list`, `vocabulary`, `current_iri`; see e.g. `term-lists/constants.csv`, `vocabularies/constants.csv`, `docs/constants.csv`). A record is found by exact match on that full IRI (`page:find-db`, `html/restxq.xqm:1589-1603`), and the same string becomes the RDF subject. So a row recorded as `https://rs.tdwg.org/bdqdim/terms/` is published with an `https` subject once the handler can find it; the only obstacle is that the handler constructs its lookup string with `http`.
+- **Requests carry no scheme.** Behind the proxy, RESTXQ sees only the path (`/bdqdim/terms/`), and the same response is served whether the client used `http` or `https`. The canonical IRI therefore cannot come from the request; it has to come from the data, and it does.
+
+#### Implementation
+
+1. **`process/process.py`.** The scheme is already configured per vocabulary: each processing run has its own `config.yaml`, whose `namespace_uri` gives the scheme. Replace the hard-coded prefix at `747` and `750` with the scheme of the term list IRI, e.g.
+
+   ```python
+   scheme = termlist_uri.split('//')[0]   # 'http:' or 'https:'
+   vocabularyUri = scheme + '//rs.tdwg.org/' + vocab_subpath + '/'
+   vocabularyVersionUri = scheme + '//rs.tdwg.org/version/' + vocab_subpath + '/' + date_issued
+   ```
+
+   For every existing vocabulary, `scheme` is `http:`, so the output is unchanged. Everything else `process.py` generates for a term list (term, term version, term list version, `list_localName`, redirects) already follows the namespace. The standard IRI comes from `config.yaml` unchanged, and the dataset index IRIs (`http://rs.tdwg.org/index/…`) describe rs.tdwg.org itself, so they stay `http`. `tdwg_docs_metadata_update.py` takes document IRIs from `document_configuration.yaml` and has no hard-coded scheme.
+
+   Optional safeguard: have `process.py` refuse to create a vocabulary, term list, or document whose path is already recorded under the other scheme.
+
+2. **`html/restxq.xqm`.** Add one helper that resolves a path to whichever IRI is recorded, trying `http` first so existing vocabularies take the same path as now:
+
+   ```xquery
+   declare function page:canonical-iri($path, $db)
+   {
+     let $http := "http://rs.tdwg.org/" || $path
+     let $https := "https://rs.tdwg.org/" || $path
+     return
+       if (page:find-db($http, $db)) then $http
+       else if (page:find-db($https, $db)) then $https
+       else $http   (: not found under either; the caller returns 404 as now :)
+   };
+   ```
+
+   In each of the twelve lookups listed in Section 7.2 item 2, replace `"http://rs.tdwg.org/" || $path` with `page:canonical-iri($path, $db)`. The resolved IRI is then passed to `page:handle-repesentation` or `page:see-also` exactly as now, so the RDF subject is the recorded IRI. The special cases in the same handlers (`decisions`, `index`, and the Darwin Core guides) keep their fixed `http` IRIs. The cost is one extra `find-db` for `https` records only; `http` records are found at the first attempt.
+
+3. **`html/html.xqm`.** Replace the test at `265` with `matches($record/term_isDefinedBy/text(), '^https?://rs\.tdwg\.org/')`, and build the vocabulary version IRI at `509` from the scheme of `$record/vocabulary/text()` rather than from a hard-coded `http://rs.tdwg.org/version/`.
+
+4. **`index/dereferencing-test.py:94`.** Accept both `http://rs.tdwg.org/` and `https://rs.tdwg.org/` prefixes. For `https` vocabularies, add checks that the RDF subjects returned are the `https` IRIs.
+
+5. **Documentation.** Add to `process/process-vocabulary.md` and the `config.yaml` comments that the scheme of `namespace_uri` sets the canonical protocol for the whole vocabulary (vocabulary, term list, terms, and versions), that TDWG vocabularies created before this change use `http`, and that a vocabulary's scheme cannot change after it is first processed. Document IRIs follow whatever is set in `document_configuration.yaml`, and should use the same scheme as the standard's vocabularies.
+
+#### Behavior after the change
+
+| Case | Before | After |
+|---|---|---|
+| Existing `http` vocabulary, requested over `http` or `https` | resolves; `http` subjects | unchanged |
+| New `https` vocabulary term, requested over either scheme | resolves; `https` subjects | unchanged |
+| New `https` vocabulary, term list, their versions, or document, requested over either scheme | 404 | resolves; `https` subjects |
+| Path not recorded under either scheme | 404 | 404 |
+
+#### Alternatives considered
+
+- **An explicit setting**, such as a `canonical_scheme` column in `term-lists.csv`, `vocabularies.csv`, and `docs.csv`, or a list of `https` vocabularies read by `restxq.xqm`. This makes the choice easier to see, but duplicates information already in the recorded IRIs and can contradict them. Not recommended.
+- **Switching everything to `https`.** This would change the canonical IRIs of every existing TDWG vocabulary, which is not acceptable for ratified standards.
+- **A single fallback without the helper** (retry with `https` in each handler). Equivalent in behavior, but repeats the logic in every handler.
 
 ---
 
@@ -534,17 +610,18 @@ For each of `bdqdim`, `bdqenh`, `bdqcrit`, `bdquc`, `bdqval`, and (Option C) `bd
 
 ### 11.3 `process/process.py`
 
-Patch lines `747` and `750` to take the scheme from the term list IRI (Section 7.2). No other change is needed for the simple vocabularies. T3 adds a separate BDQ-specific processing step rather than changing `process.py`.
+Patch lines `747` and `750` to take the scheme from the term list IRI, so the protocol is set per vocabulary by `namespace_uri` in `config.yaml` (Section 7.4). No other change is needed for the simple vocabularies. T3 adds a separate BDQ-specific processing step rather than changing `process.py`.
 
 ### 11.4 `html/restxq.xqm`
 
-- Fall back to an `https` lookup in the document, vocabulary, and term list handlers (Section 7.2).
+- Add `page:canonical-iri` and use it in the document, vocabulary, and term list handlers and their version handlers, so each resolves to whichever scheme is recorded (Section 7.4).
+- `html/html.xqm`: make the checks at `265` and `509` scheme-aware (Section 7.4).
 - Option A or C: a route for the whole `bdqffdq` ontology (redirect, or file serving as in Option B1).
 - T3: a route `/bdqtest/terms/{id}` serving generated per-Test files.
 
 ### 11.5 `index/dereferencing-test.py`
 
-Accept `https://rs.tdwg.org/` URLs (`94`), and add BDQ examples: a term from each simple vocabulary, a `bdqffdq` term and the ontology, a `bdqtest` Test, and the BDQ documents.
+Accept `https://rs.tdwg.org/` URLs (`94`) and check that `https` vocabularies return `https` subjects, and add BDQ examples: a term from each simple vocabulary, a `bdqffdq` term and the ontology, a `bdqtest` Test, and the BDQ documents.
 
 ### 11.6 Documentation in rs.tdwg.org
 
@@ -571,7 +648,7 @@ Accept `https://rs.tdwg.org/` URLs (`94`), and add BDQ examples: a term from eac
 
 ## 13. Recommended implementation approach
 
-1. **Agree on `https`** with the rs.tdwg.org maintainers and the TDWG Technical Architecture Group, and patch `process.py`, `restxq.xqm`, and `dereferencing-test.py` on the `bdq` branch.
+1. **Agree on per-vocabulary `https`** with the rs.tdwg.org maintainers and the TDWG Technical Architecture Group, and patch `process.py`, `restxq.xqm`, `html.xqm`, and `dereferencing-test.py` on the `bdq` branch (Section 7.4).
 2. **Deploy the five simple vocabularies** through `process.py` (Section 8), using a source branch and `bdq` as the derived, deployed branch, and verify them on `bdq-public-review.rs.tdwg.org`.
 3. **Deploy `bdqffdq` as a hybrid** (Option C): term list via `process.py`, axioms file, merge step, and a route or redirect for the whole ontology.
 4. **Deploy `bdqtest` as a flat term list** with its GUID tables (T1), build the whole vocabulary from the rs.tdwg.org files, and plan T3 for full per-Test RDF.
@@ -582,7 +659,7 @@ Accept `https://rs.tdwg.org/` URLs (`94`), and add BDQ examples: a term from eac
 
 ## 14. Open questions for maintainers
 
-1. Will the rs.tdwg.org maintainers and the TDWG Technical Architecture Group accept `https` as the canonical protocol for BDQ, and the corresponding patches to `process.py` and `restxq.xqm`?
+1. Will the TDWG Technical Architecture Group accept `https` as a canonical protocol for new TDWG vocabularies, chosen per vocabulary, and will the rs.tdwg.org maintainers accept the corresponding patches to `process.py`, `restxq.xqm`, and `html.xqm` (Section 7.4)?
 2. Will the rs.tdwg.org maintainers accept routes that serve files directly (Options B1, C for the whole ontology, T3), a pattern rs.tdwg.org has not used before?
 3. For `bdqffdq`, should the ontology IRI `https://rs.tdwg.org/bdqffdq/terms` and the term list IRI `https://rs.tdwg.org/bdqffdq/terms/` denote the same resource, or should one change?
 4. What standard number will BDQ be assigned, and what are the final (non-`/draft/`) URLs for the BDQ documents on `bdq.tdwg.org`, to be used in `prepend_url` and in any redirect targets?
