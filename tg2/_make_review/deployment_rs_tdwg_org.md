@@ -6,7 +6,7 @@ This document describes work within the scope of [tdwg/bdq issue #340](https://g
 
 This is an analysis originally produced by GitHub Copilot of the friction produced by the bdqffdq.owl ontology and the multiplicity of terms in the bdqtest vocabulary for deployment on rs.tdwg.org and how this friction might be approached.
 
-**Revision note (2026-09-28):** Revised in place with Claude Code (Claude Opus 5.5) after checking each citation against the `rs.tdwg.org` repository (branch `bdq`, at that time identical to `master`) and this repository. Changes: corrected inaccurate citations and claims (ABCD handling, BDQ information element model, build pipeline, loader behavior); added deployment, routing, and `https` analysis; reframed the source of truth from "BDQ repository authoritative, rs.tdwg.org derived" to "rs.tdwg.org files authoritative for all BDQ vocabularies"; added sections on deploying the simple vocabularies (`bdqdim`, `bdqenh`, `bdqcrit`, `bdquc`, `bdqval`), options for `bdqffdq` (including a hybrid CSV + axioms approach), options for `bdqtest`, and the changes needed in this repository. A further revision the same day added the summary for the TDWG Technical Architecture Group and rs.tdwg.org maintainers, and Section 7.4 on making the protocol a per-vocabulary choice. A third revision added Section 3.3 on whether the `bdqffdq` blank nodes must be blank, Section 9.4 on a blank-node-free ontology, and Section 10.6 on resolvable IRIs for `bdqtest` structural nodes. A fourth revision added the OWL profile of `bdqffdq` (Section 3.2), expanded item 3 of the summary for the TAG, added links for the reader to the draft standard, and added Section 11 on metadata records for the human-readable documents (renumbering later sections). Line numbers cited below are as of this revision.
+**Revision note (2026-09-28):** Revised in place with Claude Code (Claude Opus 5.5) after checking each citation against the `rs.tdwg.org` repository (branch `bdq`, at that time identical to `master`) and this repository. Changes: corrected inaccurate citations and claims (ABCD handling, BDQ information element model, build pipeline, loader behavior); added deployment, routing, and `https` analysis; reframed the source of truth from "BDQ repository authoritative, rs.tdwg.org derived" to "rs.tdwg.org files authoritative for all BDQ vocabularies"; added sections on deploying the simple vocabularies (`bdqdim`, `bdqenh`, `bdqcrit`, `bdquc`, `bdqval`), options for `bdqffdq` (including a hybrid CSV + axioms approach), options for `bdqtest`, and the changes needed in this repository. A further revision the same day added the summary for the TDWG Technical Architecture Group and rs.tdwg.org maintainers, and Section 7.4 on making the protocol a per-vocabulary choice. A third revision added Section 3.3 on whether the `bdqffdq` blank nodes must be blank, Section 9.4 on a blank-node-free ontology, and Section 10.6 on resolvable IRIs for `bdqtest` structural nodes. A fourth revision added the OWL profile of `bdqffdq` (Section 3.2), expanded item 3 of the summary for the TAG, added links for the reader to the draft standard, and added Section 11 on metadata records for the human-readable documents (renumbering later sections). A fifth revision recorded that the landing page is covered by the standard record, and added a note for @tucotuco on the document naming pattern. Line numbers cited below are as of this revision.
 
 ## Scope and source context
 
@@ -73,8 +73,8 @@ With both changes (and the two annotation fixes), the ontology has no blank node
 
 **5. Serving files, and CI.** Options B, C, and T3 all involve rs.tdwg.org returning pre-generated RDF files, which it has not done before (the ABCD handlers only redirect). Separately, BDQ has SHACL and SPARQL validation that could run in rs.tdwg.org CI or remain in the BDQ repository (Section 15).
 
-**6. Metadata records for the human-readable documents.** The standard has 18 human-readable components: a landing page, an ontology landing page, an ontology extension document, five guides, a supplement, a tutorial, a Quick Reference Guide, and seven Lists of Terms (plus a generated index of normative sections). Each needs document metadata in rs.tdwg.org (`docs/`, `docs-versions/`, `docs-roles/`) so that its IRI dereferences, created by `tdwg_docs_metadata_update.py` from YAML files that BDQ already maintains in the rs.tdwg.org format. The work is mostly mechanical, but the document IRIs used in the drafts do not follow TDWG patterns and several collide with vocabulary or term list IRIs, so a set of document IRIs has to be agreed first (Section 11).
-*Decision needed:* the document IRIs (a proposal is in Section 11.3), and whether the landing page is a document or is represented by the standard record.
+**6. Metadata records for the human-readable documents.** Apart from the landing page, which is covered by the standard record, the standard has 17 human-readable components: an ontology landing page, an ontology extension document, five guides, a supplement, a tutorial, a Quick Reference Guide, and seven Lists of Terms (plus a generated index of normative sections). Each needs document metadata in rs.tdwg.org (`docs/`, `docs-versions/`, `docs-roles/`) so that its IRI dereferences, created by `tdwg_docs_metadata_update.py` from YAML files that BDQ already maintains in the rs.tdwg.org format. The work is mostly mechanical, but the document IRIs used in the drafts do not follow TDWG patterns and several collide with vocabulary or term list IRIs, so a set of document IRIs has to be agreed first (Section 11).
+*Decision needed:* the document IRIs, including those of the Quick Reference Guide and its index pages (a proposal is in Section 11.3).
 
 The five simple BDQ vocabularies (`bdqdim`, `bdqenh`, `bdqcrit`, `bdquc`, `bdqval`) raise no issue beyond item 1: they fit the standard `process.py` pipeline as five small vocabularies (Section 8). The `bdq` branch of rs.tdwg.org is already deployed at `bdq-public-review.rs.tdwg.org` (Section 1.4), so all of this can be demonstrated there before anything is merged to `master`.
 
@@ -700,7 +700,7 @@ BDQ already keeps `document_configuration.yaml` files in the rs.tdwg.org format 
 
 | Document | Source | "Latest version" in the draft | Problem |
 |---|---|---|---|
-| The BDQ Standard (landing page) | `tg2/_review/index.md` | `http://rs.tdwg.org/bdqffdq/` | the `bdqffdq` vocabulary IRI |
+| The BDQ Standard (landing page) | `tg2/_review/index.md` | `http://rs.tdwg.org/bdqffdq/` | the `bdqffdq` vocabulary IRI; decided: covered by the standard record, not a document (see below) |
 | Fitness For Use Framework Ontology | `docs/bdqffdq/index.md` | `http://rs.tdwg.org/bdqffdq/` | the `bdqffdq` vocabulary IRI |
 | Fitness For Use Framework Ontology Vocabulary Extension | `docs/extension/bdqffdq/index.md` | `http://rs.tdwg.org/bdqffdq/extension/` | would be read as a term list `extension` in vocabulary `bdqffdq` |
 | Fitness For Use Framework Ontology: Concepts and Use | `docs/guide/bdqffdq/index.md` | `https://rs.tdwg.org/bdq/doc/bdqffdq` | no trailing slash; version IRI lacks `/` |
@@ -710,7 +710,7 @@ BDQ already keeps `document_configuration.yaml` files in the rs.tdwg.org format 
 | Guide to Marking and Identifying Synthetic and Modified Data | `docs/guide/synthetic/index.md` | `https://rs.tdwg.org/bdq/doc/synthetic/` | follows the pattern |
 | BDQ Supplemental Information | `docs/supplement/index.md` | `https://rs.tdwg.org/bdq/doc/supplement/` | follows the pattern |
 | Tutorial: From Use Case to Test | `docs/tutorial/index.md` | `https://bdq.tdwg.org/to_be_determined` | placeholder |
-| Quick Reference Guide | `docs/terms/bdqtest/index.md` | none | not yet a document |
+| Quick Reference Guide | `docs/terms/bdqtest/index.md`, with `bdqtest_qrg_term_descriptions.md` and the index pages `qrg_index_by_dimension.md`, `qrg_index_by_ie_actedupon.md`, `qrg_index_by_ie_class.md`, `qrg_index_by_usecase.md`, `qrg_multirecord_index.md` | none | not yet a document; one document or several? |
 | Lists of Terms (7) | `docs/list/*/index.md` | the term list IRI, e.g. `https://rs.tdwg.org/bdqdim/terms/` | the term list, not a document; mixed `http` and `https` |
 | Index of normative sections | `docs/normative_index.md` | none | generated; is it a document of the standard? |
 
@@ -718,19 +718,26 @@ Proposed IRIs, all `https` and under the standard abbreviation `bdq`, following 
 
 | Document | Proposed IRI |
 |---|---|
-| Landing page | represented by the standard record `http://www.tdwg.org/standards/NNN`, as for other TDWG standards; or `https://rs.tdwg.org/bdq/doc/introduction/` if a document record is wanted |
+| Landing page | not a document: covered by the standard record `http://www.tdwg.org/standards/NNN`, as for other TDWG standards |
 | Ontology landing page | `https://rs.tdwg.org/bdq/doc/ffdq/` |
 | Ontology extension | `https://rs.tdwg.org/bdq/doc/extension/` |
 | Guides | `https://rs.tdwg.org/bdq/doc/ffdqguide/`, `…/testguide/`, `…/implementers/`, `…/users/`, `…/synthetic/` |
 | Supplement, tutorial, Quick Reference Guide | `https://rs.tdwg.org/bdq/doc/supplement/`, `…/tutorial/`, `…/qrg/` |
 | Lists of Terms | `https://rs.tdwg.org/bdq/doc/dim/`, `…/crit/`, `…/enh/`, `…/uc/`, `…/val/`, `…/test/`, `…/ffdqlist/` |
 
+**Note for @tucotuco:** please check the desired document naming pattern before these IRIs are used, in particular:
+
+- the `docname` values proposed above (short names such as `ffdqguide` and `testguide`, versus other conventions);
+- whether the Quick Reference Guide is one document (`…/qrg/`) or whether its term descriptions page and its index pages (by dimension, by acted-upon information element, by information element class, by use case, and the MultiRecord index) are separate documents, and if so their names; these pages are generated from the `bdqtest` data and change whenever a Test changes;
+- whether the generated index of normative sections (`docs/normative_index.md`) is a document of the standard, and if so its name;
+- the names for the seven Lists of Terms, and whether the `bdqtest` and `bdqffdq` lists should be distinguished from the guides and the ontology landing page in the same way as the others.
+
 Document version IRIs are then `{current_iri}{YYYY-MM-DD}`, e.g. `https://rs.tdwg.org/bdq/doc/supplement/2026-06-03`. The IRIs must be agreed before ratification, because the TDWG documents metadata script treats an unmatched IRI as a new document (`process/document_metadata_processing/general_configuration.yaml`, comment on `docIri`).
 
 ### 11.4 Processing steps
 
 1. For each List of Terms: set `list_of_terms_iri` in the vocabulary's `config.yaml` (Section 8.2). `process.py` then writes `general_configuration.yaml`, and `tdwg_docs_metadata_update.py` is run once for the document after each `process.py` run.
-2. For each of the other documents: edit `general_configuration.yaml` by hand (`docIri`, `versionDate`, `utcOffset`) and run `tdwg_docs_metadata_update.py`, once per document, about ten runs.
+2. For each of the other documents: edit `general_configuration.yaml` by hand (`docIri`, `versionDate`, `utcOffset`) and run `tdwg_docs_metadata_update.py`, once per document: about ten runs, more if the Quick Reference Guide pages are separate documents.
 3. Order: the standard record is created only by `process.py` (`process/process-vocabulary.md:124`), so at least one vocabulary must be processed before the non-List of Terms documents; otherwise the standard and standard version records must be created by hand.
 4. With `https` document IRIs, the document handlers in `restxq.xqm` need the per-vocabulary protocol patch (Section 7.4).
 5. In this repository, the build must write the agreed IRIs into each document's header ("This version", "Latest version", "Previous version", citation), and the documents' `document_configuration.yaml` files move to rs.tdwg.org (or are kept in step with it).
@@ -811,7 +818,7 @@ Accept `https://rs.tdwg.org/` URLs (`94`) and check that `https` vocabularies re
 4. What standard number will BDQ be assigned, and what are the final (non-`/draft/`) URLs for the BDQ documents on `bdq.tdwg.org`, to be used in `prepend_url` and in any redirect targets?
 5. Should the structural nodes of `bdqtest` (Methods, Specifications, Arguments, information element nodes, Policies), now identified by non-resolvable `urn:uuid:` IRIs, be given resolvable rs.tdwg.org IRIs (Section 10.6)?
 6. For `bdqffdq`, will the BDQ maintainers replace the 15 restriction ranges with named-class ranges (and the `owl:AllDisjointClasses` axioms with pairwise `owl:disjointWith`), making the ontology free of blank nodes (Sections 3.3, 9.4)?
-7. What IRIs should the BDQ documents have, and is the landing page a document or represented by the standard record (Section 11.3)?
+7. What IRIs should the BDQ documents have, including the Quick Reference Guide and its index pages (Section 11.3)? The landing page is covered by the standard record.
 8. Should rs.tdwg.org support ontologies with blank nodes (class expressions) in general, for future versions of `bdqffdq` or for other standards (Section 3.3)?
 9. Should rs.tdwg.org CI adopt BDQ-specific semantic validation (SHACL/SPARQL checks), or should that remain in this repository, reading from rs.tdwg.org?
 
