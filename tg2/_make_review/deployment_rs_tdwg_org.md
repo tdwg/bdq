@@ -6,7 +6,7 @@ This document describes work within the scope of [tdwg/bdq issue #340](https://g
 
 This is an analysis originally produced by GitHub Copilot of the friction produced by the bdqffdq.owl ontology and the multiplicity of terms in the bdqtest vocabulary for deployment on rs.tdwg.org and how this friction might be approached.
 
-**Revision note (2026-09-28):** Revised in place with Claude Code (Claude Opus 5.5) after checking each citation against the `rs.tdwg.org` repository (branch `bdq`, at that time identical to `master`) and this repository. Changes: corrected inaccurate citations and claims (ABCD handling, BDQ information element model, build pipeline, loader behavior); added deployment, routing, and `https` analysis; reframed the source of truth from "BDQ repository authoritative, rs.tdwg.org derived" to "rs.tdwg.org files authoritative for all BDQ vocabularies"; added sections on deploying the simple vocabularies (`bdqdim`, `bdqenh`, `bdqcrit`, `bdquc`, `bdqval`), options for `bdqffdq` (including a hybrid CSV + axioms approach), options for `bdqtest`, and the changes needed in this repository. A further revision the same day added the summary for the TDWG Technical Architecture Group and rs.tdwg.org maintainers, and Section 7.4 on making the protocol a per-vocabulary choice. Line numbers cited below are as of this revision.
+**Revision note (2026-09-28):** Revised in place with Claude Code (Claude Opus 5.5) after checking each citation against the `rs.tdwg.org` repository (branch `bdq`, at that time identical to `master`) and this repository. Changes: corrected inaccurate citations and claims (ABCD handling, BDQ information element model, build pipeline, loader behavior); added deployment, routing, and `https` analysis; reframed the source of truth from "BDQ repository authoritative, rs.tdwg.org derived" to "rs.tdwg.org files authoritative for all BDQ vocabularies"; added sections on deploying the simple vocabularies (`bdqdim`, `bdqenh`, `bdqcrit`, `bdquc`, `bdqval`), options for `bdqffdq` (including a hybrid CSV + axioms approach), options for `bdqtest`, and the changes needed in this repository. A further revision the same day added the summary for the TDWG Technical Architecture Group and rs.tdwg.org maintainers, and Section 7.4 on making the protocol a per-vocabulary choice. A third revision added Section 3.3 on whether the `bdqffdq` blank nodes must be blank, Section 9.4 on a blank-node-free ontology, and Section 10.6 on resolvable IRIs for `bdqtest` structural nodes. Line numbers cited below are as of this revision.
 
 ## Scope and source context
 
@@ -46,6 +46,8 @@ The BDQ build system includes generation, audit, and validation scripts under `t
 - *A.* rs.tdwg.org only redirects to an ontology file published from the BDQ repository (the ABCD pattern). Small effort, but the source stays outside rs.tdwg.org.
 - *B.* The ontology file itself is kept in the rs.tdwg.org repository and served from there (a new pattern: returning file content) or redirected to.
 - *C (proposed).* Hybrid: term metadata is an ordinary rs.tdwg.org term list processed by `process.py`, the roughly 80 triples of restrictions and axioms are kept in a Turtle file beside it, and a merge step produces the whole ontology. `bdqffdq` terms then get normal TDWG versions and dereferencing.
+
+OWL 2 DL requires these structures to be blank nodes, so they cannot simply be given identifiers (Section 3.3). However, all 15 restrictions have the form "the range of property P is things that have some P whose value is a C", which appears to be unintended for "the range of P is C". If the BDQ maintainers replace them with named-class ranges, and replace the two `owl:AllDisjointClasses` axioms with the equivalent 9 pairwise `owl:disjointWith` statements, the ontology has no blank nodes and fits entirely in an rs.tdwg.org term list (Section 9.4).
 *Decision needed:* which option, and whether rs.tdwg.org will serve (or redirect to) a whole-ontology file.
 
 **4. A graph-rich vocabulary (`bdqtest`).** Each Test is described by a nested graph (Test → Specification → Argument → Parameter; information elements composed of several terms; policies), with many nodes identified by `urn:uuid`. The rs.tdwg.org serializer emits one value per cell and links child tables only one level deep, so it cannot produce the full graph for a Test (Sections 2, 4, 5). Options (Section 10):
@@ -54,6 +56,9 @@ The BDQ build system includes generation, audit, and validation scripts under `t
 - *T3 (proposed target).* A BDQ-specific processing step in rs.tdwg.org generates full per-Test and whole-vocabulary RDF files, served by a new route.
 - *T4.* Extend the rs.tdwg.org loader and serializer to support nested linked tables. The most general option, and a large change.
 *Decision needed:* whether rs.tdwg.org will accept a vocabulary-specific processing step and a file-serving route (T3), or prefers a general extension (T4).
+
+*Non-resolvable identifiers for structural nodes.* The nodes that give a Test its internal structure are identified by `urn:uuid:` IRIs, which cannot be dereferenced: in the current `bdqtest.ttl`, 253 Methods, 253 Specifications, 63 Arguments, 147 information element nodes (ActedUpon and Consulted), and 16 Policies. They are essentially internal to the description of each Test, and can be seen only inside a graph returned for some other IRI.
+*Question:* should these nodes be resolvable, for example as `https://rs.tdwg.org/bdqtest/specification/{uuid}`? Resolvable IRIs would let each node be described where it is identified, and would make normalized linked tables (T2) sufficient, because each kind of node could be the root of its own dataset. The cost is several hundred more TDWG-minted IRIs to keep stable and version under the Vocabulary Maintenance Specification, and changes to the BDQ standard and its implementations, which already use the `urn:uuid:` values (Section 10.6).
 
 **5. Serving files, and CI.** Options B, C, and T3 all involve rs.tdwg.org returning pre-generated RDF files, which it has not done before (the ABCD handlers only redirect). Separately, BDQ has SHACL and SPARQL validation that could run in rs.tdwg.org CI or remain in the BDQ repository (Section 14).
 
@@ -185,9 +190,29 @@ Parsing the ontology (981 triples) gives:
 - structural properties with IRI values and bounded multiplicity: `rdfs:subClassOf` (at most 3 per class, never a blank node), `rdfs:subPropertyOf` (at most 4), `rdf:type` (at most 2), `owl:differentFrom` (at most 2), and `rdfs:range` (1 per property);
 - **graph-native structures**: 15 `rdfs:range` values that are anonymous `owl:Restriction` nodes (e.g. `bdqffdq.owl:209-242`, `335-339`), and 2 `owl:AllDisjointClasses` axioms with `owl:members` RDF lists (`bdqffdq.owl:1421-1439`). Only 78 triples involve blank nodes.
 
+All 15 restrictions have the same form, a property whose range is a restriction on that same property, for example:
+
+```turtle
+bdqffdq:hasCriterion rdfs:range [ rdf:type owl:Restriction ;
+                                  owl:onProperty bdqffdq:hasCriterion ;
+                                  owl:someValuesFrom bdqffdq:Criterion ] .
+```
+
+This says that anything that is the value of `bdqffdq:hasCriterion` must itself have some `bdqffdq:hasCriterion` value that is a `bdqffdq:Criterion`. A reasoner would therefore infer that `bdqcrit:Complete`, used as a value, has a criterion of its own. The intended meaning is almost certainly `bdqffdq:hasCriterion rdfs:range bdqffdq:Criterion`. This is a modeling question for the BDQ maintainers, but it affects deployment (Section 9.4).
+
 The `@base <https://rs.tdwg.org/bdqffdq/terms#>` and the empty `:` prefix (`bdqffdq.owl:1`, `10`) are not used by any term and could be removed.
 
-### 3.3 Consequence
+### 3.3 Must these nodes be blank?
+
+**In OWL 2 DL, yes.** The [OWL 2 mapping to RDF graphs](https://www.w3.org/TR/owl2-mapping-to-rdf/) represents anonymous class expressions (such as `owl:Restriction`), the main node of n-ary axioms (such as `owl:AllDisjointClasses`), and the cells of RDF lists (such as `owl:members`) as blank nodes, and an RDF graph is parsed as an OWL 2 DL ontology only if those nodes are blank. If the restriction nodes are given IRIs, the graph remains valid RDF and has a meaning under the OWL 2 RDF-Based Semantics (OWL 2 Full), but it is no longer OWL 2 DL: DL reasoners and the OWL API, used by Protégé, would not read the restrictions as class expressions. An IRI-named restriction cannot be written in the OWL 2 functional syntax at all. Naming a class and declaring it `owl:equivalentClass` to the restriction does not help, because the restriction on the right-hand side is still a blank node.
+
+The ways to give these structures identifiers, or to avoid them, are:
+
+1. **Skolemize for storage only.** [RDF 1.1 skolemization](https://www.w3.org/TR/rdf11-concepts/#section-skolemization) replaces each blank node with a skolem IRI (e.g. `https://rs.tdwg.org/.well-known/genid/bdqffdq-hasCriterion-range`), which can then be stored in tables like any other resource. The build step that generates the ontology must turn the skolem IRIs back into blank nodes. This keeps the current semantics, but the skolem IRIs must never appear in the published ontology, and a term-level response generated from those tables would not be OWL 2 DL.
+2. **Remove the blank nodes by changing the ontology.** Replace each restriction range with a named-class range (Section 3.2), and replace each `owl:AllDisjointClasses` axiom with pairwise `owl:disjointWith` statements between named classes: 3 for the first axiom (3 members) and 6 for the second (4 members). `owl:AllDisjointClasses` is defined as pairwise disjointness, so this second change does not alter the meaning. The first change does alter the meaning, to what appears to be the intended one. Every remaining triple then has a named subject and a named or literal object.
+3. **Keep them as blank nodes** in an axioms file (Option C, Section 9.3).
+
+### 3.4 Consequence
 
 There is no existing rs.tdwg.org pathway that takes an RDF file and publishes its triples through the database-backed negotiation system. The closest precedent is the ABCD handler (`html/restxq.xqm:772-814`), which **only redirects**: it returns a 303 to externally hosted `https://abcd.tdwg.org/ontology/abcd_concepts.{owl,ttl,jsonld}` or to an HTML fragment. It never returns file content. Options for `bdqffdq` are evaluated in Section 9.
 
@@ -241,7 +266,7 @@ Multiplicity in the BDQ graph is not always where the CSV suggests:
 
 - Each Test has **one** `bdqffdq:hasActedUponInformationElement` (and at most one `bdqffdq:hasConsultedInformationElement`) pointing to a shared information element node whose `urn:uuid` IRI is looked up from `information_element_guids.csv`. The multiple Darwin Core terms are `bdqffdq:composedOf` members of that node (`build_bdqtest_rdf.py:487-504`, `710-734`).
 - Arguments hang off the Specification, not off the Test (`build_bdqtest_rdf.py:606`).
-- Methods, Specifications, information elements, Arguments, and Policies have `urn:uuid` IRIs, which cannot be dereferenced over HTTP; they can only appear inside a graph returned for some other IRI.
+- Methods, Specifications, information elements, Arguments, and Policies have `urn:uuid` IRIs, which cannot be dereferenced over HTTP; they can only appear inside a graph returned for some other IRI. In the current `tg2/_review/dist/bdqtest.ttl` there are 253 Methods, 253 Specifications, 63 Arguments, 147 information element nodes, and 16 Policies, against 253 Tests (Section 10.6).
 
 ### 4.4 Consequence
 
@@ -269,7 +294,7 @@ With the Test as the root record, one level of linked children can carry:
 - Policy aggregation, which is derived from use-case memberships and policy-type classification rather than literal row expansion (`build_bdqtest_rdf.py:811-850`);
 - MultiRecord acted-upon nodes derived from `aggregatesResponsesFrom` (`507-541`).
 
-Splitting these into separate datasets (Specifications with linked Arguments, information elements with linked members) does not help per-Test dereferencing: the roots of those datasets have `urn:uuid` IRIs, which no HTTP request can reach, and a request for a Test IRI returns only the Test and its direct children.
+Splitting these into separate datasets (Specifications with linked Arguments, information elements with linked members) does not help per-Test dereferencing while the roots of those datasets have `urn:uuid` IRIs, which no HTTP request can reach, and a request for a Test IRI returns only the Test and its direct children. It would help if those nodes were given resolvable IRIs (Section 10.6).
 
 So linked classes are a partial fit for `bdqtest` and no fit for the `bdqffdq` axioms.
 
@@ -535,6 +560,20 @@ What is needed:
 
 Assessment: meets the target (source in rs.tdwg.org, term metadata in CSV), gives `bdqffdq` terms the same TDWG version history and dereferencing as other vocabularies, and keeps the graph-native parts in RDF. Costs: a custom mapping file, a merge script, the risk of the two sources drifting (mitigated by the isomorphism check and a check that every IRI in the axioms file is a term in the CSV), and term-level responses that omit restriction ranges. Effort: moderate.
 
+### 9.4 Option C without an axioms file: a blank-node-free ontology
+
+If the BDQ maintainers make the two changes in Section 3.3 item 2 (named-class ranges instead of the 15 restrictions, pairwise `owl:disjointWith` instead of the 2 `owl:AllDisjointClasses` axioms), the whole ontology fits the term list of Option C:
+
+- the `range` column holds every property's range;
+- a `disjointWith` column set holds the disjointness statements (at most 3 per class for the current axioms, so `disjointWith`, `disjointWith1`, `disjointWith2`);
+- the ontology header (`owl:Ontology`, label, notes, license, `owl:versionIRI`) is the only content left outside the term list. It can be a few lines in the generating script's configuration, or be generated from the term list and vocabulary records in rs.tdwg.org.
+
+Term-level responses from rs.tdwg.org then carry every statement about each term, and the whole ontology is simply the union of the term records plus the header, so there is nothing to drift. The merge step reduces to serializing the term list in three formats, and the ontology stays in OWL 2 DL.
+
+Future ontology changes that need class expressions (for example, unions or cardinality restrictions) would bring back the need for an axioms file, so the option C machinery should be kept available.
+
+Assessment: the simplest way to make rs.tdwg.org CSV the complete source of truth for `bdqffdq`. It depends on a modeling decision by the BDQ maintainers about the 15 ranges, which should be made before the public review, since it changes the ontology's meaning. Effort: small, beyond Option C's term list.
+
 ---
 
 ## 10. Options for `bdqtest`
@@ -578,11 +617,24 @@ Extend the loader and serializer so linked children can have their own linked ch
 
 Assessment: the most general solution, potentially useful for other graph-rich standards, but a significant change to rs.tdwg.org's core serializer, and it still leaves the derivations in Section 5.2 (policies, MultiRecord nodes) to be precomputed into tables. Effort: large. Not recommended for the public review timeline.
 
-### 10.6 Recommendation for `bdqtest`
+### 10.6 Resolvable IRIs for the structural nodes
+
+The Methods, Specifications, Arguments, information element nodes, and Policies in `bdqtest` are identified by `urn:uuid:` IRIs (Section 4.3). They could instead be minted as resolvable IRIs under rs.tdwg.org, keeping the UUIDs as local names, for example `https://rs.tdwg.org/bdqtest/specification/01b96157-e4a1-4884-95d7-3bcfc5f3c047`.
+
+Effects:
+
+- Each kind of node could be the root of its own rs.tdwg.org dataset, with its children in linked tables one level down: Specifications with their Arguments, information element nodes with their `composedOf` members, Policies with their Tests. A request for a Test would return the Test with links to its Method, Specification, and information elements, and a client would follow those links for the rest. This makes T2 sufficient without extending the serializer (T4) or generating files (T3), although the derived structures (policy aggregation, MultiRecord nodes) would still have to be precomputed into tables.
+- Each node would be described where it is identified, in line with linked data practice.
+- Several hundred more TDWG-minted IRIs (about 730 in the current `bdqtest.ttl`) would need stability, versioning, and routing (`term-lists.csv` rows, or routes, for each new path).
+- The BDQ standard's documents, the RDF distributions, and any implementations that record these identifiers use the `urn:uuid:` values now. Changing them before ratification is possible; changing them afterwards would not be. Keeping the `urn:uuid:` values and linking them to the new IRIs with `owl:sameAs` is possible, but adds triples and complexity.
+
+This is a question for the BDQ maintainers and the TAG (see the Summary, item 4, and Section 14).
+
+### 10.7 Recommendation for `bdqtest`
 
 Use T1 for the public review, which moves the source of truth to rs.tdwg.org with standard versioning, and build the whole vocabulary from the rs.tdwg.org files. Adopt T3 as the target for full-fidelity per-Test RDF from rs.tdwg.org, discussing the new route with the rs.tdwg.org maintainers early.
 
-### 10.7 Generated CSV lists and documents
+### 10.8 Generated CSV lists and documents
 
 This repository generates flat lists and documents from `bdqtest_term_versions.csv`, including:
 
@@ -650,7 +702,7 @@ Accept `https://rs.tdwg.org/` URLs (`94`) and check that `https` vocabularies re
 
 1. **Agree on per-vocabulary `https`** with the rs.tdwg.org maintainers and the TDWG Technical Architecture Group, and patch `process.py`, `restxq.xqm`, `html.xqm`, and `dereferencing-test.py` on the `bdq` branch (Section 7.4).
 2. **Deploy the five simple vocabularies** through `process.py` (Section 8), using a source branch and `bdq` as the derived, deployed branch, and verify them on `bdq-public-review.rs.tdwg.org`.
-3. **Deploy `bdqffdq` as a hybrid** (Option C): term list via `process.py`, axioms file, merge step, and a route or redirect for the whole ontology.
+3. **Deploy `bdqffdq` as a hybrid** (Option C): term list via `process.py`, axioms file, merge step, and a route or redirect for the whole ontology. If the BDQ maintainers first replace the restriction ranges and `owl:AllDisjointClasses` axioms (Section 3.3), no axioms file is needed (Section 9.4).
 4. **Deploy `bdqtest` as a flat term list** with its GUID tables (T1), build the whole vocabulary from the rs.tdwg.org files, and plan T3 for full per-Test RDF.
 5. **Switch the BDQ build** to read from rs.tdwg.org, and freeze the files in `tg2/_review/vocabulary/`.
 6. After ratification, the rs.tdwg.org maintainers merge the source branch to `master`, rerun processing with the ratification date, and make a release.
@@ -663,7 +715,9 @@ Accept `https://rs.tdwg.org/` URLs (`94`) and check that `https` vocabularies re
 2. Will the rs.tdwg.org maintainers accept routes that serve files directly (Options B1, C for the whole ontology, T3), a pattern rs.tdwg.org has not used before?
 3. For `bdqffdq`, should the ontology IRI `https://rs.tdwg.org/bdqffdq/terms` and the term list IRI `https://rs.tdwg.org/bdqffdq/terms/` denote the same resource, or should one change?
 4. What standard number will BDQ be assigned, and what are the final (non-`/draft/`) URLs for the BDQ documents on `bdq.tdwg.org`, to be used in `prepend_url` and in any redirect targets?
-5. Should rs.tdwg.org CI adopt BDQ-specific semantic validation (SHACL/SPARQL checks), or should that remain in this repository, reading from rs.tdwg.org?
+5. Should the structural nodes of `bdqtest` (Methods, Specifications, Arguments, information element nodes, Policies), now identified by non-resolvable `urn:uuid:` IRIs, be given resolvable rs.tdwg.org IRIs (Section 10.6)?
+6. For `bdqffdq`, will the BDQ maintainers replace the 15 restriction ranges with named-class ranges (and the `owl:AllDisjointClasses` axioms with pairwise `owl:disjointWith`), making the ontology free of blank nodes (Sections 3.3, 9.4)?
+7. Should rs.tdwg.org CI adopt BDQ-specific semantic validation (SHACL/SPARQL checks), or should that remain in this repository, reading from rs.tdwg.org?
 
 ---
 
@@ -672,7 +726,7 @@ Accept `https://rs.tdwg.org/` URLs (`94`) and check that `https` vocabularies re
 rs.tdwg.org can be the source of truth for all BDQ vocabularies, with differing degrees of fit:
 
 - The five simple vocabularies fit the standard `process.py` pipeline once small `https` patches are made and some data problems are fixed.
-- `bdqffdq` fits as a hybrid: an ordinary term list for the per-term metadata, which is almost all of the ontology, plus a small axioms file for the restriction ranges and disjointness axioms, merged to produce the complete ontology.
+- `bdqffdq` fits as a hybrid: an ordinary term list for the per-term metadata, which is almost all of the ontology, plus a small axioms file for the restriction ranges and disjointness axioms, merged to produce the complete ontology. If the restriction ranges, which appear to be unintended, are replaced by named-class ranges and the disjointness axioms by pairwise `owl:disjointWith`, the ontology has no blank nodes and the term list alone is enough.
 - `bdqtest` can be versioned as a flat term list with its GUID tables in rs.tdwg.org, but full-fidelity per-Test RDF from rs.tdwg.org needs either generated per-Test files served by a new route (recommended target) or an extension of the serializer.
 
 In every case, the term-version files become outputs of rs.tdwg.org processing, and the BDQ build in this repository becomes a consumer of rs.tdwg.org data.
