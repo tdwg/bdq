@@ -41659,6 +41659,9 @@
                 "@id": "https://rs.tdwg.org/bdqtest/terms/4fccf163-9336-4f48-996c-57f5f66e72db-2025-03-07"
             },
             {
+                "@id": "https://rs.tdwg.org/bdqtest/terms/47ee20d9-5087-4f76-a494-6fea05e50b8b-2025-03-07"
+            },
+            {
                 "@id": "https://rs.tdwg.org/bdqtest/terms/4d999a65-a431-4a76-b591-e0d86dcf244b-2025-03-07"
             },
             {
@@ -41775,7 +41778,7 @@
         ],
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
-                "@value": "MeasurementPolicy: (105) measures  in UseCase bdquc:Spatial-Temporal_Patterns"
+                "@value": "MeasurementPolicy: (106) measures  in UseCase bdquc:Spatial-Temporal_Patterns"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
@@ -42240,6 +42243,9 @@
                 "@id": "https://rs.tdwg.org/bdqtest/terms/853b79a2-b314-44a2-ae46-34a1e7ed85e4-2025-03-07"
             },
             {
+                "@id": "https://rs.tdwg.org/bdqtest/terms/15f78619-811a-4c6f-997a-a4c7888ad849-2025-03-07"
+            },
+            {
                 "@id": "https://rs.tdwg.org/bdqtest/terms/374b091a-fc90-4791-91e5-c1557c649169-2025-03-07"
             },
             {
@@ -42299,7 +42305,7 @@
         ],
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
-                "@value": "ValidationPolicy: (50) validations  in UseCase bdquc:Spatial-Temporal_Patterns"
+                "@value": "ValidationPolicy: (51) validations  in UseCase bdquc:Spatial-Temporal_Patterns"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
@@ -42309,7 +42315,7 @@
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
             {
-                "@value": "ValidationPolicy: (50) validations  in UseCase bdquc:Spatial-Temporal_Patterns"
+                "@value": "ValidationPolicy: (51) validations  in UseCase bdquc:Spatial-Temporal_Patterns"
             }
         ]
     },

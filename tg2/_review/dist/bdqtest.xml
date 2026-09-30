@@ -4604,8 +4604,8 @@
 
 <rdf:Description rdf:about="urn:uuid:0348eccf-fc7f-49b3-88b6-1d911e98cbbb">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationPolicy"/>
-	<rdfs:label>ValidationPolicy: (50) validations  in UseCase bdquc:Spatial-Temporal_Patterns</rdfs:label>
-	<skos:prefLabel>ValidationPolicy: (50) validations  in UseCase bdquc:Spatial-Temporal_Patterns</skos:prefLabel>
+	<rdfs:label>ValidationPolicy: (51) validations  in UseCase bdquc:Spatial-Temporal_Patterns</rdfs:label>
+	<skos:prefLabel>ValidationPolicy: (51) validations  in UseCase bdquc:Spatial-Temporal_Patterns</skos:prefLabel>
 	<bdqffdq:hasUseCase rdf:resource="https://rs.tdwg.org/bdquc/terms/Spatial-Temporal_Patterns"/>
 	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/01c6dafa-0886-4b7e-9881-2c3018c98bdc-2025-03-06"/>
 	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe-2025-03-07"/>
@@ -4613,6 +4613,7 @@
 	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/06851339-843f-4a43-8422-4e61b9a00e75-2025-03-06"/>
 	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/0949110d-c06b-450e-9649-7c1374d940d1-2025-03-07"/>
 	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/0bb8297d-8f8a-42d2-80c1-558f29efe798-2025-03-07"/>
+	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/15f78619-811a-4c6f-997a-a4c7888ad849-2025-03-07"/>
 	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/1bf0e210-6792-4128-b8cc-ab6828aa4871-2025-03-07"/>
 	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/239ec40e-a729-4a8e-ba69-e0bf03ac1c44-2025-03-07"/>
 	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/374b091a-fc90-4791-91e5-c1557c649169-2025-03-07"/>
@@ -8793,7 +8794,7 @@
 
 <rdf:Description rdf:about="urn:uuid:962109a0-205f-4ea9-b7df-39ad3a5fc503">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementPolicy"/>
-	<rdfs:label>MeasurementPolicy: (105) measures  in UseCase bdquc:Spatial-Temporal_Patterns</rdfs:label>
+	<rdfs:label>MeasurementPolicy: (106) measures  in UseCase bdquc:Spatial-Temporal_Patterns</rdfs:label>
 	<bdqffdq:hasUseCase rdf:resource="https://rs.tdwg.org/bdquc/terms/Spatial-Temporal_Patterns"/>
 	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/0028ef9a-6553-467b-a344-90327ed2babf-2025-03-07"/>
 	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/071267a0-d993-4961-a3f7-d8210810d167-2025-03-07"/>
@@ -8823,6 +8824,7 @@
 	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/453844ae-9df4-439f-8e24-c52498eca84a-2024-09-24"/>
 	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/45fb49eb-4a1b-4b49-876f-15d5034dfc73-2024-09-25"/>
 	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/478dee00-98d0-4154-b66c-eca64dbbf86d-2025-03-07"/>
+	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/47ee20d9-5087-4f76-a494-6fea05e50b8b-2025-03-07"/>
 	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/488c1dff-21ec-4e68-a00a-7355505e180c-2025-03-07"/>
 	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/49a94636-a562-4e6b-803c-665c80628a3d-2024-09-25"/>
 	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/49b787eb-7dce-4ace-97f5-7cbb47cd8cb9-2025-03-07"/>

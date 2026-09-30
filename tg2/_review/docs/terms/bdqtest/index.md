@@ -336,7 +336,7 @@ dcterms:license=" ": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIA
 
 #### Use Cases
 
-bdquc:SDM-Trees
+bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns
 
 #### Notes
 
@@ -4735,7 +4735,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdquc:SDM-Trees
+bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns
 
 #### Notes
 

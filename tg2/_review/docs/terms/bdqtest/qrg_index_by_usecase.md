@@ -161,6 +161,8 @@ VALIDATION_DCTYPE_NOTEMPTY [Quick Reference Guide](index.md#VALIDATION_DCTYPE_NO
 
 VALIDATION_DCTYPE_STANDARD [Quick Reference Guide](index.md#VALIDATION_DCTYPE_STANDARD) [Term List](../../list/bdqtest/index.md#bdqtest_cdaabb0d-a863-49d0-bc0f-738d771acba5)
 
+VALIDATION_LICENSE_NOTEMPTY [Quick Reference Guide](index.md#VALIDATION_LICENSE_NOTEMPTY) [Term List](../../list/bdqtest/index.md#bdqtest_15f78619-811a-4c6f-997a-a4c7888ad849)
+
 VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT [Quick Reference Guide](index.md#VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT) [Term List](../../list/bdqtest/index.md#bdqtest_adb27d29-9f0d-4d52-b760-a77ba57a69c9)
 
 VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT [Quick Reference Guide](index.md#VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT) [Term List](../../list/bdqtest/index.md#bdqtest_f18a470b-3fe1-4aae-9c65-a6d3db6b550c)

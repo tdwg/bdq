@@ -8468,7 +8468,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdquc:SDM-Trees</td>
+			<td>bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -22740,7 +22740,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdquc:SDM-Trees</td>
+			<td>bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>

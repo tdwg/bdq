@@ -9184,26 +9184,27 @@ bdquc:SDM-Trees a bdqffdq:UseCase;
     bdqtest:fbe47441-500f-44c7-a1bd-1e872edc5266-2025-03-07, bdqtest:a94e986e-dbc8-4147-872d-5f2727945654-2025-03-07,
     bdqtest:f948a30e-8084-48d5-b1ca-d77c476f181f-2025-03-07, bdqtest:942f63bd-d19d-4214-bf8e-cec0055b8909-2025-03-07,
     bdqtest:d71be8d4-1a04-4816-90c5-49808c823651-2025-03-07, bdqtest:4fccf163-9336-4f48-996c-57f5f66e72db-2025-03-07,
-    bdqtest:4d999a65-a431-4a76-b591-e0d86dcf244b-2025-03-07, bdqtest:f041ab17-d834-4586-aa6b-090de2e571a8-2025-03-07,
-    bdqtest:241a279c-76d5-499b-ab49-a47ad7f8df50-2025-03-07, bdqtest:f5dd74bd-6a22-4792-b675-c7ccf2a2c103-2025-03-07,
-    bdqtest:2a9d4cfd-815a-46e0-bb51-60724582b762-2025-03-06, bdqtest:54d290e8-ac48-4f31-8af3-676363573217-2025-03-06,
-    bdqtest:49d756a8-e654-4267-a290-d1def5d2c5f9-2025-03-07, bdqtest:9c66c116-6644-45b4-b4c7-db7a4ee7c500-2025-03-07,
-    bdqtest:44f00697-ca66-43cf-8f16-646b40c0f514-2025-03-07, bdqtest:be2eb717-b390-47d1-b7ba-965a1101e215-2025-03-07,
-    bdqtest:d94b0130-7a13-4fa8-955c-eff5c47bd9de-2025-03-07, bdqtest:2d90d94b-d384-4bac-aa68-c6800d765882-2025-03-07,
-    bdqtest:7c5a6ba0-399d-4570-878a-4a064e2406fe-2025-03-07, bdqtest:6a3baf78-5ec3-4a84-8c6b-6876b3a4e3b5-2025-03-07,
-    bdqtest:2fea4571-92d0-48a5-a5ba-6caecd647862-2025-03-07, bdqtest:faca6558-dbff-4d26-a5cb-e11cdf632fe7-2025-03-07,
-    bdqtest:d2922585-2070-4851-a033-15e51977f9dc-2025-03-07, bdqtest:298db0c9-a85a-41ee-b111-d622fd969d71-2025-03-07,
-    bdqtest:a2535b23-4407-40bd-b23b-30c8185d72a2-2025-03-07, bdqtest:bceae35a-52ab-4968-846f-069ace766513-2025-03-07,
-    bdqtest:85dc5d02-9847-420f-a026-6a0e70962d2a-2025-03-06, bdqtest:780480ff-8c4a-4276-aaca-cbd1248de9fa-2025-03-06,
-    bdqtest:b3c2bb86-e239-4532-ae0c-b121ec1ee025-2025-03-06, bdqtest:c3b4cd93-a37f-4a0a-89dd-7ce53669f1f3-2025-03-06,
-    bdqtest:8c217eee-9cd0-48c3-aea0-90151c6c5bfd-2025-03-06, bdqtest:76008c6b-c56a-4233-84e3-8584950037ec-2025-03-06,
-    bdqtest:c04d428a-13d0-4766-9df7-4dfb2ef5d5d8-2025-03-06, bdqtest:7775309b-5331-4a65-b839-cbe959948d33-2025-03-06,
-    bdqtest:371035f6-42b5-494f-86d9-de2f44a6cdc6-2025-03-06, bdqtest:c3e0100f-dfc3-4379-a855-df878eef295e-2025-03-06,
-    bdqtest:c73d49d1-06e4-4272-8249-6a26e7f8abca-2025-03-07, bdqtest:3de8af03-05d4-4fd8-8e6d-ba886dc5446f-2025-03-07,
-    bdqtest:9c1cdf6a-0dbf-4828-a2e3-fb368f74d194-2025-03-07, bdqtest:58fdd5c1-6201-49a1-a7cd-f49c210dc0b6-2025-03-07,
-    bdqtest:23aced89-d613-479c-bc4c-837d74b73be0-2025-03-07, bdqtest:8b73f37d-89ed-479a-8389-9e71ad2ac84d-2025-03-07,
-    bdqtest:8dfed701-01a9-415d-a9f8-539280b75975-2025-03-07, bdqtest:130bb875-6b7c-4965-b864-d53f9d05b2cd-2025-03-07;
-  rdfs:label "MeasurementPolicy: (105) measures  in UseCase bdquc:Spatial-Temporal_Patterns";
+    bdqtest:47ee20d9-5087-4f76-a494-6fea05e50b8b-2025-03-07, bdqtest:4d999a65-a431-4a76-b591-e0d86dcf244b-2025-03-07,
+    bdqtest:f041ab17-d834-4586-aa6b-090de2e571a8-2025-03-07, bdqtest:241a279c-76d5-499b-ab49-a47ad7f8df50-2025-03-07,
+    bdqtest:f5dd74bd-6a22-4792-b675-c7ccf2a2c103-2025-03-07, bdqtest:2a9d4cfd-815a-46e0-bb51-60724582b762-2025-03-06,
+    bdqtest:54d290e8-ac48-4f31-8af3-676363573217-2025-03-06, bdqtest:49d756a8-e654-4267-a290-d1def5d2c5f9-2025-03-07,
+    bdqtest:9c66c116-6644-45b4-b4c7-db7a4ee7c500-2025-03-07, bdqtest:44f00697-ca66-43cf-8f16-646b40c0f514-2025-03-07,
+    bdqtest:be2eb717-b390-47d1-b7ba-965a1101e215-2025-03-07, bdqtest:d94b0130-7a13-4fa8-955c-eff5c47bd9de-2025-03-07,
+    bdqtest:2d90d94b-d384-4bac-aa68-c6800d765882-2025-03-07, bdqtest:7c5a6ba0-399d-4570-878a-4a064e2406fe-2025-03-07,
+    bdqtest:6a3baf78-5ec3-4a84-8c6b-6876b3a4e3b5-2025-03-07, bdqtest:2fea4571-92d0-48a5-a5ba-6caecd647862-2025-03-07,
+    bdqtest:faca6558-dbff-4d26-a5cb-e11cdf632fe7-2025-03-07, bdqtest:d2922585-2070-4851-a033-15e51977f9dc-2025-03-07,
+    bdqtest:298db0c9-a85a-41ee-b111-d622fd969d71-2025-03-07, bdqtest:a2535b23-4407-40bd-b23b-30c8185d72a2-2025-03-07,
+    bdqtest:bceae35a-52ab-4968-846f-069ace766513-2025-03-07, bdqtest:85dc5d02-9847-420f-a026-6a0e70962d2a-2025-03-06,
+    bdqtest:780480ff-8c4a-4276-aaca-cbd1248de9fa-2025-03-06, bdqtest:b3c2bb86-e239-4532-ae0c-b121ec1ee025-2025-03-06,
+    bdqtest:c3b4cd93-a37f-4a0a-89dd-7ce53669f1f3-2025-03-06, bdqtest:8c217eee-9cd0-48c3-aea0-90151c6c5bfd-2025-03-06,
+    bdqtest:76008c6b-c56a-4233-84e3-8584950037ec-2025-03-06, bdqtest:c04d428a-13d0-4766-9df7-4dfb2ef5d5d8-2025-03-06,
+    bdqtest:7775309b-5331-4a65-b839-cbe959948d33-2025-03-06, bdqtest:371035f6-42b5-494f-86d9-de2f44a6cdc6-2025-03-06,
+    bdqtest:c3e0100f-dfc3-4379-a855-df878eef295e-2025-03-06, bdqtest:c73d49d1-06e4-4272-8249-6a26e7f8abca-2025-03-07,
+    bdqtest:3de8af03-05d4-4fd8-8e6d-ba886dc5446f-2025-03-07, bdqtest:9c1cdf6a-0dbf-4828-a2e3-fb368f74d194-2025-03-07,
+    bdqtest:58fdd5c1-6201-49a1-a7cd-f49c210dc0b6-2025-03-07, bdqtest:23aced89-d613-479c-bc4c-837d74b73be0-2025-03-07,
+    bdqtest:8b73f37d-89ed-479a-8389-9e71ad2ac84d-2025-03-07, bdqtest:8dfed701-01a9-415d-a9f8-539280b75975-2025-03-07,
+    bdqtest:130bb875-6b7c-4965-b864-d53f9d05b2cd-2025-03-07;
+  rdfs:label "MeasurementPolicy: (106) measures  in UseCase bdquc:Spatial-Temporal_Patterns";
   bdqffdq:hasUseCase bdquc:Spatial-Temporal_Patterns .
 
 bdquc:Spatial-Temporal_Patterns a bdqffdq:UseCase;
@@ -9290,19 +9291,19 @@ bdquc:Taxon-Management a bdqffdq:UseCase;
     bdqtest:ad0c8855-de69-4843-a80c-a5387d20fbc8-2025-03-06, bdqtest:1bf0e210-6792-4128-b8cc-ab6828aa4871-2025-03-07,
     bdqtest:41267642-60ff-4116-90eb-499fee2cd83f-2025-03-06, bdqtest:cdaabb0d-a863-49d0-bc0f-738d771acba5-2025-03-07,
     bdqtest:9beb9442-d942-4f42-8b6a-fcea01ee086a-2025-03-07, bdqtest:853b79a2-b314-44a2-ae46-34a1e7ed85e4-2025-03-07,
-    bdqtest:374b091a-fc90-4791-91e5-c1557c649169-2025-03-07, bdqtest:42408a00-bf71-4892-a399-4325e2bc1fb8-2025-03-07,
-    bdqtest:06851339-843f-4a43-8422-4e61b9a00e75-2025-03-06, bdqtest:04b2c8f3-c71b-4e95-8e43-f70374c5fb92-2025-03-07,
-    bdqtest:d708526b-6561-438e-aa1a-82cd80b06396-2025-03-07, bdqtest:c6adf2ea-3051-4498-97f4-4b2f8a105f57-2025-03-07,
-    bdqtest:c971fe3f-84c1-4636-9f44-b1ec31fd63c7-2025-03-07, bdqtest:7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2025-03-07,
-    bdqtest:eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf-2025-03-07, bdqtest:7d2485d5-1ba7-4f25-90cb-f4480ff1a275-2025-03-07,
-    bdqtest:8d787cb5-73e2-4c39-9cd1-67c7361dc02e-2025-03-06, bdqtest:01c6dafa-0886-4b7e-9881-2c3018c98bdc-2025-03-06,
-    bdqtest:85803c7e-2a5a-42e1-b8d3-299a44cafc46-2025-03-06, bdqtest:9a39d88c-7eee-46df-b32a-c109f9f81fb8-2025-03-06,
-    bdqtest:47ff73ba-0028-4f79-9ce1-ee7008d66498-2025-03-06, bdqtest:3f1db29a-bfa5-40db-9fd1-fde020d81939-2025-03-07,
-    bdqtest:4daa7986-d9b0-4dd5-ad17-2d7a771ea71a-2025-03-07, bdqtest:d257eb98-27cb-48e5-8d3c-ab9fca4edd11-2025-03-07,
-    bdqtest:4eb48fdf-7299-4d63-9d08-246902e2857f-2025-03-07;
-  rdfs:label "ValidationPolicy: (50) validations  in UseCase bdquc:Spatial-Temporal_Patterns";
+    bdqtest:15f78619-811a-4c6f-997a-a4c7888ad849-2025-03-07, bdqtest:374b091a-fc90-4791-91e5-c1557c649169-2025-03-07,
+    bdqtest:42408a00-bf71-4892-a399-4325e2bc1fb8-2025-03-07, bdqtest:06851339-843f-4a43-8422-4e61b9a00e75-2025-03-06,
+    bdqtest:04b2c8f3-c71b-4e95-8e43-f70374c5fb92-2025-03-07, bdqtest:d708526b-6561-438e-aa1a-82cd80b06396-2025-03-07,
+    bdqtest:c6adf2ea-3051-4498-97f4-4b2f8a105f57-2025-03-07, bdqtest:c971fe3f-84c1-4636-9f44-b1ec31fd63c7-2025-03-07,
+    bdqtest:7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2025-03-07, bdqtest:eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf-2025-03-07,
+    bdqtest:7d2485d5-1ba7-4f25-90cb-f4480ff1a275-2025-03-07, bdqtest:8d787cb5-73e2-4c39-9cd1-67c7361dc02e-2025-03-06,
+    bdqtest:01c6dafa-0886-4b7e-9881-2c3018c98bdc-2025-03-06, bdqtest:85803c7e-2a5a-42e1-b8d3-299a44cafc46-2025-03-06,
+    bdqtest:9a39d88c-7eee-46df-b32a-c109f9f81fb8-2025-03-06, bdqtest:47ff73ba-0028-4f79-9ce1-ee7008d66498-2025-03-06,
+    bdqtest:3f1db29a-bfa5-40db-9fd1-fde020d81939-2025-03-07, bdqtest:4daa7986-d9b0-4dd5-ad17-2d7a771ea71a-2025-03-07,
+    bdqtest:d257eb98-27cb-48e5-8d3c-ab9fca4edd11-2025-03-07, bdqtest:4eb48fdf-7299-4d63-9d08-246902e2857f-2025-03-07;
+  rdfs:label "ValidationPolicy: (51) validations  in UseCase bdquc:Spatial-Temporal_Patterns";
   bdqffdq:hasUseCase bdquc:Spatial-Temporal_Patterns;
-  skos:prefLabel "ValidationPolicy: (50) validations  in UseCase bdquc:Spatial-Temporal_Patterns" .
+  skos:prefLabel "ValidationPolicy: (51) validations  in UseCase bdquc:Spatial-Temporal_Patterns" .
 
 <urn:uuid:9c87ce41-04a3-45e6-83d3-95ec70ae553f> a bdqffdq:ValidationPolicy;
   bdqffdq:includedInPolicy bdqtest:eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f-2025-03-06,
