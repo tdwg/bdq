@@ -6,7 +6,7 @@ This document describes work within the scope of [tdwg/bdq issue #340](https://g
 
 This is an analysis originally produced by GitHub Copilot of the friction produced by the bdqffdq.owl ontology and the multiplicity of terms in the bdqtest vocabulary for deployment on rs.tdwg.org and how this friction might be approached.
 
-**Revision note (2026-09-28):** Revised in place with Claude Code (Claude Opus 5.5) after checking each citation against the `rs.tdwg.org` repository (branch `bdq`, at that time identical to `master`) and this repository. Changes: corrected inaccurate citations and claims (ABCD handling, BDQ information element model, build pipeline, loader behavior); added deployment, routing, and `https` analysis; reframed the source of truth from "BDQ repository authoritative, rs.tdwg.org derived" to "rs.tdwg.org files authoritative for all BDQ vocabularies"; added sections on deploying the simple vocabularies (`bdqdim`, `bdqenh`, `bdqcrit`, `bdquc`, `bdqval`), options for `bdqffdq` (including a hybrid CSV + axioms approach), options for `bdqtest`, and the changes needed in this repository. A further revision the same day added the summary for the TDWG Technical Architecture Group and rs.tdwg.org maintainers, and Section 7.4 on making the protocol a per-vocabulary choice. A third revision added Section 3.3 on whether the `bdqffdq` blank nodes must be blank, Section 9.4 on a blank-node-free ontology, and Section 10.6 on resolvable IRIs for `bdqtest` structural nodes. A fourth revision added the OWL profile of `bdqffdq` (Section 3.2), expanded item 3 of the summary for the TAG, added links for the reader to the draft standard, and added Section 11 on metadata records for the human-readable documents (renumbering later sections). A fifth revision recorded that the landing page is covered by the standard record, and added a note for @tucotuco on document paths and names. Line numbers cited below are as of this revision.
+**Revision note (2026-09-28):** Revised in place with Claude Code (Claude Opus 5.5) after checking each citation against the `rs.tdwg.org` repository (branch `bdq`, at that time identical to `master`) and this repository. Changes: corrected inaccurate citations and claims (ABCD handling, BDQ information element model, build pipeline, loader behavior); added deployment, routing, and `https` analysis; reframed the source of truth from "BDQ repository authoritative, rs.tdwg.org derived" to "rs.tdwg.org files authoritative for all BDQ vocabularies"; added sections on deploying the simple vocabularies (`bdqdim`, `bdqenh`, `bdqcrit`, `bdquc`, `bdqval`), options for `bdqffdq` (including a hybrid CSV + axioms approach), options for `bdqtest`, and the changes needed in this repository. A further revision the same day added the summary for the TDWG Technical Architecture Group and rs.tdwg.org maintainers, and Section 7.4 on making the protocol a per-vocabulary choice. A third revision added Section 3.3 on whether the `bdqffdq` blank nodes must be blank, Section 9.4 on a blank-node-free ontology, and Section 10.6 on resolvable IRIs for `bdqtest` structural nodes. A fourth revision added the OWL profile of `bdqffdq` (Section 3.2), expanded item 3 of the summary for the TAG, added links for the reader to the draft standard, and added Section 11 on metadata records for the human-readable documents (renumbering later sections). A fifth revision recorded that the landing page is covered by the standard record, and added a note for @tucotuco on document paths and names. Line numbers cited below are as of this revision. **Revision note (2026-09-30):** Added the standard bootstrap and review-status caveats after checking `process.py` and `tdwg_docs_metadata_update.py` on the `rs.tdwg.org` branch `bdq`.
 
 ## Scope and source context
 
@@ -76,7 +76,7 @@ With both changes (and the two annotation fixes), the ontology has no blank node
 **6. Metadata records for the human-readable documents.** Apart from the landing page, which is covered by the standard record, the standard has 17 human-readable components: an ontology landing page, an ontology extension document, five guides, a supplement, a tutorial, a Quick Reference Guide, and seven Lists of Terms (plus a generated index of normative sections). Each needs document metadata in rs.tdwg.org (`docs/`, `docs-versions/`, `docs-roles/`) so that its IRI dereferences, created by `tdwg_docs_metadata_update.py` from YAML files that BDQ already maintains in the rs.tdwg.org format. The work is mostly mechanical, but the document IRIs used in the drafts do not follow TDWG patterns and several collide with vocabulary or term list IRIs, so a set of document IRIs has to be agreed first (Section 11).
 *Decision needed:* the document IRIs, including those of the Quick Reference Guide and its index pages (a proposal is in Section 11.3).
 
-The five simple BDQ vocabularies (`bdqdim`, `bdqenh`, `bdqcrit`, `bdquc`, `bdqval`) raise no issue beyond item 1: they fit the standard `process.py` pipeline as five small vocabularies (Section 8). The `bdq` branch of rs.tdwg.org is already deployed at `bdq-public-review.rs.tdwg.org` (Section 1.4), so all of this can be demonstrated there before anything is merged to `master`.
+The five simple BDQ vocabularies (`bdqdim`, `bdqenh`, `bdqcrit`, `bdquc`, `bdqval`) fit the standard `process.py` pipeline, but still need the preparation in Section 8: column-mapping additions (8.3), data fixes (8.4), version-date choices (8.5), HTML redirects (8.6), and the standard-record bootstrap (8.2.1). An assigned standard number is a prerequisite for the first processing run. The `bdq` branch of rs.tdwg.org is already deployed at `bdq-public-review.rs.tdwg.org` (Section 1.4), so all of this can be demonstrated there before anything is merged to `master`.
 
 ---
 
@@ -466,6 +466,19 @@ This matches the Audiovisual Core precedent, where the subjectOrientation contro
 - a `vocab.yaml` with the vocabulary label and description, `dc_creator`, license, and (for the first run) the standard label and description;
 - the document metadata files `document_configuration.yaml` and `authors_configuration.yaml` under `process/document_metadata_processing/rs.tdwg.org_bdq_doc_dim/` (or whatever directory name the IRI pattern gives), followed by a run of `tdwg_docs_metadata_update.py`.
 
+### 8.2.1 First run: bootstrapping the BDQ standard record
+
+On the `bdq` testing branch, bootstrap the standard record before processing the other vocabularies:
+
+1. Settle the standard IRI as `http://www.tdwg.org/standards/NNN`. It must have a real number because `process.py` extracts it from the IRI (`process/process.py:983`).
+2. Choose the first vocabulary (e.g. `bdqdim`), prepare its modification CSV, and prepare a BDQ `config.yaml` with `standard` set to the BDQ IRI and a namespace block containing `new_term_list: true` (`process/process.py:29-33`).
+3. Write a BDQ `vocab.yaml` with the standard's `standard_label` and `standard_description`, not only the vocabulary's label and description; these standard values are used to create the standard row (`process/process.py:1032-1051`).
+4. Commit the source files, use a separate source branch and the `bdq` branch for derived output (Section 8.7), and run `process.py`.
+5. Inspect the generated records in `standards/standards.csv`, `standards/standards-versions.csv`, `standards/standards-parts.csv`, and `standards-versions/*` (`process/process.py:1032-1061, 1106-1126`). The script leaves `status`, `category`, and `citation` empty in the standard row, so review or supply them.
+6. Only then process the remaining vocabularies and run `tdwg_docs_metadata_update.py` for the documents; that script does not create a standard and requires its row to exist already (`process/document_metadata_processing/tdwg_docs_metadata_update.py:489-505`).
+
+`process.py` marks a new standard version `recommended` (`process/process.py:1110`). For a public-review deployment, maintainers must decide whether that status, the version date, and any `recommended` term, vocabulary, and term-list versions are acceptable on `bdq-public-review.rs.tdwg.org` or need adjusting; this remains a decision, not a settled policy.
+
 The standard needs a real number: `process.py` extracts it from the standard IRI (`process/process.py:983`). BDQ documents still contain placeholders (`https://www.tdwg.org/standards/nnnn`, `http://example.org/to_be_determined`). The first run creates the standard record (from `process/files_for_new_template/new_standard.csv`); later runs with the same `date_issued` add their vocabulary versions to the same standard version.
 
 `process.py` creates the dataset directories, `constants.csv`, `namespace.csv`, mapping and classes files, and the rows in `index/index-datasets.csv`, `term-lists/term-lists.csv`, and `html/redirects.csv`, from the templates in `process/files_for_new/`.
@@ -739,7 +752,7 @@ Document version IRIs are then `{current_iri}{YYYY-MM-DD}`, e.g. `https://rs.tdw
 
 1. For each List of Terms: set `list_of_terms_iri` in the vocabulary's `config.yaml` (Section 8.2). `process.py` then writes `general_configuration.yaml`, and `tdwg_docs_metadata_update.py` is run once for the document after each `process.py` run.
 2. For each of the other documents: edit `general_configuration.yaml` by hand (`docIri`, `versionDate`, `utcOffset`) and run `tdwg_docs_metadata_update.py`, once per document: about ten runs, more if the Quick Reference Guide pages are separate documents.
-3. Order: the standard record is created only by `process.py` (`process/process-vocabulary.md:124`), so at least one vocabulary must be processed before the non-List of Terms documents; otherwise the standard and standard version records must be created by hand.
+3. Order: complete the standard-record bootstrap in Section 8.2.1 before processing the non-List of Terms documents; `tdwg_docs_metadata_update.py` does not create a standard and requires its row to exist already (`process/document_metadata_processing/tdwg_docs_metadata_update.py:489-505`).
 4. With `https` document IRIs, the document handlers in `restxq.xqm` need the per-vocabulary protocol patch (Section 7.4).
 5. In this repository, the build must write the agreed IRIs into each document's header ("This version", "Latest version", "Previous version", citation), and the documents' `document_configuration.yaml` files move to rs.tdwg.org (or are kept in step with it).
 6. Add each document to `index/dereferencing-test.py`, and check that the HTML redirect goes to the published page.
@@ -803,7 +816,7 @@ Accept `https://rs.tdwg.org/` URLs (`94`) and check that `https` vocabularies re
 ## 14. Recommended implementation approach
 
 1. **Agree on per-vocabulary `https`** with the rs.tdwg.org maintainers and the TDWG Technical Architecture Group, and patch `process.py`, `restxq.xqm`, `html.xqm`, and `dereferencing-test.py` on the `bdq` branch (Section 7.4).
-2. **Deploy the five simple vocabularies** through `process.py` (Section 8), using a source branch and `bdq` as the derived, deployed branch, and verify them on `bdq-public-review.rs.tdwg.org`.
+2. **Deploy the five simple vocabularies** through `process.py` (Section 8), completing the standard-record bootstrap first (Section 8.2.1), using a source branch and `bdq` as the derived, deployed branch, and verify them on `bdq-public-review.rs.tdwg.org`.
 3. **Deploy `bdqffdq` as a hybrid** (Option C): term list via `process.py`, axioms file, merge step, and a route or redirect for the whole ontology. If the BDQ maintainers first replace the restriction ranges and `owl:AllDisjointClasses` axioms (Section 3.3), no axioms file is needed (Section 9.4).
 4. **Deploy `bdqtest` as a flat term list** with its GUID tables (T1), build the whole vocabulary from the rs.tdwg.org files, and plan T3 for full per-Test RDF.
 5. **Switch the BDQ build** to read from rs.tdwg.org, and freeze the files in `tg2/_review/vocabulary/`.
@@ -816,12 +829,13 @@ Accept `https://rs.tdwg.org/` URLs (`94`) and check that `https` vocabularies re
 1. Will the TDWG Technical Architecture Group accept `https` as a canonical protocol for new TDWG vocabularies, chosen per vocabulary, and will the rs.tdwg.org maintainers accept the corresponding patches to `process.py`, `restxq.xqm`, and `html.xqm` (Section 7.4)?
 2. Will the rs.tdwg.org maintainers accept routes that serve files directly (Options B1, C for the whole ontology, T3), a pattern rs.tdwg.org has not used before?
 3. For `bdqffdq`, should the ontology IRI `https://rs.tdwg.org/bdqffdq/terms` and the term list IRI `https://rs.tdwg.org/bdqffdq/terms/` denote the same resource, or should one change?
-4. What standard number will BDQ be assigned, and what are the final (non-`/draft/`) URLs for the BDQ documents on `bdq.tdwg.org`, to be used in `prepend_url` and in any redirect targets?
+4. What standard number will BDQ be assigned, and what are the final (non-`/draft/`) URLs for the BDQ documents on `bdq.tdwg.org`, to be used in `prepend_url` and in any redirect targets? The number blocks the first `process.py` run (Section 8.2.1; `process/process.py:983`).
 5. Should the structural nodes of `bdqtest` (Methods, Specifications, Arguments, information element nodes, Policies), now identified by non-resolvable `urn:uuid:` IRIs, be given resolvable rs.tdwg.org IRIs (Section 10.6)?
 6. For `bdqffdq`, will the BDQ maintainers replace the 15 restriction ranges with named-class ranges (and the `owl:AllDisjointClasses` axioms with pairwise `owl:disjointWith`), making the ontology free of blank nodes (Sections 3.3, 9.4)?
 7. What IRIs should the BDQ documents have, including the Quick Reference Guide and its index pages (Section 11.3)? The landing page is covered by the standard record.
 8. Should rs.tdwg.org support ontologies with blank nodes (class expressions) in general, for future versions of `bdqffdq` or for other standards (Section 3.3)?
 9. Should rs.tdwg.org CI adopt BDQ-specific semantic validation (SHACL/SPARQL checks), or should that remain in this repository, reading from rs.tdwg.org?
+10. For public review, are the generated `recommended` standard-version status and version date, and any `recommended` term, vocabulary, and term-list versions, acceptable on `bdq-public-review.rs.tdwg.org`, or do they need adjusting (Section 8.2.1; `process/process.py:1110`)?
 
 ---
 
@@ -829,7 +843,7 @@ Accept `https://rs.tdwg.org/` URLs (`94`) and check that `https` vocabularies re
 
 rs.tdwg.org can be the source of truth for all BDQ vocabularies, with differing degrees of fit:
 
-- The five simple vocabularies fit the standard `process.py` pipeline once small `https` patches are made and some data problems are fixed.
+- The five simple vocabularies fit the standard `process.py` pipeline, but still need the Section 8 preparation: column-mapping additions (8.3), data fixes (8.4), version-date choices (8.5), HTML redirects (8.6), and the standard-record bootstrap (8.2.1).
 - `bdqffdq` fits as a hybrid: an ordinary term list for the per-term metadata, which is almost all of the ontology, plus a small axioms file for the restriction ranges and disjointness axioms, merged to produce the complete ontology. If the restriction ranges, which appear to be unintended, are replaced by named-class ranges and the disjointness axioms by pairwise `owl:disjointWith`, the ontology has no blank nodes and the term list alone is enough.
 - `bdqtest` can be versioned as a flat term list with its GUID tables in rs.tdwg.org, but full-fidelity per-Test RDF from rs.tdwg.org needs either generated per-Test files served by a new route (recommended target) or an extension of the serializer.
 
