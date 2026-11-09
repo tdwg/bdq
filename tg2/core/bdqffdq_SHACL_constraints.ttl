@@ -785,6 +785,26 @@ bdqs:ResponseShape
         sh:message  "Response SHOULD have exactly one bdqffdq:hasResponseStatus."@en ;
     ] ;
 
+    # Response.result: at most one, either a bdqffdq:ResponseResult code
+    # (hasResponseResult) or a literal (hasResponseResultValue), not both (§2.4.1).
+    # The allowed codes for each Response subclass are constrained with sh:in below.
+    sh:property [
+        sh:path     bdqffdq:hasResponseResult ;
+        sh:maxCount 1 ;
+        sh:class    bdqffdq:ResponseResult ;
+        sh:severity sh:Warning ;
+        sh:message  "Response SHOULD have at most one bdqffdq:hasResponseResult."@en ;
+    ] ;
+
+    sh:property [
+        sh:path     bdqffdq:hasResponseResultValue ;
+        sh:maxCount 1 ;
+        sh:nodeKind sh:Literal ;
+        sh:severity sh:Warning ;
+        sh:message  "Response SHOULD have at most one bdqffdq:hasResponseResultValue, which MUST be a literal."@en ;
+    ] ;
+
+
     sh:property [
         sh:path     bdqffdq:hasResponseComment ;
         sh:minCount 1 ;
@@ -792,6 +812,26 @@ bdqs:ResponseShape
         sh:datatype xsd:string ;
         sh:severity sh:Warning ;
         sh:message  "Response SHOULD have exactly one bdqffdq:hasResponseComment."@en ;
+    ] .
+
+
+# Severity is a property of the shape, so this SPARQL constraint has its own shape.
+bdqs:ResponseResultExclusiveShape
+    a sh:NodeShape ;
+    sh:targetClass bdqffdq:Response ;
+    sh:severity sh:Warning ;
+    sh:name "Response result: code or literal"@en ;
+    sh:description "Response.result is either a bdqffdq:ResponseResult code (hasResponseResult) or a literal (hasResponseResultValue), not both; see §2.4.1."@en ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message  "Response SHOULD NOT have both bdqffdq:hasResponseResult and bdqffdq:hasResponseResultValue: Response.result is either a categorical code or a literal (§2.4.1)."@en ;
+        sh:select """
+            PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
+            SELECT $this WHERE {
+                $this bdqffdq:hasResponseResult ?code .
+                $this bdqffdq:hasResponseResultValue ?value .
+            }
+        """ ;
     ] .
 
 
