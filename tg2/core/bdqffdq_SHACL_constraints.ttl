@@ -994,9 +994,9 @@ bdqs:DataQualityReportShape
 bdqs:DataQualityNeedLabelCaseShape
     a sh:NodeShape ;
     sh:targetClass bdqffdq:DataQualityNeed ;
+    sh:severity sh:Warning ;
     sh:sparql [
         a sh:SPARQLConstraint ;
-        sh:severity sh:Warning ;
         sh:message  "DataQualityNeed rdfs:label SHOULD be ALL_UPPER_CASE with underscores separating components, e.g. VALIDATION_COUNTRYCODE_STANDARD (§3.1.2)."@en ;
         sh:select   """
             PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
@@ -1017,9 +1017,9 @@ bdqs:DataQualityNeedLabelCaseShape
 bdqs:ValidationResponseRunHasResultShape
     a sh:NodeShape ;
     sh:targetClass bdqffdq:ValidationResponse ;
+    sh:severity sh:Warning ;
     sh:sparql [
         a sh:SPARQLConstraint ;
-        sh:severity sh:Warning ;
         sh:message  "ValidationResponse with status RUN_HAS_RESULT SHOULD carry bdqffdq:hasResponseResult (§4.4.4.2)."@en ;
         sh:select   """
             PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
@@ -1037,9 +1037,9 @@ bdqs:ValidationResponseRunHasResultShape
 bdqs:IssueResponseRunHasResultShape
     a sh:NodeShape ;
     sh:targetClass bdqffdq:IssueResponse ;
+    sh:severity sh:Warning ;
     sh:sparql [
         a sh:SPARQLConstraint ;
-        sh:severity sh:Warning ;
         sh:message  "IssueResponse with status RUN_HAS_RESULT SHOULD carry bdqffdq:hasResponseResult."@en ;
         sh:select   """
             PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
@@ -1057,9 +1057,9 @@ bdqs:IssueResponseRunHasResultShape
 bdqs:MeasurementResponseRunHasResultShape
     a sh:NodeShape ;
     sh:targetClass bdqffdq:MeasurementResponse ;
+    sh:severity sh:Warning ;
     sh:sparql [
         a sh:SPARQLConstraint ;
-        sh:severity sh:Warning ;
         sh:message  "MeasurementResponse with status RUN_HAS_RESULT SHOULD carry bdqffdq:hasResponseResult (categorical) or bdqffdq:hasResponseResultValue (numeric) (§4.4.4.3)."@en ;
         sh:select   """
             PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
@@ -1078,9 +1078,9 @@ bdqs:MeasurementResponseRunHasResultShape
 bdqs:AmendmentResponseHasResultValueShape
     a sh:NodeShape ;
     sh:targetClass bdqffdq:AmendmentResponse ;
+    sh:severity sh:Warning ;
     sh:sparql [
         a sh:SPARQLConstraint ;
-        sh:severity sh:Warning ;
         sh:message  "AmendmentResponse with status AMENDED or FILLED_IN SHOULD carry bdqffdq:hasResponseResultValue."@en ;
         sh:select   """
             PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
@@ -1099,9 +1099,9 @@ bdqs:AmendmentResponseHasResultValueShape
 bdqs:AmendmentResponseNotAmendedNoValueShape
     a sh:NodeShape ;
     sh:targetClass bdqffdq:AmendmentResponse ;
+    sh:severity sh:Warning ;
     sh:sparql [
         a sh:SPARQLConstraint ;
-        sh:severity sh:Warning ;
         sh:message  "AmendmentResponse with status NOT_AMENDED SHOULD NOT carry bdqffdq:hasResponseResultValue."@en ;
         sh:select   """
             PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
@@ -1119,9 +1119,9 @@ bdqs:AmendmentResponseNotAmendedNoValueShape
 bdqs:ResponsePrerequisiteNotMetShape
     a sh:NodeShape ;
     sh:targetClass bdqffdq:Response ;
+    sh:severity sh:Warning ;
     sh:sparql [
         a sh:SPARQLConstraint ;
-        sh:severity sh:Warning ;
         sh:message  "Response with status INTERNAL_PREREQUISITES_NOT_MET or EXTERNAL_PREREQUISITES_NOT_MET SHOULD NOT carry bdqffdq:hasResponseResult."@en ;
         sh:select   """
             PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
@@ -1141,9 +1141,9 @@ bdqs:ResponsePrerequisiteNotMetShape
 bdqs:SpecificationWithDefaultsMustHaveArgumentShape
     a sh:NodeShape ;
     sh:targetClass bdqffdq:Specification ;
+    sh:severity sh:Violation ;
     sh:sparql [
         a sh:SPARQLConstraint ;
-        sh:severity sh:Violation ;
         sh:message  "Specification with bdqffdq:hasAuthoritiesDefaults MUST have at least one bdqffdq:hasArgument when a Parameter is referenced (§3.1.4)."@en ;
         sh:select   """
             PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
@@ -1164,9 +1164,9 @@ bdqs:SpecificationWithDefaultsMustHaveArgumentShape
 bdqs:ImprovementTargetHasTargetShape
     a sh:NodeShape ;
     sh:targetClass bdqffdq:ImprovementTarget ;
+    sh:severity sh:Warning ;
     sh:sparql [
         a sh:SPARQLConstraint ;
-        sh:severity sh:Warning ;
         sh:message  "ImprovementTarget SHOULD have at least one of bdqffdq:targetedValidation, bdqffdq:targetedMeasure, or bdqffdq:targetedIssue (§4.4.2.8)."@en ;
         sh:select   """
             PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
@@ -1189,9 +1189,9 @@ bdqs:ImprovementTargetHasTargetShape
 bdqs:ActedUponAggregatesResponsesShape
     a sh:NodeShape ;
     sh:targetClass bdqffdq:ActedUpon ;
+    sh:severity sh:Warning ;
     sh:sparql [
         a sh:SPARQLConstraint ;
-        sh:severity sh:Warning ;
         sh:message  "bdqffdq:ActedUpon that carries bdqffdq:aggregatesResponsesFrom SHOULD also carry bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes (§3.1.2.1)."@en ;
         sh:select   """
             PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
@@ -1212,9 +1212,9 @@ bdqs:ActedUponAggregatesResponsesShape
 bdqs:ValidationResponseChainShape
     a sh:NodeShape ;
     sh:targetClass bdqffdq:ValidationResponse ;
+    sh:severity sh:Warning ;
     sh:sparql [
         a sh:SPARQLConstraint ;
-        sh:severity sh:Warning ;
         sh:message  "The chain ValidationResponse ← producesResponse – Implementation – usesSpecification → Specification ← hasSpecification – ValidationMethod – forValidation → Validation SHOULD resolve to exactly one Validation (§3.2)."@en ;
         sh:select   """
             PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
@@ -1250,9 +1250,9 @@ bdqs:ValidationResponseChainShape
 bdqs:IssueResponseChainShape
     a sh:NodeShape ;
     sh:targetClass bdqffdq:IssueResponse ;
+    sh:severity sh:Warning ;
     sh:sparql [
         a sh:SPARQLConstraint ;
-        sh:severity sh:Warning ;
         sh:message  "The chain IssueResponse ← producesResponse – Implementation – usesSpecification → Specification ← hasSpecification – IssueMethod – forIssue → Issue SHOULD resolve to exactly one Issue (§3.2)."@en ;
         sh:select   """
             PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
@@ -1288,9 +1288,9 @@ bdqs:IssueResponseChainShape
 bdqs:MeasurementResponseChainShape
     a sh:NodeShape ;
     sh:targetClass bdqffdq:MeasurementResponse ;
+    sh:severity sh:Warning ;
     sh:sparql [
         a sh:SPARQLConstraint ;
-        sh:severity sh:Warning ;
         sh:message  "The chain MeasurementResponse ← producesResponse – Implementation – usesSpecification → Specification ← hasSpecification – MeasurementMethod – forMeasure → Measure SHOULD resolve to exactly one Measure (§3.2)."@en ;
         sh:select   """
             PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
@@ -1326,9 +1326,9 @@ bdqs:MeasurementResponseChainShape
 bdqs:AmendmentResponseChainShape
     a sh:NodeShape ;
     sh:targetClass bdqffdq:AmendmentResponse ;
+    sh:severity sh:Warning ;
     sh:sparql [
         a sh:SPARQLConstraint ;
-        sh:severity sh:Warning ;
         sh:message  "The chain AmendmentResponse ← producesResponse – Implementation – usesSpecification → Specification ← hasSpecification – AmendmentMethod – forAmendment → Amendment SHOULD resolve to exactly one Amendment (§3.2)."@en ;
         sh:select   """
             PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
