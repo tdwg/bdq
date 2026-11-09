@@ -616,7 +616,7 @@ terms_sorted_by_localname = terms_df.iloc[terms_df.term_localName.str.lower().ar
 
 definitionTable = build_term_key(term_concept_dictionary,terms_sorted_by_localname)
 # Range returned as an anonomus class id, present an example value as shown in list
-definitionTable = re.sub("[a-z0-9]{35}","[ owl:someValuesFrom bdqffdq:forValidation ]",definitionTable)
+definitionTable = re.sub("[a-z0-9]{35}","[ owl:onProperty bdqffdq:forValidation ; owl:someValuesFrom bdqffdq:Validation ]",definitionTable)
 # Load the document configuration YAML file from its local location.  For a draft standard, database is not available from rs.tdwg.org
 # load from local file
 with open(document_configuration_yaml_file) as dcfy:
@@ -660,7 +660,8 @@ text = text + "- [Different From Axioms (normative)](#42-different-from-axioms-n
 text = text + "- [General Axioms (normative)](#43-general-axioms-normative)\n"
 text = text + "\n## 4 Vocabulary Extension (normative)\n"
 text = text + "\n### 4.1 Range Axioms (normative)\n"
-sparql = prefixes + "SELECT ?subject ?type ?range ?restriction ?restrictedRange WHERE { ?subject rdf:type ?type . ?subject rdfs:range ?range. optional { ?range a owl:Restriction . ?range owl:onProperty ?restrictedRange . ?range  ?restriction ?x . FILTER ( ?restriction != owl:onProperty && ?restriction != rdf:type  ) } } ORDER BY ?type ?subject "
+# ?onProperty is the restricted property, ?restriction the restriction predicate (e.g. owl:someValuesFrom), ?filler its class.
+sparql = prefixes + "SELECT ?subject ?type ?range ?restriction ?onProperty ?filler WHERE { ?subject rdf:type ?type . ?subject rdfs:range ?range. optional { ?range a owl:Restriction . ?range owl:onProperty ?onProperty . ?range  ?restriction ?filler . FILTER ( ?restriction != owl:onProperty && ?restriction != rdf:type  ) } } ORDER BY ?type ?subject "
 if debug: 
    print(sparql)
 queryResult = graph.query(sparql)
@@ -675,7 +676,7 @@ for r in queryResult :
 	text = text + "| Type | {} |\n".format(r.type.replace("http://www.w3.org/2002/07/owl#","owl:"))
 	if (r.range) :
 		if (r.restriction) :
-			text = text + "| Range | [ {} {} ] |\n".format(r.restriction.replace("http://www.w3.org/2002/07/owl#","owl:"), r.restrictedRange.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:"))
+			text = text + "| Range | [ owl:onProperty {} ; {} {} ] |\n".format(r.onProperty.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:"), r.restriction.replace("http://www.w3.org/2002/07/owl#","owl:"), r.filler.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:"))
 		else :
 			text = text + "| Range | {} |\n".format(r.range.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:").replace("http://www.w3.org/2001/XMLSchema#","xsd:"))
 	text = text + "\n\n"

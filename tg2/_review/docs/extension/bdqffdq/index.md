@@ -140,7 +140,7 @@ The terminology used to describe the terms in this vocabulary follows the [TDWG 
 | ------------ | --------- | ---------- | ------- |
 | Name (rdf:value) | normative | Idiomatic property used for structured values. | [https://rs.tdwg.org/ bdqffdq/terms/ COMPLETE](https://rs.tdwg.org/bdqffdq/terms/COMPLETE) |
 | Type (rdf:type) | normative | The subject is an instance of a class. | [https://rs.tdwg.org/ bdqffdq/terms/ ResponseResult](https://rs.tdwg.org/bdqffdq/terms/ResponseResult) |
-| Range (rdfs:range) | normative | A range of the subject property. In present context: shown as either a simple range in the form of a class, or as an owl:restriction. | [ owl:someValuesFrom bdqffdq:forValidation ] |
+| Range (rdfs:range) | normative | A range of the subject property. In present context: shown as either a simple range in the form of a class, or as an owl:restriction. | [ owl:onProperty bdqffdq:forValidation ; owl:someValuesFrom bdqffdq:Validation ] |
 | DifferentFrom (owl:differentFrom) | normative | The property that determines that two given individuals are different. | [https://rs.tdwg.org/ bdqffdq/terms/ NOT_COMPLETE](https://rs.tdwg.org/bdqffdq/terms/NOT_COMPLETE) |
 | Label (rdfs:label) | normative | A human-readable name for the subject. TDWG SDS: A a word or short phrase that serves as a human-readable name for the term. | COMPLETE |
 
@@ -205,7 +205,7 @@ The terminology used to describe the terms in this vocabulary follows the [TDWG 
 | -------- | ----- |
 | Name | bdqffdq:forAmendment |
 | Type | owl:ObjectProperty |
-| Range | [ owl:someValuesFrom bdqffdq:forAmendment ] |
+| Range | [ owl:onProperty bdqffdq:forAmendment ; owl:someValuesFrom bdqffdq:Amendment ] |
 
 
 #### forIssue
@@ -214,7 +214,7 @@ The terminology used to describe the terms in this vocabulary follows the [TDWG 
 | -------- | ----- |
 | Name | bdqffdq:forIssue |
 | Type | owl:ObjectProperty |
-| Range | [ owl:someValuesFrom bdqffdq:forIssue ] |
+| Range | [ owl:onProperty bdqffdq:forIssue ; owl:someValuesFrom bdqffdq:Issue ] |
 
 
 #### forMeasure
@@ -223,7 +223,7 @@ The terminology used to describe the terms in this vocabulary follows the [TDWG 
 | -------- | ----- |
 | Name | bdqffdq:forMeasure |
 | Type | owl:ObjectProperty |
-| Range | [ owl:someValuesFrom bdqffdq:forMeasure ] |
+| Range | [ owl:onProperty bdqffdq:forMeasure ; owl:someValuesFrom bdqffdq:Measure ] |
 
 
 #### forValidation
@@ -232,7 +232,7 @@ The terminology used to describe the terms in this vocabulary follows the [TDWG 
 | -------- | ----- |
 | Name | bdqffdq:forValidation |
 | Type | owl:ObjectProperty |
-| Range | [ owl:someValuesFrom bdqffdq:forValidation ] |
+| Range | [ owl:onProperty bdqffdq:forValidation ; owl:someValuesFrom bdqffdq:Validation ] |
 
 
 #### hasArgument
@@ -250,7 +250,7 @@ The terminology used to describe the terms in this vocabulary follows the [TDWG 
 | -------- | ----- |
 | Name | bdqffdq:hasCriterion |
 | Type | owl:ObjectProperty |
-| Range | [ owl:someValuesFrom bdqffdq:hasCriterion ] |
+| Range | [ owl:onProperty bdqffdq:hasCriterion ; owl:someValuesFrom bdqffdq:Criterion ] |
 
 
 #### hasDataQualityDimension
@@ -259,7 +259,7 @@ The terminology used to describe the terms in this vocabulary follows the [TDWG 
 | -------- | ----- |
 | Name | bdqffdq:hasDataQualityDimension |
 | Type | owl:ObjectProperty |
-| Range | [ owl:someValuesFrom bdqffdq:hasDataQualityDimension ] |
+| Range | [ owl:onProperty bdqffdq:hasDataQualityDimension ; owl:someValuesFrom bdqffdq:DataQualityDimension ] |
 
 
 #### hasEnhancement
@@ -268,7 +268,7 @@ The terminology used to describe the terms in this vocabulary follows the [TDWG 
 | -------- | ----- |
 | Name | bdqffdq:hasEnhancement |
 | Type | owl:ObjectProperty |
-| Range | [ owl:someValuesFrom bdqffdq:hasEnhancement ] |
+| Range | [ owl:onProperty bdqffdq:hasEnhancement ; owl:someValuesFrom bdqffdq:Enhancement ] |
 
 
 #### hasInformationElement
@@ -295,7 +295,7 @@ The terminology used to describe the terms in this vocabulary follows the [TDWG 
 | -------- | ----- |
 | Name | bdqffdq:hasSpecification |
 | Type | owl:ObjectProperty |
-| Range | [ owl:someValuesFrom bdqffdq:hasSpecification ] |
+| Range | [ owl:onProperty bdqffdq:hasSpecification ; owl:someValuesFrom bdqffdq:Specification ] |
 
 
 #### hasUseCase
@@ -304,7 +304,7 @@ The terminology used to describe the terms in this vocabulary follows the [TDWG 
 | -------- | ----- |
 | Name | bdqffdq:hasUseCase |
 | Type | owl:ObjectProperty |
-| Range | [ owl:someValuesFrom bdqffdq:hasUseCase ] |
+| Range | [ owl:onProperty bdqffdq:hasUseCase ; owl:someValuesFrom bdqffdq:UseCase ] |
 
 
 #### implementedBy
@@ -313,7 +313,7 @@ The terminology used to describe the terms in this vocabulary follows the [TDWG 
 | -------- | ----- |
 | Name | bdqffdq:implementedBy |
 | Type | owl:ObjectProperty |
-| Range | [ owl:someValuesFrom bdqffdq:implementedBy ] |
+| Range | [ owl:onProperty bdqffdq:implementedBy ; owl:someValuesFrom bdqffdq:Mechanism ] |
 
 
 #### improvedBy
@@ -322,7 +322,7 @@ The terminology used to describe the terms in this vocabulary follows the [TDWG 
 | -------- | ----- |
 | Name | bdqffdq:improvedBy |
 | Type | owl:ObjectProperty |
-| Range | [ owl:someValuesFrom bdqffdq:improvedBy ] |
+| Range | [ owl:onProperty bdqffdq:improvedBy ; owl:someValuesFrom bdqffdq:Amendment ] |
 
 
 #### targetedIssue
@@ -331,7 +331,7 @@ The terminology used to describe the terms in this vocabulary follows the [TDWG 
 | -------- | ----- |
 | Name | bdqffdq:targetedIssue |
 | Type | owl:ObjectProperty |
-| Range | [ owl:someValuesFrom bdqffdq:targetedIssue ] |
+| Range | [ owl:onProperty bdqffdq:targetedIssue ; owl:someValuesFrom bdqffdq:Issue ] |
 
 
 #### targetedMeasure
@@ -340,7 +340,7 @@ The terminology used to describe the terms in this vocabulary follows the [TDWG 
 | -------- | ----- |
 | Name | bdqffdq:targetedMeasure |
 | Type | owl:ObjectProperty |
-| Range | [ owl:someValuesFrom bdqffdq:targetedMeasure ] |
+| Range | [ owl:onProperty bdqffdq:targetedMeasure ; owl:someValuesFrom bdqffdq:Measure ] |
 
 
 #### targetedValidation
@@ -349,7 +349,7 @@ The terminology used to describe the terms in this vocabulary follows the [TDWG 
 | -------- | ----- |
 | Name | bdqffdq:targetedValidation |
 | Type | owl:ObjectProperty |
-| Range | [ owl:someValuesFrom bdqffdq:targetedValidation ] |
+| Range | [ owl:onProperty bdqffdq:targetedValidation ; owl:someValuesFrom bdqffdq:Validation ] |
 
 
 #### usesSpecification
@@ -358,7 +358,7 @@ The terminology used to describe the terms in this vocabulary follows the [TDWG 
 | -------- | ----- |
 | Name | bdqffdq:usesSpecification |
 | Type | owl:ObjectProperty |
-| Range | [ owl:someValuesFrom bdqffdq:usesSpecification ] |
+| Range | [ owl:onProperty bdqffdq:usesSpecification ; owl:someValuesFrom bdqffdq:Specification ] |
 
 
 ### 4.2 Different From Axioms (normative)
