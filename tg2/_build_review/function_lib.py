@@ -380,7 +380,7 @@ def createLinks(text):
             return '<a href="' + match.group(1)[:-1] + '">' + match.group(1)[:-1] + '</a>.'
         return '<a href="' + match.group(1) + '">' + match.group(1) + '</a>'
 
-    pattern = '(https?://[^\s,;\)"<]*)'
+    pattern = r'(https?://[^\s,;\)"<]*)'
     result = re.sub(pattern, repl, text)
     return result
 
@@ -400,7 +400,7 @@ def convert_link(text_with_urls):
         url = inputstring.group()
         return "<a href=\"{}\">{}</a>".format(url, url)
 
-    regx = "(http[s]?://[\w\d:#@%/;$()~_?\+-;=\\\.&]*)(?<![\)\.,])"
+    regx = r"(http[s]?://[\w\d:#@%/;$()~_?\+-;=\\.&]*)(?<![\)\.,])"
     return re.sub(regx, _handle_matched, text_with_urls)
 
 # Hack the code taken from the terms.tmpl template to insert the HTML necessary to make the semicolon-separated
