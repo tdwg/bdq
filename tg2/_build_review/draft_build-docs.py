@@ -348,7 +348,7 @@ for templatePath, document in directories.items() :
 
 		text = ""
 		text = text + "### 6.1 Class terms (normative)\n"
-		sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment (GROUP_CONCAT(?parent; SEPARATOR='; ') AS ?parents)  WHERE {  ?subject a owl:Class . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . OPTIONAL { ?subject rdfs:subClassOf ?parent } . OPTIONAL { ?subject rdfs:comment ?comment } . } GROUP BY ?subject ?prefLabel ?definition ?comment ORDER BY ?subject"
+		sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment (GROUP_CONCAT(?parent; SEPARATOR='; ') AS ?parents)  WHERE {  ?subject a owl:Class . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . OPTIONAL { ?subject rdfs:subClassOf ?parent . FILTER ( isIRI(?parent) ) } . OPTIONAL { ?subject rdfs:comment ?comment } . } GROUP BY ?subject ?prefLabel ?definition ?comment ORDER BY ?subject"
 		queryResult = graph.query(sparql)
 		for r in queryResult : 
 			entity = r.subject
@@ -376,6 +376,11 @@ for templatePath, document in directories.items() :
 			text = text + "\n********************\n\n"
 		
 		text = text + "### 6.2 ObjectProperty terms (normative)\n"
+		# Restrictions on classes that constrain the values of each property (in the Vocabulary Extension).
+		restrictionsByProperty = {}
+		sparql = prefixes + "SELECT ?class ?onProperty ?restriction ?filler WHERE { ?class rdfs:subClassOf ?r . ?r a owl:Restriction ; owl:onProperty ?onProperty ; ?restriction ?filler . FILTER ( ?restriction != owl:onProperty && ?restriction != rdf:type ) } ORDER BY ?onProperty ?class"
+		for rr in graph.query(sparql) :
+			restrictionsByProperty.setdefault(str(rr.onProperty), []).append((str(rr['class']).replace("https://rs.tdwg.org/bdqffdq/terms/",""), str(rr.restriction).replace("http://www.w3.org/2002/07/owl#","owl:"), str(rr.filler).replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:")))
 		sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment ?range ?restrictedRange ?restriction  (GROUP_CONCAT(?parent; SEPARATOR='; ') AS ?parents)  WHERE {  ?subject a owl:ObjectProperty . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . OPTIONAL { ?subject rdfs:subPropertyOf ?parent } . OPTIONAL { ?subject rdfs:range ?range . optional { ?range a owl:Restriction . ?range owl:onProperty ?restrictedRange . ?range  ?restriction ?x . FILTER ( ?restriction != owl:onProperty && ?restriction != rdf:type  ) }  } . OPTIONAL { ?subject rdfs:comment ?comment } . } GROUP BY ?subject ?prefLabel ?definition ?comment ORDER BY ?subject"
 		queryResult = graph.query(sparql)
 		for r in queryResult : 
@@ -401,7 +406,9 @@ for templatePath, document in directories.items() :
 				if (r.restriction) :
 					text = text + "- [Range](../../extension/bdqffdq/index.md#{0}) [ {1} {2} ]\n".format(term,r.restriction.replace("http://www.w3.org/2002/07/owl#","owl:"), r.restrictedRange.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:"))
 				else :
-					text = text + "- [Range](../../extension/bdqffdq/index.md{0}) {1}\n".format(term,r.range.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:"))
+					text = text + "- [Range](../../extension/bdqffdq/index.md#{0}) {1}\n".format(term,r.range.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:"))
+			for (restrictedClass, restriction, filler) in restrictionsByProperty.get(str(r.subject), []) :
+				text = text + "- [Restriction](../../extension/bdqffdq/index.md#{0}) on bdqffdq:{0}: [ owl:onProperty {1} ; {2} {3} ]\n".format(restrictedClass, entity, restriction, filler)
 			# text = text + "- Notes: {}\n".format(r.comment.replace("\n\n","\n").replace("\n","  \n"))
 			text = text + "\n********************\n\n"
 		

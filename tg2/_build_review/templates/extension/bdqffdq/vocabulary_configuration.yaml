@@ -44,13 +44,19 @@ superclass:
   term: rdfs:subClassOf
   normative: 'true'
 range: 
-  append: "shown as either a simple range in the form of a class, or as an owl:restriction."
+  append: "a named class or datatype that every value of the property is an instance of."
   label: Range
   term: rdfs:range
   normative: 'true'
-differentFrom: 
-  label: DifferentFrom
-  term: owl:differentFrom
+restriction: 
+  append: "a restriction on the subject class, in the form [ owl:onProperty P ; owl:allValuesFrom C ]: for each instance of the class, every value of the property P is an instance of the class C."
+  label: SubClass Of (restriction)
+  term: rdfs:subClassOf
+  normative: 'true'
+allDifferent: 
+  append: "the named individuals listed are pairwise different (distinct codes)."
+  label: All Different
+  term: owl:AllDifferent
   normative: 'true'
 
 # Currently unused on this page

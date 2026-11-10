@@ -115,7 +115,7 @@ graph.parse(inputTermsOwlFilename, format="ttl")
 # TODO: range, differentFrom 
 # column_list = ['term_iri', 'iri', 'term_localName', 'prefLabel', 'label', 'comments', 'definition', 'rdf_type', 'superclass', 'range', 'differentFrom']
 column_list = ['term_iri', 'iri', 'term_localName', 'prefLabel', 'label', 'comments', 'definition', 'rdf_type', 'superclass','scopeNote']
-sparql = prefixes + "SELECT DISTINCT (str(?subject) as ?term_iri) (str(?subject) as ?iri) (?subject as ?term_localName)  ?prefLabel ?label ?comment ?definition ?rdf_type (GROUP_CONCAT(?parent; SEPARATOR='; ') AS ?parents) ?scopeNote WHERE {  ?subject a owl:Class . ?subject rdfs:comment ?definition . ?subject skos:prefLabel ?prefLabel . ?subject rdf:type ?rdf_type . ?subject rdfs:label ?label . OPTIONAL { ?subject rdfs:subClassOf ?parent } . OPTIONAL { ?subject skos:note ?comment } . OPTIONAL { ?subject skos:scopeNote ?scopeNote }  } GROUP BY ?subject ?prefLabel ?label ?comment ?definition ?rdf_type ?scopeNote ORDER BY ?subject"
+sparql = prefixes + "SELECT DISTINCT (str(?subject) as ?term_iri) (str(?subject) as ?iri) (?subject as ?term_localName)  ?prefLabel ?label ?comment ?definition ?rdf_type (GROUP_CONCAT(?parent; SEPARATOR='; ') AS ?parents) ?scopeNote WHERE {  ?subject a owl:Class . ?subject rdfs:comment ?definition . ?subject skos:prefLabel ?prefLabel . ?subject rdf:type ?rdf_type . ?subject rdfs:label ?label . OPTIONAL { ?subject rdfs:subClassOf ?parent . FILTER ( isIRI(?parent) ) } . OPTIONAL { ?subject skos:note ?comment } . OPTIONAL { ?subject skos:scopeNote ?scopeNote }  } GROUP BY ?subject ?prefLabel ?label ?comment ?definition ?rdf_type ?scopeNote ORDER BY ?subject"
 queryResult = graph.query(sparql)
 
 terms_df = pd.DataFrame(queryResult, columns = column_list)
@@ -205,7 +205,7 @@ text = ""
 # 
 # text = text + "\n## 4 Vocabulary\n"
 # text = text + "\n### 4.1 Class terms\n"
-# sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment (GROUP_CONCAT(?parent; SEPARATOR='; ') AS ?parents)  WHERE {  ?subject a owl:Class . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . OPTIONAL { ?subject rdfs:subClassOf ?parent } . OPTIONAL { ?subject rdfs:comment ?comment } } GROUP BY ?subject ?prefLabel ?definition ?comment ORDER BY ?subject"
+# sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment (GROUP_CONCAT(?parent; SEPARATOR='; ') AS ?parents)  WHERE {  ?subject a owl:Class . ?subject skos:definition ?definition . ?subject skos:prefLabel ?prefLabel . OPTIONAL { ?subject rdfs:subClassOf ?parent . FILTER ( isIRI(?parent) ) } . OPTIONAL { ?subject rdfs:comment ?comment } } GROUP BY ?subject ?prefLabel ?definition ?comment ORDER BY ?subject"
 # queryResult = graph.query(sparql)
 # for r in queryResult : 
 # 	entity = r.subject
@@ -364,7 +364,7 @@ graph = rdflib.Graph()
 graph.parse(inputTermsOwlFilename, format="ttl")
 #column_list = ['iri', 'term_localName', 'prefLabel', 'label', 'comments', 'definition', 'rdf_type', 'organized_in','issued','status','term_iri','flags']
 column_list = ['term_iri', 'iri', 'term_localName', 'prefLabel', 'label', 'comments', 'definition', 'rdf_type', 'superclass', 'scopeNote']
-sparql = prefixes + "SELECT DISTINCT (str(?subject) as ?term_iri) (str(?subject) as ?iri) (?subject as ?term_localName)  ?prefLabel ?label ?comment ?definition ?rdf_type (GROUP_CONCAT(?parent; SEPARATOR='; ') AS ?parents) ?scopeNote WHERE {  ?subject a owl:Class . ?subject rdfs:comment ?definition . ?subject skos:prefLabel ?prefLabel . ?subject rdf:type ?rdf_type . ?subject rdfs:label ?label . OPTIONAL { ?subject rdfs:subClassOf ?parent } . OPTIONAL { ?subject skos:note ?comment }  OPTIONAL { ?subject skos:scopeNote ?scopeNote }  } GROUP BY ?subject ?prefLabel ?label ?comment ?definition ?rdf_type ?scopeNote ORDER BY ?subject"
+sparql = prefixes + "SELECT DISTINCT (str(?subject) as ?term_iri) (str(?subject) as ?iri) (?subject as ?term_localName)  ?prefLabel ?label ?comment ?definition ?rdf_type (GROUP_CONCAT(?parent; SEPARATOR='; ') AS ?parents) ?scopeNote WHERE {  ?subject a owl:Class . ?subject rdfs:comment ?definition . ?subject skos:prefLabel ?prefLabel . ?subject rdf:type ?rdf_type . ?subject rdfs:label ?label . OPTIONAL { ?subject rdfs:subClassOf ?parent . FILTER ( isIRI(?parent) ) } . OPTIONAL { ?subject skos:note ?comment }  OPTIONAL { ?subject skos:scopeNote ?scopeNote }  } GROUP BY ?subject ?prefLabel ?label ?comment ?definition ?rdf_type ?scopeNote ORDER BY ?subject"
 queryResult = graph.query(sparql)
 
 terms_df = pd.DataFrame(queryResult, columns = column_list)
@@ -460,7 +460,7 @@ for r in queryResult :
 
 text = text + "\n## 4 Vocabulary (normative)\n"
 text = text + "\n### 4.1 Class terms (normative)\n"
-sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment (GROUP_CONCAT(?parent; SEPARATOR='; ') AS ?parents)  ?scopeNote WHERE {  ?subject a owl:Class . ?subject rdfs:comment ?definition . ?subject skos:prefLabel ?prefLabel . OPTIONAL { ?subject rdfs:subClassOf ?parent } . OPTIONAL { ?subject skos:note ?comment } . OPTIONAL { ?subject skos:scopeNote ?scopeNote }  } GROUP BY ?subject ?prefLabel ?definition ?comment ORDER BY ?subject ?scopeNote"
+sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment (GROUP_CONCAT(?parent; SEPARATOR='; ') AS ?parents)  ?scopeNote WHERE {  ?subject a owl:Class . ?subject rdfs:comment ?definition . ?subject skos:prefLabel ?prefLabel . OPTIONAL { ?subject rdfs:subClassOf ?parent . FILTER ( isIRI(?parent) ) } . OPTIONAL { ?subject skos:note ?comment } . OPTIONAL { ?subject skos:scopeNote ?scopeNote }  } GROUP BY ?subject ?prefLabel ?definition ?comment ORDER BY ?subject ?scopeNote"
 queryResult = graph.query(sparql)
 for r in queryResult : 
 	entity = r.subject
@@ -605,18 +605,30 @@ with open(vocabulary_configuration_yaml_file) as vcfy:
 # Build definition table
 graph = rdflib.Graph()
 graph.parse(inputTermsOwlFilename, format="ttl")
-column_list = ['term_localName', 'rdf_type', 'range', 'differentFrom', 'label']
-# Obtain something similar to reported data to produce key
-sparql = prefixes + "SELECT distinct (?subject as ?term_localName) ?type ?range ?differentFrom ?label WHERE { ?subject rdf:type ?type . FILTER(?type = bdqffdq:ResponseResult) . ?subject rdfs:label ?label . optional { ?subject rdfs:range ?range. } .  ?subject a owl:NamedIndividual . ?subject a ?type . FILTER ( ?type != owl:NamedIndividual) .  ?subject owl:differentFrom ?differentFrom  . optional { ?range a owl:Restriction . ?range owl:onProperty ?restrictedRange . ?range  ?restriction ?x .  } } ORDER BY ?type ?subject"
-queryResult = graph.query(sparql)
-
-terms_df = pd.DataFrame(queryResult, columns = column_list)
-terms_sorted_by_label = terms_df.sort_values(by='label')
-terms_sorted_by_localname = terms_df.iloc[terms_df.term_localName.str.lower().argsort()]
+# Example values for the key, taken from the axioms of the ontology: a class with a
+# restriction (form: Class rdfs:subClassOf [ owl:onProperty P ; owl:allValuesFrom C ]),
+# a property with a named range, and the members of an owl:AllDifferent axiom.
+def curie(value):
+	return str(value).replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:").replace("http://www.w3.org/2002/07/owl#","owl:").replace("http://www.w3.org/2001/XMLSchema#","xsd:")
+example = {}
+sparql = prefixes + "SELECT ?class ?label ?onProperty ?restriction ?filler WHERE { ?class rdfs:subClassOf ?r . ?r a owl:Restriction ; owl:onProperty ?onProperty ; ?restriction ?filler . ?class rdfs:label ?label . FILTER ( ?restriction != owl:onProperty && ?restriction != rdf:type ) } ORDER BY ?class ?onProperty LIMIT 1"
+for r in graph.query(sparql) :
+	example = {'term_localName': curie(r['class']).replace("bdqffdq:",""), 'rdf_type': 'owl:Class', 'label': str(r.label),
+	           'restriction': "[ owl:onProperty {} ; {} {} ]".format(curie(r.onProperty), curie(r.restriction), curie(r.filler))}
+sparql = prefixes + "SELECT ?property ?range WHERE { ?property rdfs:range ?range . FILTER ( isIRI(?range) ) } ORDER BY ?property LIMIT 1"
+for r in graph.query(sparql) :
+	example['range'] = curie(r.range)
+sparql = prefixes + "SELECT ?ad ?member WHERE { ?ad a owl:AllDifferent ; owl:distinctMembers ?list . ?list rdf:rest*/rdf:first ?member . } ORDER BY ?ad ?member"
+members = {}
+for r in graph.query(sparql) :
+	members.setdefault(r.ad, []).append(curie(r.member))
+if members :
+	example['allDifferent'] = ", ".join(sorted(sorted(m) for m in members.values())[0])
+column_list = ['term_localName', 'rdf_type', 'range', 'restriction', 'allDifferent', 'label']
+terms_df = pd.DataFrame([[example.get(c, "") for c in column_list]], columns = column_list)
+terms_sorted_by_localname = terms_df
 
 definitionTable = build_term_key(term_concept_dictionary,terms_sorted_by_localname)
-# Range returned as an anonomus class id, present an example value as shown in list
-definitionTable = re.sub("[a-z0-9]{35}","[ owl:onProperty bdqffdq:forValidation ; owl:someValuesFrom bdqffdq:Validation ]",definitionTable)
 # Load the document configuration YAML file from its local location.  For a draft standard, database is not available from rs.tdwg.org
 # load from local file
 with open(document_configuration_yaml_file) as dcfy:
@@ -656,7 +668,7 @@ header = header.replace('{term_key}', definitionTable)
 
 text = "\n"
 text = text + "- [Range Axioms (normative)](#41-range-axioms-normative)\n"
-text = text + "- [Different From Axioms (normative)](#42-different-from-axioms-normative)\n"
+text = text + "- [Restrictions on Classes (normative)](#42-restrictions-on-classes-normative)\n"
 text = text + "- [General Axioms (normative)](#43-general-axioms-normative)\n"
 text = text + "\n## 4 Vocabulary Extension (normative)\n"
 text = text + "\n### 4.1 Range Axioms (normative)\n"
@@ -681,21 +693,24 @@ for r in queryResult :
 			text = text + "| Range | {} |\n".format(r.range.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:").replace("http://www.w3.org/2001/XMLSchema#","xsd:"))
 	text = text + "\n\n"
 
-text = text + "### 4.2 Different From Axioms (normative)\n"
-sparql = prefixes + "SELECT DISTINCT  ?subject  ?type  (STR(GROUP_CONCAT(DISTINCT COALESCE(?differentFrom, \",\"); SEPARATOR=\", \")) AS ?differentFromAggregate) WHERE { ?subject owl:differentFrom ?differentFrom . ?subject a ?type  . FILTER ( ?type != owl:NamedIndividual) . } GROUP BY ?subject ?type ORDER BY ?type ?subject "
+text = text + "### 4.2 Restrictions on Classes (normative)\n\n"
+text = text + "Each restriction is stated on a class: for each instance of the class, the values of the property are restricted as given (for owl:allValuesFrom, every value of the property is an instance of the given class).\n\n"
+sparql = prefixes + "SELECT ?class ?onProperty ?restriction ?filler WHERE { ?class rdfs:subClassOf ?r . ?r a owl:Restriction ; owl:onProperty ?onProperty ; ?restriction ?filler . FILTER ( ?restriction != owl:onProperty && ?restriction != rdf:type ) } ORDER BY ?class ?onProperty ?restriction"
 if debug: 
    print(sparql)
-queryResult = graph.query(sparql)
-for r in queryResult : 
-	entity = r.subject
-	entity = entity.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:");
-	term = entity.replace("bdqffdq:","");
+restrictions = {}
+for r in graph.query(sparql) :
+	restrictions.setdefault(curie(r['class']), []).append("[ owl:onProperty {} ; {} {} ]".format(curie(r.onProperty), curie(r.restriction), curie(r.filler)))
+text = text + ("None\n\n" if not restrictions else "")
+for entity in sorted(restrictions) :
+	term = entity.replace("bdqffdq:","")
 	text = text + "#### {}\n\n".format(term)
 	text = text + "| Property | Value |\n"
 	text = text + "| -------- | ----- |\n"
 	text = text + "| Name | {} |\n".format(entity)
-	text = text + "| Type | {} |\n".format(r.type.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:"))
-	text = text + "| Different From | {} |\n".format(r.differentFromAggregate.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:"))
+	text = text + "| Type | owl:Class |\n"
+	for restriction in restrictions[entity] :
+		text = text + "| SubClass Of | {} |\n".format(restriction)
 	text = text + "\n\n"
 
 # --- General Axioms (normative) ---------------------------------------------
@@ -805,6 +820,34 @@ for r in queryResult:
 	text = text + "| Property | Value |\n"
 	text = text + "| -------- | ----- |\n"
 	text = text + "| Axiom | owl:inverseOf |\n"
+	text = text + "| Subject | {} |\n".format(to_curie(r.a))
+	text = text + "| Object | {} |\n".format(to_curie(r.b))
+	text = text + "\n"
+
+
+# 4.3.6 AllDifferent
+text = text + "#### 4.3.6 AllDifferent (normative)\n\n"
+sparql = prefixes + "SELECT ?ad ?member WHERE { ?ad a owl:AllDifferent ; owl:distinctMembers ?list . ?list rdf:rest*/rdf:first ?member . } ORDER BY ?ad ?member"
+groups = {}
+for r in graph.query(sparql) :
+	groups.setdefault(r.ad, []).append(to_curie(r.member))
+text = text + render_none_if_empty(len(groups))
+for members in sorted(sorted(g) for g in groups.values()) :
+	text = text + "| Property | Value |\n"
+	text = text + "| -------- | ----- |\n"
+	text = text + "| Axiom | owl:AllDifferent |\n"
+	text = text + "| Members | {} |\n".format(", ".join(members))
+	text = text + "\n"
+
+# 4.3.7 DifferentFrom
+text = text + "#### 4.3.7 DifferentFrom (normative)\n\n"
+sparql = prefixes + "SELECT DISTINCT ?a ?b WHERE { ?a owl:differentFrom ?b . } ORDER BY ?a ?b"
+queryResult = list(graph.query(sparql))
+text = text + render_none_if_empty(len(queryResult))
+for r in queryResult:
+	text = text + "| Property | Value |\n"
+	text = text + "| -------- | ----- |\n"
+	text = text + "| Axiom | owl:differentFrom |\n"
 	text = text + "| Subject | {} |\n".format(to_curie(r.a))
 	text = text + "| Object | {} |\n".format(to_curie(r.b))
 	text = text + "\n"
