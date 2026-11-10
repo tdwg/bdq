@@ -41,7 +41,7 @@ bdqs:
     rdfs:comment """SHACL constraints derived from the normative guidance in
 Sections 3 and 4 of the bdqffdq: ontology terms document.
 sh:Violation = MUST/MUST NOT  |  sh:Warning = SHOULD/SHOULD NOT  |  sh:Info = MAY"""@en ;
-    owl:imports <https://rs.tdwg.org/bdqffdq/terms> .
+    owl:imports <https://rs.tdwg.org/bdqffdq/> .
 
 
 ########################################################################

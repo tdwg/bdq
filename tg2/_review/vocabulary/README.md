@@ -11,5 +11,5 @@ These files will eventually be built on rs.tdwg.org rather than being maintained
 [**bdqdim_term_versions.csv**](bdqdim_term_versions.csv) Term version file for `bdqdim:` Dimension vocabulary. **Editable.**<br>
 [**bdqenh_term_versions.csv**](bdqenh_term_versions.csv) Term version file for `bdqenh:` Enhancement vocabulary. **Editable.**<br>
 [**bdqtest_term_versions.csv**](bdqtest_term_versions.csv) Term version file for `bdqtest:` Test descriptions vocabulary. **Editable.**<br>
-[**bdqffdq.owl**](bdqffdq.owl) OWL Ontology for `bdqffdq:` terms. **Edit with Protégé or VERY carefully with a text editor.**
+[**bdqffdq.owl**](bdqffdq.owl) OWL Ontology for `bdqffdq:` terms (Turtle). **Generated, do not edit.** Since 2026-11-09 the ontology is built in rs.tdwg.org from the `bdqffdq` term list and its axioms file (inputs on the `bdq-source` branch, `process/bdq-revisions/`) by `process/build_ontology.py`; this file is a copy of [`../dist/bdqffdq.ttl`](../dist/bdqffdq.ttl), kept here because the build and the documents still refer to this path. Make changes to the inputs in rs.tdwg.org and regenerate (see `tg2/_make_review/deployment_rs_tdwg_org.md`, Section 9.5).
 
