@@ -452,7 +452,7 @@ The `bdqffdq:hasUseCase` object property SHOULD have an individual with a type t
 
 The `bdqffdq:hasUseCase` object property MAY have an individual from the `bdquc:` vocabulary that represents a `bdqffdq:UseCase` as its object. 
 
-An axiom types the range of `bdqffdq:hasUseCase` as a `bdqffdq:UseCase`. 
+An axiom restricts the values of `bdqffdq:hasUseCase` on a `bdqffdq:Policy` to instances of `bdqffdq:UseCase` (an `owl:allValuesFrom` restriction on the subject class; see [Vocabulary Extension, 4.2](../../extension/bdqffdq/index.md#42-restrictions-on-classes-normative)). 
 
 The `bdqffdq:includedInPolicy` object property SHOULD have an individual that is a subclass of `bdqffdq:Policy` as its subject.
 
@@ -482,19 +482,19 @@ The `bdqffdq:hasCriterion` object property SHOULD have an individual with a type
 
 The `bdqffdq:hasCriterion` object property MAY have an individual from the `bdqcrit:` vocabulary as its object.
 
-An axiom types the range of `bdqffdq:hasCriterion` as a `bdqffdq:Criterion`.
+An axiom restricts the values of `bdqffdq:hasCriterion` on a `bdqffdq:Validation` or a `bdqffdq:Issue` to instances of `bdqffdq:Criterion` (an `owl:allValuesFrom` restriction on the subject class; see [Vocabulary Extension, 4.2](../../extension/bdqffdq/index.md#42-restrictions-on-classes-normative)).
 
 The `bdqffdq:hasEnhancement` object property SHOULD have an individual with a type that is a `bdqffdq:Amendment` as its subject.
 
 The `bdqffdq:hasEnhancement` object property MAY have an individual from the `bdqenh:` vocabulary as its object.
 
-An axiom types the range of `bdqffdq:hasEnhancement` as a `bdqffdq:Enhancement`.
+An axiom restricts the values of `bdqffdq:hasEnhancement` on a `bdqffdq:Amendment` to instances of `bdqffdq:Enhancement` (an `owl:allValuesFrom` restriction on the subject class; see [Vocabulary Extension, 4.2](../../extension/bdqffdq/index.md#42-restrictions-on-classes-normative)).
 
 The `bdqffdq:hasDataQualityDimension` object property SHOULD have an individual with a type that is a subclass of `bdqffdq:DataQualityNeed` as its subject.
 
 The `bdqffdq:hasDataQualityDimension` object property MAY have an individual in the `bdqdim:` vocabulary is its object. 
 
-An axiom types the range of `bdqffdq:hasDataQualityDimension` as a `bdqffdq:DataQualityDimension`.
+An axiom restricts the values of `bdqffdq:hasDataQualityDimension` on a `bdqffdq:DataQualityNeed` to instances of `bdqffdq:DataQualityDimension` (an `owl:allValuesFrom` restriction on the subject class; see [Vocabulary Extension, 4.2](../../extension/bdqffdq/index.md#42-restrictions-on-classes-normative)).
 
 Each individual instance of a `bdqffdq:Validation` SHOULD have exactly one `bdqffdq:hasDataQualityDimension` property and exactly one `bdqffdq:Criterion` property.
 
@@ -564,25 +564,25 @@ Each description of a data quality Test SHOULD include the properties and relate
 
 The `bdqffdq:forValidation` object property SHOULD have an individual with a type that is a subclass of `bdqffdq:ValidationMethod` as its subject.
 
-An axiom places an `owl:restriction` on the object of the `bdqffdq:forValidation` object property as a `bdqffdq:Validation`.
+An axiom restricts the values of `bdqffdq:forValidation` on a `bdqffdq:ValidationMethod` to instances of `bdqffdq:Validation` (an `owl:allValuesFrom` restriction on the subject class; see [Vocabulary Extension, 4.2](../../extension/bdqffdq/index.md#42-restrictions-on-classes-normative)).
 
 Each `bdqffdq:Validation` method SHOULD have exactly one `bdqffdq:forValidation` object property.
 
 The `bdqffdq:forAmendment` object property SHOULD have an individual with a type that is a subclass of `bdqffdq:AmendmentMethod` as its subject.
 
-An axiom places an `owl:restriction` on the object of the `bdqffdq:forAmendment` object property as a `bdqffdq:Amendment`.
+An axiom restricts the values of `bdqffdq:forAmendment` on a `bdqffdq:AmendmentMethod` to instances of `bdqffdq:Amendment` (an `owl:allValuesFrom` restriction on the subject class; see [Vocabulary Extension, 4.2](../../extension/bdqffdq/index.md#42-restrictions-on-classes-normative)).
 
 Each `bdqffdq:Amendment` method SHOULD have exactly one `bdqffdq:forAmendment` object property.
 
-The `bdqffdq:forMeasure` object property SHOULD have an individual with a type that is a subclass of `bdqffdq:MeasureMethod` as its subject.
+The `bdqffdq:forMeasure` object property SHOULD have an individual with a type that is a subclass of `bdqffdq:MeasurementMethod` as its subject.
 
-An axiom places an `owl:restriction` on the object of the `bdqffdq:forMeasure` object property as a `bdqffdq:Measure`.
+An axiom restricts the values of `bdqffdq:forMeasure` on a `bdqffdq:MeasurementMethod` to instances of `bdqffdq:Measure` (an `owl:allValuesFrom` restriction on the subject class; see [Vocabulary Extension, 4.2](../../extension/bdqffdq/index.md#42-restrictions-on-classes-normative)).
 
 Each `bdqffdq:Measure` method SHOULD have exactly one `bdqffdq:forMeasure` object property.
 
 The `bdqffdq:forIssue` object property SHOULD have an individual with a type that is a subclass of `bdqffdq:IssueMethod` as its subject.
 
-An axiom places an `owl:restriction` on the object of the `bdqffdq:forIssue` object property as a `bdqffdq:Issue`.
+An axiom restricts the values of `bdqffdq:forIssue` on a `bdqffdq:IssueMethod` to instances of `bdqffdq:Issue` (an `owl:allValuesFrom` restriction on the subject class; see [Vocabulary Extension, 4.2](../../extension/bdqffdq/index.md#42-restrictions-on-classes-normative)).
 
 Each `bdqffdq:Issue` method SHOULD have exactly one `bdqffdq:forIssue` object property.
 
@@ -592,7 +592,7 @@ Each description of a data quality Test SHOULD include the following properties 
 
 The `bdqffdq:hasSpecification` object property SHOULD have an instance of a subclass of `bdqffdq:DataQualityMethod` as its subject.
 
-An axiom places an `owl:restriction` on the object of the `bdqffdq:hasSpecification` object property as a `bdqffdq:Specification`.
+An axiom restricts the values of `bdqffdq:hasSpecification` on a `bdqffdq:DataQualityMethod` to instances of `bdqffdq:Specification` (an `owl:allValuesFrom` restriction on the subject class; see [Vocabulary Extension, 4.2](../../extension/bdqffdq/index.md#42-restrictions-on-classes-normative)).
 
 An instance of `bdqffdq:Specification` SHOULD be the object of exactly one `bdqffdq:hasSpecification` property linking it to an instance of a subclass of `bdqffdq:DataQualityMethod`, which SHOULD be the subject of exactly one subproperty of a `bdqffdq:forDataQualityNeed` property linking it to a subclass of `bdqffdq:DataQualityNeed`.
 
@@ -620,13 +620,13 @@ Each data quality `Mechanism` that produces `Data Quality Reports` using the `bd
 
 The `bdqffdq:usesSpecification` object property SHOULD have a `bdqffdq:Implementation` as its subject.
 
-An axiom places an `owl:restriction` on the object of the `bdqffdq:usesSpecification` object property as a `bdqffdq:Specification`.
+An axiom restricts the values of `bdqffdq:usesSpecification` on a `bdqffdq:Implementation` to instances of `bdqffdq:Specification` (an `owl:allValuesFrom` restriction on the subject class; see [Vocabulary Extension, 4.2](../../extension/bdqffdq/index.md#42-restrictions-on-classes-normative)).
 
 Each `bdqffdq:Implementation` SHOULD have one and only one `bdqffdq:usesSpecification` object property.
 
 The `bdqffdq:implementedBy` object property SHOULD have a `bdqffdq:Implementation` as its subject.
 
-An axiom places an `owl:restriction` on the object of the `bdqffdq:implementedBy` object property as a `bdqffdq:Mechanism`.
+An axiom restricts the values of `bdqffdq:implementedBy` on a `bdqffdq:Implementation` to instances of `bdqffdq:Mechanism` (an `owl:allValuesFrom` restriction on the subject class; see [Vocabulary Extension, 4.2](../../extension/bdqffdq/index.md#42-restrictions-on-classes-normative)).
 
 Each `bdqffdq:Implementation` SHOULD have a `bdqffdq:implementedBy` object property.
 

@@ -554,7 +554,7 @@ The [bdqffdq:hasUseCase](<../../list/bdqffdq/index.md#hasUseCase> "Relates a bdq
 
 The `bdqffdq:hasUseCase` object property MAY have an individual from the `bdquc:` vocabulary that represents a `bdqffdq:UseCase` as its object. 
 
-An axiom types the range of `bdqffdq:hasUseCase` as a `bdqffdq:UseCase`. 
+An axiom restricts the values of `bdqffdq:hasUseCase` on a `bdqffdq:Policy` to instances of `bdqffdq:UseCase` (an `owl:allValuesFrom` restriction on the subject class; see [Vocabulary Extension, 4.2](../../extension/bdqffdq/index.md#42-restrictions-on-classes-normative)). 
 
 The [bdqffdq:includedInPolicy](<../../list/bdqffdq/index.md#includedInPolicy> "Assserts that a bdqffdq:DataQualityNeed is part of a bdqffdq:Policy.") object property SHOULD have an individual that is a subclass of `bdqffdq:Policy` as its subject.
 
@@ -584,19 +584,19 @@ The [bdqffdq:hasCriterion](<../../list/bdqffdq/index.md#hasCriterion> "The bdqff
 
 The `bdqffdq:hasCriterion` object property MAY have an individual from the `bdqcrit:` vocabulary as its object.
 
-An axiom types the range of `bdqffdq:hasCriterion` as a [bdqffdq:Criterion](<../../list/bdqffdq/index.md#Criterion> "Rule against which data are evaluated for conformance to quality bdqffdq:Criteria.").
+An axiom restricts the values of `bdqffdq:hasCriterion` on a `bdqffdq:Validation` or a `bdqffdq:Issue` to instances of [bdqffdq:Criterion](<../../list/bdqffdq/index.md#Criterion> "Rule against which data are evaluated for conformance to quality bdqffdq:Criteria.") (an `owl:allValuesFrom` restriction on the subject class; see [Vocabulary Extension, 4.2](../../extension/bdqffdq/index.md#42-restrictions-on-classes-normative)).
 
 The [bdqffdq:hasEnhancement](<../../list/bdqffdq/index.md#hasEnhancement> "The bdqffdq:Enhancement that describes how a bdqffdq:Amendment may propose changes to improve data quality.") object property SHOULD have an individual with a type that is a `bdqffdq:Amendment` as its subject.
 
 The `bdqffdq:hasEnhancement` object property MAY have an individual from the `bdqenh:` vocabulary as its object.
 
-An axiom types the range of `bdqffdq:hasEnhancement` as a [bdqffdq:Enhancement](<../../list/bdqffdq/index.md#Enhancement> "Description of a means by which data could be improved.").
+An axiom restricts the values of `bdqffdq:hasEnhancement` on a `bdqffdq:Amendment` to instances of [bdqffdq:Enhancement](<../../list/bdqffdq/index.md#Enhancement> "Description of a means by which data could be improved.") (an `owl:allValuesFrom` restriction on the subject class; see [Vocabulary Extension, 4.2](../../extension/bdqffdq/index.md#42-restrictions-on-classes-normative)).
 
 The [bdqffdq:hasDataQualityDimension](<../../list/bdqffdq/index.md#hasDataQualityDimension> "The bdqffdq:DataQualityDimension to which a bdqffdq:DataQualityNeed applies.") object property SHOULD have an individual with a type that is a subclass of `bdqffdq:DataQualityNeed` as its subject.
 
 The `bdqffdq:hasDataQualityDimension` object property MAY have an individual in the `bdqdim:` vocabulary is its object. 
 
-An axiom types the range of `bdqffdq:hasDataQualityDimension` as a [bdqffdq:DataQualityDimension](<../../list/bdqffdq/index.md#DataQualityDimension> "An aspect of data quality.").
+An axiom restricts the values of `bdqffdq:hasDataQualityDimension` on a `bdqffdq:DataQualityNeed` to instances of [bdqffdq:DataQualityDimension](<../../list/bdqffdq/index.md#DataQualityDimension> "An aspect of data quality.") (an `owl:allValuesFrom` restriction on the subject class; see [Vocabulary Extension, 4.2](../../extension/bdqffdq/index.md#42-restrictions-on-classes-normative)).
 
 Each individual instance of a `bdqffdq:Validation` SHOULD have exactly one `bdqffdq:hasDataQualityDimension` property and exactly one `bdqffdq:Criterion` property.
 
@@ -666,25 +666,25 @@ Each description of a data quality Test SHOULD include the properties and relate
 
 The [bdqffdq:forValidation](<../../list/bdqffdq/index.md#forValidation> "Relates a bdqffdq:ValidationMethod to a bdqffdq:Validation.") object property SHOULD have an individual with a type that is a subclass of [bdqffdq:ValidationMethod](<../../list/bdqffdq/index.md#ValidationMethod> "A data quality bdqffdq:SolutionsConcept that relates a bdqffdq:Validation to its bdqffdq:Specifications.") as its subject.
 
-An axiom places an `owl:restriction` on the object of the `bdqffdq:forValidation` object property as a `bdqffdq:Validation`.
+An axiom restricts the values of `bdqffdq:forValidation` on a `bdqffdq:ValidationMethod` to instances of `bdqffdq:Validation` (an `owl:allValuesFrom` restriction on the subject class; see [Vocabulary Extension, 4.2](../../extension/bdqffdq/index.md#42-restrictions-on-classes-normative)).
 
 Each `bdqffdq:Validation` method SHOULD have exactly one `bdqffdq:forValidation` object property.
 
 The [bdqffdq:forAmendment](<../../list/bdqffdq/index.md#forAmendment> "Relates a bdqffdq:AmendmentMethod to a bdqffdq:Amendment.") object property SHOULD have an individual with a type that is a subclass of [bdqffdq:AmendmentMethod](<../../list/bdqffdq/index.md#AmendmentMethod> "A data quality bdqffdq:SolutionsConcept that relates a bdqffdq:Amendment to its bdqffdq:Specifications.") as its subject.
 
-An axiom places an `owl:restriction` on the object of the `bdqffdq:forAmendment` object property as a `bdqffdq:Amendment`.
+An axiom restricts the values of `bdqffdq:forAmendment` on a `bdqffdq:AmendmentMethod` to instances of `bdqffdq:Amendment` (an `owl:allValuesFrom` restriction on the subject class; see [Vocabulary Extension, 4.2](../../extension/bdqffdq/index.md#42-restrictions-on-classes-normative)).
 
 Each `bdqffdq:Amendment` method SHOULD have exactly one `bdqffdq:forAmendment` object property.
 
-The [bdqffdq:forMeasure](<../../list/bdqffdq/index.md#forMeasure> "Relates a bdqffdq:MeasurementMethod to a bdqffdq:Measure.") object property SHOULD have an individual with a type that is a subclass of `bdqffdq:MeasureMethod` as its subject.
+The [bdqffdq:forMeasure](<../../list/bdqffdq/index.md#forMeasure> "Relates a bdqffdq:MeasurementMethod to a bdqffdq:Measure.") object property SHOULD have an individual with a type that is a subclass of [bdqffdq:MeasurementMethod](<../../list/bdqffdq/index.md#MeasurementMethod> "A data quality bdqffdq:SolutionsConcept that relates a bdqffdq:Measure to its bdqffdq:Specifications.") as its subject.
 
-An axiom places an `owl:restriction` on the object of the `bdqffdq:forMeasure` object property as a `bdqffdq:Measure`.
+An axiom restricts the values of `bdqffdq:forMeasure` on a `bdqffdq:MeasurementMethod` to instances of `bdqffdq:Measure` (an `owl:allValuesFrom` restriction on the subject class; see [Vocabulary Extension, 4.2](../../extension/bdqffdq/index.md#42-restrictions-on-classes-normative)).
 
 Each `bdqffdq:Measure` method SHOULD have exactly one `bdqffdq:forMeasure` object property.
 
 The [bdqffdq:forIssue](<../../list/bdqffdq/index.md#forIssue> "Relates a bdqffdq:IssueMethod to a bdqffdq:Issue.") object property SHOULD have an individual with a type that is a subclass of [bdqffdq:IssueMethod](<../../list/bdqffdq/index.md#IssueMethod> "A data quality bdqffdq:SolutionsConcept that relates a bdqffdq:Issue to its bdqffdq:Specifications.") as its subject.
 
-An axiom places an `owl:restriction` on the object of the `bdqffdq:forIssue` object property as a `bdqffdq:Issue`.
+An axiom restricts the values of `bdqffdq:forIssue` on a `bdqffdq:IssueMethod` to instances of `bdqffdq:Issue` (an `owl:allValuesFrom` restriction on the subject class; see [Vocabulary Extension, 4.2](../../extension/bdqffdq/index.md#42-restrictions-on-classes-normative)).
 
 Each `bdqffdq:Issue` method SHOULD have exactly one `bdqffdq:forIssue` object property.
 
@@ -694,7 +694,7 @@ Each description of a data quality Test SHOULD include the following properties 
 
 The [bdqffdq:hasSpecification](<../../list/bdqffdq/index.md#hasSpecification> "Relates a bdqffdq:Method to a bdqffdq:Specification.") object property SHOULD have an instance of a subclass of [bdqffdq:DataQualityMethod](<../../list/bdqffdq/index.md#DataQualityMethod> "A bdqffdq:SolutionsConcept that relates a bdqffdq:DataQualityNeed to a bdqffdq:Specification.") as its subject.
 
-An axiom places an `owl:restriction` on the object of the `bdqffdq:hasSpecification` object property as a [bdqffdq:Specification](<../../list/bdqffdq/index.md#Specification> "A specific statement about how to evaluate a bdqffdq:DataQualityNeed.").
+An axiom restricts the values of `bdqffdq:hasSpecification` on a `bdqffdq:DataQualityMethod` to instances of [bdqffdq:Specification](<../../list/bdqffdq/index.md#Specification> "A specific statement about how to evaluate a bdqffdq:DataQualityNeed.") (an `owl:allValuesFrom` restriction on the subject class; see [Vocabulary Extension, 4.2](../../extension/bdqffdq/index.md#42-restrictions-on-classes-normative)).
 
 An instance of `bdqffdq:Specification` SHOULD be the object of exactly one `bdqffdq:hasSpecification` property linking it to an instance of a subclass of `bdqffdq:DataQualityMethod`, which SHOULD be the subject of exactly one subproperty of a [bdqffdq:forDataQualityNeed](<../../list/bdqffdq/index.md#forDataQualityNeed> "Category of properties that relates a bdqffdq:DataQualityNeed to specific bdqffdq:Methods.") property linking it to a subclass of `bdqffdq:DataQualityNeed`.
 
@@ -722,13 +722,13 @@ Each data quality `Mechanism` that produces `Data Quality Reports` using the `bd
 
 The [bdqffdq:usesSpecification](<../../list/bdqffdq/index.md#usesSpecification> "The bdqffdq:Specification that a bdqffdq:Implementation implements.") object property SHOULD have a [bdqffdq:Implementation](<../../list/bdqffdq/index.md#Implementation> "A bdqffdq:SolutionsConcept that describes the portion of a bdqffdq:Mechanism that carries out the proccess described in a particular bdqffdq:Specification.") as its subject.
 
-An axiom places an `owl:restriction` on the object of the `bdqffdq:usesSpecification` object property as a `bdqffdq:Specification`.
+An axiom restricts the values of `bdqffdq:usesSpecification` on a `bdqffdq:Implementation` to instances of `bdqffdq:Specification` (an `owl:allValuesFrom` restriction on the subject class; see [Vocabulary Extension, 4.2](../../extension/bdqffdq/index.md#42-restrictions-on-classes-normative)).
 
 Each `bdqffdq:Implementation` SHOULD have one and only one `bdqffdq:usesSpecification` object property.
 
 The [bdqffdq:implementedBy](<../../list/bdqffdq/index.md#implementedBy> "The bdqffdq:Mechanism that provides a bdqffdq:Implementation") object property SHOULD have a `bdqffdq:Implementation` as its subject.
 
-An axiom places an `owl:restriction` on the object of the `bdqffdq:implementedBy` object property as a [bdqffdq:Mechanism](<../../list/bdqffdq/index.md#Mechanism> "An entity that can execute bdqffdq:DataQualityMethods.").
+An axiom restricts the values of `bdqffdq:implementedBy` on a `bdqffdq:Implementation` to instances of [bdqffdq:Mechanism](<../../list/bdqffdq/index.md#Mechanism> "An entity that can execute bdqffdq:DataQualityMethods.") (an `owl:allValuesFrom` restriction on the subject class; see [Vocabulary Extension, 4.2](../../extension/bdqffdq/index.md#42-restrictions-on-classes-normative)).
 
 Each `bdqffdq:Implementation` SHOULD have a `bdqffdq:implementedBy` object property.
 
@@ -778,7 +778,7 @@ For a [bdqffdq:MeasurementResponse](<../../list/bdqffdq/index.md#MeasurementResp
 - That `bdqffdq:Implementation`
   - SHOULD have exactly one `bdqffdq:usesSpecification` triple to a `bdqffdq:Specification`.
 - That `bdqffdq:Specification`
-  - SHOULD be the object of exactly one `bdqffdq:hasSpecification` triple from a [bdqffdq:MeasurementMethod](<../../list/bdqffdq/index.md#MeasurementMethod> "A data quality bdqffdq:SolutionsConcept that relates a bdqffdq:Measure to its bdqffdq:Specifications.").
+  - SHOULD be the object of exactly one `bdqffdq:hasSpecification` triple from a `bdqffdq:MeasurementMethod`.
 - That `bdqffdq:MeasurementMethod`
   - SHOULD have exactly one `bdqffdq:forMeasure` triple to a `bdqffdq:Measure`.
 
@@ -2275,7 +2275,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 - Name: [bdqffdq:aggregatesResponsesFrom](../../list/bdqffdq/index.md#aggregatesResponsesFrom)
 - Definition: Relates an ActedUpon Information Element (typically used by a MultiRecord Measure) to the DataQualityNeed (Validation, Issue, Measure, or Amendment) whose Responses in a DataQualityReport are aggregated as inputs to that Measure.
-- [Range](../../extension/bdqffdq/index.mdaggregatesResponsesFrom) bdqffdq:DataQualityNeed
+- [Range](../../extension/bdqffdq/index.md#aggregatesResponsesFrom) bdqffdq:DataQualityNeed
 
 ********************
 
@@ -2312,7 +2312,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 - Name: [bdqffdq:forAmendment](../../list/bdqffdq/index.md#forAmendment)
 - Definition: Relates a bdqffdq:AmendmentMethod to a bdqffdq:Amendment.
 - SubClass Of: [amendmentProperty](../../list/bdqffdq/index.md#amendmentProperty); [forDataQualityNeed](../../list/bdqffdq/index.md#forDataQualityNeed)
-- [Range](../../extension/bdqffdq/index.md#forAmendment) [ owl:someValuesFrom bdqffdq:forAmendment ]
+- [Restriction](../../extension/bdqffdq/index.md#AmendmentMethod) on bdqffdq:AmendmentMethod: [ owl:onProperty bdqffdq:forAmendment ; owl:allValuesFrom bdqffdq:Amendment ]
 
 ********************
 
@@ -2328,7 +2328,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 - Name: [bdqffdq:forIssue](../../list/bdqffdq/index.md#forIssue)
 - Definition: Relates a bdqffdq:IssueMethod to a bdqffdq:Issue.
 - SubClass Of: [forDataQualityNeed](../../list/bdqffdq/index.md#forDataQualityNeed); [issueProperty](../../list/bdqffdq/index.md#issueProperty)
-- [Range](../../extension/bdqffdq/index.md#forIssue) [ owl:someValuesFrom bdqffdq:forIssue ]
+- [Restriction](../../extension/bdqffdq/index.md#IssueMethod) on bdqffdq:IssueMethod: [ owl:onProperty bdqffdq:forIssue ; owl:allValuesFrom bdqffdq:Issue ]
 
 ********************
 
@@ -2337,7 +2337,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 - Name: [bdqffdq:forMeasure](../../list/bdqffdq/index.md#forMeasure)
 - Definition: Relates a bdqffdq:MeasurementMethod to a bdqffdq:Measure.
 - SubClass Of: [forDataQualityNeed](../../list/bdqffdq/index.md#forDataQualityNeed); [measurementProperty](../../list/bdqffdq/index.md#measurementProperty)
-- [Range](../../extension/bdqffdq/index.md#forMeasure) [ owl:someValuesFrom bdqffdq:forMeasure ]
+- [Restriction](../../extension/bdqffdq/index.md#MeasurementMethod) on bdqffdq:MeasurementMethod: [ owl:onProperty bdqffdq:forMeasure ; owl:allValuesFrom bdqffdq:Measure ]
 
 ********************
 
@@ -2346,7 +2346,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 - Name: [bdqffdq:forValidation](../../list/bdqffdq/index.md#forValidation)
 - Definition: Relates a bdqffdq:ValidationMethod to a bdqffdq:Validation.
 - SubClass Of: [forDataQualityNeed](../../list/bdqffdq/index.md#forDataQualityNeed); [validationProperty](../../list/bdqffdq/index.md#validationProperty)
-- [Range](../../extension/bdqffdq/index.md#forValidation) [ owl:someValuesFrom bdqffdq:forValidation ]
+- [Restriction](../../extension/bdqffdq/index.md#ValidationMethod) on bdqffdq:ValidationMethod: [ owl:onProperty bdqffdq:forValidation ; owl:allValuesFrom bdqffdq:Validation ]
 
 ********************
 
@@ -2362,7 +2362,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 - Name: [bdqffdq:hasArgument](../../list/bdqffdq/index.md#hasArgument)
 - Definition: Relates a bdqffdq:Specification to a bdqffdq:Argument
-- [Range](../../extension/bdqffdq/index.mdhasArgument) bdqffdq:Argument
+- [Range](../../extension/bdqffdq/index.md#hasArgument) bdqffdq:Argument
 
 ********************
 
@@ -2379,7 +2379,8 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 - Name: [bdqffdq:hasCriterion](../../list/bdqffdq/index.md#hasCriterion)
 - Definition: The bdqffdq:Criterion under which a bdqffdq:Validation or bdqffdq:Issue assesses for data quality.
 - SubClass Of: [issueProperty](../../list/bdqffdq/index.md#issueProperty); [validationProperty](../../list/bdqffdq/index.md#validationProperty)
-- [Range](../../extension/bdqffdq/index.md#hasCriterion) [ owl:someValuesFrom bdqffdq:hasCriterion ]
+- [Restriction](../../extension/bdqffdq/index.md#Issue) on bdqffdq:Issue: [ owl:onProperty bdqffdq:hasCriterion ; owl:allValuesFrom bdqffdq:Criterion ]
+- [Restriction](../../extension/bdqffdq/index.md#Validation) on bdqffdq:Validation: [ owl:onProperty bdqffdq:hasCriterion ; owl:allValuesFrom bdqffdq:Criterion ]
 
 ********************
 
@@ -2388,7 +2389,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 - Name: [bdqffdq:hasDataQualityDimension](../../list/bdqffdq/index.md#hasDataQualityDimension)
 - Definition: The bdqffdq:DataQualityDimension to which a bdqffdq:DataQualityNeed applies.
 - SubClass Of: [amendmentProperty](../../list/bdqffdq/index.md#amendmentProperty); [issueProperty](../../list/bdqffdq/index.md#issueProperty); [measurementProperty](../../list/bdqffdq/index.md#measurementProperty); [validationProperty](../../list/bdqffdq/index.md#validationProperty)
-- [Range](../../extension/bdqffdq/index.md#hasDataQualityDimension) [ owl:someValuesFrom bdqffdq:hasDataQualityDimension ]
+- [Restriction](../../extension/bdqffdq/index.md#DataQualityNeed) on bdqffdq:DataQualityNeed: [ owl:onProperty bdqffdq:hasDataQualityDimension ; owl:allValuesFrom bdqffdq:DataQualityDimension ]
 
 ********************
 
@@ -2397,7 +2398,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 - Name: [bdqffdq:hasEnhancement](../../list/bdqffdq/index.md#hasEnhancement)
 - Definition: The bdqffdq:Enhancement that describes how a bdqffdq:Amendment may propose changes to improve data quality.
 - SubClass Of: [amendmentProperty](../../list/bdqffdq/index.md#amendmentProperty)
-- [Range](../../extension/bdqffdq/index.md#hasEnhancement) [ owl:someValuesFrom bdqffdq:hasEnhancement ]
+- [Restriction](../../extension/bdqffdq/index.md#Amendment) on bdqffdq:Amendment: [ owl:onProperty bdqffdq:hasEnhancement ; owl:allValuesFrom bdqffdq:Enhancement ]
 
 ********************
 
@@ -2406,7 +2407,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 - Name: [bdqffdq:hasInformationElement](../../list/bdqffdq/index.md#hasInformationElement)
 - Definition: Describes the bdqffdq:InformationElements assessed by a bdqffdq:DataQualityNeed.
 - SubClass Of: [amendmentProperty](../../list/bdqffdq/index.md#amendmentProperty); [issueProperty](../../list/bdqffdq/index.md#issueProperty); [measurementProperty](../../list/bdqffdq/index.md#measurementProperty); [validationProperty](../../list/bdqffdq/index.md#validationProperty)
-- [Range](../../extension/bdqffdq/index.mdhasInformationElement) bdqffdq:InformationElement
+- [Range](../../extension/bdqffdq/index.md#hasInformationElement) bdqffdq:InformationElement
 
 ********************
 
@@ -2414,7 +2415,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 - Name: [bdqffdq:hasParameter](../../list/bdqffdq/index.md#hasParameter)
 - Definition: Relates a bdqffdq:Argument to a bdqffdq:Parameter.
-- [Range](../../extension/bdqffdq/index.mdhasParameter) bdqffdq:Parameter
+- [Range](../../extension/bdqffdq/index.md#hasParameter) bdqffdq:Parameter
 
 ********************
 
@@ -2453,7 +2454,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 - Name: [bdqffdq:hasSpecification](../../list/bdqffdq/index.md#hasSpecification)
 - Definition: Relates a bdqffdq:Method to a bdqffdq:Specification.
-- [Range](../../extension/bdqffdq/index.md#hasSpecification) [ owl:someValuesFrom bdqffdq:hasSpecification ]
+- [Restriction](../../extension/bdqffdq/index.md#DataQualityMethod) on bdqffdq:DataQualityMethod: [ owl:onProperty bdqffdq:hasSpecification ; owl:allValuesFrom bdqffdq:Specification ]
 
 ********************
 
@@ -2461,7 +2462,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 - Name: [bdqffdq:hasUseCase](../../list/bdqffdq/index.md#hasUseCase)
 - Definition: Relates a bdqffdq:Policy to a bdqffdq:UseCase.
-- [Range](../../extension/bdqffdq/index.md#hasUseCase) [ owl:someValuesFrom bdqffdq:hasUseCase ]
+- [Restriction](../../extension/bdqffdq/index.md#Policy) on bdqffdq:Policy: [ owl:onProperty bdqffdq:hasUseCase ; owl:allValuesFrom bdqffdq:UseCase ]
 
 ********************
 
@@ -2469,7 +2470,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 - Name: [bdqffdq:implementedBy](../../list/bdqffdq/index.md#implementedBy)
 - Definition: The bdqffdq:Mechanism that provides a bdqffdq:Implementation
-- [Range](../../extension/bdqffdq/index.md#implementedBy) [ owl:someValuesFrom bdqffdq:implementedBy ]
+- [Restriction](../../extension/bdqffdq/index.md#Implementation) on bdqffdq:Implementation: [ owl:onProperty bdqffdq:implementedBy ; owl:allValuesFrom bdqffdq:Mechanism ]
 
 ********************
 
@@ -2477,7 +2478,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 - Name: [bdqffdq:improvedBy](../../list/bdqffdq/index.md#improvedBy)
 - Definition: The bdqffdq:ImprovementTarget that would have data quality improved by bdqffdq:Responses resulting from a bdqffdq:Amendment.
-- [Range](../../extension/bdqffdq/index.md#improvedBy) [ owl:someValuesFrom bdqffdq:improvedBy ]
+- [Restriction](../../extension/bdqffdq/index.md#Amendment) on bdqffdq:Amendment: [ owl:onProperty bdqffdq:improvedBy ; owl:allValuesFrom bdqffdq:ImprovementTarget ]
 
 ********************
 
@@ -2520,7 +2521,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 - Name: [bdqffdq:targetedIssue](../../list/bdqffdq/index.md#targetedIssue)
 - Definition: A bdqffdq:Issue for which the data conformance with a bdqffdq:NeedConcept may be improved by accepting proposals from a bdqffdq:Amendment via a bdqffdq:ImprovementTarget.
-- [Range](../../extension/bdqffdq/index.md#targetedIssue) [ owl:someValuesFrom bdqffdq:targetedIssue ]
+- [Restriction](../../extension/bdqffdq/index.md#ImprovementTarget) on bdqffdq:ImprovementTarget: [ owl:onProperty bdqffdq:targetedIssue ; owl:allValuesFrom bdqffdq:Issue ]
 
 ********************
 
@@ -2528,7 +2529,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 - Name: [bdqffdq:targetedMeasure](../../list/bdqffdq/index.md#targetedMeasure)
 - Definition: A bdqffdq:Measure for which the data conformance with a bdqffdq:NeedConcept may be improved by accepting proposals from a bdqffdq:Amendment via a bdqffdq:ImprovementTarget.
-- [Range](../../extension/bdqffdq/index.md#targetedMeasure) [ owl:someValuesFrom bdqffdq:targetedMeasure ]
+- [Restriction](../../extension/bdqffdq/index.md#ImprovementTarget) on bdqffdq:ImprovementTarget: [ owl:onProperty bdqffdq:targetedMeasure ; owl:allValuesFrom bdqffdq:Measure ]
 
 ********************
 
@@ -2537,7 +2538,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 - Name: [bdqffdq:targetedValidation](../../list/bdqffdq/index.md#targetedValidation)
 - Definition: A bdqffdq:Validation for which the data conformance with a bdqffdq:NeedConcept may be improved by accepting proposals from a bdqffdq:Amendment via a bdqffdq:ImprovementTarget.
 - SubClass Of: owl:topObjectProperty
-- [Range](../../extension/bdqffdq/index.md#targetedValidation) [ owl:someValuesFrom bdqffdq:targetedValidation ]
+- [Restriction](../../extension/bdqffdq/index.md#ImprovementTarget) on bdqffdq:ImprovementTarget: [ owl:onProperty bdqffdq:targetedValidation ; owl:allValuesFrom bdqffdq:Validation ]
 
 ********************
 
@@ -2545,7 +2546,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 - Name: [bdqffdq:usesSpecification](../../list/bdqffdq/index.md#usesSpecification)
 - Definition: The bdqffdq:Specification that a bdqffdq:Implementation implements.
-- [Range](../../extension/bdqffdq/index.md#usesSpecification) [ owl:someValuesFrom bdqffdq:usesSpecification ]
+- [Restriction](../../extension/bdqffdq/index.md#Implementation) on bdqffdq:Implementation: [ owl:onProperty bdqffdq:usesSpecification ; owl:allValuesFrom bdqffdq:Specification ]
 
 ********************
 
@@ -2631,7 +2632,6 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 - Name: [bdqffdq:COMPLETE](../../list/bdqffdq/index.md#COMPLETE)
 - Type: bdqffdq:ResponseResult
-- [DifferentFrom](../../extension/bdqffdq/index.md#COMPLETE): bdqffdq:NOT_COMPLETE
 - Definition: A bdqffdq:ResponseResult of a bdqffdq:Measure that asserts that data are present and sufficiently comprehensive for use.
 
 ********************
@@ -2640,7 +2640,6 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 - Name: [bdqffdq:COMPLIANT](../../list/bdqffdq/index.md#COMPLIANT)
 - Type: bdqffdq:ResponseResult
-- [DifferentFrom](../../extension/bdqffdq/index.md#COMPLIANT): bdqffdq:NOT_COMPLIANT
 - Definition: A bdqffdq:ResponseResult of a bdqffdq:Validation where the data conforms to the bdqffdq:Criteria for quality in the Test bdqffdq:Specification.
 
 ********************
@@ -2649,16 +2648,6 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 - Name: [bdqffdq:IS_ISSUE](../../list/bdqffdq/index.md#IS_ISSUE)
 - Type: bdqffdq:ResponseResult
-- [DifferentFrom](../../extension/bdqffdq/index.md#IS_ISSUE): bdqffdq:NOT_ISSUE
-- Definition: A bdqffdq:ResponseResult of a bdqffdq:Issue indicating that the data do not have sufficient quality for a use.
-
-********************
-
-#### IS_ISSUE
-
-- Name: [bdqffdq:IS_ISSUE](../../list/bdqffdq/index.md#IS_ISSUE)
-- Type: bdqffdq:ResponseResult
-- [DifferentFrom](../../extension/bdqffdq/index.md#IS_ISSUE): bdqffdq:POTENTIAL_ISSUE
 - Definition: A bdqffdq:ResponseResult of a bdqffdq:Issue indicating that the data do not have sufficient quality for a use.
 
 ********************
@@ -2683,7 +2672,6 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 - Name: [bdqffdq:NOT_ISSUE](../../list/bdqffdq/index.md#NOT_ISSUE)
 - Type: bdqffdq:ResponseResult
-- [DifferentFrom](../../extension/bdqffdq/index.md#NOT_ISSUE): bdqffdq:POTENTIAL_ISSUE
 - Definition: A bdqffdq:ResponseResult of a bdqffdq:Issue where no potential problems were detected.
 
 ********************
@@ -2700,7 +2688,6 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 - Name: [bdqffdq:AMENDED](../../list/bdqffdq/index.md#AMENDED)
 - Type: bdqffdq:ResponseStatus
-- [DifferentFrom](../../extension/bdqffdq/index.md#AMENDED): bdqffdq:NOT_AMENDED
 - Definition: A bdqffdq:ResponseStatus used to indicate that a bdqffdq:hasResponseResultValue from a bdqffdq:Amendment contains a proposed change.
 
 ********************
@@ -2709,7 +2696,6 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 - Name: [bdqffdq:EXTERNAL_PREREQUISITES_NOT_MET](../../list/bdqffdq/index.md#EXTERNAL_PREREQUISITES_NOT_MET)
 - Type: bdqffdq:ResponseStatus
-- [DifferentFrom](../../extension/bdqffdq/index.md#EXTERNAL_PREREQUISITES_NOT_MET): bdqffdq:INTERNAL_PREREQUISITES_NOT_MET
 - Definition: A bdqffdq:ResponseStatus used to indicate that a bdqffdq:ResponseResult was not generated because a bdqval:sourceAuthority was not accessible. If the Test is run at a later time, it may produce a different bdqffdq:ResponseStatus.
 
 ********************
@@ -2718,7 +2704,6 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 - Name: [bdqffdq:FILLED_IN](../../list/bdqffdq/index.md#FILLED_IN)
 - Type: bdqffdq:ResponseStatus
-- [DifferentFrom](../../extension/bdqffdq/index.md#FILLED_IN): bdqffdq:NOT_AMENDED
 - Definition: A bdqffdq:ResponseStatus used to indicate that a bdqffdq:Amendment contains a proposed change to a record in a bdqffdq:hasResponseResultValue where the bdqffdq:InformationElement was bdqval:Empty.
 
 ********************

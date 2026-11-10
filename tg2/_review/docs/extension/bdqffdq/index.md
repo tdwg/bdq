@@ -57,13 +57,15 @@ Draft Standard for Review
 
 - [4 Vocabulary Extension (normative)](#4-vocabulary-extension-normative)
   - [4.1 Range Axioms (normative)](#41-range-axioms-normative)
-  - [4.2 Different From Axioms (normative)](#42-different-from-axioms-normative)
+  - [4.2 Restrictions on Classes (normative)](#42-restrictions-on-classes-normative)
   - [4.3 General Axioms (normative)](#43-general-axioms-normative)
     - [4.3.1 Disjointness (normative)](#431-disjointness-normative)
     - [4.3.2 AllDisjointClasses (normative)](#432-alldisjointclasses-normative)
     - [4.3.3 EquivalentClass (normative)](#433-equivalentclass-normative)
     - [4.3.4 EquivalentProperty (normative)](#434-equivalentproperty-normative)
     - [4.3.5 InverseOf (normative)](#435-inverseof-normative)
+    - [4.3.6 AllDifferent (normative)](#436-alldifferent-normative)
+    - [4.3.7 DifferentFrom (normative)](#437-differentfrom-normative)
 
 ## 1 Introduction (non-normative)
 
@@ -138,17 +140,18 @@ The terminology used to describe the terms in this vocabulary follows the [TDWG 
 
 | Label (Term) | Normative | Definition | Example |
 | ------------ | --------- | ---------- | ------- |
-| Name (rdf:value) | normative | Idiomatic property used for structured values. | [https://rs.tdwg.org/ bdqffdq/terms/ COMPLETE](https://rs.tdwg.org/bdqffdq/terms/COMPLETE) |
-| Type (rdf:type) | normative | The subject is an instance of a class. | [https://rs.tdwg.org/ bdqffdq/terms/ ResponseResult](https://rs.tdwg.org/bdqffdq/terms/ResponseResult) |
-| Range (rdfs:range) | normative | A range of the subject property. In present context: shown as either a simple range in the form of a class, or as an owl:restriction. | [ owl:onProperty bdqffdq:forValidation ; owl:someValuesFrom bdqffdq:Validation ] |
-| DifferentFrom (owl:differentFrom) | normative | The property that determines that two given individuals are different. | [https://rs.tdwg.org/ bdqffdq/terms/ NOT_COMPLETE](https://rs.tdwg.org/bdqffdq/terms/NOT_COMPLETE) |
-| Label (rdfs:label) | normative | A human-readable name for the subject. TDWG SDS: A a word or short phrase that serves as a human-readable name for the term. | COMPLETE |
+| Name (rdf:value) | normative | Idiomatic property used for structured values. | Amendment |
+| Type (rdf:type) | normative | The subject is an instance of a class. | owl:Class |
+| Range (rdfs:range) | normative | A range of the subject property. In present context: a named class or datatype that every value of the property is an instance of. | bdqffdq:DataQualityNeed |
+| SubClass Of (restriction) (rdfs:subClassOf) | normative | The subject is a subclass of a class. In present context: a restriction on the subject class, in the form [ owl:onProperty P ; owl:allValuesFrom C ]: for each instance of the class, every value of the property P is an instance of the class C. | [ owl:onProperty bdqffdq:hasEnhancement ; owl:allValuesFrom bdqffdq:Enhancement ] |
+| All Different (owl:AllDifferent) | normative | The class of collections of pairwise different individuals. In present context: the named individuals listed are pairwise different (distinct codes). | bdqffdq:AMENDED, bdqffdq:EXTERNAL_PREREQUISITES_NOT_MET, bdqffdq:FILLED_IN, bdqffdq:INTERNAL_PREREQUISITES_NOT_MET, bdqffdq:NOT_AMENDED, bdqffdq:RUN_HAS_RESULT |
+| Label (rdfs:label) | normative | A human-readable name for the subject. TDWG SDS: A a word or short phrase that serves as a human-readable name for the term. | Amendment |
 
 
 ## 2 Axiom Index (non-normative)
 
 - [Range Axioms (normative)](#41-range-axioms-normative)
-- [Different From Axioms (normative)](#42-different-from-axioms-normative)
+- [Restrictions on Classes (normative)](#42-restrictions-on-classes-normative)
 - [General Axioms (normative)](#43-general-axioms-normative)
 
 ## 4 Vocabulary Extension (normative)
@@ -199,42 +202,6 @@ The terminology used to describe the terms in this vocabulary follows the [TDWG 
 | Range | bdqffdq:DataQualityNeed |
 
 
-#### forAmendment
-
-| Property | Value |
-| -------- | ----- |
-| Name | bdqffdq:forAmendment |
-| Type | owl:ObjectProperty |
-| Range | [ owl:onProperty bdqffdq:forAmendment ; owl:someValuesFrom bdqffdq:Amendment ] |
-
-
-#### forIssue
-
-| Property | Value |
-| -------- | ----- |
-| Name | bdqffdq:forIssue |
-| Type | owl:ObjectProperty |
-| Range | [ owl:onProperty bdqffdq:forIssue ; owl:someValuesFrom bdqffdq:Issue ] |
-
-
-#### forMeasure
-
-| Property | Value |
-| -------- | ----- |
-| Name | bdqffdq:forMeasure |
-| Type | owl:ObjectProperty |
-| Range | [ owl:onProperty bdqffdq:forMeasure ; owl:someValuesFrom bdqffdq:Measure ] |
-
-
-#### forValidation
-
-| Property | Value |
-| -------- | ----- |
-| Name | bdqffdq:forValidation |
-| Type | owl:ObjectProperty |
-| Range | [ owl:onProperty bdqffdq:forValidation ; owl:someValuesFrom bdqffdq:Validation ] |
-
-
 #### hasArgument
 
 | Property | Value |
@@ -242,33 +209,6 @@ The terminology used to describe the terms in this vocabulary follows the [TDWG 
 | Name | bdqffdq:hasArgument |
 | Type | owl:ObjectProperty |
 | Range | bdqffdq:Argument |
-
-
-#### hasCriterion
-
-| Property | Value |
-| -------- | ----- |
-| Name | bdqffdq:hasCriterion |
-| Type | owl:ObjectProperty |
-| Range | [ owl:onProperty bdqffdq:hasCriterion ; owl:someValuesFrom bdqffdq:Criterion ] |
-
-
-#### hasDataQualityDimension
-
-| Property | Value |
-| -------- | ----- |
-| Name | bdqffdq:hasDataQualityDimension |
-| Type | owl:ObjectProperty |
-| Range | [ owl:onProperty bdqffdq:hasDataQualityDimension ; owl:someValuesFrom bdqffdq:DataQualityDimension ] |
-
-
-#### hasEnhancement
-
-| Property | Value |
-| -------- | ----- |
-| Name | bdqffdq:hasEnhancement |
-| Type | owl:ObjectProperty |
-| Range | [ owl:onProperty bdqffdq:hasEnhancement ; owl:someValuesFrom bdqffdq:Enhancement ] |
 
 
 #### hasInformationElement
@@ -289,140 +229,120 @@ The terminology used to describe the terms in this vocabulary follows the [TDWG 
 | Range | bdqffdq:Parameter |
 
 
-#### hasSpecification
+### 4.2 Restrictions on Classes (normative)
+
+Each restriction is stated on a class: for each instance of the class, the values of the property are restricted as given (for owl:allValuesFrom, every value of the property is an instance of the given class).
+
+#### Amendment
 
 | Property | Value |
 | -------- | ----- |
-| Name | bdqffdq:hasSpecification |
-| Type | owl:ObjectProperty |
-| Range | [ owl:onProperty bdqffdq:hasSpecification ; owl:someValuesFrom bdqffdq:Specification ] |
+| Name | bdqffdq:Amendment |
+| Type | owl:Class |
+| SubClass Of | [ owl:onProperty bdqffdq:hasEnhancement ; owl:allValuesFrom bdqffdq:Enhancement ] |
+| SubClass Of | [ owl:onProperty bdqffdq:improvedBy ; owl:allValuesFrom bdqffdq:ImprovementTarget ] |
 
 
-#### hasUseCase
-
-| Property | Value |
-| -------- | ----- |
-| Name | bdqffdq:hasUseCase |
-| Type | owl:ObjectProperty |
-| Range | [ owl:onProperty bdqffdq:hasUseCase ; owl:someValuesFrom bdqffdq:UseCase ] |
-
-
-#### implementedBy
+#### AmendmentMethod
 
 | Property | Value |
 | -------- | ----- |
-| Name | bdqffdq:implementedBy |
-| Type | owl:ObjectProperty |
-| Range | [ owl:onProperty bdqffdq:implementedBy ; owl:someValuesFrom bdqffdq:Mechanism ] |
+| Name | bdqffdq:AmendmentMethod |
+| Type | owl:Class |
+| SubClass Of | [ owl:onProperty bdqffdq:forAmendment ; owl:allValuesFrom bdqffdq:Amendment ] |
 
 
-#### improvedBy
-
-| Property | Value |
-| -------- | ----- |
-| Name | bdqffdq:improvedBy |
-| Type | owl:ObjectProperty |
-| Range | [ owl:onProperty bdqffdq:improvedBy ; owl:someValuesFrom bdqffdq:Amendment ] |
-
-
-#### targetedIssue
+#### DataQualityMethod
 
 | Property | Value |
 | -------- | ----- |
-| Name | bdqffdq:targetedIssue |
-| Type | owl:ObjectProperty |
-| Range | [ owl:onProperty bdqffdq:targetedIssue ; owl:someValuesFrom bdqffdq:Issue ] |
+| Name | bdqffdq:DataQualityMethod |
+| Type | owl:Class |
+| SubClass Of | [ owl:onProperty bdqffdq:hasSpecification ; owl:allValuesFrom bdqffdq:Specification ] |
 
 
-#### targetedMeasure
-
-| Property | Value |
-| -------- | ----- |
-| Name | bdqffdq:targetedMeasure |
-| Type | owl:ObjectProperty |
-| Range | [ owl:onProperty bdqffdq:targetedMeasure ; owl:someValuesFrom bdqffdq:Measure ] |
-
-
-#### targetedValidation
+#### DataQualityNeed
 
 | Property | Value |
 | -------- | ----- |
-| Name | bdqffdq:targetedValidation |
-| Type | owl:ObjectProperty |
-| Range | [ owl:onProperty bdqffdq:targetedValidation ; owl:someValuesFrom bdqffdq:Validation ] |
+| Name | bdqffdq:DataQualityNeed |
+| Type | owl:Class |
+| SubClass Of | [ owl:onProperty bdqffdq:hasDataQualityDimension ; owl:allValuesFrom bdqffdq:DataQualityDimension ] |
 
 
-#### usesSpecification
-
-| Property | Value |
-| -------- | ----- |
-| Name | bdqffdq:usesSpecification |
-| Type | owl:ObjectProperty |
-| Range | [ owl:onProperty bdqffdq:usesSpecification ; owl:someValuesFrom bdqffdq:Specification ] |
-
-
-### 4.2 Different From Axioms (normative)
-#### COMPLETE
+#### Implementation
 
 | Property | Value |
 | -------- | ----- |
-| Name | bdqffdq:COMPLETE |
-| Type | bdqffdq:ResponseResult |
-| Different From | bdqffdq:NOT_COMPLETE |
+| Name | bdqffdq:Implementation |
+| Type | owl:Class |
+| SubClass Of | [ owl:onProperty bdqffdq:implementedBy ; owl:allValuesFrom bdqffdq:Mechanism ] |
+| SubClass Of | [ owl:onProperty bdqffdq:usesSpecification ; owl:allValuesFrom bdqffdq:Specification ] |
 
 
-#### COMPLIANT
-
-| Property | Value |
-| -------- | ----- |
-| Name | bdqffdq:COMPLIANT |
-| Type | bdqffdq:ResponseResult |
-| Different From | bdqffdq:NOT_COMPLIANT |
-
-
-#### IS_ISSUE
+#### ImprovementTarget
 
 | Property | Value |
 | -------- | ----- |
-| Name | bdqffdq:IS_ISSUE |
-| Type | bdqffdq:ResponseResult |
-| Different From | bdqffdq:NOT_ISSUE, bdqffdq:POTENTIAL_ISSUE |
+| Name | bdqffdq:ImprovementTarget |
+| Type | owl:Class |
+| SubClass Of | [ owl:onProperty bdqffdq:targetedIssue ; owl:allValuesFrom bdqffdq:Issue ] |
+| SubClass Of | [ owl:onProperty bdqffdq:targetedMeasure ; owl:allValuesFrom bdqffdq:Measure ] |
+| SubClass Of | [ owl:onProperty bdqffdq:targetedValidation ; owl:allValuesFrom bdqffdq:Validation ] |
 
 
-#### NOT_ISSUE
-
-| Property | Value |
-| -------- | ----- |
-| Name | bdqffdq:NOT_ISSUE |
-| Type | bdqffdq:ResponseResult |
-| Different From | bdqffdq:POTENTIAL_ISSUE |
-
-
-#### AMENDED
+#### Issue
 
 | Property | Value |
 | -------- | ----- |
-| Name | bdqffdq:AMENDED |
-| Type | bdqffdq:ResponseStatus |
-| Different From | bdqffdq:NOT_AMENDED |
+| Name | bdqffdq:Issue |
+| Type | owl:Class |
+| SubClass Of | [ owl:onProperty bdqffdq:hasCriterion ; owl:allValuesFrom bdqffdq:Criterion ] |
 
 
-#### EXTERNAL_PREREQUISITES_NOT_MET
-
-| Property | Value |
-| -------- | ----- |
-| Name | bdqffdq:EXTERNAL_PREREQUISITES_NOT_MET |
-| Type | bdqffdq:ResponseStatus |
-| Different From | bdqffdq:INTERNAL_PREREQUISITES_NOT_MET |
-
-
-#### FILLED_IN
+#### IssueMethod
 
 | Property | Value |
 | -------- | ----- |
-| Name | bdqffdq:FILLED_IN |
-| Type | bdqffdq:ResponseStatus |
-| Different From | bdqffdq:NOT_AMENDED |
+| Name | bdqffdq:IssueMethod |
+| Type | owl:Class |
+| SubClass Of | [ owl:onProperty bdqffdq:forIssue ; owl:allValuesFrom bdqffdq:Issue ] |
+
+
+#### MeasurementMethod
+
+| Property | Value |
+| -------- | ----- |
+| Name | bdqffdq:MeasurementMethod |
+| Type | owl:Class |
+| SubClass Of | [ owl:onProperty bdqffdq:forMeasure ; owl:allValuesFrom bdqffdq:Measure ] |
+
+
+#### Policy
+
+| Property | Value |
+| -------- | ----- |
+| Name | bdqffdq:Policy |
+| Type | owl:Class |
+| SubClass Of | [ owl:onProperty bdqffdq:hasUseCase ; owl:allValuesFrom bdqffdq:UseCase ] |
+
+
+#### Validation
+
+| Property | Value |
+| -------- | ----- |
+| Name | bdqffdq:Validation |
+| Type | owl:Class |
+| SubClass Of | [ owl:onProperty bdqffdq:hasCriterion ; owl:allValuesFrom bdqffdq:Criterion ] |
+
+
+#### ValidationMethod
+
+| Property | Value |
+| -------- | ----- |
+| Name | bdqffdq:ValidationMethod |
+| Type | owl:Class |
+| SubClass Of | [ owl:onProperty bdqffdq:forValidation ; owl:allValuesFrom bdqffdq:Validation ] |
 
 
 ### 4.3 General Axioms (normative)
@@ -451,6 +371,22 @@ None
 None
 
 #### 4.3.5 InverseOf (normative)
+
+None
+
+#### 4.3.6 AllDifferent (normative)
+
+| Property | Value |
+| -------- | ----- |
+| Axiom | owl:AllDifferent |
+| Members | bdqffdq:AMENDED, bdqffdq:EXTERNAL_PREREQUISITES_NOT_MET, bdqffdq:FILLED_IN, bdqffdq:INTERNAL_PREREQUISITES_NOT_MET, bdqffdq:NOT_AMENDED, bdqffdq:RUN_HAS_RESULT |
+
+| Property | Value |
+| -------- | ----- |
+| Axiom | owl:AllDifferent |
+| Members | bdqffdq:COMPLETE, bdqffdq:COMPLIANT, bdqffdq:IS_ISSUE, bdqffdq:NOT_COMPLETE, bdqffdq:NOT_COMPLIANT, bdqffdq:NOT_ISSUE, bdqffdq:POTENTIAL_ISSUE |
+
+#### 4.3.7 DifferentFrom (normative)
 
 None
 
