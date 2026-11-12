@@ -47,7 +47,14 @@ BDQ_RS_PREFIX = "https://rs.tdwg.org/bdq"
 BDQ_RS_MODE = "rewrite"  # one of: "plain", "rewrite", "keep"
 BDQ_RS_BASE = "https://bdq-public-review.rs.tdwg.org"
 BDQ_RS_UNSERVED_PREFIXES = (
-    "https://rs.tdwg.org/bdqtest/terms",  # bdqtest terms and term list: not yet deployed (deployment_rs_tdwg_org.md Section 10)
+    # bdqtest: the vocabulary, its RDF, its terms and term list are not yet deployed (deployment_rs_tdwg_org.md
+    # Section 10); its documents (https://rs.tdwg.org/bdqtest/doc/...) are.
+    "https://rs.tdwg.org/bdqtest/terms",
+    "https://rs.tdwg.org/bdqtest.",
+)
+# IRIs not yet served on BDQ_RS_BASE that are exactly these (not prefixes of served IRIs).
+BDQ_RS_UNSERVED_IRIS = (
+    "https://rs.tdwg.org/bdqtest/",
 )
 # A Markdown autolink <https://rs.tdwg.org/bdq...>, not an angle-bracket link destination ](<...>).
 BDQ_RS_AUTOLINK_RE = re.compile(r'(?<![(\[])<(?P<url>https://rs\.tdwg\.org/bdq[^\s<>]*)>')
@@ -65,7 +72,7 @@ def bdq_rs_shown_plain(url: str) -> bool:
         return False
     if BDQ_RS_MODE == "plain":
         return True
-    return BDQ_RS_MODE == "rewrite" and url.startswith(BDQ_RS_UNSERVED_PREFIXES)
+    return BDQ_RS_MODE == "rewrite" and (url.startswith(BDQ_RS_UNSERVED_PREFIXES) or url in BDQ_RS_UNSERVED_IRIS)
 
 
 # This function applies the configured policy for BDQ rs.tdwg.org IRIs.

@@ -491,6 +491,10 @@ def test_bdq_rs_rewrite_mode_unserved_prefix_plain():
         assert rs.linkify_bare_urls_in_markdown_line("https://rs.tdwg.org/bdqtest/terms/") == "https://rs.tdwg.org/bdqtest/terms/"
         assert rs.rewrite_markdown_links("[Test](https://rs.tdwg.org/bdqtest/terms/example)") == "Test"
         assert rs.rewrite_markdown_links("<https://rs.tdwg.org/bdqtest/terms/example>") == "https://rs.tdwg.org/bdqtest/terms/example"
+        assert rs.rewrite_markdown_links("[Vocabulary IRI](https://rs.tdwg.org/bdqtest/)") == "Vocabulary IRI"
+        assert rs.rewrite_markdown_links("[RDF Metadata](https://rs.tdwg.org/bdqtest.ttl)") == "RDF Metadata"
+        # bdqtest documents are served
+        assert rs.rewrite_markdown_links("[Guide](https://rs.tdwg.org/bdqtest/doc/guide/)") == "[Guide](https://bdq-public-review.rs.tdwg.org/bdqtest/doc/guide/)"
 
 
 def test_bdq_rs_rewrite_mode_angle_destination_not_autolink():
