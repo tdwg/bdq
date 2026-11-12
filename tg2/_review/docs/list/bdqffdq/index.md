@@ -6,7 +6,7 @@
 Fitness For Use Framework Ontology List of Terms
 
 **Date version issued**<br>
-2026-06-03
+2026-11-09
 
 **Date created**<br>
 2025-05-10
@@ -18,13 +18,13 @@ Fitness For Use Framework Ontology List of Terms
 bdqffdq
 
 **This version**<br>
-<http://rs.tdwg.org/bdqffdq/terms/2026-06-03>
+<https://rs.tdwg.org/bdqffdq/doc/list/2026-11-09>
 
 **Latest version**<br>
-<http://rs.tdwg.org/bdqffdq/terms/>
+<https://rs.tdwg.org/bdqffdq/doc/list/>
 
 **Previous version**<br>
-{previous_version_slot}
+<https://rs.tdwg.org/bdqffdq/doc/list/2026-05-16>
 
 **Abstract**<br>
 This document is a reference for the BDQ standard, documenting vocabulary values in the Fitness For Use Framework Ontology, excluding additional axioms.
@@ -36,7 +36,7 @@ This document is a reference for the BDQ standard, documenting vocabulary values
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 **Bibliographic citation**<br>
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. Fitness For Use Framework Ontology List of Terms. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqffdq/terms/2026-06-03>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. Fitness For Use Framework Ontology List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqffdq/doc/list/2026-11-09>
 
 **Status**<br>
 Draft Standard for Review
@@ -1401,7 +1401,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. Fitness For Use Framework Ontology List of Terms. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqffdq/terms/2026-06-03>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. Fitness For Use Framework Ontology List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqffdq/doc/list/2026-11-09>
 
 **Biodiversity Information Standards (TDWG)**
 

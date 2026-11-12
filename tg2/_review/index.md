@@ -33,8 +33,6 @@ Draft Standard for Review
 **Latest version**<br>
 <http://rs.tdwg.org/bdqffdq/>
 
-**Previous version**<br>
-
 **Bibliographic citation**<br>
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. The Biodiversity Data Quality (BDQ) Standard. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqffdq/2026-06-03>
 

@@ -8,7 +8,7 @@
 Tutorial: From Use Case to Test
 
 **Date version issued**<br>
-2026-06-03
+2026-11-09
 
 **Date created**<br>
 2026-03-20
@@ -17,12 +17,10 @@ Tutorial: From Use Case to Test
 <http://example.org/to_be_determined>
 
 **This version**<br>
-<https://bdq.tdwg.org/to_be_determined2026-06-03>
+<https://rs.tdwg.org/bdq/doc/tutorial/2026-11-09>
 
 **Latest version**<br>
-<https://bdq.tdwg.org/to_be_determined>
-
-**Previous version**<br>
+<https://rs.tdwg.org/bdq/doc/tutorial/>
 
 **Abstract**<br>
 This document provides information supplementary to the BDQ standard, describing the thought process and procedure for describing a new Use Case and Tests.
@@ -34,7 +32,7 @@ This document provides information supplementary to the BDQ standard, describing
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 **Bibliographic citation**<br>
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. Tutorial: From Use Case to Test. Biodiversity Information Standards (TDWG). <https://bdq.tdwg.org/to_be_determined2026-06-03>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. Tutorial: From Use Case to Test. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdq/doc/tutorial/2026-11-09>
 
 **Status**<br>
 Draft Standard for Review
@@ -1488,7 +1486,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-[TDWG](<../../index.md#glossary_TDWG> "Biodiversity Information Standards") Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. Tutorial: From Use Case to Test. Biodiversity Information Standards (TDWG). <https://bdq.tdwg.org/to_be_determined2026-06-03>
+[TDWG](<../../index.md#glossary_TDWG> "Biodiversity Information Standards") Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. Tutorial: From Use Case to Test. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdq/doc/tutorial/2026-11-09>
 
 **Biodiversity Information Standards (TDWG)**
 

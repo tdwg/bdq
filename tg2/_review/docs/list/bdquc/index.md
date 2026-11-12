@@ -1,12 +1,12 @@
 <!--- This file is generated from templates by code, DO NOT EDIT by hand --->
 
-# BDQ Use Case Controlled Vocabulary
+# BDQ Use Case Controlled Vocabulary List of Terms
 
 **Title**<br>
-BDQ Use Case Controlled Vocabulary
+BDQ Use Case Controlled Vocabulary List of Terms
 
 **Date version issued**<br>
-2026-06-03
+2026-04-26
 
 **Date created**<br>
 2025-05-10
@@ -18,12 +18,13 @@ BDQ Use Case Controlled Vocabulary
 bdquc
 
 **This version**<br>
-<http://rs.tdwg.org/bdquc/terms/2026-06-03>
+<https://rs.tdwg.org/bdquc/doc/list/2026-04-26>
 
 **Latest version**<br>
-<http://rs.tdwg.org/bdquc/terms/>
+<https://rs.tdwg.org/bdquc/doc/list/>
 
 **Previous version**<br>
+<https://rs.tdwg.org/bdquc/doc/list/2026-04-22>
 
 **Abstract**<br>
 This document is a reference for the BDQ standard. It covers named individual Use Cases.
@@ -35,7 +36,7 @@ This document is a reference for the BDQ standard. It covers named individual Us
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 **Bibliographic citation**<br>
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Use Case Controlled Vocabulary. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdquc/terms/2026-06-03>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Use Case Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdquc/doc/list/2026-04-26>
 
 **Status**<br>
 Draft Standard for Review
@@ -100,7 +101,7 @@ For the list and links to all associated documents see [The Biodiversity Data Qu
 
 | Description | IRI | Download URL |
 | ----------- | --- | -----------  |
-| HTML file   | http://rs.tdwg.org/bdquc/terms/ | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/docs/list/bdquc/index.md |
+| HTML file   | https://rs.tdwg.org/bdquc/doc/list/ | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/docs/list/bdquc/index.md |
 | RDF/XML file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/dist/bdquc.xml |
 
 ### 1.6 Status of the Content of this Document (normative)
@@ -416,7 +417,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Use Case Controlled Vocabulary. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdquc/terms/2026-06-03>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Use Case Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdquc/doc/list/2026-04-26>
 
 **Biodiversity Information Standards (TDWG)**
 

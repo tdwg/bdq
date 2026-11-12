@@ -6,7 +6,7 @@
 Fitness For Use Framework Ontology
 
 **Date version issued**<br>
-2026-06-03
+2026-11-09
 
 **Date created**<br>
 2025-05-10
@@ -18,13 +18,10 @@ Fitness For Use Framework Ontology
 bdqffdq
 
 **This version**<br>
-<http://rs.tdwg.org/bdqffdq/2026-06-03>
+<https://rs.tdwg.org/bdqffdq/doc/ontology/2026-11-09>
 
 **Latest version**<br>
-<http://rs.tdwg.org/bdqffdq/>
-
-**Previous version**<br>
-{previous_version_slot}
+<https://rs.tdwg.org/bdqffdq/doc/ontology/>
 
 **Abstract**<br>
 This document is a reference for the BDQ standard, linking to the Fitness For Use Framework ontology documents that cover its uses, its vocabulary, and its vocabulary extension.
@@ -36,7 +33,7 @@ This document is a reference for the BDQ standard, linking to the Fitness For Us
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 **Bibliographic citation**<br>
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. Fitness For Use Framework Ontology. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqffdq/2026-06-03>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. Fitness For Use Framework Ontology. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqffdq/doc/ontology/2026-11-09>
 
 **Status**<br>
 Draft Standard for Review
@@ -129,7 +126,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. Fitness For Use Framework Ontology. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqffdq/2026-06-03>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. Fitness For Use Framework Ontology. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqffdq/doc/ontology/2026-11-09>
 
 **Biodiversity Information Standards (TDWG)**
 

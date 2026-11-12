@@ -8,7 +8,7 @@
 BDQ Tests: Concepts and Use
 
 **Date version issued**<br>
-2026-06-03
+2026-11-09
 
 **Date created**<br>
 2026-04-19
@@ -22,12 +22,10 @@ BDQ Tests: Concepts and Use
 -->
 
 **This version**<br>
-<https://rs.tdwg.org/bdq/docs/guide/bdqtest/2026-06-03>
+<https://rs.tdwg.org/bdqtest/doc/guide/2026-11-09>
 
 **Latest version**<br>
-<https://rs.tdwg.org/bdq/docs/guide/bdqtest/>
-
-**Previous version**<br>
+<https://rs.tdwg.org/bdqtest/doc/guide/>
 
 **Abstract**<br>
 This document is a reference for the BDQ standard, providing context for and normative guidance on use of the bdqtest: vocabulary.
@@ -39,7 +37,7 @@ This document is a reference for the BDQ standard, providing context for and nor
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 **Bibliographic citation**<br>
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Tests: Concepts and Use. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdq/docs/guide/bdqtest/2026-06-03>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Tests: Concepts and Use. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqtest/doc/guide/2026-11-09>
 
 **Status**<br>
 Draft Standard for Review
@@ -763,7 +761,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-[TDWG](<../../../index.md#glossary_TDWG> "Biodiversity Information Standards") Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Tests: Concepts and Use. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdq/docs/guide/bdqtest/2026-06-03>
+[TDWG](<../../../index.md#glossary_TDWG> "Biodiversity Information Standards") Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Tests: Concepts and Use. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqtest/doc/guide/2026-11-09>
 
 **Biodiversity Information Standards (TDWG)**
 

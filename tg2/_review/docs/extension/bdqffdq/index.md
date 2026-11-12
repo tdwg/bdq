@@ -6,7 +6,7 @@
 Fitness For Use Framework Ontology Vocabulary Extension
 
 **Date version issued**<br>
-2026-06-03
+2026-11-09
 
 **Date created**<br>
 2025-05-10
@@ -18,13 +18,10 @@ Fitness For Use Framework Ontology Vocabulary Extension
 bdqffdq
 
 **This version**<br>
-<http://rs.tdwg.org/bdqffdq/extension/2026-06-03>
+<https://rs.tdwg.org/bdqffdq/doc/extension/2026-11-09>
 
 **Latest version**<br>
-<http://rs.tdwg.org/bdqffdq/extension/>
-
-**Previous version**<br>
-{previous_version_slot}
+<https://rs.tdwg.org/bdqffdq/doc/extension/>
 
 **Abstract**<br>
 This document is a reference for the BDQ standard, documenting additional axioms that extend the basic vocabulary of the Fitness For Use Framework Ontology.
@@ -36,7 +33,7 @@ This document is a reference for the BDQ standard, documenting additional axioms
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 **Bibliographic citation**<br>
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. Fitness For Use Framework Ontology Vocabulary Extension. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqffdq/extension/2026-06-03>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. Fitness For Use Framework Ontology Vocabulary Extension. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqffdq/doc/extension/2026-11-09>
 
 **Status**<br>
 Draft Standard for Review
@@ -102,7 +99,7 @@ Information about the bdqffdq: ontology, its usage, and its extensions can be fo
 
 | Description | IRI | Download URL | Notes | 
 | ----------- | --- | -----------  | ----- | 
-| HTML file   | http://rs.tdwg.org/bdqffdq/extension/ | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/docs/extension/bdqffdq/index.md | This file | 
+| HTML file   | https://rs.tdwg.org/bdqffdq/doc/extension/ | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/docs/extension/bdqffdq/index.md | This file | 
 | OWL Ontology | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/vocabulary/bdqffdq.owl | Turtle Serialization of the full ontology, including additional axioms | 
 
 ### 1.4 Status of the Content of this Document (normative)
@@ -411,7 +408,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. Fitness For Use Framework Ontology Vocabulary Extension. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/bdqffdq/extension/2026-06-03>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. Fitness For Use Framework Ontology Vocabulary Extension. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqffdq/doc/extension/2026-11-09>
 
 **Biodiversity Information Standards (TDWG)**
 

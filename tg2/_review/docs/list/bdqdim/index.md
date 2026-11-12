@@ -6,7 +6,7 @@
 Data Quality Dimension Controlled Vocabulary List of Terms
 
 **Date version issued**<br>
-2026-06-03
+2024-09-30
 
 **Date created**<br>
 2025-05-10
@@ -18,12 +18,10 @@ Data Quality Dimension Controlled Vocabulary List of Terms
 bdqdim
 
 **This version**<br>
-<https://rs.tdwg.org/bdqdim/terms/2026-06-03>
+<https://rs.tdwg.org/bdqdim/doc/list/2024-09-30>
 
 **Latest version**<br>
-<https://rs.tdwg.org/bdqdim/terms/>
-
-**Previous version**<br>
+<https://rs.tdwg.org/bdqdim/doc/list/>
 
 **Abstract**<br>
 This document is a reference for the BDQ standard. It covers the vocabulary terms that are types of bdqffdq:DataQualityDimension (originally defined in Veiga 2016 and Veiga et al. 2017) and form the controlled vocabulary for bdqffdq:hasDataQualityDimension.
@@ -35,7 +33,7 @@ This document is a reference for the BDQ standard. It covers the vocabulary term
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 **Bibliographic citation**<br>
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. Data Quality Dimension Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqdim/terms/2026-06-03>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2024. Data Quality Dimension Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqdim/doc/list/2024-09-30>
 
 **Status**<br>
 Draft Standard for Review
@@ -103,7 +101,7 @@ For the list and links to all associated documents see [The Biodiversity Data Qu
 
 | Description | IRI | Download URL | Notes | 
 | ----------- | --- | -----------  | ----- | 
-| HTML file   | https://rs.tdwg.org/bdqdim/terms/ | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/docs/list/bdqdim/index.md | This file | 
+| HTML file   | https://rs.tdwg.org/bdqdim/doc/list/ | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/docs/list/bdqdim/index.md | This file | 
 | RDF/XML file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/dist/bdqdim.xml | Example for submission, to be generated | 
 
 ### 1.6 Status of the Content of this Document (normative)
@@ -498,7 +496,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. Data Quality Dimension Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqdim/terms/2026-06-03>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2024. Data Quality Dimension Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqdim/doc/list/2024-09-30>
 
 **Biodiversity Information Standards (TDWG)**
 
