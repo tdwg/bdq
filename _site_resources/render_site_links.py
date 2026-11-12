@@ -35,17 +35,37 @@ SIMPLE_MARKDOWN_LINK_WITH_TITLE_RE = re.compile(
     r'(?P<prefix>!?\[[^\]]*\]\()(?P<target><[^>]+>|[^)\s]+)(?P<ws>\s+)(?P<title>"[^"]*"|\'[^\']*\'|\([^\)]*\))(?P<suffix>\))'
 )
 
-# Links to rs.tdwg.org/bdq* should be handled specially until those resources are live.
-# For now, use "plain" so that such IRIs are shown as text and not rendered as clickable links.
-# Later this can be changed to "rewrite" for a test-rs base, or "keep" when rs.tdwg.org is ready.
+# Links to rs.tdwg.org/bdq* should be handled specially until those resources are live on rs.tdwg.org.
+# "plain": such IRIs are shown as text and not rendered as clickable links.
+# "rewrite": the IRI is still shown as text, but the link goes to the same path on BDQ_RS_BASE.
+#   For the public review, BDQ_RS_BASE is bdq-public-review.rs.tdwg.org, where the BDQ vocabularies and
+#   documents are deployed from the bdq branch of tdwg/rs.tdwg.org (tdwg/bdq#340).
+# "keep": the IRI is linked unchanged, for when rs.tdwg.org serves the BDQ resources.
+# IRIs starting with one of BDQ_RS_UNSERVED_PREFIXES are not yet served on BDQ_RS_BASE, and are shown
+# as plain text in "rewrite" mode as well.
 BDQ_RS_PREFIX = "https://rs.tdwg.org/bdq"
-BDQ_RS_MODE = "plain"  # one of: "plain", "rewrite", "keep"
-BDQ_RS_BASE = "https://test-rs.tdwg.org"
+BDQ_RS_MODE = "rewrite"  # one of: "plain", "rewrite", "keep"
+BDQ_RS_BASE = "https://bdq-public-review.rs.tdwg.org"
+BDQ_RS_UNSERVED_PREFIXES = (
+    "https://rs.tdwg.org/bdqtest/terms",  # bdqtest terms and term list: not yet deployed (deployment_rs_tdwg_org.md Section 10)
+)
+# A Markdown autolink <https://rs.tdwg.org/bdq...>, not an angle-bracket link destination ](<...>).
+BDQ_RS_AUTOLINK_RE = re.compile(r'(?<![(\[])<(?P<url>https://rs\.tdwg\.org/bdq[^\s<>]*)>')
 
 
 # This function returns True if a URL is in the BDQ rs.tdwg.org namespace that needs temporary special handling.
 def is_bdq_rs_uri(url: str) -> bool:
     return url.startswith(BDQ_RS_PREFIX)
+
+
+# This function returns True if a BDQ rs.tdwg.org IRI is to be shown as plain text, not as a link:
+# in "plain" mode, and in "rewrite" mode for IRIs not yet served on BDQ_RS_BASE.
+def bdq_rs_shown_plain(url: str) -> bool:
+    if not is_bdq_rs_uri(url):
+        return False
+    if BDQ_RS_MODE == "plain":
+        return True
+    return BDQ_RS_MODE == "rewrite" and url.startswith(BDQ_RS_UNSERVED_PREFIXES)
 
 
 # This function applies the configured policy for BDQ rs.tdwg.org IRIs.
@@ -282,7 +302,19 @@ def format_markdown_link_target(dest: str, title: str | None) -> str:
 # It also suppresses links to BDQ rs.tdwg.org IRIs when BDQ_RS_MODE is "plain", leaving only their visible text.
 # It preserves optional markdown link titles.
 def rewrite_markdown_links(text: str) -> str:
-    # First handle links with destination + title.
+    # First handle autolinks to BDQ rs.tdwg.org IRIs, e.g. "This version" in document headers:
+    # plain text, or a Markdown link that shows the IRI and goes to the rewritten target.
+    def repl_bdq_autolink(match):
+        url = match.group("url")
+        if BDQ_RS_MODE == "keep":
+            return match.group(0)
+        if bdq_rs_shown_plain(url):
+            return url
+        return f"[{url}]({rewrite_bdq_rs_uri(url)})"
+
+    text = BDQ_RS_AUTOLINK_RE.sub(repl_bdq_autolink, text)
+
+    # Then handle links with destination + title.
     def repl_with_title(match):
         prefix = match.group("prefix")
         target = match.group("target")
@@ -295,12 +327,12 @@ def rewrite_markdown_links(text: str) -> str:
 
         if target.startswith("<") and target.endswith(">"):
             inner = target[1:-1].strip()
-            if is_bdq_rs_uri(inner) and BDQ_RS_MODE == "plain":
+            if bdq_rs_shown_plain(inner):
                 return label if label else inner
             rewritten = rewrite_target(inner)
             return f"{prefix}<{rewritten}>{ws}{title}{suffix}"
 
-        if is_bdq_rs_uri(target) and BDQ_RS_MODE == "plain":
+        if bdq_rs_shown_plain(target):
             return label if label else target
 
         rewritten = rewrite_target(target)
@@ -317,7 +349,7 @@ def rewrite_markdown_links(text: str) -> str:
         label_match = MARKDOWN_LINK_LABEL_RE.match(prefix)
         label = label_match.group(1) if label_match else ""
 
-        if is_bdq_rs_uri(target) and BDQ_RS_MODE == "plain":
+        if bdq_rs_shown_plain(target):
             return label if label else target
 
         rewritten = rewrite_target(target.strip())
@@ -334,7 +366,7 @@ def rewrite_markdown_links(text: str) -> str:
         label_match = MARKDOWN_LINK_LABEL_RE.match(prefix)
         label = label_match.group(1) if label_match else ""
 
-        if is_bdq_rs_uri(target) and BDQ_RS_MODE == "plain":
+        if bdq_rs_shown_plain(target):
             return label if label else target
 
         rewritten = rewrite_target(target)
@@ -350,7 +382,7 @@ def rewrite_html_links(text: str) -> str:
     def repl(match):
         prefix, target, suffix = match.groups()
         stripped_target = target.strip()
-        if is_bdq_rs_uri(stripped_target) and BDQ_RS_MODE == "plain":
+        if bdq_rs_shown_plain(stripped_target):
             return f"{prefix}{stripped_target}{suffix}"
         return f"{prefix}{rewrite_target(stripped_target)}{suffix}"
 
@@ -379,10 +411,11 @@ def linkify_bare_urls_in_markdown_line(line: str) -> str:
 
         def repl(match):
             url = match.group("url")
-            if is_bdq_rs_uri(url) and BDQ_RS_MODE == "plain":
+            if bdq_rs_shown_plain(url):
                 return url
             rewritten_url = rewrite_target(url)
-            return f'[{rewritten_url}]({rewritten_url})'
+            # Show the URL as written; only the link target is rewritten.
+            return f'[{url}]({rewritten_url})'
 
         masked = BARE_URL_RE.sub(repl, masked)
         masked = unmask_markdown_inline_spans(masked, originals)
@@ -423,10 +456,11 @@ def linkify_bare_urls_in_html_line(line: str) -> str:
 
             def repl(match):
                 url = match.group("url")
-                if is_bdq_rs_uri(url) and BDQ_RS_MODE == "plain":
+                if bdq_rs_shown_plain(url):
                     return url
                 rewritten_url = rewrite_target(url)
-                return f'<a href="{rewritten_url}">{rewritten_url}</a>'
+                # Show the URL as written; only the link target is rewritten.
+                return f'<a href="{rewritten_url}">{url}</a>'
 
             masked = BARE_URL_RE.sub(repl, masked)
             masked = unmask_markdown_inline_spans(masked, originals)

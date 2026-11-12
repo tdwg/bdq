@@ -1,4 +1,18 @@
+from contextlib import contextmanager
+
 from _site_resources import render_site_links as rs
+
+
+# Temporarily set how BDQ rs.tdwg.org IRIs are linked (BDQ_RS_MODE, BDQ_RS_BASE), restoring the
+# configured values afterwards, so that each test is independent of the configured mode.
+@contextmanager
+def bdq_rs_links(mode, base="https://bdq-public-review.rs.tdwg.org"):
+    saved = (rs.BDQ_RS_MODE, rs.BDQ_RS_BASE)
+    rs.BDQ_RS_MODE, rs.BDQ_RS_BASE = mode, base
+    try:
+        yield
+    finally:
+        rs.BDQ_RS_MODE, rs.BDQ_RS_BASE = saved
 
 # Tests for the link rewriting and linkifying functions used in the site rendering process. 
 # These are not intended to be exhaustive tests of markdown parsing, but rather cover specific 
@@ -147,13 +161,14 @@ def test_rewrite_html_links_external_unchanged():
 
 
 def test_rewrite_html_links_bdq_rs_plain_mode_keeps_href():
-    src = '<a href="https://rs.tdwg.org/bdqtest/">bdqtest</a>'
-    out = rs.rewrite_html_links(src)
-    assert out == src
-    # even if link contains target attribute do not rewrite
-    src = '<a href="https://rs.tdwg.org/bdqtest/" target="_blank">bdqtest</a>'
-    out = rs.rewrite_html_links(src)
-    assert out == src
+    with bdq_rs_links("plain"):
+        src = '<a href="https://rs.tdwg.org/bdqtest/">bdqtest</a>'
+        out = rs.rewrite_html_links(src)
+        assert out == src
+        # even if link contains target attribute do not rewrite
+        src = '<a href="https://rs.tdwg.org/bdqtest/" target="_blank">bdqtest</a>'
+        out = rs.rewrite_html_links(src)
+        assert out == src
 
 
 def test_linkify_bare_url_in_markdown_line():
@@ -296,15 +311,17 @@ def test_linkify_html_line_backtick_span_and_markdown_link_with_bare_url():
     )
 
 def test_bdq_rs_plain_mode_not_linkified_in_markdown():
-    src = "https://rs.tdwg.org/bdqtest/terms/example"
-    out = rs.linkify_bare_urls_in_markdown_line(src)
-    assert out == src
+    with bdq_rs_links("plain"):
+        src = "https://rs.tdwg.org/bdqtest/terms/example"
+        out = rs.linkify_bare_urls_in_markdown_line(src)
+        assert out == src
 
 
 def test_bdq_rs_plain_mode_markdown_link_collapses_to_label():
-    src = "[Test](https://rs.tdwg.org/bdqtest/terms/example)"
-    out = rs.rewrite_markdown_links(src)
-    assert out == "Test"
+    with bdq_rs_links("plain"):
+        src = "[Test](https://rs.tdwg.org/bdqtest/terms/example)"
+        out = rs.rewrite_markdown_links(src)
+        assert out == "Test"
 
 
 def test_real_case_test_glossary_link():
@@ -432,4 +449,57 @@ def test_rewrite_markdown_links_plain_bold_label_with_parentheses_fragment():
     assert out == "[**Data Quality Dimension Controlled Vocabulary List of Terms (bdqdim:)**](docs/list/bdqdim/index.html#bdqdim_Conformance)"
 
 
+# BDQ rs.tdwg.org IRIs in "plain" mode: autolinks, as in document headers, become plain text.
+def test_bdq_rs_plain_mode_autolink_becomes_text():
+    with bdq_rs_links("plain"):
+        src = "<https://rs.tdwg.org/bdq/doc/users/2026-11-09>"
+        assert rs.rewrite_markdown_links(src) == "https://rs.tdwg.org/bdq/doc/users/2026-11-09"
 
+
+# BDQ rs.tdwg.org IRIs in "rewrite" mode: the IRI is shown, the link goes to BDQ_RS_BASE.
+def test_bdq_rs_rewrite_mode_autolink():
+    with bdq_rs_links("rewrite"):
+        src = "**Latest version**<br>\n<https://rs.tdwg.org/bdq/doc/users/>"
+        out = rs.rewrite_markdown_links(src)
+        assert out == "**Latest version**<br>\n[https://rs.tdwg.org/bdq/doc/users/](https://bdq-public-review.rs.tdwg.org/bdq/doc/users/)"
+
+
+def test_bdq_rs_rewrite_mode_markdown_link_keeps_label():
+    with bdq_rs_links("rewrite"):
+        src = "[bdqffdq:Validation](https://rs.tdwg.org/bdqffdq/terms/Validation)"
+        out = rs.rewrite_markdown_links(src)
+        assert out == "[bdqffdq:Validation](https://bdq-public-review.rs.tdwg.org/bdqffdq/terms/Validation)"
+
+
+def test_bdq_rs_rewrite_mode_bare_url_shows_iri():
+    with bdq_rs_links("rewrite"):
+        src = "| bdqffdq:     | https://rs.tdwg.org/bdqffdq/terms/          |"
+        out = rs.linkify_bare_urls_in_markdown_line(src)
+        assert out == "| bdqffdq:     | [https://rs.tdwg.org/bdqffdq/terms/](https://bdq-public-review.rs.tdwg.org/bdqffdq/terms/)          |"
+
+
+def test_bdq_rs_rewrite_mode_html_href_and_text():
+    with bdq_rs_links("rewrite"):
+        src = '<a href="https://rs.tdwg.org/bdqval/terms/">bdqval</a>'
+        assert rs.rewrite_html_links(src) == '<a href="https://bdq-public-review.rs.tdwg.org/bdqval/terms/">bdqval</a>'
+        src = "<td>https://rs.tdwg.org/bdqval/terms/</td>"
+        assert rs.linkify_bare_urls_in_html_line(src) == '<td><a href="https://bdq-public-review.rs.tdwg.org/bdqval/terms/">https://rs.tdwg.org/bdqval/terms/</a></td>'
+
+
+def test_bdq_rs_rewrite_mode_unserved_prefix_plain():
+    with bdq_rs_links("rewrite"):
+        assert rs.linkify_bare_urls_in_markdown_line("https://rs.tdwg.org/bdqtest/terms/") == "https://rs.tdwg.org/bdqtest/terms/"
+        assert rs.rewrite_markdown_links("[Test](https://rs.tdwg.org/bdqtest/terms/example)") == "Test"
+        assert rs.rewrite_markdown_links("<https://rs.tdwg.org/bdqtest/terms/example>") == "https://rs.tdwg.org/bdqtest/terms/example"
+
+
+def test_bdq_rs_rewrite_mode_angle_destination_not_autolink():
+    with bdq_rs_links("rewrite"):
+        src = "[x](<https://rs.tdwg.org/bdqffdq/terms/Validation>)"
+        assert rs.rewrite_markdown_links(src) == "[x](<https://bdq-public-review.rs.tdwg.org/bdqffdq/terms/Validation>)"
+
+
+def test_non_bdq_urls_unchanged_in_rewrite_mode():
+    with bdq_rs_links("rewrite"):
+        assert rs.linkify_bare_urls_in_markdown_line("See https://example.org/y.") == "See [https://example.org/y](https://example.org/y)."
+        assert rs.rewrite_markdown_links("<https://example.org/x>") == "<https://example.org/x>"
