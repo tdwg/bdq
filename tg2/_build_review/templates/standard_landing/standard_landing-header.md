@@ -25,7 +25,7 @@ Technical Specification
 {created_date}
 
 **This version**<br>
-<{current_iri}{ratification_date}>
+<{current_iri}/version/{ratification_date}>
 
 **Latest version**<br>
 <{current_iri}>
@@ -34,7 +34,7 @@ Technical Specification
 {previous_version_slot}
 
 **Bibliographic citation**<br>
-{creator}. {year}. {document_title}. {publisher}. <{current_iri}{ratification_date}>
+{creator}. {year}. {document_title}. {publisher}. <{current_iri}/version/{ratification_date}>
 
 **Abstract**<br>
 {abstract}
@@ -149,7 +149,7 @@ In the BDQ Standard documents, IRIs are frequently abbreviated using namespace a
 
 ### 1.8 Referring to Terms (normative)
 
-In any technical treatment of the BDQ standard, a precise reference to a class or property term SHOULD be made using its qualified name (the namespace prefix followed by the term local name; e.g., `bdqffdq:InformationElement`) and the namespace IRI corresponding to the namespace prefix (e.g., 'https://rs.tdwg.org/bdqffdq/terms' for `bdqffdq:`) MUST be provided. In less formal descriptions where the technical precision is not needed, the preferred label (skos:prefLabel, e.g., `Information Element`) or the term local name (e.g., `InformationElement`) MAY be used. You will find all of these methods of referring to BDQ-related terms throughout the BDQ documentation.
+In any technical treatment of the BDQ standard, a precise reference to a class or property term SHOULD be made using its qualified name (the namespace prefix followed by the term local name; e.g., `bdqffdq:InformationElement`) and the namespace IRI corresponding to the namespace prefix (e.g., `https://rs.tdwg.org/bdqffdq/terms/` for `bdqffdq:`) MUST be provided. In less formal descriptions where the technical precision is not needed, the preferred label (skos:prefLabel, e.g., `Information Element`) or the term local name (e.g., `InformationElement`) MAY be used. You will find all of these methods of referring to BDQ-related terms throughout the BDQ documentation.
 
 ### 1.9 Notation Conventions (non-normative)
 
@@ -362,44 +362,52 @@ The Supporting Vocabularies are controlled vocabularies used in the technical de
 
 #### 3.3.3 Landing Page IRIs (non-normative)
 
-Note: For each of the following documents the landing page IRI will resolve to the term list document when HTML is requested.
+The parts of the standard are identified by the IRIs below, served by rs.tdwg.org. When HTML is requested, a document IRI redirects to the document's page on this site, and a vocabulary, term list, or vocabulary extension IRI returns a description of it. The RDF metadata (Turtle) of each is available by content negotiation or by replacing the final `/` of the IRI with `.ttl` (e.g. `https://rs.tdwg.org/bdqval.ttl`); the RDF of the vocabulary extension includes its axioms.
 
-Note: **None of these links will work until deployment of the standard**, but they are included here to show the intended structure of the IRIs and to provide a complete list of the landing page, term list IRIs, and related RDF metadata documents for the standard.
+Note: **For the public review, these IRIs are served at bdq-public-review.rs.tdwg.org**, and the links below go there; they will resolve at rs.tdwg.org after ratification. The standard IRI is a placeholder until a standard number is assigned. The `bdqtest:` vocabulary, its term list, and its List of Terms are not yet served for the review.
 
-- **The Biodiversity Data Quality (BDQ) Standard** - Overview of the BDQ standard. This page. 
-  - [Standard IRI](https://www.tdwg.org/standards/nnnn/) redirects to [HTML](https://bdq.tdwg.org/bdq/)
-  - [RDF Metadata](https://rs.tdwg.org/bdq.ttl)
-- [**BDQ Tests Vocabulary (bdqtest:)**](https://bdq.tdwg.org/bdqtest/)  
-  - [Vocabulary IRI](https://rs.tdwg.org/bdqtest/) redirects to [HTML Terms List](https://bdq.tdwg.org/bdqtest/terms/)
-  - [RDF Metadata](https://rs.tdwg.org/bdqtest.ttl)
-  - [Term List RDF Metadata](https://rs.tdwg.org/bdqtest/terms.ttl)
-- [**BDQ Fitness For Use Vocabulary (bdqffdq:)**](https://bdq.tdwg.org/bdqffdq/) 
-  - [Vocabulary IRI](https://rs.tdwg.org/bdqffdq/) redirects to the [HTML Landing Page](https://bdq.tdwg.org/bdqffdq/)
-  - [RDF Metadata](https://rs.tdwg.org/bdqffdq.ttl)
-  - [HTML Terms List](https://bdq.tdwg.org/bdqffdq/terms/)
-  - [Term List RDF Metadata](https://rs.tdwg.org/bdqffdq/terms.ttl)
-  - [HTML Vocabulary Extension](https://bdq.tdwg.org/bdqffdq/extension/)
-  - [Vocabulary Extension RDF Metadata](https://bdq.tdwg.org/bdqffdq/extension.ttl)
-- [**BDQ Controlled Vocabulary (bdqval:)**](https://bdq.tdwg.org/bdqval/)
-  - [Vocabulary IRI](https://rs.tdwg.org/bdq/) redirects to [HTML Terms List](https://bdq.tdwg.org/bdqval/terms)
-  - [RDF Metadata](https://rs.tdwg.org/bdqval.ttl)
-  - [Term List RDF Metadata](https://rs.tdwg.org/bdqval/terms.ttl)
-- [**Data Quality Criterion Controlled Vocabulary (bdqcrit:)**](https://bdq.tdwg.org/bdqcrit/) 
-  - [Vocabulary IRI](https://rs.tdwg.org/bdqcrit/) redirects to [HTML Terms List](https://bdq.tdwg.org/bdqcrit/terms)
-  - [RDF Metadata](https://bdq.tdwg.org/bdqcrit.ttl)
-  - [Term List RDF Metadata](https://rs.tdwg.org/bdqcrit/terms.ttl)
-- [**Data Quality Dimension Controlled Vocabulary (bdqdim:)**](https://bdq.tdwg.org/bdqdim/)
-  - [Vocabulary IRI](https://rs.tdwg.org/bdqdim/) redirects to [HTML Terms List](https://bdq.tdwg.org/bdqdim/terms)
-  - [RDF Metadata](https://bdq.tdwg.org/bdqdim.ttl)
-  - [Term List RDF Metadata](https://rs.tdwg.org/bdqdim/terms.ttl)
-- [**Data Quality Enhancement Controlled Vocabulary (bdqenh:)**](https://bdq.tdwg.org/bdqenh/) 
-  - [Vocabulary IRI](https://rs.tdwg.org/bdqenh/) redirects to [HTML Terms List](https://bdq.tdwg.org/bdqenh/terms)
-  - [RDF Metadata](https://bdq.tdwg.org/bdqenh.ttl)
-  - [Term List RDF Metadata](https://rs.tdwg.org/bdqenh/terms.ttl)
- [**BDQ Use Case Controlled Vocabulary (bdquc:)**](https://bdq.tdwg.org/bdquc/) 
-  - [Vocabulary IRI](https://rs.tdwg.org/bdquc/) redirects to [HTML Terms List](https://bdq.tdwg.org/bdquc/terms)
-  - [RDF Metadata](https://bdq.tdwg.org/bdquc.ttl)
-  - [Term List RDF Metadata](https://rs.tdwg.org/bdquc/terms.ttl)
+- **The Biodiversity Data Quality (BDQ) Standard** - Overview of the BDQ standard. This page.
+  - Standard IRI: http://www.tdwg.org/standards/YYY
+- **The Fitness For Use Framework Ontology (bdqffdq:)**
+  - Vocabulary (ontology) IRI: https://rs.tdwg.org/bdqffdq/
+  - Term list IRI: https://rs.tdwg.org/bdqffdq/terms/
+  - Vocabulary extension IRI: https://rs.tdwg.org/bdqffdq/extension/
+  - [Fitness For Use Framework Ontology](docs/bdqffdq/index.md): https://rs.tdwg.org/bdqffdq/doc/ontology/
+  - [List of Terms](docs/list/bdqffdq/index.md): https://rs.tdwg.org/bdqffdq/doc/list/
+  - [Vocabulary Extension](docs/extension/bdqffdq/index.md): https://rs.tdwg.org/bdqffdq/doc/extension/
+  - [Fitness For Use Framework Ontology: Concepts and Use](docs/guide/bdqffdq/index.md): https://rs.tdwg.org/bdqffdq/doc/guide/
+- **The Tests (bdqtest:)**
+  - Vocabulary IRI: https://rs.tdwg.org/bdqtest/
+  - Term list IRI: https://rs.tdwg.org/bdqtest/terms/
+  - [List of Terms](docs/list/bdqtest/index.md): https://rs.tdwg.org/bdqtest/doc/list/
+  - [BDQ Tests: Concepts and Use](docs/guide/bdqtest/index.md): https://rs.tdwg.org/bdqtest/doc/guide/
+  - [BDQ Tests Quick Reference Guide](docs/terms/bdqtest/index.md): https://rs.tdwg.org/bdqtest/doc/qrg/
+- **BDQ Controlled Vocabulary (bdqval:)**
+  - Vocabulary IRI: https://rs.tdwg.org/bdqval/
+  - Term list IRI: https://rs.tdwg.org/bdqval/terms/
+  - [List of Terms](docs/list/bdqval/index.md): https://rs.tdwg.org/bdqval/doc/list/
+- **Data Quality Criterion Controlled Vocabulary (bdqcrit:)**
+  - Vocabulary IRI: https://rs.tdwg.org/bdqcrit/
+  - Term list IRI: https://rs.tdwg.org/bdqcrit/terms/
+  - [List of Terms](docs/list/bdqcrit/index.md): https://rs.tdwg.org/bdqcrit/doc/list/
+- **Data Quality Dimension Controlled Vocabulary (bdqdim:)**
+  - Vocabulary IRI: https://rs.tdwg.org/bdqdim/
+  - Term list IRI: https://rs.tdwg.org/bdqdim/terms/
+  - [List of Terms](docs/list/bdqdim/index.md): https://rs.tdwg.org/bdqdim/doc/list/
+- **Data Quality Enhancement Controlled Vocabulary (bdqenh:)**
+  - Vocabulary IRI: https://rs.tdwg.org/bdqenh/
+  - Term list IRI: https://rs.tdwg.org/bdqenh/terms/
+  - [List of Terms](docs/list/bdqenh/index.md): https://rs.tdwg.org/bdqenh/doc/list/
+- **BDQ Use Case Controlled Vocabulary (bdquc:)**
+  - Vocabulary IRI: https://rs.tdwg.org/bdquc/
+  - Term list IRI: https://rs.tdwg.org/bdquc/terms/
+  - [List of Terms](docs/list/bdquc/index.md): https://rs.tdwg.org/bdquc/doc/list/
+- **Guides and other documents**
+  - [BDQ User's Guide](docs/guide/users/index.md): https://rs.tdwg.org/bdq/doc/users/
+  - [BDQ Implementer's Guide](docs/guide/implementers/index.md): https://rs.tdwg.org/bdq/doc/implementers/
+  - [Guide to Marking and Identifying Synthetic and Modified Data](docs/guide/synthetic/index.md): https://rs.tdwg.org/bdq/doc/synthetic/
+  - [BDQ Supplemental Information](docs/supplement/index.md): https://rs.tdwg.org/bdq/doc/supplement/
+  - [Tutorial: From Use Case to Test](docs/tutorial/index.md): https://rs.tdwg.org/bdq/doc/tutorial/
 
 ### 3.4 Additional Documents (non-normative)
 

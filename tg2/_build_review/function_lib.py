@@ -429,21 +429,28 @@ def convert_examples(text_with_list_of_examples: str) -> str:
 # A document with no versions in rs.tdwg.org (or if the file cannot be read) falls back to
 # doc_modified from its document_configuration.yaml, with a warning.
 RS_TDWG_ORG_BRANCH = 'bdq'
-RS_DOCS_VERSIONS_URL = 'https://raw.githubusercontent.com/tdwg/rs.tdwg.org/' + RS_TDWG_ORG_BRANCH + '/docs-versions/docs-versions.csv'
-_rs_docs_versions = None
+# The landing page is not a document: it is covered by the standard record, so its header cites the
+# standard's versions (standards-versions/standards-versions.csv), matched on the standard IRI.
+RS_TDWG_ORG_BASE = 'https://raw.githubusercontent.com/tdwg/rs.tdwg.org/' + RS_TDWG_ORG_BRANCH + '/'
+RS_DOCS_VERSIONS_URL = RS_TDWG_ORG_BASE + 'docs-versions/docs-versions.csv'
+RS_STANDARDS_VERSIONS_URL = RS_TDWG_ORG_BASE + 'standards-versions/standards-versions.csv'
+_rs_tables = {}
+
+
+def _read_rs_table(url):
+    if url not in _rs_tables:
+        import csv, io, urllib.request
+        try:
+            with urllib.request.urlopen(url, timeout=60) as response:
+                _rs_tables[url] = list(csv.DictReader(io.StringIO(response.read().decode('utf-8'))))
+        except Exception as e:
+            print('Warning: could not read ' + url + ': ' + str(e))
+            _rs_tables[url] = []
+    return _rs_tables[url]
 
 
 def _read_rs_docs_versions():
-    global _rs_docs_versions
-    if _rs_docs_versions is None:
-        import csv, io, urllib.request
-        try:
-            with urllib.request.urlopen(RS_DOCS_VERSIONS_URL, timeout=60) as response:
-                _rs_docs_versions = list(csv.DictReader(io.StringIO(response.read().decode('utf-8'))))
-        except Exception as e:
-            print('Warning: could not read document versions from ' + RS_DOCS_VERSIONS_URL + ': ' + str(e))
-            _rs_docs_versions = []
-    return _rs_docs_versions
+    return _read_rs_table(RS_DOCS_VERSIONS_URL)
 
 
 def rs_document_version(document_configuration):
@@ -452,6 +459,9 @@ def rs_document_version(document_configuration):
     current_iri = document_configuration['current_iri']
     versions = sorted(((row['version_issued'], row['version_iri']) for row in _read_rs_docs_versions()
                        if row['current_iri'] == current_iri), reverse=True)
+    if not versions:
+        versions = sorted(((row['version_issued'], row['version']) for row in _read_rs_table(RS_STANDARDS_VERSIONS_URL)
+                           if row['standard'] == current_iri), reverse=True)
     if not versions:
         print('Warning: no versions of ' + current_iri + ' in rs.tdwg.org (' + RS_TDWG_ORG_BRANCH +
               '); using doc_modified ' + str(document_configuration['doc_modified']))
