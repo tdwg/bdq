@@ -55,9 +55,15 @@ BDQ_RS_UNSERVED_PREFIXES = (
 # IRIs not yet served on BDQ_RS_BASE that are exactly these (not prefixes of served IRIs).
 BDQ_RS_UNSERVED_IRIS = (
     "https://rs.tdwg.org/bdqtest/",
+    "https://rs.tdwg.org/bdqtest/doc/list/",  # the bdqtest List of Terms: declared with the bdqtest vocabulary
 )
-# A Markdown autolink <https://rs.tdwg.org/bdq...>, not an angle-bracket link destination ](<...>).
-BDQ_RS_AUTOLINK_RE = re.compile(r'(?<![(\[])<(?P<url>https://rs\.tdwg\.org/bdq[^\s<>]*)>')
+# Placeholder IRIs that do not resolve, e.g. the standard IRI until a standard number is assigned
+# (deployment_rs_tdwg_org.md Section 8.2.1): shown as plain text unless the mode is "keep".
+BDQ_PLACEHOLDER_PREFIXES = (
+    "http://www.tdwg.org/standards/YYY",
+)
+# A Markdown autolink <https://rs.tdwg.org/bdq...> or to a placeholder IRI, not an angle-bracket link destination ](<...>).
+BDQ_RS_AUTOLINK_RE = re.compile(r'(?<![(\[])<(?P<url>(?:https://rs\.tdwg\.org/bdq|http://www\.tdwg\.org/standards/YYY)[^\s<>]*)>')
 
 
 # This function returns True if a URL is in the BDQ rs.tdwg.org namespace that needs temporary special handling.
@@ -68,6 +74,8 @@ def is_bdq_rs_uri(url: str) -> bool:
 # This function returns True if a BDQ rs.tdwg.org IRI is to be shown as plain text, not as a link:
 # in "plain" mode, and in "rewrite" mode for IRIs not yet served on BDQ_RS_BASE.
 def bdq_rs_shown_plain(url: str) -> bool:
+    if url.startswith(BDQ_PLACEHOLDER_PREFIXES):
+        return BDQ_RS_MODE != "keep"
     if not is_bdq_rs_uri(url):
         return False
     if BDQ_RS_MODE == "plain":

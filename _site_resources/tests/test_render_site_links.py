@@ -493,7 +493,8 @@ def test_bdq_rs_rewrite_mode_unserved_prefix_plain():
         assert rs.rewrite_markdown_links("<https://rs.tdwg.org/bdqtest/terms/example>") == "https://rs.tdwg.org/bdqtest/terms/example"
         assert rs.rewrite_markdown_links("[Vocabulary IRI](https://rs.tdwg.org/bdqtest/)") == "Vocabulary IRI"
         assert rs.rewrite_markdown_links("[RDF Metadata](https://rs.tdwg.org/bdqtest.ttl)") == "RDF Metadata"
-        # bdqtest documents are served
+        assert rs.linkify_bare_urls_in_markdown_line("https://rs.tdwg.org/bdqtest/doc/list/") == "https://rs.tdwg.org/bdqtest/doc/list/"
+        # the other bdqtest documents are served
         assert rs.rewrite_markdown_links("[Guide](https://rs.tdwg.org/bdqtest/doc/guide/)") == "[Guide](https://bdq-public-review.rs.tdwg.org/bdqtest/doc/guide/)"
 
 
@@ -507,3 +508,12 @@ def test_non_bdq_urls_unchanged_in_rewrite_mode():
     with bdq_rs_links("rewrite"):
         assert rs.linkify_bare_urls_in_markdown_line("See https://example.org/y.") == "See [https://example.org/y](https://example.org/y)."
         assert rs.rewrite_markdown_links("<https://example.org/x>") == "<https://example.org/x>"
+
+
+def test_placeholder_standard_iri_plain():
+    with bdq_rs_links("rewrite"):
+        assert rs.rewrite_markdown_links("<http://www.tdwg.org/standards/YYY>") == "http://www.tdwg.org/standards/YYY"
+        assert rs.rewrite_markdown_links("<http://www.tdwg.org/standards/YYY/version/2026-11-09>") == "http://www.tdwg.org/standards/YYY/version/2026-11-09"
+        assert rs.linkify_bare_urls_in_markdown_line("Standard IRI: http://www.tdwg.org/standards/YYY") == "Standard IRI: http://www.tdwg.org/standards/YYY"
+        # other TDWG standard IRIs are linked as usual
+        assert rs.rewrite_markdown_links("<http://www.tdwg.org/standards/450>") == "<http://www.tdwg.org/standards/450>"
