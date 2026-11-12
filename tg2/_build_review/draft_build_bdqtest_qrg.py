@@ -180,6 +180,8 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 		# load from local file
 		with open(document_configuration_yaml_file) as dcfy:
 			document_configuration_yaml = yaml.load(dcfy, Loader=yaml.FullLoader)
+			# The version cited in the header comes from rs.tdwg.org (function_lib.rs_document_version).
+			document_version = function_lib.rs_document_version(document_configuration_yaml)
 
 	
 		# read in header and footer, merge with terms table, and output
@@ -198,7 +200,7 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 		# Substitute values of ratification_date and contributors into the header template
 		header = header.replace("<!--- Template for header, values provided from yaml configuration --->","")
 		header = header.replace('{document_title}', document_configuration_yaml['documentTitle'])
-		header = header.replace('{ratification_date}', document_configuration_yaml['doc_modified'])
+		header = header.replace('{ratification_date}', document_version['date'])
 		header = header.replace('{created_date}', document_configuration_yaml['doc_created'])
 		# Build the Markdown for the authors and contributors lists or the contributors list
 		contributors = build_authors_contributors_markdown(contributors_yaml)
@@ -214,9 +216,9 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 		header = header.replace('{publisher}', document_configuration_yaml['publisher'])
 		header = header.replace('{comment}', document_configuration_yaml['comment'])
 		header = header.replace('{maintainer}', document_configuration_yaml['maintainer'])
-		header = header.replace('{doc_modified}', document_configuration_yaml['doc_modified'])
+		header = header.replace('{doc_modified}', document_version['date'])
 		header = header.replace('{toc}','\n{}'.format(toc))
-		year = document_configuration_yaml['doc_modified'].split('-')[0]
+		year = document_version['date'].split('-')[0]
 		header = header.replace('{year}', year)
 		if has_namespace:
 			header = header.replace('{namespace_uri}', namespace_uri)
@@ -481,7 +483,7 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 		footer = footer.replace('{year}', year)
 		footer = footer.replace('{document_title}', document_configuration_yaml['documentTitle'])
 		footer = footer.replace('{current_iri}', document_configuration_yaml['current_iri'])
-		footer = footer.replace('{ratification_date}', document_configuration_yaml['doc_modified'])
+		footer = footer.replace('{ratification_date}', document_version['date'])
 		print(footer)
 
 		# Write out the key to the terms used in the Quick Reference Guide in a separate file.	

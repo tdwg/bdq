@@ -108,6 +108,8 @@ with open(vocabulary_configuration_yaml_file) as vcfy:
 # load from local file
 with open(document_configuration_yaml_file) as dcfy:
 	document_configuration_yaml = yaml.load(dcfy, Loader=yaml.FullLoader)
+	# The version cited in the header comes from rs.tdwg.org (function_lib.rs_document_version).
+	document_version = function_lib.rs_document_version(document_configuration_yaml)
 
 # build definition table
 graph = rdflib.Graph()
@@ -131,7 +133,7 @@ headerObject.close()
 # Substitute values of ratification_date and contributors into the header template
 header = header.replace("<!--- Template for header, values provided from yaml configuration --->","")
 header = header.replace('{document_title}', document_configuration_yaml['documentTitle'])
-header = header.replace('{ratification_date}', document_configuration_yaml['doc_modified'])
+header = header.replace('{ratification_date}', document_version['date'])
 header = header.replace('{created_date}', document_configuration_yaml['doc_created'])
 # Build the Markdown for the authors and contributors lists, or the authors list, or the contributors list
 contributors = build_authors_contributors_markdown(contributors_yaml)
@@ -147,7 +149,8 @@ header = header.replace('{abstract}', document_configuration_yaml['abstract'])
 header = header.replace('{creator}', document_configuration_yaml['creator'])
 header = header.replace('{publisher}', document_configuration_yaml['publisher'])
 header = header.replace('{comment}', document_configuration_yaml['comment'])
-year = document_configuration_yaml['doc_modified'].split('-')[0]
+year = document_version['date'].split('-')[0]
+header = function_lib.fill_previous_version_slot(header, document_version)
 header = header.replace('{year}', year)
 if has_namespace:
     header = header.replace('{namespace_uri}', namespace_uri)
@@ -294,7 +297,7 @@ footer = footer.replace('{creator}', document_configuration_yaml['creator'])
 footer = footer.replace('{year}', year)
 footer = footer.replace('{document_title}', document_configuration_yaml['documentTitle'])
 footer = footer.replace('{current_iri}', document_configuration_yaml['current_iri'])
-footer = footer.replace('{ratification_date}', document_configuration_yaml['doc_modified'])
+footer = footer.replace('{ratification_date}', document_version['date'])
    
 ## Produce a table of contents from the headings 
 toc = generate_markdown_toc((header+text+footer).splitlines())
@@ -358,6 +361,8 @@ with open(vocabulary_configuration_yaml_file) as vcfy:
 # load from local file
 with open(document_configuration_yaml_file) as dcfy:
 	document_configuration_yaml = yaml.load(dcfy, Loader=yaml.FullLoader)
+	# The version cited in the header comes from rs.tdwg.org (function_lib.rs_document_version).
+	document_version = function_lib.rs_document_version(document_configuration_yaml)
 
 # Build definition table
 graph = rdflib.Graph()
@@ -380,7 +385,7 @@ headerObject.close()
 # Substitute values of ratification_date and contributors into the header template
 header = header.replace("<!--- Template for header, values provided from yaml configuration --->","")
 header = header.replace('{document_title}', document_configuration_yaml['documentTitle'])
-header = header.replace('{ratification_date}', document_configuration_yaml['doc_modified'])
+header = header.replace('{ratification_date}', document_version['date'])
 header = header.replace('{created_date}', document_configuration_yaml['doc_created'])
 # Build the Markdown for the authors and contributors lists, or the authors list, or the contributors list
 contributors = build_authors_contributors_markdown(contributors_yaml)
@@ -396,7 +401,8 @@ header = header.replace('{abstract}', document_configuration_yaml['abstract'])
 header = header.replace('{creator}', document_configuration_yaml['creator'])
 header = header.replace('{publisher}', document_configuration_yaml['publisher'])
 header = header.replace('{comment}', document_configuration_yaml['comment'])
-year = document_configuration_yaml['doc_modified'].split('-')[0]
+year = document_version['date'].split('-')[0]
+header = function_lib.fill_previous_version_slot(header, document_version)
 header = header.replace('{year}', year)
 if has_namespace:
     header = header.replace('{namespace_uri}', namespace_uri)
@@ -567,7 +573,7 @@ footer = footer.replace('{creator}', document_configuration_yaml['creator'])
 footer = footer.replace('{year}', year)
 footer = footer.replace('{document_title}', document_configuration_yaml['documentTitle'])
 footer = footer.replace('{current_iri}', document_configuration_yaml['current_iri'])
-footer = footer.replace('{ratification_date}', document_configuration_yaml['doc_modified'])
+footer = footer.replace('{ratification_date}', document_version['date'])
 
 warning = "<!--- This file is generated from templates by code, DO NOT EDIT by hand --->\n"
     
@@ -633,6 +639,8 @@ definitionTable = build_term_key(term_concept_dictionary,terms_sorted_by_localna
 # load from local file
 with open(document_configuration_yaml_file) as dcfy:
 	document_configuration_yaml = yaml.load(dcfy, Loader=yaml.FullLoader)
+	# The version cited in the header comes from rs.tdwg.org (function_lib.rs_document_version).
+	document_version = function_lib.rs_document_version(document_configuration_yaml)
 
 # Load header 
 headerObject = open(headerFileName, 'rt', encoding='utf-8')
@@ -641,7 +649,7 @@ headerObject.close()
 # Substitute values of ratification_date and contributors into the header template
 header = header.replace("<!--- Template for header, values provided from yaml configuration --->","")
 header = header.replace('{document_title}', document_configuration_yaml['documentTitle'])
-header = header.replace('{ratification_date}', document_configuration_yaml['doc_modified'])
+header = header.replace('{ratification_date}', document_version['date'])
 header = header.replace('{created_date}', document_configuration_yaml['doc_created'])
 # Build the Markdown for the authors and contributors lists, or the authors list, or the contributors list
 contributors = build_authors_contributors_markdown(contributors_yaml)
@@ -657,7 +665,8 @@ header = header.replace('{abstract}', document_configuration_yaml['abstract'])
 header = header.replace('{creator}', document_configuration_yaml['creator'])
 header = header.replace('{publisher}', document_configuration_yaml['publisher'])
 header = header.replace('{comment}', document_configuration_yaml['comment'])
-year = document_configuration_yaml['doc_modified'].split('-')[0]
+year = document_version['date'].split('-')[0]
+header = function_lib.fill_previous_version_slot(header, document_version)
 header = header.replace('{year}', year)
 if has_namespace:
     header = header.replace('{namespace_uri}', namespace_uri)
@@ -882,7 +891,7 @@ footer = footer.replace('{creator}', document_configuration_yaml['creator'])
 footer = footer.replace('{year}', year)
 footer = footer.replace('{document_title}', document_configuration_yaml['documentTitle'])
 footer = footer.replace('{current_iri}', document_configuration_yaml['current_iri'])
-footer = footer.replace('{ratification_date}', document_configuration_yaml['doc_modified'])
+footer = footer.replace('{ratification_date}', document_version['date'])
     
 warning = "<!--- This file is generated from templates by code, DO NOT EDIT by hand --->\n"
     

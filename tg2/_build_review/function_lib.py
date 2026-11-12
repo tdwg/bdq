@@ -417,3 +417,54 @@ def convert_examples(text_with_list_of_examples: str) -> str:
             output += '  <li class="list-group-item">' + example + '</li>\n'
         output += '</ul>'
         return output
+
+
+# Document versions from rs.tdwg.org (deployment_rs_tdwg_org.md Section 11.4).
+#
+# rs.tdwg.org is the source of truth for the versions of the BDQ documents. The document headers'
+# "This version", "Date version issued", citation year, and "Previous version" are taken from the
+# document's versions in rs.tdwg.org's docs-versions/docs-versions.csv, matched on current_iri.
+# For the public review, the versions are those on the bdq branch of tdwg/rs.tdwg.org, deployed to
+# bdq-public-review.rs.tdwg.org (tdwg/bdq#340); after ratification, the branch becomes master.
+# A document with no versions in rs.tdwg.org (or if the file cannot be read) falls back to
+# doc_modified from its document_configuration.yaml, with a warning.
+RS_TDWG_ORG_BRANCH = 'bdq'
+RS_DOCS_VERSIONS_URL = 'https://raw.githubusercontent.com/tdwg/rs.tdwg.org/' + RS_TDWG_ORG_BRANCH + '/docs-versions/docs-versions.csv'
+_rs_docs_versions = None
+
+
+def _read_rs_docs_versions():
+    global _rs_docs_versions
+    if _rs_docs_versions is None:
+        import csv, io, urllib.request
+        try:
+            with urllib.request.urlopen(RS_DOCS_VERSIONS_URL, timeout=60) as response:
+                _rs_docs_versions = list(csv.DictReader(io.StringIO(response.read().decode('utf-8'))))
+        except Exception as e:
+            print('Warning: could not read document versions from ' + RS_DOCS_VERSIONS_URL + ': ' + str(e))
+            _rs_docs_versions = []
+    return _rs_docs_versions
+
+
+def rs_document_version(document_configuration):
+    """Return the version of a document to cite in its header: a dict with 'date' (the issue date of
+    the latest version), 'previous_version_iri' (the version before it, or None), and 'source'."""
+    current_iri = document_configuration['current_iri']
+    versions = sorted(((row['version_issued'], row['version_iri']) for row in _read_rs_docs_versions()
+                       if row['current_iri'] == current_iri), reverse=True)
+    if not versions:
+        print('Warning: no versions of ' + current_iri + ' in rs.tdwg.org (' + RS_TDWG_ORG_BRANCH +
+              '); using doc_modified ' + str(document_configuration['doc_modified']))
+        return {'date': str(document_configuration['doc_modified']), 'previous_version_iri': None,
+                'source': 'document_configuration.yaml'}
+    return {'date': versions[0][0], 'previous_version_iri': versions[1][1] if len(versions) > 1 else None,
+            'source': RS_DOCS_VERSIONS_URL}
+
+
+def fill_previous_version_slot(header, document_version):
+    """Fill {previous_version_slot} (after the "**Previous version**<br>" label) with the previous version
+    from rs.tdwg.org, or remove the label and the slot if there is no previous version."""
+    if document_version['previous_version_iri']:
+        return header.replace('{previous_version_slot}\n', '<' + document_version['previous_version_iri'] + '>\n')
+    header = header.replace('**Previous version**<br>\n{previous_version_slot}\n\n', '')
+    return header.replace('{previous_version_slot}\n\n', '')

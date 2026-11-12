@@ -148,6 +148,8 @@ for templatePath, document in directories.items() :
 	# load from local file
 	with open(document_configuration_yaml_file) as dcfy:
 		document_configuration_yaml = yaml.load(dcfy, Loader=yaml.FullLoader)
+		# The version cited in the header comes from rs.tdwg.org (function_lib.rs_document_version).
+		document_version = function_lib.rs_document_version(document_configuration_yaml)
 
 	# read in header and footer, merge with terms table, and output
 	headerObject = open(headerFileName, 'rt', encoding='utf-8')
@@ -161,7 +163,7 @@ for templatePath, document in directories.items() :
 		print(document_configuration_yaml)
 	header = header.replace("<!--- Template for header, values provided from yaml configuration --->","")
 	header = header.replace('{document_title}', document_configuration_yaml['documentTitle'])
-	header = header.replace('{ratification_date}', document_configuration_yaml['doc_modified'])
+	header = header.replace('{ratification_date}', document_version['date'])
 	header = header.replace('{created_date}', document_configuration_yaml['doc_created'])
 	# Build the Markdown for the authors and contributors lists or the contributors list or the authors list
 	contributors = build_authors_contributors_markdown(contributors_yaml)
@@ -176,7 +178,7 @@ for templatePath, document in directories.items() :
 	header = header.replace('{creator}', document_configuration_yaml['creator'])
 	header = header.replace('{publisher}', document_configuration_yaml['publisher'])
 	header = header.replace('{comment}', document_configuration_yaml['comment'])
-	year = document_configuration_yaml['doc_modified'].split('-')[0]
+	year = document_version['date'].split('-')[0]
 	header = header.replace('{year}', year)
 	if has_namespace:
 		header = header.replace('{namespace_uri}', namespace_uri)
@@ -453,41 +455,8 @@ for templatePath, document in directories.items() :
 
 		# End special case handling of bdqffdq ********************************
 	
-	# Determine whether there was a previous version of the document.
-	if document_configuration_yaml['doc_created'] != document_configuration_yaml['doc_modified']:
-		# Load versions list from document versions data in the rs.tdwg.org repo and find most recent version.
-		# TODO: This file will need to be created post ratification, it contains the columsn current_iri and version_iri
-		## example from Darwin Core:
-		## current_iri,version_iri
-		## http://rs.tdwg.org/abcd/doc/primer/,http://rs.tdwg.org/abcd/doc/primer/2006-07-27
-		versions_data_url = githubBaseUri + 'docs/docs-versions.csv'
-		# try to retrieve, and if not found, catch the error and treat as if no previous version
-		try:
-			versions_list_df = pd.read_csv(versions_data_url, na_filter=False)
-			# Slice all rows for versions of this document.
-			matching_versions = versions_list_df[versions_list_df['current_iri']==document_configuration_yaml['current_iri']]
-			# Sort the matching versions by version IRI in descending order so that the most recent version is first.
-			matching_versions = matching_versions.sort_values(by=['version_iri'], ascending=[False])
-			# The previous version is the second row in the dataframe (row 1).
-			# The version IRI is in the second column (column 1).
-			most_recent_version_iri = matching_versions.iat[1, 1]
-			#print(most_recent_version_iri)
-	
-			# Insert the previous version information into the header
-			previous_version_metadata_string = '''Previous version
-	: <''' + most_recent_version_iri + '''>
-	
-	'''
-			# Insert the previous version information into the designated slot.
-			header = header.replace('{previous_version_slot}\n\n', previous_version_metadata_string)
-		except:	
-			# Draft standard not approved, so no docs-versions.csv file
-			# Treat as if there was no previous version, remove the slot from the header.
-			header = header.replace('{previous_version_slot}\n\n', '\n')
-
-	else:
-		# If there was no previous version, remove the slot from the header.
-		header = header.replace('{previous_version_slot}\n\n', '\n')
+	# Previous version: from rs.tdwg.org (function_lib.rs_document_version).
+	header = function_lib.fill_previous_version_slot(header, document_version)
 	
 	footerObject = open(footerFileName, 'rt', encoding='utf-8')
 	footer = footerObject.read()
@@ -500,7 +469,7 @@ for templatePath, document in directories.items() :
 	footer = footer.replace('{year}', year)
 	footer = footer.replace('{document_title}', document_configuration_yaml['documentTitle'])
 	footer = footer.replace('{current_iri}', document_configuration_yaml['current_iri'])
-	footer = footer.replace('{ratification_date}', document_configuration_yaml['doc_modified'])
+	footer = footer.replace('{ratification_date}', document_version['date'])
 #	footer = footer.replace('{references}', references)
 
 	## Produce a table of contents from the headings 
