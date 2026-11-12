@@ -32,7 +32,7 @@ accessUrl: https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/docs/gu
 # However, typically, the Infrastructure team sets up a subdomain of the tdwg.org domain for the
 # ancillary website. In that case, the value will eventually be 
 # https://subdomain.tdwg.org/subdirectory_name/.
-browserRedirectUri: https://bdq.tdwg.org/bdq/guide/synthetic/
+browserRedirectUri: https://bdq.tdwg.org/draft/docs/guide/synthetic/
 
 # ----------------
 # Values set by the TDWG Infrastructure team at time of ratification
