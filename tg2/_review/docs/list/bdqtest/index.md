@@ -4308,6 +4308,14 @@ Including MultiRecord Measures
 			<td>has Use Cases</td>
 			<td>bdquc:Spatial-Temporal_Patterns, bdquc:Taxon-Management</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MEASURE_AMENDMENTS_PROPOSED with Specification Specification for: MEASURE_AMENDMENTS_PROPOSED</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MEASURE_AMENDMENTS_PROPOSED</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -4494,6 +4502,14 @@ Including MultiRecord Measures
 			<td>has Use Cases</td>
 			<td>bdquc:Spatial-Temporal_Patterns, bdquc:Taxon-Management</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MEASURE_VALIDATIONTESTS_COMPLIANT with Specification Specification for: MEASURE_VALIDATIONTESTS_COMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MEASURE_VALIDATIONTESTS_COMPLIANT</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -4577,6 +4593,14 @@ Including MultiRecord Measures
 			<td>has Use Cases</td>
 			<td>bdquc:Spatial-Temporal_Patterns, bdquc:Taxon-Management</td>
 		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MEASURE_VALIDATIONTESTS_NOTCOMPLIANT with Specification Specification for: MEASURE_VALIDATIONTESTS_NOTCOMPLIANT</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MEASURE_VALIDATIONTESTS_NOTCOMPLIANT</td>
+		</tr>
 	</tbody>
 </table>
 <br>
@@ -4659,6 +4683,14 @@ Including MultiRecord Measures
 		<tr>
 			<td>has Use Cases</td>
 			<td>bdquc:Spatial-Temporal_Patterns, bdquc:Taxon-Management</td>
+		</tr>
+		<tr>
+			<td>MeasureMethod label</td>
+			<td>MeasurementMethod: MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET with Specification Specification for: MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET</td>
+		</tr>
+		<tr>
+			<td>Specification label</td>
+			<td>Specification for: MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET</td>
 		</tr>
 	</tbody>
 </table>

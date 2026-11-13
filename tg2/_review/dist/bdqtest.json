@@ -1774,7 +1774,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqtest/terms/453844ae-9df4-439f-8e24-c52498eca84a-2024-09-24",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/453844ae-9df4-439f-8e24-c52498eca84a-2026-11-12",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Measure"
         ],
@@ -1785,7 +1785,7 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "We have three individual measures for pass (MEASURE_VALIDATIONTESTS_COMPLIANT (45fb49eb-4a1b-4b49-876f-15d5034dfc73)), fail (MEASURE_VALIDATIONTESTS_NOTCOMPLIANT (453844ae-9df4-439f-8e24-c52498eca84a)), and PREREQUISITES_NOT_MET (49a94636-a562-4e6b-803c-665c80628a3d). To get the total number of Tests that were attempted, add all three measures. To get the total number of Tests that ran, add NOT_COMPLIANT (fail) and COMPLIANT (pass)."
+                "@value": "We have three individual measures for pass (MEASURE_VALIDATIONTESTS_COMPLIANT (45fb49eb-4a1b-4b49-876f-15d5034dfc73)), fail (MEASURE_VALIDATIONTESTS_NOTCOMPLIANT (453844ae-9df4-439f-8e24-c52498eca84a)), and PREREQUISITES_NOT_MET (49a94636-a562-4e6b-803c-665c80628a3d). To get the total number of Tests that were attempted, add all three measures. To get the total number of Tests that ran, add NOT_COMPLIANT (fail) and COMPLIANT (pass). If no VALIDATION Tests were run on the record, the result is 0."
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension": [
@@ -1795,17 +1795,17 @@
         ],
         "http://purl.org/dc/terms/description": [
             {
-                "@value": "A count of the number of distinct VALIDATION Tests that have a Response.status=\"NOT_COMPLIANT\" for a given record."
+                "@value": "A count of the distinct VALIDATION Tests run on a record that have Response.result=NOT_COMPLIANT."
             }
         ],
-        "https://rs.tdwg.org/bdqffdq/terms/hasConsultedInformationElement": [
+        "https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement": [
             {
                 "@id": "urn:uuid:cccfdbf6-f3b5-4c1e-a7fa-e059a9c416cd"
             }
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-09-24",
+                "@value": "2026-11-12",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -1841,7 +1841,7 @@
     {
         "@id": "urn:uuid:cccfdbf6-f3b5-4c1e-a7fa-e059a9c416cd",
         "@type": [
-            "https://rs.tdwg.org/bdqffdq/terms/Consulted"
+            "https://rs.tdwg.org/bdqffdq/terms/ActedUpon"
         ],
         "https://rs.tdwg.org/bdqffdq/terms/composedOf": [
             {
@@ -1850,12 +1850,12 @@
         ],
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
-                "@value": "Information Element Consulted bdqval:AllValidationTestsRunOnSingleRecord"
+                "@value": "Information Element ActedUpon bdqval:AllValidationTestsRunOnSingleRecord"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#prefLabel": [
             {
-                "@value": "Information Element Consulted bdqval:AllValidationTestsRunOnSingleRecord"
+                "@value": "Information Element ActedUpon bdqval:AllValidationTestsRunOnSingleRecord"
             }
         ]
     },
@@ -1866,7 +1866,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forMeasure": [
             {
-                "@id": "https://rs.tdwg.org/bdqtest/terms/453844ae-9df4-439f-8e24-c52498eca84a-2024-09-24"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/453844ae-9df4-439f-8e24-c52498eca84a-2026-11-12"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
@@ -1910,7 +1910,7 @@
         ],
         "http://www.w3.org/2004/02/skos/core#example": [
             {
-                "@value": "[Response.status=RUN_HAS_RESULT, Response.result=\"37\", Response.comment=\"37 VALIDATION Tests had Response.status=\"NOT_COMPLIANT.\"]"
+                "@value": "[Response.status=RUN_HAS_RESULT, Response.result=\"37\", Response.comment=\"37 VALIDATION Tests had Response.result=NOT_COMPLIANT.\"]"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults": [
@@ -1920,7 +1920,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse": [
             {
-                "@value": "INTERNAL_PREREQUISITES_NOT_MET if no Tests of type VALIDATION were attempted to be run; REPORT of the number of Tests of output type VALIDATION run against the record that have Response.result=\"NOT_COMPLIANT\""
+                "@value": "RUN_HAS_RESULT with the result being the number of distinct VALIDATION Tests run on the record that have Response.result=NOT_COMPLIANT."
             }
         ],
         "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -1930,7 +1930,7 @@
         ],
         "http://purl.org/dc/terms/description": [
             {
-                "@value": "INTERNAL_PREREQUISITES_NOT_MET if no Tests of type VALIDATION were attempted to be run; REPORT of the number of Tests of output type VALIDATION run against the record that have Response.result=\"NOT_COMPLIANT\""
+                "@value": "RUN_HAS_RESULT with the result being the number of distinct VALIDATION Tests run on the record that have Response.result=NOT_COMPLIANT."
             }
         ]
     },
@@ -7064,6 +7064,151 @@
         "https://rs.tdwg.org/bdqffdq/terms/hasParameter": [
             {
                 "@id": "https://rs.tdwg.org/bdqval/terms/sourceAuthority"
+            }
+        ]
+    },
+    {
+        "@id": "https://rs.tdwg.org/bdqtest/terms/03049fe5-a575-404f-b564-ae63f5a1cf8b-2026-11-12",
+        "@type": [
+            "https://rs.tdwg.org/bdqffdq/terms/Measure"
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasResourceType": [
+            {
+                "@id": "https://rs.tdwg.org/bdqffdq/terms/SingleRecord"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "If no AMENDMENT Tests were run on the record, the result is 0."
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension": [
+            {
+                "@id": "https://rs.tdwg.org/bdqdim/terms/Reliability"
+            }
+        ],
+        "http://purl.org/dc/terms/description": [
+            {
+                "@value": "A count of the distinct AMENDMENT Tests run on a record that have Response.status=AMENDED or FILLED_IN."
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement": [
+            {
+                "@id": "urn:uuid:fd84c789-375d-4c5a-8b5a-2ecf9d107fa1"
+            }
+        ],
+        "http://purl.org/dc/terms/issued": [
+            {
+                "@value": "2026-11-12",
+                "@type": "http://www.w3.org/2001/XMLSchema#date"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#historyNote": [
+            {
+                "@value": "https://github.com/tdwg/bdq/issues/65"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "MEASURE_AMENDMENTS_PROPOSED"
+            }
+        ],
+        "http://purl.org/dc/terms/isVersionOf": [
+            {
+                "@id": "https://rs.tdwg.org/bdqtest/terms/03049fe5-a575-404f-b564-ae63f5a1cf8b"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Measure Amendments Proposed for SingleRecord"
+            }
+        ]
+    },
+    {
+        "@id": "urn:uuid:fd84c789-375d-4c5a-8b5a-2ecf9d107fa1",
+        "@type": [
+            "https://rs.tdwg.org/bdqffdq/terms/ActedUpon"
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/composedOf": [
+            {
+                "@id": "https://rs.tdwg.org/bdqval/terms/AllAmendmentTestsRunOnSingleRecord"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "Information Element ActedUpon bdqval:AllAmendmentTestsRunOnSingleRecord"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "Information Element ActedUpon bdqval:AllAmendmentTestsRunOnSingleRecord"
+            }
+        ]
+    },
+    {
+        "@id": "urn:uuid:3dcd847e-25bf-4ae2-8428-8e74e054d9e6",
+        "@type": [
+            "https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/forMeasure": [
+            {
+                "@id": "https://rs.tdwg.org/bdqtest/terms/03049fe5-a575-404f-b564-ae63f5a1cf8b-2026-11-12"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#note": [
+            {
+                "@value": "TG2 Measure NAME SPACE TIME OTHER Test CORE"
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasSpecification": [
+            {
+                "@id": "urn:uuid:7e365897-cfc0-413e-a613-99c6050edc4b"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#historyNote": [
+            {
+                "@value": "Source: John Wieczorek"
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "MeasurementMethod: MEASURE_AMENDMENTS_PROPOSED with Specification Specification for: MEASURE_AMENDMENTS_PROPOSED"
+            }
+        ],
+        "http://www.w3.org/2004/02/skos/core#prefLabel": [
+            {
+                "@value": "MeasurementMethod: MEASURE_AMENDMENTS_PROPOSED with Specification Specification for: MEASURE_AMENDMENTS_PROPOSED"
+            }
+        ]
+    },
+    {
+        "@id": "urn:uuid:7e365897-cfc0-413e-a613-99c6050edc4b",
+        "@type": [
+            "https://rs.tdwg.org/bdqffdq/terms/Specification"
+        ],
+        "http://www.w3.org/2004/02/skos/core#example": [
+            {
+                "@value": "[Response.status=RUN_HAS_RESULT, Response.result=\"17\", Response.comment=\"17 AMENDMENT Tests had Response.status=AMENDED or FILLED_IN.\"]"
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults": [
+            {
+                "@value": ""
+            }
+        ],
+        "https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse": [
+            {
+                "@value": "RUN_HAS_RESULT with the result being the number of distinct AMENDMENT Tests run on the record that have Response.status=AMENDED or Response.status=FILLED_IN."
+            }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+            {
+                "@value": "Specification for: MEASURE_AMENDMENTS_PROPOSED"
+            }
+        ],
+        "http://purl.org/dc/terms/description": [
+            {
+                "@value": "RUN_HAS_RESULT with the result being the number of distinct AMENDMENT Tests run on the record that have Response.status=AMENDED or Response.status=FILLED_IN."
             }
         ]
     },
@@ -15902,7 +16047,7 @@
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqtest/terms/49a94636-a562-4e6b-803c-665c80628a3d-2024-09-25",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/49a94636-a562-4e6b-803c-665c80628a3d-2026-11-12",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Measure"
         ],
@@ -15913,7 +16058,7 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "We have three individual measures for pass (MEASURE_VALIDATIONTESTS_COMPLIANT (45fb49eb-4a1b-4b49-876f-15d5034dfc73)), fail (MEASURE_VALIDATIONTESTS_NOTCOMPLIANT (453844ae-9df4-439f-8e24-c52498eca84a)), and PREREQUISITES_NOT_MET (49a94636-a562-4e6b-803c-665c80628a3d). To get the total number of Tests that were attempted, add all three measures. To get the total number of Tests that ran, add NOT_COMPLIANT (fail) and COMPLIANT (pass)."
+                "@value": "We have three individual measures for pass (MEASURE_VALIDATIONTESTS_COMPLIANT (45fb49eb-4a1b-4b49-876f-15d5034dfc73)), fail (MEASURE_VALIDATIONTESTS_NOTCOMPLIANT (453844ae-9df4-439f-8e24-c52498eca84a)), and PREREQUISITES_NOT_MET (49a94636-a562-4e6b-803c-665c80628a3d). To get the total number of Tests that were attempted, add all three measures. To get the total number of Tests that ran, add NOT_COMPLIANT (fail) and COMPLIANT (pass). If no VALIDATION Tests were run on the record, the result is 0."
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension": [
@@ -15923,17 +16068,17 @@
         ],
         "http://purl.org/dc/terms/description": [
             {
-                "@value": "The number of distinct VALIDATION Tests that have a Response.status=\"EXTERNAL_PREREQUISITES_NOT_MET\" or \"INTERNAL_PREREQUISITES_NOT_MET\" for a given record."
+                "@value": "A count of the distinct VALIDATION Tests run on a record that have Response.status=INTERNAL_PREREQUISITES_NOT_MET or EXTERNAL_PREREQUISITES_NOT_MET."
             }
         ],
-        "https://rs.tdwg.org/bdqffdq/terms/hasConsultedInformationElement": [
+        "https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement": [
             {
                 "@id": "urn:uuid:cccfdbf6-f3b5-4c1e-a7fa-e059a9c416cd"
             }
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-09-25",
+                "@value": "2026-11-12",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -15965,7 +16110,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forMeasure": [
             {
-                "@id": "https://rs.tdwg.org/bdqtest/terms/49a94636-a562-4e6b-803c-665c80628a3d-2024-09-25"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/49a94636-a562-4e6b-803c-665c80628a3d-2026-11-12"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
@@ -16001,7 +16146,7 @@
         ],
         "http://www.w3.org/2004/02/skos/core#example": [
             {
-                "@value": "[Response.status=RUN_HAS_RESULT, Response.result=\"27\", Response.comment=\"27 VALIDATION Tests had either INTERNAL_PREREQUISITES_NOT_MET\" or \"EXTERNAL_PREREQUISITES_NOT_MET\"]"
+                "@value": "[Response.status=RUN_HAS_RESULT, Response.result=\"27\", Response.comment=\"27 VALIDATION Tests had Response.status=INTERNAL_PREREQUISITES_NOT_MET or EXTERNAL_PREREQUISITES_NOT_MET.\"]"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults": [
@@ -16011,7 +16156,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse": [
             {
-                "@value": "INTERNAL_PREREQUISITES_NOT_MET if no Tests of type VALIDATION were run; Report the number of Tests of output type VALIDATION that did not run because prerequisites for those Tests were not met (Result.status=\"INTERNAL_PREREQUISITES_NOT_MET\" or \"EXTERNAL_PREREQUISITES_NOT_MET\")"
+                "@value": "RUN_HAS_RESULT with the result being the number of distinct VALIDATION Tests run on the record that have Response.status=INTERNAL_PREREQUISITES_NOT_MET or Response.status=EXTERNAL_PREREQUISITES_NOT_MET."
             }
         ],
         "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -16021,12 +16166,12 @@
         ],
         "http://purl.org/dc/terms/description": [
             {
-                "@value": "INTERNAL_PREREQUISITES_NOT_MET if no Tests of type VALIDATION were run; Report the number of Tests of output type VALIDATION that did not run because prerequisites for those Tests were not met (Result.status=\"INTERNAL_PREREQUISITES_NOT_MET\" or \"EXTERNAL_PREREQUISITES_NOT_MET\")"
+                "@value": "RUN_HAS_RESULT with the result being the number of distinct VALIDATION Tests run on the record that have Response.status=INTERNAL_PREREQUISITES_NOT_MET or Response.status=EXTERNAL_PREREQUISITES_NOT_MET."
             }
         ]
     },
     {
-        "@id": "https://rs.tdwg.org/bdqtest/terms/45fb49eb-4a1b-4b49-876f-15d5034dfc73-2024-09-25",
+        "@id": "https://rs.tdwg.org/bdqtest/terms/45fb49eb-4a1b-4b49-876f-15d5034dfc73-2026-11-12",
         "@type": [
             "https://rs.tdwg.org/bdqffdq/terms/Measure"
         ],
@@ -16037,7 +16182,7 @@
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
             {
-                "@value": "We have three individual measures for pass (MEASURE_VALIDATIONTESTS_COMPLIANT (45fb49eb-4a1b-4b49-876f-15d5034dfc73)), fail (MEASURE_VALIDATIONTESTS_NOTCOMPLIANT (453844ae-9df4-439f-8e24-c52498eca84a)), and PREREQUISITES_NOT_MET (49a94636-a562-4e6b-803c-665c80628a3d). To get the total number of Tests that were attempted, add all three measures. To get the total number of Tests that ran, add NOT_COMPLIANT (fail) and COMPLIANT (pass)."
+                "@value": "We have three individual measures for pass (MEASURE_VALIDATIONTESTS_COMPLIANT (45fb49eb-4a1b-4b49-876f-15d5034dfc73)), fail (MEASURE_VALIDATIONTESTS_NOTCOMPLIANT (453844ae-9df4-439f-8e24-c52498eca84a)), and PREREQUISITES_NOT_MET (49a94636-a562-4e6b-803c-665c80628a3d). To get the total number of Tests that were attempted, add all three measures. To get the total number of Tests that ran, add NOT_COMPLIANT (fail) and COMPLIANT (pass). If no VALIDATION Tests were run on the record, the result is 0."
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension": [
@@ -16047,17 +16192,17 @@
         ],
         "http://purl.org/dc/terms/description": [
             {
-                "@value": "Measures the number of distinct VALIDATION Tests that have a Response.status=\"COMPLIANT\" for a given record."
+                "@value": "A count of the distinct VALIDATION Tests run on a record that have Response.result=COMPLIANT."
             }
         ],
-        "https://rs.tdwg.org/bdqffdq/terms/hasConsultedInformationElement": [
+        "https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement": [
             {
                 "@id": "urn:uuid:cccfdbf6-f3b5-4c1e-a7fa-e059a9c416cd"
             }
         ],
         "http://purl.org/dc/terms/issued": [
             {
-                "@value": "2024-09-25",
+                "@value": "2026-11-12",
                 "@type": "http://www.w3.org/2001/XMLSchema#date"
             }
         ],
@@ -16089,7 +16234,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/forMeasure": [
             {
-                "@id": "https://rs.tdwg.org/bdqtest/terms/45fb49eb-4a1b-4b49-876f-15d5034dfc73-2024-09-25"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/45fb49eb-4a1b-4b49-876f-15d5034dfc73-2026-11-12"
             }
         ],
         "http://www.w3.org/2004/02/skos/core#note": [
@@ -16125,7 +16270,7 @@
         ],
         "http://www.w3.org/2004/02/skos/core#example": [
             {
-                "@value": "[Response.status=RUN_HAS_RESULT, Response.result=\"7\", Response.comment=\"7 VALIDATION Tests had Response.status=\"COMPLIANT\" ]"
+                "@value": "[Response.status=RUN_HAS_RESULT, Response.result=\"7\", Response.comment=\"7 VALIDATION Tests had Response.result=COMPLIANT.\"]"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults": [
@@ -16135,7 +16280,7 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse": [
             {
-                "@value": "INTERNAL_PREREQUISITES_NOT_MET if no Tests of type VALIDATION were attempted to be run; Report the number of Tests of output type VALIDATION run against the record that were COMPLIANT (passed)"
+                "@value": "RUN_HAS_RESULT with the result being the number of distinct VALIDATION Tests run on the record that have Response.result=COMPLIANT."
             }
         ],
         "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -16145,7 +16290,7 @@
         ],
         "http://purl.org/dc/terms/description": [
             {
-                "@value": "INTERNAL_PREREQUISITES_NOT_MET if no Tests of type VALIDATION were attempted to be run; Report the number of Tests of output type VALIDATION run against the record that were COMPLIANT (passed)"
+                "@value": "RUN_HAS_RESULT with the result being the number of distinct VALIDATION Tests run on the record that have Response.result=COMPLIANT."
             }
         ]
     },
@@ -41458,13 +41603,16 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/includedInPolicy": [
             {
-                "@id": "https://rs.tdwg.org/bdqtest/terms/453844ae-9df4-439f-8e24-c52498eca84a-2024-09-24"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/453844ae-9df4-439f-8e24-c52498eca84a-2026-11-12"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqtest/terms/49a94636-a562-4e6b-803c-665c80628a3d-2024-09-25"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/03049fe5-a575-404f-b564-ae63f5a1cf8b-2026-11-12"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqtest/terms/45fb49eb-4a1b-4b49-876f-15d5034dfc73-2024-09-25"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/49a94636-a562-4e6b-803c-665c80628a3d-2026-11-12"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqtest/terms/45fb49eb-4a1b-4b49-876f-15d5034dfc73-2026-11-12"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqtest/terms/56b6c695-adf1-418e-95d2-da04cad7be53-2025-03-07"
@@ -41778,7 +41926,7 @@
         ],
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
-                "@value": "MeasurementPolicy: (106) measures  in UseCase bdquc:Spatial-Temporal_Patterns"
+                "@value": "MeasurementPolicy: (107) measures  in UseCase bdquc:Spatial-Temporal_Patterns"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [
@@ -41805,13 +41953,16 @@
         ],
         "https://rs.tdwg.org/bdqffdq/terms/includedInPolicy": [
             {
-                "@id": "https://rs.tdwg.org/bdqtest/terms/453844ae-9df4-439f-8e24-c52498eca84a-2024-09-24"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/453844ae-9df4-439f-8e24-c52498eca84a-2026-11-12"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqtest/terms/49a94636-a562-4e6b-803c-665c80628a3d-2024-09-25"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/03049fe5-a575-404f-b564-ae63f5a1cf8b-2026-11-12"
             },
             {
-                "@id": "https://rs.tdwg.org/bdqtest/terms/45fb49eb-4a1b-4b49-876f-15d5034dfc73-2024-09-25"
+                "@id": "https://rs.tdwg.org/bdqtest/terms/49a94636-a562-4e6b-803c-665c80628a3d-2026-11-12"
+            },
+            {
+                "@id": "https://rs.tdwg.org/bdqtest/terms/45fb49eb-4a1b-4b49-876f-15d5034dfc73-2026-11-12"
             },
             {
                 "@id": "https://rs.tdwg.org/bdqtest/terms/17364d16-37b7-4ccb-9614-bfb95ff1bca9-2025-03-06"
@@ -41930,7 +42081,7 @@
         ],
         "http://www.w3.org/2000/01/rdf-schema#label": [
             {
-                "@value": "MeasurementPolicy: (41) measures  in UseCase bdquc:Taxon-Management"
+                "@value": "MeasurementPolicy: (42) measures  in UseCase bdquc:Taxon-Management"
             }
         ],
         "https://rs.tdwg.org/bdqffdq/terms/hasUseCase": [

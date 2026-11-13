@@ -6,7 +6,7 @@
 BDQ Controlled Vocabulary List of Terms
 
 **Date version issued**<br>
-2026-04-27
+2026-11-12
 
 **Date created**<br>
 2025-05-10
@@ -18,13 +18,13 @@ BDQ Controlled Vocabulary List of Terms
 bdqval
 
 **This version**<br>
-<https://rs.tdwg.org/bdqval/doc/list/2026-04-27>
+<https://rs.tdwg.org/bdqval/doc/list/2026-11-12>
 
 **Latest version**<br>
 <https://rs.tdwg.org/bdqval/doc/list/>
 
 **Previous version**<br>
-<https://rs.tdwg.org/bdqval/doc/list/2026-04-23>
+<https://rs.tdwg.org/bdqval/doc/list/2026-04-27>
 
 **Abstract**<br>
 This document is a reference for the BDQ standard. It covers some terms used in Test Specifications, and especially values used as bdqffdq:Parameters.
@@ -36,7 +36,7 @@ This document is a reference for the BDQ standard. It covers some terms used in 
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 **Bibliographic citation**<br>
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqval/doc/list/2026-04-27>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqval/doc/list/2026-11-12>
 
 **Status**<br>
 Draft Standard for Review
@@ -1217,7 +1217,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqval/doc/list/2026-04-27>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqval/doc/list/2026-11-12>
 
 **Biodiversity Information Standards (TDWG)**
 

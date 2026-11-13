@@ -368,6 +368,20 @@
 	<bdqffdq:hasResourceType rdf:resource="https://rs.tdwg.org/bdqffdq/terms/SingleRecord"/>
 </rdf:Description>
 
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/03049fe5-a575-404f-b564-ae63f5a1cf8b-2026-11-12">
+	<dcterms:description>A count of the distinct AMENDMENT Tests run on a record that have Response.status=AMENDED or FILLED_IN.</dcterms:description>
+	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/03049fe5-a575-404f-b564-ae63f5a1cf8b"/>
+	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-12</dcterms:issued>
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Measure"/>
+	<rdfs:label>MEASURE_AMENDMENTS_PROPOSED</rdfs:label>
+	<skos:historyNote>https://github.com/tdwg/bdq/issues/65</skos:historyNote>
+	<skos:note>If no AMENDMENT Tests were run on the record, the result is 0.</skos:note>
+	<skos:prefLabel>Measure Amendments Proposed for SingleRecord</skos:prefLabel>
+	<bdqffdq:hasActedUponInformationElement rdf:resource="urn:uuid:fd84c789-375d-4c5a-8b5a-2ecf9d107fa1"/>
+	<bdqffdq:hasDataQualityDimension rdf:resource="https://rs.tdwg.org/bdqdim/terms/Reliability"/>
+	<bdqffdq:hasResourceType rdf:resource="https://rs.tdwg.org/bdqffdq/terms/SingleRecord"/>
+</rdf:Description>
+
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/0345b325-836d-4235-96d0-3b5caf150fc0-2025-03-07">
 	<dcterms:description>Proposes an amendment to the value of dwc:geodeticDatum using the bdqval:sourceAuthority.</dcterms:description>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/0345b325-836d-4235-96d0-3b5caf150fc0"/>
@@ -1491,30 +1505,30 @@
 	<bdqffdq:hasResourceType rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MultiRecord"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/453844ae-9df4-439f-8e24-c52498eca84a-2024-09-24">
-	<dcterms:description>A count of the number of distinct VALIDATION Tests that have a Response.status="NOT_COMPLIANT" for a given record.</dcterms:description>
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/453844ae-9df4-439f-8e24-c52498eca84a-2026-11-12">
+	<dcterms:description>A count of the distinct VALIDATION Tests run on a record that have Response.result=NOT_COMPLIANT.</dcterms:description>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/453844ae-9df4-439f-8e24-c52498eca84a"/>
-	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-24</dcterms:issued>
+	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-12</dcterms:issued>
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Measure"/>
 	<rdfs:label>MEASURE_VALIDATIONTESTS_NOTCOMPLIANT</rdfs:label>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/31</skos:historyNote>
-	<skos:note>We have three individual measures for pass (MEASURE_VALIDATIONTESTS_COMPLIANT (45fb49eb-4a1b-4b49-876f-15d5034dfc73)), fail (MEASURE_VALIDATIONTESTS_NOTCOMPLIANT (453844ae-9df4-439f-8e24-c52498eca84a)), and PREREQUISITES_NOT_MET (49a94636-a562-4e6b-803c-665c80628a3d). To get the total number of Tests that were attempted, add all three measures. To get the total number of Tests that ran, add NOT_COMPLIANT (fail) and COMPLIANT (pass).</skos:note>
+	<skos:note>We have three individual measures for pass (MEASURE_VALIDATIONTESTS_COMPLIANT (45fb49eb-4a1b-4b49-876f-15d5034dfc73)), fail (MEASURE_VALIDATIONTESTS_NOTCOMPLIANT (453844ae-9df4-439f-8e24-c52498eca84a)), and PREREQUISITES_NOT_MET (49a94636-a562-4e6b-803c-665c80628a3d). To get the total number of Tests that were attempted, add all three measures. To get the total number of Tests that ran, add NOT_COMPLIANT (fail) and COMPLIANT (pass). If no VALIDATION Tests were run on the record, the result is 0.</skos:note>
 	<skos:prefLabel>Measure Validation Tests Not Compliant for SingleRecord</skos:prefLabel>
-	<bdqffdq:hasConsultedInformationElement rdf:resource="urn:uuid:cccfdbf6-f3b5-4c1e-a7fa-e059a9c416cd"/>
+	<bdqffdq:hasActedUponInformationElement rdf:resource="urn:uuid:cccfdbf6-f3b5-4c1e-a7fa-e059a9c416cd"/>
 	<bdqffdq:hasDataQualityDimension rdf:resource="https://rs.tdwg.org/bdqdim/terms/Reliability"/>
 	<bdqffdq:hasResourceType rdf:resource="https://rs.tdwg.org/bdqffdq/terms/SingleRecord"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/45fb49eb-4a1b-4b49-876f-15d5034dfc73-2024-09-25">
-	<dcterms:description>Measures the number of distinct VALIDATION Tests that have a Response.status="COMPLIANT" for a given record.</dcterms:description>
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/45fb49eb-4a1b-4b49-876f-15d5034dfc73-2026-11-12">
+	<dcterms:description>A count of the distinct VALIDATION Tests run on a record that have Response.result=COMPLIANT.</dcterms:description>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/45fb49eb-4a1b-4b49-876f-15d5034dfc73"/>
-	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-25</dcterms:issued>
+	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-12</dcterms:issued>
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Measure"/>
 	<rdfs:label>MEASURE_VALIDATIONTESTS_COMPLIANT</rdfs:label>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/135</skos:historyNote>
-	<skos:note>We have three individual measures for pass (MEASURE_VALIDATIONTESTS_COMPLIANT (45fb49eb-4a1b-4b49-876f-15d5034dfc73)), fail (MEASURE_VALIDATIONTESTS_NOTCOMPLIANT (453844ae-9df4-439f-8e24-c52498eca84a)), and PREREQUISITES_NOT_MET (49a94636-a562-4e6b-803c-665c80628a3d). To get the total number of Tests that were attempted, add all three measures. To get the total number of Tests that ran, add NOT_COMPLIANT (fail) and COMPLIANT (pass).</skos:note>
+	<skos:note>We have three individual measures for pass (MEASURE_VALIDATIONTESTS_COMPLIANT (45fb49eb-4a1b-4b49-876f-15d5034dfc73)), fail (MEASURE_VALIDATIONTESTS_NOTCOMPLIANT (453844ae-9df4-439f-8e24-c52498eca84a)), and PREREQUISITES_NOT_MET (49a94636-a562-4e6b-803c-665c80628a3d). To get the total number of Tests that were attempted, add all three measures. To get the total number of Tests that ran, add NOT_COMPLIANT (fail) and COMPLIANT (pass). If no VALIDATION Tests were run on the record, the result is 0.</skos:note>
 	<skos:prefLabel>Measure Validation Tests Compliant for SingleRecord</skos:prefLabel>
-	<bdqffdq:hasConsultedInformationElement rdf:resource="urn:uuid:cccfdbf6-f3b5-4c1e-a7fa-e059a9c416cd"/>
+	<bdqffdq:hasActedUponInformationElement rdf:resource="urn:uuid:cccfdbf6-f3b5-4c1e-a7fa-e059a9c416cd"/>
 	<bdqffdq:hasDataQualityDimension rdf:resource="https://rs.tdwg.org/bdqdim/terms/Reliability"/>
 	<bdqffdq:hasResourceType rdf:resource="https://rs.tdwg.org/bdqffdq/terms/SingleRecord"/>
 </rdf:Description>
@@ -1610,16 +1624,16 @@
 	<bdqffdq:hasResourceType rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MultiRecord"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/49a94636-a562-4e6b-803c-665c80628a3d-2024-09-25">
-	<dcterms:description>The number of distinct VALIDATION Tests that have a Response.status="EXTERNAL_PREREQUISITES_NOT_MET" or "INTERNAL_PREREQUISITES_NOT_MET" for a given record.</dcterms:description>
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/49a94636-a562-4e6b-803c-665c80628a3d-2026-11-12">
+	<dcterms:description>A count of the distinct VALIDATION Tests run on a record that have Response.status=INTERNAL_PREREQUISITES_NOT_MET or EXTERNAL_PREREQUISITES_NOT_MET.</dcterms:description>
 	<dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/49a94636-a562-4e6b-803c-665c80628a3d"/>
-	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-25</dcterms:issued>
+	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-12</dcterms:issued>
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Measure"/>
 	<rdfs:label>MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET</rdfs:label>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/134</skos:historyNote>
-	<skos:note>We have three individual measures for pass (MEASURE_VALIDATIONTESTS_COMPLIANT (45fb49eb-4a1b-4b49-876f-15d5034dfc73)), fail (MEASURE_VALIDATIONTESTS_NOTCOMPLIANT (453844ae-9df4-439f-8e24-c52498eca84a)), and PREREQUISITES_NOT_MET (49a94636-a562-4e6b-803c-665c80628a3d). To get the total number of Tests that were attempted, add all three measures. To get the total number of Tests that ran, add NOT_COMPLIANT (fail) and COMPLIANT (pass).</skos:note>
+	<skos:note>We have three individual measures for pass (MEASURE_VALIDATIONTESTS_COMPLIANT (45fb49eb-4a1b-4b49-876f-15d5034dfc73)), fail (MEASURE_VALIDATIONTESTS_NOTCOMPLIANT (453844ae-9df4-439f-8e24-c52498eca84a)), and PREREQUISITES_NOT_MET (49a94636-a562-4e6b-803c-665c80628a3d). To get the total number of Tests that were attempted, add all three measures. To get the total number of Tests that ran, add NOT_COMPLIANT (fail) and COMPLIANT (pass). If no VALIDATION Tests were run on the record, the result is 0.</skos:note>
 	<skos:prefLabel>Measure Validation Tests Prerequisites Not Met for SingleRecord</skos:prefLabel>
-	<bdqffdq:hasConsultedInformationElement rdf:resource="urn:uuid:cccfdbf6-f3b5-4c1e-a7fa-e059a9c416cd"/>
+	<bdqffdq:hasActedUponInformationElement rdf:resource="urn:uuid:cccfdbf6-f3b5-4c1e-a7fa-e059a9c416cd"/>
 	<bdqffdq:hasDataQualityDimension rdf:resource="https://rs.tdwg.org/bdqdim/terms/Completeness"/>
 	<bdqffdq:hasResourceType rdf:resource="https://rs.tdwg.org/bdqffdq/terms/SingleRecord"/>
 </rdf:Description>
@@ -5014,7 +5028,7 @@
 	<skos:historyNote>Source: Lee Belbin</skos:historyNote>
 	<skos:note>TG2 Measure NAME SPACE TIME OTHER Test CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MEASURE_VALIDATIONTESTS_NOTCOMPLIANT with Specification Specification for: MEASURE_VALIDATIONTESTS_NOTCOMPLIANT</skos:prefLabel>
-	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/453844ae-9df4-439f-8e24-c52498eca84a-2024-09-24"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/453844ae-9df4-439f-8e24-c52498eca84a-2026-11-12"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:1a7adc4a-58ee-480c-9765-3834ea433bf0"/>
 </rdf:Description>
 
@@ -5384,12 +5398,12 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:1a7adc4a-58ee-480c-9765-3834ea433bf0">
-	<dcterms:description>INTERNAL_PREREQUISITES_NOT_MET if no Tests of type VALIDATION were attempted to be run; REPORT of the number of Tests of output type VALIDATION run against the record that have Response.result="NOT_COMPLIANT"</dcterms:description>
+	<dcterms:description>RUN_HAS_RESULT with the result being the number of distinct VALIDATION Tests run on the record that have Response.result=NOT_COMPLIANT.</dcterms:description>
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Specification"/>
 	<rdfs:label>Specification for: MEASURE_VALIDATIONTESTS_NOTCOMPLIANT</rdfs:label>
-	<skos:example>[Response.status=RUN_HAS_RESULT, Response.result="37", Response.comment="37 VALIDATION Tests had Response.status="NOT_COMPLIANT."]</skos:example>
+	<skos:example>[Response.status=RUN_HAS_RESULT, Response.result="37", Response.comment="37 VALIDATION Tests had Response.result=NOT_COMPLIANT."]</skos:example>
 	<bdqffdq:hasAuthoritiesDefaults></bdqffdq:hasAuthoritiesDefaults>
-	<bdqffdq:hasExpectedResponse>INTERNAL_PREREQUISITES_NOT_MET if no Tests of type VALIDATION were attempted to be run; REPORT of the number of Tests of output type VALIDATION run against the record that have Response.result="NOT_COMPLIANT"</bdqffdq:hasExpectedResponse>
+	<bdqffdq:hasExpectedResponse>RUN_HAS_RESULT with the result being the number of distinct VALIDATION Tests run on the record that have Response.result=NOT_COMPLIANT.</bdqffdq:hasExpectedResponse>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:1aa9c50e-7e8a-445f-9cf3-12af51a9ec10">
@@ -6410,6 +6424,16 @@
 	<skos:example>dwc:occurrenceID="https://www.inaturalist.org/observations/43047701": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:occurrenceID conforms to GUID structure"</skos:example>
 	<bdqffdq:hasAuthoritiesDefaults></bdqffdq:hasAuthoritiesDefaults>
 	<bdqffdq:hasExpectedResponse>COMPLIANT if dwc:occurrenceID is bdqval:NotEmpty; otherwise NOT_COMPLIANT</bdqffdq:hasExpectedResponse>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:3dcd847e-25bf-4ae2-8428-8e74e054d9e6">
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
+	<rdfs:label>MeasurementMethod: MEASURE_AMENDMENTS_PROPOSED with Specification Specification for: MEASURE_AMENDMENTS_PROPOSED</rdfs:label>
+	<skos:historyNote>Source: John Wieczorek</skos:historyNote>
+	<skos:note>TG2 Measure NAME SPACE TIME OTHER Test CORE</skos:note>
+	<skos:prefLabel>MeasurementMethod: MEASURE_AMENDMENTS_PROPOSED with Specification Specification for: MEASURE_AMENDMENTS_PROPOSED</skos:prefLabel>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/03049fe5-a575-404f-b564-ae63f5a1cf8b-2026-11-12"/>
+	<bdqffdq:hasSpecification rdf:resource="urn:uuid:7e365897-cfc0-413e-a613-99c6050edc4b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:3e00109a-13d3-416d-9a91-127c99b47473">
@@ -8146,6 +8170,15 @@
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:e7ca116b-2b24-4995-af09-44ee80824188"/>
 </rdf:Description>
 
+<rdf:Description rdf:about="urn:uuid:7e365897-cfc0-413e-a613-99c6050edc4b">
+	<dcterms:description>RUN_HAS_RESULT with the result being the number of distinct AMENDMENT Tests run on the record that have Response.status=AMENDED or Response.status=FILLED_IN.</dcterms:description>
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Specification"/>
+	<rdfs:label>Specification for: MEASURE_AMENDMENTS_PROPOSED</rdfs:label>
+	<skos:example>[Response.status=RUN_HAS_RESULT, Response.result="17", Response.comment="17 AMENDMENT Tests had Response.status=AMENDED or FILLED_IN."]</skos:example>
+	<bdqffdq:hasAuthoritiesDefaults></bdqffdq:hasAuthoritiesDefaults>
+	<bdqffdq:hasExpectedResponse>RUN_HAS_RESULT with the result being the number of distinct AMENDMENT Tests run on the record that have Response.status=AMENDED or Response.status=FILLED_IN.</bdqffdq:hasExpectedResponse>
+</rdf:Description>
+
 <rdf:Description rdf:about="urn:uuid:7ecc692d-e65f-4ea5-9d54-04421ec96ab4">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Argument"/>
 	<rdfs:label>Default value for bdqval:sourceAuthority:"Creative Commons"</rdfs:label>
@@ -8794,9 +8827,10 @@
 
 <rdf:Description rdf:about="urn:uuid:962109a0-205f-4ea9-b7df-39ad3a5fc503">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementPolicy"/>
-	<rdfs:label>MeasurementPolicy: (106) measures  in UseCase bdquc:Spatial-Temporal_Patterns</rdfs:label>
+	<rdfs:label>MeasurementPolicy: (107) measures  in UseCase bdquc:Spatial-Temporal_Patterns</rdfs:label>
 	<bdqffdq:hasUseCase rdf:resource="https://rs.tdwg.org/bdquc/terms/Spatial-Temporal_Patterns"/>
 	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/0028ef9a-6553-467b-a344-90327ed2babf-2025-03-07"/>
+	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/03049fe5-a575-404f-b564-ae63f5a1cf8b-2026-11-12"/>
 	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/071267a0-d993-4961-a3f7-d8210810d167-2025-03-07"/>
 	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/0c9a139e-5d23-44de-a495-14ec08c61a1c-2025-03-07"/>
 	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/0df03601-3768-4805-906a-bbd0a41b0fda-2025-03-06"/>
@@ -8821,12 +8855,12 @@
 	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/3de8af03-05d4-4fd8-8e6d-ba886dc5446f-2025-03-07"/>
 	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/3f62eaa2-747f-456b-85e6-1a6e74086a18-2025-03-07"/>
 	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/44f00697-ca66-43cf-8f16-646b40c0f514-2025-03-07"/>
-	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/453844ae-9df4-439f-8e24-c52498eca84a-2024-09-24"/>
-	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/45fb49eb-4a1b-4b49-876f-15d5034dfc73-2024-09-25"/>
+	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/453844ae-9df4-439f-8e24-c52498eca84a-2026-11-12"/>
+	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/45fb49eb-4a1b-4b49-876f-15d5034dfc73-2026-11-12"/>
 	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/478dee00-98d0-4154-b66c-eca64dbbf86d-2025-03-07"/>
 	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/47ee20d9-5087-4f76-a494-6fea05e50b8b-2025-03-07"/>
 	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/488c1dff-21ec-4e68-a00a-7355505e180c-2025-03-07"/>
-	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/49a94636-a562-4e6b-803c-665c80628a3d-2024-09-25"/>
+	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/49a94636-a562-4e6b-803c-665c80628a3d-2026-11-12"/>
 	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/49b787eb-7dce-4ace-97f5-7cbb47cd8cb9-2025-03-07"/>
 	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/49d756a8-e654-4267-a290-d1def5d2c5f9-2025-03-07"/>
 	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/4d999a65-a431-4a76-b591-e0d86dcf244b-2025-03-07"/>
@@ -9514,12 +9548,12 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:aefe88ed-6d3a-4824-8c4a-a75714cb0351">
-	<dcterms:description>INTERNAL_PREREQUISITES_NOT_MET if no Tests of type VALIDATION were run; Report the number of Tests of output type VALIDATION that did not run because prerequisites for those Tests were not met (Result.status="INTERNAL_PREREQUISITES_NOT_MET" or "EXTERNAL_PREREQUISITES_NOT_MET")</dcterms:description>
+	<dcterms:description>RUN_HAS_RESULT with the result being the number of distinct VALIDATION Tests run on the record that have Response.status=INTERNAL_PREREQUISITES_NOT_MET or Response.status=EXTERNAL_PREREQUISITES_NOT_MET.</dcterms:description>
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Specification"/>
 	<rdfs:label>Specification for: MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET</rdfs:label>
-	<skos:example>[Response.status=RUN_HAS_RESULT, Response.result="27", Response.comment="27 VALIDATION Tests had either INTERNAL_PREREQUISITES_NOT_MET" or "EXTERNAL_PREREQUISITES_NOT_MET"]</skos:example>
+	<skos:example>[Response.status=RUN_HAS_RESULT, Response.result="27", Response.comment="27 VALIDATION Tests had Response.status=INTERNAL_PREREQUISITES_NOT_MET or EXTERNAL_PREREQUISITES_NOT_MET."]</skos:example>
 	<bdqffdq:hasAuthoritiesDefaults></bdqffdq:hasAuthoritiesDefaults>
-	<bdqffdq:hasExpectedResponse>INTERNAL_PREREQUISITES_NOT_MET if no Tests of type VALIDATION were run; Report the number of Tests of output type VALIDATION that did not run because prerequisites for those Tests were not met (Result.status="INTERNAL_PREREQUISITES_NOT_MET" or "EXTERNAL_PREREQUISITES_NOT_MET")</bdqffdq:hasExpectedResponse>
+	<bdqffdq:hasExpectedResponse>RUN_HAS_RESULT with the result being the number of distinct VALIDATION Tests run on the record that have Response.status=INTERNAL_PREREQUISITES_NOT_MET or Response.status=EXTERNAL_PREREQUISITES_NOT_MET.</bdqffdq:hasExpectedResponse>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:af5393af-6a71-4e39-aa70-7609ee10d1d0">
@@ -9674,12 +9708,12 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:b611e1b1-cbf5-405c-b24d-24e9a649cbf0">
-	<dcterms:description>INTERNAL_PREREQUISITES_NOT_MET if no Tests of type VALIDATION were attempted to be run; Report the number of Tests of output type VALIDATION run against the record that were COMPLIANT (passed)</dcterms:description>
+	<dcterms:description>RUN_HAS_RESULT with the result being the number of distinct VALIDATION Tests run on the record that have Response.result=COMPLIANT.</dcterms:description>
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Specification"/>
 	<rdfs:label>Specification for: MEASURE_VALIDATIONTESTS_COMPLIANT</rdfs:label>
-	<skos:example>[Response.status=RUN_HAS_RESULT, Response.result="7", Response.comment="7 VALIDATION Tests had Response.status="COMPLIANT" ]</skos:example>
+	<skos:example>[Response.status=RUN_HAS_RESULT, Response.result="7", Response.comment="7 VALIDATION Tests had Response.result=COMPLIANT."]</skos:example>
 	<bdqffdq:hasAuthoritiesDefaults></bdqffdq:hasAuthoritiesDefaults>
-	<bdqffdq:hasExpectedResponse>INTERNAL_PREREQUISITES_NOT_MET if no Tests of type VALIDATION were attempted to be run; Report the number of Tests of output type VALIDATION run against the record that were COMPLIANT (passed)</bdqffdq:hasExpectedResponse>
+	<bdqffdq:hasExpectedResponse>RUN_HAS_RESULT with the result being the number of distinct VALIDATION Tests run on the record that have Response.result=COMPLIANT.</bdqffdq:hasExpectedResponse>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:b64c6792-c08c-46da-b98b-e0bb0363c2ed">
@@ -10290,9 +10324,9 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:cccfdbf6-f3b5-4c1e-a7fa-e059a9c416cd">
-	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Consulted"/>
-	<rdfs:label>Information Element Consulted bdqval:AllValidationTestsRunOnSingleRecord</rdfs:label>
-	<skos:prefLabel>Information Element Consulted bdqval:AllValidationTestsRunOnSingleRecord</skos:prefLabel>
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
+	<rdfs:label>Information Element ActedUpon bdqval:AllValidationTestsRunOnSingleRecord</rdfs:label>
+	<skos:prefLabel>Information Element ActedUpon bdqval:AllValidationTestsRunOnSingleRecord</skos:prefLabel>
 	<bdqffdq:composedOf rdf:resource="https://rs.tdwg.org/bdqval/terms/AllValidationTestsRunOnSingleRecord"/>
 </rdf:Description>
 
@@ -10437,7 +10471,7 @@
 	<skos:historyNote>Source: TG2-Gainesville</skos:historyNote>
 	<skos:note>TG2 Measure NAME SPACE TIME OTHER Test CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET with Specification Specification for: MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET</skos:prefLabel>
-	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/49a94636-a562-4e6b-803c-665c80628a3d-2024-09-25"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/49a94636-a562-4e6b-803c-665c80628a3d-2026-11-12"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:aefe88ed-6d3a-4824-8c4a-a75714cb0351"/>
 </rdf:Description>
 
@@ -10471,7 +10505,7 @@
 	<skos:historyNote>Source: TG2-Gainesville</skos:historyNote>
 	<skos:note>TG2 Measure NAME SPACE OTHER Test CORE</skos:note>
 	<skos:prefLabel>MeasurementMethod: MEASURE_VALIDATIONTESTS_COMPLIANT with Specification Specification for: MEASURE_VALIDATIONTESTS_COMPLIANT</skos:prefLabel>
-	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/45fb49eb-4a1b-4b49-876f-15d5034dfc73-2024-09-25"/>
+	<bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/45fb49eb-4a1b-4b49-876f-15d5034dfc73-2026-11-12"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:b611e1b1-cbf5-405c-b24d-24e9a649cbf0"/>
 </rdf:Description>
 
@@ -11677,9 +11711,10 @@
 
 <rdf:Description rdf:about="urn:uuid:fb38e63c-daaa-45da-abc3-7fe967dc4092">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementPolicy"/>
-	<rdfs:label>MeasurementPolicy: (41) measures  in UseCase bdquc:Taxon-Management</rdfs:label>
+	<rdfs:label>MeasurementPolicy: (42) measures  in UseCase bdquc:Taxon-Management</rdfs:label>
 	<bdqffdq:hasUseCase rdf:resource="https://rs.tdwg.org/bdquc/terms/Taxon-Management"/>
 	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/012eade5-fc64-458a-a13a-a614491bf4e0-2025-03-06"/>
+	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/03049fe5-a575-404f-b564-ae63f5a1cf8b-2026-11-12"/>
 	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/0df03601-3768-4805-906a-bbd0a41b0fda-2025-03-06"/>
 	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/0f8b30e2-59dc-46ba-8b91-62049cd1a4e2-2025-03-06"/>
 	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/16059801-6adb-4e65-82f4-61eaa70d8df0-2025-03-06"/>
@@ -11689,10 +11724,10 @@
 	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/342bd81c-e2b7-41d8-b32b-013992d19f99-2025-03-06"/>
 	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/36ea0a78-a079-4014-aca3-2f2b3b11e822-2025-03-06"/>
 	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/3bc9df8b-0f57-4157-9374-b56a99090b22-2025-03-06"/>
-	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/453844ae-9df4-439f-8e24-c52498eca84a-2024-09-24"/>
-	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/45fb49eb-4a1b-4b49-876f-15d5034dfc73-2024-09-25"/>
+	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/453844ae-9df4-439f-8e24-c52498eca84a-2026-11-12"/>
+	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/45fb49eb-4a1b-4b49-876f-15d5034dfc73-2026-11-12"/>
 	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/465d7ac1-d193-46c0-a302-56a9ef99215f-2025-03-06"/>
-	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/49a94636-a562-4e6b-803c-665c80628a3d-2024-09-25"/>
+	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/49a94636-a562-4e6b-803c-665c80628a3d-2026-11-12"/>
 	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/4cf84216-c8a7-4865-a8e1-3ffd829d5a10-2025-03-06"/>
 	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/4e70b0e4-3fd2-4899-802c-439671374eeb-2025-03-06"/>
 	<bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/54d290e8-ac48-4f31-8af3-676363573217-2025-03-06"/>
@@ -11847,6 +11882,13 @@
 	<skos:prefLabel>Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS.Response</skos:prefLabel>
 	<bdqffdq:aggregatesResponsesFrom rdf:resource="https://rs.tdwg.org/bdqtest/terms/d257eb98-27cb-48e5-8d3c-ab9fca4edd11"/>
 	<bdqffdq:composedOf rdf:resource="https://rs.tdwg.org/bdqval/terms/AggregatedTestResponseOutcomes"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="urn:uuid:fd84c789-375d-4c5a-8b5a-2ecf9d107fa1">
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
+	<rdfs:label>Information Element ActedUpon bdqval:AllAmendmentTestsRunOnSingleRecord</rdfs:label>
+	<skos:prefLabel>Information Element ActedUpon bdqval:AllAmendmentTestsRunOnSingleRecord</skos:prefLabel>
+	<bdqffdq:composedOf rdf:resource="https://rs.tdwg.org/bdqval/terms/AllAmendmentTestsRunOnSingleRecord"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:fd9bc73a-2b67-4940-ac2a-ad1dda03d0b7">
