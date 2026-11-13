@@ -486,16 +486,25 @@ def test_bdq_rs_rewrite_mode_html_href_and_text():
         assert rs.linkify_bare_urls_in_html_line(src) == '<td><a href="https://bdq-public-review.rs.tdwg.org/bdqval/terms/">https://rs.tdwg.org/bdqval/terms/</a></td>'
 
 
-def test_bdq_rs_rewrite_mode_unserved_prefix_plain():
+def test_bdq_rs_rewrite_mode_bdqtest_served():
+    # bdqtest is served on bdq-public-review.rs.tdwg.org since 2026-11-13: linked like the other vocabularies.
     with bdq_rs_links("rewrite"):
-        assert rs.linkify_bare_urls_in_markdown_line("https://rs.tdwg.org/bdqtest/terms/") == "https://rs.tdwg.org/bdqtest/terms/"
-        assert rs.rewrite_markdown_links("[Test](https://rs.tdwg.org/bdqtest/terms/example)") == "Test"
-        assert rs.rewrite_markdown_links("<https://rs.tdwg.org/bdqtest/terms/example>") == "https://rs.tdwg.org/bdqtest/terms/example"
-        assert rs.rewrite_markdown_links("[Vocabulary IRI](https://rs.tdwg.org/bdqtest/)") == "Vocabulary IRI"
-        assert rs.rewrite_markdown_links("[RDF Metadata](https://rs.tdwg.org/bdqtest.ttl)") == "RDF Metadata"
-        assert rs.linkify_bare_urls_in_markdown_line("https://rs.tdwg.org/bdqtest/doc/list/") == "https://rs.tdwg.org/bdqtest/doc/list/"
-        # the other bdqtest documents are served
+        assert rs.linkify_bare_urls_in_markdown_line("https://rs.tdwg.org/bdqtest/terms/") == "[https://rs.tdwg.org/bdqtest/terms/](https://bdq-public-review.rs.tdwg.org/bdqtest/terms/)"
+        assert rs.rewrite_markdown_links("[Test](https://rs.tdwg.org/bdqtest/terms/example)") == "[Test](https://bdq-public-review.rs.tdwg.org/bdqtest/terms/example)"
+        assert rs.rewrite_markdown_links("[Vocabulary IRI](https://rs.tdwg.org/bdqtest/)") == "[Vocabulary IRI](https://bdq-public-review.rs.tdwg.org/bdqtest/)"
+        assert rs.rewrite_markdown_links("[RDF Metadata](https://rs.tdwg.org/bdqtest.ttl)") == "[RDF Metadata](https://bdq-public-review.rs.tdwg.org/bdqtest.ttl)"
         assert rs.rewrite_markdown_links("[Guide](https://rs.tdwg.org/bdqtest/doc/guide/)") == "[Guide](https://bdq-public-review.rs.tdwg.org/bdqtest/doc/guide/)"
+        v = "https://rs.tdwg.org/bdqtest/terms/version/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2023-09-17"
+        assert rs.linkify_bare_urls_in_markdown_line(v) == "[" + v + "](" + v.replace("https://rs.tdwg.org", "https://bdq-public-review.rs.tdwg.org") + ")"
+
+
+def test_bdq_rs_rewrite_mode_unserved_pattern_plain():
+    # The Quick Reference Guide's Test version form .../terms/<uuid>/<date> is not served: shown as plain text.
+    with bdq_rs_links("rewrite"):
+        v = "https://rs.tdwg.org/bdqtest/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536/2023-09-17"
+        assert rs.linkify_bare_urls_in_markdown_line(v) == v
+        assert rs.rewrite_markdown_links("[Test version](" + v + ")") == "Test version"
+        assert rs.rewrite_markdown_links("<" + v + ">") == v
 
 
 def test_bdq_rs_rewrite_mode_angle_destination_not_autolink():
