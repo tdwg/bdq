@@ -9,7 +9,7 @@ Draft Standard for Review
 
 <!--- Note: This document deliberately diverges from many of the SHOULD expecations of section 3.2.3 Layout and style of the SDS for the express purpose of simplicity. Some header values have been included in the first paragraph of text, others have been omitted, a table of contents has been omitted, the introduction and abstract are combined, the introduction is not given a heading, and, in consequence, headings are not numbered. --->
 
-This document is intended to be an easy-to-read reference for the Tests maintained as part of the TDWG standard [BDQ](http://example.org/to_be_determined) produced by the TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions and is maintained by the BDQ Maintenance Interest Group. This document lists the BDQ Tests, described by the [Terms Used in the BDQ Tests Quick Reference Guide](bdqtest_qrg_term_descriptions.md). Definitions, comments, and examples may include namespace abbreviations (e.g., `bdqval:`, `dwc:`). These are required as the meaning for the word is defined specifically in that namespace. Thus, `dwc:Event` means Event as defined by Darwin Core at [https://dwc.tdwg.org/terms/#event](https://dwc.tdwg.org/terms/#event).
+This document is intended to be an easy-to-read reference for the Tests maintained as part of the TDWG standard [BDQ](http://www.tdwg.org/standards/YYY) produced by the TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions and is maintained by the BDQ Maintenance Interest Group. This document lists the BDQ Tests, described by the [Terms Used in the BDQ Tests Quick Reference Guide](bdqtest_qrg_term_descriptions.md). Definitions, comments, and examples may include namespace abbreviations (e.g., `bdqval:`, `dwc:`). These are required as the meaning for the word is defined specifically in that namespace. Thus, `dwc:Event` means Event as defined by Darwin Core at [https://dwc.tdwg.org/terms/#event](https://dwc.tdwg.org/terms/#event).
 
 * Learn More:  
     <!--- START HIDE IN HTML --->
@@ -8944,9 +8944,9 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Tests Quick Reference Guide. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqtest/doc/qrg/2026-11-09>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Tests Quick Reference Guide. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqtest/doc/qrg/2026-11-13>
 
 **Biodiversity Information Standards (TDWG)**
 
-This content made open by Biodiversity Information Standards (TDWG) is licensed under a [Licensed under a Creative Commons Attribution 4.0 International (CC BY) License.](http://creativecommons.org/licenses/by/4.0/)
+This content made open by Biodiversity Information Standards (TDWG) is licensed under a [Licensed under a Creative Commons Attribution 4.0 International (CC BY) License.](https://creativecommons.org/licenses/by/4.0/)
 

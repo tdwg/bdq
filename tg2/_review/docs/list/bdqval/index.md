@@ -9,10 +9,10 @@ BDQ Controlled Vocabulary List of Terms
 2026-11-12
 
 **Date created**<br>
-2025-05-10
+2026-04-22
 
 **Part of TDWG Standard**<br>
-<http://example.org/to_be_determined>
+<http://www.tdwg.org/standards/YYY>
 
 **Preferred namespace abbreviation**<br>
 bdqval
@@ -1221,4 +1221,4 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
 
 **Biodiversity Information Standards (TDWG)**
 
-This content made open by Biodiversity Information Standards (TDWG) is licensed under a [Licensed under a Creative Commons Attribution 4.0 International (CC BY) License.](http://creativecommons.org/licenses/by/4.0/)
+This content made open by Biodiversity Information Standards (TDWG) is licensed under a [Licensed under a Creative Commons Attribution 4.0 International (CC BY) License.](https://creativecommons.org/licenses/by/4.0/)

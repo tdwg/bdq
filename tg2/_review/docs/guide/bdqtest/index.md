@@ -8,13 +8,13 @@
 BDQ Tests: Concepts and Use
 
 **Date version issued**<br>
-2026-11-09
+2026-11-13
 
 **Date created**<br>
-2026-04-19
+2026-11-13
 
 **Part of TDWG Standard**<br>
-<http://example.org/to_be_determined>
+<http://www.tdwg.org/standards/YYY>
 
 <!--
 **Preferred namespace abbreviation**<br>
@@ -22,7 +22,7 @@ BDQ Tests: Concepts and Use
 -->
 
 **This version**<br>
-<https://rs.tdwg.org/bdqtest/doc/guide/2026-11-09>
+<https://rs.tdwg.org/bdqtest/doc/guide/2026-11-13>
 
 **Latest version**<br>
 <https://rs.tdwg.org/bdqtest/doc/guide/>
@@ -37,7 +37,7 @@ This document is a reference for the BDQ standard, providing context for and nor
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 **Bibliographic citation**<br>
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Tests: Concepts and Use. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqtest/doc/guide/2026-11-09>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Tests: Concepts and Use. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqtest/doc/guide/2026-11-13>
 
 **Status**<br>
 Draft Standard for Review
@@ -761,8 +761,8 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-[TDWG](<../../../index.md#glossary_TDWG> "Biodiversity Information Standards") Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Tests: Concepts and Use. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqtest/doc/guide/2026-11-09>
+[TDWG](<../../../index.md#glossary_TDWG> "Biodiversity Information Standards") Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Tests: Concepts and Use. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqtest/doc/guide/2026-11-13>
 
 **Biodiversity Information Standards (TDWG)**
 
-This content made open by Biodiversity Information Standards (TDWG) is licensed under a [Licensed under a Creative Commons Attribution 4.0 International (CC BY) License.](http://creativecommons.org/licenses/by/4.0/)
+This content made open by Biodiversity Information Standards (TDWG) is licensed under a [Licensed under a Creative Commons Attribution 4.0 International (CC BY) License.](https://creativecommons.org/licenses/by/4.0/)
