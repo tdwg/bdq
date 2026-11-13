@@ -33,9 +33,7 @@ do_build.sh
 
 ** CORE tests are no longer maintained from the markdown tables in the github issues.** 
 
-Current master files for the tests are: tg2/core/TG2_tests.csv and  tg2/core/TG2_multirecord_measure_tests.csv 
-
-TODO: Make tg2/_review/vocabulary/bdqcore_term_versions.csv the master copy.
+**As of 2026-11-13 the source of truth for the Tests, and for all BDQ vocabularies, is tdwg/rs.tdwg.org, branch `bdq-source`** (see [Where the BDQ standard is maintained](../README.md#where-the-bdq-standard-is-maintained-sources-of-truth)). `tg2/_review/vocabulary/bdqtest_term_versions.csv`, from which `copy_files.sh` derives `tg2/core/TG2_tests.csv` and `tg2/core/TG2_multirecord_measure_tests.csv`, is a copy that the build still reads: a change made in rs.tdwg.org must be copied into it until the build reads rs.tdwg.org (`deployment_rs_tdwg_org.md`, Section 13).
 
 ## Convenience shell scripts 
 

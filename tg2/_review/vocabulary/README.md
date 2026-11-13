@@ -1,8 +1,8 @@
 # Vocabulary term-version files for the BDQ standard
 
-This directory contains the master canonical term-version CSV files from which the the vocabularies in the BDQ standard are generated. It also contains the master file for the Fitness For Use Framework Ontology, which is an OWL file (bdqffdq.owl), not a CSV term-version file.
+This directory contains the term-version CSV files from which this repository's build generates the vocabulary documents and RDF of the BDQ standard, and the Fitness For Use Framework Ontology (bdqffdq.owl).
 
-These files will eventually be built on rs.tdwg.org rather than being maintained here.
+**As of 2026-11-13 these are not the source of truth.** The source of truth for all seven BDQ vocabularies is tdwg/rs.tdwg.org, branch `bdq-source`, `process/bdq-revisions/`, served at bdq-public-review.rs.tdwg.org (see [Where the BDQ standard is maintained](../../README.md#where-the-bdq-standard-is-maintained-sources-of-truth)). Make changes there first, in a new release; the CSV files here are copies the build still reads, and must be updated by hand to match until the build reads rs.tdwg.org (`tg2/_make_review/deployment_rs_tdwg_org.md`, Section 13). "Editable" below means only that.
 
 **README.md**  This file.<br>
 [**bdqval_term_versions.csv**](bdqval_term_versions.csv) Term version file for `bdqval:` supplemental vocabulary. **Editable.**<br>

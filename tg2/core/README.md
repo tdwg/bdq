@@ -2,7 +2,7 @@
 
 ## The BDQ Test descriptors
 
-These are copies of the authoritative descriptors of the BDQ Tests, extracted from GitHub issue markdown tables using [bdq_issue_to_csv](https://github.com/kurator-org/bdq_issue_to_csv) one file contains the SingleRecord Tests, the other file the MultiRecord Measures.  The authoritative term version file for both is _review/vocabulary/bdqtest_term_versions.csv.
+These are copies of the descriptors of the BDQ Tests, originally extracted from GitHub issue markdown tables using [bdq_issue_to_csv](https://github.com/kurator-org/bdq_issue_to_csv); one file contains the SingleRecord Tests, the other file the MultiRecord Measures. They are derived from _review/vocabulary/bdqtest_term_versions.csv by _make_review/copy_files.sh. **As of 2026-11-13 the source of truth for the Tests is tdwg/rs.tdwg.org, branch `bdq-source`**, and `bdqtest_term_versions.csv` and the GUID tables below are copies kept in step with it until the build reads rs.tdwg.org (see [Where the BDQ standard is maintained](../README.md#where-the-bdq-standard-is-maintained-sources-of-truth)). Do not edit these files as the place of record: change the Tests in rs.tdwg.org, then copy the change here.
 
 - TG2_tests.csv
 - TG2_multirecord_measure_tests.csv
@@ -19,7 +19,7 @@ These are produced from the CSV files above using [kurator-ffdq](https://github.
 
 ### Supporting CSV files containing lists of GUIDs
 
-These files allow kurator-ffdq to preserve the identifiers of objects in the RDF when regenerating from the CSV into RDF.
+These files allow kurator-ffdq to preserve the identifiers of objects in the RDF when regenerating from the CSV into RDF. rs.tdwg.org keeps its own copies, in `bdqtest-graph-inputs/` of the release directories on `bdq-source` where they change, and generates the served Test graphs from them; changes are made there first.
 
 - information_element_guids.csv
 - TG2_tests_additional_guids.csv

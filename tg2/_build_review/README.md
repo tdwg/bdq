@@ -14,6 +14,8 @@ Some markers that affect how the build scripts process the template files are av
 
 Editable master copies of templates for human readable vocabulary lists and human readable documentation live here.
 
+**Document metadata** (titles, abstracts, authors and contributors with their roles, licence, dates, versions) come from tdwg/rs.tdwg.org (branch `bdq`, `docs/docs.csv` and `docs/docs-authors.csv`; the landing page from `standards/standards.csv`), read by `function_lib.rs_document_metadata` and `rs_document_version`. Change them there, in the `documents` of a release `config.yaml` on branch `bdq-source`. The `document_configuration.yaml` files and `authors_configuration.yaml` here are fallbacks, used only for documents or values that rs.tdwg.org does not hold (such as the Quick Reference Guide's maintainer). See [Where the BDQ standard is maintained](../README.md#where-the-bdq-standard-is-maintained-sources-of-truth).
+
 README.md  This file.
 - [**authors_configuration.yaml**](authors_configuration.yaml) - Configuration file for the list of authors and contributors.
 - [**draft_build_bdqtest_qrg.py**](draft_build_bdqtest_qrg.py) - Script to build the BDQ Tests Quick Reference Guide.
