@@ -25,8 +25,7 @@ bdqtest_term_versions.csv.
 
 Key behavioural invariants that mirror the Java implementation:
   - Only rows with status=="recommended" are emitted.
-  - Any row whose CSV text contains "AllAmendmentTestsRunOnSingleRecord" or
-    "AllDarwin" (in any column) is excluded.
+  - Any row whose CSV text contains "AllDarwin" (in any column) is excluded.
   - Method/Specification GUIDs are taken from TG2_tests_additional_guids.csv
     (keyed by term_localName), which takes precedence over the SpecificationGuid
     and MethodGuid columns of the term-versions file.
@@ -312,7 +311,6 @@ def load_test_rows(path: str) -> list:
 
     Inclusion criteria (mirroring copy_files.sh):
       - status == "recommended"
-      - The entire row text does NOT contain "AllAmendmentTestsRunOnSingleRecord"
       - The entire row text does NOT contain "AllDarwin"
     """
     rows = []
@@ -321,8 +319,6 @@ def load_test_rows(path: str) -> list:
             if row.get('status', '').strip() != 'recommended':
                 continue
             row_text = ','.join(row.values())
-            if 'AllAmendmentTestsRunOnSingleRecord' in row_text:
-                continue
             if 'AllDarwin' in row_text:
                 continue
             rows.append(row)

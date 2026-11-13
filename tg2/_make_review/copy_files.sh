@@ -51,7 +51,7 @@ cd ../../../
 # moved down into kurator-ffdq/ directory
 cd kurator-ffdq/
 # copy tests into the kurator-ffdq data directory from the bdq project
-grep -v "AllAmendmentTestsRunOnSingleRecord" ../bdq/tg2/_review/vocabulary/bdqtest_term_versions.csv  | grep -v "AllDarwin" > data/TG2_tests.csv
+grep -v "AllDarwin" ../bdq/tg2/_review/vocabulary/bdqtest_term_versions.csv > data/TG2_tests.csv
 # to build rdf files with just the single record tests, copy just those into the kurator-ffdq data directory
 #grep -v "AllAmendmentTestsRunOnSingleRecord" ../bdq/tg2/core/TG2_tests.csv  | grep -v "AllDarwin" > data/TG2_tests.csv
 
