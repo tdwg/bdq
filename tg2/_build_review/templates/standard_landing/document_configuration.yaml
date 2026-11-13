@@ -60,7 +60,7 @@ doc_created: '2025-05-10'
 # Standard metadata determined by TDWG policy.
 publisher: Biodiversity Information Standards (TDWG)
 license_statement: Licensed under a Creative Commons Attribution 4.0 International (CC BY) License.
-license_uri: http://creativecommons.org/licenses/by/4.0/
+license_uri: https://creativecommons.org/licenses/by/4.0/
 
 # Typically left blank. May be used to provide additional information about the document
 # in the machine-readable metadata.
