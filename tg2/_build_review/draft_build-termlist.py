@@ -228,6 +228,8 @@ for term in termLists:
     # load from local file
     with open(document_configuration_yaml_file) as dcfy:
         document_configuration_yaml = yaml.load(dcfy, Loader=yaml.FullLoader)
+        # The metadata held by rs.tdwg.org replace the local configuration (function_lib.rs_document_metadata).
+        document_configuration_yaml, document_contributors = function_lib.rs_document_metadata(document_configuration_yaml, contributors_yaml)
         # The version cited in the header comes from rs.tdwg.org (function_lib.rs_document_version).
         document_version = function_lib.rs_document_version(document_configuration_yaml)
 
@@ -750,11 +752,11 @@ for term in termLists:
     header = header.replace('{ratification_date}', document_version['date'])
     header = header.replace('{created_date}', document_configuration_yaml['doc_created'])
     # Build the Markdown for the authors and contributors lists or the contributors list or the authors list
-    contributors = build_authors_contributors_markdown(contributors_yaml)
+    contributors = build_authors_contributors_markdown(document_contributors)
     header = header.replace('{authors_contributors}', contributors)
-    contributors = build_contributors_markdown(contributors_yaml)
+    contributors = build_contributors_markdown(document_contributors)
     header = header.replace('{authors_contributors}', contributors)
-    contributors = build_authors_markdown(contributors_yaml)
+    contributors = build_authors_markdown(document_contributors)
     header = header.replace('{authors}', contributors)
     header = header.replace('{standard_iri}', document_configuration_yaml['dcterms_isPartOf'])
     header = header.replace('{current_iri}', document_configuration_yaml['current_iri'])

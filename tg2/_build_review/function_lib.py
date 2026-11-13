@@ -8,6 +8,7 @@
 # This script contains a library of reusable functions to support scripts to 
 # build of documents and term lists for TDWG standards and draft standards
 
+import sys
 import re
 import rdflib     # run sparql queries on rdf 
 from rdflib import Graph
@@ -444,7 +445,7 @@ def _read_rs_table(url):
             with urllib.request.urlopen(url, timeout=60) as response:
                 _rs_tables[url] = list(csv.DictReader(io.StringIO(response.read().decode('utf-8'))))
         except Exception as e:
-            print('Warning: could not read ' + url + ': ' + str(e))
+            print('Warning: could not read ' + url + ': ' + str(e), file=sys.stderr)
             _rs_tables[url] = []
     return _rs_tables[url]
 
@@ -464,7 +465,7 @@ def rs_document_version(document_configuration):
                            if row['standard'] == current_iri), reverse=True)
     if not versions:
         print('Warning: no versions of ' + current_iri + ' in rs.tdwg.org (' + RS_TDWG_ORG_BRANCH +
-              '); using doc_modified ' + str(document_configuration['doc_modified']))
+              '); using doc_modified ' + str(document_configuration['doc_modified']), file=sys.stderr)
         return {'date': str(document_configuration['doc_modified']), 'previous_version_iri': None,
                 'source': 'document_configuration.yaml'}
     return {'date': versions[0][0], 'previous_version_iri': versions[1][1] if len(versions) > 1 else None,
@@ -478,3 +479,69 @@ def fill_previous_version_slot(header, document_version):
         return header.replace('{previous_version_slot}\n', '<' + document_version['previous_version_iri'] + '>\n')
     header = header.replace('**Previous version**<br>\n{previous_version_slot}\n\n', '')
     return header.replace('{previous_version_slot}\n\n', '')
+
+
+# Document metadata from rs.tdwg.org (deployment_rs_tdwg_org.md Section 11.4).
+#
+# rs.tdwg.org is also the source of truth for the documents' metadata: title, abstract, creator,
+# publisher, licence, comment, standard, created and modified dates, and access and redirect URLs
+# (docs/docs.csv), and their authors and contributors (docs/docs-authors.csv). A document's rows
+# there replace the values of its document_configuration.yaml and of authors_configuration.yaml.
+# The roles are kept: contributor_role 'author' is shown in the document (build_authors_markdown),
+# and the other contributors are in the metadata only (unless a template asks for {contributors}).
+# The landing page is covered by the standard record (standards/standards.csv): its created and
+# modified dates are the standard's, and, since rs.tdwg.org has no authors for a standard, its
+# authors stay those of authors_configuration.yaml. Values that rs.tdwg.org does not hold (for
+# example the Quick Reference Guide's maintainer, mediaType) stay those of document_configuration.yaml.
+# A document not in rs.tdwg.org (or if the files cannot be read) keeps its local values, with a warning.
+RS_DOCS_URL = RS_TDWG_ORG_BASE + 'docs/docs.csv'
+RS_DOCS_AUTHORS_URL = RS_TDWG_ORG_BASE + 'docs/docs-authors.csv'
+RS_STANDARDS_URL = RS_TDWG_ORG_BASE + 'standards/standards.csv'
+RS_DOCS_FIELDS = ('documentTitle', 'abstract', 'creator', 'comment', 'publisher', 'license_statement', 'license_uri',
+                  'dcterms_isPartOf', 'doc_created', 'doc_modified', 'accessUrl', 'browserRedirectUri')
+RS_CONTRIBUTOR_FIELDS = ('contributor_iri', 'contributor_literal', 'contributor_role', 'role_uri', 'affiliation',
+                         'affiliation_uri')
+
+
+def rs_document_metadata(document_configuration, contributors):
+    """Return (document_configuration, contributors) for a document, with the values held by rs.tdwg.org
+    replacing the local ones. document_configuration is the dict loaded from the document's
+    document_configuration.yaml, contributors the list loaded from authors_configuration.yaml;
+    neither is modified. The contributors are in rs.tdwg.org's order, with their roles."""
+    current_iri = document_configuration['current_iri']
+    configuration = dict(document_configuration)
+    changed = []
+
+    def take(field, value):
+        if str(configuration.get(field, '')).strip() != value.strip():
+            changed.append(field)
+        configuration[field] = value
+
+    docs = [row for row in _read_rs_table(RS_DOCS_URL) if row['current_iri'] == current_iri]
+    standards = [row for row in _read_rs_table(RS_STANDARDS_URL) if row['standard'] == current_iri]
+    if docs:
+        for field in RS_DOCS_FIELDS:
+            take(field, docs[0][field])
+        authors = [{field: row[field] for field in RS_CONTRIBUTOR_FIELDS}
+                   for row in _read_rs_table(RS_DOCS_AUTHORS_URL) if row['document'] == current_iri]
+        if authors:
+            if [tuple(str(c.get(f) or '') for f in RS_CONTRIBUTOR_FIELDS) for c in contributors] != \
+                    [tuple(a[f] for f in RS_CONTRIBUTOR_FIELDS) for a in authors]:
+                changed.append('authors and contributors')
+            contributors = authors
+        else:
+            print('Warning: no authors or contributors of ' + current_iri + ' in rs.tdwg.org (' +
+                  RS_TDWG_ORG_BRANCH + '); using authors_configuration.yaml', file=sys.stderr)
+        source = RS_DOCS_URL
+    elif standards:
+        take('doc_created', standards[0]['standard_created'])
+        take('doc_modified', standards[0]['standard_modified'])
+        source = RS_STANDARDS_URL
+    else:
+        print('Warning: ' + current_iri + ' is not in rs.tdwg.org (' + RS_TDWG_ORG_BRANCH +
+              '); using document_configuration.yaml and authors_configuration.yaml', file=sys.stderr)
+        return configuration, contributors
+    if changed:
+        print('Metadata of ' + current_iri + ' from ' + source + ', differing from the local configuration: ' +
+              ', '.join(changed), file=sys.stderr)
+    return configuration, contributors
