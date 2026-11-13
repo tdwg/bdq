@@ -545,3 +545,22 @@ def rs_document_metadata(document_configuration, contributors):
         print('Metadata of ' + current_iri + ' from ' + source + ', differing from the local configuration: ' +
               ', '.join(changed), file=sys.stderr)
     return configuration, contributors
+
+
+# The current version of a BDQ Test (deployment_rs_tdwg_org.md Sections 10.9.3, 10.9.6).
+#
+# A Test's version "currently in force" (SDS 3.3.3.1, "Term version IRI") is its latest version in
+# rs.tdwg.org, issued on its `issued` date, with rs.tdwg.org's canonical version IRI form. The
+# `iri` column of bdqtest_term_versions.csv is dated by DateLastUpdated instead: that version, which
+# implementations cite in @ProvidesVersion, is usually superseded, so the documents do not cite it
+# as the Test's version.
+def bdqtest_current_version_iri(term_local_name, issued):
+    """Return https://rs.tdwg.org/bdqtest/terms/version/<term_local_name>-<issued>."""
+    return 'https://rs.tdwg.org/bdqtest/terms/version/{}-{}'.format(term_local_name, issued)
+
+
+def with_bdqtest_current_version_iris(frame):
+    """Set the `iri` column of a dataframe of bdqtest_term_versions.csv rows to each Test's current
+    version IRI (bdqtest_current_version_iri), and return the dataframe."""
+    frame['iri'] = [bdqtest_current_version_iri(n, i) for n, i in zip(frame['term_localName'], frame['issued'])]
+    return frame

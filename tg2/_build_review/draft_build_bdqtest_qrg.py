@@ -132,6 +132,8 @@ for term_list in term_lists_info:
         # PJM: Using local file
         data_url = term_history_csv # "../../../../vocabularies/bdqdim_terms.csv"
         frame = pd.read_csv(data_url, na_filter=False)
+        # The Test's current version in rs.tdwg.org, not the iri column (function_lib).
+        frame = function_lib.with_bdqtest_current_version_iris(frame)
         for index,row in frame.iterrows():
             # PJM: TODO: just use column list?
             # row_list tuned to just columns in the Quick Reference Guide.
@@ -371,7 +373,7 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 			print("### ",row['Label'])
 			print()
 			print("#### ",row['prefLabel'])
-			print("https://rs.tdwg.org/bdqtest/terms/version/{}-{}".format(row['term_localName'],row['DateLastUpdated']))
+			print(function_lib.bdqtest_current_version_iri(row['term_localName'], row['issued']))
 			print("Acts upon ",row['Resource Type'])
 			print()
 			print("#### Description")
@@ -434,7 +436,7 @@ with open (inputTermsCsvFilename, newline='') as csvfile:
 			print("### ",row['Label'])
 			print()
 			print("#### ",row['prefLabel'])
-			print("https://rs.tdwg.org/bdqtest/terms/version/{}-{}".format(row['term_localName'],row['DateLastUpdated']))
+			print(function_lib.bdqtest_current_version_iri(row['term_localName'], row['issued']))
 			print("Acts upon ",row['Resource Type'])
 			print()
 			print("#### Description")

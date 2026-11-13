@@ -200,6 +200,8 @@ for term in termLists:
             data_url = term_history_csv # "../../../../vocabularies/bdqdim_terms.csv"
             
             frame = pd.read_csv(data_url, na_filter=False)
+            # Term version IRI: the Test's current version in rs.tdwg.org, not the iri column (function_lib).
+            frame = function_lib.with_bdqtest_current_version_iris(frame)
             frame_column_list = frame.columns.tolist()
 #            print(f'Frame column list = {frame_column_list}')
             for index,row in frame.iterrows():

@@ -1134,6 +1134,8 @@ def build_category_links(df):
 def generate_qrg():
     print(f"Loading CSV from {CSV_PATH}...")
     df = pd.read_csv(CSV_PATH)
+    # Term Version IRI: the Test's current version in rs.tdwg.org, not the iri column (function_lib).
+    df = function_lib.with_bdqtest_current_version_iris(df)
     df = df.astype(str).fillna('')
 
     if 'organized_in' not in df.columns:
