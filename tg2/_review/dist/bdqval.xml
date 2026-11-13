@@ -33,31 +33,31 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/AbstractInformationElement"/>
      <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqval/terms/AggregatedTestResponseOutcomes"/>
 </rdf:Description>
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqval/terms/version/AllAmendmentTestsRunOnSingleRecord-2026-04-22">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqval/terms/version/AllAmendmentTestsRunOnSingleRecord-2026-11-12">
      <rdfs:isDefinedBy rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
      <dcterms:isPartOf rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
-     <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-04-22</dcterms:issued>
+     <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-12</dcterms:issued>
      <tdwgutility:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recommended</tdwgutility:status>
      <rdfs:label xml:lang="en">AllAmendmentTestsRunOnSingleRecord</rdfs:label>
      <skos:prefLabel xml:lang="en">AllAmendmentTestsRunOnSingleRecord</skos:prefLabel>
      <skos:note rdf:parseType="Literal"><div xmlns="http://www.w3.org/1999/xhtml">Used in Measure of Single Record Tests</div></skos:note>
-     <rdfs:comment xml:lang="en">An Abstract Information Element composed of the outcomes of a list of bdqffdq:Amendment Tests from a single run on a bdqffdq:SingleRecord in a bdqffdq:DataQualityReport forming the input to another Test.</rdfs:comment>
-     <skos:definition xml:lang="en">An Abstract Information Element composed of the outcomes of a list of bdqffdq:Amendment Tests from a single run on a bdqffdq:SingleRecord in a bdqffdq:DataQualityReport forming the input to another Test.</skos:definition>
+     <rdfs:comment xml:lang="en">An Abstract Information Element composed of the bdqffdq:AmendmentResponses of the bdqffdq:Amendment Tests run on a bdqffdq:SingleRecord in a single bdqffdq:DataQualityReport, forming the input to another Test.</rdfs:comment>
+     <skos:definition xml:lang="en">An Abstract Information Element composed of the bdqffdq:AmendmentResponses of the bdqffdq:Amendment Tests run on a bdqffdq:SingleRecord in a single bdqffdq:DataQualityReport, forming the input to another Test.</skos:definition>
      <rdf:value>AllAmendmentTestsRunOnSingleRecord</rdf:value>
      <skos:inScheme rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
      <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/AbstractInformationElement"/>
      <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqval/terms/AllAmendmentTestsRunOnSingleRecord"/>
 </rdf:Description>
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqval/terms/version/AllValidationTestsRunOnSingleRecord-2026-04-22">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqval/terms/version/AllValidationTestsRunOnSingleRecord-2026-11-12">
      <rdfs:isDefinedBy rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
      <dcterms:isPartOf rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
-     <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-04-22</dcterms:issued>
+     <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-12</dcterms:issued>
      <tdwgutility:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recommended</tdwgutility:status>
      <rdfs:label xml:lang="en">AllValidationTestsRunOnSingleRecord</rdfs:label>
      <skos:prefLabel xml:lang="en">AllValidationTestsRunOnSingleRecord</skos:prefLabel>
      <skos:note rdf:parseType="Literal"><div xmlns="http://www.w3.org/1999/xhtml">Used in Measure of Single Record Tests</div></skos:note>
-     <rdfs:comment xml:lang="en">An Abstract Information Element composed of the outcomes of a list of bdqffdq:Validation Tests from a single run on a bdqffdq:SingleRecord in a bdqffdq:DataQualityReport.</rdfs:comment>
-     <skos:definition xml:lang="en">An Abstract Information Element composed of the outcomes of a list of bdqffdq:Validation Tests from a single run on a bdqffdq:SingleRecord in a bdqffdq:DataQualityReport.</skos:definition>
+     <rdfs:comment xml:lang="en">An Abstract Information Element composed of the bdqffdq:ValidationResponses of the bdqffdq:Validation Tests run on a bdqffdq:SingleRecord in a single bdqffdq:DataQualityReport, forming the input to another Test.</rdfs:comment>
+     <skos:definition xml:lang="en">An Abstract Information Element composed of the bdqffdq:ValidationResponses of the bdqffdq:Validation Tests run on a bdqffdq:SingleRecord in a single bdqffdq:DataQualityReport, forming the input to another Test.</skos:definition>
      <rdf:value>AllValidationTestsRunOnSingleRecord</rdf:value>
      <skos:inScheme rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
      <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/AbstractInformationElement"/>

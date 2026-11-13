@@ -4250,31 +4250,35 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-25</td>
+			<td>2026-11-12</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqtest/terms/version/03049fe5-a575-404f-b564-ae63f5a1cf8b-2024-08-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/03049fe5-a575-404f-b564-ae63f5a1cf8b-2026-11-12</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>A count of the number of distinct AMENDMENT Tests that have a Response.status="AMENDED" for a given record.</td>
+			<td>A count of the distinct AMENDMENT Tests run on a record that have Response.status=AMENDED or FILLED_IN.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>The number of Tests of output type AMENDMENT that have been run against the record and have proposed changes to the record (Result.status="AMENDED" or "FILLED_IN")</td>
+			<td>RUN_HAS_RESULT with the result being the number of distinct AMENDMENT Tests run on the record that have Response.status=AMENDED or Response.status=FILLED_IN.</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
 			<td>urn:uuid:7e365897-cfc0-413e-a613-99c6050edc4b</td>
 		</tr>
 		<tr>
-			<td>InformationElements Consulted</td>
+			<td>InformationElements ActedUpon</td>
 			<td>bdqval:AllAmendmentTestsRunOnSingleRecord</td>
 		</tr>
 		<tr>
+			<td>Notes</td>
+			<td>If no AMENDMENT Tests were run on the record, the result is 0.</td>
+		</tr>
+		<tr>
 			<td>Examples</td>
-			<td>[Response.status=RUN_HAS_RESULT, Response.result="17", Response.comment="17 Tests of TYPE AMENDMENT were run and proposed changes to the record."]</td>
+			<td>[Response.status=RUN_HAS_RESULT, Response.result="17", Response.comment="17 AMENDMENT Tests had Response.status=AMENDED or FILLED_IN."]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -4286,7 +4290,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Data Quality Dimension</td>
-			<td>Completeness</td>
+			<td>Reliability</td>
 		</tr>
 		<tr>
 			<td>Source</td>
@@ -4432,35 +4436,35 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-25</td>
+			<td>2026-11-12</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqtest/terms/version/45fb49eb-4a1b-4b49-876f-15d5034dfc73-2024-08-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/45fb49eb-4a1b-4b49-876f-15d5034dfc73-2026-11-12</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>Measures the number of distinct VALIDATION Tests that have a Response.status="COMPLIANT" for a given record.</td>
+			<td>A count of the distinct VALIDATION Tests run on a record that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>INTERNAL_PREREQUISITES_NOT_MET if no Tests of type VALIDATION were attempted to be run; Report the number of Tests of output type VALIDATION run against the record that were COMPLIANT (passed)</td>
+			<td>RUN_HAS_RESULT with the result being the number of distinct VALIDATION Tests run on the record that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
 			<td>urn:uuid:b611e1b1-cbf5-405c-b24d-24e9a649cbf0</td>
 		</tr>
 		<tr>
-			<td>InformationElements Consulted</td>
+			<td>InformationElements ActedUpon</td>
 			<td>bdqval:AllValidationTestsRunOnSingleRecord</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>We have three individual measures for pass (MEASURE_VALIDATIONTESTS_COMPLIANT (45fb49eb-4a1b-4b49-876f-15d5034dfc73)), fail (MEASURE_VALIDATIONTESTS_NOTCOMPLIANT (453844ae-9df4-439f-8e24-c52498eca84a)), and PREREQUISITES_NOT_MET (49a94636-a562-4e6b-803c-665c80628a3d). To get the total number of Tests that were attempted, add all three measures. To get the total number of Tests that ran, add NOT_COMPLIANT (fail) and COMPLIANT (pass).</td>
+			<td>We have three individual measures for pass (MEASURE_VALIDATIONTESTS_COMPLIANT (45fb49eb-4a1b-4b49-876f-15d5034dfc73)), fail (MEASURE_VALIDATIONTESTS_NOTCOMPLIANT (453844ae-9df4-439f-8e24-c52498eca84a)), and PREREQUISITES_NOT_MET (49a94636-a562-4e6b-803c-665c80628a3d). To get the total number of Tests that were attempted, add all three measures. To get the total number of Tests that ran, add NOT_COMPLIANT (fail) and COMPLIANT (pass). If no VALIDATION Tests were run on the record, the result is 0.</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[Response.status=RUN_HAS_RESULT, Response.result="7", Response.comment="7 VALIDATION Tests had Response.status="COMPLIANT" ]</td>
+			<td>[Response.status=RUN_HAS_RESULT, Response.result="7", Response.comment="7 VALIDATION Tests had Response.result=COMPLIANT."]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -4490,14 +4494,6 @@ Including MultiRecord Measures
 			<td>has Use Cases</td>
 			<td>bdquc:Spatial-Temporal_Patterns, bdquc:Taxon-Management</td>
 		</tr>
-		<tr>
-			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MEASURE_VALIDATIONTESTS_COMPLIANT with Specification Specification for: MEASURE_VALIDATIONTESTS_COMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: MEASURE_VALIDATIONTESTS_COMPLIANT</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -4523,35 +4519,35 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-24</td>
+			<td>2026-11-12</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqtest/terms/version/453844ae-9df4-439f-8e24-c52498eca84a-2024-08-22</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/453844ae-9df4-439f-8e24-c52498eca84a-2026-11-12</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>A count of the number of distinct VALIDATION Tests that have a Response.status="NOT_COMPLIANT" for a given record.</td>
+			<td>A count of the distinct VALIDATION Tests run on a record that have Response.result=NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>INTERNAL_PREREQUISITES_NOT_MET if no Tests of type VALIDATION were attempted to be run; REPORT of the number of Tests of output type VALIDATION run against the record that have Response.result="NOT_COMPLIANT"</td>
+			<td>RUN_HAS_RESULT with the result being the number of distinct VALIDATION Tests run on the record that have Response.result=NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
 			<td>urn:uuid:1a7adc4a-58ee-480c-9765-3834ea433bf0</td>
 		</tr>
 		<tr>
-			<td>InformationElements Consulted</td>
+			<td>InformationElements ActedUpon</td>
 			<td>bdqval:AllValidationTestsRunOnSingleRecord</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>We have three individual measures for pass (MEASURE_VALIDATIONTESTS_COMPLIANT (45fb49eb-4a1b-4b49-876f-15d5034dfc73)), fail (MEASURE_VALIDATIONTESTS_NOTCOMPLIANT (453844ae-9df4-439f-8e24-c52498eca84a)), and PREREQUISITES_NOT_MET (49a94636-a562-4e6b-803c-665c80628a3d). To get the total number of Tests that were attempted, add all three measures. To get the total number of Tests that ran, add NOT_COMPLIANT (fail) and COMPLIANT (pass).</td>
+			<td>We have three individual measures for pass (MEASURE_VALIDATIONTESTS_COMPLIANT (45fb49eb-4a1b-4b49-876f-15d5034dfc73)), fail (MEASURE_VALIDATIONTESTS_NOTCOMPLIANT (453844ae-9df4-439f-8e24-c52498eca84a)), and PREREQUISITES_NOT_MET (49a94636-a562-4e6b-803c-665c80628a3d). To get the total number of Tests that were attempted, add all three measures. To get the total number of Tests that ran, add NOT_COMPLIANT (fail) and COMPLIANT (pass). If no VALIDATION Tests were run on the record, the result is 0.</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[Response.status=RUN_HAS_RESULT, Response.result="37", Response.comment="37 VALIDATION Tests had Response.status="NOT_COMPLIANT."]</td>
+			<td>[Response.status=RUN_HAS_RESULT, Response.result="37", Response.comment="37 VALIDATION Tests had Response.result=NOT_COMPLIANT."]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -4581,14 +4577,6 @@ Including MultiRecord Measures
 			<td>has Use Cases</td>
 			<td>bdquc:Spatial-Temporal_Patterns, bdquc:Taxon-Management</td>
 		</tr>
-		<tr>
-			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MEASURE_VALIDATIONTESTS_NOTCOMPLIANT with Specification Specification for: MEASURE_VALIDATIONTESTS_NOTCOMPLIANT</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: MEASURE_VALIDATIONTESTS_NOTCOMPLIANT</td>
-		</tr>
 	</tbody>
 </table>
 <br>
@@ -4614,35 +4602,35 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-25</td>
+			<td>2026-11-12</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqtest/terms/version/49a94636-a562-4e6b-803c-665c80628a3d-2024-08-18</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/49a94636-a562-4e6b-803c-665c80628a3d-2026-11-12</td>
 		</tr>
 		<tr>
 			<td>Description</td>
-			<td>The number of distinct VALIDATION Tests that have a Response.status="EXTERNAL_PREREQUISITES_NOT_MET" or "INTERNAL_PREREQUISITES_NOT_MET" for a given record.</td>
+			<td>A count of the distinct VALIDATION Tests run on a record that have Response.status=INTERNAL_PREREQUISITES_NOT_MET or EXTERNAL_PREREQUISITES_NOT_MET.</td>
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>INTERNAL_PREREQUISITES_NOT_MET if no Tests of type VALIDATION were run; Report the number of Tests of output type VALIDATION that did not run because prerequisites for those Tests were not met (Result.status="INTERNAL_PREREQUISITES_NOT_MET" or "EXTERNAL_PREREQUISITES_NOT_MET")</td>
+			<td>RUN_HAS_RESULT with the result being the number of distinct VALIDATION Tests run on the record that have Response.status=INTERNAL_PREREQUISITES_NOT_MET or Response.status=EXTERNAL_PREREQUISITES_NOT_MET.</td>
 		</tr>
 		<tr>
 			<td>Specification GUID</td>
 			<td>urn:uuid:aefe88ed-6d3a-4824-8c4a-a75714cb0351</td>
 		</tr>
 		<tr>
-			<td>InformationElements Consulted</td>
+			<td>InformationElements ActedUpon</td>
 			<td>bdqval:AllValidationTestsRunOnSingleRecord</td>
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>We have three individual measures for pass (MEASURE_VALIDATIONTESTS_COMPLIANT (45fb49eb-4a1b-4b49-876f-15d5034dfc73)), fail (MEASURE_VALIDATIONTESTS_NOTCOMPLIANT (453844ae-9df4-439f-8e24-c52498eca84a)), and PREREQUISITES_NOT_MET (49a94636-a562-4e6b-803c-665c80628a3d). To get the total number of Tests that were attempted, add all three measures. To get the total number of Tests that ran, add NOT_COMPLIANT (fail) and COMPLIANT (pass).</td>
+			<td>We have three individual measures for pass (MEASURE_VALIDATIONTESTS_COMPLIANT (45fb49eb-4a1b-4b49-876f-15d5034dfc73)), fail (MEASURE_VALIDATIONTESTS_NOTCOMPLIANT (453844ae-9df4-439f-8e24-c52498eca84a)), and PREREQUISITES_NOT_MET (49a94636-a562-4e6b-803c-665c80628a3d). To get the total number of Tests that were attempted, add all three measures. To get the total number of Tests that ran, add NOT_COMPLIANT (fail) and COMPLIANT (pass). If no VALIDATION Tests were run on the record, the result is 0.</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[Response.status=RUN_HAS_RESULT, Response.result="27", Response.comment="27 VALIDATION Tests had either INTERNAL_PREREQUISITES_NOT_MET" or "EXTERNAL_PREREQUISITES_NOT_MET"]</td>
+			<td>[Response.status=RUN_HAS_RESULT, Response.result="27", Response.comment="27 VALIDATION Tests had Response.status=INTERNAL_PREREQUISITES_NOT_MET or EXTERNAL_PREREQUISITES_NOT_MET."]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -4671,14 +4659,6 @@ Including MultiRecord Measures
 		<tr>
 			<td>has Use Cases</td>
 			<td>bdquc:Spatial-Temporal_Patterns, bdquc:Taxon-Management</td>
-		</tr>
-		<tr>
-			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET with Specification Specification for: MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET</td>
-		</tr>
-		<tr>
-			<td>Specification label</td>
-			<td>Specification for: MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET</td>
 		</tr>
 	</tbody>
 </table>

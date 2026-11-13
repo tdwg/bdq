@@ -112,11 +112,6 @@ VALIDATION_TAXON_NOTEMPTY
 - [Quick Reference Guide](index.md#VALIDATION_TAXON_NOTEMPTY)
 - [Term List](../../list/bdqtest/index.md#bdqtest_06851339-843f-4a43-8422-4e61b9a00e75)
 
-MEASURE_AMENDMENTS_PROPOSED
-- Term IRI: https://rs.tdwg.org/bdqtest/terms/03049fe5-a575-404f-b564-ae63f5a1cf8b
-- [Quick Reference Guide](index.md#MEASURE_AMENDMENTS_PROPOSED)
-- [Term List](../../list/bdqtest/index.md#bdqtest_03049fe5-a575-404f-b564-ae63f5a1cf8b)
-
 MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET
 - Term IRI: https://rs.tdwg.org/bdqtest/terms/49a94636-a562-4e6b-803c-665c80628a3d
 - [Quick Reference Guide](index.md#MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET)
@@ -538,6 +533,11 @@ VALIDATION_DATEIDENTIFIED_INRANGE
 
 
 ## Reliability
+
+MEASURE_AMENDMENTS_PROPOSED
+- Term IRI: https://rs.tdwg.org/bdqtest/terms/03049fe5-a575-404f-b564-ae63f5a1cf8b
+- [Quick Reference Guide](index.md#MEASURE_AMENDMENTS_PROPOSED)
+- [Term List](../../list/bdqtest/index.md#bdqtest_03049fe5-a575-404f-b564-ae63f5a1cf8b)
 
 MEASURE_VALIDATIONTESTS_COMPLIANT
 - Term IRI: https://rs.tdwg.org/bdqtest/terms/45fb49eb-4a1b-4b49-876f-15d5034dfc73

@@ -288,11 +288,11 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-04-22</td>
+			<td>2026-11-12</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/AllAmendmentTestsRunOnSingleRecord-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/AllAmendmentTestsRunOnSingleRecord-2026-04-22</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/AllAmendmentTestsRunOnSingleRecord-2026-11-12">https://rs.tdwg.org/bdqval/terms/version/AllAmendmentTestsRunOnSingleRecord-2026-11-12</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -300,7 +300,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>An Abstract Information Element composed of the outcomes of a list of bdqffdq:Amendment Tests from a single run on a bdqffdq:SingleRecord in a bdqffdq:DataQualityReport forming the input to another Test.</td>
+			<td>An Abstract Information Element composed of the bdqffdq:AmendmentResponses of the bdqffdq:Amendment Tests run on a bdqffdq:SingleRecord in a single bdqffdq:DataQualityReport, forming the input to another Test.</td>
 		</tr>
 		<tr>
 			<td>Comments</td>
@@ -334,11 +334,11 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-04-22</td>
+			<td>2026-11-12</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/AllValidationTestsRunOnSingleRecord-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/AllValidationTestsRunOnSingleRecord-2026-04-22</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/AllValidationTestsRunOnSingleRecord-2026-11-12">https://rs.tdwg.org/bdqval/terms/version/AllValidationTestsRunOnSingleRecord-2026-11-12</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -346,7 +346,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>An Abstract Information Element composed of the outcomes of a list of bdqffdq:Validation Tests from a single run on a bdqffdq:SingleRecord in a bdqffdq:DataQualityReport.</td>
+			<td>An Abstract Information Element composed of the bdqffdq:ValidationResponses of the bdqffdq:Validation Tests run on a bdqffdq:SingleRecord in a single bdqffdq:DataQualityReport, forming the input to another Test.</td>
 		</tr>
 		<tr>
 			<td>Comments</td>

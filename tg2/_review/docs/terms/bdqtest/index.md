@@ -3023,29 +3023,34 @@ There are any number of potential controlled vocabularies that might be used for
 ###  MEASURE_AMENDMENTS_PROPOSED
 
 ####  Measure Amendments Proposed
-https://rs.tdwg.org/bdqtest/terms/03049fe5-a575-404f-b564-ae63f5a1cf8b/2024-08-18
+https://rs.tdwg.org/bdqtest/terms/03049fe5-a575-404f-b564-ae63f5a1cf8b/2026-11-12
 Acts upon  SingleRecord
 
 #### Description
 
-A count of the number of distinct AMENDMENT Tests that have a Response.status="AMENDED" for a given record.
+A count of the distinct AMENDMENT Tests run on a record that have Response.status=AMENDED or FILLED_IN.
 
 #### Expected Response
 
-The number of Tests of output type AMENDMENT that have been run against the record and have proposed changes to the record (Result.status="AMENDED" or "FILLED_IN")
+RUN_HAS_RESULT with the result being the number of distinct AMENDMENT Tests run on the record that have Response.status=AMENDED or Response.status=FILLED_IN.
 
 #### Information Elements
-Consulted: 
+
+Acted upon: 
 bdqval:AllAmendmentTestsRunOnSingleRecord
 
 #### Examples
 
-Response.status=RUN_HAS_RESULT, Response.result="17", Response.comment="17 Tests of TYPE AMENDMENT were run and proposed changes to the record."
+Response.status=RUN_HAS_RESULT, Response.result="17", Response.comment="17 AMENDMENT Tests had Response.status=AMENDED or FILLED_IN."
 
 
 #### Use Cases
 
 bdquc:Spatial-Temporal_Patterns, bdquc:Taxon-Management
+
+#### Notes
+
+If no AMENDMENT Tests were run on the record, the result is 0.
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -3053,24 +3058,25 @@ bdquc:Spatial-Temporal_Patterns, bdquc:Taxon-Management
 ###  MEASURE_VALIDATIONTESTS_COMPLIANT
 
 ####  Measure Validation Tests Compliant
-https://rs.tdwg.org/bdqtest/terms/45fb49eb-4a1b-4b49-876f-15d5034dfc73/2024-08-18
+https://rs.tdwg.org/bdqtest/terms/45fb49eb-4a1b-4b49-876f-15d5034dfc73/2026-11-12
 Acts upon  SingleRecord
 
 #### Description
 
-Measures the number of distinct VALIDATION Tests that have a Response.status="COMPLIANT" for a given record.
+A count of the distinct VALIDATION Tests run on a record that have Response.result=COMPLIANT.
 
 #### Expected Response
 
-INTERNAL_PREREQUISITES_NOT_MET if no Tests of type VALIDATION were attempted to be run; Report the number of Tests of output type VALIDATION run against the record that were COMPLIANT (passed)
+RUN_HAS_RESULT with the result being the number of distinct VALIDATION Tests run on the record that have Response.result=COMPLIANT.
 
 #### Information Elements
-Consulted: 
+
+Acted upon: 
 bdqval:AllValidationTestsRunOnSingleRecord
 
 #### Examples
 
-Response.status=RUN_HAS_RESULT, Response.result="7", Response.comment="7 VALIDATION Tests had Response.status="COMPLIANT" 
+Response.status=RUN_HAS_RESULT, Response.result="7", Response.comment="7 VALIDATION Tests had Response.result=COMPLIANT."
 
 
 #### Use Cases
@@ -3079,7 +3085,7 @@ bdquc:Spatial-Temporal_Patterns, bdquc:Taxon-Management
 
 #### Notes
 
-We have three individual measures for pass (MEASURE_VALIDATIONTESTS_COMPLIANT (45fb49eb-4a1b-4b49-876f-15d5034dfc73)), fail (MEASURE_VALIDATIONTESTS_NOTCOMPLIANT (453844ae-9df4-439f-8e24-c52498eca84a)), and PREREQUISITES_NOT_MET (49a94636-a562-4e6b-803c-665c80628a3d). To get the total number of Tests that were attempted, add all three measures. To get the total number of Tests that ran, add NOT_COMPLIANT (fail) and COMPLIANT (pass).
+We have three individual measures for pass (MEASURE_VALIDATIONTESTS_COMPLIANT (45fb49eb-4a1b-4b49-876f-15d5034dfc73)), fail (MEASURE_VALIDATIONTESTS_NOTCOMPLIANT (453844ae-9df4-439f-8e24-c52498eca84a)), and PREREQUISITES_NOT_MET (49a94636-a562-4e6b-803c-665c80628a3d). To get the total number of Tests that were attempted, add all three measures. To get the total number of Tests that ran, add NOT_COMPLIANT (fail) and COMPLIANT (pass). If no VALIDATION Tests were run on the record, the result is 0.
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -3087,24 +3093,25 @@ We have three individual measures for pass (MEASURE_VALIDATIONTESTS_COMPLIANT (4
 ###  MEASURE_VALIDATIONTESTS_NOTCOMPLIANT
 
 ####  Measure Validation Tests Not Compliant
-https://rs.tdwg.org/bdqtest/terms/453844ae-9df4-439f-8e24-c52498eca84a/2024-08-22
+https://rs.tdwg.org/bdqtest/terms/453844ae-9df4-439f-8e24-c52498eca84a/2026-11-12
 Acts upon  SingleRecord
 
 #### Description
 
-A count of the number of distinct VALIDATION Tests that have a Response.status="NOT_COMPLIANT" for a given record.
+A count of the distinct VALIDATION Tests run on a record that have Response.result=NOT_COMPLIANT.
 
 #### Expected Response
 
-INTERNAL_PREREQUISITES_NOT_MET if no Tests of type VALIDATION were attempted to be run; REPORT of the number of Tests of output type VALIDATION run against the record that have Response.result="NOT_COMPLIANT"
+RUN_HAS_RESULT with the result being the number of distinct VALIDATION Tests run on the record that have Response.result=NOT_COMPLIANT.
 
 #### Information Elements
-Consulted: 
+
+Acted upon: 
 bdqval:AllValidationTestsRunOnSingleRecord
 
 #### Examples
 
-Response.status=RUN_HAS_RESULT, Response.result="37", Response.comment="37 VALIDATION Tests had Response.status="NOT_COMPLIANT."
+Response.status=RUN_HAS_RESULT, Response.result="37", Response.comment="37 VALIDATION Tests had Response.result=NOT_COMPLIANT."
 
 
 #### Use Cases
@@ -3113,7 +3120,7 @@ bdquc:Spatial-Temporal_Patterns, bdquc:Taxon-Management
 
 #### Notes
 
-We have three individual measures for pass (MEASURE_VALIDATIONTESTS_COMPLIANT (45fb49eb-4a1b-4b49-876f-15d5034dfc73)), fail (MEASURE_VALIDATIONTESTS_NOTCOMPLIANT (453844ae-9df4-439f-8e24-c52498eca84a)), and PREREQUISITES_NOT_MET (49a94636-a562-4e6b-803c-665c80628a3d). To get the total number of Tests that were attempted, add all three measures. To get the total number of Tests that ran, add NOT_COMPLIANT (fail) and COMPLIANT (pass).
+We have three individual measures for pass (MEASURE_VALIDATIONTESTS_COMPLIANT (45fb49eb-4a1b-4b49-876f-15d5034dfc73)), fail (MEASURE_VALIDATIONTESTS_NOTCOMPLIANT (453844ae-9df4-439f-8e24-c52498eca84a)), and PREREQUISITES_NOT_MET (49a94636-a562-4e6b-803c-665c80628a3d). To get the total number of Tests that were attempted, add all three measures. To get the total number of Tests that ran, add NOT_COMPLIANT (fail) and COMPLIANT (pass). If no VALIDATION Tests were run on the record, the result is 0.
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -3121,24 +3128,25 @@ We have three individual measures for pass (MEASURE_VALIDATIONTESTS_COMPLIANT (4
 ###  MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET
 
 ####  Measure Validation Tests Prerequisites Not Met
-https://rs.tdwg.org/bdqtest/terms/49a94636-a562-4e6b-803c-665c80628a3d/2024-08-18
+https://rs.tdwg.org/bdqtest/terms/49a94636-a562-4e6b-803c-665c80628a3d/2026-11-12
 Acts upon  SingleRecord
 
 #### Description
 
-The number of distinct VALIDATION Tests that have a Response.status="EXTERNAL_PREREQUISITES_NOT_MET" or "INTERNAL_PREREQUISITES_NOT_MET" for a given record.
+A count of the distinct VALIDATION Tests run on a record that have Response.status=INTERNAL_PREREQUISITES_NOT_MET or EXTERNAL_PREREQUISITES_NOT_MET.
 
 #### Expected Response
 
-INTERNAL_PREREQUISITES_NOT_MET if no Tests of type VALIDATION were run; Report the number of Tests of output type VALIDATION that did not run because prerequisites for those Tests were not met (Result.status="INTERNAL_PREREQUISITES_NOT_MET" or "EXTERNAL_PREREQUISITES_NOT_MET")
+RUN_HAS_RESULT with the result being the number of distinct VALIDATION Tests run on the record that have Response.status=INTERNAL_PREREQUISITES_NOT_MET or Response.status=EXTERNAL_PREREQUISITES_NOT_MET.
 
 #### Information Elements
-Consulted: 
+
+Acted upon: 
 bdqval:AllValidationTestsRunOnSingleRecord
 
 #### Examples
 
-Response.status=RUN_HAS_RESULT, Response.result="27", Response.comment="27 VALIDATION Tests had either INTERNAL_PREREQUISITES_NOT_MET" or "EXTERNAL_PREREQUISITES_NOT_MET"
+Response.status=RUN_HAS_RESULT, Response.result="27", Response.comment="27 VALIDATION Tests had Response.status=INTERNAL_PREREQUISITES_NOT_MET or EXTERNAL_PREREQUISITES_NOT_MET."
 
 
 #### Use Cases
@@ -3147,7 +3155,7 @@ bdquc:Spatial-Temporal_Patterns, bdquc:Taxon-Management
 
 #### Notes
 
-We have three individual measures for pass (MEASURE_VALIDATIONTESTS_COMPLIANT (45fb49eb-4a1b-4b49-876f-15d5034dfc73)), fail (MEASURE_VALIDATIONTESTS_NOTCOMPLIANT (453844ae-9df4-439f-8e24-c52498eca84a)), and PREREQUISITES_NOT_MET (49a94636-a562-4e6b-803c-665c80628a3d). To get the total number of Tests that were attempted, add all three measures. To get the total number of Tests that ran, add NOT_COMPLIANT (fail) and COMPLIANT (pass).
+We have three individual measures for pass (MEASURE_VALIDATIONTESTS_COMPLIANT (45fb49eb-4a1b-4b49-876f-15d5034dfc73)), fail (MEASURE_VALIDATIONTESTS_NOTCOMPLIANT (453844ae-9df4-439f-8e24-c52498eca84a)), and PREREQUISITES_NOT_MET (49a94636-a562-4e6b-803c-665c80628a3d). To get the total number of Tests that were attempted, add all three measures. To get the total number of Tests that ran, add NOT_COMPLIANT (fail) and COMPLIANT (pass). If no VALIDATION Tests were run on the record, the result is 0.
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
