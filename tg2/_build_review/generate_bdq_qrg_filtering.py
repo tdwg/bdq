@@ -14,6 +14,7 @@ import re
 import html as html_lib
 import pandas as pd
 import yaml
+import function_lib
 
 try:
     import markdown
@@ -1140,6 +1141,13 @@ def generate_qrg():
 
     if os.path.exists(DOC_CONFIG_PATH):
         yaml_cfg = _load_yaml(DOC_CONFIG_PATH)
+        # The metadata held by rs.tdwg.org replace the local configuration, and the version cited
+        # (citation year and version IRI) is the Quick Reference Guide's latest version in rs.tdwg.org,
+        # as in draft_build_bdqtest_qrg.py (deployment_rs_tdwg_org.md Section 11.4).
+        yaml_cfg, _ = function_lib.rs_document_metadata(yaml_cfg, [])
+        document_version = function_lib.rs_document_version(yaml_cfg)
+        yaml_cfg['ratification_date'] = document_version['date']
+        yaml_cfg['year'] = document_version['date'][:4]
     else:
         print(f"Warning: document configuration not found: {DOC_CONFIG_PATH}")
         yaml_cfg = {}

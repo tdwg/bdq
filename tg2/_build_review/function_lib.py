@@ -525,7 +525,7 @@ def rs_document_metadata(document_configuration, contributors):
         authors = [{field: row[field] for field in RS_CONTRIBUTOR_FIELDS}
                    for row in _read_rs_table(RS_DOCS_AUTHORS_URL) if row['document'] == current_iri]
         if authors:
-            if [tuple(str(c.get(f) or '') for f in RS_CONTRIBUTOR_FIELDS) for c in contributors] != \
+            if contributors and [tuple(str(c.get(f) or '') for f in RS_CONTRIBUTOR_FIELDS) for c in contributors] != \
                     [tuple(a[f] for f in RS_CONTRIBUTOR_FIELDS) for a in authors]:
                 changed.append('authors and contributors')
             contributors = authors
