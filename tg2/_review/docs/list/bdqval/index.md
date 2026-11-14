@@ -144,7 +144,7 @@ The terminology used to describe the terms in this vocabulary follows the TDWG [
 | Label (Term) | Normative | Definition | Example |
 | ------------ | --------- | ---------- | ------- |
 | Term Name (rdf:value) | normative | Idiomatic property used for structured values. TDWG SDS: The term name is a controlled value that represents the class, property, or concept described by the term definition. | AggregatedTestResponseOutcomes |
-| Term IRI (dcterms:isVersionOf) | normative | A related resource of which the described resource is a version, edition, or adaptation. TDWG SDS: The HTTP IRI that uniquely identifies the current term. | [https://rs.tdwg.org/ bdqval/terms/version/ AggregatedTestResponseOutcomes](https://rs.tdwg.org/bdqval/terms/version/AggregatedTestResponseOutcomes) |
+| Term IRI (dcterms:isVersionOf) | normative | A related resource of which the described resource is a version, edition, or adaptation. TDWG SDS: The HTTP IRI that uniquely identifies the current term. | [https://rs.tdwg.org/ bdqval/terms/ AggregatedTestResponseOutcomes](https://rs.tdwg.org/bdqval/terms/AggregatedTestResponseOutcomes) |
 | Modified (dcterms:issued) | normative | Date of formal issuance of the resource. TDWG SDS: The date in ISO 8601 Date format on which the most recent version of the term was issued. | 2026-04-23 |
 | Term Version IRI (rdf:about) | normative | The HTTP IRI that identifies the version of the term that is currently in force. | [https://rs.tdwg.org/ bdqval/terms/version/ AggregatedTestResponseOutcomes-2026-04-23](https://rs.tdwg.org/bdqval/terms/version/AggregatedTestResponseOutcomes-2026-04-23) |
 | Label (rdfs:label) | normative | A human-readable name for the subject. TDWG SDS: A a word or short phrase that serves as a human-readable name for the term. | AggregatedTestResponseOutcomes |
@@ -238,7 +238,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 	<tbody>
 		<tr>
 			<td>Term IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/AggregatedTestResponseOutcomes">https://rs.tdwg.org/bdqval/terms/version/AggregatedTestResponseOutcomes</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/AggregatedTestResponseOutcomes">https://rs.tdwg.org/bdqval/terms/AggregatedTestResponseOutcomes</a></td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -668,7 +668,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>An evaluation of a value, which in the context of the evaluation, returns false if the value contains any characters or values other than those in the range U+0000 to U+0020, otherwise returns true. </td>
+			<td>An evaluation of a value, which in the context of the evaluation, returns false if the value contains any characters or values other than those in the range U+0000 to U+0020, otherwise returns true.</td>
 		</tr>
 		<tr>
 			<td>Comments</td>
@@ -1036,7 +1036,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>An evaluation of a value, which in the context of the evaluation, returns true if the value contains any characters or values other than those in the range U+0000 to U+0020, otherwise returns false. </td>
+			<td>An evaluation of a value, which in the context of the evaluation, returns true if the value contains any characters or values other than those in the range U+0000 to U+0020, otherwise returns false.</td>
 		</tr>
 		<tr>
 			<td>Comments</td>

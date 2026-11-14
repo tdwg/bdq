@@ -141,7 +141,7 @@ The terminology used to describe the terms in this vocabulary follows the TDWG [
 | Term Name (rdf:value) | normative | Idiomatic property used for structured values. TDWG SDS: The term name is a controlled value that represents the class, property, or concept described by the term definition. | AssumedDefault |
 | Term IRI (dcterms:isVersionOf) | normative | A related resource of which the described resource is a version, edition, or adaptation. TDWG SDS: The HTTP IRI that uniquely identifies the current term. | [https://rs.tdwg.org/ bdqenh/terms/ AssumedDefault](https://rs.tdwg.org/bdqenh/terms/AssumedDefault) |
 | Modified (dcterms:issued) | normative | Date of formal issuance of the resource. TDWG SDS: The date in ISO 8601 Date format on which the most recent version of the term was issued. | 2024-09-30 |
-| Term Version IRI (rdf:about) | normative | The HTTP IRI that identifies the version of the term that is currently in force. | [https://rs.tdwg.org/ bdqenh/terms/ AssumedDefault-2024-09-30](https://rs.tdwg.org/bdqenh/terms/AssumedDefault-2024-09-30) |
+| Term Version IRI (rdf:about) | normative | The HTTP IRI that identifies the version of the term that is currently in force. | [https://rs.tdwg.org/ bdqenh/terms/version/ AssumedDefault-2024-09-30](https://rs.tdwg.org/bdqenh/terms/version/AssumedDefault-2024-09-30) |
 | Label (rdfs:label) | normative | A human-readable name for the subject. TDWG SDS: A a word or short phrase that serves as a human-readable name for the term. | Assumed Default |
 | Definition (rdfs:comment) | normative | A description of the subject resource. TDWG SDS: The normative definition of the term, written in English. | Data could be improved by setting an empty value to a default value. |
 | Comments (skos:note) | non-normative | A general note, for any purpose. | Data in a bdqffdq:InformationElement are absent and may be proposed to be filled in with a default value. Corresponding dimension is bdqdim:Completeness. |
@@ -199,7 +199,7 @@ An instance of `bdqffdq:Validation`, `bdqffdq:Issue`, or `bdqffdq:Measure` SHOUL
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqenh/terms/AssumedDefault-2024-09-30">https://rs.tdwg.org/bdqenh/terms/AssumedDefault-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdqenh/terms/version/AssumedDefault-2024-09-30">https://rs.tdwg.org/bdqenh/terms/version/AssumedDefault-2024-09-30</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -245,7 +245,7 @@ An instance of `bdqffdq:Validation`, `bdqffdq:Issue`, or `bdqffdq:Measure` SHOUL
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqenh/terms/Converted-2024-09-30">https://rs.tdwg.org/bdqenh/terms/Converted-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdqenh/terms/version/Converted-2024-09-30">https://rs.tdwg.org/bdqenh/terms/version/Converted-2024-09-30</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -291,7 +291,7 @@ An instance of `bdqffdq:Validation`, `bdqffdq:Issue`, or `bdqffdq:Measure` SHOUL
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqenh/terms/FilledInFrom-2024-09-30">https://rs.tdwg.org/bdqenh/terms/FilledInFrom-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdqenh/terms/version/FilledInFrom-2024-09-30">https://rs.tdwg.org/bdqenh/terms/version/FilledInFrom-2024-09-30</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -337,7 +337,7 @@ An instance of `bdqffdq:Validation`, `bdqffdq:Issue`, or `bdqffdq:Measure` SHOUL
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqenh/terms/Standardized-2024-09-30">https://rs.tdwg.org/bdqenh/terms/Standardized-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdqenh/terms/version/Standardized-2024-09-30">https://rs.tdwg.org/bdqenh/terms/version/Standardized-2024-09-30</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -383,7 +383,7 @@ An instance of `bdqffdq:Validation`, `bdqffdq:Issue`, or `bdqffdq:Measure` SHOUL
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqenh/terms/Transposed-2024-09-30">https://rs.tdwg.org/bdqenh/terms/Transposed-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdqenh/terms/version/Transposed-2024-09-30">https://rs.tdwg.org/bdqenh/terms/version/Transposed-2024-09-30</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>

@@ -140,7 +140,7 @@ The terminology used to describe the terms in this vocabulary follows the TDWG [
 | Term Name (rdf:value) | normative | Idiomatic property used for structured values. TDWG SDS: The term name is a controlled value that represents the class, property, or concept described by the term definition. | Complete |
 | Term IRI (dcterms:isVersionOf) | normative | A related resource of which the described resource is a version, edition, or adaptation. TDWG SDS: The HTTP IRI that uniquely identifies the current term. | [https://rs.tdwg.org/ bdqcrit/terms/ Complete](https://rs.tdwg.org/bdqcrit/terms/Complete) |
 | Modified (dcterms:issued) | normative | Date of formal issuance of the resource. TDWG SDS: The date in ISO 8601 Date format on which the most recent version of the term was issued. | 2024-09-30 |
-| Term Version IRI (rdf:about) | normative | The HTTP IRI that identifies the version of the term that is currently in force. | [https://rs.tdwg.org/ bdqcrit/terms/ Complete-2024-09-30](https://rs.tdwg.org/bdqcrit/terms/Complete-2024-09-30) |
+| Term Version IRI (rdf:about) | normative | The HTTP IRI that identifies the version of the term that is currently in force. | [https://rs.tdwg.org/ bdqcrit/terms/version/ Complete-2024-09-30](https://rs.tdwg.org/bdqcrit/terms/version/Complete-2024-09-30) |
 | Label (rdfs:label) | normative | A human-readable name for the subject. TDWG SDS: A a word or short phrase that serves as a human-readable name for the term. | Complete |
 | Definition (rdfs:comment) | normative | A description of the subject resource. TDWG SDS: The normative definition of the term, written in English. | Data are present and sufficiently comprehensive for use. |
 | Comments (skos:note) | non-normative | A general note, for any purpose. | Data in a bdqffdq:InformationElement are present and sufficiently comprehensive for use. Corresponding dimension is bdqdim:Completeness. |
@@ -204,7 +204,7 @@ An instance of `bdqffdq:Measure` or `bdqffdq:Amendment` SHOULD NOT have a `bdqff
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqcrit/terms/Complete-2024-09-30">https://rs.tdwg.org/bdqcrit/terms/Complete-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdqcrit/terms/version/Complete-2024-09-30">https://rs.tdwg.org/bdqcrit/terms/version/Complete-2024-09-30</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -250,7 +250,7 @@ An instance of `bdqffdq:Measure` or `bdqffdq:Amendment` SHOULD NOT have a `bdqff
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqcrit/terms/Consistent-2024-09-30">https://rs.tdwg.org/bdqcrit/terms/Consistent-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdqcrit/terms/version/Consistent-2024-09-30">https://rs.tdwg.org/bdqcrit/terms/version/Consistent-2024-09-30</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -258,7 +258,7 @@ An instance of `bdqffdq:Measure` or `bdqffdq:Amendment` SHOULD NOT have a `bdqff
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>Data are internally consistent and consistent with any authorities consulted. </td>
+			<td>Data are internally consistent and consistent with any authorities consulted.</td>
 		</tr>
 		<tr>
 			<td>Comments</td>
@@ -296,7 +296,7 @@ An instance of `bdqffdq:Measure` or `bdqffdq:Amendment` SHOULD NOT have a `bdqff
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqcrit/terms/Found-2024-09-30">https://rs.tdwg.org/bdqcrit/terms/Found-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdqcrit/terms/version/Found-2024-09-30">https://rs.tdwg.org/bdqcrit/terms/version/Found-2024-09-30</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -342,7 +342,7 @@ An instance of `bdqffdq:Measure` or `bdqffdq:Amendment` SHOULD NOT have a `bdqff
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqcrit/terms/InRange-2024-09-30">https://rs.tdwg.org/bdqcrit/terms/InRange-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdqcrit/terms/version/InRange-2024-09-30">https://rs.tdwg.org/bdqcrit/terms/version/InRange-2024-09-30</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -388,7 +388,7 @@ An instance of `bdqffdq:Measure` or `bdqffdq:Amendment` SHOULD NOT have a `bdqff
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqcrit/terms/Likely-2024-09-30">https://rs.tdwg.org/bdqcrit/terms/Likely-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdqcrit/terms/version/Likely-2024-09-30">https://rs.tdwg.org/bdqcrit/terms/version/Likely-2024-09-30</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -434,7 +434,7 @@ An instance of `bdqffdq:Measure` or `bdqffdq:Amendment` SHOULD NOT have a `bdqff
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqcrit/terms/NotEmpty-2024-09-30">https://rs.tdwg.org/bdqcrit/terms/NotEmpty-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdqcrit/terms/version/NotEmpty-2024-09-30">https://rs.tdwg.org/bdqcrit/terms/version/NotEmpty-2024-09-30</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -480,7 +480,7 @@ An instance of `bdqffdq:Measure` or `bdqffdq:Amendment` SHOULD NOT have a `bdqff
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqcrit/terms/Standard-2024-09-30">https://rs.tdwg.org/bdqcrit/terms/Standard-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdqcrit/terms/version/Standard-2024-09-30">https://rs.tdwg.org/bdqcrit/terms/version/Standard-2024-09-30</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -526,7 +526,7 @@ An instance of `bdqffdq:Measure` or `bdqffdq:Amendment` SHOULD NOT have a `bdqff
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqcrit/terms/Unambiguous-2024-09-30">https://rs.tdwg.org/bdqcrit/terms/Unambiguous-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdqcrit/terms/version/Unambiguous-2024-09-30">https://rs.tdwg.org/bdqcrit/terms/version/Unambiguous-2024-09-30</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>

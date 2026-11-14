@@ -458,8 +458,8 @@ bdqffdq:SingleRecord a bdqffdq:ResourceType ;
 bdqval:sourceAuthority a bdqffdq:Parameter .
 
 <urn:uuid:0348eccf-fc7f-49b3-88b6-1d911e98cbbb> a bdqffdq:ValidationPolicy ;
-    rdfs:label "ValidationPolicy: (50) validations  in UseCase bdquc:Spatial-Temporal_Patterns" ;
-    skos:prefLabel "ValidationPolicy: (50) validations  in UseCase bdquc:Spatial-Temporal_Patterns" ;
+    rdfs:label "ValidationPolicy: (51) validations  in UseCase bdquc:Spatial-Temporal_Patterns" ;
+    skos:prefLabel "ValidationPolicy: (51) validations  in UseCase bdquc:Spatial-Temporal_Patterns" ;
     bdqffdq:hasUseCase <https://rs.tdwg.org/bdquc/terms/Spatial-Temporal_Patterns> ;
     bdqffdq:includedInPolicy bdqtest:69b2efdc-6269-45a4-aecb-4cb99c2ae134-2025-03-07 .
 

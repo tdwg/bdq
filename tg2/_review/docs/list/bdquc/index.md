@@ -242,7 +242,7 @@ In an RDF context, a reference to a term in the `bdquc:` namespace MUST use the 
 	<tbody>
 		<tr>
 			<td>Term IRI</td>
-			<td><a href="https://rs.tdwg.org/bdquc/terms/version/SDM-Trees">https://rs.tdwg.org/bdquc/terms/version/SDM-Trees</a></td>
+			<td><a href="https://rs.tdwg.org/bdquc/terms/SDM-Trees">https://rs.tdwg.org/bdquc/terms/SDM-Trees</a></td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -258,7 +258,7 @@ In an RDF context, a reference to a term in the `bdquc:` namespace MUST use the 
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>A bdqffdq:UseCase for improving the quality of, and selecting dwc:Occurrence records suitable for predicting the spatial distribution of tree species. This Use Case filters for occurrence records that meet criteria for a known species at a known location and date.  Records can be further filtered to meet the requirements of the predictive modeling of specific tree species distributions (e.g., Eucalypts) using high-precision occurrence data and environmental variables to evaluate modeling methodologies and refine expert distribution envelopes. </td>
+			<td>A bdqffdq:UseCase for improving the quality of, and selecting dwc:Occurrence records suitable for predicting the spatial distribution of tree species. This Use Case filters for occurrence records that meet criteria for a known species at a known location and date.  Records can be further filtered to meet the requirements of the predictive modeling of specific tree species distributions (e.g., Eucalypts) using high-precision occurrence data and environmental variables to evaluate modeling methodologies and refine expert distribution envelopes.</td>
 		</tr>
 		<tr>
 			<td>Comments</td>
@@ -312,7 +312,7 @@ In an RDF context, a reference to a term in the `bdquc:` namespace MUST use the 
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>A bdqffdq:UseCase that pertains to dwc:Occurrence data where the Information Elements concerning what dwc:Organism occurred when at what location are used for analysies such as of taxon distributions across space and time to quantify biodiversity patterns, identify range shifts, or modeling of ecological niches. </td>
+			<td>A bdqffdq:UseCase that pertains to dwc:Occurrence data where the Information Elements concerning what dwc:Organism occurred when at what location are used for analysies such as of taxon distributions across space and time to quantify biodiversity patterns, identify range shifts, or modeling of ecological niches.</td>
 		</tr>
 		<tr>
 			<td>Comments</td>

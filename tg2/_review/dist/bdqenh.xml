@@ -18,7 +18,7 @@ xmlns:tdwgutility="http://rs.tdwg.org/dwc/terms/attributes/"
 xmlns:foaf="http://xmlns.com/foaf/0.1/"
 xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
 >
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqenh/terms/AssumedDefault-2024-09-30">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqenh/terms/version/AssumedDefault-2024-09-30">
      <rdfs:isDefinedBy rdf:resource="https://rs.tdwg.org/bdqenh/terms/"/>
      <dcterms:isPartOf rdf:resource="https://rs.tdwg.org/bdqenh/terms/"/>
      <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:issued>
@@ -33,7 +33,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Enhancement"/>
      <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqenh/terms/AssumedDefault"/>
 </rdf:Description>
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqenh/terms/Converted-2024-09-30">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqenh/terms/version/Converted-2024-09-30">
      <rdfs:isDefinedBy rdf:resource="https://rs.tdwg.org/bdqenh/terms/"/>
      <dcterms:isPartOf rdf:resource="https://rs.tdwg.org/bdqenh/terms/"/>
      <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:issued>
@@ -48,7 +48,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Enhancement"/>
      <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqenh/terms/Converted"/>
 </rdf:Description>
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqenh/terms/FilledInFrom-2024-09-30">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqenh/terms/version/FilledInFrom-2024-09-30">
      <rdfs:isDefinedBy rdf:resource="https://rs.tdwg.org/bdqenh/terms/"/>
      <dcterms:isPartOf rdf:resource="https://rs.tdwg.org/bdqenh/terms/"/>
      <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:issued>
@@ -63,7 +63,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Enhancement"/>
      <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqenh/terms/FilledInFrom"/>
 </rdf:Description>
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqenh/terms/Standardized-2024-09-30">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqenh/terms/version/Standardized-2024-09-30">
      <rdfs:isDefinedBy rdf:resource="https://rs.tdwg.org/bdqenh/terms/"/>
      <dcterms:isPartOf rdf:resource="https://rs.tdwg.org/bdqenh/terms/"/>
      <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:issued>
@@ -78,7 +78,7 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Enhancement"/>
      <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqenh/terms/Standardized"/>
 </rdf:Description>
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqenh/terms/Transposed-2024-09-30">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqenh/terms/version/Transposed-2024-09-30">
      <rdfs:isDefinedBy rdf:resource="https://rs.tdwg.org/bdqenh/terms/"/>
      <dcterms:isPartOf rdf:resource="https://rs.tdwg.org/bdqenh/terms/"/>
      <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:issued>
