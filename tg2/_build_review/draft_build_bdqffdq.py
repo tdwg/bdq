@@ -429,7 +429,7 @@ text = text + "- [Named Individuals (normative)](#44-namedindividual-terms-norma
 text = text + "\n"
 
 text = text + "### 3.1 Alphabetical Index of classes (non-normative)\n\n"
-sparql = prefixes + "SELECT ?subject WHERE {  ?subject a owl:Class . } "
+sparql = prefixes + "SELECT ?subject WHERE {  ?subject a owl:Class . } ORDER BY ?subject"
 queryResult = graph.query(sparql)
 separator = ""
 for r in queryResult : 
@@ -439,7 +439,7 @@ for r in queryResult :
 	separator = " | "
 
 text = text + "### 3.2 Alphabetical Index of object properties (non-normative)\n\n"
-sparql = prefixes + "SELECT ?subject WHERE {  ?subject a owl:ObjectProperty . } "
+sparql = prefixes + "SELECT ?subject WHERE {  ?subject a owl:ObjectProperty . } ORDER BY ?subject"
 queryResult = graph.query(sparql)
 separator = ""
 for r in queryResult : 
@@ -449,7 +449,7 @@ for r in queryResult :
 	separator = " | "
 
 text = text + "### 3.3 Alphabetical Index of data properties (non-normative)\n\n"
-sparql = prefixes + "SELECT ?subject WHERE {  ?subject a owl:DatatypeProperty . } "
+sparql = prefixes + "SELECT ?subject WHERE {  ?subject a owl:DatatypeProperty . } ORDER BY ?subject"
 queryResult = graph.query(sparql)
 separator = ""
 for r in queryResult : 
@@ -459,7 +459,7 @@ for r in queryResult :
 	separator = " | "
 
 text = text + "### 3.4 Alphabetical Index of named individuals (non-normative)\n\n"
-sparql = prefixes + "SELECT ?subject WHERE {  ?subject a owl:NamedIndividual . } "
+sparql = prefixes + "SELECT ?subject WHERE {  ?subject a owl:NamedIndividual . } ORDER BY ?subject"
 queryResult = graph.query(sparql)
 separator = ""
 for r in queryResult : 
@@ -772,32 +772,16 @@ sparql = prefixes + "SELECT DISTINCT ?adc ?member WHERE { ?adc a owl:AllDisjoint
 rows = list(graph.query(sparql))
 text = text + render_none_if_empty(len(rows))
 if rows:
-	# group members by axiom node (usually a bnode); do not print the bnode id
-	current_adc = None
-	members = []
+	# group members by axiom node (usually a bnode); do not print the bnode id. Groups are ordered by
+	# their sorted members, not by the bnode, whose id changes with every parse.
+	groups = {}
 	for r in rows:
-		adc = r.adc
-		member = r.member
-		if current_adc is None:
-			current_adc = adc
-		if adc != current_adc:
-			# flush previous group
-			text = text + "| Property | Value |\n"
-			text = text + "| -------- | ----- |\n"
-			text = text + "| Axiom | owl:AllDisjointClasses |\n"
-			text = text + "| Members | {} |\n".format(", ".join([to_curie(m) for m in members]))
-			text = text + "\n"
-			# start new group
-			current_adc = adc
-			members = []
-		members.append(member)
-
-	# flush last group
-	if members:
+		groups.setdefault(r.adc, []).append(to_curie(r.member))
+	for members in sorted(sorted(g) for g in groups.values()):
 		text = text + "| Property | Value |\n"
 		text = text + "| -------- | ----- |\n"
 		text = text + "| Axiom | owl:AllDisjointClasses |\n"
-		text = text + "| Members | {} |\n".format(", ".join([to_curie(m) for m in members]))
+		text = text + "| Members | {} |\n".format(", ".join(members))
 		text = text + "\n"
 
 # 4.3.3 EquivalentClass

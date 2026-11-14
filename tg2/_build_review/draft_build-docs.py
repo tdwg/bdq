@@ -305,7 +305,7 @@ for templatePath, document in directories.items() :
 		indextext = indextext + "\n"
 		
 		indextext = indextext + "### 5.1 Alphabetical Index of classes (non-normative)\n\n"
-		sparql = prefixes + "SELECT ?subject WHERE {  ?subject a owl:Class . } "
+		sparql = prefixes + "SELECT ?subject WHERE {  ?subject a owl:Class . } ORDER BY ?subject"
 		queryResult = graph.query(sparql)
 		separator = ""
 		for r in queryResult : 
@@ -316,7 +316,7 @@ for templatePath, document in directories.items() :
 		
 		indextext = indextext + "\n"
 		indextext = indextext + "### 5.2 Alphabetical Index of object properties (non-normative)\n\n"
-		sparql = prefixes + "SELECT ?subject WHERE {  ?subject a owl:ObjectProperty . } "
+		sparql = prefixes + "SELECT ?subject WHERE {  ?subject a owl:ObjectProperty . } ORDER BY ?subject"
 		queryResult = graph.query(sparql)
 		separator = ""
 		for r in queryResult : 
@@ -327,7 +327,7 @@ for templatePath, document in directories.items() :
 		
 		indextext = indextext + "\n"
 		indextext = indextext + "### 5.3 Alphabetical Index of data properties (non-normative)\n\n"
-		sparql = prefixes + "SELECT ?subject WHERE {  ?subject a owl:DatatypeProperty . } "
+		sparql = prefixes + "SELECT ?subject WHERE {  ?subject a owl:DatatypeProperty . } ORDER BY ?subject"
 		queryResult = graph.query(sparql)
 		separator = ""
 		for r in queryResult : 
@@ -338,7 +338,7 @@ for templatePath, document in directories.items() :
 		
 		indextext = indextext + "\n"
 		indextext = indextext + "### 5.4 Alphabetical Index of named individuals (non-normative)\n\n"
-		sparql = prefixes + "SELECT ?subject WHERE {  ?subject a owl:NamedIndividual . } "
+		sparql = prefixes + "SELECT ?subject WHERE {  ?subject a owl:NamedIndividual . } ORDER BY ?subject"
 		queryResult = graph.query(sparql)
 		separator = ""
 		for r in queryResult : 
