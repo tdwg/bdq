@@ -40,6 +40,18 @@ jobs:
           set -euo pipefail
           python -m pytest _site_resources/tests
 
+      - name: Check the vocabulary copies against rs.tdwg.org
+        # The term-version files, the ontology, and the GUID tables are generated from rs.tdwg.org, the source of
+        # truth (tg2/_make_review/export_rs_baseline.py; deployment_rs_tdwg_org.md, Section 13.1). Fail if they
+        # differ from its bdq branch: export again, or make the change in rs.tdwg.org.
+        working-directory: tg2/_make_review
+        shell: bash
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          python export_rs_baseline.py --ref bdq --check
+
       - name: Build tg2 review documents
         working-directory: tg2/_make_review
         shell: bash

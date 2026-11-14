@@ -35,7 +35,7 @@ Usage (from tg2/_make_review):
 
 Requires rdflib (for the ontology generator).
 """
-import argparse, csv, datetime, hashlib, importlib.util, io, json, pathlib, re, shutil
+import argparse, csv, datetime, hashlib, importlib.util, io, json, os, pathlib, re, shutil
 import subprocess, sys, tarfile, tempfile, urllib.request
 
 HERE = pathlib.Path(__file__).resolve().parent
@@ -214,7 +214,11 @@ def fetch_source(args, work):
                                     capture_output=True, text=True).stdout.strip() or str(checkout)
         repository = re.sub(r'^git@github\.com:(.*?)(\.git)?$', r'https://github.com/\1', repository)
     else:
-        with urllib.request.urlopen(f'https://api.github.com/repos/{GITHUB_REPO}/commits/{args.ref}', timeout=60) as r:
+        request = urllib.request.Request(f'https://api.github.com/repos/{GITHUB_REPO}/commits/{args.ref}',
+                                         headers={'Accept': 'application/vnd.github+json'})
+        if os.environ.get('GITHUB_TOKEN'):  # e.g. in GitHub Actions, to avoid the anonymous rate limit
+            request.add_header('Authorization', 'Bearer ' + os.environ['GITHUB_TOKEN'])
+        with urllib.request.urlopen(request, timeout=60) as r:
             commit = json.load(r)['sha']
         with urllib.request.urlopen(f'https://codeload.github.com/{GITHUB_REPO}/tar.gz/{commit}', timeout=600) as r:
             archive = r.read()
@@ -263,6 +267,10 @@ def main():
         print(f'Baseline export from {label}: {len(changed)} of {len(outputs)} files would change')
         for path in changed:
             print('  ' + str(path.relative_to(TG2.parent)))
+        if changed:
+            print('These files are generated from rs.tdwg.org and must not be edited by hand. If rs.tdwg.org has '
+                  'changed, run tg2/_make_review/export_rs_baseline.py, review, and commit the result; if a file here '
+                  'was edited, make the change in rs.tdwg.org instead (tg2/README.md, sources of truth).')
         return 1 if changed else 0
     for path in changed:
         path.parent.mkdir(parents=True, exist_ok=True)
