@@ -49,7 +49,7 @@ and commit the export and the regenerated documents together.
 - **A proposals file** *(planned)*: rows that differ from the exported baseline, in the published column names, with any new GUID-table entries.
 - **New Use Cases and Tests** can be drafted with [`bdq_usecase_builder`](https://github.com/FilteredPush/bdq_usecase_builder), which follows the phases of the BDQ Tutorial; exporting its proposals as rows is *planned*.
 - **The draft build** *(planned)*: builds draft Lists of Terms, the Quick Reference Guide, and `dist/` from the baseline plus the proposals, marked as draft, with document headers that say the document is a draft not yet issued.
-- **Migration on acceptance** *(planned)*: a tool that turns accepted proposals into an rs.tdwg.org release directory, validated with `process.py --dry-run` and the Test-graph check; after processing, the baseline export brings the new state back here.
+- **Migration on acceptance** *(partly implemented, for Tests)*: rs.tdwg.org's `process/bdq-revisions/bdq_new_release.py` (on `bdq-source`) turns proposed Test rows, in the published BDQ column names, into a release directory ("Changing a Test" in `process/bdq-revisions/README.md`); still planned: a tool that turns accepted proposals for the other vocabularies, the GUID tables, and the axioms into an rs.tdwg.org release directory, validated with `process.py --dry-run` and the Test-graph check; after processing, the baseline export brings the new state back here.
 
 ## The Test graphs
 
