@@ -955,8 +955,8 @@
 
 <https://rs.tdwg.org/bdqtest/method/55b60dd8-7054-4736-b9ac-88bef8967fb2> a bdqffdq:ValidationMethod ;
     rdfs:label "ValidationMethod: VALIDATION_TAXON_UNAMBIGUOUS with Specification for: VALIDATION_TAXON_UNAMBIGUOUS" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/55b60dd8-7054-4736-b9ac-88bef8967fb2-2025-03-06> ;
-    dcterms:modified "2025-03-06"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/55b60dd8-7054-4736-b9ac-88bef8967fb2-2026-11-15> ;
+    dcterms:modified "2026-11-15"^^xsd:date ;
     owl:sameAs <urn:uuid:55b60dd8-7054-4736-b9ac-88bef8967fb2> ;
     skos:historyNote "Source: ALA, GBIF, CRIA" ;
     skos:note "Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L792",
@@ -3009,8 +3009,8 @@
 
 <https://rs.tdwg.org/bdqtest/policy/0348eccf-fc7f-49b3-88b6-1d911e98cbbb> a bdqffdq:ValidationPolicy ;
     rdfs:label "ValidationPolicy: (51) validations  in UseCase bdquc:Spatial-Temporal_Patterns" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/policy/version/0348eccf-fc7f-49b3-88b6-1d911e98cbbb-2025-03-07> ;
-    dcterms:modified "2025-03-07"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/policy/version/0348eccf-fc7f-49b3-88b6-1d911e98cbbb-2026-11-15> ;
+    dcterms:modified "2026-11-15"^^xsd:date ;
     owl:sameAs <urn:uuid:0348eccf-fc7f-49b3-88b6-1d911e98cbbb> ;
     skos:prefLabel "ValidationPolicy: (51) validations  in UseCase bdquc:Spatial-Temporal_Patterns" ;
     bdqffdq:hasUseCase bdquc:Spatial-Temporal_Patterns ;
@@ -3068,8 +3068,8 @@
 
 <https://rs.tdwg.org/bdqtest/policy/3a640869-d2ea-4447-8e42-06ddb217066c> a bdqffdq:ValidationPolicy ;
     rdfs:label "ValidationPolicy: (32) validations  in UseCase bdquc:Alien-Species" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/policy/version/3a640869-d2ea-4447-8e42-06ddb217066c-2025-03-07> ;
-    dcterms:modified "2025-03-07"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/policy/version/3a640869-d2ea-4447-8e42-06ddb217066c-2026-11-15> ;
+    dcterms:modified "2026-11-15"^^xsd:date ;
     owl:sameAs <urn:uuid:3a640869-d2ea-4447-8e42-06ddb217066c> ;
     skos:prefLabel "ValidationPolicy: (32) validations  in UseCase bdquc:Alien-Species" ;
     bdqffdq:hasUseCase bdquc:Alien-Species ;
@@ -3364,8 +3364,8 @@
 
 <https://rs.tdwg.org/bdqtest/policy/9c87ce41-04a3-45e6-83d3-95ec70ae553f> a bdqffdq:ValidationPolicy ;
     rdfs:label "ValidationPolicy: (19) validations  in UseCase bdquc:Taxon-Management" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/policy/version/9c87ce41-04a3-45e6-83d3-95ec70ae553f-2025-03-06> ;
-    dcterms:modified "2025-03-06"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/policy/version/9c87ce41-04a3-45e6-83d3-95ec70ae553f-2026-11-15> ;
+    dcterms:modified "2026-11-15"^^xsd:date ;
     owl:sameAs <urn:uuid:9c87ce41-04a3-45e6-83d3-95ec70ae553f> ;
     skos:prefLabel "ValidationPolicy: (19) validations  in UseCase bdquc:Taxon-Management" ;
     bdqffdq:hasUseCase bdquc:Taxon-Management ;
@@ -6134,11 +6134,11 @@ bdqenh:Transposed a bdqffdq:Enhancement ;
 <https://rs.tdwg.org/bdqtest/specification/8bd6f6de-49e4-4889-82e0-e4af093981e0> a bdqffdq:Specification ;
     rdfs:label "Specification for: VALIDATION_TAXON_UNAMBIGUOUS" ;
     dcterms:description "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if all of dwc:scientificNameID, dwc:scientificName, dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship, dwc:cultivarEpithet are bdqval:Empty; COMPLIANT if (1) dwc:scientificNameID references a single taxon record in the bdqval:sourceAuthority, or (2) dwc:scientificNameID is bdqval:Empty and dwc:scientificName references a single taxon record in the bdqval:sourceAuthority, or (3) if dwc:scientificName and dwc:scientificNameID are bdqval:Empty and if a combination of the values of the terms dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:cultivarEpithet, dwc:taxonRank, and dwc:scientificNameAuthorship can be unambiguously resolved to a unique taxon in the bdqval:sourceAuthority, or (4) if ambiguity produced by multiple matches in (2) or (3) can be disambiguated to a unique Taxon using the values of dwc:tribe, dwc:subtribe, dwc:subgenus, dwc:genus, dwc:subfamily, dwc:family, dwc:superfamily, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:taxonID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID and dwc:vernacularName; otherwise NOT_COMPLIANT bdqval:sourceAuthority default = \"GBIF Backbone Taxonomy\" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/8bd6f6de-49e4-4889-82e0-e4af093981e0-2023-09-18> ;
-    dcterms:modified "2023-09-18"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/8bd6f6de-49e4-4889-82e0-e4af093981e0-2026-11-15> ;
+    dcterms:modified "2026-11-15"^^xsd:date ;
     owl:sameAs <urn:uuid:8bd6f6de-49e4-4889-82e0-e4af093981e0> ;
     skos:example "dwc:taxonID=\"\", dwc:scientificNameID=\"\", dwc:acceptedNameUsageID=\"\", dwc:originalNameUsageID=\"\", dwc:taxonConceptID=\"\", dwc:scientificName=\"Graphis\", dwc:higherClassification=\"\", dwc:kingdom=\"\", dwc:phylum=\"\", dwc:class=\"\", dwc:order=\"\", dwc:family=\"\", dwc:subfamily=\"\", dwc:genus=\"\", dwc:genericName=\"\", dwc:subgenus=\"\", dwc:infragenericEpithet=\"\", dwc:specificEpithet=\"\", dwc:infraspecificEpithet=\"\", dwc:cultivarEpithet=\"\", dwc:vernacularName=\"\", dwc:scientificNameAuthorship=\"\", dwc:taxonRank=\"\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"dwc:scientificName=\"Graphis\" is ambiguous as could be either a lichen or a gastropod.\"",
-        "dwc:taxonID=\"\", dwc:scientificNameID=\"\", dwc:acceptedNameUsageID=\"\", dwc:originalNameUsageID=\"\", dwc:taxonConceptID=\"\", dwc:scientificName=\"Triplex rosaria Perry, 1811\", dwc:higherClassification=\"\", dwc:kingdom=\"Animalia\", dwc:phylum=\"mollusca\", dwc:class=\"Gastropoda\", dwc:order=\"\", dwc:family=\"Muricidae\", dwc:subfamily=\"\", dwc:genus=\"Chicoreus\", dwc:genericName=\"Triplex\", dwc:subgenus=\"\", dwc:infragenericEpithet=\"\", dwc:specificEpithet=\"rosarium\", dwc:infraspecificEpithet=\"\", dwc:cultivarEpithet=\"\", dwc:vernacularName=\"\", dwc:scientificNameAuthorship=\"Perry, 1811\", dwc:taxonRank=\"\",bdqval:sourceAuthority=”marinespecies.org”: Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:scientificName matched to unique taxon record in WoRMS, unique fuzzy match on name and exact match on authorship. \"" ;
+        "dwc:taxonID=\"\", dwc:scientificNameID=\"\", dwc:acceptedNameUsageID=\"\", dwc:originalNameUsageID=\"\", dwc:taxonConceptID=\"\", dwc:scientificName=\"Triplex rosaria G. Perry, 1811\", dwc:higherClassification=\"\", dwc:kingdom=\"Animalia\", dwc:phylum=\"mollusca\", dwc:class=\"Gastropoda\", dwc:order=\"\", dwc:family=\"Muricidae\", dwc:subfamily=\"\", dwc:genus=\"Chicoreus\", dwc:genericName=\"Triplex\", dwc:subgenus=\"\", dwc:infragenericEpithet=\"\", dwc:specificEpithet=\"rosarium\", dwc:infraspecificEpithet=\"\", dwc:cultivarEpithet=\"\", dwc:vernacularName=\"\", dwc:scientificNameAuthorship=\"G. Perry, 1811\", dwc:taxonRank=\"\",bdqval:sourceAuthority=”marinespecies.org”: Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:scientificName matched to unique taxon record in WoRMS, unique fuzzy match on name and exact match on authorship. \"" ;
     bdqffdq:hasArgument <https://rs.tdwg.org/bdqtest/argument/1f9a778a-7949-4574-8826-55de1e4c1e32> ;
     bdqffdq:hasAuthoritiesDefaults "bdqval:sourceAuthority default = \"GBIF Backbone Taxonomy\" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}" ;
     bdqffdq:hasExpectedResponse "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if all of dwc:scientificNameID, dwc:scientificName, dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship, dwc:cultivarEpithet are bdqval:Empty; COMPLIANT if (1) dwc:scientificNameID references a single taxon record in the bdqval:sourceAuthority, or (2) dwc:scientificNameID is bdqval:Empty and dwc:scientificName references a single taxon record in the bdqval:sourceAuthority, or (3) if dwc:scientificName and dwc:scientificNameID are bdqval:Empty and if a combination of the values of the terms dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:cultivarEpithet, dwc:taxonRank, and dwc:scientificNameAuthorship can be unambiguously resolved to a unique taxon in the bdqval:sourceAuthority, or (4) if ambiguity produced by multiple matches in (2) or (3) can be disambiguated to a unique Taxon using the values of dwc:tribe, dwc:subtribe, dwc:subgenus, dwc:genus, dwc:subfamily, dwc:family, dwc:superfamily, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:taxonID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID and dwc:vernacularName; otherwise NOT_COMPLIANT" .
@@ -12158,8 +12158,8 @@ bdqtest:42408a00-bf71-4892-a399-4325e2bc1fb8 a bdqffdq:Validation ;
 bdqtest:4c09f127-737b-4686-82a0-7c8e30841590 a bdqffdq:Validation ;
     rdfs:label "VALIDATION_TAXON_UNAMBIGUOUS" ;
     dcterms:description "Can the taxon be unambiguously resolved from bdqval:sourceAuthority using the available taxon terms?" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/4c09f127-737b-4686-82a0-7c8e30841590-2025-03-06> ;
-    dcterms:modified "2025-03-06"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/4c09f127-737b-4686-82a0-7c8e30841590-2026-11-15> ;
+    dcterms:modified "2026-11-15"^^xsd:date ;
     dcterms:references <https://doi.org/10.15468/39omei> ;
     owl:sameAs <urn:uuid:4c09f127-737b-4686-82a0-7c8e30841590> ;
     skos:historyNote "https://github.com/tdwg/bdq/issues/70" ;

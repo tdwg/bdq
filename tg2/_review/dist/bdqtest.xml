@@ -730,8 +730,8 @@
     <bdqffdq:hasParameter rdf:resource="https://rs.tdwg.org/bdqval/terms/latestValidDate"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/policy/0348eccf-fc7f-49b3-88b6-1d911e98cbbb">
-    <dcterms:hasVersion rdf:resource="https://rs.tdwg.org/bdqtest/policy/version/0348eccf-fc7f-49b3-88b6-1d911e98cbbb-2025-03-07"/>
-    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:modified>
+    <dcterms:hasVersion rdf:resource="https://rs.tdwg.org/bdqtest/policy/version/0348eccf-fc7f-49b3-88b6-1d911e98cbbb-2026-11-15"/>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-15</dcterms:modified>
     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationPolicy"/>
     <rdfs:label>ValidationPolicy: (51) validations  in UseCase bdquc:Spatial-Temporal_Patterns</rdfs:label>
     <owl:sameAs rdf:resource="urn:uuid:0348eccf-fc7f-49b3-88b6-1d911e98cbbb"/>
@@ -2957,8 +2957,8 @@
     <bdqffdq:composedOf rdf:resource="https://rs.tdwg.org/bdqval/terms/AggregatedTestResponseOutcomes"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/method/55b60dd8-7054-4736-b9ac-88bef8967fb2">
-    <dcterms:hasVersion rdf:resource="https://rs.tdwg.org/bdqtest/method/version/55b60dd8-7054-4736-b9ac-88bef8967fb2-2025-03-06"/>
-    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:modified>
+    <dcterms:hasVersion rdf:resource="https://rs.tdwg.org/bdqtest/method/version/55b60dd8-7054-4736-b9ac-88bef8967fb2-2026-11-15"/>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-15</dcterms:modified>
     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
     <rdfs:label>ValidationMethod: VALIDATION_TAXON_UNAMBIGUOUS with Specification for: VALIDATION_TAXON_UNAMBIGUOUS</rdfs:label>
     <owl:sameAs rdf:resource="urn:uuid:55b60dd8-7054-4736-b9ac-88bef8967fb2"/>
@@ -4464,6 +4464,47 @@
     <skos:example>dwc:scientificNameAuthorship="(Györfi, 1952)": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:scientificNameAuthorship is bdqval:NotEmpty"</skos:example>
     <bdqffdq:hasAuthoritiesDefaults></bdqffdq:hasAuthoritiesDefaults>
     <bdqffdq:hasExpectedResponse>COMPLIANT if dwc:scientificNameAuthorship is bdqval:NotEmpty; otherwise NOT_COMPLIANT</bdqffdq:hasExpectedResponse>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/policy/3a640869-d2ea-4447-8e42-06ddb217066c">
+    <dcterms:hasVersion rdf:resource="https://rs.tdwg.org/bdqtest/policy/version/3a640869-d2ea-4447-8e42-06ddb217066c-2026-11-15"/>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-15</dcterms:modified>
+    <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationPolicy"/>
+    <rdfs:label>ValidationPolicy: (32) validations  in UseCase bdquc:Alien-Species</rdfs:label>
+    <owl:sameAs rdf:resource="urn:uuid:3a640869-d2ea-4447-8e42-06ddb217066c"/>
+    <skos:prefLabel>ValidationPolicy: (32) validations  in UseCase bdquc:Alien-Species</skos:prefLabel>
+    <bdqffdq:hasUseCase rdf:resource="https://rs.tdwg.org/bdquc/terms/Alien-Species"/>
+    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/060e7734-607d-4737-8b2c-bfa17788bf1a"/>
+    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/06851339-843f-4a43-8422-4e61b9a00e75"/>
+    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/0949110d-c06b-450e-9649-7c1374d940d1"/>
+    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/2750c040-1d4a-4149-99fe-0512785f2d5f"/>
+    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/2cd6884e-3d14-4476-94f7-1191cfff309b"/>
+    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/374b091a-fc90-4791-91e5-c1557c649169"/>
+    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/3f335517-f442-4b98-b149-1e87ff16de45"/>
+    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/401bf207-9a55-4dff-88a5-abcd58ad97fa"/>
+    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/42408a00-bf71-4892-a399-4325e2bc1fb8"/>
+    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048"/>
+    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/49f1d386-5bed-43ae-bd43-deabf7df64fc"/>
+    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/4c09f127-737b-4686-82a0-7c8e30841590"/>
+    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/4daa7986-d9b0-4dd5-ad17-2d7a771ea71a"/>
+    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/4eb48fdf-7299-4d63-9d08-246902e2857f"/>
+    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/4f2bf8fd-fc5c-493f-a44c-e7b16153c803"/>
+    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/5424e933-bee7-4125-839e-d8743ea69f93"/>
+    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/5618f083-d55a-4ac2-92b5-b9fb227b832f"/>
+    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/6eeac3ed-f691-457f-a42e-eaa9c8a71ce8"/>
+    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47"/>
+    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/7c4b9498-a8d9-4ebb-85f1-9f200c788595"/>
+    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/7d2485d5-1ba7-4f25-90cb-f4480ff1a275"/>
+    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/85803c7e-2a5a-42e1-b8d3-299a44cafc46"/>
+    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/88d8598b-3318-483d-9475-a5acf9887404"/>
+    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/9beb9442-d942-4f42-8b6a-fcea01ee086a"/>
+    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536"/>
+    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/ad0c8855-de69-4843-a80c-a5387d20fbc8"/>
+    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/b6ecda2a-ce36-437a-b515-3ae94948fe83"/>
+    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/c09ecbf9-34e3-4f3e-b74a-8796af15e59f"/>
+    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/cdaabb0d-a863-49d0-bc0f-738d771acba5"/>
+    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf"/>
+    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/f2ce7d55-5b1d-426a-b00e-6d4efe3058ec"/>
+    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/f51e15a6-a67d-4729-9c28-3766299d2985"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/informationelement/2e560d7e-864c-4d72-9cac-0bafbe1bbeea">
     <dcterms:hasVersion rdf:resource="https://rs.tdwg.org/bdqtest/informationelement/version/2e560d7e-864c-4d72-9cac-0bafbe1bbeea-2023-09-18"/>
@@ -6103,47 +6144,6 @@
     <bdqffdq:hasDateLastUpdated rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-09-30</bdqffdq:hasDateLastUpdated>
     <bdqffdq:hasResourceType rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MultiRecord"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/policy/3a640869-d2ea-4447-8e42-06ddb217066c">
-    <dcterms:hasVersion rdf:resource="https://rs.tdwg.org/bdqtest/policy/version/3a640869-d2ea-4447-8e42-06ddb217066c-2025-03-07"/>
-    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:modified>
-    <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationPolicy"/>
-    <rdfs:label>ValidationPolicy: (32) validations  in UseCase bdquc:Alien-Species</rdfs:label>
-    <owl:sameAs rdf:resource="urn:uuid:3a640869-d2ea-4447-8e42-06ddb217066c"/>
-    <skos:prefLabel>ValidationPolicy: (32) validations  in UseCase bdquc:Alien-Species</skos:prefLabel>
-    <bdqffdq:hasUseCase rdf:resource="https://rs.tdwg.org/bdquc/terms/Alien-Species"/>
-    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/060e7734-607d-4737-8b2c-bfa17788bf1a"/>
-    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/06851339-843f-4a43-8422-4e61b9a00e75"/>
-    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/0949110d-c06b-450e-9649-7c1374d940d1"/>
-    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/2750c040-1d4a-4149-99fe-0512785f2d5f"/>
-    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/2cd6884e-3d14-4476-94f7-1191cfff309b"/>
-    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/374b091a-fc90-4791-91e5-c1557c649169"/>
-    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/3f335517-f442-4b98-b149-1e87ff16de45"/>
-    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/401bf207-9a55-4dff-88a5-abcd58ad97fa"/>
-    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/42408a00-bf71-4892-a399-4325e2bc1fb8"/>
-    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/4833a522-12eb-4fe0-b4cf-7f7a337a6048"/>
-    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/49f1d386-5bed-43ae-bd43-deabf7df64fc"/>
-    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/4c09f127-737b-4686-82a0-7c8e30841590"/>
-    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/4daa7986-d9b0-4dd5-ad17-2d7a771ea71a"/>
-    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/4eb48fdf-7299-4d63-9d08-246902e2857f"/>
-    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/4f2bf8fd-fc5c-493f-a44c-e7b16153c803"/>
-    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/5424e933-bee7-4125-839e-d8743ea69f93"/>
-    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/5618f083-d55a-4ac2-92b5-b9fb227b832f"/>
-    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/6eeac3ed-f691-457f-a42e-eaa9c8a71ce8"/>
-    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47"/>
-    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/7c4b9498-a8d9-4ebb-85f1-9f200c788595"/>
-    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/7d2485d5-1ba7-4f25-90cb-f4480ff1a275"/>
-    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/85803c7e-2a5a-42e1-b8d3-299a44cafc46"/>
-    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/88d8598b-3318-483d-9475-a5acf9887404"/>
-    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/9beb9442-d942-4f42-8b6a-fcea01ee086a"/>
-    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536"/>
-    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/ad0c8855-de69-4843-a80c-a5387d20fbc8"/>
-    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/b6ecda2a-ce36-437a-b515-3ae94948fe83"/>
-    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/c09ecbf9-34e3-4f3e-b74a-8796af15e59f"/>
-    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/cdaabb0d-a863-49d0-bc0f-738d771acba5"/>
-    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf"/>
-    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/f2ce7d55-5b1d-426a-b00e-6d4efe3058ec"/>
-    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/f51e15a6-a67d-4729-9c28-3766299d2985"/>
-  </rdf:Description>
   <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/specification/06899170-252f-4938-9f98-95089ac0bc07">
     <dcterms:description>COMPLETE if every VALIDATION_EVENT_CONSISTENT in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</dcterms:description>
     <dcterms:hasVersion rdf:resource="https://rs.tdwg.org/bdqtest/specification/version/06899170-252f-4938-9f98-95089ac0bc07-2023-09-18"/>
@@ -6352,13 +6352,13 @@
   </rdf:Description>
   <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/specification/8bd6f6de-49e4-4889-82e0-e4af093981e0">
     <dcterms:description>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if all of dwc:scientificNameID, dwc:scientificName, dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship, dwc:cultivarEpithet are bdqval:Empty; COMPLIANT if (1) dwc:scientificNameID references a single taxon record in the bdqval:sourceAuthority, or (2) dwc:scientificNameID is bdqval:Empty and dwc:scientificName references a single taxon record in the bdqval:sourceAuthority, or (3) if dwc:scientificName and dwc:scientificNameID are bdqval:Empty and if a combination of the values of the terms dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:cultivarEpithet, dwc:taxonRank, and dwc:scientificNameAuthorship can be unambiguously resolved to a unique taxon in the bdqval:sourceAuthority, or (4) if ambiguity produced by multiple matches in (2) or (3) can be disambiguated to a unique Taxon using the values of dwc:tribe, dwc:subtribe, dwc:subgenus, dwc:genus, dwc:subfamily, dwc:family, dwc:superfamily, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:taxonID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID and dwc:vernacularName; otherwise NOT_COMPLIANT bdqval:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&amp;name=]}</dcterms:description>
-    <dcterms:hasVersion rdf:resource="https://rs.tdwg.org/bdqtest/specification/version/8bd6f6de-49e4-4889-82e0-e4af093981e0-2023-09-18"/>
-    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-09-18</dcterms:modified>
+    <dcterms:hasVersion rdf:resource="https://rs.tdwg.org/bdqtest/specification/version/8bd6f6de-49e4-4889-82e0-e4af093981e0-2026-11-15"/>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-15</dcterms:modified>
     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Specification"/>
     <rdfs:label>Specification for: VALIDATION_TAXON_UNAMBIGUOUS</rdfs:label>
     <owl:sameAs rdf:resource="urn:uuid:8bd6f6de-49e4-4889-82e0-e4af093981e0"/>
     <skos:example>dwc:taxonID="", dwc:scientificNameID="", dwc:acceptedNameUsageID="", dwc:originalNameUsageID="", dwc:taxonConceptID="", dwc:scientificName="Graphis", dwc:higherClassification="", dwc:kingdom="", dwc:phylum="", dwc:class="", dwc:order="", dwc:family="", dwc:subfamily="", dwc:genus="", dwc:genericName="", dwc:subgenus="", dwc:infragenericEpithet="", dwc:specificEpithet="", dwc:infraspecificEpithet="", dwc:cultivarEpithet="", dwc:vernacularName="", dwc:scientificNameAuthorship="", dwc:taxonRank="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:scientificName="Graphis" is ambiguous as could be either a lichen or a gastropod."</skos:example>
-    <skos:example>dwc:taxonID="", dwc:scientificNameID="", dwc:acceptedNameUsageID="", dwc:originalNameUsageID="", dwc:taxonConceptID="", dwc:scientificName="Triplex rosaria Perry, 1811", dwc:higherClassification="", dwc:kingdom="Animalia", dwc:phylum="mollusca", dwc:class="Gastropoda", dwc:order="", dwc:family="Muricidae", dwc:subfamily="", dwc:genus="Chicoreus", dwc:genericName="Triplex", dwc:subgenus="", dwc:infragenericEpithet="", dwc:specificEpithet="rosarium", dwc:infraspecificEpithet="", dwc:cultivarEpithet="", dwc:vernacularName="", dwc:scientificNameAuthorship="Perry, 1811", dwc:taxonRank="",bdqval:sourceAuthority=”marinespecies.org”: Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:scientificName matched to unique taxon record in WoRMS, unique fuzzy match on name and exact match on authorship. "</skos:example>
+    <skos:example>dwc:taxonID="", dwc:scientificNameID="", dwc:acceptedNameUsageID="", dwc:originalNameUsageID="", dwc:taxonConceptID="", dwc:scientificName="Triplex rosaria G. Perry, 1811", dwc:higherClassification="", dwc:kingdom="Animalia", dwc:phylum="mollusca", dwc:class="Gastropoda", dwc:order="", dwc:family="Muricidae", dwc:subfamily="", dwc:genus="Chicoreus", dwc:genericName="Triplex", dwc:subgenus="", dwc:infragenericEpithet="", dwc:specificEpithet="rosarium", dwc:infraspecificEpithet="", dwc:cultivarEpithet="", dwc:vernacularName="", dwc:scientificNameAuthorship="G. Perry, 1811", dwc:taxonRank="",bdqval:sourceAuthority=”marinespecies.org”: Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:scientificName matched to unique taxon record in WoRMS, unique fuzzy match on name and exact match on authorship. "</skos:example>
     <bdqffdq:hasArgument rdf:resource="https://rs.tdwg.org/bdqtest/argument/1f9a778a-7949-4574-8826-55de1e4c1e32"/>
     <bdqffdq:hasAuthoritiesDefaults>bdqval:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&amp;name=]}</bdqffdq:hasAuthoritiesDefaults>
     <bdqffdq:hasExpectedResponse>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if all of dwc:scientificNameID, dwc:scientificName, dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship, dwc:cultivarEpithet are bdqval:Empty; COMPLIANT if (1) dwc:scientificNameID references a single taxon record in the bdqval:sourceAuthority, or (2) dwc:scientificNameID is bdqval:Empty and dwc:scientificName references a single taxon record in the bdqval:sourceAuthority, or (3) if dwc:scientificName and dwc:scientificNameID are bdqval:Empty and if a combination of the values of the terms dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:cultivarEpithet, dwc:taxonRank, and dwc:scientificNameAuthorship can be unambiguously resolved to a unique taxon in the bdqval:sourceAuthority, or (4) if ambiguity produced by multiple matches in (2) or (3) can be disambiguated to a unique Taxon using the values of dwc:tribe, dwc:subtribe, dwc:subgenus, dwc:genus, dwc:subfamily, dwc:family, dwc:superfamily, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:taxonID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID and dwc:vernacularName; otherwise NOT_COMPLIANT</bdqffdq:hasExpectedResponse>
@@ -6780,6 +6780,24 @@
     <bdqffdq:hasAuthoritiesDefaults></bdqffdq:hasAuthoritiesDefaults>
     <bdqffdq:hasExpectedResponse>INTERNAL_PREREQUISITES_NOT_MET if dwc:coordinateUncertaintyInMeters is bdqval:Empty; COMPLIANT if the value of dwc:coordinateUncertaintyInMeters is interpreted as a number between 1 and 20037509 inclusive; otherwise NOT_COMPLIANT</bdqffdq:hasExpectedResponse>
   </rdf:Description>
+  <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/4c09f127-737b-4686-82a0-7c8e30841590">
+    <dcterms:description>Can the taxon be unambiguously resolved from bdqval:sourceAuthority using the available taxon terms?</dcterms:description>
+    <dcterms:hasVersion rdf:resource="https://rs.tdwg.org/bdqtest/terms/version/4c09f127-737b-4686-82a0-7c8e30841590-2026-11-15"/>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-15</dcterms:modified>
+    <dcterms:references rdf:resource="https://doi.org/10.15468/39omei"/>
+    <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
+    <rdfs:label>VALIDATION_TAXON_UNAMBIGUOUS</rdfs:label>
+    <owl:sameAs rdf:resource="urn:uuid:4c09f127-737b-4686-82a0-7c8e30841590"/>
+    <skos:historyNote>https://github.com/tdwg/bdq/issues/70</skos:historyNote>
+    <skos:note>There are any number of potential controlled vocabularies that might be used for this Test, including local vocabularies and taxon specific vocabularies. If dwc:scientificNameID is bdqval:Empty, use dwc:scientificName and dwc:CultivarEpithet to search for a unique taxon. If dwc:scientificName is bdqval:Empty, check with the terms that form atomic parts of it (dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:taxonRank, dwc:scientificNameAuthorship), and if more than one match is found, use the remaining terms to try to disambiguate to a single Taxon record. The terms dwc:subgenus, dwc:genus, dwc:family, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:scientificNameID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID should not be used to make a match if dwc:scientificNameID and dwc:scientificName or dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:taxonRank, dwc:scientificNameAuthorship are bdqval:Empty. Note that Test VALIDATION_SCIENTIFICNAME_FOUND (4c09f127-737b-4686-82a0-7c8e30841590) is a more specific Test for a subset of Information Elements from this Test. **Review Note: GBIF has indicated that we should switch to the Catalog of Life for the default source authority for this test. That change is planned prior to ratification.**</skos:note>
+    <skos:prefLabel>Validation dwc:Taxon Unambiguous for SingleRecord</skos:prefLabel>
+    <bdqffdq:hasActedUponInformationElement rdf:resource="https://rs.tdwg.org/bdqtest/informationelement/7dbf3aca-f028-4eba-a132-db6abbd4ff16"/>
+    <bdqffdq:hasConsultedInformationElement rdf:resource="https://rs.tdwg.org/bdqtest/informationelement/1a70260f-f70c-4c36-a325-e7bdcaecc170"/>
+    <bdqffdq:hasCriterion rdf:resource="https://rs.tdwg.org/bdqcrit/terms/Unambiguous"/>
+    <bdqffdq:hasDataQualityDimension rdf:resource="https://rs.tdwg.org/bdqdim/terms/Conformance"/>
+    <bdqffdq:hasDateLastUpdated rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-09-18</bdqffdq:hasDateLastUpdated>
+    <bdqffdq:hasResourceType rdf:resource="https://rs.tdwg.org/bdqffdq/terms/SingleRecord"/>
+  </rdf:Description>
   <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/method/a1252d6a-3cb8-4fce-bdba-453c82325a6f">
     <dcterms:hasVersion rdf:resource="https://rs.tdwg.org/bdqtest/method/version/a1252d6a-3cb8-4fce-bdba-453c82325a6f-2025-03-07"/>
     <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:modified>
@@ -6941,8 +6959,8 @@
     <bdqffdq:hasResourceType rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MultiRecord"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/policy/9c87ce41-04a3-45e6-83d3-95ec70ae553f">
-    <dcterms:hasVersion rdf:resource="https://rs.tdwg.org/bdqtest/policy/version/9c87ce41-04a3-45e6-83d3-95ec70ae553f-2025-03-06"/>
-    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:modified>
+    <dcterms:hasVersion rdf:resource="https://rs.tdwg.org/bdqtest/policy/version/9c87ce41-04a3-45e6-83d3-95ec70ae553f-2026-11-15"/>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-15</dcterms:modified>
     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationPolicy"/>
     <rdfs:label>ValidationPolicy: (19) validations  in UseCase bdquc:Taxon-Management</rdfs:label>
     <owl:sameAs rdf:resource="urn:uuid:9c87ce41-04a3-45e6-83d3-95ec70ae553f"/>
@@ -12635,24 +12653,6 @@
     <skos:example></skos:example>
     <bdqffdq:hasAuthoritiesDefaults></bdqffdq:hasAuthoritiesDefaults>
     <bdqffdq:hasExpectedResponse>COMPLETE if every VALIDATION_COUNTRY_FOUND in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</bdqffdq:hasExpectedResponse>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/4c09f127-737b-4686-82a0-7c8e30841590">
-    <dcterms:description>Can the taxon be unambiguously resolved from bdqval:sourceAuthority using the available taxon terms?</dcterms:description>
-    <dcterms:hasVersion rdf:resource="https://rs.tdwg.org/bdqtest/terms/version/4c09f127-737b-4686-82a0-7c8e30841590-2025-03-06"/>
-    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:modified>
-    <dcterms:references rdf:resource="https://doi.org/10.15468/39omei"/>
-    <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
-    <rdfs:label>VALIDATION_TAXON_UNAMBIGUOUS</rdfs:label>
-    <owl:sameAs rdf:resource="urn:uuid:4c09f127-737b-4686-82a0-7c8e30841590"/>
-    <skos:historyNote>https://github.com/tdwg/bdq/issues/70</skos:historyNote>
-    <skos:note>There are any number of potential controlled vocabularies that might be used for this Test, including local vocabularies and taxon specific vocabularies. If dwc:scientificNameID is bdqval:Empty, use dwc:scientificName and dwc:CultivarEpithet to search for a unique taxon. If dwc:scientificName is bdqval:Empty, check with the terms that form atomic parts of it (dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:taxonRank, dwc:scientificNameAuthorship), and if more than one match is found, use the remaining terms to try to disambiguate to a single Taxon record. The terms dwc:subgenus, dwc:genus, dwc:family, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:scientificNameID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID should not be used to make a match if dwc:scientificNameID and dwc:scientificName or dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:taxonRank, dwc:scientificNameAuthorship are bdqval:Empty. Note that Test VALIDATION_SCIENTIFICNAME_FOUND (4c09f127-737b-4686-82a0-7c8e30841590) is a more specific Test for a subset of Information Elements from this Test. **Review Note: GBIF has indicated that we should switch to the Catalog of Life for the default source authority for this test. That change is planned prior to ratification.**</skos:note>
-    <skos:prefLabel>Validation dwc:Taxon Unambiguous for SingleRecord</skos:prefLabel>
-    <bdqffdq:hasActedUponInformationElement rdf:resource="https://rs.tdwg.org/bdqtest/informationelement/7dbf3aca-f028-4eba-a132-db6abbd4ff16"/>
-    <bdqffdq:hasConsultedInformationElement rdf:resource="https://rs.tdwg.org/bdqtest/informationelement/1a70260f-f70c-4c36-a325-e7bdcaecc170"/>
-    <bdqffdq:hasCriterion rdf:resource="https://rs.tdwg.org/bdqcrit/terms/Unambiguous"/>
-    <bdqffdq:hasDataQualityDimension rdf:resource="https://rs.tdwg.org/bdqdim/terms/Conformance"/>
-    <bdqffdq:hasDateLastUpdated rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-09-18</bdqffdq:hasDateLastUpdated>
-    <bdqffdq:hasResourceType rdf:resource="https://rs.tdwg.org/bdqffdq/terms/SingleRecord"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/terms/ActedUpon">
     <rdfs:subClassOf rdf:resource="https://rs.tdwg.org/bdqffdq/terms/InformationElement"/>

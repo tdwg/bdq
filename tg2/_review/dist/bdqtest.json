@@ -13919,13 +13919,13 @@
     ],
     "http://purl.org/dc/terms/hasVersion": [
       {
-        "@id": "https://rs.tdwg.org/bdqtest/method/version/55b60dd8-7054-4736-b9ac-88bef8967fb2-2025-03-06"
+        "@id": "https://rs.tdwg.org/bdqtest/method/version/55b60dd8-7054-4736-b9ac-88bef8967fb2-2026-11-15"
       }
     ],
     "http://purl.org/dc/terms/modified": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2025-03-06"
+        "@value": "2026-11-15"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -23396,13 +23396,13 @@
     ],
     "http://purl.org/dc/terms/hasVersion": [
       {
-        "@id": "https://rs.tdwg.org/bdqtest/policy/version/0348eccf-fc7f-49b3-88b6-1d911e98cbbb-2025-03-07"
+        "@id": "https://rs.tdwg.org/bdqtest/policy/version/0348eccf-fc7f-49b3-88b6-1d911e98cbbb-2026-11-15"
       }
     ],
     "http://purl.org/dc/terms/modified": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2025-03-07"
+        "@value": "2026-11-15"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -23588,13 +23588,13 @@
     ],
     "http://purl.org/dc/terms/hasVersion": [
       {
-        "@id": "https://rs.tdwg.org/bdqtest/policy/version/3a640869-d2ea-4447-8e42-06ddb217066c-2025-03-07"
+        "@id": "https://rs.tdwg.org/bdqtest/policy/version/3a640869-d2ea-4447-8e42-06ddb217066c-2026-11-15"
       }
     ],
     "http://purl.org/dc/terms/modified": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2025-03-07"
+        "@value": "2026-11-15"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -24582,13 +24582,13 @@
     ],
     "http://purl.org/dc/terms/hasVersion": [
       {
-        "@id": "https://rs.tdwg.org/bdqtest/policy/version/9c87ce41-04a3-45e6-83d3-95ec70ae553f-2025-03-06"
+        "@id": "https://rs.tdwg.org/bdqtest/policy/version/9c87ce41-04a3-45e6-83d3-95ec70ae553f-2026-11-15"
       }
     ],
     "http://purl.org/dc/terms/modified": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2025-03-06"
+        "@value": "2026-11-15"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -32477,13 +32477,13 @@
     ],
     "http://purl.org/dc/terms/hasVersion": [
       {
-        "@id": "https://rs.tdwg.org/bdqtest/specification/version/8bd6f6de-49e4-4889-82e0-e4af093981e0-2023-09-18"
+        "@id": "https://rs.tdwg.org/bdqtest/specification/version/8bd6f6de-49e4-4889-82e0-e4af093981e0-2026-11-15"
       }
     ],
     "http://purl.org/dc/terms/modified": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2023-09-18"
+        "@value": "2026-11-15"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -32501,7 +32501,7 @@
         "@value": "dwc:taxonID=\"\", dwc:scientificNameID=\"\", dwc:acceptedNameUsageID=\"\", dwc:originalNameUsageID=\"\", dwc:taxonConceptID=\"\", dwc:scientificName=\"Graphis\", dwc:higherClassification=\"\", dwc:kingdom=\"\", dwc:phylum=\"\", dwc:class=\"\", dwc:order=\"\", dwc:family=\"\", dwc:subfamily=\"\", dwc:genus=\"\", dwc:genericName=\"\", dwc:subgenus=\"\", dwc:infragenericEpithet=\"\", dwc:specificEpithet=\"\", dwc:infraspecificEpithet=\"\", dwc:cultivarEpithet=\"\", dwc:vernacularName=\"\", dwc:scientificNameAuthorship=\"\", dwc:taxonRank=\"\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"dwc:scientificName=\"Graphis\" is ambiguous as could be either a lichen or a gastropod.\""
       },
       {
-        "@value": "dwc:taxonID=\"\", dwc:scientificNameID=\"\", dwc:acceptedNameUsageID=\"\", dwc:originalNameUsageID=\"\", dwc:taxonConceptID=\"\", dwc:scientificName=\"Triplex rosaria Perry, 1811\", dwc:higherClassification=\"\", dwc:kingdom=\"Animalia\", dwc:phylum=\"mollusca\", dwc:class=\"Gastropoda\", dwc:order=\"\", dwc:family=\"Muricidae\", dwc:subfamily=\"\", dwc:genus=\"Chicoreus\", dwc:genericName=\"Triplex\", dwc:subgenus=\"\", dwc:infragenericEpithet=\"\", dwc:specificEpithet=\"rosarium\", dwc:infraspecificEpithet=\"\", dwc:cultivarEpithet=\"\", dwc:vernacularName=\"\", dwc:scientificNameAuthorship=\"Perry, 1811\", dwc:taxonRank=\"\",bdqval:sourceAuthority=”marinespecies.org”: Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:scientificName matched to unique taxon record in WoRMS, unique fuzzy match on name and exact match on authorship. \""
+        "@value": "dwc:taxonID=\"\", dwc:scientificNameID=\"\", dwc:acceptedNameUsageID=\"\", dwc:originalNameUsageID=\"\", dwc:taxonConceptID=\"\", dwc:scientificName=\"Triplex rosaria G. Perry, 1811\", dwc:higherClassification=\"\", dwc:kingdom=\"Animalia\", dwc:phylum=\"mollusca\", dwc:class=\"Gastropoda\", dwc:order=\"\", dwc:family=\"Muricidae\", dwc:subfamily=\"\", dwc:genus=\"Chicoreus\", dwc:genericName=\"Triplex\", dwc:subgenus=\"\", dwc:infragenericEpithet=\"\", dwc:specificEpithet=\"rosarium\", dwc:infraspecificEpithet=\"\", dwc:cultivarEpithet=\"\", dwc:vernacularName=\"\", dwc:scientificNameAuthorship=\"G. Perry, 1811\", dwc:taxonRank=\"\",bdqval:sourceAuthority=”marinespecies.org”: Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:scientificName matched to unique taxon record in WoRMS, unique fuzzy match on name and exact match on authorship. \""
       }
     ],
     "https://rs.tdwg.org/bdqffdq/terms/hasArgument": [
@@ -44304,13 +44304,13 @@
     ],
     "http://purl.org/dc/terms/hasVersion": [
       {
-        "@id": "https://rs.tdwg.org/bdqtest/terms/version/4c09f127-737b-4686-82a0-7c8e30841590-2025-03-06"
+        "@id": "https://rs.tdwg.org/bdqtest/terms/version/4c09f127-737b-4686-82a0-7c8e30841590-2026-11-15"
       }
     ],
     "http://purl.org/dc/terms/modified": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2025-03-06"
+        "@value": "2026-11-15"
       }
     ],
     "http://purl.org/dc/terms/references": [
