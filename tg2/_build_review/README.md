@@ -25,8 +25,6 @@ README.md  This file.
 - [**draft_build-termlist.py**](draft_build-termlist.py) - Script to build termlist files for docs/list/ from templates (plus RDF for dist/), draft refers to this being to build a draft standard.
 - [**function_lib.py**](function_lib.py) - Shared functions reused across build scripts.
 - [**make_bdq_tests_vertical.py**](make_bdq_tests_vertical.py) - Script to build an artifact containing a list of tests. ** NOTE: purpose unclear.**
-- [**temp_namespaces.yaml**](temp_namespaces.yaml) - Configuration file used by draft_build-termlist.py to replace an rs.tdwg.org resource unavailable for a draft standard.
-- [**temp_term-lists.csv**](temp_term-lists.csv) - CSV file used by draft_build-termlist.py to replace an rs.tdwg.org resource unavailable for a draft standard.
 - [**vocabulary_configuration.yaml**](vocabulary_configuration.yaml) - Configuration file of key to terms used to describe terms in bdq, bdqdim, bdqenh, and bdqcrit.
 - [**templates/**](templates/) - Documents used as templates to generate files for the standard.
  - templates/ directories contain files in a directory structure matching the target build structure and each directory can contain:

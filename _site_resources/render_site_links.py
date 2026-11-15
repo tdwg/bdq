@@ -51,12 +51,6 @@ BDQ_RS_BASE = "https://bdq-public-review.rs.tdwg.org"
 BDQ_RS_UNSERVED_PREFIXES = ()
 # IRIs not yet served on BDQ_RS_BASE that are exactly these (not prefixes of served IRIs).
 BDQ_RS_UNSERVED_IRIS = ()
-# IRIs in a form that is not served on BDQ_RS_BASE: the Quick Reference Guide's Test version form
-# .../bdqtest/terms/<uuid>/<date>, which is to be fixed at its source, not redirected
-# (deployment_rs_tdwg_org.md Sections 10.9.6 and 13).
-BDQ_RS_UNSERVED_PATTERNS = (
-    re.compile(r'https://rs\.tdwg\.org/bdqtest/terms/[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}/\d{4}-\d{2}-\d{2}'),
-)
 # Placeholder IRIs that do not resolve, e.g. the standard IRI until a standard number is assigned
 # (deployment_rs_tdwg_org.md Section 8.2.1): shown as plain text unless the mode is "keep".
 BDQ_PLACEHOLDER_PREFIXES = (
@@ -80,8 +74,7 @@ def bdq_rs_shown_plain(url: str) -> bool:
         return False
     if BDQ_RS_MODE == "plain":
         return True
-    return BDQ_RS_MODE == "rewrite" and (url.startswith(BDQ_RS_UNSERVED_PREFIXES) or url in BDQ_RS_UNSERVED_IRIS
-                                         or any(p.fullmatch(url) for p in BDQ_RS_UNSERVED_PATTERNS))
+    return BDQ_RS_MODE == "rewrite" and (url.startswith(BDQ_RS_UNSERVED_PREFIXES) or url in BDQ_RS_UNSERVED_IRIS)
 
 
 # This function applies the configured policy for BDQ rs.tdwg.org IRIs.

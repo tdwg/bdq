@@ -50,8 +50,6 @@ bdqffdqOwlDocument = 'https://raw.githubusercontent.com/tdwg/bdq/refs/heads/mast
 
 # Common Files and information
 contributors_yaml_file = 'authors_configuration.yaml'
-term_list_document = "temp_term-lists.csv"
-local_metadata_config_file = 'temp_namespaces.yaml'
 has_namespace = True
 namespace_uri = 'https://rs.tdwg.org/bdqffdq'
 pref_namespace_prefix = "bdqffdq"
@@ -64,19 +62,9 @@ pref_namespace_prefix = "bdqffdq"
 # Retrieve common term list metadata
 # ---------------
 
-## PJM: Unavailable from rs.tdwg.org for a draft standard lacking entries in rs.tdwg.org files
+# From rs.tdwg.org's term-lists/term-lists.csv
 print('Loading term list metadata')
-term_lists_info = []
-
-frame = pd.read_csv(term_list_document, na_filter=False)
-term_list_dict = {'list_iri': 'bdqffdq'}
-term_list_dict = {'database': 'bdqffdq'}
-for index,row in frame.iterrows():
-    if row['database'] == 'bdqffdq':
-        term_list_dict['pref_ns_prefix'] = row['vann_preferredNamespacePrefix']
-        term_list_dict['pref_ns_uri'] = row['vann_preferredNamespaceUri']
-        term_list_dict['list_iri'] = row['list']
-term_lists_info.append(term_list_dict)
+term_lists_info = [function_lib.rs_term_list_info('bdqffdq')]
 
 # Load the contributors YAML file from its local location.
 with open(contributors_yaml_file) as cyf:

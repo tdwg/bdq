@@ -66,10 +66,8 @@ githubBaseUri = 'https://raw.githubusercontent.com/tdwg/bdq/' + github_branch + 
 # (5) The source csv file for each term is vocabulary/{term}_terms.csv
 # (6) A list of authors/contributors is in the build/ directory in: 
 contributors_yaml_file = 'authors_configuration.yaml'
-# (7) local replacements for metadata namespaces and term-lists.csv files 
-# are in the build/ directory in the following files, which provide metadata for each term in termLists: 
-term_list_document = "temp_term-lists.csv"
-local_metadata_config_file = 'temp_namespaces.yaml'
+# (7) term list metadata (namespace prefix, namespace IRI, term list IRI) are read from rs.tdwg.org's
+# term-lists/term-lists.csv (function_lib.rs_term_list_info)
 # (8) {term}_termlist-header.md, {term}_termlist-footer.md files are in build/templates/list/{term}/ along with a document_configuration.yaml file
 # see loop below through termLists
 # headerFileName = 'templates/list/{}/{}_termlist-header.md'.format(term,term)
@@ -107,36 +105,14 @@ display_id = ['Type'] # these are the fragment identifiers for the associated se
 with open(contributors_yaml_file) as cyf:
     contributors_yaml = yaml.load(cyf, Loader=yaml.FullLoader)
 
-if has_namespace:
-    # Load the configuration file used in the metadata creation process.
-    #metadata_config_text = requests.get(githubBaseUri + 'process/config.yaml').text
-    # PJM: Using local file for namespace when building draft documents
-    metadata_config_text = open('temp_namespaces.yaml','r')
-    metadata_config = yaml.load(metadata_config_text, Loader=yaml.FullLoader)
-    namespace_uri = metadata_config['namespaces'][0]['namespace_uri']
-    pref_namespace_prefix = metadata_config['namespaces'][0]['pref_namespace_prefix']
 
 # ---------------
-# Retrieve term list metadata from GitHub
+# Retrieve term list metadata from rs.tdwg.org (term-lists/term-lists.csv)
 # ---------------
 
-## PJM: Unavailable for draft without rs.tdwg.org files
 print('Loading term list metadata')
-term_lists_info = []
 
-if debug :
-    print(term_list_document)
-#frame = pd.read_csv(githubBaseUri + term_list_document, na_filter=False)
-frame = pd.read_csv(term_list_document, na_filter=False)
-for termList in termLists:
-    term_list_dict = {'list_iri': termList}
-    term_list_dict = {'database': termList}
-    for index,row in frame.iterrows():
-        if row['database'] == termList:
-            term_list_dict['pref_ns_prefix'] = row['vann_preferredNamespacePrefix']
-            term_list_dict['pref_ns_uri'] = row['vann_preferredNamespaceUri']
-            term_list_dict['list_iri'] = row['list']
-    term_lists_info.append(term_list_dict)
+term_lists_info = [function_lib.rs_term_list_info(termList) for termList in termLists]
 if debug :
     print(term_lists_info)
     print()
@@ -445,7 +421,7 @@ for term in termLists:
     year = document_version['date'].split('-')[0]
     header = header.replace('{year}', year)
     if has_namespace:
-        header = header.replace('{namespace_uri}', namespace_uri)
+        header = header.replace('{namespace_uri}', function_lib.rs_term_list_info(term)['pref_ns_uri'])
         header = header.replace('{pref_namespace_prefix}', term)
     header = header.replace('{term_key}', definitionTable)
     

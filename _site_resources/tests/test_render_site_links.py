@@ -498,15 +498,6 @@ def test_bdq_rs_rewrite_mode_bdqtest_served():
         assert rs.linkify_bare_urls_in_markdown_line(v) == "[" + v + "](" + v.replace("https://rs.tdwg.org", "https://bdq-public-review.rs.tdwg.org") + ")"
 
 
-def test_bdq_rs_rewrite_mode_unserved_pattern_plain():
-    # The Quick Reference Guide's Test version form .../terms/<uuid>/<date> is not served: shown as plain text.
-    with bdq_rs_links("rewrite"):
-        v = "https://rs.tdwg.org/bdqtest/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536/2023-09-17"
-        assert rs.linkify_bare_urls_in_markdown_line(v) == v
-        assert rs.rewrite_markdown_links("[Test version](" + v + ")") == "Test version"
-        assert rs.rewrite_markdown_links("<" + v + ">") == v
-
-
 def test_bdq_rs_rewrite_mode_angle_destination_not_autolink():
     with bdq_rs_links("rewrite"):
         src = "[x](<https://rs.tdwg.org/bdqffdq/terms/Validation>)"

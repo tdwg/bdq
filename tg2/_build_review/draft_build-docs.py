@@ -72,10 +72,6 @@ bdqffdqOwlDocument = 'https://raw.githubusercontent.com/tdwg/bdq/refs/heads/mast
 # (3) This file produces human readable documents in the docs/ directory within docs/{document} directories.
 # (6) A list of authors/contributors is in the build/ directory in: 
 contributors_yaml_file = 'authors_configuration.yaml'
-# (7) local replacements for metadata namespaces and term-lists.csv files 
-# are in the build/ directory in the following files, which provide metadata for each term in the standard 
-term_list_document = "temp_term-lists.csv"
-local_metadata_config_file = 'temp_namespaces.yaml'
 # (8) {term}_termlist-header.md, {term}_termlist-footer.md files are in build/templates/{directory}/ along with a document_configuration.yaml file
 # see loop below through termLists
 # headerFileName = 'templates/{}/{}_termlist-header.md'.format(directory,document)
@@ -91,30 +87,6 @@ has_namespace = False
 # Load the contributors YAML file from its local location.
 with open(contributors_yaml_file) as cyf:
 	contributors_yaml = yaml.load(cyf, Loader=yaml.FullLoader)
-
-# ---------------
-# Retrieve term list metadata from GitHub
-# ---------------
-
-## PJM: Unavailable for draft without rs.tdwg.org files
-print('Loading term list metadata')
-term_lists_info = []
-
-
-#print(term_list_document)
-##frame = pd.read_csv(githubBaseUri + term_list_document, na_filter=False)
-#frame = pd.read_csv(term_list_document, na_filter=False)
-#for termList in termLists:
-#	term_list_dict = {'list_iri': termList}
-#	term_list_dict = {'database': termList}
-#	for index,row in frame.iterrows():
-#		if row['database'] == termList:
-#			term_list_dict['pref_ns_prefix'] = row['vann_preferredNamespacePrefix']
-#			term_list_dict['pref_ns_uri'] = row['vann_preferredNamespaceUri']
-#			term_list_dict['list_iri'] = row['list']
-#	term_lists_info.append(term_list_dict)
-#print(term_lists_info)
-#print()
 
 # Load References for inclusion in templates when requested.
 #referencesObject = open(referencesFileName, 'rt', encoding='utf-8')

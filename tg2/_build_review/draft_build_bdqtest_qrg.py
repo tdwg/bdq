@@ -52,8 +52,6 @@ outputMultiRecordMeasureIndexFilename = "../_review/docs/terms/bdqtest/qrg_multi
 outputKeyFilename = '{}bdqtest_qrg_term_descriptions.md'.format(outputDirectory)
 # Files for header/footer
 contributors_yaml_file = 'authors_configuration.yaml'
-term_list_document = "temp_term-lists.csv"
-local_metadata_config_file = 'temp_namespaces.yaml'
 sourceDirectory = 'templates/terms/bdqtest_qrg/'
 headerFileName = '{}bdqtest_quickreference-header.md'.format(sourceDirectory)
 footerFileName = '{}bdqtest_quickreference-footer.md'.format(sourceDirectory)
@@ -103,21 +101,10 @@ with open(vocabulary_configuration_yaml_file) as vcfy:
 termLists = ['bdqtest']
 term = 'bdqtest'
 term_history_csv = "../_review/vocabulary/bdqtest_term_versions.csv".format(term)
-term_lists_info = []
 # column_list tuned to just columns in the Quick Reference Guide.
 column_list = ["Label","iri","term_iri","term_localName","prefLabel","InformationElement:ActedUpon","InformationElement:Consulted","Parameters","ExpectedResponse","AuthoritiesDefaults","Description","Type","Resource Type","Examples","Notes","UseCases","status"]
-# Likely will be provided from rs.tdwg.org after ratification, currently obtain from local file
-#frame = pd.read_csv(githubBaseUri + term_list_document, na_filter=False)
-frame = pd.read_csv(term_list_document, na_filter=False)
-for termList in termLists:
-    term_list_dict = {'list_iri': termList}
-    term_list_dict = {'database': termList}
-    for index,row in frame.iterrows():
-        if row['database'] == termList:
-            term_list_dict['pref_ns_prefix'] = row['vann_preferredNamespacePrefix']
-            term_list_dict['pref_ns_uri'] = row['vann_preferredNamespaceUri']
-            term_list_dict['list_iri'] = row['list']
-    term_lists_info.append(term_list_dict)
+# From rs.tdwg.org's term-lists/term-lists.csv
+term_lists_info = [function_lib.rs_term_list_info(termList) for termList in termLists]
 # Create list of lists metadata table
 table_list = []
 for term_list in term_lists_info:

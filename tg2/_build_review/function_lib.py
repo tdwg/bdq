@@ -453,6 +453,24 @@ def _read_rs_table(url):
     return _rs_tables[url]
 
 
+# The BDQ term lists' namespace prefix, namespace IRI, and term list IRI, from rs.tdwg.org's
+# term-lists/term-lists.csv, matched on the database name (e.g. bdqdim). These replace the local
+# temp_term-lists.csv and temp_namespaces.yaml used before the vocabularies were in rs.tdwg.org.
+# If the table cannot be read or has no such term list, the prefix falls back to the database name
+# (as for all BDQ term lists), with a warning.
+RS_TERM_LISTS_URL = RS_TDWG_ORG_BASE + 'term-lists/term-lists.csv'
+
+
+def rs_term_list_info(database):
+    for row in _read_rs_table(RS_TERM_LISTS_URL):
+        if row.get('database') == database:
+            return {'database': database, 'pref_ns_prefix': row['vann_preferredNamespacePrefix'],
+                    'pref_ns_uri': row['vann_preferredNamespaceUri'], 'list_iri': row['list']}
+    print('Warning: no term list ' + database + ' in ' + RS_TERM_LISTS_URL, file=sys.stderr)
+    return {'database': database, 'pref_ns_prefix': database,
+            'pref_ns_uri': 'https://rs.tdwg.org/' + database + '/terms/', 'list_iri': ''}
+
+
 def _read_rs_docs_versions():
     return _read_rs_table(RS_DOCS_VERSIONS_URL)
 
