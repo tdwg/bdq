@@ -450,7 +450,7 @@ This gives us the following additional properties for the Test:
 * **Term Name** c6b705fc-7cf8-4af1-88ab-7a38d85f7109 
 * **Modified** 2024-01-29
 
-(Once accepted into BDQ, these properties would be combined to form the fully qualified Term [IRI](<../../index.md#glossary_IRI> "Internationalized Resource Identifier is an internet protocol standard which builds on the Uniform Resource Identifier URI protocol by greatly expanding the set of permitted characters.") for the Test (e.g. https://rs.tdwg.org/ bdqtest/terms/version/07c28ace-561a-476e-a9b9-3d5ad6e35933) and the Term Version IRI for a particular version of the Test (e.g. https://rs.tdwg.org/ bdqtest/terms/version/07c28ace-561a-476e-a9b9-3d5ad6e35933-2024-07-24))
+(Once accepted into BDQ, these properties would be combined to form the fully qualified Term [IRI](<../../index.md#glossary_IRI> "Internationalized Resource Identifier is an internet protocol standard which builds on the Uniform Resource Identifier URI protocol by greatly expanding the set of permitted characters.") for the Test (e.g. https://rs.tdwg.org/ bdqtest/terms/07c28ace-561a-476e-a9b9-3d5ad6e35933) and the Term Version IRI for a particular version of the Test (e.g. https://rs.tdwg.org/ bdqtest/terms/version/07c28ace-561a-476e-a9b9-3d5ad6e35933-2024-07-24))
 
 See also: [Key to bdqtest: Vocabulary Terms](../list/bdqtest/index.md#18-key-to-vocabulary-terms-normative) in the bdqtest: term-list document.
 

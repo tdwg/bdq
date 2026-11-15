@@ -153,7 +153,7 @@ The following namespace abbreviations are used in this document:
 
 ### 1.8 Key to Vocabulary Terms (normative)
 
-These "Test Descriptors" are terms that are necessary to comprehensively describe each Test. Some terms, such as those labeled `Term Version IRI` (`rdf:about`), `Term IRI` (`dcterms:isVersionOf`) and `Term Name` (`rdf:value`) are intended for machine consumption. Some terms such as the `Description` (`rdfs:comment`) are designed to be human-readable and to be understood by consumers of biodiversity `Data Quality Reports`. Terms such as the `Specification` (`bdqffdq:Specification`) ensure that implementers have no ambiguity about how the Test should be coded.
+These "Test Descriptors" are terms that are necessary to comprehensively describe each Test. Some terms, such as those labeled `Term IRI` (`rdf:about`), `Term Version IRI` (`dcterms:hasVersion`, the Test's current version) and `Term Name` (`rdf:value`) are intended for machine consumption. Some terms such as the `Description` (`rdfs:comment`) are designed to be human-readable and to be understood by consumers of biodiversity `Data Quality Reports`. Terms such as the `Specification` (`bdqffdq:Specification`) ensure that implementers have no ambiguity about how the Test should be coded.
 
 The terminology used to describe the terms in this vocabulary follows the TDWG [TDWG Standards Documentation Standard (SDS)](https://www.tdwg.org/standards/sds/) (SDS). Each term definition includes the original RDF definition, and may also provide a TDWG-specific interpretation from the SDS, as well as a definition tailored to this local context.
 See section [2.4.1 Listing Identifiers for Tests (non-normative)](../../supplement/index.md#241-listing-identifiers-for-tests-non-normative) in [BDQ Supplemental Information](../../supplement/index.md) for a competency question clarifying the relationships among `Term Version IRI`, `Term IRI`, `Term Name`, and `Label`.
@@ -168,7 +168,7 @@ See section [2.4.1 Listing Identifiers for Tests (non-normative)](../../suppleme
 | Term Version IRI (rdf:about) | normative | The HTTP IRI that identifies the version of the term that is currently in force. | [https://rs.tdwg.org/ bdqtest/terms/version/ 07c28ace-561a-476e-a9b9-3d5ad6e35933-2025-03-07](https://rs.tdwg.org/bdqtest/terms/version/07c28ace-561a-476e-a9b9-3d5ad6e35933-2025-03-07) |
 | Description (dcterms:description) | non-normative | An account of the resource. In present context: A brief description of what the Test does. | Proposes an amendment to the value of dwc:basisOfRecord using the bdqval:sourceAuthority. |
 | Expected Response (bdqffdq:hasExpectedResponse) | normative | Text describing the logic to be followed by a bdqffdq:Implementation of a bdqffdq:Specification specifying the values of bdqffdq:ResponseStatus and bdqffdq:ResponseResults that should be produced from the evaluation of input bdqffdq:InformationElements. In present context: The formal definition of how the Test must be implemented. | EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:basisOfRecord is bdqval:Empty; AMENDED the value of dwc:basisOfRecord if it could be unambiguously interpreted as a value in the bdqval:sourceAuthority; otherwise NOT_AMENDED |
-| Specification GUID (bdqffdq:Specification) | normative | A specific statement about how to evaluate a bdqffdq:DataQualityNeed. | urn:uuid:76ee10e7-7be9-432b-ad9c-655b127bff27 |
+| Specification IRI (bdqffdq:Specification) | normative | A specific statement about how to evaluate a bdqffdq:DataQualityNeed. | [https://rs.tdwg.org/ bdqtest/specification/ 76ee10e7-7be9-432b-ad9c-655b127bff27](https://rs.tdwg.org/bdqtest/specification/76ee10e7-7be9-432b-ad9c-655b127bff27) |
 | InformationElements ActedUpon (bdqffdq:composedOf) | normative | Specific vocabulary term that comprises a bdqffdq:InformationElement that is not a bdqffdq:AbstractInformationElement. | dwc:basisOfRecord |
 | Test Aggregates Responses From (bdqffdq:aggregatesResponsesFrom) | normative | Relates an ActedUpon Information Element (typically used by a MultiRecord Measure) to the DataQualityNeed (Validation, Issue, Measure, or Amendment) whose Responses in a DataQualityReport are aggregated as inputs to that Measure. | [https://rs.tdwg.org/ bdqtest/terms/ ac2b7648-d5f9-48ca-9b07-8ad5879a2536](https://rs.tdwg.org/bdqtest/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536) |
 | InformationElements Consulted (bdqffdq:composedOf) | normative | Specific vocabulary term that comprises a bdqffdq:InformationElement that is not a bdqffdq:AbstractInformationElement. | dwc:verbatimCoordinates,dwc:verbatimLatitude,dwc:verbatimLongitude,dwc:verbatimCoordinateSystem,dwc:verbatimSRS |
@@ -517,8 +517,8 @@ Including MultiRecord Measures
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:basisOfRecord is bdqval:Empty; AMENDED the value of dwc:basisOfRecord if it could be unambiguously interpreted as a value in the bdqval:sourceAuthority; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:76ee10e7-7be9-432b-ad9c-655b127bff27</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/76ee10e7-7be9-432b-ad9c-655b127bff27">https://rs.tdwg.org/bdqtest/specification/76ee10e7-7be9-432b-ad9c-655b127bff27</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -589,6 +589,10 @@ Including MultiRecord Measures
 			<td>AmendmentMethod: AMENDMENT_BASISOFRECORD_STANDARDIZED with Specification Specification for: AMENDMENT_BASISOFRECORD_STANDARDIZED</td>
 		</tr>
 		<tr>
+			<td>AmendmentMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/3c402f21-5347-419c-a720-8bbad7c38577">https://rs.tdwg.org/bdqtest/method/3c402f21-5347-419c-a720-8bbad7c38577</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: AMENDMENT_BASISOFRECORD_STANDARDIZED</td>
 		</tr>
@@ -632,8 +636,8 @@ Including MultiRecord Measures
 			<td>INTERNAL_PREREQUISITES_NOT_MET if 1) either dwc:decimalLatitude or dwc:decimalLongitude are bdqval:NotEmpty, or 2) dwc:verbatimCoordinates and one of dwc:verbatimLatitude and dwc:verbatimLongitude are bdqval:Empty; FILLED_IN the values of dwc:decimalLatitude, dwc:decimalLongitude and dwc:geodeticDatum (provided that the dwc:verbatimCoordinates can be unambiguously interpreted as geographic coordinates) from 1) dwc:verbatimLatitude, dwc:verbatimLongitude and dwc:verbatimSRS or 2) dwc:verbatimCoordinates and dwc:verbatimSRS; otherwise NOT_AMENDED.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:1e16fbb3-0c8d-4f23-bf55-68e159ab2b04</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/1e16fbb3-0c8d-4f23-bf55-68e159ab2b04">https://rs.tdwg.org/bdqtest/specification/1e16fbb3-0c8d-4f23-bf55-68e159ab2b04</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -700,6 +704,10 @@ Including MultiRecord Measures
 			<td>AmendmentMethod: AMENDMENT_COORDINATES_FROM_VERBATIM with Specification Specification for: AMENDMENT_COORDINATES_FROM_VERBATIM</td>
 		</tr>
 		<tr>
+			<td>AmendmentMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/10ad79a1-c93f-4ab2-accf-780867f93957">https://rs.tdwg.org/bdqtest/method/10ad79a1-c93f-4ab2-accf-780867f93957</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: AMENDMENT_COORDINATES_FROM_VERBATIM</td>
 		</tr>
@@ -743,8 +751,8 @@ Including MultiRecord Measures
 			<td>INTERNAL_PREREQUISITES_NOT_MET if any of dwc:decimalLatitude or dwc:decimalLongitude or dwc:countryCode are bdqval:Empty; AMENDED dwc:decimalLatitude and dwc:decimalLongitude if the coordinates were transposed or one or more of the signs of the coordinates were reversed to align the location with dwc:countryCode according to the bdqval:sourceAuthority; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:46caea46-0c94-4efb-9e5f-1b170f2ad54e</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/46caea46-0c94-4efb-9e5f-1b170f2ad54e">https://rs.tdwg.org/bdqtest/specification/46caea46-0c94-4efb-9e5f-1b170f2ad54e</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -823,6 +831,10 @@ Including MultiRecord Measures
 			<td>AmendmentMethod: AMENDMENT_COORDINATES_TRANSPOSED with Specification Specification for: AMENDMENT_COORDINATES_TRANSPOSED</td>
 		</tr>
 		<tr>
+			<td>AmendmentMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/2f59ef74-5439-44db-8d5a-85c9773c0cef">https://rs.tdwg.org/bdqtest/method/2f59ef74-5439-44db-8d5a-85c9773c0cef</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: AMENDMENT_COORDINATES_TRANSPOSED</td>
 		</tr>
@@ -866,8 +878,8 @@ Including MultiRecord Measures
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if either dwc:decimalLatitude or dwc:decimalLongitude is bdqval:Empty, or if dwc:countryCode is bdqval:NotEmpty; FILLED_IN dwc:countryCode if dwc:decimalLatitude and dwc:decimalLongitude fall within a boundary in the bdqval:sourceAuthority that is attributable to a single valid country code; otherwise NOT_AMENDED.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:95ac057e-a941-416f-b7dc-ad7aca875cff</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/95ac057e-a941-416f-b7dc-ad7aca875cff">https://rs.tdwg.org/bdqtest/specification/95ac057e-a941-416f-b7dc-ad7aca875cff</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -946,6 +958,10 @@ Including MultiRecord Measures
 			<td>AmendmentMethod: AMENDMENT_COUNTRYCODE_FROM_COORDINATES with Specification Specification for: AMENDMENT_COUNTRYCODE_FROM_COORDINATES</td>
 		</tr>
 		<tr>
+			<td>AmendmentMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/5e55d983-5667-438c-9754-a71dfe2472af">https://rs.tdwg.org/bdqtest/method/5e55d983-5667-438c-9754-a71dfe2472af</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: AMENDMENT_COUNTRYCODE_FROM_COORDINATES</td>
 		</tr>
@@ -989,8 +1005,8 @@ Including MultiRecord Measures
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the value of dwc:countryCode is bdqval:Empty; AMENDED the value of dwc:countryCode if it can be unambiguously interpreted to a value in the bdqval:sourceAuthority; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:3e076cfa-56ff-4b79-9739-736d062eac5a</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/3e076cfa-56ff-4b79-9739-736d062eac5a">https://rs.tdwg.org/bdqtest/specification/3e076cfa-56ff-4b79-9739-736d062eac5a</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -1053,6 +1069,10 @@ Including MultiRecord Measures
 			<td>AmendmentMethod: AMENDMENT_COUNTRYCODE_STANDARDIZED with Specification Specification for: AMENDMENT_COUNTRYCODE_STANDARDIZED</td>
 		</tr>
 		<tr>
+			<td>AmendmentMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/29b2e2ac-9667-4774-ac06-45333555c620">https://rs.tdwg.org/bdqtest/method/29b2e2ac-9667-4774-ac06-45333555c620</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: AMENDMENT_COUNTRYCODE_STANDARDIZED</td>
 		</tr>
@@ -1096,8 +1116,8 @@ Including MultiRecord Measures
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:dateIdentified is bdqval:Empty; AMENDED if the value of dwc:dateIdentified is not a properly formatted ISO 8601 date but is unambiguous and altered to be a valid ISO 8601 date; otherwise NOT_AMENDED.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:16e40618-e9bd-479a-b1e8-8aee3467109f</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/16e40618-e9bd-479a-b1e8-8aee3467109f">https://rs.tdwg.org/bdqtest/specification/16e40618-e9bd-479a-b1e8-8aee3467109f</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -1160,6 +1180,10 @@ Including MultiRecord Measures
 			<td>AmendmentMethod: AMENDMENT_DATEIDENTIFIED_STANDARDIZED with Specification Specification for: AMENDMENT_DATEIDENTIFIED_STANDARDIZED</td>
 		</tr>
 		<tr>
+			<td>AmendmentMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/0836e914-75d8-4cda-a39f-f21a08382732">https://rs.tdwg.org/bdqtest/method/0836e914-75d8-4cda-a39f-f21a08382732</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: AMENDMENT_DATEIDENTIFIED_STANDARDIZED</td>
 		</tr>
@@ -1203,8 +1227,8 @@ Including MultiRecord Measures
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:day is bdqval:Empty; AMENDED the value of dwc:day if the value is unambiguously interpreted as an integer between 1 and 31 inclusive; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:3eae7451-19c6-403c-ba36-29f8204d15ff</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/3eae7451-19c6-403c-ba36-29f8204d15ff">https://rs.tdwg.org/bdqtest/specification/3eae7451-19c6-403c-ba36-29f8204d15ff</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -1263,6 +1287,10 @@ Including MultiRecord Measures
 			<td>AmendmentMethod: AMENDMENT_DAY_STANDARDIZED with Specification Specification for: AMENDMENT_DAY_STANDARDIZED</td>
 		</tr>
 		<tr>
+			<td>AmendmentMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/c15d57ce-301c-4db0-8146-399cd59382ad">https://rs.tdwg.org/bdqtest/method/c15d57ce-301c-4db0-8146-399cd59382ad</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: AMENDMENT_DAY_STANDARDIZED</td>
 		</tr>
@@ -1306,8 +1334,8 @@ Including MultiRecord Measures
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the value of dc:type is bdqval:Empty; AMENDED the value of dc:type if it can be unambiguously interpreted as a term name in the bdqval:sourceAuthority; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:317e79db-680a-4bbe-8a3e-e805c69514b8</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/317e79db-680a-4bbe-8a3e-e805c69514b8">https://rs.tdwg.org/bdqtest/specification/317e79db-680a-4bbe-8a3e-e805c69514b8</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -1374,6 +1402,10 @@ Including MultiRecord Measures
 			<td>AmendmentMethod: AMENDMENT_DCTYPE_STANDARDIZED with Specification Specification for: AMENDMENT_DCTYPE_STANDARDIZED</td>
 		</tr>
 		<tr>
+			<td>AmendmentMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/1f38a0bc-4e1f-47a4-bd4a-b6be1c9a456a">https://rs.tdwg.org/bdqtest/method/1f38a0bc-4e1f-47a4-bd4a-b6be1c9a456a</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: AMENDMENT_DCTYPE_STANDARDIZED</td>
 		</tr>
@@ -1417,8 +1449,8 @@ Including MultiRecord Measures
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:degreeOfEstablishment is bdqval:Empty; AMENDED the value of dwc:degreeOfEstablishment if it can be unambiguously matched to a term in the bdqval:sourceAuthority; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:ba1fa532-9612-4944-bfd1-8bd39ab47758</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/ba1fa532-9612-4944-bfd1-8bd39ab47758">https://rs.tdwg.org/bdqtest/specification/ba1fa532-9612-4944-bfd1-8bd39ab47758</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -1493,6 +1525,10 @@ Including MultiRecord Measures
 			<td>AmendmentMethod: AMENDMENT_DEGREEOFESTABLISHMENT_STANDARDIZED with Specification Specification for: AMENDMENT_DEGREEOFESTABLISHMENT_STANDARDIZED</td>
 		</tr>
 		<tr>
+			<td>AmendmentMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/fda457b6-f844-49ca-aee5-1b99968cf7ea">https://rs.tdwg.org/bdqtest/method/fda457b6-f844-49ca-aee5-1b99968cf7ea</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: AMENDMENT_DEGREEOFESTABLISHMENT_STANDARDIZED</td>
 		</tr>
@@ -1536,8 +1572,8 @@ Including MultiRecord Measures
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:establishmentMeans is bdqval:Empty; AMENDED the value of dwc:establishmentMeans if it can be unambiguously matched to a term in the bdqval:sourceAuthority; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:fa4e531e-f45e-4dea-8c4b-27d364117808</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/fa4e531e-f45e-4dea-8c4b-27d364117808">https://rs.tdwg.org/bdqtest/specification/fa4e531e-f45e-4dea-8c4b-27d364117808</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -1608,6 +1644,10 @@ Including MultiRecord Measures
 			<td>AmendmentMethod: AMENDMENT_ESTABLISHMENTMEANS_STANDARDIZED with Specification Specification for: AMENDMENT_ESTABLISHMENTMEANS_STANDARDIZED</td>
 		</tr>
 		<tr>
+			<td>AmendmentMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/fcd9e46a-a31e-47f5-a18a-bb7ee5d1394a">https://rs.tdwg.org/bdqtest/method/fcd9e46a-a31e-47f5-a18a-bb7ee5d1394a</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: AMENDMENT_ESTABLISHMENTMEANS_STANDARDIZED</td>
 		</tr>
@@ -1651,8 +1691,8 @@ Including MultiRecord Measures
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdqval:NotEmpty or the value of dwc:verbatimEventDate is bdqval:Empty; FILLED_IN the value of dwc:eventDate if an unambiguous ISO 8601 date is interpreted from dwc:verbatimEventDate; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:b417d971-8b0f-49ab-9431-3364ba8694e2</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/b417d971-8b0f-49ab-9431-3364ba8694e2">https://rs.tdwg.org/bdqtest/specification/b417d971-8b0f-49ab-9431-3364ba8694e2</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -1719,6 +1759,10 @@ Including MultiRecord Measures
 			<td>AmendmentMethod: AMENDMENT_EVENTDATE_FROM_VERBATIM with Specification Specification for: AMENDMENT_EVENTDATE_FROM_VERBATIM</td>
 		</tr>
 		<tr>
+			<td>AmendmentMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/7c915d24-1fda-4d72-97d4-8bd5e2136c97">https://rs.tdwg.org/bdqtest/method/7c915d24-1fda-4d72-97d4-8bd5e2136c97</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: AMENDMENT_EVENTDATE_FROM_VERBATIM</td>
 		</tr>
@@ -1762,8 +1806,8 @@ Including MultiRecord Measures
 			<td>INTERNAL _PREREQUISITES_NOT_MET if dwc:eventDate is not EMPTY or dwc:year is EMPTY or is not interpretable as an integer; FILLED_IN the value of dwc:eventDate if an ISO 8601 date was interpreted from the values in dwc:year, dwc:month and dwc:day; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:bda7e8a3-3366-43d5-8a8b-e206101dc90d</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/bda7e8a3-3366-43d5-8a8b-e206101dc90d">https://rs.tdwg.org/bdqtest/specification/bda7e8a3-3366-43d5-8a8b-e206101dc90d</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -1830,6 +1874,10 @@ Including MultiRecord Measures
 			<td>AmendmentMethod: AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY with Specification Specification for: AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY</td>
 		</tr>
 		<tr>
+			<td>AmendmentMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/8ca96a50-f1f5-4a4e-853e-755cc5aa82a7">https://rs.tdwg.org/bdqtest/method/8ca96a50-f1f5-4a4e-853e-755cc5aa82a7</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY</td>
 		</tr>
@@ -1873,8 +1921,8 @@ Including MultiRecord Measures
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdqval:NotEmpty or any of dwc:year, dwc:startDayOfYear, or dwc:endDayOfYear are bdqval:Empty; FILLED_IN the value of dwc:eventDate from values in dwc:year, dwc:startDayOfYear and dwc:endDayOfYear if the values in each are independently interpretable and if the value of dwc:startDayOfYear is less than the value of dwc:endDayOfYear; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:647bf697-e432-4b31-9a69-778396e14a82</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/647bf697-e432-4b31-9a69-778396e14a82">https://rs.tdwg.org/bdqtest/specification/647bf697-e432-4b31-9a69-778396e14a82</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -1941,6 +1989,10 @@ Including MultiRecord Measures
 			<td>AmendmentMethod: AMENDMENT_EVENTDATE_FROM_YEARSTARTDAYOFYEARENDDAYOFYEAR with Specification Specification for: AMENDMENT_EVENTDATE_FROM_YEARSTARTDAYOFYEARENDDAYOFYEAR</td>
 		</tr>
 		<tr>
+			<td>AmendmentMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/cca7732f-c336-47b0-9d69-4514d39f5950">https://rs.tdwg.org/bdqtest/method/cca7732f-c336-47b0-9d69-4514d39f5950</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: AMENDMENT_EVENTDATE_FROM_YEARSTARTDAYOFYEARENDDAYOFYEAR</td>
 		</tr>
@@ -1984,8 +2036,8 @@ Including MultiRecord Measures
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdqval:Empty; AMENDED if the value of dwc:eventDate is not a properly formatted ISO 8601 date but is unambiguous, and altered to be a valid ISO 8601 date; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:6e0e22a1-c233-4c13-baa7-0ab48a4340e4</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/6e0e22a1-c233-4c13-baa7-0ab48a4340e4">https://rs.tdwg.org/bdqtest/specification/6e0e22a1-c233-4c13-baa7-0ab48a4340e4</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -2048,6 +2100,10 @@ Including MultiRecord Measures
 			<td>AmendmentMethod: AMENDMENT_EVENTDATE_STANDARDIZED with Specification Specification for: AMENDMENT_EVENTDATE_STANDARDIZED</td>
 		</tr>
 		<tr>
+			<td>AmendmentMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/381b0edb-0fb4-4a8e-a77b-badcfa286961">https://rs.tdwg.org/bdqtest/method/381b0edb-0fb4-4a8e-a77b-badcfa286961</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: AMENDMENT_EVENTDATE_STANDARDIZED</td>
 		</tr>
@@ -2091,8 +2147,8 @@ Including MultiRecord Measures
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdqval:Empty or contains an invalid value according to ISO 8601; FILLED_IN if any of (1) dwc:day from dwc:eventDate if dwc:day is bdqval:Empty and dwc:eventDate has a precision of a day or finer and is within a single day, (2) dwc:month from dwc:eventDate if dwc:month is bdqval:Empty and dwc:eventDate has a precision of a single month or finer and is within a single month, (3) dwc:year from dwc:eventDate if dwc:year is bdqval:Empty and dwc:eventDate has a precision of a single year or finer and is within a single year, (4) dwc:startDayOfYear and dwc:endDayOfYear if they are bdqval:Empty and dwc:eventDate has a precision of a day or better; otherwise NOT_AMENDED.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:46992280-0ed6-4c42-9e89-ed388ca1d43b</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/46992280-0ed6-4c42-9e89-ed388ca1d43b">https://rs.tdwg.org/bdqtest/specification/46992280-0ed6-4c42-9e89-ed388ca1d43b</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -2159,6 +2215,10 @@ Including MultiRecord Measures
 			<td>AmendmentMethod: AMENDMENT_EVENT_FROM_EVENTDATE with Specification Specification for: AMENDMENT_EVENT_FROM_EVENTDATE</td>
 		</tr>
 		<tr>
+			<td>AmendmentMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/2bc15408-d0d0-4166-b6a6-6fdba5704379">https://rs.tdwg.org/bdqtest/method/2bc15408-d0d0-4166-b6a6-6fdba5704379</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: AMENDMENT_EVENT_FROM_EVENTDATE</td>
 		</tr>
@@ -2202,8 +2262,8 @@ Including MultiRecord Measures
 			<td>If dwc:geodeticDatum is bdqval:Empty, fill in dwc:geodeticDatum using the value of bdqval:defaultGeodeticDatum, report FILLED_IN and, if dwc:coordinateUncertaintyInMeters, dwc:decimalLatitude and dwc:decimalLongitude are bdqval:NotEmpty, amend the value of dwc:coordinateUncertaintyInMeters by adding the maximum datum shift between the specified bdqval:defaultGeodeticDatum and any other datum at the provided dwc:decimalLatitude and dwc:decimalLongitude and instead report AMENDED; otherwise NOT_AMENDED.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:da49fa95-ce7b-46cf-825a-91d53f21a997</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/da49fa95-ce7b-46cf-825a-91d53f21a997">https://rs.tdwg.org/bdqtest/specification/da49fa95-ce7b-46cf-825a-91d53f21a997</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -2282,6 +2342,10 @@ Including MultiRecord Measures
 			<td>AmendmentMethod: AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT with Specification Specification for: AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT</td>
 		</tr>
 		<tr>
+			<td>AmendmentMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/95627fe5-326a-4468-b220-82af19a6ce98">https://rs.tdwg.org/bdqtest/method/95627fe5-326a-4468-b220-82af19a6ce98</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT</td>
 		</tr>
@@ -2325,8 +2389,8 @@ Including MultiRecord Measures
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdqval:Empty; AMENDED the value of dwc:geodeticDatum if it could be unambiguously interpreted as a valid code from the bdqval:sourceAuthority (in the form Authority:Number) for a Datum, Ellipsoid or a CRS appropriate for a 2D geographic coordinate in degrees, or as the value "not recorded"; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:5daf8c2f-50df-423c-a740-55079b625c10</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/5daf8c2f-50df-423c-a740-55079b625c10">https://rs.tdwg.org/bdqtest/specification/5daf8c2f-50df-423c-a740-55079b625c10</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -2393,6 +2457,10 @@ Including MultiRecord Measures
 			<td>AmendmentMethod: AMENDMENT_GEODETICDATUM_STANDARDIZED with Specification Specification for: AMENDMENT_GEODETICDATUM_STANDARDIZED</td>
 		</tr>
 		<tr>
+			<td>AmendmentMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/35ac2bb4-d1f8-4a32-a591-32f614d97429">https://rs.tdwg.org/bdqtest/method/35ac2bb4-d1f8-4a32-a591-32f614d97429</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: AMENDMENT_GEODETICDATUM_STANDARDIZED</td>
 		</tr>
@@ -2436,8 +2504,8 @@ Including MultiRecord Measures
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; AMENDED value of dcterms:license if it could be unambiguously interpreted as a value in the bdqval:sourceAuthority; otherwise NOT_AMENDED.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:825f551a-2adf-4509-9f95-5a42601a8e88</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/825f551a-2adf-4509-9f95-5a42601a8e88">https://rs.tdwg.org/bdqtest/specification/825f551a-2adf-4509-9f95-5a42601a8e88</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -2512,6 +2580,10 @@ Including MultiRecord Measures
 			<td>AmendmentMethod: AMENDMENT_LICENSE_STANDARDIZED with Specification Specification for: AMENDMENT_LICENSE_STANDARDIZED</td>
 		</tr>
 		<tr>
+			<td>AmendmentMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/d040474f-edc7-47b8-80a0-3a3859359897">https://rs.tdwg.org/bdqtest/method/d040474f-edc7-47b8-80a0-3a3859359897</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: AMENDMENT_LICENSE_STANDARDIZED</td>
 		</tr>
@@ -2555,8 +2627,8 @@ Including MultiRecord Measures
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters or dwc:maximumDepthInMeters are bdqval:NotEmpty or dwc:verbatimDepth is bdqval:Empty; FILLED_IN the value of dwc:minimumDepthInMeters and dwc:maximumDepthInMeters if they can be unambiguously interpreted from dwc:verbatimDepth; otherwise NOT_AMENDED.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:4db033ea-b0f7-4d01-a5fc-a0459a73a67d</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/4db033ea-b0f7-4d01-a5fc-a0459a73a67d">https://rs.tdwg.org/bdqtest/specification/4db033ea-b0f7-4d01-a5fc-a0459a73a67d</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -2619,6 +2691,10 @@ Including MultiRecord Measures
 			<td>AmendmentMethod: AMENDMENT_MINDEPTHMAXDEPTH_FROM_VERBATIM with Specification Specification for: AMENDMENT_MINDEPTHMAXDEPTH_FROM_VERBATIM</td>
 		</tr>
 		<tr>
+			<td>AmendmentMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/2f73a662-b833-44ad-942c-a87f82262b7c">https://rs.tdwg.org/bdqtest/method/2f73a662-b833-44ad-942c-a87f82262b7c</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: AMENDMENT_MINDEPTHMAXDEPTH_FROM_VERBATIM</td>
 		</tr>
@@ -2662,8 +2738,8 @@ Including MultiRecord Measures
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumElevationInMeters or dwc:maximumElevationInMeters are bdqval:NotEmpty or dwc:verbatimElevation is bdqval:Empty; FILLED_IN the values of dwc:minimumElevationInMeters and dwc:maximumElevationInMeters if they can be unambiguously interpreted from dwc:verbatimElevation; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:84195393-4797-465f-bfc1-b764df67c5c2</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/84195393-4797-465f-bfc1-b764df67c5c2">https://rs.tdwg.org/bdqtest/specification/84195393-4797-465f-bfc1-b764df67c5c2</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -2726,6 +2802,10 @@ Including MultiRecord Measures
 			<td>AmendmentMethod: AMENDMENT_MINELEVATIONMAXELEVATION_FROM_VERBATIM with Specification Specification for: AMENDMENT_MINELEVATIONMAXELEVATION_FROM_VERBATIM</td>
 		</tr>
 		<tr>
+			<td>AmendmentMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/47bdaece-0c20-4ba3-b453-4c78b92b4c94">https://rs.tdwg.org/bdqtest/method/47bdaece-0c20-4ba3-b453-4c78b92b4c94</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: AMENDMENT_MINELEVATIONMAXELEVATION_FROM_VERBATIM</td>
 		</tr>
@@ -2769,8 +2849,8 @@ Including MultiRecord Measures
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:month is bdqval:Empty; AMENDED the value of dwc:month if it can be unambiguously interpreted as a month represented as an integer between 1 and 12 inclusive; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:4a514adf-766f-46a4-bf16-6febcb594f38</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/4a514adf-766f-46a4-bf16-6febcb594f38">https://rs.tdwg.org/bdqtest/specification/4a514adf-766f-46a4-bf16-6febcb594f38</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -2829,6 +2909,10 @@ Including MultiRecord Measures
 			<td>AmendmentMethod: AMENDMENT_MONTH_STANDARDIZED with Specification Specification for: AMENDMENT_MONTH_STANDARDIZED</td>
 		</tr>
 		<tr>
+			<td>AmendmentMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/c1af0cfd-311e-4982-922a-dc67e0c2c975">https://rs.tdwg.org/bdqtest/method/c1af0cfd-311e-4982-922a-dc67e0c2c975</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: AMENDMENT_MONTH_STANDARDIZED</td>
 		</tr>
@@ -2872,8 +2956,8 @@ Including MultiRecord Measures
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdqval:NotEmpty; FILLED_IN the value of dwc:occurrenceStatus using the bdqval:defaultOccurrenceStatus Parameter value if dwc:occurrenceStatus,dwc:individualCount and dwc:organismQuantity are bdqval:Empty; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:9c150f88-1fc4-47b7-b826-f6357c104946</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/9c150f88-1fc4-47b7-b826-f6357c104946">https://rs.tdwg.org/bdqtest/specification/9c150f88-1fc4-47b7-b826-f6357c104946</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -2948,6 +3032,10 @@ Including MultiRecord Measures
 			<td>AmendmentMethod: AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT with Specification Specification for: AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT</td>
 		</tr>
 		<tr>
+			<td>AmendmentMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/637f7b40-1bdc-4ecc-a6ae-bb9b366da3fd">https://rs.tdwg.org/bdqtest/method/637f7b40-1bdc-4ecc-a6ae-bb9b366da3fd</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT</td>
 		</tr>
@@ -2991,8 +3079,8 @@ Including MultiRecord Measures
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:ocurrenceStatus is bdqval:Empty; AMENDED the value of dwc:occurrenceStatus if it can be unambiguously interpreted as a value in the bdqval:sourceAuthority; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:fae50773-a832-4e44-87fe-d66a1332c3e7</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/fae50773-a832-4e44-87fe-d66a1332c3e7">https://rs.tdwg.org/bdqtest/specification/fae50773-a832-4e44-87fe-d66a1332c3e7</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -3063,6 +3151,10 @@ Including MultiRecord Measures
 			<td>AmendmentMethod: AMENDMENT_OCCURRENCESTATUS_STANDARDIZED with Specification Specification for: AMENDMENT_OCCURRENCESTATUS_STANDARDIZED</td>
 		</tr>
 		<tr>
+			<td>AmendmentMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/abdca718-5564-4dbd-9d98-0a1707d6ecf2">https://rs.tdwg.org/bdqtest/method/abdca718-5564-4dbd-9d98-0a1707d6ecf2</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: AMENDMENT_OCCURRENCESTATUS_STANDARDIZED</td>
 		</tr>
@@ -3106,8 +3198,8 @@ Including MultiRecord Measures
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:pathway is bdqval:Empty; AMENDED the value of dwc:pathway if it can be unambiguously matched to a term in the bdqval:sourceAuthority; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:fef3a7f9-edd8-41c9-9704-4798814077e3</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/fef3a7f9-edd8-41c9-9704-4798814077e3">https://rs.tdwg.org/bdqtest/specification/fef3a7f9-edd8-41c9-9704-4798814077e3</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -3182,6 +3274,10 @@ Including MultiRecord Measures
 			<td>AmendmentMethod: AMENDMENT_PATHWAY_STANDARDIZED with Specification Specification for: AMENDMENT_PATHWAY_STANDARDIZED</td>
 		</tr>
 		<tr>
+			<td>AmendmentMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/5e1ab035-a79f-4048-9330-e073d4b6c2c9">https://rs.tdwg.org/bdqtest/method/5e1ab035-a79f-4048-9330-e073d4b6c2c9</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: AMENDMENT_PATHWAY_STANDARDIZED</td>
 		</tr>
@@ -3225,8 +3321,8 @@ Including MultiRecord Measures
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is bdqval:NotEmpty, or if all of dwc:scientificName, dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship, and dwc:cultivarEpithet are bdqval:Empty, FILLED_IN the value of dwc:scientificNameID for an unambiguously resolved single taxon record in the bdqval:sourceAuthority through (1) the value of dwc:scientificName or (2) if dwc:scientificName is bdqval:Empty through values of the terms dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship and dwc:cultivarEpithet, or (3) if ambiguity produced by multiple matches in (1) or (2) can be disambiguated to a single Taxon using the values of dwc:subtribe, dwc:tribe, dwc:subgenus, dwc:genus, dwc:subfamily, dwc:family, dwc:superfamily, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:taxonID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID, dwc:taxonomicRank, and dwc:vernacularName; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:566faded-60b6-44bf-a335-dc78d5013582</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/566faded-60b6-44bf-a335-dc78d5013582">https://rs.tdwg.org/bdqtest/specification/566faded-60b6-44bf-a335-dc78d5013582</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -3305,6 +3401,10 @@ Including MultiRecord Measures
 			<td>AmendmentMethod: AMENDMENT_SCIENTIFICNAMEID_FROM_TAXON with Specification Specification for: AMENDMENT_SCIENTIFICNAMEID_FROM_TAXON</td>
 		</tr>
 		<tr>
+			<td>AmendmentMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/316da14e-9477-4319-bd2c-c201f3b0f461">https://rs.tdwg.org/bdqtest/method/316da14e-9477-4319-bd2c-c201f3b0f461</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: AMENDMENT_SCIENTIFICNAMEID_FROM_TAXON</td>
 		</tr>
@@ -3348,8 +3448,8 @@ Including MultiRecord Measures
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is bdqval:Empty, or dwc:scientificName is bdqval:NotEmpty; FILLED_IN the value of dwc:scientificName if the value of dwc: scientificNameID could be unambiguously interpreted as a value in the bdqval:sourceAuthority; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:8e8355a6-e5d0-4ad7-9f2c-8a4148bfda57</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/8e8355a6-e5d0-4ad7-9f2c-8a4148bfda57">https://rs.tdwg.org/bdqtest/specification/8e8355a6-e5d0-4ad7-9f2c-8a4148bfda57</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -3428,6 +3528,10 @@ Including MultiRecord Measures
 			<td>AmendmentMethod: AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID with Specification Specification for: AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID</td>
 		</tr>
 		<tr>
+			<td>AmendmentMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/5a6eaed2-00bd-41ce-9531-ebeb986a3517">https://rs.tdwg.org/bdqtest/method/5a6eaed2-00bd-41ce-9531-ebeb986a3517</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID</td>
 		</tr>
@@ -3471,8 +3575,8 @@ Including MultiRecord Measures
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:sex is bdqval:Empty; AMENDED the value of dwc:sex if it can be unambiguously matched to a term in the bdqval:sourceAuthority; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:08a4abb0-8977-4805-a4a1-c1a96b532322</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/08a4abb0-8977-4805-a4a1-c1a96b532322">https://rs.tdwg.org/bdqtest/specification/08a4abb0-8977-4805-a4a1-c1a96b532322</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -3547,6 +3651,10 @@ Including MultiRecord Measures
 			<td>AmendmentMethod: AMENDMENT_SEX_STANDARDIZED with Specification Specification for: AMENDMENT_SEX_STANDARDIZED</td>
 		</tr>
 		<tr>
+			<td>AmendmentMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/97fb9cdf-68c2-4b0b-8b1d-351435d30722">https://rs.tdwg.org/bdqtest/method/97fb9cdf-68c2-4b0b-8b1d-351435d30722</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: AMENDMENT_SEX_STANDARDIZED</td>
 		</tr>
@@ -3590,8 +3698,8 @@ Including MultiRecord Measures
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:taxonRank is bdqval:Empty; AMENDED the value of dwc:taxonRank if it can be unambiguously matched to a term in the bdqval:sourceAuthority; otherwise NOT_AMENDED</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:ca6b9d39-4a1d-4ec5-925a-d1d67f95bea0</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/ca6b9d39-4a1d-4ec5-925a-d1d67f95bea0">https://rs.tdwg.org/bdqtest/specification/ca6b9d39-4a1d-4ec5-925a-d1d67f95bea0</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -3666,6 +3774,10 @@ Including MultiRecord Measures
 			<td>AmendmentMethod: AMENDMENT_TAXONRANK_STANDARDIZED with Specification Specification for: AMENDMENT_TAXONRANK_STANDARDIZED</td>
 		</tr>
 		<tr>
+			<td>AmendmentMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/e9b8e041-3579-483a-a6aa-74bea442f6bd">https://rs.tdwg.org/bdqtest/method/e9b8e041-3579-483a-a6aa-74bea442f6bd</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: AMENDMENT_TAXONRANK_STANDARDIZED</td>
 		</tr>
@@ -3709,8 +3821,8 @@ Including MultiRecord Measures
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:typeStatus is bdqval:Empty; AMENDED the value of the first word in each &#124; delimited portion of dwc:typeStatus if it can be unambiguously matched to a term in the bdqval:sourceAuthority; otherwise NOT_AMENDED.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:401e2562-cb26-43a7-8690-b06eabd5982a</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/401e2562-cb26-43a7-8690-b06eabd5982a">https://rs.tdwg.org/bdqtest/specification/401e2562-cb26-43a7-8690-b06eabd5982a</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -3785,6 +3897,10 @@ Including MultiRecord Measures
 			<td>AmendmentMethod: AMENDMENT_TYPESTATUS_STANDARDIZED with Specification Specification for: AMENDMENT_TYPESTATUS_STANDARDIZED</td>
 		</tr>
 		<tr>
+			<td>AmendmentMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/05104b96-267c-432a-9f30-88552404763e">https://rs.tdwg.org/bdqtest/method/05104b96-267c-432a-9f30-88552404763e</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: AMENDMENT_TYPESTATUS_STANDARDIZED</td>
 		</tr>
@@ -3828,8 +3944,8 @@ Including MultiRecord Measures
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:annotationSystem is not available; POTENTIAL_ISSUE if an annotation in the bdqval:annotationSystem exists and has an oa:hasTarget referencing the bdqffdq:SingleRecord under evaluation with matching bdqval:annotationAlertIf criteria; otherwise NOT_ISSUE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:1999e4e0-ce3a-46e3-b131-24412bd94bd1</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/1999e4e0-ce3a-46e3-b131-24412bd94bd1">https://rs.tdwg.org/bdqtest/specification/1999e4e0-ce3a-46e3-b131-24412bd94bd1</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements Consulted</td>
@@ -3896,6 +4012,10 @@ Including MultiRecord Measures
 			<td>IssueMethod: ISSUE_ANNOTATION_NOTEMPTY with Specification Specification for: ISSUE_ANNOTATION_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>IssueMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/0dacd2f5-591c-47c1-9d05-2de81675b6cc">https://rs.tdwg.org/bdqtest/method/0dacd2f5-591c-47c1-9d05-2de81675b6cc</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: ISSUE_ANNOTATION_NOTEMPTY</td>
 		</tr>
@@ -3939,8 +4059,8 @@ Including MultiRecord Measures
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if any of dwc:countryCode, dwc:decimalLatitude, dwc:decimalLongitude are bdqval:Empty; POTENTIAL_ISSUE if (1) the geographic coordinates are within the distance given by bdqval:spatialBufferInMeters from the center of the supplied dwc:countryCode as represented in the bdqval:sourceAuthority (or one of the centers, if the bdqval:sourceAuthority provides more than one per country code) and (2) the dwc:coordinateUncertaintyInMeters is bdqval:Empty or less than half the square root of the area of the country; otherwise NOT_ISSUE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:693aa9a5-6058-4399-a474-43268a8e503b</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/693aa9a5-6058-4399-a474-43268a8e503b">https://rs.tdwg.org/bdqtest/specification/693aa9a5-6058-4399-a474-43268a8e503b</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -4019,6 +4139,10 @@ Including MultiRecord Measures
 			<td>IssueMethod: ISSUE_COORDINATES_CENTEROFCOUNTRY with Specification Specification for: ISSUE_COORDINATES_CENTEROFCOUNTRY</td>
 		</tr>
 		<tr>
+			<td>IssueMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/0239b59b-db0e-4e6a-8ba8-2f89abf9e78e">https://rs.tdwg.org/bdqtest/method/0239b59b-db0e-4e6a-8ba8-2f89abf9e78e</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: ISSUE_COORDINATES_CENTEROFCOUNTRY</td>
 		</tr>
@@ -4062,8 +4186,8 @@ Including MultiRecord Measures
 			<td>POTENTIAL_ISSUE if dwc:dataGeneralizations is bdqval:NotEmpty; otherwise NOT_ISSUE</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:90618419-452d-4f35-b39a-7c342ca0791b</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/90618419-452d-4f35-b39a-7c342ca0791b">https://rs.tdwg.org/bdqtest/specification/90618419-452d-4f35-b39a-7c342ca0791b</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -4126,6 +4250,10 @@ Including MultiRecord Measures
 			<td>IssueMethod: ISSUE_DATAGENERALIZATIONS_NOTEMPTY with Specification Specification for: ISSUE_DATAGENERALIZATIONS_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>IssueMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/5daad04c-fd7c-4972-ac3a-66f149170bf3">https://rs.tdwg.org/bdqtest/method/5daad04c-fd7c-4972-ac3a-66f149170bf3</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: ISSUE_DATAGENERALIZATIONS_NOTEMPTY</td>
 		</tr>
@@ -4169,8 +4297,8 @@ Including MultiRecord Measures
 			<td>POTENTIAL_ISSUE if dwc:establishmentMeans is bdqval:NotEmpty; otherwise NOT_ISSUE</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:c69007a2-6391-463e-96bc-baa18d24beb7</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/c69007a2-6391-463e-96bc-baa18d24beb7">https://rs.tdwg.org/bdqtest/specification/c69007a2-6391-463e-96bc-baa18d24beb7</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -4225,6 +4353,10 @@ Including MultiRecord Measures
 			<td>IssueMethod: ISSUE_ESTABLISHMENTMEANS_NOTEMPTY with Specification Specification for: ISSUE_ESTABLISHMENTMEANS_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>IssueMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/8fc9b64a-557b-46ee-aa51-d23b6cf26d75">https://rs.tdwg.org/bdqtest/method/8fc9b64a-557b-46ee-aa51-d23b6cf26d75</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: ISSUE_ESTABLISHMENTMEANS_NOTEMPTY</td>
 		</tr>
@@ -4268,8 +4400,8 @@ Including MultiRecord Measures
 			<td>RUN_HAS_RESULT with the result being the number of distinct AMENDMENT Tests run on the record that have Response.status=AMENDED or Response.status=FILLED_IN.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:7e365897-cfc0-413e-a613-99c6050edc4b</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/7e365897-cfc0-413e-a613-99c6050edc4b">https://rs.tdwg.org/bdqtest/specification/7e365897-cfc0-413e-a613-99c6050edc4b</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -4316,6 +4448,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MEASURE_AMENDMENTS_PROPOSED with Specification Specification for: MEASURE_AMENDMENTS_PROPOSED</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/3dcd847e-25bf-4ae2-8428-8e74e054d9e6">https://rs.tdwg.org/bdqtest/method/3dcd847e-25bf-4ae2-8428-8e74e054d9e6</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MEASURE_AMENDMENTS_PROPOSED</td>
 		</tr>
@@ -4359,8 +4495,8 @@ Including MultiRecord Measures
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdqval:Empty or if the value of dwc:eventDate is not a valid ISO 8601 date; otherwise RUN_HAS_RESULT with the result being the duration (sensu ISO 8601) expressed in the dwc:eventDate, in seconds.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:be93a0ef-9bf7-417f-a26e-daae5d00dabb</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/be93a0ef-9bf7-417f-a26e-daae5d00dabb">https://rs.tdwg.org/bdqtest/specification/be93a0ef-9bf7-417f-a26e-daae5d00dabb</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -4419,6 +4555,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MEASURE_EVENTDATE_DURATIONINSECONDS with Specification Specification for: MEASURE_EVENTDATE_DURATIONINSECONDS</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/d5732888-e5d4-4fa7-89dd-09baf1773e07">https://rs.tdwg.org/bdqtest/method/d5732888-e5d4-4fa7-89dd-09baf1773e07</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MEASURE_EVENTDATE_DURATIONINSECONDS</td>
 		</tr>
@@ -4462,8 +4602,8 @@ Including MultiRecord Measures
 			<td>RUN_HAS_RESULT with the result being the number of distinct VALIDATION Tests run on the record that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:b611e1b1-cbf5-405c-b24d-24e9a649cbf0</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/b611e1b1-cbf5-405c-b24d-24e9a649cbf0">https://rs.tdwg.org/bdqtest/specification/b611e1b1-cbf5-405c-b24d-24e9a649cbf0</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -4510,6 +4650,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MEASURE_VALIDATIONTESTS_COMPLIANT with Specification Specification for: MEASURE_VALIDATIONTESTS_COMPLIANT</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/d25368be-5f39-4a47-adf3-9c1293499599">https://rs.tdwg.org/bdqtest/method/d25368be-5f39-4a47-adf3-9c1293499599</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MEASURE_VALIDATIONTESTS_COMPLIANT</td>
 		</tr>
@@ -4553,8 +4697,8 @@ Including MultiRecord Measures
 			<td>RUN_HAS_RESULT with the result being the number of distinct VALIDATION Tests run on the record that have Response.result=NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:1a7adc4a-58ee-480c-9765-3834ea433bf0</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/1a7adc4a-58ee-480c-9765-3834ea433bf0">https://rs.tdwg.org/bdqtest/specification/1a7adc4a-58ee-480c-9765-3834ea433bf0</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -4601,6 +4745,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MEASURE_VALIDATIONTESTS_NOTCOMPLIANT with Specification Specification for: MEASURE_VALIDATIONTESTS_NOTCOMPLIANT</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/104854fb-68a4-41cc-8fa5-1ab76fbaa93b">https://rs.tdwg.org/bdqtest/method/104854fb-68a4-41cc-8fa5-1ab76fbaa93b</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MEASURE_VALIDATIONTESTS_NOTCOMPLIANT</td>
 		</tr>
@@ -4644,8 +4792,8 @@ Including MultiRecord Measures
 			<td>RUN_HAS_RESULT with the result being the number of distinct VALIDATION Tests run on the record that have Response.status=INTERNAL_PREREQUISITES_NOT_MET or Response.status=EXTERNAL_PREREQUISITES_NOT_MET.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:aefe88ed-6d3a-4824-8c4a-a75714cb0351</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/aefe88ed-6d3a-4824-8c4a-a75714cb0351">https://rs.tdwg.org/bdqtest/specification/aefe88ed-6d3a-4824-8c4a-a75714cb0351</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -4692,6 +4840,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET with Specification Specification for: MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/d1a8d273-8cd0-4f64-bcd4-1c3d2a42ccfa">https://rs.tdwg.org/bdqtest/method/d1a8d273-8cd0-4f64-bcd4-1c3d2a42ccfa</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET</td>
 		</tr>
@@ -4735,8 +4887,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_BASISOFRECORD_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:5aabe3d4-d2c0-415c-8972-c834b543971a</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/221a02d3-c01e-48c8-9726-8ce423cc6434">https://rs.tdwg.org/bdqtest/specification/221a02d3-c01e-48c8-9726-8ce423cc6434</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -4787,6 +4939,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/2ffe66fb-9208-4ad5-a0e8-0df1fcd52e5f">https://rs.tdwg.org/bdqtest/method/2ffe66fb-9208-4ad5-a0e8-0df1fcd52e5f</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_NOTEMPTY</td>
 		</tr>
@@ -4830,8 +4986,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_BASISOFRECORD_STANDARD in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:f094b94f-09b6-4fb0-8ba4-24252a2101c4</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/ef127cb0-c5c2-4bb0-aa4a-df4a42dfcabe">https://rs.tdwg.org/bdqtest/specification/ef127cb0-c5c2-4bb0-aa4a-df4a42dfcabe</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -4882,6 +5038,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_STANDARD</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/c5482b41-234c-4ac0-b6f0-bebb1f93c51d">https://rs.tdwg.org/bdqtest/method/c5482b41-234c-4ac0-b6f0-bebb1f93c51d</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_STANDARD</td>
 		</tr>
@@ -4925,8 +5085,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_CLASSIFICATION_CONSISTENT in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:21d0b5f6-5b3e-4810-8413-c975b7cf343a</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/0f948339-0ec9-451f-b6ea-6272404be2c1">https://rs.tdwg.org/bdqtest/specification/0f948339-0ec9-451f-b6ea-6272404be2c1</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -4977,6 +5137,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASSIFICATION_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASSIFICATION_CONSISTENT</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/b4b92d16-40bf-4a3d-a802-112e9c282f23">https://rs.tdwg.org/bdqtest/method/b4b92d16-40bf-4a3d-a802-112e9c282f23</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASSIFICATION_CONSISTENT</td>
 		</tr>
@@ -5020,8 +5184,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_CLASS_FOUND in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:a2b39526-d08a-4a91-8b6d-aacf73677789</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/be57619a-9c9d-459f-8fb6-02aa912cd696">https://rs.tdwg.org/bdqtest/specification/be57619a-9c9d-459f-8fb6-02aa912cd696</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -5072,6 +5236,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASS_FOUND with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASS_FOUND</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/c779729f-1217-4023-ae22-405f271fae34">https://rs.tdwg.org/bdqtest/method/c779729f-1217-4023-ae22-405f271fae34</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASS_FOUND</td>
 		</tr>
@@ -5115,8 +5283,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:4343a7e0-7f0b-434d-99d4-e939ecb16e1f</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/4299e1b9-042e-4967-a721-6e44569526e8">https://rs.tdwg.org/bdqtest/specification/4299e1b9-042e-4967-a721-6e44569526e8</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -5167,6 +5335,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESCOUNTRYCODE_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESCOUNTRYCODE_CONSISTENT</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/c3b3862b-5ea3-494b-9a09-8bb3d9dfe016">https://rs.tdwg.org/bdqtest/method/c3b3862b-5ea3-494b-9a09-8bb3d9dfe016</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESCOUNTRYCODE_CONSISTENT</td>
 		</tr>
@@ -5210,8 +5382,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:4dd617df-a984-419f-b7b5-098b2023c4ab</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/e4de3444-b469-426d-abed-30b345328da4">https://rs.tdwg.org/bdqtest/specification/e4de3444-b469-426d-abed-30b345328da4</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -5262,6 +5434,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESSTATEPROVINCE_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESSTATEPROVINCE_CONSISTENT</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/b64c6792-c08c-46da-b98b-e0bb0363c2ed">https://rs.tdwg.org/bdqtest/method/b64c6792-c08c-46da-b98b-e0bb0363c2ed</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESSTATEPROVINCE_CONSISTENT</td>
 		</tr>
@@ -5305,8 +5481,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:45cb9e13-7944-4535-a5ef-f6ededb77305</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/dbedc71f-74ba-4046-812d-1d96f9382a91">https://rs.tdwg.org/bdqtest/specification/dbedc71f-74ba-4046-812d-1d96f9382a91</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -5357,6 +5533,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESTERRESTRIALMARINE_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESTERRESTRIALMARINE_CONSISTENT</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/66e40165-c61e-461b-b91d-7d2b3c3427fe">https://rs.tdwg.org/bdqtest/method/66e40165-c61e-461b-b91d-7d2b3c3427fe</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESTERRESTRIALMARINE_CONSISTENT</td>
 		</tr>
@@ -5400,8 +5580,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_COORDINATES_NOTZERO in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:b482148e-9ac2-47ad-99b5-462508e9f360</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/0a4b0450-5f8d-4425-9bf3-dc79498741c0">https://rs.tdwg.org/bdqtest/specification/0a4b0450-5f8d-4425-9bf3-dc79498741c0</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -5452,6 +5632,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATES_NOTZERO with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATES_NOTZERO</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/fc17791a-b09e-45ac-ab3d-cd745d202c2d">https://rs.tdwg.org/bdqtest/method/fc17791a-b09e-45ac-ab3d-cd745d202c2d</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATES_NOTZERO</td>
 		</tr>
@@ -5495,8 +5679,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_COORDINATEUNCERTAINTY_INRANGE in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:f8dfc3fc-6580-4518-b2b4-595c29e9042e</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/e281f245-452f-4afb-a900-3269ce97ff05">https://rs.tdwg.org/bdqtest/specification/e281f245-452f-4afb-a900-3269ce97ff05</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -5547,6 +5731,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATEUNCERTAINTY_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATEUNCERTAINTY_INRANGE</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/ce0298ca-cda6-4952-81e1-9a2791483cb5">https://rs.tdwg.org/bdqtest/method/ce0298ca-cda6-4952-81e1-9a2791483cb5</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATEUNCERTAINTY_INRANGE</td>
 		</tr>
@@ -5590,8 +5778,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_COUNTRYCODE_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:d153d4bd-b39d-43b0-b00a-395ff3e2ca62</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/73a96a86-9ef2-4bb1-a8a0-f903c6744d75">https://rs.tdwg.org/bdqtest/specification/73a96a86-9ef2-4bb1-a8a0-f903c6744d75</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -5642,6 +5830,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/573e9d1a-f687-4efa-977d-5c696012c571">https://rs.tdwg.org/bdqtest/method/573e9d1a-f687-4efa-977d-5c696012c571</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_NOTEMPTY</td>
 		</tr>
@@ -5685,8 +5877,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_COUNTRYCODE_STANDARD in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:01b96157-e4a1-4884-95d7-3bcfc5f3c047</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/4365c5a8-2a44-493c-acbc-c6ed57b2c6ad">https://rs.tdwg.org/bdqtest/specification/4365c5a8-2a44-493c-acbc-c6ed57b2c6ad</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -5737,6 +5929,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_STANDARD</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/d7d0977d-c8d4-4f76-9fec-5da1c0b242f7">https://rs.tdwg.org/bdqtest/method/d7d0977d-c8d4-4f76-9fec-5da1c0b242f7</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_STANDARD</td>
 		</tr>
@@ -5780,8 +5976,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:6f1093a0-0da5-4691-a95e-184d6d55eeb0</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/d2c47382-3a98-4855-a562-503ba125fa25">https://rs.tdwg.org/bdqtest/specification/d2c47382-3a98-4855-a562-503ba125fa25</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -5832,6 +6028,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCOUNTRYCODE_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCOUNTRYCODE_CONSISTENT</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/0f7cc4a7-55b8-4108-bfdf-2b35d7f69262">https://rs.tdwg.org/bdqtest/method/0f7cc4a7-55b8-4108-bfdf-2b35d7f69262</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCOUNTRYCODE_CONSISTENT</td>
 		</tr>
@@ -5875,8 +6075,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:e5efdd20-d1fc-4287-91f9-15b9ce3f3aac</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/809e0413-0fb4-4e44-bfa7-b3b728372fb8">https://rs.tdwg.org/bdqtest/specification/809e0413-0fb4-4e44-bfa7-b3b728372fb8</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -5927,6 +6127,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYSTATEPROVINCE_UNAMBIGUOUS with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYSTATEPROVINCE_UNAMBIGUOUS</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/683c56f0-23ec-4130-8e5e-28ea0ef66501">https://rs.tdwg.org/bdqtest/method/683c56f0-23ec-4130-8e5e-28ea0ef66501</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYSTATEPROVINCE_UNAMBIGUOUS</td>
 		</tr>
@@ -5970,8 +6174,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_COUNTRY_FOUND in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:051f6ad7-1a4b-4e6c-8a1d-2af76de24848</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/4badb4f9-f739-486f-aa0f-4fa351ed2e84">https://rs.tdwg.org/bdqtest/specification/4badb4f9-f739-486f-aa0f-4fa351ed2e84</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -6022,6 +6226,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_FOUND with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_FOUND</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/9489fa31-fe80-4e3a-b4ed-d547df73c29a">https://rs.tdwg.org/bdqtest/method/9489fa31-fe80-4e3a-b4ed-d547df73c29a</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_FOUND</td>
 		</tr>
@@ -6065,8 +6273,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_COUNTRY_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:34ef6ea2-de06-4d2c-88fe-2c779de8f7db</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/2a5be256-6d25-4d05-bcc7-3b43a383d443">https://rs.tdwg.org/bdqtest/specification/2a5be256-6d25-4d05-bcc7-3b43a383d443</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -6117,6 +6325,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/c7fe0448-b77d-4eb2-8123-d96a63ef4aa8">https://rs.tdwg.org/bdqtest/method/c7fe0448-b77d-4eb2-8123-d96a63ef4aa8</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_NOTEMPTY</td>
 		</tr>
@@ -6160,8 +6372,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_DATEIDENTIFIED_INRANGE in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:a25786df-a624-4ff2-8962-6b23e8b07b0b</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/f41b08a1-afb0-4075-b591-dfdb4174af51">https://rs.tdwg.org/bdqtest/specification/f41b08a1-afb0-4075-b591-dfdb4174af51</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -6212,6 +6424,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DATEIDENTIFIED_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DATEIDENTIFIED_INRANGE</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/f9ef8fc4-3169-48ae-ab8f-ab1d58fb82d7">https://rs.tdwg.org/bdqtest/method/f9ef8fc4-3169-48ae-ab8f-ab1d58fb82d7</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DATEIDENTIFIED_INRANGE</td>
 		</tr>
@@ -6255,8 +6471,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_DATEIDENTIFIED_STANDARD in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:89f8b2ea-fc35-4941-929a-0e32cfbeb1a6</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/fee0daaa-9273-469c-9c7d-a62fafe05874">https://rs.tdwg.org/bdqtest/specification/fee0daaa-9273-469c-9c7d-a62fafe05874</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -6307,6 +6523,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DATEIDENTIFIED_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DATEIDENTIFIED_STANDARD</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/f27a494c-aacf-4796-b1ff-f6187056e79d">https://rs.tdwg.org/bdqtest/method/f27a494c-aacf-4796-b1ff-f6187056e79d</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DATEIDENTIFIED_STANDARD</td>
 		</tr>
@@ -6350,8 +6570,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_DAY_INRANGE in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:2563ae15-a5bf-48fc-91f3-6df869aece2d</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/df76475a-0207-4f98-b898-c1623d759442">https://rs.tdwg.org/bdqtest/specification/df76475a-0207-4f98-b898-c1623d759442</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -6402,6 +6622,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_INRANGE</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/b6cbae5f-c4bd-4947-9a76-930592c52bb1">https://rs.tdwg.org/bdqtest/method/b6cbae5f-c4bd-4947-9a76-930592c52bb1</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_INRANGE</td>
 		</tr>
@@ -6445,8 +6669,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_DAY_STANDARD in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:c0fce1a1-8879-4175-8a71-ce037655c358</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/e7bcd71f-7156-4e5b-9732-3fac13338f83">https://rs.tdwg.org/bdqtest/specification/e7bcd71f-7156-4e5b-9732-3fac13338f83</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -6497,6 +6721,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_STANDARD</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/317a82e3-3734-4163-b9e2-b13d93a8ce04">https://rs.tdwg.org/bdqtest/method/317a82e3-3734-4163-b9e2-b13d93a8ce04</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_STANDARD</td>
 		</tr>
@@ -6540,8 +6768,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_DCTYPE_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:e1286c46-2a95-480d-89e4-f02681372eb7</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/21fed9f3-89e6-466a-b7ce-4277038c84ea">https://rs.tdwg.org/bdqtest/specification/21fed9f3-89e6-466a-b7ce-4277038c84ea</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -6592,6 +6820,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DCTYPE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DCTYPE_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/57b42703-ccce-4f51-8c2c-c044d3af6c01">https://rs.tdwg.org/bdqtest/method/57b42703-ccce-4f51-8c2c-c044d3af6c01</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DCTYPE_NOTEMPTY</td>
 		</tr>
@@ -6635,8 +6867,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_DCTYPE_STANDARD in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:b85129f0-28c2-4ede-aff2-5ce3791c6e86</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/7c49e2d3-5d57-460f-b98a-8bba82b7156f">https://rs.tdwg.org/bdqtest/specification/7c49e2d3-5d57-460f-b98a-8bba82b7156f</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -6687,6 +6919,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DCTYPE_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DCTYPE_STANDARD</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/73019d00-f6a5-4617-808b-6dc940f36654">https://rs.tdwg.org/bdqtest/method/73019d00-f6a5-4617-808b-6dc940f36654</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DCTYPE_STANDARD</td>
 		</tr>
@@ -6730,8 +6966,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_DECIMALLATITUDE_INRANGE in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:a5111c0c-d198-4ecc-af10-809ae2b3ae01</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/7097d191-ad02-4dae-870e-fa88541cd0a7">https://rs.tdwg.org/bdqtest/specification/7097d191-ad02-4dae-870e-fa88541cd0a7</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -6782,6 +7018,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLATITUDE_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLATITUDE_INRANGE</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/799beb58-39b8-40cf-b8a3-68aca8ec5beb">https://rs.tdwg.org/bdqtest/method/799beb58-39b8-40cf-b8a3-68aca8ec5beb</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLATITUDE_INRANGE</td>
 		</tr>
@@ -6825,8 +7065,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_DECIMALLATITUDE_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:0067fa60-5503-490e-8c94-93fb79cc7da2</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/60d3d418-4eed-4190-9690-ae945fe34736">https://rs.tdwg.org/bdqtest/specification/60d3d418-4eed-4190-9690-ae945fe34736</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -6877,6 +7117,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLATITUDE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLATITUDE_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/b7faf32c-2560-4198-906a-5cad6cae4c24">https://rs.tdwg.org/bdqtest/method/b7faf32c-2560-4198-906a-5cad6cae4c24</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLATITUDE_NOTEMPTY</td>
 		</tr>
@@ -6920,8 +7164,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_DECIMALLONGITUDE_INRANGE in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:1a504f7f-21a7-49e1-a0dc-f51146957fa4</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/2212fef0-54f8-4508-b925-4aa99b7a4715">https://rs.tdwg.org/bdqtest/specification/2212fef0-54f8-4508-b925-4aa99b7a4715</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -6972,6 +7216,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLONGITUDE_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLONGITUDE_INRANGE</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/62c9ba6a-b8d3-4746-9c97-d4143f976439">https://rs.tdwg.org/bdqtest/method/62c9ba6a-b8d3-4746-9c97-d4143f976439</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLONGITUDE_INRANGE</td>
 		</tr>
@@ -7015,8 +7263,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_DECIMALLONGITUDE_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:c893ee17-ee8b-43ec-bf17-97ac814ea502</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/123392d9-c81c-4f3a-82bd-6f053eb41b65">https://rs.tdwg.org/bdqtest/specification/123392d9-c81c-4f3a-82bd-6f053eb41b65</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -7067,6 +7315,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLONGITUDE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLONGITUDE_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/cf1fc4ae-bcec-4d85-ac3e-bbc50f116d66">https://rs.tdwg.org/bdqtest/method/cf1fc4ae-bcec-4d85-ac3e-bbc50f116d66</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLONGITUDE_NOTEMPTY</td>
 		</tr>
@@ -7110,8 +7362,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_DEGREEOFESTABLISHMENT_STANDARD in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:fec2103b-5d46-4723-b2ec-8c8119b44aaf</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/34f8599a-e720-4b9d-af0a-67096be7500c">https://rs.tdwg.org/bdqtest/specification/34f8599a-e720-4b9d-af0a-67096be7500c</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -7162,6 +7414,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DEGREEOFESTABLISHMENT_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DEGREEOFESTABLISHMENT_STANDARD</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/64c18cac-e64d-4985-95d6-79dc22b5a15f">https://rs.tdwg.org/bdqtest/method/64c18cac-e64d-4985-95d6-79dc22b5a15f</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DEGREEOFESTABLISHMENT_STANDARD</td>
 		</tr>
@@ -7205,8 +7461,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_ENDDAYOFYEAR_INRANGE in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:62f754b5-a0a1-4b24-9982-b76e4e169f71</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/4b92124d-ee59-4183-b3da-77833996c053">https://rs.tdwg.org/bdqtest/specification/4b92124d-ee59-4183-b3da-77833996c053</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -7257,6 +7513,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_ENDDAYOFYEAR_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_ENDDAYOFYEAR_INRANGE</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/6878bd5c-cac6-4d0b-aa0e-119f1dcc010c">https://rs.tdwg.org/bdqtest/method/6878bd5c-cac6-4d0b-aa0e-119f1dcc010c</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_ENDDAYOFYEAR_INRANGE</td>
 		</tr>
@@ -7300,8 +7560,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_ESTABLISHMENTMEANS_STANDARD in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:f1d3bf9c-5558-41dc-8e33-b17c499be016</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/3863808c-ea76-4490-a09c-a87cfebb2fb4">https://rs.tdwg.org/bdqtest/specification/3863808c-ea76-4490-a09c-a87cfebb2fb4</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -7352,6 +7612,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_ESTABLISHMENTMEANS_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_ESTABLISHMENTMEANS_STANDARD</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/dfee6537-6ecc-4359-95ce-553050d8be59">https://rs.tdwg.org/bdqtest/method/dfee6537-6ecc-4359-95ce-553050d8be59</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_ESTABLISHMENTMEANS_STANDARD</td>
 		</tr>
@@ -7395,8 +7659,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_EVENTDATE_INRANGE in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:29a1fdc6-326b-4017-880d-d11ff0225b8f</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/5231f13b-bc40-40b3-b542-85d0f17c5b0c">https://rs.tdwg.org/bdqtest/specification/5231f13b-bc40-40b3-b542-85d0f17c5b0c</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -7447,6 +7711,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_INRANGE</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/34e79155-98da-4d5f-afde-60c95b7f1a6e">https://rs.tdwg.org/bdqtest/method/34e79155-98da-4d5f-afde-60c95b7f1a6e</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_INRANGE</td>
 		</tr>
@@ -7490,8 +7758,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_EVENTDATE_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:1fae3f77-7fcb-42c6-ab43-1ff28adf4fa4</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/36de5de9-00d2-4b79-8ff7-b82b321fc35f">https://rs.tdwg.org/bdqtest/specification/36de5de9-00d2-4b79-8ff7-b82b321fc35f</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -7542,6 +7810,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/fd524e7d-a7fe-4c75-bfaa-0fc7d96cc8b7">https://rs.tdwg.org/bdqtest/method/fd524e7d-a7fe-4c75-bfaa-0fc7d96cc8b7</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_NOTEMPTY</td>
 		</tr>
@@ -7585,8 +7857,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_EVENTDATE_STANDARD in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:80c8f69b-4ad3-40ee-bccd-de016bfae367</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/5311be07-b9ce-4609-9859-bfb68ab958fc">https://rs.tdwg.org/bdqtest/specification/5311be07-b9ce-4609-9859-bfb68ab958fc</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -7637,6 +7909,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_STANDARD</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/612e903c-56df-4e9a-afba-11a766900cfe">https://rs.tdwg.org/bdqtest/method/612e903c-56df-4e9a-afba-11a766900cfe</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_STANDARD</td>
 		</tr>
@@ -7680,8 +7956,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_EVENTTEMPORAL_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:b57460c4-16e1-4c1d-8a07-a53aee9e8922</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/5e402929-b1c0-48e2-aaf6-cc6e365c9c42">https://rs.tdwg.org/bdqtest/specification/5e402929-b1c0-48e2-aaf6-cc6e365c9c42</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -7732,6 +8008,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTTEMPORAL_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTTEMPORAL_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/9409ef24-baf9-4dfc-b4a8-7b6459cc1d54">https://rs.tdwg.org/bdqtest/method/9409ef24-baf9-4dfc-b4a8-7b6459cc1d54</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTTEMPORAL_NOTEMPTY</td>
 		</tr>
@@ -7775,8 +8055,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_EVENT_CONSISTENT in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:83d057ea-a6f6-49e6-ac3c-0c418776a0e0</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/755db673-962e-4c3a-a033-fb5b05b1d66b">https://rs.tdwg.org/bdqtest/specification/755db673-962e-4c3a-a033-fb5b05b1d66b</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -7827,6 +8107,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENT_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENT_CONSISTENT</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/0e8be8ac-143b-4f80-9b70-f037c041bc7a">https://rs.tdwg.org/bdqtest/method/0e8be8ac-143b-4f80-9b70-f037c041bc7a</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENT_CONSISTENT</td>
 		</tr>
@@ -7870,8 +8154,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_FAMILY_FOUND in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:16f999d9-1cf5-4208-b2ca-1a93d6700085</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/6a4e4bdf-dc92-4a93-b127-093224b44c19">https://rs.tdwg.org/bdqtest/specification/6a4e4bdf-dc92-4a93-b127-093224b44c19</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -7922,6 +8206,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_FAMILY_FOUND with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_FAMILY_FOUND</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/a36114dc-3370-4c9e-8cad-e0f871754365">https://rs.tdwg.org/bdqtest/method/a36114dc-3370-4c9e-8cad-e0f871754365</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_FAMILY_FOUND</td>
 		</tr>
@@ -7965,8 +8253,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_GENUS_FOUND in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:15bbda19-dd18-471a-a5c3-56c7e543012f</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/fcbc5474-422f-4e72-8419-48fee6bf578e">https://rs.tdwg.org/bdqtest/specification/fcbc5474-422f-4e72-8419-48fee6bf578e</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -8017,6 +8305,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_GENUS_FOUND with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_GENUS_FOUND</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/0cfe094e-c200-4a8c-b144-7fb0545e4cab">https://rs.tdwg.org/bdqtest/method/0cfe094e-c200-4a8c-b144-7fb0545e4cab</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_GENUS_FOUND</td>
 		</tr>
@@ -8060,8 +8352,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_GEODETICDATUM_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:a3c8b277-15fb-4ae8-afb1-e64fb6eb5241</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/a8a6e3a3-7df2-477a-ba35-552151f6f771">https://rs.tdwg.org/bdqtest/specification/a8a6e3a3-7df2-477a-ba35-552151f6f771</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -8112,6 +8404,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/624278a4-eebe-4d0d-89ea-416b697cdb9a">https://rs.tdwg.org/bdqtest/method/624278a4-eebe-4d0d-89ea-416b697cdb9a</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_NOTEMPTY</td>
 		</tr>
@@ -8155,8 +8451,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_GEODETICDATUM_STANDARD in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:5cc05662-c029-4ba9-b32e-fb487ccba71c</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/d2f89397-78f3-4e67-8994-79102470d305">https://rs.tdwg.org/bdqtest/specification/d2f89397-78f3-4e67-8994-79102470d305</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -8207,6 +8503,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_STANDARD</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/95b63dab-dd45-49e0-892f-44a73e76fc00">https://rs.tdwg.org/bdqtest/method/95b63dab-dd45-49e0-892f-44a73e76fc00</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_STANDARD</td>
 		</tr>
@@ -8250,8 +8550,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_KINGDOM_FOUND in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:a90e100a-3522-4742-aa73-3b98a35ab826</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/5fc8b4cc-9da2-4f6a-8fb9-00f6ca3576f7">https://rs.tdwg.org/bdqtest/specification/5fc8b4cc-9da2-4f6a-8fb9-00f6ca3576f7</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -8302,6 +8602,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_KINGDOM_FOUND with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_KINGDOM_FOUND</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/0f6f7d29-be39-4285-8e17-d71a9e350d38">https://rs.tdwg.org/bdqtest/method/0f6f7d29-be39-4285-8e17-d71a9e350d38</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_KINGDOM_FOUND</td>
 		</tr>
@@ -8345,8 +8649,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_KINGDOM_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:e6f0a9ce-3e72-40fb-9fad-63cf5962f93e</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/1e548db5-3f69-43b3-ad99-98c75305762e">https://rs.tdwg.org/bdqtest/specification/1e548db5-3f69-43b3-ad99-98c75305762e</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -8397,6 +8701,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_KINGDOM_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_KINGDOM_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/afb83bc1-4c79-4254-9938-ee470d2eecc2">https://rs.tdwg.org/bdqtest/method/afb83bc1-4c79-4254-9938-ee470d2eecc2</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_KINGDOM_NOTEMPTY</td>
 		</tr>
@@ -8440,8 +8748,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_LICENSE_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:d8b450af-47e6-4f5c-8154-6d6acbe9efa5</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/728b4db4-aff0-484f-9a5d-976b1f36cfb4">https://rs.tdwg.org/bdqtest/specification/728b4db4-aff0-484f-9a5d-976b1f36cfb4</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -8492,6 +8800,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/1683d750-e0bb-4ad7-baa9-9e59735d7de1">https://rs.tdwg.org/bdqtest/method/1683d750-e0bb-4ad7-baa9-9e59735d7de1</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_NOTEMPTY</td>
 		</tr>
@@ -8535,8 +8847,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_LICENSE_STANDARD in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:2a9dbd16-d427-471e-8db5-c1de2b2cf030</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/68e86c5a-f444-4aff-b54c-47bc100bcf4b">https://rs.tdwg.org/bdqtest/specification/68e86c5a-f444-4aff-b54c-47bc100bcf4b</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -8587,6 +8899,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_STANDARD</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/5c06b6ae-7229-49cc-a0e8-4c0bae153b4b">https://rs.tdwg.org/bdqtest/method/5c06b6ae-7229-49cc-a0e8-4c0bae153b4b</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_STANDARD</td>
 		</tr>
@@ -8630,8 +8946,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_LOCATION_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:30ed5e2d-ef30-4988-8dbb-12c119e94ac3</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/5fae3e9c-b1cc-4346-a845-e7f1573481ea">https://rs.tdwg.org/bdqtest/specification/5fae3e9c-b1cc-4346-a845-e7f1573481ea</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -8682,6 +8998,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_LOCATION_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_LOCATION_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/63e51c38-5bb5-4422-9df0-3ea88bde5e17">https://rs.tdwg.org/bdqtest/method/63e51c38-5bb5-4422-9df0-3ea88bde5e17</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_LOCATION_NOTEMPTY</td>
 		</tr>
@@ -8725,8 +9045,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_MAXDEPTH_INRANGE in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:cebc8ba0-ca02-4f1e-830e-ec693bc628e4</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/ec660fd1-3b67-47b3-907d-80e6799f43b9">https://rs.tdwg.org/bdqtest/specification/ec660fd1-3b67-47b3-907d-80e6799f43b9</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -8777,6 +9097,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MAXDEPTH_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MAXDEPTH_INRANGE</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/686b728d-20c5-4593-8022-e8cc575dd737">https://rs.tdwg.org/bdqtest/method/686b728d-20c5-4593-8022-e8cc575dd737</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MAXDEPTH_INRANGE</td>
 		</tr>
@@ -8820,8 +9144,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_MAXELEVATION_INRANGE in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:f9471802-a5f7-4f4e-9810-f3f4f43dad1a</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/43bdbdf5-cfa7-455c-80e3-dbd14117bb69">https://rs.tdwg.org/bdqtest/specification/43bdbdf5-cfa7-455c-80e3-dbd14117bb69</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -8872,6 +9196,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MAXELEVATION_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MAXELEVATION_INRANGE</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/00aa23d4-1278-4726-b6b2-6f08c37fce85">https://rs.tdwg.org/bdqtest/method/00aa23d4-1278-4726-b6b2-6f08c37fce85</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MAXELEVATION_INRANGE</td>
 		</tr>
@@ -8915,8 +9243,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_MINDEPTH_INRANGE in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:f3e03531-7ee5-4721-aae2-f554389e0544</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/64a7fd81-396c-4000-a11d-f89d62a57740">https://rs.tdwg.org/bdqtest/specification/64a7fd81-396c-4000-a11d-f89d62a57740</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -8967,6 +9295,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINDEPTH_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINDEPTH_INRANGE</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/de8001c9-2897-4fed-bbb3-b9b5c284e3ed">https://rs.tdwg.org/bdqtest/method/de8001c9-2897-4fed-bbb3-b9b5c284e3ed</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINDEPTH_INRANGE</td>
 		</tr>
@@ -9010,8 +9342,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:12f7f82e-ab1c-4690-92b8-ecc9328256c1</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/18eca445-c05b-443e-9819-d6ec516d963e">https://rs.tdwg.org/bdqtest/specification/18eca445-c05b-443e-9819-d6ec516d963e</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -9062,6 +9394,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINDEPTH_LESSTHAN_MAXDEPTH with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINDEPTH_LESSTHAN_MAXDEPTH</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/c4635758-9f98-4982-9d41-ff57ee475dc7">https://rs.tdwg.org/bdqtest/method/c4635758-9f98-4982-9d41-ff57ee475dc7</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINDEPTH_LESSTHAN_MAXDEPTH</td>
 		</tr>
@@ -9105,8 +9441,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_MINELEVATION_INRANGE in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:2bb79221-0312-410a-aef6-f569485df6a6</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/3cac6091-6898-48ea-86d9-3f5cd71c1efa">https://rs.tdwg.org/bdqtest/specification/3cac6091-6898-48ea-86d9-3f5cd71c1efa</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -9157,6 +9493,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINELEVATION_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINELEVATION_INRANGE</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/a684cc71-8c74-4c7e-b0db-3f93a874048e">https://rs.tdwg.org/bdqtest/method/a684cc71-8c74-4c7e-b0db-3f93a874048e</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINELEVATION_INRANGE</td>
 		</tr>
@@ -9200,8 +9540,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:f799fb5c-37e4-46d7-a07e-87eb071df9c6</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/ea0e998b-503c-4fff-92aa-9d96f56a65d8">https://rs.tdwg.org/bdqtest/specification/ea0e998b-503c-4fff-92aa-9d96f56a65d8</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -9252,6 +9592,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINELEVATION_LESSTHAN_MAXELEVATION with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINELEVATION_LESSTHAN_MAXELEVATION</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/d80952fd-a95b-4e83-b0db-55b85edd10ef">https://rs.tdwg.org/bdqtest/method/d80952fd-a95b-4e83-b0db-55b85edd10ef</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINELEVATION_LESSTHAN_MAXELEVATION</td>
 		</tr>
@@ -9295,8 +9639,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_MONTH_STANDARD in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:2c5dbdbb-feab-474c-bcca-bf6d1b90ae66</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/797b3653-1b79-4047-8f9a-82061b558a47">https://rs.tdwg.org/bdqtest/specification/797b3653-1b79-4047-8f9a-82061b558a47</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -9347,6 +9691,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MONTH_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MONTH_STANDARD</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/0fc63cd3-953a-4a11-b193-aab8100c7720">https://rs.tdwg.org/bdqtest/method/0fc63cd3-953a-4a11-b193-aab8100c7720</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MONTH_STANDARD</td>
 		</tr>
@@ -9390,8 +9738,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:f09fc9ad-a449-4422-b32f-63d8ccf2501f</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/f711c764-0ee2-4e73-a0d1-82ae94634f7d">https://rs.tdwg.org/bdqtest/specification/f711c764-0ee2-4e73-a0d1-82ae94634f7d</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -9442,6 +9790,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_NAMEPUBLISHEDINYEAR_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_NAMEPUBLISHEDINYEAR_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/0d1254e9-aaee-4a0d-9dd4-8959ada7f0c6">https://rs.tdwg.org/bdqtest/method/0d1254e9-aaee-4a0d-9dd4-8959ada7f0c6</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_NAMEPUBLISHEDINYEAR_NOTEMPTY</td>
 		</tr>
@@ -9485,8 +9837,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_OCCURRENCEID_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:3d9e1339-19d7-47e7-af9e-11905df82b6a</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/35b82564-c496-461e-88ec-cc606d7a6112">https://rs.tdwg.org/bdqtest/specification/35b82564-c496-461e-88ec-cc606d7a6112</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -9537,6 +9889,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCEID_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCEID_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/5fbbcdab-6cf5-482a-b963-1af053625f3a">https://rs.tdwg.org/bdqtest/method/5fbbcdab-6cf5-482a-b963-1af053625f3a</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCEID_NOTEMPTY</td>
 		</tr>
@@ -9580,8 +9936,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_OCCURRENCESTATUS_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:c3a53898-c4ad-40e0-961b-b4ceafea37c7</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/1319a50d-2ded-4328-b3c2-2e9cb5e7c6bb">https://rs.tdwg.org/bdqtest/specification/1319a50d-2ded-4328-b3c2-2e9cb5e7c6bb</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -9632,6 +9988,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCESTATUS_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCESTATUS_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/c8273994-3c92-480e-a127-4e35a41bccae">https://rs.tdwg.org/bdqtest/method/c8273994-3c92-480e-a127-4e35a41bccae</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCESTATUS_NOTEMPTY</td>
 		</tr>
@@ -9675,8 +10035,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_OCCURRENCESTATUS_STANDARD in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:fbe854d4-acf3-4c79-a654-81441fed644f</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/66e20810-2936-4932-950f-53e7680c7ca1">https://rs.tdwg.org/bdqtest/specification/66e20810-2936-4932-950f-53e7680c7ca1</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -9727,6 +10087,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCESTATUS_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCESTATUS_STANDARD</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/66546be0-df63-4e9e-a339-a81f253ad317">https://rs.tdwg.org/bdqtest/method/66546be0-df63-4e9e-a339-a81f253ad317</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCESTATUS_STANDARD</td>
 		</tr>
@@ -9770,8 +10134,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_ORDER_FOUND in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:ae08b4b4-89ba-4972-b51f-912b132bd006</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/53c80627-1b2c-491e-bc9f-1b5ccf121a08">https://rs.tdwg.org/bdqtest/specification/53c80627-1b2c-491e-bc9f-1b5ccf121a08</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -9822,6 +10186,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_ORDER_FOUND with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_ORDER_FOUND</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/3cce3c7b-a343-4aed-be6d-7a66c4fa03a0">https://rs.tdwg.org/bdqtest/method/3cce3c7b-a343-4aed-be6d-7a66c4fa03a0</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_ORDER_FOUND</td>
 		</tr>
@@ -9865,8 +10233,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_PATHWAY_STANDARD in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:c7c92ef0-284e-4c5d-8fc9-f1480bfe0b8e</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/420ffd9b-7eda-47a6-af3a-df69cf63b6d5">https://rs.tdwg.org/bdqtest/specification/420ffd9b-7eda-47a6-af3a-df69cf63b6d5</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -9917,6 +10285,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_PATHWAY_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_PATHWAY_STANDARD</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/0437ef18-2a7b-422c-8dbc-11dac268955b">https://rs.tdwg.org/bdqtest/method/0437ef18-2a7b-422c-8dbc-11dac268955b</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_PATHWAY_STANDARD</td>
 		</tr>
@@ -9960,8 +10332,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_PHYLUM_FOUND in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:1193230f-f188-4917-92da-bba3390ed3fa</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/315b59c1-85ab-428a-824c-9c9639f5fa7e">https://rs.tdwg.org/bdqtest/specification/315b59c1-85ab-428a-824c-9c9639f5fa7e</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -10012,6 +10384,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_PHYLUM_FOUND with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_PHYLUM_FOUND</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/ec957d61-c1aa-4040-94ff-cbf439df3a52">https://rs.tdwg.org/bdqtest/method/ec957d61-c1aa-4040-94ff-cbf439df3a52</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_PHYLUM_FOUND</td>
 		</tr>
@@ -10055,8 +10431,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_POLYNOMIAL_CONSISTENT in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:d92c5e23-bf6a-483b-86c3-9374e12d01c7</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/88fe8922-3eb1-4faa-b4aa-fe3daf742438">https://rs.tdwg.org/bdqtest/specification/88fe8922-3eb1-4faa-b4aa-fe3daf742438</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -10107,6 +10483,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_POLYNOMIAL_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_POLYNOMIAL_CONSISTENT</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/f7719d75-d067-401b-af69-92cf82b12ba1">https://rs.tdwg.org/bdqtest/method/f7719d75-d067-401b-af69-92cf82b12ba1</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_POLYNOMIAL_CONSISTENT</td>
 		</tr>
@@ -10150,8 +10530,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:e9ffc3b0-0fb8-4a7c-a588-a00085ba980b</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/2b29c224-435f-49fd-b010-16def638be27">https://rs.tdwg.org/bdqtest/specification/2b29c224-435f-49fd-b010-16def638be27</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -10202,6 +10582,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/7805aa92-8bb4-4cde-8095-45073bb1f9df">https://rs.tdwg.org/bdqtest/method/7805aa92-8bb4-4cde-8095-45073bb1f9df</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY</td>
 		</tr>
@@ -10245,8 +10629,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_SCIENTIFICNAMEID_COMPLETE in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:e6c02558-8541-4292-9a11-2f4408d69699</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/523f85e9-a15f-493a-82da-fe08119925ea">https://rs.tdwg.org/bdqtest/specification/523f85e9-a15f-493a-82da-fe08119925ea</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -10297,6 +10681,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEID_COMPLETE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEID_COMPLETE</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/486dd6c7-6034-4b63-9da8-842c317ea4af">https://rs.tdwg.org/bdqtest/method/486dd6c7-6034-4b63-9da8-842c317ea4af</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEID_COMPLETE</td>
 		</tr>
@@ -10340,8 +10728,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_SCIENTIFICNAMEID_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:02242018-3e73-4e0a-8d6f-d1db06cf81a3</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/7dc4a4bd-8c04-45c5-9d1a-46080473e3d6">https://rs.tdwg.org/bdqtest/specification/7dc4a4bd-8c04-45c5-9d1a-46080473e3d6</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -10392,6 +10780,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEID_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEID_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/968490ca-88c7-499b-8dc2-8f14db98eff1">https://rs.tdwg.org/bdqtest/method/968490ca-88c7-499b-8dc2-8f14db98eff1</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEID_NOTEMPTY</td>
 		</tr>
@@ -10435,8 +10827,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_SCIENTIFICNAME_FOUND in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:3c2fe7e9-186f-4ceb-8274-8bbcb4a62de4</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/c4969180-ef8f-4243-bf1a-a04cd115cfe7">https://rs.tdwg.org/bdqtest/specification/c4969180-ef8f-4243-bf1a-a04cd115cfe7</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -10487,6 +10879,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_FOUND with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_FOUND</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/a25d6216-e349-4a6e-bd2b-8857ca48628f">https://rs.tdwg.org/bdqtest/method/a25d6216-e349-4a6e-bd2b-8857ca48628f</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_FOUND</td>
 		</tr>
@@ -10530,8 +10926,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_SCIENTIFICNAME_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:a9c18563-f63e-42db-98e5-a3e6079086b7</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/1424d363-511c-4230-94e1-1b07dea73db5">https://rs.tdwg.org/bdqtest/specification/1424d363-511c-4230-94e1-1b07dea73db5</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -10582,6 +10978,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/f43da890-5389-4465-a2ac-628ffbc79207">https://rs.tdwg.org/bdqtest/method/f43da890-5389-4465-a2ac-628ffbc79207</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_NOTEMPTY</td>
 		</tr>
@@ -10625,8 +11025,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_SEX_STANDARD in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:72471db4-226c-454f-bbe8-5c1718e6c834</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/9f00505f-133d-47b5-9c81-4dc266896ad6">https://rs.tdwg.org/bdqtest/specification/9f00505f-133d-47b5-9c81-4dc266896ad6</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -10677,6 +11077,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SEX_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SEX_STANDARD</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/3cf9d546-bd23-4eb5-a866-4bafac20092f">https://rs.tdwg.org/bdqtest/method/3cf9d546-bd23-4eb5-a866-4bafac20092f</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SEX_STANDARD</td>
 		</tr>
@@ -10720,8 +11124,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_STARTDAYOFYEAR_INRANGE in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:53c6af68-6120-4da6-87d8-a3e9551b9671</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/9d7932d2-8b74-460c-a33a-74128d299c7a">https://rs.tdwg.org/bdqtest/specification/9d7932d2-8b74-460c-a33a-74128d299c7a</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -10772,6 +11176,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_STARTDAYOFYEAR_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_STARTDAYOFYEAR_INRANGE</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/e8700081-32c3-45d0-9aae-d322ac94d864">https://rs.tdwg.org/bdqtest/method/e8700081-32c3-45d0-9aae-d322ac94d864</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_STARTDAYOFYEAR_INRANGE</td>
 		</tr>
@@ -10815,8 +11223,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_STATEPROVINCE_FOUND in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:d261fac1-ce61-4879-bc04-870fa885b578</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/778976c3-2c33-4b8d-9135-a4d8ef36385f">https://rs.tdwg.org/bdqtest/specification/778976c3-2c33-4b8d-9135-a4d8ef36385f</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -10867,6 +11275,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_STATEPROVINCE_FOUND with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_STATEPROVINCE_FOUND</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/a6efb3ed-c977-4e6f-9b60-ba9d639bdd86">https://rs.tdwg.org/bdqtest/method/a6efb3ed-c977-4e6f-9b60-ba9d639bdd86</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_STATEPROVINCE_FOUND</td>
 		</tr>
@@ -10910,8 +11322,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_TAXONRANK_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:c619ec9b-92ec-4047-a8d3-931e3324bf3e</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/e251b99c-9726-44e3-b44d-6fa0feacc3b3">https://rs.tdwg.org/bdqtest/specification/e251b99c-9726-44e3-b44d-6fa0feacc3b3</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -10962,6 +11374,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXONRANK_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXONRANK_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/3703bd95-abdc-4364-9152-b1774b17da6e">https://rs.tdwg.org/bdqtest/method/3703bd95-abdc-4364-9152-b1774b17da6e</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXONRANK_NOTEMPTY</td>
 		</tr>
@@ -11005,8 +11421,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_TAXONRANK_STANDARD in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:c8964200-630e-47c6-baad-7e334fddbbdb</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/68db640c-ed46-4503-8d3a-31d23eb6c73c">https://rs.tdwg.org/bdqtest/specification/68db640c-ed46-4503-8d3a-31d23eb6c73c</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -11057,6 +11473,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXONRANK_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXONRANK_STANDARD</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/2f70455e-1821-4968-b67e-29fc684a1c6c">https://rs.tdwg.org/bdqtest/method/2f70455e-1821-4968-b67e-29fc684a1c6c</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXONRANK_STANDARD</td>
 		</tr>
@@ -11100,8 +11520,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_TAXON_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:f38e3644-354d-4180-bc7c-c437cef1d606</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/4209fe3a-1fae-4cdb-b3cc-29696b4e7964">https://rs.tdwg.org/bdqtest/specification/4209fe3a-1fae-4cdb-b3cc-29696b4e7964</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -11152,6 +11572,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXON_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXON_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/3a7890d7-f8f5-4f27-a07d-97e8ea4d5b09">https://rs.tdwg.org/bdqtest/method/3a7890d7-f8f5-4f27-a07d-97e8ea4d5b09</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXON_NOTEMPTY</td>
 		</tr>
@@ -11195,8 +11619,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_TAXON_UNAMBIGUOUS in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:8bd6f6de-49e4-4889-82e0-e4af093981e0</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/b268bebc-75ed-40c4-8526-907be35e54f4">https://rs.tdwg.org/bdqtest/specification/b268bebc-75ed-40c4-8526-907be35e54f4</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -11247,6 +11671,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXON_UNAMBIGUOUS with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXON_UNAMBIGUOUS</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/b189b2d9-a38f-464e-9a20-cdd584950a8b">https://rs.tdwg.org/bdqtest/method/b189b2d9-a38f-464e-9a20-cdd584950a8b</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXON_UNAMBIGUOUS</td>
 		</tr>
@@ -11290,8 +11718,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_TYPESTATUS_STANDARD in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:e4dbf38d-bdd7-4cf7-8c60-5b3bfc6af4ff</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/33f44f83-93ea-488a-bd24-2c34e6b8f513">https://rs.tdwg.org/bdqtest/specification/33f44f83-93ea-488a-bd24-2c34e6b8f513</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -11342,6 +11770,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TYPESTATUS_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TYPESTATUS_STANDARD</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/a2fcd8ee-3f1d-4aa7-af2e-95cf159fe3e2">https://rs.tdwg.org/bdqtest/method/a2fcd8ee-3f1d-4aa7-af2e-95cf159fe3e2</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TYPESTATUS_STANDARD</td>
 		</tr>
@@ -11385,8 +11817,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_YEAR_INRANGE in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:aee43366-0352-448a-a5ea-85ddc8605da1</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/296e60bb-6872-420d-9769-d3f26d205714">https://rs.tdwg.org/bdqtest/specification/296e60bb-6872-420d-9769-d3f26d205714</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -11437,6 +11869,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_INRANGE</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/5a87d516-fae8-4d9d-b979-c9d3f299df99">https://rs.tdwg.org/bdqtest/method/5a87d516-fae8-4d9d-b979-c9d3f299df99</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_INRANGE</td>
 		</tr>
@@ -11480,8 +11916,8 @@ Including MultiRecord Measures
 			<td>Count the number of VALIDATION_YEAR_NOTEMPTY in the MultiRecord that have Response.result=COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:42f331f4-a5a8-48b4-a08e-57048d1d1a77</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/64d2893d-aa67-41df-b5e4-f9978a83e35e">https://rs.tdwg.org/bdqtest/specification/64d2893d-aa67-41df-b5e4-f9978a83e35e</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -11532,6 +11968,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/d358d5cf-d6e6-4cd6-b195-7aa8643e4244">https://rs.tdwg.org/bdqtest/method/d358d5cf-d6e6-4cd6-b195-7aa8643e4244</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_NOTEMPTY</td>
 		</tr>
@@ -11575,8 +12015,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_BASISOFRECORD_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:5aabe3d4-d2c0-415c-8972-c834b543971a</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/0782e4e5-010f-4e59-82d7-618a84ead70a">https://rs.tdwg.org/bdqtest/specification/0782e4e5-010f-4e59-82d7-618a84ead70a</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -11627,6 +12067,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_BASISOFRECORD_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_BASISOFRECORD_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/8768b9a9-2054-401a-8d85-60791d94df91">https://rs.tdwg.org/bdqtest/method/8768b9a9-2054-401a-8d85-60791d94df91</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_BASISOFRECORD_NOTEMPTY</td>
 		</tr>
@@ -11670,8 +12114,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_BASISOFRECORD_STANDARD in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:f094b94f-09b6-4fb0-8ba4-24252a2101c4</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/f003048a-ad67-493c-8b87-e5f2cfb26981">https://rs.tdwg.org/bdqtest/specification/f003048a-ad67-493c-8b87-e5f2cfb26981</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -11722,6 +12166,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_BASISOFRECORD_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_BASISOFRECORD_STANDARD</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/6fba2f6c-4d87-4be6-bb3a-b553551c1d47">https://rs.tdwg.org/bdqtest/method/6fba2f6c-4d87-4be6-bb3a-b553551c1d47</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_BASISOFRECORD_STANDARD</td>
 		</tr>
@@ -11765,8 +12213,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_CLASSIFICATION_CONSISTENT in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:21d0b5f6-5b3e-4810-8413-c975b7cf343a</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/7701481b-dcb3-445a-ae50-b6bcde2163dd">https://rs.tdwg.org/bdqtest/specification/7701481b-dcb3-445a-ae50-b6bcde2163dd</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -11817,6 +12265,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_CLASSIFICATION_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_QA_CLASSIFICATION_CONSISTENT</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/c5ab8254-22df-4d08-86e1-6633707ab22b">https://rs.tdwg.org/bdqtest/method/c5ab8254-22df-4d08-86e1-6633707ab22b</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_CLASSIFICATION_CONSISTENT</td>
 		</tr>
@@ -11860,8 +12312,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_CLASS_FOUND in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:a2b39526-d08a-4a91-8b6d-aacf73677789</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/33abe762-eeca-41d0-a2b1-9847e2a07a59">https://rs.tdwg.org/bdqtest/specification/33abe762-eeca-41d0-a2b1-9847e2a07a59</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -11912,6 +12364,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_CLASS_FOUND with Specification Specification for: MULTIRECORD_MEASURE_QA_CLASS_FOUND</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/1ead6f88-824f-4d1f-a34b-11a1c3f8a871">https://rs.tdwg.org/bdqtest/method/1ead6f88-824f-4d1f-a34b-11a1c3f8a871</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_CLASS_FOUND</td>
 		</tr>
@@ -11955,8 +12411,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:4343a7e0-7f0b-434d-99d4-e939ecb16e1f</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/d95305ad-cf84-4473-8c24-09a4a236e262">https://rs.tdwg.org/bdqtest/specification/d95305ad-cf84-4473-8c24-09a4a236e262</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -12007,6 +12463,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_COORDINATESCOUNTRYCODE_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_QA_COORDINATESCOUNTRYCODE_CONSISTENT</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/e2857b1c-9c3d-4445-9f1e-32000e2243ce">https://rs.tdwg.org/bdqtest/method/e2857b1c-9c3d-4445-9f1e-32000e2243ce</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_COORDINATESCOUNTRYCODE_CONSISTENT</td>
 		</tr>
@@ -12050,8 +12510,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET; otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:4dd617df-a984-419f-b7b5-098b2023c4ab</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/809d2925-781f-432e-b5d6-4a91f1afe56c">https://rs.tdwg.org/bdqtest/specification/809d2925-781f-432e-b5d6-4a91f1afe56c</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -12102,6 +12562,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_COORDINATESSTATEPROVINCE_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_QA_COORDINATESSTATEPROVINCE_CONSISTENT</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/d1b7295f-9a2a-4a52-a066-6e3eac61b0c2">https://rs.tdwg.org/bdqtest/method/d1b7295f-9a2a-4a52-a066-6e3eac61b0c2</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_COORDINATESSTATEPROVINCE_CONSISTENT</td>
 		</tr>
@@ -12145,8 +12609,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:45cb9e13-7944-4535-a5ef-f6ededb77305</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/fcff1ad2-4469-4f4b-80b9-cbe82667682f">https://rs.tdwg.org/bdqtest/specification/fcff1ad2-4469-4f4b-80b9-cbe82667682f</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -12197,6 +12661,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_COORDINATESTERRESTRIALMARINE_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_QA_COORDINATESTERRESTRIALMARINE_CONSISTENT</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/2a044176-8820-4745-a797-9541c7e06ab2">https://rs.tdwg.org/bdqtest/method/2a044176-8820-4745-a797-9541c7e06ab2</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_COORDINATESTERRESTRIALMARINE_CONSISTENT</td>
 		</tr>
@@ -12240,8 +12708,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_COORDINATES_NOTZERO in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:b482148e-9ac2-47ad-99b5-462508e9f360</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/663022f5-df42-471d-861c-c8198ffbde65">https://rs.tdwg.org/bdqtest/specification/663022f5-df42-471d-861c-c8198ffbde65</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -12292,6 +12760,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_COORDINATES_NOTZERO with Specification Specification for: MULTIRECORD_MEASURE_QA_COORDINATES_NOTZERO</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/10cfdb9f-a8d4-42fa-81be-3811d3c9f03a">https://rs.tdwg.org/bdqtest/method/10cfdb9f-a8d4-42fa-81be-3811d3c9f03a</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_COORDINATES_NOTZERO</td>
 		</tr>
@@ -12335,8 +12807,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_COORDINATEUNCERTAINTY_INRANGE in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:f8dfc3fc-6580-4518-b2b4-595c29e9042e</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/b749a6bd-db12-4808-a137-52c96c66ce03">https://rs.tdwg.org/bdqtest/specification/b749a6bd-db12-4808-a137-52c96c66ce03</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -12387,6 +12859,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_COORDINATEUNCERTAINTY_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_COORDINATEUNCERTAINTY_INRANGE</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/7b36926a-b3b2-4a3e-828e-696fb28a1d6e">https://rs.tdwg.org/bdqtest/method/7b36926a-b3b2-4a3e-828e-696fb28a1d6e</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_COORDINATEUNCERTAINTY_INRANGE</td>
 		</tr>
@@ -12430,8 +12906,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_COUNTRYCODE_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:d153d4bd-b39d-43b0-b00a-395ff3e2ca62</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/17bebf9d-e049-497b-bcca-dd08939398ea">https://rs.tdwg.org/bdqtest/specification/17bebf9d-e049-497b-bcca-dd08939398ea</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -12482,6 +12958,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_COUNTRYCODE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_COUNTRYCODE_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/cde5acd3-b95d-444b-817c-8a20adadf279">https://rs.tdwg.org/bdqtest/method/cde5acd3-b95d-444b-817c-8a20adadf279</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_COUNTRYCODE_NOTEMPTY</td>
 		</tr>
@@ -12525,8 +13005,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_COUNTRYCODE_STANDARD in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:01b96157-e4a1-4884-95d7-3bcfc5f3c047</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/2c673ad9-f7df-4cf7-9c84-e730c25a12e1">https://rs.tdwg.org/bdqtest/specification/2c673ad9-f7df-4cf7-9c84-e730c25a12e1</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -12577,6 +13057,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_COUNTRYCODE_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_COUNTRYCODE_STANDARD</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/994ce265-fa64-4c76-a3cb-3aadd74fa9b9">https://rs.tdwg.org/bdqtest/method/994ce265-fa64-4c76-a3cb-3aadd74fa9b9</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_COUNTRYCODE_STANDARD</td>
 		</tr>
@@ -12620,8 +13104,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:6f1093a0-0da5-4691-a95e-184d6d55eeb0</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/daa9df47-98f7-44f4-9aed-acc8f8d9289b">https://rs.tdwg.org/bdqtest/specification/daa9df47-98f7-44f4-9aed-acc8f8d9289b</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -12672,6 +13156,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_COUNTRYCOUNTRYCODE_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_QA_COUNTRYCOUNTRYCODE_CONSISTENT</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/cda169b0-4a95-447d-8654-bdab5e180947">https://rs.tdwg.org/bdqtest/method/cda169b0-4a95-447d-8654-bdab5e180947</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_COUNTRYCOUNTRYCODE_CONSISTENT</td>
 		</tr>
@@ -12715,8 +13203,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET; otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:e5efdd20-d1fc-4287-91f9-15b9ce3f3aac</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/6232150a-9abc-469f-b533-44d61aa85054">https://rs.tdwg.org/bdqtest/specification/6232150a-9abc-469f-b533-44d61aa85054</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -12767,6 +13255,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_COUNTRYSTATEPROVINCE_UNAMBIGUOUS with Specification Specification for: MULTIRECORD_MEASURE_QA_COUNTRYSTATEPROVINCE_UNAMBIGUOUS</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/acff5571-4240-4308-817b-6c467060ae36">https://rs.tdwg.org/bdqtest/method/acff5571-4240-4308-817b-6c467060ae36</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_COUNTRYSTATEPROVINCE_UNAMBIGUOUS</td>
 		</tr>
@@ -12810,8 +13302,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_COUNTRY_FOUND in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:051f6ad7-1a4b-4e6c-8a1d-2af76de24848</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/59566872-1968-40f5-916a-42297d58ac7b">https://rs.tdwg.org/bdqtest/specification/59566872-1968-40f5-916a-42297d58ac7b</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -12862,6 +13354,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_COUNTRY_FOUND with Specification Specification for: MULTIRECORD_MEASURE_QA_COUNTRY_FOUND</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/e1acf301-4f03-424a-af72-94ad1ad3201b">https://rs.tdwg.org/bdqtest/method/e1acf301-4f03-424a-af72-94ad1ad3201b</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_COUNTRY_FOUND</td>
 		</tr>
@@ -12905,8 +13401,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_COUNTRY_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:34ef6ea2-de06-4d2c-88fe-2c779de8f7db</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/1c07234e-42de-45c5-9083-7b3e812835fb">https://rs.tdwg.org/bdqtest/specification/1c07234e-42de-45c5-9083-7b3e812835fb</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -12957,6 +13453,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_COUNTRY_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_COUNTRY_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/f9cd9d66-e4d2-42da-877a-90e4a7ac3cf3">https://rs.tdwg.org/bdqtest/method/f9cd9d66-e4d2-42da-877a-90e4a7ac3cf3</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_COUNTRY_NOTEMPTY</td>
 		</tr>
@@ -13000,8 +13500,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_DATEIDENTIFIED_INRANGE in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:a25786df-a624-4ff2-8962-6b23e8b07b0b</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/8949abb1-4c5f-4733-9d3a-89c981fe6d30">https://rs.tdwg.org/bdqtest/specification/8949abb1-4c5f-4733-9d3a-89c981fe6d30</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -13052,6 +13552,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_DATEIDENTIFIED_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_DATEIDENTIFIED_INRANGE</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/5f314145-e988-4684-b507-7429c796d996">https://rs.tdwg.org/bdqtest/method/5f314145-e988-4684-b507-7429c796d996</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_DATEIDENTIFIED_INRANGE</td>
 		</tr>
@@ -13095,8 +13599,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_DATEIDENTIFIED_STANDARD in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:89f8b2ea-fc35-4941-929a-0e32cfbeb1a6</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/79471c9d-a97c-4cb0-8c61-e74f1f15abce">https://rs.tdwg.org/bdqtest/specification/79471c9d-a97c-4cb0-8c61-e74f1f15abce</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -13147,6 +13651,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_DATEIDENTIFIED_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_DATEIDENTIFIED_STANDARD</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/4d16917f-0c46-4d05-a7da-0512e6a37627">https://rs.tdwg.org/bdqtest/method/4d16917f-0c46-4d05-a7da-0512e6a37627</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_DATEIDENTIFIED_STANDARD</td>
 		</tr>
@@ -13190,8 +13698,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_DAY_INRANGE in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:2563ae15-a5bf-48fc-91f3-6df869aece2d</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/f71db764-f571-4668-9a18-a3cafa5410c7">https://rs.tdwg.org/bdqtest/specification/f71db764-f571-4668-9a18-a3cafa5410c7</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -13242,6 +13750,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_DAY_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_DAY_INRANGE</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/5001024d-da6b-4499-a616-d76322e2043b">https://rs.tdwg.org/bdqtest/method/5001024d-da6b-4499-a616-d76322e2043b</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_DAY_INRANGE</td>
 		</tr>
@@ -13285,8 +13797,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_DAY_STANDARD in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:c0fce1a1-8879-4175-8a71-ce037655c358</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/745f8e6b-3f4a-4f1a-bf0c-97e0d91b545d">https://rs.tdwg.org/bdqtest/specification/745f8e6b-3f4a-4f1a-bf0c-97e0d91b545d</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -13337,6 +13849,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_DAY_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_DAY_STANDARD</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/ebb501d7-405b-44fc-af0e-711d653f41e5">https://rs.tdwg.org/bdqtest/method/ebb501d7-405b-44fc-af0e-711d653f41e5</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_DAY_STANDARD</td>
 		</tr>
@@ -13380,8 +13896,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_DCTYPE_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:e1286c46-2a95-480d-89e4-f02681372eb7</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/94bce01c-2184-47ee-89c2-49acf77456f1">https://rs.tdwg.org/bdqtest/specification/94bce01c-2184-47ee-89c2-49acf77456f1</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -13432,6 +13948,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_DCTYPE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_DCTYPE_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/5f76cfec-04ca-41a9-86bf-67824fd8e7e5">https://rs.tdwg.org/bdqtest/method/5f76cfec-04ca-41a9-86bf-67824fd8e7e5</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_DCTYPE_NOTEMPTY</td>
 		</tr>
@@ -13475,8 +13995,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_DCTYPE_STANDARD in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:b85129f0-28c2-4ede-aff2-5ce3791c6e86</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/3d5fc575-6ea0-4bff-bca9-172b6bb3b19d">https://rs.tdwg.org/bdqtest/specification/3d5fc575-6ea0-4bff-bca9-172b6bb3b19d</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -13527,6 +14047,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_DCTYPE_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_DCTYPE_STANDARD</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/faa91223-c9f0-476d-a4d0-b42e13fc9022">https://rs.tdwg.org/bdqtest/method/faa91223-c9f0-476d-a4d0-b42e13fc9022</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_DCTYPE_STANDARD</td>
 		</tr>
@@ -13570,8 +14094,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_DECIMALLATITUDE_INRANGE in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:a5111c0c-d198-4ecc-af10-809ae2b3ae01</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/71b0f5c6-1e71-4dbb-bce3-9aa9366f2643">https://rs.tdwg.org/bdqtest/specification/71b0f5c6-1e71-4dbb-bce3-9aa9366f2643</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -13622,6 +14146,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_DECIMALLATITUDE_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_DECIMALLATITUDE_INRANGE</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/e8e0076e-930c-45bd-bc49-85f341b7b729">https://rs.tdwg.org/bdqtest/method/e8e0076e-930c-45bd-bc49-85f341b7b729</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_DECIMALLATITUDE_INRANGE</td>
 		</tr>
@@ -13665,8 +14193,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_DECIMALLATITUDE_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:0067fa60-5503-490e-8c94-93fb79cc7da2</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/47010a99-41fa-41b7-9aac-189de9edc232">https://rs.tdwg.org/bdqtest/specification/47010a99-41fa-41b7-9aac-189de9edc232</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -13717,6 +14245,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_DECIMALLATITUDE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_DECIMALLATITUDE_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/63076250-647e-470e-9d0d-14a81681266f">https://rs.tdwg.org/bdqtest/method/63076250-647e-470e-9d0d-14a81681266f</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_DECIMALLATITUDE_NOTEMPTY</td>
 		</tr>
@@ -13760,8 +14292,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_DECIMALLONGITUDE_INRANGE in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:1a504f7f-21a7-49e1-a0dc-f51146957fa4</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/2042e1fa-8bf7-457e-bd43-cb48bd8b838d">https://rs.tdwg.org/bdqtest/specification/2042e1fa-8bf7-457e-bd43-cb48bd8b838d</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -13812,6 +14344,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_DECIMALLONGITUDE_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_DECIMALLONGITUDE_INRANGE</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/c08463be-2be5-4f41-a70d-3a231958b4bb">https://rs.tdwg.org/bdqtest/method/c08463be-2be5-4f41-a70d-3a231958b4bb</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_DECIMALLONGITUDE_INRANGE</td>
 		</tr>
@@ -13855,8 +14391,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_DECIMALLONGITUDE_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:c893ee17-ee8b-43ec-bf17-97ac814ea502</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/333806e5-44f2-4761-80af-df91f9240385">https://rs.tdwg.org/bdqtest/specification/333806e5-44f2-4761-80af-df91f9240385</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -13907,6 +14443,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_DECIMALLONGITUDE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_DECIMALLONGITUDE_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/00d3e89b-b730-41f2-a5a2-8cf5e802a0c4">https://rs.tdwg.org/bdqtest/method/00d3e89b-b730-41f2-a5a2-8cf5e802a0c4</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_DECIMALLONGITUDE_NOTEMPTY</td>
 		</tr>
@@ -13950,8 +14490,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_DEGREEOFESTABLISHMENT_STANDARD in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:fec2103b-5d46-4723-b2ec-8c8119b44aaf</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/50d4e600-ca37-4f18-8022-e7646f622fe2">https://rs.tdwg.org/bdqtest/specification/50d4e600-ca37-4f18-8022-e7646f622fe2</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -14002,6 +14542,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_DEGREEOFESTABLISHMENT_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_DEGREEOFESTABLISHMENT_STANDARD</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/a5a657d0-7c16-4938-b542-057ffe4150cd">https://rs.tdwg.org/bdqtest/method/a5a657d0-7c16-4938-b542-057ffe4150cd</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_DEGREEOFESTABLISHMENT_STANDARD</td>
 		</tr>
@@ -14045,8 +14589,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_ENDDAYOFYEAR_INRANGE in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:62f754b5-a0a1-4b24-9982-b76e4e169f71</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/c211fdc8-fae5-4fa5-a8b8-0664a643b6a5">https://rs.tdwg.org/bdqtest/specification/c211fdc8-fae5-4fa5-a8b8-0664a643b6a5</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -14097,6 +14641,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_ENDDAYOFYEAR_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_ENDDAYOFYEAR_INRANGE</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/893fd474-eab3-4265-865f-6cfe7635aa6b">https://rs.tdwg.org/bdqtest/method/893fd474-eab3-4265-865f-6cfe7635aa6b</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_ENDDAYOFYEAR_INRANGE</td>
 		</tr>
@@ -14140,8 +14688,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_ESTABLISHMENTMEANS_STANDARD in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:f1d3bf9c-5558-41dc-8e33-b17c499be016</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/b4bee0db-cb2a-422c-89a5-e0e866feb1cc">https://rs.tdwg.org/bdqtest/specification/b4bee0db-cb2a-422c-89a5-e0e866feb1cc</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -14192,6 +14740,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_ESTABLISHMENTMEANS_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_ESTABLISHMENTMEANS_STANDARD</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/17c7a364-86bb-41ec-a7c1-07087bea1c92">https://rs.tdwg.org/bdqtest/method/17c7a364-86bb-41ec-a7c1-07087bea1c92</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_ESTABLISHMENTMEANS_STANDARD</td>
 		</tr>
@@ -14235,8 +14787,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_EVENTDATE_INRANGE in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:29a1fdc6-326b-4017-880d-d11ff0225b8f</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/6ff94a83-1f03-4f3d-aa10-14a16aa3fff9">https://rs.tdwg.org/bdqtest/specification/6ff94a83-1f03-4f3d-aa10-14a16aa3fff9</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -14287,6 +14839,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_EVENTDATE_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_EVENTDATE_INRANGE</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/69a7c952-ecf0-4cb0-b005-b244926e8f03">https://rs.tdwg.org/bdqtest/method/69a7c952-ecf0-4cb0-b005-b244926e8f03</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_EVENTDATE_INRANGE</td>
 		</tr>
@@ -14330,8 +14886,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_EVENTDATE_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:1fae3f77-7fcb-42c6-ab43-1ff28adf4fa4</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/3929ac59-f8e8-49ea-bf6a-774d41ad869c">https://rs.tdwg.org/bdqtest/specification/3929ac59-f8e8-49ea-bf6a-774d41ad869c</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -14382,6 +14938,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_EVENTDATE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_EVENTDATE_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/e79ed5f7-8da5-4212-9476-e150a6c372b5">https://rs.tdwg.org/bdqtest/method/e79ed5f7-8da5-4212-9476-e150a6c372b5</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_EVENTDATE_NOTEMPTY</td>
 		</tr>
@@ -14425,8 +14985,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_EVENTDATE_STANDARD in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:80c8f69b-4ad3-40ee-bccd-de016bfae367</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/f7580626-6b32-499a-ad51-0aa22e3eaa4a">https://rs.tdwg.org/bdqtest/specification/f7580626-6b32-499a-ad51-0aa22e3eaa4a</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -14477,6 +15037,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_EVENTDATE_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_EVENTDATE_STANDARD</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/28e09744-e189-487c-90f7-5dd4c88d7306">https://rs.tdwg.org/bdqtest/method/28e09744-e189-487c-90f7-5dd4c88d7306</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_EVENTDATE_STANDARD</td>
 		</tr>
@@ -14520,8 +15084,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_EVENTTEMPORAL_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:b57460c4-16e1-4c1d-8a07-a53aee9e8922</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/3fc9b6a6-8c20-4fb7-a772-7f26d5aeaad0">https://rs.tdwg.org/bdqtest/specification/3fc9b6a6-8c20-4fb7-a772-7f26d5aeaad0</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -14572,6 +15136,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_EVENTTEMPORAL_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_EVENTTEMPORAL_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/36fcff08-e64e-4640-984f-5263b0407a97">https://rs.tdwg.org/bdqtest/method/36fcff08-e64e-4640-984f-5263b0407a97</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_EVENTTEMPORAL_NOTEMPTY</td>
 		</tr>
@@ -14615,8 +15183,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_EVENT_CONSISTENT in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:83d057ea-a6f6-49e6-ac3c-0c418776a0e0</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/06899170-252f-4938-9f98-95089ac0bc07">https://rs.tdwg.org/bdqtest/specification/06899170-252f-4938-9f98-95089ac0bc07</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -14667,6 +15235,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_EVENT_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_QA_EVENT_CONSISTENT</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/4383a0b8-ae96-4fbd-9537-394ffe6ce310">https://rs.tdwg.org/bdqtest/method/4383a0b8-ae96-4fbd-9537-394ffe6ce310</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_EVENT_CONSISTENT</td>
 		</tr>
@@ -14710,8 +15282,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_FAMILY_FOUND in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:16f999d9-1cf5-4208-b2ca-1a93d6700085</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/86175f22-dbda-4322-8f6a-9af7f02f4f38">https://rs.tdwg.org/bdqtest/specification/86175f22-dbda-4322-8f6a-9af7f02f4f38</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -14762,6 +15334,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_FAMILY_FOUND with Specification Specification for: MULTIRECORD_MEASURE_QA_FAMILY_FOUND</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/c39f0686-c40f-4652-8bf7-020b85d365d2">https://rs.tdwg.org/bdqtest/method/c39f0686-c40f-4652-8bf7-020b85d365d2</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_FAMILY_FOUND</td>
 		</tr>
@@ -14805,8 +15381,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_GENUS_FOUND in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:15bbda19-dd18-471a-a5c3-56c7e543012f</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/0c659160-9952-4ada-ac10-5a46ee52423a">https://rs.tdwg.org/bdqtest/specification/0c659160-9952-4ada-ac10-5a46ee52423a</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -14857,6 +15433,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_GENUS_FOUND with Specification Specification for: MULTIRECORD_MEASURE_QA_GENUS_FOUND</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/5a90c547-205b-423f-9158-400652da905f">https://rs.tdwg.org/bdqtest/method/5a90c547-205b-423f-9158-400652da905f</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_GENUS_FOUND</td>
 		</tr>
@@ -14900,8 +15480,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_GEODETICDATUM_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:a3c8b277-15fb-4ae8-afb1-e64fb6eb5241</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/6d868cda-6c34-4b02-9420-cbc51376114f">https://rs.tdwg.org/bdqtest/specification/6d868cda-6c34-4b02-9420-cbc51376114f</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -14952,6 +15532,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_GEODETICDATUM_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_GEODETICDATUM_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/63ea1bbd-0184-4f59-83cb-302bb672fde0">https://rs.tdwg.org/bdqtest/method/63ea1bbd-0184-4f59-83cb-302bb672fde0</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_GEODETICDATUM_NOTEMPTY</td>
 		</tr>
@@ -14995,8 +15579,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_GEODETICDATUM_STANDARD in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:5cc05662-c029-4ba9-b32e-fb487ccba71c</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/33e0b049-5d42-48d2-a825-c29b294eab9b">https://rs.tdwg.org/bdqtest/specification/33e0b049-5d42-48d2-a825-c29b294eab9b</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -15047,6 +15631,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_GEODETICDATUM_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_GEODETICDATUM_STANDARD</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/fd0d38cd-1a3d-46cd-83ac-aab2a367e21f">https://rs.tdwg.org/bdqtest/method/fd0d38cd-1a3d-46cd-83ac-aab2a367e21f</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_GEODETICDATUM_STANDARD</td>
 		</tr>
@@ -15090,8 +15678,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_KINGDOM_FOUND in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:a90e100a-3522-4742-aa73-3b98a35ab826</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/3f846a5d-629b-45f4-94a0-2c32abe437e2">https://rs.tdwg.org/bdqtest/specification/3f846a5d-629b-45f4-94a0-2c32abe437e2</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -15142,6 +15730,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_KINGDOM_FOUND with Specification Specification for: MULTIRECORD_MEASURE_QA_KINGDOM_FOUND</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/ab20eec9-6bc3-40e6-95ab-76c2c79a7e6c">https://rs.tdwg.org/bdqtest/method/ab20eec9-6bc3-40e6-95ab-76c2c79a7e6c</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_KINGDOM_FOUND</td>
 		</tr>
@@ -15185,8 +15777,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_KINGDOM_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:e6f0a9ce-3e72-40fb-9fad-63cf5962f93e</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/4f0adc36-22b1-4534-a994-1246be02c1a8">https://rs.tdwg.org/bdqtest/specification/4f0adc36-22b1-4534-a994-1246be02c1a8</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -15237,6 +15829,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_KINGDOM_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_KINGDOM_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/5c3ccce4-1a9d-4f04-b306-cb6c6f601f9e">https://rs.tdwg.org/bdqtest/method/5c3ccce4-1a9d-4f04-b306-cb6c6f601f9e</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_KINGDOM_NOTEMPTY</td>
 		</tr>
@@ -15280,8 +15876,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_LICENSE_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:d8b450af-47e6-4f5c-8154-6d6acbe9efa5</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/2549297e-3643-41bb-b9d1-29a29b9026ed">https://rs.tdwg.org/bdqtest/specification/2549297e-3643-41bb-b9d1-29a29b9026ed</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -15332,6 +15928,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_LICENSE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_LICENSE_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/4de30040-b177-4b0d-a2f3-4c659f179494">https://rs.tdwg.org/bdqtest/method/4de30040-b177-4b0d-a2f3-4c659f179494</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_LICENSE_NOTEMPTY</td>
 		</tr>
@@ -15375,8 +15975,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_LICENSE_STANDARD in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:2a9dbd16-d427-471e-8db5-c1de2b2cf030</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/5f5af361-e5fe-44de-9be4-5b02795a2adb">https://rs.tdwg.org/bdqtest/specification/5f5af361-e5fe-44de-9be4-5b02795a2adb</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -15427,6 +16027,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_LICENSE_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_LICENSE_STANDARD</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/f7786d53-07c1-4253-add9-3bf24d8a97c4">https://rs.tdwg.org/bdqtest/method/f7786d53-07c1-4253-add9-3bf24d8a97c4</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_LICENSE_STANDARD</td>
 		</tr>
@@ -15470,8 +16074,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_LOCATION_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:30ed5e2d-ef30-4988-8dbb-12c119e94ac3</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/977ed65e-416f-46e8-85a3-079c6b735fa8">https://rs.tdwg.org/bdqtest/specification/977ed65e-416f-46e8-85a3-079c6b735fa8</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -15522,6 +16126,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_LOCATION_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_LOCATION_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/e0078022-251d-4c34-9b52-d63f94f601dd">https://rs.tdwg.org/bdqtest/method/e0078022-251d-4c34-9b52-d63f94f601dd</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_LOCATION_NOTEMPTY</td>
 		</tr>
@@ -15565,8 +16173,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_MAXDEPTH_INRANGE in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:cebc8ba0-ca02-4f1e-830e-ec693bc628e4</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/dc982344-5bc9-49b5-85f8-434f1e304eba">https://rs.tdwg.org/bdqtest/specification/dc982344-5bc9-49b5-85f8-434f1e304eba</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -15617,6 +16225,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_MAXDEPTH_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_MAXDEPTH_INRANGE</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/66a9248a-4d93-443e-8f86-88b04e859d88">https://rs.tdwg.org/bdqtest/method/66a9248a-4d93-443e-8f86-88b04e859d88</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_MAXDEPTH_INRANGE</td>
 		</tr>
@@ -15660,8 +16272,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_MAXELEVATION_INRANGE in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:f9471802-a5f7-4f4e-9810-f3f4f43dad1a</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/50426d4a-f11e-4402-b96e-f9c91c62d0da">https://rs.tdwg.org/bdqtest/specification/50426d4a-f11e-4402-b96e-f9c91c62d0da</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -15712,6 +16324,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_MAXELEVATION_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_MAXELEVATION_INRANGE</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/127afdaf-1d01-47c8-9999-3bff64432c88">https://rs.tdwg.org/bdqtest/method/127afdaf-1d01-47c8-9999-3bff64432c88</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_MAXELEVATION_INRANGE</td>
 		</tr>
@@ -15755,8 +16371,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_MINDEPTH_INRANGE in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:f3e03531-7ee5-4721-aae2-f554389e0544</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/e7f2383d-9406-497e-86b1-163b65955533">https://rs.tdwg.org/bdqtest/specification/e7f2383d-9406-497e-86b1-163b65955533</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -15807,6 +16423,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_MINDEPTH_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_MINDEPTH_INRANGE</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/1a5a97a2-925f-449e-a475-4a5e5494184f">https://rs.tdwg.org/bdqtest/method/1a5a97a2-925f-449e-a475-4a5e5494184f</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_MINDEPTH_INRANGE</td>
 		</tr>
@@ -15850,8 +16470,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:12f7f82e-ab1c-4690-92b8-ecc9328256c1</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/ce7203a9-bb58-4780-833e-c759b8824fc6">https://rs.tdwg.org/bdqtest/specification/ce7203a9-bb58-4780-833e-c759b8824fc6</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -15902,6 +16522,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_MINDEPTH_LESSTHAN_MAXDEPTH with Specification Specification for: MULTIRECORD_MEASURE_QA_MINDEPTH_LESSTHAN_MAXDEPTH</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/51b11dac-0a61-4ebf-a0b7-69244821f481">https://rs.tdwg.org/bdqtest/method/51b11dac-0a61-4ebf-a0b7-69244821f481</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_MINDEPTH_LESSTHAN_MAXDEPTH</td>
 		</tr>
@@ -15945,8 +16569,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_MINELEVATION_INRANGE in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:2bb79221-0312-410a-aef6-f569485df6a6</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/657e5f22-d146-4109-8f57-676fe7eb777f">https://rs.tdwg.org/bdqtest/specification/657e5f22-d146-4109-8f57-676fe7eb777f</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -15997,6 +16621,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_MINELEVATION_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_MINELEVATION_INRANGE</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/3ec54cad-c181-4dd6-8bd6-6119eb6ad6c0">https://rs.tdwg.org/bdqtest/method/3ec54cad-c181-4dd6-8bd6-6119eb6ad6c0</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_MINELEVATION_INRANGE</td>
 		</tr>
@@ -16040,8 +16668,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:f799fb5c-37e4-46d7-a07e-87eb071df9c6</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/e7ca116b-2b24-4995-af09-44ee80824188">https://rs.tdwg.org/bdqtest/specification/e7ca116b-2b24-4995-af09-44ee80824188</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -16092,6 +16720,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_MINELEVATION_LESSTHAN_MAXELEVATION with Specification Specification for: MULTIRECORD_MEASURE_QA_MINELEVATION_LESSTHAN_MAXELEVATION</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/7de2e2b3-2734-4f0d-b4d1-25942d628a6f">https://rs.tdwg.org/bdqtest/method/7de2e2b3-2734-4f0d-b4d1-25942d628a6f</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_MINELEVATION_LESSTHAN_MAXELEVATION</td>
 		</tr>
@@ -16135,8 +16767,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_MONTH_STANDARD in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:2c5dbdbb-feab-474c-bcca-bf6d1b90ae66</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/8fae3a40-10fd-433c-bd4a-368bd356a7f1">https://rs.tdwg.org/bdqtest/specification/8fae3a40-10fd-433c-bd4a-368bd356a7f1</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -16187,6 +16819,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_MONTH_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_MONTH_STANDARD</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/0f4b32e4-23c8-49ec-aa9f-3b7970d52b19">https://rs.tdwg.org/bdqtest/method/0f4b32e4-23c8-49ec-aa9f-3b7970d52b19</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_MONTH_STANDARD</td>
 		</tr>
@@ -16230,8 +16866,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:f09fc9ad-a449-4422-b32f-63d8ccf2501f</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/c26bf0a3-98e8-4a5e-8219-0fa576c28cfa">https://rs.tdwg.org/bdqtest/specification/c26bf0a3-98e8-4a5e-8219-0fa576c28cfa</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -16282,6 +16918,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_NAMEPUBLISHEDINYEAR_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_NAMEPUBLISHEDINYEAR_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/11927fb0-e11d-4e20-8fde-a9910103df2a">https://rs.tdwg.org/bdqtest/method/11927fb0-e11d-4e20-8fde-a9910103df2a</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_NAMEPUBLISHEDINYEAR_NOTEMPTY</td>
 		</tr>
@@ -16325,8 +16965,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_OCCURRENCEID_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:3d9e1339-19d7-47e7-af9e-11905df82b6a</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/a634c093-6502-489e-98fc-a365fd7d5d61">https://rs.tdwg.org/bdqtest/specification/a634c093-6502-489e-98fc-a365fd7d5d61</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -16377,6 +17017,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_OCCURRENCEID_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_OCCURRENCEID_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/18cf676f-83ab-4c52-825c-2f3849bcae9d">https://rs.tdwg.org/bdqtest/method/18cf676f-83ab-4c52-825c-2f3849bcae9d</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_OCCURRENCEID_NOTEMPTY</td>
 		</tr>
@@ -16420,8 +17064,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_OCCURRENCESTATUS_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:c3a53898-c4ad-40e0-961b-b4ceafea37c7</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/8f1c623f-3e2c-4a6d-bc35-627100cab43b">https://rs.tdwg.org/bdqtest/specification/8f1c623f-3e2c-4a6d-bc35-627100cab43b</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -16472,6 +17116,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_OCCURRENCESTATUS_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_OCCURRENCESTATUS_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/a1252d6a-3cb8-4fce-bdba-453c82325a6f">https://rs.tdwg.org/bdqtest/method/a1252d6a-3cb8-4fce-bdba-453c82325a6f</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_OCCURRENCESTATUS_NOTEMPTY</td>
 		</tr>
@@ -16515,8 +17163,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_OCCURRENCESTATUS_STANDARD in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:fbe854d4-acf3-4c79-a654-81441fed644f</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/e032ea6a-012d-436d-a442-da167a466b02">https://rs.tdwg.org/bdqtest/specification/e032ea6a-012d-436d-a442-da167a466b02</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -16567,6 +17215,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_OCCURRENCESTATUS_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_OCCURRENCESTATUS_STANDARD</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/ba3bb2e3-b593-48ea-83b3-899e3a91ecd2">https://rs.tdwg.org/bdqtest/method/ba3bb2e3-b593-48ea-83b3-899e3a91ecd2</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_OCCURRENCESTATUS_STANDARD</td>
 		</tr>
@@ -16610,8 +17262,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_ORDER_FOUND in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:ae08b4b4-89ba-4972-b51f-912b132bd006</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/d2fb98d8-70fc-4f24-8b20-71304f1ce35f">https://rs.tdwg.org/bdqtest/specification/d2fb98d8-70fc-4f24-8b20-71304f1ce35f</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -16662,6 +17314,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_ORDER_FOUND with Specification Specification for: MULTIRECORD_MEASURE_QA_ORDER_FOUND</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/789f9110-5dca-411f-a742-1399175aa5be">https://rs.tdwg.org/bdqtest/method/789f9110-5dca-411f-a742-1399175aa5be</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_ORDER_FOUND</td>
 		</tr>
@@ -16705,8 +17361,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_PATHWAY_STANDARD in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:c7c92ef0-284e-4c5d-8fc9-f1480bfe0b8e</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/b051707d-1f01-48a9-8251-7a0ffecbe2ec">https://rs.tdwg.org/bdqtest/specification/b051707d-1f01-48a9-8251-7a0ffecbe2ec</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -16757,6 +17413,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_PATHWAY_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_PATHWAY_STANDARD</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/06f4a965-9424-47fe-81f8-4264c30b6bf1">https://rs.tdwg.org/bdqtest/method/06f4a965-9424-47fe-81f8-4264c30b6bf1</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_PATHWAY_STANDARD</td>
 		</tr>
@@ -16800,8 +17460,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_PHYLUM_FOUND in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:1193230f-f188-4917-92da-bba3390ed3fa</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/db818cf0-569e-4eb9-a309-a151d04b7bb4">https://rs.tdwg.org/bdqtest/specification/db818cf0-569e-4eb9-a309-a151d04b7bb4</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -16852,6 +17512,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_PHYLUM_FOUND with Specification Specification for: MULTIRECORD_MEASURE_QA_PHYLUM_FOUND</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/f643ba35-9ddb-4e70-9959-01a6849331ed">https://rs.tdwg.org/bdqtest/method/f643ba35-9ddb-4e70-9959-01a6849331ed</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_PHYLUM_FOUND</td>
 		</tr>
@@ -16895,8 +17559,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_POLYNOMIAL_CONSISTENT in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:d92c5e23-bf6a-483b-86c3-9374e12d01c7</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/13ff592f-feb2-4350-95dc-fd8c8e434994">https://rs.tdwg.org/bdqtest/specification/13ff592f-feb2-4350-95dc-fd8c8e434994</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -16947,6 +17611,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_POLYNOMIAL_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_QA_POLYNOMIAL_CONSISTENT</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/a0cfa157-3665-42dd-8dcc-3a5d53d4f217">https://rs.tdwg.org/bdqtest/method/a0cfa157-3665-42dd-8dcc-3a5d53d4f217</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_POLYNOMIAL_CONSISTENT</td>
 		</tr>
@@ -16990,8 +17658,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:e9ffc3b0-0fb8-4a7c-a588-a00085ba980b</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/8f3b709b-0a01-4e0e-a43a-b43a9ee8aec8">https://rs.tdwg.org/bdqtest/specification/8f3b709b-0a01-4e0e-a43a-b43a9ee8aec8</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -17042,6 +17710,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/e3f91e30-4a96-4772-a941-3107a27c6229">https://rs.tdwg.org/bdqtest/method/e3f91e30-4a96-4772-a941-3107a27c6229</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY</td>
 		</tr>
@@ -17085,8 +17757,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_SCIENTIFICNAMEID_COMPLETE in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:e6c02558-8541-4292-9a11-2f4408d69699</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/a908512b-be44-4987-bbc9-a27c4d2d6bd6">https://rs.tdwg.org/bdqtest/specification/a908512b-be44-4987-bbc9-a27c4d2d6bd6</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -17137,6 +17809,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEID_COMPLETE with Specification Specification for: MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEID_COMPLETE</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/8857d693-f25b-48aa-ba9b-29b692011bf2">https://rs.tdwg.org/bdqtest/method/8857d693-f25b-48aa-ba9b-29b692011bf2</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEID_COMPLETE</td>
 		</tr>
@@ -17180,8 +17856,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_SCIENTIFICNAMEID_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:02242018-3e73-4e0a-8d6f-d1db06cf81a3</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/336865b2-1b21-49f6-a5f6-1112ed397400">https://rs.tdwg.org/bdqtest/specification/336865b2-1b21-49f6-a5f6-1112ed397400</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -17232,6 +17908,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEID_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEID_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/e3f80cb9-61c0-4fa4-9767-d7d4f415321d">https://rs.tdwg.org/bdqtest/method/e3f80cb9-61c0-4fa4-9767-d7d4f415321d</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEID_NOTEMPTY</td>
 		</tr>
@@ -17275,8 +17955,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_SCIENTIFICNAME_FOUND in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:3c2fe7e9-186f-4ceb-8274-8bbcb4a62de4</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/44734c77-85b6-485b-bc43-2d96c0dde693">https://rs.tdwg.org/bdqtest/specification/44734c77-85b6-485b-bc43-2d96c0dde693</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -17327,6 +18007,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_SCIENTIFICNAME_FOUND with Specification Specification for: MULTIRECORD_MEASURE_QA_SCIENTIFICNAME_FOUND</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/180a834f-d0e1-4abc-b31d-37558ef6352d">https://rs.tdwg.org/bdqtest/method/180a834f-d0e1-4abc-b31d-37558ef6352d</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_SCIENTIFICNAME_FOUND</td>
 		</tr>
@@ -17370,8 +18054,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_SCIENTIFICNAME_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:a9c18563-f63e-42db-98e5-a3e6079086b7</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/03c7280e-d1b9-459b-8bec-8bbd7ee6c886">https://rs.tdwg.org/bdqtest/specification/03c7280e-d1b9-459b-8bec-8bbd7ee6c886</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -17422,6 +18106,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_SCIENTIFICNAME_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_SCIENTIFICNAME_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/63695de6-91f6-4f10-8bf7-59163c6e3ad9">https://rs.tdwg.org/bdqtest/method/63695de6-91f6-4f10-8bf7-59163c6e3ad9</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_SCIENTIFICNAME_NOTEMPTY</td>
 		</tr>
@@ -17465,8 +18153,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_SEX_STANDARD in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:72471db4-226c-454f-bbe8-5c1718e6c834</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/1449904c-2de3-4fd7-a63e-53882160a132">https://rs.tdwg.org/bdqtest/specification/1449904c-2de3-4fd7-a63e-53882160a132</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -17517,6 +18205,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_SEX_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_SEX_STANDARD</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/92c8e64a-7279-4934-8071-5807d1796cbd">https://rs.tdwg.org/bdqtest/method/92c8e64a-7279-4934-8071-5807d1796cbd</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_SEX_STANDARD</td>
 		</tr>
@@ -17560,8 +18252,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_STARTDAYOFYEAR_INRANGE in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:53c6af68-6120-4da6-87d8-a3e9551b9671</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/9e2719f2-9006-454a-b0d3-afd931f9c05d">https://rs.tdwg.org/bdqtest/specification/9e2719f2-9006-454a-b0d3-afd931f9c05d</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -17612,6 +18304,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_STARTDAYOFYEAR_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_STARTDAYOFYEAR_INRANGE</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/8b66559e-bbe2-497f-ae9b-2c85863db5ad">https://rs.tdwg.org/bdqtest/method/8b66559e-bbe2-497f-ae9b-2c85863db5ad</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_STARTDAYOFYEAR_INRANGE</td>
 		</tr>
@@ -17655,8 +18351,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_STATEPROVINCE_FOUND in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:d261fac1-ce61-4879-bc04-870fa885b578</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/8c7b24de-6e84-4c07-9d61-f07fee762281">https://rs.tdwg.org/bdqtest/specification/8c7b24de-6e84-4c07-9d61-f07fee762281</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -17707,6 +18403,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_STATEPROVINCE_FOUND with Specification Specification for: MULTIRECORD_MEASURE_QA_STATEPROVINCE_FOUND</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/f61b4a56-28d2-45da-9f25-05a95890ab34">https://rs.tdwg.org/bdqtest/method/f61b4a56-28d2-45da-9f25-05a95890ab34</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_STATEPROVINCE_FOUND</td>
 		</tr>
@@ -17750,8 +18450,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_TAXONRANK_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:c619ec9b-92ec-4047-a8d3-931e3324bf3e</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/6317c75a-e514-4840-8b69-81e2e87461d0">https://rs.tdwg.org/bdqtest/specification/6317c75a-e514-4840-8b69-81e2e87461d0</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -17802,6 +18502,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_TAXONRANK_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_TAXONRANK_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/e4baa0f4-ee8c-4521-b9c0-89e6976d6c91">https://rs.tdwg.org/bdqtest/method/e4baa0f4-ee8c-4521-b9c0-89e6976d6c91</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_TAXONRANK_NOTEMPTY</td>
 		</tr>
@@ -17845,8 +18549,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_TAXONRANK_STANDARD in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:c8964200-630e-47c6-baad-7e334fddbbdb</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/aa2e919c-5655-488e-90ca-10f8bbd233ca">https://rs.tdwg.org/bdqtest/specification/aa2e919c-5655-488e-90ca-10f8bbd233ca</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -17897,6 +18601,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_TAXONRANK_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_TAXONRANK_STANDARD</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/e9dd8019-0fbd-45a3-817e-f99bea3f8b19">https://rs.tdwg.org/bdqtest/method/e9dd8019-0fbd-45a3-817e-f99bea3f8b19</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_TAXONRANK_STANDARD</td>
 		</tr>
@@ -17940,8 +18648,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_TAXON_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:f38e3644-354d-4180-bc7c-c437cef1d606</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/91019397-5086-4383-b998-7bd1eeb78b9e">https://rs.tdwg.org/bdqtest/specification/91019397-5086-4383-b998-7bd1eeb78b9e</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -17992,6 +18700,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_TAXON_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_TAXON_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/d354faf8-cf72-48bd-93d5-10cd931df17c">https://rs.tdwg.org/bdqtest/method/d354faf8-cf72-48bd-93d5-10cd931df17c</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_TAXON_NOTEMPTY</td>
 		</tr>
@@ -18035,8 +18747,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_TAXON_UNAMBIGUOUS in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:8bd6f6de-49e4-4889-82e0-e4af093981e0</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/6ffe12f7-a29e-46a8-a3eb-8b7186214f4f">https://rs.tdwg.org/bdqtest/specification/6ffe12f7-a29e-46a8-a3eb-8b7186214f4f</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -18087,6 +18799,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_TAXON_UNAMBIGUOUS with Specification Specification for: MULTIRECORD_MEASURE_QA_TAXON_UNAMBIGUOUS</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/e780c2f1-4160-4ef2-b959-f3db56ceb62c">https://rs.tdwg.org/bdqtest/method/e780c2f1-4160-4ef2-b959-f3db56ceb62c</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_TAXON_UNAMBIGUOUS</td>
 		</tr>
@@ -18130,8 +18846,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_TYPESTATUS_STANDARD in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:e4dbf38d-bdd7-4cf7-8c60-5b3bfc6af4ff</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/296980d9-a8bf-4fe4-8596-ee2bbd140e38">https://rs.tdwg.org/bdqtest/specification/296980d9-a8bf-4fe4-8596-ee2bbd140e38</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -18182,6 +18898,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_TYPESTATUS_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_TYPESTATUS_STANDARD</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/e581e111-a7ef-4f16-9899-175b131b304e">https://rs.tdwg.org/bdqtest/method/e581e111-a7ef-4f16-9899-175b131b304e</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_TYPESTATUS_STANDARD</td>
 		</tr>
@@ -18225,8 +18945,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_YEAR_INRANGE in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:aee43366-0352-448a-a5ea-85ddc8605da1</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/4bb3b33e-d8fd-44d0-96f2-7a0f8b373e46">https://rs.tdwg.org/bdqtest/specification/4bb3b33e-d8fd-44d0-96f2-7a0f8b373e46</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -18277,6 +18997,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_YEAR_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_YEAR_INRANGE</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/7647f9b5-28e4-4c31-948e-80b984422b0a">https://rs.tdwg.org/bdqtest/method/7647f9b5-28e4-4c31-948e-80b984422b0a</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_YEAR_INRANGE</td>
 		</tr>
@@ -18320,8 +19044,8 @@ Including MultiRecord Measures
 			<td>COMPLETE if every VALIDATION_YEAR_NOTEMPTY in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:42f331f4-a5a8-48b4-a08e-57048d1d1a77</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/8294c0a6-b46b-48a5-8221-993d35e09017">https://rs.tdwg.org/bdqtest/specification/8294c0a6-b46b-48a5-8221-993d35e09017</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -18372,6 +19096,10 @@ Including MultiRecord Measures
 			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_YEAR_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_YEAR_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>MeasureMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/b95086d3-3d4d-4c95-9ea8-8b5894d0aede">https://rs.tdwg.org/bdqtest/method/b95086d3-3d4d-4c95-9ea8-8b5894d0aede</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: MULTIRECORD_MEASURE_QA_YEAR_NOTEMPTY</td>
 		</tr>
@@ -18415,8 +19143,8 @@ Including MultiRecord Measures
 			<td>COMPLIANT if dwc:basisOfRecord is bdqval:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:5aabe3d4-d2c0-415c-8972-c834b543971a</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/5aabe3d4-d2c0-415c-8972-c834b543971a">https://rs.tdwg.org/bdqtest/specification/5aabe3d4-d2c0-415c-8972-c834b543971a</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -18471,6 +19199,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_BASISOFRECORD_NOTEMPTY with Specification for: VALIDATION_BASISOFRECORD_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/31c40ce6-eecd-4304-bda7-0234993b079d">https://rs.tdwg.org/bdqtest/method/31c40ce6-eecd-4304-bda7-0234993b079d</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_BASISOFRECORD_NOTEMPTY</td>
 		</tr>
@@ -18514,8 +19246,8 @@ Including MultiRecord Measures
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:basisOfRecord is bdqval:Empty; COMPLIANT if the value of dwc:basisOfRecord is valid in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:f094b94f-09b6-4fb0-8ba4-24252a2101c4</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/f094b94f-09b6-4fb0-8ba4-24252a2101c4">https://rs.tdwg.org/bdqtest/specification/f094b94f-09b6-4fb0-8ba4-24252a2101c4</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -18586,6 +19318,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_BASISOFRECORD_STANDARD with Specification for: VALIDATION_BASISOFRECORD_STANDARD</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/99103239-1019-4d2e-b435-ecb28c190a3c">https://rs.tdwg.org/bdqtest/method/99103239-1019-4d2e-b435-ecb28c190a3c</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_BASISOFRECORD_STANDARD</td>
 		</tr>
@@ -18629,8 +19365,8 @@ Including MultiRecord Measures
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if all of the fields dwc:kingdom dwc:phylum, dwc:class, dwc:order, dwc:superfamily, dwc:family, dwc:subfamily, dwc:tribe, dwc:subtribe, dwc:genus are bdqval:Empty; COMPLIANT if the combination of values of higher classification taxonomic terms (dwc:kingdom, dwc:phylum, dwc:class, dwc:order, dwc:superfamily, dwc:family, dwc:subfamily, dwc:tribe, dwc:subtribe, dwc:genus) are consistent with the lowest ranking matched element in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:21d0b5f6-5b3e-4810-8413-c975b7cf343a</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/21d0b5f6-5b3e-4810-8413-c975b7cf343a">https://rs.tdwg.org/bdqtest/specification/21d0b5f6-5b3e-4810-8413-c975b7cf343a</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -18705,6 +19441,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_CLASSIFICATION_CONSISTENT with Specification for: VALIDATION_CLASSIFICATION_CONSISTENT</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/b751c2ed-11a5-4bff-9c37-1eccc8138191">https://rs.tdwg.org/bdqtest/method/b751c2ed-11a5-4bff-9c37-1eccc8138191</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_CLASSIFICATION_CONSISTENT</td>
 		</tr>
@@ -18748,8 +19488,8 @@ Including MultiRecord Measures
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:class is bdqval:Empty; COMPLIANT if the value of dwc:class is found as a value at the rank of Class in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:a2b39526-d08a-4a91-8b6d-aacf73677789</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/a2b39526-d08a-4a91-8b6d-aacf73677789">https://rs.tdwg.org/bdqtest/specification/a2b39526-d08a-4a91-8b6d-aacf73677789</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -18820,6 +19560,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_CLASS_FOUND with Specification for: VALIDATION_CLASS_FOUND</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/6d096b24-0eb1-4e6e-804f-6810e781d16f">https://rs.tdwg.org/bdqtest/method/6d096b24-0eb1-4e6e-804f-6810e781d16f</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_CLASS_FOUND</td>
 		</tr>
@@ -18863,8 +19607,8 @@ Including MultiRecord Measures
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if one or more of dwc:decimalLatitude, dwc:decimalLongitude, or dwc:countryCode are bdqval:Empty or invalid; COMPLIANT if the geographic coordinates fall on or within the boundary defined by the union of the boundary of the country from dwc:countryCode plus it's Exclusive Economic Zone as found in the bdqval:sourceAuthority, if any, plus an exterior buffer given by bdqval:spatialBufferInMeters; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:4343a7e0-7f0b-434d-99d4-e939ecb16e1f</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/4343a7e0-7f0b-434d-99d4-e939ecb16e1f">https://rs.tdwg.org/bdqtest/specification/4343a7e0-7f0b-434d-99d4-e939ecb16e1f</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -18939,6 +19683,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT with Specification for: VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/2afcbce1-7cf8-4c5c-9df4-d267dc2df704">https://rs.tdwg.org/bdqtest/method/2afcbce1-7cf8-4c5c-9df4-d267dc2df704</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT</td>
 		</tr>
@@ -18982,8 +19730,8 @@ Including MultiRecord Measures
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the values of dwc:decimalLatitude or dwc:decimalLongitude are bdqval:Empty or invalid, or dwc:stateProvince is bdqval:Empty or not found in the bdqval:sourceAuthority; COMPLIANT if the geographic coordinates fall on or within the boundary in the bdqval:sourceAuthority for the given dwc:stateProvince (after coordinate reference system transformations, if any, have been accounted for), or within the distance given by bdqval:spatialBufferInMeters outside that boundary; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:4dd617df-a984-419f-b7b5-098b2023c4ab</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/4dd617df-a984-419f-b7b5-098b2023c4ab">https://rs.tdwg.org/bdqtest/specification/4dd617df-a984-419f-b7b5-098b2023c4ab</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -19058,6 +19806,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT with Specification for: VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/315a198d-3811-40dd-918a-756f598f3294">https://rs.tdwg.org/bdqtest/method/315a198d-3811-40dd-918a-756f598f3294</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT</td>
 		</tr>
@@ -19101,8 +19853,8 @@ Including MultiRecord Measures
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if either bdqval:taxonIsMarine or bdqval:geospatialLand are not available; INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:scientificName is bdqval:Empty or (2) the values of dwc:decimalLatitude or dwc:decimalLongitude are bdqval:Empty or (3) if bdqval:assumptionOnUnknownBiome is noassumption and the marine/nonmarine status of the taxon is not interpretable from bdqval:taxonIsMarine; COMPLIANT if (1) the taxon marine/nonmarine status from bdqval:taxonIsMarine matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdqval:geospatialLand plus an exterior buffer given by bdqval:spatialBufferInMeters or (2) if the marine/nonmarine status of the taxon is not interpretable from bdqval:taxonIsMarine and bdqval:assumptionOnUnknownBiome matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdqval:geospatialLand plus an exterior buffer given by bdqval:spatialBufferInMeters; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:45cb9e13-7944-4535-a5ef-f6ededb77305</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/45cb9e13-7944-4535-a5ef-f6ededb77305">https://rs.tdwg.org/bdqtest/specification/45cb9e13-7944-4535-a5ef-f6ededb77305</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -19181,6 +19933,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT with Specification for: VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/2bb364f7-118b-4258-8afe-978901e5cf67">https://rs.tdwg.org/bdqtest/method/2bb364f7-118b-4258-8afe-978901e5cf67</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT</td>
 		</tr>
@@ -19224,8 +19980,8 @@ Including MultiRecord Measures
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLatitude is bdqval:Empty or is not interpretable as a number, or dwc:decimalLongitude is bdqval:Empty or is not interpretable as a number; COMPLIANT if either the value of dwc:decimalLatitude is not = 0 or the value of dwc:decimalLongitude is not = 0; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:b482148e-9ac2-47ad-99b5-462508e9f360</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/b482148e-9ac2-47ad-99b5-462508e9f360">https://rs.tdwg.org/bdqtest/specification/b482148e-9ac2-47ad-99b5-462508e9f360</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -19288,6 +20044,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_COORDINATES_NOTZERO with Specification for: VALIDATION_COORDINATES_NOTZERO</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/8454615d-9cd4-49af-8fd3-c67e6be9c777">https://rs.tdwg.org/bdqtest/method/8454615d-9cd4-49af-8fd3-c67e6be9c777</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_COORDINATES_NOTZERO</td>
 		</tr>
@@ -19331,8 +20091,8 @@ Including MultiRecord Measures
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:coordinateUncertaintyInMeters is bdqval:Empty; COMPLIANT if the value of dwc:coordinateUncertaintyInMeters is interpreted as a number between 1 and 20037509 inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:f8dfc3fc-6580-4518-b2b4-595c29e9042e</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/f8dfc3fc-6580-4518-b2b4-595c29e9042e">https://rs.tdwg.org/bdqtest/specification/f8dfc3fc-6580-4518-b2b4-595c29e9042e</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -19395,6 +20155,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_COORDINATEUNCERTAINTY_INRANGE with Specification for: VALIDATION_COORDINATEUNCERTAINTY_INRANGE</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/a5bbeae3-9dc8-4a0c-9f68-58526e5d6a76">https://rs.tdwg.org/bdqtest/method/a5bbeae3-9dc8-4a0c-9f68-58526e5d6a76</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_COORDINATEUNCERTAINTY_INRANGE</td>
 		</tr>
@@ -19438,8 +20202,8 @@ Including MultiRecord Measures
 			<td>COMPLIANT if dwc:countryCode is bdqval:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:d153d4bd-b39d-43b0-b00a-395ff3e2ca62</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/d153d4bd-b39d-43b0-b00a-395ff3e2ca62">https://rs.tdwg.org/bdqtest/specification/d153d4bd-b39d-43b0-b00a-395ff3e2ca62</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -19498,6 +20262,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_COUNTRYCODE_NOTEMPTY with Specification for: VALIDATION_COUNTRYCODE_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/930eb72e-fe83-48ae-9698-ca46713721a3">https://rs.tdwg.org/bdqtest/method/930eb72e-fe83-48ae-9698-ca46713721a3</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_COUNTRYCODE_NOTEMPTY</td>
 		</tr>
@@ -19541,8 +20309,8 @@ Including MultiRecord Measures
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode is bdqval:Empty; COMPLIANT if dwc:countryCode can be unambiguously interpreted as a valid ISO 3166-1-alpha-2 country code in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:01b96157-e4a1-4884-95d7-3bcfc5f3c047</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/01b96157-e4a1-4884-95d7-3bcfc5f3c047">https://rs.tdwg.org/bdqtest/specification/01b96157-e4a1-4884-95d7-3bcfc5f3c047</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -19609,6 +20377,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_COUNTRYCODE_STANDARD with Specification for: VALIDATION_COUNTRYCODE_STANDARD</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/02f5a440-a473-42cf-a3f1-6c10334d5eb8">https://rs.tdwg.org/bdqtest/method/02f5a440-a473-42cf-a3f1-6c10334d5eb8</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_COUNTRYCODE_STANDARD</td>
 		</tr>
@@ -19652,8 +20424,8 @@ Including MultiRecord Measures
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if either of the terms dwc:country or dwc:countryCode are bdqval:Empty; COMPLIANT if the values of dwc:country and dwc:countryCode match national-level country name and matching country code respectively in the bdqval:sourceAuthority</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:6f1093a0-0da5-4691-a95e-184d6d55eeb0</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/6f1093a0-0da5-4691-a95e-184d6d55eeb0">https://rs.tdwg.org/bdqtest/specification/6f1093a0-0da5-4691-a95e-184d6d55eeb0</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -19720,6 +20492,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT with Specification for: VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/3925c15a-2795-4cef-8a30-6e6e5e480eae">https://rs.tdwg.org/bdqtest/method/3925c15a-2795-4cef-8a30-6e6e5e480eae</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT</td>
 		</tr>
@@ -19763,8 +20539,8 @@ Including MultiRecord Measures
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the terms dwc:country and dwc:stateProvince are bdqval:Empty; COMPLIANT if the combination of values of dwc:country and dwc:stateProvince are unambiguously resolved to a single result with a child-parent relationship in the bdqval:sourceAuthority and the entity matching the value of dwc:country in the bdqval:sourceAuthority is an ISO 3166 country-like administrative entity in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:e5efdd20-d1fc-4287-91f9-15b9ce3f3aac</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/e5efdd20-d1fc-4287-91f9-15b9ce3f3aac">https://rs.tdwg.org/bdqtest/specification/e5efdd20-d1fc-4287-91f9-15b9ce3f3aac</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -19839,6 +20615,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS with Specification for: VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/f1a7f272-9040-42da-9b64-62abedefb1b0">https://rs.tdwg.org/bdqtest/method/f1a7f272-9040-42da-9b64-62abedefb1b0</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS</td>
 		</tr>
@@ -19882,8 +20662,8 @@ Including MultiRecord Measures
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:country is bdqval:Empty; COMPLIANT if value of dwc:country is a place type equivalent to administrative entity of "nation" in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:051f6ad7-1a4b-4e6c-8a1d-2af76de24848</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/051f6ad7-1a4b-4e6c-8a1d-2af76de24848">https://rs.tdwg.org/bdqtest/specification/051f6ad7-1a4b-4e6c-8a1d-2af76de24848</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -19958,6 +20738,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_COUNTRY_FOUND with Specification for: VALIDATION_COUNTRY_FOUND</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/04cee4e0-0c83-40cc-8de2-e7391f0a97a9">https://rs.tdwg.org/bdqtest/method/04cee4e0-0c83-40cc-8de2-e7391f0a97a9</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_COUNTRY_FOUND</td>
 		</tr>
@@ -20001,8 +20785,8 @@ Including MultiRecord Measures
 			<td>COMPLIANT if dwc:country is bdqval:NotEmpty or dwc:countryCode has a value of "XZ" and either dwc:country is bdqval:Empty or has a value of "High seas"; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:34ef6ea2-de06-4d2c-88fe-2c779de8f7db</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/34ef6ea2-de06-4d2c-88fe-2c779de8f7db">https://rs.tdwg.org/bdqtest/specification/34ef6ea2-de06-4d2c-88fe-2c779de8f7db</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -20065,6 +20849,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_COUNTRY_NOTEMPTY with Specification for: VALIDATION_COUNTRY_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/23e9d641-1349-4998-bdff-117e32c30eff">https://rs.tdwg.org/bdqtest/method/23e9d641-1349-4998-bdff-117e32c30eff</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_COUNTRY_NOTEMPTY</td>
 		</tr>
@@ -20108,8 +20896,8 @@ Including MultiRecord Measures
 			<td>INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:dateIdentified is bdqval:Empty, or (2) dwc:dateIdentified contains an invalid value according to ISO 8601, or (3) bdqval:includeEventDate=true and dwc:eventDate is not a valid ISO 8601 date; COMPLIANT if the value of dwc:dateIdentified is between bdqval:earliestValidDate and bdqval:latestValidDate inclusive and either (1) dwc:eventDate is bdqval:Empty or bdqval:includeEventDate=false, or (2) if dwc:eventDate is a valid ISO 8601 date and dwc:dateIdentified overlaps or is later than the dwc:eventDate; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:a25786df-a624-4ff2-8962-6b23e8b07b0b</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/a25786df-a624-4ff2-8962-6b23e8b07b0b">https://rs.tdwg.org/bdqtest/specification/a25786df-a624-4ff2-8962-6b23e8b07b0b</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -20188,6 +20976,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_DATEIDENTIFIED_INRANGE with Specification for: VALIDATION_DATEIDENTIFIED_INRANGE</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/67ddf706-c8ee-4cf2-a9d0-d161fc6b7d69">https://rs.tdwg.org/bdqtest/method/67ddf706-c8ee-4cf2-a9d0-d161fc6b7d69</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_DATEIDENTIFIED_INRANGE</td>
 		</tr>
@@ -20231,8 +21023,8 @@ Including MultiRecord Measures
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:dateIdentified is bdqval:Empty; COMPLIANT if the value of dwc:dateIdentified contains a valid ISO 8601 date; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:89f8b2ea-fc35-4941-929a-0e32cfbeb1a6</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/89f8b2ea-fc35-4941-929a-0e32cfbeb1a6">https://rs.tdwg.org/bdqtest/specification/89f8b2ea-fc35-4941-929a-0e32cfbeb1a6</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -20287,6 +21079,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_DATEIDENTIFIED_STANDARD with Specification for: VALIDATION_DATEIDENTIFIED_STANDARD</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/4c6a5522-ae8c-42d3-a396-8fc3aee49ef9">https://rs.tdwg.org/bdqtest/method/4c6a5522-ae8c-42d3-a396-8fc3aee49ef9</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_DATEIDENTIFIED_STANDARD</td>
 		</tr>
@@ -20330,8 +21126,8 @@ Including MultiRecord Measures
 			<td>INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:day is bdqval:Empty, or (2) dwc:day is not interpretable as an integer, or (3) dwc:day is interpretable as an integer between 29 and 31 inclusive and dwc:month is not interpretable as an integer between 1 and 12, or (4) dwc:month is interpretable as the integer 2 and dwc:day is interpretable as the integer 29 and dwc:year is not interpretable as a valid ISO 8601 year; COMPLIANT if (1) the value of dwc:day is interpretable as an integer between 1 and 28 inclusive, or (2) dwc:day is interpretable as an integer between 29 and 30 and dwc:month is interpretable as an integer in the set (4,6,9,11), or (3) dwc:day is interpretable as an integer between 29 and 31 and dwc:month is interpretable as an integer in the set (1,3,5,7,8,10,12), or (4) dwc:day is interpretable as the integer 29 and dwc:month is interpretable as the integer 2 and dwc:year is interpretable as is a valid leap year (evenly divisible by 400 or (evenly divisible by 4 but not evenly divisible by 100)); otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:2563ae15-a5bf-48fc-91f3-6df869aece2d</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/2563ae15-a5bf-48fc-91f3-6df869aece2d">https://rs.tdwg.org/bdqtest/specification/2563ae15-a5bf-48fc-91f3-6df869aece2d</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -20394,6 +21190,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_DAY_INRANGE with Specification for: VALIDATION_DAY_INRANGE</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/bb12babf-ca13-4289-9a3d-dde52bb8aff8">https://rs.tdwg.org/bdqtest/method/bb12babf-ca13-4289-9a3d-dde52bb8aff8</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_DAY_INRANGE</td>
 		</tr>
@@ -20437,8 +21237,8 @@ Including MultiRecord Measures
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:day is bdqval:Empty; COMPLIANT if the value of the field dwc:day is an integer between 1 and 31 inclusive; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:c0fce1a1-8879-4175-8a71-ce037655c358</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/c0fce1a1-8879-4175-8a71-ce037655c358">https://rs.tdwg.org/bdqtest/specification/c0fce1a1-8879-4175-8a71-ce037655c358</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -20497,6 +21297,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_DAY_STANDARD with Specification for: VALIDATION_DAY_STANDARD</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/d9bfd4f7-e158-43ee-8ac4-1bc51bf33307">https://rs.tdwg.org/bdqtest/method/d9bfd4f7-e158-43ee-8ac4-1bc51bf33307</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_DAY_STANDARD</td>
 		</tr>
@@ -20540,8 +21344,8 @@ Including MultiRecord Measures
 			<td>COMPLIANT if dc:type is bdqval:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:e1286c46-2a95-480d-89e4-f02681372eb7</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/e1286c46-2a95-480d-89e4-f02681372eb7">https://rs.tdwg.org/bdqtest/specification/e1286c46-2a95-480d-89e4-f02681372eb7</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -20600,6 +21404,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_DCTYPE_NOTEMPTY with Specification for: VALIDATION_DCTYPE_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/95c2e363-5a99-4276-937d-98008ca893f9">https://rs.tdwg.org/bdqtest/method/95c2e363-5a99-4276-937d-98008ca893f9</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_DCTYPE_NOTEMPTY</td>
 		</tr>
@@ -20643,8 +21451,8 @@ Including MultiRecord Measures
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the value of dc:type is bdqval:Empty; COMPLIANT if the value of dc:type is a term name in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:b85129f0-28c2-4ede-aff2-5ce3791c6e86</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/b85129f0-28c2-4ede-aff2-5ce3791c6e86">https://rs.tdwg.org/bdqtest/specification/b85129f0-28c2-4ede-aff2-5ce3791c6e86</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -20711,6 +21519,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_DCTYPE_STANDARD with Specification for: VALIDATION_DCTYPE_STANDARD</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/8b06bef9-7fd4-4020-b08c-a07a1bf695b6">https://rs.tdwg.org/bdqtest/method/8b06bef9-7fd4-4020-b08c-a07a1bf695b6</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_DCTYPE_STANDARD</td>
 		</tr>
@@ -20754,8 +21566,8 @@ Including MultiRecord Measures
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLatitude is bdqval:Empty or the value is not interpretable as a number; COMPLIANT if the value of dwc:decimalLatitude is between -90 and 90, inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:a5111c0c-d198-4ecc-af10-809ae2b3ae01</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/a5111c0c-d198-4ecc-af10-809ae2b3ae01">https://rs.tdwg.org/bdqtest/specification/a5111c0c-d198-4ecc-af10-809ae2b3ae01</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -20814,6 +21626,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_DECIMALLATITUDE_INRANGE with Specification for: VALIDATION_DECIMALLATITUDE_INRANGE</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/6f3a7ebb-e857-42e0-8051-4d06feeb4ab2">https://rs.tdwg.org/bdqtest/method/6f3a7ebb-e857-42e0-8051-4d06feeb4ab2</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_DECIMALLATITUDE_INRANGE</td>
 		</tr>
@@ -20857,8 +21673,8 @@ Including MultiRecord Measures
 			<td>COMPLIANT if dwc:decimalLatitude is bdqval:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:0067fa60-5503-490e-8c94-93fb79cc7da2</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/0067fa60-5503-490e-8c94-93fb79cc7da2">https://rs.tdwg.org/bdqtest/specification/0067fa60-5503-490e-8c94-93fb79cc7da2</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -20917,6 +21733,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_DECIMALLATITUDE_NOTEMPTY with Specification for: VALIDATION_DECIMALLATITUDE_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/b12c8663-25e8-4c8a-abfc-edf4334d1aef">https://rs.tdwg.org/bdqtest/method/b12c8663-25e8-4c8a-abfc-edf4334d1aef</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_DECIMALLATITUDE_NOTEMPTY</td>
 		</tr>
@@ -20960,8 +21780,8 @@ Including MultiRecord Measures
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:decimalLongitude is bdqval:Empty or the value is not a number; COMPLIANT if the value of dwc:decimalLongitude is between -180 and 180 degrees, inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:1a504f7f-21a7-49e1-a0dc-f51146957fa4</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/1a504f7f-21a7-49e1-a0dc-f51146957fa4">https://rs.tdwg.org/bdqtest/specification/1a504f7f-21a7-49e1-a0dc-f51146957fa4</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -21020,6 +21840,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_DECIMALLONGITUDE_INRANGE with Specification for: VALIDATION_DECIMALLONGITUDE_INRANGE</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/0ff56b48-f00e-45bd-822e-e04afbcef3e1">https://rs.tdwg.org/bdqtest/method/0ff56b48-f00e-45bd-822e-e04afbcef3e1</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_DECIMALLONGITUDE_INRANGE</td>
 		</tr>
@@ -21063,8 +21887,8 @@ Including MultiRecord Measures
 			<td>COMPLIANT if dwc:decimalLongitude is bdqval:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:c893ee17-ee8b-43ec-bf17-97ac814ea502</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/c893ee17-ee8b-43ec-bf17-97ac814ea502">https://rs.tdwg.org/bdqtest/specification/c893ee17-ee8b-43ec-bf17-97ac814ea502</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -21119,6 +21943,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_DECIMALLONGITUDE_NOTEMPTY with Specification for: VALIDATION_DECIMALLONGITUDE_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/908fc823-75a9-437e-be7c-5c72cd6b149e">https://rs.tdwg.org/bdqtest/method/908fc823-75a9-437e-be7c-5c72cd6b149e</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_DECIMALLONGITUDE_NOTEMPTY</td>
 		</tr>
@@ -21162,8 +21990,8 @@ Including MultiRecord Measures
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:degreeOfEstablishment is bdqval:Empty; COMPLIANT if the value of dwc:degreeOfEstablishment is in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:fec2103b-5d46-4723-b2ec-8c8119b44aaf</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/fec2103b-5d46-4723-b2ec-8c8119b44aaf">https://rs.tdwg.org/bdqtest/specification/fec2103b-5d46-4723-b2ec-8c8119b44aaf</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -21238,6 +22066,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_DEGREEOFESTABLISHMENT_STANDARD with Specification for: VALIDATION_DEGREEOFESTABLISHMENT_STANDARD</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/fd15e0a4-f49d-4566-b700-a9b46c284e68">https://rs.tdwg.org/bdqtest/method/fd15e0a4-f49d-4566-b700-a9b46c284e68</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_DEGREEOFESTABLISHMENT_STANDARD</td>
 		</tr>
@@ -21281,8 +22113,8 @@ Including MultiRecord Measures
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:endDayOfYear is bdqval:Empty or if the value of dwc:endDayOfYear is equal to 366 and (dwc:eventDate is bdqval:Empty or the value of dwc:eventDate cannot be interpreted to find a single year or an end year in a range); COMPLIANT if the value of dwc:endDayOfYear is an integer between 1 and 365 inclusive, or if the value of dwc:endDayOfYear is 366 and the end year interpreted from dwc:eventDate is a leap year; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:62f754b5-a0a1-4b24-9982-b76e4e169f71</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/62f754b5-a0a1-4b24-9982-b76e4e169f71">https://rs.tdwg.org/bdqtest/specification/62f754b5-a0a1-4b24-9982-b76e4e169f71</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -21345,6 +22177,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_ENDDAYOFYEAR_INRANGE with Specification for: VALIDATION_ENDDAYOFYEAR_INRANGE</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/ca1bc131-fa85-4fdf-902d-ad20bd4ba0f4">https://rs.tdwg.org/bdqtest/method/ca1bc131-fa85-4fdf-902d-ad20bd4ba0f4</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_ENDDAYOFYEAR_INRANGE</td>
 		</tr>
@@ -21388,8 +22224,8 @@ Including MultiRecord Measures
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:establishmentMeans is bdqval:Empty; COMPLIANT if the value of dwc:establishmentMeans is in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:f1d3bf9c-5558-41dc-8e33-b17c499be016</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/f1d3bf9c-5558-41dc-8e33-b17c499be016">https://rs.tdwg.org/bdqtest/specification/f1d3bf9c-5558-41dc-8e33-b17c499be016</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -21464,6 +22300,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_ESTABLISHMENTMEANS_STANDARD with Specification for: VALIDATION_ESTABLISHMENTMEANS_STANDARD</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/f89147ba-03e5-432b-8040-0a2a4921d676">https://rs.tdwg.org/bdqtest/method/f89147ba-03e5-432b-8040-0a2a4921d676</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_ESTABLISHMENTMEANS_STANDARD</td>
 		</tr>
@@ -21507,8 +22347,8 @@ Including MultiRecord Measures
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdqval:Empty or if the value of dwc:eventDate is not a valid ISO 8601 date; COMPLIANT if the range of dwc:eventDate is entirely within the range bdqval:earliestValidDate to bdqval:latestValidDate, inclusive, otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:29a1fdc6-326b-4017-880d-d11ff0225b8f</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/29a1fdc6-326b-4017-880d-d11ff0225b8f">https://rs.tdwg.org/bdqtest/specification/29a1fdc6-326b-4017-880d-d11ff0225b8f</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -21583,6 +22423,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_EVENTDATE_INRANGE with Specification for: VALIDATION_EVENTDATE_INRANGE</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/17f89e32-0174-4bf9-805e-ba7aec59477b">https://rs.tdwg.org/bdqtest/method/17f89e32-0174-4bf9-805e-ba7aec59477b</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_EVENTDATE_INRANGE</td>
 		</tr>
@@ -21626,8 +22470,8 @@ Including MultiRecord Measures
 			<td>COMPLIANT if dwc:eventDate is bdqval:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:1fae3f77-7fcb-42c6-ab43-1ff28adf4fa4</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/1fae3f77-7fcb-42c6-ab43-1ff28adf4fa4">https://rs.tdwg.org/bdqtest/specification/1fae3f77-7fcb-42c6-ab43-1ff28adf4fa4</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -21682,6 +22526,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_EVENTDATE_NOTEMPTY with Specification for: VALIDATION_EVENTDATE_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/12499336-882b-4186-b5a2-4a806af2e35b">https://rs.tdwg.org/bdqtest/method/12499336-882b-4186-b5a2-4a806af2e35b</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_EVENTDATE_NOTEMPTY</td>
 		</tr>
@@ -21725,8 +22573,8 @@ Including MultiRecord Measures
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdqval:Empty; COMPLIANT if the value of dwc:eventDate is a valid ISO 8601 date; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:80c8f69b-4ad3-40ee-bccd-de016bfae367</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/80c8f69b-4ad3-40ee-bccd-de016bfae367">https://rs.tdwg.org/bdqtest/specification/80c8f69b-4ad3-40ee-bccd-de016bfae367</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -21789,6 +22637,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_EVENTDATE_STANDARD with Specification for: VALIDATION_EVENTDATE_STANDARD</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/3f868855-cc39-4a1b-8050-bfa246416a47">https://rs.tdwg.org/bdqtest/method/3f868855-cc39-4a1b-8050-bfa246416a47</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_EVENTDATE_STANDARD</td>
 		</tr>
@@ -21832,8 +22684,8 @@ Including MultiRecord Measures
 			<td>COMPLIANT if any of dwc:eventDate, dwc:year, dwc:month, dwc:day, dwc:startDayOfYear, dwc:endDayOfYear, dwc:verbatimEventDate are bdqval:NotEmpty; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:b57460c4-16e1-4c1d-8a07-a53aee9e8922</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/b57460c4-16e1-4c1d-8a07-a53aee9e8922">https://rs.tdwg.org/bdqtest/specification/b57460c4-16e1-4c1d-8a07-a53aee9e8922</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -21892,6 +22744,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_EVENTTEMPORAL_NOTEMPTY with Specification for: VALIDATION_EVENTTEMPORAL_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/87d34104-0a79-4f51-aeeb-1115ec56e237">https://rs.tdwg.org/bdqtest/method/87d34104-0a79-4f51-aeeb-1115ec56e237</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_EVENTTEMPORAL_NOTEMPTY</td>
 		</tr>
@@ -21935,8 +22791,8 @@ Including MultiRecord Measures
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdqval:Empty, or all of dwc:year, dwc:month, dwc:day, dwc:startDayOfYear and dwc:endDayOfYear are bdqval:Empty; COMPLIANT if all of the following conditions are met (1) dwc:year is bdqval:Empty or dwc:eventDate has a precision of one year or finer and and is within a single year and the provided value of dwc:year matches the year expressed in dwc:eventDate, and (2) dwc:month is bdqval:Empty or dwc:eventDate has a precision of one month or finer and is within a single month and the provided value in dwc:month matches the month represented by dwc:eventDate, and (3) dwc:day is bdqval:Empty or dwc:eventDate has a precision of a day or less and is within a single day and the provided value in dwc:day matches the day represented by dwc:eventDate, and (4) dwc:startDayOfYear is empty or dwc:eventDate has a precision of one day or finer and the provided value in dwc:startDayOfYear matches the start day of the year of the range represented by dwc:eventDate, and (5) dwc:endDayOfYear is empty or dwc:eventDate has a precision of one day or finer and the provided value in dwc:endDayOfYear matches the end day of the year of the range represented by dwc:eventDate; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:83d057ea-a6f6-49e6-ac3c-0c418776a0e0</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/83d057ea-a6f6-49e6-ac3c-0c418776a0e0">https://rs.tdwg.org/bdqtest/specification/83d057ea-a6f6-49e6-ac3c-0c418776a0e0</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -21995,6 +22851,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_EVENT_CONSISTENT with Specification for: VALIDATION_EVENT_CONSISTENT</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/449f44fe-0fef-42ff-a446-d693653b55d4">https://rs.tdwg.org/bdqtest/method/449f44fe-0fef-42ff-a446-d693653b55d4</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_EVENT_CONSISTENT</td>
 		</tr>
@@ -22038,8 +22898,8 @@ Including MultiRecord Measures
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:family is bdqval:Empty; COMPLIANT if the value of dwc:family is found as a value at the rank of Family in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:16f999d9-1cf5-4208-b2ca-1a93d6700085</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/16f999d9-1cf5-4208-b2ca-1a93d6700085">https://rs.tdwg.org/bdqtest/specification/16f999d9-1cf5-4208-b2ca-1a93d6700085</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -22114,6 +22974,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_FAMILY_FOUND with Specification for: VALIDATION_FAMILY_FOUND</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/0997d841-9db9-40a8-b6ec-5867e9091532">https://rs.tdwg.org/bdqtest/method/0997d841-9db9-40a8-b6ec-5867e9091532</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_FAMILY_FOUND</td>
 		</tr>
@@ -22157,8 +23021,8 @@ Including MultiRecord Measures
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:genus is bdqval:Empty; COMPLIANT if the value of dwc:genus is found as a value at the rank of genus in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:15bbda19-dd18-471a-a5c3-56c7e543012f</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/15bbda19-dd18-471a-a5c3-56c7e543012f">https://rs.tdwg.org/bdqtest/specification/15bbda19-dd18-471a-a5c3-56c7e543012f</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -22233,6 +23097,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_GENUS_FOUND with Specification for: VALIDATION_GENUS_FOUND</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/b6cb27ac-e9b8-4a0c-b986-3e34069d8449">https://rs.tdwg.org/bdqtest/method/b6cb27ac-e9b8-4a0c-b986-3e34069d8449</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_GENUS_FOUND</td>
 		</tr>
@@ -22276,8 +23144,8 @@ Including MultiRecord Measures
 			<td>COMPLIANT if dwc:geodeticDatum is bdqval:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:a3c8b277-15fb-4ae8-afb1-e64fb6eb5241</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/a3c8b277-15fb-4ae8-afb1-e64fb6eb5241">https://rs.tdwg.org/bdqtest/specification/a3c8b277-15fb-4ae8-afb1-e64fb6eb5241</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -22332,6 +23200,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_GEODETICDATUM_NOTEMPTY with Specification for: VALIDATION_GEODETICDATUM_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/6d1f3f11-98d9-4b26-a8e7-56fbc066c705">https://rs.tdwg.org/bdqtest/method/6d1f3f11-98d9-4b26-a8e7-56fbc066c705</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_GEODETICDATUM_NOTEMPTY</td>
 		</tr>
@@ -22375,8 +23247,8 @@ Including MultiRecord Measures
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available, INTERNAL_PREREQUISITES_NOT_MET if dwc:geodeticDatum is bdqval:Empty; COMPLIANT if the value of dwc:geodeticDatum is a valid code from the bdqval:sourceAuthority (in the form Authority:Number) for a Datum, or ellipsoid, or for a CRS appropriate for a 2D geographic coordinate in degrees, or is the value "not recorded"; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:5cc05662-c029-4ba9-b32e-fb487ccba71c</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/5cc05662-c029-4ba9-b32e-fb487ccba71c">https://rs.tdwg.org/bdqtest/specification/5cc05662-c029-4ba9-b32e-fb487ccba71c</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -22443,6 +23315,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_GEODETICDATUM_STANDARD with Specification for: VALIDATION_GEODETICDATUM_STANDARD</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/344cb9f6-68e1-4d7c-a976-7edcd9f20935">https://rs.tdwg.org/bdqtest/method/344cb9f6-68e1-4d7c-a976-7edcd9f20935</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_GEODETICDATUM_STANDARD</td>
 		</tr>
@@ -22486,8 +23362,8 @@ Including MultiRecord Measures
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:kingdom is bdqval:Empty; COMPLIANT if the value of dwc:kingdom is found as a value at the rank of kingdom in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:a90e100a-3522-4742-aa73-3b98a35ab826</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/a90e100a-3522-4742-aa73-3b98a35ab826">https://rs.tdwg.org/bdqtest/specification/a90e100a-3522-4742-aa73-3b98a35ab826</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -22562,6 +23438,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_KINGDOM_FOUND with Specification for: VALIDATION_KINGDOM_FOUND</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/7072bf93-bffc-4d83-ad51-b351c6e53260">https://rs.tdwg.org/bdqtest/method/7072bf93-bffc-4d83-ad51-b351c6e53260</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_KINGDOM_FOUND</td>
 		</tr>
@@ -22605,8 +23485,8 @@ Including MultiRecord Measures
 			<td>COMPLIANT if dwc:kingdom is bdqval:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:e6f0a9ce-3e72-40fb-9fad-63cf5962f93e</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/e6f0a9ce-3e72-40fb-9fad-63cf5962f93e">https://rs.tdwg.org/bdqtest/specification/e6f0a9ce-3e72-40fb-9fad-63cf5962f93e</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -22661,6 +23541,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_KINGDOM_NOTEMPTY with Specification for: VALIDATION_KINGDOM_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/f5bd0eee-4cdf-4455-876d-a46d92373a4e">https://rs.tdwg.org/bdqtest/method/f5bd0eee-4cdf-4455-876d-a46d92373a4e</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_KINGDOM_NOTEMPTY</td>
 		</tr>
@@ -22704,8 +23588,8 @@ Including MultiRecord Measures
 			<td>COMPLIANT if dcterms:license is bdqval:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:d8b450af-47e6-4f5c-8154-6d6acbe9efa5</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/d8b450af-47e6-4f5c-8154-6d6acbe9efa5">https://rs.tdwg.org/bdqtest/specification/d8b450af-47e6-4f5c-8154-6d6acbe9efa5</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -22764,6 +23648,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_LICENSE_NOTEMPTY with Specification for: VALIDATION_LICENSE_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/940621f5-4f24-48de-8b36-256101ca4987">https://rs.tdwg.org/bdqtest/method/940621f5-4f24-48de-8b36-256101ca4987</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_LICENSE_NOTEMPTY</td>
 		</tr>
@@ -22807,8 +23695,8 @@ Including MultiRecord Measures
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dcterms:license is bdqval:Empty; COMPLIANT if the value of the term dcterms:license is in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:2a9dbd16-d427-471e-8db5-c1de2b2cf030</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/2a9dbd16-d427-471e-8db5-c1de2b2cf030">https://rs.tdwg.org/bdqtest/specification/2a9dbd16-d427-471e-8db5-c1de2b2cf030</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -22883,6 +23771,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_LICENSE_STANDARD with Specification for: VALIDATION_LICENSE_STANDARD</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/180c1a90-94c3-48b5-a9fe-4223d6f2bd60">https://rs.tdwg.org/bdqtest/method/180c1a90-94c3-48b5-a9fe-4223d6f2bd60</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_LICENSE_STANDARD</td>
 		</tr>
@@ -22926,8 +23818,8 @@ Including MultiRecord Measures
 			<td>COMPLIANT if at least one term needed to determine the location of the entity exists and is bdqval:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:30ed5e2d-ef30-4988-8dbb-12c119e94ac3</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/30ed5e2d-ef30-4988-8dbb-12c119e94ac3">https://rs.tdwg.org/bdqtest/specification/30ed5e2d-ef30-4988-8dbb-12c119e94ac3</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -22990,6 +23882,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_LOCATION_NOTEMPTY with Specification for: VALIDATION_LOCATION_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/1f014694-573d-46e0-b38a-2acf71b32071">https://rs.tdwg.org/bdqtest/method/1f014694-573d-46e0-b38a-2acf71b32071</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_LOCATION_NOTEMPTY</td>
 		</tr>
@@ -23033,8 +23929,8 @@ Including MultiRecord Measures
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumDepthInMeters is bdqval:Empty or is not interpretable as a number greater than or equal to zero; COMPLIANT if the value of dwc:maximumDepthInMeters is within the range of bdqval:minimumValidDepthInMeters to bdqval:maximumValidDepthInMeters inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:cebc8ba0-ca02-4f1e-830e-ec693bc628e4</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/cebc8ba0-ca02-4f1e-830e-ec693bc628e4">https://rs.tdwg.org/bdqtest/specification/cebc8ba0-ca02-4f1e-830e-ec693bc628e4</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -23109,6 +24005,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_MAXDEPTH_INRANGE with Specification for: VALIDATION_MAXDEPTH_INRANGE</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/ed60f87e-7ab7-446a-8565-903dbe6408d2">https://rs.tdwg.org/bdqtest/method/ed60f87e-7ab7-446a-8565-903dbe6408d2</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_MAXDEPTH_INRANGE</td>
 		</tr>
@@ -23152,8 +24052,8 @@ Including MultiRecord Measures
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumElevationInMeters is bdqval:Empty or the value cannot be interpreted as a number; COMPLIANT if the value of dwc:maximumElevationInMeters is within the range of bdqval:minimumValidElevationInMeters to bdqval:maximumValidElevationInMeters inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:f9471802-a5f7-4f4e-9810-f3f4f43dad1a</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/f9471802-a5f7-4f4e-9810-f3f4f43dad1a">https://rs.tdwg.org/bdqtest/specification/f9471802-a5f7-4f4e-9810-f3f4f43dad1a</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -23228,6 +24128,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_MAXELEVATION_INRANGE with Specification for: VALIDATION_MAXELEVATION_INRANGE</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/a6035033-0779-4a75-99ea-f7112c1dde2b">https://rs.tdwg.org/bdqtest/method/a6035033-0779-4a75-99ea-f7112c1dde2b</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_MAXELEVATION_INRANGE</td>
 		</tr>
@@ -23271,8 +24175,8 @@ Including MultiRecord Measures
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters is bdqval:Empty, or the value is not interpretable as number greater than or equal to zero; COMPLIANT if the value of dwc:minimumDepthInMeters is within the range of bdqval:minimumValidDepthInMeters to bdqval:maximumValidDepthInMeters inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:f3e03531-7ee5-4721-aae2-f554389e0544</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/f3e03531-7ee5-4721-aae2-f554389e0544">https://rs.tdwg.org/bdqtest/specification/f3e03531-7ee5-4721-aae2-f554389e0544</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -23347,6 +24251,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_MINDEPTH_INRANGE with Specification for: VALIDATION_MINDEPTH_INRANGE</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/9cc301b1-e303-4abb-9d24-d31506de9436">https://rs.tdwg.org/bdqtest/method/9cc301b1-e303-4abb-9d24-d31506de9436</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_MINDEPTH_INRANGE</td>
 		</tr>
@@ -23390,8 +24298,8 @@ Including MultiRecord Measures
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters or dwc:maximumDepthInMeters is bdqval:Empty, or if either are interpretable as not zero or a positive number; COMPLIANT if the value of dwc:minimumDepthInMeters is less than or equal to the value of dwc:maximumDepthInMeters; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:12f7f82e-ab1c-4690-92b8-ecc9328256c1</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/12f7f82e-ab1c-4690-92b8-ecc9328256c1">https://rs.tdwg.org/bdqtest/specification/12f7f82e-ab1c-4690-92b8-ecc9328256c1</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -23450,6 +24358,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH with Specification for: VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/07e4c491-0d13-409d-b966-fbb9721e81cf">https://rs.tdwg.org/bdqtest/method/07e4c491-0d13-409d-b966-fbb9721e81cf</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH</td>
 		</tr>
@@ -23493,8 +24405,8 @@ Including MultiRecord Measures
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumElevationInMeters is bdqval:Empty or the value is not a number; COMPLIANT if the value of dwc:minimumElevationInMeters is within the range of bdqval:minimumValidElevationInMeters to bdqval:maximumValidElevationInMeters inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:2bb79221-0312-410a-aef6-f569485df6a6</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/2bb79221-0312-410a-aef6-f569485df6a6">https://rs.tdwg.org/bdqtest/specification/2bb79221-0312-410a-aef6-f569485df6a6</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -23569,6 +24481,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_MINELEVATION_INRANGE with Specification for: VALIDATION_MINELEVATION_INRANGE</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/1aa9c50e-7e8a-445f-9cf3-12af51a9ec10">https://rs.tdwg.org/bdqtest/method/1aa9c50e-7e8a-445f-9cf3-12af51a9ec10</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_MINELEVATION_INRANGE</td>
 		</tr>
@@ -23612,8 +24528,8 @@ Including MultiRecord Measures
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumlevationInMeters or dwc:minimumElevationInMeters is bdqval:Empty, or if either is not a number; COMPLIANT if the value of dwc:minimumElevationInMeters is a number less than or equal to the value of the number dwc:maximumElevationInMeters, otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:f799fb5c-37e4-46d7-a07e-87eb071df9c6</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/f799fb5c-37e4-46d7-a07e-87eb071df9c6">https://rs.tdwg.org/bdqtest/specification/f799fb5c-37e4-46d7-a07e-87eb071df9c6</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -23672,6 +24588,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION with Specification for: VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/a0486e4f-210d-4143-ae5a-f320bebc2cb5">https://rs.tdwg.org/bdqtest/method/a0486e4f-210d-4143-ae5a-f320bebc2cb5</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION</td>
 		</tr>
@@ -23715,8 +24635,8 @@ Including MultiRecord Measures
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:month is bdqval:Empty; COMPLIANT if the value of dwc:month is interpretable as an integer between 1 and 12 inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:2c5dbdbb-feab-474c-bcca-bf6d1b90ae66</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/2c5dbdbb-feab-474c-bcca-bf6d1b90ae66">https://rs.tdwg.org/bdqtest/specification/2c5dbdbb-feab-474c-bcca-bf6d1b90ae66</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -23771,6 +24691,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_MONTH_STANDARD with Specification for: VALIDATION_MONTH_STANDARD</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/bb630881-2a79-4750-ae0f-36d0df2191f7">https://rs.tdwg.org/bdqtest/method/bb630881-2a79-4750-ae0f-36d0df2191f7</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_MONTH_STANDARD</td>
 		</tr>
@@ -23814,8 +24738,8 @@ Including MultiRecord Measures
 			<td>COMPLIANT if dwc:namePublishedInYear is bdqval:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:f09fc9ad-a449-4422-b32f-63d8ccf2501f</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/f09fc9ad-a449-4422-b32f-63d8ccf2501f">https://rs.tdwg.org/bdqtest/specification/f09fc9ad-a449-4422-b32f-63d8ccf2501f</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -23870,6 +24794,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY with Specification for: VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/f8024a02-76c0-482a-b805-097d0cdc82e2">https://rs.tdwg.org/bdqtest/method/f8024a02-76c0-482a-b805-097d0cdc82e2</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY</td>
 		</tr>
@@ -23913,8 +24841,8 @@ Including MultiRecord Measures
 			<td>COMPLIANT if dwc:occurrenceID is bdqval:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:3d9e1339-19d7-47e7-af9e-11905df82b6a</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/3d9e1339-19d7-47e7-af9e-11905df82b6a">https://rs.tdwg.org/bdqtest/specification/3d9e1339-19d7-47e7-af9e-11905df82b6a</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -23969,6 +24897,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_OCCURRENCEID_NOTEMPTY with Specification for: VALIDATION_OCCURRENCEID_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/296e08b2-c044-4cef-930e-8d29c579c8d6">https://rs.tdwg.org/bdqtest/method/296e08b2-c044-4cef-930e-8d29c579c8d6</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_OCCURRENCEID_NOTEMPTY</td>
 		</tr>
@@ -24012,8 +24944,8 @@ Including MultiRecord Measures
 			<td>COMPLIANT if dwc:occurrenceStatus is bdqval:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:c3a53898-c4ad-40e0-961b-b4ceafea37c7</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/c3a53898-c4ad-40e0-961b-b4ceafea37c7">https://rs.tdwg.org/bdqtest/specification/c3a53898-c4ad-40e0-961b-b4ceafea37c7</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -24068,6 +25000,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_OCCURRENCESTATUS_NOTEMPTY with Specification for: VALIDATION_OCCURRENCESTATUS_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/af9591f4-d0ee-4301-bc59-d6a68d1d6813">https://rs.tdwg.org/bdqtest/method/af9591f4-d0ee-4301-bc59-d6a68d1d6813</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_OCCURRENCESTATUS_NOTEMPTY</td>
 		</tr>
@@ -24111,8 +25047,8 @@ Including MultiRecord Measures
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdqval:Empty; COMPLIANT if the value of dwc:occurrenceStatus is resolved in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:fbe854d4-acf3-4c79-a654-81441fed644f</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/fbe854d4-acf3-4c79-a654-81441fed644f">https://rs.tdwg.org/bdqtest/specification/fbe854d4-acf3-4c79-a654-81441fed644f</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -24183,6 +25119,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_OCCURRENCESTATUS_STANDARD with Specification for: VALIDATION_OCCURRENCESTATUS_STANDARD</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/acc05ff6-b1c8-4001-8aad-930a9b9ccaf8">https://rs.tdwg.org/bdqtest/method/acc05ff6-b1c8-4001-8aad-930a9b9ccaf8</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_OCCURRENCESTATUS_STANDARD</td>
 		</tr>
@@ -24226,8 +25166,8 @@ Including MultiRecord Measures
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:order is bdqval:Empty; COMPLIANT if the value of dwc:order is found as a value at the rank of Order in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:ae08b4b4-89ba-4972-b51f-912b132bd006</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/ae08b4b4-89ba-4972-b51f-912b132bd006">https://rs.tdwg.org/bdqtest/specification/ae08b4b4-89ba-4972-b51f-912b132bd006</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -24302,6 +25242,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_ORDER_FOUND with Specification for: VALIDATION_ORDER_FOUND</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/79096434-5b55-40e1-9afb-e138a11f82ba">https://rs.tdwg.org/bdqtest/method/79096434-5b55-40e1-9afb-e138a11f82ba</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_ORDER_FOUND</td>
 		</tr>
@@ -24345,8 +25289,8 @@ Including MultiRecord Measures
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:pathway is bdqval:Empty; COMPLIANT if the value of dwc:pathway is in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:c7c92ef0-284e-4c5d-8fc9-f1480bfe0b8e</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/c7c92ef0-284e-4c5d-8fc9-f1480bfe0b8e">https://rs.tdwg.org/bdqtest/specification/c7c92ef0-284e-4c5d-8fc9-f1480bfe0b8e</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -24421,6 +25365,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_PATHWAY_STANDARD with Specification for: VALIDATION_PATHWAY_STANDARD</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/ffae8e47-2181-4a83-b1c7-d0a893e79b67">https://rs.tdwg.org/bdqtest/method/ffae8e47-2181-4a83-b1c7-d0a893e79b67</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_PATHWAY_STANDARD</td>
 		</tr>
@@ -24464,8 +25412,8 @@ Including MultiRecord Measures
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:phylum is bdqval:Empty; COMPLIANT if the value of dwc:phylum is found as a value at the rank of Phylum in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:1193230f-f188-4917-92da-bba3390ed3fa</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/1193230f-f188-4917-92da-bba3390ed3fa">https://rs.tdwg.org/bdqtest/specification/1193230f-f188-4917-92da-bba3390ed3fa</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -24540,6 +25488,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_PHYLUM_FOUND with Specification for: VALIDATION_PHYLUM_FOUND</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/06f9faab-102a-452a-b6e0-4eafd8d7e71d">https://rs.tdwg.org/bdqtest/method/06f9faab-102a-452a-b6e0-4eafd8d7e71d</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_PHYLUM_FOUND</td>
 		</tr>
@@ -24583,8 +25535,8 @@ Including MultiRecord Measures
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificName is bdqval:Empty, or all of dwc:genericName, dwc:specificEpithet and dwc:infraspecificEpithet are bdqval:Empty; COMPLIANT if the polynomial, as represented in dwc:scientificName, is consistent with bdqval:NotEmpty values of dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:d92c5e23-bf6a-483b-86c3-9374e12d01c7</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/d92c5e23-bf6a-483b-86c3-9374e12d01c7">https://rs.tdwg.org/bdqtest/specification/d92c5e23-bf6a-483b-86c3-9374e12d01c7</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -24647,6 +25599,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_POLYNOMIAL_CONSISTENT with Specification for: VALIDATION_POLYNOMIAL_CONSISTENT</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/94510668-a59f-41d3-84bb-30cd9715cb62">https://rs.tdwg.org/bdqtest/method/94510668-a59f-41d3-84bb-30cd9715cb62</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_POLYNOMIAL_CONSISTENT</td>
 		</tr>
@@ -24690,8 +25646,8 @@ Including MultiRecord Measures
 			<td>COMPLIANT if dwc:scientificNameAuthorship is bdqval:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:e9ffc3b0-0fb8-4a7c-a588-a00085ba980b</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/e9ffc3b0-0fb8-4a7c-a588-a00085ba980b">https://rs.tdwg.org/bdqtest/specification/e9ffc3b0-0fb8-4a7c-a588-a00085ba980b</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -24746,6 +25702,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY with Specification for: VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/f6c58791-279d-458b-b4ee-058a73a002ee">https://rs.tdwg.org/bdqtest/method/f6c58791-279d-458b-b4ee-058a73a002ee</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY</td>
 		</tr>
@@ -24789,8 +25749,8 @@ Including MultiRecord Measures
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is bdqval:Empty; COMPLIANT if (1) dwc:scientificNameID is a validly formed LSID, or (2) dwc:scientificNameID is a validly formed URN with at least NID and NSS present, or (3) dwc:scientificNameID is in the form scope:value, or (4) dwc:scientificNameID is a validly formed URI with host and path where path consists of more than just "/"; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:e6c02558-8541-4292-9a11-2f4408d69699</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/e6c02558-8541-4292-9a11-2f4408d69699">https://rs.tdwg.org/bdqtest/specification/e6c02558-8541-4292-9a11-2f4408d69699</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -24853,6 +25813,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_SCIENTIFICNAMEID_COMPLETE with Specification for: VALIDATION_SCIENTIFICNAMEID_COMPLETE</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/f2f40350-4081-4402-8b2b-95f9ad8893a7">https://rs.tdwg.org/bdqtest/method/f2f40350-4081-4402-8b2b-95f9ad8893a7</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_SCIENTIFICNAMEID_COMPLETE</td>
 		</tr>
@@ -24896,8 +25860,8 @@ Including MultiRecord Measures
 			<td>COMPLIANT if dwc:scientificNameID is bdqval:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:02242018-3e73-4e0a-8d6f-d1db06cf81a3</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/02242018-3e73-4e0a-8d6f-d1db06cf81a3">https://rs.tdwg.org/bdqtest/specification/02242018-3e73-4e0a-8d6f-d1db06cf81a3</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -24956,6 +25920,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_SCIENTIFICNAMEID_NOTEMPTY with Specification for: VALIDATION_SCIENTIFICNAMEID_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/b1b04dc2-e74b-43f3-9f48-60ac08afcadb">https://rs.tdwg.org/bdqtest/method/b1b04dc2-e74b-43f3-9f48-60ac08afcadb</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_SCIENTIFICNAMEID_NOTEMPTY</td>
 		</tr>
@@ -24999,8 +25967,8 @@ Including MultiRecord Measures
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificName is bdqval:Empty; COMPLIANT if there is a match of the contents of dwc:scientificName in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:3c2fe7e9-186f-4ceb-8274-8bbcb4a62de4</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/3c2fe7e9-186f-4ceb-8274-8bbcb4a62de4">https://rs.tdwg.org/bdqtest/specification/3c2fe7e9-186f-4ceb-8274-8bbcb4a62de4</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -25075,6 +26043,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_SCIENTIFICNAME_FOUND with Specification for: VALIDATION_SCIENTIFICNAME_FOUND</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/275ae9b2-4085-4946-9580-6a63844174cd">https://rs.tdwg.org/bdqtest/method/275ae9b2-4085-4946-9580-6a63844174cd</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_SCIENTIFICNAME_FOUND</td>
 		</tr>
@@ -25118,8 +26090,8 @@ Including MultiRecord Measures
 			<td>COMPLIANT if dwc:scientificName is bdqval:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:a9c18563-f63e-42db-98e5-a3e6079086b7</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/a9c18563-f63e-42db-98e5-a3e6079086b7">https://rs.tdwg.org/bdqtest/specification/a9c18563-f63e-42db-98e5-a3e6079086b7</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -25178,6 +26150,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_SCIENTIFICNAME_NOTEMPTY with Specification for: VALIDATION_SCIENTIFICNAME_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/74259ddf-188c-4e6f-96f2-9ed3a8adfbf7">https://rs.tdwg.org/bdqtest/method/74259ddf-188c-4e6f-96f2-9ed3a8adfbf7</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_SCIENTIFICNAME_NOTEMPTY</td>
 		</tr>
@@ -25221,8 +26197,8 @@ Including MultiRecord Measures
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:sex is bdqval:Empty; COMPLIANT if the value of dwc:sex is in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:72471db4-226c-454f-bbe8-5c1718e6c834</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/72471db4-226c-454f-bbe8-5c1718e6c834">https://rs.tdwg.org/bdqtest/specification/72471db4-226c-454f-bbe8-5c1718e6c834</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -25297,6 +26273,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_SEX_STANDARD with Specification for: VALIDATION_SEX_STANDARD</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/a0c48217-97a2-41e2-9540-61939f2628c5">https://rs.tdwg.org/bdqtest/method/a0c48217-97a2-41e2-9540-61939f2628c5</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_SEX_STANDARD</td>
 		</tr>
@@ -25340,8 +26320,8 @@ Including MultiRecord Measures
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:startDayOfYear is bdqval:Empty or if the value of dwc:startDayOfYear is equal to 366 and (dwc:eventDate is bdqval:Empty or the value of dwc:eventDate cannot be interpreted to find single year or a start year in a range); COMPLIANT if the value of dwc:startDayOfYear is an integer between 1 and 365, inclusive, or if the value of dwc:startDayOfYear is 366 and the start year interpreted from dwc:eventDate is a leap year; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:53c6af68-6120-4da6-87d8-a3e9551b9671</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/53c6af68-6120-4da6-87d8-a3e9551b9671">https://rs.tdwg.org/bdqtest/specification/53c6af68-6120-4da6-87d8-a3e9551b9671</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -25404,6 +26384,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_STARTDAYOFYEAR_INRANGE with Specification for: VALIDATION_STARTDAYOFYEAR_INRANGE</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/c3d0ce9b-2f40-4cd7-8e67-085b137e8e89">https://rs.tdwg.org/bdqtest/method/c3d0ce9b-2f40-4cd7-8e67-085b137e8e89</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_STARTDAYOFYEAR_INRANGE</td>
 		</tr>
@@ -25447,8 +26431,8 @@ Including MultiRecord Measures
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:stateProvince is bdqval:Empty; COMPLIANT if the value of dwc:stateProvince occurs as an administrative entity that is a child to at least one entity representing an ISO 3166 country-like entity in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:d261fac1-ce61-4879-bc04-870fa885b578</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/d261fac1-ce61-4879-bc04-870fa885b578">https://rs.tdwg.org/bdqtest/specification/d261fac1-ce61-4879-bc04-870fa885b578</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -25523,6 +26507,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_STATEPROVINCE_FOUND with Specification for: VALIDATION_STATEPROVINCE_FOUND</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/eebb4a3c-30e8-43e5-96f5-eded890dd174">https://rs.tdwg.org/bdqtest/method/eebb4a3c-30e8-43e5-96f5-eded890dd174</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_STATEPROVINCE_FOUND</td>
 		</tr>
@@ -25566,8 +26554,8 @@ Including MultiRecord Measures
 			<td>COMPLIANT if dwc:taxonRank is bdqval:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:c619ec9b-92ec-4047-a8d3-931e3324bf3e</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/c619ec9b-92ec-4047-a8d3-931e3324bf3e">https://rs.tdwg.org/bdqtest/specification/c619ec9b-92ec-4047-a8d3-931e3324bf3e</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -25626,6 +26614,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_TAXONRANK_NOTEMPTY with Specification for: VALIDATION_TAXONRANK_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/dbb803cb-8b37-4db3-a562-b4f6036f9d17">https://rs.tdwg.org/bdqtest/method/dbb803cb-8b37-4db3-a562-b4f6036f9d17</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_TAXONRANK_NOTEMPTY</td>
 		</tr>
@@ -25669,8 +26661,8 @@ Including MultiRecord Measures
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:taxonRank is bdqval:Empty; COMPLIANT if the value of dwc:taxonRank is in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:c8964200-630e-47c6-baad-7e334fddbbdb</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/c8964200-630e-47c6-baad-7e334fddbbdb">https://rs.tdwg.org/bdqtest/specification/c8964200-630e-47c6-baad-7e334fddbbdb</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -25745,6 +26737,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_TAXONRANK_STANDARD with Specification for: VALIDATION_TAXONRANK_STANDARD</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/e95df0f4-b6b6-4e04-ad00-95eef6e8d993">https://rs.tdwg.org/bdqtest/method/e95df0f4-b6b6-4e04-ad00-95eef6e8d993</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_TAXONRANK_STANDARD</td>
 		</tr>
@@ -25788,8 +26784,8 @@ Including MultiRecord Measures
 			<td>COMPLIANT if at least one term needed to determine the taxon of the entity exists and is bdqval:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:f38e3644-354d-4180-bc7c-c437cef1d606</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/f38e3644-354d-4180-bc7c-c437cef1d606">https://rs.tdwg.org/bdqtest/specification/f38e3644-354d-4180-bc7c-c437cef1d606</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -25848,6 +26844,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_TAXON_NOTEMPTY with Specification for: VALIDATION_TAXON_NOTEMPTY</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/9c5798cd-6176-41ed-8e91-35e3df1fa6d4">https://rs.tdwg.org/bdqtest/method/9c5798cd-6176-41ed-8e91-35e3df1fa6d4</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_TAXON_NOTEMPTY</td>
 		</tr>
@@ -25891,8 +26891,8 @@ Including MultiRecord Measures
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if all of dwc:scientificNameID, dwc:scientificName, dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship, dwc:cultivarEpithet are bdqval:Empty; COMPLIANT if (1) dwc:scientificNameID references a single taxon record in the bdqval:sourceAuthority, or (2) dwc:scientificNameID is bdqval:Empty and dwc:scientificName references a single taxon record in the bdqval:sourceAuthority, or (3) if dwc:scientificName and dwc:scientificNameID are bdqval:Empty and if a combination of the values of the terms dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:cultivarEpithet, dwc:taxonRank, and dwc:scientificNameAuthorship can be unambiguously resolved to a unique taxon in the bdqval:sourceAuthority, or (4) if ambiguity produced by multiple matches in (2) or (3) can be disambiguated to a unique Taxon using the values of dwc:tribe, dwc:subtribe, dwc:subgenus, dwc:genus, dwc:subfamily, dwc:family, dwc:superfamily, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:taxonID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID and dwc:vernacularName; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:8bd6f6de-49e4-4889-82e0-e4af093981e0</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/8bd6f6de-49e4-4889-82e0-e4af093981e0">https://rs.tdwg.org/bdqtest/specification/8bd6f6de-49e4-4889-82e0-e4af093981e0</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -25971,6 +26971,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_TAXON_UNAMBIGUOUS with Specification for: VALIDATION_TAXON_UNAMBIGUOUS</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/55b60dd8-7054-4736-b9ac-88bef8967fb2">https://rs.tdwg.org/bdqtest/method/55b60dd8-7054-4736-b9ac-88bef8967fb2</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_TAXON_UNAMBIGUOUS</td>
 		</tr>
@@ -26014,8 +27018,8 @@ Including MultiRecord Measures
 			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:typeStatus is bdqval:Empty; COMPLIANT if the value of the first word in each &#124; delimited portion of dwc:typeStatus is in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT.</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:e4dbf38d-bdd7-4cf7-8c60-5b3bfc6af4ff</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/e4dbf38d-bdd7-4cf7-8c60-5b3bfc6af4ff">https://rs.tdwg.org/bdqtest/specification/e4dbf38d-bdd7-4cf7-8c60-5b3bfc6af4ff</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -26090,6 +27094,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_TYPESTATUS_STANDARD with Specification for: VALIDATION_TYPESTATUS_STANDARD</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/f84d0f30-9c93-43a4-8f75-8c853fc18fb5">https://rs.tdwg.org/bdqtest/method/f84d0f30-9c93-43a4-8f75-8c853fc18fb5</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_TYPESTATUS_STANDARD</td>
 		</tr>
@@ -26133,8 +27141,8 @@ Including MultiRecord Measures
 			<td>INTERNAL_PREREQUISITES_NOT_MET if dwc:year is bdqval:Empty or cannot be interpreted as an integer; COMPLIANT if the value of dwc:year is within the range bdqval:earliestValidDate to bdqval:latestValidDate inclusive; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:aee43366-0352-448a-a5ea-85ddc8605da1</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/aee43366-0352-448a-a5ea-85ddc8605da1">https://rs.tdwg.org/bdqtest/specification/aee43366-0352-448a-a5ea-85ddc8605da1</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -26205,6 +27213,10 @@ Including MultiRecord Measures
 			<td>ValidationMethod: VALIDATION_YEAR_INRANGE with Specification for: VALIDATION_YEAR_INRANGE</td>
 		</tr>
 		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/7922ab56-6eae-4257-9691-d55d24842274">https://rs.tdwg.org/bdqtest/method/7922ab56-6eae-4257-9691-d55d24842274</a></td>
+		</tr>
+		<tr>
 			<td>Specification label</td>
 			<td>Specification for: VALIDATION_YEAR_INRANGE</td>
 		</tr>
@@ -26248,8 +27260,8 @@ Including MultiRecord Measures
 			<td>COMPLIANT if dwc:year is bdqval:NotEmpty; otherwise NOT_COMPLIANT</td>
 		</tr>
 		<tr>
-			<td>Specification GUID</td>
-			<td>urn:uuid:42f331f4-a5a8-48b4-a08e-57048d1d1a77</td>
+			<td>Specification IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/specification/42f331f4-a5a8-48b4-a08e-57048d1d1a77">https://rs.tdwg.org/bdqtest/specification/42f331f4-a5a8-48b4-a08e-57048d1d1a77</a></td>
 		</tr>
 		<tr>
 			<td>InformationElements ActedUpon</td>
@@ -26302,6 +27314,10 @@ Including MultiRecord Measures
 		<tr>
 			<td>ValidationMethod label</td>
 			<td>ValidationMethod: VALIDATION_YEAR_NOTEMPTY with Specification for: VALIDATION_YEAR_NOTEMPTY</td>
+		</tr>
+		<tr>
+			<td>ValidationMethod IRI</td>
+			<td><a href="https://rs.tdwg.org/bdqtest/method/2a0843de-32f9-473e-984a-619dace9ee66">https://rs.tdwg.org/bdqtest/method/2a0843de-32f9-473e-984a-619dace9ee66</a></td>
 		</tr>
 		<tr>
 			<td>Specification label</td>

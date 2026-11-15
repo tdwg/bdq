@@ -307,7 +307,7 @@ The descriptions of the Tests are complex. The following (abstracted from [the K
 
 - Term Name (`rdf:value`) - a UUID that identifies the Test (e.g., 3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e).
 - Term [IRI](<../../../index.md#glossary_IRI> "Internationalized Resource Identifier is an internet protocol standard which builds on the Uniform Resource Identifier URI protocol by greatly expanding the set of permitted characters.") (`dcterms:isVersionOf`) - the machine readable identifier for the Test, in the form of an IRI terminating in the Term Name UUID (https://rs.tdwg.org/bdqtest/terms/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e).
-- Versioned IRI - the machine readable identifier for a specific version of the Test, in the form of an IRI terminating in the Term Name UUID and a date (https://rs.tdwg.org/bdqtest/terms/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e-2025-03-07)  Term IRI and Versioned IRI follow the guidance of the [TDWG Metadata Standards](https://tdwg.github.io/rs.tdwg.org/README-2020-02-03.html#4th-level-terms) document for IRIs for Terms.
+- Versioned IRI - the machine readable identifier for a specific version of the Test, in the form of an IRI terminating in the Term Name UUID and a date (https://rs.tdwg.org/bdqtest/terms/version/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e-2025-03-07)  Term IRI and Versioned IRI follow the guidance of the [TDWG Metadata Standards](https://tdwg.github.io/rs.tdwg.org/README-2020-02-03.html#4th-level-terms) document for IRIs for Terms.
 - Label (`rdfs:label`) - a human readable identifier for the Test (e.g., VALIDATION_COUNTRYCODE_STANDARD).
 - ExpectedResponse ([bdqffdq:hasExpectedResponse](../../list/bdqffdq/index.md#hasexpectedresponse)) - the description of the expected behavior of a Test implementation.
 - SourceAuthorities/Defaults ([bdqffdq:hasAuthoritiesDefaults](../../list/bdqffdq/index.md#hasauthoritiesdefaults)) - information about source authorities and parameters listed in the expected response, including default values for parameters.
@@ -455,7 +455,7 @@ The following code snippet in Java from the FilteredPush `rec_occur_qc` library 
 ```java
     @Amendment(label="AMENDMENT_LICENSE_STANDARDIZED", description="Propose amendment to the value of dwc:license using bdqval:sourceAuthority.")
     @Provides("dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8")
-    @ProvidesVersion("https://rs.tdwg.org/bdqtest/terms/dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8-2023-09-18")
+    @ProvidesVersion("https://rs.tdwg.org/bdqtest/terms/version/dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8-2023-09-18")
     @Specification("EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; AMENDED value of dcterms:license if it could be unambiguously interpreted as a value in bdqval:sourceAuthority; otherwise NOT_AMENDED. bdqval:sourceAuthority default = 'Creative Commons' {[https://creativecommons.org/]} {Creative Commons licenses [https://creativecommons.org/about/cclicenses/]}")
     public static DQResponse<AmendmentValue> amendmentLicenseStandardized(
         @ActedUpon("dcterms:license") String license,
@@ -483,7 +483,7 @@ This library also includes a method whose signature does not include the paramet
 
     @Amendment(label="AMENDMENT_LICENSE_STANDARDIZED", description="Propose amendment to the value of dwc:license using bdqval:sourceAuthority.")
     @Provides("dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8")
-    @ProvidesVersion("https://rs.tdwg.org/bdqtest/terms/dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8-2023-09-18")
+    @ProvidesVersion("https://rs.tdwg.org/bdqtest/terms/version/dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8-2023-09-18")
     @Specification("EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; AMENDED value of dcterms:license if it could be unambiguously interpreted as a value in bdqval:sourceAuthority; otherwise NOT_AMENDED. bdqval:sourceAuthority default = 'Creative Commons' {[https://creativecommons.org/]} {Creative Commons licenses [https://creativecommons.org/about/cclicenses/]}")
     public static DQResponse<AmendmentValue> amendmentLicenseStandardized(
         @ActedUpon("dcterms:license") String license
@@ -814,7 +814,7 @@ Additional metadata can be added in Java annotations. In the following, again fr
 ```java
     @Validation(label="_ENDDAYOFYEAR_INRANGE", description="Is the value of dwc:endDayOfYear an integer between 1 and 365 inclusive, or 366 if a leap year?")
     @Provides("9a39d88c-7eee-46df-b32a-c109f9f81fb8")
-    @ProvidesVersion("https://rs.tdwg.org/bdqtest/terms/9a39d88c-7eee-46df-b32a-c109f9f81fb8-2023-09-18")
+    @ProvidesVersion("https://rs.tdwg.org/bdqtest/terms/version/9a39d88c-7eee-46df-b32a-c109f9f81fb8-2023-09-18")
     @Specification("INTERNAL_PREREQUISITES_NOT_MET if dwc:endDayOfYear is bdqval:Empty or if the value of dwc:endDayOfYear is equal to 366 and (dwc:eventDate is bdqval:Empty or the value of dwc:eventDate cannot be interpreted to find a single year or an end year in a range); COMPLIANT if the value of dwc:endDayOfYear is an integer between 1 and 365 inclusive, or if the value of dwc:endDayOfYear is 366 and the end year interpreted from dwc:eventDate is a leap year; otherwise NOT_COMPLIANT")
     public static DQResponse<ComplianceValue> validationEnddayofyearInrange(
             @ActedUpon(value="dwc:endDayOfYear") String endDay,
@@ -951,7 +951,7 @@ Below is an example implementation from the FilteredPush `event_date_qc` library
 ```java
     @Validation(label="VALIDATION_DAY_STANDARD", description="Is the value of dwc:day an integer between 1 and 31 inclusive?")
     @Provides("47ff73ba-0028-4f79-9ce1-ee7008d66498")
-    @ProvidesVersion("https://rs.tdwg.org/bdqtest/terms/47ff73ba-0028-4f79-9ce1-ee7008d66498-2023-09-18")
+    @ProvidesVersion("https://rs.tdwg.org/bdqtest/terms/version/47ff73ba-0028-4f79-9ce1-ee7008d66498-2023-09-18")
     @Specification("INTERNAL_PREREQUISITES_NOT_MET if dwc:day is EMPTY; COMPLIANT if the value of the field dwc:day is an integer between 1 and 31 inclusive; otherwise NOT_COMPLIANT.")
     public static DQResponse<ComplianceValue> validationDayStandard(@ActedUpon("dwc:day") String day) {
         DQResponse<ComplianceValue> result = new DQResponse<ComplianceValue>();
@@ -1347,7 +1347,7 @@ The `bdqffdq:` [OWL](<../../../index.md#glossary_OWL> "Web Ontology Language. A 
 
 The responses from Tests could be structured as elements that can be wrapped in the body `Annotation` document along with metadata from the Framework to describe which Test is being reported upon, and metadata within the target of the `Annotation` to describe which `DataResource` is being annotated, and the state it was in at the time of annotation.
 
-When Test `Responses` are being returned as `Annotations`, they SHOULD use the W3C Web Annotation Data Model for the `Annotations`, and SHOULD place Test `Responses` within the body of the `Annotation`. Such `Annotations` SHOULD include reference to the source Test by the versioned fully qualified name of the Test (e.g., bdqtest:47ff73ba-0028-4f79-9ce1-ee7008d66498-2023-09-18) and the Test Label (`rdfs:label`) (e.g., VALIDATION_DAY_STANDARD). Such annotations SHOULD also provide the [bdqffdq:Mechanism](<../../list/bdqffdq/index.md#Mechanism> "An entity that can execute bdqffdq:DataQualityMethods.") that generated the Test response. 
+When Test `Responses` are being returned as `Annotations`, they SHOULD use the W3C Web Annotation Data Model for the `Annotations`, and SHOULD place Test `Responses` within the body of the `Annotation`. Such `Annotations` SHOULD include reference to the source Test by the versioned fully qualified name of the Test (e.g., <https://rs.tdwg.org/bdqtest/terms/version/47ff73ba-0028-4f79-9ce1-ee7008d66498-2023-09-18>) and the Test Label (`rdfs:label`) (e.g., VALIDATION_DAY_STANDARD). Such annotations SHOULD also provide the [bdqffdq:Mechanism](<../../list/bdqffdq/index.md#Mechanism> "An entity that can execute bdqffdq:DataQualityMethods.") that generated the Test response. 
 
 When Test responses are persisted as `Annotations` in association with the annotated data, a means SHOULD be provided to mark `Annotations` as having been evaluated, and to carry the results of such evaluations. `Annotation` conversations (that is, `Annotations` with other annotations as their target) MAY provide such a means. Vocabularies related to bug/issue tracking MAY provide such a means.
 
@@ -1389,7 +1389,7 @@ In a complete dataset the `Specification` is linked (via a `Data Quality Method`
   a bdqffdq:Implementation ;
   bdqffdq:producesResponse <https://example.org/bdq/assertion/1> ;
   bdqffdq:implementedBy <https://example.org/bdq/mechanism/kurator-dwcsciNameDQ-v1.0.1> ;
-  bdqffdq:usesSpecification bdqtest:47ff73ba-0028-4f79-9ce1-ee7008d66498-2025-03-06 .
+  bdqffdq:usesSpecification <https://rs.tdwg.org/bdqtest/specification/version/c0fce1a1-8879-4175-8a71-ce037655c358-2023-09-18> .
 
 <https://example.org/bdq/mechanism/kurator-dwcsciNameDQ-v1.0.1>
   a bdqffdq:Mechanism ,

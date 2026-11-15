@@ -443,28 +443,31 @@ Example values for `bdqffdq:hasAuthoritiesDefaults`:
 Example RDF fragment showing use of `Arguments` and `bdqffdq:hasAuthoritiesDefaults`: 
 
 ```xml
-<rdf:Description rdf:about="urn:uuid:f41be58e-2e1e-409e-a322-1de95df2ce0b">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/argument/f41be58e-2e1e-409e-a322-1de95df2ce0b">
+    <owl:sameAs rdf:resource="urn:uuid:f41be58e-2e1e-409e-a322-1de95df2ce0b"/>
     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Argument"/>
     <rdfs:label>Default value for bdqval:maximumValidDepthInMeters:"11000"</rdfs:label>
     <bdqffdq:hasArgumentValue>11000</bdqffdq:hasArgumentValue>
     <bdqffdq:hasParameter rdf:resource="https://rs.tdwg.org/bdqval/terms/maximumValidDepthInMeters"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="urn:uuid:edf69c59-056d-4c8a-b1fb-647ea684eb18">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/argument/edf69c59-056d-4c8a-b1fb-647ea684eb18">
+    <owl:sameAs rdf:resource="urn:uuid:edf69c59-056d-4c8a-b1fb-647ea684eb18"/>
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Argument"/>
 	<rdfs:label>Default value for bdqval:minimumValidDepthInMeters:"0"</rdfs:label>
 	<bdqffdq:hasArgumentValue>0</bdqffdq:hasArgumentValue>
 	<bdqffdq:hasParameter rdf:resource="https://rs.tdwg.org/bdqval/terms/minimumValidDepthInMeters"/>
 </rdf:Description>
  
-<rdf:Description rdf:about="urn:uuid:cebc8ba0-ca02-4f1e-830e-ec693bc628e4">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/specification/cebc8ba0-ca02-4f1e-830e-ec693bc628e4">
+    <owl:sameAs rdf:resource="urn:uuid:cebc8ba0-ca02-4f1e-830e-ec693bc628e4"/>
     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Specification"/> 
     <rdfs:label>Specification for: VALIDATION_MAXDEPTH_INRANGE</rdfs:label>
     <dcterms:description>INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumDepthInMeters is bdqval:Empty or is not interpretable as a number greater than or equal to zero; COMPLIANT if the value of dwc:maximumDepthInMeters is within the range of bdqval:minimumValidDepthInMeters to bdqval:maximumValidDepthInMeters inclusive; otherwise NOT_COMPLIANT bdqval:minimumValidDepthInMeters default="0",bdqval:maximumValidDepthInMeters default="11000"</dcterms:description>
     <skos:example>dwc:maximumDepthInMeters="1200": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:maximumDepthInMeters is in range (&lt;11,000)"</skos:example>
     <skos:example>dwc:maximumDepthInMeters="99999": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:maximumDepthInMeters is not in range (&gt;11,000)"</skos:example>
-    <bdqffdq:hasArgument rdf:resource="urn:uuid:edf69c59-056d-4c8a-b1fb-647ea684eb18"/>
-    <bdqffdq:hasArgument rdf:resource="urn:uuid:f41be58e-2e1e-409e-a322-1de95df2ce0b"/>
+    <bdqffdq:hasArgument rdf:resource="https://rs.tdwg.org/bdqtest/argument/edf69c59-056d-4c8a-b1fb-647ea684eb18"/>
+    <bdqffdq:hasArgument rdf:resource="https://rs.tdwg.org/bdqtest/argument/f41be58e-2e1e-409e-a322-1de95df2ce0b"/>
     <bdqffdq:hasAuthoritiesDefaults>bdqval:minimumValidDepthInMeters default="0",bdqval:maximumValidDepthInMeters default="11000"</bdqffdq:hasAuthoritiesDefaults>
     <bdqffdq:hasExpectedResponse>INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumDepthInMeters is bdqval:Empty or is not interpretable as a number greater than or equal to zero; COMPLIANT if the value of dwc:maximumDepthInMeters is within the range of bdqval:minimumValidDepthInMeters to bdqval:maximumValidDepthInMeters inclusive; otherwise NOT_COMPLIANT</bdqffdq:hasExpectedResponse>
 </rdf:Description>   
@@ -473,7 +476,8 @@ Example RDF fragment showing use of `Arguments` and `bdqffdq:hasAuthoritiesDefau
 Example RDF Fragment showing the `Specification` for [VALIDATION_COUNTRYCODE_STANDARD](../../terms/bdqtest/index.md#VALIDATION_COUNTRYCODE_STANDARD), where `bdqffdq:hasAuthoritiesDefaults` is present to provide a `bdqval:sourceAuthority` for the `Specification`, but the Test is not parameterized, so no `bdqffdq:hasArgument` properties are present: 
 
 ```xml
-<rdf:Description rdf:about="urn:uuid:01b96157-e4a1-4884-95d7-3bcfc5f3c047">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/specification/01b96157-e4a1-4884-95d7-3bcfc5f3c047">
+    <owl:sameAs rdf:resource="urn:uuid:01b96157-e4a1-4884-95d7-3bcfc5f3c047"/>
     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Specification"/>
     <rdfs:label>Specification for: VALIDATION_COUNTRYCODE_STANDARD</rdfs:label>
     <dcterms:description>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode is bdqval:Empty; COMPLIANT if dwc:countryCode can be unambiguously interpreted as a valid ISO 3166-1-alpha-2 country code in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT bdqval:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}</dcterms:description>
@@ -552,22 +556,23 @@ A complete description of BDQ Tests can be found in the RDF representation of th
 
 
 ```xml
-  <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe-2025-03-07">
+  <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe">
+      <owl:sameAs rdf:resource="urn:uuid:0493bcfb-652e-4d17-815b-b0cce0742fbe"/>
     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
     <bdqffdq:hasResourceType rdf:resource="https://rs.tdwg.org/bdqffdq/terms/SingleRecord"/>
     <skos:note>Locations outside of a jurisdiction covered by a country code may have a value in the field dwc:countryCode, the ISO user defined codes include XZ used by the UN for installations on the high seas and recommended in Darwin Core to designate the high seas. Also available in the ISO user defined codes is ZZ, used by Darwin Core and GBIF to mark unknown countries. This Test should accept both XZ and ZZ as COMPLIANT country codes. This Test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters.</skos:note>
     <bdqffdq:hasDataQualityDimension rdf:resource="https://rs.tdwg.org/bdqdim/terms/Conformance"/>
     <dcterms:description>Is the value of dwc:countryCode a valid ISO 3166-1-alpha-2 country code?</dcterms:description>
     <bdqffdq:hasCriterion rdf:resource="https://rs.tdwg.org/bdqcrit/terms/Standard"/>
-    <bdqffdq:hasActedUponInformationElement rdf:resource="urn:uuid:c3620a97-65d6-4f9c-8a03-32e0d240a423"/>
-    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:issued>
+    <bdqffdq:hasActedUponInformationElement rdf:resource="https://rs.tdwg.org/bdqtest/informationelement/c3620a97-65d6-4f9c-8a03-32e0d240a423"/>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:modified>
     <dcterms:references rdf:resource="https://www.iso.org/iso-3166-country-codes.html"/>
     <dcterms:references rdf:resource="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2"/>
     <dcterms:references rdf:resource="https://datahub.io/core/country-list"/>
     <dcterms:references rdf:resource="https://doi.org/10.15468/doc-gg7h-s853"/>
     <skos:historyNote>https://github.com/tdwg/bdq/issues/20</skos:historyNote>
     <rdfs:label>VALIDATION_COUNTRYCODE_STANDARD</rdfs:label>
-    <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqtest/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe"/>
+    <dcterms:hasVersion rdf:resource="https://rs.tdwg.org/bdqtest/terms/version/0493bcfb-652e-4d17-815b-b0cce0742fbe-2025-03-07"/>
     <skos:prefLabel>Validation dwc:countryCode Standard for SingleRecord</skos:prefLabel>
   </rdf:Description>
 
@@ -581,7 +586,8 @@ A complete description of BDQ Tests can be found in the RDF representation of th
     <rdfs:label>Conformance</rdfs:label>
   </rdf:Description>
 
-  <rdf:Description rdf:about="urn:uuid:c3620a97-65d6-4f9c-8a03-32e0d240a423">
+  <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/informationelement/c3620a97-65d6-4f9c-8a03-32e0d240a423">
+      <owl:sameAs rdf:resource="urn:uuid:c3620a97-65d6-4f9c-8a03-32e0d240a423"/>
     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ActedUpon"/>
     <bdqffdq:composedOf rdf:resource="http://rs.tdwg.org/dwc/terms/countryCode"/>
     <rdfs:label>Information Element ActedUpon dwc:countryCode</rdfs:label>
@@ -593,19 +599,21 @@ A complete description of BDQ Tests can be found in the RDF representation of th
     <rdfs:label>SingleRecord</rdfs:label>
   </rdf:Description>
 
-  <rdf:Description rdf:about="urn:uuid:02f5a440-a473-42cf-a3f1-6c10334d5eb8">
+  <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/method/02f5a440-a473-42cf-a3f1-6c10334d5eb8">
+      <owl:sameAs rdf:resource="urn:uuid:02f5a440-a473-42cf-a3f1-6c10334d5eb8"/>
     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
     <skos:note>Example Implementations: Kurator/FilteredPush geo_ref_qc Library (Morris &amp; Lowery 2025b)</skos:note>
     <skos:note>Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L99</skos:note>
     <skos:note>TG2 Validation SPACE CODED Test VOCABULARY Conformance ISO/DCMI STANDARD CORE</skos:note>
-    <bdqffdq:hasSpecification rdf:resource="urn:uuid:01b96157-e4a1-4884-95d7-3bcfc5f3c047"/>
+    <bdqffdq:hasSpecification rdf:resource="https://rs.tdwg.org/bdqtest/specification/01b96157-e4a1-4884-95d7-3bcfc5f3c047"/>
     <skos:historyNote>Source: TG2</skos:historyNote>
     <rdfs:label>ValidationMethod: VALIDATION_COUNTRYCODE_STANDARD with Specification for: VALIDATION_COUNTRYCODE_STANDARD</rdfs:label>
     <skos:prefLabel>ValidationMethod: VALIDATION_COUNTRYCODE_STANDARD with Specification for: VALIDATION_COUNTRYCODE_STANDARD</skos:prefLabel>
-    <bdqffdq:forValidation rdf:resource="https://rs.tdwg.org/bdqtest/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe-2025-03-07"/>
+    <bdqffdq:forValidation rdf:resource="https://rs.tdwg.org/bdqtest/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe"/>
   </rdf:Description>
 
-  <rdf:Description rdf:about="urn:uuid:01b96157-e4a1-4884-95d7-3bcfc5f3c047">
+  <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/specification/01b96157-e4a1-4884-95d7-3bcfc5f3c047">
+      <owl:sameAs rdf:resource="urn:uuid:01b96157-e4a1-4884-95d7-3bcfc5f3c047"/>
     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Specification"/>
     <skos:example>dwc:countryCode="GL": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:countryCode is a valid ISO (ISO 3166-1-alpha-2 country codes) value"</skos:example>
     <skos:example>dwc:countryCode="GRL": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:countryCode is NOT a valid ISO (ISO 3166-1-alpha-2 country codes) value"</skos:example>
@@ -615,12 +623,13 @@ A complete description of BDQ Tests can be found in the RDF representation of th
     <dcterms:description>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode is bdqval:Empty; COMPLIANT if dwc:countryCode can be unambiguously interpreted as a valid ISO 3166-1-alpha-2 country code in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT bdqval:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}</dcterms:description>
   </rdf:Description>
 
-  <rdf:Description rdf:about="urn:uuid:0348eccf-fc7f-49b3-88b6-1d911e98cbbb">
+  <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/policy/0348eccf-fc7f-49b3-88b6-1d911e98cbbb">
+      <owl:sameAs rdf:resource="urn:uuid:0348eccf-fc7f-49b3-88b6-1d911e98cbbb"/>
     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationPolicy"/>
-    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe-2025-03-07"/>
-    <rdfs:label>ValidationPolicy: (50) validations  in UseCase bdquc:Spatial-Temporal_Patterns</rdfs:label>
+    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe"/>
+    <rdfs:label>ValidationPolicy: (51) validations  in UseCase bdquc:Spatial-Temporal_Patterns</rdfs:label>
     <bdqffdq:hasUseCase rdf:resource="https://rs.tdwg.org/bdquc/terms/Spatial-Temporal_Patterns"/>
-    <skos:prefLabel>ValidationPolicy: (50) validations  in UseCase bdquc:Spatial-Temporal_Patterns</skos:prefLabel>
+    <skos:prefLabel>ValidationPolicy: (51) validations  in UseCase bdquc:Spatial-Temporal_Patterns</skos:prefLabel>
   </rdf:Description>
 
   <rdf:Description rdf:about="https://rs.tdwg.org/bdquc/terms/Spatial-Temporal_Patterns">

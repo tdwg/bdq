@@ -428,7 +428,7 @@ Given a `Use Case`, can one find the `Single Record` `Validations` related to th
       ?validation
       ?validationLabel
       ?validationPrefLabel
-      ?issued
+      ?modified
     WHERE {
       # ---- Choose the Use Case ----
       # Option A: by URI (recommended)
@@ -453,9 +453,9 @@ Given a `Use Case`, can one find the `Single Record` `Validations` related to th
                   rdfs:label ?validationLabel .
     
       OPTIONAL { ?validation skos:prefLabel ?validationPrefLabel }
-      OPTIONAL { ?validation dcterms:issued ?issued }
+      OPTIONAL { ?validation dcterms:modified ?modified }
     }
-    ORDER BY LCASE(STR(?validationLabel)) STR(?issued)
+    ORDER BY LCASE(STR(?validationLabel))
 ```
 
 Or, to just get the UUID of these tests (for example to lookup relevant methods using [Java](<../../index.md#glossary_Java> "Java is a registered trademark of Oracle and/or its affiliates.") annotations), asking: Given a `Use Case`, can one find the UUIDs of the `Single Record` `Validations` related to that `Use Case`?
@@ -469,7 +469,7 @@ Or, to just get the UUID of these tests (for example to lookup relevant methods 
     PREFIX bdquc:     <https://rs.tdwg.org/bdquc/terms/>
     
     SELECT DISTINCT
-        ?isVersionOf 
+        ?validation ?uuid
     WHERE {
       # ---- Choose the Use Case ----
       VALUES ?useCase { bdquc:Spatial-Temporal_Patterns }
@@ -481,8 +481,8 @@ Or, to just get the UUID of these tests (for example to lookup relevant methods 
     
       # ---- Restrict to Validation tests on SingleRecord ----
       ?validation a bdqffdq:Validation ;
-                  bdqffdq:hasResourceType bdqffdq:SingleRecord ;
-                  dcterms:isVersionOf ?isVersionOf .
+                  bdqffdq:hasResourceType bdqffdq:SingleRecord .
+      BIND (STRAFTER(STR(?validation), "https://rs.tdwg.org/bdqtest/terms/") AS ?uuid)
     }
 ```
 
@@ -538,16 +538,17 @@ Given a `Specification` (as would be known when starting with a [bdqffdq:Respons
     
     SELECT ?test ?label ?description ?parameter ?argumentValue
     WHERE {
-      ?method bdqffdq:hasSpecification <urn:uuid:f3e03531-7ee5-4721-aae2-f554389e0544> .
+      ?specification dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/f3e03531-7ee5-4721-aae2-f554389e0544-2023-09-18> .
+      ?method bdqffdq:hasSpecification ?specification .
       ?method bdqffdq:forValidation ?test .
     
       ?test rdf:type bdqffdq:Validation .
       ?test rdfs:label ?label .
     
-      <urn:uuid:f3e03531-7ee5-4721-aae2-f554389e0544> dcterms:description ?description .
+      ?specification dcterms:description ?description .
     
       OPTIONAL {
-        <urn:uuid:f3e03531-7ee5-4721-aae2-f554389e0544> bdqffdq:hasArgument ?argument .
+        ?specification bdqffdq:hasArgument ?argument .
         ?argument bdqffdq:hasParameter ?parameter .
         ?argument bdqffdq:hasArgumentValue ?argumentValue .
       }
@@ -562,16 +563,17 @@ Given a `Response`, which Test was run with which `has Argument values` for whic
     PREFIX owl: <http://www.w3.org/2002/07/owl#>
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+    PREFIX dcterms: <http://purl.org/dc/terms/>
     PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
     SELECT ?test ?label ?description  (GROUP_CONCAT(DISTINCT ?params; separator='; ') as ?parameters) ?mechanism
     WHERE { 
       ?test rdf:type bdqffdq:Validation . ?test rdfs:label ?label . ?method bdqffdq:forValidation ?test .
-      ?method bdqffdq:hasSpecification ?specification . ?specification rdfs:comment ?description .
+      ?method bdqffdq:hasSpecification ?specification . ?specification dcterms:description ?description .
       OPTIONAL { 
          ?specification bdqffdq:hasArgument ?argument . ?argument bdqffdq:hasArgumentValue ?argumentValue . ?argument bdqffdq:hasParameter ?parameter .
          BIND (CONCAT(STR(?parameter), "=" , ?argumentValue ) as ?params )
       } .
-      ?implementation bdqffdq:usesSpecification ?specification . ?implementation bdqffdq:producesResponse ?assertion .
+      ?implementation bdqffdq:usesSpecification ?specificationVersion . ?specification dcterms:hasVersion ?specificationVersion . ?implementation bdqffdq:producesResponse ?assertion .
       ?implementation bdqffdq:implementedBy ?mechanism .
       FILTER (STR(?assertion) = "{id of assertion to look up}")
     }
@@ -702,9 +704,9 @@ The Fitness For Use Framework organizes data quality Tests as ontology individua
     PREFIX dcterms: <http://purl.org/dc/terms/>
     SELECT ?label ?term_localName ?iri ?term_iri
     WHERE { 
-      ?iri a bdqffdq:Validation .
-      ?iri rdfs:label ?label .
-      ?iri dcterms:isVersionOf ?term_iri .
+      ?term_iri a bdqffdq:Validation .
+      ?term_iri rdfs:label ?label .
+      ?term_iri dcterms:hasVersion ?iri .
       BIND (REPLACE(STR(?term_iri),"https://rs.tdwg.org/bdqtest/terms/","") as ?term_localName )
     }
 ```
@@ -713,8 +715,8 @@ Example results:
 
 | Label | Term Name | Term Version IRI | Term IRI |
 | ----  | --------- | ---------------- | -------- | 
-| VALIDATION_MINELEVATION_INRANGE | 0bb8297d-8f8a-42d2-80c1-558f29efe798 | <https://rs.tdwg.org/bdqtest/terms/0bb8297d-8f8a-42d2-80c1-558f29efe798-2025-03-07> | <https://rs.tdwg.org/bdqtest/terms/0bb8297d-8f8a-42d2-80c1-558f29efe798> |
-| VALIDATION_MONTH_STANDARD | 01c6dafa-0886-4b7e-9881-2c3018c98bdc | <https://rs.tdwg.org/bdqtest/terms/01c6dafa-0886-4b7e-9881-2c3018c98bdc-2025-03-06> | <https://rs.tdwg.org/bdqtest/terms/01c6dafa-0886-4b7e-9881-2c3018c98bdc> |
+| VALIDATION_MINELEVATION_INRANGE | 0bb8297d-8f8a-42d2-80c1-558f29efe798 | <https://rs.tdwg.org/bdqtest/terms/version/0bb8297d-8f8a-42d2-80c1-558f29efe798-2025-03-07> | <https://rs.tdwg.org/bdqtest/terms/0bb8297d-8f8a-42d2-80c1-558f29efe798> |
+| VALIDATION_MONTH_STANDARD | 01c6dafa-0886-4b7e-9881-2c3018c98bdc | <https://rs.tdwg.org/bdqtest/terms/version/01c6dafa-0886-4b7e-9881-2c3018c98bdc-2025-03-06> | <https://rs.tdwg.org/bdqtest/terms/01c6dafa-0886-4b7e-9881-2c3018c98bdc> |
 
 The `Label` is intended as the identifier of a Test for humans, the `Term Name` as a machine readable identifier.
 
@@ -834,12 +836,12 @@ The Fitness For Use Framework represents the results of `Validation` Tests as `R
     SELECT ?responsestatus ?responseresult ?responsecomment ?test ?label ?description (GROUP_CONCAT(DISTINCT ?params; separator='; ') as ?parameters) ?mechanism ?motivation ?annotationdate 
     WHERE {
       ?test rdf:type bdqffdq:Validation . ?test rdfs:label ?label . ?method bdqffdq:forValidation ?test .
-      ?method bdqffdq:hasSpecification ?specification . ?specification rdfs:comment ?description .
+      ?method bdqffdq:hasSpecification ?specification . ?specification dcterms:description ?description .
       OPTIONAL {
          ?specification bdqffdq:hasArgument ?argument . ?argument bdqffdq:hasArgumentValue ?argumentValue . ?argument bdqffdq:hasParameter ?parameter .
          BIND (CONCAT(STR(?parameter), "=" , ?argumentValue ) as ?params )
       } .
-      ?implementation bdqffdq:usesSpecification ?specification . 
+      ?implementation bdqffdq:usesSpecification ?specificationVersion . ?specification dcterms:hasVersion ?specificationVersion . 
       ?implementation bdqffdq:producesResponse ?assertion .
       ?implementation bdqffdq:implementedBy ?mechanism .
       ?assertion bdqffdq:hasResponseStatus ?responsestatus .
@@ -1120,7 +1122,7 @@ Below is an example of a `bdqffdq:Response` forming the body of an `oa:Annotatio
 	<urn:uuid:f3a41284-093c-4b7e-8054-a32456a7a427> a bdqffdq:Implementation ;
         bdqffdq:implementedBy <urn:uuid:90516df7-838c-4d53-81d9-8131be6ac713> ;
         bdqffdq:producesResponse <https://example.org/bdq/assertion/51967574-7be9-4e38-938c-5dfec2d4d61d> ;
-        bdqffdq:usesSpecification <urn:uuid:3c2fe7e9-186f-4ceb-8274-8bbcb4a62de4> .
+        bdqffdq:usesSpecification <https://rs.tdwg.org/bdqtest/specification/version/3c2fe7e9-186f-4ceb-8274-8bbcb4a62de4-2023-09-17> .
 ```
 
 Combined with `bdqtest:` these triples will return a result from the competency question in [2.4.3](#243-framework-competency-question-including-an-oaannotation-non-normative).
@@ -1130,7 +1132,7 @@ Combined with `bdqtest:` these triples will return a result from the competency 
 | `?responsestatus` | `bdqffdq:RUN_HAS_RESULT` |
 | `?responseresult` | `bdqffdq:COMPLIANT` |
 | `?responsecomment` | `Exact Match found for [Chicoreus palmarosae (Lamarck, 1822)] to [https://www.gbif.org/species/4365662] running VALIDATION_SCIENTIFICNAME_FOUND.` |
-| `?test` | `<https://rs.tdwg.org/bdqtest/terms/3f335517-f442-4b98-b149-1e87ff16de45-2025-03-06>` |
+| `?test` | `<https://rs.tdwg.org/bdqtest/terms/3f335517-f442-4b98-b149-1e87ff16de45>` |
 | `?label` | `VALIDATION_SCIENTIFICNAME_FOUND` |
 | `?description` | `EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificName is bdqval:Empty; COMPLIANT if there is a match of the contents of dwc:scientificName in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT bdqval:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}` |
 | `?parameters` | `https://rs.tdwg.org/bdqval/terms/sourceAuthority=GBIF Backbone Taxonomy` |
