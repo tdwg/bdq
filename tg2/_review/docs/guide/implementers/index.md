@@ -1425,6 +1425,8 @@ The Test Conformance Testing Data records are all fragmentary [Simple Darwin Cor
 
 Additional conformance testing records can be readily generated or adapted from real data using the specifications in Section [8.2](#82-structure-of-the-test-conformance-testing-data-non-normative) and the template in Section [8.3](#83-examples-of-the-data-for-conformance-testing-non-normative) below, along with the existing Test Conformance Testing Data records as examples.  Such additional records can be added to the conformance testing dataset.
 
+Many of the expected `Response` values in the Test Conformance Testing Data are hard coded against the current content of external [bdqval:sourceAuthority](<../../list/bdqval/index.md#bdqval_sourceAuthority> "An authority using the 'bdqval' namespace that provides a reference for values required for a Test evaluation. Where the Test is a bdqval:ParameterizedTest a bdqval:defaultSourceAuthority 'bdqval:sourceAuthority default…") services (e.g., the [GBIF](<../../../index.md#glossary_GBIF> "Global Biodiversity Information Facility is an international network and data infrastructure funded by the world’s governments and aimed at providing anyone, anywhere, open access to data about all types of life on Eart…") Backbone Taxonomy, WoRMS, APNI) and depend on those services remaining available. These values are fragile: a name added to an authority, a changed authorship string, or a service that stops answering automated requests can make a correct implementation appear to fail. The conformance testing data, and the examples in the Tests that they mirror, are likely to need review and updating regularly as part of the maintenance of the standard (for example, [tdwg/bdq#346](https://github.com/tdwg/bdq/issues/346)). When a row that depends on an external authority fails, check whether the authority has changed before concluding that the implementation is at fault.
+
 #### 8.1.1 DataID as a conformance testing data record identifier (normative)
 
 Within a Test conformance testing data set, `dataID` values uniquely identify a conformance test case.
@@ -1469,7 +1471,7 @@ The header for the data in the Test Conformance Testing Data files includes a co
 | bdqval:annotation | A placeholder for an annotation when Testing for their presence (this value does not imply the existence of the term annotation in the bdqval: namespace). |
 | bdqval:sourceAuthority | Input parameter for some Parameterized Tests. |
 
-**NOTE:** We have implemented examples of EXTERNAL_PREREQUISITES_NOT_MET using the `Input.Data` structure containing [bdqval:sourceAuthority](<../../list/bdqval/index.md#bdqval_sourceAuthority> "An authority using the 'bdqval' namespace that provides a reference for values required for a Test evaluation. Where the Test is a bdqval:ParameterizedTest a bdqval:defaultSourceAuthority 'bdqval:sourceAuthority default…")=`https://invalid/invalidservice`, for example:
+**NOTE:** We have implemented examples of EXTERNAL_PREREQUISITES_NOT_MET using the `Input.Data` structure containing `bdqval:sourceAuthority`=`https://invalid/invalidservice`, for example:
 
 ```
 bdqval:taxonomyIsMarine="https://invalid/invalidservice", dwc:decimalLatitude="", dwc:decimalLongitude="", dwc:scientificName=""
