@@ -77,10 +77,22 @@ For the list and links to all associated documents see [The Biodiversity Data Qu
 
 ### 1.5 Term List Distributions (non-normative)
 
+The complete term list, with the definitions and other properties of all terms, is available as the following downloads:
+
 | Description | IRI | Download URL |
-| ----------- | --- | -----------  |
-| HTML file   | {current_iri} | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/docs/list/{pref_namespace_prefix}/index.md |
-| RDF/XML file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/dist/{pref_namespace_prefix}.xml |
+| ----------- | --- | ------------ |
+| HTML download of this document | [{current_iri}]({current_iri}) | [https://bdq.tdwg.org/draft/docs/list/{pref_namespace_prefix}/index.md](https://bdq.tdwg.org/draft/docs/list/{pref_namespace_prefix}/index.md) |
+| RDF/XML download of all terms | [https://bdq.tdwg.org/draft/dist/{pref_namespace_prefix}.xml](https://bdq.tdwg.org/draft/dist/{pref_namespace_prefix}.xml) | [https://bdq.tdwg.org/draft/dist/{pref_namespace_prefix}.xml](https://bdq.tdwg.org/draft/dist/{pref_namespace_prefix}.xml) |
+| Turtle download of all terms | [https://bdq.tdwg.org/draft/dist/{pref_namespace_prefix}.ttl](https://bdq.tdwg.org/draft/dist/{pref_namespace_prefix}.ttl) | [https://bdq.tdwg.org/draft/dist/{pref_namespace_prefix}.ttl](https://bdq.tdwg.org/draft/dist/{pref_namespace_prefix}.ttl) |
+| JSON-LD download of all terms | [https://bdq.tdwg.org/draft/dist/{pref_namespace_prefix}.json](https://bdq.tdwg.org/draft/dist/{pref_namespace_prefix}.json) | [https://bdq.tdwg.org/draft/dist/{pref_namespace_prefix}.json](https://bdq.tdwg.org/draft/dist/{pref_namespace_prefix}.json) |
+
+The term list itself is identified by [https://rs.tdwg.org/{pref_namespace_prefix}/terms/](https://rs.tdwg.org/{pref_namespace_prefix}/terms/), which returns its record by content negotiation. The record contains the term list's metadata, its versions, and the IRIs of its member terms, but not the terms' definitions. It is available as the following downloads:
+
+| Description | IRI | Download URL |
+| ----------- | --- | ------------ |
+| Turtle download of the term list record | [https://rs.tdwg.org/{pref_namespace_prefix}/terms.ttl](https://rs.tdwg.org/{pref_namespace_prefix}/terms.ttl) | [https://rs.tdwg.org/{pref_namespace_prefix}/terms.ttl](https://rs.tdwg.org/{pref_namespace_prefix}/terms.ttl) |
+| JSON-LD download of the term list record | [https://rs.tdwg.org/{pref_namespace_prefix}/terms.json](https://rs.tdwg.org/{pref_namespace_prefix}/terms.json) | [https://rs.tdwg.org/{pref_namespace_prefix}/terms.json](https://rs.tdwg.org/{pref_namespace_prefix}/terms.json) |
+| RDF/XML download of the term list record | [https://rs.tdwg.org/{pref_namespace_prefix}/terms.rdf](https://rs.tdwg.org/{pref_namespace_prefix}/terms.rdf) | [https://rs.tdwg.org/{pref_namespace_prefix}/terms.rdf](https://rs.tdwg.org/{pref_namespace_prefix}/terms.rdf) |
 
 ### 1.6 Status of the Content of this Document (normative)
 

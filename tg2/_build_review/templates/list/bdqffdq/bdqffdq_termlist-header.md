@@ -71,11 +71,25 @@ Information about the bdqffdq: Fitness For Use Framework Ontology, its usage, an
 
 #### 1.3.1 Distributions for bdqffdq: (non-normative)
 
+The complete term list, with the definitions and other properties of all terms, is available as the following downloads, alone and as part of the bdqffdq ontology (all terms, with the additional axioms of the Vocabulary Extension):
+
 | Description | IRI | Download URL |
 | ----------- | --- | ------------ |
-| Human Readable Term List            | TBD | [/docs/list/bdqffdq/index.md](../../list/bdqffdq/index.md) | 
-| Human Readable Vocabulary Extension | TBD | [/docs/extension/bdqffdq/index.md](../../extension/bdqffdq/index.md) | 
-| OWL Ontology                        | TBD | [/vocabulary/bdqffdq.owl](../../../vocabulary/bdqffdq.owl) |
+| HTML download of this document | [{current_iri}]({current_iri}) | [https://bdq.tdwg.org/draft/docs/list/bdqffdq/index.md](https://bdq.tdwg.org/draft/docs/list/bdqffdq/index.md) |
+| Turtle download of all terms | [https://bdq.tdwg.org/draft/dist/bdqffdq_terms.ttl](https://bdq.tdwg.org/draft/dist/bdqffdq_terms.ttl) | [https://bdq.tdwg.org/draft/dist/bdqffdq_terms.ttl](https://bdq.tdwg.org/draft/dist/bdqffdq_terms.ttl) |
+| RDF/XML download of all terms | [https://bdq.tdwg.org/draft/dist/bdqffdq_terms.rdf](https://bdq.tdwg.org/draft/dist/bdqffdq_terms.rdf) | [https://bdq.tdwg.org/draft/dist/bdqffdq_terms.rdf](https://bdq.tdwg.org/draft/dist/bdqffdq_terms.rdf) |
+| JSON-LD download of all terms | [https://bdq.tdwg.org/draft/dist/bdqffdq_terms.jsonld](https://bdq.tdwg.org/draft/dist/bdqffdq_terms.jsonld) | [https://bdq.tdwg.org/draft/dist/bdqffdq_terms.jsonld](https://bdq.tdwg.org/draft/dist/bdqffdq_terms.jsonld) |
+| Turtle download of the ontology | [https://bdq.tdwg.org/draft/dist/bdqffdq.ttl](https://bdq.tdwg.org/draft/dist/bdqffdq.ttl) | [https://bdq.tdwg.org/draft/dist/bdqffdq.ttl](https://bdq.tdwg.org/draft/dist/bdqffdq.ttl) |
+| RDF/XML download of the ontology | [https://bdq.tdwg.org/draft/dist/bdqffdq.rdf](https://bdq.tdwg.org/draft/dist/bdqffdq.rdf) | [https://bdq.tdwg.org/draft/dist/bdqffdq.rdf](https://bdq.tdwg.org/draft/dist/bdqffdq.rdf) |
+| JSON-LD download of the ontology | [https://bdq.tdwg.org/draft/dist/bdqffdq.jsonld](https://bdq.tdwg.org/draft/dist/bdqffdq.jsonld) | [https://bdq.tdwg.org/draft/dist/bdqffdq.jsonld](https://bdq.tdwg.org/draft/dist/bdqffdq.jsonld) |
+
+The term list itself is identified by [https://rs.tdwg.org/bdqffdq/terms/](https://rs.tdwg.org/bdqffdq/terms/), which returns its record by content negotiation. The record contains the term list's metadata, its versions, and the IRIs of its member terms, but not the terms' definitions. It is available as the following downloads:
+
+| Description | IRI | Download URL |
+| ----------- | --- | ------------ |
+| Turtle download of the term list record | [https://rs.tdwg.org/bdqffdq/terms.ttl](https://rs.tdwg.org/bdqffdq/terms.ttl) | [https://rs.tdwg.org/bdqffdq/terms.ttl](https://rs.tdwg.org/bdqffdq/terms.ttl) |
+| JSON-LD download of the term list record | [https://rs.tdwg.org/bdqffdq/terms.json](https://rs.tdwg.org/bdqffdq/terms.json) | [https://rs.tdwg.org/bdqffdq/terms.json](https://rs.tdwg.org/bdqffdq/terms.json) |
+| RDF/XML download of the term list record | [https://rs.tdwg.org/bdqffdq/terms.rdf](https://rs.tdwg.org/bdqffdq/terms.rdf) | [https://rs.tdwg.org/bdqffdq/terms.rdf](https://rs.tdwg.org/bdqffdq/terms.rdf) |
 
 
 ### 1.4 Status of the Content of this Document (normative)

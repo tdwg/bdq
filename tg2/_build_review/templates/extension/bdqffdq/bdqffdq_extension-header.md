@@ -75,10 +75,25 @@ Information about the bdqffdq: ontology, its usage, and its extensions can be fo
 
 #### 1.3.1 Term List Distributions (non-normative)
 
-| Description | IRI | Download URL | Notes | 
-| ----------- | --- | -----------  | ----- | 
-| HTML file   | {current_iri} | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/docs/extension/{pref_namespace_prefix}/index.md | This file | 
-| OWL Ontology | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/vocabulary/bdqffdq.owl | Turtle Serialization of the full ontology, including additional axioms | 
+The axioms of this vocabulary extension, and the complete bdqffdq ontology that includes them, are available as the following downloads:
+
+| Description | IRI | Download URL |
+| ----------- | --- | ------------ |
+| HTML download of this document | [{current_iri}]({current_iri}) | [https://bdq.tdwg.org/draft/docs/extension/bdqffdq/index.md](https://bdq.tdwg.org/draft/docs/extension/bdqffdq/index.md) |
+| Turtle download of the axioms | [https://raw.githubusercontent.com/tdwg/rs.tdwg.org/bdq/bdqffdq/bdqffdq-axioms.ttl](https://raw.githubusercontent.com/tdwg/rs.tdwg.org/bdq/bdqffdq/bdqffdq-axioms.ttl) | [https://raw.githubusercontent.com/tdwg/rs.tdwg.org/bdq/bdqffdq/bdqffdq-axioms.ttl](https://raw.githubusercontent.com/tdwg/rs.tdwg.org/bdq/bdqffdq/bdqffdq-axioms.ttl) |
+| RDF/XML download of the axioms | [https://raw.githubusercontent.com/tdwg/rs.tdwg.org/bdq/bdqffdq/bdqffdq-axioms.rdf](https://raw.githubusercontent.com/tdwg/rs.tdwg.org/bdq/bdqffdq/bdqffdq-axioms.rdf) | [https://raw.githubusercontent.com/tdwg/rs.tdwg.org/bdq/bdqffdq/bdqffdq-axioms.rdf](https://raw.githubusercontent.com/tdwg/rs.tdwg.org/bdq/bdqffdq/bdqffdq-axioms.rdf) |
+| JSON-LD download of the axioms | [https://raw.githubusercontent.com/tdwg/rs.tdwg.org/bdq/bdqffdq/bdqffdq-axioms.jsonld](https://raw.githubusercontent.com/tdwg/rs.tdwg.org/bdq/bdqffdq/bdqffdq-axioms.jsonld) | [https://raw.githubusercontent.com/tdwg/rs.tdwg.org/bdq/bdqffdq/bdqffdq-axioms.jsonld](https://raw.githubusercontent.com/tdwg/rs.tdwg.org/bdq/bdqffdq/bdqffdq-axioms.jsonld) |
+| Turtle download of the ontology | [https://bdq.tdwg.org/draft/dist/bdqffdq.ttl](https://bdq.tdwg.org/draft/dist/bdqffdq.ttl) | [https://bdq.tdwg.org/draft/dist/bdqffdq.ttl](https://bdq.tdwg.org/draft/dist/bdqffdq.ttl) |
+| RDF/XML download of the ontology | [https://bdq.tdwg.org/draft/dist/bdqffdq.rdf](https://bdq.tdwg.org/draft/dist/bdqffdq.rdf) | [https://bdq.tdwg.org/draft/dist/bdqffdq.rdf](https://bdq.tdwg.org/draft/dist/bdqffdq.rdf) |
+| JSON-LD download of the ontology | [https://bdq.tdwg.org/draft/dist/bdqffdq.jsonld](https://bdq.tdwg.org/draft/dist/bdqffdq.jsonld) | [https://bdq.tdwg.org/draft/dist/bdqffdq.jsonld](https://bdq.tdwg.org/draft/dist/bdqffdq.jsonld) |
+
+The extension term list itself is identified by [https://rs.tdwg.org/bdqffdq/extension/](https://rs.tdwg.org/bdqffdq/extension/), which returns its record, with the axioms appended, by content negotiation. It is available as the following downloads:
+
+| Description | IRI | Download URL |
+| ----------- | --- | ------------ |
+| Turtle download of the term list record | [https://rs.tdwg.org/bdqffdq/extension.ttl](https://rs.tdwg.org/bdqffdq/extension.ttl) | [https://rs.tdwg.org/bdqffdq/extension.ttl](https://rs.tdwg.org/bdqffdq/extension.ttl) |
+| JSON-LD download of the term list record | [https://rs.tdwg.org/bdqffdq/extension.json](https://rs.tdwg.org/bdqffdq/extension.json) | [https://rs.tdwg.org/bdqffdq/extension.json](https://rs.tdwg.org/bdqffdq/extension.json) |
+| RDF/XML download of the term list record | [https://rs.tdwg.org/bdqffdq/extension.rdf](https://rs.tdwg.org/bdqffdq/extension.rdf) | [https://rs.tdwg.org/bdqffdq/extension.rdf](https://rs.tdwg.org/bdqffdq/extension.rdf) |
 
 ### 1.4 Status of the Content of this Document (normative)
 

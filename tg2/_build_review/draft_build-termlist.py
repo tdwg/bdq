@@ -802,5 +802,21 @@ for term in termLists:
     outputObject = open(outRDFFileName, 'wt', encoding='utf-8')
     outputObject.write(rdfOutput)
     outputObject.close()
-    
+
+    # The same graph as Turtle and JSON-LD, so that the three downloads of all terms listed in
+    # Section 1.5 of the List of Terms hold the same triples (SDS 2.2.4).
+    distribution_graph = Graph().parse(data=rdfOutput, format='xml')
+    distribution_graph.serialize(destination=outRDFFileName[:-len('.xml')] + '.ttl', format='turtle')
+    # JSON-LD with nodes and value arrays in a fixed order (as rs.tdwg.org's build_ontology.write_jsonld),
+    # since rdflib's order varies between runs.
+    def sorted_json(value):
+        if isinstance(value, dict):
+            return {k: sorted_json(v) for k, v in value.items()}
+        if isinstance(value, list):
+            return sorted((sorted_json(v) for v in value), key=lambda v: json.dumps(v, sort_keys=True))
+        return value
+    jsonld = sorted_json(json.loads(distribution_graph.serialize(format='json-ld')))
+    with open(outRDFFileName[:-len('.xml')] + '.json', 'wt', encoding='utf-8') as jsonld_file:
+        jsonld_file.write(json.dumps(jsonld, indent=2, sort_keys=True, ensure_ascii=False) + '\n')
+
 print('done ({})'.format(__file__))
